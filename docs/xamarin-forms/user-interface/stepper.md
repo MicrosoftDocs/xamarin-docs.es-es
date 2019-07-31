@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c89f04b1d1d87fed8d86d50cb68527391a7f317
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250622"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656203"
 ---
 # <a name="xamarinforms-stepper"></a>Motor Xamarin.Forms paso a paso
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Use un motor paso a paso para seleccionar un valor numérico de un intervalo de valores._
 
@@ -42,11 +42,11 @@ El [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objeto 
 
 ## <a name="basic-stepper-code-and-markup"></a>Marcado y código básico de motor paso a paso
 
-El [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) ejemplo contiene tres páginas que son funcionalmente idénticos, pero se implementan de maneras diferentes. La primera página se usa solo C# código, el segundo usa XAML con un controlador de eventos en código y la tercera es capaz de evitar el controlador de eventos mediante el uso de enlace de datos en el archivo XAML.
+El [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) ejemplo contiene tres páginas que son funcionalmente idénticos, pero se implementan de maneras diferentes. La primera página se usa solo C# código, el segundo usa XAML con un controlador de eventos en código y la tercera es capaz de evitar el controlador de eventos mediante el uso de enlace de datos en el archivo XAML.
 
 ### <a name="creating-a-stepper-in-code"></a>Creación de un motor paso a paso en el código
 
-El **motor paso a paso de código básico** página en el [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) ejemplo muestra cómo crear un [ `Stepper` ](xref:Xamarin.Forms.Stepper) y dos [ `Label` ](xref:Xamarin.Forms.Label) objetos en el código:
+El **motor paso a paso de código básico** página en el [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) ejemplo muestra cómo crear un [ `Stepper` ](xref:Xamarin.Forms.Stepper) y dos [ `Label` ](xref:Xamarin.Forms.Label) objetos en el código:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -182,7 +182,7 @@ El **enlaces básicos de motor paso a paso** página muestra cómo escribir una 
 </ContentPage>
 ```
 
-El [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de la primera [ `Label` ](xref:Xamarin.Forms.Label) está enlazado a la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propiedad de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), ya que es el [ `Text` ](xref:Xamarin.Forms.Label.Text) propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de motor paso a paso** página funciones un poco diferente de las dos páginas anteriores: Cuando aparece la página por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) eventos llamando al controlador de eventos desde el constructor de clase .
+El [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de la primera [ `Label` ](xref:Xamarin.Forms.Label) está enlazado a la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propiedad de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), ya que es el [ `Text` ](xref:Xamarin.Forms.Label.Text) propiedad del segundo `Label` con un `StringFormat` especificación. La página de **enlaces de stepper Básica** funciona de forma ligeramente diferente a la de las dos páginas anteriores: Cuando la página aparece por primera vez, `Label` la segunda muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) eventos llamando al controlador de eventos desde el constructor de clase .
 
 ## <a name="precautions"></a>Precauciones
 
@@ -258,5 +258,5 @@ Cuando [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum) está establecido en 18
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de demostraciones de motor paso a paso](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [Ejemplo de demostraciones de motor paso a paso](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [API de motor paso a paso](xref:Xamarin.Forms.Stepper)

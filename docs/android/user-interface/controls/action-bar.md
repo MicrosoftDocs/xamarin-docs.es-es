@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510453"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643041"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Barra para Xamarin. Android
 
@@ -87,7 +87,7 @@ La `ShareActionProvider` clase permite que se lleve a cabo una acción de uso co
 
 ### <a name="image-sharing-example"></a>Ejemplo de uso compartido de imágenes
 
-Por ejemplo, a continuación se muestra una captura de pantalla de un Barra de acciones con un elemento de menú para compartir una imagen (tomada del ejemplo [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ). Cuando el usuario puntea el elemento de menú en el Barra de acciones, el ShareActionProvider carga la aplicación para controlar un intento que está asociado a `ShareActionProvider`. En este ejemplo, la aplicación de mensajería se ha usado previamente, por lo que se presenta en el Barra de acciones.
+Por ejemplo, a continuación se muestra una captura de pantalla de un Barra de acciones con un elemento de menú para compartir una imagen (tomada del ejemplo [ShareActionProvider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Cuando el usuario puntea el elemento de menú en el Barra de acciones, el ShareActionProvider carga la aplicación para controlar un intento que está asociado a `ShareActionProvider`. En este ejemplo, la aplicación de mensajería se ha usado previamente, por lo que se presenta en el Barra de acciones.
 
 [![Captura de pantalla del icono de la aplicación de mensajería en el Barra de acciones](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
@@ -150,7 +150,7 @@ La imagen del ejemplo de código anterior se incluye como un recurso con la apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Pestañas Hello ICS (ejemplo)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [Demostración de ShareActionProvider (ejemplo)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Pestañas Hello ICS (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [Demostración de ShareActionProvider (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [Presentación del bocadillo de helado](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

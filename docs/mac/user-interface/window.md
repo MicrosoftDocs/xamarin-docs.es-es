@@ -1,255 +1,255 @@
 ---
-title: Windows en Xamarin.Mac
-description: En este artículo se explica cómo trabajar con ventanas y paneles en una aplicación de Xamarin.Mac. Describe la creación de ventanas y paneles en Xcode e Interface Builder, cargarlos desde los guiones gráficos y archivos .xib y trabajar con ellos mediante programación.
+title: Windows en Xamarin. Mac
+description: En este artículo se explica cómo trabajar con ventanas y paneles en una aplicación de Xamarin. Mac. Describe cómo crear ventanas y paneles en Xcode y Interface Builder, cargarlos desde guiones gráficos y archivos. Xib, y trabajar con ellos mediante programación.
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f23a506acda385b53942661244bcd7a8510c8c7f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 6d766e74f99e3c69259a41ce13501de80cf0231a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865999"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653115"
 ---
-# <a name="windows-in-xamarinmac"></a>Windows en Xamarin.Mac
+# <a name="windows-in-xamarinmac"></a>Windows en Xamarin. Mac
 
-_En este artículo se explica cómo trabajar con ventanas y paneles en una aplicación de Xamarin.Mac. Describe la creación de ventanas y paneles en Xcode e Interface Builder, cargarlos desde los guiones gráficos y archivos .xib y trabajar con ellos mediante programación._
+_En este artículo se explica cómo trabajar con ventanas y paneles en una aplicación de Xamarin. Mac. Describe cómo crear ventanas y paneles en Xcode y Interface Builder, cargarlos desde guiones gráficos y archivos. Xib, y trabajar con ellos mediante programación._
 
-Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, podrá tener acceso a la misma Windows y paneles que un desarrollador que trabaja *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus paneles y Windows (u opcionalmente crearlas directamente en código de C#).
+Al trabajar con C# y .net en una aplicación de Xamarin. Mac, tiene acceso a las mismas ventanas y paneles que un desarrollador que trabaja en *Objective-C* y *Xcode* . Dado que Xamarin. Mac se integra directamente con Xcode, puede usar los _Interface Builder_ de Xcode para crear y mantener sus ventanas y paneles (o, opcionalmente, C# crearlos directamente en el código).
 
-Según su propósito, una aplicación de Xamarin.Mac puede presentar uno o varios de Windows en la pantalla para administrar y coordinar la información se muestra y funciona con. Las funciones principales de una ventana son:
+En función de su finalidad, una aplicación de Xamarin. Mac puede presentar una o más ventanas en pantalla para administrar y coordinar la información que muestra y con la que trabaja. Las funciones principales de una ventana son:
 
-1. Para proporcionar un área en la que las vistas y los controles se pueden colocar y administrar.
-2. Para aceptar y responder a eventos en respuesta a la interacción del usuario con el teclado y el mouse.
+1. Para proporcionar un área en la que se puedan colocar y administrar las vistas y los controles.
+2. Aceptar y responder a eventos en respuesta a la interacción del usuario con el teclado y el mouse.
 
-Windows pueden ser utilizado en un estado no modal (por ejemplo, un editor de texto que puede tener varios documentos abiertos a la vez) o Modal (por ejemplo, un cuadro de diálogo de exportación que se debe descartar para que pueda continuar la aplicación).
+Windows se puede usar en un estado no modal (por ejemplo, un editor de texto que puede tener varios documentos abiertos a la vez) o modal (como un cuadro de diálogo de exportación que se debe descartar para que la aplicación pueda continuar).
 
-Los paneles son un tipo especial de ventana (una subclase de la base de `NSWindow` clase), que suelen servir una función auxiliar en una aplicación, como ventanas de utilidad, como los inspectores de formato de texto y el selector de colores del sistema.
+Los paneles son un tipo especial de ventana (una subclase de la `NSWindow` clase base), que normalmente atiende a una función auxiliar en una aplicación, como las ventanas de la utilidad, como los inspectores de formato de texto y el selector de color del sistema.
 
 [![](window-images/intro01.png "Edición de una ventana en Xcode")](window-images/intro01.png#lightbox)
 
-En este artículo, trataremos los aspectos básicos de trabajar con Windows y paneles en una aplicación de Xamarin.Mac. Se recomienda que trabaje en el [Hello, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) secciones, tal y como se tratan los conceptos clave y las técnicas que vamos a usar en este artículo.
+En este artículo, trataremos los aspectos básicos del trabajo con ventanas y paneles en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
 
-Es posible que desee echar un vistazo a la [clases de C# exponer / métodos a Objective-C](~/mac/internals/how-it-works.md) sección de la [funcionamiento interno de Xamarin.Mac](~/mac/internals/how-it-works.md) documentar, también explica la `Register` y `Export` comandos se usa para conexión de seguridad de las clases de C# para objetos de Objective-C y elementos de interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) también, en él se explican `Export` los `Register` comandos y que se usan para C# conectar las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
 
 <a name="Introduction_to_Windows" />
 
 ## <a name="introduction-to-windows"></a>Introducción a Windows
 
-Como se indicó anteriormente, una ventana proporciona un área en la que las vistas y los controles se pueden colocar y administrar y responde a eventos en función de interacción del usuario (ya sea mediante el teclado o mouse).
+Como se indicó anteriormente, una ventana proporciona un área en la que se pueden colocar y administrar vistas y controles, y responde a eventos en función de la interacción del usuario (ya sea mediante el teclado o el mouse).
 
-Función de Apple, hay cinco tipos principales de Windows en una aplicación de macOS:
+Según Apple, hay cinco tipos principales de ventanas en una aplicación macOS:
 
-- **Ventana de documento** -una ventana de documento contiene datos de usuario basados en archivos como una hoja de cálculo o un documento de texto.
-- **Ventana de la aplicación** -una ventana de la aplicación es la ventana principal de una aplicación que no está basado en un documento (por ejemplo, la aplicación de calendario en un equipo Mac).
-- **Panel** : un panel de flota sobre otras ventanas y proporciona herramientas o abrir los controles que los usuarios pueden trabajar con mientras haya documentos. En algunos casos, un panel puede estar translúcido (por ejemplo, cuando trabaja con gráficos de gran tamaño).
-- **Cuadro de diálogo** -un cuadro de diálogo aparece en respuesta a una acción del usuario y normalmente se proporciona a los usuarios de maneras pueden completar la acción. Un cuadro de diálogo requiere una respuesta del usuario para que se pueda cerrar. (Consulte [trabajar con cuadros de diálogo](~/mac/user-interface/dialog.md))
-- **Alertas** -una alerta es un tipo especial de cuadro de diálogo que aparece cuando se produce un problema grave (por ejemplo, un error) o como una advertencia (como preparación eliminar un archivo). Dado que una alerta es un cuadro de diálogo, también requiere una respuesta del usuario para que se pueda cerrar. (Consulte [trabajar con alertas](~/mac/user-interface/alert.md))
+- **Ventana de documento** : una ventana de documento contiene datos de usuario basados en archivos, como una hoja de cálculo o un documento de texto.
+- **Ventana** de la aplicación: una ventana de la aplicación es la ventana principal de una aplicación que no está basada en documentos (como la aplicación de calendario en un equipo Mac).
+- **Panel** : un panel flota sobre otras ventanas y proporciona herramientas o controles con los que los usuarios pueden trabajar mientras los documentos están abiertos. En algunos casos, un panel puede ser traslúcido (por ejemplo, al trabajar con gráficos de gran tamaño).
+- **Cuadro de diálogo** : aparece un cuadro de diálogo en respuesta a una acción del usuario y, normalmente, proporciona maneras en que los usuarios pueden completar la acción. Un cuadro de diálogo requiere una respuesta del usuario antes de que se pueda cerrar. (Consulte [trabajar con cuadros de diálogo](~/mac/user-interface/dialog.md))
+- **Alertas** : una alerta es un tipo especial de cuadro de diálogo que aparece cuando se produce un problema grave (como un error) o como una advertencia (como preparar la eliminación de un archivo). Dado que una alerta es un diálogo, también requiere una respuesta de usuario antes de que se pueda cerrar. (Vea [trabajar con alertas](~/mac/user-interface/alert.md))
 
-Para obtener más información, consulte el [sobre Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Para obtener más información, consulte la sección [About Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) de las directrices de la interfaz de usuario de Apple [OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
 <a name="Main_Key_and_Inactive_Windows" />
 
-### <a name="main-key-and-inactive-windows"></a>Principal, clave y Windows inactiva
+### <a name="main-key-and-inactive-windows"></a>Principales, clave y ventanas inactivas
 
-Windows en una aplicación de Xamarin.Mac pueden buscar y se comportan de forma distinta según cómo el usuario actualmente interactúa con ellos. El documento o ventana de la aplicación que se encuentra actualmente el foco de atención del usuario, la más importante que se llama a la _ventana principal_. En la mayoría de los casos esta ventana también será el _ventana clave_ (la ventana que actualmente está aceptando proporcionados por el usuario). Pero esto no siempre es así, por ejemplo, un selector de colores podría estar abierto y la ventana de la clave que el usuario está interactuando con para cambiar el estado de un elemento en la ventana de documento (que todavía sería la ventana principal).
+Las ventanas de una aplicación de Xamarin. Mac pueden verse y comportarse de manera diferente en función de cómo el usuario interactúe actualmente con ellas. La ventana de documento o aplicación más importante que se centra actualmente en la atención del usuario se denomina _ventana principal_. En la mayoría de los casos, esta ventana también será la _ventana clave_ (la ventana que actualmente acepta datos proporcionados por el usuario). Pero esto no es siempre el caso, por ejemplo, un selector de colores podría estar abierto y ser la ventana de clave con la que interactúa el usuario para cambiar el estado de un elemento en la ventana de documento (que seguirá siendo la ventana principal).
 
-El principal y clave de Windows (si son independientes) siempre están activas, _Windows inactiva_ son ventanas abiertas que no están en primer plano. Por ejemplo, una aplicación de editor de texto puede tener más de un documento abierto en un momento, solo la ventana principal está activa, todos los demás estarán inactivos. 
+Las ventanas principal y de clave (si son independientes) siempre están activas, las ventanas inactivas son ventanas abiertas que no están en primer plano. Por ejemplo, una aplicación de editor de texto podría tener más de un documento abierto a la vez, solo la ventana principal estaba activa, todas las demás serían inactivas. 
 
-Para obtener más información, consulte el [sobre Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Para obtener más información, consulte la sección [About Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) de las directrices de la interfaz de usuario de Apple [OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
 <a name="Naming_Windows" />
 
-### <a name="naming-windows"></a>Nomenclatura de Windows
+### <a name="naming-windows"></a>Asignar nombres a ventanas
 
-Una ventana puede mostrar una barra de título y cuando se muestra el título, normalmente es el nombre de la aplicación, el nombre del documento que se está trabajando o la función de la ventana (por ejemplo, el Inspector). Algunas aplicaciones no mostrar una barra de título porque son reconocibles por visión y no funcionan con documentos.
+Una ventana puede mostrar una barra de título y, cuando se muestra el título, suele ser el nombre de la aplicación, el nombre del documento en el que se está trabajando o la función de la ventana (por ejemplo, inspector). Algunas aplicaciones no muestran una barra de título porque son reconocibles por la visión y no funcionan con documentos.
 
 Apple sugiere las siguientes directrices:
 
-- Utilice el nombre de la aplicación para el título de una ventana principal, que no sean documentos. 
-- Nombre de una nueva ventana de documento `untitled`. Para el nuevo documento, no anexar un número en el título (como `untitled 1`). Si el usuario crea otro documento antes de guardar y título de la primera, llamar a esa ventana `untitled 2`, `untitled 3`, etcetera.
+- Use el nombre de la aplicación como título de una ventana principal que no sea de documento. 
+- Asignar un nombre a una `untitled`nueva ventana de documento. En el primer documento nuevo, no Anexe un número al título (por ejemplo `untitled 1`,). Si el usuario crea otro documento nuevo antes de guardarlo y crear títulos en el primero, `untitled 2`llame `untitled 3`a esa ventana,, etc.
 
-Para obtener más información, consulte el [Windows nomenclatura](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowNaming.html#//apple_ref/doc/uid/20000957-CH35-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Para obtener más información, consulte la sección [nomenclatura de Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowNaming.html#//apple_ref/doc/uid/20000957-CH35-SW1) de las directrices de interfaz humana de Apple [OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) .
 
 <a name="Full-Screen_Windows" />
 
-### <a name="full-screen-windows"></a>Windows de pantalla completa
+### <a name="full-screen-windows"></a>Ventanas de pantalla completa
 
-En macOS, ventana de la aplicación puede ir ocultación de pantalla completa todo incluido en la barra de menús de la aplicación (que puede mostrarse al mover el cursor a la parte superior de la pantalla) para proporcionar la distracción es contenido gratuito interacción con él.
+En macOS, una ventana de la aplicación puede desplazarse por toda la pantalla, lo que incluye la barra de menús de la aplicación (que puede revelarse moviendo el cursor a la parte superior de la pantalla) para proporcionar una interacción gratuita de distracción con su contenido.
 
 Apple sugiere las siguientes directrices:
 
-- Determine si tiene sentido para una ventana Ir a pantalla completa. Las aplicaciones que proporcionan las interacciones breves (por ejemplo, una calculadora) no deben proporcionar un modo de pantalla completa.
-- Si la tarea de pantalla completa requiere se muestra la barra de herramientas. Normalmente se oculta la barra de herramientas mientras esté en modo de pantalla completa.
-- La ventana de pantalla completa debe tener todas las funciones que los usuarios necesitan completar la tarea.
-- Si es posible, evite la interacción de Finder mientras el usuario está en una ventana de pantalla completa.
-- Aproveche el espacio de pantalla mayor sin desplazar la atención lejos de la tarea principal.
+- Determine si tiene sentido que una ventana se vea en pantalla completa. Las aplicaciones que proporcionan interacciones breves (como una calculadora) no deben proporcionar un modo de pantalla completa.
+- Muestra la barra de herramientas si la tarea de pantalla completa lo requiere. Normalmente, la barra de herramientas está oculta en modo de pantalla completa.
+- La ventana de pantalla completa debe tener todas las características que los usuarios necesitan para completar la tarea.
+- Si es posible, evite la interacción con el buscador mientras el usuario está en una ventana de pantalla completa.
+- Aproveche el aumento del espacio de la pantalla sin desplazar el foco fuera de la tarea principal.
 
-Para obtener más información, consulte el [Windows de pantalla completa](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/FullScreen.html#//apple_ref/doc/uid/20000957-CH61-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Para obtener más información, consulte la sección de [ventanas de pantalla completa](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/FullScreen.html#//apple_ref/doc/uid/20000957-CH61-SW1) de las [directrices de interfaz humana de Apple OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) .
 
 <a name="Panels" />
 
 ### <a name="panels"></a>Paneles
 
-Un Panel es una ventana auxiliar que contiene los controles y las opciones que afectan a la selección (por ejemplo, el selector de colores del sistema) o el documento activo:
+Un panel es una ventana auxiliar que contiene controles y opciones que afectan al documento activo o a la selección (como el selector de colores del sistema):
 
 [![](window-images/panel01.png "Un panel de colores")](window-images/panel01.png#lightbox)
 
-Los paneles pueden ser _específico de la aplicación_ o _todo el sistema_. Paneles específicos de la aplicación flotar encima de las ventanas de documento de la aplicación y desaparecerá cuando la aplicación está en segundo plano. Paneles de todo el sistema (como el **fuentes** panel), float encima de todas las ventanas abiertas con independencia de la aplicación. 
+Los paneles pueden ser _específicos de la aplicación o de_ _todo_el sistema. Los paneles específicos de la aplicación flotan sobre la parte superior de las ventanas de documento de la aplicación y desaparecen cuando la aplicación está en segundo plano. Los paneles de todo el sistema (como el panel **fuentes** ), flotan encima de todas las ventanas abiertas independientemente de la aplicación. 
 
 Apple sugiere las siguientes directrices:
 
-- En general, utilice un panel estándar, paneles transparentes solo deben usarse con moderación y para las tareas con muchos gráficos.
-- Considere el uso de un panel para proporcionar a los usuarios un acceso sencillo a controles importantes o información que afecta directamente a su tarea.
-- Ocultar y mostrar paneles según sea necesario.
-- Paneles siempre deben incluir la barra de título.
-- Los paneles no deben incluir un botón Minimizar activo.
+- En general, use un panel estándar, los paneles transparentes solo deben usarse con moderación y para tareas con un uso intensivo de gráficos.
+- Considere la posibilidad de usar un panel para proporcionar a los usuarios un fácil acceso a los controles importantes o a la información que afecta directamente a su tarea.
+- Oculte y muestre los paneles según sea necesario.
+- Los paneles siempre deben incluir la barra de título.
+- Los paneles no deben incluir un botón minimizar activo.
 
 #### <a name="inspectors"></a>Inspectores
 
-Las aplicaciones más modernas de macOS presentan controles auxiliares y las opciones que afectan al documento activo o selección como _inspectores_ que forman parte de la ventana principal (como el **páginas** aplicación se muestra a continuación), en lugar de usar el Panel de Windows:
+La mayoría de las aplicaciones macOS modernas presentan controles y opciones auxiliares que afectan al documento activo o a la selección como inspectores que forman parte de la ventana principal (como la aplicación de **páginas** que se muestra a continuación), en lugar de usar ventanas de panel:
 
 [![](window-images/panel02.png "Un inspector de ejemplo")](window-images/panel02.png#lightbox)
 
-Para obtener más información, consulte el [paneles](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) y nuestro [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) aplicación de ejemplo para una implementación completa de un **Inspector interfaz** en una aplicación de Xamarin.Mac.
+Para obtener más información, consulte la sección [paneles](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) de las [directrices de la interfaz humana de Apple OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) y nuestra aplicación de ejemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) para una implementación completa de una **interfaz de inspector** en una aplicación de Xamarin. Mac.
 
 <a name="Creating_and_Maintaining_Windows_in_Xcode" />
 
-## <a name="creating-and-maintaining-windows-in-xcode"></a>Creación y mantenimiento de Windows en Xcode
+## <a name="creating-and-maintaining-windows-in-xcode"></a>Crear y mantener ventanas en Xcode
 
-Cuando se crea una nueva aplicación de Xamarin.Mac Cocoa, obtendrá una ventana en blanco, estándar de forma predeterminada. Este windows se define en un `.storyboard` archivo incluido automáticamente en el proyecto. Para editar el diseño de windows, en el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo:
+Cuando se crea una nueva aplicación de Cocoa de Xamarin. Mac, se obtiene una ventana en blanco de forma predeterminada. Esta ventana se define en un `.storyboard` archivo que se incluye automáticamente en el proyecto. Para editar el diseño de Windows, en el **Explorador de soluciones**, haga doble `Main.storyboard` clic en el archivo:
 
-[![](window-images/edit01.png "Seleccione el guion gráfico principal")](window-images/edit01.png#lightbox)
+[![](window-images/edit01.png "Seleccionar el guión gráfico principal")](window-images/edit01.png#lightbox)
 
-Se abrirá el diseño de ventana en Interface Builder de Xcode:
+Se abrirá el diseño de ventana en la Interface Builder de Xcode:
 
 [![](window-images/edit02.png "Edición de la interfaz de usuario en Xcode")](window-images/edit02.png#lightbox)
 
 En el **Inspector de atributos**, hay varias propiedades que puede usar para definir y controlar la ventana:
 
-- **Título** -éste es el texto que se mostrará en la barra de título de la ventana.
-- **Autoguardar** -se trata la _clave_ que se utilizará para el Id. de la ventana cuando se guarda automáticamente su posición y configuración.
-- **Barra de título** -la ventana Mostrar una barra de título.
-- **Unified título y la barra de herramientas** : si la ventana incluye una barra de herramientas, debe formar parte de la barra de título.
-- **Tamaño de vista de contenido completa** -permite que el área de contenido de la ventana para estar bajo la barra de título.
-- **Sombra** -la ventana tiene una sombra.
-- **Con textura** -con textura windows pueden usar efectos (por ejemplo, el dinamismo) y se pueden mover arrastrando en cualquier lugar en su cuerpo.
-- **Cerrar** -la ventana tiene un botón Cerrar.
-- **Minimizar** -la ventana tiene un botón Minimizar.
-- **Cambiar el tamaño de** -la ventana tiene un control de cambio de tamaño.
-- **Botón de barra de herramientas** -la ventana tiene un botón de barra de herramientas mostrar u ocultar.
-- **Que se pueden restaurar** -es la posición y la configuración automáticamente, guardar y restaurar la ventana.
-- **Visible al iniciar** -la ventana aparece automáticamente cuando el `.xib` se carga el archivo.
-- **Ocultar en desactivar** -la ventana está oculto cuando la aplicación entra en segundo plano.
-- **Liberar cuando cierra** -es la ventana de purga de la memoria cuando está cerrado.
-- **Siempre mostrar informaciones sobre herramientas** -son la información sobre herramientas muestre constantemente.
-- **Vuelve a calcular el bucle de vista** -es el orden de la vista a calcular antes de que se dibuja la ventana.
-- **Espacios**, **Exposé** y **Cycling** -todos los definen cómo se comporta la ventana en esos entornos de macOS. 
-- **Pantalla completa** -determina si esta ventana puede entrar en el modo de pantalla completa. 
-- **Animación** -controla el tipo de animación disponible para la ventana.
-- **Apariencia** -controla la apariencia de la ventana. Por ahora, hay solo un aspecto, aguamarina.
+- **Título** : este es el texto que se mostrará en el título de la ventana.
+- **Autosave** : esta es la _clave_ que se usará para identificar la ventana cuando su posición y la configuración se guardan automáticamente.
+- **Barra de título** : hace que la ventana muestre una barra de título.
+- **Título y barra de herramientas unificados** : Si la ventana incluye una barra de herramientas, debe formar parte de la barra de título.
+- **Vista de contenido con tamaño completo** : permite que el área de contenido de la ventana esté debajo de la barra de título.
+- **Sombra** : hace que la ventana tenga una sombra.
+- Las ventanas con textura texturizada pueden usar efectos (como vibrancy) y se pueden mover arrastrándolos en cualquier lugar del cuerpo.
+- **Cerrar** : hace que la ventana tenga un botón Cerrar.
+- **Minimizar** : hace que la ventana tenga un botón minimizar.
+- **Cambiar tamaño** : hace que la ventana tenga un control de tamaño.
+- **Botón** de la barra de herramientas: hace que la ventana tenga un botón Ocultar/Mostrar barra de herramientas.
+- **Restaurable** : es la posición de la ventana y la configuración se guarda y restaura automáticamente.
+- **Visible en el inicio** : es la ventana que se muestra `.xib` automáticamente cuando se carga el archivo.
+- **Ocultar al desactivar** : es la ventana oculta cuando la aplicación entra en el fondo.
+- **Liberar al cerrar** : la ventana se purga de la memoria cuando está cerrada.
+- **Mostrar información sobre herramientas siempre** : ¿se muestra constantemente la información sobre herramientas.
+- **Recalcula el bucle de vista** : es el orden de la vista que se vuelve a calcular antes de que se dibuje la ventana.
+- **Espacios**, **Exposé** y **ciclos** : todos definen cómo se comporta la ventana en esos entornos MacOS. 
+- **Pantalla completa** : determina si esta ventana puede entrar en el modo de pantalla completa. 
+- **Animación** : controla el tipo de animación disponible para la ventana.
+- **Apariencia** : controla la apariencia de la ventana. Por ahora solo hay una apariencia, aguamarina.
 
-Consulte Apple [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) y [NSWindow](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSWindow_Class/index.html#//apple_ref/occ/cl/NSWindow) documentación para obtener más detalles.
+Para obtener más información, consulte la [Introducción a Windows y a](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) la documentación de [NSWindow](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSWindow_Class/index.html#//apple_ref/occ/cl/NSWindow) .
 
 <a name="Setting_the_Default_Size_and_Location" />
 
-### <a name="setting-the-default-size-and-location"></a>Establecer la ubicación y tamaño predeterminados
+### <a name="setting-the-default-size-and-location"></a>Establecer el tamaño y la ubicación predeterminados
 
-Para establecer la posición inicial de la ventana y controlar su tamaño, cambie a la **Inspector de tamaño**:
+Para establecer la posición inicial de la ventana y controlar su tamaño, cambie al **Inspector de tamaño**:
 
-[![](window-images/edit07.png "La ubicación y tamaño predeterminados")](window-images/edit07.png#lightbox)
+[![](window-images/edit07.png "El tamaño y la ubicación predeterminados")](window-images/edit07.png#lightbox)
 
-Desde aquí puede establecer el tamaño inicial de la ventana, asígnele un tamaño máximo y mínimo, establecer la ubicación inicial en la pantalla y los bordes alrededor de la ventana de control.
+Aquí puede establecer el tamaño inicial de la ventana, darle un tamaño mínimo y máximo, establecer la ubicación inicial en la pantalla y controlar los bordes alrededor de la ventana.
 
 <a name="Setting-a-Custom-Main-Window-Controller" />
 
-### <a name="setting-a-custom-main-window-controller"></a>Configuración de un controlador de ventana principal personalizado
+### <a name="setting-a-custom-main-window-controller"></a>Establecer un controlador de ventana principal personalizado
 
-Para poder crear salidas y acciones para exponer elementos de interfaz de usuario al código de C#, la aplicación de Xamarin.Mac se deberá usar un controlador de ventana personalizada.
+Para poder crear salidas y acciones para exponer elementos de la interfaz de usuario C# al código, la aplicación de Xamarin. Mac tendrá que usar un controlador de ventana personalizado.
 
 Haga lo siguiente:
 
-1. Abra el guión gráfico de la aplicación en Interface Builder de Xcode.
-2. Seleccione el `NSWindowController` en la superficie de diseño.
-3. Cambie a la **Inspector de identidad** permite ver y especificar `WindowController` como el **nombre de la clase**: 
+1. Abra el guión gráfico de la aplicación en la Interface Builder de Xcode.
+2. `NSWindowController` Seleccione en el superficie de diseño.
+3. Cambie a la vista **Inspector de identidad** y `WindowController` escriba como **nombre de clase**: 
 
     [![](window-images/windowcontroller01.png "Establecer el nombre de clase")](window-images/windowcontroller01.png#lightbox)
-4. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar.
-5. Un `WindowController.cs` archivo se agregará al proyecto en el **el Explorador de soluciones** en Visual Studio para Mac: 
+4. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos.
+5. Se `WindowController.cs` agregará un archivo al proyecto en el **Explorador de soluciones** en Visual Studio para Mac: 
 
-    [![](window-images/windowcontroller02.png "Al seleccionar el controlador de windows")](window-images/windowcontroller02.png#lightbox)
-6. Vuelva a abrir el guión gráfico de Interface Builder de Xcode.
+    [![](window-images/windowcontroller02.png "Seleccionar el controlador de Windows")](window-images/windowcontroller02.png#lightbox)
+6. Vuelva a abrir el guion gráfico en la Interface Builder de Xcode.
 7. El `WindowController.h` archivo estará disponible para su uso: 
 
-    [![](window-images/windowcontroller03.png "Edite el archivo WindowController.h")](window-images/windowcontroller03.png#lightbox)
+    [![](window-images/windowcontroller03.png "Edición del archivo WindowController. h")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
 ### <a name="adding-ui-elements"></a>Agregar elementos de interfaz de usuario
 
-Para definir el contenido de una ventana, arrastre controles desde el **Inspector de biblioteca** hasta la **Editor de la interfaz**. Consulte nuestra [Introducción a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentación para obtener más información sobre cómo usar Interface Builder para crear y habilitar los controles.
+Para definir el contenido de una ventana, arrastre los controles desde el **Inspector de biblioteca** hasta el editor de la **interfaz**. Consulte la documentación de [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) para obtener más información sobre el uso de Interface Builder para crear y habilitar controles.
 
-Por ejemplo, vamos a arrastrar una barra de herramientas desde el **Inspector de biblioteca** en la ventana en la **Editor de la interfaz**:
+Por ejemplo, arrastre una barra de herramientas desde el **Inspector de biblioteca** hasta la ventana del editor de la **interfaz**:
 
-[![](window-images/edit03.png "Selección de una barra de herramientas de la biblioteca")](window-images/edit03.png#lightbox)
+[![](window-images/edit03.png "Seleccionar una barra de herramientas de la biblioteca")](window-images/edit03.png#lightbox)
 
-A continuación, arrastre un **vista de texto** y ajuste su tamaño para rellenar el área bajo la barra de herramientas:
+A continuación, arrastre en una **vista de texto** y cambie su tamaño para rellenar el área de la barra de herramientas:
 
 [![](window-images/edit04.png "Agregar una vista de texto")](window-images/edit04.png#lightbox)
 
-Puesto que deseamos que el **vista de texto** para reducir y crecer según los cambios de tamaño de la ventana, vamos a pasar a la **Editor de restricciones** y agregue las siguientes restricciones:
+Dado que deseamos que la **vista de texto** se reduzca y crezca a medida que cambia el tamaño de la ventana, vamos a cambiar al **Editor de restricciones** y agregar las restricciones siguientes:
 
-[![](window-images/edit05.png "Limitaciones de edición")](window-images/edit05.png#lightbox)
+[![](window-images/edit05.png "Modificar restricciones")](window-images/edit05.png#lightbox)
 
-Al hacer clic en el para **Red I-Beams** en la parte superior del editor y haga clic en **agregar 4 restricciones**, indicamos a la vista de texto para ajustarse a la X dado, Y las coordenadas y aumentar o reducir horizontalmente y verticalmente como se cambia el tamaño de la ventana.
+Al hacer clic en el para los **haces de I en rojo** en la parte superior del editor y hacer clic en **Agregar 4 restricciones**, estamos indicando a la vista de texto que se adhiere a las coordenadas X, y, y a aumentar o reducir horizontal y verticalmente a medida que se cambia el tamaño de la ventana.
 
-Por último, vamos a exponer el **vista de texto** codificar mediante un **toma** (asegurándose de seleccionar la `ViewController.h` archivo):
+Por último, vamos a exponer la **vista de texto** al código mediante una **salida** (asegurándose de `ViewController.h` seleccionar el archivo):
 
-[![](window-images/edit06.png "Configurar una salida")](window-images/edit06.png#lightbox)
+[![](window-images/edit06.png "Configuración de una salida")](window-images/edit06.png#lightbox)
 
-Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-Para obtener más información sobre cómo trabajar con **salidas** y **acciones**, consulte nuestra [toma de corriente y acción](~/mac/get-started/hello-mac.md#outlets-and-actions) documentación.
+Para obtener más información sobre cómo trabajar con **salidas** y **acciones**, consulte nuestra documentación sobre la [salida y la acción](~/mac/get-started/hello-mac.md#outlets-and-actions) .
 
 <a name="Standard_Window_Workflow" />
 
 ### <a name="standard-window-workflow"></a>Flujo de trabajo de ventana estándar
 
-Cualquier ventana que permite crear y trabajar con en la aplicación de Xamarin.Mac, el proceso es básicamente igual que lo que hemos hecho simplemente anteriormente:
+En el caso de las ventanas creadas y con las que trabaja en la aplicación de Xamarin. Mac, el proceso es básicamente el mismo que se acaba de hacer anteriormente:
 
-1. Para las nuevas ventanas que no son los predeterminados que se agregan automáticamente al proyecto, agregue una nueva definición de ventana al proyecto. Esto se explicará en detalle a continuación.
-1. Haga doble clic en el `Main.storyboard` archivo para abrir el diseño de ventana para su edición en Interface Builder de Xcode.
-1. Arrastre una nueva ventana de diseño de la interfaz de usuario y de enlace de la ventana en la ventana principal del sistema mediante _objetos Segue_ (para obtener más información, consulte el [objetos Segue](~/mac/platform/storyboards/indepth.md#Segues) sección de nuestra [trabajar con guiones gráficos](~/mac/platform/storyboards/indepth.md) documentación).
-1. Establezca las propiedades de ventana necesaria el **Inspector de atributos** y **Inspector de tamaño**.
-1. Arrastre los controles necesarios para crear la interfaz y configurarlos en el **Inspector de atributos**.
-1. Use la **Inspector de tamaño** para controlar el cambio de tamaño para los elementos de interfaz de usuario.
-1. Exponer elementos de interfaz de usuario de la ventana al código de C# a través de **salidas** y **acciones**.
-1. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+1. En el caso de las nuevas ventanas que no son el valor predeterminado que se agrega automáticamente al proyecto, agregue una nueva definición de ventana al proyecto. Esto se explicará con más detalle a continuación.
+1. Haga doble clic en `Main.storyboard` el archivo para abrir el diseño de ventana para su edición en el Interface Builder de Xcode.
+1. Arrastre una ventana nueva al diseño de la interfaz de usuario y enlace la ventana a la ventana principal con _objetos segue_ (para obtener más información, vea la sección [objetos segue](~/mac/platform/storyboards/indepth.md#Segues) de nuestra documentación sobre [Cómo trabajar con guiones gráficos](~/mac/platform/storyboards/indepth.md) ).
+1. Establezca las propiedades de ventana necesarias en el **Inspector de atributos** y el inspector de **tamaño**.
+1. Arrastre los controles necesarios para compilar la interfaz y configurarlos en el **Inspector de atributos**.
+1. Use el **Inspector de tamaño** para controlar el cambio de tamaño de los elementos de la interfaz de usuario.
+1. Exponga los elementos de la interfaz de C# usuario de la ventana al código mediante **salidas** y **acciones**.
+1. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-Ahora que tenemos una ventana básica creada, se examinarán los procesos típicos un Xamarin.Mac hace la aplicación cuando se trabaja con windows. 
+Ahora que tenemos una ventana básica creada, veremos los procesos típicos que realiza una aplicación de Xamarin. Mac al trabajar con Windows. 
 
 <a name="Displaying_the_Default_Window" />
 
 ## <a name="displaying-the-default-window"></a>Mostrar la ventana predeterminada
 
-De forma predeterminada, una nueva aplicación de Xamarin.Mac mostrará automáticamente la ventana definida en el `MainWindow.xib` archivo cuando se inicia:
+De forma predeterminada, una nueva aplicación de Xamarin. Mac mostrará automáticamente la ventana definida en `MainWindow.xib` el archivo cuando se inicie:
 
-[![](window-images/display01.png "Una ventana de ejemplo que ejecuta")](window-images/display01.png#lightbox)
+[![](window-images/display01.png "Ventana de ejemplo en ejecución")](window-images/display01.png#lightbox)
 
-Puesto que hemos modificado el diseño de ventana anterior, ahora incluye una barra de herramientas predeterminado y **vista de texto** control. La siguiente sección en la `Info.plist` es responsable de mostrar esta ventana de archivo:
+Como hemos modificado el diseño de la ventana anterior, ahora incluye una barra de herramientas y un control de **vista de texto** predeterminados. La siguiente sección `Info.plist` del archivo es responsable de mostrar esta ventana:
 
-[![](window-images/display00.png "Edición de Info.plist")](window-images/display00.png#lightbox)
+[![](window-images/display00.png "Edición de info. plist")](window-images/display00.png#lightbox)
 
-El **interfaz principal** lista desplegable se utiliza para seleccionar el guión gráfico que se usará como la interfaz de usuario de la aplicación principal (en este caso `Main.storyboard`).
+La lista desplegable **interfaz principal** se usa para seleccionar el guion gráfico que se usará como la interfaz de usuario de la `Main.storyboard`aplicación principal (en este caso).
 
-Un controlador de vista se agrega automáticamente al proyecto para controlar ese Windows principal que se muestra (junto con su vista principal). Se define en el `ViewController.cs` detectados y se adjuntan a los **propietario del archivo** en Interface Builder en la **Inspector de identidad**:
+Un controlador de vista se agrega automáticamente al proyecto para controlar las ventanas principales que se muestran (junto con la vista principal). Se define en el `ViewController.cs` archivo y se adjunta al **propietario del archivo** en Interface Builder en el inspector de **identidad**:
 
 [![](window-images/display02.png "Establecer el propietario del archivo")](window-images/display02.png#lightbox)
 
-Para la ventana, nos gustaría que tenga un título de `untitled` cuando lo abra por primera vez así que vamos a reemplazar el `ViewWillAppear` método en el `ViewController.cs` para ser similar al siguiente:
+En nuestra ventana, nos gustaría tener un título de `untitled` cuando se abre por primera vez, así que vamos a invalidar el `ViewWillAppear` método `ViewController.cs` en el para que tenga el aspecto siguiente:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -262,21 +262,21 @@ public override void ViewWillAppear ()
 ```    
 
 > [!NOTE]
-> Estamos configurando el valor de la ventana `Title` propiedad en el `ViewWillAppear` método en lugar de la `ViewDidLoad` método porque, mientras que la vista se puede cargar en memoria, no todavía totalmente creada la instancia. Si se ha intentado obtener acceso a la `Title` propiedad en el `ViewDidLoad` método obtendríamos un `null` excepción puesto que la ventana no se ha construido y con cable de seguridad para la propiedad aún.
+> Estamos estableciendo el valor de la `Title` propiedad de la ventana en el `ViewWillAppear` `ViewDidLoad` método en lugar del método porque, mientras que la vista se puede cargar en la memoria, todavía no se ha creado una instancia totalmente. Si se intentó tener acceso `Title` a la propiedad `ViewDidLoad` en el método, se `null` obtendría una excepción, ya que la ventana no se ha construido y se ha conectado a la propiedad.
 
 <a name="Programmatically_Closing_a_Window" />
 
-## <a name="programmatically-closing-a-window"></a>Al cerrar una ventana mediante programación
+## <a name="programmatically-closing-a-window"></a>Cerrar una ventana mediante programación
 
-Puede haber ocasiones en que desea cerrar mediante programación una ventana en una aplicación de Xamarin.Mac, aparte de tener el usuario, haga clic en la ventana **cerrar** botón o usar un elemento de menú. macOS proporciona dos maneras diferentes para cerrar un `NSWindow` mediante programación: `PerformClose` y `Close`.
+Puede haber ocasiones en las que desee cerrar mediante programación una ventana en una aplicación de Xamarin. Mac, a excepción de hacer que el usuario haga clic en el botón **cerrar** de la ventana o usando un elemento de menú. MacOS proporciona dos maneras diferentes de cerrar un `NSWindow` mediante programación: `PerformClose` y `Close`.
 
 <a name="PerformClose" />
 
 ### <a name="performclose"></a>PerformClose
 
-Una llamada a la `PerformClose` método de un `NSWindow` simula el usuario hace clic en la ventana **cerrar** botón momentáneamente resalta el botón y, a continuación, cierre la ventana.
+Al llamar `PerformClose` al método de `NSWindow` un se simula que el usuario hace clic en el botón **cerrar** de la ventana resaltando momentáneamente el botón y cerrando la ventana.
 
-Si la aplicación se implementa el `NSWindow`del `WillClose` eventos, se producirá antes de cerrar la ventana. Si el evento devuelve `false`, entonces no se cerrará la ventana. Si la ventana no tiene un **cerrar** botón o no se puede cerrar por cualquier motivo, el sistema operativo emitirá el sonido de alerta.
+Si la aplicación implementa el `NSWindow`evento de `WillClose` , se generará antes de que se cierre la ventana. Si el evento devuelve `false`, la ventana no se cerrará. Si la ventana no tiene un botón **cerrar** o no se puede cerrar por alguna razón, el SO emitirá el sonido de la alerta.
 
 Por ejemplo:
 
@@ -284,20 +284,20 @@ Por ejemplo:
 MyWindow.PerformClose(this);
 ```
 
-Intente cerrar la `MyWindow` `NSWindow` instancia. Si se realizó correctamente, se cerrará la ventana, de lo contrario, se emitirá el sonido de alerta y se mantengan abiertos.
+Intentaría cerrar la instancia `MyWindow` de `NSWindow` . Si se realiza correctamente, se cerrará la ventana, de lo contrario se emitirá el sonido de la alerta y permanecerá abierto.
 
 <a name="Close" />
 
 ### <a name="close"></a>Cerrar
 
-Una llamada a la `Close` método de un `NSWindow` no simula el usuario hace clic en la ventana **cerrar** botón momentáneamente, resaltando el botón, simplemente cierra la ventana.
+Al llamar `Close` al método de `NSWindow` un no se simula que el usuario haga clic en el botón **cerrar** de la ventana resaltando momentáneamente el botón, simplemente se cierra la ventana.
 
-Una ventana no tiene que ser visibles para cerrarse y un `NSWindowWillCloseNotification` notificación se publicará en el centro de notificaciones predeterminado para la ventana que se va a cerrar.
+Una ventana no tiene que estar visible para cerrarse y se publicará una `NSWindowWillCloseNotification` notificación en el centro de notificaciones predeterminado para que la ventana se cierre.
 
-El `Close` método difiere en dos aspectos importantes de la `PerformClose` método:
+El `Close` método difiere de dos maneras importantes `PerformClose` del método:
 
-1. No intenta generar el `WillClose` eventos.
-2. No simula el usuario hace clic en el **cerrar** botón momentáneamente resaltando el botón.
+1. No intenta generar el `WillClose` evento.
+2. No simula que el usuario haga clic en el botón **cerrar** resaltando momentáneamente el botón.
 
 Por ejemplo:
 
@@ -305,30 +305,30 @@ Por ejemplo:
 MyWindow.Close();
 ```
 
-Para cerrar el `MyWindow` `NSWindow` instancia.
+Se debe cerrar la `MyWindow` `NSWindow` instancia de.
 
 <a name="Modified-Windows-Content" />
 
-## <a name="modified-windows-content"></a>Contenido modificado de Windows
+## <a name="modified-windows-content"></a>Contenido de Windows modificado
 
-En macOS, Apple ha proporcionado una manera de informar al usuario que el contenido de una ventana (`NSWindow`) se ha modificado por el usuario y debe guardarse. Si la ventana contiene contenido modificado, se mostrará un pequeño punto negro en su **cerrar** widget:
+En MacOS, Apple ha proporcionado una manera de informar al usuario de que el usuario ha modificado el`NSWindow`contenido de una ventana () y debe guardarse. Si la ventana contiene contenido modificado, se mostrará un pequeño punto negro en su widget de **cierre** :
 
-[![](window-images/close01.png "Una ventana con el marcador de modificado")](window-images/close01.png#lightbox)
+[![](window-images/close01.png "Una ventana con el marcador modificado")](window-images/close01.png#lightbox)
 
-Si el usuario intenta cerrar la ventana o salir de la aplicación de Mac, aunque hay que no haya guardado los cambios en el contenido de la ventana, debe presentar un [cuadro de diálogo](~/mac/user-interface/dialog.md) o [hoja Modal](~/mac/user-interface/dialog.md) y permitir al usuario guardar los cambios realizados primera:
+Si el usuario intenta cerrar la ventana o salir de la aplicación Mac mientras hay cambios sin guardar en el contenido de la ventana, debe presentar un cuadro de [diálogo](~/mac/user-interface/dialog.md) o una [hoja modal](~/mac/user-interface/dialog.md) y permitir que el usuario guarde primero los cambios:
 
-[![](window-images/close02.png "Guardar hoja se muestra cuando se cierra la ventana")](window-images/close02.png#lightbox)
+[![](window-images/close02.png "Una hoja de almacenamiento que se muestra cuando se cierra la ventana")](window-images/close02.png#lightbox)
 
-### <a name="marking-a-window-as-modified"></a>Marcar una ventana como modificado
+### <a name="marking-a-window-as-modified"></a>Marcar una ventana como modificada
 
-Para marcar una ventana como la necesidad de modificar el contenido, use el código siguiente:
+Para marcar una ventana como con contenido modificado, use el código siguiente:
 
 ```csharp
 // Mark Window content as modified
 Window.DocumentEdited = true;
 ```
 
-Y una vez que se ha guardado el cambio, desactive la marca modificada utilizando:
+Una vez guardado el cambio, borre la marca modificada mediante:
 
 ```csharp
 // Mark Window content as not modified
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>Guardar los cambios antes de cerrar una ventana
 
-Para ver el usuario al cerrar una ventana y se le permite guardar contenido modificado con antelación, deberá crear una subclase de `NSWindowDelegate` e invalidar sus `WindowShouldClose` método. Por ejemplo:
+Para ver si el usuario cierra una ventana y le permite guardar el contenido modificado de antemano, tendrá que crear una subclase de `NSWindowDelegate` e invalidar su `WindowShouldClose` método. Por ejemplo:
 
 ```csharp
 using System;
@@ -423,7 +423,7 @@ namespace SourceWriter
 }
 ```
 
-Usar el código siguiente para asociar una instancia de este delegado a la ventana:
+Use el código siguiente para adjuntar una instancia de este delegado a la ventana:
 
 ```csharp
 // Set delegate
@@ -432,7 +432,7 @@ Window.Delegate = new EditorWindowDelegate(Window);
 
 ### <a name="saving-changes-before-closing-the-app"></a>Guardar los cambios antes de cerrar la aplicación
 
-Por último, debe comprobar su App Xamarin.Mac para ver si alguno de sus Windows contienen contenido modificado y permitir al usuario guardar los cambios antes de salir. Para ello, edite su `AppDelegate.cs` de archivo, reemplace el `ApplicationShouldTerminate` método y darle un aspecto similar al siguiente:
+Por último, la aplicación de Xamarin. Mac debe comprobar si alguna de sus ventanas contiene contenido modificado y permitir al usuario guardar los cambios antes de salir. Para ello, edite `AppDelegate.cs` el archivo, invalide el `ApplicationShouldTerminate` método y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
@@ -452,21 +452,21 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 <a name="Working_with_Multiple_Windows" />
 
-## <a name="working-with-multiple-windows"></a>Trabajar con varios Windows
+## <a name="working-with-multiple-windows"></a>Trabajar con varias ventanas
 
-Mayoría de las aplicaciones Mac en función de documento puede editar varios documentos al mismo tiempo. Por ejemplo, un editor de texto puede tener varios archivos de texto Abrir para editarlo al mismo tiempo. De forma predeterminada, nuestra nueva aplicación de Xamarin.Mac tiene un **archivo** menú con un **New** elemento automáticamente por cable de seguridad para el `newDocument:` **acción**.
+La mayoría de las aplicaciones Mac basadas en documentos pueden editar varios documentos al mismo tiempo. Por ejemplo, un editor de texto puede tener varios archivos de texto abiertos para editarlos al mismo tiempo. De forma predeterminada, la nueva aplicación de Xamarin. Mac tiene un menú **archivo** con un **nuevo** elemento conectado automáticamente a la `newDocument:` **acción**.
 
-Vamos a activar este nuevo elemento y permite al usuario abrir varias copias de nuestra ventana principal para editar varios documentos a la vez.
+Vamos a activar este nuevo elemento y permitir que el usuario abra varias copias de la ventana principal para editar varios documentos a la vez.
 
-Vamos a editar nuestro `AppDelegate.cs` archivo y agregue la siguiente propiedad calculada:
+Vamos a editar `AppDelegate.cs` el archivo y agregaremos la siguiente propiedad calculada:
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
 ```
 
-Vamos a usar para realizar un seguimiento del número de archivos no guardados por lo que podemos proporcionar comentarios al usuario (según las directrices de Apple según se explicó anteriormente).
+Lo usaremos para realizar el seguimiento del número de archivos no guardados para que podamos enviarnos sus comentarios al usuario (según las instrucciones de Apple, tal como se ha explicado anteriormente).
 
-A continuación, agregue el siguiente método:
+A continuación, agregue el método siguiente:
 
 ```csharp
 [Export ("newDocument:")]
@@ -483,35 +483,35 @@ void NewDocument (NSObject sender) {
 }
 ```
 
-Este código crea una nueva versión de nuestro controlador de ventana, carga la nueva ventana, hace que sea el principal y ventana de la clave y lo establece el título. Ahora, si se ejecute la aplicación y seleccione **New** desde el **archivo** menú se abre y se mostrará una nueva ventana del editor:
+Este código crea una nueva versión del controlador de ventana, carga la nueva ventana, la convierte en la ventana principal y clave, y la establece como título. Ahora, Si ejecutamos la aplicación y seleccionamos **nuevo** en el menú **archivo** , se abrirá una nueva ventana del editor y se mostrará:
 
-[![](window-images/display04.png "Se ha agregado una nueva ventana sin título")](window-images/display04.png#lightbox)
+[![](window-images/display04.png "Se agregó una nueva ventana sin título")](window-images/display04.png#lightbox)
 
-Si se abre el **Windows** menú, puede ver la aplicación se seguimiento y controlar nuestra ventanas abiertas automáticamente:
+Si se abre el menú de **Windows** , puede ver que la aplicación realiza el seguimiento y el control automático de las ventanas abiertas:
 
-[![](window-images/display05.png "El menú de windows")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "Menú ventanas")](window-images/display05.png#lightbox)
 
-Para obtener más información sobre cómo trabajar con menús en una aplicación de Xamarin.Mac, consulte nuestra [trabajar con menús](~/mac/user-interface/menu.md) documentación.
+Para obtener más información sobre cómo trabajar con menús en una aplicación de Xamarin. Mac, consulte nuestra documentación sobre [Cómo trabajar con menús](~/mac/user-interface/menu.md) .
 
 <a name="Getting_the_Currently_Active_Window" />
 
-### <a name="getting-the-currently-active-window"></a>Introducción a la ventana activa
+### <a name="getting-the-currently-active-window"></a>Obtener la ventana activa actualmente
 
-En una aplicación de Xamarin.Mac que puede abrir varias ventanas (documentos), hay veces cuando necesite hacer que la ventana actual, de nivel superior (la ventana de claves). El código siguiente devuelve la ventana de clave:
+En una aplicación de Xamarin. Mac que puede abrir varias ventanas (documentos), hay ocasiones en las que necesitará obtener la ventana actual y en el nivel superior (la ventana de clave). El código siguiente devolverá la ventana de clave:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow;
 ```
 
-Se puede llamar en cualquier clase o método que debe tener acceso a la ventana actual, la clave. Si no hay ninguna ventana está abierta, devolverá `null`.
+Se puede llamar a en cualquier clase o método que necesite tener acceso a la ventana de clave actual. Si no hay ninguna ventana abierta, se devolverá `null`.
 
 <a name="Accessing-All-App-Windows" />
 
-### <a name="accessing-all-app-windows"></a>Obtener acceso a todos los de aplicación de Windows
+### <a name="accessing-all-app-windows"></a>Acceder a todas las ventanas de la aplicación
 
-Puede haber ocasiones donde necesite tener acceso a todas las ventanas que la aplicación de Xamarin.Mac tiene actualmente abierto. Por ejemplo ver si un archivo que el usuario desea abrir ya está abierto en una ventana de salida.
+Puede haber ocasiones en las que necesite tener acceso a todas las ventanas que la aplicación de Xamarin. Mac tiene abierta actualmente. Por ejemplo, para ver si un archivo que el usuario desea abrir ya está abierto en una ventana de salida.
 
-El `NSApplication.SharedApplication` mantiene un `Windows` propiedad que contiene una matriz de todas las ventanas abiertas en la aplicación. Puede recorrer en iteración esta matriz para tener acceso a todas las ventanas activas de la aplicación. Por ejemplo:
+`NSApplication.SharedApplication` Mantiene una`Windows` propiedad que contiene una matriz de todas las ventanas abiertas en la aplicación. Puede recorrer en iteración esta matriz para tener acceso a todas las ventanas actuales de la aplicación. Por ejemplo:
 
 ```csharp
 // Is the file already open?
@@ -525,17 +525,17 @@ for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
 }
 ```
 
-En el ejemplo de código se van a convertir cada ventana devuelta a la personalizada `ViewController` clase en nuestra aplicación y la comprobación del valor de un personalizado `Path` propiedad con respecto a la ruta de acceso de un archivo que el usuario desea abrir. Si el archivo ya está abierto, se la llevamos esa ventana al frente.
+En el código de ejemplo, se convierte cada ventana devuelta a `ViewController` la clase personalizada en nuestra aplicación y se prueba el valor de `Path` una propiedad personalizada con respecto a la ruta de acceso de un archivo que el usuario desea abrir. Si el archivo ya está abierto, se trae la ventana al principio.
 
 <a name="Adjusting_the_Window_Size_in_Code" />
 
-## <a name="adjusting-the-window-size-in-code"></a>Ajustar el tamaño de ventana de código
+## <a name="adjusting-the-window-size-in-code"></a>Ajustar el tamaño de la ventana en el código
 
-Hay veces cuando la aplicación necesita cambiar el tamaño de una ventana de código. Para cambiar el tamaño y posición de una ventana, ajustar de `Frame` propiedad. Al ajustar el tamaño de una ventana, normalmente deberá ajustar también su origen, para mantener la ventana en la misma ubicación debido a sistema de coordenadas de macOS.
+Hay ocasiones en las que la aplicación necesita cambiar el tamaño de una ventana en el código. Para cambiar el tamaño y la `Frame` posición de una ventana, debe ajustar su propiedad. Al ajustar el tamaño de una ventana, normalmente también debe ajustar su origen para mantener la ventana en la misma ubicación debido al sistema de coordenadas de macOS.
 
-A diferencia de iOS en la esquina superior izquierda representa (0,0), macOS usa un sistema de coordenadas matemáticos donde la esquina inferior izquierda de la pantalla representa (0,0). En iOS las coordenadas de aumentan la medida que se desplaza hacia abajo, hacia la derecha. En macOS, las coordenadas aumenten en valores hacia arriba a la derecha. 
+A diferencia de iOS en el que la esquina superior izquierda representa (0,0), macOS usa un sistema de coordenadas matemáticos donde la esquina inferior izquierda de la pantalla representa (0,0). En iOS, las coordenadas aumentan a medida que se desplaza hacia abajo hacia la derecha. En macOS, las coordenadas aumentan en el valor hacia la derecha. 
 
-Ejemplo de código siguiente cambia el tamaño de una ventana:
+En el código de ejemplo siguiente se cambia el tamaño de una ventana:
 
 ```csharp
 nfloat y = 0;
@@ -549,19 +549,19 @@ SetFrame (frame, true);
 ```
 
 > [!IMPORTANT]
-> Al ajustar un tamaño de windows y la ubicación en el código, deberá asegurarse de que respetan los tamaños mínimos y máximo que se configuraron en el generador de interfaz. Esto no se aplicarán automáticamente y podrá hacer que la ventana mayores o menores que estos límites.
+> Al ajustar el tamaño y la ubicación de Windows en el código, debe asegurarse de que respeta los tamaños mínimo y máximo que ha establecido en Interface Builder. Esto no se respetará automáticamente y podrá hacer que la ventana sea más grande o más pequeña que estos límites.
 
 <a name="Monitoring-Window-Size-Changes" />
 
-## <a name="monitoring-window-size-changes"></a>Supervisión de los cambios de tamaño de ventana
+## <a name="monitoring-window-size-changes"></a>Supervisión de los cambios de tamaño de la ventana
 
-Puede haber ocasiones en que deba supervisar los cambios en el tamaño de una ventana dentro de una aplicación de Xamarin.Mac. Por ejemplo, para volver a dibujar el contenido para ajustarse al tamaño nuevo.
+Puede haber ocasiones en las que necesite supervisar los cambios en el tamaño de una ventana dentro de la aplicación de Xamarin. Mac. Por ejemplo, para volver a dibujar el contenido para ajustarse al nuevo tamaño.
 
-Para supervisar los cambios de tamaño, en primer lugar asegúrese de que haya asignado una clase personalizada para el controlador de ventana en Interface Builder de Xcode. Por ejemplo, `MasterWindowController` en lo siguiente:
+Para supervisar los cambios de tamaño, primero asegúrese de que ha asignado una clase personalizada para el controlador de ventana en la Interface Builder de Xcode. Por ejemplo, `MasterWindowController` en lo siguiente:
 
-[![](window-images/resize01.png "El Inspector de identidad")](window-images/resize01.png#lightbox)
+[![](window-images/resize01.png "Inspector de identidad")](window-images/resize01.png#lightbox)
 
-A continuación, modifique la clase de controlador de ventana personalizados y el monitor del `DidResize` eventos en la ventana del controlador para recibir una notificación de cambios de tamaño en vivo. Por ejemplo:
+Después, edite la clase de controlador de ventana personalizada `DidResize` y supervise el evento en la ventana del controlador para recibir notificaciones de los cambios de tamaño en directo. Por ejemplo:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -574,7 +574,7 @@ public override void WindowDidLoad ()
 }
 ```
 
-Si lo desea, puede usar el `DidEndLiveResize` evento solo se recibirá una notificación cuando el usuario ha terminado de cambiar el tamaño de la ventana. Por ejemplo:
+Opcionalmente, puede usar el `DidEndLiveResize` evento para recibir una notificación solo después de que el usuario haya terminado de cambiar el tamaño de la ventana. Por ejemplo:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -590,11 +590,11 @@ public override void WindowDidLoad ()
 
 <a name="Setting_a_Window’s_Title_and_Represented_File" />
 
-## <a name="setting-a-windows-title-and-represented-file"></a>Configuración de una ventana del título y representa el archivo
+## <a name="setting-a-windows-title-and-represented-file"></a>Establecer el título y el archivo representado de una ventana
 
-Cuando se trabaja con windows que representan documentos, `NSWindow` tiene un `DocumentEdited` propiedad que si se establece en `true` muestra un pequeño punto en el botón Cerrar para proporcionar al usuario una indicación de que el archivo se ha modificado y debe guardarse antes de cerrarse.
+Cuando se trabaja con ventanas que representan documentos `NSWindow` , tiene `DocumentEdited` una propiedad que, si `true` se establece en, muestra un punto pequeño en el botón Cerrar para dar al usuario una indicación de que el archivo se ha modificado y debe guardarse antes de cerrarse.
 
-Vamos a editar nuestro `ViewController.cs` de archivos y realice los cambios siguientes:
+Vamos a editar `ViewController.cs` el archivo y realizar los cambios siguientes:
 
 ```csharp
 public bool DocumentEdited {
@@ -641,19 +641,19 @@ public override void AwakeFromNib ()
 }
 ```
 
-También se están supervisando el `WillClose` eventos en la ventana y la comprobación del estado de la `DocumentEdited` propiedad. Si es `true` necesitamos proporcionar al usuario la capacidad de guardar los cambios en el archivo. Si se ejecuta nuestra aplicación y escriba algún texto, se mostrará el punto:
+También estamos supervisando `WillClose` el evento en la ventana y comprobando el estado `DocumentEdited` de la propiedad. Si es `true` necesario proporcionar al usuario la capacidad de guardar los cambios en el archivo. Si ejecutamos la aplicación y escribemos texto, se mostrará el punto:
 
 [![](window-images/file01.png "Una ventana modificada")](window-images/file01.png#lightbox)
 
-Si se intenta cerrar la ventana, obtenemos una alerta:
+Si intentamos cerrar la ventana, obtenemos una alerta:
 
-[![](window-images/file02.png "Mostrar una operación de guardar cuadro de diálogo")](window-images/file02.png#lightbox)
+[![](window-images/file02.png "Mostrar un cuadro de diálogo guardar")](window-images/file02.png#lightbox)
 
-Si estamos cargando un documento desde un archivo podemos establecer el título de la ventana en el archivo con el nombre del `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` método (dado que `path` es una cadena que representa el archivo está abierto). Además, podemos establecer la dirección URL del archivo con el `window.RepresentedUrl = url;` método.
+Si estamos cargando un documento desde un archivo, podemos establecer el título de la ventana en el nombre del archivo mediante el `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` método (dado que `path` es una cadena que representa el archivo que se está abriendo). Además, se puede establecer la dirección URL del archivo mediante el `window.RepresentedUrl = url;` método.
 
-Si la dirección URL apunta a un tipo de archivo conocido por el sistema operativo, su icono se mostrará en la barra de título. Si el usuario hace clic en el icono, se mostrará la ruta de acceso al archivo.
+Si la dirección URL apunta a un tipo de archivo conocido por el sistema operativo, se mostrará el icono en la barra de título. Si el usuario hace clic con el botón derecho en el icono, se mostrará la ruta de acceso al archivo.
 
-Vamos a editar el `AppDelegate.cs` archivo y agregue el siguiente método:
+Vamos a editar el `AppDelegate.cs` archivo y agregar el método siguiente:
 
 ```csharp
 [Export ("openDocument:")]
@@ -688,93 +688,93 @@ void OpenDialog (NSObject sender)
 }
 ```
 
-Ahora, si ejecutamos nuestra aplicación, seleccione **abrir...**  desde el **archivo** menú, seleccione un archivo de texto desde el **abrir** diálogo cuadro y ábralo:
+Ahora, Si ejecutamos la aplicación, seleccione **abrir...** en el menú **archivo** , seleccione un archivo de texto en el cuadro de diálogo **abrir** y ábralo:
 
-[![](window-images/file03.png "Un cuadro de diálogo Abrir")](window-images/file03.png#lightbox)
+[![](window-images/file03.png "Cuadro de diálogo abrir")](window-images/file03.png#lightbox)
 
-Se mostrará el archivo y el título se establecerá con el icono del archivo:
+Se mostrará el archivo y se establecerá el título con el icono del archivo:
 
-[![](window-images/file04.png "El contenido de un archivo cargado")](window-images/file04.png#lightbox)
+[![](window-images/file04.png "Contenido de un archivo cargado")](window-images/file04.png#lightbox)
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
 ## <a name="adding-a-new-window-to-a-project"></a>Agregar una nueva ventana a un proyecto
 
-Aparte de la ventana de documento principal, una aplicación de Xamarin.Mac posible que deba mostrar otros tipos de windows para el usuario, como las preferencias o Inspector de paneles.
+Además de la ventana principal del documento, es posible que una aplicación de Xamarin. Mac necesite Mostrar otros tipos de ventanas al usuario, como preferencias o paneles del inspector.
 
 Para agregar una nueva ventana, haga lo siguiente:
 
-1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder de Xcode.
-2. Arrastre una nueva **controlador de ventana** desde el **biblioteca** y colóquela en la **superficie de diseño**:
+1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo para abrirlo para su edición en el Interface Builder de Xcode.
+2. Arrastre un nuevo **controlador de ventana** desde la **biblioteca** y colóquelo en el **superficie de diseño**:
 
-    [![](window-images/new01.png "Seleccionar un nuevo controlador de ventana en la biblioteca")](window-images/new01.png#lightbox)
-3. En el **Inspector de identidad**, escriba `PreferencesWindow` para el **identificador de guión gráfico**: 
+    [![](window-images/new01.png "Selección de un nuevo controlador de ventana en la biblioteca")](window-images/new01.png#lightbox)
+3. En el **Inspector de identidad**, `PreferencesWindow` escriba para el **ID. de guion gráfico**: 
 
     [![](window-images/new02.png "Establecer el identificador de guión gráfico")](window-images/new02.png#lightbox)
-4. Diseñar la interfaz: 
+4. Diseñe la interfaz: 
 
     [![](window-images/new03.png "Diseñar la interfaz de usuario")](window-images/new03.png#lightbox)
-5. Abra el menú de la aplicación (`MacWindows`), seleccione **preferencias...** , Control y haga clic y arrastre a la nueva ventana: 
+5. Abra el menú de la`MacWindows`aplicación (), seleccione **preferencias...** , haga clic en el control y arrástrelo a la nueva ventana: 
 
     [![](window-images/new05.png "Creación de un segue")](window-images/new05.png#lightbox)
-6. Seleccione **mostrar** en el menú emergente.
-7. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+6. Seleccione **Mostrar** en el menú emergente.
+7. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-Si se ejecuta el código y seleccione el **preferencias...**  desde el **menú aplicación**, se mostrará la ventana:
+Si ejecutamos el código y seleccionamos las **preferencias...** en el menú de la **aplicación**, se mostrará la ventana:
 
-[![](window-images/new04.png "Un menú preferencias de ejemplo")](window-images/new04.png#lightbox)
+[![](window-images/new04.png "Menú de preferencias de ejemplo")](window-images/new04.png#lightbox)
 
 <a name="Working_with_Panels" />
 
 ## <a name="working-with-panels"></a>Trabajar con paneles
 
-Como se indicó al principio de este artículo, un panel flota sobre otras ventanas y proporciona las herramientas o los controles que los usuarios pueden trabajar con mientras haya documentos abiertos. 
+Como se indicó al principio de este artículo, un panel flota sobre otras ventanas y proporciona herramientas o controles con los que los usuarios pueden trabajar mientras los documentos están abiertos. 
 
-Al igual que cualquier otro tipo de ventana que permite crear y trabajar con en la aplicación de Xamarin.Mac, el proceso es básicamente el mismo:
+Al igual que cualquier otro tipo de ventana que se crea y con la que se trabaja en la aplicación de Xamarin. Mac, el proceso es básicamente el mismo:
 
-1. Agregar una nueva definición de ventana al proyecto.
-2. Haga doble clic en el `.xib` archivo para abrir el diseño de ventana para su edición en Interface Builder de Xcode.
-3. Establezca las propiedades de ventana necesaria el **Inspector de atributos** y **Inspector de tamaño**.
-4. Arrastre los controles necesarios para crear la interfaz y configurarlos en el **Inspector de atributos**.
-5. Use la **Inspector de tamaño** para controlar el cambio de tamaño para los elementos de interfaz de usuario.
-6. Exponer elementos de interfaz de usuario de la ventana al código de C# a través de **salidas** y **acciones**.
-7. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+1. Agregue una nueva definición de ventana al proyecto.
+2. Haga doble clic en `.xib` el archivo para abrir el diseño de ventana para su edición en el Interface Builder de Xcode.
+3. Establezca las propiedades de ventana necesarias en el **Inspector de atributos** y el inspector de **tamaño**.
+4. Arrastre los controles necesarios para compilar la interfaz y configurarlos en el **Inspector de atributos**.
+5. Use el **Inspector de tamaño** para controlar el cambio de tamaño de los elementos de la interfaz de usuario.
+6. Exponga los elementos de la interfaz de C# usuario de la ventana al código mediante **salidas** y **acciones**.
+7. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-En el **Inspector de atributos**, tiene las siguientes opciones específicas de paneles:
+En el **Inspector de atributos**, tiene las siguientes opciones específicas de los paneles:
 
-[![](window-images/panel03.png "El Inspector de atributos")](window-images/panel03.png#lightbox)
+[![](window-images/panel03.png "Inspector de atributo")](window-images/panel03.png#lightbox)
 
-- **Estilo** -permiten ajustar el estilo del panel de: Panel regular (parece una ventana estándar), Panel de utilidad (tiene una barra de título más pequeña), Panel de HUD (es translúcido y la barra de título es parte del fondo).
-- **Activación no** -determina en el panel se convierte en la ventana de la clave.
-- **Documentar Modal** -si documento Modal, el panel solo estará por encima de windows de la aplicación, else flota por encima de todo.
+- **Estilo** : permite ajustar el estilo del panel desde: Panel normal (se parece a una ventana estándar), el panel de utilidad (tiene una barra de título más pequeña), el panel HUD (es traslúcido y la barra de título forma parte del fondo).
+- **No Activation** : determina que en el panel se convierte en la ventana de clave.
+- **Documento modal** : Si el documento es modal, el panel solo flotará sobre las ventanas de la aplicación, de lo contrario se flota por encima de todo.
 
 
-Para agregar un nuevo Panel, haga lo siguiente:
+Para agregar un nuevo panel, haga lo siguiente:
 
-1. En el **el Explorador de soluciones**, haga doble clic en el proyecto y seleccione **agregar** > **nuevo archivo...** .
-2. En el cuadro de diálogo nuevo archivo, seleccione **Xamarin.Mac** > **ventana de Cocoa con controlador**:
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **nuevo archivo..** .
+2. En el cuadro de diálogo nuevo archivo, seleccione la**ventana de cacao de** **Xamarin. Mac** > con el controlador:
 
     [![](window-images/panels00.png "Agregar un nuevo controlador de ventana")](window-images/panels00.png#lightbox)
 3. Escriba `DocumentPanel` para el **Nombre** y haga clic en el botón **Nuevo**.
-4. Haga doble clic en el `DocumentPanel.xib` archivo para abrirlo y editarlo en Interface Builder: 
+4. Haga doble clic en `DocumentPanel.xib` el archivo para abrirlo y editarlo en Interface Builder: 
 
-    [![](window-images/new02.png "El panel de edición")](window-images/new02.png#lightbox)
-5. Eliminar la ventana existente y arrastre un Panel desde el **Inspector de biblioteca** en el **Editor de la interfaz**: 
+    [![](window-images/new02.png "Editar el panel")](window-images/new02.png#lightbox)
+5. Elimine la ventana existente y arrastre un panel desde el **Inspector de biblioteca** en el editor de la **interfaz**: 
 
-    [![](window-images/panels01.png "Eliminación de la ventana existente")](window-images/panels01.png#lightbox)
-6. Enlazar el panel hasta el **propietario del archivo** - **ventana** - **toma**: 
+    [![](window-images/panels01.png "Eliminando la ventana existente")](window-images/panels01.png#lightbox)
+6. Enganche el panel hasta la**salida**de la**ventana** -  -  **propietaria del archivo**: 
 
-    [![](window-images/panels02.png "Arrastrar para crear el panel")](window-images/panels02.png#lightbox)
-7. Cambie a la **Inspector de identidad** y set (clase) del Panel `DocumentPanel`: 
+    [![](window-images/panels02.png "Arrastrar para conectar el panel")](window-images/panels02.png#lightbox)
+7. Cambie al **Inspector** de identidades y establezca la clase del panel `DocumentPanel`en: 
 
-    [![](window-images/panels03.png "Configuración de clase del panel")](window-images/panels03.png#lightbox)
-8. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
-9. Editar el `DocumentPanel.cs` de archivo y cambie la definición de clase a lo siguiente: 
+    [![](window-images/panels03.png "Establecer la clase del panel")](window-images/panels03.png#lightbox)
+8. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
+9. Edite `DocumentPanel.cs` el archivo y cambie la definición de clase por lo siguiente: 
 
     `public partial class DocumentPanel : NSPanel`
 10. Guarde los cambios en el archivo.
 
-Editar el `AppDelegate.cs` y realice la `DidFinishLaunching` método aspecto parecido al siguiente:
+Edite `AppDelegate.cs` el archivo y haga `DidFinishLaunching` que el método tenga el aspecto siguiente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -788,21 +788,21 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Si ejecutamos nuestra aplicación, se mostrará el panel:
 
-[![](window-images/panels04.png "El panel en una aplicación en ejecución")](window-images/panels04.png#lightbox)
+[![](window-images/panels04.png "Panel en una aplicación en ejecución")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> Panel de Windows han quedado en desuso por Apple y debe reemplazarse por **Interfaces del Inspector de**. Para obtener un ejemplo completo de creación de un **Inspector** en una aplicación de Xamarin.Mac, consulte nuestra [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) aplicación de ejemplo.
+> Las ventanas de panel están desusadas por Apple y deben reemplazarse por **interfaces de inspector**. Para ver un ejemplo completo de cómo crear un **Inspector** en una aplicación de Xamarin. Mac, consulte nuestra aplicación de ejemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha tomado una visión detallada de trabajar con Windows y paneles en una aplicación de Xamarin.Mac. Se ha visto los distintos tipos y usos de Windows y los paneles, cómo crear y mantener Windows y paneles en Interface Builder de Xcode y cómo trabajar con Windows y los paneles en código C#.
+En este artículo se ha realizado una visión detallada del trabajo con ventanas y paneles en una aplicación de Xamarin. Mac. Vimos los distintos tipos y usos de ventanas y paneles, cómo crear y mantener ventanas y paneles en la Interface Builder de Xcode y cómo trabajar con ventanas y paneles en C# el código.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacWindows (ejemplo)](https://developer.xamarin.com/samples/mac/MacWindows/)
-- [MacInspector (ejemplo)](https://developer.xamarin.com/samples/mac/MacInspector/)
+- [MacWindows (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacInspector (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con menús](~/mac/user-interface/menu.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

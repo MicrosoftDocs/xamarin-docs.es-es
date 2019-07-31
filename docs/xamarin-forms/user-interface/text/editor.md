@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 1f9cd0acd201f124f4a4577fec23dce52aee627d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649546"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657511"
 ---
 # <a name="xamarinforms-editor"></a>Editor de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Entrada de texto multilínea_
 
@@ -61,7 +61,7 @@ var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Co
 
 ### <a name="preventing-text-entry"></a>Impedir la entrada de texto
 
-Pueden ser impide que los usuarios modificar el texto en un [ `Editor` ](xref:Xamarin.Forms.Editor) estableciendo el `IsReadOnly` propiedad, que tiene un valor predeterminado de `false`a `true`:
+Se puede impedir que los usuarios modifiquen el texto en [`Editor`](xref:Xamarin.Forms.Editor) un estableciendo la `IsReadOnly` propiedad, que tiene un valor predeterminado de `false`, en `true`:
 
 ```xaml
 <Editor Text="This is a read-only Editor"
@@ -73,7 +73,7 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 ```
 
 > [!NOTE]
-> El `IsReadonly` propiedad no modifica la apariencia visual de un [ `Editor` ](xref:Xamarin.Forms.Editor), a diferencia el `IsEnabled` propiedad que también cambia la apariencia visual de la `Editor` a gris.
+> La `IsReadonly` propiedad no modifica la apariencia visual de un [`Editor`](xref:Xamarin.Forms.Editor), `Editor` a diferencia de la `IsEnabled` propiedad que también cambia la apariencia visual del a gris.
 
 ### <a name="limiting-input-length"></a>Limitar la longitud de entrada
 
@@ -189,9 +189,9 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 
 ### <a name="enabling-and-disabling-text-prediction"></a>Habilitación y deshabilitación de la predicción de texto
 
-El `IsTextPredictionEnabled` propiedad controla si la predicción de texto y automática está habilitada la corrección de texto. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escriba texto, se presentan las predicciones de word.
+La `IsTextPredictionEnabled` propiedad controla si está habilitada la predicción de texto y la corrección de texto automática. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escriba texto, se presentan las predicciones de word.
 
-Sin embargo, para algunos escenarios de entrada de texto, como escribir un nombre de usuario, la predicción de texto y texto automático corrección proporciona una experiencia negativa y debe deshabilitarse estableciendo el `IsTextPredictionEnabled` propiedad `false`:
+Sin embargo, en algunos escenarios de entrada de texto, como la especificación de un nombre de usuario, la predicción de texto y la corrección automática de texto proporcionan `IsTextPredictionEnabled` una experiencia `false`negativa y se deben deshabilitar estableciendo la propiedad en:
 
 ```xaml
 <Editor ... IsTextPredictionEnabled="false" />
@@ -202,7 +202,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
 
 > [!NOTE]
-> Cuando el `IsTextPredictionEnabled` propiedad está establecida en `false`, y un teclado personalizado no es que se va a usar, la predicción de texto y automática se deshabilita la corrección de texto. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) se ha establecido que deshabilita la predicción de texto, el `IsTextPredictionEnabled` se omite. Por lo tanto, no se puede usar la propiedad para habilitar la predicción de texto para un `Keyboard` que deshabilita de forma explícita.
+> Cuando la `IsTextPredictionEnabled` propiedad se establece en `false`y no se usa un teclado personalizado, se deshabilita la predicción de texto y la corrección de texto automática. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) se ha establecido que deshabilita la predicción de texto, el `IsTextPredictionEnabled` se omite. Por lo tanto, no se puede usar la propiedad para habilitar la predicción de texto para un `Keyboard` que deshabilita de forma explícita.
 
 ### <a name="colors"></a>Colores
 
@@ -260,11 +260,11 @@ Asegúrese de que los colores de fondo y de texto que elija puede utilizar en ca
 - [Completado](xref:Xamarin.Forms.Editor.Completed) &ndash; se genera cuando el usuario ha finalizado la entrada presionando la tecla ENTRAR del teclado.
 
 > [!NOTE]
-> El [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) (clase), desde el que [ `Entry` ](xref:Xamarin.Forms.Entry) hereda, también tiene [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) y [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)eventos.
+> La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la [`Entry`](xref:Xamarin.Forms.Entry) que hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) eventos [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) y.
 
 ### <a name="completed"></a>Completada
 
-El `Completed` evento sirve para reaccionar a la finalización de una interacción con un `Editor`. `Completed` se produce cuando el usuario finaliza la entrada con un campo especificando la tecla ENTRAR del teclado (o presionando la tecla Tab en UWP). El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
+El `Completed` evento sirve para reaccionar a la finalización de una interacción con un `Editor`. `Completed`se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -360,5 +360,5 @@ Title="Editor Demo">
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Editor de API](xref:Xamarin.Forms.Editor)

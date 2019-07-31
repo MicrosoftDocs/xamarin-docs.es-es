@@ -7,18 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d323aa6616f7547ab91dfe2b394c339e273d61c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322299"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650022"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
 Como ha visto en los dos artículos anteriores, el [ `SKShader` ](xref:SkiaSharp.SKShader) clase puede crear degradados lineales o circulares. En este artículo se centra en la `SKShader` objeto que usa un mapa de bits en un área de mosaico. El mapa de bits se puede repetir horizontalmente y verticalmente, ya sea en su orientación original o como alternativa volteado horizontalmente y verticalmente. El volteo evita discontinuidades entre los iconos:
 
@@ -42,7 +42,7 @@ En este artículo contiene varios ejemplos del uso de esta transformación de ma
 
 ## <a name="exploring-the-tile-modes"></a>Exploración de los modos de mosaico
 
-El primer programa en el **mosaico de mapa de bits** sección de la **sombreadores y otros efectos** página de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo Muestra los efectos de los dos `SKShaderTileMode` argumentos. El **modos de voltear mosaico de mapa de bits** archivo XAML crea instancias de un `SKCanvasView` y dos `Picker` vistas que le permiten seleccionar un `SKShaderTilerMode` valor de disposición en mosaico horizontal y vertical. Tenga en cuenta que una matriz de los `SKShaderTileMode` miembros se define en el `Resources` sección:
+El primer programa en el **mosaico de mapa de bits** sección de la **sombreadores y otros efectos** página de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo Muestra los efectos de los dos `SKShaderTileMode` argumentos. El **modos de voltear mosaico de mapa de bits** archivo XAML crea instancias de un `SKCanvasView` y dos `Picker` vistas que le permiten seleccionar un `SKShaderTilerMode` valor de disposición en mosaico horizontal y vertical. Tenga en cuenta que una matriz de los `SKShaderTileMode` miembros se define en el `Resources` sección:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ Tenga en cuenta que el `SKShaderTileMode` argumentos `CreateBitmap` son ambos `M
 
 Es necesario algún trabajo para obtener un mapa de bits adecuado para el icono. Ésta no funciona muy bien porque destaca el brick más oscuro demasiado. Con frecuencia aparece dentro de las imágenes repetidas, revelar el hecho de que este paredes de ladrillo se construyen a partir de un mapa de bits más pequeño.
 
-El **Media** carpeta de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo también incluye esta imagen de una pared de piedra:
+El **Media** carpeta de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo también incluye esta imagen de una pared de piedra:
 
 ![Icono del muro de piedra](bitmap-tiling-images/StoneWallTile.jpg "muro de piedra icono")
 
@@ -366,7 +366,7 @@ Si la transformación se aplica al icono individual, a continuación, se debe gi
 
 En la sección [ **icono alineación**](#tile-alignment), verá un ejemplo de una transformación de traslación que se aplica para el sombreador.
 
-Independiente [ **reloj Cat** ](https://developer.xamarin.com/samples/xamarin-forms/CatClock) ejemplo (no forma parte de **SkiaSharpFormsDemos**) simula un grano de madera en segundo plano mediante el mosaico de mapa de bits en función de este mapa de bits 240 píxeles cuadrado:
+Independiente [ **reloj Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) ejemplo (no forma parte de **SkiaSharpFormsDemos**) simula un grano de madera en segundo plano mediante el mosaico de mapa de bits en función de este mapa de bits 240 píxeles cuadrado:
 
 ![Nivel de detalle de madera](bitmap-tiling-images/WoodGrain.png "grano de madera")
 
@@ -780,5 +780,5 @@ El `SKShaderTileMode.Mirror` opciones garantizan que las ramas de la X en cada m
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [CatClock (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

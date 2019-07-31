@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: a1d49639d28e677ebbe2d7cf870a6e91dfff8575
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740915"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653157"
 ---
 # <a name="colors-in-xamarinforms"></a>Colores de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
 _Xamarin.Forms proporciona una clase de Color flexible y multiplataforma._
 
@@ -25,7 +25,7 @@ Este artículo presentan las distintas formas la `Color` clase puede usarse en X
 La `Color` clase proporciona una serie de métodos para crear una instancia de color
 
 -  **Colores con nombre** -una colección de comunes colores con nombre, incluidos `Red`, `Green`, y `Blue`.
--  **FromHex** -valor similar a la sintaxis utilizada en HTML, por ejemplo "00FF00" de cadena. Alfa, opcionalmente, puede especificarse como el primer par de caracteres ("CC00FF00").
+-  **FromHex** : valor de cadena similar a la sintaxis usada en HTML, por ejemplo, "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
 -  **FromHsla** -matiz, saturación y luminosidad `double` valores, con el valor alfa opcional (0.0-1.0).
 -  **FromRgb** -rojo, verde y azul `int` valores (0-255).
 -  **FromRgba** -rojo, verde, azul y alfa `int` valores (0-255).
@@ -124,5 +124,5 @@ Xamarin.Forms `Color` clase se utiliza para crear referencias de color basadas e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ColorsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
-- [Selector de enlazable (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
+- [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+- [Selector de enlazable (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

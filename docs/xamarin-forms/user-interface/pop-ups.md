@@ -1,24 +1,24 @@
 ---
 title: Mostrar elementos emergentes
-description: 'Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo muestra cómo utilizar la hoja de las API de alerta y la acción para mostrar cuadros de diálogo que pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas.'
+description: 'Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo se muestra cómo usar las API de alertas y de hojas de acción para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas y guían a los usuarios a través de tareas.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 58c98aefdf87bcd1ca819de96f67c66646c1723d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 3b6b2ea2d497c9fdce2c323c7f7a793a4186aa4f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182307"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656109"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-_Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo muestra cómo utilizar la hoja de las API de alerta y la acción para mostrar cuadros de diálogo que pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas._
+_Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo se muestra cómo usar las API de alertas y de hojas de acción para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas y guían a los usuarios a través de tareas._
 
 Mostrar una alerta o pedir al usuario que seleccione una opción es una tarea común de la interfaz de usuario. Xamarin.Forms tiene dos métodos en la clase [`Page`](xref:Xamarin.Forms.Page) para interactuar con el usuario mediante un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) y [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Se representan con controles nativos adecuados en cada plataforma.
 
@@ -76,4 +76,4 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PopupsSample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

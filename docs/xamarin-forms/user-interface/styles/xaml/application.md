@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7b13a192f883ea667977f4d9ae3eea41d8c65e24
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: f8fb026cd9a8dfbfd5abf13c9b11463bf84f7e0b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971170"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647246"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Estilos globales en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Los estilos pueden estar disponibles globalmente agregándolas al diccionario de recursos de la aplicación. Esto ayuda a evitar la duplicación de estilos a través de las páginas o controles._
 
@@ -66,7 +66,7 @@ El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
 
 Para obtener información sobre cómo crear estilos en una página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), consulte [estilos explícitos](~/xamarin-forms/user-interface/styles/explicit.md) y [los estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md).
 
-### <a name="override-styles"></a>Invalidar los estilos
+### <a name="override-styles"></a>Reemplazar estilos
 
 Estilos de más abajo en la jerarquía de vistas tienen prioridad sobre las define mayor seguridad. Por ejemplo, si se establece un [ `Style` ](xref:Xamarin.Forms.Style) que establece [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) a `Red` en la aplicación de nivel serán reemplazado por un estilo de nivel de página establece `Button.TextColor` a `Green`. De forma similar, un estilo de nivel de página se reemplazará por un estilo de nivel de control. Además, si `Button.TextColor` se establece directamente en una propiedad de control, esto tendrá prioridad sobre los estilos. Esta prioridad se muestra en el ejemplo de código siguiente:
 
@@ -153,8 +153,8 @@ El `buttonStyle` se aplica a la [ `Button` ](xref:Xamarin.Forms.Button) instanci
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos básicos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Trabajar con estilos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Estilos básicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Establecedor](xref:Xamarin.Forms.Setter)

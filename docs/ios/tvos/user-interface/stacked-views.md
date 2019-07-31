@@ -1,156 +1,156 @@
 ---
-title: Trabajar con vistas de tvOS apiladas en Xamarin
-description: Este documento describe cómo funcionaba con tvOS vistas apiladas en una aplicación compilada con Xamarin. Proporciona una descripción general de las vistas apiladas y describe el diseño automático y colocar y ajustar el tamaño de una vista apilada, común usa, integración con guiones gráficos y mucho más.
+title: Trabajar con vistas apiladas tvOS en Xamarin
+description: En este documento se describe cómo trabajar con vistas apiladas de tvOS en una aplicación compilada con Xamarin. Proporciona información general de alto nivel sobre las vistas apiladas y describe el diseño automático, el posicionamiento y el ajuste de tamaño de una vista apilada, los usos comunes, la integración con guiones gráficos, etc.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f51ed3d6dbbfc8a7e430c2949485838a7471e545
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 646a26b4c9b2d44595315a6a32b7294b18c42d7a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161574"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648963"
 ---
-# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas de tvOS apiladas en Xamarin
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
 
-El control de vista de pila (`UIStackView`) aprovecha la eficacia del diseño automático y las clases de tamaño para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a los cambios de contenido y el tamaño de pantalla del dispositivo Apple TV.
+El control de vista de`UIStackView`pila () aprovecha la eficacia de las clases de diseño y tamaño automáticos para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a los cambios de contenido y al tamaño de pantalla del dispositivo Apple TV.
 
-En función de propiedades definido por el desarrollador como eje, distribución, alineación y espaciado administra el diseño de todas las subvistas asociada a una vista de pila:
+El diseño de todas las subvistas adjuntas a una vista de pila se administra en función de las propiedades definidas por el desarrollador como el eje, la distribución, la alineación y el espaciado:
 
-[![](stacked-views-images/stacked01.png "Diagrama de diseño de la vista secundaria")](stacked-views-images/stacked01.png#lightbox)
+[![](stacked-views-images/stacked01.png "Diagrama de diseño de subvista")](stacked-views-images/stacked01.png#lightbox)
 
-Cuando se usa un `UIStackView` en una aplicación Xamarin.tvOS, el desarrollador puede definir las subvistas ya sea dentro de un guión gráfico en el Diseñador de iOS, así como agregar y quitar subvistas en C# código.
+Cuando se usa `UIStackView` un en una aplicación Xamarin. tvOS, el desarrollador puede definir las subvistas dentro de un guion gráfico en el diseñador de iOS, o bien agregando y quitando C# las subvistas en el código.
 
-## <a name="about-stacked-view-controls"></a>Acerca de los controles de vista apiladas 
+## <a name="about-stacked-view-controls"></a>Acerca de los controles de vista apilada 
 
-El `UIStackView` está diseñado como una vista del contenedor no son de representación y por lo tanto, no se dibuja en el lienzo, al igual que otras subclases de `UIView`. Establecer propiedades tales como `BackgroundColor` o invalidar `DrawRect` no tendrá ningún efecto visual.
+El `UIStackView` está diseñado como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Establecer propiedades como `BackgroundColor` o reemplazar `DrawRect` no tendrá ningún efecto visual.
 
-Hay varias propiedades que controlan cómo organizará una vista de pila a su colección de las subvistas:
+Hay varias propiedades que controlan el modo en que una vista de pila organizará su colección de subvistas:
 
-- **Eje** : determina si la vista de pila organiza las subvistas bien **horizontalmente** o **verticalmente**.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
-- **Distribución** : controla cómo se cambia el tamaño de las subvistas dentro de la vista de pila.
-- **Espaciado** : controla el espacio mínimo entre cada vista secundaria en la vista de pila.
-- **Línea base relativa** : si `true`, el espaciado vertical de cada vista secundaria se deriva de su línea base.
-- **Diseño márgenes relativa** : coloca las subvistas respecto a los márgenes de diseño estándar.
+- **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
+- **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.
+- **Referencia relativa** : Si `true`es, el espaciado vertical de cada subvista se derivará de su línea base.
+- **Márgenes de diseño relativos** : coloca las subvistas en relación con los márgenes de diseño estándar.
 
-Normalmente, usará una vista de pila para organizar un pequeño número de subvistas. Interfaces de usuario más complejas se pueden crear mediante el anidamiento de una o varias vistas de pila dentro de otros.
+Normalmente, usará una vista de pila para organizar un número pequeño de subvistas. Se pueden crear interfaces de usuario más complejas mediante el anidamiento de una o varias vistas de pila dentro de otras.
 
-Puede ajustar aún más la apariencia de las interfaces de usuario agregando restricciones adicionales a las subvistas (por ejemplo, al control el alto o ancho). Sin embargo, debe tener cuidado para que no incluya restricciones en conflicto para los introducidos por la vista de pila propio.
+Puede ajustar aún más la apariencia de la IU agregando restricciones adicionales a las subvistas (por ejemplo, para controlar el alto o el ancho). Sin embargo, se debe tener cuidado de no incluir restricciones conflictivas a las introducidas por la propia vista de pila.
 
 <a name="Auto-Layout-and-Size-Classes" />
 
-## <a name="auto-layout-and-size-classes"></a>Diseño automático y las clases de tamaño
+## <a name="auto-layout-and-size-classes"></a>Clases de diseño y tamaño automáticos
 
-Cuando se agrega una vista secundaria a una vista de pila su diseño lo controla totalmente esa vista de pila con diseño automático y las clases de tamaño para colocar y cambiar el tamaño de las vistas organizadas.
+Cuando se agrega una subvista a una vista de pila, su diseño se controla por completo en esa vista de pila mediante las clases de diseño y tamaño automáticas para colocar y ajustar el tamaño de las vistas organizadas.
 
-La vista de pila le _pin_ la vista de primera y última secundaria en su colección a la **superior** y **inferior** bordes para las vistas de pila Vertical o el **deja**y **derecha** bordes para las vistas de pila Horizontal. Si establece la `LayoutMarginsRelativeArrangement` propiedad `true`, a continuación, la vista ancla las subvistas a los márgenes pertinentes en lugar del borde.
+La vista de pila _anclará_ la primera y la última subvista de su colección a los bordes **superior** e **inferior** de las vistas de pila verticales o los bordes **izquierdo** y **derecho** de las vistas de pila horizontal. Si establece la `LayoutMarginsRelativeArrangement` propiedad en `true`, la vista ancla las subvistas a los márgenes relevantes en lugar del borde.
 
-La vista de pila se usa la vista de secundaria `IntrinsicContentSize` propiedad al calcular el tamaño de las subvistas a lo largo de las personalizaciones definidas `Axis` (excepto para el `FillEqually Distribution`). El `FillEqually Distribution` cambia el tamaño de todas las subvistas para que sean del mismo tamaño, rellenar, por tanto, la vista de pila a lo largo del `Axis`.
+La vista de pila usa la propiedad de `IntrinsicContentSize` la subvista al calcular el tamaño de las subvistas `Axis` a lo largo del `FillEqually Distribution`definido (excepto para). Cambia el tamaño de todas las subvistas para que tengan el mismo tamaño, rellenando así la vista de pila a lo largo del `Axis`. `FillEqually Distribution`
 
-Con la excepción de la `Fill Alignment`, la vista de pila se usa la vista de secundaria `IntrinsicContentSize` propiedad para calcular el tamaño de la vista perpendicular a la determinada `Axis`. Para el `Fill Alignment`, todas las subvistas el tamaño se ajusta para que rellenen perpendicular a la vista de pila el determinado `Axis`.
+A excepción de `Fill Alignment`, la vista de pila usa la `IntrinsicContentSize` propiedad de la subvista para calcular el tamaño de la vista perpendicular a la determinada `Axis`. En el `Fill Alignment`caso de, se ajusta el tamaño de todas las subvistas para que rellenen `Axis`la vista de pila perpendicular a la determinada.
 
 <a name="Positioning-and-Sizing-the-Stack-View" />
 
-## <a name="positioning-and-sizing-the-stack-view"></a>Posición y cambio de tamaño de la vista de pila
+## <a name="positioning-and-sizing-the-stack-view"></a>Colocar y ajustar el tamaño de la vista de pila
 
-Mientras que la vista de la pila tiene control total sobre el diseño de cualquier vista secundaria (según las propiedades como `Axis` y `Distribution`), deberá colocar la vista de pila (`UIStackView`) de esta vista primaria con diseño automático y las clases de tamaño.
+Mientras que la vista de pila tiene control total sobre el diseño de cualquier subvista (basándose en `Axis` propiedades `Distribution`como y), es necesario colocar la vista de pila`UIStackView`() dentro de su vista primaria mediante las clases de diseño y tamaño automáticas.
 
-Por lo general, esto significa que al menos dos bordes de la vista de pila para expandir y contraer, definiendo así su posición de anclaje. Sin restricciones adicionales, la vista de pila se ajustará automáticamente para ajustarse a todos sus subvistas como sigue:
+Por lo general, esto significa anclar al menos dos bordes de la vista de pila para expandir y contraer, lo que define su posición. Sin restricciones adicionales, se cambiará automáticamente el tamaño de la vista de pila para ajustarse a todas sus subvistas de la manera siguiente:
 
-* El tamaño a lo largo de su `Axis` será la suma de todos los tamaños de la vista secundaria más cualquier espacio que se ha definido entre cada vista secundaria.
-* Si el `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de la pila también incluirá espacio para los márgenes.
-* El tamaño perpendicular a la `Axis` se establecerá en la vista secundaria más grande en la colección.
+* El tamaño a lo `Axis` largo de su será la suma de todos los tamaños de las subvistas más el espacio definido entre cada subvista.
+* Si la `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de pila también incluirá espacio para los márgenes.
+* El tamaño perpendicular al `Axis` se establecerá en la subvista más grande de la colección.
 
-Además, puede especificar restricciones para la vista de pila **alto** y **ancho**. En este caso, las subvistas se debe disponer (tamaño) para rellenar el espacio especificado por la vista de pila según lo determinado por la `Distribution` y `Alignment` propiedades.
+Además, puede especificar restricciones para el **alto** y el **ancho**de la vista de pila. En este caso, las subvistas se colocarán (con el tamaño) para rellenar el espacio especificado por la vista de `Distribution` pila `Alignment` , según lo determinado por las propiedades y.
 
-Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se dispondrán en función de la línea de base de la primera o última vista secundaria, en lugar de usar el **superior**, **inferior** o **Center* -  **Y** posición. Estos se calculan en el contenido de la vista de pila como sigue:
+Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organizarán en función de la primera o la última línea de base de la subvista, en lugar de usar la posición **superior**, **inferior** o **Centro*- **Y** . Se calculan en el contenido de la vista de pila como se indica a continuación:
 
-* Una vista de pila Vertical devolverá la primera vista de secundaria para la primera línea de base y la última durante los últimos. Si cualquiera de estos subvistas son vistas de pila, se usará su línea base primero o último.
-* Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta también es una pila, usará vista secundaria más alto el es como la línea base.
+* Una vista de pila vertical devolverá la primera subvista de la primera línea de base y la última para la última. Si alguna de estas subvistas son vistas de pila, se usará su primera o última línea base.
+* Una vista de pila horizontal usará su subvista más alta para la primera y la última línea de base. Si la vista más alta también es una vista de pila, usará la subvista más alta como línea de base.
 
 > [!IMPORTANT]
-> Alineación de línea base no funciona en los tamaños de la vista secundaria ajustada o comprimidos se calculará la línea base para una posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
+> La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto**de la vista de contenido intrínseca.
 
 
 
 
 <a name="Common-Stack-View-Uses" />
 
-## <a name="common-stack-view-uses"></a>Usos comunes de vista de pila
+## <a name="common-stack-view-uses"></a>Usos comunes de la vista de pila
 
-Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Función de Apple, estos son algunos de los usos más comunes:
+Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Según Apple, estos son algunos de los usos más comunes:
 
-- **Definir el tamaño a lo largo del eje** : Anclando los dos bordes a lo largo de la vista de pila `Axis` y uno de los bordes adyacentes para establecer la posición, la pila de vista crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
-*  **Definir la posición de la vista secundaria** – Anclando con bordes adyacentes de la vista de pila para su vista primaria, la vista de pila crecerá en ambas dimensiones para ajustarse a su contenedor subvistas.
-- **Definir el tamaño y posición de la pila** – Anclando los cuatro bordes de la vista de pila para la vista primaria, la vista de pila organiza las subvistas según el espacio definido dentro de la vista de pila.
-*  **Definir el tamaño Perpendicular al eje** : Anclando ambos perpendicular bordes a la vista de pila `Axis` y uno de los bordes del eje para establecer la posición, la pila de vista crecerá perpendicular al eje para ajustarse al espacio definido por su subvistas.
+- **Defina el tamaño a lo largo del eje** : al anclar ambos bordes a lo `Axis` largo de la vista de pila y uno de los bordes adyacentes para establecer la posición, la vista de pila crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
+*  **Definir la posición de** la subvista: al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
+- **Definir el tamaño y la posición de la pila** : al anclar los cuatro bordes de la vista de pila a la vista primaria, la vista de pila organiza las subvistas en función del espacio definido en la vista de pila.
+*  **Defina el tamaño perpendicular al eje** : al anclar ambos bordes perpendiculares a la vista `Axis` de pila y uno de los bordes a lo largo del eje para establecer la posición, la vista de pila aumentará de forma perpendicular al eje para ajustarse al espacio definido por sus subvistas.
 
 <a name="Stack-Views-and-Storyboards" />
 
-## <a name="stack-views-and-storyboards"></a>Los guiones gráficos y vistas de pila
+## <a name="stack-views-and-storyboards"></a>Vistas de pila y guiones gráficos
 
-Es la manera más fácil trabajar con vistas de pila en una aplicación Xamarin.tvOS agregarlos a la interfaz de usuario de la aplicación mediante el Diseñador de iOS.
+La manera más sencilla de trabajar con vistas de pila en una aplicación Xamarin. tvOS es agregarlos a la interfaz de usuario de la aplicación mediante el diseñador de iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En el **panel de solución**, haciendo doble clic en el `Main.storyboard` de archivo y abrirlo para su edición.
-1. Definir el diseño de los elementos individuales que se va a agregar a la vista de pila: 
+1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
+1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila: 
 
     [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
-1. Agregar las restricciones necesarias para los elementos que se va a asegurar que se escalan correctamente. Este paso es importante una vez que el elemento se agrega a la vista de pila.
-1. Realice el número necesario de copias (cuatro en este caso): 
+1. Agregue las restricciones necesarias a los elementos para asegurarse de que se escalan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
+1. Haga el número necesario de copias (cuatro en este caso): 
 
     [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
-1. Arrastre un **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
 
     [![](stacked-views-images/layout03.png "Una vista de pila")](stacked-views-images/layout03.png#lightbox)
-1. Seleccione la vista de pila, en la **ficha Widget** de la **panel de propiedades** seleccione **rellenar** para el **alineación**, **relleno Igualmente** para el **distribución** y escriba `25` para el **espaciado**: 
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Panel de propiedades** seleccione **relleno** para la **alineación**, rellene **igualmente** para la **distribución** y escriba `25` para el **espaciado**: 
 
-    [![](stacked-views-images/layout04.png "La pestaña de Widget")](stacked-views-images/layout04.png#lightbox)
-1. Colocar la vista de pila en la pantalla donde lo desee y agrega restricciones para conservarla en la ubicación deseada.
-1. Seleccione los elementos individuales y arrástrelos hasta la vista de pila: 
+    [![](stacked-views-images/layout04.png "La pestaña widget")](stacked-views-images/layout04.png#lightbox)
+1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
+1. Seleccione los elementos individuales y arrástrelos a la vista de pila: 
 
-    [![](stacked-views-images/layout05.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05.png#lightbox)
-1. Se ajustarán el diseño y los elementos se colocarán en la vista de pila basándose en los atributos que estableció anteriormente.
-1. Asignar **nombres** en el **ficha Widget** de la **Explorador de propiedades** para trabajar con los controles de IU en C# código.
+    [![](stacked-views-images/layout05.png "Elementos individuales de la vista de pila")](stacked-views-images/layout05.png#lightbox)
+1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.
+1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz C# de usuario en el código.
 1. Guarde los cambios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. En el **el Explorador de soluciones**, haciendo doble clic en el `Main.storyboard` de archivo y abrirlo para su edición.
-1. Definir el diseño de los elementos individuales que se va a agregar a la vista de pila: 
+1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
+1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila: 
 
     [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
-1. Agregar las restricciones necesarias para los elementos que se va a asegurar que se escalan correctamente. Este paso es importante una vez que el elemento se agrega a la vista de pila.
-1. Realice el número necesario de copias (cuatro en este caso): 
+1. Agregue las restricciones necesarias a los elementos para asegurarse de que se escalan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
+1. Haga el número necesario de copias (cuatro en este caso): 
 
     [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
-1. Arrastre un **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
 
     [![](stacked-views-images/layout03-vs.png "Una vista de pila")](stacked-views-images/layout03-vs.png#lightbox)
-1. Seleccione la vista de pila, en la **ficha Widget** de la **Explorador de propiedades** seleccione **rellenar** para el **alineación**, **relleno Igualmente** para el **distribución** y escriba `25` para el **espaciado**: 
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Explorador de propiedades** , seleccione **Fill** para la **alineación**, rellene **igualmente** para `25` la **distribución** y escriba para el **espaciado**: 
 
-    [![](stacked-views-images/layout04-vs.png "La pestaña de Widget")](stacked-views-images/layout04-vs.png#lightbox)
-1. Colocar la vista de pila en la pantalla donde lo desee y agrega restricciones para conservarla en la ubicación deseada.
-1. Seleccione los elementos individuales y arrástrelos hasta la vista de pila: 
+    [![](stacked-views-images/layout04-vs.png "La pestaña widget")](stacked-views-images/layout04-vs.png#lightbox)
+1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
+1. Seleccione los elementos individuales y arrástrelos a la vista de pila: 
 
-    [![](stacked-views-images/layout05-vs.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05-vs.png#lightbox)
-1. Se ajustarán el diseño y los elementos se colocarán en la vista de pila basándose en los atributos que estableció anteriormente.
-1. Asignar **nombres** en el **ficha Widget** de la **Explorador de propiedades** para trabajar con los controles de IU en C# código.
+    [![](stacked-views-images/layout05-vs.png "Elementos individuales de la vista de pila")](stacked-views-images/layout05-vs.png#lightbox)
+1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.
+1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz C# de usuario en el código.
 1. Guarde los cambios.
 
 -----
 
 > [!IMPORTANT]
-> Aunque es posible asignar acciones como `TouchUpInside` a un elemento de interfaz de usuario (como un `UIButton`) en el diseñador al crear un controlador de eventos de iOS, nunca se llamará porque Apple TV no tiene una entrada táctil de pantalla o admitir eventos de toque. Siempre debe usar el valor predeterminado `Action Type` al crear acciones para tvOS elementos de la interfaz de usuario.
+> Aunque es posible asignar acciones como `TouchUpInside` a un elemento de la interfaz de usuario (como un `UIButton`) en el diseñador de iOS al crear un controlador de eventos, nunca se llamará porque Apple TV no tiene una pantalla táctil ni eventos táctiles de soporte técnico. Siempre debe usar el valor predeterminado `Action Type` al crear acciones para los elementos de la interfaz de usuario de tvOS.
 
-Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Hola, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md).
+Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-En el caso de nuestro ejemplo, se han expuesto una toma de corriente y acción para el Control de segmento y una salida para cada tarjeta de jugador"". En el código, hemos ocultar y mostrar Reproductor basado en el segmento actual. Por ejemplo:
+En el caso de nuestro ejemplo, hemos expuesto una salida y una acción para el control de segmento y una salida para cada "tarjeta de reproducción". En el código, se oculta y se muestra el reproductor basándose en el segmento actual. Por ejemplo:
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -185,21 +185,21 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-Cuando se ejecuta la aplicación, igualmente se distribuirá los cuatro elementos en la vista de pila:
+Cuando se ejecuta la aplicación, los cuatro elementos se distribuirán igualmente en nuestra vista de pila:
 
-[![](stacked-views-images/layout06.png "Cuando se ejecuta la aplicación, igualmente se distribuirá los cuatro elementos en la vista de pila")](stacked-views-images/layout06.png#lightbox)
+[![](stacked-views-images/layout06.png "Cuando se ejecuta la aplicación, los cuatro elementos se distribuirán igualmente en nuestra vista de pila.")](stacked-views-images/layout06.png#lightbox)
 
-Si se reduce el número de jugadores, se ocultan las vistas sin usar y la vista de pila de ajustar el diseño para que quepa:
+Si se reduce el número de reproductores, las vistas no utilizadas se ocultan y la vista de pila ajusta el diseño para ajustarse:
 
-[![](stacked-views-images/layout07.png "Si se reduce el número de jugadores, se ocultan las vistas sin usar y la vista de pila de ajustar el diseño para que quepa")](stacked-views-images/layout07.png#lightbox)
+[![](stacked-views-images/layout07.png "Si se reduce el número de jugadores, las vistas no utilizadas se ocultan y la vista de pila ajusta el diseño para ajustarse")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 
-### <a name="populate-a-stack-view-from-code"></a>Rellenar una vista de pila del código
+### <a name="populate-a-stack-view-from-code"></a>Rellenar una vista de pila desde el código
 
-Además de definir totalmente el contenido y el diseño de una vista de pila en el Diseñador de iOS, puede crear y quitar dinámicamente desde C# código.
+Además de definir completamente el contenido y el diseño de una vista de pila en el diseñador de iOS, puede crearla y quitarla dinámicamente del C# código.
 
-Realice el siguiente ejemplo que utiliza una vista de pila para controlar "estrellas" en una revisión (de 1 a 5):
+En el ejemplo siguiente se usa una vista de pila para controlar "estrellas" en una revisión (1 a 5):
 
 ```csharp
 public int Rating { get; set;} = 0;
@@ -251,32 +251,32 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Echemos un vistazo a algunas partes de este código en detalle. En primer lugar, usamos un `if` instrucciones para comprobar que no hay más de cinco "estrellas" o menor que cero.
+Echemos un vistazo a algunas partes de este código en detalle. En primer lugar, usamos `if` una instrucción para comprobar que no hay más de cinco "estrellas" o menor que cero.
 
-Para agregar una nueva "estrella" cargamos su imagen y establezca su **modo contenido** a **escalar Ajustar aspecto**:
+Para agregar una nueva "estrella", se carga su imagen y se establece su **modo de contenido** en **ajuste de escala**:
 
 ```csharp
 var icon = new UIImageView (new UIImage("icon.png"));
 icon.ContentMode = UIViewContentMode.ScaleAspectFit;
 ```
 
-Esto impide que el icono de "estrella" está distorsionado cuando se agrega a la vista de pila.
+Esto evita que el icono de "estrella" se distorsione cuando se agrega a la vista de pila.
 
-A continuación, se agrega el nuevo icono de "estrella" a la colección de vistas de la pila subvistas:
+A continuación, se agrega el nuevo icono de "estrella" a la colección de subvistas de la vista de pila:
 
 ```csharp
 RatingView.AddArrangedSubview(icon);
 ```
 
-Observará que se ha agregado el `UIImageView` a la `UIStackView`del `ArrangedSubviews` propiedad y no en el `SubView`. Cualquier vista que desea que la vista de pila para controlar su diseño debe agregarse a la `ArrangedSubviews` propiedad.
+Observará `UIImageView` que hemos agregado a la `UIStackView`propiedad del `ArrangedSubviews` y no a `SubView`. Cualquier vista que desee que la vista de pila controle su diseño debe agregarse a `ArrangedSubviews` la propiedad.
 
-Para quitar una vista secundaria desde una vista de pila, primero se obtiene la vista secundaria para quitar:
+Para quitar una vista previa de una vista de pila, primero se obtiene la subvista que se va a quitar:
 
 ```csharp
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-A continuación, necesitamos quitarlo de ambos el `ArrangedSubviews` recopilación y la vista Super:
+A continuación, es necesario quitarlo de la `ArrangedSubviews` colección y de la vista superior:
 
 ```csharp
 // Remove from stack and screen
@@ -284,15 +284,15 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Quitar una vista secundaria de solo el `ArrangedSubviews` colección se toma del control de la vista de pila, pero no se quita de la pantalla.
+Quitar una vista previa de la `ArrangedSubviews` colección lo saca del control de la vista de pila, pero no la quita de la pantalla.
 
 <a name="Dynamically-Changing-Content" />
 
-## <a name="dynamically-changing-content"></a>Cambiar dinámicamente el contenido
+## <a name="dynamically-changing-content"></a>Cambiar el contenido dinámicamente
 
-Una vista de pila se ajustará automáticamente el diseño de las subvistas cuando una vista secundaria se agrega, quita u oculta. También se ajuste el diseño si se ajusta a cualquier propiedad de la vista de pila (como su `Axis`).
+Una vista de pila ajustará automáticamente el diseño de las subvistas cada vez que se agregue, quite u oculte una vista previa. El diseño también se ajustará si se ajusta alguna propiedad de la vista de pila (por ejemplo `Axis`, su).
 
-Mediante la colocación de un bloque de animación, por ejemplo, se pueden animar los cambios de diseño:
+Los cambios de diseño se pueden animar colocándolos en un bloque de animación, por ejemplo:
 
 ```csharp
 // Animate stack
@@ -302,19 +302,19 @@ UIView.Animate(0.25, ()=>{
 });
 ```
 
-Muchas de las propiedades de la vista de la pila pueden especificarse mediante las clases de tamaño en un guión gráfico. Estas propiedades estarán automáticamente animado es la respuesta a cambios de tamaño o la orientación.
+Muchas de las propiedades de la vista de pila se pueden especificar utilizando clases de tamaño dentro de un guion gráfico. Estas propiedades se animarán automáticamente como respuesta a los cambios de tamaño o orientación.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
-Este artículo trata de diseñar y trabajar con vista apiladas dentro de una aplicación Xamarin.tvOS.
+En este artículo se ha tratado el diseño y el trabajo con la vista apilada dentro de una aplicación Xamarin. tvOS.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guías de interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guía de programación de aplicación de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

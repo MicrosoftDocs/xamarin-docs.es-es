@@ -1,6 +1,6 @@
 ---
-title: watchOS solución de problemas
-description: Este documento describen problemas conocidos y soluciones alternativas para el desarrollo de watchOS con Xamarin. Describe las imágenes con problemas, agregar manualmente archivos de controlador de interfaz, iniciar una aplicación de inspección de la línea de comandos y mucho más.
+title: Solución de problemas de watchos
+description: En este documento se describen los problemas conocidos y las soluciones alternativas para el desarrollo de watchos con Xamarin. Se describen las imágenes con problemas, la adición manual de archivos de controlador de interfaz, el inicio de una aplicación de inspección desde la línea de comandos, etc.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,24 +8,24 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6826088dcc192f4bc4dcfa7424236f98391e0bd6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60892790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656701"
 ---
-# <a name="watchos-troubleshooting"></a>watchOS solución de problemas
+# <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
-Esta página contiene información adicional y soluciones alternativas para problemas que surjan.
+Esta página contiene información adicional y soluciones alternativas para los problemas que puede encontrar.
 
 - [Problemas conocidos](#knownissues)
 
-- [Quitar el canal alfa de imágenes de icono](#noalpha)
+- [Quitar el canal alfa de las imágenes de iconos](#noalpha)
 
-- [Cómo agregar manualmente archivos de controlador de interfaz](#add) de Interface Builder de Xcode.
+- [Agregar manualmente archivos de controlador de interfaz](#add) para Xcode Interface Builder.
 
-- [Iniciando la WatchApp desde la línea de comandos](#command_line).
+- [Iniciar WatchApp desde la línea de comandos](#command_line).
 
 <a name="knownissues" />
 
@@ -35,32 +35,32 @@ Esta página contiene información adicional y soluciones alternativas para prob
 
 <a name="deploy" />
 
-- Las versiones anteriores de Visual Studio para Mac muestran incorrectamente una de las **AppleCompanionSettings** iconos como 88 x 88 píxeles; lo que resulta en un **falta el icono de Error** si intenta enviar a la aplicación de Store.
-    Este icono debe ser 87 x 87 píxeles (29 unidades para **@3x** pantallas de Retina). No se puede solucionar este problema en Visual Studio para Mac: modificar el recurso de imagen en Xcode o editar manualmente el **Contents.json** archivo (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+- Las versiones anteriores de Visual Studio para Mac muestran incorrectamente uno de los iconos de **AppleCompanionSettings** como 88x88 píxeles; Esto da como resultado un **error de icono que falta** si intenta enviar a la tienda de aplicaciones.
+    Este icono debe ser 87x87 píxeles (29 unidades para **@3x** pantallas retinas). No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el archivo **Contents. JSON** (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
-- Si el proyecto de extensión de inspección **Info.plist > Id. de lote de WKApp** no es [establecer correctamente](~/ios/watchos/get-started/project-references.md) para que coincida con la aplicación Watch **Id. de agrupación**, el depurador no podrá conectarse y Visual Esperará Studio para Mac con el mensaje *"En espera para que conectar el depurador"*.
+- Si **info. plist** del proyecto de extensión de inspección > identificador de lote de WKApp no está [configurado correctamente](~/ios/watchos/get-started/project-references.md) para coincidir con el **identificador de lote**de la aplicación de inspección, el depurador no podrá conectarse y Visual Studio para Mac esperará con el mensaje *"esperando a que el depurador conectar "* .
 
-- Se admite la depuración en **notificaciones** modo pero puede ser poco confiable. Volver a intentar a veces funcionará. Confirme que la aplicación Watch **Info.plist** `WKCompanionAppBundleIdentifier` se establece para que coincida con el identificador de paquete de la aplicación de iOS/contenedor primario (es decir. lo que se ejecuta en el iPhone).
+- La depuración se admite en el modo de notificaciones, pero puede ser poco confiable. A veces, el reintento funcionará. Confirme que el archivo **info. plist** `WKCompanionAppBundleIdentifier` de la aplicación de inspección está configurado para coincidir con el identificador de paquete de la aplicación de contenedor/primario de iOS (es decir, el que se ejecuta en el iPhone).
 
-- Diseñador de iOS no muestra flechas de punto de entrada para los controladores de interfaz de vista o una notificación.
+- iOS Designer no muestra las flechas de punto de entrada para los controladores de vista o de la interfaz de notificación.
 
-- No se puede agregar dos `WKNotificationControllers` a un guión gráfico.
-    Solución: El `notificationCategory` siempre se inserta el elemento en el guión gráfico XML con el mismo `id`. Para solucionar este problema, puede agregar controladores de notificación de dos (o más), abra el archivo de guión gráfico en un editor de texto y, a continuación, cambie manualmente el `id` elemento para que sea único.
+- No se pueden agregar `WKNotificationControllers` dos a un guion gráfico.
+    Solución: El `notificationCategory` elemento en el XML del guión gráfico siempre se inserta con `id`el mismo. Para evitar este problema, puede agregar dos (o más) controladores de notificaciones, abrir el archivo de guion gráfico en un editor de texto y `id` , a continuación, cambiar manualmente el elemento para que sea único.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Abriendo el guión gráfico de archivos en un editor de texto y cambie manualmente el elemento id para que sean únicos")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![](troubleshooting-images/duplicate-id-sml.png "Abrir el archivo de guion gráfico en un editor de texto y cambiar manualmente el elemento ID para que sea único")](troubleshooting-images/duplicate-id.png#lightbox)
 
-- Puede ver un error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Se produce tras una **Clean** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
-    La solución consiste en seleccionar **compilar > recompilar todo** y, a continuación, volver a iniciar la aplicación.
+- Es posible que vea el error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Esto ocurre después de una **limpieza** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
+    La solución consiste en seleccionar **Compilar > volver a generar todo** y, a continuación, volver a iniciar la aplicación.
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
-Compatibilidad con iOS Designer inspección Kit *requiere* la solución para configurarse correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), a continuación, la superficie de diseño no funcionará correctamente.
+La compatibilidad con el diseñador de iOS para el kit de inspección *requiere* que la solución se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), la superficie de diseño no funcionará correctamente.
 
 <a name="noalpha" />
 
-## <a name="removing-the-alpha-channel-from-icon-images"></a>Quitar el canal alfa de imágenes de icono
+## <a name="removing-the-alpha-channel-from-icon-images"></a>Quitar el canal alfa de las imágenes de iconos
 
-Los iconos no deben contener un canal alfa (el canal alfa define áreas transparentes de una imagen), en caso contrario, se rechazará la aplicación durante el envío de App Store con un error similar al siguiente:
+Los iconos no deben contener un canal alfa (el canal alfa define las áreas transparentes de una imagen); en caso contrario, se rechazará la aplicación durante el envío de la tienda de aplicaciones con un error similar al siguiente:
 
 ```csharp
 Invalid Icon - The watch application '...watchkitextension.appex/WatchApp.app'
@@ -68,42 +68,42 @@ contains an icon file '...watchkitextension.appex/WatchApp.app/Icon-27.5@2x.png'
 with an alpha channel. Icons should not have an alpha channel.
 ```
 
-Es fácil quitar el canal alfa en Mac OS X utilizando el **Preview** app:
+Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista previa** :
 
-1. Abra la imagen del icono en **Preview** y, a continuación, elija **archivo > Exportar**.
+1. Abra la imagen de icono en la **vista previa** y, a continuación, elija **archivo > Exportar**.
 
-2. El cuadro de diálogo que aparece se incluirá un **alfa** casilla de verificación si existe un canal alfa.
+2. El cuadro de diálogo que aparece incluirá una casilla **alfa** si hay un canal alfa.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "El cuadro de diálogo que aparece incluye una casilla de verificación alfa si existe un canal alfa")
+    ![](troubleshooting-images/remove-alpha-sml.png "El cuadro de diálogo que aparece incluirá una casilla alfa si hay un canal alfa presente")
 
-3. *Deje* el **alfa** checkbox y **guardar** el archivo a la ubicación correcta.
+3. *Desmarque* la casilla **alfa** y **guarde** el archivo en la ubicación correcta.
 
-4. La imagen del icono ahora debe pasar comprobaciones de validación de Apple.
+4. La imagen del icono ahora debe pasar las comprobaciones de validación de Apple.
 
 
 <a name="add" />
 
-## <a name="manually-adding-interface-controller-files"></a>Cómo agregar manualmente archivos de controlador de interfaz
+## <a name="manually-adding-interface-controller-files"></a>Agregar manualmente archivos de controlador de interfaz
 
 > [!IMPORTANT]
-> Soporte técnico de WatchKit de Xamarin incluye el diseño de los guiones gráficos de inspección en el Diseñador de iOS (en Visual Studio para Mac y Visual Studio), que no requieren que los pasos descritos a continuación. Simplemente proporcionar un controlador de interfaz de un nombre de clase en Visual Studio para Mac propiedades de relleno y el C# se creará automáticamente los archivos de código.
+> La compatibilidad con WatchKit de Xamarin incluye el diseño de guiones gráficos en el diseñador de iOS (tanto en Visual Studio para Mac como en Visual Studio), que no requiere los pasos descritos a continuación. Basta con dar un controlador de interfaz a un nombre de clase en el panel C# de propiedades de Visual Studio para Mac y los archivos de código se crearán automáticamente.
 
 
-*Si* utilizas Interface Builder de Xcode, siga estos pasos para crear nuevos controladores de interfaz para la aplicación del reloj y habilitar la sincronización con Xcode para que estén disponibles en las salidas y acciones C#:
+*Si* usa Xcode Interface Builder, siga estos pasos para crear nuevos controladores de interfaz para la aplicación de inspección y habilitar la sincronización con Xcode para que las salidas y las acciones estén disponibles C#en:
 
-1. Abra la aplicación watch **Interface.storyboard** en **Interface Builder de Xcode**.
+1. Abra la aplicación de inspección **interface. Storyboard** en **Xcode Interface Builder**.
     
-    ![](troubleshooting-images/add-6.png "Al abrir el guion gráfico en Interface Builder de Xcode")
+    ![](troubleshooting-images/add-6.png "Abrir el guion gráfico en Xcode Interface Builder")
 
-2. Arrastre una nueva `InterfaceController` en el guión gráfico:
+2. Arrastre un nuevo `InterfaceController` al guion gráfico:
 
     ![](troubleshooting-images/add-1.png "Un InterfaceController")
 
-3. Ahora puede arrastrar controles a la controladora de interfaz (p ej. las etiquetas y botones) pero no se puede crear acciones o salidas todavía, porque no hay ningún **.h** archivo de encabezado. Los siguientes pasos hará que el necesario **.h** que se cree el archivo de encabezado.
+3. Ahora puede arrastrar controles al controlador de interfaz (por ejemplo, etiquetas y botones), pero no puede crear salidas ni acciones todavía, porque no hay ningún archivo de encabezado **. h** . Los pasos siguientes harán que se cree el archivo de encabezado **. h** necesario.
 
-    ![](troubleshooting-images/add-2.png "Un botón en el diseño")
+    ![](troubleshooting-images/add-2.png "Botón en el diseño")
 
-4. Cierre el guión gráfico y vuelva a Visual Studio para Mac. Cree un nuevo C# archivo **MyInterfaceController.cs** (o cualquier nombre que desee utilizar) en el **ver la extensión de la aplicación** proyecto (no la aplicación del reloj propio donde es el guión gráfico). Agregue el código siguiente (actualizando el espacio de nombres, nombre de clase y el nombre de constructor):
+4. Cierre el guión gráfico y vuelva a Visual Studio para Mac. Cree un nuevo C# archivo **MyInterfaceController.CS** (o cualquier nombre que desee) en el proyecto de **extensión de aplicación de inspección** (no en la propia aplicación de inspección donde se encuentra el guion gráfico). Agregue el código siguiente (actualizando el espacio de nombres, className y el nombre del constructor):
 
         using System;
         using WatchKit;
@@ -137,7 +137,7 @@ Es fácil quitar el canal alfa en Mac OS X utilizando el **Preview** app:
             }
         }
 
-5. Crear otra nueva C# archivo **MyInterfaceController.designer.cs** en el **ver la extensión de la aplicación** del proyecto y agregue el código siguiente. Asegúrese de actualizar el espacio de nombres, el nombre de clase y el `Register` atributo:
+5. Cree otro nuevo C# archivo **MyInterfaceController.Designer.CS** en el proyecto de extensión de la **aplicación de inspección** y agregue el código siguiente. Asegúrese de actualizar el espacio de nombres, className y el `Register` atributo:
 
     ```csharp
     using Foundation;
@@ -155,38 +155,38 @@ Es fácil quitar el canal alfa en Mac OS X utilizando el **Preview** app:
     }
     ```
     
-    Sugerencia: Se puede (opcionalmente) convertir este archivo en un nodo secundario del primer archivo arrastrarlo a otro C# archivo en Visual Studio para Mac panel de solución. A continuación, aparecerá como esta:
+    Sugerencia: También puede hacer que este archivo sea un nodo secundario del primer archivo arrastrándolo al otro C# archivo en el Panel de solución de Visual Studio para Mac. A continuación, aparecerá de la siguiente manera:
     
     ![](troubleshooting-images/add-5.png "El panel de solución")
 
-6. Seleccione **compilar > compilar todo** para que reconozca la nueva clase de sincronización de Xcode (a través de la `Register` atributo) que se ha usado.
+6. Seleccione compilar **> compilar todo** para que la sincronización de Xcode reconozca `Register` la nueva clase (a través del atributo) que usamos.
 
-7. Vuelva a abrir el guión gráfico con el botón secundario en el archivo de guión gráfico de la aplicación de inspección y seleccionando **abrir con > Interface Builder de Xcode**:
+7. Vuelva a abrir el guion gráfico haciendo clic con el botón derecho en el archivo de guion gráfico de la aplicación de inspección y seleccionando **abrir con > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Abrir el guión gráfico en el generador de interfaz")
+    ![](troubleshooting-images/add-6.png "Abrir el guion gráfico en Interface Builder")
 
-8. Seleccione el nuevo controlador de interfaz y asígnele el nombre de clase definida anteriormente, por ejemplo. `MyInterfaceController`.
-Si ha funcionado correctamente, debe aparecer automáticamente en el **clase:** lista desplegable y puede seleccionarlo desde allí.
+8. Seleccione el nuevo controlador de interfaz y asígnele el className que definió anteriormente, por ejemplo,. `MyInterfaceController`.
+Si todo ha funcionado correctamente, debe aparecer automáticamente en la lista desplegable **clase:** y puede seleccionarlo desde allí.
 
-    ![](troubleshooting-images/add-4.png "Configuración de una clase personalizada")
+    ![](troubleshooting-images/add-4.png "Establecer una clase personalizada")
 
-9. Elija la **Editor del asistente** ver en Xcode (el icono con dos círculos superpuestos) para que puedan ver el guión gráfico y el código paralelo:
+9. Elija la vista **Editor de asistentes** en Xcode (el icono con dos círculos superpuestos) para que pueda ver el guión gráfico y el código en paralelo:
 
-    ![](troubleshooting-images/add-7.png "El elemento de barra de herramientas del Editor del Asistente")
+    ![](troubleshooting-images/add-7.png "El elemento de la barra de herramientas del editor de asistentes")
 
-    Cuando el foco está en el panel de código, asegúrese de que se observa el **.h** archivo de encabezado y si no, haga clic en la barra de ruta de navegación y seleccione el archivo correcto (**MyInterfaceController.h**)
+    Cuando el foco esté en el panel de código, asegúrese de consultar el archivo de encabezado **. h** y, si no hace clic con el botón derecho en la barra de ruta de navegación y selecciona el archivo correcto (**MyInterfaceController. h**)
 
-    ![](troubleshooting-images/add-8.png "Seleccione MyInterfaceController")
+    ![](troubleshooting-images/add-8.png "Seleccionar MyInterfaceController")
 
-10. Ahora puede crear salidas y acciones por **Ctrl + arrastrar** desde el guión gráfico en el **.h** archivo de encabezado.
+10. Ahora puede crear salidas y acciones mediante **Ctrl + arrastre** desde el guión gráfico hasta el archivo de encabezado **. h** .
 
     ![](troubleshooting-images/add-9.png "Creación de salidas y acciones")
 
-    Al soltar la operación de arrastrar, se le pedirá que seleccione si desea crear un enchufe o una acción y elija su nombre:
+    Cuando suelte el arrastre, se le pedirá que seleccione si desea crear una salida o una acción y elegir su nombre:
 
-    ![](troubleshooting-images/add-a.png "La toma de corriente y un cuadro de diálogo acción")
+    ![](troubleshooting-images/add-a.png "Cuadro de diálogo de salida y acción")
 
-11. Una vez que se guardan los cambios de guión gráfico y Xcode está cerrado, vuelva a Visual Studio para Mac. Detectará los cambios del archivo de encabezado y agregar automáticamente el código para el **. designer.cs** archivo:
+11. Una vez que se guardan los cambios de guion gráfico y se cierra Xcode, vuelva a Visual Studio para Mac. Detectará los cambios en el archivo de encabezado y agregará código automáticamente al archivo **. Designer.CS** :
 
 
         [Register ("MyInterfaceController")]
@@ -205,34 +205,34 @@ Si ha funcionado correctamente, debe aparecer automáticamente en el **clase:** 
         }
 
 
-Ahora puede hacer referencia al control (o implementar la acción) en C#!
+Ahora puede hacer referencia al control (o implementar la acción) en C#.
 
 
 <a name="command_line" />
 
-## <a name="launching-the-watch-app-from-the-command-line"></a>Iniciar la aplicación del reloj desde la línea de comandos
+## <a name="launching-the-watch-app-from-the-command-line"></a>Inicio de la aplicación de inspección desde la línea de comandos
 
 > [!IMPORTANT]
-> Puede iniciar la aplicación del reloj en modo de aplicación normal de forma predeterminada y también en **vista** o **notificación** modos mediante [parámetros de ejecución personalizado](~/ios/watchos/get-started/installation.md#custommodes) en Visual Studio para Mac y Visual Studio.
+> De forma predeterminada, puede iniciar la aplicación de inspección en el modo de aplicación normal y, además, en los modos de **vista** o de **notificación** mediante [parámetros de ejecución personalizados](~/ios/watchos/get-started/installation.md#custommodes) en Visual Studio para Mac y Visual Studio.
 
 
-También puede usar la línea de comandos para controlar el simulador de iOS. Es la herramienta de línea de comandos usada para iniciar aplicaciones de watch **mtouch**.
+También puede usar la línea de comandos para controlar el simulador de iOS. La herramienta de línea de comandos que se usa para iniciar las aplicaciones de inspección es **Mtouch**.
 
-Este es un ejemplo completo (que se ejecutan como una sola línea en el terminal):
+Este es un ejemplo completo (se ejecuta como una sola línea en el terminal):
 
 ```bash
 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin/mtouch --sdkroot=/Applications/Xcode.app/Contents/Developer/ --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-El parámetro deberá actualizarse para reflejar la aplicación es `launchsimwatch`:
+El parámetro que necesita actualizar para reflejar la aplicación es `launchsimwatch`:
 
 ### <a name="--launchsimwatch"></a>--launchsimwatch
 
-La ruta de acceso completa del paquete de aplicaciones principal *para la aplicación de iOS que contiene la aplicación de inspección y extensión*.
+La ruta de acceso completa al grupo de aplicaciones principal *de la aplicación de iOS que contiene la aplicación de inspección y la extensión*.
 
 > [!NOTE]
-> Es la ruta de acceso, deberá suministrar la *archivo .app de aplicación de iPhone*, es decir, aquella que se va a implementar el simulador de iOS y que contiene la extensión de inspección y la aplicación del reloj.
+> La ruta de acceso que necesita proporcionar es para el *archivo de aplicación de iPhone*, es decir, el que se implementará en el simulador de iOS y que contenga la aplicación de inspección y la de inspección.
 
 Ejemplo:
 
@@ -243,11 +243,11 @@ Ejemplo:
 
 ## <a name="notification-mode"></a>Modo de notificación
 
-Para probar la aplicación [ **notificación** modo](~/ios/watchos/platform/notifications.md), establezca el `watchlaunchmode` parámetro `Notification` y proporcione una ruta de acceso a un archivo JSON que contenga una carga de notificación de prueba.
+Para probar el modo de [ **notificación** ](~/ios/watchos/platform/notifications.md)de la aplicación, `watchlaunchmode` establezca el `Notification` parámetro en y proporcione una ruta de acceso a un archivo JSON que contenga una carga de notificación de prueba.
 
-El parámetro de carga es *requiere* para el modo de notificación.
+El parámetro payload es *necesario* para el modo de notificación.
 
-Por ejemplo, agregue estos argumentos para el comando mtouch:
+Por ejemplo, agregue estos argumentos al comando Mtouch:
 
 ```bash
 --watchlaunchmode=Notification --watchnotificationpayload=/path/to/file.json
@@ -260,7 +260,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obligatorio. Especifica la ruta de acceso de Xcode (6.2 o posterior).
+Necesario. Especifica la ruta de acceso a Xcode (6,2 o posterior).
 
 Ejemplo:
 
@@ -268,11 +268,11 @@ Ejemplo:
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--device
+### <a name="--device"></a>--dispositivo
 
-El dispositivo simulador para ejecutar. Esto se puede especificar de dos maneras: mediante el udid de un dispositivo específico, o mediante una combinación de tipo en tiempo de ejecución y el dispositivo.
+Dispositivo simulador que se va a ejecutar. Esto se puede especificar de dos maneras, ya sea mediante el UDID de un dispositivo específico o mediante una combinación de tiempo de ejecución y tipo de dispositivo.
 
-Los valores exactos varía entre máquinas y se pueden consultar mediante Apple **simctl** herramienta:
+Los valores exactos varían entre las máquinas y se pueden consultar mediante la herramienta **simctl** de Apple:
 
 ```bash
 /Applications/Xcode.app/Contents/Developer/usr/bin/simctl list
@@ -286,7 +286,7 @@ Ejemplo:
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
 ```
 
-**Tipo en tiempo de ejecución y el dispositivo**
+**Tiempo de ejecución y tipo de dispositivo**
 
 Ejemplo:
 
@@ -298,5 +298,5 @@ Ejemplo:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [WatchTables (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)
+- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

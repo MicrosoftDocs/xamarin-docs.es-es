@@ -1,5 +1,5 @@
 ---
-title: Introducción a Cognitive Services Xamarin.Forms y Azure
+title: Introducción a Xamarin. Forms y Azure Cognitive Services
 description: En este artículo se proporciona una introducción a una aplicación de ejemplo que muestra cómo invocar algunas de las API de Microsoft Cognitive Service.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 36aa53a6d257d8f5311cab84485e608bef3e97f8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 52774b387644b14e3d4612dffa6d3c3b28a37f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659272"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652314"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introducción a Cognitive Services Xamarin.Forms y Azure
+# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introducción a Xamarin. Forms y Azure Cognitive Services
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles para los desarrolladores para que sus aplicaciones más inteligentes mediante la adición de características como reconocimiento facial, reconocimiento de voz y comprensión del lenguaje. En este artículo se proporciona una introducción a la aplicación de ejemplo que muestra cómo invocar algunas de las API de Microsoft Cognitive Service._
 
@@ -50,7 +50,7 @@ Al hacer clic en el botón emoticones en el `TodoListPage` navega a la `RateAppP
 
 El `RateAppPage` permite al usuario tomar una foto de su cara, que se envía a Face API con la emoción devuelta que se muestran.
 
-## <a name="understand-the-application-anatomy"></a>Descubra los componentes de aplicación
+## <a name="understand-the-application-anatomy"></a>Descripción de la anatomía de la aplicación
 
 El proyecto de código compartido para la aplicación de ejemplo consta de cinco carpetas principales:
 
@@ -80,7 +80,7 @@ La aplicación de ejemplo usa los siguientes paquetes NuGet:
 
 Además, estos paquetes de NuGet también instalan sus propias dependencias.
 
-### <a name="model-the-data"></a>Los datos del modelo
+### <a name="model-the-data"></a>Modelar los datos
 
 La aplicación de ejemplo usa el `TodoItem` clase para modelar los datos que se muestra y se almacenan en la base de datos SQLite local. En el ejemplo de código siguiente se muestra la clase `TodoItem`:
 
@@ -105,9 +105,9 @@ El `TodoItemRepository` clase implementa las operaciones de base de datos y una 
 - **SaveItemAsync** : crea o actualiza un elemento de la base de datos SQLite local.
 - **DeleteItemAsync** : elimina el elemento especificado de la base de datos SQLite local.
 
-### <a name="platform-project-implementations"></a>Implementaciones de proyecto de plataforma
+### <a name="platform-project-implementations"></a>Implementaciones del proyecto de plataforma
 
-El `Services` carpeta en el proyecto de código compartido contiene la `IFileHelper` y `IAudioRecorderService` interfaces que se usan por el `DependencyService` clase para buscar las clases que implementan las interfaces en los proyectos de plataforma.
+La `Services` carpeta del proyecto de código compartido contiene las `IFileHelper` interfaces `IAudioRecorderService` y que usa la `DependencyService` clase para buscar las clases que implementan las interfaces en los proyectos de la plataforma.
 
 El `IFileHelper` interfaz se implementa mediante el `FileHelper` clase en cada proyecto de la plataforma. Esta clase consta de un único método, `GetLocalFilePath`, que devuelve una ruta de acceso local para almacenar la base de datos de SQLite.
 
@@ -125,4 +125,4 @@ La aplicación de ejemplo invoca los servicios cognitivos de Microsoft siguiente
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Documentación de Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/documentation)
-- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

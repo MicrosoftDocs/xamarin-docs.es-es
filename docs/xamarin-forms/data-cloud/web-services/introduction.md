@@ -1,22 +1,22 @@
 ---
-title: Introducción a servicios Web de Xamarin.Forms
-description: Esta guía proporciona un tutorial de la aplicación de ejemplo de Xamarin.Forms que muestra cómo comunicar con los servicios web diferentes. Aunque cada servicio web utiliza una aplicación de ejemplo independiente, todos son funcionalmente similares y comparten clases comunes.
+title: Introducción a los servicios Web de Xamarin. Forms
+description: En esta guía se proporciona un tutorial de la aplicación de ejemplo de Xamarin. Forms que muestra cómo comunicarse con distintos servicios Web. Aunque cada servicio web utiliza una aplicación de ejemplo independiente, todos son funcionalmente similares y comparten clases comunes.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: b34381ad587d623e66af1b581200094448851bf6
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: bbeab6a6ab0d4a9d0e3a962240317fc0d54f9e25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658992"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656636"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Introducción a servicios Web de Xamarin.Forms
+# <a name="xamarinforms-web-services-introduction"></a>Introducción a los servicios Web de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _En este tema se ofrece un tutorial de la aplicación de ejemplo de Xamarin.Forms que muestra cómo comunicar con los servicios web diferentes. Aunque cada servicio web utiliza una aplicación de ejemplo independiente, todos son funcionalmente similares y comparten clases comunes._
 
@@ -36,7 +36,7 @@ Cuando se inicia la aplicación, se muestra una página que enumera las tareas q
 
 Cada tema de esta guía proporciona un vínculo de descarga a un *diferentes* versión de la aplicación que se muestra un tipo específico de back-end de web service. Descargue el código de ejemplo correspondiente en la página de cada estilo de servicio web.
 
-## <a name="understand-the-application-anatomy"></a>Descubra los componentes de aplicación
+## <a name="understand-the-application-anatomy"></a>Descripción de la anatomía de la aplicación
 
 El proyecto de código compartido para cada aplicación de ejemplo consta de tres carpetas principales:
 
@@ -46,7 +46,7 @@ El proyecto de código compartido para cada aplicación de ejemplo consta de tre
 |Modelos|Contiene las clases de modelo de datos para la aplicación. Como mínimo, esto incluye la `TodoItem` (clase), que modela un único elemento de datos usados por la aplicación. La carpeta puede incluir también las clases adicionales que se usa para modelar los datos de usuario.|
 |Vistas|Contiene las páginas de la aplicación. Esto suele estar compuesto por el `TodoListPage` y `TodoItemPage` clases y las clases adicionales que se usa para realizar la autenticación.|
 
-El proyecto de código compartido para cada aplicación también consta de un número de archivos importantes:
+El proyecto de código compartido de cada aplicación también consta de varios archivos importantes:
 
 |Archivo|Propósito|
 |--- |--- |
@@ -54,7 +54,7 @@ El proyecto de código compartido para cada aplicación también consta de un n�
 |ITextToSpeech.cs|El `ITextToSpeech` interfaz, que especifica que el `Speak` método debe proporcionarse mediante cualquier clase de implementación.|
 |Todo.cs|El `App` clase que es responsable de crear instancias tanto la primera página que se mostrará la aplicación en cada plataforma, y el `TodoItemManager` clase que se utiliza para invocar las operaciones del servicio web.|
 
-### <a name="view-pages"></a>Páginas de vista
+### <a name="view-pages"></a>Ver páginas
 
 La mayoría de las aplicaciones de ejemplo contienen al menos dos páginas:
 
@@ -63,7 +63,7 @@ La mayoría de las aplicaciones de ejemplo contienen al menos dos páginas:
 
 Además, algunas aplicaciones de ejemplo contienen páginas adicionales que se usan para administrar el proceso de autenticación de usuario.
 
-### <a name="model-the-data"></a>Los datos del modelo
+### <a name="model-the-data"></a>Modelar los datos
 
 Cada aplicación de ejemplo usa el `TodoItem` clase para modelar los datos que se muestran y se envía al servicio web para el almacenamiento. En el ejemplo de código siguiente se muestra la clase `TodoItem`:
 
@@ -79,7 +79,7 @@ public class TodoItem
 
 El `ID` propiedad se utiliza para identificar de forma única cada `TodoItem` de instancia y cada servicio web sirve para identificar los datos que se va a actualizar o eliminar.
 
-### <a name="invoke-web-service-operations"></a>Invocar operaciones de servicio web
+### <a name="invoke-web-service-operations"></a>Invocar operaciones de servicio Web
 
 Se tiene acceso a las operaciones del servicio Web a través de la `TodoItemManager` clase y una instancia de la clase se pueden acceder mediante el `App.TodoManager` propiedad. La `TodoItemManager` clase proporciona los métodos siguientes para invocar las operaciones del servicio web:
 
@@ -93,6 +93,6 @@ En lugar de invocar las operaciones del servicio web directamente, el `TodoItemM
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ASMX (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX)
-- [WCF (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
-- [REST (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [ASMX (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

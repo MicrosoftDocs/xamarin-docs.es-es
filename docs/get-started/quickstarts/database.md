@@ -1,6 +1,6 @@
 ---
 title: Almacenamiento de datos en una base de datos local de SQLite.NET
-description: En este artículo se explica cómo almacenar datos en una base de datos local de SQLite.NET.
+description: En este artículo se explica cómo almacenar datos en una base de datos de SQLite.NET local.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,38 +9,38 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: e9aed82ef0db9de35bd4cffe7daebcaa9389e42e
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832136"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653506"
 ---
-# <a name="store-data-in-a-local-sqlitenet-database"></a>Store los datos en una base de datos Local de SQLite.NET
+# <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenar datos en una base de datos de SQLite.NET local
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
-En este tutorial, obtendrá información sobre cómo:
+En esta guía de inicio rápido, obtendrá información sobre cómo:
 
-- Use el Administrador de paquetes de NuGet para agregar un paquete de NuGet a un proyecto.
-- Store datos localmente en una base de datos de SQLite.NET.
+- Use el administrador de paquetes de NuGet para agregar un paquete de NuGet a un proyecto.
+- Almacenar datos localmente en una base de datos de SQLite.NET.
 
-La Guía de inicio rápido le guía a través almacenar datos en una base de datos local de SQLite.NET. A continuación se muestra la aplicación final:
+En la guía de inicio rápido se explica cómo almacenar datos en una base de datos de SQLite.NET local. A continuación se muestra la aplicación final:
 
-[![](database-images/screenshots1-sml.png "Notas de la página")](database-images/screenshots1.png#lightbox "notas de la página")
-[![](database-images/screenshots2-sml.png "tenga en cuenta la página de entrada")](database-images/screenshots2.png#lightbox "Nota Página de entrada")
+[ ![(database-images/screenshots1-sml.png " ")]Página notas] (database-images/screenshots1.png#lightbox "Página notas") Nota: Página de(database-images/screenshots2.png#lightbox "entrada de nota") de página [ ![(database-images/screenshots2-sml.png " ")]] 
+
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes de intentar este inicio rápido. Como alternativa, descargue el [anterior ejemplo de tutorial rápido](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/) y usarlo como punto de partida para este inicio rápido.
+Antes de intentar esta guía de inicio rápido, debe completar correctamente el [Inicio rápido anterior](multi-page.md) . También puede descargar el [ejemplo de inicio rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) y usarlo como punto de partida para esta guía de inicio rápido.
 
 ::: zone pivot="windows"
 
 ## <a name="update-the-app-with-visual-studio"></a>Actualizar la aplicación con Visual Studio
 
-1. Inicie Visual Studio y abra la solución de notas.
+1. Inicie Visual Studio y abra la solución notas.
 
-2. En **el Explorador de soluciones**, seleccione el **notas** del proyecto, haga clic en y seleccione **administrar paquetes NuGet...** :
+2. En **Explorador de soluciones**, seleccione el proyecto **notas** , haga clic con el botón derecho y seleccione **administrar paquetes NuGet..** .:
 
     ![](database-images/vs/add-nuget-packages.png "Agregue paquetes NuGet")    
 
@@ -58,7 +58,7 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
 
     Este paquete se usará para incorporar operaciones de bases de datos en la aplicación.
 
-4. En **el Explorador de soluciones**, en el **notas** proyecto, abra **Note.cs** en el **modelos** reemplazar el existente y carpeta de código con el código siguiente:
+4. En **Explorador de soluciones**, en el proyecto **notas** , Abra **Note.CS** en la carpeta **modelos** y reemplace el código existente por el código siguiente:
 
     ```csharp
     using System;
@@ -76,18 +76,18 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Esta clase define un `Note` modelo donde se almacenará los datos sobre todas las notas de la aplicación. El `ID` propiedad está marcada con `PrimaryKey` y `AutoIncrement` atributos para asegurarse de que cada `Note` instancia en la base de datos de SQLite.NET tendrá un identificador único proporcionado por SQLite.NET.
+    Esta clase define un `Note` modelo que almacenará los datos de cada nota en la aplicación. La `ID` propiedad se marca con `PrimaryKey` los `AutoIncrement` atributos y para asegurarse de `Note` que cada instancia de la base de datos SQLite.net tendrá un identificador único proporcionado por SQLite.net.
 
-    Guarde los cambios en **Note.cs** presionando **CTRL+S**y cierre el archivo.
+    Guarde los cambios en **Note.CS** presionando **Ctrl + S**y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-5. En **el Explorador de soluciones**, agregue una nueva carpeta denominada **datos** a la **notas** proyecto.
+5. En **Explorador de soluciones**, agregue una nueva carpeta denominada **Data** al proyecto **Notes** .
 
-6. En **el Explorador de soluciones**, en el **notas** proyecto, agregar una nueva clase denominada **NoteDatabase** a la **datos** carpeta.
+6. En **Explorador de soluciones**, en el proyecto **notas** , agregue una nueva clase denominada **NoteDatabase** a la carpeta de **datos** .
 
-7. En **NoteDatabase.cs**, reemplace el código existente por el código siguiente:
+7. En **NoteDatabase.CS**, reemplace el código existente por el código siguiente:
 
     ```csharp
     using System.Collections.Generic;
@@ -139,14 +139,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Esta clase contiene código para crear la base de datos, leen datos, escribir datos en él y eliminar datos. El código usa API asincrónicas de SQLite.NET que mueven las operaciones de base de datos a subprocesos en segundo plano. Además, el constructor `NoteDatabase` toma la ruta de acceso del archivo de base de datos como un argumento. Esta ruta de acceso será proporcionado por el `App` clase en el paso siguiente.
+    Esta clase contiene código para crear la base de datos, leer datos de ella, escribir datos en ella y eliminar datos de la misma. El código usa API asincrónicas de SQLite.NET que mueven las operaciones de base de datos a subprocesos en segundo plano. Además, el constructor `NoteDatabase` toma la ruta de acceso del archivo de base de datos como un argumento. La `App` clase proporcionará esta ruta de acceso en el paso siguiente.
 
-    Guarde los cambios en **NoteDatabase.cs** presionando **CTRL+S**y cierre el archivo.
+    Guarde los cambios en **NoteDatabase.CS** presionando **Ctrl + S**y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-8. En **el Explorador de soluciones**, en el **notas** del proyecto, haga doble clic en **App.xaml.cs** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
+8. En **Explorador de soluciones**, en el proyecto **notas** , haga doble clic en **app.Xaml.CS** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
 
     ```csharp
     using System;
@@ -196,14 +196,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Este código define un `Database` propiedad que se crea un nuevo `NoteDatabase` instancia como un singleton, pasando el nombre de archivo de la base de datos como el argumento para el `NoteDatabase` constructor. La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
+    Este código define una `Database` propiedad que crea una nueva `NoteDatabase` instancia como singleton, pasando el nombre de archivo de la base de datos `NoteDatabase` como argumento al constructor. La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
 
     Guarde los cambios en **App.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-9. En **el Explorador de soluciones**, en el **notas** del proyecto, haga doble clic en **NotesPage.xaml.cs** para abrirlo. A continuación, reemplace el `OnAppearing` método con el código siguiente:
+9. En **Explorador de soluciones**, en el proyecto **notas** , haga doble clic en **NotesPage.Xaml.CS** para abrirlo. A continuación, `OnAppearing` Reemplace el método por el código siguiente:
 
     ```csharp
     protected override async void OnAppearing()
@@ -214,14 +214,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```    
 
-    Este código rellena la [ `ListView` ](xref:Xamarin.Forms.ListView) con las notas que se almacenan en la base de datos.
+    Este código rellena el [`ListView`](xref:Xamarin.Forms.ListView) con cualquier nota almacenada en la base de datos.
 
-    Guarde los cambios en **NotesPage.xaml.cs** presionando **CTRL+S**y cierre el archivo.
+    Guarde los cambios en **NotesPage.Xaml.CS** presionando **Ctrl + S**y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-10. En **el Explorador de soluciones**, haga doble clic en **NoteEntryPage.xaml.cs** para abrirlo. A continuación, reemplace el `OnSaveButtonClicked` y `OnDeleteButtonClicked` métodos con el código siguiente:
+10. En **Explorador de soluciones**, haga doble clic en **NoteEntryPage.Xaml.CS** para abrirlo. A continuación, `OnSaveButtonClicked` Reemplace `OnDeleteButtonClicked` los métodos y por el código siguiente:
 
       ```csharp
       async void OnSaveButtonClicked(object sender, EventArgs e)
@@ -240,15 +240,15 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
       }
       ```    
 
-      El `NoteEntryPage` almacena un `Note` instancia, que representa una sola nota, en el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de la página. Cuando el `OnSaveButtonClicked` se ejecuta el controlador de eventos, el `Note` instancia se guarda en la base de datos y la aplicación regresa a la página anterior. Cuando el `OnDeleteButtonClicked` se ejecuta el controlador de eventos, el `Note` instancia se elimina de la base de datos y la aplicación regresa a la página anterior.
+      Almacena una `Note` instancia de, que representa una sola nota, en la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página. `NoteEntryPage` Cuando se `OnSaveButtonClicked` ejecuta el controlador de eventos, `Note` la instancia se guarda en la base de datos y la aplicación se desplaza a la página anterior. Cuando se `OnDeleteButtonClicked` ejecuta el controlador de eventos, `Note` la instancia se elimina de la base de datos y la aplicación se desplaza a la página anterior.
 
-      Guarde los cambios en **NoteEntryPage.xaml.cs** presionando **CTRL+S**y cierre el archivo.
+      Guarde los cambios en **NoteEntryPage.Xaml.CS** presionando **Ctrl + S**y cierre el archivo.
 
-11. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, consulte [crear la Guía de inicio rápido](single-page.md#building-the-quickstart).
+11. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, vea [crear la guía de inicio rápido](single-page.md#building-the-quickstart).
 
-    En el **NotesPage** presione el **+** botón para navegar a la **NoteEntryPage** y escriba una nota. Después de guardar la nota de la aplicación navegará a la **NotesPage**.
+    En el **NotesPage** , presione **+** el botón para navegar hasta el **NoteEntryPage** y escriba una nota. Después de guardar la nota, la aplicación se devolverá a la **NotesPage**.
 
-    Escriba un número de notas, de longitud variable, observar el comportamiento de la aplicación.
+    Escriba un número de notas, de longitud variable, para observar el comportamiento de la aplicación.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -257,7 +257,7 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
 
 1. Inicie Visual Studio para Mac y abra el proyecto de notas.
 
-2. En el **panel de solución**, seleccione el **notas** del proyecto, haga clic en y seleccione **Agregar > Agregar paquetes NuGet...** :
+2. En el **Panel de solución**, seleccione el proyecto **notas** , haga clic con el botón derecho y seleccione **Agregar > agregar paquetes NuGet.** ..:
 
     ![](database-images/vsmac/add-nuget-packages.png "Agregue paquetes NuGet")    
 
@@ -275,7 +275,7 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
 
     Este paquete se usará para incorporar operaciones de bases de datos en la aplicación.
 
-4. En el **panel de solución**, en el **notas** proyecto, abra **Note.cs** en el **modelos** carpeta y reemplace el código existente por lo siguiente código:
+4. En el **Panel de solución**, en el proyecto **notas** , Abra **Note.CS** en la carpeta **modelos** y reemplace el código existente por el código siguiente:
 
     ```csharp
     using System;
@@ -293,18 +293,18 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Esta clase define un `Note` modelo donde se almacenará los datos sobre todas las notas de la aplicación. El `ID` propiedad está marcada con `PrimaryKey` y `AutoIncrement` atributos para asegurarse de que cada `Note` instancia en la base de datos de SQLite.NET tendrá un identificador único proporcionado por SQLite.NET.
+    Esta clase define un `Note` modelo que almacenará los datos de cada nota en la aplicación. La `ID` propiedad se marca con `PrimaryKey` los `AutoIncrement` atributos y para asegurarse de `Note` que cada instancia de la base de datos SQLite.net tendrá un identificador único proporcionado por SQLite.net.
 
-    Guarde los cambios en **Note.cs** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **Note.CS** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-5. En el **panel de solución**, agregue una nueva carpeta denominada **datos** a la **notas** proyecto.
+5. En el **Panel de solución**, agregue una nueva carpeta denominada **Data** al proyecto **Notes** .
 
-6. En el **panel de solución**, en el **notas** proyecto, agregar una nueva clase denominada **NoteDatabase** a la **datos** carpeta.
+6. En el **Panel de solución**, en el proyecto **notas** , agregue una nueva clase denominada **NoteDatabase** a la carpeta de **datos** .
 
-7. En **NoteDatabase.cs**, reemplace el código existente por el código siguiente:
+7. En **NoteDatabase.CS**, reemplace el código existente por el código siguiente:
 
     ```csharp
     using System.Collections.Generic;
@@ -356,14 +356,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Esta clase contiene código para crear la base de datos, leen datos, escribir datos en él y eliminar datos. El código usa API asincrónicas de SQLite.NET que mueven las operaciones de base de datos a subprocesos en segundo plano. Además, el constructor `NoteDatabase` toma la ruta de acceso del archivo de base de datos como un argumento. Esta ruta de acceso será proporcionado por el `App` clase en el paso siguiente.
+    Esta clase contiene código para crear la base de datos, leer datos de ella, escribir datos en ella y eliminar datos de la misma. El código usa API asincrónicas de SQLite.NET que mueven las operaciones de base de datos a subprocesos en segundo plano. Además, el constructor `NoteDatabase` toma la ruta de acceso del archivo de base de datos como un argumento. La `App` clase proporcionará esta ruta de acceso en el paso siguiente.
 
-    Guarde los cambios en **NoteDatabase.cs** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **NoteDatabase.CS** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-8. En el **panel de solución**, en el **notas** del proyecto, haga doble clic en **App.xaml.cs** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
+8. En el **Panel de solución**, en el proyecto **notas** , haga doble clic en **app.Xaml.CS** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
 
     ```csharp
     using System;
@@ -413,14 +413,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```
 
-    Este código define un `Database` propiedad que se crea un nuevo `NoteDatabase` instancia como un singleton, pasando el nombre de archivo de la base de datos como el argumento para el `NoteDatabase` constructor. La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
+    Este código define una `Database` propiedad que crea una nueva `NoteDatabase` instancia como singleton, pasando el nombre de archivo de la base de datos `NoteDatabase` como argumento al constructor. La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
 
     Guarde los cambios en **App.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-9. En el **panel de solución**, en el **notas** del proyecto, haga doble clic en **NotesPage.xaml.cs** para abrirlo. A continuación, reemplace el `OnAppearing` método con el código siguiente:
+9. En el **Panel de solución**, en el proyecto **notas** , haga doble clic en **NotesPage.Xaml.CS** para abrirlo. A continuación, `OnAppearing` Reemplace el método por el código siguiente:
 
     ```csharp
     protected override async void OnAppearing()
@@ -431,14 +431,14 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
     }
     ```    
 
-    Este código rellena la [ `ListView` ](xref:Xamarin.Forms.ListView) con las notas que se almacenan en la base de datos.
+    Este código rellena el [`ListView`](xref:Xamarin.Forms.ListView) con cualquier nota almacenada en la base de datos.
 
-    Guarde los cambios en **NotesPage.xaml.cs** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **NotesPage.Xaml.CS** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
     > [!WARNING]
-    > Al intentar compilar la aplicación en este momento se producirá errores que se corregirán en pasos posteriores.
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán en los pasos siguientes.
 
-10. En el **panel de solución**, haga doble clic en **NoteEntryPage.xaml.cs** para abrirlo. A continuación, reemplace el `OnSaveButtonClicked` y `OnDeleteButtonClicked` métodos con el código siguiente:
+10. En el **Panel de solución**, haga doble clic en **NoteEntryPage.Xaml.CS** para abrirlo. A continuación, `OnSaveButtonClicked` Reemplace `OnDeleteButtonClicked` los métodos y por el código siguiente:
 
       ```csharp
       async void OnSaveButtonClicked(object sender, EventArgs e)
@@ -457,31 +457,31 @@ Debe completar correctamente el [inicio rápido anterior](multi-page.md) antes d
       }
       ```    
 
-      El `NoteEntryPage` almacena un `Note` instancia, que representa una sola nota, en el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de la página. Cuando el `OnSaveButtonClicked` se ejecuta el controlador de eventos, el `Note` instancia se guarda en la base de datos y la aplicación regresa a la página anterior. Cuando el `OnDeleteButtonClicked` se ejecuta el controlador de eventos, el `Note` instancia se elimina de la base de datos y la aplicación regresa a la página anterior.
+      Almacena una `Note` instancia de, que representa una sola nota, en la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página. `NoteEntryPage` Cuando se `OnSaveButtonClicked` ejecuta el controlador de eventos, `Note` la instancia se guarda en la base de datos y la aplicación se desplaza a la página anterior. Cuando se `OnDeleteButtonClicked` ejecuta el controlador de eventos, `Note` la instancia se elimina de la base de datos y la aplicación se desplaza a la página anterior.
 
-      Guarde los cambios en **NoteEntryPage.xaml.cs** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
+      Guarde los cambios en **NoteEntryPage.Xaml.CS** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
-11. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, consulte [crear la Guía de inicio rápido](single-page.md#building-the-quickstart).
+11. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, vea [crear la guía de inicio rápido](single-page.md#building-the-quickstart).
 
-    En el **NotesPage** presione el **+** botón para navegar a la **NoteEntryPage** y escriba una nota. Después de guardar la nota de la aplicación navegará a la **NotesPage**.
+    En el **NotesPage** , presione **+** el botón para navegar hasta el **NoteEntryPage** y escriba una nota. Después de guardar la nota, la aplicación se devolverá a la **NotesPage**.
 
-    Escriba un número de notas, de longitud variable, observar el comportamiento de la aplicación.
+    Escriba un número de notas, de longitud variable, para observar el comportamiento de la aplicación.
 
 ::: zone-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, ha aprendido cómo:
+En esta guía de inicio rápido, aprendió a:
 
-- Use el Administrador de paquetes de NuGet para agregar un paquete de NuGet a un proyecto.
-- Store datos localmente en una base de datos de SQLite.NET.
+- Use el administrador de paquetes de NuGet para agregar un paquete de NuGet a un proyecto.
+- Almacenar datos localmente en una base de datos de SQLite.NET.
 
-Para aplicar estilo a la aplicación con los estilos XAML, continúe con el siguiente inicio rápido.
+Para aplicar estilo a la aplicación con estilos XAML, continúe con la siguiente guía de inicio rápido.
 
 > [!div class="nextstepaction"]
 > [Siguiente](styling.md)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notes (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
-- [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md)
+- [Notes (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+- [Análisis detallado de Xamarin. Forms](deepdive.md)

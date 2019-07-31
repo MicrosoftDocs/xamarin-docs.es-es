@@ -1,36 +1,36 @@
 ---
 title: Introducción a watchOS 4
-description: Este documento proporciona una introducción de alto nivel para watchOS 4, que describe las nuevas características que ahora están disponibles para los desarrolladores de Xamarin.
+description: En este documento se proporciona una introducción de alto nivel a watchos 4, que describe las nuevas características que ahora están disponibles para los desarrolladores de Xamarin.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: ca922840b47899b62615bded852e66fe81b3371c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e3766815e071c190046cc5bc7d436621bcee3d29
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61223980"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651549"
 ---
 # <a name="introduction-to-watchos-4"></a>Introducción a watchOS 4
 
-Nuevas características de acceso de watchOS 4 en las aplicaciones:
+Acceder a las nuevas características de watchos 4 en las aplicaciones:
 
-* Leer datos altimeter barométrica en el nuevo Apple Watch Series 3.
-* Conectar directamente a los recursos de red con los datos móviles disponibles en algunos modelos de Apple Watch Series 3.
-* Core Bluetooth puede conectarse directamente a los accesorios.
-* Nuevos modos en segundo plano para aplicaciones de entrenamiento y de audio.
-* Nuevas plataformas intents SiriKit para [listas y notas](~/ios/platform/introduction-to-ios11/sirikit.md).
+* Lea los datos de Altimeter barométrica en la nueva Apple Watch serie 3.
+* Conéctese directamente a los recursos de red con los datos móviles disponibles en algunos modelos de Apple Watch serie 3.
+* El Bluetooth básico puede conectarse directamente a los accesorios.
+* Nuevos modos en segundo plano para aplicaciones de entrenamiento y audio.
+* Nuevas SiriKit para [las listas y las notas](~/ios/platform/introduction-to-ios11/sirikit.md).
 
-Cambios efectuados desde watchOS 3:
+Cambios desde watchos 3:
 
-* Código de la aplicación y la interfaz de usuario se ejecutan en un único proceso.
-* En el reloj (no es necesario para pedir al usuario que acepte en su teléfono), se pueden conceder permisos de ubicación.
+* El código y la interfaz de usuario de la aplicación se ejecutan en un único proceso.
+* Se puede conceder permiso de ubicación en el reloj (no es necesario pedir al usuario que acepte en su teléfono).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Ejemplos de watchOS](https://developer.xamarin.com/samples/watchos/all/)
+* [Ejemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
 * [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
-* [Novedades de watchOS 4 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/205/)
+* [Novedades de watchos 4 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/205/)

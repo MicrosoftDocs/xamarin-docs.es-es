@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: ba0a76b44f5942db5528e9f5d11a1d2c3f027c40
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: f41bcc3ccaa6b4dd8c001ceb5ead165486745283
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354021"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650259"
 ---
 # <a name="resource-dictionaries"></a>Diccionarios de recursos
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 _Recursos XAML son definiciones de objetos que pueden compartir y volver a utilizarse en toda una aplicación de Xamarin.Forms._
 
@@ -150,7 +150,7 @@ La versión original `PageBackgroundColor` y `NormalTextColor` instancias, defin
 
 Sin embargo, tenga en cuenta que la barra de fondo de la [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está de color amarillo todavía, porque el [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) propiedad está establecida en el valor de la `PageBackgroundColor` recursos definidos en la aplicación nivel `ResourceDictionary`.
 
-Ésta es otra manera de pensar en `ResourceDictionary` prioridad: Cuando el analizador XAML encuentra un `StaticResource`, busca una clave coincidente recorriendo la seguridad a través del árbol visual, con la primera coincidencia que encuentre. Si esta búsqueda finaliza en la página y la clave aún no se ha encontrado, el analizador XAML busca el `ResourceDictionary` conectados a la `App` objeto. Si todavía no se encuentra la clave, se produce una excepción.
+Esta es otra manera de pensar `ResourceDictionary` en la prioridad: Cuando el analizador de XAML encuentra un `StaticResource`, busca una clave coincidente viajando a través del árbol visual, usando la primera coincidencia que encuentra. Si esta búsqueda finaliza en la página y la clave aún no se ha encontrado, el analizador XAML busca el `ResourceDictionary` conectados a la `App` objeto. Si todavía no se encuentra la clave, se produce una excepción.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Diccionarios de recursos independiente
 
@@ -196,7 +196,7 @@ Puede crear una instancia `MyResourceDictionary` colocándola entre un par de `R
 
 Una instancia de `MyResourceDictionary` está establecido en el `Resources` propiedad de la `ContentPage` objeto.
 
-Sin embargo, este enfoque tiene algunas limitaciones: El `Resources` propiedad de la `ContentPage` hace referencia a este ejemplar `ResourceDictionary`. En la mayoría de los casos, desea que la opción de incluir otros `ResourceDictionary` instancias y quizás también otros recursos.
+Sin embargo, este enfoque tiene algunas limitaciones: La `Resources` propiedad `ResourceDictionary`de solo hace referencia a este. `ContentPage` En la mayoría de los casos, desea que la opción de incluir otros `ResourceDictionary` instancias y quizás también otros recursos.
 
 Esta tarea requiere diccionarios de recursos combinados.
 
@@ -306,7 +306,7 @@ En este artículo se explica cómo crear y consumir un [ `ResourceDictionary` ](
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Diccionarios de recursos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+- [Diccionarios de recursos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 

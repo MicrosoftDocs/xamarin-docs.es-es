@@ -7,16 +7,16 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61157408"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645884"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapa de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Cargar mapas de bits de varios orígenes y mostrarlos._
 
@@ -65,7 +65,7 @@ Para cargar un mapa de bits en función de una dirección URL, puede usar el [ `
 HttpClient httpClient = new HttpClient();
 ```
 
-Cuando se usa `HttpClient` con aplicaciones iOS y Android, desea establecer las propiedades del proyecto, como se describe en los documentos en  **[seguridad de capa de transporte (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**.
+Cuando se usa `HttpClient` con aplicaciones iOS y Android, desea establecer las propiedades del proyecto, como se describe en los documentos en  **[seguridad de capa de transporte (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
 Porque es más conveniente utilizar el `await` operador con `HttpClient`, no se puede ejecutar el código en el `BasicBitmapsPage` constructor. En su lugar, forma parte de la `OnAppearing` invalidar. Aquí la dirección URL apunta a un área en el sitio web de Xamarin con algunos mapas de bits de ejemplo. Un paquete en el sitio web permite anexar una especificación para cambiar el tamaño de mapa de bits a un ancho determinado:
 
@@ -104,7 +104,7 @@ Estático `SKBitmap.Decode` método es responsable de descodificación de archiv
 
 En términos de código, el enfoque más sencillo a la carga de los mapas de bits está incluido un recurso de mapa de bits directamente en la aplicación. El **SkiaSharpFormsDemos** programa incluye una carpeta denominada **Media** que contiene varios archivos, incluido uno denominado de mapa de bits **monkey.png**. Para los mapas de bits almacenada como recursos de programa, debe usar el **propiedades** cuadro de diálogo para asignar al archivo un **acción de compilación** de **recurso incrustado**!
 
-Cada recurso incrustado tiene un *Id. de recurso* formado por el nombre del proyecto, la carpeta y el nombre de archivo, todo conectado por puntos: **SkiaSharpFormsDemos.Media.monkey.png**. Puede obtener acceso a este recurso mediante la especificación de ese recurso identificador como argumento a la [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método de la [ `Assembly` ](xref:System.Reflection.Assembly) clase:
+Cada recurso incrustado tiene un *identificador de recurso* que está formado por el nombre del proyecto, la carpeta y el nombre de archivo, todo ello conectado por puntos: **SkiaSharpFormsDemos. Media. Monkey. png**. Puede obtener acceso a este recurso mediante la especificación de ese recurso identificador como argumento a la [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método de la [ `Assembly` ](xref:System.Reflection.Assembly) clase:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
@@ -250,5 +250,5 @@ Puede mostrar mapas de bits con diversos grados de transparencia y el artículo 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

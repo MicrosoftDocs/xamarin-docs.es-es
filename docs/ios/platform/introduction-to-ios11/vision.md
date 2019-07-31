@@ -1,56 +1,56 @@
 ---
-title: Marco de trabajo de visión de Xamarin.iOS
-description: Este documento describe cómo usar iOS 11 Vision Framework en Xamarin.iOS. En concreto, describe la detección de rectángulo y detección de caras.
+title: Vision Framework en Xamarin. iOS
+description: En este documento se describe cómo usar el marco de trabajo de iOS 11 Vision en Xamarin. iOS. En concreto, se describe la detección de rectángulos y la detección de caras.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 291cbdb93cfb6ac123d740e98065ba877bb44da5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7fd1a933ba166b7c1b708bc102b84ce407b18fd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61159691"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648360"
 ---
-# <a name="vision-framework-in-xamarinios"></a>Marco de trabajo de visión de Xamarin.iOS
+# <a name="vision-framework-in-xamarinios"></a>Vision Framework en Xamarin. iOS
 
-El marco de trabajo de visión, agrega un número de nuevas características a iOS 11, incluidos de procesamiento de imágenes:
+Vision Framework agrega una serie de nuevas características de procesamiento de imágenes a iOS 11, entre las que se incluyen:
 
-- [Detección de rectángulo](#rectangles)
+- [Detección de rectángulos](#rectangles)
 - [Detección de caras](#faces)
-- Machine Learning análisis de imágenes (se describe en [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
-- Detección de código de barras
+- Machine Learning el análisis de imágenes (se explica en [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
+- Detección de códigos de barras
 - Análisis de alineación de imagen
 - Detección de texto
 - Detección de horizonte
-- Seguimiento de & detección de objetos
+- Seguimiento de & de detección de objetos
 
-![Fotografiar con tres rectángulos detectados](vision-images/found-rectangles-tiny.png) ![Fotografiar con dos caras detectadas](vision-images/xamarin-home-faces-tiny.png)
+![Fotografía con tres rectángulos detectados](vision-images/found-rectangles-tiny.png) ![Fotografía con dos caras detectadas](vision-images/xamarin-home-faces-tiny.png)
 
-Detección de rectángulo y detección de caras se tratan con más detalle a continuación.
+La detección y el Detección de caras de los rectángulos se describen con más detalle a continuación.
 
 <a name="rectangles" />
 
-## <a name="rectangle-detection"></a>Detección de rectángulo
+## <a name="rectangle-detection"></a>Detección de rectángulos
 
-El [VisionRects ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/) muestra cómo procesar una imagen y dibujar los rectángulos detectados en él.
+En el [ejemplo VisionRects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) se muestra cómo procesar una imagen y dibujar los rectángulos detectados en ella.
 
 ### <a name="1-initialize-the-vision-request"></a>1. Inicializar la solicitud de visión
 
-En `ViewDidLoad`, cree un `VNDetectRectanglesRequest` que hace referencia a la `HandleRectangles` método que se llamará al final de cada solicitud:
+En `ViewDidLoad`, cree un `VNDetectRectanglesRequest` que haga referencia `HandleRectangles` al método al que se llamará al final de cada solicitud:
 
-El `MaximumObservations` también se debe establecer la propiedad, en caso contrario, el valor predeterminado será 1 y se devolverá sólo un único resultado.
+También `MaximumObservations` se debe establecer la propiedad; de lo contrario, el valor predeterminado será 1 y solo se devolverá un resultado único.
 
 ```csharp
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 RectangleRequest.MaximumObservations = 10;
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Iniciar el procesamiento de visión
+### <a name="2-start-the-vision-processing"></a>2. Iniciar el procesamiento de la visión
 
-El siguiente código empieza a procesar la solicitud. En el **VisionRects** ejemplo, este código se ejecuta después de que el usuario ha seleccionado una imagen:
+El código siguiente inicia el procesamiento de la solicitud. En el ejemplo **VisionRects** , este código se ejecuta después de que el usuario haya seleccionado una imagen:
 
 ```csharp
 // Run the rectangle detector
@@ -60,11 +60,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Este controlador pasa el `ciImage` para el marco de trabajo de visión `VNDetectRectanglesRequest` que se creó en el paso 1.
+Este controlador pasa `ciImage` a Vision Framework `VNDetectRectanglesRequest` que se creó en el paso 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Controlar los resultados del procesamiento de visión
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Controlar los resultados del procesamiento de la visión
 
-Una vez completada la detección de rectángulo, el marco ejecuta el `HandleRectangles` método, a continuación se muestra un resumen de los cuales:
+Una vez completada la detección del rectángulo, el marco de `HandleRectangles` trabajo ejecuta el método, cuyo resumen se muestra a continuación:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -88,38 +88,38 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="4-display-the-results"></a>4. Mostrar los resultados
 
-El `OverlayRectangles` método en el **VisionRectangles** ejemplo tiene tres funciones:
+El `OverlayRectangles` método en el ejemplo **VisionRectangles** tiene tres funciones:
 
-- Representación de la imagen de origen
-- Dibuja un rectángulo para indicar donde se detectó cada uno de ellos, y
-- Agregar una etiqueta de texto de cada rectángulo usando CoreGraphics.
+- Representación de la imagen de origen,
+- Dibujar un rectángulo para indicar dónde se ha detectado cada uno de ellos y
+- Agregar una etiqueta de texto para cada rectángulo mediante CoreGraphics.
 
-Ver el [origen del ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/) para el método CoreGraphics exacto.
+Vea el [origen del ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) para el método CoreGraphics exacto.
 
-![Fotografiar con tres rectángulos detectados](vision-images/found-rectangles-phone-sml.png)
+![Fotografía con tres rectángulos detectados](vision-images/found-rectangles-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Procesamiento posterior
+### <a name="5-further-processing"></a>5. Procesamiento adicional
 
-Detección de rectángulo a menudo es solo el primer paso en una cadena de operaciones, como con [en este ejemplo CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), donde los rectángulos se pasan a un modelo de CoreML para analizar los dígitos escritos a mano.
+La detección de rectángulos suele ser solo el primer paso en una cadena de operaciones, como en [este ejemplo de CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), donde los rectángulos se pasan a un modelo de CoreML para analizar los dígitos escritos a mano.
 
 
 <a name="faces" />
 
 ## <a name="face-detection"></a>Detección de caras
 
-El [VisionFaces ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/) funciona de manera similar a la **VisionRectangles** de ejemplo, mediante una clase diferente de solicitud de visión.
+El [ejemplo VisionFaces](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) funciona de forma similar al ejemplo **VisionRectangles** , mediante una clase de solicitud de visión diferente.
 
 ### <a name="1-initialize-the-vision-request"></a>1. Inicializar la solicitud de visión
 
-En `ViewDidLoad`, cree un `VNDetectFaceRectanglesRequest` que hace referencia a la `HandleRectangles` método que se llamará al final de cada solicitud.
+En `ViewDidLoad`, cree un `VNDetectFaceRectanglesRequest` que haga referencia `HandleRectangles` al método al que se llamará al final de cada solicitud.
 
 ```csharp
 FaceRectangleRequest = new VNDetectFaceRectanglesRequest(HandleRectangles);
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Iniciar el procesamiento de visión
+### <a name="2-start-the-vision-processing"></a>2. Iniciar el procesamiento de la visión
 
-El siguiente código empieza a procesar la solicitud. En el **VisionFaces** este código se ejecuta después de que el usuario ha seleccionado una imagen de ejemplo:
+El código siguiente inicia el procesamiento de la solicitud. En el ejemplo **VisionFaces** , este código se ejecuta después de que el usuario haya seleccionado una imagen:
 
 ```csharp
 // Run the face detector
@@ -129,11 +129,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Este controlador pasa el `ciImage` para el marco de trabajo de visión `VNDetectFaceRectanglesRequest` que se creó en el paso 1.
+Este controlador pasa `ciImage` a Vision Framework `VNDetectFaceRectanglesRequest` que se creó en el paso 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Controlar los resultados del procesamiento de visión
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Controlar los resultados del procesamiento de la visión
 
-Una vez completada la detección de caras, el controlador ejecuta la `HandleRectangles` método que realiza el control de errores y muestra los límites de las caras detectadas y llama a la `OverlayRectangles` para dibujar rectángulos en la imagen original:
+Una vez completada la detección de rostros, el controlador `HandleRectangles` ejecuta el método que realiza el control de errores y muestra los límites de los rostros detectados y `OverlayRectangles` llama a para dibujar los rectángulos delimitadores en la imagen original:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -162,23 +162,23 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="4-display-the-results"></a>4. Mostrar los resultados
 
-El `OverlayRectangles` método en el **VisionFaces** ejemplo tiene tres funciones:
+El `OverlayRectangles` método en el ejemplo **VisionFaces** tiene tres funciones:
 
-- Representación de la imagen de origen
-- Dibuja un rectángulo para cada rostro detectado, y
-- Agregar una etiqueta de texto para cada cara con CoreGraphics.
+- Representación de la imagen de origen,
+- Dibujar un rectángulo para cada una de las caras detectadas
+- Agregar una etiqueta de texto para cada una de ellas mediante CoreGraphics.
 
-Ver el [origen del ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/) para el método CoreGraphics exacto.
+Vea el [origen del ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) para el método CoreGraphics exacto.
 
-![Fotografiar con dos caras detectadas](vision-images/found-faces-phone-sml.png)
+![Fotografía con dos caras detectadas](vision-images/found-faces-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Procesamiento posterior
+### <a name="5-further-processing"></a>5. Procesamiento adicional
 
-El marco de trabajo de visión incluye funcionalidades adicionales para detectar características faciales, como los ojos y boca. Use la `VNDetectFaceLandmarksRequest` tipo, lo cual devolverá `VNFaceObservation` resultados que en el paso 3 anterior, pero otras `VNFaceLandmark` datos.
+Vision Framework incluye funcionalidades adicionales para detectar características faciales, como los ojos y la boca. Use el `VNDetectFaceLandmarksRequest` tipo, que devolverá `VNFaceObservation` resultados como en el paso 3 anterior, pero `VNFaceLandmark` con datos adicionales.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Rectángulos de visión (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/)
-- [Visión caras (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/)
-- [Avances en la imagen de Core - filtros, sistema operativo, visión y más (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/510/)
+- [Rectángulos de visión (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles)
+- [Caras de visión (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Avances en los filtros de imagen principal, metal, visión y mucho más (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/510/)

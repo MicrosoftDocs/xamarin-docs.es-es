@@ -1,38 +1,38 @@
 ---
-title: Plataforma de notificaciones de usuario en Xamarin.iOS
-description: Vínculos a documentos que describen el marco de trabajo de las notificaciones de usuario y cómo usarlo para enviar y recibir las notificaciones locales y remotas en una aplicación de Xamarin.iOS.
+title: Marco de notificaciones de usuario en Xamarin. iOS
+description: Vínculos a documentos que describen el marco de trabajo de notificaciones de usuario y cómo usarlo para enviar y recibir notificaciones locales y remotas en una aplicación de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/01/2016
-ms.openlocfilehash: 3e9103b02dd17529d0084d6f7eb4ddcc7749659a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13fb48d5ee64c1d84926158381f0f69655fb2cf2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423323"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651185"
 ---
-# <a name="user-notifications-framework-in-xamarinios"></a>Plataforma de notificaciones de usuario en Xamarin.iOS
+# <a name="user-notifications-framework-in-xamarinios"></a>Marco de notificaciones de usuario en Xamarin. iOS
 
-Nuevo en iOS 10, la notificación de usuario framework permite la entrega y el tratamiento de las notificaciones locales y remotas. Con este marco de trabajo, la aplicación o extensión de la aplicación puede programar la entrega de notificaciones locales mediante la especificación de un conjunto de condiciones como la ubicación o la hora del día.
+Como novedad de iOS 10, el marco de trabajo de notificaciones de usuario permite la entrega y el control de las notificaciones locales y remotas. Con este marco de trabajo, la extensión de aplicación o aplicación puede programar la entrega de notificaciones locales especificando un conjunto de condiciones como la ubicación o la hora del día.
 
-Además, la aplicación o extensión puede recibir (y posiblemente modificar) las notificaciones locales y remotas que se entregan a dispositivos iOS del usuario.
+Además, la aplicación o la extensión pueden recibir (y potencialmente modificar) las notificaciones locales y remotas, ya que se entregan al dispositivo iOS del usuario.
 
-El nuevo marco de interfaz de usuario de notificación de usuario permite que la aplicación o extensión de la aplicación para personalizar la apariencia de las notificaciones locales y remotas cuando se presentan al usuario.
+El marco de trabajo de la interfaz de usuario de notificaciones de usuario permite personalizar la apariencia de las notificaciones locales y remotas cuando se presentan al usuario.
 
 ## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificaciones de usuario mejoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
-Este artículo presenta todas las formas en que las notificaciones de usuario se han mejorado para iOS 10 y ofrece una introducción rápida a su implementación mediante el nuevo marco de notificación de usuario.
+En este artículo se presentan todas las formas en las que las notificaciones de usuario se han mejorado para iOS 10 y se ofrece una introducción rápida a la implementación mediante el nuevo marco de trabajo de notificaciones de usuario.
 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificaciones de usuario avanzadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
-En este artículo toma más detenidamente el nuevo marco de las notificaciones de usuario y cómo aprovechar al máximo, en una aplicación de Xamarin.iOS.
+En este artículo se explica con mayor profundidad el nuevo marco de trabajo de notificaciones de usuario y cómo sacar el máximo partido de él en una aplicación de Xamarin. iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Referencia de marco de Usernotifications](https://developer.apple.com/reference/usernotifications)
+- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Referencia de UserNotifications Framework](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guía de programación de notificaciones locales y remotos](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Guía de programación de notificaciones locales y remotas](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

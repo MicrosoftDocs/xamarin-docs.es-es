@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 3532a557c6ed958974326ca79ad160b01e9b5289
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 0be72e29ebfed9a3f43d96fd66b7f4597459a834
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926689"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656766"
 ---
 # <a name="easing-functions-in-xamarinforms"></a>Funciones de aceleración en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Easing/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
 _Xamarin.Forms incluye una clase de entrada y salida lenta que le permite especificar una función de transferencia que controla cómo las animaciones aceleran o ralentizar se están ejecutando. En este artículo se muestra cómo utilizar las funciones de aceleración predefinidas y cómo crear funciones de aceleración._
 
@@ -112,6 +112,6 @@ En este artículo se muestra cómo utilizar las funciones de aceleración predef
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
-- [Funciones de aceleración (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Easing/)
+- [Funciones de aceleración (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 - [Aceleración](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

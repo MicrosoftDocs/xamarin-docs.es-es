@@ -1,5 +1,5 @@
 ---
-title: Autenticar a los usuarios con una base de datos de documentos de Azure Cosmos DB y Xamarin.Forms
+title: Autenticación de usuarios con una base de datos de documentos Azure Cosmos DB y Xamarin. Forms
 description: En este artículo se explica cómo combinar el control de acceso con las colecciones de Azure Cosmos DB con particiones, para que un usuario sólo puede tener acceso a sus propios documentos en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 0067a9e576e695a308e4326955b540be2ff46f61
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832359"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657228"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticar a los usuarios con una base de datos de documentos de Azure Cosmos DB y Xamarin.Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticación de usuarios con una base de datos de documentos Azure Cosmos DB y Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure bases de datos de documento de Cosmos DB admiten colecciones con particiones, que pueden abarcar varios servidores y particiones, al tiempo que admite almacenamiento ilimitado y rendimiento. En este artículo se explica cómo combinar el control de acceso con las colecciones con particiones, para que un usuario sólo puede tener acceso a sus propios documentos en una aplicación de Xamarin.Forms._
 
@@ -271,7 +271,7 @@ En este artículo se explica cómo combinar el control de acceso con las colecci
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Todo Azure Cosmos DB Auth (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB Auth (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consumo de una base de datos de documentos de Cosmos Azure DB](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Protección del acceso a datos de Azure Cosmos DB](/azure/cosmos-db/secure-access-to-data/)
 - [Control de acceso en la API de SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).

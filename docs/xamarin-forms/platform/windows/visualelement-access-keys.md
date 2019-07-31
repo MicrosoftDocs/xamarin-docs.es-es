@@ -1,28 +1,28 @@
 ---
 title: Claves de acceso de VisualElement en Windows
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el Windows específicos de la plataforma que especifica una clave de acceso para un VisualElement.
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma específica de Windows que especifica una clave de acceso para un VisualElement.
 ms.prod: xamarin
 ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce1d682678c17bb24e7a4fd528c84554465c4fa6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926841"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656835"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Claves de acceso de VisualElement en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Teclas de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y accesibilidad de las aplicaciones en la plataforma Universal de Windows (UWP) al proporcionar una manera intuitiva para los usuarios a navegar rápidamente e interactuar con de interfaz de usuario visible la aplicación a través de un teclado en lugar de a través de la interacción o un mouse. Son combinaciones de la tecla Alt y uno o más teclas alfanuméricas, normalmente presionadas de manera secuencial. Métodos abreviados de teclado automáticamente son compatibles con las claves de acceso que utilizan un carácter alfanumérico individual.
+Las claves de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y la accesibilidad de las aplicaciones en el Plataforma universal de Windows (UWP) al proporcionar una manera intuitiva de que los usuarios naveguen rápidamente e interactúen con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de hacerlo a través de un toque. o un mouse. Son combinaciones de la tecla Alt y uno o más teclas alfanuméricas, normalmente presionadas de manera secuencial. Métodos abreviados de teclado automáticamente son compatibles con las claves de acceso que utilizan un carácter alfanumérico individual.
 
 Sugerencias de teclas de acceso son flotantes distintivos que se muestra al lado de los controles que incluyen las claves de acceso. Cada sugerencia de clave de acceso contiene las teclas alfanuméricas que activación el control asociado. Cuando un usuario presiona la tecla Alt, se muestran las sugerencias de teclas de acceso.
 
-Esta plataforma específica de UWP se usa para especificar una clave de acceso para un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Se consume en XAML estableciendo el [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) propiedad adjunta a un valor alfanumérico y, opcionalmente, establezca el [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) propiedad adjunta a un valor de la [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumeración, el [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) propiedad adjunta un `double`y el [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) propiedad adjunta a un `double`:
+Este UWP específico de la plataforma se usa para especificar una clave de acceso [`VisualElement`](xref:Xamarin.Forms.VisualElement)para. Se consume en XAML estableciendo el [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) propiedad adjunta a un valor alfanumérico y, opcionalmente, establezca el [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) propiedad adjunta a un valor de la [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumeración, el [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) propiedad adjunta un `double`y el [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) propiedad adjunta a un `double`:
 
 ```xaml
 <TabbedPage ...
@@ -104,6 +104,6 @@ Para obtener más información acerca de las claves de acceso, consulte [claves 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

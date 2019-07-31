@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 46c2280717b39160a4ce1b44d0a63382ed0b283f
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d3046479282ef1535677f6712e487ab80bbf9d1b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926465"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656802"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animaciones sencillas en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Basic/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _La clase ViewExtensions proporciona métodos de extensión que se pueden usar para construir las animaciones sencillas. En este artículo muestra cómo crear y cancelar las animaciones mediante la clase ViewExtensions._
 
@@ -39,7 +39,7 @@ El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase también incluy
 > [!NOTE]
 > El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase proporciona un [ `LayoutTo` ](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)) método de extensión. Sin embargo, este método está pensado para usarse diseños para animar las transiciones entre Estados de diseño que contienen el tamaño y posición de los cambios. Por lo tanto, que debe usarse únicamente por [ `Layout` ](xref:Xamarin.Forms.Layout) subclases.
 
-Los métodos de extensión de la animación de la clase [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) son asincrónicos y devuelven un objeto `Task<bool>`. El valor devuelto es `false` si se completa la animación y `true` si esta se cancela. Por lo tanto, los métodos de animación normalmente deben usarse con el operador `await`, lo que permite determinar fácilmente cuándo se ha completado una animación. Además, después se pueden crear animaciones secuenciales con métodos de animación posteriores que se ejecutan después de que se haya completado el método anterior. Para obtener más información, consulte [Animaciones compuestas](#compound).
+Los métodos de extensión de la animación de la clase [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) son asincrónicos y devuelven un objeto `Task<bool>`. El valor devuelto es `false` si se completa la animación y `true` si esta se cancela. Por lo tanto, los métodos de animación normalmente deben usarse con el operador `await`, lo que permite determinar fácilmente cuándo se ha completado una animación. Además, después se pueden crear animaciones secuenciales con métodos de animación posteriores que se ejecutan después de que se haya completado el método anterior. Para obtener más información, consulte [Animaciones compuestas](#compound).
 
 Si hay un requisito para permitir que una animación completa en segundo plano, el `await` se puede omitir el operador. En este escenario, los métodos de extensión de la animación se devolverá rápidamente después de iniciar la animación, con la animación que se producen en segundo plano. Esta operación puede aprovecharse al crear animaciones compuestas. Para obtener más información, consulte [animaciones compuesto](#composite).
 
@@ -234,5 +234,5 @@ En este artículo se muestra creando y cancelación de animaciones con la [ `Vie
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
-- [Animación básica (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Basic/)
+- [Animación básica (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

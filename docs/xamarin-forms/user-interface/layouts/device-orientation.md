@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511825"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656782"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 Es importante tener en cuenta cómo se utilizará la aplicación y cómo se puede incorporar la orientación horizontal para mejorar la experiencia del usuario. Diseños individuales pueden diseñarse para dar cabida a varias orientaciones y mejor usa el espacio disponible. En el nivel de aplicación, rotación puede habilitar o deshabilitar.
 
@@ -475,7 +475,7 @@ Tenga en cuenta lo siguiente:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Diseño (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Ejemplo de BusinessTumble (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
-- [Diseño dinámico (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+- [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Ejemplo de BusinessTumble (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Diseño dinámico (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [Mostrar una imagen basada en la orientación de pantalla](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

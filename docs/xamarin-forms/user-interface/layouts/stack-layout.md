@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804895"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657086"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-[StackLayout](xref:Xamarin.Forms.StackLayout) organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Las vistas en un `StackLayout` puede ajustarse según el espacio en el diseño mediante las opciones de diseño. Posición viene determinada por el orden en que se agregaron las vistas en el diseño y las opciones de diseño de las vistas.
+[StackLayout](xref:Xamarin.Forms.StackLayout) organiza las vistas en una línea unidimensional ("stack"), ya sea horizontal o verticalmente. Las vistas en un `StackLayout` puede ajustarse según el espacio en el diseño mediante las opciones de diseño. Posición viene determinada por el orden en que se agregaron las vistas en el diseño y las opciones de diseño de las vistas.
 
 [![](stack-layout-images/layouts-sml.png "Los diseños de Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
 
@@ -226,5 +226,5 @@ Tenga en cuenta que `StackLayouts`s están anidadas, porque en algunos casos los
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [LayoutOptions](~/xamarin-forms/user-interface/layouts/layout-options.md)
-- [Diseño (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Ejemplo de BusinessTumble (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Ejemplo de BusinessTumble (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

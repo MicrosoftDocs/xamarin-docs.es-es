@@ -1,168 +1,168 @@
 ---
-title: Entrega en Xamarin.iOS
-description: En este artículo trata de trabajar con entrega en una aplicación de Xamarin.iOS para transferir las actividades del usuario entre aplicaciones que se ejecutan en el usuario de otros dispositivos del.
+title: Entrega en Xamarin. iOS
+description: En este artículo se explica cómo trabajar con la entrega en una aplicación de Xamarin. iOS para transferir actividades de usuario entre aplicaciones que se ejecutan en otros dispositivos del usuario.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 084b9924af467459a017413a958ec2e46ff219fc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 28c5086833ceb1dc8550e513b120f7355aa9bebe
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865307"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656577"
 ---
-# <a name="handoff-in-xamarinios"></a>Entrega en Xamarin.iOS
+# <a name="handoff-in-xamarinios"></a>Entrega en Xamarin. iOS
 
-_En este artículo trata de trabajar con entrega en una aplicación de Xamarin.iOS para transferir las actividades del usuario entre aplicaciones que se ejecutan en el usuario de otros dispositivos del._
+_En este artículo se explica cómo trabajar con la entrega en una aplicación de Xamarin. iOS para transferir actividades de usuario entre aplicaciones que se ejecutan en otros dispositivos del usuario._
 
-Apple introdujo Handoff en iOS 8 y OS X Yosemite (10.10) para proporcionar un mecanismo común para el usuario transferir las actividades iniciadas en uno de sus dispositivos, a otro dispositivo que ejecuta la misma aplicación u otra aplicación que admita la misma actividad.
+Apple presentó la entrega en iOS 8 y OS X Yosemite (10,10) para proporcionar un mecanismo común para que el usuario transfiera las actividades iniciadas en uno de sus dispositivos, a otro dispositivo que ejecute la misma aplicación u otra aplicación que admita la misma actividad.
 
-[![](handoff-images/handoff02.png "Un ejemplo de realizar una operación de entrega")](handoff-images/handoff02.png#lightbox)
+[![](handoff-images/handoff02.png "Ejemplo de cómo realizar una operación de entrega")](handoff-images/handoff02.png#lightbox)
 
-En este artículo se Eche un vistazo rápido a habilitar la actividad de uso compartido en una aplicación Xamarin.iOS y cubrir el marco de trabajo de entrega en detalle:
+En este artículo se ofrece una visión rápida de cómo habilitar el uso compartido de actividades en una aplicación de Xamarin. iOS y se trata el marco de trabajo de entrega en detalle:
 
 ## <a name="about-handoff"></a>Acerca de la entrega
 
-HANDOFF (también conocido como continuidad) se introdujo por Apple en iOS 8 y OS X Yosemite (10.10) como una forma para que el usuario iniciar una actividad en uno de sus dispositivos (iOS o Mac) y continuar con esa misma actividad en otro de sus dispositivos (que se identifica con iClou del usuario d. cuenta).
+Apple incorporó la entrega (también conocida como continuidad) en iOS 8 y OS X Yosemite (10,10) como una manera para que el usuario inicie una actividad en uno de sus dispositivos (iOS o Mac) y continúe esa misma actividad en otro de sus dispositivos (tal y como se identifica en el iClou del usuario). Cuenta d).
 
-Entrega se expandió en iOS 9 para también admiten nuevas capacidades de búsqueda mejoradas. Para obtener más información, consulte nuestra [mejoras en la búsqueda](~/ios/platform/search/index.md) documentación.
+La entrega se amplió en iOS 9 para admitir también nuevas funcionalidades de búsqueda mejoradas. Para obtener más información, consulte nuestra documentación sobre [mejoras de búsqueda](~/ios/platform/search/index.md) .
 
-Por ejemplo, el usuario puede iniciar un correo electrónico en su iPhone y continuar sin problemas el correo electrónico en su equipo Mac, con todos la misma información de mensaje que se rellena y el cursor en la misma ubicación que dejó en iOS.
+Por ejemplo, el usuario puede iniciar un correo electrónico en su iPhone y continuar sin problemas con el correo electrónico en su equipo Mac, con la misma información de mensaje rellenada y el cursor en la misma ubicación que la dejó en iOS.
 
-Cualquiera de las aplicaciones que comparten el mismo _Id. de equipo_ son elegibles para usar Handoff para continuar las actividades de usuario en las aplicaciones siempre que estas aplicaciones son entregada mediante el Store de iTunes App o está firmado por un desarrollador registrado (para Mac, Enterprise o aplicaciones Ad Hoc).
+Cualquiera de las aplicaciones que comparten el mismo _identificador de equipo_ pueden usar la entrega para continuar con las actividades de usuario en todas las aplicaciones, siempre y cuando estas aplicaciones se entreguen a través de iTunes App Store o estén firmadas por un desarrollador registrado (para aplicaciones Mac, Enterprise o ad hoc).
 
-Cualquier `NSDocument` o `UIDocument` en función de las aplicaciones tienen automáticamente entrega soporte técnico integrado y requieren cambios mínimos para admitir la entrega.
+Las `NSDocument` aplicaciones `UIDocument` de o basadas automáticamente tienen compatibilidad con la entrega integrada y requieren cambios mínimos para admitir la entrega.
 
-### <a name="continuing-user-activities"></a>Continuar con las actividades del usuario
+### <a name="continuing-user-activities"></a>Continuar actividades de usuario
 
-El `NSUserActivity` clase (junto con algunos pequeños cambios que `UIKit` y `AppKit`) proporciona compatibilidad para definir la actividad de un usuario que potencialmente puede continuar en otro de los dispositivos del usuario.
+La `NSUserActivity` clase (junto con algunos cambios pequeños en `UIKit` y `AppKit`) proporciona compatibilidad para definir la actividad de un usuario que podría continuar en otro de los dispositivos del usuario.
 
-Una actividad se pasa a otro de los dispositivos del usuario, se deben encapsular en una instancia `NSUserActivity`, se marca como el _actividad actual_, tiene su carga conjunto (los datos que se usa para realizar la continuación) y el actividad, a continuación, se debe transmitir a dicho dispositivo.
+Para que una actividad se pase a otro de los dispositivos del usuario, debe encapsularse en una instancia `NSUserActivity`, marcada como _actividad actual_, tener su conjunto de carga (los datos usados para realizar la continuación) y la actividad debe ser se transmiten a ese dispositivo.
 
-Entrega pasa el mínimo de información para definir la actividad debe continuar con los paquetes más grandes de datos que se sincronizan a través de iCloud.
+La entrega pasa el mínimo de información para definir la actividad que se va a continuar, con paquetes de datos más grandes que se sincronizan a través de iCloud.
 
-En el dispositivo receptor, el usuario recibirá una notificación de que está disponible para la continuación de una actividad. Si el usuario decide seguir la actividad en el nuevo dispositivo, se inicia la aplicación especificada (si aún no está en ejecución) y la carga desde el `NSUserActivity` se utiliza para iniciar la actividad.
+En el dispositivo receptor, el usuario recibirá una notificación de que hay una actividad disponible para su continuación. Si el usuario decide continuar la actividad en el nuevo dispositivo, se inicia la aplicación especificada (si aún no se está ejecutando) y la carga de `NSUserActivity` se usa para reiniciar la actividad.
 
-[![](handoff-images/handoffinteractions.png "Información general de continuar con las actividades del usuario")](handoff-images/handoffinteractions.png#lightbox)
+[![](handoff-images/handoffinteractions.png "Información general sobre la continuación de actividades de usuario")](handoff-images/handoffinteractions.png#lightbox)
 
-Solo las aplicaciones que comparten el mismo Id. de equipo de desarrollador y responderán a una determinada _tipo de actividad_ son aptos para la continuación. Una aplicación define los tipos de actividad que admite en el `NSUserActivityTypes` clave de su **Info.plist** archivo. Por tanto, un dispositivo continuando elige la aplicación para realizar la continuación según el identificador de equipo, el tipo de actividad y, opcionalmente, el _título de la actividad_.
+Solo las aplicaciones que comparten el mismo identificador de equipo de desarrollador y responden a un _tipo de actividad_ determinado son válidas para su continuación. Una aplicación define los tipos de actividad que admite con la `NSUserActivityTypes` clave de su archivo **info. plist** . Dado esto, un dispositivo continuo elige la aplicación para realizar la continuación en función del identificador de equipo, el tipo de actividad y, opcionalmente, el título de la _actividad_.
 
-La aplicación receptora utiliza información de la `NSUserActivity`del `UserInfo` diccionario para configurar su interfaz de usuario y restaurar el estado de la actividad determinada para que se muestre la transición sin problemas para el usuario final.
+La aplicación receptora usa información del `NSUserActivity` `UserInfo` Diccionario de para configurar su interfaz de usuario y restaurar el estado de la actividad determinada para que la transición parezca perfecta para el usuario final.
 
-Si la continuación requiere más información que puede enviarse a través de forma eficaz un `NSUserActivity`, la reanudación de la aplicación puede enviar una llamada a la aplicación original y establecer uno o varios flujos para transmitir los datos necesarios. Por ejemplo, si la actividad estaba editando un documento de texto grande con varias imágenes, transmisión por secuencias se necesitarían para transferir la información necesaria para continuar con la actividad en el dispositivo receptor. Para obtener más información, consulte el [compatibles con secuencias de continuación](#supporting-continuation-streams) sección más adelante.
+Si la continuación requiere más información de la que se puede enviar de `NSUserActivity`forma eficaz a través de, la aplicación de reanudación puede enviar una llamada a la aplicación de origen y establecer una o más secuencias para transmitir los datos necesarios. Por ejemplo, si la actividad estaba editando un documento de texto grande con varias imágenes, sería necesario el streaming para transferir la información necesaria para continuar con la actividad en el dispositivo receptor. Para obtener más información, consulte la sección [compatibilidad con secuencias de continuación](#supporting-continuation-streams) .
 
-Como se indicó anteriormente, `NSDocument` o `UIDocument` en función de las aplicaciones automáticamente tienen entrega soporte técnico integrado. Para obtener más información, consulte el [que admiten la entrega en aplicaciones basadas en documento](#supporting-handoff-in-document-based-apps) sección más adelante.
+Como se indicó anteriormente `NSDocument` , `UIDocument` o las aplicaciones basadas en admiten automáticamente la compatibilidad con la entrega. Para obtener más información, consulte la sección [compatibilidad con la entrega en aplicaciones basadas en documentos](#supporting-handoff-in-document-based-apps) más adelante.
 
 ### <a name="the-nsuseractivity-class"></a>La clase NSUserActivity
 
-La `NSUserActivity` clase es el objeto principal en un intercambio de entrega y se usa para encapsular el estado de una actividad de usuario que está disponible para la continuación. Creará una instancia de una copia de una aplicación `NSUserActivity` para cualquier actividad admite y desea seguir en otro dispositivo. Por ejemplo, editor de documentos crearía una actividad para cada documento abierto actualmente. Sin embargo, solo en el documento al frente (se muestra en la pestaña o ventana de primer plano) es el _actividad actual_ y, por tanto, están disponibles para la continuación.
+La `NSUserActivity` clase es el objeto principal de un intercambio de entrega y se utiliza para encapsular el estado de una actividad de usuario que está disponible para la continuación. Una aplicación creará una instancia de una `NSUserActivity` copia de para cualquier actividad que admita y desea continuar en otro dispositivo. Por ejemplo, el editor de documentos crearía una actividad para cada documento abierto actualmente. Sin embargo, solo el documento más hacia la frente (mostrado en la ventana o pestaña frontal) es la _actividad actual_ y está disponible para su continuación.
 
-Una instancia de `NSUserActivity` identificado por ambos su `ActivityType` y `Title` propiedades. El `UserInfo` propiedad de diccionario que se utiliza para transportar la información sobre el estado de la actividad. Establecer el `NeedsSave` propiedad `true` si desea diferida para cargar la información de estado a través de la `NSUserActivity`del delegado. Use la `AddUserInfoEntries` método para combinar los nuevos datos de otros clientes en la `UserInfo` diccionario según sea necesario para conservar el estado de la actividad.
+Una instancia de `NSUserActivity` se identifica mediante sus `ActivityType` propiedades y `Title` . La `UserInfo` propiedad Dictionary se usa para llevar información sobre el estado de la actividad. Establezca la `NeedsSave` propiedad en `true` si desea cargar de forma diferida la información de estado `NSUserActivity`mediante el delegado de. Use el `AddUserInfoEntries` método para combinar datos nuevos de otros clientes en el `UserInfo` Diccionario según sea necesario para conservar el estado de la actividad.
 
 ### <a name="the-nsuseractivitydelegate-class"></a>La clase NSUserActivityDelegate
 
-El `NSUserActivityDelegate` se usa para mantener la información en un `NSUserActivity`del `UserInfo` diccionario actualizado y sincronizado con el estado actual de la actividad. Cuando el sistema necesita la información de la actividad en actualizarse (como antes de continuación en otro dispositivo), llama a la `UserActivityWillSave` método del delegado.
+Se utiliza para mantener actualizada la información `NSUserActivity` `UserInfo` del Diccionario de y sincronizarla con el estado actual de la actividad. `NSUserActivityDelegate` Cuando el sistema necesita que la información de la actividad se actualice (por ejemplo, antes de la continuación en otro dispositivo), `UserActivityWillSave` llama al método del delegado.
 
-Deberá implementar la `UserActivityWillSave` método y hacer los cambios a la `NSUserActivity` (como `UserInfo`, `Title`, etc.) para asegurarse de que refleja el estado de la actividad actual. Cuando el sistema llama a la `UserActivityWillSave` método, la `NeedsSave` borrado la marca. Si modifica cualquiera de las propiedades de datos de la actividad, se deberá establecer `NeedsSave` a `true` nuevo.
+Deberá implementar el `UserActivityWillSave` método y realizar cualquier cambio `NSUserActivity` en (por ejemplo `UserInfo`, `Title`,, etc.) para asegurarse de que todavía refleja el estado de la actividad actual. Cuando el sistema llame al `UserActivityWillSave` método, se `NeedsSave` borrará la marca. Si modifica cualquiera de las propiedades de datos de la actividad, deberá volver a establecer `NeedsSave` en. `true`
 
-En lugar de usar el `UserActivityWillSave` método presentada más arriba, puede tener opcionalmente `UIKit` o `AppKit` administrar automáticamente la actividad del usuario. Para ello, establezca el objeto de servicio de respuesta `UserActivity` propiedad e implemente el `UpdateUserActivityState` método. Consulte la [que admiten la entrega en los servicios de respuesta](#supporting-handoff-in-responders) sección para obtener más información.
+En lugar de usar el `UserActivityWillSave` método presentado anteriormente, también puede tener `UIKit` o `AppKit` administrar la actividad de usuario automáticamente. Para ello, establezca la propiedad del objeto de `UserActivity` respuesta e implemente el `UpdateUserActivityState` método. Para obtener más información, consulte la sección [compatibilidad con la entrega en](#supporting-handoff-in-responders) los respondedores.
 
-### <a name="app-framework-support"></a>Compatibilidad con el marco de aplicación
+### <a name="app-framework-support"></a>Compatibilidad con el marco de trabajo de aplicaciones
 
-Ambos `UIKit` (iOS) y `AppKit` (OS X) ofrecen compatibilidad integrada para su entrega en el `NSDocument`, servicio de respuesta (`UIResponder`/`NSResponder`), y `AppDelegate` clases. Aunque cada sistema operativo implementa entrega una forma ligeramente diferente, el mecanismo básico y las API son los mismos.
+Tanto `UIKit` (iOS) como `AppKit` (OS X) proporcionan compatibilidad integrada para la entrega en las `NSDocument`clases, respondedor (`UIResponder`/`NSResponder`) y `AppDelegate` . Aunque cada sistema operativo implementa la entrega de forma ligeramente diferente, el mecanismo básico y las API son los mismos.
 
-#### <a name="user-activities-in-document-based-apps"></a>Actividades del usuario en aplicaciones basadas en documento
+#### <a name="user-activities-in-document-based-apps"></a>Actividades de usuario en aplicaciones basadas en documentos
 
-Basados en documento aplicaciones iOS y OS X automáticamente tienen compatibilidad de entrega integrado. Para activar esta compatibilidad, deberá agregar una `NSUbiquitousDocumentUserActivityType` clave y valor para cada `CFBundleDocumentTypes` entrada en la aplicación **Info.plist** archivo.
+Las aplicaciones de iOS y OS X basadas en documentos incorporan automáticamente compatibilidad con la entrega. Para activar esta compatibilidad, deberá agregar una clave y un `NSUbiquitousDocumentUserActivityType` valor para cada `CFBundleDocumentTypes` entrada en el archivo **info. plist** de la aplicación.
 
-Si esta clave está presente, ambos `NSDocument` y `UIDocument` crear automáticamente `NSUserActivity` instancias de documentos de iCloud del tipo especificado. Deberá proporcionar un tipo de actividad para cada tipo de documento que admita la aplicación y varios tipos de documentos pueden usar el mismo tipo de actividad. Ambos `NSDocument` y `UIDocument` rellenar automáticamente el `UserInfo` propiedad de la `NSUserActivity` con sus `FileURL` el valor de propiedad.
+Si esta clave está presente, `NSDocument` y `UIDocument` crean `NSUserActivity` automáticamente instancias para documentos basados en iCloud del tipo especificado. Tendrá que proporcionar un tipo de actividad para cada tipo de documento admitido por la aplicación y varios tipos de documento pueden usar el mismo tipo de actividad. `FileURL` `NSUserActivity` Y rellenan automáticamente `UserInfo` la propiedad de con el valor de su propiedad. `UIDocument` `NSDocument`
 
-En OS X, el `NSUserActivity` administrados por `AppKit` y asociado automáticamente con los servicios de respuesta se convierten en la actividad actual cuando la ventana de documento se convierte en la ventana principal. En iOS, para `NSUserActivity` objetos administrados por `UIKit`, debe llamar a `BecomeCurrent` método explícitamente o que el documento `UserActivity` propiedad establecida en un `UIViewController` cuando la aplicación se pone en primer plano.
+En OS X, el `NSUserActivity` administrado por `AppKit` y los que están asociados a los respondedores se convierten automáticamente en la actividad actual cuando la ventana del documento se convierte en la ventana principal. En iOS, para `NSUserActivity` los objetos administrados por `UIKit`, debe llamar `BecomeCurrent` al método explícitamente o `UIViewController` tener la `UserActivity` propiedad del documento establecida en cuando la aplicación llegue al primer plano.
 
-`AppKit` se restaurará automáticamente cualquier `UserActivity` propiedad creada de esta forma en OS X. Esto se produce si el `ContinueUserActivity` devuelve del método `false` o si es no está implementada. En esta situación, se abre el documento con el `OpenDocument` método de la `NSDocumentController` y, a continuación, recibirá un `RestoreUserActivityState` llamada al método.
+`AppKit`restaurará automáticamente cualquier `UserActivity` propiedad creada de este modo en OS X. Esto sucede si el `ContinueUserActivity` método devuelve `false` o si no está implementado. En esta situación, el documento se abre con el `OpenDocument` método `NSDocumentController` de y, a continuación, recibirá `RestoreUserActivityState` una llamada al método.
 
-Consulte la [que admiten la entrega en aplicaciones basadas en documento](#supporting-handoff-in-document-based-apps) sección para obtener más información.
+Para obtener más información, consulte la sección [compatibilidad con las aplicaciones basadas en documentos](#supporting-handoff-in-document-based-apps) .
 
-#### <a name="user-activities-and-responders"></a>Los servicios de respuesta y las actividades del usuario
+#### <a name="user-activities-and-responders"></a>Actividades de usuario y respondedores
 
-Ambos `UIKit` y `AppKit` puede administrar automáticamente una actividad de usuario si se establece como un objeto de servicio de respuesta `UserActivity` propiedad. Si se ha modificado el estado, se deberá establecer el `NeedsSave` propiedad de la respuesta `UserActivity` a `true`. El sistema va a guardar automáticamente el `UserActivity` cuando sea necesario, después de dar el tiempo de respuesta para actualizar el estado mediante una llamada a su `UpdateUserActivityState` método.
+Y pueden administrar automáticamente una actividad de usuario si se establece como la propiedad de un objeto de `UserActivity` respuesta. `AppKit` `UIKit` Si el estado se ha modificado, deberá establecer la `NeedsSave` propiedad del del `UserActivity` respondedor en `true`. El sistema guardará `UserActivity` automáticamente cuando sea necesario, después de dar tiempo al respondedor para actualizar el estado mediante una `UpdateUserActivityState` llamada a su método.
 
-Si varios servicios de respuesta comparten una sola `NSUserActivity` instancia, que reciben una `UpdateUserActivityState` devolución de llamada cuando el sistema actualiza el objeto de actividad del usuario. El servicio de respuesta necesita llamar a la `AddUserInfoEntries` método para actualizar la `NSUserActivity`del `UserInfo` diccionario para reflejar el estado actual de la actividad en este momento. El `UserInfo` diccionario se borra antes de cada `UpdateUserActivityState` llamar.
+Si varios respondedores comparten una sola `NSUserActivity` instancia, reciben una `UpdateUserActivityState` devolución de llamada cuando el sistema actualiza el objeto de actividad del usuario. El respondedor debe llamar `AddUserInfoEntries` al método para actualizar el `NSUserActivity`Diccionario de `UserInfo` para que refleje el estado actual de la actividad en este momento. El `UserInfo` diccionario se borra antes de `UpdateUserActivityState` cada llamada.
 
-Para desasociar propio de una actividad, puede establecer un Respondedor su `UserActivity` propiedad `null`. Cuando administra un marco de aplicación `NSUserActivity` instancia no tiene más los servicios de respuesta asociados o documentos, queda invalidado de forma automática.
+Para desasociarse de una actividad, un respondedor puede establecer `UserActivity` su propiedad `null`en. Cuando una instancia administrada `NSUserActivity` del marco de trabajo de la aplicación no tiene ningún documento o respondedor asociado, se invalida automáticamente.
 
-Consulte la [que admiten la entrega en los servicios de respuesta](#supporting-handoff-in-responders) sección para obtener más información.
+Para obtener más información, consulte la sección [compatibilidad con la entrega en](#supporting-handoff-in-responders) los respondedores.
 
-#### <a name="user-activities-and-the-appdelegate"></a>Las actividades del usuario y AppDelegate
+#### <a name="user-activities-and-the-appdelegate"></a>Actividades de usuario y AppDelegate
 
-La aplicación `AppDelegate` es su punto de entrada principal cuando se administran una continuación de entrega. Cuando el usuario responde a una notificación de entrega, se inicia la aplicación adecuada (si no se está ejecutando) y el `WillContinueUserActivityWithType` método de la `AppDelegate` se llamará. En este momento, la aplicación debe informar al usuario que se está iniciando la continuación.
+La aplicación es `AppDelegate` su punto de entrada principal al administrar una continuación de la entrega. Cuando el usuario responde a una notificación de entrega, se inicia la aplicación adecuada (si aún no se está ejecutando) `WillContinueUserActivityWithType` y se llama `AppDelegate` al método de. En este momento, la aplicación debe informar al usuario de que se está iniciando la continuación.
 
-El `NSUserActivity` instancia se entrega cuando el `AppDelegate`del `ContinueUserActivity` se llama al método. En este momento, debe configurar la interfaz de usuario de la aplicación y seguir la actividad especificada.
+La `NSUserActivity` instancia se entrega cuando se `AppDelegate`llama `ContinueUserActivity` al método de. En este punto, debe configurar la interfaz de usuario de la aplicación y continuar con la actividad especificada.
 
-Consulte la [implementar Handoff](#implementing-handoff) sección para obtener más información.
+Vea la sección implementación de la [entrega](#implementing-handoff) a continuación para obtener más información.
 
-## <a name="enabling-handoff-in-a-xamarin-app"></a>Habilitar la entrega en una aplicación Xamarin
+## <a name="enabling-handoff-in-a-xamarin-app"></a>Habilitar la entrega en una aplicación de Xamarin
 
-Debido a los requisitos de seguridad impuestos por la entrega, una aplicación de Xamarin.iOS que usa el marco de trabajo de entrega debe estar configurada correctamente en el Portal de desarrollador de Apple y en el archivo de proyecto de Xamarin.iOS.
+Debido a los requisitos de seguridad impuestos por la entrega, una aplicación de Xamarin. iOS que usa el marco de entrega debe estar configurada correctamente en el portal para desarrolladores de Apple y en el archivo de proyecto de Xamarin. iOS.
 
 Haga lo siguiente:
 
-1. Inicie sesión en el [Portal Apple Developer](https://developer.apple.com).
-2. Haga clic en **certificados, identificadores y perfiles**.
-3. Si aún no lo ha hecho, haga clic en **identificadores** y crear un identificador para la aplicación (por ejemplo, `com.company.appname`), editar de lo contrario, su identificador existente.
-4. Asegúrese de que el **iCloud** service se ha comprobado para el identificador dado:
+1. Inicie sesión en el [portal para desarrolladores de Apple](https://developer.apple.com).
+2. Haga clic en **certificados, identificadores & perfiles**.
+3. Si todavía no lo ha hecho, haga clic en identificadores y cree un identificador para la aplicación (por `com.company.appname`ejemplo,). en caso contrario, edite el identificador existente.
+4. Asegúrese de que se ha comprobado el identificador especificado en el servicio **iCloud** :
 
-    [![](handoff-images/provision01.png "Habilitar el servicio de iCloud para el identificador especificado")](handoff-images/provision01.png#lightbox)
+    [![](handoff-images/provision01.png "Habilitar el servicio iCloud para el identificador especificado")](handoff-images/provision01.png#lightbox)
 5. Guarde los cambios.
-6. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y creación de aplicación de un desarrollo nuevo perfil de aprovisionamiento para usted:
+6. Haga clic en **aprovisionar perfiles** > **desarrollo** y cree un nuevo perfil de aprovisionamiento de desarrollo para la aplicación:
 
-    [![](handoff-images/provision02.png "Crear un nuevo perfil para la aplicación de aprovisionamiento de desarrollo")](handoff-images/provision02.png#lightbox)
-7. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o usar Xcode para descargar e instalar el perfil.
-8. Editar las opciones del proyecto de Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear:
+    [![](handoff-images/provision02.png "Crear un nuevo perfil de aprovisionamiento de desarrollo para la aplicación")](handoff-images/provision02.png#lightbox)
+7. Descargue e instale el nuevo perfil de aprovisionamiento o use Xcode para descargar e instalar el perfil.
+8. Edite las opciones del proyecto de Xamarin. iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear:
 
-    [![](handoff-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear")](handoff-images/provision03.png#lightbox)
-9. A continuación, edite su **Info.plist** de archivos y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento:
+    [![](handoff-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear.")](handoff-images/provision03.png#lightbox)
+9. Después, edite el archivo **info. plist** y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento:
 
-    [![](handoff-images/provision04.png "Establecer Id. de aplicación")](handoff-images/provision04.png#lightbox)
-10. Desplácese hasta la **modos en segundo plano** sección y compruebe los siguientes elementos:
+    [![](handoff-images/provision04.png "Establecimiento del identificador de la aplicación")](handoff-images/provision04.png#lightbox)
+10. Desplácese a la sección **modos en segundo plano** y compruebe los elementos siguientes:
 
-    [![](handoff-images/provision05.png "Habilitar los modos de fondo que requiere")](handoff-images/provision05.png#lightbox)
-11. Guarde los cambios a todos los archivos.
+    [![](handoff-images/provision05.png "Habilitar los modos en segundo plano requeridos")](handoff-images/provision05.png#lightbox)
+11. Guarde los cambios en todos los archivos.
 
-Con esta configuración en su lugar, la aplicación ahora está lista para tener acceso a las API de marco de trabajo de entrega. Para obtener información detallada sobre el aprovisionamiento, consulte nuestra [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) y [aprovisionamiento de la aplicación](~/ios/get-started/installation/device-provisioning/index.md) guías.
+Con esta configuración en contexto, la aplicación ya está lista para tener acceso a las API de la plataforma de entrega. Para obtener información detallada sobre el aprovisionamiento, consulte las guías [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) y aprovisionamiento [de aplicaciones](~/ios/get-started/installation/device-provisioning/index.md) .
 
-## <a name="implementing-handoff"></a>Implementación de entrega
+## <a name="implementing-handoff"></a>Implementación de la entrega
 
-Pueden continuar las actividades del usuario entre las aplicaciones que se firman con el mismo Id. de equipo de desarrollador y admiten el mismo tipo de actividad. Implementación de entrega en una aplicación Xamarin.iOS requiere crear un objeto de actividad de usuario (ya sea en `UIKit` o `AppKit`), actualizar el estado del objeto para realizar un seguimiento de la actividad y continuar con la actividad en un dispositivo receptor.
+Las actividades de usuario pueden continuar entre las aplicaciones que estén firmadas con el mismo identificador de equipo de desarrollador y que admitan el mismo tipo de actividad. La implementación de la entrega en una aplicación de Xamarin. iOS requiere la creación de un objeto de `UIKit` actividad `AppKit`de usuario (en o), actualizar el estado del objeto para realizar el seguimiento de la actividad y continuar con la actividad en un dispositivo receptor.
 
-### <a name="identifying-user-activities"></a>Identificar las actividades de usuario
+### <a name="identifying-user-activities"></a>Identificación de las actividades del usuario
 
-El primer paso para implementar el comportamiento de la transición consiste en identificar los tipos de actividades de usuario que admite la aplicación y ver cuáles de estas actividades es buenos candidatos para la continuación en otro dispositivo. Por ejemplo: una aplicación ToDo podría admitir la edición de elementos como una _tipo de actividad de usuario_y permite examinar la lista de elementos disponibles que otra.
+El primer paso para implementar la entrega es identificar los tipos de actividades de usuario que admite la aplicación y ver cuáles de esas actividades son buenos candidatos para la continuación en otro dispositivo. Por ejemplo: una aplicación de ToDo podría admitir la edición de elementos como un _tipo de actividad de usuario_y permitir explorar la lista de elementos disponibles como otra.
 
-Una aplicación puede crear tantos tipos de actividad de usuario como son necesarios, uno para cualquier función que proporciona la aplicación. Para cada tipo de actividad del usuario, la aplicación deberá hacer un seguimiento cuando una actividad del tipo comienza y finaliza y es necesario mantener la información de estado actualizada para continuar con esa tarea en otro dispositivo.
+Una aplicación puede crear tantos tipos de actividad de usuario como sean necesarios, uno para cualquier función que proporcione la aplicación. Para cada tipo de actividad de usuario, la aplicación necesitará realizar un seguimiento cuando se inicie y finalice una actividad del tipo, y tendrá que mantener la información de estado actualizada para continuar con la tarea en otro dispositivo.
 
-Las actividades del usuario se pueden continuar en cualquier aplicación firmada con el mismo identificador de equipo sin ninguna asignación uno a uno entre las aplicaciones emisoras y receptoras. Por ejemplo, una aplicación determinada puede crear cuatro tipos diferentes de actividades, consumidos por diferentes aplicaciones individuales en otro dispositivo. Esto es habitual entre una versión de Mac de la aplicación (que podría tener muchas características y funciones) y aplicaciones de iOS, donde cada aplicación es más pequeño y centrado en una tarea específica.
+Las actividades de usuario pueden continuar en cualquier aplicación firmada con el mismo identificador de equipo sin ninguna asignación uno a uno entre las aplicaciones emisoras y receptoras. Por ejemplo, una aplicación determinada puede crear cuatro tipos diferentes de actividades, que se usan en aplicaciones individuales diferentes en otro dispositivo. Se trata de una repetición común entre una versión Mac de la aplicación (que puede tener muchas características y funciones) y aplicaciones iOS, donde cada aplicación es más pequeña y se centra en una tarea específica.
 
-### <a name="creating-activity-type-identifiers"></a>Creación de identificadores de tipo de actividad
+### <a name="creating-activity-type-identifiers"></a>Crear identificadores de tipo de actividad
 
-El _identificador de tipo de actividad_ se agrega una cadena corta a la `NSUserActivityTypes` matriz de la aplicación **Info.plist** archivo usado para identificar de forma única un determinado tipo de actividad de usuario. Habrá una entrada en la matriz para cada actividad que admita la aplicación. Apple sugiere el uso de una notación de estilo de DNS inverso para el identificador de tipo de actividad para evitar colisiones. Por ejemplo: `com.company-name.appname.activity` para aplicaciones específicas basadas en las actividades o `com.company-name.activity` para las actividades que se pueden ejecutar en varias aplicaciones.
+El _identificador de tipo de actividad_ es una cadena corta agregada `NSUserActivityTypes` a la matriz del archivo **info. plist** de la aplicación que se usa para identificar de forma única un tipo de actividad de usuario determinado. Habrá una entrada en la matriz para cada actividad que admita la aplicación. Apple sugiere el uso de una notación de estilo DNS inversa para el identificador de tipo de actividad con el fin de evitar colisiones. Por ejemplo: `com.company-name.appname.activity` para actividades basadas en aplicaciones específicas `com.company-name.activity` o para actividades que se pueden ejecutar en varias aplicaciones.
 
-El identificador de tipo de actividad se usa al crear un `NSUserActivity` instancia para identificar el tipo de actividad. Cuando una actividad continúa en otro dispositivo, el tipo de actividad (junto con el identificador de equipo de la aplicación) determina qué aplicación iniciar para continuar con la actividad.
+El identificador de tipo de actividad se usa al crear `NSUserActivity` una instancia de para identificar el tipo de actividad. Cuando una actividad continúa en otro dispositivo, el tipo de actividad (junto con el identificador de equipo de la aplicación) determina la aplicación que se va a iniciar para continuar con la actividad.
 
-Por ejemplo, vamos a crear una aplicación de ejemplo denominada **MonkeyBrowser** ([descargar aquí](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/)). Esta aplicación presenta cuatro pestañas, cada uno con una Abrir dirección URL diferente en una vista de explorador web. El usuario podrá seguir cualquier pestaña en un dispositivo iOS diferente que ejecuta la aplicación.
+Por ejemplo, vamos a crear una aplicación de ejemplo llamada **MonkeyBrowser** ([descarga aquí](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)). Esta aplicación presenta cuatro pestañas, cada una con una dirección URL diferente abierta en una vista de explorador Web. El usuario podrá continuar con cualquier pestaña en un dispositivo iOS diferente que ejecute la aplicación.
 
-Para crear los identificadores de tipo de actividad necesaria para admitir este comportamiento, edite el **Info.plist** de archivo y cambie a la **origen** vista. Agregar un `NSUserActivityTypes` clave y crear los siguientes identificadores:
+Para crear los identificadores de tipo de actividad necesarios para admitir este comportamiento, edite el archivo **info. plist** y cambie a la vista de **código fuente** . Agregue una `NSUserActivityTypes` clave y cree los siguientes identificadores:
 
-[![](handoff-images/type01.png "La clave de NSUserActivityTypes y los identificadores necesarios en el editor de plist")](handoff-images/type01.png#lightbox)
+[![](handoff-images/type01.png "La clave NSUserActivityTypes y los identificadores necesarios en el editor plist")](handoff-images/type01.png#lightbox)
 
-Se crean cuatro nuevos identificadores de tipo de actividad, uno para cada una de las pestañas en el ejemplo **MonkeyBrowser** app. Al crear sus propias aplicaciones, reemplace el contenido de la `NSUserActivityTypes` de matriz con los identificadores de tipo de actividad específico a las actividades de la aplicación admite.
+Hemos creado cuatro nuevos identificadores de tipo de actividad, uno para cada una de las pestañas de la aplicación de ejemplo **MonkeyBrowser** . Al crear sus propias aplicaciones, reemplace el contenido de la `NSUserActivityTypes` matriz por los identificadores de tipo de actividad específicos de las actividades que admite la aplicación.
 
-### <a name="tracking-user-activity-changes"></a>Seguimiento de cambios de la actividad de usuario
+### <a name="tracking-user-activity-changes"></a>Seguimiento de cambios de actividad del usuario
 
-Cuando se crea una nueva instancia de la `NSUserActivity` (clase), se especificará un `NSUserActivityDelegate` instancia para realizar el seguimiento de cambios al estado de la actividad. Por ejemplo, el código siguiente puede utilizarse para realizar el seguimiento de cambios de estado:
+Cuando se crea una nueva instancia de la `NSUserActivity` clase, se especifica una `NSUserActivityDelegate` instancia para realizar el seguimiento de los cambios en el estado de la actividad. Por ejemplo, se puede usar el código siguiente para realizar el seguimiento de los cambios de estado:
 
 ```csharp
 using System;
@@ -201,17 +201,17 @@ namespace MonkeyBrowse
 }
 ```
 
-El `UserActivityReceivedData` método se llama cuando un Stream continuación ha recibido datos de un dispositivo de envío. Para obtener más información, consulte el [compatibles con secuencias de continuación](#supporting-continuation-streams) sección más adelante.
+Se llama al método cuando una secuencia de continuación ha recibido datos de un dispositivo de envío. `UserActivityReceivedData` Para obtener más información, consulte la sección [compatibilidad con secuencias de continuación](#supporting-continuation-streams) .
 
-El `UserActivityWasContinued` método se llama cuando ha tomado otro dispositivo a través de una actividad desde el dispositivo actual. Según el tipo de actividad, como agregar un nuevo elemento a una lista de tareas, la aplicación podría necesita anular la actividad en el dispositivo de envío.
+Se llama al método cuando otro dispositivo ha tomado una actividad del dispositivo actual. `UserActivityWasContinued` Según el tipo de actividad, como agregar un nuevo elemento a una lista de tareas pendientes, la aplicación podría necesitar anular la actividad en el dispositivo de envío.
 
-El `UserActivityWillSave` se llama al método antes de que se guarda y se sincronizan en todos los dispositivos disponibles localmente los cambios realizados en la actividad. Puede usar este método para realizar cambios de última hora a la `UserInfo` propiedad de la `NSUserActivity` instancia antes de enviarlo.
+Se `UserActivityWillSave` llama al método antes de que los cambios en la actividad se guarden y sincronicen en los dispositivos disponibles localmente. Puede utilizar este método para realizar cualquier último cambio en la `UserInfo` propiedad de la `NSUserActivity` instancia antes de enviarla.
 
 ### <a name="creating-a-nsuseractivity-instance"></a>Creación de una instancia de NSUserActivity
 
-Cada actividad que la aplicación desea proporcionar la posibilidad de continuar en otro dispositivo que se debe encapsular en un `NSUserActivity` instancia. La aplicación puede crear tantas actividades según sea necesario y la naturaleza de esas actividades depende de las funciones y características de la aplicación en cuestión. Por ejemplo, una aplicación de correo electrónico podría crear una actividad para crear un nuevo mensaje y otra para leer un mensaje.
+Cada actividad que su aplicación quiere proporcionar la posibilidad de continuar en otro dispositivo debe encapsularse en una `NSUserActivity` instancia de. La aplicación puede crear tantas actividades como sea necesario y la naturaleza de esas actividades depende de la funcionalidad y las características de la aplicación en cuestión. Por ejemplo, una aplicación de correo electrónico puede crear una actividad para crear un nuevo mensaje y otra para leer un mensaje.
 
-Para nuestra aplicación de ejemplo, un nuevo `NSUserActivity` se crea cada vez que el usuario escribe una nueva dirección URL en uno de la vista de explorador web con pestañas. El código siguiente almacena el estado de una pestaña determinada:
+En nuestra aplicación de ejemplo, se `NSUserActivity` crea un nuevo cada vez que el usuario escribe una nueva dirección URL en una de las vistas del explorador Web con pestañas. En el código siguiente se almacena el estado de una pestaña determinada:
 
 ```csharp
 public NSString UserActivityTab1 = new NSString ("com.xamarin.monkeybrowser.tab1");
@@ -231,13 +231,13 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-Crea un nuevo `NSUserActivity` utilizando uno de los tipos de actividad de usuario creada anteriormente y proporciona un título de lenguaje natural para la actividad. Adjunta a una instancia de la `NSUserActivityDelegate` creado anteriormente para ver el estado cambia y se informa de iOS que esta actividad de usuario es la actividad actual.
+Crea un nuevo `NSUserActivity` con uno de los tipos de actividad de usuario creados anteriormente y proporciona un título legible para la actividad. Se adjunta a una instancia de `NSUserActivityDelegate` creada anteriormente para inspeccionar los cambios de estado e informa a iOS de que esta actividad de usuario es la actividad actual.
 
-### <a name="populating-the-userinfo-dictionary"></a>Rellenar el diccionario UserInfo
+### <a name="populating-the-userinfo-dictionary"></a>Rellenar el Diccionario UserInfo
 
-Como hemos visto anteriormente, el `UserInfo` propiedad de la `NSUserActivity` clase es un `NSDictionary` de pares de clave-valor que se usan para definir el estado de una actividad determinada. Los valores almacenados en `UserInfo` debe ser uno de los siguientes tipos: `NSArray`, `NSData`, `NSDate`, `NSDictionary`, `NSNull`, `NSNumber`, `NSSet`, `NSString`, o `NSURL`. `NSURL` los valores de datos que señalan a documentos de iCloud se ajustarán automáticamente para que apunten a los mismos documentos en un dispositivo receptor.
+Como hemos mencionado anteriormente, la `UserInfo` propiedad de la clase es una `NSDictionary` de los `NSUserActivity` pares clave-valor que se usan para definir el estado de una actividad determinada. Los valores almacenados en `UserInfo` deben ser de uno de los tipos siguientes `NSArray`: `NSData`, `NSDate`, `NSDictionary`, `NSNull`, `NSNumber`, `NSSet`, `NSString`, o `NSURL`. `NSURL`los valores de datos que señalan a los documentos de iCloud se ajustarán automáticamente para que señalen a los mismos documentos en un dispositivo receptor.
 
-En el ejemplo anterior, creamos un `NSMutableDictionary` de objetos y se rellena con una clave única que proporciona la dirección URL que estaba viendo actualmente en la ficha especificada. El `AddUserInfoEntries` usó el método de la actividad del usuario para actualizar la actividad con los datos que se usará para restaurar la actividad en el dispositivo receptor:
+En el ejemplo anterior, creamos un `NSMutableDictionary` objeto y lo rellenamos con una única clave que proporciona la dirección URL que el usuario estaba viendo en la pestaña especificada. El `AddUserInfoEntries` método de la actividad del usuario se usó para actualizar la actividad con los datos que se utilizarán para restaurar la actividad en el dispositivo receptor:
 
 ```csharp
 // Update the activity when the tab's URL changes
@@ -246,13 +246,13 @@ userInfo.Add (new NSString ("Url"), new NSString (url));
 UserActivity.AddUserInfoEntries (userInfo);
 ```
 
-Apple recomienda mantener la información enviada a la menor cantidad para garantizar que la actividad se envía de manera puntual en el dispositivo receptor. Si es necesario, información más grande, como se puede editar una imagen adjunta a un documento debe enviarse, debe utilizar la continuación secuencias. Consulte la [compatibles con secuencias de continuación](#supporting-continuation-streams) sección para obtener más detalles.
+Apple recomienda mantener la información que se envía al mínimo para asegurarse de que la actividad se envía de manera oportuna al dispositivo receptor. Si se necesita más información, como se debe editar una imagen adjunta a un documento, se deben usar secuencias de continuación. Vea la sección [compatibilidad con secuencias de continuación](#supporting-continuation-streams) para obtener más detalles.
 
-### <a name="continuing-an-activity"></a>Continuar con una actividad
+### <a name="continuing-an-activity"></a>Continuar una actividad
 
-Comportamiento de la transición automáticamente le informará local dispositivos iOS y OS X que están en la proximidad física a dispositivo de origen y ha iniciado sesión en la misma cuenta de iCloud, de la disponibilidad de las actividades del usuario crítico. Si el usuario decide continuar una actividad en un dispositivo nuevo, el sistema iniciará la aplicación adecuada (según el Id. de equipo y el tipo de actividad) y la información su `AppDelegate` que la continuación debe producirse.
+La entrega informará automáticamente a los dispositivos locales de iOS y OS X que están en proximidad física con el dispositivo de origen y que han iniciado sesión en la misma cuenta de iCloud, de la disponibilidad de las actividades de usuario continuadas. Si el usuario decide continuar una actividad en un dispositivo nuevo, el sistema iniciará la aplicación adecuada (según el tipo de actividad y el identificador de equipo) y se debe `AppDelegate` producir información sobre su continuación.
 
-En primer lugar, el `WillContinueUserActivityWithType` se llama al método por lo que puede informar al usuario que va a comenzar la continuación de la aplicación. Usamos el siguiente código en el **AppDelegate.cs** archivo de nuestra aplicación de ejemplo para controlar el inicio de una continuación:
+En primer lugar `WillContinueUserActivityWithType` , se llama al método para que la aplicación pueda informar al usuario de que la continuación está a punto de comenzar. Usamos el siguiente código en el archivo **AppDelegate.CS** de la aplicación de ejemplo para administrar una continuación a partir de:
 
 ```csharp
 public NSString UserActivityTab1 = new NSString ("com.xamarin.monkeybrowser.tab1");
@@ -297,7 +297,7 @@ public override bool WillContinueUserActivity (UIApplication application, string
 }
 ```
 
-En el ejemplo anterior, cada controlador de vista se registra con el `AppDelegate` y tiene un público `PreparingToHandoff` método que muestra un indicador de actividad y un mensaje informa al usuario que la actividad está a entregar al dispositivo actual. Ejemplo:
+En el ejemplo anterior, cada controlador de vista se registra con `AppDelegate` y tiene un método `PreparingToHandoff` público que muestra un indicador de actividad y un mensaje que permite al usuario saber que la actividad está a punto de entregarse al dispositivo actual. Ejemplo:
 
 ```csharp
 private void ShowBusy(string reason) {
@@ -322,7 +322,7 @@ public void PreparingToHandoff() {
 }
 ```
 
-El `ContinueUserActivity` de la `AppDelegate` se llamará para continuar realmente la actividad especificada. De nuevo, desde nuestra aplicación de ejemplo:
+`ContinueUserActivity` Se llamaráalmétodoparacontinuarrealmente`AppDelegate` la actividad determinada. Una vez más, desde nuestra aplicación de ejemplo:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -366,7 +366,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-El público `PerformHandoff` método de cada controlador de vista realmente realiza la entrega y restaura la actividad en el dispositivo actual. En el caso del ejemplo, muestra la misma dirección URL en una ficha especificada en la que el usuario era la exploración en un dispositivo diferente. Ejemplo:
+El método `PerformHandoff` público de cada controlador de vista realiza realmente la entrega y restaura la actividad en el dispositivo actual. En el caso del ejemplo, muestra la misma dirección URL en una pestaña determinada que el usuario estaba explorando en un dispositivo diferente. Ejemplo:
 
 ```csharp
 private void HideBusy() {
@@ -403,13 +403,13 @@ public void PerformHandoff(NSUserActivity activity) {
 }
 ```
 
-El `ContinueUserActivity` método incluye un `UIApplicationRestorationHandler` que puede llamar a para el documento o el servicio de respuesta en función de reanudación de actividad. Deberá pasar un `NSArray` u objetos que se pueden restaurar en el controlador de restauración cuando se llama. Por ejemplo:
+El `ContinueUserActivity` método incluye un `UIApplicationRestorationHandler` que se puede llamar para la reanudación de la actividad basada en documentos o en el respondedor. Deberá pasar un `NSArray` objeto o objetos restaurables al controlador de restauración cuando se le llame. Por ejemplo:
 
 ```csharp
 completionHandler (new NSObject[]{Tab4});
 ```
 
-Para cada objeto pasado, sus `RestoreUserActivityState` se llamará al método. Cada objeto, a continuación, pueden usar los datos en el `UserInfo` diccionario para restaurar su propio estado. Por ejemplo:
+Para cada objeto pasado, se `RestoreUserActivityState` llamará a su método. Cada objeto puede usar los datos `UserInfo` del diccionario para restaurar su propio estado. Por ejemplo:
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -421,13 +421,13 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 }
 ```
 
-Para aplicaciones basadas en el documento, si no implementa la `ContinueUserActivity` método o devuelve `false`, `UIKit` o `AppKit` automáticamente se puede reanudar la actividad. Consulte la [que admiten la entrega en aplicaciones basadas en documento](#supporting-handoff-in-document-based-apps) sección para obtener más información.
+En el caso de las aplicaciones basadas en documentos, si no `ContinueUserActivity` implementa el método o `false`devuelve `UIKit` , `AppKit` o puede reanudar automáticamente la actividad. Para obtener más información, consulte la sección [compatibilidad con las aplicaciones basadas en documentos](#supporting-handoff-in-document-based-apps) .
 
-### <a name="failing-handoff-gracefully"></a>Error de entrega correctamente
+### <a name="failing-handoff-gracefully"></a>Error de entrega correcta
 
-Puesto que la entrega se basa en la transmisión de información entre una colección conectada libremente entre sí dispositivos iOS y OS X, el proceso de transferencia a veces puede producir un error. Debe diseñar la aplicación para controlar correctamente estos errores e informar al usuario de las situaciones que surgen.
+Dado que la entrega se basa en la transmisión de información entre una colección de dispositivos iOS y OS X conectados de forma flexible, en ocasiones se produce un error en el proceso de transferencia. Debe diseñar la aplicación para controlar estos errores correctamente e informar al usuario de las situaciones que surjan.
 
-Si se produce un error, el `DidFailToContinueUserActivitiy` método de la `AppDelegate` se llamará. Por ejemplo:
+En caso de que se produzca un error `DidFailToContinueUserActivitiy` , se llamará al método `AppDelegate` de. Por ejemplo:
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -437,23 +437,23 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 }
 ```
 
-Debe usar proporcionado `NSError` para proporcionar información al usuario sobre el error.
+Debe utilizar el proporcionado `NSError` para proporcionar información al usuario sobre el error.
 
-## <a name="native-app-to-web-browser-handoff"></a>Aplicación nativa para la entrega de explorador Web
+## <a name="native-app-to-web-browser-handoff"></a>Entrega de aplicación nativa a explorador Web
 
-Un usuario que desee continuar una actividad sin necesidad de una aplicación nativa adecuada instalada en el dispositivo deseado. En algunas situaciones, una interfaz basada en web puede proporcionar la funcionalidad necesaria y todavía se puede continuar con la actividad. Por ejemplo, cuenta de correo electrónico del usuario puede proporcionar una interfaz de usuario basada en web para crear y leer mensajes.
+Es posible que un usuario desee continuar con una actividad sin tener una aplicación nativa adecuada instalada en el dispositivo deseado. En algunas situaciones, una interfaz basada en web puede proporcionar la funcionalidad necesaria y la actividad todavía puede continuar. Por ejemplo, la cuenta de correo electrónico del usuario puede proporcionar una interfaz de usuario basada en web para redactar y leer mensajes.
 
-Si la aplicación nativa, original conoce la dirección URL para la interfaz web (y la sintaxis necesaria para identificar el elemento especificado que se va a continuación), puede codificar esta información en el `WebpageURL` propiedad de la `NSUserActivity` instancia. Si el dispositivo receptor no tiene una aplicación nativa adecuada instalada para controlar la continuación, se puede llamar a la interfaz web proporcionado.
+Si la aplicación nativa de origen conoce la dirección URL de la interfaz web (y la sintaxis necesaria para identificar el elemento determinado que se está continuando), puede codificar esta información `WebpageURL` en la propiedad `NSUserActivity` de la instancia. Si el dispositivo receptor no tiene instalada una aplicación nativa adecuada para controlar la continuación, se puede llamar a la interfaz Web proporcionada.
 
-## <a name="web-browser-to-native-app-handoff"></a>Explorador Web para la entrega de aplicaciones nativas
+## <a name="web-browser-to-native-app-handoff"></a>Entrega del explorador Web a la aplicación nativa
 
-Si el usuario estaba usando una interfaz basada en web en el dispositivo de origen y una aplicación nativa en el dispositivo receptor de notificaciones de la parte del dominio la `WebpageURL` propiedad y, a continuación, el sistema utilizará esa aplicación, el identificador de la continuación. El nuevo dispositivo recibirá un `NSUserActivity` instancia que marca el tipo de actividad como `BrowsingWeb` y el `WebpageURL` contendrá la dirección URL que se visita el usuario, el `UserInfo` diccionario estará vacío.
+Si el usuario estaba usando una interfaz basada en Web en el dispositivo de origen y una aplicación nativa en el dispositivo receptor notifica la parte de dominio de la `WebpageURL` propiedad, el sistema usará esa aplicación para controlar la continuación. El nuevo dispositivo recibirá una `NSUserActivity` instancia que marca el tipo de actividad `BrowsingWeb` como y `WebpageURL` contendrá la dirección URL que el usuario ha visitado `UserInfo` , el Diccionario estará vacío.
 
-Para que una aplicación participar en este tipo de entrega, debe reclamar el dominio en un `com.apple.developer.associated-domains` derecho con el formato `<service>:<fully qualified domain name>` (por ejemplo: `activity continuation:company.com`).
+Para que una aplicación participe en este tipo de entrega, debe reclamar el dominio en `com.apple.developer.associated-domains` un derecho con el `<service>:<fully qualified domain name>` formato (por ejemplo `activity continuation:company.com`:).
 
-Si el dominio especificado coincide con un `WebpageURL` descargas de valor de propiedad, entrega una lista de identificadores de aplicación aprobada desde el sitio Web en ese dominio. El sitio Web debe proporcionar una lista de identificadores aprobados en un archivo JSON con signo denominado **apple-app-sitio-asociación** (por ejemplo, `https://company.com/apple-app-site-association`).
+Si el dominio especificado coincide con `WebpageURL` el valor de una propiedad, la entrega descarga una lista de identificadores de aplicación aprobados del sitio web en ese dominio. El sitio web debe proporcionar una lista de identificadores aprobados en un archivo JSON firmado denominado **Apple-App-site-Association** (por `https://company.com/apple-app-site-association`ejemplo,).
 
-Este archivo JSON contiene un diccionario que especifica una lista de identificadores de aplicación en el formulario `<team identifier>.<bundle identifier>`. Por ejemplo:
+Este archivo JSON contiene un diccionario que especifica una lista de identificadores de aplicación en `<team identifier>.<bundle identifier>`el formulario. Por ejemplo:
 
 ```csharp
 {
@@ -464,7 +464,7 @@ Este archivo JSON contiene un diccionario que especifica una lista de identifica
 }
 ```
 
-Para firmar el archivo JSON (para que tenga el valor correcto `Content-Type` de `application/pkcs7-mime`), use el **Terminal** app y una `openssl` comando con un certificado y clave emitido por una entidad de certificación de confianza para iOS (consulte [ https://support.apple.com/kb/ht5012 ](https://support.apple.com/kb/ht5012) para obtener una lista). Por ejemplo:
+Para firmar el archivo JSON (para `Content-Type` que tenga el correcto de `application/pkcs7-mime`), use la aplicación **terminal** y un `openssl` comando con un certificado y una clave emitidos por una entidad de certificación de confianza de [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) iOS (consulte para obtener una lista). Por ejemplo:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -477,17 +477,17 @@ cat json.txt | openssl smime -sign -inkey company.com.key
 -outform DER > apple-app-site-association
 ```
 
-El `openssl` comando da como resultado un archivo JSON con signo que se coloca en su sitio Web en el **apple-app-sitio-asociación** dirección URL. Por ejemplo:
+El `openssl` comando genera un archivo JSON firmado que se coloca en el sitio web en la dirección URL de la **Asociación de Apple-App-site** . Por ejemplo:
 
 ```csharp
 https://example.com/apple-app-site-association.
 ```
 
-La aplicación recibirá ninguna actividad cuyo `WebpageURL` dominio está en su `com.apple.developer.associated-domains` derecho. Solo el `http` y `https` protocolos son el soporte técnico, cualquier otro protocolo, producirá una excepción.
+La aplicación recibirá cualquier actividad cuyo `WebpageURL` dominio tenga su `com.apple.developer.associated-domains` derecho. Solo se `http` admiten los protocolos y `https` , cualquier otro protocolo producirá una excepción.
 
-## <a name="supporting-handoff-in-document-based-apps"></a>Compatibilidad con entrega en aplicaciones basadas en documento
+## <a name="supporting-handoff-in-document-based-apps"></a>Compatibilidad con la entrega en aplicaciones basadas en documentos
 
-Como se indicó anteriormente, en iOS y OS X, las aplicaciones basadas en documento admite automáticamente la entrega de documentos de iCloud si la aplicación **Info.plist** archivo contiene un `CFBundleDocumentTypes` clave de `NSUbiquitousDocumentUserActivityType`. Por ejemplo:
+Como se indicó anteriormente, en iOS y OS X, las aplicaciones basadas en documentos admiten automáticamente la entrega de documentos basados en iCloud si el archivo **info. plist** de la `CFBundleDocumentTypes` aplicación contiene `NSUbiquitousDocumentUserActivityType`una clave de. Por ejemplo:
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -507,23 +507,23 @@ Como se indicó anteriormente, en iOS y OS X, las aplicaciones basadas en docume
 </array>
 ```
 
-En este ejemplo, la cadena es un designador de aplicación DNS inversa con el nombre de la actividad de anexado. Si especifica este modo, no es necesario que las entradas de tipo de actividad se repite en el `NSUserActivityTypes` matriz de los **Info.plist** archivo.
+En este ejemplo, la cadena es un designador de aplicación DNS inverso con el nombre de la actividad anexada. Si se especifica de esta manera, no es necesario repetir las entradas de tipo de actividad `NSUserActivityTypes` en la matriz del archivo **info. plist** .
 
-El objeto de actividad del usuario creado automáticamente (disponible a través del documento `UserActivity` propiedad) se puede hacer referencia a otros objetos en la aplicación y utilizado para restaurar el estado de continuación. Por ejemplo, para realizar un seguimiento de elemento selección y documento de colocar. Debe establecer este actividades `NeedsSave` propiedad `true` cada vez que el estado de los cambios y actualizar la `UserInfo` diccionario en el `UpdateUserActivityState` método.
+Otros objetos de la aplicación pueden hacer referencia al objeto de actividad de `UserActivity` usuario creado automáticamente (disponible a través de la propiedad del documento) y se puede usar para restaurar el estado de continuación. Por ejemplo, para realizar un seguimiento de la selección de elementos y la posición del documento. Debe establecer esta propiedad de actividades `NeedsSave` en `true` siempre que el estado cambie y actualice el `UserInfo` Diccionario en el `UpdateUserActivityState` método.
 
-El `UserActivity` propiedad puede usarse desde cualquier subproceso y se ajusta para el protocolo pares clave-valor de observación (KVO), por lo que puede usarse para mantener sincronizados un documento mientras se desplaza de entrada y salida de iCloud. El `UserActivity` se invalidará la propiedad cuando se cierra el documento.
+La `UserActivity` propiedad se puede usar desde cualquier subproceso y se ajusta al Protocolo de valor de clave (KVO), por lo que se puede usar para mantener un documento sincronizado mientras se mueve dentro y fuera de iCloud. La `UserActivity` propiedad se invalidará cuando se cierre el documento.
 
-Para obtener más información, consulte Apple [soporte técnico de la actividad de usuario en aplicaciones basadas en documento](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/HandoffFundamentals/HandoffFundamentals.html#//apple_ref/doc/uid/TP40014338-CH3-SW5) documentación.
+Para más información, consulte la documentación sobre la compatibilidad de la actividad de usuario de Apple [en aplicaciones basadas en documentos](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/HandoffFundamentals/HandoffFundamentals.html#//apple_ref/doc/uid/TP40014338-CH3-SW5) .
 
-## <a name="supporting-handoff-in-responders"></a>Permitir la entrega en los servicios de respuesta
+## <a name="supporting-handoff-in-responders"></a>Compatibilidad con la entrega en los respondedores
 
-Puede asociar los servicios de respuesta (hereda de `UIResponder` en iOS o `NSResponder` en OS X) a las actividades estableciendo sus `UserActivity` propiedades. El sistema guarda automáticamente el `UserActivity` propiedad a veces, una llamada del servicio de respuesta adecuado `UpdateUserActivityState` método para agregar los datos actuales para el objeto de actividad del usuario mediante el `AddUserInfoEntriesFromDictionary` método.
+Puede asociar los respondedores (heredados `UIResponder` de en iOS `NSResponder` o en OS X) a las actividades estableciendo `UserActivity` sus propiedades. El sistema guarda automáticamente la `UserActivity` propiedad en el momento adecuado, llamando al método del `UpdateUserActivityState` respondedor para agregar los datos actuales al objeto de actividad del usuario `AddUserInfoEntriesFromDictionary` mediante el método.
 
-## <a name="supporting-continuation-streams"></a>Compatibilidad con secuencias de continuación
+## <a name="supporting-continuation-streams"></a>Admitir secuencias de continuación
 
-La pueden darse situaciones donde la cantidad de información necesaria para continuar con una actividad no se pueden transferir eficazmente la carga inicial de entrega. En estas situaciones, la aplicación receptora puede establecer la secuencia de uno o más entre sí y la aplicación original para transferir los datos.
+Puede tratarse de situaciones en las que la carga de entrega inicial no puede transferir eficazmente la cantidad de información necesaria para continuar una actividad. En estas situaciones, la aplicación receptora puede establecer uno o varios flujos entre sí mismo y la aplicación de origen para transferir los datos.
 
-La aplicación original se establecerá el `SupportsContinuationStreams` propiedad del `NSUserActivity` a la instancia `true`. Por ejemplo:
+La aplicación de origen establecerá la `SupportsContinuationStreams` propiedad de la `NSUserActivity` instancia en `true`. Por ejemplo:
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -542,7 +542,7 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-A continuación, puede llamar la aplicación receptora la `GetContinuationStreams` método de la `NSUserActivity` en su `AppDelegate` para establecer la secuencia. Por ejemplo:
+A continuación, la aplicación receptora `GetContinuationStreams` puede llamar al `NSUserActivity` método de `AppDelegate` en su para establecer la secuencia. Por ejemplo:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -586,55 +586,55 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-En el dispositivo de origen, el delegado de actividad de usuario recibe las secuencias mediante una llamada a su `DidReceiveInputStream` método para proporcionar los datos que se solicitó que continuase la actividad del usuario en el dispositivo de reanudación.
+En el dispositivo de origen, el delegado de actividad del usuario recibe los flujos llamando `DidReceiveInputStream` a su método para proporcionar los datos solicitados para continuar con la actividad del usuario en el dispositivo de reanudación.
 
-Usará un `NSInputStream` para proporcionar acceso de solo lectura para transmitir datos y un `NSOutputStream` proporcionan acceso de solo escritura. Las secuencias se deben usar en un modo de solicitud y respuesta, donde la aplicación receptora solicita más datos y lo proporciona la aplicación original. Para que los datos escritos en el flujo de salida en el dispositivo de origen que se leen desde el flujo de entrada en el dispositivo continuo y viceversa.
+Usará un `NSInputStream` objeto para proporcionar acceso de solo lectura a los datos de flujo y un `NSOutputStream` proporciona acceso de solo escritura. Los flujos deben usarse en un modo de solicitud y respuesta, donde la aplicación receptora solicita más datos y la aplicación de origen lo proporciona. De este modo, los datos escritos en el flujo de salida en el dispositivo de origen se leen desde el flujo de entrada en el dispositivo que continúa y viceversa.
 
-Incluso en situaciones donde la continuación Stream son necesarios, debe haber un mínimo de atrás y hacia delante la comunicación entre las dos aplicaciones.
+Incluso en situaciones en las que se requiere una secuencia de continuación, debe haber una mínima comunicación entre las dos aplicaciones.
 
-Para obtener más información, consulte Apple [mediante secuencias de continuación](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html#//apple_ref/doc/uid/TP40014338-CH2-SW13) documentación.
+Para obtener más información, consulte la documentación sobre el [uso de secuencias de continuación](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html#//apple_ref/doc/uid/TP40014338-CH2-SW13) de Apple.
 
-## <a name="handoff-best-practices"></a>Prácticas recomendadas de entrega
+## <a name="handoff-best-practices"></a>Procedimientos recomendados de entrega
 
-Una implementación correcta de la continuación de una actividad de usuario a través de entrega sin problemas requiere un cuidadoso diseño debido a los distintos componentes implicados. Apple sugiere lo adoptar los siguientes procedimientos recomendados para las aplicaciones de entrega habilitada:
+La implementación correcta de la continuación sin problemas de una actividad de usuario a través de la entrega requiere un cuidadoso diseño debido a todos los componentes implicados. Apple sugiere adoptar las siguientes prácticas recomendadas para las aplicaciones habilitadas para la entrega:
 
-- Diseñar las actividades de usuario para requerir la carga más pequeña posible relacionar el estado de la actividad que se puede continuar. Cuanto mayor sea la carga, más tiempo tarda la continuación para empezar.
-- Si se debe transferir grandes cantidades de datos para la continuación correcta, tenga en cuenta los costos implicados en la sobrecarga de red y la configuración.
-- Es habitual que una gran aplicación de Mac crear actividades de usuario que se controlan mediante varias más pequeñas, específicos de la tarea de aplicaciones en dispositivos iOS. Las versiones de SO y diferentes de aplicaciones deben diseñarse para funcionar bien juntos o da errores leves.
-- Al especificar los tipos de actividad, use la notación DNS inversa para evitar colisiones. Si una actividad es específica para una aplicación determinada, su nombre debe incluirse en la definición de tipo (por ejemplo `com.myCompany.myEditor.editing`). Si la actividad puede trabajar en varias aplicaciones, quite el nombre de la aplicación de la definición (por ejemplo `com.myCompany.editing`).
-- Si la aplicación necesita para actualizar el estado de una actividad de usuario (`NSUserActivity`) establece el `NeedsSave` propiedad `true`. En los momentos adecuados, entrega llamará al delegado `UserActivityWillSave` método para que pueda actualizar la `UserInfo` diccionario según sea necesario.
-- Dado que el proceso de entrega no podría inicializar al instante en el dispositivo receptor, es aconsejable implementar la `AppDelegate`del `WillContinueUserActivity` e informar al usuario que va a iniciar una continuación.
+- Diseñe las actividades de usuario para que requieran la carga más pequeña posible para relacionar el estado de la actividad que se va a continuar. Cuanto mayor sea la carga útil, más tiempo tardará en iniciarse la continuación.
+- Si debe transferir grandes cantidades de datos para una continuación correcta, tenga en cuenta los costos implicados en la configuración y la sobrecarga de la red.
+- Es habitual que una aplicación Mac grande cree actividades de usuario controladas por varias aplicaciones más pequeñas y específicas de tareas en dispositivos iOS. Las distintas versiones de la aplicación y del sistema operativo deben estar diseñadas para funcionar bien de forma conjunta o con errores.
+- Al especificar los tipos de actividad, use la notación DNS inversa para evitar colisiones. Si una actividad es específica de una aplicación determinada, su nombre debe incluirse en la definición de tipo (por `com.myCompany.myEditor.editing`ejemplo,). Si la actividad puede trabajar en varias aplicaciones, quite el nombre de la aplicación de la definición ( `com.myCompany.editing`por ejemplo,).
+- Si la aplicación necesita actualizar el estado de una actividad de usuario (`NSUserActivity`), establezca `NeedsSave` la propiedad `true`en. En el momento adecuado, la entrega llamará al `UserActivityWillSave` método del delegado para que pueda `UserInfo` actualizar el Diccionario según sea necesario.
+- Dado que es posible que el proceso de entrega no se inicialice al instante en el dispositivo `AppDelegate`receptor `WillContinueUserActivity` , debe implementar el y informar al usuario de que la continuación está a punto de iniciarse.
 
-## <a name="example-handoff-app"></a>Aplicación de entrega de ejemplo
+## <a name="example-handoff-app"></a>Ejemplo de aplicación de entrega
 
-Como ejemplo del uso de entrega en una aplicación de Xamarin.iOS, hemos incluido la [ **MonkeyBrowser** ](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) aplicación de ejemplo con esta guía. La aplicación tiene cuatro pestañas que el usuario puede utilizar para explorar la web, cada uno con un tipo de actividad determinado: Tiempo, como favorito, pausa para café y trabajo.
+Como ejemplo del uso de la entrega en una aplicación de Xamarin. iOS, hemos incluido la aplicación de ejemplo [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) con esta guía. La aplicación tiene cuatro pestañas que el usuario puede usar para explorar la web, cada una con un tipo de actividad determinado: Meteorología, favorito, pausa del café y trabajo.
 
-En cualquier ficha, cuando el usuario escribe una dirección URL y derivaciones de nuevo el **vaya** un nuevo botón `NSUserActivity` se crea para esa pestaña que contiene la dirección URL que el usuario está explorando actualmente:
+En cualquier pestaña, cuando el usuario escribe una nueva dirección URL y pulsa el botón **ir** , se `NSUserActivity` crea un nuevo para esa pestaña que contiene la dirección URL que el usuario está explorando actualmente:
 
-[![](handoff-images/handoff01.png "Aplicación de entrega de ejemplo")](handoff-images/handoff01.png#lightbox)
+[![](handoff-images/handoff01.png "Ejemplo de aplicación de entrega")](handoff-images/handoff01.png#lightbox)
 
-Si otro de los dispositivos del usuario tiene el **MonkeyBrowser** aplicación instalada, ha iniciado sesión en iCloud con la misma cuenta de usuario, en la misma red y cerca del dispositivo anterior, se mostrará la actividad de entrega en la página principal pantalla (en la esquina inferior izquierda):
+Si otro de los dispositivos del usuario tiene instalada la aplicación **MonkeyBrowser** , se inicia sesión en iCloud con la misma cuenta de usuario, está en la misma red y cerca del dispositivo anterior, la actividad de entrega se mostrará en la pantalla principal (en la parte inferior esquina izquierda):
 
-[![](handoff-images/handoff02.png "La actividad de entrega que se muestra en la pantalla principal en la esquina inferior izquierda")](handoff-images/handoff02.png#lightbox)
+[![](handoff-images/handoff02.png "La actividad de entrega que se muestra en la esquina inferior izquierda de la pantalla principal")](handoff-images/handoff02.png#lightbox)
 
-Si el usuario arrastra hacia arriba en el icono de entrega, se iniciará la aplicación y la actividad del usuario especificado en el `NSUserActivity` se continuará en el dispositivo nuevo:
+Si el usuario arrastra hacia arriba en el icono de entrega, se iniciará la aplicación y la actividad de usuario especificada `NSUserActivity` en el se continuará en el nuevo dispositivo:
 
-[![](handoff-images/handoff03.png "La actividad del usuario continúa en el nuevo dispositivo")](handoff-images/handoff03.png#lightbox)
+[![](handoff-images/handoff03.png "La actividad de usuario continuó en el nuevo dispositivo")](handoff-images/handoff03.png#lightbox)
 
-Cuando la actividad del usuario se ha enviado correctamente a Apple de otro dispositivo, el dispositivo de envío `NSUserActivity` recibirán una llamada a la `UserActivityWasContinued` método en su `NSUserActivityDelegate` le permita saber que la actividad del usuario se ha transferido correctamente a otro dispositivo.
+Cuando la actividad de usuario se ha enviado correctamente a otro dispositivo de Apple, el dispositivo `NSUserActivity` de envío recibirá una llamada `UserActivityWasContinued` al método en `NSUserActivityDelegate` su para indicarle que la actividad de usuario se ha transferido correctamente a otro dispositivos.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha proporcionado una introducción a la infraestructura de entrega utilizada para continuar con una actividad de usuario entre varios dispositivos de Apple del usuario. A continuación, se ha mostrado cómo habilitar e implementar la entrega en una aplicación de Xamarin.iOS. Por último, también se han descrito los distintos tipos de continuaciones de entrega disponibles y las prácticas recomendadas de entrega.
+En este artículo se ha proporcionado una introducción al marco de entrega que se usa para continuar una actividad de usuario entre varios dispositivos de Apple del usuario. A continuación, se mostró cómo habilitar e implementar la entrega en una aplicación de Xamarin. iOS. Por último, se han explicado los diferentes tipos de continuaciones de entrega disponibles y las prácticas recomendadas de entrega.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
-- [Ejemplo de MonkeyBrowser](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/)
+- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplo de MonkeyBrowser](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
-- [Novedades de iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [Novedades de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guía de HomeKitDeveloper](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)
-- [Directrices de interfaz de usuario de HomeKit](https://developer.apple.com/homekit/ui-guidelines/)
-- [Referencia de Framework HomeKit](https://developer.apple.com/library/ios/home_kit_framework_ref)
+- [Directrices de la interfaz de usuario de HomeKit](https://developer.apple.com/homekit/ui-guidelines/)
+- [Referencia de HomeKit Framework](https://developer.apple.com/library/ios/home_kit_framework_ref)

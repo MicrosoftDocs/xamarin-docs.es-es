@@ -1,67 +1,67 @@
 ---
-title: Arrastre y coloque en Xamarin.iOS
-description: Este documento describe cómo implementar arrastrar y colocar en aplicaciones de Xamarin.iOS mediante las API que se introdujo en iOS 11. En concreto, se describe lo que permite arrastrar y colocar en UITableView.
+title: Arrastrar y colocar en Xamarin. iOS
+description: En este documento se describe cómo implementar la función de arrastrar y colocar en aplicaciones de Xamarin. iOS con las API introducidas en iOS 11. En concreto, se explica cómo habilitar la función de arrastrar y colocar en UITableView.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/05/2017
-ms.openlocfilehash: aa93e015a399e733a2bb52f087a1e482bc23a00a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb982b1cd2340262101ff09bce2c37c69864b8dc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169716"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656467"
 ---
-# <a name="drag-and-drop-in-xamarinios"></a>Arrastre y coloque en Xamarin.iOS
+# <a name="drag-and-drop-in-xamarinios"></a>Arrastrar y colocar en Xamarin. iOS
 
-_Implementación de arrastrar y colocar para iOS 11_
+_Implementación de la función de arrastrar y colocar para iOS 11_
 
-iOS 11 incluye arrastrar y soltar para copiar datos entre aplicaciones en el iPad. Los usuarios pueden seleccionar y arrastrar todos los tipos de contenido de aplicaciones colocadas side-by-side o arrastrando sobre un icono de aplicación, lo que desencadenará la aplicación para abrir y permitir que los datos que se va a quitar:
+iOS 11 incluye compatibilidad con arrastrar y colocar para copiar datos entre aplicaciones en el iPad. Los usuarios pueden seleccionar y arrastrar todos los tipos de contenido de las aplicaciones colocadas en paralelo o arrastrando el icono de una aplicación, lo que desencadenará la aplicación para abrirla y permitir que se quiten los datos:
 
-![Ejemplo de arrastrar y colocar desde una aplicación personalizada en las notas de la aplicación](drag-and-drop-images/drag-drop-sml.png)
+![Arrastre y coloque el ejemplo de la aplicación personalizada en la aplicación de Notes](drag-and-drop-images/drag-drop-sml.png)
 
 > [!NOTE]
 > Arrastrar y colocar solo está disponible en la misma aplicación en iPhone.
 
-Considere la posibilidad de compatibilidad con arrastrar y colocar contenido en cualquier parte se puede crear o editar:
+Considere la posibilidad de admitir operaciones de arrastrar y colocar en cualquier lugar en el que pueda crearse o editarse contenido:
 
-- Los controles de texto admiten arrastrar y colocar para todas las aplicaciones compiladas con iOS 11, sin ningún trabajo adicional.
-- Las vistas de tablas y vistas de colección incluyen mejoras en iOS 11 que simplifican la adición de arrastrar y soltar.
-- Para la compatibilidad con arrastrar y colocar con personalizaciones adicionales se puede realizar cualquier otra vista.
+- Los controles de texto admiten arrastrar y colocar para todas las aplicaciones compiladas en iOS 11, sin ningún trabajo adicional.
+- Las vistas de tabla y las vistas de colección incluyen mejoras en iOS 11 que simplifican la adición del comportamiento de arrastrar y colocar.
+- Cualquier otra vista puede realizarse para admitir la función de arrastrar y colocar con personalización adicional.
 
-Al agregar arrastrar y colocar compatibilidad a las aplicaciones, puede proporcionar diferentes niveles de fidelidad contenido; Por ejemplo, podría proporcionar un texto con formato y la versión de texto sin formato de los datos para que la aplicación receptora puede elegir que adapta mejor a en el destino del arrastre. También es posible personalizar la visualización de arrastrar y poder arrastrar varios elementos a la vez.
+Al agregar compatibilidad con arrastrar y colocar a las aplicaciones, puede proporcionar diferentes niveles de fidelidad del contenido; por ejemplo, puede proporcionar una versión de texto sin formato y de texto sin formato de los datos para que la aplicación receptora pueda elegir lo que mejor se adapte al destino de arrastre. También es posible personalizar la visualización de arrastre y también permitir arrastrar varios elementos a la vez.
 
-## <a name="drag-and-drop-with-text-controls"></a>Arrastrar y colocar con los controles de texto
+## <a name="drag-and-drop-with-text-controls"></a>Arrastrar y colocar con controles de texto
 
-`UITextView` y `UITextField` admiten automáticamente el texto seleccionado out de arrastrar y colocar texto contenido en.
+`UITextView`y `UITextField` permiten automáticamente arrastrar el texto seleccionado y colocar el contenido de texto en.
 
 <a name="uitableview" />
 
 ## <a name="drag-and-drop-with-uitableview"></a>Arrastrar y colocar con UITableView
 
-`UITableView` tiene control integrado para arrastrar y colocar las interacciones con filas de tabla, que requieren sólo algunos métodos para habilitar el comportamiento predeterminado.
+`UITableView`tiene un control integrado para las interacciones de arrastrar y colocar con las filas de la tabla, requiriendo solo unos cuantos métodos para habilitar el comportamiento predeterminado.
 
-Hay dos interfaces:
+Hay dos interfaces implicadas:
 
-- `IUITableViewDragDelegate` : Información de paquetes cuando se inicia un arrastre en la vista de tabla.
-- `IUITableViewDropDelegate` – Procesa la información cuando una acción de colocar se ha intentado y completado.
+- `IUITableViewDragDelegate`: Empaqueta información cuando se inicia una arrastre en la vista de tabla.
+- `IUITableViewDropDelegate`: Procesa información cuando se intenta y completa una operación de eliminación.
 
-En el [DragAndDropTableView ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/) estas dos interfaces se implementan en el `UITableViewController` (clase), junto con el origen de datos y el delegado. Se les asigna en el `ViewDidLoad` método:
+En el [ejemplo DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) , estas dos interfaces se implementan en `UITableViewController` la clase, junto con el delegado y el origen de datos. Están asignados en el `ViewDidLoad` método:
 
 ```csharp
 this.TableView.DragDelegate = this;
 this.TableView.DropDelegate = this;
 ```
 
-El código mínimo necesario para estas dos interfaces se explica a continuación.
+A continuación se explica el código necesario mínimo para estas dos interfaces.
 
-### <a name="table-view-drag-delegate"></a>Delegado de arrastre de la vista de tabla
+### <a name="table-view-drag-delegate"></a>Delegado de arrastre de vista de tabla
 
-El único método _requiere_ admitir arrastrando una fila de una vista de tabla es `GetItemsForBeginningDragSession`. Si el usuario comienza a arrastrar una fila, se llamará a este método.
+El único método _necesario_ para admitir arrastrar una fila de una vista de tabla es `GetItemsForBeginningDragSession`. Si el usuario comienza a arrastrar una fila, se llamará a este método.
 
-A continuación se muestra una implementación. Recupera los datos asociados con la fila arrastrada, lo codifica y configura un `NSItemProvider` que determina cómo va a controlar las aplicaciones de la parte "drop" de la operación (por ejemplo, si puede controlar el tipo de datos, `PlainText`, en el ejemplo):
+A continuación se muestra una implementación de. Recupera los datos asociados a la fila arrastrada, los codifica y configura un `NSItemProvider` objeto que determina cómo controlarán las aplicaciones la parte "Drop" de la operación (por ejemplo, si pueden controlar el tipo de datos, `PlainText`, en el ejemplo):
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -85,19 +85,19 @@ public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
 }
 ```
 
-Hay muchos métodos opcionales en el delegado de arrastre que se puede implementar para personalizar el comportamiento de arrastrar, como proporcionar varias representaciones de datos que pueden aprovecharse de las aplicaciones de destino (como texto con formato como así como texto sin formato o un vector y mapa de bits las versiones de un dibujo). También puede proporcionar las representaciones de datos personalizado que se usará al arrastrar y soltar dentro de la misma aplicación.
+Hay muchos métodos opcionales en el delegado de arrastre que se pueden implementar para personalizar el comportamiento de arrastre, como proporcionar varias representaciones de datos que se pueden aprovechar en las aplicaciones de destino (como texto con formato y texto sin formato, o un vector y versiones de mapa de bits de un dibujo). También puede proporcionar representaciones de datos personalizadas que se usarán al arrastrar y colocar dentro de la misma aplicación.
 
-### <a name="table-view-drop-delegate"></a>Delegado de colocar la vista de tabla
+### <a name="table-view-drop-delegate"></a>Quitar delegado de vista de tabla
 
-Los métodos en el delegado de colocar se llaman cuando una operación de arrastre se realiza a través de una vista de tabla o se complete por encima de él. Los métodos necesarios determinan si puede quitarse los datos y las acciones que se realizan si se ha completado la operación de colocar:
+Se llama a los métodos del delegado Drop cuando se produce una operación de arrastre sobre una vista de tabla o se completa por encima de él. Los métodos necesarios determinan si se permite quitar los datos y qué acciones se realizan en caso de que se complete la eliminación:
 
-- `CanHandleDropSession` – Mientras un arrastre está en curso y, potencialmente, que se coloca en la aplicación, este método determina si los datos que se arrastran puede quitarse.
-- `DropSessionDidUpdate` – Mientras la operación de arrastrar está en curso, se llama a este método para determinar qué acción está diseñada. Información de la vista de tabla que se está arrastrando sobre la sesión de arrastre y la ruta de acceso de índice posibles puede utilizarse para determinar el comportamiento y los comentarios visuales proporcionada al usuario.
-- `PerformDrop` : Cuando el usuario completa la operación de colocar (levantar el dedo hacia), este método extrae los datos que se arrastran y modifica la vista de tabla para agregar los datos en una nueva fila (o filas).
+- `CanHandleDropSession`: Mientras un arrastre está en curso y, potencialmente, se coloca en la aplicación, este método determina si se permite quitar los datos que se arrastran.
+- `DropSessionDidUpdate`: Mientras la operación de arrastrar está en curso, se llama a este método para determinar qué acción está prevista. Se puede usar la información de la vista de tabla que se está arrastrando, la sesión de arrastre y la ruta de acceso del índice posible para determinar el comportamiento y los comentarios visuales proporcionados al usuario.
+- `PerformDrop`: Cuando el usuario completa la colocación (al levantar el dedo), este método extrae los datos que se arrastran y modifica la vista de tabla para agregar los datos en una nueva fila (o filas).
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession` indica si la vista de tabla puede aceptar los datos que se está arrastrando. En este fragmento de código `CanLoadObjects` se utiliza para confirmar que esta vista de tabla puede aceptar datos de cadena.
+`CanHandleDropSession`indica si la vista de tabla puede aceptar los datos que se arrastran. En este fragmento de código `CanLoadObjects` , se usa para confirmar que esta vista de tabla puede aceptar datos de cadena.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,10 +108,10 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-El `DropSessionDidUpdate` método se llama repetidamente mientras la operación de arrastrar está en curso, para proporcionar indicaciones visuales para el usuario.
+Se llama repetidamente al métodomientraslaoperacióndearrastrarestáencurso,paraproporcionarindicacionesvisualesalusuario.`DropSessionDidUpdate`
 
-En el código siguiente, `HasActiveDrag` se usa para determinar si se ha originado la operación en la vista de tabla actual. Si es así, solo las filas solo se pueden mover.
-Si la operación de arrastrar es de otro origen, se indicará una operación de copia:
+En el código siguiente, `HasActiveDrag` se usa para determinar si la operación se originó en la vista de tabla actual. Si es así, solo se permite que se muevan las filas individuales.
+Si el arrastre procede de otro origen, se indicará una operación de copia:
 
 ```csharp
 public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDropSession session, NSIndexPath destinationIndexPath)
@@ -131,13 +131,13 @@ public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDr
 }
 ```
 
-La operación de colocar puede ser uno de `Cancel`, `Move`, o `Copy`.
+La operación Drop puede ser `Cancel`, `Move`o `Copy`.
 
-La intención de colocar se puede insertar una fila nueva o agregar/anexar datos a una fila existente.
+La intención de colocar puede ser insertar una nueva fila o agregar o anexar datos a una fila existente.
 
 #### <a name="performdrop"></a>PerformDrop
 
-El `PerformDrop` se llama al método cuando el usuario completa la operación y modifica el origen de datos y vista de tabla para reflejar los datos colocados.
+Se llama al método cuando el usuario completa la operación y modifica la vista de tabla y el origen de datos para reflejar los datos colocados. `PerformDrop`
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)
@@ -176,20 +176,20 @@ public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coord
 }
 ```
 
-Para cargar asincrónicamente los objetos de datos de gran tamaño, se puede agregar código adicional.
+Se puede agregar código adicional para cargar objetos de datos grandes de forma asincrónica.
 
 ### <a name="testing-drag-and-drop"></a>Pruebas de arrastrar y colocar
 
-Debe usar un iPad para probar la [ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/).
-Abra el ejemplo junto con otra aplicación (por ejemplo, las notas) y arrastre las filas y el texto entre ellos:
+Debe usar un iPad para probar el [ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview).
+Abra el ejemplo junto a otra aplicación (como notas) y arrastre las filas y el texto entre ellas:
 
-![captura de pantalla de la operación de arrastre en curso](drag-and-drop-images/01-sml.png)
+![captura de pantalla de la operación de arrastrar en curso](drag-and-drop-images/01-sml.png)
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Directrices de interfaz humana de arrastrar y colocar (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
-- [Arrastre y coloque el ejemplo de la vista de tabla](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/)
-- [Arrastre y coloque el ejemplo de la vista de colección](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
-- [Introducción a la operación de arrastrar y colocar (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/203/)
-- [Arrastrar y colocar con la colección y la tabla de vista (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/223/)
+- [Arrastrar y colocar instrucciones de la interfaz humana (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
+- [Arrastrar y colocar el ejemplo de vista de tabla](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Arrastrar y colocar el ejemplo de vista de colección](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [Introducción a la función de arrastrar y colocar (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/203/)
+- [Arrastrar y colocar con la vista de colección y tabla (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/223/)

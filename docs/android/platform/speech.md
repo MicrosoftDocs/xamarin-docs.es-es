@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 693bca77fc22ac68c4a0480315363b241c3cf98b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511209"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643252"
 ---
 # <a name="android-speech"></a>Voz de Android
 
@@ -234,8 +234,8 @@ En esta guía hemos analizado los aspectos básicos de la conversión de texto a
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DependencyService de Xamarin. Forms](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Text to Speech (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
-- [Voz a texto (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
+- [DependencyService de Xamarin. Forms](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Text to Speech (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [Voz a texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Espacio de nombres Android. Speech](xref:Android.Speech)
 - [Espacio de nombres Android. Speech. TTS](xref:Android.Speech.Tts)
