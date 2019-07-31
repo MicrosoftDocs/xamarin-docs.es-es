@@ -7,16 +7,16 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8978bd386ec2f2ea0f9960f079ce82750941cfad
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61086055"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655953"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar rutas de acceso a los gráficos de clip a áreas específicas y para crear regiones_
 
@@ -24,7 +24,7 @@ A veces es necesario restringir la representación de gráficos a un área deter
 
 ![](clipping-images/clippingsample.png "Monkey a través de un principal")
 
-El *área recorte* es el área de la pantalla en la que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante un rectángulo o un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, pero también puede definir un área de recorte mediante un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Estos dos tipos de objetos en primer lugar parecen estar relacionadas con porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso de una región, y son muy diferentes de internamente: Una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de exploración horizontal.
+El *área recorte* es el área de la pantalla en la que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante un rectángulo o un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, pero también puede definir un área de recorte mediante un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Estos dos tipos de objetos en primer lugar parecen estar relacionadas con porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso desde una región y son muy diferentes internamente: Una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de recorrido horizontal.
 
 La imagen anterior se creó mediante la **Monkey a través de ojo de cerradura** página. El [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso utilizando los datos SVG y utiliza el constructor para cargar un mapa de bits de recursos del programa:
 
@@ -366,7 +366,7 @@ Para comprender el motivo de esta diferencia, es útil comprender qué una regi�
 
 Este trabajo se ha simplificado considerablemente si cada ruta de acceso se reduce a una serie de líneas de exploración horizontal, como las de tubos de vacío anticuado televisores. Cada línea de barrido es simplemente una línea horizontal con un punto inicial y un punto de conexión. Por ejemplo, un círculo con un radio de 10 píxeles se puede descomponer en 20 líneas de exploración horizontal, cada uno de los cuales comienza en la parte izquierda del círculo y termina en la parte derecha. Combinar dos círculos con cualquier operación de región pasa a ser muy sencillo porque es simplemente una cuestión de examen de las coordenadas de inicio y finalización de cada par de líneas de exploración correspondiente.
 
-Esto es lo que es una región: Una serie de líneas horizontales que definen un área.
+Esto es lo que es una región: Serie de líneas de recorrido horizontal que definen un área.
 
 Sin embargo, cuando un área se reduce a una serie de análisis de las líneas, estas líneas se basan en una dimensión de píxel concreto de examen. En realidad, la región no es un objeto de gráficos vectoriales. Está más cerca de naturaleza un mapa de bits monocromático comprimido a una ruta de acceso. Por lo tanto, las regiones no se pueden escalar o girar sin perder fidelidad y por ese motivo no se transforman cuando se usa para las áreas de recorte.
 
@@ -515,4 +515,4 @@ Realmente no parece un trébol de cuatro – hoja, pero es una imagen que sería
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

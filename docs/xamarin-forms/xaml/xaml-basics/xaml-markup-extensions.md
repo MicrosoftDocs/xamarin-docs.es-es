@@ -7,16 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342195"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655487"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Las extensiones de marcado XAML constituyen una característica importante de XAML que permiten establecer objetos o valores que se hace referencia indirectamente desde otros orígenes de propiedades. Las extensiones de marcado XAML son especialmente importantes para compartir objetos y hacer referencia a las constantes que se utilizan en toda una aplicación, pero encuentra su mayor utilidad los enlaces de datos._
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Tenga en cuenta que la palabra clave `clr-namespace` seguida de dos puntos y, a continuación, el nombre de espacio de nombres. NET, seguido por un punto y coma, la palabra clave `assembly`, un signo igual y el nombre del ensamblado.
 
-Sí, sigue una coma `clr-namespace` pero sigue el signo igual `assembly`. La sintaxis se definió en este modo deliberadamente: La mayoría de las declaraciones de espacio de nombres XML hacen referencia a un URI que empieza como un nombre de esquema de URI `http`, que siempre está seguido de dos puntos. El `clr-namespace` parte de esta cadena está pensado para imitar esta convención.
+Sí, sigue una coma `clr-namespace` pero sigue el signo igual `assembly`. La sintaxis se definió de esta manera deliberadamente: La mayoría de las declaraciones de espacios de nombres XML hacen referencia a un URI que `http`comienza con un nombre de esquema de URI como, que siempre va seguido de un signo de dos puntos. El `clr-namespace` parte de esta cadena está pensado para imitar esta convención.
 
 Ambas declaraciones de espacio de nombres de estos se incluyen en el **StaticConstantsPage** ejemplo. Tenga en cuenta que el `BoxView` dimensiones se establecen en `Math.PI` y `Math.E`, pero ha escalado por un factor de 100:
 
@@ -452,7 +452,7 @@ Las extensiones de marcado pueden tener propiedades, pero no se establecen como 
 
 Esto se puede ilustrar con la extensión de marcado de Xamarin.Forms denominada `ConstraintExpression`, que se usa con el `RelativeLayout` clase. Puede especificar la ubicación o el tamaño de una vista secundaria como una constante o con respecto a un elemento primario o en otra vista con nombre. La sintaxis de la `ConstraintExpression` permite establecer la posición o el tamaño de una vista mediante una `Factor` veces una propiedad de otra vista, más una `Constant`. Algo más complejo que requiere el código.
 
-A continuación se ofrece un ejemplo:
+Veamos un ejemplo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -547,7 +547,7 @@ A continuación se ofrece un ejemplo:
 </ContentPage>
 ```
 
-Quizás la lección más importante que se deben realizar desde este ejemplo es la sintaxis de la extensión de marcado: Comillas no deben aparecer dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es normal que desee incluir los valores de las propiedades de comillas. ¡Resistir la tentación!
+Quizás la lección más importante que debe tomar de este ejemplo es la sintaxis de la extensión de marcado: No deben aparecer comillas dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es normal que desee incluir los valores de las propiedades de comillas. ¡Resistir la tentación!
 
 Este es el programa que se ejecuta:
 
@@ -561,7 +561,7 @@ Las extensiones de marcado XAML que se muestra a continuación proporcionan comp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxis XAML esencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

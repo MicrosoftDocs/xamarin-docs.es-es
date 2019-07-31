@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512878"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655963"
 ---
 # <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
-La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
+La clase [`Device`](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades para el código de destino en los tipos de hardware específico y tamaños, el `Device` clase incluye métodos que se pueden usar para interactuar con los controles de interfaz de usuario de subprocesos en segundo plano. Para obtener más información, consulte [interactúe con la interfaz de usuario de subprocesos en segundo plano](#interact-with-the-ui-from-background-threads).
+Además de los métodos y las propiedades para el código de destino en tipos y tamaños de `Device` hardware específicos, la clase incluye métodos que se pueden usar para interactuar con los controles de interfaz de usuario de los subprocesos en segundo plano. Para obtener más información, vea [interactuar con la interfaz de usuario de subprocesos en segundo plano](#interact-with-the-ui-from-background-threads).
 
 ## <a name="providing-platform-specific-values"></a>Proporcionar valores específicos de la plataforma
 
@@ -28,7 +28,7 @@ Antes de Xamarin.Forms 2.3.4, se pudo obtener la plataforma de la aplicación se
 
 Sin embargo, desde Xamarin.Forms 2.3.4 estas API se ha desusado y reemplazado. El [ `Device` ](xref:Xamarin.Forms.Device) clase ahora contiene las constantes de cadena pública que identifican las plataformas: [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`() en desuso), `Device.WinRT` (en desuso) [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), y [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). De forma similar, el [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas se han reemplazado con el [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) y [ `On` ](xref:Xamarin.Forms.On) API.
 
-En C#, se pueden proporcionar valores específicos por plataforma mediante la creación de una instruccion `switch` con la propiedad [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) y, a continuación, proporcionar las instrucciones `case` para las plataformas necesarias:
+En C#, se pueden proporcionar valores específicos por plataforma mediante la creación de una instruccion `switch` con la propiedad [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) y, a continuación, proporcionar las instrucciones `case` para las plataformas necesarias:
 
 ```csharp
 double top;
@@ -117,7 +117,7 @@ El [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) va
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-En XAML, el valor [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) se puede recuperar mediante la extensión de marcado `x:Static`:
+En XAML, el valor [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) se puede recuperar mediante la extensión de marcado `x:Static`:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -180,24 +180,24 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Si el código del temporizador interactúa con la interfaz de usuario (como establecer el texto de un `Label` o mostrar una alerta) debe realizarse dentro de una expresión `BeginInvokeOnMainThread` (ver abajo).
 
-## <a name="interact-with-the-ui-from-background-threads"></a>Interactuar con la interfaz de usuario de subprocesos en segundo plano
+## <a name="interact-with-the-ui-from-background-threads"></a>Interacción con la interfaz de usuario desde subprocesos en segundo plano
 
-Mayoría de los sistemas operativos, incluidos iOS, Android y la plataforma Universal de Windows, utilice un modelo de subprocesamiento único para el código que implican la interfaz de usuario. Este subproceso se suele denominar el *subproceso principal* o *el subproceso de interfaz de usuario*. Una consecuencia de este modelo es que todo el código que tiene acceso a elementos de la interfaz de usuario debe ejecutar en el subproceso principal de la aplicación.
+La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma universal de Windows, utilizan un modelo de subprocesamiento único para el código que implica la interfaz de usuario. Este subproceso se llama a menudo el *subproceso principal* o el subproceso de la *interfaz de usuario*. Una consecuencia de este modelo es que todo el código que tiene acceso a los elementos de la interfaz de usuario se debe ejecutar en el subproceso principal de la aplicación.
 
-A veces, las aplicaciones usar subprocesos en segundo plano para realizar operaciones potencialmente larga, como la recuperación de datos de un servicio web. Si necesita código que se ejecuta en un subproceso en segundo plano tener acceso a elementos de la interfaz de usuario, se debe ejecutar ese código en el subproceso principal.
+A veces, las aplicaciones utilizan subprocesos en segundo plano para realizar operaciones que pueden tardar mucho tiempo, como recuperar datos de un servicio Web. Si el código que se ejecuta en un subproceso en segundo plano necesita acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal.
 
-El `Device` clase incluye lo siguiente `static` elementos desde subprocesos de fondos de la interfaz de métodos que se pueden usar para interactuar con el usuario:
+La `Device` clase incluye los siguientes `static` métodos que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
 
-| Método | Argumentos | Valores devueltos | Finalidad |
+| Método | Argumentos | Valores devueltos | Propósito |
 |---|---|---|---|
-| `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que finalice. |
-| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un `Func<T>` en el subproceso principal y espera a que finalice. |
-| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un `Action` en el subproceso principal y espera a que finalice. |
-| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un `Func<Task<T>>` en el subproceso principal y espera a que finalice. |
-| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un `Func<Task>` en el subproceso principal y espera a que finalice. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el `SynchronizationContext` del subproceso principal. |
+| `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que se complete. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un `Func<T>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un `Action` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un `Func<Task<T>>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un `Func<Task>` en el subproceso principal y espera a que se complete. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el `SynchronizationContext` para el subproceso principal. |
 
-El código siguiente muestra un ejemplo del uso de la `BeginInvokeOnMainThread` método:
+En el código siguiente se muestra un ejemplo del `BeginInvokeOnMainThread` uso del método:
 
 ```csharp
 Device.BeginInvokeOnMainThread (() =>
@@ -208,6 +208,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo Device](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
-- [Ejemplo Styles](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Ejemplo Device](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [Ejemplo Styles](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device](xref:Xamarin.Forms.Device)

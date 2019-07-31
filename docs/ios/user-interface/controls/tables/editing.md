@@ -1,38 +1,38 @@
 ---
-title: Edición de tablas con Xamarin.iOS
-description: Este documento describe cómo modificar las tablas de Xamarin.iOS. Describe pasar el dedo para eliminar, modificar el modo y la inserción de fila.
+title: Editar tablas con Xamarin. iOS
+description: En este documento se describe cómo editar tablas en Xamarin. iOS. Se describe el deslizamiento hacia la eliminación, el modo de edición y la inserción de filas.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 1267de341a88130c18254f414d2fbb1c42595a0c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a95e772ab0ba5fa6687ef941034f1de87f5d608a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61195919"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655907"
 ---
-# <a name="editing-tables-with-xamarinios"></a>Edición de tablas con Xamarin.iOS
+# <a name="editing-tables-with-xamarinios"></a>Editar tablas con Xamarin. iOS
 
-Características de edición de la tabla están habilitadas invalidando los métodos en un `UITableViewSource` subclase. El comportamiento de edición más sencillo es el gesto de deslizar rápidamente para eliminar que puede implementarse con una invalidación de método único.
-Edición más complejas (incluidas muevan las filas) se puede hacer con la tabla en modo de edición.
+Las características de edición de tablas se habilitan mediante la `UITableViewSource` invalidación de métodos en una subclase. El comportamiento de edición más sencillo es el gesto de deslizar hasta eliminar que se puede implementar con una única invalidación de método.
+Se puede realizar una edición más compleja (incluidas las filas en movimiento) con la tabla en modo de edición.
 
-## <a name="swipe-to-delete"></a>Deslice el dedo para Delete
+## <a name="swipe-to-delete"></a>Deslizar rápidamente a eliminar
 
-El dedo para eliminar la función es un gesto natural de iOS que los usuarios esperan. 
+La característica de deslizar rápidamente para eliminar es un gesto natural en iOS que los usuarios esperan. 
 
- [![](editing-images/image10.png "Ejemplo de pasar el dedo para Delete")](editing-images/image10.png#lightbox)
+ [![](editing-images/image10.png "Ejemplo de deslizar rápidamente a eliminar")](editing-images/image10.png#lightbox)
 
-Hay tres reemplazos de método que afectan el gesto de deslizar rápidamente para mostrar un **eliminar** botón en una celda:
+Hay tres invalidaciones de método que afectan al gesto de deslizar rápidamente para mostrar un botón de **eliminación** en una celda:
 
--   **CommitEditingStyle** : el origen de tabla detecta si este método se invalida y habilita automáticamente el gesto de deslizar rápidamente para eliminar. Debe llamar la implementación del método `DeleteRows` en el `UITableView` para hacer que las celdas a desaparecer y también quitar los datos subyacentes del modelo (por ejemplo, una matriz, diccionario o base de datos). 
--   **CanEditRow** – CommitEditingStyle si se reemplaza, se supone que todas las filas sean editables. Si este método se implementa y se devuelve false (algunas filas específicas o para todas las filas), a continuación, el gesto de deslizar rápidamente para eliminar no estará disponible en esa celda. 
--   **TitleForDeleteConfirmation** : opcionalmente, especifica el texto de la **eliminar** botón. Si este método no está implementado el texto del botón será "Eliminar". 
+-   **CommitEditingStyle** : el origen de la tabla detecta si este método se invalida y habilita automáticamente el gesto de deslizar hacia la eliminación. La implementación del método debe llamar `DeleteRows` a `UITableView` en para hacer desaparecer las celdas y quitar también los datos subyacentes del modelo (por ejemplo, una matriz, un diccionario o una base de datos). 
+-   **CanEditRow** : si se reemplaza CommitEditingStyle, se supone que todas las filas son editables. Si este método se implementa y devuelve false (para algunas filas específicas o para todas las filas), el gesto de deslizar a eliminar no estará disponible en esa celda. 
+-   **TitleForDeleteConfirmation** : especifica opcionalmente el texto del botón **eliminar** . Si este método no está implementado, el texto del botón será "Delete". 
 
 
-Estos métodos se implementan en el `TableSource` clase se indica a continuación:
+Estos métodos se implementan en `TableSource` la clase siguiente:
 
 ```csharp
 public override void CommitEditingStyle (UITableView tableView, UITableViewCellEditingStyle editingStyle, Foundation.NSIndexPath indexPath)
@@ -59,25 +59,25 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 }
 ```
 
-En este ejemplo el `UITableViewSource` se ha actualizado para usar un `List<TableItem>` (en lugar de una matriz de cadenas) como el origen de datos porque admite la adición y eliminación de elementos de la colección.
+En este ejemplo `UITableViewSource` , se ha actualizado para usar un `List<TableItem>` elemento (en lugar de una matriz de cadenas) como origen de datos porque admite la adición y eliminación de elementos de la colección.
 
 
 ## <a name="edit-mode"></a>Modo de edición
 
-Cuando una tabla está en modo de edición el usuario ve un widget rojo 'stop' en cada fila, que revela un botón de eliminación al tocarla. La tabla también muestra un icono de 'identificador' para indicar que la fila se puede arrastrar para cambiar el orden.
-El **TableEditMode** ejemplo implementa estas características, como se muestra.
+Cuando una tabla está en modo de edición, el usuario ve un widget "detener" rojo en cada fila, lo que revela un botón eliminar cuando se toca. En la tabla también se muestra un icono de "identificador" para indicar que la fila se puede arrastrar para cambiar el orden.
+En el ejemplo **TableEditMode** se implementan estas características como se muestra.
 
- [![](editing-images/image11.png "El ejemplo de TableEditMode implementa estas características, como se muestra")](editing-images/image11.png#lightbox)
+ [![](editing-images/image11.png "En el ejemplo TableEditMode se implementan estas características como se muestra")](editing-images/image11.png#lightbox)
 
 Hay una serie de métodos diferentes en `UITableViewSource` que afectan al comportamiento del modo de edición de una tabla:
 
--   **CanEditRow** : indica si se puede editar cada fila. Devolver false para evitar pasar el dedo para eliminar y eliminación en el modo de edición. 
--   **CanMoveRow** : el valor devuelto de true para habilitar el movimiento 'identificador' o en false para evitar mover. 
--   **EditingStyleForRow** : cuando la tabla está en modo de edición, el valor devuelto de este método determina si la celda muestra el icono de eliminación de color rojo o verde agregar icono. Devolver `UITableViewCellEditingStyle.None` si la fila no debe ser editable. 
--   **MoveRow** : se le llama cuando se mueve una fila hasta que se puede modificar la estructura de datos subyacente para que coincida con los datos tal y como se muestra en la tabla. 
+-   **CanEditRow** : indica si se puede editar cada fila. Devuelve false para evitar la operación de deslizar y eliminar el dedo en el modo de edición. 
+-   **CanMoveRow** : devuelve true para habilitar el movimiento ' handle ' o false para evitar el movimiento. 
+-   **EditingStyleForRow** : cuando la tabla está en modo de edición, el valor devuelto de este método determina si la celda muestra el icono de eliminación de color rojo o el icono de agregar verde. Devuelve `UITableViewCellEditingStyle.None` si la fila no debe ser editable. 
+-   **MoveRow** : se le llama cuando se mueve una fila, de modo que la estructura de datos subyacente se puede modificar para que coincida con los datos que se muestran en la tabla. 
 
 
-La implementación para los tres primeros métodos es relativamente sencillo: a menos que desee usar el `indexPath` para cambiar el comportamiento de determinadas filas, simplemente codificar los valores devueltos para toda la tabla.
+La implementación de los tres primeros métodos es relativamente sencilla, a menos que desee utilizar `indexPath` para cambiar el comportamiento de filas específicas, codificando simplemente los valores devueltos para toda la tabla.
 
 ```csharp
 public override bool CanEditRow (UITableView tableView, NSIndexPath indexPath)
@@ -94,7 +94,7 @@ public override UITableViewCellEditingStyle EditingStyleForRow (UITableView tabl
 }
 ```
 
-El `MoveRow` implementación es un poco más complicado porque se debe modificar la estructura de datos subyacente para que coincida con el nuevo orden. Dado que los datos se implementan como un `List` el código siguiente elimina el elemento de datos en su ubicación anterior y lo inserta en la nueva ubicación. Si los datos se almacenan en una tabla de base de datos de SQLite con una columna 'order' (por ejemplo), este método en su lugar, deberá realizar algunas operaciones de SQL para volver a ordenar los números de esa columna.
+La `MoveRow` implementación es un poco más complicada porque necesita modificar la estructura de datos subyacente para que coincida con el nuevo pedido. Dado que los datos se implementan `List` como el código siguiente, elimina el elemento de datos en su ubicación anterior y lo inserta en la nueva ubicación. Si los datos se almacenaron en una tabla de base de datos SQLite con una columna "Order" (por ejemplo,), este método tendría que realizar algunas operaciones SQL para reordenar los números de la columna.
 
 ```csharp
 public override void MoveRow (UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -116,39 +116,39 @@ public override void MoveRow (UITableView tableView, NSIndexPath sourceIndexPath
 }
 ```
 
-Por último, para obtener la tabla en modo de edición, el **editar** botón necesita llamar a `SetEditing` similar a éste
+Por último, para obtener la tabla en el modo de edición, el botón Editar `SetEditing` debe llamar a este
 
 ```csharp
 table.SetEditing (true, true);
 ```
 
-y cuando el usuario ha terminado de edición, el **realiza** botón debe desactivar el modo de edición:
+y cuando el usuario haya terminado de editar, el botón **listo** debe desactivar el modo de edición:
 
 ```csharp
 table.SetEditing (false, true);
 ```
 
 
-## <a name="row-insertion-editing-style"></a>Estilo de edición de inserción de fila
+## <a name="row-insertion-editing-style"></a>Estilo de edición de inserción de filas
 
-Inserción de filas desde dentro de la tabla es una interfaz de usuario habitual: el ejemplo principal en las aplicaciones de iOS estándar es la **Edit Contact** pantalla. Esta captura de pantalla muestra cómo funciona la funcionalidad de inserción de fila: en edición modo hay más de fila que (al hacer clic en) inserta filas adicionales en los datos. Cuando la edición se completa, temporal **(Agregar nuevo)** se quita la fila.
+La inserción de filas desde dentro de la tabla es una interfaz de usuario no común: el ejemplo principal de las aplicaciones estándar de iOS es la pantalla **Editar contacto** . En esta captura de pantalla se muestra cómo funciona la funcionalidad de inserción de filas: en el modo de edición hay una fila adicional en la que, cuando se hace clic en ella, se insertan filas adicionales en los datos. Una vez completada la edición, se quita la fila temporal **(agregar nueva)** .
 
- [![](editing-images/image12.png "Cuando se completa la edición, temporal agregar nueva fila se quita.")](editing-images/image12.png#lightbox)
+ [![](editing-images/image12.png "Una vez completada la edición, se quita la nueva fila temporal agregar.")](editing-images/image12.png#lightbox)
 
 Hay una serie de métodos diferentes en `UITableViewSource` que afectan al comportamiento del modo de edición de una tabla. Estos métodos se han implementado como se indica a continuación en el código de ejemplo:
 
--   **EditingStyleForRow** – devuelve `UITableViewCellEditingStyle.Delete` para las filas que contienen datos y devuelve `UITableViewCellEditingStyle.Insert` para la última fila (que se agregarán específicamente para comportarse como un botón de inserción). 
--   **CustomizeMoveTarget** : mientras que el usuario está moviendo una celda, el valor devuelto de este método opcional puede invalidar su elección de ubicación. Esto significa que puede impedirles 'Quitar' la celda en ciertas posiciones, como en este ejemplo que impide que cualquier fila que se va a mover después los **(Agregar nuevo)** fila. 
--   **CanMoveRow** : el valor devuelto de true para habilitar el movimiento 'identificador' o en false para evitar mover. En el ejemplo, la última fila tiene el "controlador de movimiento' ocultado porque está diseñado como un botón de inserción solo al servidor. 
+-   **EditingStyleForRow** : devuelve `UITableViewCellEditingStyle.Delete` para las filas que contienen datos y devuelve `UITableViewCellEditingStyle.Insert` para la última fila (que se agregará específicamente para comportarse como un botón de inserción). 
+-   **CustomizeMoveTarget** : mientras el usuario mueve una celda, el valor devuelto de este método opcional puede invalidar su elección de ubicación. Esto significa que puede evitar que "quite" la celda en determinadas posiciones, como este ejemplo, que impide que se mueva una fila después de la fila **(agregar nuevo)** . 
+-   **CanMoveRow** : devuelve true para habilitar el movimiento ' handle ' o false para evitar el movimiento. En el ejemplo, la última fila tiene el "identificador" de movimiento oculto porque está pensado para el servidor como un botón Insertar. 
 
 
-También agregamos dos métodos personalizados para agregar la fila de 'insert' y eliminarla nuevamente cuando ya no es necesario. Se les llama desde el **editar** y **realiza** botones:
+También agregamos dos métodos personalizados para agregar la fila ' INSERT ' y, a continuación, volver a quitarla cuando ya no sea necesaria. Se llaman desde los botones **Editar** y **listo** :
 
--   **WillBeginTableEditing** : cuando el **editar** botón está modificada se llama a `SetEditing` para colocar la tabla en modo de edición. Esto desencadena el método WillBeginTableEditing donde se muestre el **(Agregar nuevo)** fila al final de la tabla para que actúe como un botón de' insert'. 
--   **DidFinishTableEditing** : cuando se toca el botón Listo `SetEditing` se llama de nuevo para desactivar el modo de edición. El código de ejemplo se quita el **(Agregar nuevo)** fila de la tabla al editar ya no es necesaria. 
+-   **WillBeginTableEditing** : cuando se toca el botón **Editar** , llama `SetEditing` a para poner la tabla en modo de edición. Esto desencadena el método WillBeginTableEditing en el que se muestra la fila **(agregar nuevo)** al final de la tabla para que actúe como un "botón Insertar". 
+-   **DidFinishTableEditing** : cuando se toca `SetEditing` el botón listo, se vuelve a llamar para desactivar el modo de edición. En el código de ejemplo se quita la fila **(agregar nuevo)** de la tabla cuando ya no se necesita la edición. 
 
 
-Estas invalidaciones de método se implementan en el archivo de ejemplo **TableEditModeAdd/Code/TableSource.cs**:
+Estas invalidaciones de método se implementan en el archivo de ejemplo **TableEditModeAdd/Code/TableSource. CS**:
 
 ```csharp
 public override UITableViewCellEditingStyle EditingStyleForRow (UITableView tableView, NSIndexPath indexPath)
@@ -175,7 +175,7 @@ public override bool CanMoveRow (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-Estos dos métodos personalizados se usan para agregar y quitar el **(Agregar nuevo)** fila al modo de edición de la tabla está habilitado o deshabilitado:
+Estos dos métodos personalizados se utilizan para agregar y quitar la fila **(agregar nuevo)** cuando el modo de edición de la tabla está habilitado o deshabilitado:
 
 ```csharp
 public void WillBeginTableEditing (UITableView tableView)
@@ -200,7 +200,7 @@ public void DidFinishTableEditing (UITableView tableView)
 }
 ```
 
-Por último, este código crea instancias el **editar** y **realiza** botones con expresiones lambda que habilitan o deshabilitan el modo de edición cuando están modificadas:
+Por último, este código crea instancias de los botones **Editar** y **listo** , con expresiones lambda que habilitan o deshabilitan el modo de edición cuando se tocan:
 
 ```csharp
 done = new UIBarButtonItem(UIBarButtonSystemItem.Done, (s,e)=>{
@@ -218,9 +218,9 @@ edit = new UIBarButtonItem(UIBarButtonSystemItem.Edit, (s,e)=>{
 });
 ```
 
-Este patrón de interfaz de usuario de inserción de fila no se usa muy a menudo, sin embargo, también puede usar el `UITableView.BeginUpdates` y `EndUpdates` métodos para animar la inserción o eliminación de las celdas de cualquier tabla. La regla para el uso de estos métodos es que la diferencia en el valor devuelto por `RowsInSection` entre el `BeginUpdates` y `EndUpdates` llamadas deben coincidir con el número de celdas agregado/eliminado con net el `InsertRows` y `DeleteRows` métodos. Si no se cambia el origen de datos subyacente para que coincida con las inserciones y eliminaciones en la vista de tabla, se producirá un error.
+Este patrón de interfaz de usuario de inserción de filas no se utiliza muy a menudo, `UITableView.BeginUpdates` pero `EndUpdates` también puede utilizar los métodos y para animar la inserción o eliminación de las celdas de cualquier tabla. La regla para usar esos métodos es que la diferencia `RowsInSection` en el valor devuelto por entre `EndUpdates` las `BeginUpdates` llamadas y debe coincidir con el número neto de celdas agregadas `DeleteRows` o eliminadas con los `InsertRows` métodos y. Si el origen de información subyacente no se cambia para que coincida con las inserciones o eliminaciones en la vista de tabla, se producirá un error.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WorkingWithTables (ejemplo)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

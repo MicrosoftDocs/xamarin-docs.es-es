@@ -1,36 +1,36 @@
 ---
-title: 'Tutorial: uso de notificaciones locales en Xamarin.iOS'
-description: En esta sección le guiaremos a través de cómo usar notificaciones locales en una aplicación de Xamarin.iOS. Mostrarán los aspectos básicos de creación y publicación de una notificación que aparecerá una alerta cuando se recibe la aplicación.
+title: 'Tutorial: uso de notificaciones locales en Xamarin. iOS'
+description: En esta sección veremos cómo usar las notificaciones locales en una aplicación de Xamarin. iOS. Se mostrarán los aspectos básicos de la creación y publicación de una notificación que mostrará una alerta cuando la reciba la aplicación.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7589784563906d60fc8026feac9ea16362463bfa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f7290d8284f90db4f53a38dc89f7b5a1a10213c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085153"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655533"
 ---
-# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin.iOS
+# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin. iOS
 
-_En esta sección le guiaremos a través de cómo usar notificaciones locales en una aplicación de Xamarin.iOS. Mostrarán los aspectos básicos de creación y publicación de una notificación que aparecerá una alerta cuando se recibe la aplicación._
+_En esta sección veremos cómo usar las notificaciones locales en una aplicación de Xamarin. iOS. Se mostrarán los aspectos básicos de la creación y publicación de una notificación que mostrará una alerta cuando la reciba la aplicación._
 
 > [!IMPORTANT]
-> La información de esta sección se aplica a iOS 9 y anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte el [Guía de usuario notificación Framework](~/ios/platform/user-notifications/index.md) para admitir tanto locales como remotas de notificación en un dispositivo iOS.
+> La información de esta sección se refiere a iOS 9 y versiones anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo](~/ios/platform/user-notifications/index.md) de notificaciones de usuario para admitir la notificación local y remota en un dispositivo iOS.
 
 ## <a name="walkthrough"></a>Tutorial
 
-Permiten crear una aplicación simple que mostrará notificaciones locales en acción. Esta aplicación tendrá un solo botón en él. Al hacer clic en el botón, creará una notificación local. Una vez especificado el periodo de tiempo ha transcurrido, se aparecerá la notificación.
+Permita crear una aplicación sencilla que mostrará las notificaciones locales en acción. Esta aplicación tendrá un solo botón. Cuando hacemos clic en el botón, se creará una notificación local. Una vez transcurrido el período de tiempo especificado, verá que aparece la notificación.
 
 
-1. En Visual Studio para Mac, cree una nueva solución de iOS de vista única y llámelo `Notifications`.
-1. Abra el `Main.storyboard` de archivos y arrastre un botón a la vista. Asigne al botón **botón**y asígnele el título **agregar notificaciones**. También puede establecer algunas [restricciones](~/ios/user-interface/designer/designer-auto-layout.md) al botón en este momento: 
+1. En Visual Studio para Mac, cree una nueva solución de iOS de vista única y `Notifications`llámela.
+1. Abra el `Main.storyboard` archivo y arrastre un botón hasta la vista. Asigne un nombre al **botón**del botón y asígnele el título **Agregar notificación**. También puede establecer algunas [restricciones](~/ios/user-interface/designer/designer-auto-layout.md) en el botón en este punto: 
 
     ![](local-notifications-in-ios-walkthrough-images/image3.png "Establecer algunas restricciones en el botón")
-1. Editar la `ViewController` de clases y agregue el controlador de eventos siguiente al método ViewDidLoad:
+1. Edite `ViewController` la clase y agregue el siguiente controlador de eventos al método ViewDidLoad:
 
     ```csharp
     button.TouchUpInside += (sender, e) =>
@@ -56,9 +56,9 @@ Permiten crear una aplicación simple que mostrará notificaciones locales en ac
     };
     ```
 
-    Este código creará una notificación que se usa un sonido, Establece el valor de la notificación de icono en 1 y muestra una alerta al usuario.
+    Este código creará una notificación que utiliza un sonido, establece el valor de la distintivo del icono en 1 y muestra una alerta al usuario.
 
-1. A continuación, edite el archivo `AppDelegate.cs`, primero agregue el código siguiente a la `FinishedLaunching` método. Nos hemos comprueba para ver si el dispositivo ejecuta iOS 8, si por lo que estamos **requiere** para pedir permiso del usuario recibir notificaciones:
+1. Después, edite `AppDelegate.cs`el archivo, agregue primero el siguiente código `FinishedLaunching` al método. Hemos comprobado que el dispositivo ejecuta iOS 8, en caso de que sea **necesario** solicitar el permiso del usuario para recibir notificaciones:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -70,7 +70,7 @@ Permiten crear una aplicación simple que mostrará notificaciones locales en ac
         }
     ```
 
-1. Todavía en `AppDelegate.cs`, agregue el siguiente método que se llamará cuando se recibe una notificación:
+1. Todavía en `AppDelegate.cs`, agregue el siguiente método al que se llamará cuando se reciba una notificación:
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
@@ -87,7 +87,7 @@ Permiten crear una aplicación simple que mostrará notificaciones locales en ac
 
     ```
 
-1. Es necesario controlar los casos donde la notificación se inició debido a una notificación local. Editar el método `FinishedLaunching` en el `AppDelegate` para incluir el siguiente fragmento de código:
+1. Necesitamos controlar el caso en el que se inició la notificación debido a una notificación local. Edite el `FinishedLaunching` método `AppDelegate` en para incluir el siguiente fragmento de código:
 
 
     ```csharp
@@ -114,16 +114,16 @@ Permiten crear una aplicación simple que mostrará notificaciones locales en ac
 
     ```
 
-1. Por último, ejecute la aplicación. En iOS 8, se le pedirá para permitir las notificaciones. Haga clic en **Aceptar** y, a continuación, haga clic en el **agregar notificación** botón. Tras una breve pausa debería ver el cuadro de diálogo de alerta, como se muestra en las capturas de pantalla siguiente:
+1. Por último, ejecute la aplicación. En iOS 8 se le pedirá que permita las notificaciones. Haga clic en **Aceptar** y, a continuación, haga clic en el botón **Agregar notificación** . Después de una pausa breve, debería ver el cuadro de diálogo de alerta, tal como se muestra en las siguientes capturas de pantallas:
 
     ![](local-notifications-in-ios-walkthrough-images/image0.png "Confirmar la capacidad de enviar notificaciones") ![](local-notifications-in-ios-walkthrough-images/image1.png "botón Agregar notificación") ![](local-notifications-in-ios-walkthrough-images/image2.png "el cuadro de diálogo de alerta de notificación")
 
 ## <a name="summary"></a>Resumen
 
-Este tutorial ha mostrado cómo usar la API de distintos para crear y publicar las notificaciones en iOS. También muestra cómo actualizar el icono de la aplicación con un distintivo para proporcionar algunos comentarios específicos de la aplicación al usuario.
+En este tutorial se ha mostrado cómo usar las distintas API para crear y publicar notificaciones en iOS. También se ha mostrado cómo actualizar el icono de la aplicación con un distintivo para proporcionar algunos comentarios específicos de la aplicación al usuario.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notificaciones locales (ejemplo)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
-- [Local y la Guía de programación de notificaciones de inserción](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [Notificaciones locales (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [Guía de programación de notificaciones de envío y locales](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)

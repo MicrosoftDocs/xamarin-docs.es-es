@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386689"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653884"
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView) admite la interacción con los datos que presenta.
+[`ListView`](xref:Xamarin.Forms.ListView)permite interactuar con los datos que presenta.
 
 <a name="selectiontaps" />
 
@@ -37,7 +37,7 @@ Cuando un usuario puntea un elemento, se activan dos eventos:
 Pulsar dos veces el mismo elemento se desencadenarán dos [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) eventos, pero tendrá solo desencadena una sola [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) eventos.
 
 > [!NOTE]
-> El [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) (clase), que contiene los argumentos de evento para el [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) evento tiene [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) y [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) propiedades y un `ItemIndex` propiedad cuyo valor representa el índice de la [ `ListView` ](xref:Xamarin.Forms.ListView) del elemento derivado. De forma similar, el [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) (clase), que contiene los argumentos de evento para el [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento, tiene un [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propiedad y un `SelectedItemIndex` propiedad cuyo valor representa el índice de la `ListView` del elemento seleccionado.
+> La [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) clase, que contiene los argumentos de evento para [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) el evento, [`Group`](xref:Xamarin.Forms.ItemTappedEventArgs.Group) tiene [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) las propiedades y, `ItemIndex` y una propiedad cuyo valor representa el índice [`ListView`](xref:Xamarin.Forms.ListView) en el del elemento punteado. Del mismo modo [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs) , la clase, que contiene los argumentos de [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento para el evento [`SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) , tiene una propiedad `SelectedItemIndex` y una propiedad cuyo valor representa el índice `ListView` de la propiedad del elemento seleccionado.
 
 Cuando el [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) propiedad está establecida en [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), los elementos de la [ `ListView` ](xref:Xamarin.Forms.ListView) puede seleccionarse el [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) y [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) se desencadena eventos y el [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propiedad se establecerá en el valor del elemento seleccionado.
 
@@ -149,7 +149,7 @@ public void OnDelete (object sender, EventArgs e) {
 
 ## <a name="pull-to-refresh"></a>Deslizar para actualizar
 
-Los usuarios han llegado a esperar que extraer en una lista de datos se actualizará esa lista. [`ListView`](xref:Xamarin.Forms.ListView) es compatible con esta-de-fábrica. Para habilitar la funcionalidad de deslizar para actualizar, establezca [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) a `true`:
+Los usuarios han llegado a esperar que extraer en una lista de datos se actualizará esa lista. [`ListView`](xref:Xamarin.Forms.ListView)es compatible con esta plataforma. Para habilitar la funcionalidad de extracción a actualización, establezca [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) en `true`:
 
 ```xaml
 <ListView ...
@@ -162,7 +162,7 @@ El código de C# equivalente es:
 listView.IsPullToRefreshEnabled = true;
 ```
 
-Aparece un indicador giratorio durante la actualización, que es el negra de forma predeterminada. Sin embargo, se puede cambiar el color del indicador giratorio en iOS y Android estableciendo el `RefreshControlColor` propiedad a un [ `Color` ](xref:Xamarin.Forms.Color):
+Aparece un control de número durante la actualización, que es negro de forma predeterminada. Sin embargo, el color del control de número se puede cambiar en iOS y `RefreshControlColor` Android estableciendo la [`Color`](xref:Xamarin.Forms.Color)propiedad en:
 
 ```xaml
 <ListView ...
@@ -176,19 +176,19 @@ El código de C# equivalente es:
 listView.RefreshControlColor = Color.Red;
 ```
 
-Las capturas de pantalla siguientes muestran Deslizar para actualizar tal y como se extrae el usuario:
+Las siguientes capturas de pantallas muestran la incorporación de cambios a la actualización cuando el usuario extrae:
 
 ![](interactivity-images/refresh-start.png "Incorporación de cambios de ListView a actualizar en curso")
 
-Las capturas de pantalla siguientes muestran Deslizar para actualizar después de que el usuario ha soltado la incorporación de cambios, con el control de número que se muestra mientras el [ `ListView` ](xref:Xamarin.Forms.ListView) se está actualizando:
+Las siguientes capturas de pantallas muestran la extracción a la actualización después de que el usuario haya lanzado la extracción, con el [`ListView`](xref:Xamarin.Forms.ListView) control de número que se muestra mientras se está actualizando:
 
-![](interactivity-images/refresh-in-progress.png "Incorporación de cambios de ListView para actualización completada")
+![](interactivity-images/refresh-in-progress.png "Incorporación de cambios de ListView a actualización completada")
 
-[`ListView`](xref:Xamarin.Forms.ListView) se desencadena la [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) eventos para iniciar la actualización y el [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) propiedad se establecerá en `true`. No se requiere para actualizar el contenido de cualquier código el `ListView` , a continuación, se debe ejecutar el controlador de eventos para el `Refreshing` evento, o mediante el método ejecutado por el [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand). Una vez el `ListView` se actualiza, el `IsRefreshing` propiedad debe establecerse en `false`, o el [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) método debe llamarse, para indicar que la actualización ha finalizado.
+[`ListView`](xref:Xamarin.Forms.ListView)activa el [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar la actualización y la [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) propiedad se establecerá en `true`. El código necesario para actualizar el contenido del `ListView` debería ejecutarse a continuación por el controlador de eventos para el `Refreshing` evento, o por [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand)el método ejecutado por. Una vez que `IsRefreshing` `false` [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) se actualiza, la propiedad debe establecerse en, o se debe llamar al método para indicar que la actualización se ha completado. `ListView`
 
 > [!NOTE]
-> Al definir un [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand), el `CanExecute` se puede especificar el método del comando para habilitar o deshabilitar el comando.
+> Al definir un [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand), se `CanExecute` puede especificar el método del comando para habilitar o deshabilitar el comando.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Interactividad de ListView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [Interactividad de ListView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

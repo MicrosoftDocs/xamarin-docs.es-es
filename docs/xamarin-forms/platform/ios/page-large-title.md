@@ -1,24 +1,24 @@
 ---
-title: Títulos de página grande en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el iOS específicos de la plataforma que se muestra el título de página como un título de gran tamaño en la barra de navegación de una NavigationPage.
+title: Títulos de páginas grandes en iOS
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma de iOS específica que muestra el título de la página como un título grande en la barra de navegación de un NavigationPage.
 ms.prod: xamarin
 ms.assetid: 45FD9145-8319-452C-9AE6-624431A4D43C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 01c5e4f449a1aed84a73b0284ba15e0c03deeed7
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab9becf2f7363674346abf004c1748cb06eb0d31
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925774"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655421"
 ---
-# <a name="large-page-titles-on-ios"></a>Títulos de página grande en iOS
+# <a name="large-page-titles-on-ios"></a>Títulos de páginas grandes en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos de plataforma de iOS se usan para mostrar el título de página como un título de gran tamaño en la barra de navegación de un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), para los dispositivos que usan iOS 11 o superior. Un gran título está alineado a la izquierda y usa una fuente mayor y realiza la transición a un título estándar como el usuario comienza a desplazarse por el contenido, por lo que se usan de forma eficaz el espacio en pantalla. Sin embargo, en orientación horizontal, el título devolverá al centro de la barra de navegación para optimizar el diseño del contenido. Se consume en XAML estableciendo el `NavigationPage.PrefersLargeTitles` propiedad adjunta un `boolean` valor:
+Esta plataforma específica de iOS se usa para mostrar el título de la página como un título grande en la barra de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)navegación de un, para los dispositivos que usan iOS 11 o superior. Un gran título está alineado a la izquierda y usa una fuente mayor y realiza la transición a un título estándar como el usuario comienza a desplazarse por el contenido, por lo que se usan de forma eficaz el espacio en pantalla. Sin embargo, en orientación horizontal, el título devolverá al centro de la barra de navegación para optimizar el diseño del contenido. Se consume en XAML estableciendo el `NavigationPage.PrefersLargeTitles` propiedad adjunta un `boolean` valor:
 
 ```xaml
 <NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,6 +101,6 @@ El resultado es que un determinado `LargeTitleDisplayMode` se aplica a la [ `Pag
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

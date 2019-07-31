@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675263"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655455"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Reconocimiento de voz con la API de Microsoft Speech
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Speech API es una API basada en la nube que proporciona algoritmos para procesar el lenguaje oral. En este artículo se explica cómo usar la API de REST de reconocimiento de voz de Microsoft para convertir audio en texto en una aplicación de Xamarin.Forms._
 
@@ -170,5 +170,5 @@ En este artículo se explica cómo usar la API de REST de voz de Microsoft para 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Documentación de Microsoft Speech API](/azure/cognitive-services/speech/home/).
-- [Consumir un servicio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Todo Cognitive Services (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

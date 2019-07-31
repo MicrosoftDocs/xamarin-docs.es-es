@@ -1,69 +1,69 @@
 ---
-title: Imágenes e iconos en Xamarin.iOS
-description: Esta sección incluye una variedad de artículos que tratan cómo trabajar con imágenes en una aplicación de Xamarin.iOS, como el uso de ellos como iconos, pantallas de inicio o incluido ellos en los controles y proporcionar iconos para tipos de documento personalizadas.
+title: Imágenes e iconos en Xamarin. iOS
+description: En esta sección se incluye una variedad de artículos que cubren el trabajo con imágenes en una aplicación de Xamarin. iOS, como su uso como iconos, iniciar pantallas o incluirlas en controles y proporcionar iconos para tipos de documentos personalizados.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 60b450cba73166462747de41176575da27190e0a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 443cdb5028964e64aeb831f8d706bfdb99f637b2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832385"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654443"
 ---
-# <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin.iOS
+# <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin. iOS
 
-_Esta sección incluye una variedad de artículos que tratan cómo trabajar con imágenes en una aplicación de Xamarin.iOS, como el uso de ellos como iconos, pantallas de inicio o incluido ellos en los controles y proporcionar iconos para tipos de documento personalizadas._
+_En esta sección se incluye una variedad de artículos que cubren el trabajo con imágenes en una aplicación de Xamarin. iOS, como su uso como iconos, iniciar pantallas o incluirlas en controles y proporcionar iconos para tipos de documentos personalizados._
 
-Hay varias maneras de esa imagen se usan recursos dentro de una aplicación de iOS. Simplemente se muestre una imagen como parte de la interfaz de usuario de una aplicación, asignarlo a un control de interfaz de usuario, como un `UIButton` o `UIImageView`, para proporcionar iconos y pantallas de inicio, Xamarin.iOS facilita agregar material gráfico excelente a una aplicación iOS de las maneras siguientes: 
+Hay varias maneras de usar recursos de imagen dentro de una aplicación iOS. Desde simplemente mostrar una imagen como parte de la interfaz de usuario de una aplicación a, asignarla a un control de IU como `UIButton` o `UIImageView`, para proporcionar iconos y pantallas de inicio, Xamarin. iOS facilita la tarea de agregar material gráfico de gran calidad a una aplicación de iOS de las siguientes maneras: 
 
-- **Imágenes independientes de resolución** : usar la compatibilidad integrada de iOS para trabajar con imágenes en diferentes resoluciones de diferentes dispositivos y tipos (iPhone, iPad, etcetera.).
-- **Conjuntos de imágenes del catálogo de activos** -uso **conjuntos de imágenes del catálogo de activos** para administrar y agrupar todas las versiones de un recurso de imagen especificado requerido por una aplicación.
-- **Las imágenes en el Diseñador de iOS** -Use el Diseñador de iOS para establecer las imágenes para los controles.
-- **Las imágenes en el código** : Use el `UIImage` métodos de la clase para cargar y trabajar con activos de imagen y asignarlas a los controles de interfaz de usuario de C# código.
-- **Icono de la aplicación** -definir el icono de aplicación requerido por cada aplicación de iOS. Éste es el icono que aprovechará el usuario desde la pantalla principal de iOS para iniciar la aplicación. Además, este icono se utiliza por Game Center, si procede.
-- **Icono de Spotlight** -definir el icono de contenido destacado de la aplicación. Cada vez que el usuario escribe el nombre de una aplicación en una búsqueda de Spotlight, este icono se muestra.
-- **Icono de configuración** -definición de la aplicación **configuración** icono. Si el usuario escribe el **configuración** aplicación en su dispositivo iOS, este icono se mostrará al final de la lista de valores de la aplicación. 
-- **Pantallas de inicio** -definir la pantalla de inicio de la aplicación. Después de que el usuario pulsa el icono de la aplicación y antes de que aparezca la primera vista, se mostrará una pantalla en blanco. Afortunadamente, iOS incluye compatibilidad para mostrar una imagen en lugar de la pantalla en blanco utilizando un guión gráfico. 
-- **Icono de iTunes** -proporcionan un icono iTune. Si usa el método Ad Hoc de la entrega de una aplicación (ya sea para usuarios corporativos o para realizar pruebas beta en dispositivos reales), el desarrollador también debe incluir un 512 x 512 y una imagen de 1024 x 1024 que se usará para representar la aplicación en iTunes.
-- **Iconos de documento** -usar una imagen como un icono para cualquier tipo de documento específico que admite o que crea una aplicación de Xamarin.iOS.
+- **Imágenes independientes** de la resolución: Use la compatibilidad integrada de iOS para trabajar con imágenes en diferentes tipos y resoluciones de dispositivos (iPhone, iPad, etc.).
+- **Conjuntos de imágenes del catálogo de activos** : use **conjuntos de imágenes del catálogo de recursos** para administrar y agrupar toda la versión de un recurso de imagen determinado que necesita una aplicación.
+- **Imágenes en el diseñador de iOS** : Use el diseñador de iOS para establecer imágenes para los controles.
+- **Imágenes en el código** : use `UIImage` los métodos de la clase para cargar y trabajar con recursos de imagen y asignarlos a C# controles de interfaz de usuario en el código.
+- **Icono de aplicación** : defina el icono de la aplicación que requiere cada aplicación de iOS. Este es el icono que el usuario va a pulsar en la pantalla principal de iOS para iniciar la aplicación. Además, Game Center usa este icono, si procede.
+- **Icono de Spotlight** : defina el icono de noticias destacadas de la aplicación. Siempre que el usuario escriba el nombre de una aplicación en una búsqueda de Spotlight, se mostrará este icono.
+- **Icono de configuración** : defina el icono de **configuración** de la aplicación. Si el usuario escribe la aplicación de **configuración** en su dispositivo iOS, este icono se mostrará al final de la lista de configuración de la aplicación. 
+- **Pantallas de inicio** : defina la pantalla de inicio de la aplicación. Después de que el usuario pulse el icono de la aplicación y antes de que aparezca la primera vista, se mostrará una pantalla en blanco. Afortunadamente, iOS incluye compatibilidad para mostrar una imagen en lugar de la pantalla en blanco mediante un guion gráfico. 
+- **icono de iTunes** : proporcione un icono de iTunes. Si usa el método ad hoc de la entrega de una aplicación (ya sea para usuarios corporativos o para pruebas beta en dispositivos reales), el desarrollador también debe incluir una 512 x 512 y una imagen de 1024x1024 que se usará para representar la aplicación en iTunes.
+- **Iconos de documento** : Use una imagen como icono para cualquier tipo de documento específico que admita o cree una aplicación de Xamarin. iOS.
 
-Hay varias consideraciones que deben tenerse en cuenta al crear activos de imagen de una aplicación de iOS, así como varios lugares donde se usará esos recursos. Cada uno de ellos tiene un efecto en no solo será necesarios cuántos activos de imagen, sino cómo se crean esos recursos. Los siguientes temas tratan los tipos de recursos de imágenes que será necesarios, cómo esos recursos se incluyen en el paquete de la aplicación y cómo se consumen los activos de imagen para proporcionar la funcionalidad necesaria:
+Hay varias consideraciones que deben tenerse en cuenta al crear recursos de imagen para una aplicación de iOS, así como varios lugares donde se usarán esos recursos. Cada uno de ellos tiene un efecto sobre el número de recursos de imagen que serán necesarios, pero el modo en que se crean. En los temas siguientes se tratan los tipos de recursos de imagen que serán necesarios, cómo se incluyen esos recursos en el paquete de la aplicación y cómo se consumen los recursos de imagen para proporcionar la funcionalidad necesaria:
 
 
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Visualización de una imagen](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
-En este artículo se trata incluido un recurso de imagen en una aplicación de Xamarin.iOS y mostrar esa imagen mediante el uso de código de C# o mediante la asignación a un control en el Diseñador de iOS.
+En este artículo se describe cómo incluir un recurso de imagen en una aplicación de Xamarin. iOS y cómo C# Mostrar esa imagen mediante código o mediante su asignación a un control en el diseñador de iOS.
 
 ## <a name="application-iconsiosapp-fundamentalsimages-iconsapp-iconsmd"></a>[Iconos de aplicación](~/ios/app-fundamentals/images-icons/app-icons.md)
 
-Este plano de artículo incluido y administrar un recurso de imagen en una aplicación de Xamarin.iOS que se usará como icono de aplicación.
+En este artículo se explica cómo incluir y administrar un recurso de imagen en una aplicación Xamarin. iOS que se usará como icono de aplicación.
 
 ## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Iconos de aplicación alternativos](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
 
-Apple ha agregado varias mejoras a iOS 10.3 que permitan a una aplicación administrar su icono:
+Apple ha agregado varias mejoras a iOS 10,3 que permiten a una aplicación administrar su icono:
 
-- `ApplicationIconBadgeNumber` : Obtiene o establece el distintivo de icono de la aplicación en el Springboard.
-- `SupportsAlternateIcons` -If `true` la aplicación tiene un conjunto alternativo de iconos.
-- `AlternateIconName` -Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si mediante el icono principal.
-- `SetAlternameIconName` : Use este método para cambiar el icono de la aplicación en el icono alternativo especificado.
+- `ApplicationIconBadgeNumber`: Obtiene o establece el distintivo del icono de la aplicación en el Springboard.
+- `SupportsAlternateIcons`: Si `true` la aplicación tiene un conjunto alternativo de iconos.
+- `AlternateIconName`: Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si se usa el icono principal.
+- `SetAlternameIconName`: Use este método para cambiar el icono de la aplicación al icono alternativo determinado.
 
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Pantallas de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
-En este artículo se describe el uso de un tipo especial de guion gráfico para proporcionar una pantalla de inicio universal para cada tamaño de dispositivo de iOS y la resolución.
+En este artículo se describe el uso de un tipo especial de guion gráfico para proporcionar una pantalla de inicio universal para cada tamaño y resolución de dispositivos iOS.
 
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documentos personalizados](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
-Este plano de artículo incluido y administrar un recurso de imagen en una aplicación de Xamarin.iOS que se usará como un icono de tipo de documento personalizado.
+En este artículo se describe cómo incluir y administrar un recurso de imagen en una aplicación Xamarin. iOS que se va a usar como un icono de tipo de documento personalizado.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
+- [Trabajar con imágenes (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icono personalizado y directrices para la creación de imagen](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Instrucciones de creación de iconos e imágenes personalizadas](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

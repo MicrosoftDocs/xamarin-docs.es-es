@@ -7,22 +7,22 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309520"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655247"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Enlaces de datos permiten propiedades de dos objetos se vinculen para que un cambio en uno provoca un cambio en el otro. Esto es una herramienta muy valiosa, y mientras los enlaces de datos se pueden definir completamente en código, XAML proporciona accesos directos y comodidad. Por lo tanto, se enlaza una de las extensiones de marcado más importantes en Xamarin.Forms._
 
 ## <a name="data-bindings"></a>Enlaces de datos
 
-Enlaces de datos conectan las propiedades de dos objetos, denominados el *origen* y *destino*. En el código, se requieren dos pasos: El `BindingContext` propiedad del objeto de destino debe establecerse en el objeto de origen y el `SetBinding` método (a menudo se usa junto con el `Binding` clase) debe invocarse en el objeto de destino para enlazar una propiedad de ese objeto a una propiedad del origen de objeto.
+Enlaces de datos conectan las propiedades de dos objetos, denominados el *origen* y *destino*. En el código, se requieren dos pasos: La `BindingContext` propiedad del objeto de destino debe establecerse en el objeto de origen y se `SetBinding` debe llamar al método (a menudo utilizado `Binding` junto con la clase) en el objeto de destino para enlazar una propiedad de ese objeto a una propiedad del origen. objeto.
 
 La propiedad de destino debe ser una propiedad enlazable, lo que significa que el objeto de destino debe derivar de `BindableObject`. La documentación de Xamarin.Forms en línea indica qué propiedades son propiedades enlazables. Una propiedad de `Label` como `Text` está asociado con la propiedad enlazable `TextProperty`.
 
@@ -114,11 +114,11 @@ La solución a este y otros problemas implica la `Mode` propiedad, que se establ
 - `OneWay` : los valores se transfieren desde el origen al destino
 - `OneWayToSource` : los valores se transfieren desde el destino al origen
 - `TwoWay` : los valores se transfieren ambos sentidos entre el origen y destino
-- `OneTime` : datos van desde el origen al destino, pero solo cuando el `BindingContext` cambios
+- `OneTime`: los datos van desde el origen hasta el destino, pero `BindingContext` solo cuando los cambios
 
 El programa siguiente muestra un uso habitual de la `OneWayToSource` y `TwoWay` modos de enlace. Cuatro `Slider` vistas están pensadas para controlar la `Scale`, `Rotate`, `RotateX`, y `RotateY` las propiedades de un `Label`. En primer lugar, parece como si estas cuatro propiedades de la `Label` debe ser los destinos de enlace de datos porque cada una se establece un `Slider`. Sin embargo, el `BindingContext` de `Label` puede ser un solo objeto, y hay cuatro controles deslizantes diferentes.
 
-Por ese motivo, todos los enlaces se establecen aparentemente hacia atrás formas: El `BindingContext` de cada uno de los controles cuatro deslizantes se establece en el `Label`, y los enlaces se establecen en el `Value` las propiedades de los controles deslizantes. Mediante el uso de la `OneWayToSource` y `TwoWay` modos, estos `Value` propiedades pueden establecer las propiedades de origen, que son el `Scale`, `Rotate`, `RotateX`, y `RotateY` propiedades de la `Label`:
+Por ese motivo, todos los enlaces se establecen de manera aparentemente inversa: La `BindingContext` de cada uno de los cuatro controles deslizantes se establece `Label`en, y los enlaces se establecen en las `Value` propiedades de los controles deslizantes. Mediante el uso de la `OneWayToSource` y `TwoWay` modos, estos `Value` propiedades pueden establecer las propiedades de origen, que son el `Scale`, `Rotate`, `RotateX`, y `RotateY` propiedades de la `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,7 +255,7 @@ Para definir una plantilla para los elementos, desea dividir el `ItemTemplate` p
 ```
 
 > [!NOTE]
-> El origen de enlace de celdas y elementos secundarios de las celdas, es el `ListView.ItemsSource` colección.
+> El origen de enlace para las celdas y los elementos secundarios de las `ListView.ItemsSource` celdas es la colección.
 
 El `Label` elemento está establecido en el `View` propiedad de la `ViewCell`. (El `ViewCell.View` etiquetas no son necesarios porque el `View` propiedad es la propiedad content de `ViewCell`.) Este marcado se muestra el `FriendlyName` propiedad de cada uno `NamedColor` objeto:
 
@@ -410,7 +410,7 @@ Los enlaces de datos proporcionan un mecanismo eficaz para vincular las propieda
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción a XAML (ejemplo)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxis de XAML esencial (ejemplo)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensiones de marcado de XAML (ejemplo)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

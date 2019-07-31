@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075486"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655755"
 ---
 # <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Las extensiones de marcado XAML ayudar a ampliar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento que se pueden establecer desde orígenes que no sean cadenas de texto literal.
 
@@ -36,7 +36,7 @@ En cualquier caso, la cadena de texto se establece en el `Color` atributo se con
 
 Es posible que prefiera en su lugar, establezca el `Color` desde un valor almacenado en un diccionario de recursos, o desde el valor de una propiedad estática de una clase que ha creado o una propiedad de tipo de atributo `Color` de otro elemento en la página, o construido desde Separe los valores de matiz, saturación y luminosidad.
 
-Todas estas opciones son posibles mediante las extensiones de marcado XAML. Pero no permita que la frase "extensiones de marcado" lo abrume: Extensiones de marcado XAML son *no* extensiones a XML. Incluso con las extensiones de marcado XAML, XAML es siempre XML legal.
+Todas estas opciones son posibles mediante las extensiones de marcado XAML. Pero no deje que la frase "extensiones de marcado" SCARE: Las extensiones de marcado XAML *no* son extensiones de XML. Incluso con las extensiones de marcado XAML, XAML es siempre XML legal.
 
 Una extensión de marcado es simplemente una manera diferente para expresar un atributo de un elemento. Las extensiones de marcado XAML son normalmente identificables mediante una configuración de atributo que se encierra entre llaves:
 
@@ -60,7 +60,7 @@ Escribir sus propias extensiones de marcado XAML personalizados.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Extensiones de marcado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Extensiones de marcado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensiones de marcado XAML de Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)

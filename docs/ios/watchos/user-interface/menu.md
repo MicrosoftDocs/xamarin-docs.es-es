@@ -1,48 +1,48 @@
 ---
-title: Control de menú (Force Touch) en Xamarin watchOS
-description: Este documento describe cómo usar el gesto de watchOS force touch en Xamarin. Describe cómo responder a un toque de fuerza, cómo agregar un menú y cambiar los elementos de menú.
+title: Control de menú de watchos (Force Touch) en Xamarin
+description: En este documento se describe cómo usar el gesto de toque forzar fuerza táctil en Xamarin. En él se describe cómo responder a una interacción forzada, cómo agregar un menú y cómo cambiar los elementos de menú.
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7696c820ab6fdf19bdef46db31061fb5914e6cf4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6ad021d07d1263b20919cf4f640a8b65bf3b12b2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60880698"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655745"
 ---
-# <a name="watchos-menu-control-force-touch-in-xamarin"></a>Control de menú (Force Touch) en Xamarin watchOS
+# <a name="watchos-menu-control-force-touch-in-xamarin"></a>Control de menú de watchos (Force Touch) en Xamarin
 
-Vea que el Kit proporciona un gesto Force Touch que desencadena un menú cuando se implementa en una pantalla de la aplicación de inspección.
+El kit de inspección proporciona un gesto Force Touch que desencadena un menú cuando se implementa en una pantalla de la aplicación de inspección.
 
-![](menu-images/menu.png "Apple Watch que muestra un menú")
+![](menu-images/menu.png "Apple Watch mostrar un menú")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
-## <a name="responding-to-force-touch"></a>Responder al toque Force
+## <a name="responding-to-force-touch"></a>Responder a Force Touch
 
-Si un `Menu` se ha implementado para un controlador de interfaz, cuando un usuario realiza una Force Touch se abrirá el menú. Si no se ha implementado ningún menú, la pantalla se anima brevemente se produce una ninguna otra acción.
+Si se `Menu` ha implementado un para un controlador de interfaz, cuando un usuario realiza una Force Touch se mostrará el menú. Si no se ha implementado ningún menú, la pantalla se anima brevemente y no se produce ninguna otra acción.
 
-Force toques no están asociados con cualquier elemento en particular en la pantalla; solo menú puede asociarse a un controlador de interfaz y aparecerá con independencia de dónde se produce la acción de presionar Force Touch en la pantalla.
+Los toques de fuerza no se asocian a ningún elemento determinado de la pantalla. solo se puede adjuntar un menú a un controlador de interfaz y aparecerá independientemente del lugar en que se produzca el Force Touch Presione en la pantalla.
 
-Entre uno y cuatro menú se pueden presentar opciones.
+Se pueden presentar entre una y cuatro opciones de menú.
 
 
-## <a name="adding-a-menu"></a>Adición de un menú
+## <a name="adding-a-menu"></a>Agregar un menú
 
-Un `Menu` deben agregarse a un `InterfaceController` en el guión gráfico en tiempo de diseño. Cuando se arrastra un control de menú a un controlador de interfaz no hay ninguna indicación visual en la vista previa del guión gráfico, pero la **menú** aparece en el **esquema del documento** panel:
+Un `Menu` se debe agregar a un `InterfaceController` en el guión gráfico en tiempo de diseño. Cuando se arrastra un control de menú a un controlador de interfaz, no hay ninguna indicación visual en la vista previa del guion gráfico, pero el **menú** aparece en el panel del **esquema del documento** :
 
-![](menu-images/menu-action.png "Edición de un menú en tiempo de diseño")
+![](menu-images/menu-action.png "Editar un menú en tiempo de diseño")
 
-Hasta cuatro menú se pueden agregar elementos al control de menú. Se pueden configurar en el **propiedades** pad. Se pueden establecer los siguientes atributos:
+Se pueden agregar hasta cuatro elementos de menú al control de menú. Se pueden configurar en el panel de **propiedades** . Se pueden establecer los siguientes atributos:
 
-- Título, y
+- Título y
 - Imagen personalizada, o
-- Una imagen del sistema: Aceptar y agregar bloques, rechazo, Info, quizás, más, silenciar, pausa, reproducir y repetir, reanudar, recurso compartido, orden aleatorio, orador, la Papelera.
+- Una imagen del sistema: Aceptar, agregar, bloquear, rechazar, información, quizás, más, silenciar, pausar, reproducir, repetir, reanudar, compartir, ordenar aleatoriamente, orador, papelera.
 
-Crear un `Action` seleccionando el **eventos** sección de la **propiedades** panel y escriba el nombre para el método de acción. Se creará un método parcial en el código, que puede implementarse en la clase de controlador de interfaz, similar al siguiente:
+Cree un `Action` control seleccionando la sección de **eventos** del panel de **propiedades** y escribiendo el nombre del método de acción. Se creará un método parcial en el código, que se puede implementar en la clase de controlador de interfaz, de la siguiente manera:
 
 ```csharp
 partial void MenuItemTapped ()
@@ -53,9 +53,9 @@ partial void MenuItemTapped ()
 
 ### <a name="custom-images"></a>Imágenes personalizadas
 
-Imágenes de elemento de menú similares a las imágenes de la pestaña de iOS, requieren un patrón opaco con un canal alfa que permite que el fondo muestre a través.
+De forma similar a las imágenes de pestañas en iOS, las imágenes de elementos de menú requieren un patrón opaco con un canal alfa que permita que el fondo se muestre a través de.
 
-Debe agregar las imágenes utilizadas para el menú para el proyecto de aplicación de inspección (no proyecto de la extensión de aplicación watch) para obtener el mejor rendimiento.
+Debe agregar las imágenes que se usan para el menú al proyecto de aplicación de inspección (no al proyecto de extensión de aplicación de inspección) para obtener el mejor rendimiento.
 
 
 ## <a name="changing-the-menu-items"></a>Cambiar los elementos de menú
@@ -68,14 +68,14 @@ Menu items added the storyboard can be shown and hidden programmatically.
 
 ### <a name="adding-at-runtime"></a>Agregar en tiempo de ejecución
 
-No puede hacer un `Menu` para agregarse a un controlador de interfaz en tiempo de ejecución, aunque la colección de `MenuItem`s *puede* se puede modificar mediante programación.
-Use el `AddMenuItem` método tal como se muestra:
+No se puede hacer `Menu` que se agregue un a un controlador de interfaz en tiempo de ejecución, `MenuItem`aunque la colección de s se *puede* modificar mediante programación.
+Use el `AddMenuItem` método como se muestra a continuación:
 
 ```csharp
 AddMenuItem (WKMenuItemIcon.Accept, "Yes", new ObjCRuntime.Selector ("tapped"));
 ```
 
-La API de Kit de inspección de Xamarin.iOS requiere actualmente una `selector` para el `AdMenuItem` método, que se debe declarar como similar al siguiente:
+La API del kit `selector` de inspección de Xamarin. iOS actualmente requiere para el `AdMenuItem` método, que se debe declarar de la siguiente manera:
 
 ```csharp
 [Export("tapped")]
@@ -87,13 +87,13 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>Quitar en tiempo de ejecución
 
-El `ClearAllMenuItems` se puede llamar el método para quitar todos *programación agregados* elementos de menú.
+Se puede llamar al métodoparaquitartodosloselementosdemenúagregadosmediante`ClearAllMenuItems` programación.
 
-No se puede borrar los elementos de menú configurados en el guión gráfico.
+Los elementos de menú configurados en el guión gráfico no se pueden borrar.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documento de menú de Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Menus.html)

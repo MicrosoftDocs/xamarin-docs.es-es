@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740958"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654567"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
@@ -35,7 +35,7 @@ La aplicación primaria también en ocasiones se conoce como la aplicación de c
 
 ## <a name="run-code"></a>Ejecutar código
 
-Comunicación entre una extensión de inspección y la aplicación de iPhone primario se muestra en el [GpsWatch ejemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
+Comunicación entre una extensión de inspección y la aplicación de iPhone primario se muestra en el [GpsWatch ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
 La extensión de inspección puede solicitar la aplicación para iOS principal para realizar algún procesamiento en su nombre utilizando el `OpenParentApplication` método.
 
 Esto es especialmente útil para tareas en ejecución largas (incluidas las solicitudes de red): solo el elemento principal aplicación de iOS pueden aprovechar las ventajas del procesamiento en segundo plano para completar estas tareas y guardar los datos recuperados en una ubicación accesible para la extensión de inspección.
@@ -147,7 +147,7 @@ Descargue el C# versión [WormHoleSharp](https://github.com/Clancey/WormHoleShar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GpsWatch (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [GpsWatch (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WormHoleSharp (ejemplo)](https://github.com/Clancey/WormHoleSharp)
 - [Referencia de WKInterfaceController de Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple compartir datos con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

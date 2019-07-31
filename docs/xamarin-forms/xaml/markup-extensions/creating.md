@@ -1,22 +1,22 @@
 ---
 title: Creación de extensiones de marcado XAML
-description: En este artículo se explica cómo definir sus propias extensiones de marcado XAML de Xamarin.Forms personalizados. Una extensión de marcado XAML es una clase que implementa la IMarkupExtension o IMarkupExtension<T> interfaz.
+description: En este artículo se explica cómo definir sus propias extensiones de marcado XAML de Xamarin.Forms personalizados. Una extensión de marcado XAML es una clase que implementa la interfaz IMarkupExtension o<T> IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4d26713f258a8c97abd4b4e9970ebdd4d490f485
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178129"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655863"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Creación de extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 En el nivel de programación, una extensión de marcado XAML es una clase que implementa el [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) o [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interfaz. Puede explorar el código fuente de las extensiones de marcado estándar se describe a continuación, en el [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repositorio de Xamarin.Forms GitHub.
 
@@ -203,5 +203,5 @@ Las extensiones de marcado XAML desempeñan un papel fundamental en XAML mediant
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Extensiones de marcado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Extensiones de marcado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensiones de marcado XAML de Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

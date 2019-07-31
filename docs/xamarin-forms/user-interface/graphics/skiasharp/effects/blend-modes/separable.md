@@ -7,16 +7,16 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5bd1e883adc3be89bde7cc0e1529e77165247
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61387597"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655042"
 ---
 # <a name="the-separable-blend-modes"></a>Los modos de mezcla separables
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como se vio en el artículo [ **modos de fusión de SkiaSharp Porter-Duff**](porter-duff.md), por lo general, los modos de mezcla Porter Duff realizan operaciones de recorte. Los modos de mezcla separables son diferentes. Los modos separables modificar los componentes de color rojo, verde y azul individuales de una imagen. Modos de fusión separables pueden mezclar el color para demostrar que es realmente en blanco la combinación de rojo, verde y azul:
 
@@ -127,20 +127,20 @@ Las capturas de pantalla de izquierda a derecha se muestran cada vez mayores `Sl
 
 [![Aclarar y oscurecer](separable-images/LightenAndDarken.png "aclarar y oscurecer")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Este programa se muestra la forma habitual en que se usan los modos de mezcla separables: El destino es una imagen de algún tipo, muy a menudo, un mapa de bits. El origen es un rectángulo que se muestran mediante un `SKPaint` objeto con su `BlendMode` propiedad establecida en un modo de mezcla separables. El rectángulo puede ser un color sólido (como aquí) o un degradado. La transparencia es _no_ utilizados normalmente con los modos de mezcla separables.
+Este programa muestra la forma normal en la que se usan los modos de mezcla separables: El destino es una imagen de algún tipo, muy a menudo un mapa de bits. El origen es un rectángulo que se muestran mediante un `SKPaint` objeto con su `BlendMode` propiedad establecida en un modo de mezcla separables. El rectángulo puede ser un color sólido (como aquí) o un degradado. La transparencia es _no_ utilizados normalmente con los modos de mezcla separables.
 
 Mientras experimenta con este programa, descubrirá que estos modos de fusión de dos no aclarar y oscurecer la imagen de manera uniforme. En su lugar, el `Slider` establece un umbral de algún tipo. Por ejemplo, al aumentar el `Slider` para el `Lighten` modo, las áreas más oscuras de la imagen produce luz primero mientras las áreas más claras siguen siendo los mismos.
 
 Para el `Lighten` modo, si el píxel del destino es el valor de color RGB (base de datos de recuperación ante desastres, Dg,) y el píxel del origen es el color (Sr, Sg, Sb), entonces el resultado es (o Og, Ob) calcula como sigue:
 
- `Or = max(Dr, Sr)` `Og = max(Dg, Sg)`
+ `Or = max(Dr, Sr)``Og = max(Dg, Sg)`
  `Ob = max(Db, Sb)`
 
 Para rojo, verde y azul por separado, el resultado es el mayor número de origen y de destino. Esto produce el efecto de las áreas oscuras del destino de rayo en primer lugar.
 
 El `Darken` modo es similar, salvo que el resultado es el menor de origen y de destino:
 
- `Or = min(Dr, Sr)` `Og = min(Dg, Sg)`
+ `Or = min(Dr, Sr)``Og = min(Dg, Sg)`
  `Ob = min(Db, Sb)`
 
 Los componentes rojos, verde y azules son cada controlan por separado, motivo por el cual estos modos de fusión se conocen como el _separables_ modos de fusión. Por este motivo, las abreviaturas **Dc** y **Sc** puede usarse para el destino y los colores de origen y se entiende que los cálculos se aplican a cada uno de los componentes rojos, verde y azules por separado.
@@ -149,9 +149,9 @@ En la tabla siguiente se muestra todos los modos de blend separables con explica
 
 | Modo de mezcla   | Sin cambios | Operación |
 | ------------ | --------- | --------- |
-| `Plus`       | Negro     | Aclara mediante la adición de colores: SC + Dc |
-| `Modulate`   | Blanco     | Se oscurece multiplicando colores: Sc·Dc | 
-| `Screen`     | Negro     | Complementa el producto de complementos: Sc + Dc &ndash; Sc·Dc |
+| `Plus`       | Negro     | Aclara mediante la adición de colores: SC + DC |
+| `Modulate`   | Blanco     | Se oscurece multiplicando los colores: Seguro CD | 
+| `Screen`     | Negro     | Complementa el producto de complementos: SC + DC &ndash; SC · CD |
 | `Overlay`    | Gris      | Inverso de `HardLight` |
 | `Darken`     | Blanco     | Mínimo de colores: min (Sc, el controlador de dominio) |
 | `Lighten`    | Negro     | Máximo de colores: max (Sc, el controlador de dominio) |
@@ -159,9 +159,9 @@ En la tabla siguiente se muestra todos los modos de blend separables con explica
 | `ColorBurn`  | Blanco     | Se oscurece el destino en función de origen | 
 | `HardLight`  | Gris      | Similar al efecto de foco intenso |
 | `SoftLight`  | Gris      | Similar al efecto de foco suave | 
-| `Difference` | Negro     | Resta el más oscuro de más claro: ABS (controlador de dominio &ndash; Sc) | 
+| `Difference` | Negro     | Resta el más oscuro del más claro: ABS (DC &ndash; SC) | 
 | `Exclusion`  | Negro     | Similar a `Difference` contraste pero más bajo |
-| `Multiply`   | Blanco     | Se oscurece multiplicando colores: Sc·Dc |
+| `Multiply`   | Blanco     | Se oscurece multiplicando los colores: Seguro CD |
 
 Los algoritmos más detallados que pueden encontrarse en el W3C [ **la composición y mezcla de nivel 1** ](https://www.w3.org/TR/compositing-1/) especificación y el Skia [ **SkBlendMode referencia** ](https://skia.org/user/api/SkBlendMode_Reference), aunque la notación de estos dos orígenes no es el mismo. Tenga en cuenta que `Plus` normalmente se considera como un modo de blend Porter Duff, y `Modulate` no forma parte de la especificación de W3C.
 
@@ -428,4 +428,4 @@ El `Darken` modo también funciona para este mismo efecto.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

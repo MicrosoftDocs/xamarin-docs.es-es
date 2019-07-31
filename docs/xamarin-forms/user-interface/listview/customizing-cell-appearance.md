@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ecb9e84473778f5185276a854bfbf2fdfcbb6528
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370834"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654844"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizar la apariencia de una celda de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-[`ListView`](xref:Xamarin.Forms.ListView) presenta listas desplazables, que se pueden personalizar mediante el uso de `ViewCell`s. `ViewCells` puede usarse para mostrar texto e imágenes, que indica un estado verdadero/falso y recibir datos de entrada del usuario.
+[`ListView`](xref:Xamarin.Forms.ListView)presenta listas desplazables, que se pueden personalizar mediante el uso `ViewCell`de s. `ViewCells` puede usarse para mostrar texto e imágenes, que indica un estado verdadero/falso y recibir datos de entrada del usuario.
 
 <a name="Built_in_Cells" />
 
@@ -115,7 +115,7 @@ El XAML anterior hace mucho. Permítame desglosarlo:
 - La celda personalizada está anidada dentro de un `DataTemplate`, que está dentro de `ListView.ItemTemplate`. Este es el mismo proceso que con cualquier otra celda.
 - `ViewCell` es el tipo de la celda personalizada. El elemento secundario de la `DataTemplate` debe ser de elemento o se derivan del tipo `ViewCell`.
 - Tenga en cuenta que dentro del `ViewCell`, diseño está administrado por un `StackLayout`. Este diseño permite personalizar el color de fondo. Tenga en cuenta que cualquier propiedad de `StackLayout` es enlazable pueden ser enlazadas dentro de una celda personalizada, aunque no se muestra aquí.
-- Dentro de la `ViewCell`, diseño puede administrarse mediante cualquier diseño de Xamarin.Forms. 
+- Dentro de `ViewCell`, el diseño se puede administrar con cualquier diseño de Xamarin. Forms. 
 
 ### <a name="cnum"></a>C&num;
 
@@ -258,6 +258,6 @@ En iOS y Android, si la [ `ListView` ](xref:Xamarin.Forms.ListView) se recicla d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Integrado en las celdas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [Celdas personalizadas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [Cambiar de contexto de enlace (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BindingContextChanged)
+- [Integrado en las celdas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Celdas personalizadas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [Cambiar de contexto de enlace (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

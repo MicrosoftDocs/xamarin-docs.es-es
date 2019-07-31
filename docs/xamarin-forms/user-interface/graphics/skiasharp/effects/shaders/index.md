@@ -7,16 +7,16 @@ ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f16600b6f90755722d031c0fdc21fff1a66673ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 90022ddd59f56e0d70e5b8efd57d97713df5e969
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341392"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654914"
 ---
 # <a name="skiasharp-shaders"></a>Sombreadores de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Puede establecer el [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint` a un objeto de tipo [ `SKShader` ](xref:SkiaSharp.SKShader) para crear varios tipos de degradados, un patrón de mosaico de mapa de bits o ruido de Perlin.
 
@@ -39,4 +39,4 @@ Generar a los sombreadores de ruido de Perlin y se combina con otros sombreadore
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

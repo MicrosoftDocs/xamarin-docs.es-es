@@ -1,69 +1,69 @@
 ---
-title: Búsqueda con marcado Web en Xamarin.iOS
-description: Este documento describe cómo crear los resultados de búsqueda basada en web que vinculan a una aplicación de Xamarin.iOS. Describe cómo habilitar el contenido de web, indexación, por lo que el sitio Web de la aplicación puede detectar, mediante los banners de aplicaciones inteligentes, vínculos universales y mucho más.
+title: Buscar con marcado Web en Xamarin. iOS
+description: En este documento se describe cómo crear los resultados de la búsqueda basada en Web que se vinculan a una aplicación de Xamarin. iOS. Describe cómo habilitar la indización de contenido Web, lo que permite que el sitio web de la aplicación sea reconocible, mediante banners de aplicaciones inteligentes, vínculos universales, etc.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830134"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654079"
 ---
-# <a name="search-with-web-markup-in-xamarinios"></a>Búsqueda con marcado Web en Xamarin.iOS
+# <a name="search-with-web-markup-in-xamarinios"></a>Buscar con marcado Web en Xamarin. iOS
 
-Para las aplicaciones que proporcionan acceso a su contenido a través de un sitio web (no solo desde dentro de la aplicación), se puede marcar contenido web con vínculos especiales que se rastreará por Apple y proporcionan la vinculación en profundidad en la aplicación en el dispositivo del usuario iOS 9.
+En el caso de las aplicaciones que proporcionan acceso a su contenido a través de un sitio web (no solo desde dentro de la aplicación), el contenido web se puede marcar con vínculos especiales que va a rastrear Apple y proporcionar un vínculo profundo a la aplicación en el dispositivo iOS 9 del usuario.
 
-Si su aplicación iOS ya admite la vinculación en profundidad móvil y su sitio Web presenta vínculos profundos a contenido dentro de su aplicación, Apple _Applebot_ rastreador web volverá indizar este contenido y lo agrega automáticamente a su índice en la nube:
+Si la aplicación de iOS ya admite la vinculación profunda móvil y el sitio web presentó vínculos profundos al contenido dentro de la aplicación, _Applebot_ web Crawler de Apple indexará este contenido y lo agregará automáticamente a su índice de nube:
 
-[![](web-markup-images/webmarkup01.png "Información general del índice en la nube")](web-markup-images/webmarkup01.png#lightbox)
+[![](web-markup-images/webmarkup01.png "Información general de Cloud index")](web-markup-images/webmarkup01.png#lightbox)
 
-Apple detectarán estos resultados en los resultados de búsqueda de Spotlight y Safari.
-Si el usuario puntea en uno de estos resultados (y que tienen instalada la aplicación), a continuación, se le dirigirá al contenido de la aplicación:
+Apple mostrará estos resultados en los resultados de búsqueda de Spotlight y de la búsqueda de Safari.
+Si el usuario pulsa uno de estos resultados (y tiene la aplicación instalada), se le dirigirá al contenido de la aplicación:
 
-[![](web-markup-images/webmarkup02.png "Vinculación de un sitio Web en los resultados de búsqueda profunda")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Vínculos profundos desde un sitio web en los resultados de la búsqueda")](web-markup-images/webmarkup02.png#lightbox)
 
-## <a name="enabling-web-content-indexing"></a>Habilitar la indización de contenido Web
+## <a name="enabling-web-content-indexing"></a>Habilitar la indización de contenido web
 
-Hay cuatro pasos necesarios para hacer el contenido de la aplicación se pueda buscar con marcado Web:
+Hay cuatro pasos necesarios para que el contenido de la aplicación se pueda buscar mediante el marcado Web:
 
-1. Asegúrese de que Apple puede detectar y sitio Web de la aplicación de índice si se define como el **soporte** o **Marketing** sitio Web en iTunes Connect.
-2. Asegúrese de que el sitio Web de la aplicación contiene el marcado necesario para implementar la vinculación en profundidad móviles. Consulte las secciones siguientes para obtener más detalles.
-3. Habilitar vínculo profundo de control en su aplicación iOS.
-4. Agregue el marcado de los datos estructurados obtenidos por el sitio Web de la aplicación para proporcionar un resultado sofisticado y atractivo para el usuario final. Aunque este paso no es estrictamente necesaria, se recomienda por Apple.
+1. Asegúrese de que Apple pueda detectar e indexar el sitio web de la aplicación mediante su definición como sitio web de **soporte técnico** o de **marketing** en iTunes Connect.
+2. Asegúrese de que el sitio web de la aplicación contiene el marcado necesario para implementar la vinculación profunda móvil. Consulte las secciones siguientes para obtener más detalles.
+3. Habilite el control de vínculos profundos en la aplicación iOS.
+4. Agregue marcado para los datos estructurados que se muestran en el sitio web de la aplicación para proporcionar un resultado enriquecido y atractivo al usuario final. Aunque este paso no es estrictamente necesario, Apple es muy recomendable.
 
-Las siguientes secciones se pasará a través de estos pasos con detalle.
+En las secciones siguientes se detallan los pasos.
 
-## <a name="make-your-apps-website-discoverable"></a>Hacer que el sitio Web de la aplicación sea reconocible
+## <a name="make-your-apps-website-discoverable"></a>Haga que el sitio web de la aplicación sea reconocible
 
-Es la manera más fácil tener Apple buscar el sitio Web de la aplicación para usarla como la **soporte** o **Marketing** sitio Web al enviar la aplicación a Apple a través de iTunes Connect.
+La manera más fácil de hacer que Apple busque el sitio web de la aplicación es usarlo como sitio web de **soporte técnico** o de **marketing** al enviar la aplicación a Apple a través de iTunes Connect.
 
-## <a name="using-smart-app-banners"></a>Uso de Banners de aplicaciones inteligentes
+## <a name="using-smart-app-banners"></a>Uso de banners de aplicaciones inteligentes
 
-Proporcione un Banner de aplicaciones inteligentes en su sitio Web para presentar un vínculo claro en la aplicación. Si la aplicación ya no está instalada, Safari pedirá automáticamente al usuario que instale la aplicación. En caso contrario, puede pulsar el uso del **vista** vínculo para iniciar la aplicación desde el sitio Web. Por ejemplo, para crear un Banner de aplicaciones inteligentes, puede usar el código siguiente:
+Proporcione un banner de Smart app en el sitio web para presentar un vínculo claro a la aplicación. Si la aplicación aún no está instalada, Safari solicitará automáticamente al usuario que instale la aplicación. En caso contrario, el uso puede pulsar el vínculo **Ver** para iniciar la aplicación desde el sitio Web. Por ejemplo, para crear un banner de Smart App, puede usar el código siguiente:
 
 ```xml
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
-Para obtener más información, consulte Apple [promocionar aplicaciones con Banners aplicación inteligente](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) documentación.
+Para más información, consulte la documentación sobre la [promoción de aplicaciones con banners](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) de aplicaciones inteligentes de Apple.
 
-## <a name="using-universal-links"></a>Uso de vínculos universales
+## <a name="using-universal-links"></a>Usar vínculos universales
 
-Nuevo a iOS 9, vínculos universales ofrecen una alternativa mejor inteligente Banners de aplicación o esquemas de dirección URL personalizadas existentes proporcionando la siguiente:
+Como novedad de iOS 9, los vínculos universales proporcionan una mejor alternativa a los titulares de aplicaciones inteligentes o a los esquemas de direcciones URL personalizadas existentes al proporcionar lo siguiente:
 
-- **Único** : la misma dirección URL no se pueden solicitar más de un sitio Web.
-- **Proteger** : se requiere un certificado firmado por el sitio Web que garantiza que pertenece el sitio Web por el usuario y ha vinculado a la la aplicación.
-- **Flexible** : el usuario final puede controlar si la dirección URL inicia el sitio Web o la aplicación.
-- **Universal** : la misma dirección URL se puede usar para definir el contenido de su sitio Web y la aplicación.
+- **Único** : la misma dirección URL no se puede reclamar por más de un sitio Web.
+- **Seguro** : se requiere un certificado firmado para el sitio web que garantiza que el sitio web es propiedad del usuario y que se vincula de forma válida a la aplicación.
+- **Flexible** : el usuario final puede controlar si la dirección URL inicia el sitio web o la aplicación.
+- **Universal** : se puede usar la misma dirección URL para definir el contenido del sitio web y de la aplicación.
 
 ## <a name="using-twitter-cards"></a>Uso de tarjetas de Twitter
 
-Puede proporcionar vínculos profundos a contenido de la aplicación mediante una tarjeta de Twitter. Por ejemplo:
+Puede proporcionar vínculos profundos al contenido de la aplicación mediante una tarjeta de Twitter. Por ejemplo:
 
 ```xml
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -71,11 +71,11 @@ Puede proporcionar vínculos profundos a contenido de la aplicación mediante un
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-Para obtener más información, consulte de Twitter [Twitter tarjeta protocolo](http://dev.twitter.com/cards/mobile) documentación.
+Para obtener más información, consulte la documentación del Protocolo de la [tarjeta Twitter](http://dev.twitter.com/cards/mobile) de Twitter.
 
-## <a name="using-facebook-app-links"></a>Uso de vínculos de la aplicación de Facebook
+## <a name="using-facebook-app-links"></a>Uso de vínculos de aplicación de Facebook
 
-Puede proporcionar vínculos profundos a contenido de la aplicación mediante un Facebook App Link. Por ejemplo:
+Puede proporcionar vínculos profundos al contenido de la aplicación mediante un vínculo de aplicación de Facebook. Por ejemplo:
 
 ```xml
 <meta property="al:ios:app_name" content="AppName">
@@ -83,11 +83,11 @@ Puede proporcionar vínculos profundos a contenido de la aplicación mediante un
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-Para obtener más información, consulte Facebook [aplicación vínculos](http://applinks.org) documentación.
+Para obtener más información, consulte la documentación de los vínculos de la [aplicación](http://applinks.org) de Facebook.
 
 ## <a name="opening-deep-links"></a>Abrir vínculos profundos
 
-Deberá agregar compatibilidad para abrir y mostrar vínculos profundos en la aplicación de Xamarin.iOS. Editar el **AppDelegate.cs** archivo e invalidar la `OpenURL` método para controlar el formato de dirección URL personalizado. Por ejemplo:
+Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplicación de Xamarin. iOS. Edite el archivo **AppDelegate.CS** e invalide el `OpenURL` método para controlar el formato de la dirección URL personalizada. Por ejemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,15 +113,15 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-En el código anterior, estamos buscando una dirección URL que contiene `/appname` y pasando el valor de `query` (`123` en este ejemplo) a un controlador de vista personalizada en nuestra aplicación para mostrar el contenido solicitado al usuario.
+En el código anterior, buscamos una dirección URL que contenga `/appname` y pasando el valor de`123` `query` (en este ejemplo) a un controlador de vista personalizado en nuestra aplicación para mostrar el contenido solicitado al usuario.
 
-## <a name="providing-rich-results-with-structured-data"></a>Proporciona los resultados de enriquecido con datos estructurados
+## <a name="providing-rich-results-with-structured-data"></a>Proporcionar resultados enriquecidos con datos estructurados
 
-Mediante la inclusión de marcado estructurado de datos puede proporcionar los resultados de búsqueda enriquecida para el usuario final que van más allá de simplemente un título y descripción. Incluir imágenes, datos específicos de la aplicación (como clasificaciones) y acciones para los resultados con el marcado de datos estructurados.
+Al incluir el marcado de datos estructurados, puede proporcionar resultados de búsqueda enriquecidos al usuario final que van más allá de simplemente un título y una descripción. Incluir imágenes, datos específicos de la aplicación (como clasificaciones) y acciones para los resultados mediante el marcado de datos estructurados.
 
-Resultados de Rich son más atractivas y puede ayudar a mejorar la clasificación en la nube en función de índice de búsqueda por incitar más a los usuarios interactuar con ellos.
+Los resultados enriquecidos son más atractivos y pueden ayudar a mejorar la clasificación en el índice de búsqueda basado en la nube, ya que se favorece a más usuarios para que interactúen con ellos.
 
-Una opción para proporcionar marcado estructurado de datos es mediante el uso de Open Graph. Por ejemplo:
+Una opción para proporcionar marcado de datos estructurados es mediante Open Graph. Por ejemplo:
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -129,9 +129,9 @@ Una opción para proporcionar marcado estructurado de datos es mediante el uso d
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-Para obtener más información, consulte el [Open Graph](http://ogp.me) sitio Web.
+Para obtener más información, vea el sitio web de [Open Graph](http://ogp.me) .
 
-Otro comunes de marcado estructurado de datos es microdatos formato de schema.org. Por ejemplo:
+Otro formato común para el marcado de datos estructurados es esquema. microdatos de la organización. Por ejemplo:
 
 ```xml
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -141,7 +141,7 @@ Otro comunes de marcado estructurado de datos es microdatos formato de schema.or
 
 ```
 
-La misma información se puede representar en formato de JSON-LD del schema.org:
+La misma información se puede representar en el formato JSON-LD del esquema.
 
 ```xml
 <script type="application/ld+json">
@@ -152,32 +152,32 @@ La misma información se puede representar en formato de JSON-LD del schema.org:
 </script>
 ```
 
-La siguiente muestra un ejemplo de metadatos desde su sitio Web que proporciona los resultados de búsqueda enriquecida para el usuario final:
+A continuación se muestra un ejemplo de metadatos del sitio web que proporcionan resultados de búsqueda enriquecidos al usuario final:
 
-[![](web-markup-images/deeplink01.png "Opciones avanzadas de búsqueda resultados a través de marcado estructurado de datos")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Resultados de búsqueda enriquecidas mediante marcado de datos estructurados")](web-markup-images/deeplink01.png#lightbox)
 
-Apple actualmente admite los siguientes tipos de esquema de schema.org:
+Apple admite actualmente los siguientes tipos de esquema de schema.org:
 
 - AggregateRating
 - ImageObject
 - InteractionCount
-- Ofertas
+- Aporta
 - Organización
-- PriceRange
+- Rangoprecio
 - Receta
 - SearchAction
 
-Para obtener más información sobre estos tipos de esquema, vea [schema.org](http://schema.org).
+Para obtener más información sobre estos tipos de esquema, vea [Schema.org](http://schema.org).
 
 ## <a name="providing-actions-with-structured-data"></a>Proporcionar acciones con datos estructurados
 
-Determinados tipos de datos estructurados permitirá un resultado de búsqueda poder por el usuario final. Actualmente se admiten las siguientes acciones:
+Los tipos específicos de datos estructurados permitirán que el usuario final pueda accionar un resultado de búsqueda. Actualmente se admiten las siguientes acciones:
 
 - Marcar un número de teléfono.
-- Obteniendo dirección de asignación a una dirección determinada.
+- Obtener la dirección de asignación a una dirección determinada.
 - Reproducir un archivo de audio o vídeo.
 
-Por ejemplo, definir una acción para marcar un número de teléfono podría ser similar al siguiente:
+Por ejemplo, la definición de una acción para marcar un número de teléfono podría ser similar a la siguiente:
 
 ```xml
 <div itemscope itemtype="http://schema.org/Organization">
@@ -186,9 +186,9 @@ Por ejemplo, definir una acción para marcar un número de teléfono podría ser
 
 ```
 
-Cuando el resultado de la búsqueda se presenta al usuario final, se mostrará un icono pequeño de teléfono en el resultado. Si el usuario pulsa el icono, se llamará al número especificado.
+Cuando se presente el resultado de la búsqueda al usuario final, se mostrará un icono de teléfono pequeño en el resultado. Si el usuario pulsa el icono, se llamará al número especificado.
 
-El siguiente código HTML agregaría una acción para reproducir un archivo de audio desde el resultado de búsqueda:
+El siguiente código HTML agregaría una acción para reproducir un archivo de audio desde el resultado de la búsqueda:
 
 ```xml
 <div itemscope itemtype="http://schema.org/AudioObject">
@@ -197,7 +197,7 @@ El siguiente código HTML agregaría una acción para reproducir un archivo de a
 
 ```
 
-Por último, el siguiente código HTML agregaría una acción para obtener instrucciones de resultado de la búsqueda:
+Por último, el siguiente código HTML agregaría una acción para obtener direcciones del resultado de la búsqueda:
 
 ```xml
 <div itemscope itemtype="http://schema.org/PostalAddress">
@@ -209,13 +209,13 @@ Por último, el siguiente código HTML agregaría una acción para obtener instr
 
 ```
 
-Para obtener más información, consulte Apple [sitio para desarrolladores de aplicación de búsqueda](https://developer.apple.com/ios/search/).
+Para obtener más información, consulte el [sitio para desarrolladores de búsqueda de aplicaciones](https://developer.apple.com/ios/search/)de Apple.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Guía de programación de búsqueda de la aplicación](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)
+- [Guía de programación de búsqueda de aplicaciones](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

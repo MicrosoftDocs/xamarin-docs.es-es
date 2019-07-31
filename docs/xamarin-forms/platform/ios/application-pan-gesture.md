@@ -1,26 +1,26 @@
 ---
-title: Reconocimiento de gestos de movimiento panorámico simultáneas en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir iOS específicos de la plataforma que permite el reconocimiento de gestos de pan simultáneas que se usará en una aplicación.
+title: Reconocimiento simultáneo de gestos de pan en iOS
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma iOS que permite el reconocimiento simultáneo de gestos de pan para su uso en una aplicación.
 ms.prod: xamarin
 ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4587bb89ddfe43873e666a07514075f1a952e985
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8e86141ac27999a71a84ae7150b19ef3f60c117f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926784"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655981"
 ---
-# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconocimiento de gestos de movimiento panorámico simultáneas en iOS
+# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconocimiento simultáneo de gestos de pan en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Cuando un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) se adjunta a una vista dentro de una vista desplazable, todo el pan gestos capturados por el `PanGestureRecognizer` y no se pasan a la vista de desplazamiento. Por lo tanto, ya no se desplazará la vista de desplazamiento.
 
-Este específicos de plataforma de iOS permite un `PanGestureRecognizer` en una vista desplazable para capturar y compartir el movimiento panorámico con la vista de desplazamiento. Se consume en XAML estableciendo el [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) propiedad adjunta `true`:
+Este específico de la plataforma iOS permite `PanGestureRecognizer` a un en una vista de desplazamiento capturar y compartir el gesto de panorámica con la vista de desplazamiento. Se consume en XAML estableciendo el [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) propiedad adjunta `true`:
 
 ```xaml
 <Application ...
@@ -46,6 +46,6 @@ Por lo tanto, con este específicos de la plataforma habilitada, cuando un [ `Li
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

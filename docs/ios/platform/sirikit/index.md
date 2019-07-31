@@ -1,43 +1,43 @@
 ---
-title: SiriKit en Xamarin.iOS
-description: Este artículo muestra cómo usar SiriKit en una aplicación de Xamarin.iOS para proporcionar servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS.
+title: SiriKit en Xamarin. iOS
+description: En este artículo se muestra cómo usar SiriKit en una aplicación de Xamarin. iOS para proporcionar servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS.
 ms.prod: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9f7cbb3f7d9e448947ec8163a8660616910e750f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0438ea08bbdcbf0ce3c64e15192cbb90cd835b00
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423467"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654014"
 ---
-# <a name="sirikit-in-xamarinios"></a>SiriKit en Xamarin.iOS
+# <a name="sirikit-in-xamarinios"></a>SiriKit en Xamarin. iOS
 
-_Este artículo muestra cómo usar SiriKit en una aplicación de Xamarin.iOS para proporcionar servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS._
+_En este artículo se muestra cómo usar SiriKit en una aplicación de Xamarin. iOS para proporcionar servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS._
 
-Nuevo IOS 10, permite que una aplicación de iOS proporcionar servicios que son accesibles para el usuario mediante Siri y la aplicación de mapas de un dispositivo iOS mediante extensiones de aplicación y el nuevo SiriKit **intenciones** y **Intents UI** marcos de trabajo.
+Novedad de iOS 10, SiriKit permite que una aplicación de iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS con las extensiones de aplicación y **los nuevos marcos** de interfaz de usuario de intents y intents.
 
-Siri funciona con el concepto de **dominios**, sabe de grupos de acciones para las tareas relacionadas. Cada interacción que tiene una aplicación con Siri debe estar en uno de sus dominios de servicio conocido como sigue:
+Siri funciona con el concepto de **dominios**, grupos de acciones conocidas para tareas relacionadas. Cada interacción que tiene una aplicación con Siri debe encontrarse en uno de sus dominios de servicio conocidos de la siguiente manera:
 
-- Una llamada de vídeo o audio.
-- Transporte de reserva.
-- Administración de sesiones de ejercicios.
-- Mensajería.
+- Llamada de audio o vídeo.
+- Reservar un viaje.
+- Administrar entrenamientos.
+- Correo.
 - Buscar fotografías.
-- Enviar o recibir los pagos.
+- Enviar o recibir pagos.
 
-Cuando el usuario realiza una solicitud de Siri que implican a uno de los servicios de la extensión de aplicación, SiriKit envía la extensión de un **intención** objeto que describe la solicitud del usuario junto con cualquier dato de apoyo. La extensión de la aplicación, a continuación, genera adecuado **respuesta** de objeto para el determinado **intención**, que detalla cómo la extensión puede atender la solicitud.
+Cuando el usuario realiza una solicitud de Siri que implica a uno de los servicios de una extensión de aplicación, SiriKit envía a la extensión un objeto de **intención** que describe la solicitud del usuario junto con los datos auxiliares. A continuación, la extensión de la aplicación genera el objeto de **respuesta** adecuado para el **objetivo**dado, lo que detalla cómo la extensión puede controlar la solicitud.
 
 ## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[Descripción de los conceptos de SiriKit](~/ios/platform/sirikit/understanding-sirikit.md)
 
-En este artículo se trata los conceptos clave que será necesarios para trabajar con SiriKit, una aplicación de Xamarin.iOS. Se describe cómo el nuevo intenciones y puntos de extensión de interfaz de usuario de intenciones y cómo funcionan con la aplicación y vocabulario del usuario para abrir una aplicación a Siri.
+En este artículo se tratan los conceptos clave necesarios para trabajar con SiriKit en una aplicación de Xamarin. iOS. Abarca los nuevos puntos de extensión de la interfaz de usuario de intents y de intents, y cómo funcionan con la aplicación y el vocabulario del usuario para abrir una aplicación en Siri.
 
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementación de SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
-En este artículo se trata los pasos necesarios para implementar la compatibilidad de SiriKit en las aplicaciones de Xamarin.iOS. El desarrollador debe leer a la Guía de descripción de conceptos de SiriKit anteriormente antes de intentar agregar soporte de SiriKit a una aplicación, como se tratan los conceptos clave que será necesario para una implementación correcta.
+En este artículo se describen los pasos necesarios para implementar la compatibilidad con SiriKit en las aplicaciones de Xamarin. iOS. El desarrollador debe leer la guía de introducción a los conceptos de SiriKit antes de intentar agregar compatibilidad con SiriKit a una aplicación, ya que se tratan los conceptos clave que se requerirán para una implementación correcta.
 
 
 
@@ -45,7 +45,7 @@ En este artículo se trata los pasos necesarios para implementar la compatibilid
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de ElizaChat](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
+- [Ejemplo de ElizaChat](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
 - [Guía de programación de SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
-- [Referencia de Framework de intenciones](https://developer.apple.com/reference/intents)
-- [Referencia de Framework de la interfaz de usuario de intenciones](https://developer.apple.com/reference/intentsui)
+- [Referencia de marco de trabajo](https://developer.apple.com/reference/intents)
+- [Referencia del marco de interfaz de usuario de Intent](https://developer.apple.com/reference/intentsui)

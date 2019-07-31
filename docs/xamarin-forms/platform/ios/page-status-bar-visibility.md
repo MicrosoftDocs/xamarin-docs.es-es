@@ -1,24 +1,24 @@
 ---
-title: Visibilidad de barra de estado de página en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el iOS específicos de la plataforma que establece la visibilidad de la barra de estado de una página.
+title: Visibilidad de la barra de estado de la página en iOS
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma iOS que establece la visibilidad de la barra de estado en una página.
 ms.prod: xamarin
 ms.assetid: D8BB7C24-A27F-4758-8557-6A81F909ABD9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 66bd6c1ca2ccc3e5335a790950cbf1a792a7df82
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: a187efa9310fa150ddc884d8b42da5ccb9ecee11
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925398"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655844"
 ---
-# <a name="page-status-bar-visibility-on-ios"></a>Visibilidad de barra de estado de página en iOS
+# <a name="page-status-bar-visibility-on-ios"></a>Visibilidad de la barra de estado de la página en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos de plataforma de iOS se usan para establecer la visibilidad de la barra de estado en un [ `Page` ](xref:Xamarin.Forms.Page), e incluye la capacidad para controlar cómo la barra de estado entra o sale de la `Page`. Se consume en XAML estableciendo el `Page.PrefersStatusBarHidden` propiedad adjunta a un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, el `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta a un valor de la `UIStatusBarAnimation` enumeración:
+Esta plataforma específica de iOS se usa para establecer la visibilidad de la barra de estado en [`Page`](xref:Xamarin.Forms.Page)un e incluye la capacidad de controlar el modo en que la barra de estado entra `Page`o sale de. Se consume en XAML estableciendo el `Page.PrefersStatusBarHidden` propiedad adjunta a un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, el `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta a un valor de la `UIStatusBarAnimation` enumeración:
 
 ```xaml
 <ContentPage ...
@@ -53,6 +53,6 @@ El `Page.SetPreferredStatusBarUpdateAnimation` método se usa para establecer c�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

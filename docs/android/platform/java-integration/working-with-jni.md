@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0b7ad7b8c97a5cd5952afd16b8c0afeff1dafe59
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fc06514be70d64f200a22fa96a7644c7d97be012
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510541"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643529"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Trabajo con JNI y Xamarin. Android
 
@@ -158,7 +158,7 @@ Dado que la generación de código no proporciona una solución para generar mé
 
 -   `ExportFieldAttribute`&ndash; especifica un nombre de campo. Reside en un método que funciona como inicializador de campo. Se puede usar con `android.os.Parcelable`.
 
-El proyecto de ejemplo [ExportAttribute](https://developer.xamarin.com/samples/monodroid/ExportAttribute/) muestra cómo utilizar estos atributos.
+El proyecto de ejemplo [ExportAttribute](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) muestra cómo utilizar estos atributos.
 
 
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Solución de problemas de ExportAttribute y ExportFieldAttribute
@@ -455,7 +455,7 @@ partial class ManagedAdder : Adder {
 }
 ```
 
-Aquí, el `Adder` C# tipo  escribe el alias `Adder` del tipo de Java. El `[Register]` atributo se usa para especificar el nombre `mono.android.test.Adder` de JNI del tipo Java y la `DoNotGenerateAcw` propiedad se usa para impedir la generación de ACW. Esto producirá la generación de un ACW para el `ManagedAdder` tipo, que crea correctamente subclases del `mono.android.test.Adder` tipo. Si no `RegisterAttribute.DoNotGenerateAcw` se hubiera usado la propiedad, el proceso de compilación de Xamarin. Android habría generado un `mono.android.test.Adder` nuevo tipo de Java. Esto produciría errores de compilación, ya que `mono.android.test.Adder` el tipo se presentaría dos veces, en dos archivos independientes.
+Aquí, el `Adder` C# tipo escribe el alias `Adder` del tipo de Java. El `[Register]` atributo se usa para especificar el nombre `mono.android.test.Adder` de JNI del tipo Java y la `DoNotGenerateAcw` propiedad se usa para impedir la generación de ACW. Esto producirá la generación de un ACW para el `ManagedAdder` tipo, que crea correctamente subclases del `mono.android.test.Adder` tipo. Si no `RegisterAttribute.DoNotGenerateAcw` se hubiera usado la propiedad, el proceso de compilación de Xamarin. Android habría generado un `mono.android.test.Adder` nuevo tipo de Java. Esto produciría errores de compilación, ya que `mono.android.test.Adder` el tipo se presentaría dos veces, en dos archivos independientes.
 
 
 
