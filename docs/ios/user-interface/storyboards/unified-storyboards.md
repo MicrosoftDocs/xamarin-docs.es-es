@@ -1,306 +1,306 @@
 ---
-title: Guiones gráficos unificados en Xamarin.iOS
-description: Este documento describen los guiones gráficos unificados en Xamarin.iOS. Guiones gráficos unificados permiten a los desarrolladores admitir varios tamaños de pantalla con una definición de interfaz único.
+title: Guiones gráficos unificados en Xamarin. iOS
+description: En este documento se describen los guiones gráficos unificados de Xamarin. iOS. Los guiones gráficos unificados permiten a los desarrolladores admitir varios tamaños de pantalla con una única definición de interfaz.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: c9d98d9d3052f52dc7860ba513756e3a33d1dc58
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 02bc6fe7109f13629e776c800657846fca02641e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831924"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657130"
 ---
-# <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin.iOS
+# <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
-iOS 8 incluye un mecanismo nuevo y más fácil de usar para crear la interfaz de usuario, el guión gráfico unificado. Con un solo guión gráfico para cubrir todos los tamaños de pantalla de hardware diferente, se pueden crear vistas rápidas y con capacidad de respuesta en un "diseño-una vez, use varios" estilo.
+iOS 8 incluye un nuevo mecanismo más sencillo de usar para crear la interfaz de usuario, el guión gráfico unificado. Con un solo guión gráfico para cubrir todos los tamaños de pantalla de hardware diferentes, se pueden crear vistas rápidas y receptivas en un estilo de "diseño-una, uso-varios".
 
-Como el desarrollador ya no necesita crear un guion gráfico independiente y específico para los dispositivos iPhone y iPad, tienen la flexibilidad para diseñar aplicaciones con una interfaz común y, a continuación, personalizar esa interfaz para las clases de tamaño diferentes. De este modo, se puede adaptar una aplicación a los puntos fuertes de cada factor de forma y cada interfaz de usuario se puede optimizar para ofrecer la mejor experiencia.
+Como el desarrollador ya no necesita crear un guion gráfico independiente y específico para dispositivos iPhone e iPad, tiene la flexibilidad de diseñar aplicaciones con una interfaz común y, a continuación, personalizar esa interfaz para clases de tamaño diferentes. De esta manera, una aplicación se puede adaptar a las ventajas de cada factor de forma y cada interfaz de usuario se puede optimizar para proporcionar la mejor experiencia.
 
 <a name="size-classes" />
 
 ## <a name="size-classes"></a>Clases de tamaño
 
-Antes de iOS 8, usado por el programador `UIInterfaceOrientation` y `UIInterfaceIdiom` para diferenciar entre los modos vertical y horizontal y entre los dispositivos iPhone y iPad. En iOS8, orientación y el dispositivo se determina mediante *las clases de tamaño*.
+Antes de iOS 8, el desarrollador usaba `UIInterfaceOrientation` y `UIInterfaceIdiom` para diferenciar entre los modos vertical y horizontal, y entre los dispositivos iPhone e iPad. En iOS8, la orientación y el dispositivo se determinan mediante el uso de *clases de tamaño*.
 
-Los dispositivos se definen mediante las clases de tamaño, en los ejes horizontales y verticales, y hay dos tipos de clases de tamaño en iOS 8:
+Los dispositivos se definen mediante clases de tamaño, tanto en los ejes verticales como horizontales, y hay dos tipos de clases de tamaño en iOS 8:
 
--  **Regular** : se trata de un tamaño de pantalla de gran tamaño (por ejemplo, un iPad) o un gadget que da la impresión de un tamaño grande (como un `UIScrollView`
--  **Compact** : se trata de los dispositivos más pequeños (por ejemplo, un iPhone). Este tamaño tiene en cuenta la orientación del dispositivo.
-
-
-Si los dos conceptos se usan juntos, el resultado es una cuadrícula de 2 x 2 que define los posibles tamaños diferentes que se pueden usar en las orientaciones diferentes, tal como se muestra en el diagrama siguiente:
-
- [![](unified-storyboards-images/sizeclassgrid.png "Una cuadrícula de 2 x 2 que define los posibles tamaños diferentes que pueden usarse en las orientaciones normal y compacto")](unified-storyboards-images/sizeclassgrid.png#lightbox)
-
-El desarrollador puede crear un controlador de vista que usa cualquiera de las cuatro posibilidades que daría lugar a diseños diferentes (como se muestra en la ilustración anterior).
-
-### <a name="ipad-size-classes"></a>las clases de tamaño de iPad
-
-El iPad, debido al tamaño, tiene un **regular** tamaño para ambas orientaciones de la clase.
-
- [![](unified-storyboards-images/image1.png "las clases de tamaño de iPad")](unified-storyboards-images/image1.png#lightbox)
+-  **Normal** : se trata de un tamaño de pantalla grande (por ejemplo, un iPad) o un gadget que proporciona la impresión de un gran tamaño (por ejemplo, un`UIScrollView`
+-  **Compacto** : es para dispositivos más pequeños (por ejemplo, un iPhone). Este tamaño tiene en cuenta la orientación del dispositivo.
 
 
-### <a name="iphone-size-classes"></a>las clases de tamaño de iPhone
+Si se usan juntos los dos conceptos, el resultado es una cuadrícula de 2 x 2 que define los diferentes tamaños posibles que se pueden usar en las distintas orientaciones, como se puede ver en el diagrama siguiente:
 
-El iPhone tiene clases de tamaño diferente según la orientación del dispositivo:
+ [![](unified-storyboards-images/sizeclassgrid.png "Cuadrícula 2 x 2 que define los diferentes tamaños posibles que se pueden usar en las orientaciones normales y compactas.")](unified-storyboards-images/sizeclassgrid.png#lightbox)
 
- [![](unified-storyboards-images/iphonesizeclasses.png "las clases de tamaño de iPhone")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
+El desarrollador puede crear un controlador de vista que use cualquiera de las cuatro posibilidades que daría como resultado diseños diferentes (como se muestra en los gráficos anteriores).
 
--  Cuando el dispositivo está en modo vertical, la pantalla tiene un **compact** clase horizontalmente y **regular** verticalmente
--  Cuando el dispositivo está en modo horizontal, se invierten las clases de pantalla de modo vertical.
+### <a name="ipad-size-classes"></a>Clases de tamaño de iPad
+
+El iPad, debido al tamaño, tiene un tamaño de clase **normal** para ambas orientaciones.
+
+ [![](unified-storyboards-images/image1.png "Clases de tamaño de iPad")](unified-storyboards-images/image1.png#lightbox)
+
+
+### <a name="iphone-size-classes"></a>Clases de tamaño de iPhone
+
+El iPhone tiene clases de tamaño diferentes en función de la orientación del dispositivo:
+
+ [![](unified-storyboards-images/iphonesizeclasses.png "Clases de tamaño de iPhone")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
+
+-  Cuando el dispositivo está en modo vertical, la pantalla tiene una clase **compacta** horizontalmente y **normal** verticalmente
+-  Cuando el dispositivo está en modo horizontal, las clases de pantalla se invierten del modo vertical.
 
 ### <a name="iphone-6-plus-size-classes"></a>Clases de tamaño de iPhone 6 Plus
 
-Los tamaños son el mismo que el anterior iPhone en orientación vertical, pero es diferente en horizontal:
+Los tamaños son los mismos que los de los iPhone anteriores cuando están en orientación vertical, pero diferentes en horizontal:
 
 [![](unified-storyboards-images/iphone6sizeclasses.png "Clases de tamaño de iPhone 6 Plus")](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
 
-Dado que el iPhone 6 Plus tiene una pantalla lo suficientemente grande, es capaz de tener una clase de tamaño ancho normal en el modo horizontal.
+Dado que el iPhone 6 Plus tiene una pantalla lo suficientemente grande, puede tener una clase de tamaño de ancho normal en el modo horizontal.
 
-### <a name="support-for-a-new-screen-scale"></a>Compatibilidad con una nueva escala de la pantalla
+### <a name="support-for-a-new-screen-scale"></a>Compatibilidad con una nueva escala de pantalla
 
-El iPhone 6 Plus usa una nueva pantalla Retina HD con un factor de escala de la pantalla de 3.0 (tres veces el original iPhone resolución de pantalla). Para proporcionar la mejor experiencia posible en estos dispositivos, incluir ilustración nueva diseñada para esta escala de la pantalla. En Xcode 6 y posteriores, asset catálogos pueden incluir imágenes en 1 x, x 2 y 3 tamaños x; basta con agregar el nuevo activos de imagen y el iOS elegirá los recursos correctos cuando se ejecuta en un iPhone 6 Plus.
+El iPhone 6 Plus usa una nueva pantalla de alta retina con un factor de escala de pantalla de 3,0 (tres veces la resolución de pantalla del iPhone original). Para proporcionar la mejor experiencia posible en estos dispositivos, incluya la nueva ilustración diseñada para esta escala de pantalla. En Xcode 6 y versiones posteriores, los catálogos de recursos pueden incluir imágenes en los tamaños 1x, 2x y 3x. simplemente agregue los recursos de imagen nuevos e iOS elegirá los activos correctos cuando se ejecute en un iPhone 6 Plus.
 
-La imagen que se carga el comportamiento de iOS también reconoce un `@3x` sufijo en los archivos de imagen. Por ejemplo, si el desarrollador incluye un recurso de imagen (con distintas resoluciones) en el paquete de la aplicación con los siguientes nombres de archivo: `MonkeyIcon.png`, `MonkeyIcon@2x.png`, y `MonkeyIcon@3x.png`. En el iPhone 6 Plus la `MonkeyIcon@3x.png` imagen se usará automáticamente si el desarrollador carga una imagen mediante el código siguiente:
+El comportamiento de carga de imágenes en iOS también `@3x` reconoce un sufijo en los archivos de imagen. Por ejemplo, si el desarrollador incluye un recurso de imagen (en diferentes resoluciones) en el paquete de la aplicación con los siguientes nombres `MonkeyIcon.png`de `MonkeyIcon@2x.png`archivo: `MonkeyIcon@3x.png`, y. En el iPhone 6 más, `MonkeyIcon@3x.png` la imagen se usará automáticamente si el desarrollador carga una imagen con el código siguiente:
 
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
-O si asigna la imagen a un elemento de interfaz de usuario con iOS diseñador como `MonkeyIcon.png`, el `MonkeyIcon@3x.png` se usará, nuevo de forma automática, en el iPhone 6 Plus.
+O bien, si asignan la imagen a un elemento de la interfaz de `MonkeyIcon.png`usuario mediante `MonkeyIcon@3x.png` el diseñador de iOS como, se usará de nuevo automáticamente en el iPhone 6 Plus.
 
 <a name="dynamic-launch-screens" />
 
-### <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámica
+### <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámico
 
-El archivo de la pantalla de inicio se muestra como pantalla de presentación mientras se está iniciando una aplicación de iOS para proporcionar comentarios al usuario que la aplicación es realmente puesta en marcha. Antes de iOS 8, el desarrollador tendría que incluir varios `Default.png` activos para cada dispositivo tipo, orientación y resolución de pantalla que se estarían ejecutando la aplicación en la imagen.
+El archivo de pantalla de inicio se muestra como una pantalla de presentación mientras se inicia una aplicación de iOS para proporcionar comentarios al usuario de que la aplicación se está iniciando realmente. Antes de iOS 8, el desarrollador tendría que incluir varios `Default.png` recursos de imagen para cada tipo de dispositivo, orientación y resolución de pantalla en la que se ejecutaba la aplicación.
 
-Nuevo IOS 8, el desarrollador puede crear un único, de forma atómico `.xib` archivo en Xcode que usa el diseño automático y las clases de tamaño para crear un *dinámica de pantalla de inicio* que funcionará para cada dispositivo, la resolución y la orientación. Esto no sólo reduce la cantidad de trabajo necesaria del desarrollador para crear y mantener todos los activos de imagen necesarios, pero reduce el tamaño de lote de la aplicación instalada.
+Como novedad de iOS 8, el desarrollador puede crear un único archivo `.xib` atómico en Xcode que use las clases de diseño y tamaño automáticos para crear una *pantalla de inicio dinámico* que funcione en todos los dispositivos, resoluciones y orientaciones. Esto no solo reduce la cantidad de trabajo necesario para que el desarrollador cree y mantenga todos los recursos de imagen necesarios, pero reduce el tamaño del paquete instalado de la aplicación.
 
 ## <a name="traits"></a>Rasgos
 
-Rasgos son propiedades que pueden usarse para determinar cómo se cambia un diseño como los cambios en su entorno. Están formados por un conjunto de propiedades (el `HorizontalSizeClass` y `VerticalSizeClass` según `UIUserInterfaceSizeClass`), así como la expresión de la interfaz ( `UIUserInterfaceIdiom`) y la escala de visualización.
+Los rasgos son propiedades que se pueden usar para determinar cómo cambia un diseño a medida que cambia su entorno. Están formados por un conjunto de propiedades ( `HorizontalSizeClass` y `VerticalSizeClass` basadas en `UIUserInterfaceSizeClass`), así como la expresión de interfaz ( `UIUserInterfaceIdiom`) y la escala de presentación.
 
-Todos los estados anteriores se envuelve en un contenedor que Apple hace referencia como una colección de rasgo ( `UITraitCollection`), que contiene no solo las propiedades sino también sus valores.
+Todos los Estados anteriores se incluyen en un contenedor al que Apple hace referencia como una colección de rasgos ( `UITraitCollection`), que no solo contiene las propiedades, sino también sus valores.
 
-## <a name="trait-environment"></a>Entorno de rasgo
+## <a name="trait-environment"></a>Entorno de rasgos
 
-Rasgo entornos son una nueva interfaz en iOS 8 y pueden devolver una colección de rasgos para los objetos siguientes:
+Los entornos de rasgos son una nueva interfaz de iOS 8 y pueden devolver una colección de rasgos para los objetos siguientes:
 
--  Las pantallas ( `UIScreens` ).
+-  Pantallas ( `UIScreens` ).
 -  Windows ( `UIWindows` ).
--  Ver los controladores ( `UIViewController` ).
+-  Controladores de vista `UIViewController` ().
 -  Vistas ( `UIView` ).
--  Controlador de presentación ( `UIPresentationController` ).
+-  Controlador de presentación `UIPresentationController` ().
 
 
-El desarrollador utiliza la colección de rasgo devuelta por un entorno de rasgo para determinar cómo se debe disponer una interfaz de usuario.
+El desarrollador utiliza la colección de rasgos devuelta por un entorno de rasgos para determinar cómo se debe diseñar una interfaz de usuario.
 
-Todos los entornos de rasgo de realizar una jerarquía, tal como se muestra en el diagrama siguiente:
+Todos los entornos de rasgos hacen que una jerarquía se vea en el diagrama siguiente:
 
- [![](unified-storyboards-images/viewhierarchy.png "El diagrama de jerarquía de entornos de rasgo")](unified-storyboards-images/viewhierarchy.png#lightbox)
+ [![](unified-storyboards-images/viewhierarchy.png "Diagrama de jerarquía de entornos de rasgos")](unified-storyboards-images/viewhierarchy.png#lightbox)
 
-La colección de rasgo que tienen cada uno de los entornos de rasgo anterior fluirá de forma predeterminada, desde el elemento primario en el entorno secundario.
+La colección de rasgos que cada uno de los entornos de rasgo anteriores debe fluir, de forma predeterminada, del entorno primario al secundario.
 
-Además de obtener la colección de rasgo actual, el entorno de rasgo tiene un `TraitCollectionDidChange` método, que se puede invalidar en las subclases de la vista o controlador de vista. El programador puede utilizar este método para modificar cualquiera de los elementos de interfaz de usuario que dependen de rasgos cuando han cambiado los rasgos.
+Además de obtener la colección de rasgos actual, el entorno de rasgos tiene `TraitCollectionDidChange` un método, que se puede invalidar en las subclases del controlador de vista o vista. El desarrollador puede usar este método para modificar cualquiera de los elementos de la interfaz de usuario que dependen de rasgos cuando esos rasgos han cambiado.
 
-## <a name="typical-trait-collections"></a>Colecciones de rasgo típico
+## <a name="typical-trait-collections"></a>Colecciones de rasgos típicas
 
-Esta sección explica los tipos típicos de las colecciones de rasgo que experimentará el usuario al trabajar con iOS 8.
+En esta sección se tratarán los tipos típicos de colecciones de rasgos que el usuario experimentará al trabajar con iOS 8.
 
-El siguiente es una colección de rasgo habitual que los desarrolladores pueden ver en un iPhone:
+A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
 |Propiedad|Valor|
 |--- |--- |
-|`HorizontalSizeClass`|Compacto|
+|`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Estándar|
 |`UserInterfaceIdom`|Teléfono|
 |`DisplayScale`|2.0|
 
-El conjunto anterior representaría una colección de rasgo totalmente calificados, puesto que tiene los valores de todas sus propiedades de rasgo.
+El conjunto anterior representaría una colección de rasgos completa, ya que tiene valores para todas sus propiedades de rasgo.
 
-También es posible tener una colección de rasgo que carece de algunas de sus valores (lo que Apple denomina *Unspecified*):
+También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
 |Propiedad|Valor|
 |--- |--- |
-|`HorizontalSizeClass`|Compacto|
+|`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Sin especificar|
 |`UserInterfaceIdom`|Sin especificar|
 |`DisplayScale`|Sin especificar|
 
-Por lo general, sin embargo, cuando el programador solicite el entorno de rasgo de su colección de rasgo, devolverá una colección completa tal como se muestra en el ejemplo anterior.
+Sin embargo, por lo general, cuando el desarrollador solicita el entorno de rasgo para su colección de rasgos, devolverá una colección completa como se mostró en el ejemplo anterior.
 
-Si no es un entorno de rasgo (por ejemplo, una vista o un controlador de vista) dentro de la jerarquía de vista actual, el desarrollador podría volver sin especificar valores para una o varias de las propiedades de rasgo.
+Si un entorno de rasgos (por ejemplo, un controlador de vista o vista) no se encuentra dentro de la jerarquía de vistas actual, el desarrollador podría obtener los valores no especificados para una o varias de las propiedades de rasgo.
 
-El desarrollador también puede obtener una colección de rasgo parcialmente completo si usan uno de los métodos de creación proporcionados por Apple, como `UITraitCollection.FromHorizontalSizeClass`, para crear una nueva colección.
+El desarrollador también obtendrá una colección de rasgos parcialmente cualificada si usa uno de los métodos de creación proporcionados por Apple, `UITraitCollection.FromHorizontalSizeClass`como, para crear una nueva colección.
 
-Una operación que se puede realizar en varias colecciones de rasgo es comparándolos entre sí, lo que implica que pide una colección de rasgo si contiene otro. ¿Qué se entiende por *contención* es que, para cualquier rasgo especificado en la segunda colección, el valor debe coincidir exactamente con el valor de la primera colección.
+Una operación que se puede realizar en varias colecciones de rasgos se compara entre sí, lo que implica la pregunta de una colección de rasgos si contiene otra. Lo que significa la *contención* es que, para cualquier rasgo especificado en la segunda colección, el valor debe coincidir exactamente con el valor de la primera colección.
 
-Para probar dos rasgos utilizar el `Contains` método de la `UITraitCollection` pasando el valor del rasgo que va a probarse.
+Para probar dos rasgos, use el `Contains` método de que `UITraitCollection` pasa el valor del rasgo que se va a probar.
 
-El desarrollador puede realizar las comparaciones manualmente en el código para determinar cómo las vistas de diseño o los controladores de vista. Sin embargo, `UIKit` utiliza internamente este método para proporcionar parte de su funcionalidad, como se muestra en el Proxy de apariencia, por ejemplo.
+El desarrollador puede realizar las comparaciones manualmente en el código para determinar cómo diseñar vistas o controladores de vistas. Sin embargo `UIKit` , usa este método internamente para proporcionar parte de su funcionalidad, como en el proxy de apariencia, por ejemplo.
 
 ## <a name="appearance-proxy"></a>Proxy de apariencia
 
-El Proxy de apariencia se introdujo en versiones anteriores de iOS para permitir a los desarrolladores personalizar las propiedades de sus vistas. Se amplió en iOS 8 para admitir colecciones de rasgo.
+El proxy de apariencia se presentó en versiones anteriores de iOS para que los desarrolladores puedan personalizar las propiedades de sus vistas. Se ha ampliado en iOS 8 para admitir colecciones de rasgos.
 
-Servidores proxy de apariencia incluyen ahora un nuevo método `AppearanceForTraitCollection`, que devuelve un nuevo Proxy de la apariencia de la colección especificada de rasgo que se ha pasado. Las personalizaciones que lleva a cabo en el que el desarrollador apariencia Proxy solo tendrá efecto en las vistas que se ajustan a la colección especificada de rasgo.
+Los proxies de apariencia ahora incluyen un nuevo `AppearanceForTraitCollection`método,, que devuelve un nuevo proxy de apariencia para la colección de rasgos especificada que se ha pasado. Las personalizaciones que realice el desarrollador en ese proxy de apariencia solo surtirán efecto en las vistas que se ajusten a la colección de rasgos especificada.
 
-Normalmente pasará el desarrollador de una colección de rasgo parcialmente especificado en el `AppearanceForTraitCollection` método, como el que acaba de especificar un Horizontal tamaño clase de compactar, para que puede personalizar cualquier vista de la aplicación que sea conciso horizontalmente.
+Por lo general, el desarrollador pasará una colección de rasgos especificada parcialmente `AppearanceForTraitCollection` al método, como uno que acaba de especificar una clase de tamaño horizontal de Compact, de modo que pueda personalizar cualquier vista de la aplicación que esté compactada horizontalmente.
 
 ## <a name="uiimage"></a>UIImage
 
-Otra clase que Apple ha agregado la colección de rasgo para es `UIImage`. En el pasado, el desarrollador tenía que especificar un @1X y @2x versión de cualquier recurso de gráficos de mapa de bits que se van a incluir en la aplicación (por ejemplo, un icono).
+Otra clase a la que Apple ha agregado la colección `UIImage`de rasgos es. En el pasado, el desarrollador tenía que especificar @1X una @2x versión y de cualquier recurso de gráfico de mapa de letra que se iba a incluir en la aplicación (por ejemplo, un icono).
 
-iOS 8 se ha ampliado para permitir que el desarrollador debe incluir varias versiones de una imagen en un catálogo de imagen basados en una colección de rasgo. Por ejemplo, el desarrollador podría incluir una imagen más pequeña para trabajar con una clase de rasgo Compact y una imagen en tamaño completo para cualquier otra colección.
+iOS 8 se ha ampliado para permitir que el desarrollador incluya varias versiones de una imagen en un catálogo de imágenes basado en una colección de rasgos. Por ejemplo, el desarrollador podría incluir una imagen más pequeña para trabajar con una clase de rasgo compacto y una imagen de tamaño completo para cualquier otra colección.
 
-Cuando se utiliza una de las imágenes dentro de un `UIImageView` (clase), la vista de la imagen mostrará automáticamente la versión correcta de la imagen para su colección de rasgo. Si cambia el entorno de rasgo (por ejemplo, el usuario cambiar el dispositivo de la posición vertical a horizontal), la vista de imagen seleccionará automáticamente el nuevo tamaño de imagen que coincida con la nueva colección de rasgo y cambiar su tamaño para que coincida con la versión actual de la imagen que se va a muestra.
+Cuando una de las imágenes se usa dentro de una `UIImageView` clase, la vista de imagen muestra automáticamente la versión correcta de la imagen para su colección de rasgos. Si el entorno de rasgo cambia (por ejemplo, el usuario que cambia el dispositivo de vertical a horizontal), la vista de imagen seleccionará automáticamente el nuevo tamaño de la imagen para que coincida con la nueva colección de rasgos y cambiará su tamaño para que coincida con el de la versión actual de la imagen. indica.
 
 ## <a name="uiimageasset"></a>UIImageAsset
 
-Apple ha agregado una nueva clase a iOS 8 denominada `UIImageAsset` para dar al programador tener un mayor control sobre la selección de imagen.
+Apple ha agregado una nueva clase a iOS 8 llamada `UIImageAsset` para ofrecer al desarrollador aún más control sobre la selección de imágenes.
 
-Un recurso de imagen resume todas las versiones diferentes de una imagen y permite al desarrollador pedir una imagen específica que coincida con una colección de rasgo que se ha pasado. Las imágenes se pueden agregar o quitar de un recurso de imagen, sobre la marcha.
+Un recurso de imagen incluye todas las distintas versiones de una imagen y permite al desarrollador solicitar una imagen específica que coincida con una colección de rasgos que se ha pasado. Las imágenes se pueden agregar o quitar de un recurso de imagen, sobre la marcha.
 
-Para obtener más información sobre activos de imagen, consulte Apple [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset) documentación.
+Para obtener más información sobre los recursos de imagen, vea la documentación de [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset) de Apple.
 
-## <a name="combining-trait-collections"></a>Combinar colecciones de rasgo
+## <a name="combining-trait-collections"></a>Combinar colecciones de rasgos
 
-Otra función que un desarrollador puede realizar en las colecciones de rasgo es sumar dos que tendrá como resultado de la colección combinada, donde los valores de una colección no especificados se reemplazan por los valores especificados en un segundo. Esto se realiza mediante el `FromTraitsFromCollections` método de la `UITraitCollection` clase.
+Otra función que puede realizar un programador en las colecciones de rasgos es agregar dos juntos que darán como resultado la colección combinada, donde los valores no especificados de una colección se reemplazan por los valores especificados en un segundo. Esto se hace mediante el `FromTraitsFromCollections` método de la `UITraitCollection` clase.
 
-Como se indicó anteriormente, si cualquiera de las cualidades no está especificado en una de las colecciones de rasgo y se especifica en el otro, el valor se establecerá en la versión especificada. Sin embargo, si hay varias versiones de un determinado valor especificado, el valor de la última colección de rasgo será el valor que se usa.
+Como se indicó anteriormente, si alguno de los rasgos no está especificado en una de las colecciones de rasgos y se especifica en otro, el valor se establecerá en la versión especificada. Sin embargo, si se especifican varias versiones de un valor determinado, el valor de la última colección de rasgos será el valor que se utiliza.
 
-## <a name="adaptive-view-controllers"></a>Controladores de vista adaptable
+## <a name="adaptive-view-controllers"></a>Controladores de vistas adaptables
 
-En esta sección se tratará los detalles de cómo la vista y los controladores de vista de iOS han adoptado los conceptos de rasgos y las clases de tamaño automáticamente se adapten mejor en las aplicaciones del desarrollador.
+En esta sección se explican los detalles de cómo los controladores de vista y vista de iOS han adoptado los conceptos de rasgos y clases de tamaño para ser más adaptables de forma automática en las aplicaciones del desarrollador.
 
-### <a name="split-view-controller"></a>Controlador de vista dividida
+### <a name="split-view-controller"></a>Controlador de vista en dos paneles
 
-Una de las clases de controlador de vista que ha cambiado más en iOS 8 es la `UISplitViewController` clase. En el pasado, el desarrollador usa a menudo un controlador de vista dividida en la versión de iPad de la aplicación y, a continuación, tendría que proporcionar una versión completamente diferente de su jerarquía de vistas de la versión de iPhone de la aplicación.
+Una de las clases de controlador de vista que ha cambiado más en iOS 8 es `UISplitViewController` la clase. En el pasado, el desarrollador solía usar un controlador de vista dividida en la versión de iPad de la aplicación y, a continuación, tendría que proporcionar una versión completamente diferente de la jerarquía de vistas para la versión de iPhone de la aplicación.
 
-En iOS 8, el `UISplitViewController` clase está disponible en ambas plataformas (iPad y iPhone), que permite al desarrollador crear una jerarquía de controlador de vista que funcionará para iPhone e iPad.
+En iOS 8, la `UISplitViewController` clase está disponible en ambas plataformas (iPad y iPhone), lo que permite al desarrollador crear una jerarquía de controlador de vista que funcionará para iPhone y iPad.
 
-Cuando se encuentra un iPhone en horizontal, el controlador de vista dividida presentará su vistas side-by-side, tal como lo haría cuando se muestra en un iPad.
+Cuando un iPhone está en horizontal, el controlador de vista en dos paneles presenta sus vistas en paralelo, tal como lo haría en un iPad.
 
-### <a name="overriding-traits"></a>Invalidación de rasgos
+### <a name="overriding-traits"></a>Invalidar rasgos
 
-Entornos de rasgo descienden del contenedor primario hacia abajo hasta los contenedores secundarios, como se muestra en el gráfico siguiente muestra un controlador de vista dividida en un iPad en la orientación horizontal:
+Los entornos de rasgos se colocan en cascada desde el contenedor principal hasta los contenedores secundarios, como en el siguiente gráfico que muestra un controlador de vista en dos paneles en un iPad con la orientación horizontal:
 
- [![](unified-storyboards-images/cascadingclasses01.png "Un controlador de vista dividida en un iPad en la orientación horizontal")](unified-storyboards-images/cascadingclasses01.png#lightbox)
+ [![](unified-storyboards-images/cascadingclasses01.png "Un controlador de vista en dos paneles en un iPad con la orientación horizontal")](unified-storyboards-images/cascadingclasses01.png#lightbox)
 
-Puesto que el iPad tiene una clase de tamaño normal en las orientaciones horizontales y verticales, la vista dividida mostrará las vistas de maestro y detalles.
+Dado que el iPad tiene una clase de tamaño normal en las orientaciones horizontal y vertical, la vista en dos paneles mostrará las vistas principal y de detalle.
 
-En un iPhone, donde la clase de tamaño son compacta en ambas orientaciones, el controlador de vista Split solo muestra la vista de detalle, tal como se muestra a continuación:
+En un iPhone, donde la clase de tamaño es compacta en ambas orientaciones, el controlador de vista en dos paneles solo muestra la vista de detalle, como se muestra a continuación:
 
- [![](unified-storyboards-images/cascadingclasses02.png "El controlador de vista Split solo muestra la vista de detalle")](unified-storyboards-images/cascadingclasses02.png#lightbox)
+ [![](unified-storyboards-images/cascadingclasses02.png "El controlador de vista en dos paneles solo muestra la vista de detalle")](unified-storyboards-images/cascadingclasses02.png#lightbox)
 
-En una aplicación en la que el desarrollador desea mostrar una vista maestra y de detalles en un iPhone en la orientación horizontal, el desarrollador debe insertar un contenedor primario para el controlador de vista de división y reemplazar la colección de rasgo. Tal como se muestra en el gráfico siguiente:
+En una aplicación en la que el desarrollador desea mostrar tanto la vista maestra como la vista de detalle en un iPhone con la orientación horizontal, el desarrollador debe insertar un contenedor primario para el controlador de vista en dos paneles e invalidar la colección de rasgos. Tal como se muestra en el siguiente gráfico:
 
- [![](unified-storyboards-images/cascadingclasses03.png "El desarrollador debe insertar un contenedor primario para el controlador de vista de división y reemplazar la colección de rasgo")](unified-storyboards-images/cascadingclasses03.png#lightbox)
+ [![](unified-storyboards-images/cascadingclasses03.png "El desarrollador debe insertar un contenedor primario para el controlador de vista en dos paneles e invalidar la colección de rasgos.")](unified-storyboards-images/cascadingclasses03.png#lightbox)
 
-Un `UIView` se establece como el elemento primario del controlador de vista de división y el `SetOverrideTraitCollection` se llama al método en la vista pasando una nueva colección de rasgo y destino es el controlador de vista de división. La nueva colección de rasgo invalida la `HorizontalSizeClass`, si se establece en `Regular`, de modo que el controlador de vista de división se mostrarán las vistas de maestro y detalles en un iPhone en la orientación horizontal.
+Se establece como elemento primario del controlador de vista en dos paneles y `SetOverrideTraitCollection` se llama al método en la vista que pasa una nueva colección de rasgos y se destina al controlador de vista de división. `UIView` La nueva colección de rasgos invalida el `HorizontalSizeClass`, estableciéndolo en `Regular`, de modo que el controlador de vista en dos paneles muestre las vistas principal y de detalle en un iPhone en la orientación horizontal.
 
-Tenga en cuenta que el `VerticalSizeClass` se estableció en `unspecified`, que permite que la nueva colección de rasgo que se agregarán a la colección de rasgo en el elemento primario, lo que resulta en un `Compact VerticalSizeClass` para el elemento secundario de controlador de vista de división.
+Tenga en cuenta `VerticalSizeClass` que se ha `unspecified`establecido en, lo que permite agregar la nueva colección de rasgos a la colección de rasgos en el elemento primario `Compact VerticalSizeClass` , lo que da como resultado una para el controlador de vistas divididas secundarias.
 
 ### <a name="trait-changes"></a>Cambios de rasgo
 
-En esta sección examinará, en detalle en cómo las colecciones de rasgo de transición cuando cambie el entorno de rasgo. Por ejemplo, cuando el dispositivo se gira de vertical a horizontal.
+En esta sección se examinan, en detalle, el modo en que las colecciones de rasgos pasan cuando cambia el entorno de rasgo. Por ejemplo, cuando el dispositivo se gira de vertical a horizontal.
 
- [![](unified-storyboards-images/traittransitions01.png "La vertical a horizontal información general de los cambios de rasgo")](unified-storyboards-images/traittransitions01.png#lightbox)
+ [![](unified-storyboards-images/traittransitions01.png "Información general de los cambios de rasgos de vertical a horizontal")](unified-storyboards-images/traittransitions01.png#lightbox)
 
-En primer lugar, iOS 8 hace algún programa de instalación para prepararse para que la transición. A continuación, en el sistema se anima el estado de transición. Por último, iOS 8 limpia cualquier necesarios durante la transición de Estados temporales.
+En primer lugar, iOS 8 realiza alguna configuración para preparar la transición. A continuación, el sistema anima el estado de transición. Por último, iOS 8 limpia todos los Estados temporales necesarios durante la transición.
 
-iOS 8 proporciona varias devoluciones de llamada que el programador puede utilizar para participar en el cambio de rasgo tal como se muestra en la tabla siguiente:
+iOS 8 proporciona varias devoluciones de llamada que el desarrollador puede usar para participar en el cambio de rasgo, tal como se muestra en la tabla siguiente:
 
 |Phase|Callback|DESCRIPCIÓN|
 |--- |--- |--- |
-|Configuración|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Este método obtiene llama al principio de un cambio de rasgo antes de que se establece una colección de rasgo para su nuevo valor.</li><li>El método se llama cuando ha cambiado el valor de la colección de rasgo pero antes de cualquier animación.</li></ul>|
-|Animación|`WillTransitionToTraitCollection`|El Coordinador de transición que se pasa a este método tiene un `AnimateAlongside` propiedad que permite al desarrollador agregar animaciones que se va a ejecutar junto con las animaciones de forma predeterminada.|
-|Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyen su propio código de limpieza después de la transición.|
+|Configuración|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
+|Animación|`WillTransitionToTraitCollection`|El Coordinador de transiciones que se pasa a este método `AnimateAlongside` tiene una propiedad que permite al desarrollador agregar animaciones que se ejecutarán junto con las animaciones predeterminadas.|
+|Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyan su propio código de limpieza después de que tenga lugar la transición.|
 
-El `WillTransitionToTraitCollection` método es muy útil para animar los controladores de vista junto con los cambios de la colección de rasgo. El `WillTransitionToTraitCollection` método solo está disponible en los controladores de vista ( `UIViewController`) y no en otros entornos de rasgo como `UIViews`.
+El `WillTransitionToTraitCollection` método es ideal para animar los controladores de vista junto con los cambios de la colección de rasgos. El `WillTransitionToTraitCollection` método solo está disponible en los controladores de `UIViewController`vista () y no en otros entornos de `UIViews`rasgo, como.
 
-El `TraitCollectionDidChange` resulta ideal para trabajar con el `UIView` (clase), donde el desarrollador desea actualizar la interfaz de usuario que están cambiando los rasgos.
+Es excelente para trabajar con la `UIView` clase, donde el desarrollador desea actualizar la interfaz de usuario a medida que los rasgos cambian. `TraitCollectionDidChange`
 
-### <a name="collapsing-the-split-view-controllers"></a>Contraer los controladores de vista dividida
+### <a name="collapsing-the-split-view-controllers"></a>Contraer los controladores de vista en dos paneles
 
-Ahora vamos a echar un vistazo más de cerca a lo que sucede cuando se contrae un controlador de vista de la división de una columna de dos a una vista de una columna. Como parte de este cambio, hay dos procesos que deben producirse:
+Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en dos paneles se contrae de una columna en una vista de una columna. Como parte de este cambio, hay dos procesos que deben realizarse:
 
--  De forma predeterminada, el controlador de vista dividida usará el controlador de vista principal como la vista después de producirse la contracción. El desarrollador puede invalidar este comportamiento invalidando el `GetPrimaryViewControllerForCollapsingSplitViewController` método de la `UISplitViewControllerDelegate` y proporcionar cualquier controlador de vista que desea mostrar en el estado contraído.
--  El controlador de vista secundaria tiene que combinar en el controlador de vista principal. Por lo general el desarrollador no tendrá que realizar ninguna acción para este paso; el controlador de vista dividida incluye la administración automática de esta fase basándose en el dispositivo de hardware. Sin embargo, puede haber algunos casos especiales donde el desarrollador querrán interactuar con este cambio. Una llamada a la `CollapseSecondViewController` método de la `UISplitViewControllerDelegate` permite que el controlador de vista maestra que se mostrará cuando se produce la contracción, en lugar de la vista de detalles.
-
-
-### <a name="expanding-the-split-view-controller"></a>Expandir el controlador de vista dividida
-
-Ahora vamos a echar un vistazo más de cerca a lo que sucede cuando se expande un controlador de vista de división en estado contraído. Una vez más, hay dos fases que deben producirse:
-
--  En primer lugar, defina el nuevo controlador de vista principal. De forma predeterminada, el controlador de vista dividida utilizará automáticamente el controlador de vista principal de la vista contraída. De nuevo, el desarrollador puede invalidar este comportamiento mediante la `GetPrimaryViewControllerForExpandingSplitViewController` método de la `UISplitViewControllerDelegate` .
--  Una vez que se ha elegido el controlador de vista principal, se debe volver a crear el controlador de vista secundaria. De nuevo, el controlador de vista dividida incluye la administración automática de esta fase basándose en el dispositivo de hardware. El desarrollador puede invalidar este comportamiento mediante una llamada a la `SeparateSecondaryViewController` método de la `UISplitViewControllerDelegate` .
+-  De forma predeterminada, el controlador de vista en dos paneles usará el controlador de vista principal como vista después de que se produzca la contracción. El desarrollador puede invalidar este comportamiento invalidando `GetPrimaryViewControllerForCollapsingSplitViewController` el método `UISplitViewControllerDelegate` de y proporcionando cualquier controlador de vista que desee mostrar en el estado contraído.
+-  El controlador de vista secundario tiene que combinarse en el controlador de vista principal. Por lo general, el desarrollador no tendrá que realizar ninguna acción para este paso; el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. Sin embargo, puede haber algunos casos especiales en los que el desarrollador desee interactuar con este cambio. La llamada `CollapseSecondViewController` al método `UISplitViewControllerDelegate` de permite mostrar el controlador de vista principal cuando se produce la contracción, en lugar de la vista de detalles.
 
 
-En un controlador de vista de división, el controlador de vista principal desempeña un papel importante en la expansión y contracción de las vistas mediante la implementación de la `CollapseSecondViewController` y `SeparateSecondaryViewController` métodos de la `UISplitViewControllerDelegate`. `UINavigationController` Implemente estos métodos para insertar y extraer el controlador de vistas secundarias automáticamente.
+### <a name="expanding-the-split-view-controller"></a>Expandir el controlador de vista en dos paneles
 
-### <a name="showing-view-controllers"></a>Controladores de vista que muestra
+Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en dos paneles se expande desde un estado contraído. Una vez más, hay dos fases que deben producirse:
 
-Otro cambio que Apple haya realizado en iOS 8 está en el modo en que el desarrollador muestra los controladores de vista. En el pasado, si la aplicación tenía un controlador de vista de hoja (por ejemplo, un controlador de vista de tabla) y el desarrollador mostraron uno diferente (por ejemplo, en respuesta al pulsar en una celda de usuario), podría llegar la aplicación a través de la jerarquía de controlador para el Controlador de vista de navegación y llame a la `PushViewController` método en él para mostrar la vista nueva.
-
-Esto presenta un muy estrecho acoplamiento entre el controlador de navegación y el entorno que se estaba ejecutando en. En iOS 8, Apple ha desacoplado esto proporcionando dos nuevos métodos:
-
--  `ShowViewController` : Se adapta para mostrar el nuevo controlador de vista en función de su entorno. Por ejemplo, en un `UINavigationController` simplemente envía la nueva vista en la pila. En un controlador de vista de división, el nuevo controlador de vista se presenta en el lado izquierdo como el nuevo controlador de vista principal. Si no hay ningún controlador de vista del contenedor está presente, se mostrará la nueva vista como un controlador de vista modales.
--  `ShowDetailViewController` – Funciona de manera similar a `ShowViewController`, pero se implementa en un controlador de vista de división para reemplazar la vista de detalles con el nuevo controlador de vista que se pasa. Si el controlador de vista de la división está contraído (como puede verse en un aplicación de iPhone), la llamada se redirigirán a la `ShowViewController` método y la nueva vista se mostrará como el controlador de vista principal. Nuevamente, si no hay ningún controlador de vista del contenedor está presente, se mostrará la nueva vista como un controlador de vista modales.
+-  En primer lugar, defina el nuevo controlador de vista principal. De forma predeterminada, el controlador de vista en dos paneles usará automáticamente el controlador de vista principal de la vista contraída. De nuevo, el desarrollador puede invalidar este comportamiento `GetPrimaryViewControllerForExpandingSplitViewController` mediante el método de. `UISplitViewControllerDelegate`
+-  Una vez elegido el controlador de vista principal, se debe volver a crear el controlador de vista secundario. De nuevo, el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. El desarrollador puede invalidar este comportamiento llamando al `SeparateSecondaryViewController` método `UISplitViewControllerDelegate` de.
 
 
-Estos métodos funcionan empezando por el controlador de vista de la hoja y recorrer la jerarquía de vistas hasta que encuentran el controlador de vista de contenedor adecuado para controlar la presentación de la nueva vista.
+En un controlador de vista en dos paneles, el controlador de vista principal desempeña una parte en la expansión y la contracción de las `CollapseSecondViewController` vistas `SeparateSecondaryViewController` mediante la implementación `UISplitViewControllerDelegate`de los métodos y de. `UINavigationController`implementa estos métodos para enviar y extraer automáticamente el controlador de vista secundario.
 
-Los desarrolladores pueden implementar `ShowViewController` y `ShowDetailViewController` en sus propios controladores de vista personalizado para obtener el mismo automatizado funcionalidad que `UINavigationController` y `UISplitViewController` proporciona.
+### <a name="showing-view-controllers"></a>Mostrar controladores de vista
+
+Otro cambio que Apple ha realizado en iOS 8 es la forma en que el desarrollador muestra los controladores de vista. En el pasado, si la aplicación tuviera un controlador de vista hoja (por ejemplo, un controlador de vista de tabla) y el desarrollador mostrase un diferente (por ejemplo, en respuesta al punteo del usuario en una celda), la aplicación volvería a la jerarquía del controlador a la Controlador de vista de navegación y `PushViewController` llamar al método en él para mostrar la nueva vista.
+
+Esto presentó un acoplamiento muy estrecho entre el controlador de navegación y el entorno en el que se estaba ejecutando. En iOS 8, Apple ha desacoplado esto proporcionando dos nuevos métodos:
+
+-  `ShowViewController`: Se adapta para mostrar el nuevo controlador de vista en función de su entorno. Por ejemplo, en `UINavigationController` , simplemente se envía la nueva vista en la pila. En un controlador de vista en dos paneles, el nuevo controlador de vista se presentará en el lado izquierdo como el nuevo controlador de vista principal. Si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
+-  `ShowDetailViewController`: Funciona de manera similar a `ShowViewController`, pero se implementa en un controlador de vista en dos paneles para reemplazar la vista de detalles con el nuevo controlador de vistas que se pasa. Si el controlador de vista en dos paneles está contraído (como podría verse en una aplicación de iPhone), la llamada se redirigirá al `ShowViewController` método y la nueva vista se mostrará como el controlador de vista principal. De nuevo, si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
+
+
+Estos métodos funcionan empezando por el controlador de vista Hoja y pasando por la jerarquía de vistas hasta que encuentren el controlador de vista del contenedor adecuado para controlar la presentación de la nueva vista.
+
+Los desarrolladores pueden `ShowViewController` implementar `ShowDetailViewController` y en sus propios controladores de vista personalizados para obtener la misma funcionalidad `UINavigationController` automatizada que proporciona y `UISplitViewController` .
 
 ### <a name="how-it-works"></a>Cómo funciona
 
-En esta sección, echaremos un vistazo a cómo se implementan estos métodos en realidad en iOS 8. Primero echemos un vistazo a la nueva `GetTargetForAction` método:
+En esta sección, echaremos un vistazo a cómo se implementan realmente estos métodos en iOS 8. En primer lugar, echemos un `GetTargetForAction` vistazo al nuevo método:
 
  [![](unified-storyboards-images/gettargetforaction.png "El nuevo método GetTargetForAction")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-Este método recorre la cadena de la jerarquía hasta que se encuentra el controlador de vista del contenedor correcto. Por ejemplo:
+Este método recorre la cadena de jerarquía hasta que se encuentra el controlador de vista del contenedor correcto. Por ejemplo:
 
-1.  Si un `ShowViewController` se llama al método, el primer controlador de vista de la cadena que implementa este método es el controlador de navegación, por lo que se usa como el elemento primario de la nueva vista.
-1.  Si un `ShowDetailViewController` se llamó al método en su lugar, el controlador de vista de división es el primer controlador de vista para su implementación, por lo que se usa como el elemento primario.
+1.  Si se `ShowViewController` llama a un método, el primer controlador de vista de la cadena que implementa este método es el controlador de navegación, por lo que se usa como elemento primario de la nueva vista.
+1.  Si se `ShowDetailViewController` llama a un método en su lugar, el controlador de vista en dos paneles es el primer controlador de vista para implementarlo, por lo que se usa como elemento primario.
 
 
-El `GetTargetForAction` método funciona localizando un controlador de vista que implementa una acción determinada y, a continuación, pedir ese controlador de vista si desea recibir esa acción. Puesto que este método es público, los desarrolladores pueden crear sus propios métodos personalizados que funcionan igual que la compilación en `ShowViewController` y `ShowDetailViewController` métodos.
+El `GetTargetForAction` método funciona mediante la búsqueda de un controlador de vista que implementa una acción determinada y, a continuación, la pregunta a ese controlador de vista si desea recibir esa acción. Dado que este método es público, los desarrolladores pueden crear sus propios métodos personalizados que funcionen igual que `ShowViewController` los `ShowDetailViewController` métodos integrados y.
 
 ## <a name="adaptive-presentation"></a>Presentación adaptable
 
-En iOS 8, Apple ha realizado el elemento flotante presentaciones ( `UIPopoverPresentationController`) adaptable también. Por lo que un controlador de vista de presentación de elemento flotante presentará automáticamente la vista de un elemento flotante normal en una clase de tamaño normal, pero lo mostrará la pantalla completa en una clase de tamaño horizontalmente compact (como en un iPhone).
+En iOS 8, Apple ha realizado también la adaptación `UIPopoverPresentationController`de las presentaciones de elemento flotante (). Por lo tanto, un controlador de vista de presentación de elemento flotante presentará automáticamente una vista de elemento flotante normal en una clase de tamaño normal, pero la mostrará en una clase de tamaño compacta horizontalmente (por ejemplo, en un iPhone).
 
-Para dar cabida a los cambios en el sistema unificado de guión gráfico, se ha creado un nuevo objeto de controlador para administrar los controladores de vista presentada: `UIPresentationController`. Este controlador se crea desde el momento en que se presenta el controlador de vista hasta que se cierra. Ya que es una clase de administración, se puede considerar una superclase sobre el controlador de vista cuando responde a los cambios en los dispositivos que afectan el controlador de vista (por ejemplo, la orientación) que pasan a ser cala nuevo en el controlador de vista controla el controlador de presentación.
+Para dar cabida a los cambios en el sistema de guion gráfico unificado, se ha creado un nuevo objeto de controlador `UIPresentationController`para administrar los controladores de vista presentados:. Este controlador se crea a partir del momento en que se presenta el controlador de vista hasta que se descarta. Como es una clase de administración, se puede considerar una superclase sobre el controlador de vista a medida que responde a los cambios del dispositivo que afectan al controlador de vistas (como la orientación), que luego se devuelven al controlador de la vista que el controlador de presentación controla.
 
-Cuando el desarrollador presenta un controlador de vista mediante el `PresentViewController` método, la administración del proceso de presentación se entrega a `UIKit`. UIKit controla (entre otras cosas), el controlador correcto para el estilo que se está creando, con la única excepción es cuando un controlador de vista tiene el estilo establecido en `UIModalPresentationCustom`. En este caso, la aplicación puede proporcionar es propio PresentationController en lugar de utilizar el `UIKit` controlador.
+Cuando el desarrollador presenta un controlador de vista mediante `PresentViewController` el método, se pasa a `UIKit`la administración del proceso de presentación. UIKit controla (entre otras cosas) el controlador correcto para el estilo que se está creando, con la única excepción cuando un controlador de vista tiene el estilo `UIModalPresentationCustom`establecido en. Aquí, la aplicación puede proporcionar su propio PresentationController en lugar de usar el `UIKit` controlador.
 
-### <a name="custom-presentation-styles"></a>Estilos de presentación personalizado
+### <a name="custom-presentation-styles"></a>Estilos de presentación personalizados
 
-Con un estilo de presentación personalizados, los desarrolladores tienen la opción para usar un controlador personalizado de presentación. Este controlador personalizado puede utilizarse para modificar la apariencia y comportamiento de la vista es allied a.
+Con un estilo de presentación personalizado, los desarrolladores tienen la opción de usar un controlador de presentación personalizado. Este controlador personalizado se puede usar para modificar la apariencia y el comportamiento de la vista a la que es Allied.
 
 <a name="size-classes"/>
 
-## <a name="working-with-size-classes"></a>Trabajar con las clases de tamaño
+## <a name="working-with-size-classes"></a>Trabajar con clases de tamaño
 
-El proyecto de Xamarin fotos adaptable que se incluye con este artículo se ofrece un ejemplo práctico del uso de las clases de tamaño y los controladores de vista adaptable en una aplicación de iOS 8 interfaz unificada.
+El proyecto Adaptive photos de Xamarin que se incluye en este artículo ofrece un ejemplo práctico del uso de clases de tamaño y controladores de vistas adaptables en una aplicación de interfaz unificada de iOS 8.
 
-Mientras que la aplicación crea su interfaz de usuario completamente desde el código, en lugar de usar el Diseñador de IOS y se aplican las mismas técnicas de creación de un guión gráfico unificado. Más adelante en este artículo, mostraremos cómo usar las clases de tamaño con un guión gráfico unificado y el diseñador en una aplicación Xamarin iOS.
+Mientras que la aplicación crea su interfaz de usuario completamente a partir del código, en lugar de usar el diseñador de IOS y crear un guión gráfico unificado, se aplican las mismas técnicas. Más adelante en este artículo, le mostraremos cómo usar clases de tamaño con un guión gráfico unificado y el diseñador de iOS en una aplicación de Xamarin.
 
-Ahora Echemos un vistazo a cómo el proyecto de fotos adaptable implementa algunas de las características de clase de tamaño en iOS 8 para crear una aplicación adaptable.
+Ahora, echemos un vistazo más de cerca a cómo el proyecto Adaptive photos está implementando algunas de las características de la clase size en iOS 8 para crear una aplicación adaptable.
 
-### <a name="adapting-to-trait-environment-changes"></a>Para adaptarse a los cambios de entorno de rasgo
+### <a name="adapting-to-trait-environment-changes"></a>Adaptación a los cambios en el entorno de rasgo
 
-Cuando se ejecuta la aplicación adaptable fotos en un iPhone, cuando el usuario gira el dispositivo de vertical a horizontal, el controlador de vista dividida mostrará el maestro y detalles de vista:
+Cuando se ejecuta la aplicación Adaptive photos en un iPhone, cuando el usuario gira el dispositivo de vertical a horizontal, el controlador de vista en dos paneles muestra la vista de maestro y detalles:
 
- [![](unified-storyboards-images/rotation.png "El controlador de vista dividida mostrará a tanto el patrón y vista de detalles, tal como se muestra aquí")](unified-storyboards-images/rotation.png#lightbox)
+ [![](unified-storyboards-images/rotation.png "El controlador de vista en dos paneles mostrará la vista maestro y los detalles, tal como se muestra aquí.")](unified-storyboards-images/rotation.png#lightbox)
 
-Esto se logra reemplazando el `UpdateConstraintsForTraitCollection` el controlador de vista y el ajuste de las restricciones en función del valor de la `VerticalSizeClass`. Por ejemplo:
+Esto se logra invalidando el `UpdateConstraintsForTraitCollection` método del controlador de vista y ajustando las restricciones en función del valor `VerticalSizeClass`de. Por ejemplo:
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -356,7 +356,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>Agregar animaciones de transición
 
-Cuando el controlador de vista dividida en las fotos adaptable aplicación va de contraído a expandido, las animaciones se agregan a las animaciones de forma predeterminada invalidando el `WillTransitionToTraitCollection` método del controlador de vista. Por ejemplo:
+Cuando el controlador de vista en dos paneles de la aplicación fotos adaptables pasa de contraído a expandido, las animaciones se agregan a las `WillTransitionToTraitCollection` animaciones predeterminadas invalidando el método del controlador de vista. Por ejemplo:
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -370,11 +370,11 @@ public override void WillTransitionToTraitCollection (UITraitCollection traitCol
 }
 ```
 
-### <a name="overriding-the-trait-environment"></a>Reemplazar el entorno de rasgo
+### <a name="overriding-the-trait-environment"></a>Invalidar el entorno de rasgos
 
-Como se muestra anteriormente, la aplicación fotos adaptable fuerza el controlador de vista dividida para mostrar los detalles y las vistas de la maestra cuando el dispositivo iPhone está en la vista horizontal.
+Como se muestra arriba, la aplicación de fotos adaptables obliga al controlador de vista en dos paneles a mostrar los detalles y las vistas maestras cuando el dispositivo iPhone está en la vista horizontal.
 
-Esto se logra mediante el siguiente código en el controlador de vista:
+Esto se logra mediante el uso del código siguiente en el controlador de vista:
 
 ```csharp
 private UITraitCollection forcedTraitCollection = new UITraitCollection ();
@@ -409,9 +409,9 @@ public void UpdateForcedTraitCollection ()
 }
 ```
 
-### <a name="expanding-and-collapsing-the-split-view-controller"></a>Expandir y contraer el controlador de vista dividida
+### <a name="expanding-and-collapsing-the-split-view-controller"></a>Expandir y contraer el controlador de vista en dos paneles
 
-Siguiente vamos a examinar cómo se implementa el comportamiento de expansión y contracción del controlador de vista dividida en Xamarin. En el `AppDelegate`, cuando se crea el controlador de vista de división, se asigna a su delegado para controlar estos cambios:
+A continuación, vamos a examinar cómo se ha implementado el comportamiento de expansión y contracción del controlador de vista de división en Xamarin. `AppDelegate`En, cuando se crea el controlador de vista en dos paneles, se asigna su delegado para controlar estos cambios:
 
 ```csharp
 public class SplitViewControllerDelegate : UISplitViewControllerDelegate
@@ -460,13 +460,13 @@ public class SplitViewControllerDelegate : UISplitViewControllerDelegate
 }
 ```
 
-El `SeparateSecondaryViewController` método comprueba si una fotografía que se muestra y realiza una acción basada en dicho estado. Si no hay foto es está mostrando lo contrae el controlador de vista secundaria para que se muestre el controlador de vista maestra.
+El `SeparateSecondaryViewController` método prueba para ver si se está mostrando una foto y toma medidas en función de ese estado. Si no se muestra ninguna foto, se contrae el controlador de vista secundario para que se muestre el controlador de vista principal.
 
-El `CollapseSecondViewController` método se usa al expandir el controlador de vista de división para ver si existen cualquier fotos en la pila, si así se contrae a esa vista.
+El `CollapseSecondViewController` método se usa al expandir el controlador de vista en dos paneles para ver si hay fotografías en la pila, en caso de que se contraiga de nuevo a esa vista.
 
-### <a name="moving-between-view-controllers"></a>Mover entre controladores de vista
+### <a name="moving-between-view-controllers"></a>Moverse entre controladores de vista
 
-A continuación, echemos un vistazo a cómo la aplicación fotos adaptable se mueve entre controladores de vista. En el `AAPLConversationViewController` clase cuando el usuario selecciona una celda de la tabla, el `ShowDetailViewController` método se llama para mostrar la vista de detalles:
+A continuación, echemos un vistazo a cómo se mueve la aplicación Adaptive photos entre los controladores de vista. En la `AAPLConversationViewController` clase cuando el usuario selecciona una celda de la tabla `ShowDetailViewController` , se llama al método para mostrar la vista de detalles:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -484,7 +484,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 ### <a name="displaying-disclosure-indicators"></a>Mostrar indicadores de divulgación
 
-En la aplicación Photo adaptable existen varios lugares donde la divulgación de indicadores se ocultan o se muestra en función de los cambios en el entorno de rasgo. Esto se controla con el código siguiente:
+En la aplicación fotográfico adaptable hay varios lugares en los que los indicadores de divulgación se ocultan o se muestran en función de los cambios en el entorno de rasgo. Esto se controla con el código siguiente:
 
 ```csharp
 public bool Aapl_willShowingViewControllerPushWithSender ()
@@ -516,9 +516,9 @@ public bool Aapl_willShowingDetailViewControllerPushWithSender ()
 }
 ```
 
-Estos elementos se implementan utilizando la `GetTargetViewControllerForAction` método descrito anteriormente en detalle.
+Estos se implementan mediante `GetTargetViewControllerForAction` el método descrito en detalle anterior.
 
-Cuando un controlador de vista de tabla de datos se están mostrando, usa los métodos implementados anteriormente para ver si va a ocurrir una inserción y si se deben mostrar u ocultar el indicador de divulgación según corresponda:
+Cuando un controlador de vista de tabla muestra datos, usa los métodos implementados anteriormente para ver si se va a producir o no una inserciones y si se muestra o no el indicador de divulgación en consecuencia:
 
 ```csharp
 public override void WillDisplay (UITableView tableView, UITableViewCell cell, NSIndexPath indexPath)
@@ -535,9 +535,9 @@ public override void WillDisplay (UITableView tableView, UITableViewCell cell, N
 
 ### <a name="new-showdetailtargetdidchangenotification-type"></a>Nuevo `ShowDetailTargetDidChangeNotification` tipo
 
-Apple ha agregado un nuevo tipo de notificación para trabajar con las clases de tamaño y entornos de rasgo desde dentro de un controlador de vista dividida, `ShowDetailTargetDidChangeNotification`. Esta notificación se envía cuando cambia el destino de la vista de detalle para un controlador de vista de división, como cuando el controlador se expande o contrae.
+Apple ha agregado un nuevo tipo de notificación para trabajar con clases de tamaño y entornos de rasgos desde un controlador de `ShowDetailTargetDidChangeNotification`vista en dos paneles,. Esta notificación se envía cuando cambia la vista de detalles de destino de un controlador de vista en dos paneles, por ejemplo, cuando el controlador se expande o se contrae.
 
-La aplicación fotos adaptable utiliza esta notificación para actualizar el estado del indicador de divulgación cuando cambia el controlador de vista de detalle:
+La aplicación Adaptive photos usa esta notificación para actualizar el estado del indicador de divulgación cuando cambia el controlador de vista de detalle:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -550,125 +550,125 @@ public override void ViewDidLoad ()
 }
 ```
 
-Eche un vistazo más de cerca en la aplicación fotos adaptable para ver todas las formas en que las clases de tamaño, las colecciones de rasgo y controladores de vista adaptable pueden utilizarse para crear fácilmente una aplicación unificada en Xamarin.iOS.
+Eche un vistazo más de cerca a la aplicación Adaptive photos para ver todas las formas en que las clases de tamaño, las colecciones de rasgos y los controladores de vistas adaptables se pueden usar para crear fácilmente una aplicación unificada en Xamarin. iOS.
 
 ## <a name="unified-storyboards"></a>Guiones gráficos unificados
 
-Nuevo para iOS 8, guiones gráficos unificados permiten al desarrollador crear uno, unificado que puede mostrarse en los dispositivos iPhone y iPad estableciendo como destino varias clases de tamaño de archivo del guión gráfico. Mediante el uso de guiones gráficos unificados, el desarrollador escribe menos código específico de la interfaz de usuario y tiene solo una interfaz diseño para crear y mantener.
+Como novedad de iOS 8, los guiones gráficos unificados permiten al desarrollador crear un archivo de guion gráfico unificado que se puede mostrar en dispositivos iPhone y iPad mediante el destino de varias clases de tamaño. Mediante el uso de guiones gráficos unificados, el desarrollador escribe menos código específico de la interfaz de usuario y solo tiene un diseño de interfaz para crear y mantener.
 
-Las principales ventajas de guiones gráficos unificados son:
+Las ventajas principales de los guiones gráficos unificados son:
 
--  Use el mismo archivo de guión gráfico para iPhone e iPad.
--  Implementar con versiones anteriores a iOS 6 e iOS 7.
--  Obtener una vista previa del diseño para distintos dispositivos, orientaciones y versiones del sistema operativo desde el Diseñador de iOS de Xamarin.
+-  Use el mismo archivo de guion gráfico para iPhone y iPad.
+-  Implementación inversa en iOS 6 e iOS 7.
+-  Obtenga una vista previa del diseño de los distintos dispositivos, orientaciones y versiones del sistema operativo desde el diseñador de Xamarin iOS.
 
-Esta característica es totalmente compatible en Visual Studio para Mac
+Esta característica es totalmente compatible con Visual Studio para Mac
 
 <a name="enabling-size-classes" />
 
-### <a name="enabling-size-classes"></a>Habilitación de las clases de tamaño
+### <a name="enabling-size-classes"></a>Habilitar clases de tamaño
 
-De forma predeterminada, cualquier nuevo proyecto de Xamarin.iOS nos pedirá clases de tamaño. Para usar las clases de tamaño y las adaptable dentro de un guion gráfico en un proyecto anterior, debe convertirse primero en el formato de guión gráfico unificado de Xcode 6 desde dentro del Diseñador de iOS.
+De forma predeterminada, cualquier nuevo proyecto de Xamarin. iOS nos dará tamaño a las clases. Para usar clases de tamaño y objetos segue adaptables dentro de un guion gráfico de un proyecto anterior, primero se debe convertir al formato de guion gráfico unificado Xcode 6 desde dentro del diseñador de iOS.
 
-Hacer esto abre el guión gráfico para convertirse en el diseñador y verificación de iOS la **Use las clases de tamaño** casilla de verificación:
+Para ello, abra el guion gráfico que se va a convertir en el diseñador de iOS y active la casilla **usar clases de tamaño** :
 
- [![](unified-storyboards-images/sizeclass01.png "La casilla de verificación de las clases de tamaño de uso")](unified-storyboards-images/sizeclass01.png#lightbox)
+ [![](unified-storyboards-images/sizeclass01.png "Casilla Usar clases de tamaño")](unified-storyboards-images/sizeclass01.png#lightbox)
 
-El Diseñador de iOS se confirmará que el desarrollador desea convertir el formato del guión gráfico para usar las clases de tamaño:
+IOS Designer confirmará que el desarrollador desea convertir el formato del guion gráfico para usar las clases de tamaño:
 
- [![](unified-storyboards-images/sizeclass02.png "El uso de alerta de las clases de tamaño")](unified-storyboards-images/sizeclass02.png#lightbox)
+ [![](unified-storyboards-images/sizeclass02.png "Alerta usar clases de tamaño")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> Diseño automático también debe estar activada para que las clases de tamaño para que funcione correctamente.
+> También debe comprobarse el diseño automático para que las clases de tamaño funcionen correctamente.
 
 ### <a name="generic-device-types"></a>Tipos de dispositivos genéricos
 
-Una vez que se ha convertido el guión gráfico para usar las clases de tamaño, se volverá a en la superficie de diseño y la **ver como** dispositivo estará genérico:
+Una vez que el guion gráfico se ha convertido para usar clases de tamaño, se volverá a mostrar en el Superficie de diseño y la **vista como** dispositivo será genérica:
 
  [![](unified-storyboards-images/sizeclass03.png "Ver como un tipo de dispositivo genérico")](unified-storyboards-images/sizeclass03.png#lightbox)
 
-Cuando se selecciona el tipo de dispositivo genérico, todos los controladores de vista cambiará de tamaño a un cuadrado de 600 x 600. Este cuadrado representa los tamaños de cualquier ancho y alto de cualquier. Cuando iOS Designer es en este modo, las modificaciones que se aplicarán a todas las clases de tamaño.
+Cuando se selecciona el tipo de dispositivo genérico, se cambia el tamaño de todos los controladores de vista a un cuadrado de 600 x 600. Este cuadrado representa los tamaños de cualquier ancho y cualquier alto. Cuando el diseñador de iOS está en este modo, cualquier edición se aplicará a todas las clases de tamaño.
 
-El desarrollador también tiene la opción de visualización de la superficie de diseño como un iPhone:
+El desarrollador también tiene la opción de ver la superficie de diseño como un iPhone:
 
  [![](unified-storyboards-images/sizeclass04.png "Visualización de la superficie de diseño como un iPhone")](unified-storyboards-images/sizeclass04.png#lightbox)
 
-O verlo como un iPad:
+O verlo como iPad:
 
- [![](unified-storyboards-images/sizeclass05.png "Visualización de la superficie de diseño como un iPad")](unified-storyboards-images/sizeclass05.png#lightbox)
+ [![](unified-storyboards-images/sizeclass05.png "Ver la superficie de diseño como iPad")](unified-storyboards-images/sizeclass05.png#lightbox)
 
-### <a name="select-a-size-class"></a>Seleccione una clase de tamaño
+### <a name="select-a-size-class"></a>Seleccionar una clase de tamaño
 
-El botón Selector de clase de tamaño está en la esquina superior izquierda de la superficie de diseño (cerca de la lista desplegable Vista como). Permite al desarrollador seleccionar qué clases de tamaño se está editando:
+El botón selector de clase de tamaño está en la esquina superior izquierda del Superficie de diseño (cerca de la vista como lista desplegable). Permite al desarrollador seleccionar las clases de tamaño que se están editando actualmente:
 
- [![](unified-storyboards-images/sizeclass06.png "Seleccione una clase de tamaño")](unified-storyboards-images/sizeclass06.png#lightbox)
+ [![](unified-storyboards-images/sizeclass06.png "Seleccionar una clase de tamaño")](unified-storyboards-images/sizeclass06.png#lightbox)
 
-El selector presenta la selección de la clase de tamaño como una cuadrícula de 3 x 3. Cada uno de los cuadrados en la cuadrícula representa una combinación de una clase de ancho y un alto. El cuadrado central selecciona la clase de cualquier tamaño de alto Width/Any (que es la vista predeterminada de un guión gráfico unificado). Cuando se selecciona este cuadrado, el desarrollador está editando el diseño predeterminado, que es heredado por todas las configuraciones.
+El selector presenta la selección de clase de tamaño como una cuadrícula de 3 x 3. Cada uno de los cuadrados de la cuadrícula representa una combinación de una clase width y una clase height. El cuadrado central selecciona la clase cualquier ancho/cualquier tamaño de alto (que es la vista predeterminada de un guión gráfico unificado). Cuando se selecciona este cuadrado, el desarrollador está editando el diseño predeterminado, que es heredado por todas las demás configuraciones.
 
-El cuadrado de la esquina superior izquierda de la cuadrícula representa la clase de tamaño de Compact compacto de ancho/alto:
+El cuadrado situado en la esquina superior izquierda de la cuadrícula representa la clase de tamaño compacto/ancho compacto:
 
- [![](unified-storyboards-images/sizeclass07.png "La clase de tamaño de alto ancho Compact/compacto")](unified-storyboards-images/sizeclass07.png#lightbox)
+ [![](unified-storyboards-images/sizeclass07.png "La clase ancho compacto/tamaño de la altura compacta")](unified-storyboards-images/sizeclass07.png#lightbox)
 
-Este modo se corresponde con un iPhone en la orientación horizontal. El cuadrado de la esquina inferior derecha de la cuadrícula representa la clase de tamaño de alto ancho/normal normal, que representa un iPad:
+Este modo corresponde a un iPhone en la orientación horizontal. El cuadrado situado en la esquina inferior derecha de la cuadrícula representa la clase de tamaño normal de ancho y alto normal, que representa un iPad:
 
- [![](unified-storyboards-images/sizeclass08.png "La clase de tamaño de alto ancho normal o normal")](unified-storyboards-images/sizeclass08.png#lightbox)
+ [![](unified-storyboards-images/sizeclass08.png "La clase de tamaño normal de ancho y alto normal")](unified-storyboards-images/sizeclass08.png#lightbox)
 
-Para editar el diseño de un iPhone en la orientación vertical, seleccione el cuadrado en la esquina inferior izquierda. Representa la clase de tamaño de alto ancho/normal Compact:
+Para editar el diseño de un iPhone en orientación vertical, seleccione el cuadrado en la esquina inferior izquierda. Representa la clase de tamaño de ancho compacto/alto normal:
 
- [![](unified-storyboards-images/sizeclass09.png "La clase de tamaño de alto ancho Compact/normal")](unified-storyboards-images/sizeclass09.png#lightbox)
+ [![](unified-storyboards-images/sizeclass09.png "La clase ancho compacto/tamaño de alto normal")](unified-storyboards-images/sizeclass09.png#lightbox)
 
-Haga clic en el cuadrado para seleccionarlo y, a la superficie de diseño cambiará el tamaño de los controladores de vista para que coincida con la nueva selección:
+Haga clic en el cuadrado para seleccionarlo y el Superficie de diseño cambiará el tamaño de los controladores de vista para que coincidan con la nueva selección:
 
- [![](unified-storyboards-images/sizeclass10.png "Cambia el tamaño de los controladores de vista para que coincida con la nueva selección, como se muestra la superficie de diseño")](unified-storyboards-images/sizeclass10.png#lightbox)
+ [![](unified-storyboards-images/sizeclass10.png "El Superficie de diseño cambiará el tamaño de los controladores de vista para que coincidan con la nueva selección, como se muestra")](unified-storyboards-images/sizeclass10.png#lightbox)
 
-Vea la sección de clase de tamaño de este artículo para obtener más información sobre las clases de tamaño y cómo afectan al diseño para iPhone e iPad.
+Vea la sección sobre la clase de tamaño de este artículo para obtener más información sobre las clases de tamaño y cómo afectan al diseño de iPhone y iPad.
 
-### <a name="adaptive-segue-types"></a>Tipos de Segue adaptable
+### <a name="adaptive-segue-types"></a>Tipos de segue adaptables
 
-Si ha usado por el programador guiones gráficos antes, ya estarán familiarizados con los tipos existentes de segue de **Push**, **Modal** y **elemento flotante**. Cuando se habilitan las clases de tamaño en un archivo de guión gráfico unificado, adaptable Segue de los siguientes (que corresponden a la nueva API de controlador de vista se ha explicado anteriormente) se ponen a disposición: **Mostrar** y **mostrar detalles**.
+Si el desarrollador ha usado guiones gráficos antes, estará familiarizado con los tipos de segue existentes delas inserciones, **modales** y **elemento flotante**. Cuando las clases de tamaño están habilitadas en un archivo de guion gráfico unificado, los siguientes tipos de segue adaptables (que corresponden a la nueva API de controlador de vista descritos anteriormente) están disponibles: **Mostrar** y **Mostrar detalles**.
 
 > [!IMPORTANT]
-> Cuando se habilitan las clases de tamaño, cualquier existente, los objetos Segue will convertirse a los nuevos tipos.
+> Cuando se habilitan las clases de tamaño, cualquier objetos segue existente se convertirá en los nuevos tipos.
 
-Tome como ejemplo un iOS 8 aplicación que usa un guión gráfico unificado en un controlador de vista de división que tiene un menú de navegación de juego sencillo en la vista principal. Si el usuario hace clic en un botón de menú, el controlador de vista del elemento seleccionado debe mostrarse en la sección de detalles del controlador de vista de división cuando se ejecuta en un iPad. En un iPhone, controlador de vista del elemento debe insertarse en la pila de navegación.
+Tome el ejemplo de una aplicación de iOS 8 que usa un guion gráfico unificado con un controlador de vista en dos paneles que tiene un menú de navegación de juegos simple en la vista maestra. Si el usuario hace clic en un botón de menú, el controlador de vista del elemento seleccionado debe mostrarse en la sección de detalles del controlador de vista en dos paneles cuando se ejecuta en un iPad. En un iPhone, el controlador de vista del elemento se debe insertar en la pila de navegación.
 
-Para lograr este efecto, en el Diseñador de iOS control y haga clic en el botón y arrastre una línea para el controlador de vista que se mostrará. Cuando se suelta el botón del mouse, seleccione `Show Detail` en el menú emergente de tipo de Segue:
+Para lograr este efecto, en el control del diseñador de iOS, haga clic en el botón y arrastre una línea hasta el controlador de vista que se va a mostrar. Cuando se suelte el botón del mouse, `Show Detail` seleccione en el menú emergente tipo de segue:
 
- [![](unified-storyboards-images/segue01.png "Seleccione Mostrar detalle en el menú emergente de tipo de Segue")](unified-storyboards-images/segue01.png#lightbox)
+ [![](unified-storyboards-images/segue01.png "Seleccione Mostrar detalles en el menú emergente tipo de segue")](unified-storyboards-images/segue01.png#lightbox)
 
-Se creará el segue nuevo entre el botón y el controlador de vista. Ahora ejecute la aplicación en el simulador de iPhone y se mostrará el menú principal:
+Se creará el nuevo segue entre el botón y el controlador de vista. Ahora ejecute la aplicación en el simulador de iPhone y se mostrará el menú principal:
 
- [![](unified-storyboards-images/segue02.png "El menú principal")](unified-storyboards-images/segue02.png#lightbox)
+ [![](unified-storyboards-images/segue02.png "Menú principal")](unified-storyboards-images/segue02.png#lightbox)
 
-Haga clic en el **seleccione juego** botón y el controlador de vista del elemento se insertará en la pila de navegación:
+Haga clic en el botón **seleccionar juego** y el controlador de vista del elemento se insertará en la pila de navegación:
 
- [![](unified-storyboards-images/segue03.png "El controlador de vista de elementos se insertarán en la pila de navegación como se muestra")](unified-storyboards-images/segue03.png#lightbox)
+ [![](unified-storyboards-images/segue03.png "El controlador de vista de elementos se insertará en la pila de navegación como se muestra")](unified-storyboards-images/segue03.png#lightbox)
 
-Detener el simulador de iPhone y ejecutar la aplicación en el simulador de iPad. Cambiar a la orientación horizontal y principal se muestra de nuevo menú:
+Detenga el simulador de iPhone y ejecute la aplicación en el simulador de iPad. Cambiar a la orientación horizontal y volver a mostrar el menú principal:
 
- [![](unified-storyboards-images/segue04.png "El menú principal de muestra")](unified-storyboards-images/segue04.png#lightbox)
+ [![](unified-storyboards-images/segue04.png "El menú principal que se muestra")](unified-storyboards-images/segue04.png#lightbox)
 
-De nuevo, haga clic en el **seleccione juego** botón y el controlador de vista del elemento que se muestra en la sección de detalles del controlador de vista de división:
+De nuevo, haga clic en el botón **seleccionar juego** y el controlador de vista del elemento se muestra en la sección de detalles del controlador de vista en dos paneles:
 
- [![](unified-storyboards-images/segue05.png "El controlador de vista se muestra en la sección de detalles del controlador de vista de división de elementos")](unified-storyboards-images/segue05.png#lightbox)
+ [![](unified-storyboards-images/segue05.png "El controlador de vista de elementos mostrado en la sección de detalles del controlador de vista en dos paneles")](unified-storyboards-images/segue05.png#lightbox)
 
-### <a name="excluding-an-element-from-a-size-class"></a>Excluir un elemento de una clase de tamaño
+### <a name="excluding-an-element-from-a-size-class"></a>Exclusión de un elemento de una clase de tamaño
 
-Hay veces cuando un elemento determinado (por ejemplo, una vista, Control o una restricción) no se necesita dentro de una clase de tamaño específico. Para excluir un elemento de una clase de tamaño, seleccione el elemento que desee excluir de la **superficie de diseño**. Desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el **engranaje** menú desplegable. Seleccione la combinación de **ancho** y **alto** para excluir el elemento de:
+Hay ocasiones en las que un elemento determinado (como una vista, un control o una restricción) no es necesario dentro de una clase de tamaño específica. Para excluir un elemento de una clase de tamaño, seleccione el elemento que desee excluir en el **superficie de diseño**. Desplácese hasta la parte inferior del **Explorador de propiedades** y haga clic en el menú desplegable **engranaje** . Seleccione la combinación de **ancho** y **alto** del que se va a excluir el elemento:
 
-[![](unified-storyboards-images/exclude-a.png "Seleccione la combinación del ancho y alto")](unified-storyboards-images/exclude-a.png#lightbox)
+[![](unified-storyboards-images/exclude-a.png "Seleccionar la combinación de ancho y alto")](unified-storyboards-images/exclude-a.png#lightbox)
 
-Un nuevo *caso de exclusión* se agregará al elemento en la parte inferior de la **Property Explorer**. A continuación, desactive la **instalado** casilla de verificación de la clase de tamaño indicada:
+Se agregará un nuevo *caso de exclusión* al elemento en la parte inferior del **Explorador de propiedades**. A continuación, desactive la casilla **instalado** de la clase de tamaño dado:
 
-[![](unified-storyboards-images/exclude-b.png "Desactive la casilla de verificación instalado")](unified-storyboards-images/exclude-b.png#lightbox)
+[![](unified-storyboards-images/exclude-b.png "Desactive la casilla instalado")](unified-storyboards-images/exclude-b.png#lightbox)
 
-Al ancho y alto que el elemento se ha excluido de la superficie de diseño, se ha quitado de la clase de tamaño determinado, pero no con todo el diseño de interfaz de usuario:
+Cambie el Superficie de diseño al ancho y el alto del que se excluyó el elemento, ya que se ha quitado de la clase de tamaño especificada, pero no del diseño de la interfaz de usuario completo:
 
- [![](unified-storyboards-images/exclude02.png "Modificador para el ancho y alto que el elemento se ha excluido de la superficie de diseño")](unified-storyboards-images/exclude02.png#lightbox)
+ [![](unified-storyboards-images/exclude02.png "Cambiar el Superficie de diseño al ancho y el alto del que se excluyó el elemento")](unified-storyboards-images/exclude02.png#lightbox)
 
-Regreso a la clase de tamaño Any alto Width/Any y el elemento aún está en su lugar:
+Volver a la clase any width/any height size y el elemento sigue en su lugar:
 
- [![](unified-storyboards-images/exclude03.png "Regreso a la clase de tamaño Any alto Width/Any")](unified-storyboards-images/exclude03.png#lightbox)
+ [![](unified-storyboards-images/exclude03.png "Volver a la clase any width/any height size")](unified-storyboards-images/exclude03.png#lightbox)
 
 Cuando la aplicación se ejecuta en el simulador de iPad, aparece el elemento:
 
@@ -676,100 +676,99 @@ Cuando la aplicación se ejecuta en el simulador de iPad, aparece el elemento:
 
 Y cuando la aplicación se ejecuta en el simulador de iPhone, falta el elemento:
 
- [![](unified-storyboards-images/exclude05.png "El elemento que falta cuando la aplicación en ejecución en el simulador de iPhone")](unified-storyboards-images/exclude05.png#lightbox)
+ [![](unified-storyboards-images/exclude05.png "Falta el elemento cuando la aplicación en ejecución en el simulador de iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Para quitar un caso de exclusión de un elemento, basta con seleccionar el elemento en el **superficie de diseño**, desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el **-** situado al lado de los casos para quitar.
+Para quitar un caso de exclusión de un elemento, simplemente seleccione el elemento en el **superficie de diseño**, desplácese hasta la parte inferior del **Explorador de propiedades** y haga clic en el **-** botón situado junto al caso que se va a quitar.
 
-Para ver una implementación de guiones gráficos unificados, examine el `UnifiedStoryboard` Xamarin iOS 8 aplicación asociado a este documento de ejemplo.
+Para ver una implementación de guiones gráficos unificados, consulte `UnifiedStoryboard` la aplicación de Xamarin iOS 8 de ejemplo asociada a este documento.
 
-## <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámica
+## <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámico
 
-El archivo de la pantalla de inicio se muestra como pantalla de presentación mientras se está iniciando una aplicación de iOS para proporcionar comentarios al usuario que la aplicación es realmente puesta en marcha. Antes de iOS 8, el desarrollador tendría que incluir varios `Default.png` activos para cada dispositivo tipo, orientación y resolución de pantalla que se estarían ejecutando la aplicación en la imagen. Por ejemplo, `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`, etcetera.
+El archivo de pantalla de inicio se muestra como una pantalla de presentación mientras se inicia una aplicación de iOS para proporcionar comentarios al usuario de que la aplicación se está iniciando realmente. Antes de iOS 8, el desarrollador tendría que incluir varios `Default.png` recursos de imagen para cada tipo de dispositivo, orientación y resolución de pantalla en la que se ejecutaba la aplicación. Por ejemplo, `Default@2x.png` `Default-Landscape@2x~ipad.png`,,,etc `Default-Portrait@2x~ipad.png`.
 
-Debe tener en cuenta el nuevo iPhone 6 e iPhone 6 Plus dispositivos (y los próximos Apple Watch) con todos los dispositivos iPad y iPhone existente, esto representa una matriz grande de tamaños diferentes, orientaciones y resoluciones de `Default.png` activos de imagen de pantalla de inicio deben crear y mantener. Además, estos archivos pueden ser bastante grandes y se "Inflar" el lote de aplicación de entrega, aumentar la cantidad de tiempo necesario para descargar la aplicación de iTunes Store App (posiblemente manteniéndola puedan entregar a través de una red de telefonía móvil) y aumentar la cantidad de almacenamiento necesario en el dispositivo del usuario final.
+La factorización en los nuevos dispositivos iPhone 6 y iPhone 6 más (y en el próximo Apple Watch) con todos los dispositivos iPhone y iPad existentes, representa una gran variedad de tamaños variables, orientaciones y resoluciones `Default.png` de los recursos de imagen de la pantalla de inicio que deben crear y mantener. Además, estos archivos pueden ser bastante grandes y se "inflarán" el paquete de aplicaciones de entrega, lo que aumenta la cantidad de tiempo necesario para descargar la aplicación desde iTunes App Store (posiblemente para que se pueda entregar a través de una red de telefonía móvil) y el aumento de la cantidad de almacenamiento necesario en el dispositivo del usuario final.
 
-Nuevo IOS 8, el desarrollador puede crear un único, de forma atómico `.xib` archivo en Xcode que usa el diseño automático y las clases de tamaño para crear un *dinámica de pantalla de inicio* que funcionará para cada dispositivo, la resolución y la orientación. Esto no sólo reduce la cantidad de trabajo necesaria del desarrollador para crear y mantener todos los activos de imagen necesarios, pero reduce en gran medida el tamaño de lote de la aplicación instalada.
+Como novedad de iOS 8, el desarrollador puede crear un único archivo `.xib` atómico en Xcode que use las clases de diseño y tamaño automáticos para crear una *pantalla de inicio dinámico* que funcione en todos los dispositivos, resoluciones y orientaciones. Esto no solo reduce la cantidad de trabajo necesario para que el desarrollador cree y mantenga todos los recursos de imagen necesarios, pero reduce en gran medida el tamaño del paquete instalado de la aplicación.
 
 
-Pantallas de inicio dinámica tiene las siguientes limitaciones y consideraciones:
+Las pantallas de inicio dinámico tienen las siguientes limitaciones y consideraciones:
 
 - Use solo `UIKit` clases.
-- Utilizar una vista de raíz única que es un `UIView` o `UIViewController` objeto.
-- No realice ninguna conexión a código de la aplicación (no agregue **acciones** o **salidas**).
+- Use una vista raíz única que sea un `UIView` objeto `UIViewController` o.
+- No realice ninguna conexión con el código de la aplicación (no agregue **acciones** ni **salidas**).
 - No agregue `UIWebView` objetos.
-- No use las clases personalizadas.
-- No utilice los atributos en tiempo de ejecución.
+- No utilice ninguna clase personalizada.
+- No utilice atributos en tiempo de ejecución.
 
-Con las instrucciones anteriores en mente, echemos un vistazo a la adición de una pantalla de inicio de dinámica a un proyecto de iOS 8 Xamarin existente.
+Teniendo en cuenta las instrucciones anteriores, echemos un vistazo a la adición de una pantalla de inicio dinámico a un proyecto existente de Xamarin iOS 8.
 
 Haga lo siguiente:
 
-1. Abra **Visual Studio para Mac** y cargar el **solución** para agregar a la pantalla de inicio dinámica.
-2. En el **el Explorador de soluciones**, haga clic en el `MainStoryboard.storyboard` de archivo y seleccione **abrir con** > **Interface Builder de Xcode**:
+1. Abra **Visual Studio para Mac** y cargue la **solución** para agregar la pantalla de inicio dinámico a.
+2. En el **Explorador de soluciones**, haga clic con el `MainStoryboard.storyboard` botón derecho en el archivo y seleccione **abrir con** > **Xcode Interface Builder**:
 
-    [![](unified-storyboards-images/dls01.png "Abrir con Interface Builder de Xcode")](unified-storyboards-images/dls01.png#lightbox)
-3. En Xcode, seleccione **archivo** > **New** > **archivo...** :
+    [![](unified-storyboards-images/dls01.png "Abrir con Xcode Interface Builder")](unified-storyboards-images/dls01.png#lightbox)
+3. En Xcode, seleccione **archivo** > **nuevo** > **archivo...** :
 
-    [![](unified-storyboards-images/dls02.png "Seleccione el archivo / nuevo")](unified-storyboards-images/dls02.png#lightbox)
-4. Seleccione **iOS** > **interfaz de usuario** > **pantalla de inicio** y haga clic en el **siguiente** botón:
+    [![](unified-storyboards-images/dls02.png "Seleccione Archivo/nuevo")](unified-storyboards-images/dls02.png#lightbox)
+4. Seleccione la**pantalla de inicio** de la**interfaz** > de usuario de **iOS** > y haga clic en el botón **siguiente** :
 
-    [![](unified-storyboards-images/dls03.png "Seleccione iOS / interfaz de usuario / pantalla de inicio")](unified-storyboards-images/dls03.png#lightbox)
-5. Nombre del archivo `LaunchScreen.xib` y haga clic en el **crear** botón:
+    [![](unified-storyboards-images/dls03.png "Seleccione iOS/interfaz de usuario/pantalla de inicio")](unified-storyboards-images/dls03.png#lightbox)
+5. Asigne un nombre `LaunchScreen.xib` al archivo y haga clic en el botón **crear** :
 
-    [![](unified-storyboards-images/dls04.png "Nombre del archivo LaunchScreen.xib")](unified-storyboards-images/dls04.png#lightbox)
-6. Editar el diseño de la pantalla de inicio agregando elementos gráficos y usando las restricciones de diseño para colocarlos de dispositivos determinados, orientaciones y tamaños de pantalla:
+    [![](unified-storyboards-images/dls04.png "Asigne al archivo el nombre LaunchScreen. Xib")](unified-storyboards-images/dls04.png#lightbox)
+6. Edite el diseño de la pantalla de inicio mediante la adición de elementos gráficos y el uso de restricciones de diseño para colocarlos en los dispositivos, las orientaciones y los tamaños de pantalla especificados:
 
-    [![](unified-storyboards-images/dls05.png "Editar el diseño de la pantalla de inicio")](unified-storyboards-images/dls05.png#lightbox)
+    [![](unified-storyboards-images/dls05.png "Edición del diseño de la pantalla de inicio")](unified-storyboards-images/dls05.png#lightbox)
 7. Guarde los cambios en `LaunchScreen.xib`.
-8. Seleccione el **aplicaciones de destino** y **General** pestaña:
+8. Seleccione el **destino de las aplicaciones** y la pestaña **General** :
 
-    [![](unified-storyboards-images/dls06.png "Seleccione el destino de las aplicaciones y en la ficha General")](unified-storyboards-images/dls06.png#lightbox)
-9. Haga clic en el **elija Info.plist** botón, seleccione el `Info.plist` para la aplicación de Xamarin y haga clic en el **elegir** botón:
+    [![](unified-storyboards-images/dls06.png "Seleccione el destino de las aplicaciones y la pestaña General")](unified-storyboards-images/dls06.png#lightbox)
+9. Haga clic en el botón **elegir info. plist** , seleccione `Info.plist` para la aplicación Xamarin y haga clic en el botón **elegir** :
 
-    [![](unified-storyboards-images/dls07.png "Seleccione el archivo Info.plist de la aplicación de Xamarin")](unified-storyboards-images/dls07.png#lightbox)
-10. En el **iconos de aplicación e imágenes de inicio** sección, abra el **archivo de la pantalla de inicio** lista desplegable y elija el `LaunchScreen.xib` creado anteriormente:
+    [![](unified-storyboards-images/dls07.png "Seleccione el archivo info. plist de la aplicación Xamarin.")](unified-storyboards-images/dls07.png#lightbox)
+10. En la sección iconos de la **aplicación e imágenes de inicio** , abra el menú desplegable de `LaunchScreen.xib` archivo de pantalla de **Inicio** y elija el creado anteriormente:
 
-    [![](unified-storyboards-images/dls08.png "Elija la LaunchScreen.xib")](unified-storyboards-images/dls08.png#lightbox)
+    [![](unified-storyboards-images/dls08.png "Elija el LaunchScreen. Xib")](unified-storyboards-images/dls08.png#lightbox)
 11. Guarde los cambios en el archivo y vuelva a Visual Studio para Mac.
-12. Espere a que Visual Studio para Mac finalizar la sincronización de los cambios con Xcode.
-13. En el **el Explorador de soluciones**, haga doble clic en el **recursos** carpeta y seleccione **agregar** > **agregar archivos...** :
+12. Espere a que Visual Studio para Mac termine de sincronizar los cambios con Xcode.
+13. En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta de **recursos** y seleccione **Agregar** > **Agregar archivos..** .:
 
-    [![](unified-storyboards-images/dls09.png "Seleccione agrega / agrega archivos...")](unified-storyboards-images/dls09.png#lightbox)
-14. Seleccione el `LaunchScreen.xib` archivo creado anteriormente y haga clic en el **abierto** botón:
+    [![](unified-storyboards-images/dls09.png "Seleccione Agregar o agregar archivos...")](unified-storyboards-images/dls09.png#lightbox)
+14. Seleccione el `LaunchScreen.xib` archivo creado anteriormente y haga clic en el botón **abrir** :
 
-    [![](unified-storyboards-images/dls10.png "Seleccione el archivo LaunchScreen.xib")](unified-storyboards-images/dls10.png#lightbox)
+    [![](unified-storyboards-images/dls10.png "Seleccione el archivo LaunchScreen. Xib")](unified-storyboards-images/dls10.png#lightbox)
 15. Compile la aplicación.
 
-### <a name="testing-the-dynamic-launch-screen"></a>Las pruebas de la pantalla de inicio dinámica
+### <a name="testing-the-dynamic-launch-screen"></a>Prueba de la pantalla de inicio dinámico
 
-En Visual Studio para Mac, seleccione el simulador de iPhone 4 Retina y ejecute la aplicación. En el formato correcto y la orientación se mostrará la pantalla de inicio dinámica:
+En Visual Studio para Mac, seleccione el simulador de retina de iPhone 4 y ejecute la aplicación. La pantalla de inicio dinámico se mostrará en el formato y la orientación correctos:
 
 [![](unified-storyboards-images/dls11.png "La pantalla de inicio dinámico que se muestra en la orientación vertical")](unified-storyboards-images/dls11.png#lightbox)
 
-Detener la aplicación en Visual Studio para Mac y seleccione un dispositivo de iPad iOS 8. Ejecute la aplicación y se dará formato correctamente la pantalla de inicio para este dispositivo y la orientación:
+Detenga la aplicación en Visual Studio para Mac y seleccione un dispositivo iPad iOS 8. Ejecute la aplicación y la pantalla de inicio tendrá el formato correcto para el dispositivo y la orientación:
 
 [![](unified-storyboards-images/dls12.png "La pantalla de inicio dinámico que se muestra en la orientación horizontal")](unified-storyboards-images/dls12.png#lightbox)
 
-Vuelva a Visual Studio para Mac y detener la aplicación se ejecute.
+Vuelva a Visual Studio para Mac y detenga la ejecución de la aplicación.
 
 ### <a name="working-with-ios-7"></a>Trabajar con iOS 7
 
-Para mantener la compatibilidad con iOS 7, incluir solamente el habitual `Default.png` activos como normal en la aplicación de iOS 8 de imagen. iOS devolverá al comportamiento anterior y usar dichos archivos como la pantalla de inicio cuando se ejecuta en un dispositivo iOS 7.
+Para mantener la compatibilidad con versiones anteriores de iOS 7, solo `Default.png` tiene que incluir los recursos de imagen habituales de la forma habitual en la aplicación iOS 8. iOS volverá al comportamiento anterior y usará esos archivos como pantalla de inicio cuando se ejecute en un dispositivo iOS 7.
 
-Para ver una implementación de una pantalla de inicio dinámica de Xamarin, examine el [pantallas de inicio dinámica](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/) aplicación iOS 8 asociado a este documento de ejemplo.
+Para ver una implementación de una pantalla de inicio dinámico en Xamarin, consulte la aplicación de ejemplo de [pantallas de inicio dinámicos](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) de iOS 8 adjuntada a este documento.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo había echado un vistazo rápido a las clases de tamaño y cómo afectan al diseño en dispositivos iPhone y iPad. Explica cómo funcionan los rasgos, entornos de rasgo y colecciones de rasgo con las clases de tamaño para crear Interfaces de unificada. Se tardaron breve vistazo a los controladores de vista adaptable y cómo funcionan con las clases de tamaño dentro de las Interfaces unificada. Parecía a la implementación de las clases de tamaño y unificada Interfaces completamente desde C# código dentro de una aplicación Xamarin iOS 8.
+En este artículo se ha examinado rápidamente las clases de tamaño y cómo afectan al diseño en dispositivos iPhone y iPad. Se ha explicado cómo funcionan los rasgos, los entornos de rasgos y las colecciones de rasgos con clases de tamaño para crear interfaces unificadas. Ha tenido un breve vistazo a los controladores de vistas adaptables y cómo funcionan con clases de tamaño dentro de interfaces unificadas. En ella, se examinó la implementación de clases de tamaño C# y de interfaces unificadas por completo desde el código dentro de una aplicación Xamarin iOS 8.
 
-Por último, en este artículo trata los aspectos básicos de creación de guiones gráficos unificados con el diseñador que funcionará en dispositivos iOS de Xamarin iOS y crear una única pantalla de inicio dinámico que se mostrará como pantalla de inicio en todos los dispositivos iOS 8.
+Por último, en este artículo se han tratado los conceptos básicos de la creación de guiones gráficos unificados con Xamarin iOS Designer que funcionará en dispositivos iOS y creará una única pantalla de inicio dinámico que se mostrará como pantalla de inicio en cada dispositivo iOS 8.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Fotos adaptables (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios8/AdaptivePhotos/)
-- [Ejemplo de StoryboardIntro](https://developer.xamarin.com/samples/monotouch/StoryboardIntro/)
-- [Pantallas de inicio dinámico (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
+- [Fotos adaptables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
+- [Pantallas de inicio dinámico (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)
-- [Diseños dinámicos en iOS8 - 2014 evolucionar (vídeo)](http://youtu.be/f3mMGlS-lM4)
+- [Diseños dinámicos en iOS8: evolucione 2014 (vídeo)](http://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)
 - [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset)
