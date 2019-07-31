@@ -11,7 +11,7 @@ abstract:
   description: 'Aplicaciones de ejemplo de Xamarin.Android y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/android/all/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
         text: Todos los ejemplos de Xamarin.Android
 sections:
   - title: null
@@ -43,7 +43,7 @@ sections:
             image:
               src: images/fragments.png
               href: 'https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/'
-            title: Fragmentos
+            title: Fragments
           - href: 'https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/'
             html: Aplicación para pintar con los dedos a todo color con seguimiento multitáctil en Android.
             image:
@@ -68,9 +68,9 @@ sections:
               src: images/watchface.png
               href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
             title: WatchFace
-          - href: 'https://developer.xamarin.com/samples/android/all/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             html: Acceda al conjunto completo de aplicaciones de ejemplo de Xamarin.Android y a demostraciones de código.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/android/all/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             title: Todos los ejemplos de Xamarin.Android

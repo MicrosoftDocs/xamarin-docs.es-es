@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 064ef79d79a74582e8deb6999589fda14d227e91
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b01edc9807b63613a66f5c24706eb694fef6dfbc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343478"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669834"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -22,6 +22,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [EntryTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/EntryTutorial)
+- [EntryTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Guía sobre las entradas de Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md)
 - [API de las entradas](xref:Xamarin.Forms.Entry)

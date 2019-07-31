@@ -11,8 +11,8 @@ abstract:
   description: 'Gráficos multiplataforma, juegos 2D y 3D para plataformas de dispositivos móviles y escritorio.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
-        text: Muestras
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
+        text: Ejemplos
 sections:
   - title: null
     items:

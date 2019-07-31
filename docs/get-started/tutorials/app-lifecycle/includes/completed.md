@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b18f6d88c5694415d2082a6db112143fc421471c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c3e78badbea16205565757058e9226b5dc7606cd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187557"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669831"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -21,7 +21,7 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [AppLifecycleTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/AppLifecycleTutorial)
+- [AppLifecycleTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-applifecycletutorial/)
 - [Guía sobre el ciclo de vida de las aplicaciones de Xamarin.Forms](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Guía sobre la clase de las aplicaciones de Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md)
 - [API de la aplicación](xref:Xamarin.Forms.Application)

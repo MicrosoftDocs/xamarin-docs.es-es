@@ -11,20 +11,20 @@ abstract:
   description: 'Aplicaciones de ejemplo multiplataforma de Xamarin y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Todos los ejemplos de Xamarin
 sections:
-  - title: Primeros pasos
+  - title: Introducción
     items:
       - type: list
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: 'En este ejemplo se muestra una aplicación de la lista de tareas pendientes donde los datos se almacenan y se accede a ellos en una base de datos local de SQLite, compilada con Xamarin.Forms.'
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'Aplicación de demostración que permite a los vendedores realizar un seguimiento de su rendimiento, administrar clientes potenciales, ver sus contactos, administrar pedidos y examinar el catálogo de productos.'
@@ -74,9 +74,9 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             html: Conjunto completo de aplicaciones de ejemplo multiplataforma de Xamarin y demostraciones de código.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: Todos los ejemplos de Xamarin

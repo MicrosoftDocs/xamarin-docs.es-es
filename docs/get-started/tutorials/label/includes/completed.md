@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896718"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669829"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -22,6 +22,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [LabelTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [LabelTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Guía sobre las etiquetas de Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md)
 - [API de las etiquetas](xref:Xamarin.Forms.Label)

@@ -19,9 +19,9 @@ abstract:
       - href: 'https://developer.apple.com/documentation/'
         text: Documentación para desarrolladores de Apple
       - href: /visualstudio/
-        text: Programa para la mejora
+        text: Visual Studio
 sections:
-  - title: Primeros pasos
+  - title: Introducción
     items:
       - type: paragraph
         text: 'Aprenda a crear su primera aplicación iOS con Xamarin y C#.'
@@ -30,7 +30,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Programa de instalación
+            text: Configuración
             href: ~/ios/get-started/installation/index.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
@@ -119,6 +119,6 @@ sections:
           - title: API
             href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12'
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">Documentos de API de iOS</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Biblioteca de clases base</a></p>'
-          - title: Muestras
+          - title: Ejemplos
             href: 'https://developer.xamarin.com/samples'
-            html: '<p><a href="https://developer.xamarin.com/samples/ios/all/">Ejemplos de iOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Ejemplos de watchOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Ejemplos de tvOS</a></p>'
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Ejemplos de iOS</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Ejemplos de watchOS</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Ejemplos de tvOS</a></p>'

@@ -11,7 +11,7 @@ abstract:
   description: 'Aplicaciones de ejemplo de Xamarin.Mac y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/mac/all/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac'
         text: Todos los ejemplos de Xamarin.Mac
 sections:
   - title: null
@@ -20,33 +20,33 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/mac/Hello_Mac/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
             html: Aplicación de Hello World para empezar a utilizar el desarrollo de Mac.
             image:
               src: images/hellomac.png
-              href: 'https://developer.xamarin.com/samples/mac/Hello_Mac/'
+              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
             title: 'Hello, Mac'
-          - href: 'https://developer.xamarin.com/samples/mac/MacControls/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
             html: Ejemplos de control de IU para aplicaciones de Mac.
             image:
               src: images/controls.png
-              href: 'https://developer.xamarin.com/samples/mac/MacControls/'
+              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
             title: MacControls
-          - href: 'https://developer.xamarin.com/samples/mac/MacImages/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
             html: Ejemplos de control de IU para aplicaciones de Mac.
             image:
               src: images/images.png
-              href: 'https://developer.xamarin.com/samples/mac/MacImages/'
+              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
             title: Imágenes de Mac
-          - href: 'https://developer.xamarin.com/samples/mac/SourceWriter/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/'
             html: Se trata de un editor sencillo que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis.
             image:
               src: images/sourcewriter.png
-              href: 'https://developer.xamarin.com/samples/mac/SourceWriter/'
+              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/'
             title: SourceWriter
-          - href: 'https://developer.xamarin.com/samples/mac/all/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac'
             html: Conjunto completo de aplicaciones de ejemplo de Xamarin.Mac y demostraciones de código.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/mac/all/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac'
             title: Todos los ejemplos de Xamarin.Mac

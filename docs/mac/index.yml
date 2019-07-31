@@ -21,7 +21,7 @@ abstract:
       - href: /visualstudio/mac/
         text: Visual Studio para Mac
 sections:
-  - title: Primeros pasos
+  - title: Introducción
     items:
       - type: paragraph
         text: 'Aprenda a crear su primera aplicación Mac con Xamarin y C#.'
@@ -30,7 +30,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Programa de instalación
+            text: Configuración
             href: ~/mac/get-started/installation.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
@@ -86,5 +86,5 @@ sections:
         items:
           - title: API
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/AppKit">Documentos de API de Mac</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Biblioteca de clases base</a></p>'
-          - title: Muestras
-            html: '<p><a href="https://developer.xamarin.com/samples/mac/all/">Ejemplos de Mac</a></p>'
+          - title: Ejemplos
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac">Ejemplos de Mac</a></p>'
