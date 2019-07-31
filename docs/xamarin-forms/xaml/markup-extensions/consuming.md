@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2019
-ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048324"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657274"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Esta información aparece en los archivos XAML con el habitual `x` prefijo de espacio de nombres y se conocen comúnmente por este prefijo. En este artículo se describe las extensiones de marcado siguiente:
 
@@ -27,7 +27,7 @@ Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad 
 - [`x:Null`](#null) : establezca un atributo en un `null` valor.
 - [`OnPlatform`](#onplatform) : personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma.
 - [`OnIdiom`](#onidiom) : personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en.
-- [`DataTemplate`](#datatemplate-markup-extension) : convierte un tipo en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
+- [`DataTemplate`](#datatemplate-markup-extension): convierte un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 
 Las extensiones de marcado XAML adicionales históricamente han sido compatible con otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Estos se describen con más detalle en otros artículos:
 
@@ -44,7 +44,7 @@ El [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de l
 
 El `x:Static` extensión de marcado es compatible con la [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) clase. La clase tiene una propiedad única denominada [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) de tipo `string` establecer en el nombre de una constante pública, una propiedad estática, campo estático o miembro de enumeración.
 
-Una forma común de usar `x:Static` consiste en definir primero una clase con algunas constantes o variables estáticas, como Este diminuto `AppConstants` clase en el [ **MarkupExtensions** ](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) programa:
+Una forma común de usar `x:Static` consiste en definir primero una clase con algunas constantes o variables estáticas, como Este diminuto `AppConstants` clase en el [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) programa:
 
 ```csharp
 static class AppConstants
@@ -85,7 +85,7 @@ El analizador XAML también permite la `StaticExtension` clase va a abreviar com
 </Label>
 ```
 
-Esto se puede simplificar aún más, pero el cambio presenta parte de la nueva sintaxis: Consta de colocar el `StaticExtension` clase y la configuración entre llaves del miembro. La expresión resultante se establece directamente en el `FontSize` atributo:
+Esto se puede simplificar aún más, pero el cambio introduce una nueva sintaxis: Consiste en colocar la `StaticExtension` clase y el valor de miembro entre llaves. La expresión resultante se establece directamente en el `FontSize` atributo:
 
 ```xaml
 <Label Text="Label No. 3"
@@ -504,7 +504,7 @@ Este es el programa que se ejecuta:
 
 ## <a name="onidiom-markup-extension"></a>Extensión de marcado OnIdiom
 
-El `OnIdiom` permite personalizar la apariencia de la interfaz de usuario en función de la expresión de la aplicación se está ejecutando en el dispositivo de extensión de marcado. Es compatible con la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (clase), que define las siguientes propiedades:
+La `OnIdiom` extensión de marcado le permite personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Es compatible con la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (clase), que define las siguientes propiedades:
 
 - `Default` de tipo `object`, establecido en un valor predeterminado que se aplicará a las propiedades que representan las expresiones de dispositivo.
 - `Phone` de tipo `object`, que se establece en un valor que se aplicará de teléfonos.
@@ -538,14 +538,14 @@ Este es el programa que se ejecuta:
 
 [![Demostración de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom demostración")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demostración")
 
-## <a name="datatemplate-markup-extension"></a>Extensión de marcado de DataTemplate
+## <a name="datatemplate-markup-extension"></a>Extensión de marcado DataTemplate
 
-El `DataTemplate` extensión de marcado permite convertir un tipo en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Es compatible con la `DataTemplateExtension` (clase), que define un `TypeName` propiedad de tipo `string`, es decir se establece en el nombre del tipo para convertirse en un `DataTemplate`. El `TypeName` propiedad es la propiedad content de `DataTemplateExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `TypeName=` forma parte de la expresión.
+La `DataTemplate` extensión de marcado le permite convertir un tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)en. Es `DataTemplateExtension` compatible con la clase, que define una `TypeName` propiedad, de tipo `string`, que se establece en el nombre `DataTemplate`del tipo que se va a convertir en. El `TypeName` propiedad es la propiedad content de `DataTemplateExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede `TypeName=` eliminar la parte de la expresión.
 
 > [!NOTE]
-> El analizador XAML permite la `DataTemplateExtension` clase va a abreviar como `DataTemplate`.
+> El analizador XAML permite abreviar la `DataTemplateExtension` clase como. `DataTemplate`
 
-Un uso típico de esta extensión de marcado está en una aplicación de Shell, como se muestra en el ejemplo siguiente:
+Un uso típico de esta extensión de marcado está en una aplicación de Shell, tal y como se muestra en el ejemplo siguiente:
 
 ```xaml
 <ShellContent Title="Monkeys"
@@ -553,9 +553,9 @@ Un uso típico de esta extensión de marcado está en una aplicación de Shell, 
               ContentTemplate="{DataTemplate views:MonkeysPage}" />
 ```
 
-En este ejemplo, `MonkeysPage` se convierte de un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), que se establece como el valor de la `ShellContent.ContentTemplate` propiedad. Esto garantiza que `MonkeysPage` es sólo cuando tenga lugar la navegación a la página se han creado, en lugar de al iniciarse la aplicación.
+En este ejemplo, `MonkeysPage` se convierte [`ContentPage`](xref:Xamarin.Forms.ContentPage) de a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que se establece como el valor de la `ShellContent.ContentTemplate` propiedad. Esto garantiza que `MonkeysPage` solo se crea cuando se produce la navegación a la página, en lugar de al inicio de la aplicación.
 
-Para obtener más información acerca de las aplicaciones de Shell, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+Para obtener más información sobre las aplicaciones de Shell, consulte [Shell de Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="define-your-own-markup-extensions"></a>Definir sus propias extensiones de marcado
 
@@ -563,9 +563,9 @@ Si se ha encontrado una necesidad de una extensión de marcado XAML que no está
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Extensiones de marcado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Extensiones de marcado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensiones de marcado XAML de Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+- [Shell de Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).

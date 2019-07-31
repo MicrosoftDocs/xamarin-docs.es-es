@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 833e24e91a37b92eb5025aacdc9509f092b823cd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 370fec5b9323187f6345d3e6bf9d3e38145cedff
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290745"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652784"
 ---
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar el objeto de SkiaSharp SKPath para la combinación de líneas y curvas conectadas_
 
@@ -199,4 +199,4 @@ La unión angular consta de un vértice agudo donde las líneas de conexión. Cu
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

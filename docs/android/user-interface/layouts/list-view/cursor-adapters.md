@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
-ms.openlocfilehash: a2af40d7af5cac39cc92c8e2bc88b5fbcf81291e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ce2f62869057fc83b04b58af37d6ffffd5ad7fb8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510046"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646471"
 ---
 # <a name="using-cursoradapters-with-xamarinandroid"></a>Uso de CursorAdapters con Xamarin. Android
 
@@ -173,5 +173,5 @@ El `OnDestroy` método contiene la `StopManagingCursor` llamada al método que s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SimpleCursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
+- [SimpleCursorTableAdapter (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/simplecursortableadapter)
+- [CursorTableAdapter (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/cursortableadapter)

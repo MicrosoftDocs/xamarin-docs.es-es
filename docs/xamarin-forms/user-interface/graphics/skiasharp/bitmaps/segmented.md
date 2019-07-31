@@ -7,16 +7,16 @@ ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: be2d998916c81cb2216251e2112ff8ca2af5d87a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ca6c8fafe4352bac83e5ae60b43627d4c7fdc10f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61410715"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648666"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualización segmentada de mapas de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 El SkiaSharp `SKCanvas` objeto define un método denominado `DrawBitmapNinePatch` y dos métodos denominados `DrawBitmapLattice` que son muy similares. Tanto estos métodos representan un mapa de bits para el tamaño de un rectángulo de destino, pero en lugar de estirar el mapa de bits de manera uniforme, que se muestran las partes del mapa de bits en sus dimensiones en píxeles y stretch otras partes del mapa de bits para que quepa el rectángulo:
 
@@ -44,7 +44,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 Es el rectángulo central en relación con el mapa de bits. Es un `SKRectI` valor (la versión de enteros de `SKRect`) y todos los tamaños y las coordenadas están en unidades de píxeles. El rectángulo de destino es relativa a la superficie de pantalla. El argumento `paint` es opcional.
 
-El **nueve revisión mostrar** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo primero utiliza un constructor estático para crear una propiedad estática pública del tipo `SKBitmap`:
+El **nueve revisión mostrar** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo primero utiliza un constructor estático para crear una propiedad estática pública del tipo `SKBitmap`:
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -228,4 +228,4 @@ El **Lattice mostrar** página generaliza la creación de la `Flags` matriz, lo 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

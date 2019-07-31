@@ -7,22 +7,22 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229721"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646229"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar el uso de SkiaSharp para representar las curvas de Bézier cúbicas, cuadráticas y cónicos_
 
 La curva de Bézier se denomina después Pierre Bézier (1910: 1999), un ingeniero de francés de la empresa automotriz Renault, que utilizaban la curva para el diseño asistido por ordenador de cuerpos de automóvil.
 
-Curvas Bézier son conocidas por ser adecuadas para el diseño interactivo: Son respetuoso &mdash; en otras palabras, no existen singularities que provocan la curva que se convierten en infinito o difícil de manejar &mdash; y generalmente son estéticamente agradables:
+Las curvas de Bézier son conocidas para ser adecuadas para el diseño interactivo: Se comportan &mdash; correctamente en otras palabras, no hay singularidad que provoquen que la curva se convierta en &mdash; infinita o no manejable y, por lo general, estéticamente agradable:
 
 ![](beziers-images/beziersample.png "Una curva de Bézier de ejemplo")
 
@@ -493,7 +493,7 @@ Es muy fácil derivar el punto de control y la ponderación que se usará el `Co
 
 ![](beziers-images/conicarc.png "Una representación de arco cónico de un arco circular")
 
-Puede usar trigonometría para determinar la distancia del punto de control desde el centro del círculo: Es el radio del círculo dividido por el coseno de la mitad el ángulo α. Para dibujar un arco circular entre los puntos inicial y final, establezca la ponderación en ese mismo coseno la mitad del ángulo. Tenga en cuenta que si el ángulo es 180 grados, a continuación, nunca se encuentran en las líneas de tangente y el peso es cero. Pero para ángulos inferior a 180 grados, los cálculos matemáticos funciona bien.
+Puede usar trigonometría para determinar la distancia del punto de control del centro del círculo: Es el radio del círculo dividido entre el coseno de la mitad del ángulo α. Para dibujar un arco circular entre los puntos inicial y final, establezca la ponderación en ese mismo coseno la mitad del ángulo. Tenga en cuenta que si el ángulo es 180 grados, a continuación, nunca se encuentran en las líneas de tangente y el peso es cero. Pero para ángulos inferior a 180 grados, los cálculos matemáticos funciona bien.
 
 El **cónicos arco Circular** página muestra esto. El [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea una instancia de archivo un `Slider` para seleccionar el ángulo. El `PaintSurface` controlador en el [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) archivo de código subyacente calcula el punto de control y el peso:
 
@@ -557,4 +557,4 @@ En este caso es lamentable que `ConicTo` no admite los pesos negativos, ya que e
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

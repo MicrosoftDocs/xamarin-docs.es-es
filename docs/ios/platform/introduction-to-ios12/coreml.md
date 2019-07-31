@@ -1,34 +1,34 @@
 ---
-title: Core ML 2 en Xamarin.iOS
-description: Este documento describe las actualizaciones a Core ML disponible como parte de iOS 12. En concreto, examina las mejoras de rendimiento asociadas con la nueva API de predicción por lotes.
+title: Core ML 2 en Xamarin. iOS
+description: En este documento se describen las actualizaciones de Core ML disponibles como parte de iOS 12. En concreto, se examinan las mejoras de rendimiento asociadas a la nueva API de predicción por lotes.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fc72e855101f110310a46145c577b272a647ac3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398850"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645704"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 en Xamarin.iOS
+# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 en Xamarin. iOS
 
-ML básica es una tecnología disponible en iOS, macOS, tvOS y watchOS de aprendizaje automático. Permite a las aplicaciones realizar predicciones basadas en modelos de aprendizaje automático.
+Core ML es una tecnología de aprendizaje automático disponible en iOS, macOS, tvOS y watchos. Permite a las aplicaciones realizar predicciones basadas en modelos de aprendizaje automático.
 
-En iOS 12, ML Core incluye una API de procesamiento por lotes. Esta API aporta una mayor eficacia Core ML y proporciona mejoras de rendimiento en escenarios donde se usa un modelo para realizar una secuencia de predicciones.
+En iOS 12, Core ML incluye una API de procesamiento por lotes. Esta API hace que los ML principales sean más eficaces y proporciona mejoras de rendimiento en escenarios en los que un modelo se utiliza para realizar una secuencia de predicciones.
 
 ## <a name="sample-app-marshabitatcoremltimer"></a>Aplicación de ejemplo: MarsHabitatCoreMLTimer
 
-Para demostrar las predicciones por lotes con Core ML, eche un vistazo a la [MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) aplicación de ejemplo. Este ejemplo se usa un modelo de aprendizaje automático de Core entrenado para predecir el costo de la creación de un habitat en Mars, basándose en diversas entradas: número de paneles solares, número de invernaderos y número de acres.
+Para mostrar las predicciones por lotes con Core ML, eche un vistazo a la aplicación de ejemplo [MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) . En este ejemplo se usa un modelo de ML básico entrenado para predecir el costo de la creación de un hábitat en Mars, basado en varias entradas: el número de paneles solares, el número de invernaderos y el número de acres.
 
-Los fragmentos de código en este documento proceden de este ejemplo.
+Los fragmentos de código de este documento proceden de este ejemplo.
 
 ## <a name="generate-sample-data"></a>Generar datos de ejemplo
 
-En `ViewController`, la aplicación de ejemplo `ViewDidLoad` llamadas al método `LoadMLModel`, que carga el modelo de aprendizaje automático principales incluyen:
+En `ViewController`, el método de la `ViewDidLoad` aplicación de `LoadMLModel`ejemplo llama a, que carga el modelo de ml Core incluido:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-A continuación, la aplicación de ejemplo crea 100.000 `MarsHabitatPricerInput` objetos que se va a usar como entrada para las predicciones de Core ML secuenciales. Cada ejemplo generado tiene establecido un valor aleatorio para el número de paneles solares, el número de invernaderos y el número de acres:
+A continuación, la aplicación de ejemplo `MarsHabitatPricerInput` crea objetos 100.000 para usarlos como entrada para las predicciones de ml básicas secuenciales. Cada ejemplo generado tiene un valor aleatorio establecido para el número de paneles solares, el número de invernaderos y el número de acres:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Al puntear en cualquiera de los otros tres botones de la aplicación ejecuta dos secuencias de predicciones: uno con un `for` bucle y otro con el nuevo lote `GetPredictions` método introducida en iOS 12:
+Al pulsar cualquiera de los tres botones de la aplicación se ejecutan dos secuencias de predicciones: `for` una que usa un bucle y otra mediante `GetPredictions` el nuevo método de Batch incluido en iOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (bucle)
 
-El `for` versión de bucle de la prueba otra vez recorre en iteración el número especificado de entradas, una llamada a [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) para cada uno y descartar el resultado. Tiempo de espera del método cuánto tarda en realizar las predicciones:
+La `for` versión de bucle de la prueba recorre en iteración el número especificado de entradas, [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) llama a para cada una de ellas y descarta el resultado. El método multiplica el tiempo que se tarda en realizar las predicciones:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -92,10 +92,10 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-## <a name="getpredictions-new-batch-api"></a>GetPredictions (API de lote nuevo)
+## <a name="getpredictions-new-batch-api"></a>GetPredictions (nueva API de batch)
 
-Crea la versión de lote de la prueba una `MLArrayBatchProvider` objeto a partir de la matriz de entrada (como se trata de un parámetro de entrada necesario para el `GetPredictions` método), crea una [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-objeto que impide que los cálculos de predicción estén restringidos a la CPU y usa el `GetPredictions` API para capturar las predicciones, vuelva a descartar el resultado:
+La versión de batch de la prueba crea `MLArrayBatchProvider` un objeto a partir de la matriz de entrada (ya que se trata de `GetPredictions` un parámetro de entrada necesario para el método), crea un[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+objeto que evita que los cálculos de predicción se limiten a la CPU y usa `GetPredictions` la API para capturar las predicciones, descartando de nuevo el resultado:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,13 +118,13 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Resultados
 
-En el simulador y dispositivo, `GetPredictions` finalice más rápidamente que las predicciones de aprendizaje automático de Core basado en el bucle.
+En el simulador y el `GetPredictions` dispositivo, finaliza más rápidamente que las predicciones de ml principales basadas en bucle.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo: MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
-- [Novedades de Core ML, parte 1 (sesión WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
-- [Novedades de Core ML, Part 2 (sesión WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introducción a ML básica de Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Aplicación de ejemplo: MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [Novedades de Core ML, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
+- [Novedades de Core ML, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
+- [Introducción a Core ML en Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
-- [Trabajar con modelos de ML básica](https://developer.apple.com/machine-learning/build-run-models/)
+- [Trabajar con modelos Core ML](https://developer.apple.com/machine-learning/build-run-models/)

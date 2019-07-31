@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: d703de90378991d262a4b056b9ebc98d183e3fb8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 6f03ae1030ef4a69b15c5e219785eee12c4e603b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658732"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656563"
 ---
 # <a name="emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones con la Face API
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms._
 
@@ -181,5 +181,5 @@ En este artículo se explica cómo usar Face API para que reconozca las emocione
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Face API](/azure/cognitive-services/face/overview/).
-- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

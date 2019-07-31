@@ -7,16 +7,16 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a57e50f098c92dbfcdcaa3139565d2ba0e291e3d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61347770"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644953"
 ---
 # <a name="skiasharp-transforms"></a>Transformaciones de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obtenga información acerca de las transformaciones para mostrar gráficos de SkiaSharp_
 
@@ -49,9 +49,9 @@ La primera diferencia es que las transformaciones de SkiaSharp se aplican a toda
 
 Las transformaciones de SkiaSharp son relativas a la esquina superior izquierda de la `SKCanvas` mientras Xamarin.Forms transformaciones son relativas a la esquina superior izquierda de la `VisualElement` al que se aplican. Esta diferencia es importante al aplicar la escala y giro transforma porque estas transformaciones son siempre con respecto a un momento determinado.
 
-La realidad la gran diferencia es que son transformaciones de SKiaSharp *métodos* mientras que las transformaciones de Xamarin.Forms son *propiedades*. Se trata de una diferencia semántica más allá de la diferencia sintáctica: Transformaciones de SkiaSharp realizan una operación mientras Xamarin.Forms transforma conjunto un estado. Transformaciones de SkiaSharp se aplican a objetos gráficos dibujados a continuación, pero no a los objetos de gráficos que se dibujan antes de aplicar la transformación. En cambio, una transformación de Xamarin.Forms se aplica a un elemento previamente representado tan pronto como se establece la propiedad. Transformaciones de SkiaSharp son acumulativas, como los métodos se llaman; Transformaciones de Xamarin.Forms se sustituyen cuando se establece la propiedad con otro valor.
+La realidad la gran diferencia es que son transformaciones de SKiaSharp *métodos* mientras que las transformaciones de Xamarin.Forms son *propiedades*. Esta es una diferencia semántica más allá de la diferencia sintáctica: Las transformaciones de SkiaSharp realizan una operación mientras que las transformaciones de Xamarin. Forms establecen un estado. Transformaciones de SkiaSharp se aplican a objetos gráficos dibujados a continuación, pero no a los objetos de gráficos que se dibujan antes de aplicar la transformación. En cambio, una transformación de Xamarin.Forms se aplica a un elemento previamente representado tan pronto como se establece la propiedad. Transformaciones de SkiaSharp son acumulativas, como los métodos se llaman; Transformaciones de Xamarin.Forms se sustituyen cuando se establece la propiedad con otro valor.
 
-Todos los programas de ejemplo en esta sección aparecen en el **transformaciones de SkiaSharp** sección de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa. Código fuente puede encontrarse en el [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) carpeta de la solución.
+Todos los programas de ejemplo en esta sección aparecen en el **transformaciones de SkiaSharp** sección de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa. Código fuente puede encontrarse en el [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) carpeta de la solución.
 
 ## <a name="the-translate-transformtranslatemd"></a>[Transformación de traslación](translate.md)
 
@@ -89,4 +89,4 @@ Utilizar las transformaciones no afines girar objetos 2D en el espacio 3D.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 05e8fb9ef26f2a2a0b812b25853e4f61e658fa46
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 4131844d49d7fdad4c97d07fb699b96db2020ec4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970565"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647292"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Estilos de dispositivo en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Xamarin.Forms incluye seis estilos dinámicos, conocidos como estilos de dispositivo, en la clase Device.Styles._
 
@@ -127,8 +127,8 @@ Las capturas de pantalla siguientes muestran los estilos de dispositivo en cada 
 
 - [Estilos de texto](~/xamarin-forms/user-interface/text/styles.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos dinámicos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Trabajar con estilos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Estilos dinámicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device.Styles](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)

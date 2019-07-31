@@ -1,5 +1,5 @@
 ---
-title: Usar una base de datos de documentos de Azure Cosmos DB en Xamarin.Forms
+title: Usar una base de datos de documentos Azure Cosmos DB en Xamarin. Forms
 description: En este artículo se explica cómo usar la biblioteca de cliente estándar de .NET de Azure Cosmos DB para integrar una base de datos de documentos de Azure Cosmos DB en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -8,22 +8,22 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0f0a9d2a5c7afb54256c7c2d3087b7912e833e3f
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: dd325fbdf9d2619df94077eed74f9e6c61796a26
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659232"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651402"
 ---
-# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Usar una base de datos de documentos de Azure Cosmos DB en Xamarin.Forms
+# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Usar una base de datos de documentos Azure Cosmos DB en Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
 _Una base de datos de documentos de Azure Cosmos DB es una base de datos NoSQL que proporciona acceso de baja latencia a los documentos JSON, que ofrece un servicio de base de datos rápido, alta disponibilidad y escalabilidad para aplicaciones que requieren replicación global y escala sin problemas. En este artículo se explica cómo usar la biblioteca de cliente estándar de .NET de Azure Cosmos DB para integrar una base de datos de documentos de Azure Cosmos DB en una aplicación de Xamarin.Forms._
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
-**Vídeo de Microsoft Azure Cosmos DB**
+**Vídeo Microsoft Azure Cosmos DB**
 
 Una cuenta de base de datos de documento de Azure Cosmos DB se puede aprovisionar mediante una suscripción de Azure. Cada cuenta de base de datos puede tener cero o más bases de datos. Una base de datos de documentos en Azure Cosmos DB es un contenedor lógico para las colecciones de documentos y los usuarios.
 
@@ -230,7 +230,7 @@ En este artículo se explica cómo usar la biblioteca de cliente estándar de .N
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Lista de tareas de Azure Cosmos DB (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+- [Lista de tareas de Azure Cosmos DB (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Documentación de Azure Cosmos DB](/azure/cosmos-db/)
 - [Biblioteca de cliente de Azure Cosmos DB .NET Standard](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [API de Azure Cosmos DB](https://docs.microsoft.com/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

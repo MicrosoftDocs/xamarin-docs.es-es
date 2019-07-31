@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 238ba1853df523ee275de628ebdbd138a6d1d1bf
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649613"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650273"
 ---
 # <a name="xamarinforms-entry"></a>Entrada de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Texto de una línea o la contraseña de entrada_
 
@@ -61,7 +61,7 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 ### <a name="preventing-text-entry"></a>Impedir la entrada de texto
 
-Pueden ser impide que los usuarios modificar el texto en un [ `Entry` ](xref:Xamarin.Forms.Entry) estableciendo el `IsReadOnly` propiedad, que tiene un valor predeterminado de `false`a `true`:
+Se puede impedir que los usuarios modifiquen el texto en [`Entry`](xref:Xamarin.Forms.Entry) un estableciendo la `IsReadOnly` propiedad, que tiene un valor predeterminado de `false`, en `true`:
 
 ```xaml
 <Entry Text="This is a read-only Entry"
@@ -73,7 +73,7 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 ```
 
 > [!NOTE]
-> El `IsReadonly` propiedad no modifica la apariencia visual de un [ `Entry` ](xref:Xamarin.Forms.Entry), a diferencia el `IsEnabled` propiedad que también cambia la apariencia visual de la `Entry` a gris.
+> La `IsReadonly` propiedad no modifica la apariencia visual de un [`Entry`](xref:Xamarin.Forms.Entry), `Entry` a diferencia de la `IsEnabled` propiedad que también cambia la apariencia visual del a gris.
 
 ### <a name="limiting-input-length"></a>Limitar la longitud de entrada
 
@@ -323,11 +323,11 @@ Entrada expone dos eventos:
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; se genera cuando el usuario ha finalizado la entrada presionando la tecla ENTRAR del teclado.
 
 > [!NOTE]
-> El [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) (clase), desde el que [ `Entry` ](xref:Xamarin.Forms.Entry) hereda, también tiene [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) y [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)eventos.
+> La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la [`Entry`](xref:Xamarin.Forms.Entry) que hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) eventos [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) y.
 
 ### <a name="completed"></a>Completada
 
-El `Completed` evento sirve para reaccionar a la finalización de una interacción con una entrada. `Completed` se produce cuando el usuario finaliza la entrada con un campo presionando la tecla ENTRAR del teclado (o presionando la tecla Tab en UWP). El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
+El `Completed` evento sirve para reaccionar a la finalización de una interacción con una entrada. `Completed`se genera cuando el usuario finaliza la entrada con un campo presionando la tecla entrar en el teclado (o presionando la tecla TAB en UWP). El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -381,5 +381,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Entrada de API](xref:Xamarin.Forms.Entry)

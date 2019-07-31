@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d46744c20874dd122b63e56ec92c7aa5ae6562e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211281"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656990"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Conceptos básicos de XAML de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-XAML (lenguaje de marcado de aplicaciones extensible) permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms utilizando el marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero suele ser más concisas y visualmente más coherente que el código equivalente y potencialmente dispone de herramientas. XAML es especialmente adecuada para su uso con la arquitectura de aplicaciones popular de MVVM (Model-View-ViewModel): XAML define la vista que esté vinculada a ViewModel código a través de enlaces de datos basados en XAML.
+XAML (lenguaje de marcado de aplicaciones extensible) permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms utilizando el marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero suele ser más concisas y visualmente más coherente que el código equivalente y potencialmente dispone de herramientas. XAML es especialmente adecuado para su uso con la popular arquitectura de aplicación MVVM (Model-View-ViewModel): XAML define la vista que está vinculada al código ViewModel a través de enlaces de datos basados en XAML.
 
 ## <a name="xaml-basics-contents"></a>Contenido de conceptos básicos XAML
 
@@ -107,6 +107,6 @@ Cuando esté familiarizado con XML y Xamarin.Forms, comience a leer [parte 1. In
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Creación de libro de Mobile Apps](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms) (Ejemplos de Xamarin.Forms)

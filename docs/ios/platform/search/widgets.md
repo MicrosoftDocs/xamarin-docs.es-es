@@ -1,63 +1,63 @@
 ---
-title: Búsqueda y Home mejoras el Widget de pantalla en iOS 10
-description: Este documento describe las mejoras de que Apple ha realizado en los Widgets en iOS 10, incluidas las actualizaciones de widgets de la pantalla principal y de búsqueda.
+title: Mejoras en el widget de pantalla principal y de búsqueda en iOS 10
+description: En este documento se describen las mejoras que Apple ha realizado en los widgets de iOS 10, incluidas las actualizaciones para los widgets de búsqueda y de pantalla principal.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f693b480fff141c177ed135ced60afd65abd77de
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f2ac37676dbdfc96c853c9bc679e79c2aae1adb1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61082182"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656233"
 ---
-# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Búsqueda y Home mejoras el Widget de pantalla en iOS 10
+# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Mejoras en el widget de pantalla principal y de búsqueda en iOS 10
 
-_En este artículo se trata las mejoras de que Apple ha realizado en el sistema de Widget en iOS 10._
+_En este artículo se describen las mejoras que Apple ha realizado en el sistema de widgets en iOS 10._
 
-Apple ha introducido varias mejoras en el sistema de Widget para asegurarse de que los widgets tienen un aspecto excelentes en cualquier en segundo plano que existe en el nuevo iOS 10 pantalla de bloqueo. Además, los widgets ahora contienen una [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) propiedad que permite al desarrollador describir el contenido que está disponible y permite al usuario expandir y contraer el contenido.
+Apple ha introducido varias mejoras en el sistema de widgets para asegurarse de que los widgets tengan un aspecto excelente sobre cualquier fondo que exista en la nueva pantalla de bloqueo de iOS 10. Además, los widgets ahora contienen una propiedad [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) que permite al desarrollador describir la cantidad de contenido disponible y permite al usuario expandir y contraer el contenido.
 
-Widgets (también conocido como hoy en día extensiones) son un tipo especial de extensión de iOS que muestre una pequeña cantidad de información útil o exponer la funcionalidad específica de la aplicación de manera oportuna. Por ejemplo, la aplicación de noticias tiene un widget que muestra los titulares más importantes y la aplicación de calendario ofrece dos widgets distintos: uno para mostrar hoy los eventos y otro para mostrar los eventos próximos.
+Los widgets (también conocidos como extensiones de hoy) son un tipo especial de extensión de iOS que muestra una pequeña cantidad de información útil o expone la funcionalidad específica de la aplicación de manera oportuna. Por ejemplo, la aplicación News tiene un widget que muestra los titulares principales y la aplicación de calendario proporciona dos widgets distintos: uno para mostrar los eventos de hoy y otro para mostrar los próximos eventos.
 
-Widgets son muy personalizables y pueden contener elementos de interfaz de usuario como texto, imágenes, botones, etcetera. Además, el desarrollador puede personalizar aún más el diseño de los widgets.
+Los widgets son muy personalizables y pueden contener elementos de interfaz de usuario como texto, imágenes, botones, etc. Además, el desarrollador puede personalizar aún más el diseño de sus widgets.
 
 [![](widgets-images/widgets01.png "Widgets de ejemplo")](widgets-images/widgets01.png#lightbox)
 
-Hay dos lugares principales que un usuario puede ver e interactuar con los Widgets de una aplicación:
+Hay dos lugares principales que un usuario puede ver e interactuar con los widgets de una aplicación:
 
-- **La pantalla de búsqueda** -los usuarios pueden agregar los Widgets que les resulten más útiles para su pantalla de búsqueda. Se tiene acceso a la pantalla de búsqueda deslizándose hacia la derecha en las pantallas principal y de bloqueo.
-- **La pantalla Inicio** -desde la pantalla principal, el usuario puede usar un toque 3D para abrir la lista de acciones rápidas aplicando presión en el icono de la aplicación. Widgets de una aplicación se mostrarán por encima de la lista de acciones rápidas. Consulte nuestra [Introducción a 3D Touch](~/ios/platform/3d-touch.md) documentación para obtener más información.
+- **La pantalla de búsqueda** : los usuarios pueden agregar los widgets que buscan más útiles en la pantalla de búsqueda. Se tiene acceso a la pantalla de búsqueda al pasar el dedo hacia la derecha en las pantallas Inicio y bloqueo.
+- **La pantalla principal** : en la pantalla principal, el usuario puede usar la función táctil 3D para abrir la lista de acciones rápidas aplicando presión al icono de la aplicación. Los widgets de una aplicación se mostrarán encima de la lista de acciones rápidas. Para obtener más información, consulte nuestra introducción a la documentación de [Touch 3D](~/ios/platform/3d-touch.md) .
 
 ## <a name="widgets-developer-suggestions"></a>Sugerencias para desarrolladores de widgets
 
-Idealmente, el desarrollador siempre debe probar y diseñar Widgets que el usuario desea agregar a las pantallas de búsqueda. Para ello, Apple tiene las siguientes sugerencias:
+Idealmente, el desarrollador siempre debe probar y diseñar widgets que el usuario desea agregar a sus pantallas de búsqueda. Para ello, Apple tiene las siguientes sugerencias:
 
-- **Crear una gran, ofrecer experiencia** -usuario desee Widgets que proporcionan breve y ofrecer información de actualizaciones de estado o les permiten realizar rápidamente tareas sencillas. Esto hace que proporciona la cantidad adecuada de información e interactividad un esenciales. Siempre que sea posible, permite al usuario llevar a cabo una tarea determinada con un solo toque. Además, puesto que no admiten Widgets panorámica o el desplazamiento, esto deberá tenerse en cuenta en el diseño del Widget.
-- **Mostrar contenido rápidamente** -Widgets están diseñados para ser ofrecer, por lo que el usuario no debe tener nunca debe esperar para que el contenido cargar una vez que se muestra un Widget. Widgets deben almacenar en caché su contenido localmente, por lo que pueden mostrar el contenido reciente mientras se está cargando contenido nuevo en segundo plano.
-- **Proporcione los márgenes y relleno adecuado** -Widgets nunca debería buscar atestados, lo que evita la extensión de contenido a los bordes de la vista de un Widget. Siempre debe haber un margen ancho de píxel varios entre los bordes y el contenido. Apple también sugiere el uso de icono de la aplicación que se muestra en la parte superior del Widget, como una guía de alineación. Si el Widget presenta un diseño de cuadrícula, asegúrese de que hay adecuado el relleno entre los elementos de la cuadrícula e intente limitar el número de elementos que el número máximo de cuatro.
-- **Usar diseños adaptables** -ancho de un Widget variará según el dispositivo que se ejecuta y la orientación del dispositivo. Alto de un Widget también puede variar en función de si se muestra en estado expandido (no admitido todos los Widgets) o contraído (predeterminado). Un Widget contraído tiene un alto de filas de tabla de aproximadamente 2,5 iOS estándar. El desarrollador puede solicitar el tamaño de un Widget expandido pero lo ideal es que debe ser menor que el alto de la pantalla. En el estado contraído, el Widget debe mostrar información esencial solo e independiente. Cuando expandido, el Widget debe mostrar información adicional que mejora el contenido principal que se muestra en el estado contraído. Widgets que se muestra en la lista de acciones rápidas sólo estará en estado contraído.
-- **No personalizar en segundo plano del Widget** -Widgets se muestran en un fondo claro, difuminado proporcionado por el sistema. Esto se hace para fomentar la coherencia entre los Widgets y mejorar la legibilidad de su contenido. Evite usar una imagen como fondo de un Widget porque podría entrar en conflicto con papeles tapiz de bloqueo y la pantalla principal del usuario.
-- **Usar la fuente del sistema en negro o en gris oscuro** : al mostrar texto en un Widget de la fuente del sistema funciona mejor. La fuente debe ser de color gris oscuro o negro para destacar con el fondo del Widget claro, difuminado.
-- **Proporcionar la aplicación acceso cuando adecuado** -Widget siempre debería funcionar por separado desde su aplicación, sin embargo, si se requiere una funcionalidad más profunda, el Widget debe ser capaz de iniciar la aplicación para ver o editar una parte específica de la información. Basta con no incluir nunca un botón "abrir la aplicación", permitir que el usuario puntee en el propio contenido y abra nunca un 3rd party la aplicación.
-- **Seleccione un claro, conciso nombre de Widget** -icono de aplicación y el nombre del Widget siempre se muestran sobre el contenido del Widget. Apple sugiere el uso de nombre de la aplicación para su Widget principal y un nombre claro y conciso para cualquier otro que proporciona. Al proporcionar un título de Widget personalizado, debe agregarse como prefijo el nombre de la aplicación (por ejemplo, mapas cercanos, mapas de restaurantes, etcetera.).
-- **Informar a cuando la autenticación agrega valor** : si una funcionalidad adicional o información está disponible solo cuando el usuario se autentica y ha iniciado sesión, presentarla al usuario. Por ejemplo, un viaje a la aplicación de uso compartido puede decir "Iniciar sesión en el manejo del libro".
-- **Seleccione un Widget de lista de acción rápida** -si la aplicación proporciona más de un Widget, el desarrollador debe elegir uno para que se presentan cuando el usuario abre la lista de acciones rápidas aplicando presión en el icono de la aplicación con 3D Touch.
+- **Cree una experiencia excelente y de gran visión** : widgets de usuario que proporcionan información breve y de visión general de las actualizaciones de estado o permiten realizar tareas sencillas rápidamente. Esto hace que la cantidad adecuada de información e interactividad sea esencial. Siempre que sea posible, permita que el usuario realice una tarea determinada con un solo punteo. Además, como los widgets no admiten el movimiento panorámico o el desplazamiento, tendrá que tener en cuenta en el diseño del widget.
+- **Mostrar rápidamente** los widgets de contenido están diseñados para ser de vista rápida, por lo que el usuario nunca debe esperar a que el contenido se cargue una vez que se muestra un widget. Los widgets deben almacenar en caché su contenido de forma local para que puedan mostrar el contenido reciente mientras el contenido nuevo se carga en segundo plano.
+- **Proporcione el relleno y los márgenes adecuados** : los widgets nunca deben parecer amontonados, por lo que evite extender el contenido a los bordes de la vista de un widget. Siempre debe haber un margen ancho de varios píxeles entre los bordes y el contenido. Apple también sugiere el uso del icono de la aplicación, que se muestra en la parte superior del widget, como una guía de alineación. Si el widget presenta un diseño de cuadrícula, asegúrese de que haya un relleno adecuado entre los elementos de la cuadrícula e intente limitar el número de elementos a cuatro máx.
+- **Usar diseños adaptables** : el ancho de un widget variará en función del dispositivo en el que se esté ejecutando y de la orientación del dispositivo. El alto de un widget también puede variar en función de si se muestra en un estado contraído (el valor predeterminado) o expandido (no compatible con todos los widgets). Un widget contraído tiene un alto de aproximadamente dos y medio de filas de tabla de iOS estándar. El desarrollador puede solicitar el tamaño de un widget expandido, pero es ideal que sea menor que el alto de la pantalla. En el estado contraído, el widget debería mostrar solo la información esencial e independiente. Cuando se expande, el widget debe mostrar información complementaria que mejora el contenido principal que se muestra en el estado contraído. Los widgets que se muestran en la lista de acciones rápidas solo estarán en el estado contraído.
+- **No Personalice los widgets de fondo del widget** se muestran en un fondo claro y borroso proporcionado por el sistema. Esto se hace para fomentar la coherencia entre widgets y mejorar la legibilidad de su contenido. Evite el uso de una imagen como fondo del widget, ya que podría entrar en conflicto con los papeles tapiz de bloqueo y de pantalla principal del usuario.
+- **Usar la fuente del sistema en color negro o gris oscuro** : cuando se muestra texto en un widget, la fuente del sistema funciona mejor. La fuente debe estar en color gris negro o oscuro para destacar el fondo de los widgets claros y borrosos.
+- **Proporcionar acceso a las aplicaciones cuando** el widget correspondiente siempre debe funcionar por separado de la aplicación; sin embargo, si se requiere una funcionalidad más profunda, el widget debe ser capaz de iniciar la aplicación para ver o editar una parte específica de la información. No incluya nunca un botón "abrir aplicación", simplemente permita que el usuario pulse en el propio contenido y nunca abra una aplicación de terceros.
+- **Seleccione un nombre de widget claro y conciso** : el icono de la aplicación y el nombre del widget siempre se muestran en el contenido del widget. Apple sugiere el uso del nombre de la aplicación para su widget principal y un nombre claro y conciso para cualquier otro que proporcione. Al proporcionar un título de widget personalizado, debe prefijarse con el nombre de la aplicación (por ejemplo, mapas cercanos, mapas, etc.).
+- Informar de si la **autenticación agrega valor** , si la funcionalidad o información adicional solo está disponible cuando el usuario se autentica y se inicia sesión, preséntela al usuario. Por ejemplo, una aplicación de uso compartido de conducción puede indicar "iniciar sesión en el inicio del libro".
+- **Seleccionar un widget de lista de acciones rápidas** : Si la aplicación proporciona más de un widget, el desarrollador debe elegir el que se va a presentar cuando el usuario muestre la lista de acciones rápidas aplicando presión al icono de la aplicación mediante el toque 3D.
 
-Para obtener más información sobre cómo trabajar con los widgets, consulte nuestra [Introducción a las extensiones](~/ios/platform/extensions.md), [Introducción a 3D Touch](~/ios/platform/3d-touch.md) documentación y Apple [Guía de programación de la extensión de aplicación](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html).
+Para más información sobre cómo trabajar con widgets, consulte la [Introducción a las extensiones](~/ios/platform/extensions.md), introducción a la documentación de [Touch 3D](~/ios/platform/3d-touch.md) y guía de programación de la [extensión de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html)de Apple.
 
-## <a name="working-with-vibrancy"></a>Trabajar con dinamismo
+## <a name="working-with-vibrancy"></a>Trabajar con vibrancy
 
-Dinamismo garantiza que el texto de un Widget permanece legible cuando se presentan en la luz del Widget, difuminado en segundo plano (proporcionado por el sistema). Antes de iOS 10, el desarrollador utilizaría una [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) de dinamismo del Widget. Por ejemplo:
+Vibrancy garantiza que el texto de un widget siga siendo legible cuando se presente en el fondo borroso del widget (proporcionado por el sistema). Antes de iOS 10, el desarrollador usaría un [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) para el vibrancy del widget. Por ejemplo:
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-Esto se ha desusado en iOS 10 y debe reemplazarse por un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) o un [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Por ejemplo:
+Esto está en desuso en iOS 10 y debe reemplazarse por un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) o un [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Por ejemplo:
 
 ```csharp
 // Get Primary Widget Vibrancy Effect
@@ -67,17 +67,17 @@ var vibrancy = UIVibrancyEffect.CreatePrimaryVibrancyEffectForNotificationCenter
 var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCenter ();
 ```
 
-## <a name="working-with-collapsed-and-expanded-widgets"></a>Trabajar con los Widgets contraídos y expandidos
+## <a name="working-with-collapsed-and-expanded-widgets"></a>Trabajar con widgets contraídos y expandidos
 
-Nuevo en iOS 10, widgets contienen ahora un [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) propiedad que permite al desarrollador describir el contenido que está disponible y permite al usuario expandir y contraer el contenido.
+Como novedad en iOS 10, los widgets ahora contienen una propiedad [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) que permite al desarrollador describir la cantidad de contenido disponible y permite que el usuario expanda y contraiga el contenido.
 
-Cuando inicialmente se muestra un Widget, está en estado contraído. Un Widget contraído tiene un alto de filas de tabla de aproximadamente 2,5 iOS estándar. El desarrollador puede solicitar el tamaño de un Widget expandido pero lo ideal es que debe ser menor que el alto de la pantalla. 
+Cuando se muestra inicialmente un widget, está en un estado contraído. Un widget contraído tiene un alto de aproximadamente dos y medio de filas de tabla de iOS estándar. El desarrollador puede solicitar el tamaño de un widget expandido, pero es ideal que sea menor que el alto de la pantalla. 
 
-En el estado contraído, el Widget debe mostrar información esencial solo e independiente. Cuando expandido, el Widget debe mostrar información adicional que mejora el contenido principal que se muestra en el estado contraído. Por ejemplo, la aplicación del tiempo muestra las condiciones meteorológicas actuales cuando se contrae y agrega los por hora cuando se expande de previsión.
+En el estado contraído, el widget debería mostrar solo la información esencial e independiente. Cuando se expande, el widget debe mostrar información complementaria que mejora el contenido principal que se muestra en el estado contraído. Por ejemplo, la aplicación Weather muestra las condiciones meteorológicas actuales cuando están contraídas y agrega la previsión por hora cuando se expande.
 
-Widgets que se muestra en la lista de acciones rápidas sólo estará en estado contraído. Si la aplicación proporciona más de un Widget, el desarrollador debe elegir uno para que se presentan cuando el usuario abre la lista de acciones rápidas aplicando presión en el icono de la aplicación con 3D Touch.
+Los widgets que se muestran en la lista de acciones rápidas solo estarán en el estado contraído. Si la aplicación proporciona más de un widget, el desarrollador debe elegir el que se va a presentar cuando el usuario muestre la lista de acciones rápidas aplicando presión al icono de la aplicación mediante el toque 3D.
 
-El ejemplo siguiente es de una simple hoy extensión (Widget) que controla los estados contraído y expandido:
+El ejemplo siguiente es de una extensión de hoy (widget) simple que controla los Estados contraído y expandido:
 
 ```csharp
 using System;
@@ -146,14 +146,14 @@ namespace MonkeyAbout
 }
 ```
 
-Eche un vistazo en el código específico del modo de presentación del Widget en detalle. Para informar al sistema que este Widget es compatible con el estado expandido, usa:
+Eche un vistazo al código específico del modo de presentación del widget en detalle. Para informar al sistema de que este widget es compatible con el estado expandido, usa:
 
 ```csharp
 // Tell widget it can be expanded
 ExtensionContext.SetWidgetLargestAvailableDisplayMode (NCWidgetDisplayMode.Expanded);
 ```
 
-Para configurar el modo de presentación actual del Widget, usa:
+Para obtener el modo de presentación actual del widget, se usa:
 
 ```csharp
 ExtensionContext.GetWidgetActiveDisplayMode()
@@ -166,7 +166,7 @@ Para obtener el tamaño máximo para el estado contraído o expandido, usa:
 var maxSize = ExtensionContext.GetWidgetMaximumSize (NCWidgetDisplayMode.Expanded);
 ```
 
-Y para controlar el cambio de estado (modo de presentación), utiliza:
+Y para controlar el cambio de estado (modo de presentación), usa:
 
 ```csharp
 [Export ("widgetActiveDisplayModeDidChange:withMaximumSize:")]
@@ -186,17 +186,17 @@ public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayM
 }
 ```
 
-Además de establecer el tamaño solicitado para cada estado (contraído o expandido), también actualiza el contenido que se muestra para que coincida con el nuevo tamaño.
+Además de establecer el tamaño solicitado para cada Estado (contraído o expandido), también actualiza el contenido que se muestra para que coincida con el nuevo tamaño.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se tratan las mejoras de que Apple ha realizado en el sistema de Widget en iOS 10 y se muestra cómo implementarlas en Xamarin.iOS.
+En este artículo se han explicado las mejoras que Apple ha realizado en el sistema de widgets en iOS 10 y se ha mostrado cómo implementarlas en Xamarin. iOS.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [Introducción a las extensiones](~/ios/platform/extensions.md)
-- [Introducción a 3D Touch](~/ios/platform/3d-touch.md)
-- [Guía de programación de la extensión de la aplicación](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html)
+- [Introducción a la función táctil 3D](~/ios/platform/3d-touch.md)
+- [Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html)

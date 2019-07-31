@@ -1,24 +1,24 @@
 ---
 title: Colocación de la barra de herramientas de página en Windows
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el Windows específicos de la plataforma que cambia la posición de una barra de herramientas en una página.
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma específica de Windows que cambia la posición de una barra de herramientas en una página.
 ms.prod: xamarin
 ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6b314a7864ba4c99b980f4b536a0c2103389b666
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 64a44115bcc7ee8781e308c8e116049ef3b06371
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924709"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656870"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Colocación de la barra de herramientas de página en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esta plataforma Universal de Windows específicos de la plataforma se usan para cambiar la ubicación de una barra de herramientas en un [ `Page` ](xref:Xamarin.Forms.Page)y se consume en XAML estableciendo el [ `Page.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) propiedad adjunta un valor de la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumeración:
+Esta plataforma universal de Windows específica de la plataforma se usa para cambiar la posición de una barra de [`Page`](xref:Xamarin.Forms.Page)herramientas en un y se consume en XAML [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) estableciendo la propiedad adjunta en un valor [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) de la enumeración:
 
 ```xaml
 <TabbedPage ...
@@ -46,6 +46,6 @@ El resultado es que la selección de ubicación de la barra de herramientas espe
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

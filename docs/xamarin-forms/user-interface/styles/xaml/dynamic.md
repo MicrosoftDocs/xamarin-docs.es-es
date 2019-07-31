@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 72475d4b811cb33d2e716fc6ab4e2d169a75c801
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354079"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647224"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Los estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si se modifica una de las instancias de establecedor, quitar, o una nueva instancia de establecedor agregado, los cambios no se aplicará al elemento visual. Sin embargo, las aplicaciones pueden responder a cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos._
 
@@ -211,8 +211,8 @@ El `tealSearchBarStyle` se asigna directamente a la [ `Style` ](xref:Xamarin.For
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos dinámicos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Trabajar con estilos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Estilos dinámicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Establecedor](xref:Xamarin.Forms.Setter)

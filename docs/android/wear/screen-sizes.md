@@ -1,35 +1,35 @@
 ---
-title: Trabajar con tamaños de pantalla en el SO de Xamarin.Android y Wear
+title: Trabajar con tamaños de pantalla en Xamarin. Android y desgaste del SO
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: a9b71fb069a428d9bec03481c986f4deb4c904ea
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 93e6797f2b00df32b8d3ae361f40fd487b7adac3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827738"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647727"
 ---
 # <a name="working-with-screen-sizes"></a>Trabajar con tamaños de pantalla
 
-Los dispositivos Android Wear pueden tener un rectangular o una presentación de redondeo, que también puede ser diferentes tamaños.
+Los dispositivos de desgaste de Android pueden tener una pantalla rectangular o redonda, que también puede tener tamaños diferentes.
 
-![Muestra las capturas de pantalla de desgaste rectangular y redondeo](screen-sizes-images/moyeu-wear.png)
+![Capturas de pantallas de los desgastes rectangulares y redondos](screen-sizes-images/moyeu-wear.png)
 
-## <a name="identifying-screen-type"></a>Que identifica el tipo de pantalla
+## <a name="identifying-screen-type"></a>Tipo de pantalla de identificación
 
-La biblioteca de compatibilidad de desgaste proporciona algunos controles que le ayudan a detectan y adaptan a las formas de pantalla diferentes, tales como `WatchViewStub` y `BoxInsetLayout`.
+La biblioteca de soporte técnico de desgaste proporciona algunos controles que le ayudan a detectar y adaptarse a diferentes formas `WatchViewStub` de `BoxInsetLayout`pantalla, como y.
 
-Tenga en cuenta que algunas de las otras admiten controles de la biblioteca (por ejemplo, `GridViewPager`) *automáticamente* detectar de forma de pantalla a sí mismos y no debe agregarse como elementos secundarios de los controles se describen a continuación.
+Tenga en cuenta que algunos de los otros controles de la biblioteca de `GridViewPager`compatibilidad (como) detectan *automáticamente* la forma de pantalla y no deben agregarse como elementos secundarios de los controles que se describen a continuación.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
-Consulte la [WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/) ejemplo para ver cómo detectar el tipo de pantalla y mostrar un diseño diferente para cada tipo.
+Vea el ejemplo de [WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) para ver cómo detectar el tipo de pantalla y mostrar un diseño diferente para cada tipo.
 
-El archivo de diseño principal contiene un `android.support.wearable.view.WatchViewStub` que hace referencia a diferentes diseños de pantallas rectangulares y redondear mediante el `app:rectLayout` y `app:roundLayout` atributos:
+El archivo de diseño principal contiene `android.support.wearable.view.WatchViewStub` un que hace referencia a diferentes diseños para pantallas rectangulares y `app:rectLayout` redondas usando los atributos y `app:roundLayout` :
 
 ```xml
 <android.support.wearable.view.WatchViewStub
@@ -41,48 +41,48 @@ El archivo de diseño principal contiene un `android.support.wearable.view.Watch
   app:roundLayout="@layout/round_layout" />
 ```
 
-La solución contiene diseños diferentes para cada estilo que se seleccionará en tiempo de ejecución:
+La solución contiene diferentes diseños para cada estilo que se seleccionarán en tiempo de ejecución:
 
-![Archivos que se muestran en los recursos y diseño](screen-sizes-images/solution.png)
+![Archivos que se muestran en recursos/diseño](screen-sizes-images/solution.png)
 
 
 ### <a name="boxinsetlayout"></a>BoxInsetLayout
 
-En lugar de crear diseños diferentes para cada tipo de pantalla, también puede crear una vista única que se adapta a las pantallas redondeadas o rectangulares.
+En lugar de crear diseños diferentes para cada tipo de pantalla, también puede crear una vista única que se adapte a pantallas rectangulares o redondas.
 
-Esto [ejemplo Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) se muestra cómo usar el `BoxInsetLayout` para usar el mismo diseño de pantallas rectangulares y round.
+En este [ejemplo de Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) se muestra cómo `BoxInsetLayout` usar el para usar el mismo diseño en pantallas rectangulares y redondas.
 
 
-## <a name="wear-ui-designer"></a>Use el Diseñador de interfaz de usuario
+## <a name="wear-ui-designer"></a>Diseñador de IU de desgaste
 
-El Diseñador de Android de Xamarin es compatible con pantallas rectangulares y redondeo:
+Xamarin Android Designer admite pantallas rectangulares y redondas:
 
-![Selección de la pantalla de Android Wear cuadrado en el Diseñador de Android de Xamarin](screen-sizes-images/design-screen-type.png)
+![Selección de la pantalla cuadrada del desgaste de Android en la Android Designer de Xamarin](screen-sizes-images/design-screen-type.png)
 
-Aquí se muestra la superficie de diseño rectangular estilo:
+Aquí se muestra la superficie de diseño en estilo rectangular:
 
 ![Superficie de diseño en estilo rectangular](screen-sizes-images/design-rect.png) 
 
-La superficie de diseño en el estilo de redondeo se muestra aquí:
+Aquí se muestra la superficie de diseño en el estilo redondo:
 
-![Superficie de diseño en el estilo de redondeo](screen-sizes-images/design-round.png)
+![Superficie de diseño en estilo redondo](screen-sizes-images/design-round.png)
 
 
-## <a name="wear-simulator"></a>Usar el simulador
+## <a name="wear-simulator"></a>Simulador de desgaste
 
-El **Google Emulator Manager** contiene las definiciones de dispositivos para ambos tipos de pantalla. Puede crear emuladores rectangulares y round para probar la aplicación.
+El **Administrador** del emulador de Google contiene definiciones de dispositivos para ambos tipos de pantalla. Puede crear emuladores rectangulares y redondos para probar la aplicación.
 
-![Use las definiciones de dispositivos que se muestra en el Administrador de emuladores de Google](screen-sizes-images/emulator-devices.png)
+![Desgaste de las definiciones de dispositivos que se muestran en el administrador de emuladores de Google](screen-sizes-images/emulator-devices.png)
 
-El emulador se representará de forma similar al siguiente para una pantalla rectangular:
+El emulador se representará como esto para una pantalla rectangular:
 
-![Emulador de la representación de una pantalla rectangular](screen-sizes-images/recipe-2.png) 
+![Representación del emulador de una pantalla rectangular](screen-sizes-images/recipe-2.png) 
 
-Se representará de forma similar al siguiente para una pantalla redonda:
+Se representará como esto para una pantalla redonda:
 
-![Emulador de la representación de una pantalla redonda](screen-sizes-images/recipe-2-round.png)
+![Representación del emulador de una pantalla redonda](screen-sizes-images/recipe-2-round.png)
 
 ## <a name="video"></a>Vídeo
 
-[Aplicaciones de pantalla completa para Android Wear](https://www.youtube.com/watch?v=naf_WbtFAlY) desde [developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
+[Aplicaciones de pantalla completa para el desgaste de Android](https://www.youtube.com/watch?v=naf_WbtFAlY) desde [developers.Google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
 

@@ -1,6 +1,6 @@
 ---
-title: Vistas de la pila de Xamarin.iOS
-description: En este artículo se describe el uso el nuevo control UIStackView en una aplicación de Xamarin.iOS para administrar un conjunto de subvistas en cualquiera una pila organizada horizontalmente o verticalmente.
+title: Vistas de pila en Xamarin. iOS
+description: En este artículo se describe cómo usar el nuevo control UIStackView en una aplicación de Xamarin. iOS para administrar un conjunto de subvistas en una pila organizada horizontal o verticalmente.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
@@ -8,79 +8,79 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 88496452595f308c97d26d0f27fae305baef894f
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5519f6e5b1bb0b63ab3169dd8f48f2f87a025ba5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830823"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642814"
 ---
-# <a name="stack-views-in-xamarinios"></a>Vistas de la pila de Xamarin.iOS
+# <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin. iOS
 
-_En este artículo se describe el uso el nuevo control UIStackView en una aplicación de Xamarin.iOS para administrar un conjunto de subvistas en cualquiera una pila organizada horizontalmente o verticalmente._
+_En este artículo se describe cómo usar el nuevo control UIStackView en una aplicación de Xamarin. iOS para administrar un conjunto de subvistas en una pila organizada horizontal o verticalmente._
 
 > [!IMPORTANT]
-> Tenga en cuenta que mientras StackView es compatible con el Diseñador de iOS, puede producirse errores de facilidad de uso al usar el canal estable. Cambiar los canales alfa o Beta debe mitigar este problema. Hemos decidido presentar este tutorial con Xcode hasta que se implementan las correcciones necesarias en el canal estable.
+> Tenga en cuenta que, aunque se admite StackView en el diseñador de iOS, pueden producirse errores de facilidad de uso al usar el canal estable. El cambio de los canales beta o alfa debe aliviar este problema. Hemos decidido presentar este tutorial con Xcode hasta que las correcciones necesarias se implementen en el canal estable.
 
-El control de vista de pila (`UIStackView`) aprovecha la eficacia del diseño automático y las clases de tamaño para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente para el tamaño de pantalla y la orientación del dispositivo iOS.
+El control de vista de`UIStackView`pila () aprovecha la eficacia de las clases de diseño y tamaño automáticos para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a la orientación y el tamaño de pantalla del dispositivo iOS.
 
-En función de propiedades definido por el desarrollador como eje, distribución, alineación y espaciado administra el diseño de todas las subvistas asociada a una vista de pila:
+El diseño de todas las subvistas adjuntas a una vista de pila se administra en función de las propiedades definidas por el desarrollador como el eje, la distribución, la alineación y el espaciado:
 
-[![](uistackview-images/stacked01.png "Diagrama de diseño de la vista de pila")](uistackview-images/stacked01.png#lightbox)
+[![](uistackview-images/stacked01.png "Diagrama de diseño de vista de pila")](uistackview-images/stacked01.png#lightbox)
 
-Cuando se usa un `UIStackView` en una aplicación de Xamarin.iOS, el desarrollador puede definir las subvistas ya sea dentro de un guión gráfico en el Diseñador de iOS, así como agregar y quitar subvistas en código C#.
+Cuando se usa `UIStackView` un en una aplicación de Xamarin. iOS, el desarrollador puede definir las subvistas dentro de un guion gráfico en el diseñador de iOS o agregando y quitando subvistas en C# el código.
 
-Este documento se compone de dos partes: un inicio rápido para ayudarle a implementar su primera pila ver y, a continuación, algunos detalles más técnicos acerca de cómo funciona.
+Este documento consta de dos partes: una guía de inicio rápido que le ayuda a implementar su primera vista de pila y, a continuación, algunos detalles técnicos sobre cómo funciona.
 
 > [!VIDEO https://youtube.com/embed/p3po6507Ip8]
 
-**Vídeo UIStackView**
+**Vídeo de UIStackView**
 
-## <a name="uistackview-quickstart"></a>Guía de inicio rápido de UIStackView
+## <a name="uistackview-quickstart"></a>Inicio rápido de UIStackView
 
-Como una introducción rápida a la `UIStackView` control, vamos a crear una interfaz simple que permite al usuario que escriba una calificación de 1 a 5. Vamos a usar dos vistas de la pila: uno para organizar la interfaz verticalmente en el dispositivo de la pantalla y uno para organizar los iconos de clasificación de 1 a 5 horizontalmente por la pantalla.
+Como introducción rápida al `UIStackView` control, vamos a crear una interfaz simple que permite al usuario escribir una clasificación de 1 a 5. Usaremos dos vistas de pila: una para organizar la interfaz verticalmente en la pantalla del dispositivo y otra para organizar los iconos de clasificación de 1-5 horizontalmente a lo largo de la pantalla.
 
 ### <a name="define-the-ui"></a>Definir la interfaz de usuario
 
-Iniciar un nuevo proyecto de Xamarin.iOS y editar la **Main.storyboard** archivo en Interface Builder de Xcode. En primer lugar, arrastre un único **vista de pila Vertical** en el **View Controller**:
+Inicie un nuevo proyecto de Xamarin. iOS y edite el archivo **Main. Storyboard** en la Interface Builder de Xcode. En primer lugar, arrastre una sola **vista de pila vertical** en el **controlador de vista**:
 
-[![](uistackview-images/quick01.png "Arrastre una sola vista de pila Vertical en el controlador de vista")](uistackview-images/quick01.png#lightbox)
+[![](uistackview-images/quick01.png "Arrastrar una sola vista de pila vertical en el controlador de vista")](uistackview-images/quick01.png#lightbox)
 
 En el **Inspector de atributos**, establezca las siguientes opciones:
 
-[![](uistackview-images/quick02.png "Establecer las opciones de vista de pila")](uistackview-images/quick02.png#lightbox)
+[![](uistackview-images/quick02.png "Establecer las opciones de la vista de pila")](uistackview-images/quick02.png#lightbox)
 
 Dónde:
 
-- **Eje** : determina si la vista de pila organiza las subvistas bien **horizontalmente** o **verticalmente**.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
-- **Distribución** : controla cómo se cambia el tamaño de las subvistas dentro de la vista de pila.
-- **Espaciado** : controla el espacio mínimo entre cada vista secundaria en la vista de pila.
-- **Línea base relativa** : si se activa, el espaciado vertical de cada vista secundaria se deriva de su línea base.
-- **Diseño márgenes relativa** : coloca las subvistas respecto a los márgenes de diseño estándar.
+- **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
+- **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.
+- **Referencia relativa** : si se activa, el espaciado vertical de cada subvista se derivará de su línea base.
+- **Márgenes de diseño relativos** : coloca las subvistas en relación con los márgenes de diseño estándar.
 
-Cuando se trabaja con una vista de pila, se puede considerar el **alineación** como el **X** y **Y** ubicación de la vista secundaria y la **distribución** como la **Alto** y **ancho**.
+Al trabajar con una vista de pila, puede pensar en la **alineación** como **la ubicación** **X** e y de la subvista y la **distribución** como el **alto** y el **ancho**.
 
 > [!IMPORTANT]
-> `UIStackView` se ha diseñado como una vista del contenedor no son de representación y por lo tanto, no se dibuja en el lienzo, al igual que otras subclases de `UIView`. Por lo tanto establecer propiedades como `BackgroundColor` o invalidar `DrawRect` no tendrá ningún efecto visual.
+> `UIStackView`está diseñada como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Por lo tanto, establecer `BackgroundColor` propiedades como o `DrawRect` invalidar no tendrá ningún efecto visual.
 
-Continúa con el diseño de interfaz de la aplicación mediante la adición de una etiqueta, ImageView, dos botones y una vista de pila Horizontal para que se parezca al siguiente:
+Continúe con el diseño de la interfaz de la aplicación agregando una etiqueta, ImageView, dos botones y una vista de pila horizontal para que sea similar a lo siguiente:
 
 [![](uistackview-images/quick03.png "Diseñar la interfaz de usuario de la vista de pila")](uistackview-images/quick03.png#lightbox)
 
-Configurar la vista de pila Horizontal con las siguientes opciones:
+Configure la vista de pila horizontal con las siguientes opciones:
 
-[![](uistackview-images/quick04.png "Configurar las opciones de vista de pila Horizontal")](uistackview-images/quick04.png#lightbox)
+[![](uistackview-images/quick04.png "Configurar las opciones de la vista de pila horizontal")](uistackview-images/quick04.png#lightbox)
 
-Porque no queremos el icono que representa cada "punto" en la clasificación para estirarla cuando se agrega a la vista de pila Horizontal, hemos establecido el **alineación** a **Center** y  **Distribución** a **rellenar igualmente**.
+Dado que no queremos que el icono que representa cada "punto" de la clasificación se estire cuando se agrega a la vista de pila horizontal, hemos establecido la **alineación** en **Center** y la **distribución** para rellenar por **igual**.
 
-Por último, conectar los siguientes **salidas** y **acciones**:
+Por último, conecte las siguientes **salidas** y **acciones**:
 
-[![](uistackview-images/quick05.png "Las salidas de la vista de pila y las acciones")](uistackview-images/quick05.png#lightbox)
+[![](uistackview-images/quick05.png "Las salidas y acciones de la vista de pila")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>Rellenar un UIStackView desde el código
 
-Vuelva a Visual Studio para Mac y edite el **ViewController.cs** archivo y agregue el código siguiente:
+Vuelva a Visual Studio para Mac y edite el archivo **ViewController.CS** y agregue el código siguiente:
 
 ```csharp
 public int Rating { get; set;} = 0;
@@ -132,32 +132,32 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Echemos un vistazo a algunas partes de este código en detalle. En primer lugar, usamos un `if` instrucciones para comprobar que no hay más de cinco "estrellas" o menor que cero.
+Echemos un vistazo a algunas partes de este código en detalle. En primer lugar, usamos `if` una instrucción para comprobar que no hay más de cinco "estrellas" o menor que cero.
 
-Para agregar una nueva "estrella" cargamos su imagen y establezca su **modo contenido** a **escalar Ajustar aspecto**:
+Para agregar una nueva "estrella", se carga su imagen y se establece su **modo de contenido** en **ajuste de escala**:
 
 ```csharp
 var icon = new UIImageView (new UIImage("icon.png"));
 icon.ContentMode = UIViewContentMode.ScaleAspectFit;
 ```
 
-Esto impide que el icono de "estrella" está distorsionado cuando se agrega a la vista de pila.
+Esto evita que el icono de "estrella" se distorsione cuando se agrega a la vista de pila.
 
-A continuación, se agrega el nuevo icono de "estrella" a la colección de vistas de la pila subvistas:
+A continuación, se agrega el nuevo icono de "estrella" a la colección de subvistas de la vista de pila:
 
 ```csharp
 RatingView.AddArrangedSubview(icon);
 ```
 
-Observará que se ha agregado el `UIImageView` a la `UIStackView`del `ArrangedSubviews` propiedad y no en el `SubView`. Cualquier vista que desea que la vista de pila para controlar su diseño debe agregarse a la `ArrangedSubviews` propiedad.
+Observará `UIImageView` que hemos agregado a la `UIStackView`propiedad del `ArrangedSubviews` y no a `SubView`. Cualquier vista que desee que la vista de pila controle su diseño debe agregarse a `ArrangedSubviews` la propiedad.
 
-Para quitar una vista secundaria desde una vista de pila, primero se obtiene la vista secundaria para quitar:
+Para quitar una vista previa de una vista de pila, primero se obtiene la subvista que se va a quitar:
 
 ```csharp
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-A continuación, necesitamos quitarlo de ambos el `ArrangedSubviews` recopilación y la vista Super:
+A continuación, es necesario quitarlo de la `ArrangedSubviews` colección y de la vista superior:
 
 ```csharp
 // Remove from stack and screen
@@ -165,96 +165,96 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Quitar una vista secundaria de solo el `ArrangedSubviews` colección se toma del control de la vista de pila, pero no se quita de la pantalla.
+Quitar una vista previa de la `ArrangedSubviews` colección lo saca del control de la vista de pila, pero no la quita de la pantalla.
 
 ### <a name="testing-the-ui"></a>Probar la interfaz de usuario
 
-Con todas las necesarias elementos de interfaz de usuario y código en su lugar, ahora puede ejecutar y probar la interfaz. Cuando se muestre la interfaz de usuario, todos los elementos en la vista de pila Vertical estarán espaciados igualmente de arriba a abajo.
+Con todos los elementos de interfaz de usuario y el código necesarios, ahora puede ejecutar y probar la interfaz. Cuando se muestra la interfaz de usuario, todos los elementos de la vista de pila vertical se espaciarán uniformemente de arriba abajo.
 
-Cuando el usuario pulsa el **aumentar clasificación** botón, se agrega otro "estrella" a la pantalla (hasta un máximo de 5):
+Cuando el usuario pulsa el botón **aumentar clasificación** , se agrega otra "estrella" a la pantalla (hasta un máximo de 5):
 
 [![](uistackview-images/intro01.png "Ejecución de la aplicación de ejemplo")](uistackview-images/intro01.png#lightbox)
 
-El "estrellas" se centra automáticamente y distribuidas uniformemente en la vista de pila Horizontal. Cuando el usuario pulsa el **Disminuir clasificación** botón, una "estrella" se quitará (hasta que se dejan ninguno).
+Las "estrellas" se centrarán automáticamente y se distribuirán uniformemente en la vista de pila horizontal. Cuando el usuario pulsa el botón **disminuir clasificación** , se quita una "estrella" (hasta que no quede ninguno).
 
-## <a name="stack-view-details"></a>Ver detalles de la pila
+## <a name="stack-view-details"></a>Detalles de la vista de pila
 
-Ahora que tenemos una idea general de lo que el `UIStackView` control es y cómo funciona, echemos un vistazo más profundo a algunas de sus características y detalles.
+Ahora que tenemos una idea general de lo que es `UIStackView` el control y cómo funciona, echemos un vistazo más profundo a algunas de sus características y detalles.
 
-### <a name="auto-layout-and-size-classes"></a>Diseño automático y las clases de tamaño
+### <a name="auto-layout-and-size-classes"></a>Clases de diseño y tamaño automáticos
 
-Como hemos visto anteriormente, cuando una vista secundaria se agrega a una vista de pila su diseño se controla completamente mediante esa vista de pila con diseño automático y las clases de tamaño para colocar y cambiar el tamaño de las vistas organizadas.
+Como vimos anteriormente, cuando se agrega una subvista a una vista de pila, su diseño está totalmente controlado por esa vista de pila con las clases de diseño y tamaño automáticas para colocar y cambiar el tamaño de las vistas organizadas.
 
-La vista de pila le _pin_ la vista de primera y última secundaria en su colección a la **superior** y **inferior** bordes para las vistas de pila Vertical o el **deja**y **derecha** bordes para las vistas de pila Horizontal. Si establece la `LayoutMarginsRelativeArrangement` propiedad `true`, a continuación, la vista ancla las subvistas a los márgenes pertinentes en lugar del borde.
+La vista de pila _anclará_ la primera y la última subvista de su colección a los bordes **superior** e **inferior** de las vistas de pila verticales o los bordes **izquierdo** y **derecho** de las vistas de pila horizontal. Si establece la `LayoutMarginsRelativeArrangement` propiedad en `true`, la vista ancla las subvistas a los márgenes relevantes en lugar del borde.
 
-La vista de pila se usa la vista de secundaria `IntrinsicContentSize` propiedad al calcular el tamaño de las subvistas a lo largo de las personalizaciones definidas `Axis` (excepto para el `FillEqually Distribution`). El `FillEqually Distribution` cambia el tamaño de todas las subvistas para que sean del mismo tamaño, rellenar, por tanto, la vista de pila a lo largo del `Axis`.
+La vista de pila usa la propiedad de `IntrinsicContentSize` la subvista al calcular el tamaño de las subvistas `Axis` a lo largo del `FillEqually Distribution`definido (excepto para). Cambia el tamaño de todas las subvistas para que tengan el mismo tamaño, rellenando así la vista de pila a lo largo del `Axis`. `FillEqually Distribution`
 
-Con la excepción de la `Fill Alignment`, la vista de pila se usa la vista de secundaria `IntrinsicContentSize` propiedad para calcular el tamaño de la vista perpendicular a la determinada `Axis`. Para el `Fill Alignment`, todas las subvistas el tamaño se ajusta para que rellenen perpendicular a la vista de pila el determinado `Axis`.
+A excepción de `Fill Alignment`, la vista de pila usa la `IntrinsicContentSize` propiedad de la subvista para calcular el tamaño de la vista perpendicular a la determinada `Axis`. En el `Fill Alignment`caso de, se ajusta el tamaño de todas las subvistas para que rellenen `Axis`la vista de pila perpendicular a la determinada.
 
-### <a name="positioning-and-sizing-the-stack-view"></a>Posición y cambio de tamaño de la vista de pila
+### <a name="positioning-and-sizing-the-stack-view"></a>Colocar y ajustar el tamaño de la vista de pila
 
-Mientras que la vista de la pila tiene control total sobre el diseño de cualquier vista secundaria (según las propiedades como `Axis` y `Distribution`), deberá colocar la vista de pila (`UIStackView`) de esta vista primaria con diseño automático y las clases de tamaño.
+Mientras que la vista de pila tiene control total sobre el diseño de cualquier subvista (basándose en `Axis` propiedades `Distribution`como y), es necesario colocar la vista de pila`UIStackView`() dentro de su vista primaria mediante las clases de diseño y tamaño automáticas.
 
-Por lo general, esto significa que al menos dos bordes de la vista de pila para expandir y contraer, definiendo así su posición de anclaje. Sin restricciones adicionales, la vista de pila se ajustará automáticamente para ajustarse a todos sus subvistas como sigue:
+Por lo general, esto significa anclar al menos dos bordes de la vista de pila para expandir y contraer, lo que define su posición. Sin restricciones adicionales, se cambiará automáticamente el tamaño de la vista de pila para ajustarse a todas sus subvistas de la manera siguiente:
 
-- El tamaño a lo largo de su `Axis` será la suma de todos los tamaños de la vista secundaria más cualquier espacio que se ha definido entre cada vista secundaria.
-- Si el `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de la pila también incluirá espacio para los márgenes.
-- El tamaño perpendicular a la `Axis` se establecerá en la vista secundaria más grande en la colección.
+- El tamaño a lo `Axis` largo de su será la suma de todos los tamaños de las subvistas más el espacio definido entre cada subvista.
+- Si la `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de pila también incluirá espacio para los márgenes.
+- El tamaño perpendicular al `Axis` se establecerá en la subvista más grande de la colección.
 
-Además, puede especificar restricciones para la vista de pila **alto** y **ancho**. En este caso, las subvistas se debe disponer (tamaño) para rellenar el espacio especificado por la vista de pila según lo determinado por la `Distribution` y `Alignment` propiedades.
+Además, puede especificar restricciones para el **alto** y el **ancho**de la vista de pila. En este caso, las subvistas se colocarán (con el tamaño) para rellenar el espacio especificado por la vista de `Distribution` pila `Alignment` , según lo determinado por las propiedades y.
 
-Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se dispondrán en función de la línea de base de la primera o última vista secundaria, en lugar de usar el **superior**, **inferior** o **Center** -  **Y** posición. Estos se calculan en el contenido de la vista de pila como sigue:
+Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organizarán en función de la primera o la última línea de base de la subvista, en lugar de usar la posición **superior**, **inferior** o **central**- **Y** . Se calculan en el contenido de la vista de pila como se indica a continuación:
 
-- Una vista de pila Vertical devolverá la primera vista de secundaria para la primera línea de base y la última durante los últimos. Si cualquiera de estos subvistas son vistas de pila, se usará su línea base primero o último.
-- Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta también es una pila, usará vista secundaria más alto el es como la línea base.
+- Una vista de pila vertical devolverá la primera subvista de la primera línea de base y la última para la última. Si alguna de estas subvistas son vistas de pila, se usará su primera o última línea base.
+- Una vista de pila horizontal usará su subvista más alta para la primera y la última línea de base. Si la vista más alta también es una vista de pila, usará la subvista más alta como línea de base.
 
 > [!IMPORTANT]
-> Alineación de línea base no funciona en los tamaños de la vista secundaria ajustada o comprimidos se calculará la línea base para una posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
+> La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto**de la vista de contenido intrínseca.
 
-### <a name="common-stack-view-uses"></a>Usos comunes de vista de pila
+### <a name="common-stack-view-uses"></a>Usos comunes de la vista de pila
 
-Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Función de Apple, estos son algunos de los usos más comunes:
+Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Según Apple, estos son algunos de los usos más comunes:
 
-- **Definir el tamaño a lo largo del eje** : Anclando los dos bordes a lo largo de la vista de pila `Axis` y uno de los bordes adyacentes para establecer la posición, la pila de vista crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
-- **Definir la posición de la vista secundaria** – Anclando con bordes adyacentes de la vista de pila para su vista primaria, la vista de pila crecerá en ambas dimensiones para ajustarse a su contenedor subvistas.
-- **Definir el tamaño y posición de la pila** – Anclando los cuatro bordes de la vista de pila para la vista primaria, la vista de pila organiza las subvistas según el espacio definido dentro de la vista de pila.
-- **Definir el tamaño Perpendicular al eje** : Anclando ambos perpendicular bordes a la vista de pila `Axis` y uno de los bordes del eje para establecer la posición, la pila de vista crecerá perpendicular al eje para ajustarse al espacio definido por su subvistas.
+- **Defina el tamaño a lo largo del eje** : al anclar ambos bordes a lo `Axis` largo de la vista de pila y uno de los bordes adyacentes para establecer la posición, la vista de pila crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
+- **Definir la posición de** la subvista: al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
+- **Definir el tamaño y la posición de la pila** : al anclar los cuatro bordes de la vista de pila a la vista primaria, la vista de pila organiza las subvistas en función del espacio definido en la vista de pila.
+- **Defina el tamaño perpendicular al eje** : al anclar ambos bordes perpendiculares a la vista `Axis` de pila y uno de los bordes a lo largo del eje para establecer la posición, la vista de pila aumentará de forma perpendicular al eje para ajustarse al espacio definido por sus subvistas.
 
-### <a name="managing-the-appearance"></a>Administración de la apariencia
+### <a name="managing-the-appearance"></a>Administrar la apariencia
 
-El `UIStackView` está diseñado como una vista del contenedor no son de representación y por lo tanto, no se dibuja en el lienzo, al igual que otras subclases de `UIView`. Establecer propiedades tales como `BackgroundColor` o invalidar `DrawRect` no tendrá ningún efecto visual.
+El `UIStackView` está diseñado como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Establecer propiedades como `BackgroundColor` o reemplazar `DrawRect` no tendrá ningún efecto visual.
 
-Hay varias propiedades que controlan cómo organizará una vista de pila a su colección de las subvistas:
+Hay varias propiedades que controlan el modo en que una vista de pila organizará su colección de subvistas:
 
-- **Eje** : determina si la vista de pila organiza las subvistas bien **horizontalmente** o **verticalmente**.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
-- **Distribución** : controla cómo se cambia el tamaño de las subvistas dentro de la vista de pila.
-- **Espaciado** : controla el espacio mínimo entre cada vista secundaria en la vista de pila.
-- **Línea base relativa** : si `true`, el espaciado vertical de cada vista secundaria se deriva de su línea base.
-- **Diseño márgenes relativa** : coloca las subvistas respecto a los márgenes de diseño estándar.
+- **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
+- **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.
+- **Referencia relativa** : Si `true`es, el espaciado vertical de cada subvista se derivará de su línea base.
+- **Márgenes de diseño relativos** : coloca las subvistas en relación con los márgenes de diseño estándar.
 
-Normalmente, usará una vista de pila para organizar un pequeño número de subvistas. Interfaces de usuario más complejas se pueden crear mediante el anidamiento de una o varias vistas de pila dentro de otros (como hicimos en el [UIStackView Quickstart](#uistackview-quickstart) anteriormente).
+Normalmente, usará una vista de pila para organizar un número pequeño de subvistas. Se pueden crear interfaces de usuario más complejas mediante el anidamiento de una o varias vistas de pila dentro de otras (como hicimos en el [Inicio rápido de UIStackView](#uistackview-quickstart) anterior).
 
-Puede ajustar aún más la apariencia de las interfaces de usuario agregando restricciones adicionales a las subvistas (por ejemplo, al control el alto o ancho). Sin embargo, debe tener cuidado para que no incluya restricciones en conflicto para los introducidos por la vista de pila propio.
+Puede ajustar aún más la apariencia de la IU agregando restricciones adicionales a las subvistas (por ejemplo, para controlar el alto o el ancho). Sin embargo, se debe tener cuidado de no incluir restricciones conflictivas a las introducidas por la propia vista de pila.
 
-### <a name="maintaining-arranged-views-and-sub-views-consistency"></a>Mantener organizan las vistas y la coherencia de las vistas de Sub
+### <a name="maintaining-arranged-views-and-sub-views-consistency"></a>Mantener la coherencia de vistas y vistas secundarias organizadas
 
-La vista de pila se asegurará de que su `ArrangedSubviews` propiedad siempre es un subconjunto de sus `Subviews` propiedad utilizando las reglas siguientes:
+La vista de pila garantizará que `ArrangedSubviews` su propiedad sea siempre un subconjunto `Subviews` de su propiedad mediante las siguientes reglas:
 
-- Si se agrega una vista secundaria a la `ArrangedSubviews` colección, automáticamente se agregará a la `Subviews` colección (a menos que ya forme parte de esa colección).
-- Si se quita una vista secundaria de la `Subviews` colección (quitado de pantalla), también se quitará el `ArrangedSubviews` colección.
-- Quitar una vista secundaria desde la `ArrangedSubviews` colección no quita de la `Subviews` colección. Por lo que ya no se distribuyen por la vista de pila, pero seguirán estando visible en pantalla.
+- Si se agrega una subvista a la `ArrangedSubviews` colección, se agregará automáticamente a la `Subviews` colección (a menos que ya forme parte de la misma).
+- Si se quita una subvista de la `Subviews` colección (se quita de la pantalla), también se quita de `ArrangedSubviews` la colección.
+- Quitar una vista previa de la `ArrangedSubviews` colección no la quita de la `Subviews` colección. Por lo tanto, la vista de pila ya no lo colocará, pero seguirá estando visible en la pantalla.
 
-El `ArrangedSubviews` colección siempre es un subconjunto de los `Subview` colección, pero el orden de las subvistas individuales dentro de cada colección es independiente y controlada por el texto siguiente:
+La `ArrangedSubviews` colección siempre es un subconjunto de `Subview` la colección; sin embargo, el orden de las subvistas individuales dentro de cada colección es independiente y controlado por lo siguiente:
 
-- El orden de las subvistas dentro de la `ArrangedSubviews` colección determinar su orden de visualización dentro de la pila.
-- El orden de las subvistas dentro de la `Subview` colección determina el orden Z (o en capas) dentro de la vista atrás hacia delante.
+- El orden de las subvistas dentro de `ArrangedSubviews` la colección determina su orden de presentación dentro de la pila.
+- El orden de las subvistas dentro de `Subview` la colección determina el orden Z (o la disposición en capas) en la vista de vuelta al frente.
 
-### <a name="dynamically-changing-content"></a>Cambiar dinámicamente el contenido
+### <a name="dynamically-changing-content"></a>Cambiar el contenido dinámicamente
 
-Una vista de pila se ajustará automáticamente el diseño de las subvistas cuando una vista secundaria se agrega, quita u oculta. También se ajuste el diseño si se ajusta a cualquier propiedad de la vista de pila (como su `Axis`).
+Una vista de pila ajustará automáticamente el diseño de las subvistas cada vez que se agregue, quite u oculte una vista previa. El diseño también se ajustará si se ajusta alguna propiedad de la vista de pila (por ejemplo `Axis`, su).
 
-Mediante la colocación de un bloque de animación, por ejemplo, se pueden animar los cambios de diseño:
+Los cambios de diseño se pueden animar colocándolos en un bloque de animación, por ejemplo:
 
 ```csharp
 // Animate stack
@@ -264,19 +264,19 @@ UIView.Animate(0.25, ()=>{
 });
 ```
 
-Muchas de las propiedades de la vista de la pila pueden especificarse mediante las clases de tamaño en un guión gráfico. Estas propiedades estarán automáticamente animado es la respuesta a cambios de tamaño o la orientación.
+Muchas de las propiedades de la vista de pila se pueden especificar utilizando clases de tamaño dentro de un guion gráfico. Estas propiedades se animarán automáticamente como respuesta a los cambios de tamaño o orientación.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha cubierto el nuevo `UIStackView` control (para iOS 9) para administrar un conjunto de subvistas en una pila bien organizada horizontalmente o verticalmente en una aplicación de Xamarin.iOS.
-Se inició con un ejemplo sencillo de usar vistas de pila para crear una interfaz de usuario y finaliza con una visión más detallada de las vistas de la pila y sus propiedades y características.
+En este artículo se ha tratado `UIStackView` el nuevo control (para iOS 9) para administrar un conjunto de subvistas en una pila organizada horizontal o verticalmente en una aplicación de Xamarin. iOS.
+Comenzó con un ejemplo sencillo del uso de vistas de pila para crear una interfaz de usuario y finalizó con una visión más detallada de las vistas de pila y sus propiedades y características.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
-- [Novedades de iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [Novedades de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Referencia de UIStackView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)
 - [Introducción a UIStackView (vídeo)](https://university.xamarin.com/lightninglectures/introducing-uistackview-on-ios9)

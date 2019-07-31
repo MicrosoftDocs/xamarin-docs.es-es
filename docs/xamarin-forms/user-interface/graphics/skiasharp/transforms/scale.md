@@ -7,16 +7,16 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2e9259bed6ad0ae5a926cb75ea74c1f379897220
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61190598"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649288"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Detectar la transformación de escala para el escalado de objetos para diversos tamaños de SkiaSharp_
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Tal vez se pregunte: ¿Cómo afecta los factores de escala el valor devuelto de la `MeasureText` método `SKPaint`? La respuesta es: No, en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
+Puede que se pregunte: ¿Cómo afectan los factores de escala al valor devuelto `MeasureText` desde el `SKPaint`método de? La respuesta es la siguiente: No, en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
 
 Como puede ver, todo lo que se dibuja después el `Scale` llamar aumenta proporcionalmente:
 
@@ -251,7 +251,7 @@ El `pathBounds` rectángulo es obtenido en la parte superior de este código y, 
 
 [![](scale-images/anisotropicscaling-small.png "Captura de pantalla de la página escala anisotrópico triple")](scale-images/anisotropicscaling-large.png#lightbox "Triple captura de pantalla de la página escala anisotrópico")
 
-Otra manera, puede pensar en el `Scale` y `Translate` llamadas consiste en determinar el efecto en orden inverso: El `Translate` llamada cambia la ruta de acceso, por lo que pasa a ser totalmente visible pero orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
+Otra manera de pensar en las `Scale` llamadas a y `Translate` es determinar el efecto en la secuencia inversa: La `Translate` llamada desplaza la ruta de acceso para que se vuelva totalmente visible pero esté orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
 
 En realidad, parece que el asterisco es un poco mayor que el lienzo. El problema es el ancho del trazo. El `Bounds` propiedad de `SKPath` indica las dimensiones de las coordenadas se codifican en la ruta de acceso, y eso es lo que el programa usa para escalar. Cuando se representa la ruta de acceso con un ancho de trazo determinado, la ruta de acceso representada es mayor que el lienzo.
 
@@ -347,4 +347,4 @@ El código también muestra la estrella 10 veces más, cada vez que reduce el es
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,16 +7,16 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: c4ca44488a4d10d3936e7bd8e664e3ffcb2a140a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 586cf0eaa7b0f38af61c9f7d619b30a39023a19e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61179824"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652959"
 ---
 # <a name="integrating-with-xamarinforms"></a>Integración con Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Crear gráficos de SkiaSharp que responden a la función táctil y los elementos de Xamarin.Forms_
 
@@ -25,7 +25,7 @@ Gráficos de SkiaSharp pueden integrarse con el resto de Xamarin.Forms de varias
 ![](integration-images/integrationexample.png "Seleccionar un color con los controles deslizantes")
 
 Otro enfoque para crear gráficos interactivos de SkiaSharp en Xamarin.Forms es a través del tacto.
-La segunda página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa se titula **pulse relleno de alternancia**. Dibuja un círculo simple de dos maneras de &mdash; sin relleno y con un relleno &mdash; activar o desactivar para un punteo. El [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) clase muestra cómo puede modificar los gráficos de SkiaSharp en respuesta a la entrada del usuario.
+La segunda página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa se titula **pulse relleno de alternancia**. Dibuja un círculo simple de dos maneras de &mdash; sin relleno y con un relleno &mdash; activar o desactivar para un punteo. El [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) clase muestra cómo puede modificar los gráficos de SkiaSharp en respuesta a la entrada del usuario.
 
 Para esta página, el `SKCanvasView` se crea una instancia de clase en el [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) archivo, lo que también establece un objeto Xamarin.Forms [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) en la vista:
 
@@ -243,4 +243,4 @@ Pero es la mejor forma de hacerse una idea de los dos modelos experimentar con e
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,24 +1,24 @@
 ---
-title: Control deslizante Thumb pulsar en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. Este artículo explica cómo usar iOS específicos de la plataforma que permite la propiedad Slider.Value debe establecerse si pulsa en el control deslizante.
+title: Puntear en el control deslizante de iOS
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma iOS que permite establecer la propiedad Slider. Value al puntear en la barra deslizante.
 ms.prod: xamarin
 ms.assetid: D0915D37-9A59-4728-BB6A-FE094A661275
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: b195a277defa04bac88ad65b928957c6efff4601
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 573b68097724c976ce73b51e3b7ba21b52f7a776
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925337"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651778"
 ---
-# <a name="slider-thumb-tap-on-ios"></a>Control deslizante Thumb pulsar en iOS
+# <a name="slider-thumb-tap-on-ios"></a>Puntear en el control deslizante de iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos de plataforma de iOS permite la [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propiedad debe establecerse si pulsa en una posición en la [ `Slider` ](xref:Xamarin.Forms.Slider) barra, en lugar de tener que arrastrar la `Slider` thumb. Se consume en XAML estableciendo el [ `Slider.UpdateOnTap` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) propiedad enlazable a `true`:
+Este específico de la plataforma iOS permite [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) establecer la propiedad pulsando en una posición en la [`Slider`](xref:Xamarin.Forms.Slider) barra, en lugar de tener que arrastrar el `Slider` control. Se consume en XAML estableciendo el [ `Slider.UpdateOnTap` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) propiedad enlazable a `true`:
 
 ```xaml
 <ContentPage ...
@@ -49,6 +49,6 @@ El resultado es que una derivación de en el [ `Slider` ](xref:Xamarin.Forms.Sli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

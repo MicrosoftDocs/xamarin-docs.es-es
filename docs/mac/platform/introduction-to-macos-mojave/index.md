@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 9c88d0a90cf5f1cae0e27a05aeaa71f726ddb4de
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b765bafe5e7a227a4ad5325046e9f005ba097dc8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511689"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653148"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introducción a macOS Mojave
 
@@ -46,6 +46,6 @@ Con macOS Mojave, Apple ha dejado de usar OpenGL ES y OpenCL, lo que [anima a lo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Xamarin. Mac](https://developer.xamarin.com/samples/mac/)
+- [Ejemplos de Xamarin. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – desarrollador de Apple](https://developer.apple.com/macos/)
 - [Notas de la versión de Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

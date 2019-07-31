@@ -1,64 +1,64 @@
 ---
-title: API de juegos en Xamarin.iOS de iOS
-description: En este artículo abarca las nuevas mejoras de juegos proporcionadas por iOS 9 que se puede usar para mejorar su juego Xamarin.iOS gráficos y funciones de audio.
+title: API de juegos de iOS en Xamarin. iOS
+description: En este artículo se tratan las nuevas mejoras de juegos que proporciona iOS 9 que se pueden usar para mejorar las características de audio y gráficos del juego de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 746d901714b4bba2d85e63e52d34781f07cf9923
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953336"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653287"
 ---
-# <a name="ios-gaming-apis-in-xamarinios"></a>API de juegos en Xamarin.iOS de iOS
+# <a name="ios-gaming-apis-in-xamarinios"></a>API de juegos de iOS en Xamarin. iOS
 
-_En este artículo abarca las nuevas mejoras de juegos proporcionadas por iOS 9 que se puede usar para mejorar su juego Xamarin.iOS gráficos y funciones de audio._
+_En este artículo se tratan las nuevas mejoras de juegos que proporciona iOS 9 que se pueden usar para mejorar las características de audio y gráficos del juego de Xamarin. iOS._
 
-Apple ha realizado varias mejoras tecnológicas a la API de juegos en iOS 9 que resulte más fácil implementar gráficos de juegos y audio en una aplicación de Xamarin.iOS.
-Estos incluyen la facilidad de desarrollo a través de marcos de alto nivel y aprovechar la eficacia de GPU de su dispositivo iOS para mejorar la velocidad y las capacidades de gráficos.
+Apple ha realizado varias mejoras tecnológicas en las API de juegos de iOS 9 que facilitan la implementación de gráficos y audio de juegos en una aplicación de Xamarin. iOS.
+Entre ellas se incluyen la facilidad de desarrollo a través de los marcos de trabajo de alto nivel y el aprovechamiento de la capacidad de la GPU del dispositivo iOS para mejorar la velocidad y las capacidades gráficas.
 
-[![](images/flocking01.png "Un ejemplo de una aplicación en ejecución aves")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "Un ejemplo de una aplicación que ejecuta la reutilización")](images/flocking01.png#lightbox)
 
-Esto incluye GameplayKit, ReplayKit, modelo de E/S, MetalKit y sombreadores de rendimiento del sistema operativo junto con las características nuevas y mejoradas de Metal, SceneKit y SpriteKit.
+Esto incluye GameplayKit, ReplayKit, e/s de modelo, MetalKit y los sombreadores de rendimiento de metal junto con las nuevas características mejoradas de metal, SceneKit y SpriteKit.
 
-Este artículo presentan los procedimientos para mejorar su juego de Xamarin.iOS con las nuevas mejoras de juegos de iOS 9:
+En este artículo se presentan todas las formas de mejorar el juego de Xamarin. iOS con las nuevas mejoras de los juegos de iOS 9:
 
 ## <a name="introducing-gameplaykit"></a>Introducción a GameplayKit
 
-El marco de Apple nuevo GameplayKit proporciona un conjunto de tecnologías que facilita la creación de juegos para dispositivos iOS reduciendo la cantidad de código repetitivo, comunes necesario para la implementación. GameplayKit proporciona herramientas para desarrollar rápidamente la mecánica de juego que, a continuación, se puede combinar fácilmente con un motor de gráficos (por ejemplo, SceneKit o SpriteKit) para entregar un juego completo.
+El nuevo marco de trabajo de GameplayKit de Apple proporciona un conjunto de tecnologías que facilitan la creación de juegos para dispositivos iOS, ya que se reduce la cantidad de código común y repetitivo necesario para la implementación. GameplayKit proporciona herramientas para desarrollar las mecánicas de juego que se pueden combinar fácilmente con un motor gráfico (como SceneKit o SpriteKit) para ofrecer rápidamente un juego completado.
 
-GameplayKit incluye varias, comunes, juego jugar algoritmos, como:
+GameplayKit incluye varios algoritmos comunes de Game Play, como:
 
-- Un comportamiento en función, simulación de agente que le permite definir los movimientos y objetivos de la IA emprenderán automáticamente.
-- Una inteligencia artificial minmax para el juego basado en turnos.
-- Un sistema de regla para la lógica del juego controlada por datos con razonamiento aproximada para proporcionar el comportamiento real de emergencia.
+- Una simulación de agente basada en el comportamiento que le permite definir los movimientos y los objetivos que el AI va a seguir automáticamente.
+- Una inteligencia artificial de MinMax para la reproducción de juegos basada en turnos.
+- Un sistema de reglas para la lógica de juego controlada por datos con razonamiento aproximado para proporcionar un comportamiento emergente.
 
-Además, GameplayKit adopta un enfoque de apoyo al desarrollo de juegos mediante el uso de una arquitectura modular que proporciona las siguientes características:
+Además, GameplayKit toma un enfoque de bloques de creación para el desarrollo de juegos mediante el uso de una arquitectura modular que proporciona las siguientes características:
 
-- Sistemas en juegos basados en el equipo de estado para controlar el código complejo, procedimiento.
-- Herramientas para proporcionar aleatoria juego e imprevisibilidad sin causar problemas de depuración.
-- Arquitectura basada en una entidad reutilizable, formada por componentes.
+- Equipo de estado para administrar sistemas complejos basados en código de procedimientos en la reproducción de juegos.
+- Herramientas para proporcionar una reproducción de juego aleatoria y una impredecible sin causar problemas de depuración.
+- Arquitectura de basada en entidades reutilizable y con componentes.
 
-Para obtener más información sobre GameplayKit, consulte Apple [Gameplaykit Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172) y [GameplayKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/GameplayKit/Reference/GameplayKit_Framework/index.html#//apple_ref/doc/uid/TP40015199).
+Para más información sobre GameplayKit, consulte la guía de [programación de GameplayKit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172) de Apple y [referencia de GameplayKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/GameplayKit/Reference/GameplayKit_Framework/index.html#//apple_ref/doc/uid/TP40015199).
 
 ## <a name="gameplaykit-examples"></a>Ejemplos de GameplayKit
 
-Echemos un vistazo rápido a la implementación de algunos mecanismos de juego simple en una aplicación de Xamarin.iOS mediante el kit de juego.
+Echemos un vistazo a la implementación de algunas mecánicas sencillas de reproducción en una aplicación de Xamarin. iOS con Game Play kit.
 
 ### <a name="pathfinding"></a>Pathfinding
 
-Pathfinding es la capacidad de un elemento de inteligencia artificial de un juego para encontrar el camino alrededor del tablero del juego.
-Por ejemplo, un enemigo 2D búsqueda avanza a través de un laberinto o un carácter a través de un terreno Solucionador de primera persona mundo 3D.
+Pathfinding es la capacidad de un elemento de AI de un juego para encontrar su forma de evitar el tablero de juego.
+Por ejemplo, un enemigo de 2D está buscando su camino a través de un laberinto o un carácter 3D a través de un terreno mundial de la primera persona superpuesto.
 
-Tenga en cuenta la asignación siguiente:
+Considere el siguiente mapa:
 
-[![](images/gkpathfindpath.png "Un mapa de pathfinding de ejemplo")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "Un mapa pathfinding de ejemplo")](images/gkpathfindpath.png#lightbox)
 
-Mediante este pathfinding C# código puede encontrar una manera a través del mapa:
+Mediante pathfinding, C# este código puede encontrar una manera a través del mapa:
 
 ```csharp
 var a = GKGraphNode2D.FromPoint (new Vector2 (0, 5));
@@ -82,7 +82,7 @@ Console.WriteLine(String.Join ("->", (object[]) a2e));
 Console.WriteLine(String.Join ("->", (object[]) a2f));
 ```
 
-### <a name="classical-expert-system"></a>Sistema experto clásica
+### <a name="classical-expert-system"></a>Sistema experto clásico
 
 El siguiente fragmento de C# código muestra cómo se puede usar GameplayKit para implementar un sistema experto clásico:
 
@@ -145,13 +145,13 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-En función de un conjunto determinado de reglas (`GKRule`) y un conjunto conocido de entradas, el sistema experto (`GKRuleSystem`) creará el resultado de predicción (`fizzbuzz` en nuestro ejemplo anterior).
+En función de un conjunto determinado de reglas`GKRule`() y un conjunto conocido de entradas, el sistema experto`GKRuleSystem`() creará una salida predecible`fizzbuzz` (para nuestro ejemplo anterior).
 
-### <a name="flocking"></a>Aves
+### <a name="flocking"></a>Rebaño
 
-Aves permite que entidades de juego se comporte como una manada, donde el grupo responde a los movimientos y las acciones de una entidad de clientes potenciales, como una manada de aves en tránsito o una escuela de peces nadando de control de un grupo de la inteligencia artificial.
+La agrupación permite que un grupo de entidades de juegos controladas por AI se comporte como un rebaño, en el que el grupo responde a los movimientos y acciones de una entidad de plomo como un rebaño de pájaros en el vuelo o una escuela de natación de peces.
 
-El siguiente fragmento de C# código implementa el comportamiento agrupada con GameplayKit y SpriteKit para mostrar los gráficos:
+El siguiente fragmento de C# código implementa el comportamiento de rebaño mediante GameplayKit y SpriteKit para la presentación de gráficos:
 
 ```csharp
 using System;
@@ -338,7 +338,7 @@ namespace FieldBehaviorExplorer
 }
 ```
 
-A continuación, implementará esta escena en un controlador de vista:
+A continuación, implemente esta escena en un controlador de vista:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -365,114 +365,114 @@ public override void ViewWillLayoutSubviews ()
 }
 ```
 
-Al ejecutarse, el poco animado _"Boids"_ se de ésta en torno a nuestro derivaciones dedo:
+Cuando se ejecuta, el pequeño _"boids"_ animado se reproducirá en torno a las pulsaciones de dedos:
 
-[![](images/flocking01.png "El poco animado Boids se de ésta en torno a las derivaciones del dedo")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "Los pequeños boids animados supondrán alrededor de las pulsaciones de dedos")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Otros ejemplos de Apple
 
-Además de los ejemplos presentados anteriormente, Apple ha proporcionado las siguientes aplicaciones de ejemplo que pueden ser transcodificados a C# y Xamarin.iOS:
+Además de los ejemplos presentados anteriormente, Apple ha proporcionado las siguientes aplicaciones de ejemplo que se pueden transcodificar en C# y Xamarin. iOS:
 
-- [FourInARow: Utilizando al estratega GameplayKit Minmax para AI oponente](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: Usa el sistema de agentes de GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
-- [DemoBots: Crear un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
+- [FourInARow: Uso del estratega de GameplayKit MinMax para el oponente AI](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
+- [AgentsCatalog: Uso del sistema de agentes en GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [DemoBots: Creación de un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
 
-En iOS 9, Apple ha realizado varios cambios y adiciones en Metal para proporcionar acceso de baja sobrecarga a la GPU. Con el sistema operativo puede maximizar el potencial informática de las aplicaciones de iOS y el gráfico.
+En iOS 9, Apple ha realizado varios cambios y adiciones a metal para proporcionar acceso de baja sobrecarga a la GPU. Con metal puede maximizar los gráficos y el potencial de las aplicaciones iOS.
 
-El marco de trabajo completa incluye las siguientes características nuevas:
+El marco de metal incluye las siguientes características nuevas:
 
-- Privada nueva profundidad de la Galería de símbolos y texturas para OS X.
-- Calidad de sombra mejorada con puestos frontal de filtrado e independiente de profundidad y Galería espera valores.
-- Mejoras de biblioteca estándar de Metal y de lenguaje de sombreado de metal.
-- Los sombreadores de cálculo admiten una amplia variedad de formatos de píxel.
+- Nuevas texturas de galería de símbolos de profundidad y privada para OS X.
+- Mejora de la calidad de sombra con compresión de profundidad y valores de la galería de símbolos frontal y posterior.
+- Mejoras en el lenguaje de sombreado de metal y en la biblioteca estándar de metal.
+- Los sombreadores de cálculo admiten una gama más amplia de formatos de píxeles.
 
-### <a name="the-metalkit-framework"></a>El marco de trabajo MetalKit
+### <a name="the-metalkit-framework"></a>El marco de MetalKit
 
-El marco de trabajo MetalKit proporciona un conjunto de clases de utilidad y las características que reducen la cantidad de trabajo necesario para usar el sistema operativo en una aplicación iOS. MetalKit proporciona compatibilidad en tres áreas clave:
+El marco de trabajo de MetalKit proporciona un conjunto de características y clases de utilidad que reducen la cantidad de trabajo necesario para usar metal en una aplicación de iOS. MetalKit ofrece compatibilidad en tres áreas clave:
 
-1. Cargar desde una variedad de orígenes como formatos comunes como PNG, JPEG, KTX y PVR de textura asincrónica.
-2. Facilitar el acceso de E/S de modelo basa activos para el control de Metal modelo específico. Estas características se han altamente optimizadas para proporcionar transferencia de datos eficaz entre búferes de Metal y mallas de E/S del modelo.
-3. Vistas predefinidas de Metal y administración de vista que reducen la cantidad de código necesario para mostrar las representaciones gráficas dentro de una aplicación de iOS.
+1. La carga de texturas asincrónica desde una variedad de orígenes incluye formatos comunes como PNG, JPEG, KTX y PVR.
+2. Acceso sencillo a los recursos basados en e/s de modelo para el control de modelos específicos de metal. Estas características se han optimizado para proporcionar una transferencia de datos eficaz entre mallas de e/s de modelo y búferes de metal.
+3. Vistas de metal predefinidas y administración de vistas que reducen en gran medida la cantidad de código necesario para mostrar las representaciones de gráficos en una aplicación de iOS.
 
-Para obtener más información sobre MetalKit, consulte de Apple [MetalKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356), [Guía de programación de Metal](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), [Metal Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) y [Metal Guía del lenguaje de sombreado](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
+Para obtener más información sobre MetalKit, consulte la guía de [referencia de MetalKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356)de Apple, [Guía de programación de metal](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), referencia del marco de [metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) y sombreado de [metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
 
-### <a name="metal-performance-shaders-framework"></a>El marco de trabajo de rendimiento metal sombreadores
+### <a name="metal-performance-shaders-framework"></a>Marco de sombreadores de rendimiento de metal
 
-El marco de trabajo del sombreador de rendimiento del sistema operativo proporciona un conjunto muy optimizada de los gráficos y en función de cálculo sombreadores para su uso en el sistema operativo en función de las aplicaciones de iOS. Cada sombreador en el sombreador de rendimiento de sistema operativo framework ha sido optimizado específicamente para proporcionar alto rendimiento en el sistema operativo admite iOS GPU.
+El marco de trabajo del sombreador de metal performance proporciona un conjunto muy optimizado de gráficos y sombreadores basados en el cálculo para su uso en las aplicaciones de iOS basadas en metal. Cada sombreador del marco del sombreador de rendimiento de metal se ha optimizado específicamente para proporcionar un alto rendimiento en las GPU de iOS compatibles con el metal.
 
-Mediante el uso de las clases de sombreador de rendimiento del sistema operativo, puede lograr el máximo rendimiento posible en cada GPU de iOS concretos sin necesidad de destino y mantener bases de código individuales. Completa los sombreadores de rendimiento puede usarse con cualquier recurso metálico, como las texturas y los búferes.
+Mediante el uso de las clases de sombreador de rendimiento de metal, puede lograr el mayor rendimiento posible en cada GPU de iOS específica sin tener que tener como destino y mantener bases de código individuales. Los sombreadores de rendimiento de metal se pueden usar con cualquier recurso de metal, como texturas y búferes.
 
-El marco de trabajo del sombreador de rendimiento del sistema operativo proporciona un conjunto de sombreadores comunes, como:
+El marco del sombreador de rendimiento de metal proporciona un conjunto de sombreadores comunes, como:
 
-- **Desenfoque gaussiano** (`MPSImageGaussianBlur`)
-- **Detección de bordes Sobel** (`MPSImageSobel`)
-- **Histograma de la imagen** (`MPSImageHistogram`)
+- **Desenfoque gausiano** (`MPSImageGaussianBlur`)
+- **Detección de Sobel Edge** (`MPSImageSobel`)
+- **Histograma de imagen** (`MPSImageHistogram`)
 
-Para obtener más información, consulte Apple [Guía del lenguaje de sombreado de Metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
+Para obtener más información, consulte la [Guía del lenguaje](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)de sombreado de metal de Apple.
 
-## <a name="introducing-model-io"></a>Introducción a E/S de modelo
+## <a name="introducing-model-io"></a>Presentación de e/s de modelo
 
-El marco de Apple E/S modelo proporciona un profundo conocimiento de los recursos 3D (por ejemplo, modelos y sus recursos relacionados). E/S de modelo proporciona los juegos de iOS con materiales de base física, modelos e iluminación que se puede usar con GameplayKit, sistema operativo y SceneKit.
+El marco de e/s de modelo de Apple proporciona una comprensión profunda de los activos 3D (como los modelos y sus recursos relacionados). La e/s del modelo proporciona juegos de iOS con materiales, modelos e iluminación basados en el físico que se pueden usar con GameplayKit, metal y SceneKit.
 
-Con el modelo de E/S, puede admitir los siguientes tipos de tareas:
+Con e/s de modelo, puede admitir los siguientes tipos de tareas:
 
-- Importación de iluminación, materiales, datos, configuración de la cámara y otra información basada en la escena desde una variedad de formatos de motor de juego y el software más populares de la malla.
-- Procesar o generar información basada en la escena, tales como crear de manera procedimental con textura cielo domos u hornearlos en una malla de iluminación.
-- Funciona con MetalKit, SceneKit y GLKit para cargar eficazmente los activos de juego en búferes GPU para la representación.
-- Exportar información basada en la escena a una variedad de software más populares y formatos de motor de juego.
+- Importe la iluminación, los materiales, los datos de malla, la configuración de la cámara y otra información basada en escenas de diversos formatos de motor de juegos y software conocidos.
+- Procesar o generar información basada en escenas, como crear cúpulas de cielo con textura de procedimientos o iluminación de hornear en una malla.
+- Funciona con MetalKit, SceneKit y GLKit para cargar eficazmente activos de juegos en búferes de GPU para su representación.
+- Exportar información basada en escenas a una variedad de formatos populares de software y de motor de juegos.
 
-Para obtener más información sobre el modelo de E/S, vea Apple [referencia del modelo de marco de E/S](https://developer.apple.com/library/prerelease/ios/documentation/ModelIO/Reference/ModelIO_Framework/index.html#//apple_ref/doc/uid/TP40015421)
+Para obtener más información sobre la e/s del modelo, consulte [Referencia del marco de e/s del modelo](https://developer.apple.com/library/prerelease/ios/documentation/ModelIO/Reference/ModelIO_Framework/index.html#//apple_ref/doc/uid/TP40015421) de Apple.
 
 ## <a name="introducing-replaykit"></a>Introducción a ReplayKit
 
-El marco de Apple nuevo ReplayKit le permite agregar grabación de juego a su juego de iOS con facilidad y permitir al usuario editar y compartir este vídeo desde dentro de la aplicación rápida y fácilmente.
+El nuevo marco de ReplayKit de Apple le permite agregar fácilmente grabaciones de juegos a su juego iOS y permitir al usuario editar y compartir este vídeo de forma rápida y sencilla desde la aplicación.
 
-Para obtener más información, consulte Apple [va Social con vídeo ReplayKit y Game Center](https://developer.apple.com/videos/wwdc/2015/?id=605) y sus [DemoBots: Crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
+Para obtener más información, consulte [redes sociales de Apple con ReplayKit y Game Center video](https://developer.apple.com/videos/wwdc/2015/?id=605) y su [DemoBots: Creación de un juego multiplataforma con una aplicación](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) de ejemplo de SpriteKit y GameplayKit.
 
 ## <a name="scenekit"></a>SceneKit
 
-Kit de escena es un gráfico de escena 3D API que simplifica el trabajo con gráficos 3D. Apareció por primera vez en OS X 10.8 y ha llegado a iOS 8. Con el Kit de escena crear visualizaciones 3D envolventes y juegos en 3D ocasionales no requiere experiencia en OpenGL. A partir de los conceptos comunes de gráfico de escena, Scene Kit abstrae las complejidades de OpenGL y OpenGL ES, facilitando en gran medida 3D de agregar contenido a una aplicación. Sin embargo, si es un experto de OpenGL, Scene Kit tiene mayor compatibilidad para enlazar directamente con OpenGL también. También incluye numerosas características que complementan los gráficos 3D, como física y se integra perfectamente con otros marcos de Apple, por ejemplo, Core Animation, Core imagen y Sprite Kit.
+El kit de escenas es una API de gráficos de escenas 3D que simplifica el trabajo con gráficos 3D. Se presentó por primera vez en OS X 10,8 y ahora se ha incorporado a iOS 8. Con el kit de escenas, crear visualizaciones 3D envolventes y juegos en 3D esporádicos no requiere experiencia en OpenGL. Al basarse en conceptos comunes de los gráficos de escenas, el kit de escenas abstrae las complejidades de OpenGL y OpenGL ES, lo que facilita enormemente la adición de contenido 3D a una aplicación. Sin embargo, si es un experto en OpenGL, el kit de escenas también tiene una gran compatibilidad para la vinculación directa con OpenGL. También incluye numerosas características que complementan los gráficos 3D, como la física, y se integran con muchos otros marcos de trabajo de Apple, como la animación básica, la imagen principal y el kit de Sprite.
 
-Para obtener más información, consulte nuestra [SceneKit](~/ios/platform/gaming/scenekit.md) documentación.
+Para obtener más información, consulte nuestra documentación de [SceneKit](~/ios/platform/gaming/scenekit.md) .
 
-### <a name="scenekit-changes"></a>Cambios de SceneKit
+### <a name="scenekit-changes"></a>SceneKit cambios
 
-Apple ha agregado las siguientes características nuevas para SceneKit para iOS 9:
+Apple ha agregado las siguientes características nuevas a SceneKit para iOS 9:
 
-- Xcode ahora proporciona un Editor de escena que le permite crear rápidamente los juegos y aplicaciones 3D interactivas mediante la edición de escenas directamente desde dentro de Xcode.
-- El `SCNView` y `SCNSceneRenderer` clases se pueden usar para habilitar la representación completa (en dispositivos iOS compatibles).
-- El `SCNAudioPlayer` y `SCNNode` clases se pueden usar para agregar efectos de audio espaciales que automáticamente el seguimiento de una posición del jugador a una aplicación iOS.
+- Xcode ofrece ahora un editor de escenas que permite crear rápidamente juegos y aplicaciones 3D interactivas mediante la edición de escenas directamente desde Xcode.
+- Las `SCNView` clases `SCNSceneRenderer` y se pueden usar para habilitar la representación de metal (en dispositivos iOS compatibles).
+- Las `SCNAudioPlayer` clases `SCNNode` y se pueden usar para agregar efectos de audio espacial que realizan un seguimiento automático de una posición del reproductor en una aplicación de iOS.
 
-Para obtener más información, consulte nuestra [SceneKit documentación](~/ios/platform/introduction-to-ios8.md#scenekit) y Apple [SceneKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) y [Fox: Crear un juego de SceneKit con el Editor de Xcode escena](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) proyecto de ejemplo.
+Para obtener más información, consulte la [documentación de SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) y la [referencia de SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) de Apple y [Fox: Creación de un juego de SceneKit con el proyecto](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) de ejemplo Xcode Scene editor.
 
 ## <a name="spritekit"></a>SpriteKit
 
-Sprite Kit, el marco de juego 2D de Apple, tiene algunas nuevas características interesantes en iOS 8 y OS X Yosemite. Estos incluyen la integración con Scene Kit sombreador, iluminación, sombras, restricciones, generación de un mapa normal y la compatibilidad con las mejoras de leyes físicas. En concreto, las nuevas características de leyes físicas facilitan agregar efectos realistas a un juego.
+El kit de sprites, el marco de juego de 2D de Apple, tiene algunas nuevas características interesantes en iOS 8 y OS X Yosemite. Entre ellas se incluyen la integración con el kit de escenas, compatibilidad con el sombreador, iluminación, sombras, restricciones, generación normal de mapas y mejoras físicas. En concreto, las nuevas características de la física hacen que sea muy fácil agregar efectos realistas a un juego.
 
-Para obtener más información, consulte nuestra [SpriteKit](~/ios/platform/gaming/spritekit.md) documentación.
+Para obtener más información, consulte nuestra documentación de [SpriteKit](~/ios/platform/gaming/spritekit.md) .
 
-### <a name="spritekit-changes"></a>Cambios de SpriteKit
+### <a name="spritekit-changes"></a>SpriteKit cambios
 
-Apple ha agregado las siguientes características nuevas para SpriteKit de iOS 9:
+Apple ha agregado las siguientes características nuevas a SpriteKit para iOS 9:
 
-- Efecto de audio espacial que automáticamente el seguimiento de la posición del jugador con el `SKAudioNode` clase.
-- Xcode ahora cuenta con un Editor de escena y el Editor de acciones para la creación de aplicación y juego 2D fácil.
-- Compatibilidad con juegos con nuevos nodos de cámara de desplazamiento fácil (`SKCameraNode`) objetos.
-- En dispositivos iOS que admiten el sistema operativo, SpriteKit automáticamente usará para la representación, incluso si ya estaba usando a los sombreadores de OpenGL ES personalizados.
+- Efecto de audio espacial que realiza un seguimiento automático de la posición `SKAudioNode` del jugador con la clase.
+- Xcode ahora incluye un editor de escenas y un editor de acciones para facilitar la creación de juegos y aplicaciones en 2D.
+- Compatibilidad con el desplazamiento sencillo con objetos nuevos de nodos`SKCameraNode`de cámara ().
+- En los dispositivos iOS que admiten metal, SpriteKit lo usará automáticamente para la representación, incluso si ya usaba los sombreadores de OpenGL ES personalizados.
 
-Para obtener más información, consulte nuestra [SpriteKit documentación](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) y sus [DemoBots: Crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
+Para obtener más información, consulte nuestra [documentación de SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) [referencia de SpriteKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) de Apple [y su DemoBots: Creación de un juego multiplataforma con una aplicación](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) de ejemplo de SpriteKit y GameplayKit.
 
 ## <a name="summary"></a>Resumen
 
-Este artículo trata las nuevas características de juegos que iOS 9 que se proporciona para las aplicaciones de Xamarin.iOS.
-Introdujo GameplayKit y modelo de E/S; las mejoras principales de metales; y las nuevas características de SceneKit y SpriteKit.
+En este artículo se han tratado las nuevas características de juegos que iOS 9 proporciona para las aplicaciones de Xamarin. iOS.
+Incorporó GameplayKit y e/s de modelo. las principales mejoras de metal; y las nuevas características de SceneKit y SpriteKit.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

@@ -7,16 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 50174844100eb852ac7daf5ce3f33b02b490ceb2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078496"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646662"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar los mapas de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 El [ **creando y mapas de bits de dibujo de SkiaSharp** ](drawing.md) artículo se describe cómo un `SKBitmap` objeto se puede pasar a un `SKCanvas` constructor. Cualquier método de dibujo se llama en la que hace que los gráficos de lienzo para representarse en el mapa de bits. Estos métodos de dibujo incluyen `DrawBitmap`, lo que significa que esta técnica permite transferir parte o la totalidad de un mapa de bits a otro mapa de bits, quizás con las transformaciones aplicadas.
 
@@ -445,7 +445,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>Hospedaje de la vista de lienzo de puntero Recortar foto
 
-Con esas dos clases de control de la lógica de recorte, la **Recortar foto** página en el **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicación tiene muy poco trabajo. El archivo XAML crea una instancia de un `Grid` al host la `PhotoCropperCanvasView` y un **realiza** botón:
+Con esas dos clases de control de la lógica de recorte, la **Recortar foto** página en el **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación tiene muy poco trabajo. El archivo XAML crea una instancia de un `Grid` al host la `PhotoCropperCanvasView` y un **realiza** botón:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -536,7 +536,7 @@ Verá el rectángulo de recorte restringido a una relación de aspecto de 16 a 9
 
 Una versión de Xamarin.Forms de la famosa 14 y 15 rompecabezas aparecieron en 22 capítulo del libro [ _Creating Mobile Apps with Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se pueden descargar como [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas pasa a ser más divertido (y a menudo más difícil) cuando se basa en una imagen de su propia biblioteca de fotos.
 
-Esta versión del 14 y 15 rompecabezas es parte de la **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicación y consta de una serie de páginas denominado **foto rompecabezas**.
+Esta versión del 14 y 15 rompecabezas es parte de la **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación y consta de una serie de páginas denominado **foto rompecabezas**.
 
 El **PhotoPuzzlePage1.xaml** archivo consta de un `Button`:
 
@@ -584,7 +584,7 @@ El método, a continuación, navega a `PhotoPuzzlePage2`, pasando en el construc
 
 Es posible que la foto seleccionada de la biblioteca no está orientada tal y como aparece en la biblioteca de fotos, pero se gira o al revés. (Esto es especialmente un problema con dispositivos iOS). Por ese motivo, `PhotoPuzzlePage2` permite girar la imagen a la orientación deseada. El archivo XAML contiene tres botones etiquetados **90&#x00B0; derecha** (es decir, hacia la derecha), **90&#x00B0; izquierda** (izquierda) y **realiza**.
 
-El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo  **[creación y dibujo de SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)**. El usuario puede girar la imagen 90 grados hacia la derecha o hacia la izquierda cualquier número de veces: 
+El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo  **[creación y dibujo de SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)** . El usuario puede girar la imagen 90 grados hacia la derecha o hacia la izquierda cualquier número de veces: 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -765,4 +765,4 @@ Ahora puede colocarlas en el orden correcto. Los iconos en la misma fila o colum
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

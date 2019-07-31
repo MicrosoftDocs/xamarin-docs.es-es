@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 29f7725e41e5163b8f990c827983fbd79bdd1b1e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 08339ba3017983cf79d75adc1c6c21a2fb9ad98b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510491"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643429"
 ---
 # <a name="oreo-features"></a>Características de Oreo
 
@@ -205,7 +205,7 @@ Android Oreo presenta una variedad de nuevas características y funcionalidades,
 Los *canales de notificación* son categorías definidas por la aplicación para las notificaciones.
 Puede crear un canal de notificación para cada tipo de notificación que necesite enviar, y puede crear canales de notificación para reflejar las elecciones realizadas por los usuarios de la aplicación. La nueva característica de canales de notificación permite proporcionar a los usuarios un control minucioso de los distintos tipos de notificaciones. Por ejemplo, si está implementando una aplicación de mensajería, puede crear canales de notificación independientes para cada grupo de conversación creado por un usuario.
 
-[Canales de notificación](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica cómo crear un canal de notificación y usarlo para publicar notificaciones locales. Para obtener un ejemplo de código del mundo real, consulte el ejemplo [NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) . en esta aplicación de ejemplo se administran dos canales y se establecen otras opciones de notificación.
+[Canales de notificación](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica cómo crear un canal de notificación y usarlo para publicar notificaciones locales. Para obtener un ejemplo de código del mundo real, consulte el ejemplo [NotificationChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) . en esta aplicación de ejemplo se administran dos canales y se establecen otras opciones de notificación.
 
 
 
@@ -262,7 +262,7 @@ Cuando la aplicación necesita una fuente, se crea un `FontsRequest` objeto (que
 
 Cuando se llama al `RequestFonts` método, primero comprueba si la fuente se almacena en caché localmente (desde una llamada anterior a `RequestFont`). Si no se almacena en caché, llama al proveedor de fuentes, recupera la fuente de forma asincrónica y, a continuación, devuelve los resultados a la aplicación invocando `OnTypeFaceRetrieved` el método.
 
-En el ejemplo de [fuentes](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) descargables se muestra cómo usar la característica de fuentes descargables introducida en Android Oreo. 
+En el ejemplo de [fuentes](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) descargables se muestra cómo usar la característica de fuentes descargables introducida en Android Oreo. 
 
 Para obtener más información acerca de la descarga de fuentes, vea el tema sobre las [fuentes](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) descargables para desarrolladores de Android.
 
@@ -272,7 +272,7 @@ Para obtener más información acerca de la descarga de fuentes, vea el tema sob
 
 El nuevo marco de _Autorrelleno_ en Android Oreo facilita a los usuarios la administración de tareas repetitivas como el inicio de sesión, la creación de cuentas y las transacciones de tarjetas de crédito. Los usuarios dedican menos tiempo a escribir información (lo que puede provocar errores de entrada). Para que la aplicación pueda trabajar con el marco de Autorrelleno, se debe habilitar un servicio de Autorrelleno en la configuración del sistema (los usuarios pueden habilitar o deshabilitar Autorrellenar).
 
-En el ejemplo [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/) se muestra el uso del marco de Autorrelleno. Incluye implementaciones de las actividades de cliente con vistas que se deben rellenar de autocompletar y un servicio que puede proporcionar datos de Autorrelleno a las actividades de cliente.
+En el ejemplo [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) se muestra el uso del marco de Autorrelleno. Incluye implementaciones de las actividades de cliente con vistas que se deben rellenar de autocompletar y un servicio que puede proporcionar datos de Autorrelleno a las actividades de cliente.
 
 Para obtener más información sobre la nueva característica Autorrellenar y cómo optimizar la aplicación para Autorrellenar, vea el tema sobre el [marco de Autorrelleno](https://developer.android.com/guide/topics/text/autofill.html) para desarrolladores de Android.
 
@@ -294,7 +294,7 @@ Para especificar cómo debe comportarse la actividad cuando está en modo PIP, u
 
 -   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; Actualiza los valores de configuración de PIP de la actividad (por ejemplo, un cambio en la relación de aspecto).
 
-En el ejemplo [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) se muestra el uso básico del modo de imagen en imagen (PIP) para dispositivos de mano introducidos en Oreo. En el ejemplo se reproduce un vídeo que continúa sin interrupciones mientras se alterna entre los modos de visualización u otras actividades.
+En el ejemplo [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) se muestra el uso básico del modo de imagen en imagen (PIP) para dispositivos de mano introducidos en Oreo. En el ejemplo se reproduce un vídeo que continúa sin interrupciones mientras se alterna entre los modos de visualización u otras actividades.
 
 
 
@@ -313,7 +313,7 @@ Android Oreo incluye una variedad de cambios de comportamiento del sistema y de 
 
 Para mejorar la experiencia del usuario, Android Oreo impone limitaciones en lo que las aplicaciones pueden hacer mientras se ejecuta en segundo plano. Por ejemplo, si el usuario ve un vídeo o juega un juego, una aplicación que se ejecuta en segundo plano podría perjudicar el rendimiento de una aplicación de uso intensivo de vídeo que se ejecuta en primer plano. Como resultado, Android Oreo coloca las siguientes restricciones en las aplicaciones que no interactúan directamente con el usuario:
 
-1.  **Limitaciones del servicio en segundo plano** &ndash; Cuando una aplicación se ejecuta en segundo plano, tiene una ventana de varios minutos en la que todavía se permite crear y usar los servicios. Al final de la ventana, Android detiene el servicio en segundo plano de la aplicación y lo trata como inactivo.
+1.  **Limitaciones del servicio en segundo plano** &ndash; Cuando una aplicación se ejecuta en segundo plano, tiene una ventana de varios minutos en la que todavía se permite crear y usar los servicios. Al final de la ventana, Android detiene el servicio en segundo plano de la aplicación y lo tratacomo inactivo.
 
 2.  **Limitaciones de difusión** &ndash; Android 7,0 (API 25) colocaba limitaciones en las difusiones que una aplicación registra para recibir. Android Oreo hace que estas limitaciones sean más rigurosas. Por ejemplo, las aplicaciones de Oreo de Android ya no pueden registrar receptores de difusión para difusiones implícitas en sus manifiestos.
 
@@ -333,19 +333,19 @@ Las aplicaciones que tienen como destino Android Oreo o posterior deben modifica
 
 Hay varios ejemplos de Xamarin. Android disponibles para mostrarle cómo sacar provecho de las características de Oreo de Android:
 
--   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) muestra cómo usar el nuevo sistema de canales de notificación introducido en Android Oreo. En este ejemplo se administran dos canales de notificaciones: uno con la importancia predeterminada y el otro con importancia alta.
+-   [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) muestra cómo usar el nuevo sistema de canales de notificación introducido en Android Oreo. En este ejemplo se administran dos canales de notificaciones: uno con la importancia predeterminada y el otro con importancia alta.
 
--   [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) muestra el uso básico del modo de imagen en imagen (PIP) para dispositivos de mano introducidos en Oreo. En el ejemplo se reproduce un vídeo que continúa sin interrupciones mientras se alterna entre los modos de visualización u otras actividades.
+-   [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) muestra el uso básico del modo de imagen en imagen (PIP) para dispositivos de mano introducidos en Oreo. En el ejemplo se reproduce un vídeo que continúa sin interrupciones mientras se alterna entre los modos de visualización u otras actividades.
 
--   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework) muestra el uso del marco de Autorrelleno. Incluye implementaciones de las actividades de cliente con vistas que se deben rellenar de autocompletar y un servicio que puede proporcionar datos de Autorrelleno a las actividades de cliente.
+-   [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) muestra el uso del marco de Autorrelleno. Incluye implementaciones de las actividades de cliente con vistas que se deben rellenar de autocompletar y un servicio que puede proporcionar datos de Autorrelleno a las actividades de cliente.
 
--   [Fuentes](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) descargables proporciona un ejemplo de cómo usar la característica de fuentes descargables que se ha descrito anteriormente.
+-   [Fuentes](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) descargables proporciona un ejemplo de cómo usar la característica de fuentes descargables que se ha descrito anteriormente.
 
--   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat) muestra el uso de la biblioteca de compatibilidad con EmojiCompat. Puede usar esta biblioteca para impedir que la aplicación muestre caracteres de Emoji que faltan como caracteres "tofu".
+-   [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) muestra el uso de la biblioteca de compatibilidad con EmojiCompat. Puede usar esta biblioteca para impedir que la aplicación muestre caracteres de Emoji que faltan como caracteres "tofu".
 
--   La [intención de actualizaciones de ubicación pendientes](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent) muestra el uso de la API de ubicación para obtener actualizaciones de la ubicación `PendingIntent`de un dispositivo mediante.
+-   La [intención de actualizaciones de ubicación pendientes](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) muestra el uso de la API de ubicación para obtener actualizaciones de la ubicación `PendingIntent`de un dispositivo mediante.
 
--   El [servicio en primer plano actualizaciones de ubicación](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) muestra cómo usar la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un servicio en primer plano enlazado e iniciado.
+-   El [servicio en primer plano actualizaciones de ubicación](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) muestra cómo usar la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un servicio en primer plano enlazado e iniciado.
 
 
 ## <a name="video"></a>Vídeo

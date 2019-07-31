@@ -1,68 +1,68 @@
 ---
-title: Compra de productos no consumibles en Xamarin.iOS
-description: Este documento describe los productos no consumibles en Xamarin.iOS, que son características que haya comprado un usuario que siguen estando disponibles de forma indefinida, independientemente del dispositivo.
+title: Compra de productos no consumibles en Xamarin. iOS
+description: En este documento se describen los productos que no se pueden consumir en Xamarin. iOS, que son características adquiridas por un usuario que permanecen disponibles indefinidamente, independientemente del dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 060403baf8ac28b9b160632a01471b9828735069
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 99723c390b217600e6aaea570195cf21b177abf0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61403223"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648168"
 ---
-# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Compra de productos no consumibles en Xamarin.iOS
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Compra de productos no consumibles en Xamarin. iOS
 
-Productos no consumibles son 'propiedad' por el cliente. La expectativa es que siempre tendrán acceso a ellos, incluso si su dispositivo se pierda o le roben o comprar uno nuevo. Son útiles para los libros en pantalla, artículos de la revista, niveles de juego, filtros de foto, 'características de pro', etcetera. Una vez que un usuario ha comprado un producto no consumibles, nunca debe pagar por él nuevamente. Si el código accidentalmente les permite intentar, StoreKit mostrará un mensaje que ya se ha adquirido.
+El cliente "posee" los productos que no se pueden consumir. La expectativa es que siempre tendrán acceso a ellos, incluso si su dispositivo se pierde o lo roban o compran uno nuevo. Son útiles para libros, problemas de revistas, niveles de juegos, filtros fotográficos, "características Pro", etc. Una vez que un usuario haya adquirido un producto que no se pueda consumir, nunca tendrá que pagar por él de nuevo. Si el código le permite accidentalmente probar, StoreKit mostrará un mensaje que le indica que ya se ha comprado.
 
 ## <a name="non-consumable-products-sample"></a>Ejemplo de productos no consumibles
 
-El [InAppPurchaseSample código](https://developer.xamarin.com/samples/monotouch/StoreKit/) contiene un proyecto denominado *NonConsumables*. El ejemplo de código muestra cómo implementar productos no consumibles con filtros de foto como ejemplo. Una vez que haya adquirido un filtro puede aplicarla a la foto y otra vez. Nunca debe volver a adquirirlo.   
+El [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un proyecto denominadononconsumibles. En el ejemplo de código se muestra cómo implementar productos no consumibles mediante el uso de filtros de foto como ejemplo. Una vez que haya adquirido un filtro, puede aplicarlo a la fotografía una y otra vez. Nunca debe volver a comprarlo.   
    
    
    
- El proceso de compra se muestra en esta serie de capturas de pantalla: el **comprar** botón se convierte en el botón de activación de características:   
+ El proceso de compra se muestra en esta serie de capturas de pantallas: el botón **comprar** se convierte en el botón de activación de características:   
    
    
    
- [![](purchasing-non-consumable-products-images/image34.png "El proceso de compra se muestra en esta serie de capturas de pantalla")](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image34.png "El proceso de compra se muestra en esta serie de capturas de pantallas")](purchasing-non-consumable-products-images/image34.png#lightbox)   
    
    
    
- El proceso de compra es el mismo que un producto consumible; la diferencia clave está en cómo se realiza el seguimiento de la compra en el código de aplicación. En este ejemplo en que el botón comprar solo está disponible si ya no se adquirió el producto, en caso contrario, activa el botón la propia característica.   
+ El proceso de compra es el mismo que el de un producto consumible; la diferencia clave radica en cómo se realiza el seguimiento de la compra en el código de la aplicación. En este ejemplo, el botón comprar solo está disponible si el producto aún no se ha comprado; de lo contrario, el botón activa la propia característica.   
    
    
    
 
-El siguiente diagrama muestra las interacciones entre las clases y el servidor de App Store para realizar una compra de productos no consumibles:   
+En el diagrama siguiente se muestran las interacciones entre las clases y el servidor de App Store para realizar una compra de productos no consumible:   
    
    
    
- [![](purchasing-non-consumable-products-images/image35.png "Compra de las interacciones entre las clases y el servidor de App Store para realizar un productos no consumibles")](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image35.png "Las interacciones entre las clases y el servidor de App Store para realizar una compra de productos no consumible")](purchasing-non-consumable-products-images/image35.png#lightbox)   
    
    
    
- La diferencia clave en el ejemplo consumible es que una vez completada la compra se actualiza la interfaz de usuario para evitar volver a adquirir. En este ejemplo, la notificación de una transacción correcta actualiza la interfaz de usuario para que la **comprar** botón se convierte en un botón que activa la característica de sí mismo.
+ La diferencia clave del ejemplo consumible es que una vez completada la compra, la interfaz de usuario se actualiza para evitar la recompra. En este ejemplo, la notificación de una transacción correcta actualiza la interfaz de usuario para que el botón **comprar** se convierta en un botón que activa la propia característica.
 
 ## <a name="re-purchasing-non-consumable-products"></a>Volver a comprar productos no consumibles
 
-El código normalmente debe ocultar o reasignar un botón de compra una vez que el producto se correctamente adquirió, para evitar que el usuario intenta adquirir el producto nuevo. La aplicación de ejemplo para ello, cambie el **comprar** botón en el botón que hace que el filtro de la foto de ejemplo funcione.   
+Normalmente, el código debe ocultar o reasignar un botón de compra una vez que el producto se ha comprado correctamente, para evitar que el usuario intente comprar el producto de nuevo. Para ello, la aplicación de ejemplo cambia el botón **comprar** en el botón que hace que el filtro fotográfico de ejemplo funcione.   
    
    
    
- Existen situaciones donde una aplicación no puede saber si ya se ha adquirido un producto no consumibles:
+ Hay situaciones en las que una aplicación no puede determinar si ya se ha comprado un producto no consumible:
 
--  Si una aplicación se elimina y vuelve a instalar en un dispositivo, desaparecerán todos los registros de compra (a menos que / hasta que el usuario realiza una restauración de copia de seguridad). 
--  Si el usuario tiene la aplicación se instala en dispositivos de dos (o más) y realiza una compra en uno de los dispositivos. Los demás dispositivos continuará mostrar los productos disponibles para su compra. 
--  Si un cliente intenta volver a comprar un producto no consumibles en estas situaciones, la aplicación de Store, cumplirá con el producto nuevo sin cargo alguno. Para realizar una compra aparecerá inicialmente la interfaz de usuario (por ejemplo, se muestra una alerta de confirmación y será necesario el identificador de Apple) pero el usuario verá un mensaje que les advierte que ya se ha adquirido el producto.  
+-  Si se elimina y se vuelve a instalar una aplicación en un dispositivo, se perderán todos los registros de compra (a menos que el usuario realice una restauración de copia de seguridad). 
+-  Si el usuario tiene la aplicación instalada en dos (o más) dispositivos y realiza una compra en uno de los dispositivos. Los demás dispositivos seguirán mostrando el producto disponible para su compra. 
+-  Si un cliente intenta volver a comprar un producto no consumible en estas situaciones, el App Store volverá a entregar el producto sin cargo alguno. La interfaz de usuario aparecerá inicialmente para realizar una compra (por ejemplo, se muestra una alerta de confirmación y se requerirá el identificador de Apple). sin embargo, el usuario verá un mensaje que le informa de que el producto ya se ha adquirido.  
    
    
    
- La ruta de acceso del código en este escenario es exactamente igual que una compra regular, las únicas diferencias son:
+ La ruta de acceso del código en este escenario es exactamente la misma que una compra normal, las únicas diferencias son:
 
--  El usuario no se le cobra nuevo para el producto.
--  El `SKPaymentTransaction` objeto pasa a la aplicación tendrá un `OriginalTransaction` propiedad que hace referencia a la transacción que se generó cuando inicialmente se adquirió el producto. 
--  Las aplicaciones que venden productos no consumibles también deben implementar del StoreKit **restaurar** característica para ayudar a los usuarios a recuperar las compras existentes. 
+-  El usuario no se cobra de nuevo para el producto.
+-  El `SKPaymentTransaction` objeto que se pasa a la aplicación tendrá `OriginalTransaction` una propiedad que hace referencia a la transacción que se generó cuando se adquirió inicialmente el producto. 
+-  Las aplicaciones que venden productos que no se pueden consumir también deben implementar la característica de **restauración** de StoreKit para ayudar a los usuarios a recuperar las compras existentes. 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 105d06c7cea23ac0873c8de68d7ad1ad62ae1ffc
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61251453"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665713"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Crear interfaces de usuario de iOS en código de Xamarin.iOS
 
@@ -89,10 +89,10 @@ Los pasos siguientes le guiarán en el proceso de quitar el guión gráfico de u
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -118,10 +118,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -132,7 +132,7 @@ Si fuese a ejecutar esta aplicación ahora, probablemente obtendría una excepci
 
 ## <a name="adding-a-controller"></a>Agregar un controlador
 
-La aplicación puede contener muchos controladores de vista, pero debe tener un controlador de vista raíz para controlar todos los controladores de vista.  Agregar un controlador a la ventana mediante la creación de un `UIViewController` instancia y estableciéndolo en el `window.RootViewController` propiedad:
+La aplicación puede contener muchos controladores de vista, pero debe tener un controlador de vista raíz para controlar todos los controladores de vista.  Agregar un controlador a la ventana mediante la creación de un `UIViewController` instancia y estableciéndolo en el `Window.RootViewController` propiedad:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -632,4 +632,4 @@ En este artículo se describe cómo desarrollar aplicaciones de iOS mediante pro
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SimpleLogin (ejemplo)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)

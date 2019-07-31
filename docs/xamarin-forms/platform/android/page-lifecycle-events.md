@@ -1,24 +1,24 @@
 ---
-title: Eventos de ciclo de vida de página en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. Este artículo explica cómo consumir el Android específicos de la plataforma deshabilita el Disappearing y eventos de la página de aparición en la aplicación, pausar y reanudación, respectivamente.
+title: Eventos del ciclo de vida de la página en Android
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo utilizar el específico de la plataforma Android que deshabilita los eventos de la página que aparecen en la pausa y en la detención de la aplicación, respectivamente.
 ms.prod: xamarin
 ms.assetid: F6E3759C-D347-407A-91A2-CF9B3B7D4CBD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 295b060ee795244184b3ea88b101c720436d1fe5
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 1745f137f2eeb04c0894c57bb0e45e5c43be7d0b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926528"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649933"
 ---
-# <a name="page-lifecycle-events-on-android"></a>Eventos de ciclo de vida de página en Android
+# <a name="page-lifecycle-events-on-android"></a>Eventos del ciclo de vida de la página en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este Android específicos de plataforma se usan para deshabilitar la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página en la aplicación pausar y reanudar, respectivamente, para las aplicaciones que usan AppCompat. Además, incluye la capacidad para controlar si se muestra el teclado en pantalla al reanudar si se mostrara en pausa, siempre que el modo de funcionamiento del teclado en pantalla se establece en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+Esta plataforma Android específica se usa para deshabilitar los [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) eventos [`Appearing`](xref:Xamarin.Forms.Page.Appearing) de página y en la pausa y reanudación de la aplicación, respectivamente, para las aplicaciones que usan AppCompat. Además, incluye la capacidad para controlar si se muestra el teclado en pantalla al reanudar si se mostrara en pausa, siempre que el modo de funcionamiento del teclado en pantalla se establece en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
 
 > [!NOTE]
 > Tenga en cuenta que estos eventos están habilitados de forma predeterminada para conservar el comportamiento existente para las aplicaciones que dependen de los eventos. Deshabilitar estos eventos hace que el ciclo de eventos AppCompat coincide con el ciclo de eventos anteriores a AppCompat.
@@ -59,7 +59,7 @@ El resultado es que el [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

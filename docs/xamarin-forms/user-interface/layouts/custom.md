@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 56f7a5308d15425bdedd7d9098882a072d90d1f7
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347055"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645200"
 ---
 # <a name="creating-a-custom-layout"></a>Crear un diseño personalizado
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms define cuatro clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout y cuadrícula, y cada uno de ellos organiza a sus elementos secundarios de forma diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño que no se proporciona mediante Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout minúsculas orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales._
 
@@ -427,7 +427,7 @@ El número de columnas en cada fila depende del tamaño de fotografía, el ancho
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WrapLayout (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+- [WrapLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Creación de los diseños personalizados en Xamarin.Forms (vídeo)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
 - [Diseño<T>](xref:Xamarin.Forms.Layout`1)

@@ -1,49 +1,49 @@
 ---
-title: Tacto y gestos en Xamarin.Android
-description: 'Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar gestos también. Por ejemplo, el gesto pinch a zoom es un ejemplo muy común de este empujando una parte de la pantalla con dos dedos, que el usuario puede acercar o alejar. Esta guía examina el toque y gestos en Android.'
+title: Toque y gestos en Xamarin. Android
+description: 'Las pantallas táctiles en muchos de los dispositivos de hoy en día permiten a los usuarios interactuar de forma rápida y eficaz con los dispositivos de una manera natural e intuitiva. Esta interacción no se limita solo a la sencilla detección táctil: también es posible usar movimientos. Por ejemplo, el gesto de acercamiento a zoom es un ejemplo muy común de esto al reducir una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. En esta guía se examinan los gestos táctiles y en Android.'
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f957c9ff5a0e7c3a0821978703860ed2f723a92
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1efccdd5f56194f002731b0490bad7573321d7d2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013153"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643997"
 ---
-# <a name="touch-and-gestures-in-xamarinandroid"></a>Tacto y gestos en Xamarin.Android
+# <a name="touch-and-gestures-in-xamarinandroid"></a>Toque y gestos en Xamarin. Android
 
-_Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar gestos también. Por ejemplo, el gesto pinch a zoom es un ejemplo muy común de este empujando una parte de la pantalla con dos dedos, que el usuario puede acercar o alejar. Esta guía examina el toque y gestos en Android._
+_Las pantallas táctiles en muchos de los dispositivos de hoy en día permiten a los usuarios interactuar de forma rápida y eficaz con los dispositivos de una manera natural e intuitiva. Esta interacción no se limita solo a la sencilla detección táctil: también es posible usar movimientos. Por ejemplo, el gesto de acercamiento a zoom es un ejemplo muy común de esto al reducir una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. En esta guía se examinan los gestos táctiles y en Android._
 
-## <a name="touch-overview"></a>Información general de toque
+## <a name="touch-overview"></a>Información general táctil
 
-iOS y Android son similares en las formas que permiten controlar la interacción. Ambos pueden admitir multitoque - muchos puntos de contacto en la pantalla - y gestos complejos. Esta guía presenta algunas de las similitudes en los conceptos, así como las particularidades de la implementación de toque y gestos en ambas plataformas.
+iOS y Android son similares en las maneras en que controlan el toque. Ambos pueden admitir puntos de contacto con varios toques en los gestos complejos y de pantalla. En esta guía se presentan algunas de las similitudes en los conceptos, así como las peculiaridades de la implementación de funciones táctiles y gestos en ambas plataformas.
 
-Android usa un `MotionEvent` objeto para encapsular datos táctiles y métodos en el objeto de vista para realizar escuchas de toques.
+Android usa un `MotionEvent` objeto para encapsular los datos táctiles y métodos en el objeto de vista para escuchar los toques.
 
-Además de capturar datos táctiles, iOS y Android proporcionan medios para interpretar los patrones de toques en los gestos. Estos los reconocedores de gestos a su vez pueden utilizarse para interpretar los comandos específicos de la aplicación, como una rotación de una imagen o un cambio de una página. Android proporciona un puñado de gestos compatibles, así como recursos para hacer que agregar gestos personalizados complejos fácil.
+Además de capturar los datos táctiles, tanto iOS como Android proporcionan medios para interpretar los patrones de los toques en los gestos. Estos reconocedores de gestos se pueden usar a su vez para interpretar comandos específicos de la aplicación, como un giro de una imagen o un turno de una página. Android proporciona una serie de gestos admitidos, así como recursos para facilitar la adición de gestos personalizados complejos.
 
-Si está trabajando en Android o iOS, la elección entre dispositivos táctiles y los reconocedores de gestos puede ser un confuso. Esta guía, se recomienda que en general, debería dará preferencia a los reconocedores de gestos. Los reconocedores de gestos se implementan como clases discretas, que proporcionan mayor separación de intereses y una mejor encapsulación. Esto facilita compartir la lógica entre diferentes vistas, minimizar la cantidad de código escrito.
+Tanto si trabaja en Android o iOS, la elección entre los reconocedores de gestos y los toques puede ser una confusión. En esta guía se recomienda que, en general, se proporcione la preferencia a los reconocedores de gestos. Los reconocedores de gestos se implementan como clases discretas, que proporcionan una mayor separación de preocupaciones y una mejor encapsulación. Esto facilita el uso compartido de la lógica entre diferentes vistas, lo que reduce la cantidad de código escrito.
 
-Esta guía sigue un formato similar para cada sistema operativo: primero, interacción de la plataforma API se introdujo y se ha explicado, ya que son la base sobre qué táctil se compilan las interacciones. A continuación, profundizar en el mundo de los reconocedores de gestos: primero explorando algunos gestos comunes, y finalizando con la creación de gestos personalizados para las aplicaciones. Por último, verá cómo hacer un seguimiento con seguimiento táctil de bajo nivel para crear un programa finger-paint de dedos individuales.
+En esta guía se sigue un formato similar para cada sistema operativo: en primer lugar, se introducen y explican las API táctiles de la plataforma, ya que son la base sobre la que se compilan las interacciones táctiles. A continuación, profundizamos en el mundo de los reconocedores de gestos: primero, explorando algunos gestos comunes y terminando con la creación de gestos personalizados para las aplicaciones. Por último, verá cómo realizar un seguimiento de los dedos individuales mediante el seguimiento táctil de bajo nivel para crear un programa de pintado con el dedo.
 
 ## <a name="sections"></a>Secciones
 
 -  [Entrada táctil de Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Tutorial: Uso de interacción en Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Seguimiento Multitáctil](touch-tracking.md)
+-  [Tutorial: Uso de Touch en Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+-  [Seguimiento multitáctil](touch-tracking.md)
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se examina la entrada táctil en Android. Para ambos sistemas operativos, hemos aprendido cómo habilitar la interacción táctil y responder a los eventos de toque. A continuación, hemos aprendido acerca de los gestos y algunos de los reconocedores de gestos que iOS y Android se proporcionan para controlar algunos de los escenarios más comunes. Hemos visto cómo crear gestos personalizados e implementarlos en las aplicaciones. Un tutorial muestra los conceptos y API para cada sistema operativo en acción, y también vio cómo realizar el seguimiento de los dedos individuales.
+En esta guía se ha examinado el toque en Android. En ambos sistemas operativos, hemos aprendido a habilitar Touch y a responder a los eventos Touch. A continuación, hemos aprendido sobre los gestos y algunos de los reconocedores de gestos que proporcionan Android e iOS para administrar algunos de los escenarios más comunes. Hemos examinado cómo crear gestos personalizados e implementarlos en aplicaciones. En un tutorial se han mostrado los conceptos y las API de cada sistema operativo en acción, y también se ha visto cómo realizar un seguimiento de los dedos individuales.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android tocar inicio (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android toque Final (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
-- [Pintura con los dedos (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [Inicio táctil de Android (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch final (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [Pintura (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

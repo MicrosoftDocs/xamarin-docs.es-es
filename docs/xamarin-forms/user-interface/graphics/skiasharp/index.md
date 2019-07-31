@@ -6,16 +6,16 @@ ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b85cdcd92c4680ced9f75d7b8c5a69c9512d6c4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61291165"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656149"
 ---
 # <a name="skiasharp-graphics-in-xamarinforms"></a>Gráficos de SkiaSharp en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Uso SkiaSharp para gráficos 2D en las aplicaciones de Xamarin.Forms_
 
@@ -25,7 +25,7 @@ En esta guía se da por supuesto que está familiarizado con la programación de
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**Webinar: SkiaSharp para Xamarin.Forms**
+**Seminario Web SkiaSharp para Xamarin. Forms**
 
 ## <a name="skiasharp-preliminaries"></a>Pasos preliminares de SkiaSharp
 
@@ -33,7 +33,7 @@ SkiaSharp para Xamarin.Forms está empaquetado como un paquete de NuGet. Despué
 
 Si la aplicación de Xamarin.Forms tiene como destino iOS, use la página de propiedades de proyecto para cambiar el destino de implementación mínimo IOS 8.0.
 
-En cualquier página de C# que utiliza SkiaSharp desea incluir un `using` la directiva para el [ `SkiaSharp` ](xref:SkiaSharp) espacio de nombres, que abarca todas las  clases de SkiaSharp, estructuras y enumeraciones que va a usar en los gráficos la programación. También conviene un `using` la directiva para el [ `SkiaSharp.Views.Forms` ](xref:SkiaSharp.Views.Forms) espacio de nombres para las clases específicas de Xamarin.Forms. Esto es una cantidad menor espacio de nombres, con la clase más importante que es [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView). Esta clase se deriva de Xamarin.Forms `View`  y hospede su salida gráfica de SkiaSharp.
+En cualquier página de C# que utiliza SkiaSharp desea incluir un `using` la directiva para el [`SkiaSharp`](xref:SkiaSharp) espacio de nombres, que abarca todas las  clases de SkiaSharp, estructuras y enumeraciones que va a usar en los gráficos la programación. También conviene un `using` la directiva para el [ `SkiaSharp.Views.Forms` ](xref:SkiaSharp.Views.Forms) espacio de nombres para las clases específicas de Xamarin.Forms. Esto es una cantidad menor espacio de nombres, con la clase más importante que es [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView). Esta clase se deriva de Xamarin.Forms `View`  y hospede su salida gráfica de SkiaSharp.
 
 > [!IMPORTANT]
 > El `SkiaSharp.Views.Forms` espacio de nombres también contiene un `SKGLView` clase que derive de `View` pero usa OpenGL para representar gráficos. Para fines de simplicidad, esta guía restringe a sí mismo a `SKCanvasView`, pero al usar `SKGLView` en su lugar, es bastante similar.
@@ -65,5 +65,5 @@ Los efectos son propiedades que cambian la visualización de gráficos, incluido
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [SkiaSharp con Xamarin.Forms seminario Web (vídeo)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

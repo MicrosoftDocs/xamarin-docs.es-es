@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c5fa46a67496123eb105ae12404d5607032f5ac1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 24f6eac93dd3095df70bbb326388cd9ed47f395c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971148"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657054"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Herencia de estilo en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Los estilos pueden heredar de otros estilos para reducir la duplicación y habilitar la reutilización._
 
@@ -108,7 +108,7 @@ Esta cadena de herencia se muestra en el ejemplo de código siguiente:
 
 En este ejemplo, `labelStyle` y `buttonStyle` son los recursos de nivel de control mientras `baseStyle` es un recurso de nivel de página. Sin embargo, mientras `labelStyle` y `buttonStyle` heredar `baseStyle`, no es posible que `baseStyle` va a heredar `labelStyle` o `buttonStyle`, debido a sus respectivas ubicaciones en la jerarquía de vistas.
 
-## <a name="style-inheritance-in-c35"></a>Herencia de estilo de C&#35;
+## <a name="style-inheritance-in-c35"></a>Herencia de estilo en C&#35;
 
 La página C# equivalente, donde [ `Style` ](xref:Xamarin.Forms.Style) instancias se asignan directamente a la [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propiedades de los controles necesarios, se muestra en el ejemplo de código siguiente:
 
@@ -158,8 +158,8 @@ El `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instancias y estable
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos básicos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Trabajar con estilos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Estilos básicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Establecedor](xref:Xamarin.Forms.Setter)

@@ -7,16 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218235"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647656"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 El [ `SKShader` ](xref:SkiaSharp.SKShader) clase define los métodos estáticos para crear cuatro tipos diferentes de los degradados. El [ **degradado lineal de SkiaSharp** ](linear-gradient.md) artículo se describe la [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. En este artículo se trata los tres tipos de degradados, todos ellos se basan en círculos.
 
@@ -54,7 +54,7 @@ Los primeros dos argumentos especifican el centro de un círculo y un radio. El 
 
 Si usa `CreateRadialGradient` para rellenar un círculo, puede establecer el centro del degradado en el centro del círculo y el radio de la radio del círculo del degradado. En ese caso, el `SKShaderTileMode` argumento no tiene ningún efecto en la representación del degradado. Sin embargo, si el área que rellena el degradado es mayor que el círculo definido por el degradado, la `SKShaderTileMode` argumento tiene un impacto profundo en lo que ocurre fuera del círculo.
 
-El efecto de `SKShaderMode` se muestra en el **degradado Radial** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo. Crea una instancia en el archivo XAML de esta página una `Picker` que le permite seleccionar uno de los tres miembros de la `SKShaderTileMode` enumeración:
+El efecto de `SKShaderMode` se muestra en el **degradado Radial** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo. Crea una instancia en el archivo XAML de esta página una `Picker` que le permite seleccionar uno de los tres miembros de la `SKShaderTileMode` enumeración:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ Este código crea un degradado con negro en el centro de difuminación gradualme
 
 [![Degradado radial](circular-gradients-images/RadialGradient.png "degradado Radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-En los tres casos, el degradado rellena el lienzo. En la pantalla de iOS a la izquierda, el degradado fuera del radio continúa con el último color, que es el blanco. Que es el resultado de `SKShaderTileMode.Clamp`. La pantalla Android muestra el efecto de `SKShaderTileMode.Repeat`: De 100 píxeles desde el centro, el degradado comienza de nuevo con el primer color, que es el negro. El degradado repite cada 100 píxeles de radius. 
+En los tres casos, el degradado rellena el lienzo. En la pantalla de iOS a la izquierda, el degradado fuera del radio continúa con el último color, que es el blanco. Que es el resultado de `SKShaderTileMode.Clamp`. La pantalla de Android muestra el efecto `SKShaderTileMode.Repeat`de: En 100 píxeles desde el centro, el degradado comienza de nuevo con el primer color, que es negro. El degradado repite cada 100 píxeles de radius. 
 
 La pantalla de la plataforma Universal de Windows en el derecho se muestra cómo `SKShaderTileMode.Mirror` hace que los gradientes para las direcciones alternativas. El primer degradado es del negro en el centro en blanco en un radio de 100 píxeles. La siguiente es blanca desde el radio de 100 píxeles en negro en un radio de 200 píxeles y se invierte el degradado siguiente de nuevo.
 
@@ -620,4 +620,4 @@ Los dos círculos tienen centros de `offCenter` y `center`. El círculo centrado
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

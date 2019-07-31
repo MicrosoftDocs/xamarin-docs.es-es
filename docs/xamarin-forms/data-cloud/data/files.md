@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659082"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656680"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados._
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/), se muestra el texto representado en un control `Label`.
+Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles), se muestra el texto representado en un control `Label`.
 
  [![Archivo de texto insertado en PCL](files-images/pcltext-sml.png "Archivo de texto insertado en PCL mostrado en la aplicación")](files-images/pcltext.png#lightbox "Embedded Text File in PCL Displayed in App")
 
@@ -166,7 +166,7 @@ En este artículo, se muestran algunas operaciones de archivo sencillas para gua
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
 - [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 43497797fe1e740787e531997a62a0ee11deceec
-ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
+ms.openlocfilehash: 7d758d4cb9906542d388f3ced185a0d0bcba5fcd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388483"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651529"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introducción a macOS Sierra
 
@@ -153,5 +153,5 @@ Consulte la documentación sobre diferencias de la [API de MacOS v 10.12](https:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Mac](https://developer.xamarin.com/samples/mac/)
+- [Ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [Novedades de macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

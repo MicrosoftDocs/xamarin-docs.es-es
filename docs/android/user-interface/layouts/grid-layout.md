@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ef965bed5b50402e1659e45c55a02f9382001521
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: a14930d52b551b35dcf5a36e2475b021e5bf27d1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511493"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646594"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout de Xamarin. Android
 
@@ -245,6 +245,6 @@ Esto da como resultado un diseño para `TextViews` que sea similar al diseño qu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GridLayoutDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/GridLayoutDemo/)
+- [GridLayoutDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-ics-samples-gridlayoutdemo)
 - [Presentación del bocadillo de helado](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

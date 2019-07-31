@@ -7,16 +7,16 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c6a600b7ae05df626d4315796c7a5e425639e2f8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61349030"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652797"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotaciones de 3D de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Utilizar las transformaciones no afines girar objetos 2D en el espacio 3D._
 
@@ -539,4 +539,4 @@ Este giro 3D está acotado por varias transformaciones 2D para mover el centro d
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

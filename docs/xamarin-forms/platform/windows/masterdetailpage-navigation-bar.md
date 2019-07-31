@@ -1,24 +1,24 @@
 ---
-title: Barra de navegación MasterDetailPage Windows
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el Windows específicos de la plataforma que se contrae la barra de navegación en un MasterDetailPage.
+title: Barra de navegación MasterDetailPage en Windows
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma específica de Windows que contrae la barra de navegación en un MasterDetailPage.
 ms.prod: xamarin
 ms.assetid: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4601aaefa09dcf5e3c4cf773ca9efff941547502
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: dc79421f7be3a35fe19f239fa24f6a14429953ac
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924770"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656889"
 ---
-# <a name="masterdetailpage-navigation-bar-on-windows"></a>Barra de navegación MasterDetailPage Windows
+# <a name="masterdetailpage-navigation-bar-on-windows"></a>Barra de navegación MasterDetailPage en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esta plataforma Universal de Windows específicos de la plataforma se usan para contraer la barra de navegación en un [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)y se consume en XAML estableciendo el [ `MasterDetailPage.CollapseStyle` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty) y [ `MasterDetailPage.CollapsedPaneWidth` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty) propiedades adjuntas:
+Esta plataforma universal de Windows específica de la plataforma se usa para contraer la barra de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)navegación en un y se consume en XAML [`MasterDetailPage.CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty) estableciendo [`MasterDetailPage.CollapsedPaneWidth`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty) las propiedades adjuntas y:
 
 ```xaml
 <MasterDetailPage ...
@@ -48,6 +48,6 @@ El resultado es que un determinado [ `CollapseStyle` ](xref:Xamarin.Forms.Platfo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

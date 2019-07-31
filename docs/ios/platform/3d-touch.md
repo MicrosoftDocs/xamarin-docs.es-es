@@ -1,49 +1,49 @@
 ---
-title: Introducción a 3D Touch en Xamarin.iOS
-description: En este artículo se describe cómo usar gestos de toque 3D introducidos en el iPhone 6s y iPhone 6s Plus. Estos gestos permiten la sensibilidad a la presión, inspección y pop y acciones rápidas.
+title: Introducción a la función táctil 3D en Xamarin. iOS
+description: En este artículo se describe cómo usar los gestos táctiles 3D introducidos con iPhone 6S y iPhone 6S Plus. Estos gestos permiten la sensibilidad a la presión, los elementos PEEK y pop, y las acciones rápidas.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: abd9fe85be412539fd51d0e6164c79ce346377a7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832104"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647982"
 ---
-# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a 3D Touch en Xamarin.iOS
+# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a la función táctil 3D en Xamarin. iOS
 
-_En este artículo se describe el uso de la nueva gestos iPhone 6s y iPhone 6s Plus 3D Touch en su aplicación._
+_En este artículo se explica el uso de los nuevos movimientos de iPhone 6S y iPhone 6S Plus 3D Touch en la aplicación._
 
-[![](3d-touch-images/info01.png "Ejemplos de 3D Touch en aplicaciones habilitadas")](3d-touch-images/info01.png#lightbox)
+[![](3d-touch-images/info01.png "Ejemplos de aplicaciones habilitadas para toque 3D")](3d-touch-images/info01.png#lightbox)
 
-Este artículo se proporciona e Introducción al uso de las nuevas API 3D Touch para agregar gestos confidenciales presión a las aplicaciones de Xamarin.iOS que se ejecutan en el nuevo iPhone 6s y iPhone 6s Plus dispositivos.
+En este artículo se proporciona una introducción al uso de las nuevas API de toque 3D para agregar gestos sensibles a la presión a las aplicaciones de Xamarin. iOS que se ejecutan en los nuevos dispositivos iPhone 6S y iPhone 6S Plus.
 
-Con 3D Touch, una aplicación de iPhone ahora es capaz de no solo indicar que el usuario toca la pantalla del dispositivo, pero es capaz de detectar la presión está ejerciendo el usuario y responder a los niveles de presión diferentes.
+Con la función táctil 3D, una aplicación de iPhone ahora es capaz de no solo indicar que el usuario está tocando la pantalla del dispositivo, pero es capaz de detectar cuánta presión está ejerciendo el usuario y responder a los diferentes niveles de presión.
 
-3D Touch proporciona las siguientes características a la aplicación:
+en 3D Touch se proporcionan las siguientes características a la aplicación:
 
-- [Sensibilidad a la presión](#Pressure-Sensitivity) : aplicaciones ahora se pueden medir hard o claro, el usuario toca la pantalla y beneficiarse de dicha información.
-  Por ejemplo, una aplicación de dibujo puede hacer que una línea más gruesa o más delgados en función de lo difícil el usuario está tocando la pantalla.
-- [Inspeccionar y Pop](#Peek-and-Pop) -la aplicación ahora puede permitir que el usuario interactúe con sus datos sin tener que salir de su contexto actual. Al pulsar el disco duro en la pantalla de la pantalla, puede inspeccionar en el elemento que les interesa (por ejemplo, para obtener una vista previa de un mensaje). Si presiona más difícil, puede extraer en el elemento.
-- [Acciones rápidas](#Quick-Actions) -pensar de acciones rápidas, como los menús contextuales que pueden ser sacado de la copia de seguridad cuando un usuario del botón secundario en un elemento de una aplicación de escritorio.
-  Con acciones rápidas, puede agregar accesos directos a funciones en la aplicación directamente desde el icono de la aplicación en la pantalla Inicio.
-- [Pruebas de 3D Touch en el simulador](#Testing-3D-Touch-in-the-Simulator) -con el hardware de Mac correcto, puede probar aplicaciones 3D Touch habilitada en el simulador de iOS.
+- [Sensibilidad](#Pressure-Sensitivity) a la presión: ahora, las aplicaciones pueden medir el grado de dificultad o luz que el usuario toca con la pantalla y aprovechar esa información.
+  Por ejemplo, una aplicación de dibujo puede hacer que una línea sea más gruesa o más delgada en función de cómo toque el usuario a la pantalla.
+- [PEEK y pop](#Peek-and-Pop) : la aplicación ahora puede permitir que el usuario interactúe con sus datos sin tener que navegar fuera de su contexto actual. Al presionar el dedo en la pantalla, puede ver el elemento que le interesan (por ejemplo, al obtener una vista previa de un mensaje). Al presionar más duro, pueden entrar en el elemento.
+- [Acciones rápidas](#Quick-Actions) : Piense en acciones rápidas como los menús contextuales que se pueden desplegar cuando un usuario hace clic con el botón derecho en un elemento de una aplicación de escritorio.
+  Con las acciones rápidas, puede agregar accesos directos a las funciones de la aplicación directamente desde el icono de la aplicación en la pantalla principal.
+- [Prueba de la función táctil 3D en el simulador](#Testing-3D-Touch-in-the-Simulator) : con el hardware de Mac correcto, puede probar aplicaciones 3D táctiles habilitadas en el simulador de iOS.
 
 <a name="Pressure-Sensitivity" />
 
 ## <a name="pressure-sensitivity"></a>Sensibilidad a la presión
 
-Como se indicó anteriormente, con nuevas propiedades de la [UITouch](xref:UIKit.UITouch) clase puede medir la cantidad de presión que el usuario se aplica a la pantalla del dispositivo de iOS y use la información de la interfaz de usuario. Por ejemplo, realizando un trazo de pincel más translúcido u opaco basándose en la cantidad de presión.
+Como se indicó anteriormente, mediante el uso de nuevas propiedades de la clase [UITouch](xref:UIKit.UITouch) , puede medir la cantidad de presión que el usuario aplica a la pantalla del dispositivo iOS y usar esta información en la interfaz de usuario. Por ejemplo, crear un trazo de pincel más translúcido u opaco en función de la cantidad de presión.
 
-[![](3d-touch-images/pressure01.png "Un trazo de pincel que se representan como más translúcido u opaco según la cantidad de presión")](3d-touch-images/pressure01.png#lightbox)
+[![](3d-touch-images/pressure01.png "Trazo de pincel representado como más traslúcido o opaco según la cantidad de presión")](3d-touch-images/pressure01.png#lightbox)
 
-Como resultado de 3D Touch, si la aplicación se ejecuta en iOS 9 (o posterior) y el dispositivo iOS es capaz de apoyo 3D Touch, hará que los cambios en la presión de la `TouchesMoved` evento.
+Como resultado de la función táctil 3D, si la aplicación se ejecuta en iOS 9 (o posterior) y el dispositivo iOS es capaz de admitir la funcionalidad táctil 3D, los cambios en `TouchesMoved` la presión harán que se genere el evento.
 
-Por ejemplo, al supervisar el `TouchesMoved` eventos de un [UIView](xref:UIKit.UIView), puede usar el código siguiente para obtener la presión actual que se aplica al usuario a la pantalla:
+Por ejemplo, al supervisar el `TouchesMoved` evento de un [UIView](xref:UIKit.UIView), puede usar el código siguiente para obtener la presión actual que el usuario aplica a la pantalla:
 
 ```csharp
 public override void TouchesMoved (NSSet touches, UIEvent evt)
@@ -62,31 +62,31 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 }
 ```
 
-El `MaximumPossibleForce` propiedad devuelve el valor más alto posible para el `Force` propiedad de la [UITouch](xref:UIKit.UITouch) basándose en el dispositivo iOS que se está ejecutando la aplicación.
+La `MaximumPossibleForce` propiedad devuelve el valor más alto posible para `Force` la propiedad de [UITouch](xref:UIKit.UITouch) basándose en el dispositivo iOS en el que se ejecuta la aplicación.
 
 > [!IMPORTANT]
-> Hará que los cambios en la presión de la `TouchesMoved` evento, incluso si la X / coordenadas Y no han cambiado. Debido a este cambio de comportamiento, las aplicaciones de iOS deben estar preparadas para la `TouchesMoved` eventos que se debe invocar con más frecuencia y de la X coordenadas X/y a ser el mismo que el último `TouchesMoved` llamar.
+> Los cambios de presión harán que `TouchesMoved` se produzca el evento, incluso si las coordenadas X/y no han cambiado. Debido a este cambio de comportamiento, las aplicaciones de iOS deberían estar preparadas para que el `TouchesMoved` evento se invoque con más frecuencia y para que las coordenadas X/y sean iguales que la última `TouchesMoved` llamada.
 
 
 
 
-Para obtener más información, consulte Apple [TouchCanvas: Uso UITouch de manera eficiente y eficaz](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) aplicación de ejemplo y [referencia de clase UITouch](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
+Para obtener más información, consulte TouchCanvas de [Apple: Uso de UITouch de aplicación](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) de ejemplo eficaz y eficaz y [referencia de clase UITouch](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
 
 <a name="Peek-and-Pop" />
 
-## <a name="peek-and-pop"></a>Peek y Pop
+## <a name="peek-and-pop"></a>Inspeccionar y extraer
 
-3D Touch proporciona nuevas formas para interactuar con la información dentro de la aplicación más rápida que nunca, sin tener que navegar desde su ubicación actual.
+la función táctil 3D proporciona nuevas formas de que un usuario interactúe con la información de su aplicación más rápido que nunca, sin tener que navegar desde su ubicación actual.
 
-Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede presionar disco duro en un elemento para obtener una vista previa de su contenido en una vista de superposición (que Apple como que hace referencia a un *Peek*).
+Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede pulsar en un elemento para obtener una vista previa de su contenido en una vista de superposición (a la que Apple hace referencia como un *vistazo*).
 
-[![](3d-touch-images/peekandpop01.png "Un ejemplo de inspección de contenido")](3d-touch-images/peekandpop01.png#lightbox)
+[![](3d-touch-images/peekandpop01.png "Ejemplo de cómo inspeccionar el contenido")](3d-touch-images/peekandpop01.png#lightbox)
 
-Si el usuario presiona más difícil, deberá especificar la vista de mensaje normal (que se conoce como *Pop*-ping en la vista).
+Si el usuario presiona más duro, entrará en la vista normal de mensajes (lo que se conoce *como ping*en la vista).
 
-### <a name="checking-for-3d-touch-availability"></a>Comprobar la disponibilidad 3D Touch
+### <a name="checking-for-3d-touch-availability"></a>Comprobar la disponibilidad de la función táctil 3D
 
-Cuando se trabaja con un `UIViewController` puede usar el código siguiente para ver si la aplicación se está ejecutando en el dispositivo de iOS es compatible con 3D Touch:
+Al trabajar con `UIViewController` , puede usar el código siguiente para ver si el dispositivo iOS en el que se ejecuta la aplicación admite el toque 3D:
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,11 +101,11 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-Este método se puede llamar antes *o después* `ViewDidLoad()`.
+Se puede llamar a este método antes *o después* `ViewDidLoad()`de.
 
-### <a name="handling-peek-and-pop"></a>POP e inspección de control
+### <a name="handling-peek-and-pop"></a>Control de PEEK y pop
 
-En un dispositivo iOS que puede controlar 3D Touch, podemos usar una instancia de la `UIViewControllerPreviewingDelegate` clase para controlar la presentación de **Peek** y **Pop** detalles de elemento. Por ejemplo, si tuviéramos un controlador de vista de tabla denominada `MasterViewController` podríamos usar el siguiente código para admitir **Peek** y **Pop**:
+En un dispositivo iOS que puede controlar el toque 3D, podemos usar una instancia de la `UIViewControllerPreviewingDelegate` clase para controlar la presentación de los detalles de los elementos **PEEK** y **pop** . Por ejemplo, si tenemos un controlador de vista de tabla `MasterViewController` llamado, podríamos usar el código siguiente para admitir **PEEK** y **pop**:
 
 ```csharp
 using System;
@@ -173,13 +173,13 @@ namespace DTouch
 }
 ```
 
-El `GetViewControllerForPreview` método se usa para realizar la **Peek** operación. Se obtiene acceso a los datos de copia de seguridad y de celda de tabla y, a continuación, carga el `DetailViewController` desde el guión gráfico actual. Estableciendo el `PreferredContentSize` a (0,0), te pedimos para el valor predeterminado **Peek** tamaño de la vista. Por último, se desenfoca todo excepto la celda que mostramos con `previewingContext.SourceRect = cell.Frame` y se devuelve la nueva vista para su presentación.
+El `GetViewControllerForPreview` método se usa para realizar la operación de **lectura** . Obtiene acceso a la celda de la tabla y a los datos `DetailViewController` de respaldo y, a continuación, carga desde el guión gráfico actual. Al establecer `PreferredContentSize` en (0,0), se solicita el tamaño predeterminado de la vista de **búsqueda** . Por último, se desenfoca todo excepto la celda que se `previewingContext.SourceRect = cell.Frame` muestra con y se devuelve la nueva vista para mostrarla.
 
-El `CommitViewController` vuelve a usar la vista se creó en el **Peek** para el **Pop** ver cuando el usuario presiona más difícil.
+Vuelve a usar la vista que creamos en la vista de **pop** cuando el usuario presiona más difícil. `CommitViewController`
 
-### <a name="registering-for-peek-and-pop"></a>Registrarse para la inspección y Pop
+### <a name="registering-for-peek-and-pop"></a>Registro para PEEK y pop
 
-Desde el controlador de vista que va a permitir que el usuario **Peek** y **Pop** elementos desde, se debe registrar para este servicio. En el ejemplo anterior de un controlador de vista de tabla (`MasterViewController`), se usaría el código siguiente:
+En el controlador de vista en el que queremos permitir que el usuario **examine y examine** **los elementos,** es necesario registrarse para este servicio. En el ejemplo anterior de un controlador de vista de tabla`MasterViewController`(), se usaría el siguiente código:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -196,24 +196,24 @@ public override void ViewDidLoad ()
 }
 ```
 
-Aquí estamos llamando a la `RegisterForPreviewingWithDelegate` método con una instancia de la `PreviewingDelegate` hemos creado anteriormente. En dispositivos iOS compatibles con 3D Touch, el usuario puede presionar disco duro en un elemento para Peek en él. Si presiona la tecla aún más difícil, el elemento se mostrará el mensaje en ella estándar mostrar la vista.
+Aquí vamos a llamar al `RegisterForPreviewingWithDelegate` método con una instancia `PreviewingDelegate` de creada anteriormente. En los dispositivos iOS que admiten la función táctil 3D, el usuario puede pulsar en un elemento para leerlo. Si presionan incluso más difíciles, el elemento se mostrará en la vista estándar.
 
-Para obtener más información, consulte nuestra [iOS 9 ejemplo ApplicationShortcuts](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) y Apple [ViewControllerPreviews: Mediante la vista previa de las API de UIViewController](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) aplicación de ejemplo, [referencia de clase UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [referencia de clase UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) y [UIPreviewActionItem Referencia del protocolo](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
+Para obtener más información, consulte el [ejemplo de ApplicationShortcuts de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y [ViewControllerPreviews de Apple: Usar la aplicación de ejemplo de API](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) de vista previa de UIViewController, [referencia de clase UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), referencia de [clase UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) y [referencia de protocolo UIPreviewActionItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
 
 <a name="Quick-Actions" />
 
 ## <a name="quick-actions"></a>Acciones rápidas
 
-Con 3D Touch y acciones rápidas, puede agregar comunes, rápido y fácil a los métodos abreviados de acceso a las funciones en la aplicación desde el icono de pantalla de inicio en el dispositivo iOS.
+Con las acciones rápidas y táctiles 3D, puede agregar accesos directos comunes y rápidos y fáciles de acceder a las funciones de la aplicación desde el icono de la pantalla principal del dispositivo iOS.
 
-Como se indicó anteriormente, se puede considerar acciones rápidas, como los menús contextuales que pueden ser sacado de la copia de seguridad cuando un usuario del botón secundario en un elemento de una aplicación de escritorio. Se deben utilizar acciones rápidas para proporcionar accesos directos a las funciones o características de la aplicación más comunes.
+Como se indicó anteriormente, puede considerar acciones rápidas como los menús contextuales que se pueden desplegar cuando un usuario hace clic con el botón derecho en un elemento de una aplicación de escritorio. Debe usar acciones rápidas para proporcionar accesos directos a las funciones o características más comunes de la aplicación.
 
 [![](3d-touch-images/quickactions01.png "Un ejemplo de un menú de acciones rápidas")](3d-touch-images/quickactions01.png#lightbox)
 
 
 ### <a name="defining-static-quick-actions"></a>Definir acciones rápidas estáticas
 
-Si una o varias de las acciones rápidas requeridos por la aplicación son estáticos y no es necesario cambiar, puede definirlas en la aplicación `Info.plist` archivo. Edite este archivo en un editor externo y agregue las siguientes claves:
+Si una o varias de las acciones rápidas que requiere la aplicación son estáticas y no necesita cambiar, puede definirlas en el archivo de `Info.plist` la aplicación. Edite este archivo en un editor externo y agregue las claves siguientes:
 
 ```xml
 <key>UIApplicationShortcutItems</key>
@@ -241,9 +241,9 @@ Si una o varias de las acciones rápidas requeridos por la aplicación son está
 </array>
 ```
 
-Aquí se define dos elementos de acción rápida estáticos con las claves siguientes:
+Aquí vamos a definir dos elementos de acción rápida estáticos con las claves siguientes:
 
-- `UIApplicationShortcutItemIconType` : Define el icono que se mostrará en el elemento de acción rápida como uno de los siguientes valores:
+- `UIApplicationShortcutItemIconType`: Define el icono que se mostrará en el elemento de acción rápida como uno de los siguientes valores:
   - `UIApplicationShortcutIconTypeAdd`
   - `UIApplicationShortcutIconTypeAlarm`
   - `UIApplicationShortcutIconTypeAudio`
@@ -276,22 +276,22 @@ Aquí se define dos elementos de acción rápida estáticos con las claves sigui
 
         ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
 
-* `UIApplicationShortcutItemSubtitle` : Define el subtítulo para el elemento.
-* `UIApplicationShortcutItemTitle` : Define el título del elemento.
-* `UIApplicationShortcutItemType` : Es un valor de cadena que se utilizará para identificar el elemento en nuestra aplicación. Para obtener más información, vea la sección siguiente.
+* `UIApplicationShortcutItemSubtitle`: Define el subtítulo del elemento.
+* `UIApplicationShortcutItemTitle`: Define el título del elemento.
+* `UIApplicationShortcutItemType`: Es un valor de cadena que se va a usar para identificar el elemento en la aplicación. Para obtener más información, vea la sección siguiente.
 
 > [!IMPORTANT]
-> Elementos de acceso directo de acción rápidos que se establecen en el `Info.plist` no se puede acceder al archivo con el `Application.ShortcutItems` propiedad. Solo se pasan en a la `HandleShortcutItem` controlador de eventos.
+> No se puede tener acceso a los elementos de `Info.plist` acceso directo de acción rápida que se `Application.ShortcutItems` establecen en el archivo con la propiedad. Solo se pasan al `HandleShortcutItem` controlador de eventos.
 
 
 
 
 
-### <a name="identifying-quick-action-items"></a>Identificación de los elementos de acción rápida
+### <a name="identifying-quick-action-items"></a>Identificar elementos de acción rápida
 
-Como vimos anteriormente, cuando define los elementos de acción rápida en la aplicación `Info.plist`, asigna un valor de cadena para el `UIApplicationShortcutItemType` clave para identificarlos.
+Como vimos anteriormente, al definir los elementos de acción rápida en la aplicación `Info.plist`, ha asignado un valor de cadena a la `UIApplicationShortcutItemType` clave para identificarlos.
 
-Para facilitar los identificadores trabajar con código, agregue una clase denominada `ShortcutIdentifier` a la aplicación del proyecto y dele un aspecto similar al siguiente:
+Para facilitar el trabajo con estos identificadores en el código, agregue una clase denominada `ShortcutIdentifier` al proyecto de la aplicación y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -310,9 +310,9 @@ namespace AppSearch
 
 <a name="Handling-a-Quick-Action" />
 
-### <a name="handling-a-quick-action"></a>Control de una acción rápida
+### <a name="handling-a-quick-action"></a>Controlar una acción rápida
 
-A continuación, deberá modificar su aplicación `AppDelegate.cs` archivo para controlar el usuario selecciona un elemento de acción rápida desde el icono de la aplicación en la pantalla de inicio.
+A continuación, debe modificar el archivo de `AppDelegate.cs` la aplicación para que el usuario seleccione un elemento de acción rápida del icono de la aplicación en la pantalla principal.
 
 Realice las siguientes modificaciones:
 
@@ -381,16 +381,16 @@ public override void PerformActionForShortcutItem (UIApplication application, UI
 }
 ```
 
-En primer lugar, definimos una pública `LaunchedShortcutItem` propiedad para realizar un seguimiento del último elemento de acción rápida seleccionado por el usuario. A continuación, se muestra cómo reemplazar el `FinishedLaunching` método y vea si `launchOptions` se han pasado y contiene un elemento de acción rápida. Si lo hacen, almacenamos la acción rápida en el `LaunchedShortcutItem` propiedad.
+En primer lugar, se define `LaunchedShortcutItem` una propiedad pública para realizar el seguimiento del último elemento de acción rápida seleccionado por el usuario. A continuación, se invalida `FinishedLaunching` el método y se `launchOptions` ve si se han pasado y si contienen un elemento de acción rápida. Si lo hacen, se almacena la acción rápida en la `LaunchedShortcutItem` propiedad.
 
-A continuación, se muestra cómo reemplazar el `OnActivated` método y pasar cualquiera seleccionado el elemento de inicio rápido para la `HandleShortcutItem` método para actuar sobre ellos. Actualmente sólo estamos escribiendo un mensaje a la **consola**. En una aplicación real controlaría cualquier acción era necesaria. Después de que se ha realizado la acción, el `LaunchedShortcutItem` propiedad está desactivada.
+Después, invalide `OnActivated` el método y pase cualquier elemento de inicio rápido seleccionado `HandleShortcutItem` al método en el que se va a actuar. Actualmente solo estamos escribiendo un mensaje en la **consola**. En una aplicación real, podría controlar qué acción fue necesaria. Una vez realizada la acción, se borra `LaunchedShortcutItem` la propiedad.
 
-Por último, si ya se estaba ejecutando la aplicación, el `PerformActionForShortcutItem` podría llamar al método para controlar el elemento de acción rápida, por lo que necesitamos invalidarlo y llamar a nuestra `HandleShortcutItem` método aquí también.
+Por último, si la aplicación ya se estaba ejecutando `PerformActionForShortcutItem` , se llamaría al método para controlar el elemento de acción rápida, por lo que necesitamos reemplazarlo `HandleShortcutItem` y llamar a nuestro método aquí también.
 
 
-### <a name="creating-dynamic-quick-action-items"></a>Creación de elementos de acción rápida dinámico
+### <a name="creating-dynamic-quick-action-items"></a>Crear elementos de acción rápida dinámica
 
-Además de definir la acción rápida estático los elementos de la aplicación `Info.plist` archivo, puede crear dinámica sobre la marcha acciones rápidas. Para definir dos acciones rápidas dinámica nueva, editar su `AppDelegate.cs` archivo nuevo y modificar el `FinishedLaunching` método para buscar a lo siguiente:
+Además de definir elementos de acción rápida estáticos en el archivo `Info.plist` de la aplicación, puede crear acciones rápidas dinámicas sobre la marcha. Para definir dos nuevas acciones rápidas dinámicas, edite `AppDelegate.cs` el archivo de nuevo y modifique el `FinishedLaunching` método para que tenga un aspecto similar al siguiente:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -423,36 +423,36 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Ahora estamos comprobando para ver si el `application` ya contiene un conjunto de forma dinámica crean `ShortcutItems`, si no es así, crearemos dos nuevos `UIMutableApplicationShortcutItem` objetos para definir los nuevos elementos y agregarlos a la `ShortcutItems` matriz.
+Ahora estamos comprobando para ver si el `application` ya contiene un conjunto de objetos creados `ShortcutItems`dinámicamente, si no vamos a crear dos nuevos `UIMutableApplicationShortcutItem` objetos para definir los nuevos elementos y agregarlos a la `ShortcutItems` matriz.
 
-El código ya se han agregado en el [controlar una acción rápida](#Handling-a-Quick-Action) va a controlar estas acciones rápidas dinámico como estático las sección anterior.
+El código que ya hemos agregado en la sección [control de una acción rápida](#Handling-a-Quick-Action) anterior controlará estas acciones rápidas dinámicas, al igual que las estáticas.
 
-Debe tenerse en cuenta que puede crear una combinación de elementos de acción rápida estáticas y dinámicas (como se hace aquí), no está limitado a uno u otro.
+Debe tenerse en contada que puede crear una mezcla de elementos de acción rápida estáticos y dinámicos (como hacemos aquí), no está limitado a uno u otro.
 
-Para obtener más información, consulte nuestra [iOS 9 ejemplo ViewControllerPreview](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) y vea de Apple [ApplicationShortcuts: Mediante UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) aplicación de ejemplo, [referencia de clase UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), [referencia de clase UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) y [ Referencia de clase UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
+Para obtener más información, consulte nuestro [ejemplo de ViewControllerPreview de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y [vea ApplicationShortcuts de Apple: Uso de](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) la aplicación de ejemplo UIApplicationShortcutItem, [referencia de clase UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), referencia de clase [UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) y [referencia de clase UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
 
 <a name="Testing-3D-Touch-in-the-Simulator" />
 
-## <a name="testing-3d-touch-in-the-simulator"></a>Prueba la entrada táctil 3D en el simulador
+## <a name="testing-3d-touch-in-the-simulator"></a>Probar la función táctil 3D en el simulador
 
-Cuando usen la versión más reciente de Xcode y el simulador de iOS en un Mac compatible con un toque Force habilita trackpad, puede probar la funcionalidad táctil 3D en el simulador.
+Al usar la versión más reciente de Xcode y el simulador de iOS en un equipo Mac compatible con una Force Touch habilitar el control de pantalla, puede probar la funcionalidad táctil 3D en el simulador.
 
-Para habilitar esta funcionalidad, ejecute cualquier aplicación en iPhone simulado hardware compatible con 3D Touch (iPhone 6s y versiones posteriores). A continuación, seleccione el **Hardware** menú en iOS Simulator y habilite el **motivación Trackpad Use 3D touch** elemento de menú:
+Para habilitar esta funcionalidad, ejecute cualquier aplicación en hardware de iPhone simulado que admita el toque 3D (iPhone 6S y versiones posteriores). A continuación, seleccione el menú de **hardware** en el simulador de iOS y habilite el elemento de menú **usar el fuerza de pantalla para el toque 3D** :
 
-[![](3d-touch-images/simulator01.png "Seleccione el menú de Hardware en el simulador de iOS y habilite la fuerza de Trackpad Use 3D touch elemento de menú")](3d-touch-images/simulator01.png#lightbox)
+[![](3d-touch-images/simulator01.png "Seleccione el menú de hardware en el simulador de iOS y habilite el elemento de menú usar el fuerza de pantalla para el toque 3D.")](3d-touch-images/simulator01.png#lightbox)
 
-Con esta característica está activa, puede presionar más difíciles en el panel de seguimiento del equipo Mac para habilitar la interacción táctil 3D tal como lo haría en hardware real iPhone.
+Con esta característica activa, puede presionar más fuerte en el toques del equipo Mac para habilitar la función táctil 3D, al igual que haría en el hardware de iPhone real.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo presenta las nuevas 3D Touch API está disponible en iOS 9 para el iPhone 6s y iPhone 6s Plus. Se ha descrito agregando sensibilidad a la presión a una aplicación; uso de Peek y Pop para mostrar rápidamente información de la aplicación desde el contexto actual sin navegación; y uso de acciones rápidas para proporcionar accesos directos a la aplicación más utilizada del características.
+En este artículo se han incorporado las nuevas API táctiles 3D que están disponibles en iOS 9 para iPhone 6S y iPhone 6S Plus. Se ha tratado la adición de sensibilidad a la presión a una aplicación; usar PEEK y pop para mostrar rápidamente información de la aplicación desde el contexto actual sin navegación; y el uso de acciones rápidas para proporcionar accesos directos a las características de uso más frecuente de la aplicación.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [iOS 9 ViewControllerPreview ejemplo](https://developer.xamarin.com/samples/monotouch/ios9/ViewControllerPreview/)
-- [iOS 9 ApplicationShortcuts ejemplo](https://developer.xamarin.com/samples/monotouch/ios9/ApplicationShortcuts/)
+- [Ejemplo de ViewControllerPreview de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
+- [Ejemplo de ApplicationShortcuts de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-applicationshortcuts)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Preparar las aplicaciones de iPhone para 3D Touch](https://developer.apple.com/ios/3d-touch/)
+- [Preparar las aplicaciones de iPhone para la funcionalidad táctil 3D](https://developer.apple.com/ios/3d-touch/)

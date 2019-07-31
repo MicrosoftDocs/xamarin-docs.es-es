@@ -7,16 +7,16 @@ ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 399f19ba4ec1ed8494e8269fc4cd0682b466a31a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1ec5c5fb1a81873d88a59eefba7652a86fc1ba4e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187760"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657213"
 ---
 # <a name="the-rotate-transform"></a>Transformación de rotación
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore los efectos y animaciones posibles con la transformación de giro de SkiaSharp_
 
@@ -373,4 +373,4 @@ Para un reloj sea más atractivo, consulte el artículo [ **datos de ruta de acc
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 05d5003d349ae11a1ec6a1b6f3d66b2f68ffad8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357192"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652874"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de trazado
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obtenga información acerca de las rutas de acceso y enumerar el contenido_
 
@@ -24,7 +24,7 @@ El [ `SKPath` ](xref:SkiaSharp.SKPath) clase define varias propiedades y método
 
 A veces resulta útil para determinar la longitud total de todas las líneas y curvas que conforman una ruta de acceso. Calcular este valor de longitud no es una tarea de forma algorítmica sencilla, por lo que toda una clase denominada [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) se dedica a él.
 
-También a veces es útil obtener todas las operaciones y los puntos que componen una ruta de acceso de dibujo. En primer lugar, esta función puede parecer innecesaria: Si su programa ha creado la ruta de acceso, el programa ya conoce el contenido. Sin embargo, hemos visto que las rutas de acceso también pueden crearse mediante [efectos del trazado](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) y convirtiendo [cadenas de texto en trazados](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). También puede obtener todas las operaciones y los puntos que componen estas rutas de acceso de dibujo. Una posibilidad es para aplicar una transformación algorítmica a todos los puntos, por ejemplo, para ajustar el texto en un hemisferio:
+También a veces es útil obtener todas las operaciones y los puntos que componen una ruta de acceso de dibujo. En primer lugar, este recurso podría parecer innecesario: Si el programa ha creado la ruta de acceso, el programa ya conoce el contenido. Sin embargo, hemos visto que las rutas de acceso también pueden crearse mediante [efectos del trazado](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) y convirtiendo [cadenas de texto en trazados](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). También puede obtener todas las operaciones y los puntos que componen estas rutas de acceso de dibujo. Una posibilidad es para aplicar una transformación algorítmica a todos los puntos, por ejemplo, para ajustar el texto en un hemisferio:
 
 ![](information-images/pathenumerationsample.png "Texto ajustado en un hemisferio.")
 
@@ -140,7 +140,7 @@ El **monociclo mitad canalización** página anima un dibujo en un monociclo que
 
 [![](information-images/unicyclehalfpipe-small.png "Captura de pantalla de la página de la canalización con mitad monociclo triple")](information-images/unicyclehalfpipe-large.png#lightbox "Triple captura de pantalla de la página de la canalización con mitad monociclo")
 
-El `SKPaint` objeto usado para el trazado de la canalización de medio y el monociclo se define como un campo en el `UnicycleHalfPipePage` clase. También define es el `SKPath` objeto para el monociclo:
+El `SKPaint` objeto que se usa para contornear la media canalización y UNICYCLE se define como un campo `UnicycleHalfPipePage` en la clase. También define es el `SKPath` objeto para el monociclo:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -255,7 +255,7 @@ La mayoría de estas letras se componen de líneas rectas, aunque aparentemente 
 
 La clave es que las líneas rectas originales se dividen en una serie de líneas rectas más pequeñas. A continuación, se pueden manipular estas líneas rectas menor individuales de maneras diferentes para formar una curva.
 
-Para facilitar este proceso, el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo contiene una variable static [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) clase con un `Interpolate` método que desglosa un línea recta en numerosas líneas cortas que son solo una unidad de longitud. Además, la clase contiene varios métodos que convierten a los tres tipos de curvas de Bézier en una serie de líneas rectas pequeñas que se aproxima a la curva. (Las fórmulas paramétricas se presentaron en el artículo [ **tipos tres de curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Este proceso se denomina _aplanamiento_ la curva:
+Para facilitar este proceso, el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo contiene una variable static [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) clase con un `Interpolate` método que desglosa un línea recta en numerosas líneas cortas que son solo una unidad de longitud. Además, la clase contiene varios métodos que convierten a los tres tipos de curvas de Bézier en una serie de líneas rectas pequeñas que se aproxima a la curva. (Las fórmulas paramétricas se presentaron en el artículo [ **tipos tres de curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Este proceso se denomina _aplanamiento_ la curva:
 
 ```csharp
 static class PathExtensions
@@ -523,4 +523,4 @@ Esta es una técnica muy versátil. Si la matriz de los efectos de la ruta de ac
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

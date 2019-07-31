@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3dd2add9d8cbc719623c8229778dc0ffe49aaa8f
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509152"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644139"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Servicios iniciados con Xamarin. Android
 
@@ -81,7 +81,7 @@ Varios llamadores pueden solicitar que se inicie un servicio. Si hay una solicit
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [StartedServicesDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/StartedServicesDemo/)
+- [StartedServicesDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
 - [Android.App.Service](xref:Android.App.Service)
 - [Android.App.StartCommandFlags](xref:Android.App.StartCommandFlags)
 - [Android.App.StartCommandResult](xref:Android.App.StartCommandResult)

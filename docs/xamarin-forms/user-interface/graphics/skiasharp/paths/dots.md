@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384827"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643021"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Supere las complejidades de dibujo de líneas de puntos y guiones de SkiaSharp_
 
@@ -26,7 +26,7 @@ SkiaSharp le permite dibujar líneas que no son sólidos, pero en su lugar está
 
 Hacer esto con un *efecto de la ruta de acceso*, que es una instancia de la [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) clase que se establece en el [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) propiedad de `SKPaint`. Puede crear una ruta de acceso mediante uno de los métodos de creación estático definidos por efecto (o combinar efectos de ruta de acceso) `SKPathEffect`. (`SKPathEffect` es uno de los efectos de seis admite SkiaSharp; los demás se describen en la sección [ **SkiaSharp efecto**](../effects/index.md).)
 
-Para dibujar líneas de puntos o guiones, use el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Hay dos argumentos: En primer lugar se trata de una matriz de `float` valores que indican la longitud de los puntos y guiones y la longitud de los espacios entre ellos. Esta matriz debe tener un número par de elementos, y debe haber al menos dos elementos. (Puede haber cero elementos en la matriz pero que da lugar a una línea sólida.) Si hay dos elementos, la primera es la longitud de un punto o guión y el segundo es la longitud del espacio antes del siguiente punto o guión. Si hay más de dos elementos, a continuación, se encuentran en este orden: dash longitud, longitud del espacio, longitud del guión, duración de la brecha y así sucesivamente.
+Para dibujar líneas de puntos o guiones, use el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Hay dos argumentos: Esta primera es una matriz de `float` valores que indican las longitudes de los puntos y guiones y la longitud de los espacios que hay entre ellos. Esta matriz debe tener un número par de elementos, y debe haber al menos dos elementos. (Puede haber cero elementos en la matriz pero que da lugar a una línea sólida.) Si hay dos elementos, la primera es la longitud de un punto o guión y el segundo es la longitud del espacio antes del siguiente punto o guión. Si hay más de dos elementos, a continuación, se encuentran en este orden: dash longitud, longitud del espacio, longitud del guión, duración de la brecha y así sucesivamente.
 
 Por lo general, deseará hacer las longitudes de dash y gap un múltiplo del ancho del trazo. Si el ancho del trazo es de 10 píxeles, por ejemplo, a continuación, la matriz {10, 10} dibujará una línea de puntos donde las brechas y los puntos son la misma longitud que el grosor del trazo.
 
@@ -217,4 +217,4 @@ Por supuesto, tendrá que ejecutar el programa para ver la animación:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

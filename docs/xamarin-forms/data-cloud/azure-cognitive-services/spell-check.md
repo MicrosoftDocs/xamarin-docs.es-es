@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 9a54743ed7dc3ce23c3306589c0bae1e0fd3206c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658682"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645342"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>La revisión ortográfica con Bing Spell Check API
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Bing Spell Check realiza contextual corrector ortográfico para el texto, que proporciona sugerencias de en línea para palabras mal escritas. En este artículo se explica cómo usar Bing Spell Check REST API para corregir errores ortográficos en una aplicación de Xamarin.Forms._
 
@@ -156,7 +156,7 @@ Este código recorre el `FlaggedTokens` colección y reemplaza cualquier mal esc
 ![](spell-check-images/after-spell-check.png "Después de comprobar la ortografía")
 
 > [!NOTE]
-> El ejemplo anterior usa `Replace` por motivos de simplicidad, pero a través de una gran cantidad de texto podría reemplazar el token erróneo. La API proporciona el `offset` valor que debe usarse en aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.
+> En el ejemplo anterior `Replace` se usa para simplificar, pero en una gran cantidad de texto podría reemplazar el token equivocado. La API proporciona el `offset` valor que debe usarse en las aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.
 
 ## <a name="summary"></a>Resumen
 
@@ -165,6 +165,6 @@ En este artículo se explica cómo usar Bing Spell Check REST API para corregir 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Documentación de Bing Spell Check](/azure/cognitive-services/bing-spell-check/)
-- [Consumir un servicio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Todo Cognitive Services (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Referencia de Bing Spell Check API v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

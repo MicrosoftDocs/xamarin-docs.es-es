@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 9a9bec364990f683a59e6ddce1a536950cdf3861
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a714b8bd1984f22a138d09912a0a7fe1a51e857c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61392689"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646817"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabajar con watchOS diseño en Xamarin
 
@@ -84,6 +84,6 @@ Estos se pueden colocar en los diseños con **grupos** o la configuración de la
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Referencia de diseño de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
 - [Hacer referencia a Color & Tipografía de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

@@ -1,24 +1,24 @@
 ---
-title: Elevación VisualElement en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el Android específicos de la plataforma que controla la elevación de VisualElements en las aplicaciones destinadas a API 21 o posterior.
+title: Elevación de VisualElement en Android
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma Android que controla la elevación de VisualElements en las aplicaciones que tienen como destino la API 21 o posterior.
 ms.prod: xamarin
 ms.assetid: 5BFD6175-2BBD-41CD-B8F9-521B4750B708
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: c7cc6b560ea91dca89c468271b89d1dcedfcda53
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 243e351f29b056a6d4a567b8e39240a87f37aec2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65927026"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651885"
 ---
-# <a name="visualelement-elevation-on-android"></a>Elevación VisualElement en Android
+# <a name="visualelement-elevation-on-android"></a>Elevación de VisualElement en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este Android específicos de plataforma se usa para controlar la elevación o el orden Z de los elementos visuales en aplicaciones que tienen como destino API 21 o mayor. La elevación de un elemento visual determina su orden de dibujo, con elementos visuales con los valores más altos de Z occluding elementos visuales con los valores más bajos de Z. Se consume en XAML estableciendo el `VisualElement.Elevation` propiedad adjunta un `boolean` valor:
+Esta plataforma Android específica se usa para controlar la elevación, o el orden Z, de los elementos visuales en las aplicaciones que tienen como destino la API 21 o posterior. La elevación de un elemento visual determina su orden de dibujo, con elementos visuales con los valores más altos de Z occluding elementos visuales con los valores más bajos de Z. Se consume en XAML estableciendo el `VisualElement.Elevation` propiedad adjunta un `boolean` valor:
 
 ```xaml
 <ContentPage ...
@@ -87,7 +87,7 @@ El resultado es que se puede controlar la elevación de los elementos visuales p
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

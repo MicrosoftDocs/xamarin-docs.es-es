@@ -7,16 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d85c705fb993e9b6b558b0c051de93e449b9d05
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289142"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648719"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Los filtros de máscara son los efectos que manipulan la geometría y el canal alfa de objetos gráficos. Para usar un filtro de máscara, establezca el [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) propiedad de `SKPaint` a un objeto de tipo [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) que ha creado llamando a uno de los `SKMaskFilter` métodos estáticos.
 
@@ -43,7 +43,7 @@ Las sobrecargas permiten especificar marcas para el algoritmo utilizado para cre
 
 En los ejemplos siguientes se muestran los efectos de estos estilos. El `sigma` parámetro especifica la extensión de desenfoque. En versiones anteriores de Skia, la extensión del desenfoque se ha indicado con un valor de radio. Si un valor de radio es preferible para la aplicación, hay una estática [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) método que se puede convertir de uno a otro. El método multiplica el radio por 0.57735 y agrega 0,5.
 
-El **desenfoque experimentar máscara** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) ejemplo le permite experimentar con los valores de sigma y estilos de desenfoque. El archivo XAML crea una instancia de un `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de sigma:
+El **desenfoque experimentar máscara** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo le permite experimentar con los valores de sigma y estilos de desenfoque. El archivo XAML crea una instancia de un `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,9 +180,9 @@ Todas las capturas de pantalla hasta ahora han demostrado desenfoque creado con 
 
 [![Enmascarar desenfoque experimento](mask-filters-images/MaskBlurExperiment.png "enmascarar el experimento de desenfoque")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-La captura de pantalla de iOS muestra el `Solid` estilo: Los caracteres del texto siguen presentes como trazos negros sólidos, y se agrega el efecto de desenfoque a fuera de estos caracteres de texto. 
+La captura de pantalla de `Solid` iOS muestra el estilo: Los caracteres de texto siguen presentes como trazos negros sólidos y el desenfoque se agrega a la parte externa de estos caracteres de texto. 
 
-La captura de pantalla de Android en el central muestra la `Outer` estilo: Se eliminan los trazos de carácter a sí mismos (como es el mapa de bits) y el efecto de desenfoque rodea el espacio vacío donde aparecieron una vez que los caracteres de texto. 
+La captura de pantalla de Android en el `Outer` centro muestra el estilo: Los trazos de caracteres se eliminan (como es el mapa de bits) y el desenfoque rodea el espacio vacío en el que aparecían los caracteres de texto. 
 
 La captura de pantalla UWP de la derecha se muestra el `Inner` estilo. El efecto de desenfoque está restringido para el área ocupada normalmente por los caracteres de texto.
 
@@ -274,4 +274,4 @@ Este filtro de desenfoque hace que la reflexión a resultar mucho más realistas
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

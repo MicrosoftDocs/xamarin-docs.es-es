@@ -1,25 +1,25 @@
 ---
-title: Colocación de la barra de herramientas TabbedPage y Color en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el Android específicos de la plataforma que establece la selección de ubicación y color de la barra de herramientas en una TabbedPage.
+title: Selección de ubicación y color de la barra de herramientas TabbedPage en Android
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma Android que establece la posición y el color de la barra de herramientas en un TabbedPage.
 ms.prod: xamarin
 ms.assetid: A5C68D6A-9A5F-42EE-845D-1E5B0CB1544E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: ad96fa84a9d60aeeaef1cf568a4971f5ffe7a13f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 045a2dda350a8d8fc60d8985d94907157f1bcb49
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970620"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649826"
 ---
-# <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Colocación de la barra de herramientas TabbedPage y Color en Android
+# <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Selección de ubicación y color de la barra de herramientas TabbedPage en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 > [!IMPORTANT]
-> Las funcionalidades específicas de plataforma que establece el color de la barra de herramientas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) ahora están obsoletos y se han reemplazado por la [ `SelectedTabColor` ](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) y [ `UnselectedTabColor` ](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor)propiedades. Para obtener más información, consulte [creando una TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#creating-a-tabbedpage).
+> Las características específicas de la plataforma que establecen el color de la barra de [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) herramientas en un están ahora obsoletas y se han [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) reemplazado por las propiedades y [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) . Para obtener más información, vea [crear un TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#creating-a-tabbedpage).
 
 Estas funcionalidades específicas de plataforma se utilizan para establecer la selección de ubicación y color de la barra de herramientas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Que se consumen en XAML estableciendo el [ `TabbedPage.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) propiedad adjunta a un valor de la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) enumeración y el [ `TabbedPage.BarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) y [ `TabbedPage.BarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) adjunta propiedades a un [ `Color` ](xref:Xamarin.Forms.Color):
 
@@ -62,7 +62,7 @@ El resultado es que se pueden establecer la posición de la barra de herramienta
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

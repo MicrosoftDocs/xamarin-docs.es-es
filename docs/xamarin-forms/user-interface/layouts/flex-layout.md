@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 512aa2b54ec22acf8308b3452bfeee2318097b57
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 187befd88c115133a92aa90a711438e7754518d5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978145"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648802"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>El Xamarin.Forms FlexLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Utilice FlexLayout para apilar o encapsula una colección de vistas secundarias._
 
@@ -27,13 +27,13 @@ Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) es nuevo en la ver
 
 `FlexLayout` se deriva de [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) y hereda un [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) propiedad de tipo `IList<View>`.
 
-`FlexLayout` define seis propiedades enlazables públicas y cinco propiedades enlazables adjuntas que afectan al tamaño, orientación y alineación de sus elementos secundarios. (Si no está familiarizado con las propiedades enlazables adjuntas, consulte el artículo  **[propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)**.) Estas propiedades se describen en detalle en las secciones siguientes en **[las propiedades enlazables detalladamente](#bindable-properties)** y  **[las propiedades enlazables asociadas con detalle](#attached-properties)**. Sin embargo, en este artículo comienza con una sección en algunas **[escenarios de uso comunes](#common-scenarios)** de `FlexLayout` que muchas de estas propiedades describe de manera más informal. Hacia el final del artículo, verá cómo combinar `FlexLayout` con [hojas de estilos CSS](~/xamarin-forms/user-interface/styles/css/index.md).
+`FlexLayout` define seis propiedades enlazables públicas y cinco propiedades enlazables adjuntas que afectan al tamaño, orientación y alineación de sus elementos secundarios. (Si no está familiarizado con las propiedades enlazables adjuntas, consulte el artículo  **[propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)** .) Estas propiedades se describen en detalle en las secciones siguientes en **[las propiedades enlazables detalladamente](#bindable-properties)** y  **[las propiedades enlazables asociadas con detalle](#attached-properties)** . Sin embargo, en este artículo comienza con una sección en algunas **[escenarios de uso comunes](#common-scenarios)** de `FlexLayout` que muchas de estas propiedades describe de manera más informal. Hacia el final del artículo, verá cómo combinar `FlexLayout` con [hojas de estilos CSS](~/xamarin-forms/user-interface/styles/css/index.md).
 
 <a name="common-scenarios" />
 
 ## <a name="common-usage-scenarios"></a>Escenarios de uso comunes
 
-El **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** programa de ejemplo contiene varias páginas que se muestran algunos usos habituales de `FlexLayout` y le permite experimentar con sus propiedades.
+El **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** programa de ejemplo contiene varias páginas que se muestran algunos usos habituales de `FlexLayout` y le permite experimentar con sus propiedades.
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>Uso de FlexLayout para una simple pila
 
@@ -92,7 +92,7 @@ Estos `FlexLayout` propiedades se describen con más detalle en la sección **[l
 
 ### <a name="using-flexlayout-for-wrapping-items"></a>Uso de FlexLayout de ajuste de los elementos
 
-El **foto ajuste** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** muestra cómo `FlexLayout` puede ajustar sus elementos secundarios en filas o columnas adicionales. El archivo XAML crea instancias el `FlexLayout` y asigna dos propiedades de la misma:
+El **foto ajuste** página de la **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** muestra cómo `FlexLayout` puede ajustar sus elementos secundarios en filas o columnas adicionales. El archivo XAML crea instancias el `FlexLayout` y asigna dos propiedades de la misma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -192,7 +192,7 @@ Este es el programa de funcionamiento, progresivamente desplazado de arriba a ab
 
 Hay un diseño estándar en el diseño web que llama el [ _Santo Grial_ ](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) porque es un formato de diseño que es muy conveniente, pero a menudo es difícil darse cuenta con la perfección. La presentación consta de un encabezado en la parte superior de la página y un pie de página en la parte inferior, ambas extender a todo el ancho de la página. Ocupa el centro de la página es el contenido principal, pero a menudo con un menú en columnas a la izquierda de la información complementaria y de contenido (a veces denominado un _reservar_ área) situado a la derecha. [Sección 5.4.1 de la especificación de diseño Flexible de cuadros de CSS](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) describe cómo puede llevarse la piedra angular diseño con un cuadro flex.
 
-El **Santo Grial diseño** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** muestra una implementación sencilla de este diseño mediante uno `FlexLayout` anidado en otro. Dado que esta página está diseñada para un teléfono en modo vertical, las áreas a la izquierda y derecha del área de contenido son solo 50 píxeles de ancho:
+El **Santo Grial diseño** página de la **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** muestra una implementación sencilla de este diseño mediante uno `FlexLayout` anidado en otro. Dado que esta página está diseñada para un teléfono en modo vertical, las áreas a la izquierda y derecha del área de contenido son solo 50 píxeles de ancho:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -261,7 +261,7 @@ En este programa, se muestran tres propiedades enlazables adjuntadas:
 
 ### <a name="catalog-items-with-flexlayout"></a>Elementos del catálogo con FlexLayout
 
-El **elementos del catálogo** página en el **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** es similar al ejemplo [Example 1 en la sección 1.1 de la especificación del cuadro de diseño CSS Flex](http://www.w3.org/TR/css-flexbox-1/#overview)excepto en que muestran una serie de imágenes puede desplazar horizontalmente y las descripciones de los tres objetos:
+El **elementos del catálogo** página en el **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** es similar al ejemplo [Example 1 en la sección 1.1 de la especificación del cuadro de diseño CSS Flex](http://www.w3.org/TR/css-flexbox-1/#overview)excepto en que muestran una serie de imágenes puede desplazar horizontalmente y las descripciones de los tres objetos:
 
 [![Página de elementos de catálogo](flex-layout-images/CatalogItems.png "el catálogo de elementos de página")](flex-layout-images/CatalogItems-Large.png#lightbox)
 
@@ -384,11 +384,11 @@ Dentro de cada uno de los tres `FlexLayout` vistas, un espacio en blanco `Label`
 Ahora que ha visto algunas aplicaciones comunes de `FlexLayout`, las propiedades de `FlexLayout` se puede explorar con más detalle.
 `FlexLayout` define las propiedades enlazables seis que establezca en el `FlexLayout` Sí, ya sea en el código o XAML, la alineación y la orientación del control. (Una de estas propiedades, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), no se trata en este artículo.)
 
-Puede experimentar con las restantes propiedades enlazables con cinco el **experimentar** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** ejemplo. Esta página le permite agregar o quitar elementos secundarios de un `FlexLayout` y establecer las combinaciones de las cinco propiedades enlazables. Todos los elementos secundarios de la `FlexLayout` son `Label` vistas de distintos colores y tamaños, con el `Text` propiedad establecida en un número que corresponde a su posición en la `Children` colección.
+Puede experimentar con las restantes propiedades enlazables con cinco el **experimentar** página de la **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** ejemplo. Esta página le permite agregar o quitar elementos secundarios de un `FlexLayout` y establecer las combinaciones de las cinco propiedades enlazables. Todos los elementos secundarios de la `FlexLayout` son `Label` vistas de distintos colores y tamaños, con el `Text` propiedad establecida en un número que corresponde a su posición en la `Children` colección.
 
 Cuando el programa se inicia, cinco `Picker` vistas muestran los valores predeterminados de estos cinco `FlexLayout` propiedades. El `FlexLayout` hacia la parte inferior de la pantalla contiene tres elementos secundarios:
 
-[![La página del experimento: Default](flex-layout-images/ExperimentDefault.png "predeterminado de la página del experimento:")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![La página del experimento: Página]predeterminada(flex-layout-images/ExperimentDefault.png "del experimento: predeterminada")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 Cada uno de los `Label` vistas tiene un fondo gris que muestra el espacio asignado a la que `Label` dentro de la `FlexLayout`. El fondo de la `FlexLayout` es blanco azulado. Ocupa el área de la parte inferior de la página, excepto un pequeño margen a la izquierda y derecha.
 
@@ -407,7 +407,7 @@ En XAML, puede especificar el valor de esta propiedad mediante los nombres de mi
 
 Este es el **experimento** página que muestra (de izquierda a derecha), el `Row` dirección, `Column` dirección, y `ColumnReverse` dirección:
 
-[![La página del experimento: Dirección](flex-layout-images/ExperimentDirection.png "la página del experimento: dirección")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
+[![La página del experimento: Dirección]de(flex-layout-images/ExperimentDirection.png "la página del experimento: dirección")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
 
 Tenga en cuenta que para el `Reverse` opciones, los elementos a partir de la derecha o inferior.
 
@@ -423,7 +423,7 @@ El [ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap) propiedad es de tipo [ `FlexWr
 
 De izquierda a derecha, se muestran estas pantallas el `NoWrap`, `Wrap` y `Reverse` opciones para elementos secundarios de 12:
 
-[![La página del experimento: Ajustar](flex-layout-images/ExperimentWrap.png "ajustar la página del experimento:")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![La página del experimento: Ajustar](flex-layout-images/ExperimentWrap.png "la página del experimento")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 Cuando el `Wrap` propiedad está establecida en `NoWrap` está restringido el eje principal (como se muestra en este programa) y el eje principal no es amplia o lo suficientemente alto como para ajustarse a todos los elementos secundarios, el `FlexLayout` intenta realizar los elementos más pequeños, como la captura de pantalla de iOS se muestra. Puede controlar la shrinkness de los elementos de la [ `Shrink` ](#shrink) propiedad enlazable adjunta.
 
@@ -442,7 +442,7 @@ El [ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent) propiedad 
 
 Esta propiedad especifica cómo se espacian los elementos en el eje principal, que es el eje horizontal en este ejemplo:
 
-[![La página del experimento: Justificar contenido](flex-layout-images/ExperimentJustifyContent.png "justificar de la página del experimento - contenido")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
+[![La página del experimento: Justificar el]contenido(flex-layout-images/ExperimentJustifyContent.png "de la página del experimento: justificación del contenido")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
 
 En todas las capturas de pantalla de tres, el `Wrap` propiedad está establecida en `Wrap`. El `Start` predeterminado se muestra en la captura de pantalla de Android anterior. La captura de pantalla de iOS aquí se muestra el `Center` opción: todos los elementos se mueven al centro. Otras de las tres opciones a partir de la palabra `Space` asignar el espacio adicional que no esté ocupado por los elementos. `SpaceBetween` asigna el espacio por igual entre los elementos; `SpaceAround` coloca igual espacio alrededor de cada elemento, mientras que `SpaceEvenly` coloca igual espacio entre cada elemento y antes del primer elemento y después del último elemento en la fila.
 
@@ -459,7 +459,7 @@ El [ `AlignItems` ](xref:Xamarin.Forms.FlexLayout.AlignItems) propiedad es de ti
 
 Esta es una de las dos propiedades (el otro es [ `AlignContent` ](#align-content)) que indica cómo se alinean los elementos secundarios en el eje cruzado. Dentro de cada fila, los elementos secundarios se estira (como se muestra en la captura de pantalla anterior) o alineados en el inicio, el centro o el final de cada elemento, como se muestra en las siguientes capturas de pantalla de tres:
 
-[![La página del experimento: Alinear elementos](flex-layout-images/ExperimentAlignItems.png "alineación de los elementos de la página del experimento:")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
+[![La página del experimento: Alinear]elementos(flex-layout-images/ExperimentAlignItems.png "en la página del experimento: alinear elementos")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 En la captura de pantalla de iOS, se alinean las partes superiores de todos los elementos secundarios. En las capturas de pantalla de Android, los elementos se centran verticalmente según el elemento secundario más alto. En la captura de pantalla UWP, la parte inferior de todos los elementos está alineada.
 
@@ -481,11 +481,11 @@ El [ `AlignContent` ](xref:Xamarin.Forms.FlexLayout.AlignContent) propiedad es d
 
 Al igual que `AlignItems`, el `AlignContent` propiedad también se alinea los elementos secundarios en el eje cruzado, pero afecta a todas las filas o columnas:
 
-[![La página del experimento: Alinear el contenido](flex-layout-images/ExperimentAlignContent.png "la página del experimento: alinear el contenido")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
+[![La página del experimento: Alinear]contenido(flex-layout-images/ExperimentAlignContent.png "en la página del experimento: alinear contenido")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
 En la captura de pantalla de iOS, ambas filas están en la parte superior; en la captura de pantalla de Android que están en el centro; y en la captura de pantalla UWP que están en la parte inferior. También se pueden espaciadas las filas de varias maneras:
 
-[![La página del experimento:  Alinear contenido 2](flex-layout-images/ExperimentAlignContent2.png "la página del experimento: alinear contenido 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![La página del experimento:  Alinear contenido]2(flex-layout-images/ExperimentAlignContent2.png "en la página del experimento: alinear contenido 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 El `AlignContent` no tiene ningún efecto cuando hay solo una fila o columna.
 
@@ -571,11 +571,11 @@ O bien, puede especificar un porcentaje del intervalo de 0 a 100%:
 <Label ... FlexLayout.Basis="25%" ... />
 ```
 
-El **base experimentar** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** ejemplo le permite experimentar con la `Basis` propiedad. La página muestra una columna ajustada de cinco `Label` elementos con background y foreground colores alternos. Dos `Slider` elementos le permiten especificar `Basis` valores para la segunda y cuarta `Label`:
+El **base experimentar** página de la **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** ejemplo le permite experimentar con la `Basis` propiedad. La página muestra una columna ajustada de cinco `Label` elementos con background y foreground colores alternos. Dos `Slider` elementos le permiten especificar `Basis` valores para la segunda y cuarta `Label`:
 
 [![La base de experimentar página](flex-layout-images/BasisExperiment.png "base experimentar página")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-La captura de pantalla de iOS a la izquierda muestra los dos `Label` elementos determinados altos en unidades independientes del dispositivo. Muestra la pantalla Android determinado altos que suponen una fracción de la altura total del `FlexLayout`. Si el `Basis` se establece en 100%, entonces el elemento secundario es el alto de la `FlexLayout`y se ajustan a la columna siguiente y ocupar el alto de esa columna, como se muestra en la captura de pantalla UWP: Parece como si los elementos cinco secundarios se organizan en una fila, pero en realidad están ordenados en cinco columnas.
+La captura de pantalla de iOS a la izquierda muestra los dos `Label` elementos determinados altos en unidades independientes del dispositivo. Muestra la pantalla Android determinado altos que suponen una fracción de la altura total del `FlexLayout`. Si se establece en 100%, el elemento secundario es el alto `FlexLayout`de, y se ajustará a la columna siguiente y ocupará el alto completo de esa columna, como muestra la captura de pantalla de UWP: `Basis` Aparece como si los cinco elementos secundarios estuvieran organizados en una fila, pero en realidad están dispuestos en cinco columnas.
 
 ### <a name="the-grow-property"></a>La propiedad de crecimiento
 
@@ -609,7 +609,7 @@ Puede establecer tanto el `Grow` y `Shrink` valores para adaptarse a situaciones
 
 ## <a name="css-styling-with-flexlayout"></a>Estilo CSS con FlexLayout
 
-Puede usar el [estilos CSS](~/xamarin-forms/user-interface/styles/css/index.md) característica se presentó con Xamarin.Forms 3.0 en relación con `FlexLayout`. El **elementos del catálogo de CSS** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** ejemplo duplica el diseño de la **elementos del catálogo** página, pero con CSS hoja de estilos para muchos de los estilos:
+Puede usar el [estilos CSS](~/xamarin-forms/user-interface/styles/css/index.md) característica se presentó con Xamarin.Forms 3.0 en relación con `FlexLayout`. El **elementos del catálogo de CSS** página de la **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** ejemplo duplica el diseño de la **elementos del catálogo** página, pero con CSS hoja de estilos para muchos de los estilos:
 
 [![Página de elementos de catálogo de la CSS](flex-layout-images/CssCatalogItems.png "página elementos de catálogo de CSS")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
@@ -738,8 +738,8 @@ Hemos visto que puede establecer propiedades directamente en el `FlexLayout` y p
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Vídeo de Flex Layout Xamarin.Forms 3.0**
+**Vídeo de diseño flexible de Xamarin. Forms 3,0**
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
+- [FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)

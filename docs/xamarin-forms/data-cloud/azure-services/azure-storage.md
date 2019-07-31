@@ -1,22 +1,22 @@
 ---
-title: Store y acceder a los datos en Azure Storage de Xamarin.Forms
-description: Azure Storage es una solución de almacenamiento en la nube escalable que puede utilizarse para almacenar datos estructurados y no estructurados. En este artículo se explica cómo usar Xamarin.Forms para almacenar datos binarios y texto en el almacenamiento de Azure y cómo tener acceso a los datos.
+title: Almacenar datos y acceder a ellos en Azure Storage de Xamarin. Forms
+description: Azure Storage es una solución de almacenamiento en la nube escalable que puede utilizarse para almacenar datos estructurados y no estructurados. En este artículo se explica cómo usar Xamarin. Forms para almacenar datos binarios y de texto en Azure Storage y cómo obtener acceso a los datos.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 044ff7448cc302da4d0efdf88325c40b9db0315c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658632"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649708"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Store y acceder a los datos en Azure Storage de Xamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Almacenar datos y acceder a ellos en Azure Storage de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage es una solución de almacenamiento en la nube escalable que puede utilizarse para almacenar datos estructurados y no estructurados. En este artículo se muestra cómo usar Xamarin.Forms para almacenar datos binarios y texto en el almacenamiento de Azure y cómo tener acceso a los datos._
 
@@ -260,8 +260,8 @@ Después de recuperar una referencia de contenedor, el método recupera una refe
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Almacenamiento de Azure (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+- [Almacenamiento de Azure (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introducción al almacenamiento](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Cómo usar Blob Storage desde Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [Uso de firmas de acceso compartido (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Azure Storage de Windows (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

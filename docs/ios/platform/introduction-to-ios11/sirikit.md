@@ -1,132 +1,132 @@
 ---
-title: Actualizaciones de SiriKit en iOS 11
-description: Este documento describe cómo trabajar con SiriKit en iOS 11. En concreto, examina cómo trabajar con tareas y notas y cómo proporcionar nombres alternativos para una aplicación.
+title: SiriKit actualizaciones en iOS 11
+description: En este documento se describe cómo trabajar con SiriKit en iOS 11. En concreto, examina cómo trabajar con tareas y notas y cómo proporcionar nombres alternativos para una aplicación.
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
-ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61400331"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656405"
 ---
-# <a name="sirikit-updates-in-ios-11"></a>Actualizaciones de SiriKit en iOS 11
+# <a name="sirikit-updates-in-ios-11"></a>SiriKit actualizaciones en iOS 11
 
-SiriKit se introdujo en iOS 10, con un número de dominios del servicio (incluidos los ejercicios de manejo de reserva y la realización de llamadas). Hacer referencia a la [SiriKit sección](~/ios/platform/sirikit/index.md) para los conceptos de SiriKit y cómo implementar SiriKit en su aplicación.
+SiriKit se presentó en iOS 10, con varios dominios de servicio (incluidos los entrenamientos, la reserva de cambios y la realización de llamadas). Consulte la [sección SiriKit](~/ios/platform/sirikit/index.md) para conocer los conceptos de SiriKit y cómo implementar SiriKit en la aplicación.
 
-![Demostración de lista de tareas de Siri](sirikit-images/sirikit.png)
+![Demostración de la lista de tareas de Siri](sirikit-images/sirikit.png)
 
-SiriKit en iOS 11 agrega estos dominios intención nuevos y actualizados:
+SiriKit en iOS 11 agrega estos dominios de intención nuevos y actualizados:
 
-- [**Enumera y notas de la** ](#listsnotes) : nuevo! Proporciona una API para las aplicaciones para procesar tareas y notas.
-- **Códigos de visuales** : nuevo! Siri puede mostrar los códigos QR para compartir información de contacto, o bien participar en transacciones de pago.
-- **Los pagos** : Agregar búsqueda y transferencia de intenciones para las interacciones de pago.
-- **Reservas de viaje** : se ha agregado cancelar las intenciones de andar y comentarios.
+- [**Listas y notas**](#listsnotes) : nuevo Proporciona una API para que las aplicaciones procesen tareas y notas.
+- **Códigos visuales** : nuevo Siri puede mostrar códigos QR para compartir información de contacto o participar en transacciones de pago.
+- **Pagos** : se han agregado intentos de búsqueda y transferencia para las interacciones de pago.
+- Cancelar la **reserva** : se han agregado intentos de cancelación y de comentarios.
 
 Entre las otras características nuevas se incluyen estas:
 
-- [**Los nombres de aplicación alternativo** ](#alternativenames) : proporciona los alias que ayudan a los clientes saber Siri para tener como destino la aplicación, ya que ofrece los nombres de/pronunciaciones alternativas.
-- **Iniciando el programa de ejercicios físicos** : proporciona la capacidad de iniciar un entrenamiento en segundo plano.
+- [**Nombres de aplicación alternativos**](#alternativenames) : proporciona alias que ayudan a los clientes a indicar a Siri que dirija su aplicación mediante la oferta de nombres alternativos.
+- **Inicio** de los entrenamientos: proporciona la capacidad de iniciar un entrenamiento en segundo plano.
 
-A continuación se explican algunas de estas características. Para obtener más detalles sobre los demás, consulte [la documentación de Apple SiriKit](https://developer.apple.com/documentation/sirikit).
+A continuación se explican algunas de estas características. Para obtener más información sobre los demás, consulte la [documentación de SiriKit de Apple](https://developer.apple.com/documentation/sirikit).
 
 <a name="listsnotes" />
 
 ## <a name="lists-and-notes"></a>Listas y notas
 
-El nuevo dominio de las listas y notas proporciona una API para las aplicaciones para procesar tareas y notas a través de solicitudes de voz Siri.
+El nuevo dominio de listas y notas proporciona una API para que las aplicaciones procesen tareas y notas a través de solicitudes de Siri Voice.
 
 **Tareas**
 
-- Tiene un título y un estado de finalización.
-- Opcionalmente, incluir una fecha límite y una ubicación.
+- Tener un título y un estado de finalización.
+- Opcionalmente, puede incluir una fecha límite y una ubicación.
 
 **Notas**
 
-- Tiene un título y un campo de contenido.
+- Tienen un título y un campo de contenido.
 
-Notas y tareas se pueden organizar en grupos. El resto de esta sección describe cómo implementar este nuevo dominio con SiriKit, utilizando el [TasksNotes SiriKit ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/).
+Las tareas y las notas se pueden organizar en grupos. En el resto de esta sección se describe cómo implementar este nuevo dominio con SiriKit, mediante el [ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample).
 
-### <a name="how-to-process-a-sirikit-request"></a>Cómo procesar una solicitud de SiriKit
+### <a name="how-to-process-a-sirikit-request"></a>Cómo procesar una solicitud SiriKit
 
-Procesar una solicitud de SiriKit siguiendo estos pasos:
+Procese una solicitud SiriKit siguiendo estos pasos:
 
-1. **Resolver** : validar los parámetros y solicitar más información del usuario (si es necesario).
-2. **Confirmar** : validación Final y que se puede procesar la solicitud de comprobación.
-3. **Controlar** : realizar la operación (actualización de datos o realizar operaciones de red).
+1. **Resolver** : valide los parámetros y solicite más información del usuario (si es necesario).
+2. **CONFIRM** : validación final y comprobación de que se puede procesar la solicitud.
+3. **Identificador** : realizar la operación (actualizar datos o realizar operaciones de red).
 
-Los dos primeros pasos son opcionales (aunque se recomienda), y el último paso es necesario.
-Hay instrucciones más detalladas en el [SiriKit sección](~/ios/platform/sirikit/index.md).
+Los dos primeros pasos son opcionales (aunque se recomienda) y se requiere el paso final.
+Hay instrucciones más detalladas en la [sección SiriKit](~/ios/platform/sirikit/index.md).
 
-### <a name="resolve-and-confirm-methods"></a>Resolver y confirme los métodos
+### <a name="resolve-and-confirm-methods"></a>Métodos Resolve y CONFIRM
 
-Estos métodos opcionales permiten que el código realice la validación, seleccione los valores predeterminados o solicitar información adicional del usuario.
+Estos métodos opcionales permiten que el código Realice la validación, seleccione valores predeterminados o solicite información adicional al usuario.
 
-Por ejemplo, para el `IINCreateTaskListIntent` interfaz, el método requerido es `HandleCreateTaskList`. Hay cuatro métodos opcionales que proporcionan más control sobre la interacción de Siri:
+Por ejemplo, para la `IINCreateTaskListIntent` interfaz, el método necesario es. `HandleCreateTaskList` Hay cuatro métodos opcionales que proporcionan más control sobre la interacción de Siri:
 
-- `ResolveTitle` : Valida el título, establece un título predeterminado (si procede) o indica que no se requieren los datos.
-- `ResolveTaskTitles` : Valida la lista de tareas que se habla por el usuario.
-- `ResolveGroupName` : Valida el nombre del grupo, elige un grupo predeterminado o indica que no se requieren los datos.
-- `ConfirmCreateTaskList` : Valida que el código puede realizar la operación solicitada, pero no realizar (solo la `Handle*` métodos deben modificar datos).
+- `ResolveTitle`: Valida el título, establece un título predeterminado (si es necesario) o indica que los datos no son necesarios.
+- `ResolveTaskTitles`: Valida la lista de tareas que habla el usuario.
+- `ResolveGroupName`: Valida el nombre del grupo, elige un grupo predeterminado o indica que los datos no son necesarios.
+- `ConfirmCreateTaskList`: Valida que el código puede realizar la operación solicitada, pero no la realiza (solo los métodos `Handle*` deben modificar los datos).
 
-### <a name="handle-the-intent"></a>Controlar la intención
+### <a name="handle-the-intent"></a>Control de la intención
 
-Hay seis intenciones en el dominio de las listas y notas, tres de las tareas y tres para las notas.
-Los métodos que deben implementar para controlar estos intentos son:
+Hay seis intenciones en el dominio listas y notas, tres para tareas y tres para notas.
+Los métodos que debe implementar para controlar estas intenciones son:
 
-- Las tareas:
+- Para tareas:
   - `HandleAddTasks`
   - `HandleCreateTaskList`
   - `HandleSetTaskAttribute`
-- Notas:
+- Para las notas:
   - `HandleCreateNote`
   - `HandleAppendToNote`
   - `HandleSearchForNotebookItems`
 
-Cada método tiene un tipo en intención específico pasado a él, que contiene toda la información que se ha analizado Siri de la solicitud del usuario (y posiblemente se actualizan en el `Resolve*` y `Confirm*` métodos).
-La aplicación debe analizar los datos proporcionados, a continuación, realizar algunas acciones para almacenar o procesar en caso contrario, los datos y devolver un resultado que Siri habla y muestra al usuario.
+Cada método tiene un tipo de intento específico que se le pasa, que contiene toda la información que Siri ha analizado de la solicitud del usuario (y posiblemente `Resolve*` se `Confirm*` ha actualizado en los métodos y).
+La aplicación debe analizar los datos proporcionados y, a continuación, realizar algunas acciones para almacenar o procesar los datos de otro modo, y devolver el resultado que Siri habla y muestra al usuario.
 
 ### <a name="response-codes"></a>Códigos de respuesta
 
-Necesario `Handle*` opcionales y `Confirm*` métodos indican un código de respuesta estableciendo un valor en el objeto que pasa a su controlador de finalización. Las respuestas que proceden de la `INCreateTaskListIntentResponseCode` enumeración:
+Los métodos `Handle*` obligatorios `Confirm*` y opcionales indican un código de respuesta estableciendo un valor en el objeto que pasan a su controlador de finalización. Las respuestas proceden `INCreateTaskListIntentResponseCode` de la enumeración:
 
-- `Ready` – Devuelve Durante la fase de confirmación (ie. desde una `Confirm*` método, pero no desde un `Handle*` método).
-- `InProgress` : Se usa para tareas de larga ejecución (por ejemplo, una operación de red o servidor).
-- `Success` – Responde con los detalles de la operación correcta (solo desde un `Handle*` método).
-- `Failure` : Significa que se produjo un error y no se pudo completar la operación.
-- `RequiringAppLaunch` : No puede procesar la intención, pero es posible en la aplicación de la operación.
-- `Unspecified` : No utilice: mensaje de error se mostrará al usuario.
+- `Ready`: Devuelve durante la fase de confirmación (es decir, `Confirm*` desde un método, pero no `Handle*` desde un método).
+- `InProgress`: Se usa para tareas de ejecución prolongada (como una operación de red/servidor).
+- `Success`: Responde con los detalles de la operación correcta (solo desde un `Handle*` método).
+- `Failure`: Significa que se ha producido un error y que la operación no se ha podido completar.
+- `RequiringAppLaunch`: No se puede procesar por el intento, pero la operación es posible en la aplicación.
+- `Unspecified`– No usar: el mensaje de error se mostrará al usuario.
 
-Más información sobre estos métodos y las respuestas en Apple [SiriKit enumera y notas de la documentación de](https://developer.apple.com/documentation/sirikit/lists_and_notes).
+Obtenga más información sobre estos métodos y respuestas en la [documentación de notas y listas de SiriKit](https://developer.apple.com/documentation/sirikit/lists_and_notes)de Apple.
 
-### <a name="implementing-lists-and-notes"></a>Implementación de las listas y notas
+### <a name="implementing-lists-and-notes"></a>Implementar listas y notas
 
-El [TasksNotes SiriKit ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/) se creó mediante los pasos siguientes para agregar compatibilidad con SiriKit a una aplicación iOS vacía.
+El [ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample) se creó con los pasos siguientes para agregar compatibilidad con SiriKit a una aplicación de iOS en blanco.
 
-En primer lugar, para agregar compatibilidad con SiriKit, siga estos pasos para la aplicación de iOS:
+En primer lugar, para agregar compatibilidad con SiriKit, siga estos pasos para la aplicación iOS:
 
-1. Graduación **SiriKit** en **Entitlements.plist**.
-2. Agregar el **privacidad: descripción de uso de Siri** clave a **Info.plist**, junto con un mensaje para los clientes.
-3. Llame a la `INPreferences.RequestSiriAuthorization` método en la aplicación para pedir al usuario que permite las interacciones de Siri.
-4. Agregue SiriKit Id. de la aplicación en el Portal para desarrolladores y volver a crear los perfiles de aprovisionamiento para incluir los nuevos derechos.
+1. Tick **SiriKit** en el archivo contitles **. plist**.
+2. Agregue la clave **privacy-Siri Usage Description** a **info. plist**, junto con un mensaje para los clientes.
+3. Llame al `INPreferences.RequestSiriAuthorization` método en la aplicación para solicitar al usuario que permita las interacciones de Siri.
+4. Agregue SiriKit al identificador de la aplicación en el portal para desarrolladores y vuelva a crear los perfiles de aprovisionamiento para incluir el nuevo derecho.
 
-A continuación, agregue un nuevo proyecto de extensión a la aplicación para controlar las solicitudes de Siri:
+Después, agregue un nuevo proyecto de extensión a la aplicación para controlar las solicitudes de Siri:
 
-1. Haga doble clic en la solución y elija **Agregar > Agregar nuevo proyecto...** .
-2. Elija la **iOS > extensión > extensión Intents** plantilla.
-3. Se agregarán dos nuevos proyectos: Intención y IntentUI. Personalizar la interfaz de usuario es opcional, por lo que el ejemplo solo incluye el código en el **intención** proyecto.
+1. Haga clic con el botón derecho en la solución y elija **agregar > agregar nuevo proyecto..** ..
+2. Elija la **extensión de > de iOS >** plantilla de extensión de intents.
+3. Se agregarán dos proyectos nuevos: Intención e IntentUI. La personalización de la interfaz de usuario es opcional, por lo que el ejemplo solo incluye código en el proyecto de **intención** .
 
-El proyecto de extensión es donde se procesarán todas las solicitudes de SiriKit. Como una extensión independiente, no lo tiene automáticamente ninguna forma de comunicarse con la aplicación principal, esto generalmente se resuelve mediante la implementación de almacenamiento de archivos compartidos con grupos de aplicaciones.
+El proyecto de extensión es donde se procesarán todas las solicitudes de SiriKit. Como una extensión independiente, no tiene ninguna manera de comunicarse de forma automática con la aplicación principal: esto se resuelve normalmente mediante la implementación de almacenamiento de archivos compartidos con grupos de aplicaciones.
 
-#### <a name="configure-the-intenthandler"></a>Configurar la IntentHandler
+#### <a name="configure-the-intenthandler"></a>Configuración de IntentHandler
 
-El `IntentHandler` clase es el punto de entrada para las solicitudes de Siri: cada intención se pasa a la `GetHandler` método, que devuelve un objeto que puede atender la solicitud.
+La `IntentHandler` clase es el punto de entrada de las solicitudes de Siri: cada intento se pasa `GetHandler` al método, que devuelve un objeto que puede controlar la solicitud.
 
-El código siguiente muestra una implementación sencilla:
+El código siguiente muestra una implementación simple:
 
 ```csharp
 [Register("IntentHandler")]
@@ -144,21 +144,21 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 }
 ```
 
-La clase debe heredar de `INExtension`, y dado que el ejemplo se va a listas de control y las intenciones de notas, también implementa `IINNotebookDomainHandling`.
+La clase debe heredar `INExtension`de y, dado que el ejemplo va a controlar las representaciones de las listas y las notas, también `IINNotebookDomainHandling`implementa.
 
 > [!NOTE]
-> - Hay una convención en .NET para las interfaces sean precedidos con una letra mayúscula `I`, lo que Xamarin se adhiere a cuando los protocolos de enlace desde el SDK de iOS.
-> - Xamarin también conserva los nombres de tipo de iOS y Apple usa los dos primeros caracteres en nombres de tipo para reflejar el marco de trabajo que pertenece un tipo.
-> - Para el `Intents` framework, los tipos tienen el prefijo `IN*` (p ej. `INExtension`), pero estos son _no_ interfaces.
-> - También sigue ese protocolos (que se convierten en las interfaces de C#) terminará con dos `I`s, como `IINAddTasksIntentHandling`.
+> - Existe una Convención en .net para que las interfaces vayan precedidas de mayúsculas `I`, que Xamarin se adhiere a los protocolos de enlace del SDK de iOS.
+> - Xamarin también conserva los nombres de tipo de iOS y Apple usa los dos primeros caracteres de los nombres de tipo para reflejar el marco al que pertenece un tipo.
+> - En el `Intents` marco de trabajo, los tipos tienen `IN*` el prefijo (por ejemplo, `INExtension`) pero _no_ son interfaces.
+> - También sigue los protocolos (que se convierten en C#interfaces en) terminan `I`con dos, como `IINAddTasksIntentHandling`.
 
-#### <a name="handling-intents"></a>Control de intenciones
+#### <a name="handling-intents"></a>Control de la calidad
 
-Cada intención (Agregar tarea, establecer el atributo de tarea, etcetera) se implementa en un único método, similar a la que se muestra a continuación. El método debe realizar tres funciones principales:
+Cada intento (agregar tarea, establecer atributo de tarea, etc.) se implementa en un único método similar al que se muestra a continuación. El método debe realizar tres funciones principales:
 
-1. **Procesar la intención** : los datos por parte de Siri está disponible en un `intent` específico del tipo de la intención del objeto. Puede que la aplicación haya validado esos datos mediante opcional `Resolve*` métodos.
-2. **Validar y actualizar el almacén de datos** : guardar datos en el sistema de archivos (con grupos de aplicaciones para que también puede acceder a la aplicación principal de iOS) o a través de una solicitud de red.
-3. **Proporcionar una respuesta** : Use el `completion` controlador para enviar una respuesta al Siri a lectura/Mostrar al usuario:
+1. **Procesar la intención** : los datos analizados por Siri están disponibles en un `intent` objeto específico del tipo de intento. Es posible que la aplicación haya validado los datos `Resolve*` mediante métodos opcionales.
+2. **Validar y actualizar el almacén de datos** : guarda los datos en el sistema de archivos (con grupos de aplicaciones para que la aplicación de iOS principal también pueda acceder a ellos) o a través de una solicitud de red.
+3. **Proporcionar respuesta** : Use el `completion` controlador para devolver una respuesta a Siri para que se pueda leer o mostrar al usuario:
 
 ```csharp
 public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateTaskListIntentResponse> completion)
@@ -173,62 +173,62 @@ public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateT
 }
 ```
 
-Tenga en cuenta que `null` se pasa como segundo parámetro a la respuesta: este es el parámetro de actividad de usuario y, si no se proporciona, se usará un valor predeterminado.
-Puede establecer un tipo de actividad personalizada que admita la aplicación de iOS a través siempre y cuando la `NSUserActivityTypes` clave **Info.plist**. A continuación, puede controlar este caso, cuando se abre la aplicación y realizar operaciones concretas (por ejemplo, de apertura para un controlador de vista relevante y carga los datos de la operación de Siri).
+Observe que `null` se pasa como el segundo parámetro a la respuesta: este es el parámetro de la actividad del usuario y, cuando no se proporciona, se usará un valor predeterminado.
+Puede establecer un tipo de actividad personalizado siempre que la aplicación iOS lo admita a través de `NSUserActivityTypes` la clave en **info. plist**. Después, puede controlar este caso cuando se abre la aplicación y realizar operaciones específicas (como abrir en un controlador de vista pertinente y cargar los datos de la operación Siri).
 
-El ejemplo también codifica el `Success` resultado, pero en escenarios reales, se deben agregar los informes de errores adecuado.
+En el ejemplo también se `Success` hardcodes el resultado, pero en escenarios reales se debe agregar el informe de errores adecuado.
 
 ### <a name="test-phrases"></a>Frases de prueba
 
-Las siguientes frases de prueba deberían funcionar en la aplicación de ejemplo:
+Las siguientes frases de prueba deben funcionar en la aplicación de ejemplo:
 
-- "Hacer una lista de víveres con Apple, banana y peras en TasksNotes"
-- "Agregar tarea sesión WWDC en TasksNotes"
-- "Agregar tarea sesión WWDC a la lista de cursos en TasksNotes"
-- "Marcar Asista a sesión WWDC como completadas en TasksNotes"
-- "En TasksNotes Recordármelo a comprar un iphone cuando llegue a casa"
-- "¡Marca compre iPhone como completado en TasksNotes"
-- "Recordarme deje de inicio a las 8 a.m. en TasksNotes"
+- "Cree una lista de comestibles con manzanas, plátanos y peras en TasksNotes"
+- "Agregar tarea WWDC en TasksNotes"
+- "Agregar WWDC de tareas a la lista de entrenamiento en TasksNotes"
+- "Marcar asista WWDC como completo en TasksNotes"
+- "En TasksNotes, Recordármelo en comprar un iPhone cuando obtengo Inicio"
+- "Marque comprar iPhone como completado en TasksNotes"
+- "Recordármelo en casa a las 8 a.m. en TasksNotes"
 
-![Crear un nuevo ejemplo de lista](sirikit-images/createtasklist-sml.png) ![Conjunto de tareas como ejemplo completo](sirikit-images/settaskattribute-sml.png)
+![Crear un ejemplo de lista nuevo](sirikit-images/createtasklist-sml.png) ![Ejemplo de establecimiento de tarea como completo](sirikit-images/settaskattribute-sml.png)
 
 > [!NOTE]
-> El 11 de iOS Simulator admite pruebas con Siri (a diferencia de las versiones anteriores).
+> El simulador de iOS 11 admite pruebas con Siri (a diferencia de las versiones anteriores).
 >
-> Si las pruebas en dispositivos reales, no olvide configurar el identificador de la aplicación y perfiles de aprovisionamiento para SiriKit soporte técnico.
+> Si va a realizar pruebas en dispositivos reales, no olvide configurar el identificador de la aplicación y los perfiles de aprovisionamiento para la compatibilidad con SiriKit.
 
 <a name="alternativenames" />
 
 ## <a name="alternative-names"></a>Nombres alternativos
 
-Esta nueva característica de iOS 11 significa que puede configurar nombres alternativos para la aplicación ayudar a los usuarios se activan correctamente con Siri. Agregue las claves siguientes a la **Info.plist** archivo del proyecto de aplicación de iOS:
+Esta nueva característica de iOS 11 significa que puede configurar nombres alternativos para la aplicación para ayudar a los usuarios a desencadenarla correctamente con Siri. Agregue las siguientes claves al archivo **info. plist** del proyecto de aplicación de iOS:
 
-![Info.plist que muestra los valores y claves de nombre alternativo de aplicación](sirikit-images/alternative-names.png)
+![Info. plist que muestra claves y valores de nombre de aplicación alternativos](sirikit-images/alternative-names.png)
 
-Con el conjunto de nombres alternativos de aplicación, las frases siguientes también funciona para la aplicación de ejemplo (que realmente se denomina **TasksNotes**):
+Con los nombres de aplicación alternativos establecidos, las siguientes frases también funcionarán para la aplicación de ejemplo (que se denomina realmente **TasksNotes**):
 
-- "Hacer una lista de víveres con Apple, banana y peras en _MonkeyNotes_"
-- "Agregar sesión WWDC en la tarea _MonkeyTodo_"
+- "Cree una lista de comestibles con manzanas, plátanos y peras en _MonkeyNotes_"
+- "Agregar tarea WWDC en _MonkeyTodo_"
 
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>solución de problemas
 
 Algunos errores que pueden surgir al ejecutar el ejemplo o agregar SiriKit a sus propias aplicaciones:
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Excepción de C de objetivo.  Nombre: NSInternalInconsistencyException motivo: Uso de la clase < INPreferences: 0x60400082ff00 > desde una aplicación requiere el derecho com.apple.developer.siri. ¿Ha habilitado la capacidad de Siri en el proyecto de Xcode?_
+_Se produjo una excepción de Objective-C.  Nombre: Motivo de NSInternalInconsistencyException: Uso de la clase < inpreferencias: 0x60400082ff00 > de una aplicación requiere el derecho com. Apple. Developer. Siri. ¿Ha habilitado la funcionalidad Siri en el proyecto de Xcode?_
 
-- SiriKit está activada en **Entitlements.plist**.
-- **Entitlements.plist** está configurado en el **opciones de proyecto > compilar > firma de lote de iOS**.
+- SiriKit se marca en los **derechos. plist**.
+- **Contitles. plist** se configura en las **opciones del proyecto > compilar > la firma del lote de iOS**.
 
-  [![Opciones de proyecto que muestra que los derechos se estableció correctamente](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
+  [![Opciones de proyecto que muestran los derechos correctamente establecidos](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
-- (para la implementación de dispositivo) Id. de aplicación tiene SiriKit habilitado y descarga el perfil de aprovisionamiento.
+- (para la implementación de dispositivos) El ID. de aplicación tiene SiriKit habilitado y Perfil de aprovisionamiento descargado.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
-- [Ejemplo de SiriKit TasksNotes](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)
-- [Novedades en SiriKit (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/214/)
+- [Ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [Novedades de SiriKit (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/214/)

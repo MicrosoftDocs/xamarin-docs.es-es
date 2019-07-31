@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: e2abb37a69fc059cea499814eb48453f3bbbed72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 416106f9948c1757f398589e730e01ab55dd01a9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078571"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642975"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) coloca y ajusta el tamaño de los elementos secundarios proporcionales a su propio tamaño y posición o por valores absolutos. Pueden ser vistas secundarias posición y tamaño utilizando valores proporcionales o valores estáticos y proporcional y se pueden combinar los valores estáticos.
 
@@ -291,5 +291,5 @@ Tenga en cuenta que `AbsoluteLayout`s están anidadas, porque en algunos casos l
 
 - [Creación de aplicaciones móviles con Xamarin.Forms, capítulo 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
 - [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
-- [Diseño (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Ejemplo de BusinessTumble (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Ejemplo de BusinessTumble (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

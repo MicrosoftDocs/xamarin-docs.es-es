@@ -1,32 +1,32 @@
 ---
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
 title: Ejemplos de escritorio multiplataforma
-description: Este documento incluye vínculos a diversas aplicaciones de ejemplo que se han adaptado para ejecutarse como aplicaciones multiplataforma con Xamarin.
+description: Este documento se vincula a varias aplicaciones de ejemplo que se han trasladado para ejecutarse como aplicaciones multiplataforma con Xamarin.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 4f77353345c6ed1ce1cde8190a347f3deb1c0348
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7af820e1c73c3b41e58ef8a9ee8ab5ea3a601834
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269955"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647558"
 ---
 # <a name="cross-platform-desktop-samples"></a>Ejemplos de escritorio multiplataforma
 
-## <a name="wpf-to-cross-platform-with-xamarinforms"></a>WPF multiplataforma con Xamarin.Forms
+## <a name="wpf-to-cross-platform-with-xamarinforms"></a>WPF a multiplataforma con Xamarin. Forms
 
 ### <a name="expenses-app"></a>Aplicación de gastos
 
-[Origen WPFToMobile en GitHub](https://github.com/nishanil/WPFToMobile)
+[Origen de WPFToMobile en GitHub](https://github.com/nishanil/WPFToMobile)
 
 #### <a name="original-app"></a>Aplicación original
 
 * WPF + WCF
 
-#### <a name="cross-platform-apps"></a>Las aplicaciones multiplataforma
+#### <a name="cross-platform-apps"></a>Aplicaciones multiplataforma
 
-Con Xamarin.Forms, la aplicación original fue capaz de portar a un back-end Azure que se ejecuta en dispositivos móviles, tabletas y escritorio:
+Con Xamarin. Forms, la aplicación original se pudo migrar a un back-end de Azure que se ejecuta en dispositivos móviles, tabletas y equipos de escritorio:
 
 * Android
 * iOS
@@ -34,16 +34,16 @@ Con Xamarin.Forms, la aplicación original fue capaz de portar a un back-end Azu
 
 ## <a name="architecture-guidance"></a>Guía de arquitectura
 
-### <a name="eshop-on-containers-app"></a>eShop (en contenedores) aplicación
+### <a name="eshop-on-containers-app"></a>Aplicación de eShop (en contenedores)
 
 [origen de eShopOnContainers en GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
-Aplicación de ejemplo hace referencia a lo siguiente:
+Aplicación de ejemplo a la que se hace referencia a continuación:
 
-* [Libro electrónico de Microservicios de .NET](https://aka.ms/microservicesebook)
+* [Libro electrónico de microservicios de .NET](https://aka.ms/microservicesebook)
 * [Libro electrónico de ciclo de vida de aplicaciones de Docker en contenedor](https://aka.ms/dockerlifecycleebook)
-* [Libro electrónico Enterprise Application patrones utilizando Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
+* [Patrones de aplicaciones empresariales con Xamarin. Forms ebook](~/xamarin-forms/enterprise-application-patterns/index.md)
 
 ## <a name="mobile-app-samples"></a>Ejemplos de aplicaciones móviles
 
-* Otros [ejemplos de Xamarin](https://developer.xamarin.com/samples/)
+* Otros [ejemplos de Xamarin](https://docs.microsoft.com/samples/browse/?products=xamarin)

@@ -7,16 +7,16 @@ ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8071f310e899575699e1d0b925541f2863b00676
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021217"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645187"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de fusión de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Estos artículos se centran en la [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) propiedad de [ `SKPaint` ](xref:SkiaSharp.SKPaint). El `BlendMode` propiedad es de tipo [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode), una enumeración con miembros de 29.
 
@@ -46,13 +46,13 @@ Los miembros de 29 el `SKBlendMode` enumeración puede dividirse en tres categor
 
 Los nombres de estas tres categorías tardará más significado en las discusiones que siguen. El orden que se enumeran los miembros aquí es igual que en la definición de la `SKBlendMode` enumeración. Los miembros de enumeración de 13 en la primera columna tienen los valores enteros del 0 al 12. La segunda columna son miembros de enumeración que se corresponden con números enteros de 13 a 24, y los miembros de la tercera columna tienen valores de 25 a 28.
 
-Estos blend se describen los modos en _aproximadamente_ el mismo orden en el W3C **la composición y mezcla de nivel 1** documento, pero hay algunas diferencias: El `Src` se denomina modo _copia_ en el documento del W3C, y `Plus` se denomina _más claro_. El documento del W3C define un _Normal_ modo blend que no se incluye en `SKBlendModes` porque se quedaría igual `SrcOver`. El `Modulate` modo blend (en la parte superior de la primera columna) no se incluye en el documento del W3C y explicación de la `Multiply` precede modo `Screen`.
+Estos modos de mezcla se describen _aproximadamente_ en el mismo orden en el documento de **nivel 1 de composición y combinación** de W3C, pero hay algunas diferencias: El `Src` modo se denomina _copia_ en el documento W3C y `Plus` se llama _más claro_. El documento del W3C define un _Normal_ modo blend que no se incluye en `SKBlendModes` porque se quedaría igual `SrcOver`. El `Modulate` modo blend (en la parte superior de la primera columna) no se incluye en el documento del W3C y explicación de la `Multiply` precede modo `Screen`.
 
 Dado que el `Modulate` modo blend es único en Skia, se tratará como un modo Porter Duff adicional, como un modo separable.
 
 ## <a name="the-importance-of-transparency"></a>La importancia de transparencia
 
-Históricamente, la composición fue desarrollada en combinación con el concepto de la _canal alfa_. En una presentación de la superficie, como el `SKCanvas` objeto y un mapa de bits completo de color, cada píxel se compone de 4 bytes: 1 byte cada uno de los componentes rojos, verde y azules y un byte adicional para la transparencia. Este componente alfa es 0 para una transparencia completa y 0xFF para opacidad completa, con distintos niveles de transparencia entre esos valores.
+Históricamente, la composición fue desarrollada en combinación con el concepto de la _canal alfa_. En una superficie de presentación como el `SKCanvas` objeto y un mapa de bits de color completo, cada píxel se compone de 4 bytes: 1 byte para los componentes rojo, verde y azul, y un byte adicional para la transparencia. Este componente alfa es 0 para una transparencia completa y 0xFF para opacidad completa, con distintos niveles de transparencia entre esos valores.
 
 Muchos de los modos de mezcla se basan en transparencia. Normalmente, cuando un `SKCanvas` primero se obtiene en un `PaintSurface` controlador, o cuando un `SKCanvas` se crea para dibujar en un mapa de bits, el primer paso es esta llamada:
 
@@ -93,4 +93,4 @@ Utilizar los modos de mezcla no separables para alterar el matiz, saturación o 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

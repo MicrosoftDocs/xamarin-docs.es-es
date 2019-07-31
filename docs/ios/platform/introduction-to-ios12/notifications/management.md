@@ -1,35 +1,35 @@
 ---
-title: Administración de la notificación de Xamarin.iOS
-description: Este documento describe cómo usar Xamarin.iOS para aprovechar las nuevas características de administración de notificación introducida en iOS 12.
+title: Administración de notificaciones en Xamarin. iOS
+description: En este documento se describe cómo usar Xamarin. iOS para aprovechar las nuevas características de administración de notificaciones introducidas en iOS 12.
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 0157a685ac990c0626cd4d6001ef853c6a28b993
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 69b6876a22e511d1c14a795d7b81c3a638492468
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035279"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652387"
 ---
-# <a name="notification-management-in-xamarinios"></a>Administración de la notificación de Xamarin.iOS
+# <a name="notification-management-in-xamarinios"></a>Administración de notificaciones en Xamarin. iOS
 
-En iOS 12, el sistema operativo puede vínculo profundo de centro de notificaciones y la aplicación de configuración a la pantalla de administración de notificación de una aplicación. Esta pantalla debe permitir que los usuarios no participan en y fuera de los distintos tipos de notificaciones envía la aplicación.
+En iOS 12, el sistema operativo puede vincular en profundidad desde el centro de notificaciones y la aplicación de configuración hasta la pantalla de administración de notificaciones de una aplicación. Esta pantalla debe permitir a los usuarios participar y excluir los distintos tipos de notificaciones que envía la aplicación.
 
 ## <a name="sample-app-redgreennotifications"></a>Aplicación de ejemplo: RedGreenNotifications
 
-Para ver un ejemplo de cómo funciona la administración de notificación, eche un vistazo a la [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) aplicación de ejemplo.
+Para ver un ejemplo de cómo funciona la administración de notificaciones, eche un vistazo a la aplicación de ejemplo [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) .
 
-Esta aplicación de ejemplo envía dos tipos de notificaciones, rojo y verde y proporciona una pantalla que permite a los usuarios participar o no en cualquier tipo.
+Esta aplicación de ejemplo envía dos tipos de notificaciones: rojo y verde, y proporciona una pantalla que permite a los usuarios participar o no de cualquier tipo.
 
-Fragmentos de código en esta guía proceden de esta aplicación de ejemplo.
+Los fragmentos de código de esta guía proceden de esta aplicación de ejemplo.
 
-## <a name="notification-management-screen"></a>Pantalla de administración de notificación
+## <a name="notification-management-screen"></a>Pantalla de Notification Management
 
-En la aplicación de ejemplo, `ManageNotificationsViewController` define una interfaz de usuario que permite a los usuarios habilitar y deshabilitar notificaciones rojo y verde de forma independiente. Es un estándar [`UIViewController`](xref:UIKit.UIViewController)
-que contiene un [ `UISwitch` ](xref:UIKit.UISwitch) para cada tipo de notificación. Si activa o desactiva el conmutador para cualquier tipo de notificación guarda, en los valores predeterminados del usuario, las preferencias del usuario para ese tipo de notificación:
+En la aplicación de ejemplo `ManageNotificationsViewController` , define una interfaz de usuario que permite a los usuarios habilitar y deshabilitar de forma independiente las notificaciones rojas y las notificaciones verdes. Es un estándar[`UIViewController`](xref:UIKit.UIViewController)
+que contiene [`UISwitch`](xref:UIKit.UISwitch) un para cada tipo de notificación. Al alternar el conmutador para cualquier tipo de notificación se guarda, en valores predeterminados del usuario, la preferencia del usuario para ese tipo de notificación:
 
 ```csharp
 partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
@@ -39,13 +39,13 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 ```
 
 > [!NOTE]
-> La pantalla de administración de la notificación también comprueba si el usuario ha deshabilitado por completo las notificaciones para la aplicación. Si es así, oculta los botones de alternancia para los tipos de notificación individual. Para ello, la pantalla de administración de notificación:
+> En la pantalla Notification Management también se comprueba si el usuario ha deshabilitado o no las notificaciones por completo de la aplicación. Si es así, oculta los alternancias para los tipos de notificación individuales. Para ello, en la pantalla Notification Management:
 >
-> - Las llamadas [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) y examina la [ `AuthorizationStatus` ](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) propiedad.
-> - Oculta los botones de alternancia para los tipos de notificación individual si se han deshabilitado por completo las notificaciones de la aplicación.
-> - Vuelva a comprobar si se han deshabilitado las notificaciones cada vez que la aplicación se mueve al primer plano, ya que el usuario puede habilitar o deshabilitar las notificaciones en la configuración de iOS en cualquier momento.
+> - Llama [`UNUserNotificationCenter.Current.GetNotificationSettingsAsync`](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) a y examina la [`AuthorizationStatus`](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) propiedad.
+> - Oculta los alternancias para los tipos de notificación individuales si las notificaciones se han deshabilitado por completo para la aplicación.
+> - Vuelve a comprobar si se han deshabilitado las notificaciones cada vez que la aplicación se mueve al primer plano, ya que el usuario puede habilitar o deshabilitar las notificaciones en la configuración de iOS en cualquier momento.
 
-La aplicación de ejemplo `ViewController` (clase), que se envía las notificaciones, comprobación la preferencia del usuario antes de enviar una notificación local para asegurarse de que la notificación es de un tipo de usuario realmente desea recibir:
+La clase de la `ViewController` aplicación de ejemplo, que envía las notificaciones, comprueba las preferencias del usuario antes de enviar una notificación local para asegurarse de que la notificación es de un tipo que el usuario realmente desea recibir:
 
 ```csharp
 partial void HandleTapRedNotificationButton(UIButton sender)
@@ -58,16 +58,16 @@ partial void HandleTapRedNotificationButton(UIButton sender)
 
 ## <a name="deep-link"></a>Vínculo profundo
 
-iOS vínculos profundos a la pantalla de administración de notificación de una aplicación desde el centro de notificaciones y la configuración de notificación de la aplicación en la aplicación configuración. Para facilitar esto, una aplicación debe:
+iOS: vínculos profundos a la pantalla de administración de notificaciones de la aplicación desde el centro de notificaciones y la configuración de notificaciones de la aplicación en la aplicación de configuración. Para facilitar esto, una aplicación debe:
 
-- Indicar que una pantalla de administración de notificación está disponible pasando `UNAuthorizationOptions.ProvidesAppNotificationSettings` a solicitud de autorización de notificación de la aplicación.
-- Implemente el `OpenSettings` método [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+- Indique que hay disponible una pantalla de administración de notificaciones pasando `UNAuthorizationOptions.ProvidesAppNotificationSettings` a la solicitud de autorización de notificación de la aplicación.
+- Implemente `OpenSettings` el método [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate)desde.
 
 ### <a name="authorization-request"></a>Solicitud de autorización
 
-Para indicar al sistema operativo que está disponible una pantalla de administración de notificación, una aplicación debe pasar el `UNAuthorizationOptions.ProvidesAppNotificationSettings` opción (junto con cualquier otras notificación las opciones de entrega que necesita) a la `RequestAuthorization` método en el `UNUserNotificationCenter`.
+Para indicar al sistema operativo que hay disponible una pantalla de administración de notificaciones, una aplicación debe `UNAuthorizationOptions.ProvidesAppNotificationSettings` pasar la opción (junto con cualquier otra opción de entrega de notificación que `RequestAuthorization` necesite) al `UNUserNotificationCenter`método en.
 
-Por ejemplo, en la aplicación de ejemplo `AppDelegate`:
+Por ejemplo, en la aplicación de `AppDelegate`ejemplo:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -82,9 +82,9 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ### <a name="opensettings-method"></a>Método OpenSettings
 
-El `OpenSettings` método, llamado por el sistema al vínculo profundo de la pantalla de administración de la notificación de una aplicación, debe navegar al usuario directamente a esa pantalla.
+El `OpenSettings` método, al que llama el sistema para establecer un vínculo profundo a la pantalla de administración de notificaciones de la aplicación, debe navegar directamente al usuario a esa pantalla.
 
-En la aplicación de ejemplo, este método realiza el segue a la `ManageNotificationsViewController` si es necesario:
+En la aplicación de ejemplo, este método realiza el segue en `ManageNotificationsViewController` si es necesario:
 
 ```csharp
 [Export("userNotificationCenter:openSettingsForNotification:")]
@@ -105,9 +105,9 @@ public void OpenSettings(UNUserNotificationCenter center, UNNotification notific
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo: RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Plataforma de notificaciones de usuario en Xamarin.iOS](~/ios/platform/user-notifications/index.md)
+- [Aplicación de ejemplo: RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Marco de notificaciones de usuario en Xamarin. iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Novedades de las notificaciones de usuario (sesión WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Procedimientos recomendados y cuáles son las novedades en las notificaciones de usuario (sesión WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Generar una notificación remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)
+- [Novedades de las notificaciones de usuario (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Prácticas recomendadas y novedades en las notificaciones de usuario (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Generación de una notificación remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

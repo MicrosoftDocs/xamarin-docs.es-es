@@ -1,24 +1,24 @@
 ---
-title: Estilo del separador de ListView en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir iOS específicos de la plataforma que controla si el separador entre las celdas de un ListView usa todo el ancho de la ListView.
+title: Estilo de separador de ListView en iOS
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma iOS que controla si el separador entre las celdas de un control ListView usa el ancho completo del control ListView.
 ms.prod: xamarin
 ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 2d634231c0bfca115581f51bd9eb298b9c45a7e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 921ef905eed17b6bfe5cb2ea401f7da92ff744af
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925758"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648113"
 ---
-# <a name="listview-separator-style-on-ios"></a>Estilo del separador de ListView en iOS
+# <a name="listview-separator-style-on-ios"></a>Estilo de separador de ListView en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este iOS específicos de la plataforma controla si el separador entre las celdas de un [ `ListView` ](xref:Xamarin.Forms.ListView) usa todo el ancho de la `ListView`. Se consume en XAML estableciendo el [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) propiedad adjunta a un valor de la [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeración:
+Este control específico `ListView`de la plataforma iOS determina si el separador entre [`ListView`](xref:Xamarin.Forms.ListView) las celdas de un usa el ancho completo de. Se consume en XAML estableciendo el [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) propiedad adjunta a un valor de la [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeración:
 
 ```xaml
 <ContentPage ...
@@ -55,6 +55,6 @@ El resultado es que un determinado [ `SeparatorStyle` ](xref:Xamarin.Forms.Platf
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

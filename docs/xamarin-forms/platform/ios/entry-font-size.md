@@ -1,24 +1,24 @@
 ---
 title: Tamaño de fuente de entrada en iOS
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el iOS específicos de la plataforma que se puede escalar el tamaño de fuente de una entrada.
+description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo usar la plataforma específica de iOS que escala el tamaño de fuente de una entrada.
 ms.prod: xamarin
 ms.assetid: E8881D4E-902B-4397-A43E-916B2885EC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 24e8c0e0b963cda7d3240c47ee526001db9d4533
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f0f5ca8aa7959d5c305c29c96f972dccc43a65ff
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926050"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648140"
 ---
 # <a name="entry-font-size-on-ios"></a>Tamaño de fuente de entrada en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos de plataforma de iOS se usan para escalar el tamaño de fuente de un [ `Entry` ](xref:Xamarin.Forms.Entry) para asegurarse de que se ajuste el texto de entrada en el control. Se consume en XAML estableciendo el [ `Entry.AdjustsFontSizeToFitWidth` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty) propiedad adjunta un `boolean` valor:
+Esta plataforma específica de iOS se usa para escalar el tamaño de fuente [`Entry`](xref:Xamarin.Forms.Entry) de un para asegurarse de que el texto introducido quepa en el control. Se consume en XAML estableciendo el [ `Entry.AdjustsFontSizeToFitWidth` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty) propiedad adjunta un `boolean` valor:
 
 ```xaml
 <ContentPage ...
@@ -55,6 +55,6 @@ El resultado es que el tamaño de fuente de la [ `Entry` ](xref:Xamarin.Forms.En
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

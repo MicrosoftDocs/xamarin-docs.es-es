@@ -6,36 +6,36 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 84767975eece4f8f0efae1fe53463cbc053bd836
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7f68695b4fa6b8abb7938dd96794eb1d0d1d13a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012969"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643951"
 ---
 # <a name="touch-in-android"></a>Entrada táctil de Android
 
-Mucho, como iOS, Android crea un objeto que contiene datos sobre la interacción del usuario físico con la pantalla &ndash; un `Android.View.MotionEvent` objeto. Este objeto contiene los datos, como qué acción se realiza, coloque donde tuvo la entrada táctil, ¿cuánto presión se aplicó, etcetera. Un `MotionEvent` objeto desglosa el movimiento en los siguientes valores:
+De forma similar a iOS, Android crea un objeto que contiene datos sobre la interacción física del usuario con &ndash; la `Android.View.MotionEvent` pantalla de un objeto. Este objeto contiene datos, como la acción que se lleva a cabo, dónde tuvo lugar el toque, cuánta presión se aplicó, etc. Un `MotionEvent` objeto divide el movimiento en hasta los valores siguientes:
 
--  Código de acción que describe el tipo de movimiento, por ejemplo, la interacción inicial, el toque mover a través de la pantalla o el final de interacción.
+-  Código de acción que describe el tipo de movimiento, como el toque inicial, el movimiento táctil a través de la pantalla o la finalización táctil.
 
--  Un conjunto de valores del eje que describen la posición de la `MotionEvent` y otras propiedades de movimiento como donde la entrada táctil está teniendo lugar, cuando la interacción tuvo lugar y se usó la presión.
-   El eje de valores pueden variar en función del dispositivo, por lo que la lista anterior no describe todos los valores del eje.
+-  Un conjunto de valores de eje que describen la posición de `MotionEvent` y otras propiedades de movimiento, como el lugar en el que se está llevando a cabo el toque, Cuándo tuvo lugar el toque y cuánta presión se usó.
+   Los valores de los ejes pueden variar en función del dispositivo, por lo que en la lista anterior no se describen todos los valores de los ejes.
 
 
-La `MotionEvent` objeto pasarán a un método adecuado en una aplicación. Hay tres maneras para que una aplicación de Xamarin.Android responder a un evento de toque:
+El `MotionEvent` objeto se pasará a un método adecuado en una aplicación. Hay tres maneras de que una aplicación de Xamarin. Android responda a un evento Touch:
 
--  *Asignar un controlador de eventos `View.Touch`*  : la `Android.Views.View` clase tiene un `EventHandler<View.TouchEventArgs>` las aplicaciones que pueden asignar un controlador. Este comportamiento es normal. NET.
+-  *Asignar un controlador de eventos `View.Touch` a* : `Android.Views.View` la clase tiene `EventHandler<View.TouchEventArgs>` una a la que las aplicaciones pueden asignar un controlador. Este es un comportamiento típico de .NET.
 
--  *Implementar `View.IOnTouchListener`*  -instancias de esta interfaz se pueden asignar a un objeto de vista mediante la vista. `SetOnListener` método. Esto es funcionalmente equivalente a asignar un controlador de eventos para el `View.Touch` eventos. Si hay alguna lógica común o compartido que puedan necesitar muchas vistas diferentes cuando se han tocado, será más eficaz para crear una clase e implementar este método más to asignar a su propio controlador de eventos de cada vista.
+-  *Implementar`View.IOnTouchListener`* : las instancias de esta interfaz pueden asignarse a un objeto de vista mediante la vista. `SetOnListener`forma. Es funcionalmente equivalente a asignar un controlador de eventos al `View.Touch` evento. Si hay algunas lógicas comunes o compartidas que pueden necesitar muchas vistas diferentes cuando se tocan, será más eficaz crear una clase e implementar este método que asignar cada vista a su propio controlador de eventos.
 
--  *Invalidar `View.OnTouchEvent`*  -todas las vistas de subclase Android `Android.Views.View`. Cuando se toca una vista, llamará a Android el `OnTouchEvent` y pasarle un `MotionEvent` objeto como parámetro.
+-  *Override`View.OnTouchEvent`* : todas las vistas de la subclase `Android.Views.View`de Android. Cuando se toca una vista, Android llama a `OnTouchEvent` y le pasa un `MotionEvent` objeto como parámetro.
 
 
 > [!NOTE]
 > No todos los dispositivos Android admiten pantallas táctiles. 
 
-Al agregar la etiqueta a la siguiente al archivo de manifiesto, Google Play para mostrar solo la aplicación en los dispositivos de pantalla táctil:
+Al agregar la siguiente etiqueta al archivo de manifiesto, Google Play solo muestra la aplicación en los dispositivos que están habilitados para tocar:
 
 ```xml
 <uses-configuration android:reqTouchScreen="finger" />
@@ -43,18 +43,18 @@ Al agregar la etiqueta a la siguiente al archivo de manifiesto, Google Play para
 
 ## <a name="gestures"></a>Gestos
 
-Un gesto es una forma de mano dibujado en la pantalla táctil. Un gesto puede tener uno o varios trazos, cada trazo que consta de una secuencia de puntos creado por otro punto de contacto con la pantalla. Android puede admitir muchos tipos diferentes de los gestos, desde un romance simple en la pantalla en los gestos complejos que implican la tecnología multitoque.
+Un gesto es una forma dibujada a mano en la pantalla táctil. Los gestos pueden tener uno o varios trazos, cada uno de los cuales consta de una secuencia de puntos creados por un punto de contacto distinto con la pantalla. Android puede admitir muchos tipos diferentes de gestos, desde un Fling simple a través de la pantalla, a gestos complejos que implican múltiples toques.
 
-Android proporciona el `Android.Gestures` espacio de nombres específicamente para administrar y responder a los gestos. En el corazón de todos los gestos es una clase especial denominada `Android.Gestures.GestureDetector`. Como el nombre implica, esta clase realizará escuchas para los gestos y eventos en función de `MotionEvents` proporcionada por el sistema operativo.
+Android proporciona el `Android.Gestures` espacio de nombres específicamente para administrar y responder a los gestos. En el corazón de todos los gestos hay una clase especial `Android.Gestures.GestureDetector`denominada. Como implica el nombre, esta clase escuchará los movimientos y eventos en función de `MotionEvents` los proporcionados por el sistema operativo.
 
-Para implementar un detector de movimiento, debe crear una instancia de una actividad una `GestureDetector` clase y proporcionar una instancia de `IOnGestureListener`, tal y como se muestra en el siguiente fragmento de código:
+Para implementar un detector de gestos, una actividad debe crear `GestureDetector` instancias de una clase y proporcionar `IOnGestureListener`una instancia de, como se muestra en el siguiente fragmento de código:
 
 ```csharp
 GestureOverlayView.IOnGestureListener myListener = new MyGestureListener();
 _gestureDetector = new GestureDetector(this, myListener);
 ```
 
-Una actividad también debe implementar la OnTouchEvent y pasar la MotionEvent para el detector de movimiento. El fragmento de código siguiente muestra un ejemplo de esto:
+Una actividad también debe implementar OnTouchEvent y pasar MotionEvent al detector de gestos. En el fragmento de código siguiente se muestra un ejemplo de esto:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent e)
@@ -64,47 +64,47 @@ public override bool OnTouchEvent(MotionEvent e)
 }
 ```
 
-Cuando una instancia de `GestureDetector` identifica un gesto de interés, lo notificará a la actividad o la aplicación generando un evento o a través de una devolución de llamada proporcionada por `GestureDetector.IOnGestureListener`.
-Esta interfaz proporciona seis métodos para los gestos distintos:
+Cuando una instancia de `GestureDetector` identifica un movimiento de interés, se lo notificará a la actividad o aplicación mediante la generación de un evento o a través `GestureDetector.IOnGestureListener`de una devolución de llamada proporcionada por.
+Esta interfaz proporciona seis métodos para los distintos gestos:
 
--  *OnDown* -se le llama cuando se produce una derivación, pero no se libera.
+-  *Down* : se llama cuando se produce una derivación, pero no se libera.
 
--  *OnFling* -se invoca cuando un romance se produce y proporciona datos sobre la interacción de inicio y finalización que desencadenó el evento.
+-  *OnFling* : se le llama cuando se produce una Fling y proporciona datos sobre el toque inicial y final que desencadenó el evento.
 
--  *OnLongPress* -se le llama cuando se produce una presión prolongada.
+-  *OnLongPress* : se le llama cuando se produce una presión larga.
 
--  *OnScroll* -se le llama cuando se produce un evento de desplazamiento.
+-  *Onscroll* : se llama cuando se produce un evento de desplazamiento.
 
--  *OnShowPress* : llamado después de que se ha producido un OnDown y un movimiento o evento no se ha realizado.
+-  *OnShowPress* : se le llama después de que se haya producido una excepción y no se ha realizado un evento de movimiento o de arriba.
 
--  *OnSingleTapUp* -se le llama cuando se produce un único punteo.
+-  *OnSingleTapUp* : se le llama cuando se produce un solo punteo.
 
 
-En muchos casos las aplicaciones solo pueden estar interesadas en un subconjunto de los gestos. En este caso, las aplicaciones deben ampliar la clase GestureDetector.SimpleOnGestureListener y reemplazar los métodos que corresponden a los eventos que están interesados en.
+En muchos casos, las aplicaciones solo pueden estar interesadas en un subconjunto de gestos. En este caso, las aplicaciones deben extender la clase GestureDetector. SimpleOnGestureListener e invalidar los métodos que corresponden a los eventos que le interesan.
 
 ## <a name="custom-gestures"></a>Gestos personalizados
 
-Los gestos son una excelente manera para que los usuarios interactúan con una aplicación. Las API que hemos visto hasta ahora sería suficiente para movimientos simples, pero pueden resultar un poco más onerosas para los gestos más complicados. Para ayudar con los gestos más complicados, Android proporciona otro conjunto de API en el espacio de nombres Android.Gestures que facilitará la parte de la carga asociada con gestos personalizados.
+Los gestos son una excelente manera de que los usuarios puedan interactuar con una aplicación. Las API que vimos hasta ahora serían suficientes para los gestos sencillos, pero podrían resultar un poco onerosos para gestos más complicados. Para ayudar con gestos más complicados, Android proporciona otro conjunto de API en el espacio de nombres de Android. gestos que facilitará parte de la carga asociada a los gestos personalizados.
 
-### <a name="creating-custom-gestures"></a>Creación de gestos personalizados
+### <a name="creating-custom-gestures"></a>Crear gestos personalizados
 
-Desde Android 1.6, el SDK de Android incluye una aplicación previamente instalado en el emulador de generador de gestos. Esta aplicación permite a los desarrolladores crear predefinidos los gestos que se pueden incrustar en una aplicación. Captura de pantalla siguiente muestra un ejemplo del generador de gestos:
+Desde Android 1,6, la Android SDK incluye una aplicación preinstalada en el emulador llamado gestos de gestos. Esta aplicación permite a los desarrolladores crear gestos predefinidos que se pueden incrustar en una aplicación. En la captura de pantalla siguiente se muestra un ejemplo de gestos del generador:
 
 [![Captura de pantalla del generador de gestos con gestos de ejemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
-Encontrará una versión mejorada de esta aplicación llama a la herramienta de gesto de Google Play. Herramienta de movimiento es muy similar a gestos generador excepto en que permite probar los gestos después de haber creado. Esta captura de pantalla siguiente muestra el generador de gestos:
+Se puede encontrar una versión mejorada de esta aplicación denominada herramienta de gestos Google Play. La herramienta de gestos es muy similar al generador de gestos, salvo que le permite probar los gestos después de haberlos creado. En la siguiente captura de pantalla se muestra el generador de gestos:
 
-[![Herramienta de captura de pantalla de gestos con gestos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
+[![Captura de pantalla de la herramienta de gestos con gestos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
-Herramienta de movimiento es un poco más útil para crear los gestos personalizados ya que permite a los gestos que se va a probar como se crean y está fácilmente disponible a través de Google Play.
+La herramienta de gestos es un poco más útil para crear gestos personalizados, ya que permite que los gestos se prueben a medida que se crean y que se pueden acceder fácilmente a través de Google Play.
 
-Herramienta gesto permite que crear un gesto de dibujo en la pantalla y asignando un nombre. Una vez creados los gestos se guardan en un archivo binario en la tarjeta SD del dispositivo. Este archivo debe ser recuperado desde el dispositivo y, a continuación, se empaquetan con una aplicación en la carpeta de /Resources/raw. Este archivo se puede recuperar desde el emulador con Android Debug Bridge. El ejemplo siguiente muestra copiando el archivo en el directorio de recursos de una aplicación un Galaxy Nexus:
+La herramienta de gestos le permite crear un gesto dibujando en la pantalla y asignando un nombre. Una vez creados los gestos, se guardan en un archivo binario en la tarjeta SD del dispositivo. Este archivo debe recuperarse desde el dispositivo y, a continuación, empaquetarse con una aplicación en la carpeta/Resources/RAW. Este archivo se puede recuperar desde el emulador mediante el Android Debug Bridge. En el ejemplo siguiente se muestra cómo copiar el archivo de un archivo de Galaxy Nexus en el directorio de recursos de una aplicación:
 
 ```shell
 $ adb pull /storage/sdcard0/gestures <projectdirectory>/Resources/raw
 ```
 
-Después de recuperar el archivo debe estar empaquetado con su aplicación dentro del directorio de Resources/sin formato. La manera más fácil de usar este archivo gesto es cargar el archivo en un GestureLibrary, como se muestra en el siguiente fragmento de código:
+Una vez que haya recuperado el archivo, se debe empaquetar con la aplicación en el directorio/Resources/RAW. La forma más fácil de usar este archivo de gestos es cargar el archivo en un GestureLibrary, como se muestra en el siguiente fragmento de código:
 
 ```csharp
 GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
@@ -115,9 +115,9 @@ if (!myGestures.Load())
 }
 ```
 
-### <a name="using-custom-gestures"></a>Uso de gestos personalizados
+### <a name="using-custom-gestures"></a>Usar gestos personalizados
 
-Para reconocer gestos personalizados en una actividad, debe tener un objeto de Android.Gesture.GestureOverlay agregado a su diseño. El fragmento de código siguiente muestra cómo agregar mediante programación un GestureOverlayView a una actividad:
+Para reconocer gestos personalizados en una actividad, debe tener un objeto Android. gesto. GestureOverlay agregado a su diseño. En el fragmento de código siguiente se muestra cómo agregar un GestureOverlayView a una actividad mediante programación:
 
 ```csharp
 GestureOverlayView gestureOverlayView = new GestureOverlayView(this);
@@ -125,7 +125,7 @@ gestureOverlayView.AddOnGesturePerformedListener(this);
 SetContentView(gestureOverlayView);
 ```
 
-El fragmento XML siguiente muestra cómo agregar un GestureOverlayView mediante declaración:
+El siguiente fragmento XML muestra cómo agregar un GestureOverlayView mediante declaración:
 
 ```xml
 <android.gesture.GestureOverlayView
@@ -134,14 +134,14 @@ El fragmento XML siguiente muestra cómo agregar un GestureOverlayView mediante 
     android:layout_height="match_parent" />
 ```
 
-El `GestureOverlayView` tiene varios eventos que se generará durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePerformed`. Este evento se desencadena cuando el usuario ha completado su gesto de dibujo.
+`GestureOverlayView` Tiene varios eventos que se producirán durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePerformed`. Este evento se desencadena cuando el usuario ha terminado de dibujar su gesto.
 
-Cuando se genera este evento, la actividad pide un `GestureLibrary` para intentar coincidir con el gesto creados por el usuario con uno de los movimientos de la herramienta gesto. `GestureLibrary` Devuelve una lista de objetos de predicción.
+Cuando se genera este evento, la actividad pide `GestureLibrary` a que pruebe y haga coincidir el gesto que el usuario con uno de los gestos creados por la herramienta de gestos. `GestureLibrary`devolverá una lista de objetos de predicción.
 
-Cada objeto de predicción contiene una puntuación y el nombre de uno de los gestos en el `GestureLibrary`. Cuanto mayor sea la puntuación, más probable que el gesto mencionado en la predicción coincide con el gesto dibujado por el usuario.
-Por lo general, las puntuaciones de menores que 1.0 se consideran a coincidencias deficientes.
+Cada objeto de predicción contiene una puntuación y el nombre de uno de los gestos `GestureLibrary`en. Cuanto mayor sea la puntuación, mayor será la probabilidad de que el gesto mencionado en la predicción coincida con el gesto dibujado por el usuario.
+Por lo general, las puntuaciones inferiores a 1,0 se consideran malas coincidencias.
 
-El código siguiente muestra un ejemplo de un gesto de coincidencia:
+En el código siguiente se muestra un ejemplo de coincidencia de un gesto:
 
 ```csharp
 private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
@@ -163,11 +163,11 @@ private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayV
 }
 ```
 
-De este modo, debe tener una comprensión de cómo usar el tacto y gestos en una aplicación de Xamarin.Android. Ahora nos gustaría pasar a un tutorial y vea todos los conceptos en una aplicación de ejemplo funcional.
+Una vez hecho esto, debe tener conocimientos sobre cómo usar los gestos táctiles y en una aplicación de Xamarin. Android. Vamos a pasar a un tutorial y ver todos los conceptos de una aplicación de ejemplo en funcionamiento.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android tocar inicio (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android toque Final (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
+- [Inicio táctil de Android (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch final (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)

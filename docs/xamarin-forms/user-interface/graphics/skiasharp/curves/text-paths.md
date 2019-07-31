@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d38391f3fd0f02dda8bfd92fce650c557bda0153
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022063"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645214"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Las rutas de acceso y el texto de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore la intersección de las rutas de acceso y el texto_
 
@@ -30,7 +30,7 @@ Además de utilizar un efecto de la ruta de acceso para trazar un contorno de ca
 
 En el artículo anterior sobre [ **los efectos de la ruta de acceso**](effects.md), vimos cómo [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método de `SKPaint` puede obtener un esquema de un trazado. También puede usar este método con las rutas de acceso que se deriva de contornos de caracteres.
 
-Por último, en este artículo se muestra otro intersección de las rutas de acceso y el texto: El [ `DrawTextOnPath` ](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método `SKCanvas` permite mostrar una cadena de texto, por lo que sigue a la línea base del texto de un trazado curvo.
+Por último, en este artículo se muestra otra intersección de rutas de acceso y texto: El [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método de `SKCanvas` permite mostrar una cadena de texto para que la línea de base del texto siga un trazado curvo.
 
 ## <a name="text-to-path-conversion"></a>Texto a la conversión de la ruta de acceso
 
@@ -128,7 +128,7 @@ El **efecto de texto de ruta de acceso** página convierte un carácter de "y" c
 
 [![](text-paths-images/textpatheffect-small.png "Captura de pantalla triple de la página de efecto de la ruta de acceso de texto")](text-paths-images/textpatheffect-large.png#lightbox "Triple captura de pantalla de la página de efecto de texto ruta de acceso")
 
-Cantidad de trabajo en el [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y el constructor. Los dos `SKPaint` objetos definidos como campos sirven para dos propósitos diferentes: La primera (denominado `textPathPaint`) se utiliza para convertir la y comercial con un `TextSize` de 50 a una ruta de acceso para el efecto de la ruta de acceso de 1 día. El segundo (`textPaint`) se usa para mostrar la versión ampliada de la y comercial con el efecto de esa ruta de acceso. Por ese motivo, la `Style` de esta segunda pintura objeto se establece en `Stroke`, pero la `StrokeWidth` no se establece la propiedad porque esa propiedad no es necesaria cuando se usa un efecto de la ruta de acceso 1D:
+Cantidad de trabajo en el [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y el constructor. Los dos `SKPaint` objetos definidos como campos se utilizan para dos propósitos diferentes: El primero (con `textPathPaint`nombre) se usa para convertir el símbolo de `TextSize` y comercial con un de 50 en una ruta de acceso para el efecto de la ruta de acceso 1D. El segundo (`textPaint`) se usa para mostrar la versión ampliada de la y comercial con el efecto de esa ruta de acceso. Por ese motivo, la `Style` de esta segunda pintura objeto se establece en `Stroke`, pero la `StrokeWidth` no se establece la propiedad porque esa propiedad no es necesaria cuando se usa un efecto de la ruta de acceso 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -285,7 +285,7 @@ Veces, sin embargo, cuando desee que el texto que se ejecute en una curva. Este 
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
 ```
 
-El texto especificado en el primer argumento se realiza para ejecutar a lo largo de la ruta de acceso especificada como segundo argumento. Puede comenzar el texto en un desplazamiento desde el principio de la ruta de acceso con el `hOffset` argumento. Normalmente, la ruta de acceso forma la línea base del texto: Son los ascendentes de texto en un lado de la ruta de acceso y trazos descendentes de texto que se encuentran en el otro. Pero se pueden desplazar la línea base del texto de la ruta de acceso con el `vOffset` argumento.
+El texto especificado en el primer argumento se realiza para ejecutar a lo largo de la ruta de acceso especificada como segundo argumento. Puede comenzar el texto en un desplazamiento desde el principio de la ruta de acceso con el `hOffset` argumento. Normalmente, la ruta de acceso forma la línea de base del texto: Los trazos de texto se encuentran en un lado del trazado y los de texto se encuentran en el otro. Pero se pueden desplazar la línea base del texto de la ruta de acceso con el `vOffset` argumento.
 
 Este método no tiene ninguna facilidad para proporcionar instrucciones sobre cómo el `TextSize` propiedad de `SKPaint` para poner el texto de tamaño perfectamente para ejecutarse desde el principio de la ruta de acceso al final. A veces puede averiguar ese tamaño de texto por su cuenta. En otras ocasiones, deberá usar funciones de medición de ruta de acceso a se describe en el siguiente artículo en [ **información de ruta de acceso y de enumeración**](information.md).
 
@@ -326,9 +326,9 @@ El `TextSize` propiedad de `textPaint` , a continuación, se ajusta para que la 
 
 [![](text-paths-images/circulartext-small.png "Captura de pantalla de la página de texto Circular triple")](text-paths-images/circulartext-large.png#lightbox "Triple captura de pantalla de la página de texto Circular")
 
-El texto en sí se ha elegido para ser circular algo así: La palabra "círculo" es el sujeto de la oración tanto el objeto de una frase preposicionales.
+El texto se eligió también como circular: La palabra "Circle" es el asunto de la oración y el objeto de una frase de preposicional.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

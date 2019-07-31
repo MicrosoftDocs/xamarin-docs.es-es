@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 364e10b8b59fcc8d640799ab6a0f11dcf4ded818
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675249"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644507"
 ---
 # <a name="introduction-to-watchos"></a>Introducción a watchOS
 
@@ -29,7 +29,7 @@ Una solución de aplicación para watchOS tiene 3 proyectos:
 
 En las aplicaciones para watchOS 1, el código de la extensión se ejecuta en el iPhone: el Apple Watch es realmente una pantalla externa. las aplicaciones para watchOS 2 y 3 se ejecutan completamente en el Apple Watch. Esta diferencia se muestra en el diagrama siguiente:
 
-[![](intro-to-watchos-images/arch-sml.png "La diferencia entre watchOS 1 y watchOS 2 (y versiones posteriores) se muestra en este diagrama")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "En este diagrama se muestra la diferencia entre watchos 1 y watchos 2 (y superior).")](intro-to-watchos-images/arch.png#lightbox)
 
 Independientemente de qué versión de watchOS está dirigida, en Visual Studio para panel del Mac de solución una solución completa tendrá un aspecto similar al siguiente:
 
@@ -53,8 +53,8 @@ Puede, sin embargo, ocultar y mostrar controles y, con algunos controles, cambia
 
 El ciclo de vida de un `WKInterfaceController` objeto implica las siguientes llamadas:
 
-- [Activo](xref:WatchKit.WKInterfaceController.Awake*) : Debe realizar la mayoría de la inicialización en este método.
-- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Lo llama poco antes de la aplicación del reloj aparece ante el usuario. Utilice este método para realizar la inicialización de último momento, iniciar las animaciones, etcetera.
+- [Activo](xref:WatchKit.WKInterfaceController.Awake*) : Debe realizar la mayor parte de la inicialización en este método.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Se llama justo antes de que la aplicación de inspección aparezca ante el usuario. Utilice este método para realizar la inicialización de último momento, iniciar las animaciones, etcetera.
 - En este momento, aparece la aplicación del reloj y la extensión empieza a responder a la información de usuario y actualizar la presentación de la aplicación Watch por la lógica de aplicación.
 - [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) después de la aplicación del reloj se ha descartado por el usuario, se llama a este método. Cuando se devuelve este método, no se puede modificar los controles de interfaz de usuario hasta la próxima vez `WillActivate` se llama. Este método también se llamará si se interrumpe la conexión para el iPhone.
 - Después de la extensión se ha desactivado, no es accesible al programa. Las funciones asincrónicas pendientes **no** llamarse. Las extensiones de inspección Kit no puede utilizar los modos de procesamiento en segundo plano. Si se vuelve a activar el programa por el usuario, pero no se terminó la aplicación por el sistema operativo, será el primer método llamado `WillActivate`.
@@ -69,7 +69,7 @@ Todos se programan mediante subclases personalizados de `WKInterfaceController`,
 ### <a name="normal-interaction"></a>Interacción normal
 
 La mayoría de interacción de aplicación/extensión de inspección serán con subclases de `WKInterfaceController` que escribir para que coincida con el segundo plano en la aplicación de inspección **Interface.storyboard**. Este tema se trata con detalle en la [instalación](~/ios/watchos/get-started/installation.md) y [Introducción](~/ios/watchos/get-started/index.md) artículos.
-La siguiente imagen muestra una parte de la [inspección Kit catálogo](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) guión gráfico del ejemplo. Para cada escena mostrado aquí, hay un personalizado correspondiente `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) en el proyecto de extensión.
+La siguiente imagen muestra una parte de la [inspección Kit catálogo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) guión gráfico del ejemplo. Para cada escena mostrado aquí, hay un personalizado correspondiente `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) en el proyecto de extensión.
 
 ![](intro-to-watchos-images/scenes.png "Ejemplos de interacción normal")
 
@@ -90,10 +90,10 @@ Para obtener más información sobre el diseño de interfaz de usuario de notifi
 
 ## <a name="screen-sizes"></a>Tamaños de pantalla
 
-El Apple Watch consta de dos tamaños de cara: 38 y 42mm, con una proporción de 5:4 para mostrar y una pantalla retina. Sus tamaños utilizables son:
+El Apple Watch tiene dos tamaños de caras: 38mm y 42mm, ambos con una relación de visualización 5:4 y una pantalla retina. Sus tamaños utilizables son:
 
-- 38mm: píxeles lógicos de 136 x 170 (píxeles físicos 340 x 272)
-- 42mm: píxeles lógicos de 156 x 195 (píxeles físicos 312 x 390).
+- 38mm 136 x 170 píxeles lógicos (272 x 340 píxeles físicos)
+- 42mm: 156 x 195 píxeles lógicos (312 x 390 píxeles físicos).
 
 Use `WKInterfaceDevice.ScreenBounds` para determinar en qué pantalla se está ejecutando la aplicación del reloj.
 
@@ -133,8 +133,8 @@ Consulte la documentación de Apple:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [watchOS 3 catálogo (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 catálogo (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [watchOS 3 catálogo (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 catálogo (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
 - [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Del desarrollo de Apple para guía Kit de inspección](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

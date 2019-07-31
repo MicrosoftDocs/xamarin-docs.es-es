@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: c493b43edbfa04aafba56c4b47d7c89b455de423
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f5a672f6b34edf02eeac0f2820989d0656342167
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830480"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648826"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso de CocosSharp en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](h https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp puede utilizarse para agregar de forma precisa, la imagen y la representación de texto a una aplicación para visualización avanzada_
 
 > [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-**Evolve 2016: Cocos # en Xamarin.Forms**
+**Evolve 2016: Islas Nº en Xamarin. Forms**
 
 ## <a name="overview"></a>Información general
 
@@ -30,7 +30,7 @@ CocosSharp es una tecnología flexible y eficaz para la presentación de gráfic
 
 * [¿Qué es CocosSharp?](#what)
 * [Agregar los paquetes de CocosSharp Nuget](#nuget)
-* [Tutorial: Adición de CocosSharp a una aplicación de Xamarin.Forms](#add)
+* [Tutorial: Agregar CocosSharp a una aplicación de Xamarin. Forms](#add)
 
 <a name="what" />
 
@@ -40,10 +40,10 @@ CocosSharp es una tecnología flexible y eficaz para la presentación de gráfic
 CocosSharp es una biblioteca en tiempo de ejecución eficaz que incluye las siguientes características:
 
 * Representación de imágenes mediante la `CCSprite` clase
-* Forma de representación mediante la `CCDrawNode` clase
-* Cada marco lógica usando el `CCNode.Schedule` clase
-* Administración de contenido (carga y descarga de recursos como archivos .png) mediante el `CCTextureCache`
-* Animaciones con la `CCAction` clase
+* Representación de la forma mediante `CCDrawNode` la clase
+* Lógica de cada fotograma mediante `CCNode.Schedule` la clase
+* Administración de contenido (cargar y descargar recursos como archivos. png) mediante`CCTextureCache`
+* Animaciones que utilizan `CCAction` la clase
 
 Objetivo principal de CocosSharp es simplificar la creación de juegos en 2D multiplataforma; Sin embargo, también puede ser una gran adición a aplicaciones de Xamarin Forms. Puesto que juegos normalmente requieren la eficacia de representación y un control preciso sobre los objetos visuales, CocosSharp puede usarse para agregar una visualización eficaz y efectos a las aplicaciones que no sean juego.
 
@@ -74,7 +74,7 @@ Repita los pasos anteriores para los proyectos específicos de la plataforma (po
 
 <a name="add" />
 
-## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>Tutorial: Adición de CocosSharp a una aplicación de Xamarin.Forms
+## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>Tutorial: Agregar CocosSharp a una aplicación de Xamarin. Forms
 
 Siga estos pasos para agregar una vista sencilla de CocosSharp a una aplicación de Xamarin.Forms:
 
@@ -346,8 +346,8 @@ Ahora mueve el círculo de CocosSharp en respuesta a los clics. Podemos ver clar
 
 Esta guía muestra cómo agregar CocosSharp a un Xamarin.Forms existente del proyecto, cómo crear una interacción entre Xamarin.Forms y CocosSharp y se describen diversas consideraciones al crear diseños de CocosSharp.
 
-El motor de juego de CocosSharp ofrece una gran cantidad de funcionalidad y la profundidad, por lo que esta guía solo la punta del iceberg de lo que puede hacer CocosSharp. Los desarrolladores interesados en leer más acerca de CocosSharp pueden encontrar muchos artículos de la [CocosSharp archivo](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/).
+El motor de juego de CocosSharp ofrece una gran cantidad de funcionalidad y la profundidad, por lo que esta guía solo la punta del iceberg de lo que puede hacer CocosSharp. Los desarrolladores interesados en leer más sobre CocosSharp pueden encontrar muchos artículos en el [archivo CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CocosSharpForms (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

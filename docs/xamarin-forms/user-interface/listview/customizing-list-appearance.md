@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169992"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647616"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizar la apariencia de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) tiene la capacidad para controlar la presentación de la lista, además del [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instancias para cada fila de la lista.
+[`ListView`](xref:Xamarin.Forms.ListView)tiene la capacidad de controlar la presentación de la lista, además de las [`ViewCell`](xref:Xamarin.Forms.ViewCell) instancias de para cada fila de la lista.
 
 <a name="Grouping" />
 
@@ -78,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-En el código anterior, también lo llamemos `Add` en elementos de `groups`, que son instancias del tipo `PageTypeGroup`. Esto es posible porque `PageTypeGroup` hereda de `List<PageModel>`. Este es un ejemplo de la lista de patrón de listas que se ha indicado anteriormente.
+En el código anterior, también se puede llamar `Add` a en elementos `groups`de, que son instancias de `PageTypeGroup`tipo. Esto es posible porque `PageTypeGroup` hereda de `List<PageModel>`. Este es un ejemplo de la lista de patrón de listas que se ha indicado anteriormente.
 
 Este es el XAML para mostrar la lista agrupada:
 
@@ -201,13 +201,13 @@ Para crear un encabezado personalizado y un pie de página, definir las vistas d
 
 ![](customizing-list-appearance-images/header-custom.png "ListView con encabezado personalizado y el pie de página")
 
-## <a name="scrollbar-visibility"></a>Visibilidad de la barra de desplazamiento
+## <a name="scrollbar-visibility"></a>Visibilidad de ScrollBar
 
-[`ListView`](xref:Xamarin.Forms.ListView) tiene `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades, que obtención o establece un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa el momento de la barra de desplazamiento horizontal o vertical, está visible. Ambas propiedades se pueden establecer en los siguientes valores:
+[`ListView`](xref:Xamarin.Forms.ListView)tiene `HorizontalScrollBarVisibility` las `VerticalScrollBarVisibility` propiedades y, que obtienen o establecen [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) un valor que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. Ambas propiedades se pueden establecer en los siguientes valores:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento de barra de desplazamiento predeterminado para la plataforma, y es el valor predeterminado para el `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido se ajusta en la vista.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no serán visibles, incluso si el contenido no se ajusta en la vista.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado `HorizontalScrollBarVisibility` para `VerticalScrollBarVisibility` las propiedades y.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
 
 <a name="Row_Separators" />
 
@@ -342,8 +342,8 @@ Tenga en cuenta que hay grandes posibilidades de degradación del rendimiento si
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GROUPING (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Vista de representador personalizado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Cambiar el tamaño de las filas dinámicas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
+- [GROUPING (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Vista de representador personalizado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Cambiar el tamaño de las filas dinámicas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [notas de la versión 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [notas de la versión 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

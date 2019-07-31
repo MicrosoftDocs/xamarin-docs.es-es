@@ -7,16 +7,16 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019595"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647402"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Datos de ruta de acceso SVG de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir rutas de acceso mediante cadenas de texto en el formato de Scalable Vector Graphics_
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-El [ **puntos y guiones** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artículo describe cómo puede usar el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para crear una línea discontinua. El primer argumento es un `float` matriz que generalmente tiene dos elementos: El primer elemento es la longitud de los guiones, y el segundo elemento es la separación entre los guiones. Cuando el `StrokeCap` propiedad está establecida en `SKStrokeCap.Round`, a continuación, los extremos del guión redondeados eficazmente alargar la longitud del guión por el ancho del trazo en ambos lados del guión. Por lo tanto, si el primer elemento de matriz se establece en 0, crea una línea de puntos.
+El [ **puntos y guiones** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artículo describe cómo puede usar el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para crear una línea discontinua. El primer argumento es una `float` matriz que generalmente tiene dos elementos: El primer elemento es la longitud de los guiones y el segundo elemento es el espacio entre los guiones. Cuando el `StrokeCap` propiedad está establecida en `SKStrokeCap.Round`, a continuación, los extremos del guión redondeados eficazmente alargar la longitud del guión por el ancho del trazo en ambos lados del guión. Por lo tanto, si el primer elemento de matriz se establece en 0, crea una línea de puntos.
 
 La distancia entre estos puntos se rige por el segundo elemento de matriz. Como verá en breve, estos dos `SKPaint` objetos se utilizan para dibujar círculos con un radio de 90 unidades. Por lo tanto, la circunferencia de este círculo es 180π, lo que significa que las marcas de 60 minutos deben aparecer cada unidades 3π, que es el segundo valor en el `float` de matriz en `minuteMarkPaint`. Las marcas de hora 12 deben aparecer cada unidades 15π, que es el valor en el segundo `float` matriz.
 
@@ -433,4 +433,4 @@ Sin embargo algo especial se realiza con la mano de segundo. Dado que el reloj s
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

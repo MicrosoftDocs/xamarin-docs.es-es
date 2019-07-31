@@ -7,21 +7,21 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: f9a3f6301005210d221f3223607e82adc0971a32
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 4aae2a206f07ea6caa7fc0d7530fb9fec05ce5f0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741015"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648428"
 ---
 # <a name="xamarinforms-listview"></a>ListView de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
-[`ListView`](xref:Xamarin.Forms.ListView) es una vista para presentar las listas de datos, especialmente las listas largas que requieren el desplazamiento.
+[`ListView`](xref:Xamarin.Forms.ListView)es una vista para presentar listas de datos, especialmente listas largas que requieren desplazamiento.
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) es una vista para presentar las listas de datos mediante las especificaciones de diseño diferente. Su objetivo es proporcionar una forma más flexible y una alternativa de alto rendimiento [ `ListView` ](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)es una vista para presentar listas de datos con diferentes especificaciones de diseño. Pretende proporcionar una alternativa más flexible y de rendimiento a [`ListView`](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [Xamarin. Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
 
 ## <a name="use-cases"></a>Casos de uso
 
@@ -62,10 +62,10 @@ Para obtener más información acerca de las características de interactividad 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con ListView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
-- [Enlaces bidireccionales (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
-- [Integrado en las celdas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [Celdas personalizadas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [GROUPING (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Vista de representador personalizado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
-- [Interactividad de ListView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [Trabajar con ListView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+- [Enlaces bidireccionales (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [Integrado en las celdas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Celdas personalizadas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [GROUPING (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Vista de representador personalizado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative/)
+- [Interactividad de ListView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

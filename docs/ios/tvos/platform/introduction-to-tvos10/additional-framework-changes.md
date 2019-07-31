@@ -1,75 +1,75 @@
 ---
-title: Cambios de marcos adicionales tvOS 10
-description: Este documento describe cambios menores y las mejoras realizadas en los marcos existentes en iOS 10. Describe las actualizaciones de AVFoundation, AVKit, Core Data, Core Graphics, Foundation, GameKit, GameplayKit y mucho más.
+title: Cambios adicionales de tvOS 10 frameworks
+description: En este documento se describen los cambios menores y las mejoras realizadas en los marcos de trabajo existentes en iOS 10. Describe las actualizaciones de AVFoundation, AVKit, Core Data, Core Graphics, Foundation, GameKit, GameplayKit, etc.
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ab6236198d0a5826fc613d1f3839bafdb980d235
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 230da58bba68b9411b67baacd53b534ae832510d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657436"
 ---
-# <a name="additional-tvos-10-frameworks-changes"></a>Cambios de marcos adicionales tvOS 10
+# <a name="additional-tvos-10-frameworks-changes"></a>Cambios adicionales de tvOS 10 frameworks
 
-Además de los cambios más importantes para tvOS, Apple ha realizado modificaciones y mejoras para varios marcos de trabajo existentes en tvOS 10.
+Además de los principales cambios en tvOS, Apple ha realizado modificaciones y mejoras en varios marcos de trabajo existentes en tvOS 10.
 
 <a name="AV-Foundation-Framework" />
 
 ## <a name="avfoundation-framework-additions"></a>Adiciones de AVFoundation Framework
 
-El marco de trabajo AVFoundation incluye las siguientes mejoras:
+El marco de trabajo de AVFoundation incluye las siguientes mejoras:
 
-- En tvOS 10, la aplicación ya no se implementa en diferentes [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) comportamientos según el tipo de contenido. Basta con establecer la `Rate` propiedad y AVFoundation determinará cuándo suficiente contenido está disponible para su reproducción sin estancamiento.
-- El nuevo `AVPlayerLooper` clase facilita una parte determinada del medio de un bucle durante la reproducción.
+- En tvOS 10, la aplicación ya no implementa distintos comportamientos de [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) en función del tipo de contenido. Basta con establecer `Rate` la propiedad y AVFoundation determinará si hay suficiente contenido disponible para la reproducción sin detenerse.
+- La nueva `AVPlayerLooper` clase facilita el bucle de una parte determinada del medio durante la reproducción.
 
 <a name="AVKit-Framework-Enhancements" />
 
 ## <a name="avkit-framework-enhancements"></a>Mejoras de AVKit Framework
 
-El marco de trabajo AVKit incluye las siguientes mejoras:
+El marco de trabajo de AVKit incluye las siguientes mejoras:
 
-- La aplicación ahora tiene control sobre el comportamiento de omitiendo la [AVPlayerViewController](https://developer.apple.com/reference/avkit/avplayerviewcontroller) por lo que podría mover un gesto omitiendo al elemento siguiente en la lista de reproducción o por adelantado dentro del elemento actual.
+- La aplicación ahora tiene control sobre el comportamiento de omisión de [AVPlayerViewController](https://developer.apple.com/reference/avkit/avplayerviewcontroller) , por lo que un gesto de omisión podría desplazarse al siguiente elemento de la lista de reproducción o avanzar dentro del elemento actual.
 
 <a name="Core-Data-Enhancements" />
 
-## <a name="core-data-enhancements"></a>Mejoras de datos principales
+## <a name="core-data-enhancements"></a>Mejoras en los datos principales
 
-tvOS 10 incluye las siguientes mejoras en el marco de trabajo de datos principales:
+tvOS 10 incluye las siguientes mejoras en el marco de datos principal:
 
-- Raíz [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) objetos admite produzca un error simultáneo y capturando sin serialización.
-- El [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) clase mantiene un grupo de almacenes de datos de SQLite.
-- El [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) objetos con almacenes de datos de SQLite en la compatibilidad con el modo de diario de WAL la nueva generación de consultas de características donde se pueden anclar los contextos de objeto administrado (MOC) para versiones específicas de la base de datos para capturar futuras y transacciones con errores.
-- Con el alto nivel `NSPersistenceContainer` para hacer referencia a la `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración Core Data.
-- Se han agregado varios métodos útiles de nuevo a `NSManagedObject` facilitando la tarea realizar búsquedas y crear subclases.
+- Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) raíz admiten errores y recuperaciones simultáneas sin serialización.
+- La clase [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) mantiene un grupo de almacenes de datos de SQLite.
+- Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) con almacenes de datos de SQLite en el modo de diario de Wal admiten la nueva característica de generación de consultas, donde los contextos de objeto administrados (MOC) se pueden anclar a versiones de base de datos específicas para futuras capturas y transacciones con errores.
+- Usar el nivel `NSPersistenceContainer` alto para `NSPersistentStoreCoordinator`hacer referencia a, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración de datos principales.
+- Se han agregado varios métodos de conveniencia para `NSManagedObject` facilitar la realización de capturas y la creación de subclases.
 
-Para obtener más información, consulte Apple [referencia de Framework Core datos](https://developer.apple.com/reference/coredata).
+Para obtener más información, consulte la referencia de la [plataforma principal de datos](https://developer.apple.com/reference/coredata)de Apple.
 
 <a name="Core-Graphics-Enhancements" />
 
-## <a name="core-graphics-enhancements"></a>Principales mejoras de gráficos
+## <a name="core-graphics-enhancements"></a>Mejoras en los gráficos principales
 
-tvOS 10 incluye las siguientes mejoras en el marco de gráficos principal:
+tvOS 10 incluye las siguientes mejoras en el marco de trabajo de gráficos básico:
 
-- El nuevo [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) clase puede usarse para realizar una serie de conversiones de color.
+- La nueva clase [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) se puede usar para realizar una serie de conversiones de color.
 
 <a name="Core-Image-Enhancements" />
 
-## <a name="core-image-enhancements"></a>Mejoras de la imagen principal
+## <a name="core-image-enhancements"></a>Mejoras en las imágenes principales
 
-tvOS 10 realiza las siguientes mejoras en el marco de imagen Core:
+tvOS 10 realiza las siguientes mejoras en el marco de imagen principal:
 
-- El `ImageWithExtent` método de la [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) clase puede usarse para insertar procesamiento personalizado en la operación de filtrado. Imagen de Core se invoque la devolución de llamada especificada entre los filtros al procesar una imagen para la salida o mostrar.
-- La aplicación ahora puede procesar imágenes en un espacio de colores fuera de espacio de color de trabajo del contexto de la imagen de Core convirtiendo dentro y fuera del espacio de colores antes y después del procesamiento.
-- Se realizaron varias mejoras de rendimiento de representación en `UIImage` de representación (cuando está respaldado por almacenes de imagen de imagen Core) en `UIImageView` objetos. 
-- `UIImage` los objetos etiquetados toda la gama representará como amplia gama de colores en `UIImageView` objetos en los dispositivos iOS que admiten color amplia.
-- Código de kernel de imagen Core ahora puede solicitar los formatos de salida de píxel concreto.
+- El `ImageWithExtent` método de la clase [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) se puede usar para insertar el procesamiento personalizado en la operación de filtro. La imagen principal invocará la devolución de llamada especificada entre filtros al procesar una imagen para la salida o la presentación.
+- Ahora, la aplicación puede procesar imágenes en un espacio de colores fuera del espacio de colores de trabajo del contexto de la imagen principal convirtiendo dentro y fuera del espacio de colores antes y después del procesamiento.
+- Se han realizado `UIImage` varias mejoras de rendimiento en la representación (cuando están respaldadas por los almacenes de imágenes de imagen principales `UIImageView` ) en los objetos. 
+- `UIImage`los objetos con etiquetas anchas se representarán como un color `UIImageView` de gama ancha en los objetos de dispositivos iOS que admiten el color ancho.
+- El código de kernel de imagen principal ahora puede solicitar formatos de salida de píxeles específicos.
 
-Además, se han agregado los siguientes filtros nuevos de imagen Core:
+Además, se han agregado los siguientes nuevos filtros de imagen principal:
 
 - `CINinePartTiled`
 - `CINinePartStretched`
@@ -79,125 +79,125 @@ Además, se han agregado los siguientes filtros nuevos de imagen Core:
 
 <a name="Foundation-Enhancements" />
 
-## <a name="foundation-enhancements"></a>Mejoras de Fundación
+## <a name="foundation-enhancements"></a>Mejoras de Foundation
 
-El marco de trabajo Foundation para tvOS 10 se han realizado las siguientes mejoras:
+Se han realizado las siguientes mejoras en Foundation Framework para tvOS 10:
 
-- Use la nueva [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) clase para realizar cálculos de intervalo de fecha y hora como duraciones, de comparación de intervalos y probar las intersecciones de intervalo.
-- Se han agregado nuevas propiedades a la [NSLocal](https://developer.apple.com/reference/foundation/nslocale) clase adquirir información local y los formatos de visualización disponible.
-- Use la nueva [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) clase para convertir entre distintas unidades de medida (UM) o realizar cálculos en los valores de UOMs diferentes.
-- Use la nueva [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) clase para dar formato localizadas medidas para mostrar al usuario final.
-- Use la nueva [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) las clases para representar UOMs específicos.
+- Use la nueva clase [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) para realizar cálculos de intervalos de fecha y hora, como duraciones, para comparar intervalos y pruebas de intersecciones de intervalo.
+- Se han agregado varias propiedades nuevas a la clase [NSLocal](https://developer.apple.com/reference/foundation/nslocale) para adquirir información local y los formatos de presentación disponibles.
+- Use la nueva clase [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) para realizar la conversión entre las diferentes unidades de medida (unidad de medida) o realice cálculos en los valores de UOMs diferentes.
+- Use la nueva clase [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) para dar formato a las medidas localizadas que se van a mostrar al usuario final.
+- Use las nuevas clases [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) para representar UOMs específicas.
 
 <a name="GameKit-Enhancements" />
 
 ## <a name="gamekit-enhancements"></a>Mejoras de GameKit
 
-Se han realizado las siguientes mejoras al marco de GameKit de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de GameKit en tvOS 10:
 
-- Se ha implementado un nuevo tipo de cuenta de iCloud solo por el [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) clase.
-- El nuevo [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) clase proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession` mantiene una lista de los jugadores y la aplicación es responsable de formulario implementar cómo y cuándo se almacena la fecha participante, puede recuperar o intercambiados entre agentes. En muchos casos puede reemplazar a las sesiones de juego coincidencias existentes basada en turnos, coincidencias en tiempo real o juego persistente guardar métodos.
+- La clase [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) ha implementado un nuevo tipo de cuenta solo iCloud.
+- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession`mantiene una lista de reproductores y la aplicación es responsable de la implementación de la forma y el momento en que se almacena, recupera o intercambia la fecha del participante entre los reproductores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
 
 <a name="GameplayKit-Enhancements" />
 
 ## <a name="gameplaykit-enhancements"></a>Mejoras de GameplayKit
 
-Se han realizado las siguientes mejoras al marco de GameplayKit de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de GameplayKit en tvOS 10:
 
-- Generación de procedimientos de ruido se ha agregado y se puede usar para mejorar el realismo en texturas aspecto natural, aportar realismo a los movimientos de cámara y ayudar a generar los mundos de juegos enriquecidos.
-- Utilice particiones espaciales para particionar los datos del mundo de juegos para la búsqueda eficaz.
-- Estratega de Monte Carlo nuevo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) se ha agregado para el cálculo de movimiento exhaustiva de posibles.
-- Se ha agregado una nueva API de árbol de decisión ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) y [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) para mejorar la inteligencia artificial de creación de juego.
-- Se ha agregado compatibilidad con 3D al agente existente y los comportamientos de búsqueda de ruta con el nuevo [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) y [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) clases.
-- Use la nueva [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) clase para proporcionar rutas de acceso de alto rendimiento y aspecto natural.
-- El nuevo [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) y [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) make clases combinación GameplayKit y SpriteKit más fácil que nunca.
+- Se ha agregado la generación de ruido de procedimiento y se puede usar para mejorar el realismo en las texturas de aspecto natural, agregar realismo a los movimientos de la cámara y ayudar a generar sofisticados mundos de juego.
+- Use la creación de particiones espaciales para particionar los datos del mundo de juego para una búsqueda eficaz.
+- Se ha agregado un nuevo estratega de Monte Carlo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) para realizar cálculos de movimiento exhaustivos.
+- Se ha agregado una nueva API de árbol de decisión ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) y [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) para mejorar la generación de juegos de inteligencia artificial.
+- se ha agregado compatibilidad con 3D a los comportamientos existentes de agente y ruta de acceso mediante las nuevas clases [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) y [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) .
+- Use la nueva clase [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) para proporcionar rutas de acceso natural y de alto rendimiento.
+- Las nuevas clases [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) y [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) hacen que la combinación de GameplayKit y SpriteKit sea más fácil que nunca.
 
 <a name="Metal-Enhancements" />
 
 ## <a name="metal-enhancements"></a>Mejoras de metal
 
-Se han realizado las siguientes mejoras al marco de Metal de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de metal en tvOS 10:
 
-- Ahora pueden usar los juegos y aplicaciones 3D _teselación_ eficazmente representar geometría a través de la GPU y escenas complejas.
-- Utilice la especialización de la función para crear una recopilación altamente optimizadas de material y funciones de la combinación de luz de una escena.
-- Proporcionar un mayor control de asignación de recursos para optimizar el rendimiento del sistema operativo basadas en aplicaciones con montones de recursos y destinos de representación Memoryless.
+- las aplicaciones 3D y los juegos ahora pueden usar teselación para representar eficazmente escenas complejas y geometría a través de la GPU.
+- Utilice la especialización de función para crear una colección altamente optimizada de funciones de combinación de materiales y claros para una escena.
+- Proporcionar un control específico de la asignación de recursos para optimizar el rendimiento de las aplicaciones basadas en metal mediante montones de recursos y destinos de representación de memoria.
 
-Para obtener más información, consulte Apple [Guía de programación de Metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
+Para obtener más información, consulte la [Guía de programación de metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221)de Apple.
 
 <a name="Metal-Performance-Shaders-Enhancements" />
 
-## <a name="metal-performance-shaders-enhancements"></a>Mejoras de rendimiento metal sombreadores
+## <a name="metal-performance-shaders-enhancements"></a>Mejoras en los sombreadores de rendimiento de metal
 
-Se han realizado las siguientes mejoras para el marco de trabajo de los sombreadores de rendimiento del sistema operativo en tvOS 10:
+Se han realizado las siguientes mejoras en el marco de sombreadores de rendimiento de metal en tvOS 10:
 
-- Muchos nuevos kernels se agregaron al marco de sombreadores de rendimiento del sistema operativo para permitir que la aplicación aprovechar los cálculos altamente optimizada, los datos en paralelo, como las conversiones de espacio de color y las operaciones de red neuronal.
+- Se han agregado muchos kernels nuevos al marco de sombreadores de rendimiento de metal para permitir que la aplicación aproveche los cálculos de alta optimización en paralelo de datos, como las conversiones de espacio de color y las operaciones de red neuronal.
 
 <a name="ModelIO-Enhancements" />
 
 ## <a name="modelio-enhancements"></a>Mejoras de ModelIO
 
-Se han realizado las siguientes mejoras al marco de ModelIO de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de ModelIO en tvOS 10:
 
 - Ahora se admite el formato de archivo USD.
-- Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente en tiempo de ejecución cambia a los modelos.
-- Firmado se ha agregado compatibilidad para el campo de distancia del [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) clase.
-- Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la selección de ubicación de sondeo de luz.
+- Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente los cambios de tiempo de ejecución en los modelos.
+- Se ha agregado compatibilidad con el campo de distancia con signo a la clase [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) .
+- Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la colocación de sondeos ligeros.
 
 <a name="SceneKit-Enhancements" />
 
 ## <a name="scenekit-enhancements"></a>Mejoras de SceneKit
 
-Se han realizado las siguientes mejoras al marco de SceneKit de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de SceneKit en tvOS 10:
 
-- SceneKit ahora incluye un nuevo sistema físicamente en función de representación (PBR) para obtener resultados más realistas con la creación de activos más sencillo.
-- Use la nueva [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) sombreado del modelo al producto una amplia variedad de efectos de un sombreado realista al requerir que solo tres propiedades fundamentales (`Diffuse`, `Metalness` y `Roughness`).
-- Desde PBR sombreado funciona mejor con la iluminación basado en el entorno, utilice el `LightingEnvironment` propiedad para asignar la iluminación basada en imágenes en canela escena completa.
-- Use el `IESProfileURL` propiedad para importar instalaciones fijas de luz del mundo real que definen la iluminación base en los valores reales, como la intensidad (en lúmenes) y el color de temperatura (en grados Kelvin).
-- El [SCNCamera](https://developer.apple.com/reference/scenekit/scncamera) clase puede proporcionar mayor realismo mediante el uso de características HDR y efectos. Use exposición adaptable para crear efectos automática o use las viñetas, halos de color y color de evaluación para agregar efectos filmatic al juego.
-- Características de cámara PBR y HDR proporcionan mejores resultados que las técnicas tradicionales de representación y, como resultado, SceneKit realiza ahora todos los cálculos de color en un espacio de color lineal (con la gama de colores P3 en pantallas de dispositivo de todo el color).
-- Color de SceneKit ahora coincide con todos los colores, lea la información de perfil de color.
-- SceneKit interpreta los valores de componente de color en un espacio de colores RGB lineal para todos los tipos de sombreador.
-- Dado que SceneKit lee y ajustar para obtener información de perfil de color en imágenes de textura, utilice catálogos de recursos para todas las imágenes para asegurarse de que esta información se proporciona.
-- Tanto lineal como representación de espacio de color y todo el color se puede deshabilitar mediante la especificación de la `SCNDisableLinearSpaceRendering` y `SCNDisableWideGamut` claves en la aplicación `Info.plist`.
-- Compilar los primates polígono arbitrario (bien cargarse desde un archivo o generar mediante programación) para especificar la geometría con el nuevo [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) clase.
+- SceneKit Now incluye un nuevo sistema de representación en cinta (PBR) para obtener resultados más realistas con la creación de recursos más sencilla.
+- Use el nuevo modelo de sombreado de [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) para producir una amplia gama de efectos de sombreado realistas, al tiempo`Diffuse`que solo `Roughness`requiere tres propiedades fundamentales (, `Metalness` y).
+- Puesto que el sombreado de PBR funciona mejor con la iluminación basada en `LightingEnvironment` el entorno, use la propiedad para asignar la iluminación basada en imagen a tan solo una escena entera.
+- Utilice la `IESProfileURL` propiedad para importar los accesorios de luz del mundo real que definen la base de iluminación en valores reales como la intensidad (en lúmenes) y la temperatura de color (en grados Kelvin).
+- La clase [SCNCamera](https://developer.apple.com/reference/scenekit/scncamera) puede proporcionar mayor realismo mediante el uso de las características y los efectos de HDR. Use la exposición adaptable para crear efectos automáticos o usar viñetas, los halos de color y la clasificación de color para agregar efectos de filmatic al juego.
+- Las características de la cámara de PBR y HDR proporcionan mejores resultados que las técnicas de representación tradicionales y, como resultado, SceneKit ahora realiza todos los cálculos de color en un espacio de colores lineal (mediante la gama de colores P3 en pantallas de dispositivos anchos).
+- El color SceneKit Now coincide con todos los colores mediante la lectura de la información del perfil de color.
+- SceneKit interpreta los valores de los componentes de color en un espacio de colores RGB lineal para todos los tipos de sombreador.
+- Dado que SceneKit Lee y ajusta la información de Perfil de color en imágenes de textura, use catálogos de recursos para todas las imágenes para asegurarse de que se proporciona esta información.
+- Tanto la representación del espacio de colores lineal como el color ancho pueden deshabilitarse mediante `SCNDisableLinearSpaceRendering` la `SCNDisableWideGamut` especificación de las claves y `Info.plist`en la de la aplicación.
+- Cree primates polígono arbitrario (se carga desde archivos o se genera mediante programación) para especificar la geometría con la nueva clase [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
 
 <a name="SpriteKit-Enhancements" />
 
 ## <a name="spritekit-enhancements"></a>Mejoras de SpriteKit
 
-Se han realizado las siguientes mejoras al marco de SpriteKit de tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de SpriteKit en tvOS 10:
 
-- Tilemaps ahora son compatibles con las formas de mosaico cuadrado, hexagonal e isométrica para 2D, 2.5D y juegos de desplazamiento lateral con el `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` y `SKTileSet` clases.
-- Use la nueva `SKWarpGeometry` clase estiramiento o distorsionar [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) o [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) representación. El nuevo [SKAction](https://developer.apple.com/reference/spritekit/skaction) clase puede usarse para animar las transiciones entre los efectos de warp.
-- Sombreadores personalizados pueden proporcionar atributos (`SKAttribute`) que puede configurarse por separado por cada nodo que utiliza el sombreador proporcionando un valor de atributo (`SKAttributeValue`).
-- El [SKView](https://developer.apple.com/reference/spritekit/skview) clase proporciona varios métodos nuevos para darle un mayor control sobre cuándo y cómo se representa una escena.
+- Ahora, Tilemaps admite formas de mosaico cuadrada, hexagonal y isométrica para juegos de 2D, 2,5 d y de desplazamiento lateral con `SKTileMapMode`las `SKTileGroup`clases `SKTileGroupRule` , `SKTileSet` y.
+- Use la nueva `SKWarpGeometry` clase para expandir o distorsionar la representación de [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) o [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) . La nueva clase [SKAction](https://developer.apple.com/reference/spritekit/skaction) se puede usar para animar las transiciones entre los efectos de alabeo.
+- Los sombreadores personalizados pueden proporcionar atributos`SKAttribute`() que se pueden configurar por separado en cada nodo que use el sombreador proporcionando un valor de atributo`SKAttributeValue`().
+- La clase [SKView](https://developer.apple.com/reference/spritekit/skview) proporciona varios métodos nuevos para proporcionar un control exhaustivo sobre cuándo y cómo se representa una escena.
 
 <a name="UIKit-Enhancements" />
 
 ## <a name="uikit-enhancements"></a>Mejoras de UIKit
 
-Se han realizado las siguientes mejoras para el marco UIKit en tvOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de UIKit en tvOS 10:
 
-- Se ha mejorado el foco de la API para compatibilidad con el foco del elemento de vista no además `UIViews`. Los elementos que admiten el foco _debe_ implementar el `IUIFocusItem` interfaz.
-- El nuevo `UIGraphicsRender` clase proporciona un método orientado a objetos de creación de mapas de bits o archivos PDF de representación de UIKit o gráficos esenciales y reemplaza el desuso `UIGraphicsBeginImageContext` método.
-- El `UIUserInterfaceStyle` se ha agregado la clase para determinar qué tema de la interfaz de usuario (oscuro o claro) está activo actualmente.
-- Se ha agregado nueva compatibilidad de animación completamente interactivos, basado en objetos, puede interrumpir y van vincularse a los gestos. Del Declinatoria vea Apple [referencia del protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating), [referencia de clase UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [referencia del protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Referencia de clase UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) y [referencia de clase UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obtener más información.
-- El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permite que la aplicación proporcionar una interfaz personalizada para las operaciones de búsqueda peek y pop.
-- El nuevo `UIAccessibilityCustomRotor` clase permite que la aplicación proporcionar funcionalidad personalizada, específicos del contexto a las tecnologías de asistencia como Voice Over.
-- Use la `UIAccessibilityIsAssistiveTouchRunning` y `UIAccessibilityAssistiveTouchStatusDidChangeNotification` símbolos para determinar si está habilitado AssistiveTouch.
-- Use la `UIAccessibilityHearingDevicePairedEar` y `UIAccessibilityHearingDevicePairedEarDidChangeNotification` símbolos para obtener el estado de cualquier emparejan MFi audífonos.
-- El nuevo [UIPasteboard](https://developer.apple.com/reference/uikit/uipasteboard) API ofrece nuevas opciones (por ejemplo, las limitaciones de la duración) y declarará automáticamente los tipos de contenido compatible para los tipos comunes de clase.
-- Para admitir el tipo dinámico en las etiquetas, usan los nuevos campos de texto y cuadros de texto `PreferredFontForTextStyle` método de la `UIFont` clase.
-- Para decidir si un elemento deberá actualizarla fuente cuando los dispositivos `UIContentSizeCategory` cambios, utilice el `AdjustsFontForContentSizeCategory` propiedad de la `UIContentSizeCategoryAdjusting` delegar.
-- La aplicación ahora puede controlar la apariencia de la notificación para elementos de la barra de pestaña como el color de texto y fondo.
-- El Control actualice ahora se admiten en todas las vistas de desplazamiento y desplazamiento subclases (como `UICollectionView`).
-- El `OpenURL` método de la `UIApplication` clase se denomina ahora es compatible con un controlador de finalización que se llama una vez completada la apertura asincrónica.
-- Iniciar el uso compartido de CloudKit y modificar sus propiedades con el nuevo `UICloudSharingController` y `UICloudSharingControllerDelegate` clases.
-- Aprovechar las ventajas de las celdas con captura previa para mejorar la experiencia de desplazamiento `UICollectionViews` con el nuevo `UICollectionViewDataSourcePrefetching` delegar.
+- La API de enfoque se ha mejorado para admitir el foco de elemento que no es de `UIViews`vista, además de. Los elementos que admiten el foco `IUIFocusItem` _deben_ implementar la interfaz.
+- La nueva `UIGraphicsRender` clase proporciona un método orientado a objetos para crear mapas de bits o archivos PDF a partir de representación UIKit o gráficos principales y `UIGraphicsBeginImageContext` reemplaza el método desusado.
+- La `UIUserInterfaceStyle` clase se ha agregado para determinar qué tema de la interfaz de usuario (oscuro o claro) está activo actualmente.
+- Se ha agregado una nueva compatibilidad de animación interrumpida, basada en objetos y totalmente interactiva y se ha vinculado a los gestos. Agradables consulte referencia del [Protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)de Apple, referencia de [clase UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referencia del [Protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), referencia de [clase UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) y [ Referencia de la clase UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obtener más información.
+- El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permitir que la aplicación proporcione una interfaz personalizada para las operaciones de lectura y de extracción.
+- La nueva `UIAccessibilityCustomRotor` clase permite a la aplicación proporcionar una funcionalidad personalizada específica del contexto a las tecnologías de asistencia, como la voz sobre.
+- Use los `UIAccessibilityIsAssistiveTouchRunning` símbolos `UIAccessibilityAssistiveTouchStatusDidChangeNotification` y para determinar si AssistiveTouch está habilitado.
+- Use los `UIAccessibilityHearingDevicePairedEar` símbolos `UIAccessibilityHearingDevicePairedEarDidChangeNotification` y para obtener el estado de cualquier ayuda de audición accesorios MFI emparejada.
+- La nueva API de [UIPasteboard](https://developer.apple.com/reference/uikit/uipasteboard) proporciona nuevas opciones (como las limitaciones de duración) y declarará automáticamente los tipos de contenido compatibles para los tipos de clase comunes.
+- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros `PreferredFontForTextStyle` de texto utilizan `UIFont` el nuevo método de la clase.
+- Para decidir si un elemento debe actualizar su fuente cuando cambien `UIContentSizeCategory` los dispositivos, use `AdjustsFontForContentSizeCategory` la propiedad del `UIContentSizeCategoryAdjusting` delegado.
+- La aplicación ahora puede controlar la apariencia del distintivo de los elementos de la barra de pestañas, como el color de texto y de fondo.
+- Ahora se admite el control de actualización en todas las subclases vista de desplazamiento y vista de `UICollectionView`desplazamiento (como).
+- Ahora `OpenURL` se llama al `UIApplication` método de la clase de forma asincrónica y admite un controlador de finalización al que se llama después de que se haya completado la operación de apertura.
+- Inicie el uso compartido de CloudKit y modifique sus propiedades `UICloudSharingController` con `UICloudSharingControllerDelegate` las nuevas clases y.
+- Aproveche las ventajas de las celdas capturadas previamente para mejorar la experiencia de `UICollectionViews` desplazamiento de con `UICollectionViewDataSourcePrefetching` el nuevo delegado.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [Novedades de tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)
