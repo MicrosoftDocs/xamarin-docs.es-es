@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667599"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509020"
 ---
 # <a name="gdb"></a>GDB
 
@@ -147,7 +147,7 @@ Para la compatibilidad con `gdb` son necesarias tres cosas:
 
 El permiso de `INTERNET` está habilitado de forma predeterminada en las aplicaciones de depuración. Si no existe aún en la aplicación, puede agregarlo; para ello, edite **Properties/AndroidManifest.xml** o las [propiedades del proyecto](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
-Para habilitar la depuración de aplicaciones, se puede definir la propiedad de atributo personalizada [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) como `true`, o se puede editar **Properties/AndroidManifest.xml** y definir el atributo `//application/@android:debuggable` como `true`:
+Para habilitar la depuración de aplicaciones, se puede definir la propiedad de atributo personalizada [ApplicationAttribute.Debugging](xref:Android.App.ApplicationAttribute.Debuggable) como `true`, o se puede editar **Properties/AndroidManifest.xml** y definir el atributo `//application/@android:debuggable` como `true`:
 
 ```xml
 <application android:label="Example.Name.Here" android:debuggable="true">

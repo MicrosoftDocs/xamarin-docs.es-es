@@ -5,7 +5,7 @@ metadata:
   description: Aplicaciones de ejemplo de Xamarin.Android para desarrolladores de dispositivos móviles.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/20/2018
+  ms.date: 07/30/2019
   ms.topic: sample
 abstract:
   description: 'Aplicaciones de ejemplo de Xamarin.Android y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin.'
@@ -20,53 +20,53 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
             html: En este ejemplo se muestran las nuevas Material Design API introducidas en Android Lollipop.
             image:
               src: images/material-design.png
-              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
             title: Material Design
-          - href: 'https://developer.xamarin.com/samples/monodroid/GooglePlayServices/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
             html: Esta solución utiliza el NuGet de Xamarin Google Play Services para mostrar algunos usos de la API de mapas.
             image:
               src: images/gps.png
-              href: 'https://developer.xamarin.com/samples/monodroid/GooglePlayServices/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
             title: Google Play Services
-          - href: 'https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
             html: En este ejemplo se muestra cómo usar ViewPager y PagerTabStrip conjuntamente para implementar una aplicación que presenta una serie de problemas matemáticos en tarjetas flash.
             image:
               src: images/flash.png
-              href: 'https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
             title: Flash Card Pager
-          - href: 'https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/'
             html: Los fragmentos son componentes modulares y autónomos que se utilizan para ayudar a resolver la complejidad de las aplicaciones de escritura que pueden ejecutarse en pantallas de diferentes tamaños.
             image:
               src: images/fragments.png
-              href: 'https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/'
-            title: Fragments
-          - href: 'https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/'
+            title: Fragmentos
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint/'
             html: Aplicación para pintar con los dedos a todo color con seguimiento multitáctil en Android.
             image:
               src: images/fingerpaint.png
-              href: 'https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint/'
             title: Pintura con los dedos
-          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer/'
             html: Use este ejemplo para aprender a usar los nuevos widgets CardView y RecyclerView introducidos con Android 5.0 Lollipop.
             image:
               src: images/recycler.png
-              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer/'
             title: RecyclerViewer
-          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/'
             html: Ejemplo de Android que reemplaza la barra de acciones por la nueva barra de herramientas en Android 5.0 Lollipop.
             image:
               src: images/toolbar.png
-              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/'
             title: Barra de herramientas
-          - href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface/'
             html: Implementación de una esfera personalizada de un reloj de Android Wear.
             image:
               src: images/watchface.png
-              href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
+              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface/'
             title: WatchFace
           - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             html: Acceda al conjunto completo de aplicaciones de ejemplo de Xamarin.Android y a demostraciones de código.

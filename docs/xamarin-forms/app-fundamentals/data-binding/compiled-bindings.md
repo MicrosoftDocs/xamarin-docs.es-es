@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2018
-ms.openlocfilehash: a5273897539cdce4aeb0abde28a0912e8327284a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8effabc66b51b1cf32e3be455428c44eeea3f26d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052185"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656223"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _Los enlaces compilados se resuelven más rápidamente que los enlaces clásicos, lo cual mejora el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms._
 
@@ -175,4 +175,4 @@ Estas diferencias de rendimiento se pueden ampliar en dispositivos móviles, dep
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demos de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demos de enlace de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

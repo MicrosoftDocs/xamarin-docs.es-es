@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: bb65f5702579f83f56b30e556859a122d0e7fcbb
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 684820a646527b382b1dbb936b9256fd4457803e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926919"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651894"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de un elemento DataTemplateSelector de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplateSelector/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _Un elemento DataTemplateSelector se puede usar para elegir una plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos. Esto permite aplicar varias instancias de DataTemplate al mismo tipo de objeto, para personalizar la apariencia de objetos concretos. En este artículo se explica cómo crear y consumir una instancia de DataTemplateSelector._
 
@@ -137,5 +137,5 @@ En este artículo se ha explicado cómo crear y consumir un elemento [`DataTempl
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Selector de plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplateSelector/)
+- [Selector de plantillas de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

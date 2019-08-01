@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 93383376c9167900bd69e43e8d83044bfdc3b607
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8a83fd7fca15214711dd90dcbf80eb0d56a3df34
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924976"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650457"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Enlazar orígenes de vídeo con el reproductor
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml**:
+Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -142,4 +142,4 @@ Como con la primera página **Seleccionar vídeo web**, de manera inicial no se 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

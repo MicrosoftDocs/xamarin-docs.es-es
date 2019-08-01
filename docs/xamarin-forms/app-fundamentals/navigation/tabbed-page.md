@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 6979b4d3e0d750ee962346a94dd832c86c92d995
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970926"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652946"
 ---
 # <a name="xamarinforms-tabbed-page"></a>TabbedPage de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 _TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas._
 
@@ -262,6 +262,6 @@ En este artículo se ha explicado cómo usar una instancia de TabbedPage para na
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Páginas de Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
-- [TabbedPage (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
+- [TabbedPageWithNavigationPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
 - [TabbedPage](xref:Xamarin.Forms.TabbedPage)

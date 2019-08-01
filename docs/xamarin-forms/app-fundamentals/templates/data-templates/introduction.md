@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: c547a851d9e042f0289ac5c3a2d20ff97f681551
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7308222e64d64efdbad218186bb9a6e4dca3b26e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926955"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651925"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introducción a las plantillas de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Las plantillas de datos de Xamarin.Forms permiten definir la presentación de los datos en los controles admitidos. En este artículo se ofrece una introducción a las plantillas de datos y se analiza por qué son necesarias._
 
@@ -138,5 +138,5 @@ Las plantillas de datos situadas más abajo en la jerarquía de vistas tienen pr
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Apariencia de etiqueta](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Plantillas de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

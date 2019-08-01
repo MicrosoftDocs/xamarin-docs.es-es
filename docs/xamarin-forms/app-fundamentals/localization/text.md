@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: a00b8052bfa2cd3a762e1b78409ffaa85cdae70c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831494"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646760"
 ---
 # <a name="localization"></a>Localización
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 _Las aplicaciones de Xamarin.Forms se pueden localizar con archivos de recursos. NET._
 
@@ -805,8 +805,8 @@ Por lo general, las imágenes se tratan específicamente para la plataforma, de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de localización de RESX](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
-- [Aplicación de ejemplo TodoLocalized](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
+- [Ejemplo de localización de RESX](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [Aplicación de ejemplo TodoLocalized](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalized)
 - [Localización multiplataforma](~/cross-platform/app-fundamentals/localization.md)
 - [Localización de iOS](~/ios/app-fundamentals/localization/index.md)
 - [Localización de Android](~/android/app-fundamentals/localization.md)

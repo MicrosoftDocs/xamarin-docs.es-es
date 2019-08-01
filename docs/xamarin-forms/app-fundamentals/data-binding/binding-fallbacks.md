@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: 505b5bfb9681e5bc30ff84aa90c8e148ed6db4b1
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058290"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650211"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Reservas de enlace de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 En ocasiones, los enlaces de datos producen errores, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un valor `null`. Si bien estos escenarios se pueden controlar con los convertidores de valor, u otro código adicional, los enlaces de datos pueden hacerse más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace. Dado que estas propiedades residen en la clase [`BindingBase`](xref:Xamarin.Forms.BindingBase), pueden usarse con enlaces, con enlaces compilados y con la extensión de marcado `Binding`.
 
@@ -106,4 +106,4 @@ Cuando la propiedad `TargetNullValue` no está establecida en una expresión de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demos de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demos de enlace de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

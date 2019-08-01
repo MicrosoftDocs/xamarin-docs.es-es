@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8f5be75c750a6ee7efc52300382ca2241b87ecd3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855320"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656921"
 ---
 # <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
 
@@ -269,7 +269,7 @@ En las siguientes secciones, se echa un vistazo a qué hace cada una de estas ca
 
 Al abrir un archivo **.storyboard** para editarlo en Xcode, Visual Studio para Mac crea un *archivo de proyecto Xcode* en segundo plano para comunicar los cambios entre él y Xcode. Más adelante, cuando el desarrollador vuelve a Visual Studio para Mac de Xcode, Visual Studio para Mac sincroniza los cambios realizados en este proyecto con el proyecto de Xamarin.Mac.
 
-La sección **Navegación del proyecto** permite al desarrollador desplazarse por todos los archivos que componen este proyecto de Xcode de _correcciones de compatibilidad (shim)_. Normalmente, solo les interesarán los archivos `.storyboard` de esta lista, como `Main.storyboard`.
+La sección **Navegación del proyecto** permite al desarrollador desplazarse por todos los archivos que componen este proyecto de Xcode de _correcciones de compatibilidad (shim)_ . Normalmente, solo les interesarán los archivos `.storyboard` de esta lista, como `Main.storyboard`.
 
 ### <a name="interface-hierarchy"></a>Jerarquía de la interfaz
 
@@ -277,7 +277,7 @@ En la sección **Jerarquía de la interfaz**, el desarrollador puede tener acces
 
 ### <a name="interface-editor"></a>Editor de la interfaz
 
-En la sección **Editor de la interfaz** se proporciona la superficie en la que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección Biblioteca de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
+En la sección **Editor de la interfaz** se proporciona la superficie en la que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección **Biblioteca** de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
 
 ### <a name="properties--utilities"></a>Propiedades y utilidades
 
@@ -579,9 +579,9 @@ Una vez aprendidos los conceptos básicos del trabajo con una aplicación de Xam
 - [Collection Views](~/mac/user-interface/collection-view.md) (Vistas de colección): en este artículo, se explica cómo trabajar con vistas de colección en una aplicación de Xamarin.Mac. En él, se describe cómo crear y mantener vistas de colección en Interface Builder y Xcode, cómo exponer los elementos de la vista de colección al código mediante salidas y acciones, rellenar vistas de colección y finalmente responder a las vistas de colección en código de C#.
 - [Working with Images](~/mac/app-fundamentals/image.md) (Trabajar con imágenes): en este artículo, se explica cómo trabajar con imágenes e iconos en una aplicación de Xamarin.Mac. En él, se describe cómo crear y mantener las imágenes necesarias para crear el icono de una aplicación y usar imágenes tanto en código de C# como en Interface Builder de Xcode.
 
-La [galería de ejemplos de Mac](https://developer.xamarin.com/samples/mac/all/) contiene ejemplos de código listos para usar para ayudar a obtener información de Xamarin.Mac.
+La [galería de ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) contiene ejemplos de código listos para usar para ayudar a obtener información de Xamarin.Mac.
 
-Una aplicación de Xamarin.Mac completa que incluye muchas de las características que un usuario esperaría encontrar en una aplicación típica de Mac es la [aplicación de ejemplo de SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
+Una aplicación de Xamarin.Mac completa que incluye muchas de las características que un usuario esperaría encontrar en una aplicación típica de Mac es la [aplicación de ejemplo de SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de Xamarin.Mac.
 
@@ -591,5 +591,5 @@ En este artículo, se han tratado los conceptos básicos de una aplicación est�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Ejemplo de Hello, Mac (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

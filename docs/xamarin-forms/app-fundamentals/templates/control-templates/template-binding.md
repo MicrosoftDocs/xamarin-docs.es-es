@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e4e67ba63d2040bff264498bc9c00124dfd22164
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 41e5bbc42ccde5cdd5223a7d2cb0a77da66e10c1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926342"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647004"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Enlace de una clase ControlTemplate de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding)
 
 _Los enlaces a plantilla permiten a los controles en una plantilla de control enlazar datos a propiedades públicas, lo que permite que los valores de propiedad en los controles de la plantilla de control se puedan cambiar fácilmente. En este artículo se muestra cómo usar enlaces a plantilla para realizar el enlace de datos desde una plantilla de control._
 
@@ -181,8 +181,8 @@ En este artículo se ha mostrado cómo usar enlaces a plantilla para realizar el
 
 - [Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [Enlaces de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [Tema sencillo con enlace a plantilla (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/)
-- [Tema sencillo con enlace a plantilla y modelo de vista (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
+- [Tema sencillo con enlace a plantilla (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding)
+- [Tema sencillo con enlace a plantilla y modelo de vista (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebindingandviewmodel)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)

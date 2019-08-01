@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5245ce6c2c8a2317e18a90514039d36232e933ef
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 25a0a6f5f16b3035307b6b42f1c509401beb3553
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117920"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647126"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icono para aplicaciones Xamarin.Mac
 
@@ -54,10 +54,10 @@ Consulte las secciones [App Icon Gallery](https://developer.apple.com/library/ma
 
 Al igual que sucede con cualquier otro recurso de imagen que el desarrollador vaya a usar en una aplicación de Xamarin.Mac, el icono de aplicación debe proporcionar una versión para la resolución Estándar y Retina. De nuevo, al igual que sucede con cualquier otra imagen, debe usar un formato `@2x` al asignar un nombre a los archivos de icono:
 
-- **Resolución estándar**  - _nombreDeImagen_**.**_extensión_de_nombre_de_archivo_ (ejemplo: **icon_512x512.png**)
-- **Alta resolución**  - _nombreDeImagen_**@2x.**_extensión_de_nombre_de_archivo_ (ejemplo: **icon_512x512@2x.png**)
+- **Resolución estándar**  - _nombreDeImagen_ **.** _extensión_de_nombre_de_archivo_ (ejemplo: **icon_512x512.png**)
+- **Alta resolución**  - _nombreDeImagen_ **@2x.** _extensión_de_nombre_de_archivo_ (ejemplo: **icon_512x512@2x.png** )
 
-Por ejemplo, para proporcionar la versión de 512 x 512 del icono de aplicación, el archivo debería denominarse **icon_512x512.png** y **icon_512x512@2x.png**.
+Por ejemplo, para proporcionar la versión de 512 x 512 del icono de aplicación, el archivo debería denominarse **icon_512x512.png** y **icon_512x512@2x.png** .
 
 Para asegurarse de que el icono tenga un aspecto inmejorable en todos los lugares en los que lo vean los usuarios, proporcione los recursos en los tamaños que se muestran a continuación:
 
@@ -116,7 +116,7 @@ En este artículo se ha descrito en detalle cómo se trabaja con las imágenes n
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacImages (ejemplo)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Images (Trabajo con imágenes)](~/mac/app-fundamentals/image.md)
 - [macOS Human Interface Guidelines - Icons and Images](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/) (Directrices de interfaz humana de macOS: iconos e imágenes)

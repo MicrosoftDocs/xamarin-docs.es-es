@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 8553eb57ca33efd23b2fedf78413eb1df00bb63e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 094f980922762ff33c19af6c9210e2e533bf5196
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925972"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651028"
 ---
 # <a name="attached-behaviors"></a>Comportamientos asociados
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/AttachedNumericValidationBehavior/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
 
 _Los comportamientos asociados son clases estáticas con una o varias propiedades asociadas. En este artículo, se explica cómo crear y usar comportamientos asociados._
 
@@ -132,4 +132,4 @@ En este artículo, se explica cómo crear y consumir comportamientos asociados. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Comportamientos asociados (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/AttachedNumericValidationBehavior/)
+- [Comportamientos asociados (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)

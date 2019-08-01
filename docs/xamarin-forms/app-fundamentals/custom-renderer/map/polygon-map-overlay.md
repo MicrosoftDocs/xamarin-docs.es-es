@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 01db31a797efc4b383f3bda3fbcf3bb91e0d38e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 45a85c8ac2f40e92078d46f5765aaf2af1518b77
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926040"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650741"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Resaltado de una región en un mapa
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 
 _En este artículo se explica cómo agregar una superposición de polígono a un mapa para resaltar una región del mapa. Los polígonos son una forma cerrada y tienen relleno en su interior._
 
@@ -308,6 +308,6 @@ En este artículo se explicó cómo agregar una superposición de polígono a un
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Polygon Map Overlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/) (Superposición de mapa de polígono [ejemplo])
+- [Polygon Map Overlay (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon) (Superposición de mapa de polígono [ejemplo])
 - [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

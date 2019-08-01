@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d1759701708c337a804471167223ef68cc3f2910
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479750"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650353"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Un enlace de datos de Xamarin.Forms enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el *destino* y el *origen*:
 
@@ -332,7 +332,7 @@ En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* pu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Vídeo relacionado

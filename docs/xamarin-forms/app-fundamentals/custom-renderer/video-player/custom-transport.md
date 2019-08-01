@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3e5db00a73047aaadb1162fa1cc8a21f6e77b3a0
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926196"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650635"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Los controles de transporte de un reproductor de vídeo son los botones que realizan las funciones **Reproducir**, **Pausa** y **Detener**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
 
@@ -364,7 +364,7 @@ Se debe acceder a dos propiedades de `AVPlayer`: la propiedad [`Status`](xref:AV
 
 ### <a name="the-android-status-setting"></a>Ajuste de estado de Android
 
-La propiedad [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) del elemento `VideoView` de Android es un operador booleano que solo indica si el vídeo está reproduciéndose o en pausa. Para determinar si el elemento `VideoView` aún no puede reproducir ni pausar el vídeo, es necesario controlar el evento `Prepared` de `VideoView`. Estos dos controladores se establecen en el método `OnElementChanged` y se anula la asociación durante el reemplazo `Dispose`:
+La propiedad [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) del elemento `VideoView` de Android es un operador booleano que solo indica si el vídeo está reproduciéndose o en pausa. Para determinar si el elemento `VideoView` aún no puede reproducir ni pausar el vídeo, es necesario controlar el evento `Prepared` de `VideoView`. Estos dos controladores se establecen en el método `OnElementChanged` y se anula la asociación durante el reemplazo `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -660,4 +660,4 @@ En una aplicación de producción, es probable que quiera usar sus propias imág
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

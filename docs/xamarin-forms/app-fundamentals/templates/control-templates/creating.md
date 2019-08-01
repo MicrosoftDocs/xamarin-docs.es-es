@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/14/2019
-ms.openlocfilehash: 0642f304589d30284bc8d3577c0383099e349033
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fbc966fdf1d79ecc9794d2156db81b583694ce36
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513044"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665683"
 ---
 # <a name="create-a-controltemplate"></a>Creación de una clase ControlTemplate
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 
 _Las plantillas de control se pueden definir en el nivel de aplicación o en el de página. En este artículo se explica cómo crear y consumir plantillas de control._
 
@@ -236,7 +236,7 @@ class MyCustomControl : ContentView
 {
     Label myLabel;
 
-    protected override OnApplyTemplate()
+    protected override void OnApplyTemplate()
     {  
         myLabel = GetTemplateChild("myLabel");
     }
@@ -249,7 +249,7 @@ En este ejemplo, se recupera el objeto [`Label`](xref:Xamarin.Forms.Label) con n
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
-- [Tema sencillo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+- [Tema sencillo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

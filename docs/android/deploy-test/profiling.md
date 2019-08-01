@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9ea2b3ddef731efb9e4bf291ec836248c13d6390
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113152"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680262"
 ---
 # <a name="profiling-android-apps"></a>Generar perfiles de aplicaciones Android
 
@@ -38,7 +38,7 @@ Android Studio 3.0 y posterior incluye la herramienta Android Profiler. Puede us
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Iniciar una aplicación Android de Xamarin en Android Profiler
 
-En los pasos siguientes se explica cómo iniciar una aplicación Android de Xamarin en la herramienta Android Profiler de Android Studio. En las siguientes capturas de pantalla de ejemplo, se usa Android Profiler para compilar la aplicación [XamagonXuzzle](https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/) de Xamarin.Forms y generar los perfiles:
+En los pasos siguientes se explica cómo iniciar una aplicación Android de Xamarin en la herramienta Android Profiler de Android Studio. En las siguientes capturas de pantalla de ejemplo, se usa Android Profiler para compilar la aplicación [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) de Xamarin.Forms y generar los perfiles:
 
 1.  En las opciones de compilación del proyecto de Android, deshabilite **Use Shared Runtime** (Usar tiempo de ejecución compartido). Esto garantiza que el paquete de aplicaciones Android (APK) se compile sin una dependencia en el tiempo de ejecución de Mono en tiempo de desarrollo compartido.
 

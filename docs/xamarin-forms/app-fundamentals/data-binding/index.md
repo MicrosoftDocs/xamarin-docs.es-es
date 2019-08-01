@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2018
-ms.openlocfilehash: c607cecf6c7044fa4c8d0270a5b8d1471d3f9227
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059066"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653368"
 ---
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. El enlace de datos es una parte integral de la arquitectura de aplicación Model-View-ViewModel (MVVM)._
 
@@ -35,7 +35,7 @@ Uno de los dos objetos implicados en un enlace de datos es casi siempre un eleme
 - Otro derivado de `View`, normalmente en la misma página.
 - Un objeto en un archivo de código.
 
-En los programas de demo, como los del ejemplo [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/), los enlaces de datos entre dos derivados de `View` a menudo se muestran con fines de claridad y simplicidad. Pero se pueden aplicar los mismos principios a los enlaces de datos entre un `View` y otros objetos. Cuando se compila una aplicación con la arquitectura Model-View-ViewModel (MVVM), la clase con los datos subyacentes a menudo se denomina ViewModel.
+En los programas de demo, como los del ejemplo [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), los enlaces de datos entre dos derivados de `View` a menudo se muestran con fines de claridad y simplicidad. Pero se pueden aplicar los mismos principios a los enlaces de datos entre un `View` y otros objetos. Cuando se compila una aplicación con la arquitectura Model-View-ViewModel (MVVM), la clase con los datos subyacentes a menudo se denomina ViewModel.
 
 En los siguientes artículos se abordan los enlaces de datos:
 
@@ -73,6 +73,6 @@ Use enlaces compilados para mejorar el rendimiento del enlace de datos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

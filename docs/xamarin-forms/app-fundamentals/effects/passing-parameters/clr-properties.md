@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 9f3d95b3901295c29c2276bfdd85579b321f9795
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925426"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656672"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Pasar parámetros de efecto como propiedades de Common Language Runtime
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _Las propiedades de Common Language Runtime (CLR) se pueden usar para definir parámetros de efecto que no responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar propiedades CLR para pasar parámetros a un efecto._
 
@@ -185,7 +185,7 @@ namespace EffectsDemo.Droid
 }
 ```
 
-El método `OnAttached` recupera la instancia de `ShadowEffect` y llama al método [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) para crear una sombra con los valores de propiedad especificados. Esta funcionalidad se encapsula en un bloque `try`/`catch` en caso de que el control al que está asociado el efecto no tenga las propiedades `Control.Layer`. El método `OnDetached` no proporciona ninguna implementación porque no se necesita limpieza.
+El método `OnAttached` recupera la instancia de `ShadowEffect` y llama al método [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) para crear una sombra con los valores de propiedad especificados. Esta funcionalidad se encapsula en un bloque `try`/`catch` en caso de que el control al que está asociado el efecto no tenga las propiedades `Control.Layer`. El método `OnDetached` no proporciona ninguna implementación porque no se necesita limpieza.
 
 ### <a name="universal-windows-platform-project"></a>Proyecto de la Plataforma universal de Windows
 
@@ -245,4 +245,4 @@ En este artículo se ha mostrado cómo usar propiedades CLR para pasar parámetr
 - [Efecto](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efecto de sombra (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+- [Efecto de sombra (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

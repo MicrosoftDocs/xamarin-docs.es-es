@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053469"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657149"
 ---
 # <a name="the-xamarinforms-command-interface"></a>La interfaz de comandos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 En la arquitectura Model-View-ViewModel (MVVM), los enlaces de datos se definen entre las propiedades de ViewModel, que suele ser una clase que se deriva de `INotifyPropertyChanged`, y las propiedades en la vista, que suele ser el archivo XAML. A veces, una aplicación tiene necesidades que van más allá de estos enlaces de propiedad y solicita al usuario que inicie comandos que influyen en el modelo de vista. Por lo general, estos comandos se señalizan mediante clics de botón o pulsaciones con el dedo, y tradicionalmente se procesan en el archivo de código subyacente en un controlador para el evento `Clicked` del elemento `Button` o el evento `Tapped` de un elemento `TapGestureRecognizer`.
 
@@ -86,7 +86,7 @@ Si el uso compartido de modelos de vista entre Windows y Xamarin.Forms no consti
 
 ## <a name="basic-commanding"></a>Comandos básicos
 
-En la página **Entrada de personas** del programa [**Demostraciones de enlace de datos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) se muestran algunos comandos sencillos implementados en un modelo de vista.
+En la página **Entrada de personas** del programa [**Demostraciones de enlace de datos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) se muestran algunos comandos sencillos implementados en un modelo de vista.
 
 `PersonViewModel` define tres propiedades denominadas `Name`, `Age` y `Skills` que definen una persona. Esta clase *no* contiene ninguna propiedad `ICommand`:
 
@@ -693,7 +693,7 @@ Si quiere usar la interfaz de comandos con vistas que no la admiten, puede utili
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comandos asincrónicos para menús de navegación
 
-Los comandos son útiles para la implementación de menús de navegación, como los del propio programa [**Demostraciones de enlace de datos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/). Este es un fragmento de **MainPage.xaml**:
+Los comandos son útiles para la implementación de menús de navegación, como los del propio programa [**Demostraciones de enlace de datos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos). Este es un fragmento de **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -767,5 +767,5 @@ En ocasiones, los enlaces de datos pueden resultar complicados, pero como ha vis
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

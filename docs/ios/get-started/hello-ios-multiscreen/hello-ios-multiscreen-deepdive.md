@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 953f626774c02a2861d0d9b3be1f1234f181c622
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9ce29df9070ee99bb3de9579025f5b0f366d6331
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670602"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655899"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -28,11 +28,11 @@ En el tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendimos qu
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "Diagrama que ilustra cómo se pasan los datos entre dos pantallas")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)*. En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
+En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)* . En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Ventajas del modelo MVC
 
-Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectura reutilizable para un problema o un caso de uso común en el código. MVC es una arquitectura para aplicaciones con una *interfaz gráfica de usuario (GUI)*. Asigna objetos de uno de tres roles de la aplicación: el *modelo* (lógica de datos o aplicación), la *vista* (interfaz de usuario) y el *controlador* (código subyacente). En el diagrama siguiente se muestran las relaciones entre las tres partes del modelo MVC y el usuario:
+Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectura reutilizable para un problema o un caso de uso común en el código. MVC es una arquitectura para aplicaciones con una *interfaz gráfica de usuario (GUI)* . Asigna objetos de uno de tres roles de la aplicación: el *modelo* (lógica de datos o aplicación), la *vista* (interfaz de usuario) y el *controlador* (código subyacente). En el diagrama siguiente se muestran las relaciones entre las tres partes del modelo MVC y el usuario:
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "Diagrama que muestra las relaciones entre las tres partes del modelo MVC y el usuario")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
@@ -205,6 +205,6 @@ A continuación vamos a aprender a crear aplicaciones multiplataforma con Xamari
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/ios/manage/overview/index.action)

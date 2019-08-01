@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 784c4d22a112de1adc98d6b7f183f9fa2081a897
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9beff615c39fc34b5a58a93d309bb20543cad77f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926276"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650419"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 La clase `VideoPlayer` define una propiedad `Source` que se usa para especificar el origen del archivo de vídeo, así como una propiedad `AutoPlay`. El valor predeterminado de `AutoPlay` es `true`, lo que significa que el vídeo se debería comenzar a reproducir de forma automática después de establecer `Source`:
 
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Establecimiento de un origen de dirección URL
 
-Con la implementación de estas propiedades en los tres representadores, es posible reproducir un vídeo desde un origen de dirección URL. La página **Play Web Video** (Reproducir vídeo web) del programa [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) se define con el siguiente archivo XAML:
+Con la implementación de estas propiedades en los tres representadores, es posible reproducir un vídeo desde un origen de dirección URL. La página **Play Web Video** (Reproducir vídeo web) del programa [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) se define con el siguiente archivo XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,4 +525,4 @@ Como alternativa, puede establecer la propiedad `Source` de un archivo de vídeo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 36f01fb309f174e0ed7c709fb77f133b101ef8e0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061098"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653872"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Adición de un reconocedor de gesto de desplazamiento lateral
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 
 _El gesto de desplazamiento lateral se usa para detectar el movimiento de los dedos alrededor de la pantalla y aplicar ese movimiento al contenido, y se implementa con la clase `PanGestureRecognizer`. Un escenario habitual para el gesto de desplazamiento lateral consiste en desplazar una imagen de forma horizontal y vertical, para poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen. Esto se logra moviendo la imagen dentro de la ventanilla, y se muestra en este artículo._
 
@@ -151,6 +151,6 @@ Al desplazar lateralmente el contenido de un elemento que no ocupa toda la panta
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PanGesture (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+- [PanGesture (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

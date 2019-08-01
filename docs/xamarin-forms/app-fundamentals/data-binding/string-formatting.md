@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 87972df2b15a5bc1f6323a6953f809379cae4a50
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056128"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644525"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 A veces es conveniente usar enlaces de datos para mostrar la representación de cadena de un objeto o valor. Por ejemplo, es posible que quiera utilizar una `Label` para mostrar el valor actual de un `Slider`. En este enlace de datos, `Slider` es el origen y el destino es la propiedad `Text` de `Label`.
 
@@ -187,5 +187,5 @@ Empero, el siguiente artículo explora la [**Ruta de enlace**](binding-path.md) 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

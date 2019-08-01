@@ -5,7 +5,7 @@ metadata:
   description: Aplicaciones de ejemplo de Xamarin.Mac multiplataforma para desarrolladores de dispositivos móviles.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/27/2018
+  ms.date: 07/30/2019
   ms.topic: sample
 abstract:
   description: 'Aplicaciones de ejemplo de Xamarin.Mac y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin.'

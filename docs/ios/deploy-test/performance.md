@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870396"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511478"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -109,7 +109,7 @@ En el caso de las clases que se crean exclusivamente para la implementación de 
 
 #### <a name="weak-attribute"></a>Atributo Weak
 
-[Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute) ha presentado el atributo `[Weak]`. Al igual que `WeakReference <T>`, `[Weak]` puede usarse para interrumpir [referencias circulares seguras](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), pero con aún menos código.
+[Xamarin.iOS 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute) ha presentado el atributo `[Weak]`. Al igual que `WeakReference <T>`, `[Weak]` puede usarse para interrumpir [referencias circulares seguras](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), pero con aún menos código.
 
 Considere el código siguiente, que usa `WeakReference <T>`:
 
@@ -211,7 +211,7 @@ class MyChild : UIView
 ```
 
 Para más información sobre la liberación de las referencias fuertes, vea [Liberar los recursos de IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
-También hay una excelente explicación en esta entrada de blog: [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) (Xamarin.iOS, el recolector de elementos no utilizados y yo).
+También hay una excelente explicación en esta entrada de blog: [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, el recolector de elementos no utilizados y yo).
 
 ### <a name="more-information"></a>Más información
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829697"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509073"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -127,7 +127,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Solo puede existir un proyecto con `<AndroidApplication>True</AndroidApplication>` en un paquete de Android. (Por desgracia, esto no se ha comprobado aún, lo que puede dar lugar a errores sutiles y extraños respecto a los recursos de Android).
 
--   **AndroidApplicationJavaClass** &ndash; el nombre completo de clase de Java para usar en lugar de `android.app.Application` cuando una clase hereda de [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
+-   **AndroidApplicationJavaClass** &ndash; el nombre completo de clase de Java para usar en lugar de `android.app.Application` cuando una clase hereda de [Android.App.Application](xref:Android.App.Application).
 
     Esta propiedad se establece generalmente mediante *otras* propiedades, como la propiedad de MSBuild `$(AndroidEnableMultiDex)`.
 

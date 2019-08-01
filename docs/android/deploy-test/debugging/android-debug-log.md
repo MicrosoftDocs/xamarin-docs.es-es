@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114787"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509208"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
 
@@ -137,7 +137,7 @@ Encontrará más comandos escribiendo **adb** y leyendo los mensajes de ayuda.
 
 ## <a name="writing-to-the-debug-log"></a>Escribir en el registro de depuración
 
-Los mensajes pueden escribirse en el [registro de depuración](https://developer.xamarin.com/api/type/Android.Util.Log/) usando los métodos de la clase **Android.Util.Log**.
+Los mensajes pueden escribirse en el [registro de depuración](xref:Android.Util.Log) usando los métodos de la clase **Android.Util.Log**.
 Por ejemplo: 
 
 ```csharp

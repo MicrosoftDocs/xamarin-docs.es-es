@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978600"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656978"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _La localización de derecha a izquierda agrega compatibilidad para la dirección de flujo de derecha a izquierda para las aplicaciones de Xamarin.Forms._
 
@@ -154,4 +154,4 @@ La localización de derecha a izquierda de Xamarin.Forms actualmente tiene una s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo TodoLocalizedRTL](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+- [Aplicación de ejemplo TodoLocalizedRTL](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

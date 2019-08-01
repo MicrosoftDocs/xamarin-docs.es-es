@@ -6,16 +6,16 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
-ms.openlocfilehash: bc88a5eb977ea49b761df22407329dfaf20fa122
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
+ms.openlocfilehash: 1318d8e1563239d5215d8cfc03c971be8b2cff35
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477581"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647655"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Muchas aplicaciones móviles consumen servicios web. Durante la fase de desarrollo, es habitual implementar un servicio web localmente y consumirlo desde una aplicación móvil que se ejecuta en el simulador de iOS o el emulador de Android. De esta forma, se evita tener que implementar el servicio web en un punto de conexión hospedado y permite una experiencia de depuración sencilla porque tanto la aplicación móvil como el servicio web se ejecutan localmente.
 
@@ -121,7 +121,7 @@ En este ejemplo de código, el resultado de la validación del certificado de se
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TodoREST (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [TodoREST (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Habilitar HTTPS local](/aspnet/core/getting-started#enable-local-https)
 - [Selector de implementación de HttpClient y SSL/TLS para iOS y macOS](~/cross-platform/macios/http-stack.md)
 - [Selector de implementación de pila HttpClient y SSL/TLS para Android](~/android/app-fundamentals/http-stack.md)

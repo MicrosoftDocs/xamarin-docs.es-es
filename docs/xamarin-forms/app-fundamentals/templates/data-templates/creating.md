@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: dee45f9788360326ddb393305e9a52627264a671
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 1163f264fc54a461d8d95854524439589cdc81f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926290"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646985"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creación de una plantilla de datos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictionary, o bien a partir de un tipo personalizado o un tipo de celda de Xamarin.Forms adecuado. En este artículo se explora cada una de las técnicas._
 
@@ -293,5 +293,5 @@ En este artículo se ha explicado cómo crear plantillas de datos, insertadas, a
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Apariencia de etiqueta](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Plantillas de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)
