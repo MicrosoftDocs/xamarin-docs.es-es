@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4ade8fbb3ac596ef2da5d76b4efa751661cd8611
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646249"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680937"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -89,7 +89,7 @@ Para más información sobre la cancelación, vea [Fine-Tuning Your Async Applic
 
 ## <a name="example"></a>Ejemplo
 
-Descargue la [solución Xamarin de ejemplo](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (para iOS y Android) para ver un ejemplo de trabajo `async` de `await` y en Mobile Apps. El código de ejemplo se describe con más detalle en esta sección.
+Descargue la [solución Xamarin de ejemplo](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (para iOS y Android) para ver un ejemplo de trabajo `async` de `await` y en Mobile Apps. El código de ejemplo se describe con más detalle en esta sección.
 
 ### <a name="writing-an-async-method"></a>Escribir un método asincrónico
 
@@ -196,7 +196,7 @@ En este documento se proporciona información general sobre las nuevas palabras 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [AsyncAwait (ejemplo)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Devoluciones de llamada como la instrucción Go to de las generaciones](https://tirania.org/blog/archive/2013/Aug-15.html)
 - [Datos (iOS) (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
 - [HttpClient (iOS) (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

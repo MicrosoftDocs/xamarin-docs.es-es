@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656212"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680991"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D en monogame
 
@@ -37,7 +37,7 @@ Una vez finalizado, tendremos un proyecto con un robot moviéndose en un círcul
 
 ## <a name="creating-a-project"></a>Crear un proyecto
 
-Este tutorial se centra en mover objetos en el espacio 3D. Comenzaremos con el proyecto para representar modelos y matrices de vértices [que se pueden encontrar aquí](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y debemos ver lo siguiente:
+Este tutorial se centra en mover objetos en el espacio 3D. Comenzaremos con el proyecto para representar modelos y matrices de vértices [que se pueden encontrar aquí](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y debemos ver lo siguiente:
 
 ![](part3-images/image2.png "Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y se debe mostrar esta vista.")
 
