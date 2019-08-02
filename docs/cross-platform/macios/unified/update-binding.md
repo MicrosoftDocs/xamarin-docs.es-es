@@ -1,44 +1,44 @@
 ---
 title: Migración de un enlace a Unified API
-description: En este artículo se trata los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para admitir las API unificada para aplicaciones de Xamarin.IOS y Xamarin.Mac.
+description: En este artículo se describen los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para que admita las API unificadas para las aplicaciones de Xamarin. IOS y Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: f081ccda507fe3fe65af0e2fb50841aecd7b3c23
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 4046dcff5cb572890ad41ab57efe6345d09f61fd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830462"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646296"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migración de un enlace a Unified API
 
-_En este artículo se trata los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para admitir las API unificada para aplicaciones de Xamarin.IOS y Xamarin.Mac._
+_En este artículo se describen los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para que admita las API unificadas para las aplicaciones de Xamarin. IOS y Xamarin. Mac._
 
 ## <a name="overview"></a>Información general
 
-A partir del 1 de febrero de 2015, Apple requiere que todos los envíos de nuevo a iTunes y el Store de la aplicación Mac deben ser aplicaciones de 64 bits. Como resultado, cualquier nueva aplicación Xamarin.iOS o Xamarin.Mac deberá usar la nueva Unified API en lugar del clásico MonoTouch y MonoMac APIs existentes para admitir de 64 bits.
+A partir del 1 de febrero de 2015, Apple requiere que todos los envíos a iTunes y a Mac App Store deban ser aplicaciones de 64 bits. Como resultado, cualquier nueva aplicación de Xamarin. iOS o Xamarin. Mac tendrá que usar el nuevo Unified API en lugar de las API clásicas de MonoTouch y MonoMac existentes para admitir 64 bits.
 
-Además, cualquier proyecto de enlace de Xamarin también debe admitir las nuevas API unificada que se incluirán en un proyecto de Xamarin.Mac o Xamarin.iOS de 64 bits. En este artículo se describen los pasos necesarios para actualizar un proyecto de enlace existente para usar la API unificada.
+Además, cualquier proyecto de enlace de Xamarin también debe admitir las nuevas API unificadas que se incluirán en un proyecto de Xamarin. iOS o Xamarin. Mac de 64 bits. En este artículo se explican los pasos necesarios para actualizar un proyecto de enlace existente para usar el Unified API.
 
 ## <a name="requirements"></a>Requisitos
 
-Para completar los pasos que aparecen en este artículo, se requiere lo siguiente:
+Para completar los pasos que se describen en este artículo, es necesario lo siguiente:
 
-- **Visual Studio para Mac** -la versión más reciente de Visual Studio para Mac instalado y configurado en el equipo de desarrollo.
-- **Apple Mac** : una Apple mac es necesario para compilar proyectos de enlace para iOS y Mac.
+- **Visual Studio para Mac** : la versión más reciente de Visual Studio para Mac instalada y configurada en el equipo de desarrollo.
+- **Apple Mac** : se necesita un equipo Mac de Apple para compilar proyectos de enlace para iOS y Mac.
 
-Proyectos de enlace no se admiten en Visual studio en un equipo Windows.
+Los proyectos de enlace no se admiten en Visual Studio en un equipo Windows.
 
 ## <a name="modify-the-using-statements"></a>Modificar las instrucciones Using
 
-Las API unificada hace más fácil que nunca para compartir código entre Mac y iOS, así como lo que le permite admitir las aplicaciones de 32 y 64 bits con el mismo binario. Quitando el _MonoMac_ y _MonoTouch_ prefijos de los espacios de nombres, se consigue más sencillo compartir entre los proyectos de aplicación de Xamarin.Mac y Xamarin.iOS.
+Las API unificadas hacen que sea más fácil que nunca compartir código entre Mac e iOS, así como permitir la compatibilidad con aplicaciones 32 y 64 bits con el mismo binario. Al quitar los prefijos _MonoMac_ y MonoTouch de los espacios de nombres, se consigue un uso compartido más sencillo en los proyectos de aplicación de Xamarin. Mac y Xamarin. iOS.
 
-Como resultado necesitamos modificar cualquiera de nuestros contratos de enlace (y otros `.cs` archivos en nuestro proyecto de enlace) para quitar el _MonoMac_ y _MonoTouch_ prefijos desde nuestro `using` instrucciones.
+Como resultado, tendremos que modificar cualquiera de nuestros contratos de enlace (y `.cs` otros archivos del proyecto de enlace) para quitar los prefijos _MonoMac_ y MonoTouch de nuestras `using` instrucciones.
 
-Por ejemplo, dada la siguiente mediante instrucciones en un contrato de enlace:
+Por ejemplo, dadas las siguientes instrucciones Using en un contrato de enlace:
 
 ```csharp
 using System;
@@ -48,7 +48,7 @@ using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
 ```
 
-Se podría quitar el `MonoTouch` prefijo resultante en la siguiente:
+Quitaremos el `MonoTouch` prefijo, lo que provocaría lo siguiente:
 
 ```csharp
 using System;
@@ -58,19 +58,19 @@ using UIKit;
 using ObjCRuntime;
 ```
 
-Nuevamente, necesitamos hacer esto para cualquier `.cs` archivo en nuestro proyecto de enlace. Con este cambio en su lugar, el siguiente paso es actualizar nuestro proyecto de enlace para usar los nuevos tipos de datos nativos.
+De nuevo, tendremos que hacer esto para cualquier `.cs` archivo del proyecto de enlace. Con este cambio en su lugar, el siguiente paso es actualizar nuestro proyecto de enlace para usar los nuevos tipos de datos nativos.
 
-Para obtener más información sobre la API unificada, consulte el [Unified API](~/cross-platform/macios/unified/index.md) documentación. Para obtener más información sobre la compatibilidad con 32 y 64 bits aplicaciones e información sobre los marcos de trabajo, consulte el [32 y 64 bits de consideraciones de la plataforma](~/cross-platform/macios/32-and-64/index.md) documentación.
+Para obtener más información sobre el Unified API, consulte la documentación de [Unified API](~/cross-platform/macios/unified/index.md) . Para obtener más información acerca de la compatibilidad con aplicaciones de 32 y 64 bits e información sobre los marcos de trabajo, consulte la documentación de consideraciones sobre la [plataforma de bits 32 y 64](~/cross-platform/macios/32-and-64/index.md) .
 
-## <a name="update-to-native-data-types"></a>Actualización de tipos de datos nativos
+## <a name="update-to-native-data-types"></a>Actualizar tipos de datos nativos
 
-Objective-C se asigna el `NSInteger` tipo de datos que `int32_t` en sistemas de 32 bits y a `int64_t` en sistemas de 64 bits. Para que coincida con este comportamiento, la nueva Unified API reemplaza los usos anteriores de `int` (que en .NET se define como siempre que se va a `System.Int32`) a un nuevo tipo de datos: `System.nint`.
+Objective-C asigna el `NSInteger` tipo de datos `int32_t` a en sistemas de 32 bits `int64_t` y a en sistemas de 64 bits. Para que coincida con este comportamiento, el nuevo Unified API reemplaza los usos `int` anteriores de (que en .net se definen como `System.Int32`siempre) a un nuevo tipo de `System.nint`datos:.
 
-Junto con el nuevo `nint` Unified API de tipo de datos, presenta el `nuint` y `nfloat` tipos para la asignación a la `NSUInteger` y `CGFloat` tipos también.
+Junto con el nuevo `nint` tipo de datos, el Unified API introduce `nuint` los `nfloat` tipos y, para asignar también `NSUInteger` a `CGFloat` los tipos y.
 
-Dado lo anterior, tenemos que revisar nuestra API y asegúrese de que cualquier instancia de `NSInteger`, `NSUInteger` y `CGFloat` que asignamos anteriormente para `int`, `uint` y `float` se actualizan al nuevo `nint`, `nuint` y `nfloat` tipos.
+Dado lo anterior, necesitamos revisar nuestra API y asegurarse de que `NSInteger`cualquier instancia de, `NSUInteger` y `CGFloat` de la que se haya asignado `int`previamente `uint` , `float` y de que se haya `nint`actualizado al nuevo .`nuint` tipos y`nfloat` .
 
-Por ejemplo, dada una definición de método Objective-C de:
+Por ejemplo, dada una definición de método de Objective-C de:
 
 ```csharp
 -(NSInteger) add:(NSInteger)operandUn and:(NSInteger) operandDeux;
@@ -83,35 +83,35 @@ Si el contrato de enlace anterior tenía la siguiente definición:
 int Add(int operandUn, int operandDeux);
 ```
 
-Se recomienda actualizar el nuevo enlace sea:
+Actualizaremos el nuevo enlace para que sea:
 
 ```csharp
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
-Si vamos a asignar a una biblioteca de terceros 3ª de versión más reciente que lo que nos habíamos vinculado inicialmente a, se debe revisar el `.h` archivos de encabezado de la biblioteca y ver si cualquier explícitas existentes, las llamadas a `int`, `int32_t`, `unsigned int`, `uint32_t` o `float` se han actualizado para que sea un `NSInteger`, `NSUInteger` o `CGFloat`. Si es así, las mismas modificaciones en el `nint`, `nuint` y `nfloat` tipos debe establecerse también sus asignaciones.
+Si se está asignando a una biblioteca de terceros de la versión más reciente que la que se había vinculado inicialmente, `.h` es necesario revisar los archivos de encabezado de la biblioteca y ver si hay alguna `int`salida, llamadas `uint32_t` explícitas a, `int32_t`, `unsigned int`o se han actualizado para que `NSInteger`sean, `NSUInteger` o `CGFloat`. `float` Si es así, también se deben realizar `nint`las `nuint` mismas `nfloat` modificaciones en los tipos, y.
 
 Para obtener más información sobre estos cambios de tipo de datos, vea la documentación de [tipos nativos](~/cross-platform/macios/nativetypes.md) documento.
 
-## <a name="update-the-coregraphics-types"></a>Actualizar los tipos de CoreGraphics
+## <a name="update-the-coregraphics-types"></a>Actualización de los tipos de CoreGraphics
 
-Los tipos de datos punto, el tamaño y el rectángulo que se usan con `CoreGraphics` usar 32 o 64 bits en función del dispositivo que se ejecutan. Cuando Xamarin originalmente enlaza las API de Mac y iOS se usan estructuras de datos existentes que se produjeron para que coincida con los tipos de datos en `System.Drawing` (`RectangleF` por ejemplo).
+Los tipos de datos de punto, tamaño y rectángulo que se `CoreGraphics` usan con el uso de los bits 32 o 64, en función del dispositivo en el que se ejecutan. Cuando Xamarin enlazaba originalmente las API de iOS y Mac, usamos estructuras de datos existentes que ocurrieron para coincidir `System.Drawing` con`RectangleF` los tipos de datos de (por ejemplo,).
 
-Debido a los requisitos para admitir los nuevos tipos de datos nativos y de 64 bits, se deben realizarse en el código existente al llamar a los siguientes ajustes `CoreGraphic` métodos:
+Debido a los requisitos para admitir 64 bits y los nuevos tipos de datos nativos, es necesario realizar los siguientes ajustes en el código existente cuando se `CoreGraphic` llama a los métodos:
 
-- **CGRect** -uso `CGRect` en lugar de `RectangleF` al definir flotante puntos regiones rectangulares.
-- **CGSize** -uso `CGSize` en lugar de `SizeF` al definir tamaños de punto flotante (ancho y alto).
-- **CGPoint** -uso `CGPoint` en lugar de `PointF` al definir un flotante (coordenadas X e Y) de la ubicación del punto.
+- **CGRect** : Úselo `CGRect` en lugar de `RectangleF` al definir regiones rectangulares de punto flotante.
+- **CGSize** : use `CGSize` en lugar de `SizeF` cuando defina tamaños de punto flotante (ancho y alto).
+- **CGPoint** : se `CGPoint` usa en lugar `PointF` de cuando se define una ubicación de punto flotante (coordenadas X e y).
 
-Dado lo anterior, tendrá que revisar nuestra API y asegúrese de que cualquier instancia de `CGRect`, `CGSize` o `CGPoint` que estaba enlazado anteriormente a `RectangleF`, `SizeF` o `PointF` cambiarse al tipo nativo `CGRect`, `CGSize` o `CGPoint` directamente.
+Dado lo anterior, tendremos que revisar nuestra API y asegurarnos de que cualquier instancia de `CGRect`, `CGSize` o `CGPoint` a la que se haya `RectangleF`enlazado `PointF` anteriormente, `SizeF` o se haya cambiado `CGRect`al tipo nativo, `CGSize` o`CGPoint` directamente.
 
-Por ejemplo, con un inicializador de Objective-C de:
+Por ejemplo, dado un inicializador de Objective-C de:
 
 ```csharp
 - (id)initWithFrame:(CGRect)frame;
 ```
 
-Si el enlace anterior incluye el código siguiente:
+Si el enlace anterior incluía el código siguiente:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -119,7 +119,7 @@ IntPtr Constructor (RectangleF frame);
 
 ```
 
-Se recomienda actualizar dicho código:
+Actualizaremos el código para:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -127,18 +127,18 @@ IntPtr Constructor (CGRect frame);
 
 ```
 
-Con todos los cambios de código ahora en su lugar, necesitamos modificar nuestro proyecto de enlace o hacer que el archivo para enlazar con las API unificada.
+Una vez realizados todos los cambios de código, es necesario modificar nuestro proyecto de enlace o crear el archivo para enlazarlo con las API unificadas.
 
 ## <a name="modify-the-binding-project"></a>Modificar el proyecto de enlace
 
-Como paso final a la actualización de nuestro proyecto de enlace para usar las API unificada, es necesario modificar el `MakeFile` que utilizamos para crear el proyecto o el tipo de proyecto de Xamarin (si se realiza el enlace desde dentro de Visual Studio para Mac) y dar instrucciones a _btouch_  para enlazar con la API unificada en lugar de las clásica.
+Como último paso para actualizar nuestro proyecto de enlace para usar las API unificadas, es necesario modificar el `MakeFile` que usamos para compilar el proyecto o el tipo de proyecto Xamarin (si se enlaza desde dentro de Visual Studio para Mac) e indicar a _btouch_ que enlace en las API unificadas en lugar de las clásicas.
 
 
-### <a name="updating-a-makefile"></a>Actualización de un archivo MAKE
+### <a name="updating-a-makefile"></a>Actualizar un archivo make
 
-Si estamos usando un archivo MAKE para crear nuestro proyecto de enlace en un Xamarin. Archivo DLL, se deberá incluir el `--new-style` opción de línea de comandos y llamada `btouch-native` en lugar de `btouch`.
+Si usamos un archivo make para compilar el proyecto de enlace en Xamarin. DLL, tendremos que incluir la `--new-style` opción de línea de comandos y llamar a `btouch-native` en lugar `btouch`de.
 
-Por lo que tenemos la siguiente `MakeFile`:
+Como se indica a `MakeFile`continuación:
 
 ```csharp
 BINDDIR=/src/binding
@@ -173,50 +173,50 @@ clean:
     -rm -f *.a *.dll
 ```
 
-Es necesario cambiar de llamar a `btouch` a `btouch-native`, por lo que se podría ajustar nuestra definición de macro como sigue:
+Tenemos que cambiar de llamada `btouch` a `btouch-native`, por lo que ajustaremos la definición de macro de la siguiente manera:
 
 ```csharp
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
-Se recomienda actualizar la llamada a `btouch` y agregue el `--new-style` opción como sigue:
+Actualizaremos la llamada a `btouch` y agregaremos la opción de la `--new-style` siguiente manera:
 
 ```csharp
 XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMBindingLibrarySampleUniversal.a
     $(BTOUCH) -unsafe --new-style -out:$@ XMBindingLibrarySample.cs -x=AssemblyInfo.cs -x=extras.cs --link-with=libXMBindingLibrarySampleUniversal.a,libXMBindingLibrarySampleUniversal.a
 ```
 
-Ahora podemos ejecutar nuestro `MakeFile` como normal para crear la nueva versión de 64 bits de la API.
+Ahora podemos ejecutar nuestro `MakeFile` como normal para compilar la nueva versión de 64 bits de la API.
 
-### <a name="updating-a-binding-project-type"></a>Actualización de un tipo de proyecto de enlace
+### <a name="updating-a-binding-project-type"></a>Actualizar un tipo de proyecto de enlace
 
-Si usamos un Visual Studio para Mac enlace de plantilla de proyecto para crear nuestra API, se deberá actualizar a la nueva versión de API unificada de la plantilla de proyecto de enlace. La manera más fácil de hacerlo es empezar un nuevo proyecto de enlace de API unificada y copie todo el código y la configuración existente.
+Si usamos una plantilla de proyecto de enlace de Visual Studio para Mac para compilar nuestra API, deberá actualizarla a la nueva versión de Unified API de la plantilla de proyecto de enlace. La forma más fácil de hacerlo es iniciar un nuevo proyecto de enlace de Unified API y copiar en todo el código y la configuración existentes.
 
 Haga lo siguiente:
 
 1. Inicie Visual Studio para Mac.
-2. Seleccione **archivo** > **nueva** > **solución...**
-3. En el cuadro de diálogo de solución nueva, seleccione **iOS** > **Unified API** > **enlace proyecto iOS**: 
+2. Seleccionar **archivo** > nuevasolución >  **..** .
+3. En el cuadro de diálogo Nueva solución, seleccione **iOS** > **Unified API** > **proyecto de enlace de iOS**: 
 
-    [![](update-binding-images/image01new.png "En el cuadro de diálogo de solución nueva, seleccione iOS / Unified API / proyecto de enlace de iOS")](update-binding-images/image01new.png#lightbox)
-4. En el cuadro de diálogo 'Configurar el nuevo proyecto' Escriba un **nombre** para el nuevo proyecto de enlace y haga clic en el **Aceptar** botón.
-5. Incluyen la versión de 64 bits de la biblioteca de Objective-C que se va a crear los enlaces para.
-6. Copiar el código fuente desde el proyecto de enlace de API clásica de 32 bits existente (como el `ApiDefinition.cs` y `StructsAndEnums.cs` archivos).
-7. Realice los cambios se indicó anteriormente a los archivos de código fuente.
+    [![](update-binding-images/image01new.png "En el cuadro de diálogo Nueva solución, seleccione iOS/Unified API/proyecto de enlace de iOS.")](update-binding-images/image01new.png#lightbox)
+4. En el cuadro de diálogo ' configurar el nuevo proyecto ', escriba un **nombre** para el nuevo proyecto de enlace y haga clic en el botón **Aceptar** .
+5. Incluya la versión de 64 bits de la biblioteca de Objective-C para la que va a crear enlaces.
+6. Copie el código fuente del proyecto existente de 32 bits Classic API Binding (como los `ApiDefinition.cs` archivos y `StructsAndEnums.cs` ).
+7. Realice los cambios anteriores indicados en los archivos de código fuente.
 
-Con todos estos cambios en su lugar, puede crear la nueva versión de 64 bits de la API como lo haría con la versión de 32 bits.
+Una vez realizados todos estos cambios, puede compilar la nueva versión de 64 bits de la API como lo haría con la versión de 32 bits.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo hemos mostrado los cambios que deben realizarse a un proyecto de enlace de Xamarin existente para admitir las nuevas API unificada y dispositivos de 64 bits y los pasos necesarios para compilar la nueva versión compatible de 64 bits de una API.
+En este artículo hemos mostrado los cambios que deben realizarse en un proyecto de enlace de Xamarin existente para admitir las nuevas API unificadas y los dispositivos de 64 bits y los pasos necesarios para compilar la nueva versión compatible de 64 bits de una API.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [IOS y Mac](~/cross-platform/macios/index.md)
+- [Mac e iOS](~/cross-platform/macios/index.md)
 - [Unified API](~/cross-platform/macios/nativetypes.md)
-- [Consideraciones de la plataforma de 32 o 64 bits](~/cross-platform/macios/32-and-64/index.md)
-- [Actualizar aplicaciones iOS existentes](~/cross-platform/macios/unified/updating-ios-apps.md)
+- [Consideraciones de la plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md)
+- [Actualización de aplicaciones iOS existentes](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)
+- [BindingSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/bindingsample/)
