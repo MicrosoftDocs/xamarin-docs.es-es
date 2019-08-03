@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645884"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738888"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapa de bits de SkiaSharp
 
@@ -22,7 +22,7 @@ _Cargar mapas de bits de varios orígenes y mostrarlos._
 
 La compatibilidad de mapas de bits de SkiaSharp es bastante extensa. Este artículo trata solo de los conceptos básicos &mdash; cargar mapas de bits y cómo mostrarlos:
 
-![](bitmaps-images/bitmapssample.png "La presentación de dos mapas de bits")
+![](bitmaps-images/basicbitmaps-small.png "La presentación de dos mapas de bits")
 
 Encontrará una explicación mucho más profunda de mapas de bits en la sección [SkiaSharp Bitmaps](../bitmaps/index.md).
 
@@ -98,7 +98,7 @@ protected override async void OnAppearing()
 
 El sistema operativo Android produce una excepción cuando se usa el `Stream` devuelto desde `GetStreamAsync` en el `SKBitmap.Decode` método porque está realizando una operación larga en un subproceso principal. Por este motivo, se copia el contenido del archivo de mapa de bits en un `MemoryStream` objeto `CopyToAsync`.
 
-Estático `SKBitmap.Decode` método es responsable de descodificación de archivos de mapa de bits. Funciona con los formatos de mapa de bits GIF, PNG y JPEG y almacena los resultados en un formato interno de SkiaSharp. En este momento, el `SKCanvasView` tiene que invalidar para permitir el `PaintSurface` controlador para actualizar la pantalla. 
+Estático `SKBitmap.Decode` método es responsable de descodificación de archivos de mapa de bits. Funciona con los formatos de mapa de bits GIF, PNG y JPEG y almacena los resultados en un formato interno de SkiaSharp. En este momento, el `SKCanvasView` tiene que invalidar para permitir el `PaintSurface` controlador para actualizar la pantalla.
 
 ## <a name="loading-a-bitmap-resource"></a>Cargar un recurso de mapa de bits
 

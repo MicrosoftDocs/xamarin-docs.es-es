@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e772e0207d2ccc9a94aefd9655dc1bb6776bba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 997c9e023a743b8e5128ffc566e50da63652f945
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653479"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739007"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de Xamarin. Forms
 
@@ -532,7 +532,7 @@ También es recomendable el libro de Charles Petzold titulado [_Creating Mobile 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Lenguaje de marcado de aplicaciones extensible (XAML)](~/xamarin-forms/xaml/index.md)
+- [Lenguaje de marcado de aplicaciones extensible (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md) (Referencia de controles)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

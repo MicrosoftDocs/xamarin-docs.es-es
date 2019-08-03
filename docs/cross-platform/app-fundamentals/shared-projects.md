@@ -1,113 +1,107 @@
 ---
-title: Uso compartido de proyectos para compartir código
-description: Proyectos compartidos permiten escribir código común que se hace referencia a un número de proyectos de aplicación diferentes. El código se compila como parte de cada proyecto que hace referencia y puede incluir directivas de compilador para ayudar a incorporar la funcionalidad específica de plataforma en el código base compartido.
+title: Usar proyectos compartidos para compartir código
+description: Los proyectos compartidos permiten escribir código común al que hacen referencia varios proyectos de aplicación diferentes. El código se compila como parte de cada proyecto de referencia y puede incluir directivas de compilador para ayudar a incorporar la funcionalidad específica de la plataforma en la base de código compartido.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: 61096635cd94d0fdd0abe6fda59c4efa41eeceb1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193358"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739061"
 ---
-# <a name="shared-projects-code-sharing"></a>Compartir el uso compartido de código de proyectos
+# <a name="shared-projects-code-sharing"></a>Uso compartido de código de proyectos compartidos
 
-_Proyectos compartidos permiten escribir código común que se hace referencia a un número de proyectos de aplicación diferentes. El código se compila como parte de cada proyecto que hace referencia y puede incluir directivas de compilador para ayudar a incorporar la funcionalidad específica de plataforma en el código base compartido._
+_Los proyectos compartidos permiten escribir código común al que hacen referencia varios proyectos de aplicación diferentes. El código se compila como parte de cada proyecto de referencia y puede incluir directivas de compilador para ayudar a incorporar la funcionalidad específica de la plataforma en la base de código compartido._
 
-Proyectos compartidos (a veces se denominan proyectos de activos compartidos) le permiten escribir código que se comparte entre varios proyectos de destino, incluidas las aplicaciones de Xamarin.
+Los proyectos compartidos (también denominados a veces proyectos de recursos compartidos) permiten escribir código que se comparte entre varios proyectos de destino, incluidas las aplicaciones de Xamarin.
 
-Admiten las directivas de compilador para que condicionalmente puede incluir código específico de plataforma que se compilarán en un subconjunto de los proyectos que se hace referencia el proyecto compartido. No hay compatibilidad con IDE para ayudar a administrar las directivas de compilador y ver cuál será la apariencia del código en cada aplicación.
+Admiten directivas de compilador para que pueda incluir condicionalmente código específico de la plataforma que se va a compilar en un subconjunto de los proyectos que hacen referencia al proyecto compartido. También hay compatibilidad con el IDE para ayudar a administrar las directivas de compilador y visualizar el aspecto que tendrá el código en cada aplicación.
 
-Si ha usado la vinculación de archivos en el pasado para compartir código entre proyectos, proyectos compartidos funciona de forma similar, pero con mucho mejor compatibilidad del IDE.
+Si ha usado la vinculación de archivos en el pasado para compartir código entre proyectos, los proyectos compartidos funcionan de forma similar, pero con una compatibilidad con el IDE mucho mejor.
 
 ## <a name="what-is-a-shared-project"></a>¿Qué es un proyecto compartido?
 
-A diferencia de muchos otros tipos de proyecto un proyecto compartido no tiene ningún resultado (en formato de archivo DLL), en su lugar se compila el código en cada proyecto que hace referencia a él. Esto se muestra en el diagrama siguiente: conceptualmente es todo el contenido del proyecto compartido "copian" en cada proyecto que hace referencia y compilado como si fuese una parte de ellos.
+A diferencia de la mayoría de los demás tipos de proyecto, un proyecto compartido no tiene ningún resultado (en formato DLL), sino que el código se compila en cada proyecto que hace referencia a él. Esto se muestra en el diagrama siguiente: conceptualmente, todo el contenido del proyecto compartido se "copia en" cada proyecto que hace referencia y se compila como si formara parte de ellos.
 
-![](shared-projects-images/sharedassetproject.png "Arquitectura del proyecto compartido")
+![](shared-projects-images/sharedassetproject.png "Arquitectura de proyecto compartido")
 
-El código en un proyecto compartido puede contener las directivas de compilador que se habilitan o deshabilitan las secciones de código en función de qué aplicación el proyecto está utilizando el código, que se sugiere en los cuadros de color de plataforma en el diagrama.
+El código de un proyecto compartido puede contener directivas de compilador que habilitarán o deshabilitarán secciones de código dependiendo del proyecto de aplicación que use el código, que se sugiere en los cuadros plataforma de color del diagrama.
 
-No se compilan un proyecto compartido por sí mismo, cuando existe únicamente como una agrupación de los archivos de código fuente que puede incluirse en otros proyectos. Cuando se hace referencia a otro proyecto, el código se compila de forma eficaz como *parte* de ese proyecto. Proyectos compartidos no pueden hacer referencia a cualquier otro tipo de proyecto (incluidos los otros proyectos compartidos).
+Un proyecto compartido no se compila por sí solo, existe únicamente como una agrupación de archivos de código fuente que se pueden incluir en otros proyectos. Cuando se hace referencia a él en otro proyecto, el código se compila eficazmente como *parte* de ese proyecto. Los proyectos compartidos no pueden hacer referencia a ningún otro tipo de proyecto (incluidos otros proyectos compartidos).
 
-Tenga en cuenta que los proyectos de aplicación de Android no pueden hacer referencia a otros proyectos de aplicación de Android, por ejemplo, un proyecto de prueba unitaria Android no puede hacer referencia a un proyecto de aplicación de Android. Para obtener más información acerca de esta limitación, consulte este [foro de debate](http://forums.xamarin.com/discussion/comment/98092/).
+Tenga en cuenta que los proyectos de aplicación de Android no pueden hacer referencia a otros proyectos de aplicación Android; por ejemplo, un proyecto de prueba unitaria de Android no puede hacer referencia a un proyecto de aplicación de Android. Para obtener más información acerca de esta limitación, consulte este debate en el [Foro](http://forums.xamarin.com/discussion/comment/98092/).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Tutorial de Visual Studio para Mac
 
-Esta sección se explica cómo crear y usar un proyecto compartido con Visual Studio para Mac. Consulte el en [ejemplo de proyecto compartido](#Shared_Project_Example) sección para obtener un ejemplo completo.
+En esta sección se explica cómo crear y usar un proyecto compartido mediante Visual Studio para Mac. Consulte la sección [ejemplo de proyectos](#Shared_Project_Example) compartidos para ver un ejemplo completo.
 
-## <a name="creating-a-shared-project"></a>Creación de un proyecto compartido
+## <a name="creating-a-shared-project"></a>Crear un proyecto compartido
 
-Para crear un nuevo proyecto compartido vaya a **archivo > nueva solución...**  (o haga clic en una solución existente y elegir **Agregar > Agregar nuevo proyecto...** ):
+Para crear un nuevo proyecto compartido, vaya a **archivo > nueva solución...** (o haga clic con el botón derecho en una solución existente y elija **agregar > agregar nuevo proyecto...** ):
 
-[![Nuevo proyecto compartido](shared-projects-images/xs-newsolution-sml.png "nueva solución")](shared-projects-images/xs-newsolution.png#lightbox)
+[![Nuevo proyecto compartido](shared-projects-images/xs-newsolution-sml.png "Nueva solución")](shared-projects-images/xs-newsolution.png#lightbox)
 
 En la siguiente pantalla, elija el nombre del proyecto y haga clic en **crear**.
 
-A continuación se muestra un nuevo proyecto compartido: Observe que hay no son ninguna referencia o nodos de componente; no son compatibles para los proyectos compartidos.
+A continuación se muestra un nuevo proyecto compartido; Observe que no hay ninguna referencia ni nodo de componente. no se admiten para los proyectos compartidos.
 
-![Vacío compartido proyecto](shared-projects-images/xs-empty.png "vacío proyecto compartido")
+![Proyecto compartido vacío](shared-projects-images/xs-empty.png "Proyecto compartido vacío")
 
-Para que un proyecto compartido sea útil, necesita al menos un proyecto capaz de compilación (por ejemplo, un iOS o Android aplicación o biblioteca o un proyecto PCL) que hace referencia. Un proyecto compartido no se compilan cuando no tiene nada que hacen referencia a él, la sintaxis es así (o cualquier otro) no se resaltarán los errores hasta que se ha hecho referencia a otro elemento.
+Para que un proyecto compartido sea útil, es necesario que haga referencia al menos a un proyecto que permita la compilación (por ejemplo, una aplicación o biblioteca de iOS o Android, o un proyecto de PCL). Un proyecto compartido no se compila cuando no tiene nada que haga referencia a él, por lo que no se resaltarán los errores de sintaxis (o cualquier otro) hasta que otra cosa haya hecho referencia a él.
 
-Agregar una referencia a un proyecto compartido se realiza la misma forma que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin.iOS que hacen referencia a un proyecto compartido.
+La adición de una referencia a un proyecto compartido se realiza de la misma manera que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin. iOS que hace referencia a un proyecto compartido.
 
-![](shared-projects-images/xs-reference.png "Referencia de proyecto a proyecto compartido")
+![](shared-projects-images/xs-reference.png "Referencia del proyecto a un proyecto compartido")
 
-Una vez que se hace referencia el proyecto compartido por otra aplicación o biblioteca puede compilar la solución y ver los errores en el código. Cuando hace referencia el proyecto compartido _dos o más_ otros proyectos, aparece un menú en la parte superior izquierda del editor de código fuente que se muestra, elija los proyectos que hacen referencia a este archivo.
+Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, aparece un menú en la parte superior izquierda del editor de código fuente que muestra elegir qué proyectos hacen referencia a este archivo.
 
-## <a name="shared-project-options"></a>Compartir las opciones de proyecto
+## <a name="shared-project-options"></a>Opciones de proyecto compartido
 
-Cuando haga doble clic en un proyecto compartido y elija **opciones** hay menos opciones que otros tipos de proyecto. Dado que no se compilan proyectos compartidos (por sí mismas), no se puede establecer las opciones del compilador o de salida, las configuraciones de proyecto, firmar el ensamblado o comandos personalizados. El código en un proyecto compartido hereda de forma eficaz estos valores de todo lo que hace referencia a ellos.
+Al hacer clic con el botón derecho en un proyecto compartido y elegir **Opciones** , hay menos valores de configuración que otros tipos de proyecto. Dado que los proyectos compartidos no se compilan (por sí solos), no se pueden establecer las opciones de salida o de compilador, las configuraciones de proyecto, la firma de ensamblados o los comandos personalizados. El código de un proyecto compartido hereda de forma eficaz estos valores de cualquier cosa que haga referencia a ellos.
 
+A continuación se muestra la pantalla **Opciones** : el **nombre** del proyecto y el **espacio de nombres predeterminado** son los dos únicos valores que normalmente cambiará.
 
-
-El **opciones** pantalla se muestra más abajo: el proyecto **nombre** y **Default Namespace** son los valores de solo dos que generalmente cambiará.
-
-
-![](shared-projects-images/xs-sharedprojectoptions.png "Compartir las opciones de proyecto")
-
-
+![](shared-projects-images/xs-sharedprojectoptions.png "Opciones de proyecto compartido")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
-
 ## <a name="visual-studio-walkthrough"></a>Tutorial de Visual Studio
 
+En esta sección se explica cómo crear y usar un proyecto compartido con Visual Studio. Consulte la sección [ejemplo de proyectos](#Shared_Project_Example) compartidos para ver una implementación completa.
 
-Esta sección se explica cómo crear y usar un proyecto compartido con Visual Studio. Consulte el a [ejemplo de proyecto compartido](#Shared_Project_Example) sección para una implementación completa.
+### <a name="creating-a-shared-project"></a>Crear un proyecto compartido
 
-### <a name="creating-a-shared-project"></a>Creación de un proyecto compartido
+Para crear un nuevo proyecto compartido, vaya a **archivo** > **nuevo** > **proyecto**.
 
-Para crear un nuevo proyecto compartido vaya a **archivo > nueva solución...**  y elija un nombre para la solución y proyecto.
+En Visual Studio 2019, escriba **compartido** en el cuadro de búsqueda de la página **crear un nuevo proyecto** . Seleccione la plantilla **proyecto compartido** y, a continuación, seleccione **siguiente**. Escriba un nombre para el proyecto y, a continuación, seleccione **crear**.
 
-![](shared-projects-images/vs-newsolution.png "Nueva solución")
+En Visual Studio 2017, seleccione la plantilla **proyecto compartido** y, a continuación, elija un nombre para el proyecto.
 
-También puede agregar un nuevo proyecto compartido a una solución, con el botón secundario en el archivo de solución y elija **Agregar > Nuevo proyecto...** . Un nuevo proyecto compartido es como se muestra a continuación (después de que se ha agregado un archivo de clase): tenga en cuenta que no existan referencias o nodos de componente; no son compatibles para los proyectos compartidos.
+![Plantilla de proyecto compartido en Visual Studio 2017](shared-projects-images/vs-newsolution.png)
 
-![](shared-projects-images/vs-empty.png "Proyecto vacío de servidor compartido")
+También puede Agregar un nuevo proyecto compartido a una solución existente; para ello, haga clic con el botón derecho en el archivo de solución y elija **agregar > nuevo proyecto**. Un nuevo proyecto compartido tiene el aspecto que se muestra a continuación (después de que se haya agregado un archivo de clase). Observe que no hay referencias ni nodos de componentes. no se admiten para los proyectos compartidos.
 
-Para que un proyecto compartido sea útil, necesita al menos un proyecto capaz de compilación (por ejemplo, un iOS o Android aplicación o biblioteca o un proyecto PCL) que hace referencia. Un proyecto compartido no se compilan cuando no tiene nada que hacen referencia a él, la sintaxis es así (o cualquier otro) no se resaltarán los errores hasta que se ha hecho referencia a otro elemento.
+![](shared-projects-images/vs-empty.png "Proyecto compartido vacío")
 
-Agregar una referencia a un proyecto compartido se realiza la misma forma que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin.iOS que hacen referencia a un proyecto compartido.
+Para que un proyecto compartido sea útil, es necesario que haga referencia al menos a un proyecto que permita la compilación (por ejemplo, una aplicación o biblioteca de iOS o Android, o un proyecto de PCL). Un proyecto compartido no se compila cuando no tiene nada que haga referencia a él, por lo que no se resaltarán los errores de sintaxis (o cualquier otro) hasta que otra cosa haya hecho referencia a él.
 
-![](shared-projects-images/vs-reference.png "Referencia de proyecto a proyecto compartido")
+La adición de una referencia a un proyecto compartido se realiza de la misma manera que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin. iOS que hace referencia a un proyecto compartido.
 
-Una vez que se hace referencia el proyecto compartido por otra aplicación o biblioteca puede compilar la solución y ver los errores en el código. Cuando hace referencia el proyecto compartido _dos o más_ otros proyectos, un menú aparece en la parte superior izquierda del editor de código fuente para ver qué proyectos hacen referencia al archivo de código actual.
+![](shared-projects-images/vs-reference.png "Referencia del proyecto a un proyecto compartido")
 
+Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, se muestra un menú en la parte superior izquierda del editor de código fuente para ver qué proyectos hacen referencia al archivo de código actual.
 
 ### <a name="shared-project-properties"></a>Propiedades del proyecto compartido
 
+Al seleccionar un proyecto compartido, hay menos opciones de configuración en el panel propiedades que en otros tipos de proyecto. Dado que los proyectos compartidos no se compilan (por sí solos), no se pueden establecer las opciones de salida o de compilador, las configuraciones de proyecto, la firma de ensamblados o los comandos personalizados. El código de un proyecto compartido hereda de forma eficaz estos valores de cualquier cosa que haga referencia a ellos.
 
-Al seleccionar un proyecto compartido menos valores de configuración en el panel de propiedades que otros tipos de proyecto. Dado que no se compilan proyectos compartidos (por sí mismas), no se puede establecer las opciones del compilador o de salida, las configuraciones de proyecto, firmar el ensamblado o comandos personalizados. El código en un proyecto compartido hereda de forma eficaz estos valores de todo lo que hace referencia a ellos.
-
-El **propiedades** panel se muestra más abajo: la **raíz Namespace** es la única opción que se puede cambiar.
+El panel **propiedades** se muestra a continuación: el **espacio de nombres raíz** es el único valor que puede cambiar.
 
 ![](shared-projects-images/vs-sharedprojectproperties.png "Propiedades del proyecto compartido")
 
@@ -117,13 +111,13 @@ El **propiedades** panel se muestra más abajo: la **raíz Namespace** es la ún
 
 ## <a name="shared-project-example"></a>Ejemplo de proyecto compartido
 
-El [Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) en el ejemplo se usa un proyecto compartido para que contenga el código común usado por ambos iOS, Android y Windows Phone de aplicaciones. Tanto el `SQLite.cs` y `TaskRepository.cs` archivos de código fuente utilizan directivas de compilador (p ej. `#if __ANDROID__`) para producir un resultado diferente para cada una de las aplicaciones que hacen referencia a ellos.
+En el ejemplo de [tarea](https://github.com/xamarin/mobile-samples/tree/master/Tasky) se usa un proyecto compartido para contener el código común que usan las aplicaciones iOS, Android y Windows Phone. Los archivos `SQLite.cs` de `TaskRepository.cs` código fuente y utilizan directivas de compilador (por ejemplo, `#if __ANDROID__`) para generar una salida diferente para cada una de las aplicaciones que hacen referencia a ellas.
 
-A continuación se muestra la estructura de solución completa (en Visual Studio para Mac y Visual Studio, respectivamente):
+La estructura de la solución completa se muestra a continuación (en Visual Studio para Mac y Visual Studio, respectivamente):
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](shared-projects-images/xs-examplesolution.png "Visual Studio para la solución de Mac")
+![](shared-projects-images/xs-examplesolution.png "Visual Studio para Mac solución")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -131,18 +125,18 @@ A continuación se muestra la estructura de solución completa (en Visual Studio
 
 -----
 
-El proyecto de Windows Phone se puede navegar desde dentro de Visual Studio para Mac, aunque no se admite ese tipo de proyecto para la compilación en Visual Studio para Mac.
+Se puede navegar por el proyecto Windows Phone desde Visual Studio para Mac, aunque ese tipo de proyecto no se admite para la compilación en Visual Studio para Mac.
 
-Las aplicaciones en ejecución se muestran a continuación:
+A continuación se muestran las aplicaciones en ejecución:
 
 ![](shared-projects-images/example.png "ejemplos de iOS, Android, Windows Phone")
 
 ## <a name="summary"></a>Resumen
 
-Este documento describe cómo funcionan los proyectos compartidos, cómo pueden crear y usar en Visual Studio para Mac y Visual Studio e introdujo una aplicación de ejemplo simple que muestra un proyecto compartido en acción.
+En este documento se describe cómo funcionan los proyectos compartidos, cómo se pueden crear y usar en Visual Studio para Mac y Visual Studio, y se ha introducido una sencilla aplicación de ejemplo que muestra un proyecto compartido en acción.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
+- [Aplicación de ejemplo de tarea](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
 - [Bibliotecas de clases portables (ejemplo)](~/cross-platform/app-fundamentals/pcl.md)
-- [Uso compartido de las opciones de código (ejemplo)](~/cross-platform/app-fundamentals/code-sharing.md)
+- [Opciones de código compartido (ejemplo)](~/cross-platform/app-fundamentals/code-sharing.md)

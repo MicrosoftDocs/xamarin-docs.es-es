@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645258"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739178"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos locales de Xamarin.Forms
 
@@ -24,7 +24,7 @@ _Xamarin.Forms admite aplicaciones de base de datos que usan el motor de base de
 
 Las aplicaciones de Xamarin.Forms pueden usar el paquete de [NuGet SQLite.NET PCL](https://www.nuget.org/packages/sqlite-net-pcl/) para incorporar las operaciones de base de datos en el código compartido haciendo referencia a las clases `SQLite` que se incluyen en el NuGet. Las operaciones de base de datos se pueden definir en el proyecto de biblioteca de .NET Standard de la solución de Xamarin.Forms.
 
-La [aplicación de ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) acompañante es una sencilla aplicación de lista de tareas. Las siguientes capturas de pantalla muestran cómo el ejemplo aparece en cada plataforma:
+La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) acompañante es una sencilla aplicación de lista de tareas. Las siguientes capturas de pantalla muestran cómo el ejemplo aparece en cada plataforma:
 
 [![Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de pantalla de primera página de lista de tareas pendientes")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots") [![ Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de pantalla de primera página de lista de tareas pendientes")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots")
 
@@ -124,4 +124,3 @@ Este artículo se centra en el **acceso** a una base de datos SQLite mediante Xa
 
 - [Todo Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) (Ejemplo de tareas)
 - [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms) (Ejemplos de Xamarin.Forms)
-

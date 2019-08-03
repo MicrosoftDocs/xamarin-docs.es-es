@@ -1,44 +1,46 @@
 ---
-title: Modificadores de campo XAML en Xamarin.Forms
-description: 'El atributo de espacio de nombres x: FieldModifier especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.'
+title: Modificadores de campo XAML en Xamarin. Forms
+description: El atributo de espacio de nombres X:FieldModifier (especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.
 ms.prod: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
-ms.openlocfilehash: 8be56524ec1c5331f30418fcc29a4bd2c26ccde1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 08/02/2019
+ms.openlocfilehash: 0f6050de943ca9878cf41b448d44bf222689be56
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075303"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739452"
 ---
-# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML en Xamarin.Forms
+# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML en Xamarin. Forms
 
-_El `x:FieldModifier` namespace (atributo) especifica el nivel de acceso para los campos generados para los elementos XAML con nombre._
+El `x:FieldModifier` atributo namespace especifica el nivel de acceso para los campos generados para los elementos XAML con nombre. Los valores válidos del atributo son:
 
-## <a name="overview"></a>Información general
+- `private`: especifica que solo se puede tener acceso al campo generado para el elemento XAML dentro del cuerpo de la clase en la que se declara.
+- `public`: especifica que el campo generado para el elemento XAML no tiene restricciones de acceso.
+- `protected`: especifica que el campo generado para el elemento XAML es accesible dentro de su clase y por instancias de la clase derivada.
+- `internal`: especifica que solo se puede tener acceso al campo generado para el elemento XAML dentro de los tipos del mismo ensamblado.
+- `notpublic`: especifica que solo se puede tener acceso al campo generado para el elemento XAML dentro de los tipos del mismo ensamblado.
 
-Los valores válidos del atributo son:
+De forma predeterminada, si no se establece el valor del atributo, el campo generado para el elemento `private`será.
 
-- `Public` : Especifica que el campo generado para el elemento XAML es `public`.
-- `NotPublic` : Especifica que el campo generado para el elemento XAML es `internal` al ensamblado.
+> [!NOTE]
+> El valor del atributo puede usar cualquier grafía, ya que Xamarin. Forms lo convertirá a minúsculas.
 
-Si no se establece el valor del atributo, el campo generado para el elemento será `private`.
+Se deben cumplir las condiciones siguientes para que `x:FieldModifier` se procese un atributo:
 
-Las siguientes condiciones deben cumplirse para una `x:FieldModifier` atributo procesarse:
+- El elemento XAML de nivel superior debe ser un válido `x:Class`.
+- El elemento XAML actual tiene un `x:Name` especificado.
 
-- El elemento XAML debe ser válido `x:Class`.
-- El elemento actual de XAML tiene un `x:Name` especificado.
-
-El XAML siguiente muestra ejemplos de establecer el atributo:
+En el código XAML siguiente se muestran ejemplos del establecimiento del atributo:
 
 ```xaml
 <Label x:Name="privateLabel" />
-<Label x:Name="internalLabel" x:FieldModifier="NotPublic" />
-<Label x:Name="publicLabel" x:FieldModifier="Public" />
+<Label x:Name="internalLabel" x:FieldModifier="internal" />
+<Label x:Name="publicLabel" x:FieldModifier="public" />
 ```
 
-> [!NOTE]
-> El `x:FieldModifier` atributo no puede utilizarse para especificar el nivel de acceso de una clase XAML.
+> [!IMPORTANT]
+> El `x:FieldModifier` atributo no se puede usar para especificar el nivel de acceso de una clase XAML.
