@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 71343aa69cc7fa34fb716ea39454e6437a64169f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855086"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644073"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: Inicio rápido
 
 _Esta guía, que consta de dos partes, le ayudará a compilar su primera aplicación de Xamarin.Android mediante Visual Studio y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin._
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 
 Creará una aplicación que convierte un número de teléfono alfanumérico (escrito por el usuario) en un número de teléfono numérico y muestra ese número al usuario. La aplicación final tiene este aspecto:
 
@@ -72,6 +72,11 @@ En el cuadro de diálogo **New Android App** (Nueva aplicación Android), haga c
 
 ## <a name="create-a-layout"></a>Crear un diseño
 
+> [!TIP]
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
+>
+> Android Designer admite tanto archivos .axml como .xml.
+
 Después de que el nuevo proyecto se haya creado, expanda la carpeta **Recursos** y, después, la carpeta **Diseño** en el **Explorador de soluciones**.
 Haga doble clic en **activity_main.axml** para abrirla en Android Designer. Este es el archivo de diseño para la pantalla de la aplicación:
 
@@ -91,7 +96,7 @@ Con el control de **Texto (grande)** seleccionado en la superficie de diseño, u
 
 [![Establecer las propiedades de texto grande](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
 
-Arrastre un widget de **Texto sin formato** del **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del widget de **Texto (grande)**. La selección de ubicación del widget no se producirá hasta que mueva el puntero del mouse a un lugar en el diseño que pueda aceptar el widget. En las capturas de pantalla siguientes, el widget no se puede colocar (tal y como se muestra en la parte izquierda) hasta que el puntero del mouse se mueva justo debajo del `TextView` anterior (como se muestra en la parte derecha):
+Arrastre un widget de **Texto sin formato** del **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del widget de **Texto (grande)** . La selección de ubicación del widget no se producirá hasta que mueva el puntero del mouse a un lugar en el diseño que pueda aceptar el widget. En las capturas de pantalla siguientes, el widget no se puede colocar (tal y como se muestra en la parte izquierda) hasta que el puntero del mouse se mueva justo debajo del `TextView` anterior (como se muestra en la parte derecha):
 
 [![El mouse indica dónde se puede colocar el widget](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
 
@@ -119,7 +124,7 @@ Guarde su trabajo presionando **CTRL+S**.
 
 ## <a name="write-some-code"></a>Escritura de algo de código
 
-El siguiente paso consiste en agregar código para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el panel del **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...**, como se muestra a continuación:
+El siguiente paso consiste en agregar código para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el panel del **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...** , como se muestra a continuación:
 
 [![Agregar nuevo elemento](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
 
@@ -279,7 +284,7 @@ Inicie Visual Studio para Mac desde la carpeta **Aplicaciones** o desde **Spotli
 
 Para crear un proyecto, haga clic en **Nuevo proyecto...**
 
-En el cuadro de diálogo **Choose a template for your new project (Elegir una plantilla para el nuevo proyecto)**, haga clic en **Android > Aplicación** y seleccione la plantilla **Aplicación de Android**. Haga clic en **Siguiente**.
+En el cuadro de diálogo **Choose a template for your new project (Elegir una plantilla para el nuevo proyecto)** , haga clic en **Android > Aplicación** y seleccione la plantilla **Aplicación de Android**. Haga clic en **Siguiente**.
 
 [![Elegir la plantilla Aplicación de Android](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
 
@@ -291,12 +296,17 @@ En el cuadro de diálogo **Configure su aplicación de Android**, deje los nombr
 
 ## <a name="create-a-layout"></a>Crear un diseño
 
+> [!TIP]
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
+>
+> Android Designer admite tanto archivos .axml como .xml.
+
 Después de que el nuevo proyecto se haya creado, expanda la carpeta **Recursos** y, después, la carpeta **Diseño** en el panel de **Solución**.
 Haga doble clic en **Main.axml** para abrirlo en Android Designer. Este es el archivo de diseño de la pantalla cuando se visualiza en Android Designer:
 
 [![Abrir Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
-Seleccione el botón **Hello World, Click Me! (Hola a todos, haz clic aquí)**  **Botón** en la superficie de diseño; pulse la tecla **Eliminar** para quitarlo. 
+Seleccione el botón **Hello World, Click Me! (Hola a todos, haz clic aquí)** **Botón** en la superficie de diseño; pulse la tecla **Eliminar** para quitarlo. 
 
 Desde el **Cuadro de herramientas** (el área de la derecha), escriba `text` en el campo de búsqueda y arrastre un widget de **Texto (grande)** a la superficie de diseño (el área del centro):
 
@@ -306,7 +316,7 @@ Con el widget de **Texto (grande)** seleccionado en la superficie de diseño, pu
 
 [![Establecer las propiedades del widget de texto grande](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
-Después, arrastre un widget de **Texto sin formato** del **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del widget de **Texto (grande)**. Tenga en cuenta que puede usar el campo de búsqueda para ayudarle a buscar widgets por el nombre:
+Después, arrastre un widget de **Texto sin formato** del **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del widget de **Texto (grande)** . Tenga en cuenta que puede usar el campo de búsqueda para ayudarle a buscar widgets por el nombre:
 
 [![Agregar un widget de texto sin formato](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
@@ -330,7 +340,7 @@ Guarde su trabajo presionando **&#8984; + S**.
 
 ## <a name="write-some-code"></a>Escritura de algo de código
 
-Ahora, agregue código para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto haciendo clic en el icono de engranaje junto al proyecto **Phoneword** en el panel de **Solución** y seleccionando **Agregar > Nuevo archivo...**:
+Ahora, agregue código para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto haciendo clic en el icono de engranaje junto al proyecto **Phoneword** en el panel de **Solución** y seleccionando **Agregar > Nuevo archivo...** :
 
 [![Agregar un nuevo archivo al proyecto](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
@@ -499,7 +509,7 @@ Luego, descargue y descomprima el [conjunto de iconos de aplicación de Xamarin]
 
 En el cuadro de diálogo de selección, vaya al directorio descomprimido de los iconos de aplicación de Xamarin y abra la carpeta **mipmap-hdpi**. Seleccione **Icon.png** y haga clic en **Abrir**.
 
-En el cuadro de diálogo **Add File to Folder (Agregar archivo a carpeta)**, seleccione **Copy the file into the directory (Copiar el archivo en el directorio)** y haga clic en **Aceptar**:
+En el cuadro de diálogo **Add File to Folder (Agregar archivo a carpeta)** , seleccione **Copy the file into the directory (Copiar el archivo en el directorio)** y haga clic en **Aceptar**:
 
 [![Cuadro de diálogo Copiar el archivo en el directorio](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
 
@@ -525,4 +535,4 @@ Ahora es el momento de analizar las herramientas y los conocimientos que ha apre
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Iconos de aplicación de Xamarin para Android (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (ejemplo)](https://developer.xamarin.com/samples/monodroid/Phoneword)
+- [Phoneword (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)

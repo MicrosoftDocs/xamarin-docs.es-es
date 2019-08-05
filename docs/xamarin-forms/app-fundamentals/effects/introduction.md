@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: d3fa958e999a10832d5fa15e4190077955b0e6df
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
+ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997389"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68486010"
 ---
 # <a name="introduction-to-effects"></a>Introducción a los efectos
 

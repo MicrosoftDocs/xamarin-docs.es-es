@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670186"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509579"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
@@ -32,7 +32,7 @@ En esta guía se tratan los temas siguientes:
 
 - **Aspectos básicos de la arquitectura y la aplicación**: Introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
 
-- **Interfaz de usuario (UI)**: Creación de interfaces de usuario con Android Designer.
+- **Interfaz de usuario (UI)** : Creación de interfaces de usuario con Android Designer.
 
 - **Actividades y ciclo de vida de la actividad**: Una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
 
@@ -47,7 +47,7 @@ En esta guía se tratan los temas siguientes:
 
 - **Aspectos básicos de la arquitectura y la aplicación**: Introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
 
-- **Interfaz de usuario (UI)**: Creación de interfaces de usuario con Android Designer.
+- **Interfaz de usuario (UI)** : Creación de interfaces de usuario con Android Designer.
 
 - **Actividades y ciclo de vida de la actividad**: Una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
 
@@ -153,6 +153,11 @@ En las secciones siguientes se exploran las relaciones entre las distintas parte
 
 ## <a name="user-interface"></a>Interfaz de usuario
 
+> [!TIP]
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
+>
+> Android Designer admite tanto archivos .axml como .xml.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** es el archivo de diseño de la interfaz de usuario de la primera pantalla de la aplicación. La extensión .axml indica que se trata de un archivo de Android Designer (AXML significa *XML de Android*). El nombre *Main* es arbitrario desde el punto de vista de Android, es decir, el archivo de diseño podría tener otro nombre. Cuando se abre **activity_main.axml** en el IDE, aparece el editor visual de los archivos de diseño de Android, denominado *Android Designer*:
@@ -193,7 +198,7 @@ Todos los elementos definidos en la superficie de diseño se traducen a XML para
 
 ::: zone-end
 
-Este código fuente XML debe contener el **texto (grande)**, el **texto sin formato** y los dos elementos de **botón**. Para obtener más información sobre Android Designer, consulte la guía [Designer Overview](~/android/user-interface/android-designer/index.md) (Introducción al diseñador) de Xamarin Android.
+Este código fuente XML debe contener cuatro elementos de control: dos **TextView**, un **EditText** y un **Button**. Para obtener más información sobre Android Designer, consulte la guía [Designer Overview](~/android/user-interface/android-designer/index.md) (Introducción al diseñador) de Xamarin Android.
 
 Ya hemos visto las herramientas y los conceptos relacionados con la parte visual de la interfaz de usuario. Ahora veremos el código que activa la interfaz de usuario mientras exploramos las actividades y el ciclo de vida de la actividad.
 
@@ -207,7 +212,7 @@ En esta sección se presenta la clase `Activity`, se describe el ciclo de vida d
 
 La aplicación **Phoneword** tiene una sola pantalla (actividad). La clase que activa la pantalla se denomina `MainActivity` y se encuentra en el archivo **MainActivity.cs**. El nombre `MainActivity` no tiene especial importancia en Android: aunque la convención es que el nombre de la primera actividad de una aplicación sea `MainActivity`, a Android no le importa si se le asigna otro nombre.
 
-Al abrir **MainActivity.cs**, puede ver que la clase `MainActivity` es una *subclase* de la clase `Activity` y que la actividad está adornada con el atributo [Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/):
+Al abrir **MainActivity.cs**, puede ver que la clase `MainActivity` es una *subclase* de la clase `Activity` y que la actividad está adornada con el atributo [Activity](xref:Android.App.ActivityAttribute):
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]
@@ -333,7 +338,7 @@ Una vez que haya configurado el dispositivo, puede implementar en él. Para ello
 ::: zone-end
 ::: zone pivot="macos"
 
-Una vez que haya configurado el dispositivo, puede implementar en él. Para ello, conéctelo, pulse **Inicio (Reproducir)**, selecciónelo en el cuadro de diálogo **Seleccionar dispositivo** y pulse **Aceptar**:
+Una vez que haya configurado el dispositivo, puede implementar en él. Para ello, conéctelo, pulse **Inicio (Reproducir)** , selecciónelo en el cuadro de diálogo **Seleccionar dispositivo** y pulse **Aceptar**:
 
 [![Seleccionar dispositivo de depuración](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 

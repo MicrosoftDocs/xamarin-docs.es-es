@@ -17,9 +17,9 @@ abstract:
       - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
         text: Notas de la versión
       - href: /visualstudio/
-        text: Visual Studio
+        text: Programa para la mejora
 sections:
-  - title: Introducción
+  - title: Primeros pasos
     items:
       - type: paragraph
         text: 'Aprenda a crear su primera aplicación Xamarin.Forms con Xamarin y C#, para Android y iOS.'
@@ -28,7 +28,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Configuración
+            text: Programa de instalación
             href: ~/get-started/requirements.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
@@ -57,7 +57,7 @@ sections:
         className: cardsB
         items:
           - href: ~/xamarin-forms/app-fundamentals/
-            html: 'Todo lo que necesita saber para crear aplicaciones de Xamarin.Forms, por ejemplo, trabajar con archivos, imágenes, bases de datos y mucho más.'
+            html: 'Todo lo que necesita saber para desarrollar aplicaciones de Xamarin.Forms, como navegación, gestos, enlace de datos, etc.'
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/xamarin-forms/app-fundamentals/
@@ -112,7 +112,7 @@ sections:
         items:
           - title: API
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Documentos de la API de Xamarin.Forms</a></p>'
-          - title: Ejemplos
+          - title: Muestras
             html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms">Xamarin.Forms Samples</a> (Ejemplos de Xamarin.Forms)</p>'
           - title: Libros
             html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Libro electrónico sobre la creación de aplicaciones móviles</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Libro electrónico sobre patrones de aplicación empresarial</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Gráficos de SkiaSharp en el libro electrónico de Xamarin.Forms</a></p>

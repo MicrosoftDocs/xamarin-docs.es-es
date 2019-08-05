@@ -1,0 +1,117 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Aspectos básicos de la aplicación de Xamarin.Forms
+metadata:
+  title: Aspectos básicos de la aplicación de Xamarin.Forms
+  description: Obtenga información sobre los aspectos fundamentales del desarrollo de aplicaciones para dispositivos móviles con Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/30/2019
+abstract:
+  description: Obtenga información sobre los aspectos fundamentales del desarrollo de aplicaciones para dispositivos móviles con Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: accessibility/index.md
+            html: Obtenga información sobre cómo facilitar el uso de la interfaz de usuario de las aplicaciones a personas con distintas necesidades y experiencias.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_accessibility.svg'
+              href: accessibility/index.md
+            title: Accesibilidad
+          - href: application-class.md
+            html: Obtenga información sobre las características expuestas por una clase de aplicación en subclases.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
+              href: application-class.md
+            title: Clase de aplicación
+          - href: app-lifecycle.md
+            html: Obtenga información sobre el control de eventos de ciclo de vida de la aplicación.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
+              href: app-lifecycle.md
+            title: Ciclo de vida de la aplicación
+          - href: deep-linking.md
+            html: Obtenga información sobre el uso de la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones permita efectuar búsquedas en dispositivos iOS y Android.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_link.svg'
+              href: deep-linking.md
+            title: Indexación de la aplicación y vinculación en profundidad
+          - href: behaviors/index.md
+            html: Obtenga información sobre cómo agregar funciones a los controles sin tener que incluirlos en subclases.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: behaviors/index.md
+            title: comportamientos
+          - href: custom-renderer/index.md
+            html: Obtenga información sobre cómo extender los controles de Xamarin.Forms mediante la creación de nuevos controles personalizados y la modificación de los controles existentes.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_extend.svg'
+              href: custom-renderer/index.md
+            title: Representadores personalizados
+          - href: data-binding/index.md
+            html: Obtenga información sobre cómo sincronizar automáticamente una interfaz de usuario con su origen de datos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_sync.svg'
+              href: data-binding/index.md
+            title: Enlace de datos
+          - href: dependency-service/index.md
+            html: Obtenga información sobre cómo invocar la funcionalidad de la plataforma nativa desde código compartido con la clase DependencyService.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-service/index.md
+            title: Servicio de dependencia
+          - href: effects/index.md
+            html: Obtenga información sobre cómo ajustar el comportamiento de los controles de Xamarin.Forms mediante el acceso a los controles nativos subyacentes.
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: effects/index.md
+            title: Efectos
+          - href: gestures/index.md
+            html: 'Obtenga información sobre cómo usar los reconocedores de gestos para agregar compatibilidad con los gestos de pulsar, reducir, panoramizar y deslizar rápidamente en las aplicaciones.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_form.svg'
+              href: gestures/index.md
+            title: Gestos
+          - href: localization/index.md
+            html: Obtenga información sobre cómo desarrollar aplicaciones multilingües con Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: localization/index.md
+            title: Localización
+          - href: messaging-center.md
+            html: Obtenga información sobre cómo usar la comunicación basada en mensajes para reducir las dependencias entre tipos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mail.svg'
+              href: messaging-center.md
+            title: Centro de mensajería
+          - href: navigation/index.md
+            html: Obtenga información sobre cómo navegar por las aplicaciones de Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_class.svg'
+              href: navigation/index.md
+            title: Navegación
+          - href: shell/index.md
+            html: Obtenga información sobre cómo usar el shell de Xamarin.Forms para reducir la complejidad del desarrollo de aplicaciones móviles.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: shell/index.md
+            title: Shell
+          - href: templates/index.md
+            html: Obtenga información sobre cómo usar la funcionalidad de plantillas proporcionada por Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_template.svg'
+              href: templates/index.md
+            title: Plantillas
+          - href: triggers.md
+            html: Obtenga información sobre cómo expresar acciones en XAML que cambian la apariencia de controles en función de eventos o cambios en propiedades.
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: triggers.md
+            title: Desencadenadores

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
-ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
+ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58751263"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647049"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -414,9 +414,9 @@ El simulador de iOS brinda una forma rápida de probar una aplicación. El simul
 Aprovisionar un dispositivo lleva tiempo y requiere una cuenta de desarrollador de Apple. En la guía [Device Provisioning (Aprovisionamiento del dispositivo)](~/ios/get-started/installation/device-provisioning/index.md) se proporcionan instrucciones precisas sobre cómo preparar un dispositivo para el desarrollo.
 
 > [!NOTE]
-> En este momento, debido a un requisito de Apple, es necesario tener un certificado de desarrollo o una _identidad de firma_ para compilar el código para el dispositivo o el simulador. Siga los pasos de la [guía Aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar esta opción.
+> En este momento, debido a un requisito de Apple, es necesario tener un certificado de desarrollo o una _identidad de firma_ para compilar el código para el dispositivo físico o el simulador. Siga los pasos de la [guía Aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar esta opción.
 
-Cuando se aprovisiona el dispositivo, puede realizar implementaciones en él al conectarlo, cambiar el destino en la barra de herramientas de compilación para el dispositivo iOS y pulsar **Start (Iniciar)** (**Play (Reproducir)**) como se muestra en la siguiente captura de pantalla:
+Cuando se aprovisiona el dispositivo, puede realizar implementaciones en él al conectarlo, cambiar el destino en la barra de herramientas de compilación para el dispositivo iOS y pulsar **Start (Iniciar)** (**Play (Reproducir)** ) como se muestra en la siguiente captura de pantalla:
 
 ::: zone pivot="macos"
 
@@ -458,10 +458,10 @@ Para obtener más información sobre los tamaños de las imágenes de inicio, lo
 ## <a name="summary"></a>Resumen
 
 ¡Enhorabuena! Ahora ya debería conocer bien los componentes de una aplicación de Xamarin.iOS, así como las herramientas necesarias para su creación.
-En el [siguiente tutorial de la serie de introducción](~/ios/get-started/hello-ios-multiscreen/index.md), extenderá la aplicación para administrar varias pantallas. También tendrá la oportunidad de implementar un controlador de navegación, obtener información sobre los segoe de guión gráfico e introducir el patrón de modelo, vista y controlador a medida que amplía la aplicación para controlar varias pantallas.
+En el [siguiente tutorial de la serie de introducción](~/ios/get-started/hello-ios-multiscreen/index.md), extenderá la aplicación para administrar varias pantallas. También tendrá la oportunidad de implementar un controlador de navegación, obtener información sobre los segues de Storyboard e introducir el patrón MVC (Modelo-Vista-Controlador) a medida que amplía la aplicación para controlar varias pantallas.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/account/#/overview)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f3fb083457fa1fbf6590eb53eea504257e93ecc6
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d59d4fc3ff9df3ea883ab4d5845da193e6cb8c51
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617779"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643787"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
@@ -74,7 +74,7 @@ C# proporciona muchas características claves de Xamarin.Android que actualmente
 
 -   [Propiedades](#properties) &ndash; Con el sistema de propiedades de C#, puede acceder a las variables de miembros de forma segura y directa sin tener que escribir métodos de establecedor y captador.
 
--   [Expresiones lambda](#lambdas) &ndash; En C# también puede usar métodos anónimos (también denominados *lambdas*) para expresar la funcionalidad de forma más sucinta y eficaz. Puede evitar la sobrecarga de tener que escribir objetos de un solo uso, y puede pasar el estado local a un método sin tener que agregar parámetros.
+-   [Expresiones lambda](#lambdas) &ndash; En C# puede usar métodos anónimos (también denominados *lambdas*) para expresar la funcionalidad de forma más sucinta y eficaz. Puede evitar la sobrecarga de tener que escribir objetos de un solo uso, y puede pasar el estado local a un método sin tener que agregar parámetros.
 
 -   [Control de eventos](#events) &ndash; C# ofrece compatibilidad a nivel de lenguaje para la *programación orientada a eventos*, donde se puede registrar un objeto para recibir una notificación cuando se produzca algún evento de interés. La palabra clave `event` define un mecanismo de multidifusión que una clase de publicador puede usar para informar a los suscriptores de eventos.
 
@@ -174,7 +174,7 @@ Java y C# utilizan expresiones de programación orientada a objetos muy similare
 
 -   Todas las instancias de clases se crean en el montón mediante el operador `new`.
 
--   Debido a que ambos lenguajes utilizan la recolección de elementos no utilizados, se pueden liberar de forma explícita los objetos no utilizados (es decir, que no hay ninguna palabra clave `delete` como hay en C++).
+-   Debido a que ambos lenguajes utilizan la recolección de elementos no utilizados, no hay ningún método para liberar de forma explícita los objetos no utilizados (es decir, que no hay ninguna palabra clave `delete` como hay en C++).
 
 -   Puede extender las clases mediante la herencia, y ambos lenguajes solo permiten una única clase base por tipo.
 
@@ -433,7 +433,7 @@ Para más información sobre la compatibilidad de Xamarin con las característic
 
 Muchas de las palabras claves del lenguaje de Java también se usan en C#. También hay una serie de palabras clave de Java que tienen un equivalente en C# pero con un nombre distinto, como se indica en esta tabla:
 
-|Java|C#|Descripción|
+|Java|C#|DESCRIPCIÓN|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Se utiliza para declarar los valores booleanos true y false.|
 |`extends`|`:`|Precede a la clase e interfaces de las que se hereda.|
@@ -448,9 +448,9 @@ Muchas de las palabras claves del lenguaje de Java también se usan en C#. Tambi
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Ajusta una sección crítica del código con lanzamiento y adquisición de bloqueo.|
 
 
-Además, hay muchas palabras clave que son exclusivas de C# y que no tienen homólogo en Java. El código de Xamarin.Android suele usar las siguientes palabras clave de C# (es útil hacer referencia a esta tabla al leer [código de ejemplo](https://developer.xamarin.com/samples/android/all/) de Xamarin.Android):
+Además, hay muchas palabras clave que son exclusivas de C# y que no tienen homólogo en Java. El código de Xamarin.Android suele usar las siguientes palabras clave de C# (es útil hacer referencia a esta tabla al leer [código de ejemplo](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) de Xamarin.Android):
 
-|C#|Descripción|
+|C#|DESCRIPCIÓN|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Realiza conversiones entre tipos de referencia compatibles o tipos que aceptan valores NULL.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Especifica que un método o una expresión lambda son asincrónicos.|
@@ -473,7 +473,7 @@ Además, hay muchas palabras clave que son exclusivas de C# y que no tienen hom�
 |[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|Un tipo de valor que encapsula un grupo de variables relacionadas.|
 |[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|Obtiene el tipo de un objeto.|
 |[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|Declara una variable local con tipo implícito.|
-|[valor](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Hace referencia al valor que el código de cliente desea asignar a una propiedad.|
+|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Hace referencia al valor que el código de cliente desea asignar a una propiedad.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Permite la invalidación de un método en una clase derivada.|
 
 
