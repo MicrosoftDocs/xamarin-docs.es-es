@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: f0ad51738e0bbe785773f653b06fe5f582527f0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 722dfbb301d6698ee58d42029c8f6b82ecddc37b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120884"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508997"
 ---
 # <a name="xamarinandroid-environment"></a>Entorno de Xamarin.Android
 
@@ -36,7 +36,7 @@ Los comentarios son líneas que comienzan por `#`. Las líneas en blanco se omit
 
 Si la *clave* comienza con una letra mayúscula, entonces se trata como una variable de entorno y **setenv**(3) se usa para establecer la variable de entorno en el *valor* especificado durante el inicio del proceso.
 
-Si la *clave* comienza con una letra minúscula, la *clave* se trata como una propiedad del sistema de Android y el *valor* es el *valor predeterminado*: las propiedades del sistema de Android que controlan el comportamiento de ejecución de Xamarin.Android se buscan primero desde el almacén de propiedades del sistema de Android y, si no existe ningún valor, se usa el valor especificado en el archivo de entorno. El objetivo es permitir que se use `adb shell setprop` para invalidar los valores que proceden del archivo de entorno con fines de diagnóstico.
+Si la *clave* comienza con una letra minúscula, se trata como una propiedad del sistema Android y el *valor* es el *valor predeterminado*: las propiedades del sistema de Android que controlan el comportamiento de ejecución de Xamarin.Android se buscan primero en el almacén de propiedades del sistema de Android y, si no existe ningún valor, se usa el valor especificado en el archivo de entorno. El objetivo es permitir que se use `adb shell setprop` para invalidar los valores que proceden del archivo de entorno con fines de diagnóstico.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variables de entorno de Xamarin.Android
 
@@ -49,7 +49,7 @@ El tipo completo de ensamblado que debe heredar de [HttpMessageHandler](https://
 
 En Xamarin.Android 6.1, esta variable de entorno no se establece de forma predeterminada, y se usa [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
 
-Como alternativa, puede especificarse el valor `Xamarin.Android.Net.AndroidClientHandler` para usar [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)
+Como alternativa, puede especificarse el valor `Xamarin.Android.Net.AndroidClientHandler` para usar [`java.net.URLConnection`](xref:Java.Net.URLConnection)
 para el acceso a la red, que *puede* permitir el uso de TLS 1.2 cuando Android lo admita.
 
 Agregado en Xamarin.Android 6.1.
@@ -90,11 +90,11 @@ Esto equivale a hacer que la propiedad del sistema `debug.mono.log` contenga `gc
 Controla qué información adicional registrará Xamarin.Android en `adb logcat`.
 Es una cadena separada por comas (`,`), que contiene uno de los siguientes valores:
 
-* `all`: se imprimen *todos* los mensajes. En raras ocasiones es una buena idea, ya que incluye mensajes `lref`.
-* `assembly`: se imprime `.apk` y se ensamblan los mensajes de análisis.
-* `gc`: se imprimen los mensajes relacionados con GC.
-* `gref`: se imprimen los mensajes de referencia global de JNI.
-* `lref`: se imprimen los mensajes de referencia local de JNI.  
+* `all`: imprimir *todos* los mensajes. En raras ocasiones es una buena idea, ya que incluye mensajes `lref`.
+* `assembly`: imprimir `.apk` y ensamblar los mensajes de análisis.
+* `gc`: imprimir los mensajes relacionados con GC.
+* `gref`: imprimir los mensajes de referencia global de JNI.
+* `lref`: imprimir los mensajes de referencia local de JNI.  
     *Nota*: Este valor *en realidad* enviará correo basura a `adb logcat`.  
     En Xamarin.Android 5.1, también creará un archivo `.__override__/lrefs.txt`, que puede volverse *gigantesco*.  
     Evítelo.
@@ -106,8 +106,8 @@ Es una cadena separada por comas (`,`), que contiene uno de los siguientes valor
 El valor de la propiedad del sistema `debug.mono.max_grefc` es un entero.
 Su valor *invalida* el recuento de GREF máximo detectado para el dispositivo de destino.
 
-*Nota:* Solo se puede usar con `adb shell setprop
-debug.mono.max_grefc` ya que el valor no estará disponible a tiempo con un archivo **environment.txt**.
+*Tenga en cuenta lo siguiente:* Solo se puede usar con `adb shell setprop
+debug.mono.max_grefc`, ya que el valor no estará disponible a tiempo con un archivo **environment.txt**.
 
 ### `debug.mono.profile`
 
@@ -139,7 +139,7 @@ De forma predeterminada, se usa `java`, hasta API-7 y en API-19 (Kit Kat) con AR
 Esta propiedad del sistema es útil para pruebas y determinadas formas de investigación.
 *En general*, no se debe cambiar.
 
-### <a name="xahttpclienthandlertype"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
+### <a name="xa_http_client_handler_type"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
 
 Introducida primero en Xamarin.Android 6.1, esta variable de entorno declara la implementación de `HttpMessageHandler` predeterminada que usará `HttpClient`. Esta variable no se establece de forma predeterminada, y Xamarin.Android usará `HttpClientHandler`.
 
