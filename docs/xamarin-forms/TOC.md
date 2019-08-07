@@ -128,7 +128,8 @@
 ##### [Creación de plantilla de datos](app-fundamentals/templates/data-templates/creating.md)
 ##### [Selección de plantilla de datos](app-fundamentals/templates/data-templates/selector.md)
 ### [Desencadenadores](app-fundamentals/triggers.md)
-## [Interfaz de usuario](user-interface/index.md)
+## Interfaz de usuario
+### [Información general](user-interface/index.yml)
 ### [Indicador de actividad](user-interface/activityindicator.md)
 ### [Animación](user-interface/animation/index.md)
 #### [Animaciones simples](user-interface/animation/simple.md)
