@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 0d9d98c00fa9a75cc542fa95252fd4a849c884c4
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 561210de29c878b13cda63be337b0b72458b81d2
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739040"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820986"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -313,7 +313,7 @@ Xamarin.Forms es un kit de herramientas multiplataforma para Android, iOS, Mac y
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/user-interface/index.md">
+                                <a href="~/xamarin-forms/user-interface/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

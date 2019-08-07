@@ -39,7 +39,7 @@ Si está usando un equipo Mac y tiene problemas de instalación de Xamarin.Andro
 
 Para obtener acceso a NuGet (Xamarin.Forms está empaquetado como NuGet), tiene que agregar las siguientes direcciones:
 
-- www.nuget.org (para acceder a NuGet)
+- [www.nuget.org](www.nuget.org) (para acceder a NuGet)
 - globalcdn.nuget.org (descargas de NuGet)
 - dl-ssl.google.com (componentes de Google para Android y Xamarin.Forms)
 
