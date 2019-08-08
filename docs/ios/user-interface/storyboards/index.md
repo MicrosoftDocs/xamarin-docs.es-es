@@ -1,97 +1,97 @@
 ---
-title: Introducción a guiones gráficos en Xamarin.iOS
-description: Este documento proporciona una introducción a guiones gráficos en Xamarin.iOS. Describe cómo un guión gráfico se usa para definir una interfaz de usuario, los objetos Segue y cómo usar el Diseñador de iOS para editar archivos de guión gráfico.
+title: Introducción a los guiones gráficos en Xamarin. iOS
+description: En este documento se proporciona una introducción a los guiones gráficos en Xamarin. iOS. Describe cómo se usa un guion gráfico para definir una interfaz de usuario, objetos segue, y cómo usar el diseñador de iOS para editar archivos de guion gráfico.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 79c1d7852cdde9b557965931706fcd24e43954f7
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 9b4f71599ecf85e51899c41c37aecc63e44e7188
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865216"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646429"
 ---
-# <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
-En esta guía se explica qué un guión gráfico es y examine algunos de los componentes claves: por ejemplo, los objetos Segue. Veremos cómo se pueden crear y usar, los guiones gráficos y qué ventajas tienen un desarrollador.
+En esta guía se explicará qué es un guion gráfico y se examinan algunos de los componentes clave, como objetos segue. Veremos cómo se pueden crear y usar guiones gráficos y qué ventajas tienen para un desarrollador.
 
-Antes de que el formato de archivo de guión gráfico se introdujo por Apple como una representación visual de la interfaz de usuario de una aplicación de iOS, los desarrolladores crean los archivos XIB por cada controlador de vista y programar manualmente la navegación entre cada vista.  Utilizar un guión gráfico permite al desarrollador definir controladores de vista y la navegación entre ellos en una superficie de diseño y ofrece una edición WYSIWYG de interfaz de usuario de la aplicación.
+Antes de que Apple introdujera el formato de archivo de guion gráfico como una representación visual de la interfaz de usuario de una aplicación de iOS, los desarrolladores creaban archivos XIB para cada controlador de vista y programaban la navegación entre cada vista manualmente.  El uso de un guion gráfico permite al desarrollador definir tanto controladores de vista como la navegación entre ellos en una superficie de diseño y ofrece la edición WYSIWYG de la interfaz de usuario de la aplicación.
 
-Un guión gráfico se puede crear, abrir y editar con el Diseñador de iOS de Xamarin. Esta guía también será tutorial cómo usar el diseñador para crear guiones gráficos al usar C# para programar el panel de navegación.
+Un guion gráfico se puede crear, abrir y editar con Xamarin iOS Designer. En esta guía también se explica cómo usar el diseñador para crear los guiones gráficos mientras C# se usa para programar la navegación.
 
 
 ## <a name="requirements"></a>Requisitos
 
-Los guiones gráficos se pueden usar con iOS Designer en Visual Studio para Mac o con Visual Studio 2017 con las cargas de trabajo de Xamarin instalados.
+Los guiones gráficos se pueden usar con iOS Designer en Visual Studio para Mac o con Visual Studio 2017 con las cargas de trabajo de Xamarin instaladas.
 
-## <a name="what-is-a-storyboard"></a>¿Qué es un guión gráfico?
+## <a name="what-is-a-storyboard"></a>¿Qué es un guion gráfico?
 
-Un guión gráfico es la representación visual de todas las pantallas en una aplicación. Contiene una secuencia de segundo plano, con cada escena que representa un *View Controller* y su *vistas*. Estas vistas pueden contener objetos y [controles](~/ios/user-interface/controls/index.md) que permitirá que el usuario interactuar con la aplicación. Esta colección de vistas y los controles (o *subvistas*) se conoce como un *jerarquía de vistas de contenido*. Segundo plano está conectado por segue de objetos que representan una transición entre controladores de vista. Normalmente, esto se logra mediante la creación de un objeto segue entre un objeto en la vista inicial y la vista de la conexión. En la imagen siguiente se muestran las relaciones en la superficie de diseño:
+Un guion gráfico es la representación visual de todas las pantallas de una aplicación. Contiene una secuencia de escenas, donde cada escena representa un *controlador de vista* y sus *vistas*. Estas vistas pueden contener objetos y [controles](~/ios/user-interface/controls/index.md) que permitirán a los usuarios interactuar con la aplicación. Esta colección de vistas y controles (osubvistas) se conoce como una *jerarquía*de vistas de contenido. Las escenas están conectadas mediante objetos segue, que representan una transición entre controladores de vista. Normalmente, esto se consigue creando un segue entre un objeto de la vista inicial y la vista de conexión. Las relaciones en la superficie de diseño se ilustran en la imagen siguiente:
 
- [![](images/storyboardsview.png "Se ilustran las relaciones en la superficie de diseño en esta imagen")](images/storyboardsview.png#lightbox)
+ [![](images/storyboardsview.png "En esta imagen se ilustran las relaciones en la superficie de diseño")](images/storyboardsview.png#lightbox)
 
-Como se muestra, el guión gráfico disposición de cada uno de sus escenas con contenido que ya se hayan procesado y muestra las conexiones entre ellos.  Es importante destacar en este momento, que, cuando hablamos acerca de las escenas en un iPhone, es seguro suponer que una *escena* en el guión gráfico es igual a uno *pantalla* de contenido en el dispositivo. Sin embargo, con un iPad que es posible tener varias escenas aparecen a la vez: por ejemplo, mediante un controlador de vista de elemento flotante.
+Como se muestra, el guión gráfico diseñará cada una de las escenas con contenido ya representado y mostrará las conexiones entre ellas.  Cabe destacar en este punto, que cuando hablamos de escenas en un iPhone, es seguro suponer que una *escena* del guión gráfico es igual a una *pantalla* de contenido del dispositivo. Sin embargo, con un iPad es posible tener varias escenas a la vez (por ejemplo, con un controlador de vista elemento flotante).
 
-Hay muchas ventajas al uso de guiones gráficos para crear la interfaz de usuario de la aplicación, especialmente cuando se usa Xamarin. En primer lugar, es una representación visual de la interfaz de usuario, como todos los objetos, incluidos [controles personalizados](~/ios/user-interface/designer/ios-designable-controls-overview.md) – se representan en tiempo de diseño. Esto significa que, antes de compilar o implementar la aplicación puede visualizar su apariencia y el flujo. Veamos la imagen anterior, por ejemplo. Nos podemos deducir a partir de un vistazo rápido al diseño de la superficies existe escenas cuántos son, el diseño de cada vista y cómo todo lo que se relaciona. Esto es lo que hace que los guiones gráficos tan eficaz.
+Hay muchas ventajas en el uso de guiones gráficos para crear la interfaz de usuario de la aplicación, sobre todo cuando se usa Xamarin. En primer lugar, es una representación visual de la interfaz de usuario, ya que todos los objetos, incluidos [los controles personalizados](~/ios/user-interface/designer/ios-designable-controls-overview.md) , se representan en tiempo de diseño. Esto significa que antes de compilar o implementar la aplicación puede visualizar su apariencia y flujo. Tome la imagen anterior, por ejemplo. Podemos saber de una mirada rápida a la superficie de diseño cuántas escenas hay, el diseño de cada vista y cómo se relaciona todo. Esto es lo que hace que los guiones gráficos sean tan eficaces.
 
-Los eventos son más fáciles de administrar con guiones gráficos, especialmente cuando se usa el Diseñador de iOS. La mayoría de los controles de interfaz de usuario tendrá una lista de posibles eventos en el panel de propiedades. El controlador de eventos se puede agregar aquí y completa en un método parcial de la clase de controladores de vista...
+Los eventos son más fáciles de administrar con los guiones gráficos, especialmente cuando se usa el diseñador de iOS. La mayoría de los controles de interfaz de usuario tendrán una lista de posibles eventos en el Panel de propiedades. El controlador de eventos se puede Agregar aquí y completarse en un método parcial en la clase de controladores de vista.
 
-El contenido de un guión gráfico se almacena como un archivo XML. En el tiempo, de compilación cualquier `.storyboard` archivos se compilan en archivos binarios que se conoce como nibs. En tiempo de ejecución, estos nibs se inicializa y crear instancias para crear nuevas vistas.
+El contenido de un guión gráfico se almacena como un archivo XML. En tiempo de compilación, `.storyboard` los archivos se compilan en archivos binarios conocidos como NIBS. En tiempo de ejecución, estos NIBS se inicializan y se crean instancias para crear nuevas vistas.
 
-## <a name="segues"></a>Los objetos Segue
+## <a name="segues"></a>Objetos segue
 
-Un *Segue*, o *objeto Segue*, se utiliza en el desarrollo de iOS para representar una transición entre bastidores. Para crear un segue, mantenga presionada la **Ctrl** clave y haga clic y arrastre desde una escena a otro. Como se arrastra el mouse, aparece un conector azul, que indica donde llevará el segue como se muestra en la imagen siguiente:
+Un objeto *segue*, o *segue*, se usa en el desarrollo de iOS para representar una transición entre escenas. Para crear un segue, mantenga presionada la tecla **Ctrl** y haga clic y arrastre de una escena a otra. A medida que se arrastra el mouse, aparece un conector azul que indica que el segue conducirá como se muestra en la imagen siguiente:
 
- [![](images/createsegue.png "Aparece un conector azul, que indica donde llevará el segue como se muestra en esta imagen")](images/createsegue.png#lightbox)
+ [![](images/createsegue.png "Aparece un conector azul, que indica dónde se mostrará el segue como se muestra en esta imagen.")](images/createsegue.png#lightbox)
 
-En el mouse hacia arriba, aparecerá un menú lo que permite elegir la acción para nuestro segue. Puede ser similar a las imágenes siguientes: 
+Al pasar el mouse, aparecerá un menú que nos permite elegir la acción para nuestro segue. Puede ser similar a las imágenes siguientes: 
 
-**Clases de previa iOS 8 y tamaño**:
+**Clases de tamaño y 8 anteriores a iOS**:
 
-[![](images/segue1.png "La lista desplegable de Segue de acción sin las clases de tamaño")](images/segue1.png#lightbox)
+[![](images/segue1.png "La lista desplegable de acciones segue sin clases de tamaño")](images/segue1.png#lightbox)
 
-**Al usar las clases de tamaño y objetos Segue adaptable**:
+**Al usar clases de tamaño y objetos segue adaptables**:
 
-[![](images/16new.png "La lista desplegable de Segue de acción con las clases de tamaño")](images/16new.png#lightbox)
+[![](images/16new.png "La lista desplegable Action segue con clases de tamaño")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Si usa VMWare para la máquina Virtual de Windows, pulse Ctrl se asigna como el _haga_ botón del mouse de forma predeterminada. Para crear un Segue, edite sus preferencias de teclado a través de **preferencias** > **teclado y Mouse** > **accesos directos de Mouse** y reasignar el **Botón secundario** tal como se muestra a continuación:
+> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del teclado **a través** > de los**métodos abreviados** de teclado de mouse **& mouse** > y reasigne el **botón secundario** , como se muestra a continuación:
 > 
-> [![](images/image22.png "Configuración de preferencias de teclado y Mouse")](images/image22.png#lightbox)
+> [![](images/image22.png "Configuración de preferencias del teclado y del mouse")](images/image22.png#lightbox)
 > 
-> Ahora podrá agregar un objeto segue entre los controladores de vista de forma habitual.
+> Ahora debería poder agregar un segue entre los controladores de vista de la forma habitual.
 
-Hay diferentes tipos de transiciones, cada control lo sobre cómo se presenta un nuevo controlador de vista al usuario y cómo interactúa con otros controladores de vista en el guión gráfico. Estos se explican a continuación. También es posible crear subclases de un objeto segue para implementar una transición personalizada:
+Hay diferentes tipos de transiciones, cada una de las cuales proporciona control sobre cómo se presenta al usuario un nuevo controlador de vista y cómo interactúa con otros controladores de vistas en el guión gráfico. Estos se explican a continuación. También es posible crear una subclase de un objeto segue para implementar una transición personalizada:
 
--  **Mostrar / Push** : una inserción segue agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que se origina la inserción es parte del mismo controlador de navegación como el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y se utiliza generalmente cuando hay alguna relación entre los datos en las pantallas. Mediante la inserción de segue le ofrece el lujo de tener una barra de navegación con un botón Atrás y título agregado a cada vista en la pila, lo que permite explorar en profundidad la navegación a través de la jerarquía de vistas.
--  **Modal** : un segue modal crea una relación entre los controladores de vista de dos en el proyecto, con la opción de una transición animada que se muestran. El controlador de vista secundarios ocultará completamente el controlador de vista principal cuando se incluyen en la vista. A diferencia de una inserción de segue, que agrega un botón Atrás para nosotros; Cuando uso modal segue `DismissViewController` debe usarse con el fin de volver a la anterior controlador de vista.
--  **Personalizado** : cualquier custom segue puede crearse como una subclase de `UIStoryboardSegue`.
--  **Desenredo** : un desenredo segue puede usarse para navegar hacia atrás por una inserción o modal segue: por ejemplo, descartando el controlador de vista presenta de forma modal. Además, puede desenredar a través de no solo uno, pero una serie de inserción y modal objetos Segue y volver atrás varios pasos en la jerarquía de navegación con una sola acción de desenredo. Para aprender a usar una operación de desenredo segue en iOS, lea el [crear desenredo objetos Segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) receta.
--  **Sourceless** : un sourceless segue indica la escena que contiene el controlador de vista inicial y, por tanto, la vista donde el usuario verán en primer lugar. Se representa mediante el objeto segue que se muestra a continuación:  
+-  **Mostrar/** enviar: un segue de extracción agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que origina la inserciones forma parte del mismo controlador de navegación que el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y normalmente se usa cuando hay alguna relación entre los datos de las pantallas. El uso de segue de extracción le permite tener una barra de navegación con un botón atrás y un título agregado a cada vista de la pila, lo que permite explorar en profundidad la navegación por la jerarquía de vistas.
+-  **Modal** : un segue modal crea una relación entre dos controladores de vista cualesquiera del proyecto, con la opción de mostrar una transición animada. El controlador de vista secundario ocultará completamente el controlador de vista primario cuando se ponga en vista. A diferencia de un segue de extracción, que agrega un botón atrás para nosotros; Cuando se usa un segue `DismissViewController` modal, se debe usar para volver al controlador de vista anterior.
+-  **Personalizado** : cualquier segue personalizado se puede crear como una subclase de `UIStoryboardSegue`.
+-  Desenredado: se puede usar un segue de desenredado para navegar hacia atrás a través de un segue de extracción o modal, por ejemplo, descartando el controlador de vista presentado de forma modal. Además, puede desenredar a través de no solo uno, sino también una serie de objetos segues de extracción y de moda y volver a varios pasos de la jerarquía de navegación con una sola acción de desenredado. Para saber cómo usar un segue de desenredado en iOS, lea la receta de creación de desenredado de [objetos segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
+-  Sin **origen** : una segue sin código fuente indica la escena que contiene el controlador de vista inicial y, por lo tanto, la vista que el usuario verá en primer lugar. Se representa mediante el segue que se muestra a continuación:  
 
-    [![](images/sourcelesssegue.png "Un objeto sourceless segue")](images/sourcelesssegue.png#lightbox)
+    [![](images/sourcelesssegue.png "Un segue de código fuente")](images/sourcelesssegue.png#lightbox)
 
-### <a name="adaptive-segue-types"></a>Tipos de Segue adaptable
+### <a name="adaptive-segue-types"></a>Tipos de segue adaptables
 
- iOS 8 introducidas [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) para permitir que un archivo de guión gráfico de iOS para que funcione con todos los tamaños de pantalla disponibles, lo que permite a los desarrolladores crear una interfaz de usuario para todos los dispositivos iOS. De forma predeterminada, todas las nuevas aplicaciones de Xamarin.iOS usará las clases de tamaño. Para usar las clases de tamaño de un proyecto anterior, consulte el [Introducción a guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) guía. 
+ iOS 8 presentó [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) para permitir que un archivo de guión gráfico de iOS funcione con todos los tamaños de pantalla disponibles, lo que permite a los desarrolladores crear una interfaz de usuario para todos los dispositivos iOS. De forma predeterminada, todas las aplicaciones de Xamarin. iOS nuevas usarán clases de tamaño. Para usar clases de tamaño de un proyecto anterior, consulte la guía de [Introducción a guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) . 
  
-Cualquier aplicación que use las clases de tamaño también van a usar el nuevo [ *objetos Segue adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Al utilizar las clases de tamaño, recuerde que no especificar directamente si se va a estamos usando un iPhone o iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre será el mismo, independientemente de cuánto inmobiliaria tiene que trabajar con. Trabajo de objetos Segue adaptable juzgar por el entorno y determinar cuál es la mejor presentar el contenido. Los objetos Segue adaptable se muestran a continuación: 
+Cualquier aplicación que use clases de tamaño también usará el nuevo [*objetos segue adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Al usar clases de tamaño, recuerde que no vamos a especificar directamente si se usa un iPhone o iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre tendrá el mismo aspecto, independientemente de la cantidad de espacio real con el que tenga que trabajar. El trabajo de objetos segue adaptable es juzgar el entorno y determinar el mejor modo de presentar el contenido. A continuación se muestran los objetos segue adaptables: 
 
-[![](images/adaptivesegue.png "La lista desplegable de objetos Segue adaptable")](images/adaptivesegue.png#lightbox)
+[![](images/adaptivesegue.png "La lista desplegable Adaptive objetos segue")](images/adaptivesegue.png#lightbox)
 
 |Segue|DESCRIPCIÓN|
 |--- |--- |
-|Mostrar|Esto es muy similar a una inserción de segue, pero tiene en cuenta el contenido de la pantalla.|
-|Mostrar detalles|Si la aplicación muestra una vista de maestro y detalles (por ejemplo, en un controlador de vista dividida en un iPad), el contenido reemplazará a la vista de detalle. Si la aplicación muestra el patrón o el detalle, el contenido reemplazará a la parte superior de la pila de controlador de vista.|
-|Presentación|Esto es similar a la segue Modal y permite la selección de los estilos de presentación y la transición.|
-|Presentación del elemento flotante|Esto presenta el contenido como un elemento flotante|
+|Mostrar|Esto es muy similar a un segue de extracción, pero tiene en cuenta el contenido de la pantalla.|
+|Mostrar detalles|Si la aplicación muestra una vista maestra y de detalles (por ejemplo, en un controlador de vista de división en un iPad), el contenido reemplazará la vista de detalles. Si la aplicación muestra solo el maestro o detalle, el contenido reemplazará la parte superior de la pila del controlador de vista.|
+|Presentación|Es similar al segue modal y permite seleccionar los estilos de presentación y de transición.|
+|Presentación de elemento flotante|Esto presenta el contenido como un elemento flotante|
 
-### <a name="transferring-data-with-segues"></a>Transferencia de datos con los objetos Segue
+### <a name="transferring-data-with-segues"></a>Transferir datos con objetos segue
 
-Las ventajas de un segue no terminen con las transiciones. También puede usarse para administrar a la transferencia de datos entre controladores de vista. Esto se logra reemplazando el `PrepareForSegue` método en el controlador de vista inicial y controlar los datos de nosotros mismos. Cuando se desencadene el segue: por ejemplo, con presionar un botón: la aplicación llamará a este método, que proporciona una oportunidad para preparar el nuevo controlador de vista *antes* se produce ninguna navegación. El código siguiente, desde el [Phoneword](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) de ejemplo, se muestra cómo hacerlo: 
+Las ventajas de una segue no terminan con las transiciones. También se pueden usar para administrar la transferencia de datos entre controladores de vista. Esto se logra invalidando el `PrepareForSegue` método en el controlador de vista inicial y controlando los datos por nosotros mismos. Cuando se desencadena segue (por ejemplo, con un botón), la aplicación llamará a este método, lo que proporciona una oportunidad para preparar el nuevo controlador de vista *antes* de que se produzca la navegación. En el código siguiente, en el ejemplo [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) , se muestra: 
 
 
 ```csharp
@@ -109,13 +109,13 @@ NSObject sender)
 }
 ```
 
-En este ejemplo, el `PrepareForSegue` método se llamará cuando se desencadene el segue por el usuario. En primer lugar, tenemos que crear una instancia del controlador de vista "receptor" y establézcalo como destino del segue View Controller. Esto se realiza mediante la línea de código siguiente:
+En este ejemplo, `PrepareForSegue` se llamará al método cuando el usuario desencadene el segue. Primero tenemos que crear una instancia del controlador de vista ' recibiendo ' y establecerla como el controlador de vista de destino de segue. Esto se realiza mediante la línea de código siguiente:
 
 ```csharp
 var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
-El método ahora tiene la capacidad de establecer las propiedades de la `DestinationViewController`. En este ejemplo, hemos aprovechado de esto, pase una lista denominada `PhoneNumbers` a la `CallHistoryController` y asignarla a un objeto del mismo nombre:
+El método ahora tiene la capacidad de establecer las propiedades en `DestinationViewController`. En este ejemplo, hemos aprovechado esto pasando una lista denominada `PhoneNumbers` `CallHistoryController` a y asignándole un objeto con el mismo nombre:.
 
 ```csharp
 if (callHistoryController != null) {
@@ -125,23 +125,23 @@ if (callHistoryController != null) {
 
 Una vez finalizada la transición, el usuario verá la `CallHistoryController` con la lista rellenada.
 
-## <a name="adding-a-storyboard-to-a-non-storyboard-project"></a>Adición de un guión gráfico a un proyecto sin guiones gráficos
+## <a name="adding-a-storyboard-to-a-non-storyboard-project"></a>Agregar un guion gráfico a un proyecto que no es un guion gráfico
 
-En ocasiones es posible que deba agregar un guion gráfico a un archivo previamente sin guiones gráficos. Una vez hacerlo en Visual Studio para Mac se puede optimizar siguiendo los pasos siguientes:
+En ocasiones, puede que tenga que agregar un guion gráfico a un archivo que no es un guion gráfico. Una vez hecho esto en Visual Studio para Mac se puede simplificar mediante los pasos siguientes:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Cree un nuevo archivo de guión gráfico, vaya a **archivo > nuevo archivo > iOS > guión gráfico**, tal y como se muestra a continuación: 
+1. Cree un nuevo archivo de guion gráfico; para ello, vaya a **archivo > nuevo archivo > iOS > guion gráfico**, como se muestra a continuación: 
     
-    [![](images/new-storyboard-xs.png "El cuadro de diálogo nuevo archivo")](images/new-storyboard-xs.png#lightbox)
+    [![](images/new-storyboard-xs.png "Cuadro de diálogo nuevo archivo")](images/new-storyboard-xs.png#lightbox)
 
-2. Agregue el nombre del guion gráfico a la **interfaz principal** sección de la **Info.plist**, tal y como se muestra a continuación:
+2. Agregue el nombre del guion gráfico a la sección de la **interfaz principal** de **info. plist**, como se muestra a continuación:
     
-    [![](images/infoplist.png "El editor Info.plist")](images/infoplist.png#lightbox)
+    [![](images/infoplist.png "Editor de info. plist")](images/infoplist.png#lightbox)
     
-    Esto hace que el equivalente de crear instancias del controlador de vista inicial en el `FinishedLaunching` método dentro del delegado de aplicación. Con esta opción establecida, la aplicación crea una instancia de una ventana (ver abajo), carga el guión gráfico principal y le asigna una instancia de controlador de vista inicial del guión gráfico (el uno al lado de sourceless Segue) como el `RootViewController` propiedad de la ventana y, a continuación, hace la ventana visible en la pantalla.
+    Esto hace el equivalente de crear una instancia del controlador de vista inicial `FinishedLaunching` en el método dentro del delegado de la aplicación. Con esta opción establecida, la aplicación crea una instancia de una ventana (vea más abajo), carga el guión gráfico principal y asigna una instancia del controlador de vista inicial del guión gráfico (el que está junto a la segue sin `RootViewController` código fuente) como la propiedad de la ventana y, a continuación, realiza una ventana visible en la pantalla.
 
-3. En el `AppDelegate`, invalidar el valor predeterminado `Window` método con el código siguiente para implementar la propiedad window:
+3. En, invalide el `Window` método predeterminado, con el código siguiente para implementar la propiedad de la ventana: `AppDelegate`
         
         public override UIWindow Window {
             get;
@@ -150,17 +150,17 @@ En ocasiones es posible que deba agregar un guion gráfico a un archivo previame
             
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Cree un nuevo archivo de guión gráfico con el botón secundario en el proyecto para **Agregar > nuevo archivo > iOS > guion gráfico vacío**, tal y como se muestra a continuación: 
+1. Cree un nuevo archivo de guion gráfico haciendo clic con el botón derecho en el proyecto para **agregar > nuevo archivo > iOS > guion gráfico vacío**, como se muestra a continuación: 
     
-    [![](images/new-storyboard-vs.png "El cuadro de diálogo nuevo elemento")](images/new-storyboard-vs.png#lightbox)
+    [![](images/new-storyboard-vs.png "Cuadro de diálogo nuevo elemento")](images/new-storyboard-vs.png#lightbox)
 
-2. Agregue el nombre del guion gráfico a la **interfaz principal** sección de la aplicación, tal y como se muestra a continuación de iOS:
+2. Agregue el nombre del guion gráfico a la sección **interfaz principal** de la aplicación de iOS, como se muestra a continuación:
     
-    [![](images/ios-app.png "El editor Info.plist")](images/ios-app.png#lightbox)
+    [![](images/ios-app.png "Editor de info. plist")](images/ios-app.png#lightbox)
     
-    Esto hace que el equivalente de crear instancias del controlador de vista inicial en el `FinishedLaunching` método dentro del delegado de aplicación. Con esta opción establecida, la aplicación crea una instancia de una ventana (ver abajo), carga el guión gráfico principal y le asigna una instancia de controlador de vista inicial del guión gráfico (el uno al lado de sourceless Segue) como el `RootViewController` propiedad de la ventana y, a continuación, hace la ventana visible en la pantalla.
+    Esto hace el equivalente de crear una instancia del controlador de vista inicial `FinishedLaunching` en el método dentro del delegado de la aplicación. Con esta opción establecida, la aplicación crea una instancia de una ventana (vea más abajo), carga el guión gráfico principal y asigna una instancia del controlador de vista inicial del guión gráfico (el que está junto a la segue sin `RootViewController` código fuente) como la propiedad de la ventana y, a continuación, realiza una ventana visible en la pantalla.
 
-3. En el `AppDelegate`, invalidar el valor predeterminado `Window` método con el código siguiente para implementar la propiedad window:
+3. En, invalide el `Window` método predeterminado, con el código siguiente para implementar la propiedad de la ventana: `AppDelegate`
 
         public override UIWindow Window {
             get;
@@ -169,53 +169,53 @@ En ocasiones es posible que deba agregar un guion gráfico a un archivo previame
             
 -----
 
-## <a name="creating-a-storyboard-with-the-ios-designer"></a>Creación de un guión gráfico con el Diseñador de iOS
+## <a name="creating-a-storyboard-with-the-ios-designer"></a>Crear un guion gráfico con el diseñador de iOS
 
-Un guión gráfico se puede crear mediante el Diseñador de Xamarin para iOS, que se ha integrado perfectamente con Visual Studio para Mac y Visual Studio.
+Se puede crear un guión gráfico mediante el Xamarin Designer para iOS, que se ha integrado sin problemas con Visual Studio para Mac y Visual Studio.
 
-Para comenzar a usar el Diseñador de iOS para crear guiones gráficos, siga el [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guía. En este tutorial explorará la navegación entre controladores de vista mediante objetos Segue y cómo controlar eventos en los controles.
+Para empezar a usar iOS Designer para crear guiones gráficos, siga la guía [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) . En este tutorial, explorará la navegación entre los controladores de vista mediante objetos segue y la forma de controlar los eventos en los controles.
 
-## <a name="instantiate-storyboards-manually"></a>Crear manualmente una instancia de guiones gráficos
+## <a name="instantiate-storyboards-manually"></a>Crear instancias de guiones gráficos manualmente
 
-Guiones gráficos reemplazan completamente los archivos XIB individuales en el proyecto, sin embargo, los controladores de vista individuales en un guión gráfico todavía se pueden crear instancias mediante `Storyboard.InstantiateViewController`.
+Los guiones gráficos reemplazan por completo los archivos XIB individuales del proyecto, pero todavía se puede crear una instancia de los `Storyboard.InstantiateViewController`controladores de vista individuales de un guión gráfico mediante.
 
-A veces, las aplicaciones tienen requisitos especiales que no se pueden controlar con las transiciones de guiones gráficos integrados proporcionadas por el diseñador. Por ejemplo, si tuviéramos que crear una aplicación que inicia las pantallas de diferentes desde el mismo botón, según el estado actual de una aplicación, nos conviene crear manualmente una instancia de los controladores de vista y la transición de programas nosotros mismos.
+A veces, las aplicaciones tienen requisitos especiales que no se pueden controlar con las transiciones de guion gráfico integradas proporcionadas por el diseñador. Por ejemplo, si vamos a crear una aplicación que inicia diferentes pantallas del mismo botón, según el estado actual de una aplicación, es posible que desee crear una instancia de los controladores de vista manualmente y programar la transición.
 
-La captura de pantalla siguiente muestra dos controladores de vista en la superficie de diseño con n segue entre ellos. La siguiente sección le guiará a través de cómo configurar esa transición en el código.
+En la captura de pantalla siguiente se muestran dos controladores de vista en nuestra superficie de diseño sin segue entre ellos. La siguiente sección le guiará por el modo en que se puede configurar la transición en el código.
 
- [![](images/viewcontrollerspink.png "Esta captura de pantalla muestra dos controladores de vista en la superficie de diseño con n segue entre ellos")](images/viewcontrollerspink.png#lightbox)
+ [![](images/viewcontrollerspink.png "En esta captura de pantalla se muestran dos controladores de vista en la superficie de diseño sin segue entre ellos.")](images/viewcontrollerspink.png#lightbox)
 
-1. Agregar un _guión gráfico de iPhone vacía_ a un proyecto existente del proyecto:
+1. Agregue un _guion gráfico de iPhone vacío_ a un proyecto de proyecto existente:
     
-    [![](images/add-storyboard1.png "Agregar a guión gráfico")](images/add-storyboard1.png#lightbox)
+    [![](images/add-storyboard1.png "Agregar guion gráfico")](images/add-storyboard1.png#lightbox)
 
-2. Haga doble clic en el guión gráfico recién creado para abrirlo y agregue un nuevo **controlador de navegación** a la superficie de diseño. Como el controlador de navegación es menor de la interfaz de usuario, de forma predeterminada viene acompañado de un controlador de vista raíz, como se muestra a continuación:
+2. Haga doble clic en el guion gráfico recién creado para abrirlo y agregar un nuevo **controlador de navegación** a la superficie de diseño. Como el controlador de navegación es sin interfaz de usuario, de forma predeterminada, se incluirá con un controlador de vista raíz, como se muestra a continuación:
 
-    [![](images/uinavigationcontroller.png "Controladores de vista con los objetos Segue")](images/uinavigationcontroller.png#lightbox)
+    [![](images/uinavigationcontroller.png "Ver controladores con objetos segue")](images/uinavigationcontroller.png#lightbox)
 
-3. Seleccione el _View Controller_ haciendo clic en la barra negra situada en la parte inferior. En el diseñador **panel propiedad**, en **identidad** podemos especificar una clase personalizada, así como un identificador único para el controlador de vista. Establecer el **nombre de la clase** y **identificador de guión gráfico** a `MainViewController`.
+3. Seleccione el _controlador de vista_ haciendo clic en la barra negra situada en la parte inferior. En el panel de **propiedades**del diseñador, en **identidad** , podemos especificar una clase personalizada, así como un identificador único para el controlador de vista. Establezca el **nombre de clase** y el identificador `MainViewController`de **guión gráfico** en.
 
-    [![](images/identitypanelnew.png "Especifique la clase personalizada")](images/identitypanelnew.png#lightbox)
+    [![](images/identitypanelnew.png "Especificar clase personalizada")](images/identitypanelnew.png#lightbox)
 
-4. Más adelante, necesitamos crear una instancia de nuestros controladores de vista desde el guión gráfico y usará el identificador de guión gráfico para hacer referencia a ellos en nuestro código. Establecer el identificador de restauración para que coincida con el identificador de guión gráfico, se garantiza que obtiene a volver a crear correctamente el controlador de vista si es necesario restaurar el estado.
+4. Más adelante, tendrá que crear una instancia de los controladores de vista desde el guión gráfico y usará el identificador de guión gráfico para hacer referencia a ellos en el código. El establecimiento del identificador de restauración para que coincida con el identificador de guión gráfico garantiza que el controlador de vista se vuelva a crear correctamente si es necesario restaurar el estado.
 
-5. Actualmente, sólo tiene un controlador de vista. Arrastre otro controlador de vista a la superficie de diseño. En el **panel propiedad**, bajo la identidad, establezca la clase y el identificador de guión gráfico para `PinkViewController`, tal y como se muestra a continuación:
+5. Actualmente solo tenemos un controlador de vista. Arrastre otro controlador de vista a la superficie de diseño. En el **Panel de propiedades**, en identidad, establezca el identificador de clase y `PinkViewController`de guión gráfico en, como se muestra a continuación:
 
-    [![](images/pinkvcnew.png "El panel de propiedades")](images/pinkvcnew.png#lightbox)
+    [![](images/pinkvcnew.png "Panel de propiedades")](images/pinkvcnew.png#lightbox)
     
-    El IDE creará estas clases personalizadas para los controladores de vista. Estos se pueden ver en el **panel de solución**, tal y como se muestra en la captura de pantalla siguiente:
+    El IDE creará estas clases personalizadas para los controladores de vista. Se pueden ver en el **Panel de solución**, como se muestra en la siguiente captura de pantalla:
     
     [![](images/solution-pad.png "Panel de solución")](images/solution-pad.png#lightbox)
 
-6. En el `PinkViewController`, seleccione la vista haciendo hacia el centro del marco del controlador. En el panel de propiedades en la vista, cambiar el **en segundo plano** fucsia:
+6. En el `PinkViewController`, seleccione la vista haciendo clic en el centro del marco del controlador. En el Panel de propiedades, en ver, cambie el **fondo** a magenta:
     
     [![](images/pinkcontroller.png "Establecer el color de fondo")](images/pinkcontroller.png#lightbox)
 
-7. Por último, arrastre un botón desde la **cuadro de herramientas** hasta el `MainViewController`. En el panel de propiedades, asígnele el nombre `PinkButton` y GoToPink el título, como se muestra a continuación:
+7. Por último, arrastre un botón desde el cuadro de `MainViewController` **herramientas** hasta el. En el panel de propiedades, asígnele el nombre `PinkButton` y el título GoToPink, como se muestra a continuación:
 
-    [![](images/pinkbutton.png "Nombre del conjunto de botón")](images/pinkbutton.png#lightbox)
+    [![](images/pinkbutton.png "Establecer nombre de botón")](images/pinkbutton.png#lightbox)
 
-El guión gráfico está completado, pero si se implementa el proyecto ahora, obtenemos una pantalla en blanco. Eso es porque todavía es necesario indicarle al IDE para usar nuestro guión gráfico y para configurar un controlador de vista raíz para que actúe como la primera vista. Normalmente esto puede hacerse a través de nuestras opciones de proyecto, como se indicó anteriormente. Sin embargo en este ejemplo vamos a lograrán el mismo resultado en el código, debe agregar lo siguiente a la **AppDelegate**:
+El guión gráfico está completo, pero si implementamos el proyecto ahora, se producirá una pantalla en blanco. Esto se debe a que aún es necesario indicar al IDE que use el guión gráfico y configurar un controlador de vista raíz para que sirva como la primera vista. Normalmente, esto se puede hacer a través de las opciones del proyecto, como se muestra anteriormente. Sin embargo, en este ejemplo se lograría el mismo resultado en el código, agregando lo siguiente a **AppDelegate**:
 
 ```csharp
 public partial class AppDelegate : UIApplicationDelegate
@@ -238,9 +238,9 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 ```
 
-Es una gran cantidad de código, pero sólo unas pocas líneas no están familiarizadas. Primero, registramos nuestro guión gráfico con el **AppDelegate** pasando en nombre del guión gráfico, **MainStoryboard**. A continuación, se informa al crear una instancia de un controlador de vista inicial desde el guión gráfico mediante una llamada a la aplicación `InstantiateInitialViewController` en el guión gráfico, y se establezca ese controlador de vista como controlador de vista raíz de la aplicación. Este método determina la primera pantalla que ve el usuario, y crea una nueva instancia de ese controlador de vista.
+Esta es una gran cantidad de código, pero solo algunas líneas son desconocidas. En primer lugar, registramos nuestro guion gráfico con el **AppDelegate** pasando el nombre del guión gráfico, **archivo mainstoryboard**. A continuación, se indica a la aplicación que cree una instancia de un controlador de vista inicial `InstantiateInitialViewController` desde el guión gráfico llamando a en nuestro guion gráfico y establecemos ese controlador de vistas como el controlador de vista raíz de la aplicación. Este método determina la primera pantalla que el usuario ve y crea una nueva instancia de ese controlador de vista.
 
-Observe que en el panel de solución que ha creado el IDE una `MainViewcontroller.cs` (clase) y su `corresponding designer.cs` cuando se agrega el nombre de clase en el panel de propiedades en el paso 4. Podemos ver esta clase crea un constructor especial que incluye una clase base:
+Observe que, en el panel de la solución, el `MainViewcontroller.cs` IDE ha creado una `corresponding designer.cs` clase y su al agregar el nombre de la clase al panel de propiedades en el paso 4. Podemos ver que esta clase creó un constructor especial que incluye una clase base:
 
 ```csharp
 public MainViewController (IntPtr handle) : base (handle) 
@@ -249,9 +249,9 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Cuando se crea un guión gráfico mediante el diseñador, el IDE agrega automáticamente el [[registrar]](xref:Foundation.RegisterAttribute) atributo en la parte superior de la `designer.cs` clase y pasar un identificador de cadena, que es idéntico al identificador de guión gráfico especificado en el paso anterior. Esta opción vinculará el C# a la escena en el guión gráfico relevante.
+Al crear un guión gráfico mediante el diseñador, el IDE agregará automáticamente el atributo [[Register]](xref:Foundation.RegisterAttribute) en la parte superior `designer.cs` de la clase y pasará un identificador de cadena, que es idéntico al identificador de guión gráfico especificado en el paso anterior. Esto vinculará C# a la escena correspondiente en el guión gráfico.
 
-En algún momento desea agregar una clase existente que fue **no** creado en el diseñador. En este caso, podría registrar esta clase como normal:
+En algún momento podría querer agregar una clase existente que **no** se creó en el diseñador. En este caso, registraría esta clase como normal:
 
 ```csharp
 [Register ("MainViewController")]
@@ -265,9 +265,9 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-Para obtener más información sobre cómo registrar las clases y métodos, consulte el [tipo registrador](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) documentación.
+Para obtener más información sobre el registro de clases y métodos, consulte la documentación del registrador de [tipos](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
 
-El último paso de esta clase es para conectar el botón y la transición al controlador de vista de color rosa. Se deberá crear una instancia de la `PinkViewController` desde el guión gráfico; a continuación, se programará una inserción segue con `PushViewController`, tal y como se muestra en el ejemplo de código siguiente:
+El último paso de esta clase es conectar el botón y la transición al controlador de vista de color rosa. Se creará una instancia `PinkViewController` del desde el guión gráfico; a continuación, se programará un `PushViewController`segue de extracción con, como se muestra en el código de ejemplo siguiente:
 
 ```csharp
 public partial class MainViewController : UIViewController
@@ -305,40 +305,40 @@ public partial class MainViewController : UIViewController
 }
 ```
 
-Ejecutar la aplicación genera una aplicación de pantalla de 2:
+La ejecución de la aplicación produce una aplicación de dos pantallas:
 
-![](images/finishedstoryboard.png "Las pantallas de ejecución de la aplicación de ejemplo")
+![](images/finishedstoryboard.png "Pantallas de ejecución de la aplicación de ejemplo")
 
-## <a name="conditional-segues"></a>Los objetos Segue condicional
+## <a name="conditional-segues"></a>Objetos segue condicional
 
-A menudo, pasar de un controlador de vista al siguiente depende de una determinada condición. Por ejemplo, si vamos a realizar una pantalla de inicio de sesión simple sería sólo queremos pasar a la siguiente pantalla *si* había verificados el nombre de usuario y la contraseña.
+A menudo, pasar de un controlador de vista a otro depende de una condición determinada. Por ejemplo, si hubiéramos realizado una pantalla de inicio de sesión simple, solo deseamos pasar a la siguiente pantalla *si* se ha comprobado el nombre de usuario y la contraseña.
 
-En el ejemplo siguiente se agregará un campo de contraseña en el ejemplo anterior. El usuario sólo podrá obtener acceso a la *PinkViewController* si se especifica la contraseña correcta, en caso contrario, se mostrará un error.
+En el ejemplo siguiente, vamos a agregar un campo de contraseña al ejemplo anterior. El usuario solo podrá tener acceso a *PinkViewController* si escribe la contraseña correcta; de lo contrario, se mostrará un error.
 
-Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea el guión gráfico, empezar a crear la interfaz de usuario e indicar qué controlador de vista que se usará a nuestro delegado de la aplicación sea RootViewController.
+Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea nuestro guion gráfico, se comienza a crear la interfaz de usuario y se indica a la aplicación que el controlador de vista que se va a usar como RootViewController.
 
-1. Ahora, vamos a compilar nuestra interfaz de usuario y agregar las vistas adicionales enumeradas en la `MainViewController` para darle un aspecto similar en la captura de pantalla siguiente:
+1. Ahora, vamos a crear la interfaz de usuario y agregar las vistas adicionales que aparecen `MainViewController` en la lista para que parezca que en la siguiente captura de pantalla:
 
     - UITextField
         - Nombre: PasswordTextField
-        - Marcador de posición: 'Escribir la contraseña secreta'
+        - Falso ' Escriba la contraseña secreta '
     - UILabel
-        - Texto: 'Error: Contraseña incorrecta. No se deben pasar!'
+        - Negrita 'Error: Contraseña incorrecta. No debe pasar! '
         - Color: Rojo
-        - Alineación: Centrar
-        - Líneas: 2
-        - Casilla 'Hidden' activada    
+        - Ecuación Centrar
+        - Cuadrícula 2
+        - Casilla ' Hidden ' activada    
         
-    [![](images/passwordvc.png "Líneas de referencia")](images/passwordvc.png#lightbox)
+    [![](images/passwordvc.png "Líneas centrales")](images/passwordvc.png#lightbox)
     
-2. Crear un objeto Segue entre el botón Ir a rosa y el controlador de vista por Ctrl y arrastrar desde el *PinkButton* a la *PinkViewController*y seleccionando **Push** de mouse hacia arriba . 
+2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, **y seleccione Activar** al pasar el mouse. 
 
-3. Haga clic en el objeto Segue y asígnele el *identificador* `SegueToPink`:
+3. Haga clic en segue y asígnele el *identificador* `SegueToPink`:
 
-    [![](images/namesegue.png "Haga clic en el objeto Segue y asígnele el identificador de SegueToPink")](images/namesegue.png#lightbox)  
+    [![](images/namesegue.png "Haga clic en segue y asígnele el identificador SegueToPink")](images/namesegue.png#lightbox)  
     
 
-4. Por último, agregue el siguiente método ShouldPerformSegue a la `MainViewController` clase:
+4. Por último, agregue el siguiente método ShouldPerformSegue a `MainViewController` la clase:
 
     ```csharp
     public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
@@ -358,139 +358,139 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea el gu
     }
     ```
 
-En este código nos hemos ajustado el segueIdentifier a nuestro `SegueToPink` segue, por lo que, a continuación, podemos probar una condición; una contraseña válida en este caso. Si la condición devuelve `true`, llevará a cabo el Segue y presentará el `PinkViewController`. Si `false`, no se mostrará el nuevo controlador de vista.
+En este código hemos coincidente con el segueIdentifier en nuestro `SegueToPink` segue, por lo que podemos probar una condición; una contraseña válida en este caso. Si se devuelve `true`la condición, segue realizará y `PinkViewController`presentará. Si `false`es, no se presentará el nuevo controlador de vista.
 
-Podemos aplicar este enfoque para cualquier objeto Segue en este controlador de vista activando el argumento segueIdentifier al método ShouldPerformSegue. En este caso, solo tiene un identificador de Segue: `SegueToPink`.
+Podemos aplicar este enfoque a cualquier segue de este controlador de vista comprobando el argumento segueIdentifier en el método ShouldPerformSegue. En este caso, solo tenemos un identificador segue: `SegueToPink`.
 
-Hacer referencia a la solución Storyboards.Conditional en el [ejemplo guiones gráficos Manual](https://developer.xamarin.com/samples/monotouch/ManualStoryboard/) para obtener un ejemplo ilustrativo.
+Consulte la solución storyboards. Conditional en el [ejemplo de guiones gráficos manuales](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) para obtener un ejemplo práctico.
 
 <a name="Using-Storyboard-References" />
 
-## <a name="using-storyboard-references"></a>Usar referencias a guión gráfico
+## <a name="using-storyboard-references"></a>Usar referencias a guion gráfico
 
-Una referencia de guión gráfico le permite tomar un diseño de guion gráfico grande y complejo y dividirla en menor guiones gráficos que obtengan hace referencia desde el original, por lo tanto, quitando la complejidad y facilitar los guiones gráficos individuales resultantes diseñar y mantener.
+Una referencia de guion gráfico permite tomar un diseño de guion gráfico grande y complejo y dividirlo en guiones gráficos más pequeños a los que se hace referencia desde el original, con lo que se elimina la complejidad y se facilita el diseño y el mantenimiento de los guiones gráficos resultantes.
 
-Además, puede proporcionar una referencia de guión gráfico una _delimitador_ a otra escena en el mismo guión gráfico o una escena concreta en uno diferente.
+Además, una referencia de guion gráfico puede proporcionar un delimitador a otra escena en el mismo guión gráfico o en una determinada escena en otro.
 
 <a name="Referencing-an-External-Storyboard" />
 
-### <a name="referencing-an-external-storyboard"></a>Hacer referencia a un guión gráfico externo
+### <a name="referencing-an-external-storyboard"></a>Referencia a un guión gráfico externo
 
-Para agregar una referencia a un guión gráfico externo, haga lo siguiente:
+Para agregar una referencia a un guion gráfico externo, haga lo siguiente:
 
-1. En el **el Explorador de soluciones**, haga doble clic en el nombre del proyecto y seleccione **agregar** > **nuevo archivo...**   >  **iOS** > **guión gráfico**. Escriba un **nombre** para el nuevo guion gráfico y haga clic en el **New** botón:
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo..** . Guion gráfico de **iOS** > .  >  Escriba un **nombre** para el nuevo guion gráfico y haga clic en el botón **nuevo** :
     
-    [![](images/ref01.png "El cuadro de diálogo nuevo archivo")](images/ref01.png#lightbox)
+    [![](images/ref01.png "Cuadro de diálogo nuevo archivo")](images/ref01.png#lightbox)
     
-2. Definir el diseño de escenas del guión gráfico nuevo como se haría normalmente y guardar los cambios: 
+2. Diseñe el diseño de las escenas del nuevo guión gráfico como lo haría normalmente y guarde los cambios: 
     
     [![](images/ref02.png "El diseño de la nueva escena")](images/ref02.png#lightbox)
     
-3. Abra el guión gráfico que se va a agregar la referencia a en el Diseñador de iOS.
+3. Abra el guion gráfico al que va a agregar la referencia en el diseñador de iOS.
 
-4. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+4. Arrastre una **referencia de guion gráfico** desde el **cuadro de herramientas** hasta el superficie de diseño: 
     
-    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
+    [![](images/ref03.png "Referencia A un guión gráfico")](images/ref03.png#lightbox)
     
-5. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione el nombre de la **guión gráfico** que creó anteriormente: 
+5. En la pestaña **Widget** del **Explorador de propiedades**, seleccione el nombre del **guion gráfico** que creó anteriormente: 
 
-    [![](images/ref04.png "La pestaña de Widget")](images/ref04.png#lightbox)
+    [![](images/ref04.png "La pestaña widget")](images/ref04.png#lightbox)
     
-6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear: 
+6. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear: 
 
     [![](images/ref05.png "Creación de un segue")](images/ref05.png#lightbox) 
     
-7. En el menú emergente, seleccione **mostrar** para completar el Segue: 
+7. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![](images/ref06.png "Seleccione Mostrar para completar el Segue")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Seleccionar Mostrar para completar el segue")](images/ref06.png#lightbox) 
     
-8. Guarde los cambios en el guión gráfico.
+8. Guarde los cambios en el guion gráfico.
 
-Se mostrará cuando se ejecuta la aplicación y el usuario hace clic en el elemento de interfaz de usuario que creó el objeto Segue desde el controlador de vista inicial desde el guión gráfico externo especificado en la referencia de guión gráfico.
+Cuando se ejecuta la aplicación y el usuario hace clic en el elemento de la interfaz de usuario desde el que se creó el segue, se mostrará el controlador de vista inicial del guión gráfico externo especificado en la referencia de guion gráfico.
 
 <a name="Referencing-a-Specific-Scene-in-an-External-Storyboard" />
 
-### <a name="referencing-a-specific-scene-in-an-external-storyboard"></a>Hacer referencia a una escena concreta en un guión gráfico externo
+### <a name="referencing-a-specific-scene-in-an-external-storyboard"></a>Hacer referencia a una escena específica en un guión gráfico externo
 
-Para agregar una referencia a una escena específica un guión gráfico externo (y no en el controlador de vista inicial), realice lo siguiente:
+Para agregar una referencia a una escena específica, un guion gráfico externo (y no el controlador de vista inicial), haga lo siguiente:
 
-1. En el **el Explorador de soluciones**, haga doble clic en el guión gráfico externo para abrirlo y editarlo.
+1. En el **Explorador de soluciones**, haga doble clic en el guion gráfico externo para abrirlo para su edición.
 
-2. Agregue una nueva escena y diseño como lo haría normalmente: 
+2. Agregue una nueva escena y diseñe su diseño como lo haría normalmente: 
 
     [![](images/ref07.png "El nuevo diseño de la escena")](images/ref07.png#lightbox)
     
-3. En el **Widget** pestaña de la **Explorador de propiedades**, escriba un **identificador de guión gráfico** para controlador de vista de la escena nueva: 
+3. En la pestaña **Widget** del **Explorador de propiedades**, escriba un **identificador de guión gráfico** para el controlador de vista de la nueva escena: 
 
-    [![](images/ref08.png "Escriba un identificador de guión gráfico para el nuevo controlador de vista de segundo plano")](images/ref08.png#lightbox)
+    [![](images/ref08.png "Escriba un identificador de guión gráfico para el nuevo controlador de vista de escenas")](images/ref08.png#lightbox)
     
-4. Abra el guión gráfico que se va a agregar la referencia a en el Diseñador de iOS.
+4. Abra el guion gráfico al que va a agregar la referencia en el diseñador de iOS.
 
-5. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+5. Arrastre una **referencia de guion gráfico** desde el **cuadro de herramientas** hasta el superficie de diseño: 
 
-    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
+    [![](images/ref03.png "Referencia A un guión gráfico")](images/ref03.png#lightbox)
     
-6. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione el nombre de la **guión gráfico** y el **Id. de referencia** (identificador de guión gráfico) de la Escena que creó anteriormente: 
+6. En la pestaña **Widget** del **Explorador de propiedades**, seleccione el nombre del **guión gráfico** y el **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![](images/ref09.png "La pestaña de Widget ")](images/ref09.png#lightbox)
+    [![](images/ref09.png "La pestaña widget")](images/ref09.png#lightbox)
     
-7. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear: 
+7. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear: 
 
     [![](images/ref10.png "Creación de un segue")](images/ref10.png#lightbox) 
     
-8. En el menú emergente, seleccione **mostrar** para completar el Segue: 
+8. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![](images/ref06.png "Seleccione Mostrar para completar el Segue")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Seleccionar Mostrar para completar el segue")](images/ref06.png#lightbox) 
     
-9. Guarde los cambios en el guión gráfico.
+9. Guarde los cambios en el guion gráfico.
 
-Cuando la aplicación es la ejecución y el usuario hace clic en el elemento de interfaz de usuario que ha creado el objeto Segue de la escena con la determinada **identificador de guión gráfico** desde el guión gráfico externo especificado en la referencia de guión gráfico se mostrará.
+Cuando se ejecuta la aplicación y el usuario hace clic en el elemento de la interfaz de usuario en el que ha creado el segue, se mostrará la escena con el **identificador de guión gráfico** especificado desde el guión gráfico externo especificado en la referencia de guion gráfico.
 
 <a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard" />
 
-### <a name="referencing-a-specific-scene-in-the-same-storyboard"></a>Hacer referencia a una escena concreta en el mismo guión gráfico
+### <a name="referencing-a-specific-scene-in-the-same-storyboard"></a>Hacer referencia a una escena específica en el mismo guion gráfico
 
-Para agregar una referencia a una escena concreta el mismo guión gráfico, haga lo siguiente:
+Para agregar una referencia a una escena específica del mismo guión gráfico, haga lo siguiente:
 
-1. En el **el Explorador de soluciones**, haga doble clic en el guión gráfico para abrirlo y editarlo.
+1. En el **Explorador de soluciones**, haga doble clic en el guion gráfico para abrirlo para su edición.
 
-2. Agregue una nueva escena y diseño como lo haría normalmente: 
+2. Agregue una nueva escena y diseñe su diseño como lo haría normalmente: 
 
     [![](images/ref11.png "El nuevo diseño de la escena")](images/ref11.png#lightbox)
 
-3. En el **Widget** pestaña de la **Explorador de propiedades**, escriba un **identificador de guión gráfico** para controlador de vista de la escena nueva: 
+3. En la pestaña **Widget** del **Explorador de propiedades**, escriba un **identificador de guión gráfico** para el controlador de vista de la nueva escena: 
 
-    [![](images/ref12.png "La pestaña de Widget")](images/ref12.png#lightbox)
+    [![](images/ref12.png "La pestaña widget")](images/ref12.png#lightbox)
     
-4. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+4. Arrastre una **referencia de guion gráfico** desde el **cuadro de herramientas** hasta el superficie de diseño: 
 
-   [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
+   [![](images/ref03.png "Referencia A un guión gráfico")](images/ref03.png#lightbox)
     
-5. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione **Id. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
+5. En la pestaña **Widget** del **Explorador de propiedades**, seleccione **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![](images/ref13.png "La pestaña de Widget")](images/ref13.png#lightbox)
+    [![](images/ref13.png "La pestaña widget")](images/ref13.png#lightbox)
     
-6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear: 
+6. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear: 
 
     [![](images/ref14.png "Creación de un segue")](images/ref14.png#lightbox) 
     
-7. En el menú emergente, seleccione **mostrar** para completar el Segue: 
+7. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![](images/ref06.png "Seleccione Mostrar para completar el Segue")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Seleccionar Mostrar para completar el segue")](images/ref06.png#lightbox) 
     
-8. Guarde los cambios en el guión gráfico.
+8. Guarde los cambios en el guion gráfico.
 
-Cuando la aplicación es la ejecución y el usuario hace clic en el elemento de interfaz de usuario que ha creado el objeto Segue de la escena con la determinada **identificador de guión gráfico** en el mismo guión gráfico especificado en la referencia de guión gráfico se mostrará.
+Cuando se ejecuta la aplicación y el usuario hace clic en el elemento de la interfaz de usuario en el que ha creado el segue, se mostrará la escena con el **identificador de guión gráfico** especificado en el mismo guion gráfico especificado en la referencia de guion gráfico.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se presenta el concepto de guiones gráficos y cómo pueden ser beneficiosos en el desarrollo de aplicaciones de iOS. Describe escenas, los controladores de vista, vistas y las jerarquías de vista y cómo se vinculan escenas junto con diferentes tipos de objetos Segue.  También se exploran crear instancias de los controladores de vista manualmente desde un guión gráfico y crear objetos Segue condicional.
+En este artículo se presenta el concepto de guiones gráficos y cómo pueden ser beneficiosos en el desarrollo de aplicaciones de iOS. Se describen las escenas, los controladores de vista, las vistas y las jerarquías de vistas y cómo se vinculan las escenas con distintos tipos de objetos segue.  También explora la creación de instancias de los controladores de vista manualmente desde un guion gráfico y la creación de objetos segue condicionales.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Guión gráfico manual (ejemplo)](https://developer.xamarin.com/samples/ManualStoryboard/)
-- [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md)
-- [Convertir a guiones gráficos](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
-- [Referencia de clase UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)
+- [Guion gráfico manual (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [Introducción al diseñador de iOS](~/ios/user-interface/designer/introduction.md)
+- [Convertir en guiones gráficos](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [Referencia de la clase UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)
