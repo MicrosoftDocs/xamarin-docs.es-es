@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: b7ce03b9b28bbcdb6201d17d8819af82d08dc9e8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f1c18c30a2da019fb9d1c09fac17c9f095dafedc
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649343"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739342"
 ---
 # <a name="creating-an-effect"></a>Creación de un efecto
 
@@ -104,45 +104,56 @@ La invalidación de `OnElementPropertyChanged` responde a los cambios de propied
 En el ejemplo de código siguiente se muestra la implementación `FocusEffect` para el proyecto de Android:
 
 ```csharp
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect(typeof(EffectsDemo.Droid.FocusEffect), nameof(EffectsDemo.Droid.FocusEffect))]
+[assembly: ResolutionGroupName("MyCompany")]
+[assembly: ExportEffect(typeof(EffectsDemo.Droid.FocusEffect), nameof(EffectsDemo.Droid.FocusEffect))]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
     {
+        Android.Graphics.Color originalBackgroundColor = new Android.Graphics.Color(0, 0, 0, 0);
         Android.Graphics.Color backgroundColor;
 
-        protected override void OnAttached ()
+        protected override void OnAttached()
         {
-            try {
+            try
+            {
                 backgroundColor = Android.Graphics.Color.LightGreen;
-                Control.SetBackgroundColor (backgroundColor);
-
-            } catch (Exception ex) {
-                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+                Control.SetBackgroundColor(backgroundColor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
             }
         }
 
-        protected override void OnDetached ()
+        protected override void OnDetached()
         {
         }
 
-        protected override void OnElementPropertyChanged (System.ComponentModel.PropertyChangedEventArgs args)
+        protected override void OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs args)
         {
-            base.OnElementPropertyChanged (args);
-            try {
-                if (args.PropertyName == "IsFocused") {
-                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor) {
-                        Control.SetBackgroundColor (Android.Graphics.Color.Black);
-                    } else {
-                        Control.SetBackgroundColor (backgroundColor);
+            base.OnElementPropertyChanged(args);
+            try
+            {
+                if (args.PropertyName == "IsFocused")
+                {
+                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor)
+                    {
+                        Control.SetBackgroundColor(originalBackgroundColor);
+                    }
+                    else
+                    {
+                        Control.SetBackgroundColor(backgroundColor);
                     }
                 }
-            } catch (Exception ex) {
-                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
             }
         }
     }

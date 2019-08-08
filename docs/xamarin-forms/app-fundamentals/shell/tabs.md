@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2019
-ms.openlocfilehash: 365e580d7d1182cca55a53a714ebb2b9be45ce35
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 25fcf40f7ad94bf5c2ba03fca7413fcaaedba09e
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650740"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739245"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Cuando el modelo de navegación para una aplicación incluye un control flotante, el siguiente nivel de navegación de la aplicación es la barra de pestañas de la parte inferior. Además, cuando se cierra el control flotante, la barra de pestañas inferior se puede considerar el nivel superior de navegación.
 
@@ -290,6 +290,6 @@ Además, también se puede aplicar estilo a las pestañas mediante Hojas de esti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Navegación en Xamarin.Forms Shell](navigation.md)
 - [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Propiedades específicas de Xamarin.Forms CSS Shell)

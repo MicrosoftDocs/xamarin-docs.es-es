@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
-ms.openlocfilehash: 017948e83b051713d5135914a0ae250d5b2479e4
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252326"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739305"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 El proceso de creación de una aplicación de Xamarin.Forms Shell es el siguiente:
 
@@ -139,4 +139,4 @@ Al presionar el icono de tres barras, o al deslizar el dedo desde la izquierda, 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

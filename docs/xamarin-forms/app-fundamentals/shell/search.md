@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
-ms.openlocfilehash: df8ecba2527015dd6a7e2fd324b34306295b94d3
-ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
+ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213312"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739249"
 ---
 # <a name="xamarinforms-shell-search"></a>Búsqueda de Xamarin.Forms Shell
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell incluye la funcionalidad de búsqueda integrada que proporciona la clase `SearchHandler`. La funcionalidad de búsqueda se puede agregar a una página mediante el establecimiento de la propiedad adjunta `Shell.SearchHandler` en un objeto `SearchHandler` en subclase. El resultado es un cuadro de búsqueda que se agrega en la parte superior de la página:
 
@@ -326,5 +326,5 @@ Además, la clase `SearchHandler` proporciona los métodos reemplazables siguien
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Navegación en Xamarin.Forms Shell](navigation.md)

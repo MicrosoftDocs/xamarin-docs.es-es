@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
-ms.openlocfilehash: 266dc91e80ced89410046a83cc79e45371e8c0a4
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: dd1dc9b679a46dc082de1fe9b3c5f10b6757c0d8
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66686991"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739281"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introducción a Xamarin.Forms Shell
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móviles al proporcionar las características fundamentales que requieren la mayoría de aplicaciones móviles, como por ejemplo:
 
@@ -53,4 +53,4 @@ Dentro de cada pestaña, se puede navegar a objetos adicionales [`ContentPage`](
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

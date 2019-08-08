@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 73e312a1af56091a7e579d3fcbcea810ee0efb1e
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653872"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820973"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Adición de un reconocedor de gesto de desplazamiento lateral
 
@@ -40,7 +40,7 @@ Esto también se puede lograr en XAML, como se muestra en el ejemplo de código 
 </Image>
 ```
 
-Después, se agrega el código para el controlador de eventos `OnPanUpdated` al archivo de código subyacente:
+Después, se agrega el código del controlador de eventos `OnPanUpdated` al archivo de código subyacente:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -48,9 +48,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
   // Handle the pan
 }
 ```
-
-> [!NOTE]
-> El desplazamiento lateral correcto en Android requiere el [paquete NuGet Xamarin.Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) como mínimo.
 
 ## <a name="creating-a-pan-container"></a>Creación de un contenedor de desplazamiento lateral
 
@@ -147,7 +144,7 @@ Este método actualiza el contenido visible del elemento de interfaz de usuario 
 Al desplazar lateralmente el contenido de un elemento que no ocupa toda la pantalla, el alto y ancho de la ventanilla se pueden obtener de las propiedades [`Height`](xref:Xamarin.Forms.VisualElement.Height) y [`Width`](xref:Xamarin.Forms.VisualElement.Width) del elemento.
 
 > [!NOTE]
-> Mostrar imágenes de alta resolución puede aumentar considerablemente la superficie de memoria de una aplicación. Por tanto, solo se deberían crear cuando sea necesario y deberían liberarse en cuanto la aplicación ya no las necesite. Para más información, vea [Optimizar los recursos de imagen](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Mostrar imágenes de alta resolución puede aumentar considerablemente la superficie de memoria de una aplicación. Por tanto, solo se deberían crear cuando sea necesario y deberían liberarse en cuanto la aplicación ya no las necesite. Para más información, vea [Optimizar los recursos de imagen](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
