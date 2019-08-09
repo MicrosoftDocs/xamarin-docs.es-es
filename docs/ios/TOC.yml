@@ -829,6 +829,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: 'Error en tiempo de ejecución: The assembly mscorlib.dll was not found or could not be loaded'
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: 'Error de compilación: Can not encode offset X in resulting scattered relocation (no se puede codificar el desplazamiento X en la reubicación distribuida resultante)'
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: El archivo IPA es de 0 bytes
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: 'Error de IBTool: The operation couldn’t be completed'
