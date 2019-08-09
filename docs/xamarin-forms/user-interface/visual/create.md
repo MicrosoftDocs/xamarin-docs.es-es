@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 71836021b29094911f9d1ad43639ed103fa18b73
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652815"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869376"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Creación de un representador visual de Xamarin. Forms
 
@@ -104,20 +104,23 @@ Después `CustomVisual` , el tipo se puede registrar en las clases de representa
 
 ## <a name="register-the-ivisual-type"></a>Registrar el tipo de IVisual
 
-En los proyectos de la plataforma, Decore las clases de `ExportRendererAttribute`representador con:
+En los proyectos de la plataforma, decore los espacios de nombres `ExportRendererAttribute`del representador con:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
-public class CustomButtonRenderer : ButtonRenderer
+namespace VisualDemos.iOS
 {
-    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    public class CustomButtonRenderer : ButtonRenderer
     {
-        ...
+        protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+        {
+            // ...
+        }
     }
 }
 ```
 
-`ExportRendererAttribute` En este ejemplo, especifica que la `CustomButtonRenderer` clase se [`Button`](xref:Xamarin.Forms.Button) usará para representar objetos de consumo, con el `IVisual` tipo registrado como tercer argumento. Se usará un representador `IVisual` que especifique un tipo, como `ExportRendererAttribute`parte de su, para representar en las vistas, en lugar del representador predeterminado.
+En este ejemplo del proyecto de plataforma iOS, el `ExportRendererAttribute` especifica que la `CustomButtonRenderer` clase se [`Button`](xref:Xamarin.Forms.Button) usará para representar objetos de consumo, con el `IVisual` tipo registrado como tercer argumento. Se usará un representador `IVisual` que especifique un tipo, como `ExportRendererAttribute`parte de su, para representar en las vistas, en lugar del representador predeterminado.
 
 ## <a name="consume-the-visual-renderer"></a>Usar el representador visual
 

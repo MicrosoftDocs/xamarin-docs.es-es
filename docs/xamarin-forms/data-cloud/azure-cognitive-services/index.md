@@ -1,24 +1,24 @@
 ---
-title: Xamarin.Forms y Azure Cognitive Services
-description: Agregar inteligencia a las aplicaciones de Xamarin.Forms con Azure Cognitive Services, incluido el reconocimiento de voz, corrector ortográfico, traducción de texto y reconocimiento de emociones.
+title: Xamarin. Forms y Azure Cognitive Services
+description: Agregue inteligencia a las aplicaciones de Xamarin. Forms con Azure Cognitive Services, incluido el reconocimiento de voz, el corrector ortográfico, la traducción de texto y el reconocimiento de emociones.
 ms.prod: xamarin
 ms.assetid: 64386A65-FD31-4A1B-A769-91495E57345A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019
-ms.openlocfilehash: f7f8a2c240cb84794bc98f708ddd2a93d090b47d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: fed556dc303fecb92a1ce5b09bfaa1aeb0c61bd0
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659312"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869331"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.Forms y Azure Cognitive Services
+# <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin. Forms y Azure Cognitive Services
 
 ## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
 
-Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles para los desarrolladores para que sus aplicaciones más inteligentes mediante la adición de características como reconocimiento facial, reconocimiento de voz y comprensión del lenguaje. En este artículo se proporciona una introducción a la aplicación de ejemplo que muestra cómo invocar algunas de las API de Microsoft Cognitive Service desde las aplicaciones de Xamarin.Forms.
+Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles para que los desarrolladores puedan hacer que sus aplicaciones sean más inteligentes mediante la adición de características como el reconocimiento facial, el reconocimiento de voz y la comprensión de lenguajes. En este artículo se proporciona una introducción a la aplicación de ejemplo que muestra cómo invocar algunas de las API de servicio cognitiva de Microsoft desde aplicaciones de Xamarin. Forms.
 
 ## <a name="speech-recognitionspeech-recognitionmd"></a>[Reconocimiento de voz](speech-recognition.md)
 
@@ -32,6 +32,6 @@ Bing Spell Check realiza contextual corrector ortográfico para el texto, que pr
 
 Microsoft Translator API puede usarse para traducir el texto de voz y a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una aplicación de Xamarin.Forms.
 
-## <a name="emotion-recognitionemotion-recognitionmd"></a>[Reconocimiento de emociones](emotion-recognition.md)
+## <a name="perceived-emotion-recognitionemotion-recognitionmd"></a>[Reconocimiento de emociones percibido](emotion-recognition.md)
 
 Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms.
