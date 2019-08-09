@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Aplicaciones auxiliares de sistema de archivos'
+title: 'Xamarin.Essentials: Asistentes del sistema de archivos'
 description: La clase FileSystem de Xamarin.Essentials contiene una serie de aplicaciones auxiliares para buscar la caché y los directorios de datos de la aplicación y abrir archivos dentro del paquete de aplicación.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 74089d55006555168d9774924c484cb8866cfb37
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898863"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738862"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Aplicaciones auxiliares de sistema de archivos
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Asistentes del sistema de archivos
 
 La clase **FileSystem** contiene una serie de aplicaciones auxiliares para buscar la caché y los directorios de datos de la aplicación y abrir archivos dentro del paquete de aplicación.
 
@@ -28,7 +28,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-Para obtener el directorio de la aplicación para almacenar **datos en caché**. Los datos en caché se pueden usar para cualquier dato que se tenga que conservar más tiempo que los datos temporales, pero no deben ser datos necesarios para que el funcionamiento sea correcto.
+Para obtener el directorio de la aplicación para almacenar **datos en caché**. Los datos en caché se pueden usar para cualquier dato que se tenga que conservar más tiempo que los temporales, pero no deben ser datos necesarios para que el funcionamiento sea correcto, ya que el sistema operativo es el que determina el momento en el que se borra el almacén.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;
