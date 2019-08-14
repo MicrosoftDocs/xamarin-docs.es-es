@@ -6,12 +6,12 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 47ed7fc1b4485864646a17940aceed395a4a8983
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680909"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978390"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introducción al desarrollo de juegos con monogame
 
@@ -23,7 +23,7 @@ Monogame es una API con aceleración de hardware multiplataforma que proporciona
 
 La primera sección de este tutorial se centra en la configuración de un proyecto vacío. La última sección cubre la escritura de todo el contenido y la lógica del juego, la mayoría de las cuales serán multiplataforma.
 
-Al final de este tutorial, se creará un juego sencillo en el que el reproductor puede controlar un carácter animado con entrada táctil.  Aunque técnicamente no es un juego completo (ya que no tiene condiciones de uso o pérdida), muestra numerosos conceptos de desarrollo de juegos y se puede usar como base para muchos tipos de juegos. 
+Al final de este tutorial, se creará un juego sencillo en el que el reproductor puede controlar un carácter animado con entrada táctil.  Aunque técnicamente no es un juego completo (ya que no tiene condiciones de uso o pérdida), muestra numerosos conceptos de desarrollo de juegos y se puede usar como base para muchos tipos de juegos.
 
 A continuación se muestra el resultado de este tutorial:
 
@@ -31,10 +31,9 @@ A continuación se muestra el resultado de este tutorial:
 
 ## <a name="monogame-and-xna"></a>Monogame y XNA
 
-La biblioteca de monogame está diseñada para imitar la biblioteca XNA de Microsoft en la sintaxis y la funcionalidad.  Todos los objetos monogame existen en el espacio de nombres Microsoft. XNA, lo que permite usar la mayoría del código XNA en monogame sin ninguna modificación. 
+La biblioteca de monogame está diseñada para imitar la biblioteca XNA de Microsoft en la sintaxis y la funcionalidad.  Todos los objetos monogame existen en el espacio de nombres Microsoft. XNA, lo que permite usar la mayoría del código XNA en monogame sin ninguna modificación.
 
 Los desarrolladores familiarizados con XNA ya estarán familiarizados con la sintaxis de monogame y los desarrolladores que busquen información adicional sobre cómo trabajar con monogame podrán hacer referencia a los tutoriales de XNA en línea existentes, a la documentación de API y a las discusiones.
-
 
 ## <a name="walkthrough-parts"></a>Partes del tutorial
 

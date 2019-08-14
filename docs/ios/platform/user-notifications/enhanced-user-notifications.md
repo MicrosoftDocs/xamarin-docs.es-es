@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 775675e11b85bb53bb51c36b71129a086d9dd60f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651262"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980802"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario mejoradas en Xamarin. iOS
 
@@ -78,7 +78,7 @@ Algunos ejemplos de notificaciones remotas son:
 Hay dos tipos de notificaciones remotas disponibles para una aplicación de iOS:
 
 - **Accesible** para el usuario: se muestra al usuario en el dispositivo.
-- **Actualizaciones silenciosas** : proporcionan un mecanismo para actualizar el contenido de una aplicación iOS en segundo plano. Cuando se recibe una actualización silenciosa, la aplicación puede ponerse en contacto con los servidores de eliminación y extraer el contenido más reciente.
+- **Actualizaciones silenciosas** : proporcionan un mecanismo para actualizar el contenido de una aplicación iOS en segundo plano. Cuando se recibe una actualización silenciosa, la aplicación puede ponerse en contacto con los servidores remotos para desplegar el contenido más reciente.
 
 Para obtener más información, consulte la documentación de la [Guía de programación de notificaciones locales y remotas](https://developer.apple.com/documentation/usernotifications) de Apple.
 

@@ -1,0 +1,197 @@
+---
+title: Marco de Xamarin. Forms
+description: La clase de marco de Xamarin. Forms es un diseño que se usa para ajustar una vista o un diseño con un borde que se puede configurar con color, sombra y otras opciones.
+ms.prod: xamarin
+ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/06/2019
+ms.openlocfilehash: 329edf455a4778efa5f6fbd1ec88cfb274c5cb49
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68984427"
+---
+# <a name="xamarinforms-frame"></a>Marco de Xamarin. Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+
+La clase de Xamarin [`Frame`](xref:Xamarin.Forms.Frame) . Forms es un diseño que se usa para ajustar una vista con un borde que se puede configurar con color, sombra y otras opciones. Los marcos se suelen usar para crear bordes alrededor de los controles, pero se pueden usar para crear una interfaz de usuario más compleja. Para obtener más información, consulte [uso avanzado](#advanced-frame-usage)de fotogramas.
+
+En la captura de `Frame` pantalla siguiente se muestran los controles de iOS y Android:
+
+["Ejemplos de marcos en iOS y Android" ejemplos de marcos en iOS y Android ![](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "")
+
+La `Frame` clase define las siguientes propiedades:
+
+* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)es un `Color` valor que determina el color `Frame` del borde.
+* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)es un `float` valor que determina el radio redondeado de la esquina.
+* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow)es un `bool` valor que determina si el marco tiene una sombra paralela.
+
+Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que `Frame` significa que puede ser el destino de los enlaces de datos.
+
+> [!NOTE]
+> El `HasShadow` comportamiento de la propiedad depende de la plataforma. El valor predeterminado es `true` en todas las plataformas. Sin embargo, en las sombras paralelas de UWP no se representan. Las sombras paralelas se representan en Android y en iOS, pero las sombras paralelas en iOS son más oscuras y ocupan más espacio.
+
+## <a name="create-a-frame"></a>Crear un marco
+
+Se `Frame` puede crear una instancia de en XAML. El objeto `Frame` predeterminado tiene un fondo blanco, una sombra paralela y ningún borde. Un `Frame` objeto normalmente ajusta otro control. En el ejemplo siguiente se muestra `Frame` un contenedor `Label` predeterminado de un objeto:
+
+```xaml
+<Frame>
+  <Label Text="Example" />
+</Frame>
+```
+
+También `Frame` se puede crear en el código:
+
+```csharp
+Frame defaultFrame = new Frame
+{
+    Content = new Label { Text = "Example" }
+};
+```
+
+`Frame`los objetos se pueden personalizar con esquinas redondeadas, bordes coloreados y sombras paralelas estableciendo propiedades en el código XAML. En el ejemplo siguiente se muestra `Frame` un objeto personalizado:
+
+```xaml
+<Frame BorderColor="Orange"
+       CornerRadius="10"
+       HasShadow="True">
+  <Label Text="Example" />
+</Frame>
+```
+
+Estas propiedades de instancia también se pueden establecer en el código:
+
+```csharp
+Frame frame = new Frame
+{
+    BorderColor = Color.Orange,
+    CornerRadius = 10,
+    HasShadow = true,
+    Content = new Label { Text = "Example" }
+};
+```
+
+## <a name="advanced-frame-usage"></a>Uso avanzado de fotogramas
+
+La `Frame` clase hereda de `ContentView`, lo que significa que puede contener cualquier tipo de `View` objeto, `Layout` incluidos los objetos. Esta capacidad permite `Frame` que se utilice para crear objetos de interfaz de usuario complejos, como tarjetas.
+
+### <a name="create-a-card-with-a-frame"></a>Crear una tarjeta con un marco
+
+La combinación `Frame` de un objeto `Layout` con un objeto como `StackLayout` un objeto permite la creación de interfaces de usuario más complejas. La siguiente captura de pantalla muestra una tarjeta de ejemplo, `Frame` creada con un objeto:
+
+Captura de pantalla de una tarjeta [creada con un marco en la captura de pantalla de una tarjeta creada con un marco ![](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "")
+
+En el siguiente código XAML se muestra cómo crear una tarjeta `Frame` con la clase:
+
+```xaml
+<Frame BorderColor="Gray"
+       CornerRadius="5"
+       Padding="8">
+  <StackLayout>
+    <Label Text="Card Example"
+           FontSize="Medium"
+           FontAttributes="Bold" />
+    <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+    <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+  </StackLayout>
+</Frame>
+```
+
+También se puede crear una tarjeta en el código:
+
+```csharp
+Frame cardFrame = new Frame
+{
+    BorderColor = Color.Gray,
+    CornerRadius = 5,
+    Padding = 8,
+    Content = new StackLayout
+    {
+        Children =
+        {
+            new Label
+            {
+                Text = "Card Example",
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                FontAttributes = FontAttributes.Bold
+            },
+            new BoxView
+            {
+                Color = Color.Gray,
+                HeightRequest = 2,
+                HorizontalOptions = LayoutOptions.Fill
+            },
+            new Label
+            {
+                Text = "Frames can wrap more complex layouts to create more complex UI components, such as this card!"
+            }
+        }
+    }
+};
+```
+
+### <a name="round-elements"></a>Elementos Round
+
+La `CornerRadius` propiedad`Frame` del control se puede utilizar para crear una imagen de círculo. En la captura de pantalla siguiente se muestra un ejemplo de una imagen redondeada creada mediante un `Frame` objeto:
+
+Captura de pantalla ["captura de pantalla de una imagen de círculo creada con un marco" de una imagen de círculo creada con un marco ![](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "")
+
+En el código XAML siguiente se muestra cómo crear una imagen de círculo en XAML:
+
+```xaml
+<Frame Margin="10"
+       BorderColor="Black"
+       CornerRadius="50"
+       HeightRequest="60"
+       WidthRequest="60"
+       IsClippedToBounds="True"
+       HorizontalOptions="Center"
+       VerticalOptions="Center">
+  <Image Source="outdoors.jpg"
+         Aspect="AspectFill"
+         Margin="-20"
+         HeightRequest="100"
+         WidthRequest="100" />
+</Frame>
+```
+
+También se puede crear una imagen circular en el código:
+
+```csharp
+Frame circleImageFrame = new Frame
+{
+    Margin = 10,
+    BorderColor = Color.Black,
+    CornerRadius = 50,
+    HeightRequest = 60,
+    WidthRequest = 60,
+    IsClippedToBounds = true,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Content = new Image
+    {
+        Source = ImageSource.FromFile("outdoors.jpg"),
+        Aspect = Aspect.AspectFill,
+        Margin = -20,
+        HeightRequest = 100,
+        WidthRequest = 100
+    }
+};
+```
+
+La imagen del **exterior. jpg** debe agregarse a cada proyecto de la plataforma y la manera en que se logra esto varía según la plataforma. Para obtener más información, vea [imágenes de Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
+
+> [!NOTE]
+> Las esquinas redondeadas se comportan de manera ligeramente diferente en las distintas plataformas. El `Image` `Frame` objeto debe ser la mitad de la diferencia entre el ancho de la imagen y el ancho del marco primario, y debe ser negativo para centrar la imagen uniformemente dentro del objeto. `Margin` Sin embargo, no se garantiza el ancho y el alto solicitados `Margin`, `HeightRequest` por `WidthRequest` lo que es posible que sea necesario modificar las propiedades, y en función del tamaño de la imagen y otras opciones de diseño.
+
+## <a name="related-links"></a>Vínculos relacionados
+
+* [Demostraciones de fotogramas](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Imágenes de Xamarin. Forms](~/xamarin-forms/user-interface/images.md)

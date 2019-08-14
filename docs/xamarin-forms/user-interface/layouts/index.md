@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d63dafbb17a3757f5d15f65e977b4b0cb8bc44a
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657030"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980860"
 ---
 # <a name="layouts-in-xamarinforms"></a>Diseños de Xamarin.Forms
 
@@ -32,6 +32,7 @@ A continuación, se describe cada control de diseño, así como detalles sobre c
 * **[RelativeLayout](relative-layout.md)** : se usa para organizar las vistas estableciendo restricciones en relación con las dimensiones de sus elementos primarios & posición.
 * **[Grid](grid.md)** : se usa para organizar las vistas en una cuadrícula. En cuanto a los valores absolutos o proporciones, se pueden especificar las filas y columnas.
 * **[FlexLayout](flex-layout.md)** : se usa para organizar las vistas horizontal o verticalmente con ajuste.
+* **[Marco](frame.md)** : se usa para ajustar una vista con un borde, o marco, que se puede configurar con color, sombra paralela, etc.
 * **[ScrollView](scroll-view.md)** : se usa para proporcionar el desplazamiento cuando una vista no cabe por completo en los límites de la pantalla.
 * **[LayoutOptions](layout-options.md)** : define la alineación y la expansión de una vista, con respecto a su elemento primario.
 * **[Transparencia de entrada](#input_transparency)** : especifica si un elemento recibe una entrada.
@@ -179,6 +180,10 @@ Tenga en cuenta los siguientes aspectos del código anterior:
 - Las cuadrículas y las columnas se especifican explícitamente, no se inferirá del contenido.
 - `Height` y `Width` valores pueden establecerse en estrella, lo que significa que la cuadrícula establecerá esos valores para rellenar el espacio disponible.
 - Posición de cada botón se especifica mediante `Grid.Row`  &  `Grid.Column` propiedades.
+
+### <a name="frameframemd"></a>[Frame](frame.md)
+
+Un `Frame` diseño se usa para crear un borde personalizable alrededor de `View`los elementos secundarios. Se puede usar para colocar un borde alrededor de un control como `Button` o `Label` o puede ajustar otros diseños para crear objetos de interfaz de usuario más complejos, como una tarjeta. `Frame`
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 

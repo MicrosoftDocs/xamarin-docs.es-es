@@ -1,76 +1,76 @@
 ---
-title: Xamarin.Forms DataSourceControl
-description: Este artículo presentan DataSourceControl Xamarin.Forms, que proporcionan una API para rápidamente y enlazar fácilmente un origen de datos a las vistas precompiladas.
+title: Páginas de formularios de Xamarin. Forms
+description: En este artículo se presentan las páginas de datos de Xamarin. Forms, que proporcionan una API para enlazar de forma rápida y sencilla un origen de datos a vistas precompiladas.
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 2a74b636a41a72b26776157a774f0a33ef45a075
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407685"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980771"
 ---
-# <a name="xamarinforms-datapages"></a>Xamarin.Forms DataSourceControl
+# <a name="xamarinforms-datapages"></a>Páginas de formularios de Xamarin. Forms
 
 ![](~/media/shared/preview.png "Esta API está actualmente en versión preliminar")
 
 > [!IMPORTANT]
-> DataSourceControl requiere un [Xamarin.Forms tema](~/xamarin-forms/user-interface/themes/index.md) referencia a representar.
+> Las páginas de formularios requieren una referencia de tema de Xamarin. Forms para representar. Esto implica la instalación del paquete de Nuget [Xamarin. Forms. theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de los paquetes de Nuget [Xamarin. Forms. theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin. Forms. theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
-Xamarin.Forms DataSourceControl se anunciaron en Evolve 2016 y están disponible como una vista previa para clientes probar y proporcionar comentarios.
+Las páginas de formularios de Xamarin. Forms se anunciaron en evolucione 2016 y están disponibles como vista previa para que los clientes puedan probar y proporcionar comentarios.
 
-DataSourceControl proporciona una API para enlazar de forma rápida y sencilla un origen de datos a vistas precompiladas. Elementos de lista y páginas de detalle representarán los datos de forma automática y se pueden personalizar utilizando temas.
+DataSourceControl proporciona una API para enlazar de forma rápida y sencilla un origen de datos a vistas precompiladas. Los elementos de lista y las páginas de detalles representarán los datos automáticamente y se pueden personalizar con temas.
 
-Para ver cómo funciona la demostración del discurso de apertura evolucionan, consulte el [Guía de introducción](get-started.md).
+Para ver cómo funciona la demo de la ponencia de evolución, consulte la [Guía de introducción](get-started.md).
 
 [![](images/demo-sml.png "Aplicación de ejemplo DataSourceControl")](images/demo.png#lightbox "aplicación de ejemplo DataSourceControl")
 
 ## <a name="introduction"></a>Introducción
 
-Orígenes de datos y las páginas de datos asociadas permiten a los desarrolladores rápida y fácilmente consumir un origen de datos admitidos y para representarlo mediante integradas se puede personalizar la interfaz de usuario de scaffolding que con los temas.
+Los orígenes de datos y las páginas de datos asociadas permiten a los desarrolladores consumir de forma rápida y sencilla un origen de datos compatible y representarlo mediante la técnica de la interfaz de usuario integrada que se puede personalizar con los temas.
 
-DataSourceControl se agrega a una aplicación de Xamarin.Forms mediante la inclusión de la **Xamarin.Forms.Pages** paquete Nuget.
+Las páginas de tipos se agregan a una aplicación de Xamarin. Forms incluyendo el paquete de Nuget de **Xamarin. Forms. pages** .
 
 ### <a name="data-sources"></a>Orígenes de datos
 
-La versión preliminar tiene algunos orígenes de datos creada previamente disponibles para su uso:
+La vista previa tiene algunos orígenes de datos predefinidos disponibles para su uso:
 
 * **JsonDataSource**
-* **AzureDataSource** (separe Nuget)
-* **AzureEasyTableDataSource** (separe Nuget)
+* **AzureDataSource** (Nuget independiente)
+* **AzureEasyTableDataSource** (Nuget independiente)
 
-Consulte la [Guía de introducción](get-started.md) para obtener un ejemplo con un `JsonDataSource`.
-
-
-### <a name="pages--controls"></a>Las páginas y controles
-
-Las siguientes páginas y controles se incluyen para permitir el enlace sencillo para los orígenes de datos proporcionado:
-
-* **ListDataPage** : vea la [Introducción al ejemplo](get-started.md).
-* **DirectoryPage** : una lista con agrupación habilitada.
-* **PersonDetailPage** : un elemento de datos únicos en la vista personalizada para un tipo de objeto específico (una entrada de contacto).
-* **DataView** : una vista para exponer datos procedentes del origen de forma genérica.
-* **CardView** : una con el estilo de vista que contiene una imagen, el texto del título y el texto de descripción.
-* **HeroImage** : una vista de la representación de imágenes.
-* **ListItem** : un pregeneradas vista con un diseño similar a los elementos de lista de Android y iOS nativo.
-
-Consulte la [DataSourceControl controla referencia](controls.md) para obtener ejemplos.
+Vea la [Guía de introducción](get-started.md) para obtener un ejemplo de `JsonDataSource`uso de.
 
 
+### <a name="pages--controls"></a>Páginas & controles
 
-### <a name="under-the-hood"></a>En segundo plano
+Se incluyen las siguientes páginas y controles para permitir un enlace sencillo a los orígenes de datos proporcionados:
 
-Un origen de datos de Xamarin.Forms se adhiere a la `IDataSource` interfaz.
+* **ListDataPage** : vea el [ejemplo de introducción](get-started.md).
+* **DirectoryPage** : una lista con la agrupación habilitada.
+* **PersonDetailPage** : una sola vista de elemento de datos personalizada para un tipo de objeto específico (una entrada de contacto).
+* **DataView** : una vista para exponer los datos del origen de forma genérica.
+* **CardView** : vista con estilo que contiene una imagen, texto de título y texto de descripción.
+* **HeroImage** : vista de representación de imágenes.
+* **ListItem** : vista pregenerada con un diseño similar a los elementos de lista nativos de iOS y Android.
 
-La infraestructura de Xamarin.Forms interactúa con un origen de datos a través de las siguientes propiedades:
+Vea la [referencia de controles de páginas de página](controls.md) para obtener ejemplos.
 
-* `Data` : una lista de solo lectura de elementos de datos que se pueden mostrar.
-* `IsLoading` : un valor booleano que indica si los datos se cargan y están disponibles para la representación.
-* `[key]` – un indizador para recuperar elementos.
 
-Hay dos métodos `MaskKey` y `UnmaskKey` que puede utilizarse para ocultar (o mostrar) las propiedades de elementos de datos (es decir impida que se procesa).
-La clave corresponde a la una propiedad con nombre en el objeto de elemento de datos.
+
+### <a name="under-the-hood"></a>En el capó
+
+Un origen de datos de Xamarin. Forms se `IDataSource` adhiere a la interfaz.
+
+La infraestructura de Xamarin. Forms interactúa con un origen de datos a través de las siguientes propiedades:
+
+* `Data`: una lista de solo lectura de los elementos de datos que se pueden mostrar.
+* `IsLoading`: un valor booleano que indica si los datos se cargan y están disponibles para su representación.
+* `[key]`: un indexador para recuperar elementos.
+
+Hay dos métodos `UnmaskKey` que `MaskKey` se pueden usar para ocultar (o mostrar) las propiedades de los elementos de datos (es decir, impedir que se representen).
+La clave corresponde a una propiedad con nombre en el objeto de elemento de datos.
