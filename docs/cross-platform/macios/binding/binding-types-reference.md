@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 65e551669edeebfb3c28d16b4eaa0f9e549eb291
-ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
+ms.openlocfilehash: de0d7ae6ac6a028166c13aa29bf0ea44035eddce
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68665699"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012439"
 ---
 # <a name="binding-types-reference-guide"></a>Guía de referencia de tipos de enlace
 
@@ -232,6 +232,13 @@ public interface UIActionSheetDelegate {
 }
 ```
 
+<a name="DesignatedDefaultCtorAttribute" />
+
+### <a name="designateddefaultctorattribute"></a>DesignatedDefaultCtorAttribute
+
+Cuando este atributo se aplica a la definición de interfaz, generará `[DesignatedInitializer]` un atributo en el constructor predeterminado (generado), que se asigna `init` al selector.
+
+<a name="DisableDefaultCtorAttribute" />
 
 ### <a name="disabledefaultctorattribute"></a>DisableDefaultCtorAttribute
 
@@ -239,6 +246,7 @@ Cuando este atributo se aplica a la definición de interfaz, impedirá que el ge
 
 Utilice este atributo cuando necesite que el objeto se inicialice con uno de los otros constructores de la clase.
 
+<a name="PrivateDefaultCtorAttribute" />
 
 ### <a name="privatedefaultctorattribute"></a>PrivateDefaultCtorAttribute
 
@@ -996,6 +1004,16 @@ Utilice esta propiedad para especificar el valor del objeto que `Task` se devuel
 
 Utilice esta propiedad para personalizar el nombre de los métodos asincrónicos generados.   El valor predeterminado es usar el nombre del método y anexar el texto "Async"; puede utilizarlo para cambiar este valor predeterminado.
 
+<a name="DesignatedInitializerAttribute" />
+
+### <a name="designatedinitializerattribute"></a>DesignatedInitializerAttribute
+
+Cuando este atributo se aplica a un constructor, se generará el `[DesignatedInitializer]` mismo en el ensamblado de plataforma final. Esto sirve para ayudar al IDE a indicar qué constructor se debe utilizar en las subclases.
+
+Se debe asignar al uso de Objective-C/Clang `__attribute__((objc_designated_initializer))`de.
+
+<a name="DisableZeroCopyAttribute" />
+
 ### <a name="disablezerocopyattribute"></a>DisableZeroCopyAttribute
 
 Este atributo se aplica a los parámetros de cadena o a las propiedades de cadena e indica al generador de código que no use el cálculo de referencias de cadenas de copia cero para este parámetro y, en su C# lugar, crea una nueva instancia de NSString a partir de la cadena.
@@ -1010,6 +1028,7 @@ A continuación se muestran dos propiedades de este tipo en Objective-C:
 @property(nonatomic,assign) NSString *name2;
 ```
 
+<a name="DisposeAttribute" />
 
 ### <a name="disposeattribute"></a>DisposeAttribute
 
@@ -1469,6 +1488,13 @@ interface XyzPanel {
 }
 ```
 
+Cuando el `[Wrap]` atributo se aplica a un método dentro de un tipo decorado `[Category]` con un atributo, debe incluir `This` como primer argumento desde que se genera un método de extensión. Por ejemplo:
+
+```csharp
+[Wrap ("Write (This, image, options?.Dictionary, out error)")]
+bool Write (CIImage image, CIImageRepresentationOptions options, out NSError error);
+```
+
 Los miembros generados `[Wrap]` por no `virtual` son de forma predeterminada; si necesita `virtual` un miembro, puede establecer `true` en el `isVirtual` parámetro opcional.
 
 ```csharp
@@ -1479,6 +1505,40 @@ interface FooExplorer {
 
     [Wrap ("FromUrl (NSUrl.FromString (url))", isVirtual: true)]
     void FromUrl (string url);
+}
+```
+
+`[Wrap]`también se puede usar directamente en captadores y establecedores de propiedad.
+Esto permite tener control total sobre ellos y ajustar el código según sea necesario.
+Por ejemplo, considere la siguiente definición de API que usa enumeraciones inteligentes:
+
+```csharp
+// Smart enum.
+enum PersonRelationship {
+        [Field (null)]
+        None,
+
+        [Field ("FMFather", "__Internal")]
+        Father,
+
+        [Field ("FMMother", "__Internal")]
+        Mother
+}
+```
+
+Definición de interfaz:
+
+```csharp
+// Property definition.
+
+[Export ("presenceType")]
+NSString _PresenceType { get; set; }
+
+PersonRelationship PresenceType {
+    [Wrap ("PersonRelationshipExtensions.GetValue (_PresenceType)")]
+    get;
+    [Wrap ("_PresenceType = value.GetConstant ()")]
+    set;
 }
 ```
 
@@ -1904,6 +1964,12 @@ El `[Lion]` atributo se aplica de la misma manera pero en el caso de los tipos i
 Utilice este atributo para ofrecer a los desarrolladores una sugerencia sobre otras API que pueden ser más cómodas de usar.   Por ejemplo, si proporciona una versión fuertemente tipada de una API, puede usar este atributo en el atributo débilmente tipado para dirigir al desarrollador a la mejor API.
 
 La información de este atributo se muestra en la documentación y se pueden desarrollar herramientas para proporcionar sugerencias de usuario sobre cómo mejorar
+
+### <a name="requiressuperattribute"></a>RequiresSuperAttribute
+
+Se trata de una subclase especializada del `[Advice]` atributo que se puede usar para sugerir al desarrollador que invalide un método **requiere** una llamada al método base (invalidado).
+
+Esto corresponde a `clang`[`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
 
 ### <a name="zerocopystringsattribute"></a>ZeroCopyStringsAttribute
 
