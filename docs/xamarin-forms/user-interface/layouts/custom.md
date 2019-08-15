@@ -1,5 +1,5 @@
 ---
-title: Crear un diseño personalizado
+title: Crear un diseño personalizado en Xamarin. Forms
 description: En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout minúsculas orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -7,20 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645200"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024527"
 ---
-# <a name="creating-a-custom-layout"></a>Crear un diseño personalizado
+# <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado en Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms define cuatro clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout y cuadrícula, y cada uno de ellos organiza a sus elementos secundarios de forma diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño que no se proporciona mediante Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout minúsculas orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales._
-
-## <a name="overview"></a>Información general
 
 En Xamarin.Forms, se derivan todas las clases de diseño de la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) clase y restringir el tipo genérico a [ `View` ](xref:Xamarin.Forms.View) y sus tipos derivados. A su vez, el `Layout<T>` clase se deriva de la [ `Layout` ](xref:Xamarin.Forms.Layout) (clase), que proporciona el mecanismo para colocar y secundarios de ajuste de tamaño los elementos.
 
@@ -67,7 +65,7 @@ El [ `Layout` ](xref:Xamarin.Forms.Layout) clase define también un [ `Invalidat
 
 El [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) se puede invalidar para implementar una memoria caché para minimizar las llamadas repetitivas de la [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) métodos de elementos secundarios del diseño. Reemplazar el `InvalidateLayout` método proporcionará una notificación cuando se agregan o se quita del diseño los elementos secundarios. De forma similar, el [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) se puede invalidar el método para proporcionar una notificación cuando uno de los elementos secundarios del diseño cambia de tamaño. Para los reemplazos de método debe responder un diseño personalizado al borrar la caché. Para obtener más información, consulte [calcular y almacenar en caché datos](#caching).
 
-## <a name="creating-a-custom-layout"></a>Crear un diseño personalizado
+## <a name="create-a-custom-layout"></a>Crear un diseño personalizado
 
 El proceso para crear un diseño personalizado es como sigue:
 
@@ -89,7 +87,7 @@ La clase de diseño puede utilizarse, a continuación, agregándolo a un [ `Page
 
 <a name="creating" />
 
-### <a name="creating-a-wraplayout"></a>Creación de un WrapLayout
+### <a name="create-a-wraplayout"></a>Creación de un WrapLayout
 
 La aplicación de ejemplo muestra una orientación distinción `WrapLayout` clase que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales.
 
@@ -107,7 +105,7 @@ public class WrapLayout : Layout<View>
 
 <a name="caching" />
 
-#### <a name="calculating-and-caching-layout-data"></a>Calcular y almacenar en caché datos de diseño
+#### <a name="calculate-and-cache-layout-data"></a>Calcular y almacenar en caché datos de diseño
 
 El `LayoutData` estructura almacena los datos de una colección de elementos secundarios en un número de propiedades:
 
@@ -200,7 +198,7 @@ El `GetLayoutData` método realiza las siguientes operaciones:
 
 <a name="adding_properties" />
 
-#### <a name="adding-properties-backed-by-bindable-properties"></a>Agregar propiedades respaldadas por propiedades enlazables
+#### <a name="add-properties-backed-by-bindable-properties"></a>Agregar propiedades respaldadas por propiedades enlazables
 
 El `WrapLayout` define la clase `ColumnSpacing` y `RowSpacing` propiedades cuyos valores se usan para separar las filas y columnas en el diseño y que están respaldadas por propiedades enlazables. Las propiedades enlazables se muestran en el ejemplo de código siguiente:
 
@@ -230,7 +228,7 @@ Invoca el controlador de cambio de propiedad de cada propiedad enlazable el `Inv
 
 <a name="onmeasure" />
 
-#### <a name="overriding-the-onmeasure-method"></a>Invalidación del método OnMeasure
+#### <a name="override-the-onmeasure-method"></a>Invalidar el método de la acción
 
 El `OnMeasure` invalidación se muestra en el ejemplo de código siguiente:
 
@@ -256,7 +254,7 @@ Invoca la invalidación del `GetLayoutData` método y construcciones un `SizeReq
 
 <a name="layoutchildren" />
 
-#### <a name="overriding-the-layoutchildren-method"></a>Invalidación del método LayoutChildren
+#### <a name="override-the-layoutchildren-method"></a>Invalidar el método LayoutChildren
 
 El `LayoutChildren` invalidación se muestra en el ejemplo de código siguiente:
 
@@ -307,7 +305,7 @@ Para obtener más información sobre la `GetLayoutData` método, consulte [calcu
 
 <a name="invalidatelayout" />
 
-#### <a name="overriding-the-invalidatelayout-method"></a>Invalidación del método InvalidateLayout
+#### <a name="overridethe-invalidatelayout-method"></a>Overridethe InvalidateLayout, método
 
 El [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) invalidación se invoca cuando los elementos secundarios se agregan o quitan del diseño, o cuando una de las `WrapLayout` Propiedades cambie el valor, como se muestra en el ejemplo de código siguiente:
 
@@ -326,7 +324,7 @@ La invalidación invalida el diseño y descarta toda la información de diseño 
 
 <a name="onchildmeasureinvalidated" />
 
-#### <a name="overriding-the-onchildmeasureinvalidated-method"></a>Invalidación del método OnChildMeasureInvalidated
+#### <a name="override-the-onchildmeasureinvalidated-method"></a>Invalidar el método OnChildMeasureInvalidated
 
 El [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) invalidación se invoca cuando cambia el tamaño de uno de los elementos secundarios del diseño y se muestra en el ejemplo de código siguiente:
 
@@ -342,7 +340,7 @@ La invalidación invalida el diseño del elemento secundario y descarta toda la 
 
 <a name="consuming" />
 
-### <a name="consuming-the-wraplayout"></a>Consumir el WrapLayout
+### <a name="consume-the-wraplayout"></a>Consumir el WrapLayout
 
 El `WrapLayout` clase puede utilizarse colocando en un [ `Page` ](xref:Xamarin.Forms.Page) tipo derivado, como se muestra en el ejemplo de código XAML siguiente:
 
