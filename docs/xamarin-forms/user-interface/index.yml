@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
+  ms.date: 08/07/2019
 abstract:
   description: Obtenga información sobre cómo crear interfaces de usuario con Xamarin.Forms.
 sections:
@@ -115,6 +115,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: map.md
             title: Asignaciones
+          - href: menuitem.md
+            html: Obtenga información sobre cómo usar la clase MenuItem para agregar elementos al menú contextual de las celdas de ListView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: menuitem.md
+            title: MenuItem
           - href: picker/index.md
             html: Obtenga información sobre cómo usar el control Picker para seleccionar un elemento de texto de una lista de datos.
             image:
@@ -169,12 +175,24 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
             title: Texto
+          - href: theming.md
+            html: Obtenga información sobre cómo crear temas para aplicaciones Xamarin.Forms y cambiar el tema en tiempo de ejecución.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: theming.md
+            title: Temas
           - href: timepicker.md
             html: Obtenga información sobre cómo usar TimePicker para permitir seleccionar una hora.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: timepicker.md
             title: TimePicker
+          - href: toolbaritem.md
+            html: Obtenga información sobre cómo usar un elemento ToolbarItem para agregar botones a la barra de navegación.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: toolbaritem.md
+            title: ToolbarItem
           - href: visual/index.md
             html: Obtenga información sobre cómo usar los objetos visuales del material de Xamarin.Forms para crear aplicaciones con un aspecto idéntico o casi idéntico en iOS y Android.
             image:

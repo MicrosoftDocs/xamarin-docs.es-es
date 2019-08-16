@@ -49,6 +49,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: hot-reload.md
+            html: Obtenga información sobre cómo usar la recarga activa de XAML para validar rápidamente los cambios de la interfaz de usuario.
+            image:
+              src: ~/media/icons/i_quickstart-3.svg
+              href: hot-reload.md
+            title: Recarga activa
           - href: toolbox.md
             html: Obtenga información sobre cómo usar el cuadro de herramientas XAML para arrastrar controles y diseños de Xamarin.Forms en el editor XAML.
             image:

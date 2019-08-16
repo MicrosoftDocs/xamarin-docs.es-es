@@ -8,13 +8,14 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 561210de29c878b13cda63be337b0b72458b81d2
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.openlocfilehash: d3c73ef7e657641618741f4276f2168f2b76b372
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820986"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521691"
 ---
+<!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
