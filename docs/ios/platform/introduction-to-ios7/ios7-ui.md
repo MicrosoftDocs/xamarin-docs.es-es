@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 5ebfa7348e13e5b168dd7f2decbef921bd7d69e3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e943b10623507278c073e73e5b755bcb5954bdaa
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652122"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528331"
 ---
 # <a name="ios-7-user-interface-overview"></a>Introducción a la interfaz de usuario de iOS 7
 
@@ -130,9 +130,9 @@ También han cambiado otros controles UIKit, incluidos los controles deslizantes
 
 Además de los cambios en UIKit, iOS 7 introduce una variedad de cambios visuales en la interfaz de usuario, entre los que se incluyen:
 
--  Contenido de pantalla completa
--  Apariencia de la barra
--  Color de matiz
+- Contenido de pantalla completa
+- Apariencia de la barra
+- Color de matiz
 
 <a name="fullscreen" />
 

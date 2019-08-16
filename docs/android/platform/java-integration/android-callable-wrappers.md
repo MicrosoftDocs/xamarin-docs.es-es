@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fb00bf4a817ad8188d5a127b23b4a910dd4f23a7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511191"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524133"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Contenedores de Android Callable para Xamarin. Android
 
@@ -40,7 +40,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Si requiere *acceso* a los tipos por nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre `My.ActivityType`completo:
+Si requiere acceso a los tipos por nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre `My.ActivityType`completo:
 
 ```csharp
 namespace My {
@@ -64,11 +64,11 @@ namespace My {
 
 Una vez agregada la configuración de `my.ActivityType` esta propiedad, se puede tener acceso a ella por su `adb` nombre desde el código externo y desde los scripts. El `Name` atributo se puede establecer para muchos tipos diferentes, `Activity`entre los que `BroadcastReceiver`se incluyen `ContentProvider`, `Application`, `Service`, y: 
 
--   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
--   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
--   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
--   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
--   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
+- [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+- [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+- [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+- [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+- [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
 Los nombres de ACW basados en MD5SUM se introdujeron en Xamarin. Android 5,0. Para obtener más información sobre la nomenclatura de atributos, vea [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 

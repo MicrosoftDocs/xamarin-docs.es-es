@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 30e471174d30e58b126c174fd4eacfdbe87d97b0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646058"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522180"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
@@ -25,11 +25,11 @@ Una aplicación Android tarda algún tiempo en iniciarse, especialmente durante 
 
 En esta guía se describe una técnica para implementar una pantalla de presentación en una aplicación de Android. Se tratan los pasos siguientes:
 
-1.  Crear un recurso dibujable para la pantalla de presentación.
+1. Crear un recurso dibujable para la pantalla de presentación.
 
-2.  Definir un nuevo tema que mostrará el recurso que se va a dibujar.
+2. Definir un nuevo tema que mostrará el recurso que se va a dibujar.
 
-3.  Agregar una nueva actividad a la aplicación que se usará como la pantalla de presentación definida por el tema creado en el paso anterior.
+3. Agregar una nueva actividad a la aplicación que se usará como la pantalla de presentación definida por el tema creado en el paso anterior.
 
 [![Ejemplo de pantalla de presentación del logotipo de Xamarin seguida de la pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
@@ -178,11 +178,11 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
     </layer-list>
     ```
 
-3.  Cree la carpeta Resources **/Values-Land** si aún no existe.
+3. Cree la carpeta Resources **/Values-Land** si aún no existe.
 
-4.  Agregue los archivos **colors. XML** y **style. XML** a **valores-terrenos** (se pueden copiar y modificar desde los archivos **valores/colores. XML** y **valores/estilo. XML** existentes).
+4. Agregue los archivos **colors. XML** y **style. XML** a **valores-terrenos** (se pueden copiar y modificar desde los archivos **valores/colores. XML** y **valores/estilo. XML** existentes).
 
-5.  Modifique **Values-Land/Style. XML** para que use la versión horizontal de drawable para `windowBackground`. En este ejemplo, se usa **splash_screen_land. XML** :
+5. Modifique **Values-Land/Style. XML** para que use la versión horizontal de drawable para `windowBackground`. En este ejemplo, se usa **splash_screen_land. XML** :
 
     ```xml
     <resources>
@@ -200,7 +200,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
     </resources>
     ```
 
-6.  Modifique **Values-Land/colors. XML** para configurar los colores que quiere usar para la versión horizontal de la pantalla de presentación. En este ejemplo, el color de fondo de la pantalla de presentación cambia a azul para el modo horizontal:
+6. Modifique **Values-Land/colors. XML** para configurar los colores que quiere usar para la versión horizontal de la pantalla de presentación. En este ejemplo, el color de fondo de la pantalla de presentación cambia a azul para el modo horizontal:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
     </resources>
     ```
 
-7.  Vuelva a compilar y ejecutar la aplicación. Gire el dispositivo al modo horizontal mientras se sigue mostrando la pantalla de presentación. La pantalla de presentación cambia a la versión horizontal:
+7. Vuelva a compilar y ejecutar la aplicación. Gire el dispositivo al modo horizontal mientras se sigue mostrando la pantalla de presentación. La pantalla de presentación cambia a la versión horizontal:
 
     [![Rotación de la pantalla de presentación en modo horizontal](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 

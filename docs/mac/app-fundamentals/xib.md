@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4878f2516e764f3ea01ac89569ab4dfdbdbd37e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5e0f096e5f2c05452a285182db4e455769aa737b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647578"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529023"
 ---
 # <a name="xib-files-in-xamarinmac"></a>archivos. Xib en Xamarin. Mac
 
@@ -79,14 +79,14 @@ En la sección **Propiedades** hay 8 *pestañas de inspectores* diferentes, como
 
 De izquierda a derecha, estas pestañas son:
 
--   **File Inspector** (Inspector de archivos): en esta pestaña se muestra la información del archivo, como el nombre de archivo y la ubicación del archivo Xib que se está editando.
--   **Ayuda rápida**: en la pestaña Ayuda rápida se proporciona ayuda contextual según lo que está seleccionado en Xcode.
--   **Identity Inspector** (Inspector de identidad): en esta pestaña se proporciona información sobre el control o la vista seleccionados.
--   **Inspector de atributos** : el inspector de atributos permite personalizar varios atributos del control o vista seleccionados.
--   **Inspector de tamaño** : el inspector de tamaño le permite controlar el tamaño y el comportamiento de cambio de tamaño del control o vista seleccionados.
--   **Conexiones inspector** : el inspector de conexiones muestra las conexiones de salida y de acción de los controles seleccionados. Examinaremos las salidas y las acciones en un momento.
--   **Inspector de enlaces** : el inspector de enlaces le permite configurar controles para que sus valores se enlacen automáticamente a los modelos de datos.
--   **Inspector de efectos de vista** : el inspector de efectos de la vista permite especificar efectos en los controles, como animaciones.
+- **File Inspector** (Inspector de archivos): en esta pestaña se muestra la información del archivo, como el nombre de archivo y la ubicación del archivo Xib que se está editando.
+- **Ayuda rápida**: en la pestaña Ayuda rápida se proporciona ayuda contextual según lo que está seleccionado en Xcode.
+- **Identity Inspector** (Inspector de identidad): en esta pestaña se proporciona información sobre el control o la vista seleccionados.
+- **Inspector de atributos** : el inspector de atributos permite personalizar varios atributos del control o vista seleccionados.
+- **Inspector de tamaño** : el inspector de tamaño le permite controlar el tamaño y el comportamiento de cambio de tamaño del control o vista seleccionados.
+- **Conexiones inspector** : el inspector de conexiones muestra las conexiones de salida y de acción de los controles seleccionados. Examinaremos las salidas y las acciones en un momento.
+- **Inspector de enlaces** : el inspector de enlaces le permite configurar controles para que sus valores se enlacen automáticamente a los modelos de datos.
+- **Inspector de efectos de vista** : el inspector de efectos de la vista permite especificar efectos en los controles, como animaciones.
 
 En la sección **biblioteca** , puede buscar controles y objetos para colocarlos en el diseñador para crear gráficamente la interfaz de usuario:
 
@@ -271,8 +271,8 @@ Haga lo siguiente:
 
 ¿Qué son las salidas y las acciones? En la programación tradicional de interfaz de usuario de .NET, un control de la interfaz de usuario se expone de forma automática como una propiedad cuando se agrega. En Mac es algo diferente, al agregar simplemente un control a una vista, el código no puede obtener acceso a él. El desarrollador debe exponer de forma explícita el elemento de interfaz de usuario al código. En este orden, Apple nos ofrece dos opciones:
 
--  **Salidas**: las salidas son análogas a las propiedades. Si conecta un control a una salida, se expone al código a través de una propiedad, por lo que puede hacer cosas como adjuntar controladores de eventos, llamar a métodos en él, etc.
--  **Acciones**: las acciones son análogas al patrón de comando en WPF. Por ejemplo, cuando se realiza una acción en un control, por ejemplo, un clic en un botón, el control llamará automáticamente a un método en el código. Las acciones son eficaces y prácticas porque puede conectar muchos controles a la misma acción.
+- **Salidas**: las salidas son análogas a las propiedades. Si conecta un control a una salida, se expone al código a través de una propiedad, por lo que puede hacer cosas como adjuntar controladores de eventos, llamar a métodos en él, etc.
+- **Acciones**: las acciones son análogas al patrón de comando en WPF. Por ejemplo, cuando se realiza una acción en un control, por ejemplo, un clic en un botón, el control llamará automáticamente a un método en el código. Las acciones son eficaces y prácticas porque puede conectar muchos controles a la misma acción.
 
 En Xcode, las salidas y las acciones se agregan directamente en el código a través del *arrastre de control*. Más concretamente, esto significa que para crear una salida o acción, elija el elemento de control al que desea agregar una salida o acción, mantenga presionado el botón de **control** del teclado y arrastre el control directamente a su código.
 

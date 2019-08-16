@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 0746174857f66843ef9a09429b6286f2efca90d6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: af90baf6d7b94973a76bcf391f2cb28c45340602
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420542"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528150"
 ---
 # <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequest"></a>MDocArchiveToMsxDocConverter.exe no encontró rver.BaseCommand.OnRequest
 
 > [!IMPORTANT]
-> Se ha resuelto este problema en versiones recientes de Xamarin. Sin embargo, si el problema se produce en la versión más reciente del software, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con el control de versiones completo completa y la información de salida del registro de compilación.
+> Este problema se ha resuelto en las versiones recientes de Xamarin. Sin embargo, si el problema se produce en la versión más reciente del software, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con la información de control de versiones completa y el resultado del registro de compilación completo.
 
 
 ## <a name="error-message"></a>Mensaje de error
@@ -30,12 +30,12 @@ Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter
   at Mtb.Server.Listener.OnRequest (System.Object state) [0x00000] in <filename unknown>:0
 ```
 
-Hay 2 problemas independientes en este mensaje:
+Hay dos problemas independientes en este mensaje:
 
-1.  `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
+1. `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
 
-    Este error es inofensivo, pero también se presta a confusión. Lo [quitará](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) en una versión futura.
+    Este error es inofensivo, pero también es engañoso. Se [quitará](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) en una versión futura.
 
-2.  `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
+2. `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
 
-    Este error es el problema real. Desafortunadamente, debido a un [limitación](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) este seguimiento de pila de excepción es *incompleta*. Si observa un seguimiento de pila incompleta similar al siguiente en el registro del servidor Mac, puede comprobar el `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` archivo en el host de compilación de Mac para buscar el seguimiento de pila completo.
+    Este error es el problema real. Desafortunadamente, debido a una [limitación](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) , este seguimiento de lapila de excepciones está incompleto. Si observa un seguimiento de la pila incompleto similar al siguiente en el registro del servidor Mac, `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` puede comprobar el archivo en el host de compilación de Mac para buscar el seguimiento de la pila completo.

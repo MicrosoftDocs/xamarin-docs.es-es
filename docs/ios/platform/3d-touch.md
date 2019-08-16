@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 38d58350cf067a2d5f7813250590cc0715b6c9ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647982"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527392"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a la función táctil 3D en Xamarin. iOS
 
@@ -82,7 +82,7 @@ Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede p
 
 [![](3d-touch-images/peekandpop01.png "Ejemplo de cómo inspeccionar el contenido")](3d-touch-images/peekandpop01.png#lightbox)
 
-Si el usuario presiona más duro, entrará en la vista normal de mensajes (lo que se conoce *como ping*en la vista).
+Si el usuario presiona más duro, entrará en la vista normal de mensajes (lo que se conocecomo ping en la vista).
 
 ### <a name="checking-for-3d-touch-availability"></a>Comprobar la disponibilidad de la función táctil 3D
 
@@ -179,7 +179,7 @@ Vuelve a usar la vista que creamos en la vista de **pop** cuando el usuario pres
 
 ### <a name="registering-for-peek-and-pop"></a>Registro para PEEK y pop
 
-En el controlador de vista en el que queremos permitir que el usuario **examine y examine** **los elementos,** es necesario registrarse para este servicio. En el ejemplo anterior de un controlador de vista de tabla`MasterViewController`(), se usaría el siguiente código:
+En el controlador de vista en el que queremos permitir que el usuario examine y examine los elementos, es necesario registrarse para este servicio. En el ejemplo anterior de un controlador de vista de tabla`MasterViewController`(), se usaría el siguiente código:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -274,11 +274,11 @@ Aquí vamos a definir dos elementos de acción rápida estáticos con las claves
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-        ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "Imagen UIApplicationShortcutIconType")
 
-* `UIApplicationShortcutItemSubtitle`: Define el subtítulo del elemento.
-* `UIApplicationShortcutItemTitle`: Define el título del elemento.
-* `UIApplicationShortcutItemType`: Es un valor de cadena que se va a usar para identificar el elemento en la aplicación. Para obtener más información, vea la sección siguiente.
+- `UIApplicationShortcutItemSubtitle`: Define el subtítulo del elemento.
+- `UIApplicationShortcutItemTitle`: Define el título del elemento.
+- `UIApplicationShortcutItemType`: Es un valor de cadena que se va a usar para identificar el elemento en la aplicación. Para obtener más información, vea la sección siguiente.
 
 > [!IMPORTANT]
 > No se puede tener acceso a los elementos de `Info.plist` acceso directo de acción rápida que se `Application.ShortcutItems` establecen en el archivo con la propiedad. Solo se pasan al `HandleShortcutItem` controlador de eventos.

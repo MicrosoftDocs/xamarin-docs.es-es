@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 18e6e82011460a51a96df4694f15b36c5ec94ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510714"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524774"
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -90,7 +90,7 @@ class MyIntentService : IntentService {
 Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes limitaciones:
 
 
--   Los tipos genéricos no `[Export]` pueden `[ExportField`usar o]. Si intenta hacerlo, se generará un `XA4207` error.
+- Los tipos genéricos no `[Export]` pueden `[ExportField`usar o]. Si intenta hacerlo, se generará un `XA4207` error.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -103,7 +103,7 @@ Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes li
     }
     ```
 
--   Los métodos genéricos no `[Export]` pueden `[ExportField]`usar ni:
+- Los métodos genéricos no `[Export]` pueden `[ExportField]`usar ni:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -118,7 +118,7 @@ Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes li
     }
     ```
 
--   `[ExportField]`no se puede usar en métodos que devuelven `void`:
+- `[ExportField]`no se puede usar en métodos que devuelven `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -131,7 +131,7 @@ Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes li
     }
     ```
 
--   _No se deben_ crear instancias de tipos genéricos a partir del código de Java.
+- _No se deben_ crear instancias de tipos genéricos a partir del código de Java.
     Solo se pueden crear de forma segura a partir de código administrado:
 
     ```csharp

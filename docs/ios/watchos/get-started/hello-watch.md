@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 7bc728360c26321c16839c5d67b93a91d2593602
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 26c418355c83da807d6dfa514e58f9bf1675759f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655510"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528428"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
 Una vez que haya creado una solución que siga los pasos de [instalación e instalación](~/ios/watchos/get-started/installation.md), tendrá 3 proyectos:
 
-- La aplicación primaria de iOS que se usa para la configuración u otras tareas administrativas en el dispositivo. (Con otros tipos de extensiones de iOS, a menudo se conoce como la aplicación "contenedor"). Con las aplicaciones de inspección, es posible que los usuarios empiecen a ejecutar la aplicación de **inspección sin ejecutar** la aplicación primaria.
+- La aplicación primaria de iOS que se usa para la configuración u otras tareas administrativas en el dispositivo. (Con otros tipos de extensiones de iOS, a menudo se conoce como la aplicación "contenedor"). Con las aplicaciones de inspección, es posible que los usuarios empiecen a ejecutar la aplicación de inspección sin ejecutar la aplicación primaria.
 - La extensión de inspección que contiene el código de programa de la aplicación de inspección. etc
 - La aplicación de inspección, que contiene los recursos de imagen y guion gráfico que se representan en el reloj.
 
@@ -43,10 +43,10 @@ Ahora debería poder ejecutar la aplicación de inspección, pero como el archiv
 Haga doble clic en interface. Storyboard en la aplicación de inspección para iniciar Xamarin iOS Designer (si está en un equipo Mac, también puede hacer clic con el botón derecho y **abrirlo con > Xcode Interface Builder**).
 
 
-1.  Asegúrese de que los paneles **cuadro de herramientas** y **propiedades** estén visibles,
-1.  Haga clic para seleccionar el controlador de interfaz,
-1.  Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
-1.  Compruebe que la **clase** está establecida en **InterfaceController**
+1. Asegúrese de que los paneles **cuadro de herramientas** y **propiedades** estén visibles,
+1. Haga clic para seleccionar el controlador de interfaz,
+1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
+1. Compruebe que la **clase** está establecida en **InterfaceController**
 
     ![](hello-watch-images/interfacecontrollerattributes.png "Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch")
 
@@ -54,10 +54,10 @@ Haga doble clic en interface. Storyboard en la aplicación de inspección para i
 
 Haga doble clic en interface. Storyboard en la aplicación de inspección para editarlo con Xamarin iOS Designer en Visual Studio:
 
-1.  Abra el panel Propiedades.
-1.  Cambie la clase a **InterfaceController**;
-1.  Haga clic en el controlador de interfaz; etc
-1.  Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
+1. Abra el panel Propiedades.
+1. Cambie la clase a **InterfaceController**;
+1. Haga clic en el controlador de interfaz; etc
+1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
 
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch")
 

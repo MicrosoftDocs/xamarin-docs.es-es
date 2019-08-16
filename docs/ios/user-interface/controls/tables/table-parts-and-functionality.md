@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d6ad088f9223dccb1966148fe8f53d76e85040a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645602"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528596"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Elementos de tabla y funcionalidad de Xamarin. iOS
 
 Un UITableView puede tener un estilo "agrupado" o "sin formato", y consta de las siguientes partes:
 
--  [Encabezado de sección](#Section_Header)
--  [Celdas](#Cells) de (o filas, si lo prefiere)
--  [Pie de sección](#Section_Footer)
--  [Index](#Index)
--  [Modo de edición](#Edit_Features) (incluye ' deslizar rápidamente a eliminar ' y arrastrar Controladores para cambiar el orden de las filas) 
+- [Encabezado de sección](#Section_Header)
+- [Celdas](#Cells) de (o filas, si lo prefiere)
+- [Pie de sección](#Section_Footer)
+- [Index](#Index)
+- [Modo de edición](#Edit_Features) (incluye ' deslizar rápidamente a eliminar ' y arrastrar Controladores para cambiar el orden de las filas) 
 
 Estas capturas de pantalla muestran cómo se muestran las filas, los encabezados, los pies de página, los controles de edición y el índice de la sección.
 

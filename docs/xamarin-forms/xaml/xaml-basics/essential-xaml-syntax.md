@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646568"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529301"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esencial
 
@@ -82,9 +82,9 @@ Estas dos maneras de especificar el `TextColor` propiedad son funcionalmente equ
 
 Con esta nueva sintaxis, se puede introducir cierta terminología útil:
 
--  `Label` es un *elemento object*. Es un objeto Xamarin.Forms expresado como un elemento XML.
--  `Text`, `VerticalOptions`, `FontAttributes` y `FontSize` son *atributos de la propiedad*. Son propiedades de Xamarin.Forms expresadas como atributos XML.
--  En ese fragmento final, `TextColor` se ha convertido en un *elemento property*. Es una propiedad de Xamarin.Forms, pero ahora es un elemento XML.
+- `Label` es un *elemento object*. Es un objeto Xamarin.Forms expresado como un elemento XML.
+- `Text`, `VerticalOptions`, `FontAttributes` y `FontSize` son *atributos de la propiedad*. Son propiedades de Xamarin.Forms expresadas como atributos XML.
+- En ese fragmento final, `TextColor` se ha convertido en un *elemento property*. Es una propiedad de Xamarin.Forms, pero ahora es un elemento XML.
 
 
 En primer lugar parecer la definición de propiedad, es posible que los elementos en sean una infracción de la sintaxis XML, pero no lo es. El período no tiene ningún significado especial en XML. Para un descodificador de XML, `Label.TextColor` es simplemente un elemento secundario normal.
@@ -176,13 +176,13 @@ Ya ha visto que la `Grid` requiere que los elementos de propiedad para el `RowDe
 
 Dentro de la etiqueta para cada miembro secundario de la `Grid` especificar la fila y columna de ese elemento secundario con los siguientes atributos:
 
--  `Grid.Row`
--  `Grid.Column`
+- `Grid.Row`
+- `Grid.Column`
 
 Los valores predeterminados de estos atributos son 0. También puede indicar si un elemento secundario abarca más de una fila o columna con estos atributos:
 
--  `Grid.RowSpan`
--  `Grid.ColumnSpan`
+- `Grid.RowSpan`
+- `Grid.ColumnSpan`
 
 Estos dos atributos tienen valores predeterminados de 1.
 

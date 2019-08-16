@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: 383a49f9baa85d50c956efbdd2ce29e3d62977b4
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485939"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523703"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Aspectos básicos de Xamarin. Android Designer
 
@@ -34,9 +34,9 @@ Del mismo modo, puede Agregar un nuevo diseño haciendo clic con el botón secun
 Esto crea un nuevo archivo de diseño **. axml** y lo carga en el diseñador.
 
 > [!TIP]
-> Las versiones más recientes de Visual Studio admiten la apertura de archivos. XML dentro del Android Designer.
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
 >
-> Los archivos. axml y. XML se admiten en el Android Designer.
+> Android Designer admite tanto archivos .axml como .xml.
 
 ## <a name="designer-features"></a>Características del diseñador
 
@@ -46,17 +46,17 @@ El diseñador se compone de varias secciones que admiten sus diversas caracterí
 
 Al editar un diseño en el diseñador, se usan las siguientes características para crear y dar forma a un diseño:
 
--   **Superficie de diseño** &ndash; Facilita la construcción visual de la interfaz de usuario al proporcionar una representación editable de cómo aparecerá el diseño en el dispositivo. El **superficie de diseño** se muestra en el **Panel de diseño** (con la **barra de herramientas del diseñador** colocada encima).
+- **Superficie de diseño** &ndash; Facilita la construcción visual de la interfaz de usuario al proporcionar una representación editable de cómo aparecerá el diseño en el dispositivo. El **superficie de diseño** se muestra en el **Panel de diseño** (con la **barra de herramientas del diseñador** colocada encima).
 
--   **Panel origen** Proporciona una vista del origen XML subyacente que corresponde al diseño presentado en el superficie de diseño. &ndash;
+- **Panel origen** Proporciona una vista del origen XML subyacente que corresponde al diseño presentado en el superficie de diseño. &ndash;
 
--   **Barra de herramientas del diseñador** &ndash; Muestra una lista de selectores: Configuración de **dispositivo**, **versión**, **tema**, diseño y barra de acciones. La **barra de herramientas del diseñador** también incluye iconos para iniciar el editor de temas y habilitar la cuadrícula de diseño del material.
+- **Barra de herramientas del diseñador** &ndash; Muestra una lista de selectores: Configuración de **dispositivo**, **versión**, **tema**, diseño y barra de acciones. La **barra de herramientas del diseñador** también incluye iconos para iniciar el editor de temas y habilitar la cuadrícula de diseño del material.
 
--   **Cuadro de herramientas** Proporciona una lista de widgets y diseños que puede arrastrar y colocar en el superficie de diseño. &ndash;
+- **Cuadro de herramientas** Proporciona una lista de widgets y diseños que puede arrastrar y colocar en el superficie de diseño. &ndash;
 
--   **Ventana Propiedades** &ndash; Muestra las propiedades del widget seleccionado para su visualización y edición.
+- **Ventana Propiedades** &ndash; Muestra las propiedades del widget seleccionado para su visualización y edición.
 
--   **Esquema del documento** &ndash; Muestra el árbol de widgets que componen el diseño. Puede hacer clic en un elemento del árbol para que se seleccione en el **superficie de diseño**. Además, al hacer clic en un elemento del árbol, se cargan las propiedades del elemento en la ventana **propiedades** .
+- **Esquema del documento** &ndash; Muestra el árbol de widgets que componen el diseño. Puede hacer clic en un elemento del árbol para que se seleccione en el **superficie de diseño**. Además, al hacer clic en un elemento del árbol, se cargan las propiedades del elemento en la ventana **propiedades** .
 
 ## <a name="design-surface"></a>Superficie de diseño
 
@@ -74,31 +74,31 @@ La **barra de herramientas del diseñador** (situada sobre el **superficie de di
 
 La **barra de herramientas del diseñador** proporciona acceso a las siguientes características:
 
--   **Selector de diseño alternativo** &ndash; Permite seleccionar entre diferentes versiones de diseño.
+- **Selector de diseño alternativo** &ndash; Permite seleccionar entre diferentes versiones de diseño.
 
--   **Selector de dispositivos** &ndash; Define un conjunto de calificadores (como el tamaño de la pantalla, la resolución y la disponibilidad del teclado) asociados a un dispositivo determinado. También puede Agregar y eliminar nuevos dispositivos.
+- **Selector de dispositivos** &ndash; Define un conjunto de calificadores (como el tamaño de la pantalla, la resolución y la disponibilidad del teclado) asociados a un dispositivo determinado. También puede Agregar y eliminar nuevos dispositivos.
 
--   **Selector de versión de Android** &ndash; Versión de Android de destino del diseño. El diseñador representará el diseño según la versión de Android seleccionada.
+- **Selector de versión de Android** &ndash; Versión de Android de destino del diseño. El diseñador representará el diseño según la versión de Android seleccionada.
 
--   **Selector de tema** &ndash; Selecciona el tema de la interfaz de usuario para el diseño.
+- **Selector de tema** &ndash; Selecciona el tema de la interfaz de usuario para el diseño.
 
--   **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
+- **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
 
--   **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
+- **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
 
--   **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
+- **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
 
--   **Editor de temas** Abre el *Editor de temas*, lo que permite personalizar los elementos del tema seleccionado. &ndash;
+- **Editor de temas** Abre el *Editor de temas*, lo que permite personalizar los elementos del tema seleccionado. &ndash;
 
--   **Cuadrícula de diseño de materiales** Habilita o deshabilita la *cuadrícula de diseño del material.* &ndash; El elemento de menú desplegable adyacente a la cuadrícula de diseño del material abre un cuadro de diálogo que le permite personalizar la cuadrícula.
+- **Cuadrícula de diseño de materiales** Habilita o deshabilita la *cuadrícula de diseño del material.* &ndash; El elemento de menú desplegable adyacente a la cuadrícula de diseño del material abre un cuadro de diálogo que le permite personalizar la cuadrícula.
 
 Cada una de estas características se explica con más detalle en estos temas:
 
--   [Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los **requisitos de recursos Opciones**y **barra de acciones configuración**.
+- [Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los **requisitos de recursos Opciones**y **barra de acciones configuración**.
 
--   En las [vistas de diseño alternativas](~/android/user-interface/android-designer/alternative-layout-views.md) se explica cómo usar el **selector de diseño alternativo**.
+- En las [vistas de diseño alternativas](~/android/user-interface/android-designer/alternative-layout-views.md) se explica cómo usar el **selector de diseño alternativo**.
 
--   [Las características de diseño de material de Xamarin. Android Designer](~/android/user-interface/android-designer/material-design-features.md) proporcionan información general detallada sobre el **Editor de temas** y la cuadrícula de **diseño de materiales**.
+- [Las características de diseño de material de Xamarin. Android Designer](~/android/user-interface/android-designer/material-design-features.md) proporcionan información general detallada sobre el **Editor de temas** y la cuadrícula de **diseño de materiales**.
 
 ### <a name="context-menu-commands"></a>Comandos del menú contextual
 
@@ -108,9 +108,9 @@ Un menú contextual está disponible tanto en el **superficie de diseño** como 
 
 En este ejemplo, al hacer clic con `TextView` el botón secundario en, se abre un menú contextual que proporciona varias opciones:
 
--   **LinearLayout** abre un submenú para editar el `LinearLayout` elemento primario del `TextView`control. &ndash;
+- **LinearLayout** abre un submenú para editar el `LinearLayout` elemento primario del `TextView`control. &ndash;
 
--   Operaciones de **eliminación**, **copia**y **corte** &ndash; `TextView`que se aplican al clic con el botón secundario.
+- Operaciones de **eliminación**, **copia**y **corte** &ndash; `TextView`que se aplican al clic con el botón secundario.
 
 
 ### <a name="zoom-controls"></a>Controles de zoom
@@ -121,15 +121,15 @@ El **superficie de diseño** admite la ampliación a través de varios controles
 
 Estos controles facilitan la visualización de ciertas áreas de la interfaz de usuario en el diseñador:
 
--   **Resaltar contenedores** Resalta los contenedores en la superficie de diseño de forma que sean más fáciles de encontrar al acercar y alejar. &ndash;
+- **Resaltar contenedores** Resalta los contenedores en la superficie de diseño de forma que sean más fáciles de encontrar al acercar y alejar. &ndash;
 
--   **Tamaño normal** &ndash; Representa el píxel de diseño del píxel para que pueda ver cómo se verá el diseño en la resolución del dispositivo seleccionado.
+- **Tamaño normal** &ndash; Representa el píxel de diseño del píxel para que pueda ver cómo se verá el diseño en la resolución del dispositivo seleccionado.
 
--   **Ajustar a la ventana** &ndash; Establece el nivel de zoom para que todo el diseño esté visible en el superficie de diseño.
+- **Ajustar a la ventana** &ndash; Establece el nivel de zoom para que todo el diseño esté visible en el superficie de diseño.
 
--   **Acercar** &ndash; Acerca de forma incremental con cada clic, ampliando el diseño.
+- **Acercar** &ndash; Acerca de forma incremental con cada clic, ampliando el diseño.
 
--   **Alejar** &ndash; Aleja de forma incremental con cada clic, haciendo que el diseño aparezca más pequeño en el superficie de diseño.
+- **Alejar** &ndash; Aleja de forma incremental con cada clic, haciendo que el diseño aparezca más pequeño en el superficie de diseño.
 
 Tenga en cuenta que la configuración de zoom elegida no afecta a la interfaz de usuario de la aplicación en tiempo de ejecución.
 
@@ -141,17 +141,17 @@ En la franja central situada entre los paneles **diseño** y **origen** , hay va
 
 Estos botones hacen lo siguiente:
 
--   **Diseño** de Este botón de nivel superior, **diseño**, selecciona el panel de **diseño.** &ndash; Al hacer clic en este botón, se habilitan los paneles **cuadro de herramientas** y **propiedades** y no se muestra la barra de herramientas del **Editor de texto** . Cuando se hace clic en el botón contraer (vea más abajo), el panel de **diseño** se presenta solo sin el panel de **origen** .
+- **Diseño** de Este botón de nivel superior, **diseño**, selecciona el panel de **diseño.** &ndash; Al hacer clic en este botón, se habilitan los paneles **cuadro de herramientas** y **propiedades** y no se muestra la barra de herramientas del **Editor de texto** . Cuando se hace clic en el botón contraer (vea más abajo), el panel de **diseño** se presenta solo sin el panel de **origen** .
 
--   **Intercambiar paneles** Este botón (que se asemeja a dos flechas opuestas) intercambia los paneles de diseño y de origen para que el panel de origen se encuentra a la izquierda y el panel de diseño está a la derecha. &ndash; Al hacer clic en él, se vuelven a intercambiar los paneles con sus ubicaciones originales.
+- **Intercambiar paneles** Este botón (que se asemeja a dos flechas opuestas) intercambia los paneles de diseño y de origen para que el panel de origen se encuentra a la izquierda y el panel de diseño está a la derecha. &ndash; Al hacer clic en él, se vuelven a intercambiar los paneles con sus ubicaciones originales.
 
--   **Origen** de Este botón (que se asemeja a dos corchetes angulares opuestos) selecciona el panel **origen.** &ndash; Al hacer clic en este botón, los paneles **cuadro de herramientas** y **propiedades** se deshabilitan y la barra de herramientas del **Editor de texto** se hace visible en la parte superior de Visual Studio. Cuando se haga clic en el botón contraer (vea más abajo), al hacer clic en el botón **origen** se muestra el panel **origen** en lugar del panel **diseño** .
+- **Origen** de Este botón (que se asemeja a dos corchetes angulares opuestos) selecciona el panel **origen.** &ndash; Al hacer clic en este botón, los paneles **cuadro de herramientas** y **propiedades** se deshabilitan y la barra de herramientas del **Editor de texto** se hace visible en la parte superior de Visual Studio. Cuando se haga clic en el botón contraer (vea más abajo), al hacer clic en el botón **origen** se muestra el panel **origen** en lugar del panel **diseño** .
 
--   **División vertical** Este botón (que es similar a una barra vertical) muestra los paneles de **diseño** y de origen en paralelo. &ndash; Esta es la disposición predeterminada.
+- **División vertical** Este botón (que es similar a una barra vertical) muestra los paneles de **diseño** y de origen en paralelo. &ndash; Esta es la disposición predeterminada.
 
--   **División horizontal** Este botón (que es similar a una barra horizontal) muestra el panel de **diseño** sobre el panel de **origen.** &ndash; Se puede hacer clic en los **paneles de intercambio** para colocar el panel de **origen** encima del panel de **diseño** .
+- **División horizontal** Este botón (que es similar a una barra horizontal) muestra el panel de **diseño** sobre el panel de **origen.** &ndash; Se puede hacer clic en los **paneles de intercambio** para colocar el panel de **origen** encima del panel de **diseño** .
 
--   **Contraer panel** Este botón (que se parece a dos corchetes angulares) "contrae" la presentación de dos paneles del diseño y del **origen** en una sola vista de uno de estos paneles. &ndash;
+- **Contraer panel** Este botón (que se parece a dos corchetes angulares) "contrae" la presentación de dos paneles del diseño y del **origen** en una sola vista de uno de estos paneles. &ndash;
     Este botón se convierte en el botón de **Panel de expansión** (similar a dos corchetes angulares que apuntan a la izquierda), en el que se puede hacer clic para devolver la vista al modo de presentación de doble panel (**diseño** y **origen**).
 
 Cuando se hace clic en el **Panel** de contraer, solo se muestra el panel de **diseño** . Sin embargo, puede hacer clic en el botón **origen** para ver en su lugar solo el panel **origen** . Vuelva a hacer clic en el botón **diseño** para volver al panel de **diseño** .
@@ -306,9 +306,9 @@ Del mismo modo, puede Agregar un nuevo diseño haciendo clic con el botón secun
 Esto crea un nuevo archivo. axml y lo carga en el Superficie de diseño.
 
 > [!TIP]
-> Las versiones más recientes de Visual Studio admiten la apertura de archivos. XML dentro del Android Designer.
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
 >
-> Los archivos. axml y. XML se admiten en el Android Designer.
+> Android Designer admite tanto archivos .axml como .xml.
 
 ## <a name="designer-features"></a>Características del diseñador
 
@@ -318,15 +318,15 @@ El diseñador se compone de varias secciones que admiten sus diversas caracterí
 
 Al editar un diseño en el diseñador, se usan las siguientes características para crear y dar forma a un diseño:
 
--   **Superficie de diseño** &ndash; Facilita la construcción visual de la interfaz de usuario al proporcionar una representación editable de cómo aparecerá el diseño en el dispositivo.
+- **Superficie de diseño** &ndash; Facilita la construcción visual de la interfaz de usuario al proporcionar una representación editable de cómo aparecerá el diseño en el dispositivo.
 
--   **Barra de herramientas** &ndash; Muestra una lista de selectores: Configuración de **dispositivo**, **versión**, **tema**, diseño y barra de acciones. La barra de herramientas también incluye iconos para iniciar el editor de temas y habilitar la cuadrícula de diseño de material.
+- **Barra de herramientas** &ndash; Muestra una lista de selectores: Configuración de **dispositivo**, **versión**, **tema**, diseño y barra de acciones. La barra de herramientas también incluye iconos para iniciar el editor de temas y habilitar la cuadrícula de diseño de material.
 
--   **Cuadro de herramientas** &ndash; Proporciona una lista de widgets y diseños que puede arrastrar y colocar en el superficie de diseño.
+- **Cuadro de herramientas** &ndash; Proporciona una lista de widgets y diseños que puede arrastrar y colocar en el superficie de diseño.
 
--   **Panel de propiedades** &ndash; Muestra las propiedades del widget seleccionado para su visualización y edición.
+- **Panel de propiedades** &ndash; Muestra las propiedades del widget seleccionado para su visualización y edición.
 
--   **Esquema del documento** &ndash; Muestra el árbol de widgets que componen el diseño. Puede hacer clic en un elemento del árbol para que se seleccione en el diseñador. Además, al hacer clic en un elemento del árbol, se cargan las propiedades del elemento en el panel de propiedades.
+- **Esquema del documento** &ndash; Muestra el árbol de widgets que componen el diseño. Puede hacer clic en un elemento del árbol para que se seleccione en el diseñador. Además, al hacer clic en un elemento del árbol, se cargan las propiedades del elemento en el panel de propiedades.
 
 ## <a name="toolbar"></a>Barra de herramientas
 
@@ -336,23 +336,23 @@ La barra de herramientas (situada sobre el Superficie de diseño) presenta los s
 
 La barra de herramientas proporciona acceso a las siguientes características:
 
--   **Selector de diseño alternativo** &ndash; Permite seleccionar entre diferentes versiones de diseño.
+- **Selector de diseño alternativo** &ndash; Permite seleccionar entre diferentes versiones de diseño.
 
--   **Selector de dispositivos** &ndash; Define un conjunto de calificadores asociados a un dispositivo determinado, como el tamaño de la pantalla, la resolución y la disponibilidad del teclado. También puede Agregar y eliminar nuevos dispositivos.
+- **Selector de dispositivos** &ndash; Define un conjunto de calificadores asociados a un dispositivo determinado, como el tamaño de la pantalla, la resolución y la disponibilidad del teclado. También puede Agregar y eliminar nuevos dispositivos.
 
--   **Selector de versión de Android** &ndash; Versión de Android de destino del diseño. El diseñador representará el diseño según la versión de Android seleccionada.
+- **Selector de versión de Android** &ndash; Versión de Android de destino del diseño. El diseñador representará el diseño según la versión de Android seleccionada.
 
--   **Selector de tema** &ndash; Selecciona el tema de la interfaz de usuario para el diseño.
+- **Selector de tema** &ndash; Selecciona el tema de la interfaz de usuario para el diseño.
 
--   **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
+- **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
 
--   **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
+- **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
 
--   **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
+- **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
 
--   **Editor de temas** Abre el *Editor de temas*, lo que permite personalizar los elementos del tema seleccionado. &ndash;
+- **Editor de temas** Abre el *Editor de temas*, lo que permite personalizar los elementos del tema seleccionado. &ndash;
 
--   **Cuadrícula de diseño de materiales** Habilita o deshabilita la *cuadrícula de diseño del material.* &ndash; El elemento de menú desplegable adyacente a la cuadrícula de diseño del material abre un cuadro de diálogo que le permite personalizar la cuadrícula.
+- **Cuadrícula de diseño de materiales** Habilita o deshabilita la *cuadrícula de diseño del material.* &ndash; El elemento de menú desplegable adyacente a la cuadrícula de diseño del material abre un cuadro de diálogo que le permite personalizar la cuadrícula.
 
 Cada una de estas características se explica con más detalle en estos temas:
 
@@ -378,9 +378,9 @@ Un menú contextual está disponible tanto en el Superficie de diseño como en e
 
 En este ejemplo, al hacer clic con `Button` el botón secundario en, se abre un menú contextual que proporciona varias opciones:
 
--   **LinearLayout** abre un submenú para editar el `LinearLayout` elemento primario del `Button`control. &ndash;
+- **LinearLayout** abre un submenú para editar el `LinearLayout` elemento primario del `Button`control. &ndash;
 
--   Operaciones de **cortar**, **copiar**y **eliminar** &ndash; `Button`que se aplican al clic con el botón secundario.
+- Operaciones de **cortar**, **copiar**y **eliminar** &ndash; `Button`que se aplican al clic con el botón secundario.
 
 ### <a name="zoom-controls"></a>Controles de zoom
 
@@ -390,15 +390,15 @@ El Superficie de diseño admite la ampliación a través de varios controles, co
 
 Estos controles facilitan la visualización de ciertas áreas de la interfaz de usuario en el diseñador:
 
--   **Resaltar contenedores** &ndash; Resalta los contenedores en la superficie de diseño de forma que sean más fáciles de encontrar al acercar y alejar.
+- **Resaltar contenedores** &ndash; Resalta los contenedores en la superficie de diseño de forma que sean más fáciles de encontrar al acercar y alejar.
 
--   **Tamaño normal** &ndash; Representa el píxel de diseño del píxel para que pueda ver cómo se verá el diseño en la resolución del dispositivo seleccionado.
+- **Tamaño normal** &ndash; Representa el píxel de diseño del píxel para que pueda ver cómo se verá el diseño en la resolución del dispositivo seleccionado.
 
--   **Ajustar a la ventana** &ndash; Establece el nivel de zoom para que todo el diseño esté visible en el superficie de diseño.
+- **Ajustar a la ventana** &ndash; Establece el nivel de zoom para que todo el diseño esté visible en el superficie de diseño.
 
--   **Acercar** &ndash; Acerca de forma incremental con cada clic, ampliando el diseño.
+- **Acercar** &ndash; Acerca de forma incremental con cada clic, ampliando el diseño.
 
--   **Alejar** &ndash; Aleja de forma incremental con cada clic, haciendo que el diseño aparezca más pequeño en el superficie de diseño.
+- **Alejar** &ndash; Aleja de forma incremental con cada clic, haciendo que el diseño aparezca más pequeño en el superficie de diseño.
 
 Tenga en cuenta que la configuración de zoom elegida no afecta a la interfaz de usuario de la aplicación en tiempo de ejecución.
 
@@ -412,15 +412,15 @@ El diseñador admite la edición de las propiedades del widget a través del **P
 
 El panel de propiedades se divide en varias secciones que agrupan propiedades &ndash; similares, lo que facilita la búsqueda de propiedades de interés:
 
--   **Widget** de Propiedades principales del widget, `id`como, `visibility` `text`,, etc. &ndash; Las propiedades para administrar el contenido del widget normalmente se colocan aquí.
+- **Widget** de Propiedades principales del widget, `id`como, `visibility` `text`,, etc. &ndash; Las propiedades para administrar el contenido del widget normalmente se colocan aquí.
 
--   **Estilo** de Propiedades que cambian la apariencia visual del widget, `font`como, `text color` `background`,, etc. &ndash;
+- **Estilo** de Propiedades que cambian la apariencia visual del widget, `font`como, `text color` `background`,, etc. &ndash;
 
--   **Diseño** de &ndash; Propiedades que establecen la ubicación y el tamaño del widget.
+- **Diseño** de &ndash; Propiedades que establecen la ubicación y el tamaño del widget.
 
--   Desplazarse &ndash; Propiedades de desplazamiento.
+- Desplazarse &ndash; Propiedades de desplazamiento.
 
--   **Comportamiento** de &ndash; Marcas que establecen cómo se comporta el widget.
+- **Comportamiento** de &ndash; Marcas que establecen cómo se comporta el widget.
 
 ### <a name="default-values"></a>Valores predeterminados
 

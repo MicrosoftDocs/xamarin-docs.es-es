@@ -1,5 +1,5 @@
 ---
-title: Autenticar un servicio Web de RESTful
+title: Autenticación de un servicio web RESTful
 description: Autenticación básica proporciona acceso a recursos solo a los clientes que tienen las credenciales correctas. En este artículo se explica cómo usar la autenticación básica para proteger el acceso a recursos de servicio web RESTful.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650401"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529203"
 ---
-# <a name="authenticate-a-restful-web-service"></a>Autenticar un servicio Web de RESTful
+# <a name="authenticate-a-restful-web-service"></a>Autenticación de un servicio web RESTful
 
 _HTTP es compatible con el uso de varios mecanismos de autenticación para controlar el acceso a los recursos. Autenticación básica proporciona acceso a recursos solo a los clientes que tienen las credenciales correctas. En este artículo se muestra cómo usar la autenticación básica para proteger el acceso a recursos de servicio web RESTful._
 
@@ -35,7 +35,7 @@ Autenticación básica es el mecanismo de autenticación más sencillo compatibl
 ![](rest-images/basic-authentication-success.png "Dirige la autenticación básica")
 
 > [!NOTE]
-> Sólo debe utilizarse la autenticación básica a través de una conexión HTTPS. Cuando se utiliza en una conexión HTTP, el <code>Authorization</code> encabezado puede descodificar fácilmente si un atacante captura el tráfico HTTP.
+> Sólo debe utilizarse la autenticación básica a través de una conexión HTTPS. Cuando se utiliza en una conexión HTTP, el `Authorization` encabezado puede descodificar fácilmente si un atacante captura el tráfico HTTP.
 
 ## <a name="specifying-basic-authentication-in-a-web-request"></a>Especificar la autenticación básica en una solicitud Web
 
@@ -73,11 +73,11 @@ public class RestService : IRestService
 A continuación, cuando se realiza una solicitud a una operación de servicio web se firma la solicitud con el `Authorization` encabezado, que indica si el usuario tiene permiso para invocar la operación.
 
 > [!NOTE]
-> Si bien este código almacena las credenciales como constantes, no se almacenan en un formato no seguro en una aplicación publicada. El [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet proporciona funcionalidad para almacenar las credenciales de forma segura. Para obtener más información, consulte [almacenar y recuperar información de cuenta en los dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> Aunque este código almacena las credenciales como constantes, no deben almacenarse en un formato no seguro en una aplicación publicada. El [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet proporciona funcionalidad para almacenar las credenciales de forma segura. Para obtener más información, consulte [almacenar y recuperar información de cuenta en los dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
 ## <a name="processing-the-authorization-header-server-side"></a>Procesamiento en el lado del servidor de encabezado de autorización
 
-El servicio REST debe decorar cada acción con el `[BasicAuthentication]` atributo. Este atributo se usa para analizar el `Authorization` encabezado y determinar si las credenciales con codificación base64 válidas comparándolos con los valores almacenados en *Web.config*. Aunque este enfoque es adecuado para un servicio de ejemplo, requieren la extensión para un servicio web de acceso público.
+El servicio Rest debe decorar cada acción con `[BasicAuthentication]` el atributo. Este atributo se usa para analizar el `Authorization` encabezado y determinar si las credenciales codificadas en Base64 son válidas comparándolos con los valores almacenados en *Web. config*. Aunque este enfoque es adecuado para un servicio de ejemplo, debe extenderse para un servicio Web de acceso público.
 
 En el módulo de autenticación básica utilizadas por IIS, los usuarios se autentican con sus credenciales de Windows. Por lo tanto, los usuarios deben tener cuentas en el dominio del servidor. Sin embargo, el modelo de autenticación básica se puede configurar para permitir la autenticación personalizada, donde las cuentas de usuario se autenticarán un origen externo, como una base de datos. Para obtener más información, consulte [autenticación básica en ASP.NET Web API](http://www.asp.net/web-api/overview/security/basic-authentication) en el sitio Web ASP.NET.
 
@@ -86,5 +86,5 @@ En el módulo de autenticación básica utilizadas por IIS, los usuarios se aute
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Consumir un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2256e52e1b2a468ecbed97d5c7ed2d0a05f6cc4e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510748"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524704"
 ---
 # <a name="app-linking-in-android"></a>Vinculación de aplicaciones en Android
 
@@ -159,7 +159,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 
 Se pueden realizar dos pruebas para asegurarse de que los filtros de intención se han configurado correctamente y de que la aplicación se establece como el controlador predeterminado para un URI:
 
-1.  El archivo de recursos digitales se hospeda correctamente como se describió anteriormente. La primera prueba enviará un intento que Android debe redirigir a la aplicación móvil. La aplicación de Android debe iniciar y mostrar la actividad registrada para la dirección URL. En un símbolo del sistema, escriba:
+1. El archivo de recursos digitales se hospeda correctamente como se describió anteriormente. La primera prueba enviará un intento que Android debe redirigir a la aplicación móvil. La aplicación de Android debe iniciar y mostrar la actividad registrada para la dirección URL. En un símbolo del sistema, escriba:
 
     ```shell
     $ adb shell am start -a android.intent.action.VIEW \
@@ -167,7 +167,7 @@ Se pueden realizar dos pruebas para asegurarse de que los filtros de intención 
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2.  Muestra las directivas de control de vínculos existentes para las aplicaciones instaladas en un dispositivo determinado. El siguiente comando volcará una lista de directivas de vínculo para cada usuario en el dispositivo con la siguiente información. En el símbolo del sistema, escriba el siguiente comando:
+2. Muestra las directivas de control de vínculos existentes para las aplicaciones instaladas en un dispositivo determinado. El siguiente comando volcará una lista de directivas de vínculo para cada usuario en el dispositivo con la siguiente información. En el símbolo del sistema, escriba el siguiente comando:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

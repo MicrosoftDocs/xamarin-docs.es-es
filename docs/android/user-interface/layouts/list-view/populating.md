@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: abc7bb09791df115536f552979b48a3a12b4f443
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646347"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522540"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Rellenar un control ListView de Xamarin. Android con datos
 
@@ -62,14 +62,14 @@ Ahora el usuario puede tocar una fila y aparecerá `Toast` una alerta:
 `ArrayAdapter<string>`es excelente debido a su simplicidad, pero es extremadamente limitado. Sin embargo, a menudo se tiene una colección de entidades de negocio, en lugar de solo las cadenas que desea enlazar.
 Por ejemplo, si los datos constan de una colección de clases Employee, es posible que desee que la lista muestre los nombres de cada empleado. Para personalizar el comportamiento de un `ListView` control para controlar qué datos se muestran, debe implementar una subclase `BaseAdapter` de invalidar los cuatro elementos siguientes:
 
--   **Recuento** &ndash; Para indicar al control cuántas filas hay en los datos.
+- **Recuento** &ndash; Para indicar al control cuántas filas hay en los datos.
 
--   **GetView (** &ndash; Para devolver una vista para cada fila, rellenado con datos.
+- **GetView (** &ndash; Para devolver una vista para cada fila, rellenado con datos.
     Este método tiene un parámetro para `ListView` que se pase en una fila existente sin usar para volver a usar.
 
--   **GetItemId** &ndash; Devuelve un identificador de fila (normalmente, el número de fila, aunque puede ser cualquier valor largo que desee).
+- **GetItemId** &ndash; Devuelve un identificador de fila (normalmente, el número de fila, aunque puede ser cualquier valor largo que desee).
 
--   Este indexador &ndash; **[int]** para devolver los datos asociados a un número de fila determinado.
+- Este indexador &ndash; **[int]** para devolver los datos asociados a un número de fila determinado.
 
 En el código de ejemplo de **BasicTableAdapter/HomeScreenAdapter. CS** se muestra cómo `BaseAdapter`subclase:
 
@@ -159,11 +159,11 @@ Un índice de sección proporciona información adicional a los usuarios cuando 
 
 Para implementar `ISectionIndexer` , debe agregar tres métodos a un adaptador:
 
--   **GetSections** &ndash; Proporciona la lista completa de títulos de índice de la sección que se pueden mostrar. Este método requiere una matriz de objetos de Java, por lo que el código `Java.Lang.Object[]` debe crear un objeto a partir de una colección .net. En nuestro ejemplo, devuelve una lista de los caracteres iniciales de la lista como `Java.Lang.String` .
+- **GetSections** &ndash; Proporciona la lista completa de títulos de índice de la sección que se pueden mostrar. Este método requiere una matriz de objetos de Java, por lo que el código `Java.Lang.Object[]` debe crear un objeto a partir de una colección .net. En nuestro ejemplo, devuelve una lista de los caracteres iniciales de la lista como `Java.Lang.String` .
 
--   **GetPositionForSection** &ndash; Devuelve la primera posición de fila de un índice de sección determinado.
+- **GetPositionForSection** &ndash; Devuelve la primera posición de fila de un índice de sección determinado.
 
--   **GetSectionForPosition** &ndash; Devuelve el índice de la sección que se va a mostrar para una fila determinada.
+- **GetSectionForPosition** &ndash; Devuelve el índice de la sección que se va a mostrar para una fila determinada.
 
 
 El archivo `SectionIndex/HomeScreenAdapter.cs` de ejemplo implementa esos métodos y código adicional en el constructor. El constructor crea el índice de la sección recorriendo en bucle todas las filas y extrayendo el primer carácter del título (los elementos ya deben estar ordenados para que funcione).

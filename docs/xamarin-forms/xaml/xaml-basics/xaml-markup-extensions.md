@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655487"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529269"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -441,9 +441,9 @@ El tamaño de los resultantes `BoxView` respecto a la pantalla es dependiente de
 
 Varias extensiones de marcado son intrínsecas de XAML y se admiten en los archivos XAML de Xamarin.Forms. Algunas de ellas no se utilizan muy a menudo, pero son esenciales cuando necesite:
 
--  Si tiene una propiedad que no es `null` valor de forma predeterminada, pero se desea establecerlo en `null`, establézcalo como el `{x:Null}` extensión de marcado.
--  Si una propiedad es de tipo `Type`, puede asignarla a un `Type` objeto mediante la extensión de marcado `{x:Type someClass}`.
--  Puede definir matrices en XAML usando el `x:Array` extensión de marcado. Esta extensión de marcado tiene un atributo obligatorio denominado `Type` que indica el tipo de los elementos de la matriz.
+- Si tiene una propiedad que no es `null` valor de forma predeterminada, pero se desea establecerlo en `null`, establézcalo como el `{x:Null}` extensión de marcado.
+- Si una propiedad es de tipo `Type`, puede asignarla a un `Type` objeto mediante la extensión de marcado `{x:Type someClass}`.
+- Puede definir matrices en XAML usando el `x:Array` extensión de marcado. Esta extensión de marcado tiene un atributo obligatorio denominado `Type` que indica el tipo de los elementos de la matriz.
 - El `Binding` se describe la extensión de marcado en [parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## <a name="the-constraintexpression-markup-extension"></a>La extensión de marcado ConstraintExpression

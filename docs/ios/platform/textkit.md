@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4d4785d6e556c856b0f7b4db2accd87f5297e277
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655369"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528717"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit en Xamarin. iOS
 
@@ -20,17 +20,17 @@ TextKit es una nueva API que ofrece características de representación y diseñ
 
 Para que las características de TextKit estén disponibles para los controles estándar, se han vuelto a implementar varios controles de texto de iOS para usar TextKit, entre los que se incluyen:
 
--  UITextView
--  UITextField
--  UILabel
+- UITextView
+- UITextField
+- UILabel
 
 ## <a name="architecture"></a>Arquitectura
 
 TextKit proporciona una arquitectura en capas que separa el almacenamiento de texto del diseño y la presentación, incluidas las clases siguientes:
 
--  `NSTextContainer`: Proporciona el sistema de coordenadas y la geometría que se usan para el diseño de texto.
--  `NSLayoutManager`: Diseña texto convirtiéndolo en glifos. 
--  `NSTextStorage`: Contiene los datos de texto, así como las actualizaciones de las propiedades de texto por lotes. Todas las actualizaciones por lotes se entregan al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
+- `NSTextContainer`: Proporciona el sistema de coordenadas y la geometría que se usan para el diseño de texto.
+- `NSLayoutManager`: Diseña texto convirtiéndolo en glifos. 
+- `NSTextStorage`: Contiene los datos de texto, así como las actualizaciones de las propiedades de texto por lotes. Todas las actualizaciones por lotes se entregan al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
 
 
 Estas tres clases se aplican a una vista que representa el texto. Las vistas de control de texto integradas, como `UITextView`, `UITextField`y `UILabel` ya las tienen establecidas, pero también puede crearlas y aplicarlas a cualquier `UIView` instancia.

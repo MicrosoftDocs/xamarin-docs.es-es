@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 9387b44419af87785d45a25ab254d3361a5615a3
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485925"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523654"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usar Xamarin. Android Designer
 
@@ -25,9 +25,9 @@ Las interfaces de usuario de Android se pueden crear mediante declaración usand
 En este artículo se muestra cómo usar Xamarin. Android Designer para crear visualmente una interfaz de usuario.
 
 > [!TIP]
-> Las versiones más recientes de Visual Studio admiten la apertura de archivos. XML dentro del Android Designer.
+> Las versiones más recientes de Visual Studio admiten la apertura de archivos .xml dentro de Android Designer.
 >
-> Los archivos. axml y. XML se admiten en el Android Designer.
+> Android Designer admite tanto archivos .axml como .xml.
 
 ## <a name="walkthrough"></a>Tutorial
 
@@ -105,11 +105,11 @@ Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarl
 
 El siguiente paso consiste en modificar la interfaz de usuario para `ImageView` Mostrar la a la izquierda, con `TextView` los dos widgets apilados `ImageView`a la derecha de.
 
-1.  Seleccione el control `ImageView`.
+1. Seleccione el control `ImageView`.
 
-2.  En el **ventana Propiedades**, escriba *ancho* en el cuadro de búsqueda y busque el **ancho del diseño**.
+2. En el **ventana Propiedades**, escriba *ancho* en el cuadro de búsqueda y busque el **ancho del diseño**.
 
-3.  Cambie la configuración de **ancho** de `wrap_content`diseño a:
+3. Cambie la configuración de **ancho** de `wrap_content`diseño a:
 
 ![Establecer ajustar contenido](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
@@ -121,7 +121,7 @@ Al hacer clic en el triángulo `Width` de nuevo `match_parent`, se devuelve el v
 
 [![Seleccionar LinearLayout raíz](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
 
-Con la raíz `LinearLayout` seleccionada, vuelva al panel de **propiedades** , escriba *orientación* en el cuadro de búsqueda y busque la configuración de **orientación** . Cambie  la orientación `horizontal`a:
+Con la raíz `LinearLayout` seleccionada, vuelva al panel de **propiedades** , escriba *orientación* en el cuadro de búsqueda y busque la configuración de **orientación** . Cambie la orientación `horizontal`a:
 
 ![Seleccionar orientación horizontal](designer-walkthrough-images/vs/17-horizontal-orientation-w158.png)
 
@@ -153,11 +153,11 @@ A continuación, ajuste la posición del `LinearLayout` widget que contiene los 
 
 Dado que `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
 
-1.  Seleccione en la **superficie del diseñador.** `ImageView`
+1. Seleccione en la **superficie del diseñador.** `ImageView`
 
-2.  En **propiedades**, escriba *src* en el cuadro de búsqueda.
+2. En **propiedades**, escriba *src* en el cuadro de búsqueda.
 
-3.  Haga clic en el cuadrado pequeño situado a la derecha del valor de la propiedad **src** y seleccione **restablecer**:
+3. Haga clic en el cuadrado pequeño situado a la derecha del valor de la propiedad **src** y seleccione **restablecer**:
 
 [![Borrar el valor src de ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
@@ -357,11 +357,11 @@ Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarl
 
 El siguiente paso consiste en modificar la interfaz de usuario para `ImageView` Mostrar la a la izquierda, con `TextView` los dos widgets apilados `ImageView`a la derecha de.
 
-1.  Con el `ImageView` seleccionado, haga clic en la pestaña **propiedades** .
+1. Con el `ImageView` seleccionado, haga clic en la pestaña **propiedades** .
 
-2.  Justo debajo de la pestaña **propiedades** , haga clic en **diseño**.
+2. Justo debajo de la pestaña **propiedades** , haga clic en **diseño**.
 
-3.  Desplácese hacia abajo hasta **vista** y `Width` cambie la `wrap_content`configuración a:
+3. Desplácese hacia abajo hasta **vista** y `Width` cambie la `wrap_content`configuración a:
 
 [![Establecer ajustar contenido](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
 
@@ -397,11 +397,11 @@ A continuación, ajuste la posición del `LinearLayout` widget que contiene los 
 
 Dado que `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
 
-1.  Seleccione el control `ImageView`.
+1. Seleccione el control `ImageView`.
 
-2.  Haga clic en la pestaña **Widget** en **propiedades**.
+2. Haga clic en la pestaña **Widget** en **propiedades**.
 
-3.  Desactive `Src` la opción para que esté en blanco:
+3. Desactive `Src` la opción para que esté en blanco:
 
 [![Borrar el valor src de ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 

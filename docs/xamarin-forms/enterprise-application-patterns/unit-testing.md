@@ -1,39 +1,39 @@
 ---
-title: Pruebas unitarias de aplicaciones de Enterprise
-description: Este capítulo explica cómo se realiza la prueba unitaria en la aplicación móvil de eShopOnContainers.
+title: Pruebas unitarias de aplicaciones empresariales
+description: En este capítulo se explica cómo se realizan las pruebas unitarias en la aplicación móvil eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831080"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529073"
 ---
-# <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones de Enterprise
+# <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones empresariales
 
-Aplicaciones móviles tienen problemas únicos que escritorio y aplicaciones basadas en web no tienen que preocuparse. Los usuarios móviles variarán los dispositivos que está usando, conectividad de red, la disponibilidad de servicios y un intervalo de otros factores. Por lo tanto, se deben probar aplicaciones móviles que se usará en el mundo real para mejorar su calidad, confiabilidad y rendimiento. Hay muchos tipos de pruebas que deben realizarse en una aplicación, incluidas las pruebas unitarias, pruebas de integración y pruebas, con las pruebas que se va a la forma más común de las pruebas unitarias de interfaz de usuario.
+Las aplicaciones móviles tienen problemas únicos que no tienen que preocuparse por el escritorio y las aplicaciones basadas en Web. Los usuarios móviles variarán en función de los dispositivos que usan, la conectividad de red, la disponibilidad de los servicios y otros factores. Por lo tanto, las aplicaciones móviles deben probarse ya que se usarán en el mundo real para mejorar su calidad, confiabilidad y rendimiento. Hay muchos tipos de pruebas que deben realizarse en una aplicación, incluidas las pruebas unitarias, las pruebas de integración y las pruebas de interfaz de usuario, con pruebas unitarias que son la forma más común de realizar pruebas.
 
-Una prueba unitaria toma una unidad pequeña de la aplicación, normalmente un método, aísla del resto del código y comprueba si se comporta según lo previsto. Su objetivo es comprobar que cada unidad de funcionalidad se ejecuta según lo previsto, así que los errores no propagan a través de la aplicación. Detectar un error en el que ocurre es más eficaz que observar el efecto de un error indirectamente en un punto de error secundario.
+Una prueba unitaria toma una unidad pequeña de la aplicación, normalmente un método, la aísla del resto del código y comprueba que se comporta de la manera esperada. Su objetivo es comprobar que cada unidad de funcionalidad funciona según lo previsto, de modo que los errores no se propaguen a lo largo de la aplicación. Detectar un error en el que se produce es más eficaz que observar el efecto de un error indirectamente en un punto secundario de error.
 
-Las pruebas unitarias tienen el mayor efecto en la calidad del código cuando es una parte integral del flujo de trabajo de desarrollo de software. Tan pronto como se ha escrito un método, se deben escribir pruebas unitarias que comprueben el comportamiento del método en respuesta a estándar, límite e incorrectos de los casos de datos de entrada y dicha comprobación cualquier suposición explícita o implícita creada por el código. Como alternativa, con el desarrollo controlado por pruebas, pruebas unitarias se escriben antes del código. En este escenario, las pruebas unitarias actúan como documentación de diseño y las especificaciones funcionales.
+Las pruebas unitarias tienen el mayor efecto en la calidad del código cuando es una parte integral del flujo de trabajo de desarrollo de software. En cuanto se escribe un método, se deben escribir pruebas unitarias que comprueben el comportamiento del método en respuesta a casos estándar, límite e incorrectos de datos de entrada, y que comprueben cualquier suposición explícita o implícita realizada por el código. Como alternativa, con el desarrollo controlado por pruebas, las pruebas unitarias se escriben antes del código. En este escenario, las pruebas unitarias actúan como documentación de diseño y como especificaciones funcionales.
 
 > [!NOTE]
-> Las pruebas unitarias son muy eficaces contra la regresión: es decir, funcionalidad que funcionan pero ha sido ve perturbada por una actualización fallida.
+> Las pruebas unitarias son muy eficaces contra la regresión, es decir, las funciones que solían funcionar pero que se han alterado por una actualización defectuosa.
 
-Pruebas unitarias suelen usan el patrón assert para organizar act:
+Normalmente, las pruebas unitarias usan el patrón Arrange-Act-Assert:
 
--   El *organizar* sección del método de prueba unitaria inicializa objetos y establece el valor de los datos que se pasan al método sometido a prueba.
--   El *actuar* sección invoca el método sometido a prueba con los argumentos necesarios.
--   El *assert* sección comprueba si la acción del método sometido a prueba se comporta según lo previsto.
+- La sección *Arrange* del método de prueba unitaria inicializa objetos y establece el valor de los datos que se pasan al método en pruebas.
+- La sección *Act* invoca al método en pruebas con los argumentos necesarios.
+- La sección Assert comprueba que la acción del método en pruebas se comporta según lo esperado.
 
-Si sigue este patrón garantiza que las pruebas unitarias son legibles y coherente.
+El siguiente patrón garantiza que las pruebas unitarias son legibles y coherentes.
 
-## <a name="dependency-injection-and-unit-testing"></a>Inserción de dependencias y las pruebas unitarias
+## <a name="dependency-injection-and-unit-testing"></a>Inserción de dependencias y pruebas unitarias
 
 Una de las motivaciones para adoptar una arquitectura de acoplamiento flexible es que facilita las pruebas unitarias. Uno de los tipos registrados con Autofac es la `OrderService` clase. En el ejemplo de código siguiente se muestra un esquema de esta clase:
 
@@ -50,34 +50,34 @@ public class OrderDetailViewModel : ViewModelBase
 }
 ```
 
-El `OrderDetailViewModel` clase tiene una dependencia en el `IOrderService` escriba que el contenedor resuelve cuando crea una instancia de un `OrderDetailViewModel` objeto. Sin embargo, en lugar de crear un `OrderService` objeto pruebas unitarias para el `OrderDetailViewModel` (clase), en su lugar, reemplace el `OrderService` objeto con una simulación con el fin de las pruebas. Figura 10-1 se ilustra esta relación.
+La `OrderDetailViewModel` clase tiene una dependencia en el `IOrderService` tipo que el contenedor resuelve cuando crea una instancia de un `OrderDetailViewModel` objeto. Sin embargo, en lugar de `OrderService` crear un objeto para la `OrderDetailViewModel` prueba unitaria de la clase, en `OrderService` su lugar, reemplace el objeto por un simulacro para el propósito de las pruebas. En la figura 10-1 se muestra esta relación.
 
 ![](unit-testing-images/unittesting.png "Clases que implementan la interfaz IOrderService")
 
 **Figura 10-1:** Clases que implementan la interfaz IOrderService
 
-Este enfoque permite la `OrderService` objeto que se pasan los `OrderDetailViewModel` de clase en tiempo de ejecución y en aras de la capacidad de prueba, permite el `OrderMockService` clase que se pasan la `OrderDetailViewModel` clase en tiempo de prueba. La principal ventaja de este enfoque es que permite que las pruebas unitarias que se ejecutará sin necesidad de difícil de manejar recursos como servicios web o bases de datos.
+Este enfoque permite pasar `OrderService` el objeto a la `OrderDetailViewModel` clase en tiempo de ejecución y, en aras de la capacidad de prueba, permite pasar `OrderMockService` la clase a la clase en `OrderDetailViewModel` el momento de la prueba. La principal ventaja de este enfoque es que permite que las pruebas unitarias se ejecuten sin necesidad de recursos difíciles de manejar, como los servicios web o las bases de datos.
 
-## <a name="testing-mvvm-applications"></a>Probar las aplicaciones MVVM
+## <a name="testing-mvvm-applications"></a>Prueba de aplicaciones MVVM
 
-Probar los modelos y los modelos de vista de las aplicaciones MVVM es idéntica a las pruebas de otras clases y las mismas herramientas y técnicas, como la prueba unitaria y simulación, se pueden usar. Sin embargo, hay algunos patrones típicos de modelo y las clases de modelo de vista, que pueden beneficiarse de las técnicas de pruebas de unidad específica.
+Probar modelos y ver modelos de aplicaciones MVVM es idéntico a probar cualquier otra clase y se pueden usar las mismas herramientas y técnicas, como pruebas unitarias y simulacros. Sin embargo, hay algunos patrones que son típicos para modelar y ver las clases de modelo, que pueden beneficiarse de las técnicas de prueba unitaria específicas.
 
 > [!TIP]
-> Probar una cosa con cada prueba unitaria. No tener la tentación de hacer que una unidad de prueba más de uno de los aspectos del comportamiento de la unidad de ejercicio. Esto puede dar lugar a las pruebas que son difíciles de leer y actualizar. También puede provocar confusión al interpretar un error.
+> Pruebe una cosa con cada prueba unitaria. No esté tentado de hacer que una prueba unitaria ejerza más de un aspecto del comportamiento de la unidad. Esto conduce a las pruebas que son difíciles de leer y actualizar. También puede generar confusión al interpretar un error.
 
-Los usos de la aplicación móvil de eShopOnContainers [xUnit](https://xunit.github.io/) para realizar las pruebas unitarias, que admite dos tipos diferentes de las pruebas unitarias:
+La aplicación móvil eShopOnContainers usa [xUnit](https://xunit.github.io/) para realizar pruebas unitarias, que admite dos tipos diferentes de pruebas unitarias:
 
--   Los hechos son las pruebas que están siempre es true, que prueba las condiciones invariantes.
--   Teorías son pruebas que sólo son true para un determinado conjunto de datos.
+- Los hechos son pruebas que siempre son verdaderas, que prueban las condiciones invariables.
+- Las teorías son pruebas que solo son verdaderas para un conjunto determinado de datos.
 
-Las pruebas unitarias incluidas con la aplicación móvil de eShopOnContainers son pruebas de hechos y, por lo que cada método de prueba unitaria está decorada con el `[Fact]` atributo.
+Las pruebas unitarias que se incluyen con la aplicación móvil eShopOnContainers son pruebas de hechos y, por lo tanto, cada `[Fact]` método de prueba unitaria se decora con el atributo.
 
 > [!NOTE]
-> un ejecutor de pruebas ejecuta las pruebas de xUnit. Para ejecutar el ejecutor de pruebas, ejecute el proyecto eShopOnContainers.TestRunner para la plataforma requerida.
+> las pruebas xUnit se ejecutan en un ejecutor de pruebas. Para ejecutar el ejecutor de pruebas, ejecute el proyecto eShopOnContainers. TestRunner para la plataforma necesaria.
 
 ### <a name="testing-asynchronous-functionality"></a>Probar la funcionalidad asincrónica
 
-Al implementar el patrón MVVM, los modelos de vista normalmente invocan operaciones en servicios, a menudo forma asincrónica. Pruebas para el código que invoca normalmente estas operaciones utilizan objetos ficticios como reemplazos para los servicios reales. El siguiente ejemplo de código muestra cómo probar la funcionalidad asincrónica al pasar de un servicio ficticio a un modelo de vista:
+Al implementar el patrón MVVM, los modelos de vista normalmente invocan operaciones en los servicios, a menudo de forma asincrónica. Las pruebas de código que invoca estas operaciones suelen usar simulacros como reemplazos para los servicios reales. En el ejemplo de código siguiente se muestra cómo probar la funcionalidad asincrónica pasando un servicio ficticio a un modelo de vista:
 
 ```csharp
 [Fact]  
@@ -93,15 +93,15 @@ public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()
 }
 ```
 
-Esta prueba unitaria que comprueba la `Order` propiedad de la `OrderDetailViewModel` instancia tendrá un valor después de la `InitializeAsync` ha invocado al método. El `InitializeAsync` método se invoca cuando se navega vista correspondiente del modelo de vista. Para obtener más información sobre la navegación, consulte [navegación](~/xamarin-forms/enterprise-application-patterns/navigation.md).
+Esta prueba unitaria comprueba que la `Order` propiedad de la `OrderDetailViewModel` instancia tendrá un valor después de que `InitializeAsync` se haya invocado el método. El `InitializeAsync` método se invoca cuando se navega a la vista correspondiente del modelo de vista. Para obtener más información sobre la navegación, consulte [navegación](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 
-Cuando el `OrderDetailViewModel` se crea una instancia, espera un `OrderService` instancia que se especifique como argumento. Sin embargo, el `OrderService` recupera datos de un servicio web. Por lo tanto, un `OrderMockService` instancia, que es una versión ficticia de la `OrderService` de clase, se especifica como argumento para el `OrderDetailViewModel` constructor. Después, cuando el modelo de vista `InitializeAsync` se invoca el método, que invoca `IOrderService` operaciones, datos simulados están recuperado en lugar de establecer la comunicación con un servicio web.
+Cuando se `OrderDetailViewModel` crea la instancia, espera que se especifique `OrderService` una instancia como argumento. Sin embargo, `OrderService` recupera datos de un servicio Web. Por consiguiente, `OrderMockService` una instancia de, que es una versión ficticia `OrderService` de la clase, se especifica como argumento para `OrderDetailViewModel` el constructor. A continuación, cuando se invoca el `InitializeAsync` método del modelo de vista, que `IOrderService` invoca las operaciones, se recuperan los datos ficticios en lugar de comunicarse con un servicio Web.
 
-### <a name="testing-inotifypropertychanged-implementations"></a>Probar las implementaciones de INotifyPropertyChanged
+### <a name="testing-inotifypropertychanged-implementations"></a>Probar implementaciones de INotifyPropertyChanged
 
-Implementar el `INotifyPropertyChanged` interfaz permite que las vistas para reaccionar ante los cambios que se originan en la vista de modelos y los modelos. Estos cambios no se limitan a los datos que se muestran en los controles, también se usan para controlar la vista, como los Estados de modelo de vista que hacen que se puede iniciar las animaciones o controles va a deshabilitar.
+La implementación `INotifyPropertyChanged` de la interfaz permite a las vistas reaccionar a los cambios que se originan en modelos de vista y modelos. Estos cambios no se limitan a los datos que se muestran en los controles; también se usan para controlar la vista, como los Estados del modelo de vista que hacen que las animaciones se inicien o se deshabiliten los controles.
 
-Se pueden probar las propiedades que se pueden actualizar directamente por la prueba unitaria adjuntando un controlador de eventos para el `PropertyChanged` eventos y comprobar si el evento se genera después de establecer un nuevo valor para la propiedad. El ejemplo de código siguiente muestra una prueba de este tipo:
+Las propiedades que se pueden actualizar directamente mediante la prueba unitaria se pueden probar asociando un controlador de eventos al `PropertyChanged` evento y comprobando si el evento se genera después de establecer un nuevo valor para la propiedad. En el ejemplo de código siguiente se muestra este tipo de prueba:
 
 ```csharp
 [Fact]  
@@ -123,11 +123,11 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
 }
 ```
 
-Esta prueba unitaria invoca el `InitializeAsync` método de la `OrderViewModel` clase, lo que hace que su `Order` propiedad que se va a actualizarse. Pasará la prueba unitaria, siempre que el `PropertyChanged` evento se desencadena para el `Order` propiedad.
+Esta prueba unitaria invoca el `InitializeAsync` método de la `OrderViewModel` clase, que hace que se `Order` actualice su propiedad. Se superará la prueba unitaria, siempre que `PropertyChanged` se produzca el evento para `Order` la propiedad.
 
-### <a name="testing-message-based-communication"></a>Probar la comunicación basada en mensajes
+### <a name="testing-message-based-communication"></a>Prueba de la comunicación basada en mensajes
 
-Vista de modelos que usan el [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) clase para la comunicación entre el acoplamiento de clases puede unidad probarse suscribiéndose a los mensajes enviados por el código sometido a prueba, como se muestra en el ejemplo de código siguiente:
+Los modelos de vista que [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) utilizan la clase para la comunicación entre las clases de acoplamiento flexible pueden ser pruebas unitarias suscritos al mensaje enviado por el código sometido a prueba, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 [Fact]  
@@ -148,11 +148,11 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-Esta prueba unitaria que comprueba la `CatalogViewModel` publica el `AddProduct` mensaje de respuesta a su `AddCatalogItemCommand` que se está ejecutando. Dado que el [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) clase es compatible con suscripciones de mensajes de multidifusión, la prueba unitaria puede suscribirse a la `AddProduct` del mensaje y ejecutar un delegado de devolución de llamada en respuesta a recibirlo. Este delegado de devolución de llamada, especificado como una expresión lambda, Establece una `boolean` campo utilizado por el `Assert` instrucción para comprobar el comportamiento de la prueba.
+Esta prueba unitaria comprueba que el `CatalogViewModel` publica el `AddProduct` mensaje en respuesta a su `AddCatalogItemCommand` ejecución. Dado que [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) la clase admite las suscripciones de mensajes de multidifusión, la prueba `AddProduct` unitaria se puede suscribir al mensaje y ejecutar un delegado de devolución de llamada en respuesta a recibirlo. Este delegado de devolución de llamada, especificado como una expresión lambda `boolean` , establece un campo que se `Assert` usa en la instrucción para comprobar el comportamiento de la prueba.
 
-### <a name="testing-exception-handling"></a>Las pruebas de control de excepciones
+### <a name="testing-exception-handling"></a>Probar el control de excepciones
 
-Pruebas unitarias también se pueden escribir esa comprobación que se producen excepciones específicas de las acciones no válidas o entradas, como se muestra en el ejemplo de código siguiente:
+También se pueden escribir pruebas unitarias que comprueben que se producen excepciones específicas para acciones o entradas no válidas, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 [Fact]  
@@ -168,16 +168,16 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-Esta prueba unitaria iniciará una excepción, porque el [ `ListView` ](xref:Xamarin.Forms.ListView) control no tiene un evento denominado `OnItemTapped`. El `Assert.Throws<T>` método es un método genérico donde `T` es el tipo de la excepción esperada. El argumento pasado a la `Assert.Throws<T>` método es una expresión lambda que producirá la excepción. Por lo tanto, pasará la prueba unitaria siempre que la expresión lambda produce una `ArgumentException`.
+Esta prueba unitaria producirá una excepción, porque el [`ListView`](xref:Xamarin.Forms.ListView) control no tiene un evento denominado. `OnItemTapped` El `Assert.Throws<T>` método es un método genérico, `T` donde es el tipo de la excepción esperada. El argumento pasado al `Assert.Throws<T>` método es una expresión lambda que producirá la excepción. Por lo tanto, la prueba unitaria se superará siempre que la expresión lambda `ArgumentException`produzca una excepción.
 
 > [!TIP]
-> Evite escribir pruebas unitarias que examine las cadenas de mensaje de excepción. Las cadenas de mensaje de excepción pueden cambiar con el tiempo y, por lo que se consideran las pruebas unitarias que se basan en su presencia frágiles.
+> Evite escribir pruebas unitarias que examinen cadenas de mensajes de excepción. Las cadenas de mensajes de excepción pueden cambiar con el tiempo, por lo que las pruebas unitarias que dependen de su presencia se consideran frágiles.
 
-### <a name="testing-validation"></a>Las pruebas de validación
+### <a name="testing-validation"></a>Probar la validación
 
-Hay dos aspectos a la implementación de la validación de pruebas: pruebas que se haya implementado correctamente las reglas de validación y las pruebas que el `ValidatableObject<T>` clase se realiza según lo previsto.
+Hay dos aspectos para probar la implementación de la validación: probar que las reglas de validación se implementan correctamente y probar `ValidatableObject<T>` que la clase funciona como se esperaba.
 
-Lógica de validación es normalmente más simple probar, porque normalmente es un proceso independiente, donde el resultado depende de la entrada. Debe haber pruebas en los resultados de invocar el `Validate` método en cada propiedad que tiene al menos una regla de validación asociado, como se muestra en el ejemplo de código siguiente:
+Normalmente, la lógica de validación es sencilla de probar, ya que normalmente es un proceso independiente en el que la salida depende de la entrada. Debe haber pruebas sobre los resultados de invocar el `Validate` método en cada propiedad que tiene al menos una regla de validación asociada, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 [Fact]  
@@ -193,9 +193,9 @@ public void CheckValidationPassesWhenBothPropertiesHaveDataTest()
 }
 ```
 
-Esta prueba unitaria comprueba que la validación es correcta cuando los dos `ValidatableObject<T>` propiedades en el `MockViewModel` instancia ambos tienen datos.
+Esta prueba unitaria comprueba que la validación se realiza correctamente cuando `ValidatableObject<T>` las dos propiedades `MockViewModel` de la instancia tienen datos.
 
-Así como la comprobación de que la validación se realiza correctamente, las pruebas unitarias de validación también deberían comprobar los valores de la `Value`, `IsValid`, y `Errors` propiedad de cada uno `ValidatableObject<T>` instancia, para comprobar que la clase se realiza según lo previsto. El ejemplo de código siguiente muestra una prueba unitaria que se hace esto:
+Además de comprobar que la validación se realiza correctamente, las pruebas unitarias de validación también deben comprobar `Value`los `IsValid`valores de `Errors` las propiedades, `ValidatableObject<T>` y de cada instancia, para comprobar que la clase funciona según lo esperado. En el ejemplo de código siguiente se muestra una prueba unitaria que hace lo siguiente:
 
 ```csharp
 [Fact]  
@@ -216,18 +216,18 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 }
 ```
 
-Esta prueba unitaria comprueba que falla la validación cuando el `Surname` propiedad de la `MockViewModel` no tiene ningún dato y el `Value`, `IsValid`, y `Errors` propiedad de cada uno `ValidatableObject<T>` instancia se han definido correctamente.
+Esta prueba unitaria comprueba que se produce un error `Surname` de validación cuando `MockViewModel` la propiedad de no tiene ningún dato `Value`y `IsValid`las propiedades `Errors` , y de `ValidatableObject<T>` cada instancia están establecidas correctamente.
 
 ## <a name="summary"></a>Resumen
 
-Una prueba unitaria toma una unidad pequeña de la aplicación, normalmente un método, aísla del resto del código y comprueba si se comporta según lo previsto. Su objetivo es comprobar que cada unidad de funcionalidad se ejecuta según lo previsto, así que los errores no propagan a través de la aplicación.
+Una prueba unitaria toma una unidad pequeña de la aplicación, normalmente un método, la aísla del resto del código y comprueba que se comporta de la manera esperada. Su objetivo es comprobar que cada unidad de funcionalidad funciona según lo previsto, de modo que los errores no se propaguen a lo largo de la aplicación.
 
-El comportamiento de un objeto sometido a prueba se puede aislar mediante la sustitución de los objetos dependientes con objetos ficticios que simulan el comportamiento de los objetos dependientes. Esto permite que las pruebas unitarias que se ejecutará sin necesidad de difícil de manejar recursos como servicios web o bases de datos.
+El comportamiento de un objeto en pruebas se puede aislar reemplazando objetos dependientes con objetos ficticios que simulan el comportamiento de los objetos dependientes. Esto permite que las pruebas unitarias se ejecuten sin necesidad de recursos difíciles de manejar, como servicios Web, o bases de datos.
 
-Probar los modelos y los modelos de vista de las aplicaciones MVVM es idéntica a las pruebas de otras clases, y se pueden usar las mismas herramientas y técnicas.
+Probar modelos y ver modelos de aplicaciones MVVM es idéntico a probar cualquier otra clase y se pueden usar las mismas herramientas y técnicas.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Descargar libro electrónico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Descargar libro electrónico (2 MB PDF)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (ejemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

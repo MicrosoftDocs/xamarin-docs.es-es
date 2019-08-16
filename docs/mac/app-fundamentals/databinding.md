@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: dfc4c8a5f00fd11d1554dcadf5e35018046e49f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: beb063d423c860958948751d162af661040004b7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642897"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529015"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -816,8 +816,8 @@ Now we need to create our Collection View, double-click the **Main.storyboard** 
 
 When you add a Collection View to a User Interface design, two extra elements are also added:
 
-1.  **Collection View Item** -  That manages a single instance of an item in the collection.
-2.  **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
+1. **Collection View Item** -  That manages a single instance of an item in the collection.
+2. **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
 
 Select the view and make it look like the following using an Image View and two Text Fields:
 

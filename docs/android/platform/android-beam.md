@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643758"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524727"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -23,9 +23,9 @@ El rayo de Android funciona insertando mensajes sobre NFC cuando dos dispositivo
 
 Android admite dos maneras de configurar mensajes con el rayo de Android:
 
--   `SetNdefPushMessage`-Antes de que se inicie el rayo de Android, una aplicación puede llamar a SetNdefPushMessage para especificar un NdefMessage para insertarlo sobre NFC y la actividad que lo está insertando. Este mecanismo se utiliza mejor cuando un mensaje no cambia mientras una aplicación está en uso.
+- `SetNdefPushMessage`-Antes de que se inicie el rayo de Android, una aplicación puede llamar a SetNdefPushMessage para especificar un NdefMessage para insertarlo sobre NFC y la actividad que lo está insertando. Este mecanismo se utiliza mejor cuando un mensaje no cambia mientras una aplicación está en uso.
 
--   `SetNdefPushMessageCallback`-Cuando se inicia el rayo de Android, una aplicación puede controlar una devolución de llamada para crear un NdefMessage. Este mecanismo permite que se retrase la creación de mensajes hasta que los dispositivos se encuentren dentro del alcance. Admite escenarios en los que el mensaje puede variar en función de lo que sucede en la aplicación.
+- `SetNdefPushMessageCallback`-Cuando se inicia el rayo de Android, una aplicación puede controlar una devolución de llamada para crear un NdefMessage. Este mecanismo permite que se retrase la creación de mensajes hasta que los dispositivos se encuentren dentro del alcance. Admite escenarios en los que el mensaje puede variar en función de lo que sucede en la aplicación.
 
 
 En cualquier caso, para enviar datos con el rayo de Android, una aplicación `NdefMessage`envía un y empaqueta los datos `NdefRecords`en varios. Echemos un vistazo a los puntos clave que deben abordarse antes de que podamos desencadenar el haz de Android. En primer lugar, trabajaremos con el estilo de devolución de `NdefMessage`llamada de creación de.

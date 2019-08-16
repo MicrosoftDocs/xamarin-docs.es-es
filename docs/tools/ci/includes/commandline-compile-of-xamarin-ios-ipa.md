@@ -1,31 +1,34 @@
 ---
-ms.openlocfilehash: e383bbccd4e76be8a208f5680e5cf21e45a0dbc3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 31c8d1b781648f2d9c69062c52e71478fc7a496b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511943"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529124"
 ---
 
 La siguiente línea de comandos para especificar una versión de lanzamiento de la solución **SOLUTION_FILE. sln** para el iPhone. La ubicación del IPA se puede establecer especificando la `IpaPackageDir` propiedad en la línea de comandos:
 
 - En el equipo Mac, mediante **xbuild**:
 
-        xbuild /p:Configuration="Release" \ 
-           /p:Platform="iPhone" \ 
-           /p:IpaPackageDir="$HOME/Builds" \
-           /t:Build MyProject.sln
+  ```
+  xbuild /p:Configuration="Release" \ 
+         /p:Platform="iPhone" \ 
+         /p:IpaPackageDir="$HOME/Builds" \
+         /t:Build MyProject.sln
+  ```
 
 El comando **xbuild** se encuentra normalmente en el directorio **/Library/Frameworks/mono.Framework/Commands**.
 
 - En Windows, con **msbuild**:
 
-        msbuild /p:Configuration="Release" 
-            /p:Platform="iPhone" 
-            /p:IpaPackageDir="%USERPROFILE%\Builds" 
-            /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser"  
-            /t:Build MyProject.sln
-
+  ```
+  msbuild /p:Configuration="Release" 
+          /p:Platform="iPhone" 
+          /p:IpaPackageDir="%USERPROFILE%\Builds" 
+          /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser"  
+          /t:Build MyProject.sln
+  ```
 
 **msbuild** no expandirá `$( )` automáticamente las expresiones pasadas en la línea de comandos. Por esta razón, se recomienda usar una ruta de acceso completa al establecer `IpaPackageDir` en la línea de comandos.
 

@@ -6,42 +6,42 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649583"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525964"
 ---
 # <a name="using-adonet-with-android"></a>Uso de ADO.NET con Android
 
-Xamarin tiene compatibilidad integrada para la base de datos SQLite que está disponible en Android y se puede exponer mediante la conocida sintaxis similar a ADO.NET. Con estas API, deberá escribir instrucciones SQL que se procesan como SQLite, `CREATE TABLE`, `INSERT` y `SELECT` instrucciones.
+Xamarin tiene compatibilidad integrada para la base de datos SQLite que está disponible en Android y se puede exponer con la conocida sintaxis de ADO.NET. El uso de estas API requiere la escritura de instrucciones SQL procesadas por SQLite, como `CREATE TABLE`, `INSERT` y `SELECT` las instrucciones.
 
 ## <a name="assembly-references"></a>Referencias de ensamblado
 
-Usar SQLite a través de ADO.NET, debe agregar el acceso `System.Data` y `Mono.Data.Sqlite` hace referencia al proyecto Android, como se muestra aquí:
+Para usar Access SQLite a través de ADO.net, `System.Data` debe `Mono.Data.Sqlite` agregar referencias y a su proyecto de Android, como se muestra aquí:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows) 
 
-![Referencias de Android en Visual Studio](using-adonet-images/image7.png "hace referencia Android en Visual Studio") 
+![Referencias de Android en Visual Studio](using-adonet-images/image7.png "Referencias de Android en Visual Studio") 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos) 
 
-![Referencias de Android en Visual Studio para Mac](using-adonet-images/image5.png "Android hace referencia en Visual Studio para Mac") 
+![Referencias de Android en Visual Studio para Mac](using-adonet-images/image5.png "Referencias de Android en Visual Studio para Mac") 
 
 -----
 
 
-Haga clic en **referencias > Editar referencias...**  , a continuación, haga clic para seleccionar los ensamblados necesarios.
+Haga clic con el botón secundario en **referencias > Editar referencias...** y, a continuación, haga clic para seleccionar los ensamblados necesarios.
 
-## <a name="about-monodatasqlite"></a>Acerca de Mono.Data.Sqlite
+## <a name="about-monodatasqlite"></a>Acerca de mono. Data. SQLite
 
-Usaremos el `Mono.Data.Sqlite.SqliteConnection` clase para crear un archivo de base de datos vacía y, a continuación, para crear una instancia `SqliteCommand` objetos que podemos usar para ejecutar instrucciones SQL en la base de datos.
+Usaremos la `Mono.Data.Sqlite.SqliteConnection` clase para crear un archivo de base de datos en blanco y, `SqliteCommand` a continuación, crear una instancia de los objetos que se pueden usar para ejecutar instrucciones SQL en la base de datos.
 
-**Creación de una base de datos en blanco** &ndash; llamar a la `CreateFile` método con una ruta de acceso de archivo (es decir, puede escribir) válido. Debe comprobar si el archivo ya existe antes de llamar a este método, en caso contrario, se creará una nueva base de datos (en blanco) a través de la parte superior de la vieja y se perderán los datos en el archivo anterior.
-`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` El `dbPath` variable debe determinarse según las reglas descritas anteriormente en este documento.
+**Crear una base de datos vacía** &ndash; Llame al`CreateFile` método con una ruta de acceso de archivo válida (es decir, grabable). Debe comprobar si el archivo ya existe antes de llamar a este método; de lo contrario, se creará una nueva base de datos (en blanco) en la parte superior de la antigua y se perderán los datos del archivo anterior.
+`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`La `dbPath` variable se debe determinar según las reglas descritas anteriormente en este documento.
 
-**Creación de una conexión de base de datos** &ndash; una vez creado el archivo de base de datos de SQLite puede crear un objeto de conexión para tener acceso a los datos. La conexión se construye con una cadena de conexión que tiene la forma de `Data Source=file_path`, tal y como se muestra aquí:
+**Crear una conexión de base de datos** &ndash; Una vez creado el archivo de base de datos de SQLite, puede crear un objeto de conexión para obtener acceso a los datos. La conexión se crea con una cadena de conexión que toma la forma `Data Source=file_path`de, como se muestra a continuación:
 
 ```csharp
 var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -50,9 +50,9 @@ connection.Open();
 connection.Close();
 ```
 
-Como se mencionó anteriormente, una conexión nunca debe volver a usar entre diferentes subprocesos. En caso de duda, crear la conexión según sea necesario y cerrar cuando haya terminado; pero tenga en cuenta de hacer más a menudo que requiere demasiado.
+Como se mencionó anteriormente, nunca se debe volver a usar una conexión entre subprocesos diferentes. En caso de duda, cree la conexión según sea necesario y ciérrela cuando haya terminado. pero sea consciente de hacerlo con más frecuencia de lo requerido.
 
-**Crear y ejecutar un comando de base de datos** &ndash; una vez que tenemos una conexión podemos ejecutar comandos SQL arbitrarios en él. El código siguiente muestra un `CREATE TABLE` instrucción que se está ejecutando.
+**Crear y ejecutar un comando de base de datos** &ndash; Una vez que tenemos una conexión, podemos ejecutar comandos SQL arbitrarios en ella. En el código siguiente se `CREATE TABLE` muestra una instrucción que se está ejecutando.
 
 ```csharp
 using (var command = connection.CreateCommand ()) {
@@ -61,17 +61,17 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-Cuando se ejecuta SQL directamente en la base de datos debe tomar las precauciones normales no deben realizar las solicitudes no válidas, por ejemplo, si se intenta crear una tabla que ya existe. Realizar un seguimiento de la estructura de la base de datos para que no provocan una `SqliteException` como **ya existe la tabla de errores de SQLite [elementos]** .
+Al ejecutar SQL directamente en la base de datos, debe tomar las precauciones normales para no realizar solicitudes no válidas, como intentar crear una tabla que ya existe. Realice un seguimiento de la estructura de la base de datos para que no `SqliteException` cause una **tabla de errores de SQLite [items] ya existe**.
 
-## <a name="basic-data-access"></a>Acceso a datos básicos
+## <a name="basic-data-access"></a>Acceso a datos básico
 
-El *DataAccess_Basic* código de ejemplo de este documento este aspecto cuando se ejecuta en Android:
+El código de ejemplo *DataAccess_Basic* de este documento tiene este aspecto cuando se ejecuta en Android:
 
-![Ejemplo de ADO.NET Android](using-adonet-images/image8.png "ejemplo ADO.NET Android")
+![Ejemplo de ADO.net de Android](using-adonet-images/image8.png "Ejemplo de ADO.net de Android")
 
-El código siguiente muestra cómo realizar operaciones sencillas de SQLite y muestra los resultados como texto en la ventana principal de la aplicación.
+En el código siguiente se muestra cómo realizar operaciones de SQLite simples y se muestra el resultado como texto en la ventana principal de la aplicación.
 
-Necesita incluir estos espacios de nombres:
+Deberá incluir estos espacios de nombres:
 
 ```csharp
 using System;
@@ -79,13 +79,13 @@ using System.IO;
 using Mono.Data.Sqlite;
 ```
 
-Ejemplo de código siguiente muestra una interacción de la base de datos completa:
+En el ejemplo de código siguiente se muestra una interacción completa de la base de datos:
 
-1.  Crear el archivo de base de datos
-2.  Insertar algunos datos.
-3.  Consultar los datos
+1. Crear el archivo de base de datos
+2. Insertar algunos datos
+3. Consultar los datos
 
-Estas operaciones generalmente aparecen en varios lugares en todo el código, por ejemplo puede crear el archivo de base de datos y tablas cuando se inicia por primera vez la aplicación y realizar lecturas y escrituras en pantallas individuales en la aplicación. En el ejemplo siguiente se han agrupado en un único método para este ejemplo:
+Normalmente, estas operaciones aparecen en varios lugares en todo el código; por ejemplo, puede crear el archivo y las tablas de base de datos cuando la aplicación se inicia por primera vez y realizar lecturas y escrituras de datos en pantallas individuales de la aplicación. En el ejemplo siguiente, se ha agrupado en un único método para este ejemplo:
 
 ```csharp
 public static SqliteConnection connection;
@@ -143,18 +143,18 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>Consultas más complejas
 
-Como SQLite permite comandos arbitrarios de SQL se ejecute en los datos, puede realizar cualquier `CREATE`, `INSERT`, `UPDATE`, `DELETE`, o `SELECT` las instrucciones que se desee. Puede leer acerca de los comandos SQL compatibles con SQLite en el sitio Web de SQLite. Las instrucciones SQL se ejecutan mediante uno de los tres métodos en un `SqliteCommand` objeto:
+Dado que SQLite permite ejecutar `CREATE`comandos SQL arbitrarios en los datos, puede realizar las instrucciones, `INSERT`, `UPDATE`, `DELETE`o `SELECT` que desee. Puede leer acerca de los comandos SQL compatibles con SQLite en el sitio web de SQLite. Las instrucciones SQL se ejecutan con uno de los tres métodos `SqliteCommand` de un objeto:
 
--   **ExecuteNonQuery** &ndash; utiliza normalmente para la inserción de datos o la creación de tabla. El valor devuelto para algunas operaciones es el número de filas afectadas, en caso contrario, es -1.
+- **ExecuteNonQuery** &ndash; Se utiliza normalmente para la creación de tablas o la inserción de datos. El valor devuelto para algunas operaciones es el número de filas afectadas; de lo contrario, es-1.
 
--   **ExecuteReader** &ndash; usa cuando una colección de filas se debe devolver como un `SqlDataReader`.
+- **ExecuteReader** Se usa cuando se debe devolver una colección de filas `SqlDataReader`como. &ndash;
 
--   **ExecuteScalar** &ndash; recupera un único valor (por ejemplo, un agregado).
+- **ExecuteScalar** &ndash; Recupera un valor único (por ejemplo, un agregado).
 
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
-`INSERT`, `UPDATE`, y `DELETE` instrucciones devolverá el número de filas afectadas. Todas las demás instrucciones SQL devuelven -1.
+`INSERT`las `UPDATE`instrucciones, `DELETE` y devolverán el número de filas afectadas. Todas las demás instrucciones SQL devolverán-1.
 
 ```csharp
 using (var c = connection.CreateCommand ()) {
@@ -165,8 +165,8 @@ using (var c = connection.CreateCommand ()) {
 
 ### <a name="executereader"></a>EXECUTEREADER
 
-El método siguiente se muestra un `WHERE` cláusula en la `SELECT` instrucción.
-Dado que el código es diseñar una instrucción SQL completa debe tener cuidado para escapar caracteres reservados como las comillas (') en torno a las cadenas.
+El método siguiente muestra una `WHERE` cláusula en la `SELECT` instrucción.
+Dado que el código está creando una instrucción SQL completa, debe tener cuidado de escapar caracteres reservados como la comilla (') en torno a las cadenas.
 
 ```csharp
 public static string MoreComplexQuery ()
@@ -193,16 +193,16 @@ public static string MoreComplexQuery ()
 }
 ```
 
-El método `ExecuteReader` devuelve un objeto `SqliteDataReader`. Además el `Read` método que se muestra en el ejemplo, incluyen otras propiedades útiles:
+El método `ExecuteReader` devuelve un objeto `SqliteDataReader`. Además del `Read` método mostrado en el ejemplo, otras propiedades útiles incluyen:
 
--   **RowsAffected** &ndash; recuento de las filas afectadas por la consulta.
+- **RowsAffected** &ndash; Recuento de las filas afectadas por la consulta.
 
--   **HasRows** &ndash; si se devolvieron filas.
+- **HasRows** &ndash; Si se devolvieron filas.
 
 
 ### <a name="executescalar"></a>EXECUTESCALAR
 
-Utilice este formulario `SELECT` las instrucciones que devuelven un único valor (por ejemplo, un agregado).
+Utilice esto para `SELECT` las instrucciones que devuelven un valor único (como un agregado).
 
 ```csharp
 using (var contents = connection.CreateCommand ()) {
@@ -211,13 +211,13 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-El `ExecuteScalar` es de tipo de valor devuelto del método `object` &ndash; debería convertir el resultado en función de la consulta de base de datos. El resultado podría ser un entero comprendido entre un `COUNT` consulta o una cadena de una sola columna `SELECT` consulta. Tenga en cuenta que esto es diferente a otros `Execute` los métodos que devuelven un objeto de lector o un recuento del número de filas afectadas.
+El `ExecuteScalar` tipo de valor devuelto `object` del método es &ndash; que debe convertir el resultado en función de la consulta de la base de datos. El resultado puede ser un entero de una `COUNT` consulta o una cadena de una consulta de una sola columna. `SELECT` Tenga en cuenta que esto es diferente `Execute` a otros métodos que devuelven un objeto de lector o un recuento del número de filas afectadas.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DataAccess Basic (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzada (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Acceso a datos básico (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
+- [Acceso a la configuración avanzada (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Recetas de datos de Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acceso a datos de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Acceso a datos de Xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

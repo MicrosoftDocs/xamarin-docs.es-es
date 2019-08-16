@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: dac81a40983ea8414ec730f10c4c1f17e4d9915c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653805"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527931"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Gráficos principales en Xamarin. iOS
 
@@ -24,10 +24,10 @@ Core Graphics es un marco de gráficos 2D de bajo nivel que permite dibujar grá
 
 Los gráficos principales admiten el dibujo en varios escenarios, entre los que se incluyen:
 
--  [Dibujar en la pantalla mediante un `UIView` ](#Drawing_in_a_UIView_Subclass) .
--  [Dibujar imágenes en memoria o en pantalla](#Drawing_Images_and_Text).
--  Crear y dibujar en un PDF.
--  Leer y dibujar un PDF existente.
+- [Dibujar en la pantalla mediante un `UIView` ](#Drawing_in_a_UIView_Subclass) .
+- [Dibujar imágenes en memoria o en pantalla](#Drawing_Images_and_Text).
+- Crear y dibujar en un PDF.
+- Leer y dibujar un PDF existente.
 
 
 ## <a name="geometric-space"></a>Espacio geométrico
@@ -36,9 +36,9 @@ Independientemente del escenario, todo el dibujo realizado con gráficos princip
 
 Este enfoque tiene algunas ventajas:
 
--  El código de dibujo se convierte en dinámico y, posteriormente, puede modificar los gráficos en tiempo de ejecución.
--  Reducir la necesidad de imágenes estáticas en el lote de aplicaciones puede reducir el tamaño de la aplicación.
--  Los gráficos son más resistentes a los cambios de resolución en todos los dispositivos.
+- El código de dibujo se convierte en dinámico y, posteriormente, puede modificar los gráficos en tiempo de ejecución.
+- Reducir la necesidad de imágenes estáticas en el lote de aplicaciones puede reducir el tamaño de la aplicación.
+- Los gráficos son más resistentes a los cambios de resolución en todos los dispositivos.
 
 <a name="Drawing_in_a_UIView_Subclass"/>
 
@@ -270,10 +270,10 @@ El texto resultante se muestra con la imagen, como se muestra a continuación:
 
 Además de dibujar en el contexto de los gráficos de una vista, los gráficos principales admiten el dibujo de imágenes respaldadas por memoria, también conocida como dibujo fuera de la pantalla. Esto requiere:
 
--  Crear un contexto de gráficos respaldado por un mapa de bits en memoria
--  Establecer el estado del dibujo y emitir comandos de dibujo
--  Obtención de la imagen desde el contexto
--  Quitar el contexto
+- Crear un contexto de gráficos respaldado por un mapa de bits en memoria
+- Establecer el estado del dibujo y emitir comandos de dibujo
+- Obtención de la imagen desde el contexto
+- Quitar el contexto
 
 
 A diferencia del `Draw` método, donde la vista proporciona el contexto, en este caso se crea el contexto de una de estas dos maneras:

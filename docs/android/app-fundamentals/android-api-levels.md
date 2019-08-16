@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: e22d1d8a1c2604c1bbe710fcaf1ba7793455e6f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c4050f439f3499289063c286afd255241bf0343
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508858"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521457"
 ---
 # <a name="understanding-android-api-levels"></a>Descripción de los niveles de API de Android
 
@@ -23,11 +23,11 @@ _Xamarin. Android tiene varias configuraciones de nivel de API de Android que de
 
 Xamarin. Android expone tres configuraciones de proyecto de nivel de API de Android:
 
--   [Plataforma de destino](#framework) &ndash; Especifica el marco que se va a usar para compilar la aplicación. Xamarin. Android usa este nivel de API en tiempo de *compilación* .
+- [Plataforma de destino](#framework) &ndash; Especifica el marco que se va a usar para compilar la aplicación. Xamarin. Android usa este nivel de API en tiempo de *compilación* .
 
--   [Versión mínima de Android](#minimum) &ndash; Especifica la versión de Android más antigua que quiere que admita su aplicación. Android usa este nivel de API en tiempo de *ejecución* .
+- [Versión mínima de Android](#minimum) &ndash; Especifica la versión de Android más antigua que quiere que admita su aplicación. Android usa este nivel de API en tiempo de *ejecución* .
 
--   [Versión de Android de destino](#target) &ndash; Especifica la versión de Android en la que se va a ejecutar la aplicación. Android usa este nivel de API en tiempo de *ejecución* .
+- [Versión de Android de destino](#target) &ndash; Especifica la versión de Android en la que se va a ejecutar la aplicación. Android usa este nivel de API en tiempo de *ejecución* .
 
 Para poder configurar un nivel de API para el proyecto, debe instalar los componentes de la plataforma SDK para ese nivel de API. Para obtener más información acerca de cómo descargar e instalar los componentes de Android SDK, consulte [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
@@ -81,9 +81,9 @@ A medida que la plataforma Android evoluciona y se publican nuevas versiones de 
 
 Cada versión de Android va acompañada de varios nombres:
 
--   La versión de Android, como **android 9,0**
--   Un nombre de código (o postre), como un _círculo_
--   Un nivel de API correspondiente, como el **nivel de API 28**
+- La versión de Android, como **android 9,0**
+- Un nombre de código (o postre), como un _círculo_
+- Un nivel de API correspondiente, como el **nivel de API 28**
 
 Un nombre de código de Android puede corresponder a varias versiones y niveles de API (como se muestra en la tabla siguiente), pero cada versión de Android corresponde a un nivel de API exactamente.
 
@@ -100,16 +100,16 @@ Cada dispositivo Android se ejecuta en *un* nivel &ndash; de API exactamente. se
 
 Cuando se compila una aplicación, contiene la siguiente información de nivel de API:
 
--   El nivel de API de *destino* de Android en el que se crea la aplicación.
+- El nivel de API de *destino* de Android en el que se crea la aplicación.
 
--   El nivel *mínimo* de API de Android que debe tener un dispositivo Android para ejecutar la aplicación. 
+- El nivel *mínimo* de API de Android que debe tener un dispositivo Android para ejecutar la aplicación. 
 
 Esta configuración se usa para garantizar que la funcionalidad necesaria para ejecutar la aplicación correctamente esté disponible en el dispositivo Android en el momento de la instalación. Si no es así, se bloquea la ejecución de la aplicación en ese dispositivo. Por ejemplo, si el nivel de API de un dispositivo Android es inferior al nivel de API mínimo que se especifica para la aplicación, el dispositivo Android impedirá que el usuario instale la aplicación.
 
 
 ## <a name="project-api-level-settings"></a>Configuración de nivel de API del proyecto
 
-En las secciones siguientes se explica cómo usar SDK Manager para preparar el entorno de desarrollo para los niveles de API a los que desea dirigirse, seguido de una explicación detallada de cómo configurar el *marco de trabajo de destino*, la *versión mínima de Android*y Configuración de versión de Android de destino en Xamarin. Android.
+En las secciones siguientes se explica cómo usar SDK Manager para preparar el entorno de desarrollo para los niveles de API a los que desea dirigirse, seguido de una explicación detallada de cómo configurar el *marco de trabajo de destino*, la *versión mínima de Android*yConfiguración de versión de Android de destino en Xamarin. Android.
 
 
 ### <a name="android-sdk-platforms"></a>Plataformas Android SDK
@@ -149,7 +149,7 @@ Establezca la versión de .NET Framework de destino seleccionando un nivel de AP
 
 ### <a name="minimum-android-version"></a>Versión mínima de Android
 
-La *versión mínima de Android* (también conocida `minSdkVersion`como) es la versión más antigua del sistema operativo Android (es decir, el nivel de API más bajo) que puede instalar y ejecutar la aplicación. De forma predeterminada, una aplicación solo se puede instalar en dispositivos que coincidan con la configuración de la plataforma de destino o superior; Si la configuración de versión mínima de *Android es anterior* a la configuración de la plataforma de destino, la aplicación también puede ejecutarse en versiones anteriores de Android. Por ejemplo, si establece la plataforma de destino en **android 7,1 (nougat)** y establece la versión mínima de Android en **Android 4.0.3 (sandwich**de helado), la aplicación se puede instalar en cualquier plataforma desde el nivel de API 15 hasta el nivel de API 25, ambos inclusive.
+La *versión mínima de Android* (también conocida `minSdkVersion`como) es la versión más antigua del sistema operativo Android (es decir, el nivel de API más bajo) que puede instalar y ejecutar la aplicación. De forma predeterminada, una aplicación solo se puede instalar en dispositivos que coincidan con la configuración de la plataforma de destino o superior; Si la configuración de versión mínima de Android es anterior a la configuración de la plataforma de destino, la aplicación también puede ejecutarse en versiones anteriores de Android. Por ejemplo, si establece la plataforma de destino en **android 7,1 (nougat)** y establece la versión mínima de Android en **Android 4.0.3 (sandwich**de helado), la aplicación se puede instalar en cualquier plataforma desde el nivel de API 15 hasta el nivel de API 25, ambos inclusive.
 
 Aunque la aplicación puede compilarse e instalarse correctamente en este intervalo de plataformas, esto no garantiza que se *ejecute* correctamente en todas estas plataformas. Por ejemplo, si la aplicación se instala en **android 5,0 (Lollipop)** y el código llama a una API que solo está disponible en **Android 7,1 (nougat)** y versiones más recientes, la aplicación obtendrá un error en tiempo de ejecución y, posiblemente, se bloqueará. Por lo tanto, el código &ndash; debe asegurarse &ndash; en tiempo de ejecución de que solo llama a las API admitidas por el dispositivo Android en el que se está ejecutando. En otras palabras, el código debe incluir comprobaciones explícitas en tiempo de ejecución para asegurarse de que la aplicación usa las API más recientes solo en los dispositivos que son lo suficientemente recientes como para admitirlos.
 [Las comprobaciones en tiempo de ejecución de las versiones de Android](#runtimechecks), más adelante en esta guía, explica cómo agregar estas comprobaciones en tiempo de ejecución al código.
@@ -225,7 +225,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 }
 ```
 
-En este ejemplo, el marco de trabajo de destino de la aplicación está establecido en **android 5,0 (nivel de API 21)** y su versión mínima de Android está establecida en **Android 4,1 (nivel de API 16)** . Dado `SetCategory` que está disponible en el `Android.OS.BuildVersionCodes.Lollipop` nivel de API y versiones posteriores, este `SetCategory` código de ejemplo solo llamará &ndash; cuando esté  realmente disponible, no `SetCategory` intentará llamar a cuando el nivel de API sea 16, 17, 18, 19 o 20. La funcionalidad se reduce en estas versiones anteriores de Android solo en la medida en que las notificaciones no están ordenadas correctamente (porque no se clasifican por tipo), pero las notificaciones siguen publicadas para alertar al usuario. Nuestra aplicación sigue funcionando, pero su funcionalidad se reduce ligeramente.
+En este ejemplo, el marco de trabajo de destino de la aplicación está establecido en **android 5,0 (nivel de API 21)** y su versión mínima de Android está establecida en **Android 4,1 (nivel de API 16)** . Dado `SetCategory` que está disponible en el `Android.OS.BuildVersionCodes.Lollipop` nivel de API y versiones posteriores, este `SetCategory` código de ejemplo solo llamará &ndash; cuando esté realmente disponible, no `SetCategory` intentará llamar a cuando el nivel de API sea 16, 17, 18, 19 o 20. La funcionalidad se reduce en estas versiones anteriores de Android solo en la medida en que las notificaciones no están ordenadas correctamente (porque no se clasifican por tipo), pero las notificaciones siguen publicadas para alertar al usuario. Nuestra aplicación sigue funcionando, pero su funcionalidad se reduce ligeramente.
 
 En general, la comprobación de la versión de compilación ayuda a su código a decidir en tiempo de ejecución entre hacer algo de la forma nueva en lugar de la antigua. Por ejemplo:
 
@@ -261,11 +261,11 @@ Esto se debe a que no hay ninguna página de **compilación > aplicación Androi
 
 -----
 
-La versión mínima de Android y la configuración de versión de Android de destino no están disponibles porque la biblioteca resultante no es &ndash; una aplicación independiente. la biblioteca puede ejecutarse en cualquier versión de Android, en función de la aplicación con la que está empaquetada. Puede especificar cómo se va a compilar la biblioteca, pero no puede predecir en qué nivel de API de plataforma se ejecutará la biblioteca. Teniendo esto en cuenta, deben tenerse en cuenta los siguientes procedimientos recomendados al consumir o crear bibliotecas:
+La versión mínima de Android y la configuración de versión de Android de destino no están disponibles porque la biblioteca resultante no es &ndash; una aplicación independiente. la biblioteca puede ejecutarse en cualquier versión de Android, en función de la aplicación con la que está empaquetada. Puede especificar cómo se va a compilarla biblioteca, pero no puede predecir en qué nivel de API de plataforma se ejecutará la biblioteca. Teniendo esto en cuenta, deben tenerse en cuenta los siguientes procedimientos recomendados al consumir o crear bibliotecas:
 
--   **Al utilizar una biblioteca de Android** Si está consumiendo una biblioteca de Android en la aplicación, asegúrese de establecer la configuración de la plataforma de destino de la aplicación en un nivel de API que sea *al menos tan alto como* el de la versión de .NET Framework de destino de la biblioteca. &ndash;
+- **Al utilizar una biblioteca de Android** Si está consumiendo una biblioteca de Android en la aplicación, asegúrese de establecer la configuración de la plataforma de destino de la aplicación en un nivel de API que sea *al menos tan alto como* el de la versión de .NET Framework de destino de la biblioteca. &ndash;
 
--   **Al crear una biblioteca de Android** &ndash; Si va a crear una biblioteca de Android para su uso por parte de otras aplicaciones, asegúrese de establecer la configuración de la plataforma de destino en el nivel de API mínimo que necesita para compilar.
+- **Al crear una biblioteca de Android** &ndash; Si va a crear una biblioteca de Android para su uso por parte de otras aplicaciones, asegúrese de establecer la configuración de la plataforma de destino en el nivel de API mínimo que necesita para compilar.
 
 Se recomiendan estas prácticas recomendadas para evitar la situación en la que una biblioteca intenta llamar a una API que no está disponible en tiempo de ejecución (lo que puede hacer que la aplicación se bloquee). Si es un desarrollador de bibliotecas, debe esforzarse por restringir el uso de las llamadas API a un subconjunto pequeño y bien establecido del área expuesta de API total. Esto ayuda a garantizar que la biblioteca se puede usar de forma segura en una amplia gama de versiones de Android.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 881590b7b2b7277a2f8f2cc17ce1c8bdff68c626
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655785"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528045"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit en Xamarin. iOS
 
@@ -22,8 +22,8 @@ El marco de EventKit proporciona una manera de teneracceso a los calendarios, *e
 
 En esta guía vamos a tratar:
 
--   **Aspectos básicos de EventKit** : se presentan los elementos fundamentales de EventKit a través de las clases principales y se proporciona una descripción de su uso. En esta sección se requiere la lectura antes de abordar la siguiente parte del documento. 
--   **Tareas comunes** : la sección tareas comunes pretende ser una referencia rápida sobre cómo hacer cosas comunes como; enumerar calendarios, crear, guardar y recuperar eventos de calendario y recordatorios, así como usar los Controladores integrados para crear y modificar eventos de calendario. En esta sección no es necesario leer de antemano, ya que se trata de una referencia para tareas concretas. 
+- **Aspectos básicos de EventKit** : se presentan los elementos fundamentales de EventKit a través de las clases principales y se proporciona una descripción de su uso. En esta sección se requiere la lectura antes de abordar la siguiente parte del documento. 
+- **Tareas comunes** : la sección tareas comunes pretende ser una referencia rápida sobre cómo hacer cosas comunes como; enumerar calendarios, crear, guardar y recuperar eventos de calendario y recordatorios, así como usar los Controladores integrados para crear y modificar eventos de calendario. En esta sección no es necesario leer de antemano, ya que se trata de una referencia para tareas concretas. 
 
 
 Todas las tareas de esta guía están disponibles en la aplicación de ejemplo complementaria:

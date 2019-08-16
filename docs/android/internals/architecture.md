@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 2b8e524d95fb60c8eb45b3dd5b64b68469d97ad1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510729"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524853"
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -33,12 +33,11 @@ Para obtener más información sobre cómo se comunican las clases de Android co
 
 Los paquetes de aplicación de Android son contenedores ZIP con una extensión de archivo *. apk* . Los paquetes de aplicación de Xamarin. Android tienen la misma estructura y el mismo diseño que los paquetes de Android normales, con las siguientes adiciones:
 
--   Los ensamblados de aplicación (que contienen  Il) se almacenan sin comprimir en la carpeta de *ensamblados* . Durante el inicio del proceso en la versión, la *. apk* es *mmap ()* Ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite el inicio de la aplicación más rápido, ya que no es necesario extraer los ensamblados antes de la ejecución.  
--   *Nota:* *No se puede confiar* en la información de ubicación del ensamblado como [Assembly. Location](xref:System.Reflection.Assembly.Location) y [Assembly.](xref:System.Reflection.Assembly.CodeBase)
-    codebase en compilaciones de versión. No existen como entradas de sistema de archivos distintas y no tienen ninguna ubicación utilizable.
+- Los ensamblados de aplicación (que contienen Il) se almacenan sin comprimir en la carpeta de *ensamblados* . Durante el inicio del proceso en la versión, la *. apk* es *mmap ()* Ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite el inicio de la aplicación más rápido, ya que no es necesario extraer los ensamblados antes de la ejecución.  
+- *Nota:* *No se puede confiar* en la información de ubicación del ensamblado como [Assembly. Location](xref:System.Reflection.Assembly.Location) y [Assembly.](xref:System.Reflection.Assembly.CodeBase) codebase en compilaciones de versión. No existen como entradas de sistema de archivos distintas y no tienen ninguna ubicación utilizable.
 
 
--   Las bibliotecas nativas que contienen el entorno de ejecución mono están presentes dentro de *. apk* . Una aplicación de Xamarin. Android debe contener bibliotecas nativas para las arquitecturas de Android deseadas o de destino, por ejemplo, *armeabi* , *armeabi-v7a* , *x86* . Las aplicaciones de Xamarin. Android no se pueden ejecutar en una plataforma a menos que contenga las bibliotecas en tiempo de ejecución adecuadas.
+- Las bibliotecas nativas que contienen el entorno de ejecución mono están presentes dentro de *. apk* . Una aplicación de Xamarin. Android debe contener bibliotecas nativas para las arquitecturas de Android deseadas o de destino, por ejemplo, *armeabi* , *armeabi-v7a* , *x86* . Las aplicaciones de Xamarin. Android no se pueden ejecutar en una plataforma a menos que contenga las bibliotecas en tiempo de ejecución adecuadas.
 
 
 Las aplicaciones de Xamarin. Android también contienen *contenedores de Android* a los que se puede llamar para permitir que Android llame a código administrado.
@@ -83,7 +82,7 @@ Hay otra signatura de constructor de consecuencia: el constructor *(IntPtr, JniH
 
 Hay dos escenarios en los que el constructor *(IntPtr, JniHandleOwnership)* se debe proporcionar manualmente en una subclase de contenedor invocable administrada:
 
-1. Se ha subclase de [Android. app. Application](xref:Android.App.Application) . La *aplicación* es especial; *nunca* se invocará el constructor de *la configuración predeterminada* y, [en su lugar, se debe proporcionar el constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
+1. Se ha subclase de [Android. app. Application](xref:Android.App.Application) . La *aplicación* es especial; *nunca* se invocará el constructor de la configuración predeterminada y, [en su lugar, se debe proporcionar el constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
 
 2. Invocación de método virtual de un constructor de clase base.
 
@@ -94,23 +93,23 @@ Esto se admite creando instancias de una instancia de LogTextBox a través del c
 
 Orden de eventos:
 
-1.  El XML de diseño se carga en un [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
+1. El XML de diseño se carga en un [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
 
-2.  Android crea instancias del gráfico de objetos de diseño y crea una instancia de *monodroid. apidemo. LogTextBox* , ACW para *LogTextBox* .
+2. Android crea instancias del gráfico de objetos de diseño y crea una instancia de *monodroid. apidemo. LogTextBox* , ACW para *LogTextBox* .
 
-3.  El constructor *monodroid. apidemo. LogTextBox* ejecuta el constructor [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
+3. El constructor *monodroid. apidemo. LogTextBox* ejecuta el constructor [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
 
-4.  El constructor *TextView* invoca *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
+4. El constructor *TextView* invoca *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
 
-5.  *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [java. lang. Object. GetObject&lt; TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [java. lang. Object. GetObject&lt; TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
-6.  *Java. lang. Object. GetObject&lt;TextView&gt;()* comprueba si ya existe una instancia correspondiente C# para el *identificador* . Si existe, se devuelve. En este escenario, no existe, por lo que *Object&lt;.&gt;GetObject t ()* debe crear uno.
+6. *Java. lang. Object. GetObject&lt;TextView&gt;()* comprueba si ya existe una instancia correspondiente C# para el *identificador* . Si existe, se devuelve. En este escenario, no existe, por lo que *Object&lt;.&gt;GetObject t ()* debe crear uno.
 
-7.  *Object. GetObject&lt;T&gt;()* busca el constructor *LogTextBox (IntPtr, JniHandleOwneship)* , lo invoca, crea una asignación entre el *identificador* y la instancia creada, y devuelve la instancia creada.
+7. *Object. GetObject&lt;T&gt;()* busca el constructor *LogTextBox (IntPtr, JniHandleOwneship)* , lo invoca, crea una asignación entre el *identificador* y la instancia creada, y devuelve la instancia creada.
 
-8.  *TextView. n_GetDefaultMovementMethod ()* invoca el captador de la propiedad *LogTextBox. DefaultMovementMethod* .
+8. *TextView. n_GetDefaultMovementMethod ()* invoca el captador de la propiedad *LogTextBox. DefaultMovementMethod* .
 
-9.  El control vuelve al constructor de *Android. widget. TextView* , que finaliza la ejecución.
+9. El control vuelve al constructor de *Android. widget. TextView* , que finaliza la ejecución.
 
 10. Se ejecuta el constructor *monodroid. apidemo. LogTextBox* , invocando *TypeManager. Activate ()* .
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 8c816bf98d9997d09b73e7c9cb0d2ff436b65fbb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fd34532e647f0595ed8afa5ef7ad044b84b7d918
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643985"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525798"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con Google Cloud Messaging
 
@@ -31,12 +31,12 @@ Para poder continuar con este tutorial, debe adquirir las credenciales necesaria
 
 Usaremos los pasos siguientes para crear una aplicación cliente de Xamarin. Android habilitada para GCM:
 
-1.  Instale paquetes adicionales necesarios para las comunicaciones con servidores GCM.
-2.  Configure los permisos de la aplicación para el acceso a los servidores GCM.
-3.  Implemente el código para comprobar la presencia de Google Play Services. 
-4.  Implemente un servicio de intención de registro que negocie con GCM para un token de registro.
-5.  Implemente un servicio de escucha de ID. de instancia que escuche las actualizaciones de token de registro de GCM.
-6.  Implemente un servicio de escucha de GCM que reciba mensajes remotos del servidor de aplicaciones a través de GCM.
+1. Instale paquetes adicionales necesarios para las comunicaciones con servidores GCM.
+2. Configure los permisos de la aplicación para el acceso a los servidores GCM.
+3. Implemente el código para comprobar la presencia de Google Play Services. 
+4. Implemente un servicio de intención de registro que negocie con GCM para un token de registro.
+5. Implemente un servicio de escucha de ID. de instancia que escuche las actualizaciones de token de registro de GCM.
+6. Implemente un servicio de escucha de GCM que reciba mensajes remotos del servidor de aplicaciones a través de GCM.
 
 Esta aplicación usará una nueva característica de GCM conocida como *mensajería de temas*. En mensajería de tema, el servidor de aplicaciones envía un mensaje a un tema, en lugar de a una lista de dispositivos individuales. Los dispositivos que se suscriben a ese tema pueden recibir mensajes de tema como notificaciones de envío. Para obtener más información sobre la mensajería de temas de GCM, vea el tema sobre la [implementación de mensajería de temas](https://developers.google.com/cloud-messaging/topic-messaging)de Google. 
 
@@ -87,14 +87,14 @@ Tenga en cuenta que la aplicación cliente no podrá recibir un token de registr
 
 Una aplicación Android debe tener configurados los permisos siguientes para poder recibir notificaciones de Google Cloud Messaging: 
 
--   `com.google.android.c2dm.permission.RECEIVE`&ndash; Concede permiso a la aplicación para registrar y recibir mensajes de Google Cloud Messaging. (¿Qué `c2dm` significa? Esto significa la _mensajería de la nube al dispositivo_, que es la predecesora ahora desusada para GCM. 
+- `com.google.android.c2dm.permission.RECEIVE`&ndash; Concede permiso a la aplicación para registrar y recibir mensajes de Google Cloud Messaging. (¿Qué `c2dm` significa? Esto significa la _mensajería de la nube al dispositivo_, que es la predecesora ahora desusada para GCM. 
     GCM todavía usa `c2dm` en muchas de sus cadenas de permiso). 
 
--   `android.permission.WAKE_LOCK`&ndash; (Opcional) impide que la CPU del dispositivo pase a suspensión mientras escucha un mensaje. 
+- `android.permission.WAKE_LOCK`&ndash; (Opcional) impide que la CPU del dispositivo pase a suspensión mientras escucha un mensaje. 
 
--   `android.permission.INTERNET`&ndash; Concede acceso a Internet para que la aplicación cliente pueda comunicarse con GCM. 
+- `android.permission.INTERNET`&ndash; Concede acceso a Internet para que la aplicación cliente pueda comunicarse con GCM. 
 
--   *nombre_paquete registra la aplicación* `.permission.C2D_MESSAGE` con Android y solicita permiso para recibir exclusivamente todos los mensajes C2D (de la nube al dispositivo). &ndash; El prefijo *nombredepaquete* es el mismo que el identificador de la aplicación. 
+- *nombre_paquete registra la aplicación* `.permission.C2D_MESSAGE` con Android y solicita permiso para recibir exclusivamente todos los mensajes C2D (de la nube al dispositivo). &ndash; El prefijo *nombredepaquete* es el mismo que el identificador de la aplicación. 
 
 Estableceremos estos permisos en el manifiesto de Android. Vamos a editar **archivo AndroidManifest. XML** y reemplazar el contenido por el siguiente código XML: 
 
@@ -205,11 +205,11 @@ A continuación, escribiremos código para ponerse en contacto con GCM y obtener
 
 Antes de que la aplicación pueda recibir notificaciones remotas del servidor de aplicaciones, debe registrarse en GCM y obtener un token de registro. El trabajo de registro de la aplicación con GCM se controla mediante `IntentService` el que se crea. Nuestro `IntentService` realiza los pasos siguientes: 
 
-1.  Usa la API [InstanceID](https://developers.google.com/instance-id/) para generar tokens de seguridad que autorizan a la aplicación cliente a acceder al servidor de aplicaciones. A cambio, recibimos un token de registro de GCM.
+1. Usa la API [InstanceID](https://developers.google.com/instance-id/) para generar tokens de seguridad que autorizan a la aplicación cliente a acceder al servidor de aplicaciones. A cambio, recibimos un token de registro de GCM.
 
-2.  Reenvía el token de registro al servidor de aplicaciones (si el servidor de aplicaciones lo requiere).
+2. Reenvía el token de registro al servidor de aplicaciones (si el servidor de aplicaciones lo requiere).
 
-3.  Se suscribe a uno o varios canales de temas de notificación.
+3. Se suscribe a uno o varios canales de temas de notificación.
 
 Después de implementarlo `IntentService`, lo probaremos para ver si obtenemos un token de registro de GCM.
 
@@ -272,11 +272,11 @@ namespace ClientApp
 
 En el código de ejemplo anterior, cambie *YOUR_SENDER_ID* por el número de identificación del remitente del proyecto de la aplicación cliente. Para obtener el identificador del remitente del proyecto: 
 
-1.  Inicie sesión en la [consola de Google Cloud](https://console.cloud.google.com/) y seleccione el nombre del proyecto en el menú desplegable. En el panel de **información del proyecto** que se muestra para el proyecto, haga clic en **ir a configuración del proyecto**:
+1. Inicie sesión en la [consola de Google Cloud](https://console.cloud.google.com/) y seleccione el nombre del proyecto en el menú desplegable. En el panel de **información del proyecto** que se muestra para el proyecto, haga clic en **ir a configuración del proyecto**:
 
     [![Selección del proyecto XamarinGCM](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
-2.  En la página **configuración** , busque el **número** &ndash; de proyecto que es el identificador del remitente del proyecto:
+2. En la página **configuración** , busque el **número** &ndash; de proyecto que es el identificador del remitente del proyecto:
 
     [![Número de proyecto mostrado](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
 

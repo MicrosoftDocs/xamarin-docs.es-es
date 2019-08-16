@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/06/2016
-ms.openlocfilehash: d01814bc241dcfb7b62f40bef226ee720a96ff23
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0dd3830b4903658d0b014eceaad9c57859963c04
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657007"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528631"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Trabajar con tablas y celdas en Xamarin. iOS
 
@@ -22,10 +22,10 @@ Para aquellos que trabajan en aplicaciones multiplataforma con Xamarin. Android,
 
 En estos artículos se proporciona una visión completa del trabajo con tablas, entre las que se incluyen:
 
--   **Partes** de la tabla: introducción y explicación de los elementos `UITableView` visuales del control. 
--   **Mostrar datos en tablas** : demostrar cómo crear y rellenar una tabla, usar distintos estilos de tabla y celda y evitar problemas de memoria mediante el reciclaje de objetos de celda. 
--   **Uso avanzado** : compilar celdas personalizadas y usar las características de edición de la clase UITableView. 
--   **Crear una tabla visualmente** : mediante el Xamarin Designer para iOS para crear una interfaz controlada por tabla con un guion gráfico. 
+- **Partes** de la tabla: introducción y explicación de los elementos `UITableView` visuales del control. 
+- **Mostrar datos en tablas** : demostrar cómo crear y rellenar una tabla, usar distintos estilos de tabla y celda y evitar problemas de memoria mediante el reciclaje de objetos de celda. 
+- **Uso avanzado** : compilar celdas personalizadas y usar las características de edición de la clase UITableView. 
+- **Crear una tabla visualmente** : mediante el Xamarin Designer para iOS para crear una interfaz controlada por tabla con un guion gráfico. 
 
 ## <a name="contents"></a>Contenido
 

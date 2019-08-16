@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653157"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528986"
 ---
 # <a name="colors-in-xamarinforms"></a>Colores de Xamarin.Forms
 
@@ -24,12 +24,12 @@ Este artículo presentan las distintas formas la `Color` clase puede usarse en X
 
 La `Color` clase proporciona una serie de métodos para crear una instancia de color
 
--  **Colores con nombre** -una colección de comunes colores con nombre, incluidos `Red`, `Green`, y `Blue`.
--  **FromHex** : valor de cadena similar a la sintaxis usada en HTML, por ejemplo, "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
--  **FromHsla** -matiz, saturación y luminosidad `double` valores, con el valor alfa opcional (0.0-1.0).
--  **FromRgb** -rojo, verde y azul `int` valores (0-255).
--  **FromRgba** -rojo, verde, azul y alfa `int` valores (0-255).
--  **FromUint** -establecer una sola `double` que representa el valor **argb**.
+- **Colores con nombre** -una colección de comunes colores con nombre, incluidos `Red`, `Green`, y `Blue`.
+- **FromHex** : valor de cadena similar a la sintaxis usada en HTML, por ejemplo, "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
+- **FromHsla** -matiz, saturación y luminosidad `double` valores, con el valor alfa opcional (0.0-1.0).
+- **FromRgb** -rojo, verde y azul `int` valores (0-255).
+- **FromRgba** -rojo, verde, azul y alfa `int` valores (0-255).
+- **FromUint** -establecer una sola `double` que representa el valor **argb**.
 
 Presentamos algunos colores del ejemplo, asignados a la `BackgroundColor` de algunas etiquetas utilizando diferentes variaciones de la sintaxis permitida:
 
@@ -69,11 +69,11 @@ En iOS y Android, esta instancia se establece en un color de contraste que está
 
 `Color` instancias incluyen métodos adicionales que pueden usarse para crear nuevos colores:
 
--  **AddLuminosity** -devuelve un nuevo color si modifica la luminosidad por el delta proporcionado.
--  **WithHue** -devuelve un nuevo color, reemplazando el matiz con el valor proporcionado.
--  **WithLuminosity** -devuelve un nuevo color, reemplazando la luminosidad con el valor proporcionado.
--  **WithSaturation** -devuelve un nuevo color, reemplazando la saturación con el valor proporcionado.
--  **MultiplyAlpha** -devuelve un nuevo color mediante la modificación de la versión alfa, multiplicarlo por el valor alfa proporcionado.
+- **AddLuminosity** -devuelve un nuevo color si modifica la luminosidad por el delta proporcionado.
+- **WithHue** -devuelve un nuevo color, reemplazando el matiz con el valor proporcionado.
+- **WithLuminosity** -devuelve un nuevo color, reemplazando la luminosidad con el valor proporcionado.
+- **WithSaturation** -devuelve un nuevo color, reemplazando la saturación con el valor proporcionado.
+- **MultiplyAlpha** -devuelve un nuevo color mediante la modificación de la versión alfa, multiplicarlo por el valor alfa proporcionado.
 
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 

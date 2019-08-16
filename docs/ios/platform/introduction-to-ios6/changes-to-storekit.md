@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 03c18c50b15db05d26e1cec20e571367219f8643
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643073"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527860"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Cambios en StoreKit en iOS 6
 
@@ -208,7 +208,7 @@ El archivo de texto y la imagen se descargan y copian en el directorio de docume
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
-Al crear nuevos productos que usarán el hospedaje de contenido de Apple, asegúrese de seleccionar el tipo de producto **no consumible** . Otros tipos de productos no admiten el hospedaje de contenido. Además, no debe habilitar el hospedaje de contenido *para los productos* que vende; Active únicamente el hospedaje de contenido para los nuevos productos.
+Al crear nuevos productos que usarán el hospedaje de contenido de Apple, asegúrese de seleccionar el tipo de producto **no consumible** . Otros tipos de productos no admiten el hospedaje de contenido. Además, no debe habilitar el hospedaje de contenido para los productos que vende; Active únicamente el hospedaje de contenido para los nuevos productos.
 
  [![](changes-to-storekit-images/image6.png "Seleccionar el tipo de producto no consumible")](changes-to-storekit-images/image6.png#lightbox)
 
@@ -244,8 +244,8 @@ La creación de paquetes de contenido para productos de compra desde la aplicaci
 
 Nuestra aplicación de ejemplo tiene capítulos de la venta: cada paquete de contenido de capítulos contendrá:
 
--  un archivo de texto y
--  una imagen para representar el capítulo.
+- un archivo de texto y
+- una imagen para representar el capítulo.
 
 
 Para empezar, seleccione **archivo > nuevo proyecto** en el menú y elija **contenido de compra**desde la aplicación:

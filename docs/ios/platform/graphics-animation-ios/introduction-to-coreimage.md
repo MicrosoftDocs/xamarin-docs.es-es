@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e4676314b361bac17b3c6df64631572e62f4d870
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653731"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527847"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen básica en Xamarin. iOS
 
@@ -22,9 +22,9 @@ La imagen principal es un nuevo marco de trabajo incluido en iOS 5 que proporcio
 
 Este documento contiene ejemplos sencillos de:
 
--  Detección de caras.
--  Aplicar filtros a una imagen
--  Enumerar los filtros disponibles.
+- Detección de caras.
+- Aplicar filtros a una imagen
+- Enumerar los filtros disponibles.
 
 
 Estos ejemplos le ayudarán a empezar a incorporar características de imagen principales en sus aplicaciones de Xamarin. iOS.
@@ -49,12 +49,12 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 
 La matriz de características se rellenará con `CIFaceFeature` objetos (si se detectaron rostros). Hay un para `CIFaceFeature` cada una de las caras. `CIFaceFeature`tiene las siguientes propiedades:
 
--  HasMouthPosition: indica si se ha detectado una boca para este problema.
--  HasLeftEyePosition: indica si se ha detectado el ojo izquierdo para esta esfera.
--  HasRightEyePosition: indica si se ha detectado el ojo correcto para esta esfera. 
--  MouthPosition: las coordenadas de la boca de este tipo.
--  LeftEyePosition: las coordenadas del ojo izquierdo para esta esfera.
--  RightEyePosition: las coordenadas del ojo adecuado para esta esfera.
+- HasMouthPosition: indica si se ha detectado una boca para este problema.
+- HasLeftEyePosition: indica si se ha detectado el ojo izquierdo para esta esfera.
+- HasRightEyePosition: indica si se ha detectado el ojo correcto para esta esfera. 
+- MouthPosition: las coordenadas de la boca de este tipo.
+- LeftEyePosition: las coordenadas del ojo izquierdo para esta esfera.
+- RightEyePosition: las coordenadas del ojo adecuado para esta esfera.
 
 
 Las coordenadas de todas estas propiedades tienen su origen en la parte inferior izquierda, a diferencia de UIKit, que usa la parte superior izquierda como el origen. Al usar las coordenadas en `CIFaceFeature` , asegúrese de ' voltearlas '. Esta vista de imagen personalizada muy básica de CoreImage\CoreImageViewController.CS muestra cómo dibujar los triángulos de ' indicador de caras ' en la imagen `FlipForBottomOrigin` (tenga en cuenta el método):

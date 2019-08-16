@@ -1,69 +1,69 @@
 ---
-title: Desgaste de empaquetado de aplicaciones
+title: Aplicaciones de desgaste de empaquetado
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 585c276b327a9092bdd13fa633307477017558c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276813"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522102"
 ---
-# <a name="packaging-wear-apps"></a>Desgaste de empaquetado de aplicaciones
+# <a name="packaging-wear-apps"></a>Aplicaciones de desgaste de empaquetado
 
-Aplicaciones de Android Wear se empaquetan con una aplicación completa de Android para su distribución en Google Play. 
+Las aplicaciones de desgaste de Android se empaquetan con una aplicación Android completa para su distribución en Google Play. 
 
-## <a name="automatic-packaging"></a>Empaquetado automática
+## <a name="automatic-packaging"></a>Empaquetado automático
 
-A partir de Xamarin Android 5.0, la aplicación Wear se empaqueta de manera automática como un recurso en la aplicación de dispositivo de mano cuando creas una referencia de proyecto desde el proyecto de equipo de mano para el proyecto de desgaste. Puede usar los pasos siguientes para crear esta asociación: 
+A partir de Xamarin Android 5,0, la aplicación de desgaste se empaqueta automáticamente como un recurso en la aplicación de mano cuando se crea una referencia de proyecto desde el proyecto de mano al proyecto de desgaste. Puede usar los pasos siguientes para crear esta asociación: 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Si su aplicación Wear ya no forma parte de su solución de mano, haga clic en el nodo de solución y seleccione **Agregar > Agregar proyecto existente...** .
+1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..** ..
 
-2. Navegue hasta la **.csproj** archivo de la aplicación Wear, selecciónelo y haga clic en **abierto**. El proyecto de aplicación Wear ahora debe estar visible en la solución de mano.
+2. Navegue hasta el archivo **. csproj** de la aplicación de desgaste, selecciónelo y haga clic en **abrir**. El proyecto de aplicación de desgaste debe estar ahora visible en la solución de mano.
 
-3. Haga clic en el **referencias** nodo y seleccione **Agregar referencia**.
+3. Haga clic con el botón secundario en el nodo **referencias** y seleccione **Agregar referencia**.
 
-4. En el **Administrador de referencias** cuadro de diálogo, habilitar, a continuación, haga clic en el desgaste del proyecto (haga clic para agregar una marca de verificación) **Aceptar**.
+4. En el cuadro de diálogo **Administrador de referencias** , habilite el proyecto de desgaste (haga clic para agregar una marca de verificación) y, a continuación, haga clic en **Aceptar**.
 
-5. Cambiar el nombre del paquete para el proyecto de desgaste para que coincida con el nombre del paquete del proyecto de equipo de mano (se puede cambiar el nombre del paquete bajo **Propiedades > manifiesto de Android**).
+5. Cambie el nombre del paquete para el proyecto de desgaste para que coincida con el nombre de paquete del proyecto de mano (el nombre del paquete se puede cambiar en **propiedades > manifiesto de Android**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Si su aplicación Wear ya no forma parte de su solución de mano, haga clic en el nodo de solución y seleccione **Agregar > Agregar proyecto existente...** .
+1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..** ..
 
-2. Navegue hasta la **.csproj** archivo de la aplicación Wear, selecciónelo y haga clic en **abierto**. El proyecto de aplicación Wear ahora debe estar visible en la solución de mano.
+2. Navegue hasta el archivo **. csproj** de la aplicación de desgaste, selecciónelo y haga clic en **abrir**. El proyecto de aplicación de desgaste debe estar ahora visible en la solución de mano.
 
-3. Haga clic en el nodo de proyecto de equipo de mano en la solución y haga clic en **editar referencias...** .
+3. Haga clic con el botón secundario en el nodo del proyecto de mano de la solución y haga clic en **Editar referencias..** ..
 
-4. En el **editar referencias** cuadro de diálogo, habilitar, a continuación, haga clic en el desgaste del proyecto (haga clic para agregar una marca de verificación) **Aceptar**.
+4. En el cuadro de diálogo **Editar referencias** , habilite el proyecto de desgaste (haga clic para agregar una marca de verificación) y, a continuación, haga clic en **Aceptar**.
 
-5. Cambiar el nombre del paquete para el proyecto de desgaste para que coincida con el nombre del paquete del proyecto de equipo de mano (se puede cambiar el nombre del paquete bajo **opciones de proyecto > aplicación de Android**).
+5. Cambie el nombre del paquete para el proyecto de desgaste para que coincida con el nombre de paquete del proyecto de mano (el nombre del paquete se puede cambiar en **Opciones de proyecto > aplicación de Android**).
 
 -----
 
 
-Tenga en cuenta que habrá un **XA5211** error si el nombre del paquete de la aplicación Wear no coincide con el nombre del paquete de la aplicación de dispositivo de mano. Por ejemplo:
+Tenga en cuenta que recibirá un error **XA5211** si el nombre del paquete de la aplicación de desgaste no coincide con el nombre del paquete de la aplicación de mano. Por ejemplo:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
 app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 ```
 
-Para corregir este error, cambie el nombre del paquete de la aplicación Wear para que coincida con el nombre del paquete de la aplicación de dispositivo de mano.
+Para corregir este error, cambie el nombre del paquete de la aplicación de desgaste para que coincida con el nombre del paquete de la aplicación de mano.
 
-Al hacer clic en **compilar > compilar todo**, esta asociación desencadena automática empaquetado del proyecto desgaste en el proyecto de equipo de mano (Phone) principal. La aplicación de desgaste está compilado automáticamente y se incluye como recurso en la aplicación de dispositivo de mano.
+Al hacer clic en compilar **> compilar todo**, esta asociación desencadena el empaquetado automático del proyecto de desgaste en el proyecto principal de mano (teléfono). La aplicación de desgaste se crea automáticamente e incluye como un recurso en la aplicación de mano.
 
-El ensamblado que genera el proyecto de aplicación Wear no se utiliza como una referencia de ensamblado en el proyecto de equipo de mano (Phone). En su lugar, el proceso de compilación hace lo siguiente:
+El ensamblado que genera el proyecto de aplicación de desgaste no se usa como referencia de ensamblado en el proyecto de mano (teléfono). En su lugar, el proceso de compilación hace lo siguiente:
 
--   Comprueba que el paquete de los nombres de coincidencia. 
+- Comprueba que los nombres de paquete coinciden. 
 
--   Genera el XML y lo agrega al proyecto de dispositivo de mano para asociarlo con la aplicación de desgaste. Por ejemplo: 
+- Genera XML y lo agrega al proyecto de mano para asociarlo a la aplicación de desgaste. Por ejemplo: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -74,20 +74,20 @@ El ensamblado que genera el proyecto de aplicación Wear no se utiliza como una 
     </ProjectReference>
     ```
 
--   Agrega la aplicación Wear como un **raw** recurso para el proyecto de equipo de mano. 
+- Agrega la aplicación de desgaste como un recurso **sin procesar** al proyecto de mano. 
 
 
 ## <a name="manual-packaging"></a>Empaquetado manual
 
-Puede escribir aplicaciones de Android Wear en Xamarin.Android antes de la versión 5.0, pero debe seguir estas instrucciones de empaquetado manual para distribuir la aplicación: 
+Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de la versión 5,0, pero debe seguir estas instrucciones de empaquetado manual para distribuir la aplicación: 
 
-1. Asegúrese de que los proyectos de equipo de mano (Phone) y proyecto portátiles tienen el mismo nombre de paquete y el número de versión.
+1. Asegúrese de que el proyecto de portátil y los proyectos de mano (teléfono) tienen el mismo número de versión y el mismo nombre de paquete.
 
-2. Compilar manualmente el proyecto portátiles como un **versión** de compilación.
+2. Compile manualmente el proyecto portátil como una compilación de **versión** .
 
-3. Agregar manualmente la versión **. APK** del paso (2) en el **recursos o sin formato** directorio del proyecto de equipo de mano (Phone).
+3. Agregue manualmente la versión **. APK** del paso (2) en el directorio Resources **/raw** del proyecto de mano (teléfono).
 
-4. Agregar manualmente un nuevo recurso XML **Resources/xml/wearable_app_desc.xml** en el proyecto de equipo de mano que hace referencia al dispositivo ponible **APK** del paso (3):
+4. Agregue manualmente un nuevo recurso de recursos XML **/XML/wearable_app_desc. XML** en el proyecto de mano que hace referencia a portátil **apk** del paso (3):
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -97,12 +97,12 @@ Puede escribir aplicaciones de Android Wear en Xamarin.Android antes de la versi
     </wearableApp>
     ```
 
-5. Agregar manualmente un `<meta-data />` elemento para el proyecto de equipo de mano **AndroidManifest.xml** `<application>` elemento que hace referencia al nuevo recurso XML:
+5. Agregue manualmente un `<meta-data />` elemento al elemento **archivo AndroidManifest. XML** `<application>` del proyecto de mano que hace referencia al nuevo recurso XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-Consulte también el sitio para desarrolladores de Android [envases presenten manual instrucciones](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).
+Vea también las [instrucciones manuales](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)del sitio para desarrolladores de Android packging.
 

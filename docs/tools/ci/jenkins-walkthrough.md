@@ -1,154 +1,154 @@
 ---
 title: Uso de Jenkins con Xamarin
-description: Este documento describe cómo usar Jenkins para la integración continua con las aplicaciones de Xamarin. Describe cómo instalar, configurar y usar Jenkins.
+description: En este documento se describe cómo usar Jenkins para la integración continua con las aplicaciones de Xamarin. Describe cómo instalar, configurar y usar Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: lobrien
 ms.author: laobri
 ms.date: 03/23/2017
-ms.openlocfilehash: 2e6a75fa3c4c63e8dea402c6761f8ef753908540
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d44e7232529386b7cb6b3db5fbb8bc4a285972fb
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61047865"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529122"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
-_Esta guía muestra cómo configurar Jenkins como un servidor de integración continua y automatizar la compilación de aplicaciones móviles creadas con Xamarin. Describe cómo instalar Jenkins en OS X, configurarlo y configurar los trabajos para compilar aplicaciones de Xamarin.iOS y Xamarin.Android cuando se confirman cambios en el sistema de administración de código fuente._
+_En esta guía se muestra cómo configurar Jenkins como un servidor de integración continua y automatizar la compilación de aplicaciones móviles creadas con Xamarin. Describe cómo instalar Jenkins en OS X, configurarlo y configurar trabajos para compilar aplicaciones de Xamarin. iOS y Xamarin. Android cuando los cambios se confirman en el sistema de administración de código fuente._
 
-[Introducción a la integración continua con Xamarin](~/tools/ci/intro-to-ci.md) presenta la integración continua como una práctica de desarrollo de software útil que proporciona advertencias anticipadas de código roto o incompatible. CI permite a los desarrolladores solucionar problemas y problemas que puedan surgir y se mantiene el software en un estado adecuado para la implementación. Este tutorial describe cómo usar el contenido de ambos documentos conjuntamente.
+La [Introducción a la integración continua con Xamarin](~/tools/ci/intro-to-ci.md) presenta la integración continua como una práctica de desarrollo de software útil que proporciona una advertencia temprana del código dañado o incompatible. CI permite a los desarrolladores solucionar problemas y problemas a medida que se producen y mantiene el software en un estado adecuado para la implementación. En este tutorial se explica cómo usar el contenido de ambos documentos juntos.
 
-Esta guía muestra cómo instalar Jenkins en un equipo dedicado ejecutándose en OS X y configurar para ejecutarse automáticamente cuando se inicia el equipo. Una vez que Jenkins está instalado, instalamos complementos adicionales para admitir MS Build. Jenkins es compatible con Git desde el principio. Si se utiliza TFS para el control de código fuente, también deben instalarse un utilidades de complemento y la línea de comandos adicionales.
+En esta guía se muestra cómo instalar Jenkins en un equipo dedicado que ejecuta OS X y configurarlo para que se ejecute automáticamente cuando se inicie el equipo. Una vez instalado Jenkins, se instalarán Complementos adicionales para admitir MS Build. Jenkins admite git de la caja. Si TFS se usa para el control de código fuente, también debe instalarse un complemento adicional y las utilidades de línea de comandos.
 
-Una vez que Jenkins está configurado y los complementos necesarios se han instalado, se creará uno o varios trabajos para compilar los proyectos de Xamarin.Android y Xamarin.iOS. Un trabajo es una colección de pasos y los metadatos necesarios para realizar algún trabajo. Normalmente, un trabajo consta de lo siguiente:
+Una vez que Jenkins esté configurado y se hayan instalado los complementos necesarios, crearemos uno o varios trabajos para compilar los proyectos de Xamarin. Android y Xamarin. iOS. Un trabajo es una colección de pasos y metadatos necesarios para realizar algún trabajo. Normalmente, un trabajo consta de lo siguiente:
 
-- **Administración de código (SCM) de origen** : se trata de una entrada de metadatos en los archivos de configuración de Jenkins que contiene información sobre cómo conectarse a control de código fuente y qué archivos para recuperar.
-- **Desencadenadores** : los desencadenadores se usan para iniciar un trabajo según ciertas acciones, como cuando un desarrollador confirma cambios en el repositorio de código fuente.
-- **Instrucciones de compilación** : se trata de un complemento o un script que se va a compilar el código fuente y generar un archivo binario que se puede instalar en dispositivos móviles.
-- **Acciones de compilación opcionales** : Esto podría incluir la ejecución de pruebas unitarias, realización de análisis estático en el código, firma de código, o a partir de otro trabajo para llevar a cabo otro trabajo relacionado de compilación.
-- **Las notificaciones** : puede enviar un trabajo de algún tipo de notificación sobre el estado de una compilación.
-- **Seguridad** : aunque es opcional, se recomienda encarecidamente que las características de seguridad de Jenkins también esté habilitada.
+- **Administración de código fuente (SCM)** : se trata de una entrada de metadatos en los archivos de configuración de Jenkins que contiene información sobre cómo conectarse al control de código fuente y qué archivos se van a recuperar.
+- **Desencadenadores** : los desencadenadores se usan para iniciar un trabajo en función de ciertas acciones, como cuando un programador confirma cambios en el repositorio de código fuente.
+- **Instrucciones de compilación** : se trata de un complemento o un script que compilará el código fuente y generará un archivo binario que se puede instalar en dispositivos móviles.
+- **Acciones de compilación opcionales** : esto podría incluir la ejecución de pruebas unitarias, la realización de análisis estáticos en el código, la firma de código o el inicio de otro trabajo para realizar otro trabajo relacionado con la compilación.
+- **Notificaciones** : un trabajo puede enviar algún tipo de notificación sobre el estado de una compilación.
+- **Seguridad** : aunque es opcional, se recomienda encarecidamente que las características de seguridad de Jenkins también estén habilitadas.
 
-Esta guía le guiará a través de cómo configurar un servidor de Jenkins que abarcan cada uno de estos puntos. Al final del mismo, deberíamos tener una buena comprensión de cómo instalar y configurar Jenkins para crear los APK e IPA para nuestros proyectos móviles de Xamarin.
+En esta guía se describe cómo configurar un servidor de Jenkins que abarque cada uno de estos puntos. Al final, deberíamos tener una buena comprensión de cómo configurar y configurar Jenkins para crear IPA y APK para nuestros proyectos móviles de Xamarin.
 
 ## <a name="requirements"></a>Requisitos
 
-El servidor de compilación ideal es un equipo independiente dedicado para el único propósito de crear y, posiblemente, probar la aplicación. Un equipo dedicado garantiza que los artefactos que podrían ser necesarios para otras funciones (como los de un servidor web) no contaminen la compilación. Por ejemplo, si el servidor de compilación también actúa como un servidor web, el servidor web puede requerir una versión en conflicto de alguna biblioteca común. Debido a este conflicto el servidor web no funcionen correctamente o Jenkins puede crear compilaciones que no funcionan cuando se implementa para los usuarios.
+El servidor de compilación ideal es un equipo independiente que se dedica a la única finalidad de compilar y probar la aplicación. Un equipo dedicado garantiza que los artefactos que podrían ser necesarios para otros roles (como el de un servidor Web) no contaminan la compilación. Por ejemplo, si el servidor de compilación también actúa como servidor Web, el servidor web puede requerir una versión en conflicto de alguna biblioteca común. Debido a este conflicto, es posible que el servidor Web no funcione correctamente o que Jenkins pueda crear compilaciones que no funcionen cuando se implementen en los usuarios.
 
-El servidor de compilación para las aplicaciones móviles de Xamarin es muy parecida a la estación de trabajo del desarrollador configure. Tiene una cuenta de usuario de que Jenkins, Visual Studio para Mac, y se instalará Xamarin.iOS y Xamarin.Android. Todos lo certificados, el aprovisionamiento de perfiles y los almacenes de claves de firma de código deben instalarse también. *Normalmente la cuenta de usuario del servidor de compilación es independiente de las cuentas de desarrollador: asegúrese de instalar y configurar todo el software, las claves y certificados mientras ha iniciado sesión con la cuenta de usuario del servidor de compilación.*
+El servidor de compilación de las aplicaciones móviles de Xamarin se configura de forma muy parecida a la estación de trabajo de un desarrollador. Tiene una cuenta de usuario en la que se instalará Jenkins, Visual Studio para Mac y Xamarin. iOS y Xamarin. Android. También se deben instalar todos los certificados de firma de código, los perfiles de aprovisionamiento y los almacenes de claves. *Normalmente, la cuenta de usuario del servidor de compilación es independiente de las cuentas de desarrollador. Asegúrese de instalar y configurar todo el software, las claves y los certificados mientras se inicia sesión con la cuenta de usuario del servidor de compilación.*
 
-El siguiente diagrama ilustra todos estos elementos en un servidor de compilación de Jenkins típico:
+En el siguiente diagrama se ilustran todos estos elementos en un servidor de compilación de Jenkins típico:
 
-[![](jenkins-walkthrough-images/image1.png "Este diagrama ilustra todos estos elementos en un servidor de compilación de Jenkins típico")](jenkins-walkthrough-images/image1.png#lightbox)
+[![](jenkins-walkthrough-images/image1.png "En este diagrama se ilustran todos estos elementos en un servidor de compilación de Jenkins típico")](jenkins-walkthrough-images/image1.png#lightbox)
 
-solo se pueden desarrollar aplicaciones de iOS e inicien sesión en un equipo que ejecuta Mac OS. Un Mini Mac es una opción de bajo costo razonable, pero cualquier equipo que pueda ejecutar OS X 10.10 (Yosemite) o versiones posteriores es suficiente.
+las aplicaciones de iOS solo se pueden compilar y firmar en un equipo que ejecute macOS. Una Mini Mac es una opción de bajo costo razonable, pero cualquier equipo capaz de ejecutar OS X 10,10 (Yosemite) o superior es suficiente.
 
-Si se utiliza TFS para el control de código fuente, desea instalar [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere proporciona acceso multiplataforma a TFS en el Terminal de macOS.
+Si TFS se usa para el control de código fuente, querrá instalar [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere proporciona acceso multiplataforma a TFS en el terminal de macOS.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
 ## <a name="installing-jenkins"></a>Instalación de Jenkins
 
-Es la primera tarea al uso de Jenkins instalarlo. Hay tres maneras de ejecutar Jenkins en OS X:
+La primera tarea para usar Jenkins es instalarla. Hay tres formas de ejecutar Jenkins en OS X:
 
-- Como un demonio, que se ejecuta en segundo plano.
-- Dentro de un contenedor de servlet como Tomcat, Jetty o JBoss.
-- Como un proceso normal que se ejecuta bajo una cuenta de usuario.
+- Como demonio, que se ejecuta en segundo plano.
+- Dentro de un contenedor de Servlets como Tomcat, Jetty o JBoss.
+- Como un proceso normal que se ejecuta en una cuenta de usuario.
 
-Las aplicaciones más tradicionales de integración continua se ejecutan en segundo plano, ya sea como un demonio (en OS X o \*nix) o como un servicio (en Windows). Esto es adecuado para escenarios donde no hay ninguna intervención de GUI y dónde se puede realizar fácilmente la configuración del entorno de compilación. Aplicaciones móviles también requieren keystore y certificados que podrían resultar problemáticos para el acceso cuando Jenkins se ejecuta como un demonio de firma. Por estas razones, este documento se centra en el tercer escenario: se ejecuta Jenkins en una cuenta de usuario en el servidor de compilación.
+La mayoría de las aplicaciones de integración continua más tradicionales se ejecutan en segundo plano, ya sea \*como un demonio (en OS X o Nix) o como un servicio (en Windows). Esto es adecuado para escenarios en los que no se requiere ninguna interacción con la interfaz gráfica de usuario y donde se puede realizar fácilmente la instalación del entorno de compilación. Mobile Apps también requiere certificados de firma y keystores que podrían ser problemáticos para acceder cuando Jenkins se ejecuta como un demonio. Debido a estos problemas, este documento se centra en el tercer escenario: ejecutar Jenkins en una cuenta de usuario en el servidor de compilación.
 
-Jenkins.App es una forma práctica para instalar Jenkins. Se trata de un contenedor AppleScript que simplifica el proceso de inicio y detención de un servidor de Jenkins. En lugar de ejecutarse en un shell de bash, Jenkins se ejecuta como una aplicación con el icono en el Dock, como se muestra en la siguiente captura de pantalla:
+Jenkins. app es una forma cómoda de instalar Jenkins. Se trata de un contenedor AppleScript que simplifica el inicio y la detención de un servidor Jenkins. En lugar de ejecutarse en un shell de Bash, Jenkins se ejecuta como una aplicación con el icono en el Dock, tal como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image2.png "En lugar de ejecutarse en un shell de bash, Jenkins se ejecuta como una aplicación con el icono de la base, como se muestra en esta captura de pantalla")](jenkins-walkthrough-images/image2.png#lightbox)
+[![](jenkins-walkthrough-images/image2.png "En lugar de ejecutarse en un shell de Bash, Jenkins se ejecuta como una aplicación con el icono en el Dock, tal como se muestra en esta captura de pantalla.")](jenkins-walkthrough-images/image2.png#lightbox)
 
-Iniciar o detener Jenkins es tan sencillo como iniciar o detener Jenkins.App.
+Iniciar o detener Jenkins es tan sencillo como iniciar o detener Jenkins. app.
 
-Para instalar Jenkins.App, descargue la versión más reciente de la página de descarga del proyecto, en la imagen en la captura de pantalla siguiente:
+Para instalar Jenkins. app, descargue la versión más reciente de la página de descarga del proyecto, que se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image3.png "Aplicación de página, descrito en esta captura de pantalla de descarga de la versión más reciente de los proyectos de descarga")](jenkins-walkthrough-images/image3.png#lightbox)
+[![](jenkins-walkthrough-images/image3.png ", Descargue la versión más reciente de la página de descarga de proyectos, que se ilustra en esta captura de pantalla")](jenkins-walkthrough-images/image3.png#lightbox)
 
-Extraiga el archivo zip en la `/Applications` carpeta en el servidor de compilación y, al igual que cualquier otra aplicación de OS X de inicio.
-La primera vez que se inicia Jenkins.App, presentará un cuadro de diálogo que le informa de que descargará Jenkins:
+Extraiga el archivo zip en la `/Applications` carpeta del servidor de compilación e inícielo como cualquier otra aplicación de OS X.
+La primera vez que inicie Jenkins. app, aparecerá un cuadro de diálogo en el que se le informará de que se descargará Jenkins:
 
-[![](jenkins-walkthrough-images/image4.png "Aplicación, presentará un cuadro de diálogo que le informa de que descargará Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
+[![](jenkins-walkthrough-images/image4.png "Aplicación, presentará un cuadro de diálogo que le informará de que se descargará Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
 
-Una vez finalizado su descarga, Jenkins.App mostrará otro cuadro de diálogo que le preguntará si desea personalizar el inicio de Jenkins, tal como se muestra en la captura de pantalla siguiente:
+Una vez que Jenkins. app ha finalizado su descarga, mostrará otro cuadro de diálogo que le pregunta si desea personalizar el inicio de Jenkins, tal como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image5.png "Aplicación ha finalizado su descarga, mostrará otro cuadro de diálogo que le preguntará si desea personalizar el inicio de Jenkins, tal como se muestra en esta captura de pantalla")](jenkins-walkthrough-images/image5.png#lightbox)
+[![](jenkins-walkthrough-images/image5.png "La aplicación ha finalizado su descarga, aparecerá otro cuadro de diálogo en el que se le pregunta si desea personalizar el inicio de Jenkins, tal como se muestra en esta captura de pantalla.")](jenkins-walkthrough-images/image5.png#lightbox)
 
-Personalización de Jenkins es opcional y no tiene que realizarse cada vez que se inicia la aplicación: la configuración predeterminada para Jenkins funcionarán para la mayoría de las situaciones.
+La personalización de Jenkins es opcional y no tiene que realizarse cada vez que se inicia la aplicación: la configuración predeterminada de Jenkins funcionará en la mayoría de los casos.
 
-Si es necesario personalizar Jenkins, haga clic en el **cambiar valores predeterminados** botón. Se le presentará dos cuadros de diálogo consecutivos: uno que solicita los parámetros de línea de comandos de Java y otro que solicita los parámetros de línea de comandos de Jenkins. Las dos capturas de pantalla siguientes muestran estos dos cuadros de diálogo:
+Si es necesario personalizar Jenkins, haga clic en el botón **cambiar valores** predeterminados. Esto le presentará dos cuadros de diálogo consecutivos: uno que solicita parámetros de la línea de comandos de Java y otro que solicita parámetros de la línea de comandos de Jenkins. En las dos capturas de pantallas siguientes se muestran estos dos cuadros de diálogo:
 
-[![](jenkins-walkthrough-images/image6.png "Esta captura de pantalla muestra los cuadros de diálogo")](jenkins-walkthrough-images/image6.png#lightbox)
+[![](jenkins-walkthrough-images/image6.png "En esta captura de pantalla se muestran los cuadros de diálogo")](jenkins-walkthrough-images/image6.png#lightbox)
 
-[![](jenkins-walkthrough-images/image7.png "Esta captura de pantalla muestra los cuadros de diálogo")](jenkins-walkthrough-images/image7.png#lightbox)
+[![](jenkins-walkthrough-images/image7.png "En esta captura de pantalla se muestran los cuadros de diálogo")](jenkins-walkthrough-images/image7.png#lightbox)
 
-Una vez que se ejecuta Jenkins, desea establecerlo como un elemento de inicio de sesión para que se iniciará cada vez que el usuario inicia sesión en el equipo. Puede hacerlo con el botón secundario en el icono de Jenkins en el Dock y eligiendo **Opciones … > Abrir al inicio de sesión**, tal y como se muestra en la captura de pantalla siguiente:
+Una vez que Jenkins se está ejecutando, es posible que desee establecerlo como un elemento de inicio de sesión para que se inicie cada vez que el usuario inicie sesión en el equipo. Para ello, haga clic con el botón derecho en el icono de Jenkins en el Dock y elija **Opciones... > Abrir en el inicio de sesión**, como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image8.png "Puede hacerlo con el botón secundario en el icono de Jenkins en el Dock y eligiendo OptionsOpen al inicio de sesión, como se muestra en esta captura de pantalla")](jenkins-walkthrough-images/image8.png#lightbox)
+[![](jenkins-walkthrough-images/image8.png "Para ello, haga clic con el botón derecho en el icono de Jenkins en el Dock y elija OptionsOpen en Inicio de sesión, tal como se muestra en esta captura de pantalla.")](jenkins-walkthrough-images/image8.png#lightbox)
 
-Esto hará que Jenkins.App iniciar automáticamente cada vez que el usuario inicia sesión, pero no cuando el equipo arranca. Es posible especificar una cuenta de usuario que va a usar para iniciar sesión automáticamente con OS X en tiempo de arranque. Abra el **preferencias del sistema**y seleccione el **usuarios y grupos** icono como se muestra en esta captura de pantalla:
+Esto hará que Jenkins. app se inicie automáticamente cada vez que el usuario inicie sesión, pero no cuando se inicie el equipo. Se puede especificar una cuenta de usuario que OS X usará para iniciar sesión automáticamente en el momento del arranque. Abra las **preferencias del sistema**y seleccione el icono **usuarios & grupos** como se muestra en esta captura de pantalla:
 
-[![](jenkins-walkthrough-images/image9.png "Abra las preferencias del sistema y seleccione el icono de grupos de usuarios como se muestra en esta captura de pantalla")](jenkins-walkthrough-images/image9.png#lightbox)
+[![](jenkins-walkthrough-images/image9.png "Abra las preferencias del sistema y seleccione el icono grupos de usuarios, tal como se muestra en esta captura de pantalla.")](jenkins-walkthrough-images/image9.png#lightbox)
 
-Haga clic en el **opciones de inicio de sesión** botón y, a continuación, elija la cuenta que va a usar para el inicio de sesión de OS X en tiempo de arranque.
+Haga clic en el botón **Opciones de inicio de sesión** y, a continuación, elija la cuenta que os X usará para el inicio de sesión en el momento del arranque.
 
-En este momento se ha instalado Jenkins. Sin embargo, si queremos generar aplicaciones móviles de Xamarin, es necesario instalar algunos complementos.
+En este punto, se ha instalado Jenkins. Sin embargo, si queremos crear aplicaciones móviles de Xamarin, tendremos que instalar algunos complementos.
 
-### <a name="installing-plugins"></a>Instalación de complementos
+### <a name="installing-plugins"></a>Instalar complementos
 
-Cuando haya finalizado el instalador Jenkins.App, comenzará a Jenkins y el explorador web con la dirección URL de inicio http://localhost:8080, tal y como se muestra en la captura de pantalla siguiente:
+Cuando el instalador Jenkins. app se haya completado, iniciará Jenkins e iniciará el explorador Web con la http://localhost:8080 dirección URL, como se muestra en la siguiente captura de pantalla:
 
 [![](jenkins-walkthrough-images/image10.png "8080, como se muestra en esta captura de pantalla")](jenkins-walkthrough-images/image10.png#lightbox)
 
-En esta página, seleccione **Jenkins > Administrar Jenkins > Administrar complementos** en el menú en la esquina superior izquierda, como se muestra en la captura de pantalla siguiente:
+En esta página, seleccione **jenkins > Manage jenkins > Manage plugins (Administrar complementos** ) en el menú de la esquina superior izquierda, tal como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image11.png "Desde esta página, seleccione Jenkins administrar Jenkins administrar complementos en el menú en la esquina superior izquierda")](jenkins-walkthrough-images/image11.png#lightbox)
+[![](jenkins-walkthrough-images/image11.png "En esta página, seleccione Jenkins Administrar complementos de Jenkins en el menú de la esquina superior izquierda.")](jenkins-walkthrough-images/image11.png#lightbox)
 
-Esto mostrará la **Jenkins Plugin Manager** página. Si hace clic en la ficha disponible, verá una lista de más de 600 complementos que puede descargarse e instalarse. Esto se muestra en la captura de pantalla siguiente:
+Se mostrará la página del administrador de complementos de **Jenkins** . Si hace clic en la pestaña disponible, verá una lista de más de 600 complementos que se pueden descargar e instalar. Esto se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image12.png "Si hace clic en la ficha disponible, verá una lista de más de 600 complementos que puede descargarse e instalarse")](jenkins-walkthrough-images/image12.png#lightbox)
+[![](jenkins-walkthrough-images/image12.png "Si hace clic en la pestaña disponible, verá una lista de más de 600 complementos que se pueden descargar e instalar.")](jenkins-walkthrough-images/image12.png#lightbox)
 
-Desplazarse a través de todos los complementos para encontrar que algunas pueden resultar tediosos y propenso a 600. Jenkins proporciona un campo de búsqueda de filtro en la esquina superior derecha de la interfaz. Mediante este campo de filtro para buscar simplificará la localización e instalado uno o todos los complementos siguientes:
+Desplazarse por todos los complementos de 600 para encontrar algunos puede ser tedioso y propenso a errores. Jenkins proporciona un campo de búsqueda de filtro en la esquina superior derecha de la interfaz. El uso de este campo de filtro para buscar simplificará la ubicación e instalación de uno o todos los complementos siguientes:
 
-- **Complemento de Jenkins MSBuild** : este complemento permite la compilación de Visual Studio y Visual Studio para Mac soluciones (.sln) y proyectos (.csproj).
-- **Complemento del inyector de entorno** : se trata de un complemento opcional pero muy útil que permite establecer variables de entorno en el trabajo y el nivel de compilación. También ofrece protección adicional para las variables, como las utilizadas para código firmar la aplicación. A veces se abrevia como el *EnvInject Plugin* .
-- **Team Foundation Server Plugin** : se trata de un complemento opcional que solo es necesario si usa Team Foundation Server o Team Foundation Services para el control de código fuente.
+- **Complemento de MSBuild para Jenkins** : este complemento permite compilar soluciones de Visual Studio y Visual Studio para Mac (. sln) y proyectos (. csproj).
+- **Complemento de inyector de entorno** : se trata de un complemento opcional pero útil que permite establecer variables de entorno en el nivel de trabajo y de compilación. También ofrece protección adicional para variables como las contraseñas que se usan para firmar el código de la aplicación. A veces se abrevia como el *complemento EnvInject* .
+- **Complemento de Team Foundation Server** : se trata de un complemento opcional que solo es necesario si usa Team Foundation Server o Team Foundation Services para el control de código fuente.
 
-Jenkins es compatible con Git sin ningún complemento adicional.
+Jenkins admite git sin complementos adicionales.
 
-Después de instalar todos los complementos, desea reiniciar Jenkins y configurar las opciones globales para cada complemento. Puede encontrar la configuración global para un complemento seleccionando **Jenkins > Administrar Jenkins > configurar el sistema** desde la esquina superior izquierda, como se muestra en la captura de pantalla siguiente:
+Después de instalar todos los complementos, querrá reiniciar Jenkins y configurar las opciones globales de cada complemento. Para encontrar la configuración global de un complemento, seleccione **jenkins > administrar jenkins > configurar el sistema** en la esquina superior izquierda, tal como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image13.png "La configuración global para un complemento se puede encontrar al seleccionar Jenkins / Manage Jenkins / configurar el sistema de la esquina superior izquierda esquina de mano")](jenkins-walkthrough-images/image13.png#lightbox)
+[![](jenkins-walkthrough-images/image13.png "Para encontrar la configuración global de un complemento, seleccione Jenkins/Manage Jenkins/configure System en la esquina superior izquierda.")](jenkins-walkthrough-images/image13.png#lightbox)
 
-Cuando se selecciona esta opción de menú, se le llevará a la **configurar el sistema [Jenkins]** página. Esta página contiene secciones para configurar Jenkins propio y establecer algunos de los valores globales del complemento.  La captura de pantalla siguiente muestra un ejemplo de esta página:
+Al seleccionar esta opción de menú, se le dirigirá a la página **configurar el sistema [Jenkins]** . Esta página contiene secciones para configurar Jenkins y establecer algunos de los valores globales del complemento.  En la captura de pantalla siguiente se muestra un ejemplo de esta página:
 
-[![](jenkins-walkthrough-images/image14.png "Esta captura de pantalla muestra un ejemplo de esta página")](jenkins-walkthrough-images/image14.png#lightbox)
+[![](jenkins-walkthrough-images/image14.png "En esta captura de pantalla se muestra un ejemplo de esta página.")](jenkins-walkthrough-images/image14.png#lightbox)
 
 #### <a name="configuring-the-msbuild-plugin"></a>Configurar el complemento de MSBuild
 
-El complemento de MSBuild debe configurarse para usar **/Library/Frameworks/Mono.framework/Commands/xbuild** compilar de Visual Studio para los archivos de solución y proyecto de Mac. Desplácese hacia abajo el **configurar el sistema [Jenkins]** página hasta que el **agregar MSBuild** aparece el botón, como se muestra en la captura de pantalla siguiente:
+El complemento MSBuild debe estar configurado para usar **/Library/Frameworks/mono.Framework/Commands/xbuild** con el fin de compilar Visual Studio para Mac solución y archivos de proyecto. Desplácese hacia abajo en la página **configurar sistema [Jenkins]** hasta que aparezca el botón **Agregar MSBuild** , tal como se muestra en la siguiente captura de pantalla:
 
- [![](jenkins-walkthrough-images/image15.png "Desplácese hacia abajo en la página Configurar sistema Jenkins hasta que aparezca el botón Agregar MSBuild")](jenkins-walkthrough-images/image15.png#lightbox)
+ [![](jenkins-walkthrough-images/image15.png "Desplácese hacia abajo en la página configurar Jenkins del sistema hasta que aparezca el botón Agregar MSBuild.")](jenkins-walkthrough-images/image15.png#lightbox)
 
-Haga clic en este botón y rellene el **nombre** y **ruta** a **MSBuild** campos del formulario que aparece. El nombre de su **MSBuild** instalación debe ser algo significativo, mientras el **ruta de acceso a MSBuild** debe ser la ruta de acceso `xbuild`, que normalmente es **/Library/Frameworks / Mono.framework/Commands/xbuild**. Después, guarde los cambios haciendo clic en Guardar o en el botón Aplicar en la parte inferior de la página, Jenkins podrán usar `xbuild` para compilar las soluciones.
+Haga clic en este botón y rellene el **nombre** y la **ruta de acceso** a los campos de **msbuild** en el formulario que aparece. El nombre de la instalación de **msbuild** debe ser algo significativo, mientras que la **ruta de acceso a MSBuild** debe `xbuild`ser la ruta de acceso a, que suele ser **/Library/Frameworks/mono.Framework/Commands/xbuild**. Después de guardar los cambios haciendo clic en el botón Guardar o aplicar en la parte inferior de la página, Jenkins podrá usar `xbuild` para compilar las soluciones.
 
-#### <a name="configuring-the-tfs-plugin"></a>Configurar el complemento de TFS
+#### <a name="configuring-the-tfs-plugin"></a>Configuración del complemento de TFS
 
-En esta sección es obligatoria si va a usar TFS para el control de código fuente.
+Esta sección es obligatoria si tiene previsto usar TFS para el control de código fuente.
 
-En el orden de una estación de trabajo de macOS interactuar con un servidor de TFS, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) debe estar instalado en la estación de trabajo. Team Explorer Everywhere es un conjunto de herramientas de Microsoft que incluye a un cliente de línea de comandos multiplataforma para tener acceso a TFS. Team Explorer Everywhere se puede descargar de Microsoft e instalarse en tres pasos:
+Para que una estación de trabajo de macOS interactúe con un servidor de TFS, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) se debe instalar en la estación de trabajo. Team Explorer Everywhere es un conjunto de herramientas de Microsoft que incluye un cliente de línea de comandos multiplataforma para tener acceso a TFS. Team Explorer Everywhere puede descargarse de Microsoft e instalarse en tres pasos:
 
-1. Descomprima el archivo a un directorio que se puede acceder a la cuenta de usuario. Por ejemplo, es posible que descomprima el archivo en **~/tee**.
-2. Configurar la ruta de acceso de shell o del sistema para incluir la carpeta que contiene los archivos que se han descomprimido en el paso anterior. Por ejemplo,
+1. Descomprima el archivo de almacenamiento en un directorio que sea accesible para la cuenta de usuario. Por ejemplo, puede descomprimir el archivo en **~/Tee**.
+2. Configure el shell o la ruta de acceso del sistema para incluir la carpeta que contiene los archivos que se descomprimen en el paso uno anterior. Por ejemplo,
 
     ```
     echo export PATH~/tee/:$PATH' >> ~/.bash_profile
     ```
 
-3. Para confirmar que está instalado Team Explorer Everywhere, abra una sesión de terminal y ejecute el `tf` comando. Si tf está configurado correctamente, verá el siguiente resultado en la sesión de terminal:
+3. Para confirmar que Team Explorer Everywhere está instalado, abra una sesión de terminal y ejecute el `tf` comando. Si TF está configurado correctamente, verá el siguiente resultado en la sesión de terminal:
 
     ```
     $ tf
@@ -157,241 +157,241 @@ En el orden de una estación de trabajo de macOS interactuar con un servidor de 
     Available commands and their options:
     ```
 
-Una vez instalado el cliente de línea de comandos de TFS, Jenkins debe configurarse con la ruta de acceso completa a la `tf` cliente de línea de comandos. Desplácese hacia abajo el **configurar el sistema [Jenkins]** página hasta que encuentre la sección de Team Foundation Server, como se muestra en la captura de pantalla siguiente:
+Una vez instalado el cliente de línea de comandos para TFS, Jenkins debe configurarse con la ruta `tf` de acceso completa al cliente de la línea de comandos. Desplácese hacia abajo en la página **configurar sistema [Jenkins]** hasta que encuentre la sección Team Foundation Server, como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image17.png "Desplácese hacia abajo en la página Configurar sistema Jenkins hasta que encuentre la sección de Team Foundation Server")](jenkins-walkthrough-images/image17.png#lightbox)
+[![](jenkins-walkthrough-images/image17.png "Desplácese hacia abajo en la página configurar Jenkins del sistema hasta que encuentre la sección Team Foundation Server")](jenkins-walkthrough-images/image17.png#lightbox)
 
-Escriba la ruta de acceso completa a la `tf` y haga clic en el **guardar** botón.
+Escriba la ruta de acceso completa `tf` al comando y haga clic en el botón **Guardar** .
 
-### <a name="configure-jenkins-security"></a>Configurar la seguridad de Jenkins
+### <a name="configure-jenkins-security"></a>Configuración de la seguridad de Jenkins
 
-Cuando instala por primera vez, Jenkins tiene la seguridad deshabilitada, por lo que es posible que cualquier usuario configurar y ejecutar cualquier tipo de trabajo de forma anónima. En esta sección se explica cómo configurar la seguridad mediante la base de datos de usuario de Jenkins para configurar la autenticación y autorización.
+Cuando se instala por primera vez, Jenkins tiene la seguridad deshabilitada, por lo que es posible que cualquier usuario configure y ejecute cualquier tipo de trabajo de forma anónima. En esta sección se explica cómo configurar la seguridad mediante la base de datos de usuario de Jenkins para configurar la autenticación y la autorización.
 
-Configuración de seguridad se puede encontrar al seleccionar **Jenkins > Administrar Jenkins > Configurar seguridad Global**, tal y como se muestra en esta captura de pantalla:
+Para encontrar la configuración de seguridad, seleccione **jenkins > administrar jenkins > configurar la seguridad global**, como se muestra en esta captura de pantalla:
 
-[![](jenkins-walkthrough-images/image18.png "Configuración de seguridad se puede encontrar al seleccionar Jenkins / Manage Jenkins / configurar seguridad Global")](jenkins-walkthrough-images/image18.png#lightbox)
+[![](jenkins-walkthrough-images/image18.png "Para encontrar la configuración de seguridad, seleccione Jenkins/Manage Jenkins/configure Global Security.")](jenkins-walkthrough-images/image18.png#lightbox)
 
-En el **configurar seguridad Global** página, compruebe la **Habilitar seguridad** casilla de verificación y la **Control de acceso** formulario debe aparecer, similar a la captura de pantalla siguiente:
+En la página **Configurar seguridad global** , active la casilla **Habilitar seguridad** y aparecerá el formulario **Access Control** , similar a la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image19.png "En la página Configurar seguridad Global, comprobar la seguridad para habilitar la casilla de verificación y el formulario de Control de acceso deben ser, similares a esta captura de pantalla")](jenkins-walkthrough-images/image19.png#lightbox)
+[![](jenkins-walkthrough-images/image19.png "En la página Configurar seguridad global, active la casilla habilitar seguridad y aparecerá el formulario Access Control, similar a esta captura de pantalla.")](jenkins-walkthrough-images/image19.png#lightbox)
 
-Alternar el botón de radio para **base de datos de usuario de Jenkins** en el **sección de seguridad del dominio**y asegúrese de que **permitir que los usuarios se registren** también está activada, como se muestra en el captura de pantalla siguiente:
+Alterne el botón de radio para la **base de datos de usuario de Jenkins** en la **sección dominio de seguridad**y asegúrese de que la **opción permitir a los usuarios registrarse** también esté activada, como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image20.png "Alternar el botón de radio para la base de datos de usuario propias de Jenkins en la sección de seguridad del dominio y asegúrese de que permitir que los usuarios a registrarse también está activada")](jenkins-walkthrough-images/image20.png#lightbox)
+[![](jenkins-walkthrough-images/image20.png "Alterne el botón de radio para la base de datos de usuario de Jenkins en la sección dominio Kerberos y asegúrese de que la opción permitir a los usuarios registrarse también esté activada")](jenkins-walkthrough-images/image20.png#lightbox)
 
-Por último, reinicie Jenkins y crear una nueva cuenta. La primera cuenta que se crea es la cuenta raíz, y esta cuenta se promocionarán automáticamente a un administrador. Vuelva a la **configurar seguridad Global** página y vaya tachando el **seguridad basada en la matriz** botón de radio. Se debe conceder acceso completo a la cuenta raíz y la cuenta anónima debe tener acceso de solo lectura, como se muestra en la captura de pantalla siguiente:
+Por último, reinicie Jenkins y cree una cuenta nueva. La primera cuenta que se crea es la cuenta raíz y esta cuenta se promoverá automáticamente a un administrador. Vuelva a la página **Configurar seguridad global** y desactive el botón de radio **seguridad basada en matrices** . Se debe conceder acceso total a la cuenta raíz y la cuenta anónima debe tener acceso de solo lectura, como se muestra en la siguiente captura de pantalla:
 
-[![](jenkins-walkthrough-images/image21.png "La cuenta raíz se debe conceder acceso total, y la cuenta anónima debe tener acceso de solo lectura")](jenkins-walkthrough-images/image21.png#lightbox)
+[![](jenkins-walkthrough-images/image21.png "Se debe conceder acceso total a la cuenta raíz y se debe conceder acceso de solo lectura a la cuenta anónima.")](jenkins-walkthrough-images/image21.png#lightbox)
 
-Una vez que esta configuración se guarda y se reinicie Jenkins, se activará la seguridad.
+Una vez que se guarda esta configuración y se reinicia Jenkins, se activará la seguridad.
 
 #### <a name="disabling-security"></a>Deshabilitar la seguridad
 
-En el caso de una contraseña olvidada o bloqueo anchos Jenkins, es posible deshabilitar la seguridad siguiendo estos pasos:
+En el caso de una contraseña olvidada o un bloqueo en todo Jenkins, es posible deshabilitar la seguridad siguiendo estos pasos:
 
-1. Dejar de Jenkins. Si usas Jenkins.app, puede hacerlo con el botón secundario en el icono de Jenkins.App en el Dock y seleccionando Quit en el menú emergente:
+1. Detenga Jenkins. Si usa Jenkins. app, puede hacerlo haciendo clic con el botón derecho en el icono de Jenkins. app en el Dock y seleccionando salir en el menú que aparece:
 
-    ![Icono de la aplicación en el Dock y seleccionar Quit en el menú emergente](jenkins-walkthrough-images/image19.png)
+    ![Icono de la aplicación en el Dock y seleccionando salir en el menú que aparece](jenkins-walkthrough-images/image19.png)
 
-2. Abra el archivo **~/.jenkins/config.xml** en un editor de texto.
-3. Cambie el valor de la `<usesecurity></usesecurity>` elemento desde `true` a `false`.
-4. Eliminar el `<authorizationstrategy></authorizationstrategy>` y `<securityrealm></securityrealm>` elementos desde el archivo.
+2. Abra el archivo **~/.Jenkins/config.XML** en un editor de texto.
+3. Cambie el valor del `<usesecurity></usesecurity>` elemento de `true` a `false`.
+4. Elimine `<authorizationstrategy></authorizationstrategy>` los `<securityrealm></securityrealm>` elementos y del archivo.
 5. Reinicie Jenkins.
 
 ## <a name="setting-up-a-job"></a>Configuración de un trabajo
 
-En el nivel superior, Jenkins organiza todas las diversas tareas necesarias para compilar software en un *trabajo*. Un trabajo también tiene metadatos asociados, que proporciona información sobre la compilación como obtener el código fuente, con qué frecuencia se debe ejecutar la compilación, las variables especiales que son necesarias para compilar y cómo notificar a los desarrolladores si se produce un error en la compilación.
+En el nivel superior, Jenkins organiza todas las diversas tareas necesarias para crear software en un *trabajo*. Un trabajo también tiene metadatos asociados, lo que proporciona información sobre la compilación, como la obtención del código fuente, la frecuencia con la que debe ejecutarse la compilación, las variables especiales necesarias para la generación y cómo notificar a los desarrolladores si se produce un error en la compilación.
 
-Los trabajos se crean seleccionando **Jenkins > nuevo trabajo** en el menú en la esquina superior derecha, como se muestra en la captura de pantalla siguiente:
+Los trabajos se crean seleccionando **Jenkins > nuevo trabajo** en el menú de la esquina superior derecha, tal como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image22.png "Los trabajos se crean seleccionando nuevo trabajo de Jenkins desde el menú en la esquina superior derecha")
+![](jenkins-walkthrough-images/image22.png "Los trabajos se crean seleccionando el nuevo trabajo de Jenkins en el menú de la esquina superior derecha.")
 
-Esto mostrará la **nuevo trabajo de [Jenkins]** página. Escriba un nombre para el trabajo y seleccione el **compilar un proyecto de software de estilo libre** botón de radio. Captura de pantalla siguiente muestra un ejemplo de esto:
+Se mostrará la página **nuevo trabajo [Jenkins]** . Escriba un nombre para el trabajo y seleccione el botón de radio compilar **un proyecto de software de estilo libre** . En la captura de pantalla siguiente se muestra un ejemplo de esto:
 
-![](jenkins-walkthrough-images/image23.png "Escriba un nombre para el trabajo y seleccione un botón de radio del proyecto de software de estilo libre de la compilación")
+![](jenkins-walkthrough-images/image23.png "Escriba un nombre para el trabajo y seleccione el botón de radio compilar un proyecto de software de estilo libre")
 
-Al hacer clic en el **Aceptar** botón presenta la página de configuración para el trabajo. Esto debería ser similar a la captura de pantalla siguiente:
+Al hacer clic en el botón **Aceptar** , se muestra la página de configuración del trabajo. Debe ser similar a la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image24.png "Esto debería ser similar a esta captura de pantalla")
+![](jenkins-walkthrough-images/image24.png "Debería ser similar a esta captura de pantalla")
 
-Jenkins organiza los trabajos en un directorio en el disco duro que se encuentra en la siguiente ruta: **~/.jenkins/jobs/[JOB nombre]**
+Jenkins organiza los trabajos en un directorio en el disco duro que se encuentra en la siguiente ruta de acceso: **~/.Jenkins/Jobs/[Job Name]**
 
-Esta carpeta contiene todos los archivos y los artefactos específicos para el trabajo como registros, archivos de configuración y el código fuente que debe compilarse.
+Esta carpeta contiene todos los archivos y artefactos específicos del trabajo, como registros, archivos de configuración y el código fuente que debe compilarse.
 
-Una vez creado el trabajo inicial, se debe configurar con uno o varios de los siguientes:
+Una vez creado el trabajo inicial, debe configurarse con uno o varios de los siguientes elementos:
 
-- Debe especificarse el sistema de administración de código fuente.
-- Uno o varios *acciones de compilación* debe agregarse al proyecto. Estos son los pasos o tareas necesarias para compilar la aplicación.
-- El trabajo se le debe asignar uno *desencadenador de compilación* : un conjunto de instrucciones que le informa de Jenkins con qué frecuencia para recuperar el código y compilar el proyecto final.
+- Se debe especificar el sistema de administración de código fuente.
+- Se deben agregar al proyecto una o varias *acciones de compilación* . Estos son los pasos o las tareas necesarias para compilar la aplicación.
+- Al trabajo se le debe asignar un desencadenador de *compilación* : un conjunto de instrucciones que informan a Jenkins con qué frecuencia recuperar el código y compilar el proyecto final.
 
-### <a name="configuring-source-code-control"></a>Configuración de Control de código fuente
+### <a name="configuring-source-code-control"></a>Configurar el control de código fuente
 
-La primera tarea Jenkins es recuperar el código fuente desde el sistema de administración de código fuente. Jenkins admite muchos de los sistemas de administración de código fuente populares disponibles hoy en día. En esta sección se trata dos sistemas populares, Git y Team Foundation Server. Con más detalle en las secciones siguientes se detallan cada uno de estos sistemas de administración de código fuente.
+La primera tarea de Jenkins es recuperar el código fuente del sistema de administración de código fuente. Jenkins admite muchos de los sistemas de administración de código fuente más conocidos disponibles hoy en día. En esta sección se tratan dos sistemas populares, GIT y Team Foundation Server. Cada uno de estos sistemas de administración de código fuente se describe con más detalle en las secciones siguientes.
 
-#### <a name="using-git-for-source-code-control"></a>Uso de Git para Control de código fuente
+#### <a name="using-git-for-source-code-control"></a>Usar git para el control de código fuente
 
-Si está utilizando TFS para el control de código fuente [omitir](#using-tfs-for-source-code-management) esta sección y vaya a la sección siguiente con TFS.
+Si usa TFS para el control de código fuente, [omita](#using-tfs-for-source-code-management) esta sección y continúe con la siguiente sección con TFS.
 
-Jenkins es compatible con Git desde el principio: no hay complementos adicionales son necesarias. Para usar Git, haga clic en el **Git** botón de radio y escriba la dirección URL para el repositorio de Git, como se muestra en la captura de pantalla siguiente:
+Jenkins admite git de la caja: no se necesitan Complementos adicionales. Para usar GIT, haga clic en el botón de radio **git** y escriba la dirección URL del repositorio de Git, tal como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image25.png "Para usar Git, haga clic en el botón de radio de Git y escriba la dirección URL para el repositorio de Git")
+![](jenkins-walkthrough-images/image25.png "Para usar GIT, haga clic en el botón de radio git y escriba la dirección URL del repositorio de Git.")
 
-Una vez que se guardan los cambios, la configuración de Git está completa.
+Una vez guardados los cambios, se completa la configuración de Git.
 
-#### <a name="using-tfs-for-source-code-management"></a>Uso de TFS para administración de código fuente
+#### <a name="using-tfs-for-source-code-management"></a>Usar TFS para la administración de código fuente
 
-En esta sección solo se aplica a los usuarios de TFS.
+Esta sección solo se aplica a los usuarios de TFS.
 
-Haga clic en el **Team Foundation Server** botón de radio y la sección de configuración de TFS deben aparecer, similares a lo que aparece en la captura de pantalla siguiente:
+Haga clic en el botón de opción **Team Foundation Server** y debe aparecer la sección configuración de TFS, similar a lo que se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image26.png "Haga clic en el botón de radio de Team Foundation Server y debe aparecer la sección de configuración de TFS")
+![](jenkins-walkthrough-images/image26.png "Haga clic en el botón de opción Team Foundation Server y debe aparecer la sección configuración de TFS.")
 
-Proporcione la información necesaria para TFS. Captura de pantalla siguiente muestra un ejemplo del formulario completado:
+Proporcione la información necesaria para TFS. En la captura de pantalla siguiente se muestra un ejemplo del formulario completado:
 
 ![](jenkins-walkthrough-images/image27.png "Esta captura de pantalla muestra un ejemplo del formulario completado")
 
-#### <a name="testing-the-source-code-control-configuration"></a>Probar la configuración de Control de código fuente
+#### <a name="testing-the-source-code-control-configuration"></a>Probar la configuración de control de código fuente
 
-Una vez que se ha configurado el control de código fuente adecuado, haga clic en **guardar** para guardar los cambios. Esto devolverá a la página principal para el trabajo, que será similar a la captura de pantalla siguiente:
+Una vez configurado el control de código fuente adecuado, haga clic en **Guardar** para guardar los cambios. Esto le devolverá a la Página principal del trabajo, que se parecerá a la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image28.png "Esto le devolverá a la página principal para el trabajo, que será similar a esta captura de pantalla")
+![](jenkins-walkthrough-images/image28.png "Esto le devolverá a la Página principal del trabajo, que se parecerá a esta captura de pantalla")
 
-La manera más sencilla para validar que el control de código fuente está configurado correctamente es desencadenar una compilación manualmente, aunque no hay ninguna acción de compilación especificada. Para iniciar manualmente una compilación, la página principal del trabajo tiene un **generar ahora** vincular en el menú de la izquierda, como se muestra en la captura de pantalla siguiente:
+La manera más sencilla de validar que el control de código fuente está configurado correctamente es desencadenar una compilación manualmente, aunque no se especifique ninguna acción de compilación. Para iniciar una compilación manualmente, la Página principal del trabajo tiene un vínculo **generar ahora** en el menú de la izquierda, tal como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image29.png "Para iniciar manualmente una compilación, la página principal del trabajo tiene un vínculo de compilación ahora en el menú de la izquierda")
+![](jenkins-walkthrough-images/image29.png "Para iniciar una compilación manualmente, la Página principal del trabajo tiene un vínculo generar ahora en el menú del lado izquierdo.")
 
-Cuando se ha iniciado una compilación, muestra el cuadro de diálogo Historial de compilaciones XAML un círculo azul parpadeando, una barra de progreso, el número de compilación y la hora de inicio de la compilación, similar a la siguiente captura de pantalla de:
+Cuando se ha iniciado una compilación, el cuadro de diálogo historial de compilaciones muestra un círculo azul parpadeante, una barra de progreso, el número de compilación y la hora en que se inició la compilación, similar a la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image30.png "Cuando se ha iniciado una compilación, el cuadro de diálogo Historial de compilación muestra un círculo azul intermitente, una barra de progreso, el número de compilación y la hora en que se inició la compilación")
+![](jenkins-walkthrough-images/image30.png "Cuando se ha iniciado una compilación, el cuadro de diálogo historial de compilaciones muestra un círculo azul parpadeante, una barra de progreso, el número de compilación y la hora en que se inició la compilación.")
 
-Si el trabajo tiene éxito, se mostrará un círculo azul. Si se produce un error en el trabajo, se mostrará un círculo rojo.
+Si el trabajo se realiza correctamente, se mostrará un círculo azul. Si se produce un error en el trabajo, se mostrará un círculo rojo.
 
-Para ayudar a solucionar los problemas que pueden surgir como parte de la compilación, Jenkins capturará todos los resultados de la consola para el trabajo. Para ver la salida de consola, haga clic en el trabajo en **historial de compilaciones XAML**y, a continuación, en el **salida de la consola** vínculo en el menú izquierdo. La siguiente captura de pantalla muestra la **salida de la consola** vínculo, así como parte de los resultados de un trabajo correcta:
+Para ayudar a solucionar problemas que pueden surgir como parte de la compilación, Jenkins capturará todos los resultados de la consola del trabajo. Para ver la salida de la consola, haga clic en el trabajo en el **historial de compilación**y, a continuación, en el vínculo salida de la **consola** en el menú de la izquierda. En la captura de pantalla siguiente se muestra el vínculo de salida de la **consola** , así como algunos de los resultados de un trabajo correcto:
 
-![](jenkins-walkthrough-images/image31.png "Esta captura de pantalla muestra el vínculo de salida de consola, así como parte de los resultados de un trabajo con éxito")
+![](jenkins-walkthrough-images/image31.png "En esta captura de pantalla se muestra el vínculo de salida de la consola, así como algunos de los resultados de un trabajo correcto.")
 
 #### <a name="location-of-build-artifacts"></a>Ubicación de los artefactos de compilación
 
-Jenkins recuperará todo el código fuente en una carpeta especial denominada una *área de trabajo*. Este directorio puede encontrarse dentro de la carpeta en la siguiente ubicación:
+Jenkins recuperará el código fuente completo en una carpeta especial denominada *área de trabajo*. Este directorio puede encontrarse dentro de la carpeta en la siguiente ubicación:
 
-    ```
-    ~/.jenkins/jobs/[JOB NAME]/workspace
-    ```
+```
+~/.jenkins/jobs/[JOB NAME]/workspace
+```
 
-La ruta de acceso al área de trabajo se almacenará en una variable de entorno denominada `$WORKSPACE`.
+La ruta de acceso al área de trabajo se almacenará en una `$WORKSPACE`variable de entorno denominada.
 
-Es posible examinar la carpeta de área de trabajo en Jenkins, vaya a la página de aterrizaje de un trabajo y, a continuación, haga clic en el **área de trabajo** vínculo en el menú izquierdo. Captura de pantalla siguiente muestra un ejemplo del área de trabajo de un trabajo denominado **HelloWorld**:
+Es posible examinar la carpeta del área de trabajo en Jenkins; para ello, vaya a la página de aterrizaje de un trabajo y, a continuación, haga clic en el vínculo del **área de trabajo** en el menú de la izquierda. En la captura de pantalla siguiente se muestra un ejemplo del área de trabajo para un trabajo denominado **HelloWorld**:
 
-![](jenkins-walkthrough-images/image32.png "Esta captura de pantalla muestra un ejemplo del área de trabajo de un trabajo denominado HelloWorld")
+![](jenkins-walkthrough-images/image32.png "Esta captura de pantalla muestra un ejemplo del área de trabajo para un trabajo denominado HelloWorld")
 
 ### <a name="build-triggers"></a>Desencadenadores de compilación
 
-Existen varias estrategias diferentes para iniciar las compilaciones de Jenkins, estos se conocen como *desencadenadores de compilación*. Un desencadenador de compilación ayuda Jenkins decidir cuándo se debe iniciar un trabajo y compile el proyecto. Dos de los desencadenadores de compilación más comunes son:
+Hay varias estrategias diferentes para iniciar las compilaciones en Jenkins: se denominan *desencadenadores de compilación*. Un desencadenador de compilación ayuda a Jenkins a decidir cuándo iniciar un trabajo y compilar el proyecto. Dos de los desencadenadores de compilación más comunes son:
 
-- **Crear periódicamente** : este desencadenador hace que Jenkins iniciar un trabajo a intervalos especificados, por ejemplo, cada dos horas o a medianoche los días laborables. Se iniciará la compilación independientemente de si ha habido cambios en el repositorio de código fuente.
-- **Poll SCM** : este desencadenador sondeará el control de código fuente de forma periódica. Si los cambios se han confirmado en el repositorio de código fuente, Jenkins iniciará una nueva compilación.
+- **Compilar periódicamente** : este desencadenador hace que Jenkins inicie un trabajo a intervalos especificados, como cada dos horas o a medianoche de los días laborables. La compilación se iniciará independientemente de si se han producido cambios en el repositorio de código fuente.
+- **Sondeo SCM** : este desencadenador sondeará el control de código fuente de forma periódica. Si se ha confirmado algún cambio en el repositorio de código fuente, Jenkins iniciará una nueva compilación.
 
-Sondear SCM es un desencadenador popular porque ofrece comentarios rápido cuando un desarrollador confirma los cambios que producen la compilación se interrumpa. Esto es útil para alertar a los equipos que algún código confirmada recientemente está causando problemas y permite a los desarrolladores solucionar el problema, mientras que los cambios son aún frescos en mente.
+Sondeo SCM es un desencadenador conocido porque proporciona comentarios rápidos cuando un desarrollador confirma cambios que hacen que la compilación se interrumpa. Esto resulta útil para avisar a los equipos de que algún código confirmado recientemente está causando problemas y permite que los desarrolladores solucionen el problema mientras los cambios se siguen actualizando en mente.
 
-Las compilaciones periódicas a menudo se usan para crear una versión de la aplicación que se puede distribuir a los evaluadores. Por ejemplo, una compilación periódica puede programarse para el viernes por la noche para que los miembros del equipo de preguntas y respuestas pueden probar el trabajo de la semana anterior.
+Las compilaciones periódicas se suelen usar para crear una versión de la aplicación que se puede distribuir a los evaluadores. Por ejemplo, una compilación periódica podría estar programada el viernes por la noche para que los miembros del equipo de QA puedan probar el trabajo de la semana anterior.
 
-### <a name="compiling-a-xamarinios-applications"></a>Compilar las aplicaciones de Xamarin.iOS
-Se pueden compilar los proyectos de Xamarin.iOS en la línea de comandos utilizando `xbuild` o `msbuild`. El comando de shell se ejecutará en el contexto de la cuenta de usuario que se ejecuta Jenkins. Es importante que la cuenta de usuario tiene acceso al perfil de aprovisionamiento para que la aplicación puede empaquetarse adecuadamente para su distribución. Es posible agregar este comando de shell a la página Configuración del trabajo.
+### <a name="compiling-a-xamarinios-applications"></a>Compilación de aplicaciones de Xamarin. iOS
+Los proyectos de Xamarin. iOS se pueden compilar en `xbuild` la `msbuild`línea de comandos mediante o. El comando de Shell se ejecutará en el contexto de la cuenta de usuario que ejecuta Jenkins. Es importante que la cuenta de usuario tenga acceso al perfil de aprovisionamiento para que la aplicación se pueda empaquetar correctamente para su distribución. Es posible agregar este comando de Shell a la página de configuración del trabajo.
 
-Desplácese hacia abajo hasta la **compilar** sección. Haga clic en el **Agregar paso de compilación** y seleccione **Execute shell**, tal y como se muestra en la captura de pantalla siguiente:
+Desplácese hacia abajo hasta la sección **compilación** . Haga clic en el botón **Agregar paso de compilación** y seleccione **Ejecutar Shell**, tal como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image33.png "Haga clic en el botón de paso de compilación de agregar y seleccione Execute shell")
+![](jenkins-walkthrough-images/image33.png "Haga clic en el botón Agregar paso de compilación y seleccione Ejecutar Shell.")
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-### <a name="building-a-xamarinandroid-project"></a>Creación de un proyecto de Xamarin.Android
+### <a name="building-a-xamarinandroid-project"></a>Compilar un proyecto de Xamarin. Android
 
-Creación de un proyecto de Xamarin.Android es un concepto muy similar a la creación de un proyecto de Xamarin.iOS. Para crear un APK de un proyecto de Xamarin.Android, Jenkins debe configurarse para llevar a cabo los dos pasos siguientes:
+La compilación de un proyecto de Xamarin. Android es muy similar en concepto a la compilación de un proyecto de Xamarin. iOS. Para crear un APK a partir de un proyecto de Xamarin. Android, Jenkins se debe configurar para realizar los dos pasos siguientes:
 
-- Compile el proyecto mediante el complemento de MSBuild
-- Inicio de sesión y zip alinean el APK con un almacén de claves de versión válida.
+- Compilar el proyecto mediante el complemento de MSBuild
+- Sign y zip Alinee el APK con un almacén de claves de versión válido.
 
 Estos dos pasos se tratarán con más detalle en las dos secciones siguientes.
 
-### <a name="creating-the-apk"></a>Creación de APK
+### <a name="creating-the-apk"></a>Crear APK
 
-Haga clic en el **Agregar paso de compilación** botón y seleccione **compilar un proyecto de Visual Studio o la solución mediante MSBuild**, tal y como se muestra en la captura de pantalla siguiente:
+Haga clic en el botón **Agregar paso de compilación** y seleccione compilar **un proyecto o solución de Visual Studio con MSBuild**, tal como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image36.png "Creación haga clic en el APK en el botón de paso de compilación de agregar y seleccione compilación de un proyecto de Visual Studio o una solución con MSBuild")
+![](jenkins-walkthrough-images/image36.png "Al crear el APK, haga clic en el botón Agregar paso de compilación y seleccione compilar un proyecto o solución de Visual Studio con MSBuild.")
 
-Una vez que el paso de compilación se agrega al proyecto, rellene los campos de formulario que aparecen. Captura de pantalla siguiente es un ejemplo del formulario completado:
+Una vez agregado el paso de compilación al proyecto, rellene los campos de formulario que aparecen. La captura de pantalla siguiente es un ejemplo del formulario completado:
 
-![](jenkins-walkthrough-images/image37.png "Una vez que el paso de compilación se agrega al proyecto, rellene los campos de formulario que aparecen")
+![](jenkins-walkthrough-images/image37.png "Una vez agregado el paso de compilación al proyecto, rellene los campos de formulario que aparecen.")
 
-Este paso de compilación ejecutará `xbuild` en el **$WORKSPACE** carpeta. El archivo de compilación de MSBuild está establecido en el **Xamarin.Android.csproj** archivo. El **argumentos de línea de comandos** especificar una versión de lanzamiento del destino **PackageForAndroid**. El producto de este paso será un APK que en la siguiente ubicación:
+Este paso de compilación se `xbuild` ejecutará en la carpeta **$Workspace** . El archivo de compilación de MSBuild se establece en el archivo **Xamarin. Android. csproj** . Los **argumentos** de la línea de comandos especifican una versión de lanzamiento del **PackageForAndroid**de destino. El producto de este paso será un APK que se encuentra en la siguiente ubicación:
 
-    ```
-    $WORKSPACE/[PROJECT NAME]/bin/Release
-    ```
+```
+$WORKSPACE/[PROJECT NAME]/bin/Release
+```
 
-Captura de pantalla siguiente muestra un ejemplo de este APK:
+En la captura de pantalla siguiente se muestra un ejemplo de este APK:
 
-![](jenkins-walkthrough-images/image38.png "Esta captura de pantalla muestra un ejemplo de este APK")
+![](jenkins-walkthrough-images/image38.png "En esta captura de pantalla se muestra un ejemplo de este APK")
 
-Este APK no está listo para la implementación, ya no se ha firmado con un almacén de claves privada y debe estar alineado zip.
+Esta APK no está lista para la implementación, ya que no se ha firmado con un almacén de claves privado y debe estar alineada en zip.
 
-#### <a name="signing-and-zipaligning-the-apk-for-release"></a>Firma y Zipalign al APK de lanzamiento
+#### <a name="signing-and-zipaligning-the-apk-for-release"></a>Firmar y zipalign APK para la versión
 
-Firma y zipalign al APK son técnicamente dos tareas independientes que se realizan dos herramientas de línea de comandos independiente desde el SDK de Android. Sin embargo, es conveniente seguir estos pasos en la compilación de una acción. Para obtener más información sobre la firma y usar zipalign con un APK, consulte la documentación de Xamarin sobre la preparación de una aplicación Android para su lanzamiento.
+La firma y la zipalign de APK son técnicamente dos tareas independientes que realizan dos herramientas de línea de comandos independientes de la Android SDK. Sin embargo, es conveniente realizarlos en una acción de compilación. Para obtener más información sobre cómo firmar y zipalign un APK, consulte la documentación de Xamarin sobre la preparación de una aplicación Android para su lanzamiento.
 
-Ambos comandos requieren parámetros de línea de comandos que pueden variar entre proyectos. Además, algunos de estos parámetros de línea de comandos son las contraseñas que no deben aparecer en la salida de la consola cuando se está ejecutando la compilación. Algunos de estos parámetros de línea de comandos almacenaremos en variables de entorno. En la tabla siguiente se describen las variables de entorno necesarias para firmar y alinear zip:
+Ambos comandos requieren parámetros de línea de comandos que pueden variar de un proyecto a un proyecto. Además, algunos de estos parámetros de la línea de comandos son contraseñas que no deben aparecer en la salida de la consola cuando se ejecuta la compilación. Almacenaremos algunos de estos parámetros de línea de comandos en variables de entorno. Las variables de entorno necesarias para la firma y/o la alineación de zip se describen en la tabla siguiente:
 
-|Variable de entorno|Descripción|
+|Variable de entorno|DESCRIPCIÓN|
 |--- |--- |
-|KEYSTORE_FILE|Se trata de la ruta de acceso al almacén de claves para firmar el APK|
-|KEYSTORE_ALIAS|La clave en el almacén de claves que se usará para firmar el APK.|
-|INPUT_APK|El APK creados por `xbuild`.|
-|SIGNED_APK|El APK firmado producidos por `jarsigner`.|
-|FINAL_APK|Este es el archivo zip alineado APK generado por `zipalign`.|
-|STORE_PASS|Esta es la contraseña que se usa para tener acceso al contenido del almacén de claves para firmar el archivo.|
+|KEYSTORE_FILE|Esta es la ruta de acceso al almacén de claves para firmar el APK|
+|KEYSTORE_ALIAS|La clave en el almacén de claves que se utilizará para firmar el APK.|
+|INPUT_APK|APK que crea `xbuild`.|
+|SIGNED_APK|La APK firmada generada por `jarsigner`.|
+|FINAL_APK|Este es el APK con alineación zip que produce `zipalign`.|
+|STORE_PASS|Esta es la contraseña que se usa para tener acceso al contenido del almacén de claves para el archivo.|
 
-Como se describe en la sección de requisitos, se pueden establecer estas variables de entorno durante la compilación mediante el complemento EnvInject. El trabajo debe tener una nueva compilación paso agregó según las variables de entorno @inject, como se muestra en la siguiente captura de pantalla:
+Tal y como se describe en la sección de requisitos, se pueden establecer estas variables de entorno durante la compilación mediante el complemento EnvInject. El trabajo debe tener un nuevo paso de compilación agregado en función de las variables de entorno de inserción, como se muestra en la siguiente captura de pantalla:
 
-![](jenkins-walkthrough-images/image39.png "El trabajo debe tener una nueva compilación paso agregó basándose en las variables de entorno de inserción")
+![](jenkins-walkthrough-images/image39.png "El trabajo debe tener un nuevo paso de compilación agregado en función de las variables de entorno de inserción")
 
-En el **propiedades contenido** forman el campo que va a aparecer, se agregan las variables de entorno, uno por línea, en el formato siguiente:
+En el campo de formulario de **contenido de propiedades** que aparecerá, se agregan las variables de entorno, una por línea, en el formato siguiente:
 
-    ```
-    ENVIRONMENT_VARIABLE_NAME = value
-    ```
+```
+ENVIRONMENT_VARIABLE_NAME = value
+```
 
-Captura de pantalla siguiente muestra las variables de entorno necesarias para firmar el APK:
+En la captura de pantalla siguiente se muestran las variables de entorno necesarias para firmar APK:
 
-![](jenkins-walkthrough-images/image40.png "Esta captura de pantalla muestra las variables de entorno necesarias para firmar el APK")
+![](jenkins-walkthrough-images/image40.png "En esta captura de pantalla se muestran las variables de entorno necesarias para firmar el APK")
 
-Tenga en cuenta que algunas de las variables de entorno para los archivos APK se basan en el `WORKSPACE` variable de entorno.
+Tenga en cuenta que algunas de las variables de entorno para los archivos APK se `WORKSPACE` basan en la variable de entorno.
 
-La variable de entorno final es la contraseña para tener acceso al contenido del almacén de claves: `STORE_PASS`. Las contraseñas son los valores confidenciales que se deben oculta o se omite en los archivos de registro. El complemento EnvInject puede configurarse para proteger estos valores para que no se muestren en los registros.
+La variable de entorno final es la contraseña para tener acceso al contenido del almacén `STORE_PASS`de claves:. Las contraseñas son valores confidenciales que se deben ocultar o omitir en los archivos de registro. El complemento EnvInject puede configurarse para proteger estos valores, de modo que no se muestren en los registros.
 
-Inmediatamente antes de la **compilar** sección de la configuración del trabajo es un **Build Environment** sección. Cuando el **insertar contraseñas** se activa la casilla de verificación, campos de alguna forma que aparezca. Estos campos de formulario se utilizan para capturar el nombre y valor de la variable de entorno. Captura de pantalla siguiente es un ejemplo de cómo agregar el `STORE_PASS` variable de entorno:
+Inmediatamente antes de que la sección de **compilación** de la configuración del trabajo sea una sección de **entorno de compilación** . Cuando se activa la casilla **Insertar contraseñas** , algunos campos de formulario aparecen. Estos campos de formulario se utilizan para capturar el nombre y el valor de la variable de entorno. La captura de pantalla siguiente es un ejemplo de `STORE_PASS` cómo agregar la variable de entorno:
 
 ![](jenkins-walkthrough-images/image41.png "Esta captura de pantalla es un ejemplo de cómo agregar la variable de entorno STOREPASS")
 
-Una vez que se han inicializado las variables de entorno, el siguiente paso es agregar un paso de compilación para la firma y código postal alinear el APK. Inmediatamente después de que el paso de compilación para insertar las variables de entorno será otro **Execute shell** compilación de comando que ejecutará `jarsigner` y `zipalign`. Cada comando pueden tardar hasta una sola línea, como se muestra en el fragmento de código siguiente:
+Una vez que se han inicializado las variables de entorno, el paso siguiente consiste en agregar un paso de compilación para firmar y comprimir el código APK. Inmediatamente después del paso de compilación para insertar las variables de entorno, se creará otra compilación del comando `jarsigner` Execute Shell que ejecutará y. `zipalign` Cada comando ocupará una línea, tal como se muestra en el siguiente fragmento de código:
 
-    ```
-    jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
-    zipalign -f -v 4 $SIGNED_APK $FINAL_APK
-    ```
+```
+jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
+zipalign -f -v 4 $SIGNED_APK $FINAL_APK
+```
 
-Captura de pantalla siguiente muestra un ejemplo de cómo especificar la `jarsigner` y `zipalign` comandos en el paso:
+En la captura de pantalla siguiente se muestra un ejemplo de `jarsigner` cómo `zipalign` escribir los comandos y en el paso:
 
-![](jenkins-walkthrough-images/image42.png "Esta captura de pantalla muestra un ejemplo de cómo especificar los comandos de jarsigner y zipalign en el paso")
+![](jenkins-walkthrough-images/image42.png "En esta captura de pantalla se muestra un ejemplo de cómo especificar los comandos jarsigner y zipalign en el paso.")
 
-Una vez que todas las acciones de compilación están en su lugar, es recomendable para desencadenar una compilación manual para comprobar que todo funciona. Si se produce un error en la compilación, el **salida de la consola** deben revisarse para obtener información sobre lo que ha provocado un error en la compilación.
+Una vez que todas las acciones de compilación estén en su lugar, es recomendable desencadenar una compilación manual para comprobar que todo funciona. Si se produce un error en la compilación, se debe revisar la salida de la **consola** para obtener información sobre la causa de que se produzca un error en la compilación.
 
-### <a name="submitting-tests-to-test-cloud"></a>Envío de las pruebas en Test Cloud
+### <a name="submitting-tests-to-test-cloud"></a>Enviar pruebas a Test Cloud
 
-Las pruebas automatizadas pueden enviarse a Test Cloud mediante comandos de shell. Para obtener más información acerca de cómo configurar una serie de pruebas en Xamarin Test Cloud, consulte esta guía para el uso de [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
+Las pruebas automatizadas se pueden enviar a Test Cloud mediante comandos de Shell. Para obtener más información sobre cómo configurar una serie de pruebas en Xamarin Test Cloud, consulte esta guía para el uso de [Xamarin. UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se introdujo Jenkins como un servidor de compilación en Mac OS y configurado para compilar y preparar las aplicaciones móviles de Xamarin para la versión. Jenkins se instala en un equipo macOS junto con varios complementos para admitir el proceso de compilación. Se crean y configura un trabajo que extraerá el código desde TFS o Git y, a continuación, compilar ese código en una aplicación lista de versión. También hemos examinado de dos maneras diferentes para programar cuándo se deben ejecutar los trabajos.
+En esta guía hemos introducido Jenkins como un servidor de compilación en macOS y lo hemos configurado para compilar y preparar las aplicaciones móviles de Xamarin para su lanzamiento. Se ha instalado Jenkins en un equipo macOS junto con varios complementos para admitir el proceso de compilación. Hemos creado y configurado un trabajo que extraerá el código de TFS o git y, a continuación, compilará el código en una aplicación de versión preparada. También hemos explorado dos maneras diferentes de programar Cuándo se deben ejecutar los trabajos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 209d8a61e6505e34fdf714b94ba40465f7f6aa4b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646369"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528799"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, tvOS Guía de inicio rápido
 
@@ -38,10 +38,10 @@ En este artículo se presentan los conceptos básicos necesarios para crear una 
 
 Trataremos los siguientes conceptos:
 
--  **Visual Studio para Mac** : Introducción a la Visual Studio para Mac y cómo crear aplicaciones de Xamarin. tvOS con ella.
--  **Anatomía de una aplicación Xamarin. tvOS** : de qué consta una aplicación Xamarin. tvOS.
--  **Creación de una interfaz de usuario** : Cómo usar para Xamarin Designer para iOS para crear una interfaz de usuario.
--  **Implementación y pruebas** : Cómo ejecutar y probar la aplicación en el simulador de tvOS y en el hardware de tvOS real.
+- **Visual Studio para Mac** : Introducción a la Visual Studio para Mac y cómo crear aplicaciones de Xamarin. tvOS con ella.
+- **Anatomía de una aplicación Xamarin. tvOS** : de qué consta una aplicación Xamarin. tvOS.
+- **Creación de una interfaz de usuario** : Cómo usar para Xamarin Designer para iOS para crear una interfaz de usuario.
+- **Implementación y pruebas** : Cómo ejecutar y probar la aplicación en el simulador de tvOS y en el hardware de tvOS real.
 
 ## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Inicio de una nueva aplicación Xamarin. tvOS en Visual Studio para Mac
 
@@ -77,12 +77,12 @@ Si está familiarizado con la programación de iOS, observará muchas similitude
 
 Echemos un vistazo a los archivos del proyecto:
 
--   `Main.cs`: contiene el punto de entrada principal de la aplicación. Cuando se inicia la aplicación, contiene la primera clase y método que se ejecutan.
--   `AppDelegate.cs`: Este archivo contiene la clase de aplicación principal responsable de escuchar eventos del sistema operativo.
--   `Info.plist`: Este archivo contiene propiedades de la aplicación, como el nombre de la aplicación, los iconos, etc.
--   `ViewController.cs`: Esta es la clase que representa la ventana principal y controla el ciclo de vida de la misma.
--   `ViewController.designer.cs`: Este archivo contiene código de fontanería que le ayuda a integrarse con la interfaz de usuario de la pantalla principal.
--  `Main.storyboard`: La interfaz de usuario de la ventana principal. El Xamarin Designer para iOS puede crear y mantener este archivo.
+- `Main.cs`: contiene el punto de entrada principal de la aplicación. Cuando se inicia la aplicación, contiene la primera clase y método que se ejecutan.
+- `AppDelegate.cs`: Este archivo contiene la clase de aplicación principal responsable de escuchar eventos del sistema operativo.
+- `Info.plist`: Este archivo contiene propiedades de la aplicación, como el nombre de la aplicación, los iconos, etc.
+- `ViewController.cs`: Esta es la clase que representa la ventana principal y controla el ciclo de vida de la misma.
+- `ViewController.designer.cs`: Este archivo contiene código de fontanería que le ayuda a integrarse con la interfaz de usuario de la pantalla principal.
+- `Main.storyboard`: La interfaz de usuario de la ventana principal. El Xamarin Designer para iOS puede crear y mantener este archivo.
 
 En las secciones siguientes, echaremos un vistazo rápido a algunos de estos archivos. Los exploraremos con más detalle más adelante, pero es una buena idea comprender sus aspectos básicos ahora.
 
@@ -435,8 +435,8 @@ Es el momento de compilar y ejecutar la aplicación para asegurarse de que se ej
 
 Siempre que se crea una aplicación, podemos elegir el tipo de compilación que queremos:
 
--   **Debug** : una compilación de depuración se compila en un archivo "" (aplicación) con metadatos adicionales que nos permiten depurar lo que sucede mientras la aplicación se está ejecutando.
--   **Versión** : una compilación de versión también crea un archivo ' ', pero no incluye información de depuración, por lo que es más pequeño y se ejecuta más rápido.  
+- **Debug** : una compilación de depuración se compila en un archivo "" (aplicación) con metadatos adicionales que nos permiten depurar lo que sucede mientras la aplicación se está ejecutando.
+- **Versión** : una compilación de versión también crea un archivo ' ', pero no incluye información de depuración, por lo que es más pequeño y se ejecuta más rápido.  
 
 Puede seleccionar el tipo de compilación en el **selector de configuración** en la esquina superior izquierda de la pantalla Visual Studio para Mac:
 
@@ -452,9 +452,9 @@ Si no se ha producido ningún error, verá un mensaje **compilación correcta** 
 
 Para ejecutar la aplicación, tenemos tres opciones:
 
--  Presione **⌘+Entrar**.
--  En el menú **Ejecutar**, elija **Depurar**.
--  Haga clic en el botón **Reproducir** de la barra de herramientas de Visual Studio para Mac (justo encima del **Explorador de soluciones**).
+- Presione **⌘+Entrar**.
+- En el menú **Ejecutar**, elija **Depurar**.
+- Haga clic en el botón **Reproducir** de la barra de herramientas de Visual Studio para Mac (justo encima del **Explorador de soluciones**).
 
 La aplicación se compilará (si aún no se ha compilado), se iniciará en modo de depuración, el simulador tvOS se iniciará y la aplicación se iniciará y mostrará la ventana de la interfaz principal:
 
@@ -468,7 +468,7 @@ Mediante el uso remoto del simulador, si hace clic en el botón algunas veces, l
 
 [![](hello-tvos-images/run05.png "Etiqueta con el recuento actualizado")](hello-tvos-images/run05.png#lightbox)
 
-Felicidades. Aquí nos centramos mucho en el terreno, pero si siguió este tutorial de principio a fin, ahora debe tener una comprensión sólida de los componentes de una aplicación Xamarin. tvOS, así como las herramientas que se usan para crearlos.
+¡Enhorabuena! Aquí nos centramos mucho en el terreno, pero si siguió este tutorial de principio a fin, ahora debe tener una comprensión sólida de los componentes de una aplicación Xamarin. tvOS, así como las herramientas que se usan para crearlos.
 
 ## <a name="where-to-next"></a>¿Dónde se debe a continuación?
 

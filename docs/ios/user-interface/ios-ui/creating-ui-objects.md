@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dd935e6feb14d9077c1ad98a2e7e10e67646dc4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f77a4f2f31c72726515e33dc273616f175df2891
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650119"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528528"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Crear objetos de interfaz de usuario en Xamarin. iOS
 
@@ -28,9 +28,9 @@ Todos los controles descritos en este capítulo se encuentran en el espacio de n
 
 Puede editar controles y diseños de interfaz de usuario de tres maneras:
 
--  **[Xamarin iOS Designer](~/ios/user-interface/designer/index.md)** : Use el diseñador de diseño integrado de Xamarin para diseñar pantallas. Haga doble clic en los archivos Storyboard o XIB para editarlos con el diseñador integrado.
--  **Interface Builder Xcode** : arrastre controles a los diseños de pantalla con Interface Builder. Abra el archivo Storyboard o XIB en Xcode; para ello, haga clic con el botón derecho en el archivo en el **Panel de solución** y elija **abrir con > Xcode Interface Builder**.
--  **Usar C#**  : los controles también se pueden construir mediante programación con código y agregarse a la jerarquía de vistas.
+- **[Xamarin iOS Designer](~/ios/user-interface/designer/index.md)** : Use el diseñador de diseño integrado de Xamarin para diseñar pantallas. Haga doble clic en los archivos Storyboard o XIB para editarlos con el diseñador integrado.
+- **Interface Builder Xcode** : arrastre controles a los diseños de pantalla con Interface Builder. Abra el archivo Storyboard o XIB en Xcode; para ello, haga clic con el botón derecho en el archivo en el **Panel de solución** y elija **abrir con > Xcode Interface Builder**.
+- **Usar C#**  : los controles también se pueden construir mediante programación con código y agregarse a la jerarquía de vistas.
 
 Se pueden agregar nuevos archivos de guion gráfico y XIB haciendo clic con el botón derecho en un proyecto de iOS y eligiendo **agregar > nuevo archivo..** ..
 
@@ -92,12 +92,12 @@ Para más información sobre cómo se integra el Interface Builder de Xcode con 
 
 Si decide crear mediante programación un objeto de interfaz de usuario con C# (en un controlador de vista o vista, por ejemplo), siga estos pasos:
 
--  Declare un campo de nivel de clase para el objeto de interfaz de usuario. Cree el propio control una vez, `ViewDidLoad` en por ejemplo. A continuación, se puede hacer referencia al objeto a través de los métodos de ciclo de vida del controlador de vista (por ejemplo,
+- Declare un campo de nivel de clase para el objeto de interfaz de usuario. Cree el propio control una vez, `ViewDidLoad` en por ejemplo. A continuación, se puede hacer referencia al objeto a través de los métodos de ciclo de vida del controlador de vista (por ejemplo,
 `ViewWillAppear`).
--  Cree un `CGRect` que defina el marco del control (sus coordenadas X e y en la pantalla, así como su ancho y alto). Deberá asegurarse de que tiene una `using CoreGraphics` Directiva para ello.
--  Llame al constructor para crear y asignar el control.
--  Establezca las propiedades o los controladores de eventos.
--  Llame `Add()` a para agregar el control a la jerarquía de vistas.
+- Cree un `CGRect` que defina el marco del control (sus coordenadas X e y en la pantalla, así como su ancho y alto). Deberá asegurarse de que tiene una `using CoreGraphics` Directiva para ello.
+- Llame al constructor para crear y asignar el control.
+- Establezca las propiedades o los controladores de eventos.
+- Llame `Add()` a para agregar el control a la jerarquía de vistas.
 
 Este es un ejemplo sencillo de creación de `UILabel` un en un controlador de C#vista mediante:
 

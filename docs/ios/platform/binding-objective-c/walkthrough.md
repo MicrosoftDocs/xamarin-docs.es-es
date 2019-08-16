@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b73f00eb704d80da6b0bab3a34f08f2d1cb70a16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646178"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527991"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlace de una biblioteca de Objective-C a iOS
 
@@ -45,10 +45,10 @@ En la aplicación de ejemplo se muestra cómo usar un delegado seguro para la co
 
 En este artículo se supone que está familiarizado con Xcode y el lenguaje Objective-C y que ha leído nuestra documentación sobre [Objective-c de enlace](~/cross-platform/macios/binding/index.md) . Además, se requiere lo siguiente para completar los pasos que se presentan:
 
--  **Xcode y el SDK de iOS** : Xcode de Apple y la API de iOS más reciente deben instalarse y configurarse en el equipo del desarrollador.
--  **[Herramientas de línea de comandos de Xcode](#Installing_the_Xcode_Command_Line_Tools)** : las herramientas de línea de comandos de Xcode deben estar instaladas para la versión instalada actualmente de Xcode (consulte a continuación los detalles de la instalación).
--  **Visual Studio para Mac o Visual Studio** : la versión más reciente de Visual Studio para Mac o Visual Studio debe estar instalada y configurada en el equipo de desarrollo. Se necesita un equipo Mac de Apple para desarrollar una aplicación de Xamarin. iOS y, al usar Visual Studio, debe estar conectado a [un host de compilación de Xamarin. iOS.](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **La versión más reciente de Objective Sharpie** : una copia actual de la herramienta de objetivo Sharpie descargada [aquí](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Si ya tiene el objetivo Sharpie instalado, puede actualizarlo a la versión más reciente mediante el`sharpie update`
+- **Xcode y el SDK de iOS** : Xcode de Apple y la API de iOS más reciente deben instalarse y configurarse en el equipo del desarrollador.
+- **[Herramientas de línea de comandos de Xcode](#Installing_the_Xcode_Command_Line_Tools)** : las herramientas de línea de comandos de Xcode deben estar instaladas para la versión instalada actualmente de Xcode (consulte a continuación los detalles de la instalación).
+- **Visual Studio para Mac o Visual Studio** : la versión más reciente de Visual Studio para Mac o Visual Studio debe estar instalada y configurada en el equipo de desarrollo. Se necesita un equipo Mac de Apple para desarrollar una aplicación de Xamarin. iOS y, al usar Visual Studio, debe estar conectado a [un host de compilación de Xamarin. iOS.](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **La versión más reciente de Objective Sharpie** : una copia actual de la herramienta de objetivo Sharpie descargada [aquí](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Si ya tiene el objetivo Sharpie instalado, puede actualizarlo a la versión más reciente mediante el`sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
@@ -679,7 +679,7 @@ Primero se obtiene una instancia de `InfColorPickerController` a través de un m
 
 [![](walkthrough-images/run01.png "Ejecutar la aplicación")](walkthrough-images/run01.png#lightbox)
 
-Felicidades. En este punto, ha creado y enlazado correctamente una biblioteca de Objective-C para su uso en una aplicación de Xamarin. iOS. A continuación, vamos a obtener información sobre el uso de delegados débiles.
+¡Enhorabuena! En este punto, ha creado y enlazado correctamente una biblioteca de Objective-C para su uso en una aplicación de Xamarin. iOS. A continuación, vamos a obtener información sobre el uso de delegados débiles.
 
 ### <a name="implementing-a-weak-delegate"></a>Implementar un delegado débil
 

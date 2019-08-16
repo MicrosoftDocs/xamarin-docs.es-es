@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a57273005df45c2f8035563efe9562c27cdfa732
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6a9bb5fae84b6883943410d0c2585ce60a1208a4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648409"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526443"
 ---
 # <a name="introduction-to-android-wear"></a>Introducción a Android Wear
 
@@ -90,15 +90,15 @@ Cada aplicación portátil se implementa con su propio archivo APK insertado en 
 
 La mejor manera de familiarizarse con el desgaste de Android consiste en compilar y probar la primera aplicación. La lista siguiente proporciona un orden de lectura recomendado para ayudarle a ponerse al día rápidamente:
 
-1.  Instalación [& instalación](~/android/wear/get-started/installation.md) proporciona instrucciones detalladas para instalar y configurar el entorno de desarrollo para compilar aplicaciones de desgaste de Xamarin. Android. 
+1. Instalación [& instalación](~/android/wear/get-started/installation.md) proporciona instrucciones detalladas para instalar y configurar el entorno de desarrollo para compilar aplicaciones de desgaste de Xamarin. Android. 
 
-2.  Una vez que haya instalado los paquetes necesarios y haya configurado un emulador o un dispositivo, consulte [Hola, desgaste](~/android/wear/get-started/hello-wear.md) de las instrucciones paso a paso que explican cómo crear un pequeño proyecto de desgaste de Android que controla los clics de los botones y muestra un contador de clic en el desgaste. dispositivos. 
+2. Una vez que haya instalado los paquetes necesarios y haya configurado un emulador o un dispositivo, consulte [Hola, desgaste](~/android/wear/get-started/hello-wear.md) de las instrucciones paso a paso que explican cómo crear un pequeño proyecto de desgaste de Android que controla los clics de los botones y muestra un contador de clic en el desgaste. dispositivos. 
 
-3.  Las [pruebas de & de implementación](~/android/wear/deploy-test/index.md) proporcionan información más detallada sobre la configuración e implementación en emuladores y dispositivos, incluidas instrucciones sobre cómo implementar la aplicación en un dispositivo de desgaste a través de Bluetooth.
+3. Las [pruebas de & de implementación](~/android/wear/deploy-test/index.md) proporcionan información más detallada sobre la configuración e implementación en emuladores y dispositivos, incluidas instrucciones sobre cómo implementar la aplicación en un dispositivo de desgaste a través de Bluetooth.
 
-4.  [Trabajar con tamaños de pantalla](~/android/wear/screen-sizes.md) explica cómo obtener una vista previa y optimizar la interfaz de usuario para los distintos tamaños de pantalla disponibles en los dispositivos de desgaste. 
+4. [Trabajar con tamaños de pantalla](~/android/wear/screen-sizes.md) explica cómo obtener una vista previa y optimizar la interfaz de usuario para los distintos tamaños de pantalla disponibles en los dispositivos de desgaste. 
 
-5.  [Trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md) describe los pasos para empaquetar aplicaciones de desgaste de forma manual para su distribución en Google Play.
+5. [Trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md) describe los pasos para empaquetar aplicaciones de desgaste de forma manual para su distribución en Google Play.
 
 Una vez que haya creado su primera aplicación de desgaste, puede intentar crear una superficie de inspección personalizada para el desgaste de Android. 
 [La creación de una esfera de inspección](~/android/wear/platform/creating-a-watchface.md) proporciona instrucciones paso a paso y código de ejemplo para desarrollar un servicio de caras de supervisión digital de bajada, seguido de más código que lo mejora en una superficie de inspección de estilo analógico con características adicionales. 
@@ -169,8 +169,8 @@ Las aplicaciones de desgaste de Android 2,0 pueden funcionar independientemente 
 
 Los gestos de muñecas permiten a los usuarios interactuar con la aplicación sin usar la pantalla &ndash; táctil los usuarios pueden responder a la aplicación con una sola mano. Se admiten dos gestos de muñecas: 
 
--   Desplazarse hacia afuera
--   Gesto de muñeca en
+- Desplazarse hacia afuera
+- Gesto de muñeca en
 
 Para obtener más información, consulte el tema sobre gestos de [muñecas](https://developer.android.com/wear/preview/features/gestures.html) de Android. 
 

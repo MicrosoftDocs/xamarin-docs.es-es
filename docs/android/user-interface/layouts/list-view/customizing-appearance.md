@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 9307e440a780d60a8301c58d70ee882fbbdebab1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646396"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522611"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalización de la apariencia de un control ListView con Xamarin. Android
 
@@ -164,17 +164,17 @@ Las cuatro vistas de filas integradas son muy sencillas. Para mostrar diseños m
 
 Este ejemplo difiere de los ejemplos anteriores de varias maneras:
 
--  Hereda de, `Activity` no `ListActivity` de. Puede personalizar las filas de cualquier `ListView` , pero también se pueden incluir otros controles en un `Activity` diseño (por ejemplo, un encabezado, botones u otros elementos de la interfaz de usuario). En este ejemplo se agrega un encabezado `ListView` encima de para mostrar.
+- Hereda de, `Activity` no `ListActivity` de. Puede personalizar las filas de cualquier `ListView` , pero también se pueden incluir otros controles en un `Activity` diseño (por ejemplo, un encabezado, botones u otros elementos de la interfaz de usuario). En este ejemplo se agrega un encabezado `ListView` encima de para mostrar.
 
--  Requiere un archivo de diseño de AXML para la pantalla. en los ejemplos `ListActivity` anteriores, no requiere un archivo de diseño. Este AXML contiene una `ListView` declaración de control.
+- Requiere un archivo de diseño de AXML para la pantalla. en los ejemplos `ListActivity` anteriores, no requiere un archivo de diseño. Este AXML contiene una `ListView` declaración de control.
 
--  Requiere un archivo de diseño AXML para representar cada fila. Este archivo AXML contiene los controles de texto e imagen con la configuración personalizada de fuente y color.
+- Requiere un archivo de diseño AXML para representar cada fila. Este archivo AXML contiene los controles de texto e imagen con la configuración personalizada de fuente y color.
 
--  Usa un archivo XML de selector personalizado opcional para establecer la apariencia de la fila cuando está seleccionada.
+- Usa un archivo XML de selector personalizado opcional para establecer la apariencia de la fila cuando está seleccionada.
 
--  La `Adapter` implementación de devuelve un diseño personalizado de `GetView` la invalidación.
+- La `Adapter` implementación de devuelve un diseño personalizado de `GetView` la invalidación.
 
--  `ItemClick`se debe declarar de forma diferente (se adjunta `ListView.ItemClick` un controlador de eventos en lugar de un reemplazo `OnListItemClick` en `ListActivity`).
+- `ItemClick`se debe declarar de forma diferente (se adjunta `ListView.ItemClick` un controlador de eventos en lugar de un reemplazo `OnListItemClick` en `ListActivity`).
 
 
 Estos cambios se detallan a continuación, empezando por crear la vista de la actividad y la vista de fila personalizada y, a continuación, abarcando las modificaciones en el adaptador y la actividad para representarlas.

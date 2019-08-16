@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6d80af60ae94c638c7d90229852f304a40ce0b0c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c612faca90d4b2b4e44cfbb53ff65ec07fcdfd1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643806"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524842"
 ---
 # <a name="binding-an-aar"></a>Enlace de un .AAR
 
@@ -24,10 +24,10 @@ _En este tutorial se proporcionan instrucciones paso a paso para crear una bibli
 El *archivo Android (. AAR)* es el formato de archivo de las bibliotecas de Android.
 Alternativa. El archivo AAR es un. Archivo ZIP que contiene lo siguiente:
 
--   Código Java compilado
--   Identificadores de recursos
--   Recursos
--   Metadatos (por ejemplo, declaraciones de actividad, permisos)
+- Código Java compilado
+- Identificadores de recursos
+- Recursos
+- Metadatos (por ejemplo, declaraciones de actividad, permisos)
 
 En esta guía se detallan los conceptos básicos de la creación de una biblioteca de enlaces para un único. Archivo AAR. Para obtener información general sobre el enlace de la biblioteca de Java en general (con un ejemplo de código básico), vea [enlazar una biblioteca de Java](~/android/platform/binding-java-library/index.md).
 
@@ -81,35 +81,35 @@ Este recurso de imagen reside en **res/drawable/Monkey. png** en **textanalyzer.
 
 Antes de comenzar con los pasos siguientes, descargue el archivo de almacenamiento de Android de ejemplo [textanalyzer. AAR](https://github.com/xamarin/monodroid-samples/blob/master/JavaIntegration/AarBinding/Resources/textanalyzer.aar?raw=true) :
 
-1.  Cree un nuevo proyecto de biblioteca de enlaces a partir de la plantilla de la biblioteca de enlaces de Android. Puede usar Visual Studio para Mac o Visual Studio (las capturas de pantallas siguientes muestran Visual Studio, pero Visual Studio para Mac es muy similar). Asigne a la solución el nombre **AarBinding**:
+1. Cree un nuevo proyecto de biblioteca de enlaces a partir de la plantilla de la biblioteca de enlaces de Android. Puede usar Visual Studio para Mac o Visual Studio (las capturas de pantallas siguientes muestran Visual Studio, pero Visual Studio para Mac es muy similar). Asigne a la solución el nombre **AarBinding**:
 
     [![Crear proyecto de AarBindings](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
-2.  La plantilla incluye una carpeta **jar** donde se agrega el. AAR (s) al proyecto de biblioteca de enlaces. Haga clic con el botón derecho en la carpeta **jar** y seleccione **Agregar > elemento existente**:
+2. La plantilla incluye una carpeta **jar** donde se agrega el. AAR (s) al proyecto de biblioteca de enlaces. Haga clic con el botón derecho en la carpeta **jar** y seleccione **Agregar > elemento existente**:
 
     [![Agregar elemento existente](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 
-3.  Navegue hasta el archivo **textanalyzer. AAR** descargado anteriormente, selecciónelo y haga clic en **Agregar**:
+3. Navegue hasta el archivo **textanalyzer. AAR** descargado anteriormente, selecciónelo y haga clic en **Agregar**:
 
     [![Agregue textanalayzer. AAR](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 
-4.  Compruebe que el archivo **textanalyzer. AAR** se ha agregado correctamente al proyecto:
+4. Compruebe que el archivo **textanalyzer. AAR** se ha agregado correctamente al proyecto:
 
     [![Se ha agregado el archivo textanalyzer. AAR](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
-5.  Establezca la acción de compilación para **textanalyzer. AAR** en `LibraryProjectZip`. En Visual Studio para Mac, haga clic con el botón secundario en **textanalyzer. AAR** para establecer la acción de compilación. En Visual Studio, la acción de compilación se puede establecer en el panel de **propiedades** :
+5. Establezca la acción de compilación para **textanalyzer. AAR** en `LibraryProjectZip`. En Visual Studio para Mac, haga clic con el botón secundario en **textanalyzer. AAR** para establecer la acción de compilación. En Visual Studio, la acción de compilación se puede establecer en el panel de **propiedades** :
 
     [![Establecer la acción de compilación textanalyzer. AAR en LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
-6.  Abra las propiedades del proyecto para configurar la versión de *.NET Framework de destino*. Si el. AAR usa cualquier API de Android, establezca la plataforma de destino en el nivel de API que el. AAR espera. (Para obtener más información sobre la configuración de la plataforma de destino y los niveles de la API de Android en general, consulte Descripción de los [niveles de API de Android](~/android/app-fundamentals/android-api-levels.md)).
+6. Abra las propiedades del proyecto para configurar la versión de *.NET Framework de destino*. Si el. AAR usa cualquier API de Android, establezca la plataforma de destino en el nivel de API que el. AAR espera. (Para obtener más información sobre la configuración de la plataforma de destino y los niveles de la API de Android en general, consulte Descripción de los [niveles de API de Android](~/android/app-fundamentals/android-api-levels.md)).
 
     Establezca el nivel de API de destino para la biblioteca de enlaces. En este ejemplo, podemos usar el nivel de API de plataforma más reciente (nivel de API 23) porque nuestro **textanalyzer** no tiene una dependencia en las API de Android:
 
     [![Establecimiento del nivel de destino en la API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
-7.  Compile la biblioteca de enlaces. El proyecto de biblioteca de enlaces se debe compilar correctamente y generar una salida. DLL en la siguiente ubicación: **AarBinding/bin/Debug/AarBinding.dll**
+7. Compile la biblioteca de enlaces. El proyecto de biblioteca de enlaces se debe compilar correctamente y generar una salida. DLL en la siguiente ubicación: **AarBinding/bin/Debug/AarBinding.dll**
 
 
 
@@ -117,19 +117,19 @@ Antes de comenzar con los pasos siguientes, descargue el archivo de almacenamien
 
 Para consumir este. DLL en la aplicación de Xamarin. Android, primero debe agregar una referencia a la biblioteca de enlaces. Siga estos pasos:
 
-1.  Vamos a crear esta aplicación en la misma solución que la biblioteca de enlaces para simplificar este tutorial. (La aplicación que usa la biblioteca de enlaces también puede residir en una solución diferente). Cree una nueva aplicación de Xamarin. Android: haga clic con el botón derecho en la solución y seleccione **Agregar nuevo proyecto**. Asigne al nuevo proyecto el nombre **BindingTest**:
+1. Vamos a crear esta aplicación en la misma solución que la biblioteca de enlaces para simplificar este tutorial. (La aplicación que usa la biblioteca de enlaces también puede residir en una solución diferente). Cree una nueva aplicación de Xamarin. Android: haga clic con el botón derecho en la solución y seleccione **Agregar nuevo proyecto**. Asigne al nuevo proyecto el nombre **BindingTest**:
 
     [![Crear nuevo proyecto de BindingTest](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
-2.  Haga clic con el botón secundario en el nodo **referencias** del proyecto **BindingTest** y seleccione **Agregar referencia..** .:
+2. Haga clic con el botón secundario en el nodo **referencias** del proyecto **BindingTest** y seleccione **Agregar referencia..** .:
 
     [![Haga clic en Agregar referencia](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
-3.  Seleccione el proyecto **AarBinding** creado anteriormente y haga clic en **Aceptar**:
+3. Seleccione el proyecto **AarBinding** creado anteriormente y haga clic en **Aceptar**:
 
     [![Comprobar el proyecto de enlace de AAR](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
-4.  Abra el nodo References del proyecto **BindingTest** para comprobar que la referencia **AarBinding** está presente:
+4. Abra el nodo References del proyecto **BindingTest** para comprobar que la referencia **AarBinding** está presente:
 
     [![AarBinding aparece en referencias](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
@@ -303,7 +303,7 @@ Compile y ejecute el proyecto **BindingTest** . La aplicación se iniciará y pr
 [![BindingTest Mostrar recuento de consonantes](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
 
-Felicidades. Ha enlazado correctamente una biblioteca de Java. AAR!
+¡Enhorabuena! Ha enlazado correctamente una biblioteca de Java. AAR!
 
 
 

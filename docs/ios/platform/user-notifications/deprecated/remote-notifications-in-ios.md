@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 143dd8c5ad2e762235641680e1217a11e1b48bb5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651319"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528758"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones de envío en iOS
 
@@ -32,24 +32,24 @@ Apple mantiene dos entornos de APNS: un *espacio aislado* y un entorno de *produ
 
 La notificación push debe observar las reglas siguientes dictadas por la arquitectura de APNS:
 
--  **límite de mensajes de 256 bytes** : el tamaño completo del mensaje de la notificación no debe superar los 256 bytes.
--  **No hay confirmación de recepción** : APNS no proporciona al remitente ninguna notificación de que un mensaje lo hizo al destinatario previsto. Si el dispositivo es inaccesible y se envían varias notificaciones secuenciales, se perderán todas las notificaciones excepto la más reciente. Solo se entregará la notificación más reciente al dispositivo.
--  **Cada aplicación requiere un certificado seguro** : la comunicación con APNS debe realizarse a través de SSL.
+- **límite de mensajes de 256 bytes** : el tamaño completo del mensaje de la notificación no debe superar los 256 bytes.
+- **No hay confirmación de recepción** : APNS no proporciona al remitente ninguna notificación de que un mensaje lo hizo al destinatario previsto. Si el dispositivo es inaccesible y se envían varias notificaciones secuenciales, se perderán todas las notificaciones excepto la más reciente. Solo se entregará la notificación más reciente al dispositivo.
+- **Cada aplicación requiere un certificado seguro** : la comunicación con APNS debe realizarse a través de SSL.
 
 
 ## <a name="creating-and-using-certificates"></a>Crear y usar certificados
 
 Cada uno de los entornos mencionados en la sección anterior requiere su propio certificado. En esta sección se explica cómo crear un certificado, asociarlo a un perfil de aprovisionamiento y, a continuación, obtener un certificado de intercambio de información personal para su uso con PushSharp.
 
-1.  Para crear certificados, vaya al portal de aprovisionamiento de iOS en el sitio web de Apple, tal como se muestra en la siguiente captura de pantalla (observe el elemento de menú ID. de aplicación a la izquierda):
+1. Para crear certificados, vaya al portal de aprovisionamiento de iOS en el sitio web de Apple, tal como se muestra en la siguiente captura de pantalla (observe el elemento de menú ID. de aplicación a la izquierda):
 
     [![](remote-notifications-in-ios-images/image5new.png "El portal de aprovisionamiento de iOS en el sitio web de Apple")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
-2.  A continuación, vaya a la sección del identificador de la aplicación y cree un nuevo identificador de aplicación, tal como se muestra en la siguiente captura de pantalla:
+2. A continuación, vaya a la sección del identificador de la aplicación y cree un nuevo identificador de aplicación, tal como se muestra en la siguiente captura de pantalla:
 
     [![](remote-notifications-in-ios-images/image6new.png "Vaya a la sección identificadores de aplicación y cree un nuevo identificador de aplicación.")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Al hacer clic en el **+** botón, podrá escribir la descripción y un identificador de paquete para el identificador de la aplicación, como se muestra en la siguiente captura de pantalla:
+3. Al hacer clic en el **+** botón, podrá escribir la descripción y un identificador de paquete para el identificador de la aplicación, como se muestra en la siguiente captura de pantalla:
 
     [![](remote-notifications-in-ios-images/image7new.png "Escriba la descripción y un identificador de lote para el ID. de aplicación")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
@@ -63,7 +63,7 @@ Cada uno de los entornos mencionados en la sección anterior requiere su propio 
 
     [![](remote-notifications-in-ios-images/image9new.png "Confirmar el registro del nuevo ID. de aplicación")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
-7.  A continuación, debe crear el certificado para el identificador de la aplicación. En el panel de navegación izquierdo, vaya a **certificados > todos** y seleccione `+` el botón, tal como se muestra en la siguiente captura de pantalla:
+7. A continuación, debe crear el certificado para el identificador de la aplicación. En el panel de navegación izquierdo, vaya a **certificados > todos** y seleccione `+` el botón, tal como se muestra en la siguiente captura de pantalla:
 
     [![](remote-notifications-in-ios-images/image10new.png "Crear el certificado para el identificador de la aplicación")](remote-notifications-in-ios-images/image8.png#lightbox)
 
@@ -75,24 +75,24 @@ Cada uno de los entornos mencionados en la sección anterior requiere su propio 
 
     [![](remote-notifications-in-ios-images/image12new.png "Seleccione el nuevo identificador de aplicación que acaba de crear")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
-10.  Se mostrarán instrucciones que le guiarán por el proceso de creación de una *solicitud de firma de certificado* con la aplicación de **acceso a llaves** en el equipo Mac.
+10. Se mostrarán instrucciones que le guiarán por el proceso de creación de una *solicitud de firma de certificado* con la aplicación de **acceso a llaves** en el equipo Mac.
 
-11.  Ahora que se ha creado el certificado, se debe usar como parte del proceso de compilación para firmar la aplicación para que se pueda registrar con APNs. Esto requiere la creación e instalación de un perfil de aprovisionamiento que use el certificado.
+11. Ahora que se ha creado el certificado, se debe usar como parte del proceso de compilación para firmar la aplicación para que se pueda registrar con APNs. Esto requiere la creación e instalación de un perfil de aprovisionamiento que use el certificado.
 
-12.  Para crear un perfil de aprovisionamiento de desarrollo, vaya a la sección **perfiles de aprovisionamiento** y siga los pasos para crearlo con el identificador de aplicación que acabamos de crear.
+12. Para crear un perfil de aprovisionamiento de desarrollo, vaya a la sección **perfiles de aprovisionamiento** y siga los pasos para crearlo con el identificador de aplicación que acabamos de crear.
 
-13.  Una vez que haya creado el perfil de aprovisionamiento, abra el **organizador de Xcode** y actualícela. Si el perfil de aprovisionamiento que creó no aparece, puede que sea necesario descargar el perfil desde el portal de aprovisionamiento de iOS e importarlo manualmente. En la captura de pantalla siguiente se muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado:  
+13. Una vez que haya creado el perfil de aprovisionamiento, abra el **organizador de Xcode** y actualícela. Si el perfil de aprovisionamiento que creó no aparece, puede que sea necesario descargar el perfil desde el portal de aprovisionamiento de iOS e importarlo manualmente. En la captura de pantalla siguiente se muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado:  
     [![](remote-notifications-in-ios-images/image13new.png "Esta captura de pantalla muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-14.  En este momento, es necesario configurar el proyecto de Xamarin. iOS para usar este perfil de aprovisionamiento recién creado. Esto se realiza desde el cuadro de diálogo **Opciones del proyecto** , en la pestaña firma de **lote de iOS** , tal como se muestra en la siguiente captura de pantalla:  
+14. En este momento, es necesario configurar el proyecto de Xamarin. iOS para usar este perfil de aprovisionamiento recién creado. Esto se realiza desde el cuadro de diálogo **Opciones del proyecto** , en la pestaña firma de **lote de iOS** , tal como se muestra en la siguiente captura de pantalla:  
     [![](remote-notifications-in-ios-images/image11.png "Configurar el proyecto de Xamarin. iOS para usar este perfil de aprovisionamiento recién creado")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 En este punto, la aplicación está configurada para trabajar con notificaciones de extracción. Sin embargo, todavía hay algunos pasos más necesarios con el certificado. Este certificado está en formato DER y no es compatible con PushSharp, que requiere un certificado de intercambio de información personal (PKCS12). Para convertir el certificado de modo que sea utilizable por PushSharp, siga estos pasos finales:
 
-1.  **Descargue el archivo de certificado** -login en el portal de aprovisionamiento de iOS, elija la pestaña certificados, seleccione el certificado asociado con el perfil de aprovisionamiento correcto y elija **Descargar** .
-1.  **Abrir acceso a llaves** : se trata de una interfaz de GUI para el sistema de administración de contraseñas en OS X.
-1.  **Importar el certificado** : Si el certificado no está ya instalado, **archivo... Importar elementos** desde el menú acceso a llaves. Navegue hasta el certificado que exportó anteriormente y selecciónelo.
-1.  **Exportar el certificado** : expanda el certificado para que la clave privada asociada esté visible, haga clic con el botón derecho en la clave y elija Exportar. Se le pedirá un nombre de archivo y una contraseña para el archivo exportado.
+1. **Descargue el archivo de certificado** -login en el portal de aprovisionamiento de iOS, elija la pestaña certificados, seleccione el certificado asociado con el perfil de aprovisionamiento correcto y elija **Descargar** .
+1. **Abrir acceso a llaves** : se trata de una interfaz de GUI para el sistema de administración de contraseñas en OS X.
+1. **Importar el certificado** : Si el certificado no está ya instalado, **archivo... Importar elementos** desde el menú acceso a llaves. Navegue hasta el certificado que exportó anteriormente y selecciónelo.
+1. **Exportar el certificado** : expanda el certificado para que la clave privada asociada esté visible, haga clic con el botón derecho en la clave y elija Exportar. Se le pedirá un nombre de archivo y una contraseña para el archivo exportado.
 
 En este momento, hemos terminado con los certificados. Hemos creado un certificado que se usará para firmar las aplicaciones de iOS y convertir ese certificado a un formato que se pueda usar con PushSharp en una aplicación de servidor. A continuación, veamos cómo las aplicaciones de iOS interactúan con APNS.
 

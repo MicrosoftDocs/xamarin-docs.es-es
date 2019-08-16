@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: b40b2d2d5083f32edcb0fc08c8365096e6d4fda9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645353"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522467"
 ---
 # <a name="a-basic-recyclerview-example"></a>Ejemplo de RecyclerView básico
 
@@ -171,11 +171,11 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 El `mPhotoAlbum` miembro contiene el origen de datos (el álbum de fotos) que se pasa al constructor; el constructor copia el álbum de fotos en esta variable miembro. Se implementan `RecyclerView.Adapter` los siguientes métodos necesarios:
 
--   **`OnCreateViewHolder`** &ndash; Crea una instancia del archivo de diseño del elemento y del titular de la vista.
+- **`OnCreateViewHolder`** &ndash; Crea una instancia del archivo de diseño del elemento y del titular de la vista.
 
--   **`OnBindViewHolder`** &ndash; Carga los datos en la posición especificada en las vistas cuyas referencias se almacenan en el titular de la vista especificado.
+- **`OnBindViewHolder`** &ndash; Carga los datos en la posición especificada en las vistas cuyas referencias se almacenan en el titular de la vista especificado.
 
--   **`ItemCount`** &ndash; Devuelve el número de elementos del origen de datos.
+- **`ItemCount`** &ndash; Devuelve el número de elementos del origen de datos.
 
 El administrador de diseño llama a estos métodos mientras coloca los elementos dentro `RecyclerView`de. La implementación de estos métodos se examina en las secciones siguientes.
 

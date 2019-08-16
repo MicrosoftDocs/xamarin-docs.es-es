@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 26. Diseños personalizados
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 26. Diseños personalizados'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 26. Diseños personalizados'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 9fa9802f94e10612c4b0fe02c84ddcabc89820a8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a9887d12d251e60cf6767fe89f6125fe1438d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331577"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529237"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumen del capítulo 26. Diseños personalizados
 
@@ -22,7 +22,7 @@ Xamarin.Forms incluye varias clases derivadas de [ `Layout<View>` ](xref:Xamarin
 
 * `StackLayout`,
 * `Grid`,
-* `AbsoluteLayout` y 
+* `AbsoluteLayout` y
 * `RelativeLayout`.
 
 Este capítulo describe cómo crear sus propias clases que derivan de `Layout<View>`.
@@ -116,7 +116,7 @@ Infinitas restricciones indican que el tamaño solicitado debe reflejar el tama�
 
 El [ **ExploreChildSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) restricción de muestra y el tamaño solicitan información sobre un diseño sencillo.
 
-## <a name="deriving-from-layoutview"></a>Derivar de diseño<View>
+## <a name="deriving-from-layoutview"></a>Derivar de la\<vista de diseño >
 
 Derive una clase de diseño personalizado de `Layout<View>`. Tiene dos responsabilidades:
 

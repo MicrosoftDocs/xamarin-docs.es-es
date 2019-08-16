@@ -1,171 +1,171 @@
 ---
-title: Introducción al desarrollo de aplicaciones de empresa
-description: Este capítulo ofrece una introducción al desarrollo de aplicaciones de empresa y presenta la aplicación móvil de eShopOnContainers.
+title: Introducción al desarrollo de aplicaciones empresariales
+description: En este capítulo se proporciona una introducción al desarrollo de aplicaciones empresariales y se presenta la aplicación móvil eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 4fbb4047b95fd70f829cd79e4ea26b2958273297
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 07bf50bdee9243141d1f266a88f82770d9503969
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831177"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529103"
 ---
-# <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones de empresa
+# <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
 
-Independientemente de la plataforma, afrontan diferentes desafíos a los desarrolladores de aplicaciones empresariales:
+Independientemente de la plataforma, los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos:
 
--   Requisitos de aplicación que se pueden cambiar con el tiempo.
--   Desafíos y nuevas oportunidades de negocio.
--   Comentarios en curso durante el desarrollo que puede afectar significativamente a los requisitos de la aplicación y el ámbito.
+- Requisitos de la aplicación que pueden cambiar con el tiempo.
+- Nuevas oportunidades de negocio y desafíos.
+- Comentarios en curso durante el desarrollo que pueden afectar significativamente al ámbito y a los requisitos de la aplicación.
 
-Con esto en mente, es importante compilar aplicaciones que se pueden modificar con facilidad o extendidas con el tiempo. Diseño de la capacidad de dichos adaptación puede ser difícil, ya que requiere una arquitectura que permite que las partes individuales de la aplicación para desarrollar y probar de forma aislada sin afectar al resto de la aplicación por separado.
+Teniendo esto en cuenta, es importante crear aplicaciones que se puedan modificar o ampliar fácilmente con el tiempo. El diseño para esta adaptación puede ser difícil, ya que requiere una arquitectura que permita que las partes individuales de la aplicación se desarrollen y prueben de forma independiente en aislamiento sin que afecte al resto de la aplicación.
 
-Muchas aplicaciones empresariales son bastante complejas que requieren más de un desarrollador. Puede ser un desafío importante para decidir cómo diseñar una aplicación para que varios desarrolladores puedan trabajar eficazmente en distintas partes de la aplicación de forma independiente, garantizando que las piezas reúnen sin problemas cuando se integra en la aplicación.
+Muchas aplicaciones empresariales son lo suficientemente complejas como para requerir más de un desarrollador. Puede ser un desafío importante decidir cómo diseñar una aplicación para que varios desarrolladores puedan trabajar de forma eficaz en distintas partes de la aplicación de forma independiente, a la vez que se aseguran de que las piezas se unen sin problemas cuando se integran en la aplicación.
 
-El enfoque tradicional para diseñar y crear una aplicación de resultados en lo que se conoce como un *monolítica* app, donde los componentes están estrechamente acoplados sin separación clara entre ellos. Normalmente, este enfoque monolítica da lugar a las aplicaciones que son difíciles y eficaz de mantener, porque pueden ser difícil de resolver los errores sin que ello interrumpa otros componentes en la aplicación, y puede ser difícil para agregar nuevas características o reemplazar las características existentes.
+El enfoque tradicional para diseñar y compilar una aplicación produce lo que se conoce como una aplicación monolítica, donde los componentes están estrechamente acoplados sin una separación clara entre ellos. Normalmente, este enfoque monolítico conduce a aplicaciones que son difíciles y poco eficientes de mantener, ya que puede ser difícil resolver errores sin romper otros componentes en la aplicación, y puede ser difícil agregar nuevas características o reemplazar las existentes.
 
-Un remedio eficaz para estos desafíos es dividir una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente entre sí en una aplicación. Este enfoque ofrece varias ventajas:
+Una solución eficaz para estos desafíos es particionar una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente juntos en una aplicación. Este enfoque ofrece varias ventajas:
 
--   Permite la funcionalidad a desarrollado, probado, ampliado y mantenido por distintas personas o equipos individual.
--   Promueve la reutilización y una separación clara de intereses entre las capacidades horizontal la aplicación, como la autenticación y acceso a datos y las funcionalidades verticales, como la funcionalidad empresarial específica de la aplicación. Esto permite que las dependencias y las interacciones entre componentes de aplicación para administrar más fácilmente.
--   Le ayuda a mantener una separación de roles al permitir que distintas personas o equipos, para centrarse en una tarea específica o parte de la funcionalidad según sus conocimientos. En concreto, proporciona una separación más clara entre la interfaz de usuario y la lógica de negocios de la aplicación.
+- Permite que distintas personas o equipos puedan desarrollar, probar, ampliar y mantener la funcionalidad individual.
+- Promueve la reutilización y una separación limpia de las preocupaciones entre las funcionalidades horizontales de la aplicación, como la autenticación y el acceso a datos, y las funcionalidades verticales, como la funcionalidad empresarial específica de la aplicación. Esto permite administrar las dependencias y las interacciones entre los componentes de la aplicación más fácilmente.
+- Ayuda a mantener una separación de roles, ya que permite que individuos, o equipos, se centren en una tarea específica o en una parte de la funcionalidad de acuerdo con sus conocimientos. En concreto, proporciona una separación más nítida entre la interfaz de usuario y la lógica de negocios de la aplicación.
 
-Sin embargo, hay muchos problemas que deben resolverse al dividir una aplicación en componentes discretos y con acoplamiento flexible. Entre ellas se incluyen las siguientes:
+Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Entre ellas se incluyen las siguientes:
 
--   Decida cómo va a proporcionar una separación clara de intereses entre los controles de interfaz de usuario y su lógica. Una de las decisiones más importantes al crear una aplicación de empresa de Xamarin.Forms es si se debe colocar la lógica de negocios en archivos de código subyacente, o si se crea una separación clara de intereses entre los controles de interfaz de usuario y su lógica, para que la aplicación más fácil de mantener y probar. Para obtener más información, consulte [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
--   Determina si se usa un contenedor de inserción de dependencia. Contenedores de inserción de dependencia reducen la dependencia de acoplamiento entre los objetos por lo que proporciona una funcionalidad para construir instancias de clases con sus dependencias y administran su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
--   Elección entre eventos de plataforma que proporciona y escasamente acoplado basada en mensajes de la comunicación entre los componentes que no son convenientes para vincular mediante referencias de objeto y el tipo. Para obtener más información, vea Introducción a [comunicarse entre débilmente acoplados componentes](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
--   Decidir cómo navegar entre páginas, incluida la forma de invocar el panel de navegación, y donde debe residir la lógica de navegación. Para obtener más información, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md) (Navegación).
--   Determinación de cómo validar entradas de usuario son correctos. Debe incluir la decisión de cómo validar entradas de usuario y notificar al usuario sobre los errores de validación. Para obtener más información, consulte [validación](~/xamarin-forms/enterprise-application-patterns/validation.md).
--   Decidir cómo realizar la autenticación y cómo proteger los recursos con la autorización. Para obtener más información, consulte [autenticación y autorización](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md).
--   Determinar cómo obtener acceso a datos remotos de web services, incluido cómo recuperar datos de forma confiable y cómo almacenar en caché los datos. Para obtener más información, consulte [acceso a datos remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
--   Decida cómo va a probar la aplicación. Para obtener más información, consulte [Unit Testing](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
+- Decidir cómo proporcionar una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica. Una de las decisiones más importantes a la hora de crear una aplicación de Xamarin. Forms Enterprise es si se debe colocar lógica de negocios en archivos de código subyacente, o si se va a crear una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica, para que la aplicación sea más mantenible y comprobable. Para obtener más información, vea [modelo-vista-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
+- Determinar si se va a usar un contenedor de inserción de dependencias. Los contenedores de inserción de dependencias reducen el acoplamiento de dependencias entre los objetos al proporcionar una utilidad para construir instancias de clases con sus dependencias insertadas y administrar su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)de dependencias.
+- Elección entre los eventos proporcionados por la plataforma y la comunicación basada en mensajes de acoplamiento flexible entre los componentes que no son convenientes para vincularlos mediante referencias de tipo y objeto. Para obtener más información, vea la introducción a la [comunicación entre componentes de acoplamiento flexible](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
+- Decidir cómo desplazarse entre las páginas, incluido cómo invocar la navegación y dónde debe residir la lógica de navegación. Para obtener más información, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md) (Navegación).
+- Determinar cómo validar los datos proporcionados por el usuario para comprobar si son correctos. La decisión debe incluir cómo validar los datos proporcionados por el usuario y cómo notificar a los usuarios sobre los errores de validación. Para obtener más información, consulte [validación](~/xamarin-forms/enterprise-application-patterns/validation.md).
+- Decidir cómo realizar la autenticación y cómo proteger los recursos con autorización. Para obtener más información, consulte [autenticación y autorización](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md).
+- Determinar cómo obtener acceso a datos remotos desde servicios Web, incluido cómo recuperar datos de forma confiable y cómo almacenar datos en caché. Para obtener más información, vea [acceso a datos remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
+- Decidir cómo probar la aplicación. Para obtener más información, vea [pruebas unitarias](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
-Esta guía proporciona instrucciones sobre estos problemas y se centra en la arquitectura para la creación de una aplicación de enterprise multiplataforma con Xamarin.Forms y patrones principales. Las instrucciones pretende ayudar a generar código adaptable, fáciles de mantener y probar, al tratar los escenarios habituales del desarrollo de aplicaciones de enterprise de Xamarin.Forms y al separar las preocupaciones de presentación, lógica de presentación y las entidades mediante la compatibilidad con el Patrón Model-View-ViewModel (MVVM).
+En esta guía se proporcionan instrucciones sobre estos problemas y se centra en los patrones y la arquitectura principales para crear una aplicación empresarial multiplataforma con Xamarin. Forms. La guía pretende ayudar a generar código adaptable, fácil de mantener y comprobable, ya que aborda escenarios comunes de desarrollo de aplicaciones empresariales de Xamarin. Forms y separa las preocupaciones de la presentación, la lógica de presentación y las entidades a través de la compatibilidad con Patrón Model-View-ViewModel (MVVM).
 
 ## <a name="sample-application"></a>Aplicación de ejemplo
 
-Esta guía incluye una aplicación de ejemplo eShopOnContainers, que es una tienda en línea que incluye la funcionalidad siguiente:
+En esta guía se incluye una aplicación de ejemplo, eShopOnContainers, que es una tienda en línea que incluye la siguiente funcionalidad:
 
--   La autenticación y autorización en un servicio back-end.
--   Exploración de un catálogo de camisetas, tazas de café y otros productos de marketing.
--   Filtrado del catálogo.
--   Ordenar los elementos del catálogo.
--   Ver historial de pedidos del usuario.
--   Configuración de valores.
+- Autenticación y autorización en un servicio back-end.
+- Exploración de un catálogo de camisas, tazas de café y otros elementos de marketing.
+- Filtrar el catálogo.
+- Ordenar los elementos del catálogo.
+- Ver el historial de pedidos del usuario.
+- Configuración de las opciones.
 
 ### <a name="sample-application-architecture"></a>Arquitectura de aplicación de ejemplo
 
-Figura 1-1 proporciona una descripción general de la arquitectura de la aplicación de ejemplo.
+En la figura 1-1 se proporciona información general de alto nivel sobre la arquitectura de la aplicación de ejemplo.
 
 ![](introduction-images/architecture.png "arquitectura de alto nivel de eShopOnContainers")
 
 **Figura 1-1**: arquitectura de alto nivel de eShopOnContainers
 
-La aplicación de ejemplo incluye tres aplicaciones de cliente:
+La aplicación de ejemplo se incluye en tres aplicaciones cliente:
 
--   Una aplicación MVC desarrollado con ASP.NET Core.
--   Una aplicación de página única (SPA) desarrollado con Angular 2 y Typescript. Este enfoque para las aplicaciones web evita realizar una vuelta al servidor con cada operación.
--   Una aplicación móvil desarrollada con Xamarin.Forms, que es compatible con iOS, Android y la plataforma Universal de Windows (UWP).
+- Una aplicación MVC desarrollada con ASP.NET Core.
+- Una aplicación de una sola página (SPA) desarrollada con angular 2 y Typescript. Este enfoque para las aplicaciones web evita realizar un recorrido de ida y vuelta al servidor con cada operación.
+- Una aplicación móvil desarrollada con Xamarin. Forms, que admite iOS, Android y el Plataforma universal de Windows (UWP).
 
-Para obtener información acerca de las aplicaciones web, consulte [diseño de la arquitectura y desarrollo de aplicaciones Web modernas con ASP.NET Core y Microsoft Azure](https://aka.ms/WebAppEbook).
+Para obtener información sobre las aplicaciones Web, consulte [diseño y desarrollo de aplicaciones web modernas con ASP.net Core y Microsoft Azure](https://aka.ms/WebAppEbook).
 
-La aplicación de ejemplo incluye los siguientes servicios de back-end:
+La aplicación de ejemplo incluye los siguientes servicios back-end:
 
--   Un microservicio de identidad, que usa ASP.NET Core Identity y IdentityServer.
--   Un microservicio de catálogo, que es controlada por datos crear, lee, actualizar, eliminar (CRUD) de servicio que utiliza una base de datos de SQL Server mediante Entity Framework Core.
--   Un microservicio de pedidos, que es un servicio basado en dominio que usa patrones de diseño guiado por el dominio.
--   Un microservicio de cesta de la compra, que es un servicio CRUD controladas por datos que usa Redis Cache.
+- Un microservicio de identidad, que usa ASP.NET Core identidad y IdentityServer.
+- Un microservicio de catálogo, que es un servicio de creación, lectura, actualización y eliminación (CRUD) controlado por datos que usa una SQL Server base de datos mediante EntityFramework Core.
+- Un microservicio de pedidos, que es un servicio controlado por dominio que utiliza patrones de diseño controlados por dominio.
+- Un microservicio de cesta, que es un servicio CRUD controlado por datos que usa Redis Cache.
 
-Estos servicios de back-end se implementan como microservicios con ASP.NET Core MVC y se implementan como contenedores únicos dentro de un único host de Docker. Colectivamente, estos servicios de back-end se conocen como aplicación de referencia eShopOnContainers. Las aplicaciones cliente se comunican con los servicios de back-end a través de una interfaz web de Representational State Transfer (REST). Para obtener más información acerca de los microservicios y Docker, consulte [Microservicios en contenedores](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
+Estos servicios de back-end se implementan como microservicios mediante ASP.NET Core MVC y se implementan como contenedores únicos en un solo host de Docker. Colectivamente, estos servicios de back-end se conocen como la aplicación de referencia eShopOnContainers. Las aplicaciones cliente se comunican con los servicios back-end a través de una interfaz Web de transferencia de estado representacional (REST). Para más información sobre los microservicios y Docker, consulte microservicios en [contenedores](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
-Para obtener información sobre la implementación de los servicios de back-end, consulte [Microservicios de. NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
+Para obtener información sobre la implementación de los servicios back- [end, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
 ### <a name="mobile-app"></a>Aplicación móvil
 
-Esta guía se centra en la creación de aplicaciones empresariales de desarrollo multiplataforma con Xamarin.Forms y la aplicación móvil de eShopOnContainers usa como ejemplo. Figura 1-2 se muestran las páginas de la aplicación móvil de eShopOnContainers que proporcionan la funcionalidad que se describen anteriormente.
+Esta guía se centra en la creación de aplicaciones empresariales multiplataforma con Xamarin. Forms y usa la aplicación móvil eShopOnContainers como ejemplo. En la figura 1-2 se muestran las páginas de la aplicación móvil eShopOnContainers que proporcionan la funcionalidad descrita anteriormente.
 
-[![](introduction-images/screenshots.png "La aplicación móvil de eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "la aplicación móvil de eShopOnContainers")
+La aplicación móvil eShopOnContainers [ ![(introduction-images/screenshots.png " ")]] (introduction-images/screenshots-large.png#lightbox "La aplicación móvil eShopOnContainers")
 
-**Figura 1-2**: La aplicación móvil de eShopOnContainers
+**Figura 1-2**: La aplicación móvil eShopOnContainers
 
-La aplicación móvil consume los servicios back-end de la aplicación de referencia eShopOnContainers. Sin embargo, puede configurarse para consumir datos de servicios ficticios para aquellos que desean evitar la implementación de los servicios de back-end.
+La aplicación móvil consume los servicios back-end proporcionados por la aplicación de referencia eShopOnContainers. Sin embargo, se puede configurar para consumir datos de servicios ficticios para aquellos que deseen evitar la implementación de los servicios back-end.
 
-La aplicación móvil de eShopOnContainers ejercita la siguiente funcionalidad de Xamarin.Forms:
+La aplicación móvil eShopOnContainers ejercita la siguiente funcionalidad de Xamarin. Forms:
 
--   XAML
--   Controles
--   Enlaces
--   Convertidores de tipos
--   Estilos
--   Animaciones
--   Comandos:
--   comportamientos
--   Desencadenadores
--   Efectos
--   Representadores personalizados
--   MessagingCenter
--   Controles personalizados
+- XAML
+- Controles
+- Enlaces
+- Convertidores
+- Estilos
+- Animaciones
+- Comandos:
+- comportamientos
+- Desencadenadores
+- Efectos
+- Representadores personalizados
+- MessagingCenter
+- Controles personalizados
 
-Para obtener más información acerca de esta funcionalidad, consulte el [Xamarin.Forms documentación](~/xamarin-forms/index.yml), y [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook).
+Para obtener más información sobre esta funcionalidad, vea la [documentación de Xamarin. Forms](~/xamarin-forms/index.yml)y [creación de Mobile Apps con Xamarin. Forms](https://aka.ms/xamebook).
 
-Además, las pruebas unitarias se proporcionan para algunas de las clases en la aplicación móvil de eShopOnContainers.
+Además, se proporcionan pruebas unitarias para algunas de las clases de la aplicación móvil eShopOnContainers.
 
 #### <a name="mobile-app-solution"></a>Solución de aplicación móvil
 
-La solución de aplicación móvil de eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describe los proyectos que componen la aplicación móvil de eShopOnContainers:
+La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describen los proyectos que componen la aplicación móvil eShopOnContainers:
 
 |Proyecto|DESCRIPCIÓN|
 |--- |--- |
-|eShopOnContainers.Core|Este proyecto es el proyecto de clases portables (PCL) de la biblioteca que contiene el código compartido y la interfaz de usuario compartida.|
-|eShopOnContainers.Droid|Este proyecto contiene código específico de Android y es el punto de entrada para la aplicación de Android.|
-|eShopOnContainers.iOS|Este proyecto incluye el código específico de iOS y es el punto de entrada para la aplicación de iOS.|
-|eShopOnContainers.UWP|Este proyecto incluye el código específico de plataforma Universal de Windows (UWP) y es el punto de entrada para la aplicación de Windows.|
-|eShopOnContainers.TestRunner.Droid|Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers.UnitTests.|
-|eShopOnContainers.TestRunner.iOS|Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers.UnitTests.|
-|eShopOnContainers.TestRunner.Windows|Este proyecto es el ejecutor de pruebas de la plataforma Universal de Windows para el proyecto eShopOnContainers.UnitTests.|
-|eShopOnContainers.UnitTests|Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers.Core.|
+|eShopOnContainers.Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
+|eShopOnContainers.Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|
+|eShopOnContainers. iOS|Este proyecto contiene código específico de iOS y es el punto de entrada de la aplicación de iOS.|
+|eShopOnContainers.UWP|Este proyecto contiene código específico de Plataforma universal de Windows (UWP) y es el punto de entrada de la aplicación de Windows.|
+|eShopOnContainers.TestRunner.Droid|Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers.TestRunner.iOS|Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers.TestRunner.Windows|Este proyecto es el ejecutor de pruebas Plataforma universal de Windows del proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers.UnitTests|Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers. Core.|
 
-Las clases de la aplicación móvil de eShopOnContainers puede volver a usarse en cualquier aplicación de Xamarin.Forms con poca o ninguna modificación.
+Las clases de la aplicación móvil eShopOnContainers se pueden volver a usar en cualquier aplicación de Xamarin. Forms con poca o ninguna modificación.
 
-##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core proyecto
+##### <a name="eshoponcontainerscore-project"></a>Proyecto eShopOnContainers. Core
 
-El proyecto PCL eShopOnContainers.Core contiene las siguientes carpetas:
+El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 
 |Carpeta|DESCRIPCIÓN|
 |--- |--- |
-|Animaciones|Contiene clases que habilitan las animaciones se consuma en XAML.|
-|comportamientos|Contiene los comportamientos que se exponen para ver las clases.|
+|Animaciones|Contiene clases que permiten usar animaciones en XAML.|
+|comportamientos|Contiene los comportamientos que se exponen a las clases de vista.|
 |Controles|Contiene controles personalizados usados por la aplicación.|
-|Convertidores de tipos|Contiene los convertidores de valores que se aplican una lógica personalizada a un enlace.|
-|Efectos|Contiene el `EntryLineColorEffect` (clase), que se usa para cambiar el color del borde específicas de `Entry` controles.|
-|Excepciones|Contiene personalizado `ServiceAuthenticationException`.|
-|Extensiones|Contiene métodos de extensión para el `VisualElement` y `IEnumerable` clases.|
-|Aplicaciones auxiliares|Contiene clases auxiliares para la aplicación.|
-|Modelos|Contiene las clases del modelo de la aplicación.|
-|Properties (Propiedades)|Contiene `AssemblyInfo.cs`, un archivo de metadatos de ensamblado. NET.|
+|Convertidores|Contiene los convertidores de valores que aplican la lógica personalizada a un enlace.|
+|Efectos|Contiene la `EntryLineColorEffect` clase, que se usa para cambiar el color del borde de `Entry` controles concretos.|
+|Excepciones|Contiene el personalizado `ServiceAuthenticationException`.|
+|Extensiones|Contiene métodos de extensión para `VisualElement` las `IEnumerable` clases y.|
+|Aplicaciones auxiliares|Contiene las clases auxiliares para la aplicación.|
+|Modelos|Contiene las clases de modelo de la aplicación.|
+|Properties (Propiedades)|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
 |Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
-|Desencadenadores|Contiene el `BeginAnimation` desencadenador, que se utiliza para invocar una animación en XAML.|
-|Validaciones|Contiene las clases implicadas en la validación de entrada de datos.|
-|ViewModels|Contiene la lógica de aplicación que se expone a las páginas.|
+|Desencadenadores|Contiene el `BeginAnimation` desencadenador, que se usa para invocar una animación en XAML.|
+|Validaciones|Contiene clases implicadas en la validación de la entrada de datos.|
+|ViewModels|Contiene la lógica de la aplicación que se expone a las páginas.|
 |Vistas|Contiene las páginas de la aplicación.|
 
 ##### <a name="platform-projects"></a>Proyectos de plataforma
 
-Los proyectos de plataforma contienen implementaciones de efecto, las implementaciones de representador personalizado y otros recursos específicos de la plataforma.
+Los proyectos de plataforma contienen implementaciones de efectos, implementaciones de representadores personalizados y otros recursos específicos de la plataforma.
 
 ## <a name="summary"></a>Resumen
 
-Plataformas y herramientas de desarrollo de aplicaciones móviles multiplataforma de Xamarin proporcionan una solución completa para clientes móviles B2E, B2B y B2C apps, y proporciona la capacidad de compartir código entre todas las plataformas de destino (iOS, Android y Windows) y lo que ayuda a reducir el costo total de propiedad. Las aplicaciones pueden compartir su código de lógica usuario interfaz y la aplicación, conservando la apariencia y comportamiento de la plataforma nativa.
+Las plataformas y herramientas de desarrollo de aplicaciones móviles multiplataforma de Xamarin proporcionan una solución completa para las aplicaciones de cliente móvil B2E, B2B y B2C, lo que proporciona la capacidad de compartir código en todas las plataformas de destino (iOS, Android y Windows) y ayuda a reducir el costo total de propiedad. Las aplicaciones pueden compartir su interfaz de usuario y el código de lógica de la aplicación, a la vez que conservan la apariencia y el funcionamiento de la plataforma nativa.
 
-Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se pueda modificar o extender con el tiempo. Diseño de la capacidad de dichos adaptación puede ser difícil, pero normalmente implica dividir una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente entre sí en una aplicación.
+Los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se pueda modificar o extender con el tiempo. El diseño para esta adaptación puede ser difícil, pero normalmente implica la creación de particiones de una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente en una aplicación.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Descargar libro electrónico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Descargar libro electrónico (2 MB PDF)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (ejemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

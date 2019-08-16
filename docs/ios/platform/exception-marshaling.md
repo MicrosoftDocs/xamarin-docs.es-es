@@ -1,38 +1,38 @@
 ---
-title: Excepción al calcular las referencias en Xamarin.iOS
-description: Este documento describe cómo trabajar con excepciones administradas y nativas en una aplicación de Xamarin.iOS. Describe problemas que pueden producirse y una solución para estos problemas.
+title: Serialización de excepciones en Xamarin. iOS
+description: En este documento se describe cómo trabajar con excepciones nativas y administradas en una aplicación de Xamarin. iOS. Describe los problemas que pueden producirse y una solución para estos problemas.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
-ms.openlocfilehash: 167d6ac421bdd2652e7f8474e1ea21bd9040723f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13b88619ccd7d01f32afd5b9332c7dcb426380b0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075100"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527979"
 ---
-# <a name="exception-marshaling-in-xamarinios"></a>Excepción al calcular las referencias en Xamarin.iOS
+# <a name="exception-marshaling-in-xamarinios"></a>Serialización de excepciones en Xamarin. iOS
 
-_Xamarin.iOS contiene nuevos eventos para ayudar a responder a las excepciones, especialmente en código nativo._
+_Xamarin. iOS contiene nuevos eventos para ayudar a responder a las excepciones, especialmente en el código nativo._
 
-Código administrado y Objective-C tienen compatibilidad para las excepciones de tiempo de ejecución (cláusulas try/catch/finally).
+Tanto el código administrado como Objective-C admiten excepciones en tiempo de ejecución (cláusulas Try/Catch/Finally).
 
-Sin embargo, sus implementaciones son diferentes, lo que significa que las bibliotecas en tiempo de ejecución (el tiempo de ejecución Mono y las bibliotecas de tiempo de ejecución Objective-C) tienen problemas cuando tienen que controlar las excepciones y, a continuación, ejecutar código escrito en otros lenguajes.
+Sin embargo, sus implementaciones son diferentes, lo que significa que las bibliotecas en tiempo de ejecución (el tiempo de ejecución mono y las bibliotecas en tiempo de ejecución de Objective-C) tienen problemas cuando tienen que controlar excepciones y, a continuación, ejecutar código escrito en otros lenguajes.
 
-Este documento explica los problemas que pueden producirse y las posibles soluciones.
+En este documento se explican los problemas que pueden producirse y las posibles soluciones.
 
-También incluye un proyecto de ejemplo, [serialización de excepciones](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), que puede usarse para probar diferentes escenarios y sus soluciones.
+También incluye un proyecto de ejemplo, [serialización de excepciones](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), que se puede usar para probar distintos escenarios y sus soluciones.
 
 ## <a name="problem"></a>Problema
 
-El problema se produce cuando una excepción se produce y se encuentra durante el desenredo de un marco de pila que no coincide con el tipo de excepción que se produjo.
+El problema se produce cuando se produce una excepción y durante el desenredo de la pila se encuentra un marco que no coincide con el tipo de excepción que se produjo.
 
-Un ejemplo típico de este para Xamarin.iOS o Xamarin.Mac es cuando una API nativa produce una excepción de Objective-C y, a continuación, esa excepción Objective-C alguna forma de controlarse cuando el proceso de desenredo de pila alcanza un marco administrado.
+Un ejemplo típico de esto para Xamarin. iOS o Xamarin. Mac es cuando una API nativa produce una excepción de Objective-C y, a continuación, esa excepción de Objective-C debe controlarse de algún modo cuando el proceso de desenredado de la pila alcance un marco administrado.
 
-La acción predeterminada es no hacer nada. Para el ejemplo anterior, esto significa que permite a los marcos de desenredado administrado de Objective-C en tiempo de ejecución. Esto es problemático, ya que el tiempo de ejecución Objective-C no sabe cómo desenredar marcos administrados; Por ejemplo no se ejecutará cualquier `catch` o `finally` cláusulas en ese marco.
+La acción predeterminada es no hacer nada. En el ejemplo anterior, esto significa permitir que los marcos administrados de desenredado de tiempo de ejecución de Objective-C. Esto es problemático, porque el tiempo de ejecución de Objective-C no sabe cómo desenredar Marcos administrados; por ejemplo, no ejecutará `catch` ninguna `finally` cláusula OR en ese marco.
 
 ### <a name="broken-code"></a>Código roto
 
@@ -43,25 +43,29 @@ var dict = new NSMutableDictionary ();
 dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
 ```
 
-Esto iniciará un NSInvalidArgumentException Objective-C en código nativo:
+Esto producirá un NSInvalidArgumentException de Objective-C en código nativo:
 
-    NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
+NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
 
-Y el seguimiento de pila tendrá un aspecto similar al siguiente:
+Y el seguimiento de la pila será similar al siguiente:
 
-    0   CoreFoundation          __exceptionPreprocess + 194
-    1   libobjc.A.dylib         objc_exception_throw + 52
-    2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
-    3   libobjc.A.dylib         objc_msgSend + 102
-    4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-    5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
-    6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
+0   CoreFoundation          __exceptionPreprocess + 194
+1   libobjc.A.dylib         objc_exception_throw + 52
+2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
+3   libobjc.A.dylib         objc_msgSend + 102
+4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
+6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
 
-Marcos de 0-3 son marcos nativos y el desenredado de pila en tiempo de ejecución Objective-C _puede_ esos marcos de desenredo. En concreto, ejecutará cualquier Objective-C `@catch` o `@finally` cláusulas.
+Los fotogramas 0-3 son marcos nativos y el desenredo de pila en el tiempo de ejecución de Objective-C _puede_ desenredar esos fotogramas. En concreto, ejecutará cualquier cláusula Objective-C `@catch` o `@finally` .
 
-Sin embargo, el desenredado de pila de Objective-C es _no_ capaz de desenredado correctamente los marcos administrados (fotogramas 4-6), en que los fotogramas se desenreda, pero no se ejecutarán la lógica de excepción administrada.
+Sin embargo, el desenredo de la pila de Objective-C _no_ es capaz de desenredar correctamente los fotogramas administrados (fotogramas 4-6), en el que los fotogramas se desenrollarán, pero la lógica de excepción administrada no se ejecutará.
 
-Lo que significa que normalmente no es posible detectar estas excepciones en la siguiente manera:
+Lo que significa que no suele ser posible detectar estas excepciones de la siguiente manera:
 
 ```csharp
 try {
@@ -74,38 +78,40 @@ try {
 }
 ```
 
-Esto es porque el desenredado de pila de Objective-C no sabe acerca de los recursos administrados `catch` cláusula y no se la `finally` cláusula se ejecuta.
+Esto se debe a que el desenredador de la pila de Objective-C no `catch` conoce la cláusula administrada y `finally` no se ejecutará la cláusula.
 
-Cuando el ejemplo de código anterior _es_ eficaz, es porque Objective-C tiene un método de notificación de las excepciones no controladas de Objective-C, [`NSSetUncaughtExceptionHandler`][2], que Xamarin.iOS y el uso de Xamarin.Mac y en ese momento intenta convertir las excepciones Objective-C en las excepciones administradas.
+Cuando el ejemplo de código anterior _es_ efectivo, se debe a que Objective-c tiene un método para notificar las excepciones no controladas de Objective- [`NSSetUncaughtExceptionHandler`][2]c,, que usa Xamarin. iOS y Xamarin. Mac, y en ese momento intenta convertir cualquier excepción de Objective-c. a excepciones administradas.
 
 ## <a name="scenarios"></a>Escenarios
 
-### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>Escenario 1: detectar excepciones de Objective-C con un controlador catch administrado
+### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>Escenario 1: detección de excepciones de Objective-C con un controlador Catch administrado
 
-En el siguiente escenario, es posible detectar las excepciones de Objective-C utilizando managed `catch` controladores:
+En el siguiente escenario, es posible detectar excepciones de Objective-C mediante controladores administrados `catch` :
 
-1. Se produce una excepción de C de objetivo.
-2. El tiempo de ejecución Objective-C recorre la pila (pero la desenredo), buscando nativo `@catch` controlador que pueda controlar la excepción.
-3. El tiempo de ejecución Objective-C no encuentra ninguno `@catch` controladores, las llamadas `NSGetUncaughtExceptionHandler`e invoca el controlador instalado por Xamarin.iOS/Xamarin.Mac.
-4. Controlador Xamarin.iOS/Xamarin.Mac's convertirá la excepción de Objective-C en una excepción administrada y producirla. Desde Objective-C en tiempo de ejecución no desenredar la pila (solo ha avanzado lo), el marco actual es el mismo donde se produjo la excepción de Objective-C.
+1. Se produce una excepción de Objective-C.
+2. El tiempo de ejecución de Objective-C recorre la pila (pero no la desenreda), buscando `@catch` un controlador nativo que pueda controlar la excepción.
+3. El tiempo de ejecución de Objective-C `@catch` no encuentra ningún controlador `NSGetUncaughtExceptionHandler`, llama a e invoca el controlador instalado por Xamarin. iOS/Xamarin. Mac.
+4. El controlador de Xamarin. iOS/Xamarin. Mac convertirá la excepción de Objective-C en una excepción administrada y la producirá. Dado que el tiempo de ejecución de Objective-C no desenredó la pila (solo la requería), el marco actual es el mismo en el que se produjo la excepción de Objective-C.
 
-Otro problema se produce en este caso, porque el tiempo de ejecución Mono no sabe cómo desenredar marcos de Objective-C correctamente.
+Aquí se produce otro problema, porque el tiempo de ejecución de mono no sabe cómo desenredar correctamente las tramas de Objective-C.
 
-Cuando se llama a la devolución de llamada de excepción de Objective-C no detectada de Xamarin.iOS, la pila es similar al siguiente:
+Cuando se llama a la devolución de llamada de excepción de Objective-C no detectada de Xamarin. iOS, la pila es similar a la siguiente:
 
-     0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
-     1 CoreFoundation           __handleUncaughtException + 809
-     2 libobjc.A.dylib          _objc_terminate() + 100
-     3 libc++abi.dylib          std::__terminate(void (*)()) + 14
-     4 libc++abi.dylib          __cxa_throw + 122
-     5 libobjc.A.dylib          objc_exception_throw + 337
-     6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
-     7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
-     8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-     9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
-    10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
+ 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
+ 1 CoreFoundation           __handleUncaughtException + 809
+ 2 libobjc.A.dylib          _objc_terminate() + 100
+ 3 libc++abi.dylib          std::__terminate(void (*)()) + 14
+ 4 libc++abi.dylib          __cxa_throw + 122
+ 5 libobjc.A.dylib          objc_exception_throw + 337
+ 6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
+ 7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
+ 8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+ 9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
+10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
 
-En este caso, los marcos administrados solo son marcos 8-10, pero se produce la excepción administrada en el marco 0. Esto significa que el tiempo de ejecución Mono debe desenredarse los marcos nativos 0-7, lo que hace que un problema equivalente para el problema descrito anteriormente: aunque el tiempo de ejecución Mono desenredar los marcos nativos, no se ejecutará cualquier Objective-C `@catch` o `@finally` cláusulas .
+Aquí, los únicos Marcos administrados son los fotogramas 8-10, pero la excepción administrada se inicia en el fotograma 0. Esto significa que el tiempo de ejecución de mono debe desenredar los marcos nativos 0-7, lo que provoca un problema equivalente al problema descrito anteriormente: aunque el tiempo de ejecución de mono desenredará los marcos nativos, `@catch` no `@finally` ejecutará ninguna cláusula Objective-C o .
 
 Ejemplo de código:
 
@@ -121,9 +127,9 @@ Ejemplo de código:
 }
 ```
 
-Y el `@finally` cláusula no se ejecutará porque el tiempo de ejecución Mono que se desenrede este marco no saberlo.
+Y la `@finally` cláusula no se ejecutarán porque el tiempo de ejecución de mono que desenreda este fotograma no conoce.
 
-Es una variación de este producir una excepción administrada en código administrado y, a continuación, cuando se desenreda a través de los marcos nativos para obtener el primer administrados `catch` cláusula:
+Una variación de esto es iniciar una excepción administrada en código administrado y, después, desenredar a través de marcos nativos para llegar a `catch` la primera cláusula administrada:
 
 ```csharp
 class AppDelegate : UIApplicationDelegate {
@@ -142,51 +148,53 @@ class AppDelegate : UIApplicationDelegate {
 }
 ```
 
-Los recursos administrados `UIApplication:Main` método llamará nativo `UIApplicationMain` método y, a continuación, en iOS hará un lote de ejecución de código nativo antes de llamar finalmente a los recursos administrados `AppDelegate:FinishedLaunching` método con aún una gran cantidad de marcos nativos en la pila cuando es la excepción administrada se produce:
+El método `UIApplication:Main` administrado llamará al método `UIApplicationMain` nativo y, a continuación, iOS realizará gran parte de la ejecución del código nativo antes `AppDelegate:FinishedLaunching` de llamar al método administrado, con todavía muchos marcos nativos en la pila cuando la excepción administrada es produci
 
-     0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
-     1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
-     2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
-     5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
-     6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
-     7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
-     8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
-     9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
-    10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
-    11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
-    12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
-    13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
-    14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
-    15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
-    16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
-    17: FrontBoardServices      -[FBSSerialQueue _performNext]
-    18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
-    19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
-    20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
-    21: CoreFoundation          __CFRunLoopDoSources0
-    22: CoreFoundation          __CFRunLoopRun
-    23: CoreFoundation          CFRunLoopRunSpecific
-    24: CoreFoundation          CFRunLoopRunInMode
-    25: UIKit                   -[UIApplication _run]
-    26: UIKit                   UIApplicationMain
-    27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
-    28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
-    29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
-    30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
+ 0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
+ 1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
+ 2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
+ 5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
+ 6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
+ 7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
+ 8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
+ 9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
+10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
+11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
+12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
+13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
+14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
+15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
+16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
+17: FrontBoardServices      -[FBSSerialQueue _performNext]
+18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
+19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
+20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
+21: CoreFoundation          __CFRunLoopDoSources0
+22: CoreFoundation          __CFRunLoopRun
+23: CoreFoundation          CFRunLoopRunSpecific
+24: CoreFoundation          CFRunLoopRunInMode
+25: UIKit                   -[UIApplication _run]
+26: UIKit                   UIApplicationMain
+27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
+28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
+29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
+30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
 
-Marcos 0-1 y 27 al 30 se administran, mientras que todos aquellos entre son nativos. Si desenreda Mono a través de estos marcos, ningún Objective-C `@catch` o `@finally` cláusulas que se va a ejecutar.
+Los marcos 0-1 y 27-30 se administran, mientras que todos los que hay entre ellos son nativos. Si mono se desenreda a través de estos fotogramas, no `@catch` se `@finally` ejecutará ninguna cláusula Objective-C o.
 
-### <a name="scenario-2---not-able-to-catch-objective-c-exceptions"></a>Escenario 2: no se puede detectar las excepciones de Objective-c.
+### <a name="scenario-2---not-able-to-catch-objective-c-exceptions"></a>Escenario 2: no se pueden detectar excepciones de Objective-C
 
-En el siguiente escenario, es _no_ posible detectar las excepciones de Objective-C mediante administrado `catch` controladores porque se controló la excepción de Objective-C de otro modo:
+En el siguiente escenario, _no_ es posible detectar excepciones de Objective-c mediante controladores administrados `catch` porque la excepción de Objective-c se controló de otra manera:
 
-1. Se produce una excepción de C de objetivo.
-2. El tiempo de ejecución Objective-C recorre la pila (pero la desenredo), buscando nativo `@catch` controlador que pueda controlar la excepción.
-3. El tiempo de ejecución Objective-C encuentra un `@catch` desenreda la pila de controlador y comienza a ejecutarse el `@catch` controlador.
+1. Se produce una excepción de Objective-C.
+2. El tiempo de ejecución de Objective-C recorre la pila (pero no la desenreda), buscando `@catch` un controlador nativo que pueda controlar la excepción.
+3. El tiempo de ejecución de Objective- `@catch` C busca un controlador, lo desenreda y comienza a ejecutar el `@catch` controlador.
 
-Este escenario se encuentra normalmente en aplicaciones de Xamarin.iOS, porque en el subproceso principal suele haber código similar al siguiente:
+Este escenario suele encontrarse en aplicaciones de Xamarin. iOS, porque en el subproceso principal suele haber código similar al siguiente:
 
 ``` objective-c
 void UIApplicationMain ()
@@ -203,17 +211,17 @@ void UIApplicationMain ()
 
 ```
 
-Esto significa que en el subproceso principal nunca hay realmente una excepción no controlada de Objective-C y, por tanto, nunca se llama a la devolución de llamada que convierte las excepciones de Objective-C en las excepciones administradas.
+Esto significa que, en el subproceso principal, nunca hay una excepción no controlada de Objective-C y, por tanto, nunca se llama a nuestra devolución de llamada que convierte excepciones de Objective-C en excepciones administradas.
 
-También es bastante común al depurar aplicaciones de Xamarin.Mac en una versión anterior de macOS que Xamarin.Mac admite ya inspeccionando la mayoría de los objetos de interfaz de usuario en el depurador intentará obtener las propiedades que corresponden a los selectores que no existen en la ejecución (de plataforma ya que Xamarin.Mac incluye compatibilidad para una versión posterior de macOS). Llamar a estos selectores generará un `NSInvalidArgumentException` ("no reconocido selector enviada a..."), lo que finalmente provoca el bloqueo del proceso.
+Esto también es bastante común cuando se depuran aplicaciones de Xamarin. Mac en una versión de macOS anterior a la que admite Xamarin. Mac, ya que la inspección de la mayoría de los objetos de interfaz de usuario en el depurador intentará capturar propiedades que se correspondan con los selectores que no existen en la plataforma que se está ejecutando ( como Xamarin. Mac incluye compatibilidad con una versión de macOS superior). Al llamar a estos selectores `NSInvalidArgumentException` se producirá un ("selector no reconocido enviado a..."), lo que hace que el proceso se bloquee.
 
-En resumen, tener el tiempo de ejecución Objective-C o las tramas de desenredo en tiempo de ejecución Mono que no hayan sido programados para identificador puede dar lugar a comportamientos no definidos, como bloqueos, pérdidas de memoria y otros tipos de comportamientos impredecible (mis).
+En Resumen, tener los marcos de tiempo de ejecución de Objective-C o de desenredado en tiempo de ejecución de mono que no están programados para controlar pueden provocar comportamientos indefinidos, como bloqueos, fugas de memoria y otros tipos de comportamientos imprevisibles (mis).
 
-## <a name="solution"></a>Soluciones
+## <a name="solution"></a>Solución
 
-En el 10 de Xamarin.iOS y Xamarin.Mac 2.10, hemos agregado compatibilidad para detectar excepciones administradas y Objective-C en cualquier límite nativo administrado y para convertir esa excepción en el otro tipo.
+En Xamarin. iOS 10 y Xamarin. Mac 2,10, se ha agregado compatibilidad para la detección de excepciones administradas y de Objective-C en cualquier límite nativo administrado y para convertir esa excepción al otro tipo.
 
-En pseudocódigo, tendrá un aspecto similar al siguiente:
+En pseudo-Code, tiene un aspecto similar al siguiente:
 
 ``` csharp
 [DllImport ("libobjc.dylib")]
@@ -225,7 +233,7 @@ static void DoSomething (NSObject obj)
 }
 ```
 
-P/Invoke para objc_msgSend se interceptan y esto se denomina en su lugar:
+Se intercepta P/Invoke a objc_msgSend y se llama en su lugar:
 
 ``` objective-c
 void
@@ -239,43 +247,43 @@ xamarin_dyn_objc_msgSend (id obj, SEL sel)
 }
 ```
 
-Y algo similar se realiza para el caso inverso (cálculo de referencias de las excepciones administradas a las excepciones de Objective-C).
+Y se hace algo similar para el caso inverso (serialización de excepciones administradas en excepciones de Objective-C).
 
-Detectar excepciones en el límite nativo administrado no es gratuito, por lo que no siempre está habilitado de forma predeterminada:
+La detección de excepciones en el límite nativo administrado no es gratuita, por lo que no siempre está habilitada de forma predeterminada:
 
-- Xamarin.iOS/tvOS: la intercepción de excepciones de Objective-C está habilitada en el simulador.
-- Xamarin.watchOS: intercepción se aplica en todos los casos, ya que permite el desenredo de tiempo de ejecución Objective-C administrado marcos confundirá el recolector de elementos no utilizados y puede hacer falta de respuesta o un bloqueo.
-- Xamarin.Mac: intercepción de excepciones de Objective-C está habilitada para las compilaciones de depuración.
+- Xamarin. iOS/tvOS: la interceptación de excepciones de Objective-C está habilitada en el simulador.
+- Xamarin. watchos: la intercepción se aplica en todos los casos, ya que, al permitir que los marcos administrados de desenredado de Objective-C en tiempo de ejecución, se confunda el recolector de elementos no utilizados y se bloquee o se bloquee.
+- Xamarin. Mac: la interceptación de excepciones de Objective-C está habilitada para las compilaciones de depuración.
 
-El [marcas de tiempo de compilación](#build_time_flags) sección explica cómo habilitar la intercepción cuando no está habilitada de forma predeterminada.
+La sección [de marcas de tiempo de compilación](#build_time_flags) explica cómo habilitar la interceptación cuando no está habilitada de forma predeterminada.
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
-Hay dos nuevos eventos que se producen una vez que se ha interceptado una excepción: `Runtime.MarshalManagedException` y `Runtime.MarshalObjectiveCException`.
+Hay dos eventos nuevos que se generan una vez interceptada una excepción: `Runtime.MarshalManagedException` y. `Runtime.MarshalObjectiveCException`
 
-Se pasan ambos eventos un `EventArgs` objeto que contiene la excepción original que se ha producido (el `Exception` propiedad) y un `ExceptionMode` propiedad para definir cómo se debe serializar la excepción.
+A ambos eventos se les `EventArgs` pasa un objeto que contiene la excepción original que se produjo `Exception` (la propiedad) y `ExceptionMode` una propiedad para definir cómo se deben calcular las referencias de la excepción.
 
-El `ExceptionMode` propiedad se puede cambiar en el evento controlador para cambiar el comportamiento según cualquier procesamiento personalizado que se realiza en el controlador. Un ejemplo sería anular el proceso si se produce una excepción determinada.
+La `ExceptionMode` propiedad se puede cambiar en el controlador de eventos para cambiar el comportamiento de acuerdo con cualquier procesamiento personalizado realizado en el controlador. Un ejemplo sería anular el proceso si se produce una excepción determinada.
 
-Cambiar el `ExceptionMode` propiedad se aplica al evento único, no afecta a todas las excepciones que se interceptan en el futuro.
+El cambio `ExceptionMode` de la propiedad se aplica a un solo evento, no afecta a ninguna excepción interceptada en el futuro.
 
 Están disponibles los siguientes modos:
 
-- `Default`: El valor predeterminado varía según la plataforma. Es `ThrowObjectiveCException` si el catálogo global está en modo cooperativo (watchOS), y `UnwindNativeCode` en caso contrario (iOS y watchOS / macOS). El valor predeterminado se puede cambiar en el futuro.
-- `UnwindNativeCode`: Este es el comportamiento anterior (sin definir). No está disponible al usar el catálogo global en modo cooperativo (que es la única opción en watchOS, por lo tanto, esto no es una opción válida en watchOS), pero es la opción predeterminada para todas las demás plataformas.
-- `ThrowObjectiveCException`: Convertir la excepción administrada en una excepción de Objective-C y la excepción de C de objetivo. Este es el valor predeterminado en watchOS.
+- `Default`: El valor predeterminado varía según la plataforma. Es `ThrowObjectiveCException` si el GC está en modo cooperativo (watchos) y `UnwindNativeCode` de lo contrario (iOS/watchos/MacOS). El valor predeterminado puede cambiar en el futuro.
+- `UnwindNativeCode`: Este es el comportamiento anterior (sin definir). Esto no está disponible cuando se usa el GC en el modo cooperativo (que es la única opción en watchos; por lo tanto, no es una opción válida en watchos), pero es la opción predeterminada para todas las demás plataformas.
+- `ThrowObjectiveCException`: Convierta la excepción administrada en una excepción de Objective-C e inicie la excepción de Objective-C. Este es el valor predeterminado en watchos.
 - `Abort`: Anular el proceso.
-- `Disable`: Deshabilita la intercepción de excepciones, por lo que no tiene sentido establecer este valor en el controlador de eventos, pero una vez que se genera el evento es demasiado tarde para deshabilitarlo. En cualquier caso, si se establece, se comportará como `UnwindNativeCode`.
+- `Disable`: Deshabilita la interceptación de excepciones, por lo que no tiene sentido establecer este valor en el controlador de eventos, pero una vez que se produce el evento, es demasiado tarde para deshabilitarlo. En cualquier caso, si se establece, se comportará como `UnwindNativeCode`.
 
-Para la serialización de excepciones de Objective-C para código administrado, están disponibles los siguientes modos:
+Para calcular las referencias de las excepciones de Objective-C al código administrado, están disponibles los siguientes modos:
 
-- `Default`: El valor predeterminado varía según la plataforma. Es `ThrowManagedException` si el catálogo global está en modo cooperativo (watchOS), y `UnwindManagedCode` en caso contrario (iOS y tvOS y macOS). El valor predeterminado se puede cambiar en el futuro.
-- `UnwindManagedCode`: Este es el comportamiento anterior (sin definir). No está disponible al usar el catálogo global en modo cooperativo (que es el modo de GC solo es válido en watchOS; por tanto, esto no es una opción válida en watchOS), pero es el valor predeterminado para todas las demás plataformas.
-- `ThrowManagedException`: Convertir la excepción de Objective-C en una excepción administrada y producir la excepción administrada. Este es el valor predeterminado en watchOS.
+- `Default`: El valor predeterminado varía según la plataforma. Es `ThrowManagedException` si el GC está en modo cooperativo (watchos) y `UnwindManagedCode` de lo contrario (iOS/tvOS/MacOS). El valor predeterminado puede cambiar en el futuro.
+- `UnwindManagedCode`: Este es el comportamiento anterior (sin definir). Esto no está disponible cuando se usa el GC en modo cooperativo (que es el único modo GC válido en watchos; por lo tanto, no es una opción válida en watchos), pero es el valor predeterminado para todas las demás plataformas.
+- `ThrowManagedException`: Convierta la excepción de Objective-C en una excepción administrada y genere la excepción administrada. Este es el valor predeterminado en watchos.
 - `Abort`: Anular el proceso.
-- `Disable`: Deshabilita la intercepción de excepciones, por lo que no tiene sentido establecer este valor en caso de controlador, pero una vez que el evento se genera, que es demasiado tarde para deshabilitarlo. En cualquier caso si se establece, anulará el proceso.
+- `Disable`:D ISABLES la interceptación de excepciones, por lo que no tiene sentido establecer este valor en el controlador de eventos, pero una vez que se genera el evento, es demasiado tarde para deshabilitarlo. En cualquier caso, si se establece, anulará el proceso.
 
-Por lo tanto, para ver cada vez que se calculan las referencias de una excepción, puede hacer esto:
+Por lo tanto, para ver cada vez que se calculan las referencias de una excepción, puede hacer lo siguiente:
 
 ``` csharp
 Runtime.MarshalManagedException += (object sender, MarshalManagedExceptionEventArgs args) =>
@@ -297,7 +305,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 
 ## <a name="build-time-flags"></a>Marcas de tiempo de compilación
 
-Es posible pasar de las siguientes opciones para **mtouch** (para aplicaciones de Xamarin.iOS) y **mmp** (para aplicaciones de Xamarin.Mac), que determinará si está habilitada la interceptación de la excepción y establecer que la acción predeterminada debería producirse:
+Es posible pasar las siguientes opciones a **Mtouch** (para aplicaciones de Xamarin. iOS) y **MMP** (para las aplicaciones de Xamarin. Mac), que determinará si está habilitada la interceptación de excepciones y establecerá la acción predeterminada que debe producirse:
 
 - `--marshal-managed-exceptions=`
   - `default`
@@ -313,17 +321,17 @@ Es posible pasar de las siguientes opciones para **mtouch** (para aplicaciones d
   - `abort`
   - `disable`
 
-Excepto para `disable`, estos valores son idénticos a los `ExceptionMode` valores que se pasan a la `MarshalManagedException` y `MarshalObjectiveCException` eventos.
+A excepción `disable`de, estos valores son idénticos `ExceptionMode` a los valores que se pasan `MarshalManagedException` a `MarshalObjectiveCException` los eventos y.
 
-El `disable` opción will _principalmente_ deshabilitar intercepción, salvo que todavía se podrán interceptar las excepciones cuando no agrega ninguna sobrecarga de ejecución. Los eventos de serialización se generan para estas excepciones, con el modo predeterminado que se va al modo predeterminado para la plataforma que se está ejecutando.
+La `disable` opción deshabilitará _principalmente_ la intercepción, salvo que seguiremos interceptando excepciones cuando no agregue ninguna sobrecarga de ejecución. Los eventos de serialización se siguen generando para estas excepciones, siendo el modo predeterminado el modo predeterminado para la plataforma en ejecución.
 
 ## <a name="limitations"></a>Limitaciones
 
-Solo se interceptar P/Invokes a la `objc_msgSend` familia de funciones cuando se intenta detectar las excepciones de Objective-C. Esto significa que P/Invoke a otra función de C, que, a continuación, genera las excepciones de Objective-C, se ejecutará en el comportamiento antiguo y no definido (Esto se puede mejorar en el futuro).
+Solo intercepto P/Invoke en la `objc_msgSend` familia de funciones al intentar detectar excepciones de Objective-C. Esto significa que una P/Invoke a otra función de C, que después produce cualquier excepción de Objective-C, seguirá ejecutándose en el comportamiento antiguo y no definido (esto puede mejorarse en el futuro).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Excepción de serialización (ejemplo)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)
+- [Serialización de excepciones (ejemplo)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)

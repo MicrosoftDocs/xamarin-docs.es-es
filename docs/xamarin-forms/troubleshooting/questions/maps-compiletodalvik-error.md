@@ -1,5 +1,5 @@
 ---
-title: ¿Por qué un error mi proyecto de xamarin.Forms.Maps para Android con ERROR de nivel superior inesperado COMPILETODALVIK?
+title: ¿Por qué se produce un ERROR en el proyecto de Android de Xamarin. Forms. Maps con COMPILETODALVIK de nivel superior inesperado?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
@@ -7,34 +7,34 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 9df9e348440b9dd4b18b3859d64cbe47bd05b24c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: efa21d3547167996e1a7dcc533caa00e0b1262e6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250500"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529036"
 ---
-# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>¿Por qué un error mi proyecto de xamarin.Forms.Maps para Android con ERROR de nivel superior inesperado COMPILETODALVIK?
+# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>¿Por qué se produce un ERROR en el proyecto de Android de Xamarin. Forms. Maps con COMPILETODALVIK de nivel superior inesperado?
 
-Este error puede aparecer en el panel de errores de Visual Studio para Mac o en la ventana de salida de la compilación de Visual Studio; en los proyectos mediante xamarin.Forms.Maps para Android.
+Este error puede aparecer en el panel de errores de Visual Studio para Mac o en la ventana de salida de la compilación de Visual Studio; en los proyectos de Android con Xamarin. Forms. Maps.
 
-Normalmente, esto se resuelve al aumentar el tamaño del montón de Java para el proyecto de Xamarin.Android. Siga estos pasos para aumentar el tamaño del montón:
+Esto se resuelve normalmente aumentando el tamaño del montón de Java para el proyecto de Xamarin. Android. Siga estos pasos para aumentar el tamaño del montón:
 
-## <a name="visual-studio"></a>Programa para la mejora
+## <a name="visual-studio"></a>Visual Studio
 
-1. Haga clic en el proyecto de Android y abrir las opciones del proyecto.
-2. Vaya a **-> Android opciones avanzadas**
-3. En el cuadro de texto de tamaño de montón de Java, escriba 1G.
+1. Haga clic con el botón derecho en el proyecto de Android & abrir las opciones del proyecto.
+2. Vaya a **Opciones de Android-> avanzado**
+3. En el cuadro de texto tamaño del montón de Java escriba 1G.
 4. Recompile el proyecto.
 
-![Captura de pantalla de las opciones de proyecto de Visual Studio](maps-compiletodalvik-error-images/vsjavaheap.png "Android opciones de compilación en Visual Studio")
+![Captura de pantalla de las opciones de proyecto de Visual Studio](maps-compiletodalvik-error-images/vsjavaheap.png "Opciones de compilación de Android en Visual Studio")
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
-1.  Haga clic en el proyecto de Android y abrir las opciones del proyecto.
-2.  Vaya a **compilar -> compilación de Android -> avanzado**
-3.  En el cuadro de texto de tamaño de montón de Java, escriba 1G.
-4.  Recompile el proyecto.  
+1. Haga clic con el botón derecho en el proyecto de Android & abrir las opciones del proyecto.
+2. Vaya a **compilación-> Android Build-> avanzado**
+3. En el cuadro de texto tamaño del montón de Java escriba 1G.
+4. Recompile el proyecto.  
 
-![Captura de pantalla de Visual Studio para Mac opciones del proyecto](maps-compiletodalvik-error-images/xsjavaheap.png "Android opciones de compilación en Visual Studio para Mac")
+![Captura de pantalla de las opciones del proyecto Visual Studio para Mac](maps-compiletodalvik-error-images/xsjavaheap.png "Opciones de compilación de Android en Visual Studio para Mac")
 

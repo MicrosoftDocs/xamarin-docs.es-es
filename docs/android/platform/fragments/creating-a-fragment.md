@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: b20ce0dc76cbe663d35e7fab01d9a4ba943c0cd6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510620"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524368"
 ---
 # <a name="creating-a-fragment"></a>Crear un fragmento
 
@@ -34,9 +34,9 @@ El código anterior impondrá la vista `Resource.Layout.Example_Fragment`y la ag
 
 Hay dos maneras de hospedar un fragmento dentro de una actividad:
 
--   **Mediante declaración** Los fragmentos se pueden usar mediante declaración `.axml` en los archivos de diseño `<Fragment>` mediante la etiqueta. &ndash;
+- **Mediante declaración** Los fragmentos se pueden usar mediante declaración `.axml` en los archivos de diseño `<Fragment>` mediante la etiqueta. &ndash;
 
--   **Mediante programación** También se pueden crear instancias de los fragmentos dinámicamente mediante `FragmentManager` la API de la clase. &ndash;
+- **Mediante programación** También se pueden crear instancias de los fragmentos dinámicamente mediante `FragmentManager` la API de la clase. &ndash;
 
 El uso mediante programación `FragmentManager` a través de la clase se explicará más adelante en esta guía.
 
@@ -67,9 +67,9 @@ Los fragmentos que se agregan mediante declaración a una actividad son estátic
 
 Cada fragmento debe tener asignado un identificador único:
 
--  **Android: ID.** &ndash; Como con otros elementos de la interfaz de usuario de un archivo de diseño, se trata de un identificador único.
+- **Android: ID.** &ndash; Como con otros elementos de la interfaz de usuario de un archivo de diseño, se trata de un identificador único.
 
--  **Android: etiqueta** &ndash; Este atributo es una cadena única.
+- **Android: etiqueta** &ndash; Este atributo es una cadena única.
 
 Si no se usa ninguno de los dos métodos anteriores, el fragmento asumirá el identificador de la vista del contenedor. En el siguiente ejemplo en el `android:id` que `android:tag` no se proporciona ni, Android asignará `fragment_container` el identificador al fragmento:
 
@@ -115,37 +115,37 @@ Por ejemplo, cuando una actividad se pausa, todos sus fragmentos asociados está
 
 La lista siguiente muestra el flujo de las distintas devoluciones de llamada en el ciclo de vida de un fragmento mientras se crea:
 
--   **`OnInflate()`** &ndash; Se llama cuando el fragmento se crea como parte de un diseño de vista. Se puede llamar a este método inmediatamente después de que el fragmento se cree mediante declaración a partir de un archivo de diseño XML. El fragmento no está asociado todavía a su actividad, pero la **actividad**, el **Grupo**y el objeto **AttributeSet** de la jerarquía de vistas se pasan como parámetros. Este método se utiliza mejor para analizar el **AttributeSet** y para guardar los atributos que se podrían usar posteriormente en el fragmento.
+- **`OnInflate()`** &ndash; Se llama cuando el fragmento se crea como parte de un diseño de vista. Se puede llamar a este método inmediatamente después de que el fragmento se cree mediante declaración a partir de un archivo de diseño XML. El fragmento no está asociado todavía a su actividad, pero la **actividad**, el **Grupo**y el objeto **AttributeSet** de la jerarquía de vistas se pasan como parámetros. Este método se utiliza mejor para analizar el **AttributeSet** y para guardar los atributos que se podrían usar posteriormente en el fragmento.
 
--   **`OnAttach()`** &ndash; Se llama después de que el fragmento esté asociado a la actividad. Este es el primer método que se va a ejecutar cuando el fragmento esté listo para usarse. En general, los fragmentos no deben implementar un constructor ni reemplazar el constructor predeterminado. Los componentes necesarios para el fragmento se deben inicializar en este método.
+- **`OnAttach()`** &ndash; Se llama después de que el fragmento esté asociado a la actividad. Este es el primer método que se va a ejecutar cuando el fragmento esté listo para usarse. En general, los fragmentos no deben implementar un constructor ni reemplazar el constructor predeterminado. Los componentes necesarios para el fragmento se deben inicializar en este método.
 
--   **`OnCreate()`** &ndash; Lo llama la actividad para crear el fragmento. Cuando se llama a este método, es posible que no se pueda crear una instancia completa de la jerarquía de vista de la actividad de hospedaje, por lo que el fragmento no debe basarse en ninguna parte de la jerarquía de vistas de la actividad hasta más adelante en el ciclo de vida del fragmento. Por ejemplo, no utilice este método para realizar ajustes o ajustes en la interfaz de usuario de la aplicación. Esta es la primera vez que el fragmento puede comenzar a recopilar los datos que necesita. En este momento, el fragmento se está ejecutando en el subproceso de la interfaz de usuario, por lo que debe evitar un procesamiento largo o realizar ese procesamiento en un subproceso en segundo plano. Este método se puede omitir si se llama a **SetRetainInstance (true)** .
+- **`OnCreate()`** &ndash; Lo llama la actividad para crear el fragmento. Cuando se llama a este método, es posible que no se pueda crear una instancia completa de la jerarquía de vista de la actividad de hospedaje, por lo que el fragmento no debe basarse en ninguna parte de la jerarquía de vistas de la actividad hasta más adelante en el ciclo de vida del fragmento. Por ejemplo, no utilice este método para realizar ajustes o ajustes en la interfaz de usuario de la aplicación. Esta es la primera vez que el fragmento puede comenzar a recopilar los datos que necesita. En este momento, el fragmento se está ejecutando en el subproceso de la interfaz de usuario, por lo que debe evitar un procesamiento largo o realizar ese procesamiento en un subproceso en segundo plano. Este método se puede omitir si se llama a **SetRetainInstance (true)** .
     Esta alternativa se describe con más detalle a continuación.
 
--   **`OnCreateView()`** &ndash; Crea la vista para el fragmento.
+- **`OnCreateView()`** &ndash; Crea la vista para el fragmento.
     Se llama a este método una vez que se completa el método **alcrear ()** de la actividad. En este momento, es seguro interactuar con la jerarquía de vistas de la actividad. Este método debe devolver la vista que va a utilizar el fragmento.
 
--   **`OnActivityCreated()`** Se llama después de que la actividad de hospedaje haya completado la **actividad. he creado.** &ndash;
+- **`OnActivityCreated()`** Se llama después de que la actividad de hospedaje haya completado la **actividad. he creado.** &ndash;
     Los ajustes finales en la interfaz de usuario deben realizarse en este momento.
 
--   **`OnStart()`** &ndash; Se llama después de que se reanude la actividad contenedora. Esto hace que el fragmento sea visible para el usuario. En muchos casos, el fragmento contendrá código que, de lo contrario, se encontraría en el método **OnStart ()** de una actividad.
+- **`OnStart()`** &ndash; Se llama después de que se reanude la actividad contenedora. Esto hace que el fragmento sea visible para el usuario. En muchos casos, el fragmento contendrá código que, de lo contrario, se encontraría en el método **OnStart ()** de una actividad.
 
--   **`OnResume()`** &ndash; Este es el último método llamado antes de que el usuario pueda interactuar con el fragmento. Un ejemplo del tipo de código que se debe realizar en este método sería habilitar las características de un dispositivo con el que el usuario puede interactuar, como la cámara que los servicios de ubicación. Sin embargo, los servicios como estos pueden provocar un consumo excesivo de la batería, y una aplicación debe minimizar su uso para conservar la duración de la batería.
+- **`OnResume()`** &ndash; Este es el último método llamado antes de que el usuario pueda interactuar con el fragmento. Un ejemplo del tipo de código que se debe realizar en este método sería habilitar las características de un dispositivo con el que el usuario puede interactuar, como la cámara que los servicios de ubicación. Sin embargo, los servicios como estos pueden provocar un consumo excesivo de la batería, y una aplicación debe minimizar su uso para conservar la duración de la batería.
 
 
 ### <a name="fragment-destruction-lifecycle-methods"></a>Métodos de ciclo de vida de destrucción de fragmentos
 
 En la lista siguiente se explican los métodos de ciclo de vida a los que se llama como un fragmento que se está destruyendo:
 
--   **`OnPause()`** &ndash; El usuario ya no puede interactuar con el fragmento. Esta situación existe porque alguna otra operación de fragmento está modificando este fragmento o la actividad de hospedaje está en pausa. Es posible que la actividad que hospeda este fragmento todavía esté visible, es decir, que la actividad en el foco sea parcialmente transparente o no ocupe toda la pantalla. Cuando este método se activa, es la primera indicación de que el usuario abandona el fragmento. El fragmento debe guardar los cambios.
+- **`OnPause()`** &ndash; El usuario ya no puede interactuar con el fragmento. Esta situación existe porque alguna otra operación de fragmento está modificando este fragmento o la actividad de hospedaje está en pausa. Es posible que la actividad que hospeda este fragmento todavía esté visible, es decir, que la actividad en el foco sea parcialmente transparente o no ocupe toda la pantalla. Cuando este método se activa, es la primera indicación de que el usuario abandona el fragmento. El fragmento debe guardar los cambios.
 
--   **`OnStop()`** &ndash; El fragmento ya no está visible. Es posible que se detenga la actividad del host o que una operación de fragmento la esté modificando en la actividad. Esta devolución de llamada sirve para el mismo propósito que **Activity. OnStop**.
+- **`OnStop()`** &ndash; El fragmento ya no está visible. Es posible que se detenga la actividad del host o que una operación de fragmento la esté modificando en la actividad. Esta devolución de llamada sirve para el mismo propósito que **Activity. OnStop**.
 
--   **`OnDestroyView()`** &ndash; Se llama a este método para limpiar los recursos asociados a la vista. Se llama a este método cuando se ha destruido la vista asociada al fragmento.
+- **`OnDestroyView()`** &ndash; Se llama a este método para limpiar los recursos asociados a la vista. Se llama a este método cuando se ha destruido la vista asociada al fragmento.
 
--   **`OnDestroy()`** &ndash; Se llama a este método cuando el fragmento ya no está en uso. Todavía está asociado a la actividad, pero el fragmento ya no funciona. Este método debe liberar cualquier recurso que esté usando el fragmento, como un [**SurfaceView**](xref:Android.Views.SurfaceView) que se pueda usar para una cámara. Este método se puede omitir si se llama a **SetRetainInstance (true)** . Esta alternativa se describe con más detalle a continuación.
+- **`OnDestroy()`** &ndash; Se llama a este método cuando el fragmento ya no está en uso. Todavía está asociado a la actividad, pero el fragmento ya no funciona. Este método debe liberar cualquier recurso que esté usando el fragmento, como un [**SurfaceView**](xref:Android.Views.SurfaceView) que se pueda usar para una cámara. Este método se puede omitir si se llama a **SetRetainInstance (true)** . Esta alternativa se describe con más detalle a continuación.
 
--   **`OnDetach()`** &ndash; Se llama a este método justo antes de que el fragmento deje de estar asociado a la actividad. La jerarquía de vistas del fragmento ya no existe y todos los recursos utilizados por el fragmento deben liberarse en este momento.
+- **`OnDetach()`** &ndash; Se llama a este método justo antes de que el fragmento deje de estar asociado a la actividad. La jerarquía de vistas del fragmento ya no existe y todos los recursos utilizados por el fragmento deben liberarse en este momento.
 
 
 ### <a name="using-setretaininstance"></a>Usar SetRetainInstance
@@ -194,9 +194,9 @@ Puesto que `EditText` el control tiene `id` un asignado, el fragmento guarda aut
 
 Aunque el `OnSaveInstanceState` uso de facilita el almacenamiento de datos transitorios, el uso de este método tiene algunas limitaciones:
 
--  Si el fragmento no se agrega a la pila de retroceso, su estado no se restaurará cuando el usuario presione el botón **atrás** .
+- Si el fragmento no se agrega a la pila de retroceso, su estado no se restaurará cuando el usuario presione el botón **atrás** .
 
--  Cuando se utiliza la agrupación para guardar los datos, se serializan. Esto puede dar lugar a retrasos en el procesamiento.
+- Cuando se utiliza la agrupación para guardar los datos, se serializan. Esto puede dar lugar a retrasos en el procesamiento.
 
 
 ## <a name="contributing-to-the-menu"></a>Contribución al menú

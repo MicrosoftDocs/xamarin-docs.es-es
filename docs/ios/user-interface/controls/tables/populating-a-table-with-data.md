@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a27bc699d6c7a77c8a970e363ca55bf54751df66
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655639"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528619"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con datos en Xamarin. iOS
 
@@ -34,8 +34,8 @@ Una `UITableViewSource` subclase se asigna a cada `UITableView`. La vista de tab
 
 Solo se requieren dos métodos obligatorios para que se muestren los datos de una tabla:
 
--   **RowsInSection** : devuelve un [`nint`](~/cross-platform/macios/nativetypes.md) recuento del número total de filas de datos que debe mostrar la tabla.
--   **GetCell** : devuelve un `UITableCellView` rellenado con datos para el índice de fila correspondiente que se pasa al método.
+- **RowsInSection** : devuelve un [`nint`](~/cross-platform/macios/nativetypes.md) recuento del número total de filas de datos que debe mostrar la tabla.
+- **GetCell** : devuelve un `UITableCellView` rellenado con datos para el índice de fila correspondiente que se pasa al método.
 
 
 El archivo de ejemplo BasicTable **TableSource.CS** tiene la implementación más sencilla posible `UITableViewSource`de. Puede ver en el fragmento de código siguiente que acepta una matriz de cadenas para mostrar en la tabla y devuelve un estilo de celda predeterminado que contiene cada cadena:
@@ -239,9 +239,9 @@ keys = indexedTableItems.Keys.ToArray ();
 
 A `UITableViewSource` continuación, la subclase necesita que se agreguen o modifiquen `Dictionary<>` los métodos siguientes para usar:
 
--   **NumberOfSections** : este método es opcional; de forma predeterminada, la tabla presupone una sección. Al mostrar un índice, este método debe devolver el número de elementos del índice (por ejemplo, 26 si el índice contiene todas las letras del alfabeto inglés).
--   **RowsInSection** : devuelve el número de filas de una sección determinada.
--   **SectionIndexTitles** : devuelve la matriz de cadenas que se utilizará para mostrar el índice. El código de ejemplo devuelve una matriz de letras.
+- **NumberOfSections** : este método es opcional; de forma predeterminada, la tabla presupone una sección. Al mostrar un índice, este método debe devolver el número de elementos del índice (por ejemplo, 26 si el índice contiene todas las letras del alfabeto inglés).
+- **RowsInSection** : devuelve el número de filas de una sección determinada.
+- **SectionIndexTitles** : devuelve la matriz de cadenas que se utilizará para mostrar el índice. El código de ejemplo devuelve una matriz de letras.
 
 
 Los métodos actualizados en el archivo de ejemplo **BasicTableIndex/TableSource. CS** tienen el siguiente aspecto:
@@ -275,8 +275,8 @@ La salida es similar a la siguiente:
 
 Para mostrar encabezados y pies de página, `UITableViewSource` la subclase requiere estos métodos adicionales:
 
--   **TitleForHeader** : devuelve el texto que se va a usar como encabezado.
--   **TitleForFooter** : devuelve el texto que se va a usar como pie de página.
+- **TitleForHeader** : devuelve el texto que se va a usar como encabezado.
+- **TitleForFooter** : devuelve el texto que se va a usar como pie de página.
 
 
 Los métodos actualizados en el archivo de ejemplo **BasicTableHeaderFooter/Code/TableSource. CS** tienen el siguiente aspecto:

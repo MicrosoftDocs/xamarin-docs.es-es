@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: e4728d14e4fdb914fbfc950ffe38abee031b4c49
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649643"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527581"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usar iCloud con Xamarin. iOS
 
@@ -45,9 +45,9 @@ Las aplicaciones deben configurarse para usar iCloud en el [portal de aprovision
 
 Para configurar correctamente una aplicación para tener acceso a iCloud:
 
--   **Busque** el inicio de sesión de TeamID en [Developer.Apple.com](https://developer.apple.com) y visite el **centro de usuarios > su cuenta > Resumen** de la cuenta de desarrollador para obtener su identificador de equipo (o un identificador individual para desarrolladores únicos). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo), que forma parte del "identificador de contenedor".
+- **Busque** el inicio de sesión de TeamID en [Developer.Apple.com](https://developer.apple.com) y visite el **centro de usuarios > su cuenta > Resumen** de la cuenta de desarrollador para obtener su identificador de equipo (o un identificador individual para desarrolladores únicos). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo), que forma parte del "identificador de contenedor".
 
--   **Crear un nuevo identificador de aplicación** : para crear un identificador de aplicación, siga los pasos descritos en la [sección aprovisionamiento de tecnologías de la tienda de la guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y asegúrese de comprobar **iCloud** como servicio permitido:
+- **Crear un nuevo identificador de aplicación** : para crear un identificador de aplicación, siga los pasos descritos en la [sección aprovisionamiento de tecnologías de la tienda de la guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y asegúrese de comprobar **iCloud** como servicio permitido:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Comprobar iCloud como servicio permitido")](introduction-to-icloud-images/icloud.png#lightbox)
 

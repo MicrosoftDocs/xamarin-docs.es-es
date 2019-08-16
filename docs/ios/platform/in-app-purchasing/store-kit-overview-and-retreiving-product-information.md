@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4eb115889b65819e969b8024fc9fbcdc02b566fb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648203"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527796"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Información general de StoreKit y recuperación de la información de producto en Xamarin. iOS
 
@@ -28,14 +28,14 @@ La implementación de compras desde la aplicación requiere las siguientes clase
    
  **SKProductsRequest** : una solicitud a StoreKit para productos aprobados para vender (App Store). Se puede configurar con varios identificadores de producto.
 
--   **SKProductsRequestDelegate** : declara métodos para controlar las solicitudes y respuestas del producto. 
--   **SKProductsResponse** : se devuelve al delegado desde StoreKit (App Store). Contiene el SKProducts que coincide con los identificadores de producto enviados con la solicitud. 
--   **SKProduct** : un producto recuperado de StoreKit (que ha configurado en iTunes Connect). Contiene información sobre el producto, como el ID. del producto, el título, la descripción y el precio. 
--   **SKPayment** : se crea con un identificador de producto y se agrega a la cola de pagos para realizar una compra. 
--   **SKPaymentQueue** : solicitudes de pago en cola que se enviarán a Apple. Las notificaciones se desencadenan como consecuencia de cada pago que se está procesando. 
--   **SKPaymentTransaction** : representa una transacción completa (una solicitud de compra que el App Store ha procesado y que se ha enviado a la aplicación a través de StoreKit). La transacción se puede comprar, restaurar o producir un error. 
--   **SKPaymentTransactionObserver** : subclase personalizada que responde a los eventos generados por la cola de pago de StoreKit. 
--   **Las operaciones de StoreKit son asincrónicas** : después de iniciar un SKProductRequest o de agregar un SKPayment a la cola, se devuelve el control al código. StoreKit llamará a los métodos de la subclase SKProductsRequestDelegate o SKPaymentTransactionObserver cuando reciba datos de los servidores de Apple. 
+- **SKProductsRequestDelegate** : declara métodos para controlar las solicitudes y respuestas del producto. 
+- **SKProductsResponse** : se devuelve al delegado desde StoreKit (App Store). Contiene el SKProducts que coincide con los identificadores de producto enviados con la solicitud. 
+- **SKProduct** : un producto recuperado de StoreKit (que ha configurado en iTunes Connect). Contiene información sobre el producto, como el ID. del producto, el título, la descripción y el precio. 
+- **SKPayment** : se crea con un identificador de producto y se agrega a la cola de pagos para realizar una compra. 
+- **SKPaymentQueue** : solicitudes de pago en cola que se enviarán a Apple. Las notificaciones se desencadenan como consecuencia de cada pago que se está procesando. 
+- **SKPaymentTransaction** : representa una transacción completa (una solicitud de compra que el App Store ha procesado y que se ha enviado a la aplicación a través de StoreKit). La transacción se puede comprar, restaurar o producir un error. 
+- **SKPaymentTransactionObserver** : subclase personalizada que responde a los eventos generados por la cola de pago de StoreKit. 
+- **Las operaciones de StoreKit son asincrónicas** : después de iniciar un SKProductRequest o de agregar un SKPayment a la cola, se devuelve el control al código. StoreKit llamará a los métodos de la subclase SKProductsRequestDelegate o SKPaymentTransactionObserver cuando reciba datos de los servidores de Apple. 
 
 
 En el diagrama siguiente se muestran las relaciones entre las distintas clases StoreKit (las clases abstractas se deben implementar en la aplicación):   
@@ -95,11 +95,11 @@ En el primer paso de la venta de un producto de compra desde la aplicación se m
    
  Independientemente del tipo de productos que una aplicación vende (consumible, no consumible o de un tipo de suscripción), el proceso de recuperación de la información de producto para su presentación es el mismo. El código de InAppPurchaseSample que acompaña a este artículo contiene un proyecto denominado consumibles que muestra cómo recuperar la información de producción para su presentación. Muestra cómo:
 
--  Cree una implementación de `SKProductsRequestDelegate` e implemente `ReceivedResponse` el método abstracto. El código de ejemplo llama a `InAppPurchaseManager` esta clase. 
--  Compruebe con StoreKit para ver si se permiten pagos (con `SKPaymentQueue.CanMakePayments` ). 
--  Cree una `SKProductsRequest` instancia de con los identificadores de producto que se han definido en iTunes Connect. Esto se hace en el método del `InAppPurchaseManager.RequestProductData` ejemplo. 
--  Llame al método Start en `SKProductsRequest` . Esto desencadena una llamada asincrónica a los servidores de App Store. Se llamará `InAppPurchaseManager` al delegado () con los resultados. 
--  El método del delegado `InAppPurchaseManager` ( `ReceivedResponse` ) actualiza la interfaz de usuario con los datos devueltos de la tienda de aplicaciones (precios de productos & descripciones o mensajes sobre productos no válidos). 
+- Cree una implementación de `SKProductsRequestDelegate` e implemente `ReceivedResponse` el método abstracto. El código de ejemplo llama a `InAppPurchaseManager` esta clase. 
+- Compruebe con StoreKit para ver si se permiten pagos (con `SKPaymentQueue.CanMakePayments` ). 
+- Cree una `SKProductsRequest` instancia de con los identificadores de producto que se han definido en iTunes Connect. Esto se hace en el método del `InAppPurchaseManager.RequestProductData` ejemplo. 
+- Llame al método Start en `SKProductsRequest` . Esto desencadena una llamada asincrónica a los servidores de App Store. Se llamará `InAppPurchaseManager` al delegado () con los resultados. 
+- El método del delegado `InAppPurchaseManager` ( `ReceivedResponse` ) actualiza la interfaz de usuario con los datos devueltos de la tienda de aplicaciones (precios de productos & descripciones o mensajes sobre productos no válidos). 
 
 La interacción general tiene el siguiente aspecto ( **StoreKit** está integrado en iOS y el **App Store** representa los servidores de Apple):
 

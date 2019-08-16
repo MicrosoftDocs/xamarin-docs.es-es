@@ -1,30 +1,31 @@
 ---
 title: Ejemplo del mundo real con un proyecto de Xcode
-description: Este documento describe cómo usar un proyecto de Xcode como una entrada directa a Sharpie objetivo, lo que simplifica el proceso de creación C# enlaces a código de Objective-C.
+description: En este documento se describe cómo usar un proyecto de Xcode como entrada directa para el objetivo Sharpie, lo que simplifica el C# proceso de creación de enlaces a código de Objective-C.
 ms.prod: xamarin
 ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: ccfc2f1760d8971e2d824cf65344fa2a5e158c12
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 083bebd093a8db92b0e64ba11d13bd32da88f604
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978369"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521931"
 ---
 # <a name="real-world-example-using-an-xcode-project"></a>Ejemplo del mundo real con un proyecto de Xcode
 
-**Este ejemplo se usa el [biblioteca POP desde Facebook](https://github.com/facebook/pop).**
+**En este ejemplo se usa la [biblioteca pop de Facebook](https://github.com/facebook/pop).**
 
-Nuevo en la versión 3.0, objetivo Sharpie admite proyectos Xcode como entrada. Estos proyectos especifican los archivos de encabezado adecuados y las marcas de compilador necesarias para compilar la biblioteca nativa y, por tanto, es necesarias enlazarla demasiado. Objetivo Sharpie seleccionará la primera _destino_ y su configuración predeterminada de un proyecto si no dado otras indicaciones.
+Novedad de la versión 3,0, Objective Sharpie admite proyectos de Xcode como entrada. Estos proyectos especifican los archivos de encabezado y las marcas de compilador correctos necesarios para compilar la biblioteca nativa y, por tanto, es necesario enlazarla también. El objetivo Sharpie seleccionará el primer _destino_ y su configuración predeterminada de un proyecto si no se indica que lo haga.
 
-Antes de objetivo Sharpie intenta analizar los archivos de proyecto y de encabezado, se debe compilar. Los proyectos suelen tengan las fases de compilación que correctamente se estructuran los archivos de encabezado para su uso externo y la integración, por lo que conviene siempre se compile el proyecto completo antes de intentar enlazar.
+Antes de que Objective Sharpie intente analizar los archivos de proyecto y de encabezado, debe compilarlos. Los proyectos suelen tener fases de compilación que estructurarán correctamente los archivos de encabezado para el consumo y la integración externos, por lo que es mejor compilar siempre el proyecto completo antes de intentar enlazarlo.
 
-<pre>$ <b>git clone https://github.com/facebook/pop.git</b>
+```
+$ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
-   <em>(more git clone output)</em>
+   (more git clone output)
 
-$ <b>cd pop</b>
-$ <b>sharpie bind pop.xcodeproj -sdk iphoneos9.0</b></pre>
-
+$ cd pop
+$ sharpie bind pop.xcodeproj -sdk iphoneos9.0
+```

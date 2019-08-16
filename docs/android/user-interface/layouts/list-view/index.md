@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646318"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522555"
 ---
 # <a name="xamarinandroid-listview"></a>ListView de Xamarin. Android
 
@@ -192,26 +192,26 @@ Ejecute la aplicación. Verá algo parecido a esto:
 
 Los temas restantes (vinculados a continuación) tienen una visión completa del trabajo `ListView` con la clase y los distintos tipos de tipos de adaptador que puede usar con él. La estructura es como se detalla a continuación:
 
--   **Apariencia visual** &ndash; Partes`ListView` del control y cómo funcionan.
+- **Apariencia visual** &ndash; Partes`ListView` del control y cómo funcionan.
 
--   **Clases** de Información general de las clases utilizadas para mostrar `ListView`un. &ndash;
+- **Clases** de Información general de las clases utilizadas para mostrar `ListView`un. &ndash;
 
--   **Mostrar datos en un control ListView** Cómo mostrar una lista simple de datos, cómo implementar `ListView's` características de facilidad de uso, cómo usar diferentes diseños de fila integrados y cómo los adaptadores ahorran memoria mediante la reutilización de las vistas de fila. &ndash;
+- **Mostrar datos en un control ListView** Cómo mostrar una lista simple de datos, cómo implementar `ListView's` características de facilidad de uso, cómo usar diferentes diseños de fila integrados y cómo los adaptadores ahorran memoria mediante la reutilización de las vistas de fila. &ndash;
 
--   **Apariencia personalizada** Cambiar el estilo `ListView` de con diseños personalizados, fuentes y colores. &ndash;
+- **Apariencia personalizada** Cambiar el estilo `ListView` de con diseños personalizados, fuentes y colores. &ndash;
 
--   **Usar SQLite** Cómo Mostrar datos de una base de datos SQLite con `CursorAdapter`un. &ndash;
+- **Usar SQLite** Cómo Mostrar datos de una base de datos SQLite con `CursorAdapter`un. &ndash;
 
--   **Ciclo de vida de actividad** Consideraciones de diseño al `ListView` implementar actividades, incluido el lugar del ciclo de vida, debe rellenar los datos y cuándo liberar recursos. &ndash;
+- **Ciclo de vida de actividad** Consideraciones de diseño al `ListView` implementar actividades, incluido el lugar del ciclo de vida, debe rellenar los datos y cuándo liberar recursos. &ndash;
 
 La discusión (dividida en seis partes) comienza con una visión general `ListView` de la propia clase antes de introducir ejemplos más complejos de cómo usarlas.
 
--   [Elementos y funcionalidad de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [Rellenar un control ListView con datos](~/android/user-interface/layouts/list-view/populating.md)
--   [Personalización de la apariencia de ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Uso de CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Uso de ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView y ciclo de vida de actividad](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [Elementos y funcionalidad de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [Rellenar un control ListView con datos](~/android/user-interface/layouts/list-view/populating.md)
+- [Personalización de la apariencia de ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [Uso de CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [Uso de ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView y ciclo de vida de actividad](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## <a name="summary"></a>Resumen

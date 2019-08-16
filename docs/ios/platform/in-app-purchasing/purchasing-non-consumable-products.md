@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 99723c390b217600e6aaea570195cf21b177abf0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e09d8511dc74bdf9368497ff8fe39bd87b62565c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648168"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528291"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Compra de productos no consumibles en Xamarin. iOS
 
@@ -55,14 +55,14 @@ Normalmente, el código debe ocultar o reasignar un botón de compra una vez que
    
  Hay situaciones en las que una aplicación no puede determinar si ya se ha comprado un producto no consumible:
 
--  Si se elimina y se vuelve a instalar una aplicación en un dispositivo, se perderán todos los registros de compra (a menos que el usuario realice una restauración de copia de seguridad). 
--  Si el usuario tiene la aplicación instalada en dos (o más) dispositivos y realiza una compra en uno de los dispositivos. Los demás dispositivos seguirán mostrando el producto disponible para su compra. 
--  Si un cliente intenta volver a comprar un producto no consumible en estas situaciones, el App Store volverá a entregar el producto sin cargo alguno. La interfaz de usuario aparecerá inicialmente para realizar una compra (por ejemplo, se muestra una alerta de confirmación y se requerirá el identificador de Apple). sin embargo, el usuario verá un mensaje que le informa de que el producto ya se ha adquirido.  
+- Si se elimina y se vuelve a instalar una aplicación en un dispositivo, se perderán todos los registros de compra (a menos que el usuario realice una restauración de copia de seguridad). 
+- Si el usuario tiene la aplicación instalada en dos (o más) dispositivos y realiza una compra en uno de los dispositivos. Los demás dispositivos seguirán mostrando el producto disponible para su compra. 
+- Si un cliente intenta volver a comprar un producto no consumible en estas situaciones, el App Store volverá a entregar el producto sin cargo alguno. La interfaz de usuario aparecerá inicialmente para realizar una compra (por ejemplo, se muestra una alerta de confirmación y se requerirá el identificador de Apple). sin embargo, el usuario verá un mensaje que le informa de que el producto ya se ha adquirido.  
    
    
    
  La ruta de acceso del código en este escenario es exactamente la misma que una compra normal, las únicas diferencias son:
 
--  El usuario no se cobra de nuevo para el producto.
--  El `SKPaymentTransaction` objeto que se pasa a la aplicación tendrá `OriginalTransaction` una propiedad que hace referencia a la transacción que se generó cuando se adquirió inicialmente el producto. 
--  Las aplicaciones que venden productos que no se pueden consumir también deben implementar la característica de **restauración** de StoreKit para ayudar a los usuarios a recuperar las compras existentes. 
+- El usuario no se cobra de nuevo para el producto.
+- El `SKPaymentTransaction` objeto que se pasa a la aplicación tendrá `OriginalTransaction` una propiedad que hace referencia a la transacción que se generó cuando se adquirió inicialmente el producto. 
+- Las aplicaciones que venden productos que no se pueden consumir también deben implementar la característica de **restauración** de StoreKit para ayudar a los usuarios a recuperar las compras existentes. 

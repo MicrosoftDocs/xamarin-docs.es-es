@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 25287e5aa52eeac712f93c3973e02c7e14c89a78
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 065c68ce6fbe816e503ace0ab42b3e86aa6916a7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645103"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522837"
 ---
 # <a name="toolbar"></a>Barra de herramientas
 
@@ -29,45 +29,45 @@ El `Toolbar` widget (introducido en Android 5,0 Lollipop) puede considerarse com
 
 Hay algunas diferencias importantes entre `Toolbar` y la barra de acciones: 
 
--   Se `Toolbar` puede colocar en cualquier parte de la interfaz de usuario.
+- Se `Toolbar` puede colocar en cualquier parte de la interfaz de usuario.
 
--   Se pueden mostrar varias barras de herramientas en la misma pantalla.
+- Se pueden mostrar varias barras de herramientas en la misma pantalla.
 
--   Si se usan fragmentos, cada fragmento puede tener el suyo `Toolbar`propio. 
+- Si se usan fragmentos, cada fragmento puede tener el suyo `Toolbar`propio. 
 
--   Se `Toolbar` puede configurar para que abarque solo un ancho parcial de la pantalla. 
+- Se `Toolbar` puede configurar para que abarque solo un ancho parcial de la pantalla. 
 
--   Dado que no está enlazado a la combinación de colores del décor de ventana de la actividad, puede tener una combinación de colores visualmente distinta. `Toolbar` 
+- Dado que no está enlazado a la combinación de colores del décor de ventana de la actividad, puede tener una combinación de colores visualmente distinta. `Toolbar` 
 
--   A diferencia de la barra de acciones `Toolbar` , no incluye un icono a la izquierda. Los menús de la derecha usan menos espacio. 
+- A diferencia de la barra de acciones `Toolbar` , no incluye un icono a la izquierda. Los menús de la derecha usan menos espacio. 
 
--   El `Toolbar` alto es ajustable. 
+- El `Toolbar` alto es ajustable. 
 
--   Se pueden incluir otras vistas dentro de `Toolbar`. 
+- Se pueden incluir otras vistas dentro de `Toolbar`. 
 
 Un `Toolbar` elemento puede contener uno o varios de los siguientes elementos: 
 
--   Botón de navegación
+- Botón de navegación
 
--   Una imagen de logotipo con marca
+- Una imagen de logotipo con marca
 
--   Título y subtítulo
+- Título y subtítulo
 
--   Vistas personalizadas
+- Vistas personalizadas
 
--   Menú Acción
+- Menú Acción
 
--   Menú de desbordamiento
+- Menú de desbordamiento
 
 Las [directrices de diseño de material](https://material.google.com/) de Google recomiendan aprovechar estos elementos para dar una apariencia distintiva a las aplicaciones (en lugar de confiar exclusivamente en un icono de aplicación y un título). 
 
 En esta guía se tratan los escenarios de `Toolbar` uso más frecuente:
 
--   Reemplazar la barra de acciones predeterminada de una actividad `Toolbar`por un. 
+- Reemplazar la barra de acciones predeterminada de una actividad `Toolbar`por un. 
 
--   Agregar un segundo `Toolbar` a una actividad.
+- Agregar un segundo `Toolbar` a una actividad.
 
--   Con la biblioteca de **compatibilidad de Android V7** , biblioteca de AppCompat (denominada *AppCompat* en el resto de esta guía) `Toolbar` para implementar en versiones anteriores de Android. 
+- Con la biblioteca de **compatibilidad de Android V7** , biblioteca de AppCompat (denominada *AppCompat* en el resto de esta guía) `Toolbar` para implementar en versiones anteriores de Android. 
 
  
  

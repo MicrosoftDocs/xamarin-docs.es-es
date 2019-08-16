@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9b4f71599ecf85e51899c41c37aecc63e44e7188
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 86198c7a2fa0460070d012afd0b7b9d078d2a5f3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646429"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528566"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -58,7 +58,7 @@ Al pasar el mouse, aparecerá un menú que nos permite elegir la acción para nu
 [![](images/16new.png "La lista desplegable Action segue con clases de tamaño")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del teclado **a través** > de los**métodos abreviados** de teclado de mouse **& mouse** > y reasigne el **botón secundario** , como se muestra a continuación:
+> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del > teclado a través de los**métodos abreviados** de teclado de mouse **& mouse** > y reasigne el **botón secundario** , como se muestra a continuación:
 > 
 > [![](images/image22.png "Configuración de preferencias del teclado y del mouse")](images/image22.png#lightbox)
 > 
@@ -66,11 +66,11 @@ Al pasar el mouse, aparecerá un menú que nos permite elegir la acción para nu
 
 Hay diferentes tipos de transiciones, cada una de las cuales proporciona control sobre cómo se presenta al usuario un nuevo controlador de vista y cómo interactúa con otros controladores de vistas en el guión gráfico. Estos se explican a continuación. También es posible crear una subclase de un objeto segue para implementar una transición personalizada:
 
--  **Mostrar/** enviar: un segue de extracción agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que origina la inserciones forma parte del mismo controlador de navegación que el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y normalmente se usa cuando hay alguna relación entre los datos de las pantallas. El uso de segue de extracción le permite tener una barra de navegación con un botón atrás y un título agregado a cada vista de la pila, lo que permite explorar en profundidad la navegación por la jerarquía de vistas.
--  **Modal** : un segue modal crea una relación entre dos controladores de vista cualesquiera del proyecto, con la opción de mostrar una transición animada. El controlador de vista secundario ocultará completamente el controlador de vista primario cuando se ponga en vista. A diferencia de un segue de extracción, que agrega un botón atrás para nosotros; Cuando se usa un segue `DismissViewController` modal, se debe usar para volver al controlador de vista anterior.
--  **Personalizado** : cualquier segue personalizado se puede crear como una subclase de `UIStoryboardSegue`.
--  Desenredado: se puede usar un segue de desenredado para navegar hacia atrás a través de un segue de extracción o modal, por ejemplo, descartando el controlador de vista presentado de forma modal. Además, puede desenredar a través de no solo uno, sino también una serie de objetos segues de extracción y de moda y volver a varios pasos de la jerarquía de navegación con una sola acción de desenredado. Para saber cómo usar un segue de desenredado en iOS, lea la receta de creación de desenredado de [objetos segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
--  Sin **origen** : una segue sin código fuente indica la escena que contiene el controlador de vista inicial y, por lo tanto, la vista que el usuario verá en primer lugar. Se representa mediante el segue que se muestra a continuación:  
+- **Mostrar/** enviar: un segue de extracción agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que origina la inserciones forma parte del mismo controlador de navegación que el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y normalmente se usa cuando hay alguna relación entre los datos de las pantallas. El uso de segue de extracción le permite tener una barra de navegación con un botón atrás y un título agregado a cada vista de la pila, lo que permite explorar en profundidad la navegación por la jerarquía de vistas.
+- **Modal** : un segue modal crea una relación entre dos controladores de vista cualesquiera del proyecto, con la opción de mostrar una transición animada. El controlador de vista secundario ocultará completamente el controlador de vista primario cuando se ponga en vista. A diferencia de un segue de extracción, que agrega un botón atrás para nosotros; Cuando se usa un segue `DismissViewController` modal, se debe usar para volver al controlador de vista anterior.
+- **Personalizado** : cualquier segue personalizado se puede crear como una subclase de `UIStoryboardSegue`.
+- Desenredado: se puede usar un segue de desenredado para navegar hacia atrás a través de un segue de extracción o modal, por ejemplo, descartando el controlador de vista presentado de forma modal. Además, puede desenredar a través de no solo uno, sino también una serie de objetos segues de extracción y de moda y volver a varios pasos de la jerarquía de navegación con una sola acción de desenredado. Para saber cómo usar un segue de desenredado en iOS, lea la receta de creación de desenredado de [objetos segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
+- Sin **origen** : una segue sin código fuente indica la escena que contiene el controlador de vista inicial y, por lo tanto, la vista que el usuario verá en primer lugar. Se representa mediante el segue que se muestra a continuación:  
 
     [![](images/sourcelesssegue.png "Un segue de código fuente")](images/sourcelesssegue.png#lightbox)
 
@@ -142,12 +142,14 @@ En ocasiones, puede que tenga que agregar un guion gráfico a un archivo que no 
     Esto hace el equivalente de crear una instancia del controlador de vista inicial `FinishedLaunching` en el método dentro del delegado de la aplicación. Con esta opción establecida, la aplicación crea una instancia de una ventana (vea más abajo), carga el guión gráfico principal y asigna una instancia del controlador de vista inicial del guión gráfico (el que está junto a la segue sin `RootViewController` código fuente) como la propiedad de la ventana y, a continuación, realiza una ventana visible en la pantalla.
 
 3. En, invalide el `Window` método predeterminado, con el código siguiente para implementar la propiedad de la ventana: `AppDelegate`
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Cree un nuevo archivo de guion gráfico haciendo clic con el botón derecho en el proyecto para **agregar > nuevo archivo > iOS > guion gráfico vacío**, como se muestra a continuación: 
@@ -162,11 +164,13 @@ En ocasiones, puede que tenga que agregar un guion gráfico a un archivo que no 
 
 3. En, invalide el `Window` método predeterminado, con el código siguiente para implementar la propiedad de la ventana: `AppDelegate`
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## <a name="creating-a-storyboard-with-the-ios-designer"></a>Crear un guion gráfico con el diseñador de iOS
@@ -331,7 +335,7 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea nuest
         
     [![](images/passwordvc.png "Líneas centrales")](images/passwordvc.png#lightbox)
     
-2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, **y seleccione Activar** al pasar el mouse. 
+2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, y seleccione Activar al pasar el mouse. 
 
 3. Haga clic en segue y asígnele el *identificador* `SegueToPink`:
 

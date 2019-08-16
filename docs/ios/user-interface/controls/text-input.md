@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 2bcbdf437956ed2e03e91236125d5e050cf349be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: edabddfeeac7f1c75df298cba6f885ec130972ba
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642768"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528557"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto en Xamarin. iOS
 
@@ -37,15 +37,15 @@ El `UITextField` control se usa con más frecuencia para aceptar una sola línea
 
 Estos controles se explican a continuación:
 
--  **Marcador de posición** : es opcional. Si se establece, se muestra cuando el campo de texto está vacío, normalmente para explicar al usuario qué entrada se espera.
--  **Botón Borrar** : controla cuándo aparece el botón Borrar estándar (el círculo gris con (X)) en el campo de texto, de modo que el usuario pueda borrar texto rápidamente. Se puede ocultar, ver o mostrar permanentemente de forma permanente, en función de si el campo se está editando o no.
--  **Tamaño de fuente mínimo** y **ajustar a ajuste** : permite ajustar automáticamente el tamaño de fuente para ajustarse al texto más largo y evitar el truncamiento, pero se limita a un tamaño inferior al especificado.
--  **Capitalización** : si se van a poner en mayúsculas automáticamente palabras, oraciones o cualquier entrada.
--  **Corrección** : indica si la revisión ortográfica y las sugerencias están habilitadas.
--  **Teclado** : controla el estilo de teclado que se muestra para la entrada y, por tanto, las teclas que están disponibles en el teclado. Esto incluye el panel numérico, el panel de teléfono, el correo electrónico y la dirección URL junto con otras opciones.
--  **Apariencia** : controla el estilo de apariencia del teclado y será oscuro o claro.
--  **Tecla Retorno** : cambie la etiqueta de la tecla retorno para reflejar mejor la acción que se llevará a cabo. Los valores admitidos son Go, join, Next, Route, done y Search.
--  **Secure** : identifica si la entrada está enmascarada (por ejemplo, para una entrada de contraseña).
+- **Marcador de posición** : es opcional. Si se establece, se muestra cuando el campo de texto está vacío, normalmente para explicar al usuario qué entrada se espera.
+- **Botón Borrar** : controla cuándo aparece el botón Borrar estándar (el círculo gris con (X)) en el campo de texto, de modo que el usuario pueda borrar texto rápidamente. Se puede ocultar, ver o mostrar permanentemente de forma permanente, en función de si el campo se está editando o no.
+- **Tamaño de fuente mínimo** y **ajustar a ajuste** : permite ajustar automáticamente el tamaño de fuente para ajustarse al texto más largo y evitar el truncamiento, pero se limita a un tamaño inferior al especificado.
+- **Capitalización** : si se van a poner en mayúsculas automáticamente palabras, oraciones o cualquier entrada.
+- **Corrección** : indica si la revisión ortográfica y las sugerencias están habilitadas.
+- **Teclado** : controla el estilo de teclado que se muestra para la entrada y, por tanto, las teclas que están disponibles en el teclado. Esto incluye el panel numérico, el panel de teléfono, el correo electrónico y la dirección URL junto con otras opciones.
+- **Apariencia** : controla el estilo de apariencia del teclado y será oscuro o claro.
+- **Tecla Retorno** : cambie la etiqueta de la tecla retorno para reflejar mejor la acción que se llevará a cabo. Los valores admitidos son Go, join, Next, Route, done y Search.
+- **Secure** : identifica si la entrada está enmascarada (por ejemplo, para una entrada de contraseña).
 
 
 Si se ha agregado `textfield1` una campo llamada a una pantalla con el diseñador, puede establecer o cambiar sus propiedades en de C# la manera siguiente:
@@ -81,8 +81,8 @@ El `UITextView` control se puede usar para mostrar texto de solo lectura o para 
 
 Las propiedades específicas incluyen:
 
--  **Comportamiento** : Si el texto es editable o de solo lectura.
--  **Detección** : detecta y convierte los datos introducidos en elementos en los que se puede hacer clic, como números de teléfono que pueden desencadenar una llamada, direcciones que se convierten en vínculos a asignaciones, direcciones URL que se abren en Safari o fechas y horas que se convierten en eventos en el calendario.
+- **Comportamiento** : Si el texto es editable o de solo lectura.
+- **Detección** : detecta y convierte los datos introducidos en elementos en los que se puede hacer clic, como números de teléfono que pueden desencadenar una llamada, direcciones que se convierten en vínculos a asignaciones, direcciones URL que se abren en Safari o fechas y horas que se convierten en eventos en el calendario.
 
 
 Si se ha agregado un UITextView a una pantalla con el diseñador, puede establecer o cambiar sus propiedades de la siguiente manera:

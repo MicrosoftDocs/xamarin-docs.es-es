@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: c5348ab754139dbd4012f6bfe9d22068ac16d12b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d5b3f084be7adc664dcb52342af617788f4dde48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509254"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526223"
 ---
 # <a name="creating-a-service"></a>Crear un servicio
 
@@ -75,7 +75,7 @@ El siguiente paso consiste en examinar cómo iniciar un servicio y, a continuaci
 
 La forma más básica de iniciar un servicio en Android es enviar un `Intent` que contiene metadatos para ayudar a identificar qué servicio debe iniciarse. Hay dos estilos diferentes de intenciones que se pueden usar para iniciar un servicio:
 
--   **Intento explícito** Un intento explícito identificará exactamente qué servicio se debe usar para completar una acción determinada.  &ndash; Un intento explícito puede considerarse como una letra que tiene una dirección específica; Android enrutará la intención al servicio que se identifica explícitamente. Este fragmento de código es un ejemplo del uso de un intento explícito para iniciar `DownloadService`un servicio denominado:
+- **Intento explícito** Un intento explícito identificará exactamente qué servicio se debe usar para completar una acción determinada. &ndash; Un intento explícito puede considerarse como una letra que tiene una dirección específica; Android enrutará la intención al servicio que se identifica explícitamente. Este fragmento de código es un ejemplo del uso de un intento explícito para iniciar `DownloadService`un servicio denominado:
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,7 +83,7 @@ La forma más básica de iniciar un servicio en Android es enviar un `Intent` qu
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Intención implícita** &ndash; Este tipo de intención identifica de manera flexible la acción que el usuario desea realizar, pero el servicio exacto para completar esa acción es desconocido. Una intención implícita puede considerarse como una carta que se dirige "a quién puede afectar...".
+- **Intención implícita** &ndash; Este tipo de intención identifica de manera flexible la acción que el usuario desea realizar, pero el servicio exacto para completar esa acción es desconocido. Una intención implícita puede considerarse como una carta que se dirige "a quién puede afectar...".
     Android examinará el contenido de la intención y determinará si hay un servicio existente que coincida con la intención.
 
     Un _filtro de intención_ se utiliza para ayudar a hacer coincidir la intención implícita con un servicio registrado. Un filtro de intención es un elemento XML que se agrega a **archivo AndroidManifest. XML** , que contiene los metadatos necesarios para ayudar a que un servicio coincida con una intención implícita.

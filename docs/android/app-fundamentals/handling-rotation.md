@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b1039dd433456731b775399ab42222fe0e4cc6d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644368"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521123"
 ---
 # <a name="handling-rotation"></a>Control de giro
 
@@ -25,9 +25,9 @@ Dado que los dispositivos móviles se giran con facilidad, la rotación integrad
 
 En esta guía se examinan los siguientes temas de orientación:
 
--   **Rotación de diseño** declarativo &ndash; Cómo usar el sistema de recursos de Android para compilar aplicaciones que tienen en cuenta la orientación, incluida la forma de cargar los diseños y drawables para las orientaciones particulares.
+- **Rotación de diseño** declarativo &ndash; Cómo usar el sistema de recursos de Android para compilar aplicaciones que tienen en cuenta la orientación, incluida la forma de cargar los diseños y drawables para las orientaciones particulares.
 
--   **Rotación de diseño mediante programación** &ndash; Cómo agregar controles mediante programación y cómo controlar manualmente los cambios de orientación.
+- **Rotación de diseño mediante programación** &ndash; Cómo agregar controles mediante programación y cómo controlar manualmente los cambios de orientación.
 
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Controlar la rotación mediante declaración con diseños
@@ -35,9 +35,9 @@ En esta guía se examinan los siguientes temas de orientación:
 Al incluir archivos en carpetas que siguen las convenciones de nomenclatura, Android carga automáticamente los archivos correspondientes cuando cambia la orientación.
 Esto incluye compatibilidad con:
 
--   *Recursos de diseño* &ndash; Especificar los archivos de diseño que se inflan para cada orientación.
+- *Recursos de diseño* &ndash; Especificar los archivos de diseño que se inflan para cada orientación.
 
--   *Recursos Dibujables* &ndash; Que especifica qué drawables se cargan para cada orientación.
+- *Recursos Dibujables* &ndash; Que especifica qué drawables se cargan para cada orientación.
 
 
 ### <a name="layout-resources"></a>Recursos de diseño
@@ -133,12 +133,12 @@ A veces, definimos diseños en el código. Esto puede ocurrir por diversos motiv
 
 Para agregar controles mediante programación, una aplicación debe realizar los siguientes pasos:
 
--  Cree un diseño.
--  Establezca los parámetros de diseño.
--  Crear controles.
--  Establecer los parámetros de diseño del control.
--  Agregue controles al diseño.
--  Establezca el diseño como la vista de contenido.
+- Cree un diseño.
+- Establezca los parámetros de diseño.
+- Crear controles.
+- Establecer los parámetros de diseño del control.
+- Agregue controles al diseño.
+- Establezca el diseño como la vista de contenido.
 
 Por ejemplo, considere una interfaz de usuario que consta de un `TextView` único control agregado `RelativeLayout`a, tal como se muestra en el código siguiente.
 

@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 2efc782386b8ec39ecca21aaf88738c813c260f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511658"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529047"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -84,7 +84,7 @@ La compatibilidad con la Xamarin Profiler está disponible en las siguientes pla
     - tvOS
         - Dispositivo y simulador
 
-Tenga en cuenta que **solo** puede  generar perfiles de configuraciones de depuración.
+Tenga en cuenta que **solo** puede generar perfiles de configuraciones de depuración.
 
 ## <a name="profiler-basics"></a>Conceptos básicos de Profiler
 
@@ -143,8 +143,8 @@ El Xamarin Profiler se puede iniciar desde el IDE al generar perfiles de la apli
 
 #### <a name="launching-from-visual-studio"></a>Iniciar desde Visual Studio
 
-1.  En primer lugar, asegúrese de que la aplicación se carga en Visual Studio y seleccione la configuración de depuración (predeterminada), tal como se especificó anteriormente.
-2.  Vaya a **analizar > Xamarin Profiler** en Visual Studio para abrir el generador de perfiles, tal como se muestra en el diagrama siguiente:
+1. En primer lugar, asegúrese de que la aplicación se carga en Visual Studio y seleccione la configuración de depuración (predeterminada), tal como se especificó anteriormente.
+2. Vaya a **analizar > Xamarin Profiler** en Visual Studio para abrir el generador de perfiles, tal como se muestra en el diagrama siguiente:
 
 ![Inicio del generador de perfiles desde Visual Studio](images/start-profiling-vs.png)
 
@@ -231,8 +231,8 @@ Hay diferentes vistas de datos en el instrumento de asignaciones, que permiten a
 La vista del inspector para asignaciones proporciona opciones para filtrar y agrupar objetos, proporcionar estadísticas sobre la memoria asignada y las asignaciones principales, así como vistas para el seguimiento de la pila y la ruta de acceso a la raíz.
 
 - **Árbol de llamadas** : muestra el árbol de llamadas completo de todos los subprocesos de la aplicación e incluye información sobre la memoria asignada en cada nodo. Cuando se selecciona un elemento en la lista, todos los nodos del mismo nivel aparecerán atenuados. Puede expandir el árbol o hacer doble clic en el elemento para profundizar en él. Al mostrar esta vista de datos, se puede usar la vista del inspector configuración de pantalla para cambiar la forma en que se presenta. Actualmente hay dos opciones:
-    1.  **Árbol de llamadas invertido** : tiene en cuenta el seguimiento de la pila de arriba abajo. Se trata de una opción de vista cómoda, ya que indica los métodos más profundos en los que la CPU ha estado gastando su tiempo.
-    2.  **Independiente por subproceso** : esta opción organiza el árbol de llamadas por subproceso.
+    1. **Árbol de llamadas invertido** : tiene en cuenta el seguimiento de la pila de arriba abajo. Se trata de una opción de vista cómoda, ya que indica los métodos más profundos en los que la CPU ha estado gastando su tiempo.
+    2. **Independiente por subproceso** : esta opción organiza el árbol de llamadas por subproceso.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

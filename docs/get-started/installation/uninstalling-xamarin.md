@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 6a0fe95d6d471bfb464234f0540b8398acb22e6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97b870d96a2ffc599e010e049554b51b550a7311
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61263029"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521584"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalación de Xamarin
 
@@ -196,14 +196,18 @@ Haga lo siguiente para ejecutar el script:
 
 1. Haga clic con el botón derecho en el script y seleccione Guardar como… para guardar el archivo en el equipo Mac.
 
-2.  Abra **Terminal** y cambie el directorio de trabajo al lugar donde se haya descargado el script:
+2. Abra **Terminal** y cambie el directorio de trabajo al lugar donde se haya descargado el script:
 
-        $ cd /location/of/file
+    ```
+    cd /location/of/file
+    ```
 
 3. Haga que el script sea ejecutable y, después, ejecútelo con **sudo**:
 
-        $ chmod +x ./xamarin_uninstall.sh
-        $ sudo ./xamarin_uninstall.sh
+    ```
+    chmod +x ./xamarin_uninstall.sh
+    sudo ./xamarin_uninstall.sh
+    ```
 
 4. Por último, elimine el script de desinstalación.
 
@@ -215,7 +219,7 @@ En este momento, Xamarin debe desinstalarse de su equipo.
 
 Xamarin se admite en los siguientes casos:
 
-- [2019 de Visual Studio y Visual Studio 2017](#uninstallvs2017)
+- [Visual Studio 2019 y Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
 - [Visual Studio 2013](#uninstallvs2015) [**no admitido**]
 - [Xamarin Studio](#uninstallxamarinstudio) [**no admitido**]
@@ -224,7 +228,7 @@ Xamarin se admite en los siguientes casos:
 
 ### <a name="visual-studio-2019-and-visual-studio-2017"></a>Visual Studio 2019 y Visual Studio 2017
 
-Xamarin se desinstala de 2019 de Visual Studio y Visual Studio 2017 mediante la aplicación del instalador:
+Xamarin se desinstala de Visual Studio 2019 y Visual Studio 2017 mediante la aplicación del instalador:
 
 1. Use el **menú Inicio** para abrir el **instalador de Visual Studio**.
 

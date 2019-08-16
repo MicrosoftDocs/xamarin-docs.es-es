@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: 0659f7d3a39da2c3c207da6553dc6821ffcffec6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 29e737e5a6cb6abdae099c0224a2da058c2ea025
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649788"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527735"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin. iOS
 
@@ -27,9 +27,9 @@ Los desarrolladores pueden centrarse en las aplicaciones del lado cliente y deja
 
 Para completar los pasos que se describen en este artículo, es necesario lo siguiente:
 
--  **Xcode y el SDK de iOS** : las API Xcode y iOS 8 de Apple deben instalarse y configurarse en el equipo del desarrollador.
--  **Visual Studio para Mac** : la versión más reciente de Visual Studio para Mac debe estar instalada y configurada en el dispositivo del usuario.
--  **dispositivo iOS 8** : dispositivo iOS que ejecuta la versión más reciente de iOS 8 para realizar pruebas.
+- **Xcode y el SDK de iOS** : las API Xcode y iOS 8 de Apple deben instalarse y configurarse en el equipo del desarrollador.
+- **Visual Studio para Mac** : la versión más reciente de Visual Studio para Mac debe estar instalada y configurada en el dispositivo del usuario.
+- **dispositivo iOS 8** : dispositivo iOS que ejecuta la versión más reciente de iOS 8 para realizar pruebas.
 
 ## <a name="what-is-cloudkit"></a>¿Qué es CloudKit?
 
@@ -53,19 +53,19 @@ En el momento de redactar este documento, Apple proporciona inicialmente CloudKi
 
 Para que una aplicación de Xamarin pueda usar el marco de trabajo de CloudKit, la aplicación se debe aprovisionar correctamente como se detalla en las guías [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) y [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
-1.  Abra el proyecto en Visual Studio para Mac o Visual Studio.
-2.  En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el **identificador** de la agrupación coincide con el que se definió en **ID. de aplicación** creado como parte de la configuración de aprovisionamiento:
+1. Abra el proyecto en Visual Studio para Mac o Visual Studio.
+2. En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el **identificador** de la agrupación coincide con el que se definió en **ID. de aplicación** creado como parte de la configuración de aprovisionamiento:
  
     [![](intro-to-cloudkit-images/image26a.png "Escriba el identificador de paquete")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
-3.  Desplácese hacia abajo hasta la parte inferior del archivo **info. plist** y seleccione **modos en segundo plano habilitados**, **actualizaciones de ubicación** y notificaciones **remotas**:
+3. Desplácese hacia abajo hasta la parte inferior del archivo **info. plist** y seleccione **modos en segundo plano habilitados**, **actualizaciones de ubicación** y notificaciones **remotas**:
 
     [![](intro-to-cloudkit-images/image27a.png "Seleccionar modos en segundo plano habilitados, actualizaciones de ubicación y notificaciones remotas")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
-4.  Haga clic con el botón derecho en el proyecto de iOS en la solución y seleccione **Opciones**.
-5.  Seleccione **firma de lote de iOS**, seleccione la **identidad del desarrollador** y el **Perfil de aprovisionamiento** que creó anteriormente.
-6.  Asegúrese de que el archivo contitles **. plist** incluye **Habilitar iCloud** , **almacenamiento de clave-valor** y **CloudKit** .
-7.  Asegúrese de que el **contenedor ubicuidad** existe para la aplicación (como se creó anteriormente). Ejemplo: `iCloud.com.your-company.CloudKitAtlas`
-8.  Guarde los cambios en el archivo.
+4. Haga clic con el botón derecho en el proyecto de iOS en la solución y seleccione **Opciones**.
+5. Seleccione **firma de lote de iOS**, seleccione la **identidad del desarrollador** y el **Perfil de aprovisionamiento** que creó anteriormente.
+6. Asegúrese de que el archivo contitles **. plist** incluye **Habilitar iCloud** , **almacenamiento de clave-valor** y **CloudKit** .
+7. Asegúrese de que el **contenedor ubicuidad** existe para la aplicación (como se creó anteriormente). Ejemplo: `iCloud.com.your-company.CloudKitAtlas`
+8. Guarde los cambios en el archivo.
 
 
 Con esta configuración en contexto, la aplicación ya está lista para acceder a las API de CloudKit Framework.
@@ -74,13 +74,13 @@ Con esta configuración en contexto, la aplicación ya está lista para acceder 
 
 Antes de implementar CloudKit en una aplicación de Xamarin iOS, este artículo tratará los aspectos básicos del marco de CloudKit, que incluirá los temas siguientes:
 
-1.  **Contenedores** : silos aislados de comunicaciones de iCloud.
-2.  **Bases de datos** : públicas y privadas están disponibles para la aplicación.
-3.  **Registros** : mecanismo en el que los datos estructurados se mueven hacia y desde CloudKit.
-4.  **Zonas de registro** : son grupos de registros.
-5.  Los identificadores de **registro** : están totalmente normalizados y representan la ubicación específica del registro.
-6.  **Referencia** : proporcione relaciones de elementos primarios y secundarios entre los registros relacionados de una base de datos determinada.
-7.  **Activos** : permite cargar archivos de datos grandes y no estructurados en iCloud y asociarlos a un registro determinado.
+1. **Contenedores** : silos aislados de comunicaciones de iCloud.
+2. **Bases de datos** : públicas y privadas están disponibles para la aplicación.
+3. **Registros** : mecanismo en el que los datos estructurados se mueven hacia y desde CloudKit.
+4. **Zonas de registro** : son grupos de registros.
+5. Los identificadores de **registro** : están totalmente normalizados y representan la ubicación específica del registro.
+6. **Referencia** : proporcione relaciones de elementos primarios y secundarios entre los registros relacionados de una base de datos determinada.
+7. **Activos** : permite cargar archivos de datos grandes y no estructurados en iCloud y asociarlos a un registro determinado.
 
 
 ### <a name="containers"></a>Contenedores
@@ -89,9 +89,9 @@ Una aplicación determinada que se ejecuta en un dispositivo iOS siempre se ejec
 
 El concepto de tomar una aplicación cliente y ejecutarla separada de otros clientes es muy eficaz y ofrece las siguientes ventajas:
 
-1.  **Seguridad** : una aplicación no puede interferir con otras aplicaciones cliente ni con el propio sistema operativo.
-1.  **Estabilidad** : Si la aplicación cliente se bloquea, no puede usar otras aplicaciones del sistema operativo.
-1.  **Privacidad** : cada aplicación cliente tiene acceso limitado a la información personal almacenada en el dispositivo.
+1. **Seguridad** : una aplicación no puede interferir con otras aplicaciones cliente ni con el propio sistema operativo.
+1. **Estabilidad** : Si la aplicación cliente se bloquea, no puede usar otras aplicaciones del sistema operativo.
+1. **Privacidad** : cada aplicación cliente tiene acceso limitado a la información personal almacenada en el dispositivo.
 
 
 CloudKit se diseñó para ofrecer las mismas ventajas que las mencionadas anteriormente y aplicarlos al trabajar con información basada en la nube:
@@ -171,13 +171,13 @@ Los registros contienen la noción de una etiqueta de cambio. Se trata de una ve
 
 Como se indicó anteriormente `CKRecords` , ajuste los pares clave-valor y, como tal, se pueden almacenar los siguientes tipos de datos en un registro:
 
-1.   `NSString`
-1.   `NSNumber`
-1.   `NSData`
-1.   `NSDate`
-1.   `CLLocation`
-1.   `CKReferences`
-1.   `CKAssets`
+1. `NSString`
+1. `NSNumber`
+1. `NSData`
+1. `NSDate`
+1. `CLLocation`
+1. `CKReferences`
+1. `CKAssets`
 
 
 Además de los tipos de valor único, un registro puede contener una matriz homogénea de cualquiera de los tipos enumerados anteriormente.
@@ -212,9 +212,9 @@ Aquí es donde se almacenan los registros de forma predeterminada. Además, se p
 
 Los identificadores de registro se representan como una tupla que contiene un nombre de registro proporcionado por el cliente y la zona en la que existe el registro. Los identificadores de registro tienen las siguientes características:
 
--  Los crea la aplicación cliente.
--  Están totalmente normalizadas y representan la ubicación específica del registro.
--  Mediante la asignación del identificador único de un registro en una base de datos externa al nombre del registro, se pueden usar para crear un puente entre las bases de datos locales que no se almacenan en CloudKit.
+- Los crea la aplicación cliente.
+- Están totalmente normalizadas y representan la ubicación específica del registro.
+- Mediante la asignación del identificador único de un registro en una base de datos externa al nombre del registro, se pueden usar para crear un puente entre las bases de datos locales que no se almacenan en CloudKit.
 
 
 Cuando los desarrolladores crean nuevos registros, pueden optar por pasar un identificador de registro. Si no se especifica un identificador de registro, se creará automáticamente un UUID y se asignará al registro.
@@ -282,15 +282,15 @@ Ahora hemos tratado todos los objetos fundamentales dentro de CloudKit. Los cont
 
 Apple ofrece dos conjuntos de API diferentes para trabajar con CloudKit:
 
--  **API operativa** : ofrece todas las características únicas de CloudKit. En el caso de aplicaciones más complejas, esta API proporciona un control exhaustivo sobre CloudKit.
--  **Comodidad API** : ofrece un subconjunto común preconfigurado de características de CloudKit. Proporciona una solución cómoda y sencilla de acceso para incluir la funcionalidad de CloudKit en una aplicación de iOS.
+- **API operativa** : ofrece todas las características únicas de CloudKit. En el caso de aplicaciones más complejas, esta API proporciona un control exhaustivo sobre CloudKit.
+- **Comodidad API** : ofrece un subconjunto común preconfigurado de características de CloudKit. Proporciona una solución cómoda y sencilla de acceso para incluir la funcionalidad de CloudKit en una aplicación de iOS.
 
 
 La comodidad de la API suele ser la mejor opción para la mayoría de las aplicaciones de iOS y Apple sugiere comenzar con ella. En el resto de esta sección se tratarán los siguientes temas útiles de la API:
 
--  Guardar un registro.
--  Capturando un registro.
--  Actualizar un registro.
+- Guardar un registro.
+- Capturando un registro.
+- Actualizar un registro.
 
 
 ### <a name="common-setup-code"></a>Código de instalación común
@@ -390,9 +390,9 @@ ThisApp.PublicDatabase.SaveRecord(newRecord, (record, err) => {
 
 Tres aspectos que hay que tener en cuenta sobre el código anterior:
 
-1.  Al llamar al `SaveRecord` método `PublicDatabase`de, el desarrollador no tiene que especificar cómo se envían los datos, en qué zona se está escribiendo, etc. La comodidad de la API se ocupa de todos los detalles.
-1.  La llamada es asincrónica y proporciona una rutina de devolución de llamada cuando se completa la llamada, bien con éxito o con errores. Si se produce un error en la llamada, se proporcionará un mensaje de error.
-1.  CloudKit no proporciona almacenamiento ni persistencia local. es solo un medio de transferencia. Por tanto, cuando se realiza una solicitud para guardar un registro, se envía inmediatamente a los servidores de iCloud.
+1. Al llamar al `SaveRecord` método `PublicDatabase`de, el desarrollador no tiene que especificar cómo se envían los datos, en qué zona se está escribiendo, etc. La comodidad de la API se ocupa de todos los detalles.
+1. La llamada es asincrónica y proporciona una rutina de devolución de llamada cuando se completa la llamada, bien con éxito o con errores. Si se produce un error en la llamada, se proporcionará un mensaje de error.
+1. CloudKit no proporciona almacenamiento ni persistencia local. es solo un medio de transferencia. Por tanto, cuando se realiza una solicitud para guardar un registro, se envía inmediatamente a los servidores de iCloud.
 
 
 > [!NOTE]
@@ -453,10 +453,10 @@ Hasta ahora este artículo ha examinado el almacenamiento y la recuperación del
 
 Cuanto más popular es la aplicación, más datos en la base de datos y lo menos factible es tener una memoria caché de todos los datos del dispositivo. Se pueden utilizar las técnicas siguientes para solucionar este problema:
 
--  **Conserve los datos de gran tamaño en la nube** : CloudKit se diseñó para tratar datos de gran tamaño de manera eficaz.
--  El **cliente solo debe ver un segmento de los datos** : Desactive el mínimo de datos necesarios para controlar cualquier tarea en un momento dado.
--  Las **vistas de cliente pueden cambiar** : dado que cada usuario tiene preferencias diferentes, el segmento de datos que se muestra puede cambiar de un usuario a otro, y la vista individual del usuario de cualquier segmento determinado puede ser diferente.
--  El **cliente utiliza consultas para centrarse en el punto de vista** : las consultas permiten al usuario ver un pequeño subconjunto de un conjunto de información mayor que existe dentro de la nube.
+- **Conserve los datos de gran tamaño en la nube** : CloudKit se diseñó para tratar datos de gran tamaño de manera eficaz.
+- El **cliente solo debe ver un segmento de los datos** : Desactive el mínimo de datos necesarios para controlar cualquier tarea en un momento dado.
+- Las **vistas de cliente pueden cambiar** : dado que cada usuario tiene preferencias diferentes, el segmento de datos que se muestra puede cambiar de un usuario a otro, y la vista individual del usuario de cualquier segmento determinado puede ser diferente.
+- El **cliente utiliza consultas para centrarse en el punto de vista** : las consultas permiten al usuario ver un pequeño subconjunto de un conjunto de información mayor que existe dentro de la nube.
 
 
 ### <a name="queries"></a>Consultas
@@ -547,9 +547,9 @@ El código anterior toma la consulta creada anteriormente y la ejecuta en la bas
 
 La manera de pensar en las consultas es que son los sondeos y son excelentes en la segmentación a través de grandes conjuntos de valores. Sin embargo, las consultas no son adecuadas para conjuntos de DataSet grandes y principalmente estáticos debido a los siguientes motivos:
 
--  No son válidas para la duración de la batería del dispositivo.
--  No son válidos para el tráfico de red.
--  Son incorrectas para la experiencia del usuario porque la información que ven está limitada por la frecuencia con la que la aplicación sondea la base de datos. Los usuarios hoy en día esperan las notificaciones de envío cuando se produce algún cambio.
+- No son válidas para la duración de la batería del dispositivo.
+- No son válidos para el tráfico de red.
+- Son incorrectas para la experiencia del usuario porque la información que ven está limitada por la frecuencia con la que la aplicación sondea la base de datos. Los usuarios hoy en día esperan las notificaciones de envío cuando se produce algún cambio.
 
 
 ### <a name="subscriptions"></a>Suscripciones
@@ -571,11 +571,11 @@ Antes de implementar la C# suscripción en el código, echemos un vistazo rápid
 
 En el gráfico anterior se muestra el proceso de suscripción típico de la siguiente manera:
 
-1.  El dispositivo cliente crea una nueva suscripción que contiene el conjunto de condiciones que desencadenará la suscripción y una notificación de extracción que se enviará cuando se produzca el desencadenador.
-2.  La suscripción se envía a la base de datos donde se agrega a la colección de suscripciones existentes.
-3.  Un segundo dispositivo crea un nuevo registro y guarda dicho registro en la base de datos.
-4.  La base de datos busca en su lista de suscripciones para ver si el nuevo registro coincide con cualquiera de sus condiciones.
-5.  Si se encuentra una coincidencia, la notificación de extracción se envía al dispositivo que registró la suscripción con información sobre el registro que hizo que se desencadenara.
+1. El dispositivo cliente crea una nueva suscripción que contiene el conjunto de condiciones que desencadenará la suscripción y una notificación de extracción que se enviará cuando se produzca el desencadenador.
+2. La suscripción se envía a la base de datos donde se agrega a la colección de suscripciones existentes.
+3. Un segundo dispositivo crea un nuevo registro y guarda dicho registro en la base de datos.
+4. La base de datos busca en su lista de suscripciones para ver si el nuevo registro coincide con cualquiera de sus condiciones.
+5. Si se encuentra una coincidencia, la notificación de extracción se envía al dispositivo que registró la suscripción con información sobre el registro que hizo que se desencadenara.
 
 
 Con este conocimiento implementado, echemos un vistazo a la creación de suscripciones en una aplicación Xamarin iOS 8.
@@ -658,10 +658,10 @@ Al trabajar con cuentas de usuario, la primera consideración es la autenticaci�
 
 CloudKit proporciona la siguiente información de usuario al desarrollador:
 
--  **Identity** : una manera de identificar al usuario de forma única.
--  **Metadatos** : la capacidad de guardar y recuperar información acerca de los usuarios.
--  **Privacidad** : toda la información se trata en un puntual de privacidad consciente. No se expone nada a menos que el usuario lo haya aceptado.
--  **Detección** : ofrece a los usuarios la capacidad de detectar a sus amigos que usan la misma aplicación.
+- **Identity** : una manera de identificar al usuario de forma única.
+- **Metadatos** : la capacidad de guardar y recuperar información acerca de los usuarios.
+- **Privacidad** : toda la información se trata en un puntual de privacidad consciente. No se expone nada a menos que el usuario lo haya aceptado.
+- **Detección** : ofrece a los usuarios la capacidad de detectar a sus amigos que usan la misma aplicación.
 
 
 A continuación, veremos estos temas en detalle.
@@ -751,15 +751,15 @@ Esto permite que la aplicación aproveche el libro de contactos del usuario sin 
 
 En Resumen, hay tres tipos diferentes de entradas disponibles para la detección de usuarios:
 
--  **Identificador de registro de usuario** : la detección se puede realizar con el identificador de usuario del usuario que ha iniciado sesión en CloudKit.
--  **Dirección de correo electrónico del usuario** : el usuario puede proporcionar una dirección de correo electrónico y se puede usar para la detección.
--  **Libro de contacto** : la libreta de direcciones del usuario se puede usar para detectar a los usuarios de la aplicación que tienen la misma dirección de correo electrónico que se muestran en sus contactos.
+- **Identificador de registro de usuario** : la detección se puede realizar con el identificador de usuario del usuario que ha iniciado sesión en CloudKit.
+- **Dirección de correo electrónico del usuario** : el usuario puede proporcionar una dirección de correo electrónico y se puede usar para la detección.
+- **Libro de contacto** : la libreta de direcciones del usuario se puede usar para detectar a los usuarios de la aplicación que tienen la misma dirección de correo electrónico que se muestran en sus contactos.
 
 
 La detección de usuarios devolverá la siguiente información:
 
--  **Identificador de registro de usuario** : el identificador único de un usuario en la base de datos pública.
--  **Nombre y apellidos** : como se almacena en la base de datos pública.
+- **Identificador de registro de usuario** : el identificador único de un usuario en la base de datos pública.
+- **Nombre y apellidos** : como se almacena en la base de datos pública.
 
 
 Esta información solo se devolverá para los usuarios que hayan optado por la detección.
@@ -869,10 +869,10 @@ Como hemos aprendido en este artículo, CloudKit proporciona una manera sencilla
 
 Los siguientes casos de uso deben ayudar al desarrollador a decidir cuándo usar una tecnología o un marco de trabajo de iCloud específico:
 
--  **el almacén de clave-valor de icloud** : mantiene de forma asincrónica una pequeña cantidad de datos actualizada y es excelente para trabajar con preferencias de la aplicación. Sin embargo, está restringido a una cantidad muy pequeña de información.
--  **ICloud Drive** : se basa en las API de documentos de icloud existentes y proporciona una API simple para sincronizar datos no estructurados desde el sistema de archivos. Proporciona una memoria caché sin conexión completa en Mac OS X y es ideal para aplicaciones centradas en documentos.
--  **datos principales de icloud** : permite que los datos se repliquen entre todos los dispositivos del usuario. Los datos son de usuario único y perfectos para mantener los datos estructurados privados sincronizados.
--  **CloudKit** : proporciona datos públicos tanto estructura como masiva y es capaz de controlar tanto archivos grandes como no estructurados. Su asociado a la cuenta de iCloud del usuario y proporciona la transferencia de datos dirigidos por el cliente.
+- **el almacén de clave-valor de icloud** : mantiene de forma asincrónica una pequeña cantidad de datos actualizada y es excelente para trabajar con preferencias de la aplicación. Sin embargo, está restringido a una cantidad muy pequeña de información.
+- **ICloud Drive** : se basa en las API de documentos de icloud existentes y proporciona una API simple para sincronizar datos no estructurados desde el sistema de archivos. Proporciona una memoria caché sin conexión completa en Mac OS X y es ideal para aplicaciones centradas en documentos.
+- **datos principales de icloud** : permite que los datos se repliquen entre todos los dispositivos del usuario. Los datos son de usuario único y perfectos para mantener los datos estructurados privados sincronizados.
+- **CloudKit** : proporciona datos públicos tanto estructura como masiva y es capaz de controlar tanto archivos grandes como no estructurados. Su asociado a la cuenta de iCloud del usuario y proporciona la transferencia de datos dirigidos por el cliente.
 
 
 Teniendo en cuenta estos casos de uso, el desarrollador debe elegir la tecnología de iCloud correcta para proporcionar la funcionalidad de la aplicación necesaria actual y proporcionar una buena escalabilidad para el crecimiento futuro.

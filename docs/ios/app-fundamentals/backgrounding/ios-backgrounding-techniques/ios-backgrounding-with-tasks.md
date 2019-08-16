@@ -1,37 +1,37 @@
 ---
 title: Procesamiento en segundo plano de iOS con tareas
-description: Este documento describe cómo usar tareas en segundo plano para realizar tareas de larga ejecución después de una aplicación se coloca en segundo plano.
+description: En este documento se describe cómo usar las tareas en segundo plano para realizar tareas de ejecución prolongada después de que una aplicación se coloque en segundo plano.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: ec5439e11b0edd2b6ad5391254e40e01271879a7
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 56ee93146bb84de0b48885d80407316e81cb512c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268828"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521365"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Procesamiento en segundo plano de iOS con tareas
 
-La manera más sencilla para realizar el procesamiento en segundo plano en iOS es dividir los requisitos de backgrounding en tareas y ejecutar las tareas en segundo plano. Las tareas están en un estricto límite de tiempo y suelen obtención unos 600 segundos (10 minutos) de tiempo de procesamiento después de una aplicación se movió a segundo plano en iOS 6 y menos de 10 minutos en iOS 7 o posterior.
+La manera más sencilla de realizar el procesamiento en iOS es dividir los requisitos de fondo en tareas y ejecutar las tareas en segundo plano. Las tareas se encuentran en un límite de tiempo estricto y normalmente obtienen unos 600 segundos (10 minutos) de tiempo de procesamiento después de que una aplicación se haya pasado al fondo en iOS 6, y de menos de 10 minutos en iOS 7 +.
 
-Tareas en segundo plano pueden dividirse en tres categorías:
+Las tareas en segundo plano se pueden dividir en tres categorías:
 
-1.  **Tareas en segundo plano Safe** : se le llama en cualquier lugar en la aplicación donde haya una tarea que no desea interrumpida debe escribir de la aplicación de segundo plano.
-1.  **Tareas de DidEnterBackground** : se le llama durante la `DidEnterBackground` método del ciclo de vida de aplicación para ayudar en la limpieza y el almacenamiento de estado.
-1.  **(IOS 7 +) de las transferencias en segundo plano** : un tipo especial de tarea en segundo plano que se utiliza para realizar transferencias de red en iOS 7. A diferencia de las tareas periódicas, transferencias en segundo plano no tiene un límite de tiempo determinado previamente.
+1. **Tareas seguras en segundo plano** : se llama en cualquier parte de la aplicación en la que tenga una tarea que no desea interrumpir en caso de que la aplicación entre en el fondo.
+1. **Tareas de DidEnterBackground** : se llama `DidEnterBackground` durante el método de ciclo de vida de la aplicación para ayudar en la limpieza y el guardado del estado.
+1. **Transferencias en segundo plano (iOS 7 +)** : un tipo especial de tarea en segundo plano que se usa para realizar transferencias de red en iOS 7. A diferencia de las tareas normales, las transferencias en segundo plano no tienen un límite de tiempo predeterminado.
 
 
-Seguridad en segundo plano y `DidEnterBackground` tareas son seguras de usar en iOS 6 e iOS 7, con algunas diferencias menores. Vamos a investigar estos dos tipos de tareas con mayor detalle.
+Las tareas seguras y `DidEnterBackground` en segundo plano son seguras para su uso en iOS 6 e iOS 7, con algunas pequeñas diferencias. Vamos a investigar estos dos tipos de tareas con mayor detalle.
 
-## <a name="creating-background-safe-tasks"></a>Creación de tareas en segundo plano con seguridad
+## <a name="creating-background-safe-tasks"></a>Crear tareas seguras para el fondo
 
-Algunas aplicaciones contienen las tareas que no deberían ser interrumpidas por iOS la aplicación debe cambiar de estado. Es una manera de proteger estas tareas se interrumpan registrarlos con iOS como tareas de ejecución prolongada. Puede usar este patrón en cualquier lugar en la aplicación donde no desea que una tarea que se interrumpan debe la put la aplicación de usuario en segundo plano. Un excelente candidato para este patrón sería tareas como enviando información de registro de un usuario nuevo a su servidor o comprobar la información de inicio de sesión.
+Algunas aplicaciones contienen tareas que iOS no debe interrumpir en caso de que la aplicación cambie el estado. Una manera de evitar que se interrumpan estas tareas es registrarlas con iOS como tareas de ejecución prolongada. Puede usar este patrón en cualquier parte de la aplicación en la que no quiera que se interrumpa una tarea si el usuario coloca la aplicación en segundo plano. Un excelente candidato para este patrón sería tareas como el envío de la información de registro de un nuevo usuario al servidor o la comprobación de la información de inicio de sesión.
 
-El fragmento de código siguiente muestra cómo registrar una tarea se ejecute en segundo plano:
+El siguiente fragmento de código muestra cómo registrar una tarea para que se ejecute en segundo plano:
 
 ```csharp
 nint taskID = UIApplication.SharedApplication.BeginBackgroundTask( () => {});
@@ -42,17 +42,17 @@ FinishLongRunningTask(taskID);
 UIApplication.SharedApplication.EndBackgroundTask(taskID);
 ```
 
-El proceso de registro de pares de una tarea con un identificador único, `taskID`y, a continuación, se encapsula en la coincidencia de `BeginBackgroundTask` y `EndBackgroundTask` llamadas. Para generar el identificador, hacemos una llamada a la `BeginBackgroundTask` método en el `UIApplication` de objetos y, a continuación, inicie la tarea de ejecución prolongada, normalmente en un nuevo subproceso. Cuando se completa la tarea, llamamos a `EndBackgroundTask` y pase el mismo identificador. Esto es importante porque iOS terminará la aplicación si un `BeginBackgroundTask` llamada no tiene una coincidencia `EndBackgroundTask`.
+El proceso de registro empareja una tarea con un identificador único, `taskID`y, a continuación, la encapsula en `BeginBackgroundTask` las `EndBackgroundTask` llamadas y coincidentes. Para generar el identificador, se realiza una llamada al `BeginBackgroundTask` método en el `UIApplication` objeto y, a continuación, se inicia la tarea de ejecución prolongada, normalmente en un nuevo subproceso. Una vez completada la tarea, se `EndBackgroundTask` llama a y se pasa el mismo identificador. Esto es importante porque iOS finalizará la aplicación si una `BeginBackgroundTask` llamada no tiene una coincidencia. `EndBackgroundTask`
 
 > [!IMPORTANT]
-> Pueden ejecutar tareas en segundo plano con seguridad en el subproceso principal o en un subproceso en segundo plano, según las necesidades de la aplicación.
+> Las tareas seguras en segundo plano se pueden ejecutar en el subproceso principal o en un subproceso en segundo plano, dependiendo de las necesidades de la aplicación.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Realización de tareas durante DidEnterBackground
 
-Además de realizar una tarea de ejecución prolongada en segundo plano con seguridad, registro puede utilizarse para iniciar tareas como una aplicación se coloca en segundo plano. iOS proporciona un método de evento en el *AppDelegate* clase denominada `DidEnterBackground` que puede utilizarse para guardar el estado de la aplicación, guardar los datos de usuario y cifrar contenido confidencial antes de una aplicación entre en segundo plano. Una aplicación tiene aproximadamente cinco segundos en devolver desde este método o se cancelará. Por lo tanto, las tareas de limpieza que pueden tardar más de cinco segundos en completarse pueden llamarse desde dentro de la `DidEnterBackground` método. Estas tareas se deben invocar en un subproceso independiente.
+Además de hacer que una tarea de ejecución prolongada sea segura para el fondo, el registro se puede usar para iniciar tareas a medida que una aplicación se está poniendo en segundo plano. iOS proporciona un método de evento en la clase AppDelegate `DidEnterBackground` denominada que se puede usar para guardar el estado de la aplicación, guardar los datos de usuario y cifrar el contenido confidencial antes de que una aplicación entre en el fondo. Una aplicación tiene aproximadamente cinco segundos para devolver desde este método o se terminará. Por lo tanto, se puede llamar a las tareas de limpieza que pueden tardar más de cinco `DidEnterBackground` segundos en completarse desde dentro del método. Estas tareas se deben invocar en un subproceso independiente.
 
-El proceso es casi idéntico de registrar una tarea de ejecución prolongada. El siguiente fragmento de código muestra esto en acción:
+El proceso es casi idéntico al registro de una tarea de ejecución prolongada. En el fragmento de código siguiente se muestra esto en acción:
 
 ```csharp
 public override void DidEnterBackground (UIApplication application) {
@@ -64,27 +64,27 @@ public override void DidEnterBackground (UIApplication application) {
 }
 ```
 
-Comenzamos invalidando el `DidEnterBackground` método en el `AppDelegate`, donde registramos nuestra tarea a través de `BeginBackgroundTask` como hicimos en el ejemplo anterior. A continuación, se genera un nuevo proceso y realiza la tarea de ejecución prolongada. Tenga en cuenta que el `EndBackgroundTask` es ahora realiza llamada desde dentro de la tarea de ejecución prolongada, ya que el `DidEnterBackground` ya habrá devuelto el método.
+Comenzaremos invalidando el `DidEnterBackground` método `AppDelegate`en, donde registraremos la tarea a través `BeginBackgroundTask` de como hicimos en el ejemplo anterior. A continuación, se genera un nuevo subproceso y se realiza la tarea de ejecución prolongada. Observe que la `EndBackgroundTask` llamada se realiza ahora desde dentro de la tarea de ejecución prolongada, `DidEnterBackground` ya que el método ya se habrá devuelto.
 
 > [!IMPORTANT]
-> iOS usa una [vigilante mecanismo](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de la aplicación sigue respondiendo. Una aplicación que se emplea demasiado tiempo en `DidEnterBackground` deja de responder en la interfaz de usuario. Permite iniciar las tareas se ejecuten en segundo plano `DidEnterBackground` para devolver de manera oportuna, que la interfaz de usuario siga respondiendo y evitando que el guardián de eliminación de la aplicación.
+> iOS usa un [mecanismo de guardián](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de una aplicación sigue respondiendo. Una aplicación que emplee demasiado tiempo en `DidEnterBackground` dejará de responder en la interfaz de usuario. La puesta al día de las tareas que se ejecutan en segundo plano permite `DidEnterBackground` que se devuelva oportunamente, manteniendo la interfaz de usuario en respuesta e impidiendo que el guardián salga de la aplicación.
 
 
-## <a name="handling-background-task-time-limits"></a>Límites de tiempo de tarea en segundo plano de control
+## <a name="handling-background-task-time-limits"></a>Administrar límites de tiempo de tareas en segundo plano
 
-iOS coloca límites estrictos sobre cómo se puede ejecutar una tarea en segundo plano de larga y si el `EndBackgroundTask` no se realiza la llamada en el tiempo asignado, se terminará la aplicación. Mediante el seguimiento de los restantes de tiempo de procesamiento en segundo plano y usar controladores de expiración cuando sea necesario, podemos evitar finalizar la aplicación de iOS.
+iOS coloca límites estrictos sobre cuánto tiempo se puede ejecutar una tarea en segundo plano `EndBackgroundTask` y, si la llamada no se realiza en el tiempo asignado, se terminará la aplicación. Mediante el seguimiento del tiempo de fondo restante y el uso de controladores de expiración cuando sea necesario, podemos evitar que iOS finalice la aplicación.
 
-### <a name="accessing-background-time-remaining"></a>Obtener acceso a fondo el tiempo restante
+### <a name="accessing-background-time-remaining"></a>Acceso al tiempo restante en segundo plano
 
-Si mueve una aplicación con tareas registradas para el fondo, las tareas registradas obtendrá unos 600 segundos ejecutar. Podemos comprobar cuánto tiempo tiene la tarea que finalice mediante estático `BackgroundTimeRemaining` propiedad de la `UIApplication` clase. El código siguiente nos proporcionará el tiempo, en segundos, que ha dejado la tarea en segundo plano:
+Si una aplicación con tareas registradas se mueve al fondo, las tareas registradas obtendrán unos 600 segundos para ejecutarse. Podemos comprobar cuánto tiempo tiene la tarea para completarse mediante la propiedad estática `BackgroundTimeRemaining` de la `UIApplication` clase. El siguiente código nos dará el tiempo, en segundos, que la tarea en segundo plano ha dejado:
 
 ```csharp
 double timeRemaining = UIApplication.SharedApplication.BackgroundTimeRemaining;
 ```
 
-### <a name="avoiding-app-termination-with-expiration-handlers"></a>Evitar la terminación de la aplicación con los controladores de expiración
+### <a name="avoiding-app-termination-with-expiration-handlers"></a>Evitar la terminación de la aplicación con controladores de expiración
 
-Además de lo que proporciona acceso a la `BackgroundTimeRemaining` iOS de propiedad, proporciona una forma correcta para controlar la caducidad de tiempo en segundo plano a través de un **caducidad controlador**. Se trata de un bloque de código que se ejecutará cuando el tiempo asignado para una tarea está a punto de expirar opcional. Llama código en el controlador de expiración `EndBackgroundTask` y pasa el Id. de tarea, que indica que la aplicación se comporta bien y evita que finaliza la aplicación incluso si se ejecuta la tarea agotó el tiempo de iOS. `EndBackgroundTask` debe llamarse en el controlador de expiración, así como en el curso normal de ejecución. 
+Además de proporcionar acceso a la propiedad `BackgroundTimeRemaining` , iOS proporciona una manera estable de controlar la expiración del tiempo de fondo a través de un **controlador**de expiración. Este es un bloque opcional de código que se ejecutará cuando el tiempo asignado a una tarea esté a punto de expirar. El código del controlador de expiración llama `EndBackgroundTask` a y pasa el identificador de tarea, lo que indica que la aplicación se comporta bien y evita que Ios finalice la aplicación incluso si la tarea se ejecuta sin tiempo. `EndBackgroundTask`se debe llamar al método en el controlador de expiración, así como en el curso normal de la ejecución. 
 
 El controlador de expiración se expresa como una función anónima mediante una expresión lambda, como se muestra a continuación:
 
@@ -106,43 +106,43 @@ Task.Factory.StartNew( () => {
 });
 ```
 
-Mientras que los controladores de expiración no son necesarios para ejecutar el código, siempre debe usar un controlador de expiración con una tarea en segundo plano.
+Aunque los controladores de expiración no son necesarios para que el código se ejecute, siempre debe usar un controlador de expiración con una tarea en segundo plano.
 
  <a name="background_tasks_in_iOS_7" />
 
-## <a name="background-tasks-in-ios-7"></a>Tareas en segundo plano en iOS 7 o posterior
+## <a name="background-tasks-in-ios-7"></a>Tareas en segundo plano en iOS 7 +
 
-El cambio más importante en iOS 7 con respecto a tareas en segundo plano no es, cómo se implementan las tareas, pero cuando se ejecutan.
+El cambio más importante en iOS 7 con respecto a las tareas en segundo plano no es cómo se implementan las tareas, pero cuando se ejecutan.
 
-Recuerde que previa iOS 7, una tarea que se ejecuta en segundo plano tenía 600 segundos en completarse. Una razón para este límite es que una tarea que se ejecuta en segundo plano mantendría el dispositivo activo para la duración de la tarea:
+Recuerde que pre-iOS 7, una tarea que se ejecuta en segundo plano tenía 600 segundos en completarse. Uno de los motivos de este límite es que una tarea que se ejecuta en segundo plano mantener el dispositivo activo mientras dure la tarea:
 
- [![](ios-backgrounding-with-tasks-images/ios6.png "Gráfico de la tarea de mantener la aplicación iOS previa activo 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
+ [![](ios-backgrounding-with-tasks-images/ios6.png "Gráfico de la tarea mantener la aplicación activa antes de iOS 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
-procesamiento en segundo plano de iOS 7 está optimizado para mayor vida útil de la batería. En iOS 7, procesamiento en segundo plano se convierte en oportunista: en lugar de mantener el dispositivo activo, respetan las tareas cuando el dispositivo entra en modo de suspensión y, en su lugar, realice su procesamiento en fragmentos cuando se activa el dispositivo para controlar las llamadas de teléfono, notificaciones, entrante correos electrónicos y otros interrupciones comunes. El diagrama siguiente proporciona información sobre cómo se puede interrumpir una tarea de copia:
+el procesamiento en segundo plano de iOS 7 está optimizado para una larga duración de la batería. En iOS 7, el fondo se convierte en oportunista: en lugar de mantener el dispositivo activo, las tareas en las que el dispositivo entra en suspensión y, en su lugar, realizan su procesamiento en fragmentos cuando el dispositivo se reactiva para controlar llamadas telefónicas, notificaciones, correos electrónicos entrantes y otros interrupciones comunes. En el siguiente diagrama se proporciona información sobre cómo se puede dividir una tarea:
 
- [![](ios-backgrounding-with-tasks-images/ios7.png "Gráfico de la tarea que se va a dividir en fragmentos posteriores a iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "Gráfico de la tarea que se divide en fragmentos posteriores a iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
-Dado que la tarea en tiempo de ejecución no es ya continua, las tareas que realizan transferencias de red deben administrarse de manera diferente en iOS 7. Se recomienda utilizar los desarrolladores la `NSURlSession` API para controlar las transferencias de red. La siguiente sección es una visión general de transferencias en segundo plano.
+Dado que el tiempo de ejecución de la tarea ya no es continuo, las tareas que realizan transferencias de red deben administrarse de manera diferente en iOS 7. Se recomienda a los desarrolladores que `NSURlSession` usen la API para controlar las transferencias de red. La siguiente sección es una introducción a las transferencias en segundo plano.
 
  <a name="background-transfers" />
 
 ## <a name="background-transfers"></a>Transferencias en segundo plano
 
-La red troncal de transferencias en segundo plano en iOS 7 es la nueva `NSURLSession` API. `NSURLSession` nos permite crear tareas para:
+La red troncal de las transferencias en segundo plano en `NSURLSession` iOS 7 es la nueva API. `NSURLSession`nos permite crear tareas para:
 
-1.  Transferencia de contenido a través de las interrupciones de red y el dispositivo.
-1.  Cargar y descargar archivos de gran tamaño ( *el servicio de transferencia en segundo plano* ).
+1. Transferir contenido a través de interrupciones de red y dispositivos.
+1. Cargar y descargar archivos grandes ( *servicio de transferencia en segundo plano* ).
 
 
 Echemos un vistazo más de cerca a cómo funciona esto.
 
-### <a name="nsurlsession-api"></a>NSURLSession API
+### <a name="nsurlsession-api"></a>API de NSURLSession
 
- `NSURLSession` es una API eficaz para transferir contenido a través de la red. Proporciona un conjunto de herramientas para controlar la transferencia de datos a través de las interrupciones de red y los cambios en los Estados de la aplicación.
+ `NSURLSession`es una API eficaz para transferir contenido a través de la red. Proporciona un conjunto de herramientas para administrar la transferencia de datos a través de las interrupciones de red y los cambios en los Estados de la aplicación.
 
-El `NSURLSession` API crea una o varias sesiones, que a su vez generan tareas para avanzar los bloques de datos relacionadas a través de la red. Las tareas se ejecutan de forma asincrónica para transferir datos de manera rápida y confiable. Dado que `NSURLSession` es asincrónica, cada sesión requiere un bloque de controlador de finalización para permitir que el sistema y la aplicación saber cuando se completa una transferencia.
+La `NSURLSession` API crea una o varias sesiones que, a su vez, generan tareas para desplazar los bloques de datos relacionados a través de la red. Las tareas se ejecutan de forma asincrónica para transferir datos de forma rápida y confiable. Dado `NSURLSession` que es asincrónico, cada sesión requiere un bloque de controlador de finalización para permitir que el sistema y la aplicación sepan cuándo se completa una transferencia.
 
-Para realizar una transferencia de red que sea válida en Ios7 previo y posterior de iOS 7, compruebe si un `NSURLSession` está disponible para las transferencias de puesta en cola y utilizar una tarea en segundo plano regular para realizar la transferencia si no es así:
+Para realizar una transferencia de red que sea válida en las versiones anteriores a iOS 7 y posteriores a iOS 7, compruebe `NSURLSession` si un está disponible para poner en cola las transferencias y use una tarea en segundo plano normal para realizar la transferencia si no lo está:
 
 ```csharp
 if ([NSURLSession class]) {
@@ -155,16 +155,16 @@ else {
 ```
 
 > [!IMPORTANT]
-> Evite realizar llamadas para actualizar la interfaz de usuario desde un segundo plano en el código de 6 compatibles de iOS, como iOS 6 no es compatible con las actualizaciones de la interfaz de usuario en segundo plano y finalizará la aplicación.
+> Evite realizar llamadas para actualizar la interfaz de usuario desde el fondo en código compatible con iOS 6, ya que iOS 6 no es compatible con las actualizaciones de la interfaz de usuario en segundo plano y finalizará la aplicación.
 
 
-El `NSURLSession` API incluye un amplio conjunto de características para controlar la autenticación, administrar las transferencias con errores y notificar los errores de cliente - pero no en el servidor de. Ayuda a salvar distancia que las interrupciones en la tarea ejecutan tiempo que se introdujo en iOS 7 y también proporciona compatibilidad para transferir archivos grandes de manera rápida y confiable. La siguiente sección aborda esta segunda característica.
+La `NSURLSession` API incluye un amplio conjunto de características para controlar la autenticación, administrar las transferencias con error y notificar los errores del lado cliente, pero no de los servidores. Ayuda a salvar las interrupciones en el tiempo de ejecución de la tarea introducido en iOS 7, y también proporciona compatibilidad para transferir archivos grandes de forma rápida y confiable. En la siguiente sección se explora esta segunda característica.
 
 ### <a name="background-transfer-service"></a>Servicio de transferencia en segundo plano
 
-Antes de iOS 7, cargar o descargar archivos en segundo plano no son confiables. Tareas en segundo plano obtención un tiempo limitado para ejecutarse, pero el tiempo necesario para transferir un archivo varía en función de la red y el tamaño del archivo. En iOS 7, podemos usar un `NSURLSession` para cargar y descargar archivos de gran tamaño correctamente. La instancia concreta `NSURLSession` tipo de sesión que controla las transferencias de red de archivos grandes en segundo plano se conoce como el *el servicio de transferencia en segundo plano*.
+Antes de iOS 7, la carga o descarga de archivos en segundo plano no era confiable. Las tareas en segundo plano obtienen un tiempo limitado para ejecutarse, pero el tiempo que se tarda en transferir un archivo varía según la red y el tamaño del archivo. En iOS 7, podemos usar `NSURLSession` para cargar y descargar correctamente archivos grandes. El tipo `NSURLSession` de sesión concreto que controla las transferencias de red de archivos grandes en segundo plano se conoce como *servicio de transferencia en segundo plano*.
 
-Las transferencias que se inicia mediante el servicio de transferencia en segundo plano son administradas por el sistema operativo y proporcionan las API para controlar los errores y la autenticación. Dado que no se enlazan las transferencias por un límite de tiempo arbitrario, se puede usar para cargar o descargar archivos de gran tamaño, contenido en segundo plano y mucho más la actualización automática. Hacer referencia a la [tutorial de transferencia en segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) para obtener más información sobre cómo implementar el servicio.
+El sistema operativo administra las transferencias iniciadas mediante el servicio de transferencia en segundo plano y proporciona las API para controlar la autenticación y los errores. Dado que las transferencias no están enlazadas por un límite de tiempo arbitrario, se pueden usar para cargar o descargar archivos de gran tamaño, actualizar el contenido de forma automática en segundo plano, etc. Consulte el [tutorial de transferencia en segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) para obtener más información sobre cómo implementar el servicio.
 
-El servicio de transferencia en segundo plano a menudo se empareja con notificaciones remotas para ayudar a las aplicaciones actualizar contenido en segundo plano o capturar en segundo plano. En las dos secciones siguientes, se introduce el concepto de registro de aplicaciones completas para ejecutarse en segundo plano en iOS 6 e iOS 7.
+A menudo, el servicio de transferencia en segundo plano se empareja con la captura en segundo plano o las notificaciones remotas para ayudar a las aplicaciones a actualizar el contenido en segundo plano. En las dos secciones siguientes, se presenta el concepto de registro de aplicaciones completas para que se ejecuten en segundo plano en iOS 6 e iOS 7.
 

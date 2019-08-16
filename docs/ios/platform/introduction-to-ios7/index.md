@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 067d97e6a36dae6c11f056241c08c21899e96c08
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 885cf4b77d4eac0668a2e70c57187e9b23a91dd1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649330"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527569"
 ---
 # <a name="introduction-to-ios-7"></a>Introducción a iOS 7
 
@@ -28,8 +28,8 @@ iOS 7 aumenta la compatibilidad con la animación en UIKit, lo que permite que l
 
  `UIView`ahora admite animar los cambios de propiedad con un efecto elástico. Para agregar esto, llame al `AnimateNotify` método o `AnimateNotifyAsync` , pasando los valores de la relación de amortiguación del muelle y la velocidad inicial del muelle, tal como se describe a continuación:
 
--  `springWithDampingRatio`: Un valor entre 0 y 1, donde la oscilación aumenta para un valor menor.
--  `initialSpringVelocity`: Velocidad inicial del muelle como un porcentaje de la distancia total de la animación por segundo.
+- `springWithDampingRatio`: Un valor entre 0 y 1, donde la oscilación aumenta para un valor menor.
+- `initialSpringVelocity`: Velocidad inicial del muelle como un porcentaje de la distancia total de la animación por segundo.
 
 
 El código siguiente produce un efecto elástico cuando cambia el centro de la vista de imagen:
@@ -97,19 +97,19 @@ La API es declarativa por naturaleza. Para declarar cómo se comportan las inter
 
 Hay varios comportamientos primitivos distintos disponibles para desencadenar interacciones complejas, entre las que se incluyen:
 
--  `UIAttachmentBehavior`: Adjunta dos elementos dinámicos de modo que se mueven juntos o adjunta un elemento dinámico a un punto de datos adjuntos.
--  `UICollisionBehavior`: Permite que los elementos dinámicos participen en colisiones.
--  `UIDynamicItemBehavior`: Especifica un conjunto general de propiedades que se van a aplicar a los elementos dinámicos, como elasticidad, densidad y fricción.
--  `UIGravityBehavior`: Aplica la gravedad a un elemento dinámico, lo que hace que los elementos se aceleren en la dirección Gravitational.
--  `UIPushBehavior`: Aplica Force a un elemento dinámico.
--  `UISnapBehavior`: Permite que un elemento dinámico se ajuste a una posición con un efecto elástico.
+- `UIAttachmentBehavior`: Adjunta dos elementos dinámicos de modo que se mueven juntos o adjunta un elemento dinámico a un punto de datos adjuntos.
+- `UICollisionBehavior`: Permite que los elementos dinámicos participen en colisiones.
+- `UIDynamicItemBehavior`: Especifica un conjunto general de propiedades que se van a aplicar a los elementos dinámicos, como elasticidad, densidad y fricción.
+- `UIGravityBehavior`: Aplica la gravedad a un elemento dinámico, lo que hace que los elementos se aceleren en la dirección Gravitational.
+- `UIPushBehavior`: Aplica Force a un elemento dinámico.
+- `UISnapBehavior`: Permite que un elemento dinámico se ajuste a una posición con un efecto elástico.
 
 
 Aunque hay muchos primitivos, el proceso general para agregar interacciones basadas en el física a una vista mediante UIKit Dynamics es coherente entre los distintos comportamientos:
 
-1.  Cree un animador dinámico.
-1.  Cree comportamientos.
-1.  Agregue comportamientos al animador dinámico.
+1. Cree un animador dinámico.
+1. Cree comportamientos.
+1. Agregue comportamientos al animador dinámico.
 
 
 ### <a name="dynamics-example"></a>Ejemplo de Dynamics
@@ -230,9 +230,9 @@ Para obtener más información, consulte nuestro [TextKit](~/ios/platform/textki
 
 iOS 7 cambia cuándo y cómo se realiza el trabajo en segundo plano. La finalización de la tarea en iOS 7 ya no mantiene las aplicaciones activas cuando las tareas se ejecutan en segundo plano y las aplicaciones se reactivarán para el procesamiento en segundo plano de forma no contigua. iOS 7 también agrega tres nuevas API para actualizar aplicaciones con contenido nuevo en segundo plano:
 
--  Captura en segundo plano: permite que las aplicaciones actualicen el contenido en segundo plano a intervalos regulares.
--  Notificaciones remotas: permite que las aplicaciones actualicen el contenido al recibir una notificación de envío. Las notificaciones pueden ser silenciosas o pueden mostrar un banner en la pantalla de bloqueo.
--  Servicio de transferencia en segundo plano: permite cargar y descargar datos, como archivos grandes, sin un límite de tiempo fijo.
+- Captura en segundo plano: permite que las aplicaciones actualicen el contenido en segundo plano a intervalos regulares.
+- Notificaciones remotas: permite que las aplicaciones actualicen el contenido al recibir una notificación de envío. Las notificaciones pueden ser silenciosas o pueden mostrar un banner en la pantalla de bloqueo.
+- Servicio de transferencia en segundo plano: permite cargar y descargar datos, como archivos grandes, sin un límite de tiempo fijo.
 
 
 Para obtener más información sobre las nuevas funcionalidades de multitarea, vea las secciones de iOS de la guía de procesamiento en [segundo plano](~/ios/app-fundamentals/backgrounding/index.md)de Xamarin.

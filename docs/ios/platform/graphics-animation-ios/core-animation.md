@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 12bb8fe6f8ed77ea9091c165d4656da292266679
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9412012949cd012d572b65b7af6e2890160338dc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656613"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527946"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animación básica en Xamarin. iOS
 
@@ -40,9 +40,9 @@ UIKit proporciona varias características que facilitan la adición de animacion
 
 En esta sección se describen las características de animación de UIKit, entre las que se incluyen:
 
--  Transiciones entre controladores
--  Transiciones entre vistas
--  Animación de la propiedad View
+- Transiciones entre controladores
+- Transiciones entre vistas
+- Animación de la propiedad View
 
 
 ### <a name="view-controller-transitions"></a>Transiciones de controladores de vistas
@@ -59,9 +59,9 @@ SecondViewController vc2 = new SecondViewController {
 
 En este caso, `PartialCurl` se usa una animación, aunque hay varias otras disponibles, entre las que se incluyen:
 
--  `CoverVertical`: Se desliza hacia arriba desde la parte inferior de la pantalla.
--  `CrossDissolve`: La vista antigua atenúa & la nueva vista se atenúa.
--  `FlipHorizontal`: Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
+- `CoverVertical`: Se desliza hacia arriba desde la parte inferior de la pantalla.
+- `CrossDissolve`: La vista antigua atenúa & la nueva vista se atenúa.
+- `FlipHorizontal`: Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
 
 
 Para animar la transición, `true` pase como el segundo argumento `PresentViewController`a:
@@ -100,12 +100,12 @@ En la captura de pantalla siguiente se muestra la transición animada entre `Tra
 
 UIKit admite animar una variedad de propiedades de `UIView` la clase de forma gratuita, entre las que se incluyen:
 
--  Fotograma
--  Límites
--  Centrar
--  Alpha
--  Transformación
--  Color
+- Fotograma
+- Límites
+- Centrar
+- Alpha
+- Transformación
+- Color
 
 
 Estas animaciones se producen implícitamente mediante la especificación de los cambios `NSAction` de propiedad en un delegado `UIView.Animate` que se pasa al método estático. Por ejemplo, el código siguiente anima el punto central de un `UIImageView`:

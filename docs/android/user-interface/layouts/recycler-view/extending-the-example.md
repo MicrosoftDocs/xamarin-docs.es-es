@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: fd813427836b0250b84941eca54d6bbe6219518e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645334"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522492"
 ---
 # <a name="extending-the-recyclerview-example"></a>Extender el ejemplo de RecyclerView
 
@@ -26,11 +26,11 @@ Cuando un usuario toca un elemento en el `RecyclerView`, se genera un evento de 
 
 Para ilustrar cómo controlar los eventos de clic de elemento, en los pasos siguientes se explica cómo se modifica la aplicación básica de visualización de fotografías para informar de qué fotografía ha sido tocada por el usuario. Cuando se produce un evento de clic de elemento en la aplicación de ejemplo, tiene lugar la siguiente secuencia:
 
-1.  La fotografía `CardView` detecta el evento de clic de elemento y lo notifica al adaptador.
+1. La fotografía `CardView` detecta el evento de clic de elemento y lo notifica al adaptador.
 
-2.  El adaptador reenvía el evento (con información de posición del elemento) al controlador de clic de elemento de la actividad.
+2. El adaptador reenvía el evento (con información de posición del elemento) al controlador de clic de elemento de la actividad.
 
-3.  El controlador de clic de elemento de la actividad responde al evento de clic del elemento.
+3. El controlador de clic de elemento de la actividad responde al evento de clic del elemento.
 
 En primer lugar, se agrega un `ItemClick` miembro del controlador de `PhotoAlbumAdapter` eventos denominado a la definición de clase:
 

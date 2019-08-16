@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644941"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528668"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalización de la apariencia de una tabla en Xamarin. iOS
 
@@ -22,10 +22,10 @@ La manera más sencilla de cambiar la apariencia de una tabla es utilizar un est
 
 Hay cuatro estilos integrados:
 
--  **Valor predeterminado** : admite `UIImageView`un.
--  **Subtítulo** : admite `UIImageView` un subtítulo y.
--  **Value1** : subtítulo alineado a la `UIImageView`derecha, es compatible con.
--  **Valor2** : el título está alineado a la derecha y el subtítulo está alineado a la izquierda (pero no hay ninguna imagen).
+- **Valor predeterminado** : admite `UIImageView`un.
+- **Subtítulo** : admite `UIImageView` un subtítulo y.
+- **Value1** : subtítulo alineado a la `UIImageView`derecha, es compatible con.
+- **Valor2** : el título está alineado a la derecha y el subtítulo está alineado a la izquierda (pero no hay ninguna imagen).
 
 
 Estas capturas de pantallas muestran cómo aparece cada estilo:
@@ -53,10 +53,10 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 Las celdas pueden tener los siguientes accesorios agregados a la derecha de la vista:
 
--   **Marca de verificación** : se puede utilizar para indicar la selección múltiple en una tabla.
--   **DetailButton** : responde a la entrada táctil independientemente del resto de la celda, lo que le permite llevar a cabo una función diferente para tocar la propia celda (como abrir una ventana emergente o nueva que no forma parte `UINavigationController` de una pila).
--   **DisclosureIndicator** : se usa normalmente para indicar que al tocar la celda se abrirá otra vista.
--   **DetailDisclosureButton** : una combinación de `DetailButton` y. `DisclosureIndicator`
+- **Marca de verificación** : se puede utilizar para indicar la selección múltiple en una tabla.
+- **DetailButton** : responde a la entrada táctil independientemente del resto de la celda, lo que le permite llevar a cabo una función diferente para tocar la propia celda (como abrir una ventana emergente o nueva que no forma parte `UINavigationController` de una pila).
+- **DisclosureIndicator** : se usa normalmente para indicar que al tocar la celda se abrirá otra vista.
+- **DetailDisclosureButton** : una combinación de `DetailButton` y. `DisclosureIndicator`
 
 
 Este es el aspecto que tiene:
@@ -124,9 +124,9 @@ En el ejemplo CellCustomTable se implementa `UITableViewCell` una subclase que d
 
 La clase de celda personalizada solo consta de tres métodos:
 
--   **Constructor** : crea los controles de interfaz de usuario y establece las propiedades de estilo personalizadas (por ejemplo, fuente, tamaño y colores).
--   **UpdateCell** : método para `UITableView.GetCell` que se va a utilizar para establecer las propiedades de la celda.
--   **LayoutSubviews** : establezca la ubicación de los controles de la interfaz de usuario. En el ejemplo, cada celda tiene el mismo diseño, pero una celda más compleja (especialmente las que tienen tamaños variables) puede necesitar posiciones de diseño diferentes en función del contenido que se muestre.
+- **Constructor** : crea los controles de interfaz de usuario y establece las propiedades de estilo personalizadas (por ejemplo, fuente, tamaño y colores).
+- **UpdateCell** : método para `UITableView.GetCell` que se va a utilizar para establecer las propiedades de la celda.
+- **LayoutSubviews** : establezca la ubicación de los controles de la interfaz de usuario. En el ejemplo, cada celda tiene el mismo diseño, pero una celda más compleja (especialmente las que tienen tamaños variables) puede necesitar posiciones de diseño diferentes en función del contenido que se muestre.
 
 
 A continuación se muestra el código de ejemplo completo de **CellCustomTable > CustomVegeCell.CS** :

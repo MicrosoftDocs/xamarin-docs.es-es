@@ -1,53 +1,55 @@
 ---
 title: Inspección de aplicaciones activas
-description: Este documento describe cómo usar el Inspector de Xamarin para inspeccionar las aplicaciones. También describe las limitaciones de la herramienta de Xamarin Inspector.
+description: En este documento se describe cómo usar el Xamarin Inspector para inspeccionar las aplicaciones. También se describen las limitaciones de la herramienta de Xamarin Inspector.
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2def0a01bdd28af5eefb76afc19a0e49fd1df355
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: a22a0f06d6c02bf3600333eb00a26fbd1315440a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831550"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528976"
 ---
 # <a name="inspecting-live-applications"></a>Inspección de aplicaciones activas
 
-Inspección de la aplicación activa está disponible para los clientes empresariales.
+La inspección de aplicaciones activas está disponible para los clientes empresariales.
 
-1. Abra cualquiera [admite el proyecto de aplicación](~/tools/inspector/install.md#supported-platforms) en Visual Studio para Mac o Visual Studio.
+1. Abra cualquier [proyecto de aplicación compatible](~/tools/inspector/install.md#supported-platforms) en Visual Studio para Mac o Visual Studio.
 1. Ejecute la aplicación en modo de depuración.
-1. Haga clic en el **inspeccionar** botón en la barra de herramientas IDE (en Visual Studio, el **inspeccionar de aplicación actual...**  también está disponible en el elemento de menú el **herramientas** o **depurar** menú).
+1. Haga clic en el botón inspeccionar en la barra de herramientas del IDE (en Visual Studio, el elemento de menú **inspeccionar aplicación actual...** también está disponible en el menú **herramientas** o depurar).
 
-[![](inspect-images/mac-heres-the-button.png "Haga clic en el botón Inspeccionar en la barra de herramientas IDE")](inspect-images/mac-heres-the-button.png#lightbox)
+[![](inspect-images/mac-heres-the-button.png "Haga clic en el botón inspeccionar en la barra de herramientas del IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 
-Se abrirá una nueva ventana de cliente de Xamarin Inspector, con un nuevo símbolo del sistema REPL.
+Se abrirá una nueva ventana del cliente de Xamarin Inspector, con un mensaje nuevo de REPL.
 
-[![](inspect-images/inspector-0.7.0-map-inspect-small.png "Se abrirá una nueva ventana de cliente de Xamarin Inspector, con un nuevo símbolo del sistema REPL")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "Se abrirá una nueva ventana del cliente de Xamarin Inspector, con un mensaje de REPL actualizado")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
-Una vez que aparece esta ventana, tendrá una interactivo C# símbolo del sistema que puede usar para ejecutar y evaluar C# instrucciones y expresiones. ¿Qué hace únicos es que el código se evalúa en el contexto del proceso de destino. En este caso, vamos a presentar el código que se ejecuta en la aplicación de iOS muestra.
+Una vez que aparezca esta ventana, tendrá un C# símbolo del sistema interactivo que puede usar para ejecutar C# y evaluar instrucciones y expresiones. Lo que lo convierte en único es que el código se evalúa en el contexto del proceso de destino. En este caso, se muestra el código que se ejecuta en la aplicación iOS mostrada.
 
-Los cambios realizados en el estado de la aplicación realmente se producen en el proceso de destino, por lo que puede usar C# para cambiar la aplicación live, o puede inspeccionar el estado de la aplicación en directo.
+Cualquier cambio que se realice en el estado de la aplicación se produce realmente en el proceso de destino, por lo que C# puede usar para cambiar la aplicación en directo o puede inspeccionar el estado de la aplicación en directo.
 
-Por ejemplo, en iOS, podríamos queremos encontrar nuestra clase de delegado de UIApplication, que es nuestro controlador principal (donde se almacenan en una gran cantidad de estado de la aplicación):
+Por ejemplo, en iOS, es posible que quiera encontrar nuestra clase de delegado UIApplication, que es nuestro principal controlador (donde se almacena una gran parte del estado de la aplicación):
 
-    var del = (MyApp.AppDelegate) UIApplication.SharedApplication.Delegate
-    del.Database.GetAllCustomers ()
-    ...
-    del.Database.AddCustomer (...)
+```csharp
+var del = (MyApp.AppDelegate) UIApplication.SharedApplication.Delegate
+del.Database.GetAllCustomers ()
+...
+del.Database.AddCustomer (...)
+```
 
-(Tenga en cuenta que cada envío se produce en un editor de varias líneas. `Shift + Enter` creará una nueva línea, y `Cmd + Enter` (`Ctrl + Enter` en Windows) enviará el código para la evaluación. `Enter` envía de forma automática cuando la seguridad.)
+(Tenga en cuenta que cada envío se produce en un editor multilínea. `Shift + Enter`creará una nueva línea y `Cmd + Enter` (`Ctrl + Enter` en Windows) enviará el código para su evaluación. `Enter`envía automáticamente cuando es seguro).
 
-Una manera más cómoda para llegar a los elementos visuales de la aplicación es mediante el botón "Inspeccionar". Una vez que presione esto, puede seleccionar un elemento de interfaz de usuario haciendo clic en la aplicación. La variable `selectedView` se asignará a apuntar al elemento real en la pantalla. En la captura de pantalla anterior, puede ver cómo acceder y, a continuación, puede editar `selectedView.BarTintColor` en el `UISearchBar` nos hubiéramos seleccionado.
+Una manera más cómoda de llegar a los elementos visuales de la aplicación es mediante el botón "inspeccionar". Una vez que lo presione, puede seleccionar un elemento de la interfaz de usuario haciendo clic en la aplicación. La variable `selectedView` se asignará para que apunte al elemento real de la pantalla. En la captura de pantalla anterior, puede ver cómo se obtuvo acceso a y `selectedView.BarTintColor` después se `UISearchBar` editó en el que hemos seleccionado.
 
-El árbol visual también es muy útil. Representa la instantánea actual de la jerarquía de vistas. Puede seleccionar filas que se va a establecer `selectedView` en REPL y para ver los valores de propiedad de la vista. En Mac, puede interactuar con una visualización seccionada 3D de las vistas en capas. En Windows, puede editar los valores de propiedad de una vista visualmente.
+El árbol visual dinámico también es muy útil. Representa la instantánea actual de la jerarquía de vistas. Puede seleccionar las filas que se `selectedView` van a establecer en REPL y ver los valores de propiedad de la vista. En Mac, puede interactuar con una visualización en 3D seccionada de las vistas por capas. En Windows, puede editar visualmente los valores de propiedad de una vista.
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Solo se admite la selección de la vista en la pantalla principal.
-- Edición de la cuadrícula de propiedades no está disponible para Mac y en Windows se limita a algunos tipos de datos. Utilice la replicación para una edición más eficaz.
-- Mientras el complemento/extensión de Inspector está instalada y habilitada en el IDE, vamos a insertar código en la aplicación cada vez que se inicia en modo de depuración. Si observa cualquier comportamiento extraño en su aplicación, vuelva a intentar deshabilitar o desinstalar el complemento/extensión de Inspector, reiniciar el IDE y nueva comprobación. Y, por favor, [archivar errores](~/tools/inspector/install.md#reporting-bugs) para hacernos saber!
-- Inspeccionar un elemento de interfaz de usuario hace que ésta cambie en cualquier caso, por favor, [háganoslo saber](~/tools/inspector/install.md#reporting-bugs), ya que esto puede indicar un error.
+- La selección de vista solo se admite en la pantalla principal.
+- La edición de la cuadrícula de propiedades no está disponible para Mac y, en Windows, está limitado a algunos tipos de datos. Use REPL para una edición más eficaz.
+- Siempre y cuando la extensión AddIn/Extension esté instalada y habilitada en el IDE, se inserta código en la aplicación cada vez que se inicia en modo de depuración. Si observa un comportamiento extraño en la aplicación, intente deshabilitar o desinstalar el complemento o la extensión del inspector, reiniciar el IDE y volver a realizar la comprobación. Y registre los [errores](~/tools/inspector/install.md#reporting-bugs) para que podamos saberlo.
+- Si la inspección de un elemento de la interfaz de usuario hace que cambie en cualquier caso, [háganoslo saber](~/tools/inspector/install.md#reporting-bugs), ya que esto puede indicar un error.
 

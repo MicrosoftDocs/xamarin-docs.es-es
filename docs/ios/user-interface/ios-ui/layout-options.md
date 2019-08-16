@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: b825b0d7f9e18350514e3f84e70f901f5fcb6724
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 06d7ef896a560040f2e2820945264b92d9cf2ada
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655925"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528488"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño en Xamarin. iOS
 
 Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o se gira una vista:
 
--  **Ajuste** automático de tamaño: el inspector de ajuste automático de tamaño del diseñador proporciona una `AutoresizingMask` manera de establecer las propiedades. Esto permitirá que un control se delimite a los bordes de su contenedor o corrija su tamaño. El ajuste automático de tamaño funciona en todas las versiones de iOS. Esto se describe con más detalle a continuación.
--  **Diseño automático** : característica, introducida en iOS 6 que permite un control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos en relación con otros elementos en la superficie de diseño. Este tema se trata con más detalle en la guía [diseño automático con Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) .
+- **Ajuste** automático de tamaño: el inspector de ajuste automático de tamaño del diseñador proporciona una `AutoresizingMask` manera de establecer las propiedades. Esto permitirá que un control se delimite a los bordes de su contenedor o corrija su tamaño. El ajuste automático de tamaño funciona en todas las versiones de iOS. Esto se describe con más detalle a continuación.
+- **Diseño automático** : característica, introducida en iOS 6 que permite un control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos en relación con otros elementos en la superficie de diseño. Este tema se trata con más detalle en la guía [diseño automático con Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) .
 
 ## <a name="autosizing"></a>Cambiar automáticamente
 
@@ -31,7 +31,7 @@ Cuando se selecciona un control, esto le permite especificar manualmente la ubic
 
  [![](layout-options-images/image42.png "Diseñador de Visual Studio para Mac")](layout-options-images/image42.png#lightbox)
 
-Al ajustar un *muelle* , se cambiará el tamaño de la vista basándose en el ancho o el alto de la vista primaria. Al ajustar *una forma* , la vista mantendrá una distancia constante entre sí misma y su vista primaria, en ese borde concreto.
+Al ajustar un *muelle* , se cambiará el tamaño de la vista basándose en el ancho o el alto de la vista primaria. Al ajustar una forma, la vista mantendrá una distancia constante entre sí misma y su vista primaria, en ese borde concreto.
 
 Esta configuración también se puede establecer en el código:
 

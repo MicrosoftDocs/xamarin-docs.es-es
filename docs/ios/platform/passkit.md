@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 2bd694d903da9f30f8fffa5fea991c1f386752dd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656384"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528319"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -31,17 +31,17 @@ Las características de PassKit descritas en este documento requieren iOS 6 y Xc
 
 El problema clave que resuelve PassKit es la distribución y la administración de códigos de barras. Estos son algunos ejemplos del mundo real de cómo se usan los códigos de barras:
 
--   **Compra de entradas de cine en línea**: los clientes suelen recibir un correo electrónico con un código de barras que representa sus entradas. Este código de barras se imprime y se lleva al cine para digitalizarlo en la taquilla.
--   **Tarjetas de fidelización**: los clientes llevan varias tarjetas diferentes específicas de cada tienda en la cartera o el bolso, para mostrar y digitalizar cuando compran productos.
--   **Cupones**: los cupones se distribuyen a través del correo electrónico, como páginas web imprimibles, a través de buzones de correo y como códigos de barras en periódicos y revistas. Los clientes pueden llevarlos a una tienda y digitalizarlos para recibir productos, servicios o descuentos a cambio.
--   **Fases de incorporación** : similar a la compra de un vale de película.
+- **Compra de entradas de cine en línea**: los clientes suelen recibir un correo electrónico con un código de barras que representa sus entradas. Este código de barras se imprime y se lleva al cine para digitalizarlo en la taquilla.
+- **Tarjetas de fidelización**: los clientes llevan varias tarjetas diferentes específicas de cada tienda en la cartera o el bolso, para mostrar y digitalizar cuando compran productos.
+- **Cupones**: los cupones se distribuyen a través del correo electrónico, como páginas web imprimibles, a través de buzones de correo y como códigos de barras en periódicos y revistas. Los clientes pueden llevarlos a una tienda y digitalizarlos para recibir productos, servicios o descuentos a cambio.
+- **Fases de incorporación** : similar a la compra de un vale de película.
 
 PassKit ofrece una alternativa para cada uno de estos escenarios:
 
--   **Entradas de cine**: después de comprarla, el cliente agrega la tarjeta de la entrada de un evento (mediante el correo electrónico o un vínculo de un sitio web). Conforme se acerque la hora de la película, la tarjeta aparecerá automáticamente en la pantalla de bloqueo como recordatorio y, al llegar al cine, la tarjeta se puede recuperar y mostrar fácilmente en Wallet para que la digitalicen.
--   **Tarjetas de fidelización**: en lugar de (o además de) proporcionar una tarjeta física, las tiendas pueden emitir (mediante correo electrónico o tras iniciar sesión en un sitio web) una tarjeta digital de la tienda. La tienda puede proporcionar características adicionales, como actualizar el saldo de la cuenta en la tarjeta mediante notificaciones de inserción y, mediante los servicios de geolocalización, la tarjeta podría aparecer automáticamente en la pantalla de bloqueo cuando el cliente esté cerca de la ubicación de una tienda.
--   **Cupones**: se pueden generar fácilmente tarjetas de cupones con características únicas para ayudar a realizar el seguimiento y se pueden distribuir mediante vínculos de correo electrónico o sitios web. Los cupones descargados pueden aparecer automáticamente en la pantalla de bloqueo cuando el usuario esté cerca de una ubicación específica o en una fecha determinada (por ejemplo, cuando se aproxime la fecha de expiración). Dado que los cupones se almacenan en el teléfono del usuario, están siempre a mano y no se pierden. Los cupones pueden animar a los clientes a descargar aplicaciones complementarias porque los vínculos del App Store se pueden incorporar en la tarjeta, lo que aumenta la interacción con el cliente.
--   **Tarjetas de embarque**: después de un proceso de facturación en línea, el cliente recibiría la tarjeta de embarque mediante correo electrónico o un vínculo. Una aplicación complementaria proporcionada por el proveedor de transporte podría incluir el proceso de facturación y permitir también al cliente realizar funciones adicionales, como elegir su asiento o comida. El proveedor de transporte puede usar notificaciones de inserción para actualizar la tarjeta si el transporte se retrasa o cancela. Conforme se acerque la hora del embarque, la tarjeta aparecerá en la pantalla de bloqueo como recordatorio y para proporcionar un acceso rápido a ella.
+- **Entradas de cine**: después de comprarla, el cliente agrega la tarjeta de la entrada de un evento (mediante el correo electrónico o un vínculo de un sitio web). Conforme se acerque la hora de la película, la tarjeta aparecerá automáticamente en la pantalla de bloqueo como recordatorio y, al llegar al cine, la tarjeta se puede recuperar y mostrar fácilmente en Wallet para que la digitalicen.
+- **Tarjetas de fidelización**: en lugar de (o además de) proporcionar una tarjeta física, las tiendas pueden emitir (mediante correo electrónico o tras iniciar sesión en un sitio web) una tarjeta digital de la tienda. La tienda puede proporcionar características adicionales, como actualizar el saldo de la cuenta en la tarjeta mediante notificaciones de inserción y, mediante los servicios de geolocalización, la tarjeta podría aparecer automáticamente en la pantalla de bloqueo cuando el cliente esté cerca de la ubicación de una tienda.
+- **Cupones**: se pueden generar fácilmente tarjetas de cupones con características únicas para ayudar a realizar el seguimiento y se pueden distribuir mediante vínculos de correo electrónico o sitios web. Los cupones descargados pueden aparecer automáticamente en la pantalla de bloqueo cuando el usuario esté cerca de una ubicación específica o en una fecha determinada (por ejemplo, cuando se aproxime la fecha de expiración). Dado que los cupones se almacenan en el teléfono del usuario, están siempre a mano y no se pierden. Los cupones pueden animar a los clientes a descargar aplicaciones complementarias porque los vínculos del App Store se pueden incorporar en la tarjeta, lo que aumenta la interacción con el cliente.
+- **Tarjetas de embarque**: después de un proceso de facturación en línea, el cliente recibiría la tarjeta de embarque mediante correo electrónico o un vínculo. Una aplicación complementaria proporcionada por el proveedor de transporte podría incluir el proceso de facturación y permitir también al cliente realizar funciones adicionales, como elegir su asiento o comida. El proveedor de transporte puede usar notificaciones de inserción para actualizar la tarjeta si el transporte se retrasa o cancela. Conforme se acerque la hora del embarque, la tarjeta aparecerá en la pantalla de bloqueo como recordatorio y para proporcionar un acceso rápido a ella.
 
 En esencia, PassKit proporciona una forma sencilla y cómoda de almacenar y mostrar códigos de barras en el dispositivo iOS. Con el tiempo adicional y la integración de la pantalla de bloqueo de ubicación, las notificaciones de inserción y la aplicación complementaria lo integran ofrece una base para servicios de ventas, vales y facturación muy sofisticados.
 
@@ -53,11 +53,11 @@ PassKit no es solo una API dentro de CocoaTouch, sino que forma parte de un ecos
 
 Cada parte del ecosistema tiene un rol claramente definido:
 
--   **Wallet**: aplicación de iOS integrada de Apple que almacena y muestra tarjetas. Este es el único lugar en que se representan las tarjetas para usarlas en el mundo real (es decir, se muestra el código de barras junto con todos los datos localizados en la tarjeta).
--   **Aplicaciones complementarias**: aplicaciones de iOS 6 compiladas por proveedores de tarjetas para ampliar la funcionalidad de las tarjetas que emiten, como dar un valor añadido a la tarjeta de una tienda, cambiar el asiento en una tarjeta de embarque u otra función específica del negocio. Las aplicaciones complementarias no son necesarias para que una tarjeta sea útil.
--   **Su servidor**: un servidor seguro donde se pueden generar y firmar las tarjetas para distribuirse. Su aplicación complementaria puede conectarse al servidor para generar nuevas tarjetas o solicitar actualizaciones de tarjetas existentes. Si quiere, también puede implementar la API de servicio web a la que llamaría Wallet para actualizar las tarjetas.
--   **Servidores de APNS**: el servidor tiene la capacidad de notificar a Wallet las actualizaciones de una tarjeta en un dispositivo determinado con APNS. Envíe una notificación de inserción a Wallet, que después se pondrá en contacto con el servidor para obtener detalles del cambio. Las aplicaciones complementarias no tienen que implementar APNS para esta característica (pueden escuchar la notificación `PKPassLibraryDidChangeNotification`).
--   **Conduit Apps**: aplicaciones que no manipulan directamente las tarjetas (como ocurre con las aplicaciones complementarias), pero que pueden mejorar su utilidad al reconocer las tarjetas y permitir que se agreguen a Wallet. Los clientes de correo electrónico, exploradores de redes sociales y otras aplicaciones de agregación de datos pueden encontrar datos adjuntos o vínculos a las tarjetas.
+- **Wallet**: aplicación de iOS integrada de Apple que almacena y muestra tarjetas. Este es el único lugar en que se representan las tarjetas para usarlas en el mundo real (es decir, se muestra el código de barras junto con todos los datos localizados en la tarjeta).
+- **Aplicaciones complementarias**: aplicaciones de iOS 6 compiladas por proveedores de tarjetas para ampliar la funcionalidad de las tarjetas que emiten, como dar un valor añadido a la tarjeta de una tienda, cambiar el asiento en una tarjeta de embarque u otra función específica del negocio. Las aplicaciones complementarias no son necesarias para que una tarjeta sea útil.
+- **Su servidor**: un servidor seguro donde se pueden generar y firmar las tarjetas para distribuirse. Su aplicación complementaria puede conectarse al servidor para generar nuevas tarjetas o solicitar actualizaciones de tarjetas existentes. Si quiere, también puede implementar la API de servicio web a la que llamaría Wallet para actualizar las tarjetas.
+- **Servidores de APNS**: el servidor tiene la capacidad de notificar a Wallet las actualizaciones de una tarjeta en un dispositivo determinado con APNS. Envíe una notificación de inserción a Wallet, que después se pondrá en contacto con el servidor para obtener detalles del cambio. Las aplicaciones complementarias no tienen que implementar APNS para esta característica (pueden escuchar la notificación `PKPassLibraryDidChangeNotification`).
+- **Conduit Apps**: aplicaciones que no manipulan directamente las tarjetas (como ocurre con las aplicaciones complementarias), pero que pueden mejorar su utilidad al reconocer las tarjetas y permitir que se agreguen a Wallet. Los clientes de correo electrónico, exploradores de redes sociales y otras aplicaciones de agregación de datos pueden encontrar datos adjuntos o vínculos a las tarjetas.
 
 Todo el ecosistema tiene un aspecto complejo, por lo que merece la pena tener en cuenta que algunos componentes son opcionales y son posibles implementaciones de PassKit mucho más sencillas.
 
@@ -69,11 +69,11 @@ Una tarjeta es una colección de datos que representan una entrada, un cupón o 
 
 Actualmente, cinco tipos admitidos, que se pueden distinguir en la aplicación Wallet por el diseño y el borde superior de la pasada:
 
--  **Entrada de evento**: pequeño recorte semicircular.
--   **Tarjeta de embarque**: muescas en los lados, se puede especificar el icono específico del transporte (por ejemplo, bus, tren o avión). Bus, tren, avión).
--   **Tarjeta de tienda**: parte superior redondeada, como una tarjeta de crédito o débito.
--  **Cupón** : perforado a lo largo de la parte superior.
--  **Genérica**: igual que la tarjeta de tienda, parte superior redondeada.
+- **Entrada de evento**: pequeño recorte semicircular.
+- **Tarjeta de embarque**: muescas en los lados, se puede especificar el icono específico del transporte (por ejemplo, bus, tren o avión). Bus, tren, avión).
+- **Tarjeta de tienda**: parte superior redondeada, como una tarjeta de crédito o débito.
+- **Cupón** : perforado a lo largo de la parte superior.
+- **Genérica**: igual que la tarjeta de tienda, parte superior redondeada.
 
 
 Los cinco tipos de tarjetas se muestran en esta captura de pantalla (en orden: cupón, genérica, tarjeta de tienda, tarjeta de embarque y entrada de evento):
@@ -84,13 +84,13 @@ Los cinco tipos de tarjetas se muestran en esta captura de pantalla (en orden: c
 
 Un archivo de tarjeta es realmente un archivo ZIP con una extensión **.pkpass** que contiene algunos archivos JSON específicos (obligatorios), una variedad de archivos de imagen (opcionales), así como las cadenas localizadas (también opcionales).
 
--   **pass.json**: obligatorio. Contiene toda la información de la tarjeta.
--   **manifest.json**: obligatorio. Contiene los hashes de SHA1 de cada archivo de la tarjeta, excepto el archivo de firma y este archivo (manifest.json).
--   **Signature** : requerido. Se crea firmando `manifest.json` el archivo con el certificado generado en el portal de aprovisionamiento de iOS.
--  **logo. png** : opcional.
--  **background. png** : opcional.
--  **Icon. png** : opcional.
--  **Archivos de cadenas localizables** : opcional.
+- **pass.json**: obligatorio. Contiene toda la información de la tarjeta.
+- **manifest.json**: obligatorio. Contiene los hashes de SHA1 de cada archivo de la tarjeta, excepto el archivo de firma y este archivo (manifest.json).
+- **Signature** : requerido. Se crea firmando `manifest.json` el archivo con el certificado generado en el portal de aprovisionamiento de iOS.
+- **logo. png** : opcional.
+- **background. png** : opcional.
+- **Icon. png** : opcional.
+- **Archivos de cadenas localizables** : opcional.
 
 A continuación se muestra la estructura de directorios de un archivo de tarjeta (este es el contenido del archivo ZIP):
 
@@ -100,9 +100,9 @@ A continuación se muestra la estructura de directorios de un archivo de tarjeta
 
 JSON es el formato porque normalmente se crean pasadas en un servidor, lo que significa que el código de generación es independiente de la plataforma en el servidor. Las tres partes clave de la información en cada paso son:
 
--   **teamIdentifier** : esta vincula todos los pasos que genere en la cuenta de App Store. Este valor es visible en el portal de aprovisionamiento de iOS.
--   **passTypeIdentifier** : Regístrese en el portal de aprovisionamiento para agrupar las pasadas (si genera más de un tipo). Por ejemplo, una cafetería podría crear un tipo de pase de tarjeta de tienda para permitir que sus clientes obtengan créditos de fidelidad, pero también un tipo de paso de cupón independiente para crear y distribuir cupones de descuento. Esa misma cafetería podría incluso contener eventos de música en directo y emitir pasadas de incidencias de eventos para ellos.
--   **SerialNumber** : una cadena única dentro de `passTypeidentifier` este. El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
+- **teamIdentifier** : esta vincula todos los pasos que genere en la cuenta de App Store. Este valor es visible en el portal de aprovisionamiento de iOS.
+- **passTypeIdentifier** : Regístrese en el portal de aprovisionamiento para agrupar las pasadas (si genera más de un tipo). Por ejemplo, una cafetería podría crear un tipo de pase de tarjeta de tienda para permitir que sus clientes obtengan créditos de fidelidad, pero también un tipo de paso de cupón independiente para crear y distribuir cupones de descuento. Esa misma cafetería podría incluso contener eventos de música en directo y emitir pasadas de incidencias de eventos para ellos.
+- **SerialNumber** : una cadena única dentro de `passTypeidentifier` este. El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
 
 Hay muchas otras claves JSON en cada tarjeta; se muestra un ejemplo de ellas a continuación:
 
@@ -199,10 +199,10 @@ Traducir un paso en varios idiomas es similar a la localización de una aplicaci
 
 Las tarjetas se firman con un certificado privado que genera en el Portal de aprovisionamiento de iOS. Los pasos para firmar la tarjeta son:
 
-1.  Calcule un hash SHA1 para cada archivo en el directorio de la tarjeta (no incluya el archivo `manifest.json` ni el archivo `signature`; ninguno de ellos debe existir en esta fase de todos modos).
-1.  Escriba `manifest.json` como una lista de clave/valor JSON de cada nombre de archivo con su hash.
-1.  Utilice el certificado para firmar el `manifest.json` archivo y escribir el resultado en un archivo denominado `signature` .
-1.  Comprimir todo y dar al archivo resultante una `.pkpass` extensión de archivo.
+1. Calcule un hash SHA1 para cada archivo en el directorio de la tarjeta (no incluya el archivo `manifest.json` ni el archivo `signature`; ninguno de ellos debe existir en esta fase de todos modos).
+1. Escriba `manifest.json` como una lista de clave/valor JSON de cada nombre de archivo con su hash.
+1. Utilice el certificado para firmar el `manifest.json` archivo y escribir el resultado en un archivo denominado `signature` .
+1. Comprimir todo y dar al archivo resultante una `.pkpass` extensión de archivo.
 
 
 Dado que la clave privada se necesita para firmar la tarjeta, este proceso solo debe realizarse en un servidor seguro que controle. NO distribuya las claves para probar y generar tarjetas en una aplicación.
@@ -216,8 +216,8 @@ Esta sección contiene instrucciones para ayudar a configurar los detalles de ap
 
 Para que una tarjeta entre en el App Store, se debe vincular a una cuenta de desarrollador. Esto requiere dos pasos:
 
-1.  La tarjeta debe estar registrada con un identificador único, que se denomina Pass Type ID (identificador del tipo de tarjeta).
-1.  Se debe generar un certificado válido para firmar la tarjeta con la firma digital del desarrollador.
+1. La tarjeta debe estar registrada con un identificador único, que se denomina Pass Type ID (identificador del tipo de tarjeta).
+1. Se debe generar un certificado válido para firmar la tarjeta con la firma digital del desarrollador.
 
 Para crear un Pass Type ID (identificador del tipo de tarjeta), realice lo siguiente.
 
@@ -227,23 +227,23 @@ El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta)
 
 1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione **+** el botón para crear un nuevo tipo de paso: [![](passkit-images/passid.png "Crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
 
-2.   Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo de `pass.` paso deben comenzar con la `pass.com.xamarin.coupon.banana` cadena en este ejemplo, se usa: [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
+2. Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo de `pass.` paso deben comenzar con la `pass.com.xamarin.coupon.banana` cadena en este ejemplo, se usa: [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
 
-3.   Confirme el ID. de paso presionando el botón **registrar** .
+3. Confirme el ID. de paso presionando el botón **registrar** .
 
 #### <a name="generate-a-certificate"></a>Generar un certificado
 
 Para crear un nuevo certificado para este identificador de tipo de paso, haga lo siguiente:
 
-1.  Seleccione el ID. de paso recién creado en la lista y haga clic en **Editar** : [![](passkit-images/pass-done.png "Seleccione el nuevo ID. de paso de la lista")](passkit-images/pass-done.png#lightbox)
+1. Seleccione el ID. de paso recién creado en la lista y haga clic en **Editar** : [![](passkit-images/pass-done.png "Seleccione el nuevo ID. de paso de la lista")](passkit-images/pass-done.png#lightbox)
 
     A continuación, seleccione **crear certificado..** . :
 
     [![](passkit-images/cert-dist.png "Seleccione Crear certificado.")](passkit-images/cert-dist.png#lightbox)
 
 
-2.  Siga los pasos para crear una solicitud de firma de certificado (CSR).
+2. Siga los pasos para crear una solicitud de firma de certificado (CSR).
   
 3. Presione el botón **continuar** en el portal para desarrolladores y cargue el CSR para generar el certificado.
 
@@ -258,12 +258,12 @@ Para obtener más información sobre el aprovisionamiento de Wallet, consulte la
 
 Ahora que hemos creado el tipo de tarjeta, podemos crear manualmente una tarjeta para probarla en el simulador o en un dispositivo. Los pasos para crear una tarjeta son:
 
--  Cree un directorio que contenga los archivos de tarjeta.
--  Cree un archivo Pass. JSON que contenga todos los datos necesarios.
--  Incluir imágenes en la carpeta (si es necesario).
--  Calcule los hashes SHA1 para cada archivo de la carpeta y escriba en manifest. JSON.
--  Firme manifest. JSON con el archivo Certificate. p12 descargado.
--  Comprima el contenido del directorio y cámbiele el nombre para que incluya la extensión .pkpass.
+- Cree un directorio que contenga los archivos de tarjeta.
+- Cree un archivo Pass. JSON que contenga todos los datos necesarios.
+- Incluir imágenes en la carpeta (si es necesario).
+- Calcule los hashes SHA1 para cada archivo de la carpeta y escriba en manifest. JSON.
+- Firme manifest. JSON con el archivo Certificate. p12 descargado.
+- Comprima el contenido del directorio y cámbiele el nombre para que incluya la extensión .pkpass.
 
 
 Hay algunos archivos de origen en el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) de este artículo que se pueden usar para generar una tarjeta. Use los archivos del directorio `CouponBanana.raw` del directorio CreateAPassManually. Aparecen los siguientes archivos:
@@ -315,12 +315,12 @@ Wallet es la parte central del ecosistema de PassKit. En esta captura de pantall
 
 Las características de Wallet incluyen:
 
--  Es el único lugar en el que se representan las tarjetas con su código de barras para digitalizarlas.
--  El usuario puede cambiar la configuración de las actualizaciones. Si están habilitadas, las notificaciones de inserción pueden desencadenar actualizaciones en los datos de la tarjeta.
--  El usuario puede habilitar o deshabilitar la integración con la pantalla de bloqueo. Si está habilitada, esto permite que la tarjeta aparezca automáticamente en la pantalla de bloqueo, según los datos de ubicación y hora pertinentes insertados en la tarjeta.
--  El lado inverso de la pasada admite la extracción a la actualización, si se proporciona una dirección URL de Web-Server en el JSON de Pass.
--  Las aplicaciones complementarias se pueden abrir (o descargar) si el identificador de la aplicación se proporciona en el JSON de Pass.
--  Las tarjetas pueden eliminarse (con una bonita animación de trituración).
+- Es el único lugar en el que se representan las tarjetas con su código de barras para digitalizarlas.
+- El usuario puede cambiar la configuración de las actualizaciones. Si están habilitadas, las notificaciones de inserción pueden desencadenar actualizaciones en los datos de la tarjeta.
+- El usuario puede habilitar o deshabilitar la integración con la pantalla de bloqueo. Si está habilitada, esto permite que la tarjeta aparezca automáticamente en la pantalla de bloqueo, según los datos de ubicación y hora pertinentes insertados en la tarjeta.
+- El lado inverso de la pasada admite la extracción a la actualización, si se proporciona una dirección URL de Web-Server en el JSON de Pass.
+- Las aplicaciones complementarias se pueden abrir (o descargar) si el identificador de la aplicación se proporciona en el JSON de Pass.
+- Las tarjetas pueden eliminarse (con una bonita animación de trituración).
 
 ## <a name="adding-passes-into-wallet"></a>Agregar pasadas a Wallet
 
@@ -334,9 +334,9 @@ Pueden agregarse tarjetas a Wallet de las maneras siguientes:
 
 Las aplicaciones de canalización son aplicaciones intermediarias que pueden recibir tarjetas en nombre de un usuario y deben programarse para reconocer su tipo de contenido y proporcionar funcionalidades para agregarlas a Wallet. Algunos ejemplos de aplicaciones de canalización son:
 
--   **Mail**: reconoce los datos adjuntos como una tarjeta.
--   **Safari**: reconoce el tipo de contenido de la tarjeta cuando se hace clic en un vínculo de URL de tarjeta.
--   **Otras aplicaciones personalizadas** : cualquier aplicación que reciba datos adjuntos o vínculos abiertos (clientes de medios sociales, lectores de correo, etc.).
+- **Mail**: reconoce los datos adjuntos como una tarjeta.
+- **Safari**: reconoce el tipo de contenido de la tarjeta cuando se hace clic en un vínculo de URL de tarjeta.
+- **Otras aplicaciones personalizadas** : cualquier aplicación que reciba datos adjuntos o vínculos abiertos (clientes de medios sociales, lectores de correo, etc.).
 
 
 En esta captura de pantalla se muestra cómo **Mail** en iOS 6 reconoce un archivo adjunto de tarjeta y (cuando se toca) ofrece la posibilidad de **Agregarlo** a Wallet.
@@ -347,9 +347,9 @@ En esta captura de pantalla se muestra cómo **Mail** en iOS 6 reconoce un archi
 
 Si va a compilar una aplicación que podría ser una canalización para tarjetas, pueden reconocerse por:
 
--  **Extensión de archivo** :. pkpass
--  **Tipo MIME** : aplicación/vnd. Apple. pkpass
--  **UTI** – com.apple.pkpass
+- **Extensión de archivo** :. pkpass
+- **Tipo MIME** : aplicación/vnd. Apple. pkpass
+- **UTI** – com.apple.pkpass
 
 
 El funcionamiento básico de una aplicación de canalización es recuperar el archivo de tarjeta y llamar al controlador `PKAddPassesViewController` de PassKit para proporcionar al usuario la opción de agregar la tarjeta a Wallet. La implementación de este controlador de vista se trata en la siguiente sección en **Aplicaciones complementarias**.
@@ -419,10 +419,10 @@ entonces la matriz de derechos `pass-type-identifiers` es incorrecta (o no coinc
 
 Las siguientes clases de PassKit están disponibles para que las aplicaciones tengan acceso a los pasos:
 
--  **PKPass**: una instancia de una tarjeta.
--  **PKPassLibrary**: proporciona la API para acceder a las tarjetas en el dispositivo.
--  **PKAddPassesViewController**: se usa para mostrar una tarjeta para que el usuario la guarde en Wallet.
--  **PKAddPassesViewControllerDelegate** : desarrolladores de Xamarin. iOS
+- **PKPass**: una instancia de una tarjeta.
+- **PKPassLibrary**: proporciona la API para acceder a las tarjetas en el dispositivo.
+- **PKAddPassesViewController**: se usa para mostrar una tarjeta para que el usuario la guarde en Wallet.
+- **PKAddPassesViewControllerDelegate** : desarrolladores de Xamarin. iOS
 
 ## <a name="example"></a>Ejemplo
 

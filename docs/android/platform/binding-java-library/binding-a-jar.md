@@ -1,54 +1,54 @@
 ---
 title: Enlace de un .JAR
-description: Este tutorial proporciona instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin.Android de Android. Archivo JAR.
+description: En este tutorial se proporcionan instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin. Android desde un dispositivo Android. Archivo JAR.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 3c84b29807fd4a181ed867095645005bf9ba4df0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957366"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524807"
 ---
 # <a name="binding-a-jar"></a>Enlace de un .JAR
 
-_Este tutorial proporciona instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin.Android de Android. Archivo JAR._
+_En este tutorial se proporcionan instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin. Android desde un dispositivo Android. Archivo JAR._
 
 ## <a name="overview"></a>Información general
 
-La Comunidad Android ofrece muchas bibliotecas de Java que puede usar en la aplicación. Estas bibliotecas de Java a menudo se empaquetan en. Formato de archivo JAR (Java Archive), pero se puede empaquetar una. JAR en un *biblioteca de enlaces de Java* para que su funcionalidad no está disponible para las aplicaciones de Xamarin.Android. El propósito de la biblioteca de enlaces de Java es hacen que las API en el. Archivo JAR disponibles para C# código a través de contenedores de código generado automáticamente.
+La comunidad de Android ofrece muchas bibliotecas de Java que puede usar en la aplicación. Estas bibliotecas de Java se suelen empaquetar en. Formato JAR (archivo Java), pero puede empaquetar un. JAR en una *biblioteca de enlaces de Java* para que su funcionalidad esté disponible para las aplicaciones de Xamarin. Android. El propósito de la biblioteca de enlaces de Java es crear las API en. Archivo JAR disponible para C# el código a través de contenedores de código generados automáticamente.
 
-Las herramientas de Xamarin pueden generar una biblioteca de enlaces de entrada de uno o más. Archivos JAR. La biblioteca de enlaces (. Ensamblado DLL) contiene lo siguiente: 
+Las herramientas de Xamarin pueden generar una biblioteca de enlaces a partir de una o varias entradas. Archivos JAR. La biblioteca de enlaces (. Ensamblado DLL) contiene lo siguiente: 
 
--   El contenido del original. Archivos JAR.
+- Contenido de la original. Archivos JAR.
 
--   Administrado que se puede llamar contenedores (MCW), que son C# tipos que ajustan los tipos de Java correspondiente dentro de la. Archivos JAR.
+- Contenedores a los que se puede llamar (MCW) C# administrados, que son tipos que contienen los tipos de Java correspondientes dentro de. Archivos JAR.
 
-El código generado de MCW utiliza JNI (Java Native Interface) para reenviar las llamadas de API subyacente. Archivo JAR. Puede crear bibliotecas de enlaces para cualquiera. Archivo JAR que estaba destinaba originalmente para usarse con Android (tenga en cuenta que las herramientas de Xamarin no admite actualmente el enlace de bibliotecas no son de Android Java). También puede optar por crear la biblioteca de enlaces sin incluir el contenido de la. Archivo del producto para que el archivo DLL tiene una dependencia el. JAR en tiempo de ejecución.
+El código MCW generado usa JNI (Java Native Interface) para reenviar las llamadas API al subyacente. Archivo JAR. Puede crear bibliotecas de enlaces para cualquier. Archivo JAR que se destine originalmente para usarse con Android (tenga en cuenta que las herramientas de Xamarin no admiten actualmente el enlace de bibliotecas de Java que no son de Android). También puede optar por compilar la biblioteca de enlaces sin incluir el contenido de. Archivo JAR para que la DLL tenga una dependencia en. JAR en tiempo de ejecución.
 
-En esta guía, podrá recorrer los aspectos básicos de la creación de una biblioteca de enlaces para un único. Archivo JAR. Le explicaremos con un ejemplo de dónde va todo derecho &ndash; es decir, donde ninguna personalización o la depuración de los enlaces necesaria. 
-[Creación de enlaces con metadatos](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) ofrece un ejemplo de un escenario más avanzado, donde el proceso de enlace no es completamente automático y se requiere cierta cantidad de intervención manual. Para obtener información general de biblioteca Java enlace en general (con un ejemplo de código básico), consulte [enlace a una biblioteca de Java](~/android/platform/binding-java-library/index.md). 
+En esta guía se detallan los conceptos básicos de la creación de una biblioteca de enlaces para un único. Archivo JAR. Veremos con un ejemplo en el que todo va &ndash; bien, es decir, donde no se requiere ninguna personalización o depuración de los enlaces. 
+La [creación de enlaces mediante metadatos](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) ofrece un ejemplo de un escenario más avanzado en el que el proceso de enlace no es totalmente automático y se requiere una cantidad de intervención manual. Para obtener información general sobre el enlace de la biblioteca de Java en general (con un ejemplo de código básico), vea [enlazar una biblioteca de Java](~/android/platform/binding-java-library/index.md). 
 
  
 ## <a name="walkthrough"></a>Tutorial
 
-En el siguiente tutorial, vamos a crear una biblioteca de enlaces para [Picasso](http://square.github.io/picasso/), una popular Android. Archivo JAR que proporciona la imagen de carga y la funcionalidad de almacenamiento en caché. Usaremos los siguientes pasos para enlazar **picasso 2.x.x.jar** para crear un nuevo ensamblado de .NET que podemos usar en un proyecto de Xamarin.Android: 
+En el siguiente tutorial, vamos a crear una biblioteca de enlaces para [Picasso](http://square.github.io/picasso/), un conocido Android. JAR que proporciona la funcionalidad de carga de imágenes y almacenamiento en caché. Usaremos los pasos siguientes para enlazar **Picasso-2. x. x. jar** para crear un nuevo ensamblado .net que se pueda usar en un proyecto de Xamarin. Android: 
 
 1. Cree un nuevo proyecto de biblioteca de enlaces de Java.
 
-2. Agregar el. Archivo JAR en el proyecto.
+2. Agregue el. Archivo JAR en el proyecto.
 
-3. Configure la acción adecuada para el. Archivo JAR.
+3. Establezca la acción de compilación adecuada para. Archivo JAR.
 
-4. Elija una plataforma de destino que el. Es compatible con el archivo JAR.
+4. Elija una versión de .NET Framework de destino que. JAR admite.
 
 5. Compile la biblioteca de enlaces.
 
-Una vez que hemos creado la biblioteca de enlaces, desarrollaremos una pequeña aplicación de Android que muestra nuestra capacidad para llamar a las API en la biblioteca de enlaces. En este ejemplo, queremos tener acceso a los métodos de **picasso 2.x.x.jar**:
+Una vez que hemos creado la biblioteca de enlaces, desarrollaremos una pequeña aplicación Android que demuestra nuestra capacidad para llamar a las API en la biblioteca de enlaces. En este ejemplo, queremos acceder a los métodos de **Picasso-2. x. x. jar**:
 
 ```java
 package com.squareup.picasso
@@ -63,7 +63,7 @@ public class Picasso
 }
 ```
 
-Después de que se genere una biblioteca de enlaces para **picasso 2.x.x.jar**, podemos llamar a estos métodos desde C#. Por ejemplo:
+Después de generar una biblioteca de enlaces para **Picasso-2. x. x. jar**, podemos llamar a estos métodos desde C#. Por ejemplo:
 
 ```csharp
 using Com.Squareup.Picasso;
@@ -75,76 +75,76 @@ Picasso.With (this)
 ```
 
 
-### <a name="creating-the-bindings-library"></a>Creación de la biblioteca de enlaces
+### <a name="creating-the-bindings-library"></a>Crear la biblioteca de enlaces
 
-Antes de empezar con los pasos siguientes, descargue [picasso 2.x.x.jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
+Antes de comenzar con los pasos siguientes, descargue [Picasso-2. x. x. jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
 
-En primer lugar, cree un nuevo proyecto de biblioteca de enlaces. En Visual Studio para Mac o Visual Studio, cree una nueva solución y seleccione el *biblioteca de enlaces de Android* plantilla. (Las capturas de pantalla en este tutorial utiliza Visual Studio, pero Visual Studio para Mac es muy similar). Nombre de la solución **JarBinding**: 
+En primer lugar, cree un nuevo proyecto de biblioteca de enlaces. En Visual Studio para Mac o Visual Studio, cree una nueva solución y seleccione la plantilla *biblioteca de enlaces de Android* . (Las capturas de pantallas de este tutorial usan Visual Studio, pero Visual Studio para Mac es muy similar). Asigne a la solución el nombre **JarBinding**: 
 
 [![Crear proyecto de biblioteca JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
-La plantilla incluye un **archivos JAR** carpeta donde se agrega su. JAR(s) al proyecto de biblioteca de enlaces. Haga clic en el **archivos JAR** carpeta y seleccione **Agregar > elemento existente**: 
+La plantilla incluye una carpeta **jar** donde se agrega el. JAR (s) en el proyecto de biblioteca de enlaces. Haga clic con el botón derecho en la carpeta **jar** y seleccione **Agregar > elemento existente**: 
 
 [![Agregar elemento existente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
-Navegue hasta la **picasso 2.x.x.jar** archivo descargado anteriormente, selecciónelo y haga clic en **agregar**: 
+Navegue hasta el archivo **Picasso-2. x. jar** descargado anteriormente, selecciónelo y haga clic en **Agregar**: 
 
-[![Seleccione el archivo jar y haga clic en Agregar](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
+[![Seleccione archivo jar y haga clic en Agregar.](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
-Compruebe que la **picasso 2.x.x.jar** archivo se agregó correctamente al proyecto: 
+Compruebe que el archivo **Picasso-2. x. x. jar** se ha agregado correctamente al proyecto: 
 
-[![Archivo JAR que se agregan al proyecto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
+[![Jar agregado al proyecto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
-Al crear un proyecto de biblioteca de enlaces de Java, debe especificar si el. Archivo JAR está incrustado en la biblioteca de enlaces o empaqueta por separado. Para ello, especifique uno de los siguientes *acciones de compilación*: 
+Al crear un proyecto de biblioteca de enlaces de Java, debe especificar si el. JAR se debe insertar en la biblioteca de enlaces o empaquetar por separado. Para ello, especifique una de las siguientes acciones de *compilación*: 
 
--   **EmbeddedJar** &ndash; el. Archivo JAR se incrustarán en la biblioteca de enlaces.
+- **EmbeddedJar** &ndash; el. JAR se incrustará en la biblioteca de enlaces.
 
--   **InputJar** &ndash; el. JAR se mantienen separado de la biblioteca de enlaces.
+- **InputJar** &ndash; el. JAR se mantendrá separado de la biblioteca de enlaces.
 
-Normalmente, se usa el **EmbeddedJar** acción de compilación para que el. Automáticamente se empaqueta el archivo JAR en la biblioteca de enlaces. Esta es la opción más sencilla &ndash; código de bytes de Java en el. Archivo JAR se convierte en código de bytes Dex y se incrusta (junto con los contenedores RCW administrados) en el APK. Si desea mantener el. JAR independiente de la biblioteca de enlaces, puede usar el **InputJar** opción; sin embargo, debe asegurarse de que el. Archivo JAR está disponible en el dispositivo que ejecuta la aplicación. 
+Normalmente, se usa la acción de compilación **EmbeddedJar** para que. JAR se empaqueta automáticamente en la biblioteca de enlaces. Esta es la opción &ndash; más sencilla de código de bytes de Java en. JAR se convierte en el código de bytes DEX y se incrusta (junto con los contenedores a los que se puede llamar administrados) en APK. Si desea conservar el. JAR independiente de la biblioteca de enlaces, puede usar la opción **InputJar** ; sin embargo, debe asegurarse de que el. El archivo JAR está disponible en el dispositivo que ejecuta la aplicación. 
 
-Establece la acción de compilación en **EmbeddedJar**: 
+Establezca la acción de compilación en **EmbeddedJar**: 
 
-[![Seleccione la acción de compilación EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
+[![Selección de la acción de compilación EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
-A continuación, abra el proyecto de propiedades para configurar el *.NET Framework de destino*. Si el. JAR usa las API de Android, establezca la plataforma de destino en el nivel de API que el. Se espera el archivo JAR. Normalmente, el desarrollador de la. Archivo JAR indicará qué nivel de API (o niveles) que el. Es compatible con archivo JAR. (Para obtener más información sobre la configuración de .NET Framework de destino y los niveles de API de Android en general, consulte [Understanding Android API niveles](~/android/app-fundamentals/android-api-levels.md).)
+A continuación, abra las propiedades del proyecto para configurar la versión de *.NET Framework de destino*. Si el. JAR usa cualquier API de Android, establezca la plataforma de destino en el nivel de API que el. JAR espera. Normalmente, el desarrollador de. El archivo JAR indicará qué nivel de API (o niveles). JAR es compatible con. (Para obtener más información sobre la configuración de la plataforma de destino y los niveles de la API de Android en general, consulte Descripción de los [niveles de API de Android](~/android/app-fundamentals/android-api-levels.md)).
 
-Establecer el destino de la API de nivel de la biblioteca de enlaces (en este ejemplo, estamos usando el nivel de API 19): 
+Establezca el nivel de API de destino de la biblioteca de enlaces (en este ejemplo, se usa el nivel de API 19): 
 
-[![Nivel de API de destino establecido en 19 de API](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
+[![Nivel de API de destino establecido en API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
-Por último, compile la biblioteca de enlaces. Aunque es posible que se muestren algunos mensajes de advertencia, el proyecto de biblioteca de enlaces debe compilarse correctamente y generar una salida. Archivo DLL en la siguiente ubicación: **JarBinding/bin/Debug/JarBinding.dll**
+Por último, compile la biblioteca de enlaces. Aunque se pueden mostrar algunos mensajes de advertencia, el proyecto de biblioteca de enlaces se debe compilar correctamente y generar una salida. DLL en la siguiente ubicación: **JarBinding/bin/Debug/JarBinding.dll**
     
 
 
 ### <a name="using-the-bindings-library"></a>Uso de la biblioteca de enlaces
 
-Para consumir esto. Archivo DLL en la aplicación de Xamarin.Android, realice lo siguiente:
+Para consumir este. DLL en la aplicación de Xamarin. Android, haga lo siguiente:
 
-1.  Agregue una referencia a la biblioteca de enlaces.
+1. Agregue una referencia a la biblioteca de enlaces.
 
-2.  Realizar llamadas en el. JAR a través de los contenedores RCW administrados. 
+2. Realice llamadas en. JAR a través de los contenedores a los que se puede llamar administrados. 
 
-En los siguientes pasos, vamos a crear una aplicación mínima que utiliza la biblioteca de enlaces para descargar y mostrar una imagen en un `ImageView`; "pesado" se realiza mediante el código que reside en el. Archivo JAR. 
+En los pasos siguientes, crearemos una aplicación mínima que use la biblioteca de enlaces para descargar y mostrar una imagen en un `ImageView`; el código que se encuentra en el se realiza el "trabajo pesado". Archivo JAR. 
 
-En primer lugar, cree una nueva aplicación de Xamarin.Android que consume la biblioteca de enlaces. Haga clic en la solución y seleccione **Agregar nuevo proyecto**; el nuevo proyecto el nombre **BindingTest**. Estamos creando esta aplicación en la misma solución que la biblioteca de enlaces con el fin de simplificar este tutorial; Sin embargo, la aplicación que consume la biblioteca de enlaces en su lugar, podría residir en una solución diferente: 
+En primer lugar, cree una nueva aplicación de Xamarin. Android que consuma la biblioteca de enlaces. Haga clic con el botón derecho en la solución y seleccione **Agregar nuevo proyecto**. Asigne al nuevo proyecto el nombre **BindingTest**. Vamos a crear esta aplicación en la misma solución que la biblioteca de enlaces con el fin de simplificar este tutorial. sin embargo, en su lugar, la aplicación que usa la biblioteca de enlaces puede residir en una solución diferente: 
 
-[![Agregar nuevo proyecto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
+[![Agregar nuevo proyecto de BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
-Haga clic en el **referencias** nodo de la **BindingTest** del proyecto y seleccione **Agregar referencia...** :
+Haga clic con el botón secundario en el nodo **referencias** del proyecto **BindingTest** y seleccione **Agregar referencia..** .:
 
-[![Agregar referencia de derecho](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
+[![Derecho Agregar referencia](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
-Compruebe el **JarBinding** proyecto que creó anteriormente y haga clic en **Aceptar**:
+Compruebe el proyecto **JarBinding** creado anteriormente y haga clic en **Aceptar**:
 
-[![Seleccione el proyecto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
+[![Seleccionar proyecto de JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
-Abra el **referencias** nodo de la **BindingTest** del proyecto y compruebe que la **JarBinding** referencia está presente: 
+Abra el nodo References del proyecto **BindingTest** y compruebe que la referencia **JarBinding** está presente: 
 
 [![JarBinding aparece en referencias](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
-Modificar el **BindingTest** diseño (**Main.axml**) para que tenga un único `ImageView`:
+Modifique el diseño de **BindingTest** (**Main. axml**) para que tenga una única `ImageView`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -161,13 +161,13 @@ Modificar el **BindingTest** diseño (**Main.axml**) para que tenga un único `I
 </LinearLayout>
 ```
 
-Agregue el siguiente `using` instrucción **MainActivity.cs** &ndash; Esto hace posible tener acceso fácilmente a los métodos de basada en Java `Picasso` clase que reside en la biblioteca de enlaces:
+Agregue la siguiente `using` instrucción a **MainActivity.CS** &ndash; esto permite acceder fácilmente a los métodos de la clase basada `Picasso` en Java que reside en la biblioteca de enlaces:
 
 ```csharp
 using Com.Squareup.Picasso;
 ```
 
-Modificar el `OnCreate` método para que use el `Picasso` clase para cargar una imagen desde una dirección URL y lo mostrará en el `ImageView`: 
+Modifique el `OnCreate` método para que use la `Picasso` clase para cargar una imagen de una dirección URL y mostrarla en el `ImageView`: 
 
 ```csharp
 public class MainActivity : Activity
@@ -186,16 +186,16 @@ public class MainActivity : Activity
 }
 ```
 
-Compilar y ejecutar el **BindingTest** proyecto. La aplicación se va a iniciar y después de un breve retraso (en función de las condiciones de red), debe descargar y mostrar una imagen similar a la captura de pantalla siguiente:
+Compile y ejecute el proyecto **BindingTest** . La aplicación se iniciará y, después de un breve retraso (según las condiciones de la red), debe descargar y mostrar una imagen similar a la siguiente captura de pantalla:
 
-[![Ejecución de la captura de pantalla de BindingTest](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
+[![Captura de pantalla de BindingTest en ejecución](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
-¡Enhorabuena! Se ha enlazado correctamente una biblioteca de Java. JAR y usado en la aplicación de Xamarin.Android.
+¡Enhorabuena! Ha enlazado correctamente una biblioteca de Java. JAR y usarlo en la aplicación Xamarin. Android.
  
  
 ## <a name="summary"></a>Resumen
 
-En este tutorial, hemos creado una biblioteca de enlaces para un tercero. JAR de archivo, agrega la biblioteca de enlaces a una aplicación de prueba mínima y, a continuación, se ejecutó la aplicación para comprobar que nuestra C# código puede llamar a código de Java que residen en el. Archivo JAR. 
+En este tutorial, creamos una biblioteca de enlaces para un tercero. Archivo JAR, se ha agregado la biblioteca de enlaces a una aplicación de prueba mínima y se ha ejecutado la aplicación para C# comprobar que el código puede llamar al código de Java que reside en. Archivo JAR. 
 
 
 

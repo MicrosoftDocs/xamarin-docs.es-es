@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9dc98480d57dc7d4883306e9f4fc530599af9bd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6482d0626874b3f2ca5e90efb0e376be60551fd7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652416"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528448"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creación de una aplicación de Xamarin. iOS mediante la API de reflexión
 
@@ -26,9 +26,9 @@ Módulo. D se distribuye con Xamarin. iOS. Para usarlo, haga clic con el botón 
 
 El uso de la API de reflexión es tan sencillo como:
 
-1.  Crear una clase decorada con MT. Atributos D.
-1.  Crear una `BindingContext` instancia de, pasándole una instancia de la clase anterior. 
-1.  Crear un `DialogViewController` , pasándole el `BindingContext’s` `RootElement` . 
+1. Crear una clase decorada con MT. Atributos D.
+1. Crear una `BindingContext` instancia de, pasándole una instancia de la clase anterior. 
+1. Crear un `DialogViewController` , pasándole el `BindingContext’s` `RootElement` . 
 
 
 Echemos un vistazo a un ejemplo para ilustrar cómo usar la API de reflexión. En este ejemplo, se creará una pantalla de entrada de datos simple, como se muestra a continuación:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: b44bb52dc69aae1d3d058a1eae7c3be13ec5dc53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643338"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523989"
 ---
 # <a name="location-services-on-android"></a>Servicios de ubicación en Android
 
@@ -30,11 +30,11 @@ En Android, independientemente de la API que elija para trabajar con los datos d
 
 Se usan varias tecnologías internamente para identificar la ubicación del usuario. El hardware utilizado depende del tipo de *proveedor de ubicación* seleccionado para el trabajo de recopilación de datos. Android usa tres proveedores de Ubicación:
 
--   **Proveedor de GPS** &ndash; GPS ofrece la ubicación más precisa, usa la mayor potencia y funciona mejor en el exterior. Este proveedor usa una combinación de GPS y GPS asistido ([AGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), que devuelve los datos de GPS recopilados por las torres de telefonía móvil.
+- **Proveedor de GPS** &ndash; GPS ofrece la ubicación más precisa, usa la mayor potencia y funciona mejor en el exterior. Este proveedor usa una combinación de GPS y GPS asistido ([AGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), que devuelve los datos de GPS recopilados por las torres de telefonía móvil.
 
--   **Proveedor de red** &ndash; Proporciona una combinación de datos de Wi-Fi y móviles, incluidos los datos de AGPS recopilados por los Torres de celdas. Utiliza menos energía que el proveedor de GPS, pero devuelve datos de ubicación de precisión variable.
+- **Proveedor de red** &ndash; Proporciona una combinación de datos de Wi-Fi y móviles, incluidos los datos de AGPS recopilados por los Torres de celdas. Utiliza menos energía que el proveedor de GPS, pero devuelve datos de ubicación de precisión variable.
 
--   **Proveedor pasivo** &ndash; Una opción "superpuesta" mediante proveedores solicitados por otras aplicaciones o servicios para generar datos de ubicación en una aplicación. Esta es una opción menos confiable pero de ahorro de energía ideal para aplicaciones que no requieren que funcionen las actualizaciones de ubicación constantes.
+- **Proveedor pasivo** &ndash; Una opción "superpuesta" mediante proveedores solicitados por otras aplicaciones o servicios para generar datos de ubicación en una aplicación. Esta es una opción menos confiable pero de ahorro de energía ideal para aplicaciones que no requieren que funcionen las actualizaciones de ubicación constantes.
 
 Los proveedores de ubicación no están siempre disponibles. Por ejemplo, es posible que quieramos usar GPS para nuestra aplicación, pero GPS podría estar desactivado en la configuración o el dispositivo podría no tener GPS. Si un proveedor específico no está disponible, la elección del proveedor podría `null`devolver.
 
@@ -43,10 +43,10 @@ Los proveedores de ubicación no están siempre disponibles. Por ejemplo, es pos
 Una aplicación con reconocimiento de ubicación necesita tener acceso a los sensores de hardware de un dispositivo para recibir datos de GPS, Wi-Fi y móviles. El acceso se controla a través de los permisos adecuados en el manifiesto de Android de la aplicación.
 Hay dos permisos disponibles &ndash; en función de los requisitos de la aplicación y de la elección de la API, por lo que querrá permitir uno:
 
--   `ACCESS_FINE_LOCATION`&ndash; Permite a una aplicación tener acceso a GPS.
+- `ACCESS_FINE_LOCATION`&ndash; Permite a una aplicación tener acceso a GPS.
     Necesario para las opciones *proveedor de GPS* y *proveedor pasivo* (el*proveedor pasivo necesita permiso para acceder a los datos de GPS recopilados por otra aplicación o servicio*). Permiso opcional para el *proveedor de red*.
 
--   `ACCESS_COARSE_LOCATION`&ndash; Permite el acceso de una aplicación a la ubicación de red de telefonía móvil y Wi-Fi. Requerido para el proveedor de `ACCESS_FINE_LOCATION` *red* si no se ha establecido.
+- `ACCESS_COARSE_LOCATION`&ndash; Permite el acceso de una aplicación a la ubicación de red de telefonía móvil y Wi-Fi. Requerido para el proveedor de `ACCESS_FINE_LOCATION` *red* si no se ha establecido.
 
 En el caso de las aplicaciones que tienen como destino la versión 21 de la API (Android `ACCESS_FINE_LOCATION` 5,0 Lollipop) o superior, puede habilitar y seguir ejecutando en dispositivos que no tienen hardware GPS. Si su aplicación requiere hardware GPS, debe agregar explícitamente un `android.hardware.location.gps` `uses-feature` elemento al manifiesto de Android. Para obtener más información, consulte la referencia de elementos [de características de uso de](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) Android.
 
@@ -175,7 +175,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 Este método toma dos parámetros:
 
--   **`Android.Gms.Location.LocationRequest`** &ndash; Un`LocationRequest` objeto es la forma en que una aplicación de Xamarin. Android pasa los parámetros en la forma en que el proveedor de la ubicación fusionada debe funcionar. `LocationRequest` Contiene información como la frecuencia con que se deben realizar las solicitudes o la importancia de una actualización de ubicación precisa. Por ejemplo, una solicitud de ubicación importante hará que el dispositivo use el GPS y, por consiguiente, más potencia, al determinar la ubicación. Este fragmento de código muestra cómo crear un `LocationRequest` para una ubicación con una precisión alta, comprobando aproximadamente cada cinco minutos para una actualización de ubicación (pero no antes de dos minutos entre solicitudes). El proveedor `LocationRequest` de ubicaciones con fusibles usará como guía el proveedor de ubicación que se va a usar al intentar determinar la ubicación del dispositivo:
+- **`Android.Gms.Location.LocationRequest`** &ndash; Un`LocationRequest` objeto es la forma en que una aplicación de Xamarin. Android pasa los parámetros en la forma en que el proveedor de la ubicación fusionada debe funcionar. `LocationRequest` Contiene información como la frecuencia con que se deben realizar las solicitudes o la importancia de una actualización de ubicación precisa. Por ejemplo, una solicitud de ubicación importante hará que el dispositivo use el GPS y, por consiguiente, más potencia, al determinar la ubicación. Este fragmento de código muestra cómo crear un `LocationRequest` para una ubicación con una precisión alta, comprobando aproximadamente cada cinco minutos para una actualización de ubicación (pero no antes de dos minutos entre solicitudes). El proveedor `LocationRequest` de ubicaciones con fusibles usará como guía el proveedor de ubicación que se va a usar al intentar determinar la ubicación del dispositivo:
 
     ```csharp
     LocationRequest locationRequest = new LocationRequest()
@@ -184,7 +184,7 @@ Este método toma dos parámetros:
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
 
--   **`Android.Gms.Location.LocationCallback`** Para recibir actualizaciones de ubicación, una aplicación de Xamarin. Android debe subclase de `LocationProvider` la clase abstracta. &ndash; Esta clase expone dos métodos que es posible que el proveedor de ubicación con fusibles invoque para actualizar la aplicación con información de ubicación. Esto se tratará con más detalle a continuación.
+- **`Android.Gms.Location.LocationCallback`** Para recibir actualizaciones de ubicación, una aplicación de Xamarin. Android debe subclase de `LocationProvider` la clase abstracta. &ndash; Esta clase expone dos métodos que es posible que el proveedor de ubicación con fusibles invoque para actualizar la aplicación con información de ubicación. Esto se tratará con más detalle a continuación.
 
 Para notificar a una aplicación de Xamarin. Android de una actualización de ubicación, el proveedor de `LocationCallBack.OnLocationResult(LocationResult result)`ubicación con fusible invocará el. El `Android.Gms.Location.LocationResult` parámetro contendrá la información de la ubicación de actualización.
 
@@ -233,10 +233,10 @@ Location Service es un tipo especial de [servicio](https://developer.android.com
 
 Para obtener la ubicación del usuario mediante el servicio de ubicación de Android, debe realizar varios pasos:
 
-1.  Obtiene una referencia al `LocationManager` servicio.
-2.  Implemente `ILocationListener` la interfaz y controle los eventos cuando cambie la ubicación.
-3.  `LocationManager` Utilice para solicitar actualizaciones de ubicación para un proveedor especificado. El `ILocationListener` del paso anterior se utilizará para recibir devoluciones `LocationManager`de llamada de.
-4.  Detener las actualizaciones de ubicación cuando la aplicación ya no sea adecuada para recibir actualizaciones.
+1. Obtiene una referencia al `LocationManager` servicio.
+2. Implemente `ILocationListener` la interfaz y controle los eventos cuando cambie la ubicación.
+3. `LocationManager` Utilice para solicitar actualizaciones de ubicación para un proveedor especificado. El `ILocationListener` del paso anterior se utilizará para recibir devoluciones `LocationManager`de llamada de.
+4. Detener las actualizaciones de ubicación cuando la aplicación ya no sea adecuada para recibir actualizaciones.
 
 ### <a name="location-manager"></a>Administrador de ubicación
 

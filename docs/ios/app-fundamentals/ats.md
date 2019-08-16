@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 62ccaea83a3648c5d9b0a029b3a22d136c4f2cee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649410"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521428"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de aplicaciones en Xamarin. iOS
 
@@ -175,7 +175,7 @@ Cada clave tiene el siguiente tipo y significado:
 - **NSAllowsArbitraryLoads** (`Boolean`): Si `YES` se va a deshabilitar ATS para cualquier dominio no `NSExceptionDomains`incluido en. En el caso de los dominios enumerados, se usará la configuración de seguridad especificada.
 - **NSAllowsArbitraryLoadsInWebContent** (`Boolean`): Si `YES` permite que las páginas web se carguen correctamente mientras la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
 - **NSExceptionDomains** (`Dictionary`): Una colección de dominios que y la configuración de seguridad que ATS debe usar para un dominio determinado.
-- **< dominio-nombre-para-excepción-as-string >** (`Dictionary`): Una colección de excepciones para un dominio determinado (por ejemplo, `www.xamarin.com`).
+- `Dictionary`  **Domain-Name-for-Exception-As-String>():unacoleccióndeexcepcionesparaundominio\<** determinado (por ejemplo, `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`): La versión de TLS mínima `TLSv1.0`como `TLSv1.1` o `TLSv1.2` (que es el valor predeterminado).
 - **NSExceptionRequiresForwardSecrecy** (`Boolean`): Si `NO` el dominio no tiene que usar un cifrado con seguridad de reenvío. El valor predeterminado es `YES`.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`): Si `NO` (valor predeterminado) todas las comunicaciones con este dominio deben estar en `HTTPS` el protocolo.

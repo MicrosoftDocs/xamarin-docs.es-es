@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655963"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529065"
 ---
 # <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
 
@@ -71,12 +71,12 @@ Como alternativa, el `OnPlatform` se puede usar extensión de marcado en XAML pa
 
 El `Device.Idiom` propiedad puede usarse para modificar los diseños o funcionalidad en función del dispositivo de la aplicación se ejecuta en. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
 
--  **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
--  **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
--  **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
--  **TV**: dispositivos de TV con Tizen
--  **Watch** – relojes Tizen
--  **Unsupported** : no se utiliza
+- **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
+- **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
+- **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
+- **TV**: dispositivos de TV con Tizen
+- **Watch** – relojes Tizen
+- **Unsupported** : no se utiliza
 
 *^ DIP no es necesariamente el número de píxeles físicos*
 

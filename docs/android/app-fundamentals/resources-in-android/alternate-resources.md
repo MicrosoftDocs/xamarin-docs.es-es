@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7c48244e316854b04234ec8dee4eebeb55a4f119
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013383"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526378"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
-Recursos alternativos son aquellos recursos que tienen como destino un dispositivo específico o una configuración de tiempo de ejecución, como el idioma actual, el tamaño de pantalla en particular o la densidad de píxeles. Si Android puede coincidir con un recurso que es más específico para un determinado dispositivo o una configuración que el recurso predeterminado, ese recurso se usará en su lugar. Si no encuentra un recurso alternativo que coincida con la configuración actual, se cargarán los recursos predeterminados. Cómo Android decide qué recursos se utilizarán en una aplicación se tratarán con más detalle a continuación, en la sección ubicación de recursos
+Los recursos alternativos son aquellos que tienen como destino un dispositivo específico o una configuración en tiempo de ejecución, como el idioma actual, el tamaño de pantalla concreto o la densidad de píxeles. Si Android puede coincidir con un recurso más específico para un determinado dispositivo o configuración que el recurso predeterminado, se utilizará ese recurso en su lugar. Si no encuentra un recurso alternativo que coincida con la configuración actual, se cargarán los recursos predeterminados. La forma en que Android decide qué recursos usará una aplicación se tratará con más detalle a continuación, en la sección Ubicación de recursos.
 
-Recursos alternativos se organizan como un subdirectorio dentro de la carpeta de recursos según el tipo de recurso, al igual que los recursos predeterminados. Es el nombre del subdirectorio recursos alternativos en el formulario: _ResourceType_-_Qualifier_
+Los recursos alternativos se organizan como un subdirectorio dentro de la carpeta recursos según el tipo de recurso, al igual que los recursos predeterminados. El nombre del subdirectorio de recurso alternativo tiene el formato siguiente: _ResourceType_-_Qualifier_
 
-*Calificador* es un nombre que identifica una configuración de dispositivo específico.
-Puede haber más de un calificador en un nombre, cada uno de ellos separados por un guión. Por ejemplo, la captura de pantalla siguiente muestra un proyecto simple que tiene recursos alternativos para varias configuraciones, como la configuración regional, densidad de pantalla, orientación y tamaño de pantalla:
+El calificador es un nombre que identifica una configuración específica del dispositivo.
+Puede haber más de un calificador en un nombre, cada uno de ellos separado por un guión. Por ejemplo, la captura de pantalla siguiente muestra un proyecto simple que tiene recursos alternativos para varias configuraciones, como la configuración regional, la densidad de la pantalla, el tamaño de la pantalla y la orientación:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -33,167 +33,177 @@ Puede haber más de un calificador en un nombre, cada uno de ellos separados por
 -----
  
 
-Las siguientes reglas se aplican al agregar calificadores a un tipo de recurso:
+Al agregar calificadores a un tipo de recurso, se aplican las siguientes reglas:
 
-1. Puede haber más de un calificador, con cada calificador separado por un guión.
+1. Puede haber más de un calificador, donde cada calificador está separado por un guión.
 
-2. Los calificadores que es posible especificados una sola vez.
+2. Es posible que los calificadores solo se especifiquen una vez.
 
-3. Calificadores deben estar en el orden en que aparecen en la tabla siguiente.
+3. Los calificadores deben estar en el orden en que aparecen en la tabla siguiente.
 
-Los calificadores posibles se muestran a continuación como referencia:
+Los calificadores posibles se enumeran a continuación como referencia:
 
-- **MCC y MNC** &ndash; el [código de país móvil](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) y, opcionalmente, el [código de la red móvil](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La tarjeta SIM proporcionará la MCC, mientras que la red que está conectado el dispositivo que proporcionará el MNC. Aunque es posible que las configuraciones regionales de destino mediante el código de país móvil, el enfoque recomendado es usar el calificador de idioma especificado a continuación. Por ejemplo, para los recursos de destino va a Alemania, sería el calificador `mcc262`. A los recursos de destino de T-Mobile en Estados Unidos, el calificador es `mcc310-mnc026`.
-  Para obtener una lista completa de códigos de país móvil y de red móvil consulte <http://mcc-mnc.com/>.
+- **MCC y MNC** El código de [país móvil](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) y, opcionalmente, el [código de red móvil](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). &ndash; La tarjeta SIM proporcionará la MCC, mientras que la red a la que está conectado el dispositivo proporcionará el MNC. Aunque es posible destinar a las configuraciones regionales con el código de país móvil, el enfoque recomendado es usar el calificador de lenguaje que se especifica a continuación. Por ejemplo, para dirigirse a los recursos a Alemania, el `mcc262`calificador sería. Para dirigirse a recursos de T-Mobile en EE. UU., el `mcc310-mnc026`calificador es.
+  Para obtener una lista completa de códigos de país móvil y códigos de <http://mcc-mnc.com/>red móvil, consulte.
 
-- **Lenguaje** &ndash; dos letras [código ISO 639-1 lenguaje](https://en.wikipedia.org/wiki/ISO_639-1) y, opcionalmente, seguido de dos letras [código de región ISO 3166-alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
-  Si se proporcionan los calificadores de ambos, se separan mediante un `-r`. Por ejemplo, para configuraciones regionales de francés de destino, a continuación, el calificador de `fr` se utiliza. Para establecer como destino las configuraciones regionales francés canadiense, la `fr-rCA` se utilizaría. Para obtener una lista completa de códigos de idioma y región, consulte [códigos para la representación de los nombres de lenguajes](http://www.loc.gov/standards/iso639-2/php/English_list.php) y [elementos de código y los nombres de país](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
+- **Idioma** de El código de [idioma ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) de dos letras y, opcionalmente, seguido del código de la [región ISO-3166-Alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)de dos letras. &ndash; 
+  Si se proporcionan ambos calificadores, se separan mediante un `-r`. Por ejemplo, para tener como destino las configuraciones regionales en francés, se `fr` usa el calificador de. Para tener como destino las `fr-rCA` configuraciones regionales en francés (Canadá), se utilizaría. Para obtener una lista completa de códigos de idioma y códigos de región, consulte [códigos para la representación de los nombres de los idiomas](http://www.loc.gov/standards/iso639-2/php/English_list.php) y [los nombres de los países y los elementos de código](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
 
-- **Ancho mínimo** &ndash; especifica el ancho de pantalla más pequeño que la aplicación está diseñada para ejecutarse en. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Disponible en el nivel de API 13 (Android 3.2) y versiones posteriores. Por ejemplo, el calificador `sw320dp` se usa para los dispositivos de destino cuyo alto y ancho sea al menos 320dp.
+- **Menor ancho** &ndash; Especifica el ancho de pantalla más pequeño en el que se va a ejecutar la aplicación. Se describe con más detalle en [creación de recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  Disponible en el nivel de API 13 (Android 3,2) y versiones posteriores. Por ejemplo, el calificador `sw320dp` se usa para destinar dispositivos cuyo alto y ancho sea al menos 320dp.
 
-- **Ancho disponible** &ndash; el ancho mínimo de la pantalla en el formato de w*N*dp, donde *N* es el ancho en la densidad de píxeles independientes.
-  Puede cambiar este valor como el usuario gira el dispositivo. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Disponible en el nivel de API 13 (Android 3.2) y versiones posteriores. Ejemplo: el w720dp calificador se usa como destino dispositivos que tienen un ancho de 720dp mínimos.
+- **Ancho disponible** El ancho mínimo de la pantalla con el formato w*n*DP, donde n es el ancho en píxeles independientes de densidad. &ndash;
+  Este valor puede cambiar a medida que el usuario gira el dispositivo. Se describe con más detalle en [creación de recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  Disponible en el nivel de API 13 (Android 3,2) y versiones posteriores. Ejemplo: el calificador w720dp se usa para dispositivos de destino que tienen un ancho de menos de 720dp.
 
-- **Alto disponible** &ndash; el alto mínimo de la pantalla en el formato de h*N*dp, donde *N* es el alto en dp. Puede cambiar este valor como el usuario gira el dispositivo. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Disponible en el nivel de API 13 (Android 3.2) y versiones posteriores. Por ejemplo, el h720dp calificador se usa como destino dispositivos que tienen una altura de 720dp mínimos
+- **Alto disponible** El alto mínimo de la pantalla con el formato h*n*DP, donde N es el alto de DP. &ndash; Este valor puede cambiar a medida que el usuario gira el dispositivo. Se describe con más detalle en [creación de recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  Disponible en el nivel de API 13 (Android 3,2) y versiones posteriores. Por ejemplo, el calificador h720dp se usa para dispositivos de destino que tienen un alto de menos de 720dp
 
-- **Tamaño de pantalla** &ndash; este calificador es una generalización que estos recursos son para el tamaño de pantalla. Se trata en detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Los valores posibles son `small`, `normal`, `large` y `xlarge`. Agregado en el nivel de API 9 (Android 2.3 o Android 2.3.1/Android 2.3.2)
+- **Tamaño de pantalla** &ndash; Este calificador es una generalización del tamaño de la pantalla para el que son estos recursos. Se trata con más detalle en la [creación de recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  Los valores posibles son `small`, `normal`, `large` y `xlarge`. Agregado en el nivel de API 9 (Android 2.3/Android 2.3.1/Android 2.3.2)
 
-- **Aspecto de pantalla** &ndash; se basa en la relación de aspecto, no la orientación de pantalla. Una pantalla larga es más amplia. Agregado en el nivel de API 4 (Android 1.6). Los valores posibles son largos y notlong.
+- **Aspecto** de la pantalla &ndash; Esto se basa en la relación de aspecto, no en la orientación de la pantalla. Una pantalla larga es más ancha. Agregado en el nivel de API 4 (Android 1,6). Los valores posibles son Long e notlong.
 
-- **Orientación de pantalla** &ndash; orientación vertical u horizontal de la pantalla. Esto puede cambiar durante la vigencia de una aplicación.
+- **Orientación** de la pantalla &ndash; Orientación de pantalla vertical u horizontal. Esto puede cambiar durante la vigencia de una aplicación.
   Los valores posibles son `port` y `land`.
 
-- **Modo de acoplamiento** &ndash; para acoplar los dispositivos en un automóvil o acoplar un departamento de soporte técnico. Se agregó en el nivel de API 8 (Android 2.2. x). Los valores posibles son `car` y `desk`.
+- **Modo de acoplamiento** &ndash; En el caso de los dispositivos de una base de coche o un muelle de mesa. Agregado en el nivel de API 8 (Android 2.2. x). Los valores posibles son `car` y `desk`.
 
-- **Modo nocturno** &ndash; o no se ejecuta la aplicación durante la noche o en el día. Esto puede cambiar durante la vigencia de una aplicación y está pensado para proporcionar a los desarrolladores una oportunidad de usar las versiones de una interfaz más oscuras durante la noche. Se agregó en el nivel de API 8 (Android 2.2. x). Los valores posibles son `night` y `notnight`.
+- **Modo nocturno** &ndash; Si la aplicación se está ejecutando por la noche o en el día. Esto puede cambiar durante la vigencia de una aplicación y está diseñado para ofrecer a los desarrolladores una oportunidad de usar versiones más oscuras de una interfaz por la noche. Agregado en el nivel de API 8 (Android 2.2. x). Los valores posibles son `night` y `notnight`.
 
-- **Densidad de píxeles (PPP) de la pantalla** &ndash; el número de píxeles en un área determinada en la pantalla física. Normalmente, expresado en puntos por pulgada (PPP). Los valores posibles son:
+- **Densidad de píxeles de pantalla (PPP)** &ndash; Número de píxeles de un área determinada en la pantalla física. Normalmente expresado como puntos por pulgada (PPP). Los valores posibles son:
 
-    - `ldpi` &ndash; Pantallas de baja densidad.
+    - `ldpi`&ndash; Pantallas de baja densidad.
 
-    - `mdpi` &ndash; Pantallas de densidad media
+    - `mdpi`&ndash; Pantallas de densidad media
 
-    - `hdpi` &ndash; Pantallas de alta densidad
+    - `hdpi`&ndash; Pantallas de alta densidad
 
-    - `xhdpi` &ndash; Pantallas de densidad extra alta
+    - `xhdpi`&ndash; Pantallas de alta densidad adicional
 
-    - `nodpi` &ndash; Recursos que no se escala
+    - `nodpi`&ndash; Recursos que no se van a escalar
 
-    - `tvdpi` &ndash; Se introdujo en el nivel de API 13 (Android 3.2) para las pantallas entre mdpi y hdpi.
+    - `tvdpi`&ndash; Introducido en el nivel de API 13 (Android 3,2) para pantallas entre pantallas y hdpi.
 
-- **Tipo de pantalla táctil** &ndash; especifica el tipo de pantalla táctil que un dispositivo puede tener. Los valores posibles son `notouch` (sin pantalla táctil), `stylus` (electromagnético pantalla táctil adecuada para un lápiz óptico), y `finger` (una pantalla táctil).
+- **Tipo de pantalla táctil** &ndash; Especifica el tipo de pantalla táctil que puede tener un dispositivo. Los valores posibles `notouch` son (sin pantalla táctil) `stylus` , (una pantalla táctil resistente adecuada para un lápiz) y `finger` (una pantalla táctil).
 
-- **Disponibilidad de teclado** &ndash; especifica qué tipo de teclado está disponible. Esto podría cambiar durante la vigencia de una aplicación &ndash; por ejemplo, cuando un usuario abre un teclado de hardware. Los valores posibles son:
+- **Disponibilidad del teclado** &ndash; Especifica qué tipo de teclado está disponible. Esto puede cambiar durante la vigencia de una aplicación &ndash; , por ejemplo, cuando un usuario abre un teclado de hardware. Los valores posibles son:
 
-    - `keysexposed` &ndash; El dispositivo tiene un teclado disponible. Si no hay ningún teclado software habilitado, a continuación, sólo se utiliza cuando se abre el teclado de hardware.
+    - `keysexposed`&ndash; El dispositivo tiene un teclado disponible. Si no hay ningún teclado de software habilitado, solo se utilizará cuando se abra el teclado de hardware.
 
-    - `keyshidden` &ndash; El dispositivo tiene un teclado de hardware, pero está oculta y no se habilita teclado de software.
+    - `keyshidden`&ndash; El dispositivo tiene un teclado de hardware, pero está oculto y no hay ningún teclado de software habilitado.
 
-    - `keyssoft` &ndash; el dispositivo tiene un teclado de software habilitado.
+    - `keyssoft`&ndash; el dispositivo tiene un teclado de software habilitado.
 
-- **Método de entrada de texto principal** &ndash; utilizar para especificar qué tipos de claves de hardware están disponibles para la entrada. Los valores posibles son:
+- **Método de entrada de texto principal** &ndash; Utilice para especificar qué tipos de claves de hardware están disponibles para la entrada. Los valores posibles son:
 
-    - `nokeys` &ndash; No hay ninguna clave de hardware para la entrada.
+    - `nokeys`&ndash; No hay claves de hardware para la entrada.
 
-    - `qwerty` &ndash; Hay disponible un teclado qwerty.
+    - `qwerty`&ndash; Hay un teclado QWERTY disponible.
 
-    - `12key` &ndash; Hay un teclado de hardware de 12 teclas
-
-
-- **Disponibilidad de la clave de navegación** &ndash; cuando 5-way o cruceta navegación (teclas de dirección) está disponible. Esto puede cambiar durante la vigencia de la aplicación. Los valores posibles son:
-
-    - `navexposed` &ndash; las teclas de navegación están disponibles para el usuario
-
-    - `navhidden` &ndash; las teclas de navegación no están disponibles.
-
--  **Método de navegación principal "no-touch"** &ndash; el tipo de navegación disponible en el dispositivo. Los valores posibles son:
-
-    - `nonav` &ndash; el método de navegación única disponible es la pantalla táctil
-
-    - `dpad` &ndash; un control de dirección (teclas de dirección) está disponible para la navegación
-
-    - `trackball` &ndash; el dispositivo tiene una bola de seguimiento para la navegación
-
-    - `wheel` &ndash; el escenario poco común donde hay uno o más direccional ruedas disponibles
-
--  **Versión de la plataforma (nivel de API)** &ndash; nivel de la API compatible con el dispositivo en el formato v*N*, donde *N* es el nivel de API que se ha elegido. Por ejemplo, v11 destinará un nivel de API 11 (Android 3.0) dispositivo.
+    - `12key`&ndash; Hay un teclado de hardware de 12 teclas
 
 
-Para obtener información más completa sobre recursos vea calificadores [proporcionar recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) en el sitio Web para desarrolladores de Android.
+- **Disponibilidad** de la clave de navegación &ndash; Para cuando esté disponible la navegación de 5 o d (pad direccional). Esto puede cambiar durante la vigencia de la aplicación. Los valores posibles son:
+
+    - `navexposed`&ndash; las teclas de navegación están disponibles para el usuario
+
+    - `navhidden`&ndash; las teclas de navegación no están disponibles.
+
+- **Método de navegación no táctil principal** &ndash; El tipo de navegación disponible en el dispositivo. Los valores posibles son:
+
+    - `nonav`&ndash; la única característica de navegación disponible es la pantalla táctil
+
+    - `dpad`&ndash; un panel de control de acceso (PAD) está disponible para la navegación
+
+    - `trackball`&ndash; el dispositivo tiene un trackball para la navegación
+
+    - `wheel`&ndash; escenario poco frecuente en el que hay una o varias ruedas direccionales disponibles
+
+- **Versión de la plataforma (nivel de API)** El nivel de API que admite el dispositivo en el formato v*n*, donde N es el nivel de API que se va a usar como destino. &ndash; Por ejemplo, V11 se dirigirá a un dispositivo de nivel de API 11 (Android 3,0).
 
 
-## <a name="how-android-determines-what-resources-to-use"></a>Cómo Android determina qué recursos que se usarán
+Para obtener información más completa sobre los calificadores de recursos, vea [proporcionar recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) en el sitio web de desarrolladores de Android.
 
-Es muy probable que una aplicación de Android contiene muchos recursos y posible. Es importante comprender cómo Android seleccionará los recursos de una aplicación cuando se ejecuta en un dispositivo.
 
-Android determina los recursos base iterando por la prueba de las reglas siguiente:
+## <a name="how-android-determines-what-resources-to-use"></a>Cómo determina Android qué recursos usar
 
-- **Eliminar calificadores contradictorias** &ndash; por ejemplo, si la orientación del dispositivo es vertical, se rechazará todos los directorios de recursos horizontal.
+Es muy posible y es probable que una aplicación Android contenga muchos recursos. Es importante comprender cómo Android seleccionará los recursos de una aplicación cuando se ejecuta en un dispositivo.
 
-- **Omitir calificadores no admitidas** &ndash; no todos los calificadores están disponibles para todos los niveles de API. Si un directorio de recursos contiene un calificador que no es compatible con el dispositivo, se omitirá dicho directorio de recursos.
+Android determina la base de recursos mediante la iteración de la siguiente prueba de reglas:
 
-- **Identificar el calificador de prioridad más alto siguiente** &ndash; que hace referencia a la tabla anterior la selección del calificador de prioridad más alto siguiente (de arriba a abajo).
+- **Eliminación** de calificadores contradictorios &ndash; por ejemplo, si la orientación del dispositivo es vertical, se rechazarán todos los directorios de recursos del entorno.
 
-- **Mantener los directorios de recursos para el calificador** &ndash; si existen los directorios de recursos que coinciden con el calificador de la tabla anterior, seleccione el calificador de prioridad más alto siguiente (de arriba a abajo).
+- **Omitir calificadores no admitidos** &ndash; No todos los calificadores están disponibles para todos los niveles de API. Si un directorio de recursos contiene un calificador que no es compatible con el dispositivo, se omitirá ese directorio de recursos.
 
-Estas reglas también se muestran en el siguiente diagrama:
+- **Identificar el calificador de mayor prioridad siguiente** &ndash; al hacer referencia a la tabla anterior, se selecciona el calificador de prioridad superior siguiente (de arriba abajo).
+
+- **Mantener los directorios de recursos para** el calificador &ndash; si hay algún directorio de recursos que coincida con el calificador de la tabla anterior, seleccione el calificador de prioridad más alta (de arriba abajo).
+
+Estas reglas también se muestran en el diagrama de flujo siguiente:
 
 [![Diagrama de flujo de recursos](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
-Cuando el sistema busca recursos específicos de la densidad y no los encuentra, intentará buscar otros recursos específicos de densidad y escalarlos. Android no puede usar necesariamente los recursos predeterminados.
-Por ejemplo, cuando busca un recurso de baja densidad y no está disponible, Android puede seleccionar versión de alta densidad de los recursos a través de los recursos predeterminados o densidad Media. Para hacerlo porque el recurso de alta densidad se puede escalar hacia abajo por un factor de 0,5, lo que dará lugar a reducir verticalmente un recurso de densidad media, lo que requeriría un factor de 0,75 menos problemas de visibilidad.
+Cuando el sistema busca recursos específicos de la densidad y no los encuentra, intentará localizar otros recursos específicos de la densidad y escalarlos. Es posible que Android no use necesariamente los recursos predeterminados.
+Por ejemplo, al buscar un recurso de baja densidad y no está disponible, Android puede seleccionar la versión de alta densidad del recurso a través de los recursos predeterminados o de densidad media. Esto se debe a que el recurso de alta densidad puede reducirse en un factor de 0,5, lo que producirá menos problemas de visibilidad que el escalado vertical de un recurso de densidad media, lo que requeriría un factor de 0,75.
 
-Por ejemplo, considere la posibilidad de una aplicación que tiene los siguientes directorios de recursos drawable:
+Como ejemplo, considere una aplicación que tiene los siguientes directorios de recursos Dibujables:
 
-    drawable
-    drawable-en
-    drawable-fr-rCA
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-fr-rCA
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
-Y ahora se ejecuta la aplicación en un dispositivo con la siguiente configuración:
+Y ahora la aplicación se ejecuta en un dispositivo con la configuración siguiente:
 
-- **Configuración regional** &ndash; en GB
-- **Orientación** &ndash; puerto
+- **Configuración regional** &ndash; en-GB
+- **Orientación** &ndash; puerto de
 - **Densidad de pantalla** &ndash; hdpi
-- **Tipo de pantalla táctil** &ndash; notouch
+- **Tipo de pantalla táctil** &ndash; NoTouch
 - **Método de entrada principal** &ndash; 12key
 
-Para empezar, se eliminan los recursos en francés como entran en conflicto con la configuración regional de `en-GB`, lo que nos deja con:
+Para empezar, los recursos en francés se eliminan a medida que entran en conflicto `en-GB`con la configuración regional de, y nos dejan con:
 
-    drawable
-    drawable-en
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
-A continuación, se selecciona el calificador de la primera de la tabla de calificadores anterior: MCC y MNC. No hay ningún directorio de recursos que contienen este calificador para que el código MCC/MNC se omite.
+A continuación, se selecciona el primer calificador de la tabla de calificadores anterior: MCC y MNC. No hay directorios de recursos que contengan este calificador, por lo que se omite el código de MCC/MNC.
 
-El siguiente calificador está seleccionado, que es el idioma. Hay recursos que coinciden con el código de idioma. Todos los directorios de recursos que no coinciden con el código de idioma de `en` se rechazan, para que la lista de recursos es ahora:
+Se selecciona el siguiente calificador, que es el idioma. Hay recursos que coinciden con el código de idioma. Se rechazan todos los directorios de recursos que no coinciden con el código de idioma de `en` , de modo que la lista de recursos es ahora:
 
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+```
 
-Es el siguiente calificador que está presente para la orientación de pantalla, por lo que todos los directorios de recursos que no coinciden con la orientación de pantalla de `port` se eliminan:
+El siguiente calificador que está presente es para la orientación de la pantalla, por lo que se eliminan todos los `port` directorios de recursos que no coinciden con la orientación de la pantalla de:
 
-    drawable-en-port
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-port-ldpi
+```
 
-A continuación es el calificador de densidad de la pantalla, `ldpi`, que da como resultado la exclusión de un directorio de recursos más:
+El siguiente es el calificador para la `ldpi`densidad de pantalla,, lo que da como resultado la exclusión de un directorio de recursos más:
 
-    drawable-en-port-ldpi
+```
+drawable-en-port-ldpi
+```
 
-Como resultado de este proceso, Android usará los recursos pueden dibujables en el directorio de recursos `drawable-en-port-ldpi` para el dispositivo.
+Como resultado de este proceso, Android usará los recursos que se dibujan en el directorio `drawable-en-port-ldpi` de recursos para el dispositivo.
 
 > [!NOTE]
-> Los calificadores de tamaño de pantalla proporcionan una excepción a este proceso de selección. Es posible para Android seleccionar los recursos que están diseñados para una pantalla más pequeña que proporciona el dispositivo actual. Por ejemplo, un dispositivo de pantalla de gran tamaño puede usar los recursos se proporcionan para una pantalla de tamaño normal. Sin embargo la inversa de este no es cierto: el mismo dispositivo de pantalla de gran tamaño no usará los recursos proporcionados para una pantalla extra grande. Si Android no puede encontrar un conjunto de recursos que coincide con un tamaño de pantalla dadas, la aplicación se bloqueará.
+> Los calificadores de tamaño de pantalla proporcionan una excepción a este proceso de selección. Es posible que Android seleccione recursos diseñados para una pantalla más pequeña que el que proporciona el dispositivo actual. Por ejemplo, un dispositivo de pantalla grande puede usar los recursos proporcionados para una pantalla de tamaño normal. Sin embargo, lo contrario no es cierto: el mismo dispositivo de pantalla grande no usará los recursos proporcionados para una pantalla de xlarge. Si Android no encuentra un conjunto de recursos que coincida con un tamaño de pantalla determinado, se bloqueará la aplicación.

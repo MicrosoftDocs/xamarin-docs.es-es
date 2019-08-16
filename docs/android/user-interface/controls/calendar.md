@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 027b526815c56e5a0092b68b550129d9ffbf1493
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643026"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523051"
 ---
 # <a name="xamarinandroid-calendar"></a>Calendario de Xamarin. Android
 
@@ -224,10 +224,10 @@ Esto muestra una lista de eventos, como se muestra a continuación:
 
 Hemos visto cómo leer los datos de calendario. Ahora veamos cómo agregar un evento a un calendario. Para que esto funcione, asegúrese de incluir el `android.permission.WRITE_CALENDAR` permiso que hemos mencionado anteriormente. Para agregar un evento a un calendario, haremos lo siguiente:
 
-1.  Cree una `ContentValues` instancia de.
-1.  Use las claves de `CalendarContract.Events.InterfaceConsts` la clase para rellenar la `ContentValues` instancia.
-1.  Establezca las zonas horarias para las horas de inicio y finalización del evento.
-1.  `ContentResolver` Utilice para insertar los datos de evento en el calendario.
+1. Cree una `ContentValues` instancia de.
+1. Use las claves de `CalendarContract.Events.InterfaceConsts` la clase para rellenar la `ContentValues` instancia.
+1. Establezca las zonas horarias para las horas de inicio y finalización del evento.
+1. `ContentResolver` Utilice para insertar los datos de evento en el calendario.
 
 
 En el código siguiente se muestran estos pasos:

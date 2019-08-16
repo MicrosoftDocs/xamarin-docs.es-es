@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: 52891a11dcc271497031658d0eff9f98a01d3555
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647879"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522250"
 ---
 # <a name="creating-a-watch-face"></a>Creación de una esfera del reloj
 
@@ -35,9 +35,9 @@ Ver los servicios faciales se agrupan e instalan como parte de una aplicación d
 
 Para implementar un servicio de reloj de inspección, se requiere lo siguiente:
 
--   Android 5,0 (nivel de API 21) o superior en el dispositivo o emulador de desgaste.
+- Android 5,0 (nivel de API 21) o superior en el dispositivo o emulador de desgaste.
 
--   Las [bibliotecas de compatibilidad con el desgaste de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Wear) se deben agregar al proyecto de Xamarin. Android.
+- Las [bibliotecas de compatibilidad con el desgaste de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Wear) se deben agregar al proyecto de Xamarin. Android.
 
 Aunque Android 5,0 es el nivel de API mínimo para implementar un servicio de reloj, se recomienda Android 5,1 o posterior. Los dispositivos de uso de Android que ejecutan Android 5,1 (API 22) o una versión superior permiten el desgaste de las aplicaciones para controlar lo que se muestra en la pantalla mientras el dispositivo está en modo *ambiente* de baja energía. Cuando el dispositivo deja el modo *ambiente* de baja energía, está en modo *interactivo* . Para obtener más información sobre estos modos, consulte [mantener visible la aplicación](https://developer.android.com/training/wearables/apps/always-on.html).
 
@@ -127,17 +127,17 @@ No se muestra en este `Canvas` diagrama el que `CanvasWatchFaceService` usa para
 
 En las secciones siguientes, se creará un servicio de portada de inspección personalizado siguiendo estos pasos:
 
-1.  Defina una clase denominada `MyWatchFaceService` que se derive de `CanvasWatchFaceService`.
+1. Defina una clase denominada `MyWatchFaceService` que se derive de `CanvasWatchFaceService`.
 
-2.  Dentro `MyWatchFaceService`de, cree una clase anidada `MyWatchFaceEngine` denominada que se derive `CanvasWatchFaceService.Engine`de.
+2. Dentro `MyWatchFaceService`de, cree una clase anidada `MyWatchFaceEngine` denominada que se derive `CanvasWatchFaceService.Engine`de.
 
-3.  En `MyWatchFaceService`, implemente `CreateEngine` un método que cree `MyWatchFaceEngine` instancias de y lo devuelva.
+3. En `MyWatchFaceService`, implemente `CreateEngine` un método que cree `MyWatchFaceEngine` instancias de y lo devuelva.
 
-4.  En `MyWatchFaceEngine`, implemente `OnCreate` el método para crear el estilo de la esfera de inspección y realizar cualquier otra tarea de inicialización.
+4. En `MyWatchFaceEngine`, implemente `OnCreate` el método para crear el estilo de la esfera de inspección y realizar cualquier otra tarea de inicialización.
 
-5.  Implemente `OnDraw` el método `MyWatchFaceEngine`de. Se llama a este método cada vez que es necesario volver a dibujar la esfera de inspección(es decir, invalidada). `OnDraw`es el método que dibuja (y vuelve a dibujar) los elementos de la superficie de inspección, como la hora, el minuto y el segundo.
+5. Implemente `OnDraw` el método `MyWatchFaceEngine`de. Se llama a este método cada vez que es necesario volver a dibujar la esfera de inspección(es decir, invalidada). `OnDraw`es el método que dibuja (y vuelve a dibujar) los elementos de la superficie de inspección, como la hora, el minuto y el segundo.
 
-6.  Implemente `OnTimeTick` el método `MyWatchFaceEngine`de.
+6. Implemente `OnTimeTick` el método `MyWatchFaceEngine`de.
     `OnTimeTick`se llama al menos una vez por minuto (en los modos de ambiente e interactivos) o cuando ha cambiado la fecha y hora.
 
 Para obtener más información `CanvasWatchFaceService`sobre, consulte la documentación de la API de Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) .
@@ -222,11 +222,11 @@ public override void OnCreate(ISurfaceHolder holder)
 
 La llamada a `SetWatchFaceStyle` hace lo siguiente:
 
-1.  Establece el modo de `PeekModeShort` *inspección* en, que hace que las notificaciones aparezcan como tarjetas de "lectura" pequeñas en la pantalla.
+1. Establece el modo de `PeekModeShort` *inspección* en, que hace que las notificaciones aparezcan como tarjetas de "lectura" pequeñas en la pantalla.
 
-2.  Establece la visibilidad del fondo `Interruptive`en, lo que hace que el fondo de una tarjeta PEEK solo se muestre brevemente si representa una notificación de interrupción.
+2. Establece la visibilidad del fondo `Interruptive`en, lo que hace que el fondo de una tarjeta PEEK solo se muestre brevemente si representa una notificación de interrupción.
 
-3.  Deshabilita la hora de la interfaz de usuario del sistema predeterminada para que no se dibuje en la superficie de inspección, de modo que la superficie de inspección personalizada pueda mostrar la hora en su lugar.
+3. Deshabilita la hora de la interfaz de usuario del sistema predeterminada para que no se dibuje en la superficie de inspección, de modo que la superficie de inspección personalizada pueda mostrar la hora en su lugar.
 
 Para obtener más información sobre estas y otras opciones de estilo de la esfera de inspección, consulte la documentación de la API de Android [WatchFaceStyle. Builder](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) .
 
@@ -296,13 +296,13 @@ Para obtener más información sobre `OnTimeTick` el método, consulte la docume
 
 Este XML hace lo siguiente:
 
-1.  Establece el `android.permission.BIND_WALLPAPER` permiso. Este permiso concede al servicio de reloj ver el permiso para cambiar el papel tapiz del sistema en el dispositivo. Tenga en cuenta que este permiso se debe establecer `<service>` en la sección en lugar de `<application>` en la sección externa.
+1. Establece el `android.permission.BIND_WALLPAPER` permiso. Este permiso concede al servicio de reloj ver el permiso para cambiar el papel tapiz del sistema en el dispositivo. Tenga en cuenta que este permiso se debe establecer `<service>` en la sección en lugar de `<application>` en la sección externa.
 
-2.  Define un `watch_face` recurso. Este recurso es un archivo XML corto que declara un `wallpaper` recurso (este archivo se creará en la sección siguiente).
+2. Define un `watch_face` recurso. Este recurso es un archivo XML corto que declara un `wallpaper` recurso (este archivo se creará en la sección siguiente).
 
-3.  Declara una imagen dibujable llamada `preview` que se mostrará en la pantalla de selección del selector de inspección.
+3. Declara una imagen dibujable llamada `preview` que se mostrará en la pantalla de selección del selector de inspección.
 
-4.  Incluye un `intent-filter` para permitir que Android sepa `MyWatchFaceService` que mostrará una esfera de inspección.
+4. Incluye un `intent-filter` para permitir que Android sepa `MyWatchFaceService` que mostrará una esfera de inspección.
 
 Esto completa el código para el ejemplo básico `WatchFace` . El siguiente paso consiste en agregar los recursos necesarios.
 
@@ -334,21 +334,21 @@ Si todavía no lo ha hecho, descargue [Preview. png](creating-a-watchface-images
 Instálelo en Resources **/drawable/Preview. png**. Asegúrese de agregar este archivo al `WatchFace` proyecto. Esta imagen de vista previa se muestra al usuario en el selector de caras de inspección en el dispositivo de desgaste. Para crear una imagen de vista previa para su propia esfera de inspección, puede realizar una captura de pantalla de la superficie del reloj mientras se está ejecutando. (Para obtener más información sobre cómo obtener capturas de pantallas de dispositivos de desgaste, consulte [realizar capturas de pantallas](~/android/wear/deploy-test/debug-on-device.md#screenshots)).
 
 
-## <a name="try-it"></a>¡ Pruébelo!
+## <a name="try-it"></a>Pruébalo.
 
 Compile e implemente la aplicación en el dispositivo de desgaste. Debería ver que la pantalla de la aplicación de desgaste aparece como antes. Haga lo siguiente para habilitar la nueva esfera de inspección:
 
-1.  Deslice el dedo hacia la derecha hasta que vea el fondo de la pantalla de inspección.
+1. Deslice el dedo hacia la derecha hasta que vea el fondo de la pantalla de inspección.
 
-2.  Toque y mantenga presionado en cualquier lugar del fondo de la pantalla durante dos segundos.
+2. Toque y mantenga presionado en cualquier lugar del fondo de la pantalla durante dos segundos.
 
-3.  Deslice el dedo de izquierda a derecha para desplazarse por los distintos rostros de inspección.
+3. Deslice el dedo de izquierda a derecha para desplazarse por los distintos rostros de inspección.
 
-4.  Seleccione la esfera de **ejemplo de Xamarin** (que se muestra a la derecha):
+4. Seleccione la esfera de **ejemplo de Xamarin** (que se muestra a la derecha):
 
     [![Selector de watchface](creating-a-watchface-images/11-watchface-picker.png "Deslice el dedo para buscar la esfera de ejemplo de Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  Puntee en la esfera de **ejemplo de Xamarin** para seleccionarla.
+5. Puntee en la esfera de **ejemplo de Xamarin** para seleccionarla.
 
 Esto cambia la parte del reloj del dispositivo de desgaste para usar el servicio de la esfera de inspección personalizada implementada hasta el momento:
 
@@ -364,15 +364,15 @@ En la siguiente sección, esta superficie de inspección se actualizará a una i
 
 En el resto de este tutorial, `MyWatchFaceService` se actualiza para mostrar una superficie de inspección de estilo analógico y se amplía para admitir más características. Se agregarán las siguientes funcionalidades para crear la superficie de inspección actualizada:
 
-1.  Indica la hora con la hora analógica, el minuto y la segunda manecilla.
+1. Indica la hora con la hora analógica, el minuto y la segunda manecilla.
 
-2.  Reacciona a los cambios en la visibilidad.
+2. Reacciona a los cambios en la visibilidad.
 
-3.  Responde a los cambios entre el modo ambiente y el modo interactivo.
+3. Responde a los cambios entre el modo ambiente y el modo interactivo.
 
-4.  Lee las propiedades del dispositivo de desgaste subyacente.
+4. Lee las propiedades del dispositivo de desgaste subyacente.
 
-5.  Actualiza automáticamente la hora a la que tiene lugar un cambio de zona horaria.
+5. Actualiza automáticamente la hora a la que tiene lugar un cambio de zona horaria.
 
 Antes de implementar los cambios de código siguientes, descargue [drawable. zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descomprima el archivo y mueva los archivos. png descomprimidos a Resources **/drawable** (sobrescriba la **versión preliminar. png**anterior). Agregue los nuevos archivos. png al `WatchFace` proyecto.
 
@@ -387,13 +387,13 @@ Esta versión de **MyWatchFaceService.CS** agrega más código a los métodos ex
 
 El método **alcreate** actualizado configura el estilo de la esfera de inspección como antes, pero incluye algunos pasos adicionales:
 
-1.  Establece la imagen de fondo en el recurso **xamarin_background** que reside en Resources **/drawable-hdpi/xamarin_background. png**.
+1. Establece la imagen de fondo en el recurso **xamarin_background** que reside en Resources **/drawable-hdpi/xamarin_background. png**.
 
-2.  `Paint` Inicializa objetos para dibujar la manecilla de la hora, la manecilla del minuto y la segunda mano.
+2. `Paint` Inicializa objetos para dibujar la manecilla de la hora, la manecilla del minuto y la segunda mano.
 
-3.  Inicializa un `Paint` objeto para dibujar los tics de hora alrededor del borde de la superficie de inspección.
+3. Inicializa un `Paint` objeto para dibujar los tics de hora alrededor del borde de la superficie de inspección.
 
-4.  Crea un temporizador que llama al `Invalidate` método (Redraw) para que la segunda mano se vuelva a dibujar cada segundo. Tenga en cuenta que este temporizador es `OnTimeTick` necesario `Invalidate` porque llama solo una vez cada minuto.
+4. Crea un temporizador que llama al `Invalidate` método (Redraw) para que la segunda mano se vuelva a dibujar cada segundo. Tenga en cuenta que este temporizador es `OnTimeTick` necesario `Invalidate` porque llama solo una vez cada minuto.
 
 Este ejemplo solo incluye una imagen **xamarin_background. png** ; sin embargo, puede que desee crear una imagen de fondo diferente para cada densidad de pantalla que admita la esfera de inspección personalizada.
 
@@ -401,17 +401,17 @@ Este ejemplo solo incluye una imagen **xamarin_background. png** ; sin embargo, 
 
 El método **OnDraw** actualizado dibuja una superficie de inspección de estilo analógico mediante los pasos siguientes:
 
-1.  Obtiene la hora actual, que ahora se mantiene en un `time` objeto.
+1. Obtiene la hora actual, que ahora se mantiene en un `time` objeto.
 
-2.  Determina los límites de la superficie de dibujo y su centro.
+2. Determina los límites de la superficie de dibujo y su centro.
 
-3.  Dibuja el fondo, escalado para ajustarse al dispositivo cuando se dibuja el fondo.
+3. Dibuja el fondo, escalado para ajustarse al dispositivo cuando se dibuja el fondo.
 
-4.  Dibuja doce *TICs* alrededor de la superficie del reloj (correspondiente a las horas de la esfera del reloj).
+4. Dibuja doce *TICs* alrededor de la superficie del reloj (correspondiente a las horas de la esfera del reloj).
 
-5.  Calcula el ángulo, la rotación y la longitud de cada mano de inspección.
+5. Calcula el ángulo, la rotación y la longitud de cada mano de inspección.
 
-6.  Dibuja cada mano en la superficie de inspección. Tenga en cuenta que la segunda mano no se dibuja si el reloj está en modo ambiente.
+6. Dibuja cada mano en la superficie de inspección. Tenga en cuenta que la segunda mano no se dibuja si el reloj está en modo ambiente.
 
 
 #### <a name="onpropertieschanged"></a>OnPropertiesChanged

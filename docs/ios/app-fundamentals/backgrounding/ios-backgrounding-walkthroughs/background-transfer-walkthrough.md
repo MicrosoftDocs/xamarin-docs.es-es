@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fad85eadd819c04d087345c6bf4b5e977c9ec279
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a0c659904be2f6755ff4a32853e141ee8572e839
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656523"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521246"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferencia en segundo plano y NSURLSession en Xamarin. iOS
 
@@ -52,15 +52,15 @@ Ahora que hemos configurado una sesión en segundo plano, vamos a comenzar las t
 
 Un `NSUrlSessionDelegate` proporciona los siguientes métodos básicos para comprobar el estado de la transferencia:
 
--  *DidFinishEventsForBackgroundSession* : se llama a este método cuando finalizan todas las tareas y se completa la transferencia.
--  *DidReceiveChallenge* : se le llama para solicitar credenciales cuando se requiere autorización.
--  *DidBecomeInvalidWithError* : `NSURLSession` se llama a este método si se invalida.
+- *DidFinishEventsForBackgroundSession* : se llama a este método cuando finalizan todas las tareas y se completa la transferencia.
+- *DidReceiveChallenge* : se le llama para solicitar credenciales cuando se requiere autorización.
+- *DidBecomeInvalidWithError* : `NSURLSession` se llama a este método si se invalida.
 
 
 Las sesiones en segundo plano requieren delegados más especializados en función de los tipos de tareas que se están ejecutando. Las sesiones en segundo plano se limitan a dos tipos de tareas:
 
--  *Tareas de carga* : las tareas `NSUrlSessionUploadTask` de tipo `NSUrlSessionTaskDelegate` usan el, que hereda `NSUrlSessionDelegate` de. Este delegado proporciona métodos adicionales para realizar el seguimiento del progreso de la carga, controlar el redireccionamiento HTTP y mucho más.
--  *Tareas de descarga* : tareas de `NSUrlSessionDownloadTask` tipo use `NSUrlSessionDownloadDelegate` , que hereda de `NSUrlSessionTaskDelegate` . Este delegado proporciona todos los métodos para las tareas de carga, así como métodos específicos de descarga para realizar el seguimiento del progreso de la descarga y determinar cuándo se ha reanudado o completado una tarea de descarga.
+- *Tareas de carga* : las tareas `NSUrlSessionUploadTask` de tipo `NSUrlSessionTaskDelegate` usan el, que hereda `NSUrlSessionDelegate` de. Este delegado proporciona métodos adicionales para realizar el seguimiento del progreso de la carga, controlar el redireccionamiento HTTP y mucho más.
+- *Tareas de descarga* : tareas de `NSUrlSessionDownloadTask` tipo use `NSUrlSessionDownloadDelegate` , que hereda de `NSUrlSessionTaskDelegate` . Este delegado proporciona todos los métodos para las tareas de carga, así como métodos específicos de descarga para realizar el seguimiento del progreso de la descarga y determinar cuándo se ha reanudado o completado una tarea de descarga.
 
 
 En el código siguiente se define una tarea que se puede usar para descargar una imagen de una dirección URL. La tarea se inicia llamando `CreateDownloadTask` a en nuestra sesión en segundo plano y pasando la solicitud de dirección URL:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4ff0fa177bf28f00182c202ffba770d4be61b3c7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 00df2edc1acc45c0302ecc793f4670eafa1dd91c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643350"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523748"
 ---
 # <a name="marshmallow-features"></a>Características de marshmallow
 
@@ -26,31 +26,31 @@ En este artículo se proporciona un esquema de las nuevas características de An
 [Android 6,0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html), es la próxima versión principal de Android después de un círculo de Android.
 Xamarin. Android es compatible con Android Marshmallow e incluye:
 
--   **Enlaces de API 23/Android 6,0** &ndash; Android 6,0 agrega muchas API nuevas para las nuevas características que se describen a continuación; estas API están disponibles para las aplicaciones de Xamarin. Android cuando el destino es el nivel de API 23. Para obtener más información sobre las API de Android 6,0, consulte [API de android 6,0](https://developer.android.com/preview/api-overview.html). 
+- **Enlaces de API 23/Android 6,0** &ndash; Android 6,0 agrega muchas API nuevas para las nuevas características que se describen a continuación; estas API están disponibles para las aplicaciones de Xamarin. Android cuando el destino es el nivel de API 23. Para obtener más información sobre las API de Android 6,0, consulte [API de android 6,0](https://developer.android.com/preview/api-overview.html). 
 
 [![Imágenes prominentes de tabletas y teléfonos que ejecutan Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
 Aunque la versión de marshmallow se centra principalmente en "polaco y calidad", también proporciona muchas características nuevas de interés para los desarrolladores de Xamarin. Android. Entre ellas se incluyen: 
 
--   **Permisos de tiempo de ejecución** &ndash; Esta mejora permite a los usuarios aprobar los permisos de seguridad en el tiempo de ejecución. 
+- **Permisos de tiempo de ejecución** &ndash; Esta mejora permite a los usuarios aprobar los permisos de seguridad en el tiempo de ejecución. 
 
--   **Mejoras de autenticación** A partir de Android Marshmallow, las aplicaciones pueden usar ahora sensores de huellas digitales para autenticar a los usuarios, y una nueva característica confirmar credenciales minimiza la necesidad de escribir contraseñas. &ndash; 
+- **Mejoras de autenticación** A partir de Android Marshmallow, las aplicaciones pueden usar ahora sensores de huellas digitales para autenticar a los usuarios, y una nueva característica confirmar credenciales minimiza la necesidad de escribir contraseñas. &ndash; 
 
--   **Vinculación de aplicaciones** Esta característica ayuda a eliminar la necesidad de hacer que el **selector de aplicaciones** se abra mediante la Asociación automática de aplicaciones con dominios Web. &ndash; 
+- **Vinculación de aplicaciones** Esta característica ayuda a eliminar la necesidad de hacer que el **selector de aplicaciones** se abra mediante la Asociación automática de aplicaciones con dominios Web. &ndash; 
 
--   **Recurso compartido directo** Puede definir *destinos directos de recursos* compartidos que hacen que el uso compartido sea rápido e intuitivo para los usuarios; esta característica permite a UERs compartir contenido con otras aplicaciones. &ndash; 
+- **Recurso compartido directo** Puede definir *destinos directos de recursos* compartidos que hacen que el uso compartido sea rápido e intuitivo para los usuarios; esta característica permite a UERs compartir contenido con otras aplicaciones. &ndash; 
 
--   **Interacciones de voz** &ndash; Esta nueva API le permite crear características de voz de conversación en la aplicación. 
+- **Interacciones de voz** &ndash; Esta nueva API le permite crear características de voz de conversación en la aplicación. 
 
--   **modo de presentación de 4k** &ndash; En Android Marshmallow, la aplicación puede solicitar una resolución de pantalla de 4k en el hardware que lo admita. 
+- **modo de presentación de 4k** &ndash; En Android Marshmallow, la aplicación puede solicitar una resolución de pantalla de 4k en el hardware que lo admita. 
 
--   **Nuevas características de audio** &ndash; A partir de marshmallow, Android ahora es compatible con el protocolo MIDI. También proporciona nuevas clases para crear objetos de captura y reproducción de audio digital, y ofrece nuevos enlaces de API para asociar dispositivos de audio y de entrada. 
+- **Nuevas características de audio** &ndash; A partir de marshmallow, Android ahora es compatible con el protocolo MIDI. También proporciona nuevas clases para crear objetos de captura y reproducción de audio digital, y ofrece nuevos enlaces de API para asociar dispositivos de audio y de entrada. 
 
--   **Nuevas características de vídeo** &ndash; Marshmallow proporciona una nueva clase que ayuda a las aplicaciones a representar secuencias de audio y vídeo en sincronización; esta clase también proporciona compatibilidad con la velocidad de reproducción dinámica. 
+- **Nuevas características de vídeo** &ndash; Marshmallow proporciona una nueva clase que ayuda a las aplicaciones a representar secuencias de audio y vídeo en sincronización; esta clase también proporciona compatibilidad con la velocidad de reproducción dinámica. 
 
--   **Android for work** &ndash; Marshmallow incluye controles mejorados para dispositivos de usuario único corporativos. Admite la instalación silenciosa y desinstalación de aplicaciones por parte del propietario del dispositivo, la aceptación automática de las actualizaciones del sistema, la administración mejorada de certificados, el seguimiento del uso de datos, la administración de permisos y las notificaciones de estado del trabajo. 
+- **Android for work** &ndash; Marshmallow incluye controles mejorados para dispositivos de usuario único corporativos. Admite la instalación silenciosa y desinstalación de aplicaciones por parte del propietario del dispositivo, la aceptación automática de las actualizaciones del sistema, la administración mejorada de certificados, el seguimiento del uso de datos, la administración de permisos y las notificaciones de estado del trabajo. 
 
--   **Biblioteca de compatibilidad de diseño de materiales** La nueva *biblioteca de soporte técnico de diseño* proporciona componentes y patrones de diseño que facilitan la compilación de la apariencia y el funcionamiento del diseño de material en la aplicación. &ndash; 
+- **Biblioteca de compatibilidad de diseño de materiales** La nueva *biblioteca de soporte técnico de diseño* proporciona componentes y patrones de diseño que facilitan la compilación de la apariencia y el funcionamiento del diseño de material en la aplicación. &ndash; 
 
 Además, muchas de las actualizaciones principales de la biblioteca de Android se lanzaron con Android M, y estas actualizaciones proporcionan nuevas características para Android M y versiones anteriores de Android.
 
@@ -60,13 +60,13 @@ Además, muchas de las actualizaciones principales de la biblioteca de Android s
 
 Para usar las nuevas características de Android Marshmallow en aplicaciones basadas en Xamarin, se requiere lo siguiente: 
 
--   **Xamarin. Android** &ndash; Xamarin. Android 5.1.7.12 o posterior debe estar instalado y configurado con Visual Studio o Xamarin Studio.
+- **Xamarin. Android** &ndash; Xamarin. Android 5.1.7.12 o posterior debe estar instalado y configurado con Visual Studio o Xamarin Studio.
 
--   **Visual Studio para Mac** o **Visual Studio** &ndash; si usa Visual Studio para Mac, se requiere la versión 5.9.7.22 o posterior. Si usa Visual Studio, se requiere la versión 3.11.1537 o posterior de las herramientas de Xamarin para Visual Studio. 
+- **Visual Studio para Mac** o **Visual Studio** &ndash; si usa Visual Studio para Mac, se requiere la versión 5.9.7.22 o posterior. Si usa Visual Studio, se requiere la versión 3.11.1537 o posterior de las herramientas de Xamarin para Visual Studio. 
 
--   **Android SDK** &ndash; Android SDK 6,0 (API 23) o posterior debe instalarse a través del administrador de Android SDK.
+- **Android SDK** &ndash; Android SDK 6,0 (API 23) o posterior debe instalarse a través del administrador de Android SDK.
 
--   **Kit para desarrolladores de Java** Xamarin. Android requiere [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 1,8 también admite los niveles de API anteriores a 24, incluido Marshmallow). &ndash; Se requiere la versión de 64 bits de JDK 1,8 Si usa controles personalizados o la vista previa de formularios.
+- **Kit para desarrolladores de Java** Xamarin. Android requiere [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 1,8 también admite los niveles de API anteriores a 24, incluido Marshmallow). &ndash; Se requiere la versión de 64 bits de JDK 1,8 Si usa controles personalizados o la vista previa de formularios.
 
 Puede seguir usando [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si está desarrollando específicamente para el nivel de API 23 o una versión anterior. 
 
@@ -75,13 +75,13 @@ Puede seguir usando [JDK 1,7](https://www.oracle.com/technetwork/java/javase/dow
 
 Para empezar a usar Android Marshmallow con Xamarin. Android, debe descargar e instalar las herramientas y los paquetes de SDK más recientes antes de poder crear un proyecto de marshmallow de Android: 
 
-1.  Instale las últimas actualizaciones de Xamarin desde el canal **estable** . 
+1. Instale las últimas actualizaciones de Xamarin desde el canal **estable** . 
 
-2.  Instale los paquetes y las herramientas del SDK de Android 6,0 Marshmallow.
+2. Instale los paquetes y las herramientas del SDK de Android 6,0 Marshmallow.
 
-3.  Cree un nuevo proyecto de Xamarin. Android que tenga como destino Android 6,0 Marshmallow (nivel de API 23). 
+3. Cree un nuevo proyecto de Xamarin. Android que tenga como destino Android 6,0 Marshmallow (nivel de API 23). 
 
-4.  Configurar un emulador o un dispositivo para Android Marshmallow.
+4. Configurar un emulador o un dispositivo para Android Marshmallow.
 
 En las secciones siguientes se explica cada uno de estos pasos:
 
@@ -95,11 +95,11 @@ Para actualizar Xamarin para que incluya compatibilidad con Android 6,0 Marshmal
 
 Para crear un proyecto de Xamarin. Android para Android Marshmallow, primero debe usar el administrador de Android SDK para instalar el SDK de Android 6,0:
 
--   Inicie el administrador de Android SDK (en Visual Studio para Mac, use **herramientas > SDK Manager**; en Visual Studio, use **herramientas > Android > Android SDK Manager**) e instale el Android SDK Tools más reciente:
+- Inicie el administrador de Android SDK (en Visual Studio para Mac, use **herramientas > SDK Manager**; en Visual Studio, use **herramientas > Android > Android SDK Manager**) e instale el Android SDK Tools más reciente:
 
     [![Selección de Android SDK herramientas en el administrador de Android SDK](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
 
--   Además, instale los paquetes de SDK de **Android 6,0** más recientes:
+- Además, instale los paquetes de SDK de **Android 6,0** más recientes:
 
     [![Selección de paquetes de SDK de Android 6,0 en el administrador de Android SDK](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
@@ -120,9 +120,9 @@ Al crear un proyecto de Android, debe configurar las opciones de versión para q
 
 Si usa un emulador, inicie Android AVD Manager y cree un nuevo dispositivo con la siguiente configuración:
 
--   Dispositivo: Nexus 5, 6 o 9.
--   Destino: Android 6,0-nivel de API 23
--   ABI: x86
+- Dispositivo: Nexus 5, 6 o 9.
+- Destino: Android 6,0-nivel de API 23
+- ABI: x86
 
 Por ejemplo, este dispositivo virtual está configurado para emular un nexo 5:
 
@@ -147,13 +147,13 @@ Xamarin también proporciona una aplicación de ejemplo que muestra cómo funcio
 
 En esta aplicación de ejemplo se muestra lo siguiente:
 
--   Cómo comprobar y solicitar permisos en tiempo de ejecución.
--   Cómo declarar permisos para dispositivos Android M.
+- Cómo comprobar y solicitar permisos en tiempo de ejecución.
+- Cómo declarar permisos para dispositivos Android M.
 
 Para usar esta aplicación de ejemplo:
 
-1.  Puntee en los botones **cámara** o **contactos** para mostrar un cuadro de diálogo de solicitud de permisos.
-2.  Conceder permiso para ver fragmentos de cámara o contactos.
+1. Puntee en los botones **cámara** o **contactos** para mostrar un cuadro de diálogo de solicitud de permisos.
+2. Conceder permiso para ver fragmentos de cámara o contactos.
 
 Para obtener más información sobre las nuevas características de permisos en tiempo de ejecución en Android Marshmallow, consulte [trabajar con permisos del sistema](https://developer.android.com/preview/features/runtime-permissions.html).
 
@@ -163,9 +163,9 @@ Para obtener más información sobre las nuevas características de permisos en 
 
 Android Marshmallow incluye dos mejoras de autenticación que ayudan a eliminar la necesidad de contraseñas:
 
--   **Autenticación mediante huella digital** &ndash; Usa un examen de huellas digitales para autenticar a los usuarios.
+- **Autenticación mediante huella digital** &ndash; Usa un examen de huellas digitales para autenticar a los usuarios.
 
--   **Confirmar credencial** &ndash; Autentica a los usuarios en función del tiempo que se ha desbloqueado el dispositivo.
+- **Confirmar credencial** &ndash; Autentica a los usuarios en función del tiempo que se ha desbloqueado el dispositivo.
 
 Los vínculos y las aplicaciones de ejemplo que se describen a continuación pueden ayudarle a familiarizarse con estas nuevas características.
 
@@ -179,8 +179,8 @@ Xamarin proporciona una aplicación de ejemplo que muestra cómo usar huellas di
 
 Para usar esta aplicación de ejemplo:
 
-1.  Pulse el botón **comprar** para abrir un cuadro de diálogo de autenticación mediante huellas digitales.
-2.  Digitalice la huella digital registrada para autenticarse.
+1. Pulse el botón **comprar** para abrir un cuadro de diálogo de autenticación mediante huellas digitales.
+2. Digitalice la huella digital registrada para autenticarse.
 
 Tenga en cuenta que esta aplicación de ejemplo requiere un dispositivo con un lector de huellas digitales.
 Esta aplicación no almacena la huella digital (o la contraseña).
@@ -205,8 +205,8 @@ Xamarin proporciona una aplicación de ejemplo que muestra cómo usar las creden
 
 Para usar esta aplicación de ejemplo:
 
-1.  Configurar una pantalla de bloqueo segura en el dispositivo (**protección > seguridad > Screenlock**).
-2.  Puntee en el botón **comprar** y confirme las credenciales de la pantalla de bloqueo seguro.
+1. Configurar una pantalla de bloqueo segura en el dispositivo (**protección > seguridad > Screenlock**).
+2. Puntee en el botón **comprar** y confirme las credenciales de la pantalla de bloqueo seguro.
 
 
 
@@ -216,13 +216,13 @@ Los desarrolladores de aplicaciones se encuentran en una opción cuando un usuar
 
 Las *pestañas personalizadas de Chrome* permiten mostrar fácilmente sitios web con el potencial de Chrome sin que los usuarios salgan de la aplicación. Esta característica ofrece a la aplicación más control sobre la experiencia web del usuario. hace que las transiciones entre el contenido nativo y web sean más fluidas sin tener `WebView`que recurrir a un. La aplicación también puede afectar a la apariencia y el aspecto de Chrome personalizando lo siguiente: 
 
--   Color de la barra de herramientas
+- Color de la barra de herramientas
 
--   Entrar y salir de animaciones
+- Entrar y salir de animaciones
 
--   Acciones personalizadas en la barra de herramientas de Chrome y en el menú de desbordamiento
+- Acciones personalizadas en la barra de herramientas de Chrome y en el menú de desbordamiento
 
--   Preinicio y captura previa de Chrome (para una carga más rápida)
+- Preinicio y captura previa de Chrome (para una carga más rápida)
 
 Para aprovechar esta característica en la aplicación de Xamarin. Android, descargue e instale la [biblioteca de pestañas personalizadas de compatibilidad con Android](https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/).
 Para obtener más información sobre esta característica, consulte [pestañas personalizadas de Chrome](https://developer.chrome.com/multidevice/android/customtabs).
@@ -233,19 +233,19 @@ Para obtener más información sobre esta característica, consulte [pestañas p
 
 El círculo de Android presentó el [diseño de material](http://www.google.com/design/spec/material-design/introduction.html) como un nuevo lenguaje de diseño para actualizar la experiencia de Android (consulte el [tema material](~/android/user-interface/material-theme.md) para obtener información sobre cómo usar el diseño de material en las aplicaciones de Xamarin. Android). Con Android Marshmallow, Google presentó la *biblioteca de compatibilidad de diseño de Android* para facilitar a los desarrolladores de aplicaciones la adopción de la apariencia y el funcionamiento del diseño del material. Esta biblioteca incluye los componentes siguientes:
 
--   **CoordinatorLayout** El nuevo `CoordinatorLayout` widget es similar a, `FrameLayout`pero más eficaz que. &ndash; Puede usar `CoordinatorLayout` como contenedor para vistas secundarias o como un diseño de nivel superior, y proporciona un `layout_anchor` atributo que se puede usar para delimitar vistas en relación con otras vistas.
+- **CoordinatorLayout** El nuevo `CoordinatorLayout` widget es similar a, `FrameLayout`pero más eficaz que. &ndash; Puede usar `CoordinatorLayout` como contenedor para vistas secundarias o como un diseño de nivel superior, y proporciona un `layout_anchor` atributo que se puede usar para delimitar vistas en relación con otras vistas.
 
--   **Contraer barras de herramientas** La nueva `CollapsingToolbarLayout` es una barra de la aplicación que se contrae que es un contenedor para `Toolbar`. &ndash; (Tenga en cuenta que la barra de la *aplicación* es lo que antes se conocía como la *barra de acciones*).
+- **Contraer barras de herramientas** La nueva `CollapsingToolbarLayout` es una barra de la aplicación que se contrae que es un contenedor para `Toolbar`. &ndash; (Tenga en cuenta que la barra de la *aplicación* es lo que antes se conocía como la *barra de acciones*).
 
--   **Botón de acción flotante** &ndash; Un botón redondo que denota la acción principal en la interfaz de la aplicación.
+- **Botón de acción flotante** &ndash; Un botón redondo que denota la acción principal en la interfaz de la aplicación.
 
--   **Etiquetas flotantes para editar texto** Usa un `TextInputLayout` nuevo`EditText`widget (que se ajusta) para mostrar una etiqueta flotante cuando se oculta una sugerencia cuando un usuario escribe texto. &ndash;
+- **Etiquetas flotantes para editar texto** Usa un `TextInputLayout` nuevo`EditText`widget (que se ajusta) para mostrar una etiqueta flotante cuando se oculta una sugerencia cuando un usuario escribe texto. &ndash;
 
--   **Vista de navegación** &ndash; El nuevo`NavigationView` widget le ayuda a usar el cajón de navegación de una manera más fácil de navegar por los usuarios.
+- **Vista de navegación** &ndash; El nuevo`NavigationView` widget le ayuda a usar el cajón de navegación de una manera más fácil de navegar por los usuarios.
 
--   **Snackbar** &ndash; El nuevo`SnackBar` widget es un mecanismo de comentarios ligeros (similar a una notificación del sistema) que muestra un mensaje breve en la parte inferior de la pantalla, que aparece encima de los demás elementos de la pantalla.
+- **Snackbar** &ndash; El nuevo`SnackBar` widget es un mecanismo de comentarios ligeros (similar a una notificación del sistema) que muestra un mensaje breve en la parte inferior de la pantalla, que aparece encima de los demás elementos de la pantalla.
 
--   **Pestañas de material** &ndash; El nuevo`TabLayout` widget proporciona un diseño horizontal para mostrar las pestañas como forma de implementar la navegación de nivel superior en la aplicación.
+- **Pestañas de material** &ndash; El nuevo`TabLayout` widget proporciona un diseño horizontal para mostrar las pestañas como forma de implementar la navegación de nivel superior en la aplicación.
 
 Para beneficiarse de la [biblioteca de soporte técnico de diseño](https://developer.android.com/tools/support-library/features.html#design) de la aplicación de Xamarin. Android, descargue e instale el paquete NuGet de diseño de la [biblioteca de compatibilidad](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) de Xamarin Xamarin.
 
@@ -254,11 +254,11 @@ Xamarin proporciona una aplicación de ejemplo que muestra una demostración de 
 Este ejemplo muestra las siguientes características de la biblioteca de diseño:
 
 
--   Barra de herramientas contraer
--   Botón de acción flotante
--   Ver delimitación
--   NavigationView
--   Snackbar
+- Barra de herramientas contraer
+- Botón de acción flotante
+- Ver delimitación
+- NavigationView
+- Snackbar
 
 Para obtener más información sobre la biblioteca de diseño, vea [biblioteca de compatibilidad de diseño de Android](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html) en el blog del desarrollador de Android.
 
@@ -267,11 +267,11 @@ Para obtener más información sobre la biblioteca de diseño, vea [biblioteca d
 
 Además de Android Marshmallow, Google ha anunciado actualizaciones relacionadas con varias bibliotecas básicas de Android. Xamarin proporciona compatibilidad con Xamarin. Android para estas actualizaciones a través de varios paquetes de NuGet de versión preliminar: 
 
--   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) La versión más reciente de Google Play Services incluye la nueva característica de invitaciones de aplicación, que permite a los usuarios compartir su aplicación con amigos. &ndash; Para obtener más información sobre esta característica, vea el apartado sobre cómo [ampliar el alcance de su aplicación con los invitados de la aplicación de Google](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
+- [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) La versión más reciente de Google Play Services incluye la nueva característica de invitaciones de aplicación, que permite a los usuarios compartir su aplicación con amigos. &ndash; Para obtener más información sobre esta característica, vea el apartado sobre cómo [ampliar el alcance de su aplicación con los invitados de la aplicación de Google](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 
--   [Bibliotecas de compatibilidad con Android](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; Estos paquetes Nuget ofrecen características que solo están disponibles para las API de biblioteca al mismo tiempo que proporcionan versiones compatibles con versiones anteriores de las API de Android Framework. 
+- [Bibliotecas de compatibilidad con Android](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; Estos paquetes Nuget ofrecen características que solo están disponibles para las API de biblioteca al mismo tiempo que proporcionan versiones compatibles con versiones anteriores de las API de Android Framework. 
 
--   [Biblioteca portátil de Android](https://www.nuget.org/packages/Xamarin.Android.Wear) &ndash; este NuGet incluye enlaces de Google Play Services. La versión más reciente de la biblioteca portátil aporta nuevas características (incluida una navegación más sencilla para aplicaciones personalizadas) a la plataforma de desgaste de Android. 
+- [Biblioteca portátil de Android](https://www.nuget.org/packages/Xamarin.Android.Wear) &ndash; este NuGet incluye enlaces de Google Play Services. La versión más reciente de la biblioteca portátil aporta nuevas características (incluida una navegación más sencilla para aplicaciones personalizadas) a la plataforma de desgaste de Android. 
 
 
 ## <a name="summary"></a>Resumen

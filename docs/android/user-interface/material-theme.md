@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 027460196f97173fcf977971b79def722ab672d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fca8ee02fc48979db1d29716374ba300a0e8bbbf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647867"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522368"
 ---
 # <a name="material-theme"></a>Tema de materiales
 
@@ -20,11 +20,11 @@ El *tema material* es un estilo de interfaz de usuario que determina la aparienc
 
 Android proporciona tres tipos de tema de material:
 
--  `Theme.Material`&ndash; Versión oscura del tema material; este es el tipo predeterminado en Android 5,0.
+- `Theme.Material`&ndash; Versión oscura del tema material; este es el tipo predeterminado en Android 5,0.
 
--  `Theme.Material.Light`&ndash; Versión ligera del tema material.
+- `Theme.Material.Light`&ndash; Versión ligera del tema material.
 
--  `Theme.Material.Light.DarkActionBar`&ndash; Versión ligera del tema material, pero con una barra de acciones oscura.
+- `Theme.Material.Light.DarkActionBar`&ndash; Versión ligera del tema material, pero con una barra de acciones oscura.
 
 Aquí se muestran ejemplos de estos tipos de tema de material:
 
@@ -41,11 +41,11 @@ Dado que el tema material solo se admite en Android 5,0 y versiones posteriores,
 
 Lo siguiente es necesario para usar las nuevas características de tema de material de Android 5,0 en aplicaciones basadas en Xamarin:
 
--  **Xamarin. Android** &ndash; Xamarin. Android 4,20 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac. 
+- **Xamarin. Android** &ndash; Xamarin. Android 4,20 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac. 
 
--  **Android SDK** &ndash; Android 5,0 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
+- **Android SDK** &ndash; Android 5,0 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
 
--  **Java JDK 1,8** &ndash; JDK 1,7 puede usarse si se trata de destino de nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- **Java JDK 1,8** &ndash; JDK 1,7 puede usarse si se trata de destino de nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Para obtener información sobre cómo configurar un proyecto de aplicación de Android 5,0, consulte [configuración de un proyecto de android 5,0](~/android/platform/lollipop.md).
 
@@ -59,11 +59,11 @@ La forma más sencilla de usar el tema material es configurar la aplicación par
 
 Para configurar una aplicación completa para que use un tipo de tema material, `android:theme` establezca el atributo del nodo de aplicación en **archivo AndroidManifest. XML** en uno de los siguientes:
 
--  `@android:style/Theme.Material`&ndash; Tema oscuro.
+- `@android:style/Theme.Material`&ndash; Tema oscuro.
 
--  `@android:style/Theme.Material.Light`&ndash; Tema claro.
+- `@android:style/Theme.Material.Light`&ndash; Tema claro.
 
--  `@android:style/Theme.Material.Light.DarkActionBar`&ndash; Tema claro con barra de acciones oscuras.
+- `@android:style/Theme.Material.Light.DarkActionBar`&ndash; Tema claro con barra de acciones oscuras.
 
 En el ejemplo siguiente se configura la aplicación *MyApp* para usar el tema claro:
 
@@ -101,19 +101,19 @@ Puede mejorar su marca mediante la creación de un tema personalizado que permit
 
 El tema material expone los siguientes atributos de diseño para la personalización:
 
--  `colorPrimary`&ndash; Color de la barra de la aplicación.
+- `colorPrimary`&ndash; Color de la barra de la aplicación.
 
--  `colorPrimaryDark`El color de la barra de estado y las barras de la aplicación contextual; normalmente es una versión oscura de `colorPrimary`. &ndash;
+- `colorPrimaryDark`El color de la barra de estado y las barras de la aplicación contextual; normalmente es una versión oscura de `colorPrimary`. &ndash;
 
--  `colorAccent`&ndash; Color de los controles de interfaz de usuario, como las casillas, los botones de radio y los cuadros de texto de edición.
+- `colorAccent`&ndash; Color de los controles de interfaz de usuario, como las casillas, los botones de radio y los cuadros de texto de edición.
 
--  `windowBackground`&ndash; Color del fondo de la pantalla.
+- `windowBackground`&ndash; Color del fondo de la pantalla.
 
--  `textColorPrimary`&ndash; Color del texto de la interfaz de usuario en la barra de la aplicación.
+- `textColorPrimary`&ndash; Color del texto de la interfaz de usuario en la barra de la aplicación.
 
--  `statusBarColor`&ndash; Color de la barra de estado.
+- `statusBarColor`&ndash; Color de la barra de estado.
 
--  `navigationBarColor`&ndash; Color de la barra de navegación.
+- `navigationBarColor`&ndash; Color de la barra de navegación.
 
 Estas áreas de pantalla se etiquetan en el diagrama siguiente:
 
@@ -126,7 +126,7 @@ De forma predeterminada `statusBarColor` , se establece en el valor `colorPrimar
 
 Puede crear un tema de aplicación personalizado mediante la creación y modificación de archivos en la carpeta **recursos** del proyecto de la aplicación. Para aplicar estilo a la aplicación con un tema personalizado, siga estos pasos:
 
--   Cree un archivo **colors. XML** en **recursos/valores** &mdash; . este archivo se usa para definir los colores del tema personalizado. Por ejemplo, puede pegar el código siguiente en el **archivo colors. XML** para ayudarle a comenzar:
+- Cree un archivo **colors. XML** en **recursos/valores** &mdash; . este archivo se usa para definir los colores del tema personalizado. Por ejemplo, puede pegar el código siguiente en el **archivo colors. XML** para ayudarle a comenzar:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -138,15 +138,15 @@ Puede crear un tema de aplicación personalizado mediante la creación y modific
 </resources>
 ```
 
--   Modifique este archivo de ejemplo para definir los nombres y códigos de color para los recursos de color que utilizará en el tema personalizado.
+- Modifique este archivo de ejemplo para definir los nombres y códigos de color para los recursos de color que utilizará en el tema personalizado.
 
--   Cree una carpeta Resources **/Values-V21** . En esta carpeta, cree un archivo **styles. XML** :
+- Cree una carpeta Resources **/Values-V21** . En esta carpeta, cree un archivo **styles. XML** :
 
     [![Ubicación de styles. XML en la carpeta Resources/Values-21. XML](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     Tenga en cuenta que Resources **/Values-V21** es específico de Android 5,0 &ndash; las versiones anteriores de Android no leerán los archivos de esta carpeta.
 
--   Agregue un `resources` nodo a **styles. XML** y defina `style` un nodo con el nombre del tema personalizado. Por ejemplo, este es un archivo **styles. XML** que define *MyCustomTheme* (derivado del estilo de `Theme.Material.Light` tema integrado):
+- Agregue un `resources` nodo a **styles. XML** y defina `style` un nodo con el nombre del tema personalizado. Por ejemplo, este es un archivo **styles. XML** que define *MyCustomTheme* (derivado del estilo de `Theme.Material.Light` tema integrado):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -158,11 +158,11 @@ Puede crear un tema de aplicación personalizado mediante la creación y modific
 </resources>
 ```
 
--   En este momento, una aplicación que usa *MyCustomTheme* mostrará el tema de `Theme.Material.Light` existencias sin personalizaciones:
+- En este momento, una aplicación que usa *MyCustomTheme* mostrará el tema de `Theme.Material.Light` existencias sin personalizaciones:
 
     [![Apariencia personalizada del tema antes de las personalizaciones](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
--   Agregue personalizaciones de color a **styles. XML** definiendo los colores de los atributos de diseño que desee cambiar. Por ejemplo, para cambiar el color de la barra `my_blue` de la aplicación a y cambiar el color `my_purple`de los controles de interfaz de usuario a, agregue invalidaciones de color a **styles. XML** que hagan referencia a recursos configurados en Colors **. XML**:
+- Agregue personalizaciones de color a **styles. XML** definiendo los colores de los atributos de diseño que desee cambiar. Por ejemplo, para cambiar el color de la barra `my_blue` de la aplicación a y cambiar el color `my_purple`de los controles de interfaz de usuario a, agregue invalidaciones de color a **styles. XML** que hagan referencia a recursos configurados en Colors **. XML**:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -190,7 +190,7 @@ En este ejemplo, *MyCustomTheme* toma los colores de `Theme.Material.Light` para
 Android 5,0 también permite aplicar estilo a una vista individual. Después de crear los **colores. XML** y **styles. XML** (como se describe en la sección anterior), puede Agregar un estilo de vista a **styles. XML**.
 Para aplicar estilo a una vista individual, siga estos pasos:
 
--   Edite Resources **/Values-V21/Styles. XML** y agregue un `style` nodo con el nombre del estilo de vista personalizado. Establezca los atributos de color personalizado para la vista en `style` este nodo. Por ejemplo, para crear un estilo [CardView](~/android/user-interface/controls/card-view.md) personalizado que tenga más esquinas redondeadas y use `my_blue` como color de fondo de la tarjeta, `style` agregue un nodo a **styles. XML** (dentro del `resources` nodo) y configure el color de fondo y radio de redondeo:
+- Edite Resources **/Values-V21/Styles. XML** y agregue un `style` nodo con el nombre del estilo de vista personalizado. Establezca los atributos de color personalizado para la vista en `style` este nodo. Por ejemplo, para crear un estilo [CardView](~/android/user-interface/controls/card-view.md) personalizado que tenga más esquinas redondeadas y use `my_blue` como color de fondo de la tarjeta, `style` agregue un nodo a **styles. XML** (dentro del `resources` nodo) y configure el color de fondo y radio de redondeo:
 
 ```xml
 <!-- Theme an individual view: -->
@@ -204,7 +204,7 @@ Para aplicar estilo a una vista individual, siga estos pasos:
 </style>
 ```
 
--   En el diseño, establezca el `style` atributo de esa vista para que coincida con el nombre de estilo personalizado que eligió en el paso anterior. Por ejemplo:
+- En el diseño, establezca el `style` atributo de esa vista para que coincida con el nombre de estilo personalizado que eligió en el paso anterior. Por ejemplo:
 
 ```xml
 <android.support.v7.widget.CardView
@@ -225,7 +225,7 @@ En este ejemplo, se muestra `CardView` el personalizado con el color `my_blue` d
 
 Para aplicar estilo a la aplicación de forma que use el tema material en Android 5,0, pero se revierte automáticamente a un estilo compatible con las versiones anteriores de Android, siga estos pasos:
 
--   Defina un tema personalizado en **Resources/Values-V21/Styles. XML** que se derive de un estilo material Theme. Por ejemplo:
+- Defina un tema personalizado en **Resources/Values-V21/Styles. XML** que se derive de un estilo material Theme. Por ejemplo:
 
 ```xml
 <resources>
@@ -235,7 +235,7 @@ Para aplicar estilo a la aplicación de forma que use el tema material en Androi
 </resources>
 ```
 
--   Defina un tema personalizado en **Resources/Values/Styles. XML** que se derive de un tema anterior, pero que use el mismo nombre de tema que el anterior. Por ejemplo:
+- Defina un tema personalizado en **Resources/Values/Styles. XML** que se derive de un tema anterior, pero que use el mismo nombre de tema que el anterior. Por ejemplo:
 
 ```xml
 <resources>
@@ -245,7 +245,7 @@ Para aplicar estilo a la aplicación de forma que use el tema material en Androi
 </resources>
 ```
 
--   En **archivo AndroidManifest. XML**, configure la aplicación con el nombre del tema personalizado. 
+- En **archivo AndroidManifest. XML**, configure la aplicación con el nombre del tema personalizado. 
     Por ejemplo:
 
 ```xml
@@ -254,7 +254,7 @@ Para aplicar estilo a la aplicación de forma que use el tema material en Androi
 </application>
 ```
 
--   Como alternativa, puede aplicar un estilo a una actividad específica mediante el tema personalizado:
+- Como alternativa, puede aplicar un estilo a una actividad específica mediante el tema personalizado:
 
 ```C#
 [Activity(Label = "MyActivity", Theme = "@style/MyCustomTheme")]

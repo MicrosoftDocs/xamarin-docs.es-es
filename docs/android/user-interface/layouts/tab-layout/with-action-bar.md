@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 92278fb84cba6329c33ac8a972a686fff7186f67
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647435"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522325"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con barra
 
@@ -47,17 +47,17 @@ Cuando el barra no puede mostrar todas las pestañas, se configuran las pestaña
 
 Cada pestaña de la barra de acciones debe estar asociada a un [*fragmento*](~/android/platform/fragments/index.md). Cuando el usuario selecciona una pestaña, la aplicación mostrará el fragmento que está asociado a la ficha. Barra no es responsable de mostrar el fragmento adecuado al usuario. En su lugar, barra notificará a una aplicación los cambios de estado en una pestaña a través de una clase que implementa la interfaz barra. ITabListener. Esta interfaz proporciona tres métodos de devolución de llamada que Android invocará cuando cambie el estado de la pestaña: 
 
--  **OnTabSelected** : se llama a este método cuando el usuario selecciona la pestaña. Debe mostrar el fragmento.
+- **OnTabSelected** : se llama a este método cuando el usuario selecciona la pestaña. Debe mostrar el fragmento.
 
--  **OnTabReselected** : se llama a este método cuando la pestaña ya está seleccionada pero el usuario la selecciona de nuevo. Esta devolución de llamada se usa normalmente para actualizar o actualizar el fragmento mostrado.
+- **OnTabReselected** : se llama a este método cuando la pestaña ya está seleccionada pero el usuario la selecciona de nuevo. Esta devolución de llamada se usa normalmente para actualizar o actualizar el fragmento mostrado.
 
--  **OnTabUnselected** : se llama a este método cuando el usuario selecciona otra pestaña. Esta devolución de llamada se utiliza para guardar el estado en el fragmento mostrado antes de desaparecer.
+- **OnTabUnselected** : se llama a este método cuando el usuario selecciona otra pestaña. Esta devolución de llamada se utiliza para guardar el estado en el fragmento mostrado antes de desaparecer.
 
 Xamarin. Android encapsula el `ActionBar.ITabListener` con eventos en la `ActionBar.Tab` clase. Las aplicaciones pueden asignar controladores de eventos a uno o varios de estos eventos. Hay tres eventos (uno para cada método en `ActionBar.ITabListener`) que generará una pestaña de la barra de acciones: 
 
--  TabSelected
--  TabReselected
--  TabUnselected
+- TabSelected
+- TabReselected
+- TabUnselected
 
 
 

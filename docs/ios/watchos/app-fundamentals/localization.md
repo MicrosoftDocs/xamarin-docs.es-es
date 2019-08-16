@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 70555a0e2df3bcdd9c3abe47cf8231145891a826
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865963"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528405"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con watchOS localización en Xamarin
 
@@ -56,7 +56,7 @@ De forma predeterminada, la aplicación del reloj no está configurada para la l
 
 1. Crear **Base.lproj** Active y mueva el **Interface.storyboard** en él.
 
-2. Crear  **<language>.lproj** directorios para cada idioma que desea admitir.
+2. Cree los directorios >. lproj de idioma para cada idioma que desee admitir.  **\<**
 
 3. El **.lproj** directorios deben contener un **Interface.strings** (el nombre de archivo debe coincidir con el nombre del storboard) el archivo de texto. Si lo desea, puede colocar las imágenes que requieran la localización en estos directorios.
 
@@ -125,7 +125,7 @@ displayText.SetText (localizedDisplay);
 
 Las imágenes que se rellenan con el código se pueden establecer de dos maneras.
 
-1. Puede cambiar un `Image` control estableciendo su valor en el nombre de cadena de una imagen que ya existe en la aplicación del reloj, p. ej.
+1. Puede cambiar un `Image` control estableciendo su valor en el nombre de cadena de una imagen que ya existe en la aplicación de inspección, por ejemplo,
 
     ```csharp
     displayImage.SetImage("gradient"); // image in Watch App (as shown above)
@@ -139,7 +139,7 @@ Las imágenes que se rellenan con el código se pueden establecer de dos maneras
     }
     ```
 
-    Tenga en cuenta que no es necesario especificar el **@2x** cuando se hace referencia al nombre de archivo de la imagen.
+    Tenga en cuenta que no es necesario especificar **@2x** al hacer referencia al nombre de archivo de la imagen.
 
 El segundo método también es aplicable si descarga una imagen desde un servidor remoto que se representará en el reloj; Sin embargo en este caso debe asegurarse de que la imagen que descarga correctamente se localiza según las preferencias del usuario.
 

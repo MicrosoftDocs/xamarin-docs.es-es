@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680937"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521718"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -120,9 +120,9 @@ public async Task<int> DownloadHomepage()
 
 Tenga en cuenta estos puntos:
 
--  La declaración del método incluye `async` la palabra clave.
--  El tipo de valor `Task<int>` devuelto es para que el `int` código de llamada pueda tener acceso al valor que se calcula en este método.
--  La instrucción return `return exampleInt;` es un objeto entero (el hecho que devuelve `Task<int>` el método forma parte de las mejoras del lenguaje).
+- La declaración del método incluye `async` la palabra clave.
+- El tipo de valor `Task<int>` devuelto es para que el `int` código de llamada pueda tener acceso al valor que se calcula en este método.
+- La instrucción return `return exampleInt;` es un objeto entero (el hecho que devuelve `Task<int>` el método forma parte de las mejoras del lenguaje).
 
 
 ### <a name="calling-an-async-method-1"></a>Llamar a un método asincrónico 1
@@ -148,11 +148,11 @@ GetButton.Click += async (sender, e) => {
 
 Notas:
 
--  El delegado anónimo tiene el prefijo de palabra clave Async.
--  El método asincrónico DownloadHomepage devuelve una tarea <int> que se almacena en la variable sizeTask.
--  El código espera en la variable sizeTask.  *Esta* es la ubicación en la que se suspende el método y el control se devuelve al código de llamada hasta que la tarea asincrónica finaliza en su propio subproceso.
--  La ejecución no *se detiene cuando* la tarea se crea en la primera línea del método, a pesar de que la tarea se crea allí. La palabra clave Await representa la ubicación en la que se pausa la ejecución.
--  Cuando finaliza la tarea asincrónica, se establece intResult y la ejecución continúa en el subproceso original, desde la línea Await.
+- El delegado anónimo tiene el prefijo de palabra clave Async.
+- El método asincrónico DownloadHomepage devuelve una tarea\<int > que se almacena en la variable sizeTask.
+- El código espera en la variable sizeTask.  *Esta* es la ubicación en la que se suspende el método y el control se devuelve al código de llamada hasta que la tarea asincrónica finaliza en su propio subproceso.
+- La ejecución no se detiene cuando la tarea se crea en la primera línea del método, a pesar de que la tarea se crea allí. La palabra clave Await representa la ubicación en la que se pausa la ejecución.
+- Cuando finaliza la tarea asincrónica, se establece intResult y la ejecución continúa en el subproceso original, desde la línea Await.
 
 
 ### <a name="calling-an-async-method-2"></a>Llamar a un método asincrónico 2
@@ -181,9 +181,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 Algunos puntos importantes:
 
--  El método se marca como `async` pero devuelve `void` . Normalmente, esto solo se hace para los controladores de eventos (de lo contrario `Task` , `Task<TResult>` se devuelve o).
--  Código `await` s en el `DownloadHomepage` método directamente en una asignación a una variable () `intResult` , a diferencia del ejemplo anterior en el que usamos una `Task<int>` variable intermedia para hacer referencia a la tarea.  *Esta* es la ubicación donde se devuelve el control al autor de la llamada hasta que el método asincrónico se ha completado en otro subproceso.
--  Cuando el método asincrónico se completa y devuelve, la ejecución se reanuda en `await` , lo que significa que se devuelve el resultado entero y, a continuación, se representa en un widget de interfaz de usuario.
+- El método se marca como `async` pero devuelve `void` . Normalmente, esto solo se hace para los controladores de eventos (de lo contrario `Task` , `Task<TResult>` se devuelve o).
+- Código `await` s en el `DownloadHomepage` método directamente en una asignación a una variable () `intResult` , a diferencia del ejemplo anterior en el que usamos una `Task<int>` variable intermedia para hacer referencia a la tarea.  *Esta* es la ubicación donde se devuelve el control al autor de la llamada hasta que el método asincrónico se ha completado en otro subproceso.
+- Cuando el método asincrónico se completa y devuelve, la ejecución se reanuda en `await` , lo que significa que se devuelve el resultado entero y, a continuación, se representa en un widget de interfaz de usuario.
 
 
 ## <a name="summary"></a>Resumen

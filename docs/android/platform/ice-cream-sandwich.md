@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 548d513d8b949b56711bacad6924c692c0454bf4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f8d9841deff485a67919aea9fede75044541ba5f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643507"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524200"
 ---
 # <a name="ice-cream-sandwich-features"></a>Características del bocadillo de helado
 
@@ -22,10 +22,10 @@ _En este artículo se describen algunas de las nuevas características disponibl
 
 La versión 4,0 del SO Android (nivel de API 14) representa un retrabajo importante del sistema operativo Android e incluye una serie de cambios importantes y actualizaciones, entre los que se incluyen:
 
--   **Interfaz de usuario actualizada** : varias características nuevas de la interfaz de usuario proporcionan a los desarrolladores más capacidad y flexibilidad cuando crean interfaces de usuario de la aplicación. Estas nuevas características incluyen: `GridLayout` , `PopupMenu` , `Switch` widget y `TextureView` . 
--   **Mejor aceleración de hardware** : ahora, la representación en 2D tiene lugar en la GPU para todos los controles de Android. Además, la aceleración de hardware está activada de forma predeterminada en todas las aplicaciones desarrolladas para Android 4,0. 
--   **Nuevas API de datos** : hay un nuevo acceso a los datos a los que no se podía tener acceso oficialmente, como los datos de calendario y el perfil de usuario del propietario del dispositivo. 
--   **Uso compartido de datos** de aplicaciones: compartir datos entre aplicaciones y dispositivos es ahora más fácil que nunca mediante `ShareActionProvider` tecnologías como, lo que facilita la creación de una acción de uso compartido desde un barra de acciones y el *haz de Android* para el *campo Near Communications (NFC)* , que lo convierte en un complemento para compartir datos entre dispositivos en estrecha proximidad entre sí. 
+- **Interfaz de usuario actualizada** : varias características nuevas de la interfaz de usuario proporcionan a los desarrolladores más capacidad y flexibilidad cuando crean interfaces de usuario de la aplicación. Estas nuevas características incluyen: `GridLayout` , `PopupMenu` , `Switch` widget y `TextureView` . 
+- **Mejor aceleración de hardware** : ahora, la representación en 2D tiene lugar en la GPU para todos los controles de Android. Además, la aceleración de hardware está activada de forma predeterminada en todas las aplicaciones desarrolladas para Android 4,0. 
+- **Nuevas API de datos** : hay un nuevo acceso a los datos a los que no se podía tener acceso oficialmente, como los datos de calendario y el perfil de usuario del propietario del dispositivo. 
+- **Uso compartido de datos** de aplicaciones: compartir datos entre aplicaciones y dispositivos es ahora más fácil que nunca mediante `ShareActionProvider` tecnologías como, lo que facilita la creación de una acción de uso compartido desde un barra de acciones y el *haz de Android* para el *campo Near Communications (NFC)* , que lo convierte en un complemento para compartir datos entre dispositivos en estrecha proximidad entre sí. 
 
 
 En este artículo, vamos a explorar estas características y otros cambios que se han realizado en la API de Android 4,0 y explicaremos cómo usar cada característica con Xamarin. Android.
@@ -34,10 +34,10 @@ En este artículo, vamos a explorar estas características y otros cambios que s
 
 Hay una variedad de nuevas tecnologías de interfaz de usuario disponibles con Android 4, entre las que se incluyen:
 
--   **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** : admite el diseño de cuadrícula 2D de los controles. 
--   **[Widget de conmutador](~/android/user-interface/controls/switch.md)** : permite alternar entre activado o desactivado. 
--   **[TextureView](~/android/user-interface/controls/texture-view.md)** : habilita el contenido de vídeo y OpenGL en una vista. 
--   **[Barra de navegación](~/android/user-interface/controls/navigation-bar.md)** : contiene botones virtuales para la parte posterior, la Página principal y la multitarea. 
+- **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** : admite el diseño de cuadrícula 2D de los controles. 
+- **[Widget de conmutador](~/android/user-interface/controls/switch.md)** : permite alternar entre activado o desactivado. 
+- **[TextureView](~/android/user-interface/controls/texture-view.md)** : habilita el contenido de vídeo y OpenGL en una vista. 
+- **[Barra de navegación](~/android/user-interface/controls/navigation-bar.md)** : contiene botones virtuales para la parte posterior, la Página principal y la multitarea. 
 
 
 Además, se han mejorado otros elementos de la `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`interfaz de usuario, como, que ahora es más fácil de trabajar, y pestañas, que tienen un aspecto más pulido.
@@ -46,10 +46,10 @@ Además, se han mejorado otros elementos de la `<a href"/guides/android/user_int
 
 Android 4 incluye varias tecnologías nuevas que nos permiten compartir datos entre dispositivos y aplicaciones. También proporciona acceso a varios tipos de datos que no estaban disponibles anteriormente, como información de calendario y el perfil de usuario del propietario del dispositivo. En esta sección, examinaremos una variedad de características que ofrece Android 4 que abordan estas áreas, entre las que se incluyen:
 
--  **[Carretera de Android](~/android/platform/android-beam.md)** : permite el uso compartido de datos a través de NFC.
--   **[ShareActionProvider](~/android/user-interface/controls/action-bar.md)** : crea un proveedor que permite a los desarrolladores especificar acciones de uso compartido desde el barra de acciones. 
--   **[Perfil de usuario](~/android/user-interface/user-profile.md)** : proporciona acceso a los datos de perfil del propietario del dispositivo. 
--   **[Calendar API](~/android/user-interface/controls/calendar.md)** : proporciona acceso a los datos de calendario desde el proveedor de calendario. 
+- **[Carretera de Android](~/android/platform/android-beam.md)** : permite el uso compartido de datos a través de NFC.
+- **[ShareActionProvider](~/android/user-interface/controls/action-bar.md)** : crea un proveedor que permite a los desarrolladores especificar acciones de uso compartido desde el barra de acciones. 
+- **[Perfil de usuario](~/android/user-interface/user-profile.md)** : proporciona acceso a los datos de perfil del propietario del dispositivo. 
+- **[Calendar API](~/android/user-interface/controls/calendar.md)** : proporciona acceso a los datos de calendario desde el proveedor de calendario. 
 
 ## <a name="x86-emulators"></a>Emuladores x86
 

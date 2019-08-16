@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
-ms.openlocfilehash: 644728d70946180f79523eeb98baabdb6daa1980
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984367"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529276"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Crear una aplicación de Xamarin. Forms
 
@@ -89,7 +89,7 @@ Una aplicación requiere un tema predeterminado, de modo que los controles tenga
 </Application>
 ```
 
-Para obtener más información sobre la combinación de diccionarios de recursos, consulte [combinar diccionarios en Xamarin. forms 3,0](~/xamarin-forms/xaml/resource-dictionaries.md#merging-dictionaries-in-xamarinforms-30).
+Para obtener más información sobre la combinación de diccionarios de recursos, vea [diccionarios de recursos combinados](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
 
 ## <a name="consume-theme-resources"></a>Consumir recursos de tema
 

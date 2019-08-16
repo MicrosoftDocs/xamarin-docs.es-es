@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 1d4c93e625b92275828428917ebbc86d931e8363
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649503"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522021"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -97,10 +97,10 @@ En la sección [archivo de definición](~/cross-platform/macios/binding/objectiv
 
 Para generar un enlace completo, normalmente se tratan cuatro componentes:
 
--  El archivo de definición de`ApiDefinition.cs` la API (en la plantilla).
--  Opcional: cualquier enumeración, tipo, Structs que requiera el archivo de definición`StructsAndEnums.cs` de la API (en la plantilla).
--  Opcional: orígenes adicionales que pueden expandir el enlace generado o proporcionar una API más C# descriptiva (cualquier C# archivo que se agregue al proyecto).
--  Biblioteca nativa que se va a enlazar.
+- El archivo de definición de`ApiDefinition.cs` la API (en la plantilla).
+- Opcional: cualquier enumeración, tipo, Structs que requiera el archivo de definición`StructsAndEnums.cs` de la API (en la plantilla).
+- Opcional: orígenes adicionales que pueden expandir el enlace generado o proporcionar una API más C# descriptiva (cualquier C# archivo que se agregue al proyecto).
+- Biblioteca nativa que se va a enlazar.
 
 En este gráfico se muestra la relación entre los archivos:
 
@@ -214,7 +214,7 @@ Attribute y se asignan C# directamente a propiedades. Al igual que los métodos,
 y el[`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
 sus.
 
-Cuando se usa el [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) atributo en una propiedad en el btouch-Native, en realidad enlaza dos métodos: el captador y el establecedor. El nombre que se proporciona para exportar es el **basename** y el establecedor se calcula anteponiendo la palabra "SET", desactivando la primera letra del nombre de **grupo en** mayúsculas y haciendo que el selector tome un argumento. Esto significa que `[Export ("label")]` , al aplicar en una propiedad, se enlaza realmente la "etiqueta" y "setLabel:" Métodos de Objective-C.
+Cuando se usa el [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) atributo en una propiedad en el btouch-Native, en realidad enlaza dos métodos: el captador y el establecedor. El nombre que se proporciona para exportar es el **basename** y el establecedor se calcula anteponiendo la palabra "SET", desactivando la primera letra del nombre de grupo en mayúsculas y haciendo que el selector tome un argumento. Esto significa que `[Export ("label")]` , al aplicar en una propiedad, se enlaza realmente la "etiqueta" y "setLabel:" Métodos de Objective-C.
 
 A veces, las propiedades de Objective-C no siguen el patrón descrito anteriormente y el nombre se sobrescribe manualmente. En esos casos, puede controlar la manera en que se genera el enlace mediante el[`[Bind]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) 
 atributo del captador o establecedor, por ejemplo:
@@ -309,10 +309,10 @@ interface MyMutableTree {
 
 La `btouch-native` herramienta generará automáticamente cuatro constructores en la clase, para una clase `Foo`determinada, genera:
 
--  `Foo ()`: el constructor predeterminado (se asigna al constructor "init" de Objective-C)
--  `Foo (NSCoder)`: el constructor que se usa durante la deserialización de archivos NIB (se asigna al constructor "initWithCoder:" de Objective-C).
--  `Foo (IntPtr handle)`: el constructor para la creación basada en el identificador, que el Runtime invoca cuando el tiempo de ejecución necesita exponer un objeto administrado desde un objeto no administrado.
--  `Foo (NSEmptyFlag)`: se usa en las clases derivadas para evitar la inicialización doble.
+- `Foo ()`: el constructor predeterminado (se asigna al constructor "init" de Objective-C)
+- `Foo (NSCoder)`: el constructor que se usa durante la deserialización de archivos NIB (se asigna al constructor "initWithCoder:" de Objective-C).
+- `Foo (IntPtr handle)`: el constructor para la creación basada en el identificador, que el Runtime invoca cuando el tiempo de ejecución necesita exponer un objeto administrado desde un objeto no administrado.
+- `Foo (NSEmptyFlag)`: se usa en las clases derivadas para evitar la inicialización doble.
 
 En el caso de los constructores que defina, se deben declarar con la siguiente firma dentro de la definición de interfaz: deben `IntPtr` devolver un valor y el nombre del método debe ser constructor. Por ejemplo, para enlazar el `initWithFrame:` constructor, esto es lo que usaría:
 
@@ -545,14 +545,14 @@ Lo anterior generará un `LonelyClass` que no deriva de `NSObject` y contendrá 
 
 El [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) atributo se puede aplicar a los siguientes tipos de datos:
 
--  `NSString`referencias (solo propiedades de solo lectura)
--  `NSArray`referencias (solo propiedades de solo lectura)
--  int de 32 bits (`System.Int32`)
--  int de 64 bits (`System.Int64`)
--  floats de 32 bits (`System.Single`)
--  floats de 64 bits (`System.Double`)
--  `System.Drawing.SizeF`
--  `CGSize`
+- `NSString`referencias (solo propiedades de solo lectura)
+- `NSArray`referencias (solo propiedades de solo lectura)
+- int de 32 bits (`System.Int32`)
+- int de 64 bits (`System.Int64`)
+- floats de 32 bits (`System.Single`)
+- floats de 64 bits (`System.Double`)
+- `System.Drawing.SizeF`
+- `CGSize`
 
 Además del nombre de campo nativo, puede especificar el nombre de la biblioteca donde se encuentra el campo, pasando el nombre de la biblioteca:
 
@@ -1197,9 +1197,9 @@ Cuando se usa el [`[Export]`](~/cross-platform/macios/binding/binding-types-refe
 
 Lo anterior marcaría el valor como si tuviera la semántica "retain". La semántica disponible es:
 
--  Assign
--  Copiar
--  Tain
+- Assign
+- Copiar
+- Tain
 
 <a name="Style_Guidelines" />
 
@@ -1255,9 +1255,9 @@ interface MyClassDelegate {
 
 Para encapsular la clase debe:
 
--  En la clase de host, agregue a su[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
+- En la clase de host, agregue a su[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
    declaración el tipo que actúa como delegado y el C# nombre que expuso. En el ejemplo anterior, son `typeof (MyClassDelegate)` y `WeakDelegate` , respectivamente.
--  En la clase Delegate, en cada método que tiene más de dos parámetros, debe especificar el tipo que desea utilizar para la clase EventArgs generada automáticamente.
+- En la clase Delegate, en cada método que tiene más de dos parámetros, debe especificar el tipo que desea utilizar para la clase EventArgs generada automáticamente.
 
 El generador de enlaces no se limita a contener solo un destino de evento único, es posible que algunas clases de Objective-C emitan mensajes a más de un delegado, por lo que tendrá que proporcionar matrices para admitir esta configuración. La mayoría de las configuraciones no lo necesitarán, pero el generador está listo para admitir esos casos.
 

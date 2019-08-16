@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: d9f624084c83b318487f1162a9a2350f9e2cc409
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510502"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523238"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Opciones de visualización y calificadores de recursos
 
@@ -29,9 +29,9 @@ Se puede tener acceso a las opciones del calificador de **recursos** haciendo cl
 
 Este cuadro de diálogo presenta menús desplegables para los siguientes calificadores de recursos:
 
--   **Idioma** de &ndash; Muestra los recursos de idioma disponibles y ofrece una opción para agregar nuevos recursos de idioma o región.
+- **Idioma** de &ndash; Muestra los recursos de idioma disponibles y ofrece una opción para agregar nuevos recursos de idioma o región.
 
--   **Modo de interfaz de usuario** Muestra los modos de visualización (por ejemplo, el **Dock de automóviles** y el acoplamiento de escritorio), así como las direcciones de diseño.  &ndash;
+- **Modo de interfaz de usuario** Muestra los modos de visualización (por ejemplo, el **Dock de automóviles** y el acoplamiento de escritorio), así como las direcciones de diseño. &ndash;
 
 Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que puede seleccionar y configurar calificadores de recursos (como se explica a continuación).
 
@@ -71,11 +71,11 @@ El icono de configuración de la **barra de acciones** está disponible a la izq
 
 Este icono abre un cuadro de diálogo elemento flotante que proporciona una manera de seleccionar uno de los tres modos de Barra de acciones:
 
--   **Estándar** de &ndash; Consta de un logotipo, un icono y un texto de título con un subtítulo opcional.
+- **Estándar** de &ndash; Consta de un logotipo, un icono y un texto de título con un subtítulo opcional.
 
--   **Lista** de &ndash; Modo de navegación de lista. En lugar de texto de título estático, este modo presenta un menú de lista para la navegación dentro de la actividad (es decir, se puede presentar al usuario como una lista desplegable).
+- **Lista** de &ndash; Modo de navegación de lista. En lugar de texto de título estático, este modo presenta un menú de lista para la navegación dentro de la actividad (es decir, se puede presentar al usuario como una lista desplegable).
 
--   **Pestañas** &ndash; Modo de navegación por tabulación. En lugar del texto del título estático, este modo presenta una serie de pestañas para la navegación dentro de la actividad.
+- **Pestañas** &ndash; Modo de navegación por tabulación. En lugar del texto del título estático, este modo presenta una serie de pestañas para la navegación dentro de la actividad.
 
 ## <a name="themes"></a>Temas
 
@@ -111,9 +111,9 @@ Se puede tener acceso a las opciones del calificador de **recursos** haciendo cl
 
 Este cuadro de diálogo presenta menús desplegables para los siguientes calificadores de recursos:
 
--   **Idioma** de &ndash; Muestra los recursos de idioma disponibles y ofrece una opción para agregar nuevos recursos de idioma o región.
+- **Idioma** de &ndash; Muestra los recursos de idioma disponibles y ofrece una opción para agregar nuevos recursos de idioma o región.
 
--   **Modo de interfaz de usuario** Muestra los modos de visualización (por ejemplo, el **Dock de automóviles** y el acoplamiento de escritorio), así como las direcciones de diseño.  &ndash;
+- **Modo de interfaz de usuario** Muestra los modos de visualización (por ejemplo, el **Dock de automóviles** y el acoplamiento de escritorio), así como las direcciones de diseño. &ndash;
 
 Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que puede seleccionar y configurar calificadores de recursos (como se explica a continuación).
 
@@ -153,11 +153,11 @@ El icono de configuración de la **barra de acciones** está disponible a la izq
 
 Este icono abre un cuadro de diálogo elemento flotante que proporciona una manera de seleccionar uno de los tres modos de Barra de acciones:
 
--   **Estándar** de &ndash; Consta de un logotipo, un icono y un texto de título con un subtítulo opcional.
+- **Estándar** de &ndash; Consta de un logotipo, un icono y un texto de título con un subtítulo opcional.
 
--   **Lista** de &ndash; Modo de navegación de lista. En lugar de texto de título estático, este modo presenta un menú de lista para la navegación dentro de la actividad (es decir, se puede presentar al usuario como una lista desplegable).
+- **Lista** de &ndash; Modo de navegación de lista. En lugar de texto de título estático, este modo presenta un menú de lista para la navegación dentro de la actividad (es decir, se puede presentar al usuario como una lista desplegable).
 
--   **Pestañas** &ndash; Modo de navegación por tabulación. En lugar del texto del título estático, este modo presenta una serie de pestañas para la navegación dentro de la actividad.
+- **Pestañas** &ndash; Modo de navegación por tabulación. En lugar del texto del título estático, este modo presenta una serie de pestañas para la navegación dentro de la actividad.
 
 ## <a name="themes"></a>Temas
 

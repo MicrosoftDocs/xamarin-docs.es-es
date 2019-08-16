@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 67fb12fd66d4d218f6e8bd40e21499e6c07e9e15
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e49f12dd656d5e07feccd34e231a00124d81048a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510586"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524278"
 ---
 # <a name="specialized-fragment-classes"></a>Clases de fragmentos especializadas
 
 La API de fragmentos proporciona otras subclases que encapsulan algunas de las funciones más comunes que se encuentran en las aplicaciones. Estas subclases son:
 
--   **ListFragment** &ndash; Este fragmento se usa para mostrar una lista de elementos enlazados a un origen de objetos, como una matriz o un cursor.
+- **ListFragment** &ndash; Este fragmento se usa para mostrar una lista de elementos enlazados a un origen de objetos, como una matriz o un cursor.
 
--   **DialogFragment** &ndash; Este fragmento se utiliza como contenedor alrededor de un cuadro de diálogo. El fragmento mostrará el cuadro de diálogo encima de su actividad.
+- **DialogFragment** &ndash; Este fragmento se utiliza como contenedor alrededor de un cuadro de diálogo. El fragmento mostrará el cuadro de diálogo encima de su actividad.
 
--   **PreferenceFragment** &ndash; Este fragmento se usa para mostrar los objetos de preferencias como listas.
+- **PreferenceFragment** &ndash; Este fragmento se usa para mostrar los objetos de preferencias como listas.
 
 
 
@@ -91,9 +91,9 @@ En el código anterior, cuando el usuario selecciona un elemento en el `ListFrag
 
 Un `DialogFragment` garantiza que el estado entre el fragmento y el cuadro de diálogo sigue siendo coherente. Todas las interacciones y el control del objeto de cuadro de `DialogFragment` diálogo se deben producir a través de la API y no se pueden realizar con llamadas directas en el objeto de cuadro de diálogo. La `DialogFragment` API proporciona a cada instancia un `Show()` método que se utiliza para mostrar un fragmento. Hay dos maneras de deshacerse de un fragmento:
 
--  Llame `DialogFragment.Dismiss()` a en `DialogFragment` la instancia de. 
+- Llame `DialogFragment.Dismiss()` a en `DialogFragment` la instancia de. 
 
--  Mostrar otro `DialogFragment`.
+- Mostrar otro `DialogFragment`.
 
 Para crear `DialogFragment`, una clase hereda de `Android.App.DialogFragment,` y, a continuación, reemplaza uno de los dos métodos siguientes:
 

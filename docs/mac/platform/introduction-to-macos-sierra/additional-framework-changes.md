@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d48f7012d0389b262e2dfce560d4f8aa925c21d5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655654"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528891"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Cambios adicionales en el marco de macOS Sierra
 
@@ -39,12 +39,12 @@ Se ha realizado la siguiente mejora en el marco de trabajo de AppKit para macOS 
 - El paso de diseño de vista diferida se ha optimizado y ampliado.
 - La API de arrastrar y colocar ahora incluye las nuevas `NSFilePromiseProvider` clases y `NSFilePromiseReceiver` para admitir la rebaño de arrastre.
 - Se han agregado varios constructores de conveniencia a los controles existentes:
-    -  `NSButton`incluye nuevos constructores para crear botones de reenvío, casillas y botones de radio.
-    -  `NSTextField`incluye nuevos constructores para crear etiquetas de ajuste y sin ajuste, etiquetas con atributos y campos de texto editables.
-    -  `NSSegmentedControl`incluye nuevos constructores para crear controles segmentados a partir de un grupo de etiquetas o imágenes.
-    -  `NSSlider`incluye nuevos constructores para crear controles deslizantes lineales horizontales.
-    -  `NSImageView`incluye nuevos constructores para crear vistas de imagen no editables a partir `NSImage`de un determinado.
--  El nuevo `NSGridView` elemento se ha agregado a la disposición automática de una colección de subvistas en una cuadrícula con filas y columnas de tamaño variable que se pueden ocultar o mostrar dinámicamente.
+    - `NSButton`incluye nuevos constructores para crear botones de reenvío, casillas y botones de radio.
+    - `NSTextField`incluye nuevos constructores para crear etiquetas de ajuste y sin ajuste, etiquetas con atributos y campos de texto editables.
+    - `NSSegmentedControl`incluye nuevos constructores para crear controles segmentados a partir de un grupo de etiquetas o imágenes.
+    - `NSSlider`incluye nuevos constructores para crear controles deslizantes lineales horizontales.
+    - `NSImageView`incluye nuevos constructores para crear vistas de imagen no editables a partir `NSImage`de un determinado.
+- El nuevo `NSGridView` elemento se ha agregado a la disposición automática de una colección de subvistas en una cuadrícula con filas y columnas de tamaño variable que se pueden ocultar o mostrar dinámicamente.
 
 <a name="AVFoundation-Framework-Enhancements" />
 
