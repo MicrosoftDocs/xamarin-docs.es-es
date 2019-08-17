@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b2660ec18d075279f9cb84be4521429c05974e59
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657086"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560283"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
@@ -219,7 +219,7 @@ El código anterior da como resultado el siguiente diseño:
 
 ![](stack-layout-images/stack.png "StackLayout complejo")
 
-Tenga en cuenta que `StackLayouts`s están anidadas, porque en algunos casos los diseños de anidamiento puede ser más sencillo que presentar todos los elementos del diseño del mismo. Observe también que, dado que `StackLayout` no admite elementos superpuestos, la página no dispone de algunos de los detalles de diseño se encuentra en las páginas de los otros diseños.
+Observe que están `StackLayouts` anidados porque, en algunos casos, el anidamiento de diseños puede ser más fácil que presentar todos los elementos dentro del mismo diseño. Observe también que, dado que `StackLayout` no admite elementos superpuestos, la página no dispone de algunos de los detalles de diseño se encuentra en las páginas de los otros diseños.
 
 
 

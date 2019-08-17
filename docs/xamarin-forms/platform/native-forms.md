@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: 88483f151852e882d6bac42a2d0c3fd0857060fb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0543d35b8bd4160aa84688da21dbc5bda5408444
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653233"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560313"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
 
@@ -184,7 +184,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-El `static` `MainActivity.Instance` campo permite la `MainActivity.NavigateToNoteEntryyPage` invocar método, que se muestra en el ejemplo de código siguiente:
+El `static` `MainActivity.Instance` campo permite la `MainActivity.NavigateToNoteEntryPage` invocar método, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
