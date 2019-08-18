@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037644"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69541538"
 ---
 Un elemento [`ListView`](xref:Xamarin.Forms.ListView) se rellena con datos mediante la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que es de tipo `IEnumerable`. El paso anterior rellenó `ListView` en XAML con una matriz de cadenas. Sin embargo, normalmente un elemento `ListView` se rellenará con datos de una colección, definida en código subyacente, que implementa `IEnumerable`.
 
@@ -177,7 +177,7 @@ En este ejercicio, modificará el proyecto **ListViewTutorial** para rellenar el
     > [!IMPORTANT]
     > La propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) se hereda a través del árbol visual. Por lo tanto, como ya se ha establecido en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), los objetos secundarios del elemento `ContentPage` heredan su valor, incluido el elemento [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  En **MainPage.xaml**, modifique la declaración de [`ListView`](xref:Xamarin.Forms.Image) para establecer la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) para la colección `Monkeys`:
+1. En **MainPage.xaml**, modifique la declaración de [`ListView`](xref:Xamarin.Forms.Image) para establecer la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) para la colección `Monkeys`:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
@@ -358,7 +358,7 @@ En este ejercicio, modificará el proyecto **ListViewTutorial** para rellenar el
     > [!IMPORTANT]
     > La propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) se hereda a través del árbol visual. Por lo tanto, como ya se ha establecido en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), los objetos secundarios del elemento `ContentPage` heredan su valor, incluido el elemento [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  En **MainPage.xaml**, modifique la declaración de [`ListView`](xref:Xamarin.Forms.Image) para establecer la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) para la colección `Monkeys`:
+1. En **MainPage.xaml**, modifique la declaración de [`ListView`](xref:Xamarin.Forms.Image) para establecer la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) para la colección `Monkeys`:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
