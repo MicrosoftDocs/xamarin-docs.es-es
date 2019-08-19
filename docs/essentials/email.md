@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 73c398a7dbc2b8b7b22b9b8e38177efe2ff48735
-ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
+ms.openlocfilehash: f2c275260625fe3842b4473e404f49c71d1d28ae
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388499"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012487"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
@@ -107,7 +107,7 @@ No hay diferencias entre las plataformas.
 
 Solo admite `PlainText`, ya que el formato `BodyFormat` que intenta enviar `Html` producirá una excepción `FeatureNotSupportedException`.
 
-No todos los clientes de correo electrónico admiten el envío de datos adjuntos. Consulte la [documentación](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para más información.
+No todos los clientes de correo electrónico admiten el envío de datos adjuntos. Para obtener más información, consulte la [documentación](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email).
 
 -----
 

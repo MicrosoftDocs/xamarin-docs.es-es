@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc3837cd0d69d49b9939b04da667010aac919fe2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61194611"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657121"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
-[`TableView`](xref:Xamarin.Forms.TableView) es una vista para mostrar listas desplazables de datos o las opciones que hay filas que no comparten la misma plantilla. A diferencia de [ListView](~/xamarin-forms/user-interface/listview/index.md), `TableView` no tiene el concepto de un `ItemsSource`, por lo que se deben agregar manualmente elementos como elementos secundarios.
+[`TableView`](xref:Xamarin.Forms.TableView)es una vista para mostrar listas desplazables de datos u opciones en las que hay filas que no comparten la misma plantilla. A diferencia de [ListView](~/xamarin-forms/user-interface/listview/index.md), `TableView` no tiene el concepto de un `ItemsSource`, por lo que los elementos se deben agregar manualmente como elementos secundarios.
 
 ![](tableview-images/tableview-all-sml.png "Ejemplo de TableView")
 
@@ -26,19 +26,19 @@ ms.locfileid: "61194611"
 
 ## <a name="use-cases"></a>Casos de uso
 
-[`TableView`](xref:Xamarin.Forms.TableView) resulta útil cuando:
+[`TableView`](xref:Xamarin.Forms.TableView)resulta útil cuando:
 
 - presentar una lista de configuración,
 - recopilación de datos en un formulario, o
 - mostrando datos que se presentan diferente de la fila a fila (por ejemplo, números, porcentajes e imágenes).
 
-[`TableView`](xref:Xamarin.Forms.TableView) Controla el desplazamiento y el diseño de filas en las secciones atractivas, una necesidad común para los escenarios anteriores. El `TableView` utiliza control de la plataforma subyacente de vista equivalente cuando esté disponible para crear una apariencia nativa para cada plataforma.
+[`TableView`](xref:Xamarin.Forms.TableView)controla el desplazamiento y la colocación de las filas en secciones atractivas, una necesidad común de los escenarios anteriores. El `TableView` utiliza control de la plataforma subyacente de vista equivalente cuando esté disponible para crear una apariencia nativa para cada plataforma.
 
 <a name="TableView_Structure" />
 
 ## <a name="structure"></a>Estructura
 
-Elementos de un [ `TableView` ](xref:Xamarin.Forms.TableView) se organiza en secciones. En la raíz de la `TableView` es el [ `TableRoot` ](xref:Xamarin.Forms.TableRoot), que es primario a uno o varios [ `TableSection` ](xref:Xamarin.Forms.TableSection) instancias. Cada [ `TableSection` ](xref:Xamarin.Forms.TableSection) consta de un encabezado y uno o más [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instancias:
+Los elementos de [`TableView`](xref:Xamarin.Forms.TableView) se organizan en secciones. En la raíz de, `TableView` es, [`TableRoot`](xref:Xamarin.Forms.TableRoot)que es el elemento primario de una o [`TableSection`](xref:Xamarin.Forms.TableSection) más instancias de. Cada [`TableSection`](xref:Xamarin.Forms.TableSection) una consta de un encabezado y una o [`ViewCell`](xref:Xamarin.Forms.ViewCell) varias instancias:
 
 ```xaml
 <TableView Intent="Settings">
@@ -73,22 +73,22 @@ Content = new TableView
 
 ## <a name="appearance"></a>Apariencia
 
-[`TableView`](xref:Xamarin.Forms.TableView) expone el [ `Intent` ](xref:Xamarin.Forms.TableView.Intent) propiedad, que se puede establecer en cualquiera de los [ `TableIntent` ](xref:Xamarin.Forms.TableIntent) miembros de enumeración:
+[`TableView`](xref:Xamarin.Forms.TableView)expone la [`Intent`](xref:Xamarin.Forms.TableView.Intent) propiedad, que se puede establecer en cualquiera de los [`TableIntent`](xref:Xamarin.Forms.TableIntent) miembros de enumeración:
 
-- `Data` : para su uso al mostrar las entradas de datos. Tenga en cuenta que [ListView](~/xamarin-forms/user-interface/listview/index.md) puede ser una mejor opción para el desplazamiento de listas de datos.
-- `Form` : para su uso cuando la TableView está actuando como un formulario.
-- `Menu` : para su uso cuando se presenta un menú de las selecciones.
-- `Settings` : para su uso cuando se muestra una lista de valores de configuración.
+- `Data`: sirve para mostrar entradas de datos. Tenga en cuenta que [ListView](~/xamarin-forms/user-interface/listview/index.md) puede ser una mejor opción para el desplazamiento de listas de datos.
+- `Form`: se utiliza cuando el TableView actúa como un formulario.
+- `Menu`: se usa para presentar un menú de selecciones.
+- `Settings`: se usa para mostrar una lista de opciones de configuración.
 
-El [ `TableIntent` ](xref:Xamarin.Forms.TableIntent) valor que elija puede afectar a cómo el [ `TableView` ](xref:Xamarin.Forms.TableView) aparece en cada plataforma. Incluso si hay no borrar las diferencias, es una práctica recomendada para seleccionar el `TableIntent` que más acerque cómo piensa usar la tabla.
+El [`TableIntent`](xref:Xamarin.Forms.TableIntent) valor que elija puede afectar al [`TableView`](xref:Xamarin.Forms.TableView) modo en que aparece en cada plataforma. Incluso si hay no borrar las diferencias, es una práctica recomendada para seleccionar el `TableIntent` que más acerque cómo piensa usar la tabla.
 
-Además, se muestra el color del texto para cada [ `TableSection` ](xref:Xamarin.Forms.TableSection) se puede cambiar estableciendo la `TextColor` propiedad a un [ `Color` ](xref:Xamarin.Forms.Color).
+Además, el color del texto que se muestra para cada [`TableSection`](xref:Xamarin.Forms.TableSection) puede cambiarse estableciendo la `TextColor` propiedad en [`Color`](xref:Xamarin.Forms.Color).
 
 <a name="Built-In_Cells" />
 
 ## <a name="built-in-cells"></a>Celdas integradas
 
-Xamarin.Forms incluye celdas integradas para recopilar y mostrar información. Aunque [ `ListView` ](xref:Xamarin.Forms.ListView) y [ `TableView` ](xref:Xamarin.Forms.TableView) puede usar todas las celdas de la mismas, [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) y [ `EntryCell` ](xref:Xamarin.Forms.EntryCell)son las más relevantes para un `TableView` escenario.
+Xamarin.Forms incluye celdas integradas para recopilar y mostrar información. Aunque [`ListView`](xref:Xamarin.Forms.ListView) [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) y [`TableView`](xref:Xamarin.Forms.TableView) pueden utilizar las mismas celdas, y [`EntryCell`](xref:Xamarin.Forms.EntryCell) son las más relevantes para un `TableView` escenario.
 
 Consulte [aspecto de la celda de ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) para obtener una descripción detallada de [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) y [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell).
 
@@ -98,13 +98,13 @@ Consulte [aspecto de la celda de ListView](~/xamarin-forms/user-interface/listvi
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) es el control que se utilizará para presentar y capturar un activado/desactivado o `true` / `false` estado. Define las siguientes propiedades:
 
-- `Text` : texto que se muestra al lado del conmutador.
-- `On` : determina si se muestra el conmutador como activado o desactivado.
-- `OnColor` – el [ `Color` ](xref:Xamarin.Forms.Color) del conmutador cuando se encuentra en la posición de encendido.
+- `Text`: texto que se va a mostrar junto al modificador.
+- `On`: indica si el modificador se muestra como activado o desactivado.
+- `OnColor`: el [`Color`](xref:Xamarin.Forms.Color) del modificador cuando se encuentra en la posición de encendido.
 
 Todas estas propiedades son enlazables.
 
-[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) También expone el `OnChanged` eventos, que le permite responder a los cambios de estado de la celda.
+[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)también expone el `OnChanged` evento, lo que le permite responder a los cambios en el estado de la celda.
 
 ![](tableview-images/switch-cell.png "Ejemplo de SwitchCell")
 
@@ -114,14 +114,14 @@ Todas estas propiedades son enlazables.
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) es útil cuando se necesita mostrar los datos de texto que el usuario puede editar. Define las siguientes propiedades:
 
-- `Keyboard` : El teclado para mostrar mientras se edita. Hay opciones para cosas como valores numéricos, correo electrónico, números de teléfono, etcetera. [Consulte la documentación de API](xref:Xamarin.Forms.Keyboard).
-- `Label` : El texto de etiqueta para mostrar a la izquierda del campo de entrada de texto.
-- `LabelColor` : El color del texto de la etiqueta.
-- `Placeholder` : Texto que se muestra en el campo de entrada cuando es nulo o está vacío. Este texto desaparece cuando comienza la entrada de texto.
-- `Text` : El texto en el campo de entrada.
-- `HorizontalTextAlignment` : La alineación horizontal del texto. Puede ser, izquierda o derecha centrado. [Consulte la documentación de API](xref:Xamarin.Forms.TextAlignment).
+- `Keyboard`: Teclado que se va a mostrar durante la edición. Hay opciones para cosas como valores numéricos, correo electrónico, números de teléfono, etcetera. [Consulte la documentación de API](xref:Xamarin.Forms.Keyboard).
+- `Label`: El texto de la etiqueta que se va a mostrar a la izquierda del campo de entrada de texto.
+- `LabelColor`: El color del texto de la etiqueta.
+- `Placeholder`: Texto que se va a mostrar en el campo de entrada cuando es null o está vacío. Este texto desaparece cuando comienza la entrada de texto.
+- `Text`: El texto del campo de entrada.
+- `HorizontalTextAlignment`: Alineación horizontal del texto. Puede ser, izquierda o derecha centrado. [Consulte la documentación de API](xref:Xamarin.Forms.TextAlignment).
 
-[`EntryCell`](xref:Xamarin.Forms.EntryCell) También expone el `Completed` evento, que se desencadena cuando el usuario presiona el botón 'listo' en el teclado mientras edita el texto.
+[`EntryCell`](xref:Xamarin.Forms.EntryCell)también expone el `Completed` evento, que se desencadena cuando el usuario presiona el botón ' DONE ' en el teclado mientras edita el texto.
 
 ![](tableview-images/entry-cell.png "Ejemplo de EntryCell")
 
@@ -137,7 +137,7 @@ Este es un ejemplo de una celda personalizada:
 
 ![](tableview-images/custom-cell.png "Ejemplo de la celda personalizada")
 
-El ejemplo siguiente muestra el XAML usado para crear el [ `TableView` ](xref:Xamarin.Forms.TableView) en las capturas de pantalla anterior:
+[`TableView`](xref:Xamarin.Forms.TableView) En el ejemplo siguiente se muestra el código XAML que se usa para crear en las capturas de pantallas anteriores:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -194,10 +194,10 @@ table.Root = new TableRoot ()
 Content = table;
 ```
 
-El elemento raíz en el [ `TableView` ](xref:Xamarin.Forms.TableView) es el [ `TableRoot` ](xref:Xamarin.Forms.TableRoot)y hay un [ `TableSection` ](xref:Xamarin.Forms.TableSection) inmediatamente debajo de la `TableRoot`. El [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) se define directamente bajo el `TableSection`y un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) se usa para administrar el diseño de la celda personalizada, aunque cualquier diseño podría usarse aquí.
+[`TableView`](xref:Xamarin.Forms.TableView) El elemento raíz en [`TableRoot`](xref:Xamarin.Forms.TableRoot)es y hay [`TableSection`](xref:Xamarin.Forms.TableSection) inmediatamente debajo de `TableRoot`. Se define directamente `TableSection`en, y [`StackLayout`](xref:Xamarin.Forms.StackLayout) se usa para administrar el diseño de la celda personalizada, aunque aquí se podría usar cualquier diseño. [`ViewCell`](xref:Xamarin.Forms.ViewCell)
 
 > [!NOTE]
-> A diferencia de [ `ListView` ](xref:Xamarin.Forms.ListView), [ `TableView` ](xref:Xamarin.Forms.TableView) no requiere ese personalizado (o ninguno) se definen las celdas en una `ItemTemplate`.
+> A diferencia [`ListView`](xref:Xamarin.Forms.ListView)de [`TableView`](xref:Xamarin.Forms.TableView) , no requiere que `ItemTemplate`las celdas personalizadas (o ninguna) estén definidas en.
 
 ## <a name="row-height"></a>Alto de fila
 
@@ -263,4 +263,4 @@ Las capturas de pantalla siguientes muestran la celda después de que se puntea 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TableView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
+- [TableView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)

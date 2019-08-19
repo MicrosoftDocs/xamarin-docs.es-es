@@ -1,71 +1,71 @@
 ---
-title: Alto de fila de tamaño automático en Xamarin.iOS
-description: Este documento describe cómo agregar a aplicaciones Xamarin.iOS filas de la vista de tabla cuyo alto varía según el contenido. Describe el diseño de la celda en el Diseñador de iOS y alto de lo que permite el cambio de tamaño automático.
+title: Cambiar el alto de fila automáticamente en Xamarin. iOS
+description: En este documento se describe cómo agregar a las filas de la vista de tabla de aplicaciones de Xamarin. iOS cuyo alto varía en función del contenido. Describe el diseño de las celdas en el diseñador de iOS y la habilitación del cambio de tamaño automático.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e4446abc73817eb0672cd10a69ff6f738de0c1e1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 025c3ee6fc176df02f72e78395b880153d6b841d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029119"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655715"
 ---
-# <a name="auto-sizing-row-height-in-xamarinios"></a>Alto de fila de tamaño automático en Xamarin.iOS
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Cambiar el alto de fila automáticamente en Xamarin. iOS
 
-A partir de iOS 8, Apple ha agregado la capacidad de crear una vista de tabla (`UITableView`) que puede aumentar y reducir el alto de una fila determinada en función del tamaño de su contenido con diseño automático, las clases de tamaño y las restricciones automáticamente.
+A partir de iOS 8, Apple ha agregado la capacidad de crear una vista`UITableView`de tabla () que puede aumentar y reducir automáticamente el alto de una fila determinada en función del tamaño de su contenido mediante el diseño automático, las clases de tamaño y las restricciones.
 
-iOS 11 agregó la posibilidad de que las filas se expanda automáticamente. Celdas, encabezados y pies de página pueden ahora ajustarse automáticamente basándose en su contenido. Sin embargo, si se crea la tabla en el Diseñador de iOS, el generador de interfaz, o si corrigió el alto de las filas debe habilitar manualmente self ajustar el tamaño de las celdas, como se describe en esta guía.
+iOS 11 ha agregado la posibilidad de que las filas se expandan automáticamente. Ahora se puede cambiar automáticamente el tamaño de los encabezados, pies de página y celdas según su contenido. Sin embargo, si la tabla se crea en el diseñador de iOS, Interface Builder o si tiene un alto de filas fijo, debe habilitar manualmente las celdas de autoajuste de tamaño, como se describe en esta guía.
 
-## <a name="cell-layout-in-the-ios-designer"></a>Diseño de la celda en el Diseñador de iOS
+## <a name="cell-layout-in-the-ios-designer"></a>Diseño de celda en el diseñador de iOS
 
-Abra el guión gráfico de la vista de tabla que desea tener auto-resize la fila para en iOS Designer, seleccione la celda *prototipo* y definir el diseño de la celda. Por ejemplo:
+Abra el guion gráfico de la vista de tabla para la que desea que se cambie el tamaño automático de la fila en el diseñador de iOS, seleccione el *prototipo* de la celda y diseñe el diseño de la celda. Por ejemplo:
 
-[![](autosizing-row-height-images/table01.png "Diseño de prototipo de la celda")](autosizing-row-height-images/table01.png#lightbox)
+[![](autosizing-row-height-images/table01.png "Diseño del prototipo de la celda")](autosizing-row-height-images/table01.png#lightbox)
 
-Para cada elemento en el prototipo, agregue restricciones para mantener los elementos en la posición correcta de cambiar el tamaño de la vista de tabla para la rotación o iOS diferentes tamaños de pantalla del dispositivo. Por ejemplo, fijar el `Title` a la parte superior, izquierda y derecha de la celda *vista contenido*:
+Para cada elemento del prototipo, agregue restricciones para mantener los elementos en la posición correcta a medida que se cambie el tamaño de la vista de tabla para rotación o tamaños de pantalla diferentes del dispositivo iOS. Por ejemplo, anclar `Title` el a la parte superior, izquierda y derecha de la *vista de contenido*de la celda:
 
-[![](autosizing-row-height-images/table02.png "Anclar el título a la parte superior, izquierda y derecha de la vista de contenido de celdas")](autosizing-row-height-images/table02.png#lightbox)
+[![](autosizing-row-height-images/table02.png "Anclar el título a la parte superior, izquierda y derecha de la vista de contenido de las celdas")](autosizing-row-height-images/table02.png#lightbox)
 
-En el caso de nuestra tabla de ejemplo, la pequeña `Label` (bajo la `Title`) es el campo que se puede reducir y crecer a aumentar o disminuir el alto de fila. Para lograr este efecto, agregue las siguientes restricciones para anclar la izquierda, derecha, superior e inferior de la etiqueta:
+En el caso de la tabla de ejemplo, el `Label` pequeño ( `Title`bajo) es el campo que se puede reducir y aumentar para aumentar o disminuir el alto de la fila. Para lograr este efecto, agregue las siguientes restricciones para anclar los elementos izquierdo, derecho, superior e inferior de la etiqueta:
 
-[![](autosizing-row-height-images/table03.png "Estas restricciones para anclar la izquierda, derecha, superior e inferior de la etiqueta")](autosizing-row-height-images/table03.png#lightbox)
+[![](autosizing-row-height-images/table03.png "Estas restricciones para anclar los puntos izquierdo, derecho, superior e inferior de la etiqueta")](autosizing-row-height-images/table03.png#lightbox)
 
-Ahora que nos hemos restringido completamente los elementos de la celda, es necesario aclarar qué elemento se debe ajustar. Para ello, establezca el **prioridad de una disposición a nivel de contenido** y **prioridad de resistencia de compresión de contenido** según sea necesario en el **diseño** sección del panel de propiedades:
+Ahora que hemos restringido totalmente los elementos de la celda, es necesario aclarar qué elemento debe ajustarse. Para ello, establezca el **contenido hugging prioridad** y la **prioridad de resistencia de compresión de contenido** según sea necesario en la sección de **diseño** del panel de propiedades:
 
-[![](autosizing-row-height-images/table03a.png "La sección de diseño del panel de propiedades")](autosizing-row-height-images/table03a.png#lightbox)
+[![](autosizing-row-height-images/table03a.png "La sección de diseño del Panel de propiedades")](autosizing-row-height-images/table03a.png#lightbox)
 
-Establezca el elemento que desea expandir para que tenga un **inferior** el valor de prioridad de una disposición a nivel y un **inferior** valor de prioridad de la resistencia de compresión.
+Establezca el elemento que desea expandir para que tenga un valor de prioridad hugging **inferior** y un valor de prioridad de resistencia de compresión **inferior** .
 
-A continuación, necesitamos seleccionar el prototipo de la celda y asígnele un único **identificador**:
+A continuación, es necesario seleccionar el prototipo de celda y asignarle un **identificador**único:
 
-[![](autosizing-row-height-images/table04.png "Lo que proporciona el prototipo de la celda de un identificador único")](autosizing-row-height-images/table04.png#lightbox)
+[![](autosizing-row-height-images/table04.png "Asignar a la celda el prototipo de un identificador único")](autosizing-row-height-images/table04.png#lightbox)
 
-En el caso de nuestro ejemplo, `GrowCell`. Vamos a usar este valor más adelante cuando se rellene la tabla.
+En el caso de nuestro ejemplo, `GrowCell`. Usaremos este valor más adelante al rellenar la tabla.
 
 > [!IMPORTANT]
-> Si la tabla contiene más de un tipo de celda (**prototipo**), debe asegurarse de que cada tipo tiene su propia `Identifier` para cambiar el tamaño de fila de Auto para que funcione.
+> Si la tabla contiene más de un tipo de celda (**prototipo**), debe asegurarse de que cada tipo tiene su propio `Identifier` tipo único para que el cambio de tamaño de fila automático funcione.
 
-Para cada elemento de prototipo de la celda, asignar un **nombre** exponerlo a C# código. Por ejemplo:
+Para cada elemento de nuestro prototipo de celda, asigne un **nombre** para exponerlo al C# código. Por ejemplo:
 
-[![](autosizing-row-height-images/table05.png "Asigne un nombre para exponerlo a C# código")](autosizing-row-height-images/table05.png#lightbox)
+[![](autosizing-row-height-images/table05.png "Asignar un nombre para exponerlo al código C#")](autosizing-row-height-images/table05.png#lightbox)
 
-A continuación, agregue una clase personalizada para el `UITableViewController`, `UITableView` y `UITableCell` (Prototype). Por ejemplo: 
+A continuación, agregue una clase personalizada para `UITableViewController` `UITableView` , y `UITableCell` (prototipo). Por ejemplo: 
 
-[![](autosizing-row-height-images/table06.png "Adición de una clase personalizada para el UITableViewController, el UITableView y el UITableCell")](autosizing-row-height-images/table06.png#lightbox)
+[![](autosizing-row-height-images/table06.png "Agregar una clase personalizada para UITableViewController, UITableView y UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
-Por último, para asegurarse de que todos los esperados contenido se muestra en la etiqueta, establezca el **líneas** propiedad `0`:
+Por último, para asegurarse de que todo el contenido esperado se muestra en nuestra etiqueta, establezca la propiedad `0`Lines en:
 
-[![](autosizing-row-height-images/table06.png "La propiedad de líneas que se establece en 0")](autosizing-row-height-images/table06a.png#lightbox)
+[![](autosizing-row-height-images/table06.png "La propiedad Lines establecida en 0")](autosizing-row-height-images/table06a.png#lightbox)
 
-Con la interfaz de usuario definida, vamos a agregar el código para permitir el cambio de tamaño de alto de fila automáticamente.
+Con la interfaz de usuario definida, vamos a agregar el código para habilitar el cambio de tamaño automático de filas.
 
-## <a name="enabling-auto-resizing-height"></a>Habilitar el cambio de tamaño automático alto
+## <a name="enabling-auto-resizing-height"></a>Habilitar el alto de cambio de tamaño automático
 
-En cualquiera origen de datos del nuestra tabla vista (`UITableViewDatasource`) o un origen (`UITableViewSource`), cuando se quitan de la cola una celda que debemos usar el `Identifier` que hemos definido en el diseñador. Por ejemplo:
+En el origen de los orígenes de la`UITableViewDatasource`vista de tabla (`UITableViewSource`) o en el código fuente (), cuando se quita la `Identifier` cola de una celda, es necesario usar el que se definió en el diseñador. Por ejemplo:
 
 ```csharp
 public string CellID {
@@ -87,7 +87,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-De forma predeterminada, la vista de tabla se establecerá para el cambio de tamaño automáticamente el alto de fila. Para asegurarse de esto, el `RowHeight` propiedad debe establecerse en `UITableView.AutomaticDimension`. También es necesario establecer la `EstimatedRowHeight` propiedad en nuestra `UITableViewController`. Por ejemplo:
+De forma predeterminada, se establecerá la vista de tabla para cambiar el tamaño de las filas de manera automática. Para garantizar esto, la `RowHeight` propiedad debe establecerse en `UITableView.AutomaticDimension`. También es necesario establecer la `EstimatedRowHeight` propiedad en nuestro. `UITableViewController` Por ejemplo:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -103,13 +103,13 @@ public override void ViewWillAppear (bool animated)
 }
 ```
 
-Esta estimación no tiene que ser exactos, solo una estimación aproximada del promedio alto de cada fila de la vista de tabla.
+No es necesario que esta estimación sea exacta, solo una estimación aproximada del alto promedio de cada fila en la vista de tabla.
 
-Con este código en su lugar, cuando se ejecuta la aplicación, cada fila se reducir y crecer en función del alto de la última etiqueta en el prototipo de la celda. Por ejemplo:
+Con este código en su lugar, cuando se ejecute la aplicación, cada fila se reducirá y aumentará en función del alto de la última etiqueta del prototipo de celda. Por ejemplo:
 
-[![](autosizing-row-height-images/table07.png "Una tabla de ejemplo que se ejecute")](autosizing-row-height-images/table07.png#lightbox)
+[![](autosizing-row-height-images/table07.png "Una ejecución de tabla de ejemplo")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GrowRowTable (sample)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)

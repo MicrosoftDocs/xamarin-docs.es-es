@@ -1,91 +1,90 @@
 ---
 title: Ciclo de vida de la actividad
-description: Las actividades son un pilar fundamental de las aplicaciones de Android y pueden existir en un número de estados diferentes. El ciclo de vida de la actividad comienza con la creación de instancias y termina con la destrucción e incluye muchos Estados entre ellos. Cuando una actividad cambia de estado, se llama al método de evento adecuado del ciclo de vida, notificar a la actividad de la inminente cambio de estado y lo que le permite ejecutar el código para adaptarse a ese cambio. En este artículo examina el ciclo de vida de las actividades y se explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado para formar parte de una aplicación confiable y se comporten correctamente.
+description: Las actividades son un bloque de creación fundamental de las aplicaciones de Android y pueden existir en varios Estados diferentes. El ciclo de vida de la actividad comienza con la creación de instancias y termina con la destrucción, e incluye muchos Estados entre ellos. Cuando una actividad cambia de estado, se llama al método de evento del ciclo de vida adecuado, que notifica a la actividad el cambio de estado inminente y le permite ejecutar el código para adaptarse a ese cambio. En este artículo se examina el ciclo de vida de las actividades y se explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado para que formen parte de una aplicación con un comportamiento correcto y confiable.
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 48ff30397b2592dd2c4dbd445987392d78ced6f3
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
-ms.translationtype: MT
+ms.openlocfilehash: eda75041add4b5fc9f7998f426aab42ed2618c4b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740778"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508813"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
-_Las actividades son un pilar fundamental de las aplicaciones de Android y pueden existir en un número de estados diferentes. El ciclo de vida de la actividad comienza con la creación de instancias y termina con la destrucción e incluye muchos Estados entre ellos. Cuando una actividad cambia de estado, se llama al método de evento adecuado del ciclo de vida, notificar a la actividad de la inminente cambio de estado y lo que le permite ejecutar el código para adaptarse a ese cambio. En este artículo examina el ciclo de vida de las actividades y se explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado para formar parte de una aplicación confiable y se comporten correctamente._
+_Las actividades son un bloque de creación fundamental de las aplicaciones de Android y pueden existir en varios Estados diferentes. El ciclo de vida de la actividad comienza con la creación de instancias y termina con la destrucción, e incluye muchos Estados entre ellos. Cuando una actividad cambia de estado, se llama al método de evento del ciclo de vida adecuado, que notifica a la actividad el cambio de estado inminente y le permite ejecutar el código para adaptarse a ese cambio. En este artículo se examina el ciclo de vida de las actividades y se explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado para que formen parte de una aplicación con un comportamiento correcto y confiable._
 
-## <a name="activity-lifecycle-overview"></a>Información general sobre el ciclo de vida de actividad
+## <a name="activity-lifecycle-overview"></a>Información general del ciclo de vida de actividad
 
-Las actividades son un concepto de programación inusual específico de Android. Desarrollo de aplicaciones tradicionales normalmente es un método main estático, que se ejecuta para iniciar la aplicación. Con Android, sin embargo, las cosas son diferentes; Las aplicaciones de Android se pueden iniciar a través de cualquier actividad dentro de una aplicación registrada. En la práctica, la mayoría de las aplicaciones solo tendrá una actividad específica que se especifica como el punto de entrada de la aplicación. Sin embargo, si se bloquea una aplicación, o se termina por el sistema operativo, el sistema operativo puede intentar reiniciar la aplicación en la última actividad abierta o cualquier otro lugar dentro de la pila de la actividad anterior.
-Además, el sistema operativo puede pausar las actividades cuando no están activas y reclamar ellos si está quedando sin memoria. Una consideración cuidadosa debe realizarse para permitir que la aplicación restaurar correctamente su estado en caso de que una actividad se reinicia, especialmente si eso depende de la actividad en los datos de las actividades anteriores.
+Las actividades son un concepto de programación inusual específico de Android. En el desarrollo de aplicaciones tradicional, normalmente hay un método Main estático, que se ejecuta para iniciar la aplicación. Con Android, sin embargo, las cosas son diferentes; Las aplicaciones de Android se pueden iniciar a través de cualquier actividad registrada en una aplicación. En la práctica, la mayoría de las aplicaciones solo tendrán una actividad específica que se especifica como el punto de entrada de la aplicación. Sin embargo, si una aplicación se bloquea, o el sistema operativo finaliza, puede intentar reiniciar la aplicación en la última actividad abierta o en cualquier otra parte de la pila de actividades anterior.
+Además, el sistema operativo puede pausar actividades cuando no están activas y reclamarlas si tiene poca memoria. Se debe tener cuidado a la hora de permitir que la aplicación restaure correctamente su estado en caso de que se reinicie una actividad, especialmente si esa actividad depende de datos de actividades anteriores.
 
-El ciclo de vida de actividad se implementa como una colección de llamadas de métodos, el sistema operativo durante el ciclo de vida de una actividad. Estos métodos permiten a los desarrolladores implementar la funcionalidad necesaria satisfacer los requisitos de administración de recursos y el estado de sus aplicaciones.
+El ciclo de vida de la actividad se implementa como una colección de métodos que el sistema operativo llama a lo largo del ciclo de vida de una actividad. Estos métodos permiten a los desarrolladores implementar la funcionalidad necesaria para satisfacer los requisitos de administración de estado y recursos de sus aplicaciones.
 
-Es muy importante para el desarrollador de aplicaciones analizar los requisitos de cada actividad para determinar qué métodos expuestos por el ciclo de vida de actividad deben implementarse. Error al hacer esto puede provocar inestabilidad en la aplicación, se bloquea, sobredimensionamiento de recursos y posiblemente incluso subyacente inestabilidad del sistema operativo.
+Es extremadamente importante que el desarrollador de la aplicación analice los requisitos de cada actividad para determinar qué métodos expuestos por el ciclo de vida de la actividad deben implementarse. Si no lo hace, se puede producir inestabilidad en la aplicación, bloqueos, saturación de recursos y, posiblemente, la inestabilidad subyacente del sistema operativo.
 
-Este capítulo analizan el ciclo de vida de actividad en detalle, incluido:
+En este capítulo se examina el ciclo de vida de la actividad en detalle, incluidos:
 
 -  Estados de actividad
 -  Métodos de ciclo de vida
 -  Conservar el estado de una aplicación
 
 
-En esta sección también incluye un [tutorial](~/android/app-fundamentals/activity-lifecycle/saving-state.md) que proporcionan ejemplos prácticos sobre cómo guardar el estado de manera eficaz durante el ciclo de vida de actividad. Al final de este capítulo debe comprender el ciclo de vida de actividad y cómo se admiten en una aplicación Android.
+En esta sección también se incluye un [tutorial](~/android/app-fundamentals/activity-lifecycle/saving-state.md) que proporciona ejemplos prácticos sobre cómo guardar el estado de forma eficaz durante el ciclo de vida de la actividad. Al final de este capítulo, debe comprender el ciclo de vida de la actividad y cómo admitirlo en una aplicación Android.
 
 ## <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
-El ciclo de vida de la actividad de Android consta de una colección de métodos expuestos dentro de la clase de actividad que proporcionan al desarrollador de un marco de administración de recursos. Este marco de trabajo permite a los desarrolladores cumplir los requisitos de administración de estado único de cada actividad dentro de una aplicación y controlar correctamente la administración de recursos.
+El ciclo de vida de la actividad de Android comprende una colección de métodos que se exponen en la clase de actividad que proporcionan al desarrollador un marco de administración de recursos. Este marco de trabajo permite a los desarrolladores cumplir los requisitos de administración de estado únicos de cada actividad dentro de una aplicación y administrar correctamente la administración de recursos.
 
 ### <a name="activity-states"></a>Estados de actividad
 
-El sistema operativo Android arbitra las actividades según su estado. Esto ayuda a Android a identificar las actividades que ya no están en uso, lo que permite el sistema operativo reclamar memoria y recursos. El siguiente diagrama muestra los Estados que se puede pasar una actividad durante su vigencia:
+El sistema operativo Android arbitra las actividades en función de su estado. Esto ayuda a Android a identificar las actividades que ya no se usan, lo que permite al sistema operativo reclamar la memoria y los recursos. En el diagrama siguiente se muestran los Estados en los que puede pasar una actividad durante su vigencia:
 
 [![Diagrama de Estados de actividad](images/image1-sml.png)](images/image1.png#lightbox)
 
-Estos estados se pueden dividir en 4 grupos principales como sigue:
+Estos Estados se pueden dividir en cuatro grupos principales como se indica a continuación:
 
-1.  *Activa o en ejecución* &ndash; actividades se considera activo o ejecutando si se encuentran en primer plano, también conocidas como la parte superior de la pila de la actividad. Esto se considera la actividad de mayor prioridad en Android y, por lo tanto sólo se terminará por el sistema operativo en situaciones extremas, tal como si la actividad intenta usar más memoria que está disponible en el dispositivo ya que esto podría causar la interfaz de usuario deje de responder.
+1.  *Activo o en ejecución* &ndash; Las actividades se consideran activas o en ejecución si están en primer plano, también conocidas como la parte superior de la pila de actividades. Esto se considera la actividad de prioridad más alta en Android y, como tal, solo la eliminará el sistema operativo en situaciones extremas, por ejemplo, si la actividad intenta usar más memoria que la disponible en el dispositivo, ya que esto podría hacer que la interfaz de usuario dejara de responder.
 
-1.  *En pausa* &ndash; cuando el dispositivo entra en suspensión, o una actividad es estando visible pero parcialmente oculto por una actividad nueva, que no son de tamaño completo o transparente, la actividad se considera en pausa. Las actividades en pausa son activos, es decir, mantener toda la información de estado y de miembro y permanecerá adjuntos para el Administrador de ventanas. Esto se considera que la segunda actividad de prioridad más alta en Android y, por tanto, solo se terminará por el sistema operativo si la eliminación de esta actividad cumplirá los requisitos de recursos necesarios para mantener la actividad de activo o en ejecución estable y con capacidad de respuesta.
+1.  En *pausa* &ndash; Cuando el dispositivo entra en suspensión, o una actividad todavía está visible pero está parcialmente oculta por una actividad nueva, que no es de tamaño completo o transparente, se considera que la actividad está en pausa. Las actividades en pausa están todavía activas, es decir, mantienen toda la información sobre el estado y los miembros y permanecen adjuntas al administrador de ventanas. Se considera que es la segunda actividad de mayor prioridad en Android y, como tal, solo la eliminará el sistema operativo Si el sacrificio de esta actividad satisfará los requisitos de recursos necesarios para mantener la actividad activa/en ejecución estable y con capacidad de respuesta.
 
-1.  *Detenido/Backgrounded* &ndash; se consideran las actividades que están completamente ocultos, por otra actividad detenida o en segundo plano.
-    Actividades detenidas siguen intentan conservar su información de estado y de miembro para siempre se consideran actividades posibles, pero se detuvo la prioridad más baja de los tres estados y, por lo tanto, el sistema operativo terminará las actividades en este estado en primer lugar para satisfacer el recurso requisitos de las actividades de mayor prioridad.
+1.  *Detenido o en segundo plano* &ndash; Las actividades ocultas completamente por otra actividad se consideran detenidas o en segundo plano.
+    Las actividades detenidas siguen intentando conservar su estado y la información de los miembros siempre que sea posible, pero las actividades detenidas se consideran la prioridad más baja de los tres Estados y, como tal, el sistema operativo eliminará primero las actividades en este estado para satisfacer el recurso. requisitos de actividades con mayor prioridad.
 
-1.  *Reiniciar* &ndash; es posible que una actividad que está en cualquier parte desde pausó en detenido en el ciclo de vida que va a quitar de la memoria por Android. Si el usuario navega a la actividad debe reiniciarse, puede restaurar a su estado guardado previamente y, a continuación, se muestra al usuario.
+1.  *Reiniciado* &ndash; Es posible que Android Quite de la memoria una actividad que esté en cualquier lugar en pausa en el ciclo de vida. Si el usuario vuelve a la actividad, se debe reiniciar, restaurar a su estado guardado previamente y, a continuación, mostrar al usuario.
 
 
-### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Volver a crear en respuesta a cambios de configuración de actividad
+### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Volver a crear la actividad en respuesta a los cambios de configuración
 
-Para complicar más complicado, Android produce una llave inglesa más en la combinación de los cambios de configuración. Los cambios de configuración son actividad rápido destrucción/volver-creation ciclos que se producen cuando cambia la configuración de una actividad, como cuando el dispositivo esté [girado](~/android/app-fundamentals/handling-rotation.md) (y la actividad debe volver a compilarse en horizontal o vertical modo), cuando se muestra el teclado (y la actividad se presenta una oportunidad de tamaño él mismo), o cuando el dispositivo se encuentre en una base, entre otros.
+Para que las cuestiones sean más complicadas, Android lanza una llave más en la combinación llamada cambios de configuración. Los cambios de configuración son ciclos de destrucción y recreación de la actividad rápida que se producen cuando cambia la configuración de una actividad, por ejemplo, cuando se [gira](~/android/app-fundamentals/handling-rotation.md) el dispositivo (y la actividad debe volver a generarse en modo horizontal o vertical), cuando el se muestra el teclado (y la actividad se presenta con una oportunidad de cambiar el tamaño) o cuando el dispositivo se coloca en un Dock, entre otros.
 
-Cambios de configuración provocan sigue los mismos cambios de estado de actividad que se producirían durante detener y reiniciar una actividad. Sin embargo, para asegurarse de que una aplicación se siente con capacidad de respuesta y lleva a cabo correctamente durante los cambios de configuración, es importante que se administran tan pronto como sea posible. Por este motivo, Android tiene una API específica que puede usarse para conservar el estado durante los cambios de configuración.
-Hablaremos sobre esto más adelante en el [administración de estado en todo el ciclo de vida](~/android/app-fundamentals/activity-lifecycle/index.md#Managing_State_Throughout_the_Lifecycle) sección.
+Los cambios de configuración siguen provocando los mismos cambios de estado de actividad que se producirían durante la detención y el reinicio de una actividad. Sin embargo, para asegurarse de que una aplicación se comporta correctamente y funciona bien durante los cambios de configuración, es importante que se controlen lo más rápido posible. Por este motivo, Android tiene una API específica que se puede usar para conservar el estado durante los cambios de configuración.
+Esto se tratará más adelante en el [Estado de administración a lo largo del ciclo de vida](~/android/app-fundamentals/activity-lifecycle/index.md#Managing_State_Throughout_the_Lifecycle) .
 
 ### <a name="activity-lifecycle-methods"></a>Métodos de ciclo de vida de actividad
 
-El SDK de Android y, por extensión, el marco de trabajo de Xamarin.Android proporciona un modelo eficaz para administrar el estado de actividades dentro de una aplicación. Cuando cambia el estado de la actividad, se notifica la actividad por el sistema operativo, que llama a métodos específicos de esa actividad. El siguiente diagrama ilustra estos métodos en relación con el ciclo de vida de actividad:
+Los Android SDK y, por extensión, el marco de Xamarin. Android proporcionan un modelo eficaz para administrar el estado de las actividades dentro de una aplicación. Cuando el estado de una actividad cambia, el sistema operativo notifica la actividad, que llama a métodos específicos en esa actividad. En el diagrama siguiente se muestran estos métodos en relación con el ciclo de vida de la actividad:
 
-[![Diagrama de flujo de ciclo de vida de actividad](images/image2-sml.png)](images/image2.png#lightbox)
+[![Diagrama de flujo del ciclo de vida](images/image2-sml.png)](images/image2.png#lightbox)
 
-Como desarrollador, puede invalidar estos métodos dentro de una actividad para gestionar los cambios de estado. Es importante tener en cuenta, sin embargo, que todos los métodos de ciclo de vida se llaman en el subproceso de interfaz de usuario y bloquearán el sistema operativo realice el siguiente elemento de trabajo de la interfaz de usuario, como ocultar la actividad actual, mostrar una nueva actividad, etcetera. Por lo tanto, el código de estos métodos debe ser tan breve como sea posible para que una aplicación se sienta bien realizar. Las tareas de ejecución prolongada deben ejecutarse en un subproceso en segundo plano.
+Como desarrollador, puede controlar los cambios de estado invalidando estos métodos dentro de una actividad. Sin embargo, es importante tener en cuenta que todos los métodos del ciclo de vida se llaman en el subproceso de la interfaz de usuario y impedirán que el sistema operativo realice la siguiente parte del trabajo de la interfaz de usuario, como ocultar la actividad actual, mostrar una nueva actividad, etc. Como tal, el código de estos métodos debe ser lo más breve posible para que una aplicación funcione correctamente. Las tareas de ejecución prolongada deben ejecutarse en un subproceso en segundo plano.
 
-Examinemos cada uno de estos métodos de ciclo de vida y su uso:
+Vamos a examinar cada uno de estos métodos de ciclo de vida y su uso:
 
 #### <a name="oncreate"></a>OnCreate
 
-[OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) es el primer método se llama cuando se crea una actividad.
-`OnCreate` siempre se reemplaza para llevar a cabo las inicializaciones de inicio que pueden ser necesario para una actividad, como:
+[Alcrear](xref:Android.App.Activity.OnCreate*) es el primer método al que se llama cuando se crea una actividad.
+`OnCreate`siempre se invalida para realizar cualquier inicialización de inicio que puede ser necesaria para una actividad como la siguiente:
 
--  Creación de vistas
--  Inicialización de variables
--  Enlace de datos estáticos a las listas
+- Crear vistas
+- Inicializar variables
+- Enlazar datos estáticos a listas
 
-
-`OnCreate` toma un [agrupación](https://developer.xamarin.com/api/type/Android.OS.Bundle/) parámetro, que es un diccionario para almacenar y pasar información de estado y los objetos entre actividades si el paquete no es null, esto indica la actividad se está reiniciando y debe restaurar su estado desde el instancia anterior. El código siguiente muestra cómo recuperar los valores de la agrupación:
+`OnCreate` toma un parámetro de [agrupación](xref:Android.OS.Bundle), que es un diccionario para almacenar y pasar información de estado y objetos entre actividades si la agrupación no es null, lo que indica que la actividad se está reiniciando y debe restaurar su estado desde la instancia anterior. En el código siguiente se muestra cómo recuperar valores de la agrupación:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -106,25 +105,25 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Una vez `OnCreate` ha finalizado, llamará a Android `OnStart`.
+Una `OnCreate` vez finalizado, Android llamará a `OnStart`.
 
 #### <a name="onstart"></a>OnStart
 
-[OnStart](https://developer.xamarin.com/api/member/Android.App.Activity.OnStart/) siempre se llama por el sistema después de `OnCreate` haya finalizado. Actividades pueden invalidar este método si es necesario realizar ningún derecho de tareas específicas antes de una actividad esté visible como actualizar los valores actuales de las vistas dentro de la actividad. Android llamará `OnResume` inmediatamente después de este método.
+El sistema siempre llama a [OnStart](xref:Android.App.Activity.OnStart) una vez `OnCreate` finalizada. Las actividades pueden invalidar este método si necesitan realizar cualquier tarea específica justo antes de que una actividad sea visible, como actualizar los valores actuales de las vistas dentro de la actividad. Android llamará `OnResume` inmediatamente después de este método.
 
-#### <a name="onresume"></a>OnResume
+#### <a name="onresume"></a>Alnude
 
-Las llamadas al sistema [OnResume](https://developer.xamarin.com/api/member/Android.App.Activity.OnResume/) cuando la actividad está lista para empezar a interactuar con el usuario.
-Las actividades deben invalidar este método para realizar tareas como:
+El sistema llama a [OnResume](xref:Android.App.Activity.OnResume) cuando la actividad está lista para empezar a interactuar con el usuario.
+Las actividades deben invalidar este método para realizar tareas como las siguientes:
 
--  Refuerza las velocidades de fotogramas (una tarea común de desarrollo de juegos)
--  A partir de las animaciones
--  Escucha de las actualizaciones GPS
--  Mostrar alertas pertinentes y los cuadros de diálogo
+-  Rampa de velocidades de fotogramas (una tarea común en el desarrollo de juegos)
+-  Animaciones iniciales
+-  Escuchando actualizaciones de GPS
+-  Mostrar cualquier alerta o cuadro de diálogo relevante
 -  Conectar controladores de eventos externos
 
 
-Por ejemplo, el fragmento de código siguiente muestra cómo inicializar la cámara:
+Por ejemplo, en el siguiente fragmento de código se muestra cómo inicializar la cámara:
 
 ```csharp
 public void OnResume()
@@ -138,23 +137,23 @@ public void OnResume()
 }
 ```
 
-`OnResume` es importante porque cualquier operación que realiza en `OnPause` debe deshacerse en `OnResume`, ya que es el único método de ciclo de vida que siempre se ejecutará después `OnPause` cuando lleva la actividad de vida a.
+`OnResume`es importante porque las operaciones que se realizan en `OnPause` deben deshacerse en `OnResume`, ya que es el único método de ciclo de vida que se garantiza que se ejecute `OnPause` después de que la actividad vuelva a la vida.
 
-#### <a name="onpause"></a>OnPause
+#### <a name="onpause"></a>Alpausar
 
-[OnPause](https://developer.xamarin.com/api/member/Android.App.Activity.OnPause/) se llama cuando el sistema está a punto de colocar la actividad en segundo plano o cuando la actividad parcialmente queda oculta. Las actividades deben invalidar este método si es necesario:
+Se llama a [OnPause](xref:Android.App.Activity.OnPause) cuando el sistema está a punto de colocar la actividad en segundo plano o cuando la actividad se oculta parcialmente. Las actividades deben invalidar este método si necesitan:
 
 -   Confirmar los cambios no guardados en los datos persistentes
 
--   Destruir o limpiar los otros objetos que consumen recursos
+-   Destruir o limpiar otros objetos que consumen recursos
 
--   Disminuir las velocidades de fotogramas y animaciones pausar
+-   Aumentar las velocidades de fotogramas y pausar animaciones
 
--   Anular el registro de controladores de eventos externos o controladores de notificación (es decir, aquellos que están vinculados a un servicio). Esto se debe hacer para evitar pérdidas de memoria de la actividad.
+-   Anular el registro de controladores de eventos externos o controladores de notificación (es decir, los que están vinculados a un servicio). Esto se debe hacer para evitar pérdidas de memoria de la actividad.
 
--   Del mismo modo, si la actividad ha mostrado cuadros de diálogos ni las alertas, deben limpiarse con el `.Dismiss()` método.
+-   Del mismo modo, si la actividad ha mostrado cuadros de diálogo o alertas, deben limpiarse con el `.Dismiss()` método.
 
-Por ejemplo, el siguiente fragmento de código liberará la cámara, como la actividad no se puede hacer uso de ella mientras está en pausa:
+Como ejemplo, el siguiente fragmento de código liberará la cámara, ya que la actividad no puede hacer uso de ella mientras está en pausa:
 
 ```csharp
 public void OnPause()
@@ -170,81 +169,78 @@ public void OnPause()
 }
 ```
 
-Hay dos métodos posibles del ciclo de vida que se llamará después `OnPause`:
+Hay dos métodos de ciclo de vida posibles a los que `OnPause`se llamará después de:
 
-1.  `OnResume` se llamará si la actividad que se va a devolver al primer plano.
-1.  `OnStop` se llamará si se ha realizado la actividad en segundo plano.
+1.  `OnResume`se llamará a si la actividad se va a devolver al primer plano.
+1.  `OnStop`se llamará a si la actividad se coloca en segundo plano.
 
 
 #### <a name="onstop"></a>OnStop
 
-[OnStop](https://developer.xamarin.com/api/member/Android.App.Activity.OnStop/) se llama cuando la actividad ya no es visible para el usuario. Esto sucede cuando se produce uno de los siguientes:
+Se llama a [OnStop](xref:Android.App.Activity.OnStop) cuando la actividad ya no es visible para el usuario. Esto sucede cuando se produce uno de los siguientes casos:
 
--  Una nueva actividad se está iniciando y abarca de esta actividad.
--  Una actividad existente es que se incorporó en primer plano.
--  La actividad se está destruyendo.
+-  Se está iniciando una nueva actividad y está cubriendo esta actividad.
+-  Una actividad existente se pone en primer plano.
+-  Se está destruyendo la actividad.
 
 
-`OnStop` no siempre se puede llamar en situaciones de escasez de memoria, como cuando tiene escasez de recursos y no en segundo plano correctamente de la actividad de Android. Por este motivo, es mejor no dependen de `OnStop` obtener llama al preparar una actividad para la destrucción. Los métodos del ciclo de vida siguientes que se pueden llamar después de que ésta será `OnDestroy` si la actividad está en desuso, o `OnRestart` si la actividad se vuelve a interactuar con el usuario.
+`OnStop`no siempre se puede llamar en situaciones de memoria insuficiente, como cuando Android se queda sin recursos y no puede almacenar en segundo plano la actividad. Por esta razón, es mejor no depender de `OnStop` la llamada a cuando se prepara una actividad para la destrucción. Los siguientes métodos de ciclo de vida a los que se puede llamar `OnDestroy` después de este se producirán si la `OnRestart` actividad deja de estar disponible, o si la actividad se va a devolver para interactuar con el usuario.
 
-#### <a name="ondestroy"></a>OnDestroy
+#### <a name="ondestroy"></a>Destruir
 
-[OnDestroy](https://developer.xamarin.com/api/member/Android.App.Activity.OnDestroy/) es el método final que se llama en una instancia de actividad antes de que se destruye y se quita completamente de la memoria. En situaciones extremas Android podría terminar el proceso de aplicación que hospeda la actividad, lo que dará lugar `OnDestroy` no que se va a invocar. La mayoría de las actividades no implementa este método porque la mayoría limpia y apagado se ha realizado el `OnPause` y `OnStop` métodos. El `OnDestroy` normalmente se invalida el método para limpiar prolongada ejecuta los recursos que podría perder recursos. Un ejemplo de esto podría ser subprocesos en segundo plano que se iniciaron en `OnCreate`.
+[Aldestroy](xref:Android.App.Activity.OnDestroy) es el método final al que se llama en una instancia de actividad antes de que se destruya y se quite por completo de la memoria. En situaciones extremas, Android puede terminar el proceso de aplicación que hospeda la actividad, lo que `OnDestroy` provocará que no se invoque. La mayoría de las actividades no implementarán este método, ya que la mayoría de las operaciones de `OnPause` limpieza `OnStop` y cierre se han realizado en los métodos y. Normalmente `OnDestroy` , el método se invalida para limpiar los recursos de larga ejecución que podrían perder recursos. Un ejemplo de esto podría ser subprocesos en segundo plano `OnCreate`que se iniciaron en.
 
-No habrá ningún método de ciclo de vida se llama después de la actividad se ha destruido.
+No habrá ningún método de ciclo de vida llamado después de que se haya destruido la actividad.
 
-#### <a name="onrestart"></a>OnRestart
+#### <a name="onrestart"></a>Reiniciar
 
-[OnRestart](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestart/) se llama después de la actividad se ha detenido, antes de que se inicie de nuevo. Un buen ejemplo de esto sería cuando el usuario presiona el botón de inicio mientras se encuentra en una actividad en la aplicación. Cuando esto sucede `OnPause` y, a continuación, `OnStop` se llama a métodos y la actividad se mueve en segundo plano, pero no se destruye. Si el usuario, a continuación, para restaurar la aplicación mediante el Administrador de tareas o una aplicación similar, llamará Android el `OnRestart` método de la actividad.
+[OnRestart](xref:Android.App.Activity.OnRestart) se llama después de que se haya detenido la actividad antes de que se vuelva a iniciar. Un buen ejemplo sería cuando el usuario presiona el botón Inicio mientras está en una actividad de la aplicación. Cuando esto ocurre `OnPause` `OnStop` y se llama a los métodos, y la actividad se mueve al fondo, pero no se destruye. Si después el usuario restaurara la aplicación mediante el administrador de tareas o una aplicación similar, Android llamará al `OnRestart` método de la actividad.
 
-No hay ningún directrices generales para qué tipo de lógica debe implementarse en `OnRestart`. Esto es porque `OnStart` siempre se invoca independientemente de si la actividad se crea o se reinicia, por lo que todos los recursos requeridos por la actividad deben inicializarse en `OnStart`, en lugar de `OnRestart`.
+No hay ninguna directriz general para el tipo de lógica que se debe implementar `OnRestart`en. Esto se debe `OnStart` a que siempre se invoca con independencia de si la actividad se crea o se reinicia, por lo que todos los recursos necesarios para la actividad se deben inicializar en `OnStart`, `OnRestart`en lugar de.
 
-El siguiente método de ciclo de vida se llama después de `OnRestart` será `OnStart`.
+El siguiente método de ciclo de `OnRestart` vida llamado `OnStart`después de será.
 
-### <a name="back-vs-home"></a>Realizar una copia de vs. Página principal
+### <a name="back-vs-home"></a>Atrás frente a Página principal
 
-Muchos dispositivos Android tienen dos botones distintos: un botón "Atrás" y un botón "Inicio". Un ejemplo de esto se aprecia en la siguiente captura de pantalla de Android 4.0.3:
+Muchos dispositivos Android tienen dos botones distintos: un botón "atrás" y un botón "Inicio". Un ejemplo de esto puede verse en la siguiente captura de pantalla de Android 4.0.3:
 
-[![Botones Atrás y principal](images/image4-sml.png)](images/image4.png#lightbox)
+[![Botones atrás y Inicio](images/image4-sml.png)](images/image4.png#lightbox)
 
-Hay una diferencia sutil entre los dos botones, aunque parece que tienen el mismo efecto de colocar una aplicación en segundo plano. Cuando un usuario hace clic en el botón Atrás, está indicando Android que han terminado con la actividad. Android destruirá la actividad. En cambio, cuando el usuario hace clic en el botón de inicio la actividad simplemente se coloca en segundo plano &ndash; Android no terminará la actividad.
+Hay una diferencia sutil entre los dos botones, aunque parezca que tienen el mismo efecto de colocar una aplicación en segundo plano. Cuando un usuario hace clic en el botón atrás, indica a Android que se ha hecho con la actividad. Android destruirá la actividad. Por el contrario, cuando el usuario hace clic en el botón Inicio, la actividad se coloca simplemente &ndash; en el Android en segundo plano no eliminará la actividad.
 
 <a name="Managing_State_Throughout_the_Lifecycle" />
 
-## <a name="managing-state-throughout-the-lifecycle"></a>Administrar el estado a lo largo del ciclo de vida
+## <a name="managing-state-throughout-the-lifecycle"></a>Administración del estado a lo largo del ciclo de vida
 
-Cuando una actividad se detuvo o se destruya el sistema proporciona una oportunidad para guardar el estado de la actividad de rehidratación más adelante.
-Este estado guardado se conoce como estado de la instancia. Android proporciona tres opciones para almacenar el estado de la instancia durante el ciclo de vida de actividad:
+Cuando una actividad se detiene o se destruye, el sistema ofrece la oportunidad de guardar el estado de la actividad para su posterior rehidratación.
+Este estado guardado se conoce como estado de instancia. Android proporciona tres opciones para almacenar el estado de la instancia durante el ciclo de vida de la actividad:
 
-1. Almacenar valores primitivos en un `Dictionary` conocido como un [agrupación](https://developer.xamarin.com/api/type/Android.OS.Bundle/) que Android utilizará para guardar el estado.
+1. Almacenar valores primitivos en `Dictionary` un conocido como [agrupación](xref:Android.OS.Bundle) que Android usará para guardar el estado.
 
-1. Creación de una clase personalizada que va a contener valores complejos, como los mapas de bits. Android usará esta clase personalizada para guardar el estado.
+1. Crear una clase personalizada que contenga valores complejos como mapas de bits. Android usará esta clase personalizada para guardar el estado.
 
-1. Sortear el ciclo de vida de cambio de configuración y asumir la responsabilidad completa para mantener el estado de la actividad.
+1. Elusión del ciclo de vida de los cambios de configuración y suponiendo la responsabilidad completa de mantener el estado en la actividad.
 
+En esta guía se describen las dos primeras opciones.
 
-Esta guía trata las dos primeras opciones.
+### <a name="bundle-state"></a>Estado del paquete
 
+La opción principal para guardar el estado de la instancia es usar un objeto de diccionario de clave o valor conocido como [agrupación](xref:Android.OS.Bundle).
+Recuerde que cuando se crea una actividad que el `OnCreate` método pasa una agrupación como parámetro, este paquete se puede usar para restaurar el estado de la instancia. No se recomienda usar un paquete para datos más complejos que no se serialicen rápida o fácilmente en pares de clave y valor (como mapas de bits). en su lugar, debe usarse para valores simples como cadenas.
 
+Una actividad proporciona métodos para ayudarle a guardar y recuperar el estado de la instancia en la agrupación:
 
-### <a name="bundle-state"></a>Estado de lote
+- [OnSaveInstanceState](xref:Android.App.Activity.OnSaveInstanceState*) &ndash; Lo invoca Android cuando se destruye la actividad. Las actividades pueden implementar este método si necesitan conservar cualquier elemento de estado de clave/valor.
 
-La opción para guardar el estado de la instancia principal es usar un objeto de diccionario de pares clave-valor conocido como un [agrupación](https://developer.xamarin.com/api/type/Android.OS.Bundle/).
-Recuerde que cuando se crea una actividad que el `OnCreate` método se pasa una agrupación como un parámetro, este paquete puede utilizarse para restaurar el estado de la instancia. No se recomienda usar un lote de datos más complejos que no rápidamente o se serializan fácilmente para clave-valor pares (por ejemplo, mapas de bits); en su lugar, debe usarse para valores sencillos como cadenas.
+- [OnRestoreInstanceState](xref:Android.App.Activity.OnRestoreInstanceState*) Se llama a esta función `OnCreate` una vez finalizado el método y proporciona otra oportunidad para que una actividad restaure su estado una vez completada la inicialización. &ndash;
 
-Una actividad proporciona métodos para guardar y recuperar el estado de la instancia en el paquete:
+En el diagrama siguiente se muestra cómo se usan estos métodos:
 
--   [OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/) &ndash; se invoca mediante Android cuando se está destruyendo la actividad. Las actividades pueden implementar este método si necesitan conservar los elementos de estado de clave/valor.
-
--   [OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/) &ndash; Esto se llama después de la `OnCreate` método finalice y proporciona otra oportunidad para una actividad restaurar su estado una vez completada la inicialización.
-
-El siguiente diagrama ilustra cómo se usan estos métodos:
-
-[![Diagrama de flujo de los Estados de agrupación](images/image3-sml.png)](images/image3.png#lightbox)
+[![Diagrama de flujo de Estados de agrupación](images/image3-sml.png)](images/image3.png#lightbox)
 
 #### <a name="onsaveinstancestate"></a>OnSaveInstanceState
 
-[OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/) se denominará como la actividad se está deteniendo. Recibirá un parámetro de paquete que la actividad puede almacenar su estado en. Cuando un dispositivo sufre un cambio de configuración, puede usar una actividad el `Bundle` objeto que se pasa a conservar el estado de actividad mediante la invalidación `OnSaveInstanceState`. Por ejemplo, considere el siguiente código:
+Se llamará a [OnSaveInstanceState](xref:Android.App.Activity.OnSaveInstanceState*) cuando se detenga la actividad. Recibirá un parámetro de agrupación en el que la actividad puede almacenar su estado. Cuando un dispositivo experimenta un cambio de configuración, una actividad puede usar `Bundle` el objeto que se pasa para conservar el estado de actividad invalidando. `OnSaveInstanceState` Por ejemplo, considere el siguiente código:
 
 ```csharp
 int c;
@@ -273,11 +269,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-El código anterior incrementa un número entero denominado `c` al seleccionar un botón denominado `incrementCounter` se hizo clic, mostrar el resultado en un `TextView` denominado `output`. Cuando se produce un cambio de configuración: por ejemplo, cuando se gira el dispositivo: el código anterior se perderá el valor de `c` porque el `bundle` sería `null`, como se muestra en la ilustración siguiente:
+El código anterior incrementa `c` un entero denominado cuando se hace clic en un botón denominado `incrementCounter` y muestra el resultado en un `TextView` denominado `output`. Cuando se produce un cambio de configuración, por ejemplo, cuando se gira el dispositivo, el código anterior perdería el valor de `c` `bundle` porque sería `null`, tal y como se muestra en la ilustración siguiente:
 
-[![Pantalla no indica el valor anterior](images/07-sml.png)](images/07.png#lightbox)
+[![Mostrar no muestra el valor anterior](images/07-sml.png)](images/07.png#lightbox)
 
-Para conservar el valor de `c` en este ejemplo, puede invalidar la actividad `OnSaveInstanceState`, guardar el valor en el paquete tal como se muestra a continuación:
+Para conservar el valor de `c` en este ejemplo, la actividad puede invalidarse `OnSaveInstanceState`, guardando el valor en la agrupación como se muestra a continuación:
 
 ```csharp
 protected override void OnSaveInstanceState (Bundle outState)
@@ -287,20 +283,18 @@ protected override void OnSaveInstanceState (Bundle outState)
 }
 ```
 
-Ahora cuando se gira el dispositivo a una nueva orientación, el entero se guarda en el paquete y se recupera con la línea:
+Ahora, cuando el dispositivo se gira a una nueva orientación, el entero se guarda en la agrupación y se recupera con la línea:
 
 ```csharp
 c = bundle.GetInt ("counter", -1);
 ```
 
 > [!NOTE]
-> Es importante siempre llamada la implementación base de `OnSaveInstanceState` para que también se puede guardar el estado de la jerarquía de vistas.
-
-
+> Es importante llamar siempre a la implementación base de `OnSaveInstanceState` para que también se pueda guardar el estado de la jerarquía de vistas.
 
 ##### <a name="view-state"></a>Estado de vista
 
-Reemplazar `OnSaveInstanceState` es un mecanismo adecuado para guardar los datos transitorios en una actividad a través de los cambios de orientación, por ejemplo, el contador en el ejemplo anterior. Sin embargo, la implementación predeterminada de `OnSaveInstanceState` se encargará de guardar los datos transitorios en la interfaz de usuario para cada vista, siempre y cuando cada vista tiene un identificador asignado. Por ejemplo, supongamos que una aplicación tiene un `EditText` elemento definido en XML como sigue:
+Reemplazar `OnSaveInstanceState` es un mecanismo adecuado para guardar datos transitorios en una actividad a través de cambios de orientación, como el contador en el ejemplo anterior. Sin embargo, la implementación predeterminada `OnSaveInstanceState` de se encargará de guardar los datos transitorios en la interfaz de usuario para cada vista, siempre y cuando cada vista tenga un identificador asignado. Por ejemplo, suponga que una aplicación tiene `EditText` un elemento definido en XML como se indica a continuación:
 
 ```xml
 <EditText android:id="@+id/myText"
@@ -308,15 +302,15 @@ Reemplazar `OnSaveInstanceState` es un mecanismo adecuado para guardar los datos
   android:layout_height="wrap_content"/>
 ```
 
-Puesto que la `EditText` control tiene un `id` asignado, cuando el usuario escribe algunos datos y gira el dispositivo, los datos se siguen mostrando, tal como se muestra a continuación:
+Puesto que `EditText` el control tiene `id` un asignado, cuando el usuario escribe algunos datos y gira el dispositivo, los datos se siguen mostrando, como se muestra a continuación:
 
-[![Se conservan los datos en modo horizontal](images/08-sml.png)](images/08.png#lightbox)
+[![Los datos se conservan en modo horizontal](images/08-sml.png)](images/08.png#lightbox)
 
 #### <a name="onrestoreinstancestate"></a>OnRestoreInstanceState
 
-[OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/) se llamará después `OnStart`. Proporciona la oportunidad de restaurar cualquier estado que se guardó previamente a una agrupación durante anterior de una actividad `OnSaveInstanceState`. Este es el mismo paquete que se proporciona a `OnCreate`, sin embargo.
+Se llamará a [OnRestoreInstanceState](xref:Android.App.Activity.OnRestoreInstanceState*) después de `OnStart`. Proporciona una actividad con la oportunidad de restaurar cualquier Estado que se guardó anteriormente en un paquete durante el anterior `OnSaveInstanceState`. Sin embargo `OnCreate`, es el mismo paquete que se proporciona.
 
-El código siguiente muestra cómo se puede restaurar el estado en `OnRestoreInstanceState`:
+En el código siguiente se muestra cómo se puede restaurar `OnRestoreInstanceState`el estado en:
 
 ```csharp
 protected override void OnRestoreInstanceState(Bundle savedState)
@@ -327,33 +321,33 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 }
 ```
 
-Este método existe para proporcionar cierta flexibilidad en torno a cuando se debe restaurar el estado. A veces es más adecuado esperar hasta que se realizan todas las inicializaciones antes de restaurar el estado de la instancia. Además, una subclase de una actividad existente solo es posible que desee restaurar ciertos valores de estado de la instancia. En muchos casos, no es necesario reemplazar `OnRestoreInstanceState`, ya que la mayoría de las actividades puede restaurar el estado mediante el paquete proporcionado a `OnCreate`.
+Este método existe para proporcionar cierta flexibilidad a la hora de restaurar el estado. A veces es más adecuado esperar hasta que se realicen todas las inicializaciones antes de restaurar el estado de la instancia. Además, una subclase de una actividad existente solo puede querer restaurar determinados valores del estado de la instancia. En muchos casos, no es necesario invalidar `OnRestoreInstanceState`, ya que la mayoría de las actividades pueden restaurar el estado mediante el paquete proporcionado a. `OnCreate`
 
-Para obtener un ejemplo de guardar el estado mediante un `Bundle`, consulte el [Walkthrough - estado de guardar la actividad](saving-state.md).
+Para obtener un ejemplo de cómo guardar el `Bundle`estado con, consulte el [Tutorial: guardar el estado de la actividad](saving-state.md).
 
 
 #### <a name="bundle-limitations"></a>Limitaciones de agrupación
 
-Aunque `OnSaveInstanceState` resulta fácil guardar los datos transitorios, tiene algunas limitaciones:
+Aunque `OnSaveInstanceState` facilita el almacenamiento de datos transitorios, tiene algunas limitaciones:
 
--   No se llama en todos los casos. Por ejemplo, al presionar **inicio** o **Atrás** salir de una actividad no darán como resultado `OnSaveInstanceState` que se llama.
+-   No se llama en todos los casos. Por ejemplo, si presiona **Inicio** o **atrás** para salir de una actividad, `OnSaveInstanceState` no se llamará.
 
--   La agrupación se pasó `OnSaveInstanceState` no está diseñado para los objetos grandes, como las imágenes. En el caso de objetos grandes, guardar el objeto de [OnRetainNonConfigurationInstance](https://developer.xamarin.com/api/member/Android.App.Activity.OnRetainNonConfigurationInstance/) es preferible, tal como se describe a continuación.
+-   La agrupación que `OnSaveInstanceState` se pasa a no está diseñada para objetos grandes, como imágenes. En el caso de objetos grandes, es preferible guardar el objeto de [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) , como se describe a continuación.
 
--   Guardado mediante la agrupación de datos serializados, lo que puede provocar retrasos.
+-   Los datos guardados mediante el lote se serializan, lo que puede provocar retrasos.
 
-Estado de la agrupación es útil para datos simples que no usan la cantidad de memoria, mientras que *datos de instancia sin configuración* es útil para datos o datos que son costosas de recuperar más complejas, como las llamadas de servicio web o un complicado consulta de base de datos. Datos de la instancia de configuración no se guardan en un objeto según sea necesario. La siguiente sección se presentan `OnRetainNonConfigurationInstance` como una manera de conservar los tipos de datos más complejos a través de los cambios de configuración.
+El estado de agrupación es útil para datos simples que no usan mucha memoria, mientras que los *datos de instancia que no son de configuración* son útiles para datos más complejos, o datos que son caros de recuperar, como por ejemplo una llamada de servicio web o una consulta de base de datos complicada. Los datos de instancia que no son de configuración se guardan en un objeto según sea necesario. En la siguiente sección `OnRetainNonConfigurationInstance` se explica cómo conservar tipos de datos más complejos a través de los cambios de configuración.
 
 
 ### <a name="persisting-complex-data"></a>Persistencia de datos complejos
 
-Además de almacenar datos en el paquete, Android también admite el almacenamiento de datos invalidando [OnRetainNonConfigurationInstance](https://developer.xamarin.com/api/member/Android.App.Activity.OnRetainNonConfigurationInstance/) y devolver una instancia de un `Java.Lang.Object` que contiene los datos que se va a conservar. Hay dos principales ventajas de usar `OnRetainNonConfigurationInstance` para guardar el estado:
+Además de conservar los datos en el paquete, Android también admite el almacenamiento de datos invalidando [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) y devolviendo una instancia `Java.Lang.Object` de que contiene los datos que se van a conservar. Usar `OnRetainNonConfigurationInstance` para guardar el estado tiene dos ventajas principales:
 
--   El objeto devuelto desde `OnRetainNonConfigurationInstance` funciona bien con los tipos de datos más grandes y complejas porque memoria conserva este objeto.
+-   El objeto devuelto `OnRetainNonConfigurationInstance` de funciona bien con tipos de datos más grandes y más complejos porque la memoria conserva este objeto.
 
--   El `OnRetainNonConfigurationInstance` método es llamado bajo demanda y solo cuando sea necesario. Esto resulta más económico que el uso de una caché manual.
+-   Se `OnRetainNonConfigurationInstance` llama al método a petición y solo cuando es necesario. Esto es más económico que usar una memoria caché manual.
 
-Uso de `OnRetainNonConfigurationInstance` es adecuado para escenarios donde resulta caro recuperar los datos varias veces, como llamadas al servicio web. Por ejemplo, considere el siguiente código que busca en Twitter:
+El `OnRetainNonConfigurationInstance` uso de es adecuado para escenarios en los que resulta caro recuperar los datos varias veces, como las llamadas a servicios Web. Por ejemplo, considere el siguiente código que busca Twitter:
 
 ```csharp
 public class NonConfigInstanceActivity : ListActivity
@@ -400,11 +394,11 @@ public class NonConfigInstanceActivity : ListActivity
 }
 ```
 
-Este código recupera los resultados de la web con formato JSON, analiza y, a continuación, muestra los resultados en una lista, como se muestra en la captura de pantalla siguiente:
+Este código recupera los resultados del Web con formato JSON, los analiza y, a continuación, presenta los resultados en una lista, como se muestra en la siguiente captura de pantalla:
 
-[![Resultados que aparecen en pantalla](images/06-sml.png)](images/06.png#lightbox)
+[![Resultados mostrados en la pantalla](images/06-sml.png)](images/06.png#lightbox)
 
-Cuando un cambio de configuración - por ejemplo, se produce cuando un dispositivo se gira - el código repite el proceso. Para volver a usar los resultados recuperados originalmente y no hacer que las llamadas de red redundantes, innecesaria, podemos usar `OnRetainNonconfigurationInstance` para guardar los resultados, como se muestra a continuación:
+Cuando se produce un cambio de configuración, por ejemplo, cuando se gira un dispositivo, el código repite el proceso. Para reutilizar los resultados recuperados originalmente y no ocasionar llamadas de red redundantes e innecesarias, podemos usar `OnRetainNonconfigurationInstance` para guardar los resultados, como se muestra a continuación:
 
 ```csharp
 public class NonConfigInstanceActivity : ListActivity
@@ -439,7 +433,7 @@ public class NonConfigInstanceActivity : ListActivity
 }
 ```
 
-Ahora cuando se gira el dispositivo, se recuperan los resultados originales de la `LastNonConfiguartionInstance` propiedad. En este ejemplo, los resultados están compuestos de una `string[]` que contiene los tweets. Puesto que `OnRetainNonConfigurationInstance` requiere que un `Java.Lang.Object` van a devolver el `string[]` se encapsula en una clase que cree subclases `Java.Lang.Object`, tal y como se muestra a continuación:
+Ahora, cuando se gira el dispositivo, los resultados originales se recuperan de `LastNonConfiguartionInstance` la propiedad. En este ejemplo, los resultados se componen de un `string[]` que contiene tweets. Puesto `OnRetainNonConfigurationInstance` que requiere `Java.Lang.Object` que se devuelva, `string[]` se `Java.Lang.Object`ajusta en una clase que subclases, como se muestra a continuación:
 
 ```csharp
 class TweetListWrapper : Java.Lang.Object
@@ -448,7 +442,7 @@ class TweetListWrapper : Java.Lang.Object
 }
 ```
 
-Por ejemplo, si intenta usar un `TextView` como el objeto devuelto desde `OnRetainNonConfigurationInstance` producirán una pérdida de la actividad, como se muestra en el código siguiente:
+Por ejemplo, si se intenta usar `TextView` como el objeto devuelto de `OnRetainNonConfigurationInstance` , se perderá la actividad, como se muestra en el código siguiente:
 
 ```csharp
 TextView _textView;
@@ -478,14 +472,14 @@ public override Java.Lang.Object OnRetainNonConfigurationInstance ()
 }
 ```
 
-En esta sección, hemos aprendido cómo conservar los datos de estado simple con el `Bundle`, y conservar los tipos de datos más complejos con `OnRetainNonConfigurationInstance`.
+En esta sección, hemos aprendido a conservar los `Bundle`datos de estado sencillos con y a guardar tipos de datos más complejos con. `OnRetainNonConfigurationInstance`
 
 ## <a name="summary"></a>Resumen
 
-El ciclo de vida de la actividad de Android proporciona un marco eficaz para la administración de estado de las actividades dentro de una aplicación, pero puede ser difícil de comprender e implementar. Este capítulo presenta los diferentes Estados que puede pasar una actividad durante su ciclo de vida, así como los métodos del ciclo de vida que están asociados con esos Estados. A continuación, se proporciona orientación sobre qué tipo de lógica debe realizarse en cada uno de estos métodos.
+El ciclo de vida de la actividad de Android proporciona un marco eficaz para la administración de Estados de actividades dentro de una aplicación, pero puede ser difícil de entender e implementar. En este capítulo se presentaron los distintos Estados en los que puede pasar una actividad durante su duración, así como los métodos de ciclo de vida asociados a esos Estados. A continuación, se proporciona una guía sobre el tipo de lógica que debe realizarse en cada uno de estos métodos.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Control de giro](~/android/app-fundamentals/handling-rotation.md)
-- [Actividad de Android](https://developer.xamarin.com/api/type/Android.App.Activity/)
+- [Actividad de Android](xref:Android.App.Activity)

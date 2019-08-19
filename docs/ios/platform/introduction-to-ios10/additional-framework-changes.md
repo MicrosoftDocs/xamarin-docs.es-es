@@ -1,61 +1,61 @@
 ---
-title: Cambios adicionales en iOS 10 marcos de trabajo
-description: Este documento describe cambios menores y las mejoras realizadas en los marcos existentes en iOS 10 y se describe cómo hacer que el uso de estas actualizaciones en Xamarin.iOS.
+title: Cambios adicionales de los marcos de trabajo de iOS 10
+description: En este documento se describen los cambios menores y las mejoras realizadas en los marcos de trabajo existentes en iOS 10 y se describe cómo hacer uso de estas actualizaciones en Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5aad72de5d894a83d734cd53fce3ac060125d740
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831219"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656942"
 ---
-# <a name="additional-ios-10-frameworks-changes"></a>Cambios adicionales en iOS 10 marcos de trabajo
+# <a name="additional-ios-10-frameworks-changes"></a>Cambios adicionales de los marcos de trabajo de iOS 10
 
-_Este artículo tratan los cambios adicionales y menores o mejoras en los marcos existentes para iOS 10._
+_En este artículo se describen cambios más pequeños o mejoras en los marcos de trabajo existentes para iOS 10._
 
-## <a name="av-foundation-framework-additions"></a>Adiciones de Framework AV Foundation
+## <a name="av-foundation-framework-additions"></a>Adiciones del marco AV Foundation
 
-El marco de trabajo AVFoundation incluye las siguientes mejoras:
+El marco de trabajo de AVFoundation incluye las siguientes mejoras:
 
-- En iOS 10, el desarrollador ya no tiene que implementar diferentes [AVPlayerItem](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/) comportamientos según el tipo de contenido. Basta con establecer la `Rate` propiedad y AVFoundation determinará cuándo suficiente contenido está disponible para su reproducción sin estancamiento.
-- El nuevo [AVCapturePhotoOutput](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureFileOutput/) clase reemplaza al elemento desusado `AVCaptureStillImageOutput` clase y proporciona un método unificado para controlar todos los flujos de trabajo de la fotografía al proporcionar control sofisticada y la supervisión del proceso de captura y compatibilidad con nuevas características como Live fotos y el formato de captura sin procesar.
-- El nuevo `AVPlayerLooper` clase facilita una parte determinada del medio de un bucle durante la reproducción.
-- El `AVAssetDownloadURLSession` permite la descarga de la clase y su posterior reproducción de FairPlay cifra secuencias HLS.
-- De forma predeterminada, el [AVCaptureSession](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureSession/) clase admite automáticamente todo el color, la amplia gama de captura cuando el hardware del dispositivo lo admite. Consulte Apple [referencia de la compatibilidad de dispositivos iOS](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) para obtener más detalles.
+- En iOS 10, el desarrollador ya no tiene que implementar distintos comportamientos de [AVPlayerItem](xref:AVFoundation.AVPlayerItem) basados en el tipo de contenido. Basta con establecer `Rate` la propiedad y AVFoundation determinará si hay suficiente contenido disponible para la reproducción sin detenerse.
+- La nueva clase [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) reemplaza a la `AVCaptureStillImageOutput` clase en desuso y proporciona un método unificado para controlar todos los flujos de trabajo de fotografía, ya que proporciona un control y una supervisión sofisticados del proceso de captura y soporte para los nuevos características como las fotos en directo y el formato de captura sin formato.
+- La nueva `AVPlayerLooper` clase facilita el bucle de una parte determinada del medio durante la reproducción.
+- La `AVAssetDownloadURLSession` clase permite la descarga y posterior reproducción de secuencias HLS cifradas Fairplay.
+- De forma predeterminada, la clase [AVCaptureSession](xref:AVFoundation.AVCaptureSession) es compatible automáticamente con la captura de ancho ancho y ancho cuando el hardware del dispositivo lo admite. Consulte referencia de [compatibilidad de dispositivos iOS](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) de Apple para obtener más detalles.
 
-## <a name="avkit-additions"></a>Adiciones de AVKit
+## <a name="avkit-additions"></a>AVKit Additions
 
-El marco de trabajo AVKit ahora incluye el nuevo `UpdatesNowPlayingInfoCenter` propiedad para indicar cuándo se debe actualizar el centro de información de juego ahora.
+El marco de trabajo de AVKit ahora `UpdatesNowPlayingInfoCenter` incluye la nueva propiedad para indicar cuándo se debe actualizar el centro de información de reproducción actual.
 
-## <a name="core-data-enhancements"></a>Mejoras de datos principales
+## <a name="core-data-enhancements"></a>Mejoras en los datos principales
 
-iOS 10 incluye las siguientes mejoras en el marco de trabajo de datos principales:
+iOS 10 incluye las siguientes mejoras en el marco de datos principal:
 
-- El [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) objetos con almacenes de datos de SQLite en la compatibilidad con el modo de diario de WAL la nueva generación de consultas de características donde se pueden anclar los contextos de objeto administrado (MOC) para versiones específicas de la base de datos para capturar futuras y transacciones con errores.
-- Raíz [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) objetos admite produzca un error simultáneo y capturando sin serialización.
-- El [NSPersistentStoreCoordinator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) clase mantiene un grupo de almacenes de datos de SQLite.
-- Se han agregado varios métodos útiles de nuevo a `NSManagedObject` facilitando la tarea realizar búsquedas y crear subclases.
-- Con el alto nivel `NSPersistenceContainer` para hacer referencia a la `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectModel/) y otros recursos de configuración Core Data.
+- Los objetos [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) con almacenes de datos de SQLite en el modo de diario de Wal admiten la nueva característica de generación de consultas, donde los contextos de objeto administrados (MOC) se pueden anclar a versiones de base de datos específicas para futuras capturas y transacciones con errores.
+- Los objetos [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) raíz admiten errores y recuperaciones simultáneas sin serialización.
+- La clase [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) mantiene un grupo de almacenes de datos de SQLite.
+- Se han agregado varios métodos de conveniencia para `NSManagedObject` facilitar la realización de capturas y la creación de subclases.
+- Usar el nivel `NSPersistenceContainer` alto para `NSPersistentStoreCoordinator`hacer referencia a, [NSManagedObjectModel](xref:CoreData.NSManagedObjectModel) y otros recursos de configuración de datos principales.
 
-Para obtener más información, consulte Apple [referencia de Framework Core datos](https://developer.apple.com/reference/coredata).
+Para obtener más información, consulte la referencia de la [plataforma principal de datos](https://developer.apple.com/reference/coredata)de Apple.
 
-## <a name="core-image-enhancements"></a>Mejoras de la imagen principal
+## <a name="core-image-enhancements"></a>Mejoras en las imágenes principales
 
-iOS 10 realiza las siguientes mejoras en el marco de imagen Core:
+iOS 10 realiza las siguientes mejoras en el marco de imagen principal:
 
-- Ahora el desarrollador puede procesar imágenes en un espacio de colores fuera de espacio de color de trabajo del contexto de la imagen de Core convirtiendo dentro y fuera del espacio de colores antes y después del procesamiento.
-- Para dispositivos iOS que usan el A8 o A9 CPU, ahora se admite el formato de imagen sin procesar. Imagen de Core ahora proporciona soporte técnico para descodificar imágenes sin formato desde la cámara integrada iSight o desde una cámara parte 3ª. Use la `FilterWithImageData` o `FilterWithImageURL` métodos de la [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) clase para procesar imágenes RAW.
-- Se realizaron varias mejoras de rendimiento de representación en `UIImage` de representación (cuando está respaldado por almacenes de imagen de imagen Core) en `UIImageView` objetos. 
-- `UIImage` los objetos etiquetados toda la gama representará como amplia gama de colores en `UIImageView` objetos en los dispositivos iOS que admiten color amplia.
-- Código de kernel de imagen Core ahora puede solicitar los formatos de salida de píxel concreto.
-- El `ImageWithExtent` método de la [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) clase puede usarse para insertar procesamiento personalizado en la operación de filtrado. Imagen de Core se invoque la devolución de llamada especificada entre los filtros al procesar una imagen para la salida o mostrar.
+- Ahora, el desarrollador puede procesar imágenes en un espacio de colores fuera del espacio de colores de trabajo del contexto de la imagen principal convirtiendo dentro y fuera del espacio de colores antes y después del procesamiento.
+- En el caso de los dispositivos iOS que usan las CPU A8 o A9, ahora se admite el formato de imagen sin procesar. La imagen principal ahora proporciona compatibilidad para descodificar imágenes sin procesar de la cámara iSight integrada o de una cámara de terceros. Use los `FilterWithImageData` métodos `FilterWithImageURL` o de la clase [CIFilter](xref:CoreImage.CIFilter) para procesar imágenes sin formato.
+- Se han realizado `UIImage` varias mejoras de rendimiento en la representación (cuando están respaldadas por los almacenes de imágenes de imagen principales `UIImageView` ) en los objetos. 
+- `UIImage`los objetos con etiquetas anchas se representarán como un color `UIImageView` de gama ancha en los objetos de dispositivos iOS que admiten el color ancho.
+- El código de kernel de imagen principal ahora puede solicitar formatos de salida de píxeles específicos.
+- El `ImageWithExtent` método de la clase [CIFilter](xref:CoreImage.CIFilter) se puede usar para insertar el procesamiento personalizado en la operación de filtro. La imagen principal invocará la devolución de llamada especificada entre filtros al procesar una imagen para la salida o la presentación.
 
-Además, se han agregado los siguientes filtros nuevos de imagen Core:
+Además, se han agregado los siguientes nuevos filtros de imagen principal:
 
 - `CINinePartTiled`
 - `CINinePartStretched`
@@ -63,156 +63,156 @@ Además, se han agregado los siguientes filtros nuevos de imagen Core:
 - `CIEdgePreserveUpsampleFilter`
 - `CIClamp`
 
-## <a name="core-motion-additions"></a>Adiciones de movimiento de Core
+## <a name="core-motion-additions"></a>Adiciones de movimiento básico
 
-Nuevo IOS 10, el marco de movimiento de Core incluye eventos podómetro que permiten una aplicación rápida y reciba notificaciones en tiempo real del usuario pausar y reanudar el seguimiento mientras se está ejecutando. Use la [CMPedometer](https://developer.xamarin.com/api/type/CoreMotion.CMPedometer/) registrarse para eventos podómetro primer o segundo plano.
+Como novedad de iOS 10, el marco de trabajo básico de Motion incluye eventos pedometer que permiten a una aplicación recibir notificaciones rápidas y en tiempo real del usuario en pausa y reanudar el seguimiento mientras se ejecuta. Use [CMPedometer](xref:CoreMotion.CMPedometer) para registrarse para eventos pedometer de primer o segundo plano.
 
-## <a name="foundation-enhancements"></a>Mejoras de Fundación
+## <a name="foundation-enhancements"></a>Mejoras de Foundation
 
-Se han realizado las siguientes mejoras para el marco de Foundation para iOS 10:
+Se han realizado las siguientes mejoras en Foundation Framework para iOS 10:
 
-- Use la nueva [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) clase para dar formato localizadas medidas para mostrar al usuario final.
-- Use la nueva [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) clase para realizar cálculos de intervalo de fecha y hora como duraciones, de comparación de intervalos y probar las intersecciones de intervalo.
-- Use la nueva [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) clase para convertir entre distintas unidades de medida (UM) o realizar cálculos en los valores de UOMs diferentes.
+- Use la nueva clase [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) para dar formato a las medidas localizadas que se van a mostrar al usuario final.
+- Use la nueva clase [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) para realizar cálculos de intervalos de fecha y hora, como duraciones, para comparar intervalos y pruebas de intersecciones de intervalo.
+- Use la nueva clase [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) para realizar la conversión entre las diferentes unidades de medida (unidad de medida) o realice cálculos en los valores de UOMs diferentes.
 
-- Use la nueva [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) las clases para representar UOMs específicos.
-- Se han agregado nuevas propiedades a la [NSLocal](https://developer.apple.com/reference/foundation/nslocale) clase adquirir información local y los formatos de visualización disponible.
+- Use las nuevas clases [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) para representar UOMs específicas.
+- Se han agregado varias propiedades nuevas a la clase [NSLocal](https://developer.apple.com/reference/foundation/nslocale) para adquirir información local y los formatos de presentación disponibles.
 
 ## <a name="gamekit-enhancements"></a>Mejoras de GameKit
 
-Se han realizado las siguientes mejoras para el marco de trabajo GameKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de GameKit en iOS 10:
 
-- El **Game Center aplicación** ha sido en desuso y quitados de iOS. Si la aplicación usa GameKit, lo _debe_ presentar su propia interfaz para mostrar las características de GameKit como marcadores, etcetera. 
-- Se ha implementado un nuevo tipo de cuenta de iCloud solo por el [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) clase.
-- El nuevo [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) clase proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession` mantiene una lista de los jugadores y es responsable de implementar la aplicación cómo y cuándo fecha participante se almacenan, recuperan o intercambiado entre agentes. En muchos casos puede reemplazar a las sesiones de juego coincidencias existentes basada en turnos, coincidencias en tiempo real o juego persistente guardar métodos.
+- La **aplicación Game Center** está en desuso y se ha quitado de iOS. Si la aplicación usa GameKit, _debe_ presentar su propia interfaz para mostrar las características de GameKit, como los marcadores, etc. 
+- La clase [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) ha implementado un nuevo tipo de cuenta solo iCloud.
+- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession`mantiene una lista de reproductores y la aplicación es responsable de implementar cómo y cuándo se almacena, recupera o intercambia la fecha del participante entre jugadores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
 
 ## <a name="gameplaykit-enhancements"></a>Mejoras de GameplayKit
 
-Se han realizado las siguientes mejoras para el marco de trabajo GameplayKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de GameplayKit en iOS 10:
 
-- Use la nueva [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) clase para proporcionar rutas de acceso de alto rendimiento y aspecto natural.
-- Generación de procedimientos de ruido se ha agregado y se puede usar para mejorar el realismo en texturas aspecto natural, aportar realismo a los movimientos de cámara y ayudar a generar los mundos de juegos enriquecidos.
-- Utilice particiones espaciales para particionar los datos del mundo de juegos para la búsqueda eficaz.
-- Estratega de Monte Carlo nuevo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) se ha agregado para el cálculo de movimiento exhaustiva de posibles.
-- Se ha agregado compatibilidad con 3D al agente existente y los comportamientos de búsqueda de ruta con el nuevo [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) y [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) clases.
-- El nuevo [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) y [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) make clases combinación GameplayKit y SpriteKit más fácil que nunca.
-- Se ha agregado una nueva API de árbol de decisión ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) y [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) para mejorar la inteligencia artificial de creación de juego.
+- Use la nueva clase [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) para proporcionar rutas de acceso natural y de alto rendimiento.
+- Se ha agregado la generación de ruido de procedimiento y se puede usar para mejorar el realismo en las texturas de aspecto natural, agregar realismo a los movimientos de la cámara y ayudar a generar sofisticados mundos de juego.
+- Use la creación de particiones espaciales para particionar los datos del mundo de juego para una búsqueda eficaz.
+- Se ha agregado un nuevo estratega de Monte Carlo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) para realizar cálculos de movimiento exhaustivos.
+- se ha agregado compatibilidad con 3D a los comportamientos existentes de agente y ruta de acceso mediante las nuevas clases [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) y [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) .
+- Las nuevas clases [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) y [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) hacen que la combinación de GameplayKit y SpriteKit sea más fácil que nunca.
+- Se ha agregado una nueva API de árbol de decisión ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) y [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) para mejorar la generación de juegos de inteligencia artificial.
 
 ## <a name="healthkit-enhancements"></a>Mejoras de HealthKit
 
-Se han realizado las siguientes mejoras para el marco de trabajo HealthKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de HealthKit en iOS 10:
 
-- Se han agregado nuevas claves de metadatos para los tipos de tiempo (como `HKWeatherConditionClear` y `HKWeatherConditionCloudy`) y los tipos de entrenamiento (como `HKWorkoutActivityTypeFlexibility` y `HKWorkoutActivityTypeWheelchairRunPace`) se han agregado.
-- El nuevo `HKCDADocument` ha agregado la clase representar una arquitectura de documento clínico (CDA) con el formato de documento.
-- Use la nueva [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) clase para especificar el `ActivityType` y `LocationType` de un entrenamiento.
-- El nuevo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y `WheelchairUse` método de la [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) se han agregado clases para trabajar con la silla de ruedas relacionados con los datos de estado.
+- Se han agregado nuevas claves de metadatos para los tipos meteorológicos `HKWeatherConditionCloudy`( `HKWeatherConditionClear` como y) y los tipos `HKWorkoutActivityTypeFlexibility` de `HKWorkoutActivityTypeWheelchairRunPace`entrenamiento (como y).
+- Se ha `HKCDADocument` agregado la nueva clase para representar un documento con formato de arquitectura de documentos clínicos (CDA).
+- Use la nueva clase [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar el `ActivityType` y `LocationType` de un entrenamiento.
+- Se han agregado los nuevos [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y el método `WheelchairUse` de la clase [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) para trabajar con los datos de mantenimiento relacionados con la silla.
 
 ## <a name="homekit-enhancements"></a>Mejoras de HomeKit
 
-Se han realizado las siguientes mejoras para el marco de trabajo de HomeKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de HomeKit en iOS 10:
 
-- Se agregaron nuevos servicios y características.
-- Un iPad puede configurarse para que actúe como un concentrador de HomeKit para proporcionar acceso remoto de accesorio, ejecutar desencadenadores de automatización y habilitar compartido los permisos de usuario.
-- Se agregó compatibilidad para la cámara y el timbre accesorios.
-- Se han proporcionado más contexto y las configuraciones de accesorios.
+- Se han agregado nuevos servicios y características.
+- Un iPad puede configurarse para que actúe como un concentrador de HomeKit para proporcionar acceso de accesorio remoto, ejecutar desencadenadores de automatización y habilitar permisos de usuario compartidos.
+- Se ha agregado compatibilidad con los accesorios de cámara y doorbell.
+- Se han proporcionado más contextos y configuraciones para los accesorios.
 
-Consulte nuestra [Introducción a HomeKit](~/ios/platform/homekit.md) documentación para obtener más información.
+Consulte nuestra [Introducción a](~/ios/platform/homekit.md) la documentación de HomeKit para obtener más información.
 
 ## <a name="metal-enhancements"></a>Mejoras de metal
 
-Se han realizado las siguientes mejoras para el marco de trabajo completa en iOS 10:
+Se han realizado las siguientes mejoras en el marco de metal en iOS 10:
 
-- Ahora pueden usar los juegos y aplicaciones 3D _teselación_ eficazmente representar geometría a través de la GPU y escenas complejas.
-- Proporcionar un mayor control de asignación de recursos para optimizar el rendimiento del sistema operativo basadas en aplicaciones con montones de recursos y destinos de representación Memoryless.
-- Utilice la especialización de la función para crear una recopilación altamente optimizadas de material y funciones de la combinación de luz de una escena.
+- las aplicaciones 3D y los juegos ahora pueden usar teselación para representar eficazmente escenas complejas y geometría a través de la GPU.
+- Proporcionar un control específico de la asignación de recursos para optimizar el rendimiento de las aplicaciones basadas en metal mediante montones de recursos y destinos de representación de memoria.
+- Utilice la especialización de función para crear una colección altamente optimizada de funciones de combinación de materiales y claros para una escena.
 
-Para obtener más información, consulte Apple [Guía de programación de Metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
+Para obtener más información, consulte la [Guía de programación de metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221)de Apple.
 
 ## <a name="modelio-enhancements"></a>Mejoras de ModelIO
 
-Se han realizado las siguientes mejoras para el marco de trabajo ModelIO en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de ModelIO en iOS 10:
 
 - Ahora se admite el formato de archivo USD.
-- Firmado se ha agregado compatibilidad para el campo de distancia del [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) clase.
-- Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la selección de ubicación de sondeo de luz.
-- Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente en tiempo de ejecución cambia a los modelos.
+- Se ha agregado compatibilidad con el campo de distancia con signo a la clase [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) .
+- Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la colocación de sondeos ligeros.
+- Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente los cambios de tiempo de ejecución en los modelos.
 
-## <a name="photos-enhancements"></a>Mejoras de fotos
+## <a name="photos-enhancements"></a>Mejoras en las fotos
 
-Se han realizado las siguientes mejoras para el marco de fotos en iOS 10:
+Se han realizado las siguientes mejoras en el marco photos en iOS 10:
 
-- Use la [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) y [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) clases para aprovechar las ventajas de la nueva característica de procesador de imagen básica para realizar modificaciones.
-- Edición de fotos en vivo ahora está disponible para las aplicaciones que admiten el marco de fotos y a las extensiones de edición de fotos (para su uso dentro de las fotos y cámara aplicaciones).
-- Use la nueva [PHLivePhotoEditingContext](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) clase aplicar ediciones a tanto el vídeo todavía contenido de fotos en vivo.
+- Use las clases [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) y [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) para aprovechar las ventajas de la nueva característica procesador de imagen principal para realizar modificaciones.
+- Live Photo Editing ahora está disponible para las aplicaciones que admiten el marco de fotografías y para las extensiones de edición de fotografías (para su uso en las fotos y las aplicaciones de cámara).
+- Use la nueva clase [PHLivePhotoEditingContext](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) para aplicar ediciones al vídeo y al contenido de las fotos en directo.
 
 ## <a name="replaykit-enhancements"></a>Mejoras de ReplayKit
 
-Se han realizado las siguientes mejoras para el marco de trabajo ReplayKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de ReplayKit en iOS 10:
 
-- Use la [RPScreenRecorder](https://developer.apple.com/reference/replaykit/rpscreenrecorder), [RPBroadcastActivityViewController](https://developer.apple.com/reference/replaykit/rpbroadcastactivityviewcontroller) y [RPBroadcastController](https://developer.apple.com/reference/replaykit/rpbroadcastcontroller) clases para admitir la difusión de registran el medio 3ª parte sitios.
-- Las extensiones de interfaz de usuario de difusión y difusión cargar deben admitir los servicios de difusión de entidad ReplayKit 3rd en la aplicación.
+- Use las clases [RPScreenRecorder](https://developer.apple.com/reference/replaykit/rpscreenrecorder), [RPBroadcastActivityViewController](https://developer.apple.com/reference/replaykit/rpbroadcastactivityviewcontroller) y [RPBroadcastController](https://developer.apple.com/reference/replaykit/rpbroadcastcontroller) para admitir la difusión de medios grabados a través de sitios de terceros.
+- La interfaz de usuario de difusión y las extensiones de Broadcast Upload son necesarias para admitir servicios de difusión de terceros de ReplayKit en la aplicación.
 
 ## <a name="scenekit-enhancements"></a>Mejoras de SceneKit
 
-Se han realizado las siguientes mejoras al marco de SceneKit de iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de SceneKit en iOS 10:
 
-- El [SCNCamera](xref:SceneKit.SCNCamera) clase puede proporcionar mayor realismo mediante el uso de características HDR y efectos. Use exposición adaptable para crear efectos automática o use las viñetas, halos de color y color de evaluación para agregar efectos fillmatic al juego.
-- SceneKit ahora incluye un nuevo sistema físicamente en función de representación (PBR) para obtener resultados más realistas con la creación de activos más sencillo.
-- Use la nueva [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) sombreado del modelo al producto una amplia variedad de efectos de un sombreado realista al requerir que solo tres propiedades fundamentales (`Diffuse`, `Metalness` y `Roughness`).
-- Desde PBR sombreado funciona mejor con la iluminación basado en el entorno, utilice el `LightingEnvironment` propiedad para asignar la iluminación basada en imágenes a una escena completa.
-- Use el `IESProfileURL` propiedad para importar instalaciones fijas de luz del mundo real que definen la iluminación según los valores reales, como la intensidad (en lúmenes) y la temperatura de color (en grados Kelvin).
-- Características de cámara PBR y HDR proporcionan mejores resultados que las técnicas tradicionales de representación y, como resultado, SceneKit realiza ahora todos los cálculos de color en un espacio de color lineal (con la gama de colores P3 en pantallas de dispositivo de todo el color).
-- Color de SceneKit ahora coincide con todos los colores, lea la información de perfil de color.
-- SceneKit interpreta los valores de componente de color en un espacio de colores RGB lineal para todos los tipos de sombreador.
-- Tanto lineal como representación de espacio de color y todo el color se puede deshabilitar mediante la especificación de la `SCNDisableLinearSpaceRendering` y `SCNDisableWideGamut` claves en la aplicación `Info.plist`.
-- Compilar los primates polígono arbitrario (bien cargarse desde un archivo o generar mediante programación) para especificar la geometría con el nuevo [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) clase.
-- Dado que SceneKit lee y ajustar para obtener información de perfil de color en imágenes de textura, utilice catálogos de recursos para todas las imágenes para asegurarse de que esta información se proporciona.
+- La clase [SCNCamera](xref:SceneKit.SCNCamera) puede proporcionar mayor realismo mediante el uso de las características y los efectos de HDR. Use la exposición adaptable para crear efectos automáticos o usar viñetas, los halos de color y la clasificación de color para agregar efectos de fillmatic al juego.
+- SceneKit Now incluye un nuevo sistema de representación en cinta (PBR) para obtener resultados más realistas con la creación de recursos más sencilla.
+- Use el nuevo modelo de sombreado de [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) para producir una amplia gama de efectos de sombreado realistas, al tiempo`Diffuse`que solo `Roughness`requiere tres propiedades fundamentales (, `Metalness` y).
+- Puesto que el sombreado de PBR funciona mejor con la iluminación basada en `LightingEnvironment` el entorno, use la propiedad para asignar la iluminación basada en imagen a toda la escena.
+- Utilice la `IESProfileURL` propiedad para importar los accesorios de luz del mundo real que definen la iluminación en función de los valores reales, como la intensidad (en lúmenes) y la temperatura de color (en grados Kelvin).
+- Las características de la cámara de PBR y HDR proporcionan mejores resultados que las técnicas de representación tradicionales y, como resultado, SceneKit ahora realiza todos los cálculos de color en un espacio de colores lineal (mediante la gama de colores P3 en pantallas de dispositivos anchos).
+- El color SceneKit Now coincide con todos los colores mediante la lectura de la información del perfil de color.
+- SceneKit interpreta los valores de los componentes de color en un espacio de colores RGB lineal para todos los tipos de sombreador.
+- Tanto la representación del espacio de colores lineal como el color ancho pueden deshabilitarse mediante `SCNDisableLinearSpaceRendering` la `SCNDisableWideGamut` especificación de las claves y `Info.plist`en la de la aplicación.
+- Cree primates polígono arbitrario (se carga desde archivos o se genera mediante programación) para especificar la geometría con la nueva clase [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Dado que SceneKit Lee y ajusta la información de Perfil de color en imágenes de textura, use catálogos de recursos para todas las imágenes para asegurarse de que se proporciona esta información.
 
 ## <a name="spritekit-enhancements"></a>Mejoras de SpriteKit
 
-Se han realizado las siguientes mejoras al marco de SpriteKit de iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de SpriteKit en iOS 10:
 
-- Sombreadores personalizados pueden proporcionar atributos (`SKAttribute`) que puede configurarse por separado por cada nodo que utiliza el sombreador proporcionando un valor de atributo (`SKAttributeValue`).
-- Tilemaps ahora son compatibles con las formas de mosaico cuadrado, hexagonal e isométrica para 2D, 2.5D y juegos de desplazamiento lateral con el `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` y `SKTileSet` clases.
-- Use la nueva `SKWarpGeometry` clase estiramiento o distorsionar [SKSpriteNode](https://developer.xamarin.com/api/type/SpriteKit.SKSpriteNode/) o [SKEffectNode](https://developer.xamarin.com/api/type/SpriteKit.SKEffectNode/) representación. El nuevo [SKAction](https://developer.xamarin.com/api/type/SpriteKit.SKAction/) clase puede usarse para animar las transiciones entre los efectos de warp.
-- El [SKView](https://developer.xamarin.com/api/type/SpriteKit.SKView/) clase proporciona varios métodos nuevos para darle un mayor control sobre cuándo y cómo se representa una escena.
+- Los sombreadores personalizados pueden proporcionar atributos`SKAttribute`() que se pueden configurar por separado en cada nodo que use el sombreador proporcionando un valor de atributo`SKAttributeValue`().
+- Ahora, Tilemaps admite formas de mosaico cuadrada, hexagonal y isométrica para juegos de 2D, 2,5 d y de desplazamiento lateral con `SKTileMapMode`las `SKTileGroup`clases `SKTileGroupRule` , `SKTileSet` y.
+- Use la nueva `SKWarpGeometry` clase para expandir o distorsionar la representación de [SKSpriteNode](xref:SpriteKit.SKSpriteNode) o [SKEffectNode](xref:SpriteKit.SKEffectNode) . La nueva clase [SKAction](xref:SpriteKit.SKAction) se puede usar para animar las transiciones entre los efectos de alabeo.
+- La clase [SKView](xref:SpriteKit.SKView) proporciona varios métodos nuevos para proporcionar un control exhaustivo sobre cuándo y cómo se representa una escena.
 
 ## <a name="scrollview-enhancements"></a>Mejoras de ScrollView
 
-Se han realizado las siguientes mejoras al control en iOS 10.3 ScrollView:
+Se han realizado las siguientes mejoras en el control ScrollView en iOS 10,3:
 
-- `UIScrollView` ahora incluyen la `IndexDisplayMode` propiedad para controlar cómo se muestra el índice mientras se desplaza al usuario como un `UIScrollViewIndexDisplayMode` de:
-    - `Automatic` -La presentación de índice se controla mediante el sistema operativo.
-    - `AlwaysHidden` -La presentación de índice siempre está oculto.
+- `UIScrollView`ahora incluya la `IndexDisplayMode` propiedad para controlar cómo se muestra el índice mientras el usuario se desplaza `UIScrollViewIndexDisplayMode` como de:
+    - `Automatic`: El sistema operativo controla la presentación del índice.
+    - `AlwaysHidden`-La presentación del índice siempre está oculta.
 
-Consulte la [iOSTenThree ejemplo](https://developer.xamarin.com/samples/monotouch/iOS10/iOSTenThree) para su uso.
+Vea el [ejemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) para obtener más uso.
 
 ## <a name="uikit-enhancements"></a>Mejoras de UIKit
 
-Se han realizado las siguientes mejoras para el marco UIKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de trabajo de UIKit en iOS 10:
 
-- El nuevo [UIPasteboard](xref:UIKit.UIPasteboard) API ofrece nuevas opciones (por ejemplo, las limitaciones de la duración) y declarará automáticamente los tipos de contenido compatible para los tipos comunes de clase.
-- Nueva compatibilidad de animación completamente interactivos, interrumpibles basado en el objeto se ha agregado y se puede vincular a los gestos. Consulte de Apple [referencia del protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating), [referencia de clase UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [referencia del protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Referencia de clase UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) y [referencia de clase UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obtener más información.
-- El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permite que la aplicación de desarrollador proporcionar una interfaz personalizada para las operaciones de búsqueda peek y pop.
-- El nuevo `UIAccessibilityCustomRotor` clase permite que la aplicación proporcionar funcionalidad personalizada, específicos del contexto a las tecnologías de asistencia como Voice Over.
-- Use la `UIAccessibilityIsAssistiveTouchRunning` y `UIAccessibilityAssistiveTouchStatusDidChangeNotification` símbolos para determinar si está habilitado AssistiveTouch.
-- Use la `UIAccessibilityHearingDevicePairedEar` y `UIAccessibilityHearingDevicePairedEarDidChangeNotification` símbolos para obtener el estado de cualquier emparejan MFi audífonos.
-- Para admitir el tipo dinámico en las etiquetas, usan los nuevos campos de texto y cuadros de texto `PreferredFontForTextStyle` método de la `UIFont` clase.
-- Para decidir si un elemento debe actualizar su fuente cuando el dispositivo `UIContentSizeCategory` cambios, utilice el `AdjustsFontForContentSizeCategory` propiedad de la `UIContentSizeCategoryAdjusting` delegar.
-- El `OpenURL` método de la `UIApplication` clase se denomina de forma asincrónica y ahora es compatible con un controlador de finalización que se llama una vez completada la acción de apertura.
-- Iniciar el uso compartido de CloudKit y modificar sus propiedades con el nuevo `UICloudSharingController` y `UICloudSharingControllerDelegate` clases.
-- Aprovechar las ventajas de las celdas con captura previa para mejorar la experiencia de desplazamiento `UICollectionViews` con el nuevo `UICollectionViewDataSourcePrefetching` delegar.
-- El desarrollador ahora puede controlar la apariencia de la notificación para elementos de la barra de ficha (por ejemplo, el color de texto y fondo).
-- El Control actualice ahora se admite en todas las vista de desplazamiento y las subclases de la vista de desplazamiento (como `UICollectionView`).
+- La nueva API de [UIPasteboard](xref:UIKit.UIPasteboard) proporciona nuevas opciones (como las limitaciones de duración) y declarará automáticamente los tipos de contenido compatibles para los tipos de clase comunes.
+- Se ha agregado una nueva compatibilidad de animación interrumpida, basada en objetos y totalmente interactiva y se puede vincular a movimientos. Consulte referencia del [Protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)de Apple, referencia de [clase UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referencia del [Protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [referencia de clase UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) y [ Referencia de la clase UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obtener más información.
+- El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permitir que la aplicación de Desarrollador proporcione una interfaz personalizada para las operaciones de lectura y de extracción.
+- La nueva `UIAccessibilityCustomRotor` clase permite a la aplicación proporcionar una funcionalidad personalizada específica del contexto a las tecnologías de asistencia, como la voz sobre.
+- Use los `UIAccessibilityIsAssistiveTouchRunning` símbolos `UIAccessibilityAssistiveTouchStatusDidChangeNotification` y para determinar si AssistiveTouch está habilitado.
+- Use los `UIAccessibilityHearingDevicePairedEar` símbolos `UIAccessibilityHearingDevicePairedEarDidChangeNotification` y para obtener el estado de cualquier ayuda de audición accesorios MFI emparejada.
+- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros `PreferredFontForTextStyle` de texto utilizan `UIFont` el nuevo método de la clase.
+- Para decidir si un elemento debe actualizar su fuente cuando `UIContentSizeCategory` cambie el dispositivo, utilice la `AdjustsFontForContentSizeCategory` propiedad del `UIContentSizeCategoryAdjusting` delegado.
+- Se `OpenURL` llama al método `UIApplication` de la clase de forma asincrónica y ahora es compatible con un controlador de finalización al que se llama después de que se haya completado la acción de apertura.
+- Inicie el uso compartido de CloudKit y modifique sus propiedades `UICloudSharingController` con `UICloudSharingControllerDelegate` las nuevas clases y.
+- Aproveche las ventajas de las celdas capturadas previamente para mejorar la experiencia de `UICollectionViews` desplazamiento de con `UICollectionViewDataSourcePrefetching` el nuevo delegado.
+- Ahora, el desarrollador puede controlar la apariencia del distintivo de los elementos de la barra de pestañas (por ejemplo, el texto y el color de fondo).
+- Ahora se admite el control de actualización en todas las subclases de vista de desplazamiento y de `UICollectionView`vista de desplazamiento (como).
 
 ## <a name="webkit-enhancements"></a>Mejoras de WebKit
 
-Se han realizado las siguientes mejoras para el marco de WebKit en iOS 10:
+Se han realizado las siguientes mejoras en el marco de WebKit en iOS 10:
 
-- Peek y soporte técnico de confirmación se ha agregado a la `WKWebView` clase. Use el `ShouldPreviewElement` método para determinar si una vista web determinado debe mostrar una vista previa.
+- La compatibilidad con PEEK y pop se ha agregado `WKWebView` a la clase. Use el `ShouldPreviewElement` método para determinar si una vista Web determinada debe mostrar una vista previa.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [Novedades de iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

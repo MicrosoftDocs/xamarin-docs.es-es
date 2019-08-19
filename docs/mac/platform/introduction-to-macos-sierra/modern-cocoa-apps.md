@@ -1,38 +1,38 @@
 ---
 title: Creación de aplicaciones modernas de macOS
-description: En este artículo se trata varias sugerencias, características y técnicas de que un desarrollador puede usar para crear una aplicación moderna de macOS en Xamarin.Mac.
+description: En este artículo se tratan varias sugerencias, características y técnicas que un desarrollador puede usar para compilar una aplicación moderna de macOS en Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 53bfc9f147b6cf369b8f5ce8d1257dbaf6b0f807
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f79e7f3576748737a4feb9204fb9840afdbb1ef4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032903"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645432"
 ---
 # <a name="building-modern-macos-apps"></a>Creación de aplicaciones modernas de macOS
 
-_En este artículo se trata varias sugerencias, características y técnicas de que un desarrollador puede usar para crear una aplicación moderna de macOS en Xamarin.Mac._
+_En este artículo se tratan varias sugerencias, características y técnicas que un desarrollador puede usar para compilar una aplicación moderna de macOS en Xamarin. Mac._
 
 <a name="Building-Modern-Looks-with-Modern-Views" />
 
-## <a name="building-modern-looks-with-modern-views"></a>Creación de aspecto moderno con vistas modernas
+## <a name="building-modern-looks-with-modern-views"></a>Creación de un aspecto moderno con las vistas modernas
 
-Un aspecto moderno incluirá una apariencia moderna de ventana y la barra de herramientas, como la aplicación de ejemplo que se muestra a continuación:
+Un aspecto moderno incluirá una ventana moderna y un aspecto de la barra de herramientas, como la aplicación de ejemplo que se muestra a continuación:
 
-[![](modern-cocoa-apps-images/content08.png "Un ejemplo de una aplicación de Mac moderna interfaz de usuario")](modern-cocoa-apps-images/content08.png#lightbox)
+[![](modern-cocoa-apps-images/content08.png "Un ejemplo de una interfaz de usuario de la aplicación Mac moderna")](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views" />
 
-### <a name="enabling-full-sized-content-views"></a>Habilitar completo tamaño vistas de contenido
+### <a name="enabling-full-sized-content-views"></a>Habilitar vistas de contenido de tamaño completo
 
-Para lograr este aspecto en una aplicación de Xamarin.Mac, el desarrollador desea utilizar un _vista completa de contenido de tamaño_, lo que significa que amplía el contenido de las áreas de la herramienta y la barra de título y macOS estará borrosa automáticamente.
+Para conseguirlo en una aplicación de Xamarin. Mac, el desarrollador querrá usar una vista de _contenido de tamaño completo_, lo que significa que el contenido se extiende en las áreas de la herramienta y la barra de título, y que MacOS lo desenfocará automáticamente.
 
-Para habilitar esta característica en el código, cree una clase personalizada para el `NSWindowController` y darle un aspecto similar al siguiente:
+Para habilitar esta característica en el código, cree una clase personalizada para `NSWindowController` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -62,21 +62,21 @@ namespace MacModern
 }
 ```
 
-Esta característica también se puede habilitar en Interface Builder de Xcode mediante la selección de la ventana y la comprobación **vista contenido completa tamaño**:
+Esta característica también se puede habilitar en la Interface Builder de Xcode seleccionando la ventana y comprobando la **vista de contenido de tamaño completo**:
 
-[![](modern-cocoa-apps-images/content01.png "Editar el guión gráfico principal en Interface Builder de Xcode")](modern-cocoa-apps-images/content01.png#lightbox)
+[![](modern-cocoa-apps-images/content01.png "Edición del guión gráfico principal en la Interface Builder de Xcode")](modern-cocoa-apps-images/content01.png#lightbox)
 
-Cuando se usa una vista de contenido de tamaño completo, el desarrollador que deba el contenido por debajo de las áreas de barra de título y la herramienta de desplazamiento para que no se desliza contenido específico (por ejemplo, etiquetas) debajo de ellos.
+Cuando se usa una vista de contenido de tamaño completo, el desarrollador puede tener que desplazar el contenido debajo del título y las áreas de la barra de herramientas para que el contenido específico (como etiquetas) no se deslice debajo de ellos.
 
-Para complicar este problema, las áreas de título y la barra de herramientas pueden tener una altura dinámica basándose en la acción que el usuario está realizando actualmente, la versión de macOS que el usuario ha instalado o el hardware de Mac que se está ejecutando la aplicación.
+Para complicar este problema, las áreas de título y de barra de herramientas pueden tener un alto dinámico basado en la acción que el usuario está realizando actualmente, la versión de macOS que el usuario ha instalado o el hardware de Mac en el que se ejecuta la aplicación.
 
-Como resultado, simplemente codificar el desplazamiento al diseñar la interfaz de usuario no funcionará. El desarrollador tendrá que adoptar un enfoque dinámico.
+Como resultado, simplemente no funcionará la codificación rígida del desplazamiento al diseñar la interfaz de usuario. El desarrollador deberá adoptar un enfoque dinámico.
 
-Apple ha incluido la [Observable de pares clave-valor](~/mac/app-fundamentals/databinding.md#Observing_Value_Changes) `ContentLayoutRect` propiedad de la `NSWindow` clase para obtener el área de contenido actual en el código. El programador puede utilizar este valor para colocar los elementos necesarios de forma manual cuando cambia el área de contenido.
+Apple ha incluido la propiedad [observable de valor de clave](~/mac/app-fundamentals/databinding.md#Observing_Value_Changes) `ContentLayoutRect` de la clase `NSWindow` para obtener el área de contenido actual en el código. El desarrollador puede usar este valor para colocar manualmente los elementos necesarios cuando cambia el área de contenido.
 
-La mejor solución es usar el diseño automático y las clases de tamaño para colocar los elementos de interfaz de usuario en el código o Interface Builder.
+La mejor solución es usar las clases de diseño automático y tamaño para colocar los elementos de la interfaz de usuario en el código o en Interface Builder.
 
-Código similar al ejemplo siguiente puede utilizarse para colocar los elementos de interfaz de usuario con diseño automático y las clases de tamaño en el controlador de vista de la aplicación:
+Código como el ejemplo siguiente se puede usar para colocar los elementos de la interfaz de usuario mediante el diseño automático y las clases de tamaño en el controlador de vista de la aplicación:
 
 ```csharp
 using System;
@@ -117,21 +117,21 @@ namespace MacModern
 }
 ```
 
-Este código crea el almacenamiento para una restricción superior que se aplicarán a una etiqueta (`ItemTitle`) para asegurarse de que no retrasar en el área de título y la barra de herramientas:
+Este código crea almacenamiento para una restricción Top que se aplicará a una etiqueta (`ItemTitle`) para asegurarse de que no se pospone en el área de título y barra de herramientas:
 
 ```csharp
 public NSLayoutConstraint topConstraint { get; set; }
 ```
 
-Reemplazando el controlador de vista `UpdateViewConstraints` método, el desarrollador puede probar para ver si ya se ha compilado la restricción necesaria y crearla si fuera necesario.
+Al invalidar el método del controlador `UpdateViewConstraints` de vista, el desarrollador puede probar para ver si ya se ha creado la restricción necesaria y crearla si es necesario.
 
-Si necesita una nueva restricción de generarse el `ContentLayoutGuide` propiedad de la ventana se tiene acceso y se convierte en el control que es necesario restringir un `NSLayoutGuide`:
+Si es necesario compilar una nueva restricción, `ContentLayoutGuide` se obtiene acceso a la propiedad de la ventana del control que se debe restringir y convertirla en `NSLayoutGuide`un:
 
 ```csharp
 var contentLayoutGuide = ItemTitle.Window?.ContentLayoutGuide as NSLayoutGuide;
 ```
 
-La propiedad TopAnchor de la `NSLayoutGuide` se obtiene acceso y si está disponible, se usa para crear una nueva restricción con la cantidad de desplazamiento deseada y la nueva restricción se activará para aplicarla:
+`NSLayoutGuide` Se obtiene acceso a la propiedad de nivel de delimitador de y, si está disponible, se usa para generar una nueva restricción con la cantidad de desplazamiento deseada y la nueva restricción se activa para aplicarla:
 
 ```csharp
 // Assemble constraint and activate it
@@ -141,17 +141,17 @@ topConstraint.Active = true;
 
 <a name="Enabling-Streamlined-Toolbars" />
 
-### <a name="enabling-streamlined-toolbars"></a>Habilitación de las barras de herramientas simplificados
+### <a name="enabling-streamlined-toolbars"></a>Habilitar barras de herramientas optimizadas
 
-MacOS ventana normal incluye un estándar de la que barra de título se ejecuta a lo largo de hasta el borde superior de la ventana. Si la ventana también incluye una barra de herramientas, se mostrará en esta área de barra de título:
+Una ventana de macOS normal incluye una barra de título estándar en las ejecuciones, junto con el borde superior de la ventana. Si la ventana también incluye una barra de herramientas, se mostrará en esta área de la barra de título:
 
-[![](modern-cocoa-apps-images/content02.png "Una barra de herramientas estándar de Mac")](modern-cocoa-apps-images/content02.png#lightbox)
+[![](modern-cocoa-apps-images/content02.png "Barra de herramientas estándar de Mac")](modern-cocoa-apps-images/content02.png#lightbox)
 
-Cuando usa una barra de herramientas simplificado, desaparece el área de título y la barra de herramientas se mueve hacia arriba en la posición de la barra de título, en línea con los botones de la ventana Cerrar, minimizar y maximizar:
+Cuando se usa una barra de herramientas optimizada, el área de título desaparece y la barra de herramientas se desplaza hacia arriba en la posición de la barra de título, en línea con los botones cerrar, minimizar y maximizar de la ventana:
 
-[![](modern-cocoa-apps-images/content03.png "Una barra de herramientas simplificado de Mac")](modern-cocoa-apps-images/content03.png#lightbox)
+[![](modern-cocoa-apps-images/content03.png "Barra de herramientas Mac simplificada")](modern-cocoa-apps-images/content03.png#lightbox)
 
-Está habilitada la barra de herramientas simplificado invalidando el `ViewWillAppear` método de la `NSViewController` y haciendo que se parezca a lo siguiente:
+La barra `ViewWillAppear` `NSViewController` de herramientas simplificada se habilita invalidando el método de y haciéndolo similar al siguiente:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -163,34 +163,34 @@ public override void ViewWillAppear ()
 }
 ```
 
-Este efecto se utiliza normalmente para _Shoebox aplicaciones_ (aplicaciones de una ventana), como mapas, calendario, notas y las preferencias del sistema. 
+Este efecto se usa normalmente para _las aplicaciones_ de la caja de zapatos (una aplicación de ventana) como mapas, calendario, notas y preferencias del sistema. 
 
 <a name="Using-Accessory-View-Controllers" />
 
-### <a name="using-accessory-view-controllers"></a>Uso de controladores de vista de accesorios
+### <a name="using-accessory-view-controllers"></a>Uso de controladores de vista de accesorio
 
-Dependiendo del diseño de la aplicación, el desarrollador también puede complementar la barra de título área con un controlador de vista de accesorio que aparece debajo del área de barra de título o herramienta para proporcionar ayuda contextual controla al usuario en función de la actividad son participa en:
+En función del diseño de la aplicación, el desarrollador también podría querer complementar el área de la barra de título con un controlador de vista de accesorio que aparece justo debajo del área de la barra de título y herramientas para proporcionar controles contextuales al usuario en función de la actividad en la que se encuentran. ocupado actualmente:
 
-[![](modern-cocoa-apps-images/content04.png "Un ejemplo de controlador de vista de accesorio")](modern-cocoa-apps-images/content04.png#lightbox)
+[![](modern-cocoa-apps-images/content04.png "Un controlador de vista accesorio de ejemplo")](modern-cocoa-apps-images/content04.png#lightbox)
 
-El controlador de vista de accesorio automáticamente se difuminan mucho y cambiar de tamaño por el sistema sin intervención del programador.
+El controlador de vista de accesorio se desenfocará automáticamente y el sistema cambiará su tamaño sin intervención del desarrollador.
 
 Para agregar un controlador de vista de accesorio, haga lo siguiente:
 
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
-2. Arrastre un **Custom View Controller** en la jerarquía de la ventana: 
+2. Arrastre un **controlador de vista personalizado** a la jerarquía de la ventana: 
 
     [![](modern-cocoa-apps-images/content05.png "Agregar un nuevo controlador de vista personalizado")](modern-cocoa-apps-images/content05.png#lightbox)
-3. De diseño de la vista de accesorios interfaz de usuario: 
+3. Diseño de la interfaz de usuario de la vista de accesorio: 
 
-    [![](modern-cocoa-apps-images/content06.png "Diseño de la nueva vista")](modern-cocoa-apps-images/content06.png#lightbox)
-4. Exponer la vista accesorio como un **toma** y cualquier otro **acciones** o **salidas** para su interfaz de usuario: 
+    [![](modern-cocoa-apps-images/content06.png "Diseñar la nueva vista")](modern-cocoa-apps-images/content06.png#lightbox)
+4. Exponga la vista de accesorio como una **salida** y cualquier otra **acción** o **salida** para su interfaz de usuario: 
 
-    [![](modern-cocoa-apps-images/content07.png "Agregar la salida necesaria")](modern-cocoa-apps-images/content07.png#lightbox)
+    [![](modern-cocoa-apps-images/content07.png "Adición de la salida necesaria")](modern-cocoa-apps-images/content07.png#lightbox)
 5. Guarde los cambios.
-6. Vuelva a Visual Studio para Mac sincronizar los cambios.
+6. Vuelva a Visual Studio para Mac para sincronizar los cambios.
 
-Editar el `NSWindowController` y darle un aspecto similar al siguiente:
+Edite `NSWindowController` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -228,38 +228,38 @@ namespace MacModern
 }
 ```
 
-Los puntos clave de este código son donde se establece la vista de la vista personalizada que se ha definido en el generador de interfaz y se exponen como un **toma**:
+Los puntos clave de este código son los lugares en los que la vista se establece en la vista personalizada que se definió en Interface Builder y se expone como una **salida**:
 
 ```csharp
 accessoryView.View = AccessoryViewGoBar;
 ```
 
-Y el `LayoutAttribute` que define _donde_ se mostrará el accesorio:
+Y que define dónde se mostrará el accesorio: `LayoutAttribute`
 
 ```csharp
 accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
 ```
 
-Dado que macOS ahora es totalmente localizado, el `Left` y `Right` `NSLayoutAttribute` propiedades han quedado en desuso y se debe reemplazar con `Leading` y `Trailing`.
+Dado que MacOS ahora está totalmente localizado, las `Left` propiedades `Right` y `NSLayoutAttribute` han quedado en desuso y deben reemplazarse por `Leading` y `Trailing`.
 
 <a name="Using-Tabbed-Windows" />
 
-### <a name="using-tabbed-windows"></a>Uso de Windows con pestañas
+### <a name="using-tabbed-windows"></a>Usar ventanas con pestañas
 
-Además, el sistema de macOS puede agregar controladores de vista de accesorio para la ventana de la aplicación. Por ejemplo, para crear pestañas Windows donde varios de Windows la aplicación se combinan en una ventana virtual:
+Además, el sistema macOS puede agregar controladores de vista de accesorio a la ventana de la aplicación. Por ejemplo, para crear ventanas con pestañas en las que varias de las ventanas de la aplicación se combinan en una ventana virtual:
 
-[![](modern-cocoa-apps-images/content08.png "Un ejemplo de una ventana con pestañas de Mac")](modern-cocoa-apps-images/content08.png#lightbox)
+[![](modern-cocoa-apps-images/content08.png "Ejemplo de una ventana de Mac con pestañas")](modern-cocoa-apps-images/content08.png#lightbox)
 
-Normalmente, el desarrollador tendrá que tomar el uso de una acción limitada por pestañas de Windows en sus aplicaciones de Xamarin.Mac, el sistema los controlará automáticamente del modo siguiente:
+Normalmente, el desarrollador deberá realizar una acción limitada usar ventanas con pestañas en sus aplicaciones de Xamarin. Mac, el sistema las administrará automáticamente de la siguiente manera:
 
-- Windows será automáticamente por fichas cuando el `OrderFront` se invoca el método.
-- Windows automáticamente será Untabbed cuando el `OrderOut` se invoca el método.
-- Sin embargo en el código todavía se consideran "visibles" todas las ventanas por pestañas, las pestañas que no sea superior están ocultos por el sistema mediante CoreGraphics.
-- Use la `TabbingIdentifier` propiedad de `NSWindow` al grupo Windows en las pestañas.
-- Si es un `NSDocument` basado en aplicación, varias de estas características se habilitarán automáticamente (por ejemplo, el botón del signo más que se va a agregar a la barra de pestañas) sin intervención del programador.
-- Que no sean de`NSDocument` en función de las aplicaciones pueden habilitar el botón "más" en el grupo de pestañas para agregar un nuevo documento invalidando el `GetNewWindowForTab` método de la `NSWindowsController`.
+- Las ventanas se incluirán en pestañas automáticamente cuando se invoque el `OrderFront` método.
+- Windows se desplazará automáticamente cuando se invoque el `OrderOut` método.
+- En el código, todas las ventanas con pestañas se siguen considerando "visibles"; sin embargo, las pestañas que no están en el frente están ocultas por el sistema mediante CoreGraphics.
+- Utilice la `TabbingIdentifier` propiedad de `NSWindow` para agrupar las ventanas en pestañas.
+- Si se trata de `NSDocument` una aplicación basada en, varias de estas características se habilitarán automáticamente (por ejemplo, el botón de signo más que se agrega a la barra de pestañas) sin ninguna acción del desarrollador.
+- Las aplicaciones no `GetNewWindowForTab` `NSWindowsController`basadas en no basados en pueden habilitar el botón "más" del grupo de pestañas para agregar un nuevo documento invalidando el método de.`NSDocument`
 
-Reúne todas las piezas, la `AppDelegate` de una aplicación que desea usar en función del sistema con fichas Windows podría ser similar al siguiente:
+Al reunir todas las piezas, el `AppDelegate` de una aplicación que quería usar ventanas con pestañas basadas en sistema podría ser similar al siguiente:
 
 ```csharp
 using AppKit;
@@ -308,9 +308,9 @@ namespace MacModern
 }
 ```
 
-Donde el `NewDocumentNumber` propiedad realiza un seguimiento de la cantidad de nuevos documentos creados y el `NewDocument` método crea un nuevo documento y lo muestra.
+Donde la `NewDocumentNumber` propiedad realiza un seguimiento del número de nuevos documentos creados y el `NewDocument` método crea un nuevo documento y lo muestra.
 
-El `NSWindowController` , a continuación, podría ser similar:
+El `NSWindowController` podría tener el siguiente aspecto:
 
 ```csharp
 using System;
@@ -389,9 +389,9 @@ namespace MacModern
 }
 ```
 
-Donde estático `App` propiedad proporciona un acceso directo para llegar a la `AppDelegate`. El `SetDefaultDocumentTitle` método establece un nuevo título de documentos en función del número de documentos nuevos creados.
+Donde la propiedad `App` estática proporciona un acceso directo para llegar `AppDelegate`a. El `SetDefaultDocumentTitle` método establece un nuevo título de documento en función del número de nuevos documentos creados.
 
-El código siguiente, indica a macOS que prefiere utilizar fichas de la aplicación y proporciona una cadena que permite que de Windows la aplicación que se desea agrupar en pestañas:
+El código siguiente indica a macOS que la aplicación prefiere usar pestañas y proporciona una cadena que permite agrupar las ventanas de la aplicación en pestañas:
 
 ```csharp
 // Prefer Tabbed Windows
@@ -399,7 +399,7 @@ Window.TabbingMode = NSWindowTabbingMode.Preferred;
 Window.TabbingIdentifier = "Main";
 ```
 
-Y el método de invalidación siguiente agrega un botón del signo más a la barra de pestañas que va a crear un nuevo documento cuando el usuario hace clic en:
+Y el método de invalidación siguiente agrega un botón de signo más a la barra de pestañas que creará un nuevo documento cuando el usuario haga clic en él:
 
 ```csharp
 public override void GetNewWindowForTab (NSObject sender)
@@ -411,32 +411,32 @@ public override void GetNewWindowForTab (NSObject sender)
 
 <a name="Using-Core-Animation" />
 
-### <a name="using-core-animation"></a>Uso de la animación principal
+### <a name="using-core-animation"></a>Usar la animación básica
 
-Animación básica es un motor de representación de gráficos potente que está integrado en macOS. Animación básica se ha optimizado para aprovechar las ventajas de la GPU (unidad de procesamiento de gráficos) disponible en el hardware de modernas de macOS en lugar de ejecutar las operaciones de gráficos en la CPU, lo que podría ralentizar el equipo.
+La animación básica es un motor de representación de gráficos de alta potencia que está integrado en macOS. La animación principal se ha optimizado para aprovechar las ventajas de la GPU (unidad de procesamiento de gráficos) disponible en el hardware de macOS moderno en lugar de ejecutar las operaciones de gráficos en la CPU, lo que puede ralentizar el equipo.
 
-El `CALayer`, proporcionada por la animación principal, se puede usar para tareas como el desplazamiento rápido y fluido y animaciones. Interfaz de usuario de una aplicación debe estar compuesta de varias capas para sacar el máximo provecho de animación básica y subvistas.
+, `CALayer`Proporcionado por la animación básica, se puede usar para tareas como el desplazamiento rápido y fluido y animaciones. La interfaz de usuario de una aplicación debe estar formada por varias subvistas y capas para aprovechar al máximo la animación básica.
 
-Un `CALayer` objeto proporciona varias propiedades que permiten que el desarrollador puede controlar lo que se presenta en la pantalla para el usuario, como:
+Un `CALayer` objeto proporciona varias propiedades que permiten al desarrollador controlar lo que se presenta en la pantalla al usuario, por ejemplo:
 
-- `Content` -Puede ser un `NSImage` o `CGImage` que proporciona el contenido de la capa.
-- `BackgroundColor` : Establece el color de fondo de la capa como un `CGColor`
-- `BorderWidth` : Establece el ancho del borde.
-- `BorderColor` : Establece el color del borde.
+- `Content`-Puede ser `NSImage` o `CGImage` que proporciona el contenido de la capa.
+- `BackgroundColor`: Establece el color de fondo de la capa como un`CGColor`
+- `BorderWidth`: Establece el ancho del borde.
+- `BorderColor`: Establece el color del borde.
 
-Para utilizar los gráficos esenciales en la interfaz de usuario de la aplicación, debe usar _capa de seguridad_ vistas, que Apple sugiere que el desarrollador siempre debe habilitar en Vista la ventana de contenido. De este modo, todas las vistas secundarias heredará automáticamente capa de seguridad también.
+Para usar gráficos principales en la interfaz de usuario de la aplicación, debe usar vistas con _respaldo de capas_ , que Apple sugiere que el desarrollador siempre debe habilitar en la vista de contenido de la ventana. De este modo, todas las vistas secundarias heredarán también automáticamente la copia de seguridad de la capa.
 
-Además, Apple sugiere el uso de vistas de nivel de seguridad en lugar de agregar un nuevo `CALayer` como una subcapa porque el sistema controlará automáticamente algunos de los valores requeridos (como las necesarias en una pantalla retina).
+Además, Apple sugiere el uso de vistas respaldadas por capas en lugar de `CALayer` agregar un nuevo como una subcapa, ya que el sistema controlará automáticamente varias de las opciones de configuración necesarias (como las que requiere la presentación de retina).
 
-Capa de seguridad puede ser habilitada configurando el `WantsLayer` de un `NSView` a `true` o dentro Interface Builder de Xcode en la **View Effects Inspector** activando **Core animación capa**:
+La `WantsLayer` copia `true` `NSView` de seguridad de capas se puede habilitar estableciendo el valor de en o dentro del Interface Builder de Xcode en el **Inspector de efectos** de la vista comprobando el **nivel de animación principal**:
 
-[![](modern-cocoa-apps-images/content09.png "El Inspector de efectos de vista")](modern-cocoa-apps-images/content09.png#lightbox)
+[![](modern-cocoa-apps-images/content09.png "Inspector de efectos de la vista")](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers" />
 
-#### <a name="redrawing-views-with-layers"></a>Volver a dibujar las vistas con capas
+#### <a name="redrawing-views-with-layers"></a>Volver a dibujar vistas con capas
 
-Otro paso importante al utilizar las vistas de capa de seguridad en una aplicación de Xamarin.Mac es establecer el `LayerContentsRedrawPolicy` de la `NSView` a `OnSetNeedsDisplay` en el `NSViewController`. Por ejemplo:
+Otro paso importante al usar vistas con copia de seguridad de capas en una aplicación de Xamarin. `LayerContentsRedrawPolicy` Mac es `NSView` establecer `OnSetNeedsDisplay` el de `NSViewController`en en el. Por ejemplo:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -448,17 +448,17 @@ public override void ViewWillAppear ()
 }
 ```
 
-Si el desarrollador no establece esta propiedad, la vista se volverá a dibujar cada vez que cambia su origen de marco, que no es el deseado por motivos de rendimiento. Con esta propiedad establecida en `OnSetNeedsDisplay` el desarrollador manualmente tendrá que establecer `NeedsDisplay` a `true` para forzar que el contenido para volver a dibujar, sin embargo.
+Si el desarrollador no establece esta propiedad, se volverá a dibujar la vista cada vez que cambie el origen del marco, lo que no es deseable por motivos de rendimiento. Sin embargo, con esta `OnSetNeedsDisplay` propiedad establecida en el desarrollador tendrá que `NeedsDisplay` `true` establecer manualmente en para forzar el redibujo del contenido.
 
-Cuando una vista se marca como modificada, el sistema comprueba el `WantsUpdateLayer` propiedad de la vista. Si devuelve `true` el `UpdateLayer` , else, se denomina método la `DrawRect` método de la vista se llama para actualizar el contenido de la vista.
+Cuando una vista se marca como desfasada, el sistema comprueba la `WantsUpdateLayer` propiedad de la vista. Si devuelve `true` `UpdateLayer` , sellamaalmétodo;delocontrario,sellamaalmétododelavistaparaactualizarelcontenidodelavista.`DrawRect`
 
-Apple tiene las siguientes sugerencias para la actualización de contenido de las vistas cuando sea necesario:
+Apple tiene las siguientes sugerencias para actualizar el contenido de una vista cuando sea necesario:
 
-- Apple prefiere usar `UpdateLater` sobre `DrawRect` siempre que sea posible ya que proporciona una mejora considerable del rendimiento.
-- Usar el mismo `layer.Contents` para los elementos de interfaz de usuario con un aspecto similares.
-- Apple también prefiere el desarrollador para crear su interfaz de usuario mediante las vistas estándar como `NSTextField`, nuevo siempre que sea posible.
+- Apple prefiere usar `UpdateLater` sobre `DrawRect` siempre que sea posible, ya que proporciona un aumento significativo del rendimiento.
+- Use el mismo `layer.Contents` para los elementos de la interfaz de usuario que tienen un aspecto similar.
+- Apple también prefiere que el desarrollador componga su interfaz de usuario con vistas estándar como `NSTextField`, siempre que sea posible.
 
-Para usar `UpdateLayer`, cree una clase personalizada para el `NSView` y hacer que el código de aspecto similar al siguiente:
+Para usar `UpdateLayer`, cree una clase personalizada `NSView` para y haga que el código tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -506,13 +506,13 @@ namespace MacModern
 
 <a name="Using-Modern-Drag-and-Drop" />
 
-## <a name="using-modern-drag-and-drop"></a>Usar la característica moderna de arrastrar y colocar
+## <a name="using-modern-drag-and-drop"></a>Usar la función de arrastrar y colocar moderna
 
-Para presentar una experiencia moderna de arrastrar y colocar para el usuario, el desarrollador debe adoptar _arrastre aves_ en su aplicación, arrastre y coloque las operaciones. Arrastre Flocking es donde aparece cada archivo individual o un elemento arrastrado inicialmente como un elemento individual que se dirige (grupo bajo el cursor con un recuento del número de elementos) como el usuario continúa la operación de arrastre.
+Para presentar una experiencia moderna de arrastrar y colocar para el usuario, el desarrollador debe adoptar la rebaño de _arrastre_ en las operaciones de arrastrar y colocar de la aplicación. Arrastrar el recuento es donde cada archivo o elemento individual que se está arrastrando aparece inicialmente como un elemento individual que reproduce (agrupar por debajo del cursor con un recuento del número de elementos) cuando el usuario continúa con la operación de arrastre.
 
-Si el usuario finaliza la operación de arrastre, los elementos individuales se Unflock y vuelva a sus ubicaciones originales.
+Si el usuario finaliza la operación de arrastre, los elementos individuales se anularán y volverán a sus ubicaciones originales.
 
-Ejemplo de código siguiente permite arrastrar aves en una vista personalizada:
+En el código de ejemplo siguiente se habilita la función de arrastrar en una vista personalizada:
 
 ```csharp
 using System;
@@ -546,9 +546,9 @@ namespace MacModern
 }
 ```
 
-El efecto agrupado se logra mediante el envío de cada elemento que se arrastran a la `BeginDraggingSession` método de la `NSView` como un elemento independiente en una matriz.
+El efecto `BeginDraggingSession` `NSView` de recorte se logra mediante el envío de cada elemento que se arrastra al método de como un elemento independiente en una matriz.
 
-Cuando se trabaja con un `NSTableView` o `NSOutlineView`, utilice el `PastboardWriterForRow` método de la `NSTableViewDataSource` clase para iniciar la operación de arrastrar:
+Cuando trabaje con `NSTableView` o `NSOutlineView`, use el `PastboardWriterForRow` método de la `NSTableViewDataSource` clase para iniciar la operación de arrastre:
 
 ```csharp
 using System;
@@ -580,19 +580,19 @@ namespace MacModern
 }
 ```
 
-Esto permite al desarrollador proporcionar un individuo `NSDraggingItem` para todos los elementos de la tabla que se está arrastrando el método anterior en lugar de `WriteRowsWith` que escribir todas las filas como un único grupo en la mesa de trabajo.
+Esto permite al desarrollador proporcionar un individuo `NSDraggingItem` para cada elemento de la tabla que se está arrastrando en contraposición al método `WriteRowsWith` anterior que escribe todas las filas como un solo grupo en la mesa de la mesa.
 
-Cuando se trabaja con `NSCollectionViews`, volver a usar el `PasteboardWriterForItemAt` método en contraposición a la `WriteItemsAt` método al arrastrar comienza.
+Al trabajar con `NSCollectionViews`, use de nuevo `PasteboardWriterForItemAt` el método en lugar del `WriteItemsAt` método al arrastrar.
 
-El desarrollador siempre debe evitar colocar archivos de gran tamaño en la mesa de trabajo. Nuevo en macOS Sierra, _archivo promesas_ permiten al programador colocar las referencias a dado archivos en la mesa de trabajo más adelante se cumplirá cuando el usuario termina la operación de colocar con el nuevo `NSFilePromiseProvider` y `NSFilePromiseReceiver` clases.
+El desarrollador siempre debe evitar la colocación de archivos de gran tamaño en la mesa de área. Nuevo en MacOS Sierra, las _promesas de archivo_ permiten al desarrollador colocar las referencias a los archivos especificados en la mesa de pegado que se cumplirán más adelante cuando el `NSFilePromiseProvider` usuario finalice la operación de colocar con las nuevas clases y. `NSFilePromiseReceiver`
 
 <a name="Using-Modern-Event-Tracking" />
 
-## <a name="using-modern-event-tracking"></a>Uso del seguimiento de eventos moderna
+## <a name="using-modern-event-tracking"></a>Usar el seguimiento de eventos moderno
 
-Para un elemento de interfaz de usuario (como un `NSButton`) que se ha agregado a un área de título o la barra de herramientas, el usuario debe ser capaz de hacer clic en el elemento y tiene desencadenar un evento como normal (por ejemplo, para mostrar una ventana emergente). Sin embargo, dado que el elemento también está en el área de título o la barra de herramientas, el usuario debe ser capaz de hacer clic y arrastrar el elemento para mover la ventana también.
+Para un elemento de la interfaz de usuario ( `NSButton`como un) que se ha agregado a un área de título o barra de herramientas, el usuario debe poder hacer clic en el elemento y hacer que active un evento como normal (por ejemplo, mostrar una ventana emergente). Sin embargo, puesto que el elemento también está en el área de título o barra de herramientas, el usuario debe poder hacer clic y arrastrar el elemento para moverla también.
 
-Para lograr esto en el código, cree una clase personalizada para el elemento (como `NSButton`) e invalidar la `MouseDown` eventos como sigue:
+Para lograr esto en el código, cree una clase personalizada para el elemento ( `NSButton`como) e invalide el `MouseDown` evento como se indica a continuación:
 
 ```csharp
 public override void MouseDown (NSEvent theEvent)
@@ -618,26 +618,26 @@ public override void MouseDown (NSEvent theEvent)
 }
 ```
 
-Este código usa el `TrackEventsMatching` método de la `NSWindow` que está asociado el elemento de interfaz de usuario para interceptar el `LeftMouseUp` y `LeftMouseDragged` eventos. Para una `LeftMouseUp` el elemento de interfaz de usuario responde a eventos, como es habitual. Para el `LeftMouseDragged` evento, el evento se pasa a la `NSWindow`del `PerformWindowDrag` método para mover la ventana en pantalla.
+Este código usa el `TrackEventsMatching` método `NSWindow` de que el elemento de la interfaz de usuario está asociado `LeftMouseUp` para `LeftMouseDragged` interceptar los eventos y. Para un `LeftMouseUp` evento, el elemento de la interfaz de usuario responde como normal. Para el `LeftMouseDragged` evento, el evento se pasa `NSWindow`al método de `PerformWindowDrag` para que la ventana se mueva en la pantalla.
 
-Una llamada a la `PerformWindowDrag` método de la `NSWindow` clase proporciona las siguientes ventajas:
+La llamada `PerformWindowDrag` al método de `NSWindow` la clase proporciona las siguientes ventajas:
 
-- Permite para que la ventana Mover, incluso si se ha bloqueado la aplicación (por ejemplo, cuando un profundo bucle de procesamiento).
-- Cambiar espacio funcionará según lo previsto.
-- Se mostrará la barra de espacios con normalidad.
-- Ventana de ajuste y alineación funcionan con normalidad.
+- Permite que la ventana se mueva, incluso si la aplicación está bloqueada (por ejemplo, al procesar un bucle profundo).
+- El cambio de espacio funcionará según lo previsto.
+- La barra de espacios se mostrará como normal.
+- El ajuste y la alineación de las ventanas funcionan como de costumbre.
 
 <a name="Using-Modern-Container-View-Controls" />
 
-## <a name="using-modern-container-view-controls"></a>Con los controles de vista de contenedor moderna
+## <a name="using-modern-container-view-controls"></a>Usar los controles de vista de contenedor modernos
 
-macOS Sierra proporciona muchas mejoras modernas a los controles de vista de contenedor existentes disponibles en versiones anteriores del sistema operativo.
+macOS Sierra proporciona muchas mejoras modernas en los controles de vista de contenedor existentes disponibles en la versión anterior del sistema operativo.
 
 <a name="Table View Enhancements" />
 
 ## <a name="table-view-enhancements"></a>Mejoras de la vista de tabla
 
-El desarrollador siempre debe usar el nuevo `NSView` basada en la versión de vista de controles del contenedor como `NSTableView`. Por ejemplo:
+El desarrollador siempre debe usar la nueva `NSView` versión basada en controles de vista de contenedor `NSTableView`como. Por ejemplo:
 
 ```csharp
 using System;
@@ -670,7 +670,7 @@ namespace MacModern
 }
 ```
 
-Esto permite acciones de fila de tabla personalizado adjuntarlo a dado de filas de la tabla (por ejemplo, Deslizar el derecho a eliminar la fila). Para habilitar este comportamiento, invalidar el `RowActions` método de la `NSTableViewDelegate`:
+Esto permite que las acciones de fila de tabla personalizadas se adjunten a las filas especificadas de la tabla (como deslizar el dedo hacia la derecha para eliminar la fila). Para habilitar este comportamiento, invalide el `RowActions` método `NSTableViewDelegate`de:
 
 ```csharp
 using System;
@@ -726,96 +726,96 @@ namespace MacModern
 }
 ```
 
-Estático `NSTableViewRowAction.FromStyle` se usa para crear una nueva acción de fila de tabla de los estilos siguientes:
+El estático `NSTableViewRowAction.FromStyle` se usa para crear una nueva acción de fila de tabla de los siguientes estilos:
 
-- `Regular` -Realiza una acción no destructiva estándar, como editar contenido de la fila.
-- `Destructive` -Realiza una acción destructiva como eliminar la fila de la tabla. Estas acciones se representa con un fondo rojo.
+- `Regular`: Realiza una acción no destructiva estándar, como editar el contenido de la fila.
+- `Destructive`: Realiza una acción destructiva, como eliminar la fila de la tabla. Estas acciones se representarán con un fondo rojo.
 
 <a name="Scroll-View-Enhancements" />
 
 ## <a name="scroll-view-enhancements"></a>Mejoras de la vista de desplazamiento 
 
-Cuando se usa una vista de desplazamiento (`NSScrollView`) directamente, o como parte de otro control (como `NSTableView`), puede deslizar el contenido de la vista de desplazamiento en las áreas de título y la barra de herramientas en una aplicación de Xamarin.Mac con un aspecto moderno y vistas.
+Cuando se usa una vista de`NSScrollView`desplazamiento () directamente o como parte de otro control ( `NSTableView`como), el contenido de la vista de desplazamiento se puede deslizar bajo las áreas de título y de la barra de herramientas en una aplicación de Xamarin. Mac con un aspecto moderno y vistas.
 
-Como resultado, el primer elemento en el área de contenido de la vista de desplazamiento puede quede parcialmente tapado por el área de título y la barra de herramientas.
+Como resultado, el primer elemento del área de contenido de la vista de desplazamiento puede ocultarse parcialmente en el área de título y de barra de herramientas.
 
 Para corregir este problema, Apple ha agregado dos nuevas propiedades a la `NSScrollView` clase:
 
-- `ContentInsets` : Permite al desarrollador proporcionar un `NSEdgeInsets` objeto que define el desplazamiento que se aplicará a la parte superior de la vista de desplazamiento.
-- `AutomaticallyAdjustsContentInsets` -If `true` controlará automáticamente la vista de desplazamiento del `ContentInsets` para el desarrollador.
+- `ContentInsets`: Permite al desarrollador proporcionar un `NSEdgeInsets` objeto que define el desplazamiento que se aplicará a la parte superior de la vista de desplazamiento.
+- `AutomaticallyAdjustsContentInsets`: Si `true` la vista de desplazamiento controlará automáticamente `ContentInsets` el para el desarrollador.
 
-Mediante el uso de la `ContentInsets` el desarrollador puede ajustar el inicio de la vista de desplazamiento para permitir la inclusión de accesorios, como:
+Mediante el `ContentInsets` uso del desarrollador puede ajustar el inicio de la vista de desplazamiento para permitir la inclusión de accesorios como:
 
-- Un indicador de ordenación, como se muestra en la aplicación de correo.
-- Un campo de búsqueda.
-- Un botón de actualización o actualización.
+- Un indicador de ordenación como el que se muestra en la aplicación de correo.
+- Campo de búsqueda.
+- Botón actualizar o actualizar.
 
 <a name="Auto-Layout-and-Localization-in-Modern-Apps" />
 
-## <a name="auto-layout-and-localization-in-modern-apps"></a>Diseño automático y localización en las aplicaciones modernas
+## <a name="auto-layout-and-localization-in-modern-apps"></a>Diseño y localización automáticos en aplicaciones modernas
 
-Apple ha incluido varias tecnologías en Xcode que permiten al desarrollador a crear fácilmente una aplicación internacionalizada de macOS. Xcode ahora permite al desarrollador separar el texto de cara al usuario desde el diseño de interfaz de usuario de la aplicación en sus archivos de guión gráfico y proporciona herramientas para mantener esta separación si cambia la interfaz de usuario.
+Apple ha incluido varias tecnologías en Xcode que permiten al desarrollador crear fácilmente una aplicación de macOS internacionalizada. Xcode permite ahora al desarrollador separar el texto orientado al usuario del diseño de la interfaz de usuario de la aplicación en sus archivos de guion gráfico y proporciona herramientas para mantener esta separación si cambia la interfaz de usuario.
 
-Para obtener más información, consulte Apple [internacionalización y localización guía](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html).
+Para obtener más información, consulte la [Guía de internacionalización y localización](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)de Apple.
 
 <a name="Implementing-Base-Internationalization" />
 
-### <a name="implementing-base-internationalization"></a>Implementación de Base de internacionalización 
+### <a name="implementing-base-internationalization"></a>Implementación de la internacionalización base 
 
-Mediante la implementación de internacionalización de Base, el desarrollador puede proporcionar un único archivo de guión gráfico para representar la interfaz de usuario de la aplicación y separar todas las cadenas de cara al usuario. 
+Mediante la implementación de la internacionalización base, el desarrollador puede proporcionar un único archivo de guion gráfico para representar la interfaz de usuario de la aplicación y separar todas las cadenas orientadas al usuario. 
 
-Cuando el programador crea el archivo de guión gráfico inicial (o archivos) que definen la interfaz de usuario de la aplicación, se compilará en la internacionalización de Base (el lenguaje que habla el desarrollador).
+Cuando el desarrollador crea el archivo de guion gráfico (o archivos) inicial que define la interfaz de usuario de la aplicación, se creará en la internacionalización base (el lenguaje que habla el desarrollador).
 
-A continuación, el programador puede exportar localizaciones y las cadenas de internacionalización de Base (en el diseño de la interfaz de usuario de guión gráfico) que pueden traducirse en varios idiomas.
+A continuación, el desarrollador puede exportar localizaciones y las cadenas de internacionalización base (en el diseño de la interfaz de usuario del guión gráfico) que se pueden traducir en varios idiomas.
 
-Posteriormente, se pueden importar estos localizaciones y Xcode generará los archivos de la cadena específica del lenguaje para el guión gráfico.
+Más adelante, se pueden importar estas localizaciones y Xcode generará los archivos de cadena específicos del lenguaje para el guión gráfico.
 
 <a name="Implementing-Auto-Layout-to-Support-Localization" />
 
-### <a name="implementing-auto-layout-to-support-localization"></a>Implementar el diseño automático para admitir la localización
+### <a name="implementing-auto-layout-to-support-localization"></a>Implementación del diseño automático para admitir la localización
 
-Dado que las versiones localizadas de cadena de valores pueden tener considerablemente distintos tamaños o dirección de lectura, debe usar el programador diseño automático para colocar y cambiar el tamaño de interfaz la aplicación de usuario en un archivo de guión gráfico.
+Dado que las versiones localizadas de los valores de cadena pueden tener tamaños y/o direcciones de lectura muy diferentes, el desarrollador debe usar el diseño automático para colocar y cambiar el tamaño de la interfaz de usuario de la aplicación en un archivo de guion gráfico.
 
-Apple sugiere lo siguiente:
+Apple recomienda hacer lo siguiente:
 
-- **Quitar las restricciones de ancho fijo** -deben permitir todas las vistas basadas en texto para cambiar el tamaño en función de su contenido. Ancho fijo vista puede recortar su contenido en idiomas específicos.
-- **Usar tamaños de contenido intrínseco** - al valor predeterminado basado en texto vistas will tamaño automático para ajustar su contenido. Para la vista de texto que no son de tamaño correctamente, selecciónelos en Interface Builder de Xcode, a continuación, elija **editar** > **tamaño para ajustarse a contenido**.
-- **Aplicar iniciales y finales atributos** : ya puede cambiar la dirección del texto según el idioma del usuario, use la nueva `Leading` y `Trailing` atributos de las restricciones existentes en lugar de `Right` y `Left` atributos. `Leading` y `Trailing` ajustará automáticamente en función de la dirección de idiomas.
-- **Vistas de PIN a vistas adyacentes** : Esto permite que las vistas para cambiar la posición y cambio de tamaño a medida que cambian las vistas en torno a ellas en la respuesta para el idioma seleccionado.
-- **No establezca un mínimo de Windows o el tamaño máximo de** -permite Windows cambiar tamaño como el idioma seleccionado cambia el tamaño de sus áreas de contenido.
-- **Probar los cambios de diseño constantemente** - durante el desarrollo de la aplicación se debe probar constantemente en diferentes idiomas. Consulte Apple [pruebas internacionalizar su aplicación](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) documentación para obtener más detalles.
-- **Usar NSStackViews para Pin vistas conjuntamente**  -  `NSStackViews` permite que su contenido en la tecla MAYÚS y crecer de forma predecible y el contenido de cambian el tamaño según el idioma seleccionado.
+- **Quitar restricciones de ancho fijo** : todas las vistas basadas en texto deben poder cambiar de tamaño en función de su contenido. La vista de ancho fijo puede recortar su contenido en idiomas específicos.
+- **Usar tamaños de contenido intrínseco** : de forma predeterminada, las vistas basadas en texto cambiarán de tamaño automáticamente para ajustarse a su contenido. En el caso de las vistas basadas en texto que no tienen el tamaño correcto, selecciónelas en Xcode Interface Builder, a continuación, elija **Editar** > **tamaño para ajustar el contenido**.
+- **Aplicar atributos iniciales y finales** : dado que la dirección del texto puede cambiar en función del idioma del usuario, `Leading` use los nuevos atributos y `Trailing` restricciones en lugar de los existentes y `Left` `Right` sus. `Leading`y `Trailing` se ajustarán automáticamente en función de la dirección de los idiomas.
+- **Anclar vistas a vistas adyacentes** : Esto permite que las vistas cambien de posición y cambien de tamaño a medida que las vistas en torno a ellas cambian en respuesta al idioma seleccionado.
+- **No establecer un tamaño mínimo o máximo de Windows** : permitir que Windows cambie de tamaño a medida que el idioma seleccionado cambia el tamaño de las áreas de contenido.
+- **Los cambios de diseño de prueba constantemente** : durante el desarrollo en la aplicación se deben probar constantemente en distintos idiomas. Consulte la documentación sobre [la prueba de la aplicación internacionalizada](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) de Apple para obtener más detalles.
+- **Usar NSStackViews para anclar vistas juntas**  -  `NSStackViews` permite que su contenido se mueva y crezca de maneras predecibles y el tamaño del cambio de contenido según el idioma seleccionado.
 
 <a name="Localizing-in-Xcodes-Interface-Builder" />
 
 ### <a name="localizing-in-xcodes-interface-builder"></a>Localizar en Interface Builder de Xcode
 
-Apple ofrece varias características en Interface Builder de Xcode que el desarrollador puede usar al diseñar o modificar la interfaz de usuario de una aplicación para admitir la localización. El **dirección del texto** sección de la **Inspector de atributos** permite al desarrollador proporcionar sugerencias sobre cómo debe usarse y actualizada en una vista de texto, seleccione dirección (como `NSTextField`):
+Apple ha proporcionado varias características en Interface Builder de Xcode que el desarrollador puede usar al diseñar o editar la interfaz de usuario de una aplicación para admitir la localización. La sección **dirección del texto** del **Inspector de atributos** permite al desarrollador proporcionar sugerencias sobre cómo se debe usar y actualizar la dirección en una vista de selección basada en texto `NSTextField`(como):
 
-[![](modern-cocoa-apps-images/content10.png "Las opciones de dirección del texto")](modern-cocoa-apps-images/content10.png#lightbox)
+[![](modern-cocoa-apps-images/content10.png "Opciones de dirección de texto")](modern-cocoa-apps-images/content10.png#lightbox)
 
-Hay tres valores posibles para el **dirección del texto**:
+Hay tres valores posibles para la **dirección del texto**:
 
-- **Natural** -el diseño se basa en la cadena asignada al control.
-- **De izquierda a derecha** -siempre se fuerza el diseño de izquierda a derecha.
-- **De derecha a izquierda** -siempre se fuerza el diseño de derecha a izquierda.
+- **Natural** : el diseño se basa en la cadena asignada al control.
+- De **izquierda a derecha** : el diseño siempre se fuerza de izquierda a derecha.
+- De **derecha a izquierda** : el diseño siempre se fuerza de derecha a izquierda.
 
-Hay dos valores posibles para el **diseño**:
+Existen dos valores posibles para el **diseño**:
 
-- **De izquierda a derecha** -el diseño es siempre de izquierda a derecha.
-- **De derecha a izquierda** -siempre es el diseño de derecha a izquierda.
+- De **izquierda a derecha** : el diseño siempre es de izquierda a derecha.
+- De **derecha a izquierda** : el diseño siempre es de derecha a izquierda.
 
-Normalmente, estos no deben cambiarse a menos que se requiere una alineación específica.
+Normalmente, no se deben cambiar a menos que se requiera una alineación específica.
 
-El **reflejado** propiedad indica al sistema que voltear propiedades de control específico (por ejemplo, la posición de la imagen de celda). Tiene tres valores posibles:
+La propiedad **Mirror** indica al sistema que voltee propiedades de control específicas (como la posición de la imagen de celda). Tiene tres valores posibles:
 
-- **Automáticamente** -la posición cambia automáticamente según la dirección del idioma seleccionado.
-- **En la interfaz de derecha a izquierda** -sólo se cambiará la posición de derecha a izquierda lenguajes basado en.
-- **Nunca** -nunca cambiará la posición.
+- **Automáticamente** : la posición cambiará automáticamente en función de la dirección del idioma seleccionado.
+- **En la interfaz de derecha a izquierda** : la posición solo se cambiará en los idiomas de derecha a izquierda.
+- **Nunca** : la posición nunca cambiará.
 
-Si ha especificado el desarrollador **Center**, **Justify** o **completa** alineación del contenido de una vista basada en texto, nunca serán volteado idioma según seleccionado.
+Si el desarrollador ha especificado el **Centro**, la **justificación** o la alineación **completa** en el contenido de una vista basada en texto, nunca se volteará en función del idioma seleccionado.
 
-Antes de macOS Sierra, los controles creados en el código podrían no reflejarse automáticamente. El desarrollador tenía que usar código similar al siguiente para controlar la creación de reflejo:
+Antes de macOS Sierra, los controles creados en el código no se reflejaban automáticamente. El desarrollador tenía que usar código similar al siguiente para controlar la creación de reflejo:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -834,9 +834,9 @@ public override void ViewDidLoad ()
 }
 ```
 
-Donde el `Alignment` y `ImagePosition` se establecen según la `UserInterfaceLayoutDirection` del control.
+`Alignment` Donde y `ImagePosition` se establecen basándose en el `UserInterfaceLayoutDirection` del control.
 
-macOS Sierra agrega varios constructores comodidad nuevo (a través de estático `CreateButton` método) que toman varios parámetros (por ejemplo, título, imagen y acción) y automáticamente reflejará correctamente. Por ejemplo:
+MacOS Sierra agrega varios nuevos constructores de conveniencia (a través `CreateButton` del método estático) que toman varios parámetros (como título, imagen y acción) y se reflejarán de forma automática correctamente. Por ejemplo:
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -847,13 +847,13 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 <a name="Using-System-Appearances" />
 
-## <a name="using-system-appearances"></a>Uso de los aspectos del sistema
+## <a name="using-system-appearances"></a>Usar aspectos del sistema
 
-Aplicaciones modernas de macOS pueden adoptar una nueva apariencia oscuro de interfaz que funciona bien para las aplicaciones de creación, edición o presentación de imagen:
+Las aplicaciones modernas de macOS pueden adoptar una nueva apariencia de interfaz oscura que funciona bien para la creación de imágenes, edición o presentación de aplicaciones:
 
-[![](modern-cocoa-apps-images/content11.png "Un ejemplo de una interfaz de usuario de ventana Mac oscuro")](modern-cocoa-apps-images/content11.png#lightbox)
+[![](modern-cocoa-apps-images/content11.png "Ejemplo de una interfaz de usuario de ventana Mac oscura")](modern-cocoa-apps-images/content11.png#lightbox)
 
-Esto puede hacerse agregando una línea de código antes de que aparezca la ventana. Por ejemplo:
+Esto puede hacerse agregando una línea de código antes de que se presente la ventana. Por ejemplo:
 
 ```csharp
 using System;
@@ -881,34 +881,34 @@ namespace MacModern
 }
 ```
 
-Estático `GetAppearance` método de la `NSAppearance` clase se utiliza para obtener un aspecto con nombre del sistema (en este caso `NSAppearance.NameVibrantDark`).
+El método `GetAppearance` estático de la `NSAppearance` clase se utiliza para obtener una apariencia con nombre del sistema (en este caso `NSAppearance.NameVibrantDark`).
 
-Apple tiene las siguientes sugerencias para el uso de los aspectos del sistema:
+Apple tiene las siguientes sugerencias para usar la apariencia del sistema:
 
-- Preferir valores codificados en colores con nombre (tales como `LabelColor` y `SelectedControlColor`).
-- Utilice el estilo de control estándar del sistema siempre que sea posible.
+- Prefiere los colores con nombre en valores codificados `LabelColor` de `SelectedControlColor`forma rígida (como y).
+- Use el estilo de control estándar del sistema siempre que sea posible.
 
-Una aplicación de Mac OS que usa las apariencias sistema automáticamente funcionará correctamente para los usuarios que han habilitado características de accesibilidad de la aplicación preferencias del sistema. Como resultado, Apple sugiere que el desarrollador siempre debe usar los aspectos del sistema en sus aplicaciones de Mac OS.
+Una aplicación macOS que use la apariencia del sistema funcionará automáticamente para los usuarios que tengan habilitadas las características de accesibilidad de la aplicación preferencias del sistema. Como resultado, Apple sugiere que el desarrollador siempre debe usar la apariencia del sistema en sus aplicaciones de macOS.
 
 <a name="Designing-UIs-with-Storyboards" />
 
-## <a name="designing-uis-with-storyboards"></a>Diseño de interfaces de usuario con guiones gráficos
+## <a name="designing-uis-with-storyboards"></a>Diseñar ius con guiones gráficos
 
-Guiones gráficos permiten al desarrollador no solo para diseño de flujo de los elementos individuales que componen de una aplicación interfaz de usuario, pero para visualizar y diseñar la interfaz de usuario y la jerarquía de elementos especificados.
+Los guiones gráficos permiten al desarrollador no solo diseñar los elementos individuales que componen la interfaz de usuario de una aplicación, sino para visualizar y diseñar el flujo de la interfaz de usuario y la jerarquía de los elementos especificados.
 
-Los controladores permiten al desarrollador recopilar los elementos en una unidad de composición y los objetos Segue abstracta y quitar el típico "el código de adherencia" necesarios para mover a lo largo de la jerarquía de vistas:
+Los controladores permiten al desarrollador recopilar elementos en una unidad de composición y objetos segue abstraer y quitar el "código de adherencia" típico necesario para moverse por la jerarquía de vistas:
 
-[![](modern-cocoa-apps-images/content12.png "Edición de la interfaz de usuario en Interface Builder de Xcode")](modern-cocoa-apps-images/content12.png#lightbox)
+[![](modern-cocoa-apps-images/content12.png "Edición de la interfaz de usuario en la Interface Builder de Xcode")](modern-cocoa-apps-images/content12.png#lightbox)
 
-Para obtener más información, consulte nuestra [Introducción a guiones gráficos](~/mac/platform/storyboards/index.md) documentación.
+Para obtener más información, consulte la documentación [Introducción a los guiones gráficos](~/mac/platform/storyboards/index.md) .
 
-Existen muchas instancias donde la escena definida en un guión gráfico requerirá datos de una escena anterior en la jerarquía de vistas. Apple tiene las siguientes sugerencias para pasar información entre bastidores:
+Hay muchos casos en los que una escena determinada definida en un guion gráfico necesitará datos de una escena anterior en la jerarquía de vistas. Apple tiene las siguientes sugerencias para pasar información entre escenas:
 
-- Dependencias de datos siempre deben en cascada hacia abajo por la jerarquía.
-- Evitar dependencias estructurales de la interfaz de usuario de codificar, porque esto limita la flexibilidad de la interfaz de usuario.
-- Use C# Interfaces para proporcionar las dependencias de datos genéricos.
+- Los dependancies de datos siempre deben estar en cascada a través de la jerarquía.
+- Evite el dependancies estructural codificar de la interfaz de usuario, ya que limita la flexibilidad de la interfaz de usuario.
+- Usar C# interfaces para proporcionar dependancies de datos genéricos.
 
-El controlador de vista que actúa como origen de Segue, puede invalidar el `PrepareForSegue` se ejecuta el método y lleve a cabo cualquier inicialización necesaria (por ejemplo, para pasar datos) antes de Segue para mostrar el controlador de vista de destino. Por ejemplo:
+El controlador de vista que actúa como origen de segue puede invalidar el `PrepareForSegue` método y realizar cualquier inicialización necesaria (como pasar datos) antes de que se ejecute segue para mostrar el controlador de vista de destino. Por ejemplo:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -925,35 +925,35 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Para obtener más información, consulte nuestra [objetos Segue](~/mac/platform/storyboards/indepth.md#Segues) documentación.
+Para obtener más información, consulte nuestra documentación de [objetos segue](~/mac/platform/storyboards/indepth.md#Segues) .
 
 <a name="Propagating-Actions" />
 
-## <a name="propagating-actions"></a>Propagación de acciones
+## <a name="propagating-actions"></a>Propagar acciones
 
-Según el diseño de la aplicación macOS, puede haber ocasiones cuando el mejor controlador para una acción en un control de interfaz de usuario podría ser en otra parte de la jerarquía de la interfaz de usuario. Esto ocurre normalmente de los menús y elementos de menú que se encuentran en su propios escena, independiente del resto de la interfaz de usuario de la aplicación.
+En función del diseño de la aplicación macOS, puede haber ocasiones en las que el mejor controlador para una acción en un control de interfaz de usuario esté en otro lugar de la jerarquía de la interfaz de usuario. Esto se aplica normalmente a los menús y elementos de menú que residen en su propia escena, independientes del resto de la interfaz de usuario de la aplicación.
 
-Para controlar esta situación, el desarrollador puede crear una acción personalizada y pasar la acción de la cadena de servicio de respuesta. Para obtener más información, consulte nuestra [trabajar con acciones de ventana personalizada](~/mac/user-interface/menu.md) documentación.
+Para controlar esta situación, el desarrollador puede crear una acción personalizada y pasar la acción hacia arriba en la cadena del respondedor. Para obtener más información, consulte la documentación sobre [Cómo trabajar con acciones de ventana personalizadas](~/mac/user-interface/menu.md) .
 
 <a name="Modern-Mac-Features" />
 
 ## <a name="modern-mac-features"></a>Características modernas de Mac
 
-Apple ha incluido varias características orientadas al usuario en macOS Sierra que permiten al desarrollador a aprovechar al máximo la plataforma Mac, como:
+Apple ha incluido varias características orientadas al usuario en macOS Sierra que permiten al desarrollador sacar el máximo partido de la plataforma Mac, como:
 
-- **NSUserActivity** : Esto permite a describir la actividad que el usuario está ocupado actualmente en la aplicación. `NSUserActivity` se creó inicialmente para admitir la entrega, donde podrían ser recoge y continúa en otro dispositivo actividades iniciadas en uno de los dispositivos del usuario. `NSUserActivity` Por tanto, funciona igual en macOS, tal como se hace en iOS, consulte nuestra [Introducción a la entrega](~/ios/platform/handoff.md) iOS documentación para obtener más detalles.
-- **Siri en Mac** -siri lo usa la actividad actual (`NSUserActivity`) para proporcionar contexto para los comandos de un usuario puede emitir.
-- **Restauración de estado** : cuando el usuario se cierra una aplicación en Mac OS y versiones posteriores, a continuación, vuelva a iniciarse, la aplicación no se realizará automáticamente devolverse al estado anterior. El programador puede utilizar la API de restauración de estado para codificar y restaurar el estado transitorio de la interfaz de usuario antes de la interfaz de usuario se muestre al usuario. Si la aplicación es `NSDocument` basado, restauración de estado se controla automáticamente. Para habilitar la restauración del estado para que no sean de`NSDocument` en función de las aplicaciones, establecer el `Restorable` de la `NSWindow` clase `true`.
-- **Documentos en la nube** -antes de macOS Sierra, una aplicación debía explícitamente participar en trabajar con documentos en iCloud del usuario en la unidad. En macOS Sierra el usuario **Desktop** y **documentos** carpetas pueden sincronizarse con su unidad de iCloud automáticamente por el sistema. Como resultado, es posible que se puede eliminar copias locales de documentos para liberar espacio en el equipo del usuario. `NSDocument` en función de las aplicaciones controlará automáticamente este cambio. Todos los demás tipos de aplicación debe usar un `NSFileCoordinator` para sincronizar la lectura y escritura de documentos.
+- **NSUserActivity** : permite a la aplicación describir la actividad en la que el usuario está involucrado actualmente. `NSUserActivity`se creó inicialmente para admitir la entrega, donde una actividad iniciada en uno de los dispositivos del usuario podría recogerse y continuarse en otro dispositivo. `NSUserActivity`funciona igual en macOS que en iOS, por lo que consulte la [Introducción a la entrega](~/ios/platform/handoff.md) de documentación de iOS para obtener más detalles.
+- **Siri en Mac** : Siri usa la actividad actual (`NSUserActivity`) para proporcionar contexto a los comandos que un usuario puede emitir.
+- **Restauración de estado** : cuando el usuario sale de una aplicación en MacOS y después la vuelve a iniciar, la aplicación se devolverá automáticamente a su estado anterior. El desarrollador puede usar la API de restauración de estado para codificar y restaurar los Estados transitorios de la interfaz de usuario antes de que se muestre la interfaz de usuario al usuario. Si la aplicación se `NSDocument` basa, la restauración del estado se controla automáticamente. Para habilitar la restauración de estado para`NSDocument` aplicaciones no basadas en, `Restorable` establezca el `NSWindow` de la `true`clase en.
+- **Documentos en la nube** : antes de MacOS Sierra, una aplicación tenía que optar explícitamente a trabajar con documentos en la unidad iCloud del usuario. En macOS Sierra las carpetas de **escritorio** y **documentos** del usuario se pueden sincronizar automáticamente con la unidad de icloud del sistema. Como resultado, es posible que se eliminen las copias locales de los documentos para liberar espacio en el equipo del usuario. `NSDocument`las aplicaciones basadas en se controlan automáticamente este cambio. Todos los demás tipos de aplicaciones deberán usar para `NSFileCoordinator` sincronizar la lectura y la escritura de documentos.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha cubierto varias sugerencias, características y técnicas de que un desarrollador puede usar para crear una aplicación moderna de macOS en Xamarin.Mac.
+En este artículo se han tratado varias sugerencias, características y técnicas que un desarrollador puede usar para compilar una aplicación moderna de macOS en Xamarin. Mac.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de macOS](https://developer.xamarin.com/samples/mac/)
+- [Ejemplos de macOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)

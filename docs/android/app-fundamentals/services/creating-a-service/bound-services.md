@@ -1,68 +1,68 @@
 ---
-title: Servicios enlazados en Xamarin.Android
-description: Servicios enlazados son servicios de Android que proporcionan una interfaz de cliente / servidor que un cliente (por ejemplo, una actividad de Android) puede interactuar con. Esta guía tratan los componentes clave relacionados con la creación de un servicio dependiente y cómo usarlo en una aplicación de Xamarin.Android.
+title: Servicios enlazados en Xamarin. Android
+description: Los servicios enlazados son servicios de Android que proporcionan una interfaz cliente-servidor que un cliente (como una actividad de Android) puede interactuar con. En esta guía se describen los componentes clave implicados en la creación de un servicio enlazado y cómo usarlo en una aplicación de Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 6b585783f21cc18112ef766819c9851baac96ef1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829743"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644188"
 ---
-# <a name="bound-services-in-xamarinandroid"></a>Servicios enlazados en Xamarin.Android
+# <a name="bound-services-in-xamarinandroid"></a>Servicios enlazados en Xamarin. Android
 
-_Servicios enlazados son servicios de Android que proporcionan una interfaz de cliente / servidor que un cliente (por ejemplo, una actividad de Android) puede interactuar con. Esta guía tratan los componentes clave relacionados con la creación de un servicio dependiente y cómo usarlo en una aplicación de Xamarin.Android._
+_Los servicios enlazados son servicios de Android que proporcionan una interfaz cliente-servidor que un cliente (como una actividad de Android) puede interactuar con. En esta guía se describen los componentes clave implicados en la creación de un servicio enlazado y cómo usarlo en una aplicación de Xamarin. Android._
 
-## <a name="bound-services-overview"></a>Información general de servicios dependiente
+## <a name="bound-services-overview"></a>Información general sobre servicios enlazados
 
-Servicios que proporcionan una interfaz de cliente / servidor para que los clientes interactúan directamente con el servicio se conocen como _servicios enlazados_.  Puede haber múltiples clientes conectados a una sola instancia de un servicio al mismo tiempo. El servicio dependiente y el cliente están aislados entre sí. En su lugar, Android proporciona una serie de objetos intermedios que administrar el estado de la conexión entre los dos. Este estado es mantenido por un objeto que implementa el [ `Android.Content.IServiceConnection` ](https://developer.xamarin.com/api/type/Android.Content.IServiceConnection/) interfaz.  Este objeto es creado por el cliente y se pasa como parámetro a la [ `BindService` ](https://developer.xamarin.com/api/member/Android.Content.Context.BindService/) método. El `BindService` está disponible en cualquier [ `Android.Content.Context` ](https://developer.xamarin.com/api/type/Android.Content.Context) objeto (por ejemplo, una actividad). Es una solicitud para el sistema operativo Android para iniciar el servicio y lo enlaza a un cliente. Hay tres formas de un cliente pueden enlazar a un servicio utilizando el `BindService` método:
+Los servicios que proporcionan una interfaz cliente-servidor para que los clientes interactúen directamente con el servicio se conocen como _servicios enlazados_.  Puede haber varios clientes conectados a una única instancia de un servicio al mismo tiempo. El servicio enlazado y el cliente están aislados entre sí. En su lugar, Android proporciona una serie de objetos intermedios que administran el estado de la conexión entre los dos. Este estado es mantenido por un objeto que implementa la [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) interfaz.  El cliente crea este objeto y se pasa como un parámetro al [`BindService`](xref:Android.Content.Context.BindService*) método. Está disponible en cualquier [`Android.Content.Context`](xref:Android.Content.Context) objeto (como una actividad). `BindService` Se trata de una solicitud al sistema operativo Android para iniciar el servicio y enlazar un cliente a él. Hay tres maneras de enlazar un cliente a un servicio mediante el `BindService` método:
 
-* **Un enlazador de servicio** &ndash; un enlazador de servicio es una clase que implementa el [ `Android.OS.IBinder` ](https://developer.xamarin.com/api/type/Android.OS.IBinder) interfaz. La mayoría de las aplicaciones no implementen esta interfaz directamente, en su lugar extenderá el [ `Android.OS.Binder` ](https://developer.xamarin.com/api/type/Android.OS.Binder) clase. Este es el enfoque más común y es adecuado para cuando el cliente y el servicio existan en el mismo proceso.
-* **Uso de una instancia de Messenger** &ndash; esta técnica es útil para cuando el servicio es posible que existan en un proceso independiente. En su lugar, las solicitudes de servicio están en el búfer entre el cliente y servicio a través de un [ `Android.OS.Messenger` ](https://developer.xamarin.com/api/type/Android.OS.Messenger). Un [ `Android.OS.Handler` ](https://developer.xamarin.com/api/type/Android.OS.Handler) se crea en el servicio que se va a controlar el `Messenger` solicitudes. Esto se explicará en otra guía.
-* **Mediante el lenguaje de definición de interfaz Android (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) es una técnica avanzada que no se tratarán en esta guía.
+* **Un enlazador de servicios** Un enlazador de servicios es una clase que implementa la [`Android.OS.IBinder`](xref:Android.OS.IBinder) interfaz. &ndash; La mayoría de las aplicaciones no implementarán esta interfaz directamente, sino que extienden la [`Android.OS.Binder`](xref:Android.OS.Binder) clase. Este es el enfoque más común y es adecuado para cuando el servicio y el cliente existen en el mismo proceso.
+* **Uso de Messenger** &ndash; Esta técnica es adecuada para cuando el servicio puede existir en un proceso independiente. En su lugar, se calcula la referencia de las solicitudes de servicio entre el [`Android.OS.Messenger`](xref:Android.OS.Messenger)cliente y el servicio a través de. Se crea en el servicio que controlará las `Messenger` solicitudes. [`Android.OS.Handler`](xref:Android.OS.Handler) Esto se tratará en otra guía.
+* **Uso del lenguaje de definición de interfaz de Android (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) es una técnica avanzada que no se tratará en esta guía.
 
-Una vez que un cliente se ha enlazado a un servicio, la comunicación entre los dos es se produce a través de `Android.OS.IBinder` objeto.  Este objeto es responsable de la interfaz que permitirá que el cliente interactuar con el servicio. No es necesario para cada aplicación de Xamarin.Android implementar esta interfaz desde el principio, el SDK de Android proporciona el [ `Android.OS.Binder` ](https://developer.xamarin.com/api/type/Android.OS.Binder) clase que se encarga de la mayoría del código necesario con cálculo de referencias de objeto entre el cliente y el servicio.
+Una vez que un cliente se ha enlazado a un servicio, la comunicación entre los `Android.OS.IBinder` dos se produce a través de un objeto.  Este objeto es responsable de la interfaz que permitirá al cliente interactuar con el servicio. No es necesario que cada aplicación de Xamarin. Android implemente esta interfaz desde cero, el Android SDK proporciona la [`Android.OS.Binder`](xref:Android.OS.Binder) clase que se encarga de la mayor parte del código necesario para calcular las referencias del objeto entre el cliente y el servicio.
 
-Cuando un cliente se realiza con el servicio, debe separar de él mediante una llamada a la `UnbindService` método. Una vez que se desenlaza el último cliente a un servicio, Android detendrá y eliminar el servicio dependiente.
+Cuando un cliente se realiza con el servicio, debe desenlazarlo mediante una llamada al `UnbindService` método. Una vez que el último cliente se ha desenlazado de un servicio, Android detendrá y eliminará el servicio enlazado.
 
-Este diagrama ilustra cómo la actividad, conexión de servicio, enlazador y servicios relacionan entre sí:
+En este diagrama se ilustra el modo en que la actividad, la conexión de servicio, el enlazador y el servicio se relacionan entre sí:
 
-![Diagrama que muestra cómo se relacionan entre sí los componentes del servicio](bound-services-images/bound-services-02.png "un diagrama que muestra cómo se relacionan entre sí los componentes del servicio.")
+![Diagrama que muestra cómo se relacionan entre sí los componentes del servicio](bound-services-images/bound-services-02.png "Diagrama que muestra cómo se relacionan entre sí los componentes del servicio.")
 
-Esta guía describirá cómo ampliar el `Service` clase para implementar un servicio dependiente. También se tratará implementar `IServiceConnection` y ampliar `Binder` para permitir que un cliente para comunicarse con el servicio. Una aplicación de ejemplo acompaña a esta guía, que contienen una solución con un único proyecto de Xamarin.Android denominado **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Se trata de una aplicación muy básica que se muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio dependiente tiene una API muy simple con un solo método, `GetFormattedTimestamp`, que devuelve una cadena que indica al usuario cuando se ha iniciado el servicio y cuánto tiempo lleva ejecutándose. La aplicación también permite al usuario desenlazar y enlazar con el servicio manualmente.
+En esta guía se explica cómo extender la `Service` clase para implementar un servicio enlazado. También se tratará la `IServiceConnection` implementación y `Binder` la extensión para permitir que un cliente se comunique con el servicio. Una aplicación de ejemplo acompaña a esta guía, que contiene una solución con un solo proyecto de Xamarin. Android denominado **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Se trata de una aplicación muy básica que muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio enlazado tiene una API muy sencilla con un solo método `GetFormattedTimestamp`,, que devuelve una cadena que indica al usuario Cuándo se ha iniciado el servicio y cuánto tiempo se ha estado ejecutando. La aplicación también permite al usuario Desenlazar manualmente y enlazar con el servicio.
 
 [![Captura de pantalla de la aplicación que se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
-## <a name="implementing-and-consuming-a-bound-service"></a>Implementar y consumir un servicio dependiente
+## <a name="implementing-and-consuming-a-bound-service"></a>Implementación y consumo de un servicio enlazado
 
-Hay tres componentes que deben implementarse para una aplicación Android consumir un servicio dependiente:
+Hay tres componentes que se deben implementar para que una aplicación Android consuma un servicio enlazado:
 
-1. **Ampliar el `Service` clase e implementar los métodos de devolución de llamada de ciclo de vida** &ndash; esta clase contendrá el código que llevará a cabo el trabajo que se solicitará del servicio. Esto se explicará más detalladamente a continuación.
-2. **Cree una clase que implementa `IServiceConnection`**  &ndash; esta interfaz proporciona métodos de devolución de llamada se le invoca Android para notificar al cliente cuando la conexión con el servicio ha cambiado, es decir, el cliente ha conectado o desconectado para el servicio. La conexión de servicio también proporcionará una referencia a un objeto que el cliente puede usar para interactuar directamente con el servicio. Esta referencia se conoce como el _enlazador_.
-3. **Cree una clase que implementa `IBinder`**  &ndash; A _enlazador_ implementación proporciona la API que un cliente usa para comunicarse con el servicio. El enlazador puede proporcionar una referencia al servicio enlazado, permitir que los métodos que deben invocarse directamente o el enlazador puede proporcionar a una API que encapsula y oculta el servicio dependiente de la aplicación cliente. Un `IBinder` debe proporcionar el código necesario para las llamadas a procedimiento remoto. No es necesario (ni recomendado) para implementar el `IBinder` interfaz directamente. En su lugar, deben extender las aplicaciones la `Binder` tipo que proporciona la mayor parte de la funcionalidad base requerida por un `IBinder`.
-4. **Iniciar y enlazar a un servicio** &ndash; una vez que se han creado la conexión de servicio, el enlazador y el servicio de la aplicación Android es responsable de iniciar el servicio y el enlace a él.
+1. **Extienda la `Service` clase e implemente los métodos** &ndash; de devolución de llamada del ciclo de vida esta clase contendrá el código que realizará el trabajo que se solicitará del servicio. Esto se tratará con más detalle a continuación.
+2. **Crear una clase que implemente `IServiceConnection`**  &ndash; esta interfaz proporciona métodos de devolución de llamada invocados por Android para notificar al cliente cuando la conexión con el servicio ha cambiado, es decir, el cliente se ha conectado o desconectado al servicio. La conexión de servicio también proporcionará una referencia a un objeto que el cliente puede utilizar para interactuar directamente con el servicio. Esta referencia se conoce como el _enlazador_.
+3. **Crear una clase que implemente `IBinder`**  &ndash; una implementación de _enlazador_ proporciona la API que un cliente utiliza para comunicarse con el servicio. El enlazador puede proporcionar una referencia al servicio enlazado, lo que permite invocar métodos directamente o el enlazador puede proporcionar una API de cliente que encapsula y oculta el servicio enlazado de la aplicación. Un `IBinder` debe proporcionar el código necesario para las llamadas a procedimientos remotos. No es necesario (o recomendado) implementar la `IBinder` interfaz directamente. En su lugar, las aplicaciones `Binder` deben extender el tipo que proporciona la mayor parte de la `IBinder`funcionalidad básica que requiere.
+4. **Inicio y enlace a un servicio** &ndash; Una vez que se ha creado la conexión de servicio, el enlazador y el servicio, la aplicación de Android es responsable de iniciar el servicio y enlazarlo.
 
-Cada uno de estos pasos se tratarán en las secciones siguientes con más detalle.
+Cada uno de estos pasos se tratará con más detalle en las secciones siguientes.
 
-### <a name="extend-the-service-class"></a>Ampliar la `Service` clase
+### <a name="extend-the-service-class"></a>Extender la `Service` clase
 
-Para crear un servicio con Xamarin.Android, es necesario para crear una subclase `Service` y adornar de la clase con el [ `ServiceAttribute` ](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute). El atributo se utiliza por las herramientas de compilación de Xamarin.Android para registrar correctamente el servicio en la aplicación **AndroidManifest.xml** muy similar a una actividad de archivos, un servicio dependiente tiene su propio ciclo de vida y la devolución de llamada de métodos asociados a la eventos importantes en su ciclo de vida. En la lista siguiente es un ejemplo de algunos de los métodos de devolución de llamada más comunes que implementará un servicio:
+Para crear un servicio con Xamarin. Android, es necesario crear una subclase `Service` y adornar la clase [`ServiceAttribute`](xref:Android.App.ServiceAttribute)con. Las herramientas de compilación de Xamarin. Android usan el atributo para registrar correctamente el servicio en el archivo **archivo AndroidManifest. XML** de la aplicación de forma similar a una actividad, un servicio enlazado tiene su propio ciclo de vida y métodos de devolución de llamada asociados a los eventos importantes en su ciclo de vida. La lista siguiente es un ejemplo de algunos de los métodos de devolución de llamada más comunes que implementará un servicio:
 
-* `OnCreate` &ndash; Este método se invoca por Android como que está creando instancias del servicio. Sirve para inicializar las variables o los objetos requeridos por el servicio durante su vigencia. Este método es opcional.
-* `OnBind` &ndash; Este método se debe implementar todos los servicios de enlazado. Se invoca cuando el primer cliente intenta conectarse al servicio. Devolverá una instancia de `IBinder` para que el cliente puede interactuar con el servicio. Siempre y cuando el servicio se está ejecutando, el `IBinder` objeto que se usará para atender las solicitudes de cliente futuras para enlazar con el servicio.
-* `OnUnbind` &ndash; Este método se llama cuando se han desenlazado todos los clientes enlazados. Devolviendo `true` desde este método, el servicio más adelante se llamará `OnRebind` con la intención que se pasa a `OnUnbind` cuando nuevos clientes enlazar a él. Lo haría cuando un servicio continúa ejecutándose después de haber sido independiente. Esto podría ocurrir si el servicio recientemente independiente también era un servicio iniciado, y `StopService` o `StopSelf` no había se ha llamado. En este escenario, `OnRebind` permite que la intención que se van a recuperar. El valor predeterminado devuelve `false` , que no hace nada. Opcional.
-* `OnDestroy` &ndash; Este método se llama cuando se Android destruye en el servicio. Cualquier limpieza necesaria, como la liberación de recursos, debe realizarse en este método. Opcional.
+* `OnCreate`&ndash; Android invoca este método, ya que crea instancias del servicio. Se utiliza para inicializar las variables u objetos que requiere el servicio durante su vigencia. Este método es opcional.
+* `OnBind`&ndash; Este método debe ser implementado por todos los servicios enlazados. Se invoca cuando el primer cliente intenta conectarse al servicio. Devolverá una instancia de `IBinder` para que el cliente pueda interactuar con el servicio. Siempre que el servicio se esté ejecutando, el `IBinder` objeto se usará para satisfacer las solicitudes de cliente futuras para enlazar con el servicio.
+* `OnUnbind`&ndash; Se llama a este método cuando todos los clientes enlazados tienen desenlazado. Al devolver `true` desde este método, el servicio llamará `OnRebind` más adelante con el intento que `OnUnbind` se pasa a cuando los nuevos clientes se enlazan a él. Lo haría cuando un servicio siga ejecutándose una vez que se haya desenlazado. Esto ocurrirá si el servicio desenlazado recientemente también era un servicio iniciado y `StopService` o `StopSelf` no se hubiese llamado. En este escenario, `OnRebind` permite recuperar el intento. El valor predeterminado `false` devuelve, que no hace nada. Opcional.
+* `OnDestroy`&ndash; Se llama a este método cuando Android está destruyendo el servicio. Cualquier limpieza necesaria, como liberar recursos, debe realizarse en este método. Opcional.
 
-En este diagrama se muestran los eventos de ciclo de vida de un servicio dependiente:
+Los eventos de ciclo de vida clave de un servicio enlazado se muestran en este diagrama:
 
-![Diagrama que muestra el orden en el que se llaman los métodos del ciclo de vida](bound-services-images/bound-services-01.png "un diagrama que muestra el orden en el que se llaman los métodos del ciclo de vida.")
+![Diagrama que muestra el orden en el que se llama a los métodos de ciclo de vida](bound-services-images/bound-services-01.png "Diagrama que muestra el orden en el que se llama a los métodos de ciclo de vida.")
 
-El siguiente fragmento de código, de la aplicación complementaria que acompaña a esta guía, muestra cómo implementar un servicio dependiente en Xamarin.Android:
+En el siguiente fragmento de código, desde la aplicación complementaria que acompaña a esta guía, se muestra cómo implementar un servicio enlazado en Xamarin. Android:
 
 ```csharp
 using Android.App;
@@ -124,11 +124,11 @@ namespace BoundServiceDemo
 }
 ```
 
-En el ejemplo, el `OnCreate` método inicializa un objeto que contiene la lógica para recuperar y aplicar formato a una marca de tiempo que se solicitarían por un cliente. Cuando el primer cliente intenta enlazar con el servicio, Android invocará el `OnBind` método. Creará una instancia de este servicio un `TimestampBinder` objeto que permitirá a los clientes tener acceso a esta instancia del servicio en ejecución. La `TimestampBinder` clase se describe en la sección siguiente.
+En el ejemplo, el `OnCreate` método inicializa un objeto que contiene la lógica para recuperar y dar formato a una marca de tiempo que el cliente solicitará. Cuando el primer cliente intenta enlazar con el servicio, Android invocará el `OnBind` método. Este servicio creará una instancia `TimestampBinder` de un objeto que permitirá a los clientes tener acceso a esta instancia del servicio en ejecución. La `TimestampBinder` clase se describe en la sección siguiente.
 
-### <a name="implementing-ibinder"></a>Implementar IBinder
+### <a name="implementing-ibinder"></a>Implementación de IBinder
 
-Como se mencionó, un `IBinder` objeto proporciona el canal de comunicación entre un cliente y un servicio. Las aplicaciones de Android no deben implementar la `IBinder` interfaz, el [ `Android.OS.Binder` ](https://developer.xamarin.com/api/type/Android.OS.Binder/) debe ampliarse. La `Binder` clase proporciona gran parte de la infraestructura necesaria que es necesario serializar el objeto de enlazador desde el servicio (que puede estar ejecutándose en un proceso independiente) al cliente. En la mayoría de los casos, el `Binder` subclase es sólo unas pocas líneas de código y contiene una referencia al servicio. En este ejemplo, `TimestampBinder` tiene una propiedad que expone el `TimestampService` al cliente:
+Como se mencionó, `IBinder` un objeto proporciona el canal de comunicación entre un cliente y un servicio. Las aplicaciones de Android no deben `IBinder` implementar la interfaz [`Android.OS.Binder`](xref:Android.OS.Binder) ; se debe extender. La `Binder` clase proporciona gran parte de la infraestructura necesaria, lo que es necesario para calcular las referencias del objeto de enlazador desde el servicio (que se puede estar ejecutando en un proceso independiente) al cliente. En la mayoría de los `Binder` casos, la subclase es solo unas pocas líneas de código y ajusta una referencia al servicio. En este ejemplo, `TimestampBinder` tiene una propiedad que expone el `TimestampService` al cliente:
 
 ```csharp
 public class TimestampBinder : Binder
@@ -148,13 +148,13 @@ Esto `Binder` hace posible invocar los métodos públicos en el servicio; por ej
 string currentTimestamp = serviceConnection.Binder.Service.GetFormattedTimestamp()
 ```
 
-Una vez `Binder` ha sido extendido, es necesario implementar `IServiceConnection` para conectar todos los elementos entre sí.
+Una `Binder` vez que se ha ampliado, es necesario implementar `IServiceConnection` para conectar todo.
 
 ### <a name="creating-the-service-connection"></a>Crear la conexión de servicio
 
-El `IServiceConnection` presentará | introducir | exponer | conectar el `Binder` objeto al cliente. Además de implementar el `IServiceConnection` interfaz, debe extender la clase `Java.Lang.Object`. La conexión de servicio también debe proporcionar alguna manera que el cliente puede tener acceso a la `Binder` (y, por tanto, se comunican con el servicio dependiente).
+El `IServiceConnection` objeto presentará | introducción | exponer | conectar `Binder` el objeto al cliente. Además de implementar la `IServiceConnection` interfaz, la clase debe extenderse. `Java.Lang.Object` La conexión de servicio también debe proporcionar alguna manera en que el cliente puede `Binder` tener acceso a (y, por tanto, comunicarse con el servicio enlazado).
 
-Este código es desde el que acompaña a proyecto de ejemplo es una manera de implementar `IServiceConnection`:
+Este código procede del proyecto de ejemplo que lo acompaña es una forma posible de `IServiceConnection`implementar:
 
 ```csharp
 using Android.Util;
@@ -224,19 +224,19 @@ namespace BoundServiceDemo
 
 ```
 
-Como parte del proceso de enlace, se invocará Android el `OnServiceConnected` método, que proporciona el `name` del servicio que se va a enlazar y `binder` que contiene una referencia al propio servicio. En este ejemplo, la conexión de servicio tiene dos propiedades, que contiene una referencia para el enlazador y una marca booleana para si el cliente está conectado al servicio o no.
+Como parte del proceso de enlace, Android invocará el `OnServiceConnected` método, proporcionando el `name` del servicio que se está enlazando y el `binder` que contiene una referencia al propio servicio. En este ejemplo, la conexión de servicio tiene dos propiedades, una que contiene una referencia al enlazador y una marca booleana para si el cliente está conectado al servicio o no.
 
-El `OnServiceDisconnected` método solo se invoca cuando la conexión entre un cliente y un servicio se pierde o se divide inesperadamente. Este método permite al cliente una oportunidad para responder a la interrupción del servicio.  
+El `OnServiceDisconnected` método solo se invoca cuando la conexión entre un cliente y un servicio se pierde o se interrumpe inesperadamente. Este método permite al cliente tener la oportunidad de responder a la interrupción en el servicio.  
 
-## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Iniciar y enlazar a un servicio con una intención explícita
+## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Inicio y enlace a un servicio con un intento explícito
 
-Para utilizar un servicio dependiente, un cliente (por ejemplo, una actividad) debe crear una instancia de un objeto que implementa `Android.Content.IServiceConnection` e invocar el `BindService` método. `BindService` devolverá `true` si el servicio está enlazado, `false` si no lo está. El método `BindService` toma tres parámetros:
+Para usar un servicio enlazado, un cliente (por ejemplo, una actividad) debe crear una instancia de un `Android.Content.IServiceConnection` objeto que implemente e invoque el `BindService` método. `BindService`devolverá `true` si el servicio está enlazado `false` a, si no lo está. El método `BindService` toma tres parámetros:
 
-* **Un `Intent`**  &ndash; la intención explícitamente debe identificar qué servicio se conecte a.
-* **Un `IServiceConnection` objeto** &ndash; este objeto es un intermediario que proporciona los métodos de devolución de llamada para notificar al cliente cuando se inicia y detiene el servicio dependiente.
-* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) enumeración** &ndash; este parámetro es un conjunto de marcas se usan por el sistema al enlazar el objeto. El valor más frecuente es [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), que iniciará automáticamente el servicio si no se está ejecutando.
+* **Una`Intent`** intención&ndash; debe identificar explícitamente a qué servicio se va a conectar.
+* **Un`IServiceConnection`**  objeto&ndash; este objeto es un intermediario que proporciona métodos de devolución de llamada para notificar al cliente cuando se inicia y se detiene el servicio enlazado.
+* enum este parámetro es un conjunto de marcas que el sistema utiliza para enlazar el objeto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; El valor que se usa con [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate)más frecuencia es, que iniciará automáticamente el servicio si aún no se está ejecutando.
 
-El fragmento de código siguiente es un ejemplo de cómo iniciar un servicio dependiente en una actividad mediante una intención explícita:
+El siguiente fragmento de código es un ejemplo de cómo iniciar un servicio enlazado en una actividad mediante un intento explícito:
 
 ```csharp
 protected override void OnStart ()
@@ -255,13 +255,13 @@ protected override void OnStart ()
 ```
 
 > [!IMPORTANT]
-> Solo es posible enlazar a un servicio con una intención explícita iniciarlo con Android 5.0 (API nivel 21).
+> A partir de Android 5,0 (nivel de API 21), solo es posible enlazar a un servicio con una intención explícita.
 
-## <a name="architectural-notes-about-the-service-connection-and-the-binder"></a>Notas de la arquitectura sobre la conexión de servicio y el enlazador.
+## <a name="architectural-notes-about-the-service-connection-and-the-binder"></a>Notas arquitectónicas sobre la conexión de servicio y el enlazador.
 
-Pueden desaprobar algunos puristas de programación orientada a objetos de la implementación anterior de la `TimestampBinder` clase ya que es una infracción de la [ley de Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) que, en su forma más sencilla indica "no responder a extraños; solo se hable con sus amigos". En esta implementación expone el hormigón `TimestampService` clase a todos los clientes.
+Algunos puristas de OOP pueden no aprobar la implementación anterior de la `TimestampBinder` clase, ya que es una infracción de la [ley de Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) que, en sus Estados de formulario más sencillos, no se comunica con los extraños; Hable solo con sus amigos. Esta implementación concreta expone la clase concreta `TimestampService` a todos los clientes.
 
-En realidad, no es necesario para el cliente conocer el `TimestampService` y exponer esa clase concreta a los clientes puede hacer que una aplicación más frágil y es más difícil de mantener durante su ciclo de vida. Un enfoque alternativo es usar una interfaz que expone el `GetFormattedTimestamp()` método y las llamadas al servicio mediante proxy el `Binder` (o posible la clase de conexión de servicio):  
+En realidad, no es necesario que el cliente conozca `TimestampService` y exponer esa clase concreta a los clientes puede hacer que una aplicación sea más frágil y más difícil de mantener durante su duración. Un enfoque alternativo es usar una interfaz que exponga el `GetFormattedTimestamp()` método y las llamadas de proxy al servicio a través de `Binder` (o posible la clase de conexión de servicio):  
 
 ```csharp
 public class TimestampBinder : Binder, IGetTimestamp
@@ -279,7 +279,7 @@ public class TimestampBinder : Binder, IGetTimestamp
 }
 ```
 
-Este ejemplo concreto que una actividad invocar métodos en el propio servicio:
+En este ejemplo concreto se permite que una actividad invoque métodos en el propio servicio:
 
 ```csharp
 // In this example the Activity is only talking to a friend, i.e. the IGetTimestamp interface provided by the Binder.
@@ -289,10 +289,10 @@ string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.Content.Bind](https://developer.xamarin.com/api/type/Android.Content.Bind/)
-- [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [Android.Content.IServiceConnection](https://developer.xamarin.com/api/type/Android.Content.IServiceConnection/)
-- [Android.OS.Binder](https://developer.xamarin.com/api/type/Android.OS.Binder/)
-- [Android.OS.IBinder](https://developer.xamarin.com/api/type/Android.OS.IBinder)
-- [BoundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/BoundServiceDemo/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.Content.Bind](xref:Android.Content.Bind)
+- [Android.Content.Context](xref:Android.Content.Context)
+- [Android.Content.IServiceConnection](xref:Android.Content.IServiceConnection)
+- [Android.OS.Binder](xref:Android.OS.Binder)
+- [Android.OS.IBinder](xref:Android.OS.IBinder)
+- [BoundServiceDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-boundservicedemo)
