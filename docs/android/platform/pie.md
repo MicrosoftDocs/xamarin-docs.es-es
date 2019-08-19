@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 52141141ab525c7407fa2f3ff2dca749473b39c1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: d4d7379e1d4d2dd605331b30d692df299f5f5c13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511453"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523662"
 ---
 # <a name="android-pie-features"></a>Características de gráficos circulares de Android
 
@@ -95,13 +95,13 @@ Para obtener información sobre cómo usar el emulador de Android para probar y 
 
 El gráfico circular de Android presenta una variedad de características nuevas. Algunas de estas nuevas características están pensadas para aprovechar las nuevas capacidades de hardware que ofrecen los dispositivos Android más recientes, mientras que otras están diseñadas para mejorar aún más la experiencia del usuario de Android:
 
--   **Mostrar compatibilidad con** recortes Proporciona API para buscar la ubicación y la forma del recorte en la parte superior de la pantalla en los dispositivos Android más recientes. &ndash;
+- **Mostrar compatibilidad con** recortes Proporciona API para buscar la ubicación y la forma del recorte en la parte superior de la pantalla en los dispositivos Android más recientes. &ndash;
 
--   **Mejoras** en las notificaciones Ahora, los mensajes de notificación pueden mostrar imágenes, `Person` y se usa una nueva clase para simplificar los participantes de la conversación. &ndash;
+- **Mejoras** en las notificaciones Ahora, los mensajes de notificación pueden mostrar imágenes, `Person` y se usa una nueva clase para simplificar los participantes de la conversación. &ndash;
 
--   **Posicionamiento interior** &ndash; Compatibilidad de la plataforma con el protocolo WiFi de tiempo de ida y vuelta, que permite que las aplicaciones usen dispositivos wifi para la navegación en la configuración de interior.
+- **Posicionamiento interior** &ndash; Compatibilidad de la plataforma con el protocolo WiFi de tiempo de ida y vuelta, que permite que las aplicaciones usen dispositivos wifi para la navegación en la configuración de interior.
 
--   **Compatibilidad con varias cámaras** &ndash; Ofrece la capacidad de obtener acceso a flujos simultáneamente desde varias cámaras físicas (como cámaras duales y de doble retroceso).
+- **Compatibilidad con varias cámaras** &ndash; Ofrece la capacidad de obtener acceso a flujos simultáneamente desde varias cámaras físicas (como cámaras duales y de doble retroceso).
 
 
 En las secciones siguientes se resaltan estas características y se proporcionan ejemplos de código breves para ayudarle a empezar a usarlas en la aplicación.
@@ -115,11 +115,11 @@ La captura de pantalla siguiente proporciona un ejemplo de emulador de un recort
 
 Para administrar el modo en que la ventana de la aplicación muestra su contenido en los dispositivos con un recorte de pantalla, el gráfico circular de Android ha agregado un nuevo atributo de diseño de ventana de [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) . Este atributo se puede establecer en uno de los siguientes valores:
 
--   [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; La ventana nunca se puede superponer con el área de recorte.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; La ventana nunca se puede superponer con el área de recorte.
 
--   [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; La ventana se puede extender en el área de recorte, pero solo en los bordes cortos de la pantalla. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; La ventana se puede extender en el área de recorte, pero solo en los bordes cortos de la pantalla. 
 
--   [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; Se permite que la ventana se extienda en el área de recorte si el recorte está incluido en una barra del sistema.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; Se permite que la ventana se extienda en el área de recorte si el recorte está incluido en una barra del sistema.
 
 Por ejemplo, para evitar que la ventana de la aplicación se superponga con el área de recorte, establezca el modo de recorte del diseño en *nunca*: 
 
@@ -145,13 +145,13 @@ Para obtener más información acerca de las nuevas características de recorte 
 
 El gráfico circular de Android presenta las siguientes mejoras para mejorar la experiencia de mensajería:
 
--   Los canales de notificación (introducidos en [Android Oreo](~/android/platform/oreo.md)) ahora admiten el bloqueo de grupos de canales.
+- Los canales de notificación (introducidos en [Android Oreo](~/android/platform/oreo.md)) ahora admiten el bloqueo de grupos de canales.
 
--   El sistema de notificación tiene tres nuevas categorías de no molestar (priorizar alarmas, sonidos del sistema y orígenes multimedia). Además, hay siete nuevos modos de no molestar que se pueden usar para suprimir las interrupciones visuales (como los distintivos, las luces de notificación, la apariencia de la barra de estado y el inicio de las actividades de pantalla completa).
+- El sistema de notificación tiene tres nuevas categorías de no molestar (priorizar alarmas, sonidos del sistema y orígenes multimedia). Además, hay siete nuevos modos de no molestar que se pueden usar para suprimir las interrupciones visuales (como los distintivos, las luces de notificación, la apariencia de la barra de estado y el inicio de las actividades de pantalla completa).
 
--   Se ha agregado una nueva clase [Person](https://developer.android.com/reference/android/app/Person.html) para representar al remitente de un mensaje. El uso de esta clase ayuda a optimizar la representación de cada notificación al identificar a las personas implicadas en una conversación (incluidos los avatares y los URI).
+- Se ha agregado una nueva clase [Person](https://developer.android.com/reference/android/app/Person.html) para representar al remitente de un mensaje. El uso de esta clase ayuda a optimizar la representación de cada notificación al identificar a las personas implicadas en una conversación (incluidos los avatares y los URI).
 
--   Las notificaciones ahora pueden mostrar imágenes. 
+- Las notificaciones ahora pueden mostrar imágenes. 
 
 En el ejemplo siguiente se muestra cómo usar las nuevas API para generar una notificación que contiene una imagen. En las siguientes capturas de pantallas, se publica una notificación de texto y va seguida de una notificación con una imagen incrustada. Cuando las notificaciones se expanden (como se muestra a la derecha), se muestra el texto de la primera notificación y se amplía la imagen incrustada en la segunda notificación:
 
@@ -209,7 +209,7 @@ Para obtener más información sobre la creación de notificaciones, consulte [n
 
 ### <a name="indoor-positioning"></a>Posicionamiento interior
 
-El gráfico circular de Android proporciona compatibilidad con IEEE 802.11 MC (también conocido como _tiempo de ida y vuelta_ _WiFi),_ lo que permite que las aplicaciones detecten la distancia a uno o varios puntos de acceso Wi-Fi. Con esta información, es posible que la aplicación aproveche el *posicionamiento interior* con una precisión de uno a dos metros. En los dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11 MC, la aplicación puede ofrecer características de navegación, como el control basado en la ubicación de dispositivos inteligentes o las instrucciones que se activan a través de un almacén:
+El gráfico circular de Android proporciona compatibilidad con IEEE 802.11 MC (también conocido como _tiempo de ida_ yvuelta WiFi), lo que permite que las aplicaciones detecten la distancia a uno o varios puntos de acceso Wi-Fi. Con esta información, es posible que la aplicación aproveche el *posicionamiento interior* con una precisión de uno a dos metros. En los dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11 MC, la aplicación puede ofrecer características de navegación, como el control basado en la ubicación de dispositivos inteligentes o las instrucciones que se activan a través de un almacén:
 
 [![Ejemplo de navegación en interiores con RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
@@ -230,13 +230,13 @@ Para obtener más información sobre la compatibilidad con varias cámaras en An
 
 Además, el gráfico circular de Android admite otras características nuevas:
 
--   La nueva clase [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , que se puede usar para dibujar y mostrar imágenes animadas.
+- La nueva clase [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , que se puede usar para dibujar y mostrar imágenes animadas.
 
--   Nueva clase [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que reemplaza `BitmapFactory`A. `ImageDecoder`se puede usar para descodificar `AnimatedImageDrawable`un.
+- Nueva clase [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que reemplaza `BitmapFactory`A. `ImageDecoder`se puede usar para descodificar `AnimatedImageDrawable`un.
 
--   Compatibilidad con imágenes HDR (alto rango dinámico) y vídeo HEIF (formato de archivo de imagen de alta eficiencia).
+- Compatibilidad con imágenes HDR (alto rango dinámico) y vídeo HEIF (formato de archivo de imagen de alta eficiencia).
 
--   El [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) se ha mejorado para controlar de forma más inteligente los trabajos relacionados con la red. El nuevo método [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) de la clase [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) devuelve la mejor red para realizar cualquier solicitud de red para un trabajo determinado.
+- El [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) se ha mejorado para controlar de forma más inteligente los trabajos relacionados con la red. El nuevo método [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) de la clase [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) devuelve la mejor red para realizar cualquier solicitud de red para un trabajo determinado.
 
 Para obtener más información sobre las características más recientes de los gráficos circulares de Android, consulte [características y API de Android 9](https://developer.android.com/about/versions/pie/android-9.0).
 
@@ -245,11 +245,11 @@ Para obtener más información sobre las características más recientes de los 
 
 Cuando la versión de Android de destino se establece en el nivel de API 28, hay varios cambios de plataforma que pueden afectar al comportamiento de la aplicación incluso si no está implementando las nuevas características descritas anteriormente. La lista siguiente es un breve resumen de estos cambios:
 
--  Las aplicaciones deben solicitar ahora permisos de primer plano antes de usar los servicios en primer plano.
+- Las aplicaciones deben solicitar ahora permisos de primer plano antes de usar los servicios en primer plano.
 
--  Si la aplicación tiene más de un proceso, no puede compartir un único directorio de datos de [vista](xref:Android.Webkit.WebView) única en todos los procesos.
+- Si la aplicación tiene más de un proceso, no puede compartir un único directorio de datos de [vista](xref:Android.Webkit.WebView) única en todos los procesos.
 
--  Ya no se permite acceder directamente al directorio de datos de otra aplicación mediante la ruta de acceso.
+- Ya no se permite acceder directamente al directorio de datos de otra aplicación mediante la ruta de acceso.
 
 Para más información sobre los cambios de comportamiento de las aplicaciones destinadas a Android P, consulte [cambios de comportamiento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 

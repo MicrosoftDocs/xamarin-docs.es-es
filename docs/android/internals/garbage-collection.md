@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 3b89f63d42b01140d73cd1551c75211d2fea8e27
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: 7563dede151d2f72e9496d71041a0f590f0cf68e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510725"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524791"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
 Xamarin. Android usa el recolector de [elementos no utilizados simple](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)de mono. Se trata de un recolector de elementos no utilizados de marca y barrido con dos generaciones y un *espacio de objetos grande*, con dos tipos de colecciones: 
 
--   Colecciones secundarias (recopila el montón Gen0) 
--   Colecciones principales (recopila GEN1 y montones de espacio de objetos grandes). 
+- Colecciones secundarias (recopila el montón Gen0) 
+- Colecciones principales (recopila GEN1 y montones de espacio de objetos grandes). 
 
 > [!NOTE]
 > En ausencia de una colección explícita a través de [GC. Las colecciones collect ()](xref:System.GC.Collect) están *a petición*, en función de las asignaciones del montón. *No se trata de un sistema de recuento de referencias*; los objetos *no se recopilarán en cuanto no haya referencias pendientes*o cuando se haya salido de un ámbito. El GC se ejecutará cuando el montón secundario se quede sin memoria para nuevas asignaciones. Si no hay ninguna asignación, no se ejecutará.
@@ -34,35 +34,35 @@ Las colecciones principales son costosas y menos frecuentes, y se usan para recu
 
 Hay tres categorías de tipos de objeto.
 
--   **Objetos administrados**: tipos que *no* heredan de [java. lang. Object](xref:Java.Lang.Object) , por ejemplo, [System. String](xref:System.String). 
+- **Objetos administrados**: tipos que *no* heredan de [java. lang. Object](xref:Java.Lang.Object) , por ejemplo, [System. String](xref:System.String). 
     Estos se recopilan normalmente por el GC. 
 
--   **Objetos de Java**: Tipos de Java que están presentes en la máquina virtual en tiempo de ejecución de Android, pero no se exponen a la máquina virtual mono. Estas son aburridas y no se tratarán más adelante. Estos se recopilan normalmente con la máquina virtual en tiempo de ejecución de Android. 
+- **Objetos de Java**: Tipos de Java que están presentes en la máquina virtual en tiempo de ejecución de Android, pero no se exponen a la máquina virtual mono. Estas son aburridas y no se tratarán más adelante. Estos se recopilan normalmente con la máquina virtual en tiempo de ejecución de Android. 
 
--   **Objetos del mismo nivel**: tipos que implementan [IJavaObject](xref:Android.Runtime.IJavaObject) , por ejemplo, todas las subclases [java. lang. Object](xref:Java.Lang.Object) y [java. lang. Throwable](xref:Java.Lang.Throwable) . Las instancias de estos tipos tienen dos "mitades" de un *elemento administrado del mismo nivel* y un *elemento nativo del mismo nivel*. El elemento administrado del mismo nivel es una C# instancia de la clase. El elemento nativo del mismo nivel es una instancia de una clase de Java dentro de la máquina C# virtual en tiempo de ejecución de Android y la propiedad [IJavaObject. Handle](xref:Android.Runtime.IJavaObject.Handle) contiene una referencia global de JNI al elemento nativo del mismo nivel. 
+- **Objetos del mismo nivel**: tipos que implementan [IJavaObject](xref:Android.Runtime.IJavaObject) , por ejemplo, todas las subclases [java. lang. Object](xref:Java.Lang.Object) y [java. lang. Throwable](xref:Java.Lang.Throwable) . Las instancias de estos tipos tienen dos "mitades" de un *elemento administrado del mismo nivel* y un *elemento nativo del mismo nivel*. El elemento administrado del mismo nivel es una C# instancia de la clase. El elemento nativo del mismo nivel es una instancia de una clase de Java dentro de la máquina C# virtual en tiempo de ejecución de Android y la propiedad [IJavaObject. Handle](xref:Android.Runtime.IJavaObject.Handle) contiene una referencia global de JNI al elemento nativo del mismo nivel. 
 
 
 Hay dos tipos de elementos del mismo nivel nativos:
 
--   **Entornos del mismo nivel** : Tipos de Java "normales" que no saben nada de Xamarin. Android, por ejemplo, [Android. Content. Context](xref:Android.Content.Context).
+- **Entornos del mismo nivel** : Tipos de Java "normales" que no saben nada de Xamarin. Android, por ejemplo,   [Android. Content. Context](xref:Android.Content.Context).
 
--   **Elementos del mismo nivel de usuario** : Los contenedores a los que se [puede llamar de Android](~/android/platform/java-integration/working-with-jni.md) , que se generan en tiempo de compilación para cada subclase Java. lang. Object presente dentro de la aplicación.
+- **Elementos del mismo nivel de usuario** :   Los contenedores a los que se [puede llamar de Android](~/android/platform/java-integration/working-with-jni.md) , que se generan en tiempo de compilación para cada subclase Java. lang. Object presente dentro de la aplicación.
 
 
 Como hay dos máquinas virtuales dentro de un proceso de Xamarin. Android, hay dos tipos de recolecciones de elementos no utilizados:
 
--   Recopilaciones en tiempo de ejecución de Android 
--   Colecciones mono 
+- Recopilaciones en tiempo de ejecución de Android 
+- Colecciones mono 
 
 Las recopilaciones en tiempo de ejecución de Android funcionan con normalidad, pero con una advertencia: una referencia global de JNI se trata como una raíz de GC. Por consiguiente, si hay una referencia global de JNI que contiene un objeto de máquina virtual en tiempo de ejecución de Android, *no se puede* recopilar el objeto, aunque de lo contrario se pueda seleccionar para la colección.
 
 Las colecciones mono son donde ocurre la diversión. Los objetos administrados se recopilan normalmente. Los objetos del mismo nivel se recopilan realizando el proceso siguiente:
 
-1.  Todos los objetos del mismo nivel válidos para la colección mono tienen su referencia global de JNI reemplazada por una referencia global débil de JNI. 
+1. Todos los objetos del mismo nivel válidos para la colección mono tienen su referencia global de JNI reemplazada por una referencia global débil de JNI. 
 
-2.  Se invoca un GC de VM en tiempo de ejecución de Android. Se puede recopilar cualquier instancia nativa del mismo nivel. 
+2. Se invoca un GC de VM en tiempo de ejecución de Android. Se puede recopilar cualquier instancia nativa del mismo nivel. 
 
-3.  Se comprueban las referencias globales de JNI creadas en (1). Si se ha recopilado la referencia débil, se recopila el objeto del mismo nivel. Si *no* se ha recopilado la referencia débil, la referencia débil se reemplaza con una referencia global de JNI y el objeto del mismo nivel no se recopila. Nota: en la API 14 +, esto significa que el valor devuelto de `IJavaObject.Handle` puede cambiar después de un GC. 
+3. Se comprueban las referencias globales de JNI creadas en (1). Si se ha recopilado la referencia débil, se recopila el objeto del mismo nivel. Si *no* se ha recopilado la referencia débil, la referencia débil se reemplaza con una referencia global de JNI y el objeto del mismo nivel no se recopila. Nota: en la API 14 +, esto significa que el valor devuelto de `IJavaObject.Handle` puede cambiar después de un GC. 
 
 El resultado final de todo esto es que una instancia de un objeto del mismo nivel se activará siempre que el código administrado (por ejemplo, almacenado en una `static` variable) haga referencia a él o que el código de Java haga referencia a él. Además, la duración de los elementos del mismo nivel nativos se ampliará más allá de lo que de otro modo activaría, ya que el elemento nativo del mismo nivel no se recopilará hasta que el elemento nativo del mismo nivel y el del mismo nivel administrados sean recopilables.
 
@@ -94,27 +94,27 @@ Xamarin. Android ofrece administración de memoria transparente con Android y el
 
 El puente de GC funciona durante una recolección de elementos no utilizados mono y averigua qué objetos del mismo nivel necesitan su "vida" verificado con el montón de tiempo de ejecución de Android. El puente de GC realiza esta determinación realizando los pasos siguientes (en orden):
 
-1.  Inducir el gráfico de referencia mono de objetos del mismo nivel inalcanzables a los objetos de Java que representan. 
+1. Inducir el gráfico de referencia mono de objetos del mismo nivel inalcanzables a los objetos de Java que representan. 
 
-2.  Realice un GC de Java.
+2. Realice un GC de Java.
 
-3.  Compruebe qué objetos están realmente inactivos. 
+3. Compruebe qué objetos están realmente inactivos. 
 
 Este complejo proceso es lo que permite a las subclases de hacer referencia a cualquier objeto de forma gratuita; quita todas las restricciones a `Java.Lang.Object` C#las que se pueden enlazar los objetos de Java. Debido a esta complejidad, el proceso del puente puede resultar muy caro y puede causar pausas perceptibles en una aplicación. Si la aplicación experimenta pausas significativas, merece la pena investigar una de las tres implementaciones de puente de GC siguientes: 
 
--   **Tarjan** : un diseño completamente nuevo del puente de GC basado en el [algoritmo de Robert Tarjan y la propagación de referencias hacia atrás](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
+- **Tarjan** : un diseño completamente nuevo del puente de GC basado en el [algoritmo de Robert Tarjan y la propagación de referencias hacia atrás](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     Tiene el mejor rendimiento en nuestras cargas de trabajo simuladas, pero también tiene la mayor parte del código experimental. 
 
--   **New** : una revisión importante del código original, corrigiendo dos instancias de comportamiento cuadrático pero manteniendo el algoritmo principal (basado en el [algoritmo de Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) para buscar componentes fuertemente conectados). 
+- **New** : una revisión importante del código original, corrigiendo dos instancias de comportamiento cuadrático pero manteniendo el algoritmo principal (basado en el [algoritmo de Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) para buscar componentes fuertemente conectados). 
 
--   **Antigua** : la implementación original (considerada la más estable de los tres). Este es el puente que una aplicación debe usar si las `GC_BRIDGE` pausas son aceptables. 
+- **Antigua** : la implementación original (considerada la más estable de los tres). Este es el puente que una aplicación debe usar si las `GC_BRIDGE` pausas son aceptables. 
 
 
 La única manera de averiguar qué puente de GC funciona mejor es experimentar en una aplicación y analizar la salida. Hay dos maneras de recopilar los datos de pruebas comparativas: 
 
--   **Habilitar registro** : habilite el registro (como se describe en la sección de [configuración](~/android/internals/garbage-collection.md) ) para cada opción de puente de GC y, a continuación, Capture y compare los resultados del registro de cada configuración. Inspeccione `GC` los mensajes para cada opción; en concreto, `GC_BRIDGE` los mensajes. Pausar hasta 150MS para las aplicaciones no interactivas son tolerable, pero las pausas anteriores a 60 ms para aplicaciones muy interactivas (como los juegos) son un problema. 
+- **Habilitar registro** : habilite el registro (como se describe en la sección de [configuración](~/android/internals/garbage-collection.md) ) para cada opción de puente de GC y, a continuación, Capture y compare los resultados del registro de cada configuración. Inspeccione `GC` los mensajes para cada opción; en concreto, `GC_BRIDGE` los mensajes. Pausar hasta 150MS para las aplicaciones no interactivas son tolerable, pero las pausas anteriores a 60 ms para aplicaciones muy interactivas (como los juegos) son un problema. 
 
--   **Habilitar cuentas de puente** : las cuentas de puente muestran el costo medio de los objetos a los que apunta cada objeto implicado en el proceso del puente. Al ordenar esta información por tamaño, se proporcionarán sugerencias sobre lo que contiene la mayor cantidad de objetos adicionales. 
+- **Habilitar cuentas de puente** : las cuentas de puente muestran el costo medio de los objetos a los que apunta cada objeto implicado en el proceso del puente. Al ordenar esta información por tamaño, se proporcionarán sugerencias sobre lo que contiene la mayor cantidad de objetos adicionales. 
 
 
 Para especificar la `GC_BRIDGE` opción que una aplicación debe hacer, `bridge-implementation=old` `bridge-implementation=new` pasar o `bridge-implementation=tarjan` a la `MONO_GC_PARAMS` variable de entorno, por ejemplo: 
@@ -157,7 +157,7 @@ puede devolver una *instancia almacenada en caché*. Si varios subprocesos propo
 
 #### <a name="disposing-bound-java-types"></a>Eliminación de tipos de Java enlazados
 
-Si la instancia es de un tipo de Java enlazado, la instancia se puede eliminar siempre *que la instancia* no se vuelva a usar desde el código administrado *y* no se pueda compartir la instancia de Java entre los subprocesos (vea la explicación anterior `Typeface.Create()` ). (Tomar esta determinación puede ser difícil). La próxima vez que la instancia de Java Escriba código administrado, se creará un *nuevo* contenedor. 
+Si la instancia es de un tipo de Java enlazado, la instancia se puede eliminar siempre que la instancia no se vuelva a usar desde el código administrado *y* no se pueda compartir la instancia de Java entre los subprocesos (vea la explicación anterior `Typeface.Create()` ). (Tomar esta determinación puede ser difícil). La próxima vez que la instancia de Java Escriba código administrado, se creará un *nuevo* contenedor. 
 
 Esto suele ser útil cuando se trata de Drawables y de otras instancias de recursos pesados:
 
@@ -171,7 +171,7 @@ Lo anterior es seguro porque el elemento del mismo nivel que [drawable. CreateFr
 
 #### <a name="disposing-other-types"></a>Desechar otros tipos 
 
-Si la instancia hace referencia a un tipo que no es un enlace de un tipo de Java (como `Activity`un personalizado), **no** llame `Dispose()` a a menos que *sepa* que ningún código Java llamará a los métodos invalidados en esa instancia. Si no lo hace, se [ `NotSupportedException`producirán.](~/android/internals/architecture.md#Premature_Dispose_Calls) 
+Si la instancia hace referencia a un tipo que no es un enlace de un tipo de Java (como `Activity`un personalizado), **no** llame `Dispose()` a a menos que *sepa* que ningún código Java llamará a los métodos invalidados en esa instancia. Si no lo hace, se [ `NotSupportedException`](~/android/internals/architecture.md#Premature_Dispose_Calls)producirán. 
 
 Por ejemplo, si tiene un agente de escucha de clic personalizado:
 
@@ -319,9 +319,9 @@ Las colecciones secundarias se pueden realizar manualmente mediante una llamada 
 
 Si la aplicación tiene un "ciclo de aranceles" en el que la misma cosa se realiza una y otra vez, puede ser aconsejable realizar manualmente una colección secundaria una vez que haya finalizado el ciclo de servicio. Los ciclos de servicio de ejemplo incluyen: 
 
--  El ciclo de representación de una sola trama de juego.
--  Toda la interacción con un cuadro de diálogo de aplicación determinado (abrir, rellenar, cerrar) 
--  Un grupo de solicitudes de red para actualizar o sincronizar los datos de la aplicación.
+- El ciclo de representación de una sola trama de juego.
+- Toda la interacción con un cuadro de diálogo de aplicación determinado (abrir, rellenar, cerrar) 
+- Un grupo de solicitudes de red para actualizar o sincronizar los datos de la aplicación.
 
 
 
@@ -333,9 +333,9 @@ Deben realizarse con poca frecuencia y pueden tener un tiempo de pausa de un seg
 
 Las colecciones principales solo se deben invocar manualmente, si alguna vez: 
 
--   Al final de los ciclos de servicio largos y cuando una pausa larga no presente ningún problema al usuario. 
+- Al final de los ciclos de servicio largos y cuando una pausa larga no presente ningún problema al usuario. 
 
--   Dentro de un método [Android. app. Activity. OnLowMemory ()](xref:Android.App.Activity.OnLowMemory) invalidado. 
+- Dentro de un método [Android. app. Activity. OnLowMemory ()](xref:Android.App.Activity.OnLowMemory) invalidado. 
 
 
 
@@ -351,16 +351,16 @@ El recolector de elementos no utilizados de Xamarin. Android se `MONO_GC_PARAMS`
 
 La `MONO_GC_PARAMS` variable de entorno es una lista separada por comas de los parámetros siguientes: 
 
--   `nursery-size` = *tamaño* : Establece el tamaño de la enfermera. El tamaño se especifica en bytes y debe ser una potencia de dos. Los `k` sufijos `m` y `g` se pueden usar para especificar kilo-, mega-and gigabytes, respectivamente. La enfermera es la primera generación (de dos). Una enfermera más grande normalmente acelerará el programa, pero evidentemente usará más memoria. El tamaño de enfermeras predeterminado es de 512 KB. 
+- `nursery-size` = *tamaño* : Establece el tamaño de la enfermera. El tamaño se especifica en bytes y debe ser una potencia de dos. Los `k` sufijos `m` y `g` se pueden usar para especificar kilo-, mega-and gigabytes, respectivamente. La enfermera es la primera generación (de dos). Una enfermera más grande normalmente acelerará el programa, pero evidentemente usará más memoria. El tamaño de enfermeras predeterminado es de 512 KB. 
 
--   `soft-heap-limit` = *tamaño* : El consumo máximo de memoria administrada de destino para la aplicación. Cuando el uso de memoria está por debajo del valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
+- `soft-heap-limit` = *tamaño* : El consumo máximo de memoria administrada de destino para la aplicación. Cuando el uso de memoria está por debajo del valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
     Por encima de este límite, el GC está optimizado para el uso de memoria (más colecciones). 
 
--   `evacuation-threshold` = *umbral* : Establece el umbral de evacuación en porcentaje. El valor debe ser un entero comprendido en el intervalo comprendido entre 0 y 100. El valor predeterminado es 66. Si la fase de barrido de la colección encuentra que el grupo de un tipo de bloque de montón específico es inferior a este porcentaje, se realizará una recolección de copia para ese tipo de bloque en la siguiente colección principal, con lo que se restaurará la ocupación para que se acerque al 100 por ciento. Un valor de 0 desactiva la evacuación. 
+- `evacuation-threshold` = *umbral* : Establece el umbral de evacuación en porcentaje. El valor debe ser un entero comprendido en el intervalo comprendido entre 0 y 100. El valor predeterminado es 66. Si la fase de barrido de la colección encuentra que el grupo de un tipo de bloque de montón específico es inferior a este porcentaje, se realizará una recolección de copia para ese tipo de bloque en la siguiente colección principal, con lo que se restaurará la ocupación para que se acerque al 100 por ciento. Un valor de 0 desactiva la evacuación. 
 
--   `bridge-implementation` = *implementación de puente* : Esto establecerá la opción puente de GC para solucionar los problemas de rendimiento de GC. Hay tres valores posibles: *Old* , *New* , *Tarjan*.
+- `bridge-implementation` = *implementación de puente* : Esto establecerá la opción puente de GC para solucionar los problemas de rendimiento de GC. Hay tres valores posibles: *Old* , *New* , *Tarjan*.
 
--   `bridge-require-precise-merge`: El puente Tarjan contiene una optimización que, en raras ocasiones, puede hacer que se recopile un objeto en un GC después de que se convierta en un elemento no utilizado. Al incluir esta opción, se deshabilita la optimización, lo que permite que los GC sean más predecibles, pero potencialmente más lentos.
+- `bridge-require-precise-merge`: El puente Tarjan contiene una optimización que, en raras ocasiones, puede hacer que se recopile un objeto en un GC después de que se convierta en un elemento no utilizado. Al incluir esta opción, se deshabilita la optimización, lo que permite que los GC sean más predecibles, pero potencialmente más lentos.
 
 Por ejemplo, para configurar el GC para que tenga un límite de tamaño de montón de 128 MB, agregue un nuevo archivo al proyecto con una `AndroidEnvironment` **acción de compilación** de con el contenido: 
 

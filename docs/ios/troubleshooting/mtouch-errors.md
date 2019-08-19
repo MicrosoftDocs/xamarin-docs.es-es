@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 736195182713eb35ad18fb1ae12c5cc7ddce0787
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
-ms.translationtype: HT
+ms.openlocfilehash: 77174070b227bf8cba94078b1ed1f0a6a8fcf1f8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012519"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528712"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
@@ -130,8 +130,8 @@ SGen (--Sgen) debe estar habilitado si está habilitada la generación de perfil
 
 Esto puede ocurrir en las siguientes circunstancias:
 
-*  ARMv6 está habilitado y Xcode 4,5 o posterior está instalado.
-*  ARMv7s está habilitado y Xcode 4,4 o una versión anterior está instalado.
+* ARMv6 está habilitado y Xcode 4,5 o posterior está instalado.
+* ARMv7s está habilitado y Xcode 4,4 o una versión anterior está instalado.
 
 Compruebe que la versión instalada de Xcode admite las arquitecturas seleccionadas.
 
@@ -165,12 +165,12 @@ Mtouch no reconoce el argumento de la línea de comandos mencionado en el mensaj
 
 Hay varias opciones para Mtouch que no se pueden usar simultáneamente:
 
--  --logdev
--  --installdev
--  --killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+- --logdev
+- --installdev
+- --killdev
+- --launchdev
+- --launchdebug
+- --launchsim
 
 <a name="MT0020" />
 
@@ -334,7 +334,7 @@ La ruta de acceso de `--sdkroot` Xcode pasada con no existe. Especifique una rut
 
 <a name="MT0056" />
 
-### <a name="mt0056-cannot-find-xcode-in-the-default-location-applicationsxcodeapp-please-install-xcode-or-pass-a-custom-path-using---sdkroot-path"></a>MT0056: No se puede encontrar Xcode en la ubicación predeterminada (/Applications/Xcode.app). Instale Xcode o pase una ruta de acceso personalizada mediante--SDKRoot <path>.
+### <a name="mt0056-cannot-find-xcode-in-the-default-location-applicationsxcodeapp-please-install-xcode-or-pass-a-custom-path-using---sdkroot-path"></a>MT0056: No se puede encontrar Xcode en la ubicación predeterminada (/Applications/Xcode.app). Instale Xcode o pase una ruta de acceso personalizada mediante--SDKRoot \<path >.
 
 <a name="MT0057" />
 
@@ -585,7 +585,9 @@ Los ensamblados que se mencionan en el mensaje de error tienen destinos de compi
 
 Por ejemplo:
 
-    --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
+  --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
 
 En este ejemplo se intenta crear una biblioteca dinámica y un marco de trabajo con la misma marca`MyBinary`().
 
@@ -597,7 +599,9 @@ Todos los ensamblados que se mencionan en el mensaje de error se compilan en un 
 
 Por ejemplo:
 
-    --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
+--assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
 
 En este ejemplo se intenta crear un objeto estático`MyBinary`() formado por dos ensamblados`Assembly1.dll` ( `Assembly2.dll`y), que no están permitidos.
 
@@ -619,7 +623,9 @@ El nombre del destino de compilación del ensamblado debe ser un nombre de archi
 
 Por ejemplo, estos valores desencadenarán este error:
 
-    --assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
+--assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
 
 porque `my/path.o` no es un nombre de archivo válido debido al carácter separador de directorio.
 
@@ -1143,7 +1149,7 @@ Si va a implementar una aplicación empresarial o a usar un perfil de aprovision
 
 ### <a name="mt1108-could-not-find-developer-tools-for-this-xx-yy-device"></a>MT1108: No se encuentran las herramientas de desarrollo para este dispositivo XX (YY).
 
-Algunas operaciones de Mtouch requieren que el archivo <tt>DeveloperDiskImage. dmg</tt> esté presente.   Este archivo forma parte de Xcode y normalmente se encuentra en relación con el SDK con el que se va a realizar la compilación, en <tt>Xcode. app/Contents/Developer/iPhone. Platform/DeviceSupport/version/DeveloperDiskImage. dmg</tt>.
+Algunas operaciones de Mtouch requieren que el `DeveloperDiskImage.dmg` archivo esté presente.   Este archivo forma parte de Xcode y normalmente se encuentra en relación con el SDK con el que se va a realizar la compilación `Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg`, en.
 
 Este error puede producirse porque no tiene un DeveloperDiskImage. dmg que coincida con el dispositivo que ha conectado.
 
@@ -1254,7 +1260,7 @@ Esto suele indicar un problema con Xcode.
 Cosas que intentar solucionar:
 
 * Usar el simulador una vez en Xcode.
-* Pase una versión del SDK explícita mediante-- <version>SDK.
+* Pase una versión del SDK explícita con la versión \<de SDK >.
 * Vuelva a instalar Xcode.
 
 <a name="MT1221" />
@@ -1425,7 +1431,9 @@ Asegúrese de que la biblioteca dinámica es una biblioteca dinámica de Mach-O 
 
 El formato de una biblioteca se puede comprobar con el `file` comando de un terminal:
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1601" />
 
@@ -1437,7 +1445,9 @@ Asegúrese de que la biblioteca estática es una biblioteca estática de Mach-O 
 
 El formato de una biblioteca se puede comprobar con el `file` comando de un terminal:
 
-    file -arch all -l /path/to/library.a
+```
+file -arch all -l /path/to/library.a
+```
 
 <a name="MT1602" />
 
@@ -1449,7 +1459,9 @@ Asegúrese de que la biblioteca dinámica es una biblioteca dinámica de Mach-O 
 
 El formato de una biblioteca se puede comprobar con el `file` comando de un terminal:
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1603" />
 
@@ -1461,7 +1473,9 @@ Asegúrese de que el archivo FAT sea válido.
 
 El formato de un archivo FAT se puede comprobar con el `file` comando de un terminal:
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 <a name="MT1604" />
 
@@ -1473,7 +1487,9 @@ Asegúrese de que el archivo es una biblioteca dinámica de Mach-O válida.
 
 El formato de un archivo se puede comprobar con el `file` comando de un terminal:
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 ## <a name="mt2xxx-linker-error-messages"></a>MT2xxx: Mensajes de error del vinculador
 
@@ -2225,7 +2241,9 @@ Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace 
 * Un enlace de terceros requiere un marco, pero el enlace no lo especifica en su `[LinkWith]` atributo. Solución
   - Si es el autor del enlace de terceros o tiene acceso a su origen, modifique el atributo del `[LinkWith]` enlace para incluir el marco que necesita:
 
-            [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```csharp
+    [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```
 
   - Si no puede modificar el enlace de terceros, puede vincular manualmente con el marco de trabajo necesario pasando `-gcc_flags '-framework SystemFramework'` a `mtouch` (esto se hace modificando los argumentos Mtouch adicionales en la página Opciones de compilación de iOS del proyecto). Recuerde que esto se debe hacer para cada configuración de proyecto.
 * En algunos casos, un enlace administrado se compone de varias bibliotecas nativas y todas deben incluirse en los enlaces. Es posible tener más de una biblioteca nativa en cada proyecto de enlace, por lo que la solución consiste simplemente en agregar todas las bibliotecas nativas necesarias al proyecto de enlace.</li>
@@ -2235,9 +2253,11 @@ Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace 
 * Una biblioteca o enlace de terceros se compiló con C++, pero el enlace no lo especifica en su `[LinkWith]` atributo. Normalmente, esto es bastante fácil de reconocer, ya que los símbolos tienen C++ símbolos alterados (un ejemplo común `__ZNKSt9exception4whatEv`es).
   - Si es el autor del enlace de terceros o tiene acceso a su origen, modifique el atributo del `[LinkWith]` enlace para establecer la `IsCxx` marca:
 
-            [LinkWith ("mylib.a", IsCxx = true)]
+    ```csharp
+    [LinkWith ("mylib.a", IsCxx = true)]
+    ```
 
-  - Si no puede modificar el enlace de terceros o si está vinculando manualmente con una biblioteca de terceros, puede establecer la marca equivalente pasando <code>-cxx</code> a Mtouch (esto se hace modificando los argumentos de Mtouch adicionales en la página Opciones de compilación de iOS del proyecto). . Recuerde que esto se debe hacer para cada configuración de proyecto.
+  - Si no puede modificar el enlace de terceros o si está vinculando manualmente con una biblioteca de terceros, puede establecer la marca equivalente pasando `-cxx` a Mtouch (esto se hace modificando los argumentos de Mtouch adicionales en la página Opciones de compilación de iOS del proyecto). . Recuerde que esto se debe hacer para cada configuración de proyecto.
 
 <a name="MT5211" />
 
@@ -2245,14 +2265,16 @@ Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace 
 
 Esto sucede cuando el vinculador nativo no puede encontrar una clase de Objective-C a la que se hace referencia en alguna parte. Hay varias razones por las que esto puede ocurrir: lo mismo que para [MT5210](#MT5210) y además:
 
-* Un enlace de terceros enlaza un protocolo de Objective-C, pero no lo anotó con el <code>[Protocol]</code> atributo en su definición de API. Solución
+* Un enlace de terceros enlaza un protocolo de Objective-C, pero no lo anotó con el `[Protocol]` atributo en su definición de API. Solución
   - Agregue el atributo `[Protocol]` que falta:
 
-              [BaseType (typeof (NSObject))]
-              [Protocol] // Add this
-              public interface MyProtocol
-              {
-              }
+    ```csharp
+    [BaseType (typeof (NSObject))]
+    [Protocol] // Add this
+    public interface MyProtocol
+    {
+    }
+    ```
 
 <a name="MT5212" />
 
@@ -2265,48 +2287,54 @@ Esto sucede cuando el vinculador nativo detecta símbolos duplicados entre todas
 * Una biblioteca nativa no se ha creado correctamente y contiene el mismo símbolo más de una vez.
   Para confirmarlo, use el siguiente conjunto de comandos de un terminal (reemplace i386 por x86_64/ARMv7/armv7s/arm64 según la arquitectura que esté compilando para):
 
-        # Native libraries are usually fat libraries, containing binary code for
-        # several architectures in the same file. First we extract the binary
-        # code for the architecture we're interested in.
-        lipo libNative.a -thin i386 -output libNative.i386.a
+  ```
+  # Native libraries are usually fat libraries, containing binary code for
+  # several architectures in the same file. First we extract the binary
+  # code for the architecture we're interested in.
+  lipo libNative.a -thin i386 -output libNative.i386.a
 
-        # Now query the native library for the duplicated symbol.
-        nm libNative.i386.a | fgrep 'SYMBOL'
+  # Now query the native library for the duplicated symbol.
+  nm libNative.i386.a | fgrep 'SYMBOL'
 
-        # You can also list the object files inside the native library.
-        # In most cases this will reveal duplicated object files.
-        ar -t libNative.i386.a
+  # You can also list the object files inside the native library.
+  # In most cases this will reveal duplicated object files.
+  ar -t libNative.i386.a
+  ```
 
   Hay algunas formas posibles de solucionar este error:
 
   - Solicite que el proveedor de la biblioteca nativa lo corrija y proporcione la versión actualizada.
   - Corregirlo mediante la eliminación de los archivos de objeto adicionales (esto solo funciona si el problema es en realidad archivos de objeto duplicados)
 
-            # Find out if the library is a fat library, and which
-            # architectures it contains.
-            lipo -info libNative.a
+  ```
+  # Find out if the library is a fat library, and which
+  # architectures it contains.
+  lipo -info libNative.a
 
-            # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
-            lipo libNative.a -thin ARCH -output libNative.ARCH.a
+  # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
+  lipo libNative.a -thin ARCH -output libNative.ARCH.a
 
-            # Extract the object files for the offending architecture
-            # This will remove the duplicates by overwriting them
-            # (since they have the same filename)
-            mkdir -p ARCH
-            cd ARCH
-            ar -x ../libNative.ARCH.a
+  # Extract the object files for the offending architecture
+  # This will remove the duplicates by overwriting them
+  # (since they have the same filename)
+  mkdir -p ARCH
+  cd ARCH
+  ar -x ../libNative.ARCH.a
 
-            # Reassemble the object files in an .a
-            ar -r ../libNative.ARCH.a *.o
-            cd ..
+  # Reassemble the object files in an .a
+  ar -r ../libNative.ARCH.a *.o
+  cd ..
 
-            # Reassemble the fat library
-            lipo *.a -create -output libNative.a
+  # Reassemble the fat library
+  lipo *.a -create -output libNative.a
+  ```
 
   - Pida al enlazador que quite el código no utilizado. Xamarin. iOS lo hará automáticamente si se cumplen todas las condiciones siguientes:
     - Todos los `[LinkWith]` atributos de los enlaces de terceros tienen habilitado Smartlink:
 
-            [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```csharp
+      [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```
 
     - No `-gcc_flags` se pasa a Mtouch (en el campo de argumentos Mtouch adicionales de las opciones de compilación de iOS del proyecto).
     - También es posible solicitar directamente al enlazador que quite el código no utilizado agregando `-gcc_flags -dead_strip` a los argumentos Mtouch adicionales en las opciones de compilación de iOS del proyecto.

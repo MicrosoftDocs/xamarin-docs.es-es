@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2958e456aeb25ba39697ad82500d574907e963e4
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: d32b96cd489f84ea93e7ada9b6458272d0dea1c0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510761"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524862"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principios de diseño de la API de Xamarin. Android
 
@@ -24,23 +24,23 @@ En el núcleo de Xamarin. Android hay un motor de interoperabilidad que C# une e
 
 Estos son algunos de los principios de diseño para el enlace de Xamarin. Android
 
--  Se ajusta a las [directrices de diseño de .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Se ajusta a las [directrices de diseño de .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
--  Permite a los desarrolladores subclases de clases de Java.
+- Permite a los desarrolladores subclases de clases de Java.
 
--  La subclase debe funcionar C# con construcciones estándar.
+- La subclase debe funcionar C# con construcciones estándar.
 
--  Derivar de una clase existente.
+- Derivar de una clase existente.
 
--  Llame al constructor base para encadenar.
+- Llame al constructor base para encadenar.
 
--  Los métodos de invalidación deben realizarse con C#el sistema de invalidación de.
+- Los métodos de invalidación deben realizarse con C#el sistema de invalidación de.
 
--  Facilite las tareas comunes de Java y las tareas de Java difíciles.
+- Facilite las tareas comunes de Java y las tareas de Java difíciles.
 
--  Exponga las propiedades de C# JavaBean como propiedades.
+- Exponga las propiedades de C# JavaBean como propiedades.
 
--  Exponga una API fuertemente tipada:
+- Exponga una API fuertemente tipada:
 
     - Aumentar la seguridad de tipos.
 
@@ -50,7 +50,7 @@ Estos son algunos de los principios de diseño para el enlace de Xamarin. Androi
 
     - Permite la documentación del menú emergente del IDE.
 
--  Anime la exploración en el IDE de las API:
+- Anime la exploración en el IDE de las API:
 
     - Use alternativas de marco para minimizar la exposición de Classlib de Java.
 
@@ -73,13 +73,13 @@ Los enlaces a la plataforma Android se encuentran en el `Mono.Android.dll` ensam
 
 Las API de Android usan las colecciones Java. util exhaustivamente para proporcionar listas, conjuntos y asignaciones. Estos elementos se exponen mediante las interfaces [System. Collections. Generic](xref:System.Collections.Generic) en nuestro enlace. Las asignaciones fundamentales son:
 
--   [java. util. set<E> ](https://developer.android.com/reference/java/util/Set.html) se asigna al tipo de sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), clase auxiliar [Android. Runtime.<T>JavaSet](xref:Android.Runtime.JavaSet`1).
+- [Java. util. set\<E >](https://developer.android.com/reference/java/util/Set.html) se asigna al tipo de sistema [\<ICollection T >](xref:System.Collections.Generic.ICollection`1), clase auxiliar [Android. Runtime.\<JavaSet T >](xref:Android.Runtime.JavaSet`1).
 
--   [java. util. List<E> ](https://developer.android.com/reference/java/util/List.html) se asigna al tipo de sistema [IList<T>](xref:System.Collections.Generic.IList`1), clase auxiliar [Android. Runtime.<T>JavaList](xref:Android.Runtime.JavaList`1).
+- [Java. util. List\<E >](https://developer.android.com/reference/java/util/List.html) asigna al tipo de [sistema\<IList T >](xref:System.Collections.Generic.IList`1), clase auxiliar [Android. Runtime. JavaList\<T >](xref:Android.Runtime.JavaList`1).
 
--   [java. util. Map < K, V >](https://developer.android.com/reference/java/util/Map.html) se asigna al tipo de sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), clase auxiliar [Android. Runtime. JavaDictionary < K, V >](xref:Android.Runtime.JavaDictionary`2).
+- [java. util. Map < K, V >](https://developer.android.com/reference/java/util/Map.html) se asigna al tipo de sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), clase auxiliar [Android. Runtime. JavaDictionary < K, V >](xref:Android.Runtime.JavaDictionary`2).
 
--   [java. util. Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) se asigna al tipo de sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), clase auxiliar [Android. Runtime.<T>JavaCollection](xref:Android.Runtime.JavaCollection`1).
+- [Java. util. Collection\<E >](https://developer.android.com/reference/java/util/Collection.html) se asigna al tipo de sistema [\<ICollection T >](xref:System.Collections.Generic.ICollection`1), clase auxiliar [Android. Runtime.\<JavaCollection T >](xref:Android.Runtime.JavaCollection`1).
 
 Hemos proporcionado clases de aplicación auxiliar para facilitar la serialización de estos tipos de forma más rápida. Cuando sea posible, se recomienda usar estas colecciones proporcionadas en lugar de la implementación proporcionada por [`List<T>`](xref:System.Collections.Generic.List`1) el [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2)marco, como o. Las implementaciones de [Android. Runtime](xref:Android.Runtime) usan internamente una colección de Java nativa y, por lo tanto, no requieren la copia a y desde una colección nativa al pasar a un miembro de la API de Android.
 
@@ -108,13 +108,13 @@ if (goodSource.Count != 4) // false
 
 Los métodos de Java se transforman en propiedades, si es necesario:
 
--  El par `T getFoo()` de métodos de `void setFoo(T)` Java y se transforman en la `Foo` propiedad. Ejemplo: [Activity. Intent](xref:Android.App.Activity.Intent).
+- El par `T getFoo()` de métodos de `void setFoo(T)` Java y se transforman en la `Foo` propiedad. Ejemplo: [Activity. Intent](xref:Android.App.Activity.Intent).
 
--  El método `getFoo()` Java se transforma en la propiedad foo de solo lectura. Ejemplo: [Context. packagename](xref:Android.Content.Context.PackageName).
+- El método `getFoo()` Java se transforma en la propiedad foo de solo lectura. Ejemplo: [Context. packagename](xref:Android.Content.Context.PackageName).
 
--  No se generan propiedades de solo establecimiento.
+- No se generan propiedades de solo establecimiento.
 
--  *No* se generan propiedades si el tipo de propiedad sería una matriz.
+- *No* se generan propiedades si el tipo de propiedad sería una matriz.
 
 
 
@@ -234,7 +234,7 @@ Los tipos anidados se "reubican" para ser elementos del mismo nivel de la interf
 
 Por ejemplo, considere la interfaz [Android. os.](xref:Android.OS.Parcelable) comparable.
 La interfaz empaquetable contiene métodos, tipos anidados y constantes. Los métodos de interfaz que se pueden empaquetar se colocan en la interfaz de [Android. os. IParcelable](xref:Android.OS.IParcelable) .
-Las constantes de interfaz que se pueden empaquetar se colocan en el tipo [Android. os. ParcelableConsts](xref:Android.OS.ParcelableConsts) . Los tipos anidados [Android. os. subClassLoaderCreators&lt;. T >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) y [Android. os. Parcel.&lt;Creator t >](https://developer.android.com/reference/android/os/Parcelable.Creator.html) no están enlazados actualmente debido a las limitaciones de nuestra compatibilidad con genéricos; si se admiten, debería estar presente como las interfaces *Android. os. IParcelableClassLoaderCreator* y *Android. os. IParcelableCreator* . Por ejemplo, la interfaz anidada [Android. os. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) está enlazada como la interfaz [Android. os. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
+Las constantes de interfaz que se pueden empaquetar se colocan en el tipo [Android. os. ParcelableConsts](xref:Android.OS.ParcelableConsts) . Los tipos anidados [Android. os. subClassLoaderCreators\<. T >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) y [Android. os. Parcel.\<Creator t >](https://developer.android.com/reference/android/os/Parcelable.Creator.html) no están enlazados actualmente debido a las limitaciones de nuestra compatibilidad con genéricos; si se admiten, debería estar presente como las interfaces *Android. os. IParcelableClassLoaderCreator* y *Android. os. IParcelableCreator* . Por ejemplo, la interfaz anidada [Android. os. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) está enlazada como la interfaz [Android. os. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
 > A partir de Xamarin. Android 1,9, las constantes de la interfaz de Java se duplican en un esfuerzo por simplificar el traslado de código Java. Esto ayuda a mejorar el traslado del código Java que se basa en las constantes de la interfaz del [proveedor de Android](https://developer.android.com/reference/android/provider/package-summary.html) .
@@ -268,21 +268,23 @@ Varias API de Android están diseñadas para [funcionar en los identificadores d
 
 Por ejemplo, una aplicación de Android de ejemplo que contiene un diseño de `main.axml`la interfaz de usuario (), una `strings.xml`cadena de tabla de internacionalización () y algunos iconos ( `drawable-*/icon.png`) mantendrían sus recursos en el directorio "Resources" de la aplicación:
 
-    Resources/
-        drawable-hdpi/
-            icon.png
+```
+Resources/
+    drawable-hdpi/
+        icon.png
 
-        drawable-ldpi/
-            icon.png
+    drawable-ldpi/
+        icon.png
 
-        drawable-mdpi/
-            icon.png
+    drawable-mdpi/
+        icon.png
 
-        layout/
-            main.axml
+    layout/
+        main.axml
 
-        values/
-            strings.xml
+    values/
+        strings.xml
+```
 
 Las API nativas de Android no funcionan directamente con los nombres de archivo, sino que operan en los identificadores de recursos. Al compilar una aplicación de Android que usa recursos, el sistema de compilación empaquetará los recursos para su distribución y `Resource` generará una clase denominada que contiene los tokens para cada uno de los recursos incluidos. Por ejemplo, para el diseño de recursos anterior, esto es lo que expondría la clase de R:
 
