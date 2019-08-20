@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 366f0cac6c21d5e749871a289bdec78f64299c0b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9a8c047305d4e91ac588f503eaa98d8bddb4a8a8
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656447"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620750"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicaciones de entrenamiento de watchos en Xamarin
 
@@ -84,11 +84,11 @@ Hay tres pasos principales para iniciar una sesión de entrenamiento:
 Antes de que una aplicación pueda acceder a los datos de HealthKit del usuario, debe solicitar y recibir la autorización del usuario. Dependiendo de la naturaleza de la aplicación de entrenamiento, podría crear los siguientes tipos de solicitudes:
 
 - Autorización para escribir datos:
-    - Entrenamientos
+  - Entrenamientos
 - Autorización para leer datos:
-    - Energía quemada
-    - Posición
-    - Frecuencia cardíaca  
+  - Energía quemada
+  - Posición
+  - Frecuencia cardíaca  
 
 Para que una aplicación pueda solicitar autorización, debe configurarse para tener acceso a HealthKit.
 
@@ -112,8 +112,8 @@ using HealthKit;
 
 // Create a workout configuration
 var configuration = new HKWorkoutConfiguration () {
-    ActivityType = HKWorkoutActivityType.Running,
-    LocationType = HKWorkoutSessionLocationType.Outdoor
+  ActivityType = HKWorkoutActivityType.Running,
+  LocationType = HKWorkoutSessionLocationType.Outdoor
 };
 ```
 
@@ -129,86 +129,86 @@ using HealthKit;
 
 namespace MonkeyWorkout.MWWatchExtension
 {
-    public class OutdoorRunDelegate : HKWorkoutSessionDelegate
+  public class OutdoorRunDelegate : HKWorkoutSessionDelegate
+  {
+    #region Computed Properties
+    public HKHealthStore HealthStore { get; private set; }
+    public HKWorkoutSession WorkoutSession { get; private set;}
+    #endregion
+
+    #region Constructors
+    public OutdoorRunDelegate (HKHealthStore healthStore, HKWorkoutSession workoutSession)
     {
-        #region Computed Properties
-        public HKHealthStore HealthStore { get; private set; }
-        public HKWorkoutSession WorkoutSession { get; private set;}
-        #endregion
+      // Initialize
+      this.HealthStore = healthStore;
+      this.WorkoutSession = workoutSession;
 
-        #region Constructors
-        public OutdoorRunDelegate (HKHealthStore healthStore, HKWorkoutSession workoutSession)
-        {
-            // Initialize
-            this.HealthStore = healthStore;
-            this.WorkoutSession = workoutSession;
-
-            // Attach this delegate to the session
-            workoutSession.Delegate = this;
-        }
-        #endregion
-
-        #region Override Methods
-        public override void DidFail (HKWorkoutSession workoutSession, NSError error)
-        {
-            // Handle workout session failing
-            RaiseFailed ();
-        }
-
-        public override void DidChangeToState (HKWorkoutSession workoutSession, HKWorkoutSessionState toState, HKWorkoutSessionState fromState, NSDate date)
-        {
-            // Take action based on the change in state
-            switch (toState) {
-            case HKWorkoutSessionState.NotStarted:
-                break;
-            case HKWorkoutSessionState.Paused:
-                RaisePaused ();
-                break;
-            case HKWorkoutSessionState.Running:
-                RaiseRunning ();
-                break;
-            case HKWorkoutSessionState.Ended:
-                RaiseEnded ();
-                break;
-            }
-
-        }
-
-        public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
-        {
-            base.DidGenerateEvent (workoutSession, @event);
-        }
-        #endregion
-
-        #region Events
-        public delegate void OutdoorRunEventDelegate ();
-
-        public event OutdoorRunEventDelegate Failed;
-        internal void RaiseFailed ()
-        {
-            if (this.Failed != null) this.Failed ();
-        }
-
-
-        public event OutdoorRunEventDelegate Paused;
-        internal void RaisePaused ()
-        {
-            if (this.Paused != null) this.Paused ();
-        }
-
-        public event OutdoorRunEventDelegate Running;
-        internal void RaiseRunning ()
-        {
-            if (this.Running != null) this.Running ();
-        }
-
-        public event OutdoorRunEventDelegate Ended;
-        internal void RaiseEnded ()
-        {
-            if (this.Ended != null) this.Ended ();
-        }
-        #endregion
+      // Attach this delegate to the session
+      workoutSession.Delegate = this;
     }
+    #endregion
+
+    #region Override Methods
+    public override void DidFail (HKWorkoutSession workoutSession, NSError error)
+    {
+      // Handle workout session failing
+      RaiseFailed ();
+    }
+
+    public override void DidChangeToState (HKWorkoutSession workoutSession, HKWorkoutSessionState toState, HKWorkoutSessionState fromState, NSDate date)
+    {
+      // Take action based on the change in state
+      switch (toState) {
+      case HKWorkoutSessionState.NotStarted:
+        break;
+      case HKWorkoutSessionState.Paused:
+        RaisePaused ();
+        break;
+      case HKWorkoutSessionState.Running:
+        RaiseRunning ();
+        break;
+      case HKWorkoutSessionState.Ended:
+        RaiseEnded ();
+        break;
+      }
+
+    }
+
+    public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
+    {
+      base.DidGenerateEvent (workoutSession, @event);
+    }
+    #endregion
+
+    #region Events
+    public delegate void OutdoorRunEventDelegate ();
+
+    public event OutdoorRunEventDelegate Failed;
+    internal void RaiseFailed ()
+    {
+      if (this.Failed != null) this.Failed ();
+    }
+
+
+    public event OutdoorRunEventDelegate Paused;
+    internal void RaisePaused ()
+    {
+      if (this.Paused != null) this.Paused ();
+    }
+
+    public event OutdoorRunEventDelegate Running;
+    internal void RaiseRunning ()
+    {
+      if (this.Running != null) this.Running ();
+    }
+
+    public event OutdoorRunEventDelegate Ended;
+    internal void RaiseEnded ()
+    {
+      if (this.Ended != null) this.Ended ();
+    }
+    #endregion
+  }
 }
 ```
 
@@ -230,44 +230,44 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 
 private void StartOutdoorRun ()
 {
-    // Create a workout configuration
-    var configuration = new HKWorkoutConfiguration () {
-        ActivityType = HKWorkoutActivityType.Running,
-        LocationType = HKWorkoutSessionLocationType.Outdoor
-    };
+  // Create a workout configuration
+  var configuration = new HKWorkoutConfiguration () {
+    ActivityType = HKWorkoutActivityType.Running,
+    LocationType = HKWorkoutSessionLocationType.Outdoor
+  };
 
-    // Create workout session
-    // Start workout session
-    NSError error = null;
-    var workoutSession = new HKWorkoutSession (configuration, out error);
+  // Create workout session
+  // Start workout session
+  NSError error = null;
+  var workoutSession = new HKWorkoutSession (configuration, out error);
 
-    // Successful?
-    if (error != null) {
-        // Report error to user and return
-        return;
-    }
+  // Successful?
+  if (error != null) {
+    // Report error to user and return
+    return;
+  }
 
-    // Create workout session delegate and wire-up events
-    RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
+  // Create workout session delegate and wire-up events
+  RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
 
-    RunDelegate.Failed += () => {
-        // Handle the session failing
-    };
+  RunDelegate.Failed += () => {
+    // Handle the session failing
+  };
 
-    RunDelegate.Paused += () => {
-        // Handle the session being paused
-    };
+  RunDelegate.Paused += () => {
+    // Handle the session being paused
+  };
 
-    RunDelegate.Running += () => {
-        // Handle the session running
-    };
+  RunDelegate.Running += () => {
+    // Handle the session running
+  };
 
-    RunDelegate.Ended += () => {
-        // Handle the session ending
-    };
+  RunDelegate.Ended += () => {
+    // Handle the session ending
+  };
 
-    // Start session
-    HealthStore.StartWorkoutSession (workoutSession);
+  // Start session
+  HealthStore.StartWorkoutSession (workoutSession);
 }
 ```
 
@@ -302,34 +302,34 @@ Eche un vistazo al siguiente código de ejemplo:
 ```csharp
 private void ObserveHealthKitSamples ()
 {
-    // Get the starting date of the required samples
-    var datePredicate = HKQuery.GetPredicateForSamples (WorkoutSession.StartDate, null, HKQueryOptions.StrictStartDate);
+  // Get the starting date of the required samples
+  var datePredicate = HKQuery.GetPredicateForSamples (WorkoutSession.StartDate, null, HKQueryOptions.StrictStartDate);
 
-    // Get data from the local device
-    var devices = new NSSet<HKDevice> (new HKDevice [] { HKDevice.LocalDevice });
-    var devicePredicate = HKQuery.GetPredicateForObjectsFromDevices (devices);
+  // Get data from the local device
+  var devices = new NSSet<HKDevice> (new HKDevice [] { HKDevice.LocalDevice });
+  var devicePredicate = HKQuery.GetPredicateForObjectsFromDevices (devices);
 
-    // Assemble compound predicate
-    var queryPredicate = NSCompoundPredicate.CreateAndPredicate (new NSPredicate [] { datePredicate, devicePredicate });
+  // Assemble compound predicate
+  var queryPredicate = NSCompoundPredicate.CreateAndPredicate (new NSPredicate [] { datePredicate, devicePredicate });
 
-    // Get ActiveEnergyBurned
-    var queryActiveEnergyBurned = new HKAnchoredObjectQuery (HKQuantityType.Create (HKQuantityTypeIdentifier.ActiveEnergyBurned), queryPredicate, null, HKSampleQuery.NoLimit, (query, addedObjects, deletedObjects, newAnchor, error) => {
-        // Valid?
-        if (error == null) {
-            // Yes, process all returned samples
-            foreach (HKSample sample in addedObjects) {
-                var quantitySample = sample as HKQuantitySample;
-                ActiveEnergyBurned += quantitySample.Quantity.GetDoubleValue (HKUnit.Joule);
-            }
-            
-            // Update User Interface
-            ...
-        }
-    });
+  // Get ActiveEnergyBurned
+  var queryActiveEnergyBurned = new HKAnchoredObjectQuery (HKQuantityType.Create (HKQuantityTypeIdentifier.ActiveEnergyBurned), queryPredicate, null, HKSampleQuery.NoLimit, (query, addedObjects, deletedObjects, newAnchor, error) => {
+    // Valid?
+    if (error == null) {
+      // Yes, process all returned samples
+      foreach (HKSample sample in addedObjects) {
+        var quantitySample = sample as HKQuantitySample;
+        ActiveEnergyBurned += quantitySample.Quantity.GetDoubleValue (HKUnit.Joule);
+      }
+      
+      // Update User Interface
+      ...
+    }
+  });
 
-    // Start Query
-    HealthStore.ExecuteQuery (queryActiveEnergyBurned);
-                                          
+  // Start Query
+  HealthStore.ExecuteQuery (queryActiveEnergyBurned);
+                                        
 }
 ```
 
@@ -367,26 +367,26 @@ public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEven
 
 public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
 {
-    base.DidGenerateEvent (workoutSession, @event);
-    
-    // Save HealthKit generated event
-    WorkoutEvents.Add (@event);
-    
-    // Take action based on the type of event
-    switch (@event.Type) {
-    case HKWorkoutEventType.Lap:
-        break;
-    case HKWorkoutEventType.Marker:
-        break;
-    case HKWorkoutEventType.MotionPaused:
-        break;
-    case HKWorkoutEventType.MotionResumed:
-        break;
-    case HKWorkoutEventType.Pause:
-        break;
-    case HKWorkoutEventType.Resume:
-        break;
-    }
+  base.DidGenerateEvent (workoutSession, @event);
+  
+  // Save HealthKit generated event
+  WorkoutEvents.Add (@event);
+  
+  // Take action based on the type of event
+  switch (@event.Type) {
+  case HKWorkoutEventType.Lap:
+    break;
+  case HKWorkoutEventType.Marker:
+    break;
+  case HKWorkoutEventType.MotionPaused:
+    break;
+  case HKWorkoutEventType.MotionResumed:
+    break;
+  case HKWorkoutEventType.Pause:
+    break;
+  case HKWorkoutEventType.Resume:
+    break;
+  }
 }
 ```
 
@@ -409,12 +409,12 @@ public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEven
 
 public void ReachedNextMile ()
 {
-    // Create and save marker event
-    var markerEvent = HKWorkoutEvent.Create (HKWorkoutEventType.Marker, NSDate.Now);
-    WorkoutEvents.Add (markerEvent);
+  // Create and save marker event
+  var markerEvent = HKWorkoutEvent.Create (HKWorkoutEventType.Marker, NSDate.Now);
+  WorkoutEvents.Add (markerEvent);
 
-    // Notify user
-    NotifyUserOfReachedMileGoal (++MilesRun);
+  // Notify user
+  NotifyUserOfReachedMileGoal (++MilesRun);
 }
 ```
 
@@ -437,14 +437,14 @@ public HKWorkoutSession WorkoutSession { get; set;}
 
 public void PauseWorkout ()
 {
-    // Pause the current workout
-    HealthStore.PauseWorkoutSession (WorkoutSession);
+  // Pause the current workout
+  HealthStore.PauseWorkoutSession (WorkoutSession);
 }
 
 public void ResumeWorkout ()
 {
-    // Pause the current workout
-    HealthStore.ResumeWorkoutSession (WorkoutSession);
+  // Pause the current workout
+  HealthStore.ResumeWorkoutSession (WorkoutSession);
 }
 ```
 
@@ -453,15 +453,15 @@ Los eventos pausar y reanudar que se generarán a partir de HealthKit se pueden 
 ```csharp
 public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
 {
-    base.DidGenerateEvent (workoutSession, @event);
+  base.DidGenerateEvent (workoutSession, @event);
 
-    // Take action based on the type of event
-    switch (@event.Type) {
-    case HKWorkoutEventType.Pause:
-        break;
-    case HKWorkoutEventType.Resume:
-        break;
-    }
+  // Take action based on the type of event
+  switch (@event.Type) {
+  case HKWorkoutEventType.Pause:
+    break;
+  case HKWorkoutEventType.Resume:
+    break;
+  }
 }
 ```
 
@@ -479,15 +479,15 @@ De nuevo, estos eventos se pueden controlar invalidando `DidGenerateEvent` el m�
 ```csharp
 public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
 {
-    base.DidGenerateEvent (workoutSession, @event);
-    
-    // Take action based on the type of event
-    switch (@event.Type) {
-    case HKWorkoutEventType.MotionPaused:
-        break;
-    case HKWorkoutEventType.MotionResumed:
-        break;
-    }
+  base.DidGenerateEvent (workoutSession, @event);
+  
+  // Take action based on the type of event
+  switch (@event.Type) {
+  case HKWorkoutEventType.MotionPaused:
+    break;
+  case HKWorkoutEventType.MotionResumed:
+    break;
+  }
 }
 
 ```
@@ -519,8 +519,8 @@ public HKWorkoutSession WorkoutSession { get; private set;}
 
 public void EndOutdoorRun ()
 {
-    // End the current workout session
-    HealthStore.EndWorkoutSession (WorkoutSession);
+  // End the current workout session
+  HealthStore.EndWorkoutSession (WorkoutSession);
 }
 ```
 
@@ -529,14 +529,14 @@ Se restablecerán los sensores de dispositivos a su modo normal. Cuando HealthKi
 ```csharp
 public override void DidChangeToState (HKWorkoutSession workoutSession, HKWorkoutSessionState toState, HKWorkoutSessionState fromState, NSDate date)
 {
-    // Take action based on the change in state
-    switch (toState) {
-    ...
-    case HKWorkoutSessionState.Ended:
-        StopObservingHealthKitSamples ();
-        RaiseEnded ();
-        break;
-    }
+  // Take action based on the change in state
+  switch (toState) {
+  ...
+  case HKWorkoutSessionState.Ended:
+    StopObservingHealthKitSamples ();
+    RaiseEnded ();
+    break;
+  }
 
 }
 ```
@@ -555,35 +555,35 @@ public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEven
 
 private void SaveWorkoutSession ()
 {
-    // Build required workout quantities 
-    var energyBurned = HKQuantity.FromQuantity (HKUnit.Joule, ActiveEnergyBurned);
-    var distance = HKQuantity.FromQuantity (HKUnit.Mile, MilesRun);
+  // Build required workout quantities 
+  var energyBurned = HKQuantity.FromQuantity (HKUnit.Joule, ActiveEnergyBurned);
+  var distance = HKQuantity.FromQuantity (HKUnit.Mile, MilesRun);
 
-    // Create any required metadata
-    var metadata = new NSMutableDictionary ();
-    metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
+  // Create any required metadata
+  var metadata = new NSMutableDictionary ();
+  metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
 
-    // Create workout
-    var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
-                                    WorkoutSession.StartDate, 
-                                    NSDate.Now, 
-                                    WorkoutEvents.ToArray (), 
-                                    energyBurned, 
-                                    distance, 
-                                    metadata);
+  // Create workout
+  var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
+                                  WorkoutSession.StartDate, 
+                                  NSDate.Now, 
+                                  WorkoutEvents.ToArray (), 
+                                  energyBurned, 
+                                  distance, 
+                                  metadata);
 
-    // Save to HealthKit
-    HealthStore.SaveObject (workout, (successful, error) => {
-        // Handle any errors
-        if (error == null) {
-            // Was the save successful
-            if (successful) {
+  // Save to HealthKit
+  HealthStore.SaveObject (workout, (successful, error) => {
+    // Handle any errors
+    if (error == null) {
+      // Was the save successful
+      if (successful) {
 
-            }
-        } else {
-            // Report error
-        }
-    });
+      }
+    } else {
+      // Report error
+    }
+  });
 
 }
 ```
@@ -617,18 +617,18 @@ public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
 
 private void SaveWorkoutSamples (HKWorkout workout)
 {
-    // Add samples to saved workout
-    HealthStore.AddSamples (WorkoutSamples.ToArray (), workout, (success, error) => {
-        // Handle any errors
-        if (error == null) {
-            // Was the save successful
-            if (success) {
+  // Add samples to saved workout
+  HealthStore.AddSamples (WorkoutSamples.ToArray (), workout, (success, error) => {
+    // Handle any errors
+    if (error == null) {
+      // Was the save successful
+      if (success) {
 
-            }
-        } else {
-            // Report error
-        }
-    });
+      }
+    } else {
+      // Report error
+    }
+  });
 }
 ```
 
@@ -667,28 +667,28 @@ public WCSession ConnectivitySession { get; set; } = WCSession.DefaultSession;
 
 private void StartOutdoorRun ()
 {
-    // Can the app communicate with the watchOS version of the app?
-    if (ConnectivitySession.ActivationState == WCSessionActivationState.Activated && ConnectivitySession.WatchAppInstalled) {
-        // Create a workout configuration
-        var configuration = new HKWorkoutConfiguration () {
-            ActivityType = HKWorkoutActivityType.Running,
-            LocationType = HKWorkoutSessionLocationType.Outdoor
-        };
+  // Can the app communicate with the watchOS version of the app?
+  if (ConnectivitySession.ActivationState == WCSessionActivationState.Activated && ConnectivitySession.WatchAppInstalled) {
+    // Create a workout configuration
+    var configuration = new HKWorkoutConfiguration () {
+      ActivityType = HKWorkoutActivityType.Running,
+      LocationType = HKWorkoutSessionLocationType.Outdoor
+    };
 
-        // Start watch app
-        HealthStore.StartWatchApp (configuration, (success, error) => {
-            // Handle any errors
-            if (error == null) {
-                // Was the save successful
-                if (success) {
-                    ...
-                }
-            } else {
-                // Report error
-                ...
-            }
-        });
-    }
+    // Start watch app
+    HealthStore.StartWatchApp (configuration, (success, error) => {
+      // Handle any errors
+      if (error == null) {
+        // Was the save successful
+        if (success) {
+          ...
+        }
+      } else {
+        // Report error
+        ...
+      }
+    });
+  }
 }
 ```
 
@@ -696,7 +696,7 @@ Este código garantiza que la versión de watchos de la aplicación está instal
 
 ```csharp
 if (ConnectivitySession.ActivationState == WCSessionActivationState.Activated && ConnectivitySession.WatchAppInstalled) {
-    ...
+  ...
 }
 ```
 
@@ -718,38 +718,38 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 
 public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
 {
-    // Create workout session
-    // Start workout session
-    NSError error = null;
-    var workoutSession = new HKWorkoutSession (workoutConfiguration, out error);
+  // Create workout session
+  // Start workout session
+  NSError error = null;
+  var workoutSession = new HKWorkoutSession (workoutConfiguration, out error);
 
-    // Successful?
-    if (error != null) {
-        // Report error to user and return
-        return;
-    }
+  // Successful?
+  if (error != null) {
+    // Report error to user and return
+    return;
+  }
 
-    // Create workout session delegate and wire-up events
-    RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
+  // Create workout session delegate and wire-up events
+  RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
 
-    RunDelegate.Failed += () => {
-        // Handle the session failing
-    };
+  RunDelegate.Failed += () => {
+    // Handle the session failing
+  };
 
-    RunDelegate.Paused += () => {
-        // Handle the session being paused
-    };
+  RunDelegate.Paused += () => {
+    // Handle the session being paused
+  };
 
-    RunDelegate.Running += () => {
-        // Handle the session running
-    };
+  RunDelegate.Running += () => {
+    // Handle the session running
+  };
 
-    RunDelegate.Ended += () => {
-        // Handle the session ending
-    };
+  RunDelegate.Ended += () => {
+    // Handle the session ending
+  };
 
-    // Start session
-    HealthStore.StartWorkoutSession (workoutSession);
+  // Start session
+  HealthStore.StartWorkoutSession (workoutSession);
 }
 ```
 
@@ -780,73 +780,73 @@ using WatchConnectivity;
 
 namespace MonkeyWorkout
 {
-    public partial class ViewController : UIViewController
+  public partial class ViewController : UIViewController
+  {
+    #region Computed Properties
+    public HKHealthStore HealthStore { get; set; } = new HKHealthStore ();
+    public WCSession ConnectivitySession { get; set; } = WCSession.DefaultSession;
+    #endregion
+
+    #region Constructors
+    protected ViewController (IntPtr handle) : base (handle)
     {
-        #region Computed Properties
-        public HKHealthStore HealthStore { get; set; } = new HKHealthStore ();
-        public WCSession ConnectivitySession { get; set; } = WCSession.DefaultSession;
-        #endregion
-
-        #region Constructors
-        protected ViewController (IntPtr handle) : base (handle)
-        {
-            // Note: this .ctor should not contain any initialization logic.
-        }
-        #endregion
-
-        #region Private Methods
-        private void InitializeWatchConnectivity ()
-        {
-            // Is Watch Connectivity supported?
-            if (!WCSession.IsSupported) {
-                // No, abort
-                return;
-            }
-
-            // Is the session already active?
-            if (ConnectivitySession.ActivationState != WCSessionActivationState.Activated) {
-                // No, start session
-                ConnectivitySession.ActivateSession ();
-            }
-        }
-
-        private void StartOutdoorRun ()
-        {
-            // Can the app communicate with the watchOS version of the app?
-            if (ConnectivitySession.ActivationState == WCSessionActivationState.Activated && ConnectivitySession.WatchAppInstalled) {
-                // Create a workout configuration
-                var configuration = new HKWorkoutConfiguration () {
-                    ActivityType = HKWorkoutActivityType.Running,
-                    LocationType = HKWorkoutSessionLocationType.Outdoor
-                };
-
-                // Start watch app
-                HealthStore.StartWatchApp (configuration, (success, error) => {
-                    // Handle any errors
-                    if (error == null) {
-                        // Was the save successful
-                        if (success) {
-                            ...
-                        }
-                    } else {
-                        // Report error
-                        ...
-                    }
-                });
-            }
-        }
-        #endregion
-
-        #region Override Methods
-        public override void ViewDidLoad ()
-        {
-            base.ViewDidLoad ();
-
-            // Start Watch Connectivity
-            InitializeWatchConnectivity ();
-        }
-        #endregion
+      // Note: this .ctor should not contain any initialization logic.
     }
+    #endregion
+
+    #region Private Methods
+    private void InitializeWatchConnectivity ()
+    {
+      // Is Watch Connectivity supported?
+      if (!WCSession.IsSupported) {
+        // No, abort
+        return;
+      }
+
+      // Is the session already active?
+      if (ConnectivitySession.ActivationState != WCSessionActivationState.Activated) {
+        // No, start session
+        ConnectivitySession.ActivateSession ();
+      }
+    }
+
+    private void StartOutdoorRun ()
+    {
+      // Can the app communicate with the watchOS version of the app?
+      if (ConnectivitySession.ActivationState == WCSessionActivationState.Activated && ConnectivitySession.WatchAppInstalled) {
+        // Create a workout configuration
+        var configuration = new HKWorkoutConfiguration () {
+          ActivityType = HKWorkoutActivityType.Running,
+          LocationType = HKWorkoutSessionLocationType.Outdoor
+        };
+
+        // Start watch app
+        HealthStore.StartWatchApp (configuration, (success, error) => {
+          // Handle any errors
+          if (error == null) {
+            // Was the save successful
+            if (success) {
+              ...
+            }
+          } else {
+            // Report error
+            ...
+          }
+        });
+      }
+    }
+    #endregion
+
+    #region Override Methods
+    public override void ViewDidLoad ()
+    {
+      base.ViewDidLoad ();
+
+      // Start Watch Connectivity
+      InitializeWatchConnectivity ();
+    }
+    #endregion
+  }
 }
 ```
 
@@ -862,92 +862,92 @@ using HealthKit;
 
 namespace MonkeyWorkout.MWWatchExtension
 {
-    public class ExtensionDelegate : WKExtensionDelegate
+  public class ExtensionDelegate : WKExtensionDelegate
+  {
+    #region Computed Properties
+    public HKHealthStore HealthStore { get; set;} = new HKHealthStore ();
+    public OutdoorRunDelegate RunDelegate { get; set; }
+    #endregion
+
+    #region Constructors
+    public ExtensionDelegate ()
     {
-        #region Computed Properties
-        public HKHealthStore HealthStore { get; set;} = new HKHealthStore ();
-        public OutdoorRunDelegate RunDelegate { get; set; }
-        #endregion
-
-        #region Constructors
-        public ExtensionDelegate ()
-        {
-            
-        }
-        #endregion
-
-        #region Private Methods
-        private void StartWorkoutSession (HKWorkoutConfiguration workoutConfiguration)
-        {
-            // Create workout session
-            // Start workout session
-            NSError error = null;
-            var workoutSession = new HKWorkoutSession (workoutConfiguration, out error);
-
-            // Successful?
-            if (error != null) {
-                // Report error to user and return
-                return;
-            }
-
-            // Create workout session delegate and wire-up events
-            RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
-
-            RunDelegate.Failed += () => {
-                // Handle the session failing
-                ...
-            };
-
-            RunDelegate.Paused += () => {
-                // Handle the session being paused
-                ...
-            };
-
-            RunDelegate.Running += () => {
-                // Handle the session running
-                ...
-            };
-
-            RunDelegate.Ended += () => {
-                // Handle the session ending
-                ...
-            };
-            
-            RunDelegate.ReachedMileGoal += (miles) => {
-                // Handle the reaching a session goal
-                ...
-            };
-
-            RunDelegate.HealthKitSamplesUpdated += () => {
-                // Update UI as required
-                ...
-            };
-
-            // Start session
-            HealthStore.StartWorkoutSession (workoutSession);
-        }
-
-        private void StartOutdoorRun ()
-        {
-            // Create a workout configuration
-            var workoutConfiguration = new HKWorkoutConfiguration () {
-                ActivityType = HKWorkoutActivityType.Running,
-                LocationType = HKWorkoutSessionLocationType.Outdoor
-            };
-
-            // Start the session
-            StartWorkoutSession (workoutConfiguration);
-        }
-        #endregion
-
-        #region Override Methods
-        public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
-        {
-            // Start the session
-            StartWorkoutSession (workoutConfiguration);
-        }
-        #endregion
+      
     }
+    #endregion
+
+    #region Private Methods
+    private void StartWorkoutSession (HKWorkoutConfiguration workoutConfiguration)
+    {
+      // Create workout session
+      // Start workout session
+      NSError error = null;
+      var workoutSession = new HKWorkoutSession (workoutConfiguration, out error);
+
+      // Successful?
+      if (error != null) {
+        // Report error to user and return
+        return;
+      }
+
+      // Create workout session delegate and wire-up events
+      RunDelegate = new OutdoorRunDelegate (HealthStore, workoutSession);
+
+      RunDelegate.Failed += () => {
+        // Handle the session failing
+        ...
+      };
+
+      RunDelegate.Paused += () => {
+        // Handle the session being paused
+        ...
+      };
+
+      RunDelegate.Running += () => {
+        // Handle the session running
+        ...
+      };
+
+      RunDelegate.Ended += () => {
+        // Handle the session ending
+        ...
+      };
+      
+      RunDelegate.ReachedMileGoal += (miles) => {
+        // Handle the reaching a session goal
+        ...
+      };
+
+      RunDelegate.HealthKitSamplesUpdated += () => {
+        // Update UI as required
+        ...
+      };
+
+      // Start session
+      HealthStore.StartWorkoutSession (workoutSession);
+    }
+
+    private void StartOutdoorRun ()
+    {
+      // Create a workout configuration
+      var workoutConfiguration = new HKWorkoutConfiguration () {
+        ActivityType = HKWorkoutActivityType.Running,
+        LocationType = HKWorkoutSessionLocationType.Outdoor
+      };
+
+      // Start the session
+      StartWorkoutSession (workoutConfiguration);
+    }
+    #endregion
+
+    #region Override Methods
+    public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
+    {
+      // Start the session
+      StartWorkoutSession (workoutConfiguration);
+    }
+    #endregion
+  }
 }
 ```
 
@@ -964,283 +964,283 @@ using HealthKit;
 
 namespace MonkeyWorkout.MWWatchExtension
 {
-    public class OutdoorRunDelegate : HKWorkoutSessionDelegate
+  public class OutdoorRunDelegate : HKWorkoutSessionDelegate
+  {
+    #region Private Variables
+    private HKAnchoredObjectQuery QueryActiveEnergyBurned;
+    #endregion
+
+    #region Computed Properties
+    public HKHealthStore HealthStore { get; private set; }
+    public HKWorkoutSession WorkoutSession { get; private set;}
+    public float MilesRun { get; set; }
+    public double ActiveEnergyBurned { get; set;}
+    public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEvent> ();
+    public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
+    #endregion
+
+    #region Constructors
+    public OutdoorRunDelegate (HKHealthStore healthStore, HKWorkoutSession workoutSession)
     {
-        #region Private Variables
-        private HKAnchoredObjectQuery QueryActiveEnergyBurned;
-        #endregion
+      // Initialize
+      this.HealthStore = healthStore;
+      this.WorkoutSession = workoutSession;
 
-        #region Computed Properties
-        public HKHealthStore HealthStore { get; private set; }
-        public HKWorkoutSession WorkoutSession { get; private set;}
-        public float MilesRun { get; set; }
-        public double ActiveEnergyBurned { get; set;}
-        public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEvent> ();
-        public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
-        #endregion
+      // Attach this delegate to the session
+      workoutSession.Delegate = this;
 
-        #region Constructors
-        public OutdoorRunDelegate (HKHealthStore healthStore, HKWorkoutSession workoutSession)
-        {
-            // Initialize
-            this.HealthStore = healthStore;
-            this.WorkoutSession = workoutSession;
-
-            // Attach this delegate to the session
-            workoutSession.Delegate = this;
-
-        }
-        #endregion
-
-        #region Private Methods
-        private void ObserveHealthKitSamples ()
-        {
-            // Get the starting date of the required samples
-            var datePredicate = HKQuery.GetPredicateForSamples (WorkoutSession.StartDate, null, HKQueryOptions.StrictStartDate);
-
-            // Get data from the local device
-            var devices = new NSSet<HKDevice> (new HKDevice [] { HKDevice.LocalDevice });
-            var devicePredicate = HKQuery.GetPredicateForObjectsFromDevices (devices);
-
-            // Assemble compound predicate
-            var queryPredicate = NSCompoundPredicate.CreateAndPredicate (new NSPredicate [] { datePredicate, devicePredicate });
-
-            // Get ActiveEnergyBurned
-            QueryActiveEnergyBurned = new HKAnchoredObjectQuery (HKQuantityType.Create (HKQuantityTypeIdentifier.ActiveEnergyBurned), queryPredicate, null, HKSampleQuery.NoLimit, (query, addedObjects, deletedObjects, newAnchor, error) => {
-                // Valid?
-                if (error == null) {
-                    // Yes, process all returned samples
-                    foreach (HKSample sample in addedObjects) {
-                        // Accumulate totals
-                        var quantitySample = sample as HKQuantitySample;
-                        ActiveEnergyBurned += quantitySample.Quantity.GetDoubleValue (HKUnit.Joule);
-
-                        // Save samples
-                        WorkoutSamples.Add (sample);
-                    }
-
-                    // Inform caller
-                    RaiseHealthKitSamplesUpdated ();
-                }
-            });
-
-            // Start Query
-            HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
-                                                  
-        }
-
-        private void StopObservingHealthKitSamples ()
-        {
-            // Stop query
-            HealthStore.StopQuery (QueryActiveEnergyBurned);
-        }
-
-        private void ResumeObservingHealthkitSamples ()
-        {
-            // Resume current queries 
-            HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
-        }
-
-        private void NotifyUserOfReachedMileGoal (float miles)
-        {
-            // Play haptic feedback
-            WKInterfaceDevice.CurrentDevice.PlayHaptic (WKHapticType.Notification);
-
-            // Raise event
-            RaiseReachedMileGoal (miles);
-        }
-
-        private void SaveWorkoutSession ()
-        {
-            // Build required workout quantities
-            var energyBurned = HKQuantity.FromQuantity (HKUnit.Joule, ActiveEnergyBurned);
-            var distance = HKQuantity.FromQuantity (HKUnit.Mile, MilesRun);
-
-            // Create any required metadata
-            var metadata = new NSMutableDictionary ();
-            metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
-
-            // Create workout
-            var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
-                                            WorkoutSession.StartDate, 
-                                            NSDate.Now, 
-                                            WorkoutEvents.ToArray (), 
-                                            energyBurned, 
-                                            distance, 
-                                            metadata);
-
-            // Save to HealthKit
-            HealthStore.SaveObject (workout, (successful, error) => {
-                // Handle any errors
-                if (error == null) {
-                    // Was the save successful
-                    if (successful) {
-                        // Add samples to workout
-                        SaveWorkoutSamples (workout);
-                    }
-                } else {
-                    // Report error
-                    ...
-                }
-            });
-
-        }
-
-        private void SaveWorkoutSamples (HKWorkout workout)
-        {
-            // Add samples to saved workout
-            HealthStore.AddSamples (WorkoutSamples.ToArray (), workout, (success, error) => {
-                // Handle any errors
-                if (error == null) {
-                    // Was the save successful
-                    if (success) {
-                        ...
-                    }
-                } else {
-                    // Report error
-                    ...
-                }
-            });
-        }
-        #endregion
-
-        #region Public Methods
-        public void PauseWorkout ()
-        {
-            // Pause the current workout
-            HealthStore.PauseWorkoutSession (WorkoutSession);
-        }
-
-        public void ResumeWorkout ()
-        {
-            // Pause the current workout
-            HealthStore.ResumeWorkoutSession (WorkoutSession);
-        }
-
-        public void ReachedNextMile ()
-        {
-            // Create and save marker event
-            var markerEvent = HKWorkoutEvent.Create (HKWorkoutEventType.Marker, NSDate.Now);
-            WorkoutEvents.Add (markerEvent);
-
-            // Notify user
-            NotifyUserOfReachedMileGoal (++MilesRun);
-        }
-
-        public void EndOutdoorRun ()
-        {
-            // End the current workout session
-            HealthStore.EndWorkoutSession (WorkoutSession);
-        }
-        #endregion
-
-        #region Override Methods
-        public override void DidFail (HKWorkoutSession workoutSession, NSError error)
-        {
-            // Handle workout session failing
-            RaiseFailed ();
-        }
-
-        public override void DidChangeToState (HKWorkoutSession workoutSession, HKWorkoutSessionState toState, HKWorkoutSessionState fromState, NSDate date)
-        {
-            // Take action based on the change in state
-            switch (toState) {
-            case HKWorkoutSessionState.NotStarted:
-                break;
-            case HKWorkoutSessionState.Paused:
-                StopObservingHealthKitSamples ();
-                RaisePaused ();
-                break;
-            case HKWorkoutSessionState.Running:
-                if (fromState == HKWorkoutSessionState.Paused) {
-                    ResumeObservingHealthkitSamples ();
-                } else {
-                    ObserveHealthKitSamples ();
-                }
-                RaiseRunning ();
-                break;
-            case HKWorkoutSessionState.Ended:
-                StopObservingHealthKitSamples ();
-                SaveWorkoutSession ();
-                RaiseEnded ();
-                break;
-            }
-
-        }
-
-        public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
-        {
-            base.DidGenerateEvent (workoutSession, @event);
-
-            // Save HealthKit generated event
-            WorkoutEvents.Add (@event);
-
-            // Take action based on the type of event
-            switch (@event.Type) {
-            case HKWorkoutEventType.Lap:
-                ...
-                break;
-            case HKWorkoutEventType.Marker:
-                ...
-                break;
-            case HKWorkoutEventType.MotionPaused:
-                ...
-                break;
-            case HKWorkoutEventType.MotionResumed:
-                ...
-                break;
-            case HKWorkoutEventType.Pause:
-                ...
-                break;
-            case HKWorkoutEventType.Resume:
-                ...
-                break;
-            }
-        }
-        #endregion
-
-        #region Events
-        public delegate void OutdoorRunEventDelegate ();
-        public delegate void OutdoorRunMileGoalDelegate (float miles);
-
-        public event OutdoorRunEventDelegate Failed;
-        internal void RaiseFailed ()
-        {
-            if (this.Failed != null) this.Failed ();
-        }
-
-
-        public event OutdoorRunEventDelegate Paused;
-        internal void RaisePaused ()
-        {
-            if (this.Paused != null) this.Paused ();
-        }
-
-        public event OutdoorRunEventDelegate Running;
-        internal void RaiseRunning ()
-        {
-            if (this.Running != null) this.Running ();
-        }
-
-        public event OutdoorRunEventDelegate Ended;
-        internal void RaiseEnded ()
-        {
-            if (this.Ended != null) this.Ended ();
-        }
-
-        public event OutdoorRunMileGoalDelegate ReachedMileGoal;
-        internal void RaiseReachedMileGoal (float miles)
-        {
-            if (this.ReachedMileGoal != null) this.ReachedMileGoal (miles);
-        }
-
-        public event OutdoorRunEventDelegate HealthKitSamplesUpdated;
-        internal void RaiseHealthKitSamplesUpdated ()
-        {
-            if (this.HealthKitSamplesUpdated != null) this.HealthKitSamplesUpdated ();
-        }
-        #endregion
     }
+    #endregion
+
+    #region Private Methods
+    private void ObserveHealthKitSamples ()
+    {
+      // Get the starting date of the required samples
+      var datePredicate = HKQuery.GetPredicateForSamples (WorkoutSession.StartDate, null, HKQueryOptions.StrictStartDate);
+
+      // Get data from the local device
+      var devices = new NSSet<HKDevice> (new HKDevice [] { HKDevice.LocalDevice });
+      var devicePredicate = HKQuery.GetPredicateForObjectsFromDevices (devices);
+
+      // Assemble compound predicate
+      var queryPredicate = NSCompoundPredicate.CreateAndPredicate (new NSPredicate [] { datePredicate, devicePredicate });
+
+      // Get ActiveEnergyBurned
+      QueryActiveEnergyBurned = new HKAnchoredObjectQuery (HKQuantityType.Create (HKQuantityTypeIdentifier.ActiveEnergyBurned), queryPredicate, null, HKSampleQuery.NoLimit, (query, addedObjects, deletedObjects, newAnchor, error) => {
+        // Valid?
+        if (error == null) {
+          // Yes, process all returned samples
+          foreach (HKSample sample in addedObjects) {
+            // Accumulate totals
+            var quantitySample = sample as HKQuantitySample;
+            ActiveEnergyBurned += quantitySample.Quantity.GetDoubleValue (HKUnit.Joule);
+
+            // Save samples
+            WorkoutSamples.Add (sample);
+          }
+
+          // Inform caller
+          RaiseHealthKitSamplesUpdated ();
+        }
+      });
+
+      // Start Query
+      HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
+                                            
+    }
+
+    private void StopObservingHealthKitSamples ()
+    {
+      // Stop query
+      HealthStore.StopQuery (QueryActiveEnergyBurned);
+    }
+
+    private void ResumeObservingHealthkitSamples ()
+    {
+      // Resume current queries 
+      HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
+    }
+
+    private void NotifyUserOfReachedMileGoal (float miles)
+    {
+      // Play haptic feedback
+      WKInterfaceDevice.CurrentDevice.PlayHaptic (WKHapticType.Notification);
+
+      // Raise event
+      RaiseReachedMileGoal (miles);
+    }
+
+    private void SaveWorkoutSession ()
+    {
+      // Build required workout quantities
+      var energyBurned = HKQuantity.FromQuantity (HKUnit.Joule, ActiveEnergyBurned);
+      var distance = HKQuantity.FromQuantity (HKUnit.Mile, MilesRun);
+
+      // Create any required metadata
+      var metadata = new NSMutableDictionary ();
+      metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
+
+      // Create workout
+      var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
+                                      WorkoutSession.StartDate, 
+                                      NSDate.Now, 
+                                      WorkoutEvents.ToArray (), 
+                                      energyBurned, 
+                                      distance, 
+                                      metadata);
+
+      // Save to HealthKit
+      HealthStore.SaveObject (workout, (successful, error) => {
+        // Handle any errors
+        if (error == null) {
+          // Was the save successful
+          if (successful) {
+            // Add samples to workout
+            SaveWorkoutSamples (workout);
+          }
+        } else {
+          // Report error
+          ...
+        }
+      });
+
+    }
+
+    private void SaveWorkoutSamples (HKWorkout workout)
+    {
+      // Add samples to saved workout
+      HealthStore.AddSamples (WorkoutSamples.ToArray (), workout, (success, error) => {
+        // Handle any errors
+        if (error == null) {
+          // Was the save successful
+          if (success) {
+            ...
+          }
+        } else {
+          // Report error
+          ...
+        }
+      });
+    }
+    #endregion
+
+    #region Public Methods
+    public void PauseWorkout ()
+    {
+      // Pause the current workout
+      HealthStore.PauseWorkoutSession (WorkoutSession);
+    }
+
+    public void ResumeWorkout ()
+    {
+      // Pause the current workout
+      HealthStore.ResumeWorkoutSession (WorkoutSession);
+    }
+
+    public void ReachedNextMile ()
+    {
+      // Create and save marker event
+      var markerEvent = HKWorkoutEvent.Create (HKWorkoutEventType.Marker, NSDate.Now);
+      WorkoutEvents.Add (markerEvent);
+
+      // Notify user
+      NotifyUserOfReachedMileGoal (++MilesRun);
+    }
+
+    public void EndOutdoorRun ()
+    {
+      // End the current workout session
+      HealthStore.EndWorkoutSession (WorkoutSession);
+    }
+    #endregion
+
+    #region Override Methods
+    public override void DidFail (HKWorkoutSession workoutSession, NSError error)
+    {
+      // Handle workout session failing
+      RaiseFailed ();
+    }
+
+    public override void DidChangeToState (HKWorkoutSession workoutSession, HKWorkoutSessionState toState, HKWorkoutSessionState fromState, NSDate date)
+    {
+      // Take action based on the change in state
+      switch (toState) {
+      case HKWorkoutSessionState.NotStarted:
+        break;
+      case HKWorkoutSessionState.Paused:
+        StopObservingHealthKitSamples ();
+        RaisePaused ();
+        break;
+      case HKWorkoutSessionState.Running:
+        if (fromState == HKWorkoutSessionState.Paused) {
+          ResumeObservingHealthkitSamples ();
+        } else {
+          ObserveHealthKitSamples ();
+        }
+        RaiseRunning ();
+        break;
+      case HKWorkoutSessionState.Ended:
+        StopObservingHealthKitSamples ();
+        SaveWorkoutSession ();
+        RaiseEnded ();
+        break;
+      }
+
+    }
+
+    public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkoutEvent @event)
+    {
+      base.DidGenerateEvent (workoutSession, @event);
+
+      // Save HealthKit generated event
+      WorkoutEvents.Add (@event);
+
+      // Take action based on the type of event
+      switch (@event.Type) {
+      case HKWorkoutEventType.Lap:
+        ...
+        break;
+      case HKWorkoutEventType.Marker:
+        ...
+        break;
+      case HKWorkoutEventType.MotionPaused:
+        ...
+        break;
+      case HKWorkoutEventType.MotionResumed:
+        ...
+        break;
+      case HKWorkoutEventType.Pause:
+        ...
+        break;
+      case HKWorkoutEventType.Resume:
+        ...
+        break;
+      }
+    }
+    #endregion
+
+    #region Events
+    public delegate void OutdoorRunEventDelegate ();
+    public delegate void OutdoorRunMileGoalDelegate (float miles);
+
+    public event OutdoorRunEventDelegate Failed;
+    internal void RaiseFailed ()
+    {
+      if (this.Failed != null) this.Failed ();
+    }
+
+
+    public event OutdoorRunEventDelegate Paused;
+    internal void RaisePaused ()
+    {
+      if (this.Paused != null) this.Paused ();
+    }
+
+    public event OutdoorRunEventDelegate Running;
+    internal void RaiseRunning ()
+    {
+      if (this.Running != null) this.Running ();
+    }
+
+    public event OutdoorRunEventDelegate Ended;
+    internal void RaiseEnded ()
+    {
+      if (this.Ended != null) this.Ended ();
+    }
+
+    public event OutdoorRunMileGoalDelegate ReachedMileGoal;
+    internal void RaiseReachedMileGoal (float miles)
+    {
+      if (this.ReachedMileGoal != null) this.ReachedMileGoal (miles);
+    }
+
+    public event OutdoorRunEventDelegate HealthKitSamplesUpdated;
+    internal void RaiseHealthKitSamplesUpdated ()
+    {
+      if (this.HealthKitSamplesUpdated != null) this.HealthKitSamplesUpdated ();
+    }
+    #endregion
+  }
 }
 ```
 

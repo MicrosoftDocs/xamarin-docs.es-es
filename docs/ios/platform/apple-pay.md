@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 538778d70e175afb8de0c61648f646c4a1669982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620524"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay en Xamarin. iOS
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654079"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620957"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Buscar con marcado Web en Xamarin. iOS
 
@@ -46,7 +46,7 @@ La manera más fácil de hacer que Apple busque el sitio web de la aplicación e
 
 Proporcione un banner de Smart app en el sitio web para presentar un vínculo claro a la aplicación. Si la aplicación aún no está instalada, Safari solicitará automáticamente al usuario que instale la aplicación. En caso contrario, el uso puede pulsar el vínculo **Ver** para iniciar la aplicación desde el sitio Web. Por ejemplo, para crear un banner de Smart App, puede usar el código siguiente:
 
-```xml
+```html
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
@@ -65,7 +65,7 @@ Como novedad de iOS 9, los vínculos universales proporcionan una mejor alternat
 
 Puede proporcionar vínculos profundos al contenido de la aplicación mediante una tarjeta de Twitter. Por ejemplo:
 
-```xml
+```html
 <meta name="twitter:app:name:iphone" content="AppName">
 <meta name="twitter:app:id:iphone" content="AppNameID">
 <meta name="twitter:app:url:iphone" content="AppNameURL">
@@ -77,7 +77,7 @@ Para obtener más información, consulte la documentación del Protocolo de la [
 
 Puede proporcionar vínculos profundos al contenido de la aplicación mediante un vínculo de aplicación de Facebook. Por ejemplo:
 
-```xml
+```html
 <meta property="al:ios:app_name" content="AppName">
 <meta property="al:ios:app_store_id" content="AppNameID">
 <meta property="al:ios:url" content="AppNameURL">
@@ -93,23 +93,23 @@ Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplic
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
 
-    // Handling a URL in the form http://company.com/appname/?123
-    try {
-        var components = new NSUrlComponents(url,true);
-        var path = components.Path;
-        var query = components.Query;
+  // Handling a URL in the form http://company.com/appname/?123
+  try {
+    var components = new NSUrlComponents(url,true);
+    var path = components.Path;
+    var query = components.Query;
 
-        // Is this a known format?
-        if (path == "/appname") {
-            // Display the view controller for the content
-            // specified in query (123)
-            return ContentViewController.LoadContent(query);
-        }
-    } catch {
-        // Ignore issue for now
+    // Is this a known format?
+    if (path == "/appname") {
+      // Display the view controller for the content
+      // specified in query (123)
+      return ContentViewController.LoadContent(query);
     }
+  } catch {
+    // Ignore issue for now
+  }
 
-    return false;
+  return false;
 }
 ```
 
@@ -123,7 +123,7 @@ Los resultados enriquecidos son más atractivos y pueden ayudar a mejorar la cla
 
 Una opción para proporcionar marcado de datos estructurados es mediante Open Graph. Por ejemplo:
 
-```xml
+```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
 <meta property="og:audio" content="http://company.com/appname/theme.m4a">
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
@@ -133,22 +133,20 @@ Para obtener más información, vea el sitio web de [Open Graph](http://ogp.me) 
 
 Otro formato común para el marcado de datos estructurados es esquema. microdatos de la organización. Por ejemplo:
 
-```xml
+```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4** stars -
-    <span itemprop="reviewCount">255** reviews
-
-
+  <span itemprop="ratingValue">4** stars -
+  <span itemprop="reviewCount">255** reviews
 ```
 
 La misma información se puede representar en el formato JSON-LD del esquema.
 
-```xml
+```html
 <script type="application/ld+json">
-    "@content":"http://schema.org",
-    "@type":"AggregateRating",
-    "ratingValue":"4",
-    "reviewCount":"255"
+  "@content":"http://schema.org",
+  "@type":"AggregateRating",
+  "ratingValue":"4",
+  "reviewCount":"255"
 </script>
 ```
 
@@ -179,34 +177,28 @@ Los tipos específicos de datos estructurados permitirán que el usuario final p
 
 Por ejemplo, la definición de una acción para marcar un número de teléfono podría ser similar a la siguiente:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/Organization">
-    <span itemprop="telephone">(408) 555-1212**
-
-
+  <span itemprop="telephone">(408) 555-1212**
 ```
 
 Cuando se presente el resultado de la búsqueda al usuario final, se mostrará un icono de teléfono pequeño en el resultado. Si el usuario pulsa el icono, se llamará al número especificado.
 
 El siguiente código HTML agregaría una acción para reproducir un archivo de audio desde el resultado de la búsqueda:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/AudioObject">
-    <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
-
-
+  <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
 ```
 
 Por último, el siguiente código HTML agregaría una acción para obtener direcciones del resultado de la búsqueda:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">1 Infinite Loop**
-    <span itemprop="addressLocality">Cupertino**
-    <span itemprop="addressRegion">CA**
-    <span itemprop="postalCode">95014**
-
-
+  <span itemprop="streetAddress">1 Infinite Loop**
+  <span itemprop="addressLocality">Cupertino**
+  <span itemprop="addressRegion">CA**
+  <span itemprop="postalCode">95014**
 ```
 
 Para obtener más información, consulte el [sitio para desarrolladores de búsqueda de aplicaciones](https://developer.apple.com/ios/search/)de Apple.

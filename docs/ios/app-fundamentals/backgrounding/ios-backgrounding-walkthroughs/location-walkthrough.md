@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 20f49f3f0c103791064545311d9f66d409cff357
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e9cfdc32f5e679216781abda1cf718a1c1a186ae
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656538"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620714"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin. iOS
 
@@ -149,8 +149,8 @@ public class LocationUpdatedEventArgs : EventArgs
     ```csharp
     #region Computed Properties
     public static bool UserInterfaceIdiomIsPhone {
-                get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-            }
+        get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+    }
 
     public static LocationManager Manager { get; set;}
     #endregion

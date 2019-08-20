@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 75affbdb6e919c15c644a68ae45e7ff657a53f6a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: afaba327299461af6b71846a39eb6c455125feae
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652272"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620386"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a los guiones gráficos en Xamarin. Mac
 
@@ -79,9 +79,9 @@ Al usar la presentación objetos segue, puede invalidar `PrepareForSegue` el mé
 En tiempo de diseño (al diseñar la interfaz de usuario en la Interface Builder de Xcode), cada elemento de la interfaz de usuario de la aplicación se divide en sus elementos constituyentes:
 
 - **Scenes** , que se componen de:
-    - **Controlador de vista** : que define las relaciones entre las vistas y los datos que las admiten.
-    - **Vistas y** subvistas: los elementos reales que componen la interfaz de usuario.
-    - **Contención objetos segue** : que define las relaciones de elementos primarios y secundarios entre las escenas.
+  - **Controlador de vista** : que define las relaciones entre las vistas y los datos que las admiten.
+  - **Vistas y** subvistas: los elementos reales que componen la interfaz de usuario.
+  - **Contención objetos segue** : que define las relaciones de elementos primarios y secundarios entre las escenas.
 - **Objetos segue de presentación** : que definen modos de presentación individuales. 
 
 Al definir cada elemento de esta manera, se permite la carga diferida de cada elemento solo cuando sea necesario durante el tiempo de ejecución. En macOS, todo el proceso se diseñó para permitir al desarrollador crear interfaces de usuario complejas y flexibles que requieran un mínimo de código de respaldo para que funcionen, todo ello a la vez que sea tan eficaz como sea posible con los recursos del sistema.

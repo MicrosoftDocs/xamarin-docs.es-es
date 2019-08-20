@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 5aad72de5d894a83d734cd53fce3ac060125d740
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 85dad3bdd46401b1acf9a1cb5acc206508cd611f
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656942"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620720"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Cambios adicionales de los marcos de trabajo de iOS 10
 
@@ -182,8 +182,8 @@ Se han realizado las siguientes mejoras en el marco de trabajo de SpriteKit en i
 Se han realizado las siguientes mejoras en el control ScrollView en iOS 10,3:
 
 - `UIScrollView`ahora incluya la `IndexDisplayMode` propiedad para controlar cómo se muestra el índice mientras el usuario se desplaza `UIScrollViewIndexDisplayMode` como de:
-    - `Automatic`: El sistema operativo controla la presentación del índice.
-    - `AlwaysHidden`-La presentación del índice siempre está oculta.
+  - `Automatic`: El sistema operativo controla la presentación del índice.
+  - `AlwaysHidden`-La presentación del índice siempre está oculta.
 
 Vea el [ejemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) para obtener más uso.
 

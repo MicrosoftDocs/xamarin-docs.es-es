@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656414"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620510"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -34,7 +34,7 @@ A continuación se muestran algunos ejemplos de interacciones rápidas típicas 
 
 Para lograr estos objetivos, una aplicación en el Apple Watch debe ser:
 
-- Con un solo **vistazo, lo** que significa que, con una vista rápida, el usuario debe poder obtener la información que necesitan. 
+- Con un solo vistazo, lo que significa que, con una vista rápida, el usuario debe poder obtener la información que necesitan. 
 - **Accionable** : es decir, los usuarios deben poder tomar decisiones rápidas y bien fundamentadas.
 - **Responde** , lo que significa que el usuario nunca debe esperar para recibir la información que necesitan o para lograr la acción que desean.
 
@@ -47,12 +47,12 @@ Debido a la naturaleza de la vista de las aplicaciones Apple Watch, Apple sugier
 Apple ha agregado varias características nuevas y API a WatchKit para ayudar al desarrollador a agregar interacciones rápidas a sus aplicaciones Apple Watch:
 
 - watchos 3 proporciona acceso a los nuevos tipos de datos proporcionados por el usuario, como:
-    - Reconocedores de gestos
-    - Rotación Digital Crown 
+  - Reconocedores de gestos
+  - Rotación Digital Crown 
 - watchos 3 proporciona nuevas formas de mostrar y actualizar información, como:
-    - Navegación de tabla mejorada
-    - Nueva compatibilidad con el marco de notificaciones de usuario
-    - Integración de SpriteKit y SceneKit
+  - Navegación de tabla mejorada
+  - Nueva compatibilidad con el marco de notificaciones de usuario
+  - Integración de SpriteKit y SceneKit
 
 Mediante la implementación de estas nuevas características, el desarrollador puede asegurarse de que la aplicación watchos 3 sea de vista rápida, accionable y con capacidad de respuesta.
 
@@ -63,11 +63,11 @@ Si el desarrollador ha implementado reconocedores de gestos en iOS, deberían es
 watchos 3 será compatible con los cuatro reconocedores de gesto siguientes:
 
 - Tipos de gestos discretos:
-    - El gesto de deslizar rápidamente (`WKSwipeGestureRecognizer`).
-    - Gesto de punteo`WKTapGestureRecognizer`().
+  - El gesto de deslizar rápidamente (`WKSwipeGestureRecognizer`).
+  - Gesto de punteo`WKTapGestureRecognizer`().
 - Tipos de gestos continuos:
-    - El gesto de panorámica`WKPanGestureRecognizer`().
-    - El gesto de presionar largo (`WKLongPressGestureRecognizer`).
+  - El gesto de panorámica`WKPanGestureRecognizer`().
+  - El gesto de presionar largo (`WKLongPressGestureRecognizer`).
 
 Para implementar uno de los reconocedores de gestos nuevos, basta con arrastrarlo a una superficie de diseño en el diseñador de iOS en Visual Studio para Mac y configurar sus propiedades.
 
@@ -96,8 +96,8 @@ Apple sugiere lo siguiente al trabajar con reconocedores de gestos en watchos 3:
 - Agregue los reconocedores de gestos a los elementos de grupo en lugar de a los controles individuales. Puesto que el Apple Watch tiene un tamaño de pantalla físico más pequeño, los elementos de grupo tienden a ser objetivos más grandes y más fáciles de alcanzar para el usuario. Además, los reconocedores de gestos pueden entrar en conflicto con los gestos integrados que ya están en los controles de interfaz de usuario nativa.
 - Establezca relaciones de dependencia en el guión gráfico de la aplicación Watch.
 - Algunos gestos tienen prioridad sobre otros tipos de gestos, como:
-    - Desplazarse
-    - Force Touch
+  - Desplazamiento
+  - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Rotación Digital Crown
 
@@ -137,28 +137,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-    public class CrownDelegate : WKCrownDelegate
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
+
+    #region Constructors
+    public CrownDelegate ()
     {
-        #region Computed Properties
-        public double AccumulatedRotations { get; set;}
-        #endregion
-
-        #region Constructors
-        public CrownDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-        {
-            base.CrownDidRotate (crownSequencer, rotationalDelta);
-
-            // Accumulate rotations
-            AccumulatedRotations += rotationalDelta;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
+
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -225,8 +225,8 @@ Hay varias maneras en las que un usuario puede responder a la notificación:
 - En el caso de una notificación bien definida y presentada, el usuario no hará nada y simplemente descartará la notificación.
 - También pueden pulsar la notificación para iniciar la aplicación watchos.
 - En el caso de una notificación que admita acciones personalizadas, el usuario puede seleccionar una de las acciones personalizadas. Pueden ser:
-    - **Acciones de primer plano** : inician la aplicación para realizar la acción.
-    - **Acciones en segundo plano** : siempre se enrutaron al iPhone en watchos 2, pero se pueden enrutar al watchApp en watchos 3.
+  - **Acciones de primer plano** : inician la aplicación para realizar la acción.
+  - **Acciones en segundo plano** : siempre se enrutaron al iPhone en watchos 2, pero se pueden enrutar al watchApp en watchos 3.
 
 Novedades de watchos 3:
 
