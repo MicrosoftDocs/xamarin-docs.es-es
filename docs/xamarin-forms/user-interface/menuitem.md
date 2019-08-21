@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 68560c6cc814f54bb8ba9348bc53334089c36a93
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984477"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658092"
 ---
 # <a name="xamarinforms-menuitem"></a>Xamarin. Forms MenuItem
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
-La clase de Xamarin [`MenuItem`](xref:Xamarin.Forms.MenuItem) . Forms es un `ListView` objeto que se usa para definir los elementos de menú para menús como menús contextuales de elementos y menús flotante de aplicación de Shell.
+La clase de Xamarin [`MenuItem`](xref:Xamarin.Forms.MenuItem) . Forms define los elementos de menú `ListView` para menús como menús contextuales de elementos y menús flotante de aplicación de Shell.
 
-En la captura de `MenuItem` pantalla siguiente se `ListView` muestran los objetos de un menú contextual en iOS y Android:
+Las siguientes capturas `MenuItem` de pantallas muestran `ListView` objetos en un menú contextual de iOS y Android:
 
 [ !["MenuItem en iOS y Android"](menuitem-images/menuitem-demo-cropped.png "MenuItem en iOS y Android") ] (menuitem-images/menuitem-demo-full.png#lightbox "MenuItem en iOS y Androidfull image")
 

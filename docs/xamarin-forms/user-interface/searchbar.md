@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739393"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658037"
 ---
 # <a name="xamarinforms-searchbar"></a>Barra de Xamarin. Forms
 
@@ -22,7 +22,7 @@ Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) es un control de entr
 
 [ ![Captura de pantalla de barra en iOS y Android](searchbar-images/device-searchbars-cropped.png "barra en iOS y Android") ] (searchbar-images/device-searchbars.png#lightbox "Barra en iOS y Android")
 
-`SearchBar` Define las siguientes propiedades:
+La `SearchBar` clase define las siguientes propiedades:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)es un `Color` que define el color del botón Cancelar.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)es un `FontAttributes` valor de enumeración que determina `SearchBar` si la fuente está en negrita, en cursiva o en ninguna de ellas.
@@ -66,7 +66,7 @@ El `SearchBar` control define muchas propiedades que personalizan la apariencia 
            FontAttributes="Italic" />
 ```
 
-Estas propiedades también se pueden especificar al crear un `SearchBar` en el código:
+Estas propiedades también se pueden especificar al crear un `SearchBar` objeto en el código:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,7 +80,7 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-En la captura de pantalla siguiente `SearchBar`se muestra el resultado:
+En la captura de pantalla siguiente `SearchBar` se muestra el control resultante:
 
 [ ![Captura de pantalla de barra personalizado en iOS y Android](searchbar-images/device-searchbars-styled-cropped.png "personalizado barra en iOS y Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Barra personalizado en iOS y Android")
 
