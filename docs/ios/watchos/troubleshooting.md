@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4ce217d31811df82f0779a22d0c64464b5295fcc
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528392"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629666"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -92,7 +92,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 *Si* usa Xcode Interface Builder, siga estos pasos para crear nuevos controladores de interfaz para la aplicación de inspección y habilitar la sincronización con Xcode para que las salidas y las acciones estén disponibles C#en:
 
 1. Abra la aplicación de inspección **interface. Storyboard** en **Xcode Interface Builder**.
-    
+
     ![](troubleshooting-images/add-6.png "Abrir el guion gráfico en Xcode Interface Builder")
 
 2. Arrastre un nuevo `InterfaceController` al guion gráfico:
@@ -144,7 +144,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
     ```csharp
     using Foundation;
     using System.CodeDom.Compiler;
-    
+
     namespace HelloWatchExtension  // remember to update this
     {
         [Register ("MyInterfaceController")] // remember to update this
@@ -156,9 +156,10 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
         }
     }
     ```
-    
-    Sugerencia: También puede hacer que este archivo sea un nodo secundario del primer archivo arrastrándolo al otro C# archivo en el Panel de solución de Visual Studio para Mac. A continuación, aparecerá de la siguiente manera:
-    
+
+    > [!TIP]
+    > También puede hacer que este archivo sea un nodo secundario del primer archivo arrastrándolo al otro C# archivo en el Panel de solución de Visual Studio para Mac. A continuación, aparecerá de la siguiente manera:
+
     ![](troubleshooting-images/add-5.png "El panel de solución")
 
 6. Seleccione compilar **> compilar todo** para que la sincronización de Xcode reconozca `Register` la nueva clase (a través del atributo) que usamos.
@@ -168,7 +169,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
     ![](troubleshooting-images/add-6.png "Abrir el guion gráfico en Interface Builder")
 
 8. Seleccione el nuevo controlador de interfaz y asígnele el className que definió anteriormente, por ejemplo,. `MyInterfaceController`
-Si todo ha funcionado correctamente, debe aparecer automáticamente en la lista desplegable **clase:** y puede seleccionarlo desde allí.
+    Si todo ha funcionado correctamente, debe aparecer automáticamente en la lista desplegable **clase:** y puede seleccionarlo desde allí.
 
     ![](troubleshooting-images/add-4.png "Establecer una clase personalizada")
 
