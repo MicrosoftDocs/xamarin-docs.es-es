@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 88823aa2d86b7cc5db72b3949453cd6aa464bd74
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528466"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629637"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creación de una aplicación Xamarin. iOS mediante la API Elements
 
@@ -20,9 +20,9 @@ _Este artículo se basa en la información que se presenta en el artículo del c
 
 En este tutorial, usaremos el MT. D elementos API para crear un estilo principal-detalle de la aplicación que muestra una lista de tareas. Cuando el usuario selecciona el **+** botón en la barra de navegación, se agregará una nueva fila a la tabla para la tarea. Al seleccionar la fila, se navegará a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento, como se muestra a continuación:
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "Al seleccionar la fila, se navegará a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+[![](elements-api-walkthrough-images/01-task-list-app.png "Al seleccionar la fila, se navegará a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## <a name="setting-up-mtd"></a>Configuración de MT. D
+## <a name="setting-up-mtd"></a>Configuración de MT. D
 
 Módulo. D se distribuye con Xamarin. iOS. Para usarlo, haga clic con el botón derecho en el nodo **referencias** de un proyecto de Xamarin. iOS en Visual Studio 2017 o Visual Studio para Mac y agregue una referencia al ensamblado **MonoTouch. Dialog-1** . A continuación, `using MonoTouch.Dialog` Agregue las instrucciones en el código fuente según sea necesario.
 
