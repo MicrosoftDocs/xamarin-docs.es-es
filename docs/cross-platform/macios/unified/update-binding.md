@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e6aac37561d107cb7e3f646c15621b86385dd0ee
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620936"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887508"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migración de un enlace a Unified API
 
@@ -89,6 +89,7 @@ Actualizaremos el nuevo enlace para que sea:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 Si se está asignando a una biblioteca de terceros de la versión más reciente que la que se había vinculado inicialmente, `.h` es necesario revisar los archivos de encabezado de la biblioteca y ver si hay alguna `int`salida, llamadas `uint32_t` explícitas a, `int32_t`, `unsigned int`o se han actualizado para que `NSInteger`sean, `NSUInteger` o `CGFloat`. `float` Si es así, también se deben realizar `nint`las `nuint` mismas `nfloat` modificaciones en los tipos, y.
 
 Para obtener más información sobre estos cambios de tipo de datos, vea la documentación de [tipos nativos](~/cross-platform/macios/nativetypes.md) documento.

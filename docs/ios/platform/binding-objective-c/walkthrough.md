@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 4c4aaeaa451a67da16057cd9b345fbbcd0af6f35
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621021"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890392"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlace de una biblioteca de Objective-C a iOS
 
@@ -490,6 +490,7 @@ A veces `Delegates`, el objetivo Sharpie tiene un problema de traducción, por l
 [BaseType(typeof(NSObject))]
 [Model]
 ```
+
 Para que la definición tenga el siguiente aspecto:
 
 [![](walkthrough-images/os11.png "La definición")](walkthrough-images/os11.png#lightbox)
@@ -660,6 +661,7 @@ public override void ViewDidLoad ()
   selector = new ColorSelectedDelegate (this);
 }
 ```
+
 **Implemente el método HandleTouchUpInsideWithStrongDelegate** -Next implemente el controlador de eventos para cuando el usuario toque **ColorChangeButton**. Edite `ViewController`y agregue el método siguiente:
 
 ```csharp
@@ -698,6 +700,7 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
     picker.PresentModallyOverViewController (this);
 }
 ```
+
 **Update ViewDidLoad** : debemos cambiar `ViewDidLoad` para que use el controlador de eventos que acabamos de crear. Edite `ViewController` y `ViewDidLoad` cambie para que sea similar al siguiente fragmento de código:
 
 

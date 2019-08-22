@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: febfa23ecb2f1536631b3009d6ddc614fa355f01
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3e6bc829ec947f8f3c01c7ef9679a5feadf4a42a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656501"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887374"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de datos en Xamarin. Mac
 
@@ -612,6 +612,7 @@ for (nuint n = 0; n < People.Count; ++n) {
     Person.Update (conn);
 }
 ```
+
 #### <a name="loading-a-record"></a>Cargar un registro
 
 El código siguiente se ha agregado para cargar un registro existente desde la base de datos SQLite:
@@ -1971,6 +1972,7 @@ En primer lugar, se incluye`using Sqlite`SQLite.net () y, a continuación, se ex
 [PrimaryKey, AutoIncrement]
 public int ID { get; set; }
 ```
+
 ### <a name="initializing-the-database"></a>Inicializar la base de datos
 
 Una vez realizados los cambios en nuestro modelo de datos para admitir la lectura y escritura en la base de datos, es necesario abrir una conexión a la base de datos e inicializarla en la primera ejecución. Vamos a agregar el código siguiente:

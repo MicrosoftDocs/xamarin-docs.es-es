@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c40d21a95db564d0fdcbea5772a88e94446c07ce
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522555"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887520"
 ---
 # <a name="xamarinandroid-listview"></a>ListView de Xamarin. Android
 
@@ -103,6 +103,7 @@ Agregue la siguiente `using` instrucción:
 ```csharp
 using System;
 ```
+
 A continuación, agregue la siguiente matriz de cadenas como un `MainActivity`miembro de:
 
 ```csharp

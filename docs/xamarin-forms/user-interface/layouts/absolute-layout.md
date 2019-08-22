@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 416106f9948c1757f398589e730e01ab55dd01a9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0389587b2abffa751349a66eedc4a3800aa2a99d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642975"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888530"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
@@ -165,6 +165,7 @@ public class AbsoluteLayoutExplorationCode : ContentPage
     }
 }
 ```
+
 <a name="Proportional_Values" />
 
 ### <a name="proportional-values"></a>Valores proporcionales

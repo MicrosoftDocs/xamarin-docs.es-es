@@ -1,26 +1,26 @@
 ---
-title: Usar datos en tiempo de diseño con el controlador de vista previa XAML
-description: En este artículo se explica cómo usar datos en tiempo de diseño para mostrar los diseños con mucha actividad de datos en la vista previa de XAML sin ejecutar la aplicación.
+title: Usar datos de tiempo de diseño con el vista previa de XAML
+description: En este artículo se explica cómo usar los datos de tiempo de diseño para mostrar los diseños con gran cantidad de datos en el visor de vista previa de XAML sin ejecutar la aplicación.
 ms.prod: xamarin
 ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557436"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887849"
 ---
-# <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos en tiempo de diseño con el controlador de vista previa XAML
+# <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos de tiempo de diseño con el vista previa de XAML
 
-_Algunos diseños son difíciles de visualizar sin datos. Utilice estos consejos para sacar el máximo partido de la vista previa de las páginas de datos con mucha actividad en la vista previa de XAML._
+_Algunos diseños son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML._
 
-## <a name="design-time-data-basics"></a>Conceptos básicos de datos de tiempo de diseño
+## <a name="design-time-data-basics"></a>Aspectos básicos de los datos de tiempo de diseño
 
-Datos en tiempo de diseño están datos falsos que se establece para facilitar los controles visualizar en la vista previa de XAML. Para empezar, agregue las siguientes líneas de código para el encabezado de la página XAML:
+Los datos en tiempo de diseño son datos falsos que se establecen para que los controles sean más fáciles de visualizar en el visor de vista previa de XAML. Para empezar, agregue las siguientes líneas de código al encabezado de la página XAML:
 
 ```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -28,40 +28,41 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Después de agregar los espacios de nombres, puede colocar `d:` delante de cualquier atributo o un control para mostrarlo en la vista previa de XAML. Elementos con `d:` no se muestran en tiempo de ejecución.
+Después de agregar los espacios de nombres, puede `d:` colocar delante de cualquier atributo o control para mostrarlo en el controlador de vista previa de XAML. Los elementos `d:` con no se muestran en tiempo de ejecución.
 
-Por ejemplo, puede agregar texto a una etiqueta que normalmente tiene datos enlazados a él.
+Por ejemplo, puede Agregar texto a una etiqueta que normalmente tiene datos enlazados a él.
 
 ```xaml
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Con texto en una etiqueta de datos en tiempo de diseño](xaml-previewer-images/designtimedata-label-sm.png "tiempo de diseño de datos con el texto de una etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Datos de tiempo de diseño con texto en una etiqueta](xaml-previewer-images/designtimedata-label-sm.png "Datos de tiempo de diseño con texto como etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-En este ejemplo, sin `d:Text`, el controlador de vista previa de XAML mostraría nada para la etiqueta. En su lugar, muestra "Name". donde la etiqueta tendrá datos reales en tiempo de ejecución.
+En este ejemplo, sin `d:Text`, el previsor de XAML no mostraría nada para la etiqueta. En su lugar, muestra "nombre". donde la etiqueta tendrá datos reales en tiempo de ejecución.
 
-Puede usar `d:` con cualquier atributo para un control de Xamarin.Forms, como colores, tamaños de fuente y espaciado. Incluso puede agregarlo al propio control:
+Puede usar `d:` con cualquier atributo de un control de Xamarin. Forms, como colores, tamaños de fuente y espaciado. Incluso puede agregarlo al propio control:
 
 ```xaml
 <d:Button Text="Design Time Button" />
 ```
 
-[![Datos con un control de botón en tiempo de diseño](xaml-previewer-images/designtimedata-controls-sm.png "datos con un control de botón en tiempo de diseño")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Datos de tiempo de diseño con un control de botón](xaml-previewer-images/designtimedata-controls-sm.png "Datos de tiempo de diseño con un control de botón")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
-En este ejemplo, el botón aparece sólo en tiempo de diseño. Use este método para colocar un marcador de posición en una [control personalizado no compatible con el controlador de vista previa de XAML](render-custom-controls.md).
+En este ejemplo, el botón solo aparece en tiempo de diseño. Use este método para colocar un marcador de posición en para un [control personalizado no admitido por el controlador de vista previa de XAML](render-custom-controls.md).
 
-## <a name="preview-images-at-design-time"></a>Imágenes de vista previa en tiempo de diseño
+## <a name="preview-images-at-design-time"></a>Vista previa de imágenes en tiempo de diseño
 
-Puede establecer un origen de tiempo de diseño para las imágenes que se enlaza a la página o se carga dinámicamente en. En el proyecto Android, agregue la imagen que desea mostrar en la vista previa de XAML para el **recursos > Drawable** carpeta. En el proyecto de iOS, agregue la imagen a la **recursos** carpeta. A continuación, puede mostrar esa imagen en la vista previa de XAML en tiempo de diseño:
+Puede establecer un origen de tiempo de diseño para las imágenes enlazadas a la página o cargadas dinámicamente. En el proyecto de Android, agregue la imagen que quiere mostrar en el vista previa de XAML a los **recursos >** carpeta drawable. En el proyecto de iOS, agregue la imagen a la carpeta **recursos** . Después, puede mostrar esa imagen en la vista previa de XAML en tiempo de diseño:
 
 ```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![Datos con imágenes en tiempo de diseño](xaml-previewer-images/designtimedata-image-sm.png "con iamges datos en tiempo de diseño")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+
+[![Datos de tiempo de diseño con imágenes](xaml-previewer-images/designtimedata-image-sm.png "Datos de tiempo de diseño con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Datos de tiempo de diseño para ListView
 
-ListView es una forma popular para mostrar datos en una aplicación móvil. Sin embargo, son difíciles de visualizar sin datos reales. Para utilizar datos en tiempo de diseño con ellos, tendrá que crear una matriz de tiempo de diseño que se usará como ItemsSource. El controlador de vista previa de XAML muestra lo que está en esa matriz en la ListView en tiempo de diseño.
+Los controles ListView son una manera popular de mostrar los datos en una aplicación móvil. Sin embargo, son difíciles de visualizar sin datos reales. Para usar los datos de tiempo de diseño con ellos, tiene que crear una matriz de tiempo de diseño para usarla como ItemsSource. El objeto de vista previa de XAML muestra lo que hay en esa matriz en el objeto ListView en tiempo de diseño.
 
 ```xaml
 <StackLayout>
@@ -83,26 +84,26 @@ ListView es una forma popular para mostrar datos en una aplicación móvil. Sin 
 </StackLayout>
 ```
 
-[![Diseño de datos de tiempo con un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "datos con un ListView en tiempo de diseño")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Datos de tiempo de diseño con un control ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Datos de tiempo de diseño con un control ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
-Este ejemplo muestra un ListView de tres TextCells en la vista previa de XAML. Puede cambiar `x:String` a un modelo de datos existente en el proyecto.
+En este ejemplo se muestra un control ListView de tres TextCells en el objeto de vista previa de XAML. Puede cambiar `x:String` a un modelo de datos existente en el proyecto.
 
-Consulte [app de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) para obtener un ejemplo más complejo.
+Consulte [la aplicación Hanselman. Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) para obtener un ejemplo más complejo.
 
-## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa: Codificar un ViewModel estático
+## <a name="alternative-hardcode-a-static-viewmodel"></a>Lugar Codificar un ViewModel estático
 
-Si no desea agregar datos en tiempo de diseño a controles individuales, puede configurar un almacén de datos ficticios para enlazar a la página. Hacer referencia a la de James Montemagno [entrada de blog sobre cómo agregar datos en tiempo de diseño](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) para ver cómo enlazar a una clase ViewModel estático en XAML.
+Si no desea agregar datos de tiempo de diseño a controles individuales, puede configurar un almacén de datos ficticios para enlazar a la página. Consulte la entrada de blog de James Montemagno [sobre cómo agregar datos en tiempo de diseño](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) para ver cómo enlazar a un ViewModel estático en XAML.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="requirements"></a>Requisitos
 
-Datos en tiempo de diseño requieren una versión mínima de Xamarin.Forms 3.6.
+Los datos de tiempo de diseño requieren una versión mínima de Xamarin. Forms 3,6.
 
-### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>IntelliSense muestra con líneas onduladas Mis datos en tiempo de diseño
+### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>IntelliSense muestra líneas onduladas en los datos de tiempo de diseño
 
-Esto es un problema conocido y se corregirá en una próxima versión de Visual Studio. El proyecto aún se compilará sin errores.
+Se trata de un problema conocido y se corregirá en una próxima versión de Visual Studio. El proyecto se compilará sin errores.
 
-### <a name="the-xaml-previewer-stopped-working"></a>El controlador de vista previa de XAML ha dejado de funcionar
+### <a name="the-xaml-previewer-stopped-working"></a>El previsor de XAML dejó de funcionar
 
-Intente cerrar y volver a abrir el archivo XAML y limpiar y recompilar el proyecto.
+Intente cerrar y volver a abrir el archivo XAML, y limpie y recompile el proyecto.

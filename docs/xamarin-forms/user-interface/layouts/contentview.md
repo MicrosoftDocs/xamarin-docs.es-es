@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: e340b45148c7528eff1aa511ee9902a4ac2658c0
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 379791d4dda676140425d79eca696cdca94cd55b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658162"
+ms.locfileid: "69888431"
 ---
 # <a name="xamarinforms-contentview"></a>ContentView de Xamarin. Forms
 
@@ -61,7 +61,7 @@ El `CardView` control personalizado define las siguientes propiedades:
 > [!NOTE]
 > La `BorderColor` propiedad afecta a varios elementos con fines de demostración. Esta propiedad podría dividirse en tres propiedades si es necesario.
 
-Cada propiedad está respaldada por una `BindableProperty` instancia de. La copia `BindableProperty` de seguridad permite aplicar estilo a cada propiedad y enlazarla mediante el patrón MVVM. Para obtener más información, consulte [enlazar datos con MVVM](#bind-data-with-mvvm).
+Cada propiedad está respaldada por una `BindableProperty` instancia de. La copia `BindableProperty` de seguridad permite aplicar estilo a cada propiedad y enlazarla mediante el patrón MVVM.
 
 En el ejemplo siguiente se muestra cómo crear una `BindableProperty`copia de seguridad:
 
@@ -151,117 +151,6 @@ CardView card = new CardView
     IconImageSource = ImageSource.FromFile("user.png")
 };
 ```
-
-### <a name="bind-data-with-mvvm"></a>Enlazar datos con MVVM
-
-Los `BindableProperty` objetos de la `CardView` clase permiten enlaces de estilo Model-View-ViewModel (MVVM). La aplicación de ejemplo contiene `PersonCollectionViewModel` una clase que define una propiedad de colección única:
-
-```csharp
-public class PersonCollectionViewModel : INotifyPropertyChanged
-{
-    ...
-    public List<PersonViewModel> Items
-    {
-        get
-        {
-            return items;
-        }
-        set
-        {
-            items = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-La `PersonViewModel` clase representa un perfil personal:
-
-```csharp
-public class PersonViewModel : INotifyPropertyChanged
-{
-    ...
-
-    string photo;
-    public string Photo
-    {
-        get
-        {
-            return photo;
-        }
-        set
-        {
-            photo = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string name;
-    public string Name
-    {
-        get
-        {
-            return name;
-        }
-        set
-        {
-            name = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string bio;
-    public string Bio
-    {
-        get
-        {
-            return bio;
-        }
-        set
-        {
-            bio = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-Se puede utilizar para representar la colección de `PersonViewModel` objetos como una lista de tarjetas. `CardView` En el ejemplo siguiente se muestra cómo enlazar una `PersonViewCollection` instancia de a una `StackLayout` instancia de en XAML:
-
-```xaml
-<StackLayout HorizontalOptions="Fill"
-             VerticalOptions="Fill"
-             BindableLayout.ItemsSource="{Binding Items}">
-    <BindableLayout.ItemTemplate>
-        <DataTemplate>
-            <controls:CardView Margin="4"
-                               BorderColor="DarkGray"
-                               IconBackgroundColor="SlateGray"
-                               BindingContext="{Binding .}"
-                               CardTitle="{Binding Name}"
-                               CardDescription="{Binding Bio}"
-                               IconImageSource="{Binding Photo}"/>
-        </DataTemplate>
-    </BindableLayout.ItemTemplate>
-</StackLayout>
-```
-
-La `Items` propiedad de una `PersonViewCollection` `StackLayout` instancia está enlazada al mediante un diseño enlazable. Define la apariencia de cada `CardView` objeto y los datos se enlazan a las propiedades de `PersonViewModel`un. `DataTemplate` Cuando se establece, se creará un `CardView` objeto para cada `PersonView` objeto de la `Items` colección. `BindingContext` `BindingContext` Se establece como se muestra en el ejemplo siguiente:
-
-```csharp
-public partial class CardViewMvvmPage : ContentPage
-{
-    public CardViewMvvmPage()
-    {
-        InitializeComponent();
-        BindingContext = DataService.GetPersonCollection();
-    }
-}
-```
-
-Para obtener más información sobre el enlace de datos, consulte [enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md). Para obtener más información `BindableProperty` sobre los objetos, vea [propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
 
 ## <a name="customize-appearance-with-a-controltemplate"></a>Personalización de la apariencia con un ControlTemplate
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1aaacae8cebed2396661a28c189af44c25238e7b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524695"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887842"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajar con el manifiesto de Android
 
@@ -227,6 +227,7 @@ Esta declaración hace que se genere el siguiente fragmento XML en **obj/Debug/A
              android:theme="@android:style/Theme.Light"
                 ... />
 ```
+
 En este ejemplo, todas las actividades de la aplicación tendrán como valor `Theme.Light` predeterminado el estilo. Si establece el tema de una actividad en `Theme.Dialog`, solo esa actividad usará el `Theme.Dialog` estilo, mientras que todas las demás actividades de la aplicación tendrán como `Theme.Light` valor predeterminado el estilo establecido `<application>` en el elemento. 
 
 El `Application` elemento no es la única manera de configurar `<application>` atributos. Como alternativa, puede insertar atributos directamente en el `<application>` elemento de **Properties/archivo AndroidManifest. XML**. Estos valores se combinan en el último `<application>` elemento que reside en **obj/Debug/Android/archivo AndroidManifest. XML**. Tenga en cuenta que el contenido de **las propiedades/archivo AndroidManifest. XML** siempre invalida los datos proporcionados por los atributos personalizados. 

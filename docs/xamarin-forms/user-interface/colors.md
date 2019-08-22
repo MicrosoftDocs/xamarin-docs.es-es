@@ -6,13 +6,13 @@ ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/15/2017
-ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.date: 07/18/2019
+ms.openlocfilehash: 2a17b037803d1ca6e54000ea7ba3f05c8ce6034f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528986"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888473"
 ---
 # <a name="colors-in-xamarinforms"></a>Colores de Xamarin.Forms
 
@@ -20,9 +20,9 @@ ms.locfileid: "69528986"
 
 _Xamarin.Forms proporciona una clase de Color flexible y multiplataforma._
 
-Este artículo presentan las distintas formas la `Color` clase puede usarse en Xamarin.Forms.
+En este artículo se presentan las distintas [`Color`](xref:Xamarin.Forms.Color) formas en que se puede usar la clase en Xamarin. Forms.
 
-La `Color` clase proporciona una serie de métodos para crear una instancia de color
+La [`Color`](xref:Xamarin.Forms.Color) clase proporciona una serie de métodos para compilar una instancia de color:
 
 - **Colores con nombre** -una colección de comunes colores con nombre, incluidos `Red`, `Green`, y `Blue`.
 - **FromHex** : valor de cadena similar a la sintaxis usada en HTML, por ejemplo, "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
@@ -67,13 +67,14 @@ En iOS y Android, esta instancia se establece en un color de contraste que está
 
 ## <a name="additional-methods"></a>Métodos adicionales
 
-`Color` instancias incluyen métodos adicionales que pueden usarse para crear nuevos colores:
+[`Color`](xref:Xamarin.Forms.Color)las instancias de incluyen los siguientes métodos adicionales:
 
-- **AddLuminosity** -devuelve un nuevo color si modifica la luminosidad por el delta proporcionado.
-- **WithHue** -devuelve un nuevo color, reemplazando el matiz con el valor proporcionado.
-- **WithLuminosity** -devuelve un nuevo color, reemplazando la luminosidad con el valor proporcionado.
-- **WithSaturation** -devuelve un nuevo color, reemplazando la saturación con el valor proporcionado.
-- **MultiplyAlpha** -devuelve un nuevo color mediante la modificación de la versión alfa, multiplicarlo por el valor alfa proporcionado.
+- **AddLuminosity** : devuelve una `Color` modificando la luminosidad por el Delta proporcionado.
+- **MultiplyAlpha** : devuelve una `Color` modificando el alfa, multiplicándolo por el valor alfa proporcionado.
+- **ToHex** : devuelve una representación `string` hexadecimal de un `Color`.
+- **WithHue** : devuelve un `Color`, reemplazando el matiz por el valor proporcionado.
+- **WithLuminosity** : devuelve un `Color`, reemplazando la luminosidad por el valor proporcionado.
+- **WithSaturation** : devuelve un `Color`, reemplazando la saturación por el valor proporcionado.
 
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 
@@ -104,7 +105,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 
 ## <a name="using-from-xaml"></a>Uso de XAML
 
-También se puedan encontrar fácilmente los colores en XAML mediante los nombres de colores definido o las representaciones hexadecimales que se muestra aquí:
+También se puede hacer referencia a los colores en XAML mediante los nombres de colores definidos o las representaciones hexadecimales que se muestran aquí:
 
 ```xaml
 <Label Text="Sea color" BackgroundColor="Aqua" />
@@ -115,12 +116,7 @@ También se puedan encontrar fácilmente los colores en XAML mediante los nombre
 ```
 
 > [!NOTE]
-> Cuando se usa la compilación de XAML, los nombres de colores distinguen mayúsculas de minúsculas y por lo tanto, pueden escribirse en minúsculas. Para obtener más información sobre la compilación de XAML, vea [compilación XAML](~/xamarin-forms/xaml/xamlc.md).
-
-## <a name="summary"></a>Resumen
-
-Xamarin.Forms `Color` clase se utiliza para crear referencias de color basadas en la plataforma. Se puede usar en código compartido y XAML.
-
+> Cuando se usa la compilación de XAML, los nombres de colores distinguen mayúsculas de minúsculas y por lo tanto, pueden escribirse en minúsculas. Para obtener más información acerca de la compilación XAML, consulte [XAML Compilation](~/xamarin-forms/xaml/xamlc.md) (Compilación XAML).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

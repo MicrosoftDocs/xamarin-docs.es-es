@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 43ce43b7ffb8cbe24fd4bb9dd95e496de27110d6
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620974"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889887"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin. iOS
 
@@ -462,6 +462,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
   ...
 }
 ```
+
 <a name="Simple-Reordering-Example" />
 
 ### <a name="simple-reordering-example"></a>Ejemplo de reordenación simple

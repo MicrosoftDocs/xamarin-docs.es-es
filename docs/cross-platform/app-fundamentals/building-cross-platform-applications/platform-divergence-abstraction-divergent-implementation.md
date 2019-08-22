@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 773bc5a6f80fa16de8fd7dc2ae86664d6250c4fc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 993a455ff0d376f213c403a55df71b3ac52d0d4b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526821"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887669"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4: Trabajo con varias plataformas
 
@@ -115,6 +115,7 @@ Los proyectos de Xamarin `__MOBILE__` siempre definen lo que es cierto para los 
 // Xamarin iOS or Android-specific code
 #endif
 ```
+
 #### <a name="ios"></a>iOS
 
 Xamarin. iOS define `__IOS__` que puede usar para detectar dispositivos iOS.

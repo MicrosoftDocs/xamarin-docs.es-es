@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
-ms.openlocfilehash: d170e37b8bf4ce880f9d8f48d30defb42ee6bba2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28cb1573262b63cc2b0ccad9f468fe36c682718d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648006"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888846"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
@@ -232,6 +232,7 @@ En Visual Studio 2017 o Visual Studio 2019, debería poder probar la aplicación
 De forma predeterminada, IIS Express solo responderá a las `localhost`solicitudes a. Los dispositivos remotos (como un dispositivo Android, un iPhone o incluso un simulador) no tendrán acceso a su servicio WCF local. Debe conocer la dirección IP de la estación de trabajo de Windows 10 en la red local. En este ejemplo, supongamos que la estación de trabajo tiene la dirección `192.168.1.143`IP. En los pasos siguientes se explica cómo configurar Windows 10 y IIS Express para aceptar conexiones remotas y conectarse al servicio desde un dispositivo físico o virtual:
 
 1. **Agregue una excepción al firewall de Windows**. Debe abrir un puerto a través del firewall de Windows que las aplicaciones de la subred pueden utilizar para comunicarse con el servicio WCF. Cree una regla de entrada que abra el puerto 49393 en el firewall. En un símbolo del sistema administrativo, ejecute este comando:
+
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
@@ -312,5 +313,5 @@ De forma predeterminada, IIS Express solo responderá a las `localhost`solicitud
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TodoWCF (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [Cómo: Creación de un cliente de Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [Procedimientos: Creación de un cliente de Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
 - [Herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

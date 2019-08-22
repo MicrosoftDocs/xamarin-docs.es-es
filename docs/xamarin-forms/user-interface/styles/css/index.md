@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de7ec7dc87fc4ba61e76603240197fc9d041255
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620836"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887938"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilos a las aplicaciones de Xamarin.Forms con hojas de estilos en cascada (CSS)
 
@@ -131,25 +131,7 @@ Para obtener más información acerca de los diccionarios de recursos, consulte 
 
 ### <a name="c"></a>C\#
 
-En C#, una hoja de estilos puede cargarse como recurso incrustado y agregarse a un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
-
-```csharp
-public partial class MyPage : ContentPage
-{
-    public MyPage()
-    {
-        InitializeComponent();
-
-        this.Resources.Add(StyleSheet.FromAssemblyResource(
-            IntrospectionExtensions.GetTypeInfo(typeof(MyPage)).Assembly,
-            "MyProject.Assets.styles.css"));
-    }
-}
-```
-
-El primer argumento para el `StyleSheet.FromAssemblyResource` método es el ensamblado que contiene la hoja de estilos, mientras que el segundo argumento es un `string` que representa el identificador de recurso. Se puede obtener el identificador de recursos de la **propiedades** ventana cuando se selecciona el archivo CSS.
-
-Como alternativa, una hoja de estilos puede cargarse desde un `StringReader` y se agrega a un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+En C#, una hoja de estilos se puede cargar desde `StringReader` un y agregar a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)un:
 
 ```csharp
 public partial class MyPage : ContentPage

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acf065a275b28863c5133f764a7f7b1f87127887
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c322a329a517f9c655ce7b8dac4aaaaf8c5ef4cc
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654208"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889775"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Búsqueda con Spotlight principales en Xamarin. iOS
 
@@ -124,6 +124,7 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
     }
 });
 ```
+
 ## <a name="additional-core-spotlight-features"></a>Características principales adicionales de Spotlight
 
 Spotlight Core tiene las siguientes características que ayudan a mantener la precisión y la actualización del índice:

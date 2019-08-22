@@ -6,13 +6,13 @@ ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/03/2019
-ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.date: 07/18/2019
+ms.openlocfilehash: 1f2ef838287e32df5df42f73e4b43816d618552d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658041"
+ms.locfileid: "69887886"
 ---
 # <a name="xamarinforms-switch"></a>Modificador de Xamarin. Forms
 
@@ -26,8 +26,9 @@ Las siguientes capturas de `Switch` pantallas muestran un control en su estado *
 
 El `Switch` control define dos propiedades:
 
-* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)es un `Color` que afecta al `Switch` modo en que se representa en el estado de alternancia o **activada**.
 * [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)es un `boolean` valor que indica `Switch` si está **activado**.
+* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)es un `Color` que afecta al `Switch` modo en que se representa en el estado de alternancia o **activada**.
+* `ThumbColor`es el `Color` de la Thumb del modificador.
 
 Estas propiedades están respaldadas por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que `Switch` significa que se puede aplicar un estilo a y ser el destino de los enlaces de datos.
 
@@ -47,23 +48,24 @@ También `Switch` se puede crear en el código:
 Switch switchControl = new Switch { IsToggled = true };
 ```
 
-### <a name="switch-style-properties"></a>Cambiar propiedades de estilo
+## <a name="switch-appearance"></a>Cambiar apariencia
 
-La `OnColor` propiedad se puede establecer para definir el `Switch` color cuando se cambia a su estado. En el ejemplo siguiente se muestra cómo crear una `Switch` instancia de en XAML `OnColor` con el conjunto de propiedades:
+Además de las [`Switch`](xref:Xamarin.Forms.Switch) propiedades que heredan de la [`View`](xref:Xamarin.Forms.View) clase, `Switch` también define `OnColor` las propiedades `ThumbColor` y. La `OnColor` propiedad se puede establecer para definir el `Switch` color cuando se cambia a su estado, y la `ThumbColor` propiedad se puede establecer para definir el `Color` de la Thumb del conmutador. En el ejemplo siguiente se muestra cómo crear una `Switch` instancia de en XAML con estas propiedades establecidas:
 
 ```xaml
-<Switch OnColor="Orange" />
+<Switch OnColor="Orange"
+        ThumbColor="Green" />
 ```
 
-La `OnColor` propiedad también se puede establecer al crear un `Switch` en el código:
+También se pueden establecer las propiedades al crear un `Switch` en el código:
 
 ```csharp
-Switch switchControl = new Switch { OnColor = Color.Orange };
+Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 ```
 
-Las siguientes capturas de `Switch` pantallas muestran el en los Estados **de alternancia activado** y `Color.Orange` desactivado, con la `OnColor` propiedad establecida en en iOS y Android:
+En la captura de pantalla `Switch` siguiente se muestra el en sus Estados **de alternancia on** y `OnColor` **OFF** , con las propiedades y `ThumbColor` establecidas:
 
-![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android](switch-images/switch-states-oncolor.png "Conmutadores en iOS y Android")
+![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android](switch-images/switch-states-colors.png "Conmutadores en iOS y Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Responder a un cambio de estado del conmutador
 

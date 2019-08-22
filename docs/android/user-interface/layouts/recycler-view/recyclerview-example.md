@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522467"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887544"
 ---
 # <a name="a-basic-recyclerview-example"></a>Ejemplo de RecyclerView básico
 
@@ -145,6 +145,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 En este ejemplo de código, `PhotoViewHolder` al constructor se le pasa una referencia a la vista del elemento `CardView`primario ( `PhotoViewHolder` el) que contiene. Tenga en cuenta que siempre reenvía la vista del elemento primario al constructor base. El `PhotoViewHolder` constructor llama `FindViewById` a en la vista de elemento primario para buscar cada una de sus referencias `ImageView` de `TextView`vista secundaria, y almacenar los `Image` resultados `Caption` en las propiedades y, respectivamente. Posteriormente, el adaptador recupera las referencias de la vista de estas propiedades cuando `CardView`actualiza las vistas secundarias de este con nuevos datos.
 
 Para obtener más información `RecyclerView.ViewHolder`sobre, vea la referencia de la [clase RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).

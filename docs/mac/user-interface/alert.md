@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 671a7c8aaa81094157056672c64f0c2dc847d6a7
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620916"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889538"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas en Xamarin. Mac
 
@@ -90,6 +90,7 @@ var alert = new NSAlert () {
 };
 alert.RunModal ();
 ```
+
 Si se ejecuta este código, se muestra lo siguiente:
 
 [![](alert-images/alert02.png "Una alerta simple")](alert-images/alert02.png#lightbox)
@@ -153,6 +154,7 @@ alert.BeginSheetForResponse (this, (result) => {
   Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
+
 Si se ejecuta este código, se mostrará lo siguiente:
 
 [![](alert-images/alert05.png "Una alerta de tres botones que se muestra como una hoja")](alert-images/alert05.png#lightbox)

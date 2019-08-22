@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/13/2019
-ms.openlocfilehash: e818495d45435546f9d2fc9c5593d9c7caa608ea
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.date: 07/18/2019
+ms.openlocfilehash: 4cfedad6ccf87dfef819b677233be1edb2d2c62d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528873"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887961"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
@@ -173,35 +173,41 @@ public class MapPage : ContentPage {
 También se puede cambiar el contenido del mapa estableciendo el `MapType` propiedad para mostrar un mapa de calle normal (predeterminado), imágenes de satélite o una combinación de ambos.
 
 ```csharp
-map.MapType == MapType.Street;
+map.MapType = MapType.Street;
 ```
 
 Válido `MapType` los valores son:
 
-- Híbrido
-- Satélite
-- Calle (predeterminado)
+- `Hybrid`
+- `Satellite`
+- `Street` (el valor predeterminado)
 
 ### <a name="map-region-and-mapspan"></a>Región de mapa y MapSpan
 
-Como se muestra en el fragmento de código anterior, proporcionando un `MapSpan` instancia a un constructor de asignación establece la vista inicial (punto central y el nivel de zoom) de la asignación cuando se cargue. El `MoveToRegion` método en la clase map, a continuación, puede utilizarse para cambiar el nivel de posición o zoom del mapa. Hay dos maneras de crear un nuevo `MapSpan` instancia:
+Como se muestra en el fragmento de código anterior, proporcionando un `MapSpan` instancia a un constructor de asignación establece la vista inicial (punto central y el nivel de zoom) de la asignación cuando se cargue. Hay dos maneras de crear un nuevo `MapSpan` instancia:
 
 - **MapSpan.FromCenterAndRadius()** -método estático para crear un intervalo de un `Position` y especificando un `Distance` .
 - **New () de MapSpan** -constructor que usa un `Position` y los grados de latitud y longitud para mostrar.
 
-
-Para cambiar el nivel de zoom del mapa sin modificar la ubicación, cree un nuevo `MapSpan` utilizando la ubicación actual de la `VisibleRegion.Center` propiedad del control de mapa. Un `Slider` podría usarse para controlar el zoom del mapa similar al siguiente (sin embargo, hacer zoom directamente en el control de mapa, actualmente no puede actualizar el valor del control deslizante):
+El `MoveToRegion` método en la clase map, a continuación, puede utilizarse para cambiar el nivel de posición o zoom del mapa. Para cambiar el nivel de zoom del mapa sin modificar la ubicación, cree un nuevo `MapSpan` utilizando la ubicación actual de la `VisibleRegion.Center` propiedad del control de mapa. Se `Slider` puede utilizar para controlar el zoom de mapa como este (sin embargo, al hacer zoom directamente en el control de mapa no se puede actualizar el valor del control deslizante actualmente):
 
 ```csharp
-var slider = new Slider (1, 18, 1);
-slider.ValueChanged += (sender, e) => {
+Slider slider = new Slider (1, 18, 1);
+slider.ValueChanged += (sender, e) =>
+{
     var zoomLevel = e.NewValue; // between 1 and 18
     var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
     map.MoveToRegion(new MapSpan (map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
 };
 ```
 
- [![Mapas con zoom](map-images/maps-zoom-sml.png "Zoom del Control de mapa")](map-images/maps-zoom.png#lightbox "Zoom del Control de mapa")
+[![Mapas con zoom](map-images/maps-zoom-sml.png "Zoom del Control de mapa")](map-images/maps-zoom.png#lightbox "Zoom del Control de mapa")
+
+Además, la [`Map`](xref:Xamarin.Forms.Maps.Map) clase tiene una `MoveToLastRegionOnLayoutChange` propiedad de tipo `bool`, que está respaldada por una propiedad enlazable. De forma predeterminada, esta `true`propiedad es, que indica que la región de mapa mostrada pasará de su región actual a su región establecida anteriormente cuando se produzca un cambio de diseño, como en la rotación de dispositivos. Cuando esta propiedad está establecida en `false`, la región de mapa que se muestra permanecerá centrada cuando se produzca un cambio de diseño. En el ejemplo siguiente se muestra cómo establecer esta propiedad:
+
+```csharp
+map.MoveToLastRegionOnLayoutChange = false;
+```
 
 ### <a name="map-pins"></a>Anclajes de mapa
 
@@ -297,6 +303,7 @@ Un [`Map`](xref:Xamarin.Forms.Maps.Map) se puede rellenar con datos mediante el 
     <Grid>
         ...
         <maps:Map x:Name="map"
+                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>

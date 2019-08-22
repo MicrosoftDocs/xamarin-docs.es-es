@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
-ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/18/2019
+ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657274"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887901"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
 
@@ -28,6 +28,7 @@ Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad 
 - [`OnPlatform`](#onplatform) : personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma.
 - [`OnIdiom`](#onidiom) : personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en.
 - [`DataTemplate`](#datatemplate-markup-extension): convierte un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
+- [`FontImage`](#fontimage-markup-extension)-Mostrar un icono de fuente en cualquier vista que pueda mostrar `ImageSource`un.
 
 Las extensiones de marcado XAML adicionales históricamente han sido compatible con otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Estos se describen con más detalle en otros artículos:
 
@@ -556,6 +557,37 @@ Un uso típico de esta extensión de marcado está en una aplicación de Shell, 
 En este ejemplo, `MonkeysPage` se convierte [`ContentPage`](xref:Xamarin.Forms.ContentPage) de a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que se establece como el valor de la `ShellContent.ContentTemplate` propiedad. Esto garantiza que `MonkeysPage` solo se crea cuando se produce la navegación a la página, en lugar de al inicio de la aplicación.
 
 Para obtener más información sobre las aplicaciones de Shell, consulte [Shell de Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+
+## <a name="fontimage-markup-extension"></a>Extensión de marcado FontImage
+
+La `FontImage` extensión de marcado le permite mostrar un icono de fuente en cualquier vista que pueda mostrar `ImageSource`un. Proporciona la misma funcionalidad que la `FontImageSource` clase, pero con una representación más concisa.
+
+La clase`FontImageExtension` admite la extensión de marcado,quedefinelassiguientespropiedades:`FontImage`
+
+- `FontFamily`de tipo `string`, la familia de fuentes a la que pertenece el icono de fuente.
+- `Glyph`de tipo `string`, el valor de carácter Unicode del icono de fuente.
+- `Color`de tipo `Color`, el color que se va a utilizar al mostrar el icono de fuente.
+- `Size`del tipo `double`, el tamaño, en unidades independientes del dispositivo, del icono de fuente representada.
+
+> [!NOTE]
+> El analizador XAML permite abreviar la `FontImageExtension` clase como. `FontImage`
+
+El `Glyph` propiedad es la propiedad content de `FontImageExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `Glyph=` forma parte de la expresión siempre que sea el primer argumento.
+
+La página de **demostración de FontImage** muestra cómo usar `FontImage` la extensión de marcado:
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+En este ejemplo, la versión abreviada del nombre `FontImageExtension` de clase se usa para mostrar un icono Xbox, de la familia de fuentes Ionicons, en [`Image`](xref:Xamarin.Forms.Image)un. La expresión también utiliza la `OnPlatform` extensión de marcado para especificar `FontFamily` diferentes valores de propiedad en iOS y Android. Además, se elimina `Glyph=` la parte de la expresión y las propiedades de extensión de marcado que se establecen se separan mediante comas. Tenga en cuenta que, mientras que el carácter Unicode `\uf30c`para el icono es, tiene que incluir un carácter de `&#xf30c;`escape en XAML, por lo que se convierte en.
+
+Esta es la ejecución del programa:
+
+[ ![Captura de pantalla de la FontImage demo de la extensión de marcado FontImage](consuming-images/fontimagedemo.png "") ] (consuming-images/fontimagedemo-large.png#lightbox "Demostración de FontImage")
+
+Para obtener información sobre cómo mostrar los iconos de fuente especificando los datos del `FontImageSource` icono de fuente de un objeto, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
 ## <a name="define-your-own-markup-extensions"></a>Definir sus propias extensiones de marcado
 

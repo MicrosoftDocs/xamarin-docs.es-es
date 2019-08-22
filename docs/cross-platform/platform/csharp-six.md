@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 1b559f3f96088e511250e09684f7c9e120d32b73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5f51332f84d2f91adbdc8c46e509774f59a8ed9e
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521676"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887435"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 Introducción a las nuevas características
 
@@ -187,6 +187,7 @@ class Program
     }
 }
 ```
+
 da como resultado:
 
 ```

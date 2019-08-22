@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d7bd3d64d7e9f4ad8298120a017719b3cbb1410e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528701"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887487"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas en Xamarin. iOS
 
@@ -28,25 +28,27 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
- `MKMapView`es una `UIView` subclase que muestra un mapa. Simplemente agregar el mapa con el código anterior genera un mapa interactivo:
+`MKMapView`es una `UIView` subclase que muestra un mapa. Simplemente agregar el mapa con el código anterior genera un mapa interactivo:
 
- ![](images/00-map.png "Un mapa de ejemplo")
+![](images/00-map.png "Un mapa de ejemplo")
 
 ## <a name="map-style"></a>Estilo de mapa
 
- `MKMapView`admite 3 estilos diferentes de asignaciones. Para aplicar un estilo de mapa, basta con `MapType` establecer la propiedad en un valor `MKMapType` de la enumeración:
- ```
+`MKMapView`admite 3 estilos diferentes de asignaciones. Para aplicar un estilo de mapa, basta con `MapType` establecer la propiedad en un valor `MKMapType` de la enumeración:
+
+```
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
- ```
-  En la captura de pantalla siguiente se muestran los distintos estilos de mapa que están disponibles:
+```
 
- ![](images/01-mapstyles.png "Esta captura de pantalla muestra los distintos estilos de mapa que están disponibles")
+En la captura de pantalla siguiente se muestran los distintos estilos de mapa que están disponibles:
+
+![](images/01-mapstyles.png "Esta captura de pantalla muestra los distintos estilos de mapa que están disponibles")
 
 ## <a name="panning-and-zooming"></a>Panorámica y zoom
 
- `MKMapView`incluye compatibilidad con las características de interactividad de mapa, como:
+`MKMapView`incluye compatibilidad con las características de interactividad de mapa, como:
 
 - Zoom a través de un gesto de pinch
 - Movimiento panorámico a través de un movimiento de pan

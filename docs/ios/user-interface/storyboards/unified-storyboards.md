@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 20010fb3704da54ae1e1133c25f332e8481a1b87
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528542"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890173"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -71,6 +71,7 @@ El comportamiento de carga de imágenes en iOS también `@3x` reconoce un sufijo
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 O bien, si asignan la imagen a un elemento de la interfaz de `MonkeyIcon.png`usuario mediante `MonkeyIcon@3x.png` el diseñador de iOS como, se usará de nuevo automáticamente en el iPhone 6 Plus.
 
 <a name="dynamic-launch-screens" />
@@ -125,7 +126,7 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad|Value|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Sin especificar|

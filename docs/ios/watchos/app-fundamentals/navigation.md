@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f49416eddb69e2900eb427f27057cd8f1cb9ceb5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e0c70418849bdf394a00cd5f53744b0c01bc5794
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654687"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889620"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación en Xamarin de watchOS
 
@@ -88,6 +88,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
   return base.GetContextForSegue (segueIdentifier);
 }
 ```
+
 <a name="Page-Based_Interfaces"/>
 
 ## <a name="page-based-interfaces"></a>Interfaces basadas en la página
