@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 56c5aa7f0f8db746fbc6d7f8b5409f7d6c0f5d0d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ccdf1e3fc0c42f8af8f9219a8b472827048a90dc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666897"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525229"
 ---
 # <a name="apk-expansion-files"></a>Archivos de expansión de APK
 
 Algunas aplicaciones, como es el caso de algunos juegos, por ejemplo, requieren más recursos y activos de los que se pueden proporcionar en el límite del tamaño máximo de la aplicación Android que impone Google Play. Este límite depende de la versión de Android para la que esté destinado el APK:
 
--  100 MB para APK destinadas a Android 4.0 o versiones posteriores (nivel de API 14 o superior).
--  50 MB para APK destinadas a Android 3.2 o versiones anteriores (nivel de API 13 o superior).
+- 100 MB para APK destinadas a Android 4.0 o versiones posteriores (nivel de API 14 o superior).
+- 50 MB para APK destinadas a Android 3.2 o versiones anteriores (nivel de API 13 o superior).
 
 Para superar esta limitación, Google Play hospeda y distribuye dos *archivos de expansión* que acompañan a un APK, con lo cual una aplicación puede superar indirectamente este límite. 
 
@@ -26,8 +26,8 @@ En la mayoría de los dispositivos, cuando se instala una aplicación, los archi
 
 Los archivos de expansión se tratan como *blobs binarios opacos (obb)* que pueden tener un tamaño de hasta 2 GB. Android no realiza ningún procesamiento especial en estos archivos tras su descarga, y estos pueden estar en cualquier formato que sea adecuado para la aplicación. Desde el punto de vista conceptual, el enfoque recomendado para los archivos de expansión es el siguiente:
 
--   **Expansión principal**: este es el archivo de expansión principal para recursos y activos que no tienen cabida en el límite de tamaño del APK. El archivo de expansión principal debe contener los activos principales que necesita una aplicación y rara vez debe actualizarse.
--   **Expansión de revisión**: este está diseñado para pequeñas actualizaciones del archivo de expansión principal. Este archivo se puede actualizar. La aplicación se encarga de realizar las revisiones o actualizaciones necesarias desde este archivo.
+- **Expansión principal**: este es el archivo de expansión principal para recursos y activos que no tienen cabida en el límite de tamaño del APK. El archivo de expansión principal debe contener los activos principales que necesita una aplicación y rara vez debe actualizarse.
+- **Expansión de revisión**: este está diseñado para pequeñas actualizaciones del archivo de expansión principal. Este archivo se puede actualizar. La aplicación se encarga de realizar las revisiones o actualizaciones necesarias desde este archivo.
 
 
 Los archivos de expansión deben cargarse al mismo tiempo que el APK.
@@ -36,10 +36,10 @@ Google Play no permite que se descargue un archivo de expansión en un APK exist
 
 ## <a name="expansion-file-storage"></a>Almacenamiento de archivos de expansión
 
-Cuando se descargan los archivos en un dispositivo, se almacenan en **_shared-store_/Android/obb/_package-name_**:
+Cuando se descargan los archivos en un dispositivo, se almacenan en **_shared-store_/Android/obb/_package-name_** :
 
--   **_shared-store_**: es el directorio especificado por `Android.OS.Environment.ExternalStorageDirectory`.
--   **_package-name_**: es el nombre del paquete de estilo Java de la aplicación.
+- **_shared-store_** : es el directorio especificado por `Android.OS.Environment.ExternalStorageDirectory`.
+- **_package-name_** : es el nombre del paquete de estilo Java de la aplicación.
 
 
 Una vez descargados, los archivos de expansión no se deben mover, modificar, cambiar de nombre ni eliminar de su ubicación en el dispositivo. Si no se respeta esta directriz, los archivos de expansión se descargarán de nuevo y se eliminarán los archivos antiguos. Además, el directorio del archivo de expansión solo debe contener los archivos del paquete de expansión.
@@ -55,13 +55,15 @@ Como alternativa a la extracción de archivos desde un archivo de expansión, se
 
 Tras descargar los archivos de expansión, Google Play utiliza el siguiente esquema para asignar un nombre a la expansión:
 
-    [main|patch].<expansion-version>.<package-name>.obb
+```
+[main|patch].<expansion-version>.<package-name>.obb
+```
 
 Los tres componentes de este esquema son:
 
--   `main` o `patch`: especifica si este es el archivo de expansión principal o de revisiones. Solo puede ser uno de los dos.
--   `<expansion-version>`: entero que coincide con el `versionCode` del APK con el que se ha asociado el archivo en primer lugar.
--   `<package-name>`: nombre del paquete de estilo Java de la aplicación.
+- `main` o `patch`: especifica si este es el archivo de expansión principal o de revisiones. Solo puede ser uno de los dos.
+- `<expansion-version>`: entero que coincide con el `versionCode` del APK con el que se ha asociado el archivo en primer lugar.
+- `<package-name>`: nombre del paquete de estilo Java de la aplicación.
 
 
 Por ejemplo, si la versión del APK es la 21 y el nombre del paquete es `mono.samples.helloworld`, el archivo de expansión principal se llamará **main.21.mono.samples.helloworld**.
@@ -75,18 +77,18 @@ Cuando se instala una aplicación desde Google Play, los archivos de expansión 
 
 Cuando se inicia una aplicación, debe comprobar si existen los archivos de expansión adecuados en el dispositivo actual. En caso contrario, la aplicación debe realizar una solicitud desde la [Administración de licencias de aplicaciones](https://developer.android.com/google/play/licensing/index.html) de Google Play. Esta comprobación se realiza mediante la *License Verification Library (LVL)* (Biblioteca de comprobación de licencias (BCL)) y debe efectuarse en el caso de las aplicaciones gratuitas y las que necesiten licencia. La BCL la utilizan principalmente aplicaciones de pago para aplicar restricciones de licencias. Sin embargo, Google ha ampliado la BCL de tal manera que pueda utilizarse también con las bibliotecas de expansión. Las aplicaciones gratuitas tienen que realizar la comprobación de la BCL, pero pueden ignorar las restricciones de licencias. La solicitud de la BCL se encarga de proporcionar la siguiente información sobre los archivos de expansión que necesita la aplicación: 
 
--   **Tamaño del archivo**: los tamaños de archivo de los archivos de expansión se utilizan como parte de la comprobación que determina si ya se han descargado o no los archivos de expansión correctos.
--   **Nombres de archivo**: nombre de archivo, en el dispositivo actual, en que deben guardarse los paquetes de expansión.
--   **URL de descarga**: dirección URL que se debe utilizar para descargar los paquetes de expansión. Es única para cada descarga y expirará poco después de haberse proporcionado.
+- **Tamaño del archivo**: los tamaños de archivo de los archivos de expansión se utilizan como parte de la comprobación que determina si ya se han descargado o no los archivos de expansión correctos.
+- **Nombres de archivo**: nombre de archivo, en el dispositivo actual, en que deben guardarse los paquetes de expansión.
+- **URL de descarga**: dirección URL que se debe utilizar para descargar los paquetes de expansión. Es única para cada descarga y expirará poco después de haberse proporcionado.
 
 
 Una vez realizada la comprobación de la BCL, la aplicación debe descargar los archivos de expansión, teniendo en cuenta los puntos siguientes como parte de la descarga:
 
--  Es posible que el dispositivo no tenga espacio suficiente para almacenar los archivos de expansión.
--  Si no está disponible la Wi-Fi, el usuario debe poder pausar o cancelar la descarga para evitar cargos de datos no deseados.
--  Los archivos de expansión se descargan en segundo plano para evitar el bloqueo de las interacciones del usuario.
--  Mientras la descarga se realiza en segundo plano, se debe mostrar un indicador de progreso.
--  Los errores que se produzcan durante la descarga se procesan correctamente y esta se puede recuperar.
+- Es posible que el dispositivo no tenga espacio suficiente para almacenar los archivos de expansión.
+- Si no está disponible la Wi-Fi, el usuario debe poder pausar o cancelar la descarga para evitar cargos de datos no deseados.
+- Los archivos de expansión se descargan en segundo plano para evitar el bloqueo de las interacciones del usuario.
+- Mientras la descarga se realiza en segundo plano, se debe mostrar un indicador de progreso.
+- Los errores que se produzcan durante la descarga se procesan correctamente y esta se puede recuperar.
 
 
 
@@ -98,9 +100,9 @@ Si no se han descargado los archivos de expansión o si los archivos actuales no
 
 Para simplificar la tarea de integrar los archivos de expansión en una aplicación, Google ha creado varias bibliotecas en Java. Las bibliotecas en cuestión son las siguientes:
 
--   **Biblioteca descargadora**: biblioteca que simplifica la integración de los archivos de expansión en una aplicación. La biblioteca descarga los archivos de expansión en un servicio en segundo plano, muestra las notificaciones de usuario, trata los problemas de conectividad de red, reanuda las descargas, etc.
--   **Biblioteca de comprobación de licencias (BCL)**: biblioteca para realizar y procesar las llamadas a los servicios de administración de licencias de aplicaciones. También puede utilizarse para realizar comprobaciones de licencias y, así, ver si la aplicación está autorizada para su uso en el dispositivo.
--   **Biblioteca del archivo .zip de expansión de APK (opcional)**: si los archivos de expansión están en un archivo .zip, esta biblioteca actúa como proveedor de contenido y permite que una aplicación lea los recursos y activos directamente desde el archivo .zip sin tener que expandirlo.
+- **Biblioteca descargadora**: biblioteca que simplifica la integración de los archivos de expansión en una aplicación. La biblioteca descarga los archivos de expansión en un servicio en segundo plano, muestra las notificaciones de usuario, trata los problemas de conectividad de red, reanuda las descargas, etc.
+- **Biblioteca de comprobación de licencias (BCL)** : biblioteca para realizar y procesar las llamadas a los servicios de administración de licencias de aplicaciones. También puede utilizarse para realizar comprobaciones de licencias y, así, ver si la aplicación está autorizada para su uso en el dispositivo.
+- **Biblioteca del archivo .zip de expansión de APK (opcional)** : si los archivos de expansión están en un archivo .zip, esta biblioteca actúa como proveedor de contenido y permite que una aplicación lea los recursos y activos directamente desde el archivo .zip sin tener que expandirlo.
 
 
 Estas bibliotecas se han trasladado a C# y están disponibles bajo la licencia de Apache 2.0. Para integrar rápidamente los archivos de expansión en una aplicación existente, estas bibliotecas se pueden agregar a una aplicación existente de Xamarin.Android. El código está disponible en [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary), en GitHub.

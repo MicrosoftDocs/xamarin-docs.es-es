@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 1d900a7a3fc1bfabc9498852fa37579f5d5a4615
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0016a26ea7e44b64154eae9b503c2d726626e73f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645239"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890406"
 ---
 # <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
@@ -450,6 +450,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
             }
     };
     ```
+
     Incluya `using Phoneword;` si el espacio de nombres del archivo es diferente.
 
 1. Agregue código para responder cuando el usuario pulse el segundo botón, que se denomina `CallButton`. Coloque el código siguiente debajo del código para el `TranslateButton` y agregue `using Foundation;` a la parte superior del archivo:

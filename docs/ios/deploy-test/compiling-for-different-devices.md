@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121215"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527122"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilación para varios dispositivos en Xamarin.iOS
 
@@ -128,8 +128,8 @@ Si el proyecto desea usar algunas de las características de las últimas versio
 
 Para ello, debe realizar los pasos siguientes:
 
--  Abra **Opciones del proyecto** y vaya al panel **Compilación de iOS**.
--  Agregue `'-gcc_flags "-weak_framework iAd"'` a **Opciones adicionales** para cada configuración en que desea establecer un enlace flexible:
+- Abra **Opciones del proyecto** y vaya al panel **Compilación de iOS**.
+- Agregue `'-gcc_flags "-weak_framework iAd"'` a **Opciones adicionales** para cada configuración en que desea establecer un enlace flexible:
 
 
 [![](compiling-for-different-devices-images/image3.png "Opciones adicionales")](compiling-for-different-devices-images/image3.png#lightbox)

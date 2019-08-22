@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647190"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621094"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -366,5 +366,5 @@ Al mostrar una [`View`](xref:Xamarin.Forms.View) en la barra de navegación de u
 - [PassingData (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
 - [LoginFlow (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
 - [TitleView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
-- [Vídeo sobre cómo crear un flujo de pantalla de inicio de sesión en Xamarin.Forms](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
+- [Vídeo sobre cómo crear un flujo de pantalla de inicio de sesión en Xamarin.Forms](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

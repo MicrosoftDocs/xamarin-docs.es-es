@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: caf43e6cb975b65240f5c0f8538b9be175978eac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780465"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526679"
 ---
 # <a name="custom-linker-configuration"></a>Configuración personalizada del enlazador
 
@@ -20,12 +20,12 @@ Si el conjunto predeterminado de opciones no es suficiente, puede controlar el p
 Puede proporcionar definiciones adicionales para que el enlazador se asegure de que el tipo, los métodos y los campos no se eliminen de la aplicación. En su propio código, el método preferido es usar el atributo personalizado `[Preserve]`, como bien se describe en las guías [Vincular en iOS](~/ios/deploy-test/linker.md) y [Vincular en Android](~/android/deploy-test/linker.md).
 Sin embargo, si necesita algunas definiciones del SDK o de los ensamblados del producto, usar un archivo XML puede ser la mejor solución con respecto a la adición de código que garantice que el enlazador no eliminará lo que se necesita.
 
-Para ello, defina un archivo XML con el elemento de nivel superior <linker> que contiene nodos de *ensamblado* que, a su vez, contienen nodos de *tipo*, que, a su vez, contienen nodos de *método* y *archivo*.
+Para ello, defina un archivo XML con el elemento de nivel superior `<linker>` que contiene nodos de *ensamblado* que, a su vez, contienen nodos de *tipo*, que, a su vez, contienen nodos de *método* y *archivo*.
 
 Cuando ya tenga este archivo de descripción del enlazador, agréguelo al proyecto y:
 
--  **Para Android**: establezca **Acción de compilación** en **LinkDescription**.
--  **Para iOS**: establezca **Acción de compilación** en **LinkDescription**.
+- **Para Android**: establezca **Acción de compilación** en **LinkDescription**.
+- **Para iOS**: establezca **Acción de compilación** en **LinkDescription**.
 
 
 En el ejemplo siguiente se muestra el aspecto del archivo XML:

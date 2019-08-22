@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865581"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621108"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -55,21 +55,21 @@ El flujo de trabajo siguiente describe los pasos necesarios para empezar a usar 
 3. Administrar las pruebas beta:
     - Agregue los metadatos.
     - Agregar usuarios internos:
-        - 25 usuarios como máximo.
+      - 25 usuarios como máximo.
     - Agregar usuarios externos:
-        - 1000 usuarios como máximo.
-        - Requiere una revisión de prueba beta, que debe ser conforme a las directrices de Apple.
+      - 1000 usuarios como máximo.
+      - Requiere una revisión de prueba beta, que debe ser conforme a las directrices de Apple.
 4. Reciba comentarios de los usuarios, tome las medidas oportunas y vuelva al paso 2.
 
 ## <a name="create-an-itunes-connect-record"></a>Crear un registro de iTunes Connect
 
-1.  Inicie sesión en el [Portal de iTunes Connect](https://itunesconnect.apple.com/) con sus credenciales de desarrollador de Apple.
-2.  Seleccione **Mis aplicaciones**:
+1. Inicie sesión en el [Portal de iTunes Connect](https://itunesconnect.apple.com/) con sus credenciales de desarrollador de Apple.
+2. Seleccione **Mis aplicaciones**:
 
     [![](testflight-images/my-apps.png "Selección de Mis aplicaciones")](testflight-images/my-apps.png#lightbox)
 
 
-3.  En la pantalla **Mis aplicaciones**, haga clic en el botón **+** situado en la esquina superior izquierda de la pantalla para agregar una aplicación nueva. Si tiene cuentas de desarrollador de iOS y Mac, se le pedirá que elija el tipo de aplicación nueva aquí.
+3. En la pantalla **Mis aplicaciones**, haga clic en el botón **+** situado en la esquina superior izquierda de la pantalla para agregar una aplicación nueva. Si tiene cuentas de desarrollador de iOS y Mac, se le pedirá que elija el tipo de aplicación nueva aquí.
 
 Se mostrará la ventana de envío **Nueva aplicación iOS**, que debe contener exactamente la misma información que el archivo Info.plist de la aplicación.
 
@@ -84,12 +84,12 @@ El formulario debe reflejar exactamente la información que contiene el archivo 
 [![](testflight-images/infoplist.png "Info.plist de la aplicación")](testflight-images/infoplist.png#lightbox)
 [ ![](testflight-images/newiosapp.png "Formulario en iTunes Connect")](testflight-images/newiosapp.png#lightbox)
 
--  **Nombre**: el nombre descriptivo que se ha usado al configurar el paquete de aplicaciones. Debe coincidir exactamente con la entrada del **nombre de la aplicación** en su `Info.plist`.
--  **Idioma principal**: el idioma base que se utiliza en la aplicación. Normalmente es el idioma que usted habla.
--  **ID de paquete**: un menú desplegable en que se enumeran todos los ID de aplicaciones creados en la cuenta de desarrollador.
-    *   **Sufijo del ID de paquete**: si ha seleccionado un ID de paquete comodín (es decir, que termina en *, como en nuestro ejemplo anterior), se mostrará un cuadro adicional en que se pedirá el sufijo del ID de paquete. En el ejemplo, el **ID de paquete** es `mobi.chkn.*` y el sufijo es **PageView**. Los dos elementos componen el **Identificador de paquete** en nuestro `Info.plist`.
--  **Versión**: el número de versión de la aplicación que se va a cargar. La elige el desarrollador.
--  **SKU**: el SKU es un ID único para la aplicación, que los usuarios no verán. Se puede considerar como si fuera un ID de producto. En el ejemplo anterior, he elegido la fecha junto con un número de versión de esa fecha.
+- **Nombre**: el nombre descriptivo que se ha usado al configurar el paquete de aplicaciones. Debe coincidir exactamente con la entrada del **nombre de la aplicación** en su `Info.plist`.
+- **Idioma principal**: el idioma base que se utiliza en la aplicación. Normalmente es el idioma que usted habla.
+- **ID de paquete**: un menú desplegable en que se enumeran todos los ID de aplicaciones creados en la cuenta de desarrollador.
+  - **Sufijo del ID de paquete**: si ha seleccionado un ID de paquete comodín (es decir, que termina en *, como en nuestro ejemplo anterior), se mostrará un cuadro adicional en que se pedirá el sufijo del ID de paquete. En el ejemplo, el **ID de paquete** es `mobi.chkn.*` y el sufijo es **PageView**. Los dos elementos componen el **Identificador de paquete** en nuestro `Info.plist`.
+- **Versión**: el número de versión de la aplicación que se va a cargar. La elige el desarrollador.
+- **SKU**: el SKU es un ID único para la aplicación, que los usuarios no verán. Se puede considerar como si fuera un ID de producto. En el ejemplo anterior, he elegido la fecha junto con un número de versión de esa fecha.
 
 
 ## <a name="upload-your-app"></a>Cargar la aplicación
@@ -190,9 +190,9 @@ Las pruebas se pueden desactivar en cualquier momento.
 
 Los evaluadores internos son miembros de su equipo de desarrollo a quienes se ha asignado uno de los roles siguientes en iTunes Connect:
 
--  **Administrador**: un administrador es responsable de agregar y administrar los usuarios nuevos en iTunes Connect.
--  **Legal**: el agente de equipo es el único usuario administrador a quien se asignará el rol Legal. Dicho rol le permite firmar contratos legales.
--  **Técnico**: un usuario técnico puede cambiar la mayoría de las propiedades relativas a una aplicación. Por ejemplo, puede editar la información de la aplicación, cargar un archivo binario y enviar una aplicación para que se revise.
+- **Administrador**: un administrador es responsable de agregar y administrar los usuarios nuevos en iTunes Connect.
+- **Legal**: el agente de equipo es el único usuario administrador a quien se asignará el rol Legal. Dicho rol le permite firmar contratos legales.
+- **Técnico**: un usuario técnico puede cambiar la mayoría de las propiedades relativas a una aplicación. Por ejemplo, puede editar la información de la aplicación, cargar un archivo binario y enviar una aplicación para que se revise.
 
 Cada compilación se puede compartir con un máximo de 25 miembros.
 

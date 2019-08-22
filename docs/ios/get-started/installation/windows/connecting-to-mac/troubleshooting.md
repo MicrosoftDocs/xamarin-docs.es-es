@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5722a3a208942e8ecef6e5b3c092ac6c9825395f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865799"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890157"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -83,6 +83,7 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
     ```bash
     ssh amyb@10.1.8.95
     ```
+
     <a name="stepnine" />
 
 9. Si **el paso 8 se realiza correctamente**, puede intentar ejecutar un comando simple como `ls` en la conexión:
@@ -218,7 +219,7 @@ Este mensaje se puede pasar por alto siempre y cuando el equipo Mac ejecute OS X
 
 Puede pasar por alto este mensaje a menos que vea que el cuadro de diálogo de conexión no muestra la dirección IP del host de la compilación de Mac. Si _falta_ la dirección IP en ese cuadro de diálogo, puede [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Usuario no válido a desde 10.1.8.95) y "input\_userauth\_request: invalid user a [preauth]" (input_userauth_request: usuario no válido a [autenticación previa])
+#### <a name="invalid-user-a-from-101895-and-input_userauth_request-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Usuario no válido a desde 10.1.8.95) y "input\_userauth\_request: invalid user a [preauth]" (input_userauth_request: usuario no válido a [autenticación previa])
 
 Podría ver este mensaje si consulta el archivo **sshd.log**. Estos mensajes forman parte del proceso de conexión normal y aparecen porque Xamarin usa el nombre de usuario **a** temporalmente al recuperar la _huella digital de SSH_.
 

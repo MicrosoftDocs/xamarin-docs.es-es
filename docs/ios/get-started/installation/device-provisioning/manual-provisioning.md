@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865896"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526633"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -193,14 +193,14 @@ Después de que se haya creado correctamente el perfil de aprovisionamiento, pod
 
 Los certificados y los perfiles de aprovisionamiento que se han creado en el portal para desarrolladores de Apple podrían no aparecer automáticamente en Xcode. Por lo tanto, puede ser necesario descargarlos para que Visual Studio para Mac y Visual Studio tengan acceso a ellos. Para actualizar y descargar los certificados creados en el portal para desarrolladores de Apple, haga lo siguiente:
 
-1.   Salga de Visual Studio para Mac o Visual Studio.
-2.   Inicie Xcode.
-3.   Seleccione el **menú de Xcode > Preferencias…** .
-4.   Haga clic en la pestaña **Cuentas**.
-5.   Seleccione un equipo y haga clic en el botón **Download Manual Profiles** (Descargar perfiles manuales): [![](manual-provisioning-images/selectteam1.png "Descarga de perfiles manuales")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Salga de Visual Studio para Mac o Visual Studio.
+2. Inicie Xcode.
+3. Seleccione el **menú de Xcode > Preferencias…** .
+4. Haga clic en la pestaña **Cuentas**.
+5. Seleccione un equipo y haga clic en el botón **Download Manual Profiles** (Descargar perfiles manuales):  [![](manual-provisioning-images/selectteam1.png "Descarga de perfiles manuales")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Salga de Xcode.
-7.  Inicie Visual Studio para Mac o Visual Studio.
+6. Salga de Xcode.
+7. Inicie Visual Studio para Mac o Visual Studio.
 
 Los nuevos certificados o perfiles de aprovisionamiento estarán disponibles en Visual Studio para Mac o Visual Studio y ya podrán usarse.
 

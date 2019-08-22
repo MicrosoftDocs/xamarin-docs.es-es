@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 2665e45277eccaedbbbbd77f6c7c0ca47700d950
-ms.sourcegitcommit: c2bffcdee5a7c619280c6b9032ba90e4df8b63d9
+ms.openlocfilehash: 75bc540ee518a1f5cfef29886d968648ea5769ed
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533016"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526707"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -262,9 +262,9 @@ Los lenguajes administrados como C# usan la recolección de elementos no utiliza
 
 SGen usa uno de tres montones para asignar espacio para los objetos:
 
--  **Guardería**: es donde se asignan los nuevos objetos pequeños. Cuando se queda sin espacio, se produce una recolección de elementos no utilizados menor. Todos los objetos activos se mueven al montón principal.
--  **Montón principal**: es donde se guardan los objetos de larga ejecución. Si no hay suficiente memoria en el montón principal, se produce una importante recolección de elementos no utilizados. Si se produce un error en una recolección de elementos no utilizados para liberar memoria, SGen le pide más memoria al sistema.
--  **Espacio de objetos grandes**: es donde se guardan los objetos que necesitan más de 8000 bytes. Los objetos grandes no se envían a la guardería, sino que se asignan a este montón.
+- **Guardería**: es donde se asignan los nuevos objetos pequeños. Cuando se queda sin espacio, se produce una recolección de elementos no utilizados menor. Todos los objetos activos se mueven al montón principal.
+- **Montón principal**: es donde se guardan los objetos de larga ejecución. Si no hay suficiente memoria en el montón principal, se produce una importante recolección de elementos no utilizados. Si se produce un error en una recolección de elementos no utilizados para liberar memoria, SGen le pide más memoria al sistema.
+- **Espacio de objetos grandes**: es donde se guardan los objetos que necesitan más de 8000 bytes. Los objetos grandes no se envían a la guardería, sino que se asignan a este montón.
 
 Una de las ventajas de SGen es que el tiempo necesario para realizar una recolección menor es proporcional al número de nuevos objetos activos creados desde la última recolección menor. Esto reduce el impacto de la recolección de elementos no utilizados sobre el rendimiento de una aplicación, ya que estas recolecciones menores tardan menos que una recolección importante. La recolección de elementos importante se seguirá produciendo, pero con menos frecuencia.
 
@@ -307,16 +307,16 @@ En la siguiente captura de pantalla se muestran las opciones del enlazador en Vi
 
 El enlazador proporciona tres opciones distintas para controlar su comportamiento:
 
--  **Don’t Link (No vincular)** : no se quita ningún tipo ni método no usado por el enlazador. Por motivos de rendimiento, esta es la opción predeterminada para las compilaciones de depuración.
--  **Link Framework SDKs/SDK Assemblies Only (Vincular solo ensamblados de SDK o SDK de Framework)** : esta opción solo reduce el tamaño de los ensamblados enviados por Xamarin. El código de usuario no se verá afectado.
--  **Link All Assemblies (Vincular todos los ensamblados)** : se trata de una optimización más agresiva que se dirige a los ensamblados de SDK y al código de usuario. En el caso de los enlaces, quita los campos de respaldo no usados y aligera cada instancia (u objetos enlazados), consumiendo menos memoria.
+- **Don’t Link (No vincular)** : no se quita ningún tipo ni método no usado por el enlazador. Por motivos de rendimiento, esta es la opción predeterminada para las compilaciones de depuración.
+- **Link Framework SDKs/SDK Assemblies Only (Vincular solo ensamblados de SDK o SDK de Framework)** : esta opción solo reduce el tamaño de los ensamblados enviados por Xamarin. El código de usuario no se verá afectado.
+- **Link All Assemblies (Vincular todos los ensamblados)** : se trata de una optimización más agresiva que se dirige a los ensamblados de SDK y al código de usuario. En el caso de los enlaces, quita los campos de respaldo no usados y aligera cada instancia (u objetos enlazados), consumiendo menos memoria.
 
 *Link All Assemblies (Vincular todos los ensamblados)* debe usarse con precaución, ya que puede interrumpir la aplicación de formas inesperadas. El análisis estático que realiza el enlazador puede identificar incorrectamente todo el código necesario, lo que daría lugar a que se quitara demasiado código de la aplicación compilada. Esta situación solo se manifiesta en runtime cuando se bloquea la aplicación. Por ello es importante probar exhaustivamente una aplicación después de cambiar el comportamiento del enlazador.
 
 Si las pruebas revelan que el enlazador ha quitado incorrectamente una clase o método, es posible marcar tipos o métodos a los que no se hace referencia de forma estática pero que son necesarios para la aplicación mediante uno de los siguientes atributos:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute`: este atributo es para proyectos de Xamarin.iOS.
--  `Android.Runtime.PreserveAttribute`: este atributo es para proyectos de Xamarin.Android.
+- `Xamarin.iOS.Foundation.PreserveAttribute`: este atributo es para proyectos de Xamarin.iOS.
+- `Android.Runtime.PreserveAttribute`: este atributo es para proyectos de Xamarin.Android.
 
 Por ejemplo, puede ser necesario conservar los constructores predeterminados de los tipos cuyas instancias se han creado de forma dinámica. Además, el uso de la serialización XML puede exigir que se conserven las propiedades de los tipos.
 

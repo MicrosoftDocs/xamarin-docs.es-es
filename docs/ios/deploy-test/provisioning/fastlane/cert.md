@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e1792eb9150aa92b04b873ae18ccd89723722529
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8236dc01f31141544bef88011d87a457f18072e8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108046"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526567"
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane para iOS: cert
 
@@ -53,11 +53,15 @@ cert proporciona una interfaz de terminal que crea nuevas identidades de firma d
 
 Para usar la utilidad Cert, escriba el comando siguiente en la CLI de terminal:
 
-    fastlane cert
+```
+fastlane cert
+```
 
 De forma predeterminada, se creará un certificado de distribución. Para crear un certificado de desarrollo, pase la marca `--development`:
 
-    fastlane cert --development
+```
+fastlane cert --development
+```
 
 cert le solicitará su identificador de Apple y la contraseña, por lo que ahora escriba esto:
 
@@ -68,7 +72,9 @@ cert le solicitará su identificador de Apple y la contraseña, por lo que ahora
 
 El identificador de Apple también se puede pasar como un argumento mediante el comando siguiente:
 
-    fastlane cert -u myemailadress@domain.com
+```
+fastlane cert -u myemailadress@domain.com
+```
 
 Si el identificador de Apple está conectado a varios equipos, se mostrarán aquí. Seleccione el número que se corresponda con el equipo que quiera usar:
 
@@ -76,7 +82,9 @@ Si el identificador de Apple está conectado a varios equipos, se mostrarán aqu
 
 El identificador de equipo también se puede pasar mediante la marca siguiente:
 
-    fastlane cert -l 2TU993NY9J
+```
+fastlane cert -l 2TU993NY9J
+```
 
 fastlane comprobará si alguno de los certificados de firma disponibles está instalado en la máquina local y, en caso de que así sea, lo usará.
 
@@ -99,12 +107,15 @@ Las siguientes opciones se pueden usar para dar soporte técnico adicional cuand
 
 - Use la marca `-–help` para obtener una lista de todos los comandos disponibles:
 
-        fastlane cert --help
+    ```
+    fastlane cert --help
+    ```
 
 - Use la marca `-–verbose` para aumentar el nivel de detalle de la salida:
 
-        fastlane cert --development --verbose
-
+    ```
+    fastlane cert --development --verbose
+    ```
 
 ## <a name="related-links"></a>Vínculos relacionados
 

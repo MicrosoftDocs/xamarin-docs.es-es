@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c00f074e2f002d82795e9bd445fdf617275089f
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301271"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525022"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manual del APK
 
 
 Tras compilar la aplicación para su lanzamiento, es necesario firmar el APK antes de distribuirla. De este modo podrá ejecutarse en un dispositivo Android. Este proceso normalmente se administra con el IDE, aunque hay casos en los que es necesario firmar el APK manualmente en la línea de comandos. El proceso de firma de APK incluye los siguientes pasos:
 
-1.   **Crear una clave privada**. Este paso debe realizarse una sola vez. Es necesaria una clave privada para firmar digitalmente el APK.
+1. **Crear una clave privada**. Este paso debe realizarse una sola vez. Es necesaria una clave privada para firmar digitalmente el APK.
     Una vez que se ha preparado la clave privada, se puede omitir este paso para las futuras compilaciones de versión.
 
-2.   **Aplicar la herramienta zipalign al APK**. *Zipalign* es un proceso de optimización que se lleva a cabo en una aplicación. Permite a Android interactuar de forma más eficaz con el APK en tiempo de ejecución. Xamarin.Android realiza una comprobación en runtime y no permite que la aplicación se ejecute si no se ha aplicado la herramienta zipalign al APK.
+2. **Aplicar la herramienta zipalign al APK**. *Zipalign* es un proceso de optimización que se lleva a cabo en una aplicación. Permite a Android interactuar de forma más eficaz con el APK en tiempo de ejecución. Xamarin.Android realiza una comprobación en runtime y no permite que la aplicación se ejecute si no se ha aplicado la herramienta zipalign al APK.
 
-3.  **Firmar el APK**. Este paso conlleva usar la herramienta **apksigner** del SDK de Android y firmar el APK con la clave privada creada en el paso anterior. Las aplicaciones desarrolladas con versiones anteriores a la 24.0.3 de las herramientas de compilación del SDK de Android usarán la aplicación **jarsigner** del JDK. Ambas herramientas se tratarán con más detalle a continuación. 
+3. **Firmar el APK**. Este paso conlleva usar la herramienta **apksigner** del SDK de Android y firmar el APK con la clave privada creada en el paso anterior. Las aplicaciones desarrolladas con versiones anteriores a la 24.0.3 de las herramientas de compilación del SDK de Android usarán la aplicación **jarsigner** del JDK. Ambas herramientas se tratarán con más detalle a continuación. 
 
 El orden de los pasos es importante y depende de qué herramienta se utiliza para firmar el APK. Si se usa **apksigner**, en primer lugar es importante usar **zipalign** con la aplicación y, después, firmarla con **apksigner**.  En caso de que sea necesario usar **jarsigner** para firmar el APK, es importante firmar primero el APK y, después, ejecutar **zipalign**. 
 

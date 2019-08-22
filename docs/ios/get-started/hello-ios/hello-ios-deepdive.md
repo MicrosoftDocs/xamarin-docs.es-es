@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647049"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527707"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -442,14 +442,14 @@ No todos tienen a su disposición un diseñador para crear los iconos e imágene
 - [**Sketch**](https://www.sketchapp.com"): Sketch es una aplicación de Mac para diseñar interfaces de usuario, iconos y mucho más. Es la aplicación que se usó para diseñar el conjunto de iconos de aplicación e imágenes de inicio de Xamarin. Sketch 3 está disponible en la App Store. También puede probar la versión gratuita [Sketch Tool](http://bohemiancoding.com/sketch/tool/).
 - [**Pixelmator**](http://www.pixelmator.com/): aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 USD.
 - [**Glyphish**](http://www.glyphish.com/): conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
-- [**Fiverr**](http://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD.  Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [**Fiverr**](http://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 ::: zone pivot="windows"
 
 * Visual Studio: puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
 - [**Glyphish**](http://www.glyphish.com/): conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
-- [**Fiverr**](http://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD.  Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [**Fiverr**](http://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 

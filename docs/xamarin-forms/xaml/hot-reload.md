@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 4f6a0b45d37252c141b2741dd0b37a980c958a51
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
+ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896407"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Recarga activa de XAML para Xamarin. Forms (versión preliminar)
 
@@ -30,7 +30,7 @@ Xamarin.Forms | 4,1 o superior
 
 ## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usar la recarga activa de XAML para Xamarin. Forms
 
-No se requiere ninguna instalación o configuración adicional para usar la recarga activa de XAML. Está integrado en Visual Studio y puede habilitarse en la configuración del IDE. Una vez habilitada, puede empezar a usar la recarga activa de XAML mediante la depuración de la aplicación en un emulador, un simulador o un dispositivo físico.
+No se requiere ninguna instalación o configuración adicional para usar la recarga activa de XAML. Está integrado en Visual Studio y puede habilitarse en la configuración del IDE. Una vez habilitada, puede empezar a usar la recarga activa de XAML mediante la depuración de la aplicación en un emulador, un simulador o un dispositivo físico. Actualmente, la recarga activa de XAML solo funciona durante la depuración en iOS o Android.
 
 En Windows, la recarga en caliente de XAML se puede habilitar activando la casilla **Habilitar la recarga activa de Xamarin** en **herramientas** > **Opciones** > **Xamarin** > **Hot Reload**.
 
@@ -53,7 +53,7 @@ Si realiza un cambio que no se puede volver a cargar la recarga activa de XAML, 
 
 Si forma parte de la versión preliminar privada, la extensión de recarga activa de XAML se actualizará automáticamente cuando se actualice Visual Studio. Si decide no actualizar Visual Studio, puede seguir usando la versión actual de la recarga activa de XAML, pero no recibirá ninguna actualización adicional a través de la fuente de extensión de la versión preliminar privada.
 
-## <a name="troubleshooting"></a>solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 - Si no se puede inicializar la recarga activa de XAML:
   - Actualice la versión de Xamarin. Forms.

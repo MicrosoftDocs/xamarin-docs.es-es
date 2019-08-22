@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: aa72daae1727e0d100592873a7895a7d8942b4f2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509020"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525505"
 ---
 # <a name="gdb"></a>GDB
 
@@ -24,9 +24,9 @@ Xamarin.Android 4.10 introdujo la compatibilidad parcial con el uso de `gdb` gra
 
 Existen tres maneras de usar `gdb`:
 
-1.  [Compilaciones de depuración con implementación rápida habilitada](#Debug_Builds_with_Fast_Deployment).
-1.  [Compilaciones de depuración con implementación rápida deshabilitada](#Debug_Builds_without_Fast_Deployment).
-1.  [Compilaciones de versión](#Release_Builds)
+1. [Compilaciones de depuración con implementación rápida habilitada](#Debug_Builds_with_Fast_Deployment).
+1. [Compilaciones de depuración con implementación rápida deshabilitada](#Debug_Builds_without_Fast_Deployment).
+1. [Compilaciones de versión](#Release_Builds)
 
 
 Cuando haya algún problema, consulte la sección [Solución de problemas](#Troubleshooting).
@@ -83,8 +83,8 @@ Las compilaciones de depuración *con* implementación rápida funcionan mediant
 
 Hay dos soluciones alternativas:
 
--   Establecer la propiedad del sistema `debug.mono.log` para que se cree el directorio `.__override__`.
--   Incluya `gdbserver` dentro de `.apk`.
+- Establecer la propiedad del sistema `debug.mono.log` para que se cree el directorio `.__override__`.
+- Incluya `gdbserver` dentro de `.apk`.
 
 ### <a name="setting-the-debugmonolog-system-property"></a>Establecer la propiedad del sistema `debug.mono.log`
 
@@ -141,9 +141,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 Para la compatibilidad con `gdb` son necesarias tres cosas:
 
-1.  El permiso de `INTERNET`.
-2.  Tener habilitada la depuración de aplicaciones.
-3.  Un elemento `gdbserver` accesible.
+1. El permiso de `INTERNET`.
+2. Tener habilitada la depuración de aplicaciones.
+3. Un elemento `gdbserver` accesible.
 
 El permiso de `INTERNET` está habilitado de forma predeterminada en las aplicaciones de depuración. Si no existe aún en la aplicación, puede agregarlo; para ello, edite **Properties/AndroidManifest.xml** o las [propiedades del proyecto](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
@@ -161,7 +161,7 @@ Un aspecto a tener en cuenta: el destino de MSBuild `_Gdb` terminará todas las 
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-### <a name="monopmip-doesnt-work"></a>`mono_pmip` no funciona
+### <a name="mono_pmip-doesnt-work"></a>`mono_pmip` no funciona
 
 La función `mono_pmip` (útil para [obtener marcos de pila administrados](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) se exporta desde `libmonosgen-2.0.so`, que actualmente el destino `_Gdb` no puede extraer. (Este problema se corregirá en futuras versiones).
 

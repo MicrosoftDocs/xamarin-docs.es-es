@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ba09afc477ddaadc07aa415376860eea3c8c28d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 30731dda1007127caff84eae20696b45803b74f1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671473"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528998"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores en Xamarin.Mac
 
@@ -24,15 +24,15 @@ Visite el [Centro de usuarios registrados de Apple Developer](https://developer.
 
 [![Centro de usuarios registrados de Apple Developer](certificates-identifiers-images/devcenter01.png "Centro de usuarios registrados de Apple Developer")](certificates-identifiers-images/devcenter01-large.png#lightbox)
 
-Haga clic en el vínculo **Certificates, Identifiers & Profiles (Certificados, identificadores y perfiles)**:
+Haga clic en el vínculo **Certificates, Identifiers & Profiles (Certificados, identificadores y perfiles)** :
 
 [![Seleccionar certificados, identificadores y perfiles](certificates-identifiers-images/devcenter02.png "Seleccionar certificados, identificadores y perfiles")](certificates-identifiers-images/devcenter02-large.png#lightbox)
 
-Luego, haga clic en el vínculo **Certificados** en la sección **Mac Apps (Aplicaciones Mac)**:
+Luego, haga clic en el vínculo **Certificados** en la sección **Mac Apps (Aplicaciones Mac)** :
 
 [![Seleccionar el vínculo Certificados](certificates-identifiers-images/devcenter03.png "Seleccionar el vínculo Certificados")](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
-Haga clic en el vínculo **Todas** y luego en el botón **+**:
+Haga clic en el vínculo **Todas** y luego en el botón **+** :
 
 [![Seleccionar todo y agregar un nuevo elemento](certificates-identifiers-images/certif01.png "Seleccionar todo y agregar un nuevo elemento")](certificates-identifiers-images/certif01-large.png#lightbox)
 
@@ -40,10 +40,10 @@ Desde aquí descargue los **certificados intermedios** (entidades de certificaci
 
 El resto de esta sección le guía por las cuatro secciones para completar la configuración de una cuenta de desarrollador de Mac.
 
--   **Registrar el identificador de la aplicación de Mac**: el desarrollador tendrá que seguir estos pasos para cada aplicación que escriba.
--   **Registrar sistemas macOS**: solo es necesario al agregar equipos para pruebas.
--   **Crear certificados**: solo se necesita una vez al configurar los certificados y luego al renovarlos.
--   **Crear perfil de aprovisionamiento**: el desarrollador tendrá que seguir estos pasos para cada nueva aplicación escrita y al agregar nuevos sistemas.
+- **Registrar el identificador de la aplicación de Mac**: el desarrollador tendrá que seguir estos pasos para cada aplicación que escriba.
+- **Registrar sistemas macOS**: solo es necesario al agregar equipos para pruebas.
+- **Crear certificados**: solo se necesita una vez al configurar los certificados y luego al renovarlos.
+- **Crear perfil de aprovisionamiento**: el desarrollador tendrá que seguir estos pasos para cada nueva aplicación escrita y al agregar nuevos sistemas.
 
 Haga clic en el vínculo **Información general** de la parte superior izquierda de la página para volver a este menú en cualquier momento.
 
@@ -77,7 +77,7 @@ Desde aquí el desarrollador puede configurar las bases de datos que se van a us
 
 Para crear un perfil de aprovisionamiento para realizar pruebas, el desarrollador tendrá que registrar los equipos Mac. Puede registrar un máximo de 100 equipos para probar las aplicaciones de Mac.
 
-En el Centro para desarrolladores de Mac, seleccione **Todos** en la sección **Dispositivos** y haga clic en el botón **+**:
+En el Centro para desarrolladores de Mac, seleccione **Todos** en la sección **Dispositivos** y haga clic en el botón **+** :
 
 [![Agregar un nuevo equipo](certificates-identifiers-images/devcenter10.png "Agregar un nuevo equipo")](certificates-identifiers-images/devcenter10-large.png#lightbox)
 
@@ -93,9 +93,9 @@ Use la sección Certificados para crear varios tipos distintos de certificados q
 
 Hay tres tipos principales de certificados:
 
--   **Certificado de desarrollo de Mac**: opcional para el desarrollo de aplicaciones generales, pero necesario si el desarrollador piensa usar características como iCloud o notificaciones de inserción. El desarrollador necesitará un certificado de desarrollo para poder crear perfiles de aprovisionamiento que le permitan acceder a esas características.
--   **Mac App Store**: el desarrollador necesitará un certificado para la aplicación y otro certificado para el instalador.
--   **Identificador de desarrollador**: si se decide distribuir fuera de Mac App Store, certificados para la aplicación y el instalador.
+- **Certificado de desarrollo de Mac**: opcional para el desarrollo de aplicaciones generales, pero necesario si el desarrollador piensa usar características como iCloud o notificaciones de inserción. El desarrollador necesitará un certificado de desarrollo para poder crear perfiles de aprovisionamiento que le permitan acceder a esas características.
+- **Mac App Store**: el desarrollador necesitará un certificado para la aplicación y otro certificado para el instalador.
+- **Identificador de desarrollador**: si se decide distribuir fuera de Mac App Store, certificados para la aplicación y el instalador.
 
 En las secciones siguientes se proporcionan ejemplos de creación de cada uno de los tipos de certificados anteriores.
 

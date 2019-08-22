@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 47211f60d55f1f355a92307eff53ed9af754eda2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511478"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527412"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -62,10 +62,10 @@ El objeto `MyView` no administrado tendrá un `GCHandle` que apunta al objeto ad
 
 En casos donde un objeto contenido mantiene un vínculo a su contenedor, hay varias opciones disponibles para solucionar la referencia circular:
 
--  Interrumpir manualmente el ciclo estableciendo el vínculo al contenedor en `null`.
--  Quitar manualmente el objeto contenido del contenedor.
--  Llamar a `Dispose` en los objetos.
--  Evitar la referencia circular manteniendo una referencia débil al contenedor. Para más información sobre las referencias débiles.
+- Interrumpir manualmente el ciclo estableciendo el vínculo al contenedor en `null`.
+- Quitar manualmente el objeto contenido del contenedor.
+- Llamar a `Dispose` en los objetos.
+- Evitar la referencia circular manteniendo una referencia débil al contenedor. Para más información sobre las referencias débiles.
 
 ### <a name="using-weakreferences"></a>Empleo de referencias débiles
 

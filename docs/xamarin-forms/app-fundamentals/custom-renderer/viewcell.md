@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: aa1093336a79689380e920783dd772c5e68c76b9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650439"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889224"
 ---
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
 
@@ -68,6 +68,7 @@ public class NativeCell : ViewCell
   }
 }
 ```
+
 La clase `NativeCell` se crea en el proyecto de biblioteca de .NET Standard y define la API para la celda personalizada. La celda personalizada expone las propiedades `Name`, `Category` y `ImageFilename` que se pueden mostrar mediante el enlace de datos. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
 
 <a name="Consuming_the_Custom_Cell" />

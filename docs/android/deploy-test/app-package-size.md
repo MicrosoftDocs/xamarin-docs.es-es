@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: a6fe5cc3a126cc42c07f38b89c5d1de308b3c0dc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109918"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525779"
 ---
 # <a name="application-package-size"></a>Tamaños de paquete de aplicación
 
@@ -63,17 +63,17 @@ La opción de compilación *Implementación rápida de ensamblados* se puede usa
 
 Para habilitar *Implementación rápida de ensamblados*, siga estos pasos:
 
-1.  Haga clic con el botón derecho en el proyecto de Android en el Explorador de soluciones y seleccione **Opciones**.
+1. Haga clic con el botón derecho en el proyecto de Android en el Explorador de soluciones y seleccione **Opciones**.
 
-2.  En el cuadro de diálogo Opciones del proyecto, seleccione **Compilación de Android**:  
+2. En el cuadro de diálogo Opciones del proyecto, seleccione **Compilación de Android**:  
 
     ![Opciones del proyecto: Compilación de Android](app-package-size-images/fastdev0.png)
 
-3.  Active las casillas **Usar el entorno de ejecución Mono compartido** e **Implementación rápida de ensamblados**:  
+3. Active las casillas **Usar el entorno de ejecución Mono compartido** e **Implementación rápida de ensamblados**:  
 
     ![Casillas de verificación seleccionadas en la pestaña Empaquetado](app-package-size-images/fastdev.png)
 
-4.  Haga clic en el botón **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo Opciones del proyecto.
+4. Haga clic en el botón **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo Opciones del proyecto.
 
 
 La próxima vez que la aplicación se compile para la depuración, los ensamblados se instalarán directamente en el dispositivo (si aún no lo están) y un paquete de aplicación más pequeño (que no incluye los ensamblados) también se instalará en el dispositivo. Con ello se acorta el tiempo necesario para conseguir que los cambios en la aplicación se pongan en funcionamiento para la realización de pruebas.

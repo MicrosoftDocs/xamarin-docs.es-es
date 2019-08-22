@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 9ce29df9070ee99bb3de9579025f5b0f366d6331
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9c7572c3d3a785264e9f26c17e74c41ee28e8af6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655899"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526529"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -72,17 +72,17 @@ El controlador de navegación es común en las aplicaciones de iOS y proporciona
 
 El controlador de navegación tiene tres funciones principales:
 
--  **Proporciona enlaces para la navegación hacia delante**: el controlador de navegación usa una metáfora de navegación jerárquica en la que las jerarquías de vistas de contenido se *insertan* en una *pila de navegación*. Puede imaginarse una pila de navegación como una pila de cartas en la que solo la superior es visible, como se muestra en el diagrama siguiente:  
+- **Proporciona enlaces para la navegación hacia delante**: el controlador de navegación usa una metáfora de navegación jerárquica en la que las jerarquías de vistas de contenido se *insertan* en una *pila de navegación*. Puede imaginarse una pila de navegación como una pila de cartas en la que solo la superior es visible, como se muestra en el diagrama siguiente:  
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "Diagrama que muestra la navegación como una baraja de cartas")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
--  **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
+- **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "Diagrama que ilustra cómo \"sacar\" una carta de la baraja")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
+- **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barra de título es responsable de mostrar el título del controlador de vista")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
@@ -191,9 +191,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 La aplicación Phoneword presentó varios conceptos que no se tratan en esta guía. Entre estos conceptos se incluyen los siguientes:
 
--  **Creación automática de controladores de vista**: cuando se escribe un nombre de clase para el controlador de vista en el **Panel de propiedades**, iOS Designer comprueba si esa clase existe y luego genera la clase de respaldo del controlador de vista. Para más información sobre esta y otras características de iOS Designer, vea la guía [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md).
--  **Controlador de vista de tabla**: `CallHistoryController` es un controlador de vista de tabla. Un controlador de vista de tabla contiene una vista de tabla, que es la herramienta de diseño y visualización de datos más común de iOS. Las tablas están fuera del ámbito de esta guía. Para obtener más información sobre los controladores de vista de tabla, vea la guía [Trabajar con tablas y las celdas](~/ios/user-interface/controls/tables/index.md).
--   **Id. de Storyboard**: al establecer el identificador de Storyboard, se crea una clase de controlador de vista en Objective-C que contiene el código subyacente del controlador de vista en Storyboard. El identificador de Storyboard se usa para buscar la clase de Objective-C y crear instancias del controlador de vista en Storyboard. Para más información sobre los identificadores de guion gráfico, vea la guía [Introduction to Storyboards (Introducción a los guiones gráficos)](~/ios/user-interface/storyboards/index.md).
+- **Creación automática de controladores de vista**: cuando se escribe un nombre de clase para el controlador de vista en el **Panel de propiedades**, iOS Designer comprueba si esa clase existe y luego genera la clase de respaldo del controlador de vista. Para más información sobre esta y otras características de iOS Designer, vea la guía [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md).
+- **Controlador de vista de tabla**: `CallHistoryController` es un controlador de vista de tabla. Un controlador de vista de tabla contiene una vista de tabla, que es la herramienta de diseño y visualización de datos más común de iOS. Las tablas están fuera del ámbito de esta guía. Para obtener más información sobre los controladores de vista de tabla, vea la guía [Trabajar con tablas y las celdas](~/ios/user-interface/controls/tables/index.md).
+- **Id. de Storyboard**: al establecer el identificador de Storyboard, se crea una clase de controlador de vista en Objective-C que contiene el código subyacente del controlador de vista en Storyboard. El identificador de Storyboard se usa para buscar la clase de Objective-C y crear instancias del controlador de vista en Storyboard. Para más información sobre los identificadores de guion gráfico, vea la guía [Introduction to Storyboards (Introducción a los guiones gráficos)](~/ios/user-interface/storyboards/index.md).
 
 ## <a name="summary"></a>Resumen
 

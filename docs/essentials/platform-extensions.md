@@ -5,12 +5,12 @@ ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 740f6f4658c3e840f73261f554eb330ee02edb5d
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 6092c4449e58655b0d08b87d0b5ad76f89abc7a8
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329070"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620657"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: extensiones de plataforma
 
@@ -36,10 +36,10 @@ Todas las extensiones de plataforma solo se pueden llamar desde proyectos UWP, i
 var system = new System.Drawing.Point(x, y);
 
 // Convert to CoreGraphics.CGPoint, Android.Graphics.Point, and Windows.Foundation.Point
-var platform = system.ToPlatformSize();
+var platform = system.ToPlatformPoint();
 
 // Back to System.Drawing.Size
-var system2 = platform.ToSystemSize();
+var system2 = platform.ToSystemPoint();
 ```
 
 ### <a name="size"></a>Tamaño
@@ -60,10 +60,10 @@ var system2 = platform.ToSystemSize();
 var system = new System.Drawing.Rectangle(x, y, width, height);
 
 // Convert to CoreGraphics.CGRect, Android.Graphics.Rect, and Windows.Foundation.Rect
-var platform = system.ToPlatformSize();
+var platform = system.ToPlatformRectangle();
 
 // Back to System.Drawing.Size
-var system2 = platform.ToSystemSize();
+var system2 = platform.ToSystemRectangle();
 ```
 
 ## <a name="api"></a>API

@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 3dad36dc93f5c23e5d9ef1e05a1b9419b7a724b6
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 989d0fe1d8fffd74ea5f64ae7bd5a13487d25c0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "58855112"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525738"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Administración de dispositivos virtuales con Android Device Manager
 
@@ -217,9 +217,9 @@ Para usar Android Device Manager, necesita los siguiente elementos:
 - Debe estar instalado Android SDK (consulte [Configuración de Android SDK para Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
 - Es necesario instalar los siguientes paquetes (a través de [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
-    -  **SDK Tools versión 26.1.1** o posterior
-    -  **Herramientas de plataforma de Android SDK 28.0.1** o posterior 
-    -  **Herramientas de compilación de Android SDK 26.0.3** o posterior
+    - **SDK Tools versión 26.1.1** o posterior
+    - **Herramientas de plataforma de Android SDK 28.0.1** o posterior 
+    - **Herramientas de compilación de Android SDK 26.0.3** o posterior
 
   Estos paquetes deberían mostrarse con el estado **Instalado**, como se muestra en la captura de pantalla siguiente:
 

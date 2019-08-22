@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 66bbc7015daaba04f8431b31f639c9173484c790
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e0fb6c1ced4953fd03939f56eb4011d956dfcca6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108670"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525601"
 ---
 # <a name="debuggable-attribute"></a>Atributo Debuggable
 
@@ -21,8 +21,8 @@ Para que la depuración sea posible, Android admite el protocolo JDWP (Java Debu
 
 JDWP puede ser el valor del atributo `android:debuggable` en una aplicación Android. Xamarin.Android proporciona los siguientes métodos para establecer este atributo:
 
-1.  Se crea un archivo `AndroidManifext.xml` y se establece ahí el atributo `android:debuggable`.
-2.  Se incluye `ApplicationAttribute` en un archivo `.CS`, así: `[assembly: Application(Debuggable=false)]`.
+1. Se crea un archivo `AndroidManifext.xml` y se establece ahí el atributo `android:debuggable`.
+2. Se incluye `ApplicationAttribute` en un archivo `.CS`, así: `[assembly: Application(Debuggable=false)]`.
 
 
 Si `AndroidManifest.xml` y `ApplicationAttribute` existen, el contenido de `AndroidManifest.xml` tiene prioridad sobre lo que se especifica mediante `ApplicationAttribute`.
