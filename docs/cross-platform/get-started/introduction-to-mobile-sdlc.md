@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: conceptdev
 ms.author: crdun
 ms.date: 11/22/2016
-ms.openlocfilehash: 99be69abb11640418917d4d2cb9738a0a843d6d0
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: 4e2af0d1746ef1321db39d97a86af2b4bd769c69
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290149"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526691"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo de vida de desarrollo de software móvil
 
@@ -19,8 +19,8 @@ La creación de aplicaciones móviles puede ser tan fácil como abrir Visual Stu
 
 En este documento, vamos a realizar un examen de introducción exhaustivo de la creación de aplicaciones móviles, incluidos:
 
-1.   **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas las siguientes: origen, diseño, desarrollo, estabilización, implementación y mantenimiento.
-1.   **Consideraciones**: hay una serie de consideraciones que se deben tener en cuenta al crear aplicaciones móviles, especialmente si se comparan con las aplicaciones de escritorio o web tradicionales. Examinaremos estas consideraciones y cómo afectan al desarrollo móvil.
+1. **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas las siguientes: origen, diseño, desarrollo, estabilización, implementación y mantenimiento.
+1. **Consideraciones**: hay una serie de consideraciones que se deben tener en cuenta al crear aplicaciones móviles, especialmente si se comparan con las aplicaciones de escritorio o web tradicionales. Examinaremos estas consideraciones y cómo afectan al desarrollo móvil.
 
 Este documento está pensado para responder a preguntas fundamentales sobre el desarrollo de aplicaciones móviles, para desarrolladores de aplicaciones nuevos y experimentados. Adopta un enfoque bastante completo para introducir la mayor parte de los conceptos que se ejecutarán durante todo el ciclo de vida de desarrollo de software (SDLC). En cambio, puede que este documento no sea para todos los usuarios. Si quiere empezar a crear aplicaciones, le recomendamos que pase a la guía [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md) y vuelva a este documento más adelante.
 
@@ -28,11 +28,11 @@ Este documento está pensado para responder a preguntas fundamentales sobre el d
 
 El ciclo de vida de desarrollo móvil es, en gran medida, parecido al SDLC para aplicaciones web o de escritorio. Al igual que con estos, normalmente hay 5 partes importantes del proceso:
 
-1.   **Inicio**: todas las aplicaciones se inician con una idea. Normalmente, la idea se perfecciona en una base sólida para una aplicación.
-1.   **Diseño**: la fase de diseño consiste en definir la experiencia del usuario (UX) de la aplicación (como cuál es el diseño general, cómo funciona, etc.), así como convertir esa experiencia del usuario en un diseño de interfaz de usuario (UI) adecuado, normalmente con la ayuda de un diseñador gráfico.
-1.   **Desarrollo**: normalmente, es la fase con un uso más intensivo de recursos, esta es la creación real de la aplicación.
-1.   **Estabilización**: cuando el desarrollo ha avanzado lo suficiente, normalmente el control de calidad empieza a probar la aplicación y se corrigen los errores. A veces, una aplicación pasará a una fase beta limitada en la que una audiencia de usuarios más amplia tiene la oportunidad de usarla, enviar comentarios y notificar cambios.
-1.  **Implementación**
+1. **Inicio**: todas las aplicaciones se inician con una idea. Normalmente, la idea se perfecciona en una base sólida para una aplicación.
+1. **Diseño**: la fase de diseño consiste en definir la experiencia del usuario (UX) de la aplicación (como cuál es el diseño general, cómo funciona, etc.), así como convertir esa experiencia del usuario en un diseño de interfaz de usuario (UI) adecuado, normalmente con la ayuda de un diseñador gráfico.
+1. **Desarrollo**: normalmente, es la fase con un uso más intensivo de recursos, esta es la creación real de la aplicación.
+1. **Estabilización**: cuando el desarrollo ha avanzado lo suficiente, normalmente el control de calidad empieza a probar la aplicación y se corrigen los errores. A veces, una aplicación pasará a una fase beta limitada en la que una audiencia de usuarios más amplia tiene la oportunidad de usarla, enviar comentarios y notificar cambios.
+1. **Implementación**
 
 A menudo, muchas de estas partes se superponen, por ejemplo, es común que el desarrollo siga mientras se finaliza la interfaz de usuario e incluso puede afectar al diseño de la interfaz de usuario. Además, una aplicación puede estar en una fase de estabilización al mismo tiempo que se agregan nuevas características a una nueva versión.
 
@@ -47,16 +47,16 @@ La ubicuidad y el nivel de interacción que tienen los usuarios con los disposit
 La fase de inicio consiste en definir y perfeccionar la idea de una aplicación.
 Para crear una aplicación correctamente, es importante hacerse algunas preguntas fundamentales. Aquí tiene algunas cuestiones que se deben tener en cuenta antes de publicar una aplicación en una de las App Store públicas:
 
--   **Ventaja competitiva**: ¿ya existen aplicaciones similares? Si es así, ¿cómo se diferencia esta aplicación de las otras?
+- **Ventaja competitiva**: ¿ya existen aplicaciones similares? Si es así, ¿cómo se diferencia esta aplicación de las otras?
 
 Para las aplicaciones que se distribuirán en una empresa:
 
--   **Integración de la infraestructura**: ¿con qué infraestructura existente se integrará o cuál extenderá?
+- **Integración de la infraestructura**: ¿con qué infraestructura existente se integrará o cuál extenderá?
 
 Además, las aplicaciones deben evaluarse en el contexto del factor de forma móvil:
 
--   **Valor**: ¿qué valor aporta esta aplicación a los usuarios? ¿Cómo la usarán?
--   **Forma/movilidad**: ¿cómo funcionará esta aplicación en un factor de forma móvil? ¿Cómo puedo agregar valor mediante tecnologías móviles, como el reconocimiento de ubicación, la cámara, etc.?
+- **Valor**: ¿qué valor aporta esta aplicación a los usuarios? ¿Cómo la usarán?
+- **Forma/movilidad**: ¿cómo funcionará esta aplicación en un factor de forma móvil? ¿Cómo puedo agregar valor mediante tecnologías móviles, como el reconocimiento de ubicación, la cámara, etc.?
 
 Para ayudarle a diseñar la funcionalidad de una aplicación, puede ser útil definir actores y [casos de uso](https://en.wikipedia.org/wiki/Use_case). Los actores son roles dentro de una aplicación y, a menudo, son usuarios. Los casos de uso son, normalmente, acciones o intentos.
 
@@ -76,9 +76,9 @@ La experiencia del usuario se efectúa normalmente a través de tramas de alambr
 
 Al crear prototipos de experiencia del usuario, es importante tener en cuenta las instrucciones de la interfaz para las diferentes plataformas a las que se dirigirá la aplicación. La aplicación debería "sentirse cómoda" en todas las plataformas. Las instrucciones de diseño oficial para cada plataforma son:
 
-1.   **Apple**: [Directrices de interfaz humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android**: [Instrucciones de diseño](https://developer.android.com/design/index.html)
-1.   **UWP**: [Conceptos básicos de diseño UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **Apple**: [Directrices de interfaz humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
+1. **Android**: [Instrucciones de diseño](https://developer.android.com/design/index.html)
+1. **UWP**: [Conceptos básicos de diseño UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 Por ejemplo, cada aplicación tiene una metáfora para cambiar de sección en una aplicación. iOS usa una barra de pestañas en la parte inferior de la pantalla, mientras que Android la usa en la superior. Por otro lado, UWP usa la vista [dinámica o de pestañas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
 
@@ -110,10 +110,10 @@ En el resto de los tutoriales, nos centraremos principalmente en la fase de desa
 
 La estabilización es el proceso de solucionar los errores de la aplicación. No debe entenderse solo desde un punto de vista funcional (por ejemplo: "Se bloquea al hacer c lic en este botón"), sino también de facilidad de uso y rendimiento. Es mejor empezar la estabilización muy pronto en el proceso de desarrollo para que se puedan realizar correcciones antes de que sean costosas. Normalmente, las aplicaciones pasan por las fases *Prototipo*, *Alfa*, *Beta* y *Versión candidata para lanzamiento*. Hay personas que las definen de forma diferente, pero, generalmente, siguen el modelo siguiente:
 
-1.   **Prototipo**: la aplicación aún está en fase de prueba de concepto y solo funcionan la funcionalidad principal o determinadas partes de la aplicación. Hay errores principales.
-1.   **Alfa**: la funcionalidad principal tiene normalmente el código completado (compilado, pero no probado por completo). Aún hay errores principales, puede que no haya funcionalidades aisladas.
-1.   **Beta**: la mayoría de la funcionalidad está completa y ha pasado al menos una corrección de errores y una prueba ligeras. Puede que aún haya problemas conocidos principales.
-1.   **Versión candidata para lanzamiento**: toda la funcionalidad está completa y probada. Salvo errores nuevos, la aplicación es una versión candidata para lanzamiento.
+1. **Prototipo**: la aplicación aún está en fase de prueba de concepto y solo funcionan la funcionalidad principal o determinadas partes de la aplicación. Hay errores principales.
+1. **Alfa**: la funcionalidad principal tiene normalmente el código completado (compilado, pero no probado por completo). Aún hay errores principales, puede que no haya funcionalidades aisladas.
+1. **Beta**: la mayoría de la funcionalidad está completa y ha pasado al menos una corrección de errores y una prueba ligeras. Puede que aún haya problemas conocidos principales.
+1. **Versión candidata para lanzamiento**: toda la funcionalidad está completa y probada. Salvo errores nuevos, la aplicación es una versión candidata para lanzamiento.
 
 Nunca es demasiado pronto para empezar a probar una aplicación. Por ejemplo, si se encuentra un problema importante en la fase de prototipo, aún se puede modificar la experiencia del usuario de la aplicación para darle cabida. Si se encuentra un problema de rendimiento en la fase alfa, es lo suficientemente pronto para modificar la arquitectura antes de que se haya generado mucho código basado en suposiciones falsas.
 
@@ -131,9 +131,9 @@ Una vez que la aplicación se ha estabilizado, es el momento de publicarla. Hay 
 
 Las aplicaciones de Xamarin.iOS y Objective-C se distribuyen exactamente del mismo modo:
 
-1.   **Apple App Store**: el App Store de Apple es un repositorio de aplicaciones en línea disponible de forma global que está integrado en Mac OS X a través de iTunes. Sin duda, es el método de distribución de aplicaciones más popular y permite a los desarrolladores comercializar y distribuir sus aplicaciones en línea con muy poco esfuerzo.
-1.   **Implementación interna**: la implementación interna está pensada para la distribución interna de aplicaciones corporativas que no están disponibles de forma pública a través del App Store.
-1.   **Implementación ad hoc**: la implementación ad hoc está pensada principalmente para desarrollo y pruebas y le permite implementar en un número limitado de dispositivos aprovisionados correctamente. Al implementar en un dispositivo mediante Xcode o Visual Studio para Mac, se conoce como implementación ad hoc.
+1. **Apple App Store**: el App Store de Apple es un repositorio de aplicaciones en línea disponible de forma global que está integrado en Mac OS X a través de iTunes. Sin duda, es el método de distribución de aplicaciones más popular y permite a los desarrolladores comercializar y distribuir sus aplicaciones en línea con muy poco esfuerzo.
+1. **Implementación interna**: la implementación interna está pensada para la distribución interna de aplicaciones corporativas que no están disponibles de forma pública a través del App Store.
+1. **Implementación ad hoc**: la implementación ad hoc está pensada principalmente para desarrollo y pruebas y le permite implementar en un número limitado de dispositivos aprovisionados correctamente. Al implementar en un dispositivo mediante Xcode o Visual Studio para Mac, se conoce como implementación ad hoc.
 
 #### <a name="android"></a>Android
 
@@ -146,10 +146,10 @@ En su lugar, cualquier usuario puede crear una tienda de aplicaciones y la mayor
 
 Esto facilita a los desarrolladores un canal de distribución posiblemente más grande y aún más complejo para sus aplicaciones. [Google Play](https://play.google.com/store?hl=en) es la tienda de aplicaciones oficial de Google, pero hay muchas otras. Algunas populares son:
 
-1.  [AppBrain](http://www.appbrain.com/)
-1.  [Tienda Apps de Amazon para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1.  [Handango](http://www.handango.com/)
-1.  [GetJar](http://www.getjar.com/)
+1. [AppBrain](http://www.appbrain.com/)
+1. [Tienda Apps de Amazon para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](http://www.handango.com/)
+1. [GetJar](http://www.getjar.com/)
 
 #### <a name="uwp"></a>UWP
 
@@ -176,10 +176,10 @@ Los teléfonos tienen un espacio de pantalla muy limitado y las tabletas, aunque
 
 Es importante tener en cuenta distintos dispositivos en todo el ciclo de vida de desarrollo de software:
 
-1.   **Planeación y conceptualización**: tenga en cuenta que el hardware y las características varían de un dispositivo a otro, puede que una aplicación que se basa en determinadas características no funcione correctamente en algunos dispositivos. Por ejemplo, no todos los dispositivos tienen cámaras, por lo que, si está creando una aplicación de mensajería de vídeo, puede que algunos dispositivos reproduzcan vídeos, pero no los puedan grabar.
-1.   **Diseño**: al diseñar la experiencia del usuario (UX) de una aplicación, preste atención a las diferentes relaciones y tamaños de pantalla de los dispositivos. Además, al diseñar la interfaz de usuario (UI) de una aplicación, se deben tener en cuenta diferentes resoluciones de pantalla.
-1.   **Desarrollo**: al usar una característica del código, siempre se debe probar primero la presencia de esa característica. Por ejemplo, antes de usar una característica de dispositivo, como una cámara, confirme siempre primero que el sistema operativo tenga esa característica. Después, al inicializar el dispositivo o característica, asegúrese de solicitar la compatibilidad actual del sistema operativo sobre el dispositivo y después use esas opciones de configuración.
-1.   **Pruebas**: es muy importante probar la aplicación al principio y con frecuencia en dispositivos reales. Puede haber incluso dispositivos con las mismas especificaciones de hardware en que varíe mucho su comportamiento.
+1. **Planeación y conceptualización**: tenga en cuenta que el hardware y las características varían de un dispositivo a otro, puede que una aplicación que se basa en determinadas características no funcione correctamente en algunos dispositivos. Por ejemplo, no todos los dispositivos tienen cámaras, por lo que, si está creando una aplicación de mensajería de vídeo, puede que algunos dispositivos reproduzcan vídeos, pero no los puedan grabar.
+1. **Diseño**: al diseñar la experiencia del usuario (UX) de una aplicación, preste atención a las diferentes relaciones y tamaños de pantalla de los dispositivos. Además, al diseñar la interfaz de usuario (UI) de una aplicación, se deben tener en cuenta diferentes resoluciones de pantalla.
+1. **Desarrollo**: al usar una característica del código, siempre se debe probar primero la presencia de esa característica. Por ejemplo, antes de usar una característica de dispositivo, como una cámara, confirme siempre primero que el sistema operativo tenga esa característica. Después, al inicializar el dispositivo o característica, asegúrese de solicitar la compatibilidad actual del sistema operativo sobre el dispositivo y después use esas opciones de configuración.
+1. **Pruebas**: es muy importante probar la aplicación al principio y con frecuencia en dispositivos reales. Puede haber incluso dispositivos con las mismas especificaciones de hardware en que varíe mucho su comportamiento.
 
 #### <a name="limited-resources"></a>Recursos limitados
 

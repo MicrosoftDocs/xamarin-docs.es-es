@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
-ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 08/22/2019
+ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976534"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Diseño de CollectionView de Xamarin. Forms
 
@@ -319,9 +319,6 @@ De forma predeterminada, un [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayo
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos.
 
-> [!IMPORTANT]
-> Los encabezados y pies de página solo se admiten actualmente en Android.
-
 Cuando se agrega un encabezado a un diseño que crece horizontalmente, de izquierda a derecha, el encabezado se muestra a la izquierda de la lista. Del mismo modo, cuando un pie de página se agrega a un diseño que crece horizontalmente, de izquierda a derecha, el pie de página se muestra a la derecha de la lista.
 
 ### <a name="display-strings-in-the-header-and-footer"></a>Mostrar cadenas en el encabezado y el pie de página
@@ -346,6 +343,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Este código genera las siguientes capturas de pantalla, con el encabezado que se muestra en la captura de pantalla de iOS y el pie de página que se muestra en la captura de pantalla de Android:
+
+[ ![Captura de pantalla de un encabezado y un pie de cadena de CollectionView, en iOS y en el](layout-images/header-footer-string.png "encabezado y pie de página") de la cadena de CollectionView de Android] (layout-images/header-footer-string-large.png#lightbox "Encabezado y pie de cadena de CollectionView")
 
 ### <a name="display-views-in-the-header-and-footer"></a>Mostrar vistas en el encabezado y el pie de página
 
@@ -395,6 +396,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Este código genera las siguientes capturas de pantalla, con el encabezado que se muestra en la captura de pantalla de iOS y el pie de página que se muestra en la captura de pantalla de Android:
+
+[ ![Captura de pantalla de un encabezado y pie de página de CollectionView con vistas, en iOS y en el](layout-images/header-footer-view.png "encabezado y pie de página") de la vista de CollectionView de Android] (layout-images/header-footer-view-large.png#lightbox "Encabezado y pie de página de la vista CollectionView")
 
 ### <a name="display-a-templated-header-and-footer"></a>Mostrar un encabezado y un pie de página con plantilla
 
@@ -446,6 +451,10 @@ collectionView.SetBinding(ItemsView.HeaderProperty, ".");
 collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Este código genera las siguientes capturas de pantalla, con el encabezado que se muestra en la captura de pantalla de iOS y el pie de página que se muestra en la captura de pantalla de Android:
+
+[ ![Captura de pantalla de un encabezado y pie de página de CollectionView con plantillas, en iOS y en el](layout-images/header-footer-template.png "encabezado y pie de página") de la plantilla de CollectionView de Android] (layout-images/header-footer-template-large.png#lightbox "Encabezado y pie de plantilla de CollectionView")
 
 ## <a name="item-spacing"></a>Espaciado de elementos
 

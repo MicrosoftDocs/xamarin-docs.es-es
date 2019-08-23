@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
-ms.openlocfilehash: 329edf455a4778efa5f6fbd1ec88cfb274c5cb49
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976494"
 ---
 # <a name="xamarinforms-frame"></a>Marco de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 La clase de Xamarin [`Frame`](xref:Xamarin.Forms.Frame) . Forms es un diseño que se usa para ajustar una vista con un borde que se puede configurar con color, sombra y otras opciones. Los marcos se suelen usar para crear bordes alrededor de los controles, pero se pueden usar para crear una interfaz de usuario más compleja. Para obtener más información, consulte [uso avanzado](#advanced-frame-usage)de fotogramas.
 
@@ -193,5 +193,5 @@ La imagen del **exterior. jpg** debe agregarse a cada proyecto de la plataforma 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Demostraciones de fotogramas](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Demostraciones de fotogramas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Imágenes de Xamarin. Forms](~/xamarin-forms/user-interface/images.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: cbc39ee38ce623ce446d50494829119058fc88dc
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658092"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976470"
 ---
 # <a name="xamarinforms-menuitem"></a>Xamarin. Forms MenuItem
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
 La clase de Xamarin [`MenuItem`](xref:Xamarin.Forms.MenuItem) . Forms define los elementos de menú `ListView` para menús como menús contextuales de elementos y menús flotante de aplicación de Shell.
 
@@ -215,5 +215,5 @@ En UWP, el menú contextual se activa haciendo clic con el botón derecho en un 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Demostraciones de MenuItem](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+* [Demostraciones de MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 * [Imágenes de Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
