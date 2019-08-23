@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: choose-layout.md
+            html: Obtenga información sobre cómo las clases de diseño principales de Xamarin.Forms colocan sus elementos secundarios y cambian el tamaño de estos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: choose-layout.md
+            title: Elección de un diseño
           - href: stack-layout.md
             html: 'Obtenga información sobre cómo organizar las vistas en una pila unidimensional, ya sea horizontal o verticalmente.'
             image:
@@ -37,18 +43,18 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: flex-layout.md
             title: FlexLayout
-          - href: absolute-layout.md
-            html: 'Obtenga información sobre cómo organizar las vistas estableciendo valores de coordenadas y de tamaño, que pueden ser proporcionales o absolutos.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
           - href: relative-layout.md
             html: 'Obtenga información sobre cómo organizar las vistas estableciendo restricciones, con respecto a las propiedades de las vistas de diseño o del mismo nivel.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: absolute-layout.md
             title: RelativeLayout
+          - href: absolute-layout.md
+            html: 'Obtenga información sobre cómo organizar las vistas estableciendo valores de coordenadas y de tamaño, que pueden ser proporcionales o absolutos.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
           - href: scroll-view.md
             html: Obtenga información acerca de cómo proporcionar desplazamiento cuando una vista no cabe dentro de los límites de la pantalla.
             image:
@@ -60,7 +66,7 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: contentview.md
-            title: Fotograma
+            title: ContentView
           - href: frame.md
             html: 'Obtenga información sobre cómo ajustar una vista con un marco que se puede configurar con color, sombra paralela y otras opciones.'
             image:
