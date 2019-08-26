@@ -19,11 +19,17 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-08.md
+            html: 'Novedades de la documentación de Xamarin en agosto de 2019: Publicación de Xamarin.Forms 4.2, actualizaciones de la interfaz de usuario y otras actualizaciones.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-08.md
+            title: Agosto de 2019
           - href: 2019-07.md
             html: 'Novedades de la documentación de Xamarin en julio de 2019: Publicación de Xamarin.Forms 4.1, actualizaciones a datos y servicios en la nube y otras actualizaciones.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-06.md
+              href: 2019-07.md
             title: Julio de 2019
           - href: 2019-06.md
             html: 'Novedades de la documentación de Xamarin en junio de 2019: Publicación de Xamarin.Forms 4.0, actualización de datos y servicios en la nube, ahora la documentación de la API se encuentra en docs.microsoft.com.'
