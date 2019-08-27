@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739270"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888965"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -91,7 +91,7 @@ about
 Para desplazarse al objeto `ShellContent` de la ruta `dogs`, el URI de la ruta absoluta es `//animals/domestic/dogs`. Igualmente, para desplazarse al objeto `ShellContent` de la ruta `about`, el URL de la ruta absoluta es `//about`.
 
 > [!IMPORTANT]
-> Se permiten nombres duplicados de ruta. Sin embargo, no se permiten rutas duplicadas. Si se detecta una ruta duplicada, se produce una excepción `ArgumentException` al inicio de la aplicación.
+> Si se detecta una ruta duplicada, se produce una excepción `ArgumentException` al inicio de la aplicación. También se producirá esta excepción si dos o más rutas del mismo nivel de la jerarquía comparten el nombre de ruta.
 
 #### <a name="register-page-routes"></a>Registro de rutas de página
 
@@ -123,7 +123,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 En este ejemplo se habilita la navegación contextual por las páginas, donde la navegación a la ruta `details` desde la página de la ruta `monkeys` muestra `MonkeyDetailPage`. De forma similar, al desplazarse a la ruta `details` desde la página de la ruta `elephants` se muestra `ElephantDetailPage`.
 
 > [!IMPORTANT]
-> Actualmente, se permiten nombres de ruta duplicados cuando se usa el método `Routing.RegisterRoute`, donde el registro duplicado sobrescribe el registro anterior.
+> Se producirá una excepción `ArgumentException` si el método `Routing.RegisterRoute` intenta registrar la misma ruta en dos o más tipos diferentes.
 
 ## <a name="perform-navigation"></a>Realización de la navegación
 

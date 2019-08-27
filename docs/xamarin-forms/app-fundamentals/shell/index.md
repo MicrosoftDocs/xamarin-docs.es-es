@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
-ms.openlocfilehash: a988a99e20af76d071f55c4cd2c97b135ad077f8
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: 20ac6ad748e7056f7f8037a73a95de66b9eae3b6
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252277"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888921"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -43,6 +43,10 @@ Las aplicaciones de Shell pueden usar un esquema de navegación basado en URI qu
 ## <a name="searchsearchmd"></a>[Búsqueda](search.md)
 
 Las aplicaciones de Shell pueden usar la funcionalidad de búsqueda integrada que se proporciona en un cuadro de búsqueda que se puede agregar a la parte superior de cada página.
+
+## <a name="lifecyclelifecyclemd"></a>[Ciclo de vida](lifecycle.md)
+
+Las aplicaciones del shell respetan el ciclo de vida de Xamarin.Forms; se genera un evento `Appearing` si una página está a punto de aparecer en la pantalla y se genera un evento `Disappearing` si una página está a punto de desaparecer de la pantalla.
 
 ## <a name="custom-rendererscustomrenderersmd"></a>[Representadores personalizados](customrenderers.md)
 

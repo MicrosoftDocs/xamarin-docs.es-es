@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1906d8c5c001c2328a0dbdce58f92092454e2c0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119623"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525084"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Editar las propiedades del dispositivo virtual Android
 
@@ -31,15 +31,15 @@ Cuando se selecciona una propiedad, aparece una descripción detallada de dicha 
 
 Puede cambiar las propiedades de la manera siguiente:
 
--   Para cambiar una propiedad booleana, haga clic en la marca de verificación situada a la derecha de la propiedad booleana:
+- Para cambiar una propiedad booleana, haga clic en la marca de verificación situada a la derecha de la propiedad booleana:
 
     ![Cambiar una propiedad booleana](device-properties-images/win/02-boolean-value.png)
 
--   Para cambiar una propiedad *enum* (enumerada), haga clic en la flecha abajo situada a la derecha de la propiedad y seleccione un nuevo valor.
+- Para cambiar una propiedad *enum* (enumerada), haga clic en la flecha abajo situada a la derecha de la propiedad y seleccione un nuevo valor.
 
     ![Cambiar una propiedad enum](device-properties-images/win/04-enum-value.png)
 
--   Para cambiar una propiedad de cadena o entero, haga doble clic en la configuración actual de la cadena o del entero en la columna de valor y especifique un nuevo valor.
+- Para cambiar una propiedad de cadena o entero, haga doble clic en la configuración actual de la cadena o del entero en la columna de valor y especifique un nuevo valor.
 
     ![Cambiar una propiedad de entero](device-properties-images/win/03-integer-value.png)
 
@@ -56,15 +56,15 @@ Cuando se selecciona una propiedad, aparece una descripción detallada de dicha 
 
 Puede cambiar las propiedades de la manera siguiente:
 
--   Para cambiar una propiedad booleana, haga clic en la marca de verificación situada a la derecha de la propiedad booleana:
+- Para cambiar una propiedad booleana, haga clic en la marca de verificación situada a la derecha de la propiedad booleana:
 
     ![Cambiar una propiedad booleana](device-properties-images/mac/02-boolean-value.png)
 
--   Para cambiar una propiedad *enum* (enumerada), haga clic en el menú desplegable situado a la derecha de la propiedad y seleccione un nuevo valor.
+- Para cambiar una propiedad *enum* (enumerada), haga clic en el menú desplegable situado a la derecha de la propiedad y seleccione un nuevo valor.
 
     ![Cambiar una propiedad enum](device-properties-images/mac/04-enum-value.png)
 
--   Para cambiar una propiedad de cadena o entero, haga doble clic en la configuración actual de la cadena o del entero en la columna de valor y especifique un nuevo valor.
+- Para cambiar una propiedad de cadena o entero, haga doble clic en la configuración actual de la cadena o del entero en la columna de valor y especifique un nuevo valor.
 
     ![Cambiar una propiedad de entero](device-properties-images/mac/03-integer-value.png)
 

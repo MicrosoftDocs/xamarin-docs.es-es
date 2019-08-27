@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4aa549258d3261d00c0623c2b21a2cebaa226e54
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670758"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524935"
 ---
 # <a name="windows-installation"></a>Instalación en el equipo Windows
 
@@ -24,13 +24,13 @@ _En esta guía se describen los pasos necesarios para instalar Xamarin.Android p
 Gracias a que ahora Xamarin se incluye con todas las ediciones de Visual Studio sin ningún costo adicional y no requiere ninguna licencia independiente, puede usar el instalador de Visual Studio para descargar e instalar las herramientas de Xamarin.Android
 (los pasos relacionados con la instalación manual y la configuración de las licencias que eran necesarios para las versiones anteriores de Xamarin.Android ya no son necesarios). En esta guía aprenderá lo siguiente:
 
--   Cómo configurar las ubicaciones personalizadas para Java Development Kit, el SDK de Android y el NDK de Android.
+- Cómo configurar las ubicaciones personalizadas de Java Development Kit, Android SDK y Android NDK.
 
--   Cómo iniciar Android SDK Manager para descargar e instalar componentes adicionales del SDK de Android.
+- Cómo iniciar Android SDK Manager para descargar e instalar componentes adicionales de Android SDK.
 
--   Cómo preparar un emulador o dispositivo de Android para la depuración y las pruebas.
+- Cómo preparar un emulador o un dispositivo de Android para la depuración y las pruebas.
 
--   Cómo crear el primer proyecto de aplicación de Xamarin.Android.
+- Cómo crear el primer proyecto de aplicación de Xamarin.Android.
 
 Cuando acabe esta guía, tendrá una instalación operativa de Xamarin.Android integrada en Visual Studio y podrá empezar a compilar su primera aplicación de Xamarin.Android.
 

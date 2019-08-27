@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2019
-ms.openlocfilehash: 25fcf40f7ad94bf5c2ba03fca7413fcaaedba09e
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739245"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888979"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
@@ -163,6 +163,9 @@ El elemento secundario de cada objeto `Tab` es un objeto `ShellContent` cuya pro
 ```
 
 Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), se puede navegar a objetos `ContentPage` adicionales. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+
+> [!NOTE]
+> El [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto `ShellContent` se hereda del objeto `Tab` primario.
 
 ### <a name="shellcontent-class"></a>Clase ShellContent
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509208"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525711"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
 
@@ -22,8 +22,8 @@ Un truco muy común que emplean los desarrolladores para depurar sus aplicacione
 
 La herramienta **Registro de depuración** proporciona un método para ver la salida del registro mientras se depura una aplicación a través de Visual Studio. El registro de depuración es compatible con los siguientes dispositivos:
 
--   Teléfonos, tabletas y ponibles Android físicos.
--   Dispositivo virtual Android en ejecución en Android Emulator. 
+- Teléfonos, tabletas y ponibles Android físicos.
+- Dispositivo virtual Android en ejecución en Android Emulator. 
 
 > [!NOTE]
 > La herramienta **Registro de depuración** no funciona con Xamarin Live Player.
@@ -41,24 +41,24 @@ Para abrir la herramienta **Registro de dispositivos**, haga clic en el icono **
 
 Como alternativa, inicie la herramienta **Registro de dispositivos** desde una de las selecciones de menú siguientes:
 
--   **Ver > Otras ventanas > Registro de dispositivos**
--   **Herramientas -> Android -> Registro de dispositivos**
+- **Ver > Otras ventanas > Registro de dispositivos**
+- **Herramientas -> Android -> Registro de dispositivos**
 
 La captura de pantalla siguiente muestra las distintas partes de la ventana **Herramienta de depuración**:
 
 [![Partes de la ventana Herramienta de depuración](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Selector de dispositivos** &ndash; Selecciona qué dispositivo físico o un emulador de ejecución se va a supervisar.
+- **Selector de dispositivos**: selecciona qué dispositivo físico o emulador en ejecución se va a supervisar.
 
--   **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
+- **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
 
--   **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
+- **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
 
--   **Reproducir/Pausar** &ndash; Alterna entre la actualización o la pausa de la visualización de las nuevas entradas de registro.
+- **Reproducir/Pausar**: alterna entre la actualización o la pausa de la visualización de las nuevas entradas del registro.
 
--   **Detener** &ndash; Detiene la visualización de las nuevas entradas de registro.
+- **Detener** &ndash; Detiene la visualización de las nuevas entradas de registro.
 
--   **Cuadro de búsqueda** &ndash; Escriba las cadenas de búsqueda en este cuadro para filtrar un subconjunto de las entradas de registro.
+- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas del registro.
 
 
 Cuando se muestre la ventana de la herramienta **Registro de depuración**, use el menú desplegable de dispositivos para elegir el dispositivo Android que desea supervisar:
@@ -78,23 +78,23 @@ La captura de pantalla siguiente muestra las distintas partes de la ventana **He
 
 [![Características de la ventana Herramienta de depuración](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Selector de dispositivos** &ndash; Selecciona qué dispositivo físico o un emulador de ejecución se va a supervisar.
+- **Selector de dispositivos**: selecciona qué dispositivo físico o emulador en ejecución se va a supervisar.
 
--   **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
+- **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
 
--   **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
+- **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
 
--   **Cuadro de búsqueda** &ndash; Escriba las cadenas de búsqueda en este cuadro para filtrar un subconjunto de las entradas de registro.
+- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas del registro.
 
--   **Mostrar mensajes** &ndash; Alterna la visualización de los mensajes informativos.
+- **Mostrar mensajes** &ndash; Alterna la visualización de los mensajes informativos.
 
--   **Mostrar advertencias** &ndash; Alterna la visualización de mensajes de advertencia, que se muestran en amarillo.
+- **Mostrar advertencias** &ndash; Alterna la visualización de mensajes de advertencia, que se muestran en amarillo.
 
--   **Mostrar errores** &ndash; Alterna la visualización de mensajes de error, que se muestran en rojo.
+- **Mostrar errores** &ndash; Alterna la visualización de mensajes de error, que se muestran en rojo.
 
--   **Volver a conectar** &ndash; Vuelve a conectar el dispositivo y actualiza la visualización del registro de entrada.
+- **Volver a conectar** &ndash; Vuelve a conectar el dispositivo y actualiza la visualización del registro de entrada.
 
--   **Agregar marcador** &ndash; Inserta un mensaje de marcador (como `--- Marker N ---`) después de la entrada de registro más reciente, donde _N_ es un contador que comienza en 1 y se incrementa en 1 cuando se agregan nuevos marcadores.
+- **Agregar marcador**: inserta un mensaje de marcador (como `--- Marker N ---`) después de la entrada de registro más reciente, donde _N_ es un contador que comienza en 1 y se incrementa en 1 cuando se agregan nuevos marcadores.
 
 Cuando se muestre la ventana de la herramienta Registro de depuración, use el menú desplegable de dispositivos para elegir el dispositivo Android que desea supervisar:
 

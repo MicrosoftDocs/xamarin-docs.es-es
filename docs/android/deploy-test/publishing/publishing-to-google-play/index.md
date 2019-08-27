@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668860"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525474"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -36,19 +36,19 @@ Google Play no está disponible en todo el mundo. Es posible que en algunas ubic
 
 Para publicar aplicaciones en Google Play, es necesario tener una cuenta de editor. Para suscribirse a una cuenta de editor, siga estos pasos:
 
-1.  Visite [Google Play Developer Console](https://play.google.com/apps/publish).
-1.  Escriba la información básica de su identidad de desarrollador.
-1.  Lea y acepte el contrato de distribución para desarrolladores que le corresponda.
-1.  Abone la tarifa de registro de 25 USD.
-1.  Confirme la verificación por correo electrónico.
-1.  Una vez creada la cuenta, ya es posible publicar aplicaciones mediante Google Play.
+1. Visite [Google Play Developer Console](https://play.google.com/apps/publish).
+1. Escriba la información básica de su identidad de desarrollador.
+1. Lea y acepte el contrato de distribución para desarrolladores que le corresponda.
+1. Abone la tarifa de registro de 25 USD.
+1. Confirme la verificación por correo electrónico.
+1. Una vez creada la cuenta, ya es posible publicar aplicaciones mediante Google Play.
 
 
 Google Play no se admite en todos los países del mundo. Las listas de países más recientes se pueden encontrar en los siguientes vínculos:
 
-1.  [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; Se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
+1. [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; Se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
 
-1.  [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; Se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
+1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; Se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
 
 
 
@@ -62,21 +62,21 @@ Para promocionar y publicitar de forma eficaz una aplicación en Google Play, Go
 
 Un *icono del iniciador* es un gráfico que representa una aplicación. Cada icono del iniciador debe ser un archivo PNG de 32 bits con un canal alfa en caso de transparencia. Una aplicación debe tener iconos de todas las densidades de pantalla generalizadas, tal como se describe en la siguiente lista:
 
--   **ldpi** (120 ppp) &ndash; 36 x 36 px
--   **mdpi** (160 ppp) &ndash; 48 x 48 px
--   **hdpi** (240 ppp) &ndash; 72 x 72 px
--   **xhdpi** (320 ppp) &ndash; 96 x 96 px
+- **ldpi** (120 ppp) &ndash; 36 x 36 px
+- **mdpi** (160 ppp) &ndash; 48 x 48 px
+- **hdpi** (240 ppp) &ndash; 72 x 72 px
+- **xhdpi** (320 ppp) &ndash; 96 x 96 px
 
 
 Los iconos del iniciador son lo primero que verá un usuario de aplicaciones de Google Play, por lo que debe prestarse mucha atención para conseguir que los iconos del iniciador sean visualmente atractivos y significativos.
 
 Sugerencias para los iconos de iniciador:
 
-1.  **Simples y ordenados**&ndash; Los iconos del iniciador deben mostrarse de forma simple y ordenada. Esto significa que hay que excluir el nombre de la aplicación del icono. Los iconos más sencillos serán más fáciles de recordar y, además, serán más fáciles distinguir en tamaños más pequeños.
+1. **Simples y ordenados**&ndash; Los iconos del iniciador deben mostrarse de forma simple y ordenada. Esto significa que hay que excluir el nombre de la aplicación del icono. Los iconos más sencillos serán más fáciles de recordar y, además, serán más fáciles distinguir en tamaños más pequeños.
 
-1.  **Iconos que no sean finos**&ndash; Los iconos demasiado finos no destacan bien en todos los fondos.
+1. **Iconos que no sean finos**: los iconos demasiado finos no destacan bien en todos los fondos.
 
-1.  **Uso del canal alfa**&ndash; Los iconos deben usar el canal alfa y no deben ser imágenes enmarcadas por completo.
+1. **Uso del canal alfa**: los iconos deben usar el canal alfa y no deben ser imágenes enmarcadas por completo.
 
 
 
@@ -84,9 +84,9 @@ Sugerencias para los iconos de iniciador:
 
 Las aplicaciones de Google Play requieren una versión de alta fidelidad del icono de la aplicación. Solo se utiliza en Google Play y no reemplaza el icono del iniciador de la aplicación. Las especificaciones de los iconos de alta resolución son los siguientes:
 
-1.  PNG de 32 bits con un canal alfa
-1.  512 x 512 píxeles
-1.  Tamaño máximo de 1024 KB
+1. PNG de 32 bits con un canal alfa
+1. 512 x 512 píxeles
+1. Tamaño máximo de 1024 KB
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) es una herramienta útil para la creación de iconos adecuados para el iniciador y las aplicaciones de alta resolución.
 
@@ -98,8 +98,8 @@ Google Play requiere un mínimo de dos y un máximo de ocho capturas de pantalla
 
 Las especificaciones para las capturas de pantalla son las siguientes:
 
-1.  PNG o JPG 24 bits sin ningún canal alfa
-1.  320 de ancho x 480 de alto, 480 de ancho x 800 de alto o 480 de ancho x 854 de alto. Las imágenes con paisajes se recortarán.
+1. PNG o JPG 24 bits sin ningún canal alfa
+1. 320 de ancho x 480 de alto, 480 de ancho x 800 de alto o 480 de ancho x 854 de alto. Las imágenes con paisajes se recortarán.
 
 
 
@@ -107,8 +107,8 @@ Las especificaciones para las capturas de pantalla son las siguientes:
 
 Se trata de una imagen opcional utilizada por Google Play:
 
-1.  Es un archivo PNG o JPG de 24 bits y de 180 de ancho x 120 de alto sin ningún canal alfa.
-1.  No incluye bordes.
+1. Es un archivo PNG o JPG de 24 bits y de 180 de ancho x 120 de alto sin ningún canal alfa.
+1. No incluye bordes.
 
 
 
@@ -116,9 +116,9 @@ Se trata de una imagen opcional utilizada por Google Play:
 
 Se utiliza en la sección de características de Google Play. Este gráfico puede aparecer solo, sin un icono de aplicación.
 
-1.  Es un archivo PNG o JPG de 1024 de ancho x 500 de alto sin ningún canal alfa y sin transparencia.
-1.  Todo el contenido importante debe estar dentro de un marco de 924 x 500. Para fines estilísticos, se pueden recortar los píxeles que estén fuera de este marco.
-1.  También puede reducirse: utilice texto grande y simplifique los gráficos.
+1. Es un archivo PNG o JPG de 1024 de ancho x 500 de alto sin ningún canal alfa y sin transparencia.
+1. Todo el contenido importante debe estar dentro de un marco de 924 x 500. Para fines estilísticos, se pueden recortar los píxeles que estén fuera de este marco.
+1. También puede reducirse: utilice texto grande y simplifique los gráficos.
 
 
 
@@ -143,7 +143,7 @@ En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/sig
 5. Firme la aplicación con el certificado.
 6. Publique la aplicación firmada en Google Play.
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)**, haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)**. Seleccione **Google Play** y haga clic en **Siguiente**:
+En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Seleccione **Google Play** y haga clic en **Siguiente**:
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -251,7 +251,7 @@ Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play
 * **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
 * **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
 
-Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)**, asegúrese de especificar un valor porcentual:
+Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)** , asegúrese de especificar un valor porcentual:
 
 [![Selección de Alfa, Beta, Lanzamiento o Producción](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
@@ -281,7 +281,7 @@ Si se produce este error, cargue un APK manualmente, por ejemplo, una compilaci�
 
 [![Ya se actualizó un APK con el código de versión (1)](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
-Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)**.
+Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -293,19 +293,19 @@ Si se aceptan el id. de cliente y el secreto de cliente, se mostrará el mensaje
 
 [![Mensaje de registro correcto](images/xs/11-registration-successful-sml.png)](images/xs/11-registration-successful.png#lightbox)
 
-En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)**, seleccione una cuenta de Google y una pista para cargar la aplicación:
+En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)** , seleccione una cuenta de Google y una pista para cargar la aplicación:
 
 [![Cuadro de diálogo para elegir una cuenta de Google](images/xs/12-choose-google-account-sml.png)](images/xs/12-choose-google-account.png#lightbox)
 
 Google Play ofrece cuatro pistas posibles para cargar la aplicación:
 
--   **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
+- **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
 
--   **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
+- **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
 
--   **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
+- **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
 
--   **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
+- **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
 
 Para obtener más información sobre las pruebas y las implementaciones graduales de Google Play, consulte [Configurar pruebas alpha o beta](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 

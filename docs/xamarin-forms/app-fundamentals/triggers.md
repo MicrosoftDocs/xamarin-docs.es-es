@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: b803c1ccfbd8bae008a763f8a31283b653ae4cf3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652155"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629621"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -111,7 +111,8 @@ que es como se hace referencia a las propiedades de otro control. Cuando la long
 </Button>
 ```
 
-Sugerencia: al evaluar `Path=Text.Length`, proporcione siempre un valor predeterminado para la propiedad de destino (p. ej., `Text=""`) porque, de lo contrario, será `null` y el desencadenador no funcionará según lo esperado.
+> [!TIP]
+> Al evaluar `Path=Text.Length`, proporcione siempre un valor predeterminado para la propiedad de destino (p. ej., `Text=""`) porque, de lo contrario, será `null` y el desencadenador no funcionará según lo esperado.
 
 Además de especificar los elementos `Setter`, también puede proporcionar [`EnterActions` y `ExitActions`](#enterexit).
 

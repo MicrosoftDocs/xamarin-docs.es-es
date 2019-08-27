@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: 9f2aecf1bcac8f9603db40e3562f49123e924bfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/19/2019
+ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739298"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889199"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -130,6 +130,32 @@ En el ejemplo siguiente se muestra cómo contraer el encabezado de control flota
     ...
 </Shell>
 ```
+
+## <a name="flyout-background-image"></a>Imagen de fondo del control flotante
+
+El control flotante puede tener una imagen de fondo opcional, que aparece debajo del encabezado del control flotante y detrás de los elementos del control flotante y los elementos del menú. La imagen de fondo se puede especificar si se establece la propiedad enlazable `FlyoutBackgroundImage`, de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), en un archivo, un recurso incrustado, un URI o un flujo.
+
+La relación de aspecto de la imagen de fondo se puede configurar si se establece la propiedad enlazable `FlyoutBackgroundImageAspect`, de tipo [`Aspect`](xref:Xamarin.Forms.Aspect), en uno de los miembros de enumeración de `Aspect`:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): recorta la imagen para que rellene el área de visualización y conserve la relación de aspecto.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): aplica el formato letterbox a la imagen si es necesario para que la imagen quepa en el área de visualización, con un espacio en blanco agregado a la parte superior o inferior o a los laterales, en función de si la imagen es ancha o alta.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill): ajusta la imagen para rellenar completa y exactamente el área de visualización. Esto puede producir que la imagen se distorsione.
+
+De forma predeterminada, la propiedad `FlyoutBackgroundImageAspect` se establecerá en `AspectFit`.
+
+En el ejemplo siguiente se muestra cómo configurar estas propiedades:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+Esto da como resultado una imagen de fondo en el control flotante:
+
+![Captura de pantalla de la imagen de fondo de un control flotante](flyout-images/flyout-backgroundimage.png "Imagen de fondo de un control flotante")
 
 ## <a name="flyout-items"></a>Elementos del control flotante
 

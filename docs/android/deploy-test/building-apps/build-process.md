@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: ffa462ed7cfdc45357f0ac62cae23d307cdb92b7
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.openlocfilehash: 982517a0072b130a0c34acb903b47d7e961ec2a5
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012457"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887816"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -23,9 +23,9 @@ El proceso de compilación de Xamarin.Android es responsable de pegarlo todo jun
 
 En términos generales, hay dos tipos de paquetes de aplicación de Android (archivos `.apk`) que puede generar el sistema de compilación de Xamarin.Android:
 
--   Compilaciones de **versión**, que son totalmente autocontenidas y no requieren la ejecución de paquetes adicionales. Estos son los paquetes que se proporcionarían a una tienda de aplicaciones.
+- Compilaciones de **versión**, que son totalmente autocontenidas y no requieren la ejecución de paquetes adicionales. Estos son los paquetes que se proporcionarían a una tienda de aplicaciones.
 
--   Compilaciones de **depuración**, los que no.
+- Compilaciones de **depuración**, los que no.
 
 No es por casualidad que estos correspondan al elemento de MSBuild `Configuration` que genera el paquete.
 
@@ -60,17 +60,17 @@ En esta página solo se documentan las características y personalizaciones espe
 
 Los siguientes destinos de compilación se definen para proyectos de Xamarin.Android:
 
--   **Build**: compila el paquete.
+- **Build**: compila el paquete.
 
--   **Clean**: elimina todos los archivos generados por el proceso de compilación.
+- **Clean**: elimina todos los archivos generados por el proceso de compilación.
 
--   **Install**: instala el paquete en el dispositivo predeterminado o el dispositivo virtual.
+- **Install**: instala el paquete en el dispositivo predeterminado o el dispositivo virtual.
 
--   **Uninstall**: desinstala el paquete del dispositivo predeterminado o el dispositivo virtual.
+- **Uninstall**: desinstala el paquete del dispositivo predeterminado o el dispositivo virtual.
 
--   **SignAndroidPackage**: crea y firma el paquete (`.apk`). Úselo con `/p:Configuration=Release` para generar paquetes de comerciales.
+- **SignAndroidPackage**: crea y firma el paquete (`.apk`). Úselo con `/p:Configuration=Release` para generar paquetes de comerciales.
 
--   **UpdateAndroidResources**: actualiza el archivo `Resource.designer.cs`. El IDE llama normalmente a este destino cuando se agregan nuevos recursos al proyecto.
+- **UpdateAndroidResources**: actualiza el archivo `Resource.designer.cs`. El IDE llama normalmente a este destino cuando se agregan nuevos recursos al proyecto.
 
 ## <a name="build-extension-points"></a>Puntos de extensión de compilación
 
@@ -99,29 +99,29 @@ Tenga en cuenta esta recomendación sobre la extensión del proceso de compilaci
 
 Las propiedades de MSBuild controlan el comportamiento de los destinos. Se especifican en el archivo de proyecto, por ejemplo, **MyApp.csproj**, dentro de un [elemento MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
--   **Configuration**: especifica la configuración de compilación que se usará, como "Debug" o "Release". La propiedad Configuration se usa para determinar los valores predeterminados de otras propiedades que determinan el comportamiento de destino. Se pueden crear configuraciones adicionales dentro del IDE.
+- **Configuration**: especifica la configuración de compilación que se usará, como "Debug" o "Release". La propiedad Configuration se usa para determinar los valores predeterminados de otras propiedades que determinan el comportamiento de destino. Se pueden crear configuraciones adicionales dentro del IDE.
 
     *De forma predeterminada*, la configuración `Debug` dará lugar a los destinos `Install` y `SignAndroidPackage` que crean un paquete de Android más pequeño que, para funcionar, requiere la presencia de otros archivos y paquetes.
 
     La configuración `Release` predeterminada dará lugar a los destinos `Install` y `SignAndroidPackage` que crean un paquete de Android que es *independiente*, y se puede usar sin instalar ningún otro paquete o archivo.
 
--   **DebugSymbols**: un valor booleano que determina si el paquete de Android es depurable (tiene el atributo *debuggable*), en combinación con la propiedad `$(DebugType)`. Un paquete depurable contiene símbolos de depuración, establece el atributo `//application/@android:debuggable` en `true` y agrega automáticamente el permiso `INTERNET` para que el depurador pueda asociarlo al proceso. Una aplicación es depurable si `DebugSymbols` es `True` *y* `DebugType` es la cadena vacía o `Full`.
+- **DebugSymbols**: un valor booleano que determina si el paquete de Android es depurable (tiene el atributo *debuggable*), en combinación con la propiedad `$(DebugType)`. Un paquete depurable contiene símbolos de depuración, establece el atributo `//application/@android:debuggable` en `true` y agrega automáticamente el permiso `INTERNET` para que el depurador pueda asociarlo al proceso. Una aplicación es depurable si `DebugSymbols` es `True` *y* `DebugType` es la cadena vacía o `Full`.
 
--   **DebugType**: especifica el [tipo de símbolos de depuración](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Entre los posibles valores se incluyen:
+- **DebugType**: especifica el [tipo de símbolos de depuración](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Entre los posibles valores se incluyen:
 
-    -   **Full**: se generan símbolos completos. Si la propiedad de MSBuild `DebugSymbols` es también `True`, entonces el paquete de aplicación es depurable.
+    - **Full**: se generan símbolos completos. Si la propiedad de MSBuild `DebugSymbols` es también `True`, entonces el paquete de aplicación es depurable.
 
-    -   **PdbOnly**: se generan símbolos "PDB". El paquete de aplicación *no* será depurable.
+    - **PdbOnly**: se generan símbolos "PDB". El paquete de aplicación *no* será depurable.
 
     Si `DebugType` no está establecido o es la cadena vacía, la propiedad `DebugSymbols` controla si la aplicación es o no depurable.
 
-    -   **AndroidGenerateLayoutBindings**: permite la generación de [diseño de código subyacente](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md) si se establece en `true` o lo deshabilita por completo si se establece en `false`. El valor predeterminado es `false`.
+    - **AndroidGenerateLayoutBindings**: permite la generación de [diseño de código subyacente](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md) si se establece en `true` o lo deshabilita por completo si se establece en `false`. El valor predeterminado es `false`.
 
 ### <a name="install-properties"></a>Propiedades de instalación
 
 Las propiedades de instalación controlan el comportamiento de los destinos `Install` y `Uninstall`.
 
--   **AdbTarget**: especifica el dispositivo de destino de Android en el que se puede instalar o del que se puede quitar el paquete Android. El valor de esta propiedad es el mismo que el de la opción del dispositivo de destino [ `adb`](https://developer.android.com/tools/help/adb.html#issuingcommands):
+- **AdbTarget**: especifica el dispositivo de destino de Android en el que se puede instalar o del que se puede quitar el paquete Android. El valor de esta propiedad es el mismo que el de la opción del dispositivo de destino [ `adb`](https://developer.android.com/tools/help/adb.html#issuingcommands):
 
     ```bash
     # Install package onto emulator via -e
@@ -135,57 +135,57 @@ Las propiedades de instalación controlan el comportamiento de los destinos `Ins
 Las propiedades de empaquetado controlan la creación del paquete de Android y se usan con los destinos `Install` y `SignAndroidPackage`.
 Las [propiedades de firma](#Signing_Properties) también son importantes al empaquetar aplicaciones de versión.
 
--   **AndroidApkDigestAlgorithm**: un valor de cadena que especifica el algoritmo de síntesis del mensaje que se usará con `jarsigner -digestalg`.
+- **AndroidApkDigestAlgorithm**: valor de cadena que especifica el algoritmo de resumen que se usará con `jarsigner -digestalg`.
 
     El valor predeterminado es `SHA1` para los APK y `SHA-256` para los paquetes de aplicaciones.
 
     Se ha agregado en Xamarin.Android 9.4.
 
--   **AndroidApkSignerAdditionalArguments** &ndash; Una propiedad de cadena que permite al desarrollador proporcionar argumentos adicionales a la herramienta `apksigner`.
+- **AndroidApkSignerAdditionalArguments**: propiedad de cadena que permite al desarrollador proporcionar argumentos adicionales a la herramienta `apksigner`.
 
     Agregado en Xamarin.Android 8.2.
 
--   **AndroidApkSigningAlgorithm** &ndash; Un valor de cadena que especifica el algoritmo de firma para utilizarlo con `jarsigner -sigalg`.
+- **AndroidApkSigningAlgorithm**: valor de cadena que especifica el algoritmo de firma para usarlo con `jarsigner -sigalg`.
 
     El valor predeterminado es `md5withRSA` para los APK y `SHA256withRSA` para los paquetes de aplicaciones.
 
     Agregado en Xamarin.Android 8.2.
 
--   **AndroidApplication**: un valor booleano que indica si el proyecto es para una aplicación Android (`True`) o para un proyecto de la biblioteca de Android (`False` o no existe).
+- **AndroidApplication**: valor booleano que indica si el proyecto es para una aplicación Android (`True`) o para un proyecto de la biblioteca de Android (`False` o no existe).
 
     Solo puede existir un proyecto con `<AndroidApplication>True</AndroidApplication>` en un paquete de Android. (Por desgracia, esto no se ha comprobado aún, lo que puede dar lugar a errores sutiles y extraños respecto a los recursos de Android).
 
--   **AndroidApplicationJavaClass** &ndash; el nombre completo de clase de Java para usar en lugar de `android.app.Application` cuando una clase hereda de [Android.App.Application](xref:Android.App.Application).
+- **AndroidApplicationJavaClass**: el nombre completo de clase de Java que usar en lugar de `android.app.Application` cuando una clase hereda de [Android.App.Application](xref:Android.App.Application).
 
     Esta propiedad se establece generalmente mediante *otras* propiedades, como la propiedad de MSBuild `$(AndroidEnableMultiDex)`.
 
     Agregado en Xamarin.Android 6.1.
 
--   **AndroidBuildApplicationPackage**: un valor booleano que indica si crear y firmar el paquete (.apk). Establecer este valor en `True` es equivalente a usar el destino de compilación [SignAndroidPackage](#Build_Targets).
+- **AndroidBuildApplicationPackage**: un valor booleano que indica si crear y firmar el paquete (.apk). Establecer este valor en `True` es equivalente a usar el destino de compilación [SignAndroidPackage](#Build_Targets).
 
     Después de Xamarin.Android 7.1, se agregó compatibilidad con esta propiedad.
 
     De forma predeterminada, esta propiedad es `False`.
 
--   **AndroidDexTool**: propiedad de estilo de la enumeración con los valores válidos de `dx` o `d8`. Indica el compilador de [dex][dex] que se usa durante el proceso de compilación de Xamarin.Android.
+- **AndroidDexTool**: propiedad de estilo de la enumeración con los valores válidos de `dx` o `d8`. Indica el compilador de [dex][dex] que se usa durante el proceso de compilación de Xamarin.Android.
     Actualmente tiene como valor predeterminado `dx`. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
 
     [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
     [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
 
--   **AndroidEnableDesugar**: propiedad booleana que determina si `desugar` está habilitado. Android no admite actualmente todas las características de Java 8 y la cadena de herramientas predeterminada implementa las nuevas características de lenguaje ejecutando transformaciones de código de bytes, llamadas `desugar`, en la salida del compilador `javac`. El valor predeterminado es `False` si se usa `AndroidDexTool=dx` y `True` si se usa `AndroidDexTool=d8`.
+- **AndroidEnableDesugar**: propiedad booleana que determina si `desugar` está habilitado. Android no admite actualmente todas las características de Java 8 y la cadena de herramientas predeterminada implementa las nuevas características de lenguaje ejecutando transformaciones de código de bytes, llamadas `desugar`, en la salida del compilador `javac`. El valor predeterminado es `False` si se usa `AndroidDexTool=dx` y `True` si se usa `AndroidDexTool=d8`.
 
--   **AndroidEnableGooglePlayStoreChecks**: una propiedad booleana que permite a los desarrolladores deshabilitar las siguientes comprobaciones de Google Play Store: XA1004, XA1005 y XA1006. Esto resulta útil para los desarrolladores que no tienen como destino Google Play Store y que no quieren ejecutar las comprobaciones mencionadas.
+- **AndroidEnableGooglePlayStoreChecks**: una propiedad booleana que permite a los desarrolladores deshabilitar las siguientes comprobaciones de Google Play Store: XA1004, XA1005 y XA1006. Esto resulta útil para los desarrolladores que no tienen como destino Google Play Store y que no quieren ejecutar las comprobaciones mencionadas.
 
     Se ha agregado en Xamarin.Android 9.4.
 
--   **AndroidEnableMultiDex**: una propiedad booleana que determina si se usará la compatibilidad con Multi-Dex en el archivo `.apk` final.
+- **AndroidEnableMultiDex**: propiedad booleana que determina si se usará la compatibilidad con Multi-Dex en el archivo `.apk` final.
 
     En Xamarin.Android 5.1, se agregó compatibilidad con esta propiedad.
 
     De forma predeterminada, esta propiedad es `False`.
 
--   **AndroidEnablePreloadAssemblies** &ndash; Una propiedad booleana que controla si todos los ensamblados administrados que se incluyen en el paquete de aplicación se cargan o no durante el inicio del proceso.
+- **AndroidEnablePreloadAssemblies**: propiedad booleana que controla si todos los ensamblados administrados que se incluyen en el paquete de aplicación se cargan o no durante el inicio del proceso.
 
     Cuando se establece en `True`, todos los ensamblados que se incluyen en el paquete de aplicación se cargan durante el inicio del proceso, antes de que se invoque cualquier código de aplicación.
     Esta acción es coherente con lo que hacía Xamarin.Android en las versiones anteriores a Xamarin.Android 9.2.
@@ -199,7 +199,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Se ha agregado en Xamarin.Android 9.2.
 
--   **AndroidEnableProfiledAot**: una propiedad booleana que determina si los perfiles de AOT se usarán durante la compilación Ahead-of-Time.
+- **AndroidEnableProfiledAot**: propiedad booleana que determina si los perfiles de AOT se usarán durante la compilación Ahead Of Time.
 
     Los perfiles se muestran en el grupo de elementos `AndroidAotProfile`. Este ItemGroup contiene perfiles predeterminados. Se puede reemplazar quitando los perfiles de AOT existentes y agregando los suyos.
 
@@ -207,14 +207,13 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     De forma predeterminada, esta propiedad es `False`.
 
--   **AndroidEnableSGenConcurrent**: una propiedad booleana que determina si se usará el [recolector de elementos no utilizados simultáneo](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen).
+- **AndroidEnableSGenConcurrent**: propiedad booleana que determina si se usará el [recolector de elementos no utilizados simultáneo](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen).
 
     Se agregó compatibilidad con esta propiedad en Xamarin.Android 7.2.
 
     De forma predeterminada, esta propiedad es `False`.
 
--   **AndroidErrorOnCustomJavaObject** &ndash; Una propiedad booleana que determina si los tipos pueden implementar `Android.Runtime.IJavaObject`
-    *sin* heredando también de `Java.Lang.Object` o `Java.Lang.Throwable`:
+- **AndroidErrorOnCustomJavaObject**: propiedad booleana que determina si los tipos pueden implementar `Android.Runtime.IJavaObject` *sin* heredarlo también de `Java.Lang.Object` o `Java.Lang.Throwable`:
 
     ```csharp
     class BadType : IJavaObject {
@@ -228,13 +227,13 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     }
     ```
 
-    Cuando es True, estos tipos generarán un error de XA4212, en caso contrario, una advertencia XA4212.
+    Cuando es True, estos tipos generarán un error XA4212; en caso contrario, una advertencia XA4212.
 
     En Xamarin.Android 8.1, se agregó compatibilidad con esta propiedad.
 
     De forma predeterminada, esta propiedad es `True`.
 
--   **AndroidFastDeploymentType**: lista de valores separada por `:` (dos puntos) para controlar qué tipos se pueden implementar en el [directorio de implementación rápida](#Fast_Deployment) del dispositivo de destino cuando la propiedad de MSBuild `$(EmbedAssembliesIntoApk)` es `False`. Si un recurso se implementa rápido, *no* se inserta en el archivo `.apk` generado, lo que puede acelerar los tiempos de desarrollo. (Cuanto más rápido se implementa, con menos frecuencia es necesario recompilar el archivo `.apk`, y el proceso de instalación puede ser más rápido). Los valores válidos son:
+- **AndroidFastDeploymentType**: lista de valores separada por `:` (dos puntos) para controlar qué tipos se pueden implementar en el [directorio de implementación rápida](#Fast_Deployment) del dispositivo de destino cuando la propiedad de MSBuild `$(EmbedAssembliesIntoApk)` es `False`. Si un recurso se implementa rápido, *no* se inserta en el archivo `.apk` generado, lo que puede acelerar los tiempos de desarrollo. (Cuanto más rápido se implementa, con menos frecuencia es necesario recompilar el archivo `.apk`, y el proceso de instalación puede ser más rápido). Los valores válidos son:
 
     - `Assemblies`: implementa los ensamblados de aplicación.
 
@@ -244,7 +243,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     **Experimental**. Agregado en Xamarin.Android 6.1.
 
--   **AndroidGenerateJniMarshalMethods**: se trata de una propiedad bool que permite la generación de métodos de serialización JNI como parte del proceso de compilación. Reduce en gran medida el uso de System.Reflection en el código de aplicación auxiliar de enlace.
+- **AndroidGenerateJniMarshalMethods**: se trata de una propiedad bool que permite la generación de métodos de serialización JNI como parte del proceso de compilación. Reduce en gran medida el uso de System.Reflection en el código de aplicación auxiliar de enlace.
 
     De forma predeterminada, se establecerá en False. Si los desarrolladores quieren usar la nueva característica de métodos de serialización JNI, pueden establecer
 
@@ -261,7 +260,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     **Experimental**. Se ha agregado en Xamarin.Android 9.2.
     El valor predeterminado es False.
 
--   **AndroidGenerateJniMarshalMethodsAdditionalArguments**: propiedad de cadena que se puede usar para agregar parámetros adicionales a la invocación de `jnimarshalmethod-gen.exe`.  Resulta útil para la depuración, por lo que se pueden usar opciones tales como `-v`, `-d` o `--keeptemp`.
+- **AndroidGenerateJniMarshalMethodsAdditionalArguments**: propiedad de cadena que se puede usar para agregar parámetros adicionales a la invocación de `jnimarshalmethod-gen.exe`.  Resulta útil para la depuración, por lo que se pueden usar opciones tales como `-v`, `-d` o `--keeptemp`.
 
     El valor predeterminado es una cadena vacía. Se puede establecer en el archivo csproj o en la línea de comandos. Por ejemplo:
 
@@ -277,39 +276,39 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Se ha agregado en Xamarin.Android 9.2.
 
--   **AndroidHttpClientHandlerType** &ndash; Controla la implementación de `System.Net.Http.HttpMessageHandler` predeterminada que se va a utilizar mediante el constructor predeterminado `System.Net.Http.HttpClient`. El valor es un nombre calificado con el ensamblado de una subclase `HttpMessageHandler`, adecuada para usarse con [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
+- **AndroidHttpClientHandlerType** &ndash; Controla la implementación de `System.Net.Http.HttpMessageHandler` predeterminada que se va a utilizar mediante el constructor predeterminado `System.Net.Http.HttpClient`. El valor es un nombre calificado con el ensamblado de una subclase `HttpMessageHandler`, adecuada para usarse con [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
     Los valores más comunes para esta propiedad son los siguientes:
 
-    -   `Xamarin.Android.Net.AndroidClientHandler`: Use las API de Java de Android para realizar solicitudes de red. Esto permite tener acceso a las direcciones URL TLS 1.2, cuando la versión de Android subyacente admita dicho protocolo. Solo Android 5.0 y versiones posteriores proporcionan compatibilidad confiable con TLS 1.2 a través de Java.
+    - `Xamarin.Android.Net.AndroidClientHandler`: Use las API de Java de Android para realizar solicitudes de red. Esto permite tener acceso a las direcciones URL TLS 1.2, cuando la versión de Android subyacente admita dicho protocolo. Solo Android 5.0 y versiones posteriores proporcionan compatibilidad confiable con TLS 1.2 a través de Java.
 
-        Esto corresponde a la opción **Android** de las páginas de propiedades de Visual Studio y la opción **AndroidClientHandler** de las páginas de propiedades de Visual Studio para Mac.
+        Esto corresponde a la opción **Android** de las páginas de propiedades de Visual Studio y la opción **AndroidClientHandler** de las páginas de propiedades de Visual Studio para Mac.
 
-        El asistente para la creación de proyectos selecciona esta opción para los nuevos proyectos cuando la **versión de Android mínima** está configurada en **Android 5.0 (Lollipop)** o versiones posteriores en Visual Studio, o bien cuando **Target Platforms** está establecido en **Latest and Greatest** en Visual Studio para Mac.
+        El asistente para nuevo proyecto selecciona esta opción para los nuevos proyectos cuando la **versión de Android mínima** está configurada en **Android 5.0 (Lollipop)** o versiones posteriores en Visual Studio, o bien cuando **Plataformas de destino** está establecido en **Más reciente y más grande** en Visual Studio para Mac.
 
-    -   Anular la cadena vacía: Esto equivale a `System.Net.Http.HttpClientHandler, System.Net.Http`.
+    - Anular la cadena vacía: Esto equivale a `System.Net.Http.HttpClientHandler, System.Net.Http`.
 
-        Esto corresponde a la opción **Default** de las páginas de propiedades de Visual Studio.
+        Esto corresponde a la opción **Predeterminado** de las páginas de propiedades de Visual Studio.
 
-        El asistente para la creación de proyectos selecciona esta opción para los nuevos proyectos cuando la **versión de Android mínima** está configurada en **Android 4.4.87** o versiones anteriores en Visual Studio, o bien cuando **Target Platforms** está establecido en **Modern Development** o **Maximum Compatibility** en Visual Studio para Mac.
+        El asistente para nuevo proyecto selecciona esta opción para los nuevos proyectos cuando la **versión de Android mínima** está configurada en **Android 4.4.87** o versiones anteriores en Visual Studio, o bien cuando la opción **Plataformas de destino** está establecida en **Desarrollo moderno** o **Compatibilidad máxima** en Visual Studio para Mac.
 
-    -  `System.Net.Http.HttpClientHandler, System.Net.Http`: Use el `HttpMessageHandler` administrado.
+    - `System.Net.Http.HttpClientHandler, System.Net.Http`: Use el `HttpMessageHandler` administrado.
 
-       Esto corresponde a la opción **Managed** de las páginas de propiedades de Visual Studio.
+       Esto corresponde a la opción **Administrado** de las páginas de propiedades de Visual Studio.
 
-    *Nota*: Si la compatibilidad con TLS 1.2 es necesaria en las versiones de Android anteriores a la 5.0, *o* si se requiere con `System.Net.WebClient` y las API relacionadas, se debe usar `$(AndroidTlsProvider)`.
+    *Nota*: Si se necesita la compatibilidad con TLS 1.2 en las versiones de Android anteriores a la 5.0, *o* si se requiere con `System.Net.WebClient` y las API relacionadas, se debe usar `$(AndroidTlsProvider)`.
 
     *Nota*: La compatibilidad con esta propiedad funciona estableciendo la [variable de entorno `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
     Tendrá prioridad un valor `$XA_HTTP_CLIENT_HANDLER_TYPE` en un archivo con una acción de compilación de `@(AndroidEnvironment)`.
 
     Agregado en Xamarin.Android 6.1.
 
--   **AndroidLinkMode**: especifica qué tipo de [vinculación](~/android/deploy-test/linker.md) debe realizarse en los ensamblados contenidos dentro del paquete de Android. Solo se usa en proyectos de aplicación de Android. El valor predeterminado es *SdkOnly*. Los valores válidos son:
+- **AndroidLinkMode**: especifica qué tipo de [vinculación](~/android/deploy-test/linker.md) debe realizarse en los ensamblados contenidos dentro del paquete de Android. Solo se usa en proyectos de aplicación de Android. El valor predeterminado es *SdkOnly*. Los valores válidos son:
 
-    -   **None**: no se intenta la vinculación.
+    - **None**: no se intenta la vinculación.
 
-    -   **SdkOnly**: la vinculación se realizará solo en las bibliotecas de clase base, no en los ensamblados del usuario.
+    - **SdkOnly**: la vinculación se realizará solo en las bibliotecas de clase base, no en los ensamblados del usuario.
 
-    -   **Full**: la vinculación se realizará en las bibliotecas de clase base y en los ensamblados del usuario.
+    - **Full**: la vinculación se realizará en las bibliotecas de clase base y en los ensamblados del usuario.
 
         > [!NOTE]
         > El uso de un valor para `AndroidLinkMode` de *Full* da lugar con frecuencia a aplicaciones interrumpidas, en especial cuando se usa la reflexión. Evítelo a menos que sepa *realmente* lo que está haciendo.
@@ -318,44 +317,46 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     ```
 
--   **AndroidLinkSkip**: especifica una lista delimitada por punto y coma (`;`) de nombres de ensamblado, sin extensiones de archivos, que no se deben vincular. Solo se usa dentro de proyectos de aplicaciones Android.
+- **AndroidLinkSkip**: especifica una lista delimitada por punto y coma (`;`) de nombres de ensamblado, sin extensiones de archivos, que no se deben vincular. Solo se usa dentro de proyectos de aplicaciones Android.
 
     ```xml
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
     ```
 
--   **AndroidLinkTool**: propiedad de estilo de la enumeración con los valores válidos de `proguard` o `r8`. Indica el reductor de código que se usa con el código Java. Actualmente el valor predeterminado es una cadena vacía o `proguard` si `$(AndroidEnableProguard)` es `True`. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
+- **AndroidLinkTool**: propiedad de estilo de la enumeración con los valores válidos de `proguard` o `r8`. Indica el reductor de código que se usa con el código Java. Actualmente el valor predeterminado es una cadena vacía o `proguard` si `$(AndroidEnableProguard)` es `True`. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
 
     [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
 
--   **AndroidLintEnabled**: propiedad booleana que permite que el desarrollador ejecute la herramienta `lint` de Android como parte del proceso de empaquetado.
+- **AndroidLintEnabled**: propiedad booleana que permite que el desarrollador ejecute la herramienta `lint` de Android como parte del proceso de empaquetado.
 
-    -   **AndroidLintEnabledIssues**: lista separada por comas de problemas de Lint que se va a habilitar.
+    - **AndroidLintEnabledIssues**: lista separada por comas de problemas de Lint que se va a habilitar.
 
-    -   **AndroidLintEnabledIssues**: lista separada por comas de problemas de Lint que se va a deshabilitar.
+    - **AndroidLintEnabledIssues**: lista separada por comas de problemas de Lint que se va a deshabilitar.
 
-    -   **AndroidLintCheckIssues**: lista separada por comas de problemas de Lint que hay que comprobar.
+    - **AndroidLintCheckIssues**: lista separada por comas de problemas de Lint que hay que comprobar.
         Nota: Solo se comprobarán estos problemas.
 
-    -   **AndroidLintConfig**: se trata de una acción de compilación para un archivo de configuración de tipo lint. Puede usarse para habilitar o deshabilitar la comprobación de problemas. Varios archivos pueden usar esta acción de compilación ya que su contenido se va a combinar.
+    - **AndroidLintConfig**: se trata de una acción de compilación para un archivo de configuración de tipo lint. Puede usarse para habilitar o deshabilitar la comprobación de problemas. Varios archivos pueden usar esta acción de compilación ya que su contenido se va a combinar.
 
-    Consulte la [Ayuda de Lint](https://developer.android.com/studio/write/lint) para más información sobre las herramientas `lint` de Android.
+    Consulte la [Ayuda de Lint](https://developer.android.com/studio/write/lint) para obtener más información sobre las herramientas `lint` de Android.
 
--   **AndroidManagedSymbols**: una propiedad booleana que controla si se generan puntos de secuencia para que la información de nombre de archivo y número de línea se pueda extraer de los seguimientos de pila de `Release`.
+- **AndroidManagedSymbols**: propiedad booleana que controla si se generan puntos de secuencia para que la información de nombre de archivo y número de línea se pueda extraer de los seguimientos de la pila de `Release`.
 
     Agregado en Xamarin.Android 6.1.
 
--   **AndroidManifest**: especifica un nombre de archivo para usar como plantilla para el archivo [`AndroidManifest.xml` de la aplicación ](~/android/platform/android-manifest.md).
+- **AndroidManifest**: especifica un nombre de archivo para usar como plantilla para el archivo [`AndroidManifest.xml` de la aplicación ](~/android/platform/android-manifest.md).
     Durante la compilación, cualquier otro valor necesario se combina para producir el archivo `AndroidManifest.xml` real.
     `$(AndroidManifest)` debe contener el nombre de paquete en el atributo `/manifest/@package`.
 
--   **AndroidMultiDexClassListExtraArgs**: propiedad de cadena que permite a los desarrolladores pasar argumentos adicionales a `com.android.multidex.MainDexListBuilder` al generar el archivo `multidex.keep`.
+- **AndroidMultiDexClassListExtraArgs**: propiedad de cadena que permite a los desarrolladores pasar argumentos adicionales a `com.android.multidex.MainDexListBuilder` al generar el archivo `multidex.keep`.
 
     Un caso específico es si se obtiene el siguiente error durante la compilación de `dx`.
 
-        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+    ```
+    com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+    ```
 
-    Si recibe este error, puede agregar lo siguiente al elemento .csproj.
+    Si recibe este error puede agregar lo siguiente al elemento .csproj.
 
     ```xml
     <DxExtraArguments>--force-jumbo </DxExtraArguments>
@@ -366,75 +367,75 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Se ha agregado en Xamarin.Android 8.3.
 
--   **AndroidPackageFormat**: una propiedad de estilo de la enumeración con los valores válidos de `apk` o `aab`. Esto indica si quiere empaquetar la aplicación Android como un [archivo APK][apk] o un [paquete de aplicaciones Android][bundle]. Los grupos de aplicaciones son un nuevo formato para las compilaciones de `Release` que se quieran enviar a Google Play. Actualmente, este valor es `apk` de forma predeterminada.
+- **AndroidPackageFormat**: una propiedad de estilo de la enumeración con los valores válidos de `apk` o `aab`. Esto indica si quiere empaquetar la aplicación Android como un [archivo APK][apk] o un [paquete de aplicaciones Android][bundle]. Los grupos de aplicaciones son un nuevo formato para las compilaciones de `Release` que se quieran enviar a Google Play. Actualmente, este valor es `apk` de forma predeterminada.
 
-    Cuando `$(AndroidPackageFormat)` se establece en `aab`, se establecen otras propiedades de MSBuild necesarias para los paquetes de aplicaciones de Android:
+    Si `$(AndroidPackageFormat)` se establece en `aab`, se establecen otras propiedades de MSBuild necesarias para los lotes de aplicaciones de Android:
 
-    * `$(AndroidUseAapt2)` es `True`.
-    * `$(AndroidUseApkSigner)` es `False`.
-    * `$(AndroidCreatePackagePerAbi)` es `False`.
+    - `$(AndroidUseAapt2)` es `True`.
+    - `$(AndroidUseApkSigner)` es `False`.
+    - `$(AndroidCreatePackagePerAbi)` es `False`.
 
 [apk]: https://en.wikipedia.org/wiki/Android_application_package
 [bundle]: https://developer.android.com/platform/technology/app-bundle
 
--   **AndroidD8JarPath**: ruta de acceso a `r8.jar` para su uso con el compilador y reductor de dex de d8. El valor predeterminado es una ruta de acceso en la instalación de Xamarin.Android. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
+- **AndroidD8JarPath**: ruta de acceso a `r8.jar` para su uso con el compilador y reductor de dex de d8. El valor predeterminado es una ruta de acceso en la instalación de Xamarin.Android. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
 
--   **AndroidSdkBuildToolsVersion**: el paquete de compilación de herramientas de Android SDK proporciona, entre otras, las herramientas **aapt** y **zipalign**. Se pueden instalar varias versiones diferentes del paquete de herramientas de compilación al mismo tiempo. Para realizar el paquete de herramientas de compilación elegido para empaquetar, se comprueba y usa una versión de herramientas de compilación "preferida", si existe; *en caso contrario*, se usa el paquete de herramientas de compilación instalado con la versión más alta.
+- **AndroidSdkBuildToolsVersion**: el paquete de compilación de herramientas de Android SDK proporciona, entre otras, las herramientas **aapt** y **zipalign**. Se pueden instalar varias versiones diferentes del paquete de herramientas de compilación al mismo tiempo. Para realizar el paquete de herramientas de compilación elegido para empaquetar, se comprueba y usa una versión de herramientas de compilación "preferida", si existe; *en caso contrario*, se usa el paquete de herramientas de compilación instalado con la versión más alta.
 
     La propiedad de MSBuild `$(AndroidSdkBuildToolsVersion)` contiene la versión de herramientas de compilación preferida. El sistema de compilación de Xamarin.Android proporciona un valor predeterminado en `Xamarin.Android.Common.targets`, y el valor predeterminado se puede reemplazar dentro del archivo de proyecto para elegir una versión alternativa de las herramientas de compilación si, por ejemplo, la herramienta aapt más reciente se bloquea mientras se sabe que una versión anterior de aapt funciona.
 
--   **AndroidSupportedAbis**: una propiedad de cadena que contiene una lista delimitada por punto y coma (`;`) de ABI que se deberían incluir en el archivo `.apk`.
+- **AndroidSupportedAbis**: propiedad de cadena que contiene una lista delimitada por punto y coma (`;`) de ABI que se deberían incluir en el archivo `.apk`.
 
     Los valores admitidos son:
 
-    -   `armeabi-v7a`
-    -   `x86`
-    -   `arm64-v8a`: requiere Xamarin.Android 5.1 y versiones posteriores.
-    -   `x86_64`: requiere Xamarin.Android 5.1 y versiones posteriores.
+    - `armeabi-v7a`
+    - `x86`
+    - `arm64-v8a`: requiere Xamarin.Android 5.1 y versiones posteriores.
+    - `x86_64`: requiere Xamarin.Android 5.1 y versiones posteriores.
 
--   **AndroidTlsProvider**: un valor de cadena que especifica qué proveedor de TLS se debe usar en una aplicación. Los valores posibles son:
+- **AndroidTlsProvider**: un valor de cadena que especifica qué proveedor de TLS se debe usar en una aplicación. Los valores posibles son:
 
-    -   Anular la cadena vacía: En Xamarin.Android 7.3 y versiones posteriores, esto equivale a `btls`.
+    - Anular la cadena vacía: En Xamarin.Android 7.3 y versiones posteriores, esto equivale a `btls`.
 
         En Xamarin.Android 7.1, esto equivale a `legacy`.
 
-        Esto corresponde a la configuración **Default** de las páginas de propiedades de Visual Studio.
+        Esto corresponde a la configuración **Predeterminado** de las páginas de propiedades de Visual Studio.
 
-    -   `btls`: usa [Boring SSL](https://boringssl.googlesource.com/boringssl) para la comunicación TLS con [HttpWebRequest](xref:System.Net.HttpWebRequest).
+    - `btls`: se usa [Boring SSL](https://boringssl.googlesource.com/boringssl) para la comunicación TLS con [HttpWebRequest](xref:System.Net.HttpWebRequest).
 
         Esto permite el uso de TLS 1.2 en todas las versiones de Android.
 
-        Esto corresponde a la configuración **Native TLS 1.2+** de las páginas de propiedades de Visual Studio.
+        Esto corresponde a la configuración **TLS 1.2+ nativo** de las páginas de propiedades de Visual Studio.
 
-    -   `legacy`: usa la implementación de SSL administrada histórica para la interacción de red. Aquí *no* se admite TLS 1.2.
+    - `legacy`: usa la implementación de SSL administrada histórica para la interacción de red. Aquí *no* se admite TLS 1.2.
 
-        Esto corresponde a la configuración **Managed TLS 1.0** de las páginas de propiedades de Visual Studio.
+        Esto corresponde a la configuración **TLS 1.0 administrado** de las páginas de propiedades de Visual Studio.
 
-    -   `default`: Es poco probable que este valor se use en proyectos de Xamarin.Android. El valor recomendado que se usará en su lugar es la cadena vacía, que corresponde a la configuración **Default** de las páginas de propiedades de Visual Studio.
+    - `default`: Es poco probable que este valor se use en proyectos de Xamarin.Android. El valor recomendado que se usará en su lugar es la cadena vacía, que corresponde a la configuración **Default** de las páginas de propiedades de Visual Studio.
 
-        El valor `default` no se ofrece en las páginas de propiedades de Visual Studio.
+        El valor `default` no se ofrece en las páginas de propiedades de Visual Studio.
 
         Actualmente, esto equivale a `legacy`.
 
     Agregado en Xamarin.Android 7.1.
 
--   **AndroidUseApkSigner** &ndash; Una propiedad booleana que permite que el desarrollador use la herramienta `apksigner` en lugar de `jarsigner`.
+- **AndroidUseApkSigner**: propiedad booleana que permite que el desarrollador use la herramienta `apksigner` en lugar de `jarsigner`.
 
     Agregado en Xamarin.Android 8.2.
 
--   **AndroidUseLegacyVersionCode**: una propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
+- **AndroidUseLegacyVersionCode**: una propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
 
     Agregado en Xamarin.Android 8.2.
 
--   **AndroidUseManagedDesignTimeResourceGenerator** &ndash; Una propiedad booleana que cambiará las compilaciones en tiempo de diseño para usar el analizador de recurso administrado en lugar de `aapt`.
+- **AndroidUseManagedDesignTimeResourceGenerator**: propiedad booleana que cambiará las compilaciones en tiempo de diseño para usar el analizador de recursos administrados en lugar de `aapt`.
 
     Agregado en Xamarin.Android 8.1.
 
--   **AndroidUseSharedRuntime**: una propiedad booleana que determina si se requieren los *paquetes de entorno de tiempo de ejecución compartido* para ejecutar la aplicación en el dispositivo de destino. Confiar en los paquetes de entorno de tiempo de ejecución compartido permite que el paquete de aplicación sea más pequeño y acelera el proceso de creación y desarrollo del paquete, lo que da lugar a un ciclo de respuesta de compilación, implementación y depuración más rápido.
+- **AndroidUseSharedRuntime**: una propiedad booleana que determina si se requieren los *paquetes de entorno de tiempo de ejecución compartido* para ejecutar la aplicación en el dispositivo de destino. Confiar en los paquetes de entorno de tiempo de ejecución compartido permite que el paquete de aplicación sea más pequeño y acelera el proceso de creación y desarrollo del paquete, lo que da lugar a un ciclo de respuesta de compilación, implementación y depuración más rápido.
 
-    Esta propiedad debe ser `True` para las compilaciones de depuración y `False` para los proyectos de versión.
+    Esta propiedad debe ser `True` para las compilaciones de depuración y `False` para los proyectos de lanzamiento.
 
--   **AndroidVersionCodePattern**: una propiedad de cadena que permite al desarrollador personalizar el elemento `versionCode` en el manifiesto.
+- **AndroidVersionCodePattern**: una propiedad de cadena que permite al desarrollador personalizar el elemento `versionCode` en el manifiesto.
     Consulte [Crear el código de la versión para el APK](~/android/deploy-test/building-apps/abi-specific-apks.md) para más información sobre cómo decidir el valor de `versionCode`.
 
     Algunos ejemplos: si `abi` es `armeabi` y `versionCode` en el manifiesto es `123`, `{abi}{versionCode}` producirá un código de versión de `1123` cuando `$(AndroidCreatePackagePerAbi)` sea True; de lo contrario, producirá un valor de 123.
@@ -447,15 +448,15 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Elementos de clave predefinidos
 
-    -   **abi**: inserta la ABI de destino para la aplicación.
-        -   2 &ndash; `armeabi-v7a`
-        -   3 &ndash; `x86`
-        -   4 &ndash; `arm64-v8a`
-        -   5 &ndash; `x86_64`
+    - **abi**: inserta la ABI de destino para la aplicación.
+        - 2 &ndash; `armeabi-v7a`
+        - 3 &ndash; `x86`
+        - 4 &ndash; `arm64-v8a`
+        - 5 &ndash; `x86_64`
 
-    -   **minSDK**: inserta el valor de SDK mínimo admitido del archivo `AndroidManifest.xml` o `11` si no se define ninguno.
+    - **minSDK**: inserta el valor de SDK mínimo admitido del archivo `AndroidManifest.xml` o `11` si no se define ninguno.
 
-    -   **versionCode**: usa el código de versión directamente de `Properties\AndroidManifest.xml`.
+    - **versionCode**: usa el código de versión directamente de `Properties\AndroidManifest.xml`.
 
     Puede definir elementos personalizados con la propiedad `$(AndroidVersionCodeProperties)`, que se define a continuación.
 
@@ -463,23 +464,23 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Agregado en Xamarin.Android 7.2.
 
--   **AndroidVersionCodeProperties**: propiedad de cadena que permite al desarrollador definir elementos personalizados para usar con `AndroidVersionCodePattern`. Tienen el formato de un par `key=value`. Todos los elementos de `value` deben ser valores enteros. Por ejemplo: `screen=23;target=$(_AndroidApiLevel)`. Como puede ver, pueden hacer uso de propiedades de MSBuild existentes o personalizadas en la cadena.
+- **AndroidVersionCodeProperties**: propiedad de cadena que permite al desarrollador definir elementos personalizados para usar con `AndroidVersionCodePattern`. Tienen el formato de un par `key=value`. Todos los elementos de `value` deben ser valores enteros. Por ejemplo: `screen=23;target=$(_AndroidApiLevel)`. Como puede ver, pueden hacer uso de propiedades de MSBuild existentes o personalizadas en la cadena.
 
     Agregado en Xamarin.Android 7.2.
 
--   **AotAssemblies**: una propiedad booleana que determina si se los ensamblados se compilarán en modo Ahead-of-Time en código nativo y se incluirán en el archivo `.apk`.
+- **AotAssemblies**: propiedad booleana que determina si los ensamblados se compilarán en modo Ahead Of Time en código nativo y se incluirán en el archivo `.apk`.
 
     En Xamarin.Android 5.1, se agregó compatibilidad con esta propiedad.
 
     De forma predeterminada, esta propiedad es `False`.
 
--   **EmbedAssembliesIntoApk**: una propiedad booleana que determina si los ensamblados de la aplicación se deben insertar o no en el paquete de aplicación.
+- **EmbedAssembliesIntoApk**: propiedad booleana que determina si los ensamblados de la aplicación se deben insertar o no en el paquete de aplicación.
 
     Esta propiedad debe ser `True` para compilaciones de versión y `False` para compilaciones de depuración. *Puede* que deba ser `True` en las compilaciones de depuración si la implementación rápida no admite el dispositivo de destino.
 
-    Cuando esta propiedad es `False`, la propiedad de MSBuild `$(AndroidFastDeploymentType)` también controla lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de desarrollo y recompilación.
+    Si esta propiedad es `False`, la propiedad de MSBuild `$(AndroidFastDeploymentType)` también controla lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de implementación y recompilación.
 
--   **EnableLLVM**: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
+- **EnableLLVM**: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
 
     En Xamarin.Android 5.1, se agregó compatibilidad con esta propiedad.
 
@@ -487,7 +488,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Esta propiedad se omite a menos que la propiedad de MSBuild `$(AotAssemblies)` sea `True`.
 
--   **EnableProguard**: una propiedad booleana que determina si se ejecuta o no [proguard](https://developer.android.com/tools/help/proguard.html) como parte del proceso de empaquetado para vincular código Java.
+- **EnableProguard**: propiedad booleana que determina si se ejecuta o no [proguard](https://developer.android.com/tools/help/proguard.html) como parte del proceso de empaquetado para vincular código Java.
 
     En Xamarin.Android 5.1, se agregó compatibilidad con esta propiedad.
 
@@ -495,46 +496,46 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Si es `True`, los archivos de [ProguardConfiguration](#ProguardConfiguration) se usarán para controlar la ejecución de `proguard`.
 
--   **JavaMaximumHeapSize**: especifica el valor del parámetro **java**
-    `-Xmx` que se usará al compilar el archivo `.dex` como parte del proceso de empaquetado. Si no se especifica, la opción `-Xmx` suministra **java** con un valor de `1G`. Se ha detectado que esto suele ser necesario en Windows en comparación con otras plataformas.
+- **JavaMaximumHeapSize**: especifica el valor del parámetro **java** `-Xmx` que se usará al compilar el archivo `.dex` como parte del proceso de empaquetado. Si no se especifica, la opción `-Xmx` suministra **java** con un valor de `1G`. Se ha detectado que esto suele ser necesario en Windows en comparación con otras plataformas.
 
     Es necesario especificar esta propiedad si el destino [`_CompileDex` produce un error `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327).
 
     Personalice el valor cambiando lo siguiente:
+
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```
 
--   **JavaOptions**: especifica opciones de línea de comando adicionales que se pasarán a **java** al compilar el archivo `.dex`.
+- **JavaOptions**: especifica opciones de línea de comandos adicionales que se pasarán a **java** al compilar el archivo `.dex`.
 
--   **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
+- **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
 
     El valor predeterminado es False.
 
--   **MandroidI18n**: especifica la compatibilidad con la internacionalización que se incluye con la aplicación, como tablas de intercalación y ordenación. El valor es una lista separada por comas o punto y coma de uno o varios de los siguientes valores sin distinción entre mayúsculas y minúsculas:
+- **MandroidI18n**: especifica la compatibilidad con la internacionalización que se incluye con la aplicación, como tablas de intercalación y ordenación. El valor es una lista separada por comas o punto y coma de uno o varios de los siguientes valores sin distinción entre mayúsculas y minúsculas:
 
-    -   **None**: no incluye codificaciones adicionales.
+    - **None**: no incluye codificaciones adicionales.
 
-    -   **All**: incluye todas las codificaciones disponibles.
+    - **All**: incluye todas las codificaciones disponibles.
 
-    -   **CJK**: incluye las codificaciones china, japonesa y coreana, como *Japonés (EUC)* \[enc-jp, CP51932\], *Japonés (Shift-JIS)* \[iso-2022-jp, shift\_jis, CP932\], *Japonés (JIS)* \[CP50220\], *Chino simplificado (GB2312)* \[gb2312, CP936\], *Coreano (UHC)* \[ks\_c\_5601-1987, CP949\], *Coreano (EUC)* \[euc-kr, CP51949\], *Chino tradicional (Big5)* \[big5, CP950\] y *Chino simplificado (GB18030)* \[GB18030, CP54936\].
+    - **CJK**: incluye las codificaciones china, japonesa y coreana, como *Japonés (EUC)* \[enc-jp, CP51932\], *Japonés (Shift-JIS)* \[iso-2022-jp, shift\_jis, CP932\], *Japonés (JIS)* \[CP50220\], *Chino simplificado (GB2312)* \[gb2312, CP936\], *Coreano (UHC)* \[ks\_c\_5601-1987, CP949\], *Coreano (EUC)* \[euc-kr, CP51949\], *Chino tradicional (Big5)* \[big5, CP950\] y *Chino simplificado (GB18030)* \[GB18030, CP54936\].
 
-    -   **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
+    - **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
 
-    -   **Other**: incluye otras codificaciones, como *Cirílico(Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)* \[CP874\].
+    - **Other**: incluye otras codificaciones, como *Cirílico (Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalí* \[x-iscii-be, CP57003\], *ISCII Tamil* \[x-iscii-ta, CP57004\], *ISCII Telugu* \[x-iscii-te, CP57005\], *ISCII Asamés* \[x-iscii-as, CP57006\], *ISCII Oriya* \[x-iscii-or, CP57007\], *ISCII Kannada* \[x-iscii-ka, CP57008\], *ISCII Malayalam* \[x-iscii-ma, CP57009\], *ISCII Gujarati* \[x-iscii-gu, CP57010\], *ISCII Punyabí* \[x-iscii-pa, CP57011\] y *Tailandés (Windows)* \[CP874\].
 
-    -   **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\] *, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] y *IBM EBCDIC (Griego)* \[CP875\].
+    - **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\] *, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] e *IBM EBCDIC (Griego)* \[CP875\].
 
-    -   **West**: incluye las codificaciones occidentales, como *Europeo Occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo Occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo Occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\] y *Nórdico (DOS)* \[CP865\].
+    - **West**: incluye las codificaciones occidentales, como *Europeo occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\] y *Nórdico (DOS)* \[CP865\].
 
 
     ```xml
     <MandroidI18n>West</MandroidI18n>
     ```
 
--   **MonoSymbolArchive**: una propiedad booleana que controla si los artefactos de `.mSYM` para usarlos más adelante con `mono-symbolicate`, a fin de extraer información &ldquo;real&rdquo; de nombre de archivo y número de línea de los seguimientos de pila de versión.
+- **MonoSymbolArchive**: propiedad booleana que controla si los artefactos de `.mSYM` se crean para usarlos más adelante con `mono-symbolicate`, a fin de extraer información &ldquo;real&rdquo; de nombre de archivo y número de línea de los seguimientos de la pila de lanzamiento.
 
-    Este valor es true de forma predeterminada para aplicaciones de &ldquo;versión&rdquo; que tienen habilitados símbolos de depuración: `$(EmbedAssembliesIntoApk)` es true, `$(DebugSymbols)` es true y `$(Optimize)` es true.
+    Este valor es true de forma predeterminada para aplicaciones de &ldquo;lanzamiento&rdquo; que tienen habilitados los símbolos de depuración: `$(EmbedAssembliesIntoApk)` es true, `$(DebugSymbols)` es true y `$(Optimize)` es true.
 
     Agregado en Xamarin.Android 7.1.
 
@@ -542,18 +543,18 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
 Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/android/platform/binding-java-library/index.md):
 
--   **AndroidClassParser**: una propiedad de cadena que controla cómo se analizan los archivos `.jar`. Entre los posibles valores se incluyen:
+- **AndroidClassParser**: una propiedad de cadena que controla cómo se analizan los archivos `.jar`. Entre los posibles valores se incluyen:
 
-    -   **class-parse**: usa `class-parse.exe` para analizar el código de bytes de Java directamente, sin ayuda de una JVM. Este valor es experimental.
+    - **class-parse**: usa `class-parse.exe` para analizar el código de bytes de Java directamente, sin ayuda de una JVM. Este valor es experimental.
 
 
-    -   **jar2xml**: usa `jar2xml.jar` para utilizar la reflexión de Java y extraer tipos y miembros de un archivo `.jar`.
+    - **jar2xml**: usa `jar2xml.jar` para utilizar la reflexión de Java y extraer tipos y miembros de un archivo `.jar`.
 
     Las ventajas de `class-parse` sobre `jar2xml` son las siguientes:
 
-    -   `class-parse` puede extraer nombres de parámetro del código de bytes de Java que contiene símbolos de *depuración* (por ejemplo, código de bytes compilado con `javac -g`).
+    - `class-parse` puede extraer nombres de parámetro del código de bytes de Java que contiene símbolos de *depuración* (por ejemplo, código de bytes compilado con `javac -g`).
 
-    -   `class-parse` no "omite" las clases que se heredan de miembros de tipos que no se pueden resolver o que los contienen.
+    - `class-parse` no "omite" las clases que se heredan de miembros de tipos que no se pueden resolver o que los contienen.
 
     **Experimental**. Agregado en Xamarin.Android 6.0.
 
@@ -561,19 +562,19 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
     El valor predeterminado cambiará en futuras versiones.
 
--   **AndroidCodegenTarget**: una propiedad de cadena que controla la ABI de destino de generación de código. Entre los posibles valores se incluyen:
+- **AndroidCodegenTarget**: una propiedad de cadena que controla la ABI de destino de generación de código. Entre los posibles valores se incluyen:
 
-    -   **XamarinAndroid**: usa la API de enlace de JNI presente desde Mono para Android 1.0. Los ensamblados de enlace compilados con Xamarin.Android 5.0 o posterior solo se pueden ejecutar en Xamarin.Android 5.0 o posterior (adiciones de API/ABI), pero el *origen* es compatible con versiones de producto anteriores.
+    - **XamarinAndroid**: usa la API de enlace de JNI presente desde Mono para Android 1.0. Los ensamblados de enlace compilados con Xamarin.Android 5.0 o posterior solo se pueden ejecutar en Xamarin.Android 5.0 o posterior (adiciones de API/ABI), pero el *origen* es compatible con versiones de producto anteriores.
 
-    -   **XAJavaInterop1**: usa Java.Interop de uso para las invocaciones de JNI. Los ensamblados de enlace que usan `XAJavaInterop1` solo se pueden compilar y ejecutar con Xamarin.Android 6.1 o posterior. Xamarin.Android 6.1 y versiones posteriores enlazan `Mono.Android.dll` con este valor.
+    - **XAJavaInterop1**: usa Java.Interop de uso para las invocaciones de JNI. Los ensamblados de enlace que usan `XAJavaInterop1` solo se pueden compilar y ejecutar con Xamarin.Android 6.1 o posterior. Xamarin.Android 6.1 y versiones posteriores enlazan `Mono.Android.dll` con este valor.
 
         Las ventajas de `XAJavaInterop1` son las siguientes:
 
-        -   Ensamblados más pequeños.
+        - Ensamblados más pequeños.
 
-        -   Almacenamiento en caché de `jmethodID` para invocaciones de método `base`, mientras que todos los demás enlaces de la jerarquía de herencia se compilan con `XAJavaInterop1` o versiones posteriores.
+        - Almacenamiento en caché de `jmethodID` para invocaciones de método `base`, mientras que todos los demás tipos de enlaces de la jerarquía de herencia se compilan con `XAJavaInterop1` o versiones posteriores.
 
-        -   Almacenamiento en caché de `jmethodID` de los constructores de JCW (Java Callable Wrapper) para subclases administradas.
+        - Almacenamiento en caché de `jmethodID` de los constructores de JCW (Java Callable Wrapper) para subclases administradas.
 
         El valor predeterminado es `XAJavaInterop1`.
 
@@ -582,25 +583,25 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
 Las propiedades del recurso controlan la generación del archivo `Resource.designer.cs`, que proporciona acceso a recursos de Android.
 
--   **AndroidAapt2CompileExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 compile** al procesar recursos de Android.
+- **AndroidAapt2CompileExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 compile** al procesar recursos de Android.
 
     Se ha agregado en Xamarin.Android 9.1.
 
--   **AndroidAapt2LinkExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 link** al procesar recursos de Android.
+- **AndroidAapt2LinkExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 link** al procesar recursos de Android.
 
     Se ha agregado en Xamarin.Android 9.1.
 
--   **AndroidExplicitCrunch**: si va a compilar una aplicación con un gran número de recursos Drawable locales, una compilación inicial (o recompilación) puede tardar minutos en completarse. Para acelerar el proceso de compilación, intente incluir esta propiedad y establecerla en `True`. Cuando se establece esta propiedad, el proceso de compilación analiza previamente los archivos .png.
+- **AndroidExplicitCrunch**: si va a compilar una aplicación con un gran número de recursos Drawable locales, una compilación inicial (o recompilación) puede tardar minutos en completarse. Para acelerar el proceso de compilación, intente incluir esta propiedad y establecerla en `True`. Cuando se establece esta propiedad, el proceso de compilación analiza previamente los archivos .png.
 
     Nota: Esta opción no es compatible con la opción `$(AndroidUseAapt2)`. Si `$(AndroidUseAapt2)` está habilitada, se deshabilitará esta funcionalidad. Si quiere seguir usando esta característica, establezca `$(AndroidUseAapt2)` en `False`.
 
     **Experimental**. Agregado en Xamarin.Android 7.0.
 
--   **AndroidResgenExtraArgs**: especifica opciones adicionales de la línea de comandos para pasar al comando **aapt** al procesar activos y recursos de Android.
+- **AndroidResgenExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt** al procesar recursos de Android.
 
--   **AndroidResgenFile**: especifica el nombre del archivo de recursos que se generará. La plantilla predeterminada establece esta propiedad en `Resource.designer.cs`.
+- **AndroidResgenFile**: especifica el nombre del archivo de recursos que se generará. La plantilla predeterminada establece esta propiedad en `Resource.designer.cs`.
 
--   **AndroidUseAapt2**: propiedad bool que permite al desarrollador controlar el uso de la herramienta `aapt2` para el empaquetado.
+- **AndroidUseAapt2**: propiedad bool que permite al desarrollador controlar el uso de la herramienta `aapt2` para el empaquetado.
     De forma predeterminada, este valor se establecerá en False y usaremos `aapt`.
     Si el desarrollador quiere usar la nueva funcionalidad de `aapt2` puede establecerlo
 
@@ -616,7 +617,7 @@ Las propiedades del recurso controlan la generación del archivo `Resource.desig
 
     Se ha agregado en Xamarin.Android 8.3.
 
--   **MonoAndroidResourcePrefix**: especifica un *prefijo de ruta de acceso* que se quita del principio de los nombres de archivo con una acción de compilación de `AndroidResource`. Esto permite cambiar la ubicación de los recursos.
+- **MonoAndroidResourcePrefix**: especifica un *prefijo de ruta de acceso* que se quita del principio de los nombres de archivo con una acción de compilación de `AndroidResource`. Esto permite cambiar la ubicación de los recursos.
 
     El valor predeterminado es `Resources`. Cambie este valor a `res` con estructuras de proyectos de Java.
 
@@ -628,19 +629,19 @@ Las propiedades de firma controlan cómo se firma el paquete de aplicación para
 
 De forma predeterminada, el destino de firma genera una nueva clave de firma de depuración, si es necesario. Si desea usar una clave específica, por ejemplo, en un servidor de compilación, se pueden usar las siguientes propiedades de MSBuild:
 
--   **AndroidDebugKeyAlgorithm** &ndash; Especifica el algoritmo predeterminado que se usará para `debug.keystore`. El valor predeterminado es `RSA`.
+- **AndroidDebugKeyAlgorithm** &ndash; Especifica el algoritmo predeterminado que se usará para `debug.keystore`. El valor predeterminado es `RSA`.
 
--   **AndroidDebugKeyValidity** &ndash; Especifica la validez predeterminada para usarla con `debug.keystore`. El valor predeterminado es `10950`, `30 * 365` o `30 years`.
+- **AndroidDebugKeyValidity** &ndash; Especifica la validez predeterminada para usarla con `debug.keystore`. El valor predeterminado es `10950`, `30 * 365` o `30 years`.
 
--   **AndroidKeyStore**: un valor booleano que indica si se debe usar información de firma personalizada. El valor predeterminado es `False`, lo que significa que se usará la clave de firma de depuración predeterminada para firmar paquetes.
+- **AndroidKeyStore**: un valor booleano que indica si se debe usar información de firma personalizada. El valor predeterminado es `False`, lo que significa que se usará la clave de firma de depuración predeterminada para firmar paquetes.
 
--   **AndroidSigningKeyAlias**: especifica el alias de la clave en el almacén de claves. Es el valor de **keytool -alias** usado al crear el almacén de claves.
+- **AndroidSigningKeyAlias**: especifica el alias de la clave en el almacén de claves. Es el valor de **keytool -alias** usado al crear el almacén de claves.
 
--   **AndroidSigningKeyPass**: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)** .
+- **AndroidSigningKeyPass**: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)** .
 
--   **AndroidSigningKeyStore**: especifica el nombre de archivo del archivo de almacén de claves creado por `keytool`. Corresponde al valor proporcionado a la opción **keytool - keystore**.
+- **AndroidSigningKeyStore**: especifica el nombre de archivo del archivo de almacén de claves creado por `keytool`. Corresponde al valor proporcionado a la opción **keytool - keystore**.
 
--   **AndroidSigningStorePass**: especifica la contraseña de `$(AndroidSigningKeyStore)`. Es el valor proporcionado a `keytool` al crear el archivo de almacén de claves y cuando se pide que se **escriba la contraseña del almacén de claves**.
+- **AndroidSigningStorePass**: especifica la contraseña de `$(AndroidSigningKeyStore)`. Es el valor proporcionado a `keytool` al crear el archivo de almacén de claves y cuando se pide que se **escriba la contraseña del almacén de claves**.
 
 Por ejemplo, considere la siguiente invocación de `keytool`:
 
@@ -730,8 +731,8 @@ Las [bibliotecas nativas](~/android/platform/native-libraries.md) se agregan a l
 
 Tenga en cuenta que puesto que Android admite varias interfaces binarias de aplicación (ABI), el sistema de compilación debe saber para qué ABI está compilada la biblioteca nativa. Hay dos maneras de hacerlo:
 
-1.  Examinando la ruta de acceso.
-2.  Mediante el atributo de elemento `Abi`.
+1. Examinando la ruta de acceso.
+2. Mediante el atributo de elemento `Abi`.
 
 Con el examen de la ruta de acceso, el nombre del directorio principal de la biblioteca nativa se utiliza para especificar la ABI a la que se dirige la biblioteca. Por lo tanto, si agrega `lib/armeabi-v7a/libfoo.so` a la compilación, la ABI se examina como `armeabi-v7a`.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb2fd504cccb7aa81831288762ba623824e52554
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119519"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526510"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane para iOS: sigh
 
@@ -50,7 +50,7 @@ Para más información sobre la instalación de fastlane, consulte la introducci
 
 ## <a name="what-is-sigh"></a>¿Qué es sigh?
 
-sigh proporciona una interfaz de terminal que permite crear y renovar perfiles de aprovisionamiento para todas las configuraciones: desarrollo, distribución en la Tienda de aplicaciones, distribución ad hoc y distribución empresarial. Además, proporciona una manera sencilla de descargar y reparar los perfiles de aprovisionamiento.
+sigh proporciona una interfaz de terminal que le permite crear y renovar perfiles de aprovisionamiento para todas las configuraciones: desarrollo, distribución a través del App Store, distribución ad hoc y distribución empresarial. Además, proporciona una manera sencilla de descargar y reparar los perfiles de aprovisionamiento.
 
 <a name="appid" />
 
@@ -58,7 +58,9 @@ sigh proporciona una interfaz de terminal que permite crear y renovar perfiles d
 
 Se puede crear un identificador de aplicación con el comando siguiente:
 
-    fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
+fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
 
 Donde `com.company.appname` es el identificador de agrupación de la aplicación, que se encuentra en el archivo Info.plist de la aplicación de Xamarin.iOS, como se muestra a continuación:
 

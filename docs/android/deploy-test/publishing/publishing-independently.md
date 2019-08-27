@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d7135611c3c0a13794b1ed538d62a0788227b7bd
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977756"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525383"
 ---
 # <a name="publishing-independently"></a>Publicación de forma independiente
 
@@ -21,11 +21,11 @@ Es posible publicar una aplicación sin usar ninguno de los mercados de Android 
 
 Existen varias licencias para el desarrollo, la implementación y la distribución de aplicaciones de Xamarin.Android:
 
--   **Visual Studio Community** &ndash; Para estudiantes, equipos pequeños y desarrolladores de OSS que usan Windows.
+- **Visual Studio Community**: para estudiantes, equipos pequeños y desarrolladores de OSS que usan Windows.
 
--   **Visual Studio Professional** &ndash; Para desarrolladores individuales o equipos pequeños (solo Windows). Esta licencia ofrece una suscripción estándar o en la nube y no tiene restricciones de uso.
+- **Visual Studio Professional** &ndash; Para desarrolladores individuales o equipos pequeños (solo Windows). Esta licencia ofrece una suscripción estándar o en la nube y no tiene restricciones de uso.
 
--   **Visual Studio Enterprise** &ndash; Para equipos de cualquier tamaño (solo Windows). Esta licencia incluye funcionalidades empresariales, una suscripción estándar o en la nube.
+- **Visual Studio Enterprise** &ndash; Para equipos de cualquier tamaño (solo Windows). Esta licencia incluye funcionalidades empresariales, una suscripción estándar o en la nube.
 
 Visite la [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) para descargar las ediciones Community o para obtener más información sobre la compra de las ediciones Professional y Enterprise.
 
@@ -60,8 +60,8 @@ Es posible distribuir una aplicación a través de un servidor web. Para ello, c
 
 La instalación manual es la tercera opción para instalar aplicaciones. Para llevar a cabo la instalación manual de una aplicación:
 
-1.   **Distribuya una copia del APK al usuario** &ndash; Por ejemplo, esta copia se puede distribuir en un CD o en una unidad flash USB.
-1.   **El usuario instala la aplicación en un dispositivo Android** &ndash; Use la herramienta de línea de comandos *Android Debug Bridge* (**adb**). **adb** es una herramienta de línea de comandos versátil que permite la comunicación con una instancia del emulador o con un dispositivo Android. **adb** está incluido en Android SDK; lo encontrará en el directorio **<sdk>/platform-tools/**.
+1. **Distribuya una copia del APK al usuario** &ndash; Por ejemplo, esta copia se puede distribuir en un CD o en una unidad flash USB.
+1. **El usuario instala la aplicación en un dispositivo Android** &ndash; Use la herramienta de línea de comandos *Android Debug Bridge* (**adb**). **adb** es una herramienta de línea de comandos versátil que permite la comunicación con una instancia del emulador o con un dispositivo Android. **adb** está incluido en Android SDK; lo encontrará en el directorio **\<sdk>/platform-tools/** .
 
 El dispositivo Android debe estar conectado con un cable USB al equipo.
 Los equipos Windows también pueden requerir controladores USB adicionales del proveedor del teléfono para que **adb** los pueda reconocer. Las instrucciones de instalación de estos controladores USB adicionales no se tratan en este documento.
