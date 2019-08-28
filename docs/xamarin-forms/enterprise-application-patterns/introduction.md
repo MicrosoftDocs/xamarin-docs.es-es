@@ -145,7 +145,7 @@ El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 |Efectos|Contiene la `EntryLineColorEffect` clase, que se usa para cambiar el color del borde de `Entry` controles concretos.|
 |Excepciones|Contiene el personalizado `ServiceAuthenticationException`.|
 |Extensiones|Contiene métodos de extensión para `VisualElement` las `IEnumerable` clases y.|
-|Aplicaciones auxiliares|Contiene las clases auxiliares para la aplicación.|
+|Asistentes|Contiene las clases auxiliares para la aplicación.|
 |Modelos|Contiene las clases de modelo de la aplicación.|
 |Properties (Propiedades)|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
 |Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
