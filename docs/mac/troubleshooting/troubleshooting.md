@@ -1,6 +1,6 @@
 ---
-title: Sugerencias para solucionar problemas de Xamarin.Mac
-description: Este documento describe los enfoques para resolver los problemas detectados al desarrollo de aplicaciones de Xamarin.Mac. También se explica cómo obtener soporte técnico.
+title: Sugerencias para la solución de problemas de Xamarin. Mac
+description: En este documento se describen los métodos para resolver problemas que se producen al desarrollar aplicaciones de Xamarin. Mac. También se describen las formas de obtener soporte técnico.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
@@ -8,127 +8,127 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dea7337702e37895d1e8dec55bd433d8ac4d64c0
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61237611"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065611"
 ---
-# <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para solucionar problemas de Xamarin.Mac
+# <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para la solución de problemas de Xamarin. Mac
 
 ## <a name="overview"></a>Información general
 
-A veces todo un bloqueo mientras se trabaja en un proyecto, en la imposibilidad de obtener una API para trabajar como queremos o intentar solucionar un error. Nuestro objetivo en Xamarin es para que pueda tener éxito en la escritura de las aplicaciones de escritorio y móviles, y hemos proporcionado algunos recursos para ayudar a.
+A veces, todos se bloquean mientras se trabaja en un proyecto, ya sea en la imposibilidad de obtener una API para trabajar de la forma deseada o para intentar solucionar un error. Nuestro objetivo en Xamarin es que tenga éxito al escribir las aplicaciones móviles y de escritorio, y que hemos proporcionado algunos recursos para ayudarle.
 
-Con cualquiera de estos recursos, hay algunos pasos de preparación que puede seguir para ayudarles a solucionar el problema rápidamente:
+Con cualquiera de estos recursos, hay algunos pasos que puede seguir para ayudarles a resolver el problema rápidamente:
 
-- Determinar la causa del problema como la mejor posible a los bloqueos de informe:
- 
-     - "Mi aplicación se bloquea" es difícil de diagnosticar. "Mi aplicación se bloquea cuando devuelva una matriz vacía para esta llamada" es mucho más fácil trabajar en la solución.
+- Determine la causa raíz del problema lo mejor posible para informar sobre bloqueos:
 
-     - "No se puede obtener NSTable funcione" es menos útil de "Ninguno de los métodos en mi NSTableDelegate parecer que se llame en este caso".
+  - "Mi aplicación se bloquea" es difícil de diagnosticar. "Mi aplicación se bloquea cuando devuelva una matriz vacía a esta llamada" es mucho más fácil de trabajar en la corrección.
 
-- Si es posible proporcionar un programa pequeño ejemplo que muestra el problema. Indagar en las páginas de código fuente para buscar el problema tarda órdenes de magnitud más tiempo y esfuerzo.
+  - "No puedo obtener NSTable to Work" es menos útil que "ninguno de los métodos de mi NSTableDelegate parece ser llamado en este caso".
 
-- Saber qué cambios realizados a la aplicación para producir un error que aparezca pueden reducir rápidamente el origen del problema. Teniendo en cuenta si recientemente ha actualizado las versiones de Xamarin.Mac, recorte de secciones de la aplicación para encontrar el elemento de la causa del problema, o las pruebas anteriores compilaciones para encontrar qué cambio introdujo el problema puede ser muy útil.
+- Si es posible, proporcione un pequeño programa de ejemplo que muestre el problema. Si se profundiza en las páginas de código fuente que buscan el problema, se realizarán pedidos de magnitud más tiempo y esfuerzo.
+
+- Saber qué cambios ha realizado en la aplicación para que aparezca un problema puede reducir rápidamente el origen del problema. Teniendo en cuenta si ha actualizado recientemente versiones de Xamarin. Mac, recorte las secciones de la aplicación para encontrar la parte que causa el problema o probar compilaciones anteriores para averiguar qué cambio ha introducido el problema puede ser muy útil.
 
 
-### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>Qué hacer cuando se bloquea la aplicación sin resultados
+### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>Qué hacer cuando la aplicación se bloquea sin salida
 
-En la mayoría de los casos, el depurador de Visual Studio para Mac detectará las excepciones y se bloquea en la aplicación y le ayudarán a localizar la causa raíz. Sin embargo, hay algunos casos donde la aplicación en el dock de devolución y, a continuación, salir con poca o ninguna salida. Estos pueden incluir:
+En la mayoría de los casos, el depurador de Visual Studio para Mac detectará las excepciones y los bloqueos de la aplicación y le ayudará a realizar un seguimiento de la causa principal. Sin embargo, hay algunos casos en los que la aplicación se rebotará en el Dock y, a continuación, se cerrará con poca o ninguna salida. Estos pueden incluir:
 
 - Problemas de firma de código.
-- Determinados se bloquea en tiempo de ejecución mono.
-- Algunas excepciones de Objective-c y bloqueos.
-- Algunos se bloquea una etapa muy temprana de la duración de proceso.
-- Algunos desbordamientos de pila.
-- Aparece en la versión de macOS su **Info.plist** es más reciente de la versión de macOS instalado actualmente o no es válido.
+- Ciertos bloqueos de tiempo de ejecución de mono.
+- Algunas excepciones y bloqueos de Objective-c.
+- Algunos bloqueos son muy tempranos en la duración del proceso.
+- Algunos desbordamientos de la pila.
+- La versión de macOS indicada en **info. plist** es más reciente que la versión de MacOS instalada actualmente o no es válida.
 
-Depuración de estos programas puede ser frustrante, como buscar puede ser difícil la información necesaria. Estos son algunos enfoques que puede ser útil:
+La depuración de estos programas puede ser frustrante, ya que la búsqueda de la información necesaria puede ser difícil. Estos son algunos de los métodos que pueden ayudar:
 
-- Asegúrese de que aparece en la versión de macOS el **Info.plist** es la misma que la versión de macOS instalado actualmente en el equipo.
-- Compruebe el Visual Studio para la salida de la aplicación Mac (**vista** -> **paneles** -> **resultado de la aplicación**) para seguimientos de pila o de salida en rojo desde Cocoa que puede que describan la salida.
-- Ejecutar la aplicación desde la línea de comandos y examine la salida (en el **Terminal** app) mediante el uso de: 
+- Asegúrese de que la versión de macOS indicada en **info. plist** sea la misma que la versión de MacOS instalada actualmente en el equipo.
+- Compruebe la salida de la aplicación Visual Studio para Mac (**Ver** -> **paneles** -> resultado de la**aplicación**) para los seguimientos de la pila o la salida en rojo del coco que puede describir la salida.
+- Ejecute la aplicación desde la línea de comandos y examine el resultado (en la aplicación **terminal** ) mediante:
 
-     `MyApp.app/Contents/MacOS/MyApp` (donde `MyApp` es el nombre de la aplicación)
-- Puede aumentar la salida mediante la adición de "MONO_LOG_LEVEL" al comando en la línea de comandos, por ejemplo: 
+  `MyApp.app/Contents/MacOS/MyApp`(donde `MyApp` es el nombre de la aplicación)
+- Puede aumentar la salida agregando "MONO_LOG_LEVEL" al comando en la línea de comandos, por ejemplo:
 
-     `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- Puede adjuntar un depurador nativo (`lldb`) para el proceso para ver si proporciona más información (Esto requiere una licencia de pago). Por ejemplo, realice lo siguiente:
+  `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
+- Puede adjuntar un depurador`lldb`nativo () al proceso para ver si proporciona más información (esto requiere una licencia de pago). Por ejemplo, haga lo siguiente:
 
-    1. Escriba `lldb MyApp.app/Contents/MacOS/MyApp` en el Terminal.
-    2. Escriba `run` en el Terminal.
-    3. Escriba `c` en el Terminal.
-    4. Salga cuando finalice la depuración.
-- Como último recurso, antes de llamar a `NSApplication.Init` en su `Main` método (o en otros lugares, según sea necesario), podría escribir texto en un archivo en una ubicación conocida para realizar un seguimiento en qué paso de inicio está experimentando problemas.
+  1. Escriba `lldb MyApp.app/Contents/MacOS/MyApp` en el terminal.
+  2. Escriba `run` en el terminal.
+  3. Escriba `c` en el terminal.
+  4. Salir cuando finalice la depuración.
+- Como último recurso, antes de llamar `NSApplication.Init` a en `Main` el método (o en otros lugares según sea necesario), puede escribir texto en un archivo en una ubicación conocida para realizar un seguimiento del paso del inicio en el que se está ejecutando.
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Las secciones siguientes tratan los problemas conocidos y sus soluciones.
+En las secciones siguientes se tratan los problemas conocidos y sus soluciones.
 
-### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>No se puede conectar al depurador de aplicaciones en espacio aislado
+### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>No se puede conectar al depurador en aplicaciones en espacio aislado
 
-El depurador se conecta a las aplicaciones de Xamarin.Mac a través de TCP, lo que significa que de forma predeterminada cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se produce un error *"no se puede conectar a el depurador"*. 
+El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador.* .
 
-[![Edición de los derechos](troubleshooting-images/debug01.png "los derechos de edición")](troubleshooting-images/debug01-large.png#lightbox)
+[![Editar los derechos](troubleshooting-images/debug01.png "Editar los derechos")](troubleshooting-images/debug01-large.png#lightbox)
 
-El **permitir conexiones de red salientes (cliente)** permiso es necesario para que el depurador, este se habilita la depuración con normalidad. Puesto que no se puede depurar sin él, hemos actualizado la `CompileEntitlements` de destino para `msbuild` para agregar automáticamente ese permiso a los derechos para cualquier aplicación que está aislada para la depuración solo compilaciones. Las compilaciones de versión deben usar los derechos especificados en el archivo de derechos, sin modificar.
+El permiso **permitir conexiones de red salientes (cliente)** es el requerido para el depurador, lo que permite la depuración de forma normal. Dado que no se puede depurar sin él, `CompileEntitlements` hemos actualizado `msbuild` el destino de para que agregue automáticamente ese permiso a los derechos de cualquier aplicación que esté en un espacio aislado para las compilaciones de depuración únicamente. Las compilaciones de versión deben usar los derechos especificados en el archivo de derechos, sin modificar.
 
-### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: no hay datos disponibles para la codificación 437
- 
-Al incluir 3rd bibliotecas de terceros en una aplicación de Xamarin.Mac, podría obtener un error en el formulario "System.NotSupportedException: No hay datos disponibles para la codificación 437" al intentar compilar y ejecutar la aplicación. Por ejemplo, bibliotecas, como `Ionic.Zip.ZipFile`, puede producir esta excepción durante la operación.
+### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: no hay datos disponibles para la codificación 437
 
-Esto puede solucionarse, abra las opciones para el proyecto de Xamarin.Mac, que se va a **de compilación de Mac** > **internacionalización** y comprobando la **West** internacionalización:
+Al incluir bibliotecas de terceros en la aplicación de Xamarin. Mac, podría obtener un error con el formato "System. NotSupportedException: No hay datos disponibles para la codificación 437 "al intentar compilar y ejecutar la aplicación. Por ejemplo, las bibliotecas, `Ionic.Zip.ZipFile`como, pueden producir esta excepción durante la operación.
+
+Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la internacionalización de la **compilación** > de Mac y Compruebe la internacionalización **occidental** :
 
 [![Modificar las opciones de compilación](troubleshooting-images/issue01.png "Modificar las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>No se pudo compilar (mm5103)
 
-Este error se produce normalmente cuando una nueva versión de Xcode es la versión y ha instalado la versión nueva, pero no aún ejecutarlo. Antes de intentar compilar con una nueva versión de Xcode, deberá primero ejecute esa versión de al menos una vez.
+Este error suele producirse cuando se lanza una nueva versión de Xcode y se ha instalado la nueva versión, pero aún no se ha ejecutado. Antes de intentar compilar con una nueva versión de Xcode, primero debe ejecutar esa versión al menos una vez.
 
-La primera vez que ejecute una nueva versión de Xcode, instala varias herramientas de línea de comandos que son necesarios para Xamarin.Mac. Además, debe realizar una compilación limpia después de actualizar Xcode o su versión de Xamarin.Mac.
+La primera vez que se ejecuta una nueva versión de Xcode, se instalan varias herramientas de línea de comandos necesarias para Xamarin. Mac. Además, debe realizar una compilación limpia después de actualizar Xcode o la versión de Xamarin. Mac.
 
-Si no se puede resolver este problema, inicie [archivar un error](#filing-a-bug).
+Si no puede resolver este problema, envíe [un error](#filing-a-bug).
 
-### <a name="missing-entitlementsplist"></a>Falta entitlements.plist
+### <a name="missing-entitlementsplist"></a>Faltan los derechos. plist
 
-La versión más reciente de Visual Studio para Mac ha quitado la sección de los derechos de la **Info.plist** editor y lo ha colocado en independiente **Entitlements.plist** editor (para una mejor compatibilidad multiplataforma con Xamarin.iOS).
+La versión más reciente de Visual Studio para Mac ha quitado la sección derechos del editor **info. plist** y la ha colocado en el editor de **derechos independientes. plist** (para una mejor compatibilidad entre plataformas con Xamarin. iOS).
 
-Con el nuevo Visual Studio para Mac instalado, cuando se crea un nuevo proyecto de aplicación de Xamarin.Mac, un **Entitlements.plist** archivo se agregará automáticamente al árbol del proyecto:
+Con el nuevo Visual Studio para Mac instalado, cuando cree un nuevo proyecto de aplicación de Xamarin. Mac, se agregará automáticamente un archivo contitles **. plist** al árbol del proyecto:
 
-![Selección de los derechos](troubleshooting-images/entitlements01.png "seleccionando los derechos")
+![Seleccionar derechos](troubleshooting-images/entitlements01.png "Seleccionar derechos")
 
-Si hace doble clic en el **Entitlements.plist** se mostrará el archivo, el Editor de derechos:
+Si hace doble clic en el archivo contitles **. plist** , se mostrará el editor de derechos:
 
-[![Edición de los derechos](troubleshooting-images/entitlements02.png "los derechos de edición")](troubleshooting-images/entitlements02-large.png#lightbox)
+[![Editar los derechos](troubleshooting-images/entitlements02.png "Editar los derechos")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-Para proyectos de Xamarin.Mac existentes, deberá crear manualmente el **Entitlements.plist** archivo con el botón secundario en el proyecto en el **panel de solución** y seleccionando **agregar**  >  **Nuevo archivo...** . A continuación, seleccione **Xamarin.Mac** > **lista de propiedades vacía**:
+En el caso de los proyectos existentes de Xamarin. Mac, tendrá que crear manualmente el archivo contitles **. plist** haciendo clic con el botón derecho en el proyecto en el **Panel de solución** y seleccionando **Agregar** > **nuevo archivo..** .. A continuación, seleccione la**lista de propiedades vacía**de **Xamarin. Mac** > :
 
-![Agregar una nueva lista de propiedades](troubleshooting-images/entitlements03.png "agregar una nueva lista de propiedades")
+![Agregar una nueva lista de propiedades](troubleshooting-images/entitlements03.png "Agregar una nueva lista de propiedades")
 
-Escriba `Entitlements` para el nombre y haga clic en el **New** botón. Si el proyecto anteriormente incluye un archivo de derechos, se le pedirá para agregarlo al proyecto en lugar de crear un nuevo archivo:
+Escriba `Entitlements` como nombre y haga clic en el botón **nuevo** . Si el proyecto incluye previamente un archivo de derechos, se le pedirá que lo agregue al proyecto en lugar de crear un nuevo archivo:
 
-[![Comprobar la sobrescritura de un archivo](troubleshooting-images/entitlements04.png "comprobando la sobrescritura de un archivo")](troubleshooting-images/entitlements04-large.png#lightbox)
+[![Comprobar la sobrescritura de un archivo](troubleshooting-images/entitlements04.png "Comprobar la sobrescritura de un archivo")](troubleshooting-images/entitlements04-large.png#lightbox)
 
-## <a name="community-support-on-the-forums"></a>Soporte de la Comunidad en los foros
+## <a name="community-support-on-the-forums"></a>Soporte técnico de la comunidad en los foros
 
-La Comunidad de desarrolladores que usan productos de Xamarin es asombroso y muchos visite nuestros [foros de Xamarin.Mac](http://forums.xamarin.com/categories/mac) compartir experiencias y a sus conocimientos. Además, los ingenieros de Xamarin periódicamente visite el foro para ayudar a.
+La comunidad de desarrolladores que usan productos de Xamarin es sorprendente y muchos visitan nuestros [foros de Xamarin. Mac](http://forums.xamarin.com/categories/mac) para compartir experiencias y sus conocimientos. Además, los ingenieros de Xamarin visitan periódicamente el foro para ayudarle.
 
 <a name="filing-a-bug"/>
 
-## <a name="filing-a-bug"></a>Archivar un error
+## <a name="filing-a-bug"></a>Presentar un error
 
-Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin.Mac:
+Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin. Mac:
 
-- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues). 
+- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues).
 - Antes de la migración a GitHub, los problemas de Xamarin se recopilaban en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Busque allí para ver si están los mismos problemas.
 - Si no encuentra un problema, registre uno nuevo en el [repositorio de problemas de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos. 
+Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos.
 
-De la siguiente información, incluya toda la que pueda:                                                                                                                                          
+De la siguiente información, incluya toda la que pueda:
 
-- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**. 
+- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**.
 - El seguimiento de la pila completo del bloqueo.
-- El código de C# del bloqueo. 
+- El código de C# del bloqueo.

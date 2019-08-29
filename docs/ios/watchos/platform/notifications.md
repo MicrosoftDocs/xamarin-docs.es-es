@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 39c77b4016027171a4e76bc4fb15c77d733cf5ba
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645921"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065370"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>las notificaciones en Xamarin de watchOS
 
@@ -37,7 +37,7 @@ Después de personalizar el controlador puede parecerse a este ejemplo desde el 
 
 Hay dos tipos de notificación:
 
-- **Breve vistazo** -visión estática no desplazable definido por el sistema.
+- Vista estática de **aspecto breve** no desplazable definida por el sistema.
 
 - **Long vistazo** : desplazable, vista personalizable definida por el usuario! Se pueden especificar una versión más sencilla y estática y una versión dinámica más compleja.
 
@@ -99,21 +99,21 @@ Le *debe* proporcionar una carga JSON de prueba al modo de notificación de prue
 
 Visual Studio para Mac mostrará opciones adicionales cuando una extensión de inspección se establece como el **proyecto de inicio**.
 Haga doble clic en el proyecto de extensión de inspección y elija **ejecutar con > parámetros personalizados...** :
-    
+
 [![](notifications-images/runwith-customparams-sml.png "Ejecución con propiedades personalizadas")](notifications-images/runwith-customparams.png#lightbox)
-    
+
 Se abrirá el **argumentos de ejecución** ventana que contiene un **WatchKit** ficha. Seleccione **notificación** y proporcionar una carga JSON, a continuación, presione **Execute** para iniciar la aplicación del reloj en el simulador:
-    
+
 [![](notifications-images/runwith-execargs-sml.png "Seleccione predeterminado de la carga de notificación")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para establecer la carga de notificación de prueba en el botón secundario de Visual Studio en la extensión de inspección para editar el **las propiedades del proyecto**. Vaya a la **depurar** sección y seleccione un archivo JSON de notificaciones en la lista (mostrará automáticamente todos los archivos JSON que se incluye en el proyecto).
-    
+
 [![](notifications-images/runwith-execargs-sml-vs.png "Seleccione un archivo JSON de notificaciones")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Cuando la extensión de inspección es la **proyecto de inicio**, Visual Studio mostrará opciones adicionales, como se muestra a continuación. Elija uno de los **notificación** opciones para iniciar la aplicación del reloj en **notificación** modo (mediante el archivo JSON seleccionado en la ventana Propiedades):
-    
+
 ![](notifications-images/runwith-vs.png "El menú del dispositivo")
 
 -----
@@ -128,7 +128,7 @@ También es posible usar el [línea de comandos](~/ios/watchos/troubleshooting.m
 
 En el [inspección Kit catálogo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) ejemplo existe es un archivo de ejemplo carga JSON **NotificationPayload.json** (indicadas a continuación).
 
-```csharp
+```json
 {
     "aps": {
         "alert": "Test message content",

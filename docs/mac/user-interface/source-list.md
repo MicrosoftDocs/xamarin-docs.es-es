@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 33ef45fa08748e70ef376e43cb5ed9b12ba55198
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 499edcb1420b311c519f1665b4d2effd9088e9e7
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655262"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065377"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origen en Xamarin. Mac
 

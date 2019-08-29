@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 197600f713527ed79d9a52768d367589d9edf2fa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bdd4ba57dfce96e469639e4b90b06c73c339b0f0
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646883"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065398"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes en Xamarin. Mac
 

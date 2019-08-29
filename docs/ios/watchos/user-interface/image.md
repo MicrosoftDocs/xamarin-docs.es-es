@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7ff97f27a89b9943194ea875458f4e63f7797b76
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d97f914a557839a2ca1322f803894055b6156c7e
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645850"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065340"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Controles de imagen de watchos en Xamarin
 

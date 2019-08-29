@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 746d901714b4bba2d85e63e52d34781f07cf9923
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e647169a9059edab3593ec2986e16358b4e574aa
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653287"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065564"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>API de juegos de iOS en Xamarin. iOS
 

@@ -6,12 +6,12 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 0fff049c48a613937513d9826647f3fc37753684
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 99347ccc2490361bedda926b25076158a12e39bf
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887450"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065170"
 ---
 # <a name="unified-api-overview"></a>Información general de Unified API
 

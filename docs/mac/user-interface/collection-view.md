@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 432e875969164b6481671d769d488c5f34458fe0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ee1b3043033ea1d6e024619e6a176947733e9f24
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657260"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065482"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin. Mac
 

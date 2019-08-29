@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: fc9a8acb2c04d805e7abc52b2996ec5546b0fb69
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: MT
+ms.openlocfilehash: ca3580648d357d2c943274717af66ad5d825ce75
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657368"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065592"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de la interfaz de usuario de tvOS en Xamarin
 
@@ -26,7 +26,7 @@ tvOS 10 ahora es compatible con un tema de la interfaz de usuario oscuro y liger
 
 Como se indicó anteriormente, tvOS 10 ahora es compatible con un tema de la interfaz de usuario oscuro y claro que todos los controles de UIKit de compilación se adaptarán automáticamente a, en función de las preferencias del usuario.
 
-El usuario puede cambiar este tema; para ello, vaya a **configuración** > **General** > **y cambie** entre **Light** y **Dark**:
+El usuario puede cambiar este tema; para ello, vaya a **configuración** > **General** > y cambie entre **Light** y **Dark**:
 
 [![](user-interface-styles-images/theme01.png "La aplicación de configuración")](user-interface-styles-images/theme01.png#lightbox)
 
@@ -48,10 +48,10 @@ Para participar en la compatibilidad con temas claros y oscuros, haga lo siguien
 
 1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
 2. Seleccione la vista **código fuente** (en la parte inferior del editor).
-3. Agregue una nueva clave y llámela `UIUserInterfaceStyle`: 
+3. Agregue una nueva clave y llámela `UIUserInterfaceStyle`:
 
     [![](user-interface-styles-images/theme03.png "La clave UIUserInterfaceStyle")](user-interface-styles-images/theme03.png#lightbox)
-4. Deje el tipo establecido en `String` y escriba un valor de `Automatic`: 
+4. Deje el tipo establecido en `String` y escriba un valor de `Automatic`:
 
     [![](user-interface-styles-images/theme04.png "Especificar automático")](user-interface-styles-images/theme04.png#lightbox)
 5. Guarde los cambios en el archivo.
@@ -95,7 +95,7 @@ La nueva `UserInterfaceStyle` propiedad de la `UITraitCollection` clase se puede
 - No **especificado** : la vista no se ha mostrado todavía en pantalla, por lo que se desconoce el tema de la interfaz de usuario actual.
 
 Además, las colecciones de rasgos tienen las siguientes características en tvOS 10:
- 
+
 - El proxy de apariencia puede personalizarse en función `UserInterfaceStyle` de la de `UITraitCollection` un determinado para cambiar cosas como imágenes o colores de los elementos basados en el tema.
 - Una aplicación tvOS puede controlar los cambios de la colección de rasgos `TraitCollectionDidChange` invalidando `UIView` el `UIViewController` método de una clase o.
 
@@ -137,7 +137,7 @@ Por ejemplo:
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
 {
     base.TraitCollectionDidChange (previousTraitCollection);
-    
+
     // Take action based on the Light or Dark theme
     ...
 }
@@ -170,13 +170,13 @@ En tvOS 10, el guión gráfico de una aplicación se puede establecer para respo
 
 Para habilitar la compatibilidad con la colección de rasgos, haga lo siguiente:
 
-1. Haga clic con el botón derecho en el archivo de guion gráfico en el **Explorador de soluciones** y seleccione **abrir con** > **Xcode Interface Builder**: 
+1. Haga clic con el botón derecho en el archivo de guion gráfico en el **Explorador de soluciones** y seleccione **abrir con** > **Xcode Interface Builder**:
 
-    [![](user-interface-styles-images/theme05.png "Abrir con Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox) 
-2. Para habilitar la compatibilidad con la colección de rasgos, cambie al **Inspector de archivos** y active la propiedad **usar variaciones de rasgos** en la sección **Interface Builder documento** : 
+    [![](user-interface-styles-images/theme05.png "Abrir con Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox)
+2. Para habilitar la compatibilidad con la colección de rasgos, cambie al **Inspector de archivos** y active la propiedad **usar variaciones de rasgos** en la sección **Interface Builder documento** :
 
     [![](user-interface-styles-images/theme06.png "Habilitar la compatibilidad con la colección de rasgos")](user-interface-styles-images/theme06.png#lightbox)
-3. Confirme el cambio para usar variaciones de rasgos: 
+3. Confirme el cambio para usar variaciones de rasgos:
 
     [![](user-interface-styles-images/theme07.png "La alerta usar variaciones de rasgos")](user-interface-styles-images/theme07.png#lightbox)
 4. Guarde los cambios en el archivo de guion gráfico.
@@ -184,23 +184,23 @@ Para habilitar la compatibilidad con la colección de rasgos, haga lo siguiente:
 Apple ha agregado las siguientes capacidades al editar guiones gráficos de tvOS en Interface Builder:
 
 * El desarrollador puede especificar diferentes variaciones de elementos de la interfaz de usuario basados en el tema de la interfaz de usuario en el **Inspector de atributos**:
-    
-    * Ahora varias propiedades tienen una **+** junto a ellas, en las que se puede hacer clic para agregar una versión específica del tema de la interfaz de usuario: 
 
-        [![](user-interface-styles-images/theme08.png "Agregar una versión específica del tema de la interfaz de usuario")](user-interface-styles-images/theme08.png#lightbox) 
-    
-    * El desarrollador puede especificar una nueva propiedad o hacer clic en el botón **x** para quitarla: 
+  * Ahora varias propiedades tienen una **+** junto a ellas, en las que se puede hacer clic para agregar una versión específica del tema de la interfaz de usuario:
 
-        [![](user-interface-styles-images/theme09.png "Especifique una nueva propiedad o haga clic en el botón x para quitarla.")](user-interface-styles-images/theme09.png#lightbox)
+    [![](user-interface-styles-images/theme08.png "Agregar una versión específica del tema de la interfaz de usuario")](user-interface-styles-images/theme08.png#lightbox)
+
+  * El desarrollador puede especificar una nueva propiedad o hacer clic en el botón **x** para quitarla:
+
+    [![](user-interface-styles-images/theme09.png "Especifique una nueva propiedad o haga clic en el botón x para quitarla.")](user-interface-styles-images/theme09.png#lightbox)
 * El desarrollador puede obtener una vista previa del diseño de la interfaz de usuario en el tema claro o oscuro desde Interface Builder:
-    
-    * La parte inferior del Superficie de diseño permite al desarrollador cambiar el tema de la interfaz de usuario actual: 
 
-        [![](user-interface-styles-images/theme10.png "La parte inferior del Superficie de diseño")](user-interface-styles-images/theme10.png#lightbox)
-        
-    * El nuevo tema se mostrará en Interface Builder y se mostrarán los ajustes específicos de la colección de rasgos: 
+  * La parte inferior del Superficie de diseño permite al desarrollador cambiar el tema de la interfaz de usuario actual:
 
-        [![](user-interface-styles-images/theme11.png "El tema que se muestra en Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+    [![](user-interface-styles-images/theme10.png "La parte inferior del Superficie de diseño")](user-interface-styles-images/theme10.png#lightbox)
+
+  * El nuevo tema se mostrará en Interface Builder y se mostrarán los ajustes específicos de la colección de rasgos:
+
+    [![](user-interface-styles-images/theme11.png "El tema que se muestra en Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 
 Además, el simulador tvOS ahora tiene un método abreviado de teclado que permite al desarrollador cambiar rápidamente entre los temas claro y oscuro al depurar una aplicación de tvOS. Use la secuencia de teclado del **comando SHIFT-D** para alternar entre Light y Dark.
 

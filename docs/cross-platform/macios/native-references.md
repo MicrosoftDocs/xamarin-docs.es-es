@@ -1,82 +1,82 @@
 ---
-title: IOS, Mac y los proyectos de enlaces de referencias nativo
-description: Las referencias nativas le ofrece la capacidad de insertar un marco nativo en un Xamarin.iOS, Xamarin.Mac o proyecto de enlace.
+title: Referencias nativas de los proyectos de iOS, Mac y enlaces
+description: Las referencias nativas le ofrecen la posibilidad de insertar un marco nativo en un proyecto de Xamarin. iOS, Xamarin. Mac o de enlace.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e5e232ffa8a41f7adbffae595b85341a10d8667a
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61201564"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065260"
 ---
-# <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referencias nativas en iOS, Mac y proyectos de enlaces
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referencias nativas en proyectos de iOS, Mac y enlaces
 
-_Las referencias nativas le ofrece la capacidad de insertar un marco nativo en un proyecto de Xamarin.iOS o Xamarin.Mac o enlace._
+_Las referencias nativas le permiten insertar un marco nativo en un proyecto de Xamarin. iOS o Xamarin. Mac o en un proyecto de enlace._
 
-Desde iOS 8.0 ha sido posible crear un marco de trabajo incrustado para compartir código entre las extensiones de aplicación y la aplicación principal en Xcode. Mediante la característica de referencia nativa será posible consumir estas plataformas admitidas (creadas con Xcode) en Xamarin.iOS.
+Dado que iOS 8,0 es posible crear un marco de trabajo incrustado para compartir el código entre las extensiones de aplicación y la aplicación principal en Xcode. Con la característica de referencia nativa, es posible usar estos marcos de trabajo incrustados (creados con Xcode) en Xamarin. iOS.
  
 > [!IMPORTANT]
-> No será posible crear marcos incrustados desde cualquier tipo de proyectos de Xamarin.iOS o Xamarin.Mac, las referencias nativas solo permite el consumo de los marcos nativos (Objective-C) existentes.
+> No será posible crear marcos de trabajo insertados a partir de cualquier tipo de proyectos de Xamarin. iOS o Xamarin. Mac, las referencias nativas solo permiten el consumo de marcos nativos (Objective-C) existentes.
 
 <a name="Terminology" />
 
 ## <a name="terminology"></a>Terminología
 
-En iOS 8 (y versiones posteriores), **marcos incrustado** puede ser tanto incrustados marcos de trabajo vinculados estáticamente y vinculadas dinámicamente. Para distribuirlos correctamente, debe realizar en marcos de trabajo de "fat" que incluye todos sus _segmentos_ para cada arquitectura de dispositivo que desea admitir con la aplicación.
+En iOS 8 (y versiones posteriores), los **marcos de trabajo incrustados** pueden estar vinculados estáticamente y vinculados dinámicamente. Para distribuirlos correctamente, debe convertirlos en marcos de "FAT" que incluyan todos sus _segmentos_ para cada arquitectura de dispositivo que desee admitir con la aplicación.
 
 <a name="Static-vs-Dynamic-Frameworks" />
 
-### <a name="static-vs-dynamic-frameworks"></a>Puertos estáticos frente a. Marcos de trabajo dinámicos
+### <a name="static-vs-dynamic-frameworks"></a>Frente a Marcos dinámicos
 
-**Marcos estáticos** se vinculan en tiempo de compilación donde **marcos dinámicos** están vinculados en tiempo de ejecución y, por tanto, se puede modificar sin volver a vincular. Si ha utilizado cualquier marco 3rd-party anteriores a iOS 8, usaba un **Framework estático** que se compiló en la aplicación. Consulte Apple [programación de biblioteca dinámica](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) documentación para obtener más detalles.
+Los **marcos de trabajo estáticos** se vinculan en tiempo de compilación, donde los **Marcos dinámicos** están vinculados en tiempo de ejecución y se pueden modificar sin volver a vincular. Si ha usado algún marco de terceros antes de iOS 8, estaba usando un **marco de trabajo estático** compilado en la aplicación. Consulte la documentación de [programación de biblioteca dinámica](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) de Apple para obtener más detalles.
 
 <a name="Embedded-vs-System-Frameworks" />
 
-### <a name="embedded-vs-system-frameworks"></a>Vs incrustados. Marcos de trabajo del sistema
+### <a name="embedded-vs-system-frameworks"></a>Incrustado frente a Marcos del sistema
 
-**Embedded marcos** se incluyen en el lote de aplicaciones y solo son accesibles para la aplicación específica a través de su espacio aislado. **Marcos de trabajo del sistema** se almacenan en el nivel de sistema operativo y están disponibles para todas las aplicaciones en el dispositivo. Actualmente, solo Apple tiene la capacidad para crear marcos de trabajo de nivel de sistema operativo.
+Los **marcos de trabajo incrustados** se incluyen en el lote de aplicaciones y solo se puede acceder a ellos en su aplicación específica a través de su espacio aislado. Los **marcos de trabajo del sistema** se almacenan en el nivel del sistema operativo y están disponibles para todas las aplicaciones del dispositivo. Actualmente, solo Apple tiene la capacidad de crear marcos de nivel de sistema operativo.
 
 <a name="Thin-vs-Fat-Frameworks" />
 
-### <a name="thin-vs-fat-frameworks"></a>Vs finos. Marcos FAT
+### <a name="thin-vs-fat-frameworks"></a>En comparación con Marcos FAT
 
-**Fino marcos** contienen sólo el código compilado para una arquitectura de sistema específica donde **marcos Fat** contienen código para varias arquitecturas. Cada base de código específicos de la arquitectura compilado en un marco de trabajo se conoce como un _segmento_. Por lo tanto, por ejemplo, si tuviéramos un marco que se compiló para las dos arquitecturas de simulador (i386 y X86_64) de iOS, lo contendría dos segmentos.
+Los **marcos finos** contienen solo el código compilado para una arquitectura de sistema específica en la que los **Marcos FAT** contienen código para varias arquitecturas. Cada código base específico de la arquitectura compilada en un marco de trabajo se conoce como un _segmento_. Por lo tanto, por ejemplo, si tenemos un marco que se compiló para las dos arquitecturas de simulador de iOS (i386 y X86_64), contendría dos segmentos.
 
-Si intenta distribuir este marco de trabajo de ejemplo con la aplicación, se podría ejecutar correctamente en el simulador, pero producirá un error en el dispositivo, ya que el marco de trabajo no contiene los segmentos de código específico para un dispositivo iOS. Para asegurarse de que funcione en todas las instancias de un marco de trabajo, también necesitaría incluir segmentos específicos del dispositivo como arm64, armv7 y armv7s.
+Si intentó distribuir este marco de ejemplo con la aplicación, se ejecutaría correctamente en el simulador, pero se producirá un error en el dispositivo, ya que el marco de trabajo no contiene ningún segmento específico del código para un dispositivo iOS. Para asegurarse de que un marco de trabajo funcione en todas las instancias, también debe incluir segmentos específicos del dispositivo como arm64, ARMv7 y armv7s.
 
 <a name="Working-with-Embedded-Frameworks" />
 
-## <a name="working-with-embedded-frameworks"></a>Trabajar con plataformas admitidas
+## <a name="working-with-embedded-frameworks"></a>Trabajar con marcos de trabajo incrustados
 
-Hay dos pasos que deben completarse para trabajar con plataformas admitidas en una aplicación Xamarin.iOS o Xamarin.Mac: Creación de un marco Fat e incrustar el marco de trabajo.
+Hay dos pasos que se deben completar para trabajar con marcos de trabajo insertados en una aplicación de Xamarin. iOS o Xamarin. Mac: Crear un marco FAT e incrustar el marco de trabajo.
 
 <a name="Overview" />
 
-### <a name="creating-a-fat-framework"></a>Creación de un marco Fat
+### <a name="creating-a-fat-framework"></a>Creación de un marco de Fat
 
-Como se indicó anteriormente, para poder consumir un marco de trabajo incrustado en la aplicación, debe ser un marco Fat que incluye todas las arquitecturas del sistema los segmentos para los dispositivos que se ejecutará la aplicación.
+Como se indicó anteriormente, para poder usar un marco de trabajo incrustado en la aplicación, debe ser un marco FAT que incluya todos los segmentos de arquitectura del sistema de los dispositivos en los que se ejecutará la aplicación.
 
-Cuando el marco de trabajo y la aplicación que están en el mismo proyecto de Xcode, esto no es un problema ya que Xcode compilará el marco de trabajo y la aplicación con la misma configuración de compilación. Puesto que las aplicaciones de Xamarin no pueden crear marcos incrustados, no se puede usar esta técnica.
+Cuando el marco y la aplicación de consumo están en el mismo proyecto de Xcode, esto no es un problema, ya que Xcode compilará el marco de trabajo y la aplicación con la misma configuración de compilación. Dado que las aplicaciones de Xamarin no pueden crear marcos de trabajo incrustados, no se puede usar esta técnica.
 
-Para resolver este problema, el `lipo` herramienta de línea de comandos puede usarse para combinar dos o más marcos de trabajo en un solo marco Fat que contiene todos los segmentos de necesarios. Para obtener más información sobre cómo trabajar con el `lipo` de comandos, consulte nuestra [vincular bibliotecas nativas](~/ios/platform/native-interop.md) documentación.
+Para solucionar este problema, se `lipo` puede usar la herramienta de línea de comandos para combinar dos o más marcos en un marco de Fat que contenga todos los segmentos necesarios. Para obtener más información sobre cómo trabajar `lipo` con el comando, consulte la documentación vinculación de [bibliotecas nativas](~/ios/platform/native-interop.md) .
 
 <a name="Embedding-a-Framework" />
 
-### <a name="embedding-a-framework"></a>Incrustación de un marco de trabajo
+### <a name="embedding-a-framework"></a>Incrustar un marco de trabajo
 
-El paso siguiente son necesarios para insertar un marco de trabajo en un proyecto de Xamarin.iOS o Xamarin.Mac con las referencias nativas:
+El paso siguiente es necesario para incrustar un marco de trabajo en un proyecto de Xamarin. iOS o Xamarin. Mac mediante referencias nativas:
 
-1. Cree un nuevo o abra un proyecto de Xamarin.iOS, Xamarin.Mac o enlace existente.
-2. En el **el Explorador de soluciones**, haga doble clic en el nombre del proyecto y seleccione **agregar** > **Agregar referencia nativa**: 
+1. Cree un nuevo o abra un proyecto de Xamarin. iOS, Xamarin. Mac o de enlace existente.
+2. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **Agregar referencia nativa**: 
 
-    [![](native-references-images/ref01.png "En el Explorador de soluciones, haga doble clic en el nombre del proyecto y seleccione Agregar referencia nativa")](native-references-images/ref01.png#lightbox)
-3. Desde el **abierto** cuadro de diálogo, seleccione el nombre del marco nativo que desea insertar y haga clic en el **abierto** botón: 
+    [![](native-references-images/ref01.png "En el Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione Agregar referencia nativa.")](native-references-images/ref01.png#lightbox)
+3. En el cuadro de diálogo **abrir** , seleccione el nombre del marco nativo que desea incrustar y haga clic en el botón **abrir** : 
 
-    [![](native-references-images/ref02.png "Seleccione el nombre del marco nativo para insertar y haga clic en el botón Abrir")](native-references-images/ref02.png#lightbox)
+    [![](native-references-images/ref02.png "Seleccione el nombre del marco de trabajo nativo que se va a incrustar y haga clic en el botón abrir")](native-references-images/ref02.png#lightbox)
 4. El marco de trabajo se agregará al árbol del proyecto: 
 
     [![](native-references-images/ref03.png "El marco de trabajo se agregará al árbol de proyectos")](native-references-images/ref03.png#lightbox)
@@ -85,17 +85,17 @@ Cuando se compila el proyecto, el marco nativo se incrustará en el lote de la a
 
 <a name="App-Extensions-and-Embedded-Frameworks" />
 
-## <a name="app-extensions-and-embedded-frameworks"></a>Extensiones de aplicaciones y plataformas admitidas
+## <a name="app-extensions-and-embedded-frameworks"></a>Extensiones de aplicaciones y marcos de trabajo incrustados
 
-Internamente Xamarin.iOS puede sacar partido de esta característica para vincular con el tiempo de ejecución Mono como un marco de trabajo (cuando el destino de implementación es > = iOS 8.0), lo que reduce significativamente para las aplicaciones con extensiones de tamaño de la aplicación (ya que el tiempo de ejecución Mono se incluirá una sola vez para Todo lote de aplicaciones, en lugar de una vez para la aplicación de contenedor y una vez para cada extensión).
+De forma interna, Xamarin. iOS puede aprovechar esta característica para vincular con el tiempo de ejecución de mono como un marco (cuando el destino de implementación es > = iOS 8,0), lo que reduce significativamente el tamaño de la aplicación para las aplicaciones con extensiones (ya que el tiempo de ejecución de mono solo se incluirá una vez para todo el paquete de aplicaciones, en lugar de una vez para la aplicación contenedora y otra para cada extensión.
 
-Las extensiones se vincularán con el tiempo de ejecución Mono como un marco de trabajo, porque todas las extensiones requieren iOS 8.0.
+Las extensiones se vincularán con el tiempo de ejecución de mono como un marco, ya que todas las extensiones requieren iOS 8,0.
 
-Aplicaciones que no tienen las extensiones y aplicaciones destinados a iOS 
+Aplicaciones que no tienen extensiones y aplicaciones destinadas a iOS 
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha tomado una visión detallada de la incorporación de un marco nativo en una aplicación Xamarin.iOS o Xamarin.Mac.
+En este artículo se ha realizado una visión detallada de la inserción de un marco de trabajo nativo en una aplicación Xamarin. iOS o Xamarin. Mac.
 
