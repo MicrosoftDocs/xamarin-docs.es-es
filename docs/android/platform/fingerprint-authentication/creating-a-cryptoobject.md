@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8e5d4cf50874a0976c1dd10e35e7bd84518f14c4
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511155"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119836"
 ---
 # <a name="creating-a-cryptoobject"></a>Creación de un CryptoObject
 
@@ -105,10 +105,10 @@ Se crea una instancia del cifrado con una `Cipher.GetInstance`llamada a, tomando
 
 Es importante saber que hay algunas situaciones en las que Android puede invalidar la clave: 
 
-* Se ha inscrito una nueva huella digital con el dispositivo.
-* No hay huellas digitales inscritas con el dispositivo.
-* El usuario ha deshabilitado el bloqueo de pantalla.
-* El usuario ha cambiado el bloqueo de pantalla (el tipo de screenlock o el PIN o patrón usado).
+- Se ha inscrito una nueva huella digital con el dispositivo.
+- No hay huellas digitales inscritas con el dispositivo.
+- El usuario ha deshabilitado el bloqueo de pantalla.
+- El usuario ha cambiado el bloqueo de pantalla (el tipo de screenlock o el PIN o patrón usado).
 
 Cuando esto sucede, `Cipher.Init` producirá una [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)excepción. En el código de ejemplo anterior se detectará esa excepción, se eliminará la clave y, a continuación, se creará una nueva.
 
@@ -122,11 +122,11 @@ Se `KeyGenerator` crea una instancia de mediante `GetInstance` el Factory Method
 
 A continuación, `KeyGenParameterSpec` se crea una con `KeyGenParameterSpec.Builder`el. `KeyGenParameterSpec.Builder` Incluye la siguiente información sobre la clave que se va a crear:
 
-* Nombre de la clave.
-* La clave debe ser válida para el cifrado y el descifrado.
-* En el código `BLOCK_MODE` de ejemplo, se establece en encadenamiento de`KeyProperties.BlockModeCbc` _bloques_ de cifrado (), lo que significa que cada bloque es XORed con el bloque anterior (creando dependencias entre cada bloque). 
-* Usa `CryptoObjectHelper` el [_estándar de criptografía de clave pública #7_](https://tools.ietf.org/html/rfc2315) (_pkcs7_) para generar los bytes que rellenarán los bloques para asegurarse de que tienen el mismo tamaño.
-* `SetUserAuthenticationRequired(true)`significa que se requiere la autenticación del usuario antes de que se pueda usar la clave.
+- Nombre de la clave.
+- La clave debe ser válida para el cifrado y el descifrado.
+- En el código `BLOCK_MODE` de ejemplo, se establece en encadenamiento de`KeyProperties.BlockModeCbc` _bloques_ de cifrado (), lo que significa que cada bloque es XORed con el bloque anterior (creando dependencias entre cada bloque). 
+- Usa `CryptoObjectHelper` el [_estándar de criptografía de clave pública #7_](https://tools.ietf.org/html/rfc2315) (_pkcs7_) para generar los bytes que rellenarán los bloques para asegurarse de que tienen el mismo tamaño.
+- `SetUserAuthenticationRequired(true)`significa que se requiere la autenticación del usuario antes de que se pueda usar la clave.
 
 Una vez que `KeyGenerator` secrea,seusaparainicializar,quegeneraráunaclaveylaalmacenarádeformasegura`KeyGenParameterSpec` en el dispositivo. 
 

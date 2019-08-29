@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: cb4933695d34a0805be4139c7b345f7a70f33613
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524324"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119582"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Respuesta a las devoluciones de llamada de autenticación
 
 El escáner de huellas digitales se ejecuta en segundo plano en su propio subproceso y, cuando finaliza, informará de los resultados del análisis al invocar `FingerprintManager.AuthenticationCallback` un método de en el subproceso de la interfaz de usuario. Una aplicación de Android debe proporcionar su propio controlador, que extiende esta clase abstracta, implementando todos los métodos siguientes:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Se llama cuando se produce un error irrecuperable. No hay nada más que una aplicación o usuario puede hacer para corregir la situación, salvo que es posible que vuelva a intentarlo.
-* **`OnAuthenticationFailed()`** &ndash; Este método se invoca cuando se detecta una huella digital, pero el dispositivo no la reconoce.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Se llama cuando se produce un error recuperable, por ejemplo, el dedo se desliza rápidamente a través del escáner.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Se llama a este método cuando se reconoce una huella digital.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Se llama cuando se produce un error irrecuperable. No hay nada más que una aplicación o usuario puede hacer para corregir la situación, salvo que es posible que vuelva a intentarlo.
+- **`OnAuthenticationFailed()`** &ndash; Este método se invoca cuando se detecta una huella digital, pero el dispositivo no la reconoce.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Se llama cuando se produce un error recuperable, por ejemplo, el dedo se desliza rápidamente a través del escáner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Se llama a este método cuando se reconoce una huella digital.
 
 Si se `CryptoObject` utilizó una al llamar `Authenticate`a, se recomienda llamar `Cipher.DoFinal` a en `OnAuthenticationSuccessful`.
 `DoFinal`producirá una excepción si el cifrado se alteró o se inicializó incorrectamente, lo que indica que el resultado del escáner de huellas digitales puede haberse alterado fuera de la aplicación.

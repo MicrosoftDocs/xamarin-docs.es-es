@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 886a6145851720c088e39818b3a6e42a7b66e4bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eaae0859ddce1c7601b0429381c8643c0884c3ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654407"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121392"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -78,8 +78,8 @@ Apple incluye los siguientes cambios en Foundation Framework en iOS 9:
 
 Se han realizado los siguientes cambios en la clase [NSBundle](xref:Foundation.NSBundle) para iOS 9:
 
-* `GetPreservationPriorityForTag (NSString tag)`: Obtiene la prioridad de conservación actual para los recursos con la etiqueta especificada. Los valores válidos están en `0.0` el `1.0`intervalo a, los recursos con la prioridad más baja se purgarán primero.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)`: Establece la prioridad de conservación actual para los recursos con las etiquetas especificadas. Los valores válidos están en `0.0` el `1.0`intervalo a, los recursos con la prioridad más baja se purgarán primero.
+- `GetPreservationPriorityForTag (NSString tag)`: Obtiene la prioridad de conservación actual para los recursos con la etiqueta especificada. Los valores válidos están en `0.0` el `1.0`intervalo a, los recursos con la prioridad más baja se purgarán primero.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)`: Establece la prioridad de conservación actual para los recursos con las etiquetas especificadas. Los valores válidos están en `0.0` el `1.0`intervalo a, los recursos con la prioridad más baja se purgarán primero.
 
 Para obtener más información, consulte la [referencia de NSBundle](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)de Apple.
 

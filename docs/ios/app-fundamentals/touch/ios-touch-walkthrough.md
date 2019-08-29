@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: bd6f40a117734712941585b6ce0d630105e54693
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065450"
+ms.locfileid: "70121039"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Tutorial: Uso de Touch en Xamarin. iOS
 
@@ -96,9 +96,9 @@ En este ejemplo, se mostrarán algunas de las API de Touch. Siga estos pasos par
     
     Este método funciona comprobando un `UITouch` objeto y, si existe, realiza alguna acción en función de dónde se produjo el toque:
 
-    * _Dentro de TouchImage_ : muestra el `Touches Began` texto de una etiqueta y cambia la imagen.
-    * _Dentro de DoubleTouchImage_ : cambie la imagen que se muestra si el gesto fue un doble punteo.
-    * _Dentro de DragImage_ : establece una marca que indica que la entrada táctil se ha iniciado. El método `TouchesMoved` usará esta marca para determinar si `DragImage` se debe mover en la pantalla o no, como veremos en el paso siguiente.
+    - _Dentro de TouchImage_ : muestra el `Touches Began` texto de una etiqueta y cambia la imagen.
+    - _Dentro de DoubleTouchImage_ : cambie la imagen que se muestra si el gesto fue un doble punteo.
+    - _Dentro de DragImage_ : establece una marca que indica que la entrada táctil se ha iniciado. El método `TouchesMoved` usará esta marca para determinar si `DragImage` se debe mover en la pantalla o no, como veremos en el paso siguiente.
 
     El código anterior solo se ocupa de los toques individuales, todavía no hay ningún comportamiento si el usuario mueve el dedo por la pantalla. Para responder al movimiento, implemente `TouchesMoved` como se muestra en el código siguiente:
 

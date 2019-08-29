@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2def6280a159203fd2c8d3db01a8e66c9ae61688
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657400"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121439"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri controladores de Bluetooth y remotos para tvOS en Xamarin
 
@@ -58,10 +58,10 @@ La superficie táctil de Siri remota es capaz de detectar una variedad de gestos
 
 Apple proporciona las siguientes sugerencias para trabajar con gestos de la superficie táctil:
 
-* **Diferenciar entre los clics y pulsaciones** : hacer clic en es una acción intencionada del usuario y es adecuada para la selección, la activación y el botón principal de un juego. Pulsar es más sutil y debe usarse con moderación porque el usuario a menudo mantiene el Siri remoto en su mano y puede activar accidentalmente un evento TAP fácilmente.
-* **No** volver a definir los gestos estándar: el usuario tiene una expectativa de que determinados gestos realicen acciones específicas; no se debe volver a definir el significado o la función de estos gestos en la aplicación. La única excepción es una aplicación de juego durante el juego activo.
-* **Definir nuevos gestos** con moderación, el usuario tiene una expectativa de que determinados gestos realicen acciones específicas. Debe evitar definir gestos personalizados para realizar acciones estándar. Y de nuevo, los juegos son la excepción más usual en la que los gestos personalizados pueden agregar diversión y una reproducción envolvente al juego.
-* En **caso de que sea necesario, responder a** los grifos de la cruceta: al pulsar ligeramente en los bordes de las esquinas de la superficie táctil, se reaccionará como un panel de la cruceta en un dispositivo de juego moviendo el foco o la dirección arriba, abajo, izquierda o derecha. Si procede, debe responder a estos gestos en su aplicación o juego.
+- **Diferenciar entre los clics y pulsaciones** : hacer clic en es una acción intencionada del usuario y es adecuada para la selección, la activación y el botón principal de un juego. Pulsar es más sutil y debe usarse con moderación porque el usuario a menudo mantiene el Siri remoto en su mano y puede activar accidentalmente un evento TAP fácilmente.
+- **No** volver a definir los gestos estándar: el usuario tiene una expectativa de que determinados gestos realicen acciones específicas; no se debe volver a definir el significado o la función de estos gestos en la aplicación. La única excepción es una aplicación de juego durante el juego activo.
+- **Definir nuevos gestos** con moderación, el usuario tiene una expectativa de que determinados gestos realicen acciones específicas. Debe evitar definir gestos personalizados para realizar acciones estándar. Y de nuevo, los juegos son la excepción más usual en la que los gestos personalizados pueden agregar diversión y una reproducción envolvente al juego.
+- En **caso de que sea necesario, responder a** los grifos de la cruceta: al pulsar ligeramente en los bordes de las esquinas de la superficie táctil, se reaccionará como un panel de la cruceta en un dispositivo de juego moviendo el foco o la dirección arriba, abajo, izquierda o derecha. Si procede, debe responder a estos gestos en su aplicación o juego.
 
 <a name="Siri-Remote-Buttons" />
 
@@ -86,7 +86,7 @@ Para agregar un reconocedor de gestos, haga lo siguiente:
 2. Arrastre un reconocedor de gestos de punteo de la **biblioteca** y colóquelo en la vista: 
 
     [![](remote-bluetooth-images/storyboard01.png "Reconocedor de gestos de TAP")](remote-bluetooth-images/storyboard01.png#lightbox)
-3. Active **la casilla de** verificación en la sección **botón** del **Inspector de atributos**: 
+3. Active la casilla de verificación en la sección **botón** del **Inspector de atributos**: 
 
     [![](remote-bluetooth-images/storyboard02.png "Activar selección")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Seleccione** significa que el gesto responderá al usuario haciendo clic en la **superficie táctil** en el Siri remoto. También tiene la opción de responder a los botones **menú**, **reproducir/pausar**, **arriba**, **abajo**, **izquierda** y **derecha** .

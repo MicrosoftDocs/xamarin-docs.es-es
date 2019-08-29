@@ -1,68 +1,68 @@
 ---
-title: Introducción a Objective-c.
-description: Este documento se describe cómo empezar a usar la inserción de .NET con Objective-C. Describe los requisitos, la instalación de inserción de .NET de NuGet y las plataformas compatibles.
+title: Introducción a Objective-C
+description: En este documento se describe cómo empezar a usar la inserción de .NET con Objective-C. Se describen los requisitos, la instalación de la inserción de .NET desde NuGet y las plataformas admitidas.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9d17027b1b84c7d742404c36fbdd4886de523914
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61040900"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119977"
 ---
-# <a name="getting-started-with-objective-c"></a>Introducción a Objective-c.
+# <a name="getting-started-with-objective-c"></a>Introducción a Objective-C
 
-Se trata de la página de introducción para Objective-C, que cubre los aspectos básicos para todas las plataformas compatibles.
+Esta es la página de introducción de Objective-C, que cubre los aspectos básicos de todas las plataformas admitidas.
 
 ## <a name="requirements"></a>Requisitos
 
-Para usar la inserción de .NET con Objective-C, necesitará un equipo Mac que ejecuta:
+Para usar la inserción de .NET con Objective-C, necesitará un equipo Mac que ejecute:
 
-* macOS 10.12 (Sierra) o posterior
-* Xcode 8.3.2 o posterior
-* [Mono 5.0](https://www.mono-project.com/download/)
+- macOS 10,12 (Sierra) o posterior
+- Xcode 8.3.2 o posterior
+- [Mono 5,0](https://www.mono-project.com/download/)
 
-Puede instalar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar y compilar su C# código.
+Puede instalar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar y compilar C# el código.
 
 > [!NOTE]
-> * Las versiones anteriores de macOS, Xcode y Mono _podría_ funciona, pero se ha comprobado y no admitido
-> * Generación de código se puede realizar en Windows, pero solo es posible compilarlo en un equipo Mac que Xcode está instalado
+> - Las versiones anteriores de macOS, Xcode y mono _podrían_ funcionar, pero no se prueban y no se admiten.
+> - La generación de código se puede realizar en Windows, pero solo es posible compilarla en un equipo Mac en el que esté instalado Xcode
 
-## <a name="installing-net-embedding-from-nuget"></a>Instalación de inserción de .NET de NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Instalación de la inserción de .NET desde NuGet
 
-Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la inserción de .NET para el proyecto.
+Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la inserción de .net para su proyecto.
 
-Una invocación de comando de ejemplo se muestra en el [macOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md) y [iOS](~/tools/dotnet-embedding/get-started/objective-c/ios.md) guías de introducción.
+En las guías de introducción de [MacOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md) e [iOS](~/tools/dotnet-embedding/get-started/objective-c/ios.md) se muestra una invocación de comando de ejemplo.
 
 ## <a name="platforms"></a>Plataformas
 
-Objective-C es un lenguaje que se usa normalmente para escribir aplicaciones para macOS, iOS, tvOS y watchOS; inserción de .NET es compatible con todas esas plataformas. Trabajar con cada plataforma implica algunos [diferencias clave y estos se explican aquí](~/tools/dotnet-embedding/objective-c/platforms.md).
+Objective-C es un lenguaje que se usa con más frecuencia para escribir aplicaciones para macOS, iOS, tvOS y watchos; la incrustación de .NET es compatible con todas esas plataformas. Al trabajar con cada plataforma se implican algunas [diferencias clave, que se explican aquí](~/tools/dotnet-embedding/objective-c/platforms.md).
 
 ### <a name="macos"></a>macOS
 
-[Creación de una aplicación macOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md) es más fácil, ya que no implica tantos pasos adicionales, como la configuración de identidad, creando perfiles, simuladores y dispositivos. Se recomienda comenzar con el documento de macOS antes para iOS.
+[La creación de una aplicación MacOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md) es más fácil, ya que no implica tantos pasos adicionales, como la configuración de identidades, perfiles creando, simuladores y dispositivos. Se recomienda comenzar con el documento de macOS antes que el de iOS.
 
-### <a name="ios--tvos"></a>iOS y tvOS
+### <a name="ios--tvos"></a>iOS/tvOS
 
-Asegúrese de que ya están configurados para desarrollar aplicaciones de iOS antes de intentar crear uno mediante la inserción de .NET. El [instrucciones](~/tools/dotnet-embedding/get-started/objective-c/ios.md) se supone que ya ha creado e implementado una aplicación iOS desde su equipo.
+Asegúrese de que ya está configurado para desarrollar aplicaciones de iOS antes de intentar crear una mediante la inserción de .NET. Las [instrucciones siguientes](~/tools/dotnet-embedding/get-started/objective-c/ios.md) suponen que ya ha creado e implementado correctamente una aplicación de iOS desde el equipo.
 
-Compatibilidad con tvOS es análogo al funcionamiento de iOS, si solo se usa proyectos de tvOS en el IDE (Visual Studio y Xcode) en lugar de los proyectos de iOS.
+La compatibilidad con tvOS es análoga a cómo funciona iOS, simplemente mediante el uso de proyectos de tvOS en los IDE (tanto Visual Studio como Xcode) en lugar de los proyectos de iOS.
 
 > [!NOTE]
-> La compatibilidad con watchOS estará disponible en una futura versión y será muy similar a iOS o tvOS.
+> La compatibilidad con watchos estará disponible en una versión futura y será muy similar a iOS/tvOS.
 
 ## <a name="further-reading"></a>Información adicional
 
-* [Inserción de .NET características específicas de Objective-c.](~/tools/dotnet-embedding/objective-c/index.md)
-* [Procedimientos recomendados para Objective-C](~/tools/dotnet-embedding/objective-c/best-practices.md)
-* [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
-* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Las descripciones y códigos de error](~/tools/dotnet-embedding/errors.md)
-* [Plataformas de destino](~/tools/dotnet-embedding/objective-c/platforms.md)
+- [Características de inserción de .NET específicas para Objective-C](~/tools/dotnet-embedding/objective-c/index.md)
+- [Prácticas recomendadas para Objective-C](~/tools/dotnet-embedding/objective-c/best-practices.md)
+- [Limitaciones de la inserción de .NET](~/tools/dotnet-embedding/limitations.md)
+- [Contribuir al proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)
+- [Plataformas de destino](~/tools/dotnet-embedding/objective-c/platforms.md)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Weather (iOS y macOS)](https://github.com/jamesmontemagno/embeddinator-weather)
+- [Ejemplo meteorológico (iOS & macOS)](https://github.com/jamesmontemagno/embeddinator-weather)

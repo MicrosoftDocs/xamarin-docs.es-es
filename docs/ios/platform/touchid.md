@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 0f92dca71f74266e1408cd65c842f729a9a648ce
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065667"
+ms.locfileid: "70121304"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID en Xamarin. iOS
 
@@ -102,15 +102,15 @@ En lo que se refiere a la seguridad, también es muy importante saber que no hay
 
 Para usar Touch ID sin cadena de claves aprovechando la API de autenticación local, hay algunas funciones que se pueden usar. Estos se detallan a continuación:
 
-* `CanEvaluatePolicy`: Esto simplemente comprueba si el dispositivo es capaz de aceptar el Touch ID.
-* `EvaluatePolicy`: Inicia la operación de autenticación y muestra la interfaz de usuario, y `true` devuelve `false` una respuesta o.
-* `DeviceOwnerAuthenticationWithBiometrics`: Esta es la Directiva que se puede usar para mostrar la pantalla touch ID. Merece la pena mencionar que, en su lugar, no hay ningún mecanismo de reserva de código de acceso, debe implementar esta reserva en la aplicación para permitir a los usuarios omitir la autenticación de Touch ID.
+- `CanEvaluatePolicy`: Esto simplemente comprueba si el dispositivo es capaz de aceptar el Touch ID.
+- `EvaluatePolicy`: Inicia la operación de autenticación y muestra la interfaz de usuario, y `true` devuelve `false` una respuesta o.
+- `DeviceOwnerAuthenticationWithBiometrics`: Esta es la Directiva que se puede usar para mostrar la pantalla touch ID. Merece la pena mencionar que, en su lugar, no hay ningún mecanismo de reserva de código de acceso, debe implementar esta reserva en la aplicación para permitir a los usuarios omitir la autenticación de Touch ID.
 
 Hay algunas advertencias con respecto al uso de la autenticación local, que se enumeran a continuación:
 
-* Como con la cadena de claves, solo se puede ejecutar en primer plano. Si se llama en un subproceso en segundo plano, se producirá un error.
-* Tenga en cuenta que se puede producir un error en la evaluación de la Directiva. Debe implementarse un botón de código de acceso como revertir.
-* Debe proporcionar un `localizedReason` para explicar por qué se necesita autenticación. Esto ayuda a compilar la confianza con el usuario.
+- Como con la cadena de claves, solo se puede ejecutar en primer plano. Si se llama en un subproceso en segundo plano, se producirá un error.
+- Tenga en cuenta que se puede producir un error en la evaluación de la Directiva. Debe implementarse un botón de código de acceso como revertir.
+- Debe proporcionar un `localizedReason` para explicar por qué se necesita autenticación. Esto ayuda a compilar la confianza con el usuario.
 
 A continuación, en la sección siguiente, veremos cómo implementar la API teniendo en cuenta estas advertencias.
 

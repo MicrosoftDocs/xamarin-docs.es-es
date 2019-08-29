@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b865f08c9f6506996b5303bb80677977f1d0fa21
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643560"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119522"
 ---
 # <a name="fingerprint-authentication"></a>Autenticación de huella digital
 
@@ -27,9 +27,9 @@ Las API de FingerprintManager tienen como destino dispositivos con un escáner d
 
 [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (y su homólogo de la biblioteca de compatibilidad, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) es la clase principal para usar el hardware de análisis de huellas digitales. Esta clase es un contenedor de Android SDK alrededor del servicio de nivel de sistema que administra las interacciones con el propio hardware. Es responsable de iniciar el escáner de huellas digitales y de responder a los comentarios del escáner. Esta clase tiene una interfaz bastante sencilla con solo tres miembros:
 
-* **`Authenticate`** &ndash; Este método inicializará el explorador de hardware e iniciará el servicio en segundo plano, esperando a que el usuario digitalice su huella digital.
-* **`EnrolledFingerprints`** Esta propiedad devolverá `true` si el usuario ha registrado una o varias huellas digitales con el dispositivo. &ndash;
-* **`HardwareDetected`** &ndash; Esta propiedad se usa para determinar si el dispositivo admite el análisis de huellas digitales.
+- **`Authenticate`** &ndash; Este método inicializará el explorador de hardware e iniciará el servicio en segundo plano, esperando a que el usuario digitalice su huella digital.
+- **`EnrolledFingerprints`** Esta propiedad devolverá `true` si el usuario ha registrado una o varias huellas digitales con el dispositivo. &ndash;
+- **`HardwareDetected`** &ndash; Esta propiedad se usa para determinar si el dispositivo admite el análisis de huellas digitales.
 
 Una `FingerprintManager.Authenticate` aplicación de Android usa el método para iniciar el escáner de huellas digitales. El siguiente fragmento de código es un ejemplo de cómo invocarlo mediante las API de compatibilidad de la biblioteca de soporte:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890392"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121338"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlace de una biblioteca de Objective-C a iOS
 
@@ -22,9 +22,9 @@ Cuando se trabaja en iOS, pueden darse casos en los que se desea consumir una bi
 
 Por lo general, en el ecosistema de iOS, puede encontrar bibliotecas en tres tipos:
 
-* Como archivo de biblioteca estática precompilado `.a` con extensión junto con sus encabezados (archivos. h). Por ejemplo, [la biblioteca de análisis de Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* Como marco precompilado. Se trata simplemente de una carpeta que contiene la biblioteca estática, encabezados y, a veces `.framework` , recursos adicionales con extensión. Por ejemplo, [la biblioteca AdMob de Google](https://developers.google.com/admob/ios/download).
-* Como solo archivos de código fuente. Por ejemplo, una biblioteca que contenga `.h` los archivos de solo `.m` y Objective C.
+- Como archivo de biblioteca estática precompilado `.a` con extensión junto con sus encabezados (archivos. h). Por ejemplo, [la biblioteca de análisis de Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- Como marco precompilado. Se trata simplemente de una carpeta que contiene la biblioteca estática, encabezados y, a veces `.framework` , recursos adicionales con extensión. Por ejemplo, [la biblioteca AdMob de Google](https://developers.google.com/admob/ios/download).
+- Como solo archivos de código fuente. Por ejemplo, una biblioteca que contenga `.h` los archivos de solo `.m` y Objective C.
 
 En el primer y el segundo escenario, ya habrá una biblioteca estática CocoaTouch precompilada, por lo que en este artículo nos centraremos en el tercer escenario. Recuerde que, antes de empezar a crear un enlace, compruebe siempre la licencia proporcionada con la biblioteca para asegurarse de que tiene la libertad de enlazarla.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: df13c1080be5fd466c4875ed8a3bdc2012a70df0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526166"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119797"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificaciones remotas con mensajería en la nube de Firebase
 
@@ -731,9 +731,9 @@ Como resultado de estos cambios, `SendNotification` se ejecutará siempre que se
 
 Cuando una aplicación está en segundo plano, la [carga útil del mensaje](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) determinará cómo se trata el mensaje:
 
-* **Notificación** de los mensajes se enviarán a la **bandeja del sistema.** &ndash; Aparecerá una notificación local. Cuando el usuario pulsa la notificación, se iniciará la aplicación.
-* **Datos** de administrará los mensajes. `OnMessageReceived` &ndash;
-* **Ambos** &ndash; los mensajes que tienen una notificación y una carga de datos se entregarán a la bandeja del sistema. Cuando se inicia la aplicación, la carga `Extras` `Intent` de datos aparecerá en el del que se usó para iniciar la aplicación.
+- **Notificación** de los mensajes se enviarán a la **bandeja del sistema.** &ndash; Aparecerá una notificación local. Cuando el usuario pulsa la notificación, se iniciará la aplicación.
+- **Datos** de administrará los mensajes. `OnMessageReceived` &ndash;
+- **Ambos** &ndash; los mensajes que tienen una notificación y una carga de datos se entregarán a la bandeja del sistema. Cuando se inicia la aplicación, la carga `Extras` `Intent` de datos aparecerá en el del que se usó para iniciar la aplicación.
 
 En este ejemplo, si la aplicación está en segundo plano, `SendNotification` se ejecutará si el mensaje tiene una carga de datos. De lo contrario, se iniciará una notificación en segundo plano (ilustrada anteriormente en este tutorial).
 

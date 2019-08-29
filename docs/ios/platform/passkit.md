@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528319"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119182"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -326,9 +326,9 @@ Las características de Wallet incluyen:
 
 Pueden agregarse tarjetas a Wallet de las maneras siguientes:
 
-* **Conduit Apps**: estas no manipulan directamente las tarjetas, simplemente cargan archivos de tarjetas y muestran al usuario la opción de agregarlas a Wallet. 
+- **Conduit Apps**: estas no manipulan directamente las tarjetas, simplemente cargan archivos de tarjetas y muestran al usuario la opción de agregarlas a Wallet. 
 
-* **Aplicaciones complementarias**: estas las escriben los proveedores para distribuir tarjetas y ofrecer funcionalidades adicionales para examinarlas o modificarlas. Las aplicaciones de Xamarin.iOS tienen acceso completo a la API de PassKit para crear y manipular tarjetas. Después, se pueden agregar tarjetas a Wallet mediante `PKAddPassesViewController`. Este proceso se describe con más detalles en la sección **Aplicaciones complementarias** de este documento.
+- **Aplicaciones complementarias**: estas las escriben los proveedores para distribuir tarjetas y ofrecer funcionalidades adicionales para examinarlas o modificarlas. Las aplicaciones de Xamarin.iOS tienen acceso completo a la API de PassKit para crear y manipular tarjetas. Después, se pueden agregar tarjetas a Wallet mediante `PKAddPassesViewController`. Este proceso se describe con más detalles en la sección **Aplicaciones complementarias** de este documento.
 
 ### <a name="conduit-applications"></a>Aplicaciones de conducto
 

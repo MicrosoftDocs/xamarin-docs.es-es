@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620510"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120167"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -230,16 +230,16 @@ Hay varias maneras en las que un usuario puede responder a la notificación:
 
 Novedades de watchos 3:
 
-* Notificación use una API similar en todas las plataformas (iOS, watchos, tvOS y macOS).
-* La notificación local se puede programar en el Apple Watch.
-* La notificación en segundo plano se enrutará a la extensión de la aplicación si se programaron en el Apple Watch.
+- Notificación use una API similar en todas las plataformas (iOS, watchos, tvOS y macOS).
+- La notificación local se puede programar en el Apple Watch.
+- La notificación en segundo plano se enrutará a la extensión de la aplicación si se programaron en el Apple Watch.
 
 #### <a name="notification-scheduling-and-delivery"></a>Programación y entrega de notificaciones
 
 La notificación del iPhone del usuario se redirigirá a la Apple Watch cuando se produzca lo siguiente:
 
-* La pantalla del iPhone está desactivada.
-* El Apple Watch se está gastando y se ha desbloqueado.
+- La pantalla del iPhone está desactivada.
+- El Apple Watch se está gastando y se ha desbloqueado.
 
 En watchos 3, las notificaciones locales se pueden programar en el Apple Watch y solo se entregan en el reloj. Es el desarrollador quien programa la notificación de iPhone correspondiente si es necesaria para la aplicación.
 

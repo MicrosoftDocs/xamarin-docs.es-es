@@ -6,12 +6,12 @@ ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 3701a2a111c5c18f694def241b1e888fa6f4ce19
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889400"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120316"
 ---
 # <a name="known-issues--workarounds"></a>Problemas conocidos & soluciones alternativas
 
@@ -21,20 +21,20 @@ La `System.Threading.CurrentThread.CurrentCulture` configuración `System.Global
 
 ### <a name="workarounds"></a>Soluciones
 
-* Establezca la aplicación-dominio-local `DefaultThreadCurrentCulture`:
+- Establezca la aplicación-dominio-local `DefaultThreadCurrentCulture`:
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* O bien, actualice a los libros 1.2.1 o versiones más recientes, que volverán a escribir `System.Threading.CurrentThread.CurrentCulture` las `System.Globalization.CultureInfo.CurrentCulture` asignaciones en y para proporcionar el comportamiento deseado (con lo que se soluciona el error de mono).
+- O bien, actualice a los libros 1.2.1 o versiones más recientes, que volverán a escribir `System.Threading.CurrentThread.CurrentCulture` las `System.Globalization.CultureInfo.CurrentCulture` asignaciones en y para proporcionar el comportamiento deseado (con lo que se soluciona el error de mono).
 
 ## <a name="unable-to-use-newtonsoftjson"></a>No se puede usar Newtonsoft. JSON
 
 ### <a name="workaround"></a>Solución alternativa
 
-* Actualice a los libros 1.2.1, donde se instalará Newtonsoft. JSON 9.0.1.
+- Actualice a los libros 1.2.1, donde se instalará Newtonsoft. JSON 9.0.1.
   Los libros 1,3, actualmente en el canal alfa, admiten las versiones 10 y posteriores.
 
 ### <a name="details"></a>Detalles
@@ -51,9 +51,9 @@ Hay un [error en el editor de Mónaco][monaco-bug] en Safari/WebKit, que se usa 
 
 ### <a name="workaround"></a>Solución alternativa
 
-* Al hacer clic en la información sobre herramientas después de que aparezca, se forzará el procesamiento del texto.
+- Al hacer clic en la información sobre herramientas después de que aparezca, se forzará el procesamiento del texto.
 
-* O actualizar a libros 1.2.1 o posteriores
+- O actualizar a libros 1.2.1 o posteriores
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -64,7 +64,7 @@ A partir de los libros 1,3, hemos quitado los representadores de SkiaSharp que s
 
 ### <a name="workaround"></a>Solución alternativa
 
-* Actualice SkiaSharp a la versión más reciente de NuGet. En el momento de escribir este documento, es 1.57.1.
+- Actualice SkiaSharp a la versión más reciente de NuGet. En el momento de escribir este documento, es 1.57.1.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

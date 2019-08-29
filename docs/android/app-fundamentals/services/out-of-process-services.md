@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 33d0e87e8823db6bf0fd0bc5541f37bd41b6dcde
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2794a1d23cd7c1eab9cf4e94eaa805ad2b8bca61
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526254"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119130"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Ejecución de servicios de Android en procesos remotos
 
@@ -33,9 +33,9 @@ En general, no es necesario que una aplicación implemente un servicio remoto. U
 
 En muchos sentidos, el enlace a un servicio que se ejecuta en otro proceso es el mismo que el [enlace a un servicio local](~/android/app-fundamentals/services/creating-a-service/bound-services.md). El cliente invocará `BindService` para enlazar (e iniciar, si es necesario) el servicio. Se `Android.OS.IServiceConnection` creará un objeto para administrar la conexión entre el cliente y el servicio. Si el cliente se enlaza correctamente al servicio, Android devolverá un objeto a través de `IServiceConnection` que se puede usar para invocar métodos en el servicio. A continuación, el cliente interactúa con el servicio que usa este objeto. Para revisar, estos son los pasos para enlazar a un servicio:
 
-* **Crear una intención** &ndash; Un intento explícito debe usarse para enlazar con el servicio.
-* **Implementar y crear una instancia `IServiceConnection` de un objeto** &ndash; el `IServiceConnection` objeto actúa como intermediario entre el cliente y el servicio.  Es responsable de supervisar la conexión entre el cliente y el servidor.
-* **Invocar `BindService` la** llamada &ndash; al método enviará el intento y la conexión de servicio creada en los pasos anteriores a Android, que se encargará de iniciar el servicio y establecer la comunicación entre `BindService` cliente y servicio.
+- **Crear una intención** &ndash; Un intento explícito debe usarse para enlazar con el servicio.
+- **Implementar y crear una instancia `IServiceConnection` de un objeto** &ndash; el `IServiceConnection` objeto actúa como intermediario entre el cliente y el servicio.  Es responsable de supervisar la conexión entre el cliente y el servidor.
+- **Invocar `BindService` la** llamada &ndash; al método enviará el intento y la conexión de servicio creada en los pasos anteriores a Android, que se encargará de iniciar el servicio y establecer la comunicación entre `BindService` cliente y servicio.
 
 La necesidad de cruzar los límites del proceso conlleva una complejidad adicional: la comunicación es unidireccional (cliente a servidor) y el cliente no puede invocar directamente métodos en la clase de servicio. Recuerde que cuando un servicio ejecuta el mismo proceso que el cliente, Android proporciona un `IBinder` objeto que puede permitir la comunicación bidireccional. Este no es el caso del servicio que se ejecuta en su propio proceso. Un cliente se comunica con un servicio remoto con la ayuda de la `Android.OS.Messenger` clase.
 
@@ -68,9 +68,9 @@ Aunque es posible usar las intenciones implícitas con las aplicaciones destinad
 
 Tal y como se ha descrito anteriormente, el hecho de que un servicio se ejecute en su propio proceso significa que se implican algunas API diferentes. Como introducción rápida, estos son los pasos para enlazar y consumir un servicio remoto:  
 
-* **Cree la `Service`**  subclase de subclase `Service` &ndash; del tipo e implemente los métodos de ciclo de vida para un servicio enlazado. También es necesario establecer los metadatos que informarán a Android de que el servicio debe ejecutarse en su propio proceso.
-* **Implementar un `Handler`**  esresponsablede`Handler` analizar las solicitudes de cliente, extraer los parámetros que se pasaron del cliente e invocar los métodos adecuados en el servicio. &ndash;
-* **Cree `Messenger` una** `Handler` `Messenger` `Service` instancia de como se describió anteriormente, cada una de las cuales debe mantener una instancia de la clase que enrute las solicitudes de cliente a la que se creó en el paso anterior. &ndash;
+- **Cree la `Service`**  subclase de subclase `Service` &ndash; del tipo e implemente los métodos de ciclo de vida para un servicio enlazado. También es necesario establecer los metadatos que informarán a Android de que el servicio debe ejecutarse en su propio proceso.
+- **Implementar un `Handler`**  esresponsablede`Handler` analizar las solicitudes de cliente, extraer los parámetros que se pasaron del cliente e invocar los métodos adecuados en el servicio. &ndash;
+- **Cree `Messenger` una** `Handler` `Messenger` `Service` instancia de como se describió anteriormente, cada una de las cuales debe mantener una instancia de la clase que enrute las solicitudes de cliente a la que se creó en el paso anterior. &ndash;
 
 Un servicio diseñado para ejecutarse en su propio proceso es, fundamentalmente, un servicio enlazado. La clase de servicio extenderá la `Service` clase base y se decorará `ServiceAttribute` con el que contiene los metadatos que Android necesita agrupar en el manifiesto de Android. Para empezar, las siguientes propiedades de los `ServiceAttribute` elementos que son importantes para un servicio fuera de proceso:
 
@@ -133,8 +133,8 @@ Para procesar las solicitudes de cliente, el servicio debe `Handler` implementar
 
 En el siguiente fragmento de código de la aplicación de ejemplo se `HandleMessage`muestra un ejemplo de. En este ejemplo, hay dos acciones que un cliente puede solicitar al servicio:
 
-* La primera acción es un mensaje _Hello, World_ , el cliente ha enviado un mensaje simple al servicio.
-* La segunda acción invocará un método en el servicio y recuperará una cadena; en este caso, la cadena es un mensaje que devuelve la hora a la que se inició el servicio y cuánto tiempo se ha estado ejecutando:
+- La primera acción es un mensaje _Hello, World_ , el cliente ha enviado un mensaje simple al servicio.
+- La segunda acción invocará un método en el servicio y recuperará una cadena; en este caso, la cadena es un mensaje que devuelve la hora a la que se inició el servicio y cuánto tiempo se ha estado ejecutando:
 
 ```csharp
 public class TimestampRequestHandler : Android.OS.Handler
@@ -384,10 +384,10 @@ Los permisos se pueden identificar mediante `Permission` la propiedad `ServiceAt
 
 Hay cuatro niveles de permisos diferentes que Android proporciona:
 
-* **normal** &ndash; Este es el nivel de permisos predeterminado. Se usa para identificar los permisos de bajo riesgo que Android puede conceder automáticamente a los clientes que lo soliciten. El usuario no tiene que conceder explícitamente estos permisos, pero los permisos se pueden ver en la configuración de la aplicación.
-* **firma** de &ndash; Se trata de una categoría especial de permiso que Android concederá automáticamente a las aplicaciones que estén firmadas con el mismo certificado. Este permiso se ha diseñado para facilitar a los desarrolladores de aplicaciones el uso compartido de componentes o datos entre sus aplicaciones sin molestar al usuario en las aprobaciones de constantes.
-* **signatureOrSystem** Esto es muy similar a los permisos de firma descritos anteriormente. &ndash; Además de concederse automáticamente a las aplicaciones firmadas con el mismo certificado, este permiso también se concederá a las aplicaciones que estén firmadas con el mismo certificado que se usó para firmar las aplicaciones instaladas con la imagen del sistema Android. Normalmente, los desarrolladores de Android ROM usan este permiso para permitir que sus aplicaciones funcionen con aplicaciones de terceros. Normalmente, no lo usan las aplicaciones que están diseñadas para la distribución general para el público en gran medida.
-* **peligrosa** &ndash; Los permisos peligrosos son aquellos que podrían causar problemas al usuario. Por esta razón, los permisos **peligrosos** deben ser aprobados explícitamente por el usuario.
+- **normal** &ndash; Este es el nivel de permisos predeterminado. Se usa para identificar los permisos de bajo riesgo que Android puede conceder automáticamente a los clientes que lo soliciten. El usuario no tiene que conceder explícitamente estos permisos, pero los permisos se pueden ver en la configuración de la aplicación.
+- **firma** de &ndash; Se trata de una categoría especial de permiso que Android concederá automáticamente a las aplicaciones que estén firmadas con el mismo certificado. Este permiso se ha diseñado para facilitar a los desarrolladores de aplicaciones el uso compartido de componentes o datos entre sus aplicaciones sin molestar al usuario en las aprobaciones de constantes.
+- **signatureOrSystem** Esto es muy similar a los permisos de firma descritos anteriormente. &ndash; Además de concederse automáticamente a las aplicaciones firmadas con el mismo certificado, este permiso también se concederá a las aplicaciones que estén firmadas con el mismo certificado que se usó para firmar las aplicaciones instaladas con la imagen del sistema Android. Normalmente, los desarrolladores de Android ROM usan este permiso para permitir que sus aplicaciones funcionen con aplicaciones de terceros. Normalmente, no lo usan las aplicaciones que están diseñadas para la distribución general para el público en gran medida.
+- **peligrosa** &ndash; Los permisos peligrosos son aquellos que podrían causar problemas al usuario. Por esta razón, los permisos **peligrosos** deben ser aprobados explícitamente por el usuario.
 
 Como `signature` los `normal` permisos y se conceden automáticamente en el momento de instalación de Android, es fundamental que apk que hospeda el servicio se instale **antes** que el APK que contiene el cliente. Si el cliente se instala en primer lugar, Android no concederá los permisos. En este caso, será necesario desinstalar el cliente APK, instalar el servicio APK y, a continuación, volver a instalar el cliente APK.
 

@@ -5,12 +5,12 @@ ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 8f32da34c82e46fa4afd69ae420b314eab18b235
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 982eecea12a4e967bc0c05480ae9099cea10b4cb
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889356"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120046"
 ---
 # <a name="callbacks-on-android"></a>Devoluciones de llamada en Android
 
@@ -293,8 +293,8 @@ Hay mucho trabajo que realizar aquí, pero estas mejoras en la inserción de .NE
 
 ## <a name="further-reading"></a>Información adicional
 
-* [Introducción en Android](~/tools/dotnet-embedding/get-started/java/android.md)
-* [Investigación preliminar de Android](~/tools/dotnet-embedding/android/index.md)
-* [Limitaciones de la inserción de .NET](~/tools/dotnet-embedding/limitations.md)
-* [Contribuir al proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
-* [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)
+- [Introducción en Android](~/tools/dotnet-embedding/get-started/java/android.md)
+- [Investigación preliminar de Android](~/tools/dotnet-embedding/android/index.md)
+- [Limitaciones de la inserción de .NET](~/tools/dotnet-embedding/limitations.md)
+- [Contribuir al proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+- [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)

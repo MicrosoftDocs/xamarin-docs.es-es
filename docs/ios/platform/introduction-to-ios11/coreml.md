@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: c2092cd9e7beb233c9478869ebff91d85b5b30c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649605"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121517"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introducción a CoreML en Xamarin. iOS
 
@@ -171,11 +171,11 @@ void HandleClassification(VNRequest request, NSError error){
 
 Hay tres ejemplos de CoreML para probar:
 
-* El [ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) de predicción de precios de hábitat de Mars tiene entradas y salidas numéricas simples.
+- El [ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) de predicción de precios de hábitat de Mars tiene entradas y salidas numéricas simples.
 
-* El [ejemplo de vision & CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) acepta un parámetro de imagen y usa el marco de trabajo para identificar las regiones cuadradas de la imagen, que se pasan a un modelo CoreML que reconoce los dígitos únicos.
+- El [ejemplo de vision & CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) acepta un parámetro de imagen y usa el marco de trabajo para identificar las regiones cuadradas de la imagen, que se pasan a un modelo CoreML que reconoce los dígitos únicos.
 
-* Por último, el [ejemplo de reconocimiento de imágenes CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) usa CoreML para identificar las características de una foto. De forma predeterminada, usa el modelo **SqueezeNet** más pequeño (5 MB), pero se ha escrito para que pueda descargar e incorporar el modelo **VGG16** mayor (553MB). Para obtener más información, vea el [archivo Léame del ejemplo](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+- Por último, el [ejemplo de reconocimiento de imágenes CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) usa CoreML para identificar las características de una foto. De forma predeterminada, usa el modelo **SqueezeNet** más pequeño (5 MB), pero se ha escrito para que pueda descargar e incorporar el modelo **VGG16** mayor (553MB). Para obtener más información, vea el [archivo Léame del ejemplo](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

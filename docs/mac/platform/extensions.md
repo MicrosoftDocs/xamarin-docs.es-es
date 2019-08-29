@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5138062cec6ee71f1db17d0118001b59dd7bc02c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 58250770b925c20b912b71e5591b1d0e252c801a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642947"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119035"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
@@ -28,9 +28,9 @@ En Xamarin. Mac 2,10 se agregó compatibilidad con varios puntos de extensión m
 
 A continuación se indican las limitaciones y los problemas conocidos que pueden producirse al desarrollar extensiones en Xamarin. Mac:
 
-* Actualmente no hay compatibilidad con la depuración en Visual Studio para Mac. Toda la depuración tendrá que realizarse a través de **NSLog** y la **consola**de. Vea la sección sugerencias a continuación para obtener más información.
-* Las extensiones deben estar contenidas en una aplicación host, que cuando se ejecuta una vez con el registro en el sistema. A continuación, se deben habilitar en la sección de **extensión** de **preferencias del sistema**. 
-* Algunos bloqueos de extensión pueden desestabilizar la aplicación host y causar un comportamiento extraño. En concreto, el **buscador** y la sección **hoy** del **Centro** de notificaciones pueden quedar "atascados" y dejar de responder. Esto también se ha experimentado en los proyectos de extensión en Xcode y actualmente no está relacionado con Xamarin. Mac. A menudo, esto se puede ver en el registro del sistema (a través de la **consola**, consulte sugerencias para obtener detalles) imprimir mensajes de error repetidos. Parece que se está reiniciando macOS para corregirlo.
+- Actualmente no hay compatibilidad con la depuración en Visual Studio para Mac. Toda la depuración tendrá que realizarse a través de **NSLog** y la **consola**de. Vea la sección sugerencias a continuación para obtener más información.
+- Las extensiones deben estar contenidas en una aplicación host, que cuando se ejecuta una vez con el registro en el sistema. A continuación, se deben habilitar en la sección de **extensión** de **preferencias del sistema**. 
+- Algunos bloqueos de extensión pueden desestabilizar la aplicación host y causar un comportamiento extraño. En concreto, el **buscador** y la sección **hoy** del **Centro** de notificaciones pueden quedar "atascados" y dejar de responder. Esto también se ha experimentado en los proyectos de extensión en Xcode y actualmente no está relacionado con Xamarin. Mac. A menudo, esto se puede ver en el registro del sistema (a través de la **consola**, consulte sugerencias para obtener detalles) imprimir mensajes de error repetidos. Parece que se está reiniciando macOS para corregirlo.
 
 <a name="Tips" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 604313009129ad3c7133098d8e7880b0e07eef6e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527109"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121403"
 ---
 # <a name="localization-in-xamarinios"></a>Localización en Xamarin. iOS
 
@@ -145,9 +145,9 @@ La sintaxis de los valores de cadena localizados es la siguiente:
 
 Debe aplicar un carácter de escape a los caracteres siguientes en las cadenas:
 
-* `\"`cita
-* `\\`barra diagonal inversa
-* `\n`newline
+- `\"`cita
+- `\\`barra diagonal inversa
+- `\n`newline
 
 Este es un ejemplo es **/localizable. Strings** (es decir, Spanish) del ejemplo:
 

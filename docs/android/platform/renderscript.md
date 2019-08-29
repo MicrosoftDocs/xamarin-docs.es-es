@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9f15ef73e51a2e94e1a1174134f3e69d2cb2c4a3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511426"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119728"
 ---
 # <a name="an-introduction-to-renderscript"></a>Una introducción a Renderscript
 
@@ -22,11 +22,11 @@ _En esta guía se presenta Renderscript y se explica cómo usar las API intríns
 
 Renderscript es un marco de programación creado por Google con el fin de mejorar el rendimiento de las aplicaciones de Android que requieren recursos de cálculo extensivos. Se trata de una API de bajo nivel y alto rendimiento basada en [C99](https://en.wikipedia.org/wiki/C99). Dado que se trata de una API de bajo nivel que se ejecutará en CPU, GPU o DSP, Renderscript es adecuado para aplicaciones Android que pueden necesitar realizar cualquiera de las siguientes acciones:
 
-* Gráficos
-* Procesamiento de imágenes
-* Cifrado
-* Procesamiento de señal
-* Rutinas matemáticas
+- Gráficos
+- Procesamiento de imágenes
+- Cifrado
+- Procesamiento de señal
+- Rutinas matemáticas
 
 Renderscript usará y compilará los scripts en el código de LLVM bytes que se incluye en el APK. `clang` Cuando la aplicación se ejecuta por primera vez, el código de bytes de LLVM se compilará en el código máquina para los procesadores del dispositivo. Esta arquitectura permite a una aplicación de Android aprovechar las ventajas del código máquina sin que los desarrolladores tengan que escribirla para cada procesador en el propio dispositivo.
 
@@ -44,7 +44,7 @@ Hay tres conceptos importantes para el uso de Renderscripts en una aplicación d
 
 1. **Un contexto** &ndash; Una API administrada proporcionada por el Android SDK que asigna recursos a Renderscript y permite a la aplicación Android pasar y recibir datos de Renderscript.
 
-2. **Un _kernel de proceso_**  También conocido como _kernel raíz_ o kernel, que es una rutina que realiza el trabajo.  &ndash; El kernel es muy similar a una función de C. se trata de una rutina pueden paralelizar que se ejecutará en todos los datos de la memoria asignada.
+2. **Un _kernel de proceso_**  También conocido como _kernel raíz_ o kernel, que es una rutina que realiza el trabajo. &ndash; El kernel es muy similar a una función de C. se trata de una rutina pueden paralelizar que se ejecutará en todos los datos de la memoria asignada.
 
 3. **Memoria asignada** Los datos se pasan a y desde un kernel a través de una _[asignación.](xref:Android.Renderscripts.Allocation)_ &ndash; Un kernel puede tener una asignación de entrada o de salida.
 
@@ -67,7 +67,7 @@ clase. La `Script` clase se usa para establecer los parámetros de un Renderscri
 
 - **`Android.Renderscripts.ScriptIntrinsic`** Algunas de las tareas más comunes de Renderscript se incluyen en el Android SDK y son accesibles mediante una subclase de la clase [ScriptIntrinsic.](xref:Android.Renderscripts.ScriptIntrinsic) &ndash; No es necesario que un desarrollador realice pasos adicionales para usar estos scripts en su aplicación, ya que ya se proporcionan.
 
-- **`ScriptC_XXXXX`** También conocido como scripts de usuario, son scripts escritos por desarrolladores y empaquetados en el APK.  &ndash; En tiempo de compilación, la cadena de herramientas de Android generará clases contenedoras administradas que permitirán usar los scripts en la aplicación de Android.
+- **`ScriptC_XXXXX`** También conocido como scripts de usuario, son scripts escritos por desarrolladores y empaquetados en el APK. &ndash; En tiempo de compilación, la cadena de herramientas de Android generará clases contenedoras administradas que permitirán usar los scripts en la aplicación de Android.
   El nombre de estas clases generadas es el nombre del archivo Renderscript, con `ScriptC_`el prefijo. La escritura e incorporación de scripts de usuario no es compatible oficialmente con Xamarin. Android y más allá del ámbito de esta guía.
 
 De estos dos tipos, solo `StringIntrinsic` es compatible con Xamarin. Android. En esta guía se explica cómo usar scripts intrínsecos en una aplicación de Xamarin. Android.

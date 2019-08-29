@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655391"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121285"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconocimiento de voz en Xamarin. iOS
 
@@ -89,8 +89,8 @@ Hay cuatro pasos principales que el desarrollador debe llevar a cabo para adopta
 - Proporcione una descripción del uso en el archivo `Info.plist` de la aplicación `NSSpeechRecognitionUsageDescription` mediante la clave. Por ejemplo, una aplicación de cámara podría incluir la descripción siguiente, _"Esto le permite realizar una foto simplemente diciendo la palabra" queso "._
 - Solicite autorización `SFSpeechRecognizer.RequestAuthorization` llamando al método para presentar una explicación (proporcionada en la `NSSpeechRecognitionUsageDescription` clave anterior) de por qué la aplicación desea que el reconocimiento de voz acceda al usuario en un cuadro de diálogo y permita que acepte o rechace.
 - Cree una solicitud de reconocimiento de voz:
-    * Para el audio grabado previamente en el disco, use `SFSpeechURLRecognitionRequest` la clase.
-    * Para audio en vivo (o audio de la memoria), `SFSPeechAudioBufferRecognitionRequest` use la clase.
+    - Para el audio grabado previamente en el disco, use `SFSpeechURLRecognitionRequest` la clase.
+    - Para audio en vivo (o audio de la memoria), `SFSPeechAudioBufferRecognitionRequest` use la clase.
 - Pase la solicitud de reconocimiento de voz a un reconocedor de voz (`SFSpeechRecognizer`) para comenzar el reconocimiento. Opcionalmente, la aplicación puede mantener en el `SFSpeechRecognitionTask` devuelto para supervisar y realizar un seguimiento de los resultados del reconocimiento.
 
 Estos pasos se tratarán con más detalle a continuación.

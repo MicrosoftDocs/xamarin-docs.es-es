@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
-ms.openlocfilehash: 4cfedad6ccf87dfef819b677233be1edb2d2c62d
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 5eee9fea7ea0fffe9dc254ac4340ff05d087ce33
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887961"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121556"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
@@ -115,13 +115,13 @@ Sin una clave de API válida, el control de mapas se mostrará como un cuadro gr
 
 También deberá habilitar los permisos adecuados, con el botón secundario en el proyecto de Android y seleccione **Opciones > compilar > aplicación de Android** y funciona a la perfección lo siguiente:
 
-* `AccessCoarseLocation`
-* `AccessFineLocation`
-* `AccessLocationExtraCommands`
-* `AccessMockLocation`
-* `AccessNetworkState`
-* `AccessWifiState`
-* `Internet`
+- `AccessCoarseLocation`
+- `AccessFineLocation`
+- `AccessLocationExtraCommands`
+- `AccessMockLocation`
+- `AccessNetworkState`
+- `AccessWifiState`
+- `Internet`
 
 Algunos de ellos se muestran en la captura de pantalla siguiente:
 

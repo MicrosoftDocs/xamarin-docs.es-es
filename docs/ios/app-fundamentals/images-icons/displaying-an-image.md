@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 2c69c995317d5121f203946cf1a4196bce9b4177
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643078"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120595"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin. iOS
 
@@ -159,9 +159,9 @@ Dado que `RenderMode` la propiedad `UIImage` de es de solo lectura, utilice `Ima
 
 Hay tres valores posibles para `UIImage.RenderMode` a través de la `UIImageRenderingMode` enumeración:
 
-* `AlwaysOriginal`: Fuerza la representación de la imagen como el archivo de imagen de origen original sin cambios.
-* `AlwaysTemplate`: Fuerza la representación de la imagen como una imagen de plantilla al colorear los píxeles con el color `Tint` especificado.
-* `Automatic`: Representa la imagen como una plantilla o original según el entorno en el que se usa. Por ejemplo, si la imagen se `UIToolBar`usa en `UITabBar` , `UINavigationBar`o `UISegmentControl` se tratará como una plantilla.
+- `AlwaysOriginal`: Fuerza la representación de la imagen como el archivo de imagen de origen original sin cambios.
+- `AlwaysTemplate`: Fuerza la representación de la imagen como una imagen de plantilla al colorear los píxeles con el color `Tint` especificado.
+- `Automatic`: Representa la imagen como una plantilla o original según el entorno en el que se usa. Por ejemplo, si la imagen se `UIToolBar`usa en `UITabBar` , `UINavigationBar`o `UISegmentControl` se tratará como una plantilla.
 
 ## <a name="adding-new-assets-collections"></a>Agregar nuevas colecciones de activos
 

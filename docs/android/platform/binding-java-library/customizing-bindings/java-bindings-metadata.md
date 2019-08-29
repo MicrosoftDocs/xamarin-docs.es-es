@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524610"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119851"
 ---
 # <a name="java-bindings-metadata"></a>Metadatos de enlaces Java
 
@@ -79,9 +79,9 @@ Permite pasar a analizar **Metadata. XML** con más detalle.
 Como ya hemos aprendido, el generador de enlaces usa el archivo **Metadata. XML** para influir en la creación del ensamblado de enlace.
 El formato de metadatos usa la sintaxis de [XPath](https://www.w3.org/TR/xpath/) y es casi idéntico a los metadatos de *GAPI* descritos en la guía de metadatos de [GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Esta implementación es casi una implementación completa de XPath 1,0 y, por lo tanto, admite elementos del estándar 1,0. Este archivo es un eficaz mecanismo basado en XPath para cambiar, agregar, ocultar o quitar cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla de la especificación de metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
 
-* **agregar nodo** &ndash; Anexa un nodo secundario al nodo especificado por el atributo de ruta de acceso.
-* **ATTR** &ndash; Establece el valor de un atributo del elemento especificado por el atributo de ruta de acceso.
-* **quitar nodo** &ndash; Quita los nodos que coinciden con un XPath especificado.
+- **agregar nodo** &ndash; Anexa un nodo secundario al nodo especificado por el atributo de ruta de acceso.
+- **ATTR** &ndash; Establece el valor de un atributo del elemento especificado por el atributo de ruta de acceso.
+- **quitar nodo** &ndash; Quita los nodos que coinciden con un XPath especificado.
 
 El siguiente es un ejemplo de un archivo **Metadata. XML** :
 
@@ -248,8 +248,8 @@ Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo Retur
 
 Las herramientas que ofuscan las bibliotecas de Java pueden interferir con el generador de enlaces de Xamarin. Android C# y su capacidad de generar clases contenedoras. Las características de las clases ofuscadas incluyen: 
 
-* El nombre de clase incluye **$** una clase, es decir, **una $.**
-* El nombre de clase está totalmente comprometido por caracteres en minúsculas, es decir, **a.**
+- El nombre de clase incluye **$** una clase, es decir, **una $.**
+- El nombre de clase está totalmente comprometido por caracteres en minúsculas, es decir, **a.**
 
 Este fragmento de código es un ejemplo de cómo generar un tipo "no ofuscado C# ":
 

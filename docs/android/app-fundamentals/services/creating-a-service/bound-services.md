@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 6b585783f21cc18112ef766819c9851baac96ef1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ae1e8332f1d62a4690863a97f63c0c1bef1ee127
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644188"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119086"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servicios enlazados en Xamarin. Android
 
@@ -22,9 +22,9 @@ _Los servicios enlazados son servicios de Android que proporcionan una interfaz 
 
 Los servicios que proporcionan una interfaz cliente-servidor para que los clientes interactúen directamente con el servicio se conocen como _servicios enlazados_.  Puede haber varios clientes conectados a una única instancia de un servicio al mismo tiempo. El servicio enlazado y el cliente están aislados entre sí. En su lugar, Android proporciona una serie de objetos intermedios que administran el estado de la conexión entre los dos. Este estado es mantenido por un objeto que implementa la [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) interfaz.  El cliente crea este objeto y se pasa como un parámetro al [`BindService`](xref:Android.Content.Context.BindService*) método. Está disponible en cualquier [`Android.Content.Context`](xref:Android.Content.Context) objeto (como una actividad). `BindService` Se trata de una solicitud al sistema operativo Android para iniciar el servicio y enlazar un cliente a él. Hay tres maneras de enlazar un cliente a un servicio mediante el `BindService` método:
 
-* **Un enlazador de servicios** Un enlazador de servicios es una clase que implementa la [`Android.OS.IBinder`](xref:Android.OS.IBinder) interfaz. &ndash; La mayoría de las aplicaciones no implementarán esta interfaz directamente, sino que extienden la [`Android.OS.Binder`](xref:Android.OS.Binder) clase. Este es el enfoque más común y es adecuado para cuando el servicio y el cliente existen en el mismo proceso.
-* **Uso de Messenger** &ndash; Esta técnica es adecuada para cuando el servicio puede existir en un proceso independiente. En su lugar, se calcula la referencia de las solicitudes de servicio entre el [`Android.OS.Messenger`](xref:Android.OS.Messenger)cliente y el servicio a través de. Se crea en el servicio que controlará las `Messenger` solicitudes. [`Android.OS.Handler`](xref:Android.OS.Handler) Esto se tratará en otra guía.
-* **Uso del lenguaje de definición de interfaz de Android (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) es una técnica avanzada que no se tratará en esta guía.
+- **Un enlazador de servicios** Un enlazador de servicios es una clase que implementa la [`Android.OS.IBinder`](xref:Android.OS.IBinder) interfaz. &ndash; La mayoría de las aplicaciones no implementarán esta interfaz directamente, sino que extienden la [`Android.OS.Binder`](xref:Android.OS.Binder) clase. Este es el enfoque más común y es adecuado para cuando el servicio y el cliente existen en el mismo proceso.
+- **Uso de Messenger** &ndash; Esta técnica es adecuada para cuando el servicio puede existir en un proceso independiente. En su lugar, se calcula la referencia de las solicitudes de servicio entre el [`Android.OS.Messenger`](xref:Android.OS.Messenger)cliente y el servicio a través de. Se crea en el servicio que controlará las `Messenger` solicitudes. [`Android.OS.Handler`](xref:Android.OS.Handler) Esto se tratará en otra guía.
+- **Uso del lenguaje de definición de interfaz de Android (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) es una técnica avanzada que no se tratará en esta guía.
 
 Una vez que un cliente se ha enlazado a un servicio, la comunicación entre los `Android.OS.IBinder` dos se produce a través de un objeto.  Este objeto es responsable de la interfaz que permitirá al cliente interactuar con el servicio. No es necesario que cada aplicación de Xamarin. Android implemente esta interfaz desde cero, el Android SDK proporciona la [`Android.OS.Binder`](xref:Android.OS.Binder) clase que se encarga de la mayor parte del código necesario para calcular las referencias del objeto entre el cliente y el servicio.
 
@@ -53,10 +53,10 @@ Cada uno de estos pasos se tratará con más detalle en las secciones siguientes
 
 Para crear un servicio con Xamarin. Android, es necesario crear una subclase `Service` y adornar la clase [`ServiceAttribute`](xref:Android.App.ServiceAttribute)con. Las herramientas de compilación de Xamarin. Android usan el atributo para registrar correctamente el servicio en el archivo **archivo AndroidManifest. XML** de la aplicación de forma similar a una actividad, un servicio enlazado tiene su propio ciclo de vida y métodos de devolución de llamada asociados a los eventos importantes en su ciclo de vida. La lista siguiente es un ejemplo de algunos de los métodos de devolución de llamada más comunes que implementará un servicio:
 
-* `OnCreate`&ndash; Android invoca este método, ya que crea instancias del servicio. Se utiliza para inicializar las variables u objetos que requiere el servicio durante su vigencia. Este método es opcional.
-* `OnBind`&ndash; Este método debe ser implementado por todos los servicios enlazados. Se invoca cuando el primer cliente intenta conectarse al servicio. Devolverá una instancia de `IBinder` para que el cliente pueda interactuar con el servicio. Siempre que el servicio se esté ejecutando, el `IBinder` objeto se usará para satisfacer las solicitudes de cliente futuras para enlazar con el servicio.
-* `OnUnbind`&ndash; Se llama a este método cuando todos los clientes enlazados tienen desenlazado. Al devolver `true` desde este método, el servicio llamará `OnRebind` más adelante con el intento que `OnUnbind` se pasa a cuando los nuevos clientes se enlazan a él. Lo haría cuando un servicio siga ejecutándose una vez que se haya desenlazado. Esto ocurrirá si el servicio desenlazado recientemente también era un servicio iniciado y `StopService` o `StopSelf` no se hubiese llamado. En este escenario, `OnRebind` permite recuperar el intento. El valor predeterminado `false` devuelve, que no hace nada. Opcional.
-* `OnDestroy`&ndash; Se llama a este método cuando Android está destruyendo el servicio. Cualquier limpieza necesaria, como liberar recursos, debe realizarse en este método. Opcional.
+- `OnCreate`&ndash; Android invoca este método, ya que crea instancias del servicio. Se utiliza para inicializar las variables u objetos que requiere el servicio durante su vigencia. Este método es opcional.
+- `OnBind`&ndash; Este método debe ser implementado por todos los servicios enlazados. Se invoca cuando el primer cliente intenta conectarse al servicio. Devolverá una instancia de `IBinder` para que el cliente pueda interactuar con el servicio. Siempre que el servicio se esté ejecutando, el `IBinder` objeto se usará para satisfacer las solicitudes de cliente futuras para enlazar con el servicio.
+- `OnUnbind`&ndash; Se llama a este método cuando todos los clientes enlazados tienen desenlazado. Al devolver `true` desde este método, el servicio llamará `OnRebind` más adelante con el intento que `OnUnbind` se pasa a cuando los nuevos clientes se enlazan a él. Lo haría cuando un servicio siga ejecutándose una vez que se haya desenlazado. Esto ocurrirá si el servicio desenlazado recientemente también era un servicio iniciado y `StopService` o `StopSelf` no se hubiese llamado. En este escenario, `OnRebind` permite recuperar el intento. El valor predeterminado `false` devuelve, que no hace nada. Opcional.
+- `OnDestroy`&ndash; Se llama a este método cuando Android está destruyendo el servicio. Cualquier limpieza necesaria, como liberar recursos, debe realizarse en este método. Opcional.
 
 Los eventos de ciclo de vida clave de un servicio enlazado se muestran en este diagrama:
 
@@ -232,9 +232,9 @@ El `OnServiceDisconnected` método solo se invoca cuando la conexión entre un c
 
 Para usar un servicio enlazado, un cliente (por ejemplo, una actividad) debe crear una instancia de un `Android.Content.IServiceConnection` objeto que implemente e invoque el `BindService` método. `BindService`devolverá `true` si el servicio está enlazado `false` a, si no lo está. El método `BindService` toma tres parámetros:
 
-* **Una`Intent`** intención&ndash; debe identificar explícitamente a qué servicio se va a conectar.
-* **Un`IServiceConnection`**  objeto&ndash; este objeto es un intermediario que proporciona métodos de devolución de llamada para notificar al cliente cuando se inicia y se detiene el servicio enlazado.
-* enum este parámetro es un conjunto de marcas que el sistema utiliza para enlazar el objeto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; El valor que se usa con [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate)más frecuencia es, que iniciará automáticamente el servicio si aún no se está ejecutando.
+- **Una`Intent`** intención&ndash; debe identificar explícitamente a qué servicio se va a conectar.
+- **Un`IServiceConnection`**  objeto&ndash; este objeto es un intermediario que proporciona métodos de devolución de llamada para notificar al cliente cuando se inicia y se detiene el servicio enlazado.
+- enum este parámetro es un conjunto de marcas que el sistema utiliza para enlazar el objeto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; El valor que se usa con [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate)más frecuencia es, que iniciará automáticamente el servicio si aún no se está ejecutando.
 
 El siguiente fragmento de código es un ejemplo de cómo iniciar un servicio enlazado en una actividad mediante un intento explícito:
 

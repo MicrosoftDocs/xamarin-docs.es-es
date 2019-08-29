@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b5ffa884def5acb01dc07ce39a2189e2570209c3
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620572"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120829"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vistas de tabla en Xamarin. Mac
 
@@ -40,8 +40,8 @@ El comportamiento de una vista de tabla se puede personalizar proporcionando una
 
 Al crear vistas de tabla, Apple sugiere lo siguiente:
 
-* Permite al usuario ordenar la tabla haciendo clic en los encabezados de columna.
-* Cree encabezados de columna que sean nombres o frases cortas que describan los datos que se muestran en esa columna.
+- Permite al usuario ordenar la tabla haciendo clic en los encabezados de columna.
+- Cree encabezados de columna que sean nombres o frases cortas que describan los datos que se muestran en esa columna.
 
 Para obtener más información, consulte la sección [vistas de contenido](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) de las directrices de la interfaz humana de Apple [OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 

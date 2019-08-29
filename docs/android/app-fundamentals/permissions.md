@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1426054b60d182f7f40bf3c4b0bf69b2287ad57e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509407"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119157"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permisos en Xamarin. Android
 
@@ -22,15 +22,15 @@ Las aplicaciones de Android se ejecutan en su propio espacio aislado y, por moti
 
 El desarrollador de la aplicación declara los permisos en **archivo AndroidManifest. XML** cuando se desarrolla la aplicación. Android tiene dos flujos de trabajo diferentes para obtener el consentimiento del usuario para esos permisos:
  
-* En el caso de las aplicaciones destinadas a Android 5,1 (nivel de API 22) o inferior, la solicitud de permiso se produjo cuando se instaló la aplicación. Si el usuario no ha concedido los permisos, no se instalará la aplicación. Una vez instalada la aplicación, no hay ninguna manera de revocar los permisos excepto desinstalando la aplicación.
-* A partir de Android 6,0 (nivel de API 23), a los usuarios se les dio más control sobre los permisos. pueden conceder o revocar permisos, siempre y cuando la aplicación esté instalada en el dispositivo. En esta captura de pantalla se muestra la configuración de permisos de la aplicación Google contacts. Muestra los distintos permisos y permite al usuario habilitar o deshabilitar permisos:
+- En el caso de las aplicaciones destinadas a Android 5,1 (nivel de API 22) o inferior, la solicitud de permiso se produjo cuando se instaló la aplicación. Si el usuario no ha concedido los permisos, no se instalará la aplicación. Una vez instalada la aplicación, no hay ninguna manera de revocar los permisos excepto desinstalando la aplicación.
+- A partir de Android 6,0 (nivel de API 23), a los usuarios se les dio más control sobre los permisos. pueden conceder o revocar permisos, siempre y cuando la aplicación esté instalada en el dispositivo. En esta captura de pantalla se muestra la configuración de permisos de la aplicación Google contacts. Muestra los distintos permisos y permite al usuario habilitar o deshabilitar permisos:
 
 ![Pantalla de permisos de ejemplo](permissions-images/01-permissions-check.png) 
 
 Las aplicaciones de Android deben comprobar en tiempo de ejecución para ver si tienen permiso de acceso a un recurso protegido. Si la aplicación no tiene permiso, debe realizar solicitudes mediante las nuevas API proporcionadas por el Android SDK para que el usuario conceda los permisos. Los permisos se dividen en dos categorías:
 
-* **Permisos normales** &ndash; Se trata de permisos que suponen un pequeño riesgo de seguridad para la seguridad o la privacidad del usuario. Android 6,0 concederá automáticamente permisos normales en el momento de la instalación. Consulte la documentación de Android para obtener una [lista completa de los permisos normales](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-* **Permisos peligrosos** &ndash; A diferencia de los permisos normales, los permisos peligrosos son aquellos que protegen la seguridad o la privacidad del usuario. El usuario debe concederlas explícitamente. El envío o la recepción de un mensaje SMS es un ejemplo de una acción que requiere un permiso peligroso.
+- **Permisos normales** &ndash; Se trata de permisos que suponen un pequeño riesgo de seguridad para la seguridad o la privacidad del usuario. Android 6,0 concederá automáticamente permisos normales en el momento de la instalación. Consulte la documentación de Android para obtener una [lista completa de los permisos normales](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
+- **Permisos peligrosos** &ndash; A diferencia de los permisos normales, los permisos peligrosos son aquellos que protegen la seguridad o la privacidad del usuario. El usuario debe concederlas explícitamente. El envío o la recepción de un mensaje SMS es un ejemplo de una acción que requiere un permiso peligroso.
 
 > [!IMPORTANT]
 > La categoría a la que pertenece un permiso puede cambiar con el tiempo.  Es posible que un permiso categorizado como permiso "normal" se pueda elevar en los niveles de API futuros a un permiso peligroso.
@@ -121,8 +121,8 @@ En el caso de las aplicaciones que tienen como destino Android 5.1 (nivel de API
 
 El `ContextCompat.CheckSelfPermission` método (disponible con la biblioteca de compatibilidad de Android) se usa para comprobar si se ha concedido un permiso específico. Este método devolverá [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) una enumeración que tiene uno de dos valores:
 
-* **`Permission.Granted`** &ndash; Se ha concedido el permiso especificado.
-* **`Permission.Denied`** &ndash; No se ha concedido el permiso especificado.
+- **`Permission.Granted`** &ndash; Se ha concedido el permiso especificado.
+- **`Permission.Denied`** &ndash; No se ha concedido el permiso especificado.
 
 Este fragmento de código es un ejemplo de cómo comprobar el permiso de cámara en una actividad: 
 
@@ -145,9 +145,9 @@ El `ActivityCompat.ShouldShowRequestPermissionRationale` método se usa para det
 
 Si el usuario concede el permiso, se `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` debe llamar al método. Este método requiere los siguientes parámetros:
 
-* **actividad** de &ndash; Se trata de la actividad que solicita los permisos y que se va a notificar mediante Android de los resultados.
-* **permisos** de &ndash; Una lista de los permisos que se solicitan.
-* **antes si requestcode** Valor entero que se usa para hacer coincidir los resultados de la solicitud de permiso con `RequestPermissions` una llamada. &ndash; Este valor debería ser mayor que cero.
+- **actividad** de &ndash; Se trata de la actividad que solicita los permisos y que se va a notificar mediante Android de los resultados.
+- **permisos** de &ndash; Una lista de los permisos que se solicitan.
+- **antes si requestcode** Valor entero que se usa para hacer coincidir los resultados de la solicitud de permiso con `RequestPermissions` una llamada. &ndash; Este valor debería ser mayor que cero.
 
 Este fragmento de código es un ejemplo de los dos métodos que se han analizado. En primer lugar, se realiza una comprobación para determinar si se debe mostrar la racionalización de permisos. Si se va a mostrar la justificación, se muestra un snackbar con la lógica. Si el usuario hace clic en **Aceptar** en snackbar, la aplicación solicitará los permisos. Si el usuario no acepta la razón, la aplicación no debe continuar para solicitar permisos. Si no se muestra la racionalización, la actividad solicitará el permiso:
 

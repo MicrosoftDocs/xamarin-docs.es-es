@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522021"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120477"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -918,8 +918,8 @@ La `Volume` propiedad se define como Nullable Float, ya que la Convención en Ob
 
 Para ello, debe realizar algunas acciones:
 
-* Cree una clase fuertemente tipada que subclase [DictionaryContainer](xref:Foundation.DictionaryContainer) y proporcione los distintos captadores y establecedores para cada propiedad.
-* Declare sobrecargas para los métodos `NSDictionary` que toman la nueva versión fuertemente tipada.
+- Cree una clase fuertemente tipada que subclase [DictionaryContainer](xref:Foundation.DictionaryContainer) y proporcione los distintos captadores y establecedores para cada propiedad.
+- Declare sobrecargas para los métodos `NSDictionary` que toman la nueva versión fuertemente tipada.
 
 Puede crear la clase fuertemente tipada manualmente, o bien usar el generador para realizar el trabajo por usted.  En primer lugar, exploraremos cómo hacerlo manualmente para que entienda lo que está ocurriendo y, después, el enfoque automático.
 
@@ -1404,3 +1404,4 @@ Históricamente, se necesitaba copiar el protocolo en cada implementación, pero
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de enlace](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+ 

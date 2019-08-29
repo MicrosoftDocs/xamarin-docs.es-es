@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528836"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120739"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
 
@@ -61,16 +61,16 @@ Mientras que la vista de pila tiene control total sobre el diseño de cualquier 
 
 Por lo general, esto significa anclar al menos dos bordes de la vista de pila para expandir y contraer, lo que define su posición. Sin restricciones adicionales, se cambiará automáticamente el tamaño de la vista de pila para ajustarse a todas sus subvistas de la manera siguiente:
 
-* El tamaño a lo `Axis` largo de su será la suma de todos los tamaños de las subvistas más el espacio definido entre cada subvista.
-* Si la `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de pila también incluirá espacio para los márgenes.
-* El tamaño perpendicular al `Axis` se establecerá en la subvista más grande de la colección.
+- El tamaño a lo `Axis` largo de su será la suma de todos los tamaños de las subvistas más el espacio definido entre cada subvista.
+- Si la `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de pila también incluirá espacio para los márgenes.
+- El tamaño perpendicular al `Axis` se establecerá en la subvista más grande de la colección.
 
 Además, puede especificar restricciones para el **alto** y el **ancho**de la vista de pila. En este caso, las subvistas se colocarán (con el tamaño) para rellenar el espacio especificado por la vista de `Distribution` pila `Alignment` , según lo determinado por las propiedades y.
 
 Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organizarán en función de la primera o la última línea de base de la subvista, en lugar de usar la posición **superior**, **inferior** o **Centro*- **Y** . Se calculan en el contenido de la vista de pila como se indica a continuación:
 
-* Una vista de pila vertical devolverá la primera subvista de la primera línea de base y la última para la última. Si alguna de estas subvistas son vistas de pila, se usará su primera o última línea base.
-* Una vista de pila horizontal usará su subvista más alta para la primera y la última línea de base. Si la vista más alta también es una vista de pila, usará la subvista más alta como línea de base.
+- Una vista de pila vertical devolverá la primera subvista de la primera línea de base y la última para la última. Si alguna de estas subvistas son vistas de pila, se usará su primera o última línea base.
+- Una vista de pila horizontal usará su subvista más alta para la primera y la última línea de base. Si la vista más alta también es una vista de pila, usará la subvista más alta como línea de base.
 
 > [!IMPORTANT]
 > La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto**de la vista de contenido intrínseca.

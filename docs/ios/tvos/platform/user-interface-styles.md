@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ca3580648d357d2c943274717af66ad5d825ce75
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065592"
+ms.locfileid: "70120052"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de la interfaz de usuario de tvOS en Xamarin
 
@@ -183,22 +183,22 @@ Para habilitar la compatibilidad con la colección de rasgos, haga lo siguiente:
 
 Apple ha agregado las siguientes capacidades al editar guiones gráficos de tvOS en Interface Builder:
 
-* El desarrollador puede especificar diferentes variaciones de elementos de la interfaz de usuario basados en el tema de la interfaz de usuario en el **Inspector de atributos**:
+- El desarrollador puede especificar diferentes variaciones de elementos de la interfaz de usuario basados en el tema de la interfaz de usuario en el **Inspector de atributos**:
 
-  * Ahora varias propiedades tienen una **+** junto a ellas, en las que se puede hacer clic para agregar una versión específica del tema de la interfaz de usuario:
+  - Ahora varias propiedades tienen una **+** junto a ellas, en las que se puede hacer clic para agregar una versión específica del tema de la interfaz de usuario:
 
     [![](user-interface-styles-images/theme08.png "Agregar una versión específica del tema de la interfaz de usuario")](user-interface-styles-images/theme08.png#lightbox)
 
-  * El desarrollador puede especificar una nueva propiedad o hacer clic en el botón **x** para quitarla:
+  - El desarrollador puede especificar una nueva propiedad o hacer clic en el botón **x** para quitarla:
 
     [![](user-interface-styles-images/theme09.png "Especifique una nueva propiedad o haga clic en el botón x para quitarla.")](user-interface-styles-images/theme09.png#lightbox)
-* El desarrollador puede obtener una vista previa del diseño de la interfaz de usuario en el tema claro o oscuro desde Interface Builder:
+- El desarrollador puede obtener una vista previa del diseño de la interfaz de usuario en el tema claro o oscuro desde Interface Builder:
 
-  * La parte inferior del Superficie de diseño permite al desarrollador cambiar el tema de la interfaz de usuario actual:
+  - La parte inferior del Superficie de diseño permite al desarrollador cambiar el tema de la interfaz de usuario actual:
 
     [![](user-interface-styles-images/theme10.png "La parte inferior del Superficie de diseño")](user-interface-styles-images/theme10.png#lightbox)
 
-  * El nuevo tema se mostrará en Interface Builder y se mostrarán los ajustes específicos de la colección de rasgos:
+  - El nuevo tema se mostrará en Interface Builder y se mostrarán los ajustes específicos de la colección de rasgos:
 
     [![](user-interface-styles-images/theme11.png "El tema que se muestra en Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 

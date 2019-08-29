@@ -1,29 +1,29 @@
 ---
-title: Examen de huellas digitales
+title: Buscando huellas digitales
 ms.prod: xamarin
 ms.assetid: 1CDDC096-77E0-47B3-BE0B-8953E2DDACD3
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 372fe4c7844448e7fb3cbc768f16feb3a5cc7791
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023462"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119744"
 ---
-# <a name="scanning-for-fingerprints"></a>Examen de huellas digitales
+# <a name="scanning-for-fingerprints"></a>Buscando huellas digitales
 
-Ahora que hemos visto cómo preparar una aplicación de Xamarin.Android para usar la autenticación con huella digital, vamos a volver a la `FingerprintManager.Authenticate` método y analizar su lugar en la autenticación de huella digital de Android 6.0. Información general del flujo de trabajo de autenticación con huella digital se describe en esta lista:
+Ahora que hemos aprendido a preparar una aplicación de Xamarin. Android para usar la `FingerprintManager.Authenticate` autenticación mediante huella digital, vamos a volver al método y analizaremos su lugar en la autenticación de huellas digitales de Android 6,0. En esta lista se describe información general rápida sobre el flujo de trabajo para la autenticación mediante huellas digitales:
 
-1. Invocar `FingerprintManager.Authenticate`, pasando un `CryptoObject` y un `FingerprintManager.AuthenticationCallback` instancia. El `CryptoObject` se utiliza para garantizar que no se ha alterado el resultado de la autenticación de huella digital. 
-2. Subclase la [FingerprintManager.AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html) clase. Una instancia de esta clase se ofrecerá en `FingerprintManager` cuando se inicia la autenticación de huella digital. Cuando finalice el escáner de huella digital, invocará uno de los métodos de devolución de llamada en esta clase.
-3. Escribir código para actualizar la interfaz de usuario para que el usuario sepa que el dispositivo ha iniciado el escáner de huellas digitales y está esperando la interacción del usuario. 
-4. Cuando se realiza el escáner de huella digital, Android devolverá resultados a la aplicación mediante la invocación de un método en el `FingerprintManager.AuthenticationCallback` instancia que se proporcionó en el paso anterior.
-5. La aplicación de informar al usuario de los resultados de la autenticación de huella digital y reaccionar a los resultados según corresponda. 
+1. Invocar `FingerprintManager.Authenticate`, pasando `CryptoObject` un y `FingerprintManager.AuthenticationCallback` una instancia de. `CryptoObject` Se utiliza para asegurarse de que el resultado de la autenticación de huellas digitales no se ha alterado. 
+2. Subclase de la clase [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html) . Se proporcionará `FingerprintManager` una instancia de esta clase cuando se inicie la autenticación mediante huella digital. Una vez finalizado el escáner de huellas digitales, se invocará uno de los métodos de devolución de llamada en esta clase.
+3. Escriba código para actualizar la interfaz de usuario para que el usuario sepa que el dispositivo ha iniciado el escáner de huellas digitales y está esperando la interacción con el usuario. 
+4. Cuando se realiza el escáner de huellas digitales, Android devolverá los resultados a la aplicación invocando un `FingerprintManager.AuthenticationCallback` método en la instancia que se proporcionó en el paso anterior.
+5. La aplicación informará al usuario de los resultados de la autenticación mediante huellas digitales y reaccionará a los resultados según corresponda. 
 
-El fragmento de código siguiente es un ejemplo de un método en una actividad que se iniciará el examen de huellas digitales:
+El siguiente fragmento de código es un ejemplo de un método en una actividad que iniciará el examen de huellas digitales:
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -46,19 +46,19 @@ protected void FingerPrintAuthenticationExample()
 }
 ```
 
-Tratemos cada uno de estos parámetros en el `Authenticate` método un poco más detalladamente:
+Analicemos cada uno de estos parámetros en el `Authenticate` método en un poco más detallado:
 
-* El primer parámetro es un _crypto_ que usará el escáner de huellas digitales para autenticar a los resultados de un examen de huellas digitales de objeto. Este objeto puede ser `null`, en cuyo caso en que la aplicación tiene que confían ciegamente en la que nada ha alterado los resultados de la huella digital. Se recomienda que un `CryptoObject` se crea una instancia y se proporcionan para el `FingerprintManager` en lugar de null. [Creación de un CryptObject](~/android/platform/fingerprint-authentication/creating-a-cryptoobject.md) se explica detalladamente cómo crear una instancia de un `CryptoObject` según un `Cipher`.
-* El segundo parámetro siempre es cero. La documentación de Android lo identifica como conjunto de marcas y es más probable es que se reserva para uso futuro. 
-* El tercer parámetro, `cancellationSignal` es un objeto utilizado para desactivar el escáner de huellas digitales y cancelar la solicitud actual. Se trata de un [CancellationSignal Android](https://developer.android.com/reference/android/os/CancellationSignal.html)y no es un tipo de .NET framework.
-* El cuarto parámetro es obligatorio y es una clase que cree subclases el `AuthenticationCallback` clase abstracta. Los métodos de esta clase se invocará para indicar a los clientes cuando el `FingerprintManager` ha finalizado y cuáles son los resultados. Como hay mucho que comprender acerca de cómo implementar la `AuthenticationCallback`, se explicará en [es propia sección](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md).
-* El quinto parámetro es opcional `Handler` instancia. Si un `Handler` se proporciona el objeto, el `FingerprintManager` usará el `Looper` desde ese objeto al procesar los mensajes desde el hardware de huella digital. Normalmente, no es necesario proporcionar un `Handler`, usará el FingerprintManager el `Looper` desde la aplicación.
+- El primer parámetro es un objeto _criptográfico_ que el escáner de huellas digitales usará para ayudar a autenticar los resultados de un análisis de huellas digitales. Este objeto puede ser `null`, en cuyo caso la aplicación tiene que confiar ciegamente en que nada ha alterado los resultados de la huella digital. Se recomienda que se cree `CryptoObject` una instancia de y se proporcione `FingerprintManager` a en lugar de NULL. En la [creación de un CryptObject](~/android/platform/fingerprint-authentication/creating-a-cryptoobject.md) se explicará en detalle cómo `CryptoObject` crear una instancia `Cipher`de basándose en un.
+- El segundo parámetro siempre es cero. La documentación de Android lo identifica como un conjunto de marcas y lo más probable es que esté reservado para un uso futuro. 
+- El tercer parámetro `cancellationSignal` es un objeto que se usa para desactivar el escáner de huellas digitales y cancelar la solicitud actual. Se trata de un [CancellationSignal de Android](https://developer.android.com/reference/android/os/CancellationSignal.html), y no de un tipo de .NET Framework.
+- El cuarto parámetro es obligatorio y es una clase que subclase la `AuthenticationCallback` clase abstracta. Los métodos de esta clase se invocarán para indicar a los clientes Cuándo `FingerprintManager` ha finalizado y cuáles son los resultados. Como hay mucho que comprender sobre la `AuthenticationCallback`implementación de, se tratará en su [propia sección](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md).
+- El quinto parámetro es una instancia `Handler` opcional. Si se `Handler` proporciona un objeto `FingerprintManager` , usará el `Looper` de ese objeto al procesar los mensajes del hardware de huella digital. Normalmente, no es necesario proporcionar un `Handler`, FingerprintManager usará el `Looper` de la aplicación.
 
-## <a name="cancelling-a-fingerprint-scan"></a>Al cancelar un examen de huellas digitales
+## <a name="cancelling-a-fingerprint-scan"></a>Cancelar un examen de huellas digitales
 
-Podría ser necesario para el usuario (o la aplicación) cancelar el examen de huellas digitales después de que se ha iniciado. En esta situación, invocar el [ `IsCancelled` ](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) método en el [ `CancellationSignal` ](https://developer.android.com/reference/android/os/CancellationSignal.html) que proporcionó `FingerprintManager.Authenticate` cuando se invoca para iniciar el examen de huellas digitales.
+Es posible que sea necesario que el usuario (o la aplicación) cancele el análisis de huellas digitales una vez iniciado. En esta situación, invoque [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) el método en [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) el que se proporcionó `FingerprintManager.Authenticate` cuando se invocó para iniciar el análisis de huellas digitales.
 
-Ahora que hemos visto la `Authenticate` método, vamos a examinar algunos de los parámetros más importantes con más detalle. En primer lugar, examinaremos [responde a las devoluciones de llamada de autenticación](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), que se describe cómo crear subclases de la [FingerprintManager.AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), habilitando una aplicación Android para reaccionar a la resultados proporcionados por el escáner de huella digital.
+Ahora que hemos encontrado el `Authenticate` método, vamos a examinar algunos de los parámetros más importantes con más detalle. En primer lugar, veremos la [respuesta a](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md)las devoluciones de llamada de autenticación, que explican cómo crear subclases de [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), lo que permite que una aplicación de Android reaccione a los resultados proporcionados por el escáner de huellas digitales.
 
 
 

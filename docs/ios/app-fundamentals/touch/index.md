@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: f11e72e433c443fbb9639b1f972ec4d87adf8b58
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60bd87adb56e311407280ba98f48d8c3e2160836
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526904"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121018"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Control de la entrada táctil en aplicaciones de Xamarin. iOS
 
@@ -34,8 +34,8 @@ Sin embargo, hay ocasiones en las que es necesario usar el procesamiento táctil
 
 Esta guía sirve como introducción a la entrada táctil en iOS. Para obtener más información sobre el uso de comentarios táctiles 3D e hápticos en iOS, que se introdujeron en iOS 9 y 10, consulte las guías específicas siguientes:
 
-* [Entrada táctil 3D](~/ios/platform/3d-touch.md)
-* [Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [Entrada táctil 3D](~/ios/platform/3d-touch.md)
+- [Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

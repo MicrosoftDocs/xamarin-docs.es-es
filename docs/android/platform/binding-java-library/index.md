@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 4c01022e01c5ba6a9099b88e99558bd7d7ce728d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524546"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119640"
 ---
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
@@ -68,36 +68,36 @@ using Com.Company.Package;
 
 Al enlazar una biblioteca de Android existente, es necesario tener en cuenta los puntos siguientes:
 
-* **¿Hay dependencias externas para la biblioteca?** &ndash;Todas las dependencias de Java que requiere la biblioteca de Android deben incluirse en el proyecto de Xamarin. Android como **ReferenceJar** o como **EmbeddedReferenceJar**. Los ensamblados nativos deben agregarse al proyecto de enlace como un **EmbeddedNativeLibrary**.  
+- **¿Hay dependencias externas para la biblioteca?** &ndash;Todas las dependencias de Java que requiere la biblioteca de Android deben incluirse en el proyecto de Xamarin. Android como **ReferenceJar** o como **EmbeddedReferenceJar**. Los ensamblados nativos deben agregarse al proyecto de enlace como un **EmbeddedNativeLibrary**.  
 
-* **¿Qué versión de la API de Android es el destino de la biblioteca de Android?** &ndash;No es posible "degradar" el nivel de API de Android; Asegúrese de que el proyecto de enlace de Xamarin. Android tenga como destino el mismo nivel de API (o superior) que la biblioteca de Android.
+- **¿Qué versión de la API de Android es el destino de la biblioteca de Android?** &ndash;No es posible "degradar" el nivel de API de Android; Asegúrese de que el proyecto de enlace de Xamarin. Android tenga como destino el mismo nivel de API (o superior) que la biblioteca de Android.
 
-* **¿Qué versión del JDK se usó para compilar la biblioteca?** &ndash;Pueden producirse errores de enlace si la biblioteca de Android se compiló con una versión de JDK diferente de la que usa Xamarin. Android. Si es posible, vuelva a compilar la biblioteca de Android con la misma versión del JDK que usa la instalación de Xamarin. Android.
+- **¿Qué versión del JDK se usó para compilar la biblioteca?** &ndash;Pueden producirse errores de enlace si la biblioteca de Android se compiló con una versión de JDK diferente de la que usa Xamarin. Android. Si es posible, vuelva a compilar la biblioteca de Android con la misma versión del JDK que usa la instalación de Xamarin. Android.
 
 
 ## <a name="build-actions"></a>Acciones de compilación
 
 Cuando se crea una biblioteca de enlaces, se establecen *acciones de compilación* en el archivo **. jar** o. Los archivos AAR que se incorporan en el proyecto &ndash; de biblioteca de enlaces cada acción de compilación determinan cómo **. jar** o. El archivo AAR se incrustará en la biblioteca de enlaces (o hará referencia a ella). En la lista siguiente se resumen estas acciones de compilación:
 
-* `EmbeddedJar`Inserta el archivo **. jar** en la dll de la biblioteca de enlaces resultante como un recurso incrustado. &ndash; Esta es la acción de compilación más sencilla y usada con más frecuencia. Use esta opción cuando desee que el archivo **. jar** se compile automáticamente en el código de bytes y se empaquete en la biblioteca de enlaces.
+- `EmbeddedJar`Inserta el archivo **. jar** en la dll de la biblioteca de enlaces resultante como un recurso incrustado. &ndash; Esta es la acción de compilación más sencilla y usada con más frecuencia. Use esta opción cuando desee que el archivo **. jar** se compile automáticamente en el código de bytes y se empaquete en la biblioteca de enlaces.
 
-* `InputJar`No inserta el archivo **. jar** en la biblioteca de enlaces resultante. &ndash; DLL. La biblioteca de enlaces. DLL tendrá una dependencia de este archivo **. jar** en tiempo de ejecución. Utilice esta opción si no desea incluir el archivo **. jar** en la biblioteca de enlaces (por ejemplo, por motivos de licencia). Si usa esta opción, debe asegurarse de que el archivo INPUT **. jar** está disponible en el dispositivo que ejecuta la aplicación.
+- `InputJar`No inserta el archivo **. jar** en la biblioteca de enlaces resultante. &ndash; DLL. La biblioteca de enlaces. DLL tendrá una dependencia de este archivo **. jar** en tiempo de ejecución. Utilice esta opción si no desea incluir el archivo **. jar** en la biblioteca de enlaces (por ejemplo, por motivos de licencia). Si usa esta opción, debe asegurarse de que el archivo INPUT **. jar** está disponible en el dispositivo que ejecuta la aplicación.
 
-* `LibraryProjectZip`&ndash; Inserta un. Archivo AAR en la biblioteca de enlaces resultante. DLL. Esto es similar a EmbeddedJar, salvo que puede tener acceso a los recursos (así como al código) en el enlazado. Archivo AAR. Utilice esta opción si desea incrustar un. AAR en la biblioteca de enlaces.
+- `LibraryProjectZip`&ndash; Inserta un. Archivo AAR en la biblioteca de enlaces resultante. DLL. Esto es similar a EmbeddedJar, salvo que puede tener acceso a los recursos (así como al código) en el enlazado. Archivo AAR. Utilice esta opción si desea incrustar un. AAR en la biblioteca de enlaces.
 
-* `ReferenceJar` Especifica un archivo Reference. jar: un archivo Reference. jar es un archivo. jar que es un archivo. jar enlazado. &ndash; Los archivos AAR dependen de. Esta referencia **. jar** solo se utiliza para satisfacer las dependencias de tiempo de compilación. Cuando se usa esta acción de compilación C# , no se crean enlaces para Reference **. jar** y no se insertan en la biblioteca de enlaces resultante. DLL. Use esta opción cuando vaya a crear una biblioteca de enlaces para el archivo Reference **. jar** pero aún no lo haya hecho. Esta acción de compilación es útil para empaquetar varios **. jar**s (y/o. AARs) en varias bibliotecas de enlaces interdependientes.
+- `ReferenceJar` Especifica un archivo Reference. jar: un archivo Reference. jar es un archivo. jar que es un archivo. jar enlazado. &ndash; Los archivos AAR dependen de. Esta referencia **. jar** solo se utiliza para satisfacer las dependencias de tiempo de compilación. Cuando se usa esta acción de compilación C# , no se crean enlaces para Reference **. jar** y no se insertan en la biblioteca de enlaces resultante. DLL. Use esta opción cuando vaya a crear una biblioteca de enlaces para el archivo Reference **. jar** pero aún no lo haya hecho. Esta acción de compilación es útil para empaquetar varios **. jar**s (y/o. AARs) en varias bibliotecas de enlaces interdependientes.
 
-* `EmbeddedReferenceJar`Inserta un archivo Reference **. jar** en la biblioteca de enlaces resultante. &ndash; DLL. Use esta acción de compilación cuando desee crear C# enlaces para INPUT **. jar** (o. AAR) y todas sus referencias **. jar**(s) en la biblioteca de enlaces.
+- `EmbeddedReferenceJar`Inserta un archivo Reference **. jar** en la biblioteca de enlaces resultante. &ndash; DLL. Use esta acción de compilación cuando desee crear C# enlaces para INPUT **. jar** (o. AAR) y todas sus referencias **. jar**(s) en la biblioteca de enlaces.
 
-* `EmbeddedNativeLibrary`Inserta un objeto nativo **. así** en el enlace. &ndash; Esta acción de compilación se usa para **. por tanto,** los archivos que requiere el archivo **. jar** que se está enlazando. Puede que sea necesario cargar manualmente la biblioteca **. so** antes de ejecutar el código de la biblioteca de Java. Esto se describe a continuación.
+- `EmbeddedNativeLibrary`Inserta un objeto nativo **. así** en el enlace. &ndash; Esta acción de compilación se usa para **. por tanto,** los archivos que requiere el archivo **. jar** que se está enlazando. Puede que sea necesario cargar manualmente la biblioteca **. so** antes de ejecutar el código de la biblioteca de Java. Esto se describe a continuación.
 
 Estas acciones de compilación se explican con más detalle en las siguientes guías.
 
 Además, las siguientes acciones de compilación se usan para ayudar a importar la documentación de la API C# de Java y convertirlas en documentación XML:
 
-* `JavaDocJar`se usa para apuntar al archivo jar de archivo Javadoc para una biblioteca Java que se ajusta a un estilo de paquete `FOOBAR-javadoc**.jar**`Maven (normalmente).
-* `JavaDocIndex`se usa para apuntar `index.html` al archivo en el HTML de documentación de referencia de la API.
-* `JavaSourceJar`se utiliza para complementar `JavaDocJar`, para generar primero Javadoc a partir de orígenes y, a continuación, tratar los resultados como `JavaDocIndex`, para una biblioteca Java que se ajusta a un `FOOBAR-sources**.jar**`estilo de paquete Maven (normalmente).
+- `JavaDocJar`se usa para apuntar al archivo jar de archivo Javadoc para una biblioteca Java que se ajusta a un estilo de paquete `FOOBAR-javadoc**.jar**`Maven (normalmente).
+- `JavaDocIndex`se usa para apuntar `index.html` al archivo en el HTML de documentación de referencia de la API.
+- `JavaSourceJar`se utiliza para complementar `JavaDocJar`, para generar primero Javadoc a partir de orígenes y, a continuación, tratar los resultados como `JavaDocIndex`, para una biblioteca Java que se ajusta a un `FOOBAR-sources**.jar**`estilo de paquete Maven (normalmente).
 
 La documentación de la API debe ser el valor predeterminado de doclet de Java8, Java7 o java6 SDK (tienen el mismo formato) o el estilo DroidDoc.
 

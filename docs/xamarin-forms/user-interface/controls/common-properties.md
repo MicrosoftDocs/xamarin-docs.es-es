@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/21/2019
-ms.openlocfilehash: c487442af7df4e4b8dc8860dcea4cd6065087a7f
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 6d10e665c6461655440ddfb2c524cb56a14337f6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70075661"
+ms.locfileid: "70121348"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Propiedades, métodos y eventos de controles comunes de Xamarin. Forms
 
@@ -80,11 +80,15 @@ La `IsVisible` propiedad es un `bool` valor que determina si se representa el co
 
 ### [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest)
 
-La `MinimumHeightRequest` propiedad es un `double` valor que determina el alto deseado más pequeño del control. Para obtener más información, consulte propiedades de la [solicitud](#request-properties).
+La `MinimumHeightRequest` propiedad es un `double` valor que determina cómo se controla el desbordamiento cuando dos elementos compiten por el espacio limitado. El establecimiento `MinimumHeightRequest` de la propiedad permite que el proceso de diseño escale el elemento hacia abajo hasta la dimensión mínima solicitada. Si no `MinimumHeightRequest` se especifica, el valor predeterminado es-1 y el proceso de diseño `HeightRequest` considerará como el valor mínimo. Esto significa que los elementos sin `MinimumHeightRequest` valor no tendrán un alto escalable.
+
+Para obtener más información, vea [propiedades de solicitud mínima](#minimum-request-properties).
 
 ### [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest)
 
-La `MinimumWidthRequest` propiedad es un `double` valor que determina el ancho deseado más pequeño del control. Para obtener más información, consulte propiedades de la [solicitud](#request-properties).
+La `MinimumWidthRequest` propiedad es un `double` valor que determina cómo se controla el desbordamiento cuando dos elementos compiten por el espacio limitado. El establecimiento `MinimumWidthRequest` de la propiedad permite que el proceso de diseño escale el elemento hacia abajo hasta la dimensión mínima solicitada. Si no `MinimumWidthRequest` se especifica, el valor predeterminado es-1 y el proceso de diseño `WidthRequest` considerará como el valor mínimo. Esto significa que los elementos sin `MinimumWidthRequest` valor no tendrán un ancho escalable.
+
+Para obtener más información, vea [propiedades de solicitud mínima](#minimum-request-properties).
 
 ### [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity)
 
@@ -229,6 +233,35 @@ Todas las plataformas Android, iOS y UWP tienen unidades de medida diferentes qu
 ## <a name="request-properties"></a>Propiedades de solicitud
 
 Las propiedades cuyos nombres contienen "Request" definen un valor deseado, que puede no coincidir con el valor representado real. Por ejemplo, `HeightRequest` puede establecerse en 150 pero si el diseño solo permite espacio para las unidades 100, la `Height` representación del control solo será 100. El tamaño representado se ve afectado por el espacio disponible y los componentes contenidos.
+
+## <a name="minimum-request-properties"></a>Propiedades de solicitud mínimas
+
+Las propiedades de solicitud `MinimumHeightRequest` mínima `MinimumWidthRequest`incluyen y, y están diseñadas para permitir un control más preciso sobre cómo los elementos controlan el desbordamiento entre sí. Sin embargo, el comportamiento de diseño relacionado con estas propiedades tiene algunas consideraciones importantes.
+
+### <a name="unspecified-minimum-property-values"></a>Valores de propiedad mínimos no especificados
+
+Si no se establece un valor mínimo, el valor predeterminado de la propiedad minimum es-1. El proceso de diseño omite este valor y considera que el valor absoluto es el mínimo. La consecuencia práctica de este comportamiento es que **no se** reducirá un elemento sin ningún valor mínimo especificado. **Se** reducirá un elemento con un valor mínimo especificado.
+
+En el siguiente código XAML `BoxView` se muestran dos elementos `StackLayout`en un horizontal:
+
+```xaml
+<StackLayout Orientation="Horizontal">
+    <BoxView HeightRequest="100" BackgroundColor="Purple" WidthRequest="500"></BoxView>
+    <BoxView HeightRequest="100" BackgroundColor="Green" WidthRequest="500" MinimumWidthRequest="250"></BoxView>
+</StackLayout>
+```
+
+La primera `BoxView` instancia solicita un ancho de 500 y no especifica un ancho mínimo. La segunda `BoxView` instancia solicita un ancho de 500 y un ancho mínimo de 250. Si el elemento `StackLayout` primario no es lo suficientemente ancho como para contener ambos componentes en el ancho solicitado, `BoxView` el proceso de diseño tendrá en cuenta la primera instancia para tener un ancho mínimo de 500 porque no se especifica ningún otro mínimo válido. La segunda `BoxView` instancia tiene permiso para reducir verticalmente a 250 y se reducirá para ajustarse hasta que su ancho alcance 250 unidades.
+
+Si el comportamiento deseado es que la primera `BoxView` instancia se reduzca verticalmente sin ningún ancho mínimo `MinimumWidthRequest` , se debe establecer en un valor válido, como 0.
+
+### <a name="minimum-and-absolute-property-values"></a>Valores de las propiedades Minimum y Absolute
+
+El comportamiento es indefinido si el valor mínimo es mayor que el valor absoluto. Por ejemplo, si `MinimumWidthRequest` se establece en 100, la `WidthRequest` propiedad nunca debe superar 100. Al especificar un valor de propiedad mínimo, siempre debe especificar un valor absoluto para asegurarse de que el valor absoluto sea mayor que el valor mínimo.
+
+### <a name="minimum-properties-within-a-grid"></a>Propiedades mínimas dentro de una cuadrícula
+
+`Grid`los diseños tienen su propio sistema para ajustar el tamaño relativo de las filas y las columnas. El `MinimumWidthRequest` uso `MinimumHeightRequest` de o `Grid` dentro de un diseño no tendrá ningún efecto. Para obtener más información, consulte [cuadrícula de Xamarin. Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
