@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 25ebf101dfe0cc3d51e8411b7977e6dc0b061f2d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8cb5d1cb29f5668194d15102c0b2fb4118388e94
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978405"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065469"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Capacidades de Wallet en Xamarin.iOS
 
@@ -22,11 +22,11 @@ Wallet es una aplicación que almacena y muestra códigos de barras y otro conte
 
 Los desarrolladores pueden trabajar con Wallet de varias maneras:
 
-*   Para crear un pase no es necesario compilar una aplicación. Un Passfile es un archivo comprimido que contiene algunos archivos JSON y archivos de metadatos opcionales. Para prepararlo necesitará un [identificador de tipo de pase](~/ios/platform/passkit.md) y un [certificado de pase](~/ios/platform/passkit.md). Luego, esta información se declara en un archivo JSON. En la guía [Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit) encontrará más información sobre cómo aprovisionar un Passfile.
+* Para crear un pase no es necesario compilar una aplicación. Un Passfile es un archivo comprimido que contiene algunos archivos JSON y archivos de metadatos opcionales. Para prepararlo necesitará un [identificador de tipo de pase](~/ios/platform/passkit.md) y un [certificado de pase](~/ios/platform/passkit.md). Luego, esta información se declara en un archivo JSON. En la guía [Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit) encontrará más información sobre cómo aprovisionar un Passfile.
 
-*   Las aplicaciones complementarias se escriben para distribuir pases. También tienen la funcionalidad para crear, editar y actualizar pases y agregarlos a la aplicación Wallet. Un buen ejemplo de este tipo de aplicación sería una aplicación de cine: una vez que un usuario compra una entrada con la aplicación, se puede agregar directamente a Wallet desde la aplicación. Para usar una aplicación complementaria, el perfil de aprovisionamiento debe incluir un Id. de aplicación con las características de Wallet, que se pueden establecer si se siguen los pasos siguientes. La aplicación también debe incluir los derechos necesarios.
+* Las aplicaciones complementarias se escriben para distribuir pases. También tienen la funcionalidad para crear, editar y actualizar pases y agregarlos a la aplicación Wallet. Un buen ejemplo de este tipo de aplicación sería una aplicación de cine: una vez que un usuario compra una entrada con la aplicación, se puede agregar directamente a Wallet desde la aplicación. Para usar una aplicación complementaria, el perfil de aprovisionamiento debe incluir un Id. de aplicación con las características de Wallet, que se pueden establecer si se siguen los pasos siguientes. La aplicación también debe incluir los derechos necesarios.
 
-*   Conduit Apps son aplicaciones que no manipulan los pases directamente. Tienen una interacción mínima con el pase más allá de recibirlo y de proporcionar al usuario la opción de agregarlo a Wallet. Estas aplicaciones no necesitan ningún aprovisionamiento o derecho especial, pero usan algunos métodos del marco de PassKit.
+* Conduit Apps son aplicaciones que no manipulan los pases directamente. Tienen una interacción mínima con el pase más allá de recibirlo y de proporcionar al usuario la opción de agregarlo a Wallet. Estas aplicaciones no necesitan ningún aprovisionamiento o derecho especial, pero usan algunos métodos del marco de PassKit.
 
 ## <a name="developer-center"></a>Centro para desarrolladores
 
@@ -57,7 +57,7 @@ Este Id. de aplicación ya puede usarse para generar, o volver a generar, un nue
 
 Para más información sobre el uso de Wallet, consulte las siguientes guías:
 
-*   [Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit)
+* [Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit)
  
 ## <a name="next-steps"></a>Pasos siguientes
  

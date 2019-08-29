@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 42edb04cb6dfe5fca59a6cc96f34cb8f9c5e1e88
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527707"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120584"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -447,7 +447,7 @@ No todos tienen a su disposición un diseñador para crear los iconos e imágene
 ::: zone-end
 ::: zone pivot="windows"
 
-* Visual Studio: puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
+- Visual Studio: puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
 - [**Glyphish**](http://www.glyphish.com/): conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
 - [**Fiverr**](http://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 

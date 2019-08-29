@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ef36e79254a6d07ae6d23de7e86f6a43b2140b09
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831343"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065518"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Capacidades de iCloud en Xamarin.iOS
 
@@ -97,9 +97,9 @@ Este Id. de aplicación ya puede usarse para generar, o volver a generar, un nue
 
 Para más información sobre el uso de iCloud, consulte las siguientes guías:
 
-*   [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) (Introducción a iCloud)
-*   [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introducción a CloudKit)
-*   [Introduction to Document Picker](~/ios/platform/document-picker.md) (Introducción al selector de documentos)
+* [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) (Introducción a iCloud)
+* [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introducción a CloudKit)
+* [Introduction to Document Picker](~/ios/platform/document-picker.md) (Introducción al selector de documentos)
 
 ## <a name="next-steps"></a>Pasos siguientes
  

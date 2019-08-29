@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 4f5c28c4ad9b673ac50b404e7d34f718366bd11d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890101"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121453"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Aprovisionamiento automático para Xamarin.iOS
 
@@ -100,11 +100,11 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
 Cuando se ha habilitado la firma automática, Visual Studio para Mac actualiza estos artefactos en caso necesario si sucede algo de lo siguiente:
 
-* Se conecta un dispositivo iOS al equipo Mac
+- Se conecta un dispositivo iOS al equipo Mac
     - Comprueba automáticamente si el dispositivo está registrado en el portal Apple Developer. Si no es así, lo agrega y genera un nuevo perfil de aprovisionamiento que lo contiene.
-* Se ha modificado el Id. de agrupación de la aplicación
+- Se ha modificado el Id. de agrupación de la aplicación
     - Actualiza el Id. de aplicación. Se crea un nuevo perfil de aprovisionamiento que contiene este Id. de aplicación.
-* Se ha habilitado una capacidad compatible en el archivo Entitlements.plist.
+- Se ha habilitado una capacidad compatible en el archivo Entitlements.plist.
     - Esta capacidad se agrega al Id. de aplicación y se genera un nuevo perfil de aprovisionamiento con el Id. de aplicación actualizado.
     - No todas las capacidades son compatibles de momento. Para más información sobre las que lo son, vea la guía [Working with Capabilities (Trabajar con capacidades)](~/ios/deploy-test/provisioning/capabilities/index.md).
 

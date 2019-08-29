@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 7bb4e142a8b7bd0cf0691da381729dc226028193
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832178"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121366"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -21,28 +21,28 @@ _Agregar funcionalidades a una aplicación requiere con frecuencia una configura
 Apple proporciona a los desarrolladores _capacidades_ (a veces denominadas _servicios de aplicaciones_) como método para extender la funcionalidad y ampliar el alcance de lo que pueden hacer las aplicaciones de iOS. Gracias a las capacidades, los desarrolladores pueden agregar a su aplicación una integración más profunda de las características de las plataformas, como por ejemplo la capacidad de iniciar transacciones monetarias desde la aplicación, servicios de dispositivo adicionales como Siri, etc.
 Estas capacidades se pueden usar con los proyectos de Xamarin.iOS. A continuación se muestra la lista completa de los servicios:
 
-* Grupos de aplicaciones
-* Dominios asociados
-* Protección de datos
-* Game Center
-* HealthKit
-* HomeKit
-* Configuración inalámbrica de accesorios
-* iCloud
-* Compra desde la aplicación
-* Inter-App Audio
-* Apple Pay
-* Cartera
-* Notificación de inserción
-* VPN personal
-* Siri
-* Asignaciones
-* Modos en segundo plano
-* Uso compartido de cadenas de claves
-* Extensiones de red
-* Configuración de zona activa
-* Múltiples rutas
-* Lectura de etiquetas NFC
+- Grupos de aplicaciones
+- Dominios asociados
+- Protección de datos
+- Game Center
+- HealthKit
+- HomeKit
+- Configuración inalámbrica de accesorios
+- iCloud
+- Compra desde la aplicación
+- Inter-App Audio
+- Apple Pay
+- Cartera
+- Notificación de inserción
+- VPN personal
+- Siri
+- Asignaciones
+- Modos en segundo plano
+- Uso compartido de cadenas de claves
+- Extensiones de red
+- Configuración de zona activa
+- Múltiples rutas
+- Lectura de etiquetas NFC
 
 Las capacidades se pueden habilitar a través de Visual Studio para Mac y Visual Studio 2019, o manualmente en el portal para desarrolladores de Apple. Hay ciertas capacidades, como Wallet, Apple Pay y iCloud, que requieren una configuración adicional de los identificadores de aplicación.
 
@@ -57,16 +57,16 @@ En esta sección se explica cómo usar el aprovisionamiento automático de Visua
 > [!IMPORTANT]
 > No todas las capacidades se pueden agregar y administrar con aprovisionamiento automático. La lista siguiente contiene las capacidades admitidas:
 >
->* HealthKit 
->* HomeKit 
->* VPN personal 
->* Configuración inalámbrica de accesorios 
->* Inter-App Audio 
->* SiriKit 
->* Zona activa 
->* Extensiones de red 
->* Lectura de etiquetas NFC
->* Múltiples rutas 
+>- HealthKit 
+>- HomeKit 
+>- VPN personal 
+>- Configuración inalámbrica de accesorios 
+>- Inter-App Audio 
+>- SiriKit 
+>- Zona activa 
+>- Extensiones de red 
+>- Lectura de etiquetas NFC
+>- Múltiples rutas 
 >
 >Las notificaciones push, Game Center, la compra desde la aplicación, los mapas, el uso compartido de cadenas de claves, los dominios asociados y las capacidades de protección de datos no se admiten de momento. Para agregar estas capacidades, use el aprovisionamiento manual y siga los pasos de la sección [Centro para desarrolladores](#devcenter).
 
@@ -85,8 +85,8 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
     ![Agregar capacidades al archivo entitlements.plist](images/image17.png)
 
     Al seleccionar una capacidad suceden dos cosas:
-    * Esa característica se agrega al Id. de aplicación.
-    * Se agrega el par de clave/valor de derechos al archivo Entitlements.plist.
+    - Esa característica se agrega al Id. de aplicación.
+    - Se agrega el par de clave/valor de derechos al archivo Entitlements.plist.
 
     Visual Studio para Mac le avisa una vez que se han realizado estas tareas mediante el siguiente mensaje de correcto:
 
@@ -108,8 +108,8 @@ Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en
 
     Al guardar **Entitlement.plist** ocurren dos cosas:
 
-    * Esa característica se agrega al Id. de aplicación.
-    * Se agrega el par de clave/valor de derechos al archivo Entitlements.plist.
+    - Esa característica se agrega al Id. de aplicación.
+    - Se agrega el par de clave/valor de derechos al archivo Entitlements.plist.
 
 -----
 
@@ -196,8 +196,8 @@ Ahora cree un perfil de aprovisionamiento que contenga este identificador de apl
 
 Una vez que se ha habilitado una funcionalidad en el servidor, se deben seguir unos pasos más para que la aplicación pueda usar la funcionalidad. En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
-*   Use el espacio de nombres del marco en su aplicación.
-*   Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
+- Use el espacio de nombres del marco en su aplicación.
+- Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
 
 <a name="troubleshooting" />
 

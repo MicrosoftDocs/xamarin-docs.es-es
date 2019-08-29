@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 20aa1da478916bf4c8949103a5ce7fbf1f5d8f93
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832415"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064823"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Capacidades de los grupos de aplicaciones en Xamarin.iOS
 
@@ -20,9 +20,9 @@ _Agregar funcionalidades a una aplicación requiere con frecuencia una configura
 
 Un grupo de aplicaciones permite que aplicaciones diferentes (o una aplicación y sus extensiones) tengan acceso a una ubicación de almacenamiento de archivos compartidos. Los grupos de aplicaciones se pueden usar para datos como:
 
-*   [Configuración de Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
-*   [Valores NSUserDefaults compartidos](~/ios/app-fundamentals/user-defaults.md)
-*   [Archivos compartidos](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Configuración de Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
+* [Valores NSUserDefaults compartidos](~/ios/app-fundamentals/user-defaults.md)
+* [Archivos compartidos](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## <a name="configure-a-new-app-group"></a>Configurar un nuevo grupo de aplicaciones
 

@@ -4,13 +4,13 @@ description: La clase Email de Xamarin.Essentials permite que una aplicación ab
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
-ms.openlocfilehash: f2c275260625fe3842b4473e404f49c71d1d28ae
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.date: 08/20/2019
+ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012487"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060098"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
@@ -62,18 +62,9 @@ public class EmailTest
 }
 ```
 
-
 ## <a name="file-attachments"></a>Datos adjuntos
 
-![Características en versión preliminar](~/media/shared/preview.png)
-
-El envío de archivos por correo electrónico está disponible como versión preliminar experimental en Xamarin.Essentials versión 1.1.0. Esta característica permite que una aplicación envíe archivos por correo electrónico a través de clientes de correo electrónico en el dispositivo. Para habilitar esta característica, establezca la siguiente propiedad en el código de inicio de la aplicación:
-
-```csharp
-ExperimentalFeatures.Enable(ExperimentalFeatures.EmailAttachments);
-```
-
-Una vez que se haya habilitado la característica, se puede enviar por correo electrónico cualquier archivo. Xamarin.Essentials detectará automáticamente el tipo de archivo (MIME) y solicitará que el archivo se agregue como datos adjuntos. Cada cliente de correo electrónico es diferente y podría admitir únicamente algunas extensiones de archivo o ninguna en absoluto.
+Esta característica permite que una aplicación envíe archivos por correo electrónico a través de clientes de correo electrónico en el dispositivo. Xamarin.Essentials detectará automáticamente el tipo de archivo (MIME) y solicitará que el archivo se agregue como datos adjuntos. Cada cliente de correo electrónico es diferente y podría admitir únicamente algunas extensiones de archivo o ninguna en absoluto.
 
 A continuación se muestra un ejemplo en el que se escribe texto en el disco y se agrega como datos adjuntos a un correo electrónico:
 

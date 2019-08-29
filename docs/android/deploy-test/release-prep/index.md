@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525275"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119629"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -319,15 +319,15 @@ Puede ver los archivos de la solución en cualquier momento. Para ello, haga cli
 
 En la **lista de soluciones** se muestran todas las soluciones que tienen como mínimo un proyecto archivado. En la **lista de soluciones** se incluyen las secciones siguientes:
 
-* **Solución actual**: muestra la solución actual. Tenga en cuenta que esta área puede estar vacía si la solución actual no tiene ningún archivo.
-* **Todos los archivos**: muestra todas las soluciones que tienen un archivo.
-* Cuadro de texto de **Búsqueda** (en la parte superior): filtra las soluciones incluidas en la lista **Todos los archivos** según la cadena de búsqueda especificada en el cuadro de texto.
+- **Solución actual**: muestra la solución actual. Tenga en cuenta que esta área puede estar vacía si la solución actual no tiene ningún archivo.
+- **Todos los archivos**: muestra todas las soluciones que tienen un archivo.
+- Cuadro de texto de **Búsqueda** (en la parte superior): filtra las soluciones incluidas en la lista **Todos los archivos** según la cadena de búsqueda especificada en el cuadro de texto.
 
 En la **lista de archivos** se muestra una lista de todos los archivos de la solución seleccionada. En la **lista de archivos** se incluyen las secciones siguientes:
 
-* **Nombre de la solución seleccionada**: muestra el nombre de la solución seleccionada en la **lista de soluciones**. Toda la información que se muestra en la **lista de archivos** hace referencia a esta solución seleccionada.
-* **Filtro de plataformas**: este campo permite filtrar archivos por tipo de plataforma (por ejemplo, iOS o Android).
-* **Elementos de archivo**: muestra los archivos de la solución seleccionada. Cada elemento de esta lista incluye el nombre del proyecto, la fecha de creación y la plataforma. También puede incluir información adicional, como el progreso cuando se está archivando o publicando un elemento.
+- **Nombre de la solución seleccionada**: muestra el nombre de la solución seleccionada en la **lista de soluciones**. Toda la información que se muestra en la **lista de archivos** hace referencia a esta solución seleccionada.
+- **Filtro de plataformas**: este campo permite filtrar archivos por tipo de plataforma (por ejemplo, iOS o Android).
+- **Elementos de archivo**: muestra los archivos de la solución seleccionada. Cada elemento de esta lista incluye el nombre del proyecto, la fecha de creación y la plataforma. También puede incluir información adicional, como el progreso cuando se está archivando o publicando un elemento.
 
 En el **panel de detalles** se muestra información adicional sobre cada archivo. El panel también permite al usuario iniciar el flujo de trabajo de distribución o abrir la carpeta donde se ha creado la distribución. En la sección **Comentarios de la compilación** se pueden incluir comentarios de compilación en el archivo.
 
@@ -343,9 +343,9 @@ En el cuadro de diálogo **Canal de distribución** se muestra información sobr
 
 Es posible elegir uno de los siguientes canales de distribución:
 
-* **Ad hoc**: guarda un APK firmado en el disco que se puede instalar como prueba en dispositivos Android. Vaya a [Signing the App Package](~/android/deploy-test/signing/index.md) (Firmar el paquete de aplicación) para obtener información sobre cómo crear una identidad de firma de Android, crear un certificado de firma para aplicaciones de Android y publicar una versión _ad hoc_ de la aplicación en disco. Esta es una buena forma de crear un APK para realizar pruebas.
+- **Ad hoc**: guarda un APK firmado en el disco que se puede instalar como prueba en dispositivos Android. Vaya a [Signing the App Package](~/android/deploy-test/signing/index.md) (Firmar el paquete de aplicación) para obtener información sobre cómo crear una identidad de firma de Android, crear un certificado de firma para aplicaciones de Android y publicar una versión _ad hoc_ de la aplicación en disco. Esta es una buena forma de crear un APK para realizar pruebas.
 
-* **Google Play**: publica un APK firmado en Google Play. Vaya a [Publicación en Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para obtener información sobre cómo firmar y publicar un APK en Google Play Store.
+- **Google Play**: publica un APK firmado en Google Play. Vaya a [Publicación en Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para obtener información sobre cómo firmar y publicar un APK en Google Play Store.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

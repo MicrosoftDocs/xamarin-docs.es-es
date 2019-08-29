@@ -5,12 +5,12 @@ ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 13b8c4c109855402928d3923a5910e23f933dc65
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: aab0857381d6805503824d89bf47e9d4a6f3ab79
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58176075"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120124"
 ---
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: convertidores de color
 
@@ -49,12 +49,12 @@ var blueWithAlpha = blue.MultiplyAlpha(.5f);
 
 Hay varios métodos de extensión, por ejemplo:
 
-* ToUInt
-* MultiplyAlpha
-* WithHue
-* WithAlpha
-* WithSaturation
-* WithLuminosity
+- ToUInt
+- MultiplyAlpha
+- WithHue
+- WithAlpha
+- WithSaturation
+- WithLuminosity
 
 
 ## <a name="using-platform-extensions"></a>Uso de las extensiones de plataforma

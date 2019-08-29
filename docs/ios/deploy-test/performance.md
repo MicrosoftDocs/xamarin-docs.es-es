@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 47211f60d55f1f355a92307eff53ed9af754eda2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b34ba7e3285549d62e5489287be8886db80bd1af
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527412"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064816"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 

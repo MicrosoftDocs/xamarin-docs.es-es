@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: a00b8052bfa2cd3a762e1b78409ffaa85cdae70c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646760"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119113"
 ---
 # <a name="localization"></a>Localización
 
@@ -28,8 +28,8 @@ El mecanismo integrado para la localización de aplicaciones .NET usa [archivos 
 
 Hay dos ejemplos relacionados con este documento:
 
-* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) es una demostración muy simple de los conceptos explicados. Los fragmentos de código que se muestran a continuación son todos de este ejemplo.
-* [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized) es una aplicación básica de trabajo que usa estas técnicas de localización.
+- [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) es una demostración muy simple de los conceptos explicados. Los fragmentos de código que se muestran a continuación son todos de este ejemplo.
+- [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized) es una aplicación básica de trabajo que usa estas técnicas de localización.
 
 #### <a name="shared-projects-are-not-recommended"></a>No se recomiendan los proyectos compartidos
 
@@ -64,8 +64,8 @@ Elija un nombre descriptivo, como **AppResources**, y pulse **Aceptar**.
 
 Se agregarán dos archivos al proyecto:
 
-* El archivo **AppResources.resx**, en el cual se almacenan cadenas traducibles en formato XML.
-* El archivo **AppResources.designer.cs**, que declara una clase parcial para contener referencias a todos los elementos creados en el archivo XML RESX.
+- El archivo **AppResources.resx**, en el cual se almacenan cadenas traducibles en formato XML.
+- El archivo **AppResources.designer.cs**, que declara una clase parcial para contener referencias a todos los elementos creados en el archivo XML RESX.
 
 El árbol de la solución mostrará los archivos según su relación. El archivo RESX *debe* editarse para agregar nuevas cadenas traducibles; el archivo **.designer.cs** *no* se debe editar.
 
@@ -112,10 +112,10 @@ Basta con establecer la herramienta personalizada en el archivo RESX base tal co
 
 Por desgracia, no hay ningún editor de RESX integrado en Visual Studio para Mac. La adición de nuevas cadenas traducibles requiere la adición de un elemento `data` XML nuevo para cada cadena. Cada elemento `data` puede contener lo siguiente:
 
-* El atributo `name` (obligatorio) es la clave para esta cadena traducible. Debe ser un nombre de propiedad C# válido, por lo que no se permiten espacios ni caracteres especiales.
-* El elemento `value` (obligatorio), que es la cadena real que se muestra en la aplicación.
-* El elemento `comment` (opcional) puede contener instrucciones para el traductor, con explicaciones sobre cómo se utiliza esta cadena.
-* El atributo `xml:space` (opcional) para controlar cómo se conserva el espaciado en la cadena.
+- El atributo `name` (obligatorio) es la clave para esta cadena traducible. Debe ser un nombre de propiedad C# válido, por lo que no se permiten espacios ni caracteres especiales.
+- El elemento `value` (obligatorio), que es la cadena real que se muestra en la aplicación.
+- El elemento `comment` (opcional) puede contener instrucciones para el traductor, con explicaciones sobre cómo se utiliza esta cadena.
+- El atributo `xml:space` (opcional) para controlar cómo se conserva el espaciado en la cadena.
 
 Algunos elementos `data` de ejemplo se muestran aquí:
 
@@ -145,14 +145,14 @@ Normalmente, la traducción real de las cadenas de texto predeterminadas no se l
 Se agrega un archivo RESX adicional para cada idioma que se quiera admitir.
 Los archivos de recursos específicos de idioma deben seguir una convención de nomenclatura específica: deben usar el mismo nombre de archivo que los archivos de recursos base (por ejemplo, **AppResources**) seguido por un punto (.) y, a continuación, el código de idioma. Estos son algunos ejemplos sencillos:
 
-* **AppResources.fr.resx**: traducciones en francés.
-* **AppResources.es.resx**: traducciones en español.
-* **AppResources.de.resx**: traducciones en alemán.
-* **AppResources.ja.resx**: traducciones en japonés.
-* **AppResources.zh Hans.resx** - traducciones en chino (simplificado).
-* **AppResources.zh Hant.resx** - traducciones en chino (tradicional).
-* **AppResources.pt.resx**: traducciones en portugués.
-* **AppResources.pt-BR.resx**: traducciones en portugués (de Brasil).
+- **AppResources.fr.resx**: traducciones en francés.
+- **AppResources.es.resx**: traducciones en español.
+- **AppResources.de.resx**: traducciones en alemán.
+- **AppResources.ja.resx**: traducciones en japonés.
+- **AppResources.zh Hans.resx** - traducciones en chino (simplificado).
+- **AppResources.zh Hant.resx** - traducciones en chino (tradicional).
+- **AppResources.pt.resx**: traducciones en portugués.
+- **AppResources.pt-BR.resx**: traducciones en portugués (de Brasil).
 
 El patrón general consiste en usar códigos de idioma de dos letras, pero hay algunos ejemplos (por ejemplo, chino) donde se usa un formato diferente, y otros ejemplos (por ejemplo, portugués de Brasil) donde se requiere un identificador de configuración regional de cuatro caracteres.
 
@@ -255,10 +255,10 @@ Compruebe el **resultado de la aplicación** para los resultados del código de 
 Si no es así, la clase `AppResources` no podrá cargar sus recursos.
 Compruebe lo siguiente para resolver los problemas que surgen cuando no se pueden encontrar los recursos:
 
-* El espacio de nombres predeterminado para el proyecto coincide con el espacio de nombres raíz en el archivo **AppResources.Designer.cs**.
-* Si el archivo **AppResources.resx** se encuentra en un subdirectorio, el nombre del subdirectorio debe formar parte del espacio de nombres *y* debe formar parte del identificador de recursos.
-* El archivo **AppResources.resx** tiene la **Acción de compilación: EmbeddedResource**.
-* La opción **Project Options > Source Code > .NET Naming Policies > Use Visual Studio-style resources names** (Opciones del proyecto > Código fuente > Directivas de nomenclatura de .NET > Usar nombres de recursos de estilo Visual Studio) está activada. Puede desactivarla, si lo prefiere, pero los espacios de nombres que se usan al hacer referencia a los recursos RESX tendrán que actualizarse en toda la aplicación.
+- El espacio de nombres predeterminado para el proyecto coincide con el espacio de nombres raíz en el archivo **AppResources.Designer.cs**.
+- Si el archivo **AppResources.resx** se encuentra en un subdirectorio, el nombre del subdirectorio debe formar parte del espacio de nombres *y* debe formar parte del identificador de recursos.
+- El archivo **AppResources.resx** tiene la **Acción de compilación: EmbeddedResource**.
+- La opción **Project Options > Source Code > .NET Naming Policies > Use Visual Studio-style resources names** (Opciones del proyecto > Código fuente > Directivas de nomenclatura de .NET > Usar nombres de recursos de estilo Visual Studio) está activada. Puede desactivarla, si lo prefiere, pero los espacios de nombres que se usan al hacer referencia a los recursos RESX tendrán que actualizarse en toda la aplicación.
 
 #### <a name="doesnt-work-in-debug-mode-android-only"></a>No funciona en modo de DEPURACIÓN (solo Android)
 
@@ -654,13 +654,13 @@ namespace UsingResxLocalization
 
 Las viñetas siguientes explican los elementos importantes en el código anterior:
 
-* La clase se denomina `TranslateExtension` pero, por convención, podemos referirnos a ella como **Translate** en nuestro marcado.
-* La clase implementa `IMarkupExtension`, que Xamarin.Forms requiere para que funcione.
-* `"UsingResxLocalization.Resx.AppResources"` es el identificador de recurso para nuestros recursos RESX. Consta de nuestro espacio de nombres predeterminado, la carpeta donde se encuentran los archivos de recursos y el nombre del archivo RESX predeterminado.
-* La clase `ResourceManager` se crea mediante `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`, para determinar el ensamblado actual desde el cual se cargan los recursos, y se almacena en memoria caché en el campo `ResMgr` estático. Se crea como tipo `Lazy`, por lo que su creación se aplaza hasta que se usa en primer lugar en el método `ProvideValue`.
-* `ci` usa el servicio de dependencia para obtener el idioma elegido del usuario desde el sistema operativo nativo.
-* `GetString` es el método que recupera la cadena traducida real de los archivos de recursos. En la Plataforma universal de Windows, `ci` será un valor nulo porque la interfaz `ILocalize` no está implementada en estas plataformas. Esto equivale a llamar al método `GetString` solo con el primer parámetro. De forma alternativa, el marco de trabajo de los recursos reconocerá automáticamente la configuración regional y recuperará la cadena traducida desde el archivo RESX correspondiente.
-* Se ha incluido el control de errores para ayudar a depurar los recursos que faltan iniciando una excepción (solo en modo `DEBUG`).
+- La clase se denomina `TranslateExtension` pero, por convención, podemos referirnos a ella como **Translate** en nuestro marcado.
+- La clase implementa `IMarkupExtension`, que Xamarin.Forms requiere para que funcione.
+- `"UsingResxLocalization.Resx.AppResources"` es el identificador de recurso para nuestros recursos RESX. Consta de nuestro espacio de nombres predeterminado, la carpeta donde se encuentran los archivos de recursos y el nombre del archivo RESX predeterminado.
+- La clase `ResourceManager` se crea mediante `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`, para determinar el ensamblado actual desde el cual se cargan los recursos, y se almacena en memoria caché en el campo `ResMgr` estático. Se crea como tipo `Lazy`, por lo que su creación se aplaza hasta que se usa en primer lugar en el método `ProvideValue`.
+- `ci` usa el servicio de dependencia para obtener el idioma elegido del usuario desde el sistema operativo nativo.
+- `GetString` es el método que recupera la cadena traducida real de los archivos de recursos. En la Plataforma universal de Windows, `ci` será un valor nulo porque la interfaz `ILocalize` no está implementada en estas plataformas. Esto equivale a llamar al método `GetString` solo con el primer parámetro. De forma alternativa, el marco de trabajo de los recursos reconocerá automáticamente la configuración regional y recuperará la cadena traducida desde el archivo RESX correspondiente.
+- Se ha incluido el control de errores para ayudar a depurar los recursos que faltan iniciando una excepción (solo en modo `DEBUG`).
 
 El fragmento de código XAML siguiente muestra cómo usar la extensión de marcado. Su funcionamiento requiere dos pasos:
 
@@ -691,8 +691,8 @@ La siguiente sintaxis más detallada también es válida para la extensión de m
 
 Aunque podemos gestionar la traducción de la interfaz de usuario en el código de Xamarin.Forms, algunos elementos deben realizarse en cada proyecto específico de plataforma. Esta sección explica cómo localizar los elementos siguientes:
 
-* Nombre de la aplicación
-* Imágenes
+- Nombre de la aplicación
+- Imágenes
 
 El proyecto de ejemplo incluye una imagen localizada denominada **flag.png**, a la cual se hace referencia en C# del modo siguiente:
 

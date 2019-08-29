@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 0314ec958b2c38e702c56ef64d1cc2bba1383060
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: bbc01416fe49b361b163808f3502533db8e39d8c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865845"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121323"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabajar con derechos en Xamarin.iOS
 
@@ -94,13 +94,13 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="wallet"></a>Cartera
 
-*   **Descripción**: formalmente llamada Passbook, Wallet es una aplicación que almacena y administra pases. Estos pases pueden ser tarjetas de crédito, tarjetas de fidelización, tarjetas de embarque o entradas.
+- **Descripción**: formalmente llamada Passbook, Wallet es una aplicación que almacena y administra pases. Estos pases pueden ser tarjetas de crédito, tarjetas de fidelización, tarjetas de embarque o entradas.
 
     - **Identificador de tipo de pase**
-        * **Claves**: com.apple.developer.pass-type-identifiers
-        * **Cadena**: `$(TeamIdentifierPrefix)*`
+        - **Claves**: com.apple.developer.pass-type-identifiers
+        - **Cadena**: `$(TeamIdentifierPrefix)*`
 
-* **Notas**:
+- **Notas**:
     - De esta manera, la aplicación admitirá todos los tipos de pases. Para restringir la aplicación y admitir únicamente un subconjunto de tipos de pase de equipo, establezca el valor de la cadena en: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
     Donde pass.$(CFBundleIdentifier) es el identificador de pase creado [anteriormente](~/ios/platform/passkit.md).
@@ -109,7 +109,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="icloud"></a>iCloud
 
-*   **Descripción**: iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores disponen de cuatro formas de usar iCloud para proporcionar almacenamiento a sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento de UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento de archivos y directorios individuales. Para más información, consulte la guía Introduction to iCloud (Introducción a iCloud).
+- **Descripción**: iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores disponen de cuatro formas de usar iCloud para proporcionar almacenamiento a sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento de UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento de archivos y directorios individuales. Para más información, consulte la guía Introduction to iCloud (Introducción a iCloud).
 
     - **Documentos de iCloud y CloudKit**
         - **Claves**: com.apple.developer.ubiquity-container-identifiers
@@ -118,7 +118,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
         - **Clave**: com.apple.developer.ubiquity-kvstore-identifier
         - **Cadena**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
-* **Notas**:
+- **Notas**:
     - Para buscar la cadena `$(TeamIdentifierPrefix)`, regístrese en developer.apple.com y vaya **Member Center > Your Account > Developer Account Summary** (Centro para miembros > Su cuenta > Resumen de la cuenta de desarrollador) para obtener el identificador de equipo (o el identificador personal en el caso de los desarrolladores). Será una cadena de 10 caracteres (por ejemplo, A93A5CM278).
     - La cadena `$(CFBundleIdentifier)` comienza por `iCloud` y se establece al crear el contenedor de iCloud, de acuerdo con los pasos descritos en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
     - Se pueden usar los marcadores de posición $`(TeamIdentifierPrefix)` y `$(CFBundleIdentifier)`, que se sustituirán por los valores correctos en tiempo de compilación.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 59df461c52cd01187ca3a9fc25fe741342910061
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e5f322ece2775f975ab3737eb20ebbd854afa6c4
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854540"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064838"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurar aplicaciones Xamarin.iOS
 
@@ -108,11 +108,11 @@ Para establecer un punto de interrupción condicional, obtenga acceso a la **ven
 
 - Para agregar un nuevo punto de interrupción condicional, haga clic con el botón derecho en el margen del editor, a la izquierda del número de línea del código para el que quiere establecer un punto de interrupción y seleccione Nuevo punto de interrupción:
 
-    [![](debugging-in-xamarin-ios-images/image4.png "Selección de Nuevo punto de interrupción")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Selección de Nuevo punto de interrupción")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - Para agregar una condición a un punto de interrupción existente, haga doble clic en el punto de interrupción y seleccione **Propiedades de punto de interrupción** o, en el **Panel de puntos de interrupción**, seleccione el botón de propiedades que se muestra a continuación:
 
-    [![](debugging-in-xamarin-ios-images/image5.png "Panel Puntos de interrupción")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "Panel Puntos de interrupción")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 Puede escribir la condición bajo la que desea que se produzca el punto de interrupción:
@@ -161,9 +161,9 @@ En Visual Studio tendrá un aspecto similar al siguiente:
 Estos son:
 
 - **Reproducir/detener**: iniciará o detendrá la ejecución del código, hasta el siguiente punto de interrupción.
-- **Paso a paso por procedimientos (F11)**: ejecutará la siguiente línea de código. Si la siguiente línea es una llamada de función, el salto ejecutará la función y se detendrá en la siguiente línea de código _después_ de la función.
-- **Depurar paso a paso con instrucciones(F10)**: esto también ejecutará la siguiente línea de código. Si la siguiente línea es una llamada de función, Depurar paso a paso con instrucciones se detendrá en la primera línea de la función, lo que le permitirá continuar con la depuración línea por línea de la función. Si la línea siguiente no es una función, se comportará igual Paso a paso por procedimientos.
-- **Paso a paso para salir (MAYÚS + F11)**: volverá a la línea donde se llamó la función actual.
+- **Paso a paso por procedimientos (F11)** : ejecutará la siguiente línea de código. Si la siguiente línea es una llamada de función, el salto ejecutará la función y se detendrá en la siguiente línea de código _después_ de la función.
+- **Depurar paso a paso con instrucciones(F10)** : esto también ejecutará la siguiente línea de código. Si la siguiente línea es una llamada de función, Depurar paso a paso con instrucciones se detendrá en la primera línea de la función, lo que le permitirá continuar con la depuración línea por línea de la función. Si la línea siguiente no es una función, se comportará igual Paso a paso por procedimientos.
+- **Paso a paso para salir (MAYÚS + F11)** : volverá a la línea donde se llamó la función actual.
 
 Para acceder a documentación más exhaustiva sobre la depuración, vea [Navegar por el código con el depurador de Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 

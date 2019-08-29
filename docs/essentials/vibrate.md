@@ -5,12 +5,12 @@ ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: d9bf7a1e5e0d15f1fdc909745cd439115b6f8463
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898945"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120113"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibración
 
@@ -107,9 +107,9 @@ No hay diferencias entre las plataformas.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Solo vibra cuando el dispositivo se establece en "Vibrar al sonar".
-* Siempre vibra durante 500 milisegundos.
-* No se puede cancelar la vibración.
+- Solo vibra cuando el dispositivo se establece en "Vibrar al sonar".
+- Siempre vibra durante 500 milisegundos.
+- No se puede cancelar la vibración.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

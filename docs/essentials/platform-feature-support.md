@@ -4,13 +4,13 @@ description: Xamarin.Essentials brinda una API multiplataforma única que funcio
 ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/10/2019
-ms.openlocfilehash: 2dadc9effb2433467609338d4654e784fe8b085e
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.date: 08/20/2019
+ms.openlocfilehash: 6175e6ca6c09f1e85302df309fd58b8278aaf90c
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629595"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060074"
 ---
 # <a name="platform-support"></a>Compatibilidad de la plataforma
 
@@ -28,7 +28,6 @@ Xamarin.Essentials admite las siguientes plataformas y sistemas operativos:
 > [!NOTE]
 > * Tizen es compatible oficialmente con el equipo de desarrollo de Samsung.
 > * tvOS & watchOS tienen una cobertura de API limitada; consulte la guía de características para obtener más información.
-> * Tizen, tvOS, & watchOS actualmente están en versión preliminar y están disponibles en Xamarin.Essentials 1.3-pre.
 
 ## <a name="feature-support"></a>Compatibilidad con características
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: 654eca1098f9486e0c41fd296b3f8d381ac7ea34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105381"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120502"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Referencia de Info.plist para Xamarin.iOS
 
@@ -22,8 +22,8 @@ Para obtener más información sobre cómo trabajar con claves de Info.Plist, le
 
 Para obtener acceso a la ubicación del usuario, también se deben efectuar modificaciones en Info.plist. Se deben establecer las siguientes claves relacionadas con los datos de ubicación: 
 
-* **NSLocationWhenInUseUsageDescription**: Al obtener acceso a la ubicación del usuario mientras interactúa con la aplicación. 
-* **NSLocationAlwaysUsageDescription**: Al obtener acceso la aplicación a la ubicación del usuario en segundo plano.
+- **NSLocationWhenInUseUsageDescription**: Al obtener acceso a la ubicación del usuario mientras interactúa con la aplicación. 
+- **NSLocationAlwaysUsageDescription**: Al obtener acceso la aplicación a la ubicación del usuario en segundo plano.
 
 ## <a name="photos"></a>Fotos 
 

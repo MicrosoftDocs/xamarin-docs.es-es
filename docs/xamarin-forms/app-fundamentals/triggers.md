@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: d9e3055130a66fe240bf378ad2f63679e71bec14
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629621"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121138"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -24,13 +24,13 @@ Puede asignar un desencadenador directamente a un control o agregarlo a un dicci
 
 Hay cuatro tipos de desencadenadores:
 
-* [Desencadenador de propiedades](#property): se produce cuando una propiedad en un control se establece en un valor determinado.
+- [Desencadenador de propiedades](#property): se produce cuando una propiedad en un control se establece en un valor determinado.
 
-* [Desencadenador de datos](#data): usa enlaces de datos para desencadenar basándose en las propiedades de otro control.
+- [Desencadenador de datos](#data): usa enlaces de datos para desencadenar basándose en las propiedades de otro control.
 
-* [Desencadenador de eventos](#event): se produce cuando tiene lugar un evento en el control.
+- [Desencadenador de eventos](#event): se produce cuando tiene lugar un evento en el control.
 
-* [Multi-desencadenador](#multi): permite establecer varias condiciones de desencadenador antes de que se produzca una acción.
+- [Multi-desencadenador](#multi): permite establecer varias condiciones de desencadenador antes de que se produzca una acción.
 
 <a name="property" />
 
@@ -52,15 +52,15 @@ En este ejemplo se muestra un desencadenador que cambia un color de fondo `Entry
 
 Las partes importantes de la declaración del desencadenador son:
 
-* **TargetType**: tipo de control al que se aplica el desencadenador.
+- **TargetType**: tipo de control al que se aplica el desencadenador.
 
-* **Property**: propiedad en el control que se supervisa.
+- **Property**: propiedad en el control que se supervisa.
 
-* **Value**: valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
+- **Value**: valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
 
-* **Setter**: colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
+- **Setter**: colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
 
-* **EnterActions y ExitActions** (no mostrados): se escriben en código y se pueden usar además de los elementos `Setter` (o en su lugar). [Se describen abajo](#enterexit).
+- **EnterActions y ExitActions** (no mostrados): se escriben en código y se pueden usar además de los elementos `Setter` (o en su lugar). [Se describen abajo](#enterexit).
 
 ### <a name="applying-a-trigger-using-a-style"></a>Aplicar un desencadenador mediante un estilo
 
@@ -140,11 +140,11 @@ La propia clase implementa `TriggerAction`, lo que significa que debe proporcion
 
 Una implementación de acción de desencadenador debe:
 
-* Implementar la clase genérica `TriggerAction<T>`, con el parámetro genérico correspondiente al tipo de control al que se va a aplicar el desencadenador. Puede usar superclases como `VisualElement` para escribir acciones de desencadenador que funcionen con una serie de controles, o especificar un tipo de control como `Entry`.
+- Implementar la clase genérica `TriggerAction<T>`, con el parámetro genérico correspondiente al tipo de control al que se va a aplicar el desencadenador. Puede usar superclases como `VisualElement` para escribir acciones de desencadenador que funcionen con una serie de controles, o especificar un tipo de control como `Entry`.
 
-* Invalidar el método `Invoke`: se llama a este método cada vez que se cumplen los criterios del desencadenador.
+- Invalidar el método `Invoke`: se llama a este método cada vez que se cumplen los criterios del desencadenador.
 
-* Opcionalmente, exponer propiedades que se pueden establecer en el código XAML cuando se declara el desencadenador (como `Anchor`, `Scale` y `Length` en este ejemplo).
+- Opcionalmente, exponer propiedades que se pueden establecer en el código XAML cuando se declara el desencadenador (como `Anchor`, `Scale` y `Length` en este ejemplo).
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -236,9 +236,9 @@ Para usar este convertidor en un multi-desencadenador, primero agréguelo al dic
 
 A continuación se muestra el código XAML. Observe las siguientes diferencias con respecto al primer ejemplo de multi-desencadenador:
 
-* El botón tiene `IsEnabled="false"` establecido de forma predeterminada.
-* Las condiciones del multi-desencadenador usan el convertidor para convertir el valor `Text.Length` en un `boolean`.
-* Cuando todas las condiciones son `true`, el establecedor convierte en `true` la propiedad `IsEnabled` del botón.
+- El botón tiene `IsEnabled="false"` establecido de forma predeterminada.
+- Las condiciones del multi-desencadenador usan el convertidor para convertir el valor `Text.Length` en un `boolean`.
+- Cuando todas las condiciones son `true`, el establecedor convierte en `true` la propiedad `IsEnabled` del botón.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />

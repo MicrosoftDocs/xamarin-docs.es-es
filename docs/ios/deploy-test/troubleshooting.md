@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: e57254ce724c5660e53dcd9deaa0f4a27bf91400
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: a290f29707bd59a22f612f31e544a211488eba0d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675197"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121495"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Solución de problemas de pruebas e implementación de Xamarin.iOS
 
@@ -20,19 +20,19 @@ ms.locfileid: "67675197"
 
 El aprovisionamiento y la firma de código con iOS puede resultar bastante difícil, por lo que es importante asegurarse de que los certificados de firma de código y los perfiles de aprovisionamiento están en orden.
 
-* Los equipos grandes deben abstenerse de usar el botón "Solucionar problema" en Xcode, como se muestra aquí:
+- Los equipos grandes deben abstenerse de usar el botón "Solucionar problema" en Xcode, como se muestra aquí:
 
     [![](troubleshooting-images/fixissue.png "Cuadro de diálogo Corregir problemas")](troubleshooting-images/fixissue.png#lightbox)
 
     Esto creará certificados y perfiles de aprovisionamiento nuevos. En el mejor de los casos, esto creará un perfil de aprovisionamiento cada vez que un miembro del equipo haga clic en él, provocando una desorganización en los perfiles. En el peor caso, revocará los certificados del resto de personas de la empresa, provocando que sus aplicaciones dejen de funcionar.
 
-* Mantenga la aplicación Acceso a llaves organizada y elimine los perfiles y certificados que han expirado. Los certificados de empresa duran tres años, mientras que otros solo uno. Los certificados no pueden renovarse, por lo que será necesario crear certificados nuevos antes de que expiren los antiguos. Asegúrese de revocar y eliminar los certificados antiguos, y volver a firmar aplicaciones con los certificados nuevos.
+- Mantenga la aplicación Acceso a llaves organizada y elimine los perfiles y certificados que han expirado. Los certificados de empresa duran tres años, mientras que otros solo uno. Los certificados no pueden renovarse, por lo que será necesario crear certificados nuevos antes de que expiren los antiguos. Asegúrese de revocar y eliminar los certificados antiguos, y volver a firmar aplicaciones con los certificados nuevos.
 
-* Quite los perfiles de aprovisionamiento antiguos a medida que se instalen los nuevos. Es decir, que Visual Studio para Mac no se encuentre en una situación en la que tenga que decidir qué perfil usar. Para conseguir esto, primero asegúrese de eliminar el perfil en el Centro para desarrolladores de Apple y, después, vaya a *Preferencias > Su cuenta > Ver detalles...* Seleccione el perfil de aprovisionamiento y haga clic en **Mostrar en Finder**. Esto mostrará la ubicación del perfil en el sistema de archivos de Mac donde se puede eliminar con Finder.
+- Quite los perfiles de aprovisionamiento antiguos a medida que se instalen los nuevos. Es decir, que Visual Studio para Mac no se encuentre en una situación en la que tenga que decidir qué perfil usar. Para conseguir esto, primero asegúrese de eliminar el perfil en el Centro para desarrolladores de Apple y, después, vaya a *Preferencias > Su cuenta > Ver detalles...* Seleccione el perfil de aprovisionamiento y haga clic en **Mostrar en Finder**. Esto mostrará la ubicación del perfil en el sistema de archivos de Mac donde se puede eliminar con Finder.
 
-* Asegúrese de que todos los certificados necesarios y las claves privadas correspondientes se encuentran disponibles. Para cada equipo necesitará un certificado del desarrollador (para instalar las aplicaciones en un dispositivo propio) y un certificado de distribución (para instalarlas en otros dispositivos).
+- Asegúrese de que todos los certificados necesarios y las claves privadas correspondientes se encuentran disponibles. Para cada equipo necesitará un certificado del desarrollador (para instalar las aplicaciones en un dispositivo propio) y un certificado de distribución (para instalarlas en otros dispositivos).
 
-* Vuelva a iniciar Xcode y Visual Studio para Mac o Visual Studio cuando se instale un nuevo certificado o perfil de aprovisionamiento.
+- Vuelva a iniciar Xcode y Visual Studio para Mac o Visual Studio cuando se instale un nuevo certificado o perfil de aprovisionamiento.
 
 ## <a name="testflight"></a>TestFlight
 

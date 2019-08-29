@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0702241b5dbc744bf40c59928103d92a73a4c462
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526633"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121223"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -222,9 +222,9 @@ Los nuevos certificados o perfiles de aprovisionamiento estarán disponibles en 
 
 Apple proporciona una selección de servicios de aplicación especiales, también denominados funciones, que pueden activarse para una aplicación de Xamarin.iOS. Estos servicios de aplicación deben configurarse en el portal de aprovisionamiento de iOS al crear el **identificador de aplicación** y en el archivo **Entitlements.plist** que forma parte del proyecto de la aplicación de Xamarin.iOS. Para obtener más información sobre cómo agregar servicios de aplicación a la suya propia, consulte las guías [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introducción a las capacidades) y [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Trabajar con derechos).
 
-* Cree un id. de aplicación con los servicios de aplicación necesarios.
-* Cree un nuevo [perfil de aprovisionamiento](#provisioningprofile) que contenga dicho id. de aplicación.
-* Establecer derechos en el proyecto de Xamarin.iOS
+- Cree un id. de aplicación con los servicios de aplicación necesarios.
+- Cree un nuevo [perfil de aprovisionamiento](#provisioningprofile) que contenga dicho id. de aplicación.
+- Establecer derechos en el proyecto de Xamarin.iOS
 
 ## <a name="deploying-to-a-device"></a>Implementación en un dispositivo
 

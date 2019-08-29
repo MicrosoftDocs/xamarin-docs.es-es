@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525474"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119803"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -246,10 +246,10 @@ Después de hacer clic en **Permitir**, el explorador indica _Received verificat
 
 Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play ofrece cuatro pistas posibles para cargar la aplicación:
 
-* **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
-* **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
-* **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
-* **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
+- **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
+- **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
+- **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
+- **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
 
 Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)** , asegúrese de especificar un valor porcentual:
 

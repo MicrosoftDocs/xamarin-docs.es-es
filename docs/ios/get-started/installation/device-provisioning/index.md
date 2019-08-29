@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: f0d6d2343350455a101033aced7cec0c31695503
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 477bb7289588d0ab1b1dd29909c7dc36f2b2dfac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353235"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121422"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Aprovisionamiento de dispositivos para Xamarin.iOS
 
@@ -47,17 +47,17 @@ Estos pasos garantizan que se pueda realizar un seguimiento de todo lo que se cr
 
 Hay dos maneras de aprovisionar el dispositivo iOS:
 
-* **Automáticamente (recomendado)**: seleccione el esquema **Aprovisionamiento automático** en el proyecto para que Visual Studio cree y administre automáticamente las identidades de firma, los Id. de aplicación y los perfiles de aprovisionamiento. Para más información sobre cómo administrar automáticamente el aprovisionamiento, vea la guía [Aprovisionamiento automático](automatic-provisioning.md). Esta es la forma recomendada de aprovisionar un dispositivo iOS.
+- **Automáticamente (recomendado)** : seleccione el esquema **Aprovisionamiento automático** en el proyecto para que Visual Studio cree y administre automáticamente las identidades de firma, los Id. de aplicación y los perfiles de aprovisionamiento. Para más información sobre cómo administrar automáticamente el aprovisionamiento, vea la guía [Aprovisionamiento automático](automatic-provisioning.md). Esta es la forma recomendada de aprovisionar un dispositivo iOS.
 
-* **Manualmente**: las identidades de firma, los Id. de aplicación y los perfiles de aprovisionamiento pueden crearse y administrarse a través del portal Apple Developer, como se explica en la guía [Aprovisionamiento manual](manual-provisioning.md). Luego estos artefactos se pueden administrar como se explica en la guía de [administración de cuentas de Apple](~/cross-platform/macios/apple-account-management.md).
+- **Manualmente**: las identidades de firma, los Id. de aplicación y los perfiles de aprovisionamiento pueden crearse y administrarse a través del portal Apple Developer, como se explica en la guía [Aprovisionamiento manual](manual-provisioning.md). Luego estos artefactos se pueden administrar como se explica en la guía de [administración de cuentas de Apple](~/cross-platform/macios/apple-account-management.md).
 
 ## <a name="provisioning-for-application-services"></a>Aprovisionamiento de servicios de aplicación
 
 Apple proporciona una selección de servicios de aplicación especiales, también denominados funciones, que pueden activarse para una aplicación de Xamarin.iOS. Estos servicios de aplicación deben configurarse en el portal de aprovisionamiento de iOS al crear el **identificador de aplicación** y en el archivo **Entitlements.plist** que forma parte del proyecto de la aplicación de Xamarin.iOS. Para obtener más información sobre cómo agregar servicios de aplicación a la suya propia, consulte las guías [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introducción a las capacidades) y [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Trabajar con derechos).
 
-* Cree un id. de aplicación con los servicios de aplicación necesarios.
-* Cree un nuevo [perfil de aprovisionamiento](#provisioning-your-device) que contenga dicho id. de aplicación.
-* Establecer derechos en el proyecto de Xamarin.iOS
+- Cree un id. de aplicación con los servicios de aplicación necesarios.
+- Cree un nuevo [perfil de aprovisionamiento](#provisioning-your-device) que contenga dicho id. de aplicación.
+- Establecer derechos en el proyecto de Xamarin.iOS
 
 ## <a name="related-links"></a>Vínculos relacionados
 
