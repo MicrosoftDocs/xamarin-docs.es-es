@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: eac7d316b65b57231d2fc25ef6b859293650d3f8
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: e4c8e404f447dd88b338123335a291bc9f23e449
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "53709619"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119007"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -65,12 +65,12 @@ Markdown utiliza caracteres especiales como \*, \` y \# para dar formato. Si des
 ## <a name="file-name"></a>Nombre del archivo
 
 Los nombres de archivo utilizan las siguientes reglas:
-* Solo contienen letras minúsculas, números y guiones.
-* No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
-* Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
-* No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
-* Debe estar en Markdown y utilizar la extensión de archivo .md.
-* Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
+- Solo contienen letras minúsculas, números y guiones.
+- No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
+- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
+- No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
+- Debe estar en Markdown y utilizar la extensión de archivo .md.
+- Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
 
 
 
@@ -155,7 +155,7 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 1. Esto
 1. Es
 1. Una
-1. Por orden 
+1. Por orden
 1. Lista
 
 
