@@ -5,12 +5,12 @@ ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: f1fceaef93e7ac30bbbe0f13da7dde3cde5275fd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5423872da7966bc7e4bb88e278d76b709f114158
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898685"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120714"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
@@ -98,13 +98,13 @@ Estos son los sistemas de coordenadas de la derecha por lo que, con el pulgar de
 
 Ejemplos:
 
-* Cuando el dispositivo está pantalla arriba sobre una mesa, con la parte superior del mismo (en el modo vertical) apuntando al norte, los dos sistemas de coordenadas están alineados. El valor `Quaternion` representa el cuaternión de identidad (0, 0, 0, 1). Todas las rotaciones se pueden analizar en relación con esta posición.
+- Cuando el dispositivo está pantalla arriba sobre una mesa, con la parte superior del mismo (en el modo vertical) apuntando al norte, los dos sistemas de coordenadas están alineados. El valor `Quaternion` representa el cuaternión de identidad (0, 0, 0, 1). Todas las rotaciones se pueden analizar en relación con esta posición.
 
-* Cuando el dispositivo está pantalla arriba sobre una mesa y la parte superior del mismo (en el modo vertical) apunta al oeste, el valor de `Quaternion` es (0, 0, 0.707, 0.707). El dispositivo se giró 90 grados alrededor del eje Z de la Tierra.
+- Cuando el dispositivo está pantalla arriba sobre una mesa y la parte superior del mismo (en el modo vertical) apunta al oeste, el valor de `Quaternion` es (0, 0, 0.707, 0.707). El dispositivo se giró 90 grados alrededor del eje Z de la Tierra.
 
-* Cuando el dispositivo se sostiene de manera vertical, con la parte superior (en el modo vertical) apuntando al cielo y la parte posterior orientada al norte, es porque el dispositivo se giró 90 grados alrededor del eje X. El valor de `Quaternion` es (0.707, 0, 0, 0.707).
+- Cuando el dispositivo se sostiene de manera vertical, con la parte superior (en el modo vertical) apuntando al cielo y la parte posterior orientada al norte, es porque el dispositivo se giró 90 grados alrededor del eje X. El valor de `Quaternion` es (0.707, 0, 0, 0.707).
 
-* Si el dispositivo se coloca de manera tal que el borde izquierdo esté sobre una mesa y la parte superior apunte al norte, es porque el dispositivo se giró &ndash;90 grados alrededor del eje Y (o 90 grados alrededor del eje Y negativo). El valor de `Quaternion` es (0, -0.707, 0, 0.707).
+- Si el dispositivo se coloca de manera tal que el borde izquierdo esté sobre una mesa y la parte superior apunte al norte, es porque el dispositivo se giró &ndash;90 grados alrededor del eje Y (o 90 grados alrededor del eje Y negativo). El valor de `Quaternion` es (0, -0.707, 0, 0.707).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

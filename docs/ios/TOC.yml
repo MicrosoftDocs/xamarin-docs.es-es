@@ -250,6 +250,8 @@
               href: platform/ios13/index.md
             - name: Primeros pasos
               href: platform/ios13/get-started.md
+            - name: Modo oscuro
+              href: platform/ios13/dark-mode.md
             - name: Solución de problemas
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12

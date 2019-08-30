@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 777e8d2880313b5a793d6257cc0fd9d8299cb94d
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 4a80b14aeb1517bac1e0d994a606ac4e74b2a94a
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528486"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065634"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
 
@@ -32,17 +32,17 @@ Estas son las primeras líneas de un bloqueo en una aplicación de prueba sencil
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] *** Assertion failure in -[NSTableView _uncachedRectHeightOfRow:], /SourceCache/AppKit/AppKit-1343.13/TableView.subproj/NSTableView.m:1855
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] NSTableView variable rowHeight error: The value must be > 0 for row 0, but the delegate <NSOutlineViewHottness_HotnessViewDelegate: 0xaa01860> gave -1.000.
 2014-10-15 16:18:02.381 NSOutlineViewHottness[79111:1304993] (
-    0   CoreFoundation                      0x91888343 __raiseError + 195
-    1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
-    2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
-    3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
-    4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
-    5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
-    6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
-    7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
-    8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
-    9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
-    10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
+  0   CoreFoundation                      0x91888343 __raiseError + 195
+  1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
+  2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
+  3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
+  4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
+  5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
+  6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
+  7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
+  8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
+  9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
+  10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
 ```
 
 Las líneas que tienen números como prefijo corresponden al seguimiento de la pila nativo. En ellas puede ver que el error se produjo en alguna parte de `NSTableView`, que controla los altos de las filas. Después, `NSAssertionHandler` activa un objeto `NSException (objc_exception_throw)` y vemos el error de aserción:
@@ -61,7 +61,7 @@ public override nfloat GetRowHeight (NSTableView tableView, nint row)
 }
 ```
 
-## <a name="example-2-callback-jumped-into-middle-of-nowhere"></a>Ejemplo 2: Devolución de llamada en alguna parte
+## <a name="example-2-callback-jumped-into-middle-of-nowhere"></a>Ejemplo 2: Devolución de llamada en alguna parte
 
 ```csharp
 Stacktrace:
@@ -134,7 +134,7 @@ El objeto `NSButton` que devolvió `StandardWindowButton()` se recopiló, aunque
 
 Aunque no era la causa principal de este problema en concreto, los seguimientos de la pila como este también pueden deberse a firmas de método incorrectas en funciones exportadas (`[Export]`) a Objective-C. Por ejemplo, si un método espera que un parámetro sea un objeto `out string` y lo escribe como `string`, se puede bloquear de la misma forma.
 
-## <a name="example-3-callbacks-and-managed-objects"></a>Ejemplo 3: Devoluciones de llamada y objetos administrados
+## <a name="example-3-callbacks-and-managed-objects"></a>Ejemplo 3: Devoluciones de llamada y objetos administrados
 
 La biblioteca realiza una devolución de llamada a muchas API de Cocoa cuando se produce un evento, lo que le da una oportunidad de responder, o cuando algunos datos necesitan llevar a cabo una tarea. Aunque es posible que piense sobre todo en los patrones **Delegate** y **DataSource**, hay una gran cantidad de API que funcionan de esta manera. Por ejemplo, al invalidar los métodos de un objeto `NSView` y, luego, insertarlo en el árbol visual, se espera que AppKit devuelva una llamada cuando se produzca un evento.
 

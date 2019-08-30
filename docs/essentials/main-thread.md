@@ -4,13 +4,13 @@ description: La clase MainThread permite que las aplicaciones ejecuten código e
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 08/20/2019
+ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899010"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060120"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -93,6 +93,18 @@ else
 Quizás sospeche que esta comprobación puede mejorar el rendimiento si el bloque de código ya se ejecuta en el subproceso principal.
 
 _Sin embargo, esta comprobación no es necesaria._ Las implementaciones de plataforma de los `BeginInvokeOnMainThread` mismos comprueban si la llamada se realiza en el subproceso principal. La penalización de rendimiento si llama a `BeginInvokeOnMainThread` cuando no es realmente necesario es muy pequeña.
+
+## <a name="additional-methods"></a>Otros métodos
+
+La clase `MainThread` incluye los siguientes métodos `static` adicionales, que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
+
+| Método | Argumentos | Valores devueltos | Propósito |
+|---|---|---|---|
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un elemento `Func<T>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un elemento `Action` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un elemento `Func<Task<T>>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un elemento `Func<Task>` en el subproceso principal y espera a que se complete. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el elemento `SynchronizationContext` para el subproceso principal. |
 
 ## <a name="api"></a>API
 
