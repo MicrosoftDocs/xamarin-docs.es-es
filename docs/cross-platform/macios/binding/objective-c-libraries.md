@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
+ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120477"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169267"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -325,7 +325,7 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>Protocolos de enlace
 
-Como se describe en el documento de diseño de la API, en la sección sobre [modelos y protocolos](~/ios/internals/api-design/index.md#Models), Xamarin. iOS asigna los protocolos de Objective-C a las clases que se han marcado con el[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+Como se describe en el documento de diseño de la API, en la sección sobre [modelos y protocolos](~/ios/internals/api-design/index.md#models), Xamarin. iOS asigna los protocolos de Objective-C a las clases que se han marcado con el[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
 atribui. Normalmente se usa al implementar clases de delegado de Objective-C.
 
 La gran diferencia entre una clase enlazada normal y una clase delegada es que la clase delegada podría tener uno o más métodos opcionales.
@@ -1404,4 +1404,3 @@ Históricamente, se necesitaba copiar el protocolo en cada implementación, pero
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de enlace](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
- 
