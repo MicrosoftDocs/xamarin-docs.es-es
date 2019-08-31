@@ -7,38 +7,38 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/09/2018
-ms.openlocfilehash: 0b8f3aa736cba6e70fbf346766499c23a9bbe270
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e746a44deb024894a5d1f94fab21128126287e8
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61418228"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198798"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
 
-Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 2017, el archivo .dSYM que se necesita para resolver símbolos de los informes de bloqueo se colocarán en la misma jerarquía de directorio que el archivo del proyecto de la aplicación (.csproj). La ubicación exacta depende de la configuración de compilación del proyecto:
+Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 2017, el archivo. dSYM que se necesita para simbolizará informes de bloqueo se colocará en la misma jerarquía de directorios que el archivo de proyecto de la aplicación (. csproj). La ubicación exacta depende de la configuración de compilación del proyecto:
 
-- Si ha habilitado las compilaciones específicas del dispositivo, el .dSYM puede encontrarse en el directorio siguiente:
+- Si ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;directorio del proyecto&gt;/bin /&lt;plataforma&gt;/&lt;configuración&gt;/device-builds /&lt;dispositivo&gt; - &lt; versión del sistema operativo&gt;/**
+    **&lt;&gt;directorio de proyecto&lt;/bin/&gt;configuracióndeplataforma&lt; /Device-Builds/dispositivo&gt; &lt;/&gt;&lt;- versión de SO&gt;/**
 
     Por ejemplo:
   
     **TestApp/bin/iPhone/Release/device-builds/iphone8.4-11.3.1/**
 
-- Si no ha habilitado las compilaciones específicas del dispositivo, el .dSYM puede encontrarse en el directorio siguiente:
+- Si no ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;directorio del proyecto&gt;/bin /&lt;plataforma&gt;/&lt;configuración&gt;/**
+    **&lt;configuración de&gt;la&lt;plataformade/bin/&gt;dedirectoriodeproyecto/&lt;&gt;/**
 
     Por ejemplo:
 
     **TestApp/bin/iPhone/Release/**
 
 > [!NOTE]
-> Como parte del proceso de compilación, Visual Studio 2017 copia el archivo .dSYM desde el host de compilación de Mac para Windows. Si no ve un archivo .dSYM en Windows, asegúrese de que ha configurado las opciones de compilación de la aplicación a [crear un archivo .ipa](~/ios/deploy-test/app-distribution/ipa-support.md).
+> Como parte del proceso de compilación, Visual Studio 2017 copia el archivo. dSYM del host de compilación de Mac en Windows. Si no ve un archivo. dSYM en Windows, asegúrese de que ha configurado la configuración de compilación de la aplicación para [crear un archivo. IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Symbolicating iOS Crash archivos (Xamarin.iOS)](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
-- [Desmitificación de los registros de bloqueo de aplicación de iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
+- [Symbolicating de archivos de bloqueo de iOS (Xamarin. iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- [Desmitificación de los registros de bloqueo de la aplicación iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
 

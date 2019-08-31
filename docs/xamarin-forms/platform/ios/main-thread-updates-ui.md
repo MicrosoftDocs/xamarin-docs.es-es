@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 9603cccc1f08be057bc66012cdde75e1b7391f1a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d55ef4a97d5d4f320bf152ba05c86aff82eb2f1e
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655272"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200116"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>Actualizaciones principales del control de subprocesos en iOS
 

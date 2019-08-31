@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: 65bcd9f534685a8a953d217d3573f5fe4b0b7400
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887928"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198289"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 

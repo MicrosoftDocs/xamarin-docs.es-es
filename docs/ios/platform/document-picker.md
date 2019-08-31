@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: cd38facb62c5864f1c933611d8d9dcda94589066
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6982f02860db2e89f83b4002d6acb5b28bae906b
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528229"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200368"
 ---
 # <a name="document-picker-in-xamarinios"></a>Selector de documentos en Xamarin. iOS
 
@@ -292,7 +292,7 @@ private void FindDocument () {
 
     // Register a notification for when the query returns
     NSNotificationCenter.DefaultCenter.AddObserver (this,
-            new Selector("queryDidFinishGathering:"),           NSMetadataQuery.DidFinishGatheringNotification,
+            new Selector("queryDidFinishGathering:"),             NSMetadataQuery.DidFinishGatheringNotification,
             Query);
 
     // Start looking for the file
@@ -525,7 +525,7 @@ namespace DocPicker
 
             // Build a predicate to locate the file by name and attach it to the query
             var pred = NSPredicate.FromFormat ("%K == %@",
-                new NSObject[] {NSMetadataQuery.ItemFSNameKey
+                 new NSObject[] {NSMetadataQuery.ItemFSNameKey
                 , new NSString(TestFilename)});
             Query.Predicate = pred;
 
@@ -560,7 +560,7 @@ namespace DocPicker
         }
 
         private void LoadDocument (NSMetadataQuery query) {
-            Console.WriteLine ("Loading Document...");  
+            Console.WriteLine ("Loading Document...");    
 
             // Take action based on the returned record count
             switch (query.ResultCount) {
@@ -684,7 +684,7 @@ namespace DocPicker
                     });
                 }
                 else
-                {   
+                {    
                     // Yes, inform caller and save location the Application Container
                     HasiCloud = true;
                     iCloudUrl = uburl;

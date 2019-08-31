@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 3e6bc829ec947f8f3c01c7ef9679a5feadf4a42a
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 893a3f76fe21bfe831ae81ffcd64c1538d9f05e1
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887374"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200175"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de datos en Xamarin. Mac
 

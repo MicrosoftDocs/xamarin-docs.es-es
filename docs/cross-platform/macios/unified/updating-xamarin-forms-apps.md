@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d119d96a3ce8389a71726e1359e064efe1fbb1ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509445"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199210"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Actualización de aplicaciones de Xamarin. Forms existentes
 
@@ -53,7 +53,7 @@ Haga clic en el proyecto de iOS para que esté seleccionado y, a continuación, 
 Esto lo hará automáticamente:
 
 - Cambie el tipo de proyecto para que admita la API de 64 bits unificada.
-- Cambie la referencia de Framework a **Xamarin. iOS** (reemplazando  la referencia de MonoTouch anterior).
+- Cambie la referencia de Framework a **Xamarin. iOS** (reemplazando la referencia de MonoTouch anterior).
 - Cambie las referencias de espacio de nombres en el código `MonoTouch` para quitar el prefijo.
 - Actualice el archivo **csproj** para usar los destinos de compilación correctos para el Unified API.
 
@@ -192,7 +192,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-### <a name="troubleshooting"></a>solución de problemas
+### <a name="troubleshooting"></a>Solución de problemas
 
 En ocasiones, verá un error similar al siguiente después de actualizar el paquete de NuGet de Xamarin. Forms. Se produce cuando el actualizador de NuGet no quita completamente las referencias a las versiones anteriores de los archivos **csproj** .
 

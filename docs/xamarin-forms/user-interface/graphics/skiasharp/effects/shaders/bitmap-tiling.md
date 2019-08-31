@@ -7,12 +7,12 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 7d323aa6616f7547ab91dfe2b394c339e273d61c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f019b6e031774d7bcdf593015394d0c73c96949b
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650022"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198647"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits de SkiaSharp
 

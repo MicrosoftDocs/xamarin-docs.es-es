@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 334ae6db2efa3b9d3212d0faf4d5f1bb730abb3b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 344bc8f46ecad250c5021be4682f02489aa5cb96
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654107"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198452"
 ---
 # <a name="search-apis-in-xamarinios"></a>Buscar API en Xamarin. iOS
 

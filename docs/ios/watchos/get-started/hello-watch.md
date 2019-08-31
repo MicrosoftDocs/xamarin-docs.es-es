@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 26c418355c83da807d6dfa514e58f9bf1675759f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dba84c32390be8017952206de9e23facd58931fe
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528428"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199037"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
@@ -39,7 +39,7 @@ Ahora debería poder ejecutar la aplicación de inspección, pero como el archiv
 -----
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-    
+
 Haga doble clic en interface. Storyboard en la aplicación de inspección para iniciar Xamarin iOS Designer (si está en un equipo Mac, también puede hacer clic con el botón derecho y **abrirlo con > Xcode Interface Builder**).
 
 

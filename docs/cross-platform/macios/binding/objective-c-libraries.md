@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
-ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
+ms.openlocfilehash: df90bc764200434e8d546a1ebf61e039498517bb
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169267"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199409"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -378,23 +378,23 @@ Para cada definición `MyProtocol` de protocolo en Objective-C, ahora hay una `I
 Cualquier definición que contenga [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) el atributo generará realmente tres clases compatibles que mejoran en gran medida la forma en que se consumen los protocolos:
 
 ```csharp
-    // Full method implementation, contains all methods
-    class MyProtocol : IMyProtocol {
-        public void Say (string msg);
-        public void Listen (string msg);
-    }
+// Full method implementation, contains all methods
+class MyProtocol : IMyProtocol {
+    public void Say (string msg);
+    public void Listen (string msg);
+}
 
-    // Interface that contains only the required methods
-    interface IMyProtocol: INativeObject, IDisposable {
-        [Export ("say:")]
-        void Say (string msg);
-    }
+// Interface that contains only the required methods
+interface IMyProtocol: INativeObject, IDisposable {
+    [Export ("say:")]
+    void Say (string msg);
+}
 
-    // Extension methods
-    static class IMyProtocol_Extensions {
-        public static void Optional (this IMyProtocol this, string msg);
-        }
+// Extension methods
+static class IMyProtocol_Extensions {
+    public static void Optional (this IMyProtocol this, string msg);
     }
+}
 ```
 
 La **implementación** de la clase proporciona una clase abstracta completa que puede invalidar métodos individuales de y obtener seguridad de tipos completa.  Pero debido a C# que no se admite la herencia múltiple, hay escenarios en los que es posible que necesite tener una clase base diferente, pero que aún desea implementar una interfaz, es decir, donde

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/03/2017
-ms.openlocfilehash: 3fc40f3a422901d0ffb4779e0c0b7c46de052d3a
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7e2b3e93baaeac85267c9db2f414793610521f2e
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121209"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200024"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Complicaciones de watchos en Xamarin
 
@@ -64,16 +64,16 @@ public class ComplicationController : CLKComplicationDataSource
 {
   public ComplicationController ()
   {
-    }
+  }
   public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
-    {
-    }
+  {
+  }
   public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
-    {
-    }
+  {
+  }
   public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
-    {
-    }
+  {
+  }
 }
 ```
 

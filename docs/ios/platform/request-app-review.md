@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: c65e29a5499c33fd8d36dfa39bda05ec3b300148
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ca26951784e330b52059a3d2a7519e35013ab1bf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656299"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198509"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Solicitar revisión de la aplicación en Xamarin. iOS
 
@@ -49,9 +49,9 @@ namespace iOSTenThree
 
             return true;
         }
-        
+
         ...
-        
+
     }
 }
 ```

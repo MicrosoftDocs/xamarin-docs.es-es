@@ -7,12 +7,12 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 47b4a1bb0249bc21bd75e82067cb00b3f272e202
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5235f00a28a047260a91cb708e26e262cafbad07
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642680"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200238"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits de SkiaSharp
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: d924bac99b4edc5f41afd024d56fb0c6ace2613d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5bdff0aee39375d8de296849056660f69a7d907f
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647634"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198538"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 

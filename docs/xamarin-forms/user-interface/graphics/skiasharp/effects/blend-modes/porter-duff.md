@@ -7,12 +7,12 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 60de4b8abc200ac7892838765210167f8a79dcfe
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c15dd4606a75cc3cdffbad71f15299568157213a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645842"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199873"
 ---
 # <a name="porter-duff-blend-modes"></a>Modos de fusión Porter Duff
 

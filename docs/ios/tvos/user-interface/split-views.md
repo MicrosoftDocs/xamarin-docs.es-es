@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 52160d11c8c17a67a5db92e6a95f94815d54a0a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7735f53d96977041f518a0ee56fb103a449e6cba
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648928"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198203"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista en dos paneles tvOS en Xamarin
 
@@ -85,7 +85,7 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
     [![](split-views-images/activity04.png "Diseño de contenido")](split-views-images/activity04.png#lightbox)
 1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz C# de usuario en el código.
 1. Guarde los cambios.
-    
+
 -----
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).

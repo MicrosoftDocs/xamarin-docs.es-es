@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 274c441e0507f100697fc153a9f748de1bce4cf3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0619dd9a81c40633c7c61f23ef9e8f3ef92c2e6a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526067"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197624"
 ---
 # <a name="touch-in-android"></a>Entrada táctil de Android
 

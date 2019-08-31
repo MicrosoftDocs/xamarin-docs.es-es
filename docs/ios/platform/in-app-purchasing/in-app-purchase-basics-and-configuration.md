@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4c8e08c5393bed1f96baa7c1bced85eed3d2d0c6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0c24c0f3a57847a7ecf1a1410a1745419517e0c6
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527919"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198859"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Conceptos básicos y configuración de compras desde la aplicación en Xamarin. iOS
 

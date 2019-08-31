@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con el sistema de arch
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/12/2018
-ms.openlocfilehash: e52f9abb31090f3acc361eb5a3f9ae2e12600b36
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653524"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198131"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acceso al sistema de archivos en Xamarin. iOS
 
@@ -292,7 +292,7 @@ La copia de seguridad de una gran cantidad de datos puede tardar mucho tiempo. S
 
 Apple presentó la funcionalidad de *copia de seguridad de icloud* con iOS 5. Cuando está habilitada la copia de seguridad de icloud, se realiza una copia de seguridad de todos los archivos del directorio principal de la aplicación (excluidos los directorios de `Caches`los que `tmp`normalmente no se realiza una copia de seguridad, por ejemplo, el paquete de aplicaciones, y) en los servidores de iCloud. Esta característica proporciona al usuario una copia de seguridad completa en caso de que su dispositivo se pierda, lo roben o dañen.
 
-Dado que iCloud solo proporciona 5 GB de espacio libre para cada usuario y para evitar el uso innecesario de ancho de banda, Apple espera que las aplicaciones solo realicen copias de seguridad de los datos esenciales generados por el usuario. Para cumplir con las directrices de almacenamiento de datos de iOS, debe limitar la cantidad de datos de los que se realiza una copia de seguridad si cumple los siguientes elementos:
+Dado que iCloud solo proporciona 5 GB de espacio libre a cada usuario y para evitar el uso innecesario de ancho de banda, Apple espera que las aplicaciones solo realicen copias de seguridad de los datos esenciales generados por el usuario. Para cumplir con las directrices de almacenamiento de datos de iOS, debe limitar la cantidad de datos de los que se realiza una copia de seguridad si cumple los siguientes elementos:
 
 - Almacene únicamente datos generados por el usuario o datos que no se puedan volver a crear en el directorio documentos (del que se hace copia de seguridad).
 - Almacene cualquier otro dato que se pueda volver a crear o volver a descargar fácilmente `Library/Caches` en `tmp` o (de los que no se realiza ninguna copia de seguridad y que se pueda "limpiar").

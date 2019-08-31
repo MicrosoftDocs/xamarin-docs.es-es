@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 025c3ee6fc176df02f72e78395b880153d6b841d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4b00efe1132f5588ee896fc2044c247acfe0723a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655715"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198467"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Cambiar el alto de fila automáticamente en Xamarin. iOS
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522102"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198395"
 ---
 # <a name="packaging-wear-apps"></a>Aplicaciones de desgaste de empaquetado
 

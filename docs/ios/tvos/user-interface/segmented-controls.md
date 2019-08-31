@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648942"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200250"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabajar con controles segmentados de tvOS en Xamarin
 
@@ -71,7 +71,7 @@ La manera más sencilla de trabajar con controles de segmento en una aplicación
 1. Guarde los cambios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
 1. Arrastre un **Control Segment** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
@@ -85,7 +85,7 @@ La manera más sencilla de trabajar con controles de segmento en una aplicación
 
     [![](segmented-controls-images/segment04-vs.png "Asignación de un nombre")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Guarde los cambios.
-    
+
 -----
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
@@ -208,7 +208,7 @@ Donde `UIControlState` especifica el estado del control para el que está config
 
 - Normal
 - Destaca
-- Disabled
+- Deshabilitado
 - Seleccionado
 - Con foco
 

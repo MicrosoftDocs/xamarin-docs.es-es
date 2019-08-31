@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 16568ca06a7c6be9d23ebb44e9c958b06bbc6bdf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c8d1f3dda459bc679048291e5df94bd68fbb80b2
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657351"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200059"
 ---
 # <a name="introduction-to-tvos-12"></a>Introducción a tvOS 12
 

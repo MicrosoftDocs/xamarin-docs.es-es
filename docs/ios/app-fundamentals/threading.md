@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: cbf0aace8806b3b253b523d9ed2001b466ae5237
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a5c453fc6ac7500c8ade43c38049875a8774657b
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526942"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200198"
 ---
 # <a name="threading-in-xamarinios"></a>Subprocesamiento en Xamarin. iOS
 

@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: de0d7ae6ac6a028166c13aa29bf0ea44035eddce
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.openlocfilehash: 52c4f6b45a44eaa9df253e9d049d1016de4a6e30
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012439"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199357"
 ---
 # <a name="binding-types-reference-guide"></a>Guía de referencia de tipos de enlace
 
@@ -1769,13 +1769,13 @@ Puede usar este atributo para asociar el dominio de error a la propia enumeraci�
 Ejemplo:
 
 ```csharp
-    [Native]
-    [ErrorDomain ("AVKitErrorDomain")]
-    public enum AVKitError : nint {
-        None = 0,
-        Unknown = -1000,
-        PictureInPictureStartFailed = -1001
-    }
+[Native]
+[ErrorDomain ("AVKitErrorDomain")]
+public enum AVKitError : nint {
+    None = 0,
+    Unknown = -1000,
+    PictureInPictureStartFailed = -1001
+}
 ```
 
 Después, puede llamar al método `GetDomain` de extensión para obtener la constante de dominio de cualquier error.

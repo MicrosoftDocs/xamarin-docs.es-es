@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: ff88302755f1c1947591d90ab3373dae7e7db8ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8bd282002ec85350d7a0c413225d35754991e460
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656695"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197937"
 ---
 # <a name="entry-cursor-color-on-ios"></a>Color del cursor de entrada en iOS
 

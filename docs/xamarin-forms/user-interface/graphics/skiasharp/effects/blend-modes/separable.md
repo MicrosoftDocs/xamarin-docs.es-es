@@ -7,12 +7,12 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4fb5bd1e883adc3be89bde7cc0e1529e77165247
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 621bc872a80cf023bb9428e2d3183e8af611211f
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655042"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200389"
 ---
 # <a name="the-separable-blend-modes"></a>Los modos de mezcla separables
 

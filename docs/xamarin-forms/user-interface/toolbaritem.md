@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: e6ce55f25b130c64b72a5a7e2ec2ec9a00291d14
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: b361bc988b66d38fc33ceb866a2c5ec83153f8d0
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976341"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200020"
 ---
 # <a name="xamarinforms-toolbaritem"></a>De Xamarin. Forms ToolbarItem
 

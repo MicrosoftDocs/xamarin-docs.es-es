@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 35df6e4ca799a875bcd7db50adbc7a300460885c
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 013e169770fa2e52f89915d1b74c7292a049f87e
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680962"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197821"
 ---
 # <a name="using-the-model-class"></a>Usar la clase Model
 

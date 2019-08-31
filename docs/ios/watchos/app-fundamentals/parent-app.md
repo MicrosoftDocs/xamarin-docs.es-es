@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfb419834c2eee94f98d023df3a3fe8d6eee90
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654567"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198115"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
@@ -22,11 +22,11 @@ ms.locfileid: "68654567"
 
 Hay diferentes formas de comunicación entre la aplicación del reloj y la aplicación de iOS se incluye con:
 
-- Ver extensiones puede [llamar a un método](#code) frente a la aplicación principal que se ejecuta en segundo plano en el iPhone.
+- Las extensiones de inspección pueden [llamar a un método](#code) en la aplicación primaria que se ejecuta en segundo plano en el iPhone.
 
 - Ver extensiones puede [comparten una ubicación de almacenamiento](#storage) con la aplicación de iPhone primario.
 
-- Uso de entrega para pasar datos de una vista o una notificación a la aplicación del reloj, enviar al usuario a un controlador de interfaz específica en la aplicación.
+- Usar la entrega para pasar datos de un vistazo o una notificación a la aplicación de inspección, enviando el usuario a un controlador de interfaz específico en la aplicación.
 
 La aplicación primaria también en ocasiones se conoce como la aplicación de contenedor.
 

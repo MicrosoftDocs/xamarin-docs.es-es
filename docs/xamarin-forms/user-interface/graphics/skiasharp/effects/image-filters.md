@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 54f6c8b94a1abdfcc3be9a86e179e766c417232b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 10b61a7279964e8e1fb76a88be4f253e96b59908
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655382"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199202"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imágenes de SkiaSharp
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 76e9d91b735f2ae5041330d8e290347ae9314487
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 43c9ee599fe96c107bf10996834d9bcf60847603
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654802"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200106"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
@@ -120,7 +120,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
 
 5. Agregue una imagen a un catálogo de recursos en el proyecto para que esté disponible para su uso en la pantalla de Inicio:
 
-    - En el **Explorador de soluciones**, haga clic con el botón derecho en catálogos de **recursos** y seleccione **Agregar catálogo de recursos**. Asigne a este nuevo activo el nombre **del catálogo de**recursos:
+    - En el **Explorador de soluciones**, haga clic con el botón derecho en catálogos de **recursos** y seleccione **Agregar catálogo de recursos**. Asigne a este nuevo activoel nombre del catálogo de recursos:
 
     ![La ventana Agregar nuevo elemento, con el catálogo de recursos seleccionado](launch-screens-images/launch05.w157.png)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
-ms.openlocfilehash: 13b88619ccd7d01f32afd5b9332c7dcb426380b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 16ff511a2984e98eb8a67ef33cdca25a63fff7ab
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527979"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200315"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Serialización de excepciones en Xamarin. iOS
 

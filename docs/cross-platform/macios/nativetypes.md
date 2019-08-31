@@ -6,12 +6,12 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 9d43bbdb49fe4ab1ff909f709a37f979c360ceb9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509588"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199393"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS y macOS
 
@@ -45,9 +45,9 @@ Se proporcionan operadores de conversiones implícitas cuando no es posible la p
 
 Se proporcionan operadores de conversiones explícitas cuando existe una posibilidad de pérdida de datos (el valor de bit 64 se almacena en una ubicación de almacenamiento 32 o potencialmente 32).
 
- `int``nint` `nuint` y se pueden convertir implícitamente en, y `nfloat` como 32 bits siempre caben en los bits 32 o 64. `float` `uint`
+`int``nint` `nuint` y se pueden convertir implícitamente en, y `nfloat` como 32 bits siempre caben en los bits 32 o 64. `float` `uint`
 
- `nint``ulong` `double` y se pueden convertir`long`implícitamente en, y los valores de bit 32 o 64 siempre caben en el almacenamiento de 64 bits. `nfloat` `nuint`
+`nint``ulong` `double` y se pueden convertir`long`implícitamente en, y los valores de bit 32 o 64 siempre caben en el almacenamiento de 64 bits. `nfloat` `nuint`
 
 `nint`Debe usar conversiones explícitas de, `nuint` y `nfloat` en `int`, `uint` y `float` dado que los tipos nativos pueden contener 64 bits de almacenamiento.
 

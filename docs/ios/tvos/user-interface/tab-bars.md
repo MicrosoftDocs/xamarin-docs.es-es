@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649661"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199942"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con controladores de barra de pestañas de tvOS en Xamarin
 
@@ -59,7 +59,7 @@ Cada categoría (pestaña) de la barra de pestañas se representa mediante un el
 La manera más sencilla de trabajar con barras de pestañas en una aplicación de Xamarin. tvOS es agregarlas a la interfaz de usuario de la aplicación mediante el diseñador de iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-    
+
 1. Inicie una nueva aplicación de Xamarin. tvOS y > seleccione aplicación con**pestañas**de **tvOS** > : 
 
     [![](tab-bars-images/tab02.png "Seleccionar aplicación con pestañas")](tab-bars-images/tab02.png#lightbox)
@@ -84,7 +84,7 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 1. Guarde los cambios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Inicie una nueva aplicación de Xamarin. tvOS y > seleccione aplicación con**pestañas**de **tvOS** > : 
 
     [![](tab-bars-images/tab02vs.png "Seleccionar aplicación con pestañas")](tab-bars-images/tab02vs.png#lightbox)
@@ -107,7 +107,7 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 1. Exponga los eventos necesarios para trabajar con los controles de interfaz C# de usuario en el código.
 1. Asigne un nombre a todos los controles de interfaz de C# usuario que desee exponer en el código.
 1. Guarde los cambios.
-    
+
 -----
 
 > [!IMPORTANT]

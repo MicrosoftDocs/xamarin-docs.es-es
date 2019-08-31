@@ -7,12 +7,12 @@ ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 43a427b4eca174dce4af47bb43cb1a048a6cfe7c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 290e533e54b2ee150b94d9fb6b0f5119324f9cf0
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647687"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197989"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Degradado lineal de SkiaSharp
 

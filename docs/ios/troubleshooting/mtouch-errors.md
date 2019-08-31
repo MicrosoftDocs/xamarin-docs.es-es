@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: d75f46f8b06ef0e743218d5f42d5b2732b6e4158
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: aa8f25af4a394b981fdc7d5dc5a8836b7ff240cc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120975"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200264"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
@@ -2506,7 +2506,7 @@ Pasos para la solución de problemas:
 - intente ejecutar `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` (que debería proporcionar una dirección IP y no un error obviamente).
 - intente ejecutar "ping \`hostname\`", que puede proporcionarle más información, como:`cannot resolve MyHost.local: Unknown host`
 
-En algunos casos, se trata de un problema de "red local" y se puede solucionar agregando el host `127.0.0.1   MyHost.local` desconocido `/etc/hosts`en.
+En algunos casos, se trata de un problema de "red local" y se puede solucionar agregando el host `127.0.0.1    MyHost.local` desconocido `/etc/hosts`en.
 
 <a name="MT7002" />
 

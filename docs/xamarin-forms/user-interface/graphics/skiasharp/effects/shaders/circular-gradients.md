@@ -7,12 +7,12 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d56cc499112a937cd1a22664adeedd54c4397341
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647656"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199002"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares de SkiaSharp
 

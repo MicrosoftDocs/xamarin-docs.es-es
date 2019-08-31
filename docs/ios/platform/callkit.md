@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: aa57ae8a0f8254a715893b155d34e20297ec5c73
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92e4cd45a7fe49a7a78a8922bf70ac87870db095
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653017"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200408"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit en Xamarin. iOS
 

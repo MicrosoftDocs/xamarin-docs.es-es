@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d755f2242b1af94ce5729b1004eb867217876ac6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a40203e4d01f45ef36ee6988198400a259600aac
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656854"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198096"
 ---
 # <a name="tabbedpage-icons-on-windows"></a>Iconos de TabbedPage en Windows
 
@@ -54,7 +54,7 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
 {
   public WindowsTabbedPageIconsCS()
-    {
+  {
     On<Windows>().SetHeaderIconsEnabled(true);
     On<Windows>().SetHeaderIconsSize(new Size(24, 24));
 

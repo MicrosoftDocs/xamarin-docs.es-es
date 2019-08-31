@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9fcd4820b5e22254356250ef2d26714dc32a59f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c818cac3b26e94710a64938a80690b8d4946320
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655208"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200214"
 ---
 # <a name="ios-security-and-privacy-features"></a>Características de seguridad y privacidad de iOS
 
 _En este artículo se explica cómo trabajar con la seguridad y la privacidad en iOS y cómo afectan a una aplicación de Xamarin. iOS._
 
 Apple ha realizado varias mejoras en la seguridad y la privacidad en iOS 10 (y versiones posteriores) que ayudarán a los desarrolladores a mejorar la seguridad de sus aplicaciones y a garantizar la privacidad del usuario final. En este artículo se trata la implementación de estas características en una aplicación Xamarin. iOS.
-    
+
 <a name="General-Enhancements" />
 
 ## <a name="general-enhancements"></a>Mejoras generales
@@ -51,9 +51,9 @@ Están disponibles las siguientes claves relacionadas con la privacidad:
 - **Privacidad: Descripción de uso de actualización de estado** (`NSHealthUpdateUsageDescription`): Permite al desarrollador describir por qué la aplicación desea editar los datos de estado del usuario. Para obtener más información, consulte referencia de la [clase HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)de Apple.
 - **Privacidad: Descripción de uso de HomeKit** (`NSHomeKitUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder a los datos de configuración de HomeKit del usuario.
 - **Privacidad: Descripción de uso de la ubicación siempre** (`NSLocationAlwaysUsageDescription`): Permite al desarrollador describir por qué la aplicación desea siempre tener acceso a la ubicación del usuario.
-- En desuso **Privacidad: Descripción de uso de ubicación** (`NSLocationUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la ubicación del usuario. *TENGA EN CUENTA Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSLocationAlwaysUsageDescription` o`NSLocationWhenInUseUsageDescription` en su lugar.*
+- En desuso **Privacidad: Descripción de uso de ubicación** (`NSLocationUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la ubicación del usuario. *NOTA: Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSLocationAlwaysUsageDescription` o`NSLocationWhenInUseUsageDescription` en su lugar.*
 - **Privacidad: Descripción de uso de la ubicación en** uso (`NSLocationWhenInUseUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere tener acceso a la ubicación del usuario mientras se ejecuta.
-- En desuso **Privacidad: Descripción de uso de la biblioteca multimedia** : permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario. *TENGA EN CUENTA Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSAppleMusicUsageDescription` en su lugar.*
+- En desuso **Privacidad: Descripción de uso de la biblioteca multimedia** : permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario. *NOTA: Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSAppleMusicUsageDescription` en su lugar.*
 - **Privacidad: Descripción de uso del micrófono** (`NSMicrophoneUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso al micrófono de los dispositivos.
 - **Privacidad: Descripción del uso de movimiento** (`NSMotionUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder al acelerómetro del dispositivo.
 - **Privacidad: Descripción de uso de la biblioteca de fotos** (`NSPhotoLibraryUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca de fotos del usuario.

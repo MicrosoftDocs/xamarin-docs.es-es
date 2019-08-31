@@ -1,59 +1,59 @@
 ---
-title: Nueva referencia de recuento de sistema de Xamarin.iOS
-description: Este documento describe el sistema, habilitado de forma predeterminada en todas las aplicaciones de Xamarin.iOS de recuento de referencia mejorada de Xamarin.
+title: Nuevo sistema de recuento de referencias en Xamarin. iOS
+description: En este documento se describe el sistema de recuento de referencias mejorado de Xamarin, que está habilitado de forma predeterminada en todas las aplicaciones de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
-ms.openlocfilehash: 8c7b1a88284156cb5d4261f18d5659ed66dfaf64
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 221c3a3bb82b5b46f4afea5ec43fcdd5c00b0556
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037220"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199327"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>Nueva referencia de recuento de sistema de Xamarin.iOS
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nuevo sistema de recuento de referencias en Xamarin. iOS
 
-Xamarin.iOS 9.2.1 introdujo la referencia mejorada del sistema para todas las aplicaciones de recuento de forma predeterminada. Puede usar para eliminar muchos problemas de memoria que resultaban difíciles realizar un seguimiento y corregir en versiones anteriores de Xamarin.iOS.
+Xamarin. iOS 9.2.1 presentó el sistema de recuento de referencias mejorado a todas las aplicaciones de forma predeterminada. Se puede usar para eliminar muchos problemas de memoria que resultaban difíciles de seguir y corregir en versiones anteriores de Xamarin. iOS.
 
 ## <a name="enabling-the-new-reference-counting-system"></a>Habilitar el nuevo sistema de recuento de referencias
 
-A partir de Xamarin 9.2.1 está habilitada el ref nuevo recuento de sistema para **todas** aplicaciones de forma predeterminada.
+A partir de Xamarin 9.2.1, el nuevo sistema de recuento de referencias está habilitado para **todas** las aplicaciones de forma predeterminada.
 
-Si está desarrollando una aplicación existente, puede comprobar el archivo .csproj para asegurarse de que todas las apariciones de `MtouchUseRefCounting` se establecen en `true`, como a continuación:
+Si está desarrollando una aplicación existente, puede comprobar el archivo. csproj para asegurarse de que todas las apariciones de `MtouchUseRefCounting` se establecen en `true`, como se indica a continuación:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Si se establece en `false` la aplicación no usa las nuevas herramientas.
+Si se establece en `false` , la aplicación no utilizará las nuevas herramientas.
 
-### <a name="using-older-versions-of-xamarin"></a>Con versiones anteriores de Xamarin
+### <a name="using-older-versions-of-xamarin"></a>Usar versiones anteriores de Xamarin
 
-Xamarin.iOS 7.2.1 y encima de las características de una vista previa mejorada nuestro nuevo recuento de referencias del sistema.
+Xamarin. iOS 7.2.1 y versiones posteriores ofrece una vista previa mejorada de nuestro nuevo sistema de recuento de referencias.
 
-**API clásica:**
+**Classic API:**
 
-Para habilitar este nuevo sistema de recuento de referencia, compruebe el **usar extensión de recuento de referencias** casilla se encuentra en la **avanzadas** ficha de su proyecto **opciones de compilación de iOS** , como se muestra a continuación: 
+Para habilitar este nuevo sistema de recuento de referencias, active la casilla **usar la extensión** de recuento de referencias que se encuentra en la pestaña **Opciones avanzadas** de las **Opciones de compilación de iOS**del proyecto, como se muestra a continuación: 
 
-[![](newrefcount-images/image1.png "Habilitar el nuevo sistema de recuento de referencia")](newrefcount-images/image1.png#lightbox)
+[![](newrefcount-images/image1.png "Habilitar el nuevo sistema de recuento de referencias")](newrefcount-images/image1.png#lightbox)
 
-Tenga en cuenta que estas opciones se han quitado en versiones más recientes de Visual Studio para Mac.
+Tenga en cuenta que estas opciones se han quitado en las versiones más recientes de Visual Studio para Mac.
 
- **[API unificada:](~/cross-platform/macios/unified/index.md)**
+ **[Unified API:](~/cross-platform/macios/unified/index.md)**
 
- La nueva extensión de recuento de referencia es necesaria para la API unificada y debe habilitarse de forma predeterminada. Las versiones anteriores de su IDE no pueden tener este valor comprueban automáticamente y es posible que deba colocar una comprobación por ella.
+ La nueva extensión de recuento de referencias es necesaria para el Unified API y debe estar habilitada de forma predeterminada. Es posible que las versiones anteriores del IDE no tengan este valor comprobado automáticamente y que tenga que realizar una comprobación por él mismo.
 
-    
+
 > [!IMPORTANT]
-> Una versión anterior de esta característica ha estado presente desde MonoTouch 5.2, pero sólo estaba disponible para **sgen** como una versión preliminar experimental. Esta versión nueva y mejorada ahora también está disponible para el **Boehm** recolector de elementos no utilizados.
+> Una versión anterior de esta característica se ha solucionado desde MonoTouch 5,2, pero solo estaba disponible para **SGen** como vista previa experimental. Esta nueva versión mejorada también está disponible para el recolector de elementos no utilizados de **Boehm** .
 
 
-Históricamente, ha habido dos tipos de objetos administrados por Xamarin.iOS: aquellos que fueron simplemente un contenedor en torno a un objeto nativo (objetos del mismo nivel) y aquellos que extendido o incorporar la nueva funcionalidad (objetos derivados) - normalmente por mantener el estado en memoria adicional. Anteriormente era posible que nos podríamos aumentar un objeto del mismo nivel con estado (por ejemplo agregando un C# controlador de eventos), pero que se deja que el objeto vaya sin referencia y, a continuación, recopilados. Esto podría provocar un bloqueo más adelante (por ejemplo, si el tiempo de ejecución Objective-C se vuelve a llamar el objeto administrado).
+Históricamente, había dos tipos de objetos administrados por Xamarin. iOS: aquellos que simplemente eran un contenedor alrededor de un objeto nativo (objetos del mismo nivel) y los que extenderon o incorporaban nuevas funcionalidades (objetos derivados), normalmente manteniendo un estado adicional en memoria. Anteriormente era posible que se pudiera aumentar un objeto del mismo nivel con el estado (por ejemplo, C# agregando un controlador de eventos), pero se permite que el objeto pase sin referencia y se recopile. Esto podría provocar un bloqueo más adelante (por ejemplo, si el tiempo de ejecución de Objective-C vuelve a llamar al objeto administrado).
 
-El nuevo sistema actualiza automáticamente los objetos del mismo nivel en objetos administrados por el tiempo de ejecución cuando almacena cualquier información adicional.
+El nuevo sistema actualiza automáticamente los objetos del mismo nivel en objetos administrados por el tiempo de ejecución cuando almacenan información adicional.
 
 Esto soluciona varios bloqueos que se produjeron en situaciones como esta:
 
@@ -73,10 +73,10 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sin la extensión de recuento de referencia este código podría bloquearse porque `cell` pasa a ser recopilables de modo que su `TouchDown` delegar, lo que se traducirá en un puntero pendiente.
+Sin la extensión de recuento de referencias, este `cell` código se bloqueó porque se `TouchDown` vuelve a recopilar y, por tanto, su delegado, que se traducirá en un puntero pendiente.
 
-La extensión de recuento de referencia garantiza el objeto administrado permanece activo e impide que su colección, siempre se conserva el objeto nativo por código nativo.
+La extensión de recuento de referencias garantiza que el objeto administrado permanece activo y evita su colección, siempre que el código nativo retenga el objeto nativo.
 
-El nuevo sistema también elimina la necesidad de *mayoría* privada campos que se utilizan en enlaces - que es el método predeterminado para mantener activa la instancia de respaldo. El vinculador administrado es lo suficientemente inteligente como para quitar todos los *innecesarios* campos desde las aplicaciones que usan la nueva referencia de extensión de recuento.
+El nuevo sistema también elimina la necesidad de la mayoría de los campos de respaldo privados usados en los enlaces, que es el método predeterminado para mantener *la* instancia activa. El vinculador administrado es lo suficientemente inteligente como para quitar todos los campos innecesarios de las aplicaciones que usan la nueva extensión de recuento de referencias.
 
-Esto significa que cada instancia de objeto administrado consume menos memoria que antes. También resuelve un problema relacionado donde algunos campos de respaldo contendría las referencias que ya no se necesitan el tiempo de ejecución Objective-C, lo que dificulta reclamar memoria.
+Esto significa que cada instancia de objeto administrado utiliza menos memoria que antes. También resuelve un problema relacionado en el que algunos campos de respaldo contendrían referencias que ya no eran necesarias en el tiempo de ejecución de Objective-C, lo que dificultaba la recuperación de memoria.

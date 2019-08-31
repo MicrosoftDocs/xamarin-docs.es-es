@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 5519f6e5b1bb0b63ab3169dd8f48f2f87a025ba5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6f9fd193bda16e3b5e048faf5ec7c5eb09b58bcf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642814"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199146"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin. iOS
 
@@ -59,7 +59,7 @@ Dónde:
 - **Referencia relativa** : si se activa, el espaciado vertical de cada subvista se derivará de su línea base.
 - **Márgenes de diseño relativos** : coloca las subvistas en relación con los márgenes de diseño estándar.
 
-Al trabajar con una vista de pila, puede pensar en la **alineación** como **la ubicación** **X** e y de la subvista y la **distribución** como el **alto** y el **ancho**.
+Al trabajar con una vista de pila, puede pensar en la **alineación** como la ubicación **X** e y de la subvista y la **distribución** como el **alto** y el **ancho**.
 
 > [!IMPORTANT]
 > `UIStackView`está diseñada como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Por lo tanto, establecer `BackgroundColor` propiedades como o `DrawRect` invalidar no tendrá ningún efecto visual.

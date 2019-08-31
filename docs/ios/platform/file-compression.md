@@ -1,24 +1,24 @@
 ---
-title: Compresión de archivos en Xamarin.iOS
-description: Este documento describe cómo trabajar con la API libcompression en Xamarin.iOS. Describe desinflándose, lo que infla, y admiten los distintos algoritmos.
+title: Compresión de archivos en Xamarin. iOS
+description: En este documento se describe cómo trabajar con la API de libcompression en Xamarin. iOS. Describe la desinflación, la inflación y los diferentes algoritmos admitidos.
 ms.prod: xamarin
 ms.assetid: 94D05DAB-01E8-4C62-9CEF-9D6417EEA8EB
 ms.technology: xamarin-ios
 author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019
-ms.openlocfilehash: f7a1df65047fd8040dd40e9f7f057d6bfe6dea61
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bcc63aa4e1926f5502d571bf47c83b0c8ea7e429
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61403036"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199524"
 ---
-# <a name="file-compression-in-xamarinios"></a>Compresión de archivos en Xamarin.iOS
+# <a name="file-compression-in-xamarinios"></a>Compresión de archivos en Xamarin. iOS
 
-Las aplicaciones de Xamarin que tienen como destino iOS 9.0 o macOS 10.11 (y versiones posteriores) pueden usar el _Framework compresión_ para comprimir (codificar) y descomprimir (descodificación) datos. Xamarin.iOS proporciona este marco de trabajo después de la API de Stream. El marco de compresión permite a los programadores interactuar con el comprimir y descomprime los datos como si fueran secuencias normales sin necesidad de utilizar las devoluciones de llamada o delegados.
+Las aplicaciones Xamarin destinadas a iOS 9,0 o macOS 10,11 (y versiones más recientes) pueden usar el _marco de compresión_ para comprimir (codificar) y descomprimir (descodificar) los datos. Xamarin. iOS proporciona este marco de trabajo después de Stream API. El marco de compresión permite a los programadores interactuar con los datos de compresión y descomprimidos como si fueran secuencias normales sin necesidad de utilizar delegados o devoluciones de llamada.
 
-El marco de trabajo de compresión proporciona compatibilidad para los algoritmos siguientes:
+El marco de compresión proporciona compatibilidad con los algoritmos siguientes:
 
 * LZ4
 * LZ4 sin procesar
@@ -26,11 +26,11 @@ El marco de trabajo de compresión proporciona compatibilidad para los algoritmo
 * Lzma
 * Zlib
 
-Mediante el marco de compresión permite a los desarrolladores realizar las operaciones de compresión sin necesidad de bibliotecas de terceros o paquetes NuGet. Esto reduce las dependencias externas y garantiza que las operaciones de compresión se admitirá en todas las plataformas (siempre y cuando cumplan los requisitos mínimos del sistema operativo).
+El uso del marco de compresión permite a los desarrolladores realizar operaciones de compresión sin ninguna biblioteca de terceros o paquetes Nuget. Esto reduce las dependencias externas y garantiza que las operaciones de compresión se admitirán en todas las plataformas (siempre y cuando cumplan los requisitos mínimos de sistema operativo).
 
-## <a name="general-file-decompression"></a>Descompresión de archivos generales
+## <a name="general-file-decompression"></a>Descompresión de archivos general
 
-El marco de compresión utiliza una secuencia de la API de Xamarin.iOS y Xamarin.Mac. Para comprimir los datos, el programador puede utilizar los patrones normales que se usan en otras API de E/S dentro de .NET significa que esta API. El ejemplo siguiente muestra cómo descomprimir los datos con el marco de compresión, que es similar a la API se encuentra en la `System.IO.Compression.DeflateStream` API:
+El marco de compresión usa Stream API en Xamarin. iOS y Xamarin. Mac. Esta API significa que para comprimir los datos, el desarrollador puede usar los patrones normales usados en otras API de e/s en .NET. En el ejemplo siguiente se muestra cómo descomprimir datos con el marco de compresión, que es similar a la API `System.IO.Compression.DeflateStream` que se encuentra en la API:
 
 ```csharp
 // sample zlib data
@@ -45,11 +45,11 @@ using (var reader = new StreamReader (decompressing))
 }
 ```
 
-El `CompressionStream` implementa el `IDisposable` interfaz, como otro `System.IO.Streams`, por lo que los desarrolladores deben garantizar que los recursos se liberan una vez que ya no sean necesarios.
+Implementa la `IDisposable` interfaz, como otra `System.IO.Streams`, por lo que los desarrolladores deben asegurarse de que los recursos se liberan una vez que ya no son necesarios. `CompressionStream`
 
-## <a name="general-file-compression"></a>Compresión de archivos generales
+## <a name="general-file-compression"></a>Compresión de archivos general
 
-La API de compresión también permite a los desarrolladores comprimir los datos siguiendo las mismas API. Se pueden comprimir datos con uno de los algoritmos proporcionados se indica en la `CompressionAlgorithm` enumerador.
+La API de compresión también permite a los desarrolladores comprimir datos después de la misma API. Los datos se pueden comprimir utilizando uno de los algoritmos proporcionados que `CompressionAlgorithm` se indican en el enumerador.
 
 ```csharp
 // sample method that copies the data from the source stream to the destination stream
@@ -85,4 +85,4 @@ static void CompressExample ()
 
 ## <a name="async-support"></a>Compatibilidad con Async
 
-El `CompressionStream` es compatible con todas las operaciones asincrónicas que son compatibles con el `System.IO.DeflateStream`, lo que significa que los desarrolladores pueden usar la palabra clave async para realizar las operaciones de compresión y descompresión sin bloquear el subproceso de interfaz de usuario.
+Admite todas las operaciones asincrónicas que admite `System.IO.DeflateStream`, lo que significa que los desarrolladores pueden usar la palabra clave Async para realizar las operaciones de compresión y descompresión sin bloquear el subproceso de la interfaz de usuario. `CompressionStream`

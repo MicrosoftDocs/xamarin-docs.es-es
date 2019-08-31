@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 426b46f578ac3a09372fa4bf63ace1b6545c4866
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb49be3e52258864d61521bbe1dc388e9f6d1210
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528175"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198299"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referencia a bibliotecas nativas en Xamarin. iOS
 

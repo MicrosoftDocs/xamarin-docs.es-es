@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 3e68ac0a39d3268ce7c84f583c64b247e9f82362
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b61924c78f85c8a1a835cef87f357ec262926935
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524187"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197728"
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 

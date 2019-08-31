@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: 29b417d3962afc75eb2b7acdb989d1f96ab06ccc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0416aed671c9675e7c2c990eb59a7a4d8cab7888
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527144"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199615"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso de SQLite.NET con Xamarin. iOS
 

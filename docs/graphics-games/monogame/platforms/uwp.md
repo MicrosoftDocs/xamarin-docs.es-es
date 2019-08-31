@@ -1,61 +1,61 @@
 ---
-title: Crear un proyecto MonoGame UWP
-description: MonoGame puede utilizarse para crear juegos y aplicaciones para plataforma Universal de Windows, como destino que varios dispositivos con un código base y un conjunto de contenido.
+title: Creación de un proyecto de UWP de monogame
+description: Monogame puede usarse para crear juegos y aplicaciones para Plataforma universal de Windows, destinados a varios dispositivos con un código base y un conjunto de contenido.
 ms.prod: xamarin
 ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7db73759cb4a1b1a8d7fe40426b03a163c3ebdc4
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 367f44104b0d6049b8d65ab6e3b3f38c703cdb3f
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831060"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198713"
 ---
-# <a name="creating-a-monogame-uwp-project"></a>Crear un proyecto MonoGame UWP
+# <a name="creating-a-monogame-uwp-project"></a>Creación de un proyecto de UWP de monogame
 
-_MonoGame puede utilizarse para crear juegos y aplicaciones para plataforma Universal de Windows, como destino que varios dispositivos con un código base y un conjunto de contenido._
+_Monogame puede usarse para crear juegos y aplicaciones para Plataforma universal de Windows, destinados a varios dispositivos con un código base y un conjunto de contenido._
 
-Este tutorial describe la creación de un proyecto MonoGame Universal Windows Platform (UWP) y carga de contenido. Pueden ejecutar las aplicaciones para UWP en todos los dispositivos de Windows 10, incluidos equipos de escritorio, tabletas, teléfonos Windows y Xbox One.
+En este tutorial se aborda la creación de proyectos de Plataforma universal de Windows monogame (UWP) y la carga de contenido. Las aplicaciones para UWP pueden ejecutarse en todos los dispositivos de Windows 10, incluidos los equipos de escritorio, tabletas, Windows Phone y Xbox One.
 
-En este tutorial crea un proyecto vacío que muestra un *azul aciano* en segundo plano (el color de fondo tradicional de aplicaciones XNA).
+En este tutorial se crea un proyecto vacío que muestra un fondo *azul azul aciano* (el color de fondo tradicional de las aplicaciones XNA).
 
 ## <a name="requirements"></a>Requisitos
 
-Desarrollo de aplicaciones MonoGame UWP requiere:
+El desarrollo de aplicaciones monogame para UWP requiere:
 
 - Sistema operativo Windows 10
 - Cualquier versión de Visual Studio 2017
 - Herramientas de desarrollo de Windows 10
-- Dispositivo de configuración al modo de programador
-- [MonoGame 3.7.1 para Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) o posterior
+- Establecimiento del dispositivo en modo de desarrollador
+- [Monogame 3.7.1 para Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) o posterior
 
-Para obtener más información, consulte este [página sobre la configuración para el desarrollo de Windows 10 UWP](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
+Para obtener más información, consulte esta [Página sobre cómo configurar el desarrollo para Windows 10 UWP](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 
-Juegos de Xbox One se pueden desarrollar en Xbox One hardware de venta directa. Se necesita software adicional en el equipo de desarrollo y Xbox One. Para obtener información sobre cómo configurar una Xbox One para desarrollo de juegos, vea esta página en [configurando una Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index).
+Los juegos de Xbox One se pueden desarrollar en hardware de Xbox One comercial. Se requiere software adicional tanto en el equipo de desarrollo como en la Xbox One. Para obtener información sobre la configuración de una consola Xbox One para el desarrollo de juegos, consulte esta página sobre la configuración de una [consola Xbox](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)One.
 
-## <a name="creating-an-empty-template"></a>Creación de una plantilla vacía
+## <a name="creating-an-empty-template"></a>Crear una plantilla vacía
 
-Una vez que se han instalado todos los recursos necesarios y se ha habilitado el modo de programador en la máquina de Windows 10, podemos crear un nuevo proyecto MonoGame mediante Visual Studio siguiendo estos pasos:
+Una vez que se han instalado todos los recursos necesarios y se ha habilitado el modo de Desarrollador en el equipo con Windows 10, podemos crear un nuevo proyecto de monogame con Visual Studio siguiendo estos pasos:
 
-1. Seleccione **archivo** > **nueva** > **proyecto...**
-1. Seleccione el **instalado** > **plantillas** > **Visual C#**   >  **MonoGame** categoría:
+1. Seleccione **archivo** > nuevoproyecto >  **...**
+1. Seleccione la > categoría de**Visual C#**  >  juego > de plantillas instaladas:
 
-    ![](uwp-images/image1.png "Categoría de MonoGame")
+    ![](uwp-images/image1.png "Categoría de monogame")
 
-1. Seleccione el **MonoGame Windows 10 Universal proyecto** opción:
+1. Seleccione la opción de **proyecto universal de Windows 10 monogame** :
 
-    ![](uwp-images/image2.png "Seleccione la opción de proyecto Universal de MonoGame Windows 10")
+    ![](uwp-images/image2.png "Selección de la opción de proyecto universal de Windows 10 de monogame")
 
 1. Escriba un nombre para el nuevo proyecto y haga clic en **Aceptar**.
-Si Visual Studio muestra los errores después de hacer clic en Aceptar, compruebe que están instaladas las herramientas de Windows 10 y que el dispositivo está en modo de programador.
+Si Visual Studio muestra errores después de hacer clic en aceptar, compruebe que estén instaladas las herramientas de Windows 10 y que el dispositivo esté en modo de desarrollador.
 
-Una vez que Visual Studio termine de crear la plantilla, podemos ejecutar para ver el proyecto vacío que se ejecuta:
+Una vez que Visual Studio termina de crear la plantilla, podemos ejecutarla para ver el proyecto vacío en ejecución:
 
-![](uwp-images/image3.png "Una vez que Visual Studio termine de crear la plantilla, ejecútela para ver el proyecto vacío que está ejecutando")
+![](uwp-images/image3.png "Una vez que Visual Studio termine de crear la plantilla, ejecútela para ver el proyecto vacío en ejecución")
 
-Los números en las esquinas proporcionan información de diagnóstico. Esta información se puede quitar mediante la eliminación del código en `App.xaml.cs` en el `DEBUG` bloque en el `OnLaunched` método:
+Los números de las esquinas proporcionan información de diagnóstico. Esta información se puede quitar eliminando el código en `App.xaml.cs` el `DEBUG` bloque `OnLaunched` del método:
 
 
 ```csharp
@@ -70,40 +70,40 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
     ...
 ```
 
-## <a name="running-on-xbox-one"></a>Que se ejecutan en Xbox One
+## <a name="running-on-xbox-one"></a>Ejecutar en Xbox One
 
-Los proyectos de UWP pueden implementar en cualquier dispositivo Windows 10 desde el mismo proyecto. Después de configurar la máquina de desarrollo de Windows 10 y Xbox One, se pueden implementar aplicaciones para UWP cambiando el destino a equipo remoto y escribir dirección IP de la Xbox One:
+Los proyectos de UWP se pueden implementar en cualquier dispositivo de Windows 10 desde el mismo proyecto. Después de configurar el equipo de desarrollo de Windows 10 y la Xbox One, las aplicaciones UWP se pueden implementar cambiando el destino a la máquina remota y escribiendo la dirección IP de la Xbox One:
 
-![](uwp-images/remote.png "Se pueden implementar aplicaciones para UWP cambiando el destino a equipo remoto y escribir la dirección IP de los de Xbox")
+![](uwp-images/remote.png "Las aplicaciones UWP se pueden implementar cambiando el destino a la máquina remota y escribiendo la dirección IP de la Xbox.")
 
-En Xbox One, el borde blanco representa el área de no seguro para televisores. Para obtener más información, consulte el [sección área segura](#safe-area-on-xbox-one).
+En Xbox One, el borde blanco representa el área no segura de los televisores. Para obtener más información, consulte la [sección área segura](#safe-area-on-xbox-one).
 
-![](uwp-images/safearea.png "En Xbox One, el borde blanco representa la zona no segura para televisores")
+![](uwp-images/safearea.png "En Xbox One, el borde blanco representa el área no segura de los televisores")
 
 ### <a name="safe-area-on-xbox-one"></a>Área segura en Xbox One
 
-Desarrollo de juegos para consolas requiere considerar el área segura, que es un área en el centro de la pantalla que debe contener todos los objetos visuales críticos (por ejemplo, la interfaz de usuario o HUD). El área situada fuera de la zona segura no se garantiza que estén visibles en todos los televisores, por lo que los objetos visuales que se colocan en esta área puede total o parcialmente visibles en algunas pantallas.
+Para desarrollar juegos para consolas, es necesario tener en cuenta el área segura, que es un área del centro de la pantalla que debe contener todos los objetos visuales críticos (como la interfaz de usuario o HUD). No se garantiza que el área fuera del área segura esté visible en todos los televisores, por lo que los objetos visuales colocados en esta área pueden ser parcial o totalmente invisibles en algunas pantallas.
 
-La plantilla de MonoGame para Xbox One tiene en cuenta la zona segura y lo representa como un borde blanco. Esta área también se refleja en tiempo de ejecución en el juego `Window.ClientBounds` propiedad tal como se muestra en esta imagen de la ventana Inspección en Visual Studio. Tenga en cuenta que el alto de los límites del cliente es 1016, a pesar de la resolución de pantalla de 1920 x 1080:
+La plantilla monogame para Xbox One considera el área segura y la representa como un borde blanco. Esta área también se refleja en tiempo de ejecución en la `Window.ClientBounds` propiedad del juego, tal como se muestra en esta imagen de la ventana Inspección de Visual Studio. Observe que el alto de los límites del cliente es 1016, a pesar de la resolución de pantalla de 1920 x 1080:
 
-![](uwp-images/clientbounds.png "Tenga en cuenta que el alto de los límites del cliente es 1016, a pesar de la resolución de pantalla de 1920 x 1080")
+![](uwp-images/clientbounds.png "Observe que el alto de los límites del cliente es 1016, a pesar de la resolución de pantalla de 1920 x 1080")
 
-## <a name="referencing-content-in-uwp-projects"></a>Hacer referencia a contenido en los proyectos de UWP
+## <a name="referencing-content-in-uwp-projects"></a>Hacer referencia al contenido en proyectos de UWP
 
-Puede hacer referencia a contenido en los proyectos de MonoGame directamente desde el archivo o a través del [canalización de contenido de MonoGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Proyectos pequeños de juegos pueden beneficiarse de la simplicidad de la carga del archivo. Proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido para reducir el tamaño y tiempos de carga. A diferencia de XNA en la consola Xbox 360, el `System.IO.File` está disponible en las aplicaciones para UWP de Xbox una clase.
+Se puede hacer referencia al contenido de los proyectos de monogame directamente desde el archivo o a través de la canalización de [contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)de monogame. Los proyectos de juegos pequeños pueden beneficiarse de la simplicidad de carga desde el archivo. Los proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido con el fin de reducir el tamaño y los tiempos de carga. A diferencia de XNA en la Xbox 360, `System.IO.File` la clase está disponible en las aplicaciones de Xbox One UWP.
 
-Para obtener más información sobre la carga de contenido mediante la canalización de contenido, consulte el [Guía de la canalización de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
+Para obtener más información sobre cómo cargar contenido mediante la canalización de contenido, consulte la guía de canalizaciones de [contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
-### <a name="loading-content-from-file"></a>Cargando el contenido del archivo
+### <a name="loading-content-from-file"></a>Cargando contenido desde el archivo
 
-A diferencia de iOS y Android, los proyectos UWP pueden hacer referencia a archivos en relación con el archivo ejecutable. Juegos sencillos en pueden usar este contenido de carga técnica sin necesidad de modificar y compilar el proyecto de canalización de contenido.
+A diferencia de iOS y Android, los proyectos de UWP pueden hacer referencia a archivos relacionados con el archivo ejecutable. Los juegos sencillos pueden usar esta técnica para cargar contenido sin necesidad de modificar y compilar el proyecto de canalización de contenido.
 
-Para cargar un `Texture2D` del archivo:
+Para cargar un `Texture2D` desde un archivo:
 
-1. Agregue un archivo .png para la carpeta de contenido en el proyecto UWP. Agregar contenido a la carpeta de contenido es una convención en XNA y MonoGame.
-1. Haga doble clic en el PNG recién agregada y seleccione Propiedades.
-1. Cambiar el **Copy to Output Directory** a **copiar si es posterior**.
-1. Agregue el código siguiente al método Initialize de tu juego para cargar un `Texture2D`:
+1. Agregue un archivo. png a la carpeta de contenido en el proyecto de UWP. Agregar contenido a la carpeta de contenido es una Convención en XNA y monogame.
+1. Haga clic con el botón derecho en el PNG recién agregado y seleccione Propiedades.
+1. Cambie la **copia al directorio de salida** a **copiar si es posterior**.
+1. Agregue el código siguiente al método Initialize del juego para cargar un `Texture2D`:
 
     ```csharp
     Texture2D texture;
@@ -113,8 +113,8 @@ Para cargar un `Texture2D` del archivo:
     }
     ```
 
-Para obtener más información sobre el uso de un `Texture2D`, consulte el [Introducción a MonoGame guía](~/graphics-games/monogame/introduction/index.md).
+Para obtener más información sobre el `Texture2D`uso de, consulte la [Guía de introducción a monogame](~/graphics-games/monogame/introduction/index.md).
 
 ## <a name="summary"></a>Resumen
 
-Esta guía explica cómo crear un nuevo proyecto UWP y las consideraciones específicas de UWP al cargar archivos. Los desarrolladores interesados en la creación de juegos UWP completas pueden leer más sobre MonoGame en el [Introducción a MonoGame guía](~/graphics-games/monogame/introduction/index.md).
+En esta guía se explica cómo crear un nuevo proyecto de UWP y consideraciones específicas de UWP al cargar archivos. Los desarrolladores interesados en crear juegos de UWP completos pueden leer más sobre monogame en la [Guía de introducción a monogame](~/graphics-games/monogame/introduction/index.md).
