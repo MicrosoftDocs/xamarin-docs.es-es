@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b96cd489f84ea93e7ada9b6458272d0dea1c0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3ae18a2009ee3c34498a2e7586b561c525e76d45
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524862"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225544"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principios de diseño de la API de Xamarin. Android
 
@@ -42,21 +42,21 @@ Estos son algunos de los principios de diseño para el enlace de Xamarin. Androi
 
 - Exponga una API fuertemente tipada:
 
-    - Aumentar la seguridad de tipos.
+  - Aumentar la seguridad de tipos.
 
-    - Minimice los errores en tiempo de ejecución.
+  - Minimice los errores en tiempo de ejecución.
 
-    - Obtiene el IDE de IntelliSense en los tipos de valor devuelto.
+  - Obtiene el IDE de IntelliSense en los tipos de valor devuelto.
 
-    - Permite la documentación del menú emergente del IDE.
+  - Permite la documentación del menú emergente del IDE.
 
 - Anime la exploración en el IDE de las API:
 
-    - Use alternativas de marco para minimizar la exposición de Classlib de Java.
+  - Use alternativas de marco para minimizar la exposición de Classlib de Java.
 
-    - Exponga C# los delegados (expresiones lambda, métodos anónimos y System. Delegate) en lugar de las interfaces de un solo método cuando sea adecuado y aplicable.
+  - Exponga C# los delegados (expresiones lambda, métodos anónimos y System. Delegate) en lugar de las interfaces de un solo método cuando sea adecuado y aplicable.
 
-    - Proporcionar un mecanismo para llamar a bibliotecas de Java arbitrarias ( [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)).
+  - Proporcionar un mecanismo para llamar a bibliotecas de Java arbitrarias ( [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)).
 
 
 ## <a name="assemblies"></a>Ensamblados
@@ -198,17 +198,17 @@ Una derivación de ejemplo de una clase interna es CubeWallpaper. CubeEngine:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
-        public override WallpaperService.Engine OnCreateEngine ()
-        {
-                return new CubeEngine (this);
-        }
+    public override WallpaperService.Engine OnCreateEngine ()
+    {
+        return new CubeEngine (this);
+    }
 
-        class CubeEngine : WallpaperService.Engine {
-                public CubeEngine (CubeWallpaper s)
-                        : base (s)
-                {
-                }
+    class CubeEngine : WallpaperService.Engine {
+        public CubeEngine (CubeWallpaper s)
+                : base (s)
+        {
         }
+    }
 }
 ```
 

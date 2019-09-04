@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bde37c907d2cad327dd2a72f26ee357a4391c43
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14fbbd72d3ec80d15d2dcae5938f8df28923ca4c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649054"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226609"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabajar con barras de navegación de tvOS en Xamarin
 
@@ -34,16 +34,16 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic `Main.storyboard` en archivo y ábralo para su edición.
-1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla: 
+1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla:
 
     [![](navigation-bars-images/navbar02.png "Una barra de navegación")](navigation-bars-images/navbar02.png#lightbox)
-1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Panel de propiedades**, puede establecer el **título**: 
+1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Panel de propiedades**, puede establecer el **título**:
 
     [![](navigation-bars-images/navbar03.png "Establecer el título")](navigation-bars-images/navbar03.png#lightbox)
-1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra: 
+1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra:
 
     [![](navigation-bars-images/navbar04.png "Un elemento de botón de barra")](navigation-bars-images/navbar04.png#lightbox)
-1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**: 
+1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**:
 
     [![](navigation-bars-images/navbar05.png "Una acción de elemento de botón de barra")](navigation-bars-images/navbar05.png#lightbox)
 1. Guarde los cambios.
@@ -53,16 +53,16 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
 
 
 1. En el **Explorador de soluciones**, haga doble clic `Main.storyboard` en archivo y ábralo para su edición.
-1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla: 
+1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla:
 
     [![](navigation-bars-images/navbar02-vs.png "Una barra de navegación")](navigation-bars-images/navbar02-vs.png#lightbox)
-1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Explorador de propiedades**, puede establecer el **título**: 
+1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Explorador de propiedades**, puede establecer el **título**:
 
     [![](navigation-bars-images/navbar03-vs.png "Establecer el título")](navigation-bars-images/navbar03-vs.png#lightbox)
-1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra: 
+1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra:
 
     [![](navigation-bars-images/navbar04-vs.png "Elementos de botón de barra")](navigation-bars-images/navbar04-vs.png#lightbox)
-1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**: 
+1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**:
 
     [![](navigation-bars-images/navbar05-vs.png "Acciones de un elemento de botón de barra")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Guarde los cambios.
@@ -126,7 +126,7 @@ namespace MySingleView
 
 Siempre y cuando la propiedad de `Enabled` un botón `true` sea y no esté incluida en otro control o vista, se puede convertir en el elemento enfocado mediante Siri remoto.
 
-Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647177"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226896"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. Xib: diseño de la interfaz de usuario menos en Xamarin. Mac
 
@@ -35,16 +35,16 @@ Cuando se crea una nueva aplicación de Cocoa de Xamarin. Mac, se obtiene una ve
 Para cambiar a una ventana de Xibless para una aplicación, haga lo siguiente:
 
 1. Abra la aplicación que desea dejar de usar `.storyboard` o archivos. Xib para definir la interfaz de usuario en Visual Studio para Mac.
-2. En el **Panel de solución**, haga clic con el botón derecho en el archivo **Main. Storyboard** o **MainWindow. Xib** y seleccione **quitar**: 
+2. En el **Panel de solución**, haga clic con el botón derecho en el archivo **Main. Storyboard** o **MainWindow. Xib** y seleccione **quitar**:
 
     ![Quitar el guión gráfico o la ventana principales](xibless-ui-images/switch01.png "Quitar el guión gráfico o la ventana principales")
-3. En el **cuadro de diálogo quitar**, haga clic en el botón **eliminar** para quitar completamente el. Storyboard o. Xib del proyecto: 
+3. En el **cuadro de diálogo quitar**, haga clic en el botón **eliminar** para quitar completamente el. Storyboard o. Xib del proyecto:
 
     ![Confirmar la eliminación](xibless-ui-images/switch02.png "Confirmar la eliminación")
 
 Ahora tendremos que modificar el archivo **MainWindow.CS** para definir el diseño de la ventana y modificar el archivo **ViewController.CS** o **MainWindowController.CS** para crear una instancia de nuestra `MainWindow` clase, ya que ya no se usa. archivo Storyboard o. Xib.
 
-Las aplicaciones modernas de Xamarin. Mac que usan guiones gráficos para su interfaz de usuario pueden no incluir automáticamente los archivos **MainWindow.CS**, **ViewController.CS** o **MainWindowController.CS** . Según sea necesario, simplemente agregue una nueva C# clase vacía al proyecto (**Agregar** > **nuevo archivo..** . Clase vacíaGeneral > ) y asígnele el mismo nombre que el archivo que falta.  >  
+Las aplicaciones modernas de Xamarin. Mac que usan guiones gráficos para su interfaz de usuario pueden no incluir automáticamente los archivos **MainWindow.CS**, **ViewController.CS** o **MainWindowController.CS** . Según sea necesario, simplemente agregue una nueva C# clase vacía al proyecto (**Agregar** > **nuevo archivo..** . Clase vacíaGeneral > ) y asígnele el mismo nombre que el archivo que falta.  > 
 
 
 ### <a name="defining-the-window-in-code"></a>Definir la ventana en el código
@@ -160,7 +160,7 @@ La `AutoresizingMask = NSViewResizingMask.MinYMargin` propiedad indica al botón
 
 Por último, `ContentView.AddSubview (ClickMeButton)` el método `NSButton` agrega a la vista de contenido para que se muestre en la pantalla cuando se ejecute la aplicación y se muestre la ventana.
 
-A continuación, se agregará una etiqueta a la ventana que mostrará el número de veces `NSButton` que se ha realizado el clic en: 
+A continuación, se agregará una etiqueta a la ventana que mostrará el número de veces `NSButton` que se ha realizado el clic en:
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -172,7 +172,7 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
     StringValue = "Button has not been clicked yet."
 };
 ContentView.AddSubview (ClickMeLabel);
-``` 
+```
 
 Dado que MacOS no tiene un elemento de interfaz de usuario de _etiqueta_ específico, se ha agregado una etiqueta, `NSTextField` que no se puede editar, y con un estilo especial. Al igual que el botón anterior, el tamaño y la ubicación tienen en cuenta que (0,0) está en la parte inferior izquierda de la ventana. La `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` propiedad usa el operador **or** para combinar dos `NSViewResizingMask` características. Esto hará que la etiqueta permanezca en la misma ubicación desde la parte superior de la ventana cuando se cambie el tamaño de la ventana verticalmente y se reduzca y crezca en ancho a medida que se cambie el tamaño de la ventana horizontalmente.
 
@@ -239,7 +239,7 @@ Definimos la ubicación de la ventana de la pantalla con `CGRect`un. Al igual qu
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
-``` 
+```
 
 Están disponibles `NSWindowStyle` las siguientes características:
 
@@ -249,7 +249,7 @@ Están disponibles `NSWindowStyle` las siguientes características:
 - **Miniaturizable** : la ventana tiene un botón miniaturize y se puede minimizar.
 - **Ajustable** : la ventana tendrá un botón cambiar tamaño y se podrá cambiar de tamaño.
 - **Utilidad** : la ventana es una ventana de estilo de utilidad (panel).
-- **DocModal** : Si la ventana es un panel, el documento será modal en lugar de modal del sistema. 
+- **DocModal** : Si la ventana es un panel, el documento será modal en lugar de modal del sistema.
 - **NonactivatingPanel** : Si la ventana es un panel, no se convertirá en la ventana principal.
 - **TexturedBackground** : la ventana tendrá un fondo con textura.
 - Sin escalar: la ventana no se escalará.
@@ -292,7 +292,7 @@ En este punto, si se ejecuta la aplicación y el botón hizo clic un par de vece
 
 Si deseamos agregar una ventana de xibless solo de código a una aplicación de Xamarin. Mac existente, haga clic con el botón derecho en el proyecto en el **Panel de solución** y seleccione **Agregar** > **nuevo archivo.** .. En el cuadro de diálogo **nuevo archivo** , elija la**ventana de cacao de** **Xamarin. Mac** > con el controlador, como se muestra a continuación:
 
-![Agregar un nuevo controlador de ventana](xibless-ui-images/add01.png "Agregar un nuevo controlador de ventana") 
+![Agregar un nuevo controlador de ventana](xibless-ui-images/add01.png "Agregar un nuevo controlador de ventana")
 
 Al igual que antes, eliminaremos el archivo default. Storyboard o. Xib del proyecto (en este caso, **SecondWindow. Xib**) y seguiremos los pasos descritos en la sección sobre cómo [cambiar una ventana para usar el código](#Switching_a_Window_to_use_Code) anterior para cubrir la definición de la ventana en el código.
 

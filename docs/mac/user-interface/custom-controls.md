@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: aee3d81375ab619fa2016a87951cce3e72cdbe47
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650191"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227906"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Crear controles personalizados en Xamarin. Mac
 
@@ -285,7 +285,7 @@ De nuevo, el método que usamos depende de lo que estamos tratando de lograr con
 
 ### <a name="responding-to-state-change-events"></a>Responder a los eventos de cambio de estado
 
-Cuando el usuario cambia el estado de nuestro control personalizado, necesitamos una manera de responder al cambio de estado en el código (por ejemplo, hacer algo cuando se hace clic en un botón personalizado). 
+Cuando el usuario cambia el estado de nuestro control personalizado, necesitamos una manera de responder al cambio de estado en el código (por ejemplo, hacer algo cuando se hace clic en un botón personalizado).
 
 Para proporcionar esta funcionalidad, edite `NSFlipSwitch` la clase y agregue el código siguiente:
 
@@ -299,7 +299,7 @@ internal void RaiseValueChanged() {
 
     // Perform any action bound to the control from Interface Builder
     // via an Action.
-    if (this.Action !=null) 
+    if (this.Action !=null)
         NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
 ## endregion
@@ -320,7 +320,7 @@ En primer lugar, se `ValueChanged` proporciona un evento al que se puede Agregar
 En segundo lugar, dado que el control personalizado `NSControl`hereda de, tiene automáticamente una **acción** que se puede asignar en la Interface Builder de Xcode. Para llamar a esta **acción** cuando cambia el estado, usamos el código siguiente:
 
 ```csharp
-if (this.Action !=null) 
+if (this.Action !=null)
     NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
@@ -361,7 +361,7 @@ public override void ViewDidLoad ()
         Console.WriteLine("Option Two: {0}", OptionTwo.Value);
     };
 }
-``` 
+```
 
 En este caso, se responde `ValueChanged` al evento que se definió `NSFlipSwitch` anteriormente en la clase y se escribe el **valor** actual cuando el usuario hace clic en el control.
 

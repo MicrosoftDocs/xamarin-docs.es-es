@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e712f0b69f87659499f7eab4955a9f943716f5b5
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650273"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227980"
 ---
 # <a name="xamarinforms-entry"></a>Entrada de Xamarin.Forms
 
@@ -105,7 +105,7 @@ En C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Ejemplo de entrada de IsPassword")
+![Ejemplo de IsPassword de entrada](entry-images/password.png)
 
 Marcadores de posición se pueden usar con instancias de `Entry` que están configurados como campos de contraseña:
 
@@ -121,7 +121,7 @@ En C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Ejemplo de marcador de posición y entrada IsPassword")
+![Ejemplo de IsPassword de entrada y marcador de posición](entry-images/passwordplaceholder.png)
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Establecer la posición del Cursor y la longitud de la selección de texto
 
@@ -294,7 +294,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Ejemplo de entrada de TextColor")
+![Ejemplo de TextColor de entrada](entry-images/textcolor.png)
 
 Tenga en cuenta que el marcador de posición no está afectado por el `TextColor`.
 
@@ -311,7 +311,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Ejemplo de entrada de BackgroundColor")
+![Ejemplo de BackgroundColor de entrada](entry-images/textbackgroundcolor.png)
 
 Tenga cuidado para asegurarse de que los colores de fondo y de texto que elija puede utilizar en cada plataforma y no interferir con cualquier texto de marcador de posición.
 

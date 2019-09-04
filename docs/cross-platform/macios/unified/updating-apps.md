@@ -6,12 +6,12 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 61562eed8867b7a2e12b3d2e96feed28d957696b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 021139c817d2b0eb430a6c8fe09dbd07b7c17813
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511202"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226152"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Actualización de las aplicaciones existentes en el Unified API
 
@@ -40,7 +40,7 @@ Las aplicaciones de Xamarin. iOS existentes pueden actualizarse a la Unified API
 
 Las aplicaciones de Xamarin. Mac existentes pueden actualizarse a la Unified API mediante la herramienta de migración automatizada integrada en Visual Studio para Mac. Es posible que se requieran algunas correcciones adicionales, tal y como se explica en [estas instrucciones](~/cross-platform/macios/unified/updating-mac-apps.md) y [sugerencias](~/cross-platform/macios/unified/updating-tips.md).
 
-### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Aplicaciones de Xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Aplicaciones de Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Siga estas instrucciones para actualizar una solución existente de Xamarin. Forms con un proyecto de iOS para usar el Unified API. La compatibilidad con Unified API solo está disponible en Xamarin. Forms 1,3 y versiones posteriores, por lo que [las instrucciones](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) también explican cómo actualizar la aplicación de Xamarin. Forms a la versión 1,3. Estas [sugerencias](~/cross-platform/macios/unified/updating-tips.md) pueden ayudarle a actualizar cualquier código de iOS nativo en representadores personalizados o servicios de dependencia.
 

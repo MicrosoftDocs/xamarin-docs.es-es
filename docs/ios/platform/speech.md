@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121285"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227333"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconocimiento de voz en Xamarin. iOS
 
@@ -89,8 +89,8 @@ Hay cuatro pasos principales que el desarrollador debe llevar a cabo para adopta
 - Proporcione una descripción del uso en el archivo `Info.plist` de la aplicación `NSSpeechRecognitionUsageDescription` mediante la clave. Por ejemplo, una aplicación de cámara podría incluir la descripción siguiente, _"Esto le permite realizar una foto simplemente diciendo la palabra" queso "._
 - Solicite autorización `SFSpeechRecognizer.RequestAuthorization` llamando al método para presentar una explicación (proporcionada en la `NSSpeechRecognitionUsageDescription` clave anterior) de por qué la aplicación desea que el reconocimiento de voz acceda al usuario en un cuadro de diálogo y permita que acepte o rechace.
 - Cree una solicitud de reconocimiento de voz:
-    - Para el audio grabado previamente en el disco, use `SFSpeechURLRecognitionRequest` la clase.
-    - Para audio en vivo (o audio de la memoria), `SFSPeechAudioBufferRecognitionRequest` use la clase.
+  - Para el audio grabado previamente en el disco, use `SFSpeechURLRecognitionRequest` la clase.
+  - Para audio en vivo (o audio de la memoria), `SFSPeechAudioBufferRecognitionRequest` use la clase.
 - Pase la solicitud de reconocimiento de voz a un reconocedor de voz (`SFSpeechRecognizer`) para comenzar el reconocimiento. Opcionalmente, la aplicación puede mantener en el `SFSpeechRecognitionTask` devuelto para supervisar y realizar un seguimiento de los resultados del reconocimiento.
 
 Estos pasos se tratarán con más detalle a continuación.
@@ -380,8 +380,8 @@ Es importante llamar `RecognitionTask.Cancel` a si el usuario cancela la traducc
 Apple impone las siguientes limitaciones cuando se trabaja con el reconocimiento de voz en una aplicación iOS:
 
 - El reconocimiento de voz es gratuito para todas las aplicaciones, pero su uso no es ilimitado:
-    - Los dispositivos iOS individuales tienen un número limitado de reconocimientos que se pueden realizar al día.
-    - Las aplicaciones se limitarán globalmente según una solicitud por día.
+  - Los dispositivos iOS individuales tienen un número limitado de reconocimientos que se pueden realizar al día.
+  - Las aplicaciones se limitarán globalmente según una solicitud por día.
 - La aplicación debe estar preparada para controlar los errores de límite de velocidad de uso y conexión de red del reconocimiento de voz.
 - El reconocimiento de voz puede tener un alto costo en el agotamiento de la batería y en el tráfico de red elevado en el dispositivo iOS del usuario, por lo que Apple impone un límite de duración de audio estricto de aproximadamente un minuto de longitud máxima.
 

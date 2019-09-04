@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 7c48244e316854b04234ec8dee4eebeb55a4f119
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526378"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225784"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -73,52 +73,52 @@ Los calificadores posibles se enumeran a continuación como referencia:
 
 - **Densidad de píxeles de pantalla (PPP)** &ndash; Número de píxeles de un área determinada en la pantalla física. Normalmente expresado como puntos por pulgada (PPP). Los valores posibles son:
 
-    - `ldpi`&ndash; Pantallas de baja densidad.
+  - `ldpi`&ndash; Pantallas de baja densidad.
 
-    - `mdpi`&ndash; Pantallas de densidad media
+  - `mdpi`&ndash; Pantallas de densidad media
 
-    - `hdpi`&ndash; Pantallas de alta densidad
+  - `hdpi`&ndash; Pantallas de alta densidad
 
-    - `xhdpi`&ndash; Pantallas de alta densidad adicional
+  - `xhdpi`&ndash; Pantallas de alta densidad adicional
 
-    - `nodpi`&ndash; Recursos que no se van a escalar
+  - `nodpi`&ndash; Recursos que no se van a escalar
 
-    - `tvdpi`&ndash; Introducido en el nivel de API 13 (Android 3,2) para pantallas entre pantallas y hdpi.
+  - `tvdpi`&ndash; Introducido en el nivel de API 13 (Android 3,2) para pantallas entre pantallas y hdpi.
 
 - **Tipo de pantalla táctil** &ndash; Especifica el tipo de pantalla táctil que puede tener un dispositivo. Los valores posibles `notouch` son (sin pantalla táctil) `stylus` , (una pantalla táctil resistente adecuada para un lápiz) y `finger` (una pantalla táctil).
 
 - **Disponibilidad del teclado** &ndash; Especifica qué tipo de teclado está disponible. Esto puede cambiar durante la vigencia de una aplicación &ndash; , por ejemplo, cuando un usuario abre un teclado de hardware. Los valores posibles son:
 
-    - `keysexposed`&ndash; El dispositivo tiene un teclado disponible. Si no hay ningún teclado de software habilitado, solo se utilizará cuando se abra el teclado de hardware.
+  - `keysexposed`&ndash; El dispositivo tiene un teclado disponible. Si no hay ningún teclado de software habilitado, solo se utilizará cuando se abra el teclado de hardware.
 
-    - `keyshidden`&ndash; El dispositivo tiene un teclado de hardware, pero está oculto y no hay ningún teclado de software habilitado.
+  - `keyshidden`&ndash; El dispositivo tiene un teclado de hardware, pero está oculto y no hay ningún teclado de software habilitado.
 
-    - `keyssoft`&ndash; el dispositivo tiene un teclado de software habilitado.
+  - `keyssoft`&ndash; el dispositivo tiene un teclado de software habilitado.
 
 - **Método de entrada de texto principal** &ndash; Utilice para especificar qué tipos de claves de hardware están disponibles para la entrada. Los valores posibles son:
 
-    - `nokeys`&ndash; No hay claves de hardware para la entrada.
+  - `nokeys`&ndash; No hay claves de hardware para la entrada.
 
-    - `qwerty`&ndash; Hay un teclado QWERTY disponible.
+  - `qwerty`&ndash; Hay un teclado QWERTY disponible.
 
-    - `12key`&ndash; Hay un teclado de hardware de 12 teclas
+  - `12key`&ndash; Hay un teclado de hardware de 12 teclas
 
 
 - **Disponibilidad** de la clave de navegación &ndash; Para cuando esté disponible la navegación de 5 o d (pad direccional). Esto puede cambiar durante la vigencia de la aplicación. Los valores posibles son:
 
-    - `navexposed`&ndash; las teclas de navegación están disponibles para el usuario
+  - `navexposed`&ndash; las teclas de navegación están disponibles para el usuario
 
-    - `navhidden`&ndash; las teclas de navegación no están disponibles.
+  - `navhidden`&ndash; las teclas de navegación no están disponibles.
 
 - **Método de navegación no táctil principal** &ndash; El tipo de navegación disponible en el dispositivo. Los valores posibles son:
 
-    - `nonav`&ndash; la única característica de navegación disponible es la pantalla táctil
+  - `nonav`&ndash; la única característica de navegación disponible es la pantalla táctil
 
-    - `dpad`&ndash; un panel de control de acceso (PAD) está disponible para la navegación
+  - `dpad`&ndash; un panel de control de acceso (PAD) está disponible para la navegación
 
-    - `trackball`&ndash; el dispositivo tiene un trackball para la navegación
+  - `trackball`&ndash; el dispositivo tiene un trackball para la navegación
 
-    - `wheel`&ndash; escenario poco frecuente en el que hay una o varias ruedas direccionales disponibles
+  - `wheel`&ndash; escenario poco frecuente en el que hay una o varias ruedas direccionales disponibles
 
 - **Versión de la plataforma (nivel de API)** El nivel de API que admite el dispositivo en el formato v*n*, donde N es el nivel de API que se va a usar como destino. &ndash; Por ejemplo, V11 se dirigirá a un dispositivo de nivel de API 11 (Android 3,0).
 

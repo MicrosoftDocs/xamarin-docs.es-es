@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8379b9c9575c5a4f24f6c35c37cf8682e53b78ec
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121124"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227240"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación de Xamarin. Mac
 
@@ -68,24 +68,24 @@ Comprobaremos que la aplicación está en un espacio aislado y aprenderá a solu
 Vamos a hacer lo siguiente para crear nuestro proyecto de ejemplo:
 
 1. Inicie Visual Studio para Mac y haga clic en la **nueva solución.** .
-2. En el cuadro de diálogo **nuevo proyecto** , seleccione aplicación de**coco**de**aplicación** >  **Mac** > : 
+2. En el cuadro de diálogo **nuevo proyecto** , seleccione aplicación de**coco**de**aplicación** >  **Mac** > :
 
     [![Creación de una nueva aplicación de cacao](sandboxing-images/sample01.png "Creación de una nueva aplicación de cacao")](sandboxing-images/sample01-large.png#lightbox)
-3. Haga clic en el botón siguiente `MacSandbox` , escriba para el nombre del proyecto y haga clic en el botón **crear** : 
+3. Haga clic en el botón siguiente `MacSandbox` , escriba para el nombre del proyecto y haga clic en el botón **crear** :
 
     [![Escribir el nombre de la aplicación](sandboxing-images/sample02.png "Escribir el nombre de la aplicación")](sandboxing-images/sample02-large.png#lightbox)
-4. En el **Panel de solución**, haga doble clic en el archivo **Main. Storyboard** para abrirlo para su edición en Xcode: 
+4. En el **Panel de solución**, haga doble clic en el archivo **Main. Storyboard** para abrirlo para su edición en Xcode:
 
     [![Edición del guión gráfico principal](sandboxing-images/sample03.png "Edición del guión gráfico principal")](sandboxing-images/sample03-large.png#lightbox)
-5. Arrastre una **vista Web** a la ventana, cambie su tamaño para rellenar el área de contenido y establecerla para que crezca y se reduzca con la ventana: 
+5. Arrastre una **vista Web** a la ventana, cambie su tamaño para rellenar el área de contenido y establecerla para que crezca y se reduzca con la ventana:
 
     [![Agregar una vista Web](sandboxing-images/sample04.png "Agregar una vista Web")](sandboxing-images/sample04-large.png#lightbox)
-6. Cree una salida para la vista web denominada `webView`: 
+6. Cree una salida para la vista web denominada `webView`:
 
     [![Creación de una nueva salida](sandboxing-images/sample05.png "Creación de una nueva salida")](sandboxing-images/sample05-large.png#lightbox)
 7. Vuelva a Visual Studio para Mac y haga doble clic en el archivo **ViewController.CS** en el **Panel de solución** para abrirlo para su edición.
 8. Agregue la siguiente instrucción using:`using WebKit;`
-9. Haga que `ViewDidLoad` el método tenga el aspecto siguiente: 
+9. Haga que `ViewDidLoad` el método tenga el aspecto siguiente:
 
     ```csharp
     public override void AwakeFromNib ()
@@ -109,34 +109,34 @@ Antes de poder habilitar el espacio aislado de la aplicación, primero debemos a
 
 Haga lo siguiente:
 
-1. Inicie sesión en el portal para desarrolladores de Apple: 
+1. Inicie sesión en el portal para desarrolladores de Apple:
 
     [![Iniciar sesión en el portal para desarrolladores de Apple](sandboxing-images/sign01.png "Iniciar sesión en el portal para desarrolladores de Apple")](sandboxing-images/sign01-large.png#lightbox)
-2. Seleccione **certificados, identificadores & perfiles**: 
+2. Seleccione **certificados, identificadores & perfiles**:
 
     [![Seleccionar certificados, identificadores y perfiles](sandboxing-images/sign02.png "Seleccionar certificados, identificadores y perfiles")](sandboxing-images/sign02-large.png#lightbox)
-3. En **aplicaciones Mac**, seleccione **Identifiers**(identificadores): 
+3. En **aplicaciones Mac**, seleccione **Identifiers**(identificadores):
 
     [![Seleccionar identificadores](sandboxing-images/sign03.png "Seleccionar identificadores")](sandboxing-images/sign03-large.png#lightbox)
-4. Cree un nuevo identificador para la aplicación: 
+4. Cree un nuevo identificador para la aplicación:
 
     [![Creación de un nuevo identificador de aplicación](sandboxing-images/sign04.png "Creación de un nuevo identificador de aplicación")](sandboxing-images/sign04-large.png#lightbox)
-5. En **perfiles de aprovisionamiento**, seleccione **desarrollo**: 
+5. En **perfiles de aprovisionamiento**, seleccione **desarrollo**:
 
     [![Seleccionar desarrollo](sandboxing-images/sign05.png "Seleccionar desarrollo")](sandboxing-images/sign05-large.png#lightbox)
-6. Cree un nuevo perfil y seleccione **desarrollo de aplicaciones Mac**: 
+6. Cree un nuevo perfil y seleccione **desarrollo de aplicaciones Mac**:
 
     [![Crear un nuevo perfil](sandboxing-images/sign06.png "Crear un nuevo perfil")](sandboxing-images/sign06-large.png#lightbox)
-7. Seleccione el ID. de aplicación que hemos creado anteriormente: 
+7. Seleccione el ID. de aplicación que hemos creado anteriormente:
 
     [![Selección del identificador de la aplicación](sandboxing-images/sign07.png "Selección del identificador de la aplicación")](sandboxing-images/sign07-large.png#lightbox)
-8. Seleccione los desarrolladores de este perfil: 
+8. Seleccione los desarrolladores de este perfil:
 
     [![Agregar desarrolladores](sandboxing-images/sign08.png "Agregar desarrolladores")](sandboxing-images/sign08-large.png#lightbox)
-9. Seleccione los equipos para este perfil: 
+9. Seleccione los equipos para este perfil:
 
     [![Selección de los equipos permitidos](sandboxing-images/sign09.png "Selección de los equipos permitidos")](sandboxing-images/sign09-large.png#lightbox)
-10. Asigne un nombre al perfil: 
+10. Asigne un nombre al perfil:
 
     [![Asignar un nombre al perfil](sandboxing-images/sign10.png "Asignar un nombre al perfil")](sandboxing-images/sign10-large.png#lightbox)
 11. Haga clic en el botón **listo** .
@@ -146,10 +146,10 @@ Haga lo siguiente:
 
 A continuación, es necesario cargar el nuevo ID. de aplicación y el perfil en el equipo de desarrollo. Vamos a hacer lo siguiente:
 
-1. Inicie Xcode y seleccione **preferencias** en el menú de **Xcode** : 
+1. Inicie Xcode y seleccione **preferencias** en el menú de **Xcode** :
 
     ![Editar cuentas en Xcode](sandboxing-images/sign11.png "Editar cuentas en Xcode")
-2. Haga clic en el botón **Ver detalles..** .: 
+2. Haga clic en el botón **Ver detalles..** .:
 
     ![Hacer clic en el botón Ver detalles](sandboxing-images/sign12.png "Hacer clic en el botón Ver detalles")
 3. Haga clic en el botón **Actualizar** (en la esquina inferior izquierda).
@@ -158,17 +158,17 @@ A continuación, es necesario cargar el nuevo ID. de aplicación y el perfil en 
 A continuación, es necesario seleccionar el nuevo identificador de aplicación y el perfil de aprovisionamiento en nuestro proyecto de Xamarin. Mac. Vamos a hacer lo siguiente:
 
 1. En el **Panel de solución**, haga doble clic en el archivo **info. plist** para abrirlo para su edición.
-2. Asegúrese de que el **identificador de paquete** coincide con el identificador de aplicación que hemos creado `com.appracatappra.MacSandbox`anteriormente (ejemplo:): 
+2. Asegúrese de que el **identificador de paquete** coincide con el identificador de aplicación que hemos creado `com.appracatappra.MacSandbox`anteriormente (ejemplo:):
 
     [![Editar el identificador de paquete](sandboxing-images/sign13.png "Editar el identificador de paquete")](sandboxing-images/sign13-large.png#lightbox)
-3. A continuación, haga doble clic en el archivo contitles **. plist** y asegúrese de que el **almacén de clave-valor de icloud** y los **contenedores de ICLOUD** coinciden con el identificador `com.appracatappra.MacSandbox`de aplicación que hemos creado anteriormente (ejemplo:): 
+3. A continuación, haga doble clic en el archivo contitles **. plist** y asegúrese de que el **almacén de clave-valor de icloud** y los **contenedores de ICLOUD** coinciden con el identificador `com.appracatappra.MacSandbox`de aplicación que hemos creado anteriormente (ejemplo:):
 
     [![Edición del archivo de derechos. plist](sandboxing-images/sign17.png "Edición del archivo de derechos. plist")](sandboxing-images/sign17-large.png#lightbox)
 4. Guarde los cambios.
-5. En el **Panel de solución**, haga doble clic en el archivo de proyecto para abrir sus opciones de edición:  
+5. En el **Panel de solución**, haga doble clic en el archivo de proyecto para abrir sus opciones de edición:
 
     ![Editign las opciones de la solución](sandboxing-images/sign14.png "Editign las opciones de la solución")
-6. Seleccione **firma de Mac**y, a continuación, active la casilla **firmar el** paquete de aplicación y **firme el paquete del instalador**. En **Perfil de aprovisionamiento**, seleccione el que hemos creado anteriormente: 
+6. Seleccione **firma de Mac**y, a continuación, active la casilla **firmar el** paquete de aplicación y **firme el paquete del instalador**. En **Perfil de aprovisionamiento**, seleccione el que hemos creado anteriormente:
 
     ![Configuración del perfil de aprovisionamiento](sandboxing-images/sign15.png "Configuración del perfil de aprovisionamiento")
 7. Haga clic en el botón **listo** .
@@ -195,7 +195,7 @@ En caso de un problema, corrija el problema en el portal para desarrolladores de
 Para habilitar el espacio aislado de la aplicación, seleccione una casilla en las opciones de los proyectos. Haga lo siguiente:
 
 1. En el **Panel de solución**, haga doble clic en el archivo contitles **. plist** para abrirlo para su edición.
-2. Active **Habilitar derechos** y **habilitar espacio aislado de aplicaciones**: 
+2. Active **Habilitar derechos** y **habilitar espacio aislado de aplicaciones**:
 
     [![Edición de derechos y habilitación del espacio aislado](sandboxing-images/sign17.png "Edición de derechos y habilitación del espacio aislado")](sandboxing-images/sign17-large.png#lightbox)
 3. Guarde los cambios.
@@ -208,25 +208,25 @@ En este punto, ha habilitado el espacio aislado de la aplicación, pero no ha pr
 
 Aparte del comportamiento de bloqueo de recursos, hay tres formas principales de saber si una aplicación de Xamarin. Mac se ha aislado correctamente:
 
-1. En el buscador, compruebe el contenido de `~/Library/Containers/` la carpeta: Si la aplicación está en un espacio aislado, habrá una carpeta denominada como identificador de lote de la aplicación (por `com.appracatappra.MacSandbox`ejemplo:): 
+1. En el buscador, compruebe el contenido de `~/Library/Containers/` la carpeta: Si la aplicación está en un espacio aislado, habrá una carpeta denominada como identificador de lote de la aplicación (por `com.appracatappra.MacSandbox`ejemplo:):
 
     [![Abrir el paquete de la aplicación](sandboxing-images/sample09.png "Abrir el paquete de la aplicación")](sandboxing-images/sample09-large.png#lightbox)
 2. El sistema ve la aplicación como espacio aislado en el monitor de actividad:
-    - Inicie el monitor de actividad `/Applications/Utilities`(en). 
+    - Inicie el monitor de actividad `/Applications/Utilities`(en).
     - Elija **Ver** > **columnas** y asegúrese de que esté activada la casilla elemento de menú de **espacio aislado** .
-    - Asegúrese de que la columna de `Yes` espacio aislado Lee para su aplicación: 
+    - Asegúrese de que la columna de `Yes` espacio aislado Lee para su aplicación:
 
     [![Comprobando la aplicación en el monitor de actividad](sandboxing-images/sample10.png "Comprobando la aplicación en el monitor de actividad")](sandboxing-images/sample10-large.png#lightbox)
 3. Compruebe que el archivo binario de la aplicación está en un espacio aislado:
     - Inicie la aplicación terminal.
     - Navegue hasta el directorio `bin` de aplicaciones.
-    - Emita este comando: `codesign -dvvv --entitlements :- executable_path` (donde `executable_path` es la ruta de acceso a la aplicación): 
+    - Emita este comando: `codesign -dvvv --entitlements :- executable_path` (donde `executable_path` es la ruta de acceso a la aplicación):
 
     [![Comprobar la aplicación en la línea de comandos](sandboxing-images/sample11.png "Comprobar la aplicación en la línea de comandos")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Depurar una aplicación en espacio aislado
 
-El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador.* . 
+El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador.* .
 
 [![Establecer las opciones necesarias](sandboxing-images/debug01.png "Establecer las opciones necesarias")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -246,7 +246,7 @@ Haga lo siguiente:
 
 1. Compile la aplicación en cuestión y ejecútela desde Visual Studio para Mac.
 2. Abra la aplicación de **consola** ( `/Applications/Utilties/`desde).
-3. Seleccione **todos los mensajes** en la barra lateral `sandbox` y escriba en la búsqueda: 
+3. Seleccione **todos los mensajes** en la barra lateral `sandbox` y escriba en la búsqueda:
 
     [![Un ejemplo de un problema de espacio aislado en la consola](sandboxing-images/resolve01.png "Un ejemplo de un problema de espacio aislado en la consola")](sandboxing-images/resolve01-large.png#lightbox)
 
@@ -259,7 +259,7 @@ Ahora que hemos aprendido a encontrar infracciones de espacio aislado de aplicac
 Haga lo siguiente:
 
 1. En el **Panel de solución**, haga doble clic en el archivo contitles **. plist** para abrirlo para su edición.
-2. En la sección **derechos** , active la casilla **permitir conexiones de red salientes (cliente)** : 
+2. En la sección **derechos** , active la casilla **permitir conexiones de red salientes (cliente)** :
 
     [![Editar los derechos](sandboxing-images/sign17.png "Editar los derechos")](sandboxing-images/sign17-large.png#lightbox)
 3. Guarde los cambios en la aplicación.
@@ -280,7 +280,7 @@ Al diseñar el espacio aislado de la aplicación, está diseñando para un escen
 
 Como vimos anteriormente, se concede a una aplicación de Xamarin. Mac que no está en un espacio aislado los derechos completos y el acceso del usuario que ejecuta la aplicación. Si se ve comprometido por código malintencionado, una aplicación no protegida puede actuar como agente para un comportamiento hostil, con un gran potencial para hacer daño.
 
-Al habilitar el espacio aislado de la aplicación, se quitan todos los privilegios menos un conjunto mínimo de privilegios, que luego se vuelven a habilitar en función de los derechos de la aplicación de Xamarin. Mac. 
+Al habilitar el espacio aislado de la aplicación, se quitan todos los privilegios menos un conjunto mínimo de privilegios, que luego se vuelven a habilitar en función de los derechos de la aplicación de Xamarin. Mac.
 
 Modifique los recursos de espacio aislado de la aplicación de la aplicación editando su archivo contitles **. plist** y comprobando o seleccionando los derechos necesarios en los cuadros desplegables editores:
 
@@ -356,13 +356,13 @@ Además, el sistema permite automáticamente lo siguiente a una aplicación en e
 - Abra los archivos elegido por el usuario en el menú **Abrir recientes** .
 - Use copiar & pegar entre otras aplicaciones.
 - Leer archivos de las siguientes ubicaciones de lectura universal:
-    - `/bin`
-    - `/sbin`
-    - `/usr/bin`
-    - `/usr/lib`
-    - `/usr/sbin`
-    - `/usr/share`
-    - `/System`
+  - `/bin`
+  - `/sbin`
+  - `/usr/bin`
+  - `/usr/lib`
+  - `/usr/sbin`
+  - `/usr/share`
+  - `/System`
 - Leer y escribir archivos en los directorios creados por `NSTemporaryDirectory`.
 
 De forma predeterminada, los archivos abiertos o guardados por una aplicación de Xamarin. Mac en espacio aislado permanecen accesibles hasta que finalice la aplicación (a menos que el archivo se haya abierto cuando se cierre la aplicación). Los archivos abiertos se restaurarán automáticamente en el espacio aislado de la aplicación a través de la característica de reanudación de macOS la próxima vez que se inicie la aplicación.
@@ -401,10 +401,10 @@ Mediante el uso de _marcadores de ámbito de seguridad_, una aplicación de Xama
 
 Cuando se trabaja con marcadores de ámbito de seguridad y acceso persistente a recursos, hay dos casos de uso de SISTINE:
 
-- **Un marcador de ámbito de aplicación proporciona acceso persistente a un archivo o carpeta especificados por el usuario.** 
+- **Un marcador de ámbito de aplicación proporciona acceso persistente a un archivo o carpeta especificados por el usuario.**
 
     Por ejemplo, si la aplicación de Xamarin. Mac en espacio aislado permite usar para abrir un documento externo para su edición ( `NSOpenPanel`mediante), la aplicación puede crear un marcador de ámbito de aplicación para que pueda tener acceso al mismo archivo en el futuro.
-- **Un marcador de ámbito de documento proporciona un acceso persistente a un documento específico a un subarchivo.** 
+- **Un marcador de ámbito de documento proporciona un acceso persistente a un documento específico a un subarchivo.**
 
 Por ejemplo, una aplicación de edición de vídeo que crea un archivo de proyecto que tiene acceso a imágenes individuales, clips de vídeo y archivos de sonido que se combinarán posteriormente en una sola película.
 
@@ -432,7 +432,7 @@ Después de ceder el acceso a un recurso, deberá volver al paso 4 de nuevo para
 
 ### <a name="the-app-sandbox-and-code-signing"></a>El espacio aislado de la aplicación y la firma de código
 
-Después de habilitar el espacio aislado de la aplicación y de habilitar los requisitos específicos de la aplicación de Xamarin. Mac (a través de derechos), debe firmar el código del proyecto para que el espacio aislado surta efecto. Debe realizar la firma de código porque los derechos necesarios para el espacio aislado de la aplicación están vinculados a la firma de la aplicación. 
+Después de habilitar el espacio aislado de la aplicación y de habilitar los requisitos específicos de la aplicación de Xamarin. Mac (a través de derechos), debe firmar el código del proyecto para que el espacio aislado surta efecto. Debe realizar la firma de código porque los derechos necesarios para el espacio aislado de la aplicación están vinculados a la firma de la aplicación.
 
 macOS impone un vínculo entre el contenedor de una aplicación y su firma de código, de este modo, ninguna otra aplicación puede acceder a ese contenedor, incluso si está suplantando el identificador del lote de aplicaciones. Este mecanismo funciona de la siguiente manera:
 
@@ -529,7 +529,7 @@ Estos son algunos problemas comunes y cosas que puede hacer para solucionarlos:
 - **Conservar el acceso a los recursos del sistema de archivos** : Si la aplicación de Xamarin. Mac depende del acceso persistente a recursos fuera de su contenedor, use marcadores de ámbito de seguridad para mantener el acceso.
 - **Crear un elemento de inicio de sesión para una aplicación** : con el espacio aislado de la aplicación, no `LSSharedFileList` se puede crear un elemento de inicio de sesión con ni `LSRegisterURL`se puede manipular el estado de los servicios de inicio mediante. Use la `SMLoginItemSetEnabled` función tal y como se describe en manzanas [agregando elementos de inicio de sesión mediante la documentación del marco de administración de servicios](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
 - **Acceso** a los datos de usuario: Si usa funciones POSIX como `getpwuid` para obtener el directorio particular del usuario de los servicios de directorio, considere el uso de los símbolos de cacao `NSHomeDirectory`o Core Foundation como.
-- **Acceder a las preferencias de otras aplicaciones** : como el espacio aislado de la aplicación dirige las API de búsqueda de rutas de acceso al contenedor de la aplicación, la modificación de las preferencias tiene lugar dentro de ese contenedor y el acceso a otras preferencias de aplicaciones no está permitido. 
+- **Acceder a las preferencias de otras aplicaciones** : como el espacio aislado de la aplicación dirige las API de búsqueda de rutas de acceso al contenedor de la aplicación, la modificación de las preferencias tiene lugar dentro de ese contenedor y el acceso a otras preferencias de aplicaciones no está permitido.
 - **Uso de vídeo insertado en HTML5 en las vistas web** : Si la aplicación de Xamarin. Mac usa WebKit para reproducir vídeos HTML5 incrustados, también debe vincular la aplicación con el marco AV Foundation. De lo contrario, el espacio aislado de la aplicación impedirá que cocorreccióna juegue a estos vídeos.
 
 ### <a name="applying-required-app-sandbox-entitlements"></a>Aplicando los derechos de espacio aislado de la aplicación necesarios
@@ -555,7 +555,7 @@ Para obtener más información, vea la guía de programación de la [creación d
 
 ### <a name="implement-a-migration-strategy"></a>Implementar una estrategia de migración
 
-Si está publicando una nueva versión en espacio aislado de una aplicación de Xamarin. Mac que no estaba previamente en un espacio aislado, deberá asegurarse de que los usuarios actuales tengan una ruta de acceso de actualización fluida. 
+Si está publicando una nueva versión en espacio aislado de una aplicación de Xamarin. Mac que no estaba previamente en un espacio aislado, deberá asegurarse de que los usuarios actuales tengan una ruta de acceso de actualización fluida.
 
  Para obtener más información sobre cómo implementar un manifiesto de migración de contenedor, lea la documentación [migración de una aplicación a un espacio aislado](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) de Apple.
 

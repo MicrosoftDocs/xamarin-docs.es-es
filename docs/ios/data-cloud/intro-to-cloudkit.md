@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: 29e737e5a6cb6abdae099c0224a2da058c2ea025
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527735"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227828"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin. iOS
 
@@ -55,7 +55,7 @@ Para que una aplicación de Xamarin pueda usar el marco de trabajo de CloudKit, 
 
 1. Abra el proyecto en Visual Studio para Mac o Visual Studio.
 2. En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el **identificador** de la agrupación coincide con el que se definió en **ID. de aplicación** creado como parte de la configuración de aprovisionamiento:
- 
+
     [![](intro-to-cloudkit-images/image26a.png "Escriba el identificador de paquete")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3. Desplácese hacia abajo hasta la parte inferior del archivo **info. plist** y seleccione **modos en segundo plano habilitados**, **actualizaciones de ubicación** y notificaciones **remotas**:
@@ -471,42 +471,42 @@ CloudKit admite los siguientes tipos de `NSPredicates` cuando se trabaja con con
 
 
 1. Registros coincidentes en los que el nombre es igual a un valor almacenado en una variable:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("name = '{0}'", recordName))
     ```
-   
+
 2. Permite que la búsqueda de coincidencias se base en un valor de clave dinámica, de modo que la clave no tenga que conocerse en tiempo de compilación:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("{0} = '{1}'", key, value))
     ```
-    
+
 3. Registros coincidentes en los que el valor del registro es mayor que el valor especificado:
-   
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0}", (NSDate)date))
     ```
 
 4. Registros coincidentes en los que la ubicación del registro está dentro de 100 metros de la ubicación especificada:
-    
-    ```
+
+    ```csharp
     var location = new CLLocation(37.783,-122.404);
     var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
     ```
 
 5. CloudKit admite una búsqueda con tokens. Esta llamada creará dos tokens, uno para `after` y otro para `session`. Devolverá un registro que contiene los dos tokens:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
-    
+
 6. CloudKit admite predicados compuestos Unidos mediante el `AND` operador.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
-    
+
 
 
 #### <a name="creating-queries"></a>Crear consultas
@@ -820,40 +820,40 @@ Antes de enviar una aplicación que usa CloudKit, debe configurarse para que ten
 
 Haga lo siguiente:
 
-1. En Visual Studio para MA, compile la aplicación para el**dispositivo iOS**de **lanzamiento** > : 
+1. En Visual Studio para MA, compile la aplicación para el**dispositivo iOS**de **lanzamiento** > :
 
     [![](intro-to-cloudkit-images/shipping01.png "Compilar la aplicación para su lanzamiento")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
-2. En el menú compilar, seleccione **archivar**: 
+2. En el menú compilar, seleccione **archivar**:
 
     [![](intro-to-cloudkit-images/shipping02.png "Seleccionar archivo")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
-3. El **archivo** se creará y se mostrará en Visual Studio para Mac: 
+3. El **archivo** se creará y se mostrará en Visual Studio para Mac:
 
     [![](intro-to-cloudkit-images/shipping03.png "Se creará y mostrará el archivo.")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. Inicie **Xcode**.
-5. En el menú **ventana** , seleccione **organizador**: 
+5. En el menú **ventana** , seleccione **organizador**:
 
     [![](intro-to-cloudkit-images/shipping04.png "Seleccionar organizador")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
-6. Seleccione el archivo de la aplicación y haga clic en el botón **exportar...** : 
+6. Seleccione el archivo de la aplicación y haga clic en el botón **exportar...** :
 
     [![](intro-to-cloudkit-images/shipping05.png "El archivo de la aplicación")](intro-to-cloudkit-images/shipping05.png#lightbox)
-    
-7. Seleccione un método para la exportación y haga clic en el botón **siguiente** : 
+
+7. Seleccione un método para la exportación y haga clic en el botón **siguiente** :
 
     [![](intro-to-cloudkit-images/shipping06.png "Seleccionar un método para la exportación")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
-8. Seleccione el **equipo de desarrollo** en la lista desplegable y haga clic en el botón **elegir** : 
+8. Seleccione el **equipo de desarrollo** en la lista desplegable y haga clic en el botón **elegir** :
 
     [![](intro-to-cloudkit-images/shipping07.png "Seleccione el equipo de desarrollo en la lista desplegable.")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
-9. Seleccione **producción** en la lista desplegable y haga clic en el botón **siguiente** : 
+9. Seleccione **producción** en la lista desplegable y haga clic en el botón **siguiente** :
 
     [![](intro-to-cloudkit-images/shipping08.png "Seleccionar producción en la lista desplegable")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
-10. Revise la configuración y haga clic en el botón **exportar** : 
+10. Revise la configuración y haga clic en el botón **exportar** :
 
     [![](intro-to-cloudkit-images/shipping09.png "Revisar la configuración")](intro-to-cloudkit-images/shipping09.png#lightbox)
 

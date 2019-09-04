@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f2272b90f664331959cfc8f60c6e59adc9550a98
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eca0f82fd967c28bffc8f20bcc9e2ec6bb3ba737
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522767"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227706"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -34,7 +34,7 @@ En esta guía se muestran ambos enfoques:
 - En [Viewpager con vistas](~/android/user-interface/controls/view-pager/viewpager-and-views.md), se desarrolla una aplicación de [TreePager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) para mostrar cómo usar `ViewPager` para mostrar vistas de un catálogo de árbol (una galería de imágenes de árboles de deciduous y perenne). 
     `PagerTabStrip`y `PagerTitleStrip` se usan para mostrar los títulos que ayudan en la navegación de páginas.
 
-- En [Viewpager con fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), se desarrolla una aplicación de [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) ligeramente más compleja para demostrar cómo se `ViewPager` usa `Fragment`con para crear una aplicación que presenta problemas matemáticos como tarjetas flash y responde a los datos proporcionados por el usuario. 
+- En [Viewpager con fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), se desarrolla una aplicación de [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) ligeramente más compleja para demostrar cómo se `ViewPager` usa `Fragment`con para crear una aplicación que presenta problemas matemáticos como tarjetas flash y responde a los datos proporcionados por el usuario. 
 
 
 ## <a name="requirements"></a>Requisitos

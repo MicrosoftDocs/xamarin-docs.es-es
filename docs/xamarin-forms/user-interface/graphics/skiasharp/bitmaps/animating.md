@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 74fb5bdc13facd52c06e8b7c2138d1d5db9d4565
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 33e17a01d8a13fcdaee27e5857c554a4a232c534
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199509"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228055"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animar los mapas de bits de SkiaSharp
 

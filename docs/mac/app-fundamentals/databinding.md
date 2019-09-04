@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: beb063d423c860958948751d162af661040004b7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529015"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227256"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -36,7 +36,7 @@ Es posible que desee echar un vistazo a la [sección exponer C# clases y método
 
 La codificación de valores clave (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a`get/set`través de variables de instancia o métodos de descriptor de acceso (). Mediante la implementación de los descriptores de acceso compatibles con el código de clave-valor en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS (conocido anteriormente como OS X), como la observación de clave-valor (KVO), el enlace de datos, los enlaces de cacao y la creación de scripts.
 
-Mediante el uso de la codificación de valores clave y técnicas de enlace de datos en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible. 
+Mediante el uso de la codificación de valores clave y técnicas de enlace de datos en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible.
 
 Por ejemplo, echemos un vistazo a la siguiente definición de clase de un objeto compatible con KVC:
 
@@ -50,7 +50,7 @@ namespace MacDatabinding
     public class PersonModel : NSObject
     {
         private string _name = "";
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -60,7 +60,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -68,7 +68,7 @@ namespace MacDatabinding
 }
 ```
 
-En primer lugar `[Register("PersonModel")]` , el atributo registra la clase y la expone a Objective-C. A continuación, la clase debe heredar `NSObject` de (o una subclase que hereda de `NSObject`). Esto agrega varios métodos base que permiten a la clase ser compatible con KVC. A continuación, `[Export("Name")]` el atributo expone la `Name` propiedad y define el valor de clave que se usará más adelante para tener acceso a la propiedad a través de las técnicas KVC y KVO. 
+En primer lugar `[Register("PersonModel")]` , el atributo registra la clase y la expone a Objective-C. A continuación, la clase debe heredar `NSObject` de (o una subclase que hereda de `NSObject`). Esto agrega varios métodos base que permiten a la clase ser compatible con KVC. A continuación, `[Export("Name")]` el atributo expone la `Name` propiedad y define el valor de clave que se usará más adelante para tener acceso a la propiedad a través de las técnicas KVC y KVO.
 
 Por último, para poder ser los cambios observados con valores clave en el valor de la propiedad, el descriptor de acceso debe `WillChangeValue` ajustar `DidChangeValue` los cambios en su valor en las llamadas de método `Export` y (especificando la misma clave que el atributo).  Por ejemplo:
 
@@ -103,7 +103,7 @@ namespace MacDatabinding
     {
         private string _name = "";
         private PersonModel _child = new PersonModel();
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -113,7 +113,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         [Export("Child")]
         public PersonModel Child {
             get { return _child; }
@@ -123,7 +123,7 @@ namespace MacDatabinding
                 DidChangeValue ("Child");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -138,11 +138,11 @@ La ruta de acceso de la clave al nombre del `self.Child.Name` elemento secundari
 El `ValueForKey` método devuelve el valor de la clave especificada (como un `NSString`), con respecto a la instancia de la clase KVC que recibe la solicitud. Por ejemplo, si `Person` es una instancia de la `PersonModel` clase definida anteriormente:
 
 ```csharp
-// Read value 
+// Read value
 var name = Person.ValueForKey (new NSString("Name"));
 ```
 
-Esto devolvería el valor de `Name` la propiedad de esa instancia `PersonModel`de. 
+Esto devolvería el valor de `Name` la propiedad de esa instancia `PersonModel`de.
 
 ### <a name="setting-values-using-key-value-coding"></a>Establecer valores mediante el código clave-valor
 
@@ -169,7 +169,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 });
 ```
 
-Ahora, cada vez que `Name` se modifica la `Person` propiedad de la `PersonModel` instancia de la clase, el nuevo valor se escribe en la consola. 
+Ahora, cada vez que `Name` se modifica la `Person` propiedad de la `PersonModel` instancia de la clase, el nuevo valor se escribe en la consola.
 
 Para obtener más información, consulte la guía de programación de la [Introducción a los valores de clave](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i)de Apple.
 
@@ -391,7 +391,7 @@ public NSImage Icon {
         }
     }
 }
-``` 
+```
 
 Para corregirlo, usamos el código siguiente:
 
@@ -419,7 +419,7 @@ Usaremos el `PersonModel` modelo de datos en el resto de este artículo.
 
 Con nuestro modelo de datos definido, echemos un vistazo a un sencillo ejemplo de enlace de datos en la Interface Builder de Xcode. Por ejemplo, vamos a agregar un formulario a nuestra aplicación de Xamarin. Mac que se puede usar para editar `PersonModel` el que definimos anteriormente. Vamos a agregar algunos campos de texto y una casilla para mostrar y editar las propiedades de nuestro modelo.
 
-En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro archivo **Main. Storyboard** en Interface Builder y `SimpleViewController`nombrar su clase: 
+En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro archivo **Main. Storyboard** en Interface Builder y `SimpleViewController`nombrar su clase:
 
 [![Agregar un nuevo controlador de vista](databinding-images/simple01.png "Agregar un nuevo controlador de vista")](databinding-images/simple01-large.png#lightbox)
 
@@ -466,23 +466,23 @@ Ahora tenemos que crear el formulario, haga doble clic en el archivo **Main. Sto
 Para enlazar los datos del formulario `PersonModel` al que exponíamos `Person` a través de la clave, haga lo siguiente:
 
 1. Seleccione el campo de texto **nombre de empleado** y cambie al **Inspector de enlaces**.
-2. Active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.Name` , escriba para la **ruta de acceso**de la clave: 
+2. Active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.Name` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple03.png "Escribir la ruta de acceso de la clave")](databinding-images/simple03-large.png#lightbox)
-3. Seleccione el campo de texto **ocupación** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.Occupation` , escriba para la **ruta de acceso**de la clave:  
+3. Seleccione el campo de texto **ocupación** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.Occupation` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple04.png "Escribir la ruta de acceso de la clave")](databinding-images/simple04-large.png#lightbox)
-4. Active la casilla **empleado como administrador** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.isManager` , escriba para la **ruta de acceso**de la clave:  
+4. Active la casilla **empleado como administrador** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.isManager` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple05.png "Escribir la ruta de acceso de la clave")](databinding-images/simple05-large.png#lightbox)
-5. Seleccione el campo **de texto número de empleados administrados** y active la casilla enlazar **con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.NumberOfEmployees` , escriba para la **ruta de acceso**de la clave:  
+5. Seleccione el campo **de texto número de empleados administrados** y active la casilla enlazar **con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.NumberOfEmployees` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple06.png "Escribir la ruta de acceso de la clave")](databinding-images/simple06-large.png#lightbox)
 6. Si el empleado no es un administrador, queremos ocultar el número de empleados con etiquetas y campos de texto administrados.
-7. Seleccione la etiqueta **administrada número de empleados** , expanda el control situado **oculto** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.isManager` , escriba para la **ruta de acceso**de la clave:  
+7. Seleccione la etiqueta **administrada número de empleados** , expanda el control situado **oculto** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.isManager` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple07.png "Escribir la ruta de acceso de la clave")](databinding-images/simple07-large.png#lightbox)
-8. Seleccione `NSNegateBoolean` en la lista desplegable **transformador de valor** :  
+8. Seleccione `NSNegateBoolean` en la lista desplegable **transformador de valor** :
 
     ![Selección de la transformación clave NSNegateBoolean](databinding-images/simple08.png "Selección de la transformación clave NSNegateBoolean")
 9. Esto indica al enlace de datos que la etiqueta se ocultará si el valor `isManager` de la `false`propiedad es.
@@ -576,34 +576,34 @@ Ahora tenemos que crear la vista de tabla, haga doble clic en el archivo **Main.
 
 Es necesario agregar un controlador de la **matriz** para proporcionar datos enlazados a la tabla, haga lo siguiente:
 
-1. Arrastre un **controlador** de la matriz desde el **Inspector de biblioteca** hasta el editor de la **interfaz**:  
+1. Arrastre un **controlador** de la matriz desde el **Inspector de biblioteca** hasta el editor de la **interfaz**:
 
     ![Seleccionar un controlador de la matriz de la biblioteca](databinding-images/table03.png "Seleccionar un controlador de la matriz de la biblioteca")
-2. Seleccione **controlador de matriz** en la jerarquía de la **interfaz** y cambie al **Inspector de atributo**:  
+2. Seleccione **controlador de matriz** en la jerarquía de la **interfaz** y cambie al **Inspector de atributo**:
 
     [![Seleccionar el inspector de atributos](databinding-images/table04.png "Seleccionar el inspector de atributos")](databinding-images/table04-large.png#lightbox)
-3. Escriba `PersonModel` para el **nombre de clase**, haga clic en el botón de **signo más** y agregue tres claves. Asígneles `Name` unnombre`isManager`y: `Occupation`  
+3. Escriba `PersonModel` para el **nombre de clase**, haga clic en el botón de **signo más** y agregue tres claves. Asígneles `Name` unnombre`isManager`y: `Occupation`
 
     ![Agregar las rutas de acceso de clave necesarias](databinding-images/table05.png "Agregar las rutas de acceso de clave necesarias")
 4. Esto indica al controlador de la matriz lo que está administrando una matriz de y qué propiedades debe exponer (a través de claves).
-5. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y controlador de **vista de tabla**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:  
+5. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y controlador de **vista de tabla**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
 
     ![Escribir una ruta de acceso de clave](databinding-images/table06.png "Escribir una ruta de acceso de clave")
 6. Esto une el controlador de la matriz a la `PersonModels` matriz de que exponíamos en nuestro controlador de vistas.
 
 Ahora debemos enlazar nuestra vista de tabla al controlador de la matriz, haga lo siguiente:
 
-1. Seleccione la vista de tabla y el **Inspector de enlace**:  
+1. Seleccione la vista de tabla y el **Inspector de enlace**:
 
     [![Seleccionar el inspector de enlace](databinding-images/table07.png "Seleccionar el inspector de enlace")](databinding-images/table07-large.png#lightbox)
-2. En el control situado contenido de la **tabla** , seleccione **enlazar con** y controlador de la **matriz**. Escriba `arrangedObjects` en el campo **clave del controlador** :  
+2. En el control situado contenido de la **tabla** , seleccione **enlazar con** y controlador de la **matriz**. Escriba `arrangedObjects` en el campo **clave del controlador** :
 
     ![Definir la clave del controlador](databinding-images/table08.png "Definir la clave del controlador")
-3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:  
+3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:
 
     [![Establecer la ruta de acceso de la clave del modelo](databinding-images/table09.png "Establecer la ruta de acceso de la clave del modelo")](databinding-images/table09-large.png#lightbox)
 4. `objectValue`es el actual `PersonModel` de la matriz que está siendo administrado por el controlador de la matriz.
-5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:  
+5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:
 
     [![Establecer la ruta de acceso de la clave del modelo](databinding-images/table10.png "Establecer la ruta de acceso de la clave del modelo")](databinding-images/table10-large.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
@@ -618,7 +618,7 @@ Si ejecutamos la aplicación, la tabla se rellenará con nuestra matriz `PersonM
 
 el enlace de datos en una vista de esquema es muy similar al enlace en una vista de tabla. La diferencia clave es que vamos a usar un **controlador de árbol** en lugar de un **controlador** de la matriz para proporcionar los datos enlazados a la vista de esquema. Para obtener más información sobre cómo trabajar con las vistas de esquema, consulte la documentación de las [vistas de esquema](~/mac/user-interface/outline-view.md) .
 
-En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro archivo **Main. Storyboard** en Interface Builder y `OutlineViewController`nombrar su clase: 
+En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro archivo **Main. Storyboard** en Interface Builder y `OutlineViewController`nombrar su clase:
 
 [![Agregar un nuevo controlador de vista](databinding-images/outline01.png "Agregar un nuevo controlador de vista")](databinding-images/outline01-large.png#lightbox)
 
@@ -694,38 +694,38 @@ Ahora tenemos que crear la vista de esquema, haga doble clic en el archivo **Mai
 
 Necesitamos agregar un controlador de **árbol** para proporcionar datos enlazados a nuestro esquema; haga lo siguiente:
 
-1. Arrastre un **controlador de árbol** desde el **Inspector de biblioteca** hasta el editor de la **interfaz**:  
+1. Arrastre un **controlador de árbol** desde el **Inspector de biblioteca** hasta el editor de la **interfaz**:
 
     ![Seleccionar un controlador de árbol de la biblioteca](databinding-images/outline03.png "Seleccionar un controlador de árbol de la biblioteca")
-2. Seleccione **controlador de árbol** en la jerarquía de la **interfaz** y cambie al **Inspector de atributo**:  
+2. Seleccione **controlador de árbol** en la jerarquía de la **interfaz** y cambie al **Inspector de atributo**:
 
     [![Seleccionar el inspector de atributos](databinding-images/outline04.png "Seleccionar el inspector de atributos")](databinding-images/outline04-large.png#lightbox)
-3. Escriba `PersonModel` para el **nombre de clase**, haga clic en el botón de **signo más** y agregue tres claves. Asígneles `Name` unnombre`isManager`y: `Occupation`  
+3. Escriba `PersonModel` para el **nombre de clase**, haga clic en el botón de **signo más** y agregue tres claves. Asígneles `Name` unnombre`isManager`y: `Occupation`
 
     ![Agregar las rutas de acceso de clave necesarias](databinding-images/outline05.png "Agregar las rutas de acceso de clave necesarias")
 4. Esto indica al controlador de árbol lo que está administrando una matriz de y qué propiedades debe exponer (a través de claves).
-5. En la sección **controlador de árbol** , `personModelArray` escriba para **elementos secundarios**, escriba `NumberOfEmployees` en el recuento y escriba `isEmployee` en **hoja**:  
+5. En la sección **controlador de árbol** , `personModelArray` escriba para **elementos secundarios**, escriba `NumberOfEmployees` en el recuento y escriba `isEmployee` en **hoja**:
 
     ![Establecer las rutas de acceso de las claves del controlador de árbol](databinding-images/outline05.png "Establecer las rutas de acceso de las claves del controlador de árbol")
 6. Esto indica al controlador de árbol dónde encontrar los nodos secundarios, cuántos nodos secundarios hay y si el nodo actual tiene nodos secundarios.
-7. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y el **propietario del archivo**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:  
+7. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y el **propietario del archivo**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
 
     ![Editar la ruta de acceso de la clave](databinding-images/outline06.png "Editar la ruta de acceso de la clave")
 8. Esto une el controlador de árbol a la matriz `PersonModels` de que exponíamos en nuestro controlador de vistas.
 
 Ahora debemos enlazar nuestra vista de esquema al controlador de árbol, haga lo siguiente:
 
-1. Seleccione la vista esquema y, en el **Inspector de enlace** , seleccione:  
+1. Seleccione la vista esquema y, en el **Inspector de enlace** , seleccione:
 
     [![Seleccionar el inspector de enlace](databinding-images/outline07.png "Seleccionar el inspector de enlace")](databinding-images/outline07-large.png#lightbox)
-2. En la **vista esquema contenido** control situado, seleccione **enlazar con** y **controlador de árbol**. Escriba `arrangedObjects` en el campo **clave del controlador** :  
+2. En la **vista esquema contenido** control situado, seleccione **enlazar con** y **controlador de árbol**. Escriba `arrangedObjects` en el campo **clave del controlador** :
 
     ![Establecimiento de la clave de controlador](databinding-images/outline08.png "Establecimiento de la clave de controlador")
-3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:  
+3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:
 
     [![Escribir la ruta de acceso de la clave del modelo](databinding-images/outline09.png "Escribir la ruta de acceso de la clave del modelo")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue`es el actual `PersonModel` de la matriz que se está administrando mediante el controlador de árbol.
-5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:  
+5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:
 
     [![Escribir la ruta de acceso de la clave del modelo](databinding-images/outline10.png "Escribir la ruta de acceso de la clave del modelo")](databinding-images/outline10-large.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
@@ -743,7 +743,7 @@ El enlace de datos con una vista de colección es muy similar al enlace con una 
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`:
 
 ![](databinding-images/collection01.png)
 

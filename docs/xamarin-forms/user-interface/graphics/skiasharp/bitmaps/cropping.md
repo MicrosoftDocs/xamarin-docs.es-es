@@ -7,12 +7,12 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 50174844100eb852ac7daf5ce3f33b02b490ceb2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e9ba34dfcbdf041cb9bce7f277da3987acf9fec8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646662"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228239"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar los mapas de bits de SkiaSharp
 

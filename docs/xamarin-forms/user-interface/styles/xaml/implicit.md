@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 328063fd6924902738722813cfb961e56af5385e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cdbfaafdac8f965adaf4b840b568154e40ef7e10
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644475"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228187"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos en Xamarin.Forms
 
@@ -51,9 +51,9 @@ El siguiente ejemplo de código muestra un *implícita* estilo declarado en XAML
 </ContentPage>
 ```
 
-El [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define una sola *implícita* estilo que se aplica a la página [ `Entry` ](xref:Xamarin.Forms.Entry) instancias. El `Style` se usa para mostrar el texto azul sobre un fondo amarillo, y también establece otras opciones de apariencia. El `Style` se agrega a la página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) sin especificar un `x:Key` atributo. Por lo tanto, el `Style` se aplica a todas la `Entry` implícitamente instancias que coinciden con el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad de la `Style` exactamente. Sin embargo, el `Style` no se aplica a la `CustomEntry` instancia, que es una subclase `Entry`. El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
+El [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define una sola *implícita* estilo que se aplica a la página [ `Entry` ](xref:Xamarin.Forms.Entry) instancias. El `Style` se usa para mostrar el texto azul sobre un fondo amarillo, y también establece otras opciones de apariencia. El `Style` se agrega a la página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) sin especificar un `x:Key` atributo. Por lo tanto, el `Style` se aplica a todas la `Entry` implícitamente instancias que coinciden con el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad de la `Style` exactamente. Sin embargo, el `Style` no se aplica a la `CustomEntry` instancia, que es una subclase `Entry`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![](implicit-images/implicit-styles.png "Ejemplo de los estilos implícitos")](implicit-images/implicit-styles-large.png#lightbox "ejemplo los estilos implícitos")
+[![Ejemplo de estilos implícitos](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
 Además, la cuarta [ `Entry` ](xref:Xamarin.Forms.Entry) invalida la [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) y [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) propiedades del estilo implícito a diferentes `Color`valores.
 

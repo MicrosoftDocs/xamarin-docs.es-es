@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b9e8ad848204f7db785327093cd4b7ed9aa6de81
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bce2c1e543084ea80908946b1e37e43cf53c1676
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654069"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227350"
 ---
 # <a name="understanding-sirikit-concepts"></a>Descripción de los conceptos de SiriKit
 
 _En este artículo se tratan los conceptos clave necesarios para trabajar con SiriKit en una aplicación de Xamarin. iOS._
 
 
-Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los **nuevos marcos** de **interfaz de usuario** de intents y intents.
+Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los nuevos marcos de **interfaz de usuario** de intents y intents.
 
-SiriKit permite que una aplicación de iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS mediante extensiones de aplicación y **los nuevos marcos** de **interfaz de usuario** de intents y intents.
+SiriKit permite que una aplicación de iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS mediante extensiones de aplicación y los nuevos marcos de **interfaz de usuario** de intents y intents.
 
 Siri funciona con el concepto de **dominios**, grupos de acciones conocidas para tareas relacionadas. Cada interacción que tiene la aplicación con Siri debe encontrarse en uno de sus dominios de servicio conocidos de la siguiente manera:
 
@@ -152,7 +152,7 @@ A continuación, el intento se envía a la extensión de la aplicación para su 
 
 Cada IntentResponse también incluirá un **código de respuesta** que indica a Siri si la aplicación pudo completar la solicitud o no. Algunos dominios tienen códigos de respuesta de error muy específicos que también se pueden enviar.
 
-Por último, el IntentResponse incluirá `NSUserActivity` un (como los que se usan para admitir la entrega). `NSUserActivity` Se usará para iniciar la aplicación si la respuesta requiere que abandone el entorno de Siri y escriba la aplicación para completarla. 
+Por último, el IntentResponse incluirá `NSUserActivity` un (como los que se usan para admitir la entrega). `NSUserActivity` Se usará para iniciar la aplicación si la respuesta requiere que abandone el entorno de Siri y escriba la aplicación para completarla.
 
 Siri creará automáticamente una adecuada `NSUserActivity` para iniciar la aplicación y la recogida en la que el usuario se quedó en el entorno de Siri. Sin embargo, la aplicación puede proporcionar su `NSUserActivity` propia información personalizada, si es necesario.
 
@@ -174,7 +174,7 @@ Hay tres tareas principales que la extensión de la aplicación tendrá que real
 
 ### <a name="the-resolve-stage"></a>La fase de resolución
 
-La fase de resolución ayuda a Siri a comprender los valores que el usuario ha proporcionado y garantiza que lo que realmente quiere decir es lo que ocurrirá cuando la aplicación procese la intención. 
+La fase de resolución ayuda a Siri a comprender los valores que el usuario ha proporcionado y garantiza que lo que realmente quiere decir es lo que ocurrirá cuando la aplicación procese la intención.
 
 Esta fase también proporciona una oportunidad para que la aplicación influya en el comportamiento de Siri durante la conversación con el usuario. Para ello, la aplicación proporcionará una **respuesta de resolución**. Hay una serie de respuestas predefinidas a los distintos tipos de datos que entiende Siri.
 
@@ -182,7 +182,7 @@ La respuesta de resolución más común de la aplicación será **correcta**, lo
 
 Puede haber ocasiones en las que la aplicación deba confirmar que una solicitud determinada coincide con la parte correcta de la información que conoce. En estos casos, enviará una respuesta de **ConfirmationRequired** para formular una pregunta sí o no al usuario, como *"Enviar mensaje a Bobo la excelente?"* .
 
-Puede haber otros casos en los que la aplicación necesitará que el usuario elija una lista de opciones breve. En este caso, la aplicación proporcionará una respuesta de anulación de ambigüedades con una lista de entre dos y diez opciones para que el usuario elija: 
+Puede haber otros casos en los que la aplicación necesitará que el usuario elija una lista de opciones breve. En este caso, la aplicación proporcionará una respuesta de anulación de ambigüedades con una lista de entre dos y diez opciones para que el usuario elija:
 
 ```csharp
 Who do you want to message?
@@ -217,7 +217,7 @@ En función del dominio y el tipo de acción, Siri puede solicitar confirmación
 
 La fase de control es la parte más importante del trabajo con una intención porque es el punto en el que la aplicación cumple la solicitud del usuario realizando la tarea que se le ha solicitado.
 
-Al igual que en la fase de confirmación, la aplicación debe proporcionar toda la información sobre el resultado como sea posible para que Siri pueda relacionarla con el usuario. A veces, esta información se presentará visualmente u otras veces Siri simplemente la devolverá al usuario. 
+Al igual que en la fase de confirmación, la aplicación debe proporcionar toda la información sobre el resultado como sea posible para que Siri pueda relacionarla con el usuario. A veces, esta información se presentará visualmente u otras veces Siri simplemente la devolverá al usuario.
 
 Puede haber ocasiones en las que la aplicación necesite un tiempo adicional para procesar una solicitud determinada, como retrasos de la llamada de red o si una persona activa necesita completar la solicitud (por ejemplo, completar y enviar un pedido o dirigir un automóvil a la ubicación del usuario). Cuando Siri está esperando una respuesta de la aplicación, muestra una interfaz de usuario en espera para el usuario que le indica que la aplicación está procesando la solicitud.
 
@@ -228,7 +228,7 @@ Idealmente, la aplicación debe proporcionar una respuesta a Siri dentro de dos 
 Con SiriKit en iOS 10, Apple ha creado dos nuevos puntos de extensión:
 
 - **Extensión** de intents: proporciona Siri con el contenido de la aplicación y realiza las tareas necesarias para cumplir los intentos admitidos.
-- **Extensión** de la interfaz de usuario de intents: proporciona una interfaz de usuario personalizada que se mostrará para el contenido de las aplicaciones dentro de Siri. 
+- **Extensión** de la interfaz de usuario de intents: proporciona una interfaz de usuario personalizada que se mostrará para el contenido de las aplicaciones dentro de Siri.
 
 También hay una API para proporcionar palabras y frases a Siri para ayudar en el reconocimiento en la forma de:
 
@@ -292,9 +292,9 @@ Hay varias partes en un archivo de `AppIntentVocabulary.plist` vocabulario:
 
 - **Ejemplo de usos** de la aplicación: proporcionan un conjunto de casos de uso comunes para las solicitudes que el usuario puede hacer de la aplicación. Por ejemplo:  *"Iniciar un entrenamiento con MonkeyFit".*
 - **Parámetros** : proporcionan un conjunto de tipos de parámetros no estándar específicos de la aplicación. Por ejemplo, los nombres de entrenamiento de la aplicación MonkeyFit. Constan de:
-    - **Frase** : permite que la aplicación defina términos únicos para la aplicación. Por ejemplo: el tipo de entrenamiento "Bananarific" para la aplicación MonkeyFit. 
-    - **Pronunciación** : proporciona sugerencias de Pronunciación a Siri como una escritura fonética simple para una frase determinada. Por ejemplo, "BA Nana RI fica".
-    - **Ejemplo** : proporciona un ejemplo del uso de la frase determinada en la aplicación. Por ejemplo, *"Start a Bananarific in MonkeyFit"* .
+  - **Frase** : permite que la aplicación defina términos únicos para la aplicación. Por ejemplo: el tipo de entrenamiento "Bananarific" para la aplicación MonkeyFit.
+  - **Pronunciación** : proporciona sugerencias de Pronunciación a Siri como una escritura fonética simple para una frase determinada. Por ejemplo, "BA Nana RI fica".
+  - **Ejemplo** : proporciona un ejemplo del uso de la frase determinada en la aplicación. Por ejemplo, *"Start a Bananarific in MonkeyFit"* .
 
 Para obtener más información, consulte referencia del [formato de archivo de vocabulario de aplicación](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1)de Apple.
 
@@ -326,7 +326,7 @@ Lo que es más importante, la aplicación _debe_ eliminar la información del vo
 
 La parte final de SiriKit se centra en los permisos. Al igual que con otras características de iOS (como fotos, cámara o contactos), los usuarios tienen que conceder permiso explícito para que la aplicación se comunique con Siri.
 
-La aplicación puede proporcionar una cadena que defina la información que va a proporcionar a Siri y proporcione un motivo de por qué el usuario debe conceder este acceso. 
+La aplicación puede proporcionar una cadena que defina la información que va a proporcionar a Siri y proporcione un motivo de por qué el usuario debe conceder este acceso.
 
 Apple sugiere que la aplicación debe solicitar permiso del usuario para usar Siri la primera vez que el usuario abre la aplicación después de haber actualizado a iOS 10. Esto es para que los usuarios sepan la integración de Siri y puedan usar el uso previamente aprobado antes de que realicen su primera solicitud.
 
@@ -336,9 +336,9 @@ SiriKit es una parte integral de iOS y hace uso del marco de trabajo de mayor ta
 
 El marco intents va más allá de la integración de Siri y proporciona otras características, como la integración de contactos, donde la aplicación puede convertirse en la aplicación de telefonía o mensajería predeterminada para contactos específicos. Las intenciones también proporcionan una integración profunda con CallKit para proporcionar a los usuarios la mejor experiencia de VOIP posible.
 
-La aplicación Maps en iOS 10 ha agregado características como el uso compartido de la ubicación en la que el usuario puede reservar un viaje directamente dentro de la interfaz de usuario de maps. SiriKit proporciona un punto de extensión común con mapas, por lo que se pueden compartir los intentos de uso compartido (y otros) entre Siri y Maps. 
+La aplicación Maps en iOS 10 ha agregado características como el uso compartido de la ubicación en la que el usuario puede reservar un viaje directamente dentro de la interfaz de usuario de maps. SiriKit proporciona un punto de extensión común con mapas, por lo que se pueden compartir los intentos de uso compartido (y otros) entre Siri y Maps.
 
-Esto significa que si la aplicación ha adoptado las extensiones SiriKit, también recibirá la integración de Maps de forma gratuita. 
+Esto significa que si la aplicación ha adoptado las extensiones SiriKit, también recibirá la integración de Maps de forma gratuita.
 
 ## <a name="designing-a-great-siri-experience"></a>Diseño de una experiencia de Siri fantástica
 
@@ -456,7 +456,7 @@ Tómese el tiempo adecuado para explorar y experimentar cómo la aplicación pue
 
 Recuerde siempre probar la aplicación en distintas situaciones y en todos los distintos métodos para invocar una conversación con Siri. Pruebe en las ubicaciones reales. es posible que el usuario esté usando la aplicación, fuera de la oficina y el escritorio.
 
-Esforzarse por tener las conversaciones con Siri (en nombre de la aplicación) ser fluida, natural y "sentir justo". 
+Esforzarse por tener las conversaciones con Siri (en nombre de la aplicación) ser fluida, natural y "sentir justo".
 
 ## <a name="summary"></a>Resumen
 

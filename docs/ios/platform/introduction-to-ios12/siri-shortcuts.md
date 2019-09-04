@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 4fa15e73575e20541df7ee8f606b01ec6e3d875a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656718"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226567"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri en Xamarin. iOS
 
@@ -264,19 +264,19 @@ Para compilar la biblioteca estática C# y generar definiciones de enlaces para 
 
 - Configure el sistema para usar las herramientas de línea de comandos de Xcode 10:
 
-    > [!WARNING]
-    > La actualización de las herramientas de línea de comandos seleccionadas afecta a todas las versiones instaladas de Xcode en el sistema. Cuando haya terminado de usar la aplicación de ejemplo de chef de sopa, asegúrese de revertir esta configuración a su configuración original.
+  > [!WARNING]
+  > La actualización de las herramientas de línea de comandos seleccionadas afecta a todas las versiones instaladas de Xcode en el sistema. Cuando haya terminado de usar la aplicación de ejemplo de chef de sopa, asegúrese de revertir esta configuración a su configuración original.
 
-    - En Xcode, elija **xcode > preferencias > ubicaciones** y establezca **herramientas de línea de comandos** en la instalación más reciente de Xcode 10 disponible en el sistema.
+  - En Xcode, elija **xcode > preferencias > ubicaciones** y establezca **herramientas de línea de comandos** en la instalación más reciente de Xcode 10 disponible en el sistema.
 
 - En el terminal, `cd` en el directorio **OrderSoupIntentStaticLib**
 
 - Tipo `make`, que compila:
 
-    - La biblioteca estática, **libOrderSoupIntentStaticLib. a**
-    - En el directorio de salida Bo C# , las definiciones de enlaces:
-        - **ApiDefinitions.cs**
-        - **StructsAndEnums.cs**
+  - La biblioteca estática, **libOrderSoupIntentStaticLib. a**
+  - En el directorio de salida Bo C# , las definiciones de enlaces:
+    - **ApiDefinitions.cs**
+    - **StructsAndEnums.cs**
 
 El proyecto **OrderSoupIntentBindings** , que se basa en esta biblioteca estática y sus definiciones de enlaces asociadas, genera estos elementos automáticamente.
 Sin embargo, la ejecución manual mediante el proceso anterior garantizará que se compila según lo esperado.
@@ -647,14 +647,14 @@ En la sección **certificados, identificadores & perfiles** del [portal para des
 
 - Cree tres ID. de aplicación: uno para la propia aplicación, uno para la extensión intents y otro para la extensión de la interfaz de usuario de intents. Por ejemplo:
 
-    - Aplicación: **com. yourcompanyname. SoupChef**
-        - Para este identificador de aplicación, asigne las funcionalidades SiriKit y **grupos de aplicaciones** .
+  - Aplicación: **com. yourcompanyname. SoupChef**
+    - Para este identificador de aplicación, asigne las funcionalidades SiriKit y **grupos de aplicaciones** .
 
-    - Extensión intents: **com. yourcompanyname. SoupChef.** intents
-        - Para este identificador de aplicación, asigne la funcionalidad de **grupos de aplicaciones** .
+  - Extensión intents: **com. yourcompanyname. SoupChef.** intents
+    - Para este identificador de aplicación, asigne la funcionalidad de **grupos de aplicaciones** .
 
-    - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
-        - Este identificador de aplicación no necesita ninguna funcionalidad especial.
+  - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
+    - Este identificador de aplicación no necesita ninguna funcionalidad especial.
 
 - Después de crear los identificadores de aplicación anteriores, edite la funcionalidad de **grupos de aplicaciones** asignada a la aplicación y la extensión intents, especificando el grupo de aplicaciones específico que se creó anteriormente.
 
@@ -668,16 +668,16 @@ En Visual Studio para Mac o Visual Studio 2017, haga lo siguiente:
 
 - Actualice los distintos archivos **info. plist** de la solución. Establezca la aplicación, la extensión intents y el **identificador de paquete** de la extensión de la interfaz de usuario de intents en los identificadores de aplicación definidos anteriormente:
 
-    - Aplicación: **com. yourcompanyname. SoupChef**
-    - Extensión intents: **com. yourcompanyname. SoupChef.** intents
-    - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
+  - Aplicación: **com. yourcompanyname. SoupChef**
+  - Extensión intents: **com. yourcompanyname. SoupChef.** intents
+  - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
 
 - Actualice el archivo contitles **. plist** para el proyecto **SoupChef** :
-    - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
-    - Asegúrese de que **SiriKit** está habilitado.
+  - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
+  - Asegúrese de que **SiriKit** está habilitado.
 
 - Actualice el archivo contitles **. plist** para el proyecto **SoupChefIntents** :
-    - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
+  - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
 
 - Por último, Abra **NSUserDefaultsHelper.CS**. Establezca la `AppGroup` variable en el valor de su nuevo grupo de aplicaciones (por ejemplo, establézcalo en `group.com.yourcompanyname.SoupChef`).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 448bc60891a44d8cd5eea0480031d692b4fb5d31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657478"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227091"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
 
@@ -44,7 +44,7 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace ScratchTicket
     {
         [Register("ScratchTicketView"), DesignTimeVisible(true)]
@@ -55,7 +55,7 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
             CGPoint latestPoint;
             bool startNewPath = false;
             UIImage image;
-    
+
             [Export("Image"), Browsable(true)]
             public UIImage Image
             {
@@ -66,18 +66,18 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
                     SetNeedsDisplay();
                 }
             }
-    
+
             public ScratchTicketView(IntPtr p)
                 : base(p)
             {
                 Initialize();
             }
-    
+
             public ScratchTicketView()
             {
                 Initialize();
             }
-    
+
             void Initialize()
             {
                 initialPoint = CGPoint.Empty;
@@ -87,42 +87,42 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
                 path = new CGPath();
                 SetNeedsDisplay();
             }
-    
+
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     initialPoint = touch.LocationInView(this);
                 }
             }
-    
+
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     latestPoint = touch.LocationInView(this);
                     SetNeedsDisplay();
                 }
             }
-    
+
             public override void TouchesEnded(NSSet touches, UIEvent evt)
             {
                 base.TouchesEnded(touches, evt);
                 startNewPath = true;
             }
-    
+
             public override void Draw(CGRect rect)
             {
                 base.Draw(rect);
-    
+
                 using (var g = UIGraphics.GetCurrentContext())
                 {
                     if (image != null)
@@ -130,13 +130,13 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
                     else
                         g.SetFillColor(UIColor.LightGray.CGColor);
                     g.FillRect(rect);
-    
+
                     if (!initialPoint.IsEmpty)
                     {
                         g.SetLineWidth(20);
                         g.SetBlendMode(CGBlendMode.Clear);
                         UIColor.Clear.SetColor();
-    
+
                         if (path.IsEmpty || startNewPath)
                         {
                             path.AddLines(new CGPoint[] { initialPoint, latestPoint });
@@ -146,9 +146,9 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
                         {
                             path.AddLineToPoint(latestPoint);
                         }
-    
+
                         g.SetLineCap(CGLineCap.Round);
-                        g.AddPath(path);        
+                        g.AddPath(path);
                         g.DrawPath(CGPathDrawingMode.Stroke);
                     }
                 }
@@ -159,7 +159,7 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 
 
 1. Agregue los `FillTexture.png` `FillTexture2.png` archivos y`Monkey.png` (disponibles [en github](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) a la carpeta **recursos** .
-    
+
 1. Haga doble clic en `Main.storyboard` el archivo para abrirlo en el diseñador:
 
     [![](ios-designable-controls-walkthrough-images/03new.png "El diseñador de iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
@@ -174,7 +174,7 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 
     [![](ios-designable-controls-walkthrough-images/05new.png "Establecimiento de la propiedad de imagen de vista de imagen en Monkey. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
-    
+
 1. A medida que se usan clases de tamaño, es necesario restringir esta vista de imagen. Haga clic en la imagen dos veces para ponerla en modo de restricción. Vamos a restringirlo al centro; para ello, haga clic en el controlador de anclaje central y alinearlo vertical y horizontalmente:
 
     [![](ios-designable-controls-walkthrough-images/06new.png "Centrar la imagen")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
@@ -215,12 +215,12 @@ Agregue el código siguiente a la `ScratchTicketView` clase para la propiedad:
 
 ```csharp
 [Export("Image"), Browsable(true)]
-public UIImage Image 
+public UIImage Image
 {
     get { return image; }
-    set { 
+    set {
             image = value;
-            SetNeedsDisplay ();
+              SetNeedsDisplay ();
         }
 }
 ```
@@ -238,7 +238,7 @@ public override void Draw(CGRect rect)
             g.SetFillColor ((UIColor.FromPatternImage (image).CGColor));
         else
             g.SetFillColor (UIColor.LightGray.CGColor);
-            
+
         g.FillRect(rect);
 
         if (!initialPoint.IsEmpty)
@@ -258,7 +258,7 @@ public override void Draw(CGRect rect)
              }
 
              g.SetLineCap(CGLineCap.Round);
-             g.AddPath(path);       
+             g.AddPath(path);
              g.DrawPath(CGPathDrawingMode.Stroke);
         }
     }

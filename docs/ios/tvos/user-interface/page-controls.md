@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb53c11612cf492cda39067db861c1d67e0d3e16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: decbbdab09b514bd49784f6ba45575ae845c547f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648981"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226477"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabajar con controles de página de tvOS en Xamarin
 
@@ -35,37 +35,37 @@ La manera más sencilla de trabajar con controles de página en una aplicación 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-    
+
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista: 
+1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista:
 
     [![](page-controls-images/page02.png "Un control de página")](page-controls-images/page02.png#lightbox)
-1. En la **pestaña widget** del **Panel de propiedades**, puede ajustar varias propiedades del control de página, como la **Página actual** y el **número de páginas**: 
+1. En la **pestaña widget** del **Panel de propiedades**, puede ajustar varias propiedades del control de página, como la **Página actual** y el **número de páginas**:
 
     [![](page-controls-images/page03.png "La pestaña widget")](page-controls-images/page03.png#lightbox)
 1. A continuación, agregue controles o gestos a la vista para moverse hacia atrás y hacia delante por la colección de páginas.
-1. Por último, asigne **nombres** a los controles para que pueda responder a ellos en C# el código. Por ejemplo: 
+1. Por último, asigne **nombres** a los controles para que pueda responder a ellos en C# el código. Por ejemplo:
 
     [![](page-controls-images/page04.png "Asignar nombre al control")](page-controls-images/page04.png#lightbox)
 1. Guarde los cambios.
-    
+
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
+
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista: 
+1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista:
 
     [![](page-controls-images/page02-vs.png "Un control de página")](page-controls-images/page02-vs.png#lightbox)
-1. En la **pestaña widget** del **Explorador de propiedades**, puede ajustar varias propiedades del control de página, como la **Página actual** y el **número de páginas**: 
+1. En la **pestaña widget** del **Explorador de propiedades**, puede ajustar varias propiedades del control de página, como la **Página actual** y el **número de páginas**:
 
     [![](page-controls-images/page03-vs.png "La pestaña widget")](page-controls-images/page03-vs.png#lightbox)
 1. A continuación, agregue controles o gestos a la vista para moverse hacia atrás y hacia delante por la colección de páginas.
-1. Por último, asigne **nombres** a los controles para que pueda responder a ellos en C# el código. Por ejemplo: 
+1. Por último, asigne **nombres** a los controles para que pueda responder a ellos en C# el código. Por ejemplo:
 
     [![](page-controls-images/page04-vs.png "Asignar nombre al control")](page-controls-images/page04-vs.png#lightbox)
 1. Guarde los cambios.
-    
+
 
 -----
 
@@ -160,7 +160,7 @@ PageView.CurrentPage = PageNumber;
 
 La `CurrentPage` propiedad es cero (0), por lo que la primera página será cero y la última será una menos el número máximo de páginas.
 
-Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 

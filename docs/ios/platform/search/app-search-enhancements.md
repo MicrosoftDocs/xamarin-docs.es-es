@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 27eff717fd1390f54a177cc7636e7d107b69cd24
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656281"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227411"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Mejoras en la búsqueda de aplicaciones en Xamarin. iOS
 
@@ -44,13 +44,13 @@ Para más información sobre la implementación de la vinculación profunda en u
 
 Al implementar la nueva clase [CSSearchQuery](https://developer.apple.com/reference/corespotlight/cssearchquery) , una aplicación puede proporcionar la tecnología de búsqueda y coincidencia de Spotlight para buscar contenido dentro de sí mismo, sin que el usuario tenga que salir de la aplicación (de forma similar a cómo funciona el correo electrónico, los mensajes y la aplicación de notas).
 
-Normalmente, las aplicaciones que `CSSearchQuery` admiten no tendrán que mantener su propio índice de búsqueda independiente. 
+Normalmente, las aplicaciones que `CSSearchQuery` admiten no tendrán que mantener su propio índice de búsqueda independiente.
 
 ## <a name="search-continuation"></a>Continuación de búsqueda
 
 En iOS 9, Apple presentó las API de búsqueda (como Spotlight principal `NSUserActivity` y marcado Web) para ofrecer un contenido de gran interés dentro de una aplicación para permitir que los usuarios busquen el contenido mediante las interfaces de búsqueda de Spotlight y Safari. Consulte la documentación de la [nueva API de búsqueda](~/ios/platform/search/index.md) para obtener más detalles.
 
-En iOS 10 Apple se basa en esta característica, ya que permite al usuario iniciar una búsqueda en Spotlight o Safari y luego continuar con la búsqueda cuando abra una aplicación. 
+En iOS 10 Apple se basa en esta característica, ya que permite al usuario iniciar una búsqueda en Spotlight o Safari y luego continuar con la búsqueda cuando abra una aplicación.
 
 Para implementar esta característica, edite el archivo `Info.plist` de la aplicación, `CoreSpotlightContinuation` agregue la clave de tipo **Boolean** y establezca su `YES`valor en:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 5e5cc20e9fbeaf2b00e022ccdbf67286aed6d5ef
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3920445c234344fe7f2a1cdd93ed7f4f6405727d
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528813"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226583"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit en Xamarin. iOS
 
@@ -25,13 +25,13 @@ Del mismo modo `PHAssetCollection` , `PHCollectionList` las clases y contienen m
 
 ## <a name="querying-model-data"></a>Consultar datos del modelo
 
-PhotoKit facilita la consulta de datos del modelo mediante una variedad de métodos de captura. Por ejemplo, para recuperar todas las imágenes, llamaría `PFAsset.Fetch`a, pasando el tipo de `PHAssetMediaType.Image` medio.
+PhotoKit facilita la consulta de datos del modelo mediante una variedad de métodos de captura. Por ejemplo, para recuperar todas las imágenes, llamaría `PHAsset.Fetch`a, pasando el tipo de `PHAssetMediaType.Image` medio.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-La `PHFetchResult` instancia contendría entonces todas las `PFAsset` instancias que representan imágenes. Para obtener las imágenes, se usa `PHImageManager` (o la `PHCachingImageManager`versión de almacenamiento en caché) para realizar una solicitud de la imagen mediante una `RequestImageForAsset`llamada a. Por ejemplo, el código siguiente recupera una imagen para cada recurso de `PHFetchResult` que se va a mostrar en una celda de vista de colección:
+La `PHFetchResult` instancia contendría entonces todas las `PHAsset` instancias que representan imágenes. Para obtener las imágenes, se usa `PHImageManager` (o la `PHCachingImageManager`versión de almacenamiento en caché) para realizar una solicitud de la imagen mediante una `RequestImageForAsset`llamada a. Por ejemplo, el código siguiente recupera una imagen para cada recurso de `PHFetchResult` que se va a mostrar en una celda de vista de colección:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

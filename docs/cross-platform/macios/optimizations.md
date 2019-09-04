@@ -6,12 +6,12 @@ ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: a14845646fb400285adac8579af4b15db61e047b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4fdc40a8aed4b3137e418d6123fc000c2b36b6dd
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511167"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226206"
 ---
 # <a name="build-optimizations"></a>Optimizaciones de compilación
 
@@ -432,13 +432,13 @@ public unsafe partial class ObjCBlockTester : NSObject {
             ApiDefinition.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("callClassCallback"));
         }
     }
-    
+
     [Export ("classCallback:")]
     [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
     public unsafe virtual void ClassCallback ([BlockProxy (typeof (Trampolines.NIDActionArity1V0))] System.Action completionHandler)
     {
         // ...
-        
+
     }
 }
 
@@ -450,7 +450,7 @@ static class Trampolines
 
     static internal class SDActionArity1V0 {
         static internal readonly DActionArity1V0 Handler = Invoke;
-        
+
         [MonoPInvokeCallback (typeof (DActionArity1V0))]
         static unsafe void Invoke (IntPtr block) {
             var descriptor = (BlockLiteral *) block;
@@ -459,11 +459,11 @@ static class Trampolines
                 del (obj);
         }
     }
-    
+
     internal class NIDActionArity1V0 {
         IntPtr blockPtr;
         DActionArity1V0 invoker;
-        
+
         [Preserve (Conditional=true)]
         [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
         public unsafe NIDActionArity1V0 (BlockLiteral *block)
@@ -471,14 +471,14 @@ static class Trampolines
             blockPtr = _Block_copy ((IntPtr) block);
             invoker = block->GetDelegateForBlock<DActionArity1V0> ();
         }
-        
+
         [Preserve (Conditional=true)]
         [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
         ~NIDActionArity1V0 ()
         {
             _Block_release (blockPtr);
         }
-        
+
         [Preserve (Conditional=true)]
         [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
         public unsafe static System.Action Create (IntPtr block)
@@ -492,7 +492,7 @@ static class Trampolines
             }
             return new NIDActionArity1V0 ((BlockLiteral *) block).Invoke;
         }
-        
+
         [Preserve (Conditional=true)]
         [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
         unsafe void Invoke ()

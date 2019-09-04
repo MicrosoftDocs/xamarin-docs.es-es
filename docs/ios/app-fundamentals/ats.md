@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521428"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227669"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de aplicaciones en Xamarin. iOS
 
@@ -41,7 +41,7 @@ ATS aplicará los siguientes requisitos para todas las conexiones a Internet:
 - El protocolo de seguridad de la capa de transporte (TLS) debe ser de la versión 1,2 o superior.
 - Se debe usar al menos una huella digital SHA256 con una clave RSA de 2048 bits o superior, o una clave de curva elíptica (ECC) de 256 bits o superior para todos los certificados.
 
-Una vez más, dado que ATS está habilitado de forma predeterminada en iOS 9, cualquier intento de establecer una conexión que no cumpla estos requisitos producirá una excepción. 
+Una vez más, dado que ATS está habilitado de forma predeterminada en iOS 9, cualquier intento de establecer una conexión que no cumpla estos requisitos producirá una excepción.
 
 <a name="ATS-Compatible-Ciphers" />
 
@@ -132,7 +132,7 @@ Profesionales ti
 Iconos
 
 - Requiere iOS 7 o posterior.
-- Algunas características y opciones de HttpClient no están disponibles. 
+- Algunas características y opciones de HttpClient no están disponibles.
 
 ## <a name="diagnosing-ats-issues"></a>Diagnóstico de problemas de ATS
 
@@ -153,7 +153,7 @@ Apple también proporciona la [aplicación de ejemplo TLSTool](https://developer
 
 Puede configurar varias de las características de ATS estableciendo valores para claves específicas en el archivo **info. plist** de la aplicación. Las siguientes claves están disponibles para controlar ATS (_con sangría para mostrar cómo se anidan_):
 
-```csharp
+```
 NSAppTransportSecurity
     NSAllowsArbitraryLoads
     NSAllowsArbitraryLoadsInWebContent

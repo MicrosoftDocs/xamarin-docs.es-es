@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8082fc6ab2625e68d64ee9d42a9b630f885d9002
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120595"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227753"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin. iOS
 
@@ -41,7 +41,7 @@ Para crear un nuevo conjunto de imágenes y agregarle imágenes, haga lo siguien
 3. Seleccione el nuevo conjunto de imágenes y se mostrará el editor:
 
     ![](displaying-an-image-images/imageset03.png "El editor de conjunto de imágenes")
-4. Desde aquí, arrastre las imágenes para cada uno de los diferentes dispositivos y resoluciones necesarios. 
+4. Desde aquí, arrastre las imágenes para cada uno de los diferentes dispositivos y resoluciones necesarios.
 5. Haga doble clic en el **nombre** del nuevo conjunto de imágenes en la **lista de recursos** para editarlo: ![](displaying-an-image-images/imageset04.png "Editar el nombre del nuevo conjunto de imágenes")
 
 Al usar un **conjunto de imágenes** en el diseñador de iOS, simplemente seleccione el nombre del conjunto en la lista desplegable del editor de propiedades:
@@ -54,7 +54,7 @@ Al usar un **conjunto de imágenes** en el diseñador de iOS, simplemente selecc
 
     ![](displaying-an-image-images/asset5.png "Haga clic en el botón de signo más")
 
-2. Seleccione **Agregar conjunto de imágenes** y se mostrará el editor de conjunto de imágenes para el nuevo conjunto de imágenes. Desde aquí, arrastre las imágenes para cada uno de los diferentes dispositivos y resoluciones necesarios. 
+2. Seleccione **Agregar conjunto de imágenes** y se mostrará el editor de conjunto de imágenes para el nuevo conjunto de imágenes. Desde aquí, arrastre las imágenes para cada uno de los diferentes dispositivos y resoluciones necesarios.
 
     ![](displaying-an-image-images/asset7.png "El editor de conjunto de imágenes")
 
@@ -193,7 +193,7 @@ Además de usar imágenes para admitir una aplicación, iOS también usa imágen
 
 ### <a name="frombundle"></a>FromBundle
 
-La `FromBundle` llamada al método es una llamada sincrónica (bloqueo) que tiene una serie de características de carga y administración de imágenes integradas, como la compatibilidad con el almacenamiento en caché y el control automático de archivos de imagen para distintas resoluciones.  
+La `FromBundle` llamada al método es una llamada sincrónica (bloqueo) que tiene una serie de características de carga y administración de imágenes integradas, como la compatibilidad con el almacenamiento en caché y el control automático de archivos de imagen para distintas resoluciones.
 
 `UITabBarItem` En el ejemplo siguiente se muestra cómo establecer la imagen de en un `UITabBar`:
 

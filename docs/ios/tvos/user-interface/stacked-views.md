@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120739"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227219"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
 
@@ -24,7 +24,7 @@ El diseño de todas las subvistas adjuntas a una vista de pila se administra en 
 
 Cuando se usa `UIStackView` un en una aplicación Xamarin. tvOS, el desarrollador puede definir las subvistas dentro de un guion gráfico en el diseñador de iOS, o bien agregando y quitando C# las subvistas en el código.
 
-## <a name="about-stacked-view-controls"></a>Acerca de los controles de vista apilada 
+## <a name="about-stacked-view-controls"></a>Acerca de los controles de vista apilada
 
 El `UIStackView` está diseñado como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Establecer propiedades como `BackgroundColor` o reemplazar `DrawRect` no tendrá ningún efecto visual.
 
@@ -98,21 +98,21 @@ La manera más sencilla de trabajar con vistas de pila en una aplicación Xamari
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila: 
+1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila:
 
     [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Agregue las restricciones necesarias a los elementos para asegurarse de que se escalan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
-1. Haga el número necesario de copias (cuatro en este caso): 
+1. Haga el número necesario de copias (cuatro en este caso):
 
     [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
-1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista:
 
     [![](stacked-views-images/layout03.png "Una vista de pila")](stacked-views-images/layout03.png#lightbox)
-1. Seleccione la vista de la pila, en la **pestaña widget** del **Panel de propiedades** seleccione **relleno** para la **alineación**, rellene **igualmente** para la **distribución** y escriba `25` para el **espaciado**: 
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Panel de propiedades** seleccione **relleno** para la **alineación**, rellene **igualmente** para la **distribución** y escriba `25` para el **espaciado**:
 
     [![](stacked-views-images/layout04.png "La pestaña widget")](stacked-views-images/layout04.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
-1. Seleccione los elementos individuales y arrástrelos a la vista de pila: 
+1. Seleccione los elementos individuales y arrástrelos a la vista de pila:
 
     [![](stacked-views-images/layout05.png "Elementos individuales de la vista de pila")](stacked-views-images/layout05.png#lightbox)
 1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.
@@ -122,21 +122,21 @@ La manera más sencilla de trabajar con vistas de pila en una aplicación Xamari
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila: 
+1. Diseñe el diseño de los elementos individuales que va a agregar a la vista de pila:
 
     [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Agregue las restricciones necesarias a los elementos para asegurarse de que se escalan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
-1. Haga el número necesario de copias (cuatro en este caso): 
+1. Haga el número necesario de copias (cuatro en este caso):
 
     [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
-1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista:
 
     [![](stacked-views-images/layout03-vs.png "Una vista de pila")](stacked-views-images/layout03-vs.png#lightbox)
-1. Seleccione la vista de la pila, en la **pestaña widget** del **Explorador de propiedades** , seleccione **Fill** para la **alineación**, rellene **igualmente** para `25` la **distribución** y escriba para el **espaciado**: 
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Explorador de propiedades** , seleccione **Fill** para la **alineación**, rellene **igualmente** para `25` la **distribución** y escriba para el **espaciado**:
 
     [![](stacked-views-images/layout04-vs.png "La pestaña widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
-1. Seleccione los elementos individuales y arrástrelos a la vista de pila: 
+1. Seleccione los elementos individuales y arrástrelos a la vista de pila:
 
     [![](stacked-views-images/layout05-vs.png "Elementos individuales de la vista de pila")](stacked-views-images/layout05-vs.png#lightbox)
 1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.

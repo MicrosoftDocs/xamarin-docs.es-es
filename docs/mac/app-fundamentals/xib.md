@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5e0f096e5f2c05452a285182db4e455769aa737b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bdb27d42e872bff4004e8f43d13019dbc8bfeab9
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529023"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227851"
 ---
 # <a name="xib-files-in-xamarinmac"></a>archivos. Xib en Xamarin. Mac
 

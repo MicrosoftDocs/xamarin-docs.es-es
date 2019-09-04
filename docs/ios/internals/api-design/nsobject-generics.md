@@ -1,24 +1,24 @@
 ---
-title: Subclases genéricas de NSObject en Xamarin.iOS
-description: Este documento describe cómo crear crear subclases genéricas de NSObject. Examina lo que puede y no se puede realizar, analiza al registrador estático y echa un vistazo a rendimiento.
+title: Subclases genéricas de NSObject en Xamarin. iOS
+description: En este documento se describe cómo crear subclases genéricas de NSObject. Examina lo que se puede y no se puede hacer, describe el registrador estático y consulta el rendimiento.
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 4d2ab7a546925e92bb59f626279dcbf9c3c4ab4f
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: 2e84ec85fac933f579f961300d242bafa1f0b838
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157710"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226049"
 ---
-# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclases genéricas de NSObject en Xamarin.iOS
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclases genéricas de NSObject en Xamarin. iOS
 
-## <a name="using-generics-with-nsobjects"></a>Utilizar genéricos con NSObjects
+## <a name="using-generics-with-nsobjects"></a>Usar genéricos con NSObjects
 
-Es posible utilizar valores genéricos en las subclases de `NSObject`, por ejemplo [UIView](xref:UIKit.UIView):
+Es posible usar genéricos en las subclases de `NSObject`, por ejemplo [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
@@ -30,17 +30,17 @@ class Foo<T> : UIView {
 }
 ```
 
-Dado que los objetos de esa subclase `NSObject` están registrados con el tiempo de ejecución Objective-C, existen algunas limitaciones sobre lo que es posible con subclases genéricas de `NSObject` tipos.
-    
-## <a name="considerations-for-generic-subclasses-of-nsobject"></a>Consideraciones para subclases genéricas de NSObject
+Dado que los objetos que `NSObject` se registran con el tiempo de ejecución de Objective-C existen algunas limitaciones en cuanto a lo que se puede hacer `NSObject` con las subclases genéricas de los tipos.
 
-Este documento detallan las limitaciones en la compatibilidad limitada con subclases genéricas de `NSObjects`.
-    
-### <a name="generic-type-arguments-in-member-signatures"></a>Argumentos de tipo genéricos en firmas de miembro
+## <a name="considerations-for-generic-subclasses-of-nsobject"></a>Consideraciones sobre las subclases genéricas de NSObject
 
-Todos los argumentos de tipo genérico en una signatura de miembro expuesto a Objective-C deben tener un `NSObject` restricción.
+En este documento se detallan las limitaciones de la compatibilidad limitada con las `NSObjects`subclases genéricas de.
 
-**Buena**:
+### <a name="generic-type-arguments-in-member-signatures"></a>Argumentos de tipo genérico en firmas de miembro
+
+Todos los argumentos de tipo genérico de una firma de miembro expuesta a Objective-C `NSObject` deben tener una restricción.
+
+**Bueno**:
 
 ```csharp
 class Generic<T> : NSObject where T: NSObject
@@ -52,9 +52,9 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: El parámetro de tipo genérico es un `NSObject`, por lo que la firma del selector de `myMethod:` se pueden exponer de forma segura y Objective-C (siempre será `NSObject` o una subclase de ella).
+**Motivo**: El parámetro de tipo genérico es `NSObject`, por lo que la firma `myMethod:` de selector de se puede exponer de forma segura a Objective-C `NSObject` (siempre será o una subclase de ella).
 
-**Incorrecta**:
+**Incorrecto**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -66,9 +66,9 @@ class Generic<T> : NSObject
 }
 ```
 
-**Motivo**: no es posible crear una firma de Objective-C para los miembros exportados que puede llamar a código de Objective-C, ya que la firma podría diferir según el tipo exacto del tipo genérico `T`.
+**Motivo**: no es posible crear una firma de Objective-c para los miembros exportados a los que puede llamar el código de Objective-c, ya que la signatura diferirá en función del tipo `T`exacto del tipo genérico.
 
-**Buena**:
+**Bueno**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -82,9 +82,9 @@ class Generic<T> : NSObject
 }
 ```
 
-**Motivo**: es posible que haya sin restricciones argumentos de tipo genérico, siempre no forman parte de la firma del miembro exportado.
+**Motivo**: es posible tener argumentos de tipo genérico sin restricciones siempre que no formen parte de la firma del miembro exportado.
 
-**Buena**:
+**Bueno**:
 
 ```csharp
 class Generic<T, U> : NSObject where T: NSObject
@@ -97,14 +97,14 @@ class Generic<T, U> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: el `T` parámetro en Objective C exporta `MyMethod` esté restringido a ser un `NSObject`, el tipo sin restricciones `U` no forma parte de la firma.
-    
-### <a name="instantiations-of-generic-types-from-objective-c"></a>Creaciones de instancias de tipos genéricos desde Objective-C
+**Motivo**: el `T` parámetro en el elemento exportado `MyMethod` de Objective-C `NSObject`está restringido a, el tipo `U` sin restricciones no forma parte de la firma.
 
-No se permite la creación de instancias de tipos genéricos desde Objective-C. Esto suele ocurrir cuando se usa un tipo administrado en un xib o un guión gráfico.
+### <a name="instantiations-of-generic-types-from-objective-c"></a>Instancias de tipos genéricos de Objective-C
 
-Tenga en cuenta esta definición de clase, que expone un constructor que toma un `IntPtr` (la forma de Xamarin.iOS de construir un C# objeto a partir de una instancia de Objective-C nativa):
-    
+No se permite la creación de instancias de tipos genéricos desde Objective-C. Esto suele ocurrir cuando se usa un tipo administrado en un Xib o un guion gráfico.
+
+Considere esta definición de clase, que expone un constructor que toma un `IntPtr` (la forma de Xamarin. iOS de construir un C# objeto a partir de una instancia de Objective-C nativa):
+
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
@@ -113,12 +113,12 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-Mientras que la construcción anterior está bien, en tiempo de ejecución, se producirá una excepción en si trata de Objective-C crear una instancia de ella.
+Aunque la construcción anterior es correcta, en tiempo de ejecución, se producirá una excepción en si Objective-C intenta crear una instancia del mismo.
 
-Se trata de sucede porque Objective-C no tiene ningún concepto de tipos genéricos, y no puede especificar el tipo exacto genérico para crear.
+Esto sucede porque Objective-C no tiene ningún concepto de tipos genéricos y no puede especificar el tipo genérico exacto que se va a crear.
 
-Este problema puede solucionarse mediante la creación de una subclase especializada del tipo genérico. Por ejemplo:
-    
+Este problema se puede solucionar creando una subclase especializada del tipo genérico. Por ejemplo:
+
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
@@ -131,13 +131,13 @@ class GenericUIView : Generic<UIView>
 }
 ```
 
-Ahora hay ninguna ambigüedad, la clase `GenericUIView` puede usarse en xib o guiones gráficos.
+Ahora, ya no hay ambigüedad, la clase `GenericUIView` se puede usar en Xib o guiones gráficos.
 
-## <a name="no-support-for-generic-methods"></a>No se admite para métodos genéricos
+## <a name="no-support-for-generic-methods"></a>No se admiten métodos genéricos
 
 ### <a name="generic-methods-are-not-allowed"></a>No se permiten métodos genéricos.
 
-No se compilará el código siguiente:
+El código siguiente no se compilará:
 
 ```csharp
 class MyClass : NSObject
@@ -149,9 +149,9 @@ class MyClass : NSObject
 }
 ```
 
-**Motivo**: No se permite porque Xamarin.iOS no sabe qué tipo para usar para el argumento de tipo `T` cuando el método se invoca desde Objective-C.
+**Motivo**: Esto no se permite porque Xamarin. iOS no sabe qué tipo usar para el argumento `T` de tipo cuando se invoca el método desde Objective-C.
 
-Una alternativa es crear un método especializado y exportarlas en su lugar:
+Una alternativa es crear un método especializado y exportarlo en su lugar:
 
 ```csharp
 class MyClass : NSObject
@@ -167,9 +167,9 @@ class MyClass : NSObject
 }
 ```
 
-### <a name="no-exported-static-members-allowed"></a>No hay miembros estáticos exportados permitidos
+### <a name="no-exported-static-members-allowed"></a>No se permiten miembros estáticos exportados
 
-No puede exponer un miembros estáticos y Objective-C si está hospedado dentro de una subclase genérica de `NSObject`.
+No se puede exponer un miembro estático a Objective-C si está hospedado dentro de una subclase genérica `NSObject`de.
 
 Ejemplo de un escenario no admitido:
 
@@ -186,11 +186,11 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** Al igual que los métodos genéricos, el tiempo de ejecución de Xamarin.iOS tiene que poder saber qué tipo usar para el argumento de tipo genérico `T`.
+**Debido** Al igual que los métodos genéricos, el tiempo de ejecución de Xamarin. iOS debe ser capaz de saber qué tipo usar para `T`el argumento de tipo genérico.
 
-Por ejemplo los miembros que se usa la propia instancia (, ya que nunca habrá una instancia `Generic<T>`, siempre será `Generic<SomeSpecificClass>`), pero esta información para los miembros estáticos no está presente.
+En el caso de los miembros de instancia, se usa la propia instancia (dado `Generic<T>`que nunca habrá una instancia `Generic<SomeSpecificClass>`, siempre será), pero para los miembros estáticos esta información no está presente.
 
-Tenga en cuenta que esto se aplica incluso si el miembro en cuestión no utiliza el argumento de tipo `T` de ninguna manera.
+Tenga en cuenta que esto se aplica incluso si el miembro en cuestión no utiliza el `T` argumento de tipo de ninguna manera.
 
 En este caso, la alternativa es crear una subclase especializada:
 
@@ -219,5 +219,5 @@ class Generic<T> : NSObject where T : NSObject
 
 ## <a name="performance"></a>Rendimiento
 
-El registrador estático no puede resolver un miembro exportado en un tipo genérico en tiempo de compilación que lo hace, se va a buscar en tiempo de ejecución. Esto significa que invocar al método desde Objective-C es ligeramente más lenta que la invocación de miembros de clases no genéricas.
+El registrador estático no puede resolver un miembro exportado en un tipo genérico en tiempo de compilación, ya que normalmente lo hace, debe buscarse en tiempo de ejecución. Esto significa que la invocación de este método desde Objective-C es ligeramente más lenta que la invocación de miembros de clases no genéricas.
 

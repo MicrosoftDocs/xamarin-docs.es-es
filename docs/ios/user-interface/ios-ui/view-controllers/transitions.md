@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 82a2e2b4abe5bc634c74c083b860d1f4f59a90b7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fd3cd2bb62fdb378ed62c53c01130ebeaff74d2a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528473"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226375"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Ver transiciones del controlador en Xamarin. iOS
 
@@ -168,7 +168,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
     window.RootViewController = navController;
     window.MakeKeyAndVisible ();
-    
+
     return true;
 }
 ```
@@ -187,7 +187,7 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
     circleLayout = new CircleLayout (Monkeys.Instance.Count){
         ItemSize = new CGSize (100, 100)
     };
-            
+
     controller2 = new ImagesCollectionViewController (circleLayout) {
         UseLayoutToLayoutNavigationTransitions = true
         };
@@ -236,7 +236,7 @@ pinch = new UIPinchGestureRecognizer (g => {
         else
             nextLayout = circleLayout;
 
-        trLayout = imagesController.CollectionView.StartInteractiveTransition (nextLayout, (completed, finished) => {   
+        trLayout = imagesController.CollectionView.StartInteractiveTransition (nextLayout, (completed, finished) => {
             Console.WriteLine ("transition completed");
             trLayout = null;
         });

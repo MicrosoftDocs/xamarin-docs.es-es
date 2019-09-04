@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9113ff728c382a26d0f0b5c0a6e40575cb8e776f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198289"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227951"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -20,7 +20,7 @@ ms.locfileid: "70198289"
 
 [`WebView`](xref:Xamarin.Forms.WebView) es una vista para mostrar la web y el contenido HTML en la aplicación. A diferencia de `OpenUri`, que lleva al usuario en el explorador web en el dispositivo, `WebView` muestra el contenido HTML dentro de la aplicación.
 
-![](webview-images/in-app-browser.png "En el Explorador de la aplicación")
+![En el explorador de aplicaciones](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>Contenido
 
@@ -105,7 +105,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "Cadena de WebView mostrar HTML")
+![Vista previa que muestra la cadena HTML](webview-images/html-string.png)
 
 En el código anterior, `@` se usa para marcar el código HTML como una cadena literal, lo que significa que se omiten todos los caracteres de escape habituales.
 
@@ -147,7 +147,7 @@ Para mostrar local contenido mediante un `WebView`, deberá abrir el archivo HTM
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar el contenido local en cada plataforma:
 
-![](webview-images/local-content.png "Mostrar vista Web contenido Local")
+![Vista previa que muestra el contenido local](webview-images/local-content.png)
 
 Aunque la primera página se ha cargado, el `WebView` no tiene conocimiento de dónde procede el código HTML. Que es un problema cuando se trabaja con páginas que hacen referencia a los recursos locales. Cuando el vínculo local páginas unos de otros, una página hace uso de un archivo JavaScript independiente o una página se vincula a una hoja de estilos CSS son ejemplos de cuándo esto puede suceder.  
 
@@ -176,11 +176,11 @@ En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "Archivos locales en iOS")
+![Archivos locales en iOS](webview-images/ios-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "Archivos locales en iOS")
+![Archivos locales en iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -206,11 +206,11 @@ En Android, coloque las imágenes, CSS y HTML en la carpeta de activos con la ac
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "Archivos locales en Android")
+![Archivos locales en Android](webview-images/android-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](webview-images/android-xs.png "Archivos locales en Android")
+![Archivos locales en Android](webview-images/android-xs.png)
 
 -----
 
@@ -328,9 +328,9 @@ public partial class InAppBrowserXaml : ContentPage
 
 Ya está.
 
-![](webview-images/in-app-browser.png "Botones de navegación de WebView")
+![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 WebView provoca los eventos siguientes para ayudarle a responder a los cambios de estado:
 
@@ -383,11 +383,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Esto da como resultado el siguiente resultado (cargar):
 
-![](webview-images/loading-start.png "Ejemplo del evento de navegación de WebView")
+![Ejemplo de evento de navegación de vista en WebView](webview-images/loading-start.png)
 
 Termina de cargar:
 
-![](webview-images/loading-end.png "Ejemplo de eventos WebView")
+![Ejemplo de evento de navegación de vista en WebView](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Volver a cargar contenido
 

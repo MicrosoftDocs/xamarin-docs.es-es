@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: f4acadc1153c93ebade7453cfd7a79f5b052e513
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14f7692c88f5047f1250707940e3871371aecc8b
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528360"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227956"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -30,15 +30,15 @@ Para comenzar a editar el primer archivo XAML, utilice Visual Studio o Visual St
 
 En Windows, use Visual Studio para seleccionar **archivo > Nuevo > proyecto** en el menú. En el **nuevo proyecto** cuadro de diálogo, seleccione **Visual C# > multiplataforma** a la izquierda y, a continuación, **aplicación móvil (Xamarin.Forms)** en la lista en el centro.
 
-![](get-started-with-xaml-images/win/newprojectdialog.w157.png "Cuadro de diálogo nuevo proyecto")
+![Cuadro de diálogo Nuevo proyecto](get-started-with-xaml-images/win/newprojectdialog.w157.png)
 
 Seleccione una ubicación para la solución, asígnele un nombre de **XamlSamples** (o lo que prefiere) y presione **Aceptar**.
 
 En la siguiente pantalla, seleccione el **aplicación vacía** plantilla y la **.NET Standard** estrategia de uso compartido de código:
 
-![](get-started-with-xaml-images/win/newcrossplatformapp.png "Cuadro de diálogo nueva aplicación")
+![Cuadro de diálogo Nueva aplicación](get-started-with-xaml-images/win/newcrossplatformapp.png)
 
-Presione **Aceptar**.
+Haga clic en **Aceptar**.
 
 Se crean cuatro proyectos en la solución: el **XamlSamples** biblioteca .NET Standard, **XamlSamples.Android**, **XamlSamples.iOS**y la plataforma Universal de Windows solución de **XamlSamples.UWP**.
 
@@ -46,19 +46,19 @@ Se crean cuatro proyectos en la solución: el **XamlSamples** biblioteca .NET St
 
 En Visual Studio para Mac, seleccione **archivo > nueva solución** en el menú. En el **nuevo proyecto** cuadro de diálogo, seleccione **multiplataforma > aplicación** a la izquierda, y **aplicación de Forms en blanco** (*no* **aplicación de formularios** ) en la lista de plantillas:
 
-![](get-started-with-xaml-images/mac/newprojectdialog1.png "Nuevo cuadro de diálogo de proyecto 1")
+![Cuadro de diálogo nuevo proyecto 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
 Presione **siguiente**.
 
 En el cuadro de diálogo siguiente, asigne al proyecto un nombre de **XamlSamples** (o lo que prefiera). Asegúrese de que el **uso .NET Standard** botón de radio está seleccionado:
 
-![](get-started-with-xaml-images/mac/newprojectdialog2.png "Nuevo cuadro de diálogo de proyecto 2")
+![Cuadro de diálogo nuevo proyecto 2](get-started-with-xaml-images/mac/newprojectdialog2.png)
 
 Presione **siguiente**.
 
 En el cuadro de diálogo siguiente, puede seleccionar una ubicación para el proyecto:
 
-![](get-started-with-xaml-images/mac/newprojectdialog3.png "Cuadro de diálogo de proyecto nuevo 3")
+![Cuadro de diálogo nuevo proyecto 3](get-started-with-xaml-images/mac/newprojectdialog3.png)
 
 Presione **crear**
 
@@ -141,7 +141,7 @@ Aunque normalmente no es necesario pasar mucho tiempo con archivos de código ge
 
 Al compilar y ejecutar este programa, el `Label` elemento aparece en el centro de la página, tal como sugiere el XAML:
 
-[![](get-started-with-xaml-images/xamlsamples.png "Predeterminado para mostrar de Xamarin.Forms")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "visualización predeterminada de Xamarin.Forms")
+[![Presentación predeterminada de Xamarin. Forms](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 Para los objetos visuales más interesantes, todo lo que necesita es más interesante de XAML.
 
@@ -151,13 +151,13 @@ Para los objetos visuales más interesantes, todo lo que necesita es más intere
 
 Para agregar otros basada en XAML `ContentPage` clases al proyecto, seleccione el **XamlSamples** biblioteca estándar de .NET del proyecto e invocar el **proyecto > Agregar nuevo elemento** elemento de menú. En la izquierda de la **Agregar nuevo elemento** cuadro de diálogo, seleccione **Visual C#**  y **Xamarin.Forms**. En la lista seleccione **página de contenido** (no **página de contenido (C#)** , que crea una página de sólo código, o **vista contenido**, que no es una página). Asigne un nombre, por ejemplo, de la página **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Agregar nuevo elemento de cuadro de diálogo")
+![Cuadro de diálogo Agregar nuevo elemento](get-started-with-xaml-images/win/addnewitemdialog.w157.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para agregar otros basada en XAML `ContentPage` clases al proyecto, seleccione el **XamlSamples** biblioteca estándar de .NET del proyecto e invocar el **archivo > nuevo archivo** elemento de menú. En la izquierda de la **nuevo archivo** cuadro de diálogo, seleccione **formularios** a la izquierda, y **formularios ContentPage Xaml** (no **ContentPage de Forms**, que crea una página de sólo código, o **vista contenido**, que no es una página). Asigne un nombre, por ejemplo, de la página **HelloXamlPage**:
 
-![](get-started-with-xaml-images/mac/newfiledialog.png "Cuadro de diálogo nuevo archivo")
+![Cuadro de diálogo nuevo archivo](get-started-with-xaml-images/mac/newfiledialog.png)
 
 -----
 
@@ -278,7 +278,7 @@ public MainPage()
 
 Establecer el `Content` propiedad de la página reemplaza la configuración de la `Content` propiedad en el archivo XAML. Al compilar e implementar la nueva versión de este programa, aparece un botón en la pantalla. Al presionar navega a `HelloXamlPage`. Esta es la página resultante en el iPhone, Android y UWP:
 
-[![](get-started-with-xaml-images/helloxaml1.png "Girar el texto de la etiqueta")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "etiqueta texto girado")
+[![Texto de etiqueta girado](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
 
 Puede navegar hasta `MainPage` utilizando el **< Atrás** botón en iOS, mediante la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o con la flecha izquierda en la parte superior de la página en Windows 10.
 
@@ -288,7 +288,7 @@ No dude en experimentar con el XAML para las distintas formas representar el `La
 
 Este es su aspecto:
 
-[![](get-started-with-xaml-images/helloxaml2.png "Etiqueta de texto con caracteres Unicode girado")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "gira el texto de la etiqueta con caracteres Unicode")
+[![Texto de etiqueta girado con caracteres Unicode](get-started-with-xaml-images/helloxaml2.png)](get-started-with-xaml-images/helloxaml2-large.png#lightbox)
 
 ## <a name="xaml-and-code-interactions"></a>Interacciones de código y XAML
 
@@ -316,7 +316,7 @@ El **HelloXamlPage** ejemplo contiene una sola `Label` en la página, pero esto 
 
 Este archivo XAML es sintácticamente completa, y este es su aspecto:
 
-[![](get-started-with-xaml-images/xamlpluscode1.png "Varios controles en una página")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "varios controles en una página")
+[![Varios controles en una página](get-started-with-xaml-images/xamlpluscode1.png)](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox)
 
 Sin embargo, es probable que observe este programa sea funcionalmente deficientes. Quizás el `Slider` se supone que debe hacer que el `Label` para mostrar el valor actual y el `Button` probablemente está pensado para hacer algo dentro del programa.
 
@@ -407,7 +407,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 Al ejecutar el programa, en primer lugar el `Label` no muestra el `Slider` valor porque el `ValueChanged` aún no ha desencadenado el evento. Pero cualquier manipulación de los `Slider` hace que el valor que se mostrará:
 
-[![](get-started-with-xaml-images/xamlpluscode2.png "Valor del control deslizante muestra")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "valor del control deslizante muestra")
+[![Se muestra el valor del control deslizante](get-started-with-xaml-images/xamlpluscode2.png)](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox)
 
 Ahora el `Button`. Vamos a simular una respuesta a un `Clicked` eventos mediante una alerta con el `Text` del botón. El controlador de eventos puede difundir con seguridad el `sender` argumento para un `Button` y, a continuación, obtener acceso a sus propiedades:
 

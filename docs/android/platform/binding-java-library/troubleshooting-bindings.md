@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: c752f4acf4bf43c138a7b359b94620dae5e8d46e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2137ff95e65c6841b3e525f0c9755e013310c7e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524527"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225597"
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
 
@@ -51,8 +51,8 @@ Una vez que haya descompilado la biblioteca de Android, examine el código fuent
 
 - **Clases que tienen características de ofuscación** &ndash; Las características de las clases ofuscadas incluyen:
 
-    - El nombre de clase incluye **$** una clase, es decir, **una $.**
-    - El nombre de clase está totalmente comprometido por caracteres en minúsculas, es decir, **a.**      
+  - El nombre de clase incluye **$** una clase, es decir, **una $.**
+  - El nombre de clase está totalmente comprometido por caracteres en minúsculas, es decir, **a.**      
 
 - las instrucciones &ndash; **de las bibliotecas sin referencia identifican la biblioteca sin referencia y agregan esas dependencias al proyecto de enlace de Xamarin. Android con una acción de compilación de ReferenceJar o `import`**   **EmbedddedReferenceJar**.
 
@@ -114,19 +114,19 @@ Este error puede producirse por varias razones, como se indica a continuación:
 
 - Java permite derivar una clase pública de una clase no pública, pero esto no se admite en .NET. Dado que el generador de enlaces no genera enlaces para clases no públicas, las clases derivadas como estas no se pueden generar correctamente. Para corregirlo, quite la entrada de metadatos para las clases derivadas mediante el uso de Remove-node en **Metadata. XML**o corrija los metadatos que hacen que la clase no pública sea pública. Aunque la última solución creará el enlace para que se C# compile el origen, no se debe usar la clase no pública.
 
-    Por ejemplo:
+  Por ejemplo:
 
-    ```xml
-    <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
-        name="visibility">public</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
+      name="visibility">public</attr>
+  ```
 
 - Las herramientas que ofuscan las bibliotecas de Java pueden interferir con el generador de enlaces de Xamarin. Android C# y su capacidad de generar clases contenedoras. En el fragmento de código siguiente se muestra cómo actualizar **Metadata. XML** para no ofuscar un nombre de clase:
 
-    ```xml
-    <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
-        name="obfuscated">false</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
+      name="obfuscated">false</attr>
+  ```
 
 ### <a name="problem-generated-c-source-does-not-build-due-to-parameter-type-mismatch"></a>Problema: El C# origen generado no se compila debido a un error de coincidencia de tipos de parámetro
 
@@ -203,24 +203,24 @@ Se trata de un problema que se produce al enlazar métodos de Java con tipos de 
 
 - Agregue una declaración de clase parcial `HttpURLConnectionRequestAdapter` para y implemente `IHttpRequest.Unwrap()`explícitamente:
 
-    ```csharp
-    namespace Oauth.Signpost.Basic {
-        partial class HttpURLConnectionRequestAdapter {
-            Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
-                return Unwrap();
-            }
-        }
-    }
-    ```
+  ```csharp
+  namespace Oauth.Signpost.Basic {
+      partial class HttpURLConnectionRequestAdapter {
+          Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
+              return Unwrap();
+          }
+      }
+  }
+  ```
 
 - Quite la covarianza del código generado C# . Esto implica agregar la siguiente transformación a **Transforms\Metadata.XML** , lo que hará que C# el código generado tenga un tipo de `Java.Lang.Object`valor devuelto de:
 
-    ```xml
-    <attr
-        path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
-        name="managedReturn">Java.Lang.Object
-    </attr>
-    ```
+  ```xml
+  <attr
+      path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
+      name="managedReturn">Java.Lang.Object
+  </attr>
+  ```
 
 ### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Colisiones de nombres en clases o propiedades internas
 

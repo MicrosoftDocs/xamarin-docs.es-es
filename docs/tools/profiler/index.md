@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620992"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227897"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -100,13 +100,13 @@ Antes de poder generar correctamente el perfil de la aplicación, debe permitir 
 
   **Compilación > > de depuración de iOS habilitar generación de perfiles**
 
-  ![](images/ios-options-mac.png "Cuadro de diálogo Opciones de iOS en Visual Studio para Mac")
+  ![Cuadro de diálogo Opciones de iOS en Visual Studio para Mac](images/ios-options-mac.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
   **Propiedades > compilación de iOS > habilitar la generación de perfiles**
 
-  ![](images/ios-project-options-vs.png "Cuadro de diálogo Opciones de iOS en Visual Studio")
+  ![Cuadro de diálogo Opciones de iOS en Visual Studio](images/ios-project-options-vs.png)
 
 -----
 
@@ -137,7 +137,7 @@ El Xamarin Profiler se puede iniciar desde el IDE al generar perfiles de la apli
 1. En primer lugar, asegúrese de que la aplicación se ha cargado en Visual Studio para Mac y seleccione la configuración de depuración (predeterminada).
 2. Vaya a **ejecutar > iniciar la generación de perfiles**en Visual Studio para Mac o **analice > Xamarin Profiler** en Visual Studio para abrir el generador de perfiles, tal como se muestra en el diagrama siguiente:
 
-  ![](images/start-profiling-xs.png "Inicio del generador de perfiles desde Visual Studio para Mac")
+  ![Inicio del generador de perfiles desde Visual Studio para Mac](images/start-profiling-xs.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -164,13 +164,13 @@ Para guardar una sesión de generación de perfiles en cualquier momento, elija 
 
 Una vez instalado, el Xamarin Profiler se puede encontrar en la carpeta Aplicaciones, tal como se muestra en la siguiente captura de pantalla:
 
-![](images/applications.png "Abrir el generador de perfiles independiente desde Mac")
+![Abrir el generador de perfiles independiente desde Mac](images/applications.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Una vez instalada la aplicación Xamarin Profiler se puede encontrar en el directorio de la aplicación:
 
-![](images/applications-vs.png "Abrir el generador de perfiles independiente desde Windows")
+![Abrir el generador de perfiles independiente desde Windows](images/applications-vs.png)
 
 -----
 
@@ -184,11 +184,11 @@ El Xamarin Profiler se compone de cinco secciones, como se muestra a continuaci�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](images/profiler-mac-sml.png "Secciones del generador de perfiles en Visual Studio para Mac")](images/profiler-mac.png#lightbox) 
+[![Secciones del generador de perfiles en Visual Studio para Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/profiler-vs.png "Secciones del generador de perfiles en Visual Studio")](images/profiler-vs.png#lightbox)
+[![Secciones del generador de perfiles en Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -206,11 +206,11 @@ En la parte superior del generador de perfiles está el gráfico asignaciones, q
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](images/allocations1.png "Instrumento de asignaciones")](images/allocations1.png#lightbox) 
+[![Instrumento de asignaciones](images/allocations1.png)](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/allocations1-vs.png "Instrumento de asignaciones")](images/allocations1-vs.png#lightbox)
+[![Instrumento de asignaciones](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -220,11 +220,11 @@ Hay diferentes vistas de datos en el instrumento de asignaciones, que permiten a
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-  [![](images/allocations3.png "Pestaña asignaciones")](images/allocations3.png#lightbox) 
+  [![Pestaña asignaciones](images/allocations3.png)](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations2-vs.png "Pestaña asignaciones")](images/allocations2-vs.png#lightbox)
+  [![Pestaña asignaciones](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -236,11 +236,11 @@ La vista del inspector para asignaciones proporciona opciones para filtrar y agr
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-  [![](images/allocations2.png "Pestaña árbol de llamadas")](images/allocations2.png#lightbox) 
+  [![Pestaña árbol de llamadas](images/allocations2.png)](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations3-vs.png "Pestaña árbol de llamadas")](images/allocations3-vs.png#lightbox)
+  [![Pestaña árbol de llamadas](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ La vista del inspector para asignaciones proporciona opciones para filtrar y agr
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-  [![](images/allocations4.png "Pestaña instantáneas")](images/allocations4.png#lightbox) 
+  [![Pestaña instantáneas](images/allocations4.png)](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations4-vs.png "Pestaña instantáneas")](images/allocations4-vs.png#lightbox)
+  [![Pestaña instantáneas](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -280,11 +280,11 @@ El gráfico de trazados, tal como se muestra en la captura de pantalla siguiente
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-  [![](images/time2.png "Time Profiler Instrument: árbol de llamadas")](images/time2.png#lightbox) 
+  [![Time Profiler Instrument: árbol de llamadas](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/time2-vs.png "Time Profiler Instrument: árbol de llamadas")](images/time2-vs.png#lightbox) 
+  [![Time Profiler Instrument: árbol de llamadas](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -315,7 +315,7 @@ Si genera perfiles de una aplicación con cualquier otra configuración, se le p
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/image1vs.png "Cuadro de diálogo error de generación de perfiles")](images/image1vs.png#lightbox) 
+[![Cuadro de diálogo error de generación de perfiles](images/image1vs.png)](images/image1vs.png#lightbox) 
 
 -----
 

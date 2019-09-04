@@ -6,12 +6,12 @@ ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 04/18/2018
-ms.openlocfilehash: 7da163e85b04791c276f9cb14f5b21615b7909fb
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 47efbaa12475f627b5963cb6613c3441a1d96aac
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200159"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227842"
 ---
 # <a name="installing-net-embedding"></a>Instalación de la inserción de .NET
 
@@ -32,12 +32,12 @@ Ahora que NuGet está instalado, puede ejecutar las herramientas manualmente.
 - Abra un terminal (macOS) o un símbolo del sistema (Windows)
 - Cambiar el directorio a la raíz de la solución
 - Las herramientas se instalan en:
-    - **./Packages/Embeddinator-4000. [Versión]/Tools/objcgen** (Objective-C)
-    - **./Packages/Embeddinator-4000. [Versión]/tools/Embeddinator-4000.exe** (Java/C)
+  - **./Packages/Embeddinator-4000. [Versión]/Tools/objcgen** (Objective-C)
+  - **./Packages/Embeddinator-4000. [Versión]/tools/Embeddinator-4000.exe** (Java/C)
 - En macOS, **objcgen** se puede ejecutar directamente.
 - En Windows, **Embeddinator-4000. exe** se puede ejecutar directamente.
 - En macOS, **Embeddinator-4000. exe** debe ejecutarse con **mono**:
-    - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
+  - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 Cada invocación de comando necesitará una serie de parámetros que se enumeran en la documentación específica de la plataforma.
 

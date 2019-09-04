@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2018
-ms.openlocfilehash: 9817ac2df7a60b5358316599ce02702448b0c307
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199724"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226038"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrar el tipo de Xamarin. iOS
 
@@ -129,10 +129,10 @@ A partir de la versión de 6.2.6 estable y la versión beta de 6.3.4, se ha agre
 Este nuevo sistema de registro ofrece las siguientes características nuevas:
 
 - Detección en tiempo de compilación de errores de programador:
-    - Dos clases que se registran con el mismo nombre.
-    - Se exportó más de un método para responder al mismo selector
+  - Dos clases que se registran con el mismo nombre.
+  - Se exportó más de un método para responder al mismo selector
 - Eliminación de código nativo sin usar:
-    - El nuevo sistema de registro agregará referencias fuertes al código que se usa en bibliotecas estáticas, lo que permite que el vinculador nativo destaque el código nativo sin usar del binario resultante. En los enlaces de ejemplo de Xamarin, la mayoría de las aplicaciones se 300 000 más pequeñas.
+  - El nuevo sistema de registro agregará referencias fuertes al código que se usa en bibliotecas estáticas, lo que permite que el vinculador nativo destaque el código nativo sin usar del binario resultante. En los enlaces de ejemplo de Xamarin, la mayoría de las aplicaciones se 300 000 más pequeñas.
 
 - Compatibilidad con subclases genéricas `NSObject`de; vea los genéricos de [NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información. Además, el nuevo sistema de registro detectará construcciones genéricas no admitidas que anteriormente habrían causado un comportamiento aleatorio en tiempo de ejecución.
 
@@ -142,37 +142,37 @@ A continuación se muestran algunos ejemplos de los errores detectados por el nu
 
 - Exportar el mismo selector más de una vez en la misma clase:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo:")]
-        void Foo (NSString str);
-        [Export ("foo:")]
-        void Foo (string str)
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo:")]
+      void Foo (NSString str);
+      [Export ("foo:")]
+      void Foo (string str)
+  }
+  ```
 
 - Exportar más de una clase administrada con el mismo nombre de Objective-C:
 
-    ```csharp
-    [Register ("Class")]
-    class MyClass : NSObject {}
+  ```csharp
+  [Register ("Class")]
+  class MyClass : NSObject {}
 
-    [Register ("Class")]
-    class YourClass : NSObject {}
-    ```
+  [Register ("Class")]
+  class YourClass : NSObject {}
+  ```
 
 - Exportar métodos genéricos:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo")]
-        void Foo<T> () {}
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo")]
+      void Foo<T> () {}
+  }
+  ```
 
 ### <a name="limitations-of-the-new-registrar"></a>Limitaciones del nuevo registrador
 

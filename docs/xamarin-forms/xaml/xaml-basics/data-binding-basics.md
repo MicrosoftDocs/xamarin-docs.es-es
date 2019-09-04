@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655247"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227928"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
@@ -102,7 +102,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Este es el programa en ejecución:
 
-[![](data-binding-basics-images/sliderbinding.png "Para ver enlaces")](data-binding-basics-images/sliderbinding-large.png#lightbox "para ver los enlaces ")
+[![Enlaces de vista a vista](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
 
 ## <a name="the-binding-mode"></a>El modo de enlace
 
@@ -201,7 +201,7 @@ Los enlaces en tres de los `Slider` las vistas son `OneWayToSource`, lo que sign
 
 Sin embargo, el enlace para el `Scale` propiedad es `TwoWay`. Esto es porque el `Scale` propiedad tiene un valor predeterminado de 1 y usar un `TwoWay` enlace hace que el `Slider` inicial del valor que se establecerá en 1 en lugar de 0. Si fuera ese enlace `OneWayToSource`, `Scale` inicialmente se establecería la propiedad en 0 de la `Slider` valor predeterminado. El `Label` no estará visible y que podría provocar confusión en el usuario.
 
- [![](data-binding-basics-images/slidertransforms.png "Con las versiones anteriores enlaces")](data-binding-basics-images/slidertransforms-large.png#lightbox "hacia atrás enlaces")
+ [![Enlaces hacia atrás](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
 
  > [!NOTE]
  > El [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) clase también tiene [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) y [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propiedades, que escalen el `VisualElement` en los ejes x y y respectivamente.
@@ -234,7 +234,7 @@ Establecimiento estático `NamedColor.All` propiedad a la `ItemsSource` de un `L
 
 La presentación resultante se establece que los elementos son realmente del tipo `XamlSamples.NamedColor`:
 
-[![](data-binding-basics-images/listview1.png "Enlazar a una colección")](data-binding-basics-images/listview1-large.png#lightbox "enlaza a una colección")
+[![Enlazar a una colección](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
 
 No es toda la información, pero la `ListView` es desplazable y seleccionable.
 
@@ -259,7 +259,7 @@ Para definir una plantilla para los elementos, desea dividir el `ItemTemplate` p
 
 El `Label` elemento está establecido en el `View` propiedad de la `ViewCell`. (El `ViewCell.View` etiquetas no son necesarios porque el `View` propiedad es la propiedad content de `ViewCell`.) Este marcado se muestra el `FriendlyName` propiedad de cada uno `NamedColor` objeto:
 
-[![](data-binding-basics-images/listview2.png "Enlazar a una colección con un DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "enlaza a una colección con un DataTemplate")
+[![Enlazar a una colección con un DataTemplate](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
 
 Mucho mejor. Ahora todo lo necesario es refinar la plantilla de elemento con el color real y obtener más información. Para admitir esta plantilla, algunos valores y los objetos se han definido en el diccionario de recursos de la página:
 
@@ -396,7 +396,7 @@ Enlaces de datos de tres hacen referencia a esta instancia. Tenga en cuenta que 
 
 Este es el resultado:
 
-[![](data-binding-basics-images/listview3.png "Enlazar a una colección con una plantilla de datos y los convertidores de tipos")](data-binding-basics-images/listview3-large.png#lightbox "enlaza a una colección con una plantilla de datos y los convertidores de tipos")
+[![Enlazar a una colección con un DataTemplate y convertidores](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
 El `ListView` es bastante sofisticada en el control de cambios que se produzcan dinámicamente en los datos subyacentes, pero solo si realizar ciertos pasos. Si la colección de elementos que se asigna a la `ItemsSource` propiedad de la `ListView` cambios en tiempo de ejecución: es decir, si los elementos se pueden agregar a o quitar de la colección, utilice un `ObservableCollection` clase para estos elementos. `ObservableCollection` implementa el `INotifyCollectionChanged` interfaz, y `ListView` instalará un controlador para el `CollectionChanged` eventos.
 

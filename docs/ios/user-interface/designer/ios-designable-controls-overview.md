@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: aa6db1403a34b7228352e12e1b2f954308db3744
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3f36ef7541ea00e2a08733c9d47d252477da787a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528506"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227064"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 
@@ -98,7 +98,7 @@ Se debe tener cuidado cuando y dónde inicializar las propiedades diseñables en
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
-    
+
     [Export ("Counter"), Browsable (true)]
     public int Counter {get; set;}
 
@@ -179,7 +179,8 @@ A menudo, la superficie de diseño puede detectar las excepciones producidas por
 
  ![](ios-designable-controls-overview-images/exception-box.png "Un control defectuoso como marcador de posición rojo y los detalles de la excepción")
 
-Si los símbolos de depuración están disponibles para el control, el seguimiento tendrá nombres de archivo y números de línea. Si hace doble clic en una línea del seguimiento de la pila, se saltará a esa línea en el código fuente.
+Si los símbolos de depuración están disponibles para el control, el seguimiento tendrá nombres de archivo y números de línea.
+Si hace doble clic en una línea del seguimiento de la pila, se saltará a esa línea en el código fuente.
 
 Si el diseñador no puede aislar el control defectuoso, aparecerá un mensaje de advertencia en la parte superior de la superficie de diseño:
 

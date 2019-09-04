@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f2ac37676dbdfc96c853c9bc679e79c2aae1adb1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656233"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227365"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Mejoras en el widget de pantalla principal y de búsqueda en iOS 10
 
@@ -71,7 +71,7 @@ var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCen
 
 Como novedad en iOS 10, los widgets ahora contienen una propiedad [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) que permite al desarrollador describir la cantidad de contenido disponible y permite que el usuario expanda y contraiga el contenido.
 
-Cuando se muestra inicialmente un widget, está en un estado contraído. Un widget contraído tiene un alto de aproximadamente dos y medio de filas de tabla de iOS estándar. El desarrollador puede solicitar el tamaño de un widget expandido, pero es ideal que sea menor que el alto de la pantalla. 
+Cuando se muestra inicialmente un widget, está en un estado contraído. Un widget contraído tiene un alto de aproximadamente dos y medio de filas de tabla de iOS estándar. El desarrollador puede solicitar el tamaño de un widget expandido, pero es ideal que sea menor que el alto de la pantalla.
 
 En el estado contraído, el widget debería mostrar solo la información esencial e independiente. Cuando se expande, el widget debe mostrar información complementaria que mejora el contenido principal que se muestra en el estado contraído. Por ejemplo, la aplicación Weather muestra las condiciones meteorológicas actuales cuando están contraídas y agrega la previsión por hora cuando se expande.
 

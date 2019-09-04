@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b61924c78f85c8a1a835cef87f357ec262926935
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197728"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225800"
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 
@@ -80,12 +80,12 @@ y requerir que las alarmas exactas funcionen ahora deberán desencadenar cada al
 El almacenamiento externo ahora se divide en dos tipos: almacenamiento único para la aplicación y datos compartidos por varias aplicaciones. Leer y escribir en la ubicación específica de la aplicación en el almacenamiento externo no requiere ningún permiso especial. La interacción con los datos en el almacenamiento compartido requiere `READ_EXTERNAL_STORAGE` ahora `WRITE_EXTERNAL_STORAGE` el permiso o. Los dos tipos se pueden clasificar como tales:
 
 - Si va a obtener una ruta de acceso de archivo o directorio mediante una `Context` llamada a un método en, por ejemplo,[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
-   de[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
-   - la aplicación no requiere permisos adicionales.
+  de[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+  - la aplicación no requiere permisos adicionales.
 
 - Si va a obtener una ruta de acceso de archivo o directorio al obtener acceso a una propiedad o `Environment` llamar a un método en, como[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
-   de[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
-   , la aplicación requiere el `READ_EXTERNAL_STORAGE` permiso `WRITE_EXTERNAL_STORAGE` o.
+  de[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  , la aplicación requiere el `READ_EXTERNAL_STORAGE` permiso `WRITE_EXTERNAL_STORAGE` o.
 
 > [!NOTE]
 > `WRITE_EXTERNAL_STORAGE`implica el `READ_EXTERNAL_STORAGE` permiso, por lo que solo debería tener que establecer un permiso.
@@ -681,27 +681,27 @@ Además de los cambios descritos anteriormente, KitKat le permite:
 - *Use la pantalla completa* : KitKat presenta un nuevo [modo inmersivo](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para examinar contenido, jugar a juegos y ejecutar otras aplicaciones que podrían beneficiarse de una experiencia de pantalla completa.
 
 - *Personalización* de notificaciones: obtenga detalles adicionales acerca de las notificaciones del sistema con la[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
-   . Esto le permite presentar la información de manera diferente dentro de la aplicación.
+  . Esto le permite presentar la información de manera diferente dentro de la aplicación.
 
 - *Recursos* que se dibujan en reflejo: los recursos que se van a dibujar tienen un nuevo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
-   atributo que indica al sistema que cree una versión reflejada para las imágenes que requieran el volteo de los diseños de izquierda a derecha.
+  atributo que indica al sistema que cree una versión reflejada para las imágenes que requieran el volteo de los diseños de izquierda a derecha.
 
 - *Pausar animaciones* : pausar y reanudar animaciones creadas con el[`Animator`](xref:Android.Animation.Animator)
-   clase.
+  clase.
 
 - *Leer texto dinámico cambiante* : denota partes de la interfaz de usuario que actualizan dinámicamente con nuevo texto como "regiones activas" con el nuevo[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
-   atributo para que el nuevo texto se lea automáticamente en el modo de accesibilidad.
+  atributo para que el nuevo texto se lea automáticamente en el modo de accesibilidad.
 
 - *Mejorar la experiencia de audio* : hacer pistas más fuertes con el[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
-   , busque el pico y el RMS de una secuencia de audio con el[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
-   y obtenga información de una marca de tiempo de [audio](xref:Android.Media.AudioTimestamp) para ayudarle con la sincronización de audio y vídeo.
+  , busque el pico y el RMS de una secuencia de audio con el[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+  y obtenga información de una marca de tiempo de [audio](xref:Android.Media.AudioTimestamp) para ayudarle con la sincronización de audio y vídeo.
 
 - *Sincronizar ContentResolver devuelvan en el intervalo personalizado* : KitKat agrega cierta variabilidad al momento en que se realiza una solicitud de sincronización. Sincronizar `ContentResolver` a un momento o intervalo `ContentResolver.RequestSync` personalizado llamando a y pasando un `SyncRequest`.
 
 - *Distinguir entre controladores* : en KitKat, a los controladores se les asignan identificadores enteros únicos a los que se puede tener `ControllerNumber` acceso a través de la propiedad del dispositivo. Esto hace que sea más fácil distinguir a los jugadores de un juego.
 
 - *Control remoto* : con unos pocos cambios en el lado del hardware y el software, KitKat le permite convertir un dispositivo de un transmisor de infrarrojos en un control remoto mediante el `ConsumerIrService`y interactuar con dispositivos periféricos con el nuevo[`RemoteController`](xref:Android.Media.RemoteController)
-   Enumera.
+  Enumera.
 
 Para más información sobre los cambios anteriores de la API, consulte la introducción a las API de Google [Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .
 

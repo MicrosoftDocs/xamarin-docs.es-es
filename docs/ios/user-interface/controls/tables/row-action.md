@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 41aabb5e8b6d3eb46a92ee194c6b6b5e3ca51943
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655631"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226295"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de fila en Xamarin. iOS
 
@@ -22,7 +22,7 @@ _En esta guía se muestra cómo crear acciones de deslizamiento personalizado pa
 
 iOS proporciona dos maneras de realizar acciones en una tabla: `UISwipeActionsConfiguration` y `UITableViewRowAction`.
 
-`UISwipeActionsConfiguration`se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo. 
+`UISwipeActionsConfiguration`se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo.
 
 La `UITableViewRowAction` clase se utiliza para definir una acción que tendrá lugar cuando el usuario se deslice horizontalmente a la izquierda en una fila de una vista de tabla.
 Por ejemplo, al editar una tabla, deslizar el dedo a la izquierda en una fila muestra un botón **eliminar** de forma predeterminada. Al adjuntar varias instancias de `UITableViewRowAction` la clase a `UITableView`un, se pueden definir varias acciones personalizadas, cada una con su propio texto, formato y comportamiento.
@@ -32,7 +32,7 @@ Por ejemplo, al editar una tabla, deslizar el dedo a la izquierda en una fila mu
 
 Hay tres pasos necesarios para implementar las acciones de deslizamiento `UISwipeActionsConfiguration`con:
 
-1. Reemplace `GetLeadingSwipeActionsConfiguration` los métodos y `GetTrailingSwipeActionsConfiguration` /o. Estos métodos devuelven `UISwipeActionsConfiguration`. 
+1. Reemplace `GetLeadingSwipeActionsConfiguration` los métodos y `GetTrailingSwipeActionsConfiguration` /o. Estos métodos devuelven `UISwipeActionsConfiguration`.
 2. Cree una instancia `UISwipeActionsConfiguration` del que se va a devolver. Esta clase toma una matriz de `UIContextualAction`.
 3. Creará un control `UIContextualAction`.
 
@@ -40,7 +40,7 @@ Estos se explican con mayor detalle en las secciones siguientes.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. Implementar los métodos SwipeActionsConfigurations
 
-`UITableViewController`(y también `UITableViewSource` y `UITableViewDelegate`) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration`, que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda. 
+`UITableViewController`(y también `UITableViewSource` y `UITableViewDelegate`) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration`, que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda.
 
 En el ejemplo siguiente (del ejemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) se muestra la implementación de la configuración de deslizamiento inicial. Se crean dos acciones a partir de las acciones contextuales, que se explican [a continuación](#create-uicontextualaction). Después [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), estas acciones se pasan a un recién inicializado, que se utiliza como valor devuelto.
 
@@ -54,11 +54,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
     //UISwipeActionsConfiguration
     var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
-    
+
     leadingSwipe.PerformsFirstActionWithFullSwipe = false;
-    
+
     return leadingSwipe;
-}  
+}
 ```
 
 <a name="create-uiswipeactionsconfigurations" />
@@ -99,10 +99,10 @@ public UIContextualAction ContextualFlagAction(int row)
                         "Flag",
                         (FlagAction, view, success) => {
                             var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
-                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null)); 
+                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
                             alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
                             PresentViewController(alertController, true, null);
-                            
+
                             success(true);
                         });
 

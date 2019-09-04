@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: cb8520a223a2bc10706c7e5bcebf8fc412d4e64e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652304"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226691"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabajar con campos de texto y búsqueda de tvOS en Xamarin
 
@@ -30,7 +30,7 @@ En este documento se explican los detalles del trabajo con campos de texto y de 
 
 ## <a name="about-text-and-search-fields"></a>Acerca de los campos de texto y de búsqueda
 
-Como se indicó anteriormente, si es necesario, Xamarin. tvOS puede presentar uno o más campos de texto para recopilar pequeñas cantidades de texto del usuario mediante una pantalla (o un teclado Bluetooth opcional según la versión de tvOS que el usuario haya instalado). 
+Como se indicó anteriormente, si es necesario, Xamarin. tvOS puede presentar uno o más campos de texto para recopilar pequeñas cantidades de texto del usuario mediante una pantalla (o un teclado Bluetooth opcional según la versión de tvOS que el usuario haya instalado).
 
 Además, si la aplicación presenta grandes cantidades de contenido al usuario (como una música, películas o una colección de imágenes), es posible que desee incluir un campo de búsqueda que permita al usuario escribir una pequeña cantidad de texto para filtrar la lista de elementos disponibles.
 
@@ -59,7 +59,7 @@ Siempre que el usuario haga clic en un campo de texto de la interfaz de usuario,
 
 [![](text-fields-and-search-images/keyboard01.png "Teclado remoto Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-Si hay más de un campo de texto en la vista actual, se mostrará automáticamente un botón **siguiente** para llevar al usuario al siguiente campo de texto. Se mostrará un botón **listo** para el último campo de texto que finalizará la entrada de texto y devolverá el usuario a la pantalla anterior. 
+Si hay más de un campo de texto en la vista actual, se mostrará automáticamente un botón **siguiente** para llevar al usuario al siguiente campo de texto. Se mostrará un botón **listo** para el último campo de texto que finalizará la entrada de texto y devolverá el usuario a la pantalla anterior.
 
 En cualquier momento, el usuario también puede presionar el botón de **menú** en la entrada de texto de Siri remoto para finalizar y volver a la pantalla anterior.
 
@@ -99,37 +99,37 @@ Haga lo siguiente:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo para abrirlo para su edición.
-1. Arrastre uno o más **campos de texto** a la superficie de diseño en una vista: 
+1. Arrastre uno o más **campos de texto** a la superficie de diseño en una vista:
 
     [![](text-fields-and-search-images/text02.png "Un campo de texto")](text-fields-and-search-images/text02.png#lightbox)
-1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Panel de propiedades**: 
+1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Panel de propiedades**:
 
     [![](text-fields-and-search-images/text03.png "Ficha widget del Panel de propiedades")](text-fields-and-search-images/text03.png#lightbox)
-1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado: 
+1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado:
 
     [![](text-fields-and-search-images/text04.png "Sección campo de texto")](text-fields-and-search-images/text04.png#lightbox)
-1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado: 
+1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado:
 
-    [![](text-fields-and-search-images/text05.png "Revisión ortográfica, capitalización y el tipo de teclado predeterminado")](text-fields-and-search-images/text05.png#lightbox) 
+    [![](text-fields-and-search-images/text05.png "Revisión ortográfica, capitalización y el tipo de teclado predeterminado")](text-fields-and-search-images/text05.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
-1. Arrastre uno o más **campos de texto** a la superficie de diseño en una vista: 
+1. Arrastre uno o más **campos de texto** a la superficie de diseño en una vista:
 
     [![](text-fields-and-search-images/text02-vs.png "Un campo de texto")](text-fields-and-search-images/text02-vs.png#lightbox)
-1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Explorador de propiedades**: 
+1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Explorador de propiedades**:
 
     [![](text-fields-and-search-images/text03-vs.png "La pestaña widget")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado: 
+1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado:
 
     [![](text-fields-and-search-images/text04-vs.png "Sección campo de texto")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado: 
+1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado:
 
-    [![](text-fields-and-search-images/text05-vs.png "Revisión ortográfica, capitalización y el tipo de teclado predeterminado")](text-fields-and-search-images/text05-vs.png#lightbox) 
+    [![](text-fields-and-search-images/text05-vs.png "Revisión ortográfica, capitalización y el tipo de teclado predeterminado")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
-    
+
 -----
 
 En el código, puede obtener o establecer el valor de un campo de texto mediante `Text` su propiedad:
@@ -149,41 +149,41 @@ La forma más fácil de trabajar con campos de búsqueda en una aplicación de X
 Haga lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-    
+
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo para abrirlo para su edición.
-1. Arrastre un nuevo controlador de vista de colección al guion gráfico para mostrar los resultados de la búsqueda del usuario: 
+1. Arrastre un nuevo controlador de vista de colección al guion gráfico para mostrar los resultados de la búsqueda del usuario:
 
     [![](text-fields-and-search-images/search02.png "Un controlador de vista de colección")](text-fields-and-search-images/search02.png#lightbox)
-1. En la **pestaña widget** del **Panel de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el identificador de **guión gráfico**: 
+1. En la **pestaña widget** del **Panel de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el identificador de **guión gráfico**:
 
     [![](text-fields-and-search-images/search03.png "La pestaña widget")](text-fields-and-search-images/search03.png#lightbox)
 1. Seleccione el **prototipo de celda** en la superficie de diseño.
-1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**: 
+1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**:
 
     [![](text-fields-and-search-images/search04.png "La pestaña widget")](text-fields-and-search-images/search04.png#lightbox)
-1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**: 
+1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**:
 
     [![](text-fields-and-search-images/search05.png "Diseño del prototipo de celda")](text-fields-and-search-images/search05.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
-1. Arrastre un nuevo controlador de vista de colección al guion gráfico para mostrar los resultados de la búsqueda del usuario: 
+1. Arrastre un nuevo controlador de vista de colección al guion gráfico para mostrar los resultados de la búsqueda del usuario:
 
     [![](text-fields-and-search-images/seach02-vs.png "Un controlador de vista de colección")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el **identificador de guión gráfico**: 
+1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el **identificador de guión gráfico**:
 
     [![](text-fields-and-search-images/search03-vs.png "La pestaña widget")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Seleccione el **prototipo de celda** en la superficie de diseño.
-1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**: 
+1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**:
 
     [![](text-fields-and-search-images/search04-vs.png "La pestaña widget")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**: 
+1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**:
 
     [![](text-fields-and-search-images/search05-vs.png "Diseño del prototipo de celda")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
-    
+
 -----
 
 <a name="Provide-a-Data-Model" />
@@ -192,13 +192,13 @@ Haga lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-A continuación, deberá proporcionar una clase para que actúe como modelo de datos para los resultados que buscará el usuario. En el **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo..** . Clase vacíaGeneral > y proporcione un nombre:  >  
+A continuación, deberá proporcionar una clase para que actúe como modelo de datos para los resultados que buscará el usuario. En el **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo..** . Clase vacíaGeneral > y proporcione un nombre:  > 
 
 [![](text-fields-and-search-images/search06.png "Seleccione clase vacía y proporcione un nombre.")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-A continuación, deberá proporcionar una clase para que actúe como modelo de datos para los resultados que buscará el usuario. En el **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto y seleccione **Agregar** > **nuevo elemento..** .AppleMisc > Class yproporcioneunnombre: >   >  
+A continuación, deberá proporcionar una clase para que actúe como modelo de datos para los resultados que buscará el usuario. En el **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto y seleccione **Agregar** > **nuevo elemento..** .AppleMisc > Class yproporcioneunnombre: >   > 
 
 [![](text-fields-and-search-images/search06-vs.png "Seleccione la clase y proporcione un nombre.")](text-fields-and-search-images/search06-vs.png#lightbox)
 
@@ -613,7 +613,7 @@ Para más información sobre las vistas de colección, consulte nuestra document
 
 ### <a name="presenting-the-search-field"></a>Presentar el campo de búsqueda
 
-Hay dos formas principales en que se puede presentar al usuario un campo de búsqueda (y sus resultados de búsqueda y teclado en pantalla asociados) en tvOS: 
+Hay dos formas principales en que se puede presentar al usuario un campo de búsqueda (y sus resultados de búsqueda y teclado en pantalla asociados) en tvOS:
 
 - **Vista de cuadro de diálogo modal** : el campo de búsqueda se puede presentar en la vista y el controlador de vista actuales como una vista de cuadro de diálogo modal de pantalla completa. Esto se hace normalmente en respuesta al usuario que hace clic en un botón o en otro elemento de la interfaz de usuario. Se descarta el cuadro de diálogo cuando el usuario selecciona un elemento de los resultados de la búsqueda.
 - **Ver contenido** : el campo de búsqueda es una parte directa de una vista determinada. Por ejemplo, como el contenido de una pestaña de búsqueda en un controlador de vista de pestañas.

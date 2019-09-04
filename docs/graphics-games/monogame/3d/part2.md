@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f125f8f20d22da4e988440cbaa936771d86a7673
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680982"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227723"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dibujo de gráficos 3D con vértices en monogame
 
@@ -85,7 +85,7 @@ Nuestro plano servirá como planta y querrámos aplicar una textura al realizar 
 En primer lugar, vamos a agregar un miembro a nuestra clase Game1:
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 A continuación, defina nuestros vértices en `Game1.Initialize`. Tenga en cuenta que la plantilla proporcionada a la que se hace referencia anteriormente en `Game1.Initialize` este artículo no contiene un método, por lo que necesitamos `Game1`agregar el método completo a:
@@ -179,7 +179,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -213,7 +213,7 @@ Las `View` propiedades `Projection` y controlan cómo se ve la escena. Vamos a m
 
 ### <a name="techniques-and-passes"></a>Técnicas y pases
 
-Una vez que se han asignado propiedades en nuestro efecto, podemos realizar la representación real. 
+Una vez que se han asignado propiedades en nuestro efecto, podemos realizar la representación real.
 
 No vamos a cambiar la `CurrentTechnique` propiedad en este tutorial, pero los juegos más avanzados pueden tener un solo efecto que puede dibujar de maneras diferentes (por ejemplo, cómo se aplica el valor de color). Cada uno de estos modos de representación se puede representar como una técnica que se puede asignar antes de la representación. Además, cada técnica puede requerir varios pasos para que se representen correctamente. Los efectos pueden necesitar varios pases si se representan objetos visuales complejos, como una superficie o un pelo brillante.
 
@@ -231,7 +231,7 @@ Por último, se especifica el número de triángulos que se van a representar. N
 
 ## <a name="rendering-with-a-texture"></a>Representación con una textura
 
-En este punto, la aplicación representa un plano blanco (en perspectiva). A continuación, agregaremos una textura al proyecto que se usará al representar nuestro plano. 
+En este punto, la aplicación representa un plano blanco (en perspectiva). A continuación, agregaremos una textura al proyecto que se usará al representar nuestro plano.
 
 Para simplificar las cosas, agregaremos el. png directamente a nuestro proyecto en lugar de usar la herramienta de canalización monogame. Para ello, descargue [este archivo. png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) en el equipo. Una vez descargado, haga clic con el botón derecho en la carpeta de **contenido** en el panel de solución y seleccione **Agregar > Agregar archivos..** .. Si trabaja en Android, esta carpeta se encuentra en la carpeta **activos** del proyecto específico de Android. En el caso de iOS, esta carpeta estará en la raíz del proyecto de iOS. Navegue hasta la ubicación donde se guarda el archivo de **cuadros de ajedrez. png** y selecciónelo. Seleccione esta copia para copiar el archivo en el directorio.
 
@@ -332,7 +332,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Si ejecutamos el código, podemos ver que nuestro plano ahora muestra un patrón de tablero de ajedrez:
@@ -404,7 +404,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 También se creará un `Vector3` en `Game1` para representar la posición de la cámara. Vamos a agregar un campo bajo nuestra `checkerboardTexture` declaración:
@@ -413,7 +413,7 @@ También se creará un `Vector3` en `Game1` para representar la posición de la 
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 A continuación, quite la `cameraPosition` variable local del método:`DrawModel`
@@ -434,7 +434,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -450,7 +450,7 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 Ahora, Si ejecutamos el código, podremos ver ambos modelos y el suelo al mismo tiempo:

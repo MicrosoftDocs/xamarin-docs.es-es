@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 8978bd386ec2f2ea0f9960f079ce82750941cfad
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655953"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228257"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
 
@@ -22,7 +22,7 @@ _Usar rutas de acceso a los gráficos de clip a áreas específicas y para crear
 
 A veces es necesario restringir la representación de gráficos a un área determinada. Esto se conoce como *recorte*. Puede utilizar el recorte de efectos especiales, como esta imagen de un objeto monkey ven a través de un principal:
 
-![](clipping-images/clippingsample.png "Monkey a través de un principal")
+![Monkey a través de Keyhole](clipping-images/clippingsample.png)
 
 El *área recorte* es el área de la pantalla en la que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante un rectángulo o un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, pero también puede definir un área de recorte mediante un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Estos dos tipos de objetos en primer lugar parecen estar relacionadas con porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso desde una región y son muy diferentes internamente: Una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de recorrido horizontal.
 
@@ -100,7 +100,7 @@ canvas.ClipPath(keyholePath);
 
 El `PaintSurface` controlador, a continuación, restablece las transformaciones con una llamada a `ResetMatrix` y dibuja el mapa de bits para ampliar el alto de la pantalla completa. Este código supone que el mapa de bits es cuadrada, que es este mapa de bits determinado. El mapa de bits se representa solo dentro del área definido por el trazado de recorte:
 
-[![](clipping-images/monkeythroughkeyhole-small.png "Captura de pantalla triple del objeto Monkey a través de la página principal")](clipping-images/monkeythroughkeyhole-large.png#lightbox "Triple captura de pantalla de objeto Monkey a través de la página principal")
+[![Captura de pantalla triple de la página de Monkey a Keyhole](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
 
 El trazado de recorte cuando está sujeto a las transformaciones en vigor el `ClipPath` se llama al método, y no a las transformaciones en vigor cuando un objeto gráfico (por ejemplo, un mapa de bits) se muestra. El trazado de recorte es parte del estado del lienzo que se guarda con el `Save` método y restaurada con el `Restore` método.
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Lo que queda es la intersección de estos cuatro círculos:
 
-[![](clipping-images//fourcircleintersectclip-small.png "Captura de pantalla de la página cuatro Clip de círculo forman una intersección con triple")](clipping-images/fourcircleintersectclip-large.png#lightbox "Triple captura de pantalla de la página cuatro Clip de círculo forman una intersección")
+[![Captura de pantalla triple de la página de recorte de intersección de cuatro círculos](clipping-images//fourcircleintersectclip-small.png)](clipping-images/fourcircleintersectclip-large.png#lightbox)
 
 El [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumeración tiene solo dos miembros:
 
@@ -177,13 +177,13 @@ El [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumeración tiene solo
 
 Si reemplaza los cuatro `SKClipOperation.Intersect` argumentos en el `FourCircleIntersectClipPage` clase con `SKClipOperation.Difference`, verá lo siguiente:
 
-[![](clipping-images//fourcircledifferenceclip-small.png "Captura de pantalla de la página cuatro Clip de círculo forman una intersección con la operación de diferencia triple")](clipping-images/fourcircledifferenceclip-large.png#lightbox "Triple captura de pantalla de la página cuatro Clip de círculo forman una intersección con la operación de diferencia")
+[![Captura de pantalla triple de la página de recorte de intersección de cuatro círculos con la operación de diferencia](clipping-images//fourcircledifferenceclip-small.png)](clipping-images/fourcircledifferenceclip-large.png#lightbox)
 
 Se quitaron cuatro círculos superpuestos en el área de recorte.
 
 El **Clip operaciones** página muestra la diferencia entre estas dos operaciones con sólo un par de círculos. El primer círculo de la izquierda se agrega al área de recorte con la operación de ajuste predeterminado de `Intersect`, mientras que el segundo círculo de la derecha se agrega al área de recorte con la operación de recorte indicada por la etiqueta de texto:
 
-[![](clipping-images//clipoperations-small.png "Captura de pantalla triple de la página operaciones de Clip")](clipping-images/clipoperations-large.png#lightbox "Triple captura de pantalla de la página operaciones de Clip")
+[![Captura de pantalla triple de la página de operaciones de recorte](clipping-images//clipoperations-small.png)](clipping-images/clipoperations-large.png#lightbox)
 
 El [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) clase define dos `SKPaint` objetos como campos y, a continuación, divide la pantalla en dos áreas rectangulares. Estas áreas son diferentes dependiendo de si el teléfono está en modo vertical u horizontal. El `DisplayClipOp` clase, a continuación, muestra el texto y llamadas `ClipPath` con las rutas de acceso de dos círculo para ilustrar cada operación de recorte:
 
@@ -282,7 +282,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 Captura de pantalla siguiente muestra las áreas de recorte basadas en las operaciones de seis región. El círculo de la izquierda es la región que el `Op` se llama al método en, y el círculo de la derecha es la región que se pasa a la `Op` método:
 
-[![](clipping-images//regionoperations-small.png "Captura de pantalla de la página de operaciones de región triple")](clipping-images/regionoperations-large.png#lightbox "Triple captura de pantalla de la página de operaciones de región")
+[![Captura de pantalla triple de la página de operaciones de región](clipping-images//regionoperations-small.png)](clipping-images/regionoperations-large.png#lightbox)
 
 ¿Son estos todas las posibilidades de combinar estas dos círculos? Observe la imagen resultante como una combinación de tres componentes, que por sí solos se ve en el `Difference`, `Intersect`, y `ReverseDifference` operaciones. El número total de combinaciones es dos a la tercera potencia, o también ocho. Los dos que faltan son la región original (que resulta de llamar no `Op` en absoluto) y una región completamente vacía.
 
@@ -423,7 +423,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El `DrawRegion` llamada rellena la región en color naranja, mientras que el `DrawPath` llamada trazos de la ruta de acceso original en azul para la comparación:
 
-[![](clipping-images//regionpaint-small.png "Captura de pantalla triple de la página de dibujo de la región")](clipping-images/regionpaint-large.png#lightbox "Triple captura de pantalla de la página de dibujo de región")
+[![Captura de pantalla triple de la página de Paint de la región](clipping-images//regionpaint-small.png)](clipping-images/regionpaint-large.png#lightbox)
 
 La región es claramente una serie de coordenadas discretas.
 
@@ -509,7 +509,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Realmente no parece un trébol de cuatro – hoja, pero es una imagen que serían difícil de representación sin recortes:
 
-[![](clipping-images//fourleafclover-small.png "Captura de pantalla triple de la página trébol de cuatro –")](clipping-images/fourleafclover-large.png#lightbox "Triple captura de pantalla de la página trébol de cuatro –")
+[![Captura de pantalla triple de la página de trébol de cuatro hojas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Vínculos relacionados

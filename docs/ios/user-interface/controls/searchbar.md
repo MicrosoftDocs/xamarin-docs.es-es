@@ -1,45 +1,45 @@
 ---
-title: Barras de búsqueda de Xamarin.iOS
-description: Este documento describe cómo usar las barras de búsqueda en Xamarin.iOS. Describe cómo crear barras de búsqueda en un guión gráfico y mediante programación.
+title: Barras de búsqueda en Xamarin. iOS
+description: En este documento se describe cómo usar las barras de búsqueda en Xamarin. iOS. Describe cómo crear barras de búsqueda mediante programación y en un guión gráfico.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 75abb943dbc56d7b4213e0c36c19ff338182ae8a
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 78776b669b9f389398c54d72a9080a90f8664429
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674865"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226323"
 ---
-# <a name="search-bars-in-xamarinios"></a>Barras de búsqueda de Xamarin.iOS
+# <a name="search-bars-in-xamarinios"></a>Barras de búsqueda en Xamarin. iOS
 
-El UISearchBar se usa para buscar a través de una lista de valores. 
+UISearchBar se usa para buscar en una lista de valores.
 
-Contiene tres componentes principales: 
+Contiene tres componentes principales:
 
-- Un campo que se usa para escribir texto. Los usuarios pueden usar esta opción para especificar su término de búsqueda.
-- Botón Borrar, quitar cualquier texto del campo de búsqueda.
-- Un botón Cancelar para salir de la función de búsqueda.
+- Campo que se usa para escribir texto. Los usuarios pueden usarla para escribir el término de búsqueda.
+- Botón borrar, para quitar cualquier texto del campo de búsqueda.
+- Botón Cancelar para salir de la función de búsqueda.
 
 ![Barra de búsqueda](searchbar-images/image1.png)
 
-## <a name="implementing-the-search-bar"></a>Implementación de la barra de búsqueda
+## <a name="implementing-the-search-bar"></a>Implementar la barra de búsqueda
 
-Para implementar el inicio de la barra de búsqueda creando una nueva:
+Para implementar la barra de búsqueda, empiece por crear una instancia de una nueva:
 
 ```csharp
 searchBar = new UISearchBar();
 ```
 
-Y, a continuación, colóquelo. El ejemplo siguiente muestra cómo colocarlo en la barra de navegación o en el HeaderView de una tabla:
+Y, a continuación, colóquelo. En el ejemplo siguiente se muestra cómo colocarlo en la barra de navegación o en el HeaderView de una tabla:
 
 ```csharp
 NavigationItem.TitleView = searchBar;
 
-\\or
+// or
 
 TableView.TableHeaderView = searchBar;
 ```
@@ -57,7 +57,7 @@ Establecer propiedades en la barra de búsqueda:
 
 ![Propiedades de la barra de búsqueda](searchbar-images/image6.png)
 
-Elevar el `SearchButtonClicked` eventos cuando se presiona el botón de búsqueda. Esto llamará a la lógica de búsqueda:
+Provoca el `SearchButtonClicked` evento cuando se presiona el botón Buscar. Se llamará a la lógica de búsqueda:
 
 ```csharp
 searchBar.SearchButtonClicked += (sender, e) => {
@@ -65,36 +65,36 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-Para obtener información acerca de cómo administrar la presentación de la barra de búsqueda y resultados de búsqueda, consulte el [búsqueda controlador](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) receta.
+Para obtener información sobre la administración de la presentación de la barra de búsqueda y los resultados de la búsqueda, consulte la receta del [controlador de búsqueda](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) .
 
-## <a name="using-the-search-bar-in-the-designer"></a>En la barra de búsqueda del diseñador
+## <a name="using-the-search-bar-in-the-designer"></a>Usar la barra de búsqueda en el diseñador
 
-El diseñador ofrece dos opciones para implementar una barra de búsqueda en el diseñador
+El diseñador ofrece dos opciones para implementar una barra de búsqueda en el diseñador.
 
 - Barra de búsqueda
-- Barra de búsqueda con la controladora de pantalla de búsqueda (en desuso)
+- Barra de búsqueda con el controlador de pantalla de búsqueda (desusado)
 
 ![Controles de barra de búsqueda en el diseñador](searchbar-images/image2.png)
 
-Utilice el Panel de propiedades para establecer las propiedades de la barra de búsqueda
+Usar el panel de propiedades para establecer las propiedades de la barra de búsqueda
 
 ![Diseñador de propiedades de barra de búsqueda](searchbar-images/image3.png)
 
-A continuación se explican estas propiedades:
+Estas propiedades se explican a continuación:
 
-- **Mensaje de texto, el marcador de posición,** – estas propiedades se usan para sugerir e indicarle cómo los usuarios deben utilizar la barra de búsqueda. Por ejemplo, si la aplicación muestra una lista de almacenes podría usar la propiedad de símbolo del sistema para indicar que los usuarios pueden "escribir una ciudad, el nombre del artículo o el código postal"
-- **Buscar el estilo** : puede establecer la barra de búsqueda para ser **Prominent** o **mínimo**. Utilizando los destacados teñir todo lo demás en pantalla, excepto en la barra de búsqueda, provocando el enfoque que se dibujará en la barra de búsqueda. La barra de búsqueda de estilo mínima se mezcla con su entorno.
-- **Capacidades** : habilitación de estas propiedades solo muestra el elemento de interfaz de usuario. Se debe implementar la funcionalidad para ellos, se genera el evento correcto tal como se detalla en el [documentos de la API de la barra de búsqueda](xref:UIKit.UISearchBar)
-    - Muestra los resultados de búsqueda / botón marcadores: muestra un icono de resultados de búsqueda o marcadores en la barra de búsqueda
-    - Muestra el botón Cancelar: permite a los usuarios para salir de la función de búsqueda. Se recomienda que esta opción está seleccionada.
-    - Muestra a la barra de ámbito: Esto permite a los usuarios limitar el ámbito de la búsqueda. Por ejemplo, al realizar búsquedas en la aplicación de música, el usuario puede seleccionar si desean buscar música o su biblioteca para una canción determinada o un intérprete. Para mostrar varias opciones, agregue una matriz de títulos para el **ScopeBarTitles** propiedad.
-    ![Títulos de ámbito de barra de búsqueda](searchbar-images/image4.png)
+- **Texto, marcador de posición, preguntar** : estas propiedades se usan para sugerir e indicar cómo deben usar los usuarios la barra de búsqueda. Por ejemplo, si la aplicación muestra una lista de tiendas, podría usar la propiedad prompt para informar a los usuarios de que pueden "escribir una ciudad, un nombre de caso o código postal".
+- **Estilo de búsqueda** : puede establecer que la barra de búsqueda sea **prominente** o **mínima**. El uso de los prominentes hará que se Matize todo lo demás en la pantalla, excepto en el caso de la barra de búsqueda, lo que hará que el foco se dibuje en la barra de búsqueda. La barra de búsqueda de estilo mínimo se combinará con su entorno.
+- **Capacidades** : al habilitar estas propiedades solo se muestra el elemento de la interfaz de usuario. La funcionalidad se debe implementar para ello mediante la generación del evento correcto como se detalla en los documentos de la API de la [barra de búsqueda](xref:UIKit.UISearchBar) .
+  - Muestra el botón resultados de la búsqueda/marcadores: muestra un icono de resultados de la búsqueda o marcadores en la barra de búsqueda.
+  - Muestra el botón Cancelar: permite a los usuarios salir de la función de búsqueda. Se recomienda seleccionar esta opción.
+  - Muestra la barra de ámbito: permite a los usuarios limitar el ámbito de la búsqueda. Por ejemplo, al buscar en la aplicación música, el usuario puede seleccionar si quiere buscar Apple Music o su biblioteca para una canción o un intérprete determinados. Para mostrar varias opciones, agregue una matriz de títulos a la propiedad **ScopeBarTitles** .
+  ![Títulos de ámbito de la barra de búsqueda](searchbar-images/image4.png)
 
-- **Comportamiento de texto** : estas opciones se usan para tratar cómo se da formato a la entrada del usuario al que está escribiendo. Uso de mayúsculas establecerá el inicio de cada palabra o frase, o todos los caracteres como letra mayúscula. Corrección y el corrector ortográfico con preguntar al usuario con sugerencias de palabras a medida que escriben.
-- **Teclado** : controles que muestran el estilo de teclado para la entrada y, por lo tanto, qué claves están disponibles en el teclado. Esto incluye del teclado numérico, panel de teléfono, correo electrónico, dirección URL junto con otras opciones.
-- **Apariencia** : controla el estilo de apariencia del teclado y se cualquier oscuro o claro con temas.
-- **Devolver clave** : cambiar la etiqueta de la tecla ENTRAR para reflejar mejor qué acción se realizará. Los valores admitidos son Go, combinación, siguiente, ruta, de hecho y búsqueda.
-- **Proteger** – identifica si se enmascara la entrada (por ejemplo, una entrada de contraseña).
+- **Comportamiento de texto** : estas opciones se usan para abordar cómo se da formato a la entrada del usuario cuando se escriben. El uso de mayúsculas establecerá el inicio de cada palabra o frase, o todos los caracteres en mayúsculas. Corrección y revisión ortográfica con preguntar al usuario sobre las sugerencias de palabras que escriben.
+- **Teclado** : controla el estilo de teclado que se muestra para la entrada y, por tanto, las teclas que están disponibles en el teclado. Esto incluye el panel numérico, el panel de teléfono, el correo electrónico y la dirección URL junto con otras opciones.
+- **Apariencia** : controla el estilo de apariencia del teclado y será oscuro o claro.
+- **Tecla Retorno** : cambie la etiqueta de la tecla retorno para reflejar mejor la acción que se llevará a cabo. Los valores admitidos son Go, join, Next, Route, done y Search.
+- **Secure** : identifica si la entrada está enmascarada (por ejemplo, para una entrada de contraseña).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

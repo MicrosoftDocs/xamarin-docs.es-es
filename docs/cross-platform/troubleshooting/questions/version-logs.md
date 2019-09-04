@@ -7,38 +7,38 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cd7a2026a4d1d1458455733a6f2710364cc7fec7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119965"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226774"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde se puede encontrar mi información de versión y los registros?
 
 ## <a name="outline"></a>Contorno
 
 - [Información de versión](#version-information)
-    - Información de versión de Windows
-    - Información de versión de Mac
-    - Android SDK Tools, herramientas de plataforma, herramientas de compilación
+  - Información de versión de Windows
+  - Información de versión de Mac
+  - Android SDK Tools, herramientas de plataforma, herramientas de compilación
 - [Registros del instalador y del IDE](#ide-and-installer-logs)
-    - [Registros de Windows](#windows-logs)
-        - Xamarin Studio
-        - Xamarin para Visual Studio
-        - Instalador universal de Xamarin
-        - Instaladores individuales `.msi` , registros detallados
-        - Inicio de Visual Studio, registros detallados
-    - [Registros de Mac](#mac-logs)
-        - Host de compilación
-    - Visual Studio para Mac
-        - Xamarin Studio
-        - Instalador de Xamarin
+  - [Registros de Windows](#windows-logs)
+    - Xamarin Studio
+    - Xamarin para Visual Studio
+    - Instalador universal de Xamarin
+    - Instaladores individuales `.msi` , registros detallados
+    - Inicio de Visual Studio, registros detallados
+  - [Registros de Mac](#mac-logs)
+    - Host de compilación
+  - Visual Studio para Mac
+    - Xamarin Studio
+    - Instalador de Xamarin
 - [Resultados de compilación detallados](#verbose-build-output-logs)
 - [Depuración de registros para aplicaciones de Xamarin. Android y Xamarin. iOS](#debug-logs-for-xamarin-apps)
-    - Registros `adb` de logcat de Android
-    - registros del simulador de iOS (en Mac)
-    - registros de dispositivos iOS (en Mac)
+  - Registros `adb` de logcat de Android
+  - registros del simulador de iOS (en Mac)
+  - registros de dispositivos iOS (en Mac)
 
 ## <a name="a-idversion-information-nameversion-information-version-information"></a><a id="version-information" name="version-information" />Información de versión
 

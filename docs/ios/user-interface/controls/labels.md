@@ -1,60 +1,60 @@
 ---
-title: Etiquetas de Xamarin.iOS
-description: Este documento describe cómo utilizar las etiquetas de Xamarin.iOS. Describe cómo crear etiquetas y mediante programación con el Diseñador de iOS.
+title: Etiquetas en Xamarin. iOS
+description: En este documento se explica cómo usar las etiquetas en Xamarin. iOS. Describe cómo crear etiquetas mediante programación y con el diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: cca74ac74e5077822193f6dd97a69f8d9b823561
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 41cd0eb93cee216311ea42f7ca027a1556b322e6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227873"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227074"
 ---
-# <a name="labels-in-xamarinios"></a>Etiquetas de Xamarin.iOS
+# <a name="labels-in-xamarinios"></a>Etiquetas en Xamarin. iOS
 
-El `UILabel` control se utiliza para mostrar único y varias líneas, texto de sólo lectura. 
+El `UILabel` control se usa para mostrar texto de solo lectura y de una sola línea.
 
-## <a name="implementing-a-label"></a>Implementación de una etiqueta
+## <a name="implementing-a-label"></a>Implementar una etiqueta
 
-Se crea una nueva etiqueta creando un [ `UILabel` ](xref:UIKit.UILabel):
+Se crea una nueva etiqueta creando una instancia de [`UILabel`](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();
 ```
 
-### <a name="labels-and-storyboards"></a>Las etiquetas y los guiones gráficos
+### <a name="labels-and-storyboards"></a>Etiquetas y guiones gráficos
 
-También puede agregar una etiqueta a la interfaz de usuario cuando se usa el Diseñador de iOS. Busque **etiqueta** en el **cuadro de herramientas** y arrástrelo a la vista:
+También puede Agregar una etiqueta a la interfaz de usuario al usar el diseñador de iOS. Busque **etiqueta** en el **cuadro de herramientas** y arrástrela a la vista:
 
-![En el cuadro de herramientas de etiqueta](labels-images/image3.png)
+![Etiqueta en el cuadro de herramientas](labels-images/image3.png)
 
-En el panel de propiedades, se pueden ajustar las propiedades siguientes:
+Las siguientes propiedades se pueden ajustar en el panel de propiedades:
 
-![Panel de propiedades de etiqueta](labels-images/image2.png)
+![Panel de propiedades etiqueta](labels-images/image2.png)
 
-- **Contexto de texto** : sin formato o con atributos. Texto sin formato permite establecer el [atributos de formato](#Formatting_Text_and_Label) en toda la cadena. Textos con atributos permite establecer el formato de caracteres diferentes o las palabras en la cadena.
-- **Alineación de color, fuente,** : atributos de formato que se pueden aplicar a la etiqueta.
-- **Líneas** : establece el número de líneas que puede abarcar la etiqueta. Establezca esta opción en 0 para permitir que la etiqueta para usar tantas líneas según sea necesario.
-- **Comportamiento** : se puede establecer en Enabled o resaltada. Habilitada está establecido de forma predeterminada, se mostrará el texto deshabilitado en un color gris más claro. Resaltado está deshabilitada de forma predeterminada y permite la etiqueta se vuelva a dibujar con un estado resaltado cuando se selecciona un usuario.
-- **Baselane y salto de línea** : 
-    - La línea de base determina cómo el texto estará colocado si los tamaños de fuente es diferente del especificado.
-    - Saltos de línea determinan cómo se ajusta o trunca si tiene más de una sola línea una cadena.
-- **Autoshrink** : determina cómo se minimizará el tamaño de fuente dentro de una etiqueta, si es necesario.
-- **Resaltado, sombra, desplazamiento** : le permite establecer el color estando iluminada y sombra y desplazamiento de la sombra.
+- **Contexto de texto** : sin formato o con atributos. El texto sin formato le permite establecer los [atributos de formato](#Formatting_Text_and_Label) en toda la cadena. Los textos con atributos permiten establecer el formato en caracteres o palabras diferentes en la cadena.
+- **Colores, fuentes, alineación** : atributos de formato que se pueden aplicar a la etiqueta.
+- **Líneas** : establece el número de líneas que la etiqueta puede abarcar. Establézcalo en 0 para permitir que la etiqueta use tantas líneas como sea necesario.
+- **Comportamiento** : se puede establecer en habilitado o resaltado. Habilitado está establecido de forma predeterminada, el texto deshabilitado se mostrará en color gris más claro. Resaltado está deshabilitado de forma predeterminada y permite volver a dibujar la etiqueta con un estado resaltado cuando lo selecciona un usuario.
+- **Baselane y salto de línea** :
+  - Base determina cómo se colocará el texto si el tamaño de fuente es diferente del especificado.
+  - Los saltos de línea determinan el modo en que una cadena se ajustará o se truncará si es mayor que una sola línea.
+- **AutoShrink** : determina cómo se minimizará el tamaño de fuente dentro de una etiqueta, si es necesario.
+- **Resaltado, sombra, desplazamiento** : permite establecer el color de la y de sombra y el desplazamiento de la sombra.
 
-## <a name="truncating-and-wrapping"></a>Truncar y ajuste
+## <a name="truncating-and-wrapping"></a>Truncamiento y ajuste
 
-Para obtener información sobre el uso de la línea se interrumpe en iOS, consulte el [truncar y ajustar el texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) receta.
+Para obtener información sobre el uso de los saltos de línea en iOS, consulte la receta [truncar y ajustar texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
 <a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Aplicar formato a texto y etiqueta
 
-Dar formato a la cadena que se utiliza en una etiqueta puede establecer atributos en toda la cadena de formato o puede usar las cadenas de atributos. Los ejemplos siguientes muestran cómo implementar estos:
+Para dar formato a la cadena que se usa en una etiqueta, puede establecer los atributos de formato en toda la cadena o puede usar cadenas con atributos. En los siguientes ejemplos se muestra cómo implementarlos:
 
 ```csharp
 label = new UILabel(){
@@ -74,19 +74,19 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obtener más información sobre el uso de texto de estilo `NSAttributedString` hacen referencia a la [estilo al texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) receta.
+Para obtener más información sobre el estilo `NSAttributedString` de texto, consulte la receta de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-De forma predeterminada, las etiquetas tienen la `Enabled` posible establecerlo en establecido en true, pero está deshabilitado para conceder al usuario una sugerencia de que un control determinado está deshabilitado:
+De forma predeterminada, las `Enabled` etiquetas tienen el valor true, pero es posible establecerlo en deshabilitado para dar al usuario una sugerencia de que un control determinado está deshabilitado:
 
 ```csharp
 label.Enabled = false;
 ```
 
-Esto establece la etiqueta a un color gris claro, tal como se muestra en la siguiente imagen de ejemplo de la pantalla de restricciones en iOS:
+Esto establece la etiqueta en un color gris claro, tal como se muestra en la siguiente imagen de ejemplo de la pantalla restricciones de iOS:
 
 ![Botón deshabilitado en iOS](labels-images/image1.png)
 
-También puede establecer los colores del texto resaltado y sombra para el texto de etiqueta para los efectos adicionales:
+También puede establecer los colores del texto resaltado y sombra en el texto de la etiqueta para obtener efectos adicionales:
 
 ```csharp
 label.Highlighted = true;
@@ -96,11 +96,11 @@ label.ShadowColor = UIColor.Black;
 label.ShadowOffset = new CoreGraphics.CGSize(1.0f, 1.0f);
 ```
 
-Que muestra el texto similar al siguiente:
+Que muestra el texto de la siguiente manera:
 
-![Resaltado y sombra que se establezca en texto](labels-images/image4.png)
+![Resaltar y establecer sombra en el texto](labels-images/image4.png)
 
-Para obtener más información acerca de cómo cambiar la fuente de un UILabel, consulte el [cambiar la fuente](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) receta.
+Para obtener más información sobre cómo cambiar la fuente de un UILabel, consulte la receta de [cambio de fuente](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) .
 
 
 

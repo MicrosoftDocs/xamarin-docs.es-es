@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b639a7fdefb8fca67d833b07ef9aa1a85da67ef6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642886"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228010"
 ---
 # <a name="xamarinforms-text-styles"></a>Estilos de texto de Xamarin.Forms
 
@@ -48,7 +48,7 @@ En C#, se seleccionan los estilos integrados de `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Ejemplo de estilos de dispositivo")
+![Ejemplo de estilos de dispositivo](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -90,7 +90,7 @@ En XAML:
 
 Tenga en cuenta que los recursos (incluidos todos los estilos) se definen dentro de `ContentPage.Resources`, que es un elemento relacionado de cuanto más se familiarice `ContentPage.Content` elemento.
 
-![](styles-images/customstyle.png "Ejemplo de estilos personalizados")
+![Ejemplo de estilos personalizados](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -137,11 +137,11 @@ Considere el siguiente ejemplo de la misma página de vistas de un estilo con lo
 
 Deshabilitado:
 
-![](styles-images/pre-access.png "Estilos de dispositivo con accesibilidad deshabilitado")
+![Estilos de dispositivo con accesibilidad deshabilitada](styles-images/pre-access.png)
 
 Habilitado:
 
-![](styles-images/post-access.png "Estilos de dispositivo con accesibilidad habilitado")
+![Estilos de dispositivo con accesibilidad habilitada](styles-images/post-access.png)
 
 Para garantizar la accesibilidad, asegúrese de que los estilos integrados se utilizan como base para cualquier estilo relacionada con el texto dentro de la aplicación y que está utilizando estilos de forma coherente. Consulte [estilos](~/xamarin-forms/user-interface/styles/index.md) para obtener más detalles sobre la extensión y trabajar con estilos en general.
 

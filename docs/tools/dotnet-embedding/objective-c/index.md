@@ -6,12 +6,12 @@ ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: dd3203cc4e1ccd2adecbd5da349cf0663ef523e1
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 0053bdf4e34f12accc59bde36c04404a19c6d54b
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889467"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227803"
 ---
 # <a name="objective-c-support"></a>Compatibilidad con Objective-C
 

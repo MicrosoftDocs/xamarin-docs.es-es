@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3f1761df5c2b638c5777e6384f4c0c06e9b3071f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657289"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227267"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabajar con alertas de tvOS en Xamarin
 
@@ -34,7 +34,7 @@ Como se indicó anteriormente, las alertas se usan para obtener la atención del
 
 Apple tiene las siguientes sugerencias para trabajar con alertas:
 
-- **Usar alertas** con moderación: las alertas interrumpen el flujo del usuario con la aplicación e interrumpen la experiencia del usuario y, por lo tanto, solo se deben usar en situaciones importantes como notificaciones de error, compras desde la aplicación y acciones destructivas. 
+- **Usar alertas** con moderación: las alertas interrumpen el flujo del usuario con la aplicación e interrumpen la experiencia del usuario y, por lo tanto, solo se deben usar en situaciones importantes como notificaciones de error, compras desde la aplicación y acciones destructivas.
 - **Proporciona opciones útiles** : Si la alerta presenta opciones al usuario, debe asegurarse de que cada opción ofrezca información crítica y proporcione acciones útiles para que el usuario las realice.
 
 <a name="Alert-Titles-and-Messages" />
@@ -44,7 +44,7 @@ Apple tiene las siguientes sugerencias para trabajar con alertas:
 Apple tiene las siguientes sugerencias para presentar el título de una alerta y el mensaje opcional:
 
 - **Usar títulos** de varias palabras: el título de una alerta debe obtener el punto de la situación en todo momento y, al mismo tiempo, seguir siendo sencillo. Un solo título de palabra suele proporcionar información suficiente.
-- **Use títulos descriptivos que no requieran un mensaje** : siempre que sea posible, considere la posibilidad de hacer que el título de la alerta sea lo suficientemente descriptivo como para que el texto del mensaje opcional no sea necesario. 
+- **Use títulos descriptivos que no requieran un mensaje** : siempre que sea posible, considere la posibilidad de hacer que el título de la alerta sea lo suficientemente descriptivo como para que el texto del mensaje opcional no sea necesario.
 - **Haga que el mensaje sea una oración corta y completa** : Si el mensaje opcional es necesario para obtener el punto de la alerta, manténgalo lo más simple posible y conviértalo en una oración completa con las mayúsculas y minúsculas adecuadas.
 
 <a name="Alert-Buttons" />
@@ -70,15 +70,15 @@ const string acceptButtonTitle = "OK";
 const string cancelButtonTitle = "Cancel";
 const string deleteButtonTitle = "Delete";
 ...
-        
+
 var alertController = UIAlertController.Create (title, message, UIAlertControllerStyle.Alert);
 
 // Create the action.
-var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ => 
+var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
-var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ => 
+var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
@@ -97,7 +97,7 @@ UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 Después, para cada botón que deseamos Mostrar en la alerta, se crea una acción que define el título del botón, su estilo y la acción que queremos realizar si se presiona el botón:
 
 ```csharp
-UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
+UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
     // Do something when the button is pressed
     ...
 );

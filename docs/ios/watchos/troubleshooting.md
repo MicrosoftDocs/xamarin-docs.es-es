@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 4ce217d31811df82f0779a22d0c64464b5295fcc
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: 1777bfe627d0dc579169c954f7799348befbf6b8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629666"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227028"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 

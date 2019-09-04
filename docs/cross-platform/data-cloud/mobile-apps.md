@@ -6,12 +6,12 @@ ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: de56c133bfc28d66081505e458c35d533885c574
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 093e2ad9cf18abecc4eb1b63690c016e8ed21a0c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526736"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227778"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure Mobile Apps
 
@@ -24,12 +24,12 @@ as https://developer xamarin com/guides/cross-platform/data-cloud/mobile-service
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
 The ZIPs in /Resources/ are also referenced by inbound links
-Getting Started  http://go.microsoft.com/fwlink/p/?LinkId=331359
-Get started with data   http://go.microsoft.com/fwlink/p/?LinkId=331302
-Get started with push   http://go.microsoft.com/fwlink/p/?LinkId=331303
+Getting Started http://go.microsoft.com/fwlink/p/?LinkId=331359
+Get started with data http://go.microsoft.com/fwlink/p/?LinkId=331302
+Get started with push http://go.microsoft.com/fwlink/p/?LinkId=331303
 Get started with authentication http://go.microsoft.com/fwlink/p/?LinkId=331328
-Get started with Notification Hubs  http://go.microsoft.com/fwlink/p/?LinkId=331329
-Validate and modify data    http://go.microsoft.com/fwlink/p/?LinkId=331330
+Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=331329
+Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
 
 

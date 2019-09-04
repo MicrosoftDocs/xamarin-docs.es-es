@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528717"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227283"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit en Xamarin. iOS
 
@@ -29,7 +29,7 @@ Para que las características de TextKit estén disponibles para los controles e
 TextKit proporciona una arquitectura en capas que separa el almacenamiento de texto del diseño y la presentación, incluidas las clases siguientes:
 
 - `NSTextContainer`: Proporciona el sistema de coordenadas y la geometría que se usan para el diseño de texto.
-- `NSLayoutManager`: Diseña texto convirtiéndolo en glifos. 
+- `NSLayoutManager`: Diseña texto convirtiéndolo en glifos.
 - `NSTextStorage`: Contiene los datos de texto, así como las actualizaciones de las propiedades de texto por lotes. Todas las actualizaciones por lotes se entregan al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
 
 
@@ -160,7 +160,7 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 En la captura de pantalla siguiente se muestra cómo cambia el diseño del texto para fluir en torno a la ruta de acceso dibujada:
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "En esta captura de pantalla se muestra cómo cambia el diseño del texto para fluir alrededor del trazado dibujado.")
 
 Observe que en este caso la `AllowsNonContiguousLayout` propiedad del administrador de diseño está establecida en false. Esto hace que el diseño se vuelva a calcular para todos los casos en los que el texto cambie. Si se establece en true, el rendimiento puede mejorar si se evita una actualización de diseño completo, especialmente en el caso de documentos grandes. Sin embargo, `AllowsNonContiguousLayout` si se establece en true, se impedirá que la ruta de exclusión actualice el diseño en algunas circunstancias, por ejemplo, si el texto se escribe en tiempo de ejecución sin un retorno de carro final antes de que se establezca la ruta de acceso.
