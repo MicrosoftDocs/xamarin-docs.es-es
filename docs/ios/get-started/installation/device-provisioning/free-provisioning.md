@@ -4,15 +4,15 @@ description: En este documento se describe la manera en que los desarrolladores 
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/16/2018
-ms.openlocfilehash: 533ab09a73116402e39da65933f26b8f3065357c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855073"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291431"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
 
@@ -54,7 +54,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 4. Cierre las preferencias de Xcode.
 5. Conecte el dispositivo iOS en el que quiera implementar su aplicación.
 6. Cree un proyecto en Xcode. Elija **Archivo > Nuevo > Proyecto** y seleccione **Aplicación de una vista**.
-7. En el cuadro de diálogo del nuevo proyecto, establezca el ID de Apple que acaba de agregar como el valor de **Equipo**. En la lista desplegable, debería tener un aspecto similar a **su nombre (equipo Personal)**:
+7. En el cuadro de diálogo del nuevo proyecto, establezca el ID de Apple que acaba de agregar como el valor de **Equipo**. En la lista desplegable, debería tener un aspecto similar a **su nombre (equipo Personal)** :
 
     ![Creación de una aplicación](free-provisioning-images/launchapp2.png "Creación de una aplicación")
 

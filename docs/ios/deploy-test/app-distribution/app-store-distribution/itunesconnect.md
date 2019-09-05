@@ -4,15 +4,15 @@ description: Este artículo describe los pasos necesarios para configurar y mant
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 910f91478eeb6894e11748c929cc94bc2c0dbe64
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865605"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283591"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -200,7 +200,7 @@ Esta sección del registro de aplicación de iTunes Connect proporciona el ident
 ### <a name="app-icon"></a>Icono de la aplicación
 
 > [!IMPORTANT]
->  Los iconos de aplicaciones ya no se envían a través de iTunes Connect. Deben enviarse a través del conjunto de imágenes **AppIcon** del archivo **Assets.xcassets** del proyecto. Para obtener más información, consulte la guía [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icono de la App Store).
+> Los iconos de aplicaciones ya no se envían a través de iTunes Connect. Deben enviarse a través del conjunto de imágenes **AppIcon** del archivo **Assets.xcassets** del proyecto. Para obtener más información, consulte la guía [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icono de la App Store).
 
 El icono de la aplicación es la cara de la aplicación para los usuarios, por lo que debe ser fácil de recordar y mostrarse correctamente en un tamaño pequeño. Los iconos fáciles de recordar se reconocen inmediatamente, y son simples y limpios.
 

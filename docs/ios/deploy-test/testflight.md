@@ -4,15 +4,15 @@ description: TestFlight es ahora propiedad de Apple y se considera la manera pri
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 2080961e2741ea0d0f0316918c55f3c2a194a00a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621108"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289980"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 

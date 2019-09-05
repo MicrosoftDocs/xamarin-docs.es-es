@@ -4,15 +4,15 @@ description: En este documento se describe cómo aprovisionar un dispositivo de 
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 477bb7289588d0ab1b1dd29909c7dc36f2b2dfac
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7ee3d7d9b2ce074174b676225ec934279ceb5a86
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292627"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Aprovisionamiento de dispositivos para Xamarin.iOS
 

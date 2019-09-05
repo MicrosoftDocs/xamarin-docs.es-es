@@ -3,15 +3,15 @@ title: Rendimiento multiplataforma
 description: En este documento se describen diversas técnicas que pueden usarse para mejorar el rendimiento de una aplicación móvil. Además, analiza el generador de perfiles, el recurso IDisposable, las referencias débiles, el recolector de elementos no utilizados SGen, las técnicas de reducción de tamaño y mucho más.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 75bc540ee518a1f5cfef29886d968648ea5769ed
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526707"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290185"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 

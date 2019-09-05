@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8fb647e12de621fc0772ad5c18aac21e46758715
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ab070d1f5f2400ee5daa12013953cf8c6beff082
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113110"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279777"
 ---
 # <a name="debugging"></a>Depuración
 

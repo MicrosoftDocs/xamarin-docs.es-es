@@ -4,15 +4,15 @@ description: En esta guía se examina cómo medir el tiempo de las aplicaciones 
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ec510d46bf1b46cf8fd70c8f4d43b3108f46a010
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284773"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 

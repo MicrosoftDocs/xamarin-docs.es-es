@@ -4,15 +4,15 @@ description: Este documento describe las técnicas que pueden usarse para mejora
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/29/2016
-ms.openlocfilehash: b34ba7e3285549d62e5489287be8886db80bd1af
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: b41916a65e091fb7d5198a6f06a5e91aa9d6bb81
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064816"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292338"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 

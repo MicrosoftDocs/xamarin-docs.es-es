@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar, compilar y publicar
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 51e802b1e142955fb3988432f9d9c7393f2ee0ea
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675224"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292328"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 

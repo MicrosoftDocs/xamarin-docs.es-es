@@ -4,15 +4,15 @@ description: En este documento se describe cómo distribuir una aplicación Xama
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: e6f7ec4fe018181b6f470de4201d5e5a3f90d4da
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527627"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290993"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 

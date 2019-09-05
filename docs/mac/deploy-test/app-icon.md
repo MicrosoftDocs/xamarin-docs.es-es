@@ -4,15 +4,15 @@ description: En este artículo se describe la creación de las imágenes necesar
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 25a0a6f5f16b3035307b6b42f1c509401beb3553
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6a4ea3950b9657e4e04c6465cc0a64ac3c1d266c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647126"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291559"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icono para aplicaciones Xamarin.Mac
 

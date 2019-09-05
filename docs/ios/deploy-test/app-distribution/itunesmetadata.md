@@ -4,15 +4,15 @@ description: En este artículo se habla sobre el archivo iTunesMetadata.plist us
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f632b44e087c0e380ecd81c2af7db3d49c072f7e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887742"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281160"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS
 

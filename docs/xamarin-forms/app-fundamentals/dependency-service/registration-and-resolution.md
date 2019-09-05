@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
-ms.openlocfilehash: 0bbe4310a32c11da35e41b01693f8cb1a66fc39b
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 6e666c16c9b1afc3478f524cae2f84d6704319c2
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739335"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199225"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
 
@@ -68,13 +68,13 @@ En el siguiente ejemplo se muestra el uso del método [`Register`](xref:Xamarin.
 [Register("AppDelegate")]
 public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 {
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-                global::Xamarin.Forms.Forms.Init();
-                LoadApplication(new App());
-                DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
-                return base.FinishedLaunching(app, options);
-        }
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new App());
+        DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
+        return base.FinishedLaunching(app, options);
+    }
 }
 ```
 
@@ -165,7 +165,7 @@ Cuando una aplicación termina de utilizar una implementación de la plataforma 
 ITextToSpeechService service = DependencyService.Get<ITextToSpeechService>(DependencyFetchTarget.NewInstance);
 using (service as IDisposable)
 {
-        await service.SpeakAsync("Hello world");
+    await service.SpeakAsync("Hello world");
 }
 ```
 

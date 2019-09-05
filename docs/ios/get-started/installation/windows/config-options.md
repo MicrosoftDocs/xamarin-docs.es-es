@@ -4,15 +4,15 @@ description: En este artículo se describe cómo configurar Visual Studio 2019 
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: eb6be5cd77dddad553376d18808092c6566021bc
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854683"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279223"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configuración de Visual Studio para el desarrollo de iOS
 

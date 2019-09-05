@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 17e6f4a935924b9c7e282747443bb579d08a5ab9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92e2ceeea901e2acea70118e75d936f3b3ac94db
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651113"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199994"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización en Xamarin.Forms
 
@@ -155,9 +155,9 @@ En Android, para establecer el texto que el lector de pantalla leerá para el bo
 
 ```xml
 <resources>
-        <string name="app_name">Xamarin Forms Control Gallery</string>
-        <string name="btnMDPAutomationID_open">Open Side Menu message</string>
-        <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+    <string name="app_name">Xamarin Forms Control Gallery</string>
+    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
 </resources>
 ```
 

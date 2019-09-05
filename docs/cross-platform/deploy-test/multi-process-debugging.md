@@ -3,15 +3,15 @@ title: Depuración de varios procesos
 description: En este documento se describe cómo usar Visual Studio para Mac para depurar varios procesos que se ejecutan al mismo tiempo. Por ejemplo, esta característica puede usarse para depurar al mismo tiempo una aplicación móvil y un proyecto de servicio web.
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: d20e6e0fd567d0aa0febe21bfe12a5237049b22a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: db5d2dfcf96cdc1a89c0ecb2192b86f564e584ed
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781857"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290442"
 ---
 # <a name="multi-process-debugging"></a>Depuración de varios procesos
 
@@ -56,7 +56,7 @@ Cuando se inicia la configuración de soluciones múltiples, algunos de los pane
 
 ![](multi-process-debugging-images/mpd05-xs.png "Panel de salida de una configuración de soluciones")
 
-### <a name="multiple-processes-and-the-active-thread"></a>Varios procesos y el _subproceso activo_
+### <a name="multiple-processes-and-the-_active-thread_"></a>Varios procesos y el _subproceso activo_
 
 Cuando se encuentra un punto de interrupción en un proceso, dicho proceso detendrá la ejecución, mientras que los demás procesos continúan ejecutándose. En un escenario de un solo proceso, Visual Studio para Mac puede mostrar fácilmente información como subprocesos, variables locales o resultado de la aplicación en un único conjunto de paneles. En cambio, cuando hay varios procesos con múltiples puntos de interrupción, y posiblemente varios subprocesos, puede resultar abrumador para el desarrollador hacer frente a la información de una sesión de depuración que está intentando mostrar toda la información de todos los subprocesos (y procesos) a la vez.
 

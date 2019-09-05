@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: aa72daae1727e0d100592873a7895a7d8942b4f2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bc2c1c26bcb3dcf99a5598b6dccb6aad02513a28
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525505"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197557"
 ---
 # <a name="gdb"></a>GDB
 

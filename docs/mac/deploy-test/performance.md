@@ -4,15 +4,15 @@ description: Este documento proporciona algunas consideraciones de rendimiento p
 ms.prod: xamarin
 ms.assetid: 54B07DED-FDF2-49B2-A5FB-3A9357E65922
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 76ce6cd3a78e56acb9d77c0c6a4b942e5bdc3f2e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 48e5e71a9d4435852f72eb9be21f2e80cd124bfd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656078"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291093"
 ---
 # <a name="xamarinmac-performance"></a>Rendimiento de Xamarin.Mac
 

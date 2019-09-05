@@ -4,15 +4,15 @@ description: En este documento se describe mtouch, una herramienta que controla 
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: c67544824f23ea72ad325d39347330a863846c2b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 437db399d1a8cafb19dbc57d7f2ea4141900d8db
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526535"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292358"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso de mtouch para agrupar aplicaciones Xamarin.iOS
 

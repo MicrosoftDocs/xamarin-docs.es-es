@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525719"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225763"
 ---
 # <a name="building-abi-specific-apks"></a>Compilar APK específicos de ABI
 
@@ -49,17 +49,17 @@ Google recomienda un algoritmo determinado para el código de versión que usa u
 Al expandir este esquema de código de versión a ocho dígitos, es posible incluir alguna información de ABI en el código de versión que garantiza que Google Play distribuirá el APK correcto a un dispositivo. En la lista siguiente se explica este formato de código de versión de ocho dígitos (que se indexan de izquierda a derecha):
 
 - **Índice 0** (rojo en el diagrama siguiente): un entero de la ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Índice 1-2** (naranja en el diagrama siguiente): el nivel de API mínimo admitido por la aplicación.
 
 - **Índice 3-4** (azul en el diagrama siguiente): los tamaños de pantalla admitidos:
-    - 1: pequeño
-    - 2: normal
-    - 3: grande
-    - 4: extra grande
+  - 1: pequeño
+  - 2: normal
+  - 3: grande
+  - 4: extra grande
 
 - **Índice 5-7** (verde en el diagrama siguiente): un número único para el código de versión. 
     Lo establece el desarrollador. Debería aumentar para cada versión pública de la aplicación.

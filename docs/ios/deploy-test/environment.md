@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar variables de entorno
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 52ae48a0cd911cd90d985b830876ec003d073d2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d85fa063580e9619ef433e98f6e6a0e4121ee37
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119310"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288996"
 ---
 # <a name="execution-environment-for-xamarinios-apps"></a>Entorno de ejecución para aplicaciones Xamarin.iOS
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: df4c5f1fe4464f3614c1156f095a803f0d265d70
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: af6028c5e4316b1a2e8acde7e4d15e12759c9cb1
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977763"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197517"
 ---
 # <a name="get-started-with-xamarinandroid"></a>Introducción a Xamarin.Android
 

@@ -4,15 +4,15 @@ description: En esta guía se describe cómo usar Emparejar con Mac para conecta
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 5889859543deaecccb72740fccbc2b3343a8297f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978324"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292126"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
@@ -39,12 +39,12 @@ Emparejar con Mac permite el flujo de trabajo de desarrollo siguiente:
 - Es posible usar la línea de comandos de Windows para compilar aplicaciones de iOS.
 
 > [!NOTE]
-> 
+>
 > Antes de seguir las instrucciones de esta guía, complete los pasos siguientes:
-> 
+>
 > - En un equipo Windows, [instale Visual Studio 2019](~/get-started/installation/windows.md).
 > - En un equipo Mac, [instale Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) y [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation).
->    - _Debe abrir manualmente Xcode después de realizar la instalación_ para poder agregar componentes adicionales.
+>   - _Debe abrir manualmente Xcode después de realizar la instalación_ para poder agregar componentes adicionales.
 >
 > Si prefiere no instalar Visual Studio para Mac, Visual Studio 2019 puede configurar automáticamente el host de compilación de Mac con Xamarin.iOS y Mono.
 > Todavía debe instalar y ejecutar Xcode.
@@ -74,28 +74,28 @@ Ahora que la sesión remota está habilitada, conecte Visual Studio 2019 al equ
 
 1. En Visual Studio 2019, abra un proyecto de iOS existente o elija **Archivo > Nuevo > Proyecto** y, después, seleccione una plantilla de proyecto de iOS para crear uno.
 
-2. Abra el cuadro de diálogo **Emparejar con Mac**. 
+2. Abra el cuadro de diálogo **Emparejar con Mac**.
 
     - Use el botón **Emparejar con Mac** de la barra de herramientas de iOS:
 
-        ![Barra de herramientas de iOS con el botón Emparejar con Mac resaltado](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
+      ![Barra de herramientas de iOS con el botón Emparejar con Mac resaltado](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
 
     - O bien, seleccione **Herramientas > iOS > Emparejar con Mac**.
 
     - El cuadro de diálogo **Emparejar con Mac** muestra una lista de todos los hosts de compilación de Mac conectados anteriormente y disponibles actualmente:
 
-        ![Cuadro de diálogo Emparejar con Mac](images/pairtomac.png "The Pair to Mac dialog")
+      ![Cuadro de diálogo Emparejar con Mac](images/pairtomac.png "The Pair to Mac dialog")
 
-3. Seleccione un equipo Mac en la lista. Haga clic en **Conectar**. 
+3. Seleccione un equipo Mac en la lista. Haga clic en **Conectar**.
 
 4. Escriba el nombre de usuario y la contraseña.
 
     - La primera vez que se conecta a cualquier equipo Mac, se le pide que escriba el nombre de usuario y la contraseña de esa máquina:
 
-        ![Escribir un nombre de usuario y una contraseña para el equipo Mac](images/auth.png "Entering a username and password for the Mac")
+      ![Escribir un nombre de usuario y una contraseña para el equipo Mac](images/auth.png "Entering a username and password for the Mac")
 
-        > [!TIP]
-        > Al iniciar sesión, use el nombre de usuario del sistema en lugar del nombre completo.
+      > [!TIP]
+      > Al iniciar sesión, use el nombre de usuario del sistema en lugar del nombre completo.
 
     - Emparejar con Mac usa estas credenciales para crear una conexión SSH con el equipo Mac. Si se realiza correctamente, se agrega una clave al archivo **authorized_keys** en el equipo Mac. Las siguientes conexiones al mismo equipo Mac iniciarán sesión automáticamente.
 
@@ -107,12 +107,12 @@ Ahora que la sesión remota está habilitada, conecte Visual Studio 2019 al equ
 
     - Cuando Visual Studio 2019 está conectado a un equipo Mac, el elemento del equipo Mac del cuadro de diálogo **Emparejar con Mac** muestra un icono que indica que está conectado actualmente:
 
-        ![Un equipo Mac conectado](images/connected.png "A connected Mac")
+      ![Un equipo Mac conectado](images/connected.png "A connected Mac")
 
       Solo puede haber un equipo Mac conectado en cualquier momento.
 
       > [!TIP]
-      > Al hacer clic con el botón derecho en cualquier equipo Mac de la lista **Emparejar con Mac**, se abrirá un menú contextual que le permite **Conectar...**, **Olvidar este equipo Mac** o **Desconectar**:
+      > Al hacer clic con el botón derecho en cualquier equipo Mac de la lista **Emparejar con Mac**, se abrirá un menú contextual que le permite **Conectar...** , **Olvidar este equipo Mac** o **Desconectar**:
       >
       > ![Menús contextuales de Emparejar con Mac](images/contextmenu.png "The Pair to Mac context menus")
       >
@@ -126,18 +126,18 @@ Si no pudo emparejar un equipo Mac, pruebe a [agregar manualmente un equipo Mac]
 
 Si no ve un equipo Mac determinado en el cuadro de diálogo **Emparejar con Mac**, agréguelo manualmente:
 
-1. Busque la dirección IP de su equipo Mac. 
+1. Busque la dirección IP de su equipo Mac.
 
     - Abra **Preferencias del Sistema > Compartir > Sesión remota** en el equipo Mac:
 
-        [![Dirección IP del equipo Mac en Preferencias del Sistema > Compartir](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
+      [![Dirección IP del equipo Mac en Preferencias del Sistema > Compartir](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
 
-    - Como alternativa, use la línea de comandos. En la terminal, use este comando: 
+    - Como alternativa, use la línea de comandos. En la terminal, use este comando:
 
-        ```bash
-        $ ipconfig getifaddr en0
-        196.168.1.8
-        ```
+      ```bash
+      $ ipconfig getifaddr en0
+      196.168.1.8
+      ```
 
       En función de la configuración de red, puede que tenga que usar un nombre de interfaz que no sea `en0`. Por ejemplo: `en1`, `en2`, etc.
 
@@ -171,7 +171,7 @@ Emparejar con Mac realiza las instalaciones o actualizaciones de software necesa
 
 ### <a name="mono"></a>Mono
 
-Emparejar con Mac comprobará que esté instalado Mono. Si no está instalado, Emparejar con Mac descargará e instalará la versión estable más reciente de Mono en el equipo Mac. 
+Emparejar con Mac comprobará que esté instalado Mono. Si no está instalado, Emparejar con Mac descargará e instalará la versión estable más reciente de Mono en el equipo Mac.
 
 El progreso se indica mediante varios mensajes, como se muestra en las siguientes capturas de pantalla (haga clic para ampliar):
 

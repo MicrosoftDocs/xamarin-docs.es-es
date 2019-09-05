@@ -4,15 +4,15 @@ description: En este documento se describe el vinculador de Xamarin.iOS, que se 
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 04f92988d4d367abd5e6e864d4450aee2e6c1df2
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 23022351b6ac2da59550be668cb9ed4fe84904dd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233801"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284764"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 

@@ -5,15 +5,15 @@ description: Este documento contiene vínculos a la guía de instalación de Vis
 ms.prod: xamarin
 ms.assetid: 68E2A17F-7C10-EF1C-8362-C60E7F2FD94D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: ecbe3bf5d0506e17e5b958a05adf150753d56aa8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 66d279c5bc98aadbf0a046ca35c70a90294f65a1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119051"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281229"
 ---
 # <a name="xamarinmac-installation"></a>Instalación de Xamarin.Mac
 

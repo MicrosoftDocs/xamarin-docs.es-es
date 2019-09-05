@@ -4,15 +4,15 @@ description: En este documento se describe C# para desarrolladores de Objective-
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669822"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291996"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de C# para desarrolladores de Objective-C
 
