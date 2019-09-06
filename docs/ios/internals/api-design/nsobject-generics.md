@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear subclases genéricas de N
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 2e84ec85fac933f579f961300d242bafa1f0b838
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 531d0b2b6141cc0e1f4014f1d3422af3c6f8643a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226049"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291978"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclases genéricas de NSObject en Xamarin. iOS
 

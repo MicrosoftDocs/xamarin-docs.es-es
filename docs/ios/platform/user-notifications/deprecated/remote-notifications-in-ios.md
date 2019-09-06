@@ -4,27 +4,27 @@ description: En este documento se describe cómo trabajar con notificaciones de 
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528758"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290590"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones de envío en iOS
 
 > [!IMPORTANT]
-> La información de esta sección se refiere a iOS 9 y versiones anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo](~/ios/platform/user-notifications/index.md) de notificaciones de usuario para admitir la notificación local y remota en un dispositivo iOS.
+> La información de esta sección se refiere a iOS 9 y versiones anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo de notificaciones de usuario](~/ios/platform/user-notifications/index.md) para admitir la notificación local y remota en un dispositivo iOS.
 
 Las notificaciones de extracción deben ser breves y contener suficientes datos para notificar a la aplicación móvil que debe ponerse en contacto con la aplicación de servidor para obtener una actualización. Por ejemplo, cuando llega un nuevo correo electrónico, la aplicación de servidor solo notificaría a la aplicación móvil que ha llegado el nuevo correo electrónico. La notificación no contendría el correo electrónico nuevo. A continuación, la aplicación móvil recuperará los correos electrónicos nuevos del servidor cuando sea adecuado.
 
 En el centro de notificaciones Push en iOS se encuentra el *servicio de puerta de enlace de notificaciones push de Apple (APNS)* . Se trata de un servicio proporcionado por Apple que es responsable de enrutar las notificaciones de un servidor de aplicaciones a dispositivos iOS.
 La siguiente imagen muestra la topología de notificaciones de envío para iOS: ![](remote-notifications-in-ios-images/image4.png "Esta imagen muestra la topología de notificaciones de envío para iOS")
 
-Las notificaciones remotas son cadenas con formato JSON que cumplen el formato y los protocolos especificados en la sección de [carga de notificación](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) de la guía de programación de notificaciones de [envío y local](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) en la documentación para [desarrolladores de iOS ](https://developer.apple.com/devcenter/ios/index.action).
+Las notificaciones remotas son cadenas con formato JSON que cumplen el formato y los protocolos especificados en la sección de [carga de notificación](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) de la guía de [programación de notificaciones de envío y local](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) en la documentación para desarrolladores de [iOS ](https://developer.apple.com/devcenter/ios/index.action).
 
 Apple mantiene dos entornos de APNS: un *espacio aislado* y un entorno de *producción* . El entorno de espacio aislado está pensado para realizar pruebas durante la fase de desarrollo y `gateway.sandbox.push.apple.com` se puede encontrar en en el puerto TCP 2195. El entorno de producción está pensado para usarse en aplicaciones que se han implementado y se pueden `gateway.push.apple.com` encontrar en el puerto TCP 2195.
 

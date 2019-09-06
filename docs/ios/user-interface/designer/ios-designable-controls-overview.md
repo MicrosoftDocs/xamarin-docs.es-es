@@ -4,15 +4,15 @@ description: El Xamarin Designer para iOS admite la representación de controles
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 3f36ef7541ea00e2a08733c9d47d252477da787a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: e934059f5428780ea19917068503b58961ac5673
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227064"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284185"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 

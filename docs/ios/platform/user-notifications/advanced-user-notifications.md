@@ -4,15 +4,15 @@ description: En este artículo se profundiza más en el marco de trabajo de noti
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 28734af7c3d9958462e47ff6b11a0f9d0e06bcfb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a22e0d6979173ca29596687da8a0b54c6fc565a7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655411"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279054"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin. iOS
 
@@ -43,7 +43,7 @@ Una aplicación Xamarin. iOS tiene dos tipos de notificaciones de usuario que se
 - **Notificaciones locales** : las envían las aplicaciones instaladas localmente en el dispositivo de los usuarios.
 - **Notificaciones remotas** : se envían desde un servidor remoto y se presentan al usuario, o bien se desencadena una actualización en segundo plano del contenido de la aplicación.
 
-Para obtener más información, consulte nuestra documentación de notificaciones de [usuario mejorada](~/ios/platform/user-notifications/enhanced-user-notifications.md) .
+Para obtener más información, consulte nuestra documentación de [notificaciones de usuario mejorada](~/ios/platform/user-notifications/enhanced-user-notifications.md) .
 
 ## <a name="the-new-user-notification-interface"></a>La nueva interfaz de notificación de usuario
 
@@ -149,9 +149,9 @@ Las notificaciones en iOS 10 admiten archivos adjuntos de imágenes (estáticas 
 
 Para crear una interfaz de usuario personalizada para las notificaciones de usuario, el desarrollador debe agregar una extensión de contenido de notificación (novedad en iOS 10) a la solución de la aplicación.
 
-La extensión de contenido de notificación permite al desarrollador agregar sus propias vistas a la interfaz de usuario de notificaciones y extraer el contenido que deseen. A partir de iOS 12, las extensiones de contenido de notificación admiten controles de interfaz de usuario interactiva como botones y controles deslizantes. Para obtener más información, consulte la documentación sobre las notificaciones interactivas [en iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) .
+La extensión de contenido de notificación permite al desarrollador agregar sus propias vistas a la interfaz de usuario de notificaciones y extraer el contenido que deseen. A partir de iOS 12, las extensiones de contenido de notificación admiten controles de interfaz de usuario interactiva como botones y controles deslizantes. Para obtener más información, consulte la documentación sobre las [notificaciones interactivas en iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) .
 
-Para admitir la interacción del usuario con una notificación de usuario, se deben crear acciones personalizadas, registradas en el sistema y adjuntas a la notificación antes de que se programen con el sistema. Se llamará a la extensión de contenido de notificación para controlar el procesamiento de estas acciones. Consulte la sección [trabajar con acciones de notificación](~/ios/platform/user-notifications/enhanced-user-notifications.md) del documento de notificaciones de [usuario mejoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md) para obtener más detalles sobre las acciones personalizadas.
+Para admitir la interacción del usuario con una notificación de usuario, se deben crear acciones personalizadas, registradas en el sistema y adjuntas a la notificación antes de que se programen con el sistema. Se llamará a la extensión de contenido de notificación para controlar el procesamiento de estas acciones. Consulte la sección [trabajar con acciones de notificación](~/ios/platform/user-notifications/enhanced-user-notifications.md) del documento de [notificaciones de usuario mejoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md) para obtener más detalles sobre las acciones personalizadas.
 
 Cuando se presenta al usuario una notificación de usuario con una interfaz de usuario personalizada, tendrá los siguientes elementos:
 
@@ -297,7 +297,7 @@ En la situación en la que la interfaz de usuario de notificaciones personalizad
 Para diseñar la interfaz de usuario personalizada de la extensión de contenido de notificación, `MainInterface.storyboard` haga doble clic en el archivo para abrirlo y editarlo en el diseñador de iOS, `UILabels` y arrastre los elementos que necesite para compilar la interfaz deseada (como y `UIImageViews`).
 
 > [!NOTE]
-> A partir de iOS 12, una extensión de contenido de notificación puede incluir controles interactivos como botones y campos de texto. Para obtener más información, consulte la documentación sobre las notificaciones interactivas [en iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) .
+> A partir de iOS 12, una extensión de contenido de notificación puede incluir controles interactivos como botones y campos de texto. Para obtener más información, consulte la documentación sobre las [notificaciones interactivas en iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) .
 
 Una vez que se ha diseñado la interfaz de usuario y los controles C# necesarios expuestos al código `NotificationViewController.cs` , abra para editar y `DidReceiveNotification` modifique el método para rellenar la interfaz de usuario cuando el usuario expande la notificación. Por ejemplo:
 
@@ -375,7 +375,7 @@ Para eliminar este efecto, edite `Info.plist` el archivo de la extensión y esta
 
 ### <a name="using-media-attachments-in-custom-ui"></a>Uso de datos adjuntos multimedia en la interfaz de usuario personalizada
 
-Dado que los datos adjuntos multimedia (como se muestra en la sección anterior [Agregar datos](#adding-media-attachments) adjuntos de multimedia) forman parte de la carga de notificación, se puede acceder a ellos y mostrarlos en la extensión de contenido de notificación del mismo modo que lo harían en la interfaz de usuario de notificación predeterminada.
+Dado que los datos adjuntos multimedia (como se muestra en la sección anterior [Agregar datos adjuntos de multimedia](#adding-media-attachments) ) forman parte de la carga de notificación, se puede acceder a ellos y mostrarlos en la extensión de contenido de notificación del mismo modo que lo harían en la interfaz de usuario de notificación predeterminada.
 
 Por ejemplo, si la interfaz de usuario personalizada anterior `UIImageView` incluía un que C# se expuso al código, se podría usar el código siguiente para rellenarlo desde con los datos adjuntos multimedia:
 
@@ -444,12 +444,12 @@ Dado que el sistema administra los datos adjuntos multimedia, está fuera del es
 
 ### <a name="adding-custom-actions-to-a-custom-ui"></a>Agregar acciones personalizadas a una interfaz de usuario personalizada
 
-Los botones de acción personalizada se pueden usar para agregar interactividad a una interfaz de usuario de notificación personalizada. Consulte la sección [trabajar con acciones de notificación](~/ios/platform/user-notifications/enhanced-user-notifications.md) del documento de notificaciones de [usuario mejoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md) para obtener más detalles sobre las acciones personalizadas.
+Los botones de acción personalizada se pueden usar para agregar interactividad a una interfaz de usuario de notificación personalizada. Consulte la sección [trabajar con acciones de notificación](~/ios/platform/user-notifications/enhanced-user-notifications.md) del documento de [notificaciones de usuario mejoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md) para obtener más detalles sobre las acciones personalizadas.
 
 Además de las acciones personalizadas, la extensión de contenido de notificación puede responder también a las siguientes acciones integradas:
 
 - **Acción predeterminada** : es cuando el usuario puntea una notificación para abrir la aplicación y mostrar los detalles de la notificación dada.
-- **Acción** de descartar: esta acción se envía a la aplicación cuando el usuario descarta una notificación determinada.
+- **Acción de descartar** : esta acción se envía a la aplicación cuando el usuario descarta una notificación determinada.
 
 Las extensiones de contenido de notificación también tienen la capacidad de actualizar su interfaz de usuario cuando el usuario invoca una de las acciones personalizadas, como mostrar una fecha como aceptada cuando el usuario pulsa el botón **Aceptar** acción personalizada. Además, las extensiones de contenido de notificación pueden indicar al sistema que retrase el descartado de la interfaz de usuario de notificación para que el usuario pueda ver el efecto de la acción antes de que se cierre la notificación.
 

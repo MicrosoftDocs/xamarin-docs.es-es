@@ -4,15 +4,15 @@ description: En este documento se describe cómo registrar una aplicación de Xa
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 67cc2028276b6e1415c88cb8957e2cd567fa5bae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521269"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290615"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registro de aplicaciones de Xamarin. iOS para que se ejecuten en segundo plano
 
@@ -25,7 +25,7 @@ Al registrar una aplicación, se indica a iOS que la aplicación debe tener priv
 Las aplicaciones registradas pueden dividirse en varias categorías:
 
 - Los reproductores de música de **audio** y otras aplicaciones que funcionan con contenido de audio se pueden registrar para seguir reproduciendo audio incluso cuando la aplicación ya no está en primer plano. Si una aplicación de esta categoría intenta hacer algo que no sea reproducir audio o descargar mientras está en segundo plano, iOS la terminará.
-- Las aplicaciones VoIP-Voice over Internet Protocol (VoIP) obtienen los mismos privilegios concedidos a las aplicaciones de audio para seguir procesando audio en segundo plano. También se les permite responder según sea necesario a los servicios de VoIP que los encienden, para mantener sus conexiones activas.
+- Las aplicaciones VoIP-Voice over Internet Protocol **(VoIP)** obtienen los mismos privilegios concedidos a las aplicaciones de audio para seguir procesando audio en segundo plano. También se les permite responder según sea necesario a los servicios de VoIP que los encienden, para mantener sus conexiones activas.
 - **Accesorios externos y Bluetooth** : reservados para aplicaciones que necesitan comunicarse con dispositivos Bluetooth y otros accesorios de hardware externo, el registro en estas categorías permite que la aplicación permanezca conectada al hardware.
 - **NewsStand** : una aplicación de NewsStand puede seguir sincronizando el contenido en segundo plano.
 - **Ubicación** : las aplicaciones que hacen uso de datos GPS o de ubicación de red pueden enviar y recibir actualizaciones de ubicación en segundo plano.

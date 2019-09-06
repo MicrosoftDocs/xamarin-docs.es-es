@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar las barras de búsqueda en
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 78776b669b9f389398c54d72a9080a90f8664429
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226323"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283359"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barras de búsqueda en Xamarin. iOS
 

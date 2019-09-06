@@ -4,15 +4,15 @@ description: En este artículo se describe el marco de trabajo de notificaciones
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980802"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290570"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario mejoradas en Xamarin. iOS
 
@@ -186,7 +186,7 @@ Para proporcionar el derecho necesario, haga lo siguiente:
 
 ### <a name="registering-for-remote-notifications"></a>Registro de notificaciones remotas
 
-Si la aplicación va a enviar y recibir notificaciones remotas, aún tendrá que realizar el _registro_ de tokens mediante `UIApplication` la API existente. Este registro requiere que el dispositivo tenga acceso de conexión de red activo APNs, lo que generará el token necesario que se enviará a la aplicación. La aplicación debe reenviar este token a la aplicación del lado servidor del desarrollador para registrarse para recibir notificaciones remotas:
+Si la aplicación va a enviar y recibir notificaciones remotas, aún tendrá que realizar el _registro de tokens_ mediante `UIApplication` la API existente. Este registro requiere que el dispositivo tenga acceso de conexión de red activo APNs, lo que generará el token necesario que se enviará a la aplicación. La aplicación debe reenviar este token a la aplicación del lado servidor del desarrollador para registrarse para recibir notificaciones remotas:
 
 [![](enhanced-user-notifications-images/token01.png "Introducción al registro de tokens")](enhanced-user-notifications-images/token01.png#lightbox)
 
@@ -210,7 +210,7 @@ Una vez que la aplicación esté totalmente registrada y los permisos necesarios
 
 ### <a name="providing-notification-content"></a>Proporcionar contenido de notificación
 
-Como novedad de iOS 10, todas las notificaciones contienen un **título** y un subtítulo que siempre se mostrarán con el **cuerpo** del contenido de la notificación. También es nuevo, es la capacidad de agregar datos adjuntos de **multimedia** al contenido de notificación.
+Como novedad de iOS 10, todas las notificaciones contienen un **título** y un **subtítulo** que siempre se mostrarán con el **cuerpo** del contenido de la notificación. También es nuevo, es la capacidad de agregar **datos adjuntos de multimedia** al contenido de notificación.
 
 Para crear el contenido de una notificación local, use el código siguiente:
 
@@ -397,7 +397,7 @@ Hay tres tipos de acciones a las que puede responder una aplicación iOS:
 
 - **Acción predeterminada** : es cuando el usuario puntea una notificación para abrir la aplicación y mostrar los detalles de la notificación dada.
 - **Acciones personalizadas** : se agregaron en iOS 8 y proporcionan una manera rápida para que el usuario realice una tarea personalizada directamente desde la notificación sin necesidad de iniciar la aplicación. Se pueden presentar como una lista de botones con títulos personalizables o un campo de entrada de texto que se puede ejecutar en segundo plano (donde la aplicación tiene una pequeña cantidad de tiempo para completar la solicitud) o en el primer plano (donde la aplicación se inicia en primer plano hasta Fu). lfill la solicitud). Las acciones personalizadas están disponibles en iOS y watchos.
-- **Acción** de descartar: esta acción se envía a la aplicación cuando el usuario descarta una notificación determinada.
+- **Acción de descartar** : esta acción se envía a la aplicación cuando el usuario descarta una notificación determinada.
 
 ### <a name="creating-custom-actions"></a>Crear acciones personalizadas
 
@@ -537,7 +537,7 @@ Para implementar una extensión de servicio en una aplicación de Xamarin. iOS, 
 
 1. Abra la solución de la aplicación en Visual Studio para Mac.
 2. Haga clic con el botón derecho en el nombre de la solución en el **Panel de solución** y seleccione **Agregar** > **Agregar nuevo proyecto**.
-3. Seleccione extensiones de **iOS** >  > **servicio de notificaciones extensiones** y haga clic en el botón **siguiente** : 
+3. Seleccione > **extensiones de**iOS > **servicio de notificaciones extensiones** y haga clic en el botón **siguiente** : 
 
     [![](enhanced-user-notifications-images/extension02.png "Seleccionar extensiones del servicio de notificaciones")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Escriba un **nombre** para la extensión y haga clic en el botón **siguiente** : 

@@ -4,15 +4,15 @@ description: En esta sección se presentan las tareas y los conceptos más comun
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: cc1a4ae46eb07c789e5f451fec1db201826ffb21
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 12ee6fcb231fb447285bae8f96e62a5eab8e2d00
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652174"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288080"
 ---
 # <a name="tvos-application-fundamentals"></a>Aspectos básicos de la aplicación tvOS
 

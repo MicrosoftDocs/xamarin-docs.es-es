@@ -4,15 +4,15 @@ description: En esta guía se presenta el diseño automático de iOS y se descri
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 5e70a34fe4381b7c6d636448501a03d4e61039d7
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198973"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280000"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
@@ -155,7 +155,7 @@ La desubicación de fotogramas utiliza el mismo código de color que los element
 
  [![](designer-auto-layout-images/image05.png "Vista de mal posición del marco de ejemplo")](designer-auto-layout-images/image05.png#lightbox)
 
-Para resolver errores de colocación de fotogramas, seleccione el botón actualizar fotogramas en función de las **restricciones** en la barra de herramientas de restricciones (botón secundario):
+Para resolver errores de colocación de fotogramas, seleccione el botón **Actualizar fotogramas en función** de las restricciones en la barra de herramientas de restricciones (botón secundario):
 
  [![](designer-auto-layout-images/image03.png "Botón de la barra de herramientas actualizar fotogramas basados en restricciones")](designer-auto-layout-images/image03.png#lightbox)
 
@@ -170,7 +170,7 @@ En función de los requisitos de la aplicación, puede haber ocasiones en las qu
 Para tener acceso a una restricción en el código, primero debe exponerla en el diseñador de iOS haciendo lo siguiente:
 
 1. Cree la restricción como normal (mediante cualquiera de los métodos enumerados anteriormente).
-2. En el **Explorador**de esquemas de documento, busque la restricción deseada y selecciónela:
+2. En el **Explorador de esquemas de documento**, busque la restricción deseada y selecciónela:
 
     [![](designer-auto-layout-images/modify01.png "Explorador de esquemas de documento")](designer-auto-layout-images/modify01.png#lightbox)
 3. A continuación, asigne un **nombre** a la restricción en la pestaña **Widget** del **Explorador de propiedades**:

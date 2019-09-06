@@ -4,15 +4,15 @@ description: Documentos que describen el funcionamiento interno de tvOS en Xamar
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 45341418779405e52251eb07576c8e5fa9f09297
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ffcf4d3a491cb6ad865da35d387782b7bd1fca01
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647117"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283572"
 ---
 # <a name="tvos-in-xamarin-internals"></a>tvOS en Xamarin: interno 
 

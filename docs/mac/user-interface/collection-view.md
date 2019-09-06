@@ -4,15 +4,15 @@ description: En este artículo se describe cómo trabajar con vistas de colecci�
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/24/2017
-ms.openlocfilehash: ee1b3043033ea1d6e024619e6a176947733e9f24
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: a3673f017a5dd50e5cc3ae44790bf359c2871440
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065482"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279624"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin. Mac
 
@@ -213,13 +213,13 @@ Haga lo siguiente:
 
     ![Exponer el NSBox en una salida](collection-view-images/proto03.png)
 6. Vuelva al **Editor estándar** y seleccione la vista imagen.
-7. En el **Inspector de enlace**, **Seleccione enlazar al** > **propietario del archivo** y escriba una ruta de `self.Person.Icon`acceso de clave de **modelo** de:
+7. En el **Inspector de enlace**, seleccione **enlazar al** > **propietario del archivo** y escriba una ruta de `self.Person.Icon`acceso de clave de **modelo** de:
 
     ![Enlazar el icono](collection-view-images/proto04.png)
-8. Seleccione la primera etiqueta y, en **el inspector de enlace**, seleccione enlazar **al** > **propietario del archivo** y escriba una ruta `self.Person.Name`de acceso de clave de **modelo** de:
+8. Seleccione la primera etiqueta y, en **el inspector de enlace**, seleccione **enlazar al** > **propietario del archivo** y escriba una ruta `self.Person.Name`de acceso de clave de **modelo** de:
 
     ![Enlazar el nombre](collection-view-images/proto05.png)
-9. Seleccione la segunda etiqueta y, en **el inspector de enlace**, seleccione enlazar **al** > **propietario del archivo** y escriba una ruta `self.Person.Occupation`de acceso de clave de **modelo** de:
+9. Seleccione la segunda etiqueta y, en **el inspector de enlace**, seleccione **enlazar al** > **propietario del archivo** y escriba una ruta `self.Person.Occupation`de acceso de clave de **modelo** de:
 
     ![Enlace de la profesión](collection-view-images/proto06.png)
 10. Guarde los cambios en el `.xib` archivo y vuelva a Visual Studio para sincronizar los cambios.
@@ -582,7 +582,7 @@ Haga lo siguiente:
 3. Con la vista de recopilación seleccionada, use el editor de restricciones para anclarlo a la vista cuando se cambie el tamaño:
 
     ![Agregar restricciones](collection-view-images/collection02.png)
-4. Asegúrese de que la vista de recopilación está seleccionada en el **superficie de diseño** (y no en la vista de desplazamiento o el recorte con **borde** que la contiene), cambie al **Editor del asistente** y cree una **salida** para la vista de recopilación:
+4. Asegúrese de que la vista de recopilación está seleccionada en el **superficie de diseño** (y no en la vista de desplazamiento o el **recorte** con **borde** que la contiene), cambie al **Editor del asistente** y cree una **salida** para la vista de recopilación:
 
     ![Agregar restricciones](collection-view-images/collection03.png)
 5. Guarde los cambios y vuelva a Visual Studio para realizar la sincronización.

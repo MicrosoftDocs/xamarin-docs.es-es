@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a varias guías que describen có
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/06/2016
-ms.openlocfilehash: 0dd3830b4903658d0b014eceaad9c57859963c04
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7d4ad4ca7f15e20bed3cd9bb4050c5a0a9cba63a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528631"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284165"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Trabajar con tablas y celdas en Xamarin. iOS
 

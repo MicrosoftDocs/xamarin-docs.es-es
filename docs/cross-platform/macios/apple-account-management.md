@@ -3,19 +3,19 @@ title: Administración de cuentas Apple
 description: En este documento se describe cómo usar las características de administración de cuentas de Apple en Visual Studio para Mac y Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: bb51550518c723a72a29637ad8972cb61c687c6b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118973"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290629"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas Apple
 
-La interfaz de administración de cuentas de Apple proporciona una manera de ver todos los equipos de desarrollo asociados a un identificador de Apple. También permite ver más detalles sobre cada equipo mostrando una lista de identidades de _firma_ y _perfiles de aprovisionamiento_ que están instalados en el equipo.
+La interfaz de administración de cuentas de Apple proporciona una manera de ver todos los equipos de desarrollo asociados a un identificador de Apple. También permite ver más detalles sobre cada equipo mostrando una lista de _identidades de firma_ y _perfiles de aprovisionamiento_ que están instalados en el equipo.
 
 La autenticación de su ID de Apple se realiza en la línea de comandos con [Fastlane](https://fastlane.tools/). Fastlane debe estar instalado en el equipo para que se autentique correctamente. Encontrará más información en Fastlane y cómo instalarlo en las guías de [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) .
 
@@ -145,7 +145,7 @@ Este es actualmente un problema conocido relacionado con el [#53906](https://bug
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Si tiene problemas para iniciar sesión en su cuenta, intente lo siguiente:
 
-- Abra la aplicación de cadena de claves y, en categoría, seleccione contraseñas. `deliver.`Busque y elimine todas las entradas.
+- Abra la aplicación de cadena de claves y, en categoría, seleccione *contraseñas*. `deliver.`Busque y elimine todas las entradas.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Error al agregar la cuenta. Inicie sesión con una contraseña específica de la aplicación "
 

@@ -1,44 +1,44 @@
 ---
 title: Xamarin Workbooks
-description: Xamarin Workbooks proporcionan una mezcla de documentación y código que es perfecto para la experimentación, aprendizaje y crear a guías de material pedagógico.
+description: Xamarin Workbooks proporcionan una combinación de documentación y código idóneo para la experimentación, el aprendizaje y la creación de guías y ayudas para la enseñanza.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/23/2018
-ms.openlocfilehash: d0aed1b501b86a23d4008ba9618b0e459178ca24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ea065a0eea9be95b0513acd4ee3950efe9a4e53d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61257745"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288096"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
-Xamarin Workbooks proporcionan una mezcla de documentación y código que es perfecto para la experimentación, aprendizaje y crear a guías de material pedagógico.
+Xamarin Workbooks proporcionan una combinación de documentación y código idóneo para la experimentación, el aprendizaje y la creación de guías y ayudas para la enseñanza.
 
-Crear una rica C# libro para Android, iOS, Mac, WPF, o consola y obtener resultados de live instantánea que obtenga información sobre estas API.
+Cree un libro C# enriquecido para Android, iOS, Mac, WPF o la consola, y obtenga resultados directos instantáneos a medida que aprende estas API.
 
-Xamarin Workbooks es software de código abierto. Desarrollo ocurre en el cuadro Abrir en GitHub. Le invitamos a los usuarios interesados y a los desarrolladores a involucrarse con el proyecto.
+Xamarin Workbooks es software de código abierto. El desarrollo se produce en el abierto en GitHub. Invitamos a los usuarios y desarrolladores interesados a participar en el proyecto.
 
-[Únete a nosotros en GitHub.](https://github.com/Microsoft/workbooks)
+[Únase a nosotros en GitHub.](https://github.com/Microsoft/workbooks)
 
-Pruébelo y Díganos su opinión, o si se [experimenta errores](~/tools/workbooks/install.md#reporting-bugs). Tenemos un [foro](https://forums.xamarin.com/categories/inspector) demasiado!
+Pruébelo e indíquenos lo que cree, o bien, si tiene [errores](~/tools/workbooks/install.md#reporting-bugs). También tenemos un [Foro](https://forums.xamarin.com/categories/inspector) .
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "Un libro de UrhoSharp en función de ejemplo")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Un libro basado en UrhoSharp de ejemplo")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Instalación y requisitos](install.md)
 
-Información sobre cómo obtener los libros instalados en el equipo Mac o Windows.
+Información sobre cómo instalar los libros en el equipo Mac o Windows.
 
 ## <a name="interactive-workbooksworkbookmd"></a>[Libros interactivos](workbook.md)
 
-Introducción al uso de Xamarin Workbooks.
+Una introducción al uso de Xamarin Workbooks.
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
-Hay una amplia variedad de [libros disponibles en GitHub de ejemplo](https://github.com/xamarin/workbooks).
+Hay una amplia variedad de [libros de ejemplo disponibles en github](https://github.com/xamarin/workbooks).
 
 ## <a name="integration-sdksdkindexmd"></a>[SDK de integración](sdk/index.md)
 
-Es posible extender Xamarin Workbooks con representadores y las representaciones de datos personalizado. Se escriben las integraciones con C# y TypeScript/JavaScript.
+Es posible extender Xamarin Workbooks con representaciones y representadores de datos personalizados. Las integraciones se escriben con C# y TypeScript/JavaScript.

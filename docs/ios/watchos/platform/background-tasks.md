@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar las tareas en segundo plan
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: 93ad7d6adbecac2b2d5cf32d1dfc84edba718407
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287153"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tareas en segundo plano de watchos en Xamarin
 

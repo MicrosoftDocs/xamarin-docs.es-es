@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con excepciones nativa
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: 16ff511a2984e98eb8a67ef33cdca25a63fff7ab
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200315"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279693"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Serialización de excepciones en Xamarin. iOS
 

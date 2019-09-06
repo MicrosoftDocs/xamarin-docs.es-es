@@ -4,15 +4,15 @@ description: En este artículo se tratan las nuevas API principales introducidas
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 962f06367542cc0e5d0d17f3261411c96f215e44
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227480"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292024"
 ---
 # <a name="introduction-to-ios-7"></a>Introducción a iOS 7
 
@@ -93,7 +93,7 @@ Las capturas de pantallas siguientes muestran la animación combinada a través 
 
 UIKit Dynamics es un nuevo conjunto de API de UIKit que permiten a las aplicaciones crear interacciones animadas basadas en la física. UIKit Dynamics encapsula un motor físico 2D para que esto sea posible.
 
-La API es declarativa por naturaleza. Para declarar cómo se comportan las interacciones físicas, cree objetos, denominados *comportamientos* , para expresar conceptos físicos como la gravedad, las colisiones, los muelles, etc. A continuación, adjunte los comportamientos a otro objeto, denominado animador *dinámico*, que encapsula una vista. El animador dinámico se encarga de aplicar los comportamientos de física declarados a *los elementos dinámicos* : los `UIView`elementos que implementan `IUIDynamicItem`, como un.
+La API es declarativa por naturaleza. Para declarar cómo se comportan las interacciones físicas, cree objetos, denominados *comportamientos* , para expresar conceptos físicos como la gravedad, las colisiones, los muelles, etc. A continuación, adjunte los comportamientos a otro objeto, denominado *animador dinámico*, que encapsula una vista. El animador dinámico se encarga de aplicar los comportamientos de física declarados a *los elementos dinámicos* : los `UIView`elementos que implementan `IUIDynamicItem`, como un.
 
 Hay varios comportamientos primitivos distintos disponibles para desencadenar interacciones complejas, entre las que se incluyen:
 

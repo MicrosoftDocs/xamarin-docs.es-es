@@ -1,57 +1,57 @@
 ---
 title: Enlace de Objective-C
-description: Este documento proporciona vínculos a diversas guías que describen cómo crear C# enlaces a código de Objective-C, permitiendo a los desarrolladores consumir bibliotecas listos para usar en aplicaciones de Xamarin.
+description: En este documento se proporcionan vínculos a varias guías que describen cómo C# crear enlaces a código de Objective-C, lo que permite a los desarrolladores usar bibliotecas de uso no estándar en aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 8975bb899127d0761359bec695cd084f89c12972
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864407"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290559"
 ---
 # <a name="binding-objective-c"></a>Enlace de Objective-C
 
-Esta sección incluye una serie de documentos que tratan la creación de enlaces a las bibliotecas de Objective-C, por lo que se puede llamar desde C# aplicaciones creadas con Xamarin.iOS o Xamarin.Mac.
+En esta sección se incluye una serie de documentos que cubren la creación de enlaces a bibliotecas de Objective-C, de modo C# que se pueden llamar desde aplicaciones creadas con Xamarin. iOS o Xamarin. Mac.
 
 ## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Información general](~/cross-platform/macios/binding/overview.md)
 
-Este documento contiene algunos de los aspectos internos de cómo realiza un enlace. Es un documento con algo de información técnica avanzado.
+Este documento contiene algunos de los aspectos internos de cómo tiene lugar un enlace. Se trata de un documento avanzado con información técnica.
 
 ## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-Este documento describe el proceso usado para crear C# enlaces de Objective-C API y cómo se asignan las expresiones en Objective-C para las expresiones que se usan en. NET.
-Si va a enlazar sólo las API de C, debe usar el mecanismo estándar de .NET para esto, el marco de trabajo de P/Invoke.
+En este documento se describe el proceso que C# se usa para crear enlaces de API de Objective-c y cómo se asignan las expresiones en Objective-c a las expresiones usadas en .net.
+Si va a enlazar solo las API de C, debe usar el mecanismo estándar de .NET para esto, el marco de trabajo P/Invoke.
 
-## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guía de referencia de definición de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
+## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guía de referencia de la definición de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
 
-Esta es la Guía de referencia que describe todos los atributos disponibles para los autores de enlace para controlar el proceso de generación de enlace.
+Esta es la guía de referencia que describe todos los atributos disponibles para enlazar autores para impulsar el proceso de generación de enlaces.
 
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
-Sharpie objetivo es una herramienta de línea de comandos para ayudar a arrancar el primer paso de un enlace. Funciona mediante el análisis de los archivos de encabezado de una biblioteca nativa para asignar a la API pública en el [definición de enlace](~/cross-platform/macios/binding/objective-c-libraries.md) (un proceso que también se puede realizar manualmente).
+Objective Sharpie es una herramienta de línea de comandos que ayuda a arrancar el primer paso de un enlace. Funciona mediante el análisis de los archivos de encabezado de una biblioteca nativa para asignar la API pública en la [definición de enlace](~/cross-platform/macios/binding/objective-c-libraries.md) (un proceso que también se puede hacer manualmente).
 
 ## <a name="ios"></a>iOS
 
-El [página enlace de iOS](~/ios/platform/binding-objective-c/index.md) vínculos volver a estos recursos comunes de enlace, además a los ejemplos siguientes.
+La [Página enlace de iOS](~/ios/platform/binding-objective-c/index.md) vuelve a vincular a estos recursos de enlace comunes, además de los ejemplos siguientes.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Tutorial: Enlace de una biblioteca de Objective-c.](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Tutorial: Enlazar una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
-Este artículo proporciona un tutorial paso a paso de creación de un proyecto de enlace con el código abierto [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) proyecto Objective-C como ejemplo. La biblioteca de InfColorPicker proporciona un controlador de vista reutilizables que permiten al usuario seleccionar un color basado en su representación HSB, lo más fácil de usar la selección de color. Objetivo Sharpie se usará para ayudar en el proceso de enlace.
+En este artículo se proporciona un tutorial paso a paso para crear un proyecto de enlace con el proyecto de código abierto [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-C como ejemplo. La biblioteca InfColorPicker proporciona un controlador de vistas reutilizable que permite al usuario seleccionar un color en función de su representación HSB, lo que facilita la selección de color. El objetivo Sharpie se usará para ayudar en el proceso de enlace.
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Ejemplos de enlace](https://github.com/mono/monotouch-bindings)
 
-Una colección de enlaces de terceros que puede usarse como referencia al crear nuevos proyectos de enlace.
+Colección de enlaces de terceros que se pueden utilizar como referencia al crear nuevos proyectos de enlace.
 
 ## <a name="mac"></a>Mac
 
-Históricamente [enlace Mac](~/mac/platform/binding.md) ha sido un proceso manual. Actualmente no hay un [preview descargable](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) de soporte técnico de proyecto de enlace de Mac para una versión futura de Visual Studio para Mac.
+El [enlace de Mac](~/mac/platform/binding.md) históricamente ha sido un proceso muy manual. Actualmente hay una [vista previa descargable](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) de la compatibilidad con proyectos de enlace de Mac para una futura versión de Visual Studio para Mac.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [iOS enlace](~/ios/platform/binding-objective-c/index.md)
+- [Enlace de iOS](~/ios/platform/binding-objective-c/index.md)
 - [Enlace de Mac](~/mac/platform/binding.md)

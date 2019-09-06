@@ -4,15 +4,15 @@ description: En este artículo se muestra cómo incluir una extensión de aplica
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227496"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280040"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Conceptos básicos de la extensión de aplicaciones de mensajes en Xamarin. iOS
 
@@ -24,12 +24,12 @@ Novedad de iOS 10, una extensión de aplicación de mensaje se integra con la ap
 
 Como se indicó anteriormente, una extensión de aplicación de mensaje se integra con la aplicación de **mensajes** y presenta una nueva funcionalidad al usuario. La extensión puede enviar texto, adhesivos, archivos multimedia y mensajes interactivos. Hay disponibles dos tipos de extensiones de aplicación de mensajes:
 
-- **Paquetes** de adhesivos: contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
+- **Paquetes de adhesivos** : contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
 - **aplicación IMessage** : puede presentar una interfaz de usuario personalizada dentro de la aplicación mensajes para seleccionar adhesivos, escribir texto, incluidos archivos multimedia (con conversiones de tipo opcionales) y crear, editar y enviar mensajes de interacción.
 
 Las extensiones de aplicaciones de mensajes proporcionan tres tipos de contenido principales:
 
-- **Mensajes** interactivos: son un tipo de contenido de mensaje personalizado que genera una aplicación, cuando el usuario pulsa el mensaje, la aplicación se iniciará en primer plano.
+- **Mensajes interactivos** : son un tipo de contenido de mensaje personalizado que genera una aplicación, cuando el usuario pulsa el mensaje, la aplicación se iniciará en primer plano.
 - **Adhesivos** : son imágenes generadas por la aplicación que se pueden incluir en los mensajes enviados entre usuarios.
 - **Otro contenido admitido** : la aplicación puede proporcionar contenido, como fotos, vídeos, texto o vínculos a cualquier otro tipo de contenido que siempre se admita en la aplicación mensajes.
 
@@ -99,7 +99,7 @@ Los paquetes de adhesivos pueden proporcionar adhesivos en uno de los tres tama�
 
 Usar el inspector de atributos de Xcode para establecer el tamaño de todo el paquete de adhesivos y proporcionar solo recursos de imagen que coincidan con el tamaño solicitado, para obtener los mejores resultados en el explorador de adhesivos dentro de la aplicación mensajes.
 
-Para obtener más información, consulte la aplicación del [generador](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) de helados y la [referencia de mensajes](https://developer.apple.com/reference/messages)de Apple.
+Para obtener más información, consulte la aplicación del [generador de helados](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) y la [referencia de mensajes](https://developer.apple.com/reference/messages)de Apple.
 
 ## <a name="creating-a-custom-sticker-experience"></a>Creación de una experiencia de adhesivo personalizada
 
@@ -665,7 +665,7 @@ namespace MessageExtension
 }
 ```
 
-Cuando el usuario solicita agregar un nuevo adhesivo a su colección disponible, se crea un `AddStickerViewController` nuevo controlador visible y la vista de adhesivo entra en la vista expandida:
+Cuando el usuario solicita agregar un nuevo adhesivo a su colección disponible, se crea un `AddStickerViewController` nuevo controlador visible y la vista de adhesivo entra en la vista **expandida** :
 
 ```csharp
 // Switch to expanded view mode

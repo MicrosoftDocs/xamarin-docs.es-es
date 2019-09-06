@@ -3,15 +3,15 @@ title: Introducción con el SDK de Xamarin Workbooks
 description: En este documento se describe cómo empezar a trabajar con el SDK de Xamarin Workbooks, que se puede usar para desarrollar integraciones para Xamarin Workbooks.
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: dd75270b3b14b0b770808bbc3ffc88240f868eae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8e3dc65f9f615ff893f3526d53d99da25045c794
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511009"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283964"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Introducción con el SDK de Xamarin Workbooks
 
@@ -159,7 +159,7 @@ Tenga en cuenta que no ve `#r` ninguna directiva ni nada para inicializar la int
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Consulte nuestra otra documentación para obtener más información sobre las piezas móviles que componen el SDK, así como nuestras integraciones de [ejemplo](~/tools/workbooks/samples/index.md) para las acciones adicionales que puede realizar desde la integración, como proporcionar JavaScript personalizado que se ejecuta en el cliente de los libros.
+Consulte nuestra otra documentación para obtener más información sobre las piezas móviles que componen el SDK, así como nuestras [integraciones de ejemplo](~/tools/workbooks/samples/index.md) para las acciones adicionales que puede realizar desde la integración, como proporcionar JavaScript personalizado que se ejecuta en el cliente de los libros.
 
 [nugetorg]: https://nuget.org
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

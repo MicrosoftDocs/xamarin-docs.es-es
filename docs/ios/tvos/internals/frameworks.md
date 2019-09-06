@@ -4,15 +4,15 @@ description: 'Para ayudar a aclarar las características disponibles para las ap
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 24dbdd46f499a5f0199a227eb984f3809948dd03
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 510e99f247756c35156dcec63d62638b99716430
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121021"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287904"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Marcos admitidos y no admitidos en tvOS
 
