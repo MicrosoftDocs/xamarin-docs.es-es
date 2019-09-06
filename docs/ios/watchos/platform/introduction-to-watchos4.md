@@ -4,15 +4,15 @@ description: En este documento se proporciona una introducción de alto nivel a 
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: e3766815e071c190046cc5bc7d436621bcee3d29
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7f2440cfa7ac3149fd190c6752c9b2829681b602
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651549"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293022"
 ---
 # <a name="introduction-to-watchos-4"></a>Introducción a watchOS 4
 

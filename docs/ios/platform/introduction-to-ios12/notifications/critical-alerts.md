@@ -1,35 +1,35 @@
 ---
-title: Alertas críticas en Xamarin.iOS
-description: Este documento describe cómo usar las alertas críticas con Xamarin.iOS. Alertas críticas, introducidas con iOS 12, son las notificaciones de interrupciones que reproducción un sonido independientemente de si no molestar está en o el conmutador de timbre está desactivada.
+title: Alertas críticas en Xamarin. iOS
+description: En este documento se describe cómo usar las alertas críticas con Xamarin. iOS. Las alertas críticas, introducidas con iOS 12, son notificaciones molestas que reproducen un sonido independientemente de si la opción no molestar está activada o si el interruptor del timbre está desactivado.
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 264b1935aefe6f5ddf4bfcd17c491f6858bd4ffb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 54a214215f77b66f6a4b134dcb8d27b26c44fb6c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876110"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291290"
 ---
-# <a name="critical-alerts-in-xamarinios"></a>Alertas críticas en Xamarin.iOS
+# <a name="critical-alerts-in-xamarinios"></a>Alertas críticas en Xamarin. iOS
 
-Con iOS 12, las aplicaciones puedan enviar alertas críticas. Alertas críticas reproducción un sonido independientemente de si no molestar está habilitada o el conmutador de timbre está desactivada. Estas notificaciones son perjudiciales y solo deben usarse cuando los usuarios deben realizar una acción inmediata.
+Con iOS 12, las aplicaciones pueden enviar alertas críticas. Las alertas críticas reproducen un sonido independientemente de si está habilitado o no molestar o si el interruptor del timbre está desactivado. Estas notificaciones son perjudiciales y solo deben usarse cuando los usuarios deben realizar una acción inmediata.
 
-## <a name="custom-critical-alert-entitlement"></a>Derechos de alerta crítica personalizado
+## <a name="custom-critical-alert-entitlement"></a>Derecho de alerta crítica personalizada
 
-Mostrar las alertas críticas en su aplicación, en primer lugar [solicitar un derecho personalizado notificaciones de alerta crítica](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/) de Apple.
+Para mostrar las alertas críticas en la aplicación, primero [solicite un derecho a las notificaciones de alerta críticas](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/) de Apple.
 
-Después de recibir este derecho de Apple y siga cualquier asociadas instrucciones sobre cómo configurar la aplicación para usarla, agregar personalizado [derechos](~/ios/deploy-test/provisioning/entitlements.md) a la aplicación **Entitlements.plist** archivos. A continuación, configure su **firma de lote de iOS** opciones para usar **Entitlements.plist** al iniciar la aplicación en el simulador y dispositivo.
+Después de recibir este derecho de Apple y de seguir las instrucciones asociadas sobre cómo configurar la aplicación para que la use, agregue el [derecho](~/ios/deploy-test/provisioning/entitlements.md) personalizado a los archivos **. plist de derechos** de la aplicación. Después, configure las opciones de **firma del lote de iOS** para usar los **derechos. plist** al firmar la aplicación en el simulador y el dispositivo.
 
-## <a name="request-authorization"></a>Solicitud de autorización
+## <a name="request-authorization"></a>Solicitar autorización
 
-Solicitud de autorización de notificación de una aplicación solicita al usuario que habilita o deshabilita las notificaciones de una aplicación. Si la solicitud de autorización de notificación solicita permiso para enviar alertas críticas, la aplicación también le proporcionará al usuario una oportunidad de participar en las alertas críticas.
+La solicitud de autorización de notificación de una aplicación solicita al usuario que permita o deniega las notificaciones de la aplicación. Si la solicitud de autorización de notificación solicita permiso para enviar alertas críticas, la aplicación también dará al usuario la oportunidad de participar en las alertas críticas.
 
-El siguiente código solicita permiso para enviar alertas críticas y notificaciones estándares y sonidos pasando adecuado [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
-los valores para [ `RequestAuthorization` ](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
+El código siguiente solicita permiso para enviar alertas críticas y notificaciones y sonidos estándar pasando el correspondiente[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+valores para [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -45,13 +45,13 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>Alertas críticas locales
 
-Para enviar una alerta crítica local, cree una [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-y establezca su `Sound` propiedad como:
+Para enviar una alerta crítica local, cree un[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+y establezca su `Sound` propiedad en:
 
-- `UNNotificationSound.DefaultCriticalSound`, que utiliza el sonido de notificación crítica de forma predeterminada.
-- `UNNotificationSound.GetCriticalSound`, que le permite especificar un personalizado de sonido que se incluye con la aplicación y un volumen.
+- `UNNotificationSound.DefaultCriticalSound`, que usa el sonido de notificación crítico predeterminado.
+- `UNNotificationSound.GetCriticalSound`, que le permite especificar un sonido personalizado que se incluye en la aplicación y en un volumen.
 
-A continuación, cree un `UNNotificationRequest` desde la notificación de contenido y agregarlo al centro de notificaciones:
+A continuación, cree `UNNotificationRequest` un a partir del contenido de la notificación y agréguelo al centro de notificaciones:
 
 ```csharp
 var content = new UNMutableNotificationContent()
@@ -74,16 +74,16 @@ center.AddNotificationRequest(request, null);
 ```
 
 > [!IMPORTANT]
-> No se enviarán las alertas críticas si no están habilitadas para la aplicación. Junto con el mensaje que aparece la primera vez que una aplicación solicita permiso para enviar alertas críticas, un usuario también puede habilitar o deshabilitar las alertas críticas en su aplicación **notificaciones** sección de iOS **configuración**app.
+> Las alertas críticas no se entregarán si no están habilitadas para la aplicación. Junto con el mensaje que aparece la primera vez que una aplicación solicita permiso para enviar alertas críticas, un usuario también puede habilitar o deshabilitar las alertas críticas en la sección **notificaciones** de la aplicación de la aplicación de **configuración** de iOS.
 
 ## <a name="remote-critical-alerts"></a>Alertas críticas remotas
 
-Para obtener información acerca de las alertas críticas remotas, consulte el [¿qué es nuevo en las notificaciones de usuario](https://developer.apple.com/videos/play/wwdc2018/710/) sesión desde la sesión WWDC 2018 y el [generar una notificación remota](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) documento.
+Para obtener información acerca de las alertas críticas remotas, consulte la sesión [novedades en las notificaciones de usuario](https://developer.apple.com/videos/play/wwdc2018/710/) de WWDC 2018 y el documento [generación de una notificación remota](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Plataforma de notificaciones de usuario en Xamarin.iOS](~/ios/platform/user-notifications/index.md)
+- [Marco de notificaciones de usuario en Xamarin. iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Novedades de las notificaciones de usuario (sesión WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Procedimientos recomendados y cuáles son las novedades en las notificaciones de usuario (sesión WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Generar una notificación remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)
+- [Novedades de las notificaciones de usuario (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Prácticas recomendadas y novedades en las notificaciones de usuario (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Generación de una notificación remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

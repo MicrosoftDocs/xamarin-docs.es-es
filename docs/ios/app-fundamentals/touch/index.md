@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a guías que describen cómo trab
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/23/2017
-ms.openlocfilehash: 60bd87adb56e311407280ba98f48d8c3e2160836
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: dfd1a3c88d2c9c87c84a18736dd0f4c8c7e79005
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121018"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282998"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Control de la entrada táctil en aplicaciones de Xamarin. iOS
 

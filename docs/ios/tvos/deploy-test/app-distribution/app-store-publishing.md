@@ -4,15 +4,15 @@ description: En este documento se describe cómo publicar una aplicación en la 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: aaffaf3d66bb51d467c40bc3e5707a149154c0a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528732"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282717"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en Apple TV App Store
 
@@ -56,7 +56,7 @@ Haga lo siguiente:
 3. Seleccione un **Precio de venta** o especifique que la aplicación se publicará de manera gratuita.
 4. Proporcione un **icono de App Store** (icono grande) y capturas de pantallas de la aplicación en acción, en los dispositivos Apple TV que admite. Para más información, consulte la guía [trabajar con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md) .
 5. Proporcione una **Descripción** clara y concisa de la aplicación, incluidas sus características y beneficios para el usuario final.
-6. Proporcione **categorías**,subcategorías y **palabras clave** para ayudar al usuario a encontrar la aplicación en la App Store de Apple TV.
+6. Proporcione **categorías**, **subcategorías**y **palabras clave** para ayudar al usuario a encontrar la aplicación en la App Store de Apple TV.
 7. Proporcione las direcciones URL de **Contacto** y **Soporte técnico** a su sitio web requeridas por Apple.
 8. Establezca la **clasificación**de la aplicación, que es usada por el control parental en la tienda de aplicaciones de Apple TV.
 9. Configure tecnologías opcionales del App Store, como **Game Center** y **Compra desde la aplicación**.
@@ -126,7 +126,7 @@ Para obtener instrucciones detalladas, vea las secciones [Crear un perfil de dis
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Establecer la configuración de compilación de la aplicación
 
-De forma predeterminada, cuando se crea una nueva aplicación Xamarin. tvOS, se crean automáticamente _configuraciones de compilación_ para la implementación de depuración y **lanzamiento** . Antes de realizar la compilación final de la aplicación que va a enviar a Apple, hay algunas modificaciones que debe realizar en la configuración de la **versión** base.
+De forma predeterminada, cuando se crea una nueva aplicación Xamarin. tvOS, se crean automáticamente _configuraciones de compilación_ para la implementación de **depuración** y **lanzamiento** . Antes de realizar la compilación final de la aplicación que va a enviar a Apple, hay algunas modificaciones que debe realizar en la configuración de la **versión** base.
 
 Haga lo siguiente:
 

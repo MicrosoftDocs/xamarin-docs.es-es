@@ -3,15 +3,15 @@ title: Compilar vistas HTML mediante plantillas de Razor
 description: " El uso de una página web de pantalla completa para representar HTML puede ser una manera sencilla y eficaz de representar el formato complejo de una manera multiplataforma, especialmente si ya tiene el código HTML, JavaScript y CSS de un proyecto de sitio Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621035"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284920"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Compilar vistas HTML mediante plantillas de Razor
 
@@ -485,7 +485,7 @@ Estas plantillas no hacen uso de controles nativos en cada plataforma; toda la p
 
 HTML puede ser excelente para crear prototipos y mostrar los tipos de elementos que la web es mejor en, como el texto enriquecido y el diseño dinámico. Sin embargo, no todas las tareas son adecuadas para HTML y JavaScript: desplazarse a través de listas largas de datos, por ejemplo, funciona mejor con los controles de interfaz de usuario nativos (como UITableView en iOS o ListView en Android).
 
-Las vistas Web de la plantilla se pueden aumentar fácilmente con controles específicos de la plataforma: simplemente Edite **archivo mainstoryboard. Storyboard** en iOS Designer o en Resources **/layout/main. axml** en Android.
+Las vistas Web de la plantilla se pueden aumentar fácilmente con controles específicos de la plataforma: simplemente Edite **archivo mainstoryboard. Storyboard** en iOS Designer o en **Resources/layout/main. axml** en Android.
 
 ### <a name="razortodo-sample"></a>Ejemplo de RazorTodo
 

@@ -4,15 +4,15 @@ description: En este artículo se describen las mejoras que Apple ha realizado e
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2a2475bcc5eea48584c4aa128aafeeb326e41f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227411"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280372"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Mejoras en la búsqueda de aplicaciones en Xamarin. iOS
 
@@ -36,7 +36,7 @@ En las secciones siguientes se tratarán estos temas con más detalle.
 
 iOS 10 proporciona un mecanismo para contar la frecuencia con la que el usuario sigue los vínculos profundos más populares en una aplicación y usa esta información para mejorar la clasificación del contenido de una aplicación en los resultados de la búsqueda, al tiempo que se sigue protegiendo la identidad del usuario mediante la *diferencia Privacidad*.
 
-En el caso de las `NSUserActivity` aplicaciones que usan objetos para proporcionar direcciones URL de vínculo `EligibleForPublicIndexing` profundo y tienen `true`la propiedad establecida en, iOS 10 envía un subconjunto de hashes de *privacidad diferencial* a los servidores de Apple. Esta información se usa para promover el contenido popular en la aplicación en los resultados de la búsqueda.
+En el caso de las `NSUserActivity` aplicaciones que usan objetos para proporcionar direcciones URL de vínculo `EligibleForPublicIndexing` profundo y tienen `true`la propiedad establecida en, iOS 10 envía un subconjunto de *hashes de privacidad diferencial* a los servidores de Apple. Esta información se usa para promover el contenido popular en la aplicación en los resultados de la búsqueda.
 
 Para más información sobre la implementación de la vinculación profunda en una aplicación de Xamarin. iOS, consulte la documentación de [búsqueda con NSUserActivity](~/ios/platform/search/nsuseractivity.md) .
 

@@ -3,15 +3,15 @@ title: 'Parte 1: Descripción de la plataforma móvil Xamarin'
 description: En este documento se describe la plataforma de Xamarin a alto nivel, en el proceso de compilación, el acceso al SDK de la plataforma, el uso compartido de código, la creación de la interfaz de usuario, los diseñadores visuales, etc.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e3a9afa2780f9cf5816427d282644fb2ac3c8dde
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5398d99a64e7f6b75c8b9e418da252852aff1322
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526761"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288674"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: Descripción de la plataforma móvil Xamarin
 
@@ -19,7 +19,7 @@ La plataforma Xamarin se compone de una serie de elementos que permiten desarrol
 
 - lenguaje: permite usar una sintaxis conocida y características sofisticadas como genéricos, LINQ y la biblioteca de tareas paralelas. **C#**
 - **.NET Framework mono** : proporciona una implementación multiplataforma de las amplias características de .NET Framework de Microsoft.
-- Compilador: en función de la plataforma, genera una aplicación nativa (por ejemplo, iOS) o una aplicación .NET integrada y tiempo de ejecución (por ejemplo, Android). El compilador también realiza muchas optimizaciones para la implementación móvil, como la vinculación de código no utilizado.
+- **Compilador** : en función de la plataforma, genera una aplicación nativa (por ejemplo, iOS) o una aplicación .NET integrada y tiempo de ejecución (por ejemplo, Android). El compilador también realiza muchas optimizaciones para la implementación móvil, como la vinculación de código no utilizado.
 - **Herramientas del IDE** : Visual Studio en Mac y Windows le permite crear, compilar e implementar proyectos de Xamarin.
 
 Además, dado que el lenguaje subyacente es C# con .NET Framework, los proyectos se pueden estructurar para compartir código que también se puede implementar en Windows Phone.

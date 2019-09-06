@@ -4,15 +4,15 @@ description: En este artículo se muestra paso a paso cómo crear una aplicació
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: badb65ace8d2ab68e102c9be127abe998a602091
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225855"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286115"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso de gráficos principales y animación básica en Xamarin. iOS
 
@@ -82,7 +82,7 @@ Antes de comenzar, descargue el ejemplo *GraphicsDemo* que acompaña a esta guí
 
     `SetNeedsDisplay`se llamará cada vez que toque Move en orden `Draw` para que se llame en el siguiente paso de bucle de ejecución.
 
-4. Vamos a agregar líneas al trazado en el `Draw` método y a usar una línea discontinua roja para dibujar con. [ `Draw` Implemente](~/ios/platform/graphics-animation-ios/core-graphics.md) con el código que se muestra a continuación:
+4. Vamos a agregar líneas al trazado en el `Draw` método y a usar una línea discontinua roja para dibujar con. [Implemente `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con el código que se muestra a continuación:
 
     ```csharp
     public override void Draw (CGRect rect){

@@ -4,15 +4,15 @@ description: En este documento se proporciona una introducción a los guiones gr
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 86198c7a2fa0460070d012afd0b7b9d078d2a5f3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528566"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284330"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -29,7 +29,7 @@ Los guiones gráficos se pueden usar con iOS Designer en Visual Studio para Mac 
 
 ## <a name="what-is-a-storyboard"></a>¿Qué es un guion gráfico?
 
-Un guion gráfico es la representación visual de todas las pantallas de una aplicación. Contiene una secuencia de escenas, donde cada escena representa un *controlador de vista* y sus *vistas*. Estas vistas pueden contener objetos y [controles](~/ios/user-interface/controls/index.md) que permitirán a los usuarios interactuar con la aplicación. Esta colección de vistas y controles (osubvistas) se conoce como una *jerarquía*de vistas de contenido. Las escenas están conectadas mediante objetos segue, que representan una transición entre controladores de vista. Normalmente, esto se consigue creando un segue entre un objeto de la vista inicial y la vista de conexión. Las relaciones en la superficie de diseño se ilustran en la imagen siguiente:
+Un guion gráfico es la representación visual de todas las pantallas de una aplicación. Contiene una secuencia de escenas, donde cada escena representa un *controlador de vista* y sus *vistas*. Estas vistas pueden contener objetos y [controles](~/ios/user-interface/controls/index.md) que permitirán a los usuarios interactuar con la aplicación. Esta colección de vistas y controles (o *subvistas*) se conoce como una *jerarquía*de vistas de contenido. Las escenas están conectadas mediante objetos segue, que representan una transición entre controladores de vista. Normalmente, esto se consigue creando un segue entre un objeto de la vista inicial y la vista de conexión. Las relaciones en la superficie de diseño se ilustran en la imagen siguiente:
 
  [![](images/storyboardsview.png "En esta imagen se ilustran las relaciones en la superficie de diseño")](images/storyboardsview.png#lightbox)
 
@@ -58,7 +58,7 @@ Al pasar el mouse, aparecerá un menú que nos permite elegir la acción para nu
 [![](images/16new.png "La lista desplegable Action segue con clases de tamaño")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del > teclado a través de los**métodos abreviados** de teclado de mouse **& mouse** > y reasigne el **botón secundario** , como se muestra a continuación:
+> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del **teclado a través** > de los**métodos abreviados** de teclado de mouse **& mouse** > y reasigne el **botón secundario** , como se muestra a continuación:
 > 
 > [![](images/image22.png "Configuración de preferencias del teclado y del mouse")](images/image22.png#lightbox)
 > 
@@ -69,7 +69,7 @@ Hay diferentes tipos de transiciones, cada una de las cuales proporciona control
 - **Mostrar/** enviar: un segue de extracción agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que origina la inserciones forma parte del mismo controlador de navegación que el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y normalmente se usa cuando hay alguna relación entre los datos de las pantallas. El uso de segue de extracción le permite tener una barra de navegación con un botón atrás y un título agregado a cada vista de la pila, lo que permite explorar en profundidad la navegación por la jerarquía de vistas.
 - **Modal** : un segue modal crea una relación entre dos controladores de vista cualesquiera del proyecto, con la opción de mostrar una transición animada. El controlador de vista secundario ocultará completamente el controlador de vista primario cuando se ponga en vista. A diferencia de un segue de extracción, que agrega un botón atrás para nosotros; Cuando se usa un segue `DismissViewController` modal, se debe usar para volver al controlador de vista anterior.
 - **Personalizado** : cualquier segue personalizado se puede crear como una subclase de `UIStoryboardSegue`.
-- Desenredado: se puede usar un segue de desenredado para navegar hacia atrás a través de un segue de extracción o modal, por ejemplo, descartando el controlador de vista presentado de forma modal. Además, puede desenredar a través de no solo uno, sino también una serie de objetos segues de extracción y de moda y volver a varios pasos de la jerarquía de navegación con una sola acción de desenredado. Para saber cómo usar un segue de desenredado en iOS, lea la receta de creación de desenredado de [objetos segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
+- **Desenredado** : se puede usar un segue de desenredado para navegar hacia atrás a través de un segue de extracción o modal, por ejemplo, descartando el controlador de vista presentado de forma modal. Además, puede desenredar a través de no solo uno, sino también una serie de objetos segues de extracción y de moda y volver a varios pasos de la jerarquía de navegación con una sola acción de desenredado. Para saber cómo usar un segue de desenredado en iOS, lea la receta de [creación de desenredado de objetos segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
 - Sin **origen** : una segue sin código fuente indica la escena que contiene el controlador de vista inicial y, por lo tanto, la vista que el usuario verá en primer lugar. Se representa mediante el segue que se muestra a continuación:  
 
     [![](images/sourcelesssegue.png "Un segue de código fuente")](images/sourcelesssegue.png#lightbox)
@@ -269,7 +269,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-Para obtener más información sobre el registro de clases y métodos, consulte la documentación del registrador de [tipos](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
+Para obtener más información sobre el registro de clases y métodos, consulte la documentación del [registrador de tipos](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
 
 El último paso de esta clase es conectar el botón y la transición al controlador de vista de color rosa. Se creará una instancia `PinkViewController` del desde el guión gráfico; a continuación, se programará un `PushViewController`segue de extracción con, como se muestra en el código de ejemplo siguiente:
 
@@ -335,7 +335,7 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea nuest
         
     [![](images/passwordvc.png "Líneas centrales")](images/passwordvc.png#lightbox)
     
-2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, y seleccione Activar al pasar el mouse. 
+2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, **y seleccione Activar al pasar** el mouse. 
 
 3. Haga clic en segue y asígnele el *identificador* `SegueToPink`:
 
@@ -374,7 +374,7 @@ Consulte la solución storyboards. Conditional en el [ejemplo de guiones gráfic
 
 Una referencia de guion gráfico permite tomar un diseño de guion gráfico grande y complejo y dividirlo en guiones gráficos más pequeños a los que se hace referencia desde el original, con lo que se elimina la complejidad y se facilita el diseño y el mantenimiento de los guiones gráficos resultantes.
 
-Además, una referencia de guion gráfico puede proporcionar un delimitador a otra escena en el mismo guión gráfico o en una determinada escena en otro.
+Además, una referencia de guion gráfico puede proporcionar un _delimitador_ a otra escena en el mismo guión gráfico o en una determinada escena en otro.
 
 <a name="Referencing-an-External-Storyboard" />
 

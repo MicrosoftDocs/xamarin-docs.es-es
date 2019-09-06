@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con controles segmenta
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200250"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291397"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabajar con controles segmentados de tvOS en Xamarin
 
@@ -43,8 +43,8 @@ No puede mezclar texto e iconos en un segmento determinado y debe evitar mezclar
 Apple realiza las siguientes sugerencias para trabajar con texto de segmento:
 
 - **Usar nombres cortos y significativos** : el título del segmento debe indicar claramente el tipo de contenido que el usuario debe esperar al seleccionar el segmento determinado. Por ejemplo:  Música o vídeos.
-- **Usar** mayúsculas y minúsculas en el título: cada palabra del título de los segmentos debe escribirse en mayúsculas, excepto artículos, conjunciones y Preposiciones de menos de cuatro (4) caracteres.
-- **Usar títulos cortos** y centrados: Mantenga los títulos, cortos y centrados en el tipo de contenido que se esperará cuando se seleccione el segmento.
+- Usar mayúsculas y **minúsculas** en el título: cada palabra del título de los segmentos debe escribirse en mayúsculas, excepto artículos, conjunciones y Preposiciones de menos de cuatro (4) caracteres.
+- **Usar títulos cortos y centrados** : Mantenga los títulos, cortos y centrados en el tipo de contenido que se esperará cuando se seleccione el segmento.
 
 De nuevo, no puede mezclar texto e iconos en un segmento determinado y debe evitar mezclar iconos y texto en un solo control segmentado.
 

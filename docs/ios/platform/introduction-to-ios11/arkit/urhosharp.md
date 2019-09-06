@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar una aplicación de A
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/01/2017
-ms.openlocfilehash: 106d6100d373c8d14a35aaee59035cf4a98083a5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4c23caade91a1a46d6b2b9bb2425a5bdead40030
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528258"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289232"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso de ARKit con UrhoSharp en Xamarin. iOS
 
@@ -89,7 +89,7 @@ public class MutantDemo : ArkitApp
 
 Y eso es realmente todo lo que tiene que hacer en este momento para que el contenido 3D se muestre en realidad aumentada.
 
-Urho usa formatos personalizados para modelos 3D y animaciones, por lo que debe exportar los recursos a este formato.   Puede usar herramientas como el [complemento Urho3D](https://github.com/reattiva/Urho3D-Blender) de mezclador y [UrhoAssetImporter](https://github.com/EgorBo/UrhoAssetImporter) que pueden convertir estos recursos de formatos populares como dbx, DAE, OBJ, Blend, 3D-max en el formato requerido por Urho.
+Urho usa formatos personalizados para modelos 3D y animaciones, por lo que debe exportar los recursos a este formato.   Puede usar herramientas como el [complemento Urho3D de mezclador](https://github.com/reattiva/Urho3D-Blender) y [UrhoAssetImporter](https://github.com/EgorBo/UrhoAssetImporter) que pueden convertir estos recursos de formatos populares como dbx, DAE, OBJ, Blend, 3D-max en el formato requerido por Urho.
 
 Para obtener más información sobre la creación de aplicaciones 3D con Urho, visite la guía de [Introducción a UrhoSharp](~/graphics-games/urhosharp/introduction.md) .
 

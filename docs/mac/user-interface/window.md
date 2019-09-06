@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con ventanas y paneles 
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d766e74f99e3c69259a41ce13501de80cf0231a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653115"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291533"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows en Xamarin. Mac
 
@@ -57,7 +57,7 @@ Para obtener más información, consulte la sección [About Windows](https://dev
 
 Las ventanas de una aplicación de Xamarin. Mac pueden verse y comportarse de manera diferente en función de cómo el usuario interactúe actualmente con ellas. La ventana de documento o aplicación más importante que se centra actualmente en la atención del usuario se denomina _ventana principal_. En la mayoría de los casos, esta ventana también será la _ventana clave_ (la ventana que actualmente acepta datos proporcionados por el usuario). Pero esto no es siempre el caso, por ejemplo, un selector de colores podría estar abierto y ser la ventana de clave con la que interactúa el usuario para cambiar el estado de un elemento en la ventana de documento (que seguirá siendo la ventana principal).
 
-Las ventanas principal y de clave (si son independientes) siempre están activas, las ventanas inactivas son ventanas abiertas que no están en primer plano. Por ejemplo, una aplicación de editor de texto podría tener más de un documento abierto a la vez, solo la ventana principal estaba activa, todas las demás serían inactivas. 
+Las ventanas principal y de clave (si son independientes) siempre están activas, las ventanas _inactivas_ son ventanas abiertas que no están en primer plano. Por ejemplo, una aplicación de editor de texto podría tener más de un documento abierto a la vez, solo la ventana principal estaba activa, todas las demás serían inactivas. 
 
 Para obtener más información, consulte la sección [About Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) de las directrices de la interfaz de usuario de Apple [OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -110,7 +110,7 @@ Apple sugiere las siguientes directrices:
 
 #### <a name="inspectors"></a>Inspectores
 
-La mayoría de las aplicaciones macOS modernas presentan controles y opciones auxiliares que afectan al documento activo o a la selección como inspectores que forman parte de la ventana principal (como la aplicación de **páginas** que se muestra a continuación), en lugar de usar ventanas de panel:
+La mayoría de las aplicaciones macOS modernas presentan controles y opciones auxiliares que afectan al documento activo o a la selección como _inspectores_ que forman parte de la ventana principal (como la aplicación de **páginas** que se muestra a continuación), en lugar de usar ventanas de panel:
 
 [![](window-images/panel02.png "Un inspector de ejemplo")](window-images/panel02.png#lightbox)
 
@@ -136,7 +136,7 @@ En el **Inspector de atributos**, hay varias propiedades que puede usar para def
 - **Título y barra de herramientas unificados** : Si la ventana incluye una barra de herramientas, debe formar parte de la barra de título.
 - **Vista de contenido con tamaño completo** : permite que el área de contenido de la ventana esté debajo de la barra de título.
 - **Sombra** : hace que la ventana tenga una sombra.
-- Las ventanas con textura texturizada pueden usar efectos (como vibrancy) y se pueden mover arrastrándolos en cualquier lugar del cuerpo.
+- Las ventanas con textura **texturizada** pueden usar efectos (como vibrancy) y se pueden mover arrastrándolos en cualquier lugar del cuerpo.
 - **Cerrar** : hace que la ventana tenga un botón Cerrar.
 - **Minimizar** : hace que la ventana tenga un botón minimizar.
 - **Cambiar tamaño** : hace que la ventana tenga un control de tamaño.
@@ -765,7 +765,7 @@ Para agregar un nuevo panel, haga lo siguiente:
 6. Enganche el panel hasta la**salida**de la**ventana** -  -  **propietaria del archivo**: 
 
     [![](window-images/panels02.png "Arrastrar para conectar el panel")](window-images/panels02.png#lightbox)
-7. Cambie al **Inspector** de identidades y establezca la clase del panel `DocumentPanel`en: 
+7. Cambie al **Inspector de identidades** y establezca la clase del panel `DocumentPanel`en: 
 
     [![](window-images/panels03.png "Establecer la clase del panel")](window-images/panels03.png#lightbox)
 8. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.

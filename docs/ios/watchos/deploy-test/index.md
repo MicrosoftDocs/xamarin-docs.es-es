@@ -4,15 +4,15 @@ description: En este documento se describe cómo implementar y probar aplicacion
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d950ceb18bd13378ced06ec7257300fc5bf4504b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120174"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284672"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementación y prueba de aplicaciones de watchos con Xamarin
 
@@ -27,10 +27,10 @@ Tanto si está implementando en una inspección de pruebas como si está cargand
 
 - En la solución:
 
-  - Compruebe que los identificadores de [agrupación y las referencias de proyecto](~/ios/watchos/get-started/installation.md) están establecidos.
-  - Compruebe que los iconos están configurados [correctamente](~/ios/watchos/app-fundamentals/icons.md).
+  - Compruebe que los [identificadores de agrupación y las referencias de proyecto](~/ios/watchos/get-started/installation.md) están establecidos.
+  - Compruebe que los iconos están [configurados correctamente](~/ios/watchos/app-fundamentals/icons.md).
   - Compruebe que los números de versión de la agrupación coinciden en todos los proyectos.
-  - Configure el archivo contitles **. plist** para los grupos de aplicaciones (si es necesario).
+  - Configure el archivo **contitles. plist** para los grupos de aplicaciones (si es necesario).
 
 - A continuación, siga las instrucciones para lo siguiente:
   - [Implemente en un Apple Watch para las pruebas](~/ios/watchos/deploy-test/device.md), o bien
@@ -74,7 +74,7 @@ Puede usar un grupo de aplicaciones para compartir datos entre la aplicación iO
 
 - Configuró el **grupo de aplicaciones** en la sección **certificados, identificadores & de perfiles** del portal para desarrolladores de Apple.
 
-- **Grupos de aplicaciones** habilitados (y proporcionado el identificador de **grupo de aplicaciones**) *tanto* en la aplicación iOS como en el identificador de la **aplicación** de la extensión Watch y en el archivo contitles **. plist**.
+- **Grupos de aplicaciones** habilitados (y proporcionado el identificador de **grupo de aplicaciones**) *tanto* en la aplicación iOS como en el identificador de la **aplicación** de la extensión Watch y en el archivo **contitles. plist**.
 
 ### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores & perfiles
 
@@ -86,7 +86,7 @@ El grupo de aplicaciones aparecerá en la lista:
 
 ![Lista de identificadores](images/appgroups-setup-sml.png)
 
-Una vez creado el grupo, se puede hacer referencia a él en la configuración del identificador de la **aplicación** . No olvide incluir tanto la aplicación iOS como los identificadores de **aplicación**de la extensión de inspección.
+Una vez creado el grupo, se puede hacer referencia a él en la configuración del identificador de la **aplicación** . No olvide incluir tanto la aplicación iOS como los **identificadores de aplicación**de la extensión de inspección.
 
 ![Configuraciones disponibles](images/appgroups-sml.png)
 
@@ -95,7 +95,7 @@ Una vez creado el grupo, se puede hacer referencia a él en la configuración de
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
 Algunas características de la aplicación (por ejemplo, Los grupos de aplicaciones) requieren que se establezcan los derechos.
-Haga doble clic para editar el archivo contitles **. plist** en estos proyectos:
+Haga doble clic para editar el archivo **contitles. plist** en estos proyectos:
 
 - proyecto de aplicación de iOS
 - Ver proyecto de extensión

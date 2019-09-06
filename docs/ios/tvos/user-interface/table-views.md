@@ -4,15 +4,15 @@ description: En este artículo se describe el diseño y el trabajo con vistas de
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199909"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288299"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla tvOS en Xamarin
 
@@ -55,7 +55,7 @@ Además, puede definir un tipo de celda de vista de tabla **personalizada** y pr
 
 Apple tiene las siguientes sugerencias para trabajar con las celdas de la vista de tabla:
 
-- **Evitar** el recorte de texto: Mantenga las líneas de texto cortas para que no se trunquen. Las palabras o frases truncadas son difíciles de analizar a través de la habitación.
+- **Evitar el recorte de texto** : Mantenga las líneas de texto cortas para que no se trunquen. Las palabras o frases truncadas son difíciles de analizar a través de la habitación.
 - **Tenga en cuenta el estado de la fila enfocada** : dado que una fila se vuelve más grande, con esquinas redondeadas en el foco, debe probar la apariencia de la celda en todos los Estados. Es posible que las imágenes o el texto se recorten o tengan un aspecto incorrecto en el estado Focused.
 - **Usar tablas modificables** si se mueven de forma moderada o se eliminan filas de la tabla, se tarda más tiempo en TvOS que iOS. Debe decidir detenidamente si esta característica agregará o distraerá de la aplicación tvOS.
 - **Crear tipos de celda personalizados cuando sea necesario** : mientras que los tipos de celda de la vista de tabla integrada son excelentes para muchas situaciones, considere la posibilidad de crear tipos de celda personalizados para información no estándar a fin de proporcionar un mayor control y presentar mejor la información al usuario.
@@ -70,7 +70,7 @@ Para comenzar, haga lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En Visual Studio para Mac, inicie un nuevo proyecto de aplicación de tvOS y seleccione**aplicación de vista única** de **tvOS** >  > y haga clic en el botón **siguiente** : 
+1. En Visual Studio para Mac, inicie un nuevo proyecto**de aplicación de** > tvOS y seleccione**aplicación de vista única** de **tvOS** > y haga clic en el botón **siguiente** : 
 
     [![](table-views-images/table02.png "Seleccionar una aplicación de vista única")](table-views-images/table02.png#lightbox)
 1. Escriba un **nombre** para la aplicación y haga clic en **siguiente**: 
@@ -101,7 +101,7 @@ Para comenzar, haga lo siguiente:
 1. Para cada **celda prototipo**, selecciónela y asigne un **identificador** único en la pestaña **Widget** del **Explorador de propiedades**. Este paso es _muy importante_ , ya que necesitará este identificador más adelante al rellenar la tabla. Por ejemplo `AttrCell`: 
 
     [![](table-views-images/table12.png "La pestaña widget")](table-views-images/table12.png#lightbox)
-1. También puede seleccionar la presentación de la celda como uno de los [tipos de celda de vista de tabla](#table-view-cell-types) predeterminados a través de la lista desplegable **estilo** o establecerlo en **personalizado** y usar el superficie de diseño para diseñar la celda arrastrando otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
+1. También puede seleccionar la presentación de la celda como uno de los [tipos de celda de vista de tabla predeterminados](#table-view-cell-types) a través de la lista desplegable **estilo** o establecerlo en **personalizado** y usar el superficie de diseño para diseñar la celda arrastrando otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
 
     [![](table-views-images/table13.png "Diseño de celda")](table-views-images/table13.png#lightbox)
 1. Asigne un **nombre** único a cada elemento de la interfaz de usuario en el diseño de la celda prototipo en la pestaña **Widget** del **Explorador de propiedades** para C# que pueda acceder a ellos más adelante en el código: 
@@ -142,7 +142,7 @@ Para comenzar, haga lo siguiente:
 1. Para cada **celda prototipo**, selecciónela y asigne un **identificador** único en la pestaña **Widget** del **Explorador de propiedades**. Este paso es _muy importante_ , ya que necesitará este identificador más adelante al rellenar la tabla. Por ejemplo `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Asignar un identificador")](table-views-images/table12-vs.png#lightbox)
-1. También puede seleccionar la presentación de la celda como uno de los [tipos de celda de vista de tabla](#table-view-cell-types) predeterminados a través de la lista desplegable **estilo** o establecerlo en **personalizado** y usar el superficie de diseño para diseñar la celda arrastrando otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
+1. También puede seleccionar la presentación de la celda como uno de los [tipos de celda de vista de tabla predeterminados](#table-view-cell-types) a través de la lista desplegable **estilo** o establecerlo en **personalizado** y usar el superficie de diseño para diseñar la celda arrastrando otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
 
     [![](table-views-images/table13-vs.png "La lista desplegable de estilo")](table-views-images/table13-vs.png#lightbox)
 1. Asigne un **nombre** único a cada elemento de la interfaz de usuario en el diseño de la celda prototipo en la pestaña **Widget** del **Explorador de propiedades** para C# que pueda acceder a ellos más adelante en el código: 

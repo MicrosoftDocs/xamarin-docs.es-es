@@ -4,15 +4,15 @@ description: En este documento se describen los distintos iconos necesarios para
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/26/2018
-ms.openlocfilehash: f65d4faa0e006517366ab6aacf3f596b18385ccb
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b3968f211ff5445e8b704bbd7897f4c46ecc2be9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120516"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292589"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Trabajar con iconos de watchos en Xamarin
 
@@ -57,7 +57,7 @@ Una vez configurados los iconos de la [aplicación primaria](~/ios/watchos/app-f
 
     ![](icons-images/newasset.png "Agregar un catálogo de recursos al proyecto")
 
-2. Haga doble clic en el archivo appicos **. appiconset/Contents. JSON.**
+2. Haga doble clic en el archivo **Appicos. appiconset/Contents. JSON.**
 
     ![](icons-images/xcassets-iconset-sml.png "Contenido de appicos")
 

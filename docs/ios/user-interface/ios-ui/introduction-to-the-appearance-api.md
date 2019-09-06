@@ -4,15 +4,15 @@ description: iOS le permite aplicar valores de propiedades visuales en un nivel 
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/15/2018
-ms.openlocfilehash: 2211897af70712f9de2dec5c7c0771c5089dad1a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b0f09a729c6998e7a728bfc3d805058e7a43a54a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655892"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287078"
 ---
 # <a name="appearance-api-in-xamarinios"></a>API de apariencia en Xamarin. iOS
 
@@ -69,7 +69,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>Usar UIAppearance en Xamarin. Forms
 
-La API de apariencia puede ser útil al [aplicar estilos a la aplicación de iOS en las](~/xamarin-forms/platform/ios/formatting.md#uiappearance) soluciones de Xamarin. Forms. Algunas líneas de la `AppDelegate` clase pueden ayudar a implementar una combinación de colores específica sin tener que crear un representador [personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+La API de apariencia puede ser útil al [aplicar estilos a la aplicación de iOS en las](~/xamarin-forms/platform/ios/formatting.md#uiappearance) soluciones de Xamarin. Forms. Algunas líneas de la `AppDelegate` clase pueden ayudar a implementar una combinación de colores específica sin tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ### <a name="custom-themes-and-uiappearance"></a>Temas personalizados y UIAppearance
 

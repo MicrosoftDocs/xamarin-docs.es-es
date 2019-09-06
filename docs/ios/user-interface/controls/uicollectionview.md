@@ -4,15 +4,15 @@ description: Las vistas de colección permiten mostrar el contenido mediante dis
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282864"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin. iOS
 
@@ -194,7 +194,7 @@ En este caso, al registrar la `AnimalCell` clase, iOS creará un nuevo `AnimalCe
 La `UICollectionView` clase utiliza un delegado de tipo `UICollectionViewDelegate` para admitir la interacción con el `UICollectionView`contenido de. Esto permite controlar:
 
 - **Selección de celdas** : determina si una celda está seleccionada.
-- Resaltado de **celdas** : determina si una celda se está tocando actualmente.
+- **Resaltado de celdas** : determina si una celda se está tocando actualmente.
 - **Menús de celda** : menú que se muestra para una celda en respuesta a un gesto largo de presionar.
 
 
@@ -452,7 +452,7 @@ En este artículo, echaremos un vistazo a la implementación de la función de a
 Como se indicó anteriormente, uno de los cambios más importantes en la vista de recopilación en iOS 9 fue la adición de una funcionalidad sencilla de arrastrar a reordenar de forma rápida.
 
 En iOS 9, la manera más rápida de agregar la reordenación a una vista de colección es usar `UICollectionViewController`.
-El controlador de vista de colección tiene `InstallsStandardGestureForInteractiveMovement` ahora una propiedad, que agrega un reconocedor de *gestos* estándar que admite arrastrar para reordenar los elementos de la colección.
+El controlador de vista de colección tiene `InstallsStandardGestureForInteractiveMovement` ahora una propiedad, que agrega un *reconocedor de gestos* estándar que admite arrastrar para reordenar los elementos de la colección.
 Dado que el valor predeterminado `true`es, solo tiene que implementar el `MoveItem` método de la `UICollectionViewDataSource` clase para admitir la función de arrastrar y volver a ordenar. Por ejemplo:
 
 ```csharp
@@ -494,7 +494,7 @@ En el **Panel de propiedades** de _CollectionViewCell_ y establezca la **clase**
 
 [![](uicollectionview-images/quick05.png "Establezca la clase en TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-Establezca la **vista** reutilizable de `Cell`la recopilación en:
+Establezca la **vista reutilizable** de `Cell`la recopilación en:
 
 [![](uicollectionview-images/quick06.png "Establecer la vista reutilizable de la colección en la celda")](uicollectionview-images/quick06.png#lightbox)
 

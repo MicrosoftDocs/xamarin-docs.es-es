@@ -4,15 +4,15 @@ description: HomeKit es el marco de trabajo de Apple para controlar los disposit
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e8acec18785ff5017aa012a646f40f8a866070f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656628"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292723"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin. iOS
 
@@ -54,7 +54,7 @@ Haga lo siguiente:
 
 1. Inicie sesión en el [portal para desarrolladores de Apple](https://developer.apple.com).
 2. Haga clic en **certificados, identificadores & perfiles**.
-3. Si todavía no lo ha hecho, haga clic en identificadores y cree un identificador para la aplicación (por `com.company.appname`ejemplo,). en caso contrario, edite el identificador existente.
+3. Si todavía no lo ha hecho, haga clic en **identificadores** y cree un identificador para la aplicación (por `com.company.appname`ejemplo,). en caso contrario, edite el identificador existente.
 4. Asegúrese de que se ha comprobado el servicio **HomeKit** para el identificador dado: 
 
     [![](homekit-images/provision01.png "Habilitar el servicio HomeKit para el identificador especificado")](homekit-images/provision01.png#lightbox)
@@ -69,7 +69,7 @@ Haga lo siguiente:
 9. Después, edite el archivo **info. plist** y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento: 
 
     [![](homekit-images/provision04.png "Establecimiento del identificador de la aplicación")](homekit-images/provision04.png#lightbox)
-10. Por último, edite el archivo contitles **. plist** y asegúrese de que se ha seleccionado el derecho **HomeKit** : 
+10. Por último, edite el archivo **contitles. plist** y asegúrese de que se ha seleccionado el derecho **HomeKit** : 
 
     [![](homekit-images/provision05.png "Habilitación del derecho HomeKit")](homekit-images/provision05.png#lightbox)
 11. Guarde los cambios en todos los archivos.
@@ -695,7 +695,7 @@ Apple ha realizado los siguientes cambios y adiciones a HomeKit para iOS 9:
 - **Scenes y Siri** -Siri tiene una compatibilidad más profunda para escenas en iOS 9 y puede reconocer el nombre de cualquier escena definida en HomeKit. Un usuario puede ejecutar una escena simplemente hablando su nombre en Siri.
 - **Categorías de accesorios** : se ha agregado un conjunto de categorías predefinidas a todos los accesorios y ayuda a identificar el tipo de accesorio que se va a agregar a un hogar o a trabajar desde dentro de la aplicación. Estas nuevas categorías están disponibles durante la instalación del accesorio.
 - **Apple Watch support** -HomeKit está ahora disponible para watchos y el Apple Watch podrá controlar los dispositivos habilitados para HomeKit sin que un iPhone esté cerca de la inspección. HomeKit para watchos admite las siguientes funcionalidades: Ver los hogares, controlar los accesorios y ejecutar escenas.
-- **Nuevo tipo** de desencadenador de evento: además de los desencadenadores de tipo de temporizador admitidos en iOS 8, iOS 9 admite ahora desencadenadores de eventos basados en el estado del accesorio (como los datos del sensor) o la ubicación geográfica. Los desencadenadores de `NSPredicates` eventos usan para establecer las condiciones para su ejecución.
+- **Nuevo tipo de desencadenador de evento** : además de los desencadenadores de tipo de temporizador admitidos en iOS 8, iOS 9 admite ahora desencadenadores de eventos basados en el estado del accesorio (como los datos del sensor) o la ubicación geográfica. Los desencadenadores de `NSPredicates` eventos usan para establecer las condiciones para su ejecución.
 - **Acceso remoto** : con acceso remoto, el usuario ahora puede controlar sus accesorios de automatización doméstica habilitados para HomeKit cuando están lejos de la casa en una ubicación remota. En iOS 8 esto solo se admitía si el usuario tuviera una tercera generación de TV de Apple en casa. En iOS 9, esta limitación se eleva y el acceso remoto se admite a través de iCloud y el protocolo de accesorio de HomeKit (HAP).
 - **Nuevas capacidades de Bluetooth de baja energía (ble)** : HomeKit admite ahora más tipos de accesorio que pueden comunicarse a través del protocolo Bluetooth de baja energía (ble). Mediante el uso de la tunelización segura de HAP, un accesorio de HomeKit puede exponer otro accesorio Bluetooth a través de Wi-Fi (si está fuera del intervalo de Bluetooth). En iOS 9, BLE los accesorios tienen compatibilidad total con las notificaciones y los metadatos.
 - **Nuevas categorías de accesorio** : Apple ha agregado las siguientes categorías de accesorio nuevas en iOS 9: Cubiertas de ventanas, puertas motorizadas y ventanas, sistemas de alarmas, sensores y conmutadores programables.

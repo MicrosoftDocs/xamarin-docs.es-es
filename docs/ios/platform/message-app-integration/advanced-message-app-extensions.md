@@ -4,15 +4,15 @@ description: En este artículo se muestran técnicas avanzadas para trabajar con
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e55e6d908bbeb9b4b42ccbcad8121a1b410b79af
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200136"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290954"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensiones de aplicación de mensajes avanzadas en Xamarin. iOS
 
@@ -25,13 +25,13 @@ Novedad de iOS 10, una extensión de aplicación de mensaje se integra con la ap
 
 Como se indicó anteriormente, una extensión de aplicación de mensaje se integra con la aplicación de **mensajes** y presenta una nueva funcionalidad al usuario. La extensión puede enviar texto, adhesivos, archivos multimedia y mensajes interactivos. Hay disponibles dos tipos de extensiones de aplicación de mensajes:
 
-- **Paquetes** de adhesivos: contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
+- **Paquetes de adhesivos** : contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
 - **aplicación IMessage** : puede presentar una interfaz de usuario personalizada dentro de la aplicación mensajes para seleccionar adhesivos, escribir texto, incluidos archivos multimedia (con conversiones de tipo opcionales) y crear, editar y enviar mensajes de interacción.
 
 Las extensiones de aplicaciones de mensajes proporcionan tres tipos de contenido principales:
 
-- **Mensajes** interactivos: son un tipo de contenido de mensaje personalizado que genera una aplicación, cuando el usuario pulsa el mensaje, la aplicación se iniciará en primer plano.
-- **Adhesivos** : son imágenes generadas por la aplicación que se pueden incluir en los mensajes enviados entre usuarios. Consulte nuestra aplicación de ejemplo del [generador](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) de helados para ver un ejemplo de implementación de una aplicación de adhesivo.
+- **Mensajes interactivos** : son un tipo de contenido de mensaje personalizado que genera una aplicación, cuando el usuario pulsa el mensaje, la aplicación se iniciará en primer plano.
+- **Adhesivos** : son imágenes generadas por la aplicación que se pueden incluir en los mensajes enviados entre usuarios. Consulte nuestra aplicación de ejemplo del [generador de helados](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) para ver un ejemplo de implementación de una aplicación de adhesivo.
 - **Otro contenido admitido** : la aplicación puede proporcionar contenido como fotos, vídeos, texto o vínculos del tipo que siempre ha sido compatible con la aplicación mensajes.
 
 Como novedad de iOS 10, la aplicación de mensaje incluye ahora su propia tienda de aplicaciones integrada y dedicada. Las aplicaciones que incluyen extensiones de aplicaciones de mensajes se mostrarán y promocionarán en este almacén. El nuevo cajón de aplicaciones de mensajes mostrará todas las aplicaciones que se han descargado de la tienda de aplicaciones de mensajes para proporcionar acceso rápido a los usuarios.
@@ -188,7 +188,7 @@ Una extensión de aplicación de mensajes se puede mostrar en uno de dos modos d
 
 Una extensión de aplicación de mensajes se puede cambiar entre estos modos mediante programación o manualmente por el usuario en cualquier momento y debe responder al instante a cualquier cambio en el modo de vista.
 
-Eche un vistazo al siguiente ejemplo de cómo controlar el cambio entre los dos modos de vista diferentes. Se necesitarán dos controladores de vista diferentes para cada Estado. Controla la vista **compacta** y `AddStickerViewController` controlará la vista expandida: `StickerBrowserViewController`
+Eche un vistazo al siguiente ejemplo de cómo controlar el cambio entre los dos modos de vista diferentes. Se necesitarán dos controladores de vista diferentes para cada Estado. Controla la vista **compacta** y `AddStickerViewController` controlará la vista **expandida:** `StickerBrowserViewController`
 
 ```csharp
 using System;
@@ -378,7 +378,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 }
 ```
 
-Opcionalmente, la aplicación podría haber usado el `WillTransition` método para controlar el cambio del modo de vista antes de que se presente al usuario (como se hace en el ejemplo anterior de icecream Builder). Para obtener más información, consulte nuestra documentación de personalización de [adhesivo adicional](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md) .
+Opcionalmente, la aplicación podría haber usado el `WillTransition` método para controlar el cambio del modo de vista antes de que se presente al usuario (como se hace en el ejemplo anterior de icecream Builder). Para obtener más información, consulte nuestra documentación de [Personalización de adhesivo adicional](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md) .
 
 ## <a name="replying-to-a-message"></a>Responder a un mensaje
 

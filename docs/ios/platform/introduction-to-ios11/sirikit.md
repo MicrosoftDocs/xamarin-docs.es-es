@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con SiriKit en iOS 11.
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656405"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286740"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>SiriKit actualizaciones en iOS 11
 
@@ -30,7 +30,7 @@ SiriKit en iOS 11 agrega estos dominios de intención nuevos y actualizados:
 Entre las otras características nuevas se incluyen estas:
 
 - [**Nombres de aplicación alternativos**](#alternativenames) : proporciona alias que ayudan a los clientes a indicar a Siri que dirija su aplicación mediante la oferta de nombres alternativos.
-- **Inicio** de los entrenamientos: proporciona la capacidad de iniciar un entrenamiento en segundo plano.
+- **Inicio de los entrenamientos** : proporciona la capacidad de iniciar un entrenamiento en segundo plano.
 
 A continuación se explican algunas de estas características. Para obtener más información sobre los demás, consulte la [documentación de SiriKit de Apple](https://developer.apple.com/documentation/sirikit).
 
@@ -109,7 +109,7 @@ El [ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/io
 
 En primer lugar, para agregar compatibilidad con SiriKit, siga estos pasos para la aplicación iOS:
 
-1. Tick **SiriKit** en el archivo contitles **. plist**.
+1. Tick **SiriKit** en el archivo **contitles. plist**.
 2. Agregue la clave **privacy-Siri Usage Description** a **info. plist**, junto con un mensaje para los clientes.
 3. Llame al `INPreferences.RequestSiriAuthorization` método en la aplicación para solicitar al usuario que permita las interacciones de Siri.
 4. Agregue SiriKit al identificador de la aplicación en el portal para desarrolladores y vuelva a crear los perfiles de aprovisionamiento para incluir el nuevo derecho.
@@ -117,7 +117,7 @@ En primer lugar, para agregar compatibilidad con SiriKit, siga estos pasos para 
 Después, agregue un nuevo proyecto de extensión a la aplicación para controlar las solicitudes de Siri:
 
 1. Haga clic con el botón derecho en la solución y elija **agregar > agregar nuevo proyecto..** ..
-2. Elija la **extensión de > de iOS >** plantilla de extensión de intents.
+2. Elija la **extensión de > de iOS > plantilla de extensión de intents** .
 3. Se agregarán dos proyectos nuevos: Intención e IntentUI. La personalización de la interfaz de usuario es opcional, por lo que el ejemplo solo incluye código en el proyecto de **intención** .
 
 El proyecto de extensión es donde se procesarán todas las solicitudes de SiriKit. Como una extensión independiente, no tiene ninguna manera de comunicarse de forma automática con la aplicación principal: esto se resuelve normalmente mediante la implementación de almacenamiento de archivos compartidos con grupos de aplicaciones.
@@ -211,7 +211,7 @@ Con los nombres de aplicación alternativos establecidos, las siguientes frases 
 - "Agregar tarea WWDC en _MonkeyTodo_"
 
 
-## <a name="troubleshooting"></a>solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Algunos errores que pueden surgir al ejecutar el ejemplo o agregar SiriKit a sus propias aplicaciones:
 

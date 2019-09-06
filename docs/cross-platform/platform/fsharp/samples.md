@@ -3,15 +3,15 @@ title: F#Ejemplos de Xamarin
 description: F#se puede usar para compilar aplicaciones de Xamarin. Este documento se vincula a varios proyectos de aplicación de Xamarin de ejemplo de iOS, Mac y Xamarin F#. Forms escritos en.
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 8c71ad269731c943060932aa30de95345e577ccf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ed9521916a9610ee8fbd06ac8a6497d28d744d90
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646142"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280575"
 ---
 # <a name="f-samples-for-xamarin"></a>F#Ejemplos de Xamarin
 

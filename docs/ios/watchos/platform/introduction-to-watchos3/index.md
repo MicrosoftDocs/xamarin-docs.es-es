@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 50278eaa6d3518b8de85685c1faf64eabac4531d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621044"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292201"
 ---
 # <a name="introduction-to-watchos-3"></a>Introducción a watchOS 3
 
@@ -25,10 +25,10 @@ En este documento se tratarán los siguientes temas:
   - Las [tareas en segundo plano](#Background-Tasks) proporcionan a la aplicación la capacidad de actualizar su información en segundo plano para que esté lista cuando el usuario la necesite.
   - Se han realizado [mejoras de complicaciones](#Complications-Enhancements) para watchos 3 que proporcionan nuevas características para las aplicaciones.
   - Los [marcos de trabajo recién disponibles](#Newly-Available-Frameworks) se han expuesto para las aplicaciones de watchos.
-  - Las [sugerencias](#Proactive-Suggestions) proactivas permiten a la aplicación Mostrar información de forma proactiva al usuario.
+  - Las [sugerencias proactivas](#Proactive-Suggestions) permiten a la aplicación Mostrar información de forma proactiva al usuario.
   - Se han realizado varias [mejoras de seguridad y privacidad](#Security-and-Privacy-Enhancements) en watchos 3.
   - Las [instantáneas y el Dock](#Snapshots-and-Dock) proporcionan al usuario acceso rápido a las aplicaciones de App watchos.
-  - Las notificaciones de [usuario](#User-Notifications) proporcionan a los usuarios notificaciones locales y remotas.
+  - Las [notificaciones de usuario](#User-Notifications) proporcionan a los usuarios notificaciones locales y remotas.
   - Se han realizado varias [mejoras del marco de conectividad de inspección](#Watch-Connectivity-Framework-Enhancements) en watchos 3.
   - Se han realizado varias [mejoras de WatchKit Framework](#WatchKit-Framework-Enhancements) en watchos 3.
   - Las mejoras de la [aplicación de entrenamiento](#Workout-App-Enhancements) ofrecen nuevas capacidades para el entrenamiento relacionado con las aplicaciones Apple Watch.
@@ -104,7 +104,7 @@ watchos 3 incluye varios marcos existentes de Apple que antes no estaban disponi
 
 watchos 3 permite que la aplicación presente de forma proactiva información al usuario en contextos determinados. Para admitir esta característica, [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) ahora incluye la `MapItem` propiedad que permite que la aplicación proporcione información de ubicación para su uso posterior por parte de otras aplicaciones.
 
-Para obtener más información, consulte la guía [de introducción a las sugerencias](~/ios/watchos/platform/proactive-suggestions.md) proactivas.
+Para obtener más información, consulte la guía [de introducción a las sugerencias proactivas](~/ios/watchos/platform/proactive-suggestions.md) .
 
 <a name="Security-and-Privacy-Enhancements" />
 

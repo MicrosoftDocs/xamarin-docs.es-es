@@ -4,15 +4,15 @@ description: En este documento se proporcionan varias sugerencias de solución d
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 323aad42832a70bf80e7a5bf3508bb9b65e77b5a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f10fb237bca92f49ac77657778ada8a47ed69c49
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655202"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292169"
 ---
 # <a name="watchos-3-troubleshooting"></a>Solución de problemas de watchos 3
 

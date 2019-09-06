@@ -3,15 +3,15 @@ title: Seguridad de la capa de transporte (TLS) 1,2
 description: En este documento se describe cómo habilitar TLS 1,2 para proyectos de Xamarin. iOS, Xamarin. Android y Xamarin. Mac. Muestra cómo hacerlo tanto en Visual Studio 2019 como en Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6175725ae3eea805680b4da81aa0458aa3f8a68c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526769"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280352"
 ---
 # <a name="transport-layer-security-tls-12"></a>Seguridad de la capa de transporte (TLS) 1,2
 
@@ -101,7 +101,7 @@ Las opciones de proyecto de Android también permiten elegir la implementación 
 Los nuevos proyectos de Xamarin tienen como valor predeterminado la implementación nativa que admite TLS 1,2 (que se recomienda para todos los proyectos); sin embargo, puede volver al código administrado si es necesario por motivos de compatibilidad.
 
 > [!IMPORTANT]
-> La opción **mono/Managed** se ha quitado de las opciones [de proyecto de iOS y Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) .
+> La opción **mono/Managed** se ha [quitado de las opciones de proyecto de iOS y Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) .
 >
 > La opción Native siempre se usa en las plataformas iOS y Mac.
 

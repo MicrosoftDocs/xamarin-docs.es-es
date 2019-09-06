@@ -2,15 +2,15 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: Guía de migración de aplicaciones de escritorio
 description: Una simple explicación de cómo desacoplar las aplicaciones de Windows Forms o WPF existentes para crear aplicaciones multiplataforma que se ejecuten en macOS, iOS, Android, así como UWP/Windows 10.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: bdea1c472d95c86037056a2905679b43e12e0468
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 2a678c2b1880cb69b1bece85ed558309aa611a62
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120378"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290342"
 ---
 # <a name="desktop-app-porting-guidance"></a>Guía de migración de aplicaciones de escritorio
 
@@ -26,7 +26,7 @@ En el caso de las aplicaciones de C# Windows Forms y WPF escritas con (o Visual 
 
 ## <a name="net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
-Visual Studio 2017 y versiones posteriores admiten el analizador de portabilidad de [.net](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([descarga para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)), que puede examinar las aplicaciones existentes e indicar la cantidad de código que se puede migrar "tal cual" a otras plataformas. Puede obtener más información al respecto desde este [vídeo de Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 y versiones posteriores admiten el [analizador de portabilidad de .net](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([descarga para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)), que puede examinar las aplicaciones existentes e indicar la cantidad de código que se puede migrar "tal cual" a otras plataformas. Puede obtener más información al respecto desde este [vídeo de Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 También se puede descargar una herramienta de línea de comandos desde el [analizador de portabilidad en github](https://github.com/Microsoft/dotnet-apiport) y se usa para proporcionar los mismos informes.
 
@@ -67,7 +67,7 @@ Es posible que también sea necesario ajustar algunas operaciones del sistema de
 
 ## <a name="tips-for-making-code-portable"></a>Sugerencias para que el código sea portátil
 
-- **Inserción** de dependencias: proporcione diferentes implementaciones para cada plataforma.
+- **Inserción de dependencias** : proporcione diferentes implementaciones para cada plataforma.
 
 - **Enfoque en capas** , ya sea MVVM, MVC, MVP o algún otro patrón que le ayude a separar el código portable del código específico de la plataforma.
 

@@ -4,15 +4,15 @@ description: La seguridad de transporte de aplicaciones (ATS) exige conexiones s
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2017
-ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dc435f486d0020ab339ebd8f537f749f44493fe0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227669"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289491"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de aplicaciones en Xamarin. iOS
 
@@ -73,9 +73,9 @@ En el caso de una aplicación existente, Apple sugiere `HTTPS` que se admita el 
 
 En el caso de una nueva aplicación de Xamarin. iOS `HTTPS` , debe usar exclusivamente al comunicarse con recursos de Internet. De nuevo, puede haber situaciones (como el uso de un servicio Web de terceros) en las que esto no sea posible y deberá dejar de usar ATS.
 
-Además, ATS exige que la comunicación de API de alto nivel se cifre mediante la versión 1,2 de TLS con confidencialidad directa. Consulte las secciones [requisitos de conexión de ATS](#ats-connection-requirements) y cifrados [compatibles con ATS](#ats-compatible-ciphers) anteriores para obtener más detalles.
+Además, ATS exige que la comunicación de API de alto nivel se cifre mediante la versión 1,2 de TLS con confidencialidad directa. Consulte las secciones [requisitos de conexión de ATS](#ats-connection-requirements) y [cifrados compatibles con ATS](#ats-compatible-ciphers) anteriores para obtener más detalles.
 
-Aunque es posible que no esté familiarizado con TLS (seguridad de la[capa de transporte](https://en.wikipedia.org/wiki/Transport_Layer_Security)), es el sucesor de SSL (capa de[sockets seguros](https://en.wikipedia.org/wiki/Transport_Layer_Security)) y proporciona una colección de protocolos criptográficos para aplicar la seguridad a través de las conexiones de red.
+Aunque es posible que no esté familiarizado con TLS (seguridad de la[capa de transporte](https://en.wikipedia.org/wiki/Transport_Layer_Security)), es el sucesor de SSL ([capa de sockets seguros](https://en.wikipedia.org/wiki/Transport_Layer_Security)) y proporciona una colección de protocolos criptográficos para aplicar la seguridad a través de las conexiones de red.
 
 El nivel de TLS está controlado por el servicio Web que está consumiendo y, por lo tanto, está fuera del control de la aplicación. `HttpClient` Tanto`ModernHttpClient` como deben usar automáticamente el nivel máximo de cifrado TLS compatible con el servidor.
 

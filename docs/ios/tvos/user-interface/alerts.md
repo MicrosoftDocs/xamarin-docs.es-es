@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con alertas de tvOS en
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291125"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabajar con alertas de tvOS en Xamarin
 
@@ -34,7 +34,7 @@ Como se indicó anteriormente, las alertas se usan para obtener la atención del
 
 Apple tiene las siguientes sugerencias para trabajar con alertas:
 
-- **Usar alertas** con moderación: las alertas interrumpen el flujo del usuario con la aplicación e interrumpen la experiencia del usuario y, por lo tanto, solo se deben usar en situaciones importantes como notificaciones de error, compras desde la aplicación y acciones destructivas.
+- **Usar alertas con moderación** : las alertas interrumpen el flujo del usuario con la aplicación e interrumpen la experiencia del usuario y, por lo tanto, solo se deben usar en situaciones importantes como notificaciones de error, compras desde la aplicación y acciones destructivas.
 - **Proporciona opciones útiles** : Si la alerta presenta opciones al usuario, debe asegurarse de que cada opción ofrezca información crítica y proporcione acciones útiles para que el usuario las realice.
 
 <a name="Alert-Titles-and-Messages" />
@@ -55,7 +55,7 @@ Apple tiene la siguiente sugerencia para agregar botones a una alerta:
 
 - **Limite dos botones** : siempre que sea posible, limite la alerta a un máximo de dos botones. Las alertas de un solo botón proporcionan información pero ninguna acción. Dos alertas de botón proporcionan una opción de acción sí/no simple.
 - **Use títulos de botón lógicos y concisos** : sencillos de uno a dos títulos de botón de Word que describen claramente el funcionamiento óptimo de la acción del botón. Para obtener más información, consulte nuestra documentación sobre [Cómo trabajar con los botones](~/ios/tvos/user-interface/buttons.md) .
-- **Marque claramente** los botones destructivos: los botones que realizan una acción destructiva (como eliminar un archivo) los marcan claramente con `UIAlertActionStyle.Destructive` el estilo.
+- **Marque claramente los botones destructivos** : los botones que realizan una acción destructiva (como eliminar un archivo) los marcan claramente con `UIAlertActionStyle.Destructive` el estilo.
 
 <a name="Displaying-an-Alert" />
 

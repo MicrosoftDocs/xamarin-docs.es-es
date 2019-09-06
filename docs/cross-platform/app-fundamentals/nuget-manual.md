@@ -3,15 +3,15 @@ title: Creación manual de paquetes NuGet para Xamarin
 description: Este documento contiene sugerencias para ayudar a compilar paquetes NuGet que tienen como destino la plataforma Xamarin. Describe los perfiles de Xamarin de paquetes de NuGet, PCL paquetes Nuget con dependencias de plataforma y vínculos a varios ejemplos de código abierto.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: cf694b54c8d2cdb33fd480d89d32b439f036ddc5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119450"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289200"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes NuGet para Xamarin
 
@@ -32,7 +32,7 @@ Las principales plataformas de destino de Xamarin que se usan hoy en día son:
 
 También hay un destino para el [Classic API](~/cross-platform/macios/unified/index.md)de iOS anterior:
 
-- Classic API MonoTouch-iOS
+- Classic API **MonoTouch** -iOS
 
 Un archivo **. nuspec** destinado a todos estos elementos tendría un aspecto similar al siguiente:
 

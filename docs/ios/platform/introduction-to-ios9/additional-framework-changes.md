@@ -4,15 +4,15 @@ description: En este documento se describen los cambios de marco de trabajo adic
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c3f140affe3d539eb07d06f50a031cd7ef469728
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197748"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292402"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -145,7 +145,7 @@ Se han realizado los siguientes cambios en la clase [LAContext](xref:LocalAuthen
 - **MaxBiometryFailures** : se ha depreciado en iOS 9.
 - **TouchIdAuthenticationAllowableReuseDuration** Obtiene o establece la cantidad de tiempo que se puede volver a usar una autenticación de Touch ID.
 - **EvaluateAccessControl** : evalúa asincrónicamente una directiva de autenticación.
-- Invalidate: invalida una autenticación de Touch ID dada.
+- **Invalidate** : invalida una autenticación de Touch ID dada.
 - **IsCredentialSet** : devuelve `true` si las credenciales están establecidas actualmente.
 - **SetCredentialType** Establece el tipo de credencial dado.
 
@@ -159,7 +159,7 @@ Apple incluye los siguientes cambios en el marco de trabajo de [MapKit](xref:Map
 - Los resultados de la búsqueda devueltos por MapKit y la clase [CLGeocoder](xref:CoreLocation.CLGeocoder) también pueden proporcionar la zona horaria del resultado.
 - Ahora puede personalizar completamente las anotaciones de mapa que presenta la aplicación iOS mediante la `DetailCalloutAccessoryView` propiedad de la clase [MKAnnotationView](xref:MapKit.MKAnnotationView) .
 
-Para más información sobre cómo trabajar con mapas y anotaciones en Xamarin. iOS y Apple [CLGeocoder Reference](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) , consulte nuestra documentación sobre las asignaciones y las superposiciones de [iOS](~/ios/user-interface/controls/ios-maps/index.md) en [MapKit](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) .
+Para más información sobre cómo trabajar con mapas y anotaciones en Xamarin. iOS y Apple [CLGeocoder Reference](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) , consulte nuestra documentación sobre las asignaciones y las [superposiciones](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) de [iOS](~/ios/user-interface/controls/ios-maps/index.md) en MapKit.
 
 ## <a name="passkit-framework-additions"></a>Adiciones de PassKit Framework
 

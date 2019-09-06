@@ -4,21 +4,21 @@ description: En este documento se describen las características de localizació
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/28/2017
-ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e394b5487b240f98310ab223371466d62a3bdf23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278882"
 ---
 # <a name="localization-in-xamarinios"></a>Localización en Xamarin. iOS
 
 _En este documento se describen las características de localización del SDK de iOS y cómo acceder a ellas con Xamarin._
 
-Consulte las codificaciones de [internacionalización](encodings.md) para obtener instrucciones sobre cómo incluir conjuntos de caracteres o páginas de códigos en aplicaciones que deben procesar datos no Unicode.
+Consulte las [codificaciones de internacionalización](encodings.md) para obtener instrucciones sobre cómo incluir conjuntos de caracteres o páginas de códigos en aplicaciones que deben procesar datos no Unicode.
 
 ## <a name="ios-platform-features"></a>características de la plataforma iOS
 
@@ -132,7 +132,7 @@ Puede haber varios archivos **. Strings** diferentes en cada directorio de idiom
 - **InfoPlist. Strings** : se permiten ciertas claves específicas en este archivo para traducir elementos como el nombre de la aplicación.
 - **Storyboard: nombre >. Strings: archivo opcional que contiene traducciones para los elementos de la interfaz de usuario de un guion gráfico. \<**
 
-La **acción de compilación** para estos archivos debe ser un **recurso**de agrupación.
+La **acción de compilación** para estos archivos debe ser un **recurso de agrupación**.
 
 #### <a name="strings-file-format"></a>. Strings (formato de archivo)
 
@@ -240,7 +240,7 @@ Short,Short: 7/8/15 10:26
 Medium,None: 7/8/2015
 ```
 
-Consulte la documentación de los formateadores de [fecha](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) de Apple para obtener más información. Al probar el formato de fecha y hora que depende de la configuración regional, Compruebe la configuración de idioma y **región** de **iPhone** .
+Consulte la documentación de los [formateadores de fecha](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) de Apple para obtener más información. Al probar el formato de fecha y hora que depende de la configuración regional, Compruebe la configuración de idioma y **región** de **iPhone** .
 
 <a name="rtl" />
 

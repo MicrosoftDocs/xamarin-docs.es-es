@@ -4,15 +4,15 @@ description: En este artículo se proporciona una introducción al uso de guione
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: afaba327299461af6b71846a39eb6c455125feae
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 722e09cc292bad682a49ee0cba4ff0ca0f39a844
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620386"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291644"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a los guiones gráficos en Xamarin. Mac
 
@@ -80,7 +80,7 @@ En tiempo de diseño (al diseñar la interfaz de usuario en la Interface Builder
 
 - **Scenes** , que se componen de:
   - **Controlador de vista** : que define las relaciones entre las vistas y los datos que las admiten.
-  - **Vistas y** subvistas: los elementos reales que componen la interfaz de usuario.
+  - **Vistas y subvistas** : los elementos reales que componen la interfaz de usuario.
   - **Contención objetos segue** : que define las relaciones de elementos primarios y secundarios entre las escenas.
 - **Objetos segue de presentación** : que definen modos de presentación individuales. 
 

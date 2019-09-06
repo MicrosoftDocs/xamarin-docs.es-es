@@ -3,15 +3,15 @@ title: 'Caso práctico de aplicación multiplataforma: Tasky'
 description: En este documento se describe cómo se ha diseñado la aplicación de ejemplo portable de tareas y se ha creado como una aplicación móvil multiplataforma. Se describen los requisitos de la aplicación, la interfaz, el modelo de datos, la funcionalidad básica, la implementación, etc.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 38f4e079529bec0dfc721d0c37686a6d90533b7e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527022"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281209"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Caso práctico de aplicación multiplataforma: Tasky
 

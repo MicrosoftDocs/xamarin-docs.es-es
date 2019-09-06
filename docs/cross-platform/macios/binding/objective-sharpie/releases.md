@@ -3,15 +3,15 @@ title: Historial de versiones de Objective Sharpie
 description: En este documento se describe el historial de versiones de Objective Sharpie, la herramienta que se usa para C# automatizar la creación de enlaces a código de Objective-C.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 86c9f46064b66dc31f805e830309cb061a78a2c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509647"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290855"
 ---
 # <a name="objective-sharpie-release-history"></a>Historial de versiones de Objective Sharpie
 
@@ -29,7 +29,7 @@ ms.locfileid: "68509647"
 
 * Compatibilidad con Xcode 8 beta 4, iOS 10, macOS 10,12, tvOS 10 y watchos 3.
 * Actualizado a la última compilación maestra de Clang (2016-08-02)
-* [Conserva las opciones de envío](https://twitter.com/Symbiatch/status/760373403878559744) de `sharpie pod bind` telemetría de a `sharpie bind`.
+* [Conserva las opciones de envío de telemetría](https://twitter.com/Symbiatch/status/760373403878559744) de `sharpie pod bind` a `sharpie bind`.
 
 ## <a name="32-june-14-2016"></a>3,2 (14 de junio de 2016)
 

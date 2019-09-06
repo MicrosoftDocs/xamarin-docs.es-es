@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con CloudKit en Xamari
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/11/2016
-ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 09275517a1d081073ab471d1e8c993dc232a4385
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227828"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292442"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin. iOS
 
@@ -54,16 +54,16 @@ En el momento de redactar este documento, Apple proporciona inicialmente CloudKi
 Para que una aplicación de Xamarin pueda usar el marco de trabajo de CloudKit, la aplicación se debe aprovisionar correctamente como se detalla en las guías [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) y [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
 1. Abra el proyecto en Visual Studio para Mac o Visual Studio.
-2. En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el **identificador** de la agrupación coincide con el que se definió en **ID. de aplicación** creado como parte de la configuración de aprovisionamiento:
+2. En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el identificador de la **agrupación** coincide con el que se definió en **ID. de aplicación** creado como parte de la configuración de aprovisionamiento:
 
     [![](intro-to-cloudkit-images/image26a.png "Escriba el identificador de paquete")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
-3. Desplácese hacia abajo hasta la parte inferior del archivo **info. plist** y seleccione **modos en segundo plano habilitados**, **actualizaciones de ubicación** y notificaciones **remotas**:
+3. Desplácese hacia abajo hasta la parte inferior del archivo **info. plist** y seleccione **modos en segundo plano habilitados**, **actualizaciones de ubicación** y **notificaciones remotas**:
 
     [![](intro-to-cloudkit-images/image27a.png "Seleccionar modos en segundo plano habilitados, actualizaciones de ubicación y notificaciones remotas")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4. Haga clic con el botón derecho en el proyecto de iOS en la solución y seleccione **Opciones**.
 5. Seleccione **firma de lote de iOS**, seleccione la **identidad del desarrollador** y el **Perfil de aprovisionamiento** que creó anteriormente.
-6. Asegúrese de que el archivo contitles **. plist** incluye **Habilitar iCloud** , **almacenamiento de clave-valor** y **CloudKit** .
+6. Asegúrese de que el archivo **contitles. plist** incluye **Habilitar iCloud** , **almacenamiento de clave-valor** y **CloudKit** .
 7. Asegúrese de que el **contenedor ubicuidad** existe para la aplicación (como se creó anteriormente). Ejemplo: `iCloud.com.your-company.CloudKitAtlas`
 8. Guarde los cambios en el archivo.
 
@@ -78,7 +78,7 @@ Antes de implementar CloudKit en una aplicación de Xamarin iOS, este artículo 
 2. **Bases de datos** : públicas y privadas están disponibles para la aplicación.
 3. **Registros** : mecanismo en el que los datos estructurados se mueven hacia y desde CloudKit.
 4. **Zonas de registro** : son grupos de registros.
-5. Los identificadores de **registro** : están totalmente normalizados y representan la ubicación específica del registro.
+5. Los **identificadores de registro** : están totalmente normalizados y representan la ubicación específica del registro.
 6. **Referencia** : proporcione relaciones de elementos primarios y secundarios entre los registros relacionados de una base de datos determinada.
 7. **Activos** : permite cargar archivos de datos grandes y no estructurados en iCloud y asociarlos a un registro determinado.
 
@@ -824,7 +824,7 @@ Haga lo siguiente:
 
     [![](intro-to-cloudkit-images/shipping01.png "Compilar la aplicación para su lanzamiento")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
-2. En el menú compilar, seleccione **archivar**:
+2. En el menú **compilar** , seleccione **archivar**:
 
     [![](intro-to-cloudkit-images/shipping02.png "Seleccionar archivo")](intro-to-cloudkit-images/shipping02.png#lightbox)
 

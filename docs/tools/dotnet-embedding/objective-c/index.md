@@ -3,15 +3,15 @@ title: Compatibilidad con Objective-C
 description: En este documento se proporciona una descripción de la compatibilidad con Objective-C en la inserción de .NET. Describe el recuento automático de referencias, NSString, protocolos, protocolo NSObject, excepciones, etc.
 ms.prod: xamarin
 ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 0053bdf4e34f12accc59bde36c04404a19c6d54b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8798e0acf7b1184c64c7012b2f724e2fa7d2c816
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227803"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292762"
 ---
 # <a name="objective-c-support"></a>Compatibilidad con Objective-C
 

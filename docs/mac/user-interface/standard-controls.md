@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con los controles está
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e5868e2cfe9a054e84eeb67432a01c2d98b1c3e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648347"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292242"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles estándar en Xamarin. Mac
 
@@ -57,7 +57,7 @@ Hay un subconjunto de controles AppKit que incluyen un estilo de presentación q
 - **Control segmentado redondeado con textura** -a `NSSegmentedControl` con un estilo de `NSSegmentStyleTexturedRounded`.
 - **Control segmentado redondeado con textura** -a `NSSegmentedControl` con un estilo de `NSSegmentStyleSeparated`.
 - **Menú emergente** `NSPopUpButton` con textura redonda: con un estilo de. `NSTexturedRoundedBezelStyle`
-- **Menú** desplegable de textura redondeada: `NSPopUpButton` con un estilo de `NSTexturedRoundedBezelStyle`.
+- Menú desplegable de **textura redondeada** : `NSPopUpButton` con un estilo de `NSTexturedRoundedBezelStyle`.
 - **Barra de búsqueda** : `NSSearchField`un.
 
 Apple sugiere las siguientes directrices al trabajar con controles AppKit en un marco de ventana:
@@ -93,7 +93,7 @@ Una vez que se ha incluido un control en la interfaz de usuario, use el **Editor
 
 [![](standard-controls-images/edit04.png "Establecer las restricciones")](standard-controls-images/edit04.png#lightbox)
 
-Use las comillas **rojas** alrededor del exterior del cuadro **Autoresizing** _para ajustar_ un control a una ubicación determinada (x, y). Por ejemplo: 
+Use las comillas **rojas** alrededor del exterior del cuadro **Autoresizing** para ajustar un _control a una_ ubicación determinada (x, y). Por ejemplo: 
 
 [![](standard-controls-images/edit05.png "Editar una restricción")](standard-controls-images/edit05.png#lightbox)
 
@@ -195,7 +195,7 @@ namespace AppKit
 
 Donde la `[Register("SourceListView")]` instrucción expone la `SourceListView` clase a Objective-C para que se pueda usar en Interface Builder. Para obtener más información, consulte la sección [exposición C# de clases o métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en el que `Register` se `Export` explican los comandos y que se C# usan para conectar las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
 
-Con el código anterior en su lugar, puede arrastrar un control AppKit, del tipo base que está extendiendo, a la superficie de diseño (en el ejemplo siguiente, una **lista de origen**), cambiar al **Inspector** de identidades y establecer la **clase personalizada** en el nombre que expuesto a Objective-C (ejemplo `SourceListView`):
+Con el código anterior en su lugar, puede arrastrar un control AppKit, del tipo base que está extendiendo, a la superficie de diseño (en el ejemplo siguiente, una **lista de origen**), cambiar al **Inspector de identidades** y establecer la **clase personalizada** en el nombre que expuesto a Objective-C (ejemplo `SourceListView`):
 
 [![](standard-controls-images/edit10.png "Establecer una clase personalizada en Xcode")](standard-controls-images/edit10.png#lightbox)
 
@@ -300,7 +300,7 @@ DisclosureButton.Activated += (sender, e) => {
 Donde `NSCellStateValue` puede ser:
 
 - **Activado** : el botón se inserta o se selecciona el control (por ejemplo, una marca de verificación en una casilla).
-- Desactivado: el botón no está presionado o el control no está seleccionado.
+- **Desactivado** : el botón no está presionado o el control no está seleccionado.
 - **Mezclado** : una combinación de Estados **de on** y **OFF** .
 
 <a name="Mark-a-Button-as-Default-and-Set-Key-Equivalent" />
@@ -337,7 +337,7 @@ AdjustTime.Activated += (sender, e) => {
 Donde `NSCellStateValue` puede ser:
 
 - **Activado** : el botón se inserta o se selecciona el control (por ejemplo, una marca de verificación en una casilla).
-- Desactivado: el botón no está presionado o el control no está seleccionado.
+- **Desactivado** : el botón no está presionado o el control no está seleccionado.
 - **Mezclado** : una combinación de Estados **de on** y **OFF** .
 
 Para seleccionar un botón de un grupo de botones de radio, exponga el botón de radio para seleccionar como una `State` salida y establecer su propiedad. Por ejemplo:
@@ -473,7 +473,7 @@ partial void ItemOne (Foundation.NSObject sender) {
 }
 ```
 
-Para obtener más información sobre cómo trabajar con menús y controles de menú, vea la documentación sobre los [menús](~/mac/user-interface/menu.md) y el [botón emergente y las listas](~/mac/user-interface/menu.md) desplegables.
+Para obtener más información sobre cómo trabajar con menús y controles de menú, vea la documentación sobre los [menús](~/mac/user-interface/menu.md) y el [botón emergente y las listas desplegables](~/mac/user-interface/menu.md) .
 
 <a name="Working_with_Selection_Controls" />
 

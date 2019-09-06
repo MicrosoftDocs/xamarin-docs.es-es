@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: 64b35588afa06a6a8f4a206f10827409f9de316f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: c7deda17a7a4936f000fbfce285b3dc3932795e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645233"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292279"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso de JSON para crear una interfaz de usuario en Xamarin. iOS
 

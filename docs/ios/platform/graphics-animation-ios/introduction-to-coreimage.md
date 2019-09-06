@@ -4,15 +4,15 @@ description: La imagen principal es un nuevo marco de trabajo incluido en iOS 5 
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a537926ab28bc355af5c5c4993ccff4a736b15aa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527847"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288572"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen básica en Xamarin. iOS
 

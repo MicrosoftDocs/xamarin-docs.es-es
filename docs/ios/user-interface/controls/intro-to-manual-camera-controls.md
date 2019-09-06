@@ -4,15 +4,15 @@ description: En este documento se describe cómo se puede usar el marco de AVFou
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6f60b52d4fd29aacf319f9de94051e28c9876e33
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6b7868475426b7e8536030ce9e35812db828b175
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226699"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288706"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de cámara manuales en Xamarin. iOS
 
@@ -303,7 +303,7 @@ Al trabajar con el foco, hay algunos términos con los que el desarrollador debe
 - **Profundidad de campo** : la distancia entre los objetos enfocados más cercanos y más alejados.
 - **Macro** : es el extremo cercano del espectro de foco y es la distancia más cercana a la que se puede centrar la lente.
 - **Infinity** : este es el extremo del espectro de foco y es la distancia más lejana a la que se puede centrar la lente.
-- **Distancia** de hiperfocalización: este es el punto en el espectro de foco, donde el objeto más alejado del marco está justo al final del foco. En otras palabras, esta es la posición focal que maximiza la profundidad del campo.
+- **Distancia de hiperfocalización** : este es el punto en el espectro de foco, donde el objeto más alejado del marco está justo al final del foco. En otras palabras, esta es la posición focal que maximiza la profundidad del campo.
 - **Posición del objetivo** : es lo que controla todos los demás términos. Es la distancia de la lente desde el sensor y, por tanto, el controlador de foco.
 
 
@@ -516,7 +516,7 @@ Antes de analizar los detalles del control de la exposición en una aplicación 
 
 Los tres elementos básicos que se reúnen para controlar la exposición son:
 
-- **Velocidad** de obturación: es el período de tiempo que está abierto el obturador para que se ilumine en el sensor de cámara. Cuanto más corta sea el obturador abierto, menos claro es dejar que la imagen sea más nítida (menos el desenfoque de movimiento). Cuanto más tiempo esté abierto el obturador, mayor será la luz y más desenfoque de movimiento que se produzca.
+- **Velocidad de obturación** : es el período de tiempo que está abierto el obturador para que se ilumine en el sensor de cámara. Cuanto más corta sea el obturador abierto, menos claro es dejar que la imagen sea más nítida (menos el desenfoque de movimiento). Cuanto más tiempo esté abierto el obturador, mayor será la luz y más desenfoque de movimiento que se produzca.
 - **Asignación ISO** : se trata de un término que se toma prestado de la fotografía de la película y hace referencia a la confidencialidad de los productos químicos de la película que se van a aclarar. Los valores ISO bajos de la película tienen menos grano y una reproducción de color más fina. los valores ISO bajos de los sensores digitales tienen menos ruido del sensor pero menos brillo. Cuanto mayor sea el valor ISO, más brillante será la imagen, pero con más ruido de sensor. "ISO" en un sensor digital es una medida de [ganancia electrónica](https://en.wikipedia.org/wiki/Gain), no de una característica física.
 - **Abertura de lente** : es el tamaño de la apertura de la lente. En todos los dispositivos iOS, la abertura de la lente es fija, por lo que los únicos dos valores que se pueden usar para ajustar la exposición son la velocidad de obturación e ISO.
 
@@ -1134,9 +1134,9 @@ Con la captura entre corchetes de iOS 8, una aplicación puede establecer valore
 
 De nuevo, la captura entre corchetes es una ráfaga de imágenes fijas tomadas con distintos valores de la imagen a la imagen. Los tipos de captura entre corchetes disponibles son:
 
-- Corchete de **exposición automática** , donde todas las imágenes tienen una cantidad de sesgo variable.
-- Corchete de **exposición manual** , donde todas las imágenes tienen una velocidad de obturador variable (duración) y una cantidad ISO.
-- Corchete de **ráfaga simple** : una serie de imágenes fijas tomadas en una sucesión rápida.
+- **Corchete de exposición automática** , donde todas las imágenes tienen una cantidad de sesgo variable.
+- **Corchete de exposición manual** , donde todas las imágenes tienen una velocidad de obturador variable (duración) y una cantidad ISO.
+- **Corchete de ráfaga simple** : una serie de imágenes fijas tomadas en una sucesión rápida.
 
 
 ### <a name="new-bracketed-capture-controls-in-ios-8"></a>Nuevos controles de captura entre corchetes en iOS 8

@@ -4,15 +4,15 @@ description: En este artículo se tratan las nuevas mejoras de juegos que propor
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e647169a9059edab3593ec2986e16358b4e574aa
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: fa78a596495b22ebb2c8b148aadb76261845ccdc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065564"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281261"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>API de juegos de iOS en Xamarin. iOS
 
@@ -396,7 +396,7 @@ El marco de trabajo de MetalKit proporciona un conjunto de características y cl
 2. Acceso sencillo a los recursos basados en e/s de modelo para el control de modelos específicos de metal. Estas características se han optimizado para proporcionar una transferencia de datos eficaz entre mallas de e/s de modelo y búferes de metal.
 3. Vistas de metal predefinidas y administración de vistas que reducen en gran medida la cantidad de código necesario para mostrar las representaciones de gráficos en una aplicación de iOS.
 
-Para obtener más información sobre MetalKit, consulte la guía de [referencia de MetalKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356)de Apple, [Guía de programación de metal](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), referencia del marco de [metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) y sombreado de [metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
+Para obtener más información sobre MetalKit, consulte la guía de [referencia de MetalKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356)de Apple, [Guía de programación de metal](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), referencia del marco de [metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) y [sombreado de metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
 
 ### <a name="metal-performance-shaders-framework"></a>Marco de sombreadores de rendimiento de metal
 
@@ -410,7 +410,7 @@ El marco del sombreador de rendimiento de metal proporciona un conjunto de sombr
 - **Detección de Sobel Edge** (`MPSImageSobel`)
 - **Histograma de imagen** (`MPSImageHistogram`)
 
-Para obtener más información, consulte la [Guía del lenguaje](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)de sombreado de metal de Apple.
+Para obtener más información, consulte la [Guía del lenguaje de sombreado de metal](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)de Apple.
 
 ## <a name="introducing-model-io"></a>Presentación de e/s de modelo
 

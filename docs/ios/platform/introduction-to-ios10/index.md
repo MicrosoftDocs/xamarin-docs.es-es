@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: edc585364df2e0b2129135e7bf5977c33a77a6e0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 465c8df864669ad47acd47ae380574e247a0acd6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647424"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292864"
 ---
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
 
@@ -52,7 +52,7 @@ Además, las extensiones de aplicación de teclado de terceros tienen las siguie
 - La nueva `DocumentInputMode` propiedad de la `UITextDocumentProxy` clase puede determinar el idioma de entrada de un documento y permitir que la extensión de teclado se alinee con ese idioma.
 - El nuevo `HandleInputModeList` método permite que la extensión de teclado muestre el menú de selector de teclado del sistema en respuesta a la tecla de globo terráqueo que se está punteando.
 
-Para obtener más información, consulte la [Introducción a las extensiones](~/ios/platform/extensions.md), la [integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md), [Introducción a las sugerencias](~/ios/platform/search/proactive-suggestions.md)proactivas, [Introducción a SiriKit](~/ios/platform/sirikit/index.md), [Introducción a](~/ios/platform/user-notifications/index.md) las notificaciones de usuario y Apple [ Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Para obtener más información, consulte la [Introducción a las extensiones](~/ios/platform/extensions.md), la [integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md), [Introducción a las sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md), [Introducción a SiriKit](~/ios/platform/sirikit/index.md), [Introducción a las notificaciones de usuario](~/ios/platform/user-notifications/index.md) y Apple [ Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
 ## <a name="app-search-enhancements"></a>Mejoras en las búsquedas de aplicaciones
 
@@ -99,7 +99,7 @@ Para obtener más información, consulte la guía [de introducción a Callkit](~
 
 iOS 10 permite la inclusión de una extensión de aplicación de mensajes en la solución de Xamarin. iOS que se integra con la aplicación de **mensajes** y presenta una nueva funcionalidad al usuario. La extensión puede enviar texto, adhesivos, archivos multimedia y mensajes interactivos. Hay disponibles dos tipos de extensiones de aplicación de mensajes:
 
-- **Paquetes** de adhesivos: contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
+- **Paquetes de adhesivos** : contiene una colección de adhesivos que el usuario puede Agregar a un mensaje. Los paquetes de adhesivos se pueden crear sin necesidad de escribir ningún código.
 - **aplicación IMessage** : puede presentar una interfaz de usuario personalizada dentro de la aplicación mensajes para seleccionar adhesivos, escribir texto, incluidos archivos multimedia (con conversiones de tipo opcionales) y crear, editar y enviar mensajes de interacción.
 
 Para obtener más información, consulte la guía de [integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md) .
@@ -129,7 +129,7 @@ iOS 10 presenta nuevas formas de impulsar la interacción con una aplicación, y
 
 Una aplicación expone esta funcionalidad al sistema mediante una colección de tecnologías como [NSUserActivity](xref:Foundation.NSUserActivity), marcado Web, Spotlight principal, MapKit, Media Player y UIKit.
 
-Para obtener más información, consulte la guía [de introducción a las sugerencias](~/ios/platform/search/proactive-suggestions.md) proactivas.
+Para obtener más información, consulte la guía [de introducción a las sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md) .
 
 ## <a name="request-app-review"></a>Solicitud de revisión de aplicaciones
 
@@ -147,7 +147,7 @@ Para obtener más información, consulte nuestra guía de [mejoras de seguridad 
 
 ## <a name="sirikit"></a>SiriKit
 
-Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los **nuevos marcos** de **interfaz de usuario** de intents y intents.
+Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los **nuevos marcos** de interfaz de usuario de intents y **intents** .
 
 SiriKit admite los siguientes dominios de servicio:
 
@@ -180,7 +180,7 @@ Además, la aplicación o la extensión pueden recibir (y potencialmente modific
 
 El marco de trabajo de la interfaz de usuario de notificaciones de usuario permite personalizar la apariencia de las notificaciones locales y remotas cuando se presentan al usuario.
 
-Para obtener más información, consulte la guía de la plataforma de notificaciones de [usuario](~/ios/platform/user-notifications/index.md) .
+Para obtener más información, consulte la guía de la [plataforma de notificaciones de usuario](~/ios/platform/user-notifications/index.md) .
 
 ## <a name="video-subscriber-account"></a>Cuenta de suscriptor de vídeo
 
@@ -223,7 +223,7 @@ Las siguientes API están desusadas en iOS 10:
 - Los símbolos de [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) relacionados con el contenido omnipresente están desusados.
 - `ADBannerView`, `ADInterstitialAd` y los símbolos relacionados en la clase [UIViewController](xref:UIKit.UIViewController) están desusados.
 - Los símbolos de [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) relacionados con los valores de punto flotante están desusados.
-- Las `UILocalNotification`clases `UIMutableUserNotificationAction`,, `UIMutableUserNotificationCategory`, ydeUIKithan`UIUserNotificationCategory`quedado endesuso.`UIUserNotificationAction` `UIUserNotificationSettings` Use el marco de trabajo de notificaciones de [usuario](#user-notifications) en su lugar.
+- Las `UILocalNotification`clases `UIMutableUserNotificationAction`,, `UIMutableUserNotificationCategory`, ydeUIKithan`UIUserNotificationCategory`quedado endesuso.`UIUserNotificationAction` `UIUserNotificationSettings` Use el marco de trabajo de [notificaciones de usuario](#user-notifications) en su lugar.
 - Los `HandleActionForLocalNotification`métodos `HandleActionForRemoteNotification` ,y`DidReceiveRemoteNotification`WatchKit han quedado desusados. `DidReceiveLocalNotification` Use los `HandleActionForNotification` métodos `DidReceiveNotification` y en su lugar.
 - Los `DidReceiveLocalNotification` métodos `DidReceiveRemoteNotification` y de [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) han quedado en desuso. Cree una instancia de [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) que implemente los métodos adecuados y asígnela a la `Delegate` propiedad del objeto [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) .
 - La **aplicación Game Center** está en desuso y se ha quitado de iOS. Si la aplicación usa GameKit, _debe_ presentar su propia interfaz para mostrar las características de GameKit, como los marcadores, etc.

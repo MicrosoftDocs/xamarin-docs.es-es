@@ -1,47 +1,47 @@
 ---
 title: Introducción a watchOS 5
-description: Este documento proporciona una descripción detallada de algunas watchOS 5 API para Xamarin.
+description: En este documento se proporciona una descripción de alto nivel de algunas API de watchos 5 para Xamarin.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e873d476e38c91bad0db805d53e2c396f4ffb9dd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61222863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282040"
 ---
 # <a name="introduction-to-watchos-5"></a>Introducción a watchOS 5
 
-Este documento proporciona una descripción detallada de algunas watchOS 5 API.
+En este documento se proporciona una descripción de alto nivel de algunas API de watchos 5.
 
-Para empezar a crear aplicaciones de 5 watchOS con Xamarin, consulte el [Guía de introducción](~/ios/platform/introduction-to-ios12/get-started.md)
+Para empezar a crear aplicaciones de watchos 5 con Xamarin, consulte la [Guía de introducción](~/ios/platform/introduction-to-ios12/get-started.md) .
 
 ## <a name="workout-improvements"></a>Mejoras de entrenamiento
 
-La API de entrenamiento en watchOS 5 ofrecen nuevas características para la recopilación de datos de entrenamiento, guardando entrenamientos a HealthKit, continuar automáticamente con el ejercicio después de una aplicación se bloquea y trabajar con una serie de datos relacionados de cantidad.
+Las API de entrenamiento en watchos 5 proporcionan nuevas características para la recopilación de datos de entrenamiento, el ahorro de entrenamientos en HealthKit, la continuación automática de un entrenamiento después de que una aplicación se bloquea y el trabajo con una serie de datos de cantidad relacionados.
 
 ## <a name="siri-shortcuts"></a>Métodos abreviados de Siri
 
-En watchOS 5, la pantalla del reloj Siri abreviados ese contenido de la aplicación expuesta y funcionalidad a los usuarios en el momento conveniente. Aprende Siri con el tiempo para mostrar los métodos abreviados de relevantes cuando están más probables que se usará.
+En watchos 5, la cara de inspección de Siri muestra los accesos directos que muestran el contenido y la funcionalidad de la aplicación a los usuarios en momentos prácticos. Siri aprende con el tiempo para mostrar los accesos directos relevantes cuando es más probable que se usen.
 
-## <a name="background-audio-mode"></a>Modo de audio en segundo plano
+## <a name="background-audio-mode"></a>Modo de audio de fondo
 
-watchOS 5 hace posible que las aplicaciones de terceros reproducir audio en segundo plano a través del marco de AV Foundation.
+watchos 5 permite a las aplicaciones de terceros reproducir audio en segundo plano a través del marco AV Foundation.
 
-## <a name="movement-disorder-api"></a>Movimiento trastorno API
+## <a name="movement-disorder-api"></a>API de trastorno de movimiento
 
-La API de movimiento trastorno, parte del marco en watchOS 5, entre otras CoreMotion permite a las aplicaciones watchOS supervisión, registro y consulta tremor y dyskinesia síntomas relacionados con la enfermedad de Parkinson.
+La API de trastorno de movimiento, parte del marco de trabajo de CoreMotion en watchos 5, permite que las aplicaciones de watchos supervisen, registren y consulten los síntomas de los dyskinesia relacionados con la enfermedad de Parkinson.
 
 ## <a name="natural-language-framework"></a>Marco de lenguaje natural
 
-El marco de lenguaje Natural permite que las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, puede usarse para identificar las partes de la oración y determinar el idioma que se representa mediante un bloque de texto.
+El marco de lenguaje natural permite a las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, se puede usar para identificar partes de la voz y determinar el idioma representado por un bloque de texto.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [watchOS: desarrollador de Apple (Apple)](https://developer.apple.com/watchOS/)
-- [Novedades de watchOS (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/206/)
-- [Inspección (Apple)](https://www.apple.com/watch/)
+- [watchos: Apple Developer (Apple)](https://developer.apple.com/watchOS/)
+- [Novedades de watchos (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/206/)
+- [Ver (Apple)](https://www.apple.com/watch/)

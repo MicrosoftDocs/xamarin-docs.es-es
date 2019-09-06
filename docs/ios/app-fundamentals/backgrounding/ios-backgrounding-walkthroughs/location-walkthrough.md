@@ -4,15 +4,15 @@ description: En este documento se proporciona un tutorial sobre cómo usar la in
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e9cfdc32f5e679216781abda1cf718a1c1a186ae
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b95f60676a1c58463fc6e384ea3738122a1c76fe
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620714"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286824"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin. iOS
 

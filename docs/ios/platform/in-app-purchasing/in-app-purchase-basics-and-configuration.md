@@ -4,15 +4,15 @@ description: En este documento se describen las compras desde la aplicación en 
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c24c0f3a57847a7ecf1a1410a1745419517e0c6
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198859"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288584"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Conceptos básicos y configuración de compras desde la aplicación en Xamarin. iOS
 
@@ -69,7 +69,7 @@ No podrá probar ninguna funcionalidad de StoreKit hasta que tenga un contrato d
 
 ### <a name="ios-provisioning-portal"></a>Portal de aprovisionamiento de iOS
 
-Las nuevas aplicaciones se configuran en la sección identificadores de **aplicaciones** del **portal de aprovisionamiento de iOS**. Para crear un nuevo identificador de aplicación, vaya al [centro de usuarios del portal de aprovisionamiento de iOS](https://developer.apple.com/membercenter/index.action), vaya a **certificados, identificadores y perfiles** sección del portal y haga clic en identificadores en *aplicaciones iOS*. A continuación, haga clic en "+" en la parte superior derecha para generar un nuevo identificador de aplicación.
+Las nuevas aplicaciones se configuran en la sección **identificadores de aplicaciones** del **portal de aprovisionamiento de iOS**. Para crear un nuevo identificador de aplicación, vaya al [centro de usuarios del portal de aprovisionamiento de iOS](https://developer.apple.com/membercenter/index.action), vaya a **certificados, identificadores y perfiles** sección del portal y haga clic en **identificadores** en *aplicaciones iOS*. A continuación, haga clic en "+" en la parte superior derecha para generar un nuevo identificador de aplicación.
 
 
 El formulario para crear nuevos **identificadores de aplicación**
@@ -85,7 +85,7 @@ Escriba algo apropiado para la *Descripción*, de modo que pueda identificar fá
 Puede usar cualquier cadena que desee para su **identificador de lote** (siempre que sea único en su cuenta); sin embargo, Apple recomienda seguir el formato de DNS inverso en lugar de usar cualquier cadena arbitraria. La aplicación de ejemplo que acompaña a este artículo usa com. Xamarin. storekit. Testing para el identificador de paquete, pero sería igualmente válido usar un identificador como my_store_example (aunque Apple no lo recomiende).
 
 > [!IMPORTANT]
-> Apple también permite agregar asteriscos comodín al final de un **identificador de paquete** para que se pueda usar un único identificador de aplicación para varias aplicaciones. sin embargo, los identificadores de aplicación de la _tarjeta no se pueden usar para in-AppPurchase_. Un identificador de lote de tarjetas comodín de ejemplo podría ser com. Xamarin. *
+> Apple también permite agregar asteriscos comodín al final de un **identificador de paquete** para que se pueda usar un único identificador de aplicación para varias aplicaciones. sin embargo, los _identificadores de aplicación de la tarjeta no se pueden usar para in-AppPurchase_. Un identificador de lote de tarjetas comodín de ejemplo podría ser com. Xamarin. *
 
 #### <a name="enabling-app-services"></a>Habilitar App Services
 
@@ -144,7 +144,7 @@ Hay cinco tipos de productos de compra desde la aplicación que puede ofrecer:
 
 1. **Consumible** : cosas que se "usan", como la moneda del juego que el jugador puede gastar. Si el usuario realiza una copia de seguridad o una restauración, o si se actualiza su dispositivo, no se restaura también una transacción consumible (lo que haría que el reproductor se conferira la misma ventaja). El código de aplicación debe asegurarse de proporcionar el ' elemento consumible ' en cuanto se complete la transacción.
 1. **No consumible** : productos que el usuario posee una vez comprados, como un problema de la revista digital o un nivel de juego.
-1. Suscripciones renovables automáticamente: al igual que una suscripción de revista del mundo real, al final del período de suscripción, Apple cobra automáticamente el cliente de nuevo y amplía el período de suscripción, siempre o hasta que el cliente lo cancela explícitamente. Este es el método de pago preferido para las aplicaciones de NewsStand (de hecho, las aplicaciones deben admitir este método de pago para su aprobación para la distribución de NewsStand).
+1. **Suscripciones renovables** automáticamente: al igual que una suscripción de revista del mundo real, al final del período de suscripción, Apple cobra automáticamente el cliente de nuevo y amplía el período de suscripción, siempre o hasta que el cliente lo cancela explícitamente. Este es el método de pago preferido para las aplicaciones de NewsStand (de hecho, las aplicaciones deben admitir este método de pago para su aprobación para la distribución de NewsStand).
 1. **Suscripción gratuita** : solo se puede ofrecer en aplicaciones habilitadas para NewsStand y permite que el cliente tenga acceso al contenido de la suscripción en todos sus dispositivos. Las suscripciones gratuitas nunca expiran.
 1. **Suscripción sin renovación** : debe usarse para vender acceso limitado de tiempo a contenido estático, como el acceso de un mes a un archivo de fotografías.
 

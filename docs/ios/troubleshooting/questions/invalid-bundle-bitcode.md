@@ -1,23 +1,23 @@
 ---
-title: 'Error al enviar a App Store: "Agrupación no válida: las opciones no permitidas para insertar en bitcode se detectan en el envío"'
+title: 'Error al enviar a la tienda de aplicaciones: "No se permite la inserción de opciones de agrupación no válidas en Bitcode en el envío".'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 137313FB-3D29-428B-93C1-5A05DC8F7C03
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 867ad29abfa6a38971b60ac9ebf181905949dafd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 84244e0c4c24a8ca6ac71a79de963bedf5c1ee68
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421734"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292533"
 ---
-# <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>Error al enviar a App Store: "Agrupación no válida: las opciones no permitidas para insertar en bitcode se detectan en el envío"
+# <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>Error al enviar a la tienda de aplicaciones: "No se permite la inserción de opciones de agrupación no válidas en Bitcode en el envío".
 
-watchOS aplicaciones y tvOS _requieren_ bitcode cuándo se envían a la aplicación de Store. Al crear y enviar aplicaciones para watchOS y tvOS utilizando Xcode 8.3 o una versión anterior, puede producirse el error siguiente (a través de la notificación por correo electrónico) al intentar cargar en la aplicación de Store:
+las aplicaciones de watchos y tvOS _requieren_ Bitcode cuando se envían a la tienda de aplicaciones. Al compilar y enviar aplicaciones watchos y tvOS con Xcode 8,3 o una versión anterior, se puede producir el siguiente error (a través de una notificación por correo electrónico) al intentar cargar en la tienda de aplicaciones:
 
->Agrupación no válida: la aplicación no se puede procesar porque las opciones no permitidas para insertar en bitcode se detectan en el envío. Es probable que no se está compilando la aplicación con la cadena de herramientas proporcionada en Xcode.
+>Agrupación no válida: no se puede procesar la aplicación porque se han detectado opciones que no se pueden insertar en Bitcode en el envío. Es probable que no esté compilando la aplicación con la cadena de herramientas proporcionada en Xcode.
 
-La solución a este problema consiste en compilar las aplicaciones con Xcode 9 y la última versión de Xamarin.iOS.
+La solución a este problema consiste en compilar las aplicaciones con Xcode 9 y la versión más reciente de Xamarin. iOS.

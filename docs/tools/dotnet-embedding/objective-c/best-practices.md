@@ -1,35 +1,35 @@
 ---
-title: Prácticas recomendadas de inserción de .NET para Objective-C
-description: Este documento describen varios procedimientos recomendados para usar la inserción de .NET con Objective-C. Describe exponer un subconjunto del código administrado, exponer una API chunkier, nomenclatura y mucho más.
+title: Procedimientos recomendados para la inserción de .NET para Objective-C
+description: En este documento se describen varias prácticas recomendadas para usar la inserción de .NET con Objective-C. Describe la exposición de un subconjunto del código administrado, la exposición de una API de chunkier, la nomenclatura y mucho más.
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 33138b7858b8bc04a5be30f9fad1709e916f5575
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ff04c001193eb897aac81cdc66ed535c76d81717
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364155"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285114"
 ---
-# <a name="net-embedding-best-practices-for-objective-c"></a>Prácticas recomendadas de inserción de .NET para Objective-C
+# <a name="net-embedding-best-practices-for-objective-c"></a>Procedimientos recomendados para la inserción de .NET para Objective-C
 
-Se trata de un borrador y pueden no ser sincronizados con las características actualmente compatibles con la herramienta. Esperamos que este documento evolucionará por separado y, finalmente, coincide con el final de la herramienta, es decir, le sugeriremos a largo plazo mejores enfoques - soluciones alternativas no inmediatas.
+Se trata de un borrador y es posible que no esté sincronizado con las características admitidas actualmente por la herramienta. Esperamos que este documento evolucione por separado y que finalmente coincida con la herramienta final, es decir, se le sugerirán los mejores enfoques a largo plazo, no soluciones inmediatas.
 
-Gran parte de este documento también se aplica a otros idiomas admitidos. Sin embargo, todos proporcionan algunos ejemplos son en C# y Objective-C.
+Una gran parte de este documento también se aplica a otros idiomas admitidos. Sin embargo, todos los ejemplos C# proporcionados se encuentran en y Objective-C.
 
 ## <a name="exposing-a-subset-of-the-managed-code"></a>Exponer un subconjunto del código administrado
 
-La biblioteca nativa generada/framework contiene código de Objective-C para llamar a cada una de las API administradas que se exponen. La API más que de superficie (hacer público), a continuación, mayor nativo _adherencia_ se convertirá en la biblioteca.
+El marco de trabajo o biblioteca nativa generada contiene código de Objective-C para llamar a cada una de las API administradas que se exponen. Cuanto más API se surfacee (hacer pública), mayor será la biblioteca nativa de _glue_ .
 
-Sería una buena idea para crear un ensamblado diferente y más pequeño, para exponer solo las API necesarias para el desarrollador nativo. Ese fachada también le permitirá tener más control sobre la visibilidad, nomenclatura, comprobación de errores... del código generado.
+Podría ser una buena idea crear un ensamblado más pequeño para exponer solo las API necesarias al desarrollador nativo. Esa fachada también le permitirá tener más control sobre la visibilidad, la nomenclatura y la comprobación de errores... del código generado.
 
-## <a name="exposing-a-chunkier-api"></a>Exponer una API chunkier
+## <a name="exposing-a-chunkier-api"></a>Exposición de una API de chunkier
 
-Hay un precio para realizar la transición de código nativo a administrado (y posterior). Por lo tanto, es mejor exponer _pesado en lugar de chatty_ API para los programadores de aplicaciones nativas, p. ej.
+Hay un precio para pagar por la transición de nativo a administrado (y viceversa). Como tal, es mejor exponer la _fragmentación en lugar de las API de chat_ a los desarrolladores nativos, por ejemplo,
 
-**Chatty**
+**Locuaces**
 
 ```csharp
 public class Person {
@@ -58,17 +58,17 @@ public class Person {
 Person *p = [[Person alloc] initWithFirstName:@"Sebastien" lastName:@"Pouliot"];
 ```
 
-Puesto que el número de transiciones es menor, el rendimiento será mejor. También requiere menos código que se va a generar, por lo que esto creará una biblioteca nativa más pequeña.
+Dado que el número de transiciones es más pequeño, el rendimiento será mejor. También requiere que se genere menos código, por lo que también se generará una biblioteca nativa más pequeña.
 
-## <a name="naming"></a>nomenclatura
+## <a name="naming"></a>Nombra
 
-Asignación de nombres es uno de estos dos problemas más difíciles en informática, las demás que se va a caché de errores de invalidación y off-por-1. Espero que inserción de .NET puede protegerse de todos excepto de nomenclatura.
+La denominación de cosas es uno de los dos problemas más difíciles de informática, mientras que los demás almacenan en caché los errores de invalidación y desactivación. Afortunadamente, la incrustación de .NET puede protegerle de todos los nombres pero.
 
 ### <a name="types"></a>Tipos
 
-Objective-C no admite espacios de nombres. En general, sus tipos van precedidos de un 2 (para Apple) o 3 (de 3 partes) como prefijo, de caracteres `UIView` para la vista de UIKit, que indica el marco de trabajo.
+Objective-C no admite espacios de nombres. En general, sus tipos tienen como prefijo un prefijo de carácter 2 (para Apple) o 3 (para terceros), `UIView` como en el caso de la vista de UIKit, que denota el marco de trabajo.
 
-Para tipos de .NET el omitiendo el espacio de nombres no es posible que pueden presentar nombres duplicados o confusos. Esto hace que los tipos .NET existentes muy largos, por ejemplo
+En el caso de los tipos .NET, no es posible omitir el espacio de nombres ya que puede introducir nombres duplicados o confusos. Esto hace que los tipos .NET existentes sean muy largos, por ejemplo,
 
 ```csharp
 namespace Xamarin.Xml.Configuration {
@@ -76,19 +76,19 @@ namespace Xamarin.Xml.Configuration {
 }
 ```
 
-se usará como:
+se utilizaría como:
 
 ```objc
 id reader = [[Xamarin_Xml_Configuration_Reader alloc] init];
 ```
 
-Sin embargo puede exponer el tipo como volver a:
+Sin embargo, puede volver a exponer el tipo como:
 
 ```csharp
 public class XAMXmlConfigReader : Xamarin.Xml.Configuration.Reader {}
 ```
 
-lo que más descriptiva de Objective-C para usar, por ejemplo:
+hacer que sea más fácil de usar, por ejemplo:
 
 ```objc
 id reader = [[XAMXmlConfigReader alloc] init];
@@ -96,20 +96,20 @@ id reader = [[XAMXmlConfigReader alloc] init];
 
 ### <a name="methods"></a>Métodos
 
-Incluso buenos nombres de .NET podrían no ser ideales para una API de C de objetivo.
+Incluso los nombres de .NET buenos podrían no ser ideales para una API de Objective-C.
 
-Convenciones de nomenclatura en Objective-C son diferentes de .NET (mayúsculas y minúsculas camel en lugar de mayúsculas y minúsculas pascal, más detallado).
-Lea la [directrices de programación para cacao](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html#//apple_ref/doc/uid/20001282-BCIGIJJF).
+Las convenciones de nomenclatura en Objective-C son diferentes de .NET (mayúsculas y minúsculas Camel en lugar de mayúsculas y minúsculas Pascal, más detallado).
+Lea las [directrices de codificación de cacao](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html#//apple_ref/doc/uid/20001282-BCIGIJJF).
 
-Desde el punto de vista de un desarrollador Objective-C, un método con un `Get` prefijo implica que no pertenece la instancia, es decir, el [obtener regla](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
+Desde el punto de vista de un desarrollador de Objective-C, un método `Get` con un prefijo implica que no es propietario de la instancia, es decir, la [regla get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
 
-Esta regla de nomenclatura no tiene ninguna coincidencia en el mundo de GC. NET; un método de .NET con un `Create` prefijo se comportará de forma idéntica en. NET. Sin embargo, para desarrolladores de Objective-C, normalmente significa que posee la instancia devuelta, es decir, el [crear regla](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+Esta regla de nomenclatura no tiene ninguna coincidencia en el mundo de GC de .NET; un método .net con un `Create` prefijo se comportará de forma idéntica en .net. Sin embargo, para los desarrolladores de Objective-C, normalmente significa que es el propietario de la instancia devuelta, es decir, la [regla de creación](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
 
 ## <a name="exceptions"></a>Excepciones
 
-Es bastante común en .NET para usar las excepciones de forma extensa para informar de errores. Sin embargo, son lentas y no idéntica en Objective-C. Siempre que sea posible se debe ocultar del desarrollador de Objective-C.
+Es bastante habitual en .NET usar las excepciones extensamente para notificar los errores. Sin embargo, son lentos y no son bastante idénticos en Objective-C. Siempre que sea posible, debe ocultarlos del desarrollador de Objective-C.
 
-Por ejemplo, .NET `Try` patrón será mucho más fácil de consumir desde código de Objective-C:
+Por ejemplo, el patrón `Try` .net será mucho más fácil de consumir del código Objective-C:
 
 ```csharp
 public int Parse (string number)
@@ -118,7 +118,7 @@ public int Parse (string number)
 }
 ```
 
-versus
+utilizándo
 
 ```csharp
 public bool TryParse (string number, out int value)
@@ -127,18 +127,18 @@ public bool TryParse (string number, out int value)
 }
 ```
 
-### <a name="exceptions-inside-init"></a>Excepciones dentro de `init*`
+### <a name="exceptions-inside-init"></a>Excepciones dentro de`init*`
 
-En .NET un constructor debe tener éxito y devolver un (_espero_) instancia válida o produce una excepción.
+En .NET, un constructor debe ejecutarse correctamente y devolver una instancia válida (_afortunadamente_) o producir una excepción.
 
-En cambio, Objective-C permite `init*` para devolver `nil` cuando no se puede crear una instancia. Se trata de un patrón común, pero no general, utilizado en muchos de los marcos de Apple. En otros casos un `assert` puede ocurrir (y eliminar el proceso actual).
+En cambio, Objective-C permite `init*` que se `nil` devuelva cuando no se puede crear una instancia. Este es un patrón común, pero no general, que se usa en muchos de los marcos de trabajo de Apple. En algunos otros casos puede `assert` producirse un error (y eliminar el proceso actual).
 
-El generador de seguir los mismos `return nil` de patrón de generan `init*` métodos. Si se produce una excepción administrada, a continuación, se imprimirá (mediante `NSLog`) y `nil` se devolverá al llamador.
+El generador sigue el mismo `return nil` patrón para los `init*` métodos generados. Si se produce una excepción administrada, se imprimirá (mediante `NSLog`) y `nil` se devolverá al autor de la llamada.
 
 ## <a name="operators"></a>Operadores
 
-Objective-C no permitir que los operadores se puede sobrecargar como C# funciona, de modo que estos se convierten en los selectores de clase.
+Objective-C no permite que los operadores se sobrecarguen como C# lo hace, por lo que se convierten en selectores de clase.
 
-["Descriptivo"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) métodos con nombre se generan con preferencia a las sobrecargas de operador cuando se encuentra y puede producir un más fáciles de consumir API.
+Los métodos con nombre ["descriptivos"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) se generan en preferencia a las sobrecargas de operador cuando se encuentran y pueden generar una API más fácil de usar.
 
-Las clases que reemplazan los operadores `==` o `!=` debe invalidar también el método Equals (Object) estándar.
+Las clases que invalidan `!=` los operadores `==` ///deben reemplazar también el método Equals (Object) estándar.

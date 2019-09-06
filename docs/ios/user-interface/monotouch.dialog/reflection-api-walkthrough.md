@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: 6482d0626874b3f2ca5e90efb0e376be60551fd7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 27f025d80b3259da32581811ae6c900358a07e4e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528448"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278513"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creación de una aplicación de Xamarin. iOS mediante la API de reflexión
 

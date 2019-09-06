@@ -3,15 +3,15 @@ title: Unificación de componentes de Google Play Services y NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 524456a5d5419c9ef2f2cef741135c90e624b620
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8a7fd77a3f6460f0edbd76f8a4ccf45b32b3ed87
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521597"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284987"
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Unificación de componentes de Google Play Services y NuGet
 

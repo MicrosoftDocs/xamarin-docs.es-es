@@ -4,15 +4,15 @@ description: En este documento se describe cómo mostrar imágenes en Xamarin. i
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 7f1e61f9364a6a59f2bbacd1c773fe49cc338db9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 191d037d12d27e2c6ab475467853023f440c71d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528830"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291366"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Mostrar imágenes con Xamarin. iOS
 
@@ -80,7 +80,7 @@ Si hubiéramos colocado la imagen en **/Resources/pics/SF Monkey. jpg**, el cód
 imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");
 ```
 
-No es necesario que las referencias del archivo de recursos incluyan la carpeta Resources.
+No es necesario que las referencias del archivo de recursos incluyan la carpeta **Resources** .
 
 ## <a name="related-links"></a>Vínculos relacionados
 

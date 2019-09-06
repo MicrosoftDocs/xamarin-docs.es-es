@@ -4,15 +4,15 @@ description: En este documento se proporciona una breve introducción a las nuev
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: aa28384b0f0f8e4901f975a7d47a5a3db964e539
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 23bc8ac638cc9e1165371216473b5c077ad21675
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657382"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283393"
 ---
 # <a name="introduction-to-tvos-11"></a>Introducción a tvOS 11
 

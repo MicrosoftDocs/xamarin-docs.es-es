@@ -4,21 +4,21 @@ description: En este documento se proporciona un tutorial sobre la creación de 
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: dba84c32390be8017952206de9e23facd58931fe
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199037"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293143"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
 Una vez que haya creado una solución que siga los pasos de [instalación e instalación](~/ios/watchos/get-started/installation.md), tendrá 3 proyectos:
 
-- La aplicación primaria de iOS que se usa para la configuración u otras tareas administrativas en el dispositivo. (Con otros tipos de extensiones de iOS, a menudo se conoce como la aplicación "contenedor"). Con las aplicaciones de inspección, es posible que los usuarios empiecen a ejecutar la aplicación de inspección sin ejecutar la aplicación primaria.
+- La aplicación primaria de iOS que se usa para la configuración u otras tareas administrativas en el dispositivo. (Con otros tipos de extensiones de iOS, a menudo se conoce como la aplicación "contenedor"). Con las aplicaciones de inspección, es posible que los usuarios empiecen a ejecutar la aplicación de **inspección sin ejecutar** la aplicación primaria.
 - La extensión de inspección que contiene el código de programa de la aplicación de inspección. etc
 - La aplicación de inspección, que contiene los recursos de imagen y guion gráfico que se representan en el reloj.
 
@@ -146,7 +146,7 @@ Si aún no es el proyecto de inicio,
 
 1. Establezca el destino de implementación en una imagen del simulador compatible con el kit de inspección (como iPhone 6 iOS 8,2).
 
-1. Haga clic en el botón depurar para desencadenar una compilación y un inicio del simulador.
+1. Haga clic en el botón **depurar** para desencadenar una compilación y un inicio del simulador.
 
     [![](hello-watch-images/readytodebug-sml.png "Elementos de la interfaz de Visual Studio")](hello-watch-images/readytodebug.png#lightbox)
 

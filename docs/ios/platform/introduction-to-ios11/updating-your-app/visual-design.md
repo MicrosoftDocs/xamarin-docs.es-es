@@ -4,15 +4,15 @@ description: En este documento se describen las actualizaciones de diseño visua
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 488c3d7d2b4d57295f73f65b361abff939c2aebb
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: aa99d50295e214b7926d0655ea434c851b3ba099
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889826"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286320"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Actualizaciones del diseño visual en iOS 11
 

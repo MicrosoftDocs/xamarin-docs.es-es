@@ -3,15 +3,15 @@ title: Simulador remoto de iOS para Windows
 description: El simulador remoto de iOS para Windows le permite probar las aplicaciones en un simulador de iOS que se ejecuta en Windows junto con Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-author: lobrien
-ms.author: laobri
-ms.date: 04/02/2019
-ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+author: conceptdev
+ms.author: crdun
+ms.date: 04/26/2019
+ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188860"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289709"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
 
@@ -21,7 +21,7 @@ El simulador remoto de iOS para Windows le permite probar las aplicaciones en un
 
 ## <a name="getting-started"></a>Introducción
 
-El simulador remoto de iOS para Windows se instala automáticamente como parte de Xamarin en Visual Studio 2019 y Visual Studio 2017. Para ello, siga estos pasos:
+El simulador remoto de iOS para Windows se instala automáticamente como parte de Xamarin en Visual Studio 2019 y Visual Studio 2017. Para usarlo, siga estos pasos:
 
 1. [Emparejar Visual 2019 a un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. En Visual Studio, inicie la depuración de un proyecto de iOS o tvOS. El simulador remoto de iOS para Windows aparecerá automáticamente en el equipo Windows.
@@ -30,11 +30,11 @@ Inspecione [este vídeo](deploy.md) para obtener una guía paso a paso.
 
 ## <a name="simulator-window"></a>Ventana del simulador
 
-La barra de herramientas en la parte superior de la ventana del simulador contiene un número de botones útiles:
+La barra de herramientas situada en la parte superior de la ventana del simulador contiene varios botones útiles:
 
 - **Inicio** : simula el botón Inicio de un dispositivo iOS.
 - **Bloqueo** : bloquea el simulador (pasar el dedo para desbloquear).
-- **Captura de pantalla** – guarda una captura de pantalla del simulador (almacenados en **Pictures\Xamarin\iOS simulador\\** ).
+- **Captura de pantalla** : guarda una captura de pantalla del simulador (almacenado en el **\\simulador Pictures\Xamarin\iOS**).
 - [**Configuración** ](#settings) : muestra el teclado, ubicación y otras opciones.
 - [**Otras opciones** ](#other-options) : abrirá varias opciones del simulador, como rotación, gestos de agitar y Touch Id.
 
@@ -54,11 +54,16 @@ El botón de puntos suspensivos de la barra de herramientas muestra otras opcion
 
 [![Configuración adicional del simulador de iOS](images/more-sml.png "Configuración adicional del simulador de iOS")](images/more.png#lightbox)
 
-## <a name="touchscreen-support"></a>Compatibilidad con pantalla táctil
+## <a name="touchscreen-support"></a>Compatibilidad con la pantalla táctil
 
 Los equipos Windows más modernos tienen pantallas táctiles. Gracias a que el simulador remoto de iOS para Windows es compatible con las interacciones táctiles, puede probar la aplicación con los mismos gestos táctiles de reducir, deslizar el dedo y con varios dedos que usa con los dispositivos iOS físicos.
 
 De forma similar, el simulador remoto de iOS para Windows procesa la entrada de lápiz de Windows como entrada de lápiz de Apple.
+
+## <a name="sound-handling"></a>Control de sonido
+
+Los sonidos reproducidos por el simulador procederán de los altavoces del equipo Mac del host.
+los sonidos de iOS no se escuchan en el equipo Windows.
 
 ## <a name="disabling-the-remoted-ios-simulator-for-windows"></a>Deshabilitar el simulador remoto de iOS para Windows
 

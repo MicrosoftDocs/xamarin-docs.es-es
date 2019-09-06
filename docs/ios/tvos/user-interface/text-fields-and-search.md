@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con campos de texto y 
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226691"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292496"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabajar con campos de texto y búsqueda de tvOS en Xamarin
 
@@ -46,7 +46,7 @@ Cuando el usuario mueve el [foco](~/ios/tvos/app-fundamentals/navigation-focus.m
 
 Apple tiene las siguientes sugerencias para trabajar con campos de texto:
 
-- **Use la entrada de texto** con moderación, debido a la naturaleza del teclado en pantalla, la introducción de secciones largas de texto o la rellenado de varios campos de texto es tediosa para el usuario. Una solución mejor es limitar la cantidad de entradas de texto mediante listas de selección o [botones](~/ios/tvos/user-interface/buttons.md).
+- **Use la entrada de texto con moderación** , debido a la naturaleza del teclado en pantalla, la introducción de secciones largas de texto o la rellenado de varios campos de texto es tediosa para el usuario. Una solución mejor es limitar la cantidad de entradas de texto mediante listas de selección o [botones](~/ios/tvos/user-interface/buttons.md).
 - **Usar sugerencias para comunicar** el campo de texto de propósito puede mostrar el marcador de posición "hints" cuando está vacío. Si es aplicable, use sugerencias para describir el propósito del campo de texto en lugar de una etiqueta independiente.
 - **Seleccione el tipo de teclado predeterminado adecuado** -tvOS proporciona varios tipos de teclado diferentes y creados por el usuario que puede especificar para el campo de texto. Por ejemplo, el teclado de dirección de correo electrónico puede facilitar la entrada permitiendo al usuario seleccionar en una lista de direcciones escritas recientemente.
 - **Cuando sea necesario, use campos de texto seguro** : un campo de texto seguro presenta los caracteres especificados como puntos (en lugar de las letras reales). Use siempre un campo de texto seguro al recopilar información confidencial, como contraseñas.

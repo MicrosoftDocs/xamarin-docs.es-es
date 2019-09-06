@@ -4,15 +4,15 @@ description: La biblioteca SQLite.NET PCL NuGet proporciona un mecanismo de acce
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 0416aed671c9675e7c2c990eb59a7a4d8cab7888
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199615"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289840"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso de SQLite.NET con Xamarin. iOS
 
@@ -196,9 +196,9 @@ Puede comprobar el para `rowcount` confirmar el número de filas afectadas (elim
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Usar SQLite.NET con varios subprocesos
 
-SQLite admite tres modos de subprocesamiento diferentes: *Subproceso único*, *multiproceso*y serializado. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el modo de subproceso serializado. Es importante establecer este modo pronto en la aplicación (por ejemplo, al principio del `OnCreate` método).
+SQLite admite tres modos de subprocesamiento diferentes: *Subproceso único*, *multiproceso*y *serializado*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el modo de subproceso **serializado** . Es importante establecer este modo pronto en la aplicación (por ejemplo, al principio del `OnCreate` método).
 
-Para cambiar el modo de subprocesos `SqliteConnection.SetConfig` , llame a, `Mono.Data.Sqlite` que se encuentra en el espacio de nombres. Por ejemplo, esta línea de código configura SQLite para el modo de serialización:
+Para cambiar el modo de subprocesos `SqliteConnection.SetConfig` , llame a, `Mono.Data.Sqlite` que se encuentra en el espacio de nombres. Por ejemplo, esta línea de código configura SQLite para el modo de **serialización** :
 
 ```csharp
 using Mono.Data.Sqlite;

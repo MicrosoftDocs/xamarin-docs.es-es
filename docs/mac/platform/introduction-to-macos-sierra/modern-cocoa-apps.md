@@ -4,15 +4,15 @@ description: En este artículo se tratan varias sugerencias, características y 
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 04bcf1012800ef2883fef80580bcec869bd8e5a3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065694"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291471"
 ---
 # <a name="building-modern-macos-apps"></a>Creación de aplicaciones modernas de macOS
 
@@ -508,7 +508,7 @@ namespace MacModern
 
 ## <a name="using-modern-drag-and-drop"></a>Usar la función de arrastrar y colocar moderna
 
-Para presentar una experiencia moderna de arrastrar y colocar para el usuario, el desarrollador debe adoptar la rebaño de _arrastre_ en las operaciones de arrastrar y colocar de la aplicación. Arrastrar el recuento es donde cada archivo o elemento individual que se está arrastrando aparece inicialmente como un elemento individual que reproduce (agrupar por debajo del cursor con un recuento del número de elementos) cuando el usuario continúa con la operación de arrastre.
+Para presentar una experiencia moderna de arrastrar y colocar para el usuario, el desarrollador debe adoptar la _rebaño de arrastre_ en las operaciones de arrastrar y colocar de la aplicación. Arrastrar el recuento es donde cada archivo o elemento individual que se está arrastrando aparece inicialmente como un elemento individual que reproduce (agrupar por debajo del cursor con un recuento del número de elementos) cuando el usuario continúa con la operación de arrastre.
 
 Si el usuario finaliza la operación de arrastre, los elementos individuales se anularán y volverán a sus ubicaciones originales.
 

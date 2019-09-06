@@ -4,15 +4,15 @@ description: En este artículo se describen las mejoras que Apple ha realizado e
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9a8c047305d4e91ac588f503eaa98d8bddb4a8a8
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620750"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292851"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicaciones de entrenamiento de watchos en Xamarin
 
@@ -293,7 +293,7 @@ El paso final consiste en guardar los resultados de la sesión de entrenamiento 
 
 ### <a name="observing-healthkit-samples"></a>Observar ejemplos de HealthKit
 
-La aplicación tendrá que abrir una _consulta de objeto_ delimitador para cada uno de los puntos de datos de HealthKit que le interesen, como la tasa de corazón o la energía activa grabada. Para cada punto de datos que se está observando, será necesario crear un controlador de actualización para capturar los datos nuevos a medida que se envían a la aplicación.
+La aplicación tendrá que abrir una _consulta de objeto delimitador_ para cada uno de los puntos de datos de HealthKit que le interesen, como la tasa de corazón o la energía activa grabada. Para cada punto de datos que se está observando, será necesario crear un controlador de actualización para capturar los datos nuevos a medida que se envían a la aplicación.
 
 Desde estos puntos de datos, la aplicación puede acumular totales (como la distancia total de ejecución) y actualizar su interfaz de usuario según sea necesario. Además, la aplicación puede notificar a los usuarios cuando han alcanzado un objetivo o logro específico, como completar el siguiente kilómetro de una ejecución.
 
@@ -649,7 +649,7 @@ Eche un vistazo a cómo funciona este proceso:
 3. Con la configuración de entrenamiento pasada, la aplicación watchos 3 inicia una nueva sesión de entrenamiento`HKWorkoutSession`().
 
 > [!IMPORTANT]
-> Para que la aplicación de iPhone primaria inicie un entrenamiento en el Apple Watch, la aplicación watchos 3 debe tener habilitada la ejecución en segundo plano. Para más información, consulte habilitación del [fondo que se ejecuta](#enabling-background-running) anteriormente.
+> Para que la aplicación de iPhone primaria inicie un entrenamiento en el Apple Watch, la aplicación watchos 3 debe tener habilitada la ejecución en segundo plano. Para más información, consulte [habilitación del fondo que se ejecuta](#enabling-background-running) anteriormente.
 
 Este proceso es muy similar al proceso de inicio de una sesión de entrenamiento en la aplicación watchos 3 directamente. En el iPhone, use el siguiente código:
 

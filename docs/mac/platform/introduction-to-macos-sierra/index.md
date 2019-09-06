@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 7d758d4cb9906542d388f3ced185a0d0bcba5fcd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651529"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290924"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introducción a macOS Sierra
 

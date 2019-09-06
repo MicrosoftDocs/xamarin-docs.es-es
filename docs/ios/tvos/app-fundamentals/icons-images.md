@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con iconos e imágenes
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4c3739f7d1583966a58ebf102a3d3b2a0a9f93ab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653208"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277849"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -108,7 +108,7 @@ Es importante recordar incluir un borde de _zona segura_ en cada capa que compon
 tvOS funciona con imágenes superpuestas en los siguientes formatos:
 
 - **Archivos de automóvil** : es un formato de catálogo de recursos propietario creado por Apple. No se crean directamente archivos de automóvil, sino que se crean en tiempo de compilación desde cualquier archivo LSR y se incluyen en el lote de aplicaciones.
-- **Imágenes de LSR** : se trata de un formato de imagen de propiedad creado por Apple. Use el [complemento de Adobe Photoshop exportador de Parallax](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) o el previsor de [Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para crear y obtener una vista previa de las imágenes en capas en el formato LSR.
+- **Imágenes de LSR** : se trata de un formato de imagen de propiedad creado por Apple. Use el [complemento de Adobe Photoshop exportador de Parallax](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) o el [previsor de Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para crear y obtener una vista previa de las imágenes en capas en el formato LSR.
 - **Assets. xcassets** : de dos (2) a cinco (5) imágenes `.png` con formato estándar incluidas en un catálogo de recursos que se compilarán en un coche o en una imagen en capas con formato LSR en tiempo de compilación.
 - **Archivos de LCR** : se trata de un formato de archivo propietario creado por Apple. Los archivos de LCR están diseñados para usarse como contenido adicional descargado de uno de los servidores de contenido. El archivo LCR nunca debe incluirse en el lote de aplicaciones. Los archivos de LCR se generan a partir de archivos de `layerutil` LSR o Photoshop mediante la herramienta de línea de comandos incluida con Xcode.
 

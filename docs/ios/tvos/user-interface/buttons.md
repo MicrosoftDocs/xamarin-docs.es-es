@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con botones en una apl
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: c53344d2e2e9458585439fd90a1f71a4869026be
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200183"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291109"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabajar con botones de tvOS en Xamarin
 
@@ -52,7 +52,7 @@ Apple tiene las siguientes sugerencias al crear los títulos de los botones:
 
 - **Mostrar el texto descriptivo debajo de los iconos botones** : siempre que sea posible, coloque solo los botones borrar, texto descriptivo debajo del icono para obtener el propósito del botón.
 - **Usar verbos o frases verbales para el título** : indica claramente la acción que tendrá lugar cuando el usuario haga clic en el botón.
-- **Usar mayúsculas** y minúsculas en el estilo de título: con la excepción de los artículos, las conjunciones o las preposiciones (cuatro letras o menos), cada palabra del título del botón debe escribirse en mayúsculas.
+- **Usar mayúsculas y minúsculas** en el estilo de título: con la excepción de los artículos, las conjunciones o las preposiciones (cuatro letras o menos), cada palabra del título del botón debe escribirse en mayúsculas.
 - **Usar un título corto al punto** : Use el palabras más corto posible para describir la acción del botón.
 
 <a name="Buttons-and-Storyboards" />

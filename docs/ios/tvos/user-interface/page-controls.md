@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con controles de pági
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: decbbdab09b514bd49784f6ba45575ae845c547f
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ec4b99fd1c8ec28f6b4bbb30695613da6c40d60c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226477"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288949"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabajar con controles de página de tvOS en Xamarin
 

@@ -4,15 +4,15 @@ description: En este documento se describe SceneKit, una API de gráficos de esc
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 3221764db0fa85f4cd0eb2dbc291f4b7b1d70d66
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: d6e6ff02fef3d2919e9716dc8a456aabd9533820
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199569"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292799"
 ---
 # <a name="scenekit-in-xamarinios"></a>SceneKit en Xamarin. iOS
 

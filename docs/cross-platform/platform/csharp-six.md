@@ -4,15 +4,15 @@ description: La versión 6 del C# lenguaje sigue evolucionando el lenguaje para 
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 5f51332f84d2f91adbdc8c46e509774f59a8ed9e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2a62ff12869f886e63fc5c78050e9870431e58bb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887435"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280620"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 Introducción a las nuevas características
 

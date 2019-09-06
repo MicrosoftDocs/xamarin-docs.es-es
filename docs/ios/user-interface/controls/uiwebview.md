@@ -4,15 +4,15 @@ description: En este documento se describen las distintas formas en que una apli
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 8848f2bacac4b1ddab5c74ec07246e077bb4f158
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e593a594bbf0fd6398c277d531258f6fded515f1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642696"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282544"
 ---
 # <a name="web-views-in-xamarinios"></a>Vistas Web en Xamarin. iOS
 

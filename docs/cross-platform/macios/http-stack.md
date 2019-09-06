@@ -3,15 +3,15 @@ title: Selector de implementación de HttpClient y SSL/TLS para iOS/macOS
 description: La pila HttpClient y el selector de implementación de SSL/TLS determinan la implementación de HttpClient y SSL/TLS que usará la aplicación de Xamarin iOS, tvOS o macOS.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: f00a25bbb86e9ec57ef2290c1a7e37a8891e1064
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f3c30e8edc36c6d92b6fac0bd0e199aa26e16993
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521867"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280923"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>Selector de implementación de HttpClient y SSL/TLS para iOS/macOS
 
@@ -22,7 +22,7 @@ Los proyectos deben hacer referencia al ensamblado **System .net. http** .
 > [!WARNING]
 > **Abril de 2018** : debido a los mayores requisitos de seguridad, incluido el cumplimiento de PCI, los principales proveedores en la nube y los servidores Web se espera que dejen de admitir versiones de TLS anteriores a 1,2. Los proyectos de Xamarin creados en versiones anteriores de Visual Studio usan de forma predeterminada versiones anteriores de TLS.
 >
-> Para asegurarse de que las aplicaciones continúan funcionando con estos servidores y servicios, **debe actualizar los proyectos de `NSUrlSession` Xamarin con la configuración que se muestra a continuación y volver a compilar y volver a implementar las aplicaciones** para los usuarios.
+> Para asegurarse de que las aplicaciones continúan funcionando con estos servidores y servicios, **debe actualizar los `NSUrlSession` proyectos de Xamarin con la configuración que se muestra a continuación y volver a compilar y volver a implementar las aplicaciones** para los usuarios.
 
 ### <a name="selecting-an-httpclient-stack"></a>Selección de una pila HttpClient
 

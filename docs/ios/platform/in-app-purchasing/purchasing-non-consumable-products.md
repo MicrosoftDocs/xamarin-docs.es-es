@@ -4,15 +4,15 @@ description: En este documento se describen los productos que no se pueden consu
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e09d8511dc74bdf9368497ff8fe39bd87b62565c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: aa478636b4ab94ab000fd98860646bfa300e9fab
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291312"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Compra de productos no consumibles en Xamarin. iOS
 
@@ -20,7 +20,7 @@ El cliente "posee" los productos que no se pueden consumir. La expectativa es qu
 
 ## <a name="non-consumable-products-sample"></a>Ejemplo de productos no consumibles
 
-El [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un proyecto denominadononconsumibles. En el ejemplo de código se muestra cómo implementar productos no consumibles mediante el uso de filtros de foto como ejemplo. Una vez que haya adquirido un filtro, puede aplicarlo a la fotografía una y otra vez. Nunca debe volver a comprarlo.   
+El [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un proyecto denominado *nonconsumibles*. En el ejemplo de código se muestra cómo implementar productos no consumibles mediante el uso de filtros de foto como ejemplo. Una vez que haya adquirido un filtro, puede aplicarlo a la fotografía una y otra vez. Nunca debe volver a comprarlo.   
    
    
    

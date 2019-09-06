@@ -1,38 +1,38 @@
 ---
-title: Reproducción de sonidos con AVAudioPlayer en Xamarin.Mac
-description: Este documento describe cómo reproducir sonidos con AVAudioPlayer en una aplicación de Xamarin.Mac. Describe AVAudioPlayer en un alto nivel y vínculos a otra documentación que explora lo más completamente.
+title: Reproducir sonido con AVAudioPlayer en Xamarin. Mac
+description: En este documento se describe cómo reproducir sonido con AVAudioPlayer en una aplicación de Xamarin. Mac. Describe AVAudioPlayer en un nivel alto y vínculos a otra documentación que lo explora más completamente.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 9aeb7bbfc2fddef1f690b5299ec060c475ea1ce7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61234874"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283303"
 ---
-# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reproducción de sonidos con AVAudioPlayer en Xamarin.Mac
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reproducir sonido con AVAudioPlayer en Xamarin. Mac
 
-## <a name="about-the-avaudioplayer"></a>Acerca de la AVAudioPlayer
+## <a name="about-the-avaudioplayer"></a>Acerca de AVAudioPlayer
 
-La `AVAudioPlayer` clase se utiliza para los datos de audio de reproducción de la memoria o un archivo. Apple recomienda el uso de esta clase para reproducir audio en su aplicación, a menos que se está realizando la red de transmisión por secuencias o requerir una E/S de audio de baja latencia.
+La `AVAudioPlayer` clase se usa para reproducir datos de audio de cualquier memoria o de un archivo. Apple recomienda el uso de esta clase para reproducir audio en la aplicación a menos que esté realizando streaming de red o requiera e/s de audio de baja latencia.
 
-Puede usar el `AVAudioPlayer` clase para hacer lo siguiente:
+Puede utilizar la `AVAudioPlayer` clase para hacer lo siguiente:
 
-- Reproducir sonidos de cualquier duración con bucle opcional.
-- Reproducir sonidos varias al mismo tiempo con la sincronización opcional.
-- Controlar el volumen, la velocidad de reproducción y la posición de estéreo para cada reproducción de sonidos.
-- Admite características como avance rápido o rebobinado.
-- Obtener datos de disponibilidad de nivel de reproducción.
+- Reproducir sonidos de cualquier duración con bucles opcionales.
+- Reproducir varios sonidos al mismo tiempo con la sincronización opcional.
+- Controle el volumen, la velocidad de reproducción y la posición estéreo de cada sonido que se reproduce.
+- Compatibilidad con características como el avance rápido o el rebobinado.
+- Obtener datos de medición de nivel de reproducción.
 
-`AVAudioPlayer` es compatible con sonidos en cualquier formato de audio proporcionado por iOS, tvOS y macOS como .aif, .wav o. mp3.
+`AVAudioPlayer`admite sonidos en cualquier formato de audio proporcionado por iOS, tvOS y macOS, como. AIF,. WAV o. mp3.
 
 ## <a name="playing-sounds-in-macos"></a>Reproducir sonidos en macOS
 
-Dado que macOS es compatible con las mismas clases de cuadro de herramientas de Audio como iOS, consulte nuestra iOS [reproducción de sonidos con AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) documentación para los detalles completos de reproducir audio en una aplicación de Xamarin.Mac.
+Dado que macOS es compatible con las mismas clases de cuadro de herramientas de audio que iOS, consulte nuestra documentación sobre el sonido de reproducción de iOS [con AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) para ver los detalles completos de la reproducción de audio en una aplicación de Xamarin. Mac.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

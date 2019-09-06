@@ -4,15 +4,15 @@ description: En esta guía se explica cómo crear su primera aplicación de Xama
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119163"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281818"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, tvOS Guía de inicio rápido
 
@@ -53,7 +53,7 @@ Para empezar, vamos a hacer lo siguiente:
 
     [![](hello-tvos-images/setup01.png "Visual Studio para Mac")](hello-tvos-images/setup01.png#lightbox)
 2. Haga clic en el vínculo **nueva solución...** en la esquina superior izquierda de la pantalla para abrir el cuadro de diálogo **nuevo proyecto** .
-3. Seleccione aplicación > de**vista única** de **tvOS** > y haga clic en el botón **siguiente** :
+3. Seleccione**aplicación de** > **vista única** de **tvOS** > y haga clic en el botón **siguiente** :
 
     [![](hello-tvos-images/setup02.png "Seleccionar una aplicación de vista única")](hello-tvos-images/setup02.png#lightbox)
 4. Escriba `Hello, tvOS` como nombre de la **aplicación**, escriba el identificador de la **organización** y haga clic en el botón **siguiente** :
@@ -444,7 +444,7 @@ Puede seleccionar el tipo de compilación en el **selector de configuración** e
 
 ### <a name="building-the-application"></a>Compilar la aplicación
 
-En nuestro caso, solo queremos una compilación de depuración, así que vamos a asegurarnos de que está seleccionado depurar. Vamos a compilar la aplicación en primer lugar presionando **⌘ B**, o bien, en el menú compilar, elija compilar **todo**.
+En nuestro caso, solo queremos una compilación de depuración, así que vamos a asegurarnos de que está seleccionado **depurar** . Vamos a compilar la aplicación en primer lugar presionando **⌘ B**, o bien, en el menú **compilar** , elija **compilar todo**.
 
 Si no se ha producido ningún error, verá un mensaje **compilación correcta** en la barra de estado de Visual Studio para Mac. Si se produjeron errores, revise el proyecto y asegúrese de que ha seguido los pasos correctamente. Empiece por confirmar que el código (tanto en Xcode como en Visual Studio para Mac) coincide con el código del tutorial.
 

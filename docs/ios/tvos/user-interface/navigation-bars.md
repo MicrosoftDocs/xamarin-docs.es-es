@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con barras de navegaci
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 14fbbd72d3ec80d15d2dcae5938f8df28923ca4c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f33e3f4f27afe7e0b98c4a1f71d77c4a1c7195ac
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226609"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289079"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabajar con barras de navegación de tvOS en Xamarin
 

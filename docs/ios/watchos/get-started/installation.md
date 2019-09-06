@@ -4,15 +4,15 @@ description: Este documento describe cómo instalar y usar watchOS con Xamarin. 
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 12/05/2017
-ms.openlocfilehash: b4d827715870d54de3116067a3e24e229ecda530
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 1bc7ba07676c66c411357b5ad043258fea611d71
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293122"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalación y uso de watchOS en Xamarin
 

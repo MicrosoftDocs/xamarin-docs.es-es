@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear los resultados de la bús
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 87037c8c3797c7c305ce2689172bda1babbc26bd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620957"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291717"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Buscar con marcado Web en Xamarin. iOS
 

@@ -4,15 +4,15 @@ description: En este documento se describe cómo personalizar la apariencia de u
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6eb942c0276bda28cb4be14fb31cdf820b9ccd5e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291354"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalización de la apariencia de una tabla en Xamarin. iOS
 

@@ -4,15 +4,15 @@ description: En este artículo se proporcionan varias sugerencias para la soluci
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e6e264d9f1cd959c95a27597649d2ec23d832b1c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c624dc9be86161305fddba56e58ae5b99d674770
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200064"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292927"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9: solución de problemas
 
@@ -44,7 +44,7 @@ Si el mismo guion gráfico se ejecuta en iOS 9, se producirá una excepción con
 
 > Finalizando la aplicación debido a la excepción no detectada ' NSInvalidArgumentException ', motivo: ' * * * + [NSLayoutConstraint constraintWithItem: Attribute: relatedBy: toItem: Attribute: multiplicador: Constant:]: No se puede establecer una restricción entre un atributo inicial o final y un atributo Right/left. Use iniciales/finales para ambos o ninguno.
 
-iOS 9 aplica los diseños para & usar los atributos**finales** **izquierdos** _o_ **iniciales** & , pero *no* ambos. Para corregir este problema, cambie todas las restricciones de diseño para usar el mismo conjunto de atributos en el archivo de guion gráfico.
+iOS 9 aplica los diseños para usar los atributos**finales** **izquierdos** _o_ **iniciales** &  **,**  & pero *no* ambos. Para corregir este problema, cambie todas las restricciones de diseño para usar el mismo conjunto de atributos en el archivo de guion gráfico.
 
 Para obtener más información, consulte el [error de restricción de iOS 9](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow discusión.
 

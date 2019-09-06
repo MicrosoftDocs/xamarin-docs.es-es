@@ -1,46 +1,46 @@
 ---
-title: Creación de NuGet de proyectos de biblioteca existentes
-description: Este documento describe cómo crear un paquete de NuGet desde un proyecto de biblioteca existente, permitiendo que el código se puede compartir con otros desarrolladores.
+title: Creación de un NuGet a partir de proyectos de biblioteca existentes
+description: En este documento se describe cómo crear un paquete NuGet a partir de un proyecto de biblioteca existente, lo que permite que el código se comparta con otros desarrolladores.
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864695"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289223"
 ---
-# <a name="creating-a-nuget-from-existing-library-projects"></a>Creación de NuGet de proyectos de biblioteca existentes
+# <a name="creating-a-nuget-from-existing-library-projects"></a>Creación de un NuGet a partir de proyectos de biblioteca existentes
 
-Las bibliotecas PCL existente o .NET Standard se pueden convertir en paquetes de NuGet a través de la **opciones de proyecto** ventana:
+Las bibliotecas PCL o .NET Standard existentes se pueden convertir en paquetes Nuget a través de la ventana **Opciones del proyecto** :
 
-1. Haga doble clic en el proyecto de biblioteca en el **panel de solución** y elija **opciones**.
+1. Haga clic con el botón derecho en el proyecto de biblioteca en el **Panel de solución** y elija **Opciones**.
 
-2. Vaya a la **paquete NuGet > metadatos** sección y especifique toda la [información requerida](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en el **General** pestaña:
+2. Vaya a la sección **paquete de NuGet > metadatos** y escriba toda la [información necesaria](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en la pestaña **General** :
 
-   [![](existing-library-images/existing-metadata-sml.png "Escriba los metadatos necesarios")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Especificar los metadatos necesarios")](existing-library-images/existing-metadata.png#lightbox)
 
-3. Si lo desea, [agregar metadatos adicionales](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en el **detalles** ficha.
+3. Opcionalmente, [agregue metadatos adicionales](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en la pestaña **detalles** .
 
-4. Después de configurar los metadatos, puede hacer doble clic en el proyecto y elija **crear paquetes de NuGet** y **.nupkg** se guardará el archivo de paquete de NuGet en el **/bin /** carpeta (Debug o Release, según la configuración).
+4. Una vez configurados los metadatos, puede hacer clic con el botón derecho en el proyecto y elegir **crear paquete Nuget** y el archivo de paquete Nuget **. nupkg** se guardará en la carpeta **/bin/** (debug o release, en función de la configuración).
 
-   ![](existing-library-images/create-nuget-package.png "Elija crear paquetes de NuGet en el menú contextual")
+   ![](existing-library-images/create-nuget-package.png "Elija crear paquete NuGet en el menú contextual.")
 
-5. Para crear el paquete de NuGet en _cada_ de compilación o implementación, vaya a la **paquete NuGet > compilar** sección y graduación **crear un paquete NuGet al compilar el proyecto**:
+5. Para crear el paquete NuGet en _cada_ compilación o implementación, vaya a la sección **paquete Nuget > compilación** y marque **la casilla crear un paquete Nuget al compilar el proyecto**:
 
-    [![](existing-library-images/existing-tickbox-sml.png "Pasos para crear un paquete de NuGet")](existing-library-images/existing-tickbox.png#lightbox)
+    [![](existing-library-images/existing-tickbox-sml.png "Paso para crear un paquete NuGet")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
-> Crear el paquete NuGet paquete puede ralentizar el proceso de compilación. Si no está activada esta casilla, todavía se puede generar un paquete NuGet manualmente en cualquier momento desde el menú contextual del proyecto (se muestra en el paso 4 anterior).
+> La generación del paquete NuGet puede ralentizar el proceso de compilación. Si este cuadro no está marcado, todavía puede generar un paquete NuGet manualmente en cualquier momento en el menú contextual del proyecto (que se muestra en el paso 4 anterior).
 
-## <a name="verifying-the-output"></a>Comprobar la salida
+## <a name="verifying-the-output"></a>Comprobación del resultado
 
-Paquetes de NuGet también son archivos ZIP, por lo que es posible inspeccionar la estructura interna del paquete generado.
+Los paquetes NuGet también son archivos ZIP, por lo que es posible inspeccionar la estructura interna del paquete generado.
 
-Esta captura de pantalla muestra el contenido de NuGet basado en PCL: un único ensamblado PCL se incluye:
+En esta captura de pantalla se muestra el contenido de un NuGet basado en PCL: solo se incluye un ensamblado PCL:
 
 ![](existing-library-images/nuget-output.png "Archivos contenidos en el paquete NuGet")
 

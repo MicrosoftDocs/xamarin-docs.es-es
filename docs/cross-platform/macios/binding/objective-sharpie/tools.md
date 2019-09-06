@@ -3,15 +3,15 @@ title: Comando & de herramientas de Sharpie de objetivos
 description: En este documento se proporciona información general sobre las herramientas incluidas con Objective Sharpie y los argumentos de línea de comandos que se usan con ellas.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2015
-ms.openlocfilehash: ddfe0f99991808214a6006c9504d267179adf2ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521859"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280906"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comando & de herramientas de Sharpie de objetivos
 

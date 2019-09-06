@@ -4,15 +4,15 @@ description: En este documento se describe cómo permitir la restauración de la
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a0d0e1ab7272094d55dff7fa083e61ee9c3286c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 537d804f1fa7e6ac95cb86a16849ed9fbc006507
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527591"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290201"
 ---
 # <a name="transactions-and-verification-in-xamarinios"></a>Transacciones y comprobación en Xamarin. iOS
 
@@ -169,7 +169,7 @@ Dado que el servidor remoto requiere alguna manera de validar que una solicitud 
    
 5. La solicitud de descarga va acompañada de los datos de recepción para que el servidor remoto pueda comprobar que está autorizado para tener acceso al contenido. El cliente de red de la aplicación espera una respuesta a esta solicitud.   
    
-6. Cuando el servidor recibe una solicitud de contenido, analiza los datos de recepción y envía una solicitud directamente a los servidores iTunes para comprobar que la recepción es para una transacción válida. El servidor debe usar alguna lógica para determinar si se va a enviar la solicitud a la dirección URL de producción o de espacio aislado. Apple sugiere usar siempre la dirección URL de producción y cambiar al espacio aislado si su estado de recepción 21007 (recepción de espacio aislado enviada al servidor de producción). Consulte la guía de [programación](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) de la validación de recepciones de Apple para obtener más detalles.
+6. Cuando el servidor recibe una solicitud de contenido, analiza los datos de recepción y envía una solicitud directamente a los servidores iTunes para comprobar que la recepción es para una transacción válida. El servidor debe usar alguna lógica para determinar si se va a enviar la solicitud a la dirección URL de producción o de espacio aislado. Apple sugiere usar siempre la dirección URL de producción y cambiar al espacio aislado si su estado de recepción 21007 (recepción de espacio aislado enviada al servidor de producción). Consulte la guía de [programación de la validación de recepciones](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) de Apple para obtener más detalles.
    
 7. iTunes comprobará la recepción y devolverá un estado de cero si es válido.   
    
@@ -210,4 +210,4 @@ HTTP envíe el JSON a [https://buy.itunes.apple.com/verifyReceipt](https://buy.i
 
 Un estado cero indica una confirmación válida. El servidor puede continuar para completar el contenido del producto adquirido. La clave Receipt contiene un diccionario JSON con las mismas propiedades que el `SKPaymentTransaction` objeto que recibió la aplicación, por lo que el código del servidor puede consultar este diccionario para recuperar información como el product_id y la cantidad de la compra.
 
-Consulte la documentación de la [Guía de programación](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Introduction.html) de la validación de recepciones de Apple para obtener información adicional.
+Consulte la documentación de la guía de programación de la [validación de recepciones](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Introduction.html) de Apple para obtener información adicional.

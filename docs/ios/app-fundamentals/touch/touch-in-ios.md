@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con eventos táctiles,
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 70c46282c9eebfed45bbdae75fdb2216e7f4c889
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526608"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280096"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventos táctiles y gestos en Xamarin. iOS
 
@@ -129,13 +129,13 @@ Xamarin. iOS proporciona la clase `UIGestureRecognizer` como una clase base para
 
 El patrón básico para usar un reconocedor de gestos es el siguiente:
 
-1. **Crear instancias del** reconocedor de gestos: en primer `UIGestureRecognizer` lugar, cree una instancia de una subclase. El objeto al que se crea una instancia se asociará con una vista y se recolectará como elemento no utilizado cuando se elimine la vista. No es necesario crear esta vista como una variable de nivel de clase.
-1. **Configurar los valores** de gestos: el siguiente paso consiste en configurar el reconocedor de gestos. Consulte la documentación de Xamarin `UIGestureRecognizer` sobre y sus subclases para obtener una lista de las propiedades que se pueden establecer para controlar el `UIGestureRecognizer` comportamiento de una instancia.
+1. **Crear instancias del reconocedor de gestos** : en primer `UIGestureRecognizer` lugar, cree una instancia de una subclase. El objeto al que se crea una instancia se asociará con una vista y se recolectará como elemento no utilizado cuando se elimine la vista. No es necesario crear esta vista como una variable de nivel de clase.
+1. **Configurar los valores de gestos** : el siguiente paso consiste en configurar el reconocedor de gestos. Consulte la documentación de Xamarin `UIGestureRecognizer` sobre y sus subclases para obtener una lista de las propiedades que se pueden establecer para controlar el `UIGestureRecognizer` comportamiento de una instancia.
 1. **Configurar el destino** : debido a su herencia de Objective-C, Xamarin. iOS no genera eventos cuando un reconocedor de gestos coincide con un gesto.  `UIGestureRecognizer`tiene un método, `AddTarget` que puede aceptar un delegado anónimo o un selector de Objective-C con el código que se va a ejecutar cuando el reconocedor de gestos realiza una coincidencia.
-1. **Habilitar** el reconocedor de gestos: al igual que con los eventos táctiles, los gestos solo se reconocen si las interacciones táctiles están habilitadas.
+1. **Habilitar el reconocedor de gestos** : al igual que con los eventos táctiles, los gestos solo se reconocen si las interacciones táctiles están habilitadas.
 1. **Agregar el reconocedor de gestos a la vista** : el paso final consiste en agregar el gesto a una `View.AddGestureRecognizer` vista mediante una llamada a y pasarle un objeto de reconocedor de gestos.
 
-Consulte los [ejemplos](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) del reconocedor de gestos para obtener más información sobre cómo implementarlos en el código.
+Consulte los [ejemplos del reconocedor de gestos](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) para obtener más información sobre cómo implementarlos en el código.
 
 Cuando se llama al destino del gesto, se le pasará una referencia al gesto que se ha producido. Esto permite que el destino del gesto obtenga información sobre el gesto que se ha producido. La extensión de la información disponible depende del tipo de reconocedor de gestos que se usó. Consulte la documentación de Xamarin para obtener información sobre los datos disponibles para `UIGestureRecognizer` cada subclase.
 

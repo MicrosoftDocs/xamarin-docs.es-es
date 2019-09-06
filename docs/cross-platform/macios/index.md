@@ -3,15 +3,15 @@ title: Plataforma de Apple (iOS y Mac)
 description: 'En este documento se describen varios temas relacionados con el desarrollo de Xamarin. iOS y Xamarin. Mac: uso compartido de código, Unified API, bibliotecas de Objective-C de enlace, referencias nativas, tipos nativos y mucho más.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d57e69f3cb7662b1ff6e1e7fe1645605d7861b9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199420"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290834"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma de Apple (iOS y Mac)
 
@@ -19,7 +19,7 @@ ms.locfileid: "70199420"
 
 En el caso de los elementos del código que no tienen elementos de interfaz de usuario, la mejor manera de compartir el código entre iOS y Mac sigue siendo el uso de [bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md).
 
-Para el código que tiene que hacer algún trabajo de la interfaz de usuario y, a pesar de ello, desea compartir, debe usar [proyectos](~/cross-platform/app-fundamentals/shared-projects.md) compartidos que le permitan colocar código para compartirlo en un solo proyecto y compilarlo con Mac e iOS cuando se haga referencia a ellos.
+Para el código que tiene que hacer algún trabajo de la interfaz de usuario y, a pesar de ello, desea compartir, debe usar [proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md) que le permitan colocar código para compartirlo en un solo proyecto y compilarlo con Mac e iOS cuando se haga referencia a ellos.
 
 ## <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 

@@ -4,15 +4,15 @@ description: En este artículo se describe el espacio aislado de una aplicación
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227240"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290318"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación de Xamarin. Mac
 
@@ -115,7 +115,7 @@ Haga lo siguiente:
 2. Seleccione **certificados, identificadores & perfiles**:
 
     [![Seleccionar certificados, identificadores y perfiles](sandboxing-images/sign02.png "Seleccionar certificados, identificadores y perfiles")](sandboxing-images/sign02-large.png#lightbox)
-3. En **aplicaciones Mac**, seleccione **Identifiers**(identificadores):
+3. En **aplicaciones Mac**, seleccione **Identifiers (identificadores**):
 
     [![Seleccionar identificadores](sandboxing-images/sign03.png "Seleccionar identificadores")](sandboxing-images/sign03-large.png#lightbox)
 4. Cree un nuevo identificador para la aplicación:
@@ -161,7 +161,7 @@ A continuación, es necesario seleccionar el nuevo identificador de aplicación 
 2. Asegúrese de que el **identificador de paquete** coincide con el identificador de aplicación que hemos creado `com.appracatappra.MacSandbox`anteriormente (ejemplo:):
 
     [![Editar el identificador de paquete](sandboxing-images/sign13.png "Editar el identificador de paquete")](sandboxing-images/sign13-large.png#lightbox)
-3. A continuación, haga doble clic en el archivo contitles **. plist** y asegúrese de que el **almacén de clave-valor de icloud** y los **contenedores de ICLOUD** coinciden con el identificador `com.appracatappra.MacSandbox`de aplicación que hemos creado anteriormente (ejemplo:):
+3. A continuación, haga doble clic en el archivo **contitles. plist** y asegúrese de que el **almacén de clave-valor de icloud** y los **contenedores de ICLOUD** coinciden con el identificador `com.appracatappra.MacSandbox`de aplicación que hemos creado anteriormente (ejemplo:):
 
     [![Edición del archivo de derechos. plist](sandboxing-images/sign17.png "Edición del archivo de derechos. plist")](sandboxing-images/sign17-large.png#lightbox)
 4. Guarde los cambios.
@@ -194,7 +194,7 @@ En caso de un problema, corrija el problema en el portal para desarrolladores de
 
 Para habilitar el espacio aislado de la aplicación, seleccione una casilla en las opciones de los proyectos. Haga lo siguiente:
 
-1. En el **Panel de solución**, haga doble clic en el archivo contitles **. plist** para abrirlo para su edición.
+1. En el **Panel de solución**, haga doble clic en el archivo **contitles. plist** para abrirlo para su edición.
 2. Active **Habilitar derechos** y **habilitar espacio aislado de aplicaciones**:
 
     [![Edición de derechos y habilitación del espacio aislado](sandboxing-images/sign17.png "Edición de derechos y habilitación del espacio aislado")](sandboxing-images/sign17-large.png#lightbox)
@@ -258,7 +258,7 @@ Ahora que hemos aprendido a encontrar infracciones de espacio aislado de aplicac
 
 Haga lo siguiente:
 
-1. En el **Panel de solución**, haga doble clic en el archivo contitles **. plist** para abrirlo para su edición.
+1. En el **Panel de solución**, haga doble clic en el archivo **contitles. plist** para abrirlo para su edición.
 2. En la sección **derechos** , active la casilla **permitir conexiones de red salientes (cliente)** :
 
     [![Editar los derechos](sandboxing-images/sign17.png "Editar los derechos")](sandboxing-images/sign17-large.png#lightbox)
@@ -282,7 +282,7 @@ Como vimos anteriormente, se concede a una aplicación de Xamarin. Mac que no es
 
 Al habilitar el espacio aislado de la aplicación, se quitan todos los privilegios menos un conjunto mínimo de privilegios, que luego se vuelven a habilitar en función de los derechos de la aplicación de Xamarin. Mac.
 
-Modifique los recursos de espacio aislado de la aplicación de la aplicación editando su archivo contitles **. plist** y comprobando o seleccionando los derechos necesarios en los cuadros desplegables editores:
+Modifique los recursos de espacio aislado de la aplicación de la aplicación editando su archivo **contitles. plist** y comprobando o seleccionando los derechos necesarios en los cuadros desplegables editores:
 
 [![Editar los derechos](sandboxing-images/sign17.png "Editar los derechos")](sandboxing-images/sign17-large.png#lightbox)
 
@@ -305,7 +305,7 @@ El directorio del contenedor de la aplicación de una aplicación de Xamarin. Ma
 - La mayoría de las API de búsqueda de rutas de macOS están relacionadas con el contenedor de la aplicación. Por ejemplo, el contenedor tendrá su propia **biblioteca** (a la que se `NSLibraryDirectory`accede a través de), los subdirectorios de **compatibilidad de aplicaciones** y **preferencias** .
 - macOS establece y aplica la conexión entre y la aplicación y su contenedor a través de la firma de código. Incluso si otra aplicación intenta suplantar la aplicación mediante su **identificador de lote**, no podrá tener acceso al contenedor debido a la firma de código.
 - El contenedor no es para los archivos generados por el usuario. En su lugar, es para los archivos que utiliza la aplicación, como bases de datos, memorias caché u otros tipos de datos específicos.
-- En el caso de los tipos de las aplicaciones (por ejemplo, la aplicación fotográfica de Apple), el contenido del usuario pasará al contenedor.
+- En _el caso de_ los tipos de las aplicaciones (por ejemplo, la aplicación fotográfica de Apple), el contenido del usuario pasará al contenedor.
 
 > [!IMPORTANT]
 > Desafortunadamente, Xamarin. Mac no tiene todavía una cobertura de API del 100% (a diferencia de Xamarin. iOS). como `NSHomeDirectory` resultado, la API no se ha asignado en la versión actual de Xamarin. Mac.

@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con imágenes e iconos 
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: bdd4ba57dfce96e469639e4b90b06c73c339b0f0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065398"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281699"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes en Xamarin. Mac
 
@@ -45,13 +45,13 @@ Cuando se agrega una imagen para su uso en una aplicación de Xamarin. Mac, hay 
 - **Árbol de proyecto principal [desusado]** -las imágenes se pueden agregar directamente al árbol de proyectos. Cuando se llama a imágenes almacenadas en el árbol del proyecto principal desde el código, no se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Carpeta recursos [en desuso]** -la carpeta **recursos** especiales es para cualquier archivo que se convertirá en parte del paquete de la aplicación, como el icono, la pantalla de inicio o las imágenes generales (o cualquier otra imagen o archivo que el desarrollador desee agregar). Cuando se llama a imágenes almacenadas en la carpeta **recursos** desde el código, al igual que las imágenes almacenadas en el árbol del proyecto principal, no se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage.ImageNamed("tags.png")`.
 - **Carpeta o subcarpeta personalizada [en desuso]** : el desarrollador puede Agregar una carpeta personalizada al árbol de origen de proyectos y almacenar allí las imágenes. La ubicación donde se agrega el archivo puede estar anidada en una subcarpeta para facilitar la organización del proyecto. Por ejemplo, si el desarrollador agrega una `Card` carpeta al proyecto y una subcarpeta de `Hearts` a esa carpeta, almacene una imagen **Jack. png** en la `Hearts` carpeta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` cargará la imagen en tiempo de ejecución.
-- **Conjuntos de imágenes del catálogo de recursos [preferido]** -agregado en OS X el Capitan, los **conjuntos de imágenes** de catálogos de recursos contienen todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para la aplicación. En lugar de confiar en el nombre de archivo de recursos **@1x** de **@2x** imagen (,).
+- **Conjuntos de imágenes del catálogo de recursos [preferido]** -agregado en OS X el Capitan, los **conjuntos de imágenes de catálogos de recursos** contienen todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para la aplicación. En lugar de confiar en el nombre de archivo de recursos **@1x** de **@2x** imagen (,).
 
 <a name="asset-catalogs" />
 
 ### <a name="adding-images-to-an-asset-catalog-image-set"></a>Agregar imágenes a un conjunto de imágenes del catálogo de recursos
 
-Como se indicó anteriormente, un **conjunto de imágenes** de catálogos de recursos contiene todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para la aplicación. En lugar de confiar en el nombre de archivo de los recursos de imagen (consulte las imágenes independientes de la resolución y la nomenclatura de la imagen anterior), los **conjuntos de imágenes** usan el editor de recursos para especificar la imagen que pertenece a cada dispositivo o resolución.
+Como se indicó anteriormente, un **conjunto de imágenes de catálogos de recursos** contiene todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para la aplicación. En lugar de confiar en el nombre de archivo de los recursos de imagen (consulte las imágenes independientes de la resolución y la nomenclatura de la imagen anterior), los **conjuntos de imágenes** usan el editor de recursos para especificar la imagen que pertenece a cada dispositivo o resolución.
 
 1. En el **Panel de solución**, haga doble clic en el archivo **assets. xcassets** para abrirlo para su edición: 
 
@@ -107,7 +107,7 @@ Aquí puede trabajar con la colección de la misma manera que la colección **as
 > [!IMPORTANT]
 > Apple ha dejado de trabajar con este método de trabajo con imágenes en una aplicación de macOS. En su lugar, debe usar [conjuntos de imágenes del catálogo de recursos](#asset-catalogs) para el administrador de las imágenes de la aplicación.
 
-Antes de poder usar un archivo de imagen en la aplicación de Xamarin. Mac ( C# ya sea en código o desde Interface Builder) debe incluirse en la carpeta de **recursos** del proyecto como un **recurso**de agrupación. Para agregar un archivo a un proyecto, haga lo siguiente:
+Antes de poder usar un archivo de imagen en la aplicación de Xamarin. Mac ( C# ya sea en código o desde Interface Builder) debe incluirse en la carpeta de **recursos** del proyecto como un **recurso de agrupación**. Para agregar un archivo a un proyecto, haga lo siguiente:
 
 1. Haga clic con el botón derecho en la carpeta **recursos** del proyecto en el **Panel de solución** y seleccione **Agregar** > **Agregar archivos..** .: 
 
@@ -115,7 +115,7 @@ Antes de poder usar un archivo de imagen en la aplicación de Xamarin. Mac ( C# 
 2. En el cuadro de diálogo **Agregar archivos** , seleccione los archivos de imagen que desea agregar al proyecto `BundleResource` , seleccione para la **acción invalidar compilación** y haga clic en el botón **abrir** :
 
     [![Seleccionar los archivos que se van a agregar](image-images/add02.png "Seleccionar los archivos que se van a agregar")](image-images/add02-large.png#lightbox)
-3. Si los archivos no están ya en la carpeta **recursos** , se le preguntará si desea **copiar**, trasladar o **vincular** los archivos. Seleccione cada una de las cuales se adapte a sus necesidades; normalmente se copiará:
+3. Si los archivos no están ya en la carpeta **recursos** , se le preguntará si desea **copiar**, **trasladar** o **vincular** los archivos. Seleccione cada una de las cuales se adapte a sus necesidades; normalmente se **copiará**:
 
     ![Seleccionar la acción agregar](image-images/add04.png "Seleccionar la acción agregar")
 4. Los nuevos archivos se incluirán en el proyecto y se leerán para su uso: 

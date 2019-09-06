@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF frente a Xamarin.Forms: Similitudes & diferencias'
 description: En este documento se comparan y contrastan WPF con Xamarin. Forms. Se describen las plantillas de control, XAML, la infraestructura de enlace, las plantillas de datos, ItemsControl, UserControl, la navegación y la navegación de direcciones URL.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 149636719c7f8046b8a32d8d2f4157b663388cb1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227607"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290407"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF frente a Xamarin.Forms: Similitudes & diferencias
 
@@ -18,7 +18,7 @@ ms.locfileid: "70227607"
 
 WPF admite el concepto de *plantillas de control* que proporcionan las instrucciones de visualización para un`Button`control `ListBox`(,, etc.). Como se mencionó anteriormente, Xamarin. Forms usa clases de _representación_ concretas para esto que interactúan con la plataforma nativa (iOS, Android, etc.) para visualizar el control.
 
-Sin embargo, Xamarin. Forms tiene `ControlTemplate` un tipo; se `Page` usa para los objetos. Proporciona una definición para `Page` que proporciona contenido coherente, pero permite al usuario de la página cambiar los colores, las fuentes, etc. e incluso agregar elementos para que sea único para la aplicación.
+Sin embargo, Xamarin. _Forms tiene un_ `ControlTemplate` tipo; se `Page` usa para los objetos. Proporciona una definición para `Page` que proporciona contenido coherente, pero permite al usuario de la página cambiar los colores, las fuentes, etc. e incluso agregar elementos para que sea único para la aplicación.
 
 Los usos comunes de esto son cosas como cuadros de diálogo de autenticación, mensajes y para proporcionar una apariencia de página estandarizada pero que se puede personalizar en la aplicación. Como parte de esta compatibilidad, se usan muchos controles conocidos con nombre de WPF:
 
@@ -177,4 +177,4 @@ Es el enfoque más común y cada página tiene una `Navigation` propiedad que se
 
 ### <a name="url-navigation"></a>Navegación de direcciones URL
 
-WPF es una tecnología orientada al escritorio y puede aceptar parámetros de línea de comandos para el comportamiento de Inicio directo. Xamarin. Forms puede usar la vinculación de [URL profunda](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) para saltar a una página en el inicio.
+WPF es una tecnología orientada al escritorio y puede aceptar parámetros de línea de comandos para el comportamiento de Inicio directo. Xamarin. Forms puede usar la [vinculación de URL profunda](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) para saltar a una página en el inicio.

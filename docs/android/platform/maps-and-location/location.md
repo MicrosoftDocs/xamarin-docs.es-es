@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523989"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280609"
 ---
 # <a name="location-services-on-android"></a>Servicios de ubicación en Android
 
@@ -336,15 +336,15 @@ else
 ```
 
 > [!NOTE]
->  Si el usuario ha deshabilitado todos los `GetBestProvider` proveedores de `null`ubicación, devolverá. Para ver cómo funciona este código en un dispositivo real, asegúrese de habilitar las redes GPS, Wi-Fi y telefonía móvil en **configuración de Google > el modo de ubicación >** como se muestra en esta captura de pantalla:
-
-[![Pantalla de modo de ubicación de configuración en un teléfono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-En la captura de pantalla siguiente se muestra la `GetBestProvider`aplicación de ubicación que se ejecuta mediante:
-
-[![Aplicación GetBestProvider que muestra latitud, longitud y proveedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Tenga en cuenta que `GetBestProvider` no cambia el proveedor dinámicamente. En su lugar, determina el mejor proveedor disponible una vez durante el ciclo de vida de la actividad. Si el estado del proveedor cambia después de que se haya establecido, la aplicación requerirá código adicional `ILocationListener` en &ndash; los `OnProviderDisabled`métodos `OnProviderEnabled`, `OnStatusChanged` y &ndash; para controlar todas las posibilidades relacionadas con el modificador de proveedor.
+> Si el usuario ha deshabilitado todos los `GetBestProvider` proveedores de `null`ubicación, devolverá. Para ver cómo funciona este código en un dispositivo real, asegúrese de habilitar las redes GPS, Wi-Fi y telefonía móvil en **configuración de Google > el modo de ubicación >** como se muestra en esta captura de pantalla:
+>
+> [![Pantalla de modo de ubicación de configuración en un teléfono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> En la captura de pantalla siguiente se muestra la `GetBestProvider`aplicación de ubicación que se ejecuta mediante:
+>
+> [![Aplicación GetBestProvider que muestra latitud, longitud y proveedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Tenga en cuenta que `GetBestProvider` no cambia el proveedor dinámicamente. En su lugar, determina el mejor proveedor disponible una vez durante el ciclo de vida de la actividad. Si el estado del proveedor cambia después de que se haya establecido, la aplicación requerirá código adicional `ILocationListener` en &ndash; los `OnProviderDisabled`métodos `OnProviderEnabled`, `OnStatusChanged` y &ndash; para controlar todas las posibilidades relacionadas con el modificador de proveedor.
 
 ## <a name="summary"></a>Resumen
 

@@ -4,15 +4,15 @@ description: Con iOS 12, es posible agrupar las notificaciones en el centro de n
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 3edaabe287bc2b37d2ec5a759ada9f59441c6d3a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652568"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291263"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notificaciones agrupadas en Xamarin. iOS
 

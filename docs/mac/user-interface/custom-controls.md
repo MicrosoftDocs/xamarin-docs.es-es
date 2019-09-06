@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear controles personalizados 
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 24e4113f0437c626ba93f12c1124407c472fef8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227906"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284942"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Crear controles personalizados en Xamarin. Mac
 
@@ -157,7 +157,7 @@ public bool Value {
 
 Cuando cambia el estado del cambio, necesitamos una manera de actualizar la interfaz de usuario. Esto se hace obligando al control a volver a dibujar su interfaz `NeedsDisplay = true`de usuario con.
 
-Si nuestro control requería más que un único estado de activación o desactivación (por ejemplo, un conmutador de varios Estados con 3 posiciones), podríamos haber usado una enumeración para realizar el seguimiento del estado. En nuestro ejemplo, se realizará una simple **bool** .
+Si nuestro control requería más que un único estado de activación o desactivación (por ejemplo, un conmutador de varios Estados con 3 posiciones), podríamos haber usado una **enumeración** para realizar el seguimiento del estado. En nuestro ejemplo, se realizará una simple **bool** .
 
 También hemos agregado un método auxiliar para intercambiar el estado del conmutador entre on y OFF:
 
@@ -212,10 +212,10 @@ Vamos a ajustar la representación visual del control cuando cambie su estado (p
 
 ### <a name="responding-to-user-input"></a>Responder a los datos proporcionados por el usuario
 
-Hay dos formas básicas de agregar datos proporcionados por el usuario a nuestro control personalizado: **Invalida** las rutinas de control de mouse o los reconocedores de **gestos**. El método que usamos, se basará en la funcionalidad que requiere nuestro control.
+Hay dos formas básicas de agregar datos proporcionados por el usuario a nuestro control personalizado: **Invalida las rutinas de control de mouse** o los **reconocedores de gestos**. El método que usamos, se basará en la funcionalidad que requiere nuestro control.
 
 > [!IMPORTANT]
-> Para cualquier control personalizado que cree, debe usar métodos de **invalidación** _o_reconocedores de gestos, pero no ambos al mismo tiempo, ya que pueden entrar en conflicto entre sí.
+> Para cualquier control personalizado que cree, debe usar métodos de **invalidación** _o_ **reconocedores de gestos**, pero no ambos al mismo tiempo, ya que pueden entrar en conflicto entre sí.
 
 <a name="Summary" />
 

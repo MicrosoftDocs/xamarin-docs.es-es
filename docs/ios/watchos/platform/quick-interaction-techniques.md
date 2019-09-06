@@ -4,15 +4,15 @@ description: En este artículo se describen las técnicas de interacción rápid
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120167"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286760"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -34,7 +34,7 @@ A continuación se muestran algunos ejemplos de interacciones rápidas típicas 
 
 Para lograr estos objetivos, una aplicación en el Apple Watch debe ser:
 
-- Con un solo vistazo, lo que significa que, con una vista rápida, el usuario debe poder obtener la información que necesitan. 
+- Con **un solo vistazo, lo** que significa que, con una vista rápida, el usuario debe poder obtener la información que necesitan. 
 - **Accionable** : es decir, los usuarios deben poder tomar decisiones rápidas y bien fundamentadas.
 - **Responde** , lo que significa que el usuario nunca debe esperar para recibir la información que necesitan o para lograr la acción que desean.
 
@@ -195,7 +195,7 @@ Como novedad de watchos 3, el desarrollador puede habilitar la paginación verti
 
 [![](quick-interaction-techniques-images/quick05.png "Desplazarse entre una tabla y la vista de detalle y deslizar hacia arriba y hacia abajo para desplazarse por las demás filas")](quick-interaction-techniques-images/quick05.png#lightbox)
 
-Para habilitar este modo, abra el guión gráfico de la aplicación watchos en Xcode para editarlo, seleccione la vista de tabla y active la casilla paginación de **detalles vertical** :
+Para habilitar este modo, abra el guión gráfico de la aplicación watchos en Xcode para editarlo, seleccione la vista de tabla y active la casilla **paginación de detalles vertical** :
 
 [![](quick-interaction-techniques-images/quick06.png "Active la casilla paginación de detalles vertical")](quick-interaction-techniques-images/quick06.png#lightbox)
 
@@ -245,7 +245,7 @@ En watchos 3, las notificaciones locales se pueden programar en el Apple Watch y
 
 Al incluir el mismo identificador de notificación en las versiones Apple Watch y iPhone de las notificaciones, se evita que se muestren notificaciones duplicadas en el reloj. La versión Apple Watch de la notificación tendrá prioridad sobre la versión de iPhone.
 
-Como watchos 3 usa el mismo `UINotification` marco de API que Ios 10, consulte la documentación del [marco](~/ios/platform/user-notifications/index.md) de notificaciones de usuario de iOS 10 para obtener más detalles.
+Como watchos 3 usa el mismo `UINotification` marco de API que Ios 10, consulte la documentación del [marco de notificaciones de usuario](~/ios/platform/user-notifications/index.md) de iOS 10 para obtener más detalles.
 
 ### <a name="using-spritekit-and-scenekit"></a>Usar SpriteKit y SceneKit
 
@@ -299,7 +299,7 @@ Además, tanto SpriteKit como SceneKit se pueden mezclar con elementos de interf
 
 ## <a name="simple-navigation"></a>Navegación simple
 
-watchos 3 presenta varias maneras de que un desarrollador puede simplificar la navegación dentro de sus aplicaciones de watchos, como la nueva [paginación vertical](#vertical-paging), la [compatibilidad con](#gesture-recognizer-support) el reconocedor de gestos y las características de [rotación de digital Crown](#digital-crown-rotation) presentadas anteriormente.
+watchos 3 presenta varias maneras de que un desarrollador puede simplificar la navegación dentro de sus aplicaciones de watchos, como la nueva [paginación vertical](#vertical-paging), la [compatibilidad con el reconocedor de gestos](#gesture-recognizer-support) y las características de [rotación de digital Crown](#digital-crown-rotation) presentadas anteriormente.
 
 El Digital Crown es único en el Apple Watch y se puede usar de muchas formas diferentes para simplificar la navegación. Por ejemplo, una aplicación de temporizador puede usar el Digital Crown para desplazarse a través de las longitudes de temporizador disponibles.
 

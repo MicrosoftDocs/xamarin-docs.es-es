@@ -4,15 +4,15 @@ description: En este artículo se describe el uso del código clave-valor y la o
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227256"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290159"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -475,7 +475,7 @@ Para enlazar los datos del formulario `PersonModel` al que exponíamos `Person` 
 4. Active la casilla **empleado como administrador** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.isManager` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple05.png "Escribir la ruta de acceso de la clave")](databinding-images/simple05-large.png#lightbox)
-5. Seleccione el campo **de texto número de empleados administrados** y active la casilla enlazar **con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.NumberOfEmployees` , escriba para la **ruta de acceso**de la clave:
+5. Seleccione el campo **de texto número de empleados administrados** y active la casilla **enlazar con** y seleccione **controlador de vista simple** en la lista desplegable. A continuación `self.Person.NumberOfEmployees` , escriba para la **ruta de acceso**de la clave:
 
     [![Escribir la ruta de acceso de la clave](databinding-images/simple06.png "Escribir la ruta de acceso de la clave")](databinding-images/simple06-large.png#lightbox)
 6. Si el empleado no es un administrador, queremos ocultar el número de empleados con etiquetas y campos de texto administrados.
@@ -493,7 +493,7 @@ Si ejecuta la aplicación, los valores de la `Person` propiedad rellenarán auto
 
 [![Mostrar un formulario rellenado automáticamente](databinding-images/simple09.png "Mostrar un formulario rellenado automáticamente")](databinding-images/simple09-large.png#lightbox)
 
-Cualquier cambio que los usuarios realice en el formulario se volverá a escribir en la `Person` propiedad en el controlador de vista. Por ejemplo, al anular la selección de Employee, `Person` el administrador actualiza `PersonModel` la instancia de y el campo de texto y la etiqueta **administrada de empleados** se ocultan automáticamente (a través del enlace de datos):
+Cualquier cambio que los usuarios realice en el formulario se volverá a escribir en la `Person` propiedad en el controlador de vista. Por ejemplo, al anular la selección de **Employee** , `Person` el administrador actualiza `PersonModel` la instancia de y el campo de texto y la etiqueta **administrada de empleados** se ocultan automáticamente (a través del enlace de datos):
 
 [![Ocultar el número de empleados para usuarios que no son administradores](databinding-images/simple10.png "Ocultar el número de empleados para usuarios que no son administradores")](databinding-images/simple10-large.png#lightbox)
 
@@ -586,7 +586,7 @@ Es necesario agregar un controlador de la **matriz** para proporcionar datos enl
 
     ![Agregar las rutas de acceso de clave necesarias](databinding-images/table05.png "Agregar las rutas de acceso de clave necesarias")
 4. Esto indica al controlador de la matriz lo que está administrando una matriz de y qué propiedades debe exponer (a través de claves).
-5. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y controlador de **vista de tabla**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
+5. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione **enlazar a** y controlador de vista de **tabla**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
 
     ![Escribir una ruta de acceso de clave](databinding-images/table06.png "Escribir una ruta de acceso de clave")
 6. Esto une el controlador de la matriz a la `PersonModels` matriz de que exponíamos en nuestro controlador de vistas.
@@ -704,11 +704,11 @@ Necesitamos agregar un controlador de **árbol** para proporcionar datos enlazad
 
     ![Agregar las rutas de acceso de clave necesarias](databinding-images/outline05.png "Agregar las rutas de acceso de clave necesarias")
 4. Esto indica al controlador de árbol lo que está administrando una matriz de y qué propiedades debe exponer (a través de claves).
-5. En la sección **controlador de árbol** , `personModelArray` escriba para **elementos secundarios**, escriba `NumberOfEmployees` en el recuento y escriba `isEmployee` en **hoja**:
+5. En la **sección controlador de árbol** , `personModelArray` escriba para **elementos secundarios**, escriba `NumberOfEmployees` en el **recuento** y escriba `isEmployee` en **hoja**:
 
     ![Establecer las rutas de acceso de las claves del controlador de árbol](databinding-images/outline05.png "Establecer las rutas de acceso de las claves del controlador de árbol")
 6. Esto indica al controlador de árbol dónde encontrar los nodos secundarios, cuántos nodos secundarios hay y si el nodo actual tiene nodos secundarios.
-7. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione enlazar **a** y el **propietario del archivo**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
+7. Cambie al **Inspector de enlaces** y, en **matriz de contenido** , seleccione **enlazar a** y el **propietario del archivo**. Escriba una **ruta de acceso** de `self.personModelArray`clave de modelo de:
 
     ![Editar la ruta de acceso de la clave](databinding-images/outline06.png "Editar la ruta de acceso de la clave")
 8. Esto une el controlador de árbol a la matriz `PersonModels` de que exponíamos en nuestro controlador de vistas.

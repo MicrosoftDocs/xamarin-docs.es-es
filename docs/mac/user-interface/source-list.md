@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con listas de origen en
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 499edcb1420b311c519f1665b4d2effd9088e9e7
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 63ce931abfbe7a39108ae3f8210209b7d43827ed
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065377"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278554"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origen en Xamarin. Mac
 

@@ -3,15 +3,15 @@ title: Usar el equipo City con Xamarin
 description: En esta guía se explican los pasos implicados en el uso de TeamCity para compilar aplicaciones móviles y después enviarlas a Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2880fcbc3366079955945c4780af2be82afe5a4a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511930"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293139"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usar el equipo City con Xamarin
 
@@ -60,7 +60,7 @@ Un paso fundamental en la configuración de un servidor de compilación es insta
 2. **Inicie sesión en el almacén de componentes de Xamarin** : este es un paso opcional y solo es necesario si la aplicación usa componentes del almacén de componentes de Xamarin. Iniciar sesión de forma proactiva en el almacén de componentes en este momento impedirá que se produzcan problemas cuando una compilación de TeamCity intente compilar la aplicación.
 3. **Xcode** : Xcode es necesario para compilar y firmar aplicaciones de iOS.
 4. **Herramientas de línea de comandos de Xcode** : esto se describe en el paso 1 de la sección de instalación de la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
-5. **Identidad de firma & perfiles de aprovisionamiento** : importe los certificados y el perfil de aprovisionamiento a través de Xcode. Consulte la guía de Apple sobre la exportación de identidades de [firma y perfiles de aprovisionamiento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obtener más detalles.
+5. **Identidad de firma & perfiles de aprovisionamiento** : importe los certificados y el perfil de aprovisionamiento a través de Xcode. Consulte la guía de Apple sobre la [exportación de identidades de firma y perfiles de aprovisionamiento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obtener más detalles.
 6. **Keystores de Android** : Copie el keystores de Android necesario en un directorio al que el usuario de TeamCity tenga acceso `~/Documents/keystores/MyAndroidApp1`, es decir,.
 7. **Calabash** : este paso es opcional si la aplicación tiene pruebas escritas con calabash. Para obtener más información, consulte la guía de [instalación de calabash en OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) y la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
 

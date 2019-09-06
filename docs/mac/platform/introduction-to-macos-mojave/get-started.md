@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar para compilar aplica
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 369133f49566625dd677dc077ed8ff6a0bb0b4db
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 64c1ca0bfee5b98b7842bdc44a46bc40cf2012fc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511670"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285463"
 ---
 # <a name="get-started-with-macos-mojave"></a>Introducción a macOS Mojave
 

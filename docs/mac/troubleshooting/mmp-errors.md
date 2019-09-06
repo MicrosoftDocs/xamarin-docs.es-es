@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 16708ad1d26c9d7394ad95b2d449ca304534a2bd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 35de496d0684473fe3f6bc4ebadddc471b6b0cfe
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292892"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensajes de error de Xamarin. Mac (MMP)
 

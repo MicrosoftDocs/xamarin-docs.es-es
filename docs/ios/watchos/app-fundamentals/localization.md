@@ -4,15 +4,15 @@ description: Este documento describe cómo adaptar las aplicaciones para watchOS
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 70555a0e2df3bcdd9c3abe47cf8231145891a826
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 10f240a8e245f24d4b8f646eb972cbe21d28b75c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528405"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289936"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con watchOS localización en Xamarin
 

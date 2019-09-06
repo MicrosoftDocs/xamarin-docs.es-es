@@ -1,32 +1,32 @@
 ---
 title: Xamarin Inspector
-description: Este documento incluye vínculos a guías que describen cómo instalar y usar el Xamarin Inspector para explorar y depurar aplicaciones.
+description: En este documento se proporcionan vínculos a guías que describen cómo instalar y usar el Xamarin Inspector para explorar y depurar aplicaciones.
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 41111a0ae87b2b1c4a7b1c77bfeeeb3c9e5fa000
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5aa35c53af39df63f0b6e0f960432cbc43dadc8a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896005"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292472"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
-Xamarin Inspector se integra con la aplicación de flujo de trabajo de su IDE, lo que le permite ejecutar de forma interactiva de depuración C# código o inspeccionar las propiedades de la interfaz de usuario, que actúa como ayuda para la depuración o el diagnóstico al inspeccionar la aplicación en ejecución.
+El Xamarin Inspector se integra con el flujo de trabajo de depuración de aplicaciones del IDE, lo que C# le permite ejecutar código de forma interactiva o inspeccionar las propiedades de la interfaz de usuario, actuando como ayuda para la depuración o el diagnóstico al inspeccionar la aplicación en ejecución.
 
-Inspección de la aplicación activa está disponible para los clientes empresariales. Háganos saber si le [experimenta errores](~/tools/inspector/install.md#reporting-bugs). Tenemos un [foro](https://forums.xamarin.com/categories/inspector) demasiado!
+La inspección de aplicaciones activas está disponible para los clientes empresariales. Háganoslo saber si tiene [errores](~/tools/inspector/install.md#reporting-bugs). También tenemos un [Foro](https://forums.xamarin.com/categories/inspector) .
 
-[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Inspección de la aplicación activa está disponible para los clientes de empresa")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
+[![](images/interactive-1.0.0-bike-inspect-3d-small.png "La inspección de aplicaciones activas está disponible para los clientes empresariales")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[Instalación y requisitos](~/tools/inspector/install.md)
 
-Información sobre cómo obtener Xamarin Inspector instalado en el equipo Mac o Windows.
+Información sobre cómo obtener Xamarin Inspector instalado en un equipo Mac o Windows.
 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[Inspección de aplicaciones activas](~/tools/inspector/inspect.md)
 
-Describe cómo usar el Inspector de para adjuntar a una aplicación mientras se ejecuta desde el IDE, lo que permite su estado explorar y manipular sin poner en pausa.
+Describe cómo usar el inspector para adjuntar a una aplicación mientras se ejecuta desde el IDE, lo que permite explorar y manipular su estado sin pausar.
 
 

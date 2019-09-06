@@ -4,15 +4,15 @@ description: 'iOS 6 presenta dos cambios en la API del kit de tiendas: la capaci
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4197dfb38ac6118d20da2b87d0c686558d77b0f6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527860"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281572"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Cambios en StoreKit en iOS 6
 
@@ -38,7 +38,7 @@ Anteriormente, las aplicaciones tendrían que desencadenar iTunes, App Store o i
 
 Estos son algunos ejemplos de cómo se podría usar:
 
-- **Animar a los usuarios para** que califiquen la aplicación: puede abrir la página de App Store para que el usuario pueda clasificar y revisar la aplicación sin cerrarla.
+- **Animar a los usuarios para que califiquen la aplicación** : puede abrir la página de App Store para que el usuario pueda clasificar y revisar la aplicación sin cerrarla.
 - **Aplicaciones de promoción cruzada** : permite al usuario ver otras aplicaciones que publique, con la capacidad de comprar o descargar inmediatamente.
 - **Ayudar a los usuarios a encontrar y descargar contenido** : Ayude a los usuarios a comprar contenido que la aplicación encuentra, administra o agrega (por ejemplo, una aplicación relacionada con música podría proporcionar una lista de reproducción de canciones y permitir la compra de cada canción dentro de la aplicación).
 
@@ -208,7 +208,7 @@ El archivo de texto y la imagen se descargan y copian en el directorio de docume
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
-Al crear nuevos productos que usarán el hospedaje de contenido de Apple, asegúrese de seleccionar el tipo de producto **no consumible** . Otros tipos de productos no admiten el hospedaje de contenido. Además, no debe habilitar el hospedaje de contenido para los productos que vende; Active únicamente el hospedaje de contenido para los nuevos productos.
+Al crear nuevos productos que usarán el hospedaje de contenido de Apple, asegúrese de seleccionar el tipo de producto **no consumible** . Otros tipos de productos no admiten el hospedaje de contenido. Además, no debe habilitar el hospedaje de contenido *para los productos* que vende; Active únicamente el hospedaje de contenido para los nuevos productos.
 
  [![](changes-to-storekit-images/image6.png "Seleccionar el tipo de producto no consumible")](changes-to-storekit-images/image6.png#lightbox)
 

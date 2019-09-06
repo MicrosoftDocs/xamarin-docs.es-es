@@ -4,15 +4,15 @@ description: En este documento se presenta el editor de la lista de propiedades 
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ca3622e01d6c7b616dc115b89ffcccf64022b1a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527139"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286790"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Trabajar con listas de propiedades en Xamarin. iOS
 
@@ -67,7 +67,7 @@ Las secciones de información de **implementación** de dispositivos se muestran
 
 ### <a name="supported-device-orientations"></a>Orientaciones de dispositivos compatibles
 
- Las orientaciones de **dispositivo compatibles** controlan el modo en que la aplicación responde a la rotación del dispositivo. Es muy común que las aplicaciones de iPhone/iPad solo admitan el uso de **vertical**o todo el resto. Por lo general, todas las aplicaciones de iPad excepto los juegos deben admitir todas las orientaciones.
+ Las **orientaciones de dispositivo compatibles** controlan el modo en que la aplicación responde a la rotación del dispositivo. Es muy común que las aplicaciones de iPhone/iPad solo admitan el uso de **vertical**o todo el **resto.** Por lo general, todas las aplicaciones de iPad excepto los juegos deben admitir todas las orientaciones.
 
 ### <a name="status-bar-styles"></a>Estilos de barra de estado
 

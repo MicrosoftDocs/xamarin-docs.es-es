@@ -4,15 +4,15 @@ description: En este artículo se describe cómo trabajar con barras de herramie
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b2008b93f208d73af06c12fa493232fd56ddd64f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644749"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280099"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas en Xamarin. Mac
 
@@ -117,7 +117,7 @@ Están disponibles las propiedades siguientes:
 5. **Tamaño** : establece el tamaño de la barra de herramientas.
 6. **Autoguardar** : si se selecciona esta opción, la aplicación conservará los cambios de configuración de la barra de herramientas de un usuario entre los lanzamientos de la aplicación.
 
-Seleccione la opción Autoguardar y deje las demás propiedades con su configuración predeterminada. 
+Seleccione la opción **Autoguardar** y deje las demás propiedades con su configuración predeterminada. 
 
 Después de abrir la barra de herramientas en la jerarquía de la **interfaz**, abra el cuadro de diálogo de personalización seleccionando un elemento de la barra de herramientas:
 
@@ -132,7 +132,7 @@ Se pueden agregar los siguientes elementos de la barra de herramientas:
 - **Elemento de la barra de herramientas imagen** : elemento de la barra de herramientas con una imagen personalizada como icono.
 - **Elemento de la barra de herramientas espacio flexible** : espacio flexible utilizado para justificar los elementos de la barra de herramientas subsiguientes. Por ejemplo, uno o varios elementos de la barra de herramientas seguidos de un elemento de barra de herramientas de espacio flexible y otro elemento de la barra de herramientas anclarían el último elemento al lado derecho de la barra de herramientas.
 - **Elemento de la barra de herramientas espacio** : espacio fijo entre los elementos de la barra de herramientas
-- **Elemento de barra de herramientas** separador: un separador visible entre dos o más elementos de la barra de herramientas, para la agrupación
+- **Elemento de barra de herramientas separador** : un separador visible entre dos o más elementos de la barra de herramientas, para la agrupación
 - **Personalizar el elemento** de la barra de herramientas: permite a los usuarios personalizar la barra de herramientas.
 - **Imprimir elemento** de la barra de herramientas: permite a los usuarios imprimir el documento abierto
 - **Elemento de la barra de herramientas mostrar colores** : muestra el selector de colores estándar del sistema: 
@@ -196,7 +196,7 @@ Guarde el documento, vuelva a Visual Studio para Mac para sincronizarlo con Xcod
 
 ## <a name="using-images-with-toolbar-items"></a>Usar imágenes con elementos de barra de herramientas
 
-Mediante el uso de un elemento de la **barra de herramientas de imagen**, cualquier imagen de mapa de bits agregada a la carpeta de **recursos** (y dada una acción de compilación de **recurso**de agrupación) se puede mostrar en la barra de herramientas como un icono:
+Mediante el uso de un elemento de la **barra de herramientas de imagen**, cualquier imagen de mapa de bits agregada a la carpeta de **recursos** (y dada una acción de compilación de **recurso de agrupación**) se puede mostrar en la barra de herramientas como un icono:
 
 1. En Visual Studio para Mac, en el **Panel de solución**, haga clic con el botón derecho en la carpeta **recursos** y seleccione **Agregar** > **Agregar archivos**.
 2. En el cuadro de diálogo **Agregar archivos** , vaya a las imágenes deseadas, selecciónelas y haga clic en el botón **abrir** : 
@@ -223,7 +223,7 @@ Mediante el uso de un elemento de la **barra de herramientas de imagen**, cualqu
 
     ![Establecer la etiqueta del elemento de la barra de herramientas y la etiqueta de la paleta](toolbar-images/edit16.png "Establecer la etiqueta del elemento de la barra de herramientas y la etiqueta de la paleta")
 
-9. Arrastre un **elemento de barra de herramientas** de separador desde el **Inspector de biblioteca** hasta el área de elementos de **barra de herramientas permitidos** de la barra de herramientas 
+9. Arrastre un **elemento de barra de herramientas de separador** desde el **Inspector de biblioteca** hasta el área de **elementos de barra de herramientas permitidos** de la barra de herramientas 
 
     [![Un elemento de barra de herramientas de separador agregado al área de elementos de la barra de herramientas permitida](toolbar-images/edit17.png "Un elemento de barra de herramientas de separador agregado al área de elementos de la barra de herramientas permitida")](toolbar-images/edit17-large.png#lightbox)
 

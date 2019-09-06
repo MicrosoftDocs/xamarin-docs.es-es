@@ -3,15 +3,15 @@ title: Enlace de plataformas nativas
 description: En este documento se describe cómo usar la opción-Framework de Objective Sharpie para crear un enlace a una biblioteca distribuida como un marco de trabajo.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/15/2016
-ms.openlocfilehash: cb6c39b2110161b3f839b8adc03701007f09cc4d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 560db570e915cc9bf261f482f03d972973968585
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521883"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279041"
 ---
 # <a name="binding-native-frameworks"></a>Enlace de plataformas nativas
 

@@ -4,15 +4,15 @@ description: La aplicación Wallet permite a los usuarios de iOS almacenar tarje
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119182"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277866"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -370,13 +370,13 @@ Dado que Wallet es una tecnología de tienda, la aplicación debe aprovisionarse
 
 ### <a name="entitlements"></a>Derechos
 
-El archivo contitles **. plist** debe estar incluido en todos los proyectos de Xamarin. iOS recientes. Para agregar un nuevo archivo contitles. plist, siga los pasos de la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
+El archivo **contitles. plist** debe estar incluido en todos los proyectos de Xamarin. iOS recientes. Para agregar un nuevo archivo contitles. plist, siga los pasos de la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
 Para establecer los derechos, haga lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Haga doble clic en el archivo contitles **. plist** en el panel de solución para abrir el editor de derechos. plist:
+Haga doble clic en el archivo **contitles. plist** en el panel de solución para abrir el editor de derechos. plist:
 
 ![](passkit-images/image31.png "Contitles. Editor plst")
 
@@ -389,7 +389,7 @@ La opción predeterminada es que la aplicación permita todos los tipos de tarje
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Haga doble clic en el archivo contitles **. plist** para abrir el archivo de origen XML.
+Haga doble clic en el archivo **contitles. plist** para abrir el archivo de origen XML.
 
 Para agregar el derecho de Wallet, establezca la propiedad `Passbook Identifiers` en en la lista desplegable, que establecerá automáticamente el **tipo** `Array`. A continuación, establezca el **valor** de `$(TeamIdentifierPrefix)*`cadena en:
 

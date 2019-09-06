@@ -4,15 +4,15 @@ description: En este artículo se describe cómo incluir un recurso de imagen en
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/24/2018
-ms.openlocfilehash: 8082fc6ab2625e68d64ee9d42a9b630f885d9002
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8e06b03e0acb129f1eb0c3c793d0b4a05c11ce2b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227753"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282373"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin. iOS
 
@@ -22,11 +22,11 @@ _En este artículo se describe cómo incluir un recurso de imagen en una aplicac
 
 Cuando se agrega una imagen para su uso en una aplicación de Xamarin. iOS, el desarrollador usará un _Catálogo de recursos_ para admitir todos los dispositivos iOS y la resolución requerida por una aplicación.
 
-Agregado en iOS 7, los **conjuntos de imágenes** de catálogos de recursos contienen todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para una aplicación. En lugar de confiar en el nombre de archivo de recursos de imagen, los **conjuntos de imágenes** usan un archivo JSON para especificar la imagen a la que pertenece cada dispositivo o resolución. Esta es la manera preferida de administrar y admitir imágenes en iOS (desde iOS 9 o superior).
+Agregado en iOS 7, los **conjuntos de imágenes de catálogos de recursos** contienen todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para una aplicación. En lugar de confiar en el nombre de archivo de recursos de imagen, los **conjuntos de imágenes** usan un archivo JSON para especificar la imagen a la que pertenece cada dispositivo o resolución. Esta es la manera preferida de administrar y admitir imágenes en iOS (desde iOS 9 o superior).
 
 ## <a name="adding-images-to-an-asset-catalog-image-set"></a>Agregar imágenes a un conjunto de imágenes del catálogo de recursos
 
-Como se indicó anteriormente, un **conjunto de imágenes** de catálogos de recursos contiene todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para una aplicación. En lugar de confiar en el nombre de archivo de recursos de imagen, los **conjuntos de imágenes** usan un archivo JSON para especificar la imagen a la que pertenece cada dispositivo o resolución.
+Como se indicó anteriormente, un **conjunto de imágenes de catálogos de recursos** contiene todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para una aplicación. En lugar de confiar en el nombre de archivo de recursos de imagen, los **conjuntos de imágenes** usan un archivo JSON para especificar la imagen a la que pertenece cada dispositivo o resolución.
 
 Para crear un nuevo conjunto de imágenes y agregarle imágenes, haga lo siguiente:
 
@@ -178,7 +178,7 @@ Para agregar un nuevo catálogo de activos al proyecto:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. En el Explorador de soluciones, haga clic con el botón derecho en la carpeta de catálogos de **recursos** y seleccione **Agregar > nuevo catálogo de recursos**.
+1. En el Explorador de soluciones, haga clic con el botón derecho en la carpeta de **catálogos de recursos** y seleccione **Agregar > nuevo catálogo de recursos**.
 2. Asígnele un nombre y haga clic en **Agregar**:
 
     ![](displaying-an-image-images/asset1.png "Creación de un nuevo catálogo de activos")

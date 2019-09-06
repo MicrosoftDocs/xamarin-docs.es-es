@@ -4,21 +4,21 @@ description: En este documento se describe EventKit y cómo usarlo en Xamarin. i
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528045"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291521"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit en Xamarin. iOS
 
 iOS tiene dos aplicaciones relacionadas con el calendario integradas: la aplicación de calendario y la aplicación de recordatorios. Es lo suficientemente sencillo para comprender cómo la aplicación de calendario administra los datos de calendario, pero la aplicación de recordatorios es menos obvia. En realidad, los recordatorios pueden tener fechas asociadas en cuanto a su vencimiento, cuando se completan, etc. Como tal, iOS almacena todos los datos de calendario, ya sean eventos de calendario o recordatorios, en una ubicación, denominada *base de datos de calendario*.
 
-El marco de EventKit proporciona una manera de teneracceso a los calendarios, *eventos de calendario*y datos de *recordatorios* que almacena la base de datos de calendario. El acceso a los calendarios y los eventos de calendario está disponible desde iOS 4, pero el acceso a los recordatorios es nuevo en iOS 6.
+El marco de EventKit proporciona una manera de tener acceso a los *calendarios*, *eventos de calendario*y datos de *recordatorios* que almacena la base de datos de calendario. El acceso a los calendarios y los eventos de calendario está disponible desde iOS 4, pero el acceso a los recordatorios es nuevo en iOS 6.
 
 En esta guía vamos a tratar:
 
@@ -375,7 +375,7 @@ App.Current.EventStore.FetchReminders (
 
 ## <a name="summary"></a>Resumen
 
-En este documento se proporciona información general sobre las partes importantes del marco de trabajo de EventKit y varias de las tareas más comunes. Sin embargo, el marco de trabajo de EventKit es muy grande y eficaz, e incluye características que no se han introducido aquí, como por ejemplo, actualizaciones por lotes, configuración de alarmas, configuración de periodicidad en eventos, registro y escucha de cambios en la base de datos de calendario. establecimiento de geovallas y mucho más.  Para obtener más información, consulte la [Guía de programación del calendario y](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)los recordatorios de Apple.
+En este documento se proporciona información general sobre las partes importantes del marco de trabajo de EventKit y varias de las tareas más comunes. Sin embargo, el marco de trabajo de EventKit es muy grande y eficaz, e incluye características que no se han introducido aquí, como por ejemplo, actualizaciones por lotes, configuración de alarmas, configuración de periodicidad en eventos, registro y escucha de cambios en la base de datos de calendario. establecimiento de geovallas y mucho más.  Para obtener más información, consulte la [Guía de programación del calendario y los recordatorios](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)de Apple.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

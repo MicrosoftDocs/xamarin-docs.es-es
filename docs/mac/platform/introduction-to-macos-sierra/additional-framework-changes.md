@@ -4,15 +4,15 @@ description: En este documento se describen los cambios y las mejoras menores de
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de3a0a67fb6abbd4423435b38d7712f583ab74d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620904"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284440"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Cambios adicionales en el marco de macOS Sierra
 
@@ -35,7 +35,7 @@ Se ha realizado la siguiente mejora en el marco de trabajo de AppKit para macOS 
 - Varias mejoras en `NSCollectionView` , como:
   - **Secciones contraíbles** : permite al usuario contraer una sección de vista de colección en una sola fila horizontal.
   - Los **encabezados flotantes** : los encabezados y pies de página ahora se pueden flotar (en un diseño de flujo) con la misma API que [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) en iOS.
-  - **Vistas de fondo** desplazables: ahora se puede establecer un fondo de vistas de colección para desplazarse junto con el contenido.
+  - **Vistas de fondo desplazables** : ahora se puede establecer un fondo de vistas de colección para desplazarse junto con el contenido.
 - El paso de diseño de vista diferida se ha optimizado y ampliado.
 - La API de arrastrar y colocar ahora incluye las nuevas `NSFilePromiseProvider` clases y `NSFilePromiseReceiver` para admitir la rebaño de arrastre.
 - Se han agregado varios constructores de conveniencia a los controles existentes:
@@ -125,7 +125,7 @@ Se ha realizado la siguiente mejora en el marco de trabajo de GamePlayKit para m
 
 Se ha realizado la siguiente mejora en el marco de metal para macOS Sierra:
 
-- las aplicaciones 3D y los juegos ahora pueden usar teselación para representar eficazmente escenas complejas y geometría a través de la GPU.
+- las aplicaciones 3D y los juegos ahora pueden usar _teselación_ para representar eficazmente escenas complejas y geometría a través de la GPU.
 - Utilice la especialización de función para crear una colección altamente optimizada de funciones de combinación de materiales y claros para una escena.
 - Proporcionar un control específico de la asignación de recursos para optimizar el rendimiento de las aplicaciones basadas en metal mediante montones de recursos y destinos de representación de memoria.
 
@@ -196,7 +196,7 @@ Se ha realizado la siguiente mejora en el marco de trabajo de SpriteKit para mac
 
 Se han agregado los siguientes marcos de trabajo a macOS Sierra:
 
-- **Marco de trabajo** de intents: este marco permite que la aplicación examine las interacciones (por ejemplo, la ubicación o las acciones del usuario) y tome medidas en función de esa información.
+- **Marco de trabajo de intents** : este marco permite que la aplicación examine las interacciones (por ejemplo, la ubicación o las acciones del usuario) y tome medidas en función de esa información.
 - **SafariServices Framework** : este marco de trabajo permite a la aplicación desarrollar extensiones de aplicaciones para Safari (como los bloqueadores de contenido) tanto para MacOS como para iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con vistas de tabla en 
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120829"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291620"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vistas de tabla en Xamarin. Mac
 
@@ -73,7 +73,7 @@ Seleccione la vista de tabla en la jerarquía de la **interfaz** y las siguiente
 - **Floating Group Rows** : Si `true`es, la vista de tabla dibujará celdas agrupadas como si fueran flotantes.
 - **Columnas** : define el número de columnas que se muestran.
 - **Encabezados** : Si `true`es, las columnas tendrán encabezados.
-- Reordenación: Si `true`es, el usuario podrá arrastrar de nuevo el orden de las columnas de la tabla.
+- **Reordenación** : Si `true`es, el usuario podrá arrastrar de nuevo el orden de las columnas de la tabla.
 - **Cambiar** el tamaño: `true`si es, el usuario podrá arrastrar encabezados de columna para cambiar el tamaño de las columnas.
 - **Tamaño de columna** : controla el modo en que la tabla ajustará automáticamente el tamaño de las columnas.
 - **Resaltar** : controla el tipo de resaltado que usa la tabla cuando se selecciona una celda.
@@ -102,7 +102,7 @@ Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las sig
 - **Título** : establece el título de la columna.
 - **Alineación** : establece la alineación del texto dentro de las celdas.
 - **Fuente de título** : selecciona la fuente del texto de encabezado de la celda.
-- **Criterio** de ordenación: es la clave utilizada para ordenar los datos de la columna. Déjelo en blanco si el usuario no puede ordenar esta columna.
+- **Criterio de ordenación** : es la clave utilizada para ordenar los datos de la columna. Déjelo en blanco si el usuario no puede ordenar esta columna.
 - **Selector** : es la **acción** que se usa para realizar la ordenación. Déjelo en blanco si el usuario no puede ordenar esta columna.
 - **Order** : es el criterio de ordenación de los datos de las columnas.
 - **Cambio de tamaño** : selecciona el tipo de cambio de tamaño de la columna.
@@ -339,11 +339,11 @@ Si ejecutamos la aplicación, se muestra lo siguiente:
 
 ## <a name="sorting-by-column"></a>Ordenar por columna
 
-Vamos a permitir que el usuario ordene los datos de la tabla haciendo clic en un encabezado de columna. En primer lugar, haga doble `Main.storyboard` clic en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave**de `compare:` ordenación, para el selector `Ascending` y seleccione para el **pedido**:
+Vamos a permitir que el usuario ordene los datos de la tabla haciendo clic en un encabezado de columna. En primer lugar, haga doble `Main.storyboard` clic en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave de ordenación** `compare:` , para el selector `Ascending` y seleccione para el **pedido**:
 
 [![](table-view-images/sort01.png "Establecer el criterio de ordenación")](table-view-images/sort01.png#lightbox)
 
-Seleccione la `Details` columna, escriba `Description` para la **clave**de `compare:` ordenación, para el selector `Ascending` y seleccione para el **pedido**:
+Seleccione la `Details` columna, escriba `Description` para la **clave de ordenación** `compare:` , para el selector `Ascending` y seleccione para el **pedido**:
 
 [![](table-view-images/sort02.png "Establecer el criterio de ordenación")](table-view-images/sort02.png#lightbox)
 
@@ -498,11 +498,11 @@ Si ejecutamos la aplicación y escribemos un carácter, se selecciona una fila:
 
 ## <a name="reordering-columns"></a>Reordenación de columnas
 
-Si desea permitir que el usuario arrastre columnas de reordenación en la vista de tabla, haga doble clic `Main.storyboard` en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista de tabla en la jerarquía de la **interfaz** y active la casilla reordenación en el inspector de **atributos**:
+Si desea permitir que el usuario arrastre columnas de reordenación en la vista de tabla, haga doble clic `Main.storyboard` en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista de tabla en la jerarquía de la **interfaz** y active la casilla **reordenación** en el **Inspector de atributos**:
 
 [![](table-view-images/reorder01.png "Inspector de atributo")](table-view-images/reorder01.png#lightbox)
 
-Si asignamos un valor a la propiedad autosave y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
+Si asignamos un valor a la propiedad **autosave** y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 

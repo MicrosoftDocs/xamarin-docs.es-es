@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar el gesto de toque forzar f
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7efaa80eb7fb6aecf6eae449fe1e3d06a41d9413
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199011"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291677"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Control de menú de watchos (Force Touch) en Xamarin
 
@@ -87,7 +87,7 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>Quitar en tiempo de ejecución
 
-Se puede llamar al métodoparaquitartodosloselementosdemenúagregadosmediante`ClearAllMenuItems` programación.
+Se puede llamar al métodoparaquitartodosloselementosdemenúagregadosmedianteprogramación.`ClearAllMenuItems`
 
 Los elementos de menú configurados en el guión gráfico no se pueden borrar.
 

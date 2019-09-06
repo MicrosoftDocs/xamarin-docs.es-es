@@ -3,15 +3,15 @@ title: Introducción a macOS
 description: En este documento se describe cómo empezar a usar la inserción de .NET con macOS. Se describen los requisitos y se presenta una aplicación de ejemplo para mostrar cómo enlazar el ensamblado administrado y usar la salida generada en un proyecto de Xcode.
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: ee40a5ef3504e5d274a34ec2d9569026e5d40551
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e7f1bac95e9e812c0e47b55b85f72f34ba76e68e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199862"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290268"
 ---
 # <a name="getting-started-with-macos"></a>Introducción a macOS
 
@@ -67,7 +67,7 @@ Asegúrese de que la opción **copiar elementos si es necesario** está activada
 
 ![Copiar elementos si es necesario](macos-images/hello-from-csharp-mac-copy-items-if-needed.png)
 
-Seleccione el proyecto **Hello-from-CSharp** y navegue hasta la pestaña **General** del destino **Hello-from-CSharp** . En la sección binario incrustado, agregue **Hello-from-CSharp. Framework**.
+Seleccione el proyecto **Hello-from-CSharp** y navegue hasta la pestaña **General** del destino **Hello-from-CSharp** . En la sección **binario incrustado** , agregue **Hello-from-CSharp. Framework**.
 
 ![Archivos binarios incrustados](macos-images/hello-from-csharp-mac-embedded-binaries.png)
 

@@ -4,15 +4,15 @@ description: En este documento se proporcionan vínculos a guías que describen 
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 7dfd8392abf832e53cb90d0a09990fc5ef57b0bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f1168378104fd40fa7de78297f1f683d0caa0afa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656321"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283123"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>controles de la interfaz de usuario de macOS en Xamarin. Mac
 

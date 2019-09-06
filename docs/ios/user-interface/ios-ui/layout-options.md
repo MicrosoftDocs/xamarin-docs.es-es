@@ -4,15 +4,15 @@ description: En este documento se describen las distintas formas de diseñar int
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 06d7ef896a560040f2e2820945264b92d9cf2ada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528488"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287043"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño en Xamarin. iOS
 
@@ -31,7 +31,7 @@ Cuando se selecciona un control, esto le permite especificar manualmente la ubic
 
  [![](layout-options-images/image42.png "Diseñador de Visual Studio para Mac")](layout-options-images/image42.png#lightbox)
 
-Al ajustar un *muelle* , se cambiará el tamaño de la vista basándose en el ancho o el alto de la vista primaria. Al ajustar una forma, la vista mantendrá una distancia constante entre sí misma y su vista primaria, en ese borde concreto.
+Al ajustar un *muelle* , se cambiará el tamaño de la vista basándose en el ancho o el alto de la vista primaria. Al ajustar *una forma, la* vista mantendrá una distancia constante entre sí misma y su vista primaria, en ese borde concreto.
 
 Esta configuración también se puede establecer en el código:
 
@@ -41,7 +41,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 ```
 
 
-Para probar la configuración de ajuste automático de tamaño, habilite distintas orientaciones de **dispositivo compatibles** en las opciones del proyecto:
+Para probar la configuración de ajuste automático de tamaño, habilite distintas **orientaciones de dispositivo compatibles** en las opciones del proyecto:
 
  [![](layout-options-images/image43a.png "Configuración de ajuste automático")](layout-options-images/image43a.png#lightbox)
 

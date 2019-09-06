@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c3f0130e96ae61838b9a7abcd68ccd219a327d4d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198483"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280157"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
@@ -33,7 +33,7 @@ Hay varios aspectos que se deben tener en cuenta a [la hora de admitir la multit
 - [Métodos abreviados de teclado de hardware personalizado](#Custom-Hardware-Keyboard-Shortcuts)
 - [Administración de recursos](#Resource-Management-Considerations)
 
-Como desarrollador de aplicaciones, también puede [rechazar la multitarea](#Opting-Out-of-Multitasking), incluida la deshabilitación de la [reproducción de vídeo PIP](#Disabling-PIP-Video-Playback).
+Como desarrollador de aplicaciones, también puede [rechazar la multitarea](#Opting-Out-of-Multitasking), incluida la [deshabilitación de la reproducción de vídeo PIP](#Disabling-PIP-Video-Playback).
 
 En este artículo se explican los pasos necesarios para asegurarse de que la aplicación de Xamarin. iOS se ejecuta correctamente en un entorno de multitarea o de cómo no participar en la multitarea si no es una buena opción para la aplicación.
 
@@ -46,7 +46,7 @@ En este artículo se explican los pasos necesarios para asegurarse de que la apl
 
 ## <a name="multitasking-quickstart"></a>Inicio rápido de multitarea
 
-Para admitir la visualización de diapositivas o de **vista dividida** , la aplicación debe hacer lo siguiente:
+Para admitir la visualización de **diapositivas** o de **vista dividida** , la aplicación debe hacer lo siguiente:
 
 - Crearse con iOS 9 (o superior).
 - Use un guion gráfico para su pantalla de inicio (y no recursos de imagen).
@@ -57,7 +57,7 @@ Para admitir la visualización de diapositivas o de **vista dividida** , la apli
 
 ## <a name="about-multitasking-for-ipad"></a>Acerca de la multitarea para iPad
 
-iOS 9 ofrece nuevas capacidades de multitarea en iPad con la introducción de diapositivas, vista _en_ _dos paneles_ (solo iPad Air 2, iPad Mini 4 y iPad Pro) e _imagen en imagen_. Veremos más detenidamente estas características en las secciones siguientes.
+iOS 9 ofrece nuevas capacidades de multitarea en iPad con la introducción de _diapositivas_, _vista en dos paneles_ (solo iPad Air 2, iPad Mini 4 y iPad Pro) e _imagen en imagen_. Veremos más detenidamente estas características en las secciones siguientes.
 
 <a name="Slide-Over" />
 
@@ -216,7 +216,7 @@ Tenga en cuenta las siguientes acciones del usuario y sus implicaciones:
 Para asegurarse de que la aplicación usa los recursos de forma eficaz, debe hacer lo siguiente:
 
 - **Generar perfiles de la aplicación con Instruments** : Compruebe si hay pérdidas de memoria, el uso de la CPU de manifiesto y las áreas en las que la aplicación podría estar bloqueando el subproceso principal.
-- **Responda a los métodos** de transiciones de estado: en la invalidación del archivo **AppDelegate.CS** y la respuesta a métodos de cambio de estado, como la aplicación que entra o se devuelve desde el fondo. Libere los recursos no necesarios, como imágenes, datos o vistas, y el controlador de vista.
+- **Responda a los métodos de transiciones de estado** : en la invalidación del archivo **AppDelegate.CS** y la respuesta a métodos de cambio de estado, como la aplicación que entra o se devuelve desde el fondo. Libere los recursos no necesarios, como imágenes, datos o vistas, y el controlador de vista.
 - **Pruebas en paralelo con aplicaciones con un uso intensivo de memoria** : ejecute la aplicación con las opciones de deslizamiento y la vista en dos paneles del hardware de iOS físico con una aplicación que consume mucha memoria, como Maps (en el modo de vista satélite), y compruebe que ambas aplicaciones siguen respondiendo y no se bloquean.
 
 Para más información sobre la administración de recursos, consulte la [Guía de eficiencia energética](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) de Apple para aplicaciones iOS.

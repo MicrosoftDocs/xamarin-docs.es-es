@@ -4,21 +4,21 @@ description: En las secciones anteriores hemos explorado el desarrollo con tabla
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528687"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291376"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajo con tablas en iOS Designer
 
 Los guiones gráficos son una manera WYSIWYG de crear aplicaciones de iOS y se admiten en Visual Studio en Mac y Windows. Para obtener más información sobre los guiones gráficos, consulte el documento [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/index.md) . Los guiones gráficos también permiten editar los diseños de celda *de* la tabla, lo que simplifica el desarrollo con tablas y celdas.
 
-Al configurar las propiedades de una vista de tabla en el diseñador de iOS, hay dos tipos de contenido de celda entre los que puede elegir: Contenido de prototipos estáticos o **dinámicos** .
+Al configurar las propiedades de una vista de tabla en el diseñador de iOS, hay dos tipos de contenido de celda entre los que puede elegir: Contenido de prototipos **estáticos** o **dinámicos** .
 
 <a name="Prototype_Content" />
 
@@ -131,7 +131,7 @@ Seleccione la vista de tabla y abra el **Panel de propiedades**. Actualice las s
 
 - **Secciones**: _2_ 
 - **Estilo**: _Agrupados_
-- Separador: _Ninguna_
+- **Separador**: _Ninguna_
 - **Selección**: _Sin selección_
 
 Seleccione la sección superior y, en **propiedades > sección** de la vista de tabla, cambie **las filas** a _3_, como se muestra a continuación:

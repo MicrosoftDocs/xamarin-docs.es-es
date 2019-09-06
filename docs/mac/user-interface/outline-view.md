@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con vistas de esquema e
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227885"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287253"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Esquematizar vistas en Xamarin. Mac
 
@@ -69,7 +69,7 @@ Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes
 [![](outline-view-images/edit05.png "Inspector de atributo")](outline-view-images/edit05.png#lightbox)
 
 - **Columna de esquema** : columna de la tabla en la que se muestran los datos jerárquicos.
-- **Columna de esquema** autoguardado `true`: si es, la columna de esquema se guardará y restaurará automáticamente entre las ejecuciones de la aplicación.
+- **Columna de esquema autoguardado** : Si `true`es, la columna de esquema se guardará y restaurará automáticamente entre las ejecuciones de la aplicación.
 - **Indentación** : la cantidad para aplicar sangría a las columnas bajo un elemento expandido.
 - La **sangría sigue a las celdas** : Si `true`es, se aplicará sangría a la marca de sangría junto con las celdas.
 - **Autoguardar elementos expandidos** : `true`si es, el estado expandido o contraído de los elementos se guardará automáticamente y se restaurará entre las ejecuciones de la aplicación.
@@ -77,7 +77,7 @@ Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes
 - **Floating Group Rows** : Si `true`es, la vista de tabla dibujará celdas agrupadas como si fueran flotantes.
 - **Columnas** : define el número de columnas que se muestran.
 - **Encabezados** : Si `true`es, las columnas tendrán encabezados.
-- Reordenación: Si `true`es, el usuario podrá arrastrar de nuevo el orden de las columnas de la tabla.
+- **Reordenación** : Si `true`es, el usuario podrá arrastrar de nuevo el orden de las columnas de la tabla.
 - **Cambiar** el tamaño: `true`si es, el usuario podrá arrastrar encabezados de columna para cambiar el tamaño de las columnas.
 - **Tamaño de columna** : controla el modo en que la tabla ajustará automáticamente el tamaño de las columnas.
 - **Resaltar** : controla el tipo de resaltado que usa la tabla cuando se selecciona una celda.
@@ -106,7 +106,7 @@ Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las sig
 - **Título** : establece el título de la columna.
 - **Alineación** : establece la alineación del texto dentro de las celdas.
 - **Fuente de título** : selecciona la fuente del texto de encabezado de la celda.
-- **Criterio** de ordenación: es la clave utilizada para ordenar los datos de la columna. Déjelo en blanco si el usuario no puede ordenar esta columna.
+- **Criterio de ordenación** : es la clave utilizada para ordenar los datos de la columna. Déjelo en blanco si el usuario no puede ordenar esta columna.
 - **Selector** : es la **acción** que se usa para realizar la ordenación. Déjelo en blanco si el usuario no puede ordenar esta columna.
 - **Order** : es el criterio de ordenación de los datos de las columnas.
 - **Cambio de tamaño** : selecciona el tipo de cambio de tamaño de la columna.
@@ -400,7 +400,7 @@ Si expandimos un nodo en la vista de esquema, tendrá un aspecto similar al sigu
 
 ## <a name="sorting-by-column"></a>Ordenar por columna
 
-Vamos a permitir que el usuario ordene los datos en el esquema haciendo clic en un encabezado de columna. En primer lugar, haga doble `Main.storyboard` clic en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave**de `compare:` ordenación, para el selector `Ascending` y seleccione para el **pedido**:
+Vamos a permitir que el usuario ordene los datos en el esquema haciendo clic en un encabezado de columna. En primer lugar, haga doble `Main.storyboard` clic en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave de ordenación** `compare:` , para el selector `Ascending` y seleccione para el **pedido**:
 
 [![](outline-view-images/sort01.png "Establecer el orden de las claves de ordenación")](outline-view-images/sort01.png#lightbox)
 
@@ -515,11 +515,11 @@ El `GetNextTypeSelectMatch` método toma el determinado `searchString` y devuelv
 
 ## <a name="reordering-columns"></a>Reordenación de columnas
 
-Si desea permitir que el usuario arrastre columnas de reordenación en la vista de esquema, haga doble clic `Main.storyboard` en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y Active la casilla reordenación en el **Inspector de atributos**:
+Si desea permitir que el usuario arrastre columnas de reordenación en la vista de esquema, haga doble clic `Main.storyboard` en el archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **reordenación** en el **Inspector de atributos**:
 
 [![](outline-view-images/reorder01.png "Inspector de atributo")](outline-view-images/reorder01.png#lightbox)
 
-Si asignamos un valor a la propiedad autosave y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
+Si asignamos un valor a la propiedad **autosave** y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 

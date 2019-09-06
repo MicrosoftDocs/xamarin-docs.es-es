@@ -4,15 +4,15 @@ description: En esta sección se incluye una variedad de artículos que cubren e
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 443cdb5028964e64aeb831f8d706bfdb99f637b2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: af7dbad29c156964f154053dac00255b1b32e4ff
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654443"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289093"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin. iOS
 

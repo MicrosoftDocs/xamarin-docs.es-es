@@ -4,15 +4,15 @@ description: En este artículo se proporciona un tutorial práctico para crear u
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121338"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285760"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlace de una biblioteca de Objective-C a iOS
 
@@ -126,7 +126,7 @@ El primer paso es agregar el código fuente de InfoColorPicker en la biblioteca 
 2. En el menú **archivo** , seleccione **nuevo** > **proyecto...** :
 
     [![](walkthrough-images/image04.png "Iniciar un nuevo proyecto")](walkthrough-images/image04.png#lightbox)
-3. Seleccione **Framework & Library**, la plantilla **biblioteca estática** de Cocoa y haga clic en el botón **siguiente** :
+3. Seleccione **Framework & Library**, la plantilla **biblioteca estática de Cocoa** y haga clic en el botón **siguiente** :
 
     [![](walkthrough-images/image05.png "Seleccione la plantilla biblioteca estática de coco Touch")](walkthrough-images/image05.png#lightbox)
 
@@ -569,7 +569,7 @@ A continuación, echemos un vistazo a los protocolos en Objective-C y cómo los 
 
 ### <a name="protocols-and-xamarinios"></a>Protocolos y Xamarin. iOS
 
-En Objective-C, un protocolo define métodos (o mensajes) que se pueden usar en determinadas circunstancias. Conceptualmente, son muy similares a las interfaces de C#. Una diferencia importante entre un protocolo Objective-C y una C# interfaz es que los protocolos pueden tener métodos opcionales: métodos que una clase no tiene que implementar. Objective-C usa la @optional palabra clave se usa para indicar qué métodos son opcionales. Para obtener más información sobre [los protocolos, vea eventos, protocolos y](~/ios/app-fundamentals/delegates-protocols-and-events.md)delegados.
+En Objective-C, un protocolo define métodos (o mensajes) que se pueden usar en determinadas circunstancias. Conceptualmente, son muy similares a las interfaces de C#. Una diferencia importante entre un protocolo Objective-C y una C# interfaz es que los protocolos pueden tener métodos opcionales: métodos que una clase no tiene que implementar. Objective-C usa la @optional palabra clave se usa para indicar qué métodos son opcionales. Para obtener más información sobre [los protocolos, vea eventos, protocolos y delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 
 **InfColorPickerController** tiene un protocolo de este tipo, que se muestra en el siguiente fragmento de código:
 

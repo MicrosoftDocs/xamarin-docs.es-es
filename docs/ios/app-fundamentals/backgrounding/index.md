@@ -4,15 +4,15 @@ description: El procesamiento en segundo plano o el fondo es el proceso de permi
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 2dfa88ae349a792c524b17a25d454dae86575756
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 161fda52002e8bb757db23c9b2a20a6befd132f5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521381"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289338"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Procesamiento en segundo plano en Xamarin. iOS
 

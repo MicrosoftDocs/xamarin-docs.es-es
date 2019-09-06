@@ -3,15 +3,15 @@ title: Actualización de aplicaciones Mac existentes
 description: En este documento se describen los pasos que deben seguirse para actualizar una aplicación de Xamarin. Mac desde el Classic API al Unified API.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 43498c0609fdbe6dba59b9ed5926c9c58b72d4db
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197807"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280876"
 ---
 # <a name="updating-existing-mac-apps"></a>Actualización de aplicaciones Mac existentes
 
@@ -117,7 +117,7 @@ Hasta ese momento, al igual que los componentes, deberá cambiar cualquier paque
 
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Habilitar compilaciones de 64 bits de aplicaciones de Xamarin. Mac
 
-En el caso de una aplicación móvil de Xamarin. Mac que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte la información sobre la habilitación de las compilaciones **de 64 bits de las aplicaciones de Xamarin. Mac** del documento consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md) para obtener instrucciones detalladas sobre cómo habilitar compilaciones de 64 bits
+En el caso de una aplicación móvil de Xamarin. Mac que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte la información sobre la **habilitación de las compilaciones de 64 bits de las aplicaciones de Xamarin. Mac** del documento consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md) para obtener instrucciones detalladas sobre cómo habilitar compilaciones de 64 bits
 
 ## <a name="finishing-up"></a>Finalizando
 

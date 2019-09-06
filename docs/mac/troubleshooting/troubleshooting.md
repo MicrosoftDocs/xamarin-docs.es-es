@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: dea7337702e37895d1e8dec55bd433d8ac4d64c0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 6bc2990ef82e1bccd4f9e530eb67265eeae528a9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065611"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292150"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para la solución de problemas de Xamarin. Mac
 
@@ -79,7 +79,7 @@ El permiso **permitir conexiones de red salientes (cliente)** es el requerido pa
 
 Al incluir bibliotecas de terceros en la aplicación de Xamarin. Mac, podría obtener un error con el formato "System. NotSupportedException: No hay datos disponibles para la codificación 437 "al intentar compilar y ejecutar la aplicación. Por ejemplo, las bibliotecas, `Ionic.Zip.ZipFile`como, pueden producir esta excepción durante la operación.
 
-Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la internacionalización de la **compilación** > de Mac y Compruebe la internacionalización **occidental** :
+Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la**internacionalización** de la **compilación** > de Mac y Compruebe la internacionalización **occidental** :
 
 [![Modificar las opciones de compilación](troubleshooting-images/issue01.png "Modificar las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -95,15 +95,15 @@ Si no puede resolver este problema, envíe [un error](#filing-a-bug).
 
 La versión más reciente de Visual Studio para Mac ha quitado la sección derechos del editor **info. plist** y la ha colocado en el editor de **derechos independientes. plist** (para una mejor compatibilidad entre plataformas con Xamarin. iOS).
 
-Con el nuevo Visual Studio para Mac instalado, cuando cree un nuevo proyecto de aplicación de Xamarin. Mac, se agregará automáticamente un archivo contitles **. plist** al árbol del proyecto:
+Con el nuevo Visual Studio para Mac instalado, cuando cree un nuevo proyecto de aplicación de Xamarin. Mac, se agregará automáticamente un archivo **contitles. plist** al árbol del proyecto:
 
 ![Seleccionar derechos](troubleshooting-images/entitlements01.png "Seleccionar derechos")
 
-Si hace doble clic en el archivo contitles **. plist** , se mostrará el editor de derechos:
+Si hace doble clic en el archivo **contitles. plist** , se mostrará el editor de derechos:
 
 [![Editar los derechos](troubleshooting-images/entitlements02.png "Editar los derechos")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-En el caso de los proyectos existentes de Xamarin. Mac, tendrá que crear manualmente el archivo contitles **. plist** haciendo clic con el botón derecho en el proyecto en el **Panel de solución** y seleccionando **Agregar** > **nuevo archivo..** .. A continuación, seleccione la**lista de propiedades vacía**de **Xamarin. Mac** > :
+En el caso de los proyectos existentes de Xamarin. Mac, tendrá que crear manualmente el archivo **contitles. plist** haciendo clic con el botón derecho en el proyecto en el **Panel de solución** y seleccionando **Agregar** > **nuevo archivo..** .. A continuación, seleccione la**lista de propiedades vacía**de **Xamarin. Mac** > :
 
 ![Agregar una nueva lista de propiedades](troubleshooting-images/entitlements03.png "Agregar una nueva lista de propiedades")
 

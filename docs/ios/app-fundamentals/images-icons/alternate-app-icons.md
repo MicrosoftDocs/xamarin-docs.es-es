@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar iconos de aplicación alte
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e194edcea75df9dc18d89bba00c0b97e5bd71c34
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b15b39460b40bc2c9f993b3b0d9bca3275ac7644
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197876"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286803"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Iconos de aplicación alternativos en Xamarin. iOS
 
@@ -51,13 +51,13 @@ Haga lo siguiente:
 
 ## <a name="modifying-the-infoplist-file"></a>Modificar el archivo info. plist
 
-Con las imágenes necesarias agregadas a la carpeta Resources, la clave [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) deberá agregarse al archivo **info. plist** del proyecto. Esta clave definirá el nombre del nuevo icono y las imágenes que lo componen.
+Con las imágenes necesarias agregadas a la carpeta **Resources** , la clave [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) deberá agregarse al archivo **info. plist** del proyecto. Esta clave definirá el nombre del nuevo icono y las imágenes que lo componen.
 
 Haga lo siguiente:
 
 1. En el **Explorador de soluciones**, haga doble clic en el archivo **Info.plist** para abrirlo para su edición.
 2. Cambie a la vista de **código fuente** .
-3. Agregue una clave de **iconos** de agrupación y deje el **tipo** establecido en **Diccionario**.
+3. Agregue una clave de **iconos de agrupación** y deje el **tipo** establecido en **Diccionario**.
 4. Agregue una `CFBundleAlternateIcons` clave y establezca el **tipo** en **Dictionary**.
 5. Agregue una `AppIcon2` clave y establezca el **tipo** en **Dictionary**. Este será el nombre del nuevo conjunto de iconos de aplicación alternativo.
 6. Agregar una `CFBundleIconFiles` clave y establecer el **tipo** en **matriz**

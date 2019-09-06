@@ -4,15 +4,15 @@ description: El marco de redes sociales proporciona una API unificada para inter
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c6e0005207a7c6fc444d029c9577684370b4cbf0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fd94cd7a6d37e7fa00489e788f232842b319e5d3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226624"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292666"
 ---
 # <a name="social-framework-in-xamarinios"></a>Marco de redes sociales en Xamarin. iOS
 

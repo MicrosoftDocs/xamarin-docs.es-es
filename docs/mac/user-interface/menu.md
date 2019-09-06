@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con menús en una aplic
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0879fcc529e72e03df4eaba7790a534ace38856f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657338"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292435"
 ---
 # <a name="menus-in-xamarinmac"></a>Menús en Xamarin. Mac
 
@@ -23,10 +23,10 @@ Al trabajar con C# y .net en una aplicación de Xamarin. Mac, tiene acceso a los
 Los menús son una parte integral de la experiencia del usuario de una aplicación Mac y suelen aparecer en varias partes de la interfaz de usuario:
 
 - **Barra de menús de la aplicación** : este es el menú principal que aparece en la parte superior de la pantalla para cada aplicación Mac.
-- **Menús** contextuales: aparecen cuando el usuario hace clic con el botón derecho o el control hace clic en un elemento de una ventana.
+- **Menús contextuales** : aparecen cuando el usuario hace clic con el botón derecho o el control hace clic en un elemento de una ventana.
 - **La barra de estado** es el área situada en el extremo derecho de la barra de menús de la aplicación que aparece en la parte superior de la pantalla (a la izquierda del reloj de la barra de menús) y crece a la izquierda a medida que se agregan elementos.
 - **Menú acoplar** : el menú de cada aplicación del Dock que aparece cuando el usuario hace clic con el botón derecho o el control hace clic en el icono de la aplicación, o cuando el usuario hace clic en el icono y mantiene presionado el botón del mouse.
-- **Botón emergente y listas** desplegables: un botón emergente muestra un elemento seleccionado y presenta una lista de opciones para seleccionar al hacer clic en el usuario. Una lista desplegable es un tipo de botón emergente que se usa normalmente para seleccionar comandos específicos del contexto de la tarea actual. Ambos pueden aparecer en cualquier parte de una ventana.
+- **Botón emergente y listas desplegables** : un botón emergente muestra un elemento seleccionado y presenta una lista de opciones para seleccionar al hacer clic en el usuario. Una lista desplegable es un tipo de botón emergente que se usa normalmente para seleccionar comandos específicos del contexto de la tarea actual. Ambos pueden aparecer en cualquier parte de una ventana.
 
 [![Un menú de ejemplo](menu-images/intro01.png "Un menú de ejemplo")](menu-images/intro01-large.png#lightbox)
 
@@ -76,7 +76,7 @@ Por ejemplo, si hacemos clic en el **Inspector de conexión** para el elemento d
 
 [![Ver la acción adjunta](menu-images/defaultbar03.png "Ver la acción adjunta")](menu-images/defaultbar03-large.png#lightbox)
 
-Si selecciona el **primer respondedor** en la **jerarquía** de la interfaz y se desplaza hacia abajo en el **Inspector de conexión**, verá la definición de `openDocument:` la acción a la que está asociado el elemento de menú **abierto** (junto con varios otras acciones predeterminadas para la aplicación que son y no se conectan automáticamente a los controles):
+Si selecciona el **primer respondedor** en la jerarquía de la **interfaz** y se desplaza hacia abajo en el **Inspector de conexión**, verá la definición de `openDocument:` la acción a la que está asociado el elemento de menú **abierto** (junto con varios otras acciones predeterminadas para la aplicación que son y no se conectan automáticamente a los controles):
 
 [![Ver todas las acciones asociadas](menu-images/defaultbar04.png "Ver todas las acciones asociadas")](menu-images/defaultbar04-large.png#lightbox) 
 
@@ -94,7 +94,7 @@ Si fuera la ejecución de una aplicación de Xamarin. Mac recién creada antes d
 
 Mientras que otros elementos de menú, como **cortar**, **copiar**y **pegar** , no son:
 
-![Elementos de menú] deshabilitados (menu-images/appmenu04.png "Elementos de menú") deshabilitados
+![Elementos de menú deshabilitados](menu-images/appmenu04.png "Elementos de menú deshabilitados")
 
 Detenga la aplicación y haga doble clic en el archivo **Main. Storyboard** en el **Panel de solución** para abrirlo para su edición en el Interface Builder de Xcode. A continuación, arrastre una **vista de texto** desde la **biblioteca** hasta el controlador de vista de la ventana en el editor de la **interfaz**:
 
@@ -158,7 +158,7 @@ public bool ValidateMenuItem (NSMenuItem item) {
 
 Cuando se ejecuta este código, y no se selecciona ningún texto en `NSTextView`la, los dos elementos de menú de ajuste están deshabilitados (aunque estén conectados a acciones en el controlador de vista):
 
-![Mostrar elementos] deshabilitados (menu-images/validate02.png "Mostrar elementos") deshabilitados
+![Mostrar elementos deshabilitados](menu-images/validate02.png "Mostrar elementos deshabilitados")
 
 Si se selecciona una sección de texto y se vuelve a abrir el menú, los dos elementos de menú de ajuste estarán disponibles:
 
@@ -209,7 +209,7 @@ Si hacemos clic en el botón **abrir** , se mostrará el mensaje de alerta:
 
 La línea clave aquí era `[Export ("openDocument:")]`, indica `NSMenu` que **AppDelegate** tiene un método `void OpenDialog (NSObject sender)` que responde a la `openDocument:` acción. Si recuerda lo anterior, el elemento de menú **abrir** se conecta automáticamente a esta acción de forma predeterminada en Interface Builder:
 
-[![Ver las acciones] adjuntas (menu-images/defaultbar03.png "Ver las acciones") adjuntas](menu-images/defaultbar03-large.png#lightbox)
+[![Ver las acciones adjuntas](menu-images/defaultbar03.png "Ver las acciones adjuntas")](menu-images/defaultbar03-large.png#lightbox)
 
 A continuación, veremos cómo crear nuestro propio menú, elementos de menú y acciones y responder a ellos en el código.
 
@@ -805,7 +805,7 @@ private void AssembleMenu(NSMenu menu, List<LanguageFormatCommand> commands) {
 }
 ``` 
 
-En el `LanguageFormatCommand` caso de cualquier objeto que `Title` tenga una propiedad en blanco, esta rutina crea un **elemento de menú** separador (una línea fina gris) entre las secciones de menú:
+En el `LanguageFormatCommand` caso de cualquier objeto que `Title` tenga una propiedad en blanco, esta rutina crea un **elemento de menú separador** (una línea fina gris) entre las secciones de menú:
 
 ```csharp
 menuItem = NSMenuItem.SeparatorItem;
@@ -1066,7 +1066,7 @@ Ahora, Si ejecutamos la aplicación y seleccionamos un elemento de la ventana em
 
 ![Un ejemplo del elemento emergente en ejecución](menu-images/popup05.png "Un ejemplo del elemento emergente en ejecución")
 
-Puede crear listas desplegables y trabajar con ellas de la misma manera que los botones emergentes. En lugar de asociarse a una acción existente, puede crear sus propias acciones personalizadas como hicimos en el menú contextual de la sección [menús](#Contextual_Menus) contextuales.
+Puede crear listas desplegables y trabajar con ellas de la misma manera que los botones emergentes. En lugar de asociarse a una acción existente, puede crear sus propias acciones personalizadas como hicimos en el menú contextual de la sección [menús contextuales](#Contextual_Menus) .
 
 ## <a name="summary"></a>Resumen
 

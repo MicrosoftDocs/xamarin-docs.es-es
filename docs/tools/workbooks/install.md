@@ -3,15 +3,15 @@ title: Instalación y requisitos de los libros
 description: En este documento se describe cómo descargar e instalar Xamarin Workbooks, y se describen las plataformas admitidas y los requisitos del sistema.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: dd1e0838fbd3c3606021ddc996bf94cabc084f77
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5292a052d4f93af9b21cc7cbc51891c99d6f9403
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119993"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285241"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
@@ -45,7 +45,7 @@ ms.locfileid: "70119993"
 |Plataforma de aplicaciones|Compatibilidad con sistemas operativos|Notas|
 |--- |--- |--- |
 |Mac|Solo se admite en Mac|
-|iOS|Compatible con Mac y Windows|Xamarin. iOS 11,0 y Xcode 9,0 o posterior deben instalarse en Mac. La ejecución de libros de iOS en Windows requiere un host de compilación de Mac que ejecute todo lo anterior y el simulador de [iOS remoto](~/tools/ios-simulator/index.md) instalado en Windows.|
+|iOS|Compatible con Mac y Windows|Xamarin. iOS 11,0 y Xcode 9,0 o posterior deben instalarse en Mac. La ejecución de libros de iOS en Windows requiere un host de compilación de Mac que ejecute todo lo anterior y el [simulador de iOS remoto](~/tools/ios-simulator/index.md) instalado en Windows.|
 |Android|Compatible con Mac y Windows|Debe usar el emulador de Google, Visual Studio o Xamarin Android con un dispositivo virtual > = 5,0|
 |WPF|Solo se admite en Windows|
 |Consola (.NET Framework)|Compatible con Mac y Windows|

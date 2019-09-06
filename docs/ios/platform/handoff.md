@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con la entrega en una a
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 28c5086833ceb1dc8550e513b120f7355aa9bebe
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656577"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290755"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega en Xamarin. iOS
 
@@ -68,7 +68,7 @@ Se utiliza para mantener actualizada la información `NSUserActivity` `UserInfo`
 
 Deberá implementar el `UserActivityWillSave` método y realizar cualquier cambio `NSUserActivity` en (por ejemplo `UserInfo`, `Title`,, etc.) para asegurarse de que todavía refleja el estado de la actividad actual. Cuando el sistema llame al `UserActivityWillSave` método, se `NeedsSave` borrará la marca. Si modifica cualquiera de las propiedades de datos de la actividad, deberá volver a establecer `NeedsSave` en. `true`
 
-En lugar de usar el `UserActivityWillSave` método presentado anteriormente, también puede tener `UIKit` o `AppKit` administrar la actividad de usuario automáticamente. Para ello, establezca la propiedad del objeto de `UserActivity` respuesta e implemente el `UpdateUserActivityState` método. Para obtener más información, consulte la sección [compatibilidad con la entrega en](#supporting-handoff-in-responders) los respondedores.
+En lugar de usar el `UserActivityWillSave` método presentado anteriormente, también puede tener `UIKit` o `AppKit` administrar la actividad de usuario automáticamente. Para ello, establezca la propiedad del objeto de `UserActivity` respuesta e implemente el `UpdateUserActivityState` método. Para obtener más información, consulte la sección [compatibilidad con la entrega en los respondedores](#supporting-handoff-in-responders) .
 
 ### <a name="app-framework-support"></a>Compatibilidad con el marco de trabajo de aplicaciones
 
@@ -94,7 +94,7 @@ Si varios respondedores comparten una sola `NSUserActivity` instancia, reciben u
 
 Para desasociarse de una actividad, un respondedor puede establecer `UserActivity` su propiedad `null`en. Cuando una instancia administrada `NSUserActivity` del marco de trabajo de la aplicación no tiene ningún documento o respondedor asociado, se invalida automáticamente.
 
-Para obtener más información, consulte la sección [compatibilidad con la entrega en](#supporting-handoff-in-responders) los respondedores.
+Para obtener más información, consulte la sección [compatibilidad con la entrega en los respondedores](#supporting-handoff-in-responders) .
 
 #### <a name="user-activities-and-the-appdelegate"></a>Actividades de usuario y AppDelegate
 
@@ -112,7 +112,7 @@ Haga lo siguiente:
 
 1. Inicie sesión en el [portal para desarrolladores de Apple](https://developer.apple.com).
 2. Haga clic en **certificados, identificadores & perfiles**.
-3. Si todavía no lo ha hecho, haga clic en identificadores y cree un identificador para la aplicación (por `com.company.appname`ejemplo,). en caso contrario, edite el identificador existente.
+3. Si todavía no lo ha hecho, haga clic en **identificadores** y cree un identificador para la aplicación (por `com.company.appname`ejemplo,). en caso contrario, edite el identificador existente.
 4. Asegúrese de que se ha comprobado el identificador especificado en el servicio **iCloud** :
 
     [![](handoff-images/provision01.png "Habilitar el servicio iCloud para el identificador especificado")](handoff-images/provision01.png#lightbox)

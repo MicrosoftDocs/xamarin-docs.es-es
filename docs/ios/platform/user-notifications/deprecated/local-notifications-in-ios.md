@@ -4,20 +4,20 @@ description: En esta sección se muestra cómo implementar las notificaciones lo
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 7f2619010a410cabc54074e669ff4f1ea24bd0fa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb8956e44a3148d79fff59d728cb63818b9bab60
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655501"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292748"
 ---
 # <a name="notifications-in-xamarinios"></a>Notificaciones en Xamarin. iOS
 
 > [!IMPORTANT]
-> La información de esta sección se refiere a iOS 9 y versiones anteriores. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo](~/ios/platform/user-notifications/index.md)de notificaciones de usuario.
+> La información de esta sección se refiere a iOS 9 y versiones anteriores. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo de notificaciones de usuario](~/ios/platform/user-notifications/index.md).
 
 iOS tiene tres formas de indicar al usuario que se ha recibido una notificación:
 
@@ -25,7 +25,7 @@ iOS tiene tres formas de indicar al usuario que se ha recibido una notificación
 - **Alertas** : es posible mostrar un cuadro de diálogo en la pantalla con información sobre la notificación.
 - **Distintivos** : cuando se publica una notificación, se puede mostrar un número (distintivo) en el icono de la aplicación.
 
-iOS también proporciona un *Centro* de notificaciones que mostrará todas las notificaciones, tanto locales como remotas, al usuario. Los usuarios pueden tener acceso a esta tecla deslizando el dedo hacia abajo desde la parte superior de la pantalla:
+iOS también proporciona un *centro de notificaciones* que mostrará todas las notificaciones, tanto locales como remotas, al usuario. Los usuarios pueden tener acceso a esta tecla deslizando el dedo hacia abajo desde la parte superior de la pantalla:
 
 ![Centro de notificaciones](local-notifications-in-ios-images/image13.png "Centro de notificaciones")
 

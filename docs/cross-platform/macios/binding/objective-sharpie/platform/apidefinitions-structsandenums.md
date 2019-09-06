@@ -1,36 +1,36 @@
 ---
-title: ApiDefinitions y StructsAndEnums archivos
-description: Este documento describe los archivos ApiDefinitions.cs y StructsAndEnums.cs que genera Sharpie objetivo. Estos archivos se usan para tener acceso al código de Objective-C desde C#.
+title: ApiDefinitions & StructsAndEnums archivos
+description: En este documento se describen los archivos ApiDefinitions.cs y StructsAndEnums.cs que genera Objective Sharpie. A continuación, estos archivos se usan para tener acceso al código de C#Objective-C desde.
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 3b991f6105c6053f473b049d195aaef63cbcdd57
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 950f9149744cb8aa2abaed60ccefb416405ab110
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977672"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290778"
 ---
-# <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions y StructsAndEnums archivos
+# <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions & StructsAndEnums archivos
 
-Cuando el objetivo Sharpie se ha ejecutado correctamente, genera `Binding/ApiDefinitions.cs` y `Binding/StructsAndEnums.cs` archivos.
-Estos dos archivos se agregan a un proyecto de enlace en Visual Studio para Mac o pasa directamente a la `btouch` o `bmac` herramientas para producir el enlace final.
+Cuando el objetivo Sharpie se ha ejecutado correctamente, `Binding/ApiDefinitions.cs` genera `Binding/StructsAndEnums.cs` archivos y.
+Estos dos archivos se agregan a un proyecto de enlace en Visual Studio para Mac o se pasan `btouch` directamente `bmac` a las herramientas o para generar el enlace final.
 
-En *algunos* casos estos archivos generados pueden ser todo lo que necesita, sin embargo, con más frecuencia el desarrollador tendrá que modificar manualmente estos archivos para corregir cualquier problema que no se puede controlar automáticamente la herramienta (por ejemplo, los marcados generan con un [ `Verify` atributo](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md)).
+En *algunos* casos, estos archivos generados podrían ser todo lo que necesita, pero a menudo el desarrollador tendrá que modificar manualmente estos archivos generados para corregir los problemas que no se puedan controlar automáticamente con la herramienta (como los marcados con un [ `Verify`atributo](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md)).
 
-Algunos de los siguientes pasos son:
+Algunos de los pasos siguientes incluyen:
 
-- **Ajuste los nombres**: A veces desea ajustar los nombres de métodos y clases para que coincida con las instrucciones de diseño de .NET Framework.
-- **Métodos o propiedades**: La heurística utilizada por objetivo Sharpie a veces, seleccionará un método para convertirse en una propiedad. En este momento, podría decidir si este es el comportamiento previsto o no.
-- **Enlazar eventos**: Puede vincular sus clases con las clases de delegado y generar automáticamente los eventos para aquellos.
-- **Enlazar notificaciones**: No es posible extraer el contrato de API de notificaciones de los archivos de encabezado puro, esto requerirá un viaje a la documentación de API. Si desea que las notificaciones fuertemente tipadas, deberá actualizar el resultado.
-- **Protección de API**: En este momento, puede proporcionar constructores adicionales, agregue los métodos (para permitir C# sintaxis de inicialización en construcción), operador de sobrecarga e implementar sus propias interfaces en el archivo de definiciones adicionales.
+- **Ajustar nombres**: A veces, querrá ajustar los nombres de los métodos y las clases para que coincidan con las directrices de diseño de .NET Framework.
+- **Métodos o propiedades**: A veces, la heurística utilizada por el Sharpie de objetivos seleccionará un método que se va a convertir en una propiedad. En este momento, puede decidir si este es el comportamiento previsto o no.
+- **Enlazar eventos**: Puede vincular las clases a las clases de delegado y generar automáticamente eventos para ellas.
+- **Enlazar notificaciones**: No es posible extraer el contrato de API de las notificaciones de los archivos de encabezado puro, lo que requiere un viaje a la documentación de la API. Si desea recibir notificaciones fuertemente tipadas, tendrá que actualizar el resultado.
+- **API selección**: En este momento, puede elegir proporcionar constructores adicionales, agregar métodos (para permitir la sintaxis de C# inicialización en construcción), sobrecarga de operadores e implementar sus propias interfaces en el archivo de definiciones adicionales.
 
-Consulte la [una API de enlace](~/cross-platform/macios/binding/objective-c-libraries.md) descripción para ver cómo encajan estos archivos en el proceso de enlace, tal como se muestra en el diagrama siguiente:
+Vea el [enlace de una](~/cross-platform/macios/binding/objective-c-libraries.md) Descripción de API para ver cómo se ajustan estos archivos en el proceso de enlace, como se muestra en el diagrama siguiente:
 
-![](apidefinitions-structsandenums-images/binding-flowchart.png "El proceso de enlace se muestra en este diagrama")
+![](apidefinitions-structsandenums-images/binding-flowchart.png "En este diagrama se muestra el proceso de enlace")
 
-Hacer referencia a la [referencias de los tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md) para obtener más información sobre el contenido de estos archivos.
+Consulte la [referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md) para obtener más información sobre el contenido de estos archivos.
 

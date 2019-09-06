@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar los métodos abreviados de
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/08/2018
-ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a2ae80946cb94b6c81b87a88c91cd9bf1706186f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226567"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291769"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri en Xamarin. iOS
 
@@ -56,7 +56,7 @@ En la aplicación de ejemplo se muestra cómo:
 
 ## <a name="infoplist-and-entitlementsplist"></a>Info. plist y contitles. plist
 
-Antes de profundizar más en el código de chef de sopa, eche un vistazo a los archivos **info. plist** y aptitles **. plist** .
+Antes de profundizar más en el código de chef de sopa, eche un vistazo a los archivos **info. plist** y **aptitles. plist** .
 
 ### <a name="infoplist"></a>Info.plist
 
@@ -78,7 +78,7 @@ Las actividades y los intentos personalizados que se pasan a la propia aplicaci�
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-El archivo contitles **. plist** del proyecto **SoupChef** contiene lo siguiente:
+El archivo **contitles. plist** del proyecto **SoupChef** contiene lo siguiente:
 
 ```xml
 <key>com.apple.security.application-groups</key>
@@ -198,7 +198,7 @@ La invocación de Siri y el uso de esta frase abrirá el chef de sopa en la pant
 
 Para proporcionar un acceso directo que permita a un usuario completar rápidamente una tarea específica relacionada con la aplicación, cree un intento personalizado. Un intento personalizado representa una tarea que un usuario puede querer completar, parámetros relevantes para esa tarea y respuestas potenciales resultantes de la ejecución de la tarea. En función de cómo se defina una intención personalizada, al invocarla puede abrir la aplicación o ejecutar una tarea en segundo plano.
 
-Use Xcode 10 para crear intentos personalizados. En el [repositorio de SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), el intento personalizado se define en **OrderSoupIntentCodeGen**, un proyecto de Objective-C. Abra este proyecto y seleccione el archivo intents **. intentdefinition** en el **navegador del proyecto** para ver el intento de **OrderSoup** .
+Use Xcode 10 para crear intentos personalizados. En el [repositorio de SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), el intento personalizado se define en **OrderSoupIntentCodeGen**, un proyecto de Objective-C. Abra este proyecto y seleccione el archivo **intents. intentdefinition** en el **navegador del proyecto** para ver el intento de **OrderSoup** .
 
 Tenga en cuenta lo siguiente:
 
@@ -253,7 +253,7 @@ Este proyecto de **biblioteca estática de chocolate Touch** contiene los archiv
 #### <a name="configuring-the-static-library-project-build-settings"></a>Configurar los valores de compilación del proyecto de biblioteca estática
 
 En el **Explorador de proyectos**de Xcode, seleccione el proyecto de nivel superior, **OrderSoupIntentStaticLib**, y vaya a compilar **fases > orígenes de compilación**.
-Observe que **OrderSoupIntent. m** (que importa **OrderSoupIntent. h**) aparece aquí. En **Link Binary with Libraries (vincular binario con bibliotecas**), tenga en cuenta que se incluyen intents **. Framework** y **Foundation. Framework** .
+Observe que **OrderSoupIntent. m** (que importa **OrderSoupIntent. h**) aparece aquí. En **Link Binary with Libraries (vincular binario con bibliotecas**), tenga en cuenta que se incluyen **intents. Framework** y **Foundation. Framework** .
 Con estos valores en su lugar, el marco de trabajo se compilará correctamente.
 
 #### <a name="building-the-static-library-and-generating-c-bindings-definitions"></a>Compilar la biblioteca estática C# y generar definiciones de enlaces
@@ -309,7 +309,7 @@ Observe que el proyecto **SoupChef** contiene una referencia a **OrderSoupIntent
 
 ### <a name="adding-the-intentdefinition-file-to-your-solution"></a>Agregar el archivo. intentdefinition a la solución
 
-En la C# solución **SoupChef** , el proyecto **SoupKit** contiene código compartido entre la aplicación y sus extensiones. El archivo intents **. intentdefinition** se ha colocado en el directorio **base. lproj** de **SoupKit**y tiene una acción de **compilación** de **contenido**. El proceso de compilación copia este archivo en el grupo de aplicaciones de la aplicación de chef de sopa, donde es necesario para que la aplicación funcione correctamente.
+En la C# solución **SoupChef** , el proyecto **SoupKit** contiene código compartido entre la aplicación y sus extensiones. El archivo **intents. intentdefinition** se ha colocado en el **directorio base. lproj** de **SoupKit**y tiene una acción de **compilación** de **contenido**. El proceso de compilación copia este archivo en el grupo de aplicaciones de la aplicación de chef de sopa, donde es necesario para que la aplicación funcione correctamente.
 
 ### <a name="donating-an-intent"></a>Donar un intento
 
@@ -451,7 +451,7 @@ En el archivo **info. plist**anterior:
 
 ##### <a name="soupchefintents-entitlementsplist"></a>SoupChefIntents: contitles. plist
 
-El archivo contitles **. plist** del proyecto **SoupChefIntents** tiene la funcionalidad de **grupos de aplicaciones** . Esta capacidad está configurada para usar el mismo grupo de aplicaciones que el proyecto **SoupChef** :
+El archivo **contitles. plist** del proyecto **SoupChefIntents** tiene la funcionalidad de **grupos de aplicaciones** . Esta capacidad está configurada para usar el mismo grupo de aplicaciones que el proyecto **SoupChef** :
 
 ```xml
 <key>com.apple.security.application-groups</key>
@@ -549,7 +549,7 @@ En el archivo **info. plist**anterior:
 
 #### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI: contitles. plist
 
-El proyecto **SoupChefIntentsUI** no necesita un archivo contitles **. plist** .
+El proyecto **SoupChefIntentsUI** no necesita un archivo **contitles. plist** .
 
 ### <a name="creating-the-user-interface"></a>Creación de la interfaz de usuario
 
@@ -650,7 +650,7 @@ En la sección **certificados, identificadores & perfiles** del [portal para des
   - Aplicación: **com. yourcompanyname. SoupChef**
     - Para este identificador de aplicación, asigne las funcionalidades SiriKit y **grupos de aplicaciones** .
 
-  - Extensión intents: **com. yourcompanyname. SoupChef.** intents
+  - Extensión intents: **com. yourcompanyname. SoupChef. intents**
     - Para este identificador de aplicación, asigne la funcionalidad de **grupos de aplicaciones** .
 
   - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
@@ -669,14 +669,14 @@ En Visual Studio para Mac o Visual Studio 2017, haga lo siguiente:
 - Actualice los distintos archivos **info. plist** de la solución. Establezca la aplicación, la extensión intents y el **identificador de paquete** de la extensión de la interfaz de usuario de intents en los identificadores de aplicación definidos anteriormente:
 
   - Aplicación: **com. yourcompanyname. SoupChef**
-  - Extensión intents: **com. yourcompanyname. SoupChef.** intents
+  - Extensión intents: **com. yourcompanyname. SoupChef. intents**
   - Extensión de la interfaz de usuario de intents: **com. yourcompanyname. SoupChef. Intentsui**
 
-- Actualice el archivo contitles **. plist** para el proyecto **SoupChef** :
+- Actualice el archivo **contitles. plist** para el proyecto **SoupChef** :
   - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
   - Asegúrese de que **SiriKit** está habilitado.
 
-- Actualice el archivo contitles **. plist** para el proyecto **SoupChefIntents** :
+- Actualice el archivo **contitles. plist** para el proyecto **SoupChefIntents** :
   - Para la funcionalidad de **grupos de aplicaciones** , establezca el grupo en el nuevo grupo de aplicaciones creado anteriormente (en el ejemplo anterior, era **grupo. com. yourcompanyname. SoupChef**).
 
 - Por último, Abra **NSUserDefaultsHelper.CS**. Establezca la `AppGroup` variable en el valor de su nuevo grupo de aplicaciones (por ejemplo, establézcalo en `group.com.yourcompanyname.SoupChef`).

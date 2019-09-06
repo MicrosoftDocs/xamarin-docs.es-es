@@ -3,15 +3,15 @@ title: Tipos nativos para iOS y macOS
 description: En este documento se describe cómo Unified API de Xamarin asigna tipos .NET a tipos nativos de 32 bits y 64 bits, según sea necesario en función de la arquitectura de destino de la compilación.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f370bc816fa72f94af8dae32ac295448f858dbb8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199393"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290793"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS y macOS
 

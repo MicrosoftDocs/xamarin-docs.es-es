@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar TextKit en Xamarin. iOS. T
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: c153e653cc57d35f125ef58ebc8df0013f77e7c1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227283"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283013"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit en Xamarin. iOS
 

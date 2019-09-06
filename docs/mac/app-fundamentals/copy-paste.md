@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con la mesa de trabajo 
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 43da869cfdb4ccbf5fcd8836a6fa5ca5ca732bfa
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291221"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar y pegar en Xamarin. Mac
 
@@ -695,7 +695,7 @@ Al colocar el elemento inicial en la mesa de pegado, especificará que una o var
 
 ### <a name="change-count"></a>Recuento de cambios
 
-Cada área de la mesa mantiene un recuento de _cambios_ que se incrementa cada vez que se declara un nuevo propietario. Una aplicación puede determinar si el contenido de la mesa de pegado ha cambiado desde la última vez que lo examinó comprobando el valor del recuento de cambios.
+Cada área de la mesa mantiene un _recuento de cambios_ que se incrementa cada vez que se declara un nuevo propietario. Una aplicación puede determinar si el contenido de la mesa de pegado ha cambiado desde la última vez que lo examinó comprobando el valor del recuento de cambios.
 
 Use los `ChangeCount` métodos `ClearContents` y de la `NSPasteboard` clase para modificar el número de cambios de una mesa de pegada determinada.
 
@@ -770,7 +770,7 @@ En función del tipo de aplicación de Xamarin. Mac que se va a crear, es posibl
 1. Realice una llamada única al `ReadObjectsForClasses` método y proporcione una matriz de todas las representaciones que desee (en el orden preferido).
 2. Realice varias llamadas al `ReadObjectsForClasses` método solicitando una matriz diferente de tipos cada vez.
 
-Vea la sección anterior **operación** de pegado más arriba para obtener más información sobre cómo recuperar datos de una mesa de pegado.
+Vea la sección anterior **operación de pegado** más arriba para obtener más información sobre cómo recuperar datos de una mesa de pegado.
 
 ### <a name="checking-for-existing-data-types"></a>Comprobar los tipos de datos existentes
 

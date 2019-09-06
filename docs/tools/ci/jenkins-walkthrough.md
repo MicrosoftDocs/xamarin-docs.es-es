@@ -3,15 +3,15 @@ title: Uso de Jenkins con Xamarin
 description: En este documento se describe cómo usar Jenkins para la integración continua con las aplicaciones de Xamarin. Describe cómo instalar, configurar y usar Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d44e7232529386b7cb6b3db5fbb8bc4a285972fb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 40f3443fb7c6fc6240e016106d9b6bbe0e0b666d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529122"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290824"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
@@ -79,7 +79,7 @@ Una vez que Jenkins. app ha finalizado su descarga, mostrará otro cuadro de di�
 
 La personalización de Jenkins es opcional y no tiene que realizarse cada vez que se inicia la aplicación: la configuración predeterminada de Jenkins funcionará en la mayoría de los casos.
 
-Si es necesario personalizar Jenkins, haga clic en el botón **cambiar valores** predeterminados. Esto le presentará dos cuadros de diálogo consecutivos: uno que solicita parámetros de la línea de comandos de Java y otro que solicita parámetros de la línea de comandos de Jenkins. En las dos capturas de pantallas siguientes se muestran estos dos cuadros de diálogo:
+Si es necesario personalizar Jenkins, haga clic en el botón **cambiar valores predeterminados** . Esto le presentará dos cuadros de diálogo consecutivos: uno que solicita parámetros de la línea de comandos de Java y otro que solicita parámetros de la línea de comandos de Jenkins. En las dos capturas de pantallas siguientes se muestran estos dos cuadros de diálogo:
 
 [![](jenkins-walkthrough-images/image6.png "En esta captura de pantalla se muestran los cuadros de diálogo")](jenkins-walkthrough-images/image6.png#lightbox)
 
@@ -107,7 +107,7 @@ En esta página, seleccione **jenkins > Manage jenkins > Manage plugins (Adminis
 
 [![](jenkins-walkthrough-images/image11.png "En esta página, seleccione Jenkins Administrar complementos de Jenkins en el menú de la esquina superior izquierda.")](jenkins-walkthrough-images/image11.png#lightbox)
 
-Se mostrará la página del administrador de complementos de **Jenkins** . Si hace clic en la pestaña disponible, verá una lista de más de 600 complementos que se pueden descargar e instalar. Esto se muestra en la siguiente captura de pantalla:
+Se mostrará la página del **Administrador de complementos de Jenkins** . Si hace clic en la pestaña disponible, verá una lista de más de 600 complementos que se pueden descargar e instalar. Esto se muestra en la siguiente captura de pantalla:
 
 [![](jenkins-walkthrough-images/image12.png "Si hace clic en la pestaña disponible, verá una lista de más de 600 complementos que se pueden descargar e instalar.")](jenkins-walkthrough-images/image12.png#lightbox)
 
@@ -206,7 +206,7 @@ Los trabajos se crean seleccionando **Jenkins > nuevo trabajo** en el menú de l
 
 ![](jenkins-walkthrough-images/image22.png "Los trabajos se crean seleccionando el nuevo trabajo de Jenkins en el menú de la esquina superior derecha.")
 
-Se mostrará la página **nuevo trabajo [Jenkins]** . Escriba un nombre para el trabajo y seleccione el botón de radio compilar **un proyecto de software de estilo libre** . En la captura de pantalla siguiente se muestra un ejemplo de esto:
+Se mostrará la página **nuevo trabajo [Jenkins]** . Escriba un nombre para el trabajo y seleccione el botón de radio **compilar un proyecto de software de estilo libre** . En la captura de pantalla siguiente se muestra un ejemplo de esto:
 
 ![](jenkins-walkthrough-images/image23.png "Escriba un nombre para el trabajo y seleccione el botón de radio compilar un proyecto de software de estilo libre")
 
@@ -222,7 +222,7 @@ Una vez creado el trabajo inicial, debe configurarse con uno o varios de los sig
 
 - Se debe especificar el sistema de administración de código fuente.
 - Se deben agregar al proyecto una o varias *acciones de compilación* . Estos son los pasos o las tareas necesarias para compilar la aplicación.
-- Al trabajo se le debe asignar un desencadenador de *compilación* : un conjunto de instrucciones que informan a Jenkins con qué frecuencia recuperar el código y compilar el proyecto final.
+- Al trabajo se le debe asignar un *desencadenador de compilación* : un conjunto de instrucciones que informan a Jenkins con qué frecuencia recuperar el código y compilar el proyecto final.
 
 ### <a name="configuring-source-code-control"></a>Configurar el control de código fuente
 
@@ -315,7 +315,7 @@ Estos dos pasos se tratarán con más detalle en las dos secciones siguientes.
 
 ### <a name="creating-the-apk"></a>Crear APK
 
-Haga clic en el botón **Agregar paso de compilación** y seleccione compilar **un proyecto o solución de Visual Studio con MSBuild**, tal como se muestra en la siguiente captura de pantalla:
+Haga clic en el botón **Agregar paso de compilación** y seleccione **compilar un proyecto o solución de Visual Studio con MSBuild**, tal como se muestra en la siguiente captura de pantalla:
 
 ![](jenkins-walkthrough-images/image36.png "Al crear el APK, haga clic en el botón Agregar paso de compilación y seleccione compilar un proyecto o solución de Visual Studio con MSBuild.")
 
@@ -372,7 +372,7 @@ Inmediatamente antes de que la sección de **compilación** de la configuración
 
 ![](jenkins-walkthrough-images/image41.png "Esta captura de pantalla es un ejemplo de cómo agregar la variable de entorno STOREPASS")
 
-Una vez que se han inicializado las variables de entorno, el paso siguiente consiste en agregar un paso de compilación para firmar y comprimir el código APK. Inmediatamente después del paso de compilación para insertar las variables de entorno, se creará otra compilación del comando `jarsigner` Execute Shell que ejecutará y. `zipalign` Cada comando ocupará una línea, tal como se muestra en el siguiente fragmento de código:
+Una vez que se han inicializado las variables de entorno, el paso siguiente consiste en agregar un paso de compilación para firmar y comprimir el código APK. Inmediatamente después del paso de compilación para insertar las variables de entorno, se creará otra compilación del comando `jarsigner` **Execute Shell** que ejecutará y `zipalign`. Cada comando ocupará una línea, tal como se muestra en el siguiente fragmento de código:
 
 ```
 jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS

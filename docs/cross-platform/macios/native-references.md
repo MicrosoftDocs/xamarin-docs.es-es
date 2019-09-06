@@ -3,15 +3,15 @@ title: Referencias nativas de los proyectos de iOS, Mac y enlaces
 description: Las referencias nativas le ofrecen la posibilidad de insertar un marco nativo en un proyecto de Xamarin. iOS, Xamarin. Mac o de enlace.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e5e232ffa8a41f7adbffae595b85341a10d8667a
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065260"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287549"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referencias nativas en proyectos de iOS, Mac y enlaces
 
@@ -62,7 +62,7 @@ Como se indicó anteriormente, para poder usar un marco de trabajo incrustado en
 
 Cuando el marco y la aplicación de consumo están en el mismo proyecto de Xcode, esto no es un problema, ya que Xcode compilará el marco de trabajo y la aplicación con la misma configuración de compilación. Dado que las aplicaciones de Xamarin no pueden crear marcos de trabajo incrustados, no se puede usar esta técnica.
 
-Para solucionar este problema, se `lipo` puede usar la herramienta de línea de comandos para combinar dos o más marcos en un marco de Fat que contenga todos los segmentos necesarios. Para obtener más información sobre cómo trabajar `lipo` con el comando, consulte la documentación vinculación de [bibliotecas nativas](~/ios/platform/native-interop.md) .
+Para solucionar este problema, se `lipo` puede usar la herramienta de línea de comandos para combinar dos o más marcos en un marco de Fat que contenga todos los segmentos necesarios. Para obtener más información sobre cómo trabajar `lipo` con el comando, consulte la documentación [vinculación de bibliotecas nativas](~/ios/platform/native-interop.md) .
 
 <a name="Embedding-a-Framework" />
 

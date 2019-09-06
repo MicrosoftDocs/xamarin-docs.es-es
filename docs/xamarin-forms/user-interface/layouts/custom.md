@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526954"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292574"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado en Xamarin. Forms
 
@@ -74,8 +74,8 @@ El proceso para crear un diseño personalizado es como sigue:
 1. Invalidar el [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar el [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) método en todo el diseño los elementos secundarios y devolver un tamaño solicitado para el diseño. Para obtener más información, consulte [invalidación del método OnMeasure](#onmeasure).
 1. Invalidar el [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar el [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) método en elementos secundarios de la del diseño. Error al invocar el [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) método en cada elemento secundario en un diseño dará como resultado el elemento secundario nunca reciben un tamaño correcto o una posición y, por lo tanto, el elemento secundario no estará visible en la página. Para obtener más información, consulte [invalidación del método LayoutChildren](#layoutchildren).
 
-  > [!NOTE]
->  Al enumerar los elementos secundarios en el [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) y [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalidaciones, omitir cualquier elemento secundario cuyo [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad está establecida en `false`. Esto garantizará que el diseño personalizado no deja espacio para elementos secundarios visibles.
+    > [!NOTE]
+    > Al enumerar los elementos secundarios en el [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) y [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalidaciones, omitir cualquier elemento secundario cuyo [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad está establecida en `false`. Esto garantizará que el diseño personalizado no deja espacio para elementos secundarios visibles.
 
 1. [*opcional*] invalidar el [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) método para recibir notificaciones cuando los elementos secundarios se agregan o se quita del diseño. Para obtener más información, consulte [invalidación del método InvalidateLayout](#invalidatelayout).
 1. [*opcional*] invalidar el [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método para recibir una notificación cuando uno de los elementos secundarios del diseño cambia de tamaño. Para obtener más información, consulte [invalidación del método OnChildMeasureInvalidated](#onchildmeasureinvalidated).

@@ -4,15 +4,15 @@ description: En este documento se describe iCloud y su uso en aplicaciones de Xa
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527581"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292421"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usar iCloud con Xamarin. iOS
 
@@ -174,11 +174,11 @@ Hay cinco partes en el ejemplo iCloudUIDoc:
 
 Todas las operaciones de iCloud se ejecutan (o se deben ejecutar) de forma asincrónica para que no se bloqueen mientras esperan que suceda algo. Verá tres maneras diferentes de lograrlo en el ejemplo:
 
- Subprocesos `AppDelegate.FinishedLaunching` : en la llamada `GetUrlForUbiquityContainer` inicial a, se realiza en otro subproceso para evitar el bloqueo del subproceso principal.
+ **Subprocesos** : en `AppDelegate.FinishedLaunching` la llamada `GetUrlForUbiquityContainer` inicial a, se realiza en otro subproceso para evitar el bloqueo del subproceso principal.
 
  **NotificationCenter** : registro para las notificaciones cuando se `NSMetadataQuery.StartQuery` completan las operaciones asincrónicas.
 
- **Controladores** de finalización: pasar métodos para que se ejecuten al finalizar operaciones asincrónicas como `UIDocument.Open`.
+ **Controladores de finalización** : pasar métodos para que se ejecuten al finalizar operaciones asincrónicas como `UIDocument.Open`.
 
 ### <a name="accessing-the-ubiquitycontainer"></a>Acceso a UbiquityContainer
 

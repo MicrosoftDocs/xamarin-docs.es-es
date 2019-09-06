@@ -1,28 +1,28 @@
 ---
 title: Introducción a Java
-description: Este documento describe cómo empezar a usar la inserción de .NET con Java. Describe los requisitos del sistema, instalación y las plataformas compatibles.
+description: En este documento se describe cómo empezar a usar la inserción de .NET con Java. Se describen los requisitos del sistema, la instalación y las plataformas admitidas.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2018
-ms.openlocfilehash: 79a483743946c4f7509833867f2afe4b1e055183
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8d6bc284d07ce1be11ad273f875b75a70ae14a0f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61198947"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278403"
 ---
 # <a name="getting-started-with-java"></a>Introducción a Java
 
-Se trata de la página de introducción para Java, que cubre los aspectos básicos para todas las plataformas compatibles.
+Esta es la página de introducción para Java, en la que se describen los aspectos básicos de todas las plataformas compatibles.
 
 ## <a name="requirements"></a>Requisitos
 
-Para usar la inserción de .NET con Java, necesitará:
+Para usar la inserción de .NET con Java, necesitará lo siguiente:
 
-* Java 1.8 o posterior
-* [Mono 5.0](https://www.mono-project.com/download/)
+* Java 1,8 o posterior
+* [Mono 5,0](https://www.mono-project.com/download/)
 
 Para Mac:
 
@@ -30,52 +30,52 @@ Para Mac:
 
 Para Windows:
 
-* Visual Studio 2017 con compatibilidad con C++
-* Windows 10 SDK
+* Visual Studio 2017 con C++ compatibilidad
+* SDK de Windows 10
 
 Para Android:
 
-* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) o posterior
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
+* [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o posterior
+* [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1,8
 
-Puede usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar y compilar su C# código.
+Puede usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar y compilar C# el código.
 
 > [!NOTE]
-> Las versiones anteriores de Xcode, Visual Studio, Xamarin.Android, Android Studio y Mono _podría_ funciona, pero se ha comprobado y no admitido.
+> Las versiones anteriores de Xcode, Visual Studio, Xamarin. Android, Android Studio y mono _podrían_ funcionar, pero no se prueban y no se admiten.
 
 ## <a name="installation"></a>Instalación
 
-Inserción de .NET está actualmente disponible en [NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
+La inserción de .NET está disponible actualmente en [NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
 
 ```shell
 nuget install Embeddinator-4000
 ```
 
-Esto colocará **Embeddinator 4000.exe** en el **paquetes/Embeddinator-4000/tools** directory.
+Esto colocará **Embeddinator-4000. exe** en el directorio **Packages/Embeddinator-4000/Tools** .
 
-Además, puede compilar la inserción de .NET de código fuente, consulte nuestra [repositorio de git](https://github.com/mono/Embeddinator-4000/) y [que contribuyen](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md) documento para obtener instrucciones.
+Además, puede crear la incrustación de .NET desde el origen, ver nuestro [repositorio git](https://github.com/mono/Embeddinator-4000/) y el documento [contribuyente](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md) para obtener instrucciones.
 
 ## <a name="platforms"></a>Plataformas
 
 Java está actualmente en estado de vista previa para macOS, Windows y Android.
 
-La plataforma está seleccionada, pasando el `--platform=<platform>` argumento de línea de comandos de la herramienta de inserción de .NET. Actualmente `macOS`, `Windows`, y `Android` son compatibles.
+La plataforma se selecciona pasando el `--platform=<platform>` argumento de línea de comandos a la herramienta de inserción de .net. Actualmente `macOS`se `Windows`admiten `Android` , y.
 
 ### <a name="macos-and-windows"></a>macOS y Windows
 
-Para el desarrollo, debe ser capaz de usar un IDE de Java que admite Java 1.8. Incluso puede usar Android Studio para este si lo desea, [ver aquí](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects). Puede usar la salida del archivo JAR como lo haría con cualquier archivo jar de Java estándar.
+Para el desarrollo, debería poder usar cualquier IDE de Java que admita Java 1,8. Puede incluso usar Android Studio para esto si lo desea, [Consulte aquí](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects). Puede usar la salida del archivo JAR como lo haría con cualquier archivo jar estándar de Java.
 
 ### <a name="android"></a>Android
 
-Asegúrese de que ya están configurados para desarrollar aplicaciones de Android antes de intentar crear uno mediante la inserción de .NET. El [instrucciones](~/tools/dotnet-embedding/get-started/java/android.md) se supone que ya ha creado e implementado una aplicación Android desde su equipo.
+Asegúrese de que ya está configurado para desarrollar aplicaciones de Android antes de intentar crear una mediante la inserción de .NET. Las [instrucciones siguientes](~/tools/dotnet-embedding/get-started/java/android.md) suponen que ya ha creado e implementado correctamente una aplicación de Android desde el equipo.
 
-Se recomienda Android Studio para el desarrollo, pero otros IDE debería funcionar siempre y cuando no hay compatibilidad para la [formato de archivo AAR](https://developer.android.com/studio/projects/android-library.html).
+Android Studio se recomienda para el desarrollo, pero otros IDE deberían funcionar siempre y cuando exista compatibilidad con el [formato de archivo AAR](https://developer.android.com/studio/projects/android-library.html).
 
 ## <a name="further-reading"></a>Información adicional
 
-* [Introducción a Android](~/tools/dotnet-embedding/get-started/java/android.md)
+* [Introducción en Android](~/tools/dotnet-embedding/get-started/java/android.md)
 * [Devoluciones de llamada en Android](~/tools/dotnet-embedding/android/callbacks.md)
 * [Investigación preliminar de Android](~/tools/dotnet-embedding/android/index.md)
-* [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
-* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Las descripciones y códigos de error](~/tools/dotnet-embedding/errors.md)
+* [Limitaciones de la inserción de .NET](~/tools/dotnet-embedding/limitations.md)
+* [Contribuir al proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)

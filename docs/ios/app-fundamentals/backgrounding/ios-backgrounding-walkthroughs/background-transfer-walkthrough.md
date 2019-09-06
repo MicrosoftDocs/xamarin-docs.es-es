@@ -4,15 +4,15 @@ description: En este documento se proporciona un tutorial que muestra cómo usar
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: a0c659904be2f6755ff4a32853e141ee8572e839
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3e27cffa9e2605c3697536f226fe87fbbf1bfbbd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521246"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286879"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferencia en segundo plano y NSURLSession en Xamarin. iOS
 

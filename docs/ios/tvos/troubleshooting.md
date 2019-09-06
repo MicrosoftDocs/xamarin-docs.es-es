@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 2503b8a96e8f1c6f08dfcd19672db3b93a5ce7e1
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620322"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291188"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
 
@@ -127,7 +127,7 @@ Si usa una biblioteca de terceros (por ejemplo, monogame) y se produce un error 
 
 [![](troubleshooting-images/mtouch01.png "Ejecución de la tarea MTouch")](troubleshooting-images/mtouch01.png#lightbox)
 
-También debe incluir `--bitcode=asmonly` en los **argumentos táctiles adicionales**, tener las opciones del vinculador establecidas para vincular **todo** y realizar una compilación limpia.
+También debe incluir `--bitcode=asmonly` en los **argumentos táctiles adicionales**, tener las opciones del vinculador establecidas para **vincular todo** y realizar una compilación limpia.
 
 ### <a name="itms-90471-error-the-large-icon-is-missing"></a>Error de ITMS-90471. Falta el icono grande
 

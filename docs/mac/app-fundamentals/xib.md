@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con archivos. Xib cread
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: bdb27d42e872bff4004e8f43d13019dbc8bfeab9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227851"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290288"
 ---
 # <a name="xib-files-in-xamarinmac"></a>archivos. Xib en Xamarin. Mac
 
@@ -52,7 +52,7 @@ Echemos un vistazo a lo que hace cada una de estas secciones de Xcode y cómo la
 
 Al abrir un archivo. Xib para editarlo en Xcode, Visual Studio para Mac crea un archivo de proyecto de Xcode en segundo plano para comunicar los cambios entre él y Xcode. Más adelante, cuando vuelva a Visual Studio para Mac de Xcode, los cambios realizados en este proyecto se sincronizarán con el proyecto de Xamarin. Mac Visual Studio para Mac.
 
-La sección de **navegación del proyecto** le permite desplazarse por todos los archivos que componen este proyecto de Xcode de correcciones de _compatibilidad (Shim_ ). Normalmente, solo estará interesado en los archivos. Xib de esta lista, como **MainMenu. Xib** y **MainWindow. Xib**.
+La sección de **navegación del proyecto** le permite desplazarse por todos los archivos que componen este proyecto de Xcode de _correcciones de compatibilidad (Shim_ ). Normalmente, solo estará interesado en los archivos. Xib de esta lista, como **MainMenu. Xib** y **MainWindow. Xib**.
 
 
 #### <a name="interface-hierarchy"></a>Jerarquía de la interfaz
@@ -224,10 +224,10 @@ Por ejemplo:
 7. Con la etiqueta aún seleccionada en el **Editor**de la interfaz, cambie al **Inspector de tamaño**:
 
     ![Seleccionar el inspector de tamaño](xib-images/xcode13.png "Seleccionar el inspector de tamaño")
-8. En el **cuadro ajuste** automático de tamaño, haga clic en el corchete **rojo atenuado** de la derecha y la **flecha atenuar horizontalmente** en el centro:
+8. En el **cuadro ajuste** automático de tamaño, haga clic en el **corchete rojo atenuado** de la derecha y la **flecha atenuar horizontalmente** en el centro:
 
     ![Editar las propiedades de ajuste automático de tamaño](xib-images/xcode14.png "Editar las propiedades de ajuste automático de tamaño")
-9. Esto garantiza que la etiqueta se ajustará para aumentar y reducirse cuando se cambie el tamaño de la ventana en la aplicación en ejecución. Los **corchetes rojos** y los de la parte superior e izquierda del cuadro de autoajuste de **tamaño** indican a la etiqueta que se bloquee en las ubicaciones X e y dadas.
+9. Esto garantiza que la etiqueta se ajustará para aumentar y reducirse cuando se cambie el tamaño de la ventana en la aplicación en ejecución. Los **corchetes rojos** y los de la parte superior e izquierda del cuadro de **autoajuste de tamaño** indican a la etiqueta que se bloquee en las ubicaciones X e y dadas.
 10. Guardar los cambios en la interfaz de usuario
 
 A medida que va a cambiar el tamaño y mover los controles, debe haber observado que Interface Builder proporciona sugerencias de ajuste útiles basadas en las [directrices de la interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). Estas instrucciones le ayudarán a crear aplicaciones de alta calidad que tendrán una apariencia familiar para los usuarios de Mac.

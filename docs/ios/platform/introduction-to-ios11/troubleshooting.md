@@ -1,29 +1,29 @@
 ---
-title: Solución de problemas para iOS 11 y Xamarin.iOS
-description: En este artículo se describe los recursos que se pueden usar para solucionar problemas al desarrollar aplicaciones de Xamarin.iOS. Se tratan de informes de errores, notas, el blog de versiones de Xamarin y opciones de soporte técnico.
+title: Sugerencias para la solución de problemas de iOS 11 y Xamarin. iOS
+description: En este artículo se describen los recursos que se pueden usar para solucionar problemas al desarrollar aplicaciones de Xamarin. iOS. Se describen los informes de errores, las notas de la versión, el blog de las versiones de Xamarin y las opciones de soporte técnico.
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/31/2017
-ms.openlocfilehash: f7fbd6f19820b8cbefe1a75c148ca1d9ba1395f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 570fd554b375c4911028faf412c3c20bac1881aa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399266"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286535"
 ---
-# <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Solución de problemas para iOS 11 y Xamarin.iOS
+# <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Sugerencias para la solución de problemas de iOS 11 y Xamarin. iOS
 
-Para resolver problemas al usar Xamarin con iOS 11, use los siguientes recursos:
+Use los recursos siguientes para resolver problemas al usar Xamarin con iOS 11:
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemas conocidos y solución de problemas
 
-Si encuentra algún problema al compilar aplicaciones de iOS 11 con Xamarin, compruebe la [notas de la versión](https://docs.microsoft.com/xamarin/ios/release-notes/), [Xamarin.iOS foros](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), y [ GitHub](https://github.com/xamarin/xamarin-macios/issues) problemas existentes.
+Si tiene problemas para compilar aplicaciones de iOS 11 con Xamarin, consulte las notas de la [versión](https://docs.microsoft.com/xamarin/ios/release-notes/), los [foros de Xamarin. iOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS)y [GitHub](https://github.com/xamarin/xamarin-macios/issues) para obtener los problemas existentes.
 
-Si piensa que se han encontrado un error en Xamarin.iOS, informar del problema [en GitHub](https://github.com/xamarin/xamarin-macios/issues).
+Si cree que ha encontrado un error en Xamarin. iOS, informe del problema [en github](https://github.com/xamarin/xamarin-macios/issues).
 
-## <a name="forums-and-stackoverflow"></a>StackOverflow y foros
+## <a name="forums-and-stackoverflow"></a>Foros y StackOverflow
 
-Para obtener respuestas a preguntas específicas sobre el uso o implementar una característica específica de iOS 11 en Xamarin.iOS, Xamarin [iOS foro](http://forums.xamarin.com/categories/ios) proporciona una gran cantidad de información. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) es otra buena fuente de información a los usuarios le ayuda a los usuarios.
+Para obtener respuestas a preguntas específicas sobre el uso o la implementación de una característica específica de iOS 11 en Xamarin. iOS, el foro de Xamarin [iOS](http://forums.xamarin.com/categories/ios) proporciona una gran cantidad de información. [Stackoverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) es otra buena fuente de información que ayuda a los usuarios.

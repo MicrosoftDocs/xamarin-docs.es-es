@@ -3,15 +3,15 @@ title: Inspección de aplicaciones activas
 description: En este documento se describe cómo usar el Xamarin Inspector para inspeccionar las aplicaciones. También se describen las limitaciones de la herramienta de Xamarin Inspector.
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: a22a0f06d6c02bf3600333eb00a26fbd1315440a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528976"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291486"
 ---
 # <a name="inspecting-live-applications"></a>Inspección de aplicaciones activas
 
@@ -19,7 +19,7 @@ La inspección de aplicaciones activas está disponible para los clientes empres
 
 1. Abra cualquier [proyecto de aplicación compatible](~/tools/inspector/install.md#supported-platforms) en Visual Studio para Mac o Visual Studio.
 1. Ejecute la aplicación en modo de depuración.
-1. Haga clic en el botón inspeccionar en la barra de herramientas del IDE (en Visual Studio, el elemento de menú **inspeccionar aplicación actual...** también está disponible en el menú **herramientas** o depurar).
+1. Haga clic en el botón **inspeccionar** en la barra de herramientas del IDE (en Visual Studio, el elemento de menú **inspeccionar aplicación actual...** también está disponible en el menú **herramientas** o **depurar** ).
 
 [![](inspect-images/mac-heres-the-button.png "Haga clic en el botón inspeccionar en la barra de herramientas del IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 

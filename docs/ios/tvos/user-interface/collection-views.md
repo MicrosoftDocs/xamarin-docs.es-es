@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con vistas de colecci�
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200343"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280219"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabajar con vistas de colección de tvOS en Xamarin
 
@@ -108,7 +108,7 @@ Vamos a hacer lo siguiente:
 1. A continuación, arrastre un controlador de vista de colección al guion gráfico: 
 
     [![](collection-views-images/collection04.png "Un controlador de vista de colección")](collection-views-images/collection04.png#lightbox)
-1. Control: arrastre desde el botón hasta el controlador de vista de colección y seleccione Enviar en el menú emergente: 
+1. Control: arrastre desde el botón hasta el controlador de **vista de colección y seleccione Enviar** en el menú emergente: 
 
     [![](collection-views-images/collection05.png "Seleccione la extracción en el menú emergente.")](collection-views-images/collection05.png#lightbox)
 1. Cuando se ejecute la aplicación, esto hará que se muestre la vista de colección siempre que el usuario haga clic en el botón.
@@ -148,7 +148,7 @@ Vamos a hacer lo siguiente:
 1. A continuación, arrastre un controlador de vista de colección al guion gráfico: 
 
     [![](collection-views-images/collection04vs.png "Un controlador de vista de colección")](collection-views-images/collection04vs.png#lightbox)
-1. Control: arrastre desde el botón hasta el controlador de vista de colección y seleccione Enviar en el menú emergente: 
+1. Control: arrastre desde el botón hasta el controlador de **vista de colección y seleccione Enviar** en el menú emergente: 
 
     [![](collection-views-images/collection05vs.png "Seleccione la extracción en el menú emergente.")](collection-views-images/collection05vs.png#lightbox)
 1. Cuando se ejecute la aplicación, esto hará que se muestre la vista de colección siempre que el usuario haga clic en el botón.

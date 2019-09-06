@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a varias guías que describen las
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/19/2017
-ms.openlocfilehash: fa4744ba217d602dbd3134e616ac3bc4d47f7b76
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0a8963f7c6552e046aee2e75b10bcdb51fc22950
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120811"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286776"
 ---
 # <a name="introduction-to-ios-11"></a>Introducción a iOS 11
 

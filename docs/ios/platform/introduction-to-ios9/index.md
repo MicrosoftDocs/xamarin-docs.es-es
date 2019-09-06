@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285204"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -29,7 +29,7 @@ Como novedad de iOS 9 y iPhone 6S y iPhone 6S Plus, 3D Touch agrega gestos sensi
 en 3D Touch se proporcionan las siguientes características a la aplicación:
 
 - **Sensibilidad** a la presión: ahora, las aplicaciones pueden medir el grado de dificultad o luz que el usuario toca con la pantalla y aprovechar esa información. Por ejemplo, una aplicación de dibujo puede hacer que una línea sea más gruesa o más delgada en función de cómo toque el usuario a la pantalla.
-- **PEEK y pop** : la aplicación ahora puede permitir que el usuario interactúe con sus datos sin tener que navegar fuera de su contexto actual. Al presionar el dedo en la pantalla, pueden *inspeccionarse* en el elemento que le interesan (por ejemplo, al obtener una vista previa de un mensaje). Al presionar más duro, pueden entrar en el elemento.
+- **PEEK y pop** : la aplicación ahora puede permitir que el usuario interactúe con sus datos sin tener que navegar fuera de su contexto actual. Al presionar el dedo en la pantalla, pueden *inspeccionarse* en el elemento que le interesan (por ejemplo, al obtener una vista previa de un mensaje). Al presionar más duro, *pueden entrar en* el elemento.
 - **Acciones rápidas** : Piense en acciones rápidas como los menús contextuales que se pueden desplegar cuando un usuario hace clic con el botón derecho en un elemento de una aplicación de escritorio. Con las acciones rápidas, puede agregar accesos directos comunes y rápidos y fáciles de acceder a las funciones de la aplicación desde el icono de la pantalla principal del dispositivo iOS.
 
 Para obtener más información, consulte nuestra [Introducción a la guía táctil 3D](~/ios/platform/3d-touch.md) .
@@ -129,7 +129,7 @@ Con iOS 9, Apple amplía la compatibilidad con las extensiones al proporcionar v
   - **Extensión de proveedor de túnel de paquetes** : Use este punto de extensión para implementar un cliente del Protocolo de túnel VPN personalizado.
 - **Nuevos puntos de extensión de Safari**:
   - **Extensión de bloqueo de contenido** : Use este punto de extensión para definir una lista de contenido bloqueado que no se mostrará cuando el usuario Explore la Web.
-  - **Extensión de vínculos** compartidos: Use este punto de extensión para habilitar la visualización del contenido de la aplicación en los vínculos compartidos de Safari.
+  - **Extensión de vínculos compartidos** : Use este punto de extensión para habilitar la visualización del contenido de la aplicación en los vínculos compartidos de Safari.
 
 Para obtener más información, consulte nuestra [Introducción a las extensiones](~/ios/platform/extensions.md) y la documentación de la guía de programación de la [extensión de aplicaciones](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214) de Apple.
 

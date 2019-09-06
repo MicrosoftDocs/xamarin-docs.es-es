@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con los nuevos marcos d
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8b551a17fc54ec1557cd385b4c91b33720316879
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225967"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278539"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contactos y ContactsUI en Xamarin. iOS
 
@@ -263,7 +263,7 @@ Los contactos de un usuario pueden existir localmente en el dispositivo del usua
 
 [![](contacts-images/containers01.png "Información general sobre contenedores y grupos")](contacts-images/containers01.png#lightbox)
 
-Algunos contenedores permiten organizar los contactos en uno o varios _grupos_ o subgrupos. Este comportamiento depende de la memoria auxiliar de un contenedor determinado. Por ejemplo, iCloud solo tiene un contenedor, pero puede tener muchos grupos (pero no subgrupos). Microsoft Exchange, por otro lado, no admite grupos, pero puede tener varios contenedores (uno para cada carpeta de Exchange).
+Algunos contenedores permiten organizar los contactos en uno o varios _grupos_ o _subgrupos_. Este comportamiento depende de la memoria auxiliar de un contenedor determinado. Por ejemplo, iCloud solo tiene un contenedor, pero puede tener muchos grupos (pero no subgrupos). Microsoft Exchange, por otro lado, no admite grupos, pero puede tener varios contenedores (uno para cada carpeta de Exchange).
 
 [![](contacts-images/containers02.png "Superposición dentro de contenedores y grupos")](contacts-images/containers02.png#lightbox)
 

@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con alertas en una apli
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 1e2ad12e7dc52b44bda079340638298b87ac5f65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889538"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291211"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas en Xamarin. Mac
 
@@ -66,7 +66,7 @@ Apple proporciona varias propiedades que se pueden usar para personalizar una al
 
 - **AlertStyle** define el tipo de una alerta como una de las siguientes:
   - **ADVERTENCIA** : se usa para advertir al usuario de un evento actual o inminente que no es crítico. Este es el estilo predeterminado.
-  - Informativo: se usa para advertir al usuario sobre un evento actual o inminente. Actualmente, no hay ninguna diferencia visible entre una **ADVERTENCIA** y una **información**
+  - **Informativo** : se usa para advertir al usuario sobre un evento actual o inminente. Actualmente, no hay ninguna diferencia visible entre una **ADVERTENCIA** y una **información**
   - **Crítico** : se usa para advertir al usuario sobre las consecuencias graves de un evento inminente (como la eliminación de un archivo). Este tipo de alerta debe usarse con moderación.
 - **MessageText** : este es el mensaje principal o el título de la alerta y debe definir rápidamente la situación al usuario.
 - **InformativeText** : este es el cuerpo de la alerta en el que debe definir la situación claramente y presentar las opciones que sean factibles al usuario.

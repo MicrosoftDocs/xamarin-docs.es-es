@@ -4,15 +4,15 @@ description: Este documento describe cómo trabajar con las notificaciones de wa
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 39c77b4016027171a4e76bc4fb15c77d733cf5ba
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 9ca50171e43ef98e5b4e5fbd7bd236f74d35da8f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065370"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286762"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>las notificaciones en Xamarin de watchOS
 

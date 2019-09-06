@@ -4,15 +4,15 @@ description: 'En este documento se describe el procesamiento en iOS: Estados de 
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 1899ee225d0ea285a38ba7b4d341e5d3a4452639
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fe508d5b0f8d15a26f02b110763cc8e3f4a2e25
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521387"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292129"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introducción al procesamiento en segundo plano en iOS
 
@@ -34,12 +34,12 @@ El ciclo de vida de la aplicación de iOS es una colección de Estados y método
 - **No se está ejecutando** : la aplicación todavía no se ha iniciado en el dispositivo.
 - En **ejecución/activa** : la aplicación está en la pantalla y está ejecutando código en primer plano.
 - **Inactivo** : la aplicación se interrumpe por una llamada telefónica entrante, texto u otra interrupción.
-- En segundo plano: la aplicación se mueve al fondo y continúa ejecutando el código en segundo plano.
-- **Suspended** : Si la aplicación no tiene código para ejecutarse en segundo plano, o si se ha completado todo el código, el sistema operativo suspenderá la aplicación. El proceso de una aplicación suspendida se mantiene activo, pero la aplicación no puede ejecutar ningún código en este estado.
+- **En segundo plano: la** aplicación se mueve al fondo y continúa ejecutando el código en segundo plano.
+- **Suspended** : Si la aplicación no tiene código para ejecutarse en segundo plano, o si se ha completado todo el código, el sistema operativo *suspenderá* la aplicación. El proceso de una aplicación suspendida se mantiene activo, pero la aplicación no puede ejecutar ningún código en este estado.
 - **Volver a no ejecución/terminación (poco frecuente)** : en ocasiones, el proceso de la aplicación se destruye y la aplicación vuelve al estado *no en ejecución* . Esto sucede en situaciones de memoria insuficiente o si el usuario finaliza manualmente la aplicación.
 
 
-Desde la introducción de la compatibilidad con la multitarea, iOS no suele finalizar las aplicaciones inactivas y, en su lugar, mantiene sus procesos suspendidos en la memoria. Mantener activo el proceso de una aplicación garantiza que la aplicación se inicie rápidamente la próxima vez que el usuario la abra. También significa que las aplicaciones pueden moverse libremente del estado *suspendido* al estado de fondo sin dibujar en los recursos del sistema. iOS 7 aprovecha esta característica con nuevas API que permiten a las aplicaciones pausar las tareas en segundo plano cuando el dispositivo entra en suspensión, actualizar el contenido directamente desde el fondo sin interacción del usuario, etc. Trataremos las nuevas API en las [técnicas de fondo de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
+Desde la introducción de la compatibilidad con la multitarea, iOS no suele finalizar las aplicaciones inactivas y, en su lugar, mantiene sus procesos *suspendidos* en la memoria. Mantener activo el proceso de una aplicación garantiza que la aplicación se inicie rápidamente la próxima vez que el usuario la abra. También significa que las aplicaciones pueden moverse libremente del estado *suspendido* *al estado de fondo sin* dibujar en los recursos del sistema. iOS 7 aprovecha esta característica con nuevas API que permiten a las aplicaciones pausar las tareas en segundo plano cuando el dispositivo entra en suspensión, actualizar el contenido directamente desde el fondo sin interacción del usuario, etc. Trataremos las nuevas API en las [técnicas de fondo de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
 ## <a name="application-lifecycle-methods"></a>Métodos de ciclo de vida de la aplicación
 

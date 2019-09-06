@@ -2,15 +2,15 @@
 title: Devoluciones de llamada en Android
 ms.prod: xamarin
 ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 982eecea12a4e967bc0c05480ae9099cea10b4cb
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: bfe12d84510707ff6e81aae2b5b20be7e9cacd59
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120046"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293056"
 ---
 # <a name="callbacks-on-android"></a>Devoluciones de llamada en Android
 

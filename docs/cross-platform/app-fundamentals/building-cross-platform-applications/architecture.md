@@ -3,15 +3,15 @@ title: 'Parte 2: Arquitectura'
 description: En este documento se describen los patrones de arquitectura útiles para la creación de aplicaciones multiplataforma. Se describen las capas de aplicación típicas (capa de datos, capa de acceso a datos, etc.) y patrones comunes de software móvil (MVVM, MVC, etc.).
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 23758e9794904e60b0ba09fe740574da8e7b830c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526641"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284567"
 ---
 # <a name="part-2---architecture"></a>Parte 2: Arquitectura
 

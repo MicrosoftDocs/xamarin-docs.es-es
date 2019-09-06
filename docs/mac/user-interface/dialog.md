@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con cuadros de diálogo
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 03fad33d49f1454700c118ad44c8582453a75eee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 723f751b93af304c7d70fb1250dbda2f0220e77e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645650"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292213"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin. Mac
 
@@ -91,7 +91,7 @@ El cuadro de diálogo guardar proporciona a los usuarios una manera coherente de
 
 [![](dialog-images/save01.png "Cuadro de diálogo guardar")](dialog-images/save01.png#lightbox)
 
-Y el estado expandido:
+Y el estado **expandido** :
 
 [![](dialog-images/save02.png "Cuadro de diálogo Guardar expandido")](dialog-images/save02.png#lightbox)
 
@@ -99,7 +99,7 @@ El cuadro de diálogo Guardar **mínimo** también puede mostrarse como una hoja
 
 [![](dialog-images/save03.png "Una hoja de almacenamiento mínima")](dialog-images/save03.png#lightbox)
 
-Como puede ser el cuadro de diálogo Guardar expandido:
+Como puede ser el cuadro de diálogo Guardar **expandido** :
 
 [![](dialog-images/save04.png "Una hoja de guardado expandida")](dialog-images/save04.png#lightbox)
 

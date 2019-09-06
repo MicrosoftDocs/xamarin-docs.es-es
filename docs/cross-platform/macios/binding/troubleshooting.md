@@ -1,48 +1,48 @@
 ---
-title: Solución de problemas de enlace
-description: Esta guía describe qué hacer si tiene dificultades para una biblioteca de Objective-C de enlace. En particular, comenta los enlaces que faltan, las excepciones del argumento cuando se pasa null a un enlace y los errores de generación de informes.
+title: Solución de problemas de enlaces
+description: En esta guía se describe lo que debe hacer si tiene dificultades para enlazar una biblioteca de Objective-C. En concreto, se describen los enlaces que faltan, las excepciones de los argumentos al pasar null a un enlace y los informes de errores.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 8fd4a11208be1271785a7e02ad8d45db66d6f1fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977593"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280886"
 ---
-# <a name="binding-troubleshooting"></a>Solución de problemas de enlace
+# <a name="binding-troubleshooting"></a>Solución de problemas de enlaces
 
-Algunas sugerencias para solucionar problemas de enlaces para macOS (antes conocido como OS X) las API de Xamarin.Mac.
+Algunas sugerencias para solucionar problemas de enlaces a las API de macOS (anteriormente conocido como OS X) en Xamarin. Mac.
 
-## <a name="missing-bindings"></a>Enlaces que faltan
+## <a name="missing-bindings"></a>Faltan enlaces
 
-Mientras que Xamarin.Mac cubre gran parte de las API de Apple, en ocasiones, es posible que deba llamar a algunas API de Apple que no tiene un enlace aún. En otros casos, deberá llamar a C, Objective-C de terceros que TI fuera del ámbito de los enlaces de Xamarin.Mac.
+Aunque Xamarin. Mac abarca gran parte de las API de Apple, en ocasiones es posible que tenga que llamar a algunas API de Apple que todavía no tienen un enlace. En otros casos, debe llamar a un tercero C/Objective-C que esté fuera del ámbito de los enlaces de Xamarin. Mac.
 
-Si está trabajando con una API de Apple, es el primer paso para que Xamarin sepa que está experimentando una sección de la API que no tenemos cobertura para todavía. [Archivar un error](#reporting-bugs) teniendo en cuenta la API que faltan. Informes de clientes se usa para dar prioridad a las API que trabajamos en siguiente. Además, si tiene una licencia Business o Enterprise y esta falta de un enlace está bloqueando el progreso, también siga las instrucciones de [soporte](http://xamarin.com/support) para presentar una incidencia. No podemos prometer un enlace, pero en algunos casos podemos obtener un trabajo en torno a.
+Si trabaja con una API de Apple, el primer paso es dejar que Xamarin sepa que está llegando a una sección de la API para la que aún no tenemos cobertura. [Archivo de un error](#reporting-bugs) que indica la API que falta. Usamos informes de clientes para priorizar qué API trabajamos en el siguiente. Además, si tiene una licencia empresarial o empresarial y esta falta de un enlace está bloqueando el progreso, siga también las instrucciones de [soporte técnico](http://xamarin.com/support) para archivar un vale. No podemos poner en peligro un enlace, pero en algunos casos podemos ayudarle a solucionarlo.
 
-Una vez que notifique a Xamarin (si procede) de su enlace faltando, el paso siguiente es considerar enlace usted mismo. Tenemos una guía completa [aquí](~/cross-platform/macios/binding/overview.md) y alguna documentación no oficial [aquí](http://brendanzagaeski.appspot.com/xamarin/0002.html) de ajuste de los enlaces de Objective-C a mano. Si se llama a una API de C, puede usar C#del mecanismo P/Invoke, documentación es [aquí](https://www.mono-project.com/docs/advanced/pinvoke/).
+Una vez que notifique a Xamarin (si es aplicable) de su enlace que falta, el siguiente paso es tener en cuenta su enlace. [Aquí tenemos una guía completa](~/cross-platform/macios/binding/overview.md) y otra documentación no oficial para el ajuste [manual de enlaces](http://brendanzagaeski.appspot.com/xamarin/0002.html) de Objective-C. Si está llamando a una API de C, puede usar C#el mecanismo P/Invoke de la documentación [.](https://www.mono-project.com/docs/advanced/pinvoke/)
 
-Si decide trabajar en el enlace usted mismo, tenga en cuenta que los errores en el enlace pueden generar todo tipo de bloqueos interesantes en el tiempo de ejecución nativo. En concreto, tenga cuidado de que la firma en C# coincide con la firma nativa en el número de argumentos y el tamaño de cada argumento. Si no lo hace pueden dañar la memoria o la pila y podría bloquearse inmediatamente o en algún momento arbitrario en el futuro o dañar los datos.
+Si decide trabajar en el enlace, tenga en cuenta que los errores en el enlace pueden producir todo tipo de bloqueos interesantes en el tiempo de ejecución nativo. En concreto, tenga cuidado de que la firma de C# coincida con la firma nativa en número de argumentos y el tamaño de cada argumento. Si no lo hace, puede dañar la memoria o la pila y puede bloquearse inmediatamente o en algún punto arbitrario del futuro o datos dañados.
 
-## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Excepciones del argumento cuando se pasa null a un enlace
+## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Excepciones de argumentos al pasar null a un enlace
 
-Aunque Xamarin trabaja para ofrecer alta calidad y bien probados enlaces para las API de Apple, en ocasiones, errores y errores slip en. Problema con mucha más comunes que pueden surgir es una API producir `ArgumentNullException` cuando se pasa en null cuando la API subyacente acepta `nil`. Los archivos de encabezado nativo define la API a menudo no proporcionan suficiente información en el que las API que acepte nil y que se bloqueará si se le pasa.
+Mientras Xamarin trabaja para proporcionar enlaces de alta calidad y bien probados para las API de Apple, a veces se producen errores y errores en la remisión. A diferencia del problema más común que podría encontrarse es una API que `ArgumentNullException` se produce cuando se pasa NULL cuando la API subyacente `nil`acepta. Los archivos de encabezado nativo que definen la API no proporcionan información suficiente sobre qué API aceptan Nil y cuál se bloqueará si se pasa en.
 
-Si experimenta un caso donde pasando `null` produce una `ArgumentNullException` pero piensa debe trabajar, siga estos pasos:
+Si ejecuta en un caso en el que pasar `null` produce una `ArgumentNullException` excepción pero cree que debería funcionar, siga estos pasos:
 
-1. Compruebe la documentación de Apple y ejemplos para ver si puede encontrar la prueba que acepta `nil`. Si está familiarizado con Objective-C, puede escribir un programa de prueba pequeño para verificarlo.
-2. [Archivar un error](#reporting-bugs).
-3. ¿Puede solucionar el error? Si no puede llamar a la API con `null`, una simple comprobación de null en torno a las llamadas puede ser una solución alternativa fácil.
-4. Sin embargo, algunas API necesitan pasar null para desactivar o deshabilitar algunas características. En estos casos, puede solucionar el problema llevando el Explorador de ensamblado (vea [buscar el C# miembro de un selector dado](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copiar el enlace y quitar la comprobación de null. Asegúrese de archivar un error (paso 2) si hacerlo, como el enlace copiado no recibirá actualizaciones y revisiones que se realice en Xamarin.Mac y debe considerarse una solución a corto plazo.
+1. Consulte la documentación de Apple o los ejemplos para ver si puede encontrar una prueba que acepte `nil`. Si está familiarizado con Objective-C, puede escribir un pequeño programa de prueba para comprobarlo.
+2. [Archivo a un error](#reporting-bugs).
+3. ¿Puede solucionar el error? Si puede evitar llamar a la API con `null`, una simple comprobación nula en torno a las llamadas puede ser una solución sencilla.
+4. Sin embargo, algunas API requieren pasar null para desactivar o deshabilitar algunas características. En estos casos, puede solucionar el problema si abre el explorador de ensamblados (vea [Buscar el C# miembro de un selector determinado](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copiando el enlace y quitando la comprobación de valores NULL. Asegúrese de que se ha archivado un error (paso 2): si lo hace, ya que el enlace copiado no recibirá las actualizaciones y las correcciones que se realicen en Xamarin. Mac, por lo que se debe considerar una solución alternativa a corto plazo.
 
 <a name="reporting-bugs"/>
 
-## <a name="reporting-bugs"></a>Informar de errores
+## <a name="reporting-bugs"></a>Informes de errores
 
-Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin.Mac:
+Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin. Mac:
 
 - Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/mac).
 - Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues). 

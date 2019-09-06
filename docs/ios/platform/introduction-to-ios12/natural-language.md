@@ -4,15 +4,15 @@ description: En este documento se describe el marco de lenguaje natural. En iOS 
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/20/2018
-ms.openlocfilehash: 235628b512a63ee2f7ec4de2176ab0b90ad65487
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b0d07f2153a0395146506a371631e0bcf75ebef
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652609"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292913"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Usar el marco de lenguaje natural con Xamarin. iOS
 
@@ -33,7 +33,7 @@ En esta aplicación de ejemplo se muestra cómo usar el marco de lenguaje natura
 
 ## <a name="recognizing-languages"></a>Reconocimiento de idiomas
 
-En la pestaña reconocedor de la aplicación de ejemplo se muestra cómo usar un[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
+En la pestaña **reconocedor** de la aplicación de ejemplo se muestra cómo usar un[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 para determinar el idioma de un bloque de texto.
 
 > [!NOTE]
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Etiquetado de entidades con nombre y partes de la voz
 
-La pestaña etiquetador de la aplicación de ejemplo XamarinNL muestra cómo usar el método[`NLTagger`](xref:NaturalLanguage.NLTagger)
+La pestaña **etiquetador** de la aplicación de ejemplo XamarinNL muestra cómo usar el método[`NLTagger`](xref:NaturalLanguage.NLTagger)
 clase para asociar categorías con tokens de una cadena de entrada.
 El marco de lenguaje natural incluye compatibilidad integrada para reconocer personas, lugares, organizaciones y partes de la voz.
 

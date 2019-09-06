@@ -4,15 +4,15 @@ description: En este artículo se muestra cómo usar las sugerencias proactivas 
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 294616e7766a6613a014495e5f9d124f74465072
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121413"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291736"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introducción a las sugerencias proactivas en Xamarin. iOS
 
@@ -84,7 +84,7 @@ Y se admite en la aplicación mediante la implementación de lo siguiente:
 
 - **La entrega** - `NSUserActivity` se agregó en iOS 8 para admitir la entrega, que permite al desarrollador iniciar una actividad en un dispositivo y, a continuación, continuar en otro (consulte la [introducción a la entrega](~/ios/platform/handoff.md)).
 - **Búsqueda de Spotlight** : iOS 9 agregó la capacidad de promover el contenido de la aplicación desde dentro de `NSUserActivity` los resultados de búsqueda de Spotlight mediante (consulte [búsqueda con Spotlight básico](~/ios/platform/search/corespotlight.md)).
-- Los recordatorios de **Siri** contextuales (en `NSUserActivity` iOS 10) se han ampliado para permitir que Siri realice rápidamente un recordatorio para ver el contenido que el usuario está viendo actualmente en la aplicación en otro momento.
+- Los **recordatorios de Siri contextuales** (en `NSUserActivity` iOS 10) se han ampliado para permitir que Siri realice rápidamente un recordatorio para ver el contenido que el usuario está viendo actualmente en la aplicación en otro momento.
 - **Sugerencias de ubicación** : iOS 10 mejora `NSUserActivity` en las ubicaciones de captura que se ven dentro de la aplicación y las promueve en muchos lugares en todo el sistema.
 - **Las**  -  solicitudes`NSUserActivity` contextuales de Siri proporcionan el contexto de la información que se presenta dentro de la aplicación a Siri para que el usuario pueda obtener instrucciones o realizar una llamada invocando Siri desde dentro de la aplicación.
 - **Interacciones de contacto** : novedad de iOS `NSUserActivity` 10, permite promocionar las aplicaciones de comunicaciones desde una tarjeta de contacto (en la aplicación de contactos) como método de comunicación alternativo.
@@ -115,7 +115,7 @@ Para obtener más información sobre la entrega y la búsqueda de Spotlight, con
 
 ### <a name="creating-an-activity"></a>Crear una actividad
 
-Antes de crear una actividad, será necesario crear un identificador de tipo de actividad para identificarla. El identificador de tipo de actividad es una cadena corta agregada `NSUserActivityTypes` a la matriz del `Info.plist` archivo de la aplicación que se usa para identificar de forma única un tipo de actividad de usuario determinado. Habrá una entrada en la matriz para cada actividad que la aplicación admita y exponga a la búsqueda de aplicaciones. Consulte nuestra [referencia](~/ios/platform/search/nsuseractivity.md) sobre la creación de identificadores de tipo de actividad para obtener más detalles.
+Antes de crear una actividad, será necesario crear un identificador de tipo de actividad para identificarla. El identificador de tipo de actividad es una cadena corta agregada `NSUserActivityTypes` a la matriz del `Info.plist` archivo de la aplicación que se usa para identificar de forma única un tipo de actividad de usuario determinado. Habrá una entrada en la matriz para cada actividad que la aplicación admita y exponga a la búsqueda de aplicaciones. Consulte nuestra [referencia sobre la creación de identificadores de tipo de actividad](~/ios/platform/search/nsuseractivity.md) para obtener más detalles.
 
 Vea un ejemplo de una actividad:
 
@@ -326,7 +326,7 @@ Eche un vistazo a cómo la aplicación puede donar interacciones:
 
 [![](proactive-suggestions-images/activity04.png "Información general sobre la donación de interacciones")](proactive-suggestions-images/activity04.png#lightbox)
 
-La aplicación crea un `INInteraction` objeto que contiene una **intención** (`INIntent`), los **participantes** y los metadatos. La **intención** representa una acción del usuario, como la realización de una llamada de vídeo o el envío de un mensaje de texto. Los **participantes** incluyen las personas que reciben la comunicación. Los **metadatos** definen información adicional, como el envío correcto del mensaje, etc.
+La aplicación crea un `INInteraction` objeto que contiene una **intención** (`INIntent`), los **participantes** y los **metadatos**. La **intención** representa una acción del usuario, como la realización de una llamada de vídeo o el envío de un mensaje de texto. Los **participantes** incluyen las personas que reciben la comunicación. Los **metadatos** definen información adicional, como el envío correcto del mensaje, etc.
 
 El desarrollador nunca crea directamente una instancia de `INIntent` o `INIntentResponse`, utilizará una de las clases secundarias específicas (en función de la tarea que la aplicación está realizando en nombre del usuario) que heredan de estas clases primarias. Por ejemplo, `INSendMessageIntent` y `INSendMessageIntentResponse` para enviar un mensaje de texto. 
 

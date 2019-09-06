@@ -4,15 +4,15 @@ description: En esta guía se describe la configuración del entorno de Xamarin.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620524"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291811"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay en Xamarin. iOS
 
@@ -117,7 +117,7 @@ Para habilitar el nuevo entorno de prueba, haga lo siguiente:
 
 ## <a name="summary"></a>Resumen
 
-En este artículo, se exploran los distintos elementos necesarios para usar Apple Pay dentro de la aplicación. Hemos examinado cómo crear un identificador de comerciante y cómo se usa en el archivo contitles **. plist**, que debe modificarse manualmente.
+En este artículo, se exploran los distintos elementos necesarios para usar Apple Pay dentro de la aplicación. Hemos examinado cómo crear un identificador de comerciante y cómo se usa en el archivo **contitles. plist**, que debe modificarse manualmente.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

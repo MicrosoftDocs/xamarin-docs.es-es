@@ -3,15 +3,15 @@ title: 'Parte 4: Trabajo con varias plataformas'
 description: En este documento se describe cómo controlar la divergencia de las aplicaciones en función de la plataforma o la capacidad. Describe el tamaño de la pantalla, las metáforas de navegación, la entrada táctil y los gestos, las notificaciones de envío y los paradigmas de interfaz como listas y pestañas.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 993a455ff0d376f213c403a55df71b3ac52d0d4b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887669"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288882"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4: Trabajo con varias plataformas
 
@@ -158,7 +158,7 @@ Cada versión de la API también define una nueva Directiva de compilador, por l
 
 #### <a name="mac"></a>Mac
 
-Actualmente no hay ningún símbolo integrado para Xamarin. Mac, pero puede Agregar el suyo propio en las opciones del proyecto de aplicación Mac **> Compilar >** compilador en el cuadro **definir símbolos** , o editar el archivo **. csproj** y agregarlo `__MAC__`(por ejemplo,).
+Actualmente no hay ningún símbolo integrado para Xamarin. Mac, pero puede Agregar el suyo propio en las opciones del proyecto de aplicación Mac **> Compilar > compilador** en el cuadro **definir símbolos** , o editar el archivo **. csproj** y agregarlo `__MAC__`(por ejemplo,).
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>

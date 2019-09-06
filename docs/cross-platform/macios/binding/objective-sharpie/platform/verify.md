@@ -1,41 +1,41 @@
 ---
-title: Objetivo Sharpie comprobar los atributos
-description: Este documento describe el atributo [Verify] generado por objetivo Sharpie. El atributo [Verify] se resalta para desarrolladores donde deben comprobar manualmente los resultados del objetivo Sharpie.
+title: Atributos de comprobación de Sharpie de objetivos
+description: En este documento se describe el atributo [Verify] generado por Objective Sharpie. El atributo [Verify] se resalta a los desarrolladores en los que deben comprobar manualmente la salida del Sharpie de objetivos.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/15/2016
-ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b13164b7125e04b3e92a4ae0c0c0afd428f325af
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977856"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278933"
 ---
-# <a name="objective-sharpie-verify-attributes"></a>Objetivo Sharpie comprobar los atributos
+# <a name="objective-sharpie-verify-attributes"></a>Atributos de comprobación de Sharpie de objetivos
 
-A menudo encontrará que se anotará con enlaces producidos por objetivo Sharpie el `[Verify]` atributo. Estos atributos indican que debe _comprobar_ que objetivo Sharpie ha hecho lo correcto comparando el enlace con la declaración de C, Objective-C original (que se proporcionará en un comentario sobre la declaración de enlace).
+A menudo, encontrará que los enlaces generados por Objective Sharpie se anotarán con el `[Verify]` atributo. Estos atributos indican que debe _comprobar_ que Objective Sharpie hizo lo correcto comparando el enlace con la declaración c/Objective-c original (que se proporcionará en un comentario encima de la declaración enlazada).
 
-Comprobación se recomienda para _todas_ enlazado declaraciones, pero es más probable _requiere_ para declaraciones anotan con el `[Verify]` atributo. Esto es porque en muchas situaciones, no hay suficientes metadatos en el código nativo de origen original para deducir cómo generar mejor un enlace. Es posible que deba hacer referencia a documentación o los comentarios de código dentro de los archivos de encabezado para tomar la mejor decisión de enlace.
+Se recomienda la comprobación para _todas las_ declaraciones enlazadas, pero lo más probable es que sea _necesario_ para las `[Verify]` declaraciones anotadas con el atributo. Esto se debe a que, en muchas situaciones, no hay suficientes metadatos en el código fuente nativo original para deducir cómo crear mejor un enlace. Es posible que tenga que hacer referencia a documentación o comentarios de código dentro de los archivos de encabezado para tomar la mejor decisión de enlace.
 
-Una vez haya comprobado que el enlace es corregir o resueltos para que sea correcto, _quitar_ el `[Verify]` atributo desde el enlace.
+Una vez que haya comprobado que el enlace es correcto o lo ha corregido para que sea `[Verify]` correcto, quite el atributo del enlace.
 
 > [!IMPORTANT]
-> `[Verify]` atributos de forma intencionada hacen que C# errores de compilación para que se debe comprobar el enlace. Debe quitar el `[Verify]` cuando ha revisado (y posiblemente corregido) el código de atributo.
+> `[Verify]`los atributos causan C# intencionadamente errores de compilación para que se le obligue a comprobar el enlace. Debe quitar el `[Verify]` atributo cuando haya revisado (y, posiblemente, corregido) el código.
 
-## <a name="verify-hints-reference"></a>Comprobar la referencia de sugerencias
+## <a name="verify-hints-reference"></a>Referencia de sugerencias de comprobación
 
-El argumento de sugerencia proporcionado para el atributo puede ser cruzado hace referencia con la documentación siguiente. Documentación para cualquier producidos `[Verify]` atributos se proporcionará en la consola también una vez completado el enlace.
+Se puede hacer referencia cruzada al argumento de sugerencia proporcionado al atributo con la documentación siguiente. La documentación de los `[Verify]` atributos generados se proporcionará en la consola de y después de que se haya completado el enlace.
 
-|`[Verify]` Sugerencia|Descripción|
+|`[Verify]`Diversas|DESCRIPCIÓN|
 |---|---|
-|InferredFromPreceedingTypedef|El nombre de esta declaración se dedujo mediante convención común desde el que precede inmediatamente `typedef` en el código nativo de origen original. Compruebe que el nombre deducido es correcto, como esta convención es ambigua.|
-|ConstantsInterfaceAssociation|No hay ninguna manera de prueba de errores para determinar qué interfaz Objective-C puede asociarse una declaración de variable extern. Las instancias de estas se enlazan como `[Field]` las propiedades de una interfaz parcial en una interfaz concreta cerca de la forma para producir una API más intuitiva, posiblemente lo que elimina las constantes de' ' interfaz por completo.|
-|MethodToProperty|Un método de Objective-C estaba enlazado como un C# propiedad debido a una convención como no tomar ningún parámetro y devuelve un valor (distinto de void devolución). A menudo métodos como estas deben estar enlazados como propiedades para exponer una API más bonito, pero a veces pueden producirse falsos positivos y el enlace debe ser realmente un método.|
-|StronglyTypedNSArray|Nativo `NSArray*` han vinculado como `NSObject[]`. Es posible más rigurosamente la matriz en el enlace de acuerdo con las expectativas que se establecen a través de la documentación de API (por ejemplo, los comentarios en el archivo de encabezado) o al examinar el contenido de la matriz a través de pruebas. Por ejemplo, un nsarray frente * que contiene solo NSNumber * instancescan enlazarse como `NSNumber[]` en lugar de `NSObject[]`.|
+|InferredFromPreceedingTypedef|El nombre de esta declaración fue inferido por la Convención común desde el `typedef` anterior en el código fuente nativo original. Compruebe que el nombre deducido sea correcto, ya que esta Convención es ambigua.|
+|ConstantsInterfaceAssociation|No hay ningún método de prueba de engaño para determinar con qué interfaz de Objective-C se puede asociar una declaración de variable extern. Las instancias de se enlazan `[Field]` como propiedades en una interfaz parcial en una interfaz concreta cercana para generar una API más intuitiva, lo que posiblemente elimine la interfaz ' constantes ' por completo.|
+|MethodToProperty|Un método de Objective-C se ha enlazado como una propiedad debido a la C# Convención, como no tomar ningún parámetro y devolver un valor (devolución no nula). A menudo, métodos como estos se deben enlazar como propiedades para exponer una API más agradable, pero a veces pueden producirse falsos positivos y el enlace realmente debe ser un método.|
+|StronglyTypedNSArray|Un nativo `NSArray*` se ha enlazado como `NSObject[]`. Es posible que sea más seguro escribir la matriz en el enlace según las expectativas establecidas a través de la documentación de la API (por ejemplo, comentarios en el archivo de encabezado) o examinando el contenido de la matriz mediante las pruebas. Por ejemplo, un NSArray * que contiene solo NSNumber * instancescan se debe `NSNumber[]` enlazar como `NSObject[]`en lugar de.|
 
-Rápidamente puede recibir documentación para el uso de una sugerencia el `sharpie verify-docs` herramienta, por ejemplo:
+También puede recibir rápidamente la documentación de una sugerencia mediante la `sharpie verify-docs` herramienta, por ejemplo:
 
 ```csharp
 sharpie verify-docs InferredFromPreceedingTypedef

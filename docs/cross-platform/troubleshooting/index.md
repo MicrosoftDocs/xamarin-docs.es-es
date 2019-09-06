@@ -1,18 +1,18 @@
 ---
 title: Solución de problemas de Xamarin
-description: Este documento incluye vínculos a contenido que respuestas a preguntas frecuentes sobre el desarrollo de Xamarin, se describe cómo actualizar referencias de componentes en NuGet, se describen las opciones de soporte técnico y responde a preguntas específicas de cada producto.
+description: En este documento se incluyen vínculos a contenido que responde a las preguntas más frecuentes sobre el desarrollo de Xamarin, se describe cómo actualizar referencias de componentes a NuGet, se describen las opciones de soporte técnico y se responde a preguntas específicas del producto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/10/2018
-ms.openlocfilehash: fe2cfacaa8658357a1c6629b1c1e8676efebd452
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 318e02d30840ed5031f6df8b19f8143fa7b23a8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359088"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285093"
 ---
 # <a name="xamarin-troubleshooting"></a>Solución de problemas de Xamarin
 
@@ -20,13 +20,13 @@ ms.locfileid: "61359088"
 
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[Preguntas más frecuentes](questions/index.md)
 
-Preguntas más frecuentes sobre la plataforma de Xamarin y las respuestas específicas de Visual Studio.
+Preguntas más frecuentes sobre la plataforma Xamarin y respuestas específicas de Visual Studio.
 
 ### <a name="updating-component-references-to-nugetcomponent-nugetmd"></a>[Actualización de referencias de componentes en NuGet](component-nuget.md)
 
-Cómo actualizar las soluciones existentes de Xamarin para cambiar las referencias de componentes a los paquetes de NuGet.
+Cómo actualizar soluciones de Xamarin existentes para cambiar las referencias de componentes a paquetes de NuGet.
 
-## <a name="product-specific-questions"></a>Preguntas específicas de productos
+## <a name="product-specific-questions"></a>Preguntas específicas del producto
 
 - [Android](~/android/troubleshooting/questions/index.md)
 - [iOS](~/ios/troubleshooting/questions/index.md)

@@ -4,15 +4,15 @@ description: En este documento se describe cómo reemplazar las referencias de c
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 270d02fb5045e322b167101d82de9a61c64ce836
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7feec9f2fa136b96d81a54e4b2650918c53b5832
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118943"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281602"
 ---
 # <a name="updating-component-references-to-nuget"></a>Actualización de referencias de componentes a NuGet
 
@@ -127,7 +127,7 @@ En la pestaña **paquetes** se enumeran todos los paquetes NuGet incluidos en el
 
 ![La pestaña Paquetes contiene NuGet](component-nuget-images/packages-tab-sml.png)
 
-Tenga en cuenta que la pestaña ensamblados estará vacía:
+Tenga en cuenta que la pestaña **ensamblados** estará vacía:
 
 ![La pestaña ensamblados está vacía](component-nuget-images/assemblies-tab-empty-sml.png)
 
@@ -146,7 +146,7 @@ El paquete NuGet permanecerá en la lista del nodo **paquetes** y la aplicación
 
 ## <a name="components-with-nuget-replacements"></a>Componentes con reemplazos de NuGet
 
-Si la pestaña ensamblados de la página de información de componentes contiene entradas como se muestra a continuación, deberá buscar manualmente el paquete de NuGet equivalente.
+Si la pestaña **ensamblados** de la página de información de componentes contiene entradas como se muestra a continuación, deberá buscar manualmente el paquete de NuGet equivalente.
 
 ![Contiene ensamblados](component-nuget-images/assemblies-tab-sml.png)
 

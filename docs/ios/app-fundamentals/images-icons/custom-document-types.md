@@ -4,15 +4,15 @@ description: En este artículo se describe cómo incluir y administrar un recurs
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 1125b0c420d6dbd23c5539a2183d531bc0d6089f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643005"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282515"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Iconos de documentos personalizados en Xamarin. iOS
 
@@ -44,7 +44,7 @@ Haga clic en el botón **Agregar tipo de documento** y rellene los campos obliga
 -----
 
 
-Para obtener más información sobre los tipos de documento, consulte los temas de referencia de los identificadores de [tipos uniformes](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) de Apple y [programación de interacción de documentos para iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Para obtener más información sobre los tipos de documento, consulte los temas de referencia de los [identificadores de tipos uniformes](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) de Apple y [programación de interacción de documentos para iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Vínculos relacionados

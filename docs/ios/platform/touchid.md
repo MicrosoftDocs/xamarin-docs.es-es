@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar Touch ID, la tecnología d
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: bc797d250b4b66ebfd06bad76c3f43759a65e7c3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121304"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292512"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID en Xamarin. iOS
 

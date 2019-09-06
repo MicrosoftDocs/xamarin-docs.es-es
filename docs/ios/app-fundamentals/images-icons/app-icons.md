@@ -4,15 +4,15 @@ description: 'En este documento se describe cómo trabajar con varios iconos de 
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: dd712940ff6e7000ffd9181f808a8ab32093b38d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121473"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282652"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin. iOS
 
@@ -113,7 +113,7 @@ Para utilizar un catálogo de recursos, haga lo siguiente:
 
 1. Haga doble clic en `Info.plist` el archivo en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese hacia abajo hasta la sección iconos de la **aplicación** .
-3. En la lista desplegable **origen** , asegúrese de que está seleccionado appicos: 
+3. En la lista desplegable **origen** , asegúrese de que está seleccionado **appicos** : 
 
     ![](app-icons-images/migrate01.png "Asegurarse de que se ha seleccionado appicor")
 4. En el **Explorador de soluciones**, haga doble clic en `Assets.xcassets` el archivo para abrirlo para su edición: 

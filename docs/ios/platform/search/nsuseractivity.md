@@ -4,15 +4,15 @@ description: En este documento se describe cómo indexar un NSUserActivity, lo q
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 0b673128d675d825d4c0564929dbd3896c09b0c5
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198494"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291754"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Búsqueda con NSUserActivity en Xamarin. iOS
 
@@ -29,7 +29,7 @@ Las siguientes propiedades de `NSUserActivity` se usan para admitir la búsqueda
 
 - `EligibleForHandoff`: Si `true`es, esta actividad se puede usar en una operación de entrega.
 - `EligibleForSearch`: Si `true`es, esta actividad se agregará al índice en el dispositivo y se mostrará en los resultados de la búsqueda.
-- `EligibleForPublicIndexing`: Si `true`es, esta actividad se agregará al índice basado en la nube de Apple y se presentará a los usuarios (a través de la búsqueda) que no hayan instalado ya la aplicación en su dispositivo iOS. Consulte la sección indexación de [búsqueda pública](#public-search-indexing) a continuación para obtener más detalles.
+- `EligibleForPublicIndexing`: Si `true`es, esta actividad se agregará al índice basado en la nube de Apple y se presentará a los usuarios (a través de la búsqueda) que no hayan instalado ya la aplicación en su dispositivo iOS. Consulte la sección [indexación de búsqueda pública](#public-search-indexing) a continuación para obtener más detalles.
 - `Title`: Proporciona un título para la actividad y se muestra en los resultados de la búsqueda. Los usuarios también pueden buscar el texto del propio título.
 - `Keywords`: Es una matriz de cadenas que se usa para describir la actividad que se indexará y hará que el usuario final pueda realizar búsquedas.
 - `ContentAttributeSet`: Es un `CSSearchableItemAttributeSet` que se usa para describir más detalladamente la actividad y proporcionar contenido enriquecido en los resultados de la búsqueda.
@@ -162,7 +162,7 @@ Solo porque se ha establecido una actividad para la indexación `EligibleForPubl
 
 Al adoptar la búsqueda de aplicaciones `NSUserActivity` a través de en la aplicación, también obtiene las siguientes características:
 
-- Promisión: puesto que la búsqueda de aplicaciones está exponiendo contenido, navegación o características con el mismo mecanismo que`NSUserActivity`la entrega (), puede permitir fácilmente que los usuarios de la aplicación inicien una actividad en un dispositivo y continúen en otro.
+- **Promisión:** puesto que la búsqueda de aplicaciones está exponiendo contenido, navegación o características con el mismo mecanismo que`NSUserActivity`la entrega (), puede permitir fácilmente que los usuarios de la aplicación inicien una actividad en un dispositivo y continúen en otro.
 - **Sugerencias de Siri** : junto con las sugerencias estándar que las sugerencias de Siri suelen realizar, se pueden sugerir automáticamente los activos de la aplicación.
 - **Siri avisos inteligentes** : los usuarios podrán preguntar a Siri para recordarles las actividades de la aplicación.
 

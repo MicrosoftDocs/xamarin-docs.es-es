@@ -4,24 +4,24 @@ description: En este documento se describen los conceptos clave necesarios para 
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: bce2c1e543084ea80908946b1e37e43cf53c1676
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227350"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292562"
 ---
 # <a name="understanding-sirikit-concepts"></a>Descripción de los conceptos de SiriKit
 
 _En este artículo se tratan los conceptos clave necesarios para trabajar con SiriKit en una aplicación de Xamarin. iOS._
 
 
-Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los nuevos marcos de **interfaz de usuario** de intents y intents.
+Novedad de iOS 10, SiriKit permite que una aplicación de Xamarin. iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS. Esta funcionalidad se proporciona en una o más extensiones de aplicación mediante los **nuevos marcos** de interfaz de usuario de intents y **intents** .
 
-SiriKit permite que una aplicación de iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS mediante extensiones de aplicación y los nuevos marcos de **interfaz de usuario** de intents y intents.
+SiriKit permite que una aplicación de iOS proporcione servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS mediante extensiones de aplicación y **los nuevos marcos** de interfaz de usuario de intents y **intents** .
 
 Siri funciona con el concepto de **dominios**, grupos de acciones conocidas para tareas relacionadas. Cada interacción que tiene la aplicación con Siri debe encontrarse en uno de sus dominios de servicio conocidos de la siguiente manera:
 
@@ -38,8 +38,8 @@ Cuando el usuario realiza una solicitud de Siri que implica a uno de los servici
 
 Tanto Siri como la aplicación Maps interactúan con los servicios de la aplicación a través de dos tipos diferentes de extensiones de aplicación:
 
-- **Extensión** de intents: proporciona Siri y se asigna con el contenido de la aplicación y realiza las tareas necesarias para cumplir con las intenciones admitidas.
-- **Extensión** de la interfaz de usuario de intents: proporciona una interfaz de usuario personalizada que se mostrará para el contenido de la aplicación dentro de Siri o Maps.
+- **Extensión de intents** : proporciona Siri y se asigna con el contenido de la aplicación y realiza las tareas necesarias para cumplir con las intenciones admitidas.
+- **Extensión de la interfaz de usuario de intents** : proporciona una interfaz de usuario personalizada que se mostrará para el contenido de la aplicación dentro de Siri o Maps.
 
 La aplicación debe proporcionar una extensión de intents para admitir SiriKit y es responsable de proporcionar información que Siri y Maps pueden presentar al usuario y para controlar las intenciones.
 
@@ -182,7 +182,7 @@ La respuesta de resolución más común de la aplicación será **correcta**, lo
 
 Puede haber ocasiones en las que la aplicación deba confirmar que una solicitud determinada coincide con la parte correcta de la información que conoce. En estos casos, enviará una respuesta de **ConfirmationRequired** para formular una pregunta sí o no al usuario, como *"Enviar mensaje a Bobo la excelente?"* .
 
-Puede haber otros casos en los que la aplicación necesitará que el usuario elija una lista de opciones breve. En este caso, la aplicación proporcionará una respuesta de anulación de ambigüedades con una lista de entre dos y diez opciones para que el usuario elija:
+Puede haber otros casos en los que la aplicación necesitará que el usuario elija una lista de opciones breve. En este caso, la aplicación proporcionará una respuesta de anulación de **ambigüedades** con una lista de entre dos y diez opciones para que el usuario elija:
 
 ```csharp
 Who do you want to message?
@@ -227,8 +227,8 @@ Idealmente, la aplicación debe proporcionar una respuesta a Siri dentro de dos 
 
 Con SiriKit en iOS 10, Apple ha creado dos nuevos puntos de extensión:
 
-- **Extensión** de intents: proporciona Siri con el contenido de la aplicación y realiza las tareas necesarias para cumplir los intentos admitidos.
-- **Extensión** de la interfaz de usuario de intents: proporciona una interfaz de usuario personalizada que se mostrará para el contenido de las aplicaciones dentro de Siri.
+- **Extensión de intents** : proporciona Siri con el contenido de la aplicación y realiza las tareas necesarias para cumplir los intentos admitidos.
+- **Extensión de la interfaz de usuario de intents** : proporciona una interfaz de usuario personalizada que se mostrará para el contenido de las aplicaciones dentro de Siri.
 
 También hay una API para proporcionar palabras y frases a Siri para ayudar en el reconocimiento en la forma de:
 

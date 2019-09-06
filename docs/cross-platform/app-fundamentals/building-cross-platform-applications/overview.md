@@ -3,21 +3,21 @@ title: Información general sobre la creación de aplicaciones multiplataforma
 description: En este documento se proporciona información general de alto nivel sobre la creación de aplicaciones multiplataforma. Describe el valor de, modelos C#de diseño como MVC/MVVM y ius nativas.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c97cfda836f59d4cdbcd234744f723eb9429ace4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526847"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288381"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Información general sobre la creación de aplicaciones multiplataforma
 
 En esta guía se presenta la plataforma Xamarin y cómo diseñar una aplicación multiplataforma para maximizar el uso del código y ofrecer una experiencia nativa de alta calidad en todas las plataformas móviles principales: iOS, Android y Windows Phone.
 
-El enfoque que se usa en este documento suele ser aplicable a las aplicaciones de productividad y a las aplicaciones de juegos. sin embargo, el enfoque se centra en la productividad y la utilidad (aplicaciones que no son de juego). Consulte la [Introducción al documento](~/graphics-games/monogame/introduction/index.md) de monogame o consulte [Visual Studio Tools para Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones sobre el desarrollo de juegos multiplataforma.
+El enfoque que se usa en este documento suele ser aplicable a las aplicaciones de productividad y a las aplicaciones de juegos. sin embargo, el enfoque se centra en la productividad y la utilidad (aplicaciones que no son de juego). Consulte la [Introducción al documento de monogame](~/graphics-games/monogame/introduction/index.md) o consulte [Visual Studio Tools para Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones sobre el desarrollo de juegos multiplataforma.
 
 La frase "escribir una vez, ejecutar en todas partes" se usa a menudo para Extol las virtudes de un único código base que se ejecuta sin modificar en varias plataformas. Aunque tiene la ventaja de reutilización del código, este enfoque conduce a menudo a aplicaciones que tienen un conjunto de características con el menor nivel de nominador y una interfaz de usuario de aspecto genérico que no encaja bien en ninguna de las plataformas de destino.
 

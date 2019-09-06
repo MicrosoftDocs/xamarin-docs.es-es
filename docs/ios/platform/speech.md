@@ -4,15 +4,15 @@ description: En este artículo se presentan las nuevas Speech API y se muestra c
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227333"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292519"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconocimiento de voz en Xamarin. iOS
 

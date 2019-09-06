@@ -3,15 +3,15 @@ title: Actualización de aplicaciones de Xamarin. Forms existentes
 description: En este documento se describen los pasos que deben seguirse para actualizar una aplicación de Xamarin. Forms desde el Classic API al Unified API.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1820dfa1fb756ede6076fb61ad5eb4f6c9926fe8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199210"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280720"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Actualización de aplicaciones de Xamarin. Forms existentes
 
@@ -53,7 +53,7 @@ Haga clic en el proyecto de iOS para que esté seleccionado y, a continuación, 
 Esto lo hará automáticamente:
 
 - Cambie el tipo de proyecto para que admita la API de 64 bits unificada.
-- Cambie la referencia de Framework a **Xamarin. iOS** (reemplazando la referencia de MonoTouch anterior).
+- Cambie la referencia de Framework a **Xamarin. iOS** (reemplazando la referencia de **MonoTouch** anterior).
 - Cambie las referencias de espacio de nombres en el código `MonoTouch` para quitar el prefijo.
 - Actualice el archivo **csproj** para usar los destinos de compilación correctos para el Unified API.
 
@@ -230,7 +230,7 @@ Hasta ese momento, al igual que los componentes, deberá cambiar cualquier paque
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Habilitar compilaciones de 64 bits de aplicaciones de Xamarin. iOS
 
-En el caso de una aplicación móvil de Xamarin. iOS que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte las compilaciones de **64 bits de las aplicaciones de Xamarin. iOS** del documento de consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md#enable-64) para obtener instrucciones detalladas sobre cómo habilitar las compilaciones de 64 bits.
+En el caso de una aplicación móvil de Xamarin. iOS que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte las **compilaciones de 64 bits de las aplicaciones de Xamarin. iOS** del documento de consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md#enable-64) para obtener instrucciones detalladas sobre cómo habilitar las compilaciones de 64 bits.
 
 ## <a name="summary"></a>Resumen
 

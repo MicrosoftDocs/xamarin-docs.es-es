@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 1777bfe627d0dc579169c954f7799348befbf6b8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227028"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292834"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -40,7 +40,7 @@ Esta página contiene información adicional y soluciones alternativas para los 
 
 - Si **info. plist** del proyecto de extensión de inspección > identificador de lote de WKApp no está [configurado correctamente](~/ios/watchos/get-started/project-references.md) para coincidir con el **identificador de lote**de la aplicación de inspección, el depurador no podrá conectarse y Visual Studio para Mac esperará con el mensaje *"esperando a que el depurador conectar "* .
 
-- La depuración se admite en el modo de notificaciones, pero puede ser poco confiable. A veces, el reintento funcionará. Confirme que el archivo **info. plist** `WKCompanionAppBundleIdentifier` de la aplicación de inspección está configurado para coincidir con el identificador de paquete de la aplicación de contenedor/primario de iOS (es decir, el que se ejecuta en el iPhone).
+- La depuración se admite en el modo de **notificaciones** , pero puede ser poco confiable. A veces, el reintento funcionará. Confirme que el archivo **info. plist** `WKCompanionAppBundleIdentifier` de la aplicación de inspección está configurado para coincidir con el identificador de paquete de la aplicación de contenedor/primario de iOS (es decir, el que se ejecuta en el iPhone).
 
 - iOS Designer no muestra las flechas de punto de entrada para los controladores de vista o de la interfaz de notificación.
 

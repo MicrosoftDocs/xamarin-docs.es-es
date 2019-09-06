@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar ADO.NET como método para 
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 09c20b776f2c5d4ddd36e8b515f5bcbf6d92d7a4
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 3526ee254a3986e1ff59288adeb95a49129b8b60
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199705"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290964"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Uso de ADO.NET con Xamarin. iOS
 

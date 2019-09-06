@@ -4,15 +4,15 @@ description: En este documento se describe la entrada de texto de watchos en Xam
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f77c48cbec6a672a67808cda4e7b8fe887b492af
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 2d4b77431c6cda1b8a7718b04a35b179ff45e0ba
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200153"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291666"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Trabajar con la entrada de texto de watchos en Xamarin
 

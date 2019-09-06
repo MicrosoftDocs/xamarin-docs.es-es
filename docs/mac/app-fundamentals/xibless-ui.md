@@ -4,15 +4,15 @@ description: En este artículo se explica cómo crear una interfaz de usuario de
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226896"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283328"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. Xib: diseño de la interfaz de usuario menos en Xamarin. Mac
 
@@ -252,7 +252,7 @@ Están disponibles `NSWindowStyle` las siguientes características:
 - **DocModal** : Si la ventana es un panel, el documento será modal en lugar de modal del sistema.
 - **NonactivatingPanel** : Si la ventana es un panel, no se convertirá en la ventana principal.
 - **TexturedBackground** : la ventana tendrá un fondo con textura.
-- Sin escalar: la ventana no se escalará.
+- Sin **escalar** : la ventana no se escalará.
 - **UnifiedTitleAndToolbar** : las áreas de título y barra de herramientas de la ventana se combinarán.
 - **HUD** : la ventana se mostrará como un panel de información emergente.
 - **FullScreenWindow** : la ventana puede entrar en el modo de pantalla completa.

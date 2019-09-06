@@ -1,35 +1,35 @@
 ---
-title: Plataformas de Objective-c.
-description: Este documento describe las diversas plataformas de inserción de .NET puede tener como destino cuando se trabaja con código de Objective-C. Describe macOS, iOS, tvOS y watchOS.
+title: Plataformas de Objective-C
+description: En este documento se describen las distintas plataformas a las que la incrustación .NET puede dirigirse al trabajar con código de Objective-C. Se describen macOS, iOS, tvOS y watchos.
 ms.prod: xamarin
 ms.assetid: 43253BE4-A03A-4646-9A14-32C05174E672
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 8091fb4e8328f61f1471d061b51b4735de3c089c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f97b595f129cb1ad1ea56e3ae43b0f0a477fef5a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230729"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282727"
 ---
-# <a name="objective-c-platforms"></a>Plataformas de Objective-c.
+# <a name="objective-c-platforms"></a>Plataformas de Objective-C
 
-Inserción de .NET puede tener como destino varias plataformas al generar código de Objective-C:
+La inserción de .NET puede tener como destino varias plataformas al generar código de Objective-C:
 
 * macOS
 * iOS
 * tvOS
-* watchOS [aún no implementado]
+* watchos [aún no implementado]
 
-La plataforma está seleccionada, pasando el `--platform=<platform>` argumento de línea de comandos a la inserción de. NET.
+La plataforma se selecciona pasando el `--platform=<platform>` argumento de línea de comandos a la inserción de .net.
 
-Al compilar para iOS, tvOS y watchOS plataformas, inserción de .NET siempre creará un marco que incrusta Xamarin.iOS, puesto que Xamarin.iOS contiene una gran cantidad de código de compatibilidad en tiempo de ejecución que se requiere en estas plataformas.
+Al compilar para las plataformas iOS, tvOS y watchos, la incrustación de .NET siempre creará un marco que inserta Xamarin. iOS, ya que Xamarin. iOS contiene una gran cantidad de código de compatibilidad en tiempo de ejecución que es necesario en estas plataformas.
 
-Sin embargo, al compilar para la plataforma macOS, es posible elegir si el marco de trabajo generado debe incrustar Xamarin.Mac o no. Es posible que no incruste Xamarin.Mac si el ensamblado enlazado no hace referencia a Xamarin.Mac.dll (directa o indirectamente), y esta opción está seleccionada, pasando `--platform=macOS` a la herramienta de inserción de .NET.
+Sin embargo, al compilar para la plataforma macOS, es posible elegir si el marco de trabajo generado debe incrustar Xamarin. Mac o no. Es posible no insertar Xamarin. Mac si el ensamblado enlazado no hace referencia a Xamarin. Mac. dll (ya sea directa o indirectamente) y se selecciona pasando `--platform=macOS` a la herramienta de incrustación de .net.
 
-Si el ensamblado dependiente contiene una referencia a Xamarin.Mac.dll, es necesario incrustar Xamarin.Mac, y además el embeddinator debe saber qué plataforma de destino para usar.
+Si el ensamblado enlazado contiene una referencia a Xamarin. Mac. dll, es necesario insertar Xamarin. Mac y, además, el embeddinator debe saber qué plataforma de destino se va a usar.
 
-Existen tres posibles plataformas de destino de Xamarin.Mac: `modern` (anteriormente denominados `mobile`), `full` y `system` (se describe la diferencia entre cada uno en Xamarin.Mac [.NET framework de destino] [ 1] documentación), y cada uno de ellos se selecciona pasando `--platform=macOS-modern`, `--platform=macOS-full` o `--platform=macOS-system` a la herramienta de inserción de .NET.
+Hay tres posibles plataformas de destino de Xamarin. Mac: `modern` (llamadas `mobile`anteriormente) `full` y `system` (la diferencia entre cada se describe en la documentación de la plataforma de [destino][1] de Xamarin. Mac) y cada una se selecciona pasando `--platform=macOS-modern` `--platform=macOS-full` o `--platform=macOS-system` a la herramienta de incrustación de .net.
 
 [1]: ~/mac/platform/target-framework.md

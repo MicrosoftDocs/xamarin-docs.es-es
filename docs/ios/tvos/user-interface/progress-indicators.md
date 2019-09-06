@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con indicadores de pro
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ab82b98351b95fbdea9c33a9eae7142c7a54fc77
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 202ce8d674a39b06fd1b07460dff4bf573062592
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200303"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291412"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabajar con indicadores de progreso de tvOS en Xamarin
 

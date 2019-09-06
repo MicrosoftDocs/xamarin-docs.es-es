@@ -4,15 +4,15 @@ description: En este documento se proporciona información general de StoreKit. 
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a68526187271c00332548764850783531391c73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527796"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292186"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Información general de StoreKit y recuperación de la información de producto en Xamarin. iOS
 
@@ -93,7 +93,7 @@ En el primer paso de la venta de un producto de compra desde la aplicación se m
    
    
    
- Independientemente del tipo de productos que una aplicación vende (consumible, no consumible o de un tipo de suscripción), el proceso de recuperación de la información de producto para su presentación es el mismo. El código de InAppPurchaseSample que acompaña a este artículo contiene un proyecto denominado consumibles que muestra cómo recuperar la información de producción para su presentación. Muestra cómo:
+ Independientemente del tipo de productos que una aplicación vende (consumible, no consumible o de un tipo de suscripción), el proceso de recuperación de la información de producto para su presentación es el mismo. El código de InAppPurchaseSample que acompaña a este artículo contiene un proyecto denominado *consumibles* que muestra cómo recuperar la información de producción para su presentación. Muestra cómo:
 
 - Cree una implementación de `SKProductsRequestDelegate` e implemente `ReceivedResponse` el método abstracto. El código de ejemplo llama a `InAppPurchaseManager` esta clase. 
 - Compruebe con StoreKit para ver si se permiten pagos (con `SKPaymentQueue.CanMakePayments` ). 
@@ -107,7 +107,7 @@ La interacción general tiene el siguiente aspecto ( **StoreKit** está integrad
 
 ### <a name="displaying-product-information-example"></a>Ejemplo de visualización de la información del producto
 
-El código de ejemplo de los consumibles de [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) muestra cómo se puede recuperar la información del producto. En la pantalla principal del ejemplo se muestra información de dos productos que se recuperan de la tienda de aplicaciones:   
+El código de ejemplo de los *consumibles* de [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) muestra cómo se puede recuperar la información del producto. En la pantalla principal del ejemplo se muestra información de dos productos que se recuperan de la tienda de aplicaciones:   
    
    
    

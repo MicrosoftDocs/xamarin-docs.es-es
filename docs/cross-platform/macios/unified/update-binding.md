@@ -3,15 +3,15 @@ title: Migración de un enlace a Unified API
 description: En este artículo se describen los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para que admita las API unificadas para las aplicaciones de Xamarin. IOS y Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 90ef47d4e105dc401369c92e9196111c060314e3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287381"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migración de un enlace a Unified API
 
@@ -34,9 +34,9 @@ Los proyectos de enlace no se admiten en Visual Studio en un equipo Windows.
 
 ## <a name="modify-the-using-statements"></a>Modificar las instrucciones Using
 
-Las API unificadas hacen que sea más fácil que nunca compartir código entre Mac e iOS, así como permitir la compatibilidad con aplicaciones 32 y 64 bits con el mismo binario. Al quitar los prefijos _MonoMac_ y MonoTouch de los espacios de nombres, se consigue un uso compartido más sencillo en los proyectos de aplicación de Xamarin. Mac y Xamarin. iOS.
+Las API unificadas hacen que sea más fácil que nunca compartir código entre Mac e iOS, así como permitir la compatibilidad con aplicaciones 32 y 64 bits con el mismo binario. Al quitar los prefijos _MonoMac_ y _MonoTouch_ de los espacios de nombres, se consigue un uso compartido más sencillo en los proyectos de aplicación de Xamarin. Mac y Xamarin. iOS.
 
-Como resultado, tendremos que modificar cualquiera de nuestros contratos de enlace (y `.cs` otros archivos del proyecto de enlace) para quitar los prefijos _MonoMac_ y MonoTouch de nuestras `using` instrucciones.
+Como resultado, tendremos que modificar cualquiera de nuestros contratos de enlace (y `.cs` otros archivos del proyecto de enlace) para quitar los prefijos _MonoMac_ y _MonoTouch_ de nuestras `using` instrucciones.
 
 Por ejemplo, dadas las siguientes instrucciones Using en un contrato de enlace:
 

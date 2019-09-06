@@ -4,15 +4,15 @@ description: En este documento se describen los cambios menores y las mejoras re
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 230da58bba68b9411b67baacd53b534ae832510d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 88039da5faf911386232d2b189b27a2921f8144c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657436"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289572"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Cambios adicionales de tvOS 10 frameworks
 
@@ -118,7 +118,7 @@ Se han realizado las siguientes mejoras en el marco de trabajo de GameplayKit en
 
 Se han realizado las siguientes mejoras en el marco de metal en tvOS 10:
 
-- las aplicaciones 3D y los juegos ahora pueden usar teselación para representar eficazmente escenas complejas y geometría a través de la GPU.
+- las aplicaciones 3D y los juegos ahora pueden usar _teselación_ para representar eficazmente escenas complejas y geometría a través de la GPU.
 - Utilice la especialización de función para crear una colección altamente optimizada de funciones de combinación de materiales y claros para una escena.
 - Proporcionar un control específico de la asignación de recursos para optimizar el rendimiento de las aplicaciones basadas en metal mediante montones de recursos y destinos de representación de memoria.
 

@@ -4,15 +4,15 @@ description: En este artículo se describe el método RequestReview que Apple ag
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: ca26951784e330b52059a3d2a7519e35013ab1bf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 146dc66974f6e0c6e6a8f7bf9f46b570025eaead
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198509"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280387"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Solicitar revisión de la aplicación en Xamarin. iOS
 

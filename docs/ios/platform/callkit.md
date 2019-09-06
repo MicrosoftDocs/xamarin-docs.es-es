@@ -4,15 +4,15 @@ description: En este artículo se trata la nueva API de CallKit que Apple lanzó
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 92e4cd45a7fe49a7a78a8922bf70ac87870db095
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef2894d91604f0bc315b38eb525862858428c405
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200408"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292167"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit en Xamarin. iOS
 
@@ -877,7 +877,7 @@ Si el usuario pulsa una entrada de la lista de recientes (en la aplicación de t
 3. Si el sistema acepta la acción, se devolverá a la aplicación a través `XCProvider` del delegado.
 4. La aplicación inicia la llamada saliente con su red de comunicación.
 
-Para obtener más información sobre los intentos, consulte nuestra documentación sobre [las extensiones](~/ios/platform/sirikit/understanding-sirikit.md) de la interfaz de usuario de intents y intents. 
+Para obtener más información sobre los intentos, consulte nuestra documentación sobre las extensiones de la interfaz de usuario de intents [y intents](~/ios/platform/sirikit/understanding-sirikit.md) . 
 
 ### <a name="the-outgoing-call-lifecycle"></a>Ciclo de vida de la llamada saliente
 

@@ -4,15 +4,15 @@ description: En este documento se describe dónde buscar información y registro
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: cd7a2026a4d1d1458455733a6f2710364cc7fec7
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f2d9921795d2a788a6646aad36712a0691c07d50
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226774"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291175"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde se puede encontrar mi información de versión y los registros?
 
@@ -164,7 +164,7 @@ Estos son los registros del `XamarinInstaller.dmg` instalador.
 
 Después de ejecutar `adb` el comando, vuelva a adjuntar el archivo **android_logcat. txt** desde el escritorio. En estas instrucciones se supone que solo tiene un dispositivo conectado.
 
-Vea también la página de registro de depuración de [Android](~/android/deploy-test/debugging/android-debug-log.md) .
+Vea también la página de [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) .
 
 #### <a name="visual-studio"></a>Visual Studio
 
@@ -182,7 +182,7 @@ Vea también la página de registro de depuración de [Android](~/android/deploy
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />registros del simulador de iOS (en Mac)
 
-- Para acceder al registro del sistema, seleccione Depurar **> abrir registro del sistema...** en la aplicación del simulador de iOS.
+- Para acceder al registro del sistema, seleccione **Depurar > abrir registro del sistema...** en la aplicación del simulador de iOS.
 
 - Para ver los informes de bloqueos del simulador, abra Console. app `~/Library/Logs > DiagnosticReports`y vaya a.
 

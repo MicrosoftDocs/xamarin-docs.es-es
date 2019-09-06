@@ -4,15 +4,15 @@ description: En este documento se describe CoreML, que habilita machine learning
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 96ea328901beede663c9ed3d8d42979544b041ea
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121517"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292647"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introducción a CoreML en Xamarin. iOS
 
@@ -33,7 +33,7 @@ En estos pasos se describe cómo agregar CoreML a un proyecto de iOS. Consulte e
 
 ### <a name="1-add-the-coreml-model-to-the-project"></a>1. Agregar el modelo CoreML al proyecto
 
-Agregue un modelo de CoreML (un archivo con la extensión **. mlmodel** ) al directorio Resources del proyecto. 
+Agregue un modelo de CoreML (un archivo con la extensión **. mlmodel** ) al directorio **Resources** del proyecto. 
 
 En las propiedades del archivo del modelo, su **acción de compilación** se establece en **CoreMLModel**. Esto significa que se compilará en un archivo **. mlmodelc** cuando se compile la aplicación.
 
@@ -92,7 +92,7 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 CoreML también se puede usar junto con Vision Framework para realizar operaciones en una imagen, como el reconocimiento de formas, la identificación de objetos y otras tareas.
 
-En los pasos siguientes se describe cómo se usan CoreML y Vision conjuntamente en el [ejemplo CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). El ejemplo combina el [reconocimiento](~/ios/platform/introduction-to-ios11/vision.md#rectangles) de los rectángulos de Vision Framework con el modelo _MNINSTClassifier_ CoreML para identificar un dígito manuscrito en una fotografía.
+En los pasos siguientes se describe cómo se usan CoreML y Vision conjuntamente en el [ejemplo CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). El ejemplo combina el [reconocimiento de los rectángulos](~/ios/platform/introduction-to-ios11/vision.md#rectangles) de Vision Framework con el modelo _MNINSTClassifier_ CoreML para identificar un dígito manuscrito en una fotografía.
 
 ![Reconocimiento de imágenes del número 3](coreml-images/vision3.png) ![Reconocimiento de imagen del número 5](coreml-images/vision5.png)
 
@@ -171,7 +171,7 @@ void HandleClassification(VNRequest request, NSError error){
 
 Hay tres ejemplos de CoreML para probar:
 
-- El [ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) de predicción de precios de hábitat de Mars tiene entradas y salidas numéricas simples.
+- El [ejemplo de predicción de precios de hábitat de Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) tiene entradas y salidas numéricas simples.
 
 - El [ejemplo de vision & CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) acepta un parámetro de imagen y usa el marco de trabajo para identificar las regiones cuadradas de la imagen, que se pasan a un modelo CoreML que reconoce los dígitos únicos.
 

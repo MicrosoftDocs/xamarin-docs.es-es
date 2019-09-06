@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6f9fd193bda16e3b5e048faf5ec7c5eb09b58bcf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199146"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282684"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin. iOS
 
@@ -52,14 +52,14 @@ En el **Inspector de atributos**, establezca las siguientes opciones:
 
 Dónde:
 
-- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o **verticalmente**.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
 - **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
 - **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.
 - **Referencia relativa** : si se activa, el espaciado vertical de cada subvista se derivará de su línea base.
 - **Márgenes de diseño relativos** : coloca las subvistas en relación con los márgenes de diseño estándar.
 
-Al trabajar con una vista de pila, puede pensar en la **alineación** como la ubicación **X** e y de la subvista y la **distribución** como el **alto** y el **ancho**.
+Al trabajar con una vista de pila, puede pensar en la **alineación** como la ubicación X **e y de** la subvista y la **distribución** como el **alto** y el **ancho**.
 
 > [!IMPORTANT]
 > `UIStackView`está diseñada como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView`. Por lo tanto, establecer `BackgroundColor` propiedades como o `DrawRect` invalidar no tendrá ningún efecto visual.
@@ -72,7 +72,7 @@ Configure la vista de pila horizontal con las siguientes opciones:
 
 [![](uistackview-images/quick04.png "Configurar las opciones de la vista de pila horizontal")](uistackview-images/quick04.png#lightbox)
 
-Dado que no queremos que el icono que representa cada "punto" de la clasificación se estire cuando se agrega a la vista de pila horizontal, hemos establecido la **alineación** en **Center** y la **distribución** para rellenar por **igual**.
+Dado que no queremos que el icono que representa cada "punto" de la clasificación se estire cuando se agrega a la vista de pila horizontal, hemos establecido la **alineación** en **Center** y la **distribución** para **rellenar por igual**.
 
 Por último, conecte las siguientes **salidas** y **acciones**:
 
@@ -216,7 +216,7 @@ Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organi
 Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Según Apple, estos son algunos de los usos más comunes:
 
 - **Defina el tamaño a lo largo del eje** : al anclar ambos bordes a lo `Axis` largo de la vista de pila y uno de los bordes adyacentes para establecer la posición, la vista de pila crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
-- **Definir la posición de** la subvista: al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
+- **Definir la posición de la subvista** : al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
 - **Definir el tamaño y la posición de la pila** : al anclar los cuatro bordes de la vista de pila a la vista primaria, la vista de pila organiza las subvistas en función del espacio definido en la vista de pila.
 - **Defina el tamaño perpendicular al eje** : al anclar ambos bordes perpendiculares a la vista `Axis` de pila y uno de los bordes a lo largo del eje para establecer la posición, la vista de pila aumentará de forma perpendicular al eje para ajustarse al espacio definido por sus subvistas.
 
@@ -226,7 +226,7 @@ El `UIStackView` está diseñado como una vista de contenedor sin representació
 
 Hay varias propiedades que controlan el modo en que una vista de pila organizará su colección de subvistas:
 
-- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o **verticalmente**.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
 - **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
 - **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.

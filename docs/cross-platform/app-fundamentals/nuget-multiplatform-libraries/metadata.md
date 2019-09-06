@@ -1,52 +1,52 @@
 ---
-title: Editar metadatos de NuGet
-description: Este documento describe cómo usar las opciones del proyecto para modificar los metadatos de NuGet para bibliotecas multiplataforma. Describe los metadatos necesarios y opcionales.
+title: Edición de metadatos de NuGet
+description: En este documento se describe cómo usar las opciones de proyecto para editar metadatos de NuGet para bibliotecas multiplataforma. Describe los metadatos necesarios y opcionales.
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 3680b02003a844668b0b5c97e5d4c0d296ae3500
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf8efad28c7ec6acfd0e43403e8db14639a3c755
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289407"
 ---
-# <a name="editing-nuget-metadata"></a>Editar metadatos de NuGet
+# <a name="editing-nuget-metadata"></a>Edición de metadatos de NuGet
 
-_Use las opciones de proyecto para editar los metadatos de NuGet para bibliotecas multiplataforma_
+_Usar las opciones de proyecto para editar metadatos de NuGet para bibliotecas multiplataforma_
 
-Tipos de proyecto de biblioteca (por ejemplo, PCL o .NET Standard o el nuevo tipo de proyecto de NuGet) tienen un **paquete NuGet** sección la **opciones de proyecto** ventana.
+Los tipos de proyecto de biblioteca (como PCL o .NET Standard, o el nuevo tipo de proyecto de NuGet) tienen una sección de **paquete Nuget** en la ventana **Opciones del proyecto** .
 
-El **metadatos** sección configura los valores utilizados en el [ **.nuspec** archivo de manifiesto de paquete de NuGet](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
+En la sección de **metadatos** se configuran los valores utilizados en el [archivo de manifiesto del paquete NuGet **. nuspec** ](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
 
 ## <a name="required-information"></a>Información necesaria
 
-El **General** pestaña contiene cuatro campos que se deben especificar para generar un paquete de NuGet:
+La pestaña **General** contiene cuatro campos que se deben especificar para generar un paquete de NuGet:
 
-[![](metadata-images/metadata-general-sml.png "Ventana de metadatos necesarios del paquete de NuGet")](metadata-images/metadata-general.png#lightbox)
+[![](metadata-images/metadata-general-sml.png "Ventana de metadatos necesaria del paquete NuGet")](metadata-images/metadata-general.png#lightbox)
 
-- **Id. de** : el identificador del paquete, que debe ser único en Nuget.org (o dondequiera que se distribuirá el paquete). Siga este [orientación](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y utilizar únicamente caracteres que son válidos en una dirección URL (sin espacios y evitar la mayoría de caracteres especiales).
-- **Versión** : elija un número de versión coherente con [reglas de control de versiones de NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
-- **Los autores** : lista separada por comas de nombres.
-- **Descripción** : Introducción a las características del paquete que se muestra cuando los usuarios seleccionan el paquete.
+- **ID** : el identificador del paquete, que debe ser único en Nuget.org (o donde se distribuirá el paquete). Siga esta [Guía](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y use únicamente caracteres que sean válidos en una dirección URL (sin espacios y eviten la mayoría de los caracteres especiales).
+- **Versión** : elija un número de versión coherente con [las reglas de control de versiones de NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
+- **Autores** : lista de nombres separados por comas.
+- **Descripción** : información general de las características del paquete que se muestra cuando los usuarios seleccionan el paquete.
 
 > [!NOTE]
-> Acuérdese de incrementar el número de versión al crear nuevas versiones para la distribución de NuGet u otros usuarios.
+> Recuerde incrementar el número de versión al crear nuevas versiones para la distribución a NuGet u otros usuarios.
 
-Para obtener más información, consulte el [referencia de elementos necesario](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements) para obtener más información, así como estas instrucciones detallan en [elegir un identificador de paquete único y establecer el número de versión](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y [ Establecimiento de un tipo de paquete](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
+Para obtener más información, consulte la [referencia de elementos necesarios](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements) para obtener más información, así como estas instrucciones detalladas sobre cómo [elegir un identificador de paquete único y establecer el número de versión](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y [establecer un tipo de paquete](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
 
 > [!IMPORTANT]
-> Se deben especificar todos los campos de esta pestaña; en caso contrario, aparecerá un mensaje de error: _"El proyecto no tiene metadatos de NuGet por lo que no se creará un paquete de NuGet. Los metadatos del paquete NuGet pueden especificarse en la sección de metadatos en las opciones de proyecto"_
+> Se deben especificar todos los campos de esta pestaña; de lo contrario, aparecerá un mensaje de error: _"El proyecto no tiene metadatos de NuGet, por lo que no se creará un paquete NuGet. Los metadatos del paquete NuGet se pueden especificar en la sección metadatos de opciones del proyecto "._
 
 ## <a name="optional-metadata"></a>Metadatos opcionales
 
-El **detalles** pestaña contiene los campos opcionales que se incluirán en el archivo de manifiesto del paquete de NuGet.
+La pestaña **detalles** contiene los campos opcionales que se van a incluir en el archivo de manifiesto del paquete NuGet.
 
-[![](metadata-images/metadata-detail-sml.png "Ventana de metadatos opcionales del paquete de NuGet")](metadata-images/metadata-detail.png#lightbox)
+[![](metadata-images/metadata-detail-sml.png "Ventana de metadatos opcional del paquete NuGet")](metadata-images/metadata-detail.png#lightbox)
 
-Hacer referencia a la [opcional de elementos de referencia](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) para obtener más información acerca de los campos obligatorios y opcionales.
+Consulte la [referencia de elementos opcionales](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) para obtener más información sobre los campos obligatorios y opcionales.
 
 > [!NOTE]
 > Si el paquete de NuGet se distribuye en [NuGet.org](https://www.nuget.org) , se recomienda proporcionar tanta información como sea posible.

@@ -4,15 +4,15 @@ description: En este documento se describe HealthKit, un marco de trabajo inclui
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6446bd7ef196fadae25c0e4dc18542d269424d6d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200272"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288667"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin. iOS
 
@@ -65,7 +65,7 @@ Para obtener más información sobre el aprovisionamiento de una aplicación de 
 
 La creación de un **identificador de aplicación** explícito y un **Perfil de aprovisionamiento** adecuado se realiza en el centro de desarrollo de [iOS](https://developer.apple.com/devcenter/ios/index.action)de Apple. 
 
-Los identificadores de **aplicación** actuales aparecen en la sección [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) del centro de desarrollo. A menudo, esta lista muestra los valores de `*`identificador de, que indican que el**nombre** del **identificador** - de aplicación se puede usar con cualquier número de sufijos. Estos *identificadores de aplicación comodín* no se pueden usar con el kit de mantenimiento.
+Los **identificadores de aplicación** actuales aparecen en la sección [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) del centro de desarrollo. A menudo, esta lista muestra los valores de `*`identificador de, que indican que el**nombre** del **identificador** - de aplicación se puede usar con cualquier número de sufijos. Estos *identificadores de aplicación comodín* no se pueden usar con el kit de mantenimiento.
  
 Para crear un **identificador de aplicación**explícito, haga **+** clic en el botón situado en la parte superior derecha para pasar a la página **registrar el ID. de aplicación de iOS** :
 
@@ -214,7 +214,7 @@ El trabajo de `ValidateAuthorization()` es para compilar el `HKObjectTypes` conj
 Se `ReactToHealthCarePermissions()` llamará a la devolución de llamada después de que el usuario haya interactuado con el cuadro de diálogo de permisos `bool` y se le pasen dos fragmentos de información: un valor que `true` será si el usuario ha interactuado con el cuadro de diálogo permisos y un `NSError`que, si no es null, indica algún tipo de error asociado a la presentación del cuadro de diálogo de permisos.
 
 > [!IMPORTANT]
-> Para estar claro sobre los argumentos de esta función: los parámetros Success y _error_ no indican si el usuario ha concedido permiso para obtener acceso a los datos del kit de mantenimiento. Solo indican que el usuario tiene la oportunidad de permitir el acceso a los datos.
+> Para estar claro sobre los argumentos de esta función: los parámetros _Success_ y _error_ no indican si el usuario ha concedido permiso para obtener acceso a los datos del kit de mantenimiento. Solo indican que el usuario tiene la oportunidad de permitir el acceso a los datos.
 
 Para confirmar si la aplicación tiene acceso a los datos, `HKHealthStore.GetAuthorizationStatus()` se usa, `HKQuantityTypeIdentifierKey.HeartRate`pasando. En función del estado devuelto, la aplicación habilita o deshabilita la capacidad de escribir datos. No hay ninguna experiencia de usuario estándar para tratar con una denegación de acceso y hay muchas opciones posibles. En la aplicación de ejemplo, el estado se establece en `HeartRateModel` un objeto singleton que, a su vez, genera eventos relevantes.
 
@@ -399,7 +399,7 @@ Obviamente, en una aplicación con un solo controlador, sería posible evitar la
 
 El simulador de iOS no es compatible con el kit de mantenimiento. La depuración debe realizarse en un dispositivo físico que ejecute iOS 8.
 
-Conecte un dispositivo de desarrollo de iOS 8 aprovisionado correctamente al sistema. Selecciónelo como destino de implementación en Visual Studio para Mac y, en el menú, elija **ejecutar >** depurar.
+Conecte un dispositivo de desarrollo de iOS 8 aprovisionado correctamente al sistema. Selecciónelo como destino de implementación en Visual Studio para Mac y, en el menú, elija **ejecutar > depurar**.
 
 > [!IMPORTANT]
 > Los errores relacionados con el aprovisionamiento se verán en este momento. Para solucionar errores, revise la sección creación y aprovisionamiento de una aplicación del kit de mantenimiento anterior. Los componentes son: 

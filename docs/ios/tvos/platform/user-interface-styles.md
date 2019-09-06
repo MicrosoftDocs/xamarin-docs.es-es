@@ -4,15 +4,15 @@ description: En este artículo se tratan los temas claros y oscuros de la interf
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4df67221c367386cddd485fcd1853523d77158e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120052"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290678"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de la interfaz de usuario de tvOS en Xamarin
 
@@ -26,7 +26,7 @@ tvOS 10 ahora es compatible con un tema de la interfaz de usuario oscuro y liger
 
 Como se indicó anteriormente, tvOS 10 ahora es compatible con un tema de la interfaz de usuario oscuro y claro que todos los controles de UIKit de compilación se adaptarán automáticamente a, en función de las preferencias del usuario.
 
-El usuario puede cambiar este tema; para ello, vaya a **configuración** > **General** > y cambie entre **Light** y **Dark**:
+El usuario puede cambiar este tema; para**ello, vaya** a **configuración** > **General** > y cambie entre **Light** y **Dark**:
 
 [![](user-interface-styles-images/theme01.png "La aplicación de configuración")](user-interface-styles-images/theme01.png#lightbox)
 

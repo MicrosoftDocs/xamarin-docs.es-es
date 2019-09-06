@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar los catálogos de recursos
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/26/2017
-ms.openlocfilehash: 984ef59a4571379f7b2969ed4f15674f8819e4e4
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b6bf2aa8925e29ed5120de5cc2d3146704259d87
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620340"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282409"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Iconos de App Store en Xamarin. iOS
 
@@ -37,7 +37,7 @@ Los iconos de Application Store ahora deben entregarse en un catálogo de recurs
 
 Para agregar un icono de App Store, haga lo siguiente:
 
-1. Busque el conjunto de imágenes appicor en el archivo **assets. xcassets** del proyecto. 
+1. Busque el conjunto de imágenes **Appicor** en el archivo **assets. xcassets** del proyecto. 
     - Todos los proyectos nuevos deben aparecer con un archivo **assets. xcassets** que contiene un conjunto de imágenes AppIcon.
     - Para agregar un nuevo catálogo de recursos, haga clic con el botón derecho en el proyecto y seleccione **agregar > nuevo archivo > catálogo de recursos**.
     - Para agregar un nuevo conjunto de imágenes icono de aplicación, haga clic con el botón derecho en el área del conjunto de iconos y seleccione iconos de la **aplicación & imágenes de inicio > icono nueva aplicación**:

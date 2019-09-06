@@ -4,15 +4,15 @@ description: En este documento se describen los guiones gráficos unificados de 
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890173"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280864"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -115,7 +115,7 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad|Value|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Estándar|
@@ -626,7 +626,7 @@ Vea la sección sobre la clase de tamaño de este artículo para obtener más in
 
 ### <a name="adaptive-segue-types"></a>Tipos de segue adaptables
 
-Si el desarrollador ha usado guiones gráficos antes, estará familiarizado con los tipos de segue existentes delas inserciones, **modales** y **elemento flotante**. Cuando las clases de tamaño están habilitadas en un archivo de guion gráfico unificado, los siguientes tipos de segue adaptables (que corresponden a la nueva API de controlador de vista descritos anteriormente) están disponibles: **Mostrar** y **Mostrar detalles**.
+Si el desarrollador ha usado guiones gráficos antes, estará familiarizado con los tipos de segue existentes de las **inserciones**, **modales** y **elemento flotante**. Cuando las clases de tamaño están habilitadas en un archivo de guion gráfico unificado, los siguientes tipos de segue adaptables (que corresponden a la nueva API de controlador de vista descritos anteriormente) están disponibles: **Mostrar** y **Mostrar detalles**.
 
 > [!IMPORTANT]
 > Cuando se habilitan las clases de tamaño, cualquier objetos segue existente se convertirá en los nuevos tipos.

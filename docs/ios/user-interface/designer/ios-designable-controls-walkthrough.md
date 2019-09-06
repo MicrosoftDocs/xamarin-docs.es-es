@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear un control personalizado 
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227091"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287308"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
 
@@ -189,12 +189,12 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
     [![](ios-designable-controls-walkthrough-images/08new.png "Barra de herramientas restricciones")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
-1. A continuación, compile el proyecto para que la **vista** de vales de tachado aparezca en **componentes personalizados** en el cuadro de herramientas:
+1. A continuación, compile el proyecto para que la **vista de vales de tachado** aparezca en **componentes personalizados** en el cuadro de herramientas:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "Cuadro de herramientas componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
-1. Arrastre y coloque una **vista de vale** de tachado para que aparezca sobre la imagen Monkey. Ajuste los manipuladores de arrastre para que la vista del vale de borrado cubra el Monkey por completo, como se muestra a continuación:
+1. Arrastre y coloque una **vista de vale de tachado** para que aparezca sobre la imagen Monkey. Ajuste los manipuladores de arrastre para que la vista del vale de borrado cubra el Monkey por completo, como se muestra a continuación:
 
     [![](ios-designable-controls-walkthrough-images/10new.png "Una vista de vale de borrado en la vista de imagen")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 

@@ -4,15 +4,15 @@ description: En este artículo se proporciona una introducción al uso de OpenTK
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 908ed187d8d3d341f8d65e3a3d417588492f325f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227816"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292967"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin. Mac
 

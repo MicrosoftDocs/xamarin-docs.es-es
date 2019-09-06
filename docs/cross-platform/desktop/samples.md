@@ -2,15 +2,15 @@
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
 title: Ejemplos de escritorio multiplataforma
 description: Este documento se vincula a varias aplicaciones de ejemplo que se han trasladado para ejecutarse como aplicaciones multiplataforma con Xamarin.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 7af820e1c73c3b41e58ef8a9ee8ab5ea3a601834
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3363fe8c1835db18dae47559f0c07ddaa4cc7594
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647558"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290351"
 ---
 # <a name="cross-platform-desktop-samples"></a>Ejemplos de escritorio multiplataforma
 

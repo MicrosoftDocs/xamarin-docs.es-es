@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar los controles de tabla de 
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f3e991550cd58f20d52bebb208eedec4d8f7e41e
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065682"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291691"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 
@@ -152,7 +152,7 @@ watchos 3 presentó una nueva característica para las tablas: la capacidad de d
 > [!IMPORTANT]
 > Esta característica solo está disponible actualmente editando el guión gráfico en Xcode Interface Builder.
 
-Para habilitar esta característica, seleccione `WKInterfaceTable` en la superficie de diseño y marque la opción de paginación **detalle vertical** :
+Para habilitar esta característica, seleccione `WKInterfaceTable` en la superficie de diseño y marque la opción de **paginación detalle vertical** :
 
 ![](table-images/vertical-detail-paging-sml.png "Seleccionar la opción de paginación de detalles verticales")
 

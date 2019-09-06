@@ -3,15 +3,15 @@ title: Información general de Unified API
 description: La Unified API de Xamarin permite compartir código entre Mac e iOS y admite aplicaciones de 32 y 64 bits con el mismo binario.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99347ccc2490361bedda926b25076158a12e39bf
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 75177daa2f8bd1faa271940713ff8543db3b97c0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065170"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287392"
 ---
 # <a name="unified-api-overview"></a>Información general de Unified API
 
@@ -312,7 +312,7 @@ Los cambios adicionales que se deben tener en cuenta se enumeran en las [sugeren
 
 ## <a name="sample-code"></a>Código de ejemplo
 
-A partir del 31 de julio, hemos publicado puertos de los ejemplos de iOS en esta nueva API `magic-types` en la rama en MonoTouch [-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
+A partir del 31 de julio, hemos publicado puertos de los ejemplos de iOS en esta nueva API `magic-types` en la rama en [MonoTouch-samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
 Para Mac, estamos comprobando ejemplos en el repositorio de [ejemplos de Mac](https://github.com/xamarin/mac-samples) (que muestra las nuevas API en Mavericks/Yosemite), así como ejemplos de 32/64 bits en la rama de tipos mágicos [Mac-samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
