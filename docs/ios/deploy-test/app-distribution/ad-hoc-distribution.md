@@ -4,15 +4,15 @@ description: En este documento se ofrece una introducción a las técnicas de di
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: efa3c8cf4d2e64c6d8bccdfe6e6fec9602d17c73
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 35596d5231f7e485cf8217e35a5641277dcab11d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865853"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285595"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribución ad hoc para aplicaciones Xamarin.iOS
 
@@ -51,15 +51,15 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 3. Haga clic en el botón **+** para crear un nuevo certificado.
 4. En el título *Production* (Producción), seleccione **In-House and Ad Hoc** (Interna y ad hoc) o **App Store and Ad Hoc** (App Store y ad hoc), en función de su pertenencia al programa:
 
-   [![](ad-hoc-distribution-images/cert-first-small.png "Selección de Interna y ad hoc o App Store y ad hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
+   [![Selección de Interna y ad hoc o App Store y ad hoc](ad-hoc-distribution-images/cert-first-small.png)](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. Haga clic en Continuar y siga las instrucciones para crear una solicitud de firma de certificado a través del acceso a cadena de claves:
 
-   [![](ad-hoc-distribution-images/createcertmanually02.png "Creación de una solicitud de firma de certificado a través de Acceso a llaves")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
+   [![Creación de una solicitud de firma de certificado a través de Acceso a llaves](ad-hoc-distribution-images/createcertmanually02.png)](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. Una vez que haya creado la CSR tal como se indica, haga clic en Continuar y cárguela en el Centro de usuarios registrados:
 
-   [![](ad-hoc-distribution-images/createcertmanually03.png "Carga de la CSR en el Centro de usuarios registrados")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+   [![Carga de la CSR en el Centro de usuarios registrados](ad-hoc-distribution-images/createcertmanually03.png)](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Haga clic en Generar para crear el certificado.
 8. Por último, descargue el certificado completado y haga doble clic en el archivo para instalarlo.
@@ -67,9 +67,9 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 
 Como alternativa, se puede solicitar un certificado mediante el cuadro de diálogo Preferencias de Xcode. Para ello, siga estos pasos:
 
-1. Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…):  [![](ad-hoc-distribution-images/selectteam.png "Selección del equipo")](ad-hoc-distribution-images/selectteam.png#lightbox)
+1. Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…):  [![Selección del equipo](ad-hoc-distribution-images/selectteam.png)](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2. Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):  [![](ad-hoc-distribution-images/selectcert.png "Selección de App Store de iOS")](ad-hoc-distribution-images/selectcert.png#lightbox)
+2. Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):  [![Selección de App Store de iOS](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,23 +91,23 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 
 Una vez que tenga los componentes necesarios para crear un perfil de distribución, siga estos pasos para crearlo:
 
-1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento > Distribución**:  [![](ad-hoc-distribution-images/distribute01.png "Selección de Aprovisionamiento > Distribución")](ad-hoc-distribution-images/distribute01.png#lightbox)
+1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento > Distribución**:  [![Selección de Aprovisionamiento > Distribución](ad-hoc-distribution-images/distribute01.png)](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. Haga clic en el botón **+** y seleccione el tipo de perfil de distribución que quiere crear como **Ad hoc**:
 
-    [![](ad-hoc-distribution-images/distribute02.png "Creación de un tipo de distribución ad hoc")](ad-hoc-distribution-images/distribute02.png#lightbox)
+    [![Creación de un tipo de distribución ad hoc](ad-hoc-distribution-images/distribute02.png)](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. Haga clic en el botón **Continuar** y seleccione el identificador de la aplicación en la lista desplegable para la que quiere crear un perfil de distribución:
 
-    [![](ad-hoc-distribution-images/distribute03.png "Selección de Id. de aplicación en la lista desplegable")](ad-hoc-distribution-images/distribute03.png#lightbox)
+    [![Selección de id. de aplicación en la lista desplegable](ad-hoc-distribution-images/distribute03.png)](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. Haga clic en el botón **Continuar** y seleccione el certificado de distribución necesario para firmar la aplicación:
 
-    [![](ad-hoc-distribution-images/distribute04.png "Seleccione el certificado de distribución necesario para firmar la aplicación")](ad-hoc-distribution-images/distribute04.png#lightbox)
+    [![Seleccione el certificado de distribución necesario para firmar la aplicación](ad-hoc-distribution-images/distribute04.png)](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 5. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
 
-    [![](ad-hoc-distribution-images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](ad-hoc-distribution-images/distribute06.png#lightbox)
+    [![Escritura de un nombre para el nuevo perfil de distribución](ad-hoc-distribution-images/distribute06.png)](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 6. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
@@ -134,13 +134,13 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 1. Haga doble clic en el nombre del proyecto en el **Explorador de soluciones** para abrirlo para su edición.
 2. Seleccione **Firma del lote de iOS** y el tipo de compilación en el elemento desplegable **Configuración**:
 
-    ![](ad-hoc-distribution-images/releasexs01.png "Seleccione el tipo de compilación en la lista desplegable Configuración")
+    ![Selección del tipo de compilación en la lista desplegable Configuración](ad-hoc-distribution-images/releasexs01.png)
 3. En la mayoría de los casos, la **Identidad de firma** y el **Perfil de aprovisionamiento** pueden dejarse en el valor predeterminado **Automático** y Visual Studio para Mac elegirá el perfil correcto según el identificador de paquete de Info.plist:
 
-    ![](ad-hoc-distribution-images/releasexs02.png "Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático")
+    ![Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático](ad-hoc-distribution-images/releasexs02.png)
 4. Si fuera necesario, seleccione la identidad de firma y el perfil de distribución (creado anteriormente) en las listas desplegables:
 
-    ![](ad-hoc-distribution-images/releasexs03.png "Seleccione la identidad de firma y el perfil de distribución")
+    ![Selección de la identidad de firma y el perfil de distribución](ad-hoc-distribution-images/releasexs03.png)
 5. Haga clic en el botón **Aceptar** para guardar los cambios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -149,13 +149,13 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 1. Haga clic con el botón derecho en el nombre del proyecto en el **Explorador de soluciones** y seleccione **Propiedades** para abrirlo para su edición.
 2. Seleccione **Firma del lote de iOS** y el tipo de compilación en el elemento desplegable **Configuración**:
 
-    ![](ad-hoc-distribution-images/releasevs01.png "Seleccione el tipo de compilación en la lista desplegable Configuración")
+    ![Selección del tipo de compilación en la lista desplegable Configuración](ad-hoc-distribution-images/releasevs01.png)
 3. En la mayoría de los casos, la **Identidad de firma** y el **Perfil de aprovisionamiento** pueden dejarse en el valor predeterminado **Automático** y Visual Studio elegirá el perfil correcto según el identificador de paquete de Info.plist:
 
-    ![](ad-hoc-distribution-images/releasevs02.png "Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático")
+    ![Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático](ad-hoc-distribution-images/releasevs02.png)
 4. Si fuera necesario, seleccione la identidad de firma y el perfil de distribución (creado anteriormente) en las listas desplegables:
 
-    ![](ad-hoc-distribution-images/releasevs03.png "Seleccione la identidad de firma y el perfil de distribución")
+    ![Selección de la identidad de firma y el perfil de distribución](ad-hoc-distribution-images/releasevs03.png)
 5. Guarde los cambios en las propiedades del proyecto.
 
 -----

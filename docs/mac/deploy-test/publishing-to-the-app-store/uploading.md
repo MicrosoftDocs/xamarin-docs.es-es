@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar iTunes Connect para cargar
 ms.prod: xamarin
 ms.assetid: 30cd0e47-1b2e-47ef-93f6-4bed20b15c03
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: fa5c8a72a469f1a798cbdcfc63c07860363f6608
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb58fee1c9eaeee391b3a838b3fa2921e97a57
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109853"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284264"
 ---
 # <a name="upload-to-mac-app-store"></a>Cargar en Mac App Store
 

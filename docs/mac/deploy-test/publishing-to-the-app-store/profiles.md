@@ -4,15 +4,15 @@ description: En esta guía se describe el proceso de creación de los perfiles d
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 2b5c6ed77d7bf1c60b9424a138786dafb7a86706
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0a4766abf8ded591bf348f2c2a7ba2283cdde00
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108423"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290241"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfiles de aprovisionamiento para aplicaciones Xamarin.Mac
 
@@ -33,31 +33,31 @@ Haga lo siguiente:
 
 1. Seleccione el tipo de perfil de aprovisionamiento que se va a crear y haga clic en el botón **Continuar**: 
 
-     [![](profiles-images/certif14.png "Selección del tipo de perfil")](profiles-images/certif14.png#lightbox)
+    [![](profiles-images/certif14.png "Selección del tipo de perfil")](profiles-images/certif14.png#lightbox)
 2. Seleccione el identificador de la aplicación para la que se va a crear el perfil y haga clic en el botón **Continuar**: 
 
-     [![](profiles-images/certif15.png "Selección del identificador de la aplicación")](profiles-images/certif15.png#lightbox)
+    [![](profiles-images/certif15.png "Selección del identificador de la aplicación")](profiles-images/certif15.png#lightbox)
 3. Seleccione el identificador de desarrollador usado para firmar el perfil y haga clic en **Continuar**: 
 
-     [![](profiles-images/certif16.png "Selección del identificador del desarrollador")](profiles-images/certif16.png#lightbox)
+    [![](profiles-images/certif16.png "Selección del identificador del desarrollador")](profiles-images/certif16.png#lightbox)
 4. Seleccione los equipos en los que se puede usar este perfil y haga clic en **Continuar**: 
 
-     [![](profiles-images/certif17.png "Selección de los equipos permitidos")](profiles-images/certif17.png#lightbox)
+    [![](profiles-images/certif17.png "Selección de los equipos permitidos")](profiles-images/certif17.png#lightbox)
 5. Ahora, especifique un **nombre de perfil** y haga clic en el botón **Generar**: 
 
-     [![](profiles-images/certif18.png "Generación del perfil")](profiles-images/certif18.png#lightbox)
+    [![](profiles-images/certif18.png "Generación del perfil")](profiles-images/certif18.png#lightbox)
 6. Haga clic en el botón **Descargar** para descargar el nuevo perfil: 
 
-     [![](profiles-images/certif19.png "Descarga del perfil")](profiles-images/certif19.png#lightbox)
+    [![](profiles-images/certif19.png "Descarga del perfil")](profiles-images/certif19.png#lightbox)
 7. Los perfiles de aprovisionamiento de desarrollo se instalan en el panel de preferencias de perfiles de la aplicación **Preferencias del sistema** de Mac: 
 
-     [![](profiles-images/certif20.png "Instalación del perfil")](profiles-images/certif20.png#lightbox)
+    [![](profiles-images/certif20.png "Instalación del perfil")](profiles-images/certif20.png#lightbox)
 8. En el panel de preferencias de perfiles se mostrarán todos los perfiles instalados: 
 
-     [![](profiles-images/image47.png "Consulta de todos los perfiles instalados")](profiles-images/image47.png#lightbox)
+    [![](profiles-images/image47.png "Consulta de todos los perfiles instalados")](profiles-images/image47.png#lightbox)
 9. El perfil también aparecerá en la **utilidad de certificados de desarrollador** en caso de que tenga que volver a descargarse: 
 
-     [![](profiles-images/image48.png "Utilidad de certificado de desarrollador")](profiles-images/image48.png#lightbox)
+    [![](profiles-images/image48.png "Utilidad de certificado de desarrollador")](profiles-images/image48.png#lightbox)
 
 Será necesario crear un perfil de aprovisionamiento de desarrollo para cada aplicación nueva o cuando se agregue un equipo nuevo para realizar pruebas en él.
 

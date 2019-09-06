@@ -4,15 +4,15 @@ description: En esta guía se describe el proceso de creación de los certificad
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 30731dda1007127caff84eae20696b45803b74f1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 80a54d9276159c7c1b1706b61e7bc865aca540bd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528998"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285859"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores en Xamarin.Mac
 
@@ -51,13 +51,13 @@ Haga clic en el vínculo **Información general** de la parte superior izquierda
 
 El desarrollador debe registrar un identificador de aplicación para cada aplicación escrita. Use los pasos siguientes para crear una entrada para una aplicación de ejemplo básica denominada "MacWriter".
 
-1. Escriba una **descripción de identificador de aplicación** y seleccione los **App Services** que la aplicación vaya a necesitar: 
+1. Escriba una **descripción de identificador de aplicación** y seleccione los **App Services** que la aplicación vaya a necesitar:
 
     [![Escribir la descripción y los App Services](certificates-identifiers-images/devcenter04.png "Escribir la descripción y los App Services")](certificates-identifiers-images/devcenter04-large.png#lightbox)
-2. Escriba un **Id. de paquete** para la aplicación y haga clic en el botón **Continuar**: 
+2. Escriba un **Id. de paquete** para la aplicación y haga clic en el botón **Continuar**:
 
     [![Escribir un identificador de paquete](certificates-identifiers-images/devcenter05.png "Escribir un identificador de paquete")](certificates-identifiers-images/devcenter05-large.png#lightbox)
-3. Compruebe la información y haga clic en el botón **Enviar**: 
+3. Compruebe la información y haga clic en el botón **Enviar**:
 
     [![Comprobar la información](certificates-identifiers-images/devcenter06.png "Comprobar la información")](certificates-identifiers-images/devcenter06-large.png#lightbox)
 
@@ -105,27 +105,27 @@ Como se ha mencionado anteriormente, el certificado de desarrollo de aplicacione
 
 Haga lo siguiente para crear un nuevo certificado de desarrollo:
 
-1. Active el botón de radio **Mac Development (Desarrollo de Mac)** y haga clic en **Continuar**: 
+1. Active el botón de radio **Mac Development (Desarrollo de Mac)** y haga clic en **Continuar**:
 
      [![Agregar un certificado de desarrollo](certificates-identifiers-images/certif02.png "Agregar un certificado de desarrollo")](certificates-identifiers-images/certif02-large.png#lightbox)
-2. En la pantalla siguiente se explica cómo usar Acceso a llaves para crear un archivo de solicitud de certificado de firma para cargar: 
+2. En la pantalla siguiente se explica cómo usar Acceso a llaves para crear un archivo de solicitud de certificado de firma para cargar:
 
     [![La pantalla de carga de Acceso a llaves](certificates-identifiers-images/certif03.png "La pantalla de carga de Acceso a llaves")](certificates-identifiers-images/certif03-large.png#lightbox)
-3. Elija un nombre común significativo para el certificado para que sea fácilmente reconocible más adelante cuando se cree el certificado final. Recuerde dónde se guarda el archivo, para poder encontrarlo en el paso siguiente: 
+3. Elija un nombre común significativo para el certificado para que sea fácilmente reconocible más adelante cuando se cree el certificado final. Recuerde dónde se guarda el archivo, para poder encontrarlo en el paso siguiente:
 
-     ![Exportar un certificado](certificates-identifiers-images/image12.png "Exportar un certificado")
-4. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio), porque tendrá que elegirlo en el paso siguiente: 
+    ![Exportar un certificado](certificates-identifiers-images/image12.png "Exportar un certificado")
+4. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio), porque tendrá que elegirlo en el paso siguiente:
 
-     [![Cargar el archivo de certificado](certificates-identifiers-images/image13.png "Cargar el archivo de certificado")](certificates-identifiers-images/image13-large.png#lightbox)
-5. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**: 
+    [![Cargar el archivo de certificado](certificates-identifiers-images/image13.png "Cargar el archivo de certificado")](certificates-identifiers-images/image13-large.png#lightbox)
+5. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**:
 
-     [![Descargar un certificado de desarrollo](certificates-identifiers-images/image15.png "Descargar un certificado de desarrollo")](certificates-identifiers-images/image15-large.png#lightbox)
-6. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La **utilidad de certificado de desarrollador** mostrará los certificados así: 
+    [![Descargar un certificado de desarrollo](certificates-identifiers-images/image15.png "Descargar un certificado de desarrollo")](certificates-identifiers-images/image15-large.png#lightbox)
+6. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La **utilidad de certificado de desarrollador** mostrará los certificados así:
 
-     [![La utilidad de certificado de desarrollador](certificates-identifiers-images/image16.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/image16-large.png#lightbox)
-7. También aparecerá en **Acceso a llaves** así: 
+    [![La utilidad de certificado de desarrollador](certificates-identifiers-images/image16.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/image16-large.png#lightbox)
+7. También aparecerá en **Acceso a llaves** así:
 
-     ![Certificado en Acceso a llaves](certificates-identifiers-images/image17.png "Certificado en Acceso a llaves")
+    ![Certificado en Acceso a llaves](certificates-identifiers-images/image17.png "Certificado en Acceso a llaves")
 
 Como se ha mencionado anteriormente, el certificado de desarrollador no siempre es necesario, a menos que el desarrollador esté implementando características de macOS como iCloud y notificaciones de inserción. También es necesario crear un **perfil de aprovisionamiento de desarrollo**, que será necesario para probar aplicaciones de Mac App Store.
 
@@ -133,41 +133,41 @@ Como se ha mencionado anteriormente, el certificado de desarrollador no siempre 
 
 Para publicar una aplicación en el App Store, habrá que crear un certificado de **Mac App Store** que se usará para firmar la aplicación y el paquete de Mac Installer.
 
-1. Seleccione **Mac App Store** como tipo de certificado y haga clic en el botón **Continuar**: 
+1. Seleccione **Mac App Store** como tipo de certificado y haga clic en el botón **Continuar**:
 
     [![Crear un certificado de App Store](certificates-identifiers-images/certif04.png "Crear un certificado de App Store")](certificates-identifiers-images/certif04-large.png#lightbox)
-2. Seleccione el tipo de certificado que se va a crear (necesitará uno de cada tipo para publicar en el App Store): 
+2. Seleccione el tipo de certificado que se va a crear (necesitará uno de cada tipo para publicar en el App Store):
 
     [![Seleccionar el tipo de certificado](certificates-identifiers-images/certif05.png "Seleccionar el tipo de certificado")](certificates-identifiers-images/certif05-large.png#lightbox)
-3. En la página siguiente se explica cómo usar **Acceso a llaves** para generar un archivo de solicitud de certificado. Siga las instrucciones: 
+3. En la página siguiente se explica cómo usar **Acceso a llaves** para generar un archivo de solicitud de certificado. Siga las instrucciones:
 
-     [![Generar la solicitud de llaves](certificates-identifiers-images/certif06.png "Generar la solicitud de llaves")](certificates-identifiers-images/certif06-large.png#lightbox)
-4. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Aplicación del App Store": 
+    [![Generar la solicitud de llaves](certificates-identifiers-images/certif06.png "Generar la solicitud de llaves")](certificates-identifiers-images/certif06-large.png#lightbox)
+4. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Aplicación del App Store":
 
-     ![Escribir un nombre descriptivo](certificates-identifiers-images/image20.png "Escribir un nombre descriptivo")
-5. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio): 
+    ![Escribir un nombre descriptivo](certificates-identifiers-images/image20.png "Escribir un nombre descriptivo")
+5. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio):
 
-     [![Guardar el certificado](certificates-identifiers-images/image21.png "Guardar el certificado")](certificates-identifiers-images/image21-large.png#lightbox)
-6. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**: 
+    [![Guardar el certificado](certificates-identifiers-images/image21.png "Guardar el certificado")](certificates-identifiers-images/image21-large.png#lightbox)
+6. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**:
 
-      [![Descargar el certificado de App Store](certificates-identifiers-images/image23.png "Descargar el certificado de App Store")](certificates-identifiers-images/image23-large.png#lightbox)
-7. Haga clic en **Continuar** y siga los mismos pasos que para descargar otro certificado, esta vez para el *instalador*: 
+    [![Descargar el certificado de App Store](certificates-identifiers-images/image23.png "Descargar el certificado de App Store")](certificates-identifiers-images/image23-large.png#lightbox)
+7. Haga clic en **Continuar** y siga los mismos pasos que para descargar otro certificado, esta vez para el *instalador*:
 
-     [![Seleccionar el instalador](certificates-identifiers-images/image24.png "Seleccionar el instalador")](certificates-identifiers-images/image24-large.png#lightbox)
-8. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Instalador del App Store": 
+    [![Seleccionar el instalador](certificates-identifiers-images/image24.png "Seleccionar el instalador")](certificates-identifiers-images/image24-large.png#lightbox)
+8. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Instalador del App Store":
 
-     ![Establecer el nombre del certificado](certificates-identifiers-images/image25.png "Establecer el nombre del certificado")
-9. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio): 
+    ![Establecer el nombre del certificado](certificates-identifiers-images/image25.png "Establecer el nombre del certificado")
+9. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio):
 
-     [![Cargar el certificado](certificates-identifiers-images/image26.png "Cargar el certificado")](certificates-identifiers-images/image26-large.png#lightbox) 
+    [![Cargar el certificado](certificates-identifiers-images/image26.png "Cargar el certificado")](certificates-identifiers-images/image26-large.png#lightbox)
 
-     [![Descargar el certificado de distribución](certificates-identifiers-images/image28.png "Descargar el certificado de distribución")](certificates-identifiers-images/image28-large.png#lightbox)
-10. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La utilidad de certificado de desarrollador mostrará los certificados así: 
+    [![Descargar el certificado de distribución](certificates-identifiers-images/image28.png "Descargar el certificado de distribución")](certificates-identifiers-images/image28-large.png#lightbox)
+10. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La utilidad de certificado de desarrollador mostrará los certificados así:
 
-     [![La utilidad de certificado de desarrollador](certificates-identifiers-images/image29.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/image29-large.png#lightbox)
-11. Los dos nuevos certificados ya serán visibles en **Acceso a llaves**: 
+    [![La utilidad de certificado de desarrollador](certificates-identifiers-images/image29.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/image29-large.png#lightbox)
+11. Los dos nuevos certificados ya serán visibles en **Acceso a llaves**:
 
-     [![Certificado en Acceso a llaves](certificates-identifiers-images/image30.png "Certificado en Acceso a llaves")](certificates-identifiers-images/image30-large.png#lightbox)
+    [![Certificado en Acceso a llaves](certificates-identifiers-images/image30.png "Certificado en Acceso a llaves")](certificates-identifiers-images/image30-large.png#lightbox)
 
 #### <a name="developer-id-certificates"></a>Certificados de identificador de desarrollador
 
@@ -175,41 +175,41 @@ Para publicar por sí mismo una aplicación de Xamarin.Mac (no publicar a travé
 
 Haga lo siguiente:
 
-1. En la sección **Certificados**, haga clic en el botón **+** y luego active el botón de radio **Id. de desarrollador**: 
+1. En la sección **Certificados**, haga clic en el botón **+** y luego active el botón de radio **Id. de desarrollador**:
 
     [![Agregar un identificador de desarrollador](certificates-identifiers-images/certif07.png "Agregar un identificador de desarrollador")](certificates-identifiers-images/certif07-large.png#lightbox)
-2. Haga clic en el botón **Continuar** y seleccione el tipo de identificador de desarrollador que va a crear: 
+2. Haga clic en el botón **Continuar** y seleccione el tipo de identificador de desarrollador que va a crear:
 
     [![Seleccionar el tipo de identificador de desarrollador](certificates-identifiers-images/certif08.png "Seleccionar el tipo de identificador de desarrollador")](certificates-identifiers-images/certif08-large.png#lightbox)
 3. Necesitará dos, uno para firmar la propia aplicación y otro para firmar el instalador de la aplicación. Tenga cuidado al asignar nombres a las solicitudes de certificado de estas claves: use nombres descriptivos que incluyan el texto `Application` y `Installer` para poder distinguirlas más adelante.
-4. En la pantalla siguiente se proporcionan instrucciones detalladas sobre cómo crear el certificado, haga clic en el botón **Continuar**: 
+4. En la pantalla siguiente se proporcionan instrucciones detalladas sobre cómo crear el certificado, haga clic en el botón **Continuar**:
 
     [![Cómo crear el certificado](certificates-identifiers-images/certif09.png "Cómo crear el certificado")](certificates-identifiers-images/certif09-large.png#lightbox)
-5. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Aplicación de identificador de desarrollador": 
+5. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Aplicación de identificador de desarrollador":
 
-     ![Escribir un nombre para el certificado](certificates-identifiers-images/image33.png "Escribir un nombre para el certificado")
-6. Se guardará un archivo de solicitud de certificado (extensión `.certSigningRequest`) localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio): 
+    ![Escribir un nombre para el certificado](certificates-identifiers-images/image33.png "Escribir un nombre para el certificado")
+6. Se guardará un archivo de solicitud de certificado (extensión `.certSigningRequest`) localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio):
 
-     [![Cargar el certificado](certificates-identifiers-images/certif10.png "Cargar el certificado")](certificates-identifiers-images/certif10-large.png#lightbox) 
+    [![Cargar el certificado](certificates-identifiers-images/certif10.png "Cargar el certificado")](certificates-identifiers-images/certif10-large.png#lightbox)
 
-     [![Descargar el identificador de desarrollador](certificates-identifiers-images/certif11.png "Descargar el identificador de desarrollador")](certificates-identifiers-images/certif11-large.png#lightbox)
+    [![Descargar el identificador de desarrollador](certificates-identifiers-images/certif11.png "Descargar el identificador de desarrollador")](certificates-identifiers-images/certif11-large.png#lightbox)
 7. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**.
 8. Haga clic en **Continuar** y siga los mismos pasos que para descargar otro certificado, esta vez para el *instalador*.
-9. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Instalador de identificador de desarrollador": 
+9. Elija un **nombre común** descriptivo: por ejemplo, use el texto "Instalador de identificador de desarrollador":
 
-     ![Escribir un nombre común](certificates-identifiers-images/image38.png "Escribir un nombre común")
-10. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio): 
+    ![Escribir un nombre común](certificates-identifiers-images/image38.png "Escribir un nombre común")
+10. Un archivo de solicitud de certificado (extensión `.certSigningRequest`) se guardará localmente en el equipo Mac. Recuerde dónde se guarda (la ubicación predeterminada es el escritorio):
 
-     [![Cargar un certificado](certificates-identifiers-images/certif10.png "Cargar un certificado")](certificates-identifiers-images/certif10-large.png#lightbox)
-11. El certificado está disponible para descargar: haga clic en el botón **Descargar** antes de hacer clic en **Listo**: 
+    [![Cargar un certificado](certificates-identifiers-images/certif10.png "Cargar un certificado")](certificates-identifiers-images/certif10-large.png#lightbox)
+11. El certificado está disponible para descargar: haga clic en el botón **Descargar** antes de hacer clic en **Listo**:
 
-     [![Descargar un certificado](certificates-identifiers-images/certif11.png "Descargar un certificado")](certificates-identifiers-images/certif11-large.png#lightbox)
-12. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La **utilidad de certificado de desarrollador** mostrará los certificados así: 
+    [![Descargar un certificado](certificates-identifiers-images/certif11.png "Descargar un certificado")](certificates-identifiers-images/certif11-large.png#lightbox)
+12. Haga clic en **Descargar** para obtener el certificado y haga doble clic para instalarlo en **Acceso a llaves**. La **utilidad de certificado de desarrollador** mostrará los certificados así:
 
-     [![La utilidad de certificado de desarrollador](certificates-identifiers-images/certif12.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/certif12-large.png#lightbox)
-13. Los siguientes elementos están visibles en **Acceso a llaves**: 
+    [![La utilidad de certificado de desarrollador](certificates-identifiers-images/certif12.png "La utilidad de certificado de desarrollador")](certificates-identifiers-images/certif12-large.png#lightbox)
+13. Los siguientes elementos están visibles en **Acceso a llaves**:
 
-     [![Certificado en Acceso a llaves](certificates-identifiers-images/image43.png "Certificado en Acceso a llaves")](certificates-identifiers-images/image43-large.png#lightbox)
+    [![Certificado en Acceso a llaves](certificates-identifiers-images/image43.png "Certificado en Acceso a llaves")](certificates-identifiers-images/image43-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Vínculos relacionados
