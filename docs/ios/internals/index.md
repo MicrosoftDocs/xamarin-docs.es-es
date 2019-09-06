@@ -1,46 +1,46 @@
 ---
-title: Conceptos avanzados y funcionamiento interno de iOS
-description: En este tema se busca en MonoTouch API diseño, los ensamblados y clases de la biblioteca de clases de Base (BCL) de .NET y cómo Visual Studio para Mac se integra con Interface Builder de Xcode y cadena de herramientas de Apple.
+title: Conceptos avanzados e internos de iOS
+description: En este tema se examina el diseño de API MonoTouch, los ensamblados y las clases de la biblioteca de clases base (BCL) de .NET y cómo Visual Studio para Mac se integra con la Interface Builder de Xcode y la cadena de herramientas de Apple.
 ms.prod: xamarin
 ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 8a454e469f96c3464d756eb6b4e4eb3ed40c8f1e
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4f6043190087d34ccaa4a63fcc801843194273ad
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865758"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291891"
 ---
-# <a name="ios-advanced-concepts-and-internals"></a>Conceptos avanzados y funcionamiento interno de iOS
+# <a name="ios-advanced-concepts-and-internals"></a>Conceptos avanzados e internos de iOS
 
-_En este tema se busca en MonoTouch API diseño, los ensamblados y clases de la biblioteca de clases de Base (BCL) de .NET y cómo Visual Studio para Mac se integra con Interface Builder de Xcode y cadena de herramientas de Apple._
+_En este tema se examina el diseño de API MonoTouch, los ensamblados y las clases de la biblioteca de clases base (BCL) de .NET y cómo Visual Studio para Mac se integra con la Interface Builder de Xcode y la cadena de herramientas de Apple._
 
 ## <a name="api-designiosinternalsapi-designindexmd"></a>[Diseño de API](~/ios/internals/api-design/index.md)
 
-Explica los principios de diseño el enlace de API.
+Explica los principios de diseño que hay detrás del enlace de API.
 
 ## <a name="available-assembliescross-platforminternalsavailable-assembliesmd"></a>[Ensamblados disponibles](~/cross-platform/internals/available-assemblies.md)
 
-Enumera los ensamblados disponibles y las clases de la biblioteca de clases de .NET Base (BCL).
+Enumera los ensamblados y las clases disponibles de la biblioteca de clases base (BCL) de .NET.
 
 ## <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[Generación de código XIB](~/ios/internals/xib-code-generation.md)
 
-También cubre cómo Visual Studio para Mac e Interface Builder de Xcode le permite usar Interface Builder al diseño de interfaz de usuario.
+También se explica cómo el Interface Builder de Visual Studio para Mac y Xcode le permite usar Interface Builder para diseñar la interfaz de usuario.
 
 > [!IMPORTANT]
-> Este documento explica a Visual Studio para la integración del equipo Mac con Xcode Interface Builder. Para obtener más información sobre el Diseñador de iOS, consulte el [iOS Designer](~/ios/user-interface/designer/index.md) documento.
+> En este documento se explica la integración de Visual Studio para Mac solo con Interface Builder de Xcode. Para obtener más información sobre el diseñador de iOS, revise el documento del [Diseñador de iOS](~/ios/user-interface/designer/index.md) .
 
 ## <a name="ios-architectureiosinternalsarchitecturemd"></a>[Arquitectura de iOS](~/ios/internals/architecture.md)
 
-Aplicaciones de Xamarin.iOS se ejecutan dentro del entorno de ejecución Mono y use compilación adelante of Time (AOT) completa para compilar código C# para el lenguaje ensamblador ARM. Esta guía explora Xamarin.iOS en un nivel bajo
+Las aplicaciones de Xamarin. iOS se ejecutan en el entorno de ejecución de mono y usan la compilación completa de antemano C# para compilar el código en el lenguaje de ensamblado ARM. En esta guía se explora Xamarin. iOS en un nivel bajo.
 
-## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Selectores de Objective-c.](~/ios/internals/objective-c-selectors.md)
+## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Selectores de Objective-C](~/ios/internals/objective-c-selectors.md)
 
 Notas y uso para llamar directamente a los selectores de Objective-C (métodos).
 
 ## <a name="limitationslimitationsmd"></a>[Limitaciones](limitations.md)
 
-Problemas y limitaciones a tener en cuenta con Xamarin.iOS.
+Problemas y limitaciones que debe tener en cuenta con Xamarin. iOS.

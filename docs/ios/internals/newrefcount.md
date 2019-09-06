@@ -4,15 +4,15 @@ description: En este documento se describe el sistema de recuento de referencias
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 221c3a3bb82b5b46f4afea5ec43fcdd5c00b0556
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199327"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291870"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Nuevo sistema de recuento de referencias en Xamarin. iOS
 
@@ -36,7 +36,7 @@ Xamarin. iOS 7.2.1 y versiones posteriores ofrece una vista previa mejorada de n
 
 **Classic API:**
 
-Para habilitar este nuevo sistema de recuento de referencias, active la casilla **usar la extensión** de recuento de referencias que se encuentra en la pestaña **Opciones avanzadas** de las **Opciones de compilación de iOS**del proyecto, como se muestra a continuación: 
+Para habilitar este nuevo sistema de recuento de referencias, active la casilla **usar la extensión de recuento de referencias** que se encuentra en la pestaña **Opciones avanzadas** de las **Opciones de compilación de iOS**del proyecto, como se muestra a continuación: 
 
 [![](newrefcount-images/image1.png "Habilitar el nuevo sistema de recuento de referencias")](newrefcount-images/image1.png#lightbox)
 
@@ -77,6 +77,6 @@ Sin la extensión de recuento de referencias, este `cell` código se bloqueó po
 
 La extensión de recuento de referencias garantiza que el objeto administrado permanece activo y evita su colección, siempre que el código nativo retenga el objeto nativo.
 
-El nuevo sistema también elimina la necesidad de la mayoría de los campos de respaldo privados usados en los enlaces, que es el método predeterminado para mantener *la* instancia activa. El vinculador administrado es lo suficientemente inteligente como para quitar todos los campos innecesarios de las aplicaciones que usan la nueva extensión de recuento de referencias.
+El nuevo sistema también elimina la necesidad de la mayoría de los campos de respaldo privados usados en los enlaces, que es el método predeterminado para mantener *la* instancia activa. El vinculador administrado es lo suficientemente inteligente como para quitar todos los campos *innecesarios* de las aplicaciones que usan la nueva extensión de recuento de referencias.
 
 Esto significa que cada instancia de objeto administrado utiliza menos memoria que antes. También resuelve un problema relacionado en el que algunos campos de respaldo contendrían referencias que ya no eran necesarias en el tiempo de ejecución de Objective-C, lo que dificultaba la recuperación de memoria.

@@ -4,15 +4,15 @@ description: En este documento se describen las limitaciones de Xamarin. iOS, la
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227530"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291904"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin. iOS
 
@@ -75,7 +75,7 @@ Falta de System. Reflection. **Emit** significa que no funcionará ningún códi
 
 
   > [!IMPORTANT]
-  > No confunda Reflection **. Emit** con **reflexión**. Reflection. Emit consiste en generar código dinámicamente y hacer que ese código se JITed y compile en código nativo. Debido a las limitaciones de iOS (sin compilación JIT) esto no se admite.
+  > No confunda **Reflection. Emit** con **reflexión**. Reflection. Emit consiste en generar código dinámicamente y hacer que ese código se JITed y compile en código nativo. Debido a las limitaciones de iOS (sin compilación JIT) esto no se admite.
 
 Sin embargo, toda la API de reflexión, incluido Type. GetType ("someClass"), los métodos de enumeración, las propiedades de lista, la captura de atributos y valores funciona bien.
 

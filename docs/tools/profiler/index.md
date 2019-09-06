@@ -3,15 +3,15 @@ title: Generador de perfiles de Xamarin
 description: En esta guía se exploran las características clave de la Xamarin Profiler. Examina los generadores, la generación de perfiles y el momento en que se deben usar, y en un flujo de trabajo estándar para la generación de perfiles de aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227897"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283659"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -84,7 +84,7 @@ La compatibilidad con la Xamarin Profiler está disponible en las siguientes pla
   - tvOS
     - Dispositivo y simulador
 
-Tenga en cuenta que **solo** puede generar perfiles de configuraciones de depuración.
+Tenga en cuenta que **solo** puede generar perfiles de configuraciones de **depuración** .
 
 ## <a name="profiler-basics"></a>Conceptos básicos de Profiler
 

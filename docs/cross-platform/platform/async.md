@@ -3,15 +3,15 @@ title: Información general sobre la compatibilidad con Async
 description: En este documento se describe la programación con Async y Await, C# conceptos presentados en 5 para facilitar la escritura de código asincrónico.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521718"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280633"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -151,7 +151,7 @@ Notas:
 - El delegado anónimo tiene el prefijo de palabra clave Async.
 - El método asincrónico DownloadHomepage devuelve una tarea\<int > que se almacena en la variable sizeTask.
 - El código espera en la variable sizeTask.  *Esta* es la ubicación en la que se suspende el método y el control se devuelve al código de llamada hasta que la tarea asincrónica finaliza en su propio subproceso.
-- La ejecución no se detiene cuando la tarea se crea en la primera línea del método, a pesar de que la tarea se crea allí. La palabra clave Await representa la ubicación en la que se pausa la ejecución.
+- La ejecución *no se detiene cuando* la tarea se crea en la primera línea del método, a pesar de que la tarea se crea allí. La palabra clave Await representa la ubicación en la que se pausa la ejecución.
 - Cuando finaliza la tarea asincrónica, se establece intResult y la ejecución continúa en el subproceso original, desde la línea Await.
 
 

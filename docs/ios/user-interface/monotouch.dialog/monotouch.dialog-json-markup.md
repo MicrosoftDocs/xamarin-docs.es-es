@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: 08f10dc02380a09b7ab81ff1539f5da6a9d768f6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 5fc5e6c1df911963ab765f5d49016eace8e2733f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528443"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284147"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado JSON de MonoTouch.Dialog
 

@@ -4,15 +4,15 @@ description: En este documento se describe cómo Xamarin. iOS controla las opera
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: cd1bd0507f89f7b29bfcd3ef1ba0a3b1215632ce
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1ecb00fecaf14afb8c6d5c59297eb26821ed791a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527374"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291928"
 ---
 # <a name="floating-point-operations-in-xamarinios"></a>Operaciones de punto flotante en Xamarin. iOS
 

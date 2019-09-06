@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con controladores de b
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199942"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283977"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con controladores de barra de pestañas de tvOS en Xamarin
 
@@ -39,7 +39,7 @@ Apple tiene las siguientes sugerencias para trabajar con barras de pestañas:
 
 - **Usar barras de pestañas para organizar el contenido lógicamente** : Use la barra de pestañas para organizar lógicamente el contenido con el que funciona la aplicación tvOS. Por ejemplo, gráficos destacados, comprados y de búsqueda.
 - **Agregar distintivos para informar a los usuarios del nuevo contenido** : opcionalmente, puede mostrar un distintivo (un óvalo rojo con un número blanco o un signo de exclamación) para informar al usuario del nuevo contenido de una categoría.
-- **Use** los distintivos con moderación: no se amontona la barra de pestañas con distintivos y solo se muestran los datos que proporcionan información crítica al usuario.
+- **Use los distintivos con moderación** : no se amontona la barra de pestañas con distintivos y solo se muestran los datos que proporcionan información crítica al usuario.
 - **Limite el número de categorías** : para reducir la complejidad y mantener la aplicación administrable, no sobrecargue la barra de pestañas con categorías y asegúrese de que todas las categorías estén visibles y no se llenarán. Los títulos sencillos y cortos funcionan mejor.
 - **No deshabilitar una categoría** : todas las pestañas (categorías) siempre deberían estar visibles y habilitadas en todo momento. Si una pestaña determinada no tiene contenido, proporcione una explicación al usuario por qué. Por ejemplo, la pestaña compras estará vacía si el usuario no ha realizado ninguna compra.
 
@@ -60,12 +60,12 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Inicie una nueva aplicación de Xamarin. tvOS y > seleccione aplicación con**pestañas**de **tvOS** > : 
+1. Inicie una nueva aplicación de Xamarin. tvOS y**Seleccione aplicación con** > **pestañas**de **tvOS** > : 
 
     [![](tab-bars-images/tab02.png "Seleccionar aplicación con pestañas")](tab-bars-images/tab02.png#lightbox)
 1. Siga todas las indicaciones para crear una nueva solución de Xamarin. tvOS.
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra** de pestañas del **controlador de vista** en el **esquema del documento**:
+1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra de pestañas** del **controlador de vista** en el **esquema del documento**:
 
     [![](tab-bars-images/tab03a.png "El elemento de barra de pestañas del controlador de vistas en el esquema del documento")](tab-bars-images/tab03a.png#lightbox)
 1. A continuación, establezca las propiedades necesarias en la **pestaña widget** del **Explorador de propiedades**: 
@@ -85,12 +85,12 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Inicie una nueva aplicación de Xamarin. tvOS y > seleccione aplicación con**pestañas**de **tvOS** > : 
+1. Inicie una nueva aplicación de Xamarin. tvOS y**Seleccione aplicación con** > **pestañas**de **tvOS** > : 
 
     [![](tab-bars-images/tab02vs.png "Seleccionar aplicación con pestañas")](tab-bars-images/tab02vs.png#lightbox)
 1. Siga todas las indicaciones para crear una nueva solución de Xamarin. tvOS.
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
-1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra** de pestañas del **controlador de vista** en el **esquema del documento**:
+1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra de pestañas** del **controlador de vista** en el **esquema del documento**:
 
     [![](tab-bars-images/tab03avs.png "El controlador de vista en el esquema del documento")](tab-bars-images/tab03avs.png#lightbox)
 1. A continuación, establezca las propiedades necesarias en la **pestaña widget** del **Explorador de propiedades**: 

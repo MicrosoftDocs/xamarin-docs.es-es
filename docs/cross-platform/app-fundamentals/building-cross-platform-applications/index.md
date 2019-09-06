@@ -3,19 +3,19 @@ title: Creación de aplicaciones multiplataforma
 description: En esta sección se analiza, en un resumen más de seis partes, cómo crear aplicaciones con la plataforma de desarrollo de Xamarin, desde comprender cómo funciona Xamarin para diseñar aplicaciones móviles y, a continuación, probar e implementar en las distintas tiendas de aplicaciones.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/28/2016
-ms.openlocfilehash: 4485f25ac2f81747132ccd92d73c52118f70e545
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680924"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288059"
 ---
 # <a name="building-cross-platform-applications"></a>Creación de aplicaciones multiplataforma
 
-Hay dos opciones para compartir código entre aplicaciones móviles multiplataforma: Proyectos de recursos compartidos y bibliotecas de clases portables. Estas opciones se [tratan aquí](~/cross-platform/app-fundamentals/code-sharing.md): también está disponible más información sobre las [bibliotecas de clases portable](~/cross-platform/app-fundamentals/pcl.md) y los [proyectos](~/cross-platform/app-fundamentals/shared-projects.md) compartidos.
+Hay dos opciones para compartir código entre aplicaciones móviles multiplataforma: Proyectos de recursos compartidos y bibliotecas de clases portables. Estas opciones se [tratan aquí](~/cross-platform/app-fundamentals/code-sharing.md): también está disponible más información sobre las [bibliotecas de clases portable](~/cross-platform/app-fundamentals/pcl.md) y los [proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md) .
 
 <a name="Sections" />
 
@@ -37,7 +37,7 @@ Hay dos opciones para compartir código entre aplicaciones móviles multiplatafo
 
 ## <a name="case-studies"></a>Casos prácticos
 
-Los principios descritos en este documento se ponen en práctica en la *tarea*de aplicación de ejemplo, así como en [las aplicaciones](https://xamarin.com/prebuilt) precompiladas como [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
+Los principios descritos en este documento se ponen en práctica en la *tarea*de aplicación de ejemplo, así como en [las aplicaciones precompiladas](https://xamarin.com/prebuilt) como [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
  <a name="Tasky" />
 

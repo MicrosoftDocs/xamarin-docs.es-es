@@ -4,15 +4,15 @@ description: En este documento se describen los pasos necesarios para implementa
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 78d39b080a136f66c81b48d6cceb5fbdd9d24c11
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654938"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290635"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementación de SiriKit en Xamarin. iOS
 
@@ -45,7 +45,7 @@ Como se muestra en la guía Descripción de los [conceptos de SiriKit](~/ios/pla
 
 Entre ellas se incluyen las siguientes:
 
-1. **Extensión** intents: comprueba las respuestas de los usuarios, confirma que la aplicación puede controlar la solicitud y realiza realmente la tarea para completar la solicitud del usuario.
+1. **Extensión intents** : comprueba las respuestas de los usuarios, confirma que la aplicación puede controlar la solicitud y realiza realmente la tarea para completar la solicitud del usuario.
 2. **La extensión** - de la interfaz de usuario de intents es*opcional*, proporciona una interfaz de usuario personalizada para las respuestas en el entorno de Siri y puede incluir la interfaz de usuario y la personalización de marca de las aplicaciones en Siri para enriquecer la experiencia del usuario.
 3. **Aplicación** : proporciona a la aplicación vocabularios específicos del usuario para ayudar a Siri a trabajar con ella. 
 
@@ -58,7 +58,7 @@ Sin embargo, SiriKit se basa en las extensiones, antes de agregar extensiones a 
 
 ### <a name="moving-common-shared-code"></a>Mover código compartido común 
 
-En primer lugar, el desarrollador puede mover parte del código común que se compartirá entre la aplicación y las extensiones en _proyectos_compartidos, _bibliotecas de clases portables (PCL)_ o _bibliotecas nativas_.
+En primer lugar, el desarrollador puede mover parte del código común que se compartirá entre la aplicación y las extensiones en _proyectos compartidos_, _bibliotecas de clases portables (PCL)_ o _bibliotecas nativas_.
 
 Las extensiones deberán poder realizar todas las acciones que realiza la aplicación. En los términos de la aplicación de MonkeyChat de ejemplo, cosas como buscar contactos, agregar nuevos contactos, enviar mensajes y recuperar el historial de mensajes.
 
@@ -84,7 +84,7 @@ Haga lo siguiente:
 
     [![](implementing-sirikit-images/prep05.png "Comprobar el proyecto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
 6. En el **Explorador de soluciones**, arrastre el código compartido común desde la aplicación principal a la biblioteca nativa.
-7. En el caso de MonkeyChat, arrastre las carpetas Models y **processors** de la aplicación principal a la biblioteca nativa: 
+7. En el caso de MonkeyChat, arrastre las carpetas **Models** y **processors** de la aplicación principal a la biblioteca nativa: 
 
     [![](implementing-sirikit-images/prep06.png "Las carpetas Models y processors en el Explorador de soluciones")](implementing-sirikit-images/prep06.png#lightbox)
 
@@ -100,7 +100,7 @@ Haga lo siguiente:
 
     [![](implementing-sirikit-images/prep05w.png "Comprobar el proyecto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
 6. En el **Explorador de soluciones**, arrastre el código compartido común desde la aplicación principal al proyecto compartido.
-7. En el caso de MonkeyChat, arrastre las carpetas Models y **processors** de la aplicación principal a la biblioteca nativa.
+7. En el caso de MonkeyChat, arrastre las carpetas **Models** y **processors** de la aplicación principal a la biblioteca nativa.
 
 -----
 
@@ -600,7 +600,7 @@ Para cada extensión de intents necesaria, haga lo siguiente:
 - Configure el archivo de extensión `Info.plist` intents.
 - Modifique la clase principal de la extensión intents.
 
-Para obtener más información, consulte nuestra [referencia de la extensión](~/ios/platform/sirikit/understanding-sirikit.md) intents y la [creación de la referencia de la extensión](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1)intents en Apple.
+Para obtener más información, consulte nuestra [referencia de la extensión intents](~/ios/platform/sirikit/understanding-sirikit.md) y la [creación de la referencia de la extensión intents](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1)en Apple.
 
 ### <a name="creating-the-extension"></a>Crear la extensión
 
@@ -864,7 +864,7 @@ Al igual que la extensión intents, el desarrollador realizará el paso siguient
 - Configure el archivo de extensión `Info.plist` de la interfaz de usuario de intents.
 - Modifique la clase principal de la extensión de la interfaz de usuario de intents.
 
-Para obtener más información, consulte [la referencia de la extensión de la interfaz de usuario](~/ios/platform/sirikit/understanding-sirikit.md) de intents y Apple [que proporciona una referencia de interfaz personalizada](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ProvidingaCustomInterface.html#//apple_ref/doc/uid/TP40016875-CH7-SW1).
+Para obtener más información, consulte [la referencia de la extensión de la interfaz de usuario de intents](~/ios/platform/sirikit/understanding-sirikit.md) y Apple [que proporciona una referencia de interfaz personalizada](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ProvidingaCustomInterface.html#//apple_ref/doc/uid/TP40016875-CH7-SW1).
 
 ### <a name="creating-the-extension"></a>Crear la extensión
 

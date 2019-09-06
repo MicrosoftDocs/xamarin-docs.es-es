@@ -4,15 +4,15 @@ description: iOS 7 introduce una gran cantidad de cambios en la interfaz de usua
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 982fbc5364f7014d730b8d588baad501b4b73654
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 4568b204989c3ebb89ba4441232a100678657e28
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200290"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280655"
 ---
 # <a name="ios-7-user-interface-overview"></a>Introducción a la interfaz de usuario de iOS 7
 

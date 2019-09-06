@@ -4,15 +4,15 @@ description: En este documento se describe cómo Xamarin. iOS convierte de forma
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 589b584e0526ffdc56dd5ec26aa25a0b61e2141a
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 5fb34f9c5a880060d4f9677507e09969a876929b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889900"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291969"
 ---
 # <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString en Xamarin. iOS y Xamarin. Mac
 

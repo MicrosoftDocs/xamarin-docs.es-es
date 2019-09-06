@@ -4,15 +4,15 @@ description: En este documento se proporciona una introducción rápida a la cre
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b93cc584a58d864e6dc7477dc7f76d4f59844d48
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 498f73d6e5942fe305dc19effc83b9d976d86ac5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652406"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291917"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Guiones gráficos en Xamarin. Mac: Inicio rápido
 
@@ -78,7 +78,7 @@ Si vuelve a Visual Studio para Mac y ejecuta el proyecto ahora, observe que el l
 
 Vamos a diseñar el lado derecho de la vista en dos paneles para que actúe como inspector de las propiedades del texto seleccionado. Vamos a arrastrar algunos controles a la vista inferior para diseñar la interfaz de usuario del inspector. En el último control, queremos mostrar un elemento flotante que permita al usuario seleccionar entre cuatro estilos de carácter preestablecidos.
 
-Agregaremos un botón al inspector y un controlador de vista al Superficie de diseño. Cambiaremos el tamaño del controlador de vista para que sea el tamaño que deseamos que tenga nuestro elemento flotante y le agregue cuatro botones. A continuación, haremos clic en el botón en la vista del inspector y lo arrastramos hasta el controlador de vista que representará nuestra elemento flotante:
+Agregaremos un botón al inspector y un controlador de vista al Superficie de diseño. Cambiaremos el tamaño del controlador de vista para que sea el tamaño que deseamos que tenga nuestro elemento flotante y le agregue cuatro botones. A continuación, **haremos** clic en el botón en la vista del inspector y lo arrastramos hasta el controlador de vista que representará nuestra elemento flotante:
 
 [![](quickstart-images/qs14.png "Arrastrar para crear un nuevo segue")](quickstart-images/qs14.png#lightbox)
 
@@ -86,7 +86,7 @@ En el menú emergente, seleccionaremos **elemento flotante**:
 
 [![](quickstart-images/qs15.png "Seleccionar el tipo de segue")](quickstart-images/qs15.png#lightbox)
 
-Por último, seleccionaremos el segue en el Superficie de diseño y estableceremos el **borde preferido** en **izquierda**. A continuación, se va a arrastrar una línea desde la **vista** de delimitador hasta el botón al que se desea adjuntar los elemento flotante:
+Por último, seleccionaremos el segue en el Superficie de diseño y estableceremos el **borde preferido** en **izquierda**. A continuación, se va a arrastrar una línea desde la **vista de delimitador** hasta el botón al que se desea adjuntar los elemento flotante:
 
 [![](quickstart-images/qs16.png "Arrastrar para crear un nuevo segue")](quickstart-images/qs16.png#lightbox)
 

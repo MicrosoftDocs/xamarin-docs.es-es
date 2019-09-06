@@ -1,33 +1,33 @@
 ---
-title: Configuración de Xamarin Live Player Visual Studio
-description: Este documento describe cómo usar Xamarin Live Player para realizar las modificaciones dinámicas en una aplicación en ejecución.
+title: Xamarin Live Player configuración de Visual Studio
+description: En este documento se describe cómo usar la Xamarin Live Player para realizar ediciones en directo en una aplicación en ejecución.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: a29a637526c2829b44ae89d505dac37a648dee77
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: 94f1d36bf97aab7eabb57e6f2712c9850b390ab1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157738"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290490"
 ---
-# <a name="xamarin-live-player-visual-studio-configuration"></a>Configuración de Xamarin Live Player Visual Studio
+# <a name="xamarin-live-player-visual-studio-configuration"></a>Xamarin Live Player configuración de Visual Studio
 
 ![Características en versión preliminar](~/media/shared/preview.png)
 
 > [!WARNING]
-> La versión Xamarin Live Player preliminar finalizó. La aplicación ya no está disponible. Las instrucciones siguientes se proporcionan para los clientes siguen usando la versión preliminar con Visual Studio 2017.
+> Finalizó la vista previa de Xamarin Live Player. La aplicación ya no está disponible. Las instrucciones siguientes se proporcionan para que los clientes sigan usando la versión preliminar con Visual Studio 2017.
 
 > [!TIP]
-> Puede usar el [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) de 2019 de Visual Studio o Visual Studio para Mac para ver los diseños de pantalla al editarlas.
+> Puede usar la [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita.
 
 # <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
-## <a name="using-xamarin-live-player"></a>Uso de Xamarin Live Player
+## <a name="using-xamarin-live-player"></a>Usar Xamarin Live Player
 
-Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no está disponible para descargar.
+Ya debe tener la aplicación Xamarin Live Player en el dispositivo. Ya no está disponible para su descarga.
 
 1. Abra **Visual Studio 2017**.
 2. Vaya a **Herramientas > Opciones...**  y seleccione la opción **Xamarin > otros**.
@@ -41,7 +41,7 @@ Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no est
     ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices-empty-windows.png)
 
     - Si ya ha emparejado un dispositivo, este estará disponible como una opción.
-    - En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
+    - De lo contrario, se le pedirá que empareje un dispositivo cuando sea necesario.
 
 6. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
 
@@ -56,13 +56,13 @@ Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no est
 
     ![Ventana para emparejar un dispositivo](install-images/manage-empty-windows.png)
 
-    Si no se puede conectar con el dispositivo de emparejamiento, puede aparecer un error.
+    Si no se puede establecer contacto con el dispositivo para el emparejamiento, puede aparecer un error.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-## <a name="using-xamarin-live-player"></a>Uso de Xamarin Live Player
+## <a name="using-xamarin-live-player"></a>Usar Xamarin Live Player
 
-Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no está disponible para descargar.
+Ya debe tener la aplicación Xamarin Live Player en el dispositivo. Ya no está disponible para su descarga.
 
 1. Abra **Visual Studio para Mac**.
 2. Vaya a **Visual Studio > Preferencias...**  y seleccione la pestaña **Proyectos > Xamarin Live Player (versión preliminar)** .
@@ -76,7 +76,7 @@ Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no est
     ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices.png)
 
     - Si ya ha emparejado un dispositivo, este estará disponible como una opción.
-    - En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
+    - De lo contrario, se le pedirá que empareje un dispositivo cuando sea necesario.
     - Elija **Dispositivos con Xamarin Live Player...**  para administrar los dispositivos que quiera usar con Xamarin Live Player.
 
 6. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
@@ -95,11 +95,11 @@ Ya debe tener la aplicación de Xamarin Live Player en el dispositivo. Ya no est
 
     Si no se puede conectar el dispositivo para el emparejamiento, aparecerá un error:
 
-    ![No se puede conectar al mensaje de error de dispositivo](install-images/error-cannot-connect.png)
+    ![No se puede conectar con el mensaje de error del dispositivo](install-images/error-cannot-connect.png)
 
 -----
 
-Si experimenta problemas o no se puede conectar, consulte [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
+Si experimenta algún problema o no puede conectarse, consulte [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

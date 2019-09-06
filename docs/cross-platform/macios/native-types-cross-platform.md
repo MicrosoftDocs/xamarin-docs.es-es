@@ -3,15 +3,15 @@ title: Trabajo con tipos nativos en aplicaciones multiplataforma
 description: En este artículo se explica el uso de los nuevos tipos nativos de Unified API de iOS (NINT, nuint, nfloat) en una aplicación multiplataforma donde el código se comparte con dispositivos que no son iOS como Android o Windows Phone os.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: 9018c3e3c976ef7623835055ee989dfd86dc25e1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226228"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290850"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabajo con tipos nativos en aplicaciones multiplataforma
 
@@ -207,7 +207,7 @@ namespace NativeShared
 }
 ```
 
-Tenga en cuenta que aquí hemos cambiado `CalculateArea` el método para devolver `nfloat` un en lugar del estándar `float`. Esto se hizo para que no se obtenga un error de compilación al intentar convertir implícitamente el `nfloat` resultado de nuestro cálculo (dado que los dos valores que se van `nfloat`a multiplicar `float` son del tipo) a un valor devuelto.
+Tenga en cuenta que aquí hemos cambiado `CalculateArea` el método para devolver `nfloat` un en lugar del estándar `float`. Esto se hizo para que no se obtenga un error de compilación al intentar convertir _implícitamente_ el `nfloat` resultado de nuestro cálculo (dado que los dos valores que se van `nfloat`a multiplicar `float` son del tipo) a un valor devuelto.
 
 Si el código se compila y se ejecuta en un dispositivo que no es `using nfloat = global::System.Single;` Unified API, `nfloat` asigna a `Single` un que se convertirá implícitamente `float` en un que `CalculateArea` permita a la aplicación de front-end que lo consume llamar al método sin produzca.
 

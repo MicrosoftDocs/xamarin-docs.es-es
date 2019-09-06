@@ -4,15 +4,15 @@ description: En este artículo se describe cómo usar los gestos táctiles 3D in
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 784638e2796f12cb338fb3583b62a376e16dcf60
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199734"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291864"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a la función táctil 3D en Xamarin. iOS
 
@@ -82,7 +82,7 @@ Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede p
 
 [![](3d-touch-images/peekandpop01.png "Ejemplo de cómo inspeccionar el contenido")](3d-touch-images/peekandpop01.png#lightbox)
 
-Si el usuario presiona más duro, entrará en la vista normal de mensajes (lo que se conocecomo ping en la vista).
+Si el usuario presiona más duro, entrará en la vista normal de mensajes (lo que se conoce *como ping en la*vista).
 
 ### <a name="checking-for-3d-touch-availability"></a>Comprobar la disponibilidad de la función táctil 3D
 
@@ -179,7 +179,7 @@ Vuelve a usar la vista que creamos en la vista de **pop** cuando el usuario pres
 
 ### <a name="registering-for-peek-and-pop"></a>Registro para PEEK y pop
 
-En el controlador de vista en el que queremos permitir que el usuario examine y examine los elementos, es necesario registrarse para este servicio. En el ejemplo anterior de un controlador de vista de tabla`MasterViewController`(), se usaría el siguiente código:
+En el controlador de vista en el que queremos **permitir que el usuario examine y examine** **los elementos,** es necesario registrarse para este servicio. En el ejemplo anterior de un controlador de vista de tabla`MasterViewController`(), se usaría el siguiente código:
 
 ```csharp
 public override void ViewDidLoad ()

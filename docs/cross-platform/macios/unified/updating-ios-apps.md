@@ -3,15 +3,15 @@ title: Actualización de aplicaciones iOS existentes
 description: En este documento se describen los pasos que deben seguirse para actualizar una aplicación de Xamarin. iOS desde el Classic API al Unified API.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b0999ff6fc3b3042827f11ae1e127ef7bb9fedfe
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509612"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279551"
 ---
 # <a name="updating-existing-ios-apps"></a>Actualización de aplicaciones iOS existentes
 
@@ -47,7 +47,7 @@ Una vez que se han corregido las advertencias, siga estos pasos para actualizar 
 
 ### <a name="1-update-project-type--build-target"></a>1. Actualizar el tipo de proyecto & destino de compilación
 
-Cambie el tipo de proyecto en  los archivos csproj `6BC8ED88-2882-458C-8E55-DFD12B67127B` de `FEACFBD2-3405-455C-9665-78FE426C6842`a. Edite el archivo **csproj** en un editor de texto, reemplazando el primer `<ProjectTypeGuids>` elemento del elemento como se muestra a continuación:
+Cambie el tipo de proyecto en los archivos csproj `6BC8ED88-2882-458C-8E55-DFD12B67127B` de `FEACFBD2-3405-455C-9665-78FE426C6842`a. Edite el archivo **csproj** en un editor de texto, reemplazando el primer `<ProjectTypeGuids>` elemento del elemento como se muestra a continuación:
 
 ![](updating-ios-apps-images/csproj.png "Edite el archivo csproj en un editor de texto, reemplazando el primer elemento del elemento ProjectTypeGuids como se muestra")
 
@@ -57,11 +57,11 @@ Cambie el elemento **Import** que contiene `Xamarin.MonoTouch.CSharp.targets` a 
 
 ### <a name="2-update-project-references"></a>2. Actualizar referencias de proyecto
 
-Expanda el nodo **referencias** del proyecto de aplicación de iOS. Inicialmente, se muestra una referencia * rota  -MonoTouch similar a esta captura de pantalla (porque simplemente hemos cambiado el tipo de proyecto):
+Expanda el nodo **referencias** del proyecto de aplicación de iOS. Inicialmente, se muestra una referencia * rota- **MonoTouch** similar a esta captura de pantalla (porque simplemente hemos cambiado el tipo de proyecto):
 
 ![](updating-ios-apps-images/references.png "Inicialmente, se mostrará una referencia rota-MonoTouch similar a esta captura de pantalla porque el tipo de proyecto ha cambiado.")
 
-Haga clic con el botón derecho en el proyecto de aplicación de iOS para **editar las referencias**y, después, haga clic en la referencia MonoTouch y elimínela con el botón rojo "X".
+Haga clic con el botón derecho en el proyecto de aplicación de iOS para **editar las referencias**y, después, haga clic en la referencia **MonoTouch** y elimínela con el botón rojo "X".
 
 ![](updating-ios-apps-images/references-delete-monotouch-sml.png "Haga clic con el botón derecho en el proyecto de aplicación de iOS para editar las referencias y, después, haga clic en la referencia MonoTouch y elimínela con el botón X de color rojo.")
 
@@ -73,7 +73,7 @@ Presione **Aceptar** para guardar los cambios de las referencias del proyecto.
 
 ### <a name="3-remove-monotouch-from-namespaces"></a>3. Quitar MonoTouch de los espacios de nombres
 
-Quite el  prefijo MonoTouch de los espacios `using` de nombres de las instrucciones o cualquier lugar en el que se haya calificado un nombre de clase completo (por ejemplo, `MonoTouch.UIKit`solo `UIKit`se convierte en).
+Quite el prefijo **MonoTouch** de los espacios `using` de nombres de las instrucciones o cualquier lugar en el que se haya calificado un nombre de clase completo (por ejemplo, `MonoTouch.UIKit`solo `UIKit`se convierte en).
 
 ### <a name="4-remap-types"></a>4. Tipos de reasignación
 
@@ -104,7 +104,7 @@ Hasta ese momento, al igual que los componentes, deberá cambiar cualquier paque
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Habilitar compilaciones de 64 bits de aplicaciones de Xamarin. iOS
 
-En el caso de una aplicación móvil de Xamarin. iOS que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte las compilaciones de **64 bits de las aplicaciones de Xamarin. iOS** del documento de consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md#enable-64) para obtener instrucciones detalladas sobre cómo habilitar las compilaciones de 64 bits.
+En el caso de una aplicación móvil de Xamarin. iOS que se ha convertido en el Unified API, el desarrollador todavía necesita habilitar la compilación de la aplicación para equipos de 64 bits a partir de las opciones de la aplicación. Consulte las **compilaciones de 64 bits de las aplicaciones de Xamarin. iOS** del documento de consideraciones de la [plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md#enable-64) para obtener instrucciones detalladas sobre cómo habilitar las compilaciones de 64 bits.
 
 ## <a name="finishing-up"></a>Finalizando
 

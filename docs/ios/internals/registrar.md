@@ -4,15 +4,15 @@ description: En este documento se describe el registrador de tipos de Xamarin C#
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0d8e16c2a651df293b13e7f7586d5a643caa1c9c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226038"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291840"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrar el tipo de Xamarin. iOS
 
@@ -134,7 +134,7 @@ Este nuevo sistema de registro ofrece las siguientes características nuevas:
 - Eliminación de código nativo sin usar:
   - El nuevo sistema de registro agregará referencias fuertes al código que se usa en bibliotecas estáticas, lo que permite que el vinculador nativo destaque el código nativo sin usar del binario resultante. En los enlaces de ejemplo de Xamarin, la mayoría de las aplicaciones se 300 000 más pequeñas.
 
-- Compatibilidad con subclases genéricas `NSObject`de; vea los genéricos de [NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información. Además, el nuevo sistema de registro detectará construcciones genéricas no admitidas que anteriormente habrían causado un comportamiento aleatorio en tiempo de ejecución.
+- Compatibilidad con subclases genéricas `NSObject`de; vea los [genéricos de NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información. Además, el nuevo sistema de registro detectará construcciones genéricas no admitidas que anteriormente habrían causado un comportamiento aleatorio en tiempo de ejecución.
 
 ### <a name="errors-caught-by-the-new-registrar"></a>Errores detectados por el nuevo registrador
 

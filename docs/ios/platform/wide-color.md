@@ -1,75 +1,75 @@
 ---
-title: Color amplio en Xamarin.iOS
-description: Este documento aborda color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac.
+title: Color ancho en Xamarin. iOS
+description: En este documento se describe el color ancho y cómo se puede usar en una aplicación de Xamarin. iOS o Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 523aa1a97e1c536b5afbdb66c52f605382fa338d
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: a1f5301d0c5c0674e162b3d7689c83bbb4f6ae90
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268809"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290533"
 ---
-# <a name="wide-color-in-xamarinios"></a>Color amplio en Xamarin.iOS
+# <a name="wide-color-in-xamarinios"></a>Color ancho en Xamarin. iOS
 
-_En este artículo se trata color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac._
+_En este artículo se trata el color ancho y cómo se puede usar en una aplicación Xamarin. iOS o Xamarin. Mac._
 
-10 de iOS y macOS Sierra mejora la compatibilidad con formatos de píxel de rango ampliado y espacios de la amplia gama de colores en todo el sistema incluidos marcos como gráficos básicos, la imagen de Core, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas a color amplia es aún más disminuido proporcionando este comportamiento a lo largo de la pila de gráficos completa.
+iOS 10 y macOS Sierra mejora la compatibilidad con los formatos de píxeles de rango extendido y los espacios de colores de gama extensa en todo el sistema, incluidos marcos como gráficos principales, imagen básica, metal y AVFoundation. La compatibilidad con dispositivos con pantallas de color ancho se facilita aún más proporcionando este comportamiento en toda la pila de gráficos.
 
-## <a name="asset-catalogs"></a>Catálogos de activos
+## <a name="asset-catalogs"></a>Catálogos de recursos
 
-### <a name="supporting-wide-color-with-asset-catalogs"></a>Compatibilidad con Color amplia con catálogos de activos
+### <a name="supporting-wide-color-with-asset-catalogs"></a>Compatibilidad con colores anchos con catálogos de recursos
 
-En iOS 10 y macOS Sierra, Apple ha ampliado el catálogos de recursos usa para incluir y clasificación de contenido de imagen estática de lote de la aplicación para admitir color amplia.
+En iOS 10 y macOS Sierra, Apple ha expandido los catálogos de recursos usados para incluir y categorizar el contenido de las imágenes estáticas en el paquete de la aplicación para admitir el color ancho.
 
-Uso de los catálogos de activos proporcionan las siguientes ventajas a una aplicación:
+El uso de catálogos de recursos proporciona las siguientes ventajas a una aplicación:
 
-- Proporcionan la mejor opción de implementación para los activos de imagen estática.
-- Admite la corrección del color automático.
-- Admiten la optimización de formato de píxel automática.
-- Admiten App segmentación y reducción de aplicación, lo que garantiza que solo el contenido que es relevante de get se entrega al dispositivo del usuario final.
+- Proporcionan la mejor opción de implementación para los recursos de imagen estáticos.
+- Admiten la corrección automática del color.
+- Admiten la optimización automática del formato de píxeles.
+- Admiten la división de aplicaciones y el ligero de aplicaciones, lo que garantiza que solo se entregue el contenido pertinente al dispositivo del usuario final.
 
-Apple ha realizado las siguientes mejoras en catálogos de recursos para obtener soporte técnico de color amplia:
+Apple ha realizado las siguientes mejoras en los catálogos de recursos para la compatibilidad con colores anchos:
 
-- Admite el contenido de origen de 16 bits (por canal de color).
-- Admite el contenido de catalogación mediante la gama de colores de visualización. Contenido se puede etiquetar de pantalla P3 gamas o sRGB.
+- Admiten contenido de origen de 16 bits (por canal de color).
+- Admiten la catalogación de contenido por gama de pantalla. El contenido se puede etiquetar para el sRGB o mostrar las gamas de P3.
 
-El desarrollador tiene tres opciones para la compatibilidad con contenido en color amplia en sus aplicaciones:
+El desarrollador tiene tres opciones para admitir el contenido de color ancho en sus aplicaciones:
 
-1. **No hacer nada** -dado que el contenido en color amplia solo debe usarse en situaciones donde la aplicación debe mostrar colores vivos (donde mejorará la experiencia del usuario), el contenido fuera de este requisito debe dejarse como-es. Continuarán representarse correctamente en todas las situaciones de hardware.
-2. **Actualizar el contenido existente a la pantalla P3** -Esto requiere que el desarrollador reemplazar el contenido de imagen existente en su catálogo de recursos con un archivo nuevo y actualizado en el formato de P3 y etiquetarla como tal en el Editor activo. En tiempo de compilación, se generará una imagen derivados sRGB de estos recursos.
-3. **Proporcionar contenido optimizado de activos** -en este caso, el desarrollador proporcionará un sRGB de 8 bits y una visión de la pantalla P3 de 16 bits de cada imagen en el catálogo de activos (etiquetado correctamente en el editor de recursos).
+1. **No hacer nada** : dado que el contenido de color ancho solo se debe usar en situaciones en las que la aplicación necesita mostrar colores intensos (donde mejorarán la experiencia del usuario), el contenido que se encuentra fuera de este requisito se debe dejar tal cual. Se seguirá representando correctamente en todas las situaciones de hardware.
+2. **Actualizar contenido existente para mostrar P3** : Esto requiere que el desarrollador Reemplace el contenido de la imagen existente en su catálogo de recursos con un nuevo archivo actualizado en el formato P3 y lo etiquete como tal en el editor de recursos. En el momento de la compilación, se generará una imagen derivada de sRGB a partir de estos recursos.
+3. **Proporcionar contenido de activo optimizado** : en esta situación, el desarrollador proporcionará un sRGB de 8 bits y una visión P3 de pantalla de 16 bits de cada imagen en el catálogo de recursos (etiquetada correctamente en el editor de activos).
 
 ### <a name="asset-catalog-deployment"></a>Implementación del catálogo de activos
 
-Se producirá lo siguiente cuando el desarrollador envía una aplicación en el Store de la aplicación con los catálogos de recursos que incluyen contenido de la imagen de color amplia:
+Lo siguiente ocurrirá cuando el desarrollador envíe una aplicación a la tienda de aplicaciones con catálogos de recursos que incluyan contenido de imagen de color ancho:
 
-- Cuando la aplicación se implementa para el usuario final, la segmentación de la aplicación garantizará que se entrega solo la variante de contenido adecuada para el dispositivo del usuario.
-- En el dispositivo que no son compatibles con color amplia, no hay ningún costo de carga para incluir contenido en color amplia, nunca está incluido en el dispositivo.
-- `NSImage` en macOS Sierra (y versiones posteriores) seleccionará automáticamente la mejor representación de contenido para la presentación del hardware.
-- El contenido mostrado se actualizarán automáticamente cuando o si el hardware de dispositivos muestra el cambio de características.
+- Cuando la aplicación se implementa en el usuario final, la segmentación de aplicaciones se asegurará de que solo se entregue la variante de contenido adecuada en el dispositivo del usuario.
+- En el dispositivo que no admiten el color ancho, no hay ningún costo de carga por incluir el contenido de color ancho, ya que nunca se envía al dispositivo.
+- `NSImage`en macOS Sierra (y versiones posteriores), se seleccionará automáticamente la mejor representación de contenido para la pantalla del hardware.
+- El contenido que se muestra se actualizará automáticamente cuando se cambien las características de visualización de hardware de los dispositivos.
 
 ### <a name="asset-catalog-storage"></a>Almacenamiento del catálogo de activos
 
-Almacenamiento del catálogo activo tiene implicaciones para una aplicación y propiedades siguientes:
+El almacenamiento del catálogo de activos tiene las siguientes propiedades y implicaciones para una aplicación:
 
-- En tiempo de compilación, Apple intenta optimizar el almacenamiento de contenido de la imagen a través de las conversiones de imágenes de alta calidad.
-- se usan 16 bits por canal de color para el contenido de color amplia.
-- Compresión de imágenes dependientes se usa para reducir los tamaños de contenido de entrega de contenido. Se han agregado nuevas compresiones "con pérdida de datos" para optimizar aún más el contenido de los tamaños.
+- En tiempo de compilación, Apple intenta optimizar el almacenamiento del contenido de la imagen a través de conversiones de imágenes de alta calidad.
+- se usan 16 bits por canal de color para el contenido de color ancho.
+- La compresión de imágenes dependiente del contenido se usa para reducir los tamaños de contenido de entrega. Se han agregado nuevas compresiones "perdidas" para optimizar aún más los tamaños de contenido.
 
-## <a name="rendering-off-screen-images-in-app"></a>Representar imágenes fuera de la pantalla en la aplicación
+## <a name="rendering-off-screen-images-in-app"></a>Representación de imágenes fuera de la pantalla en la aplicación
 
-Según el tipo de aplicación que se está creando, podría permitir al usuario que incluya contenido de la imagen que han recopilado desde internet o creación contenido de la imagen directamente dentro de la aplicación (por ejemplo, un dibujo vectorial app por ejemplo).
+En función del tipo de aplicación que se va a crear, es posible que el usuario pueda incluir el contenido de la imagen que se ha recopilado de Internet o crear directamente el contenido de la imagen dentro de la aplicación (como una aplicación de dibujo vectorial, por ejemplo).
 
-En ambos casos, la aplicación puede representar las imágenes necesarias fuera de la pantalla en color amplio uso de características mejoradas que se agregó a iOS y macOS.
+En ambos casos, la aplicación puede representar la imagen requerida fuera de la pantalla en color ancho mediante las características mejoradas que se han agregado a iOS y macOS.
 
-### <a name="drawing-wide-color-in-ios"></a>Color amplio de dibujo en iOS
+### <a name="drawing-wide-color-in-ios"></a>Dibujo de color ancho en iOS
 
-Antes de explicar cómo dibujar una imagen de color amplia correctamente en iOS 10, eche un vistazo al código de dibujo iOS comunes siguientes:
+Antes de explicar cómo dibujar correctamente una imagen de color ancho en iOS 10, eche un vistazo al siguiente código de dibujo de iOS común:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -84,13 +84,13 @@ public UIImage DrawWideColorImage ()
     }
 ```
 
-Hay problemas con el código estándar que deberá solucionarse _antes_ se puede usar para dibujar una imagen de color amplia. El `UIGraphics.BeginImageContext (size)` método usado para iniciar el dibujo de imagen de iOS tiene las siguientes limitaciones:
+Hay problemas con el código estándar que deben solucionarse _antes_ de que se puedan usar para dibujar una imagen de color ancho. El `UIGraphics.BeginImageContext (size)` método usado para iniciar el dibujo de la imagen de iOS tiene las siguientes limitaciones:
 
 - No puede crear contextos de imagen con más de 8 bits por canal de color.
-- No puede representar los colores en el espacio de Color sRGB de rango ampliado.
-- No tiene la capacidad para proporcionar una interfaz para crear contextos en un espacio de colores no sRGB debido a las rutinas de C de bajo nivel que se llama en segundo plano.
+- No puede representar colores en el espacio de color sRGB de intervalo extendido.
+- No tiene la capacidad de proporcionar una interfaz para crear contextos en un espacio de colores que no sea sRGB debido a las rutinas de C de bajo nivel a las que se llama en segundo plano.
 
-Para controlar estas limitaciones y dibujar una imagen de color amplia en iOS 10, use el siguiente código en su lugar:
+Para controlar estas limitaciones y dibujar una imagen de color ancho en iOS 10, use el código siguiente en su lugar:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -118,22 +118,22 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-El nuevo `UIGraphicsImageRenderer` clase crea un nuevo contexto de la imagen que es capaz de controlar el espacio de Color sRGB de rango ampliado y tiene las siguientes características:
+La nueva `UIGraphicsImageRenderer` clase crea un nuevo contexto de imagen que es capaz de controlar el espacio de color sRGB de intervalo extendido y tiene las siguientes características:
 
-- Es totalmente administrado de forma predeterminada el color.
-- Es compatible con el espacio de Color sRGB de rango ampliado de manera predeterminada.
-- Determina de manera inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del dispositivo iOS que se ejecuta la aplicación en el espacio de colores.
-- Totalmente y automáticamente administra el contexto de la imagen (`CGContext`) duración, por lo que el desarrollador no tiene que preocuparse sobre cómo llamar a begin y end comandos de contexto.
-- Es compatible con la `UIGraphics.GetCurrentContext()` método.
+- De forma predeterminada, está totalmente administrada por el color.
+- De forma predeterminada, es compatible con el espacio de colores sRGB de rango extendido.
+- Decide de forma inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido de color sRGB en función de las capacidades del dispositivo iOS en el que se ejecuta la aplicación.
+- Administra por completo y automáticamente la duración del contexto`CGContext`de la imagen (), por lo que el desarrollador no tiene que preocuparse por llamar a los comandos de contexto Begin y end.
+- Es compatible con el `UIGraphics.GetCurrentContext()` método.
 
-El `CreateImage` método de la `UIGraphicsImageRenderer` clase se llama para crear una imagen de color amplia y se pasa con el contexto de la imagen para dibujar en un controlador de finalización. Todo el dibujo se realiza dentro de este controlador de finalización como sigue:
+Se llama al `UIGraphicsImageRenderer` método de la clase para crear una imagen de color ancho y pasar un controlador de finalización con el contexto de la imagen que se va a dibujar en. `CreateImage` Todo el dibujo se realiza dentro de este controlador de finalización de la siguiente manera:
 
-- El `UIColor.FromDisplayP3` método crea un nuevo color rojo saturado en la amplia gama de espacio de colores de pantalla P3 y se usa para dibujar la primera mitad del rectángulo. 
-- La segunda mitad del rectángulo se dibuja en el normal sRGB totalmente saturado en color rojo para la comparación.
+- El `UIColor.FromDisplayP3` método crea un nuevo color rojo completamente saturado en la gama ancha que muestra el espacio de colores P3 y se usa para dibujar la primera mitad del rectángulo. 
+- La segunda mitad del rectángulo se dibuja en el color rojo de sRGB normal de la comparación.
 
-### <a name="drawing-wide-color-in-macos"></a>Color amplio de dibujo en macOS
+### <a name="drawing-wide-color-in-macos"></a>Dibujo de color ancho en macOS
 
-La `NSImage` clase se ha ampliado en macOS Sierra para admitir el dibujo de imágenes de Color amplia. Por ejemplo:
+La `NSImage` clase se ha expandido en MacOS Sierra para admitir el dibujo de imágenes de color ancho. Por ejemplo:
 
 ```csharp
 var size = CGSize(250,250);
@@ -151,13 +151,13 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 });
 ```
 
-## <a name="rendering-on-screen-images-in-app"></a>Representación en pantalla de imágenes en la aplicación
+## <a name="rendering-on-screen-images-in-app"></a>Representación de imágenes en pantalla en la aplicación
 
-Para representar las imágenes de color amplia en pantalla, el proceso funciona de manera similar a dibujar una imagen fuera de la pantalla de color amplia para macOS e iOS presentadas más arriba.
+Para representar imágenes de color ancho en pantalla, el proceso funciona de forma similar a dibujar una imagen de color ancho fuera de la pantalla para macOS e iOS presentados anteriormente.
 
 ### <a name="rendering-on-screen-in-ios"></a>Representación en pantalla en iOS
 
-Si la aplicación necesita representar una imagen en color amplia en pantalla en iOS, reemplazar el `Draw` método de la `UIView` en cuestión como de costumbre. Por ejemplo:
+Cuando la aplicación necesita representar una imagen en la pantalla de color ancho en iOS, invalide `Draw` el método `UIView` de en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -183,15 +183,15 @@ namespace MonkeyTalk
 }
 ```
 
-Como con iOS 10 el `UIGraphicsImageRenderer` clase mostrado anteriormente, de manera inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del dispositivo iOS que se ejecuta la aplicación cuando el espacio de colores del `Draw` se llama al método. Además, la `UIImageView` ha sido color administrado desde iOS 9.3.
+Como iOS 10 hace con la `UIGraphicsImageRenderer` clase mostrada anteriormente, decide de forma inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido de color sRGB en función de las capacidades del dispositivo iOS en `Draw` el que se ejecuta la aplicación cuando se llama al método. Además, el `UIImageView` color también se ha administrado desde iOS 9,3.
 
-Si la aplicación necesita saber cómo se realiza la representación en un `UIView` o `UIViewController`, puede comprobar el nuevo `DisplayGamut` propiedad de la `UITraitCollection` clase. Este valor será una `UIDisplayGamut` enumeración de las acciones siguientes:
+Si la aplicación necesita saber cómo se realiza la representación `UIView` en o `UIViewController`, puede comprobar la nueva `DisplayGamut` propiedad de la `UITraitCollection` clase. Este valor será una `UIDisplayGamut` enumeración de lo siguiente:
 
 - P3
 - SRGB
 - Sin especificar
 
-Si desea que la aplicación para controlar qué espacio de colores se usa para dibujar una imagen, puede usar un nuevo `ContentsFormat` propiedad de la `CALayer` para especificar el espacio de Color deseado. Este valor puede ser un `CAContentsFormat` enumeración de las acciones siguientes:
+Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva `ContentsFormat` propiedad `CALayer` de para especificar el espacio de colores deseado. Este valor puede ser una `CAContentsFormat` enumeración de lo siguiente:
 
 - Gray8Uint
 - Rgba16Float
@@ -199,7 +199,7 @@ Si desea que la aplicación para controlar qué espacio de colores se usa para d
 
 ### <a name="rendering-on-screen-in-macos"></a>Representación en pantalla en macOS
 
-Cuando la aplicación necesita representar una imagen en color amplia en pantalla en macOS, reemplazar el `DrawRect` método de la `NSView` en cuestión como de costumbre. Por ejemplo:
+Cuando la aplicación necesita representar una imagen en color ancho en pantalla en MacOS, invalide el `DrawRect` método `NSView` de en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-De nuevo, decide de forma inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del hardware de Mac que se ejecuta la aplicación cuando el espacio de colores del `DrawRect` se llama al método.
+Una vez más, decide de manera inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido, en función de las capacidades del hardware Mac en el `DrawRect` que se ejecuta la aplicación cuando se llama al método.
 
-Si desea que la aplicación para controlar qué espacio de colores se usa para dibujar una imagen, puede usar un nuevo `DepthLimit` propiedad de la `NSWindow` clase para especificar el espacio de Color deseado. Este valor puede ser un `NSWindowDepth` enumeración de las acciones siguientes:
+Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva `DepthLimit` propiedad de la `NSWindow` clase para especificar el espacio de colores deseado. Este valor puede ser una `NSWindowDepth` enumeración de lo siguiente:
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb

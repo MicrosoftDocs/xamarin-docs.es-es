@@ -4,22 +4,22 @@ description: En esta sección veremos cómo usar las notificaciones locales en u
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200382"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290456"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin. iOS
 
 _En esta sección veremos cómo usar las notificaciones locales en una aplicación de Xamarin. iOS. Se mostrarán los aspectos básicos de la creación y publicación de una notificación que mostrará una alerta cuando la reciba la aplicación._
 
 > [!IMPORTANT]
-> La información de esta sección se refiere a iOS 9 y versiones anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo](~/ios/platform/user-notifications/index.md) de notificaciones de usuario para admitir la notificación local y remota en un dispositivo iOS.
+> La información de esta sección se refiere a iOS 9 y versiones anteriores, se ha dejado aquí para admitir versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía del marco de trabajo de notificaciones de usuario](~/ios/platform/user-notifications/index.md) para admitir la notificación local y remota en un dispositivo iOS.
 
 ## <a name="walkthrough"></a>Tutorial
 

@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621089"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290601"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensiones de iOS en Xamarin. iOS
 
@@ -21,7 +21,7 @@ ms.locfileid: "69621089"
 
 **Crear extensiones en vídeo de iOS**
 
-Las extensiones, tal y como se introdujeron en iOS `UIViewControllers` 8, están especializadas que se presentan mediante iOS dentro de contextos estándar, como en el **Centro**de notificaciones, como tipos de teclado personalizados solicitados por el usuario para realizar entradas especializadas u otros contextos. como editar una fotografía en la que la extensión puede proporcionar filtros de efectos especiales.
+Las extensiones, tal y como se introdujeron en iOS `UIViewControllers` 8, están especializadas que se presentan mediante iOS dentro de contextos estándar, como en el **centro de notificaciones**, como tipos de teclado personalizados solicitados por el usuario para realizar entradas especializadas u otros contextos. como editar una fotografía en la que la extensión puede proporcionar filtros de efectos especiales.
 
 Todas las extensiones se instalan junto con una aplicación de contenedor (con ambos elementos escritos mediante las API unificadas de 64 bits) y se activan desde un punto de extensión determinado en una aplicación host. Y dado que se usarán como complementos para las funciones del sistema existentes, deben ser de alto rendimiento, eficaces y robustos. 
 
@@ -93,13 +93,13 @@ Además, el proyecto de la extensión tiene los siguientes requisitos:
 
   ![](extensions-images/bundleidentifiers.png) 
 - `NSExtensionPointIdentifier`Debe definir la clave, con un valor adecuado ( `com.apple.widget-extension` por ejemplo, para un widget del centro de notificaciones de hoy `Info.plist` en **día** ), en su archivo.
-- También debe definir la `NSExtensionMainStoryboard` clave o la `NSExtensionPrincipalClass` clave en su `Info.plist` archivo con un valor adecuado:
+- También *debe definir la* `NSExtensionMainStoryboard` clave o la `NSExtensionPrincipalClass` clave en su `Info.plist` archivo con un valor adecuado:
   - Use la `NSExtensionMainStoryboard` clave para especificar el nombre del guion gráfico que presenta la interfaz de usuario principal para la extensión `.storyboard`(menos). Por ejemplo, `Main` para el `Main.storyboard` archivo.
   - Use la `NSExtensionPrincipalClass` clave para especificar la clase que se inicializará cuando se inicie la extensión. El valor debe coincidir con el valor de `UIViewController`registro de su: 
 
   ![](extensions-images/registerandprincipalclass.png)
 
-Los tipos específicos de extensiones pueden tener requisitos adicionales. Por ejemplo, **hoy** o la clase principal de la extensión del **Centro** de notificaciones debe implementar [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
+Los tipos específicos de extensiones pueden tener requisitos adicionales. Por ejemplo, **hoy** o la clase principal de la extensión del **centro de notificaciones** debe implementar [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > Si inicia el proyecto mediante una de las plantillas de extensiones proporcionadas por Visual Studio para Mac, la mayoría de los requisitos (si no todos) se proporcionarán y se cumplirán automáticamente con la plantilla.
@@ -250,7 +250,7 @@ Para probar la extensión en el simulador de iOS, ejecute la aplicación **Today
 
 [![](extensions-images/run01.png "Se mostrará la vista principal de contenedores.")](extensions-images/run01.png#lightbox)
 
-Después, presione el botón **Inicio** en el simulador, deslice el dedo hacia abajo desde la parte superior de la pantalla para abrir el **Centro**de notificaciones, seleccione la pestaña **hoy** y haga clic en el botón **Editar** :
+Después, presione el botón **Inicio** en el simulador, deslice el dedo hacia abajo desde la parte superior de la pantalla para abrir el **centro de notificaciones**, seleccione la pestaña **hoy** y haga clic en el botón **Editar** :
 
 [![](extensions-images/run02.png "Presione el botón Inicio del simulador, deslice el dedo hacia abajo desde la parte superior de la pantalla para abrir el centro de notificaciones, seleccione la pestaña hoy y haga clic en el botón Editar.")](extensions-images/run02.png#lightbox)
 

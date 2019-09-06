@@ -4,15 +4,15 @@ description: En este documento se describen las diapositivas, los conmutadores y
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: be4ae87600e533cdfdf39c204a8ef6af4682ec0c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bcb860a88c67b3b2cde7336d53d717d4d9201fd4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655770"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288485"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, modificadores y controles segmentados en Xamarin. iOS
 
@@ -60,11 +60,11 @@ El control deslizante personalizado tiene el siguiente aspecto:
 
 ## <a name="switch"></a>Modificador
 
-iOS usa `UISwitch` como entrada booleana que se puede representar mediante un botón de radio en otras plataformas. El usuario puede manipular el control moviendo el *control entre las* posiciones **ON/OFF** .
+iOS usa `UISwitch` como entrada booleana que se puede representar mediante un botón de radio en otras plataformas. El usuario puede *manipular el control* moviendo el control entre las posiciones **ON/OFF** .
 
  [![](slider-switch-segmented-controls-images/image28a.png "Conmutador")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
-La apariencia del modificador se puede personalizar en el **Panel de propiedades** del diseñador, lo que le permitirá controlar el estado predeterminado, los colores **de tinta de encendido o apagado** y una **imagen de activado/** desactivado. Esto se muestra en la imagen siguiente:
+La apariencia del modificador se puede personalizar en el **Panel de propiedades** del diseñador, lo que le permitirá controlar el estado predeterminado, los colores **de tinta de encendido o apagado** y una **imagen de activado/desactivado**. Esto se muestra en la imagen siguiente:
 
  [![](slider-switch-segmented-controls-images/image29a.png "Propiedades del modificador")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 

@@ -4,15 +4,15 @@ description: En este documento se describen las distintas partes de un UITableVi
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: edc5ec51499116fc2fabeb03327b32a689dc0c49
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528596"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279334"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Elementos de tabla y funcionalidad de Xamarin. iOS
 

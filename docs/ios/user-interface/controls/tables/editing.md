@@ -4,15 +4,15 @@ description: En este documento se describe cómo editar tablas en Xamarin. iOS. 
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f82057957e76ee683e2a649fdf6c2350bf282c18
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90ef335bd3683028d5f9951cdf2ca341158209b9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528642"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284211"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Editar tablas con Xamarin. iOS
 

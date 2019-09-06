@@ -1,159 +1,159 @@
 ---
-title: Las pruebas en dispositivos de Apple Watch
-description: Este documento describe cómo implementar una aplicación para watchOS creada con Xamarin para realizar pruebas en un Apple Watch real. Describe los dispositivos, el aprovisionamiento de perfiles, las pruebas y se proporcionan algunas sugerencias para solucionar problemas.
+title: Pruebas en dispositivos Apple Watch
+description: En este documento se describe cómo implementar una aplicación de watchos compilada con Xamarin para realizar pruebas en un Apple Watch real. Se describen los dispositivos, el aprovisionamiento de perfiles, las pruebas y se proporcionan algunas sugerencias para la solución de problemas.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61283013"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283866"
 ---
-# <a name="testing-on-apple-watch-devices"></a>Las pruebas en dispositivos de Apple Watch
+# <a name="testing-on-apple-watch-devices"></a>Pruebas en dispositivos Apple Watch
 
-Una vez que ha seguido el [pasos de implementación](~/ios/watchos/deploy-test/index.md) para crear identificadores de aplicación y los grupos de aplicaciones (si es necesario), siga las instrucciones de esta página para:
+Después de haber seguido los [pasos de implementación](~/ios/watchos/deploy-test/index.md) para crear los identificadores de aplicación y los grupos de aplicaciones (si es necesario), siga las instrucciones de esta página para:
 
-- [Configurar los dispositivos](#devices) en el centro de desarrollo de Apple y
-- [Crear perfiles de aprovisionamiento de desarrollo](#profiles), a continuación,
-- [Implementar y probar](#testing) en un Apple Watch.
+- [Configure los dispositivos](#devices) en el centro de desarrollo de Apple y
+- [Cree perfiles de aprovisionamiento de desarrollo](#profiles)y, a continuación,
+- [Implementar y probar](#testing) en una Apple Watch.
 
 <a name="devices" />
 
 ## <a name="devices"></a>Dispositivos
 
-Probar aplicaciones de iOS en un real iPhone o iPad siempre ha requerido el dispositivo esté registrado en el centro de desarrollo. La lista de dispositivos tiene este aspecto (haga clic en el signo más **+** para agregar un nuevo dispositivo):
+Probar las aplicaciones de iOS en un iPhone o iPad real siempre requiere que el dispositivo esté registrado en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic **+** en el signo más para agregar un nuevo dispositivo):
 
-![](device-images/devices-sml.png "La lista de dispositivos tiene este aspecto")
+![](device-images/devices-sml.png "La lista de dispositivos tiene el siguiente aspecto")
 
-Inspecciones no son diferentes: ahora debe agregar el dispositivo de Apple Watch antes de implementar las aplicaciones a él. Busque la inspección UDID mediante **Xcode** (**Windows > dispositivos** lista). Cuando se conecta el teléfono emparejado también se mostrará la información de la inspección:
+Los relojes no son diferentes; ahora debe agregar el dispositivo Apple Watch antes de implementar las aplicaciones en él. Busque el UDID del reloj con **Xcode** (lista de**dispositivos de Windows >** ). Cuando se conecte el teléfono emparejado, también se mostrará la información del reloj:
 
-[![](device-images/xcode-devices-sml.png "Información de inspección emparejados")](device-images/xcode-devices.png#lightbox)
+[![](device-images/xcode-devices-sml.png "Información de inspección emparejada")](device-images/xcode-devices.png#lightbox)
 
-Cuando conoce la inspección UDID, agréguelo a la lista de dispositivos en el centro de desarrollo:
+Cuando conozca el UDID del reloj, agréguelo a la lista de dispositivos en el centro de desarrollo:
 
-![](device-images/devices-watch-sml.png "La inspección UDID en la lista de dispositivos")
+![](device-images/devices-watch-sml.png "UDID del reloj en la lista de dispositivos")
 
-Una vez que se ha agregado el dispositivo de inspección, asegúrese de que se selecciona cualquier nuevo o existente en desarrollo o en perfiles de aprovisionamiento de ad hoc que cree:
+Una vez que se ha agregado el dispositivo de inspección, asegúrese de que está seleccionado en cualquier perfil de aprovisionamiento nuevo o existente o en los perfiles de aprovisionamiento ad hoc que cree:
 
 ![](device-images/devices-provisioning.png "Lista de dispositivos disponibles")
 
-No olvide que si edita un perfil de aprovisionamiento existente para descargar y volver a instalarlo.
+No olvide Si edita un perfil de aprovisionamiento existente para descargarlo y volver a instalarlo.
 
 <a name="profiles" />
 
-## <a name="development-provisioning-profiles"></a>Los perfiles de aprovisionamiento de desarrollo
+## <a name="development-provisioning-profiles"></a>Perfiles de aprovisionamiento de desarrollo
 
-Para crear aplicaciones para las pruebas en el dispositivo, deberá crear un **perfil de aprovisionamiento de desarrollo** para cada identificador de aplicación de la solución.
+Para compilar para realizar pruebas en el dispositivo, debe crear un **Perfil de aprovisionamiento de desarrollo** para cada identificador de aplicación de la solución.
 
-Si tiene un Id. de aplicación, comodín *perfil de aprovisionamiento de un solo será necesario*; pero si tiene un identificador de aplicación independiente para cada proyecto, necesitará un perfil de aprovisionamiento para cada identificador de aplicación:
+Si tiene un identificador de aplicación comodín, *solo se necesitará un perfil de aprovisionamiento*; pero si tiene un identificador de aplicación independiente para cada proyecto, necesitará un perfil de aprovisionamiento para cada identificador de aplicación:
 
 ![](device-images/provisioningprofile-development.png "El perfil de aprovisionamiento de desarrollo")
 
-Una vez que haya creado los tres perfiles, aparecen en la lista. No olvide descargar e instalar cada uno de ellos:
+Una vez que haya creado los tres perfiles, aparecerán en la lista. No olvide descargar e instalar cada uno de ellos:
 
 ![](device-images/provisioningprofiles.png "Los perfiles de aprovisionamiento de desarrollo disponibles")
 
-Puede comprobar el perfil de aprovisionamiento en la **opciones de proyecto** seleccionando el **compilar > firma de lote de iOS** pantalla y seleccionando la **versión** o **Depuración iPhone** configuración.
+Puede comprobar el perfil de aprovisionamiento en las opciones del **proyecto** seleccionando la pantalla **compilar > la firma del lote de iOS** y seleccionando la configuración de **versión** o **depuración de iPhone** .
 
-El **perfil de aprovisionamiento** lista mostrará todos los perfiles coincidentes; debería ver los perfiles coincidentes que ha creado en la lista desplegable:
+La lista de perfiles de **aprovisionamiento** mostrará todos los perfiles coincidentes. debería ver los perfiles coincidentes que ha creado en esta lista desplegable:
 
 ![](device-images/options-selectprofile.png "La lista de perfiles de aprovisionamiento")
 
 
 <a name="testing" />
 
-## <a name="testing-on-a-watch-device"></a>Las pruebas en un dispositivo de inspección
+## <a name="testing-on-a-watch-device"></a>Pruebas en un dispositivo de inspección
 
-Una vez haya configurado su dispositivo, los identificadores de aplicación y los perfiles de aprovisionamiento, está listo para probar.
+Una vez que haya configurado el dispositivo, los ID. de aplicación y los perfiles de aprovisionamiento, está listo para realizar la prueba.
 
-1. Asegúrese de que está conectado su iPhone y el reloj ya está emparejado con el iPhone.
+1. Asegúrese de que el iPhone está enchufado y de que el reloj ya está emparejado con el iPhone.
 
-2. Asegúrese de que la configuración está establecida en **versión** o **depurar**.
+2. Asegúrese de que la configuración esté establecida en **liberar** o **depurar**.
 
-3. Asegúrese de que el dispositivo iPhone conectado está seleccionado en la lista de destino.
+3. Asegúrese de que el dispositivo iPhone conectado está seleccionado en la lista destino.
 
-4. Haga doble clic en el proyecto de aplicación de iOS (no la inspección o extensión) y elija **establecer como proyecto de inicio**.
+4. Haga clic con el botón derecho en el proyecto de aplicación de iOS (no en el monitor o la extensión) y elija **establecer como proyecto de inicio**.
 
-5. Haga clic en el **ejecutar** botón (o elija un **iniciar** opción desde el **ejecutar** menú).
+5. Haga clic en el botón **Ejecutar** (o elija una opción **iniciar** en el menú **Ejecutar** ).
 
-6. La solución se compilará y se implementará la aplicación de iOS en iPhone.
-  Si la aplicación de iOS o el aprovisionamiento de extensión de supervisión no está configurado correctamente, a continuación, se podrá realizar la implementación para el iPhone.
+6. La solución se compilará y la aplicación de iOS se implementará en el iPhone.
+  Si el aprovisionamiento de la aplicación iOS o de la extensión de inspección no se establece correctamente, se producirá un error en la implementación en el iPhone.
 
-7. Si la implementación se completa correctamente, el iPhone intentará enviar la aplicación del reloj para la inspección emparejada automáticamente. El icono de la aplicación aparecerá en la pantalla de supervisión con un círculo *instalar* indicador de progreso.
+7. Si la implementación se completa correctamente, el iPhone intentará enviar la aplicación de inspección automáticamente a la inspección emparejada. El icono de la aplicación aparecerá en la pantalla de inspección con un indicador de progreso de *instalación* circular.
 
-8. Si la aplicación del reloj se ha instalado correctamente, el icono permanecerá en la pantalla de inspección - toque para comenzar a probar la aplicación.
+8. Si la aplicación de inspección se instala correctamente, el icono permanecerá en la pantalla de inspección y la tocará para empezar a probar la aplicación.
 
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Si se produce un error durante la implementación use la **Vista > paneles > registro de dispositivos** para obtener más información sobre el error. A continuación se enumeran algunos errores y sus causas:
+Si se produce un error durante la implementación, use la **vista > paneles > registro del dispositivo** para ver más información sobre el error. A continuación se enumeran algunos errores y sus causas:
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Error MT3001: Podría no AOT el ensamblado
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>MT3001 de error: No se pudo el ensamblado AOT
 
 Esto puede ocurrir al compilar en modo de depuración para implementar en un dispositivo Apple Watch.
 
-Para *temporalmente* solucionar este problema, deshabilite **compilaciones incrementales** en la extensión de inspección **opciones de proyecto > compilar > compilación para watchOS** ventana:
+Para solucionar *temporalmente* este problema, deshabilite las **compilaciones incrementales** en las opciones de proyecto de extensión de inspección > ventana compilar compilación de **> watchos** :
 
-[![](device-images/disable-incremental-sml.png "La casilla de verificación compilaciones incrementales")](device-images/disable-incremental.png#lightbox)
+[![](device-images/disable-incremental-sml.png "Casilla compilaciones incrementales")](device-images/disable-incremental.png#lightbox)
 
-Esto se corregirá en una versión futura, después del cual se pueden habilitar volver a las compilaciones incrementales para aprovechar las ventajas de los tiempos de compilación más rápidos.
-
-
-### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Se produce un error en la aplicación Watch iniciarse durante la depuración en el dispositivo
-
-Cuando se intenta depurar una aplicación de inspección en un dispositivo físico, sólo el icono de & cargando el indicador giratorio aparezcan (y, finalmente, tiempo de espera). Esto se solucionará en futuras versiones. una solución alternativa es ejecutar una versión de lanzamiento (que no le permitirá depurar).
+Esto se corregirá en una versión futura, después de la cual se pueden volver a habilitar las compilaciones incrementales para aprovechar las ventajas de tiempos de compilación más rápidos.
 
 
-### <a name="invalid-application-executable-or-application-verification-failed"></a>Archivo ejecutable de aplicación no válida o error de comprobación de aplicación
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>No se puede iniciar la aplicación de inspección durante la depuración en el dispositivo
+
+Al intentar depurar una aplicación de inspección en un dispositivo físico, solo se muestra el icono & cargar el control de número (y, finalmente, se agota el tiempo de espera). Esto se solucionará en una versión futura; una solución consiste en ejecutar una compilación de versión (que no permitirá la depuración).
+
+
+### <a name="invalid-application-executable-or-application-verification-failed"></a>Error de comprobación de aplicación o archivo ejecutable de aplicación no válido
 
 ```csharp
 Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "Alerta de archivo ejecutable de aplicación no válida")
+![](device-images/invalid-application-executable.png "Alerta ejecutable de aplicación no válida")
 
-Si estos mensajes aparecen *en la pantalla de inspección* después de que ha intentado instalar la aplicación, podría haber un par de problemas:
+Si estos mensajes aparecen *en la pantalla de inspección* una vez que la aplicación ha intentado instalarse, podría haber un par de problemas:
 
-- El propio dispositivo inspección no se ha agregado como un dispositivo en el centro de desarrollo de Apple. Siga las instrucciones para [configurar correctamente los dispositivos](#devices).
+- El dispositivo de inspección en sí no se ha agregado como un dispositivo en el centro de desarrollo de Apple. Siga las instrucciones para [configurar los dispositivos correctamente](#devices).
 
-- Los perfiles de aprovisionamiento de desarrollo que se usa para las pruebas no tenía el dispositivo de inspección incluido; o bien, después de que el reloj se agregó a los perfiles de aprovisionamiento que no estaban volver a descargar y volver a instalar. Siga las instrucciones para [configurar correctamente los perfiles de aprovisionamiento](#profiles).
+- Los perfiles de aprovisionamiento de desarrollo que se usan para las pruebas no incluían el dispositivo de inspección. o bien, una vez que se ha agregado el reloj a los perfiles de aprovisionamiento, no se han vuelto a descargar ni volver a instalar. Siga las instrucciones para [configurar correctamente los perfiles de aprovisionamiento](#profiles).
 
-- Si el **registro de dispositivos iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` del, a continuación, la aplicación del reloj **Info.plist** tiene el mal **MinimumOSVersion** valor.
-  Debe ser **8.2** : si ha instalado 6.3 de Xcode es posible que deba modificar manualmente el origen de inserción establézcalo como 8.2.
+- Si el **registro del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , **el valor** de **info. plist** de la aplicación Watch es incorrecto.
+  Debe ser **8,2** : Si ha instalado Xcode 6,3, es posible que tenga que editar manualmente el origen para insertar establézcalo en 8,2.
 
-- La aplicación Watch **Entitlements.plist** incorrectamente un derecho habilitó (por ejemplo, los grupos de aplicaciones) que no debería tener.
+- El archivo **contitles. plist** de la aplicación Watch tiene un derecho habilitado (por ejemplo, grupos de aplicaciones) que no debe tener.
 
-- La aplicación Watch **Id. de aplicación** tiene incorrectamente un derecho habilitado (por ejemplo, los grupos de aplicaciones) en el centro de desarrollo que no debería tener.
+- El **identificador de aplicación** de la aplicación Watch tiene un derecho habilitado (por ejemplo, grupos de aplicaciones) en el centro de desarrollo que no debe tener.
 
 
 
-### <a name="install-never-finished"></a>Nunca instale finalizada
+### <a name="install-never-finished"></a>Instalación nunca finalizada
 
 ```csharp
 SPErrorGizmoInstallNeverFinishedErrorMessage
 ```
 
-Este error podría indicar claves innecesarias (y no válidas) en la aplicación Watch **Info.plist** archivo. No debe incluir claves destinadas a la extensión de aplicación o inspección de iOS en la aplicación del reloj.
+Este error puede indicar claves innecesarias (y no válidas) en el archivo **info. plist** de la aplicación de inspección. No debe incluir las claves diseñadas para la aplicación iOS o la extensión Watch en la aplicación Watch.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
 
 
-### <a name="waiting-for-debugger-to-connect"></a>"en espera para que conectar el depurador"
+### <a name="waiting-for-debugger-to-connect"></a>"esperando a que se conecte el depurador"
 
-Si el **resultado de la aplicación** se bloquea la ventana que muestra
+Si la ventana de salida de la **aplicación** se bloquea.
 
 ```csharp
 waiting for debugger to connect
 ```
 
-Compruebe si alguno de los paquetes de NuGet que se han incluido en el proyecto tiene una dependencia **Microsoft.Bcl.Build**. Esto se agrega automáticamente con algunas bibliotecas publicada por Microsoft, incluidos los populares [Microsoft Http Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http/).
+Compruebe si alguno de los paquetes Nuget que se han incluido en el proyecto tiene una dependencia de **Microsoft. BCL. Build**. Esto se agrega automáticamente con algunas bibliotecas publicadas por Microsoft, incluidas las conocidas [bibliotecas de cliente http de Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
-El **Microsoft.Bcl.Build.targets** archivo que se agrega a la **.csproj** puede interferir con el empaquetado de extensiones de iOS durante la implementación. Puede realizar un seguimiento el [error](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
-Una posible solución alternativa consiste en modificar el archivo .csproj y mover manualmente el **Microsoft.Bcl.Build.targets** a ser el último elemento.
+El archivo **Microsoft. BCL. Build. targets** que se agrega a **. csproj** puede interferir con el empaquetado de las extensiones de iOS durante la implementación. Puede realizar un seguimiento del [error](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
+Una posible solución es editar el archivo. csproj y trasladar manualmente **Microsoft. BCL. Build. targets** para que sea el último elemento.
 

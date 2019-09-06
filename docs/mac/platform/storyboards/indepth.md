@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con guiones gráficos 
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f3bdc70928dc06719bf7cfb775bf70fae9695a4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6aca181b2942bbde854df41c8f9741106cda6776
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227868"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279311"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajar con guiones gráficos en Xamarin. Mac
 
@@ -84,7 +84,7 @@ Y, por tanto, están conectados para recibir y responder a eventos como cortar, 
 
 ### <a name="containment"></a>Inclusiones
 
-En guiones gráficos, los controladores de vista (como el controlador de vista en dos paneles y el controlador devista de pestaña) ahora pueden implementar la contención, de modo que pueden "contener" otros controladores de subvista:
+En guiones gráficos, los controladores de vista (como el controlador de vista en dos paneles y el controlador de vista de pestaña) ahora pueden implementar la _contención_, de modo que pueden "contener" otros controladores de subvista:
 
 [![Ejemplo de contención de controlador de vista](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 
@@ -261,7 +261,7 @@ Los siguientes reconocedores de gestos están disponibles en macOS:
 
 Una referencia de guion gráfico permite tomar un diseño de guion gráfico grande y complejo y dividirlo en guiones gráficos más pequeños a los que se hace referencia desde el original, con lo que se elimina la complejidad y se facilita el diseño y el mantenimiento de los guiones gráficos resultantes.
 
-Además, una referencia de guion gráfico puede proporcionar un delimitador a otra escena en el mismo guión gráfico o en una determinada escena en otro.
+Además, una referencia de guion gráfico puede proporcionar un _delimitador_ a otra escena en el mismo guión gráfico o en una determinada escena en otro.
 
 <a name="Referencing-an-External-Storyboard" />
 

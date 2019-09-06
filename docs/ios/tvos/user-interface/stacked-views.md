@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con vistas apiladas de
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227219"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287974"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
 
@@ -30,7 +30,7 @@ El `UIStackView` está diseñado como una vista de contenedor sin representació
 
 Hay varias propiedades que controlan el modo en que una vista de pila organizará su colección de subvistas:
 
-- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o verticalmente.
+- **Eje** : determina si la vista de pila organiza las subvistas **horizontal** o **verticalmente**.
 - **Alineación** : controla cómo se alinean las subvistas dentro de la vista de pila.
 - **Distribución** : controla cómo se ajusta el tamaño de las subvistas en la vista de pila.
 - **Espaciado** : controla el espacio mínimo entre cada subvista de la vista de pila.
@@ -85,7 +85,7 @@ Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organi
 Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Según Apple, estos son algunos de los usos más comunes:
 
 - **Defina el tamaño a lo largo del eje** : al anclar ambos bordes a lo `Axis` largo de la vista de pila y uno de los bordes adyacentes para establecer la posición, la vista de pila crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
-- **Definir la posición de** la subvista: al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
+- **Definir la posición de la subvista** : al anclar los bordes adyacentes de la vista de pila a su vista primaria, la vista de pila aumentará en ambas dimensiones para que quepan en las subvistas.
 - **Definir el tamaño y la posición de la pila** : al anclar los cuatro bordes de la vista de pila a la vista primaria, la vista de pila organiza las subvistas en función del espacio definido en la vista de pila.
 - **Defina el tamaño perpendicular al eje** : al anclar ambos bordes perpendiculares a la vista `Axis` de pila y uno de los bordes a lo largo del eje para establecer la posición, la vista de pila aumentará de forma perpendicular al eje para ajustarse al espacio definido por sus subvistas.
 
@@ -108,7 +108,7 @@ La manera más sencilla de trabajar con vistas de pila en una aplicación Xamari
 1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista:
 
     [![](stacked-views-images/layout03.png "Una vista de pila")](stacked-views-images/layout03.png#lightbox)
-1. Seleccione la vista de la pila, en la **pestaña widget** del **Panel de propiedades** seleccione **relleno** para la **alineación**, rellene **igualmente** para la **distribución** y escriba `25` para el **espaciado**:
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Panel de propiedades** seleccione **relleno** para la **alineación**, **rellene igualmente** para la **distribución** y escriba `25` para el **espaciado**:
 
     [![](stacked-views-images/layout04.png "La pestaña widget")](stacked-views-images/layout04.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
@@ -132,7 +132,7 @@ La manera más sencilla de trabajar con vistas de pila en una aplicación Xamari
 1. Arrastre una **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista:
 
     [![](stacked-views-images/layout03-vs.png "Una vista de pila")](stacked-views-images/layout03-vs.png#lightbox)
-1. Seleccione la vista de la pila, en la **pestaña widget** del **Explorador de propiedades** , seleccione **Fill** para la **alineación**, rellene **igualmente** para `25` la **distribución** y escriba para el **espaciado**:
+1. Seleccione la vista de la pila, en la **pestaña widget** del **Explorador de propiedades** , seleccione **Fill** para la **alineación**, **rellene igualmente** para `25` la **distribución** y escriba para el **espaciado**:
 
     [![](stacked-views-images/layout04-vs.png "La pestaña widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregue restricciones para mantenerla en la ubicación requerida.
