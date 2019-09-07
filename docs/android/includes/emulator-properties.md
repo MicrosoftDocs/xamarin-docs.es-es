@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c81cc7ff176ab4863498a03169a2c6a3711a0ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b505f4a4f7a8f50a6044d01a327eef76a7b1ce3b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525097"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758049"
 ---
 |Propiedad.|DESCRIPCIÓN|Opciones|
 |--- |--- |--- |
@@ -65,4 +65,3 @@ ms.locfileid: "69525097"
 |`skin.name`|**Nombre de máscara**&ndash; nombre de una máscara de Android Emulator. Una máscara es una colección de archivos que define los elementos visuales y de control de una pantalla del emulador y describe el aspecto que tendrá la ventana del dispositivo virtual Android en el equipo de desarrollo. Una máscara describe el tamaño de la pantalla, los botones y el diseño global, pero no afecta al funcionamiento de la aplicación.||
 |`skin.path`|**Ruta de acceso a la máscara**&ndash; ruta de acceso al directorio que contiene los archivos de máscara del emulador especificados en skin.name. Este directorio contiene archivos de diseño hardware.ini y archivos de imagen para los elementos representados de la máscara.||
 |`skin.dynamic`|**Máscara dinámica**&ndash; indica si la máscara es dinámica o no. La máscara del emulador es dinámica si el emulador va a construir una máscara de un tamaño determinado en función de una anchura y una altura especificadas.|No|
-
