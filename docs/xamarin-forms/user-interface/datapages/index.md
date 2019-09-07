@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980771"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759684"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de formularios de Xamarin. Forms
 
@@ -45,7 +45,6 @@ La vista previa tiene algunos orígenes de datos predefinidos disponibles para s
 
 Vea la [Guía de introducción](get-started.md) para obtener un ejemplo de `JsonDataSource`uso de.
 
-
 ### <a name="pages--controls"></a>Páginas & controles
 
 Se incluyen las siguientes páginas y controles para permitir un enlace sencillo a los orígenes de datos proporcionados:
@@ -59,8 +58,6 @@ Se incluyen las siguientes páginas y controles para permitir un enlace sencillo
 * **ListItem** : vista pregenerada con un diseño similar a los elementos de lista nativos de iOS y Android.
 
 Vea la [referencia de controles de páginas de página](controls.md) para obtener ejemplos.
-
-
 
 ### <a name="under-the-hood"></a>En el capó
 

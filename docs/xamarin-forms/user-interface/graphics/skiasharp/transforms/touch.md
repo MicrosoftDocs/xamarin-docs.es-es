@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e51c1a201ce91b2b376b802f0f45e8aad4b712f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655549"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772980"
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctiles
 
@@ -757,7 +757,6 @@ class TouchManipulationManager
     ...
 }
 ```
-
 
 Sin embargo, probablemente deseará evitar la `AnisotropicScale` opción. Es muy fácil con esta opción para manipular el mapa de bits para que uno de los factores de escala se convierte en cero. Esto hace que el mapa de bits desaparecen de la visión, nunca a devolver. Si realmente necesita escalado anisotrópico, desea mejorar la lógica para evitar resultados no deseados.
 

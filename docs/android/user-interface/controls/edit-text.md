@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644630"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758840"
 ---
 # <a name="xamarinandroid-edit-text"></a>Editar texto de Xamarin. Android
 
@@ -65,7 +65,6 @@ Ejecute la aplicación y escriba texto en el campo de texto. Al presionar la tec
 [![Ejemplos de cómo escribir texto en EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *Algunas partes de esta página son modificaciones basadas en el trabajo creado y* [*compartido por el proyecto de código abierto de Android*](http://code.google.com/policies.html) *y se usan según los términos descritos en el* [*Licencia de atribución de Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se basa en el* [*tutorial de formularios de Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

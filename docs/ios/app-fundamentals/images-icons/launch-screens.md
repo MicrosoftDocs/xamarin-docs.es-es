@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18d33dfcef109fd29f32969b9bdd15b8a2dc475a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290248"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764052"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
@@ -131,7 +131,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
     - Para editar un archivo de guion gráfico, Visual Studio necesita una conexión activa a un host de compilación de Mac. Consulte la guía [conexión con el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para obtener más información.
 
 7. Elija un dispositivo y una orientación para obtener una vista previa del guión gráfico de la pantalla de inicio en el diseñador de iOS. Abra el panel de selección de dispositivos en la barra de herramientas inferior y seleccione **iPhone 4S** y **vertical**: 
- 
+
     ![Barra de herramientas de selección de dispositivos](launch-screens-images/launch07-vs.png)
 
     - Tenga en cuenta que la selección de un dispositivo y la orientación solo cambia el modo en que iOS Designer muestra una vista previa del diseño. Independientemente de la selección realizada aquí, las restricciones recién agregadas se aplican a todos los dispositivos y orientaciones, a menos que se use el botón **Editar rasgos** para especificar lo contrario. 
@@ -196,7 +196,6 @@ Al actualizar una aplicación existente para usar guiones gráficos para sus pan
 A continuación, haga doble clic `Info.plist` en el archivo en el **Explorador de soluciones** para abrirlo para su edición. En **pantalla de inicio**, seleccione el nuevo archivo de guion gráfico creado anteriormente.
 
 ![](launch-screens-images/storyboard09.png "Seleccione el nuevo archivo de guion gráfico creado anteriormente")
-
 
 Para usar el nuevo guión gráfico como una pantalla de inicio, haga lo siguiente:
 

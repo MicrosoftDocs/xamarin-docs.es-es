@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f0cdec005dc210600977d5c8f5606cff6570989
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ec5dd15ffb838d7062c8c769375289e7b07b24d2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290012"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766368"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Paso 2. Configurar el acceso de servicio para la aplicación móvil
 
@@ -30,8 +30,6 @@ Cada vez que un recurso, por ejemplo, aplicación Web, servicio Web, etc., debe 
    ![](configure-images/2.3-permissions.png "Después de seleccionar la aplicación, vuelva a seleccionar la aplicación recién agregada en permisos para otras aplicaciones y proporcione los derechos adecuados.")
 
 4. Por último, **guarde** la configuración. Estos servicios ahora deben estar disponibles en las aplicaciones móviles.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

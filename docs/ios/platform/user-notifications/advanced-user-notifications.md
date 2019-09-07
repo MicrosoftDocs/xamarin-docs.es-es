@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: a22e0d6979173ca29596687da8a0b54c6fc565a7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8bca2b47212b9effe637dcd2e116630579609b39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279054"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769415"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin. iOS
 
@@ -203,7 +203,6 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
     public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
@@ -307,7 +306,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {
@@ -546,7 +544,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {

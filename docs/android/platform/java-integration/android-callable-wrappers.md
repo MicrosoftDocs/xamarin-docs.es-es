@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: fb00bf4a817ad8188d5a127b23b4a910dd4f23a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b55cffc19eec5ae95a0a0aba8053bdaaa49e7747
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524133"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761476"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Contenedores de Android Callable para Xamarin. Android
 
@@ -20,8 +20,6 @@ Los contenedores a los que se puede llamar de Android (ACWs) son necesarios siem
 *Cada vez* El código de Android necesita ejecutar `virtual` un método de interfaz o `overridden` que se implementa en código administrado, Xamarin. Android debe proporcionar un proxy de Java para que este método se envíe al tipo administrado adecuado. Estos tipos de proxy Java son código Java que tiene la misma clase base y la misma lista de interfaces de Java que el tipo administrado, implementando los mismos constructores y declarando cualquier método de interfaz y clase base invalidado. 
 
 Los contenedores a los que se puede llamar de Android se generan mediante el programa **monodroid. exe** durante el [proceso de compilación](~/android/deploy-test/building-apps/build-process.md): se generan para todos los tipos que heredan (directa o indirectamente) [java. lang. Object](xref:Java.Lang.Object). 
-
-
 
 ## <a name="android-callable-wrapper-naming"></a>Nombres de contenedor de Android Callable
 
@@ -40,7 +38,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Si requiere acceso a los tipos por nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre `My.ActivityType`completo:
+Si requiere *acceso* a los tipos por nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre `My.ActivityType`completo:
 
 ```csharp
 namespace My {
@@ -72,8 +70,6 @@ Una vez agregada la configuración de `my.ActivityType` esta propiedad, se puede
 
 Los nombres de ACW basados en MD5SUM se introdujeron en Xamarin. Android 5,0. Para obtener más información sobre la nomenclatura de atributos, vea [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 
-
-
 ## <a name="implementing-interfaces"></a>Implementar interfaces
 
 Hay ocasiones en las que puede que necesite implementar una interfaz de Android, como [Android. Content. IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Dado que todas las clases e interfaces de Android amplían la interfaz de [Android. Runtime. IJavaObject](xref:Android.Runtime.IJavaObject) , surge la pregunta: `IJavaObject`¿cómo se implementa? 
@@ -94,7 +90,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
     }
 }
 ```
-
 
 ## <a name="implementation-details"></a>Detalles de implementación
 

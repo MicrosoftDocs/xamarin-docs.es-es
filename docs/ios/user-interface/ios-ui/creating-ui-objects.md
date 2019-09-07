@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c1e7d6cbb2598f64a331257c9b14ecfa119193f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287294"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768796"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Crear objetos de interfaz de usuario en Xamarin. iOS
 
@@ -43,11 +43,11 @@ Para empezar a crear la interfaz de usuario en el diseñador de iOS, haga doble 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "Cuadro de herramientas")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "Cuadro de herramientas-Visual Studio")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 -----
 
 Cuando se selecciona un control en la superficie de diseño, el **Panel de propiedades** mostrará los atributos de ese control. El **Widget > identidad > campo Nombre** , que se rellena en la siguiente captura de pantalla, se usa como nombre de la *toma* . Así es cómo se puede hacer referencia al control C#en:
@@ -65,7 +65,7 @@ Para abrir un guion gráfico en Xcode, haga clic con el botón derecho para acce
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "Menú contextual de guion gráfico: Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "Menú contextual de guion gráfico: Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
@@ -168,8 +168,6 @@ Estos elementos de la clase parcial permiten al código hacer referencia a los c
 El `designer.cs` archivo no se debe editar manualmente: el IDE (Visual Studio para Mac o Visual Studio) es responsable de mantenerlo sincronizado con el guion gráfico.
 
 Cuando los objetos de interfaz de usuario se agregan `View` mediante `ViewController`programación a un objeto o, se crea una instancia y se administran las referencias a los objetos y, por tanto, no se requiere ningún archivo del diseñador.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

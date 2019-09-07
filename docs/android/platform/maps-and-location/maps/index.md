@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: e36a8e25c5924ac82356c0f1c3110d1596f81cbf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 194f82757b0b4cb5e148e06d4303dc0d22afb9b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523886"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761707"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar las asignaciones y la ubicación de Google con Xamarin. Android
 
@@ -28,7 +28,6 @@ Las tecnologías de asignación son un complemento omnipresente para dispositivo
 
 Los temas de esta sección cubren una amplia gama de características de asignación.
 En primer lugar, se explica cómo aprovechar la aplicación de mapas integrada de Android y cómo mostrar una vista panorámica de una ubicación. A continuación, se explica cómo usar la API de Maps para incorporar características de asignación directamente dentro de una aplicación, que abarcan cómo controlar la posición y la presentación de un mapa, además de cómo agregar superposiciones gráficas.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

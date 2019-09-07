@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523654"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761455"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usar Xamarin. Android Designer
 
 _Este artículo es un tutorial de Xamarin. Android Designer. Muestra cómo crear una interfaz de usuario para una aplicación de explorador de color pequeña; Esta interfaz de usuario se crea completamente en el diseñador._
-
 
 ## <a name="overview"></a>Información general
 
@@ -33,7 +32,6 @@ En este artículo se muestra cómo usar Xamarin. Android Designer para crear vis
 
 El objetivo de este tutorial es usar el Android Designer para crear una interfaz de usuario para una aplicación de explorador de color de ejemplo. La aplicación color Browser presenta una lista de colores, sus nombres y sus valores RGB. Aprenderá a agregar widgets al **superficie de diseño** , así como a diseñar estos widgets visualmente. Después, aprenderá a modificar widgets de forma interactiva en el **superficie de diseño** o mediante el panel de **propiedades** del diseñador. Por último, verá cómo se ve el diseño cuando la aplicación se ejecuta en un dispositivo o emulador.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
@@ -46,7 +44,6 @@ Asigne a la nueva aplicación el nombre **DesignerWalkthrough** y haga clic en *
 En el cuadro de diálogo **nueva aplicación de Android** , elija **aplicación vacía** y haga clic en **Aceptar**:
 
 [![Selección de la plantilla aplicación en blanco de Android](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
-
 
 ### <a name="adding-a-layout"></a>Agregar un diseño
 
@@ -99,7 +96,6 @@ En este punto, la superficie del diseñador debe ser similar a la captura de pan
 [![Diseño del diseñador](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
 Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior `linearLayout1`(con sangría debajo).
-
 
 ### <a name="arranging-the-user-interface"></a>Organizar la interfaz de usuario
 
@@ -283,8 +279,6 @@ Compile y ejecute la aplicación. La captura de pantalla siguiente es un ejemplo
 
 [![Captura de pantalla final](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
@@ -352,7 +346,6 @@ Después, agregue un `Text (Small)` widget debajo del `Text (Large)` widget. En 
 
 Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior ( `linearLayout1`con sangría debajo).
 
-
 ### <a name="arranging-the-user-interface"></a>Organizar la interfaz de usuario
 
 El siguiente paso consiste en modificar la interfaz de usuario para `ImageView` Mostrar la a la izquierda, con `TextView` los dos widgets apilados `ImageView`a la derecha de.
@@ -376,7 +369,6 @@ Al hacer clic en el triángulo `Width` de nuevo `match_parent`, se devuelve el v
 Con la raíz `LinearLayout` seleccionada, vuelva a la pestaña **propiedades** y haga clic en **Widget**. Cambie la `Orientation` configuración a `horizontal` como se muestra a continuación. En este momento, el **superficie de diseño** debe ser similar a la captura de pantalla siguiente. Observe que los `TextView` widgets se han colocado a la derecha `ImageView`de:
 
 [![Seleccionar orientación horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
-
 
 ### <a name="modifying-the-spacing"></a>Modificar el espaciado
 
@@ -528,7 +520,6 @@ Compile y ejecute la aplicación. La captura de pantalla siguiente es un ejemplo
 [![Captura de pantalla final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
-
 
 ## <a name="summary"></a>Resumen
 

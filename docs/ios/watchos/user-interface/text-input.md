@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 2d4b77431c6cda1b8a7718b04a35b179ff45e0ba
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a0e45c51ba5460da87b80f21d4e9e54c13deabde
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291666"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766775"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Trabajar con la entrada de texto de watchos en Xamarin
 
@@ -101,8 +101,6 @@ Cuando el usuario está hablando, la pantalla inspección muestra la pantalla si
 ![](text-input-images/dictation.png "Cuando el usuario está hablando, la pantalla inspección muestra el texto tal y como se entiende")
 
 Una vez que presione el botón **Done** , se devolverá el texto.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

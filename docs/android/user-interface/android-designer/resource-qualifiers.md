@@ -7,23 +7,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523238"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762618"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Opciones de visualización y calificadores de recursos
 
 _En este tema se explica cómo definir los recursos que se usarán solo cuando se encuentren coincidencias con algunos valores de calificador. Un ejemplo sencillo es un recurso de cadena calificado con el idioma. Un recurso de cadena se puede definir como valor predeterminado, con otros recursos alternativos definidos que se usarán para otros idiomas. Todos los tipos de recursos se pueden calificar, incluido el propio diseño._
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="resource-qualifier-options"></a>Opciones de calificador de recursos
 
-Se puede tener acceso a las opciones del calificador de **recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
+Se puede tener acceso a las **Opciones del calificador de recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
 
 [![Opciones de calificador de recursos](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
@@ -55,11 +54,10 @@ Tenga en cuenta que si agrega un nuevo lenguaje pero no crea nuevos recursos, el
 
 Al hacer clic en el menú desplegable **modo de interfaz de usuario** , se muestra una lista de los modos, como **normal**, **coche Dock**, **mesa acoplada**, **televisión**, **dispositivo**y **inspección**:
 
-
 [![Menú modo de interfaz de usuario](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Debajo de esta lista están los modos nocturnos **no nocturno** y **nocturno**, seguidos de las direcciones de diseño de **izquierda a derecha** y de **derecha a izquierda** (para obtener información sobre las opciones de **izquierda a derecha** y **de derecha a izquierda** , vea [ LayoutDirection](xref:Android.Util.LayoutDirection)).
-Los últimos elementos del cuadro de diálogo Opciones de calificador de **recursos** son las **pantallas redondas** (para su uso con el desgaste de Android) o no las **pantallas redondas**.
+Los últimos elementos del cuadro de diálogo **Opciones de calificador de recursos** son las **pantallas redondas** (para su uso con el desgaste de Android) o **no las pantallas redondas**.
 Para obtener información acerca de las pantallas redondas y no redondas, vea [diseños](https://developer.android.com/training/wearables/ui/layouts.html).
 Para obtener más información sobre los modos de interfaz de usuario de Android, vea [UiModeManager](xref:Android.App.UiModeManager).
 
@@ -99,13 +97,11 @@ El conjunto de widgets disponibles en el cuadro de herramientas viene determinad
 
 Para obtener más información sobre los tipos de recursos, vea [recursos de Android](~/android/app-fundamentals/resources-in-android/index.md).
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="resource-qualifier-options"></a>Opciones de calificador de recursos
 
-Se puede tener acceso a las opciones del calificador de **recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
+Se puede tener acceso a las **Opciones del calificador de recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
 
 [![Opciones de calificador de recursos](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
@@ -143,7 +139,6 @@ Debajo de esta lista se encuentran los modos nocturnos **no nocturno** y **noctu
 
 Para obtener más información sobre los modos de interfaz de usuario de Android, vea [UiModeManager](xref:Android.App.UiModeManager).
 Para obtener información sobre las opciones de **izquierda a derecha** y de **derecha a izquierda** , vea [LayoutDirection](xref:Android.Util.LayoutDirection).
-
 
 ## <a name="action-bar-settings"></a>Configuración de Barra de acciones
 

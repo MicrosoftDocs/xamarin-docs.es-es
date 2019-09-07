@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282864"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768857"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin. iOS
 
@@ -43,7 +43,6 @@ La `UICollectionViewCell` clase tiene las siguientes propiedades para cada una d
 - `ContentView`: Esta vista contiene el contenido que presenta la celda. Se representa en el orden z superior de la pantalla.
 - `SelectedBackgroundView`: Las celdas tienen compatibilidad integrada para la selección. Esta vista se usa para indicar visualmente que se ha seleccionado una celda. Se representa justo debajo de `ContentView` cuando se selecciona una celda.
 - `BackgroundView`: Las celdas también pueden mostrar un fondo, que presenta `BackgroundView` . Esta vista se representa debajo de `SelectedBackgroundView` .
-
 
 Si se establece `ContentView` el valor de tal que es menor `BackgroundView` que `SelectedBackgroundView`y, `BackgroundView` se puede usar para enmarcar visualmente el contenido, `SelectedBackgroundView` mientras que se mostrará cuando se seleccione una celda, como se muestra a continuación:
 
@@ -85,7 +84,6 @@ public class AnimalCell : UICollectionViewCell
 
  <a name="Supplementary_Views" />
 
-
 ## <a name="supplementary-views"></a>Vistas complementarias
 
 Las vistas complementarias son vistas que presentan información asociada a cada sección de `UICollectionView`un. Al igual que las celdas, las vistas complementarias están controladas por datos. Cuando las celdas presenten los datos de los elementos de un origen de datos, las vistas complementarias presentan los datos de la sección, como las categorías de libro en una estantería o el género de música en una biblioteca de música.
@@ -117,7 +115,6 @@ Se pueden colocar en cualquier parte de la vista de colección y pueden estar fo
 
  <a name="Decoration_Views" />
 
-
 ## <a name="decoration-views"></a>Vistas de decoración
 
 Las vistas de decoración son vistas meramente visuales que se pueden mostrar `UICollectionView`en un. A diferencia de las celdas y las vistas complementarias, no están controladas por datos. Siempre se crean dentro de la subclase de un diseño y, posteriormente, pueden cambiar como el diseño del contenido. Por ejemplo, una vista de decoración podría usarse para presentar una vista de fondo que se desplaza con el contenido `UICollectionView`de, como se muestra a continuación:
@@ -136,7 +133,6 @@ Las vistas de decoración son vistas meramente visuales que se pueden mostrar `U
     }
   }
  ```
-
 
 ## <a name="data-source"></a>Origen de datos
 
@@ -188,7 +184,6 @@ En este caso, al registrar la `AnimalCell` clase, iOS creará un nuevo `AnimalCe
 
  <a name="Delegate" />
 
-
 ### <a name="delegate"></a>delegado
 
 La `UICollectionView` clase utiliza un delegado de tipo `UICollectionViewDelegate` para admitir la interacción con el `UICollectionView`contenido de. Esto permite controlar:
@@ -197,11 +192,9 @@ La `UICollectionView` clase utiliza un delegado de tipo `UICollectionViewDelegat
 - **Resaltado de celdas** : determina si una celda se está tocando actualmente.
 - **Menús de celda** : menú que se muestra para una celda en respuesta a un gesto largo de presionar.
 
-
 Al igual que con el origen de `UICollectionViewController` datos, se configura de forma predeterminada para que sea `UICollectionView`el delegado de.
 
  <a name="Cell_HighLighting" />
-
 
 #### <a name="cell-highlighting"></a>Resaltado de celdas
 
@@ -227,7 +220,6 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
  <a name="Disabling_Selection" />
 
-
 #### <a name="disabling-selection"></a>Deshabilitar selección
 
 La selección está habilitada de `UICollectionView`forma predeterminada en. Para deshabilitar la selección `ShouldHighlightItem` , invalide y devuelva false como se muestra a continuación:
@@ -245,7 +237,6 @@ Cuando el resaltado está deshabilitado, el proceso de selección de una celda t
 
  <a name="Cell_Menus" />
 
-
 #### <a name="cell-menus"></a>Menús de celda
 
 Cada celda de un `UICollectionView` es capaz de mostrar un menú que permita que se admita opcionalmente cortar, copiar y pegar. Para crear un menú de edición en una celda:
@@ -254,13 +245,11 @@ Cada celda de un `UICollectionView` es capaz de mostrar un menú que permita que
 1. Invalide `CanPerformAction` y devuelva true para cada acción que pueda realizar el elemento, que será cualquier corte, copia o pegado.
 1. Invalide `PerformAction` para realizar la operación de edición y copia de pegado.
 
-
 En la captura de pantalla siguiente se muestra el menú cuando se presiona una celda larga:
 
  [![](uicollectionview-images/04a-menu.png "En esta captura de pantalla se muestra el menú cuando se presiona una celda larga")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
-
 
 ## <a name="layout"></a>Diseño
 
@@ -269,7 +258,6 @@ Con el sistema de diseño, una aplicación puede admitir diseños como el tipo d
 
  <a name="Layout_Basics" />
 
-
 ### <a name="layout-basics"></a>Conceptos básicos del diseño
 
 Los diseños de `UICollectionView` se definen en una clase que hereda de `UICollectionViewLayout`. La implementación del diseño es responsable de la creación de los atributos de diseño para `UICollectionView`cada elemento de. Hay dos maneras de crear un diseño:
@@ -277,9 +265,7 @@ Los diseños de `UICollectionView` se definen en una clase que hereda de `UIColl
 - Use la integrada `UICollectionViewFlowLayout` .
 - Proporcione un diseño personalizado heredando de `UICollectionViewLayout` .
 
-
  <a name="Flow_Layout" />
-
 
 ### <a name="flow-layout"></a>Diseño de flujo
 
@@ -289,13 +275,11 @@ Para usar un diseño de flujo:
 
 - Cree una instancia de `UICollectionViewFlowLayout` :
 
-
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
 - Pase la instancia al constructor de `UICollectionView` :
-
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -306,7 +290,6 @@ Esto es todo lo que se necesita para diseñar el contenido en una cuadrícula. A
  [![](uicollectionview-images/05-layout-orientation.png "Ejemplo de cambios de orientación")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
-
 
 #### <a name="section-inset"></a>Margen de la sección
 
@@ -323,7 +306,6 @@ Esto da lugar a un espaciado alrededor de la sección, como se muestra a continu
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
-
 #### <a name="subclassing-uicollectionviewflowlayout"></a>Subclase de UICollectionViewFlowLayout
 
 En la edición para `UICollectionViewFlowLayout` usar directamente, también se pueden crear subclases para personalizar aún más el diseño del contenido a lo largo de una línea. Por ejemplo, se puede usar para crear un diseño que no ajusta las celdas en una cuadrícula, sino que crea una sola fila con un efecto de desplazamiento horizontal, como se muestra a continuación:
@@ -336,7 +318,6 @@ Para implementar esto mediante subclases `UICollectionViewFlowLayout` es necesar
 - Reemplazar `ShouldInvalidateLayoutForBoundsChange` y devolver true de modo que cuando se delimitan `UICollectionView` los cambios, se vuelva a calcular el diseño de las celdas. Esto se usa en este caso, asegúrese de que el código de transformación que se aplica a la celda centermost se aplicará durante el desplazamiento.
 - Invalidar `TargetContentOffset` para que la celda centermost se ajuste al centro de la `UICollectionView` medida en que se detiene el desplazamiento.
 - Reemplazar `LayoutAttributesForElementsInRect` para devolver una matriz de `UICollectionViewLayoutAttributes` . Cada `UICollectionViewLayoutAttribute` contiene información sobre cómo diseñar el elemento determinado, incluidas las propiedades como `Center` , `Size` `ZIndex` y `Transform3D` .
-
 
 En el código siguiente se muestra este tipo de implementación:
 
@@ -409,7 +390,6 @@ namespace SimpleCollectionView
 
  <a name="Custom_Layout" />
 
-
 ### <a name="custom-layout"></a>Diseño personalizado
 
 Además de usar `UICollectionViewFlowLayout`, los diseños también se pueden personalizar completamente heredando directamente de `UICollectionViewLayout`.
@@ -420,16 +400,13 @@ Los métodos clave que se van a invalidar son:
 - `CollectionViewContentSize`: Devuelve el tamaño del área que se usa para mostrar el contenido.
 - `LayoutAttributesForElementsInRect`: Como en el ejemplo de UICollectionViewFlowLayout mostrado anteriormente, este método se usa para proporcionar información al `UICollectionView` sobre cómo diseñar cada elemento. Sin embargo, a diferencia `UICollectionViewFlowLayout` de, al crear un diseño personalizado, puede colocar los elementos de la forma que prefiera.
 
-
 Por ejemplo, el mismo contenido podría aparecer en un diseño circular, tal como se muestra a continuación:
 
  [![](uicollectionview-images/08-circle-layout.png "Un diseño personalizado circular tal como se muestra aquí")](uicollectionview-images/08-circle-layout.png#lightbox)
 
 Lo más eficaz de los diseños es que para cambiar del diseño de la cuadrícula a un diseño de desplazamiento horizontal y, posteriormente, a este diseño circular, solo `UICollectionView` es necesario cambiar la clase de diseño proporcionada para. Nada en `UICollectionView`, su delegado o el código fuente de datos cambian en absoluto.
 
-
 ## <a name="changes-in-ios-9"></a>Cambios en iOS 9
-
 
 En iOS 9, la vista de colección`UICollectionView`() ahora admite la reordenación de los elementos de forma predeterminada mediante la adición de un nuevo reconocedor de gestos predeterminado y varios métodos de compatibilidad nuevos.
 
@@ -1045,7 +1022,6 @@ namespace CollectionView
       var end = unionRects.Count;
       List<UICollectionViewLayoutAttributes> attrs = new List<UICollectionViewLayoutAttributes> ();
 
-
       for (int i = 0; i < end; i++) {
         if (rect.IntersectsWith(unionRects[i])) {
           begin = i * (int)unionSize;
@@ -1235,7 +1211,6 @@ Se han realizado los siguientes cambios o adiciones en la `UICollectionViewContr
 - `GetTargetContentOffset`: Se usa para obtener el desplazamiento de un elemento de vista de colección determinado.
 - `GetTargetIndexPathForMove`: Obtiene el `indexPath` de un elemento determinado para una operación de arrastre.
 - `MoveItem`: Mueve el orden de un elemento determinado en la lista.
-
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 

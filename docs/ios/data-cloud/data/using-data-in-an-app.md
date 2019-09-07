@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 9cd93a94361c11ecaa454a804e58180a33ec08fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290940"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766856"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso de datos en una aplicación iOS
 
@@ -37,7 +37,6 @@ Hay un par de operaciones de lectura en el ejemplo:
 
 - Lectura de la lista
 - Leer registros individuales
-
 
 Los dos métodos de la `StockDatabase` clase son:
 
@@ -77,8 +76,6 @@ public int SaveStock (Stock item)
 }
 ```
 
-
-
 Normalmente, las aplicaciones reales requerirán alguna validación (por ejemplo, campos obligatorios, longitud mínima u otras reglas de negocios).
 Una buena aplicación multiplataforma implementa tanto como sea posible la validación lógica en el código compartido, pasando los errores de validación a la interfaz de usuario para su presentación de acuerdo con las capacidades de la plataforma.
 
@@ -104,7 +101,6 @@ Puede hacerlo fácilmente en la aplicación móvil si envía un archivo de base 
 - **Extensión** de la administración de SQLite de SQLite: funciona en Mac y Windows y genera archivos que son compatibles con iOS y Android.
 - **Línea de comandos** : vea [www.SQLite.org/SQLite.html](http://www.sqlite.org/sqlite.html) .
 
-
 Al crear un archivo de base de datos para su distribución con la aplicación, tenga cuidado con el nombre de las tablas y columnas para asegurarse de que coinciden con lo que espera el código, especialmente si usa SQLite.NET, lo C# que esperará que los nombres coincidan con sus clases y propiedades ( o los atributos personalizados asociados).
 
 En el caso de iOS, incluya el archivo SQLite en la aplicación y asegúrese de **que esté marcado con la acción de compilación: Contenido**. Coloque el código en `FinishedLaunching` para copiar el archivo en un directorio de escritura *antes* de llamar a los métodos de datos. En el código siguiente se copiará una base de datos existente denominada **Data. SQLite**, solo si aún no existe.
@@ -120,7 +116,6 @@ if (!File.Exists (Database.DatabaseFilePath))
 ```
 
 Cualquier código de acceso a datos (ya sea ADO.NET o Using SQLite.NET) que se ejecute después de que se haya completado, tendrá acceso a los datos rellenados previamente.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

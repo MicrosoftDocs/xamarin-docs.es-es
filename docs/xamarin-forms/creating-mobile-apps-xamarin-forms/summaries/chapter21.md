@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 21. Transformaciones
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 21. Transformaciones'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 21. Transformaciones'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513018"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760576"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen del capítulo 21. Transformaciones
 
@@ -122,8 +122,6 @@ El `AnchorX` afecta a la propiedad `RotationY` pero no `RotationX`. El `AnchorY`
 El sistema de coordenadas 3D implicado en Xamarin.Forms es zurdo. Si señala el índice de la mano izquierda en la dirección de X creciente coordina (a la derecha) y coordina el dedo intermedio en la dirección de Y creciente (abajo), a continuación, los puntos de control de posición en la dirección de aumentar las coordenadas Z (fuera de la pantalla).
 
 Además, para cualquiera de los tres ejes, si señala el pulgar izquierdo en la dirección de aumentar los valores, a continuación, la curva de los dedos indica la dirección de giro de los ángulos de rotación positivos.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

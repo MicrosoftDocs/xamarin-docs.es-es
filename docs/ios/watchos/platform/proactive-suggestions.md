@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281285"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767775"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugerencias proactivas de watchos en Xamarin
 
 _En este artículo se muestra cómo usar las sugerencias proactivas en una aplicación de watchos 3 para impulsar la interacción, lo que permite que el sistema presente de forma proactiva información útil automáticamente al usuario._
 
-
 Novedades de watchos 3, las sugerencias proactivas presentan a los usuarios las formas de interactuar con una aplicación de Xamarin. iOS de forma proactiva que presenten de forma proactiva información útil al usuario en los momentos adecuados.
-
 
 ## <a name="about-proactive-suggestions"></a>Acerca de las sugerencias proactivas
 
@@ -300,7 +298,6 @@ En esta sección se examinan las sugerencias de ubicación de consumo directamen
 
 Cuando la aplicación se inicia con un objeto `MKDirectionsRequest` MapKit, debe iniciar automáticamente la asignación del usuario a la ubicación solicitada o presentar una interfaz de usuario que facilita al usuario el inicio de la obtención de direcciones. Por ejemplo:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -362,7 +359,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## <a name="summary"></a>Resumen
 
 En este artículo se han tratado sugerencias proactivas y se ha mostrado cómo el desarrollador puede usarlas para dirigir el tráfico a una aplicación Xamarin. iOS para watchos. Se ha tratado el paso para implementar las sugerencias proactivas y las directrices de uso presentadas.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

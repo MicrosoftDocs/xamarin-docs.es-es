@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119694"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757734"
 ---
 # <a name="app-linking-in-android"></a>Vinculación de aplicaciones en Android
 
@@ -22,7 +22,7 @@ _En esta guía se explica cómo Android 6,0 admite la vinculación de aplicacion
 
 Las aplicaciones móviles ya no viven en un &ndash; silo en muchos casos son componentes importantes de sus negocios, junto con su sitio Web. Es deseable que las empresas conecten sin problemas su presencia web y sus aplicaciones móviles, con vínculos en un sitio web que inician aplicaciones móviles y muestran contenido relevante en la aplicación móvil. *Aplicación: vinculación* (también conocido como *vinculación profunda*) es una técnica que permite a un dispositivo móvil responder a un URI e iniciar una aplicación móvil que se corresponda con ese URI.
 
-Android controla la vinculación de aplicaciones a través del *sistema* &ndash; de intención cuando el usuario hace clic en un vínculo en un explorador móvil, el explorador móvil enviará un intento de que Android delegue a una aplicación registrada. Por ejemplo, al hacer clic en un vínculo de un sitio web de cocina, se abriría una aplicación móvil que está asociada a ese sitio web y se muestra una receta específica al usuario. Si hay más de una aplicación registrada para controlar esa intención, Android generará lo que se conoce como un *cuadro de diálogo* de desambiguación que le pedirá a un usuario la aplicación de la aplicación que debe administrar la intención, por ejemplo:
+Android controla la vinculación de aplicaciones a través del *sistema* &ndash; de intención cuando el usuario hace clic en un vínculo en un explorador móvil, el explorador móvil enviará un intento de que Android delegue a una aplicación registrada. Por ejemplo, al hacer clic en un vínculo de un sitio web de cocina, se abriría una aplicación móvil que está asociada a ese sitio web y se muestra una receta específica al usuario. Si hay más de una aplicación registrada para controlar esa intención, Android generará lo que se conoce como un *cuadro de diálogo de desambiguación* que le pedirá a un usuario la aplicación de la aplicación que debe administrar la intención, por ejemplo:
 
 ![Captura de pantalla de ejemplo de un cuadro de diálogo de desambiguación](app-linking-images/01-disambiguation-dialog.png)
 
@@ -40,7 +40,7 @@ En esta guía se explica cómo configurar una aplicación Android 6,0 y cómo cr
 
 En esta guía se requiere Xamarin. Android 6,1 y una aplicación destinada a Android 6,0 (nivel de API 23) o superior.
 
-La vinculación de aplicaciones es posible en versiones anteriores de Android mediante el [paquete de NuGet](https://www.nuget.org/packages/Rivets/) remaches del almacén de componentes de Xamarin. El paquete de remaches no es compatible con la vinculación de aplicaciones en Android 6,0; no admite la vinculación de aplicaciones Android 6,0.
+La vinculación de aplicaciones es posible en versiones anteriores de Android mediante el [paquete de NuGet remaches](https://www.nuget.org/packages/Rivets/) del almacén de componentes de Xamarin. El paquete de remaches no es compatible con la vinculación de aplicaciones en Android 6,0; no admite la vinculación de aplicaciones Android 6,0.
 
 ## <a name="configuring-app-linking-in-android-60"></a>Configuración de la vinculación de aplicaciones en Android 6,0
 
@@ -191,7 +191,6 @@ Se pueden realizar dos pruebas para asegurarse de que los filtros de intención 
 ## <a name="summary"></a>Resumen
 
 En esta guía se describe cómo funciona la vinculación de aplicaciones en Android 6,0. A continuación, se explica cómo configurar una aplicación Android 6,0 para admitir y responder a los vínculos de la aplicación. También se describe cómo probar la vinculación de aplicaciones en una aplicación Android.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

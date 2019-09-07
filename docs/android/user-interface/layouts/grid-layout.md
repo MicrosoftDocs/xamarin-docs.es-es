@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a14930d52b551b35dcf5a36e2475b021e5bf27d1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ad7e2e16784a309286d42d4562a52ef57671e477
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764563"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout de Xamarin. Android
 
@@ -20,7 +20,6 @@ Es `GridLayout` una nueva `ViewGroup` subclase que admite la colocación de vist
  [![GridLayout recortado que muestra cuatro celdas](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout`funciona con una jerarquía de vista plana, en la que las vistas secundarias establecen sus ubicaciones en la cuadrícula especificando las filas y las columnas en las que deben estar. De este modo, el *GridLayout* puede colocar las vistas en la cuadrícula sin necesidad de que las vistas intermedias proporcionen una estructura de tabla, como se muestra en las filas de la tabla que se usan en TableLayout. Al mantener una jerarquía plana, *GridLayout* puede diseñar más rápidamente sus vistas secundarias. Echemos un vistazo a un ejemplo para ilustrar lo que significa realmente este concepto en el código.
-
 
 ## <a name="creating-a-grid-layout"></a>Crear un diseño de cuadrícula
 
@@ -56,8 +55,6 @@ Esto da como resultado la siguiente interfaz de usuario cuando se ejecuta en una
 
  [![Captura de pantalla de la aplicación GridLayoutDemo que muestra cuatro celdas](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
-
-
 ## <a name="specifying-orientation"></a>Especificar orientación
 
 Observe que en el XML anterior, `TextView` cada no especifica una fila o columna. Cuando no se especifican, el `GridLayout` asigna cada vista secundaria en orden, en función de la orientación. Por ejemplo, vamos a cambiar la orientación del GridLayout del valor predeterminado, que es horizontal, a vertical similar a la siguiente:
@@ -79,8 +76,6 @@ Ahora, el `GridLayout` colocará las celdas de arriba abajo en cada columna, en 
 Esto da como resultado la siguiente interfaz de usuario en tiempo de ejecución:
 
  [![Captura de pantalla de GridLayoutDemo con celdas colocadas en orientación vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
-
-
 
 ### <a name="specifying-explicit-position"></a>Especificar la posición explícita
 
@@ -115,8 +110,6 @@ Si queremos controlar explícitamente las posiciones de las vistas secundarias e
             android:layout_column="1"  />
 </GridLayout>
 ```
-
-
 
 ### <a name="specifying-spacing"></a>Especificar el espaciado
 
@@ -175,8 +168,6 @@ Este XML crea el espaciado en `GridLayout` el, tal y como se muestra a continuac
  [![Captura de pantalla de GridLayoutDemo que ilustra celdas mayores con espaciado](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 La ventaja de usar la nueva `Space` vista es que permite el espaciado y no es necesario establecer atributos en cada vista secundaria.
-
-
 
 ### <a name="spanning-columns-and-rows"></a>Expandir columnas y filas
 
@@ -241,7 +232,6 @@ Para evitar que la primera columna se ajuste, podemos establecer el botón para 
 Esto da como resultado un diseño para `TextViews` que sea similar al diseño que teníamos anteriormente, con el botón agregado a la parte inferior `GridLayout` de, como se muestra a continuación:
 
  [![Captura de pantalla de GridLayoutDemo con el botón que abarca ambas columnas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

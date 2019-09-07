@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: af7dbad29c156964f154053dac00255b1b32e4ff
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289093"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767214"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin. iOS
 
@@ -33,7 +33,6 @@ Hay varias maneras de usar recursos de imagen dentro de una aplicación iOS. Des
 
 Hay varias consideraciones que deben tenerse en cuenta al crear recursos de imagen para una aplicación de iOS, así como varios lugares donde se usarán esos recursos. Cada uno de ellos tiene un efecto sobre el número de recursos de imagen que serán necesarios, pero el modo en que se crean. En los temas siguientes se tratan los tipos de recursos de imagen que serán necesarios, cómo se incluyen esos recursos en el paquete de la aplicación y cómo se consumen los recursos de imagen para proporcionar la funcionalidad necesaria:
 
-
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Visualización de una imagen](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
 En este artículo se describe cómo incluir un recurso de imagen en una aplicación de Xamarin. iOS y cómo C# Mostrar esa imagen mediante código o mediante su asignación a un control en el diseñador de iOS.
@@ -51,7 +50,6 @@ Apple ha agregado varias mejoras a iOS 10,3 que permiten a una aplicación admin
 - `AlternateIconName`: Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si se usa el icono principal.
 - `SetAlternameIconName`: Use este método para cambiar el icono de la aplicación al icono alternativo determinado.
 
-
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Pantallas de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 En este artículo se describe el uso de un tipo especial de guion gráfico para proporcionar una pantalla de inicio universal para cada tamaño y resolución de dispositivos iOS.
@@ -59,8 +57,6 @@ En este artículo se describe el uso de un tipo especial de guion gráfico para 
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documentos personalizados](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 En este artículo se describe cómo incluir y administrar un recurso de imagen en una aplicación Xamarin. iOS que se va a usar como un icono de tipo de documento personalizado.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

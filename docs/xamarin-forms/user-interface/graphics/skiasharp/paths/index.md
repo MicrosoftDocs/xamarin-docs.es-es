@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 14b92bb576679dee3408c5805c6b698addd9bd8a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f9964d68e33e84dff789a4ad34443782f22ea821
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657441"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759161"
 ---
 # <a name="skiasharp-lines-and-paths"></a>Las rutas de acceso y las líneas de SkiaSharp
 
@@ -49,7 +49,6 @@ Supere las complejidades de dibujo de líneas de puntos y guiones de SkiaSharp.
 ## <a name="finger-paintingfinger-paintmd"></a>[Pintura con los dedos](finger-paint.md)
 
 Utilizar los dedos para pintar en el lienzo.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

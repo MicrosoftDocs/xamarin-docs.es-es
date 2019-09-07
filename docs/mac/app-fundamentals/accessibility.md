@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e92887dc54acc33e6d433aafe39ae7df9ea8ac71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769946"
 ---
 # <a name="accessibility-on-macos"></a>Accesibilidad en macOS
 
@@ -83,8 +83,6 @@ Una vez habilitado, el inspector aparece como una ventana flotante que se puede 
 [![Ejemplo de inspector de accesibilidad en ejecución](accessibility-images/accessibility-example.png "Ejemplo de inspector de accesibilidad en ejecución")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Para obtener más información, lea la [Guía de prueba de accesibilidad para OS X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 59d02db9fa2787e93ad88e4b6f37e0fef50572a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df1177d55510571da3369d298bd05aa9bd0734a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767928"
 ---
 # <a name="introduction-to-watchos"></a>Introducción a watchOS
 
@@ -102,7 +102,6 @@ Si empieza con el entorno de mayor tamaño, reducir verticalmente puede provocar
 
 Obtenga más información sobre [trabajar con tamaños de pantalla](~/ios/watchos/app-fundamentals/screen-sizes.md).
 
-
 ## <a name="limitations-of-watchos"></a>Limitaciones de watchOS
 
 Existen algunas limitaciones de watchOS a tener en cuenta al desarrollar aplicaciones para watchOS:
@@ -119,7 +118,6 @@ Algunas otras limitaciones conocidos y preguntas más frecuentes:
 
 - Las API que permiten la inspección controlar iTunes en el teléfono conectado son privadas.
 
-
 ## <a name="further-reading"></a>Información adicional
 
 Consulte la documentación de Apple:
@@ -129,7 +127,6 @@ Consulte la documentación de Apple:
 - [Vea la Guía de programación de Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
 - [Directrices de interfaz humana de Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

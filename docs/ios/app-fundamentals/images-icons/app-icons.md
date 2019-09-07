@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a0c5821b91c6394b8bae4a090899fa81eb4756e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282652"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763761"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin. iOS
 
@@ -98,7 +98,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
  4. Utiliza las mismas imágenes y tamaños que el icono de Spotlight.
  5. Usa los mismos iconos de tamaño que el iPhone.
  6. Solo se admite con conjuntos de imágenes del catálogo de activos.
- 
+
  Para obtener más información sobre los iconos, consulte la documentación de los [tamaños de imagen y icono](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) de Apple.
 
 <a name="managing" />

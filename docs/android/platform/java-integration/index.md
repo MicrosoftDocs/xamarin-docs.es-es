@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524077"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761425"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integración de Java con Xamarin. Android
 
@@ -38,12 +38,9 @@ La segunda técnica, con JNI, funciona en un nivel mucho menor, pero puede propo
 
 La tercera técnica es radicalmente diferente de las dos anteriores: trasladar el código de Java a C#. Trasladar código de un idioma a otro puede ser un proceso muy laborioso, pero es posible reducir ese esfuerzo con la ayuda de una herramienta denominada *nitidez*. Sharp es una herramienta de código abierto que es una herramienta de JavaC# a convertidor. 
 
-
-
 ## <a name="summary"></a>Resumen
 
 En este documento se proporciona información general de alto nivel sobre algunas de las distintas formas en que las bibliotecas de Java se pueden volver a usar en una aplicación de Xamarin. Android. Se introdujeron los conceptos de los enlaces y los contenedores a los que se puede llamar administrados, y se explican las opciones para migrar código Java a C#. 
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efd120e785e55bfa3806cd193bd5f155f35a5e18
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292834"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767723"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -80,14 +80,12 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
 4. La imagen del icono ahora debe pasar las comprobaciones de validación de Apple.
 
-
 <a name="add" />
 
 ## <a name="manually-adding-interface-controller-files"></a>Agregar manualmente archivos de controlador de interfaz
 
 > [!IMPORTANT]
 > La compatibilidad con WatchKit de Xamarin incluye el diseño de guiones gráficos en el diseñador de iOS (tanto en Visual Studio para Mac como en Visual Studio), que no requiere los pasos descritos a continuación. Basta con dar un controlador de interfaz a un nombre de clase en el panel C# de propiedades de Visual Studio para Mac y los archivos de código se crearán automáticamente.
-
 
 *Si* usa Xcode Interface Builder, siga estos pasos para crear nuevos controladores de interfaz para la aplicación de inspección y habilitar la sincronización con Xcode para que las salidas y las acciones estén disponibles C#en:
 
@@ -210,14 +208,12 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
 Ahora puede hacer referencia al control (o implementar la acción) en C#.
 
-
 <a name="command_line" />
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Inicio de la aplicación de inspección desde la línea de comandos
 
 > [!IMPORTANT]
 > De forma predeterminada, puede iniciar la aplicación de inspección en el modo de aplicación normal y, además, en los modos de **vista** o de **notificación** mediante [parámetros de ejecución personalizados](~/ios/watchos/get-started/installation.md#custommodes) en Visual Studio para Mac y Visual Studio.
-
 
 También puede usar la línea de comandos para controlar el simulador de iOS. La herramienta de línea de comandos que se usa para iniciar las aplicaciones de inspección es **Mtouch**.
 
@@ -243,7 +239,6 @@ Ejemplo:
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-
 ## <a name="notification-mode"></a>Modo de notificación
 
 Para probar el modo de [ **notificación** ](~/ios/watchos/platform/notifications.md)de la aplicación, `watchlaunchmode` establezca el `Notification` parámetro en y proporcione una ruta de acceso a un archivo JSON que contenga una carga de notificación de prueba.
@@ -255,7 +250,6 @@ Por ejemplo, agregue estos argumentos al comando Mtouch:
 ```bash
 --watchlaunchmode=Notification --watchnotificationpayload=/path/to/file.json
 ```
-
 
 ## <a name="other-arguments"></a>Otros argumentos
 
@@ -296,8 +290,6 @@ Ejemplo:
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

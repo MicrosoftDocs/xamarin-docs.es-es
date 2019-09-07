@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: d7de124dd032bd63a10d6a273bc86489df007832
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a82bba575031fa7b7c0011ee639e66aec4862179
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293074"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767944"
 ---
 # <a name="getting-started-with-watchos-in-xamarin"></a>Introducción con watchos en Xamarin
 
@@ -30,4 +30,3 @@ También puede leer sobre las [referencias de proyecto y los identificadores](~/
 ## <a name="hello-watchioswatchosget-startedhello-watchmd"></a>[Hola, inspección](~/ios/watchos/get-started/hello-watch.md)
 
 Cree su primera aplicación de watchos C# con y Xamarin.
-

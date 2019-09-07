@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 5bdff0aee39375d8de296849056660f69a7d907f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ff054b1bd9607dd0dade874453a6ddf99ea4fd77
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198538"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758208"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -42,8 +42,6 @@ Conecte el adaptador como se muestra a continuación:
 ```csharp
 pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

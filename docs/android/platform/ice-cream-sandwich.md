@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: f8d9841deff485a67919aea9fede75044541ba5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761462"
 ---
 # <a name="ice-cream-sandwich-features"></a>Características del bocadillo de helado
 
@@ -27,7 +27,6 @@ La versión 4,0 del SO Android (nivel de API 14) representa un retrabajo importa
 - **Nuevas API de datos** : hay un nuevo acceso a los datos a los que no se podía tener acceso oficialmente, como los datos de calendario y el perfil de usuario del propietario del dispositivo. 
 - **Uso compartido de datos** de aplicaciones: compartir datos entre aplicaciones y dispositivos es ahora más fácil que nunca mediante `ShareActionProvider` tecnologías como, lo que facilita la creación de una acción de uso compartido desde un barra de acciones y el *haz de Android* para el *campo Near Communications (NFC)* , que lo convierte en un complemento para compartir datos entre dispositivos en estrecha proximidad entre sí. 
 
-
 En este artículo, vamos a explorar estas características y otros cambios que se han realizado en la API de Android 4,0 y explicaremos cómo usar cada característica con Xamarin. Android.
 
 ## <a name="user-interface-features"></a>Características de la interfaz de usuario
@@ -38,7 +37,6 @@ Hay una variedad de nuevas tecnologías de interfaz de usuario disponibles con A
 - **[Widget de conmutador](~/android/user-interface/controls/switch.md)** : permite alternar entre activado o desactivado. 
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** : habilita el contenido de vídeo y OpenGL en una vista. 
 - **[Barra de navegación](~/android/user-interface/controls/navigation-bar.md)** : contiene botones virtuales para la parte posterior, la Página principal y la multitarea. 
-
 
 Además, se han mejorado otros elementos de la `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`interfaz de usuario, como, que ahora es más fácil de trabajar, y pestañas, que tienen un aspecto más pulido.
 
@@ -59,8 +57,6 @@ ICS todavía no admite el desarrollo con un emulador de x86. los emuladores x86 
 
 En este artículo se han tratado varias tecnologías nuevas que ahora están disponibles con Android 4. Hemos revisado nuevas características de la interfaz de usuario, como *GridLayout*, *popupMenu*y *Switch* widget. También analizamos parte de la nueva compatibilidad para controlar la interfaz de usuario del sistema, así como cómo trabajar con *TextureView*. A continuación, analizamos una serie de nuevas tecnologías de uso compartido. Hemos explicado cómo el *haz de Android* permite compartir información entre dispositivos que usan *NFC*, se ha EXPLICAdo la nueva *API de calendario*y también se ha mostrado cómo usar la *ShareActionProvider*integrada.
 Por último, hemos examinado cómo usar el proveedor *ContactsContract* para acceder a los datos de Perfil de usuario.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

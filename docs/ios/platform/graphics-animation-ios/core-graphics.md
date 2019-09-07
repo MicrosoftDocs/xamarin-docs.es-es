@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 72c233dc492fe1c93546121bc9103e666c2127ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65ccbe397093833e3af58d1165bc1dad8287ba5d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286264"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752941"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Gráficos principales en Xamarin. iOS
 
@@ -28,7 +28,6 @@ Los gráficos principales admiten el dibujo en varios escenarios, entre los que 
 - [Dibujar imágenes en memoria o en pantalla](#Drawing_Images_and_Text).
 - Crear y dibujar en un PDF.
 - Leer y dibujar un PDF existente.
-
 
 ## <a name="geometric-space"></a>Espacio geométrico
 
@@ -276,7 +275,6 @@ Además de dibujar en el contexto de los gráficos de una vista, los gráficos p
 - Obtención de la imagen desde el contexto
 - Quitar el contexto
 
-
 A diferencia del `Draw` método, donde la vista proporciona el contexto, en este caso se crea el contexto de una de estas dos maneras:
 
 1. Llamando a `UIGraphics.BeginImageContext` (o `BeginImageContextWithOptions`)
@@ -422,7 +420,6 @@ UIGraphics.EndPDFContent ();
 ```
 
 El texto resultante se dibuja en el PDF, que después se incluye en un `NSData` que se puede guardar, cargar, enviar por correo electrónico, etc.
-
 
 ## <a name="summary"></a>Resumen
 

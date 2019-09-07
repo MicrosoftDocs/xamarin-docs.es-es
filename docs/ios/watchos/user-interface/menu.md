@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291677"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766801"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Control de menú de watchos (Force Touch) en Xamarin
 
@@ -28,7 +28,6 @@ Si se `Menu` ha implementado un para un controlador de interfaz, cuando un usuar
 Los toques de fuerza no se asocian a ningún elemento determinado de la pantalla. solo se puede adjuntar un menú a un controlador de interfaz y aparecerá independientemente del lugar en que se produzca el Force Touch Presione en la pantalla.
 
 Se pueden presentar entre una y cuatro opciones de menú.
-
 
 ## <a name="adding-a-menu"></a>Agregar un menú
 
@@ -56,7 +55,6 @@ partial void MenuItemTapped ()
 De forma similar a las imágenes de pestañas en iOS, las imágenes de elementos de menú requieren un patrón opaco con un canal alfa que permita que el fondo se muestre a través de.
 
 Debe agregar las imágenes que se usan para el menú al proyecto de aplicación de inspección (no al proyecto de extensión de aplicación de inspección) para obtener el mejor rendimiento.
-
 
 ## <a name="changing-the-menu-items"></a>Cambiar los elementos de menú
 
@@ -90,8 +88,6 @@ void MenuItemTapped ()
 Se puede llamar al métodoparaquitartodosloselementosdemenúagregadosmedianteprogramación.`ClearAllMenuItems`
 
 Los elementos de menú configurados en el guión gráfico no se pueden borrar.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

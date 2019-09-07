@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285204"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751994"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -67,7 +67,6 @@ Estos nuevos marcos orientados a objetos proporcionan lo siguiente:
 
 Para obtener más información, consulte nuestra documentación de la interfaz de usuario de contactos [y contactos](~/ios/platform/contacts.md) .
 
-
 ## <a name="new-search-apis"></a>Nuevas API de búsqueda
 
 La búsqueda se ha ampliado en iOS 9 para proporcionar nuevas formas de acceder a la información dentro de la aplicación de Xamarin. iOS. Con las nuevas API de búsqueda, puede realizar búsquedas en el contenido de la aplicación a través de los resultados de búsqueda de Spotlight y de Safari, los recordatorios y las sugerencias de entrega y Siri. Esto permite a los usuarios acceder rápidamente a las actividades y la información en la aplicación.
@@ -83,7 +82,6 @@ El control de vista de pila ([UIStackView](xref:UIKit.UIStackView) aprovecha la 
 Con el control de vista de pila, se reduce considerablemente la cantidad de trabajo necesaria para diseñar una interfaz de usuario. El diseño de todas las subvistas adjuntas a una vista de pila se administra automáticamente en función de las propiedades definidas por el desarrollador como el eje, la distribución, la alineación y el espaciado.
 
 Para obtener más información, consulte nuestra [Introducción a](~/ios/user-interface/controls/uistackview.md) la documentación de la vista de pila.
-
 
 ## <a name="collection-view-changes"></a>Cambios en la vista de colección
 
@@ -145,7 +143,6 @@ En iOS 9, Apple ha mejorado la cadena de claves para proporcionar un nuevo tipo 
 
 Para obtener más información, consulte nuestra [Introducción a la documentación de Touch ID](~/ios/platform/touchid.md) .
 
-
 ## <a name="right-to-left-language-support"></a>Compatibilidad con idiomas de derecha a izquierda
 
 En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Incluye lo siguiente:
@@ -155,8 +152,6 @@ En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario voltea
 - La capacidad de voltear una imagen mediante programación usando la propiedad [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) de la clase [UIImage](xref:UIKit.UIImage) .
 
 Para obtener más información, consulte la documentación del soporte técnico de Apple de [derecha a izquierda](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) .
-
-
 
 ## <a name="additional-framework-changes"></a>Cambios adicionales en el marco de trabajo
 
@@ -205,8 +200,6 @@ Consulte también las partes de iOS de estos ejemplos (Companion Mac OS X versio
 
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 695410937e82b885e31827d02f5fefd138497523
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39b522af5bdc3587e3d5aa1451ed4879c6af65f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290277"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769337"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Error de IBTool: The operation couldn’t be completed.
 
@@ -63,4 +63,3 @@ Después de este cambio, tendrá que actualizar el guion gráfico y `.xib` los a
 ### <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más ayuda, para ponerse en contacto con nosotros o si este problema permanece incluso después de usar la información anterior, consulte [¿Qué opciones de soporte técnico están disponibles para Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obtener información sobre las opciones de contacto, sugerencias y cómo archivar un nuevo error si es necesario . 
-

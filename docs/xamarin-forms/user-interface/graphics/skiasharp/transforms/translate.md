@@ -7,12 +7,12 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4fae33f7de8c6022b2298c462ea510ec8ed623f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e108852b2978903fb74686ad60cf419bbe4e3c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657206"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772965"
 ---
 # <a name="the-translate-transform"></a>Transformación de traslación
 
@@ -302,7 +302,6 @@ El `PaintSurface` llamadas del controlador de la `Translate` dos veces, primero 
 [![](translate-images/hendecagramanimation-small.png "Captura de pantalla triple de la página de animación Hendecagram")](translate-images/hendecagramanimation-large.png#lightbox "Triple captura de pantalla de la página de animación Hendecagram")
 
 Tenga en cuenta que la estrella mantiene la misma orientación a medida que gira en torno al centro de la página. No gira en absoluto. Es un trabajo para una transformación de giro.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

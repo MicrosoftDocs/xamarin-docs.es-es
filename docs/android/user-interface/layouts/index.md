@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: 79183963e59a7ca167ffbc3c0cc4b3628595389e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522654"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764472"
 ---
 # <a name="xamarinandroid-layouts"></a>Diseños de Xamarin. Android
 
@@ -46,7 +46,6 @@ Los diseños se usan para organizar los elementos que componen la interfaz de us
 
     ![Ejemplo de diseño de cuadrícula](images/grid-layout.png)
 
-- Los [diseños](~/android/user-interface/layouts/tab-layout/index.md) con pestañas son un conocido patrón de interfaz de usuario en aplicaciones móviles debido a su simplicidad y facilidad de uso. Proporcionan una manera coherente y sencilla de desplazarse entre varias pantallas en una aplicación.
+- Los [diseños con pestañas](~/android/user-interface/layouts/tab-layout/index.md) son un conocido patrón de interfaz de usuario en aplicaciones móviles debido a su simplicidad y facilidad de uso. Proporcionan una manera coherente y sencilla de desplazarse entre varias pantallas en una aplicación.
 
     ![Ejemplo de diseño con pestañas](images/tabbed-layout.png)
- 

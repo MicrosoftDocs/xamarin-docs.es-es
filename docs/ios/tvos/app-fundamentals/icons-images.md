@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7eca637e546324f9282aedcac48dacffa72bf246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277849"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769268"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -79,9 +79,6 @@ Las imágenes superpuestas contienen de dos (2) a cinco (5) capas separadas que 
 > [!IMPORTANT]
 > Las imágenes superpuestas son necesarias para los iconos de la aplicación y son opcionales para otros elementos que pueden recibir el [foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como la imagen de estante superior). Sin embargo, Apple sugiere el uso de imágenes superpuestas para cualquier imagen que pueda centrarse en la aplicación.
 
-
-
-
 Apple realiza las siguientes sugerencias para diseñar imágenes por capas:
 
 - **Hacer que la capa de fondo sea opaca** : la capa de fondo (capa 1) **debe** ser opaca o se producirá un error al intentar usar la imagen en capas en Apple TV. Todas las demás capas pueden contener varios niveles de transparencia para mejorar el efecto 3D.
@@ -145,9 +142,6 @@ Cada aplicación debe proporcionar una versión pequeña y una grande de su icon
 
 > [!IMPORTANT]
 > Los iconos de la aplicación se deben proporcionar como **imágenes por capas**. Consulte la sección anterior de la [imagen en capas](#Layered-Images) para obtener más detalles.
-
-
-
 
 Apple proporciona las siguientes sugerencias para crear iconos de aplicación:
 

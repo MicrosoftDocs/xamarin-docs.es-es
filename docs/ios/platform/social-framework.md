@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: fd94cd7a6d37e7fa00489e788f232842b319e5d3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6008663276151ef9512e4a370252da6861fa1b19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292666"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769439"
 ---
 # <a name="social-framework-in-xamarinios"></a>Marco de redes sociales en Xamarin. iOS
 
@@ -58,7 +58,6 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 - `SetInitialText`: Agrega el texto inicial que se va a mostrar en el tweet.
 - `AddUrl`: Agrega una dirección URL al tweet.
 - `AddImage`: Agrega una imagen al tweet.
-
 
 Una vez inicializado, `PresentVIewController` al llamar a se muestra la `SLComposeViewController`vista creada por. El usuario puede editar y enviar el tweet opcionalmente, o cancelar su envío. En cualquier caso, el controlador debe descartarse en `CompletionHandler`, donde también se puede comprobar el resultado para ver si se ha enviado o cancelado el tweet, como se muestra a continuación:
 
@@ -473,7 +472,6 @@ Si no se establece esta opción (o se usa una clave no válida), se producirá u
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha mostrado cómo usar el marco de redes sociales para interactuar con Twitter y Facebook. Se mostró dónde configurar cuentas para cada red social en la configuración del dispositivo. También se describe cómo utilizar `SLComposeViewController` para presentar una vista unificada para la publicación en redes sociales. Además, examinó la clase `SLRequest` que se usa para llamar a la API de cada red social.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

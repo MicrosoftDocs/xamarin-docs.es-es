@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7502998e8e8da5e011ef1ec0ab7dcc6e3d892d3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286053"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768721"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación en Xamarin de watchOS
 
@@ -97,7 +97,6 @@ Deslice el dedo interfaces basadas en la página de izquierda a derecha, similar
 
 ![](navigation-images/paged-1.png "Primera página de ejemplo") ![](navigation-images/paged-2.png "segunda página de ejemplo") ![](navigation-images/paged-5.png "quinta página de ejemplo")
 
-
 Para que una interfaz basada en la página de la interfaz de usuario principal para la aplicación del reloj, utilice `ReloadRootControllers` con una matriz de los controladores de interfaz y contextos:
 
 ```csharp
@@ -113,8 +112,6 @@ var controllerNames = new [] { "pageController", "pageController", "pageControll
 var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

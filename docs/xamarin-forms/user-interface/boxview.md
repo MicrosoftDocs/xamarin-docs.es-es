@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: 06b4764570205a39734d38e3e118b7dc1fa35d18
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2da2af2a57fb0ec737927024d497530c2a3aac5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888729"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759881"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
@@ -783,7 +783,6 @@ La segunda mano se trata de un poco diferente: Se aplica una función de acelera
 ## <a name="conclusion"></a>Conclusión
 
 El `BoxView` puede parecer simple al principio, pero a medida hemos visto, puede ser bastante versátil, y pueden reproducir casi objetos visuales que normalmente sólo son posibles gráficos vectoriales. Para los gráficos más sofisticados, consulte [utilizando SkiaSharp en Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

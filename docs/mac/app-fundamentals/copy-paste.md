@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291221"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769940"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar y pegar en Xamarin. Mac
 
@@ -603,7 +603,7 @@ namespace MacCopyPaste
 Una vez más, obtenemos la ventana actual, el nivel superior `ImageDocument` y usamos su instancia de clase para ver si existen los datos de imagen necesarios. A continuación, usamos `MenuWillHighlightItem` el método para habilitar o deshabilitar cada elemento en función de este estado.
 
 Edite el archivo **AppDelegate.CS** y haga `DidFinishLaunching` que el método tenga el aspecto siguiente:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -1275,8 +1275,6 @@ if (ok) {
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha explicado con detalle cómo trabajar con la mesa de trabajo en una aplicación de Xamarin. Mac para admitir operaciones de copia y pegado. En primer lugar, se presentó un ejemplo sencillo para familiarizarse con las operaciones de las tareas de área de trabajar estándar. A continuación, se tomó una visión detallada de la mesa de pegado y cómo leer y escribir datos en ella. Por último, examinaba el uso de un tipo de datos personalizado para admitir la copia y el pegado de tipos de datos complejos dentro de una aplicación.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

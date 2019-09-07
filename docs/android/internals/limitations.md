@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524774"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757786"
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -47,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Aunque parece perfectamente lógico, el contenedor de Android al que se puede llamar resultante en las compilaciones *de versión* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo [`Context.StartService`](xref:Android.Content.Context.StartService*), se producirá un error:
+Aunque parece perfectamente lógico, el contenedor de Android al que se puede llamar resultante *en las compilaciones de versión* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo [`Context.StartService`](xref:Android.Content.Context.StartService*), se producirá un error:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -84,11 +84,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### <a name="generic-c-classes"></a>Clases C# genéricas
 
 Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes limitaciones:
-
 
 - Los tipos genéricos no `[Export]` pueden `[ExportField`usar o]. Si intenta hacerlo, se generará un `XA4207` error.
 

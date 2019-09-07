@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 7455e9b8f8e164dd5733b44db4aaac8a93133a05
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 87d99c62f20e6cfd23605d1917a577ac0d95038f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121596"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772457"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
 
@@ -42,7 +42,7 @@ Para proporcionar una experiencia de inicio agradable y asegurarse de que se uti
 Antes de iOS 9, todas las aplicaciones requerían la pantalla completa en el dispositivo, pero algunos iPad ahora pueden realizar varias [tareas de pantalla dividida](~/ios/platform/multitasking.md).
 Esto significa que la aplicación podría ocupar simplemente una columna delgada en el lateral de la pantalla, el 50% del ancho de la pantalla o toda la pantalla.
 
-ejemplo de pantalla dividida de iPad [ ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "ejemplo de pantalla dividida de iPad")
+[ejemplo de pantalla dividida de iPad ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "ejemplo de pantalla dividida de iPad")
 
 La funcionalidad de pantalla dividida significa que debe diseñar la aplicación para que funcione bien con tan solo 320 píxeles de ancho o hasta 1366 píxeles de ancho.
 
@@ -59,15 +59,13 @@ Para admitir tabletas y equipos de escritorio que ejecuten Windows, deberá usar
 
 Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y escritorios de Windows a dimensiones arbitrarias, además de ejecutarse en pantalla completa.
 
-Ejemplo de pantalla dividida de Windows [ ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
-
+[Ejemplo de pantalla dividida de Windows ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
 
 <a name="optimize" />
 
 ## <a name="optimizing-for-tablet-and-desktop"></a>Optimizar para tabletas y equipos de escritorio
 
 Puede ajustar la interfaz de usuario de Xamarin. Forms en función de si se usa un dispositivo de teléfono o tableta o escritorio. Esto significa que puede optimizar la experiencia del usuario en dispositivos de gran tamaño, como tabletas y equipos de escritorio.
-
 
 ### <a name="deviceidiom"></a>Device.Idiom
 
@@ -89,8 +87,6 @@ Este enfoque se puede expandir para realizar cambios significativos en los dise�
 Es ideal para pantallas de mayor tamaño, especialmente en el iPad donde [`UISplitViewController`](xref:UIKit.UISplitViewController) usa para proporcionar una experiencia de iOS nativa. [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 
 Revise [esta entrada de blog de Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) para ver cómo puede adaptar la interfaz de usuario para que los teléfonos usen un diseño y las `MasterDetailPage`pantallas más grandes puedan usar otro (con).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

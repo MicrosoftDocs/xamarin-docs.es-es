@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bf50bdee9243141d1f266a88f82770d9503969
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529103"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760225"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
 
@@ -26,7 +26,7 @@ Teniendo esto en cuenta, es importante crear aplicaciones que se puedan modifica
 
 Muchas aplicaciones empresariales son lo suficientemente complejas como para requerir más de un desarrollador. Puede ser un desafío importante decidir cómo diseñar una aplicación para que varios desarrolladores puedan trabajar de forma eficaz en distintas partes de la aplicación de forma independiente, a la vez que se aseguran de que las piezas se unen sin problemas cuando se integran en la aplicación.
 
-El enfoque tradicional para diseñar y compilar una aplicación produce lo que se conoce como una aplicación monolítica, donde los componentes están estrechamente acoplados sin una separación clara entre ellos. Normalmente, este enfoque monolítico conduce a aplicaciones que son difíciles y poco eficientes de mantener, ya que puede ser difícil resolver errores sin romper otros componentes en la aplicación, y puede ser difícil agregar nuevas características o reemplazar las existentes.
+El enfoque tradicional para diseñar y compilar una aplicación produce lo que se conoce como una aplicación *monolítica* , donde los componentes están estrechamente acoplados sin una separación clara entre ellos. Normalmente, este enfoque monolítico conduce a aplicaciones que son difíciles y poco eficientes de mantener, ya que puede ser difícil resolver errores sin romper otros componentes en la aplicación, y puede ser difícil agregar nuevas características o reemplazar las existentes.
 
 Una solución eficaz para estos desafíos es particionar una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente juntos en una aplicación. Este enfoque ofrece varias ventajas:
 
@@ -37,7 +37,7 @@ Una solución eficaz para estos desafíos es particionar una aplicación en comp
 Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Entre ellas se incluyen las siguientes:
 
 - Decidir cómo proporcionar una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica. Una de las decisiones más importantes a la hora de crear una aplicación de Xamarin. Forms Enterprise es si se debe colocar lógica de negocios en archivos de código subyacente, o si se va a crear una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica, para que la aplicación sea más mantenible y comprobable. Para obtener más información, vea [modelo-vista-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
-- Determinar si se va a usar un contenedor de inserción de dependencias. Los contenedores de inserción de dependencias reducen el acoplamiento de dependencias entre los objetos al proporcionar una utilidad para construir instancias de clases con sus dependencias insertadas y administrar su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)de dependencias.
+- Determinar si se va a usar un contenedor de inserción de dependencias. Los contenedores de inserción de dependencias reducen el acoplamiento de dependencias entre los objetos al proporcionar una utilidad para construir instancias de clases con sus dependencias insertadas y administrar su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 - Elección entre los eventos proporcionados por la plataforma y la comunicación basada en mensajes de acoplamiento flexible entre los componentes que no son convenientes para vincularlos mediante referencias de tipo y objeto. Para obtener más información, vea la introducción a la [comunicación entre componentes de acoplamiento flexible](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
 - Decidir cómo desplazarse entre las páginas, incluido cómo invocar la navegación y dónde debe residir la lógica de navegación. Para obtener más información, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md) (Navegación).
 - Determinar cómo validar los datos proporcionados por el usuario para comprobar si son correctos. La decisión debe incluir cómo validar los datos proporcionados por el usuario y cómo notificar a los usuarios sobre los errores de validación. Para obtener más información, consulte [validación](~/xamarin-forms/enterprise-application-patterns/validation.md).
@@ -81,7 +81,7 @@ La aplicación de ejemplo incluye los siguientes servicios back-end:
 - Un microservicio de pedidos, que es un servicio controlado por dominio que utiliza patrones de diseño controlados por dominio.
 - Un microservicio de cesta, que es un servicio CRUD controlado por datos que usa Redis Cache.
 
-Estos servicios de back-end se implementan como microservicios mediante ASP.NET Core MVC y se implementan como contenedores únicos en un solo host de Docker. Colectivamente, estos servicios de back-end se conocen como la aplicación de referencia eShopOnContainers. Las aplicaciones cliente se comunican con los servicios back-end a través de una interfaz Web de transferencia de estado representacional (REST). Para más información sobre los microservicios y Docker, consulte microservicios en [contenedores](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
+Estos servicios de back-end se implementan como microservicios mediante ASP.NET Core MVC y se implementan como contenedores únicos en un solo host de Docker. Colectivamente, estos servicios de back-end se conocen como la aplicación de referencia eShopOnContainers. Las aplicaciones cliente se comunican con los servicios back-end a través de una interfaz Web de transferencia de estado representacional (REST). Para más información sobre los microservicios y Docker, consulte [microservicios en contenedores](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
 Para obtener información sobre la implementación de los servicios back- [end, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
@@ -145,7 +145,7 @@ El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 |Efectos|Contiene la `EntryLineColorEffect` clase, que se usa para cambiar el color del borde de `Entry` controles concretos.|
 |Excepciones|Contiene el personalizado `ServiceAuthenticationException`.|
 |Extensiones|Contiene métodos de extensión para `VisualElement` las `IEnumerable` clases y.|
-|Asistentes|Contiene las clases auxiliares para la aplicación.|
+|Aplicaciones auxiliares|Contiene las clases auxiliares para la aplicación.|
 |Modelos|Contiene las clases de modelo de la aplicación.|
 |Properties (Propiedades)|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
 |Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
@@ -163,7 +163,6 @@ Los proyectos de plataforma contienen implementaciones de efectos, implementacio
 Las plataformas y herramientas de desarrollo de aplicaciones móviles multiplataforma de Xamarin proporcionan una solución completa para las aplicaciones de cliente móvil B2E, B2B y B2C, lo que proporciona la capacidad de compartir código en todas las plataformas de destino (iOS, Android y Windows) y ayuda a reducir el costo total de propiedad. Las aplicaciones pueden compartir su interfaz de usuario y el código de lógica de la aplicación, a la vez que conservan la apariencia y el funcionamiento de la plataforma nativa.
 
 Los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se pueda modificar o extender con el tiempo. El diseño para esta adaptación puede ser difícil, pero normalmente implica la creación de particiones de una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente en una aplicación.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

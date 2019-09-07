@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 10f240a8e245f24d4b8f646eb972cbe21d28b75c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 008858f987a5a3f83b518b98a0647ac5a68b0672
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768739"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con watchOS localización en Xamarin
 
@@ -200,8 +200,6 @@ En el simulador, seleccione el idioma de prueba con iOS **configuración** aplic
 Al realizar pruebas con un reloj, cambiar el idioma de la inspección en la **Apple Watch** aplicación en el iPhone emparejado.
 
   ![](localization-images/phone-settings-sml.png "Cambiar idioma de la inspección en la aplicación de Apple Watch en el iPhone emparejado")
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

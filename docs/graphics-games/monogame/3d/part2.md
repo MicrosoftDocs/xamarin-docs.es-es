@@ -6,18 +6,18 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1f2fce14f1839e3d9aff4c68dc0dffc0e8059e6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766813"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dibujo de gráficos 3D con vértices en monogame
 
 _Monogame admite el uso de matrices de vértices para definir cómo se representa un objeto 3D por punto. Los usuarios pueden aprovechar las ventajas de las matrices de vértices para crear geometría dinámica, implementar efectos especiales y mejorar la eficacia de su representación a través de la selección._
 
-Los usuarios que hayan leído la [Guía sobre los modelos de representación](~/graphics-games/monogame/3d/part1.md) estarán familiarizados con la representación de un modelo 3D en monogame. La `Model` clase es una manera eficaz de representar gráficos 3D cuando se trabaja con datos definidos en un archivo (como. FBX) y cuando se trabaja con datos estáticos. Algunos juegos requieren geometría 3D para definirse o manipularse dinámicamente en tiempo de ejecución. En estos casos, podemos usar matrices de vértices para definir y representar geometría. Un vértice es un término general para un punto en el espacio 3D que forma parte de una lista ordenada que se usa para definir la geometría. Normalmente, los vértices se ordenan de manera que se define una serie de triángulos.
+Los usuarios que hayan leído la [Guía sobre los modelos de representación](~/graphics-games/monogame/3d/part1.md) estarán familiarizados con la representación de un modelo 3D en monogame. La `Model` clase es una manera eficaz de representar gráficos 3D cuando se trabaja con datos definidos en un archivo (como. FBX) y cuando se trabaja con datos estáticos. Algunos juegos requieren geometría 3D para definirse o manipularse dinámicamente en tiempo de ejecución. En estos casos, podemos usar matrices de *vértices* para definir y representar geometría. Un vértice es un término general para un punto en el espacio 3D que forma parte de una lista ordenada que se usa para definir la geometría. Normalmente, los vértices se ordenan de manera que se define una serie de triángulos.
 
 Para ayudar a visualizar cómo se usan los vértices para crear objetos 3D, veamos la siguiente esfera:
 
@@ -117,7 +117,6 @@ Ahora que tenemos las posiciones de la geometría definida, podemos escribir nue
 
 En primer lugar, es necesario definir una `BasicEffect` instancia de que contendrá los parámetros para la representación, como la posición y la iluminación. Para ello, agregue un `BasicEffect` miembro a la `Game1` clase siguiente, donde se `floorVerts` define el campo:
 
-
 ```csharp
 ...
 VertexPositionTexture[] floorVerts;
@@ -168,7 +167,6 @@ void DrawGround()
 
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
@@ -246,7 +244,6 @@ Texture2D checkerboardTexture;
 
 Modifique `Game1.LoadContent` como se indica a continuación:
 
-
 ```csharp
 protected override void LoadContent()
 {
@@ -306,7 +303,6 @@ void DrawGround()
 
 Por último, es necesario modificar el `Game1.Initialize` método para asignar también coordenadas de textura en nuestros vértices:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -349,7 +345,6 @@ Las coordenadas de textura normalizadas permiten el cambio de tamaño de las tex
 
 Podemos cambiar la asignación de coordenadas de textura para usar una única variable para el número de repeticiones:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -382,7 +377,6 @@ protected override void Initialize ()
 Esto da como resultado que la textura se repita 20 veces:
 
 ![](part2-images/image10.png "Esto hace que la textura se repita 20 veces")
-
 
 ## <a name="rendering-vertices-with-models"></a>Representar vértices con modelos
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6cb001a42f0cc98d0054523dffa0772b29188d73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523822"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757531"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obtención de una clave de la API de Google Maps
 
@@ -23,7 +23,6 @@ La obtención de una clave de Maps API V2 implica los siguientes pasos:
 1. Recupere la huella digital SHA-1 del almacén de claves que se usa para firmar la aplicación.
 2. Cree un proyecto en la consola de API de Google.
 3. Obtención de la clave de API.
-
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>Obtención de la huella digital de clave de firma
 
@@ -52,7 +51,6 @@ La información acerca de un almacén de claves se obtiene ejecutando el comando
 
 -----
 
-
 Ejecute keytool con el siguiente comando (con las rutas de acceso de archivo que se muestran arriba):
 
 ```shell
@@ -77,10 +75,9 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 
 -----
 
-
 ### <a name="production-keys"></a>Claves de producción
 
-Al implementar una aplicación en Google Play, debe estar firmada [con una clave privada](~/android/deploy-test/signing/index.md).
+Al implementar una aplicación en Google Play, debe estar [firmada con una clave privada](~/android/deploy-test/signing/index.md).
 `keytool` Tendrá que ejecutarse con los detalles de la clave privada y la huella digital de SHA-1 resultante utilizada para crear una clave de API de Google Maps de producción. Recuerde actualizar el archivo **archivo AndroidManifest. XML** con la clave de API de Google Maps correcta antes de la implementación.
 
 ### <a name="keytool-output"></a>Salida de keytool

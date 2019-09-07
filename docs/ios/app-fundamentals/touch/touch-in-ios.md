@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 577bc7af34c463aec65148bd97dc5dd49262d699
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280096"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767082"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventos táctiles y gestos en Xamarin. iOS
 
@@ -41,7 +41,6 @@ Hay tres fases de toque que se producen cuando el usuario toca la pantalla, muev
 - `TouchesBegan`: Se llama a este método cuando se toca la pantalla por primera vez.
 - `TouchesMoved`: Se llama a este método cuando la ubicación de la función Touch cambia cuando el usuario está deslizando el dedo por la pantalla.
 - `TouchesEnded`o `TouchesCancelled` –`TouchesEnded` se llama cuando los dedos del usuario se levantan de la pantalla.  `TouchesCancelled`se llama a este método si iOS cancela el toque; por ejemplo, si un usuario desliza el dedo desde un botón para cancelar una imprenta.
-
 
 Los eventos Touch viajan de forma recursiva a través de la pila de UIViews para comprobar si el evento Touch está dentro de los límites de un objeto de vista. Esto se suele denominar _prueba de posicionamiento_. En primer lugar, se llamará en el `UIView` nivel `UIViewController` superior o y, a continuación, `UIView` se `UIViewControllers` llamará en y debajo de ellos en la jerarquía de vistas.
 
@@ -126,7 +125,6 @@ Xamarin. iOS proporciona la clase `UIGestureRecognizer` como una clase base para
 - *UIRotationGestureRecognizer* : rotación de dos dedos hacia la derecha o hacia la izquierda.
 - *UILongPressGestureRecognizer* : mantenga presionado, que a veces se conoce como un clic largo o largo.
 
-
 El patrón básico para usar un reconocedor de gestos es el siguiente:
 
 1. **Crear instancias del reconocedor de gestos** : en primer `UIGestureRecognizer` lugar, cree una instancia de una subclase. El objeto al que se crea una instancia se asociará con una vista y se recolectará como elemento no utilizado cuando se elimine la vista. No es necesario crear esta vista como una variable de nivel de clase.
@@ -152,7 +150,6 @@ Los gestos se pueden resumir como uno de dos tipos:
 1. *Discreta* : estos gestos solo se activan la primera vez que se reconocen.
 1. *Continuo* : estos gestos continúan activando siempre que se reconozcan.
 
-
 Los reconocedores de gestos existen en uno de los siguientes Estados:
 
 - *Posible* : este es el estado inicial de todos los reconocedores de gestos. Este es el valor predeterminado de la propiedad State.
@@ -162,7 +159,6 @@ Los reconocedores de gestos existen en uno de los siguientes Estados:
 - *Reconocido* : el estado se establecerá cuando el reconocedor de gestos coincida con un conjunto de toques y informará al suscriptor de que el gesto ha finalizado.
 - *Finalizado* : se trata de un alias para el Estado reconocido.
 - *Failed* : cuando el reconocedor de gestos ya no puede coincidir con los toques en los que está escuchando, el estado cambiará a failed.
-
 
 Xamarin. iOS representa estos valores en la `UIGestureRecognizerState` enumeración.
 
@@ -178,7 +174,6 @@ También es posible deshabilitar un gesto en iOS. Hay dos propiedades de delegad
 
 1. *ShouldReceiveTouch* : este delegado se llama justo antes de que se pase un evento Touch al reconocedor de gestos y proporciona una oportunidad para examinar los toques y decidir qué toques controlará el reconocedor de gestos.
 1. *ShouldBegin* : se llama cuando un reconocedor intenta cambiar el estado de posible a algún otro Estado. Si devuelve false, se forzará el cambio de estado del reconocedor de gestos a failed.
-
 
 Puede invalidar estos métodos con un delegado fuertemente tipado `UIGestureRecognizerDelegate`, un delegado débil o un enlace a través de la sintaxis del controlador de eventos, como se muestra en el siguiente fragmento de código:
 
@@ -199,6 +194,5 @@ Aunque iOS proporciona algunos reconocedores de gestos predeterminados, puede qu
 1. Subclase `UIGestureRecognizer` .
 1. Invalide los métodos de evento Touch adecuados.
 1. Propaga el estado de reconocimiento a través de la propiedad de estado de la clase base.
-
 
 Un ejemplo práctico de esto se explicará en el tutorial [uso de Touch in iOS](ios-touch-walkthrough.md) .

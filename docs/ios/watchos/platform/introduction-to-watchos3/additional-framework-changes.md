@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 34f192938ac583e39232312377142015aa6d3811
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287562"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768583"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Cambios adicionales en los marcos de watchos 3
 
 _En este artículo se describen cambios más pequeños o mejoras en los marcos de trabajo existentes para watchos 3._
 
 Además de los principales cambios en iOS, Apple ha realizado modificaciones y mejoras en varios marcos de trabajo existentes en watchos 3.
-
 
 ## <a name="core-data"></a>Datos principales
 
@@ -33,14 +32,12 @@ Se han realizado las siguientes mejoras en el marco de datos principal para Watc
 
 Para obtener más información, consulte la referencia de la [plataforma principal de datos](https://developer.apple.com/reference/coredata)de Apple.
 
-
 ## <a name="core-motion"></a>Movimiento de núcleo
 
 Se han realizado las siguientes mejoras en Core Motion Framework para Watch OS 3:
 
 - El nuevo evento de movimiento de dispositivo usa el acelerómetro y giroscopio para proporcionar actualizaciones de movimiento y orientación. La aplicación se puede registrar para esta actualización (a velocidades de hasta 100 Hz).
 - El nuevo evento pedometer habilita las notificaciones rápidas y en tiempo real cuando el usuario se detiene y se reanuda la ejecución. Use [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) para registrarse para eventos pedometer de primer o segundo plano.
-
 
 ## <a name="foundation"></a>Cimiento
 
@@ -52,7 +49,6 @@ Se han realizado las siguientes mejoras en Foundation Framework para Watch OS 3:
 - Use la nueva clase [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) para dar formato a las medidas localizadas que se van a mostrar al usuario final.
 - Use las nuevas clases [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) para representar UOMs específicas.
 
-
 ## <a name="healthkit"></a>HealthKit
 
 Se han realizado las siguientes mejoras en el marco de trabajo de HealthKit para Watch OS 3:
@@ -60,7 +56,6 @@ Se han realizado las siguientes mejoras en el marco de trabajo de HealthKit para
 - Use la nueva clase [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar el `ActivityType` y `LocationType` de un entrenamiento.
 - Se han agregado los nuevos [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y el método `WheelchairUse` de la clase [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) para trabajar con los datos de mantenimiento relacionados con la silla.
 - Se han agregado nuevas claves de metadatos para los tipos meteorológicos `HKWeatherConditionCloudy`( `HKWeatherConditionClear` como y) y los tipos `HKWorkoutActivityTypeFlexibility` de `HKWorkoutActivityTypeWheelchairRunPace`entrenamiento (como y).
-
 
 ## <a name="homekit"></a>HomeKit
 
@@ -70,7 +65,6 @@ Se han realizado las siguientes mejoras en el marco de trabajo de HomeKit para W
 - Se han agregado varios servicios y características nuevos.
 - Agrega más contexto y configuración de los accesorios de servicios principales y servicios de vínculo.
 
-
 ## <a name="passkit"></a>PassKit
 
 Se han realizado las siguientes mejoras en el marco de trabajo de PassKit para Watch OS 3:
@@ -78,14 +72,12 @@ Se han realizado las siguientes mejoras en el marco de trabajo de PassKit para W
 - Amplía el marco de trabajo para admitir pagos en la aplicación y seguros en el Apple Watch de bienes y servicios físicos.
 - Las siguientes clases están ahora disponibles: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) y [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
-
 ## <a name="uikit"></a>UIKit
 
 Se han realizado las siguientes mejoras en el marco de trabajo de UIKit para Watch OS 3:
 
 - Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros `PreferredFontForTextStyle` de texto utilizan `UIFont` el nuevo método de la clase.
 - Se `ColorWithDisplayP3` ha agregado el método para admitir el color ancho.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -6,12 +6,12 @@ ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: 093e2ad9cf18abecc4eb1b63690c016e8ed21a0c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b94bae8fb1b7c990c5b2478a0da143960a0bcc55
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227778"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765971"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure Mobile Apps
 
@@ -31,7 +31,6 @@ Get started with authentication http://go.microsoft.com/fwlink/p/?LinkId=331328
 Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=331329
 Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
-
 
 Estos vínculos son para la documentación de Xamarin disponible en el sitio web de [Azure Mobile Apps](https://docs.microsoft.com/azure/app-service-mobile/) .
 Agregar la funcionalidad de Azure a una aplicación de Xamarin mediante la descarga del [cliente móvil de Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
@@ -74,13 +73,11 @@ Proporciona instrucciones completas para configurar y codificar una pantalla de 
 - [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
 - [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
-
 ## <a name="authorize-users-in-scripts"></a>Autorización de usuarios en scripts
 
 Código de ejemplo de back-ends de JavaScript
 
 - [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
-
 
 ## <a name="get-started-with-push"></a>Introducción a la instalación
 
@@ -89,15 +86,12 @@ Complete las instrucciones para configurar las notificaciones de envío en los s
 - [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
 - [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
-
 ## <a name="get-started-with-notification-hubs"></a>Introducción a Notification Hubs
 
 Complete las instrucciones para configurar las notificaciones de envío en los sitios web de Apple y Google, configure el centro de notificaciones de Azure y, después, genere notificaciones de envío a los dispositivos.
 
 - [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
 - [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

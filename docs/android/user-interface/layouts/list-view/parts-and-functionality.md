@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: 3ab7a923dabd6b98c509870abaa51b12fb63c8d2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4566ee5d203b5d098133aebe2c32dbaec712e17a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510121"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764209"
 ---
 # <a name="xamarinandroid-listview-parts-and-functionality"></a>Componentes y funcionalidad de ListView de Xamarin. Android
 
@@ -31,26 +31,21 @@ Estas capturas de pantallas `ListView` usan un control básico para mostrar cóm
 
 Los elementos que componen `ListView` un se describen con más detalle a continuación:
 
-
 ## <a name="rows"></a>Filas
 
 Cada fila tiene su propia `View`. La vista puede ser una de las vistas integradas definidas en `Android.Resources`o una vista personalizada. Cada fila puede usar el mismo diseño de vista o puede ser diferente. Hay ejemplos en este documento sobre el uso de diseños integrados y otros que explican cómo definir diseños personalizados.
-
 
 ## <a name="adapter"></a>Adaptador
 
 El `ListView` control `View` requiere que proporcione el formato para cada fila. `Adapter` Android tiene adaptadores y vistas integrados que se pueden usar, o bien se pueden crear clases personalizadas.
 
-
 ## <a name="fast-scrolling"></a>Desplazamiento rápido
 
 Cuando un `ListView` contiene muchas filas de datos, se puede habilitar el desplazamiento rápido para ayudar al usuario a desplazarse a cualquier parte de la lista. La barra de desplazamiento de desplazamiento rápido se puede habilitar opcionalmente (y personalizarse en el nivel de API 11 y versiones posteriores).
 
-
 ## <a name="section-index"></a>Índice de sección
 
 Al desplazarse por las listas largas, el índice de sección opcional proporciona al usuario información sobre la parte de la lista que está viendo actualmente. Solo es adecuado en listas largas, normalmente junto con desplazamiento rápido.
-
 
 ## <a name="classes-overview"></a>Información general sobre clases
 
@@ -71,4 +66,3 @@ A continuación se describe el propósito de cada clase:
 - **CursorAdapter** &ndash; Use opara`SimpleCursorAdapter` Mostrar datos basados en una consulta de SQLite. `CursorAdapter`
 
 Este documento contiene ejemplos sencillos que usan `ArrayAdapter` , así como ejemplos más complejos que requieren implementaciones personalizadas de `BaseAdapter` o `CursorAdapter`.
-

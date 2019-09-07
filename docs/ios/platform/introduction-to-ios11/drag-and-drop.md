@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2017
-ms.openlocfilehash: d6848c478e0704fab16a2f8cc64bb8aa80f9a174
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f1e9cabb78152374ee3eede80dcfc5dcba8dde1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286613"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752376"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Arrastrar y colocar en Xamarin. iOS
 
@@ -184,7 +184,6 @@ Debe usar un iPad para probar el [ejemplo](https://docs.microsoft.com/samples/xa
 Abra el ejemplo junto a otra aplicación (como notas) y arrastre las filas y el texto entre ellas:
 
 ![captura de pantalla de la operación de arrastrar en curso](drag-and-drop-images/01-sml.png)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

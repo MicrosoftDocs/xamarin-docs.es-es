@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: d85c199f6243fc49c1ca924bbd60cfef48b6d91f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120002"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762234"
 ---
 # <a name="setup-and-installation"></a>Configuración e instalación
 
@@ -45,7 +45,6 @@ Después de haber instalado Xamarin. Android, realice los pasos siguientes para 
 
 Estos pasos se describen en las secciones siguientes.
 
-
 ### <a name="install-android-sdk-and-tools"></a>Instalación de Android SDK y herramientas 
 
 Inicie el **Administrador de Android SDK**: 
@@ -59,7 +58,6 @@ Inicie el **Administrador de Android SDK**:
 ![Cómo iniciar el administrador de Android SDK en Visual Studio para Mac](installation-images/xs/sdk-menu.png)
 
 -----
-
 
 Asegúrese de que tiene instalados los siguientes Android SDK y herramientas:
 
@@ -79,15 +77,13 @@ Si no tiene instaladas las herramientas y el SDK más recientes, descargue las h
 
 -----
 
-
 ## <a name="configuration"></a>Configuración
 
 Antes de poder usar probar la aplicación, debe configurar un emulador de desgaste de Android o un dispositivo de desgaste de Android real. 
 
-
 ### <a name="android-wear-emulator"></a>Emulador de uso de Android
 
-Antes de poder usar un emulador de desgaste de Android, debe configurar un dispositivo virtual Android de desgaste de Android (AVD) con el administrador del emulador de **Google**:
+Antes de poder usar un emulador de desgaste de Android, debe configurar un dispositivo virtual Android de desgaste de Android (AVD) con el **Administrador del emulador de Google**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -99,18 +95,15 @@ Antes de poder usar un emulador de desgaste de Android, debe configurar un dispo
 
 -----
 
-Para más información sobre cómo configurar un emulador de desgaste de Android, consulte depurar el [desgaste de Android en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
-
+Para más información sobre cómo configurar un emulador de desgaste de Android, consulte [depurar el desgaste de Android en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
 
 ### <a name="android-wear-device"></a>Dispositivo de desgaste de Android
 
-Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede depurar la aplicación en este dispositivo en lugar de usar un emulador. Para obtener información sobre el desarrollo con un dispositivo de desgaste, consulte depurar [en un dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
-
+Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede depurar la aplicación en este dispositivo en lugar de usar un emulador. Para obtener información sobre el desarrollo con un dispositivo de desgaste, consulte [depurar en un dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
 
 ## <a name="create-your-first-android-wear-app"></a>Cree su primera aplicación de desgaste de Android
 
 Siga las instrucciones [Hello, desgaste](~/android/wear/get-started/hello-wear.md) para compilar su primera aplicación de inspección.
-
 
 ## <a name="packaging-your-app"></a>Empaquetar la aplicación
 
@@ -119,7 +112,6 @@ Las aplicaciones de desgaste de Android siempre se distribuyen con una aplicaci�
 Al agregar la aplicación de desgaste de Android como referencia a la aplicación principal de Android, se supone que es un proyecto de desgaste de Android y generará automáticamente el XML y los metadatos necesarios. Además, comprobará que los números de versión y paquete coinciden para que pueda enviar fácilmente sus aplicaciones a Google Play. 
 
 Para más información sobre las aplicaciones de desgaste de empaquetado, consulte [trabajar con empaquetado](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

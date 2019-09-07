@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 2f5e66ae58f471be62839de17fe4edd12ccef457
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680991"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764000"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D en monogame
 
@@ -34,13 +34,11 @@ Una vez finalizado, tendremos un proyecto con un robot moviéndose en un círcul
 
 ![](part3-images/image1.gif "Una vez finalizada, la aplicación incluirá un proyecto con un robot moviéndose en un círculo y una cámara que se puede controlar mediante la entrada táctil.")
 
-
 ## <a name="creating-a-project"></a>Crear un proyecto
 
 Este tutorial se centra en mover objetos en el espacio 3D. Comenzaremos con el proyecto para representar modelos y matrices de vértices [que se pueden encontrar aquí](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y debemos ver lo siguiente:
 
 ![](part3-images/image2.png "Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y se debe mostrar esta vista.")
-
 
 ## <a name="creating-a-robot-entity"></a>Creación de una entidad robot
 
@@ -94,7 +92,6 @@ namespace MonoGame3D
 
                     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
                         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
                 }
 
@@ -355,7 +352,7 @@ La última línea de código combina las dos matrices en una:
 Matrix combined = translationMatrix * rotationMatrix;
 ```
 
-Esto se conoce como multiplicación de matrices, que funciona ligeramente diferente de la multiplicación normal. La *propiedad conmutable de* la multiplicación indica que el orden de los números en una operación de multiplicación no cambia el resultado. Es decir, 3 * 4 es equivalente a 4 * 3. La multiplicación de matrices difiere en que no es conmutativa. Es decir, la línea anterior se puede leer como "aplicar translationMatrix para trasladar el modelo y, a continuación, girar todo aplicando rotationMatrix". Podríamos visualizar el modo en que la línea anterior afecta a la posición y la rotación de la manera siguiente:
+Esto se conoce como multiplicación de matrices, que funciona ligeramente diferente de la multiplicación normal. La *propiedad conmutable de la multiplicación* indica que el orden de los números en una operación de multiplicación no cambia el resultado. Es decir, 3 * 4 es equivalente a 4 * 3. La multiplicación de matrices difiere en que no es conmutativa. Es decir, la línea anterior se puede leer como "aplicar translationMatrix para trasladar el modelo y, a continuación, girar todo aplicando rotationMatrix". Podríamos visualizar el modo en que la línea anterior afecta a la posición y la rotación de la manera siguiente:
 
 ![](part3-images/image8.png "Una visualización PF el modo en que la línea anterior afecta a la posición y la rotación")
 

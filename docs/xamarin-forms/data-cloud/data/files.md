@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529225"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760566"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
@@ -118,7 +118,6 @@ Hay disponibles dos soluciones a este problema con los proyectos compartidos:
 - **Sincronizar los proyectos**: edite las propiedades del proyecto para cada plataforma con el fin de usar el mismo nombre de ensamblado y el **mismo** espacio de nombres predeterminado. Después, este valor se puede “codificar de forma rígida” como el prefijo para los identificadores de recursos incrustados en el proyecto compartido.
 - **Directivas de compilador #if**: use directivas de compilador para establecer el prefijo de identificador de recurso correcto y use ese valor para crear de forma dinámica el identificador de recurso correcto.
 
-
 A continuación, se muestra un ejemplo de código de la segunda opción. Las directivas de compilador se usan para seleccionar el prefijo del recurso codificado de forma rígida (que suele ser el mismo que el espacio de nombres predeterminado del proyecto al que se hace referencia). Después, la variable `resourcePrefix` se usa para crear un identificador de recurso válido al concatenarlo con el nombre de archivo del recurso incrustado.
 
 ```csharp
@@ -169,4 +168,3 @@ En este artículo, se muestran algunas operaciones de archivo sencillas para gua
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
 - [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
-

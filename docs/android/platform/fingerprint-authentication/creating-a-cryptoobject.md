@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7328792e0d921beb09389d9a0400ea97766b2246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119836"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756443"
 ---
 # <a name="creating-a-cryptoobject"></a>Creación de un CryptoObject
 
@@ -124,7 +124,7 @@ A continuación, `KeyGenParameterSpec` se crea una con `KeyGenParameterSpec.Buil
 
 - Nombre de la clave.
 - La clave debe ser válida para el cifrado y el descifrado.
-- En el código `BLOCK_MODE` de ejemplo, se establece en encadenamiento de`KeyProperties.BlockModeCbc` _bloques_ de cifrado (), lo que significa que cada bloque es XORed con el bloque anterior (creando dependencias entre cada bloque). 
+- En el código `BLOCK_MODE` de ejemplo, se establece en _encadenamiento de bloques de cifrado_ (`KeyProperties.BlockModeCbc`), lo que significa que cada bloque es XORed con el bloque anterior (creando dependencias entre cada bloque). 
 - Usa `CryptoObjectHelper` el [_estándar de criptografía de clave pública #7_](https://tools.ietf.org/html/rfc2315) (_pkcs7_) para generar los bytes que rellenarán los bloques para asegurarse de que tienen el mismo tamaño.
 - `SetUserAuthenticationRequired(true)`significa que se requiere la autenticación del usuario antes de que se pueda usar la clave.
 
@@ -154,8 +154,6 @@ protected void FingerPrintAuthenticationExample()
 ```
 
 Ahora que hemos aprendido a crear un `CryptoObject`, vamos a ver `FingerprintManager.AuthenticationCallbacks` cómo se usan para transferir los resultados del servicio de análisis de huellas digitales a una aplicación de Android.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

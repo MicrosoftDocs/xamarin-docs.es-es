@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e934059f5428780ea19917068503b58961ac5673
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 51afbdf79248af6f76426dd0e0c862e506a0a22f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284185"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768781"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 
@@ -41,7 +41,6 @@ Una propiedad declarada por un control personalizado aparecerá en el panel de p
 1. La propiedad tiene un [ExportAttribute](xref:Foundation.ExportAttribute) , así como un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) establecido en true.
 1. El tipo de propiedad es un tipo numérico, un tipo de enumeración, una cadena, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor)o [UIImage](xref:UIKit.UIImage). Esta lista de tipos admitidos puede expandirse en el futuro.
 
-
 La propiedad también se puede decorar con un [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) para especificar la etiqueta que se muestra en el panel de propiedades.
 
 ## <a name="initialization"></a>Inicialización
@@ -49,7 +48,6 @@ La propiedad también se puede decorar con un [DisplayNameAttribute](xref:System
 En `UIViewController` el caso de las subclases, debe usar el método [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) para el código que depende de las vistas que creó en el diseñador.
 
 Para `UIView` y otras `NSObject` subclases, el método [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) es el lugar recomendado para realizar la inicialización del control personalizado una vez que se carga desde el archivo de diseño. Esto se debe a que las propiedades personalizadas establecidas en el panel de propiedades no se establecerán cuando se ejecute el constructor del control, pero se establecerán antes `AwakeFromNib` de que se llame a:
-
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -131,7 +129,6 @@ El `CustomView` componente expone una `Counter` propiedad que el desarrollador p
 - El `AwakeFromNib` método se ejecuta y se realiza una llamada al método del `Initialize` componente.
 - Dentro `Initialize` del valor de la `Counter` propiedad se restablece a cero (0).
 
-
 Para corregir la situación anterior, inicialice la `Counter` propiedad en otra parte (como en el constructor del componente) o no invalide el `AwakeFromNib` método `Initialize` y llame a si el componente no requiere inicialización adicional fuera de lo que está siendo controlado por sus constructores.
 
 ## <a name="design-mode"></a>Modo de diseño
@@ -140,7 +137,6 @@ En la superficie de diseño, un control personalizado debe cumplir algunas restr
 
 - Los recursos del lote de aplicaciones no están disponibles en el modo de diseño. Las imágenes están disponibles cuando se cargan a través de [los métodos UIImage](xref:UIKit.UIImage) .
 - Las operaciones asincrónicas, como las solicitudes Web, no se deben realizar en modo de diseño. La superficie de diseño no admite animaciones ni otras actualizaciones asincrónicas en la interfaz de usuario del control.
-
 
 Un control personalizado puede implementar [IComponent](xref:System.ComponentModel.IComponent) y utilizar la propiedad [DesignMode](xref:System.ComponentModel.ISite.DesignMode) para comprobar si está en la superficie de diseño. En este ejemplo, la etiqueta mostrará "modo de diseño" en la superficie de diseño y "tiempo de ejecución" en tiempo de ejecución:
 

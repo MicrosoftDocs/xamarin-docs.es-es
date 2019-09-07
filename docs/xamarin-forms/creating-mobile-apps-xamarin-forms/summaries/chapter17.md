@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 17. Dominar la cuadrícula
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 17. Dominar la cuadrícula'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 17. Dominar la cuadrícula'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333744"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760625"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominar la cuadrícula
 
@@ -101,8 +101,6 @@ El [ **KeypadGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree
 El `Grid` puede ayudar a estructurar un programa para responder a los cambios de orientación. El [ **GridRgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) muestra una técnica que mueve un elemento entre una segunda fila de un teléfono con orientación vertical y la segunda columna de un teléfono orientado a horizontal.
 
 Inicializa el programa `Slider` elementos a un intervalo de 0 a 255 y utiliza los enlaces de datos para mostrar el valor de los controles deslizantes en formato hexadecimal. Dado que el `Slider` valores son de punto flotante y la cadena de formato para hexadecimal solo funciona con números enteros, de .NET un [ `DoubleToIntConvert` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca de ayuda.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

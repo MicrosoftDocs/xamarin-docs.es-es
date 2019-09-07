@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: c8be9220f17a0f0f046f09ff61ae76d1fed7e15f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b5d1ddc4cf3a6817851d22aba920abb29d9f746f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767645"
 ---
 # <a name="attached-properties"></a>Propiedades asociadas
 
@@ -141,7 +141,6 @@ Al crear una propiedad adjunta, hay una serie de parámetros opcionales que se p
 ## <a name="summary"></a>Resumen
 
 En este artículo proporciona una introducción a las propiedades adjuntas y se muestra cómo crear y consumirlos. Una propiedad adjunta es un tipo especial de propiedad enlazable, definida en una clase, pero Unidos a otros objetos y reconocible en XAML como atributos que contienen una clase y un nombre de propiedad separados por un punto.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

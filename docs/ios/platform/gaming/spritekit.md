@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: dfda8b1ec3e7cfbdec3fe313d305d78422487f08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d2466de4891c289f4686c37bc9fe73c24a5a48ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289314"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753062"
 ---
 # <a name="spritekit-in-xamarinios"></a>SpriteKit en Xamarin. iOS
 
@@ -26,7 +26,7 @@ SpriteKit incluye una API de física de cuerpo 2D y rígida. Cada Sprite tiene u
 SpriteKit admite ahora la derivación del cuerpo de la física de un Sprite a partir de su textura. Esto facilita la implementación de colisiones que parecen más naturales.
 
 Por ejemplo, observe en la siguiente colisión cómo los plátanos y Monkey entran en conflicto casi en la superficie de cada imagen:
- 
+
 ![](spritekit-images/image13.png "El plátano y Monkey entran en conflicto casi en la superficie de cada imagen.")
 
 SpriteKit hace posible la creación de este cuerpo físico con una sola línea de código. Simplemente llame `SKPhysicsBody.Create` a con la textura y el tamaño: Sprite. PhysicsBody = SKPhysicsBody. Create (Sprite. Texture, Sprite. Tamaño);
@@ -44,7 +44,7 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 El efecto de ajustar el umbral alfa como este ajusta la colisión anterior, de modo que el Monkey se recurra al conflicto con el plátano:
 
 ![](spritekit-images/image14.png "El Monkey se sitúa cuando entra en conflicto con el plátano")
- 
+
 ## <a name="physics-fields"></a>Campos de física
 
 Otra excelente adición a SpriteKit es el nuevo soporte de campo físico. Estos permiten agregar elementos, como los campos de Vortex, los campos de gravedad radial y los campos de muelle por nombrar solo unos pocos.
@@ -86,7 +86,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 Esto hace que los plátanos oscilan como un muelle alrededor del nodo de campo:
 
 ![](spritekit-images/image15.png "Los plátanos oscilan como un muelle alrededor del nodo de campo")
- 
+
 ## <a name="radial-gravity-field"></a>Campo de gravedad radial
 
 Agregar un campo diferente es similar. Por ejemplo, el código siguiente crea un campo de gravedad radial:

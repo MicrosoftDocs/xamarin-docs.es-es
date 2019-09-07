@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 25. Variedades de página
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 25. Variedades de página'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 25. Variedades de página'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331828"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760543"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumen del capítulo 25. Variedades de página
 
@@ -111,8 +111,6 @@ El [ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 El [ **MultiTabbedColor** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) ejemplo se utiliza el [ `NamedColor` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca. El [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) archivo establece la `DataTemplate` propiedad de `TabbedPage` a un árbol visual a partir `ContentPage` que contiene enlaces a las propiedades de `NamedColor` (incluido un enlace a la `Title` propiedad).
 
 Sin embargo, esto es problemático en iOS. Solo algunos de los elementos se pueden mostrar y hay ninguna manera buena para concederles los iconos.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 16e805488969aadb0d0b8aa5c892248b7fa403c9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59047b8564db6415ea3c47d7dcb72b5d0c66d1dd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521207"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755586"
 ---
 # <a name="cpu-architectures"></a>Arquitecturas de CPU
 
@@ -21,14 +21,13 @@ _Xamarin. Android admite varias arquitecturas de CPU, incluidos los dispositivos
 ## <a name="cpu-architectures-overview"></a>Información general sobre arquitecturas de CPU
 
 Al preparar la aplicación para su lanzamiento, debe especificar las arquitecturas de CPU de la plataforma que admite la aplicación. Un APK único puede contener código máquina para admitir varias arquitecturas diferentes. Cada colección de código específico de la arquitectura está asociada a una *interfaz binaria de aplicación* (ABI). Cada ABI define cómo se espera que este código máquina interactúe con Android en tiempo de ejecución.
-Para obtener más información sobre cómo funciona, consulte [dispositivos &amp; de varios núcleos Xamarin. Android](~/android/deploy-test/multicore-devices.md).
-
+Para obtener más información sobre cómo funciona, consulte [ &amp; dispositivos de varios núcleos Xamarin. Android](~/android/deploy-test/multicore-devices.md).
 
 ## <a name="how-to-specify-supported-architectures"></a>Cómo especificar las arquitecturas admitidas
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Normalmente, se selecciona explícitamente una arquitectura (o arquitecturas) cuando la aplicación está configurada para su **lanzamiento**. Cuando la aplicación está configurada para depurar, se habilitan las opciones **usar tiempo de ejecución compartido** y **usar implementación rápida** , lo que deshabilita la selección de arquitectura explícita.
+Normalmente, se selecciona explícitamente una arquitectura (o arquitecturas) cuando la aplicación está configurada para su **lanzamiento**. Cuando la aplicación está configurada para **depurar**, se habilitan las opciones **usar tiempo de ejecución compartido** y **usar implementación rápida** , lo que deshabilita la selección de arquitectura explícita.
 
 En Visual Studio, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **propiedades**. En la página **Opciones de Android** , consulte la sección Propiedades de **empaquetado** y compruebe que la opción usar el **tiempo de ejecución compartido** está deshabilitada (la desactivación permite seleccionar explícitamente qué Abi se admite). Haga clic en el botón **Opciones avanzadas** y, en **arquitecturas admitidas**, compruebe las arquitecturas que desea admitir:
 
@@ -36,14 +35,13 @@ En Visual Studio, haga clic con el botón derecho en el proyecto en el **Explora
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Normalmente, se selecciona explícitamente una arquitectura (o arquitecturas) cuando la aplicación está configurada para su **lanzamiento**. Cuando la aplicación está configurada para depurar, se habilitan las opciones usar el entorno de **ejecución mono compartido** y la **implementación rápida** de ensamblados, lo que impide la selección de arquitectura explícita.
+Normalmente, se selecciona explícitamente una arquitectura (o arquitecturas) cuando la aplicación está configurada para su **lanzamiento**. Cuando la aplicación está configurada para **depurar**, se habilitan las opciones usar el entorno de **ejecución mono compartido** y la **implementación rápida de ensamblados** , lo que impide la selección de arquitectura explícita.
 
 En Visual Studio para Mac, busque el proyecto en el panel de **solución** , haga clic en el icono de engranaje situado junto al proyecto y seleccione **Opciones**. En el cuadro de diálogo **Opciones del proyecto** , haga clic en **compilación de Android**. Haga clic en la pestaña **General** y compruebe que la opción **usar el tiempo de ejecución mono compartido** está deshabilitada (la desactivación permite seleccionar explícitamente qué Abi admite). Haga clic en la pestaña **Opciones avanzadas** y, en **Abi compatibles**, compruebe el Abi de las arquitecturas que desea admitir:
 
 [![Selección de armeabi y armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android admite las siguientes arquitecturas:
 
@@ -74,4 +72,4 @@ No tiene que seleccionar **arm64-v8a** o **x86_64** para tener como destino disp
 ## <a name="additional-information"></a>Información adicional
 
 En algunas situaciones, puede que tenga que crear un APK independiente para cada arquitectura (para reducir el tamaño de la APK o porque la aplicación tiene bibliotecas compartidas que son específicas de una arquitectura de CPU determinada).
-Para obtener más información sobre este enfoque, vea compilar [apk específicos de ABI](~/android/deploy-test/building-apps/abi-specific-apks.md).
+Para obtener más información sobre este enfoque, vea [compilar apk específicos de ABI](~/android/deploy-test/building-apps/abi-specific-apks.md).

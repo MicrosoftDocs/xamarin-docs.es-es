@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: bcb719451529cd5a9ca829b8693c425d752cc93b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 743e6550f75ff8319ba1c880da7ef43408f0d318
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283221"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768717"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con la configuración de watchos en Xamarin
 
@@ -43,7 +43,6 @@ En la **aplicación de iPhone** de la solución (*no* la aplicación de inspecci
 
   [![](settings-images/rootplist-sml.png "Editar Settings-Watch. bundle/root. plist")](settings-images/rootplist.png#lightbox)
 
-
 ## <a name="use-settings-in-the-watch-app"></a>Uso de la configuración de la aplicación de inspección
 
 Para acceder a los valores seleccionados por el usuario, cree `NSUserDefaults` una instancia de mediante el grupo de aplicaciones `NSUserDefaultsType.SuiteName`y especifique:
@@ -64,8 +63,6 @@ var userName = shared.StringForKey ("name_preference");
 Los usuarios interactuarán con la configuración a través de la nueva aplicación de **Apple Watch** en su iPhone. Esta aplicación permite al usuario Mostrar u ocultar aplicaciones en el reloj y editar también la configuración expuesta mediante el uso **de Settings-Watch. bundle**.
 
 ![](settings-images/applewatch-1.png "Ejemplo de configuración de la aplicación") ![](settings-images/applewatch-2.png "ejemplo de configuración de la aplicación")
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

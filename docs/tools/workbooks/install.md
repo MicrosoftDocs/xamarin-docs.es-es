@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 5292a052d4f93af9b21cc7cbc51891c99d6f9403
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4638d599d72ea2a6375aa2afff5974ef8c09308d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285241"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772118"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
@@ -50,7 +50,6 @@ ms.locfileid: "70285241"
 |WPF|Solo se admite en Windows|
 |Consola (.NET Framework)|Compatible con Mac y Windows|
 |Consola (.NET Core)|Compatible con Mac y Windows|
-
 
 ## <a name="reporting-bugs"></a>Informes de errores
 

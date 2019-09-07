@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287381"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765425"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migración de un enlace a Unified API
 
@@ -134,7 +134,6 @@ Una vez realizados todos los cambios de código, es necesario modificar nuestro 
 
 Como último paso para actualizar nuestro proyecto de enlace para usar las API unificadas, es necesario modificar el `MakeFile` que usamos para compilar el proyecto o el tipo de proyecto Xamarin (si se enlaza desde dentro de Visual Studio para Mac) e indicar a _btouch_ que enlace en las API unificadas en lugar de las clásicas.
 
-
 ### <a name="updating-a-makefile"></a>Actualizar un archivo make
 
 Si usamos un archivo make para compilar el proyecto de enlace en Xamarin. DLL, tendremos que incluir la `--new-style` opción de línea de comandos y llamar a `btouch-native` en lugar `btouch`de.
@@ -149,7 +148,6 @@ PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -214,8 +212,6 @@ Una vez realizados todos estos cambios, puede compilar la nueva versión de 64 b
 ## <a name="summary"></a>Resumen
 
 En este artículo hemos mostrado los cambios que deben realizarse en un proyecto de enlace de Xamarin existente para admitir las nuevas API unificadas y los dispositivos de 64 bits y los pasos necesarios para compilar la nueva versión compatible de 64 bits de una API.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

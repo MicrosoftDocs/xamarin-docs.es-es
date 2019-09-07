@@ -6,12 +6,12 @@ ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: conceptdev
 ms.author: crdun
 ms.date: 01/15/2016
-ms.openlocfilehash: b13164b7125e04b3e92a4ae0c0c0afd428f325af
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eb4a992255fa26be1e83f27f93755e0fd8bda0a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278933"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765685"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>Atributos de comprobación de Sharpie de objetivos
 
@@ -40,4 +40,3 @@ También puede recibir rápidamente la documentación de una sugerencia mediante
 ```csharp
 sharpie verify-docs InferredFromPreceedingTypedef
 ```
-

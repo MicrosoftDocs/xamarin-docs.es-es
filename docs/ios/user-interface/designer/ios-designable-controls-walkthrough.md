@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 651df247e3b5616a3baa38e85159c6a6d5247807
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768804"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
 
@@ -26,7 +26,6 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 
 > [!IMPORTANT]
 > A partir de Xamarin. Studio 5,5, la forma en que se crean los controles personalizados es ligeramente diferente a la de las versiones anteriores. Para crear un control personalizado, se requiere `IComponent` la interfaz (con los métodos de implementación asociados) o se puede anotar la clase con `[DesignTimeVisible(true)]`. El último método se usa en el siguiente ejemplo de tutorial.
-
 
 1. Cree una nueva solución desde la aplicación de **> de iOS > aplicación de C# vista única >** plantilla `ScratchTicket`, asígnele un nombre y continúe con el Asistente para nuevo proyecto:
 
@@ -157,23 +156,19 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
     }
     ```
 
-
 1. Agregue los `FillTexture.png` `FillTexture2.png` archivos y`Monkey.png` (disponibles [en github](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) a la carpeta **recursos** .
 
 1. Haga doble clic en `Main.storyboard` el archivo para abrirlo en el diseñador:
 
     [![](ios-designable-controls-walkthrough-images/03new.png "El diseñador de iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
-
 1. Arrastre y coloque una **vista de imagen** desde el **cuadro de herramientas** en la vista del guión gráfico.
 
     [![](ios-designable-controls-walkthrough-images/04new.png "Una vista de imagen agregada al diseño")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
-
 1. Seleccione la **vista imagen** y cambie su propiedad **imagen** a `Monkey.png`.
 
     [![](ios-designable-controls-walkthrough-images/05new.png "Establecimiento de la propiedad de imagen de vista de imagen en Monkey. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
-
 
 1. A medida que se usan clases de tamaño, es necesario restringir esta vista de imagen. Haga clic en la imagen dos veces para ponerla en modo de restricción. Vamos a restringirlo al centro; para ello, haga clic en el controlador de anclaje central y alinearlo vertical y horizontalmente:
 
@@ -183,16 +178,13 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 
     [![](ios-designable-controls-walkthrough-images/07new.png "Agregar restricciones")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
-
 1. Actualice el marco en función de las restricciones haciendo clic en el botón actualizar de la barra de herramientas:
 
     [![](ios-designable-controls-walkthrough-images/08new.png "Barra de herramientas restricciones")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
-
 1. A continuación, compile el proyecto para que la **vista de vales de tachado** aparezca en **componentes personalizados** en el cuadro de herramientas:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "Cuadro de herramientas componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
-
 
 1. Arrastre y coloque una **vista de vale de tachado** para que aparezca sobre la imagen Monkey. Ajuste los manipuladores de arrastre para que la vista del vale de borrado cubra el Monkey por completo, como se muestra a continuación:
 
@@ -201,7 +193,6 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 1. Restrinja la vista del vale de desecho a la vista de imagen dibujando un rectángulo delimitador para seleccionar ambas vistas. Seleccione las opciones para restringir el ancho, el alto, el centro y el centro y actualizar los fotogramas según las restricciones, como se muestra a continuación:
 
     [![](ios-designable-controls-walkthrough-images/11new.png "Centrar y agregar restricciones")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
-
 
 1. Ejecute la aplicación y "desecho" la imagen para mostrar el Monkey.
 
@@ -272,8 +263,6 @@ Incluir un `ExportAttribute` y un `BrowsableAttribute`conel argumento establecid
 ## <a name="summary"></a>Resumen
 
 En este artículo se describe cómo crear un control personalizado, así como usarlo en una aplicación de iOS mediante el diseñador de iOS. Vimos cómo crear y compilar el control para que esté disponible para una aplicación en el cuadro de **herramientas**del diseñador. Además, analizamos cómo implementar el control para que se represente correctamente en tiempo de diseño y en tiempo de ejecución, así como en cómo exponer las propiedades del control personalizado en el diseñador.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

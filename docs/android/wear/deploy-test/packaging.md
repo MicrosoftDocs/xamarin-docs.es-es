@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198395"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763974"
 ---
 # <a name="packaging-wear-apps"></a>Aplicaciones de desgaste de empaquetado
 
@@ -47,7 +47,6 @@ A partir de Xamarin Android 5,0, la aplicación de desgaste se empaqueta automá
 
 -----
 
-
 Tenga en cuenta que recibirá un error **XA5211** si el nombre del paquete de la aplicación de desgaste no coincide con el nombre del paquete de la aplicación de mano. Por ejemplo:
 
 ```shell
@@ -57,7 +56,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 Para corregir este error, cambie el nombre del paquete de la aplicación de desgaste para que coincida con el nombre del paquete de la aplicación de mano.
 
-Al hacer clic en compilar **> compilar todo**, esta asociación desencadena el empaquetado automático del proyecto de desgaste en el proyecto principal de mano (teléfono). La aplicación de desgaste se crea automáticamente e incluye como un recurso en la aplicación de mano.
+Al hacer clic en **Compilar > compilar todo**, esta asociación desencadena el empaquetado automático del proyecto de desgaste en el proyecto principal de mano (teléfono). La aplicación de desgaste se crea automáticamente e incluye como un recurso en la aplicación de mano.
 
 El ensamblado que genera el proyecto de aplicación de desgaste no se usa como referencia de ensamblado en el proyecto de mano (teléfono). En su lugar, el proceso de compilación hace lo siguiente:
 
@@ -76,7 +75,6 @@ El ensamblado que genera el proyecto de aplicación de desgaste no se usa como r
 
 - Agrega la aplicación de desgaste como un recurso **sin procesar** al proyecto de mano. 
 
-
 ## <a name="manual-packaging"></a>Empaquetado manual
 
 Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de la versión 5,0, pero debe seguir estas instrucciones de empaquetado manual para distribuir la aplicación: 
@@ -85,7 +83,7 @@ Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de 
 
 2. Compile manualmente el proyecto portátil como una compilación de **versión** .
 
-3. Agregue manualmente la versión **. APK** del paso (2) en el directorio Resources **/raw** del proyecto de mano (teléfono).
+3. Agregue manualmente la versión **. APK** del paso (2) en el directorio **Resources/RAW** del proyecto de mano (teléfono).
 
 4. Agregue manualmente un nuevo recurso de recursos XML **/XML/wearable_app_desc. XML** en el proyecto de mano que hace referencia a portátil **apk** del paso (3):
 
@@ -105,4 +103,3 @@ Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de 
     ```
 
 Vea también las [instrucciones manuales](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)del sitio para desarrolladores de Android packging.
-

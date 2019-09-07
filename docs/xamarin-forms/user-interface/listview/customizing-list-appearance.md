@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fc0664ff32e63af5d0c80f69ff69f4992ad0c708
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770309"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizar la apariencia de ListView
 
@@ -294,12 +294,10 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "ListView con alto de fila fijo")
 
-
 ### <a name="uneven-rows"></a>Filas desiguales
 
 Si desea que las filas individuales tengan distintas alturas, puede establecer el `HasUnevenRows` propiedad `true`.
 Tenga en cuenta que el alto de las filas no tiene que configurar manualmente una vez `HasUnevenRows` se ha establecido en `true`, ya que el alto se calculará automáticamente mediante Xamarin.Forms.
-
 
 C#:
 
@@ -337,8 +335,6 @@ El `OnImageTapped` controlador de eventos se ejecuta en respuesta a una [ `Image
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView con cambio de tamaño de fila en tiempo de ejecución")
 
 Tenga en cuenta que hay grandes posibilidades de degradación del rendimiento si esta característica está sobreutilizada.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

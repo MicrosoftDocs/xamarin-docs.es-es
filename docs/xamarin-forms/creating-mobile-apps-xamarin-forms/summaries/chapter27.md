@@ -7,12 +7,12 @@ ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 985510caa78733d1a53aceb41371839f544daa73
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511648"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760505"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumen del capítulo 27. Representadores personalizados
 
@@ -113,8 +113,6 @@ Los representadores de tres son:
 Los representadores de detectar cambios en el control nativo y, a continuación, llame a `SetValueFromRenderer`, que hace referencia a una propiedad enlazable definida en el `StepSlider`, un cambio en lo que hace que el `StepSlider` para desencadenar un `ValueChanged` eventos.
 
 El [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) muestra este control deslizante de nuevo.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,5 +1,5 @@
 ---
-title: Matriz de errores de Xamarin.Android
+title: Matriz de errores de Xamarin. Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7EBE4C01-8EFC-4B7E-97BA-D879994F59AB
@@ -7,392 +7,368 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 037b5a8939ab5866a10e7ecc58a1e2a5bdfb5bfd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757392"
 ---
-# <a name="xamarinandroid-errors-matrix"></a>Matriz de errores de Xamarin.Android
+# <a name="xamarinandroid-errors-matrix"></a>Matriz de errores de Xamarin. Android
 
 ## <a name="errors-reference"></a>Referencia de errores
 
-Este documento proporciona cierta información sobre los distintos códigos de error de Xamarin.
+En este documento se proporciona información sobre los distintos códigos de error de Xamarin.
 
-|Categoría|Descripción|
+|Categoría|DESCRIPCIÓN|
 |--- |--- |
 |XA0xxx|Errores de mandroid|
-|XA1xxx|Copiar el archivo o los vínculos simbólicos (proyecto relacionado) errores|
+|XA1xxx|Errores de copia de archivos/vínculos simbólicos (relacionados con proyectos)|
 |XA2xxx|Errores del vinculador|
-|XA3xxx|Errores AOT|
+|XA3xxx|Errores de AOT|
 |XA4xxx|Errores de generación de código|
-|XA5xxx|Errores de la cadena de herramientas y GCC|
-|XA6xxx|errores de herramientas internas de mandroid|
+|XA5xxx|Errores GCC y cadena de herramientas|
+|XA6xxx|mandroid errores de herramientas internas|
 |XA7xxx|Reservada|
 |XA8xxx|Reservada|
 |XA9xxx|Errores de licencia|
 
-
 ## <a name="error-codes"></a>Códigos de error
 
-### <a name="xa0xxx-errors"></a>XA0xxx Errors
+### <a name="xa0xxx-errors"></a>Errores de XA0xxx
 
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA0000|Error inesperado: rellene una [informe de errores](https://github.com/xamarin/xamarin-android/issues/new).|
-|XA0001|'-nombredisp proporcionó sin ninguna acción específica del dispositivo.|
-|XA0002|No se pudo analizar la variable de entorno '{0}'.|
-|XA0003|Nombre de la aplicación '{0}.exe' entra en conflicto con un nombre de ensamblado (.dll) de producto o SDK.|
-|XA0004|Nueva lógica de refcounting requiere sgen habilitarse demasiado.|
-|XA0005|El directorio de salida '{0}' no existe.|
-|XA0006|No hay ninguna plataforma de desarrollo en '{0}', utilice--plataforma = PLAT para especificar el SDK|
-|XA0007|El ensamblado raíz '{0}' no existe.|
-|XA0008|Debe proporcionar solo un ensamblado de raíz.|
+|XA0000|Error inesperado: rellene un [Informe de errores](https://github.com/xamarin/xamarin-android/issues/new).|
+|XA0001|'-devname se proporcionó sin ninguna acción específica del dispositivo.|
+|XA0002|No se pudo analizar la variable de{0}entorno ' '.|
+|XA0003|El nombre de{0}aplicación ". exe" entra en conflicto con un nombre de ensamblado de SDK o de producto (. dll).|
+|XA0004|La nueva lógica de refcounting requiere que el SGen esté habilitado.|
+|XA0005|El directorio de salida{0}' ' no existe.|
+|XA0006|No hay ninguna plataforma desarrollo en '{0}', use--Platform = chapas para especificar el SDK|
+|XA0007|El ensamblado raíz{0}' ' no existe.|
+|XA0008|Solo debe proporcionar un ensamblado raíz.|
 |XA0009|Error al cargar los ensamblados: {0}.|
-|XA0010|No se pudo analizar los argumentos de línea de comandos: {0}.|
-|XA0011|{0} se compiló un tiempo de ejecución más reciente ({1}) que admite MonoTouch.|
-|XA0012|Datos incompletos se proporcionan para completar '{0}'.|
-|XA0013|Compatibilidad de generación de perfiles requiere sgen habilitarse demasiado.|
-|XA0014|iOS {0} no admite la creación de aplicaciones destinadas a ARMv6.|
+|XA0010|No se pudieron analizar los argumentos de la {0}línea de comandos:.|
+|XA0011|{0}se compiló con un tiempo de ejecución más{1}reciente () de lo que admite MonoTouch.|
+|XA0012|Se proporcionan datos incompletos para{0}completar ' '.|
+|XA0013|La compatibilidad con la generación de perfiles requiere que se habilite también Sgen.|
+|XA0014|iOS {0} no admite la creación de aplicaciones dirigidas a ARMv6.|
 |XA0020|No se pudo determinar la ruta de acceso de mandroid.|
-|XA0100|EmbeddedNativeLibrary '{0}' no es válido en el proyecto de aplicación de Android. Use AndroidNativeLibrary en su lugar.|
+|XA0100|EmbeddedNativeLibrary '{0}' no es válido en el proyecto de aplicación de Android. En su lugar, use AndroidNativeLibrary.|
 
-### <a name="xa1xxx-errors"></a>XA1xxx Errors
+### <a name="xa1xxx-errors"></a>Errores de XA1xxx
 
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA1001|No se pudo encontrar una aplicación en el directorio especificado.|
-|XA1002|No se pudo crear vínculos simbólicos, se copiaron los archivos.|
-|XA1003|No se pudo terminar la aplicación '{0}'. Es posible que deba eliminar manualmente la aplicación.|
+|XA1001|No se encontró ninguna aplicación en el directorio especificado.|
+|XA1002|No se pudieron crear los vínculos simbólicos, se copiaron los archivos.|
+|XA1003|No se pudo eliminar la aplicación{0}' '. Es posible que tenga que eliminar la aplicación manualmente.|
 |XA1004|No se pudo obtener la lista de aplicaciones instaladas.|
-|XA1005|No se pudo terminar la aplicación '{0}'en el dispositivo'{1}': {2}. Es posible que deba eliminar manualmente la aplicación.|
-|XA1006|No se pudo instalar la aplicación '{0}'en el dispositivo'{1}': {2}.|
-|XA1007|No se pudo iniciar la aplicación '{0}'en el dispositivo'{1}': {2}. Todavía puede iniciar manualmente la aplicación pulsando en él.|
+|XA1005|No se pudo eliminar la aplicación{0}' ' en el dispositivo{1}' ' {2}:. Es posible que tenga que eliminar la aplicación manualmente.|
+|XA1006|No se pudo instalar la aplicación{0}' ' en el dispositivo{1}' ' {2}:.|
+|XA1007|No se pudo iniciar la aplicación{0}' ' en el dispositivo{1}' ' {2}:. Puede seguir iniciando la aplicación manualmente punteando en ella.|
 |XA1008|No se pudo iniciar el simulador: {0}.|
-|XA1009|No se pudo copiar el ensamblado '{0}'para'{1}': {2}.|
-|XA1010|No se pudo cargar el ensamblado '{0}': {1}.|
-|XA1011|No se pudo agregar el archivo de recursos que faltan: '{0}'.|
+|XA1009|No se pudo copiar el ensamblado '{0}' en ' {2}{1}':.|
+|XA1010|No se pudo cargar el ensamblado{0}' {1}':.|
+|XA1011|No se pudo agregar el archivo de recursos{0}que faltaba: ' '.|
 |XA1101|No se pudo iniciar la aplicación.|
-|XA1102|No se pudo conectar con la aplicación (terminará): {0}.|
+|XA1102|No se pudo adjuntar a la aplicación (para eliminarla): {0}.|
 |XA1103|No se pudo desasociar.|
-|XA1104|No se pudo enviar el paquete: {0}.|
+|XA1104|No se pudo enviar el {0}paquete:.|
 |XA1105|Tipo de respuesta inesperado.|
-|XA1106|No se pudo obtener la lista de aplicaciones en el dispositivo: Tiempo de espera agotado para esta solicitud.|
+|XA1106|No se pudo obtener la lista de aplicaciones en el dispositivo: Se agotó el tiempo de espera de la solicitud.|
 |XA1107|No se pudo iniciar la aplicación.|
 |XA1201|No se pudo cargar el simulador: {0}.|
-|XA1301|Biblioteca nativa '{0}' ({1}) se omite porque no coincide con la actual architecture(s) de compilación ({2}).|
+|XA1301|Se omitió{0}la biblioteca{1}nativa ' ' () porque no coincide con las arquitecturas de compilación actuales ({2}).|
 
-### <a name="xa2xxx-errors"></a>XA2xxx Errors
+### <a name="xa2xxx-errors"></a>Errores de XA2xxx
 
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA2001|No se pudo vincular ensamblados.|
-|XA2002|No se puede resolver la referencia: {0}.|
-|XA2003|Opción '{0}' se omitirá porque se deshabilita la vinculación.|
-|XA2004|Archivo de definiciones de enlazador adicionales '{0}' no se pudo encontrar.|
-|XA2005|Las definiciones de '{0}' no se pudo analizar.|
-|XA2006|Referencia al elemento de metadatos '{0}' (definido en '{1}') de '{2}' no se pudo resolver.|
+|XA2001|No se pudieron vincular los ensamblados.|
+|XA2002|No se puede resolver la {0}referencia:.|
+|XA2003|Se omitirá la opción '{0}' porque la vinculación está deshabilitada.|
+|XA2004|No se encontró el archivo de{0}definiciones del vinculador adicional ' '.|
+|XA2005|No se pudieron{0}analizar las definiciones de ' '.|
+|XA2006|No se pudo resolver la{0}referencia al elemento de metadatos ' ' ({2}definido en '{1}') desde ' '.|
 
-### <a name="xa3xxx-errors"></a>XA3xxx Errors
+### <a name="xa3xxx-errors"></a>Errores de XA3xxx
 
-Estos son errores AOT.
+Estos son errores de AOT.
 
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA3001|Podría no AOT el ensamblado '{0}'.|
-|XA3002|Restricción de AOT: Método '{0}' debe ser estático, ya que está decorado con [MonoPInvokeCallback].|
-|XA3003|En conflicto: opciones de depuración y--llvm. Depurar con Soft está deshabilitada.|
+|XA3001|No se pudo el ensamblado{0}"" en AOT.|
+|XA3002|Restricción de AOT: El método{0}' ' debe ser estático, ya que se decora con [MonoPInvokeCallback].|
+|XA3003|En conflicto: opciones debug y--LLVM. La depuración de software está deshabilitada.|
 
+### <a name="xa4xxx-errors"></a>Errores de XA4xxx
 
-### <a name="xa4xxx-errors"></a>XA4xxx Errors
+Se trata de errores de generación de código.
 
-Estos son errores de generación de código.
-
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA4001|No se pudo expansed a la plantilla principal '{0}'.|
-|XA4101|El registrador no puede generar una firma para el tipo '{0}'.|
-|XA4102|El registrador encuentra un tipo no válido '{0}'en la firma de método'{2}'. Use '{1}' en su lugar.|
-|XA4103|El registrador encuentra un tipo no válido '{0}'en la firma de método'{2}': El tipo implementa INativeObject, pero no tiene un constructor que toma dos (IntPtr, bool) argumentos.|
-|XA4104|El registrador no puede serializar el valor devuelto de tipo '{0}'en la firma de método'{1}'.|
-|XA4105|El registrador no puede serializar el parámetro de tipo '{0}'en la firma de método'{1}'.|
-|XA4106|El registrador no puede serializar el valor devuelto para la estructura '{0}'en la firma de método'{1}'.|
-|XA4107|El registrador no puede serializar el parámetro de tipo '{0}'en la firma de método'{1}'.|
-|XA4108|El registrador no puede obtener el tipo ObjectiveC de tipo administrado '{0}'.|
-|XA4109|No se pudo compilar el código generado del registrador. Registre un [informe de errores](http://bugzilla.xamarin.com).|
-|XA4110|El registrador no puede serializar el parámetro de salida de tipo '{0}'en la firma de método'{1}'.|
-|XA4111|El registrador no puede generar una firma para el tipo '{0}'en el método'{1}'.|
-|XA4200|Solo se pueden generar de ACW para los tipos 'claas'.|
-|XA4201|No se puede determinar el nombre JNI de tipo {0}.|
-|XA4203|El nombre del tipo especificado debe ser completo.|
-|XA4204|No se puede resolver el tipo de interfaz '{0}'. ¿Falta una referencia de ensamblado?|
-|XA4205|[ExportField] solo puede usarse en métodos con 0 parámetros.|
-|XA4206|[Exportar] no se puede usar en un tipo genérico.|
+|XA4001|La plantilla principal no se pudo exrotar a '{0}'.|
+|XA4101|El registrador no puede compilar una{0}signatura para el tipo ' '.|
+|XA4102|El registrador encontró un tipo no{0}válido ' ' en la firma{2}para el método ' '. En su{1}lugar, use ' '.|
+|XA4103|El registrador encontró un tipo no{0}válido ' ' en la firma{2}para el método ' ': El tipo implementa INativeObject, pero no tiene un constructor que toma dos argumentos (IntPtr, bool).|
+|XA4104|El registrador no puede calcular las referencias del valor{0}devuelto para el tipo '{1}' en la Signatura del método ' '.|
+|XA4105|El registrador no puede serializar el parámetro{0}de tipo ' ' en la{1}Signatura del método ' '.|
+|XA4106|El registrador no puede calcular las referencias del valor{0}devuelto de la estructura '{1}' en la Signatura del método ' '.|
+|XA4107|El registrador no puede serializar el parámetro{0}de tipo ' ' en la{1}Signatura del método ' '.|
+|XA4108|El registrador no puede obtener el tipo ObjectiveC para el{0}tipo administrado ' '.|
+|XA4109|No se pudo compilar el código de registrador generado. Registre un [Informe de errores](http://bugzilla.xamarin.com).|
+|XA4110|El registrador no puede calcular las referencias del parámetro{0}de salida de tipo ' '{1}en la Signatura del método ' '.|
+|XA4111|El registrador no puede compilar una{0}signatura para el tipo{1}' ' en el método ' '.|
+|XA4200|Solo puede generar ACW para los tipos ' Claas '.|
+|XA4201|No se puede determinar el nombre de {0}JNI para el tipo.|
+|XA4203|El nombre de tipo especificado debe ser completo.|
+|XA4204|No se puede resolver el tipo{0}de interfaz ' '. ¿Falta una referencia de ensamblado?|
+|XA4205|[ExportField] solo se puede usar en métodos con 0 parámetros.|
+|XA4206|[Export] no se puede usar en un tipo genérico.|
 |XA4207|[ExportField] no se puede usar en un tipo genérico.|
-|XA4208|[Java.Interop.ExportFieldAttribute] no se puede usar en un método que devuelve void.|
-|XA4209|No se pudo crear JavaTypeInfo para la clase: {0} debido a {1}.|
-|XA4210|Deberá agregar una referencia a Mono.Android.Export.dll al usar ExportAttribute o ExportFieldAttribute.|
-|XA4211|AndroidManifest.xml //uses-sdk/@android:targetSdkVersion '{0}'es menor que $(TargetFrameworkVersion)'{1}'. El uso de API -{1} para la compilación ACW.|
+|XA4208|[Java. Interop. ExportFieldAttribute] no se puede usar en un método que devuelva void.|
+|XA4209|No se pudo crear JavaTypeInfo para la {0} clase: {1}debido a.|
+|XA4210|Debe agregar una referencia a mono. Android. Export. dll cuando use ExportAttribute o ExportFieldAttribute.|
+|XA4211|Archivo AndroidManifest. XML //uses-sdk/@android:targetSdkVersion '{0}' es menor que $ (TargetFrameworkVersion) '{1}'. Usar API-{1} para la compilación de ACW.|
 
+### <a name="xa5xxx-errors"></a>Errores de XA5xxx
 
-### <a name="xa5xxx-errors"></a>XA5xxx Errors
-
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA5101|Falta '{0}' compilador. Instale el NDK de Android.|
-|XA5102|Error de conversión de ensamblados en código nativo. Registre un [informe de errores](http://bugzilla.xamarin.com).|
-|XA5103|No se pudo compilar el archivo '{0}'. Registre un [informe de errores](http://bugzilla.xamarin.com).|
-|XA5201|No se pudo vincular nativo. Revise las marcas de usuario proporcionadas para gcc: {0}|
-|XA5202|No se pudo vincular nativo. Revise el registro de compilación.|
-|XA5303|Nativo vinculación advertencia: {0}.|
-|XA5300|SDK de Android no se encuentra o no totalmente instalado.|
-|XA5301|Herramienta 'Quitar' que falta. Instale Xcode componente "Herramientas de línea de comandos".|
-|XA5302|Herramienta de 'dsymutil' que falta. Instale Xcode componente "Herramientas de línea de comandos".|
-|XA5203|No se pudo generar los símbolos de depuración (directorio de dSYM). Revise el registro de compilación.|
-|XA5204|No se pudo eliminar el archivo binario final. Revise el registro de compilación.|
-|XA5205|Herramienta de 'aapt' que falta. Instale el paquete de herramientas de compilación de Android SDK.|
-|XA5206|{0}. Directorio de recursos Android {1} no existe.|
-|XA5207|{0}. Archivo de biblioteca de Java {1} no existe.|
-|XA5208|Error de descarga. Descargue {0} y colóquelo la {1} directory.|
-|XA5209|No se pudo descomprimir. Descargue {0} y extráigalo a la {1} directory.|
-|XA5210|{0}. Archivo de biblioteca nativa {1} no existe.|
+|XA5101|Falta el{0}compilador ' '. Instale el NDK de Android.|
+|XA5102|Error de conversión del ensamblado al código nativo. Registre un [Informe de errores](http://bugzilla.xamarin.com).|
+|XA5103|No se pudo compilar{0}el archivo ' '. Registre un [Informe de errores](http://bugzilla.xamarin.com).|
+|XA5201|Error de vinculación nativa. Revise las marcas de usuario proporcionadas a GCC:{0}|
+|XA5202|Error de vinculación nativa. Revise el registro de compilación.|
+|XA5303|ADVERTENCIA de vinculación {0}nativa:.|
+|XA5300|Android SDK no se encuentra o no está completamente instalado.|
+|XA5301|Falta la herramienta ' Strip '. Instale el componente de las herramientas de línea de comandos de Xcode.|
+|XA5302|Falta la herramienta ' dsymutil '. Instale el componente de las herramientas de línea de comandos de Xcode.|
+|XA5203|No se pudieron generar los símbolos de depuración (directorio dSYM). Revise el registro de compilación.|
+|XA5204|No se pudo quitar el archivo binario final. Revise el registro de compilación.|
+|XA5205|Falta la herramienta ' AAPT '. Instale el paquete de herramientas de compilación de Android SDK.|
+|XA5206|{0} El directorio {1} de recursos de Android no existe.|
+|XA5207|{0} El archivo {1} de biblioteca Java no existe.|
+|XA5208|Error en la descarga. Descargue {0} y colóquelo en el {1} directorio.|
+|XA5209|Error al descomprimir. Descárguelo {0} y extráigalo en el {1} directorio.|
+|XA5210|{0}. El archivo {1} de biblioteca nativo no existe.|
 
-### <a name="xa6xxx-errors"></a>XA6xxx Errors
+### <a name="xa6xxx-errors"></a>Errores de XA6xxx
 
-|Código de error|Descripción|
+|Código de error|DESCRIPCIÓN|
 |--- |--- |
-|XA6001|Versión en ejecución de Cecil no admite la eliminación del ensamblado.|
-|XA6002|No se pudo quitar el ensamblado '{0}'.|
-|XA6003|UnauthorizedAccessException mensaje.|
+|XA6001|La versión de ejecución de Cecil no admite la eliminación de ensamblados.|
+|XA6002|No se pudo quitar el{0}ensamblado ' '.|
+|XA6003|Mensaje UnauthorizedAccessException.|
 
-### <a name="xa9xxx-errors"></a>XA9xxx Errors
+### <a name="xa9xxx-errors"></a>Errores de XA9xxx
 
-Estos códigos de error son errores de activación y licencias.
-
+Estos códigos de error son los errores de activación y licencia.
 
 #### <a name="xa9000"></a>XA9000
 
- **Causa:** Licencia ha expirado
+ **Dará** Licencia expirada
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |WARNING|WARNING|WARNING|WARNING|WARNING|
-
 
 #### <a name="xa9001"></a>XA9001
 
- **Causa:** Versión de evaluación ha expirado
+ **Dará** Evaluación expirada
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |WARNING|WARNING|WARNING|WARNING|WARNING|
 
-
-
 #### <a name="xa9002"></a>XA9002
 
- **Causa:** AndroidJavaSource
+ **Dará** AndroidJavaSource
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|Aceptar|Aceptar|Aceptar|Aceptar|
+|ERROR|OK|OK|OK|OK|
 
- **Causa:** AndroidJavaLibrary
+ **Dará** AndroidJavaLibrary
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|Aceptar|Aceptar|Aceptar|Aceptar|
+|ERROR|OK|OK|OK|OK|
 
- **Si un ensamblado de enlace tiene el .jar incrustado, esto se detecta en el momento de paquete, no en tiempo de compilación.**
+ **Si un ensamblado de enlace tiene incrustado. jar, se detecta en tiempo de paquete, no en tiempo de compilación.**
 
- **Causa:** AndroidNativeLibrary
+ **Dará** AndroidNativeLibrary
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|Aceptar|Aceptar|Aceptar|Aceptar|
-
+|ERROR|OK|OK|OK|OK|
 
 #### <a name="xa9003"></a>XA9003
 
- **Causa:** System.Runtime.Serialization
+ **Dará** System.Runtime.Serialization
 
- **Se comprueban durante:** Paquete
+ **Comprobada durante:** Paquete
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
+|ERROR|ERROR|OK|OK|OK|
 
- **Causa:** System.ServiceModel.Web
+ **Dará** System.ServiceModel.Web
 
- **Se comprueban durante:** Paquete
+ **Comprobada durante:** Paquete
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
+|ERROR|ERROR|OK|OK|OK|
 
- **Causa:** Mono.Data.Tds
+ **Dará** Mono. Data. TDS
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
+|ERROR|ERROR|OK|OK|OK|
 
- **Esto se hace referencia a System.Data.dll, que está permitido**
+ **Se hace referencia a esto mediante System. Data. dll, que se permite**
 
- **Causa:** Mono.Android.Export
+ **Dará** Mono. Android. Export
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|Aceptar|Aceptar|Aceptar|Aceptar|
-
-
+|ERROR|OK|OK|OK|OK|
 
 #### <a name="xa9004"></a>XA9004
 
- **Causa:** : generación de perfiles
+ **Causa:** --generación de perfiles
 
- **Se comprueban durante:** Paquete
+ **Comprobada durante:** Paquete
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
-
-
+|ERROR|ERROR|OK|OK|OK|
 
 #### <a name="xa9005"></a>XA9005
 
- **Causa:** Límite de tamaño (32kb).
+ **Dará** Límite de tamaño (32 KB).
 
- **Se comprueban durante:** Paquete
+ **Comprobada durante:** Paquete
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|Aceptar|-|-|-|
-
-
+|ERROR|OK|-|-|-|
 
 #### <a name="xa9006"></a>XA9006
 
- **Causa:** Espacio de nombres System.Data.SqlClient.
+ **Dará** Espacio de nombres System. Data. SqlClient.
 
- **Se comprueban durante:** Paquete
+ **Comprobada durante:** Paquete
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
-
+|ERROR|ERROR|OK|OK|OK|
 
 #### <a name="xa9008"></a>XA9008
 
- **Causa:** Compilación desde la línea de comandos.
+ **Dará** Compilar desde la línea de comandos.
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ERROR|ERROR|Aceptar|Aceptar|Aceptar|
-
+|ERROR|ERROR|OK|OK|OK|
 
 #### <a name="xa9009"></a>XA9009
 
- **Causa:** Número de serie que faltan.
+ **Dará** Falta el número de serie.
 
- **Se comprueban durante:** Un-testable
+ **Comprobada durante:** No se pudo probar
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
-
 #### <a name="xa9010"></a>XA9010
 
- **Causa:** ProductId no válido.
+ **Dará** ProductId no válido.
 
- **Se comprueban durante:** Compilar
+ **Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
 Equivalente a XA9018.
 
-
-
 #### <a name="xa9011"></a>XA9011
 
- **Causa:** No se pudo actualizar el archivo de licencia (para el nuevo formato de archivo).
+ **Dará** No se pudo actualizar el archivo de licencia (al nuevo formato de archivo).
 
- **Se comprueban durante:** Activación
+ **Comprobada durante:** Activación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
 #### <a name="xa9012"></a>XA9012
 
- **Causa:** Sin internet
+ **Dará** Sin Internet
 
- **Se comprueban durante:** Activación
+ **Comprobada durante:** Activación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### <a name="xa9013"></a>XA9013
 
- **Causa:** Error desconocido
+ **Dará** Error desconocido
 
- **Se comprueban durante:** Activación
+ **Comprobada durante:** Activación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### <a name="xa9014"></a>XA9014
 
- **Causa:** Código de activación no válido
+ **Dará** Código de activación no válido
 
- **Se comprueban durante:** Activación
+ **Comprobada durante:** Activación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### <a name="xa9017"></a>XA9017
 
- **Causa:** Servidor de activación no devuelve una licencia válida.
+ **Dará** El servidor de activación no devuelve una licencia válida.
 
- **Se comprueban durante:** Activación
+ **Comprobada durante:** Activación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
-
 #### <a name="xa9018"></a>XA9018
 
-**Causa:** Licencia no válida
+**Dará** Licencia no válida
 
-**Se comprueban durante:** Compilar
+**Comprobada durante:** Compilación
 
-|Starter|Indie|Business(Trial)|Trabajo|Empresa|
+|Inicio|Indie|Empresa (evaluación)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
 |-|-|ERROR|-|-|
-

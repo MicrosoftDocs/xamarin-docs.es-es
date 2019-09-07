@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 62e3e6944118e82cbd7712a80eb8098f3c6541fc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754451"
 ---
 # <a name="using-data-in-an-app"></a>Uso de datos en una aplicación
 
@@ -133,7 +133,6 @@ public class YourAndroidApp : Application {
     }
 }
 ```
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

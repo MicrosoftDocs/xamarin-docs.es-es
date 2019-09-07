@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 2c290ac7d66147342087342bda5e5a19b4e6e6f7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978476"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763620"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2: implementación de WalkingGame
 
@@ -39,7 +39,7 @@ El contenido que se usa aquí se puede encontrar [en github](https://github.com/
 
 En el caso de los iniciadores, exploraremos las clases de monogame usadas en la representación básica:
 
-- `SpriteBatch`: se usa para dibujar gráficos 2D en la pantalla. Los sprites son elementos visuales 2D que se usan para mostrar imágenes en la pantalla. El `SpriteBatch` objeto puede dibujar un solo Sprite cada vez entre sus `Begin` métodos y `End` , o bien se pueden agrupar varios sprites, o procesarlos *por lotes*.
+- `SpriteBatch`: se usa para dibujar gráficos 2D en la pantalla. Los *sprites* son elementos visuales 2D que se usan para mostrar imágenes en la pantalla. El `SpriteBatch` objeto puede dibujar un solo Sprite cada vez entre sus `Begin` métodos y `End` , o bien se pueden agrupar varios sprites, o *procesarlos por lotes*.
 - `Texture2D`: representa un objeto de imagen en tiempo de ejecución. `Texture2D`las instancias se crean a menudo a partir de formatos de archivo como. png o. bmp, aunque también se pueden crear dinámicamente en tiempo de ejecución. `Texture2D`las instancias de se utilizan al representar `SpriteBatch` con instancias de.
 - `Vector2`: representa una posición en un sistema de coordenadas 2D que se suele usar para colocar objetos visuales. Monogame también incluye `Vector3` y `Vector4` , pero solo usaremos `Vector2` en este tutorial.
 - `Rectangle`: un área de cuatro lados con la posición, el ancho y el alto. Vamos a usar esto para definir la parte de `Texture2D` que se va a representar al empezar a trabajar con animaciones.
@@ -151,7 +151,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input.Touch;
 
-
 namespace WalkingGame
 {
     public class CharacterEntity
@@ -255,7 +254,6 @@ Merece la pena mencionar que, a pesar de su nombre `LoadContent` , el método no
 
 Por último, podemos modificar el método draw de la manera siguiente:
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -312,7 +310,6 @@ La `Animation` clase contendrá una `List<AnimationFrame>` , así como la lógic
 
 Para agregar la `Animation` clase, haga clic con el botón derecho o haga clic en el control en el proyecto compartido **WalkingGame** y seleccione **Agregar > nuevo archivo..** .. Escriba la **animación** de nombre y haga clic en el botón **nuevo** . Vamos a modificar el `Animation.cs` archivo para que contenga el código siguiente:
 
-
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -355,7 +352,6 @@ namespace WalkingGame
         {
             double secondsIntoAnimation = 
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
-
 
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
 
@@ -462,7 +458,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 
 Como se mencionó anteriormente, es necesario llamar `Animation.Update` a para que se reproduzcan animaciones basadas en el tiempo. También necesitamos asignar el `currentAnimation`. Por ahora, asignaremos `currentAnimation` a, pero vamos a reemplazar este código más adelante cuando implementemos nuestra lógica de `walkDown`movimiento. Vamos a agregar el `Update` método a `CharacterEntity` como se indica a continuación:
 
-
 ```csharp
 public void Update(GameTime gameTime)
 {
@@ -567,7 +562,7 @@ public void Update(GameTime gameTime)
 }
 ```
 
-Lo que hemos implementado aquí se denomina movimiento *basado en el tiempo* (en oposición al movimiento *basado* en fotogramas). El movimiento basado en el tiempo multiplica un valor de velocidad (en nuestro caso, los `velocity` valores almacenados en la variable) por la cantidad de tiempo transcurrido desde la `gameTime.ElapsedGameTime.TotalSeconds`última actualización que se almacena en. Si el juego se ejecuta en menos fotogramas por segundo, el tiempo transcurrido entre fotogramas aumenta: el resultado final es que los objetos que usan el movimiento basado en el tiempo siempre se moverán a la misma velocidad, independientemente de la velocidad de fotogramas.
+Lo que hemos implementado aquí se denomina movimiento *basado en el tiempo* (en oposición al movimiento *basado en fotogramas* ). El movimiento basado en el tiempo multiplica un valor de velocidad (en nuestro caso, los `velocity` valores almacenados en la variable) por la cantidad de tiempo transcurrido desde la `gameTime.ElapsedGameTime.TotalSeconds`última actualización que se almacena en. Si el juego se ejecuta en menos fotogramas por segundo, el tiempo transcurrido entre fotogramas aumenta: el resultado final es que los objetos que usan el movimiento basado en el tiempo siempre se moverán a la misma velocidad, independientemente de la velocidad de fotogramas.
 
 Si ejecutamos el juego ahora, veremos que el carácter se desplaza hacia la ubicación táctil:
 
@@ -661,7 +656,6 @@ public void Update(GameTime gameTime)
 
     this.X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
     this.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
 
     if (velocity != Vector2.Zero)
     {

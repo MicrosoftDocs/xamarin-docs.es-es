@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c477f030dc69394ba601b31d71a772f5037af48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758397"
 ---
 # <a name="xamarinandroid-tablelayout"></a>TableLayout de Xamarin. Android
 
@@ -21,7 +21,7 @@ elementos de filas y columnas.
 
 Inicie un nuevo proyecto denominado **HelloTableLayout**.
 
-Abra el archivo Resources **/layout/main. axml** e inserte lo siguiente:
+Abra el archivo **Resources/layout/main. axml** e inserte lo siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -118,13 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-El [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carga el archivo de diseño para [`Activity`](xref:Android.App.Activity)el, especificado por el identificador &mdash; `Resource.Layout.Main` de recurso hace referencia al archivo de diseño Resources **/layout/main. axml** .
+El [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carga el archivo de diseño para [`Activity`](xref:Android.App.Activity)el, especificado por el identificador &mdash; `Resource.Layout.Main` de recurso hace referencia al archivo de diseño **Resources/layout/main. axml** .
 
 Ejecute la aplicación. Debería ver lo siguiente:
 
 [![Captura de pantalla de ejemplo de la aplicación TableLayout que muestra varias filas de la tabla](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
-
-
 
 ## <a name="references"></a>Referencias
 
@@ -132,4 +130,4 @@ Ejecute la aplicación. Debería ver lo siguiente:
 - [`TableRow`](xref:Android.Widget.TableRow)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la licencia de atribución de [Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/)._
+_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la [licencia de atribución de Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/)._

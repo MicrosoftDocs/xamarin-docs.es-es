@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b88d6c33671f36d2d4106f45a267322320639c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280633"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765338"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -124,7 +124,6 @@ Tenga en cuenta estos puntos:
 - El tipo de valor `Task<int>` devuelto es para que el `int` código de llamada pueda tener acceso al valor que se calcula en este método.
 - La instrucción return `return exampleInt;` es un objeto entero (el hecho que devuelve `Task<int>` el método forma parte de las mejoras del lenguaje).
 
-
 ### <a name="calling-an-async-method-1"></a>Llamar a un método asincrónico 1
 
 Este controlador de eventos de clic de botón puede encontrarse en la aplicación de ejemplo de Android para llamar al método descrito anteriormente:
@@ -153,7 +152,6 @@ Notas:
 - El código espera en la variable sizeTask.  *Esta* es la ubicación en la que se suspende el método y el control se devuelve al código de llamada hasta que la tarea asincrónica finaliza en su propio subproceso.
 - La ejecución *no se detiene cuando* la tarea se crea en la primera línea del método, a pesar de que la tarea se crea allí. La palabra clave Await representa la ubicación en la que se pausa la ejecución.
 - Cuando finaliza la tarea asincrónica, se establece intResult y la ejecución continúa en el subproceso original, desde la línea Await.
-
 
 ### <a name="calling-an-async-method-2"></a>Llamar a un método asincrónico 2
 
@@ -185,14 +183,11 @@ Algunos puntos importantes:
 - Código `await` s en el `DownloadHomepage` método directamente en una asignación a una variable () `intResult` , a diferencia del ejemplo anterior en el que usamos una `Task<int>` variable intermedia para hacer referencia a la tarea.  *Esta* es la ubicación donde se devuelve el control al autor de la llamada hasta que el método asincrónico se ha completado en otro subproceso.
 - Cuando el método asincrónico se completa y devuelve, la ejecución se reanuda en `await` , lo que significa que se devuelve el resultado entero y, a continuación, se representa en un widget de interfaz de usuario.
 
-
 ## <a name="summary"></a>Resumen
 
 El uso de Async y Await simplifica en gran medida el código necesario para generar operaciones de ejecución prolongada en subprocesos en segundo plano sin bloquear el subproceso principal. También facilitan el acceso a los resultados cuando se completa la tarea.
 
 En este documento se proporciona información general sobre las nuevas palabras clave del lenguaje y ejemplos de Xamarin. iOS y Xamarin. Android.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

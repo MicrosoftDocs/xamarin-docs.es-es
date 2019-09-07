@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2787e814d330bf8262ba05e38c7827211e07fd72
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522611"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764260"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalización de la apariencia de un control ListView con Xamarin. Android
 
 La apariencia de un control ListView viene determinada por el diseño de las filas que se muestran. Para cambiar la apariencia de un `ListView`, utilice un diseño de fila diferente.
-
 
 ## <a name="built-in-row-views"></a>Vistas de fila integradas
 
@@ -82,8 +81,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 
 Las propiedades de la vista de grupo y la vista secundaria se pueden establecer haciendo referencia a los `Text1` identificadores estándar y `Text2` de control, tal y como se muestra anteriormente. La captura de pantalla SimpleExpandableListItem (mostrada anteriormente) proporciona un ejemplo de una vista de grupo de una línea (SimpleExpandableListItem1) y una vista secundaria de dos líneas (SimpleExpandableListItem2). Como alternativa, se puede configurar la vista de grupo para dos líneas (SimpleExpandableListItem2) y la vista secundaria se puede configurar para una línea (SimpleExpandableListItem1), o ambas vistas de grupo y secundarias pueden tener el mismo número de líneas. 
 
-
-
 ## <a name="accessories"></a>Accesorios
 
 Las filas pueden tener accesorios agregados a la derecha de la vista para indicar el estado de la selección:
@@ -105,7 +102,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 ```
 
 El `ListView` mismo es compatible con los distintos modos de selección, independientemente del accesorio que se muestre. Para evitar confusiones, `Single` use el modo `SingleChoice` de selección con `Checked` accesorios `Multiple` y el modo `MultipleChoice` o con el estilo. El modo `ChoiceMode` `ListView`de selección se controla mediante la propiedad de.
-
 
 ### <a name="handling-api-level"></a>Control de nivel de API
 
@@ -129,7 +125,6 @@ lv.ChoiceMode = 1; // Single
 //lv.ChoiceMode = 3; // MultipleModal
 */
 ```
-
 
 ### <a name="selecting-items-programmatically"></a>Seleccionar elementos mediante programación
 
@@ -157,7 +152,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-
 ## <a name="creating-custom-row-layouts"></a>Crear diseños de fila personalizados
 
 Las cuatro vistas de filas integradas son muy sencillas. Para mostrar diseños más complejos (como una lista de correos electrónicos, tweets o información de contacto), se necesita una vista personalizada. Las vistas personalizadas se declaran generalmente como archivos AXML en el directorio de **recursos/diseño** y, a continuación, se cargan con su identificador de recurso mediante un adaptador personalizado. La vista puede contener cualquier número de clases de presentación (como TextViews, ImageViews y otros controles) con colores personalizados, fuentes y diseño.
@@ -176,13 +170,11 @@ Este ejemplo difiere de los ejemplos anteriores de varias maneras:
 
 - `ItemClick`se debe declarar de forma diferente (se adjunta `ListView.ItemClick` un controlador de eventos en lugar de un reemplazo `OnListItemClick` en `ListActivity`).
 
-
 Estos cambios se detallan a continuación, empezando por crear la vista de la actividad y la vista de fila personalizada y, a continuación, abarcando las modificaciones en el adaptador y la actividad para representarlas.
-
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>Agregar un control ListView a un diseño de actividad
 
-Dado `HomeScreen` que ya no se hereda `ListActivity` de, no tiene una vista predeterminada, por lo que se debe crear un archivo de diseño AXML para la vista de HomeScreen. En este ejemplo, la vista tendrá un encabezado (con `TextView`) y un `ListView` para mostrar los datos. El diseño se define en el archivo Resources **/layout/HomeScreen. axml** que se muestra aquí:
+Dado `HomeScreen` que ya no se hereda `ListActivity` de, no tiene una vista predeterminada, por lo que se debe crear un archivo de diseño AXML para la vista de HomeScreen. En este ejemplo, la vista tendrá un encabezado (con `TextView`) y un `ListView` para mostrar los datos. El diseño se define en el archivo **Resources/layout/HomeScreen. axml** que se muestra aquí:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -210,10 +202,9 @@ Dado `HomeScreen` que ya no se hereda `ListActivity` de, no tiene una vista pred
 
 La ventaja de usar un `Activity` con un diseño personalizado (en lugar de un `ListActivity`) radica en poder agregar controles adicionales a la pantalla, como el encabezado `TextView` de este ejemplo.
 
-
 ### <a name="creating-a-custom-row-layout"></a>Crear un diseño de fila personalizado
 
-Se requiere otro archivo de diseño AXML para que contenga el diseño personalizado para cada fila que aparecerá en la vista de lista. En este ejemplo, la fila tendrá un fondo verde, texto marrón y imagen alineada a la derecha. El marcado XML de Android para declarar este diseño se describe en Resources **/layout/CustomView. axml**:
+Se requiere otro archivo de diseño AXML para que contenga el diseño personalizado para cada fila que aparecerá en la vista de lista. En este ejemplo, la fila tendrá un fondo verde, texto marrón y imagen alineada a la derecha. El marcado XML de Android para declarar este diseño se describe en **Resources/layout/CustomView. axml**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -256,7 +247,6 @@ Se requiere otro archivo de diseño AXML para que contenga el diseño personaliz
 
 Aunque un diseño de fila personalizado puede contener muchos controles diferentes, el rendimiento del desplazamiento puede verse afectado por diseños complejos y el uso de imágenes (especialmente si tienen que cargarse a través de la red). Vea el artículo de Google para obtener más información sobre cómo solucionar problemas de rendimiento de desplazamiento.
 
-
 ### <a name="referencing-a-custom-row-view"></a>Hacer referencia a una vista de fila personalizada
 
 La implementación del ejemplo de adaptador personalizado está en `HomeScreenAdapter.cs`. El método clave es `GetView` donde carga el AXML personalizado mediante el identificador `Resource.Layout.CustomView`de recurso y, a continuación, establece las propiedades de cada uno de los controles de la vista antes de devolverlos. Se muestra la clase de adaptador completa:
@@ -297,7 +287,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>Hacer referencia al control ListView personalizado en la actividad
 
 Dado que `HomeScreen` la clase ahora hereda de `Activity`, se `ListView` declara un campo en la clase para que contenga una referencia al control declarado en AXML:
@@ -331,8 +320,6 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 La pantalla resultante tiene el siguiente aspecto:
 
 [![Captura de pantalla del CustomRowView resultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
-
-
 
 ### <a name="customizing-the-row-selector-color"></a>Personalizar el color del selector de filas
 
@@ -374,13 +361,9 @@ Una fila seleccionada y el mensaje `Toast` correspondiente ahora tienen el sigui
 
 [![Una fila seleccionada en naranja, con el mensaje del sistema que muestra el nombre de la fila seleccionada](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
-
-
 ### <a name="preventing-flickering-on-custom-layouts"></a>Evitar el parpadeo en los diseños personalizados
 
 Android intenta mejorar el rendimiento del desplazamiento `ListView` mediante el almacenamiento en caché de la información de diseño. Si tiene listas de desplazamiento de datos de gran tamaño, también debe establecer `android:cacheColorHint` la propiedad en `ListView` la declaración de la definición de AXML de la actividad (en el mismo valor de color que el fondo del diseño de fila personalizado). Si no se incluye esta sugerencia, se podría producir un "parpadeo" cuando el usuario se desplace a través de una lista con colores de fondo de fila personalizados.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

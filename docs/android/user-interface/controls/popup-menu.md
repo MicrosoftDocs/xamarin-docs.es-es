@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 9b3e4177d6be5854e80952d091aa78787d9645bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8a808e6ea49338de5b6bd1618fc2227e6cf5f0b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764894"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Menú emergente de Xamarin. Android
 
@@ -20,10 +20,9 @@ El [menú](xref:Android.Widget.PopupMenu) desacoplado (también denominado _men�
 
 [![Ejemplo de una aplicación con un botón y un menú emergente de tres elementos](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
-
 ## <a name="creating-a-popup-menu"></a>Crear un menú emergente
 
-El primer paso es crear un archivo de recursos de menú para el menú y colocarlo en **recursos/menú**. Por ejemplo, el siguiente XML es el código para el menú de tres elementos que se muestra en la captura de pantalla anterior, Resources **/Menu/popup_menu. XML**:
+El primer paso es crear un archivo de recursos de menú para el menú y colocarlo en **recursos/menú**. Por ejemplo, el siguiente XML es el código para el menú de tres elementos que se muestra en la captura de pantalla anterior, **Resources/menu/popup_menu. XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -47,7 +46,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-Por último, el menú emergente debe estar inflado con el recurso de menú que se creó anteriormente. En el ejemplo siguiente, se agrega la llamada al método [Inflate](xref:Android.Views.LayoutInflater.Inflate*) del menú y se llama a su método [Show](xref:Android.Widget.PopupMenu.Show) para mostrarlo:
+Por último, el menú emergente debe estar *inflado* con el recurso de menú que se creó anteriormente. En el ejemplo siguiente, se agrega la llamada al método [Inflate](xref:Android.Views.LayoutInflater.Inflate*) del menú y se llama a su método [Show](xref:Android.Widget.PopupMenu.Show) para mostrarlo:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -56,7 +55,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
 
 ## <a name="handling-menu-events"></a>Control de eventos de menú
 
@@ -77,8 +75,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

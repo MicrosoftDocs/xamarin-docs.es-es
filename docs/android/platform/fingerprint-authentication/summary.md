@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d406b492e2f55604daf8a1c6b4be32f23b63f54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761234"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Guía de autenticación mediante huellas digitales
 
@@ -34,8 +34,6 @@ La autenticación mediante huella digital es una excelente manera de permitir qu
 En primer lugar, analizamos las propias API `FingerprintManager` de huellas `FingerprintManagerCompat`digitales, (y). Hemos examinado cómo `FingerprintManager.AuthenticationCallbacks` una aplicación debe extender la clase abstracta y utilizarla como intermediario entre el hardware de huella digital y la propia aplicación. Después, hemos examinado cómo comprobar la integridad de los resultados del escáner de huellas `Cipher` digitales con un objeto de Java. Por último, hemos retocado un poco en las pruebas describiendo cómo inscribir una huella digital en un dispositivo y usar **ADB** para simular una huella digital en un emulador. 
 
 Si todavía no lo ha hecho, debe examinar la aplicación de [ejemplo](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) que acompaña a esta guía. El [ejemplo de cuadro de diálogo de huellas digitales](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) se ha trasladado de Java a Xamarin. Android y proporciona otro ejemplo sobre cómo agregar la autenticación mediante huellas digitales a una aplicación de Android.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

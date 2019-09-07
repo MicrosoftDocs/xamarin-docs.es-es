@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523082"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762440"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Autocompletar para Xamarin. Android
 
@@ -47,7 +47,6 @@ widget que proporciona sugerencias para un nombre de país.
 
 [`TextView`](xref:Android.Widget.TextView) Es una etiqueta que presenta el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
-
 
 ## <a name="tutorial"></a>Tutorial
 
@@ -166,8 +165,6 @@ Ejecute la aplicación. A medida que escribe, debería ver algo parecido a esto:
 
 [![Captura de pantalla de autocompletar de ejemplo con nombres que contienen "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## <a name="more-information"></a>Más información
 
 Tenga en cuenta que el uso de una matriz de cadenas codificadas de forma rígida no es una práctica de diseño recomendada, ya que el código de la aplicación debe centrarse en el comportamiento, no en el contenido. El contenido de la aplicación, como las cadenas, se debe externalizar desde el código para facilitar modificaciones en el contenido y facilitar la localización del contenido. Las cadenas codificadas de forma rígida se usan en este tutorial solo para simplificar y centrarse en el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
@@ -196,11 +193,10 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-
 ### <a name="references"></a>Referencias
 
 - [Receta AutoCompleteTextView](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Proyecto de ejemplo de Xamarin. Android para el`AutoCompleteTextView`
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 - [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la licencia de atribución de [Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/). Este tutorial se basa en el tutorial de autocompletar de [Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._
+_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la [licencia de atribución de Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/). Este tutorial se basa en el [tutorial de autocompletar de Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4f1f1333c35a72e7243e892e7aac8d98603c973
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287253"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772601"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Esquematizar vistas en Xamarin. Mac
 
@@ -447,7 +447,6 @@ Si desea permitir que el usuario seleccione una sola fila, haga doble clic en el
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-
 Después, edite `ProductOutlineDelegate.cs` el archivo y agregue el siguiente método:
 
 ```csharp
@@ -469,7 +468,6 @@ Si desea permitir que el usuario seleccione varias filas, haga doble clic en el 
 [![](outline-view-images/select02.png "Inspector de atributo")](outline-view-images/select02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
-
 
 Después, edite `ProductOutlineDelegate.cs` el archivo y agregue el siguiente método:
 

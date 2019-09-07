@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 80f2b686e9802a93b0cf32420ccaef3e8877727c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738888"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759553"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapa de bits de SkiaSharp
 
@@ -68,7 +68,6 @@ HttpClient httpClient = new HttpClient();
 Cuando se usa `HttpClient` con aplicaciones iOS y Android, desea establecer las propiedades del proyecto, como se describe en los documentos en  **[seguridad de capa de transporte (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
 Porque es más conveniente utilizar el `await` operador con `HttpClient`, no se puede ejecutar el código en el `BasicBitmapsPage` constructor. En su lugar, forma parte de la `OnAppearing` invalidar. Aquí la dirección URL apunta a un área en el sitio web de Xamarin con algunos mapas de bits de ejemplo. Un paquete en el sitio web permite anexar una especificación para cambiar el tamaño de mapa de bits a un ancho determinado:
-
 
 ```csharp
 protected override async void OnAppearing()

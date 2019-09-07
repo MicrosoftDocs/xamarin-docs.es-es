@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 1e2ad12e7dc52b44bda079340638298b87ac5f65
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6fa442926fc2a54325713caf9764b37b530a345d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291211"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769843"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas en Xamarin. Mac
 
@@ -109,7 +109,6 @@ alert.BeginSheet (this);
 Si se ejecuta este código, se mostrará lo siguiente:
 
 [![](alert-images/alert03.png "Una alerta que se muestra como una hoja")](alert-images/alert03.png#lightbox)
-
 
 <a name="Working_with_Alert_Buttons" />
 

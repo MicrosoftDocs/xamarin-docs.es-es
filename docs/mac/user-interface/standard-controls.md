@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18ce7eb4dcd68596027f739579fd5a4b70497829
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292242"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772703"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles estándar en Xamarin. Mac
 
@@ -215,7 +215,6 @@ Seleccione el tipo de exposición que desea crear y asigne un **nombre**a la **s
 
 [![](standard-controls-images/edit13.png "Configuración de la salida o acción")](standard-controls-images/edit13.png#lightbox)
 
-
 Para obtener más información sobre cómo trabajar con **salidas** y **acciones**, consulte la sección [tomas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) de nuestra [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentación.
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -324,7 +323,6 @@ Cuando se ejecuta la aplicación y la ventana con el botón es clave y se centra
 AppKit proporciona varios tipos de casillas y grupos de botones de radio que se pueden usar en el diseño de la interfaz de usuario. Para obtener más información, consulte la sección [botones](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) de las [directrices de interfaz humana de Apple OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
 [![](standard-controls-images/buttons02.png "Un ejemplo de los tipos de casilla disponibles")](standard-controls-images/buttons02.png#lightbox)
-
 
 Las casillas y los botones de radio (expuestos a través de las **salidas**) tienen un estado (como **on** y **OFF**), el estado se `State` puede comprobar o `NSCellStateValue` establecer con la propiedad en la enumeración. Por ejemplo:
 
@@ -637,7 +635,6 @@ Mediante el uso de la codificación de valores clave y técnicas de enlace de da
 La codificación de valores clave (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a`get/set`través de variables de instancia o métodos de descriptor de acceso (). Mediante la implementación de los descriptores de acceso compatibles con el código clave-valor en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS como la observación de clave-valor (KVO), el enlace de datos, los enlaces de cacao y la creación de scripts.
 
 Para obtener más información, consulte la sección [enlace de datos simple](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) de nuestra documentación sobre el [enlace de datos y el código de valor de clave](~/mac/app-fundamentals/databinding.md) .
-
 
 <a name="Summary" />
 

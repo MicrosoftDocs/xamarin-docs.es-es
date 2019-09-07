@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293143"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768688"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
@@ -42,7 +42,6 @@ Ahora debería poder ejecutar la aplicación de inspección, pero como el archiv
 
 Haga doble clic en interface. Storyboard en la aplicación de inspección para iniciar Xamarin iOS Designer (si está en un equipo Mac, también puede hacer clic con el botón derecho y **abrirlo con > Xcode Interface Builder**).
 
-
 1. Asegúrese de que los paneles **cuadro de herramientas** y **propiedades** estén visibles,
 1. Haga clic para seleccionar el controlador de interfaz,
 1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
@@ -62,7 +61,6 @@ Haga doble clic en interface. Storyboard en la aplicación de inspección para e
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch")
 
 -----
-
 
 Cree la interfaz de usuario:
 
@@ -154,7 +152,6 @@ Cuando se inicie el simulador, presione el botón para incrementar la etiqueta.
 Enhorabuena, tiene una aplicación de Watch.
 
 ![](hello-watch-images/running.png "La aplicación que se ejecuta en el simulador")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

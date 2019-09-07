@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: d3face5db37e22fe7acceaa975c3327bb02b78ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8107a26e090aa920d71146d5f2af8b8365697d6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523323"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757214"
 ---
 # <a name="resolving-library-installation-errors"></a>Resolución de errores de instalación de biblioteca
 
@@ -23,8 +23,6 @@ _En algunos casos, es posible que obtenga errores al instalar las bibliotecas de
 
 Al compilar un proyecto de aplicación de Xamarin. Android, es posible que obtenga errores de compilación cuando Visual Studio o Visual Studio para Mac intenten descargar e instalar las bibliotecas de dependencias. Muchos de estos errores se deben a problemas de conectividad de red, archivos dañados o problemas de control de versiones. En esta guía se describen los errores de instalación de la biblioteca de soporte técnico más comunes y se proporcionan los pasos para solucionar estos problemas y volver a compilar el proyecto de la aplicación. 
 
- 
- 
 ## <a name="errors-while-downloading-m2repository"></a>Errores al descargar m2Repository
 
 Es posible que vea errores de **m2repository** al hacer referencia a un paquete NuGet de las bibliotecas de compatibilidad de Android o los servicios de Google Play. El mensaje de error es similar al siguiente:
@@ -34,8 +32,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 ```
 
 Este ejemplo es para **Android\_m2repository\_R16**, pero puede ver el mismo mensaje de error para una versión diferente, como **Android\_m2repository\_R18** o **Android\_ . m2repository\_R25**. 
-
-
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Recuperación automática de errores de m2repository 
 
@@ -60,8 +56,6 @@ A menudo, este problema se puede solucionar eliminando la biblioteca problemáti
 4. Volver a generar &ndash; el proyecto con esto hará que el proceso de compilación vuelva a descargar la biblioteca que falta.
 
 En la mayoría de los casos, estos pasos resolverán el error de compilación y podrán continuar. Si al eliminar esta biblioteca no se resuelve el error de compilación, debe descargar e instalar manualmente el **archivo\_Android\_m2repository r_nn_. zip** como se describe en la sección siguiente. 
-
-
 
 ### <a name="manually-downloading-m2repository"></a>Descarga manual de m2repository
 
@@ -109,7 +103,7 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
 2. Cambie el nombre del archivo por el hash MD5 correspondiente de la dirección URL de descarga, tal como se muestra en la tabla anterior. Por ejemplo, si descargó **Android\_m2repository\_R25. zip**, cambie su nombre a **0B3F1796C97C707339FB13AE8507AF50. zip**. Si el hash MD5 de la dirección URL de descarga del archivo descargado no se muestra en la tabla, puede usar un [generador de MD5 en línea](http://www.webconfs.com/online-md5-generator.php) para convertir la dirección URL a una cadena hash MD5. 
 
-3. Copie el archivo en la carpeta Xamarin mozip: 
+3. Copie el archivo en **la carpeta Xamarin** mozip: 
 
     - En Windows, esta carpeta se encuentra en **C:\\usuarios\\nombre de\\***usuario***\\AppData\\\\local Xamarin**mozip. 
 
@@ -119,9 +113,7 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
     [![Ejemplo del repositorio R16. zip cuyo nombre se ha cambiado a 0595E577D19D31708195A83087881EE6. zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 Si este procedimiento no soluciona el error de compilación, debe descargar manualmente el archivo **m2repository\_\_r_nn_. zip de Android** , descomprimirlo e instalar su contenido tal y como se describe en la sección siguiente. 
-
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Descarga e instalación manuales de archivos m2repository
 
@@ -144,7 +136,7 @@ Siga estos pasos para descargar **m2repository** e instalar su contenido:
 
     [![carpeta m2repository encontrada en el archivo zip extraído](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
-4. En el directorio de la biblioteca con versión que purgó en el paso 1, vuelva a crear el **contenido** y los subdirectorios **incrustados** . Por ejemplo, en la siguiente captura de pantalla se muestra el **contenido** y los subdirectorios **incrustados** que se crean en la carpeta **23.1.1.0** para **\_Android m2repository\_R25. zip**: 
+4. En el directorio de la biblioteca con versión que purgó en el paso 1, vuelva a crear el **contenido** y los subdirectorios **incrustados** . Por ejemplo, en la siguiente captura de pantalla se muestra el **contenido** y los subdirectorios **incrustados** que se crean en la carpeta **23.1.1.0** para **Android\_m2repository\_R25. zip**: 
 
     [![Crear contenido y carpetas incrustadas en la carpeta 23.1.1.0](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
@@ -160,15 +152,13 @@ Siga estos pasos para descargar **m2repository** e instalar su contenido:
 
     [![Ejemplo de archivos copiados en la carpeta 23.1.1.0/Embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
-8. Compruebe que se copian todos los archivos. El directorio incrustado debe contener ahora archivos como **. jar**, **. AAR**y **. archivo POM**.
+8. Compruebe que se copian todos los archivos. El directorio **incrustado** debe contener ahora archivos como **. jar**, **. AAR**y **. archivo POM**.
 
-9. Descomprima el contenido de los archivos **. AAR** extraídos en el directorio incrustado. En Windows, anexe una extensión **. zip** al archivo **. AAR** , ábrala y copie el contenido en el directorio **incrustado** .
+9. Descomprima el contenido de los archivos **. AAR** extraídos en el directorio **incrustado** . En Windows, anexe una extensión **. zip** al archivo **. AAR** , ábrala y copie el contenido en el directorio **incrustado** .
     En macOS, descomprima el archivo **. AAR** con el comando **Unzip** del terminal (por ejemplo, **Unzip File. AAR**).
 
 En este punto, ha instalado manualmente los componentes que faltan y el proyecto se debe compilar sin errores. Si no es así, compruebe que ha descargado la versión del archivo **m2repository** **. zip** que se corresponde exactamente con la versión del mensaje de error y compruebe que ha instalado su contenido en las ubicaciones correctas, tal y como se describe en los pasos anteriores. 
 
-
-
 ## <a name="summary"></a>Resumen 
 
-En este artículo se explica cómo recuperarse de los errores comunes que pueden producirse durante la descarga e instalación automáticas de las bibliotecas de dependencias. Se describe cómo eliminar la biblioteca problemática y volver a compilar el proyecto como una manera de volver a descargar y volver a instalar la biblioteca. En él se describe cómo descargar la biblioteca e instalarla en la carpeta mozip. También se describe un procedimiento más implicado para descargar e instalar manualmente los archivos necesarios como una manera de solucionar problemas que no se pueden resolver a través de medios automáticos. 
+En este artículo se explica cómo recuperarse de los errores comunes que pueden producirse durante la descarga e instalación automáticas de las bibliotecas de dependencias. Se describe cómo eliminar la biblioteca problemática y volver a compilar el proyecto como una manera de volver a descargar y volver a instalar la biblioteca. En él se describe cómo descargar la biblioteca e instalarla en **la carpeta** mozip. También se describe un procedimiento más implicado para descargar e instalar manualmente los archivos necesarios como una manera de solucionar problemas que no se pueden resolver a través de medios automáticos. 

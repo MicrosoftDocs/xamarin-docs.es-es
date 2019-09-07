@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fb5c696e830710e6ad99140477eedcbfe0e8823
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522870"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764687"
 ---
 # <a name="adding-a-second-toolbar"></a>Adición de una segunda barra de herramientas
-
 
 ## <a name="overview"></a>Información general 
 
 Puede hacer más que reemplazar la barra &ndash; de acción que se puede usar varias veces dentro de una actividad, se puede personalizar para colocarla en cualquier parte de la pantalla y se puede configurar para que abarque solo un ancho parcial de la pantalla. `Toolbar` Los ejemplos siguientes muestran cómo crear un segundo `Toolbar` y colocarlo en la parte inferior de la pantalla. Esto `Toolbar` implementa los elementos de menú de **copiar**, **cortar**y **pegar** . 
-
 
 ## <a name="define-the-second-toolbar"></a>Definir la segunda barra de herramientas 
 
@@ -68,7 +66,7 @@ android:background="?android:attr/colorAccent
 
 Tenga en cuenta `Toolbar` que esto se basa en un tema diferente (**ThemeOverlay. material. Dark. barra**) que el utilizado `Toolbar` por el creado al [reemplazar el barra de acciones](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash; no está enlazado a la ventana de la actividad Décor o a el tema que se usa en `Toolbar`el primer.
 
-Edite Resources **/Values/Styles. XML** y agregue el color de énfasis siguiente a la definición de estilo: 
+Edite **Resources/Values/Styles. XML** y agregue el color de énfasis siguiente a la definición de estilo: 
 
 ```xml
 <item name="android:colorAccent">#C7A935</item>
@@ -78,8 +76,6 @@ Esto proporciona a la barra de herramientas inferior un color ámbar oscuro. Al 
 
 [![Captura de pantalla de la aplicación con la segunda barra de herramientas amarilla en la parte inferior de la pantalla](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-
- 
 ## <a name="add-edit-menu-items"></a>Agregar elementos del menú Edición 
 
 En esta sección se explica cómo agregar elementos de menú de edición `Toolbar`a la parte inferior. 
@@ -96,11 +92,9 @@ Para agregar elementos de menú a un `Toolbar`elemento secundario:
 
 En las secciones siguientes se muestra este proceso en detalle: Los elementos de menú **cortar**, **copiar**y **pegar** se agregan a `Toolbar`la parte inferior. 
 
-
-
 ### <a name="define-the-edit-menu-resource"></a>Definir el recurso del menú Edición
 
-En el subdirectorio Resources **/Menu** , cree un nuevo archivo XML denominado **edit_menus. XML** y reemplace el contenido por el siguiente código XML:
+En el subdirectorio **Resources/menu** , cree un nuevo archivo XML denominado **edit_menus. XML** y reemplace el contenido por el siguiente código XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,8 +118,6 @@ En el subdirectorio Resources **/Menu** , cree un nuevo archivo XML denominado *
 ```
 
 Este XML crea los elementos de menú **cortar**, **copiar**y **pegar** (mediante los iconos que se agregaron `mipmap-` a las carpetas al [reemplazar el barra de acciones](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
-
-
 
 ### <a name="inflate-the-menus"></a>Inflar los menús
 
@@ -153,8 +145,6 @@ Al pulsar el icono del menú **cortar** , se muestra el siguiente aviso:
 Al puntear en los elementos de menú de cualquier barra de herramientas se muestra la notificación del sistema resultante: 
 
 [![Capturas de pantallas de las notificaciones del sistema para guardar, copiar y pegar elementos de menú que se van a puntear](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
-
-
 
 ## <a name="the-up-button"></a>Botón subir 
 
@@ -184,8 +174,6 @@ Cuando el usuario navega `MainActivity` de a `DetailActivity`, `DetailActivity` 
 [![Ejemplo de captura de pantalla de una flecha izquierda de botón arriba en la barra de herramientas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Al pulsar este botón **arriba** , la aplicación vuelve a `MainActivity`. En una aplicación más compleja con varios niveles de jerarquía, al pulsar este botón, se devolvería al usuario al siguiente nivel superior de la aplicación, en lugar de a la pantalla anterior. 
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

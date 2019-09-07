@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2017
-ms.openlocfilehash: dc435f486d0020ab339ebd8f537f749f44493fe0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 039a73b45f93525631635a9a73bf153c7938bc92
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289491"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766675"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de aplicaciones en Xamarin. iOS
 
 _La seguridad de transporte de aplicaciones (ATS) exige conexiones seguras entre los recursos de Internet (como el servidor back-end de la aplicación) y la aplicación._
 
 En este artículo se presentan los cambios de seguridad que la seguridad de transporte de aplicaciones aplica en una aplicación iOS 9 y [lo que esto significa para los proyectos de Xamarin. iOS](#xamarinsupport), se tratarán las [Opciones de configuración de ATS](#config) y se explicará cómo no participar en [ATS](#optout) . ATS si es necesario. Dado que ATS está habilitado de forma predeterminada, todas las conexiones a Internet no seguras producirán una excepción en las aplicaciones de iOS 9 (a menos que lo permita explícitamente).
-
 
 ## <a name="about-app-transport-security"></a>Acerca de la seguridad de transporte de aplicaciones
 
@@ -90,7 +89,6 @@ Para establecer la implementación de HTTPClient usada por una aplicación de iO
 
 ![](ats-images/client01.png "Establecer las opciones de compilación de iOS")
 
-
 #### <a name="managed-handler"></a>Controlador administrado
 
 El controlador administrado es el controlador HttpClient totalmente administrado que se ha incluido con versiones anteriores de Xamarin. iOS y es el controlador predeterminado.
@@ -145,7 +143,6 @@ En iOS9, la seguridad de transporte de aplicaciones (ATS) exige conexiones segur
 Dado que ATS está habilitado de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10,11 (el `NSURLConnection`Capitan `CFURL` ) `NSURLSession` , todas las conexiones que usan o estarán sujetas a los requisitos de seguridad de ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
 
 Apple también proporciona la [aplicación de ejemplo TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) que se puede compilar (o, opcionalmente, transcodificar en Xamarin y C#) y usarse para diagnosticar problemas de ATS/TLS. Consulte la sección [de aceptación de ATS](#optout) a continuación para obtener información sobre cómo resolver este problema.
-
 
 <a name="config" />
 
@@ -217,7 +214,6 @@ Dentro de Visual Studio para Mac, haga doble clic `Info.plist` en el archivo en 
 
 [![](ats-images/ats01.png "La vista de origen del archivo info. plist")](ats-images/ats01.png#lightbox)
 
-
 Si la aplicación necesita cargar y mostrar contenido web desde sitios no seguros, agregue lo siguiente al archivo **info. plist** de la aplicación para permitir que las páginas web se carguen correctamente mientras la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación:
 
 ```xml
@@ -245,9 +241,6 @@ Dentro de Visual Studio para Mac, haga doble clic `Info.plist` en el archivo en 
 > [!IMPORTANT]
 > Si la aplicación requiere una conexión a un sitio web inseguro, **siempre** debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar completamente el ATS usando `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` solo debe usarse en situaciones de emergencias extremas.
 
-
-
-
 De nuevo, la deshabilitación de ATS _solo_ debe usarse como último recurso, si el cambio a conexiones seguras no está disponible o no es práctico.
 
 <a name="Summary" />
@@ -255,8 +248,6 @@ De nuevo, la deshabilitación de ATS _solo_ debe usarse como último recurso, si
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha introducido la seguridad de transporte de aplicaciones (ATS) y se describe la manera en que se aplican las comunicaciones seguras con Internet. En primer lugar, hemos tratado los cambios de ATS necesarios para una aplicación de Xamarin. iOS que se ejecuta en iOS 9. Después, hemos tratado el control de las características y opciones de ATS. Por último, hemos tratado la aceptación de ATS en la aplicación Xamarin. iOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

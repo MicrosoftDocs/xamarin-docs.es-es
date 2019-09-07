@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290834"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765544"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma de Apple (iOS y Mac)
 
@@ -31,7 +31,6 @@ El Unified API para los proyectos de iOS y Mac usa los mismos espacios de nombre
 > **Desuso del perfil clásico:** A medida que se agregan nuevas plataformas en Xamarin. iOS, comenzamos a dejar de usar gradualmente las características del perfil clásico (MonoTouch. dll). Por ejemplo, se ha quitado la opción non-NRC (New-Ref-Count). NRC siempre se ha habilitado para todas las aplicaciones unificadas (es decir, no NRC nunca era una opción) y no tiene problemas conocidos. Las versiones futuras eliminarán la opción de usar Boehm como recolector de elementos no utilizados. Esto también era una opción que nunca estaba disponible para las aplicaciones unificadas. La eliminación completa del soporte técnico clásico está programada para el lanzamiento de 2016 con la versión de Xamarin. iOS 10,0.
 
 Las API de Xamarin. iOS y Xamarin. Mac originales (no unificadas) han simplificado el uso compartido de código, ya que `MonoTouch.` los `MonoMac.` marcos nativos tenían prefijos de espacio de nombres o.  Proporcionamos algunos espacios de nombres vacíos que permiten a los desarrolladores compartir `using` código mediante la adición de instrucciones que hacen referencia a espacios de nombres MonoMac y MonoTouch en el mismo archivo, pero esto no era tan agradable. El Classic API solo debe seguir utilizándose en las aplicaciones heredadas que se distribuyen internamente (se recomienda actualizar al Unified API).
-
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>Actualización del modelo clásico al Unified API
 

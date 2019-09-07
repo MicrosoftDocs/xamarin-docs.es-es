@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: a4a6df4916ae5dcc2a0f826d2f0ab9d09167ba5f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dbaf904c31d1a778a25e591ee94c4d354f5698a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765734"
 ---
 # <a name="advanced-manual-real-world-example"></a>Ejemplo avanzado (manual) del mundo real
 
@@ -35,18 +35,18 @@ $ xcodebuild -sdk iphoneos9.0 -arch arm64
 Build settings from command line:
     ARCHS = arm64
     SDKROOT = iphoneos8.1
- 
+
 === BUILD TARGET pop OF PROJECT pop WITH THE DEFAULT CONFIGURATION (Release) ===
- 
+
 ...
- 
+
 CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
     cd /Users/aaron/src/sharpie/pop
     export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/aaron/bin::/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/aaron/.rvm/bin"
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/aaron/src/sharpie/pop/pop/POPAnimationTracer.h /Users/aaron/src/sharpie/pop/build/Headers/POP
- 
+
 ...
- 
+
 ** BUILD SUCCEEDED **
 ```
 

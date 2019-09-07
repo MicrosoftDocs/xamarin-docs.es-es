@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a58242e89033d6cd2652495f9466379f63f498f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119522"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761246"
 ---
 # <a name="fingerprint-authentication"></a>Autenticación de huella digital
 
 _En esta guía se describe cómo agregar la autenticación mediante huella digital, introducida en Android 6,0, a una aplicación de Xamarin. Android._
-
 
 ## <a name="fingerprint-authentication-overview"></a>Introducción a la autenticación mediante huellas digitales
 
@@ -51,11 +50,6 @@ En esta guía se explica cómo usar las `FingerprintManager` API para mejorar un
 La autenticación mediante huella digital requiere Android 6,0 (nivel de API 23) o superior y un dispositivo con un escáner de huellas digitales. 
 
 Una huella digital ya debe estar inscrita en el dispositivo para cada usuario que se va a autenticar. Esto implica la configuración de un bloqueo de pantalla que utiliza una contraseña, un PIN, un patrón de deslizamiento o reconocimiento facial. Es posible simular parte de la funcionalidad de autenticación mediante huella digital en un Android Emulator.  Para obtener más información sobre estos dos temas, consulte la sección [inscripción de una huella digital](enrolling-fingerprint.md) . 
-
-
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 53dce7cc6cc614cde252aa34248fa299c89fafa3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e96f9a0ce4d1eec9bf853faceeb85a2acb4840af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887702"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761023"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>¿Cómo se automatiza un proyecto de prueba de NUnit de Android?
 
@@ -91,10 +91,8 @@ En los pasos siguientes se explica este proceso:
 
 Para obtener más información sobre el `adb shell am instrument` uso del comando para ejecutar pruebas unitarias, vea el tema Android Developer [Running tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
-
 > [!NOTE]
 > Con la versión [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , los nombres de paquete predeterminados para los contenedores a los que se puede llamar de Android se basarán en el md5sum del nombre calificado con el ensamblado del tipo que se va a exportar. Esto permite proporcionar el mismo nombre completo a partir de dos ensamblados diferentes y no obtener un error de empaquetado. Por lo tanto, asegúrese de que `Name` usa la propiedad `Instrumentation` en el atributo para generar un nombre de clase o ACW legible.
 
 _El nombre de ACW debe usarse en `adb` el comando anterior_.
 Para cambiar el nombre y la refactorización de la C# clase, es `RunTests` necesario modificar el comando para que use el nombre de ACW correcto.
-

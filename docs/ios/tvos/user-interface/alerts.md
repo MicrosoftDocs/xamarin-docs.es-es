@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2578272dcd38399f23f2aac67503ea4e1b09a027
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291125"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769077"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabajar con alertas de tvOS en Xamarin
 
@@ -361,14 +361,11 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado `UIAlertController` el uso de para mostrar un mensaje de alerta al usuario en Xamarin. tvOS. En primer lugar, se mostró cómo mostrar una alerta simple y agregar botones. A continuación, se mostró cómo agregar campos de texto a una alerta. Por último, ha mostrado cómo usar una clase auxiliar para reducir la cantidad de código repetitivo necesario para mostrar una alerta.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

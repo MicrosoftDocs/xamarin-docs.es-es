@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: c0a8f57e3f4f351cf5b874ded2639b975ea71cad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b60c8f306ad815cd3292cc94bd80f87b49df547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281905"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766996"
 ---
 # <a name="configuring-sqlite-in-xamarinios"></a>Configuración de SQLite en Xamarin. iOS
 
@@ -64,7 +64,6 @@ lock (locker){
 ```
 
 Todo el acceso a la base de datos (lecturas, escrituras, actualizaciones, etc.) debe ajustarse con el mismo bloqueo. Se debe tener cuidado para evitar una situación de interbloqueo asegurándose de que el trabajo dentro de la cláusula Lock se mantiene sencillo y no llama a otros métodos que también pueden tomar un bloqueo.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

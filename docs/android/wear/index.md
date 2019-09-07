@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648330"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758330"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -42,8 +42,6 @@ Explica cómo implementar la aplicación de desgaste de Android en un dispositiv
 
 El sitio para desarrolladores de Android proporciona información detallada sobre las API de desgaste de claves, como la [actividad de portátil](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), los [intentos](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), la [autenticación](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), las [complicaciones](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), la [representación de complicaciones](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), las [notificaciones](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Vistas](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)y [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
-
-
 ## <a name="samples"></a>Ejemplos
 
 Puede encontrar una serie de [ejemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) con el desgaste de Android (o ir directamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
@@ -51,12 +49,11 @@ Puede encontrar una serie de [ejemplos](https://docs.microsoft.com/samples/brows
 |Muestra|DESCRIPCIÓN|Captura de pantalla|
 |--- |--- |--- |
 |[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|Un ejemplo sencillo de los aspectos básicos de los proyectos de portátil, incluidas las notificaciones de GridViewPager y interactivas.|![Captura de pantalla de Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demostración sencilla del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto. Vea cómo funciona WatchViewStub en el diseño Resources **/layout/main_activity. XML** .|![Captura de pantalla de WatchViewStub](images/watchview.png)|
+|[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demostración sencilla del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto. Vea cómo funciona WatchViewStub en el diseño **Resources/layout/main_activity. XML** .|![Captura de pantalla de WatchViewStub](images/watchview.png)|
 |[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant)|Demostración de las páginas de notificación de desgaste, en forma de pasos de recetas. Las notificaciones se crean en RecipeService.cs.|![Captura de pantalla de RecipeAssistant](images/recipeassist.png)|
 |[ElizaChat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-elizachat)|Ejemplo divertido de interactuar con un "asistente personal" denominado Eliza, mediante el uso de notificaciones interactivas para crear una conversación mediante respuestas preparadas.|![Captura de pantalla de ElizaChat](images/eliza.png)|
 |[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa el modelo de navegación 2D, donde el usuario se desliza verticalmente y, a continuación, horizontalmente para navegar por las opciones y el contenido.|![Captura de pantalla de GridViewPager](images/gridviewpager.png)|
 |[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace es una esfera de inspección personalizada con una hora, un minuto y dos manos de estilo analógico. En este ejemplo se muestra cómo crear un servicio de reloj de inspección que dibuja la hora actual y controla los eventos de cambio de visibilidad y el modo ambiente. Incluye un receptor de difusión que escucha los cambios de zona horaria y actualiza automáticamente la hora según corresponda.|![Captura de pantalla de WatchFace](images/gridviewpager.png)|
-
 
 ## <a name="videos"></a>Vídeos
 
@@ -67,7 +64,6 @@ Consulte estos vínculos de vídeo que describen Xamarin. Android con soporte t�
 |[Android L y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; La versión preliminar para desarrolladores de Android L presentó una gran cantidad de nuevas API para que los desarrolladores aprovechen las ventajas de, incluido el diseño de materiales, las notificaciones y las nuevas animaciones, por nombrar algunas.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
 |[C#está en mis oídos y en mis ojos: El uso de &ndash; portátil de](https://www.youtube.com/watch?v=80H8tXByZQc) Google Glass y Android podría parecer algo en el futuro (o un episodio de gadget de inspector), pero muchas personas ya están adoptando el futuro hoy mismo. C#los desarrolladores saben esto y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátil (desde el desarrollo de 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
 |[Novedades de Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, desgaste de Android, Android TV, Android auto, diseño de material y arte; ¿qué significa esto para usted como desarrollador de Xamarin?, desde evolucione 2014.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
-
 
 <!--
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e829c953278d8edeb697d27da8e3707ee1c91784
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119640"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757584"
 ---
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
@@ -28,7 +28,7 @@ El ecosistema de bibliotecas de terceros para Android es masivo. Por este motivo
 
 En esta guía se explica la primera opción: Cómo crear una *biblioteca de enlaces* que incluya una o más bibliotecas de Java existentes en un ensamblado al que se pueda vincular en la aplicación. Para obtener más información sobre el uso de JNI, consulte [trabajar con JNI](~/android/platform/java-integration/working-with-jni.md).
 
-Xamarin. Android implementa enlaces mediante contenedores a los que se *puede llamar* (*MCW*) administrados. MCW es un puente de JNI que se usa cuando el código administrado necesita invocar código Java. Los contenedores a los que se puede llamar administrados también proporcionan compatibilidad para subclases de tipos de Java y para invalidar métodos virtuales en tipos de Java. Del mismo modo, cada vez que el código de tiempo de ejecución (ART) de Android quiere invocar código administrado, lo hace a través de otro puente de JNI conocido como contenedores de Android Calling (ACW). Esta [arquitectura](~/android/internals/architecture.md) se ilustra en el diagrama siguiente:
+Xamarin. Android implementa enlaces mediante contenedores a los que se puede llamar (*MCW*) *administrados* . MCW es un puente de JNI que se usa cuando el código administrado necesita invocar código Java. Los contenedores a los que se puede llamar administrados también proporcionan compatibilidad para subclases de tipos de Java y para invalidar métodos virtuales en tipos de Java. Del mismo modo, cada vez que el código de tiempo de ejecución (ART) de Android quiere invocar código administrado, lo hace a través de otro puente de JNI conocido como contenedores de Android Calling (ACW). Esta [arquitectura](~/android/internals/architecture.md) se ilustra en el diagrama siguiente:
 
 [![Arquitectura de puente de Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
@@ -65,7 +65,6 @@ A continuación, colocaría la `using` siguiente instrucción en la parte superi
 using Com.Company.Package;
 ```
 
-
 Al enlazar una biblioteca de Android existente, es necesario tener en cuenta los puntos siguientes:
 
 - **¿Hay dependencias externas para la biblioteca?** &ndash;Todas las dependencias de Java que requiere la biblioteca de Android deben incluirse en el proyecto de Xamarin. Android como **ReferenceJar** o como **EmbeddedReferenceJar**. Los ensamblados nativos deben agregarse al proyecto de enlace como un **EmbeddedNativeLibrary**.  
@@ -73,7 +72,6 @@ Al enlazar una biblioteca de Android existente, es necesario tener en cuenta los
 - **¿Qué versión de la API de Android es el destino de la biblioteca de Android?** &ndash;No es posible "degradar" el nivel de API de Android; Asegúrese de que el proyecto de enlace de Xamarin. Android tenga como destino el mismo nivel de API (o superior) que la biblioteca de Android.
 
 - **¿Qué versión del JDK se usó para compilar la biblioteca?** &ndash;Pueden producirse errores de enlace si la biblioteca de Android se compiló con una versión de JDK diferente de la que usa Xamarin. Android. Si es posible, vuelva a compilar la biblioteca de Android con la misma versión del JDK que usa la instalación de Xamarin. Android.
-
 
 ## <a name="build-actions"></a>Acciones de compilación
 
@@ -85,7 +83,7 @@ Cuando se crea una biblioteca de enlaces, se establecen *acciones de compilació
 
 - `LibraryProjectZip`&ndash; Inserta un. Archivo AAR en la biblioteca de enlaces resultante. DLL. Esto es similar a EmbeddedJar, salvo que puede tener acceso a los recursos (así como al código) en el enlazado. Archivo AAR. Utilice esta opción si desea incrustar un. AAR en la biblioteca de enlaces.
 
-- `ReferenceJar` Especifica un archivo Reference. jar: un archivo Reference. jar es un archivo. jar que es un archivo. jar enlazado. &ndash; Los archivos AAR dependen de. Esta referencia **. jar** solo se utiliza para satisfacer las dependencias de tiempo de compilación. Cuando se usa esta acción de compilación C# , no se crean enlaces para Reference **. jar** y no se insertan en la biblioteca de enlaces resultante. DLL. Use esta opción cuando vaya a crear una biblioteca de enlaces para el archivo Reference **. jar** pero aún no lo haya hecho. Esta acción de compilación es útil para empaquetar varios **. jar**s (y/o. AARs) en varias bibliotecas de enlaces interdependientes.
+- `ReferenceJar`Especifica un archivo Reference. jar: un archivo Reference. jar es un archivo. jar que es un archivo. jar enlazado. &ndash; Los archivos AAR dependen de. Esta referencia **. jar** solo se utiliza para satisfacer las dependencias de tiempo de compilación. Cuando se usa esta acción de compilación C# , no se crean enlaces para Reference **. jar** y no se insertan en la biblioteca de enlaces resultante. DLL. Use esta opción cuando vaya a crear una biblioteca de enlaces para el archivo Reference **. jar** pero aún no lo haya hecho. Esta acción de compilación es útil para empaquetar varios **. jar**s (y/o. AARs) en varias bibliotecas de enlaces interdependientes.
 
 - `EmbeddedReferenceJar`Inserta un archivo Reference **. jar** en la biblioteca de enlaces resultante. &ndash; DLL. Use esta acción de compilación cuando desee crear C# enlaces para INPUT **. jar** (o. AAR) y todas sus referencias **. jar**(s) en la biblioteca de enlaces.
 
@@ -125,8 +123,6 @@ El generador de enlaces de Xamarin. Android cambiará algunas expresiones y patr
 
 - Una _clase interna_ en Java es una _clase anidada_ con un constructor de instancia C#en.
 
-
-
 ## <a name="binding-scenarios"></a>Escenarios de enlace
 
 Las siguientes guías de escenarios de enlace pueden ayudarle a enlazar una biblioteca de Java (o bibliotecas) para su incorporación a su aplicación:
@@ -137,10 +133,9 @@ Las siguientes guías de escenarios de enlace pueden ayudarle a enlazar una bibl
 
 - [Enlazar un proyecto de biblioteca Eclipse](~/android/platform/binding-java-library/binding-a-library-project.md) es un tutorial para crear bibliotecas de enlace desde proyectos de biblioteca de Android. Lea este tutorial para aprender a enlazar proyectos de biblioteca de Android de Eclipse.
 
-- La personalización de [enlaces](~/android/platform/binding-java-library/customizing-bindings/index.md) explica cómo realizar modificaciones manuales en el enlace para resolver errores de compilación y dar forma a la API resultante para que seaC#más "similar".
+- La [Personalización de enlaces](~/android/platform/binding-java-library/customizing-bindings/index.md) explica cómo realizar modificaciones manuales en el enlace para resolver errores de compilación y dar forma a la API resultante para que seaC#más "similar".
 
 - [Solución de problemas de enlaces](~/android/platform/binding-java-library/troubleshooting-bindings.md) muestra escenarios comunes de error de enlace, explica las posibles causas y ofrece sugerencias para resolver estos errores.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

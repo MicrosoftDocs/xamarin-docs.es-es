@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: a43a2ed4498be76a99ab4b6b54d3048f2f80af5c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 107fcd39a64ef1d7758d211ab47a07e1ece52f4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887655"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757237"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>¿Cómo instalar manualmente las bibliotecas de compatibilidad de Android que requieren los paquetes de Xamarin.Android.Support?
 
@@ -127,7 +127,6 @@ El número de versión del subdirectorio (**23.4.0.0** en este ejemplo) no es ex
 
 -----
 
-
 ## <a name="additional-references"></a>Referencias adicionales
 
 - [Error 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) : no se pudo descargar "inexacto". Descargue {0} y colóquelo en el {1} directorio ". y "Instale el paquete: '{0}' disponible en el instalador del SDK" mensajes de error relacionados con Xamarin. Android. support packages
@@ -137,4 +136,3 @@ El número de versión del subdirectorio (**23.4.0.0** en este ejemplo) no es ex
 En este documento se describe el comportamiento actual a partir del 2016 de agosto. La técnica descrita en este documento no forma parte del conjunto de pruebas estable para Xamarin, por lo que podría interrumpirse en el futuro.
 
 Para obtener más ayuda, para ponerse en contacto con nosotros o si este problema permanece incluso después de usar la información anterior, consulte [¿Qué opciones de soporte técnico están disponibles para Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obtener información sobre las opciones de contacto, sugerencias y cómo archivar un nuevo error si es necesario .
-

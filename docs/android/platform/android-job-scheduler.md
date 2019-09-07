@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 95d4194e0ed1a1da435a233e40a74f506c49b539
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2bfc64626d658cbcb22ba5f2ebd1f1ff069ec19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119873"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757763"
 ---
 # <a name="android-job-scheduler"></a>Programador de trabajos de Android
 
 _En esta guía se describe cómo programar el trabajo en segundo plano mediante la API del programador de trabajos de Android, que está disponible en dispositivos Android que ejecutan Android 5,0 (nivel de API 21) y versiones posteriores._
-
 
 ## <a name="overview"></a>Información general 
 
@@ -78,7 +77,6 @@ Todo el trabajo realizado por la biblioteca del programador de trabajos de Andro
 4. Invalide el `OnStartJob` método y agregue el código para realizar el trabajo. Android invocará este método en el subproceso principal de la aplicación para ejecutar el trabajo. Trabajo que tardará más tiempo en ejecutarse en un subproceso para evitar que se bloquee la aplicación.
 5. Cuando se realiza el trabajo, `JobService` debe `JobFinished` llamar al método. Este método indica el `JobService` modo en `JobScheduler` que se realiza el trabajo. Si no se `JobFinished` llama a, se `JobService` producirá una demanda innecesaria en el dispositivo, lo que reduce la duración de la batería. 
 6. Es conveniente reemplazar también el `OnStopJob` método. Android llama a este método cuando se está cerrando el trabajo antes de que finalice y proporciona la `JobService` oportunidad de eliminar los recursos correctamente. Este método debe devolver `true` si es necesario volver a programar el trabajo o `false` si no es deseable volver a ejecutar el trabajo.
-   
 
 El código siguiente es un ejemplo de la más sencilla `JobService` para una aplicación, mediante la TPL para realizar de forma asincrónica algún trabajo:
 
@@ -115,7 +113,6 @@ Las aplicaciones de Xamarin. Android no crean instancias `JobService` de directa
 
 - **JobID** se trata de `int` un valor que se utiliza para `JobScheduler`identificar un trabajo en. &ndash; Al reutilizar este valor se actualizarán los trabajos existentes. El valor debe ser único para la aplicación. 
 - **JobService** Este parámetro es un `ComponentName` que `JobScheduler` identifica explícitamente el tipo que debe usar para ejecutar un trabajo. &ndash; 
-  
 
 Este método de extensión muestra cómo crear un `JobInfo.Builder` con un Android `Context`, como una actividad:
 
@@ -138,7 +135,6 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 Una eficaz característica del programador de trabajos de Android es la posibilidad de controlar cuándo se ejecuta un trabajo o en qué condiciones se puede ejecutar un trabajo. En la tabla siguiente se describen algunos de los `JobInfo.Builder` métodos de que permiten a una aplicación influir en el momento en que se puede ejecutar un trabajo:  
 
-
 |  Método | DESCRIPCIÓN   |
 |---|---|
 | `SetMinimumLatency`  | Especifica que se debe observar un retraso (en milisegundos) antes de que se ejecute un trabajo. |
@@ -150,8 +146,7 @@ Una eficaz característica del programador de trabajos de Android es la posibili
 | `SetPeriodic` | Especifica que el trabajo debe ejecutarse con regularidad. |
 | `SetPersisted` | El trabajo debe ser perdedor entre los reinicios del dispositivo. | 
 
-
-El `SetBackoffCriteria` proporciona instrucciones sobre cuánto `JobScheduler` tiempo debe esperar antes de intentar volver a ejecutar un trabajo. Los criterios de retardo son dos partes: un retraso en milisegundos (valor predeterminado de 30 segundos) y el tipo de devolución de llamada que se debe usar (que a veces se conoce como la _Directiva de retroceso_ o la _Directiva_de reintentos). Las dos directivas se encapsulan en la `Android.App.Job.BackoffPolicy` enumeración:
+El `SetBackoffCriteria` proporciona instrucciones sobre cuánto `JobScheduler` tiempo debe esperar antes de intentar volver a ejecutar un trabajo. Los criterios de retardo son dos partes: un retraso en milisegundos (valor predeterminado de 30 segundos) y el tipo de devolución de llamada que se debe usar (que a veces se conoce como la _Directiva de retroceso_ o la _Directiva de reintentos_). Las dos directivas se encapsulan en la `Android.App.Job.BackoffPolicy` enumeración:
 
 - `BackoffPolicy.Exponential`&ndash; Una directiva de retroceso exponencial aumentará el valor de retroceso inicial de forma exponencial después de cada error. La primera vez que se produce un error en un trabajo, la biblioteca esperará el intervalo inicial especificado antes de volver a programar el trabajo; por ejemplo, 30 segundos. La segunda vez que se produce un error en el trabajo, la biblioteca esperará al menos 60 segundos antes de intentar ejecutar el trabajo. Después del tercer intento fallido, la biblioteca esperará 120 segundos, etc. Este es el valor predeterminado.
 - `BackoffPolicy.Linear`&ndash; Esta estrategia es una interrupción lineal de que el trabajo se debe volver a programar para que se ejecute a intervalos establecidos (hasta que se realice correctamente). El retroceso lineal es más adecuado para el trabajo que debe realizarse lo antes posible o para los problemas que se resolverán rápidamente. 
@@ -206,7 +201,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### <a name="cancelling-a-job"></a>Cancelar un trabajo
 
 Es posible cancelar todos los trabajos programados, o simplemente un único trabajo mediante el `JobsScheduler.CancelAll()` método o el `JobScheduler.Cancel(jobId)` método:

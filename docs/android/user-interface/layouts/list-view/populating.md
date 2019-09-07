@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e934dd0f35b7c734228d637fe646d0e2c20e9dad
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522540"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758623"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Rellenar un control ListView de Xamarin. Android con datos
 
@@ -37,7 +37,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-
 ### <a name="handling-row-clicks"></a>Controlar los clics de fila
 
 `ListView` Normalmente, también permitirá al usuario tocar una fila para realizar alguna acción (como reproducir una canción, llamar a un contacto o Mostrar otra pantalla). Para responder a los toques de los usuarios, debe haber un método más `ListActivity` implementado de la &ndash; `OnListItemClick` &ndash; siguiente manera:
@@ -55,7 +54,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 Ahora el usuario puede tocar una fila y aparecerá `Toast` una alerta:
 
 [![Captura de pantalla de la notificación del sistema que aparece cuando se toca una fila](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## <a name="implementing-a-listadapter"></a>Implementar un ListAdapter
 
@@ -102,7 +100,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### <a name="using-a-custom-adapter"></a>Usar un adaptador personalizado
 
 El uso del adaptador personalizado es similar al integrado `ArrayAdapter`, pasando un `context` y el `string[]` de los valores que se van a mostrar:
@@ -112,7 +109,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
 Dado que en este ejemplo se usa el mismo`SimpleListItem1`diseño de fila (), la aplicación resultante tendrá el mismo aspecto que el ejemplo anterior.
-
 
 ### <a name="row-view-re-use"></a>Reutilización de la vista de filas
 
@@ -137,7 +133,6 @@ Las implementaciones de adaptador personalizado *siempre* deben volver a `conver
 
 `CursorAdapter`Algunas implementaciones de adaptador (como) no tienen un `GetView` método, sino que requieren dos métodos `NewView` diferentes y `BindView` que aplican la reutilización de filas al separar las responsabilidades `GetView` de en dos modalidades. Hay un `CursorAdapter` ejemplo más adelante en el documento.
 
-
 ## <a name="enabling-fast-scrolling"></a>Habilitar el desplazamiento rápido
 
 El desplazamiento rápido ayuda al usuario a desplazarse por las listas largas proporcionando un "controlador" adicional que actúa como una barra de desplazamiento para tener acceso directamente a una parte de la lista. En esta captura de pantalla se muestra el controlador de desplazamiento rápido:
@@ -149,7 +144,6 @@ Hacer que el controlador de desplazamiento rápido aparezca es tan sencillo como
 ```csharp
 ListView.FastScrollEnabled = true;
 ```
-
 
 ### <a name="adding-a-section-index"></a>Agregar un índice de sección
 
@@ -164,7 +158,6 @@ Para implementar `ISectionIndexer` , debe agregar tres métodos a un adaptador:
 - **GetPositionForSection** &ndash; Devuelve la primera posición de fila de un índice de sección determinado.
 
 - **GetSectionForPosition** &ndash; Devuelve el índice de la sección que se va a mostrar para una fila determinada.
-
 
 El archivo `SectionIndex/HomeScreenAdapter.cs` de ejemplo implementa esos métodos y código adicional en el constructor. El constructor crea el índice de la sección recorriendo en bucle todas las filas y extrayendo el primer carácter del título (los elementos ya deben estar ordenados para que funcione).
 
@@ -213,8 +206,6 @@ public int GetSectionForPosition(int position)
 
 Los títulos de índice de la sección no necesitan asignar 1:1 a las secciones reales. Este es el motivo `GetPositionForSection` por el cual existe el método.
 `GetPositionForSection`ofrece la oportunidad de asignar los índices que se encuentran en la lista de índices a las secciones que se encuentran en la vista de lista. Por ejemplo, puede tener una "z" en el índice, pero es posible que no tenga una sección de tabla para cada letra, por lo que en lugar de la asignación "z" a 26, puede asignarse a 25 o 24, o al índice de sección "z" que debe asignarse.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 49e0de909e2255d850211e51596efdaa43f293ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509366"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755058"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Crear recursos para diferentes pantallas
 
 Android se ejecuta en muchos dispositivos diferentes, cada uno con una amplia variedad de resoluciones, tamaños de pantalla y densidades de pantalla. Android realizará el escalado y el cambio de tamaño para que la aplicación funcione en estos dispositivos, pero esto puede dar lugar a una experiencia de usuario poco óptima. Por ejemplo, las imágenes podrían aparecer borrosas o pueden estar colocadas como se esperaba en una vista.
-
 
 ## <a name="concepts"></a>Conceptos
 
@@ -38,7 +37,6 @@ Observe que los tres primeros de estos conceptos se relacionan entre &ndash; sí
 
 Para ayudar a abordar esta complejidad, el marco de trabajo de Android prefiere usar *píxeles independientes de la densidad (DP)* para los diseños de pantalla. Mediante el uso de píxeles independientes de densidad, los elementos de la interfaz de usuario aparecerán para que el usuario tenga el mismo tamaño físico en las pantallas con diferentes densidades.
 
-
 ## <a name="supporting-various-screen-sizes-and-densities"></a>Compatibilidad con varios tamaños de pantalla y densidades
 
 Android controla la mayor parte del trabajo para presentar los diseños correctamente para cada configuración de pantalla. Sin embargo, se pueden realizar algunas acciones para ayudar al sistema a salir.
@@ -46,7 +44,6 @@ Android controla la mayor parte del trabajo para presentar los diseños correcta
 El uso de píxeles independientes de la densidad en lugar de píxeles reales en los diseños es suficiente en la mayoría de los casos para garantizar la independencia de la densidad.
 Android escalará el drawables en tiempo de ejecución al tamaño adecuado.
 Sin embargo, es posible que el escalado provoque que los mapas de bits parezcan borrosos. Para solucionar este problema, proporcione recursos alternativos para las diferentes densidades. Al diseñar dispositivos para varias resoluciones y densidades de pantalla, resultará más fácil empezar con las imágenes de mayor resolución o densidad y, a continuación, reducir verticalmente.
-
 
 ### <a name="declare-the-supported-screen-size"></a>Declarar el tamaño de pantalla compatible
 
@@ -87,7 +84,6 @@ Edite **archivo AndroidManifest. XML** para incluir [Supports-Screens](https://d
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>Proporcionar diseños alternativos para diferentes tamaños de pantalla
 
-
 Los diseños alternativos permiten personalizar una vista para un tamaño de pantalla de específico, cambiando la posición o el tamaño de los elementos de la interfaz de usuario del componente.
 
 A partir del nivel de API 13 (Android 3,2), los tamaños de pantalla están en desuso en favor de usar el calificador*N*DP de SW. Este nuevo calificador declara la cantidad de espacio que necesita un diseño determinado. Se recomienda que las aplicaciones que están diseñadas para ejecutarse en Android 3,2 o superior deben usar estos calificadores más recientes.
@@ -103,7 +99,6 @@ Por ejemplo, si un diseño requirió un mínimo de 700 DP de ancho de pantalla, 
 ![Carpeta de diseño para el ancho de pantalla de 700 DP](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
-
 
 Como directriz, estos son algunos números para varios dispositivos:
 
@@ -150,8 +145,6 @@ En el caso de las aplicaciones que abarcarán los niveles de API antiguos y nuev
 
 -----
 
-
-
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>Proporcionar diferentes mapas de bits para diferentes densidades de pantalla
 
 Aunque Android escalará los mapas de bits según sea necesario para un dispositivo, los propios mapas de bits no se pueden escalar o reducir verticalmente de forma elegante: pueden ser aproximados o borrosos. Si proporciona mapas de bits adecuados para la densidad de pantalla, se solucionará este problema.
@@ -164,7 +157,6 @@ Compárelo con un diseño que esté diseñado con recursos específicos de la de
 
 ![Capturas de pantallas con recursos específicos de la densidad](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Creación de recursos de densidad variable con Android Asset Studio
 
 La creación de estos mapas de bits de diversas densidades puede ser un poco tediosa. Como tal, Google ha creado una utilidad en línea que puede reducir algunos de los tediosas tareas implicados en la creación de estos mapas de bits denominados [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
@@ -172,7 +164,6 @@ La creación de estos mapas de bits de diversas densidades puede ser un poco ted
 [![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 Este sitio web le ayudará en la creación de mapas de bits que tienen como destino las cuatro densidades de pantalla comunes mediante el suministro de una imagen. Después, Android Asset Studio creará los mapas de bits con algunas personalizaciones y, a continuación, permitirá que se descarguen como un archivo zip.
-
 
 ## <a name="tips-for-multiple-screens"></a>Sugerencias para varias pantallas
 
@@ -185,10 +176,9 @@ Android se ejecuta en un número de dispositivos desconcertante, y la combinaci�
 - **Evitar** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) Siempre que **sea posible** &ndash; , está en desuso en el nivel de API 3 (Android 1,5) y dará como resultado diseños frágiles. 
    No debe usarse. En su lugar, intente usar widgets de diseño más flexibles como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)o el nuevo [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Elegir una orientación de diseño como predeterminada**     Por ejemplo, en lugar de proporcionar los recursos alternativos y el puerto de diseño, coloque los recursos para el panorama en el diseño y los recursos de vertical en el puerto de diseño. &ndash;
+- **Elegir una orientación de diseño como predeterminada** Por ejemplo, en lugar de proporcionar los recursos alternativos y el puerto de diseño, coloque los recursos para el panorama en el diseño y los recursos de vertical en el puerto de diseño. &ndash;
 
 - **Usar LayoutParams para el alto y el ancho** : al definir los elementos de la interfaz de usuario en un archivo de diseño XML, una aplicación Android que use los valores **wrap_content** y **fill_parent** tendrá más éxito y garantizará una apariencia adecuada en los distintos dispositivos que usar unidades independientes de píxeles o de densidad. Estos valores de dimensión hacen que Android escale los recursos de mapa de bits según corresponda. Por esta misma razón, las unidades independientes de la densidad se reservan mejor para cuando se especifican los márgenes y el relleno de los elementos de la interfaz de usuario.
-
 
 ## <a name="testing-multiple-screens"></a>Probar varias pantallas
 

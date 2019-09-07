@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: dfee003ba327b199974ae277a93cb1ca55a81b0d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1f55e5d97058d07926233e8b116663e6674a441c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522882"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764958"
 ---
 # <a name="android-time-picker"></a>Selector de tiempo de Android
 
@@ -34,7 +34,7 @@ La aplicación de ejemplo de esta guía tiene como destino Android 4,1 (nivel de
 
 ## <a name="using-the-timepicker"></a>Usar el TimePicker
 
-Este ejemplo extiende `DialogFragment`; la implementación de subclases de `TimePickerFragment` `DialogFragment` (a la que se llama `TimePickerDialog`a continuación) hospeda y muestra un. Cuando se inicia la aplicación de ejemplo por primera vez, se muestra un botón de `TextView` **hora** de picking encima de un que se usará para mostrar la hora seleccionada:
+Este ejemplo extiende `DialogFragment`; la implementación de subclases de `TimePickerFragment` `DialogFragment` (a la que se llama `TimePickerDialog`a continuación) hospeda y muestra un. Cuando se inicia la aplicación de ejemplo por primera vez, se muestra un botón de `TextView` **hora de picking** encima de un que se usará para mostrar la hora seleccionada:
 
 [![Pantalla inicial de aplicación de ejemplo](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png#lightbox)
 
@@ -59,7 +59,7 @@ En este ejemplo se utiliza la tercera técnica, que requiere que la actividad pr
 
 Inicie un nuevo proyecto de Android llamado **TimePickerDemo** (si no está familiarizado con la creación de proyectos de Xamarin. Android, consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obtener información sobre cómo crear un nuevo proyecto).
 
-Edite Resources **/layout/main. axml** y reemplace su contenido por el siguiente código XML:
+Edite **Resources/layout/main. axml** y reemplace su contenido por el siguiente código XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,6 @@ Esta `TimePickerFragment` clase se divide en partes más pequeñas y se explica 
         DateTime currentTime = DateTime.Now;
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
-
 
 - Este `DateTime` objeto se pasa a la `timeSelectedHandler` que se registra con el `TimePickerFragment` objeto en el momento de su creación. `OnTimeSet`invoca este controlador para actualizar la presentación de la hora de la actividad a la hora seleccionada (este controlador se implementa en la sección siguiente):
 

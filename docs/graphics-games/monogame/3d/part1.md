@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 013e169770fa2e52f89915d1b74c7292a049f87e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197821"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766833"
 ---
 # <a name="using-the-model-class"></a>Usar la clase Model
 
@@ -39,12 +39,11 @@ Antes de continuar, debemos comprobar que el proyecto se abre y se implementa co
 
 ![Pantalla de juego azul en blanco](part1-images/image2.png)
 
-
 ## <a name="including-the-xnbs-in-the-game-project"></a>Incluir XNBs en el proyecto de juego
 
-El formato de archivo. XNB es una extensión estándar para el contenido compilado (contenido creado por la [herramienta](http://www.monogame.net/documentation/?page=Pipeline)de canalización monogame). Todo el contenido compilado tiene un archivo de código fuente (que es un archivo. FBX en el caso de nuestro modelo) y un archivo de destino (un archivo. XNB). El formato .fbx es un formato de modelo 3D común que pueden crear aplicaciones como [Maya](http://www.autodesk.com/products/maya/overview) y [Blender](http://www.blender.org/). 
+El formato de archivo. XNB es una extensión estándar para el contenido compilado (contenido creado por la [herramienta de canalización monogame](http://www.monogame.net/documentation/?page=Pipeline)). Todo el contenido compilado tiene un archivo de código fuente (que es un archivo. FBX en el caso de nuestro modelo) y un archivo de destino (un archivo. XNB). El formato .fbx es un formato de modelo 3D común que pueden crear aplicaciones como [Maya](http://www.autodesk.com/products/maya/overview) y [Blender](http://www.blender.org/). 
 
-La `Model` clase se puede construir cargando un archivo. XNB de un disco que contenga datos de geometría 3D.   Este archivo. XNB se crea a través de un proyecto de contenido. Las plantillas monogame incluyen automáticamente un proyecto de contenido (con la extensión. MGCP) en la carpeta de contenido. Para obtener información detallada sobre la herramienta de canalización de monogame, consulte la guía de canalizaciones de [contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
+La `Model` clase se puede construir cargando un archivo. XNB de un disco que contenga datos de geometría 3D.   Este archivo. XNB se crea a través de un proyecto de contenido. Las plantillas monogame incluyen automáticamente un proyecto de contenido (con la extensión. MGCP) en la carpeta de contenido. Para obtener información detallada sobre la herramienta de canalización de monogame, consulte la [Guía de canalizaciones de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 En esta guía se omitirá el uso de la herramienta de canalización monogame y se usará. XNB los archivos que se incluyen aquí. Tenga en cuenta que. Los archivos XNB varían según la plataforma, por lo que debe asegurarse de usar el conjunto correcto de archivos XNB para cualquier plataforma con la que esté trabajando.
 
@@ -210,7 +209,6 @@ Podemos ver que la cámara ha retrovuelto, lo que da lugar `Model` a un tamaño 
 ## <a name="rendering-multiple-models"></a>Representar varios modelos
 
 Como se mencionó anteriormente, un `Model` solo se puede dibujar varias veces. Para facilitar esta tarea, moveremos el código `Model` de dibujo a su propio método que toma la posición `Model` deseada como parámetro. Una vez finalizado `Draw` , `DrawModel` nuestros métodos y tendrán el siguiente aspecto:
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)

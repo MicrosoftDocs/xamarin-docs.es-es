@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 6cbcd6612323acc8619004d56fff82461e005e9e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 72ffa4508f2c8f050f505313a28ce8278f2570b4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760263"
 ---
 # <a name="dependency-injection"></a>Inserción de dependencias
 
-Normalmente, se invoca un constructor de clase al crear instancias de un objeto y los valores que necesita el objeto se pasan como argumentos al constructor. Este es un ejemplo de inserción de dependencias y, específicamente, se conoce como *inserción*de constructores. Las dependencias que necesita el objeto se insertan en el constructor.
+Normalmente, se invoca un constructor de clase al crear instancias de un objeto y los valores que necesita el objeto se pasan como argumentos al constructor. Este es un ejemplo de inserción de dependencias y, específicamente, se conoce como *inserción de constructores*. Las dependencias que necesita el objeto se insertan en el constructor.
 
 Al especificar las dependencias como tipos de interfaz, la inserción de dependencias permite desacoplar los tipos concretos del código que depende de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y asignaciones entre las interfaces y los tipos abstractos, y los tipos concretos que implementan o amplían estos tipos.
 
-También hay otros tipos de inserción de dependencias, como la inserción de un establecedor de *propiedad*y la inserción de *llamadas de método*, pero se suelen considerar. Por lo tanto, este capítulo se centrará únicamente en realizar la inserción de constructores con un contenedor de inserción de dependencias.
+También hay otros tipos de inserción de dependencias, como la inserción de un *establecedor de propiedad*y la *inserción de llamadas de método*, pero se suelen considerar. Por lo tanto, este capítulo se centrará únicamente en realizar la inserción de constructores con un contenedor de inserción de dependencias.
 
 <a name="introduction_to_dependency_injection" />
 
@@ -41,7 +41,7 @@ public class ProfileViewModel : ViewModelBase
 }
 ```
 
-El `ProfileViewModel` constructor recibe una `IOrderService` instancia de como argumento, insertada por otra clase. La única dependencia de la `ProfileViewModel` clase se encuentra en el tipo de interfaz. Por lo tanto `ProfileViewModel` , la clase no tiene ningún conocimiento de la clase que es responsable de crear `IOrderService` instancias del objeto. La clase que es responsable de crear instancias del `IOrderService` objeto e insertarlo en la `ProfileViewModel` clase se conoce como *contenedor de inserción*de dependencias.
+El `ProfileViewModel` constructor recibe una `IOrderService` instancia de como argumento, insertada por otra clase. La única dependencia de la `ProfileViewModel` clase se encuentra en el tipo de interfaz. Por lo tanto `ProfileViewModel` , la clase no tiene ningún conocimiento de la clase que es responsable de crear `IOrderService` instancias del objeto. La clase que es responsable de crear instancias del `IOrderService` objeto e insertarlo en la `ProfileViewModel` clase se conoce como contenedor de inserción de *dependencias*.
 
 Los contenedores de inserción de dependencias reducen el acoplamiento entre objetos proporcionando una utilidad para crear instancias de la clase y administrar su duración en función de la configuración del contenedor. Durante la creación de objetos, el contenedor inserta las dependencias que el objeto requiere en él. Si estas dependencias no se han creado todavía, el contenedor crea y resuelve primero sus dependencias.
 
@@ -140,7 +140,7 @@ _container = builder.Build();
 Al invocar `Build` el método en `ContainerBuilder` la instancia de, se crea un nuevo contenedor de inserción de dependencias que contiene los registros que se han realizado.
 
 > [!TIP]
-> Considere la posibilidad de que sea inmutable. `IContainer` Aunque Autofac proporciona un `Update` método para actualizar los registros de un contenedor existente, la llamada a este método debe evitarse siempre que sea posible. Hay riesgos para modificar un contenedor una vez compilado, especialmente si se ha usado el contenedor. Para obtener más información, vea [considerar un contenedor como](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) inmutable en readthedocs.IO.
+> Considere la posibilidad de que sea inmutable. `IContainer` Aunque Autofac proporciona un `Update` método para actualizar los registros de un contenedor existente, la llamada a este método debe evitarse siempre que sea posible. Hay riesgos para modificar un contenedor una vez compilado, especialmente si se ha usado el contenedor. Para obtener más información, vea [considerar un contenedor como inmutable](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) en readthedocs.IO.
 
 <a name="resolution" />
 
@@ -197,7 +197,6 @@ Autofac incluye ámbitos de instancia adicionales. Para obtener más informació
 La inserción de dependencias permite desacoplar tipos concretos del código que depende de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y asignaciones entre las interfaces y los tipos abstractos, y los tipos concretos que implementan o amplían estos tipos.
 
 Autofac facilita la creación de aplicaciones de acoplamiento flexible y proporciona todas las características que se encuentran normalmente en los contenedores de inserción de dependencias, incluidos los métodos para registrar las asignaciones de tipos y las instancias de objeto, resolver objetos, administrar la duración de los objetos e insertar objetos dependientes en constructores de objetos que resuelve.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

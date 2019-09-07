@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228250"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759383"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso de SkiaSharp
 
@@ -943,7 +943,6 @@ Puede usar este efecto de la ruta de acceso para rellenar o trazado. Las líneas
 
 El argumento final es un valor de inicialización usado para generar la secuencia pseudoaleatoria usa para el efecto. El efecto de vibración tendrá un aspecto un poco diferente para distintos valores de inicialización. El argumento tiene un valor predeterminado de cero, lo que significa que el efecto es el mismo cada vez que ejecute el programa. Si desea vibración diferente cada vez que se actualiza la pantalla, puede establecer el valor de inicialización la `Millisecond` propiedad de un `DataTime.Now` valor (por ejemplo).
 
-
 El **vibración experimentar** página le permite experimentar con diferentes valores en un rectángulo de trayectoria:
 
 [![Captura de pantalla triple de la página JitterExperiment](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1086,7 +1085,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Solo se necesitan los dos primeros argumentos. El método tiene acceso a la ruta de acceso al que hace referencia el `src` argumento, modifica los datos de ruta de acceso basados en las propiedades de trazo en el `SKPaint` objeto (incluido el `PathEffect` propiedad) y, a continuación, escribe los resultados en el `dst` ruta de acceso. El `resScale` parámetro permite reducir la precisión para crear una ruta de acceso de destino más pequeño y el `cullRect` argumento puede eliminar perfiles fuera de un rectángulo.
 
-Un uso básico de este método no implica efectos de ruta de acceso: Si el `SKPaint` objeto tiene su `Style` propiedad establecida en `SKPaintStyle.Stroke`, `PathEffect`yno tiene su conjunto, creaunarutadeaccesoquerepresentauncontornodelarutadeaccesodeorigencomosihubierasidotrazada`GetFillPath` por el propiedades de Paint.
+Un uso básico de este método no implica efectos de ruta de acceso: Si el `SKPaint` objeto tiene su `Style` propiedad establecida en `SKPaintStyle.Stroke` `PathEffect` ,`GetFillPath` y no *tiene su* conjunto, crea una ruta de acceso que representa un *contorno* de la ruta de acceso de origen como si hubiera sido trazada por el propiedades de Paint.
 
 Por ejemplo, si la `src` ruta de acceso es un círculo simple del radio de 500 y el `SKPaint` objeto especifica un ancho de trazo de 100, el `dst` ruta de acceso se convierte en dos círculos concéntricos, uno con un radio de 450 y otro con un radio de 550. Se llama al método `GetFillPath` porque rellena esta información `dst` ruta de acceso es el mismo que el trazado el `src` ruta de acceso. Pero también puede trazar la `dst` ruta de acceso para ver los contornos de ruta de acceso.
 
@@ -1412,8 +1411,6 @@ Como ya han descubierto, no son precisamente restringidas al interior del área 
 [![Captura de pantalla triple de la página líneas de trama discontinua](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Ahora que ha visto los efectos de la ruta de acceso que van desde simples puntos y guiones para combinaciones extrañas, use su imaginación y vea lo que puede crear.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

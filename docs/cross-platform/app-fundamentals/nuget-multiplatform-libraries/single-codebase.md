@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 966d7a21da0112383c08e862a357c3c1d4fb9c22
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766464"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Creación de una nueva biblioteca multiplataforma para NuGet
 
@@ -50,7 +50,6 @@ Si más adelante necesita una funcionalidad específica de la plataforma, [se pu
 
    ![](single-codebase-images/create-nuget-package.png "El archivo de paquete NuGet se guardará en la carpeta bin Debug o release, en función de la configuración.")
 
-
 ## <a name="verifying-the-output"></a>Comprobación del resultado
 
 Los paquetes NuGet también son archivos ZIP, por lo que es posible inspeccionar la estructura interna del paquete generado.
@@ -75,7 +74,6 @@ Se pueden agregar uno o varios proyectos de plataforma a la solución, y la bibl
 
 Después de realizar la conversión a un proyecto compartido, visite la[sección](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) **Opciones de proyecto > paquete NuGet > de ensamblados**
 de referencia y asegúrese de que se seleccionan los perfiles necesarios (para que NuGet siga siendo compatible con los proyectos de. se usaba previamente en).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 6ff697964cbc057b4a3f905394d147d7c132d79b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4db5718394c3835861f3dfa8b99a4bac70e26981
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281955"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767012"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Trabajar con valores predeterminados de usuario en Xamarin. iOS
 
 _En este artículo se explica cómo trabajar con NSUserDefault para guardar la configuración predeterminada en una aplicación o extensión de Xamarin. iOS._
-
 
 La `NSUserDefaults` clase proporciona una manera para que las aplicaciones y extensiones de iOS interactúen con el sistema de valores predeterminados de todo el sistema mediante programación. Al usar el sistema de valores predeterminados, el usuario puede configurar el comportamiento o el estilo de una aplicación para que se adapte a sus preferencias (según el diseño de la aplicación). Por ejemplo, para presentar los datos en métricas frente a medidas de los Imperials o seleccionar un tema de la interfaz de usuario determinado.
 
@@ -129,14 +128,11 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > Cuando la aplicación se ejecuta por primera `NSUserDefaults` vez, lee las claves y los valores de la base de datos de los valores predeterminados del usuario de la aplicación y los almacena en memoria caché para evitar abrir y leer la base de datos cada vez que se requiere un valor.
 
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha `NSUserDefaults` tratado la clase y cómo se puede usar para proporcionar un conjunto de opciones que el usuario final puede usar para configurar la aplicación de Xamarin. iOS. Además, se ha tratado el uso de grupos de aplicaciones para comunicarse entre una extensión y su aplicación primaria o entre aplicaciones en un grupo.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

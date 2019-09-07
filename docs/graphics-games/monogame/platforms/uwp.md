@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 367f44104b0d6049b8d65ab6e3b3f38c703cdb3f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa43513154499a39c27f5ad35fce9584ce7827f8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198713"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763523"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Creación de un proyecto de UWP de monogame
 
@@ -40,7 +40,7 @@ Los juegos de Xbox One se pueden desarrollar en hardware de Xbox One comercial. 
 Una vez que se han instalado todos los recursos necesarios y se ha habilitado el modo de Desarrollador en el equipo con Windows 10, podemos crear un nuevo proyecto de monogame con Visual Studio siguiendo estos pasos:
 
 1. Seleccione **archivo** > nuevoproyecto >  **...**
-1. Seleccione la > categoría de**Visual C#**  >  juego > de plantillas instaladas:
+1. Seleccione la categoría de > **Visual C#**  >  juegodeplantillasinstaladas > :
 
     ![](uwp-images/image1.png "Categoría de monogame")
 
@@ -56,7 +56,6 @@ Una vez que Visual Studio termina de crear la plantilla, podemos ejecutarla para
 ![](uwp-images/image3.png "Una vez que Visual Studio termine de crear la plantilla, ejecútela para ver el proyecto vacío en ejecución")
 
 Los números de las esquinas proporcionan información de diagnóstico. Esta información se puede quitar eliminando el código en `App.xaml.cs` el `DEBUG` bloque `OnLaunched` del método:
-
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -90,9 +89,9 @@ La plantilla monogame para Xbox One considera el área segura y la representa co
 
 ## <a name="referencing-content-in-uwp-projects"></a>Hacer referencia al contenido en proyectos de UWP
 
-Se puede hacer referencia al contenido de los proyectos de monogame directamente desde el archivo o a través de la canalización de [contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)de monogame. Los proyectos de juegos pequeños pueden beneficiarse de la simplicidad de carga desde el archivo. Los proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido con el fin de reducir el tamaño y los tiempos de carga. A diferencia de XNA en la Xbox 360, `System.IO.File` la clase está disponible en las aplicaciones de Xbox One UWP.
+Se puede hacer referencia al contenido de los proyectos de monogame directamente desde el archivo o a través de la [canalización de contenido de monogame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Los proyectos de juegos pequeños pueden beneficiarse de la simplicidad de carga desde el archivo. Los proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido con el fin de reducir el tamaño y los tiempos de carga. A diferencia de XNA en la Xbox 360, `System.IO.File` la clase está disponible en las aplicaciones de Xbox One UWP.
 
-Para obtener más información sobre cómo cargar contenido mediante la canalización de contenido, consulte la guía de canalizaciones de [contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
+Para obtener más información sobre cómo cargar contenido mediante la canalización de contenido, consulte la [Guía de canalizaciones de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 ### <a name="loading-content-from-file"></a>Cargando contenido desde el archivo
 

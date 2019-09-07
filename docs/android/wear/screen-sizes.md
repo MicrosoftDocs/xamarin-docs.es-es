@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 93e6797f2b00df32b8d3ae361f40fd487b7adac3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647727"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758317"
 ---
 # <a name="working-with-screen-sizes"></a>Trabajar con tamaños de pantalla
 
@@ -45,13 +45,11 @@ La solución contiene diferentes diseños para cada estilo que se seleccionarán
 
 ![Archivos que se muestran en recursos/diseño](screen-sizes-images/solution.png)
 
-
 ### <a name="boxinsetlayout"></a>BoxInsetLayout
 
 En lugar de crear diseños diferentes para cada tipo de pantalla, también puede crear una vista única que se adapte a pantallas rectangulares o redondas.
 
 En este [ejemplo de Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) se muestra cómo `BoxInsetLayout` usar el para usar el mismo diseño en pantallas rectangulares y redondas.
-
 
 ## <a name="wear-ui-designer"></a>Diseñador de IU de desgaste
 
@@ -67,10 +65,9 @@ Aquí se muestra la superficie de diseño en el estilo redondo:
 
 ![Superficie de diseño en estilo redondo](screen-sizes-images/design-round.png)
 
-
 ## <a name="wear-simulator"></a>Simulador de desgaste
 
-El **Administrador** del emulador de Google contiene definiciones de dispositivos para ambos tipos de pantalla. Puede crear emuladores rectangulares y redondos para probar la aplicación.
+El **Administrador del emulador de Google** contiene definiciones de dispositivos para ambos tipos de pantalla. Puede crear emuladores rectangulares y redondos para probar la aplicación.
 
 ![Desgaste de las definiciones de dispositivos que se muestran en el administrador de emuladores de Google](screen-sizes-images/emulator-devices.png)
 
@@ -85,4 +82,3 @@ Se representará como esto para una pantalla redonda:
 ## <a name="video"></a>Vídeo
 
 [Aplicaciones de pantalla completa para el desgaste de Android](https://www.youtube.com/watch?v=naf_WbtFAlY) desde [developers.Google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
-

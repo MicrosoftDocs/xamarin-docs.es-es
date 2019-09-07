@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 0c6568f9283491f0e55c79c77fb8efb2ae75f33c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887544"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758620"
 ---
 # <a name="a-basic-recyclerview-example"></a>Ejemplo de RecyclerView básico
 
@@ -21,7 +21,6 @@ Para entender cómo `RecyclerView` funciona en una aplicación típica, en este 
 [![Dos capturas de pantalla de una aplicación de RecyclerView que usa CardViews para mostrar fotografías](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** usa [CardView](~/android/user-interface/controls/card-view.md) para implementar cada elemento de fotografía en `RecyclerView` el diseño. Debido a `RecyclerView`las ventajas de rendimiento de, esta aplicación de ejemplo puede desplazarse rápidamente a través de una gran colección de fotografías sin problemas y sin retrasos apreciables.
-
 
 ### <a name="an-example-data-source"></a>Un origen de datos de ejemplo
 
@@ -46,7 +45,6 @@ mPhotoAlbum.RandomSwap ();
 ```
 
 Dado que los detalles de `PhotoAlbum` implementación de no son relevantes `RecyclerView`para comprender `PhotoAlbum` , el código fuente no se presenta aquí. El código fuente a `PhotoAlbum` está disponible en [Photoalbum.CS](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) en la aplicación de ejemplo [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) .
-
 
 ### <a name="layout-and-initialization"></a>Diseño e inicialización
 
@@ -109,7 +107,7 @@ Este código hace lo siguiente:
 
 ### <a name="layout-manager"></a>Administrador de diseño
 
-Cada elemento de `RecyclerView` se compone de un `CardView` que contiene una imagen de fotografía y un título de fotografía (los detalles se describen en la sección de titulares de la [vista](#view-holder) a continuación). El predefinido `LinearLayoutManager` se usa para diseñar cada `CardView` en una disposición de desplazamiento vertical:
+Cada elemento de `RecyclerView` se compone de un `CardView` que contiene una imagen de fotografía y un título de fotografía (los detalles se describen en la sección de [titulares](#view-holder) de la vista a continuación). El predefinido `LinearLayoutManager` se usa para diseñar cada `CardView` en una disposición de desplazamiento vertical:
 
 ```csharp
 mLayoutManager = new LinearLayoutManager (this);
@@ -150,7 +148,6 @@ En este ejemplo de código, `PhotoViewHolder` al constructor se le pasa una refe
 
 Para obtener más información `RecyclerView.ViewHolder`sobre, vea la referencia de la [clase RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-
 ### <a name="adapter"></a>Adaptador
 
 El adaptador carga cada `RecyclerView` fila con datos de una fotografía determinada. Para una fotografía determinada en la posición de fila *p*, por ejemplo, el adaptador busca los datos asociados en la posición *p* en el origen de datos y copia estos datos en el elemento de fila en `RecyclerView` la posición *p* de la colección. El adaptador usa el titular de la vista para buscar las referencias `ImageView` de `TextView` y en esa posición, por lo que no tiene `FindViewById` que llamar repetidamente a esas vistas cuando el usuario se desplaza por la colección de fotografías y reutiliza las vistas.
@@ -179,7 +176,6 @@ El `mPhotoAlbum` miembro contiene el origen de datos (el álbum de fotos) que se
 - **`ItemCount`** &ndash; Devuelve el número de elementos del origen de datos.
 
 El administrador de diseño llama a estos métodos mientras coloca los elementos dentro `RecyclerView`de. La implementación de estos métodos se examina en las secciones siguientes.
-
 
 #### <a name="oncreateviewholder"></a>OnCreateViewHolder
 
@@ -243,7 +239,6 @@ public override RecyclerView.ViewHolder
 
 La instancia de marcador de vista `vh`resultante,, se devuelve al autor de la llamada (el administrador de diseño).
 
-
 #### <a name="onbindviewholder"></a>OnBindViewHolder
 
 Cuando el administrador de diseño está listo para mostrar una vista determinada en `RecyclerView`el área visible de la pantalla, llama al método `OnBindViewHolder` del adaptador para rellenar el elemento en la posición de la fila especificada con el contenido del origen de datos. `OnBindViewHolder`Obtiene la información de la fotografía para la posición de la fila especificada (el recurso de imagen de la fotografía y la cadena para el título de la fotografía) y copia estos datos en las vistas asociadas. Las vistas se encuentran a través de referencias almacenadas en el objeto de portaherramienta de la vista `holder` (que se pasa a través del parámetro):
@@ -267,7 +262,6 @@ El adaptador carga el recurso de imagen en la vista a la que hace referencia la 
 
 Observe que `OnBindViewHolder` es el código que trata directamente la estructura de los datos. En este caso, `OnBindViewHolder` entiende cómo asignar la posición `RecyclerView` del elemento a su elemento de datos asociado en el origen de datos. En este caso, la asignación es sencilla, ya que la posición puede usarse como un índice de matriz en el álbum de fotos. sin embargo, los orígenes de datos más complejos pueden requerir código adicional para establecer este tipo de asignación.
 
-
 #### <a name="itemcount"></a>ItemCount
 
 El `ItemCount` método devuelve el número de elementos de la colección de datos. En la aplicación de visor de fotos de ejemplo, el recuento de elementos es el número de fotos del álbum de fotos:
@@ -280,7 +274,6 @@ public override int ItemCount
 ```
 
 Para obtener más información `RecyclerView.Adapter`sobre, vea la referencia de la [clase RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
-
 
 ### <a name="putting-it-all-together"></a>Reunir todo
 
@@ -377,9 +370,6 @@ android:hardwareAccelerated="true"
 
 Esta aplicación básica solo admite la exploración del álbum de fotos. No responde a los eventos táctiles de elementos ni a los cambios en los datos subyacentes. Esta funcionalidad se agrega en [la extensión del ejemplo RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-
-
-
 ### <a name="changing-the-layoutmanager"></a>Cambiar el LayoutManager
 
 Debido a `RecyclerView`la flexibilidad de, es fácil modificar la aplicación para que use un administrador de diseño diferente. En el ejemplo siguiente, se modifica para mostrar el álbum de fotos con un diseño de cuadrícula que se desplaza horizontalmente en lugar de con un diseño lineal vertical. Para ello, la creación de instancias del administrador de diseño se modifica para `GridLayoutManager` usar el de la siguiente manera:
@@ -396,8 +386,6 @@ Al cambiar solo una línea de código, es posible modificar la aplicación de vi
 Tenga en cuenta que ni el código del adaptador ni el XML de diseño tuvieron que modificarse para cambiar el estilo de diseño. 
 
 En el tema siguiente, [extender el ejemplo de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md), esta aplicación de ejemplo básica se extiende para controlar eventos de clic de `RecyclerView` elemento y actualizar cuando cambia el origen de datos subyacente.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

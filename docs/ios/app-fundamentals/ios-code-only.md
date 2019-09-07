@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: d1464ca3accf53a9362d00e279ff9e158d7e34d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b829cf3f440b1c94c5232d258c86b6ea4b0f181
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281631"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767513"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Crear interfaces de usuario de iOS en código de Xamarin.iOS
 
@@ -59,16 +59,13 @@ La plantilla proyecto vacío agrega 4 archivos al proyecto:
 1. **Info.plist** -archivo de lista de propiedades que contiene información de configuración de aplicación.
 1. **Entitlements.plist** : archivo de lista de propiedades que contiene información sobre las capacidades y los permisos de la aplicación.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>plantillas de iOS
 
-
 Visual Studio para Mac no proporciona una plantilla vacía. Todas las plantillas incluyen compatibilidad con guiones gráficos, que Apple recomienda como medio principal para crear una interfaz de usuario. Sin embargo, es posible crear la interfaz de usuario completamente en código.
 
 Los pasos siguientes le guiarán en el proceso de quitar el guión gráfico de una aplicación:
-
 
 1. Use la plantilla de aplicación de vista única para crear un nuevo proyecto de iOS:
 

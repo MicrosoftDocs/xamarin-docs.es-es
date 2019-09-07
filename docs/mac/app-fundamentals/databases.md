@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289125"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769907"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de datos en Xamarin. Mac
 
@@ -2221,8 +2221,6 @@ En primer lugar, se obtiene acceso a la base de datos SQLite.NET y se crea y rel
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada del uso del enlace de datos y el código de clave-valor con las bases de datos de SQLite en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición C# de una clase a Objective-C mediante el uso de código de clave-valor (KVC) y el valor de clave (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazar datos a elementos de la interfaz de usuario en la Interface Builder de Xcode. En el artículo también se describe cómo trabajar con los datos de SQLite a través del SQLite.NET ORM y cómo mostrar los datos en una vista de tabla.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

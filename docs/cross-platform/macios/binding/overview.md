@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279791"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765597"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Información general de los enlaces de Objective-C
 
@@ -37,7 +37,6 @@ También puede leer más detalles técnicos de [Cómo funciona](#howitworks), lo
 
 Puede usar el `btouch-native` para Xamarin. iOS (o `bmac-native` si usa Xamarin. Mac) para compilar enlaces directamente. Funciona al pasar a la C# herramienta`btouch-native` `bmac-native` de línea de comandos las definiciones de la API que ha creado manualmente (o usando Objective Sharpie).
 
-
 La sintaxis general para invocar estas herramientas es:
 
 ```csharp
@@ -51,7 +50,6 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
 El comando anterior generará el archivo `cocos2d.dll` en el directorio actual y contendrá la biblioteca totalmente enlazada que puede usar en el proyecto. Esta es la herramienta que Visual Studio para Mac usa para crear los enlaces si usa un proyecto de enlace (descrito [a continuación](#bindingproject)).
-
 
 <a name="bindingproject" />
 

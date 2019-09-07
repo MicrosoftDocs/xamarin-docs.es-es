@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 22. Animación
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 22. Animación'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 22. Animación'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333214"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770994"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Resumen del capítulo 22. Animación
 
@@ -197,8 +197,6 @@ El [ **ColorAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples
 ## <a name="structuring-your-animations"></a>Estructurar las animaciones
 
 A veces resulta útil expresar las animaciones en XAML y usarlos junto con MVVM. Este tema se trata en el próximo capítulo, [ **capítulo 23. Los desencadenadores y comportamientos**](chapter23.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

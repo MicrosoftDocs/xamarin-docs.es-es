@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 35c35e702b7f992e0661630783edd4f00abce5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286790"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767371"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Trabajar con listas de propiedades en Xamarin. iOS
 
@@ -32,7 +32,6 @@ Cada panel controla propiedades diferentes, como se describe a continuación:
 - **Panel avanzado** : el panel Opciones avanzadas es el lugar donde se especifican los tipos de documento, UTI y tipos de URL admitidos.
 - **Panel de origen** : el panel de origen controla las propiedades menos comunes, así como las propiedades personalizadas de la aplicación.
 
-
 En las tres secciones siguientes se investigan con más detalle las características de cada panel.
 
 ## <a name="application-panel"></a>Panel de la aplicación
@@ -46,11 +45,9 @@ Visual Studio para Mac incluye una interfaz gráfica para editar entradas `Info.
 1. Iconos y pantallas de inicio
 1. Mapas y modos en segundo plano
 
-
 Estos se describen con más detalle en las secciones siguientes.
 
  <a name="iOS_Application_Target" />
-
 
 ### <a name="ios-application-target"></a>Destino de la aplicación iOS
 
@@ -77,13 +74,9 @@ La sección de estilos de la **barra de estado** es una interfaz gráfica para `
 
  <a name="Icons" />
 
-
 ### <a name="icons-launch-images-and-itunes-artwork"></a>Iconos, imágenes de inicio y material gráfico de iTunes
 
 Puede encontrar información sobre el uso de iconos, imágenes y material gráfico en el archivo info. plist en la guía [trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md) .
-
-
-
 
 ### <a name="maps-integration-and-background-modes"></a>Integración de Maps y modos en segundo plano
 
@@ -104,7 +97,6 @@ El panel avanzado controla los tipos de documentos y los esquemas de dirección 
  [![](property-lists-images/image34.png "Panel avanzado")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
-
 
 ## <a name="document-types"></a>Tipos de documento
 
@@ -127,8 +119,6 @@ Para obtener más información sobre el uso de UTI personalizado, consulte la gu
 El nombre de un esquema de dirección URL (también denominado Protocolo) es la primera parte de la dirección URL. Por ejemplo, `http://` y `https://` son esquemas de dirección URL comunes. Tiene la opción de crear un esquema de dirección URL personalizado para la aplicación. Los esquemas de URL personalizados se utilizan para comunicarse y enviar datos de un junto a otro con otras aplicaciones. En la captura de pantalla siguiente se muestra la creación de un `monkeys://`nuevo esquema de dirección URL personalizado denominado:
 
  [![](property-lists-images/url.png "Direcciones URL personalizadas")](property-lists-images/url.png#lightbox)
-
-
 
 Para obtener más información sobre la implementación de esquemas de URL personalizados, consulte la [sección implementación de esquemas de URL personalizados de Apple de esta guía](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html) .
 
@@ -153,7 +143,6 @@ Revise los vínculos de [recursos relacionados con las aplicaciones](https://dev
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha mostrado el uso de los Editores gráficos y avanzados. plist para editar configuraciones de aplicaciones comunes, así como para especificar iconos e imágenes de inicio. También se ha introducido `Entitlements.plist` el para agregar y administrar las funcionalidades de la aplicación.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

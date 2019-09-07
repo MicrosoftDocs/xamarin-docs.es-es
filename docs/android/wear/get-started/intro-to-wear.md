@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 37bc5bf32bc1d218179ef1176e1632239b1cb45f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119535"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758496"
 ---
 # <a name="introduction-to-android-wear"></a>Introducción a Android Wear
 
 _Con la introducción del desgaste de Android de Google, ya no está restringido a los teléfonos y las tabletas cuando se trata de desarrollar excelentes aplicaciones Android. La compatibilidad de Xamarin. Android con el desgaste de Android permite ejecutar C# código en su muñeca. Esta introducción proporciona información general básica sobre el desgaste de Android, describe sus características clave y ofrece información general sobre las características disponibles en el desgaste de Android 2,0. En él se enumeran algunos de los dispositivos de desgaste de Android más populares y se proporcionan vínculos a la documentación esencial sobre el desgaste de Android de Google para su posterior lectura._
-
 
 ## <a name="overview"></a>Información general
 
@@ -27,29 +26,21 @@ El desgaste de Android se ejecuta en una variedad de dispositivos, entre los que
 
 Xamarin. Android 5,0 y versiones posteriores admiten el desgaste de Android a través de la compatibilidad con Android 4.4 W (API 20) y un paquete de NuGet que agrega controles de interfaz de usuario específicos para el desgaste adicional. Xamarin. Android 5,0 y versiones posteriores también incluyen funcionalidad para empaquetar las aplicaciones de desgaste. Los paquetes NuGet también están disponibles para el desgaste de Android 2,0 como se describe más adelante en esta guía.
 
-
 ## <a name="android-wear-basics"></a>Conceptos básicos sobre el desgaste de Android
 
 El desgaste de Android tiene un paradigma de interfaz de usuario que difiere del de las aplicaciones de bolsillo de Android. La primera ola de aplicaciones de desgaste se diseñó para extender una aplicación de mano complementaria de algún modo, pero a partir del desgaste de Android 2,0, las aplicaciones de desgaste se pueden usar de forma independiente. Cuando se implementa una aplicación de desgaste, se empaqueta con una aplicación de mano complementaria. Dado que la mayoría de las aplicaciones de desgaste dependen de una aplicación complementaria de mano, necesitan alguna manera de comunicarse con aplicaciones de mano. En las secciones siguientes se describen estos escenarios de uso y se describen las características esenciales del desgaste de Android. 
-
-
 
 ### <a name="usage-scenarios"></a>Escenarios de uso
 
 La primera versión del desgaste de Android se centró principalmente en la extensión de aplicaciones de mano actuales con notificaciones mejoradas y la sincronización de datos entre la aplicación de mano y la aplicación portátil. Por lo tanto, estos escenarios son relativamente sencillos de implementar.
 
-
 #### <a name="wearable-notifications"></a>Notificaciones de portátil
 
 La manera más sencilla de admitir el desgaste de Android es aprovechar la naturaleza compartida de las notificaciones entre el dispositivo de mano y el dispositivo portátil. Mediante el uso de la API de notificación de `WearableExtender` support V4 y la clase (disponible en la [biblioteca de compatibilidad de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), puede aprovechar las características nativas de la plataforma, como las tarjetas de estilo de bandeja de entrada o la entrada de voz. El ejemplo [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) proporciona código de ejemplo que muestra cómo enviar una lista de notificaciones a un dispositivo de desgaste de Android. 
 
-
-
 #### <a name="companion-applications"></a>Aplicaciones complementarias
 
 Otra estrategia consiste en crear una aplicación completa que se ejecute de forma nativa en el dispositivo portátil y pares con una aplicación de mano complementaria. Un buen ejemplo de este enfoque es la aplicación de ejemplo de [cuestionario](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) , que muestra cómo crear una prueba que se ejecuta en un dispositivo de mano y realiza preguntas de prueba en el dispositivo portátil. 
-
-
 
 ### <a name="user-interface"></a>Interfaz de usuario
 
@@ -60,8 +51,6 @@ El patrón de navegación principal para el desgaste es una serie de tarjetas or
 El desgaste también hace uso de botones de acción que se componen de un círculo de color grande con un pequeño texto de Descripción debajo (como se muestra arriba).  En el ejemplo [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) se muestra cómo `GridViewPager` usar `GridPagerAdapter` y en una aplicación de desgaste.
 
 El desgaste de Android 2,0 agrega un cajón de navegación, un cajón de acciones y botones de acción insertados a la interfaz de usuario de desgaste. Para más información sobre los elementos de la interfaz de usuario de 2,0 de Android, consulte el tema sobre la [anatomía](https://www.google.com/design/spec-wear/system-overview/anatomy.html) de Android. 
-
-
 
 ### <a name="communications"></a>Comunicaciones
 
@@ -77,14 +66,10 @@ Puede optar por registrar devoluciones de llamada para recibir esos mensajes a t
 Se crearán instancias de este servicio automáticamente con el desgaste de Android.
 En el ejemplo [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) se muestra cómo implementar un `WearableListenerService`.
 
-
-
 ### <a name="deployment"></a>Implementación
 
 Cada aplicación portátil se implementa con su propio archivo APK insertado en la aplicación principal APK. Este empaquetado se administra automáticamente en Xamarin. Android 5,0 y versiones posteriores, pero debe realizarse manualmente para las versiones de Xamarin. Android anteriores a la versión 5,0. 
 [Trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md) explica la implementación con más detalle. 
-
-
 
 ## <a name="going-further"></a>Ampliar conocimientos 
 
@@ -103,13 +88,9 @@ La mejor manera de familiarizarse con el desgaste de Android consiste en compila
 Una vez que haya creado su primera aplicación de desgaste, puede intentar crear una superficie de inspección personalizada para el desgaste de Android. 
 [La creación de una esfera de inspección](~/android/wear/platform/creating-a-watchface.md) proporciona instrucciones paso a paso y código de ejemplo para desarrollar un servicio de caras de supervisión digital de bajada, seguido de más código que lo mejora en una superficie de inspección de estilo analógico con características adicionales. 
 
-
-
 ## <a name="android-wear-20"></a>Desgaste de Android 2,0
 
-El desgaste de Android 2,0 presenta una variedad de nuevas características y funcionalidades, como *complicaciones*, diseños curvos, dibujados de navegación y acciones, y notificaciones ampliadas. Además, el desgaste de 2,0 permite crear aplicaciones independientes que funcionen de forma independiente de las aplicaciones de mano. La nueva funcionalidad de gestos de *muñecas* permite interacciones de una sola mano con la aplicación. En las secciones siguientes se resaltan estas características y se proporcionan vínculos para ayudarle a empezar a usarlas en la aplicación.
-
-
+El desgaste de Android 2,0 presenta una variedad de nuevas características y funcionalidades, como *complicaciones*, diseños curvos, dibujados de navegación y acciones, y notificaciones ampliadas. Además, el desgaste de 2,0 permite crear aplicaciones independientes que funcionen de forma independiente de las aplicaciones de mano. La nueva funcionalidad de *gestos de muñecas* permite interacciones de una sola mano con la aplicación. En las secciones siguientes se resaltan estas características y se proporcionan vínculos para ayudarle a empezar a usarlas en la aplicación.
 
 ### <a name="install-wear-20-packages"></a>Instalación de desgaste de paquetes 2,0
 
@@ -123,11 +104,9 @@ Además de **Xamarin. Android. desgaste**, se recomienda instalar el NuGet **Xam
 
 [![Xamarin. GooglePlayServices. portátil](intro-to-wear-images/gpsw-nuget-sml.png "Instalar el NuGet Xamarin. GooglePlayServices. portátil")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-
 ### <a name="key-features-of-wear-20"></a>Características clave del desgaste 2,0
 
 El desgaste de Android 2,0 es la actualización más importante para el desgaste de Android desde su lanzamiento inicial en 2014. En las secciones siguientes se resaltan las características clave del desgaste de Android 2,0 y se proporcionan vínculos para ayudarle a empezar a usar estas nuevas características en la aplicación. 
-
 
 #### <a name="complications"></a>Complicaciones
 
@@ -137,8 +116,6 @@ Las *complicaciones* son widgets de reloj pequeños que se pueden ver de un vist
 
 Para obtener más información sobre las complicaciones, vea el tema sobre las complicaciones de las caras de la [observación](https://developer.android.com/wear/preview/features/complications.html) de Android. 
 
-
-
 #### <a name="navigation-and-action-drawers"></a>Navegación y dibujados de acciones 
 
 Dos nuevos alimentadores se incluyen en el desgaste de 2,0. El *cajón de navegación*, que aparece en la parte superior de la pantalla, permite a los usuarios navegar entre las vistas de la aplicación (como se muestra a continuación). El *cajón de acciones*, que aparece en la parte inferior de la pantalla (como se muestra a la derecha), permite a los usuarios elegir en una lista de acciones. 
@@ -146,8 +123,6 @@ Dos nuevos alimentadores se incluyen en el desgaste de 2,0. El *cajón de navega
 ![Navegación y dibujados de acciones](intro-to-wear-images/drawers.png "Navegación y dibujados de acciones")
 
 Para obtener más información sobre estos dos nuevos interactivos interactivos, consulte el tema [navegación y acciones de desgaste](https://developer.android.com/wear/preview/features/ui-nav-actions.html) de Android. 
-
-
 
 #### <a name="curved-layouts"></a>Diseños curvos 
 
@@ -157,13 +132,9 @@ Desgaste 2,0 presenta nuevas características para mostrar diseños curvos en di
 
 `WearableRecyclerView`extiende la `RecyclerView` clase para admitir diseños curvos y gestos de desplazamiento circular. Para obtener más información, consulte la documentación de la API de Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) . 
 
-
-
 #### <a name="standalone-apps"></a>Aplicaciones independientes 
 
 Las aplicaciones de desgaste de Android 2,0 pueden funcionar independientemente de las aplicaciones de mano. Esto significa que, por ejemplo, una inspección inteligente puede seguir ofreciendo funcionalidad completa aunque el dispositivo de mano complementario esté apagado o lejos del dispositivo portátil. Para obtener más información sobre esta característica, consulte el tema [aplicaciones independientes](https://developer.android.com/wear/preview/features/standalone-apps.html) de Android.
-
-
 
 #### <a name="wrist-gestures"></a>Gestos de muñecas 
 
@@ -172,12 +143,9 @@ Los gestos de muñecas permiten a los usuarios interactuar con la aplicación si
 - Desplazarse hacia afuera
 - Gesto de muñeca en
 
-Para obtener más información, consulte el tema sobre gestos de [muñecas](https://developer.android.com/wear/preview/features/gestures.html) de Android. 
-
+Para obtener más información, consulte el tema sobre [gestos de muñecas](https://developer.android.com/wear/preview/features/gestures.html) de Android. 
 
 Hay muchas más características de desgaste 2,0, como acciones insertadas, respuesta inteligente, entrada remota, notificaciones expandidas y un nuevo modo de puente para las notificaciones. Para obtener más información sobre las nuevas características de desgaste 2,0, consulte la [Introducción a la API](https://developer.android.com/wear/preview/api-overview.html)de Android. 
-
-
 
 ## <a name="devices"></a>Dispositivos
 
@@ -190,8 +158,6 @@ Estos son algunos ejemplos de los dispositivos que pueden ejecutar el desgaste d
 - [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 - [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
-
-
 ## <a name="further-reading"></a>Información adicional
 
 Consulte la documentación sobre el desgaste de Android de Google:
@@ -201,12 +167,9 @@ Consulte la documentación sobre el desgaste de Android de Google:
 - [Biblioteca Android. support. portátil](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Desgaste de Android 2,0](https://developer.android.com/wear/preview/index.html)
 
-
-
 ## <a name="summary"></a>Resumen
 
 Esta introducción proporciona información general sobre el desgaste de Android. Se describen las características básicas del desgaste de Android y se incluye información general sobre las características introducidas en el desgaste de Android 2,0. Proporciona vínculos a la lectura básica para ayudar a los desarrolladores a empezar a trabajar con el desarrollo de uso de Xamarin. Android y a mostrar ejemplos de algunos de los dispositivos de desgaste de Android actualmente en el mercado.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

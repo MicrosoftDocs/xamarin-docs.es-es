@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 07a61eb9d0c16f82d6c367cefc9e3050ca8dfc25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280864"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768829"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -31,7 +31,6 @@ Los dispositivos se definen mediante clases de tamaño, tanto en los ejes vertic
 - **Normal** : se trata de un tamaño de pantalla grande (por ejemplo, un iPad) o un gadget que proporciona la impresión de un gran tamaño (por ejemplo, un`UIScrollView`
 - **Compacto** : es para dispositivos más pequeños (por ejemplo, un iPhone). Este tamaño tiene en cuenta la orientación del dispositivo.
 
-
 Si se usan juntos los dos conceptos, el resultado es una cuadrícula de 2 x 2 que define los diferentes tamaños posibles que se pueden usar en las distintas orientaciones, como se puede ver en el diagrama siguiente:
 
  [![](unified-storyboards-images/sizeclassgrid.png "Cuadrícula 2 x 2 que define los diferentes tamaños posibles que se pueden usar en las orientaciones normales y compactas.")](unified-storyboards-images/sizeclassgrid.png#lightbox)
@@ -43,7 +42,6 @@ El desarrollador puede crear un controlador de vista que use cualquiera de las c
 El iPad, debido al tamaño, tiene un tamaño de clase **normal** para ambas orientaciones.
 
  [![](unified-storyboards-images/image1.png "Clases de tamaño de iPad")](unified-storyboards-images/image1.png#lightbox)
-
 
 ### <a name="iphone-size-classes"></a>Clases de tamaño de iPhone
 
@@ -98,7 +96,6 @@ Los entornos de rasgos son una nueva interfaz de iOS 8 y pueden devolver una col
 - Vistas ( `UIView` ).
 - Controlador de presentación `UIPresentationController` ().
 
-
 El desarrollador utiliza la colección de rasgos devuelta por un entorno de rasgos para determinar cómo se debe diseñar una interfaz de usuario.
 
 Todos los entornos de rasgos hacen que una jerarquía se vea en el diagrama siguiente:
@@ -115,7 +112,7 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad|Valor|
+|Propiedad|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Estándar|
@@ -126,7 +123,7 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad|Valor|
+|Propiedad|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Unidad|
 |`VerticalSizeClass`|Sin especificar|
@@ -234,14 +231,12 @@ Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en 
 - De forma predeterminada, el controlador de vista en dos paneles usará el controlador de vista principal como vista después de que se produzca la contracción. El desarrollador puede invalidar este comportamiento invalidando `GetPrimaryViewControllerForCollapsingSplitViewController` el método `UISplitViewControllerDelegate` de y proporcionando cualquier controlador de vista que desee mostrar en el estado contraído.
 - El controlador de vista secundario tiene que combinarse en el controlador de vista principal. Por lo general, el desarrollador no tendrá que realizar ninguna acción para este paso; el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. Sin embargo, puede haber algunos casos especiales en los que el desarrollador desee interactuar con este cambio. La llamada `CollapseSecondViewController` al método `UISplitViewControllerDelegate` de permite mostrar el controlador de vista principal cuando se produce la contracción, en lugar de la vista de detalles.
 
-
 ### <a name="expanding-the-split-view-controller"></a>Expandir el controlador de vista en dos paneles
 
 Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en dos paneles se expande desde un estado contraído. Una vez más, hay dos fases que deben producirse:
 
 - En primer lugar, defina el nuevo controlador de vista principal. De forma predeterminada, el controlador de vista en dos paneles usará automáticamente el controlador de vista principal de la vista contraída. De nuevo, el desarrollador puede invalidar este comportamiento `GetPrimaryViewControllerForExpandingSplitViewController` mediante el método de. `UISplitViewControllerDelegate`
 - Una vez elegido el controlador de vista principal, se debe volver a crear el controlador de vista secundario. De nuevo, el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. El desarrollador puede invalidar este comportamiento llamando al `SeparateSecondaryViewController` método `UISplitViewControllerDelegate` de.
-
 
 En un controlador de vista en dos paneles, el controlador de vista principal desempeña una parte en la expansión y la contracción de las `CollapseSecondViewController` vistas `SeparateSecondaryViewController` mediante la implementación `UISplitViewControllerDelegate`de los métodos y de. `UINavigationController`implementa estos métodos para enviar y extraer automáticamente el controlador de vista secundario.
 
@@ -253,7 +248,6 @@ Esto presentó un acoplamiento muy estrecho entre el controlador de navegación 
 
 - `ShowViewController`: Se adapta para mostrar el nuevo controlador de vista en función de su entorno. Por ejemplo, en `UINavigationController` , simplemente se envía la nueva vista en la pila. En un controlador de vista en dos paneles, el nuevo controlador de vista se presentará en el lado izquierdo como el nuevo controlador de vista principal. Si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
 - `ShowDetailViewController`: Funciona de manera similar a `ShowViewController`, pero se implementa en un controlador de vista en dos paneles para reemplazar la vista de detalles con el nuevo controlador de vistas que se pasa. Si el controlador de vista en dos paneles está contraído (como podría verse en una aplicación de iPhone), la llamada se redirigirá al `ShowViewController` método y la nueva vista se mostrará como el controlador de vista principal. De nuevo, si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
-
 
 Estos métodos funcionan empezando por el controlador de vista Hoja y pasando por la jerarquía de vistas hasta que encuentren el controlador de vista del contenedor adecuado para controlar la presentación de la nueva vista.
 
@@ -269,7 +263,6 @@ Este método recorre la cadena de jerarquía hasta que se encuentra el controlad
 
 1. Si se `ShowViewController` llama a un método, el primer controlador de vista de la cadena que implementa este método es el controlador de navegación, por lo que se usa como elemento primario de la nueva vista.
 1. Si se `ShowDetailViewController` llama a un método en su lugar, el controlador de vista en dos paneles es el primer controlador de vista para implementarlo, por lo que se usa como elemento primario.
-
 
 El `GetTargetForAction` método funciona mediante la búsqueda de un controlador de vista que implementa una acción determinada y, a continuación, la pregunta a ese controlador de vista si desea recibir esa acción. Dado que este método es público, los desarrolladores pueden crear sus propios métodos personalizados que funcionen igual que `ShowViewController` los `ShowDetailViewController` métodos integrados y.
 
@@ -690,7 +683,6 @@ El archivo de pantalla de inicio se muestra como una pantalla de presentación m
 La factorización en los nuevos dispositivos iPhone 6 y iPhone 6 más (y en el próximo Apple Watch) con todos los dispositivos iPhone y iPad existentes, representa una gran variedad de tamaños variables, orientaciones y resoluciones `Default.png` de los recursos de imagen de la pantalla de inicio que deben crear y mantener. Además, estos archivos pueden ser bastante grandes y se "inflarán" el paquete de aplicaciones de entrega, lo que aumenta la cantidad de tiempo necesario para descargar la aplicación desde iTunes App Store (posiblemente para que se pueda entregar a través de una red de telefonía móvil) y el aumento de la cantidad de almacenamiento necesario en el dispositivo del usuario final.
 
 Como novedad de iOS 8, el desarrollador puede crear un único archivo `.xib` atómico en Xcode que use las clases de diseño y tamaño automáticos para crear una *pantalla de inicio dinámico* que funcione en todos los dispositivos, resoluciones y orientaciones. Esto no solo reduce la cantidad de trabajo necesario para que el desarrollador cree y mantenga todos los recursos de imagen necesarios, pero reduce en gran medida el tamaño del paquete instalado de la aplicación.
-
 
 Las pantallas de inicio dinámico tienen las siguientes limitaciones y consideraciones:
 

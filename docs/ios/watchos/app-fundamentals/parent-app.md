@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 0049d69caabce545b2813dbd2b3905fe96f28fed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f3e56ab90d5205318539994bae7f4db153bb163
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292737"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768090"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
 > [!IMPORTANT]
 > Acceso a la aplicación principal con los ejemplos siguientes solo funciona en aplicaciones de inspección para watchOS 1.
-
 
 Hay diferentes formas de comunicación entre la aplicación del reloj y la aplicación de iOS se incluye con:
 
@@ -30,7 +29,6 @@ Hay diferentes formas de comunicación entre la aplicación del reloj y la aplic
 
 La aplicación primaria también en ocasiones se conoce como la aplicación de contenedor.
 
-
 <a name="code" />
 
 ## <a name="run-code"></a>Ejecutar código
@@ -39,8 +37,6 @@ Comunicación entre una extensión de inspección y la aplicación de iPhone pri
 La extensión de inspección puede solicitar la aplicación para iOS principal para realizar algún procesamiento en su nombre utilizando el `OpenParentApplication` método.
 
 Esto es especialmente útil para tareas en ejecución largas (incluidas las solicitudes de red): solo el elemento principal aplicación de iOS pueden aprovechar las ventajas del procesamiento en segundo plano para completar estas tareas y guardar los datos recuperados en una ubicación accesible para la extensión de inspección.
-
-
 
 ### <a name="watch-kit-app-extension"></a>Extensión de la aplicación de inspección Kit
 
@@ -57,12 +53,10 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### <a name="ios-app"></a>Aplicación de iOS
 
 Todas las llamadas desde una extensión de aplicación de inspección se enrutan a través de la aplicación de iPhone `HandleWatchKitExtensionRequest` método.
 Si está realizando solicitudes diferentes en la aplicación del reloj, a continuación, este método tendrá que consultar el `userInfo` diccionario para determinar cómo procesar la solicitud.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -81,7 +75,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -142,8 +135,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 Descargue el C# versión [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

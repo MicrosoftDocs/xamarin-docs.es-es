@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522351"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762190"
 ---
 # <a name="tabbed-layouts"></a>Diseños con pestañas
-
 
 ## <a name="overview"></a>Información general
 
@@ -29,8 +28,6 @@ Las pestañas son un conocido patrón de interfaz de usuario en aplicaciones mó
 - **Barra de herramientas** es un componente de barra de acción más reciente y flexible `ActionBar`que reemplaza a. &ndash; `Toolbar` `Toolbar`está disponible en Android 5,0 Lollipop o posterior y también está disponible para versiones anteriores de Android mediante el paquete NuGet de la [biblioteca de compatibilidad de Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
     `Toolbar`es actualmente el componente de la barra de acciones recomendado que se usará en las aplicaciones Android.
     Para obtener más información, vea [barra de herramientas](~/android/user-interface/controls/tool-bar/index.md). 
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

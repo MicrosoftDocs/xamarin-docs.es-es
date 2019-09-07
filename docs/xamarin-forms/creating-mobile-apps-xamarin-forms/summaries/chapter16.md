@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 16. Enlace de datos
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 16. Enlace de datos'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 16. Enlace de datos'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771105"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumen del capítulo 16. Enlace de datos
 
@@ -138,8 +138,6 @@ Puede simplificar los controles personalizados mediante los enlaces de datos. El
 En su lugar el [ `NewCheckBox.cs.xaml` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) archivo contiene todo el marcado para elementos visuales del control a través de enlaces de datos en el `Label` elementos según las propiedades definidas en el archivo de código subyacente.
 
 El [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) muestra el `NewCheckBox` control personalizado.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

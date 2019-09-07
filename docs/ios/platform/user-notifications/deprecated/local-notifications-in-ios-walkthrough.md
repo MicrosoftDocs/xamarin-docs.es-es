@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290456"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769751"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin. iOS
 
@@ -24,7 +24,6 @@ _En esta sección veremos cómo usar las notificaciones locales en una aplicaci�
 ## <a name="walkthrough"></a>Tutorial
 
 Permita crear una aplicación sencilla que mostrará las notificaciones locales en acción. Esta aplicación tendrá un solo botón. Cuando hacemos clic en el botón, se creará una notificación local. Una vez transcurrido el período de tiempo especificado, verá que aparece la notificación.
-
 
 1. En Visual Studio para Mac, cree una nueva solución de iOS de vista única y `Notifications`llámela.
 1. Abra el `Main.storyboard` archivo y arrastre un botón hasta la vista. Asigne un nombre al **botón**del botón y asígnele el título **Agregar notificación**. También puede establecer algunas [restricciones](~/ios/user-interface/designer/designer-auto-layout.md) en el botón en este punto: 
@@ -88,7 +87,6 @@ Permita crear una aplicación sencilla que mostrará las notificaciones locales 
 
 1. Necesitamos controlar el caso en el que se inició la notificación debido a una notificación local. Edite el `FinishedLaunching` método `AppDelegate` en para incluir el siguiente fragmento de código:
 
-
     ```csharp
     // check for a notification
 
@@ -119,7 +117,6 @@ Permita crear una aplicación sencilla que mostrará las notificaciones locales 
 ## <a name="summary"></a>Resumen
 
 En este tutorial se ha mostrado cómo usar las distintas API para crear y publicar notificaciones en iOS. También se ha mostrado cómo actualizar el icono de la aplicación con un distintivo para proporcionar algunos comentarios específicos de la aplicación al usuario.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

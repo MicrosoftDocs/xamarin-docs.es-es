@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e3ef6dd857760d722fe84f98250b8db9e398ea2e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 802cf60f88f80ce7d67cd9fd8ec85ca343fd2916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287185"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769386"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit en Xamarin. iOS
 
@@ -38,10 +38,6 @@ En este artículo se tratan los conceptos clave necesarios para trabajar con Sir
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementación de SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
 En este artículo se describen los pasos necesarios para implementar la compatibilidad con SiriKit en las aplicaciones de Xamarin. iOS. El desarrollador debe leer la guía de introducción a los conceptos de SiriKit antes de intentar agregar compatibilidad con SiriKit a una aplicación, ya que se tratan los conceptos clave que se requerirán para una implementación correcta.
-
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

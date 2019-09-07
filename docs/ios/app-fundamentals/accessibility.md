@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289516"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766749"
 ---
 # <a name="accessibility-on-ios"></a>Accesibilidad en iOS
 
@@ -74,7 +74,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## <a name="accessibility-and-localization"></a>Accesibilidad y localización
 
 Las propiedades de accesibilidad como la etiqueta y la sugerencia se pueden localizar como otro texto en la interfaz de usuario.
@@ -122,7 +121,6 @@ La pantalla **accesibilidad** también proporciona opciones de zoom, tamaño del
 
 Siga estas [instrucciones de VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) para probar la accesibilidad en dispositivos iOS.
 
-
 ## <a name="simulator-testing"></a>Pruebas del simulador
 
 Al realizar pruebas en el simulador, el **Inspector de accesibilidad** está disponible para ayudar a comprobar que las propiedades de accesibilidad y los eventos están configurados correctamente. Active el inspector en la aplicación de **configuración** . para ello, vaya a **General > accesibilidad > inspector de accesibilidad**:
@@ -135,8 +133,6 @@ A continuación se muestra un ejemplo de la salida cuando se selecciona una fila
 ![](accessibility-images/tableview-a11y-sml.png "Uso del inspector de accesibilidad")
 
 Mientras el inspector está visible, use el icono "X" en la parte superior izquierda para mostrar y ocultar temporalmente la superposición y habilitar o deshabilitar la configuración de accesibilidad.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

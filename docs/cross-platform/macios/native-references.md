@@ -6,19 +6,19 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287549"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765500"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referencias nativas en proyectos de iOS, Mac y enlaces
 
 _Las referencias nativas le permiten insertar un marco nativo en un proyecto de Xamarin. iOS o Xamarin. Mac o en un proyecto de enlace._
 
 Dado que iOS 8,0 es posible crear un marco de trabajo incrustado para compartir el código entre las extensiones de aplicación y la aplicación principal en Xcode. Con la característica de referencia nativa, es posible usar estos marcos de trabajo incrustados (creados con Xcode) en Xamarin. iOS.
- 
+
 > [!IMPORTANT]
 > No será posible crear marcos de trabajo insertados a partir de cualquier tipo de proyectos de Xamarin. iOS o Xamarin. Mac, las referencias nativas solo permiten el consumo de marcos nativos (Objective-C) existentes.
 
@@ -98,4 +98,3 @@ Aplicaciones que no tienen extensiones y aplicaciones destinadas a iOS
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada de la inserción de un marco de trabajo nativo en una aplicación Xamarin. iOS o Xamarin. Mac.
-

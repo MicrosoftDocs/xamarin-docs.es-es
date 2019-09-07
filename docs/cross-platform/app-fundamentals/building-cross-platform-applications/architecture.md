@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284567"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762116"
 ---
 # <a name="part-2---architecture"></a>Parte 2: Arquitectura
 
@@ -21,11 +21,9 @@ Un principio clave de la creación de aplicaciones multiplataforma es crear una 
 - **Separación de responsabilidades** : Asegúrese de que cada componente (tanto en la arquitectura como en el nivel de clase) tenga un propósito claro y bien definido. Cada componente debe realizar solo sus tareas definidas y exponer esa funcionalidad a través de una API que sea accesible a las demás clases que necesiten usarla.
 - **Polimorfismo** : la programación en una interfaz (o clase abstracta) que admite varias implementaciones significa que se puede escribir y compartir código principal entre plataformas, a la vez que se interactúa con características específicas de la plataforma.
 
-
 El resultado natural es una aplicación modelada después de entidades reales o abstractas con capas lógicas independientes. La separación del código en las capas hace que las aplicaciones sean más fáciles de entender, probar y mantener. Se recomienda que el código de cada capa sea físicamente independiente (ya sea en directorios o incluso en proyectos independientes para aplicaciones muy grandes), así como de forma lógica independiente (mediante espacios de nombres).
 
  <a name="Typical_Application_Layers" />
-
 
 ## <a name="typical-application-layers"></a>Capas de aplicación típicas
 
@@ -38,11 +36,9 @@ En este documento y en los casos prácticos, hacemos referencia a los seis nivel
 - **Nivel de aplicación** : código que suele ser específico de la plataforma (no suele compartirse entre plataformas) o el código específico de la aplicación (no suele ser reutilizable). Una buena prueba de si el código debe colocarse en el nivel de aplicación frente a la capa de la interfaz de usuario (a) para determinar si la clase tiene algún control de pantalla real o (b) si se podría compartir entre varias pantallas o dispositivos (por ejemplo, iPhone y iPad).
 - **Capa de la interfaz de usuario (IU)** : la capa orientada al usuario, contiene pantallas, widgets y controladores que los administran.
 
-
 Es posible que una aplicación no contenga necesariamente todas las capas; por ejemplo, la capa de acceso de servicio no existirá en una aplicación que no tenga acceso a los recursos de red. Una aplicación muy sencilla podría combinar la capa de datos y el nivel de acceso a datos porque las operaciones son extremadamente básicas.
 
  <a name="Common_Mobile_Software_Patterns" />
-
 
 ## <a name="common-mobile-software-patterns"></a>Patrones comunes de software móvil
 
@@ -54,6 +50,5 @@ Los patrones son una manera establecida de capturar soluciones recurrentes a pro
 - **Singleton** : el patrón singleton proporciona una manera en la que solo puede existir una única instancia de un objeto determinado. Por ejemplo, al usar SQLite en aplicaciones móviles, solo desea una instancia de la base de datos. Usar el patrón singleton es una manera sencilla de asegurarse de esto.
 - **Proveedor** : modelo acuñó por Microsoft (es decir, similar a la estrategia o inserción de dependencias básica) para fomentar la reutilización de código en aplicaciones de Silverlight, WPF y WinForms. El código compartido se puede escribir en una interfaz o una clase abstracta, y las implementaciones concretas específicas de la plataforma se escriben y se pasan cuando se usa el código.
 - **Async** : no se debe confundir con la palabra clave Async, el patrón Async se usa cuando es necesario ejecutar el trabajo de ejecución prolongada sin mantener la interfaz de usuario o el procesamiento actual. En su forma más sencilla, el patrón Async simplemente describe que las tareas de ejecución prolongada deben iniciarse en otro subproceso (o en una abstracción de subproceso similar, como una tarea) mientras el subproceso actual continúa procesándose y escucha una respuesta del proceso en segundo plano. y, a continuación, actualiza la interfaz de usuario cuando se devuelven los datos y el estado.
-
 
 Cada uno de los patrones se examinará con más detalle, ya que su uso práctico se ilustra en los casos prácticos. Wikipedia tiene descripciones más detalladas de los patrones [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [estrategia](https://en.wikipedia.org/wiki/Strategy_pattern) y [proveedor](https://en.wikipedia.org/wiki/Provider_model) (y de los [patrones de diseño](https://en.wikipedia.org/wiki/Design_Patterns) generalmente).

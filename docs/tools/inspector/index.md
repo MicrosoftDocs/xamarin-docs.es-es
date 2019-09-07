@@ -6,12 +6,12 @@ ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 5aa35c53af39df63f0b6e0f960432cbc43dadc8a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b89a39329754d375ee69d677eb8088c2eeac662f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292472"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772244"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
@@ -28,5 +28,3 @@ Información sobre cómo obtener Xamarin Inspector instalado en un equipo Mac o 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[Inspección de aplicaciones activas](~/tools/inspector/inspect.md)
 
 Describe cómo usar el inspector para adjuntar a una aplicación mientras se ejecuta desde el IDE, lo que permite explorar y manipular su estado sin pausar.
-
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/22/2018
-ms.openlocfilehash: 17995f61d92856a88769e2cd7ac8ed7445cf9782
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 36779446a132dc696f28903c3f0b27329bcd4aaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281135"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752114"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 en Xamarin. iOS
 
@@ -319,7 +319,6 @@ var configuration = new ARWorldTrackingConfiguration
 ```
 
 Aunque la textura perfectamente reflectante que se muestra en el fragmento de código anterior es divertida en un ejemplo, es probable que la texturización del entorno se use mejor con la retención consulta que desencadena una respuesta "no relatada del valle" (la textura es solo una estimación basada en lo que la cámara registrada).
-
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Experiencias de AR compartidas y persistentes
 

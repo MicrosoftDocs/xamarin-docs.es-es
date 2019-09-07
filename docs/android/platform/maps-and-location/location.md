@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61532eb1e31db6a862275180394b2b5ba9b05f8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280609"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761728"
 ---
 # <a name="location-services-on-android"></a>Servicios de ubicación en Android
 
@@ -75,11 +75,10 @@ else
 
 Las aplicaciones deben ser tolerantes del escenario en el que el usuario no conceda el permiso (o que haya revocado el permiso) y tenga una manera de solucionar correctamente esa situación. Consulte la [Guía de permisos](~/android/app-fundamentals/permissions.md) para obtener más detalles sobre cómo implementar comprobaciones de permisos en tiempo de ejecución en Xamarin. Android.
 
-
 ## <a name="using-the-fused-location-provider"></a>Usar el proveedor de ubicaciones con fusibles
 
 El proveedor de ubicaciones fusionadas es el método preferido para que las aplicaciones de Android reciban actualizaciones de ubicación del dispositivo, ya que de forma eficaz seleccionará el proveedor de ubicación durante el tiempo de ejecución para proporcionar la mejor información de ubicación de manera eficaz. Por ejemplo, un usuario que recorre el exterior obtiene la mejor ubicación de lectura con GPS. Si, a continuación, el usuario se dirige a las puertas, donde el GPS funciona de forma deficiente (si se hace en absoluto), el proveedor de ubicación con fusibles puede cambiar automáticamente a Wi-Fi, lo que funciona mejor en el interior.
- 
+
 La API del proveedor de ubicación con fusibles proporciona una variedad de otras herramientas para proporcionar a las aplicaciones compatibles con la ubicación, incluidas la geovalla y la supervisión de actividades. En esta sección, nos centraremos en los aspectos básicos de la configuración de, el `LocationClient`establecimiento de proveedores y la obtención de la ubicación del usuario.
 
 El proveedor de ubicaciones con fusibles forma parte de [Google Play Services](https://developer.android.com/google/play-services/index.html).

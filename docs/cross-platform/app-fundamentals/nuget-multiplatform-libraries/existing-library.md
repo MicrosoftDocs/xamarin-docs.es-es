@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e70cf426b2357570585c1c8f1cf21715858cb6f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289223"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758157"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creación de un NuGet a partir de proyectos de biblioteca existentes
 
@@ -43,7 +43,6 @@ Los paquetes NuGet también son archivos ZIP, por lo que es posible inspeccionar
 En esta captura de pantalla se muestra el contenido de un NuGet basado en PCL: solo se incluye un ensamblado PCL:
 
 ![](existing-library-images/nuget-output.png "Archivos contenidos en el paquete NuGet")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

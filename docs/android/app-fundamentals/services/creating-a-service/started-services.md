@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755072"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Servicios iniciados con Xamarin. Android
 
@@ -42,7 +42,7 @@ El primer parámetro es un `Intent` objeto que contiene los metadatos sobre el t
 
 - `StartCommandFlag.Redelivery`Esto significa que es una nueva entrega de una anterior `Intent`. `Intent` &ndash; Este valor se proporciona cuando se devolvió `StartCommandResult.RedeliverIntent` el servicio pero se detuvo antes de que se pudiera apagar correctamente.
 -`StartCommandFlag.Retry`Este valor se recibe cuando se produce `OnStartCommand` un error en una llamada anterior y Android intenta iniciar el servicio de nuevo con la misma intención que el intento con error anterior. &dash;
- 
+
 Por último, el tercer parámetro es un valor entero que es único para la aplicación que identifica la solicitud. Es posible que varios llamadores puedan invocar el mismo objeto de servicio. Este valor se usa para asociar una solicitud para detener un servicio con una solicitud determinada para iniciar un servicio. Se tratará con más detalle en la sección [detener el servicio](#Stopping_the_Service). 
 
 El servicio `StartCommandResult` devuelve el valor como una sugerencia para Android sobre qué hacer si se elimina el servicio debido a las restricciones de recursos. Hay tres valores posibles para `StartCommandResult`:

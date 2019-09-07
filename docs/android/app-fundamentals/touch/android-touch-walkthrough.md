@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: d9c8fb7e1045d35fa23c85c689cb0e1f9461d8dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fc3fb6e7c3391092b33ce1d162a60ce6528e0ab0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754863"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Tutorial: uso de Touch en Android
 
@@ -68,7 +68,6 @@ Cada vez que el usuario toca `ImageView`el, `Touch` se generará el evento y el 
 Siempre que el usuario toque el `ImageView`, se mostrará la **entrada táctil** en el. `TextView` Cuando el usuario ya no toca el `ImageView`, se mostrarán los **extremos** del mensaje en el `TextView`, tal y como se muestra en la siguiente captura de pantalla:
 
 [![Captura de pantalla de la actividad con los extremos táctiles](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
-
 
 ## <a name="gesture-recognizer-activity"></a>Actividad de reconocedor de gestos
 
@@ -352,7 +351,6 @@ Para los fines de este tutorial, la biblioteca de gestos ya se ha creado con la 
   [![Garabato en la pantalla, se muestra la imagen original](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 Ahora conoce cómo integrar Touch y gestos en una aplicación Android con Xamarin. Android.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

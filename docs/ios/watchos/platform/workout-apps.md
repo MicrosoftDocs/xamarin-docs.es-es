@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f5a2b17491b026e08abf2262a998576cbb4356c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292851"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767828"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicaciones de entrenamiento de watchos en Xamarin
 
 _En este artículo se describen las mejoras que Apple ha realizado en las aplicaciones de entrenamiento en watchos 3 y cómo implementarlas en Xamarin._
-
 
 Novedad de watchos 3, las aplicaciones relacionadas con el entrenamiento tienen la capacidad de ejecutarse en segundo plano en el Apple Watch y obtener acceso a los datos de HealthKit. Su aplicación primaria basada en iOS 10 también tiene la capacidad de iniciar la aplicación basada en watchos 3 sin la intervención del usuario.
 
@@ -188,7 +187,6 @@ namespace MonkeyWorkout.MWWatchExtension
     {
       if (this.Failed != null) this.Failed ();
     }
-
 
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
@@ -614,7 +612,6 @@ public HKHealthStore HealthStore { get; private set; }
 public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
 ...
 
-
 private void SaveWorkoutSamples (HKWorkout workout)
 {
   // Add samples to saved workout
@@ -715,7 +712,6 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 #endregion
 ...
 
-
 public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
 {
   // Create workout session
@@ -765,8 +761,6 @@ Tomando toda la información que se presenta en este documento, una aplicación 
 
 > [!IMPORTANT]
 > El código que se muestra en las siguientes secciones solo incluye los elementos necesarios para implementar las nuevas características mejoradas que se proporcionan para las aplicaciones de entrenamiento en watchos 3. No se incluye todo el código auxiliar y el código para presentar y actualizar la interfaz de usuario, pero se puede crear fácilmente siguiendo nuestra documentación de watchos.<p/>
-
-
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
@@ -1209,7 +1203,6 @@ namespace MonkeyWorkout.MWWatchExtension
       if (this.Failed != null) this.Failed ();
     }
 
-
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
     {
@@ -1257,8 +1250,6 @@ Apple sugiere el uso de las siguientes prácticas recomendadas al diseñar e imp
 ## <a name="summary"></a>Resumen
 
 En este artículo se han explicado las mejoras que Apple ha realizado en las aplicaciones de entrenamiento en watchos 3 y cómo implementarlas en Xamarin.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

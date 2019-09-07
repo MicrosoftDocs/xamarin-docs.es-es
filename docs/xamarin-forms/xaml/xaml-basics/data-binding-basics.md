@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 7b34e7658ad38f80cffa22d99eea42901a905a38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227928"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767616"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
@@ -405,8 +405,6 @@ Si las propiedades de los propios elementos cambian en tiempo de ejecución, los
 ## <a name="summary"></a>Resumen
 
 Los enlaces de datos proporcionan un mecanismo eficaz para vincular las propiedades entre dos objetos dentro de una página, o entre objetos visuales y los datos subyacentes. Pero cuando la aplicación comienza a funcionar con orígenes de datos, un patrón arquitectónico popular aplicación comienza a aparecer como un paradigma útil. Este tema se trata en [parte 5. Enlaces de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285866"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768935"
 ---
 # <a name="ios-designer-basics"></a>aspectos básicos del diseñador de iOS
 
@@ -194,7 +194,7 @@ IOS Designer tiene seis secciones principales:
 Para agregar un control a una interfaz, arrástrelo desde el **cuadro de herramientas** y colóquelo en la superficie de diseño. Al agregar o colocar un control, las instrucciones verticales y horizontales resaltan las posiciones de diseño usadas con frecuencia como centro vertical, centro horizontal y márgenes:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
- 
+
 ![En la superficie de diseño, las instrucciones destacan las posiciones de diseño usadas con frecuencia](introduction-images/9-layoutguides-vsmac.png "En la superficie de diseño, las instrucciones destacan las posiciones de diseño usadas con frecuencia")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -220,7 +220,7 @@ Un menú contextual está disponible tanto en la superficie de diseño como en e
 ### <a name="constraints-toolbar"></a>Barra de herramientas restricciones
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
- 
+
 [![Barra de herramientas de] condados (introduction-images/11-constraintstoolbar-vsmac.png "Barra de herramientas restricciones")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -316,7 +316,7 @@ Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#en
 La superficie de diseño admite el zoom a través de varios controles:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
- 
+
 ![Los controles de zoom en la barra de herramientas inferior](introduction-images/16-zoomcontrols-vsmac.png "Los controles de zoom en la barra de herramientas inferior")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)

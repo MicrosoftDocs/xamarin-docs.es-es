@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 68c87355a2a6a081e0fff741ffe8a4466abb540a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 815eb638b3e394dcfe4b60d716820c610b01f8a1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292602"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769320"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Error de iOS Designer con RegisterServicePort
 
@@ -30,4 +30,3 @@ Tenga en cuenta lo más importante que debe buscar es este archivo:
 Con independencia de los resultados anteriores, si el archivo existe, el problema de spyware o malware mencionado está presente en el equipo.  
 
 En el vínculo siguiente se describen los pasos para quitar este spyware o malware:[http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
-

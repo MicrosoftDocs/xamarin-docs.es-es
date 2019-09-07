@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 06/17/2016
-ms.openlocfilehash: 188bc8a04b62c97e9d6f80669fe50da1bf4d9340
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289551"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770162"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Patrones y expresiones comunes en Xamarin. Mac
 
@@ -54,8 +54,6 @@ Para más información sobre cómo trabajar con vistas de tabla en una aplicaci�
 Los protocolos de Objective-C se pueden comparar con las C#interfaces de y, en muchos casos, se usan en situaciones similares. Por ejemplo, `NSTableView` en el ejemplo anterior, tanto el delegado como el origen de datos son protocolos. Xamarin. Mac los expone como clases base con métodos virtuales que se pueden invalidar. La principal diferencia entre C# las interfaces y los protocolos de Objective-C es que algunos métodos de un protocolo pueden ser opcionales para implementar. Tendrá que consultar la documentación o la definición de una API para determinar qué es opcional.
 
 Para más información, consulte la documentación sobre [delegados, protocolos y eventos](~/ios/app-fundamentals/delegates-protocols-and-events.md) .
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

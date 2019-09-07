@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2d02e79ff51468572250d1a7ce7c6d3da103c03a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643021"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770528"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones de SkiaSharp
 
@@ -165,7 +165,6 @@ Límite de la pantalla aparece UWP que números separados por puntos y guiones e
 Hasta ahora no se ha realizado ninguna mención del segundo parámetro para el `SKPathEffect.CreateDash` método. Este parámetro se denomina `phase` y hace referencia a un desplazamiento dentro del modelo de punto y guión al principio de la línea. Por ejemplo, si la matriz de dash es {10, 10} y el `phase` es 10, a continuación, la línea comienza con un hueco en lugar de un punto.
 
 Una aplicación interesante de la `phase` parámetro está en una animación. El **animado espiral** página es similar a la **Archimedean espiral** página, excepto en que el [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) clase anima la `phase` parámetro mediante el Xamarin.Forms `Device.Timer` método:
-
 
 ```csharp
 public class AnimatedSpiralPage : ContentPage

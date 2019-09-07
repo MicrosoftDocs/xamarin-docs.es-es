@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280219"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769130"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabajar con vistas de colección de tvOS en Xamarin
 
@@ -96,7 +96,6 @@ Vamos a hacer lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-    
 1. Inicie una nueva **aplicación de tvOS de vista única** en Visual Studio para Mac.
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo en el diseñador de iOS.
 1. Agregue una vista de imagen, una etiqueta y un botón a la vista existente y configúrela para que tengan un aspecto similar al siguiente: 
@@ -132,11 +131,9 @@ Vamos a hacer lo siguiente:
 
     [![](collection-views-images/collection11.png "Establezca la identidad en CityCell")](collection-views-images/collection11.png#lightbox)
 1. Guarde los cambios.
-    
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
 1. Inicie una nueva **aplicación de tvOS de vista única** en Visual Studio.
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo en el diseñador de iOS.
 1. Agregue una vista de imagen, una etiqueta y un botón a la vista existente y configúrela para que tengan un aspecto similar al siguiente: 
@@ -170,7 +167,6 @@ Vamos a hacer lo siguiente:
 
     [![](collection-views-images/collection11vs.png "Establezca la identidad en CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Guarde los cambios.
-    
 
 -----
 
@@ -286,7 +282,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 Para obtener más información sobre la navegación y el foco, consulte nuestra documentación sobre [Cómo trabajar con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md) y [Siri de dispositivos remotos y Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -469,7 +464,6 @@ Define la propiedad y establece la ciudad predeterminada que se mostrará inicia
 ### <a name="the-collection-view-delegate"></a>Delegado de la vista de colección
 
 A continuación, agregue una `CityViewDelegate` nueva clase al proyecto y haga que tenga un aspecto similar al siguiente:
-
 
 ```csharp
 using System;
@@ -684,7 +678,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Establecemos la transparencia del elemento anterior que pierde el foco a cero (0) y la transparencia del elemento siguiente obtienen el foco al 100%. Esta transición también se anima.
 
-
 ## <a name="configuring-the-collection-view-controller"></a>Configurar el controlador de vista de colección
 
 Ahora tenemos que realizar la configuración final en nuestra vista de colección y permitir que el controlador establezca la propiedad que hemos definido para que la vista de colección se pueda cerrar después de que el usuario realice una selección.
@@ -824,14 +817,11 @@ Una de las principales características del uso de una vista de colección es la
 
 Los agregados recientemente a las vistas de colección para iOS 9 era la capacidad de permitir fácilmente la reordenación de los elementos de la colección. Una vez más, como tvOS 9 es un subconjunto de iOS 9, se hace de la misma manera. Consulte el documento de cambios en la [vista de colección](~/ios/user-interface/controls/uicollectionview.md) para obtener más detalles.
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el trabajo con vistas de colección dentro de una aplicación Xamarin. tvOS. En primer lugar, se han descrito todos los elementos que componen la vista de colección. A continuación, se mostró cómo diseñar e implementar una vista de colección mediante un guión gráfico. Por último, se proporcionan vínculos a información sobre cómo crear diseños personalizados y Reordenar elementos.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

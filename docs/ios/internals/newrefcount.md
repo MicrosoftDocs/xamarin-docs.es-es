@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291870"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753344"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Nuevo sistema de recuento de referencias en Xamarin. iOS
 
@@ -46,10 +46,8 @@ Tenga en cuenta que estas opciones se han quitado en las versiones más reciente
 
  La nueva extensión de recuento de referencias es necesaria para el Unified API y debe estar habilitada de forma predeterminada. Es posible que las versiones anteriores del IDE no tengan este valor comprobado automáticamente y que tenga que realizar una comprobación por él mismo.
 
-
 > [!IMPORTANT]
 > Una versión anterior de esta característica se ha solucionado desde MonoTouch 5,2, pero solo estaba disponible para **SGen** como vista previa experimental. Esta nueva versión mejorada también está disponible para el recolector de elementos no utilizados de **Boehm** .
-
 
 Históricamente, había dos tipos de objetos administrados por Xamarin. iOS: aquellos que simplemente eran un contenedor alrededor de un objeto nativo (objetos del mismo nivel) y los que extenderon o incorporaban nuevas funcionalidades (objetos derivados), normalmente manteniendo un estado adicional en memoria. Anteriormente era posible que se pudiera aumentar un objeto del mismo nivel con el estado (por ejemplo, C# agregando un controlador de eventos), pero se permite que el objeto pase sin referencia y se recopile. Esto podría provocar un bloqueo más adelante (por ejemplo, si el tiempo de ejecución de Objective-C vuelve a llamar al objeto administrado).
 

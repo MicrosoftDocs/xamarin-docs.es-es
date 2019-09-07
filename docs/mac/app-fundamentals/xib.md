@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: be737dfb92cf2ce90dc64dd527f908d52cf2c580
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290288"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770347"
 ---
 # <a name="xib-files-in-xamarinmac"></a>archivos. Xib en Xamarin. Mac
 
@@ -33,11 +33,9 @@ En este artículo, trataremos los aspectos básicos del trabajo con archivos. Xi
 
 Es posible que desee echar un vistazo a la [sección exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los `Register` atributos y `Export` que se usan para conectar C# las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
 
-
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introducción a Xcode y a Interface Builder
 
 Como parte de Xcode, Apple ha creado una herramienta llamada Interface Builder, que permite crear visualmente la interfaz de usuario en un diseñador. Xamarin.Mac se integra con fluidez con el generador de interfaz, lo que le permite crear la interfaz de usuario con las mismas herramientas que lo hacen los usuarios de Objective-C de objetivo.
-
 
 ### <a name="components-of-xcode"></a>Componentes de Xcode
 
@@ -47,23 +45,19 @@ Al abrir un archivo. Xib en Xcode desde Visual Studio para Mac, se abre con un *
 
 Echemos un vistazo a lo que hace cada una de estas secciones de Xcode y cómo las usará para crear la interfaz para la aplicación de Xamarin. Mac.
 
-
 #### <a name="project-navigation"></a>Navegación del proyecto
 
 Al abrir un archivo. Xib para editarlo en Xcode, Visual Studio para Mac crea un archivo de proyecto de Xcode en segundo plano para comunicar los cambios entre él y Xcode. Más adelante, cuando vuelva a Visual Studio para Mac de Xcode, los cambios realizados en este proyecto se sincronizarán con el proyecto de Xamarin. Mac Visual Studio para Mac.
 
 La sección de **navegación del proyecto** le permite desplazarse por todos los archivos que componen este proyecto de Xcode de _correcciones de compatibilidad (Shim_ ). Normalmente, solo estará interesado en los archivos. Xib de esta lista, como **MainMenu. Xib** y **MainWindow. Xib**.
 
-
 #### <a name="interface-hierarchy"></a>Jerarquía de la interfaz
 
 La sección jerarquía de la **interfaz** permite tener acceso fácilmente a varias propiedades clave de la interfaz de usuario, como sus **marcadores de posición** y la **ventana**principal. También puede usar esta sección para obtener acceso a los elementos individuales (vistas) que componen la interfaz de usuario y ajustar la forma en que se anidan arrastrándolas dentro de la jerarquía.
 
-
 #### <a name="interface-editor"></a>Editor de interfaces
 
 La sección del editor de la **interfaz** proporciona la superficie en la que se va a diseñar gráficamente la interfaz de usuario. Arrastre los elementos desde la sección **biblioteca** de la sección **propiedades & Utilidades** para crear el diseño. A medida que se agregan elementos de la interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección jerarquía de la **interfaz** en el orden en que aparecen en el editor de la **interfaz**.
-
 
 #### <a name="properties--utilities"></a>Propiedades & Utilidades
 
@@ -93,7 +87,6 @@ En la sección **biblioteca** , puede buscar controles y objetos para colocarlos
 ![Ejemplo del inspector de biblioteca](xib-images/xcode06.png "Ejemplo del inspector de biblioteca")
 
 Ahora que está familiarizado con el IDE de Xcode y Interface Builder, echemos un vistazo a su uso para crear una interfaz de usuario.
-
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Crear y mantener ventanas en Xcode
 
@@ -176,7 +169,6 @@ Se abrirá el diseño de ventana en la Interface Builder de Xcode:
 
 [![Editar MainWindow. Xib](xib-images/edit02.png "Editar MainWindow. Xib")](xib-images/edit02-large.png#lightbox)
 
-
 ### <a name="standard-window-workflow"></a>Flujo de trabajo de ventana estándar
 
 En el caso de las ventanas creadas y con las que trabaja en la aplicación de Xamarin. Mac, el proceso es básicamente el mismo:
@@ -188,7 +180,6 @@ En el caso de las ventanas creadas y con las que trabaja en la aplicación de Xa
 5. Use el **Inspector de tamaño** para controlar el cambio de tamaño de los elementos de la interfaz de usuario.
 6. Exponga los elementos de la interfaz de C# usuario de la ventana al código mediante salidas y acciones.
 7. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
-
 
 ### <a name="designing-a-window-layout"></a>Diseñar un diseño de ventana
 
@@ -240,11 +231,9 @@ Aquí puede seleccionar los elementos que desea editar o arrastrar para reordena
 
 Para obtener más información sobre cómo trabajar con Windows en una aplicación de Xamarin. Mac, consulte nuestra documentación de [Windows](~/mac/user-interface/window.md) .
 
-
 ## <a name="exposing-ui-elements-to-c-code"></a>Exponer elementos de la interfaz C# de usuario al código
 
 Una vez que haya terminado de diseñar la apariencia de la interfaz de usuario en Interface Builder, deberá exponer los elementos de la interfaz de usuario para que se pueda tener acceso a ellos C# desde el código. Para ello, utilizará acciones y salidas.
-
 
 ### <a name="setting-a-custom-main-window-controller"></a>Establecer un controlador de ventana principal personalizado
 
@@ -266,7 +255,6 @@ Haga lo siguiente:
 
     [![El archivo. h coincidente en Xcode](xib-images/windowcontroller03.png "El archivo. h coincidente en Xcode")](xib-images/windowcontroller03-large.png#lightbox)
 
-
 ### <a name="outlets-and-actions"></a>Salidas y acciones
 
 ¿Qué son las salidas y las acciones? En la programación tradicional de interfaz de usuario de .NET, un control de la interfaz de usuario se expone de forma automática como una propiedad cuando se agrega. En Mac es algo diferente, al agregar simplemente un control a una vista, el código no puede obtener acceso a él. El desarrollador debe exponer de forma explícita el elemento de interfaz de usuario al código. En este orden, Apple nos ofrece dos opciones:
@@ -281,7 +269,6 @@ Para los desarrolladores de Xamarin. Mac, esto significa que arrastra a los arch
 [![Ejemplo de un archivo. h en Xcode](xib-images/xcode16.png "Ejemplo de un archivo. h en Xcode")](xib-images/xcode16-large.png#lightbox)
 
 Este archivo stub. h refleja el **MainWindow.Designer.CS** que se agrega automáticamente a un proyecto de Xamarin. Mac cuando se `NSWindow` crea un nuevo. Este archivo se utilizará para sincronizar los cambios realizados por Interface Builder y es donde se crearán las salidas y acciones para que los elementos de la interfaz C# de usuario se expongan al código.
-
 
 #### <a name="adding-an-outlet"></a>Agregar una salida
 
@@ -312,7 +299,6 @@ Haga lo siguiente:
     ![La salida completada](xib-images/outlet06.png "La salida completada")
 10. Guarde los cambios en el archivo.
 
-
 #### <a name="adding-an-action"></a>Agregar una acción
 
 A continuación, echemos un vistazo a la creación de una acción para exponer una interacción del usuario C# con el elemento de la interfaz de usuario en el código.
@@ -335,7 +321,6 @@ Haga lo siguiente:
 6. Guarde los cambios en el archivo.
 
 Con la interfaz de usuario conectada y expuesta al C# código, vuelva a Visual Studio para Mac y deje que sincronice los cambios de Xcode y Interface Builder.
-
 
 ### <a name="writing-the-code"></a>Escribir el código
 
@@ -400,7 +385,6 @@ La línea clave aquí es `[Export ("openDocument:")]`, indica `NSMenu` que **App
 
 Para obtener más información sobre cómo trabajar con menús, vea la documentación de los [menús](~/mac/user-interface/menu.md) .
 
-
 ## <a name="synchronizing-changes-with-xcode"></a>Sincronizar cambios con Xcode
 
 Al volver a Visual Studio para Mac de Xcode, los cambios que haya realizado en Xcode se sincronizarán automáticamente con el proyecto de Xamarin. Mac.
@@ -432,7 +416,6 @@ Normalmente, nunca tendrá que abrir el **MainWindow.Designer.CS** usted mismo, 
 
 > [!IMPORTANT]
 > En la mayoría de los casos, Visual Studio para Mac verá automáticamente los cambios realizados en Xcode y los sincronizará con el proyecto de Xamarin. Mac. En caso de que esa sincronización no se realice de forma automática, vuelva a Xcode y después vuelva a Visual Studio para Mac. Normalmente, esto iniciará un ciclo de sincronización.
-
 
 ## <a name="adding-a-new-window-to-a-project"></a>Agregar una nueva ventana a un proyecto
 
@@ -471,7 +454,6 @@ Si ejecuta el código y selecciona las **preferencias...** en el menú de la **a
 ![Ejecutar la aplicación de ejemplo](xib-images/new04.png "Ejecutar la aplicación de ejemplo")
 
 Para obtener más información sobre cómo trabajar con Windows en una aplicación de Xamarin. Mac, consulte nuestra documentación de [Windows](~/mac/user-interface/window.md) .
-
 
 ## <a name="adding-a-new-view-to-a-project"></a>Agregar una nueva vista a un proyecto
 
@@ -581,11 +563,9 @@ Esto crea una nueva instancia del controlador de vista para que se muestre la nu
 
 Para obtener más información sobre cómo trabajar con Windows en una aplicación de Xamarin. Mac, consulte nuestra documentación sobre [cuadros de diálogo](~/mac/user-interface/dialog.md) y [ventanas](~/mac/user-interface/window.md) .
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada del trabajo con archivos. Xib en una aplicación de Xamarin. Mac. Vimos los distintos tipos y usos de los archivos. Xib para crear la interfaz de usuario de la aplicación, cómo crear y mantener archivos. Xib en la Interface Builder de Xcode y cómo trabajar con archivos. Xib C# en el código.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 049f01d47d303f07edd57c659361d9a123993ede
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288655"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761980"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
@@ -39,7 +39,6 @@ Al probar las aplicaciones dentro de su organización o administrar un programa 
 
 - **Distribución** : administrar el proceso de aprovisionamiento (especialmente para dispositivos iOS) y obtener versiones actualizadas de software para los evaluadores.
 - **Comentarios** : recopilación de información sobre el uso de la aplicación e información detallada sobre los errores que puedan producirse.
-
 
 Hay una serie de servicios que ayudan a resolver estos problemas, ya que proporcionan una infraestructura integrada en la aplicación para recopilar e informar sobre el uso y los errores, así como para optimizar el proceso de aprovisionamiento para ayudar a registrar y administrar los evaluadores y sus dispositivos. .
 
