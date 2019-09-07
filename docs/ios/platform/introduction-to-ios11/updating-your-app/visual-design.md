@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: aa99d50295e214b7926d0655ea434c851b3ba099
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bd3adf5d01be0cdb709c752e1ace131b8b3e8d83
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286320"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752253"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Actualizaciones del diseño visual en iOS 11
 
@@ -113,11 +113,9 @@ iOS 11 ha ampliado la funcionalidad de las acciones de fila. `UISwipeActionsConf
 
 Las vistas de tabla tienen compatibilidad para arrastrar y colocar en iOS 11. Para obtener más información, vea la guía de [arrastrar y colocar](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) .
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Novedades de iOS 11 (Apple)](https://developer.apple.com/ios/)
 - [Página del producto de App Store actualizada (Apple)](https://developer.apple.com/app-store/product-page/)
 - [Diseño para iPhone X (Apple) (vídeo)](https://developer.apple.com/videos/play/fall2017/801/)
 - [Actualización de la aplicación para iOS 11 (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/204/)
-

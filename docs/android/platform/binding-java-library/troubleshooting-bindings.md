@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 2137ff95e65c6841b3e525f0c9755e013310c7e0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dfbcb1a6f502d6d7a5b03dc03278fc21e57806bf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225597"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756610"
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
 
 _En este artículo se resumen los errores comunes de servidor que pueden producirse al generar enlaces, junto con las posibles causas y las formas sugeridas de resolverlos._
-
 
 ## <a name="overview"></a>Información general
 
@@ -37,13 +36,12 @@ Después de habilitar la salida de diagnóstico, vuelva a compilar el proyecto d
 
 También puede resultar útil descompilar la biblioteca de Android y examinar los tipos y métodos que Xamarin. Android está intentando enlazar. Esto se explica con más detalle más adelante en esta guía.
 
-
 ## <a name="decompiling-an-android-library"></a>Descompilación de una biblioteca de Android
 
 Inspeccionar las clases y los métodos de las clases de Java puede proporcionar información valiosa que le ayudará en el enlace de una biblioteca.
 [JD-GUI](http://jd.benow.ca/) es una utilidad gráfica que puede mostrar el código fuente de Java de los archivos de **clase** contenidos en un archivo jar. Se puede ejecutar como una aplicación independiente o como un complemento para IntelliJ o Eclipse.
 
-Para descompilar una biblioteca de Android, abra el **. Archivo JAR** con la descompilador de Java. Si la biblioteca es una **. Archivo AAR** , es necesario extraer el archivo classes **. jar** del archivo de almacenamiento. A continuación se muestra una captura de pantalla de ejemplo del uso de JD-GUI para analizar el archivo jar de [Picasso](http://square.github.io/picasso/) :
+Para descompilar una biblioteca de Android, abra el **. Archivo JAR** con la descompilador de Java. Si la biblioteca es una **. Archivo AAR** , es necesario extraer el archivo **classes. jar** del archivo de almacenamiento. A continuación se muestra una captura de pantalla de ejemplo del uso de JD-GUI para analizar el archivo jar de [Picasso](http://square.github.io/picasso/) :
 
 ![Uso de la descompilador de Java para analizar Picasso-2.5.2. jar](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
 
@@ -59,7 +57,6 @@ Una vez que haya descompilado la biblioteca de Android, examine el código fuent
 > [!NOTE]
 > La descompilación de una biblioteca de Java puede estar prohibida o sujeta a restricciones legales basadas en leyes locales o en la licencia en la que se publicó la biblioteca de Java. Si es necesario, dé de alta los servicios de un profesional legal antes de intentar descompilar una biblioteca de Java e inspeccionar el código fuente.
 
-
 ## <a name="inspect-apixml"></a>Inspeccione la API. LENGUAJE
 
 Como parte de la compilación de un proyecto de enlace, Xamarin. Android generará un nombre de archivo XML **obj/Debug/API. XML**:
@@ -68,16 +65,13 @@ Como parte de la compilación de un proyecto de enlace, Xamarin. Android generar
 
 Este archivo proporciona una lista de todas las API de Java que está intentando enlazar Xamarin. Android. El contenido de este archivo puede ayudar a identificar los tipos o métodos que faltan, el enlace duplicado. Aunque la inspección de este archivo es tediosa y lenta, puede proporcionar pistas sobre lo que puede estar causando problemas de enlace. Por ejemplo, **API. XML** podría revelar que una propiedad devuelve un tipo inadecuado o que hay dos tipos que comparten el mismo nombre administrado.
 
-
 ## <a name="known-issues"></a>Problemas conocidos
 
 En esta sección se enumeran algunos de los mensajes de error comunes o síntomas que se producen al intentar enlazar una biblioteca de Android.
 
-
 ### <a name="problem-java-version-mismatch"></a>Problema: Versión de Java no coincidente
 
 A veces, los tipos no se generan o se pueden producir bloqueos inesperados porque se usa una versión más reciente o anterior de Java en comparación con la compilación de la biblioteca. Vuelva a compilar la biblioteca de Android con la misma versión del JDK que usa el proyecto de Xamarin. Android.
-
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problema: Se requiere al menos una biblioteca de Java
 
@@ -87,7 +81,6 @@ Recibe el error "se requiere al menos una biblioteca de Java", aunque. Se ha agr
 
 Asegúrese de que la acción de compilación está `EmbeddedJar`establecida en. Dado que hay varias acciones de compilación para. Archivos JAR ( `InputJar`como `EmbeddedJar` `ReferenceJar` , y`EmbeddedReferenceJar`), el generador de enlaces no puede adivinar automáticamente cuál debe usarse de forma predeterminada. Para obtener más información sobre las acciones de compilación, vea [acciones de compilación](~/android/platform/binding-java-library/index.md).
 
-
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Las herramientas de enlace no pueden cargar. Biblioteca JAR
 
 El generador de la biblioteca de enlaces no puede cargar. Biblioteca JAR.
@@ -95,8 +88,6 @@ El generador de la biblioteca de enlaces no puede cargar. Biblioteca JAR.
 #### <a name="possible-causes"></a>Causas posibles
 
 Existen. Las bibliotecas de JAR que usan la ofuscación de código (a través de herramientas como ProGuard) no se pueden cargar con las herramientas de Java. Dado que nuestra herramienta hace uso de la reflexión de Java y la biblioteca de ingeniería de código de bytes ASM, esas herramientas dependientes pueden rechazar las bibliotecas ofuscadas, mientras que las herramientas de tiempo de ejecución de Android pueden pasar. La solución alternativa para esto es enlazar a mano estas bibliotecas en lugar de usar el generador de enlaces.
-
-
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Faltan C# tipos en la salida generada.
 
@@ -249,7 +240,6 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ## <a name="summary"></a>Resumen
 
 En este artículo se enumeran los problemas comunes de solución de problemas asociados a los enlaces de Java y se explica cómo resolverlos.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

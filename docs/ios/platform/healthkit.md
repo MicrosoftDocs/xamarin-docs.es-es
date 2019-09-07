@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eb944b062f75ceec8ca8dbe22cde64b0fdd15625
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288667"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752954"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin. iOS
 
@@ -43,9 +43,6 @@ Para completar los pasos que se describen en este artículo, es necesario lo sig
 > [!IMPORTANT]
 > El kit de mantenimiento se presentó en iOS 8. Actualmente, el kit de mantenimiento no está disponible en el simulador de iOS y la depuración requiere conexión a un dispositivo iOS físico.
 
-
-
-
 ## <a name="creating-and-provisioning-a-health-kit-app"></a>Crear y aprovisionar una aplicación del kit de mantenimiento
 Antes de que una aplicación de Xamarin iOS 8 pueda usar la API de HealthKit, debe estar correctamente configurada y aprovisionada. En esta sección se explican los pasos necesarios para configurar correctamente la aplicación de Xamarin.
 
@@ -66,16 +63,14 @@ Para obtener más información sobre el aprovisionamiento de una aplicación de 
 La creación de un **identificador de aplicación** explícito y un **Perfil de aprovisionamiento** adecuado se realiza en el centro de desarrollo de [iOS](https://developer.apple.com/devcenter/ios/index.action)de Apple. 
 
 Los **identificadores de aplicación** actuales aparecen en la sección [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) del centro de desarrollo. A menudo, esta lista muestra los valores de `*`identificador de, que indican que el**nombre** del **identificador** - de aplicación se puede usar con cualquier número de sufijos. Estos *identificadores de aplicación comodín* no se pueden usar con el kit de mantenimiento.
- 
-Para crear un **identificador de aplicación**explícito, haga **+** clic en el botón situado en la parte superior derecha para pasar a la página **registrar el ID. de aplicación de iOS** :
 
+Para crear un **identificador de aplicación**explícito, haga **+** clic en el botón situado en la parte superior derecha para pasar a la página **registrar el ID. de aplicación de iOS** :
 
 [![](healthkit-images/image02.png "Registro de una aplicación en el portal para desarrolladores de Apple")](healthkit-images/image02.png#lightbox)
 
 Como se muestra en la imagen anterior, después de crear una descripción de la aplicación, use la sección de ID. de **aplicación explícito** para crear un identificador para la aplicación. En la sección **App Services** , active el **Kit de estado** en la sección **habilitar servicios** .
 
 Cuando haya terminado, haga clic en el botón **Continue (continuar** ) para registrar el identificador de la **aplicación** en su cuenta. Se le devolverá a la página **certificados, identificadores y perfiles** . Haga clic en **perfiles de aprovisionamiento** para pasar a la lista de perfiles de aprovisionamiento actuales y haga clic en el **+** botón situado en la esquina superior derecha para pasar a la página **Agregar Perfil de aprovisionamiento de iOS** . Seleccione la opción **desarrollo de aplicaciones de iOS** y haga clic en **continuar** para acceder a la página **seleccionar ID** . de aplicación. Aquí, seleccione el **identificador de aplicación** explícito que especificó anteriormente:
-
 
 [![](healthkit-images/image03.png "Seleccionar el identificador de aplicación explícito")](healthkit-images/image03.png#lightbox)
 
@@ -171,7 +166,6 @@ Dado que la información de estado es extremadamente sensible, los desarrollador
 ### <a name="permissions-walkthrough"></a>Tutorial de permisos
 
 En el proyecto aprovisionado del kit de mantenimiento, abra el `AppDelegate.cs` archivo. Observe la instrucción usando `HealthKit`; en la parte superior del archivo.
-
 
 El siguiente código se relaciona con los permisos del kit de mantenimiento:
 
@@ -410,11 +404,9 @@ Conecte un dispositivo de desarrollo de iOS 8 aprovisionado correctamente al sis
 
 Suponiendo que las aprovisionaciones se han establecido correctamente, se iniciará la aplicación. Cuando alcance su método `OnActivated` , solicitará la autorización del kit de mantenimiento. La primera vez que lo encuentre el sistema operativo, se mostrará al usuario el siguiente cuadro de diálogo:
 
-
 [![](healthkit-images/image12.png "Se presentará al usuario este cuadro de diálogo")](healthkit-images/image12.png#lightbox)
 
 Habilite la aplicación para actualizar los datos de la tarifa de corazón y la aplicación volverá a aparecer. La `ReactToHealthCarePermissions` devolución de llamada se activará de forma asincrónica. Esto hará que la `HeartRateModel’s` `Enabled` propiedad cambie, lo que generará el `EnabledChanged` evento, lo que hará que `HKPermissionsViewController.OnEnabledChanged()` se ejecute el controlador de eventos, lo `StoreData` que habilita el botón. En el diagrama siguiente se muestra la secuencia:
-
 
 [![](healthkit-images/image13.png "Este diagrama muestra la secuencia de eventos")](healthkit-images/image13.png#lightbox)
 

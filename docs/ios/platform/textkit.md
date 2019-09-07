@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c153e653cc57d35f125ef58ebc8df0013f77e7c1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dba65eb11b6ae22a51610804e3a6a73549f4565b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283013"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769763"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit en Xamarin. iOS
 
@@ -31,7 +31,6 @@ TextKit proporciona una arquitectura en capas que separa el almacenamiento de te
 - `NSTextContainer`: Proporciona el sistema de coordenadas y la geometría que se usan para el diseño de texto.
 - `NSLayoutManager`: Diseña texto convirtiéndolo en glifos.
 - `NSTextStorage`: Contiene los datos de texto, así como las actualizaciones de las propiedades de texto por lotes. Todas las actualizaciones por lotes se entregan al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
-
 
 Estas tres clases se aplican a una vista que representa el texto. Las vistas de control de texto integradas, como `UITextView`, `UITextField`y `UILabel` ya las tienen establecidas, pero también puede crearlas y aplicarlas a cualquier `UIView` instancia.
 
@@ -144,8 +143,6 @@ Este código agrega compatibilidad para dibujar en la vista de texto mediante gr
 > [!IMPORTANT]
 > Estas subclases `UITextView` de ejemplo permiten agregar compatibilidad con el dibujo táctil. La subclase `UITextView` no es necesaria para obtener las características de TextKit.
 
-
-
 Después de que el usuario dibuje en la vista de texto `CGPath` , el dibujado se `UIBezierPath` aplica a una instancia `UIBezierPath.CGPath` de estableciendo la propiedad:
 
 ```csharp
@@ -164,7 +161,6 @@ En la captura de pantalla siguiente se muestra cómo cambia el diseño del texto
 ![](textkit-images/exclusionpath2.png "En esta captura de pantalla se muestra cómo cambia el diseño del texto para fluir alrededor del trazado dibujado.")
 
 Observe que en este caso la `AllowsNonContiguousLayout` propiedad del administrador de diseño está establecida en false. Esto hace que el diseño se vuelva a calcular para todos los casos en los que el texto cambie. Si se establece en true, el rendimiento puede mejorar si se evita una actualización de diseño completo, especialmente en el caso de documentos grandes. Sin embargo, `AllowsNonContiguousLayout` si se establece en true, se impedirá que la ruta de exclusión actualice el diseño en algunas circunstancias, por ejemplo, si el texto se escribe en tiempo de ejecución sin un retorno de carro final antes de que se establezca la ruta de acceso.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

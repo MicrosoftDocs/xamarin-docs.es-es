@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656782"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772759"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -225,7 +225,6 @@ Tenga en cuenta lo siguiente:
 
 - `outerStack` se ajusta para presentar los controles y la imagen como una pila horizontal o vertical según la orientación, para aprovechar al máximo el espacio disponible.
 
-
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Tenga en cuenta la siguiente aplicación, se muestra en vertical:
@@ -277,7 +276,6 @@ Tenga en cuenta lo siguiente:
 
 - Debido al modo en que se ha diseñado la página, no hay ninguna necesidad de código de procedimientos introducir la capacidad de respuesta.
 - El `ScrollView` se usa para permitir que la etiqueta esté visible incluso cuando el alto de la pantalla es menor que la suma de la altura fija de los botones y la imagen.
-
 
 ### <a name="relativelayout"></a>RelativeLayout
 
@@ -471,7 +469,6 @@ protected override void OnSizeAllocated (double width, double height){
 Tenga en cuenta lo siguiente:
 
 - Debido al modo en que se ha diseñado la página, hay un método para cambiar la posición de cuadrícula de los controles.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

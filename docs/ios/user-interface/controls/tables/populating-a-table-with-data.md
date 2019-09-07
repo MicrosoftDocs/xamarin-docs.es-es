@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: d409787661491a6922434a12157c494851644412
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768867"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con datos en Xamarin. iOS
 
@@ -25,7 +25,6 @@ En esta guía se trata:
 - Agregar un índice
 - Agregar encabezados y pies de página
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## <a name="subclassing-uitableviewsource"></a>Subclase de UITableViewSource
@@ -36,7 +35,6 @@ Solo se requieren dos métodos obligatorios para que se muestren los datos de un
 
 - **RowsInSection** : devuelve un [`nint`](~/cross-platform/macios/nativetypes.md) recuento del número total de filas de datos que debe mostrar la tabla.
 - **GetCell** : devuelve un `UITableCellView` rellenado con datos para el índice de fila correspondiente que se pasa al método.
-
 
 El archivo de ejemplo BasicTable **TableSource.CS** tiene la implementación más sencilla posible `UITableViewSource`de. Puede ver en el fragmento de código siguiente que acepta una matriz de cadenas para mostrar en la tabla y devuelve un estilo de celda predeterminado que contiene cada cadena:
 
@@ -139,13 +137,9 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-
 Ahora el usuario puede tocar una fila y aparecerá una alerta:
 
-
-
  [![](populating-a-table-with-data-images/image4.png "La alerta de fila seleccionada")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## <a name="cell-reuse"></a>Reutilización de celdas
 
@@ -246,7 +240,6 @@ A `UITableViewSource` continuación, la subclase necesita que se agreguen o modi
 - **RowsInSection** : devuelve el número de filas de una sección determinada.
 - **SectionIndexTitles** : devuelve la matriz de cadenas que se utilizará para mostrar el índice. El código de ejemplo devuelve una matriz de letras.
 
-
 Los métodos actualizados en el archivo de ejemplo **BasicTableIndex/TableSource. CS** tienen el siguiente aspecto:
 
 ```csharp
@@ -266,7 +259,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Los índices generalmente se usan solo con el estilo de tabla simple.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>Agregar encabezados y pies de página
@@ -280,7 +272,6 @@ Para mostrar encabezados y pies de página, `UITableViewSource` la subclase requ
 
 - **TitleForHeader** : devuelve el texto que se va a usar como encabezado.
 - **TitleForFooter** : devuelve el texto que se va a usar como pie de página.
-
 
 Los métodos actualizados en el archivo de ejemplo **BasicTableHeaderFooter/Code/TableSource. CS** tienen el siguiente aspecto:
 
@@ -296,7 +287,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 ```
 
 Puede personalizar aún más la apariencia del encabezado y del pie de página con un objeto de vista, `GetViewForHeader` mediante `GetViewForFooter` las invalidaciones del `UITableViewSource`método y en.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

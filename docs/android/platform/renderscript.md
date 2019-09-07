@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fee63906d30f68d397b60a465a87bd96d4106d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119728"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757434"
 ---
 # <a name="an-introduction-to-renderscript"></a>Una introducción a Renderscript
 
@@ -64,10 +64,9 @@ El motor de Renderscript realizará una comprobación en tiempo de ejecución pa
 Todos los kernels de Renderscript se ajustarán mediante un tipo que sea un descendiente del[`Android.Renderscripts.Script`](xref:Android.Renderscripts.Script)
 clase. La `Script` clase se usa para establecer los parámetros de un Renderscript, establecer el `Allocations`apropiado y ejecutar Renderscript. Hay dos `Script` subclases en el Android SDK:
 
-
 - **`Android.Renderscripts.ScriptIntrinsic`** Algunas de las tareas más comunes de Renderscript se incluyen en el Android SDK y son accesibles mediante una subclase de la clase [ScriptIntrinsic.](xref:Android.Renderscripts.ScriptIntrinsic) &ndash; No es necesario que un desarrollador realice pasos adicionales para usar estos scripts en su aplicación, ya que ya se proporcionan.
 
-- **`ScriptC_XXXXX`** También conocido como scripts de usuario, son scripts escritos por desarrolladores y empaquetados en el APK. &ndash; En tiempo de compilación, la cadena de herramientas de Android generará clases contenedoras administradas que permitirán usar los scripts en la aplicación de Android.
+- **`ScriptC_XXXXX`** También conocido como _scripts de usuario_, son scripts escritos por desarrolladores y empaquetados en el APK. &ndash; En tiempo de compilación, la cadena de herramientas de Android generará clases contenedoras administradas que permitirán usar los scripts en la aplicación de Android.
   El nombre de estas clases generadas es el nombre del archivo Renderscript, con `ScriptC_`el prefijo. La escritura e incorporación de scripts de usuario no es compatible oficialmente con Xamarin. Android y más allá del ámbito de esta guía.
 
 De estos dos tipos, solo `StringIntrinsic` es compatible con Xamarin. Android. En esta guía se explica cómo usar scripts intrínsecos en una aplicación de Xamarin. Android.
@@ -152,9 +151,7 @@ Es posible que desee consultar la receta [desenfocar una imagen con Renderscript
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se ha introducido Renderscript y cómo usarlo en una aplicación de Xamarin. Android. Describe brevemente qué es Renderscript y cómo funciona en una aplicación Android. Se describen algunos de los componentes clave de Renderscript y la diferencia entre los scripts de _usuario_ y los scripts de _intrínsecas_. Por último, en esta guía se describen los pasos para usar un script intrínseco en una aplicación de Xamarin. Android.
-
-
+En esta guía se ha introducido Renderscript y cómo usarlo en una aplicación de Xamarin. Android. Describe brevemente qué es Renderscript y cómo funciona en una aplicación Android. Se describen algunos de los componentes clave de Renderscript y la diferencia entre los _scripts de usuario_ y los _scripts de intrínsecas_. Por último, en esta guía se describen los pasos para usar un script intrínseco en una aplicación de Xamarin. Android.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

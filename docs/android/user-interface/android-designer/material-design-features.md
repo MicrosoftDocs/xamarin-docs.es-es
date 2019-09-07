@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 77b0bc28bc4156092cb2b12d0c8b234d3f021239
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523440"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756821"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Características de diseño de material de Xamarin. Android Designer
 
@@ -58,7 +58,6 @@ Para agregar un nuevo KEYLINE, escriba un nuevo valor de desplazamiento en el cu
 
 Al cambiar estos valores de configuración, se guardan en el archivo XML de diseño y se reutilizan cuando se vuelve a abrir el diseño.
 
-
 ## <a name="theme-editor"></a>Editor de temas
 
 El **Editor de temas** permite personalizar la información de color para un subconjunto de atributos de tema. Para abrir el **Editor de temas**, haga clic en el icono de pincel en la barra de herramientas:
@@ -85,7 +84,7 @@ Echemos un vistazo a cada una de estas pestañas en detalle.
 
 ### <a name="inherit-tab"></a>Heredar (pestaña)
 
-Como se muestra en el ejemplo siguiente, la pestaña heredar muestra la herencia de estilo para el color de **fondo** del **tema predeterminado**:
+Como se muestra en el ejemplo siguiente, la pestaña **heredar** muestra la herencia de estilo para el color de **fondo** del **tema predeterminado**:
 
 [![Heredar (pestaña)](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
@@ -145,7 +144,7 @@ Cuando se cambia un recurso de color, aparece un mensaje con el mensaje, *el tem
 
 El color de **fondo** del diseñador ha cambiado a la nueva selección de color, pero este cambio aún no se ha guardado. En este momento, puede realizar una de las siguientes acciones:
 
-- Haga clic en descartar **cambios** para descartar la opción de nuevo color (o opciones) y revertir el tema a su estado original.
+- Haga clic en **descartar cambios** para descartar la opción de nuevo color (o opciones) y revertir el tema a su estado original.
 
 - Presione <kbd>Ctrl + S</kbd> para guardar los cambios en el tema actual.
 
@@ -157,9 +156,6 @@ En el ejemplo siguiente, se presionó <kbd>Ctrl + S</kbd> para que los cambios s
 
 En este tema se describen las características de diseño de materiales disponibles en Xamarin. Android Designer. Se explicó cómo habilitar y configurar la cuadrícula de diseño de material y se explicó cómo usar el editor de temas para crear nuevos temas personalizados que se ajusten a las directrices de diseño de materiales.
 Para obtener más información sobre la compatibilidad de Xamarin. Android con el diseño de material, consulte el [tema material](~/android/user-interface/material-theme.md).
-
-
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -266,7 +262,7 @@ Echemos un vistazo a cada una de estas pestañas en detalle.
 
 ### <a name="inherit-tab"></a>Heredar (pestaña)
 
-Como se muestra en el ejemplo siguiente, la pestaña heredar muestra la herencia de estilo para el color de **fondo** del **tema predeterminado**:
+Como se muestra en el ejemplo siguiente, la pestaña **heredar** muestra la herencia de estilo para el color de **fondo** del **tema predeterminado**:
 
 [![Heredar (pestaña)](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
@@ -278,7 +274,6 @@ Para obtener más información sobre la herencia de estilos, vea [estilos y tema
 En la captura de pantalla siguiente se muestra el **selector de colores**:
 
 [![Selector de colores](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
-
 
 En este ejemplo, el color de **fondo** se puede cambiar a cualquier valor a través de varios medios:
 
@@ -316,17 +311,15 @@ Cuando se cambia un recurso de color, aparece un mensaje con el mensaje, *el tem
 
 Se ha realizado el cambio de color en el diseñador, pero este cambio aún no se ha guardado. En este momento, puede realizar una de las siguientes acciones:
 
-- Haga clic en descartar **cambios** para descartar la opción de nuevo color (o opciones) y revertir el tema a su estado original.
+- Haga clic en **descartar cambios** para descartar la opción de nuevo color (o opciones) y revertir el tema a su estado original.
 
 - Presione  **&#8984; + S** para guardar los cambios en un nuevo tema denominado **personalizado**.
-
 
 ## <a name="summary"></a>Resumen
 
 En este tema se describen las características de diseño de materiales disponibles en Xamarin. Android Designer. Se explicó cómo habilitar y configurar la cuadrícula de diseño de material, cómo usar la paleta de colores de diseño de materiales para editar las propiedades de color y cómo usar el selector de escala tipográfica para configurar las propiedades de texto. También se muestra cómo usar el editor de temas para crear nuevos temas personalizados que se ajusten a las directrices de diseño de materiales. Para obtener más información sobre la compatibilidad de Xamarin. Android con el diseño de material, consulte el [tema material](~/android/user-interface/material-theme.md).
 
 -----
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
