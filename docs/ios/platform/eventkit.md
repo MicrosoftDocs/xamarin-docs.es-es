@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 960be485f6997ed8c861d47181fa89397cff9c0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291521"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753152"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit en Xamarin. iOS
 
@@ -24,7 +24,6 @@ En esta guía vamos a tratar:
 
 - **Aspectos básicos de EventKit** : se presentan los elementos fundamentales de EventKit a través de las clases principales y se proporciona una descripción de su uso. En esta sección se requiere la lectura antes de abordar la siguiente parte del documento. 
 - **Tareas comunes** : la sección tareas comunes pretende ser una referencia rápida sobre cómo hacer cosas comunes como; enumerar calendarios, crear, guardar y recuperar eventos de calendario y recordatorios, así como usar los Controladores integrados para crear y modificar eventos de calendario. En esta sección no es necesario leer de antemano, ya que se trata de una referencia para tareas concretas. 
-
 
 Todas las tareas de esta guía están disponibles en la aplicación de ejemplo complementaria:
 
@@ -376,7 +375,6 @@ App.Current.EventStore.FetchReminders (
 ## <a name="summary"></a>Resumen
 
 En este documento se proporciona información general sobre las partes importantes del marco de trabajo de EventKit y varias de las tareas más comunes. Sin embargo, el marco de trabajo de EventKit es muy grande y eficaz, e incluye características que no se han introducido aquí, como por ejemplo, actualizaciones por lotes, configuración de alarmas, configuración de periodicidad en eventos, registro y escucha de cambios en la base de datos de calendario. establecimiento de geovallas y mucho más.  Para obtener más información, consulte la [Guía de programación del calendario y los recordatorios](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)de Apple.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

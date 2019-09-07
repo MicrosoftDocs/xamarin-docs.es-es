@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fa1fb0656384455322a2d0a3562fc0ee3ca52397
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524565"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757599"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Nomenclatura de parámetros con javadoc
 
 _En este artículo se explica cómo recuperar nombres de parámetros en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java._
-
 
 ## <a name="overview"></a>Información general
 
@@ -35,12 +34,9 @@ La integración de Javadoc HTML en un proyecto de enlace de Java es un proceso m
 
 Una vez hecho esto, los nombres de parámetros de Java originales deben estar presentes en las API enlazadas por un proyecto de enlace de Java. 
 
-
 > [!NOTE]
 > Hay una gran cantidad de varianza en la salida de JavaDoc. El. La cadena de herramientas de enlace JAR no admite todas las permutaciones posibles y, por lo tanto, es posible que algún parámetro no tenga un nombre correcto.
-
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se explica cómo usar Javadoc en un proyecto de enlace de Java para proporcionar los nombres de parámetro de significado para las API enlazadas. 
-

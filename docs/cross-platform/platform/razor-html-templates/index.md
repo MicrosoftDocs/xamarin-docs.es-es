@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284920"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765347"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Compilar vistas HTML mediante plantillas de Razor
 
@@ -198,7 +198,6 @@ En esta sección se han incorporado las características de los controles de vis
 - La capacidad de interceptar solicitudes de C# navegación en el código.
 - La capacidad de llamar a JavaScript C# desde el código.
 
-
 En la siguiente sección se presenta Razor, que facilita la creación del código HTML para usarlo en aplicaciones híbridas.
 
 ## <a name="what-is-razor"></a>¿Qué es Razor?
@@ -235,7 +234,6 @@ Tenga en cuenta las siguientes diferencias con respecto a un archivo HTML normal
 - El IDE generará automáticamente una clase parcial para las plantillas (archivos con la extensión **. cshtml** ). Puede ver este código, pero no se debe editar.
  ![RazorView. cshtml](images/image6_125x34.png) la clase parcial se denomina RazorView para que coincida con el nombre de archivo de la plantilla. cshtml. Este es el nombre que se usa para hacer referencia a la plantilla C# en el código.
 - `@using`también se pueden incluir instrucciones en la parte superior de una plantilla de Razor para incluir espacios de nombres adicionales.
-
 
 A continuación, la salida HTML final se puede generar con C# el código siguiente. Tenga en cuenta que especificamos que el modelo es una cadena "Hola mundo" que se incorporará a la salida de la plantilla representada.
 
@@ -379,8 +377,6 @@ En esta sección se explica cómo usar la creación de su propia aplicación hí
 - **Aplicación de > de iOS > aplicación WebView**
 - **Proyecto ASP.NET MVC**
 
-
-
 La **nueva** ventana de la solución tiene el siguiente aspecto para los proyectos de iPhone y Android: la descripción de la solución de la derecha destaca la compatibilidad con el motor de plantillas de Razor.
 
  ![Creación de soluciones de iPhone y Android](images/image13_1139x959.png)
@@ -399,7 +395,6 @@ Las partes importantes de la solución son:
 - Archivos de plantilla Razor. cshtml como **RazorView. cshtml** .
 - Clases de modelo a las que se hace referencia en las plantillas de Razor, como **ExampleModel.CS** .
 - La clase específica de la plataforma que crea la vista Web y representa la plantilla, `MainActivity` como en Android `iPhoneHybridViewController` y en iOS.
-
 
 En la siguiente sección se explica cómo funcionan los proyectos.
 
@@ -494,7 +489,6 @@ El repositorio [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master
 - **RazorTodo** : aplicación controlada por HTML completamente con plantillas de Razor.
 - **RazorNativeTodo** : usa controles de vista de lista nativos para iOS y Android, pero muestra la pantalla de edición con HTML y Razor.
 
-
 Estas aplicaciones Xamarin se ejecutan en iOS y Android, con las bibliotecas de clases portables (PCL) para compartir código común, como la base de datos y las clases de modelo. Las plantillas Razor **. cshtml** también se pueden incluir en la PCL para que se compartan fácilmente entre las plataformas.
 
 Ambas aplicaciones de ejemplo incorporan las API de texto a voz y el uso compartido de Twitter desde la plataforma nativa, lo que demuestra que las aplicaciones híbridas con Xamarin todavía tienen acceso a toda la funcionalidad subyacente de las vistas orientadas a plantillas HTML de Razor.
@@ -507,7 +501,6 @@ La aplicación **RazorNativeTodo** usa una plantilla de Razor HTML para la vista
 
 - Rendimiento: los controles de desplazamiento nativo utilizan la virtualización para garantizar un desplazamiento rápido y suave incluso con listas muy largas de datos.
 - Experiencia nativa: los elementos de interfaz de usuario específicos de la plataforma se habilitan con facilidad, como la compatibilidad con el índice de desplazamiento rápido en iOS y Android.
-
 
 Una ventaja clave de la creación de aplicaciones híbridas con Xamarin es que puede empezar con una interfaz de usuario controlada por HTML completamente (como la primera muestra) y, después, agregar funcionalidad específica de la plataforma cuando sea necesario (como se muestra en el segundo ejemplo). A continuación se muestran las pantallas de listas nativas y las pantallas de edición de Razor HTML en iOS y Android.
 

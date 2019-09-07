@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 60bf25d7d88a1772e8b742a336a5faaebdf964fa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1a91b92cc3e82bad02d630dde8ced1d1ba63e3fd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768476"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas en Xamarin. iOS
 
@@ -52,7 +52,6 @@ En la captura de pantalla siguiente se muestran los distintos estilos de mapa qu
 
 - Zoom a través de un gesto de pinch
 - Movimiento panorámico a través de un movimiento de pan
-
 
 Estas características se pueden habilitar o deshabilitar con solo establecer `ZoomEnabled` las `ScrollEnabled` propiedades y de `MKMapView` la instancia, donde el valor predeterminado es true para ambos. Por ejemplo, para mostrar una asignación estática, simplemente establezca las propiedades adecuadas en false:
 
@@ -100,7 +99,6 @@ Una anotación tiene dos partes:
 
 - `MKAnnotation` Objeto, que incluye los datos del modelo sobre la anotación, como el título y la ubicación de la anotación.
 - Que contiene la imagen que se va a mostrar y, opcionalmente ,unallamadaquesemuestracuandoelusuariopuntealaanotación.`MKAnnotationView`
-
 
 El kit de mapas usa el patrón de delegación de iOS para agregar anotaciones a un mapa `Delegate` , donde la `MKMapView` propiedad de se establece `MKMapViewDelegate`en una instancia de. Es la implementación de este delegado la que es responsable de devolver `MKAnnotationView` el para una anotación.
 
@@ -183,7 +181,6 @@ Otra manera de disponer los gráficos en capas en un mapa es usar superposicione
 - Polilíneas: se ven a menudo cuando se muestra una ruta.
 - Círculos: se usa para resaltar un área circular de un mapa.
 
-
 Además, se pueden crear superposiciones personalizadas para mostrar geometrías arbitrarias con código de dibujo granular y personalizado. Por ejemplo, el radar meteorológico sería una buena candidata para una superposición personalizada.
 
 #### <a name="adding-an-overlay"></a>Agregar una superposición
@@ -192,7 +189,6 @@ De forma similar a las anotaciones, agregar una superposición implica 2 partes:
 
 - Crear un objeto de modelo para la superposición y agregarlo `MKMapView` a.
 - Crear una vista para la superposición en `MKMapViewDelegate` .
-
 
 El modelo para la superposición puede ser `MKShape` cualquier subclase. Xamarin. iOS incluye `MKShape` subclases para polígonos, polilíneas y círculos, a través `MKPolygon`de `MKPolyline` las `MKCircle` clases, y, respectivamente.
 
@@ -231,7 +227,6 @@ Para realizar una búsqueda local, una aplicación debe seguir estos pasos:
 1. Cree un `MKLocalSearch` objeto `MKLocalSearchRequest` a partir de.
 1. Llame al `Start` método en el `MKLocalSearch` objeto.
 1. Recupera el `MKLocalSearchResponse` objeto en una devolución de llamada.
-
 
 La propia API de búsqueda local no proporciona ninguna interfaz de usuario. Ni siquiera es necesario usar un mapa. Sin embargo, para hacer uso práctico de la búsqueda local, una aplicación debe proporcionar alguna manera de especificar una consulta de búsqueda y mostrar los resultados. Además, dado que los resultados contendrán datos de ubicación, a menudo tendrá sentido mostrarlos en un mapa.
 
@@ -279,8 +274,6 @@ Echaremos un vistazo a cómo implementar el `searchResultsController` y el `sear
 Esto da como resultado una barra de búsqueda que se muestra sobre el mapa, como se muestra a continuación:
 
  ![](images/07-searchbar.png "Una barra de búsqueda que se muestra sobre el mapa")
-
-
 
 ### <a name="displaying-the-search-results"></a>Mostrar los resultados de la búsqueda
 
@@ -351,7 +344,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -382,7 +374,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -406,8 +397,6 @@ La implementación anterior agrega una anotación a la asignación cuando se sel
 
 > [!IMPORTANT]
 > `UISearchController`se implementó en iOS 8. Si desea admitir dispositivos anteriores a este, tendrá que usar `UISearchDisplayController`.
-
-
 
 ## <a name="summary"></a>Resumen
 

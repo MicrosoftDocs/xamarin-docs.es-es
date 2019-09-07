@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524853"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756690"
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -28,26 +28,20 @@ Los desarrolladores de Xamarin. Android acceden a las distintas características
 
 Para obtener más información sobre cómo se comunican las clases de Android con las clases en tiempo de ejecución de Android, consulte el documento de diseño de la [API](~/android/internals/api-design.md) .
 
-
 ## <a name="application-packages"></a>Paquetes de aplicación
 
 Los paquetes de aplicación de Android son contenedores ZIP con una extensión de archivo *. apk* . Los paquetes de aplicación de Xamarin. Android tienen la misma estructura y el mismo diseño que los paquetes de Android normales, con las siguientes adiciones:
 
-- Los ensamblados de aplicación (que contienen Il) se almacenan sin comprimir en la carpeta de *ensamblados* . Durante el inicio del proceso en la versión, la *. apk* es *mmap ()* Ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite el inicio de la aplicación más rápido, ya que no es necesario extraer los ensamblados antes de la ejecución.  
-- *Nota:* *No se puede confiar* en la información de ubicación del ensamblado como [Assembly. Location](xref:System.Reflection.Assembly.Location) y [Assembly.](xref:System.Reflection.Assembly.CodeBase) codebase en compilaciones de versión. No existen como entradas de sistema de archivos distintas y no tienen ninguna ubicación utilizable.
-
+- Los ensamblados de aplicación (que contienen IL) se *almacenan* sin comprimir en la carpeta de *ensamblados* . Durante el inicio del proceso en la versión, la *. apk* es *mmap ()* Ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite el inicio de la aplicación más rápido, ya que no es necesario extraer los ensamblados antes de la ejecución.  
+- *Nota:* *No se puede confiar* en la información de ubicación del ensamblado como [Assembly. Location](xref:System.Reflection.Assembly.Location) y [Assembly. codebase](xref:System.Reflection.Assembly.CodeBase) en compilaciones de versión. No existen como entradas de sistema de archivos distintas y no tienen ninguna ubicación utilizable.
 
 - Las bibliotecas nativas que contienen el entorno de ejecución mono están presentes dentro de *. apk* . Una aplicación de Xamarin. Android debe contener bibliotecas nativas para las arquitecturas de Android deseadas o de destino, por ejemplo, *armeabi* , *armeabi-v7a* , *x86* . Las aplicaciones de Xamarin. Android no se pueden ejecutar en una plataforma a menos que contenga las bibliotecas en tiempo de ejecución adecuadas.
 
-
 Las aplicaciones de Xamarin. Android también contienen *contenedores de Android* a los que se puede llamar para permitir que Android llame a código administrado.
-
-
 
 ## <a name="android-callable-wrappers"></a>Contenedores que se pueden llamar de Android
 
 - Los contenedores a los que se **puede llamar de Android** son un puente [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) que se usan cada vez que el entorno de tiempo de ejecución de Android necesita invocar código administrado. Los contenedores a los que se puede llamar de Android son cómo se pueden invalidar los métodos virtuales y se pueden implementar interfaces de Java. Vea el documento [información general sobre la integración de Java](~/android/platform/java-integration/index.md) para obtener más información.
-
 
 <a name="Managed_Callable_Wrappers" />
 
@@ -64,15 +58,12 @@ Las referencias globales se pueden liberar explícitamente mediante una llamada 
 
 Se debe tener cuidado al desechar los contenedores que se pueden llamar administrados si la instancia se puede compartir accidentalmente entre subprocesos, ya que si se elimina la instancia, afectará a las referencias de otros subprocesos. Para obtener la máxima seguridad `Dispose()` , solo las instancias que se han `new` asignado a través de los métodos *o* desde los métodos que *sabe* que siempre asignan nuevas instancias y no las instancias almacenadas en caché, lo que puede provocar un uso compartido accidental de instancias entre ThreadPool.
 
-
-
 ## <a name="managed-callable-wrapper-subclasses"></a>Subclases de contenedor con llamadas administradas
 
 Las subclases de contenedor a las que se puede llamar administradas son el lugar en el que puede residir toda la lógica específica de la aplicación "interesante". Entre ellas se incluyen las subclases de [Android. app. Activity](xref:Android.App.Activity) personalizadas (por ejemplo, el tipo [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) en la plantilla de proyecto predeterminada). (Concretamente, se trata de subclases *java. lang. Object* que *no* contienen un atributo personalizado [RegisterAttribute](xref:Android.Runtime.RegisterAttribute) o [RegisterAttribute. DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) es *false*, que es el valor predeterminado).
 
 Como los contenedores a los que se puede llamar administrados, las subclases de contenedor a las que se puede llamar administradas también contienen una referencia global, accesible a través de la propiedad [java. lang. Object. Handle](xref:Java.Lang.Object.Handle) . Al igual que con los contenedores a los que se puede llamar administrados, las referencias globales se pueden liberar explícitamente llamando a [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose).
-A diferencia de los contenedores a los que se puede llamar administrados, se debe tener *especial cuidado* antes de desechar dichas instancias, ya que la toma de Dispose *()* de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un contenedor de Android al que se puede llamar) y la administrada repetición.
-
+A diferencia de los contenedores a los que se puede llamar administrados, se debe tener *especial cuidado* antes de desechar dichas instancias, ya que la toma de *Dispose ()* de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un contenedor de Android al que se puede llamar) y la administrada repetición.
 
 ### <a name="java-activation"></a>Activación de Java
 
@@ -82,12 +73,12 @@ Hay otra signatura de constructor de consecuencia: el constructor *(IntPtr, JniH
 
 Hay dos escenarios en los que el constructor *(IntPtr, JniHandleOwnership)* se debe proporcionar manualmente en una subclase de contenedor invocable administrada:
 
-1. Se ha subclase de [Android. app. Application](xref:Android.App.Application) . La *aplicación* es especial; *nunca* se invocará el constructor de la configuración predeterminada y, [en su lugar, se debe proporcionar el constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
+1. Se ha subclase de [Android. app. Application](xref:Android.App.Application) . La *aplicación* es especial; *nunca* se invocará el constructor de *la configuración predeterminada* y, [en su lugar, se debe proporcionar el constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
 
 2. Invocación de método virtual de un constructor de clase base.
 
 Tenga en cuenta que (2) es una abstracción de fugas. En Java, como en C#, las llamadas a métodos virtuales desde un constructor siempre invocan la implementación de método más derivada. Por ejemplo, el [constructor TextView (Context, AttributeSet, int)](xref:Android.Widget.TextView#ctor*) invoca el método virtual [TextView. getDefaultMovementMethod ()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), que está enlazado como la [propiedad TextView. DefaultMovementMethod](xref:Android.Widget.TextView.DefaultMovementMethod).
-Por lo tanto, si un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) se tratara de (1) [TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26)de la subclase, (2) [invalida TextView. DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)y (3) [activa una instancia de esa clase a través de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) la propiedad *DefaultMovementMethod* reemplazada sería se invoca antes de que el constructor de ACW tuviera la oportunidad de ejecutarse y se produciría C# antes de que el constructor tuviera la oportunidad de ejecutarse.
+Por lo tanto, si un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) se tratara de (1) TextView de la [subclase](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [invalida TextView. DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)y (3) [activa una instancia de esa clase a través de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) la propiedad *DefaultMovementMethod* reemplazada sería se invoca antes de que el constructor de ACW tuviera la oportunidad de ejecutarse y se produciría C# antes de que el constructor tuviera la oportunidad de ejecutarse.
 
 Esto se admite creando instancias de una instancia de LogTextBox a través del constructor [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) cuando la instancia de ACW LogTextBox escribe primero código administrado y, a continuación, invocando el [LogTextBox (Context, IAttributeSet, int)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) *en la misma instancia* cuando se ejecuta el constructor ACW.
 
@@ -171,8 +162,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 ```
 
 Solo *Dispose ()* de las subclases de contenedor a las que se puede llamar administradas cuando sepa que el objeto de Java ya no se va a usar o la subclase no contiene datos de instancia y se ha proporcionado un constructor *(IntPtr, JniHandleOwnership)* .
-
-
 
 ## <a name="application-startup"></a>Inicio de la aplicación
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 00c2284a12d17e0dcd5a89cb0c39c1064665c6d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03d79c93821737afb1f8e1946ebb3b6380d7a527
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288440"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768436"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Cambiar el alto de fila automáticamente en Xamarin. iOS
 
@@ -108,7 +108,6 @@ No es necesario que esta estimación sea exacta, solo una estimación aproximada
 Con este código en su lugar, cuando se ejecute la aplicación, cada fila se reducirá y aumentará en función del alto de la última etiqueta del prototipo de celda. Por ejemplo:
 
 [![](autosizing-row-height-images/table07.png "Una ejecución de tabla de ejemplo")](autosizing-row-height-images/table07.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

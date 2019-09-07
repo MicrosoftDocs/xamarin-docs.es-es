@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb16ad3889453f866f3dc9e66f5bcc8860bd094a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292402"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751984"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -55,9 +55,6 @@ El nuevo marco de trabajo de _servicios Web de CloudKit_ proporciona una bibliot
 
 > [!IMPORTANT]
 > Antes de poder acceder, presentar o actualizar el contenido de una base de datos de CloudKit mediante CloudKit JS, debe haber definido previamente el esquema de esa base de datos.
-
-
-
 
 Para obtener más información, consulte los siguientes documentos:
 
@@ -261,8 +258,6 @@ Para corregir esta situación, use las clases de diseño y tamaño automáticos 
 ### <a name="new-uitextinputassistantitem-class"></a>Nueva clase UITextInputAssistantItem
 
 Use la nueva `UITextInputAssistantItem` clase para los grupos de botones de la barra de diseño en una _barra de accesos directos_. La barra de acceso directo es un área nueva que está disponible en el teclado en pantalla para proporcionar accesos directos de escritura.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

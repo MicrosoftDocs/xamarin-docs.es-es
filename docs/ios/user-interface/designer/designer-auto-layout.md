@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280000"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768416"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
@@ -47,7 +47,6 @@ La configuración predeterminada del diseñador de iOS tiene habilitado el modo 
 
     ![](designer-auto-layout-images/image01.png "La casilla usar Autodiseño en el panel de propiedades")
 
-
 De forma predeterminada, no se crea ninguna restricción ni está visible en la superficie. En su lugar, se deducen automáticamente a partir de la información del marco en tiempo de compilación. Para agregar restricciones, es necesario seleccionar un elemento en la superficie de diseño y agregarle restricciones. Podemos hacerlo mediante la barra de **herramientas de restricciones**.
 
 ## <a name="constraints-toolbar"></a>Barra de herramientas restricciones
@@ -63,7 +62,6 @@ La barra de herramientas restricciones se ha actualizado y ahora consta de dos p
 - **Botón "actualizar restricciones":** Es importante tener en cuenta que los cambios dependen de si está en modo de edición de restricciones.
   - En el modo de edición de restricciones, este botón ajusta las restricciones para que coincidan con el marco del elemento.
   - En el modo de edición de fotogramas, este botón ajusta el marco del elemento para que coincida con la posición en la que se definen las restricciones.
-
 
 ## <a name="surface-based-constraint-editing"></a>Edición de restricciones basada en superficies
 
@@ -87,8 +85,6 @@ Tenga en cuenta las tres líneas verdes de guiones en los otros dos botones. Las
 
 > [!IMPORTANT]
 > Las guías de diseño son tipos especiales de destinos de restricción que nos permiten crear restricciones Top y bottom que tienen en cuenta la presencia de barras del sistema, como barras de estado o barras de herramientas. Uno de los principales usos es tener una aplicación compatible entre iOS 6 e iOS 7, ya que la versión más reciente tiene la vista de contenedor que se extiende por debajo de la barra de estado. Para obtener más información sobre la guía de diseño superior, consulte la [documentación de Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 Las tres secciones siguientes presentan el trabajo con distintos tipos de restricciones.
 
@@ -129,7 +125,6 @@ Pueden surgir varios tipos de problemas al usar restricciones:
 - **Restricciones en conflicto** : esto sucede si varias restricciones obligan a que el elemento tenga valores en conflicto para un atributo y el motor de restricciones no puede reconciliarlos.
 - **Elementos con restricción** : las propiedades de un elemento (ubicación + tamaño) deben cubrirse completamente por su conjunto de restricciones y tamaños intrínsecos para que las restricciones sean válidas. Si estos valores son ambiguos, se dice que el elemento está subrestringido.
 - Error de **colocación del marco** : esto se produce cuando el marco de un elemento y su conjunto de restricciones definen dos rectángulos resultantes diferentes.
-
 
 En esta sección se explican los tres problemas mencionados anteriormente y se proporcionan detalles sobre cómo controlarlos.
 
