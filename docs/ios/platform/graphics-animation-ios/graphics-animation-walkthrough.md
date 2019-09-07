@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 919eff45e11f60db51109904269addeec1038558
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286115"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752878"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso de gráficos principales y animación básica en Xamarin. iOS
 
@@ -25,7 +25,6 @@ En la captura de pantalla siguiente se muestra la aplicación completada:
 Antes de comenzar, descargue el ejemplo *GraphicsDemo* que acompaña a esta guía. Se puede descargar [aquí](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) y se encuentra en el directorio **GraphicsWalkthrough** inicie el proyecto denominado **GraphicsDemo_starter** haciendo doble clic en él y abriendo la `DemoView` clase.
 
 ## <a name="drawing-a-path"></a>Dibujo de un trazado
-
 
 1. En `DemoView` , agregue `CGPath` una variable a la clase y cree una instancia de ella en el constructor. Declare también `CGPoint` dos variables `initialPoint` , `latestPoint`y, que se usarán para capturar el punto táctil desde el que se crea la ruta de acceso:
 
@@ -179,7 +178,6 @@ Ahora que hemos implementado el código para permitir que los usuarios dibujen e
 ## <a name="summary"></a>Resumen
 
 En este artículo, se recorre un ejemplo en el que se relacionan los conceptos de gráficos y animaciones. En primer lugar, hemos mostrado cómo usar los gráficos principales para dibujar una ruta `UIView` de acceso en respuesta a la interacción del usuario. Después hemos mostrado cómo usar la animación básica para que una imagen viaje a lo largo de ese trazado.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

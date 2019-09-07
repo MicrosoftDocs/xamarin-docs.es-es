@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ccf6966e85eddaa10b5651e1b0b48dec9203b28
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291486"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772201"
 ---
 # <a name="inspecting-live-applications"></a>Inspección de aplicaciones activas
 
@@ -52,4 +52,3 @@ El árbol visual dinámico también es muy útil. Representa la instantánea act
 - La edición de la cuadrícula de propiedades no está disponible para Mac y, en Windows, está limitado a algunos tipos de datos. Use REPL para una edición más eficaz.
 - Siempre y cuando la extensión AddIn/Extension esté instalada y habilitada en el IDE, se inserta código en la aplicación cada vez que se inicia en modo de depuración. Si observa un comportamiento extraño en la aplicación, intente deshabilitar o desinstalar el complemento o la extensión del inspector, reiniciar el IDE y volver a realizar la comprobación. Y registre los [errores](~/tools/inspector/install.md#reporting-bugs) para que podamos saberlo.
 - Si la inspección de un elemento de la interfaz de usuario hace que cambie en cualquier caso, [háganoslo saber](~/tools/inspector/install.md#reporting-bugs), ya que esto puede indicar un error.
-

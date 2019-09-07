@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4d6144ad48b9e2f263137fb2474bc9eb278d93f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291376"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768967"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajo con tablas en iOS Designer
 
@@ -28,13 +28,11 @@ Un `UITableView` objeto con contenido de prototipo suele estar pensado para most
 
  <a name="Static_Content" />
 
-
 ## <a name="static-content"></a>Contenido estático
 
 `UITableView`s con contenido estático permiten diseñar tablas directamente en la superficie de diseño. Las celdas se pueden arrastrar a la tabla y personalizar cambiando las propiedades y agregando controles.
 
  <a name="Creating_a_Storyboard-driven_app" />
-
 
 ## <a name="creating-a-storyboard-driven-app"></a>Creación de una aplicación controlada por guiones gráficos
 
@@ -62,7 +60,6 @@ El guion gráfico se editará en tres pasos:
 - En segundo lugar, cree la interfaz de usuario arrastrando y colocando objetos en la vista
 - Por último, agregue la clase UIKit requerida a cada vista y asigne un nombre a varios controles para que se pueda hacer referencia a ellos en el código.
 
-
 Una vez completado el guión gráfico, se puede agregar código para hacer todo el trabajo.
 
 <a name="Layout_The_View_Controllers" />
@@ -85,7 +82,6 @@ El primer cambio en el guión gráfico es eliminar la vista de detalles existent
 
 7. Cambie el nuevo **UITableViewController** para que **sea contenido: Celdas**estáticas. 
 
-
 8. El nuevo UITableViewController debe tener el nombre de clase y el identificador establecido. Seleccione el controlador de vista y escriba _TaskDetailViewController_ para la **clase** en el **Panel de propiedades** : se creará un `TaskDetailViewController.cs` nuevo archivo en el panel de solución. Escriba **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Se usará más adelante para cargar esta vista en C# el código:  
 
     [![Establecer el identificador de guión gráfico](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
@@ -93,8 +89,6 @@ El primer cambio en el guión gráfico es eliminar la vista de detalles existent
 9. La superficie de diseño de guion gráfico debe tener ahora el siguiente aspecto (el título del elemento de navegación del controlador de vista raíz se ha cambiado a "tablón de tareas"):
 
     [![Superficie de diseño](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
-
-
 
 <a name="Create_the_UI" />
 
@@ -118,7 +112,6 @@ Haga lo siguiente:
 - En el **Panel de propiedades**, en **elemento de botón** de **barra, seleccione identificador: Agregar** (para convertirlo en *+* un botón más). 
 - Asígnele un nombre para que se pueda identificar en el código en una fase posterior. Tenga en cuenta que deberá asignar al controlador de vista raíz un nombre de clase (por ejemplo, **ItemViewController**) para que pueda establecer el nombre del elemento del botón de barra.
 
-
 #### <a name="taskdetail-view-controller"></a>Controlador de vista TaskDetail
 
 La vista de detalle requiere mucho más trabajo. Las celdas de la vista de tabla deben arrastrarse hasta la vista y, a continuación, se pueden rellenar con etiquetas, vistas de texto y botones. En la captura de pantalla siguiente se muestra la interfaz de usuario finalizada con dos secciones. Una sección tiene tres celdas, tres etiquetas, dos campos de texto y un modificador, mientras que la segunda sección tiene una celda con dos botones:
@@ -136,7 +129,6 @@ Seleccione la vista de tabla y abra el **Panel de propiedades**. Actualice las s
 
 Seleccione la sección superior y, en **propiedades > sección** de la vista de tabla, cambie **las filas** a _3_, como se muestra a continuación:
 
-
  [![establecer la sección superior en tres filas](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Para cada celda, abra el **Panel de propiedades** y establezca:
@@ -144,7 +136,6 @@ Para cada celda, abra el **Panel de propiedades** y establezca:
 - **Estilo**:  _Personalizada_
 - **Identificador**: Elija un identificador único para cada celda (por ejemplo, "_title_", "_notas_", "_Done_").
 - Arrastre los controles necesarios para generar el diseño que se muestra en la captura de pantalla (Coloque **UILabel**, **campo** y **UISwitch** en las celdas correctas y establezca las etiquetas adecuadamente, por ej. Título, notas y listo).
-
 
 En la segunda sección, establezca **las filas** en _1_ y arrastre el controlador de tamaño inferior de la celda para que sea más alto.
 
@@ -165,7 +156,6 @@ Hay algunos pasos finales para crear nuestro guion gráfico. En primer lugar, de
 - **UISwitch** : _DoneSwitch_
 - **Eliminar botón** : _DeleteButton_
 - **Guardar botón** : _SaveButton_
-
 
 <a name="Adding_Code" />
 
@@ -350,8 +340,6 @@ En el ejemplo se muestra:
 - Crear una tabla con contenido estático para crear un formulario de entrada. Esto incluye cambiar el estilo de tabla y agregar secciones, celdas y controles de interfaz de usuario. 
 - Cómo crear un segue e invalidar el `PrepareForSegue` método para notificar a la vista de destino los parámetros que requiere. 
 - Cargar vistas de guion gráfico directamente `Storyboard.InstantiateViewController` con el método.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

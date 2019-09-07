@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 3. Más profunda en texto
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 3. Más profunda en texto'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 3. Más profunda en texto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e37175240825c0fed350589649469c99f1bbf69a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334664"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771223"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Más profunda en texto
 
@@ -28,7 +28,7 @@ Cuando el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) y [
 
 Cuando el `HorizontalOptions` y `VerticalOptions` propiedades se establecen en valores distintos de `LayoutOptions.Fill`, el tamaño de la `Label` se rige por el espacio necesario para representar el texto, hasta el tamaño de su contenedor hace que estén disponible para el `Label`. El `Label` se dice que *sin restricciones* y determina su propio tamaño.
 
-(Nota: Los términos *restringida* y *sin restricciones* podría no ser intuitivo, como una vista sin restricciones es generalmente más pequeña que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
+(Nota: Los términos *restringidos* y sin *restricciones* pueden ser un contador intuitivo, ya que una vista sin restricciones suele ser menor que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
 
 Una vista, como un `Label` puede restringir en una dimensión y sin restricciones en el otro. Un `Label` sólo ajustar texto en varias líneas si está restringido horizontalmente.
 
@@ -99,8 +99,8 @@ Por último, dos propiedades estáticas de sólo lectura definen valor de color 
 
 `Color.Default` está diseñado para aplicar la combinación de colores de la plataforma y, por lo tanto tiene un significado diferente en contextos diferentes en distintas plataformas. De forma predeterminada, las combinaciones de colores de la plataforma son:
 
-- iOS: Texto oscuro sobre un fondo claro
-- Android: Claro, oscuro texto sobre un fondo claro o texto sobre un fondo oscuro (en el libro) (para Material de diseño a través de AppCompat en el **maestro** rama del repositorio de código de ejemplo)
+- iOS Texto oscuro sobre un fondo claro
+- Android: Texto claro sobre un fondo oscuro (en el libro) o texto oscuro sobre un fondo claro (para el diseño de material a través de AppCompat en la rama **principal** del repositorio de código de ejemplo)
 - UWP: Texto oscuro sobre un fondo claro
 
 El `Color.Accent` valor resultados en un color específico de la plataforma (y a veces seleccionable por el usuario) que está visible en un fondo oscuro o claro.
@@ -134,8 +134,6 @@ El [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-s
 [![Captura de pantalla triple de variable con formato de párrafo](images/ch03fg06-small.png "texto de la etiqueta con el formato de Variable")](images/ch03fg06-large.png#lightbox "texto de la etiqueta con el formato de Variable")
 
 El [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) programa usa una sola `Label` y un `FormattedString` objeto para mostrar todos los tamaños de fuente con nombre para cada plataforma.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

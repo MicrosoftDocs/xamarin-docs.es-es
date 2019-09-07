@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 23. Los desencadenadores y comportamientos
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 23. Los desencadenadores y comportamientos'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 23. Los desencadenadores y comportamientos'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a1274a8447f49ce39f9c92703bbaec9e875b9e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61332137"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760589"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Los desencadenadores y comportamientos
 
@@ -183,8 +183,6 @@ El [ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-sampl
 El último ejemplo, [ **MultiColorSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) le permite cambiar entre tres vistas diferentes de la selección del color utilizando los botones de radio. Las tres vistas fundido de entrada y salida mediante un [ `FadeEnableAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca.
 
 El programa también responde a los cambios de orientación entre vertical y horizontal usando un [ `GridOrientationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) en el **Xamarin.FormsBook.Toolkit** biblioteca.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3e27cffa9e2605c3697536f226fe87fbbf1bfbbd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 47a07959bcfabc0980ccb90f2ae7a489e5e71223
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286879"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756234"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferencia en segundo plano y NSURLSession en Xamarin. iOS
 
@@ -56,12 +56,10 @@ Un `NSUrlSessionDelegate` proporciona los siguientes métodos básicos para comp
 - *DidReceiveChallenge* : se le llama para solicitar credenciales cuando se requiere autorización.
 - *DidBecomeInvalidWithError* : `NSURLSession` se llama a este método si se invalida.
 
-
 Las sesiones en segundo plano requieren delegados más especializados en función de los tipos de tareas que se están ejecutando. Las sesiones en segundo plano se limitan a dos tipos de tareas:
 
 - *Tareas de carga* : las tareas `NSUrlSessionUploadTask` de tipo `NSUrlSessionTaskDelegate` usan el, que hereda `NSUrlSessionDelegate` de. Este delegado proporciona métodos adicionales para realizar el seguimiento del progreso de la carga, controlar el redireccionamiento HTTP y mucho más.
 - *Tareas de descarga* : tareas de `NSUrlSessionDownloadTask` tipo use `NSUrlSessionDownloadDelegate` , que hereda de `NSUrlSessionTaskDelegate` . Este delegado proporciona todos los métodos para las tareas de carga, así como métodos específicos de descarga para realizar el seguimiento del progreso de la descarga y determinar cuándo se ha reanudado o completado una tarea de descarga.
-
 
 En el código siguiente se define una tarea que se puede usar para descargar una imagen de una dirección URL. La tarea se inicia llamando `CreateDownloadTask` a en nuestra sesión en segundo plano y pasando la solicitud de dirección URL:
 
@@ -96,7 +94,6 @@ La API de delegado de sesión proporciona un amplio kit de herramientas para int
 
 > [!IMPORTANT]
 > Las sesiones en segundo plano se inician en un subproceso en segundo plano, por lo que cualquier llamada para actualizar la interfaz de `InvokeOnMainThread` usuario se debe ejecutar explícitamente en el subproceso de la interfaz de usuario llamando a para evitar que Ios finalice la aplicación. 
-
 
 ## <a name="handling-transfer-completion"></a>Control de la finalización de la transferencia
 
@@ -141,8 +138,6 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 ```
 
 En este tutorial, trataremos los pasos básicos para implementar el servicio de transferencia en segundo plano en iOS 7.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

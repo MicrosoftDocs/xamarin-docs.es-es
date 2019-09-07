@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286622"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752431"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC principal en Xamarin. iOS
 
@@ -141,7 +141,6 @@ Los parámetros `NFCNdefReaderSession` del constructor son los siguientes:
 - `queue`: La cola en la que se administran las devoluciones de llamada. Puede ser `null`, en cuyo caso, asegúrese de usar al actualizar `DispatchQueue.MainQueue` los controles de la interfaz de usuario (como se muestra en el ejemplo).
 - `invalidateAfterFirstRead`: Cuando `true`, el examen se detiene después del primer análisis correcto; `false` cuando el examen continúa y se devuelven varios resultados hasta que se cancela el examen o se alcanza el tiempo de espera de 60 segundos.
 
-
 ### <a name="3-cancel-the-scanning-session"></a>3. Cancelar la sesión de examen
 
 El usuario puede cancelar la sesión de detección a través de un botón proporcionado por el sistema en la interfaz de usuario:
@@ -159,7 +158,6 @@ En ambos casos, se llamará `DidInvalidate` al método del delegado.
 ## <a name="summary"></a>Resumen
 
 CoreNFC permite que la aplicación Lea datos de etiquetas NFC. Admite la lectura de una variedad de formatos de etiqueta (tipos NDEF 1 a 5), pero no admite la escritura o el formato.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

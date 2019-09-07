@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6f3df1c7c4664f4138e0f399419ac95e15231916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225800"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757528"
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 
@@ -29,7 +29,6 @@ Android 4,4 (nivel de API 19), también conocido como "KitKat", se publicó a fi
 - [Hardware](#hardware) de Convierta cualquier aplicación en una tarjeta NFC con emulación de tarjeta basada en host NFC; ejecute sensores de baja energía con el `SensorManager`. &ndash;
 
 - [Herramientas de desarrollo](#developer_tools) &ndash; Las aplicaciones de screencast en acción con el cliente Android Debug Bridge, disponibles como parte de la Android SDK.
-
 
 En esta guía se proporcionan instrucciones para migrar una aplicación de Xamarin. Android existente a KitKat, así como una introducción de alto nivel de KitKat para desarrolladores de Xamarin. Android.
 
@@ -248,10 +247,8 @@ En la captura de pantalla siguiente se muestra la escena después de la animaci�
 
 [![Captura de pantalla de la aplicación una vez completada la animación](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
-
 > [!NOTE]
 > Hay un [error conocido](https://code.google.com/p/android/issues/detail?id=62450) en la biblioteca de transiciones de Android que hace que las `GetSceneForLayout` escenas creadas con se interrumpan cuando un usuario navega por una actividad por segunda vez. [Aquí](http://www.doubleencore.com/2013/11/new-transitions-framework/)se describe una solución alternativa de Java.
-
 
 ##### <a name="custom-transitions-in-scenes"></a>Transiciones personalizadas en escenas
 
@@ -289,7 +286,6 @@ KitKat le ofrece más control sobre la aplicación con barras de navegación y d
 - `windowTranslucentNavigation`-Cuando se establece en true, hace que la barra de navegación inferior sea translúcida.
 
 - `fitsSystemWindows`-Si se establece la barra superior o inferior en transcluent, el contenido se desplaza bajo los elementos transparentes de la interfaz de usuario de forma predeterminada. Establecer esta propiedad en `true` es una forma sencilla de evitar que el contenido se superponga con los elementos de la interfaz de usuario del sistema translúcido.
-
 
 En el código siguiente se define un tema con barras de navegación y de estado translúcido:
 
@@ -405,11 +401,8 @@ La mayoría de los dispositivos que se incluyen con KitKat descargan automática
 
 [![Captura de pantalla de ejemplo de la pantalla de configuración de impresión](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
-
 > [!NOTE]
 > Aunque las API de impresión están configuradas para que funcionen con Google Cloud Print de forma predeterminada, Android sigue permitiendo a los desarrolladores preparar el contenido de impresión con las nuevas API y enviarlo a otras aplicaciones para controlar la impresión.
-
-
 
 #### <a name="printing-html-content"></a>Imprimir contenido HTML
 
@@ -425,7 +418,6 @@ La opción Imprimir normalmente aparecerá en el [menú de opciones](https://dev
 El menú opciones permite que los usuarios realicen acciones en una actividad. Está en la esquina superior derecha de la pantalla y tiene el siguiente aspecto:
 
 [![Captura de pantalla de ejemplo del elemento de menú de impresión mostrado en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
-
 
 Los elementos de menú adicionales pueden definirse en el directorio de *menús*en *recursos*. El código siguiente define un elemento de menú de ejemplo denominado [Print](xref:Android.Print.PrintManager):
 
@@ -541,7 +533,6 @@ Para trabajar, HCE tiene que poder ejecutarse en segundo plano y debe iniciarse 
 
 - *OnDeactivated* : `HostAdpuService` se desactiva cuando el servicio HCE deja de comunicarse con el lector NFC.
 
-
 Un servicio HCE también debe registrarse con el manifiesto de la aplicación y decorarse con los permisos, el filtro de intención y los metadatos adecuados. El código siguiente es un ejemplo de un `HostApduService` registrado con el manifiesto de Android mediante `Service` el atributo (para obtener más información sobre los atributos, consulte la guía Xamarin [Working with Android manifest](~/android/platform/android-manifest.md) ):
 
 ```csharp
@@ -645,10 +636,8 @@ protected override void OnPause()
 
 Al reiniciar el dispositivo, se restablece el número de pasos en 0. La aplicación necesitará código adicional para asegurarse de que informa de un recuento exacto de la aplicación, independientemente de otras aplicaciones que usen el sensor o el estado del dispositivo.
 
-
 > [!NOTE]
 > Mientras que la API para la detección y el recuento de pasos se incluye con KitKat, no todos los teléfonos están desprovistos del sensor. Puede comprobar si el sensor está disponible ejecutando `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`o asegúrese de que el valor devuelto de `GetDefaultSensor` no `null`sea.
-
 
 <a name="developer_tools" />
 
@@ -673,17 +662,16 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 Puede encontrar el vídeo en el dispositivo: aparecerá en la Galería cuando se complete la grabación.
 
-
 ## <a name="other-kitkat-additions"></a>Otras adiciones de KitKat
 
 Además de los cambios descritos anteriormente, KitKat le permite:
 
 - *Use la pantalla completa* : KitKat presenta un nuevo [modo inmersivo](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para examinar contenido, jugar a juegos y ejecutar otras aplicaciones que podrían beneficiarse de una experiencia de pantalla completa.
 
-- *Personalización* de notificaciones: obtenga detalles adicionales acerca de las notificaciones del sistema con la[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+- *Personalización de notificaciones* : obtenga detalles adicionales acerca de las notificaciones del sistema con la[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
   . Esto le permite presentar la información de manera diferente dentro de la aplicación.
 
-- *Recursos* que se dibujan en reflejo: los recursos que se van a dibujar tienen un nuevo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+- *Recursos que se dibujan en reflejo* : los recursos que se van a dibujar tienen un nuevo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
   atributo que indica al sistema que cree una versión reflejada para las imágenes que requieran el volteo de los diseños de izquierda a derecha.
 
 - *Pausar animaciones* : pausar y reanudar animaciones creadas con el[`Animator`](xref:Android.Animation.Animator)
@@ -705,11 +693,9 @@ Además de los cambios descritos anteriormente, KitKat le permite:
 
 Para más información sobre los cambios anteriores de la API, consulte la introducción a las API de Google [Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .
 
-
 ## <a name="summary"></a>Resumen
 
-En este artículo se presentaron algunas de las nuevas API disponibles en Android 4,4 (nivel de API 19) y se han descrito prácticas recomendadas para la transición de una aplicación a KitKat. Se describen los cambios en las API que afectan a la experiencia del usuario, incluido el *marco de transición* ylas nuevas opciones para la misma. A continuación, se presentó el *marco* y `DocumentsProvider` la clase de acceso al almacenamiento, así como las nuevas API de *impresión*. Exploró la *emulación de la tarjeta basada en host NFC* y cómo trabajar con *sensores de baja energía*, incluidos dos nuevos sensores para realizar un seguimiento de los pasos del usuario. Por último, ha demostrado la captura de demostraciones en tiempo real de aplicaciones con *grabación de pantalla*y proporciona una lista detallada de los cambios y las adiciones de la API de kitkat.
-
+En este artículo se presentaron algunas de las nuevas API disponibles en Android 4,4 (nivel de API 19) y se han descrito prácticas recomendadas para la transición de una aplicación a KitKat. Se describen los cambios en las API que afectan a la experiencia del usuario, incluido el *marco de transición* y las nuevas *opciones para la*misma. A continuación, se presentó el *marco* y `DocumentsProvider` la clase de acceso al almacenamiento, así como las nuevas API de *impresión*. Exploró la *emulación de la tarjeta basada en host NFC* y cómo trabajar con *sensores de baja energía*, incluidos dos nuevos sensores para realizar un seguimiento de los pasos del usuario. Por último, ha demostrado la captura de demostraciones en tiempo real de aplicaciones con *grabación de pantalla*y proporciona una lista detallada de los cambios y las adiciones de la API de kitkat.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

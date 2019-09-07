@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292024"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752059"
 ---
 # <a name="introduction-to-ios-7"></a>Introducción a iOS 7
 
@@ -30,7 +30,6 @@ iOS 7 aumenta la compatibilidad con la animación en UIKit, lo que permite que l
 
 - `springWithDampingRatio`: Un valor entre 0 y 1, donde la oscilación aumenta para un valor menor.
 - `initialSpringVelocity`: Velocidad inicial del muelle como un porcentaje de la distancia total de la animación por segundo.
-
 
 El código siguiente produce un efecto elástico cuando cambia el centro de la vista de imagen:
 
@@ -104,13 +103,11 @@ Hay varios comportamientos primitivos distintos disponibles para desencadenar in
 - `UIPushBehavior`: Aplica Force a un elemento dinámico.
 - `UISnapBehavior`: Permite que un elemento dinámico se ajuste a una posición con un efecto elástico.
 
-
 Aunque hay muchos primitivos, el proceso general para agregar interacciones basadas en el física a una vista mediante UIKit Dynamics es coherente entre los distintos comportamientos:
 
 1. Cree un animador dinámico.
 1. Cree comportamientos.
 1. Agregue comportamientos al animador dinámico.
-
 
 ### <a name="dynamics-example"></a>Ejemplo de Dynamics
 
@@ -233,7 +230,6 @@ iOS 7 cambia cuándo y cómo se realiza el trabajo en segundo plano. La finaliza
 - Captura en segundo plano: permite que las aplicaciones actualicen el contenido en segundo plano a intervalos regulares.
 - Notificaciones remotas: permite que las aplicaciones actualicen el contenido al recibir una notificación de envío. Las notificaciones pueden ser silenciosas o pueden mostrar un banner en la pantalla de bloqueo.
 - Servicio de transferencia en segundo plano: permite cargar y descargar datos, como archivos grandes, sin un límite de tiempo fijo.
-
 
 Para obtener más información sobre las nuevas funcionalidades de multitarea, vea las secciones de iOS de la guía de procesamiento en [segundo plano](~/ios/app-fundamentals/backgrounding/index.md)de Xamarin.
 

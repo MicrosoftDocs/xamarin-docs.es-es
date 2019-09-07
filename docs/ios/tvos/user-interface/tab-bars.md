@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df19dcf542bd3a62a696c0d7d533b4e14390336e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283977"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768994"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con controladores de barra de pestañas de tvOS en Xamarin
 
@@ -121,7 +121,6 @@ Para obtener más información sobre cómo trabajar con guiones gráficos, vea n
 
 Utilice la `Items` propiedad `UITabBar` de para tener acceso a la colección `UITabBarItems` de que contiene como una matriz indizada de cero (0). La `SelectedItem` propiedad devolverá la pestaña (categoría) seleccionada actualmente `UITabBarItem`como.
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>Trabajar con elementos de barra de pestañas
@@ -144,9 +143,6 @@ Utilice la `Title` propiedad `UITabBarItem` de para cambiar el título y la `Ima
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el uso del controlador de barra de pestañas dentro de una aplicación Xamarin. tvOS.
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 8537e075c4ac1dba8362ec9ce5fc77ee0935503c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: af32f4af3951eff3b8b5412908e35c4cdef09ae4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757267"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>¿Es posible conectarse a emuladores de Android que se ejecutan en un Mac desde una máquina virtual de Windows?
 
@@ -57,7 +57,7 @@ Para conectarse al Android Emulator que se ejecuta en un equipo Mac desde una m�
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
     ```
 
-    Este comando configura el reenvío de puertos mediante `pf packet filter` el servicio de sistema de. Los saltos de línea son importantes. Asegúrese de mantenerlos intactos al pegarlos. También tendrá que ajustar el nombre de la interfaz de *vmnet8* si utiliza Parallels. `vmnet8`es el nombre del *dispositivo NAT* especial para el modo de *redes* compartidas en la fusión de VMware. Es probable que la interfaz de red adecuada en Parallels sea [vnic0](http://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
+    Este comando configura el reenvío de puertos mediante `pf packet filter` el servicio de sistema de. Los saltos de línea son importantes. Asegúrese de mantenerlos intactos al pegarlos. También tendrá que ajustar el nombre de la interfaz de *vmnet8* si utiliza Parallels. `vmnet8`es el nombre del *dispositivo NAT* especial para el modo de *redes compartidas* en la fusión de VMware. Es probable que la interfaz de red adecuada en Parallels sea [vnic0](http://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
 
 5. Conéctese al emulador desde la máquina Windows:
 
@@ -104,4 +104,3 @@ En este documento se describe el comportamiento actual a partir de marzo de 2016
 
 Si observa que la técnica ya no funciona o observa otros errores en el documento, no dude en agregarla a la discusión en el siguiente subproceso del Foro: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Gracias
-

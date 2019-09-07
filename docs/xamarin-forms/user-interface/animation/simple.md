@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d3046479282ef1535677f6712e487ab80bbf9d1b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71972f13f991bc5ad3ddf3c1c631fa7413290204
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656802"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759905"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animaciones sencillas en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _La clase ViewExtensions proporciona métodos de extensión que se pueden usar para construir las animaciones sencillas. En este artículo muestra cómo crear y cancelar las animaciones mediante la clase ViewExtensions._
-
 
 El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase proporciona los siguientes métodos de extensión que pueden usarse para crear animaciones sencillas:
 
@@ -229,7 +228,6 @@ Esta operación cancelará inmediatamente todas las animaciones que se están ej
 ## <a name="summary"></a>Resumen
 
 En este artículo se muestra creando y cancelación de animaciones con la [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase. Esta clase proporciona métodos de extensión que se pueden usar para construir las animaciones sencillas que giran, escalarán, traducirán y atenuación [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) instancias.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 3ff6bc9c603360232b22a36dadb42b6caf31cada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0d5cde38c9bb9ef4771ec17ef34ebf7e1b8cf74c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522397"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755511"
 ---
 # <a name="local-notifications-on-android"></a>Notificaciones locales en Android
 
@@ -24,7 +24,7 @@ Android proporciona dos áreas controladas por el sistema para mostrar los icono
 
 ![Ejemplo de área de notificación en un dispositivo](local-notifications-images/01-notification-shade.png)
 
-Para obtener detalles sobre la notificación, el usuario puede abrir el cajón de notificaciones (que expande cada icono de notificación para mostrar el contenido de la notificación) y realizar las acciones asociadas a las notificaciones. En la captura de pantalla siguiente se muestra un *cajón* de notificaciones que se corresponde con el área de notificación mostrada anteriormente:
+Para obtener detalles sobre la notificación, el usuario puede abrir el cajón de notificaciones (que expande cada icono de notificación para mostrar el contenido de la notificación) y realizar las acciones asociadas a las notificaciones. En la captura de pantalla siguiente se muestra un *cajón de notificaciones* que se corresponde con el área de notificación mostrada anteriormente:
 
 [![Ejemplo de cajón de notificaciones que muestra tres notificaciones](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -84,7 +84,6 @@ Android incluye compatibilidad con los metadatos de notificación para que las n
 > [!NOTE]
 > La **visibilidad** y la **categoría** se introdujeron en Android 5,0 y no están disponibles en versiones anteriores de Android. A partir de Android 8,0, los [canales de notificación](#notif-chan) se utilizan para controlar cómo se presentan las notificaciones al usuario.
 
-
 ### <a name="expanded-layouts"></a>Diseños expandidos
 
 A partir de Android 4,1, las notificaciones se pueden configurar con estilos de diseño expandidos que permiten al usuario expandir el alto de la notificación para ver más contenido. Por ejemplo, en el ejemplo siguiente se muestra una notificación de diseño expandida en modo de contrato:
@@ -115,7 +114,7 @@ La aplicación de **YouTube** que se instala con Android Oreo enumera dos catego
 
 [![Pantallas de notificación para YouTube en Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-Cada una de estas categorías corresponde a un canal de notificación. La aplicación de YouTube implementa un canal de notificaciones de **descarga** y un canal de **notificaciones generales** . El usuario puede pulsar **Descargar notificaciones**, que muestra la pantalla de configuración del canal de notificaciones de descarga de la aplicación:
+Cada una de estas categorías corresponde a un canal de notificación. La aplicación de YouTube implementa un canal de **notificaciones de descarga** y un canal de **notificaciones generales** . El usuario puede pulsar **Descargar notificaciones**, que muestra la pantalla de configuración del canal de notificaciones de descarga de la aplicación:
 
 [![Descargar la pantalla de notificaciones de la aplicación de YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
@@ -158,7 +157,7 @@ Para crear una notificación en Android, use la clase [NotificationCompat. Build
 
 - IDENTIFICADOR del canal de notificación en el que se publicará la notificación (Android 8,0 y versiones posteriores).
 
-Después de establecer estas opciones en el generador, se genera un objeto de notificación que contiene la configuración. Para publicar la notificación, se pasa este objeto de notificación al *Administrador*de notificaciones. Android proporciona la clase [NotificationManager](xref:Android.App.NotificationManager) , que es responsable de publicar notificaciones y mostrarla al usuario. Se puede obtener una referencia a esta clase desde cualquier contexto, como una actividad o un servicio.
+Después de establecer estas opciones en el generador, se genera un objeto de notificación que contiene la configuración. Para publicar la notificación, se pasa este objeto de notificación al *Administrador de notificaciones*. Android proporciona la clase [NotificationManager](xref:Android.App.NotificationManager) , que es responsable de publicar notificaciones y mostrarla al usuario. Se puede obtener una referencia a esta clase desde cualquier contexto, como una actividad o un servicio.
 
 ### <a name="creating-a-notification-channel"></a>Creación de un canal de notificación
 
@@ -237,7 +236,7 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-En este ejemplo, se crea `NotificationCompat.Builder` una instancia `builder` de un nuevo objeto denominado, junto con el identificador del canal de notificación que se va a usar. Se establecen el título y el texto de la notificación, y el icono de notificación se carga desde Resources **/drawable/ic_notification. png**. La llamada al método del generador de `Build` notificaciones crea un objeto de notificación con esta configuración. El siguiente paso consiste en llamar `Notify` al método del administrador de notificaciones. Para buscar el administrador de notificaciones, `GetSystemService`llame a, como se mostró anteriormente.
+En este ejemplo, se crea `NotificationCompat.Builder` una instancia `builder` de un nuevo objeto denominado, junto con el identificador del canal de notificación que se va a usar. Se establecen el título y el texto de la notificación, y el icono de notificación se carga desde **Resources/drawable/ic_notification. png**. La llamada al método del generador de `Build` notificaciones crea un objeto de notificación con esta configuración. El siguiente paso consiste en llamar `Notify` al método del administrador de notificaciones. Para buscar el administrador de notificaciones, `GetSystemService`llame a, como se mostró anteriormente.
 
 El `Notify` método acepta dos parámetros: el identificador de notificación y el objeto de notificación. El identificador de notificación es un entero único que identifica la notificación en la aplicación. En este ejemplo, el identificador de notificación se establece en cero (0); sin embargo, en una aplicación de producción, querrá asignar a cada notificación un identificador único. Reutilizar el valor del identificador anterior en una llamada a `Notify` hace que se sobrescriba la última notificación.
 
@@ -284,7 +283,7 @@ Como alternativa, puede usar el sonido de tono predeterminado del sistema para s
 builder.SetSound (RingtoneManager.GetDefaultUri(RingtoneType.Ringtone));
 ```
 
-Después de crear un objeto de notificación, es posible establecer las propiedades de notificación en el objeto de notificación (en lugar de configurarlos de antemano a través `NotificationCompat.Builder` de los métodos). Por ejemplo, en lugar de llamar al `SetDefaults` método para habilitar la vibración en una notificación, puede modificar directamente la marca de bits de la propiedad de [valores](xref:Android.App.Notification.Defaults) predeterminados de la notificación:
+Después de crear un objeto de notificación, es posible establecer las propiedades de notificación en el objeto de notificación (en lugar de configurarlos de antemano a través `NotificationCompat.Builder` de los métodos). Por ejemplo, en lugar de llamar al `SetDefaults` método para habilitar la vibración en una notificación, puede modificar directamente la marca de bits de la propiedad de [valores predeterminados](xref:Android.App.Notification.Defaults) de la notificación:
 
 ```csharp
 // Build the notification:
@@ -329,7 +328,6 @@ Una notificación permanece visible hasta que se produce una de estas tres accio
 
 Para obtener más información sobre cómo actualizar las notificaciones de Android, consulte [modificar una notificación](https://developer.android.com/training/notify-user/managing.html#Updating).
 
-
 ### <a name="starting-an-activity-from-a-notification"></a>Inicio de una actividad a partir de una notificación
 
 En Android, es habitual asociar una notificación a una *acción* &ndash; que se inicia cuando el usuario pulsa la notificación. Esta actividad puede residir en otra aplicación o incluso en otra tarea. Para agregar una acción a una notificación, se crea un objeto [PendingIntent](xref:Android.App.PendingIntent) y se asocia `PendingIntent` con la notificación. Un `PendingIntent` es un tipo especial de intención que permite a la aplicación de destinatario ejecutar un fragmento de código predefinido con los permisos de la aplicación de envío. Cuando el usuario pulsa la notificación, Android inicia la actividad especificada por `PendingIntent`.
@@ -373,7 +371,7 @@ Al pulsar esta notificación, el usuario vuelve a la actividad de origen.
 En una aplicación de producción, la aplicación debe controlar la *pila de retroceso* cuando el usuario presiona el botón **atrás** dentro de la actividad de notificación (si no está familiarizado con las tareas de Android y la pila de retroceso, consulte [tareas y pila de retroceso](https://developer.android.com/guide/components/tasks-and-back-stack.html)).
 En la mayoría de los casos, la navegación hacia atrás de la actividad de notificación debe devolver al usuario de la aplicación y volver a la pantalla principal. Para administrar la pila de retroceso, la aplicación usa la clase [TaskStackBuilder](xref:Android.App.TaskStackBuilder) para crear `PendingIntent` un con una pila de retroceso.
 
-Otra consideración real es que la actividad de origen puede necesitar enviar datos a la actividad de notificación. Por ejemplo, la notificación puede indicar que ha llegado un mensaje de texto, y la actividad de notificación (una pantalla de visualización de mensajes), requiere el identificador del mensaje para mostrar el mensaje al usuario. La actividad que crea el `PendingIntent` puede usar el método Intent [. PutExtra](xref:Android.Content.Intent.PutExtra*) para agregar datos (por ejemplo, una cadena) al intento de modo que estos datos se pasen a la actividad de notificación.
+Otra consideración real es que la actividad de origen puede necesitar enviar datos a la actividad de notificación. Por ejemplo, la notificación puede indicar que ha llegado un mensaje de texto, y la actividad de notificación (una pantalla de visualización de mensajes), requiere el identificador del mensaje para mostrar el mensaje al usuario. La actividad que crea el `PendingIntent` puede usar el método [Intent. PutExtra](xref:Android.Content.Intent.PutExtra*) para agregar datos (por ejemplo, una cadena) al intento de modo que estos datos se pasen a la actividad de notificación.
 
 En el ejemplo de código siguiente se muestra cómo `TaskStackBuilder` usar para administrar la pila de retroceso y se incluye un ejemplo de cómo enviar una cadena de un solo mensaje a una actividad `SecondActivity`de notificación denominada:
 
@@ -462,7 +460,7 @@ Para usar una imagen como un icono grande en una notificación, se llama al mét
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-Este código de ejemplo abre el archivo de imagen en Resources **/drawable/monkey_icon. png**, lo convierte en un mapa de bits y pasa `NotificationCompat.Builder`el mapa de bits resultante a. Normalmente, la resolución de la imagen de origen es mayor que &ndash; el icono pequeño pero no es mucho mayor. Una imagen demasiado grande podría producir operaciones de cambio de tamaño innecesarias que podrían retrasar el envío de la notificación.
+Este código de ejemplo abre el archivo de imagen en **Resources/drawable/monkey_icon. png**, lo convierte en un mapa de bits y pasa `NotificationCompat.Builder`el mapa de bits resultante a. Normalmente, la resolución de la imagen de origen es mayor que &ndash; el icono pequeño pero no es mucho mayor. Una imagen demasiado grande podría producir operaciones de cambio de tamaño innecesarias que podrían retrasar el envío de la notificación.
 
 ### <a name="big-text-style"></a>Estilo de texto grande
 
@@ -531,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-Al igual que el método `SetLargeIcon` de `NotificationCompat.Builder`, el método [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) de `BigPictureStyle` requiere un mapa de bits de la imagen que desea mostrar en el cuerpo de la notificación. En este ejemplo, el método [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) de `BitmapFactory` lee el archivo de imagen ubicado en Resources **/drawable/x_bldg. png** y lo convierte en un mapa de bits.
+Al igual que el método `SetLargeIcon` de `NotificationCompat.Builder`, el método [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) de `BigPictureStyle` requiere un mapa de bits de la imagen que desea mostrar en el cuerpo de la notificación. En este ejemplo, el método [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) de `BitmapFactory` lee el archivo de imagen ubicado en **Resources/drawable/x_bldg. png** y lo convierte en un mapa de bits.
 
 También puede mostrar imágenes que no están empaquetadas como un recurso. Por ejemplo, el siguiente código de ejemplo carga una imagen desde la tarjeta SD local y la muestra en una notificación de *imagen* :
 
@@ -705,11 +703,11 @@ Cuando se ordenan las notificaciones, la prioridad de la notificación tiene pri
 builder.SetCategory (Notification.CategoryCall);
 ```
 
-La característica no molestar (novedad en Android 5,0) filtra las notificaciones en función de las categorías. Por ejemplo, la pantalla *no molestar* en **configuración** permite al usuario excluir las notificaciones de llamadas telefónicas y mensajes:
+La característica no *molestar* (novedad en Android 5,0) filtra las notificaciones en función de las categorías. Por ejemplo, la pantalla *no molestar* en **configuración** permite al usuario excluir las notificaciones de llamadas telefónicas y mensajes:
 
 ![No molestar modificadores de pantalla](local-notifications-images/26-do-not-disturb.png)
 
-Cuando el usuario configura *no molesta* para bloquear todas las interrupciones excepto las llamadas telefónicas (como se muestra en la captura de pantalla anterior), Android permite que se presenten notificaciones con un valor de categoría de `Notification.CategoryCall` cuando el dispositivo está en nomodo de molestar. Tenga en `Notification.CategoryAlarm` cuenta que las notificaciones *no* se bloquean nunca en el modo no molestar.
+Cuando el usuario configura *no molesta* para bloquear todas las interrupciones excepto las llamadas telefónicas (como se muestra en la captura de pantalla anterior), Android permite que se presenten notificaciones con un valor de categoría de `Notification.CategoryCall` cuando el dispositivo está en no  *modo de molestar* . Tenga en `Notification.CategoryAlarm` cuenta que las notificaciones no se bloquean nunca en el modo no *molestar* .
 
 En el ejemplo [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) se muestra cómo `NotificationCompat.Builder` usar para iniciar una segunda actividad desde una notificación. Este código de ejemplo se explica en el tutorial [uso de notificaciones locales en Xamarin. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 

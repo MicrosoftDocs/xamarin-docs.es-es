@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: edd5a2c1ed2efdffc9bd28bb06ac19348615eefc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cc681e94187530c5442ad4fb12557017b92b2bb4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292109"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769222"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
 
@@ -41,4 +41,3 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
 - [Symbolicating de archivos de bloqueo de iOS (Xamarin. iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [Desmitificación de los registros de bloqueo de la aplicación iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
-

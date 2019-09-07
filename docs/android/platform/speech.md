@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14cce06399b804ba8fd982a40347fb3146b281c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643252"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757414"
 ---
 # <a name="android-speech"></a>Voz de Android
 
@@ -206,7 +206,6 @@ Por ejemplo, el usuario podría elegir francés y hacer clic en el icono de desc
 
 La instalación de estos datos se produce automáticamente una vez completada la descarga.
 
-
 ### <a name="step-5---the-ioninitlistener"></a>Paso 5: IOnInitListener
 
 Para que una actividad pueda convertir el texto en voz, se debe implementar el método `OnInit` de interfaz (es decir, el segundo parámetro especificado para la creación de instancias de la `TextToSpeech` clase). Esto inicializa el agente de escucha y prueba el resultado.
@@ -229,8 +228,6 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 ## <a name="summary"></a>Resumen
 
 En esta guía hemos analizado los aspectos básicos de la conversión de texto a voz y voz a texto y métodos posibles de cómo incluirlos en sus propias aplicaciones. Aunque no cubren cada caso determinado, ahora debe tener un conocimiento básico de cómo se interpreta la voz, cómo instalar nuevos idiomas y cómo aumentar el inclusivity de las aplicaciones.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

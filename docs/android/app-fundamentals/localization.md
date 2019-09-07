@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15f5705fcf625d7c9aa6901cc919cea399f252e9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 08d12a58b4a0d8a8f757df965bd9dfb73f1639b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755380"
 ---
 # <a name="android-localization"></a>Localización de Android
 
@@ -174,7 +174,7 @@ En el **archivo Strings. XML**
  </plurals>
 ```
 
-Para representar la cadena completa, use `GetQuantityString` el método, pasando el identificador de recurso y el valor que se va a mostrar (que se pasa dos veces). Android usa el segundo parámetro para determinar `quantity` la cadena que se va a usar, el tercer parámetro es el valor que se sustituye realmente por la cadena (se requieren ambos).
+Para representar la cadena completa, use `GetQuantityString` el método, pasando el identificador de recurso y el valor que se va a mostrar (que se pasa dos veces). Android usa el segundo parámetro `quantity` *para determinar la cadena que se* va a usar, el tercer parámetro es el valor que se sustituye realmente por la cadena (se requieren ambos).
 
 ```csharp
 var translated = Resources.GetQuantityString (
@@ -194,14 +194,13 @@ Se describen con más detalle en los [documentos de Android](https://developer.a
 
 ### <a name="images"></a>Imágenes
 
-Las imágenes localizadas siguen las mismas reglas que los archivos de cadenas: todas las imágenes a las que se hace referencia en la aplicación deben colocarse en directorios Dibujables, por lo que hay una reserva.
+Las imágenes localizadas siguen las mismas reglas que los archivos de cadenas: todas las imágenes a las que se hace referencia en la aplicación deben colocarse en directorios **Dibujables** , por lo que hay una reserva.
 
 Las imágenes específicas de la configuración regional deben colocarse en carpetas Dibujables aptas como **drawable-es** o **drawable-ja** (también se pueden agregar especificadores de PPP).
 
-En esta captura de pantalla, se guardan cuatro imágenes en el directorio drawable, pero solo una, **Flag. png**, tiene copias localizadas en otros directorios.
+En esta captura de pantalla, se guardan cuatro imágenes en el directorio **drawable** , pero solo una, **Flag. png**, tiene copias localizadas en otros directorios.
 
 ![Captura de pantalla de varias carpetas Dibujables, cada una de las cuales contiene uno o varios archivos. png localizados](localization-images/drawable.png)
-
 
 #### <a name="other-resource-types"></a>Otros tipos de recursos
 
@@ -210,7 +209,6 @@ También puede proporcionar otros tipos de recursos alternativos, específicos d
 Android 4,2 incorporó compatibilidad con [idiomas de derecha a izquierda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si establece la configuración `android:supportsRtl="true"`de la aplicación. El calificador `"ldrtl"` de recursos se puede incluir en un nombre de directorio para que contenga diseños personalizados que estén diseñados para la presentación RTL.
 
 Para más información sobre la reserva y los nombres de directorios de recursos, consulte los documentos de Android para [proporcionar recursos alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
-
 
 ### <a name="app-name"></a>Nombre de la aplicación
 
@@ -256,12 +254,9 @@ Para probar en un dispositivo, cambie el idioma en la aplicación de **configura
 > [!TIP]
 > Tome nota de los iconos y la ubicación de los elementos de menú para que pueda revertir el idioma a la configuración original.
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se tratan los aspectos básicos de la localización de aplicaciones de Android mediante el control de recursos integrado. Puede obtener más información sobre i18n y l10n para aplicaciones de iOS, Android y multiplataforma (incluidas Xamarin. Forms) en [esta guía multiplataforma](~/cross-platform/app-fundamentals/localization.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

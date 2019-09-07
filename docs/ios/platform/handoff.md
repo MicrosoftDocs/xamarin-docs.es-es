@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52ee92eca5fa0b3108b2ef96ef81bfb939e61a6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290755"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752918"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega en Xamarin. iOS
 
@@ -626,8 +626,6 @@ Cuando la actividad de usuario se ha enviado correctamente a otro dispositivo de
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha proporcionado una introducción al marco de entrega que se usa para continuar una actividad de usuario entre varios dispositivos de Apple del usuario. A continuación, se mostró cómo habilitar e implementar la entrega en una aplicación de Xamarin. iOS. Por último, se han explicado los diferentes tipos de continuaciones de entrega disponibles y las prácticas recomendadas de entrega.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

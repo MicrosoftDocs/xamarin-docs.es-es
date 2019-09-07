@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: dc84ecc0ee3a71cc4e1d4233f4d6d5f22f597b07
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 162378c00f3e20574d04dc373fcc492a9407b88d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523482"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761030"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>¿Por qué no se puede conectar la compilación de versión de Android a Internet?
 
 ## <a name="cause"></a>Causa
 
 La causa más común de este problema es que el permiso de **Internet** se incluye automáticamente en una compilación de depuración, pero debe establecerse manualmente para una compilación de versión. Esto se debe a que el permiso de Internet se usa para permitir que un depurador se asocie al proceso, tal como se describe [aquí](~/android/deploy-test/building-apps/build-process.md)"DebugSymbols".
-
 
 ## <a name="fix"></a>Solución
 

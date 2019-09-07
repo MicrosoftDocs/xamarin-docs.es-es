@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: conceptdev
 ms.author: crdun
 ms.date: 10/09/2017
-ms.openlocfilehash: 0979a0b65cc3d5b4944dadaf67aaa14cf1b3cf73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287597"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766098"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure y Xamarin
 
@@ -40,7 +40,6 @@ Las aplicaciones pueden tener acceso a servicios adicionales como Office 365.
 La API Web de Microsoft expone una interfaz similar a REST que las aplicaciones de Xamarin pueden usar fácilmente.
 Puede poner en marcha fácilmente un [sitio web de Azure](https://trywebsites.azurewebsites.net/) y crear una aplicación basada en WebAPI para conectarse a las aplicaciones de Xamarin.
 
-
 ### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introducción a los servicios Web](~/cross-platform/data-cloud/web-services/index.md)
 
 En este tutorial se presenta cómo integrar las tecnologías REST, WCF y SOAP Web Service con aplicaciones móviles de Xamarin. Examina varias implementaciones de servicio, evalúa las herramientas y bibliotecas disponibles para integrarlas y proporciona patrones de ejemplo para consumir datos de servicio. Por último, proporciona información general básica sobre la creación de un servicio web RESTful para su consumo con una aplicación móvil de Xamarin.
@@ -56,7 +55,6 @@ Además de los [ejemplos de documentación](https://github.com/xamarin/mobile-sa
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) : muestra para la [serie de arquitectura](https://www.microsoft.com/net/learn/architecture) de libros electrónicos.
 - Ejemplo de [Azure y IOT](https://azure.microsoft.com/campaigns/mydriving/) de la compilación 2016.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

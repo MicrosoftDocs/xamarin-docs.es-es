@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4ead912b55790caf3e2e1f22e149f5682e6bb697
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119744"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761216"
 ---
 # <a name="scanning-for-fingerprints"></a>Buscando huellas digitales
 
@@ -58,10 +58,7 @@ Analicemos cada uno de estos parámetros en el `Authenticate` método en un poco
 
 Es posible que sea necesario que el usuario (o la aplicación) cancele el análisis de huellas digitales una vez iniciado. En esta situación, invoque [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) el método en [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) el que se proporcionó `FingerprintManager.Authenticate` cuando se invocó para iniciar el análisis de huellas digitales.
 
-Ahora que hemos encontrado el `Authenticate` método, vamos a examinar algunos de los parámetros más importantes con más detalle. En primer lugar, veremos la [respuesta a](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md)las devoluciones de llamada de autenticación, que explican cómo crear subclases de [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), lo que permite que una aplicación de Android reaccione a los resultados proporcionados por el escáner de huellas digitales.
-
-
-
+Ahora que hemos encontrado el `Authenticate` método, vamos a examinar algunos de los parámetros más importantes con más detalle. En primer lugar, veremos la [respuesta a las devoluciones de llamada de autenticación](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), que explican cómo crear subclases de [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), lo que permite que una aplicación de Android reaccione a los resultados proporcionados por el escáner de huellas digitales.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

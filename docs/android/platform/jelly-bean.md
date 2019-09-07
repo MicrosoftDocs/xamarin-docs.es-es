@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 614a0e3952db42d2587930b66bf71ce4c703d035
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7fa116f716c3c30e8d41dd19cbc09477a7709e49
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524064"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761535"
 ---
 # <a name="jelly-bean-features"></a>Características de Jale Bean
 
 _En este documento se proporciona información general de alto nivel de las nuevas características para los desarrolladores que se introdujeron en Android 4,1. Estas características incluyen: notificaciones mejoradas, actualizaciones para el rayo de Android para compartir archivos de gran tamaño, actualizaciones a multimedia, detección de redes punto a punto, animaciones y nuevos permisos._
-
-
 
 ## <a name="overview"></a>Información general
 
@@ -30,19 +28,13 @@ Se ha agregado compatibilidad con la detección de servicios de red mediante Bon
 
 Por último, se han agregado varios permisos nuevos en Android 4,1.
 
-
-
 ## <a name="requirements"></a>Requisitos
 
 Para desarrollar aplicaciones de Xamarin. Android con el Bean de jale, se requiere Xamarin. Android 4.2.6 o posterior y Android 4,1 (nivel de API 16) se instala a través del administrador de Android SDK como se muestra en la siguiente captura de pantalla:
 
 [![Seleccionar Android 4,1 en el administrador de Android SDK](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
-
-
 ## <a name="whats-new"></a>Novedades
-
-
 
 ### <a name="animations"></a>Animaciones
 
@@ -51,7 +43,6 @@ Las actividades se pueden iniciar mediante animaciones de zoom o animaciones per
 - `MakeScaleUpAnimation`: De esta forma, se crea una animación que escala verticalmente una ventana de actividad a partir de una posición inicial y un tamaño en la pantalla.
 - `MakeThumbnailScaleUpAnimation`: Esto creará una animación que se escala verticalmente desde una imagen en miniatura desde la posición especificada en la pantalla.
 - `MakeCustomAnimation`: Crea una animación a partir de los recursos de la aplicación. Hay una animación para cuando se abre la actividad y otra para cuando se detiene la actividad.
-
 
 La nueva `TimeAnimator` clase proporciona una interfaz `TimeAnimator.ITimeListener` que puede notificar a una aplicación cada vez que un fotograma cambia en una animación. Por ejemplo, considere la siguiente implementación de `TimeAnimator.ITimeListener`:
 
@@ -75,8 +66,6 @@ animator.Start();
 
 A medida `TimeAnimator` que se ejecuta la instancia, se `ITimeAnimator.ITimeListener`invocará, que después registrará el tiempo durante el que se ha estado ejecutando el animador y cuánto tiempo ha transcurrido desde la última vez que se ha invocado el método.
 
-
-
 ### <a name="application-stack-navigation"></a>Navegación por la pila de aplicaciones
 
 Android 4,1 mejora la navegación de la pila de aplicaciones que se presentó en Android 3,0. Al especificar la `ParentName` propiedad `ActivityAttribute`de, Android puede abrir la actividad primaria adecuada cuando el usuario presiona el [botón subir](https://developer.android.com/design/patterns/navigation.html#up-vs-back) en la barra de acciones: Android creará una instancia de la actividad especificada por `ParentName` la propiedad. Esto permite a las aplicaciones conservar la jerarquía de actividades que realizan una tarea determinada.
@@ -91,9 +80,6 @@ En escenarios más complejos, hay nuevos métodos en la clase de actividad que s
 - `ShouldUpRecreateTask`: Este método se utiliza para consultar si se debe crear la pila de retroceso sintética para navegar hasta una actividad primaria. Devuelve `true` si se debe crear la pila sintética. 
 - `FinishAffinity`: La llamada a este método finalizará la actividad actual y todas las actividades inferiores en la tarea actual que tengan la misma afinidad de tarea.
 - `OnCreateNavigateUpTaskStack`: Este método se reemplaza cuando es necesario tener un control completo sobre cómo se crea la pila sintética.
-
-
-
 
 ### <a name="camera"></a>Cámara
 
@@ -125,7 +111,6 @@ La nueva clase `MediaActionSound` proporciona un conjunto de API para generar so
 - `MediaActionSoundType.StartVideoRecording`: Este sonido indica el inicio de la grabación de vídeo.
 - `MediaActionSoundType.StopVideoRecording`: Este sonido se reproducirá para indicar el final de la grabación de vídeo.
 
-
 Un ejemplo de cómo usar la `MediaActionSound` clase puede verse en el siguiente fragmento de código:
 
 ```csharp
@@ -143,17 +128,11 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
-
-
 ### <a name="connectivity"></a>Conectividad
-
-
 
 #### <a name="android-beam"></a>Android Beam
 
 El rayo de Android es una tecnología basada en NFC que permite que dos dispositivos Android se comuniquen entre sí. Android 4,1 proporciona una mejor compatibilidad para la transferencia de archivos grandes. Cuando use el nuevo método `NfcAdapter.SetBeamPushUris()` , Android cambiará entre mecanismos de transporte alternativos (como Bluetooth) para lograr una velocidad de transferencia rápida.
-
-
 
 #### <a name="network-services-discovery"></a>Detección de Network Services
 
@@ -164,13 +143,9 @@ Para crear un servicio que puede ser consumido por otros servicios, `NsdServiceI
 
 Para detectar servicios en la red y la implementación de `Nsd.DiscoveryListener` que se `NsdManager.discoverServices()`pasa a.
 
-
-
 #### <a name="network-usage"></a>Uso de red
 
 Un nuevo método `ConnectivityManager.IsActiveNetworkMetered` permite que un dispositivo Compruebe si está conectado a una red de uso medido. Este método se puede usar para ayudar a administrar el uso de datos al informar a los usuarios de forma precisa de que puede haber costosos en las operaciones de datos.
-
-
 
 #### <a name="wifi-direct-service-discovery"></a>Detección de servicios Wi-Fi Direct
 
@@ -183,14 +158,9 @@ En jale Bean, `WifiP2pManager` puede detectar dispositivos cercanos mediante *Bo
 - `SetDnsSdResponseListeners()`: Este método se usa para registrar devoluciones de llamada que se van a invocar al recibir una respuesta a las solicitudes de detección de Bonjour.
 - `SetUpnpServiceResponseListener()`: Este método se usa para registrar devoluciones de llamada que se van a invocar al recibir una respuesta a las solicitudes de detección UPnP.
 
-
-
-
 ### <a name="content-providers"></a>Proveedores de contenido
 
 La `ContentResolver` clase ha recibido un nuevo método, `AcquireUnstableContentProvider`. Este método permite a una aplicación adquirir un proveedor de contenido "inestable". Normalmente, cuando una aplicación adquiere un proveedor de contenido y ese proveedor de contenido se bloquea, lo hará la aplicación. Con esta llamada al método, una aplicación no se bloqueará si el proveedor de contenido se bloquea. En su lugar `Android.OS.DeadObjectionException` , se producirá desde las llamadas en el proveedor de contenido para informar a una aplicación de que el proveedor de contenido ha desaparecido. Un proveedor de contenido "inestable" es útil al interactuar con proveedores de contenido de otras aplicaciones; es menos probable que el código erróneo de otra aplicación afecte a otra aplicación.
-
-
 
 ### <a name="copy-and-paste-with-intents"></a>Copiar y pegar con intenciones
 
@@ -200,13 +170,9 @@ La `Intent` clase ahora puede tener un `ClipData` objeto asociado a ella a trav�
 - **Intención** : cualquier `Intent` objeto.
 - **URI** : puede ser cualquier URI, como un marcador http o el URI a un proveedor de contenido.
 
-
-
-
 ### <a name="isolated-services"></a>Servicios aislados
 
 Un servicio aislado es un servicio que se ejecuta bajo su propio proceso especial y no tiene permisos propios. La única comunicación con el servicio es cuando se inicia el servicio y se enlaza a él a través de la API de servicio. Es posible declarar un servicio como aislado estableciendo la propiedad `IsolatedProcess="true"` `ServiceAttribute` en que adorna una clase de servicio.
-
 
 ### <a name="media"></a>Multimedia
 
@@ -218,7 +184,6 @@ Las nuevas `Android.Media.Audiofx.AudioEffect` subclases se han agregado para ad
 - `Android.Media.Audiofx.AutomaticGainControl`: Esta clase se usa para normalizar la señal capturada aumentando o reduciendo una señal de entrada para que la señal de salida sea constante.
 - `Android.Media.Audiofx.NoiseSuppressor`: Esta clase quitará el ruido de fondo de la señal capturada.
 
-
 No todos los dispositivos admiten estos efectos. Una aplicación `AudioEffect.IsAvailable` debe llamar al método para ver si se admite el efecto de audio en cuestión en el dispositivo que ejecuta la aplicación.
 
 La `MediaPlayer` clase ahora admite la reproducción de sin huecos `SetNextMediaPlayer()` con el método. Este nuevo método especifica el siguiente MediaPlayer que se va a iniciar cuando el reproductor multimedia actual termine de reproducirse.
@@ -228,25 +193,19 @@ Las siguientes clases nuevas proporcionan mecanismos y la interfaz de usuario es
 - `MediaRouter`: Esta clase permite a las aplicaciones controlar el enrutamiento de canales multimedia desde un dispositivo a altavoces externos u otros dispositivos.
 - `MediaRouterActionProvider`y `MediaRouteButton` : estas clases ayudan a proporcionar una interfaz de usuario coherente para seleccionar y reproducir elementos multimedia.
 
-
-
-
 ### <a name="notifications"></a>Notificaciones
 
 Android 4,1 permite que las aplicaciones tengan más flexibilidad y control con la visualización de notificaciones. Ahora, las aplicaciones pueden mostrar notificaciones más grandes y mejores a los usuarios. Un nuevo método, `NotificationBuilder.SetStyle()` permite que uno de los nuevos tres nuevos estilos se establezca en las notificaciones:
 
 - `Notification.BigPictureStyle`: Se trata de una clase auxiliar que generará notificaciones que incluirán una imagen en ellas. La imagen siguiente muestra un ejemplo de una notificación con una imagen grande:
 
-
  [![Captura de pantalla de ejemplo de una notificación de BigPictureStyle](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 - `Notification.BigTextStyle`: Se trata de una clase auxiliar que generará notificaciones que tendrán varias líneas de texto, como el correo electrónico. En la siguiente captura de pantalla se puede consultar un ejemplo de este nuevo estilo de notificación:
 
-
  [![Captura de pantalla de ejemplo de una notificación de BigTextStyle](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 - `Notification.InboxStyle`: Se trata de una clase auxiliar que generará notificaciones que contienen una lista de cadenas, como fragmentos de código de un mensaje de correo electrónico, tal como se muestra en esta captura de pantalla:
-
 
  [![Captura de pantalla de ejemplo de una notificación de Notification. InboxStyle](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
@@ -256,8 +215,6 @@ Un ejemplo de esto se puede ver en la siguiente captura de pantalla, donde los b
  [![Captura de pantalla de ejemplo de los botones de acción que se muestran debajo de un mensaje de notificación](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 La `Notification` clase ha recibido nuevas constantes que permiten al desarrollador especificar uno de los cinco niveles de prioridad para una notificación. Se pueden establecer en una notificación mediante la `Priority` propiedad.
-
-
 
 ### <a name="permissions"></a>Permisos
 
@@ -269,17 +226,13 @@ Se han agregado los siguientes permisos nuevos:
 - `WRITE_CALL_LOG`: Permite que una aplicación escriba en el registro de llamadas del teléfono.
 - `WRITE_USER_DICTIONARY`: Permite que una aplicación escriba en el Diccionario de palabras del usuario.
 
-
 Un cambio importante a tener `READ_EXTERNAL_STORAGE` en cuenta: Actualmente, Android concede automáticamente este permiso. Las versiones futuras de Android requerirán que una aplicación solicite este permiso antes de que se le conceda el permiso.
-
-
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se presentaron algunas de las nuevas API que están disponibles en Android 4,1 (nivel de API 16). Resaltó algunos cambios para animaciones y animando el lanzamiento de una actividad, e incorporó las nuevas API para la detección de redes de otros dispositivos mediante protocolos como Bonjour o UPnP. También se resaltan otros cambios en la API, como la capacidad de cortar y pegar datos a través de la intención, la capacidad de usar los servicios aislados o los proveedores de contenido "inestables".
 
 Este artículo se ha pasado a presentar las actualizaciones a las notificaciones y se han explicado algunos de los nuevos permisos que se han introducido en Android 4,1
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

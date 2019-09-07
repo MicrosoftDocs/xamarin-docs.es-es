@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f8a542b58fa891b63f43d1c87dea911b83e01949
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e3b7ccf74773e5a391b8f133ccc241ca0e18bfcb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509315"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755155"
 ---
 # <a name="using-android-assets"></a>Uso de recursos de Android
 
@@ -19,7 +19,6 @@ Los _recursos_ proporcionan una manera de incluir archivos arbitrarios como text
 
 Los recursos agregados al proyecto se mostrarán como un sistema de archivos que puede leer la aplicación mediante [AssetManager](xref:Android.Content.Res.AssetManager).
 En esta sencilla demostración, vamos a agregar un recurso de archivo de texto a nuestro proyecto, a leerlo con `AssetManager`y a mostrarlo en una TextView.
-
 
 ## <a name="add-asset-to-project"></a>Agregar activo al proyecto
 
@@ -40,7 +39,6 @@ Visual Studio para Mac debe haber establecido la **acción de compilación** par
 -----
 
 Al seleccionar la opción **BuildAction** correcta se garantiza que el archivo se empaquetará en el APK en tiempo de compilación.
-
 
 ## <a name="reading-assets"></a>Leer recursos
 
@@ -69,13 +67,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-
 ## <a name="running-the-application"></a>Ejecutar la aplicación
 
 Ejecute la aplicación y verá lo siguiente:
 
 ![Captura de pantalla de ejemplo](android-assets-images/screenshot.png)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

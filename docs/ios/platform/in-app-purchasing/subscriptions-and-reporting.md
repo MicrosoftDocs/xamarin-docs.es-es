@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284037"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752673"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Suscripciones e informes en Xamarin. iOS
 
@@ -28,7 +28,6 @@ Diferencias principales entre las suscripciones sin renovación y otros tipos de
 - Información general sobre la implementación
 - Normalmente, las suscripciones que no son de renovación deberían implementarse mediante el flujo de trabajo proporcionado por el servidor y se pueden administrar como productos consumibles. 
 
-
 ## <a name="about-free-subscriptions"></a>Acerca de las suscripciones gratuitas
 
 Las suscripciones gratuitas permiten a los desarrolladores colocar contenido gratuito en aplicaciones de NewsStand (no se pueden usar en aplicaciones que no son de NewsStand). Una vez que se inicia una suscripción gratuita, estará disponible en todos los dispositivos del usuario. Las suscripciones gratuitas nunca expiran; solo finalizan cuando se desinstala la aplicación.
@@ -36,7 +35,6 @@ Las suscripciones gratuitas permiten a los desarrolladores colocar contenido gra
 ### <a name="implementation-overview"></a>Información general sobre la implementación
 
 Las suscripciones gratuitas se comportan de forma muy parecida a las suscripciones renovables automáticamente. La aplicación debe tener un producto de suscripción gratuita disponible para "compra" en iTunes Connect. Cuando el usuario lo compra, la compra de suscripción gratuita debe validarse como un producto de suscripción autorenovable. Las transacciones de suscripción gratuitas se pueden restaurar.
-
 
 ## <a name="about-auto-renewable-subscriptions"></a>Acerca de las suscripciones renovables automáticamente
 
@@ -53,7 +51,7 @@ El secreto compartido de compra desde la aplicación debe usarse en la solicitud
 En la Página principal de iTunes Connect, seleccione **mis aplicaciones**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Selección de Mis aplicaciones")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 Seleccione una aplicación y haga clic en la pestaña **compras desde la aplicación** :
 
 [![](subscriptions-and-reporting-images/image6.png "Haga clic en la pestaña compras desde la aplicación.")](subscriptions-and-reporting-images/image6.png#lightbox)
@@ -63,10 +61,8 @@ En la parte inferior de la página, seleccione **ver o generar un secreto compar
  [![](subscriptions-and-reporting-images/image40.png "Seleccionar ver o generar un secreto compartido")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generar un secreto compartido")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- Para usar el secreto compartido, inclúyalo en la carga de JSON que se envía a los servidores de Apple cuando se valida una confirmación de compra desde la aplicación para una suscripción autorenovable, de la siguiente manera:
+
+Para usar el secreto compartido, inclúyalo en la carga de JSON que se envía a los servidores de Apple cuando se valida una confirmación de compra desde la aplicación para una suscripción autorenovable, de la siguiente manera:
 
 ```csharp
 {
@@ -95,10 +91,8 @@ Si el estado es cero, la suscripción sigue siendo válida y los demás campos c
 #### <a name="restoring-auto-renewable-subscriptions"></a>Restaurar suscripciones autorenovables
 
 Recibirá varias transacciones: la transacción de compra original más una transacción independiente para cada período de tiempo durante el cual se renovó la suscripción. Debe realizar un seguimiento de las fechas y los términos de inicio para comprender cuál es el período de validez.   
-   
-   
-   
- El objeto SKPaymentTransaction no incluye el término de suscripción: debe usar un identificador de producto diferente para cada término y escribir código que pueda extrapolar el período de suscripción de la fecha de compra de la transacción.
+
+El objeto SKPaymentTransaction no incluye el término de suscripción: debe usar un identificador de producto diferente para cada término y escribir código que pueda extrapolar el período de suscripción de la fecha de compra de la transacción.
 
 #### <a name="testing-auto-renewal"></a>Prueba de la renovación automática
 

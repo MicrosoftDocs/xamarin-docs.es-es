@@ -6,12 +6,12 @@ ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: bd97406501df155561e0e240607740430dbf4ac3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 55d531036336cdd6c3ac7efa1c5ba21b09a7be9e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284585"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758138"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Accesibilidad en aplicaciones de Xamarin
 
@@ -68,8 +68,6 @@ Proporcione leyendas para el contenido de vídeo y un script legible para el con
 ### <a name="localize"></a>Localize
 
 Las descripciones de accesibilidad se pueden localizar (y deben) en el caso de que la aplicación admita varios idiomas.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

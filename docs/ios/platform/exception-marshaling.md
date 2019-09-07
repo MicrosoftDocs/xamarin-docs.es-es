@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 936c5b91a27fed1c00f3cf0c61d0184d5532c25a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279693"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753083"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Serialización de excepciones en Xamarin. iOS
 
@@ -330,7 +330,6 @@ La `disable` opción deshabilitará _principalmente_ la intercepción, salvo que
 Solo intercepto P/Invoke en la `objc_msgSend` familia de funciones al intentar detectar excepciones de Objective-C. Esto significa que una P/Invoke a otra función de C, que después produce cualquier excepción de Objective-C, seguirá ejecutándose en el comportamiento antiguo y no definido (esto puede mejorarse en el futuro).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

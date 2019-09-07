@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8ebc52936dfdcb6b5262424eba5652de0b8908e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522041"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755594"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
@@ -32,7 +32,6 @@ En este capítulo se examina el ciclo de vida de la actividad en detalle, inclui
 - Estados de actividad
 - Métodos de ciclo de vida
 - Conservar el estado de una aplicación
-
 
 En esta sección también se incluye un [tutorial](~/android/app-fundamentals/activity-lifecycle/saving-state.md) que proporciona ejemplos prácticos sobre cómo guardar el estado de forma eficaz durante el ciclo de vida de la actividad. Al final de este capítulo, debe comprender el ciclo de vida de la actividad y cómo admitirlo en una aplicación Android.
 
@@ -56,7 +55,6 @@ Estos Estados se pueden dividir en cuatro grupos principales como se indica a co
     Las actividades detenidas siguen intentando conservar su estado y la información de los miembros siempre que sea posible, pero las actividades detenidas se consideran la prioridad más baja de los tres Estados y, como tal, el sistema operativo eliminará primero las actividades en este estado para satisfacer el recurso. requisitos de actividades con mayor prioridad.
 
 1. *Reiniciado* &ndash; Es posible que Android Quite de la memoria una actividad que esté en cualquier lugar en pausa en el ciclo de vida. Si el usuario vuelve a la actividad, se debe reiniciar, restaurar a su estado guardado previamente y, a continuación, mostrar al usuario.
-
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Volver a crear la actividad en respuesta a los cambios de configuración
 
@@ -122,7 +120,6 @@ Las actividades deben invalidar este método para realizar tareas como las sigui
 - Mostrar cualquier alerta o cuadro de diálogo relevante
 - Conectar controladores de eventos externos
 
-
 Por ejemplo, en el siguiente fragmento de código se muestra cómo inicializar la cámara:
 
 ```csharp
@@ -174,7 +171,6 @@ Hay dos métodos de ciclo de vida posibles a los que `OnPause`se llamará despu�
 1. `OnResume`se llamará a si la actividad se va a devolver al primer plano.
 1. `OnStop`se llamará a si la actividad se coloca en segundo plano.
 
-
 #### <a name="onstop"></a>OnStop
 
 Se llama a [OnStop](xref:Android.App.Activity.OnStop) cuando la actividad ya no es visible para el usuario. Esto sucede cuando se produce uno de los siguientes casos:
@@ -182,7 +178,6 @@ Se llama a [OnStop](xref:Android.App.Activity.OnStop) cuando la actividad ya no 
 - Se está iniciando una nueva actividad y está cubriendo esta actividad.
 - Una actividad existente se pone en primer plano.
 - Se está destruyendo la actividad.
-
 
 `OnStop`no siempre se puede llamar en situaciones de memoria insuficiente, como cuando Android se queda sin recursos y no puede almacenar en segundo plano la actividad. Por esta razón, es mejor no depender de `OnStop` la llamada a cuando se prepara una actividad para la destrucción. Los siguientes métodos de ciclo de vida a los que se puede llamar `OnDestroy` después de este se producirán si la `OnRestart` actividad deja de estar disponible, o si la actividad se va a devolver para interactuar con el usuario.
 
@@ -325,7 +320,6 @@ Este método existe para proporcionar cierta flexibilidad a la hora de restaurar
 
 Para obtener un ejemplo de cómo guardar el `Bundle`estado con, consulte el [Tutorial: guardar el estado de la actividad](saving-state.md).
 
-
 #### <a name="bundle-limitations"></a>Limitaciones de agrupación
 
 Aunque `OnSaveInstanceState` facilita el almacenamiento de datos transitorios, tiene algunas limitaciones:
@@ -337,7 +331,6 @@ Aunque `OnSaveInstanceState` facilita el almacenamiento de datos transitorios, t
 - Los datos guardados mediante el lote se serializan, lo que puede provocar retrasos.
 
 El estado de agrupación es útil para datos simples que no usan mucha memoria, mientras que los *datos de instancia que no son de configuración* son útiles para datos más complejos, o datos que son caros de recuperar, como por ejemplo una llamada de servicio web o una consulta de base de datos complicada. Los datos de instancia que no son de configuración se guardan en un objeto según sea necesario. En la siguiente sección `OnRetainNonConfigurationInstance` se explica cómo conservar tipos de datos más complejos a través de los cambios de configuración.
-
 
 ### <a name="persisting-complex-data"></a>Persistencia de datos complejos
 
@@ -477,7 +470,6 @@ En esta sección, hemos aprendido a conservar los `Bundle`datos de estado sencil
 ## <a name="summary"></a>Resumen
 
 El ciclo de vida de la actividad de Android proporciona un marco eficaz para la administración de Estados de actividades dentro de una aplicación, pero puede ser difícil de entender e implementar. En este capítulo se presentaron los distintos Estados en los que puede pasar una actividad durante su duración, así como los métodos de ciclo de vida asociados a esos Estados. A continuación, se proporciona una guía sobre el tipo de lógica que debe realizarse en cada uno de estos métodos.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

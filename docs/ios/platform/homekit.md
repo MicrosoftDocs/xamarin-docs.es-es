@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a004ea539bab264f6a1418826be451ffb7d43d47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753046"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin. iOS
 
@@ -266,7 +266,6 @@ También debe supervisar los eventos y `DidAddHome` `DidRemoveHome` del administ
 
 > [!IMPORTANT]
 > El `AlertView.PresentOKAlert` método que se usa en el código de ejemplo anterior es una clase auxiliar en la aplicación HomeKitIntro que facilita el trabajo con las alertas de iOS.
-
 
 ## <a name="finding-new-accessories"></a>Buscar nuevos accesorios
 
@@ -705,8 +704,6 @@ Para obtener más información sobre las nuevas características de HomeKit en i
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha introducido HomeKit Home Automation Framework de Apple. Se ha mostrado cómo configurar y configurar dispositivos de prueba mediante el simulador de accesorios de HomeKit y cómo crear una aplicación sencilla de Xamarin. iOS para detectar, comunicarse y controlar dispositivos de automatización de la casa con HomeKit.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

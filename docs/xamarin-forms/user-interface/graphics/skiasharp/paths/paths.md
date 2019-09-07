@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 370fec5b9323187f6345d3e6bf9d3e38145cedff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eee338461593ad131f679d32cadf63fe3b1a4c40
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759346"
 ---
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso de SkiaSharp
 
@@ -194,7 +194,6 @@ Este es el programa que se ejecuta:
 [![](paths-images/strokejoins-small.png "Triple captura de pantalla de la página de trazo une")](paths-images/strokejoins-large.png#lightbox "Triple captura de pantalla de la página se une a trazo")
 
 La unión angular consta de un vértice agudo donde las líneas de conexión. Cuando se unen dos líneas en un ángulo pequeño, la unión angular puede ser bastante larga. Para evitar uniones excesivamente largos, la longitud de la unión angular está limitada por el valor de la [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) propiedad de `SKPaint`. Una unión angular que supera esta longitud se cortan para convertirse en una unión biselada.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

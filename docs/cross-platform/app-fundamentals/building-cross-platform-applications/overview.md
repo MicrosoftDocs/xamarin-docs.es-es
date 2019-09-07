@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288381"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758108"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Información general sobre la creación de aplicaciones multiplataforma
 
@@ -45,11 +45,9 @@ Para aumentar la cantidad de reutilización del código, puede adoptar component
 1. [Paquetes NuGet](https://nuget.org) que son compatibles con los proyectos de Xamarin, como [JSON.net](https://www.nuget.org/packages/Newtonsoft.Json/),
 1. Usar las características de .NET Framework para redes, servicios Web, e/s y mucho más.
 
-
 Algunos de estos componentes se implementan en el caso práctico de *tarea* .
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Separar el código reutilizable en una biblioteca principal
 
@@ -58,7 +56,6 @@ Al seguir el principio de separación de la responsabilidad mediante la disposic
  ![](overview-images/layers2.png "Al seguir el principio de separación de la responsabilidad mediante la disposición en capas de la arquitectura de la aplicación y, a continuación, la funcionalidad básica que es independiente de la plataforma en una biblioteca principal reutilizable, puede maximizar el uso compartido de código entre plataformas.")
 
  <a name="Case_Studies" />
-
 
 ## <a name="case-studies"></a>Casos prácticos
 

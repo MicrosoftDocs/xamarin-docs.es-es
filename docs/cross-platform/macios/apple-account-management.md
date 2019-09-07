@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766119"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas Apple
 
@@ -55,7 +55,7 @@ Para usar esta característica, debe tener una cuenta de desarrollador de Apple.
     ![cuadro de diálogo Fastlane.](apple-account-management-images/image2.png)
 
 3. Escriba el identificador y la contraseña de Apple y haga clic en el botón **iniciar sesión** . Esto guardará las credenciales en la cadena de claves segura de este equipo. [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) se utiliza para administrar las credenciales de forma segura y pasarlas al portal para desarrolladores de Apple.
- 
+
 4. Seleccione **permitir siempre** en el cuadro de diálogo de alerta para permitir que Visual Studio use las credenciales:
 
     ![Cuadro de diálogo permitir alerta siempre](apple-account-management-images/image4.png)
@@ -81,13 +81,12 @@ Para usar esta característica, debe tener una cuenta de desarrollador de Apple.
     ![cuadro de diálogo nombre de usuario y contraseña](apple-account-management-images/prov1a.png)
 
 1. Una vez que la cuenta se haya agregado correctamente, verá el identificador de Apple y los equipos de los que forma parte su identificador de Apple.
- 
+
 1. Seleccione cualquier equipo y presione la tecla **Ver detalles..** . . Se mostrará una lista de todas las identidades de firma y los perfiles de aprovisionamiento que están instalados en el equipo:
 
     ![cuadro de diálogo nombre de usuario y contraseña](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>Administrar identidades de firma y perfiles de aprovisionamiento
 

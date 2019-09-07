@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 4. Desplazamiento de la pila
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 4. Desplazamiento de la pila'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 4. Desplazamiento de la pila'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66e4f52e87a4398dd2e09d2d128f43de9a71a665
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334607"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760839"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 
@@ -110,8 +110,6 @@ Colocar un `StackLayout` en un `ScrollView` es común, pero poner un `ScrollView
 El truco consiste en dar el `ScrollView` secundarios de la `StackLayout` un `VerticalOptions` de `FillAndExpand`. Esto se muestra en el [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) ejemplo.
 
 El **BlackCat** ejemplo también muestra cómo definir y acceder a los recursos de programa que se incrustan en la biblioteca compartida. También puede lograrse con proyectos de activos compartidos (SAPs) pero el proceso es un poco más complicado, como el [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) muestra.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

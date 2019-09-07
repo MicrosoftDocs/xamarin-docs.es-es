@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10f065d6e7b1cacb217cb510c57707662a196664
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288299"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768566"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla tvOS en Xamarin
 
@@ -952,8 +952,6 @@ Dado que tvOS se basa en iOS, las vistas de tabla y los controladores de vista d
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el trabajo con vistas de tabla dentro de una aplicación Xamarin. tvOS. Y ha presentado un ejemplo de cómo trabajar con una vista de tabla dentro de una vista dividida, que es el uso típico de una vista de tabla en una aplicación de tvOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

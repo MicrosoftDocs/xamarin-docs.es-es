@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290159"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770004"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -888,7 +888,6 @@ Esta línea nos indica que la clave `Title` no existe en el objeto al que se est
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada del trabajo con el enlace de datos y el código de clave-valor en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición C# de una clase a Objective-C mediante el uso de código de clave-valor (KVC) y el valor de clave (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazar datos a elementos de la interfaz de usuario en la Interface Builder de Xcode. Por último, mostraba un enlace de datos complejo mediante **controladores de matriz** y **controladores de árbol**.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

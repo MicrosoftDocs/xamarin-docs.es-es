@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228257"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759355"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
 
@@ -56,7 +56,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 ```
 
 Aunque la `keyholePath` objeto describe el contorno de un principal, las coordenadas son completamente arbitrarias y reflejan lo que era útil cuando los datos de ruta de acceso fue creados. Por este motivo, el `PaintSurface` controlador obtiene los límites de esta ruta de acceso y las llamadas `Translate` y `Scale` para mover la ruta de acceso al centro de la pantalla y convertirlo en casi tan altos como la pantalla:
-
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -510,7 +509,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Realmente no parece un trébol de cuatro – hoja, pero es una imagen que serían difícil de representación sin recortes:
 
 [![Captura de pantalla triple de la página de trébol de cuatro hojas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

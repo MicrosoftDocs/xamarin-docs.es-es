@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770326"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes en Xamarin. Mac
 
@@ -36,7 +36,6 @@ Además, macOS proporciona un conjunto de imágenes predefinidas que se pueden u
 [![Ejemplo de ejecución de la aplicación](image-images/intro01.png "Ejemplo de ejecución de la aplicación")](image-images/intro01-large.png#lightbox)
 
 En este artículo, trataremos los aspectos básicos del trabajo con imágenes e iconos en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
-
 
 ## <a name="adding-images-to-a-xamarinmac-project"></a>Agregar imágenes a un proyecto de Xamarin. Mac
 
@@ -101,7 +100,6 @@ Para agregar un nuevo catálogo de activos al proyecto:
 
 Aquí puede trabajar con la colección de la misma manera que la colección **assets. xcassets** predeterminada que se incluye automáticamente en el proyecto.
 
-
 ### <a name="adding-images-to-resources"></a>Agregar imágenes a recursos
 
 > [!IMPORTANT]
@@ -132,7 +130,6 @@ Puede usar cualquier archivo PNG, jpg o PDF como imagen de origen en la aplicaci
 
 Cualquier recurso gráfico que agregue a una aplicación de Xamarin. Mac (iconos, controles personalizados, cursores personalizados, material gráfico personalizado, etc.) debe tener versiones de alta resolución además de sus versiones de resolución estándar. Esto es necesario para que la aplicación tenga un aspecto óptimo cuando se ejecute en un equipo Mac equipado con la visualización de retina.
 
-
 ### <a name="adopt-the-2x-naming-convention"></a>Adopción de @2x la Convención de nomenclatura
 
 > [!IMPORTANT]
@@ -150,7 +147,6 @@ Cuando se agrega a un proyecto, aparecería de la siguiente manera:
 Cuando se asigna una imagen a un elemento de la interfaz de usuario en Interface Builder simplemente tendrá que elegir el archivo en _ImageName_ **.** _nombre de archivo: formato de extensión_ (ejemplo: **Tags. png**). Lo mismo para usar una imagen en C# el código, seleccionará el archivo en el archivo _ImageName_ **.** _nombre de archivo: formato de extensión_ .
 
 Cuando se ejecuta la aplicación de Xamarin. Mac en un equipo Mac, el _ImageName_ **.** _nombre de archivo:_ la imagen del formato de extensión se usará en las **ImageName@2x.filename-extension** pantallas de resolución estándar. la imagen se seleccionará automáticamente en los equipos Mac de las bases de visualización de retina.
-
 
 ## <a name="using-images-in-interface-builder"></a>Usar imágenes en Interface Builder
 
@@ -444,12 +440,9 @@ Salida del ejemplo:
 
 Para obtener más información sobre cómo trabajar con las vistas de esquema, consulte la documentación de las [vistas de esquema](~/mac/user-interface/outline-view.md) .
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada del trabajo con imágenes e iconos en una aplicación de Xamarin. Mac. Vimos los distintos tipos y usos de las imágenes, cómo usar imágenes e iconos en la Interface Builder de Xcode y cómo trabajar con imágenes e iconos en C# el código.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

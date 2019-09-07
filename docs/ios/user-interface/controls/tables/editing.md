@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90ef335bd3683028d5f9951cdf2ca341158209b9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9960167e2f71531e5ffeaecac94aede5d5ea3340
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284211"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768889"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Editar tablas con Xamarin. iOS
 
@@ -30,7 +30,6 @@ Hay tres invalidaciones de método que afectan al gesto de deslizar rápidamente
 - **CommitEditingStyle** : el origen de la tabla detecta si este método se invalida y habilita automáticamente el gesto de deslizar hacia la eliminación. La implementación del método debe llamar `DeleteRows` a `UITableView` en para hacer desaparecer las celdas y quitar también los datos subyacentes del modelo (por ejemplo, una matriz, un diccionario o una base de datos). 
 - **CanEditRow** : si se reemplaza CommitEditingStyle, se supone que todas las filas son editables. Si este método se implementa y devuelve false (para algunas filas específicas o para todas las filas), el gesto de deslizar a eliminar no estará disponible en esa celda. 
 - **TitleForDeleteConfirmation** : especifica opcionalmente el texto del botón **eliminar** . Si este método no está implementado, el texto del botón será "Delete". 
-
 
 Estos métodos se implementan en `TableSource` la clase siguiente:
 
@@ -61,7 +60,6 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 En este ejemplo `UITableViewSource` , se ha actualizado para usar un `List<TableItem>` elemento (en lugar de una matriz de cadenas) como origen de datos porque admite la adición y eliminación de elementos de la colección.
 
-
 ## <a name="edit-mode"></a>Modo de edición
 
 Cuando una tabla está en modo de edición, el usuario ve un widget "detener" rojo en cada fila, lo que revela un botón eliminar cuando se toca. En la tabla también se muestra un icono de "identificador" para indicar que la fila se puede arrastrar para cambiar el orden.
@@ -75,7 +73,6 @@ Hay una serie de métodos diferentes en `UITableViewSource` que afectan al compo
 - **CanMoveRow** : devuelve true para habilitar el movimiento ' handle ' o false para evitar el movimiento. 
 - **EditingStyleForRow** : cuando la tabla está en modo de edición, el valor devuelto de este método determina si la celda muestra el icono de eliminación de color rojo o el icono de agregar verde. Devuelve `UITableViewCellEditingStyle.None` si la fila no debe ser editable. 
 - **MoveRow** : se le llama cuando se mueve una fila, de modo que la estructura de datos subyacente se puede modificar para que coincida con los datos que se muestran en la tabla. 
-
 
 La implementación de los tres primeros métodos es relativamente sencilla, a menos que desee utilizar `indexPath` para cambiar el comportamiento de filas específicas, codificando simplemente los valores devueltos para toda la tabla.
 
@@ -128,7 +125,6 @@ y cuando el usuario haya terminado de editar, el botón **listo** debe desactiva
 table.SetEditing (false, true);
 ```
 
-
 ## <a name="row-insertion-editing-style"></a>Estilo de edición de inserción de filas
 
 La inserción de filas desde dentro de la tabla es una interfaz de usuario no común: el ejemplo principal de las aplicaciones estándar de iOS es la pantalla **Editar contacto** . En esta captura de pantalla se muestra cómo funciona la funcionalidad de inserción de filas: en el modo de edición hay una fila adicional en la que, cuando se hace clic en ella, se insertan filas adicionales en los datos. Una vez completada la edición, se quita la fila temporal **(agregar nueva)** .
@@ -141,12 +137,10 @@ Hay una serie de métodos diferentes en `UITableViewSource` que afectan al compo
 - **CustomizeMoveTarget** : mientras el usuario mueve una celda, el valor devuelto de este método opcional puede invalidar su elección de ubicación. Esto significa que puede evitar que "quite" la celda en determinadas posiciones, como este ejemplo, que impide que se mueva una fila después de la fila **(agregar nuevo)** . 
 - **CanMoveRow** : devuelve true para habilitar el movimiento ' handle ' o false para evitar el movimiento. En el ejemplo, la última fila tiene el "identificador" de movimiento oculto porque está pensado para el servidor como un botón Insertar. 
 
-
 También agregamos dos métodos personalizados para agregar la fila ' INSERT ' y, a continuación, volver a quitarla cuando ya no sea necesaria. Se llaman desde los botones **Editar** y **listo** :
 
 - **WillBeginTableEditing** : cuando se toca el botón **Editar** , llama `SetEditing` a para poner la tabla en modo de edición. Esto desencadena el método WillBeginTableEditing en el que se muestra la fila **(agregar nuevo)** al final de la tabla para que actúe como un "botón Insertar". 
 - **DidFinishTableEditing** : cuando se toca `SetEditing` el botón listo, se vuelve a llamar para desactivar el modo de edición. En el código de ejemplo se quita la fila **(agregar nuevo)** de la tabla cuando ya no se necesita la edición. 
-
 
 Estas invalidaciones de método se implementan en el archivo de ejemplo **TableEditModeAdd/Code/TableSource. CS**:
 
@@ -219,7 +213,6 @@ edit = new UIBarButtonItem(UIBarButtonSystemItem.Edit, (s,e)=>{
 ```
 
 Este patrón de interfaz de usuario de inserción de filas no se utiliza muy a menudo, `UITableView.BeginUpdates` pero `EndUpdates` también puede utilizar los métodos y para animar la inserción o eliminación de las celdas de cualquier tabla. La regla para usar esos métodos es que la diferencia `RowsInSection` en el valor devuelto por entre `EndUpdates` las `BeginUpdates` llamadas y debe coincidir con el número neto de celdas agregadas `DeleteRows` o eliminadas con los `InsertRows` métodos y. Si el origen de información subyacente no se cambia para que coincida con las inserciones o eliminaciones en la vista de tabla, se producirá un error.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 056ab7a9fe4bcb7f07a9a7cd7c841a3d9f7574b6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c3c0e51348d2435ce5042485b214e6e5fe159b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648026"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758417"
 ---
 # <a name="hello-wear"></a>Hola, Wear
 
@@ -38,7 +38,6 @@ Cree una nueva **aplicación de desgaste de Android**:
 
 -----
 
-
 Esta plantilla incluye automáticamente el NuGet (y las dependencias) de **Xamarin Android portátil Library** , por lo que tendrá acceso a widgets específicos de desgaste. Si no ve la plantilla de desgaste, revise la guía de [instalación y configuración](~/android/wear/get-started/installation.md) para comprobar que ha instalado un Android SDK compatible. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. Elegir la **plataforma de destino** correcta
@@ -58,7 +57,6 @@ Asegúrese de que el marco de trabajo de destino esté establecido en **Android 
 -----
 
 Para obtener más información sobre cómo establecer la plataforma de destino, consulte Descripción de los niveles de la [API de Android](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### <a name="3-edit-the-mainaxml-layout"></a>3. Editar el diseño **Main. axml**
 
@@ -133,10 +131,9 @@ public class MainActivity : Activity
 
 El siguiente paso consiste en configurar un emulador o un dispositivo para implementar y ejecutar la aplicación. Si aún no está familiarizado con el proceso de implementación y ejecución de aplicaciones de Xamarin. Android en general, consulte la guía de [Inicio rápido de Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
-Si no tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede ejecutar la aplicación en un emulador. Para obtener información sobre cómo depurar aplicaciones de desgaste en un emulador, consulte depurar el [desgaste de Android en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
+Si no tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede ejecutar la aplicación en un emulador. Para obtener información sobre cómo depurar aplicaciones de desgaste en un emulador, consulte [depurar el desgaste de Android en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
 
-Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede ejecutar la aplicación en el dispositivo en lugar de usar un emulador. Para obtener más información sobre la depuración en un dispositivo de desgaste, consulte depurar [en un dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
-
+Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede ejecutar la aplicación en el dispositivo en lugar de usar un emulador. Para obtener más información sobre la depuración en un dispositivo de desgaste, consulte [depurar en un dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
 
 ### <a name="6-run-the-android-wear-app"></a>6. Ejecutar la aplicación de desgaste de Android
 
@@ -166,13 +163,11 @@ Pulse **en** la situado en la parte frontal del dispositivo de desgaste y ver el
 
 [![Captura de pantalla de la aplicación de desgaste tras 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## <a name="next-steps"></a>Pasos siguientes
 
 Consulte los [ejemplos de desgaste](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , incluidas las aplicaciones de desgaste de Android con aplicaciones de teléfono complementarias.
 
 Cuando esté listo para distribuir la aplicación, consulte [trabajar con empaquetado](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

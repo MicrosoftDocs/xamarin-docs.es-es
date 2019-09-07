@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 1e003a80b58f783829f5af3b74801fc3c91c88e9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 769ff7efedca453734b6db2dd2dcb2ad503ba272
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655617"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759796"
 ---
 # <a name="xamarinforms-cells"></a>Celdas de Xamarin.Forms
 
@@ -57,7 +57,6 @@ Xamarin.Forms es compatible con los siguientes tipos de celda:
 | --- | --- |
 | El [ `EntryCell` ](xref:Xamarin.Forms.EntryCell) define un [ `Label` ](xref:Xamarin.Forms.EntryCell.Label) propiedad que identifica la celda y una sola línea de texto editable en el [ `Text` ](xref:Xamarin.Forms.EntryCell.Text) propiedad. Controlar la [ `Completed` ](xref:Xamarin.Forms.EntryCell.Completed) eventos para recibir una notificación cuando el usuario ha completado la entrada de texto.<br /><br />[Documentación de API](xref:Xamarin.Forms.EntryCell) / [guía](~/xamarin-forms/user-interface/tableview.md#entrycell) | [![Ejemplo de EntryCell](cells-images/EntryCell.png "EntryCell ejemplo")](cells-images/EntryCell-Large.png#lightbox "EntryCell ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryCellDemoPage.xaml) |
 |     |     |
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 61dedca1b89237bdd4669a63173b1c6e4fde072b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: caef124228ab4ec4356b10c0559d2abe33d1531f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644304"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755280"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Tutorial: uso de notificaciones locales en Xamarin. Android
 
 _En este tutorial se muestra cómo usar las notificaciones locales en las aplicaciones de Xamarin. Android. Muestra los aspectos básicos de la creación y publicación de una notificación local. Cuando el usuario hace clic en la notificación en el área de notificación, inicia una segunda actividad._
-
 
 ## <a name="overview"></a>Información general
 
@@ -35,7 +34,6 @@ En las siguientes capturas de pantallas se muestran algunos ejemplos de esta apl
 Para empezar, vamos a crear un nuevo proyecto de Android con la plantilla de **aplicación de Android** . Vamos a llamar a este proyecto **LocalNotifications**. (Si no está familiarizado con la creación de proyectos de Xamarin. Android, consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)).
 
 Edite el archivo de recursos **Values/Strings. XML** para que contenga dos recursos de cadena adicionales que se usarán cuando sea el momento de crear el canal de notificación:
-
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +101,6 @@ protected override void OnCreate(Bundle bundle)
     CreateNotificationChannel();
 }
 ```
-
 
 ### <a name="define-the-notification-id"></a>Definir el identificador de notificación
 
@@ -174,7 +171,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### <a name="create-a-second-activity"></a>Crear una segunda actividad
 
 Ahora es necesario crear otra actividad que Android mostrará cuando el usuario haga clic en la notificación. Agregue otra actividad de Android al proyecto denominado **SecondActivity**. Abra **SecondActivity.CS** y reemplace su contenido por este código:
@@ -231,11 +227,9 @@ También debemos crear un diseño de recursos para **SecondActivity**. Agregue u
 </LinearLayout>
 ```
 
-
 ### <a name="add-a-notification-icon"></a>Icono Agregar un aviso
 
-Por último, agregue un icono pequeño que aparecerá en el área de notificación cuando se inicie la notificación. Puede copiar [este icono](local-notifications-walkthrough-images/ic-stat-button-click.png) en el proyecto o crear su propio icono personalizado. Asigne el nombre archivo **de\_icono IC\_STAT\_Button click. png** y cópielo en la carpeta Resources **/drawable** . No olvide usar **agregar > elemento existente...** para incluir este archivo de icono en el proyecto.
-
+Por último, agregue un icono pequeño que aparecerá en el área de notificación cuando se inicie la notificación. Puede copiar [este icono](local-notifications-walkthrough-images/ic-stat-button-click.png) en el proyecto o crear su propio icono personalizado. Asigne el nombre archivo **de\_icono IC\_STAT\_Button click. png** y cópielo en la carpeta **Resources/drawable** . No olvide usar **agregar > elemento existente...** para incluir este archivo de icono en el proyecto.
 
 ### <a name="run-the-application"></a>Ejecución de la aplicación
 
@@ -255,13 +249,11 @@ Al hacer clic en la notificación, debe desaparecer y la otra actividad debe ini
 
 [![Captura de pantalla de segunda actividad](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-Felicidades. En este punto, ha completado el tutorial de notificaciones locales de Android y tiene un ejemplo en funcionamiento al que puede hacer referencia. Hay muchas más notificaciones que se han mostrado aquí, por lo que si desea más información, eche un vistazo a [la documentación de Google sobre](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)las notificaciones.
-
+¡Enhorabuena! En este punto, ha completado el tutorial de notificaciones locales de Android y tiene un ejemplo en funcionamiento al que puede hacer referencia. Hay muchas más notificaciones que se han mostrado aquí, por lo que si desea más información, eche un vistazo a [la documentación de Google sobre las notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 ## <a name="summary"></a>Resumen
 
 Este tutorial se `NotificationCompat.Builder` usa para crear y Mostrar notificaciones. Mostraba un ejemplo básico de cómo iniciar una segunda actividad como una manera de responder a la interacción del usuario con la notificación y demostró la transferencia de datos de la primera actividad a la segunda actividad.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

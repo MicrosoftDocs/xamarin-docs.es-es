@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 13b19d60569884f244f2ea9c79aaa6989838d0d3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290702"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770035"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
@@ -45,7 +45,6 @@ Las siguientes sugerencias pueden ser útiles al trabajar con extensiones en Xam
     [![](extensions-images/extension02.png "Registro del sistema")](extensions-images/extension02.png#lightbox)
 - Como se indicó anteriormente, la ejecución de la aplicación host de extensión la registrará en el sistema. Eliminando la agrupación de aplicaciones con el anulación del registro. 
 - Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar):`plugin kit -mv`
-
 
 <a name="Walkthrough-and-Sample-App" />
 

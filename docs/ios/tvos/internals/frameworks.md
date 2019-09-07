@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 510e99f247756c35156dcec63d62638b99716430
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dddbe8cb834eed7174619926a175adb0f8f0f50a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287904"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769611"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Marcos admitidos y no admitidos en tvOS
 
@@ -109,8 +109,6 @@ A continuación se muestra una lista de los marcos de trabajo compatibles con iO
 - WatchConnectivity
 - WatchKit
 - WebKit
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

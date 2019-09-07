@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 5. Tratar con tamaños
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 5. Tratar con tamaños'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 5. Tratar con tamaños'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334431"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771141"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumen del capítulo 5. Tratar con tamaños
 
@@ -80,15 +80,13 @@ El [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## <a name="accessibility-issues"></a>Problemas de accesibilidad
 
-El **EstimatedFontSize** programa y el **FitToSizeClock** programa ambos contienen un error sutil: Si el usuario cambia la configuración de accesibilidad del teléfono en Android o Windows 10 Mobile, el programa ya no puede estimar tamaño representa el texto según el tamaño de fuente. El [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) muestra este problema.
+El programa **EstimatedFontSize** y el programa **FitToSizeClock** contienen un error sutil: Si el usuario cambia la configuración de accesibilidad del teléfono en Android o Windows 10 Mobile, el programa ya no podrá calcular el tamaño del texto en función del tamaño de fuente. El [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) muestra este problema.
 
 ## <a name="empirically-fitting-text"></a>Empíricamente ajustar texto
 
 Otra forma de ajustar el texto a un rectángulo es empíricamente calcular el tamaño del texto representado y ajustarla hacia arriba o hacia abajo. El programa en las llamadas de libro [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) en un elemento visual para obtener el tamaño del elemento deseado. Que método está desusado y programas en su lugar, deben llamar a [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
 Para un `Label`, el primer argumento debe ser el ancho del contenedor (para permitir el ajuste), mientras que el segundo argumento debe establecerse en `Double.PositiveInfinity` para hacer que el alto sin restricciones. El [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) muestra esta técnica.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

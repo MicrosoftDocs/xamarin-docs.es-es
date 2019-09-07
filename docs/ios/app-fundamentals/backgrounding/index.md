@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 161fda52002e8bb757db23c9b2a20a6befd132f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5afb87eb3f84e00427072ef6c4e2c19b46de0186
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289338"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766581"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Procesamiento en segundo plano en Xamarin. iOS
 
@@ -35,8 +35,6 @@ En esta guía y los tutoriales que lo acompañan, vamos a aprender a realizar ta
 ## <a name="summary"></a>Resumen
 
 En esta guía se presentaron las distintas formas de realizar el procesamiento en segundo plano en iOS. Hemos tratado los Estados de las aplicaciones de iOS y hemos examinado los reproducciones de roles en el ciclo de vida de la aplicación de iOS. Además, hemos aprendido cómo podríamos registrar tareas individuales o aplicaciones completas para que funcionen en segundo plano en iOS. Por último, hemos reforzado nuestro conocimiento del fondo en iOS mediante la creación de aplicaciones que realizan actualizaciones en segundo plano.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

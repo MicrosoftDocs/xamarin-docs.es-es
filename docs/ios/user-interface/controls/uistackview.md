@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bde76891b4b01800384ee0579e3fbe14987c5420
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282684"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768388"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin. iOS
 
@@ -270,8 +270,6 @@ Muchas de las propiedades de la vista de pila se pueden especificar utilizando c
 
 En este artículo se ha tratado `UIStackView` el nuevo control (para iOS 9) para administrar un conjunto de subvistas en una pila organizada horizontal o verticalmente en una aplicación de Xamarin. iOS.
 Comenzó con un ejemplo sencillo del uso de vistas de pila para crear una interfaz de usuario y finalizó con una visión más detallada de las vistas de pila y sus propiedades y características.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

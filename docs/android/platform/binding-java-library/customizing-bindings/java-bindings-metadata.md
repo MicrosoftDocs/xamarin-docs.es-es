@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 046c392709f2c94664120e9fac3f4198e9f50dbf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119851"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756605"
 ---
 # <a name="java-bindings-metadata"></a>Metadatos de enlaces Java
 
 _C#el código de Xamarin. Android llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstrae los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin. Android proporciona una herramienta que genera estos enlaces. Estas herramientas permiten al desarrollador controlar cómo se crea un enlace mediante metadatos, lo que permite procedimientos como la modificación de espacios de nombres y el cambio de nombre de los miembros. En este documento se explica cómo funcionan los metadatos, se resumen los atributos que admiten los metadatos y se explica cómo resolver los problemas de enlace mediante la modificación de estos metadatos._
 
-
 ## <a name="overview"></a>Información general
 
-Una **biblioteca de enlace de Java** de Xamarin. Android intenta automatizar gran parte del trabajo necesario para enlazar una biblioteca de Android existente con la ayuda de una herramienta que a veces se conoce como generador de _enlaces_. Al enlazar una biblioteca de Java, Xamarin. Android inspeccionará las clases de Java y generará una lista de todos los paquetes, tipos y miembros que se van a enlazar. Esta lista de API se almacena en un archivo XML que se puede encontrar en  **\{el directorio de proyecto} \obj\Release\api.XML** para una compilación de **versión** y en  **\{el directorio de proyecto} \obj\Debug\api.XML** para una compilación de depuración.
+Una **biblioteca de enlace de Java** de Xamarin. Android intenta automatizar gran parte del trabajo necesario para enlazar una biblioteca de Android existente con la ayuda de una herramienta que a veces se conoce como generador de _enlaces_. Al enlazar una biblioteca de Java, Xamarin. Android inspeccionará las clases de Java y generará una lista de todos los paquetes, tipos y miembros que se van a enlazar. Esta lista de API se almacena en un archivo XML que se puede encontrar en  **\{el directorio de proyecto} \obj\Release\api.XML** para una compilación de **versión** y en  **\{el directorio de proyecto} \obj\Debug\api.XML** para una compilación de **depuración** .
 
 ![Ubicación del archivo API. XML en la carpeta obj/Debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
@@ -53,7 +52,7 @@ En muchos casos, la asistencia humana es necesaria para que la API de Java sient
 Estos cambios no se logran mediante la modificación de **API. XML** directamente.
 En su lugar, los cambios se registran en archivos XML especiales proporcionados por la plantilla biblioteca de enlaces de Java. Al compilar el ensamblado de enlace de Xamarin. Android, estos archivos de asignación influirán en el generador de enlaces al crear el ensamblado de enlace.
 
-Estos archivos de asignación XML se pueden encontrar en la carpeta Transformations del proyecto:
+Estos archivos de asignación XML se pueden encontrar en la carpeta **Transformations** del proyecto:
 
 - **Metadata. XML** &ndash; permite realizar cambios en la API final, como cambiar el espacio de nombres del enlace generado. 
 
@@ -73,11 +72,10 @@ El archivo **Metadata. XML** es la importación más importante de estos archivo
 
 Permite pasar a analizar **Metadata. XML** con más detalle.
 
-
 ## <a name="metadataxml-transform-file"></a>Metadata. XML (archivo de transformación)
 
 Como ya hemos aprendido, el generador de enlaces usa el archivo **Metadata. XML** para influir en la creación del ensamblado de enlace.
-El formato de metadatos usa la sintaxis de [XPath](https://www.w3.org/TR/xpath/) y es casi idéntico a los metadatos de *GAPI* descritos en la guía de metadatos de [GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Esta implementación es casi una implementación completa de XPath 1,0 y, por lo tanto, admite elementos del estándar 1,0. Este archivo es un eficaz mecanismo basado en XPath para cambiar, agregar, ocultar o quitar cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla de la especificación de metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
+El formato de metadatos usa la sintaxis de [XPath](https://www.w3.org/TR/xpath/) y es casi idéntico a los *metadatos de GAPI* descritos en la guía de [metadatos de GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Esta implementación es casi una implementación completa de XPath 1,0 y, por lo tanto, admite elementos del estándar 1,0. Este archivo es un eficaz mecanismo basado en XPath para cambiar, agregar, ocultar o quitar cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla de la especificación de metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
 
 - **agregar nodo** &ndash; Anexa un nodo secundario al nodo especificado por el atributo de ruta de acceso.
 - **ATTR** &ndash; Establece el valor de un atributo del elemento especificado por el atributo de ruta de acceso.
@@ -111,8 +109,6 @@ A continuación se enumeran algunos de los elementos XPath más usados para las 
 
 - `parameter`&ndash; Identifique un parámetro para un método. ej.`/parameter[@name='p0']`
 
-
-
 ### <a name="adding-types"></a>Agregar tipos
 
 El `add-node` elemento le indicará al proyecto de enlace de Xamarin. Android que agregue una nueva clase contenedora a **API. XML**. Por ejemplo, el siguiente fragmento de código dirigirá el generador de enlace para crear una clase con un constructor y un campo único:
@@ -125,7 +121,6 @@ El `add-node` elemento le indicará al proyecto de enlace de Xamarin. Android qu
     </class>
 </add-node>
 ```
-
 
 ### <a name="removing-types"></a>Quitar tipos
 
@@ -180,15 +175,13 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
 No es un nombre de C# clase válido. Para corregir este problema, el autor del enlace debe usar `argsType` el atributo y proporcionar un C# nombre válido para `EventArgs` la subclase:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
     method[@name='on2DSignNextManeuver']" 
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
-
- 
 
 ## <a name="supported-attributes"></a>Atributos admitidos
 
@@ -339,12 +332,9 @@ Con todos estos cambios en su lugar, puede usar el código siguiente en Xamarin.
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se describe cómo Xamarin. Android usa metadatos para transformar una definición de API desde el formato de *Google* *AOSP*. Después de cubrir los cambios que son posibles mediante *Metadata. XML*, examinó las limitaciones que se producen al cambiar el nombre de los miembros y se presenta la lista de atributos XML admitidos, que describen Cuándo debe usarse cada atributo.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

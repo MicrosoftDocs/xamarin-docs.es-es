@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 8ecc0cf0ed1fe77f55044d44ecdfc43d6cb6b448
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b7dfeee92020be2fb40cfdfc5eb1b97d065b97e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758176"
 ---
 # <a name="localization"></a>Localización
 
@@ -44,7 +44,6 @@ Al diseñar y compilar una aplicación, lo que antes podía haber codificado, pe
 - Ordenación de datos.
 
 Con independencia de las plataformas móviles a las que se destina la aplicación, estas sugerencias le ayudarán a crear una aplicación localizada de alta calidad.
-
 
 ## <a name="design-considerations"></a>Consideraciones de diseño
 
@@ -85,7 +84,6 @@ Sin embargo, algunos recursos tienen sentido localizar, como:
 - Iconos: algunos iconografía pueden ser específicos de la referencia cultural y puede hacer que la aplicación sea más fácil de usar localizando la imagen para reflejar la comprensión local.
 - Colores: algunas referencias culturales entienden los colores de manera diferente: rojo puede significar una advertencia en una región, pero buena suerte en otra. Consulte con los oradores nativos al diseñar la aplicación para determinar si debe crear un mecanismo para localizar los colores.
 
-
 ### <a name="videos-and-sound"></a>Vídeos y sonido
 
 Los vídeos y el sonido presentan problemas especiales a la hora de localizar una aplicación, porque aunque es relativamente fácil obtener cadenas traducidas, la grabación de varias pistas de VoiceOver o clips de vídeo puede ser costosa y difícil.
@@ -93,7 +91,6 @@ Los vídeos y el sonido presentan problemas especiales a la hora de localizar un
 Varias copias de archivos de vídeo y sonido también pueden aumentar considerablemente el tamaño de la aplicación (especialmente si se localiza en un gran número de idiomas o si hay muchos archivos multimedia). Considere la posibilidad de descargar solo los recursos de idioma necesarios una vez que el usuario haya instalado la aplicación, pero esto también podría dar lugar a una mala experiencia de usuario en redes lentas.
 
 A menudo hay varias maneras de solucionar problemas de localización: lo más importante es considerarlas por adelantado y asegurarse de que la aplicación está diseñada para encargarse de ellas.
-
 
 ### <a name="dates-times-numbers-and-currency"></a>Fechas, horas, números y moneda
 
@@ -144,7 +141,6 @@ Asegúrese de escribir y probar el algoritmo de búsqueda con varios idiomas en 
 - Lematización: Si la búsqueda se crea para buscar palabras similares, raíces de Word y otras optimizaciones de búsqueda, ¿se han creado las optimizaciones para todos los idiomas admitidos?
 - Ordenación: Asegúrese de que los resultados se ordenen correctamente (consulte más arriba).
 
-
 ### <a name="data-from-external-sources"></a>Datos de orígenes externos
 
 Muchas aplicaciones descargan datos de orígenes externos, desde fuentes de Twitter y RSS hasta precios meteorológicos, noticias o acciones. Cuando se muestra a un usuario, es necesario tener en cuenta la posibilidad de que se muestre una pantalla de información irrelevante o ilegible.
@@ -157,7 +153,6 @@ Hay algunas estrategias que puede usar para probar y asegurarse de que la aplica
 
 Esto también podría afectar a los vínculos externos a las pistas de audio o vídeos: al diseñar la aplicación, asegúrese de planear con anterioridad el origen del contenido traducido o de asegurarse de que la interfaz de usuario informará a los usuarios adecuadamente cuando el contenido no se presente en su módulo.
 
-
 ### <a name="dont-over-translate"></a>No sobretraducción
 
 Es posible que algunas cadenas de la aplicación no necesiten traducir o que, al menos, el traductor tenga especial atención. Algunos ejemplos pueden ser:
@@ -169,20 +164,15 @@ Es posible que algunas cadenas de la aplicación no necesiten traducir o que, al
 
 Por último, asegúrese de incluir instrucciones detalladas para el traductor si algunas cadenas requieren un tratamiento especial.
 
-
 ### <a name="formatted-text"></a>Texto con formato
 
 No suele ser un problema con Mobile Apps porque las cadenas no suelen tener un formato enriquecido. Sin embargo, si se requiere texto enriquecido (por ejemplo, formato de negrita o cursiva) en la aplicación, asegúrese de que el traductor sabe cómo introducir el formato, que los archivos de cadenas lo almacenan correctamente y que tienen el formato correcto antes de que se muestren al usuario (es decir, no deje que los códigos de formato se presentan al usuario.
-
-
 
 ## <a name="translation-tips"></a>Sugerencias de traducción
 
 La traducción de las cadenas usadas por una aplicación se considera parte del proceso de localización. Normalmente, esta tarea se sobrescribirá en un servicio de traducción y la lleva a cabo un personal multilingüe que puede no conocer su aplicación o su empresa.
 
 Las siguientes sugerencias le ayudarán a generar cadenas que son más fáciles de traducir y, por tanto, a mejorar la calidad de las aplicaciones localizadas.
-
-
 
 ### <a name="localize-complete-strings-not-words"></a>Localizar cadenas completas, no palabras
 
@@ -208,7 +198,6 @@ y, a continuación, intente crear la frase correcta sobre la marcha en el códig
 
 **Esto no se recomienda** porque no funcionará necesariamente para todos los lenguajes y será difícil para el traductor comprender el contexto de cada segmento corto. También conduce a reutilizar las cadenas traducidas, lo que puede causar problemas posteriormente si se usan en contextos diferentes (y, a continuación, se actualizan).
 
-
 ### <a name="allow-for-parameter-re-ordering"></a>Permitir reordenación de parámetros
 
 Algunos lenguajes de programación requieren una sintaxis adicional para especificar el orden de los parámetros en una cadena; sin embargo, .NET ya admite el concepto de marcadores de posición numerados, por lo que
@@ -227,7 +216,6 @@ podría traducirse lo siguiente (donde se cambia la posición y el orden de los 
 
 y los tokens se ordenarán como el traductor previsto. Asegúrese de incluir una explicación de lo que contiene cada marcador de posición al enviar la cadena a un traductor.
 
-
 ### <a name="use-multiple-strings-for-cardinality"></a>Usar varias cadenas para la cardinalidad
 
 Evite cadenas como `"You have {0} message/s."` usar cadenas específicas para cada Estado para proporcionar una mejor experiencia de usuario:
@@ -242,7 +230,6 @@ Evite cadenas como `"You have {0} message/s."` usar cadenas específicas para ca
 ```
 
 Tendrá que escribir código en la aplicación para evaluar el número que se muestra y elegir la cadena adecuada. Algunas plataformas (incluidas iOS y Android) tienen características integradas para elegir automáticamente la mejor cadena plural según las preferencias de idioma o configuración regional actual.
-
 
 ### <a name="allowing-for-gender"></a>Permitir sexo
 
@@ -294,7 +281,6 @@ También hay servicios de traducción profesional que tomarán las cadenas y las
 
 Uno de los servicios más conocidos es [Lionbridge](http://www.lionbridge.com/). La mayoría de los servicios profesionales admiten todos los tipos de archivo comunes, como cadenas, XML, RESX y POT/PO.
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se presentaron algunos de los conceptos con los que debe familiarizarse antes de internacionalizar la aplicación y, a continuación, localizar los recursos, y también se explica cómo cambiar las preferencias de idioma para cada plataforma.
@@ -306,8 +292,6 @@ Siga leyendo los detalles técnicos de la plataforma en la que está interesado:
 - Localización multiplataforma de [Xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) mediante archivos resx.
 - Localización de la plataforma nativa de [Xamarin. iOS](~/ios/app-fundamentals/localization/index.md) .
 - Localización de la plataforma nativa de [Xamarin. Android](~/android/app-fundamentals/localization.md) .
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

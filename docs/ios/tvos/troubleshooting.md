@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291188"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769100"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
 
@@ -146,7 +146,6 @@ Los dispositivos de juego se pueden usar para mejorar el juego y proporcionar un
 
 Si va a enviar una aplicación de Xamarin. tvOS con compatibilidad con el dispositivo de juego al App Store de Apple TV y recibe un mensaje de error con el formato:
 
-
 _Se han detectado uno o más problemas con la entrega reciente para "nombre de aplicación". La entrega se realizó correctamente, pero es posible que quiera corregir los siguientes problemas en la siguiente entrega:_
 
 _Agrupación no válida: una aplicación que admita controladores de juego también debe ser compatible con Apple TV Remote._
@@ -200,8 +199,6 @@ En la siguiente ruta de acceso:
 Tenga en cuenta que el número de Perfil de la ruta de acceso debe coincidir con el número de Perfil de la PCL.
 
 Con este archivo en su lugar, debería poder agregar correctamente el archivo PCL al proyecto Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

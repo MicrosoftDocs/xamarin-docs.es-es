@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d001c39b2111785911d678bdeb2e83d761fba11
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7596f79119f28997cbcda6e7057e682edfd760b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286999"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756358"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Procesamiento en segundo plano de iOS con tareas
 
@@ -23,7 +23,6 @@ Las tareas en segundo plano se pueden dividir en tres categorías:
 1. **Tareas seguras en segundo plano** : se llama en cualquier parte de la aplicación en la que tenga una tarea que no desea interrumpir en caso de que la aplicación entre en el fondo.
 1. **Tareas de DidEnterBackground** : se llama `DidEnterBackground` durante el método de ciclo de vida de la aplicación para ayudar en la limpieza y el guardado del estado.
 1. **Transferencias en segundo plano (iOS 7 +)** : un tipo especial de tarea en segundo plano que se usa para realizar transferencias de red en iOS 7. A diferencia de las tareas normales, las transferencias en segundo plano no tienen un límite de tiempo predeterminado.
-
 
 Las tareas seguras y `DidEnterBackground` en segundo plano son seguras para su uso en iOS 6 e iOS 7, con algunas pequeñas diferencias. Vamos a investigar estos dos tipos de tareas con mayor detalle.
 
@@ -47,7 +46,6 @@ El proceso de registro empareja una tarea con un identificador único, `taskID`y
 > [!IMPORTANT]
 > Las tareas seguras en segundo plano se pueden ejecutar en el subproceso principal o en un subproceso en segundo plano, dependiendo de las necesidades de la aplicación.
 
-
 ## <a name="performing-tasks-during-didenterbackground"></a>Realización de tareas durante DidEnterBackground
 
 Además de hacer que una tarea de ejecución prolongada sea segura para el fondo, el registro se puede usar para iniciar tareas a medida que una aplicación se está poniendo en segundo plano. iOS proporciona un método de evento en la clase AppDelegate `DidEnterBackground` denominada que se puede usar para guardar el estado de la aplicación, guardar los datos de usuario y cifrar el contenido confidencial antes de que una aplicación entre en el fondo. Una aplicación tiene aproximadamente cinco segundos para devolver desde este método o se terminará. Por lo tanto, se puede llamar a las tareas de limpieza que pueden tardar más de cinco `DidEnterBackground` segundos en completarse desde dentro del método. Estas tareas se deben invocar en un subproceso independiente.
@@ -68,7 +66,6 @@ Comenzaremos invalidando el `DidEnterBackground` método `AppDelegate`en, donde 
 
 > [!IMPORTANT]
 > iOS usa un [mecanismo de guardián](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de una aplicación sigue respondiendo. Una aplicación que emplee demasiado tiempo en `DidEnterBackground` dejará de responder en la interfaz de usuario. La puesta al día de las tareas que se ejecutan en segundo plano permite `DidEnterBackground` que se devuelva oportunamente, manteniendo la interfaz de usuario en respuesta e impidiendo que el guardián salga de la aplicación.
-
 
 ## <a name="handling-background-task-time-limits"></a>Administrar límites de tiempo de tareas en segundo plano
 
@@ -133,7 +130,6 @@ La red troncal de las transferencias en segundo plano en `NSURLSession` iOS 7 es
 1. Transferir contenido a través de interrupciones de red y dispositivos.
 1. Cargar y descargar archivos grandes ( *servicio de transferencia en segundo plano* ).
 
-
 Echemos un vistazo más de cerca a cómo funciona esto.
 
 ### <a name="nsurlsession-api"></a>API de NSURLSession
@@ -157,7 +153,6 @@ else {
 > [!IMPORTANT]
 > Evite realizar llamadas para actualizar la interfaz de usuario desde el fondo en código compatible con iOS 6, ya que iOS 6 no es compatible con las actualizaciones de la interfaz de usuario en segundo plano y finalizará la aplicación.
 
-
 La `NSURLSession` API incluye un amplio conjunto de características para controlar la autenticación, administrar las transferencias con error y notificar los errores del lado cliente, pero no de los servidores. Ayuda a salvar las interrupciones en el tiempo de ejecución de la tarea introducido en iOS 7, y también proporciona compatibilidad para transferir archivos grandes de forma rápida y confiable. En la siguiente sección se explora esta segunda característica.
 
 ### <a name="background-transfer-service"></a>Servicio de transferencia en segundo plano
@@ -167,4 +162,3 @@ Antes de iOS 7, la carga o descarga de archivos en segundo plano no era confiabl
 El sistema operativo administra las transferencias iniciadas mediante el servicio de transferencia en segundo plano y proporciona las API para controlar la autenticación y los errores. Dado que las transferencias no están enlazadas por un límite de tiempo arbitrario, se pueden usar para cargar o descargar archivos de gran tamaño, actualizar el contenido de forma automática en segundo plano, etc. Consulte el [tutorial de transferencia en segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) para obtener más información sobre cómo implementar el servicio.
 
 A menudo, el servicio de transferencia en segundo plano se empareja con la captura en segundo plano o las notificaciones remotas para ayudar a las aplicaciones a actualizar el contenido en segundo plano. En las dos secciones siguientes, se presenta el concepto de registro de aplicaciones completas para que se ejecuten en segundo plano en iOS 6 e iOS 7.
-

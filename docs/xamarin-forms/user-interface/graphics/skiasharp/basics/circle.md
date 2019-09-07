@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 876379a1d515517054d9e0fa2657e8bc10dc749f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888516"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759543"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Dibujar un círculo Simple en SkiaSharp
 
@@ -157,7 +157,6 @@ Un `SKPaint` objeto es poco más que una colección de propiedades de dibujo de 
 Aunque el ancho del contorno del círculo se especifica como 25 píxeles &mdash; o un cuarto del radio del círculo &mdash; parece más delgado, y hay una buena razón para ello: La mitad del ancho de la línea queda oscurecida por el círculo azul. Los argumentos para el `DrawCircle` método definen las coordenadas geométricas abstractas de un círculo. El interior azul tiene un tamaño para esa dimensión y el píxel más próximo, pero el esquema de 25 píxeles de ancho sobrepasa el círculo geométrico &mdash; mitad en el interior y la otra mitad en la parte exterior.
 
 El ejemplo siguiente en el [integración con Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artículo muestra visualmente.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: e44dfd85d9d4480d56ac75d61fd379b04fb8fb12
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e78e3930ec731bc970ef39ddb7fe7051d62f63a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648617"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770438"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformaciones de matriz de SkiaSharp
 
@@ -649,7 +649,6 @@ El `SKMatrix` estructura de SkiaSharp define las propiedades de la tercera fila:
 </pre>
 
 Los valores distintos de cero de `Persp0` y `Persp1` dar lugar a las transformaciones que mover objetos fuera del plano bidimensional donde Z es igual a 1. ¿Qué ocurre cuando esos objetos se desplaza al ese plano se trata en el artículo en [ **transformaciones no afines**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

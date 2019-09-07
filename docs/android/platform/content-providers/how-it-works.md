@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8fb0b5136cc75463fc35ced2336e0ea321e8aecd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9d8710b3b88b59871b88a1d42ec4f4bb3e515ff5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524415"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756507"
 ---
 # <a name="how-content-providers-work"></a>Cómo funcionan los proveedores de contenido
 
@@ -23,12 +23,9 @@ Hay dos clases implicadas en una `ContentProvider` interacción:
 
 Normalmente, un proveedor de contenido está respaldado por una base de datos de SQLite, pero la API significa que no es necesario que el código de consumo sepa nada sobre el SQL subyacente. Las consultas se realizan a través de un URI mediante el uso de constantes para hacer referencia a nombres de columna (para reducir las dependencias `ICursor` de la estructura de datos subyacente) y se devuelve una para que el código de consumo realice la iteración.
 
-
 ## <a name="consuming-a-contentprovider"></a>Consumir un ContentProvider
 
 `ContentProviders`exponga su funcionalidad a través de un URI que esté registrado en el **archivo AndroidManifest. XML** de la aplicación que publica los datos. Existe una Convención en la que el URI y las columnas de datos que se exponen deben estar disponibles como constantes para facilitar el enlace a los datos. La funcionalidad integrada `ContentProviders` de Android proporciona clases útiles con constantes que hacen referencia a la estructura de datos en [`Android.Providers`](xref:Android.Provider) el espacio de nombres.
-
-
 
 ### <a name="built-in-providers"></a>Proveedores integrados
 
@@ -47,8 +44,6 @@ Android ofrece acceso a una amplia gama de datos de usuario y del `ContentProvid
 - *UserDictionary* &ndash; contenido del diccionario definido por el usuario que se usa para la entrada de texto predictivo.
 
 - *Correo de voz* &ndash; historial de mensajes de correo de voz.
-
-
 
 ## <a name="classes-overview"></a>Información general sobre clases
 
@@ -79,4 +74,3 @@ La `ContentProvider` API permite a los consumidores realizar una serie de operac
 - Eliminar registros.
 
 Este documento contiene un ejemplo que usa un proporcionado `ContentProvider`por el sistema, así como un ejemplo simple de solo lectura que implementa un personalizado. `ContentProvider`
-

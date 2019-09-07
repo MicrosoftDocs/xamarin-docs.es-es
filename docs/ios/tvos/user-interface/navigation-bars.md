@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f33e3f4f27afe7e0b98c4a1f71d77c4a1c7195ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289079"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769089"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabajar con barras de navegación de tvOS en Xamarin
 
@@ -48,9 +48,7 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
     [![](navigation-bars-images/navbar05.png "Una acción de elemento de botón de barra")](navigation-bars-images/navbar05.png#lightbox)
 1. Guarde los cambios.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. En el **Explorador de soluciones**, haga doble clic `Main.storyboard` en archivo y ábralo para su edición.
 1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla:
@@ -66,7 +64,6 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
 
     [![](navigation-bars-images/navbar05-vs.png "Acciones de un elemento de botón de barra")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Guarde los cambios.
-
 
 -----
 
@@ -133,8 +130,6 @@ Para obtener más información sobre cómo trabajar con guiones gráficos, vea n
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el trabajo con barras de navegación dentro de una aplicación Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

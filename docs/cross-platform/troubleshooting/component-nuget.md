@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 7feec9f2fa136b96d81a54e4b2650918c53b5832
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6d40555c70072a4c057739b39cc24a4f885f2dc9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281602"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765291"
 ---
 # <a name="updating-component-references-to-nuget"></a>Actualización de referencias de componentes a NuGet
 
@@ -141,7 +141,6 @@ El paquete NuGet permanecerá en la lista del nodo **paquetes** y la aplicación
 
 ![Actualización del paquete NuGet](component-nuget-images/nuget-update-sml.png)
 
-
 <a name="replace" />
 
 ## <a name="components-with-nuget-replacements"></a>Componentes con reemplazos de NuGet
@@ -201,7 +200,6 @@ Esto significa que si abre la solución en un equipo nuevo, el componente no se 
 - Investigue paquetes de NuGet alternativos o busque el código fuente si el componente es de código abierto.
 
 Muchos proveedores de componentes siguen trabajando en la migración a NuGet y otros (incluidos los productos disponibles comercialmente) pueden investigar opciones de entrega alternativas.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 - [Lista de complementos y bibliotecas de Xamarin populares](https://github.com/xamarin/XamarinComponents/blob/master/README.md)

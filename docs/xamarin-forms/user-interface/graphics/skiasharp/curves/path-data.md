@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647402"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770573"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Datos de ruta de acceso SVG de SkiaSharp
 
@@ -428,7 +428,6 @@ public class PrettyAnalogClockPage : ContentPage
 Sin embargo algo especial se realiza con la mano de segundo. Dado que el reloj se actualiza cada 16 milisegundos, el `Millisecond` propiedad de la `DateTime` valor puede emplearse para animar un barrido de segunda mano en lugar de uno que se mueve en saltos discretos de segundo a segundo. Pero este código no permite el movimiento a ser suaves. En su lugar, usa Xamarin.Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) y [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) animación funciones para otro tipo de movimiento de aceleración. Estas funciones de aceleración provocar el segundero mover de una manera es &mdash; extrayendo volver un poco antes de que lo mueve, y, a continuación, ligeramente disparen su destino, un efecto que lamentablemente no se puede reproducir en estas capturas de pantalla estáticas:
 
 [![](path-data-images/prettyanalogclock-small.png "Captura de pantalla de la página bastante analógico reloj triple")](path-data-images/prettyanalogclock-large.png#lightbox "Triple captura de pantalla de la página bastante analógico reloj")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228272"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759418"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
@@ -552,7 +552,6 @@ Como puede ver, no hay ninguna diferencia visual entre el `ConicTo` ruta de acce
 Pero el ángulo de 180 grados y el error de matemáticas.
 
 En este caso es lamentable que `ConicTo` no admite los pesos negativos, ya que en teoría (según las ecuaciones paramétricas), se puede completar el círculo con otra llamada a `ConicTo` con los mismos puntos pero con un valor negativo del peso. Esto permitiría crear un círculo completo con sólo dos `ConicTo` curvas según cualquier ángulo entre (pero no incluyendo) cero grados y 180 grados.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 62dadffbc4b8a5629969203938e4fa0130971664
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283337"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768926"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicadores de progreso y actividad en Xamarin. iOS
 
@@ -46,7 +46,6 @@ Use los `StartAnimating()` métodos `StopAnimating()` y para iniciar y detener l
 
 Establezca la `HidesWhenStopped` propiedad en `true` para que el indicador de actividad desaparezca después `StopAnimating()` de que se haya llamado a. Se establece en `true` de forma predeterminada. En cualquier momento puede ver si el indicador de actividad está ejecutando su animación giratoria comprobando la `IsAnimating` propiedad. 
 
-
 ### <a name="managing-activity-indicator-appearances"></a>Administrar aspectos de indicador de actividad
 
 La `UIActivityIndicatorViewStyle` enumeración se puede pasar como un parámetro al crear una instancia del indicador de actividad. Puede utilizar esto para establecer el estilo visual en `Gray`, `White`o `WhiteLarge`, por ejemplo:
@@ -77,7 +76,6 @@ También puede Agregar una barra de progreso a la interfaz de usuario al usar el
 Las siguientes propiedades se pueden ajustar en el panel de propiedades:
 
 ![Panel de propiedades](progress-activity-indicator-images/progress-indicator3.png)
-
 
 ### <a name="managing-progress-bar-behavior"></a>Administrar el comportamiento de la barra de progreso
 
@@ -110,6 +108,3 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 TrackTintColor = UIColor.Magenta
             }; 
 ```
-
-
-

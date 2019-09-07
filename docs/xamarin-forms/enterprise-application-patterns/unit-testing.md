@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529073"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770683"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones empresariales
 
@@ -29,7 +29,7 @@ Normalmente, las pruebas unitarias usan el patrón Arrange-Act-Assert:
 
 - La sección *Arrange* del método de prueba unitaria inicializa objetos y establece el valor de los datos que se pasan al método en pruebas.
 - La sección *Act* invoca al método en pruebas con los argumentos necesarios.
-- La sección Assert comprueba que la acción del método en pruebas se comporta según lo esperado.
+- La sección *Assert* comprueba que la acción del método en pruebas se comporta según lo esperado.
 
 El siguiente patrón garantiza que las pruebas unitarias son legibles y coherentes.
 
@@ -225,7 +225,6 @@ Una prueba unitaria toma una unidad pequeña de la aplicación, normalmente un m
 El comportamiento de un objeto en pruebas se puede aislar reemplazando objetos dependientes con objetos ficticios que simulan el comportamiento de los objetos dependientes. Esto permite que las pruebas unitarias se ejecuten sin necesidad de recursos difíciles de manejar, como servicios Web, o bases de datos.
 
 Probar modelos y ver modelos de aplicaciones MVVM es idéntico a probar cualquier otra clase y se pueden usar las mismas herramientas y técnicas.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

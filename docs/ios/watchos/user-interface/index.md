@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/19/2016
-ms.openlocfilehash: cebacf6d845affe017e289fe4522a3b7c76d2942
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ac96bce706d42d4334004e62762ff21231f0162
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766866"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Controles de la interfaz de usuario de watchos en Xamarin
 
@@ -39,7 +39,6 @@ Los nombres de programación de todos los controles tienen el prefijo (por `WKIn
 |Entrada de texto|Use `PresentTextInputController` y la `WKTextInputMode` enumeración.<br />[Documentación de entrada de texto](~/ios/watchos/user-interface/text-input.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Digital Crown|El Digital Crown se puede usar para controlar un selector o se puede realizar un seguimiento de la rotación en el código.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |Gestos|Hay cuatro tipos de reconocimiento de gestos que se pueden agregar a una escena: Pulse, deslice el dedo, desplácese y LongPress.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289840"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763143"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso de SQLite.NET con Xamarin. iOS
 
@@ -136,7 +136,6 @@ Los atributos comunes que se pueden aplicar a las clases para controlar cómo se
 - **[Ignore]** : hace que SQLite.net omita esta propiedad. Esto es especialmente útil para las propiedades que tienen un tipo que no se puede almacenar en la base de datos, o las propiedades que modelan recopilaciones que no se pueden resolver automáticamente como SQLite.
 - **[Unique]** : garantiza que los valores de la columna de base de datos subyacente son únicos.
 
-
 La mayoría de estos atributos son opcionales, SQLite usará los valores predeterminados para los nombres de tabla y columna. Siempre debe especificar una clave principal de tipo entero para que las consultas de selección y eliminación se puedan realizar de forma eficaz en los datos.
 
 ## <a name="more-complex-queries"></a>Consultas más complejas
@@ -149,7 +148,6 @@ Los siguientes métodos de `SQLiteConnection` se pueden usar para realizar otras
 - **Delete** : elimina un objeto con su clave principal.
 - **Consulta\<T >** : realiza una consulta SQL que devuelve un número de filas (como objetos).
 - **Ejecutar** : Use este método (y no `Query` ) cuando no espere filas de SQL (como las instrucciones INSERT, Update y Delete).
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Obtener un objeto por la clave principal
 

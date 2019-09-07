@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 1df10c4b8eaa30ce417feb2abae7f52b2494edf6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526368"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755242"
 ---
 # <a name="android-resource-basics"></a>Conceptos básicos de los recursos de Android
 
@@ -20,11 +20,11 @@ Casi todas las aplicaciones de Android tendrán algún tipo de recursos. como m�
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Archivos de recursos](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Archivos de recursos](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 Los cinco archivos que componen los recursos predeterminados se crearon en la carpeta recursos:
@@ -39,7 +39,6 @@ Los cinco archivos que componen los recursos predeterminados se crearon en la ca
 
 - Resource.Designer.CS&ndash; este archivo se genera y mantiene automáticamente en Xamarin. Android y contiene el identificador único asignado a cada recurso. Esto es muy similar y idéntico en lo que respecta al archivo R. Java que tendría una aplicación Android escrita en Java. Lo crean automáticamente las herramientas de Xamarin. Android y se volverán a generar de vez en cuando.
 
-
 ## <a name="creating-and-accessing-resources"></a>Crear y obtener acceso a recursos
 
 La creación de recursos es tan sencilla como agregar archivos al directorio para el tipo de recurso en cuestión. En la captura de pantalla siguiente se muestran los recursos de cadena para las configuraciones regionales alemanas que se agregaron a un proyecto. Cuando se agregó **Strings. XML** al archivo, la **acción de compilación** se estableció automáticamente en **AndroidResource** con las herramientas de Xamarin. Android:
@@ -47,20 +46,18 @@ La creación de recursos es tan sencilla como agregar archivos al directorio par
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Acción de compilación para strings. XML establecida en AndroidResource](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Acción de compilación para strings. XML establecida en AndroidResource](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 Esto permite a las herramientas de Xamarin. Android compilar e insertar correctamente los recursos en el archivo APK. Si, por alguna razón, la **acción de compilación** no está establecida en el **recurso de Android**, los archivos se excluirán del APK y cualquier intento de cargar o tener acceso a los recursos producirá un error en tiempo de ejecución y la aplicación se bloqueará.
 
 Además, es importante tener en cuenta que aunque Android solo admite nombres de archivo en minúsculas para los elementos de recursos, Xamarin. Android es un poco más permisivo; será compatible con los nombres de archivo en mayúsculas y minúsculas. La Convención para los nombres de imagen es usar minúsculas con caracteres de subrayado como separadores (por ejemplo, **mi\_nombre de\_imagen. png**). Tenga en cuenta que los nombres de recursos no se pueden procesar si los guiones o espacios se usan como separadores.
 
 Una vez que se han agregado recursos a un proyecto, hay dos maneras de utilizarlos en una &ndash; aplicación mediante programación (dentro del código) o de archivos XML.
-
 
 ## <a name="referencing-resources-programmatically"></a>Referencia a recursos mediante programación
 
@@ -106,7 +103,6 @@ Al hacer referencia a los recursos mediante programación (en el código), se pu
 
 - **Nombre del recurso** &ndash; es el nombre de archivo del recurso (sin la extensión) o el valor del atributo Android: Name para los recursos que están en un elemento XML.
 
-
 ## <a name="referencing-resources-from-xml"></a>Referencia a recursos desde XML
 
 Se obtiene acceso a los recursos de un archivo XML mediante una sintaxis especial:
@@ -136,7 +132,7 @@ Por ejemplo, el contenido de un archivo de diseño, **Main. axml**, es el siguie
 </LinearLayout>
 ```
 
-Este ejemplo tiene un [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requiere una **marca**de nombre de recurso dibujable. Tiene su `src` atributo establecido en `@drawable/flag`. `ImageView` Cuando se inicia la actividad, Android buscará en el **recurso** de directorio o dibujable para un archivo denominado **Flag. png** (la extensión de archivo podría ser otro formato de imagen, como **Flag. jpg**) y cargar ese archivo y `ImageView`mostrarlo en el.
+Este ejemplo tiene un [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requiere una **marca**de nombre de recurso dibujable. Tiene su `src` atributo establecido en `@drawable/flag`. `ImageView` Cuando se inicia la actividad, Android buscará en el **recurso de directorio o dibujable** para un archivo denominado **Flag. png** (la extensión de archivo podría ser otro formato de imagen, como **Flag. jpg**) y cargar ese archivo y `ImageView`mostrarlo en el.
 Cuando se ejecuta esta aplicación, tendría un aspecto similar al de la siguiente imagen:
 
 ![ImageView localizadas](android-resource-basics-images/03-localized-screenshot.png)

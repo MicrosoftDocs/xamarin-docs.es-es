@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286760"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768590"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -98,7 +98,7 @@ Apple sugiere lo siguiente al trabajar con reconocedores de gestos en watchos 3:
 - Algunos gestos tienen prioridad sobre otros tipos de gestos, como:
   - Desplazamiento
   - Force Touch
- 
+
 ### <a name="digital-crown-rotation"></a>Rotación Digital Crown
 
 Al implementar la compatibilidad de Digital Crown en sus aplicaciones de watchos 3, un desarrollador puede proporcionar mayor velocidad de navegación y interacciones de precisión para sus usuarios.
@@ -169,7 +169,6 @@ Apple ha dejado al desarrollador para determinar cómo se corresponden los recue
 El signo (`+/-`) del delta de rotación indica la dirección en la que el usuario está convirtiendo el digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "El signo de la diferencia de rotación indica la dirección en la que el usuario está convirtiendo el Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 Si el usuario se desplaza hacia arriba, WatchKit devolverá deltas positivos y, si se desplaza hacia abajo, se devolverán diferencias negativas, independientemente de la orientación en la que el usuario esté contratando el reloj.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b79f64f154dbd7dde623d13385f111d3d5a5d3f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769546"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introducción a las sugerencias proactivas en Xamarin. iOS
 
@@ -534,7 +534,6 @@ En esta sección se examinan las sugerencias de ubicación de consumo directamen
 
 Cuando la aplicación se inicia con un objeto `MKDirectionsRequest` MapKit, debe iniciar automáticamente la asignación del usuario a la ubicación solicitada o presentar una interfaz de usuario que facilita al usuario el inicio de la obtención de direcciones. Por ejemplo:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -607,7 +606,6 @@ En el caso de las aplicaciones que controlan los medios, iOS admite los siguient
   - Después de llegar a casa o al trabajo. 
 
 Al incluir una llamada de API simple en iOS 10, el desarrollador puede crear una experiencia de pantalla de bloqueo más atractiva para los usuarios de la aplicación multimedia. Mediante el uso `MPPlayableContentManager` de la clase para administrar la reproducción multimedia, los controles multimedia completos (como los presentados por la aplicación de música) se presentarán en la pantalla de bloqueo de la aplicación.
-
 
 ```csharp
 using System;
@@ -682,8 +680,6 @@ namespace MonkeyPlayer
 ## <a name="summary"></a>Resumen
 
 En este artículo se han tratado sugerencias proactivas y se ha mostrado cómo el desarrollador puede usarlas para dirigir el tráfico a la aplicación Xamarin. iOS. Se ha tratado el paso para implementar las sugerencias proactivas y las directrices de uso presentadas.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

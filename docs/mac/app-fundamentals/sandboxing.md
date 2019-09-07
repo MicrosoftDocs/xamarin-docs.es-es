@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290318"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770299"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación de Xamarin. Mac
 
@@ -562,8 +562,6 @@ Si está publicando una nueva versión en espacio aislado de una aplicación de 
 ## <a name="summary"></a>Resumen
 
 En este artículo se describe detalladamente el espacio aislado de una aplicación de Xamarin. Mac. En primer lugar, creamos una aplicación sencilla de Xamarin. Mac para mostrar los aspectos básicos del espacio aislado de la aplicación. A continuación, mostramos cómo resolver infracciones de espacio aislado. Después, se ha analizado en profundidad el espacio aislado de la aplicación y, por último, se ha examinado el diseño de una aplicación de Xamarin. Mac para el espacio aislado de la aplicación.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9a9e7e9c5d189527d4fbdcc2001d6f003fa63dd7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524807"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757877"
 ---
 # <a name="binding-a-jar"></a>Enlace de un .JAR
 
@@ -33,7 +33,6 @@ El código MCW generado usa JNI (Java Native Interface) para reenviar las llamad
 En esta guía se detallan los conceptos básicos de la creación de una biblioteca de enlaces para un único. Archivo JAR. Veremos con un ejemplo en el que todo va &ndash; bien, es decir, donde no se requiere ninguna personalización o depuración de los enlaces. 
 La [creación de enlaces mediante metadatos](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) ofrece un ejemplo de un escenario más avanzado en el que el proceso de enlace no es totalmente automático y se requiere una cantidad de intervención manual. Para obtener información general sobre el enlace de la biblioteca de Java en general (con un ejemplo de código básico), vea [enlazar una biblioteca de Java](~/android/platform/binding-java-library/index.md). 
 
- 
 ## <a name="walkthrough"></a>Tutorial
 
 En el siguiente tutorial, vamos a crear una biblioteca de enlaces para [Picasso](http://square.github.io/picasso/), un conocido Android. JAR que proporciona la funcionalidad de carga de imágenes y almacenamiento en caché. Usaremos los pasos siguientes para enlazar **Picasso-2. x. x. jar** para crear un nuevo ensamblado .net que se pueda usar en un proyecto de Xamarin. Android: 
@@ -74,7 +73,6 @@ Picasso.With (this)
 
 ```
 
-
 ### <a name="creating-the-bindings-library"></a>Crear la biblioteca de enlaces
 
 Antes de comenzar con los pasos siguientes, descargue [Picasso-2. x. x. jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
@@ -113,10 +111,7 @@ Establezca el nivel de API de destino de la biblioteca de enlaces (en este ejemp
 
 [![Nivel de API de destino establecido en API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 Por último, compile la biblioteca de enlaces. Aunque se pueden mostrar algunos mensajes de advertencia, el proyecto de biblioteca de enlaces se debe compilar correctamente y generar una salida. DLL en la siguiente ubicación: **JarBinding/bin/Debug/JarBinding.dll**
-    
-
 
 ### <a name="using-the-bindings-library"></a>Uso de la biblioteca de enlaces
 
@@ -140,7 +135,7 @@ Compruebe el proyecto **JarBinding** creado anteriormente y haga clic en **Acept
 
 [![Seleccionar proyecto de JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
-Abra el nodo References del proyecto **BindingTest** y compruebe que la referencia **JarBinding** está presente: 
+Abra el nodo **References** del proyecto **BindingTest** y compruebe que la referencia **JarBinding** está presente: 
 
 [![JarBinding aparece en referencias](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
@@ -191,13 +186,10 @@ Compile y ejecute el proyecto **BindingTest** . La aplicación se iniciará y, d
 [![Captura de pantalla de BindingTest en ejecución](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 ¡Enhorabuena! Ha enlazado correctamente una biblioteca de Java. JAR y usarlo en la aplicación Xamarin. Android.
- 
- 
+
 ## <a name="summary"></a>Resumen
 
 En este tutorial, creamos una biblioteca de enlaces para un tercero. Archivo JAR, se ha agregado la biblioteca de enlaces a una aplicación de prueba mínima y se ha ejecutado la aplicación para C# comprobar que el código puede llamar al código de Java que reside en. Archivo JAR. 
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

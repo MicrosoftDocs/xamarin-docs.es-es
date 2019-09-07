@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d23b29b7e49c210dc44163e41735fa96b55d12f2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526319"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755016"
 ---
 # <a name="android-resources"></a>Recursos de Android
 
 _En este artículo se presenta el concepto de recursos de Android en Xamarin. Android y se documenta cómo usarlos. En él se explica cómo usar los recursos de la aplicación de Android para admitir la localización de aplicaciones y varios dispositivos, incluidos los tamaños y las densidades de pantalla variables._
-
 
 ## <a name="overview"></a>Información general
 
@@ -39,23 +38,23 @@ Cuando se inicia un nuevo proyecto de Xamarin. Android, se crea un directorio es
 
 ![Contenido y carpeta de recursos](images/resources-folder-vs.png)
 
-En la imagen anterior, los recursos de la aplicación se organizan según su tipo en estos subdirectorios: las imágenes Irán en el directorio de Drawing. las vistas van en el subdirectorio de **diseño** , etc.
- 
+En la imagen anterior, los recursos de la aplicación se organizan según su tipo en estos subdirectorios: las imágenes Irán en el directorio de **Drawing** . las vistas van en el subdirectorio de **diseño** , etc.
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Contenido y carpeta de recursos](images/resources-folder-xs.png)
 
 En la imagen anterior, los recursos de la aplicación se organizan según su tipo en estos subdirectorios: las imágenes Irán en el directorio de **mipmap** ; las vistas van en el subdirectorio de **diseño** , etc.
- 
+
 -----
 
 Hay dos maneras de tener acceso a estos recursos en una aplicación de Xamarin. Android: *mediante programación* en código y de forma *declarativa* en XML con una sintaxis XML especial.
 
-Estos recursos se denominan *recursos* predeterminados y se usan en todos los dispositivos a menos que se especifique una coincidencia más específica. Además, cada tipo de recurso puede tener opcionalmente *recursos alternativos* que Android puede usar para dirigirse a dispositivos específicos. Por ejemplo, se pueden proporcionar recursos para el destino de la configuración regional del usuario, el tamaño de la pantalla o si el dispositivo gira 90 grados de vertical a horizontal, etc. En cada uno de estos casos, Android cargará los recursos para su uso por parte de la aplicación sin ningún esfuerzo de codificación adicional por parte del desarrollador.
+Estos recursos se denominan *recursos predeterminados* y se usan en todos los dispositivos a menos que se especifique una coincidencia más específica. Además, cada tipo de recurso puede tener opcionalmente *recursos alternativos* que Android puede usar para dirigirse a dispositivos específicos. Por ejemplo, se pueden proporcionar recursos para el destino de la configuración regional del usuario, el tamaño de la pantalla o si el dispositivo gira 90 grados de vertical a horizontal, etc. En cada uno de estos casos, Android cargará los recursos para su uso por parte de la aplicación sin ningún esfuerzo de codificación adicional por parte del desarrollador.
 
-Los recursos alternativos se especifican agregando una cadena corta,denominada calificador, al final del directorio que contiene un tipo de recursos determinado.
+Los recursos alternativos se especifican agregando una cadena corta, denominada *calificador*, al final del directorio que contiene un tipo de recursos determinado.
 
-Por ejemplo, **Resources/drawable-de** especificará las imágenes para los dispositivos que están configurados en una configuración regional alemana, mientras que Resources **-fr** puede contener imágenes para dispositivos establecidos en una configuración regional en francés. Un ejemplo de cómo proporcionar recursos alternativos puede verse en la imagen siguiente, donde se ejecuta la misma aplicación con solo la configuración regional del dispositivo que cambia:
+Por ejemplo, **Resources/drawable-de** especificará las imágenes para los dispositivos que están configurados en una configuración regional alemana, mientras que **Resources-fr** puede contener imágenes para dispositivos establecidos en una configuración regional en francés. Un ejemplo de cómo proporcionar recursos alternativos puede verse en la imagen siguiente, donde se ejecuta la misma aplicación con solo la configuración regional del dispositivo que cambia:
 
 ![Pantallas de ejemplo para diferentes configuraciones regionales](images/localized-screenshots.png)
 
@@ -66,7 +65,6 @@ En este artículo se describe el uso de los recursos y se tratan los temas sigui
 - **Configuraciones específicas del dispositivo** &ndash; Compatibilidad con las diferentes resoluciones de pantalla y densidades de una aplicación.
 
 - **Localización** de &ndash; Mediante el uso de recursos para admitir las distintas regiones, puede usarse una aplicación.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

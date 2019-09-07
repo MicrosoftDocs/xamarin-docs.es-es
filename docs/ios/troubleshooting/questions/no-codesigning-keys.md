@@ -7,28 +7,25 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9d589af6249063add3dc9b085463fde9edd8e449
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: aa2f52be4e485fb55a949a0327161bd1c301334c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278433"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769713"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain?
 
 ## <a name="cause-of-the-error"></a>Causa del error
 Este mensaje de error se produce cuando el proyecto en cuestión busca credenciales de firma de código válidas pero no puede encontrarlas. La firma de código es necesaria para las pruebas y las implementaciones en dispositivos iOS físicos; Además de las compilaciones ad-hoc & App Store. 
 
-
 ### <a name="provisioning-devices"></a>Aprovisionamiento de dispositivos
 Si no ha aprovisionado un dispositivo iOS antes, la guía siguiente le guiará a través del proceso completo paso a paso: [Guía de aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
-
 
 ## <a name="bug-when-using-ios-simulator"></a>Error al usar el simulador de iOS
 
 > [!NOTE]
 > Este problema se ha resuelto en las versiones recientes de Xamarin para Visual Studio. Sin embargo, si el problema se produce en la versión más reciente del software, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con la información de control de versiones completa y el resultado del registro de compilación completo.
-
 
 Se produjo un error en Xamarin. Visual Studio 3,11 que hacía que el proyecto de iOS de una plantilla de Xamarin. Forms agregara los derechos de codesign. plist a las compilaciones del simulador; bloqueo eficaz de las pruebas con el simulador.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772650"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows en Xamarin. Mac
 
@@ -747,7 +747,6 @@ En el **Inspector de atributos**, tiene las siguientes opciones específicas de 
 - **Estilo** : permite ajustar el estilo del panel desde: Panel normal (se parece a una ventana estándar), el panel de utilidad (tiene una barra de título más pequeña), el panel HUD (es traslúcido y la barra de título forma parte del fondo).
 - **No Activation** : determina que en el panel se convierte en la ventana de clave.
 - **Documento modal** : Si el documento es modal, el panel solo flotará sobre las ventanas de la aplicación, de lo contrario se flota por encima de todo.
-
 
 Para agregar un nuevo panel, haga lo siguiente:
 

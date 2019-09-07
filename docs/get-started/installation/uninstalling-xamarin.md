@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 04/08/2017
-ms.openlocfilehash: ff40ed55c06df41c418b694d02f7d6e9c1c5316c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a5a9ddfe92bd8f5b743da2c535a93c282542c860
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291443"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756785"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalación de Xamarin
 
@@ -266,7 +266,6 @@ Para desinstalar completamente Visual Studio 2017, elija **Desinstalar** en el m
 >
 >Esto se puede resolver mediante la ejecución de la opción **Reparación** en el instalador de Visual Studio, que volverá a instalar los componentes que falten.
 
-
 ## <a name="uninstalling-older-and-unsupported-products"></a>Desinstalación de productos anteriores y no admitidos
 
 <a name="uninstallvs2015"></a>
@@ -361,7 +360,6 @@ rm -rf ~/Library/XamarinStudio-*
 ## <a name="summary"></a>Resumen
 
 En este artículo se proporcionan instrucciones para desinstalar Xamarin por completo de un equipo Mac mediante los comandos de Terminal. También se incluyen instrucciones para desinstalar Xamarin de un equipo Windows mediante la opción **Programas y características** (Visual Studio 2015 y versiones anteriores) y para usar el **Instalador de Visual Studio** para Visual Studio 2017.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

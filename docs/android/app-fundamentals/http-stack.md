@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f66764fef5c54563ffd03274b1f86a8c0bcc637
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3b74acee34c367814fbd2a948fe490f4225aee00
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522146"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755395"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Selector de implementación de la pila HttpClient y SSL/TLS para Android
 
@@ -23,7 +23,7 @@ Los proyectos deben hacer referencia al ensamblado **System .net. http** .
 > [!WARNING]
 > **Abril de 2018** : debido a los mayores requisitos de seguridad, incluido el cumplimiento de PCI, los principales proveedores en la nube y los servidores Web se espera que dejen de admitir versiones de TLS anteriores a 1,2. Los proyectos de Xamarin creados en versiones anteriores de Visual Studio usan de forma predeterminada versiones anteriores de TLS.
 >
-> Para asegurarse de que las aplicaciones continúan funcionando con estos servidores y servicios, **debe actualizar los proyectos de Xamarin `Android HttpClient` con la configuración de y `Native TLS 1.2` que se muestra a continuación, y volver a compilar y volver a implementar las aplicaciones** para los usuarios.
+> Para asegurarse de que las aplicaciones continúan funcionando con estos servidores y servicios, **debe actualizar los `Android HttpClient` proyectos de Xamarin con la configuración de y `Native TLS 1.2` que se muestra a continuación, y volver a compilar y volver a implementar las aplicaciones** para los usuarios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -32,7 +32,6 @@ La configuración de HttpClient. Android está en **Opciones de proyecto > opcio
 Esta es la configuración recomendada para la compatibilidad con TLS 1,2:
 
 [![Opciones de Android de Visual Studio](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -75,8 +74,6 @@ El controlador administrado es el controlador HttpClient totalmente administrado
 - Normalmente es mucho más lento (por ejemplo, cifrado) que la API nativa.
 - Requiere más código administrado, lo que crea aplicaciones de mayor tamaño.
 
-
-
 ### <a name="choosing-a-handler"></a>Elegir un controlador
 
 La elección entre `AndroidClientHandler` y `HttpClientHandler` depende de las necesidades de la aplicación. `AndroidClientHandler`se recomienda para la compatibilidad de seguridad más actualizada, por ejemplo,.
@@ -98,7 +95,6 @@ La desventaja de utilizar SSL aburrido como el proveedor de TLS de subordinado e
 
 A partir de Xamarin. Android 8,3, el proveedor de TLS predeterminado es aburrido`btls`SSL (). Si no desea utilizar SSL aburrido, puede revertir a la implementación de SSL administrada histórica estableciendo la `$(AndroidTlsProvider)` propiedad en `legacy` (para obtener más información sobre cómo establecer las propiedades de compilación, vea proceso de [compilación](~/android/deploy-test/building-apps/build-process.md)).
 
-
 ### <a name="programatically-using-androidclienthandler"></a>Usar mediante programación`AndroidClientHandler`
 
 `Xamarin.Android.Net.AndroidClientHandler` Es una`HttpMessageHandler` implementación específica de Xamarin. Android.
@@ -113,7 +109,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > El dispositivo Android subyacente debe admitir TLS 1,2 (es decir, Android 4,1 y versiones posteriores). Tenga en cuenta que el soporte técnico oficial de TLS 1,2 es Android 5.0 +. Sin embargo, algunos dispositivos admiten TLS 1,2 en Android 4.1 +.
-
 
 ## <a name="ssltls-implementation-build-option"></a>Opción de compilación de implementación de SSL/TLS
 
@@ -180,7 +175,6 @@ Esta variable de entorno se establece agregando un _archivo de entorno_ al proye
 -----
 
 Consulte la guía del [entorno de Xamarin. Android](~/android/deploy-test/environment.md) para obtener más detalles sobre las variables de entorno y Xamarin. Android.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

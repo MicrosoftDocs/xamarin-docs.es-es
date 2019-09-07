@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 6287dca8660c1147455beb22304b7f8637ac7fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba3be4fea9999698c5a81faf5b07bec99fb1aa46
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292758"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753239"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Marcos de trabajo incrustados en Xamarin. iOS
 
@@ -74,4 +74,3 @@ El desarrollador de la aplicación puede invalidar este comportamiento; para ell
 - `--mono:framework`: Vínculos con el tiempo de ejecución mono como un marco.
 
 Un escenario para la vinculación con el tiempo de ejecución de mono como un marco de trabajo para las aplicaciones sin extensiones es reducir el tamaño del archivo ejecutable, para superar las restricciones de tamaño que Apple aplica en el ejecutable. Como referencia, el entorno de ejecución mono agrega aproximadamente 1.7 MB por arquitectura (a partir de Xamarin. iOS 8,12, pero su variación varía entre versiones e incluso entre aplicaciones). El marco de trabajo mono agrega aproximadamente 2,3 MB por arquitectura, lo que significa que, en el caso de una aplicación de una sola arquitectura sin extensiones, el hecho de que el vínculo de la aplicación con el tiempo de ejecución de mono sea una plataforma, reducirá el archivo ejecutable de ~ 1.7 MB, pero agregará un marco de ~ 2,3 MB, lo que resultará en un ALLtogether de aplicación de ~ 0,6 MB de mayor tamaño.
-

@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 065c68ce6fbe816e503ace0ab42b3e86aa6916a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a0ca1aa42d9173abbc86a38ae26b14bfb4865a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522837"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764617"
 ---
 # <a name="toolbar"></a>Barra de herramientas
 
 _La barra de herramientas es un componente de barra de acción que proporciona más flexibilidad que la barra de acciones predeterminada: se puede colocar en cualquier parte de la aplicación, se puede cambiar su tamaño y puede usar una combinación de colores diferente del tema de la aplicación. Además, cada pantalla de la aplicación puede tener varias barras de herramientas._
 
- 
 ## <a name="overview"></a>Información general
 
 Un elemento de diseño clave de cualquier actividad de Android es una *barra de acciones*. La barra de acciones es el componente de la interfaz de usuario que se usa para la navegación, la búsqueda, los menús y la personalización de marca en una aplicación Android. En las versiones de Android anteriores a Android 5,0 Lollipop, la barra de acciones (también conocida como la barra de la *aplicación*) era el componente recomendado para proporcionar esta funcionalidad. 
@@ -69,15 +68,10 @@ En esta guía se tratan los escenarios de `Toolbar` uso más frecuente:
 
 - Con la biblioteca de **compatibilidad de Android V7** , biblioteca de AppCompat (denominada *AppCompat* en el resto de esta guía) `Toolbar` para implementar en versiones anteriores de Android. 
 
- 
- 
 ## <a name="requirements"></a>Requisitos
 
 `Toolbar`está disponible en Android 5,0 Lollipop (API 21) y versiones posteriores. Cuando el destino sea versiones de Android anteriores a Android 5,0, use la [biblioteca de compatibilidad de Android V7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/), que `Toolbar` proporciona compatibilidad compatible con versiones anteriores en un paquete de NuGet. 
 La compatibilidad de la [barra de herramientas](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) explica cómo usar esta biblioteca. 
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

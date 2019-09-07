@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290717"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769119"
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
@@ -175,11 +175,6 @@ La imagen de estante superior se puede proporcionar como un único archivo `.png
 En lugar de mostrar una imagen de estante superior estática, puede contener una fila dinámica o elementos enfocables o un conjunto dinámico de banners de desplazamiento. Ambos estilos dinámicos le permiten resaltar el contenido proporcionado por la aplicación o saltar a sus características más usadas.
 
 Para obtener más información, consulte la documentación sobre [Cómo trabajar con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md) y la [referencia de TVServices Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) de Apple para más información sobre cómo agregar una extensión de estante superior a la aplicación para proporcionar contenido dinámico dinámico.
-
-
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

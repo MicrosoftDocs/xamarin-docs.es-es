@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: e26a71ad72b557a27841bfee1d26001126e2a2a2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654664"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756757"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Aplicar estilo a una aplicación de Xamarin. Forms multiplataforma
 
@@ -315,7 +315,6 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     En el **NotesPage** , presione **+** el botón para navegar hasta el **NoteEntryPage** y escriba una nota. En cada página, observe cómo ha cambiado el estilo de la guía de inicio rápido anterior.
 
 ::: zone-end
-
 
 ## <a name="next-steps"></a>Pasos siguientes
 

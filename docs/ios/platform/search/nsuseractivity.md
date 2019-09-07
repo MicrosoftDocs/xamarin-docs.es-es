@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291754"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769556"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Búsqueda con NSUserActivity en Xamarin. iOS
 
@@ -165,8 +165,6 @@ Al adoptar la búsqueda de aplicaciones `NSUserActivity` a través de en la apli
 - **Promisión:** puesto que la búsqueda de aplicaciones está exponiendo contenido, navegación o características con el mismo mecanismo que`NSUserActivity`la entrega (), puede permitir fácilmente que los usuarios de la aplicación inicien una actividad en un dispositivo y continúen en otro.
 - **Sugerencias de Siri** : junto con las sugerencias estándar que las sugerencias de Siri suelen realizar, se pueden sugerir automáticamente los activos de la aplicación.
 - **Siri avisos inteligentes** : los usuarios podrán preguntar a Siri para recordarles las actividades de la aplicación.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

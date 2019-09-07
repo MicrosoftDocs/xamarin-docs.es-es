@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3f1e2ef06fb439f4b3ef290b1a7f80856b126a8d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755195"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -19,19 +19,18 @@ Los recursos alternativos son aquellos que tienen como destino un dispositivo es
 
 Los recursos alternativos se organizan como un subdirectorio dentro de la carpeta recursos según el tipo de recurso, al igual que los recursos predeterminados. El nombre del subdirectorio de recurso alternativo tiene el formato siguiente: _ResourceType_-_Qualifier_
 
-El calificador es un nombre que identifica una configuración específica del dispositivo.
+El *calificador* es un nombre que identifica una configuración específica del dispositivo.
 Puede haber más de un calificador en un nombre, cada uno de ellos separado por un guión. Por ejemplo, la captura de pantalla siguiente muestra un proyecto simple que tiene recursos alternativos para varias configuraciones, como la configuración regional, la densidad de la pantalla, el tamaño de la pantalla y la orientación:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Recursos alternativos](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Recursos alternativos](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 Al agregar calificadores a un tipo de recurso, se aplican las siguientes reglas:
 
@@ -103,7 +102,6 @@ Los calificadores posibles se enumeran a continuación como referencia:
 
   - `12key`&ndash; Hay un teclado de hardware de 12 teclas
 
-
 - **Disponibilidad** de la clave de navegación &ndash; Para cuando esté disponible la navegación de 5 o d (pad direccional). Esto puede cambiar durante la vigencia de la aplicación. Los valores posibles son:
 
   - `navexposed`&ndash; las teclas de navegación están disponibles para el usuario
@@ -122,9 +120,7 @@ Los calificadores posibles se enumeran a continuación como referencia:
 
 - **Versión de la plataforma (nivel de API)** El nivel de API que admite el dispositivo en el formato v*n*, donde N es el nivel de API que se va a usar como destino. &ndash; Por ejemplo, V11 se dirigirá a un dispositivo de nivel de API 11 (Android 3,0).
 
-
 Para obtener información más completa sobre los calificadores de recursos, vea [proporcionar recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) en el sitio web de desarrolladores de Android.
-
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Cómo determina Android qué recursos usar
 
@@ -132,13 +128,13 @@ Es muy posible y es probable que una aplicación Android contenga muchos recurso
 
 Android determina la base de recursos mediante la iteración de la siguiente prueba de reglas:
 
-- **Eliminación** de calificadores contradictorios &ndash; por ejemplo, si la orientación del dispositivo es vertical, se rechazarán todos los directorios de recursos del entorno.
+- **Eliminación de calificadores contradictorios** &ndash; por ejemplo, si la orientación del dispositivo es vertical, se rechazarán todos los directorios de recursos del entorno.
 
 - **Omitir calificadores no admitidos** &ndash; No todos los calificadores están disponibles para todos los niveles de API. Si un directorio de recursos contiene un calificador que no es compatible con el dispositivo, se omitirá ese directorio de recursos.
 
 - **Identificar el calificador de mayor prioridad siguiente** &ndash; al hacer referencia a la tabla anterior, se selecciona el calificador de prioridad superior siguiente (de arriba abajo).
 
-- **Mantener los directorios de recursos para** el calificador &ndash; si hay algún directorio de recursos que coincida con el calificador de la tabla anterior, seleccione el calificador de prioridad más alta (de arriba abajo).
+- **Mantener los directorios de recursos para el calificador** &ndash; si hay algún directorio de recursos que coincida con el calificador de la tabla anterior, seleccione el calificador de prioridad más alta (de arriba abajo).
 
 Estas reglas también se muestran en el diagrama de flujo siguiente:
 

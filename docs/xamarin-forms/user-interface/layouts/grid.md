@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 38206812fbd746a63c5bff18111779c25deedc66
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7a6c737bff6c504fea10fd2e34e4b26249f73aff
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770396"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
@@ -378,7 +378,6 @@ public CalculatorGridCode ()
   Content = controlGrid;
 }
 ```
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

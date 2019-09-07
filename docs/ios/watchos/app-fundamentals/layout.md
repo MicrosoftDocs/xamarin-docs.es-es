@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 5272921cade2b9dadd24a4c917e6251ac591e178
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292322"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768752"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabajar con watchOS diseño en Xamarin
 
@@ -34,7 +34,6 @@ El punto clave es: asegúrese de la interfaz de usuario legible y utilizable en 
 
 - Use la [ `Menu` control](~/ios/watchos/user-interface/menu.md) a la funcionalidad de exponer con menor frecuencia se utiliza para mantener el diseño de su aplicación claro y conciso.
 
-
 ## <a name="implementation"></a>Implementación
 
 Vea el que Kit incluye los siguientes controles para ayudarle a crear diseños de aplicaciones de watch atractiva:
@@ -55,7 +54,6 @@ Cuando se establece el tamaño en **relativa al contenedor** puede proporcionar 
 
 ![](layout-images/button-attributes.png "Proporcione un valor proporcional y un ajuste de desplazamiento")
 
-
 ### <a name="group"></a>Agrupar
 
 `WKInterfaceGroup` es un contenedor de diseño simple que se puede configurar para apilar controla vertical u horizontalmente. Incluye el espaciado entre cada control de forma predeterminada, pero puede modificar el espaciado (y los márgenes) en el **atributos** inspector.
@@ -65,7 +63,6 @@ Cuando se establece el tamaño en **relativa al contenedor** puede proporcionar 
 Grupos pueden propios tendrán el tamaño y colocados en relación con los controles en torno a ellas, y se pueden anidar grupos para crear diseños complejos.
 
 ![](layout-images/group-scene.png "Los grupos se pueden anidar para crear diseños complejos")
-
 
 ### <a name="separator"></a>Separador
 
@@ -79,8 +76,6 @@ Tenga en cuenta los separadores azules y verdes que no use todo el ancho de la p
 
 Ningún diseño estaría completa sin la `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, y [otros controles](~/ios/watchos/user-interface/index.md).
 Estos se pueden colocar en los diseños con **grupos** o la configuración de la posición y el tamaño de cada control.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

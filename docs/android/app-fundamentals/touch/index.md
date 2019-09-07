@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0b11f5c290f07debb61d511bdd27ad1a7ad0b0b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526083"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754715"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Toque y gestos en Xamarin. Android
 
@@ -39,8 +39,6 @@ En esta guía se sigue un formato similar para cada sistema operativo: en primer
 ## <a name="summary"></a>Resumen
 
 En esta guía se ha examinado el toque en Android. En ambos sistemas operativos, hemos aprendido a habilitar Touch y a responder a los eventos Touch. A continuación, hemos aprendido sobre los gestos y algunos de los reconocedores de gestos que proporcionan Android e iOS para administrar algunos de los escenarios más comunes. Hemos examinado cómo crear gestos personalizados e implementarlos en aplicaciones. En un tutorial se han mostrado los conceptos y las API de cada sistema operativo en acción, y también se ha visto cómo realizar un seguimiento de los dedos individuales.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

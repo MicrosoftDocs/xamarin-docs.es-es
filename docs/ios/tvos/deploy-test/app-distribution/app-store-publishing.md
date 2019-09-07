@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4dface536504b0a79d376ab0979443a5ed19e901
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282717"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769245"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en Apple TV App Store
 
@@ -24,7 +24,6 @@ El proceso de enviar una aplicación a la tienda de aplicaciones de Apple TV imp
 2. Crear un *perfil de aprovisionamiento de distribución*.
 3. Usar este perfil para compilar la aplicación.
 4. Envío de la aplicación a través de *iTunes Connect*.
-
 
 En este artículo se tratarán todos los pasos necesarios para aprovisionar, compilar y enviar una aplicación para la distribución de App Store de Apple TV.
 
@@ -39,7 +38,6 @@ Aquí se muestran un par de cosas a tener en cuenta a la hora de enviar una apli
 
 1. Asegúrese de que la descripción de la aplicación coincide con la funcionalidad incluida en la aplicación.
 2. Compruebe que la aplicación no se bloquea con un uso normal. Esto incluye el uso en cada dispositivo Apple TV que admita.
-
 
 Apple también mantiene una lista de sugerencias de envío de la tienda de aplicaciones de Apple TV. Puede leerlas en [Distribución en el App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
@@ -121,7 +119,6 @@ El aprovisionamiento incluye los siguientes pasos con el portal de aprovisionami
 
 Para obtener instrucciones detalladas, vea las secciones [Crear un perfil de distribución](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) y [Seleccionar un perfil de distribución en un proyecto de Xamarin.iOS](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). De nuevo, ambos documentos son específicos de iOS, pero se usa la misma técnica para las aplicaciones de tvOS.
 
-
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Establecer la configuración de compilación de la aplicación
@@ -137,7 +134,6 @@ Haga lo siguiente:
 5. Apple también requiere que las aplicaciones de tvOS usen Bitcode. De nuevo en la configuración de versión `--bitcode=asmonly` , agregue al cuadro **argumentos de Mtouch adicionales** .
 6. La casilla **optimizar archivos de imagen PNG para iOS** debe estar activada, ya que esto le ayudará a reducir aún más el tamaño de entrega de la aplicación.
 7. La depuración *no* debe habilitarse porque hará que la compilación sea innecesariamente más grande.
-
 
 <a name="Building_and_Submitting_the_Distributable" />
 
@@ -189,7 +185,6 @@ Una vez que se ha creado y archivado su compilación de distribución, ahora est
 
 Una vez que se ha completado la compilación de distribución, está listo para enviar su aplicación de iOS a Apple para su revisión y publicación en el App Store.
 
-
 El flujo de trabajo de archivo en Visual Studio para Mac abrirá Application Loader automáticamente, una vez que `.ipa`haya guardado:
 
 1. Seleccione *Deliver Your App* (Entregar la aplicación) y haga clic en el botón *Elegir*:
@@ -225,7 +220,6 @@ Si tiene problemas para enviar la aplicación Xamarin. tvOS a la tienda de aplic
 ## <a name="summary"></a>Resumen
 
 En este artículo se presenta una guía paso a paso para configurar, compilar y enviar una aplicación para la publicación de App Store de Apple TV. Primero, ha tratado los pasos necesarios para crear e instalar un perfil de aprovisionamiento de distribución. A continuación, se describe cómo usar Visual Studio para Mac para crear una compilación de distribución. Por último, le mostramos cómo usar iTunes Connect y la herramienta de archivo de Xcode para enviar una aplicación a la tienda de aplicaciones de Apple TV.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc76a642c27b7a2c7f3483911be596f8d6cdd1ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288584"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752857"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Conceptos básicos y configuración de compras desde la aplicación en Xamarin. iOS
 
@@ -26,7 +26,6 @@ El uso de App Store para proporcionar la compra desde la aplicación requiere la
 - **portal de aprovisionamiento de iOS** : creación de un identificador de paquete y habilitación del acceso al almacén de aplicaciones para la aplicación.
 - **Kit de tienda** : agregar código a la aplicación para mostrar productos, comprar productos y restaurar transacciones.
 - **Código personalizado** : para realizar el seguimiento de las compras realizadas por los clientes y proporcionar los productos o servicios que han adquirido. También es posible que necesite implementar un proceso del lado servidor para validar las confirmaciones si los productos se componen del contenido descargado de un servidor (como los libros y los problemas de la revista).
-
 
 Hay dos "entornos de servidor" del kit de tiendas:
 
@@ -54,7 +53,6 @@ Estos tres pasos se deben completar antes de escribir cualquier código:
 - **portal de aprovisionamiento de iOS** : Asegúrese de que la aplicación tiene un identificador de aplicación válido (no un carácter comodín con un asterisco * en él) y tiene habilitada la adquisición de aplicaciones.
 - **Administración de aplicaciones de iTunes Connect** : agregar productos a la aplicación.
 
-
 ### <a name="apple-developer-account"></a>Cuenta de desarrollador de Apple
 
 La creación y distribución de aplicaciones gratuitas requiere muy poca configuración en [iTunes Connect](https://itunesconnect.apple.com), sin embargo, para vender aplicaciones de pago o compras desde la aplicación, es necesario proporcionar a Apple información bancaria y fiscal. Haga clic en **contratos, impuestos y banca** en el menú principal que se muestra aquí:
@@ -70,7 +68,6 @@ No podrá probar ninguna funcionalidad de StoreKit hasta que tenga un contrato d
 ### <a name="ios-provisioning-portal"></a>Portal de aprovisionamiento de iOS
 
 Las nuevas aplicaciones se configuran en la sección **identificadores de aplicaciones** del **portal de aprovisionamiento de iOS**. Para crear un nuevo identificador de aplicación, vaya al [centro de usuarios del portal de aprovisionamiento de iOS](https://developer.apple.com/membercenter/index.action), vaya a **certificados, identificadores y perfiles** sección del portal y haga clic en **identificadores** en *aplicaciones iOS*. A continuación, haga clic en "+" en la parte superior derecha para generar un nuevo identificador de aplicación.
-
 
 El formulario para crear nuevos **identificadores de aplicación**
 
@@ -114,7 +111,6 @@ El proceso para agregar nuevos productos tiene dos pasos:
 
 Los campos necesarios para cada producto de compra desde la aplicación se describen a continuación:
 
-
 ### <a name="reference-name"></a>Nombre de referencia
 
 El nombre de referencia no se muestra a los usuarios; es para uso interno y solo aparece en iTunes Connect.
@@ -148,7 +144,6 @@ Hay cinco tipos de productos de compra desde la aplicación que puede ofrecer:
 1. **Suscripción gratuita** : solo se puede ofrecer en aplicaciones habilitadas para NewsStand y permite que el cliente tenga acceso al contenido de la suscripción en todos sus dispositivos. Las suscripciones gratuitas nunca expiran.
 1. **Suscripción sin renovación** : debe usarse para vender acceso limitado de tiempo a contenido estático, como el acceso de un mes a un archivo de fotografías.
 
-
  *Actualmente, en este documento solo se tratan los dos primeros tipos de productos (consumibles y no consumibles).*
 
  <a name="Price_Tiers" />
@@ -176,10 +171,8 @@ Aunque Apple ha proporcionado una opción de suscripción gratuita especial para
 En iTunes Connect puede escribir un nombre diferente y texto descriptivo para cualquier número de idiomas admitidos. Cada idioma se puede Agregar o editar en a través de un elemento emergente:
 
  [![](in-app-purchase-basics-and-configuration-images/image12.png "Cada idioma se puede Agregar o editar en a través de un elemento emergente.")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- Cuando se muestra información del producto en la aplicación, el texto localizado está disponible para que se muestre a través de StoreKit. La presentación de la moneda también debe estar localizada para mostrar el símbolo y el formato decimal correctos; este formato se trata más adelante en el documento.
+
+Cuando se muestra información del producto en la aplicación, el texto localizado está disponible para que se muestre a través de StoreKit. La presentación de la moneda también debe estar localizada para mostrar el símbolo y el formato decimal correctos; este formato se trata más adelante en el documento.
 
 ### <a name="app-store-review"></a>Revisión de App Store
 
@@ -188,10 +181,8 @@ Igual que las aplicaciones: Apple revisa todos los productos antes de que se les
 La primera vez que se envía una aplicación con la opción de compra desde la aplicación habilitada (ya sea una nueva aplicación o se ha agregado la funcionalidad a una existente), también debe elegir algunos productos para enviarlos. El portal de iTunes Connect le pedirá que lo haga, tal como se muestra en esta captura de pantalla:
 
  [![](in-app-purchase-basics-and-configuration-images/image13.png "El portal de iTunes Connect le pedirá que envíe también algunos productos.")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- La aplicación y las compras desde la aplicación se revisarán juntas, de modo que todos se aprueben a la vez (de modo que la aplicación no vaya al almacén sin ningún producto aprobado).
+
+La aplicación y las compras desde la aplicación se revisarán juntas, de modo que todos se aprueben a la vez (de modo que la aplicación no vaya al almacén sin ningún producto aprobado).
 
 Una vez aprobada su primera versión con la funcionalidad de compra desde la aplicación, puede agregar más productos y enviarlos para su revisión en cualquier momento. También puede optar por enviar una nueva versión junto con productos específicos de compras desde la aplicación, mediante la página de detalles de la **versión** , como sugiere la solicitud.
 

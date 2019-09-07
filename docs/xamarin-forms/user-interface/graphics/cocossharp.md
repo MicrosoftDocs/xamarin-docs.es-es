@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: d6440518149a4fab8e9667a2a41d3df818e2a879
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7b465391958a6e862bfed9fde8d9da1fdd52bee5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759757"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso de CocosSharp en Xamarin.Forms
 
@@ -94,7 +94,6 @@ CocosSharp puede hospedarse en cualquier contenedor de Xamarin.Forms. Este ejemp
 
 En primer lugar, configure la página de manera que contenga un `Grid` y dos `Button` instancias:
 
-
 ```csharp
 public class HomePage : ContentPage
 {
@@ -147,7 +146,6 @@ En iOS, el `HomePage` aparece como se muestra en la siguiente imagen:
 
 La `CocosSharpView` clase se utiliza para insertar CocosSharp en una aplicación de Xamarin.Forms. Puesto que `CocosSharpView` hereda el [Xamarin.Forms.View](xref:Xamarin.Forms.View) (clase), proporciona una interfaz conocida para el diseño, y puede utilizarse dentro de contenedores de diseño como [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Agregue un nuevo `CocosSharpView` al proyecto siguiendo el `CreateTopHalf` método:
 
-
 ```csharp
 void CreateTopHalf(Grid grid)
 {
@@ -165,7 +163,6 @@ void CreateTopHalf(Grid grid)
 ```
 
 Inicialización de CocosSharp no es inmediata, por lo que se registrará un evento para cuando el `CocosSharpView` ha finalizado su creación. Hacer esto en el `HandleViewCreated` método:
-
 
 ```csharp
 void HandleViewCreated (object sender, EventArgs e)
@@ -203,7 +200,6 @@ Solo un `CCScene` pueden estar activas al mismo tiempo. La mayoría de juegos us
 
 Inicialmente el `GameScene` clase será casi vacía: simplemente vamos a crear para satisfacer la referencia en `HomePage`. Agregue una nueva clase al proyecto Biblioteca .NET Standard denominado `GameScene`. Debe heredar la `CCScene` clase como sigue:
 
-
 ```csharp
 public class GameScene : CCScene
 {
@@ -215,7 +211,6 @@ public class GameScene : CCScene
 ```
 
 Ahora que `GameScene` está definido, podemos volver a `HomePage` y agregue un campo:
-
 
 ```csharp
 // Keep the GameScene at class scope
@@ -234,7 +229,6 @@ Ahora podemos compilar el proyecto y ejecútelo para ver la ejecución de CocosS
 Actualmente, la aplicación tiene una instancia en ejecución del motor de CocosSharp, mostrar un valor vacío `CCScene`. A continuación, vamos a agregar un objeto visual: un círculo. El `CCDrawNode` clase puede utilizarse para dibujar una variedad de formas geométricas, como se describe en el [dibujar geometría con CCDrawNode guía](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 Adición de un círculo a nuestro `GameScene` clase y crear instancias en el constructor como se muestra en el código siguiente:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -262,7 +256,6 @@ Ejecutar la aplicación ahora muestra un círculo en el lado izquierdo del área
 
 ![](cocossharp-images/image6.png "Círculo en GameScene")
 
-
 #### <a name="understanding-designresolution"></a>Descripción DesignResolution
 
 Ahora que se muestra un objeto visual de CocosSharp, podemos investigar la `DesignResolution` propiedad.
@@ -287,7 +280,6 @@ La simple aplicación emplea la `CCDrawNode` clases para dibujar un círculo. Es
 
 Elementos visuales de CocosSharp (como `CCDrawNode`) heredan la `CCNode` clase. `CCNode` proporciona dos propiedades que se pueden usar para colocar un objeto con respecto a su elemento primario: `PositionX` y `PositionY`. Actualmente, nuestro código utiliza estas dos propiedades para colocar el centro del círculo, como se muestra en este fragmento de código:
 
-
 ```csharp
 circle.PositionX = 20;
 circle.PositionY = 50;
@@ -296,7 +288,6 @@ circle.PositionY = 50;
 Es importante tener en cuenta que se colocan los objetos de CocosSharp por valores de posición explícitos, en lugar de la mayoría vistas de Xamarin.Forms, que se colocan automáticamente según el comportamiento de sus controles de diseño del elemento primario.
 
 Vamos a agregar código para permitir que el usuario haga clic en uno de los dos botones para mover el círculo a la izquierda o a la derecha 10 unidades (no píxeles, puesto que el círculo se dibuja en el espacio de unidad de CocosSharp global). Primero vamos a crear dos métodos públicos en el `GameScene` clase:
-
 
 ```csharp
 public void MoveCircleLeft()
@@ -311,7 +302,6 @@ public void MoveCircleRight()
 ```
 
 A continuación, vamos a agregar controladores a los dos botones de `HomePage` para responder a clics. Cuando termine, nuestro `CreateBottomHalf` método contiene el código siguiente:
-
 
 ```csharp
 void CreateBottomHalf(Grid grid)

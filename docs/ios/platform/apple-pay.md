@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291811"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753266"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay en Xamarin. iOS
 
@@ -81,7 +81,6 @@ Como novedad de iOS 10, el desarrollador puede incorporar Apple Pay directamente
 ### <a name="passkit-framework-enhancements"></a>Mejoras de PassKit Framework
 
 En iOS 10, el marco de trabajo de PassKit se ha ampliado para admitir `UIKit` Apple Pay fuera de y para permitir que los emisores de tarjetas presenten sus propias tarjetas desde sus aplicaciones.
-
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>Compatibilidad Apple Pay fuera de UIKit
 

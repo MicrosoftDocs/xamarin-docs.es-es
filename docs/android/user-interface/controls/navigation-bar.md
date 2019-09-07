@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: cf57142f0896b42c5c8ba726db723527e0e61452
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762386"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra de navegación de Xamarin. Android
 
@@ -25,7 +25,6 @@ Hay disponibles varias nuevas marcas que controlan la visibilidad de la barra de
 - `SystemUiFlagVisible`&ndash; Hace que la barra de navegación esté visible. 
 - `SystemUiFlagLowProfile`&ndash; Atenúa los controles de la barra de navegación. 
 - `SystemUiFlagHideNavigation`&ndash; Oculta la barra de navegación. 
-
 
 Estas marcas se pueden aplicar a cualquier vista de la jerarquía de vistas estableciendo la `SystemUiVisibility` propiedad. Si varias vistas tienen esta propiedad establecida, el sistema las combina con una operación OR y las aplica siempre que la ventana en la que se establecen las marcas conserva el foco. Al quitar una vista, también se quitarán las marcas que haya establecido.
 
@@ -64,8 +63,6 @@ tv.SystemUiVisibilityChange +=
         tv.Text = String.Format ("Visibility = {0}", e.Visibility);
   };
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

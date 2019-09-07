@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 05d72c2b9cea3972a8173ea0656f5a84c2b3d51c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a3f3849725f0d3b8e8bc8d43c1cd3f87f044616
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523492"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761045"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajuste de los parámetros de memoria de Java para Android Designer
 
@@ -29,7 +29,6 @@ Los nombres de propiedad siguientes corresponden a la [opción de línea de coma
 - **AndroidDesignerJavaRendererMaxMemory** -Xmx
 
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -102,4 +101,3 @@ Los nombres de propiedad siguientes corresponden a la [opción de línea de coma
 10. Reinicie Visual Studio para Mac y vuelva a abrir la solución.
 
 -----
-

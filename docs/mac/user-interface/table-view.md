@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b341ee5ee72c3a89ab14161862896585ed498fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291620"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772689"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vistas de tabla en Xamarin. Mac
 
@@ -407,7 +407,6 @@ Si desea permitir que el usuario seleccione una sola fila, haga doble clic en el
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
-
 Después, edite `ProductTableDelegate.cs` el archivo y agregue el siguiente método:
 
 ```csharp
@@ -435,7 +434,6 @@ Si desea permitir que el usuario seleccione varias filas, haga doble clic en el 
 [![](table-view-images/select02.png "Inspector de atributo")](table-view-images/select02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
-
 
 Después, edite `ProductTableDelegate.cs` el archivo y agregue el siguiente método:
 

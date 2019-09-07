@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 335c385b5be77736f0e19852eb71f2a2329eb9a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287043"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768255"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño en Xamarin. iOS
 
@@ -40,7 +40,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 Para probar la configuración de ajuste automático de tamaño, habilite distintas **orientaciones de dispositivo compatibles** en las opciones del proyecto:
 
  [![](layout-options-images/image43a.png "Configuración de ajuste automático")](layout-options-images/image43a.png#lightbox)
@@ -53,7 +52,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 También podemos ajustar los controles mediante el diseñador. Si selecciona las transformaciones que se muestran a continuación, la imagen permanecerá alineada a la derecha sin ser cortada en la parte inferior de la vista:
 
  [![](layout-options-images/autoresize.png "Autorotación")](layout-options-images/autoresize.png#lightbox)
@@ -63,10 +61,6 @@ Estas capturas de pantalla muestran cómo cambian el tamaño o la posición de l
  [![](layout-options-images/image44a.png "Autorotación")](layout-options-images/image44a.png#lightbox)
 
 Tenga en cuenta que la vista de texto y el campo de texto se ajustan para mantener los mismos márgenes izquierdo `FlexibleWidth` y derecho, debido a la configuración. La imagen tiene el margen superior e izquierdo flexible, lo que significa que conserva los márgenes inferior y derecho, manteniendo la imagen en la vista cuando se gira la pantalla. Normalmente, los diseños complejos requieren una combinación de estos valores en todos los controles visibles para mantener la coherencia de la interfaz de usuario y evitar que los controles se superpongan cuando cambien los límites de la vista (debido a la rotación u otro evento de cambio de tamaño).
-
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

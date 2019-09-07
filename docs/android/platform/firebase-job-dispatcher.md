@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: c0a35414cce6ff9981ad7825c8158a2f6f707585
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cb7e8aaca13405aedd422288421d497653ddbfe8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119492"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761204"
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo de Firebase
 
 _En esta guía se describe cómo programar el trabajo en segundo plano mediante la biblioteca de distribuidores de trabajos de Firebase de Google._
-
 
 ## <a name="overview"></a>Información general
 
@@ -66,7 +65,6 @@ Para empezar a trabajar con el distribuidor de trabajos de Firebase, agregue pri
 
 Después de agregar la biblioteca `JobService` `FirebaseJobDispatcher`de distribuidores de trabajos de Firebase, cree una clase y, a continuación, programe para que se ejecute con una instancia del.
 
-
 ### <a name="creating-a-jobservice"></a>Creación de un JobService
 
 Todo el trabajo realizado por la biblioteca de distribución de trabajos de Firebase debe realizarse en un tipo que `Firebase.JobDispatcher.JobService` extienda la clase abstracta. Crear un `JobService` es muy similar a crear un `Service` con el marco de trabajo de Android: 
@@ -108,7 +106,7 @@ public class DemoJob : JobService
 ### <a name="creating-a-firebasejobdispatcher"></a>Creación de un FirebaseJobDispatcher
 
 Antes de que se pueda programar cualquier trabajo, es necesario crear un `Firebase.JobDispatcher.FirebaseJobDispatcher` objeto. El `FirebaseJobDispatcher` es responsable de programar un `JobService`. El siguiente fragmento de código es una manera de crear una instancia de `FirebaseJobDispatcher`: 
- 
+
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
 IDriver driver = new GooglePlayDriver(context);
@@ -163,7 +161,7 @@ El valor devuelto `FirebaseJobDispatcher.Schedule` por será uno de los siguient
 - `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable`Se usó `IDriver` un no válido o `IDriver` no estaba disponible de algún modo. &ndash; 
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger`&ndash; No`Trigger` se admitía.
 - `FirebaseJobDispatcher.ScheduleResultBadService`&ndash; El servicio no está configurado correctamente o no está disponible.
- 
+
 ### <a name="configuring-a-job"></a>Configuración de un trabajo
 
 Es posible personalizar un trabajo. Entre los ejemplos de cómo se puede personalizar un trabajo se incluyen los siguientes:
@@ -171,7 +169,7 @@ Es posible personalizar un trabajo. Entre los ejemplos de cómo se puede persona
 - [Pasar parámetros a un trabajo](#Passing_Parameters_to_a_Job) &ndash; Un`Job` puede requerir valores adicionales para realizar su trabajo, por ejemplo, para descargar un archivo.
 - [Establecer restricciones](#Setting_Constraints) &ndash; Puede que sea necesario ejecutar solo un trabajo cuando se cumplen ciertas condiciones. Por ejemplo, ejecute `Job` solo cuando el dispositivo se esté cargando. 
 - [Especifique cuándo `Job` debe ejecutarse](#Setting_Job_Triggers) &ndash; el distribuidor de trabajos de Firebase permite a las aplicaciones especificar una hora en la que se debe ejecutar el trabajo.  
-- [Declarar una estrategia de reintento para trabajos con error](#Setting_a_RetryStrategy) Una estrategia `FirebaseJobDispatcher` de reintento proporciona instrucciones sobre qué hacer con `Jobs` que no se completan. &ndash; 
+- [Declarar una estrategia de reintento para trabajos con error](#Setting_a_RetryStrategy) Una estrategia `FirebaseJobDispatcher` de _reintento_ proporciona instrucciones sobre qué hacer con `Jobs` que no se completan. &ndash; 
 
 Cada uno de estos temas se explicará más en las secciones siguientes.
 
@@ -224,7 +222,7 @@ Job myJob = dispatcher.NewJobBuilder()
 
 <a name="Setting_Job_Triggers" />
 
-`JobTrigger` Proporciona instrucciones al sistema operativo sobre cuándo debe iniciarse el trabajo. Un `JobTrigger` tiene una _ventana en ejecución_ que define una hora programada para el `Job` momento en que se debe ejecutar. La ventana de ejecución tiene un valor de _ventana de inicio_ y un valor de _ventana_ de finalización. La ventana de inicio es el número de segundos que debe esperar el dispositivo antes de ejecutar el trabajo y el valor de la ventana final es el número máximo de segundos que `Job`se debe esperar antes de ejecutar. 
+`JobTrigger` Proporciona instrucciones al sistema operativo sobre cuándo debe iniciarse el trabajo. Un `JobTrigger` tiene una _ventana en ejecución_ que define una hora programada para el `Job` momento en que se debe ejecutar. La ventana de ejecución tiene un valor de _ventana de inicio_ y un valor de _ventana de finalización_ . La ventana de inicio es el número de segundos que debe esperar el dispositivo antes de ejecutar el trabajo y el valor de la ventana final es el número máximo de segundos que `Job`se debe esperar antes de ejecutar. 
 
 Se `JobTrigger` puede crear un con el `Firebase.Jobdispatcher.Trigger.ExecutionWindow` método.  Por ejemplo `Trigger.ExecutionWindow(15,60)` , significa que el trabajo debe ejecutarse entre 15 y 60 segundos desde la programación. El `Job.Builder.SetTrigger` método se usa para 
 
@@ -242,8 +240,8 @@ El valor `JobTrigger` predeterminado para un trabajo se representa mediante el `
 
 #### <a name="setting-a-retrystrategy"></a>Establecer un RetryStrategy
 
-`Firebase.JobDispatcher.RetryStrategy` Se usa para especificar la cantidad de un retraso que debe usar un dispositivo antes de intentar volver a ejecutar un trabajo con error. Un `RetryStrategy` tiene una _Directiva_que define el algoritmo de base de tiempo que se utilizará para volver a programar el trabajo con errores y una ventana de ejecución que especifica una ventana en la que se debe programar el trabajo. Esta _ventana_ de reprogramación se define con dos valores. El primer valor es el número de segundos que hay que esperar antes de volver a programar el trabajo (el valor de _retroceso inicial_ ) y el segundo número es el número máximo de segundos antes de que se deba ejecutar el trabajo (el valor de _retroceso máximo_ ). 
- 
+`Firebase.JobDispatcher.RetryStrategy` Se usa para especificar la cantidad de un retraso que debe usar un dispositivo antes de intentar volver a ejecutar un trabajo con error. Un `RetryStrategy` tiene una _Directiva_que define el algoritmo de base de tiempo que se utilizará para volver a programar el trabajo con errores y una ventana de ejecución que especifica una ventana en la que se debe programar el trabajo. Esta _ventana de reprogramación_ se define con dos valores. El primer valor es el número de segundos que hay que esperar antes de volver a programar el trabajo (el valor de _retroceso inicial_ ) y el segundo número es el número máximo de segundos antes de que se deba ejecutar el trabajo (el valor de _retroceso máximo_ ). 
+
 Los dos tipos de directivas de reintentos se identifican mediante estos valores int:
 
 - `RetryStrategy.RetryPolicyExponential`Una directiva de _retroceso exponencial_ aumentará el valor de retroceso inicial de forma exponencial después de cada error. &ndash; La primera vez que se produce un error en un trabajo, la biblioteca esperará el intervalo de _initial especificado antes de &ndash; volver a programar el ejemplo de trabajo 30 segundos. La segunda vez que se produce un error en el trabajo, la biblioteca esperará al menos 60 segundos antes de intentar ejecutar el trabajo. Después del tercer intento fallido, la biblioteca esperará 120 segundos, etc. El `RetryStrategy.DefaultExponential` objeto `RetryStrategy` representa el valor predeterminado para la biblioteca de distribuidores de trabajos de Firebase. Tiene un retroceso inicial de 30 segundos y un retroceso máximo de 3600 segundos.
@@ -286,7 +284,6 @@ Cualquier método devolverá un valor entero:
 ## <a name="summary"></a>Resumen
 
 En esta guía se describe cómo usar el distribuidor de trabajos de Firebase para realizar el trabajo en segundo plano de forma inteligente. Se ha explicado cómo encapsular el trabajo que se va a `JobService` realizar como y cómo `FirebaseJobDispatcher` usar para programar ese trabajo, especificando los criterios con `JobTrigger` y cómo se deben controlar los errores con un `RetryStrategy`.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

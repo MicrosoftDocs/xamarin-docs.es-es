@@ -7,12 +7,12 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 0592f80b7d7352463ba22d7d371cc1b18ac3e0be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bfc1bec06c773039529cd85aac604a9a9031cb54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655578"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70773025"
 ---
 # <a name="the-skew-transform"></a>Transformación de sesgo
 
@@ -249,7 +249,6 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 Ahora la sombra se extiende desde la parte inferior de los trazos descendentes:
 
 [![](skew-images/skewshadowtext3-small.png "Captura de pantalla de la página sesgar sombra del texto con los ajustes para los trazos descendentes triple")](skew-images/skewshadowtext3-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto con los ajustes para los trazos descendentes")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

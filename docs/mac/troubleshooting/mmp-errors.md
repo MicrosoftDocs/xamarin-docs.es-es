@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 35de496d0684473fe3f6bc4ebadddc471b6b0cfe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ac50c665955f9bf234c46b3d4082fb628b61a33d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292892"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770027"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensajes de error de Xamarin. Mac (MMP)
 
@@ -616,7 +616,7 @@ Una posible solución alternativa sería deshabilitar la `register-protocols` op
 <a name="MM8026" />
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: * no se admite cuando el registrador dinámico se ha vinculado.
- 
+
 Esto normalmente indica un error en Xamarin. Mac, ya que el registrador dinámico no debe estar vinculado si es necesario. Registre un error en [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
- 
+
 Es posible forzar al enlazador a mantener el registrador dinámico agregando `--optimize=-remove-dynamic-registrar` los argumentos MMP adicionales en las opciones de compilación de Mac del proyecto.

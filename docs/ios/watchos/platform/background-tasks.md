@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287153"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768665"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tareas en segundo plano de watchos en Xamarin
 
@@ -109,7 +109,6 @@ Estas tareas se tratarán en detalle en las secciones siguientes.
 
 En el tiempo de ejecución de la tarea, la aplicación puede realizar cualquier tipo de procesamiento local, como actualizar una escala de tiempo complicada o capturar `NSUrlSession`algunos datos necesarios con.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
@@ -142,9 +141,6 @@ Cuando la aplicación marca el `WKSnapshotRefreshBackgroundTask` completado, el 
 
 > [!IMPORTANT]
 > Es importante programar siempre una `WKSnapshotRefreshBackgroundTask` después de que la aplicación haya recibido nuevos datos y actualizado su interfaz de usuario, o el usuario no verá la información modificada.
-
-
-
 
 Además, cuando el usuario recibe una notificación de la aplicación y la pulsa para poner la aplicación en primer plano, la instantánea debe estar actualizada, ya que actúa como la pantalla de inicio también:
 
@@ -700,8 +696,6 @@ Apple tiene las siguientes sugerencias:
 ## <a name="summary"></a>Resumen
 
 En este artículo se han tratado las mejoras que Apple ha realizado en watchos y cómo se pueden usar para mantener actualizada una aplicación de inspección. En primer lugar, se ha incluido toda la nueva tarea en segundo plano que Apple ha agregado en watchos 3. A continuación, se ha tratado el ciclo de vida de la API en segundo plano y cómo implementar tareas en segundo plano en una aplicación Xamarin watchos. Por último, se ha explicado cómo funciona la programación y se han ofrecido algunos procedimientos recomendados.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291817"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768486"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generación de código. Xib en Xamarin. iOS
 
@@ -72,7 +72,6 @@ Las clases de diseñador contienen métodos parciales correspondientes a todas l
 
 1. Si escribe `partial` en el cuerpo de clase de la parte de clase que no es de diseñador, Visual Studio para Mac ofrecerá para Autocompletar las firmas de todos los métodos parciales no implementados.
 2. Las firmas de método parcial tienen un atributo aplicado que los expone en el mundo de Objective-C, por lo que se pueden administrar como la acción correspondiente.
-
 
 Si lo desea, puede omitir el método parcial e implementar la acción aplicando el atributo a un método diferente o dejar que pase a una clase base.
 

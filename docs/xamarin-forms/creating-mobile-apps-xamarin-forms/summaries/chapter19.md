@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 19. Vistas de colección
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 19. Vistas de colección'
+description: 'Crear Mobile Apps con Xamarin. Forms: Resumen del capítulo 19. Vistas de colección'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bad46bead106304713bae91a7bf752db8080760a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334531"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760619"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumen del capítulo 19. Vistas de colección
 
@@ -113,7 +113,7 @@ Obtener el tamaño adecuado para todas las plataformas puede resultar complicado
 
 ### <a name="grouping-the-listview-items"></a>Agrupar los elementos de ListView
 
-`ListView` admite la agrupación de elementos y navegar entre esos grupos. El `ItemsSource` propiedad debe establecerse en una colección de colecciones: El objeto que `ItemsSource` se establece a debe implementar `IEnumerable`, y también debe implementar cada elemento de la colección `IEnumerable`. Cada grupo debe incluir dos propiedades: una descripción del grupo y una abreviatura de tres letras.
+`ListView` admite la agrupación de elementos y navegar entre esos grupos. La `ItemsSource` propiedad se debe establecer en una colección de colecciones: El objeto que `ItemsSource` se establece en debe implementar `IEnumerable`y cada elemento de la colección también debe implementar `IEnumerable`. Cada grupo debe incluir dos propiedades: una descripción del grupo y una abreviatura de tres letras.
 
 El [ `NamedColorGroup` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca crea siete grupos de `NamedColor` objetos. El [ **ColorGroupList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) ejemplo muestra cómo usar estos grupos con el [ `IsGroupingEnabled` ](xref:Xamarin.Forms.ListView.IsGroupingEnabled) propiedad de `ListView` establecido en `true`y el [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) y [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) propiedades enlazadas a las propiedades de cada grupo.
 
@@ -225,8 +225,6 @@ El [ **ConditionalSection** ](https://github.com/xamarin/xamarin-forms-book-samp
 ### <a name="a-tableview-menu"></a>Un menú TableView
 
 Otro uso de un `TableView` es un menú. El [ **MenuCommands frente** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/MenuCommands) muestra un menú que le permite mover un poco `BoxView` alrededor de la pantalla.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

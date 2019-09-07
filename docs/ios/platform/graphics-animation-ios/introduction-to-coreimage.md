@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a537926ab28bc355af5c5c4993ccff4a736b15aa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ffaa6553830a64589818c991e8f729ff7232e367
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288572"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752832"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen básica en Xamarin. iOS
 
@@ -25,7 +25,6 @@ Este documento contiene ejemplos sencillos de:
 - Detección de caras.
 - Aplicar filtros a una imagen
 - Enumerar los filtros disponibles.
-
 
 Estos ejemplos le ayudarán a empezar a incorporar características de imagen principales en sus aplicaciones de Xamarin. iOS.
 
@@ -55,7 +54,6 @@ La matriz de características se rellenará con `CIFaceFeature` objetos (si se d
 - MouthPosition: las coordenadas de la boca de este tipo.
 - LeftEyePosition: las coordenadas del ojo izquierdo para esta esfera.
 - RightEyePosition: las coordenadas del ojo adecuado para esta esfera.
-
 
 Las coordenadas de todas estas propiedades tienen su origen en la parte inferior izquierda, a diferencia de UIKit, que usa la parte superior izquierda como el origen. Al usar las coordenadas en `CIFaceFeature` , asegúrese de ' voltearlas '. Esta vista de imagen personalizada muy básica de CoreImage\CoreImageViewController.CS muestra cómo dibujar los triángulos de ' indicador de caras ' en la imagen `FlipForBottomOrigin` (tenga en cuenta el método):
 

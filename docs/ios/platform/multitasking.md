@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280157"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769638"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
@@ -40,7 +40,6 @@ En este artículo se explican los pasos necesarios para asegurarse de que la apl
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **Vídeo de multitarea para iPad**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -251,8 +250,6 @@ Para no participar en la reproducción de vídeo PIP, haga lo siguiente en la ap
 ## <a name="summary"></a>Resumen
 
 En este artículo se han explicado los pasos necesarios para asegurarse de que una aplicación de Xamarin. iOS se ejecutará y se comportará correctamente en la nueva capacidad de multitarea de iOS 9 para iPad. Además, se ha incluido la aceptación de la multitarea para las aplicaciones en las que no es una buena opción.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

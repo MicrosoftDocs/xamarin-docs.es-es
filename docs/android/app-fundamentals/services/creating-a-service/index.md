@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 63f815cc974315735220a99fd4cce2af408a8c2f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119043"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754894"
 ---
 # <a name="creating-a-service"></a>Crear un servicio
 
@@ -95,7 +95,7 @@ La forma más básica de iniciar un servicio en Android es enviar un `Intent` qu
 
 Si Android tiene más de una coincidencia posible para una intención implícita, puede pedirle al usuario que seleccione el componente para controlar la acción:
 
-![Captura de pantalla de un cuadro de diálogo de] desambiguación (images/creating-a-service-01.png "Captura de pantalla de un cuadro de diálogo de") desambiguación
+![Captura de pantalla de un cuadro de diálogo de desambiguación](images/creating-a-service-01.png "Captura de pantalla de un cuadro de diálogo de desambiguación")
 
 > [!IMPORTANT]
 > A partir de Android 5,0 (nivel de AP 21), no se puede usar una intención implícita para iniciar un servicio.
@@ -103,7 +103,6 @@ Si Android tiene más de una coincidencia posible para una intención implícita
 Siempre que sea posible, las aplicaciones deben usar intentos explícitos para iniciar un servicio. Una intención implícita no pide que un servicio específico inicie &ndash; , es una solicitud de algún servicio instalado en el dispositivo para controlar la solicitud. Esta solicitud ambigua puede dar lugar a que el servicio equivocado controle la solicitud o que otra aplicación se inicie innecesariamente (lo que aumenta la presión de los recursos en el dispositivo).
 
 La forma en que se envía el intento depende del tipo de servicio y se tratará con más detalle más adelante en las guías específicas de cada tipo de servicio.
-
 
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>Creación de un filtro de intención para intenciones IMPLÍCITAS
 
@@ -128,7 +127,6 @@ Esto da como resultado la inclusión de una entrada en el archivo &ndash; **arch
 ```
 
 Con los aspectos básicos de un servicio de Xamarin. Android fuera de camino, vamos a examinar los distintos subtipos de servicios con más detalle.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ff29b51cec6f612f4dac497e75eddba4dbd4c1e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525964"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754470"
 ---
 # <a name="using-adonet-with-android"></a>Uso de ADO.NET con Android
 
@@ -30,7 +30,6 @@ Para usar Access SQLite a través de ADO.net, `System.Data` debe `Mono.Data.Sqli
 ![Referencias de Android en Visual Studio para Mac](using-adonet-images/image5.png "Referencias de Android en Visual Studio para Mac") 
 
 -----
-
 
 Haga clic con el botón secundario en **referencias > Editar referencias...** y, a continuación, haga clic para seleccionar los ensamblados necesarios.
 
@@ -151,7 +150,6 @@ Dado que SQLite permite ejecutar `CREATE`comandos SQL arbitrarios en los datos, 
 
 - **ExecuteScalar** &ndash; Recupera un valor único (por ejemplo, un agregado).
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 `INSERT`las `UPDATE`instrucciones, `DELETE` y devolverán el número de filas afectadas. Todas las demás instrucciones SQL devolverán-1.
@@ -199,7 +197,6 @@ El método `ExecuteReader` devuelve un objeto `SqliteDataReader`. Además del `R
 
 - **HasRows** &ndash; Si se devolvieron filas.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 Utilice esto para `SELECT` las instrucciones que devuelven un valor único (como un agregado).
@@ -212,8 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 El `ExecuteScalar` tipo de valor devuelto `object` del método es &ndash; que debe convertir el resultado en función de la consulta de la base de datos. El resultado puede ser un entero de una `COUNT` consulta o una cadena de una consulta de una sola columna. `SELECT` Tenga en cuenta que esto es diferente `Execute` a otros métodos que devuelven un objeto de lector o un recuento del número de filas afectadas.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 8f7dd6f0a2e6db2580982a877cab2137cf28fab2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9266d8c4e1723adfb7e5e55dce7ede6d47f6f116
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508703"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755482"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin. Android
 
@@ -62,7 +62,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 Cuando Xamarin. Android compila la clase, también actualizará archivo AndroidManifest con los metadatos necesarios para registrar el receptor. Para un receptor de difusión registrado estáticamente, el `Enabled` valor de debe establecerse `true`en, de lo contrario, Android no podrá crear una instancia del receptor.
- 
+
 La `Exported` propiedad controla si el receptor de difusión puede recibir mensajes desde fuera de la aplicación. Si la propiedad no se establece explícitamente, Android determina el valor predeterminado de la propiedad basándose en si hay algún filtro de intención asociado al receptor de difusión. Si hay al menos un filtro de intención para el receptor de difusión, Android asumirá que la `Exported` propiedad es `true`. Si no hay ningún filtro de intención asociado al receptor de difusión, Android asumirá que el valor es `false`. 
 
 El `OnReceive` método recibe una referencia `Intent` al que se envió al receptor de difusión. Esto hace posible que el remitente de la intención pase valores al receptor de difusión.

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523703"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761409"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Aspectos básicos de Xamarin. Android Designer
 
 _En este tema se presentan las características de Xamarin. Android Designer, se explica cómo iniciar el diseñador, se describe el Superficie de diseño y se detalla cómo usar el panel Propiedades para editar las propiedades del widget._
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -84,7 +83,7 @@ La **barra de herramientas del diseñador** proporciona acceso a las siguientes 
 
 - **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
 
-- **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
+- **Opciones de calificador de recursos** Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
 
 - **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
 
@@ -94,7 +93,7 @@ La **barra de herramientas del diseñador** proporciona acceso a las siguientes 
 
 Cada una de estas características se explica con más detalle en estos temas:
 
-- [Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los **requisitos de recursos Opciones**y **barra de acciones configuración**.
+- [Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los requisitos de **recursos Opciones**y **barra de acciones configuración**.
 
 - En las [vistas de diseño alternativas](~/android/user-interface/android-designer/alternative-layout-views.md) se explica cómo usar el **selector de diseño alternativo**.
 
@@ -111,7 +110,6 @@ En este ejemplo, al hacer clic con `TextView` el botón secundario en, se abre u
 - **LinearLayout** abre un submenú para editar el `LinearLayout` elemento primario del `TextView`control. &ndash;
 
 - Operaciones de **eliminación**, **copia**y **corte** &ndash; `TextView`que se aplican al clic con el botón secundario.
-
 
 ### <a name="zoom-controls"></a>Controles de zoom
 
@@ -141,11 +139,11 @@ En la franja central situada entre los paneles **diseño** y **origen** , hay va
 
 Estos botones hacen lo siguiente:
 
-- **Diseño** de Este botón de nivel superior, **diseño**, selecciona el panel de **diseño.** &ndash; Al hacer clic en este botón, se habilitan los paneles **cuadro de herramientas** y **propiedades** y no se muestra la barra de herramientas del **Editor de texto** . Cuando se hace clic en el botón contraer (vea más abajo), el panel de **diseño** se presenta solo sin el panel de **origen** .
+- **Diseño** de Este botón de nivel superior, **diseño**, selecciona el panel de **diseño.** &ndash; Al hacer clic en este botón, se habilitan los paneles **cuadro de herramientas** y **propiedades** y no se muestra la barra de herramientas del **Editor de texto** . Cuando se hace clic en el botón **contraer** (vea más abajo), el panel de **diseño** se presenta solo sin el panel de **origen** .
 
 - **Intercambiar paneles** Este botón (que se asemeja a dos flechas opuestas) intercambia los paneles de diseño y de origen para que el panel de origen se encuentra a la izquierda y el panel de diseño está a la derecha. &ndash; Al hacer clic en él, se vuelven a intercambiar los paneles con sus ubicaciones originales.
 
-- **Origen** de Este botón (que se asemeja a dos corchetes angulares opuestos) selecciona el panel **origen.** &ndash; Al hacer clic en este botón, los paneles **cuadro de herramientas** y **propiedades** se deshabilitan y la barra de herramientas del **Editor de texto** se hace visible en la parte superior de Visual Studio. Cuando se haga clic en el botón contraer (vea más abajo), al hacer clic en el botón **origen** se muestra el panel **origen** en lugar del panel **diseño** .
+- **Origen** de Este botón (que se asemeja a dos corchetes angulares opuestos) selecciona el panel **origen.** &ndash; Al hacer clic en este botón, los paneles **cuadro de herramientas** y **propiedades** se deshabilitan y la barra de herramientas del **Editor de texto** se hace visible en la parte superior de Visual Studio. Cuando se haga clic en el botón **contraer** (vea más abajo), al hacer clic en el botón **origen** se muestra el panel **origen** en lugar del panel **diseño** .
 
 - **División vertical** Este botón (que es similar a una barra vertical) muestra los paneles de **diseño** y de origen en paralelo. &ndash; Esta es la disposición predeterminada.
 
@@ -154,7 +152,7 @@ Estos botones hacen lo siguiente:
 - **Contraer panel** Este botón (que se parece a dos corchetes angulares) "contrae" la presentación de dos paneles del diseño y del **origen** en una sola vista de uno de estos paneles. &ndash;
     Este botón se convierte en el botón de **Panel de expansión** (similar a dos corchetes angulares que apuntan a la izquierda), en el que se puede hacer clic para devolver la vista al modo de presentación de doble panel (**diseño** y **origen**).
 
-Cuando se hace clic en el **Panel** de contraer, solo se muestra el panel de **diseño** . Sin embargo, puede hacer clic en el botón **origen** para ver en su lugar solo el panel **origen** . Vuelva a hacer clic en el botón **diseño** para volver al panel de **diseño** .
+Cuando se hace clic en el **Panel de contraer** , solo se muestra el panel de **diseño** . Sin embargo, puede hacer clic en el botón **origen** para ver en su lugar solo el panel **origen** . Vuelva a hacer clic en el botón **diseño** para volver al panel de **diseño** .
 
 ## <a name="source-pane"></a>Panel origen
 
@@ -165,7 +163,6 @@ En el panel **origen** se muestra el origen XML que subyace al diseño mostrado 
 Los cambios realizados en el origen XML se representan inmediatamente en el **superficie de diseño**; los cambios realizados en el **superficie de diseño** hacen que el origen XML mostrado en el panel de **origen** se actualice en consecuencia. Al realizar cambios en XML en el panel **origen** , las características de autocompletar e IntelliSense están disponibles para acelerar el desarrollo de la interfaz de usuario basada en XML, tal como se explica a continuación.
 
 Para una mayor facilidad de navegación al trabajar con archivos XML largos, el panel de **origen** es compatible con la barra de desplazamiento de Visual Studio (como se mostró a la derecha en la captura de pantalla anterior). Para obtener más información sobre la barra de desplazamiento, vea [Cómo realizar un seguimiento del Código personalizando la barra de desplazamiento](https://msdn.microsoft.com/library/dn237345.aspx).
-
 
 ### <a name="autocompletion"></a>Autocompletar
 
@@ -183,8 +180,6 @@ Después de escribir un nuevo atributo para un widget y de empezar a asignarle u
 
 En la parte inferior de este menú emergente hay dos botones (como se indica en rojo en la captura de pantalla anterior). Al hacer clic en el botón **recursos del proyecto** de la izquierda, la lista se restringe a los recursos que forman parte del proyecto de la aplicación, mientras que al hacer clic en el botón **recursos del marco** de la derecha se restringe la lista para mostrar los recursos disponibles en el marco.
 Estos botones se activan o desactivan: puede hacer clic en ellos de nuevo para deshabilitar la acción de filtrado que proporciona cada una.
-
-
 
 ## <a name="properties-pane"></a>Panel Propiedades
 
@@ -216,7 +211,6 @@ En esta lista, puede seleccionar un recurso de texto para usarlo en el widget en
 [![Icono de lista del selector de recursos recurso para un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 Al hacer clic en el cuadrado en blanco situado `Src` a la derecha de la propiedad, se abre el cuadro de diálogo **seleccionar recurso** con una lista de recursos que van desde los colores (como se mostró anteriormente) a drawables.
-
 
 ### <a name="boolean-property-references"></a>Referencias de propiedades booleanas
 
@@ -276,7 +270,6 @@ No todos los contenedores permiten editar `Size` el de un widget. Por ejemplo, o
 
 ![Sin controladores de tamaño](designer-basics-images/vs/20-no-resize-handles.png)
 
-
 ## <a name="document-outline"></a>Esquema del documento
 
 El **esquema del documento** muestra la jerarquía del widget del diseño.
@@ -287,9 +280,6 @@ En el ejemplo siguiente, se selecciona `LinearLayout` el widget contenedor:
 El contorno del widget seleccionado (en este caso, a `LinearLayout`) también se resalta en el **superficie de diseño**. El widget seleccionado en el esquema del documento permanece sincronizado con su homólogo en el **superficie de diseño**. Esto resulta útil para seleccionar grupos de vistas, que no siempre son fáciles de seleccionar en el **superficie de diseño**.
 
 El **esquema del documento** admite copiar y pegar, o puede usar arrastrar y colocar. Arrastrar y colocar se admite desde el **esquema del documento** hasta el **superficie de diseño** , así como desde el **superficie de diseño** al **esquema del documento**. Además, al hacer clic con el botón secundario en un elemento del **esquema del documento** , se muestra el menú contextual de ese elemento (el mismo menú contextual que aparece al hacer clic con el botón secundario en ese mismo widget en el **superficie de diseño**).
-
-
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -346,7 +336,7 @@ La barra de herramientas proporciona acceso a las siguientes características:
 
 - **Selector de configuración** Selecciona la configuración del dispositivo, como *vertical* u *horizontal.* &ndash;
 
-- **Opciones** de calificador de recursos Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
+- **Opciones de calificador de recursos** Abre un cuadro de diálogo que muestra los menús desplegables para seleccionar el idioma, el modo de la interfaz de usuario, el modo nocturno y las opciones de pantalla redondeada. &ndash;
 
 - **Configuración de barra de acciones** &ndash; Configura los valores de barra de acciones para el diseño.
 
@@ -356,7 +346,7 @@ La barra de herramientas proporciona acceso a las siguientes características:
 
 Cada una de estas características se explica con más detalle en estos temas:
 
-[Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los **requisitos de recursos Opciones**y **barra de acciones configuración**.
+[Opciones de visualización y calificadores de recursos](~/android/user-interface/android-designer/resource-qualifiers.md) proporciona información detallada sobre el **selector de dispositivos**, el selector de **versiones de Android**, el selector de **temas**, el **selector de configuración**y los requisitos de **recursos Opciones**y **barra de acciones configuración**.
 
 En las [vistas de diseño alternativas](~/android/user-interface/android-designer/alternative-layout-views.md) se explica cómo usar el **selector de diseño alternativo**.
 
@@ -418,7 +408,7 @@ El panel de propiedades se divide en varias secciones que agrupan propiedades &n
 
 - **Diseño** de &ndash; Propiedades que establecen la ubicación y el tamaño del widget.
 
-- Desplazarse &ndash; Propiedades de desplazamiento.
+- **Desplazarse** &ndash; Propiedades de desplazamiento.
 
 - **Comportamiento** de &ndash; Marcas que establecen cómo se comporta el widget.
 
@@ -445,7 +435,6 @@ En el ejemplo siguiente se muestra el selector de recursos `Src` para la propied
 Las propiedades *booleanas* normalmente se muestran como una casilla en el panel de propiedades. Cuando una `Boolean` propiedad admite referencias de recursos, aparece una pequeña casilla junto a la propiedad. Una casilla activada significa `true` y un cuadro vacío significa `false`. También puede especificar directamente un valor `true` como o. `false` Al mantener el mouse sobre la entrada, se abre un pequeño icono de campo de texto. Puede hacer clic en él si desea escribir el valor manualmente.
 
 [![Ejemplo de configuración de propiedades booleanas](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
-
 
 ## <a name="grouped-properties"></a>Propiedades agrupadas
 

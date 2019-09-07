@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 150a4e3c1deafbabea892d5adb786374c3d97d12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277866"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769586"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -74,7 +74,6 @@ Actualmente, cinco tipos admitidos, que se pueden distinguir en la aplicación W
 - **Tarjeta de tienda**: parte superior redondeada, como una tarjeta de crédito o débito.
 - **Cupón** : perforado a lo largo de la parte superior.
 - **Genérica**: igual que la tarjeta de tienda, parte superior redondeada.
-
 
 Los cinco tipos de tarjetas se muestran en esta captura de pantalla (en orden: cupón, genérica, tarjeta de tienda, tarjeta de embarque y entrada de evento):
 
@@ -204,10 +203,8 @@ Las tarjetas se firman con un certificado privado que genera en el Portal de apr
 1. Utilice el certificado para firmar el `manifest.json` archivo y escribir el resultado en un archivo denominado `signature` .
 1. Comprimir todo y dar al archivo resultante una `.pkpass` extensión de archivo.
 
-
 Dado que la clave privada se necesita para firmar la tarjeta, este proceso solo debe realizarse en un servidor seguro que controle. NO distribuya las claves para probar y generar tarjetas en una aplicación.
 
- 
 ## <a name="configuration-and-setup"></a>Configuración y configuración
 
 Esta sección contiene instrucciones para ayudar a configurar los detalles de aprovisionamiento y crear el primer paso.
@@ -229,7 +226,6 @@ El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta)
 
 2. Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo de `pass.` paso deben comenzar con la `pass.com.xamarin.coupon.banana` cadena en este ejemplo, se usa: [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
-
 3. Confirme el ID. de paso presionando el botón **registrar** .
 
 #### <a name="generate-a-certificate"></a>Generar un certificado
@@ -242,13 +238,11 @@ Para crear un nuevo certificado para este identificador de tipo de paso, haga lo
 
     [![](passkit-images/cert-dist.png "Seleccione Crear certificado.")](passkit-images/cert-dist.png#lightbox)
 
-
 2. Siga los pasos para crear una solicitud de firma de certificado (CSR).
   
 3. Presione el botón **continuar** en el portal para desarrolladores y cargue el CSR para generar el certificado.
 
 4. Descargue el certificado y haga doble clic en él para instalarlo en la cadena de claves.
-
 
 Ahora que hemos creado un certificado para este Pass Type ID (identificador del tipo de tarjeta), en la siguiente sección se describe cómo crear una tarjeta manualmente.
 
@@ -264,7 +258,6 @@ Ahora que hemos creado el tipo de tarjeta, podemos crear manualmente una tarjeta
 - Calcule los hashes SHA1 para cada archivo de la carpeta y escriba en manifest. JSON.
 - Firme manifest. JSON con el archivo Certificate. p12 descargado.
 - Comprima el contenido del directorio y cámbiele el nombre para que incluya la extensión .pkpass.
-
 
 Hay algunos archivos de origen en el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) de este artículo que se pueden usar para generar una tarjeta. Use los archivos del directorio `CouponBanana.raw` del directorio CreateAPassManually. Aparecen los siguientes archivos:
 
@@ -338,7 +331,6 @@ Las aplicaciones de canalización son aplicaciones intermediarias que pueden rec
 - **Safari**: reconoce el tipo de contenido de la tarjeta cuando se hace clic en un vínculo de URL de tarjeta.
 - **Otras aplicaciones personalizadas** : cualquier aplicación que reciba datos adjuntos o vínculos abiertos (clientes de medios sociales, lectores de correo, etc.).
 
-
 En esta captura de pantalla se muestra cómo **Mail** en iOS 6 reconoce un archivo adjunto de tarjeta y (cuando se toca) ofrece la posibilidad de **Agregarlo** a Wallet.
 
  [![](passkit-images/image22.png "En esta captura de pantalla se muestra cómo mail in iOS 6 reconoce un archivo adjunto de Pass")](passkit-images/image22.png#lightbox)
@@ -350,7 +342,6 @@ Si va a compilar una aplicación que podría ser una canalización para tarjetas
 - **Extensión de archivo** :. pkpass
 - **Tipo MIME** : aplicación/vnd. Apple. pkpass
 - **UTI** – com.apple.pkpass
-
 
 El funcionamiento básico de una aplicación de canalización es recuperar el archivo de tarjeta y llamar al controlador `PKAddPassesViewController` de PassKit para proporcionar al usuario la opción de agregar la tarjeta a Wallet. La implementación de este controlador de vista se trata en la siguiente sección en **Aplicaciones complementarias**.
 
@@ -383,7 +374,6 @@ Haga doble clic en el archivo **contitles. plist** en el panel de solución para
 En la sección Wallet, seleccione la opción **Habilitar Wallet** .
 
 ![](passkit-images/image32.png "Habilitar derechos de Wallet")
-
 
 La opción predeterminada es que la aplicación permita todos los tipos de tarjeta. En cambio, es posible restringir la aplicación y permitir solo un subconjunto de tipos de tarjeta de equipo. Para habilitarlo, seleccione **Permitir un subconjunto de tipos de pase de equipo** y escriba el identificador del tipo de tarjeta del subconjunto que quiera permitir.
 

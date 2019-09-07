@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290635"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769795"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementación de SiriKit en Xamarin. iOS
 
@@ -50,7 +50,6 @@ Entre ellas se incluyen las siguientes:
 3. **Aplicación** : proporciona a la aplicación vocabularios específicos del usuario para ayudar a Siri a trabajar con ella. 
 
 Todos estos elementos y los pasos para incluirlos en la aplicación se tratarán en detalle en las secciones siguientes.
-
 
 ## <a name="preparing-the-app"></a>Preparar la aplicación
 
@@ -156,7 +155,6 @@ Si opta por crear una extensión de intención independiente para cada intento, 
 Para ayudar a elegir entre las dos opciones, consulte si cualquiera de las intenciones pertenece de forma natural. Por ejemplo, una aplicación que ha realizado llamadas de audio y vídeo podría querer incluir ambos intentos en una única extensión de intención, ya que están administrando tareas similares y pueden proporcionar la mayor reutilización de código.
 
 Para cualquier intención o grupo de intenciones que no quepan en un grupo existente, cree una nueva extensión de intención en la solución de la aplicación para contenerlos.
-
 
 ### <a name="setting-the-required-entitlements"></a>Establecer los derechos necesarios
 
@@ -266,7 +264,6 @@ Edite el archivo `Info.plist` de la aplicación y `NSSiriUsageDescription` agreg
 
 `INPreferences` Llame al `RequestSiriAuthorization` método de la clase cuando se inicie la aplicación por primera vez. Edite `AppDelegate.cs` la clase y haga `FinishedLaunching` que el método tenga el aspecto siguiente:
 
-
 ```csharp
 using Intents;
 ...
@@ -288,7 +285,6 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
             break;
         }
     });
-
 
     return true;
 }
@@ -684,7 +680,6 @@ Si la aplicación requiere opcionalmente que el usuario inicie sesión en el dis
 
 -----
 
-
 Para obtener una lista completa de los dominios de intención disponibles, consulte la referencia de los [dominios de intención](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)de Apple.
 
 ### <a name="configuring-the-main-class"></a>Configurar la clase Main
@@ -743,7 +738,6 @@ En el caso de la aplicación MonkeyChat de ejemplo, la extensión intención req
 Además, MonkeyChat requiere contenido para el cuerpo del mensaje. Si el usuario no lo ha proporcionado, Siri debe pedir al usuario el contenido.
 
 La extensión intención tendrá que controlar correctamente cada uno de estos casos.
-
 
 ```csharp
 [Export ("resolveRecipientsForSearchForMessages:withCompletion:")]
@@ -810,7 +804,6 @@ Para obtener más información, consulte [la referencia de la fase CONFIRM](~/io
 ### <a name="processing-the-intent"></a>Procesamiento de la intención
 
 Este es el punto en el que la extensión de intención realiza realmente la tarea para completar la solicitud del usuario y devolver los resultados a Siri para que se pueda informar al usuario.
-
 
 ```csharp
 public void HandleSendMessage (INSendMessageIntent intent, Action<INSendMessageIntentResponse> completion)
@@ -1064,9 +1057,6 @@ Apple sugiere que el desarrollador tenga en cuenta las siguientes consideracione
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha explicado SiriKit y se ha mostrado cómo puede agregarse a las aplicaciones de Xamarin. iOS para proporcionar servicios que son accesibles para el usuario mediante Siri y la aplicación Maps en un dispositivo iOS.
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

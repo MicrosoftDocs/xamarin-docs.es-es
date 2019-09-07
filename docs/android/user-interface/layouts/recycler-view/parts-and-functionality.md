@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 89b7f70ae69987edbd465d669f1bac17ddebc7c8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bea058a1f275d6f02fe4cbdf70f8e47a11d1cf8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522444"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764124"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Componentes y funcionalidad de RecyclerView
-
 
 `RecyclerView`controla algunas tareas internamente (como el desplazamiento y el reciclaje de vistas), pero es esencialmente un administrador que coordina las clases auxiliares para mostrar una colección. `RecyclerView`delega las tareas a las siguientes clases auxiliares:
 
@@ -51,7 +50,6 @@ Además, opcionalmente, puede extender las clases siguientes para cambiar la apa
 
 Si no extiende `ItemDecoration` y `ItemAnimator`, `RecyclerView` utiliza implementaciones predeterminadas. En esta guía no se explica cómo crear clases `ItemDecoration` y `ItemAnimator` personalizadas; para obtener más información sobre estas clases, vea [RecyclerView. ItemDecoration](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) y [RecyclerView. ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-
 <a name="recycling" />
 
 ### <a name="how-view-recycling-works"></a>Cómo funciona el reciclaje de vistas
@@ -74,8 +72,6 @@ Si no extiende `ItemDecoration` y `ItemAnimator`, `RecyclerView` utiliza impleme
 6. La vista reciclada pasa a la pantalla cuando el usuario desplaza el `RecyclerView` objeto hasta el siguiente elemento de la lista. Mientras tanto, otra vista se desplaza fuera de la vista y se recicla según los pasos anteriores.
 
 Además de la reutilización de la `RecyclerView` vista de elementos, también usa otra optimización de eficacia: los titulares de la vista. Un *contenedor de vistas* es una clase simple que almacena en caché las referencias de la vista. Cada vez que el adaptador infla un archivo de diseño de elementos, también crea un contenedor de vistas correspondiente. El titular de la `FindViewById` vista usa para obtener referencias a las vistas dentro del archivo de diseño de elementos inflado. Estas referencias se usan para cargar datos nuevos en las vistas cada vez que se recicla el diseño para Mostrar datos nuevos.
- 
-
 
 ### <a name="the-layout-manager"></a>Administrador de diseño
 
@@ -96,7 +92,6 @@ Para especificar el administrador de diseño, cree una instancia del administrad
 
 Para obtener más información sobre el administrador de diseño, vea la referencia de la [clase RecyclerView. LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-
 ### <a name="the-view-holder"></a>El titular de la vista
 
 El titular de la vista es una clase que se define para almacenar en caché las referencias de la vista. El adaptador utiliza estas referencias de vista para enlazar cada vista a su contenido. Cada elemento de `RecyclerView` tiene una instancia asociada de contenedor de vistas que almacena en memoria caché las referencias de la vista para ese elemento. Para crear un contenedor de vistas, siga estos pasos para definir una clase que contenga el conjunto exacto de vistas por elemento:
@@ -107,7 +102,6 @@ El titular de la vista es una clase que se define para almacenar en caché las r
 
 Un ejemplo detallado de una `ViewHolder` implementación se presenta en [un ejemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Para obtener más información `RecyclerView.ViewHolder`sobre, vea la referencia de la [clase RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
 
 ### <a name="the-adapter"></a>El adaptador
 
@@ -131,8 +125,6 @@ Al implementar un adaptador, debe invalidar los métodos siguientes `RecyclerVie
 
 El administrador de diseño llama a estos métodos mientras coloca los elementos dentro `RecyclerView`de. 
 
-
-
 ### <a name="notifying-recyclerview-of-data-changes"></a>Notificar los cambios de datos de RecyclerView
 
 `RecyclerView`no actualiza automáticamente su presentación cuando cambia el contenido de su origen de datos; el adaptador debe notificar `RecyclerView` cuando se produzca un cambio en el conjunto de datos. El conjunto de datos puede cambiar de muchas maneras. por ejemplo, el contenido de un elemento puede cambiar o se puede modificar la estructura global de los datos.
@@ -155,7 +147,6 @@ El administrador de diseño llama a estos métodos mientras coloca los elementos
 Si sabe exactamente cómo ha cambiado el conjunto de datos, puede llamar a los métodos adecuados anteriores para actualizar `RecyclerView` de la manera más eficaz. Si no sabe exactamente cómo ha cambiado el conjunto de datos, puede llamar a `NotifyDataSetChanged`, que es mucho menos eficaz porque `RecyclerView` debe actualizar todas las vistas que son visibles para el usuario. Para obtener más información acerca de estos métodos, vea [RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
 En el siguiente tema, [un ejemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md), se implementa una aplicación de ejemplo para mostrar ejemplos de código reales de los elementos y la funcionalidad descritos anteriormente.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

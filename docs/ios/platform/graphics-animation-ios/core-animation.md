@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 366932e32443a7284f15f51a7a9a437d4b177438
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286251"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753074"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animación básica en Xamarin. iOS
 
@@ -44,7 +44,6 @@ En esta sección se describen las características de animación de UIKit, entre
 - Transiciones entre vistas
 - Animación de la propiedad View
 
-
 ### <a name="view-controller-transitions"></a>Transiciones de controladores de vistas
 
  `UIViewController`proporciona compatibilidad integrada para la transición entre controladores de vista a través del `PresentViewController` método. Cuando se `PresentViewController`usa, la transición al segundo controlador se puede animar opcionalmente.
@@ -62,7 +61,6 @@ En este caso, `PartialCurl` se usa una animación, aunque hay varias otras dispo
 - `CoverVertical`: Se desliza hacia arriba desde la parte inferior de la pantalla.
 - `CrossDissolve`: La vista antigua atenúa & la nueva vista se atenúa.
 - `FlipHorizontal`: Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
-
 
 Para animar la transición, `true` pase como el segundo argumento `PresentViewController`a:
 
@@ -106,7 +104,6 @@ UIKit admite animar una variedad de propiedades de `UIView` la clase de forma gr
 - Alpha
 - Transformación
 - Color
-
 
 Estas animaciones se producen implícitamente mediante la especificación de los cambios `NSAction` de propiedad en un delegado `UIView.Animate` que se pasa al método estático. Por ejemplo, el código siguiente anima el punto central de un `UIImageView`:
 
@@ -233,7 +230,7 @@ Este código cambia el `Position` de la capa mediante la creación de una ruta d
 Las siguientes capturas de pantallas muestran el nivel que contiene la imagen que se anima a través de la ruta de acceso especificada:
 
  ![](core-animation-images/12-explicit-animation.png "En esta captura de pantalla se muestra el nivel que contiene la imagen que se anima a través de la ruta de acceso especificada")
- 
+
 ## <a name="summary"></a>Resumen
 
 En este artículo, analizamos las capacidades de animación proporcionadas a través de los marcos de *animación básicos* . Hemos examinado la animación básica, que muestra cómo impulsa animaciones en UIKit y cómo se puede usar directamente para el control de animación de nivel inferior.

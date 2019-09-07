@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 4197dfb38ac6118d20da2b87d0c686558d77b0f6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dc0838bf63492dd06d5452cedbaf1d7fb8313c9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281572"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752313"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Cambios en StoreKit en iOS 6
 
@@ -246,7 +246,6 @@ Nuestra aplicación de ejemplo tiene capítulos de la venta: cada paquete de con
 
 - un archivo de texto y
 - una imagen para representar el capítulo.
-
 
 Para empezar, seleccione **archivo > nuevo proyecto** en el menú y elija **contenido de compra**desde la aplicación:
 
@@ -484,7 +483,6 @@ public void SaveDownload (SKDownload download)
 ```
 
 Cuando `FinishTransaction` se llama a, ya no se garantiza que los archivos descargados `Cache` estén en el directorio. Se deben copiar todos los archivos antes `FinishTransaction`de llamar a.
-
 
 ## <a name="other-considerations"></a>Otras consideraciones
 

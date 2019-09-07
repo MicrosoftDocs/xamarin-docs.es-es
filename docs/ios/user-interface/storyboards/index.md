@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284330"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768879"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -21,7 +21,6 @@ En esta guía se explicará qué es un guion gráfico y se examinan algunos de l
 Antes de que Apple introdujera el formato de archivo de guion gráfico como una representación visual de la interfaz de usuario de una aplicación de iOS, los desarrolladores creaban archivos XIB para cada controlador de vista y programaban la navegación entre cada vista manualmente.  El uso de un guion gráfico permite al desarrollador definir tanto controladores de vista como la navegación entre ellos en una superficie de diseño y ofrece la edición WYSIWYG de la interfaz de usuario de la aplicación.
 
 Un guion gráfico se puede crear, abrir y editar con Xamarin iOS Designer. En esta guía también se explica cómo usar el diseñador para crear los guiones gráficos mientras C# se usa para programar la navegación.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +76,7 @@ Hay diferentes tipos de transiciones, cada una de las cuales proporciona control
 ### <a name="adaptive-segue-types"></a>Tipos de segue adaptables
 
  iOS 8 presentó [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) para permitir que un archivo de guión gráfico de iOS funcione con todos los tamaños de pantalla disponibles, lo que permite a los desarrolladores crear una interfaz de usuario para todos los dispositivos iOS. De forma predeterminada, todas las aplicaciones de Xamarin. iOS nuevas usarán clases de tamaño. Para usar clases de tamaño de un proyecto anterior, consulte la guía de [Introducción a guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) . 
- 
+
 Cualquier aplicación que use clases de tamaño también usará el nuevo [*objetos segue adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Al usar clases de tamaño, recuerde que no vamos a especificar directamente si se usa un iPhone o iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre tendrá el mismo aspecto, independientemente de la cantidad de espacio real con el que tenga que trabajar. El trabajo de objetos segue adaptable es juzgar el entorno y determinar el mejor modo de presentar el contenido. A continuación se muestran los objetos segue adaptables: 
 
 [![](images/adaptivesegue.png "La lista desplegable Adaptive objetos segue")](images/adaptivesegue.png#lightbox)
@@ -92,7 +91,6 @@ Cualquier aplicación que use clases de tamaño también usará el nuevo [*objet
 ### <a name="transferring-data-with-segues"></a>Transferir datos con objetos segue
 
 Las ventajas de una segue no terminan con las transiciones. También se pueden usar para administrar la transferencia de datos entre controladores de vista. Esto se logra invalidando el `PrepareForSegue` método en el controlador de vista inicial y controlando los datos por nosotros mismos. Cuando se desencadena segue (por ejemplo, con un botón), la aplicación llamará a este método, lo que proporciona una oportunidad para preparar el nuevo controlador de vista *antes* de que se produzca la navegación. En el código siguiente, en el ejemplo [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) , se muestra: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -252,7 +250,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 Al crear un guión gráfico mediante el diseñador, el IDE agregará automáticamente el atributo [[Register]](xref:Foundation.RegisterAttribute) en la parte superior `designer.cs` de la clase y pasará un identificador de cadena, que es idéntico al identificador de guión gráfico especificado en el paso anterior. Esto vinculará C# a la escena correspondiente en el guión gráfico.
 
 En algún momento podría querer agregar una clase existente que **no** se creó en el diseñador. En este caso, registraría esta clase como normal:
@@ -340,7 +337,6 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea nuest
 3. Haga clic en segue y asígnele el *identificador* `SegueToPink`:
 
     [![](images/namesegue.png "Haga clic en segue y asígnele el identificador SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Por último, agregue el siguiente método ShouldPerformSegue a `MainViewController` la clase:
 
@@ -489,8 +485,6 @@ Cuando se ejecuta la aplicación y el usuario hace clic en el elemento de la int
 ## <a name="summary"></a>Resumen
 
 En este artículo se presenta el concepto de guiones gráficos y cómo pueden ser beneficiosos en el desarrollo de aplicaciones de iOS. Se describen las escenas, los controladores de vista, las vistas y las jerarquías de vistas y cómo se vinculan las escenas con distintos tipos de objetos segue.  También explora la creación de instancias de los controladores de vista manualmente desde un guion gráfico y la creación de objetos segue condicionales.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

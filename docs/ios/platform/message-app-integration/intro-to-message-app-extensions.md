@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ca782e57964adadd85412030db2247f0de690a6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280040"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769664"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Conceptos básicos de la extensión de aplicaciones de mensajes en Xamarin. iOS
 
@@ -337,7 +337,6 @@ namespace MonkeyStickers
         public override void ViewDidLoad ()
         {
             base.ViewDidLoad ();
-
 
             // Create new browser and configure it
             BrowserViewController = new StickerBrowserViewController (MSStickerSize.Regular);
@@ -707,8 +706,6 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 ## <a name="summary"></a>Resumen
 
 En este artículo se incluye una extensión de aplicación de mensajes en una solución de Xamarin. iOS que se integra con la aplicación de **mensajes** y presenta una nueva funcionalidad al usuario. Se describe el uso de la extensión para enviar texto, adhesivos, archivos multimedia y mensajes interactivos.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286587"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752327"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Cambios en la tienda de aplicaciones en iOS 11
 
@@ -33,7 +33,6 @@ La tienda de aplicaciones rediseñada tiene las siguientes secciones:
 Los iconos de tienda (o los iconos de marketing) ya no se administran en iTunes Connect y, en su lugar, se deben incluir como un [Catálogo de recursos](~/ios/app-fundamentals/images-icons/app-icons.md) en el archivo binario de la aplicación, de forma similar a los iconos de la aplicación. Se debe incluir un icono de almacén 1024 x 1024 en formato PNG en un catálogo de recursos para el envío correcto de aplicaciones iOS 11.
 
 La reducción de la aplicación garantiza que este catálogo de recursos adicional no aumente el tamaño de la aplicación.
-
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>Compras desde la aplicación promocionadas en la tienda de aplicaciones
 
@@ -96,7 +95,6 @@ Las versiones por fases están habilitadas en iTunes Connect. Haga clic en la ap
 ![Opción que muestra la versión por fases para las actualizaciones automáticas](app-store-changes-images/image6.png)
 
 La actualización está disponible inmediatamente para su descarga en la pestaña actualizaciones de la tienda de aplicaciones. Las versiones por fases solo están disponibles para los usuarios que tienen seleccionada la opción Descargas automáticas.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

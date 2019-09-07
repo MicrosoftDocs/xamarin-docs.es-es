@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: d4d7379e1d4d2dd605331b30d692df299f5f5c13
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6475cd0f27e41321902b57dd28f59bfb250e0c8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523662"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757463"
 ---
 # <a name="android-pie-features"></a>Características de gráficos circulares de Android
 
@@ -81,28 +81,24 @@ Cree un nuevo proyecto de Xamarin. Android. Si no está familiarizado con el des
 
 Al crear un proyecto de Android, debe configurar las opciones de versión para que tengan como destino Android 9,0 o posterior. Por ejemplo, para tener como destino el gráfico circular de Android, debe configurar el nivel de API de Android de destino de su proyecto a **android 9,0** (API 28). Se recomienda que también establezca el nivel de plataforma de destino en API 28 o posterior. Para más información sobre la configuración de los niveles de la API de Android, consulte [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md).
 
-
 ### <a name="configure-a-device-or-emulator"></a>Configurar un dispositivo o emulador
 
 Si usa un dispositivo físico, como un nexo o un píxel, puede actualizar el dispositivo a un gráfico circular de Android siguiendo las instrucciones de [imágenes de fábrica para dispositivos de nexo y píxel](https://developers.google.com/android/images).
 
 Si usa un emulador, cree un dispositivo virtual para el nivel de API 28 y seleccione una imagen basada en x86. Para obtener información sobre el uso de la Android Device Manager para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con la Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-Para obtener información sobre cómo usar el emulador de Android para probar y depurar, consulte depuración [en el Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
-
-
+Para obtener información sobre cómo usar el emulador de Android para probar y depurar, consulte [depuración en el Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 ## <a name="new-features"></a>Características nuevas
 
 El gráfico circular de Android presenta una variedad de características nuevas. Algunas de estas nuevas características están pensadas para aprovechar las nuevas capacidades de hardware que ofrecen los dispositivos Android más recientes, mientras que otras están diseñadas para mejorar aún más la experiencia del usuario de Android:
 
-- **Mostrar compatibilidad con** recortes Proporciona API para buscar la ubicación y la forma del recorte en la parte superior de la pantalla en los dispositivos Android más recientes. &ndash;
+- **Mostrar compatibilidad con recortes** Proporciona API para buscar la ubicación y la forma del _recorte_ en la parte superior de la pantalla en los dispositivos Android más recientes. &ndash;
 
-- **Mejoras** en las notificaciones Ahora, los mensajes de notificación pueden mostrar imágenes, `Person` y se usa una nueva clase para simplificar los participantes de la conversación. &ndash;
+- **Mejoras en las notificaciones** Ahora, los mensajes de notificación pueden mostrar imágenes, `Person` y se usa una nueva clase para simplificar los participantes de la conversación. &ndash;
 
 - **Posicionamiento interior** &ndash; Compatibilidad de la plataforma con el protocolo WiFi de tiempo de ida y vuelta, que permite que las aplicaciones usen dispositivos wifi para la navegación en la configuración de interior.
 
 - **Compatibilidad con varias cámaras** &ndash; Ofrece la capacidad de obtener acceso a flujos simultáneamente desde varias cámaras físicas (como cámaras duales y de doble retroceso).
-
 
 En las secciones siguientes se resaltan estas características y se proporcionan ejemplos de código breves para ayudarle a empezar a usarlas en la aplicación.
 
@@ -137,9 +133,7 @@ Tenga en cuenta que no se permite que el fondo blanco de la aplicación se extie
 
 Si necesita información más detallada sobre el área de recorte en el dispositivo, puede usar la nueva clase [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout`representa el área de la pantalla que no se puede usar para mostrar el contenido. Puede usar esta información para recuperar la ubicación y la forma del recorte para que la aplicación no intente Mostrar contenido en este área no funcional.
 
-Para obtener más información acerca de las nuevas características de recorte en Android P, consulte [Mostrar compatibilidad con](https://developer.android.com/about/versions/pie/android-9.0#cutout)recortes.
-
-
+Para obtener más información acerca de las nuevas características de recorte en Android P, consulte [Mostrar compatibilidad con recortes](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 ### <a name="notifications-enhancements"></a>Mejoras en las notificaciones
 
@@ -206,25 +200,22 @@ En el ejemplo siguiente se muestra cómo incluir una imagen en una notificación
 
 Para obtener más información sobre la creación de notificaciones, consulte [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md).
 
-
 ### <a name="indoor-positioning"></a>Posicionamiento interior
 
-El gráfico circular de Android proporciona compatibilidad con IEEE 802.11 MC (también conocido como _tiempo de ida_ yvuelta WiFi), lo que permite que las aplicaciones detecten la distancia a uno o varios puntos de acceso Wi-Fi. Con esta información, es posible que la aplicación aproveche el *posicionamiento interior* con una precisión de uno a dos metros. En los dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11 MC, la aplicación puede ofrecer características de navegación, como el control basado en la ubicación de dispositivos inteligentes o las instrucciones que se activan a través de un almacén:
+El gráfico circular de Android proporciona compatibilidad con IEEE 802.11 MC (también conocido como _tiempo de ida y vuelta_ _WiFi),_ lo que permite que las aplicaciones detecten la distancia a uno o varios puntos de acceso Wi-Fi. Con esta información, es posible que la aplicación aproveche el *posicionamiento interior* con una precisión de uno a dos metros. En los dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11 MC, la aplicación puede ofrecer características de navegación, como el control basado en la ubicación de dispositivos inteligentes o las instrucciones que se activan a través de un almacén:
 
 [![Ejemplo de navegación en interiores con RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 La nueva clase [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) y varias clases auxiliares proporcionan los medios para medir la distancia a los dispositivos Wi-Fi. Para obtener más información sobre las API de posicionamiento interior introducidas en Android P, consulte [Android .net. WiFi. RTT](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
-
 ### <a name="multi-camera-support"></a>Compatibilidad con varias cámaras
 
-Muchos dispositivos Android más recientes tienen cámaras duales y/o de doble retroceso que son útiles para características como la visión estéreo, los efectos visuales mejorados y la capacidad de zoom mejorada. Android P incorpora una nueva API de [varias cámaras](https://developer.android.com/about/versions/pie/android-9.0#camera) que permite que la aplicación use una *cámara lógica* (o *varias*cámaras lógicas) que esté respaldada por dos o más cámaras físicas.
+Muchos dispositivos Android más recientes tienen cámaras duales y/o de doble retroceso que son útiles para características como la visión estéreo, los efectos visuales mejorados y la capacidad de zoom mejorada. Android P incorpora una nueva API de [varias cámaras](https://developer.android.com/about/versions/pie/android-9.0#camera) que permite que la aplicación use una *cámara lógica* (o *varias cámaras lógicas*) que esté respaldada por dos o más cámaras físicas.
 Para determinar si el dispositivo es compatible con una cámara lógica múltiple, puede ver las capacidades de cada cámara en el dispositivo para ver si es compatible con [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Android circular también incluye una nueva clase [configuracióndesesión](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) que se puede usar para ayudar a reducir los retrasos durante la captura inicial y eliminar la necesidad de iniciar e iniciar el flujo de la cámara.
 
 Para obtener más información sobre la compatibilidad con varias cámaras en Android P, consulte [compatibilidad con múltiples cámaras y actualizaciones](https://developer.android.com/about/versions/pie/android-9.0#camera)de la cámara.
-
 
 ### <a name="other-features"></a>Otras características
 
@@ -240,7 +231,6 @@ Además, el gráfico circular de Android admite otras características nuevas:
 
 Para obtener más información sobre las características más recientes de los gráficos circulares de Android, consulte [características y API de Android 9](https://developer.android.com/about/versions/pie/android-9.0).
 
-
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 
 Cuando la versión de Android de destino se establece en el nivel de API 28, hay varios cambios de plataforma que pueden afectar al comportamiento de la aplicación incluso si no está implementando las nuevas características descritas anteriormente. La lista siguiente es un breve resumen de estos cambios:
@@ -253,17 +243,14 @@ Cuando la versión de Android de destino se establece en el nivel de API 28, hay
 
 Para más información sobre los cambios de comportamiento de las aplicaciones destinadas a Android P, consulte [cambios de comportamiento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
-
 ## <a name="sample-code"></a>Código de ejemplo
 
 [AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) es una aplicación de ejemplo de Xamarin. Android para un gráfico circular de Android que muestra cómo establecer los modos de recorte `Person` de pantalla, cómo usar la nueva clase y cómo enviar una notificación que incluye una imagen.
-
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se presentó Android circular y se explica cómo instalar y configurar las herramientas y los paquetes más recientes para el desarrollo de Xamarin. Android con el gráfico circular de Android. Proporciona información general sobre las características clave disponibles en el gráfico circular de Android, con código fuente de ejemplo para algunas de estas características.
 Incluye vínculos a la documentación de la API y temas para desarrolladores de Android que le ayudarán a empezar a crear aplicaciones para el gráfico circular de Android. También se resaltan los cambios de comportamiento de los sectores de Android más importantes que podrían afectar a las aplicaciones existentes.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

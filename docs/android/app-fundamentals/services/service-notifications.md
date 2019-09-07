@@ -1,27 +1,26 @@
 ---
 title: Notificaciones del servicio
-description: Esta guía describe cómo un servicio de Android puede usar notificaciones locales para enviar información a un usuario.
+description: En esta guía se describe cómo un servicio Android puede usar notificaciones locales para enviar información a un usuario.
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d56f67254a9eae334fa8ac3f08d3ef270800c309
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012393"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754816"
 ---
 # <a name="service-notifications"></a>Notificaciones del servicio
 
-_Esta guía describe cómo un servicio de Android puede usar notificaciones locales para enviar información a un usuario._
+_En esta guía se describe cómo un servicio Android puede usar notificaciones locales para enviar información a un usuario._
 
+## <a name="service-notifications-overview"></a>Información general de notificaciones de servicio
 
-## <a name="service-notifications-overview"></a>Información general de las notificaciones del servicio
-
-Las notificaciones del servicio, permitir que una aplicación mostrar información al usuario, incluso si la aplicación de Android no está en primer plano. Es posible que una notificación proporcionar acciones del usuario, como mostrar una actividad desde una aplicación. Ejemplo de código siguiente muestra cómo un servicio podría enviar una notificación a un usuario:
+Las notificaciones de servicio permiten que una aplicación muestre información al usuario, incluso si la aplicación Android no está en primer plano. Es posible que una notificación proporcione acciones al usuario, como mostrar una actividad de una aplicación. En el ejemplo de código siguiente se muestra cómo un servicio puede enviar una notificación a un usuario:
 
 ```csharp
 [Service]
@@ -46,18 +45,17 @@ public class MyService: Service
 }
 ```
 
-Esta captura de pantalla es un ejemplo de la notificación de que se muestra:
+Esta captura de pantalla es un ejemplo de la notificación que se muestra:
 
-[![Icono de notificación en la barra de estado](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[![Icono de notificación que se muestra en la barra de estado](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
-Cuando las diapositivas de usuario hacia abajo de la pantalla de notificación en la parte superior, se muestra la notificación completa:
+Cuando el usuario se desplaza hacia abajo en la pantalla de notificación desde la parte superior, se muestra la notificación completa:
 
-![Notificación a que se muestra en la Bandeja de notificación](service-notifications-images/02-fullnotification.png)
-
+![Aviso mostrado en la bandeja de notificación](service-notifications-images/02-fullnotification.png)
 
 ## <a name="updating-a-notification"></a>Actualización de una notificación
 
-Para actualizar una notificación, el servicio se volverá a publicar la notificación usando el mismo identificador de notificación. Android mostrará o actualizar la notificación en la barra de estado según sea necesario.
+Para actualizar una notificación, el servicio volverá a publicar la notificación con el mismo identificador de notificación. Android mostrará o actualizará la notificación en la barra de estado según sea necesario.
 
 ```csharp 
 void UpdateNotification(string content)
@@ -79,8 +77,7 @@ Notification GetNotification(string content, PendingIntent intent)
 }
 ```
 
-Para obtener más información acerca de las notificaciones está disponible en el [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md) sección de la [notificaciones Android](~/android/app-fundamentals/notifications/index.md) guía.
-
+Puede encontrar más información sobre las notificaciones en la sección [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md) de la guía de [notificaciones de Android](~/android/app-fundamentals/notifications/index.md) .
 
 ## <a name="related-links"></a>Vínculos relacionados
 

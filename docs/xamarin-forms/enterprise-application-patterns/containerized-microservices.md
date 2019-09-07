@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bb1f7024f3518e0e547563d1bd611b2a37d474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529163"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760394"
 ---
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
-El desarrollo de aplicaciones cliente-servidor ha provocado un enfoque en la creación de aplicaciones en capas que usan tecnologías específicas en cada nivel. Estas aplicaciones a menudo se denominan aplicaciones monolíticas y se empaquetan en el hardware que se ha ajustado previamente para cargas máximas. Los principales inconvenientes de este enfoque de desarrollo son el acoplamiento estrecho entre los componentes de cada nivel, los componentes individuales no se pueden escalar fácilmente y el costo de las pruebas. Una actualización simple puede tener efectos imprevistos en el resto del nivel, por lo que un cambio en un componente de la aplicación requiere que se vuelva a probar y volver a implementar todo el nivel.
+El desarrollo de aplicaciones cliente-servidor ha provocado un enfoque en la creación de aplicaciones en capas que usan tecnologías específicas en cada nivel. Estas aplicaciones a menudo se denominan aplicaciones *monolíticas* y se empaquetan en el hardware que se ha ajustado previamente para cargas máximas. Los principales inconvenientes de este enfoque de desarrollo son el acoplamiento estrecho entre los componentes de cada nivel, los componentes individuales no se pueden escalar fácilmente y el costo de las pruebas. Una actualización simple puede tener efectos imprevistos en el resto del nivel, por lo que un cambio en un componente de la aplicación requiere que se vuelva a probar y volver a implementar todo el nivel.
 
 Especialmente en lo que respecta a la edad de la nube, es que los componentes individuales no se pueden escalar fácilmente. Una aplicación monolítica contiene funcionalidad específica del dominio y se divide normalmente por capas funcionales como front-end, lógica de negocios y almacenamiento de datos. Una aplicación monolítica se escala mediante la clonación de toda la aplicación en varios equipos, tal como se muestra en la figura 8-1.
 
@@ -90,7 +90,7 @@ La aplicación de referencia de eShopOnContainers usa Docker para hospedar cuatr
 
 La arquitectura de los servicios back-end de la aplicación de referencia se descompone en varios subsistemas autónomos en forma de los microservicios y contenedores de colaboración. Cada microservicio proporciona un área única de funcionalidad: un servicio de identidad, un servicio de catálogo, un servicio de pedidos y un servicio de cesta.
 
-Cada microservicio tiene su propia base de datos, lo que le permite desacoplarlo por completo de los otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de diferentes microservicios se logra mediante eventos de nivel de aplicación. Para obtener más información, consulte [comunicación entre](#communication_between_microservices)microservicios.
+Cada microservicio tiene su propia base de datos, lo que le permite desacoplarlo por completo de los otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de diferentes microservicios se logra mediante eventos de nivel de aplicación. Para obtener más información, consulte [comunicación entre microservicios](#communication_between_microservices).
 
 Para obtener más información acerca de la aplicación de [referencia, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
@@ -149,7 +149,6 @@ Para obtener información sobre la implementación del bus de [eventos, consulte
 Los microservicios ofrecen un enfoque para el desarrollo y la implementación de aplicaciones que se adapta a los requisitos de agilidad, escala y confiabilidad de las aplicaciones en la nube modernas. Una de las principales ventajas de los microservicios es que se pueden escalar horizontalmente de forma independiente, lo que significa que se puede escalar un área funcional específica que requiere más capacidad de procesamiento o ancho de banda de red para admitir la demanda, sin necesidad de escalar de forma innecesaria áreas de la aplicación que no está experimentando una mayor demanda.
 
 Un contenedor es un entorno operativo aislado, controlado por recursos y portátil, donde una aplicación puede ejecutarse sin tocar los recursos de otros contenedores o del host. Las empresas están adoptando cada vez más contenedores al implementar aplicaciones basadas en microservicios y Docker se ha convertido en la implementación de contenedor estándar que ha adoptado la mayoría de las plataformas de software y los proveedores de nube.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

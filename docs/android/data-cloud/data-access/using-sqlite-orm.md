@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: c684efe9bcb292869eb25b36067fcaa42b546a04
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 65c8466e2649c6d48cf5651f25d14c073dbcf5e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525923"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754432"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso de SQLite.NET con Android
 
@@ -61,7 +61,6 @@ Una vez que tenga la biblioteca SQLite.NET disponible, siga estos tres pasos par
 ## <a name="basic-data-access-sample"></a>Ejemplo de acceso a datos básico
 
 El código de ejemplo *DataAccess_Basic* de este documento tiene este aspecto cuando se ejecuta en Android. En el código se muestra cómo realizar operaciones simples de SQLite.NET y se muestra el resultado como texto en la ventana principal de la aplicación.
-
 
 **Android**
 
@@ -140,7 +139,6 @@ Los atributos comunes que se pueden aplicar a las clases para controlar cómo se
 
 - **[Único]** &ndash; Garantiza que los valores de la columna de base de datos subyacente son únicos.
 
-
 La mayoría de estos atributos son opcionales, SQLite usará los valores predeterminados para los nombres de tabla y columna. Siempre debe especificar una clave principal de tipo entero para que las consultas de selección y eliminación se puedan realizar de forma eficaz en los datos.
 
 ## <a name="more-complex-queries"></a>Consultas más complejas
@@ -158,7 +156,6 @@ Los siguientes métodos de `SQLiteConnection` se pueden usar para realizar otras
 - **Query&lt;T&gt;realizauna consulta SQL** quedevuelveunnúmerodefilas(comoobjetos).&ndash;
 
 - **Ejecutar** Use este método (y no `Query`) cuando no espere filas de SQL (como las instrucciones INSERT, Update y Delete). &ndash;
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Obtener un objeto por la clave principal
 
@@ -205,9 +202,9 @@ Puede comprobar el para `rowcount` confirmar el número de filas afectadas (elim
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Usar SQLite.NET con varios subprocesos
 
-SQLite admite tres modos de subprocesamiento diferentes: *Subproceso único*, *multiproceso*y serializado. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el modo de subproceso serializado. Es importante establecer este modo pronto en la aplicación (por ejemplo, al principio del `OnCreate` método).
+SQLite admite tres modos de subprocesamiento diferentes: *Subproceso único*, *multiproceso*y *serializado*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el modo de subproceso **serializado** . Es importante establecer este modo pronto en la aplicación (por ejemplo, al principio del `OnCreate` método).
 
-Para cambiar el modo de subprocesos `SqliteConnection.SetConfig`, llame a. Por ejemplo, esta línea de código configura SQLite para el modo de serialización:
+Para cambiar el modo de subprocesos `SqliteConnection.SetConfig`, llame a. Por ejemplo, esta línea de código configura SQLite para el modo de **serialización** :
 
 ```csharp
 using using Mono.Data.Sqlite;

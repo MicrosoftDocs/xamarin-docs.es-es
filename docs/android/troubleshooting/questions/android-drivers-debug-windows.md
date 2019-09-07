@@ -7,28 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 85045967f5c63eb39c45f917b957d2a393a3a068
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8be3f1b8803aa7e052ebc89af51dad3b659f95f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757330"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>¿Qué controladores USB son necesario para depurar Android en Windows?
 
-## <a name="finding-usb-drivers"></a>Buscar controladores USB
+## <a name="finding-usb-drivers"></a>Búsqueda de controladores USB
 
-Para depurar en un dispositivo Android al desarrollar en Windows; deberá instalar a un controlador USB compatible. Android SDK Manager incluye "Controlador USB de Google" de forma predeterminada, lo que agrega compatibilidad para dispositivos de Nexus como se describe aquí: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
+Para depurar en un dispositivo Android al desarrollar en Windows; debe instalar un controlador USB compatible. De forma predeterminada, el administrador de Android SDK incluye el "controlador USB de Google", que agrega compatibilidad con dispositivos Nexus como se describe aquí:[https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Otros dispositivos requieren controladores USB específicamente publicados por el fabricante del dispositivo. En esta guía se incluyen algunos vínculos para los fabricantes más comunes: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
+Otros dispositivos requieren controladores USB publicados específicamente por el fabricante del dispositivo. En esta guía se incluyen algunos vínculos para los fabricantes más comunes:[https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Alternativas
 
-Según la por el fabricante, puede ser difícil de rastrear el controlador USB exacto necesitado. Desarrollan algunas alternativas para probar aplicaciones de Android en Windows incluido mediante un emulador de Android o con servicios externos de pruebas. Algunas de ellas son:
+Según el Manfacturer, puede ser difícil realizar un seguimiento del controlador USB exacto necesario. Algunas alternativas para probar aplicaciones Android desarrolladas en Windows, incluido el uso de un emulador de Android o el uso de servicios de prueba externos. Algunos son:
 
-- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) : las pruebas se ejecutan en cientos de dispositivos Android reales de los servicios de nube.
+- [App Center test](https://docs.microsoft.com/appcenter/test-cloud/) -Cloud Testing Services se ejecutan en cientos de dispositivos Android reales.
 
 - [Emulador de Visual Studio para Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
 - [Depuración en Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
-

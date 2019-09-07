@@ -7,12 +7,12 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: e2bf493a5d8a4197fbc59044edf126761b41cf8d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d6011175a735eb81f83a023f7d32fccd6feadd47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649725"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759467"
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
@@ -162,7 +162,6 @@ SKRect rect = new SKRect(strokeWidth / 2,
                          info.Height - strokeWidth / 2);
 canvas.DrawOval(rect, paint);
 ```
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e3f871d9d5992429c6f6619b2f5ff7059558045
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 69d5222bb6c50870d0c42bea6ff71236e3d1580c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525948"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754562"
 ---
 # <a name="introduction"></a>Introducción
 
@@ -38,7 +38,6 @@ Hay varias ventajas en el uso de una base de datos SQL en la aplicación móvil:
 - Los desarrolladores con conocimientos de bases de datos existentes pueden aprovechar sus conocimientos para diseñar la base de datos y el código de acceso a datos.
 - El modelo de datos del componente de servidor de una aplicación conectada se puede volver a usar (en su totalidad o en parte) en la aplicación móvil.
 
-
 ## <a name="sqlite-database-engine"></a>Motor de base de datos SQLite
 
 SQLite es un motor de base de datos de código abierto adoptado por Google para su plataforma móvil. El motor de base de datos de SQLite está integrado en ambos sistemas operativos, por lo que no hay trabajo adicional para que los desarrolladores puedan aprovecharlo. SQLite es idóneo para el desarrollo móvil multiplataforma porque:
@@ -48,13 +47,11 @@ SQLite es un motor de base de datos de código abierto adoptado por Google para 
 - El formato de archivo es fácil de usar entre plataformas: si se trata de sistemas de 32 o 64 bits y de Big-Endian.
 - Implementa la mayor parte del estándar SQL92.
 
-
 Dado que SQLite está diseñado para ser pequeño y rápido, hay algunas advertencias sobre su uso:
 
 - No se admiten algunas sintaxis de combinación externa.
 - Solo se admiten Rename de tabla y ADDCOLUMN. No se pueden realizar otras modificaciones en el esquema.
 - Las vistas son de solo lectura.
-
 
 Puede obtener más información acerca de SQLite en el sitio Web- [SQLite.org](http://SQLite.org) ; sin embargo, toda la información que necesita para usar SQLite con Xamarin se incluye en este documento y en los ejemplos asociados. El motor de base de datos SQLite se admitía en Android desde Android 2.
 Aunque no se trata en este capítulo, SQLite también está disponible para su uso en Windows Phone y aplicaciones Windows.
@@ -63,7 +60,6 @@ Aunque no se trata en este capítulo, SQLite también está disponible para su u
 
 SQLite también puede usarse en plataformas Windows, aunque dichas plataformas no se describen en este documento.
 Lea más en la [tarea](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) y en los casos prácticos de [Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) con tareas y revise el [blog de Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

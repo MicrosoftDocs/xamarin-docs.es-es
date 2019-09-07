@@ -7,12 +7,12 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648740"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759746"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animación básica de SkiaSharp
 
@@ -245,7 +245,6 @@ public class ExpandingCirclesPage : ContentPage
 El resultado es que la imagen de la misma cuando se ve `t` es igual a 0, como cuando `t` es igual a 1, y los círculos parecen continúe expandiendo para siempre:
 
 [![](animation-images/expandingcircles-small.png "Captura de pantalla triple de la página de expansión de círculos")](animation-images/expandingcircles-large.png#lightbox "Triple captura de pantalla de la página de círculos de expansión")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

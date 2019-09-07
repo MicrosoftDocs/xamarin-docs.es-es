@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31c3c629686d6c7be03b95d7bfe0740599228bbd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290590"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769397"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones de envío en iOS
 
@@ -35,7 +35,6 @@ La notificación push debe observar las reglas siguientes dictadas por la arquit
 - **límite de mensajes de 256 bytes** : el tamaño completo del mensaje de la notificación no debe superar los 256 bytes.
 - **No hay confirmación de recepción** : APNS no proporciona al remitente ninguna notificación de que un mensaje lo hizo al destinatario previsto. Si el dispositivo es inaccesible y se envían varias notificaciones secuenciales, se perderán todas las notificaciones excepto la más reciente. Solo se entregará la notificación más reciente al dispositivo.
 - **Cada aplicación requiere un certificado seguro** : la comunicación con APNS debe realizarse a través de SSL.
-
 
 ## <a name="creating-and-using-certificates"></a>Crear y usar certificados
 
@@ -174,7 +173,6 @@ Además, una nueva `timestamp` clave de datos JSON estará en el cuerpo de la re
 ## <a name="summary"></a>Resumen
 
 En esta sección se presentan los conceptos clave relacionados con las notificaciones de envío en iOS. Se explicó el rol del servicio de puerta de enlace de notificaciones push de Apple (APNS). Después, se ha tratado la creación y el uso de los certificados de seguridad esenciales para APNS. Por último, este documento ha finalizado con un debate sobre cómo los servidores de aplicaciones pueden usar los *servicios de comentarios* para detener el seguimiento de los tokens de dispositivo caducados.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

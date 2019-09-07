@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 31f6c0dd0d4f5452ebc2cbde0cc44cd9c47eeb9a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e3f6524f03612ee39c537f482b1db916ecf08a23
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510317"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759096"
 ---
 # <a name="xamarinandroid-controls-widgets"></a>Controles de Xamarin. Android (widgets)
 
@@ -24,20 +24,17 @@ Xamarin. Android expone todos los controles de interfaz de usuario (widgets) nat
 
 ![Ejemplo de barra](images/action-bar.png)
 
-
 ## <a name="auto-completeandroiduser-interfacecontrolsauto-completemd"></a>[Autocompletar](~/android/user-interface/controls/auto-complete.md)
 
 `AutoCompleteTextView`es un elemento de la vista de texto editable que muestra sugerencias de finalización automáticamente mientras el usuario está escribiendo. La lista de sugerencias se muestra en un menú desplegable en el que el usuario puede elegir un elemento del que reemplazar el contenido del cuadro de edición.
 
 ![Ejemplo de autocompletar](images/auto-complete.png)
 
-
 ## <a name="buttonsandroiduser-interfacecontrolsbuttonsindexmd"></a>[Botones](~/android/user-interface/controls/buttons/index.md)
 
 Los botones son elementos de la interfaz de usuario que el usuario puntea para realizar una acción.
 
 ![Botones de ejemplo](images/buttons.png)
-
 
 ## <a name="calendarandroiduser-interfacecontrolscalendarmd"></a>[Calendar](~/android/user-interface/controls/calendar.md)
 
@@ -46,13 +43,11 @@ La `Calendar` clase se usa para convertir una instancia específica en el tiempo
 
 ![Calendario de ejemplo](images/calendar.png)
 
-
 ## <a name="cardviewandroiduser-interfacecontrolscard-viewmd"></a>[CardView](~/android/user-interface/controls/card-view.md)
 
 `CardView`es un componente de interfaz de usuario que presenta el contenido de texto e imagen en las vistas que se parecen a las tarjetas. `CardView`se implementa como un `FrameLayout` widget con esquinas redondeadas y una sombra. Normalmente, `CardView` se usa para presentar un elemento de una sola fila en `ListView` un `GridView` grupo de vistas o.
 
 ![Ejemplo de vista de tarjeta](images/cardview.png)
-
 
 ## <a name="edit-textandroiduser-interfacecontrolsedit-textmd"></a>[Editar texto](~/android/user-interface/controls/edit-text.md)
 
@@ -60,13 +55,11 @@ La `Calendar` clase se usa para convertir una instancia específica en el tiempo
 
 ![Ejemplo de edición de texto](images/edit-text.png)
 
-
 ## <a name="galleryandroiduser-interfacecontrolsgallerymd"></a>[Galería](~/android/user-interface/controls/gallery.md)
 
 `Gallery`es un widget de diseño que se usa para mostrar los elementos en una lista de desplazamiento horizontal. coloca la selección actual en el centro de la vista.
 
 ![Galería de ejemplo](images/gallery.png)
-
 
 ## <a name="navigation-barandroiduser-interfacecontrolsnavigation-barmd"></a>[Barra de navegación](~/android/user-interface/controls/navigation-bar.md)
 
@@ -74,13 +67,11 @@ La *barra de navegación* proporciona controles de navegación en dispositivos q
 
 ![Barra de navegación de ejemplo](images/navigation-bar.png)
 
-
 ## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[Selectores](~/android/user-interface/controls/pickers/index.md)
 
-Los selectores son elementos de interfaz de usuario que permiten al usuario seleccionar una fecha o una hora mediante los cuadros de diálogo proporcionados por Android.
+Los *selectores* son elementos de interfaz de usuario que permiten al usuario seleccionar una fecha o una hora mediante los cuadros de diálogo proporcionados por Android.
 
 ![Selector de ejemplo](images/picker.png)
-
 
 ## <a name="popup-menuandroiduser-interfacecontrolspopup-menumd"></a>[Menú emergente](~/android/user-interface/controls/popup-menu.md)
 
@@ -88,13 +79,11 @@ Los selectores son elementos de interfaz de usuario que permiten al usuario sele
 
 ![Menú emergente de ejemplo](images/popup-menu.png)
 
-
 ## <a name="ratingbarandroiduser-interfacecontrolsratingbarmd"></a>[RatingBar](~/android/user-interface/controls/ratingbar.md)
 
 Un `RatingBar` es un elemento de la interfaz de usuario que muestra una clasificación en estrellas.
 
 ![Ejemplo de RatingBar](ratingbar-images/01-ratingbar.png)
-
 
 ## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[Spinner](~/android/user-interface/controls/spinner.md)
 
@@ -102,13 +91,11 @@ Un `RatingBar` es un elemento de la interfaz de usuario que muestra una clasific
 
 ![Ejemplo de control de número](images/spinner.png)
 
-
 ## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[Switch](~/android/user-interface/controls/switch.md)
 
 `Switch`es un elemento de la interfaz de usuario que permite a los usuarios alternar entre dos Estados, como activado o desactivado. El `Switch` valor predeterminado es OFF.
 
 ![Modificador de ejemplo](images/switch.png)
-
 
 ## <a name="textureviewandroiduser-interfacecontrolstexture-viewmd"></a>[TextureView](~/android/user-interface/controls/texture-view.md)
 
@@ -116,13 +103,11 @@ Un `RatingBar` es un elemento de la interfaz de usuario que muestra una clasific
 
 ![Ejemplo de vista de textura](images/texture-view.png)
 
-
 ## <a name="toolbarandroiduser-interfacecontrolstool-barindexmd"></a>[ToolBar](~/android/user-interface/controls/tool-bar/index.md)
 
 El `Toolbar` widget (introducido en Android 5,0 Lollipop) puede considerarse como una generalización de la interfaz &ndash; de la barra de acciones, por lo que se pretende reemplazar la barra de acciones. Se `Toolbar` puede usar en cualquier parte del diseño de una aplicación y es mucho más personalizable que una barra de acción.
 
 ![Barra de herramientas de ejemplo](images/toolbar.png)
-
 
 ## <a name="viewpagerandroiduser-interfacecontrolsview-pagerindexmd"></a>[ViewPager](~/android/user-interface/controls/view-pager/index.md) 
 
@@ -130,10 +115,8 @@ El `Toolbar` widget (introducido en Android 5,0 Lollipop) puede considerarse com
 
 ![Ejemplo de ViewPager](images/viewpager.png)
 
-
 ## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[WebView](~/android/user-interface/controls/web-view.md)
 
 `WebView`es un elemento de la interfaz de usuario que le permite crear su propia ventana para ver páginas web (o incluso desarrollar un explorador completo).
 
 ![Vista Web de ejemplo](images/web-view.png)
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752639"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras desde la aplicación en Xamarin. iOS
 
@@ -55,7 +55,6 @@ En este artículo se ha introducido el concepto de compra desde la aplicación, 
 - **Kit de tiendas** : explicación de las clases que se usan para compilar características de compras desde la aplicación.
 - **Codificación de la aplicación para la** compra: ejemplos de cómo compilar la compra desde la aplicación en una aplicación de Xamarin. iOS.
 - **Informes** : información general de las estadísticas disponibles a través de iTunes Connect.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

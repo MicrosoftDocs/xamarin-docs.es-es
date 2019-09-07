@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 4568b204989c3ebb89ba4441232a100678657e28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 97542c50041bfe24a3ad9494443ed8a4df85f113
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280655"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752238"
 ---
 # <a name="ios-7-user-interface-overview"></a>Introducción a la interfaz de usuario de iOS 7
 
@@ -69,7 +69,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 Esto genera una vista de alertas estándar, con la subvista omitida, como se muestra a continuación:
 
  ![](ios7-ui-images/alert.png "UIAlertView de ejemplo")
- 
+
  Nota: UIAlertView quedó en desuso en iOS 8. Vea la receta del [controlador de alertas](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) sobre el uso de una vista de alertas en iOS 8 y versiones posteriores.
 
 ### <a name="uisegmentedcontrol"></a>UISegmentedControl
@@ -253,7 +253,6 @@ También se puede aplicar el color de matiz a las imágenes cuando `RenderingMod
 
 > [!IMPORTANT]
 > El color del matiz no se `UIAppearance`puede establecer mediante.
-
 
 ### <a name="dynamic-type"></a>Tipo dinámico
 

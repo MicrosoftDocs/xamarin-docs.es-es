@@ -1,47 +1,46 @@
 ---
-title: Prólogo al desarrollo de aplicaciones de empresa
-description: Este capítulo proporciona un prefacio a patrones de aplicación empresarial mediante Xamarin.Forms.
+title: Preceder al desarrollo de aplicaciones empresariales
+description: En este capítulo se proporciona un prefijo a los patrones de aplicaciones empresariales con Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 82f1455ff5e5ac06b50664e1d4d533d4964b7a0e
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 4ce04ec5216872cb56424e8847eec357a5b3ac0e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831126"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770742"
 ---
-# <a name="preface-to-enterprise-app-development"></a>Prólogo al desarrollo de aplicaciones de empresa
+# <a name="preface-to-enterprise-app-development"></a>Preceder al desarrollo de aplicaciones empresariales
 
-Este libro electrónico proporciona instrucciones sobre la creación de aplicaciones empresariales de desarrollo multiplataforma con Xamarin.Forms. Xamarin.Forms es un Kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear fácilmente diseños de interfaz que se pueden compartir entre plataformas, incluidas iOS, Android y la plataforma Universal de Windows (UWP) de usuario nativa. Proporciona una solución completa para la empresa a empleado (B2E), negocio a negocio (B2B) y Business a las aplicaciones de consumidor (B2C) que proporciona la capacidad de compartir código entre todas las plataformas de destino y para ayudar a reducir el costo total de propiedad (TCO).
+En este libro electrónico se proporcionan instrucciones sobre cómo crear aplicaciones empresariales multiplataforma con Xamarin. Forms. Xamarin. Forms es un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear fácilmente diseños de interfaz de usuario nativa que se pueden compartir entre plataformas, como iOS, Android y el Plataforma universal de Windows (UWP). Proporciona una solución completa para aplicaciones de negocio a empleado (B2E), de negocio a negocio (B2B) y de negocio a consumidor (B2C), lo que proporciona la capacidad de compartir código en todas las plataformas de destino y ayudar a reducir el costo total de propiedad (TCO).
 
-La guía proporciona una guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms adaptables, fáciles de mantener y fácil de probar. Se proporciona orientación sobre cómo implementar MVVM, inserción de dependencias, navegación, validación y la administración de configuración, manteniendo el acoplamiento flexible. Además, también hay una guía sobre cómo realizar la autenticación y autorización con IdentityServer, acceso a datos de microservicios en contenedores y las pruebas unitarias.
+En esta guía se proporcionan instrucciones arquitectónicas para desarrollar aplicaciones empresariales de Xamarin. Forms adaptables y fáciles de mantener. Se proporciona orientación sobre cómo implementar MVVM, la inserción de dependencias, la navegación, la validación y la administración de la configuración, mientras se mantiene el acoplamiento flexible. Además, también hay instrucciones sobre cómo realizar la autenticación y la autorización con IdentityServer, el acceso a los datos de microservicios en contenedor y las pruebas unitarias.
 
-La guía incluye código fuente para el [aplicación móvil de eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Mobile)y el código fuente de la [aplicación de referencia eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers). La aplicación móvil de eShopOnContainers es una aplicación multiplataforma enterprise desarrollada con Xamarin.Forms, que se conecta a una serie de microservicios en contenedores conocidos como aplicación de referencia de eShopOnContainers. Sin embargo, la aplicación móvil de eShopOnContainers puede configurarse para consumir datos de servicios ficticios para aquellos que desean evitar la implementación de los microservicios en contenedores.
+La guía incluye el código fuente de la [aplicación móvil de eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Mobile)y el código fuente de la [aplicación de referencia de eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers). La aplicación móvil eShopOnContainers es una aplicación empresarial multiplataforma desarrollada con Xamarin. Forms, que se conecta a una serie de microservicios en contenedores conocido como la aplicación de referencia eShopOnContainers. Sin embargo, la aplicación móvil eShopOnContainers puede configurarse para consumir datos de servicios ficticios para aquellos que quieren evitar la implementación de microservicios en contenedores.
 
 ## <a name="whats-left-out-of-this-guides-scope"></a>Lo que queda fuera del ámbito de esta guía
 
-Esta guía está dirigida a los lectores que ya están familiarizados con Xamarin.Forms. Para obtener una introducción detallada a Xamarin.Forms, consulte el [Xamarin.Forms documentación](~/xamarin-forms/index.yml), y [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook).
+Esta guía está dirigida a los lectores que ya están familiarizados con Xamarin. Forms. Para obtener una introducción detallada a Xamarin. Forms, consulte la [documentación de Xamarin. Forms](~/xamarin-forms/index.yml)y [creación de Mobile Apps con Xamarin. Forms](https://aka.ms/xamebook).
 
-La guía es complementaria a [Microservicios de. NET: Arquitectura de aplicaciones .NET en contenedor](https://aka.ms/microservicesebook), que se centra en desarrollar e implementar microservicios en contenedores. Incluyen otras guías que vale la pena leer [diseño de la arquitectura y desarrollo de aplicaciones Web modernas con ASP.NET Core y Microsoft Azure](https://aka.ms/WebAppEbook), [en contenedores Docker Application Lifecycle con Microsoft Platform y herramientas](https://aka.ms/dockerlifecycleebook), y [plataforma de Microsoft y herramientas de desarrollo de aplicaciones móviles](https://aka.ms/MobAppDev/StndPDF).
+La guía es complementaria a [los microservicios de .net: Arquitectura de aplicaciones](https://aka.ms/microservicesebook).net en contenedor, que se centra en el desarrollo y la implementación de microservicios en contenedores. Otras guías que merece la pena leer incluyen la [arquitectura y el desarrollo de aplicaciones web modernas con ASP.net Core y Microsoft Azure](https://aka.ms/WebAppEbook), el [ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft](https://aka.ms/dockerlifecycleebook), y la plataforma de [Microsoft y Herramientas para el desarrollo de aplicaciones móviles](https://aka.ms/MobAppDev/StndPDF).
 
-## <a name="who-should-use-this-guide"></a>¿Quién debe usar esta guía
+## <a name="who-should-use-this-guide"></a>¿Quién debe usar esta guía?
 
-Los destinatarios de esta guía son principalmente a los desarrolladores y arquitectos que deseen obtener información sobre cómo diseñar e implementar aplicaciones empresariales de desarrollo multiplataforma con Xamarin.Forms.
+La audiencia de esta guía está dirigida principalmente a desarrolladores y arquitectos que desean aprender a diseñar e implementar aplicaciones empresariales multiplataforma con Xamarin. Forms.
 
-Otros destinatarios secundarios son decisiones técnicas que le gustaría recibir información general sobre arquitectura y tecnología antes de decidir qué enfoque para seleccionar para el desarrollo de aplicaciones empresariales multiplataforma con Xamarin.Forms.
+Una audiencia secundaria son responsables de la toma de decisiones técnicas que desean recibir información general sobre la arquitectura y la tecnología antes de decidir qué enfoque elegir para el desarrollo de aplicaciones empresariales multiplataforma con Xamarin. Forms.
 
 ## <a name="how-to-use-this-guide"></a>Cómo usar esta guía
 
-Esta guía se centra en la creación de aplicaciones empresariales de desarrollo multiplataforma con Xamarin.Forms. Por lo tanto, se debe leer en su totalidad para ofrecer una base de la descripción de estas aplicaciones y sus consideraciones técnicas. La guía, junto con su aplicación de ejemplo, también puede servir como punto de inicio o la referencia para crear una nueva aplicación de empresa. Use la aplicación de ejemplo asociada como una plantilla para la nueva aplicación, o para ver cómo organizar los componentes de una aplicación. A continuación, consulte esta guía para una guía de arquitectura.
+Esta guía se centra en la creación de aplicaciones empresariales multiplataforma con Xamarin. Forms. Como tal, se debe leer en su totalidad para proporcionar una base de conocimiento de esas aplicaciones y sus consideraciones técnicas. La guía, junto con su aplicación de ejemplo, también puede servir como punto de partida o como referencia para crear una nueva aplicación empresarial. Use la aplicación de ejemplo asociada como plantilla para la nueva aplicación o para ver cómo organizar las partes de componentes de una aplicación. Después, consulte esta guía para obtener instrucciones arquitectónicas.
 
-No dude en reenviar a esta guía a los miembros del equipo para ayudar a garantizar una comprensión común de desarrollo de aplicaciones empresariales multiplataforma con Xamarin.Forms. Tener todo el mundo principios subyacentes y trabajar desde un conjunto común de terminología ayudará a garantizar una aplicación coherente de los modelos arquitectónicos y los procedimientos recomendados.
-
+No dude en reenviar esta guía a los miembros del equipo para ayudar a garantizar una comprensión común del desarrollo de aplicaciones empresariales multiplataforma con Xamarin. Forms. Hacer que todo el mundo trabaje con un conjunto común de terminología y principios subyacentes le ayudará a garantizar una aplicación coherente de los patrones y prácticas de arquitectura.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Descargar libro electrónico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Descargar libro electrónico (2 MB PDF)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (ejemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

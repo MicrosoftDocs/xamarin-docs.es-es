@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228010"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770249"
 ---
 # <a name="xamarinforms-text-styles"></a>Estilos de texto de Xamarin.Forms
 
@@ -144,7 +144,6 @@ Habilitado:
 ![Estilos de dispositivo con accesibilidad habilitada](styles-images/post-access.png)
 
 Para garantizar la accesibilidad, asegúrese de que los estilos integrados se utilizan como base para cualquier estilo relacionada con el texto dentro de la aplicación y que está utilizando estilos de forma coherente. Consulte [estilos](~/xamarin-forms/user-interface/styles/index.md) para obtener más detalles sobre la extensión y trabajar con estilos en general.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

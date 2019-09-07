@@ -7,12 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: f526be2156c4d74cf695b6b11706e3bbb7f355bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642991"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772777"
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -468,7 +468,6 @@ Anchura y altura representan el ancho y alto del mapa de bits. La primera transf
 El `a` y `b` se calculan los valores para que la tercera transformación es afín. El código obtiene el inverso de la transformación afín y, a continuación, usa para asignar la esquina inferior derecha. Es el punto (a, b).
 
 Otro uso de transformaciones no afines es imitar gráficos tridimensionales. En el siguiente artículo, [ **rotaciones 3D** ](3d-rotation.md) verá cómo girar un gráfico bidimensional en un espacio 3D.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

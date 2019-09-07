@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: bf9b630613dcc5c25dac96cad71e54022ead1812
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3c4fa085c9fdf17cdc256d9710c23911bb60d584
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770638"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
@@ -38,7 +38,7 @@ Para insertar una vista nativa a un archivo XAML de Xamarin.Forms:
 1. Cree una instancia de la vista nativa en el archivo XAML.
 
 > [!IMPORTANT]
-> El código XAML compilado debe estar deshabilitado para cualquier página XAML que use vistas nativas. Esto se puede lograr decorando la clase de código subyacente de la página XAML con el `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obtener más información sobre la compilación XAML, vea compilar [XAML en Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
+> El código XAML compilado debe estar deshabilitado para cualquier página XAML que use vistas nativas. Esto se puede lograr decorando la clase de código subyacente de la página XAML con el `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obtener más información sobre la compilación XAML, vea [compilar XAML en Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Para hacer referencia a una vista nativa desde un archivo de código subyacente, debe usar un proyecto de activos compartidos (SAP) y ajustar el código específico de plataforma con directivas de compilación condicional. Para obtener más información, consulte [que hace referencia a vistas nativas desde código](#native_view_code).
 
@@ -486,7 +486,6 @@ El `MySpinner` clase expone `ItemsSource` y `SelectedObject` propiedades y un `I
 ## <a name="summary"></a>Resumen
 
 En este artículo se muestra cómo consumir vistas nativas en archivos XAML de Xamarin.Forms. Se pueden establecer las propiedades y los controladores de eventos en vistas nativas, y pueden interactuar con las vistas de Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

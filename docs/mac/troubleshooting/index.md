@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 341689e53d6654cb68316c17e2f263062cfc1fd5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ac6ce31ad851e90f7781cffdb3cd3d1d905a8733
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292698"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769781"
 ---
 # <a name="xamarinmac-troubleshooting"></a>Solución de problemas de Xamarin. Mac 
 
@@ -26,4 +26,3 @@ Sugerencias y trucos para la solución de problemas.
 ## <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[Mensajes de error (MMP)](~/mac/troubleshooting/mmp-errors.md)
 
 Una guía de referencia de errores que muestra los errores más comunes que puede experimentar al compilar aplicaciones de Xamarin. Mac.
-

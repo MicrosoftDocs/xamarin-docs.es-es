@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278539"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753298"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contactos y ContactsUI en Xamarin. iOS
 
@@ -31,9 +31,6 @@ Los dos nuevos marcos de trabajo contienen la siguiente funcionalidad:
 
 > [!IMPORTANT]
 > Los marcos `AddressBook` de `AddressBookUI` trabajo y existentes que usan iOS 8 (y anteriores) han quedado desusados en iOS 9 y deben reemplazarse por `Contacts` los `ContactsUI` nuevos marcos de trabajo y lo antes posible para cualquier aplicación de Xamarin. iOS existente. Las nuevas aplicaciones deben escribirse en los nuevos marcos de trabajo.
-
-
-
 
 En las secciones siguientes, echaremos un vistazo a estos nuevos marcos y cómo implementarlos en una aplicación Xamarin. iOS.
 
@@ -359,7 +356,6 @@ PresentViewController(view, true, null);
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha realizado una visión detallada del trabajo con los marcos de interfaz de usuario de contacto y contacto en una aplicación de Xamarin. iOS. En primer lugar, se han tratado los distintos tipos de objetos que proporciona el marco de trabajo de contacto y cómo se usan para crear nuevos o tener acceso a contactos existentes. También examinó el marco de trabajo de interfaz de usuario de contacto para seleccionar contactos existentes y Mostrar información de contacto.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

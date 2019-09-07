@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283328"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770159"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. Xib: diseño de la interfaz de usuario menos en Xamarin. Mac
 
@@ -45,7 +45,6 @@ Para cambiar a una ventana de Xibless para una aplicación, haga lo siguiente:
 Ahora tendremos que modificar el archivo **MainWindow.CS** para definir el diseño de la ventana y modificar el archivo **ViewController.CS** o **MainWindowController.CS** para crear una instancia de nuestra `MainWindow` clase, ya que ya no se usa. archivo Storyboard o. Xib.
 
 Las aplicaciones modernas de Xamarin. Mac que usan guiones gráficos para su interfaz de usuario pueden no incluir automáticamente los archivos **MainWindow.CS**, **ViewController.CS** o **MainWindowController.CS** . Según sea necesario, simplemente agregue una nueva C# clase vacía al proyecto (**Agregar** > **nuevo archivo..** . Clase vacíaGeneral > ) y asígnele el mismo nombre que el archivo que falta.  > 
-
 
 ### <a name="defining-the-window-in-code"></a>Definir la ventana en el código
 
@@ -178,7 +177,6 @@ Dado que MacOS no tiene un elemento de interfaz de usuario de _etiqueta_ especí
 
 De nuevo, `ContentView.AddSubview (ClickMeLabel)` el método `NSTextField` agrega a la vista de contenido para que se muestre en la pantalla cuando se ejecute la aplicación y se abra la ventana.
 
-
 ### <a name="adjusting-the-window-controller"></a>Ajustar el controlador de ventana
 
 Dado que el diseño de `MainWindow` ya no se carga desde un archivo. Storyboard o. Xib, es necesario realizar algunos ajustes en el controlador de ventana. Edite el archivo **MainWindowController.CS** y haga que tenga un aspecto similar al siguiente:
@@ -268,7 +266,6 @@ Window.AwakeFromNib ();
 
 Esto le permitirá codificar en la ventana como una ventana estándar cargada desde un archivo. Storyboard o. Xib.
 
-
 ### <a name="displaying-the-window"></a>Mostrar la ventana
 
 Con el archivo. Storyboard o. Xib eliminado y modificados los archivos **MainWindow.CS** y **MainWindowController.CS** , usará la ventana de la misma forma que lo haría con cualquier ventana normal que se hubiera creado en la Interface Builder de Xcode con un archivo. Xib.
@@ -287,7 +284,6 @@ En este punto, si se ejecuta la aplicación y el botón hizo clic un par de vece
 
 ![Ejecución de una aplicación de ejemplo](xibless-ui-images/run01.png "Ejecución de una aplicación de ejemplo")
 
-
 ## <a name="adding-a-code-only-window"></a>Agregar una ventana de solo código
 
 Si deseamos agregar una ventana de xibless solo de código a una aplicación de Xamarin. Mac existente, haga clic con el botón derecho en el proyecto en el **Panel de solución** y seleccione **Agregar** > **nuevo archivo.** .. En el cuadro de diálogo **nuevo archivo** , elija la**ventana de cacao de** **Xamarin. Mac** > con el controlador, como se muestra a continuación:
@@ -295,7 +291,6 @@ Si deseamos agregar una ventana de xibless solo de código a una aplicación de 
 ![Agregar un nuevo controlador de ventana](xibless-ui-images/add01.png "Agregar un nuevo controlador de ventana")
 
 Al igual que antes, eliminaremos el archivo default. Storyboard o. Xib del proyecto (en este caso, **SecondWindow. Xib**) y seguiremos los pasos descritos en la sección sobre cómo [cambiar una ventana para usar el código](#Switching_a_Window_to_use_Code) anterior para cubrir la definición de la ventana en el código.
-
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Agregar un elemento de la interfaz de usuario a una ventana en el código
 
@@ -309,7 +304,6 @@ MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
 En el código anterior se crea `NSButton` un nuevo y se agrega `MyWindow` a la instancia de la ventana para su presentación. Básicamente, cualquier elemento de la interfaz de usuario que se pueda definir en la Interface Builder de Xcode en un archivo. Storyboard o. Xib se puede crear en el código y mostrarse en una ventana.
-
 
 ## <a name="defining-the-menu-bar-in-code"></a>Definir la barra de menús en el código
 
@@ -359,12 +353,9 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Lo anterior crea un menú de la barra de estado a partir del código y lo muestra cuando se inicia la aplicación. Para obtener más información sobre cómo trabajar con menús, vea la documentación de los [menús](~/mac/user-interface/menu.md) .
 
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tomado una visión detallada de la creación de la interfaz de usuario de C# una aplicación de Xamarin. Mac en el código en lugar de usar la Interface Builder de Xcode con archivos. Storyboard o. Xib.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

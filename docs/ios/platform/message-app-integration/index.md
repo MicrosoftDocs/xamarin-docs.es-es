@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2016
-ms.openlocfilehash: 7db2f0fee05b60180cdd54f2f2e5ae33339a0430
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cee6f5a6f9815c348f5446c6a75c2b1a0f4c10c6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290875"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769594"
 ---
 # <a name="message-app-integration-in-xamarinios"></a>Integración de aplicaciones de mensajes en Xamarin. iOS
 
@@ -27,7 +27,6 @@ En este artículo se muestra cómo incluir una extensión de aplicación de mens
 ## <a name="advanced-message-app-extensionsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[Extensiones avanzadas de aplicaciones de mensajes](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
 En este artículo se muestran técnicas avanzadas para trabajar con extensiones de aplicación de mensaje en una solución de Xamarin. iOS que se integra con la aplicación **mensajes** y presenta una nueva funcionalidad al usuario.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

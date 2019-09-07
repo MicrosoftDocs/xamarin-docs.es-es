@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524727"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757861"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -27,9 +27,7 @@ Android admite dos maneras de configurar mensajes con el rayo de Android:
 
 - `SetNdefPushMessageCallback`-Cuando se inicia el rayo de Android, una aplicación puede controlar una devolución de llamada para crear un NdefMessage. Este mecanismo permite que se retrase la creación de mensajes hasta que los dispositivos se encuentren dentro del alcance. Admite escenarios en los que el mensaje puede variar en función de lo que sucede en la aplicación.
 
-
 En cualquier caso, para enviar datos con el rayo de Android, una aplicación `NdefMessage`envía un y empaqueta los datos `NdefRecords`en varios. Echemos un vistazo a los puntos clave que deben abordarse antes de que podamos desencadenar el haz de Android. En primer lugar, trabajaremos con el estilo de devolución de `NdefMessage`llamada de creación de.
-
 
 ## <a name="creating-a-message"></a>Crear un mensaje
 
@@ -65,7 +63,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## <a name="receiving-a-message"></a>Recibir un mensaje
 
 En el lado receptor, el sistema invoca una intención con la `ActionNdefDiscovered` acción, desde la que se puede extraer el NdefMessage como se indica a continuación:
@@ -78,8 +75,6 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 Para obtener un ejemplo de código completo que usa el rayo de Android, que se muestra en la siguiente captura de pantalla, vea la [demostración de rayos de Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) en la galería de ejemplo.
 
 [![Capturas de pantallas de ejemplo de la demostración de rayos de Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
