@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: b04ecf0685e78b73346ea5af815ed46f98b5da0f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524357"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761859"
 ---
 # <a name="fragments"></a>Fragments
 
@@ -46,7 +46,6 @@ Esta guía contiene una cobertura completa sobre cómo usar fragmentos, entre lo
 - **Administración de fragmentos y transacciones** : Cómo manipular fragmentos en tiempo de ejecución.
 - **Paquete de soporte de Android** : Cómo usar las bibliotecas que permiten usar fragmentos en versiones anteriores de Android.
 
-
 ## <a name="requirements"></a>Requisitos
 
 Los fragmentos están disponibles en la Android SDK a partir del nivel de API 11 (Android 3,0), tal como se muestra en la siguiente captura de pantalla:
@@ -58,7 +57,6 @@ Los fragmentos están disponibles en Xamarin. Android 4,0 y versiones posteriore
 [![Establecimiento del nivel de API de la plataforma de destino en las opciones del proyecto](images/03-sml.png)](images/03.png#lightbox)
 
 Es posible usar fragmentos en versiones anteriores de Android mediante el paquete de soporte de Android y Xamarin. Android 4,2 o superior. La forma de hacerlo se describe con más detalle en los documentos de esta sección.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

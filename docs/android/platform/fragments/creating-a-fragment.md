@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f7dd62af7cfa37f136b4c72c7c34907ad8ebf36f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524368"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761189"
 ---
 # <a name="creating-a-fragment"></a>Crear un fragmento
 
@@ -25,7 +25,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 ```
 
 El código anterior impondrá la vista `Resource.Layout.Example_Fragment`y la agregará como una vista secundaria `ViewGroup` al contenedor.
-
 
 > [!NOTE]
 > Las subclases de fragmento deben tener un constructor público predeterminado sin argumentos.
@@ -102,14 +101,12 @@ OR
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## <a name="fragment-lifecycle"></a>Ciclo de vida de fragmentos
 
 Los fragmentos tienen su propio ciclo de vida que es en cierto modo independiente del [ciclo de vida de la actividad de hospedaje](~/android/app-fundamentals/activity-lifecycle/index.md), pero que todavía se ve afectado por él.
 Por ejemplo, cuando una actividad se pausa, todos sus fragmentos asociados están en pausa. En el diagrama siguiente se describe el ciclo de vida del fragmento.
 
 [![Diagrama de flujo que ilustra el ciclo de vida de los fragmentos](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
-
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Métodos de ciclo de vida de creación de fragmentos
 
@@ -132,7 +129,6 @@ La lista siguiente muestra el flujo de las distintas devoluciones de llamada en 
 
 - **`OnResume()`** &ndash; Este es el último método llamado antes de que el usuario pueda interactuar con el fragmento. Un ejemplo del tipo de código que se debe realizar en este método sería habilitar las características de un dispositivo con el que el usuario puede interactuar, como la cámara que los servicios de ubicación. Sin embargo, los servicios como estos pueden provocar un consumo excesivo de la batería, y una aplicación debe minimizar su uso para conservar la duración de la batería.
 
-
 ### <a name="fragment-destruction-lifecycle-methods"></a>Métodos de ciclo de vida de destrucción de fragmentos
 
 En la lista siguiente se explican los métodos de ciclo de vida a los que se llama como un fragmento que se está destruyendo:
@@ -147,11 +143,9 @@ En la lista siguiente se explican los métodos de ciclo de vida a los que se lla
 
 - **`OnDetach()`** &ndash; Se llama a este método justo antes de que el fragmento deje de estar asociado a la actividad. La jerarquía de vistas del fragmento ya no existe y todos los recursos utilizados por el fragmento deben liberarse en este momento.
 
-
 ### <a name="using-setretaininstance"></a>Usar SetRetainInstance
 
 Es posible que un fragmento especifique que no se debe destruir completamente si se vuelve a crear la actividad. La `Fragment` clase proporciona el método `SetRetainInstance` para este fin. Si `true` se pasa a este método, cuando se reinicie la actividad, se usará la misma instancia del fragmento. Si esto ocurre, todos los métodos de devolución de llamada se invocarán `OnCreate` excepto `OnDestroy` las devoluciones de llamada y del ciclo de vida. Este proceso se ilustra en el diagrama del ciclo de vida mostrado anteriormente (por las líneas de puntos verdes).
-
 
 ## <a name="fragment-state-management"></a>Administración de estado de fragmentos
 
@@ -189,7 +183,6 @@ Reemplazar `OnSaveInstanceState` es un mecanismo adecuado para guardar datos tra
 
 Puesto que `EditText` el control tiene `id` un asignado, el fragmento guarda automáticamente los datos en el widget `OnSaveInstanceState` cuando se llama a.
 
-
 ### <a name="bundle-limitations"></a>Limitaciones de agrupación
 
 Aunque el `OnSaveInstanceState` uso de facilita el almacenamiento de datos transitorios, el uso de este método tiene algunas limitaciones:
@@ -197,7 +190,6 @@ Aunque el `OnSaveInstanceState` uso de facilita el almacenamiento de datos trans
 - Si el fragmento no se agrega a la pila de retroceso, su estado no se restaurará cuando el usuario presione el botón **atrás** .
 
 - Cuando se utiliza la agrupación para guardar los datos, se serializan. Esto puede dar lugar a retrasos en el procesamiento.
-
 
 ## <a name="contributing-to-the-menu"></a>Contribución al menú
 

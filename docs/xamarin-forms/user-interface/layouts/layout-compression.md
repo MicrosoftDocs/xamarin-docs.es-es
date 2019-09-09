@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 97aa8c321362ebccc954a79f99b7bc69b5a0ad63
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 453da8c1b943591c331950ecb433bf0055faf85d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657074"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770366"
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 
@@ -117,7 +117,6 @@ La aplicación de ejemplo contiene una página que se extraen de una aplicación
 ## <a name="summary"></a>Resumen
 
 Compresión de diseño quita diseños especificados del árbol visual en un intento de mejorar el rendimiento de representación de página. La ventaja de rendimiento que esto ofrece varía según la complejidad de una página, la versión del sistema operativo que se va a usar y el dispositivo en el que se ejecuta la aplicación. Sin embargo, las mejoras de rendimiento más importantes se apreciarán en los dispositivos más antiguos.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

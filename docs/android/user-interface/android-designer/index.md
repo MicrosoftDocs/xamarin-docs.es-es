@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 94f5dd206fb4794d1cdd71792418a2b4a2278c80
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 176037db501c2577775bdfb817fea01f16a02242
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761640"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin. Android Designer
 
 _En este artículo se describen las características de Xamarin. Android Designer. Se explican los conceptos básicos del diseñador, que muestran cómo usar el diseñador para diseñar widgets visualmente y editar propiedades. También se muestra cómo usar el diseñador para trabajar con interfaces y recursos de usuario en distintas configuraciones, como temas, lenguajes y configuraciones de dispositivos, así como la forma de diseñar vistas alternativas como horizontal y vertical._
-
 
 ## <a name="overview"></a>Información general
 
@@ -36,8 +35,6 @@ En este artículo se analizan las numerosas características de Xamarin. Android
 8. Cómo controlar los conflictos que pueden surgir al trabajar con vistas alternativas. 
 9. Cómo usar las herramientas de diseño de materiales para compilar aplicaciones compatibles con el diseño de materiales.
 
-
-
 ## <a name="sections"></a>Secciones
 
  [Uso de Android Designer](~/android/user-interface/android-designer/designer-walkthrough.md)
@@ -50,14 +47,10 @@ En este artículo se analizan las numerosas características de Xamarin. Android
 
  [Características de Material Design](~/android/user-interface/android-designer/material-design-features.md)
 
-
-
 ## <a name="summary"></a>Resumen
 
 En este artículo se describe el conjunto de características de Xamarin. Android Designer.
 Se ha mostrado cómo empezar a trabajar con el diseñador y se han explicado las distintas partes. Se ha descrito cómo cargar un diseño y cómo agregar y modificar widgets mediante la **superficie del diseñador** y la vista de **código fuente** . También se explica cómo trabajar con varios recursos y configuraciones de dispositivos. Por último, examinó cómo usar el diseñador para desarrollar interfaces de usuario que se crean específicamente para vistas alternativas, como horizontal y vertical, y cómo resolver los conflictos que pueden surgir entre esas vistas.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

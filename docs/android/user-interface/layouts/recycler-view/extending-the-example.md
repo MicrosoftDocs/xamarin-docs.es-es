@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2fc2eabb26a9635b569cc6d3a51195fb554ca950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522492"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758601"
 ---
 # <a name="extending-the-recyclerview-example"></a>Extender el ejemplo de RecyclerView
 
-
 En realidad, la aplicación básica descrita en [un ejemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) no hace mucho &ndash; sino que simplemente se desplaza y muestra una lista fija de elementos de fotografía para facilitar la exploración. En las aplicaciones reales, los usuarios esperan poder interactuar con la aplicación punteando en los elementos de la pantalla. Además, el origen de datos subyacente puede cambiar (o ser modificado por la aplicación) y el contenido de la pantalla debe permanecer coherente con estos cambios. En las secciones siguientes, aprenderá a controlar eventos de clic de elemento y a actualizar `RecyclerView` cuando cambie el origen de datos subyacente.
-
 
 ### <a name="handling-item-click-events"></a>Controlar eventos de clic de elemento
 
@@ -164,7 +162,6 @@ Ahora, cuando se puntee en el botón de `RecyclerView` **selección aleatoria** 
 [![Primera captura de pantalla antes de intercambiar, segunda captura de pantalla después del intercambio](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 Por supuesto, `NotifyDataSetChanged` se podría haber llamado a en lugar de realizar las dos llamadas `NotifyItemChanged`a, pero hacerlo obligaría `RecyclerView` a actualizar toda la colección, aunque solo hubieran cambiado dos elementos de la colección. Llamar `NotifyItemChanged` a es significativamente más eficaz que `NotifyDataSetChanged`llamar a.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

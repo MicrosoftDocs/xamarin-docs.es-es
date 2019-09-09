@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287974"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769019"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
 
@@ -74,9 +74,6 @@ Si la `BaselineRelativeArrangement` propiedad es `true`, las subvistas se organi
 
 > [!IMPORTANT]
 > La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto**de la vista de contenido intrínseca.
-
-
-
 
 <a name="Common-Stack-View-Uses" />
 
@@ -309,8 +306,6 @@ Muchas de las propiedades de la vista de pila se pueden especificar utilizando c
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el trabajo con la vista apilada dentro de una aplicación Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

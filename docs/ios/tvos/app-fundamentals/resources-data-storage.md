@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e9c27233e0905435e14505195b7b0e4d3283790b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b50ba09488f1f052f3e41302a42c691089727ff
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283824"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769648"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Recursos de tvOS y almacenamiento de datos en Xamarin
 
@@ -36,9 +36,6 @@ Como resultado, la aplicación no puede confiar en que el contenido descargado p
 
 > [!IMPORTANT]
 > Aunque tiene la posibilidad de descargar otros recursos y recursos según sea necesario, Apple advierte de que se consume todo el espacio en la memoria caché de la aplicación, ya que puede provocar resultados imprevisibles.
-
-
-
 
 <a name="Managing-Resources" />
 
@@ -75,16 +72,11 @@ Xcode se usa para crear agrupaciones de contenido relacionado (por ejemplo, todo
 > [!IMPORTANT]
 > Se debe tener cuidado para lograr el equilibrio adecuado entre el número de veces que la aplicación tiene que descargar recursos a petición y el tamaño de las descargas individuales. El usuario puede resultar frustrado con la aplicación si el juego se interrumpe constantemente para descargar contenido nuevo o si una única descarga tarda demasiado tiempo.
 
-
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
 En este artículo se han tratado las limitaciones de tamaño, recursos y almacenamiento de datos colocadas en una aplicación Xamarin. tvOS por el sistema tvOS. Ha presentado opciones para solucionar estas limitaciones y sugerencias para crear una experiencia de usuario excelente para la aplicación.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

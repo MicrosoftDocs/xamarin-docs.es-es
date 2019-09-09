@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ec4b99fd1c8ec28f6b4bbb30695613da6c40d60c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288949"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769045"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabajar con controles de página de tvOS en Xamarin
 
@@ -35,7 +35,6 @@ La manera más sencilla de trabajar con controles de página en una aplicación 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
 1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista:
 
@@ -49,9 +48,7 @@ La manera más sencilla de trabajar con controles de página en una aplicación 
     [![](page-controls-images/page04.png "Asignar nombre al control")](page-controls-images/page04.png#lightbox)
 1. Guarde los cambios.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo para su edición.
 1. Arrastre un **control de página** desde el **cuadro de herramientas** y colóquelo en la vista:
@@ -65,7 +62,6 @@ La manera más sencilla de trabajar con controles de página en una aplicación 
 
     [![](page-controls-images/page04-vs.png "Asignar nombre al control")](page-controls-images/page04-vs.png#lightbox)
 1. Guarde los cambios.
-
 
 -----
 
@@ -167,8 +163,6 @@ Para obtener más información sobre cómo trabajar con guiones gráficos, vea n
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha tratado el diseño y el trabajo con el control de página dentro de una aplicación Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

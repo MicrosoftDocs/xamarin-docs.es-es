@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: be353c6274dcf69946740e2d195b9e4d64208313
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 24d86c54ea4b346e1c165b28c6b62f5a98390d64
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121572"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760142"
 ---
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
@@ -64,7 +64,7 @@ Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su t
 
 ## <a name="uiappearance-api"></a>API de UIAppearance
 
-[ La`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) se puede usar para establecer propiedades visuales en muchos controles de iOS *sin* tener que crear un representador [personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+[ La`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) se puede usar para establecer propiedades visuales en muchos controles de iOS *sin* tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 La adición de una sola línea de código al método **AppDelegate.CS** `FinishedLaunching` puede aplicar estilo a todos los controles de un `Appearance` tipo determinado mediante su propiedad. El código siguiente contiene dos ejemplos: aplicar estilos a la barra de pestañas y control de modificador de forma global:
 
@@ -101,7 +101,7 @@ Esto hace que la pestaña seleccionada sea verde:
 
 ![](theme-images/tabbar-custom.png "Icono verde de la barra de pestañas de iOS en TabbedPage")
 
-El uso de esta API le permite personalizar la apariencia de Xamarin. `TabbedPage` Forms en Ios con muy poco código. Consulte la [receta personalización](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) de pestañas para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
+El uso de esta API le permite personalizar la apariencia de Xamarin. `TabbedPage` Forms en Ios con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
 
 ### <a name="uiswitch"></a>UISwitch
 
@@ -118,8 +118,6 @@ Estas dos capturas de pantalla muestran el `UISwitch` control predeterminado a l
 ### <a name="other-controls"></a>Otros controles
 
 Muchos controles de interfaz de usuario de iOS pueden tener sus colores predeterminados y otros atributos establecidos mediante la [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

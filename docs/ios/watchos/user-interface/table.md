@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291691"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766952"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 
@@ -39,9 +39,6 @@ Para establecer la **clase** para el controlador de filas, seleccione la fila en
 
 Una vez establecida la clase para el controlador de la fila, el IDE creará un C# archivo correspondiente en el proyecto. Arrastre los controles (como etiquetas) a la fila y asígneles nombres para que se pueda hacer referencia a ellos en el código.
 
-
-
-
 ## <a name="create-and-populate-rows"></a>Crear y rellenar filas
 
 `SetNumberOfRows`crea las clases de controlador de filas para cada fila, `Identifier` utilizando para seleccionar el correcto. Si dio a su controlador de filas un `Identifier`personalizado, cambie el **valor predeterminado** en el fragmento de código que aparece a continuación por el identificador que ha usado. La `RowController` *columna para cada fila* se crea `SetNumberOfRows` cuando se llama a y se muestra la tabla.
@@ -65,7 +62,6 @@ for (var i = 0; i < rows.Count; i++) {
 
 > [!IMPORTANT]
 > El `SetNumberOfRows` uso de y, a continuación `GetRowController` , recorrer en iteración el uso de hace que se envíe toda la tabla al reloj. En las vistas posteriores de la tabla, si necesita agregar o quitar filas específicas, use `InsertRowsAt` y `RemoveRowsAt` para mejorar el rendimiento.
-
 
 ## <a name="respond-to-taps"></a>Responder a los grifos
 
@@ -142,7 +138,6 @@ for (var i = 0; i < rows.Count; i++) {
 }
 ```
 
-
 ## <a name="vertical-detail-paging"></a>Paginación de detalles vertical
 
 watchos 3 presentó una nueva característica para las tablas: la capacidad de desplazarse por las páginas de detalles relacionadas con cada fila, sin tener que volver a la tabla y elegir otra fila. Las pantallas de detalles se pueden desplazar hacia arriba y hacia abajo, o mediante el Digital Crown.
@@ -210,8 +205,6 @@ namespace WatchTables.OnWatchExtension
 ```
 
 A continuación, se puede hacer referencia a las salidas y acciones declaradas en el código; sin embargo, el archivo **. Designer.CS** no debe editarse directamente.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

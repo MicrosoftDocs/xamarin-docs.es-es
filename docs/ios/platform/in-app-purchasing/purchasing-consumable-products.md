@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c23515c7fc7a3fef836cba76ec30279c94150da2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f48f84c704fa8ce20ce24dfbfaca2df23a8494eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752719"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Compra de productos consumibles en Xamarin. iOS
 
@@ -41,24 +41,14 @@ Hay otro tipo de flujo de trabajo: *productos entregados por el servidor* , que 
 ## <a name="consumable-products-example"></a>Ejemplo de productos consumibles
 
 El [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un proyecto denominado *consumibles* que implementa una "moneda del juego" básica (denominada "créditos de Monkey"). En el ejemplo se muestra cómo implementar dos productos de compras desde la aplicación para que el usuario pueda comprar tantos "créditos de Monkey" como deseen: en una aplicación real, también sería cierto modo de gastarlos.   
-   
-   
-   
- La aplicación se muestra en estas capturas de pantallas: cada compra agrega más "créditos de Monkey" al saldo del usuario:   
-   
-   
-   
- [![Cada compra agrega más créditos de Monkey al saldo de usuarios.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
-   
-   
-   
- Las interacciones entre las clases personalizadas, StoreKit y App Store tienen el siguiente aspecto:   
-   
-   
-   
- [![Interacciones entre las clases personalizadas, StoreKit y App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
-&nbsp;
+La aplicación se muestra en estas capturas de pantallas: cada compra agrega más "créditos de Monkey" al saldo del usuario:   
+
+ [![Cada compra agrega más créditos de Monkey al saldo de usuarios.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+
+Las interacciones entre las clases personalizadas, StoreKit y App Store tienen el siguiente aspecto:   
+
+ [![Interacciones entre las clases personalizadas, StoreKit y App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 ### <a name="viewcontroller-methods"></a>Métodos ViewController
 
@@ -69,10 +59,8 @@ NSObject succeededObserver, failedObserver;
 ```
 
 El constructor también creará la `SKProductsRequestDelegate` subclase ( `InAppPurchaseManager`) que, a su vez, `SKPaymentTransactionObserver` crea y registra `CustomPaymentObserver`().   
-   
-   
-   
- La primera parte del procesamiento de una transacción de compra desde la aplicación es controlar la pulsación del botón cuando el usuario desea comprar algo, tal y como se muestra en el código siguiente de la aplicación de ejemplo:
+
+La primera parte del procesamiento de una transacción de compra desde la aplicación es controlar la pulsación del botón cuando el usuario desea comprar algo, tal y como se muestra en el código siguiente de la aplicación de ejemplo:
 
 ```csharp
 buy5Button.TouchUpInside += (sender, e) => {
@@ -83,9 +71,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 };
 ```
 
-   
-   
- La segunda parte de la interfaz de usuario controla la notificación de que la transacción se ha realizado correctamente, en este caso actualizando el saldo mostrado:
+La segunda parte de la interfaz de usuario controla la notificación de que la transacción se ha realizado correctamente, en este caso actualizando el saldo mostrado:
 
 ```csharp
 priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
@@ -118,10 +104,8 @@ public void PurchaseProduct(string appStoreProductId)
 ```
 
 Agregar el pago a la cola es una operación asincrónica. La aplicación vuelve a obtener el control mientras StoreKit procesa la transacción y la envía a los servidores de Apple. En este momento, iOS comprobará que el usuario ha iniciado sesión en la tienda de aplicaciones y le pedirá un identificador de Apple y una contraseña, si es necesario.   
-   
-   
-   
- Suponiendo que el usuario `SKPaymentTransactionObserver` se autentique correctamente en la tienda de aplicaciones y acepte la transacción, recibirá la respuesta de StoreKit y llamará al método siguiente para completar la transacción y finalizarla.
+
+Suponiendo que el usuario `SKPaymentTransactionObserver` se autentique correctamente en la tienda de aplicaciones y acepte la transacción, recibirá la respuesta de StoreKit y llamará al método siguiente para completar la transacción y finalizarla.
 
 ```csharp
 public void CompleteTransaction (SKPaymentTransaction transaction)
@@ -250,10 +234,8 @@ Dado que una conexión de red puede ser transitoria en dispositivos móviles, es
 ### <a name="purchase-transactions"></a>Transacciones de compra
 
 La cola de pago de StoreKit almacenará y reenviará las solicitudes de compra si es posible, por lo que el efecto de una interrupción de la red variará en función de que se produzca un error en la red durante el proceso de compra.   
-   
-   
-   
- Si se produce un error durante una transacción, la `SKPaymentTransactionObserver` subclase ( `CustomPaymentObserver`) tendrá el `UpdatedTransactions` método denominado y la `SKPaymentTransaction` clase estará en estado de error.
+
+Si se produce un error durante una transacción, la `SKPaymentTransactionObserver` subclase ( `CustomPaymentObserver`) tendrá el `UpdatedTransactions` método denominado y la `SKPaymentTransaction` clase estará en estado de error.
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -307,14 +289,10 @@ Applications may detect and respond to specific error codes, or handle them in t
 ## <a name="handling-restrictions"></a>Control de restricciones
 
 La **configuración > característica de restricciones de > general** de iOS permite a los usuarios bloquear determinadas características de su dispositivo.   
-   
-   
-   
- Puede consultar si el usuario tiene permiso para realizar compras desde la aplicación mediante el `SKPaymentQueue.CanMakePayments` método. Si esto devuelve false, el usuario no puede acceder a la compra desde la aplicación. StoreKit mostrará automáticamente un mensaje de error al usuario si se intenta realizar una compra. Al seleccionar este valor, la aplicación puede ocultar los botones de compra o realizar alguna otra acción para ayudar al usuario.   
-   
-   
-   
- En el `InAppPurchaseManager.cs` archivo, `CanMakePayments` el método encapsula la función StoreKit de la siguiente manera:
+
+Puede consultar si el usuario tiene permiso para realizar compras desde la aplicación mediante el `SKPaymentQueue.CanMakePayments` método. Si esto devuelve false, el usuario no puede acceder a la compra desde la aplicación. StoreKit mostrará automáticamente un mensaje de error al usuario si se intenta realizar una compra. Al seleccionar este valor, la aplicación puede ocultar los botones de compra o realizar alguna otra acción para ayudar al usuario.   
+
+En el `InAppPurchaseManager.cs` archivo, `CanMakePayments` el método encapsula la función StoreKit de la siguiente manera:
 
 ```csharp
 public bool CanMakePayments()
@@ -324,14 +302,10 @@ public bool CanMakePayments()
 ```
 
 Para probar este método, use la característica de **restricciones** de iOS para deshabilitar las **compras desde la aplicación**:   
-   
-   
-   
+
  [![Usar la característica de restricciones de iOS para deshabilitar las compras desde la aplicación](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
-   
-   
-   
- Este código de ejemplo `ConsumableViewController` de reacciona a `CanMakePayments` devolver false mostrando el texto **deshabilitado de AppStore** en los botones deshabilitados.
+
+Este código de ejemplo `ConsumableViewController` de reacciona a `CanMakePayments` devolver false mostrando el texto **deshabilitado de AppStore** en los botones deshabilitados.
 
 ```csharp
 // only if we can make payments, request the prices
@@ -348,21 +322,11 @@ if (iap.CanMakePayments()) {
 ```
 
 La aplicación tiene este aspecto cuando la característica **de compras desde la aplicación** está restringida: los botones de compra están deshabilitados.   
-   
-   
-   
+
  [![La aplicación tiene este aspecto cuando la característica de compras desde la aplicación está restringida, los botones de compra están deshabilitados.](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
-   
-   
-   
 
 La información del producto puede seguir siendo `CanMakePayments` solicitada cuando es false, por lo que la aplicación todavía puede recuperar y mostrar los precios. Esto significa que si quitamos `CanMakePayments` la comprobación del código, los botones de compra seguirán estando activos. sin embargo, cuando se intenta realizar una compra, el usuario verá un mensaje que indica que **no se permiten compras desde la aplicación** (generado por StoreKit cuando la cola de pago es acceso:   
-   
-   
-   
- [![No se permiten compras desde la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
-   
-   
-   
- Las aplicaciones del mundo real pueden adoptar un enfoque diferente para controlar la restricción, como ocultar los botones por completo y, quizás, ofrecer un mensaje más detallado que la alerta que StoreKit muestra automáticamente.
 
+ [![No se permiten compras desde la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+
+Las aplicaciones del mundo real pueden adoptar un enfoque diferente para controlar la restricción, como ocultar los botones por completo y, quizás, ofrecer un mensaje más detallado que la alerta que StoreKit muestra automáticamente.

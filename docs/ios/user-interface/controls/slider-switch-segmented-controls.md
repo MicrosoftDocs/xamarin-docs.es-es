@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: bcb860a88c67b3b2cde7336d53d717d4d9201fd4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e95a514286c68879eac4ee80f2c95882b4e2b5b6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288485"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768462"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, modificadores y controles segmentados en Xamarin. iOS
 
@@ -75,7 +75,6 @@ switch1.On = true;
 ```
 
  <a name="Segmented_Controls" />
-
 
 ## <a name="segmented-controls"></a>Controles segmentados
 
