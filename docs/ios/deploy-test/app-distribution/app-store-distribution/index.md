@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05034989c60868f8bff8164da7da90a7ff8788a3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290993"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763216"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -70,7 +70,6 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 3. Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o puede que tenga que esperar hasta que un administrador o agente de equipo la apruebe:  [![](images/generated.png "Generación de la identidad de firma y cuadro de diálogo")](images/generated.png#lightbox)
 
-
 <a name="creatingprofile" />
 
 ## <a name="creating-a-distribution-profile"></a>Creación de un perfil de distribución
@@ -81,7 +80,6 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesita un identificador de aplicación para identificar la aplicación que va a distribuir al dispositivo del usuario. Si aún no lo ha creado, siga estos pasos para hacerlo:
 
-
 1. En el [Centro de usuarios registrados de Apple Developer](https://developer.apple.com/account/overview.action), vaya a la sección *Certificate, Identifiers and Profiles* (Certificado, identificadores y perfiles). Seleccione **App IDs** (Identificadores de aplicación) en **Identifiers** (Identificadores).
 2. Haga clic en el botón **+** y proporcione un **Nombre** que la identifique en el portal.
 3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como:
@@ -89,7 +87,6 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
     - **Comodín**: com.[nombreDeDominio].*
 4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que la aplicación necesite.
 5. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
-
 
 ### <a name="creating-a-provisioning-profile"></a>Crear un perfil de aprovisionamiento
 
@@ -120,7 +117,6 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
     [![](images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](images/distribute06.png#lightbox)
 
 7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

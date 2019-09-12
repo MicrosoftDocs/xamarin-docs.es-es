@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509579"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756719"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
@@ -116,7 +116,6 @@ Los elementos se resumen en la tabla siguiente:
 - **drawable**: El directorio drawable contiene [recursos que se pueden dibujar](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imágenes y mapas de bits.
 
 - **mipmap**: El directorio mipmap contiene archivos drawable para distintas densidades de los iconos de iniciadores. En la plantilla predeterminada, el directorio drawable contiene el archivo del icono de la aplicación, **Icon.png**.
-
 
 ::: zone pivot="windows"
 

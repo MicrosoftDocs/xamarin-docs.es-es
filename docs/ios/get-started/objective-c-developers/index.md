@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 96a7e6b9587d696479afd084613c79e2b03f956c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2970253ec15ca207b9f69e2b764e0a69f8037938
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292000"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753514"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin para desarrolladores de Objective-C
 
@@ -30,7 +30,6 @@ Encontrará una gran cantidad de información en nuestro sitio de documentación
 
 - [Manual de C# para los desarrolladores Objective-C](primer.md): un breve manual para los desarrolladores de Objective-C que desean pasarse a Xamarin y el lenguaje C#. 
 - [Tutorial: Enlace de una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md): un tutorial detallado para volver a usar código existente de Objective-C en una aplicación de Xamarin.iOS. 
-
 
 ## <a name="binding-objective-c"></a>Enlace de Objective-C
 

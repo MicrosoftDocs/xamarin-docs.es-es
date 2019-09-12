@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68486010"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771462"
 ---
 # <a name="introduction-to-effects"></a>Introducción a los efectos
 
@@ -58,7 +58,6 @@ Cada clase `PlatformEffect` específica de la plataforma expone los métodos sig
 - [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached): se llama cuando se desasocia un efecto de un control de Xamarin.Forms. Una versión invalidada de este método, en cada clase de efecto específica de la plataforma, es el lugar para realizar cualquier limpieza de efectos, como anular el registro de un controlador de eventos.
 
 Además, `PlatformEffect` expone el método [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), que también se puede invalidar. Este método se llama cuando ha cambiado una propiedad del elemento. Una versión invalidada de este método, en cada clase de efecto específica de la plataforma, es el lugar para responder a los cambios de propiedad enlazable en el control de Xamarin.Forms. Siempre se debe realizar una comprobación de la propiedad que ha modificado, ya que esta invalidación se puede llamar varias veces.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

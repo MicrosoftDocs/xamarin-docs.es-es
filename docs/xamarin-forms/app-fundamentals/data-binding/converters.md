@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 34b449aa358874f06a495ec52578dcca2dd13767
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654729"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771620"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Convertidor de valores de enlace de Xamarin.Forms
 
@@ -463,7 +463,6 @@ Los valores de las propiedades `Red` y `Green` se muestran con una extensión de
 Este es el resultado:
 
 [![Selector de colores RGB](converters-images/rgbcolorselector-small.png "RGB Color Selector")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

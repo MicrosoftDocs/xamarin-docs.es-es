@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: bc2c1c26bcb3dcf99a5598b6dccb6aad02513a28
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 0599b2374addf461e59948a1926de06e6e1e746a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197557"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754055"
 ---
 # <a name="gdb"></a>GDB
 
@@ -27,7 +27,6 @@ Existen tres maneras de usar `gdb`:
 1. [Compilaciones de depuración con implementación rápida habilitada](#Debug_Builds_with_Fast_Deployment).
 1. [Compilaciones de depuración con implementación rápida deshabilitada](#Debug_Builds_without_Fast_Deployment).
 1. [Compilaciones de versión](#Release_Builds)
-
 
 Cuando haya algún problema, consulte la sección [Solución de problemas](#Troubleshooting).
 
@@ -56,7 +55,6 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 El destino `_Gdb` iniciará una actividad de iniciador declarada dentro del archivo `AndroidManifest.xml`. Para especificar explícitamente qué actividad ejecutar, use la propiedad de MSBuild `RunActivity`. En este momento no se admite el inicio de servicios y otras construcciones de Android.
 
 El destino `_Gdb` creará un directorio `gdb-symbols` y copiará ahí el contenido de los directorios `/system/lib` y `$APPDIR/lib` del destino.
-
 
 > [!NOTE]
 > El contenido del directorio `gdb-symbols` está vinculado al destino de Android en el que realizó la implementación, y no se reemplazará automáticamente si cambia el directorio. (Puede considerarlo un error). Si cambia los dispositivos de destino de Android, deberá eliminar manualmente este directorio.
@@ -107,7 +105,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### <a name="including-gdbserver-in-your-app"></a>Incluir `gdbserver` en la aplicación
 

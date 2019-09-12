@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650635"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771831"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
@@ -656,7 +656,6 @@ Pero, en Android y UWP, el botón **Reproducir** tiene una apariencia muy distin
 [![Transporte personalizado pausado](custom-transport-images/customtransportpaused-small.png "Custom Transport Paused")](custom-transport-images/customtransportpaused-large.png#lightbox "Custom Transport Paused")
 
 En una aplicación de producción, es probable que quiera usar sus propias imágenes de mapa de bits para los botones con el fin de conseguir una uniformidad visual.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

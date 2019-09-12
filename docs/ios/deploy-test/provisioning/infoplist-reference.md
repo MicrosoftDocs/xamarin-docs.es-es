@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 9b766677c10a06b933504f3fdcba0b43e2c84a1c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e927d15e34107c19d9b4033db591742a513a963f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284393"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762568"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Referencia de Info.plist para Xamarin.iOS
 
@@ -66,7 +66,6 @@ UIBackgroundModes
 ## <a name="homekit"></a>HomeKit 
 
 NSHomeKitUsageDescription 
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

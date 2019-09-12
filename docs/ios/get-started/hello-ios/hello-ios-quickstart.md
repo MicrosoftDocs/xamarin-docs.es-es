@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 45eda150b0cff9462cfe5f09be4b04ea64ec391d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5508636905acbb513aec4c6e065e9296293310d3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284557"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768675"
 ---
 # <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
@@ -329,7 +329,6 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![](hello-ios-quickstart-images/vs-image14.png "Ajuste el ancho para que el botón tenga el mismo ancho que el campo de texto y la etiqueta")
 
-
 1. Con el **Botón** seleccionado en la superficie de diseño, cambie la propiedad **Nombre** en la sección **Identidad** de las **Propiedades** a `TranslateButton`. Cambie la propiedad **Título** a "Traducir":
 
     ![](hello-ios-quickstart-images/vs-image15.png "Cambie la propiedad Title a Traducir")
@@ -424,7 +423,6 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 1. Haga doble clic en **ViewController.cs** en el **Explorador de soluciones** para abrirlo y poder agregar lógica para controlar las interacciones con los botones:
 
     ![](hello-ios-quickstart-images/vs-image20.png "Lógica agregada para controlar las interacciones con los botones")
-
 
 1. Empiece por la conexión del `TranslateButton`. En la clase **ViewController**, busque el método `ViewDidLoad`. Agregue lo siguiente al código del botón dentro de `ViewDidLoad`, debajo de la llamada a `base.ViewDidLoad()`:
 

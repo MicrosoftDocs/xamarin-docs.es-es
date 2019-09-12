@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6cada2c7426cc50723321d77e21852a92fe64d63
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112482"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755797"
 ---
 # <a name="finding-your-keystores-signature"></a>Búsqueda de la firma de su almacén de claves
 
@@ -59,13 +59,11 @@ Certificate fingerprints:
          Version: 3
 ```
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Busque el archivo de Xamarin **debug.keystore** que se utiliza para firmar la aplicación. De forma predeterminada, el almacén de claves que se utiliza para firmar las versiones de depuración de una aplicación de Xamarin.Android puede encontrarse en la siguiente ubicación:
 
 **~/.local/share/Xamarin/Mono for Android/debug.keystore**
-
 
 La información acerca de un almacén de claves se obtiene ejecutando el comando **keytool** desde el JDK. La herramienta normalmente se encuentra en la siguiente ubicación:
 
@@ -126,7 +124,6 @@ Por ejemplo, si ha seguido los pasos de [Crear un nuevo certificado](~/android/d
 
 Para más información sobre cómo firmar una aplicación de Xamarin.Android, vea [Firmar el paquete de aplicación de Android](~/android/deploy-test/signing/index.md).
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Cuando utilice el asistente de Visual Studio para Mac **Firmar y distribuir...** para firmar la aplicación, encontrará el almacén de claves resultante en la siguiente ubicación:
@@ -138,6 +135,5 @@ Por ejemplo, si ha seguido los pasos de [Crear un nuevo certificado](~/android/d
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
 Para más información sobre cómo firmar una aplicación de Xamarin.Android, vea [Firmar el paquete de aplicación de Android](~/android/deploy-test/signing/index.md).
-
 
 -----

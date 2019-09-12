@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525711"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754219"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
 
@@ -29,7 +29,6 @@ La herramienta **Registro de depuración** proporciona un método para ver la sa
 > La herramienta **Registro de depuración** no funciona con Xamarin Live Player.
 
 El **Registro de depuración** no muestra mensajes de registro que se generan mientras la aplicación se ejecuta de forma independiente en el dispositivo (es decir, mientras está desconectada de Visual Studio).
-
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Acceso al registro de depuración desde Visual Studio
 
@@ -60,13 +59,11 @@ La captura de pantalla siguiente muestra las distintas partes de la ventana **He
 
 - **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas del registro.
 
-
 Cuando se muestre la ventana de la herramienta **Registro de depuración**, use el menú desplegable de dispositivos para elegir el dispositivo Android que desea supervisar:
 
 [![Ubicación del selector de dispositivos](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 Después de seleccionar el dispositivo, la herramienta **Registro de dispositivos** agrega las entradas del registro automáticamente desde una aplicación en ejecución (estas entradas del registro se muestran en la en la tabla de entradas del registro). El cambio entre dispositivos se detiene y se inicia el registro de dispositivos. Tenga en cuenta que un proyecto Android debe estar cargado antes de que los dispositivos aparezcan en el selector de dispositivos. Si el dispositivo no aparece en el selector de dispositivos, compruebe que está disponible en el menú desplegable de dispositivos de Visual Studio junto al botón **Iniciar**.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -104,7 +101,6 @@ Después de seleccionar el dispositivo, la herramienta **Registro de dispositivo
 
 -----
 
-
 ## <a name="accessing-from-the-command-line"></a>Acceso desde la línea de comandos
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -129,11 +125,9 @@ $ ./adb logcat
 
 -----
 
-
 Si se conecta más de un dispositivo, el dispositivo se debe identificar explícitamente. Por ejemplo, **adb -d logcat** muestra el registro del único dispositivo físico conectado, mientras que **adb -e logcat** muestra el registro del único emulador que se ejecuta.
 
 Encontrará más comandos escribiendo **adb** y leyendo los mensajes de ayuda.
-
 
 ## <a name="writing-to-the-debug-log"></a>Escribir en el registro de depuración
 

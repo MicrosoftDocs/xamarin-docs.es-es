@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650215"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771686"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -680,7 +680,6 @@ En la captura de pantalla de iOS de la izquierda se muestra el programa al ejecu
 La otra captura de pantalla muestra la configuración modificada. Al experimentar con esta página, recuerde colocar el programa en modo de suspensión o finalícelo en el dispositivo o emulador que se está ejecutando. La finalización del programa desde el depurador de Visual Studio no provocará que se llame a la invalidación de `OnSleep` en la clase `App`.
 
 En el artículo siguiente verá cómo especificar los [**formatos de cadena**](string-formatting.md) de los enlaces de datos que se establecen en la propiedad `Text` de `Label`.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

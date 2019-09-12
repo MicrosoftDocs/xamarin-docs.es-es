@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525579"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753989"
 ---
 # <a name="profiling-android-apps"></a>Generar perfiles de aplicaciones Android
 
@@ -24,14 +24,13 @@ Antes de implementar la aplicación en una tienda de aplicaciones, es importante
 
 En esta guía se presenta el generador de perfiles de Xamarin y se proporciona información detallada sobre cómo empezar a usar Android Profiler.
 
- 
 ## <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
 Xamarin Profiler es una aplicación independiente integrada con Visual Studio y Visual Studio para Mac para generar perfiles de aplicaciones Xamarin desde el IDE. Para obtener más información sobre el uso de Xamarin Profiler, vea [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
 > Debe ser un suscriptor de [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) para desbloquear la característica Xamarin Profiler en Visual Studio Enterprise en Windows o Visual Studio para Mac.
- 
+
 ## <a name="android-studio-profiler"></a>Android Studio Profiler
 
 Android Studio 3.0 y posterior incluye la herramienta Android Profiler. Puede usar Android Profiler para medir el rendimiento de una aplicación Android de Xamarin compilada con Visual Studio &ndash; sin necesidad de disponer de una licencia de Visual Studio Enterprise. Aun así, a diferencia de Xamarin Profiler, Android Profiler no está integrado con Visual Studio y solo puede usarse para generar perfiles de un paquete de aplicaciones Android (APK) que se haya compilado con antelación e importado en Android Profiler.
@@ -100,7 +99,6 @@ En los pasos siguientes se explica cómo iniciar una aplicación Android de Xama
 15. Si pulsa el botón **Aleatorizar** en **XamagonXuzzle** (que hace que desplace y aleatorice los iconos), verá que el uso de la CPU aumentará durante el intervalo de aleatorización de la aplicación:
 
     [![Uso de CPU al pulsar el botón para aleatorizar](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
-
 
 ### <a name="using-the-android-profiler"></a>Uso de Android Profiler
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 9272c522383251a54aff5093c20e4b6b6131e2b2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 925a110025092ce6efa4e4d5f8e80b640b7f3dd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293044"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770088"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 
@@ -25,7 +25,6 @@ Obtenga más información sobre [Identificador del desarrollador y equipo select
 Para compilar una aplicación para la implementación directamente en los usuarios (NO a través de Mac App Store), establezca que la **configuración de firma** use el **identificador de desarrollador**. Asegúrese de editar la configuración de **lanzamiento**.
 
  [![](signing-images/config02.png "Opciones de la firma de Mac")](signing-images/config02.png#lightbox)
-
 
 ## <a name="build"></a>Compilar
 

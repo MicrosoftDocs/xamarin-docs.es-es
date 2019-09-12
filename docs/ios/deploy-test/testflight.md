@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 2080961e2741ea0d0f0316918c55f3c2a194a00a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289980"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756212"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -22,9 +22,7 @@ Las pruebas beta son una parte integral del ciclo de desarrollo de software y ha
 
 TestFlight es el servicio de pruebas beta de Apple para aplicaciones iOS y solo es accesible a través de [iTunes Connect](https://itunesconnect.apple.com/). Está actualmente disponible para aplicaciones iOS 8.0 y versiones posteriores. TestFlight permite realizar pruebas beta con usuarios internos y externos y, debido a una revisión de la aplicación Beta para estos últimos, garantiza un proceso mucho más sencillo en la revisión final al publicar en el App Store.
 
-
-Anteriormente, el binario se generaba en Visual Studio para Mac y se cargaba en el sitio web de TestFlightApp para la distribución a los evaluadores. Con el nuevo proceso, hay una serie de mejoras que le permitirán tener aplicaciones de alta calidad y bien probadas en el App Store. Por ejemplo:
-
+Anteriormente, el binario se generaba en Visual Studio para Mac y se cargaba en el sitio web de TestFlightApp para la distribución a los evaluadores. Con el nuevo proceso, hay una serie de mejoras que le permitirán tener aplicaciones de alta calidad y bien probadas en el App Store. Por ejemplo: 
 
 - La revisión de la aplicación beta necesaria para las pruebas externas garantiza una mayor probabilidad de éxito de su revisión final en el App Store, ya que ambas requieren el cumplimiento de las directrices de Apple.
 - Antes de cargar, la aplicación debe estar registrada en iTunes Connect. Esto garantiza que no habrá ninguna discrepancia entre los perfiles, los nombres y los certificados de aprovisionamiento.
@@ -44,7 +42,6 @@ Para probar las compilaciones con TestFlight, deberá crear un *perfil de distri
 Puede confirmar que el perfil de distribución contiene los derechos de la versión beta cuando [valide la compilación en Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), como se muestra a continuación:
 
 [![](testflight-images/validate-build.png "Envío de la aplicación a Apple")](testflight-images/validate-build.png#lightbox)
-
 
 ## <a name="testflight-workflow"></a>Flujo de trabajo de TestFlight
 
@@ -68,14 +65,11 @@ El flujo de trabajo siguiente describe los pasos necesarios para empezar a usar 
 
     [![](testflight-images/my-apps.png "Selección de Mis aplicaciones")](testflight-images/my-apps.png#lightbox)
 
-
 3. En la pantalla **Mis aplicaciones**, haga clic en el botón **+** situado en la esquina superior izquierda de la pantalla para agregar una aplicación nueva. Si tiene cuentas de desarrollador de iOS y Mac, se le pedirá que elija el tipo de aplicación nueva aquí.
 
 Se mostrará la ventana de envío **Nueva aplicación iOS**, que debe contener exactamente la misma información que el archivo Info.plist de la aplicación.
 
 Para obtener más información acerca de cómo crear un nuevo registro de iTunes Connect, consulte la guía [Crear un registro de iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
-
-
 
 ### <a name="completing-the-new-ios-app-submission-form"></a>Completar el formulario de envío de la aplicación iOS nueva
 
@@ -91,7 +85,6 @@ El formulario debe reflejar exactamente la información que contiene el archivo 
 - **Versión**: el número de versión de la aplicación que se va a cargar. La elige el desarrollador.
 - **SKU**: el SKU es un ID único para la aplicación, que los usuarios no verán. Se puede considerar como si fuera un ID de producto. En el ejemplo anterior, he elegido la fecha junto con un número de versión de esa fecha.
 
-
 ## <a name="upload-your-app"></a>Cargar la aplicación
 
 Una vez creado el registro de iTunes Connect, podrá cargar nuevas compilaciones. Recuerde que las compilaciones deben tener el derecho beta nuevo.
@@ -106,12 +99,11 @@ En primer lugar, compile la versión [final distribuible](~/ios/deploy-test/app-
 
  [![](testflight-images/new-archive.png "Selección de Archivo para publicar")](testflight-images/new-archive.png#lightbox)
 
-
  Consulte la guía [Compilar la versión distribuible](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para obtener más información.
 
 ### <a name="sign-and-distribute-your-app"></a>Firmar y distribuir la aplicación
 
- Al crear un archivo se abre automáticamente la **Vista de archivos**, en que se muestran todos los proyectos archivados, agrupados por solución. Para firmar la aplicación y prepararla para su distribución, seleccione **Firmar y distribuir...** , como se muestra a continuación:
+ Al crear un archivo se abre automáticamente la **Vista de archivos**, en que se muestran todos los proyectos archivados, agrupados por solución. Para firmar la aplicación y prepararla para su distribución, seleccione **Firmar y distribuir...**, como se muestra a continuación:
 
 [![](testflight-images/archive-view.png "Al crear un archivo se abre automáticamente la vista Archivos")](testflight-images/archive-view.png#lightbox)
 
@@ -144,7 +136,6 @@ Una vez abierto, seleccione la opción **Deliver Your App** (Entregar la aplicac
  Consulte la sección [Enviar la aplicación a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para obtener más información sobre estos pasos.
 
 -----
-
 
 En la guía [Publicación en el App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) se describen todos los pasos anteriores con más detalle; consúltela para obtener información más detallada sobre el proceso de envío al App Store.
 
@@ -217,7 +208,6 @@ Puede invitar a estos evaluadores; para ello, seleccione su nombre y haga clic e
 Puede ver el estado de su invitación en la columna de estado de la página Evaluadores internos:
 
 [![](testflight-images/status-added.png "Estado de la invitación")](testflight-images/status-added.png#lightbox)
-
 
 ### <a name="external-testers"></a>Evaluadores externos
 

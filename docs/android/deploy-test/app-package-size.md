@@ -7,22 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6d391bd804e1c59d06d78dd7cffe3f11f9276468
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525779"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754635"
 ---
 # <a name="application-package-size"></a>Tamaños de paquete de aplicación
 
 _En este artículo se examinan los elementos que componen un paquete de aplicación Xamarin.Android y las estrategias asociadas que se pueden utilizar para la implementación eficaz del paquete durante las etapas de depuración y lanzamiento de la versión._
 
-
 ## <a name="overview"></a>Información general
 
 Xamarin.Android usa diversos mecanismos para minimizar el tamaño de paquete y mantener un proceso eficiente de depuración e implementación de versiones. En este artículo, se examina el flujo de trabajo de implementación de depuración y lanzamiento de Xamarin.Android y cómo la plataforma Xamarin.Android garantiza que se compilan y lanzan pequeños paquetes de aplicación.
-
 
 ## <a name="release-packages"></a>Paquetes de versión
 
@@ -41,7 +39,6 @@ Como se puede observar, se quita una cantidad considerable de la BCL que no se u
 ![Tamaño de paquete de ApiDemo después de la vinculación](app-package-size-images/api-demo-package-size-after-linker.png)
 
 Como se ilustra aquí, el tamaño del paquete de aplicación suele ser 2,9 MB más grande que la aplicación y sus dependencias.
-
 
 ## <a name="debug-packages"></a>Depuración de paquetes
 
@@ -75,11 +72,9 @@ Para habilitar *Implementación rápida de ensamblados*, siga estos pasos:
 
 4. Haga clic en el botón **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo Opciones del proyecto.
 
-
 La próxima vez que la aplicación se compile para la depuración, los ensamblados se instalarán directamente en el dispositivo (si aún no lo están) y un paquete de aplicación más pequeño (que no incluye los ensamblados) también se instalará en el dispositivo. Con ello se acorta el tiempo necesario para conseguir que los cambios en la aplicación se pongan en funcionamiento para la realización de pruebas.
 
 Al soportar la primera implementación larga del entorno de tiempo de ejecución compartido y de la plataforma compartida, cada vez que realizamos cambios en la aplicación, podemos implementar la nueva versión rápidamente y sin problemas, de modo que conseguimos un ciclo de cambio, implementación y ejecución rápido.
-
 
 ## <a name="summary"></a>Resumen
 

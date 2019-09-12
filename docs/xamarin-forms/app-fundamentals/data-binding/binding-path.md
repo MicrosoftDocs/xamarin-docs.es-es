@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646753"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771644"
 ---
 # <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
 
@@ -162,8 +162,6 @@ Ahora, se revela que el tipo de la propiedad `Content` es `Xamarin.Forms.StackLa
 A medida que Xamarin.Forms procesa la ruta de acceso de enlace, instala un controlador `PropertyChanged` en todos los objetos de la ruta de acceso que implementen la interfaz `INotifyPropertyChanged`. Por ejemplo, el enlace final reacciona ante un cambio en el primer objeto `Label` porque cambia la propiedad `Text`.
 
 Si una propiedad en la ruta de acceso de enlace no implementa `INotifyPropertyChanged`, se omitirán todos los cambios a esa propiedad. Algunos cambios podrían invalidar completamente la ruta de acceso de enlace, por lo que solo debe usar esta técnica cuando la cadena de propiedades y subpropiedades nunca sea no válida.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

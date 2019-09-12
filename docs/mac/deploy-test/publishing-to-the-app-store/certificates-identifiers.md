@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 80a54d9276159c7c1b1706b61e7bc865aca540bd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a39c40bb6f63427f1a4aeedea10e90aef4df91e8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285859"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770258"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores en Xamarin.Mac
 
@@ -210,7 +210,6 @@ Haga lo siguiente:
 13. Los siguientes elementos están visibles en **Acceso a llaves**:
 
     [![Certificado en Acceso a llaves](certificates-identifiers-images/image43.png "Certificado en Acceso a llaves")](certificates-identifiers-images/image43-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

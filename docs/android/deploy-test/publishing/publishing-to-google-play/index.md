@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119803"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755962"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
 Aunque hay muchos mercados de aplicaciones para distribuirlas, Google Play es posiblemente el mayor almacén y el más visitado del mundo para aplicaciones Android. Google Play proporciona una plataforma única para distribuir, publicitar, vender y analizar las ventas de una aplicación Android.
 
 En esta sección se tratan temas específicos de Google Play, como registrarse para convertirse en editor, recopilar recursos para ayudar a Google Play a promocionar y publicitar la aplicación, las directrices para la clasificación de la aplicación en Google Play y el uso de filtros para restringir la implementación de una aplicación en determinados dispositivos.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -29,8 +28,6 @@ Todas las aplicaciones deben estar registradas con una clave criptográfica que 
 El tamaño máximo de un APK publicado en Google Play es de 100 MB. Si una aplicación supera ese tamaño, Google Play permitirá la entrega de recursos adicionales mediante *archivos de expansión de APK*. Los archivos de expansión Android permiten que el APK tenga 2 archivos adicionales, cada uno de ellos con un tamaño máximo de 2 GB. Google Play hospedará y distribuirá estos archivos sin costo alguno. Los archivos de expansión se tratarán en otra sección.
 
 Google Play no está disponible en todo el mundo. Es posible que en algunas ubicaciones no se admita la distribución de aplicaciones.
-
-
 
 ## <a name="becoming-a-publisher"></a>Convertirse en editor
 
@@ -43,20 +40,15 @@ Para publicar aplicaciones en Google Play, es necesario tener una cuenta de edit
 1. Confirme la verificación por correo electrónico.
 1. Una vez creada la cuenta, ya es posible publicar aplicaciones mediante Google Play.
 
-
 Google Play no se admite en todos los países del mundo. Las listas de países más recientes se pueden encontrar en los siguientes vínculos:
 
 1. [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; Se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
 
 1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; Se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
 
-
-
 ### <a name="preparing-promotional-assets"></a>Preparación de los recursos promocionales
 
 Para promocionar y publicitar de forma eficaz una aplicación en Google Play, Google permite a los desarrolladores enviar recursos promocionales, como capturas de pantalla, gráficos y vídeos. Google Play utiliza dichos recursos para publicitar y promocionar la aplicación.
-
-
 
 #### <a name="launcher-icons"></a>Iconos del iniciador
 
@@ -66,7 +58,6 @@ Un *icono del iniciador* es un gráfico que representa una aplicación. Cada ico
 - **mdpi** (160 ppp) &ndash; 48 x 48 px
 - **hdpi** (240 ppp) &ndash; 72 x 72 px
 - **xhdpi** (320 ppp) &ndash; 96 x 96 px
-
 
 Los iconos del iniciador son lo primero que verá un usuario de aplicaciones de Google Play, por lo que debe prestarse mucha atención para conseguir que los iconos del iniciador sean visualmente atractivos y significativos.
 
@@ -78,8 +69,6 @@ Sugerencias para los iconos de iniciador:
 
 1. **Uso del canal alfa**: los iconos deben usar el canal alfa y no deben ser imágenes enmarcadas por completo.
 
-
-
 #### <a name="high-resolution-application-icons"></a>Iconos de aplicaciones de alta resolución
 
 Las aplicaciones de Google Play requieren una versión de alta fidelidad del icono de la aplicación. Solo se utiliza en Google Play y no reemplaza el icono del iniciador de la aplicación. Las especificaciones de los iconos de alta resolución son los siguientes:
@@ -90,8 +79,6 @@ Las aplicaciones de Google Play requieren una versión de alta fidelidad del ico
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) es una herramienta útil para la creación de iconos adecuados para el iniciador y las aplicaciones de alta resolución.
 
-
-
 #### <a name="screen-shots"></a>Capturas de pantalla
 
 Google Play requiere un mínimo de dos y un máximo de ocho capturas de pantalla para una aplicación. Se muestran en la página de detalles de la aplicación en Google Play.
@@ -101,16 +88,12 @@ Las especificaciones para las capturas de pantalla son las siguientes:
 1. PNG o JPG 24 bits sin ningún canal alfa
 1. 320 de ancho x 480 de alto, 480 de ancho x 800 de alto o 480 de ancho x 854 de alto. Las imágenes con paisajes se recortarán.
 
-
-
 #### <a name="promotional-graphic"></a>Gráfico promocional
 
 Se trata de una imagen opcional utilizada por Google Play:
 
 1. Es un archivo PNG o JPG de 24 bits y de 180 de ancho x 120 de alto sin ningún canal alfa.
 1. No incluye bordes.
-
-
 
 #### <a name="feature-graphic"></a>Gráfico de características
 
@@ -120,13 +103,9 @@ Se utiliza en la sección de características de Google Play. Este gráfico pued
 1. Todo el contenido importante debe estar dentro de un marco de 924 x 500. Para fines estilísticos, se pueden recortar los píxeles que estén fuera de este marco.
 1. También puede reducirse: utilice texto grande y simplifique los gráficos.
 
-
-
 #### <a name="video-link"></a>Vínculo de vídeo
 
 Se trata de una dirección URL de un vídeo de YouTube que muestra la aplicación. El vídeo debe durar entre 30 segundos y 2 minutos, y debe mostrar las mejores partes de la aplicación.
-
-
 
 ### <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -143,7 +122,7 @@ En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/sig
 5. Firme la aplicación con el certificado.
 6. Publique la aplicación firmada en Google Play.
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Seleccione **Google Play** y haga clic en **Siguiente**:
+En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)**, haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)**. Seleccione **Google Play** y haga clic en **Siguiente**:
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -186,7 +165,6 @@ En la siguiente sección se explica cómo crear un nuevo proyecto de API de Goog
 
 -----
 
-
 #### <a name="create-a-google-api-project"></a>Creación de un proyecto de API de Google
 
 En primer lugar, inicie sesión en su [cuenta de desarrollador de Google Play](https://play.google.com/apps/publish).
@@ -224,7 +202,6 @@ Haga clic en **Guardar** para guardar los cambios. De este modo volverá a la p�
 
 Este archivo JSON contiene el id. de cliente y el secreto del cliente que puede cortar y pegar en el cuadro de diálogo **Sign and Distribute (Firmar y distribuir)** en el paso siguiente.
 
-
 #### <a name="register-google-api-access"></a>Registro del acceso de la API de Google
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -251,7 +228,7 @@ Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play
 - **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
 - **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
 
-Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)** , asegúrese de especificar un valor porcentual:
+Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)**, asegúrese de especificar un valor porcentual:
 
 [![Selección de Alfa, Beta, Lanzamiento o Producción](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
@@ -270,7 +247,6 @@ Cuando finaliza la carga, el estado se muestra en la esquina inferior izquierda 
 
 [![Mensaje de publicación del proyecto finalizada](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
 
-
 ### <a name="troubleshooting"></a>Solución de problemas
 
 Tenga en cuenta que se debe haber enviado antes un APK a Google Play Store para que **Publish to Google Play (Publicación en Google Play)** funcione. Si aún no se ha cargado un APK, el Asistente para publicación mostrará el siguiente error en la panel **Errores**:
@@ -281,7 +257,7 @@ Si se produce este error, cargue un APK manualmente, por ejemplo, una compilaci�
 
 [![Ya se actualizó un APK con el código de versión (1)](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
-Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)** .
+Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)**.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -293,7 +269,7 @@ Si se aceptan el id. de cliente y el secreto de cliente, se mostrará el mensaje
 
 [![Mensaje de registro correcto](images/xs/11-registration-successful-sml.png)](images/xs/11-registration-successful.png#lightbox)
 
-En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)** , seleccione una cuenta de Google y una pista para cargar la aplicación:
+En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)**, seleccione una cuenta de Google y una pista para cargar la aplicación:
 
 [![Cuadro de diálogo para elegir una cuenta de Google](images/xs/12-choose-google-account-sml.png)](images/xs/12-choose-google-account.png#lightbox)
 

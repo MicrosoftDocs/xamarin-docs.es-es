@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 87972df2b15a5bc1f6323a6953f809379cae4a50
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771563"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
@@ -183,7 +183,6 @@ Tal vez se pregunte cómo podría mostrar sus valores RGB (rojos, verdes y azule
 Otro enfoque es más general: puede escribir un *convertidor de valores de enlace* como se describe en el siguiente artículo, [**Convertidor de valores de enlace de Xamarin.Forms**](converters.md).
 
 Empero, el siguiente artículo explora la [**Ruta de enlace**](binding-path.md) con más detalle y muestra cómo se puede utilizar para hacer referencia a elementos de las colecciones y subpropiedades.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

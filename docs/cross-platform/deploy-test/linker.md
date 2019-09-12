@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765924"
 ---
 # <a name="custom-linker-configuration"></a>Configuración personalizada del enlazador
 
@@ -26,7 +26,6 @@ Cuando ya tenga este archivo de descripción del enlazador, agréguelo al proyec
 
 - **Para Android**: establezca **Acción de compilación** en **LinkDescription**.
 - **Para iOS**: establezca **Acción de compilación** en **LinkDescription**.
-
 
 En el ejemplo siguiente se muestra el aspecto del archivo XML:
 
@@ -60,8 +59,6 @@ Tenga en cuenta que deben usarse los nombres de método de establecedor y captad
 La segunda sección, para `My.Own.Assembly.dll`, se asegurará de que el tipo `Foo` conservará todos sus campos (es decir, el atributo `preserve="fields"`) y todos sus constructores (es decir, todos los métodos denominados `.ctor` en IL). El tipo `Bar` conservará firmas específicas (no nombres) para un constructor (que acepta un único parámetro de cadena) y para un campo de cadena específico `_blah`.
 El espacio de nombres `My.Own.Namespace` conservará todos los tipos que contiene.
 Por último, cualquier tipo cuyo nombre completo (incluido el espacio de nombres) coincida con el patrón de carácter comodín "My.Other\*" conservará todos sus campos y métodos. El carácter comodín `*` puede incluirse varias veces en un patrón de "nombre completo de tipo".
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

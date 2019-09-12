@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108436"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771880"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
 
@@ -92,7 +92,6 @@ De esta forma, se crea una referencia al tipo `ClassInPCL`, lo que indica que se
 ## <a name="summary"></a>Resumen
 
 En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado. Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms. Se pueden usar para realizar pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: e8070894bab89ab2e38772518c94482409e4d17f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650425"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771727"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 
@@ -331,7 +331,6 @@ Siempre que la propiedad `Control` sea `null`, se crea una instancia de un nuevo
 ## <a name="summary"></a>Resumen
 
 En este artículo se mostró cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo. Los controles de interfaces de usuario personalizadas de Xamarin.Forms deben derivar de la clase [`View`](xref:Xamarin.Forms.View), que se usa para colocar los diseños y los controles en la pantalla.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

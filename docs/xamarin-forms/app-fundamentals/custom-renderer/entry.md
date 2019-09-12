@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 2deee2bd7fa07f562bee02409d1a7a19cdac0be9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650859"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772010"
 ---
 # <a name="customizing-an-entry"></a>Personalización de una entrada
 
@@ -212,7 +212,6 @@ La llamada al método `OnElementChanged` de la clase base crea una instancia de 
 ## <a name="summary"></a>Resumen
 
 En este artículo se mostró cómo crear un representador de control personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin.Forms, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia representación específica de la plataforma. Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia de los controles de Xamarin.Forms. Se pueden usar para pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

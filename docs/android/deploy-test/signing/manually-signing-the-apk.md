@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525022"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755898"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manual del APK
-
 
 Tras compilar la aplicación para su lanzamiento, es necesario firmar el APK antes de distribuirla. De este modo podrá ejecutarse en un dispositivo Android. Este proceso normalmente se administra con el IDE, aunque hay casos en los que es necesario firmar el APK manualmente en la línea de comandos. El proceso de firma de APK incluye los siguientes pasos:
 
@@ -27,15 +26,11 @@ Tras compilar la aplicación para su lanzamiento, es necesario firmar el APK ant
 
 El orden de los pasos es importante y depende de qué herramienta se utiliza para firmar el APK. Si se usa **apksigner**, en primer lugar es importante usar **zipalign** con la aplicación y, después, firmarla con **apksigner**.  En caso de que sea necesario usar **jarsigner** para firmar el APK, es importante firmar primero el APK y, después, ejecutar **zipalign**. 
 
-
-
 ## <a name="prerequisites"></a>Requisitos previos
 
 Esta guía se centra en el uso de **apksigner** de las herramientas de compilación del SDK de Android, versión 24.0.3 o posterior. En ella se da por supuesto que ya ha creado el APK.
 
 Las aplicaciones compiladas con una versión anterior de las herramientas de compilación del SDK de Android deben usar **jarsigner**, como se describe en la sección [Firma del APK con jarsigner](#Sign_the_APK_with_jarsigner) de a continuación.
-
-
 
 ## <a name="create-a-private-keystore"></a>Crear un almacén de claves privadas
 
@@ -48,8 +43,6 @@ Por este motivo, se debe crear y usar un almacén de claves privadas para firmar
 
 Es importante proteger este almacén de claves. Si se pierde, no será posible publicar actualizaciones de la aplicación con Google Play.
 La única manera de solucionar los problemas causados por la pérdida de un almacén de claves sería crear otro almacén de claves, volver a firmar el APK con la clave nueva y, después, enviar una aplicación nueva. Después, la aplicación anterior tendría que quitarse de Google Play. Del mismo modo, si este nuevo almacén de claves corre peligro o se distribuye públicamente, es posible que se distribuyan versiones no oficiales o malintencionadas de una aplicación.
-
-
 
 ### <a name="create-a-new-keystore"></a>Crear un almacén de claves nuevo
 
@@ -95,7 +88,6 @@ Para enumerar las claves que están almacenadas en un almacén de claves, use **
 $ keytool -list -keystore xample.keystore
 ```
 
-
 ## <a name="zipalign-the-apk"></a>Aplicar zipalign al APK
 
 Antes de firmar un APK con **apksigner**, es importante optimizar el archivo con la herramienta **zipalign** del SDK de Android. La herramienta **zipalign** reestructurará los recursos de un APK con límites de 4 bytes. Esta alineación permite a Android cargar rápidamente los recursos del APK, con lo que se aumenta el rendimiento de la aplicación y se reduce sustancialmente el uso de memoria. Xamarin.Android llevará a cabo una comprobación en runtime para determinar si se ha aplicado zipalign al APK. Si no se ha aplicado zipalign al APK, no se ejecutará la aplicación.
@@ -105,7 +97,6 @@ El siguiente comando usará el APK firmado y generará un APK firmado con zipali
 ```shell
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
-
 
 ## <a name="sign-the-apk"></a>Firmar el APK
 
@@ -129,7 +120,6 @@ Para obtener las información sobre el uso de **apksigner**, consulte la [docume
 > [!NOTE]
 > De acuerdo con el [problema 62696222 de Google](https://issuetracker.google.com/issues/62696222), **apksigner** "no se encuentra" en Android SDK. La solución alternativa a este problema es instalar la versión 25.0.3 de las herramientas de compilación del SDK de Android y usar dicha versión de **apksigner**.  
 
-
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>Firma del APK con jarsigner
@@ -147,8 +137,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 
 > [!NOTE]
 > Al usar **jarsigner**, es importante firmar el APK _en primer lugar_ y, luego, usar **zipalign**.  
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

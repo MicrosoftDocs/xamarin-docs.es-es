@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118906"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751920"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -32,10 +32,8 @@ Para realizar correcciones y actualizaciones menores, puede hacer clic en el bot
 
 6. Los encargados del mantenimiento combinarán la solicitud una vez que se hayan aplicado los comentarios y el cambio no presente problemas. Aparecerá en docs.microsoft.com poco después.
 
-
 > [!NOTE]
 > Si la solicitud aborda un asunto existente, agregue la palabra clave `Fixes #Issue_Number` al mensaje de confirmación o a la descripción de la solicitud de incorporación de cambios. De este modo, el asunto se podrá cerrar automáticamente cuando se combine la solicitud. Para obtener más información, vea [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/) (Cierre de asuntos mediante mensajes de confirmación).
-
 
 ### <a name="big-changes-or-new-content"></a>Cambios importantes o contenido nuevo
 
@@ -80,5 +78,3 @@ En la lista siguiente se incluye una serie de reglas orientativas que se deben t
 
 > [!NOTE]
 > Es posible que observe que algunos de los temas no siguen actualmente todas las instrucciones que se especifican aquí y en la [guía de estilo](contributing-guidelines/template.md), pero estamos trabajando para dar coherencia a todo el sitio. 
-
-

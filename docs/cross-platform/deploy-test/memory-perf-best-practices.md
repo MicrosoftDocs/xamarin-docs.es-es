@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290185"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765946"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -173,7 +173,6 @@ El campo `handler` mantiene la referencia al método anónimo y se usa para la s
 
 Se puede usar la inicialización diferida para aplazar la creación de un objeto hasta que se use por primera vez. Esta técnica se usa principalmente para mejorar el rendimiento, evitar el cálculo y reducir los requisitos de memoria.
 
-
 Considere el uso de la inicialización diferida para aquellos objetos cuya creación consume muchos recursos en estos dos escenarios:
 
 - La aplicación podría no usar el objeto.
@@ -246,8 +245,6 @@ Las operaciones de larga ejecución también deberían permitir la cancelación.
 
 > [!IMPORTANT]
 > La clase `CancellationTokenSource` implementa la interfaz `IDisposable`, y se debería invocar al método `CancellationTokenSource.Dispose` una vez que se termine con la instancia `CancellationTokenSource`.
-
-
 
 Para más información, vea [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 

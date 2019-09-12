@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d981307ae96f75c67442d3898255c8bed62f1cf7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771713"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
@@ -328,7 +328,6 @@ La propiedad `BindingContext` de `StackLayout` se establece en el objeto `slider
 [![Herencia de contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
 
 En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* puede cambiar el flujo de datos entre los objetos de origen y destino.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

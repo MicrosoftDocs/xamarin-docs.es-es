@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 437db399d1a8cafb19dbc57d7f2ea4141900d8db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292358"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762772"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso de mtouch para agrupar aplicaciones Xamarin.iOS
 
@@ -49,7 +49,6 @@ El comando `mtouch` puede compilar el código de tres formas diferentes:
 - Compilación para la implementación de dispositivos
 - Implementación del ejecutable en el dispositivo
 
-
 ### <a name="building-for-the-simulator"></a>Compilación para el simulador
 
 Para empezar, el escenario más habitual es probar la aplicación en el simulador, por lo que usará `mtouch -sim` para compilar el código en un paquete del simulador. Esto se hace como sigue:
@@ -70,9 +69,7 @@ En este caso particular, usamos el certificado "Desarrollador de iPhone: Miguel 
 
  <a name="Running_your_Application" />
 
-
 ## <a name="running-your-application"></a>Ejecución de la aplicación
-
 
 ### <a name="launching-on-the-simulator"></a>Inicio en el simulador
 
@@ -95,8 +92,6 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-
-
 Se recomienda encarecidamente que también mantenga un registro de la salida estándar y de los archivos de errores estándar para facilitar la depuración. La salida de `Console.WriteLine` es `stdout`, y la salida de `Console.Error.WriteLine` y cualquier otro mensaje de error en tiempo de ejecución es `stderr`.
 
 Para ello, use las marcas `--stdout` y `--stderr`:
@@ -106,7 +101,6 @@ Para ello, use las marcas `--stdout` y `--stderr`:
 ```
 
 Si se produce un error en la aplicación, puede ver la salida y el error para diagnosticar el problema.
-
 
 ### <a name="deploying-to-a-device"></a>Implementar en un dispositivo
 
@@ -125,8 +119,6 @@ Estos pasos se realizan normalmente en Visual Studio para Mac.
 ## <a name="reference"></a>Referencia
 
 Consulte la página del manual [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) para obtener información detallada sobre las otras opciones de la línea de comandos.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

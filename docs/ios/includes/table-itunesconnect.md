@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3560c365df18f0331d5834de20dbc5585615dbeb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763230"
+---
 |Dispositivo|Vertical (sin barra de estado)|Vertical (pantalla completa)|Horizontal (sin barra de estado)|Horizontal (pantalla completa)|
 |---|---|---|---|---|
 |Retina de 3,5 pulgadas|640 x 920|640 x 960|960 x 600|960 x 640|
@@ -15,4 +23,3 @@ Los vídeos de las versiones preliminares de las aplicaciones están disponibles
 |iPad|2048 x 1536 (4:3)|1200 x 900|900 x 1200|
 |iPhone 6|1334 x 750|1334 x 750|750 x 1334|
 |iPhone 6 Plus|2208 x 1242 (píxeles representados) 1920 x 1080 (píxeles físicos)|1920 x 1080|1080 x 1920|
-

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cb8dc64a8c40496aaf2ea23a834effb58436618a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759086"
 ---
 # <a name="android-emulator-setup"></a>Configuración de Android Emulator
 
 _En esta guía se explica cómo preparar Android Emulator para probar la aplicación._
-
 
 ## <a name="overview"></a>Información general
 
@@ -45,7 +44,5 @@ En este artículo se describen los mensajes de advertencia y los problemas más 
 
 Después de configurar Android Emulator, vea [Depuración en Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md) para obtener información sobre cómo iniciar el emulador y usarlo para probar y depurar la aplicación.
 
-
 > [!NOTE]
 > A partir de la versión **26.0.1** de Android SDK Tools, Google ha quitado la compatibilidad con administradores de AVD/SDK existentes en favor de las nuevas herramientas de la CLI (interfaz de la línea de comandos). Debido a este cambio de degradación, ahora se usan administradores de SDK/dispositivos de Xamarin en lugar de administradores de SDK/dispositivos de Google para las Herramientas de Android 26.0.1 y versiones posteriores. Para obtener más información sobre Xamarin SDK Manager, vea [Configuración del SDK de Android para Xamarin.Android](~/android/get-started/installation/android-sdk.md).
-

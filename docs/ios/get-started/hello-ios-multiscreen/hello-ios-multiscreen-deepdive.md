@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 8ab7f24d69e4f20cb1a732f32d220c85b178deef
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 72e421e088a582e4d2de1cf830a0978cca9f45c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762641"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -28,11 +28,11 @@ En el tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendimos qu
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "Diagrama que ilustra cómo se pasan los datos entre dos pantallas")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)* . En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
+En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)*. En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Ventajas del modelo MVC
 
-Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectura reutilizable para un problema o un caso de uso común en el código. MVC es una arquitectura para aplicaciones con una *interfaz gráfica de usuario (GUI)* . Asigna objetos de uno de tres roles de la aplicación: el *modelo* (lógica de datos o aplicación), la *vista* (interfaz de usuario) y el *controlador* (código subyacente). En el diagrama siguiente se muestran las relaciones entre las tres partes del modelo MVC y el usuario:
+Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectura reutilizable para un problema o un caso de uso común en el código. MVC es una arquitectura para aplicaciones con una *interfaz gráfica de usuario (GUI)*. Asigna objetos de uno de tres roles de la aplicación: el *modelo* (lógica de datos o aplicación), la *vista* (interfaz de usuario) y el *controlador* (código subyacente). En el diagrama siguiente se muestran las relaciones entre las tres partes del modelo MVC y el usuario:
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "Diagrama que muestra las relaciones entre las tres partes del modelo MVC y el usuario")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
@@ -76,11 +76,9 @@ El controlador de navegación tiene tres funciones principales:
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "Diagrama que muestra la navegación como una baraja de cartas")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
-
 - **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "Diagrama que ilustra cómo \"sacar\" una carta de la baraja")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
-
 
 - **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
 

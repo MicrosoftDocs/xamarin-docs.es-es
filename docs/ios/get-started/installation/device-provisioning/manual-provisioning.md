@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/15/2017
-ms.openlocfilehash: 5f56a99e341f58bc06e8bf49305b5527a92f0413
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768639"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -265,7 +265,6 @@ En este momento, el aprovisionamiento se ha completado y la aplicación está li
 
 4. Asegúrese de establecer la configuración de compilación en **iPhone** o **iPad**, en lugar de en simulador.
 5. Haga clic en **Ejecutar** en Visual Studio y compruebe que la aplicación se ejecuta en el dispositivo.
-
 
 -----
 

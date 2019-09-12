@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643960"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755843"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Inicio rápido
 
@@ -78,7 +78,7 @@ Con el botón **Translation History** (Historial de traducciones) seleccionado e
 
 ### <a name="creating-the-second-activity"></a>Creación de la segunda actividad
 
-Cree una segunda actividad para activar la segunda pantalla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...** :
+Cree una segunda actividad para activar la segunda pantalla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
 
 [![Agregar un archivo nuevo](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -216,14 +216,13 @@ El texto del botón **Translation History** (Historial de traducciones) debería
 
 [![El botón refleja el nuevo valor de cadena](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
-
 Con el botón **Translation History** (Historial de traducciones) seleccionado en la superficie de diseño, abra la pestaña **Comportamiento** en el **Panel de propiedades** y haga doble clic en la casilla **Habilitado** para deshabilitar el botón. Esto hará que el botón se vuelva más oscuro en la superficie de diseño:
 
 [![Deshabilitar el botón Translation History (Historial de traducciones)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>Creación de la segunda actividad
 
-Cree una segunda actividad para activar la segunda pantalla. En el **Panel de solución**, haga clic en el icono de engranaje de color gris junto al proyecto **Phoneword** y seleccione **Agregar > Nuevo archivo...** :
+Cree una segunda actividad para activar la segunda pantalla. En el **Panel de solución**, haga clic en el icono de engranaje de color gris junto al proyecto **Phoneword** y seleccione **Agregar > Nuevo archivo...**:
 
 En el cuadro de diálogo **Nuevo archivo**, elija **Android > Actividad**, asigne a la actividad el nombre `TranslationHistoryActivity` y haga clic en **Agregar**.
 

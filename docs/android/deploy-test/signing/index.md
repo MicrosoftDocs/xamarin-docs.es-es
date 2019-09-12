@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58506998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756059"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
@@ -85,7 +85,6 @@ Por ejemplo, los pasos anteriores podrían crear una clave de firma en la ubicac
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-
 > [!NOTE]
 > Debe crear una copia de seguridad del archivo de almacén de claves y la contraseña resultantes en un lugar seguro, ya que no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado macOS), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
 
@@ -121,7 +120,6 @@ En la captura de pantalla siguiente se muestra un ejemplo de la aplicación list
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-
 Tal como se muestra aquí, se ha agregado un nuevo certificado en el almacén de claves. Para publicar una aplicación en Google Play, haga clic en **Cancelar** y vaya a [Publicación en Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 En caso contrario, haga clic en **Siguiente** para publicar la aplicación *ad hoc* (para la distribución independiente) como se muestra en este ejemplo:
 
@@ -150,8 +148,6 @@ Se abrirá el Finder en la ubicación del archivo APK firmado:
 El APK ya se puede copiar en el Finder y enviar a su destino final. Es conveniente instalar el APK en un dispositivo Android y probarlo antes de la distribución. Vea [Publicación de forma independiente](~/android/deploy-test/publishing/publishing-independently.md) para más información sobre cómo publicar un APK *ad hoc*.
 
 -----
-
-
 
 ## <a name="next-steps"></a>Pasos siguientes
 

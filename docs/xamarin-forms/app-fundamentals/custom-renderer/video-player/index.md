@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8e6f37fb607f4b0bc0ddfd41ad86dfe7ecbc03df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650529"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771818"
 ---
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
 
@@ -65,10 +65,6 @@ Aunque los reproductores de vídeo en cada plataforma proporcionan sus propios c
 ## <a name="custom-video-positioningcustom-positioningmd"></a>[Barra de posición de vídeo personalizada](custom-positioning.md)
 
 Todos los reproductores de vídeo de la plataforma tienen una barra de posición que muestra el progreso del vídeo y permite avanzar o retroceder a una posición determinada. En este artículo se muestra cómo sustituir esa barra de posición por un control personalizado.
-
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

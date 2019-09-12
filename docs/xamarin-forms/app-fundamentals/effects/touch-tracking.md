@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978559"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771356"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
 
@@ -803,7 +803,6 @@ Si pasa los dedos por las teclas, podrá ver por los pequeños cambios en el col
 ## <a name="summary"></a>Resumen
 
 En este artículo se mostró cómo invocar eventos en un efecto, y cómo escribir y usar un efecto que implementa el procesamiento multitáctil de bajo nivel.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

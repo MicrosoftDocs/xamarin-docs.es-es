@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645368"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771485"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
@@ -432,7 +432,6 @@ El método `OnElementPropertyChanged` actualiza el color o el desplazamiento de 
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha mostrado cómo usar propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución. Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

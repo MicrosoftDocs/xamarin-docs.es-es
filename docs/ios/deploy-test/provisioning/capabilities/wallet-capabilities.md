@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 8afe9e703d357c246ec46756a87a7337859d5888
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1844136bb62930341cf00ec871fdd2ff8ff8fe1f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287024"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762739"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Capacidades de Wallet en Xamarin.iOS
 
@@ -54,13 +54,12 @@ Este Id. de aplicación ya puede usarse para generar, o volver a generar, un nue
 
 ![Uso del identificador de aplicación recién creado para crear un perfil de aprovisionamiento](wallet-capabilities-images/image20.png)
 
-
 Para más información sobre el uso de Wallet, consulte las siguientes guías:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit)
- 
+
 ## <a name="next-steps"></a>Pasos siguientes
- 
+
 En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.

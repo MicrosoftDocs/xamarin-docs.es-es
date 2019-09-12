@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a6cdd5ccec0d2c60eba18418327fd786201f11b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41a5a30cdd5017046415f1d678abf1d44e83e678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753670"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -25,11 +25,9 @@ _En esta guía se proporcionan los pasos necesarios para solucionar los problema
 
 Para encontrar los archivos de registro, vaya a **Ayuda &gt; Xamarin &gt; Comprimir registros** en Visual Studio.
 
-
 ## <a name="wheres-the-xamarin-build-host-app"></a>¿Dónde está la aplicación host de compilación de Xamarin?
 
 El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no es necesario. Visual Studio ahora implementa automáticamente el agente en el inicio de sesión remoto y lo ejecuta en segundo plano. No se ejecutará ninguna aplicación adicional en la máquina Mac o Windows.
-
 
 ## <a name="troubleshooting-remote-login"></a>Solucionar problemas del inicio de sesión remoto
 
@@ -64,7 +62,6 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
     Por ejemplo, en la siguiente captura de pantalla, el nombre de cuenta será **amyb** y no **Amy Burns**:
 
     [![](troubleshooting-images/troubleshooting-image5a.png "Obtención del nombre de cuenta de la aplicación Terminal")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Compruebe que la dirección IP que usa para el equipo Mac es correcta. Encontrará la dirección IP en **Preferencias del sistema > Compartir > Inicio de sesión remoto** en el equipo Mac.
 
@@ -373,7 +370,6 @@ Si está solucionando un problema de compilación y quiere asegurarse de que el 
 2. Pulse la tecla Control y haga clic en la carpeta **mtbs** y, después, seleccione **Mover a la papelera**:
 
     [![](troubleshooting-images/troubleshooting-image9.png "Mover la carpeta mtbs a la Papelera")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

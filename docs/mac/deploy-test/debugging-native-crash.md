@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: bb33d9f85dfc1215e91caa20fab3800645e13111
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282186"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769881"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
 
@@ -251,4 +251,3 @@ Nunca debe permitir que una excepción de C# "escape" código administrado al m�
 Sin hacer demasiado énfasis en los motivos técnicos, configurar la infraestructura para detectar excepciones administradas en todos los límites administrados o nativos es costoso y hay _muchas_ transiciones que se producen en numerosas operaciones comunes. Muchas operaciones, en concreto las que implican el subproceso de interfaz de usuario, deben finalizar rápidamente; si no, la aplicación sufrirá interrupciones y tendrá características de rendimiento inaceptables. Muchas de esas devoluciones de llamada realizan operaciones muy sencillas que, rara vez, tienen posibilidad de ejecutarse, por lo que, en esos casos, esta sobrecarga sería costosa e innecesaria.
 
 Por lo tanto, no configuraremos estos bloques Try Catch en la guía. En los casos en que el código no realice operaciones sencillas (es decir, devolver valores booleanos o matemática básica), puede tratar de configurar un bloque Try Catch usted mismo. 
-

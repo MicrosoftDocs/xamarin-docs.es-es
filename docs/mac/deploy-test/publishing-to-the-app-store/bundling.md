@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 283a057723ae399ead65c0c3e40347dbbd1e189e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770121"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Compilación para el Mac App Store
 
@@ -42,7 +42,6 @@ Antes de compilar, asegúrese de que se ha seleccionado la configuración **Lanz
 Una vez que se ha compilado la aplicación, el desarrollador puede hacer clic con el botón derecho en el proyecto y seleccionar **Abrir carpeta contenedora** para buscar el archivo de paquete (en el directorio `bin/x86/AppStore` en el ejemplo que se muestra a continuación).  Este archivo de paquete incluye un instalador para la aplicación que se puede enviar a Apple para que se incluya en Mac App Store.
 
  ![Seleccionar el paquete de compilación en el buscador](bundling-images/image64.png "Seleccionar el paquete de compilación en el buscador")
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

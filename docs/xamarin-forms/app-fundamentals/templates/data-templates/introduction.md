@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 7308222e64d64efdbad218186bb9a6e4dca3b26e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771275"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introducción a las plantillas de Xamarin.Forms
 
@@ -133,7 +133,6 @@ Una instancia de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se coloca
 - Una instancia de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definida en el nivel de aplicación se puede aplicar a los controles válidos de toda la aplicación.
 
 Las plantillas de datos situadas más abajo en la jerarquía de vistas tienen prioridad sobre las definidas más arriba cuando comparten atributos `x:Key`. Por ejemplo, una plantilla de datos de nivel de aplicación se reemplazará por una plantilla de datos de nivel de página, y una plantilla de datos de nivel de página se reemplazará por una plantilla de datos de nivel de control, o bien una plantilla de datos insertada.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

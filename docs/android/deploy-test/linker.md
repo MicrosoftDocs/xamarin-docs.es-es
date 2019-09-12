@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525419"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753840"
 ---
 # <a name="linking-on-android"></a>Vincular en Android
 
@@ -25,8 +25,6 @@ Por ejemplo, el ejemplo [Hello, Android](https://docs.microsoft.com/samples/xama
 |Lanzar con vinculación:|4,2 MB|2,9 MB|
 
 Enlace de resultados de un paquete con un tamaño un 30 % inferior al del paquete original (sin vincular) en 1.2.0 y un 18 % inferior al del paquete sin vincular en 4.0.1.
-
-
 
 ## <a name="control"></a>Control
 
@@ -50,7 +48,6 @@ public class MyActivity {
 }
 ```
 
-
 ### <a name="linker-behavior"></a>Comportamiento del enlazador
 
 El mecanismo principal para controlar el enlazador es el menú desplegable **Comportamiento del enlazador** (*Vinculación* en Visual Studio) del cuadro de diálogo **Opciones del proyecto**. Hay tres opciones:
@@ -58,7 +55,6 @@ El mecanismo principal para controlar el enlazador es el menú desplegable **Com
 1. **No vincular** (*Ninguno* en Visual Studio)
 1. **Vincular ensamblados de SDK** (*Solo ensamblados de SDK*)
 1. **Vincular todos los ensamblados** (*Ensamblados de SDK y usuario*)
-
 
 La opción **No vincular** desactiva el enlazador; en el ejemplo de tamaño de aplicación anterior "Lanzar sin vincular" se usó este comportamiento. Es útil para solucionar errores en tiempo de ejecución, para ver si es responsabilidad del enlazador. Normalmente, no se recomienda esta configuración para las compilaciones de producción.
 
@@ -86,7 +82,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### <a name="preserving-code"></a>Conservar el código
 
@@ -149,8 +144,6 @@ namespace Android.Runtime
 
 En los ejemplos anteriores, el atributo `Preserve` se declara en el espacio de nombres `Android.Runtime`; sin embargo, puede usar el atributo `Preserve` porque el vinculador busca este atributo por nombre de tipo de atributo en cualquier espacio de nombres.
 
-
-
 ### <a name="falseflag"></a>falseflag
 
 Si no se puede usar el atributo [Preserve], a menudo resulta útil proporcionar un bloque de código para que el enlazador crea que se usa el tipo, al tiempo que se impide la ejecución del bloque de código en tiempo de ejecución. Para usar esta técnica, podríamos hacer lo siguiente:
@@ -173,8 +166,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### <a name="linkskip"></a>linkskip
 
 Es posible especificar que un conjunto de ensamblados proporcionado por el usuario no debe vincularse en absoluto, mientras que se permite omitir otros ensamblados de usuario con la opción *Vincular ensamblados de SDK* mediante el uso de la [propiedad AndroidLinkSkip MSBuild](~/android/deploy-test/building-apps/build-process.md):
@@ -185,14 +176,11 @@ Es posible especificar que un conjunto de ensamblados proporcionado por el usuar
 </PropertyGroup>
 ```
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 La [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 **acción de compilación** puede usarse en archivos que pueden contener un [archivo de configuración de enlazador personalizado](~/cross-platform/deploy-test/linker.md).
 .edmx. Puede que sea necesario que los archivos de configuración de enlazador personalizados conserven los miembros `internal` o `private`.
-
-
 
 ### <a name="custom-attributes"></a>Atributos personalizados
 
@@ -207,7 +195,6 @@ Cuando se vincula un ensamblado, se quitarán los siguientes tipos de atributo p
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 Cuando se vincula un ensamblado, se quitarán los siguientes tipos de atributo personalizado de todos los miembros de las compilaciones de versiones:
 
 - System.Diagnostics.DebuggableAttribute
@@ -219,7 +206,6 @@ Cuando se vincula un ensamblado, se quitarán los siguientes tipos de atributo p
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

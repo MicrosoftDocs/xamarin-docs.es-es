@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 58621701d832660b125d7589762cc033811eb69b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9982f9102166aa6892be0819615f329a65fffbb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281839"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756426"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Compatibilidad con IPA en Xamarin.iOS
 
@@ -45,7 +45,7 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
 1. Haga doble clic en el archivo **Info.plist**, en el **Explorador de soluciones**, para abrirlo para su edición.
 2. Desplácese hasta la sección **Ilustraciones de iTunes** del editor.
-3. En caso de que falte alguna imagen, haga clic en la miniatura que encontrará en el editor, seleccione el archivo de imagen deseado de las ilustraciones de iTunes en el cuadro de diálogo **Open File (Abrir archivo)** y haga clic en el botón **OK (Aceptar)** o bien **Open (Abrir)** .
+3. En caso de que falte alguna imagen, haga clic en la miniatura que encontrará en el editor, seleccione el archivo de imagen deseado de las ilustraciones de iTunes en el cuadro de diálogo **Open File (Abrir archivo)** y haga clic en el botón **OK (Aceptar)** o bien **Open (Abrir)**.
 4. Repita este paso hasta que se hayan especificado todas las imágenes necesarias para su aplicación.
 
 Para obtener más información, consulte la documentación de [iTunes Artwork (Ilustraciones de iTunes)](~/ios/app-fundamentals/images-icons/app-icons.md).
@@ -66,7 +66,6 @@ Antes de empezar a crear un IPA para una solución multiplataforma, asegúrese d
 
 Para crear un IPA, es necesario crear un _archivo_ de una compilación de versión de nuestra aplicación. Este archivo contiene nuestra aplicación y la información que la identifica.
 
-
 1. Seleccione la configuración **Versión | Dispositivo** en Visual Studio para Mac:
 
     ![](ipa-support-images/buildxs01new.png "Selección de la configuración Versión | Dispositivo")
@@ -75,21 +74,19 @@ Para crear un IPA, es necesario crear un _archivo_ de una compilación de versi�
 
     ![](ipa-support-images/buildxs02new.png "Selección de Archivo para publicar")
 
-1. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)** :
+1. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)**:
 
     ![](ipa-support-images/buildxs03new.png "Muestra de la vista Archivos")
 
-
 ### <a name="sign-and-distribute-your-app"></a>Firmar y distribuir la aplicación
 
-Cada vez que se compila la aplicación para el archivo, se abre automáticamente la **Archives View (Vista de archivos)** , que muestra todos los proyectos archivados, agrupados por solución. De forma predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)** .
+Cada vez que se compila la aplicación para el archivo, se abre automáticamente la **Archives View (Vista de archivos)**, que muestra todos los proyectos archivados, agrupados por solución. De forma predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)**.
 
 Se recomienda mantener los archivos que se implementen en los clientes, ya sean implementaciones ad hoc o internas para que cualquier información de depuración generada pueda considerarse como perteneciente a una fecha posterior.
 
 Tenga en cuenta que, en el caso de las compilaciones que no pertenecen a la App Store, el archivo **iTunesMetadata.plist**, así como las ilustraciones definidas para iTunes, se incluirán automáticamente en su IPA, si están presentes en el archivo.
 
 Para firmar la aplicación y prepararla para la distribución:
-
 
 1. Seleccione el botón **Sign and Distribute... (Firmar y distribuir...)** que se muestra a continuación:
 
@@ -103,7 +100,7 @@ Para firmar la aplicación y prepararla para la distribución:
 
     ![](ipa-support-images/distribute02.png "Selección de la identidad de firma y el correspondiente perfil de aprovisionamiento")
 
-1. Compruebe los detalles del paquete y haga clic en **Publish (Publicar)** :
+1. Compruebe los detalles del paquete y haga clic en **Publish (Publicar)**:
 
     ![](ipa-support-images/distribute03.png "Comprobación de los detalles del paquete")
 
@@ -111,11 +108,9 @@ Para firmar la aplicación y prepararla para la distribución:
 
     ![](ipa-support-images/distribute04.png "Guardado del IPA en el equipo")
 
-
 ### <a name="building-via-the-command-line-on-mac"></a>Compilación a través de la línea de comandos (Mac)
 
 En algunos casos, como en un entorno de integración continua (CI), será necesario compilar su IPA a través de la línea de comandos. Para ello, siga los pasos indicados a continuación:
-
 
 1. Asegúrese de que las opciones **Project Options (Opciones de proyecto) > iOS IPA Options (Opciones de IPA para iOS) > Include iTunesArtwork images (Incluir imágenes de iTunesArtwork)** y **Build ad-hoc/enterprise package (IPA) (Compilar paquete ad hoc o empresa (IPA))** estén activadas:
 
@@ -128,7 +123,7 @@ En algunos casos, como en un entorno de integración continua (CI), será necesa
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     ```
 
-1. Si incluye un archivo opcional **iTunesMetadata.plist**, haga clic en el botón **...** , selecciónelo en la lista y haga clic en el botón **OK (Aceptar)** :
+1. Si incluye un archivo opcional **iTunesMetadata.plist**, haga clic en el botón **...**, selecciónelo en la lista y haga clic en el botón **OK (Aceptar)**:
 
      ![](ipa-support-images/imagexs03.png "Selección de iTunesMetadata.plist en la lista")
 
@@ -146,14 +141,14 @@ Una vez que se haya creado y seleccionado el perfil de aprovisionamiento, se hay
 
     ![](ipa-support-images/imagevs01.png "Selección de Propiedades")
 
-2. Seleccione **iOS IPA Options (Opciones de IPA para iOS)** y seleccione **Ad-Hoc (Ad hoc)** en la lista desplegable **Configuration (Configuración)** :
+2. Seleccione **iOS IPA Options (Opciones de IPA para iOS)** y seleccione **Ad-Hoc (Ad hoc)** en la lista desplegable **Configuration (Configuración)**:
 
     ![](ipa-support-images/imagevs02.png "Selección de Ad hoc en la lista desplegable Configuración")
 
     > [!NOTE]
     > Podría no haber una configuración ad hoc disponible para los proyectos de Xamarin.iOS más recientes. Si no está disponible, seleccione la configuración de **Lanzamiento**.
 
-3. Si incluye un archivo opcional **iTunesMetadata.plist**, haga clic en el botón **...** , selecciónelo en la lista y haga clic en el botón **Open (Abrir)** :
+3. Si incluye un archivo opcional **iTunesMetadata.plist**, haga clic en el botón **...**, selecciónelo en la lista y haga clic en el botón **Open (Abrir)**:
 
     ![](ipa-support-images/imagevs03.png "Selección de iTunesMetadata.plist en la lista")
 
@@ -164,7 +159,7 @@ Una vez que se haya creado y seleccionado el perfil de aprovisionamiento, se hay
     ![](ipa-support-images/imagevs05.png "Selección de Ad hoc en la lista desplegable Configuración de compilación")
 
 7. Compile el proyecto para crear el paquete IPA.
-8. El paquete IPA se creará en **Bin > Dispositivo iOS > carpeta Ad Hoc (o Lanzamiento)** :
+8. El paquete IPA se creará en **Bin > Dispositivo iOS > carpeta Ad Hoc (o Lanzamiento)**:
 
     ![](ipa-support-images/imagevs06.png "IPA en el Explorador de archivos")
 
@@ -251,7 +246,6 @@ Ahora el usuario puede sincronizar iTunes con su dispositivo para instalar la nu
 ## <a name="summary"></a>Resumen
 
 En este artículo se trata la configuración necesaria para preparar una aplicación de Xamarin.iOS para una compilación que no pertenezca a la App Store. También se explica cómo crear un paquete IPA y cómo instalar la aplicación de iOS resultante en el dispositivos iOS del usuario final para las pruebas o la distribución interna.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

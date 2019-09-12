@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/29/2019
 ms.custom: video
-ms.openlocfilehash: fa6910c380545527f930f340536f47b548b74b12
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233216"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756991"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Información de la aplicación:
 
@@ -86,7 +86,6 @@ La información sobre la aplicación se extrae de `Package.appxmanifest` para es
 - **Name** - `DisplayName` en el nodo `Properties`
 - **PackageName**: `Name` en el nodo `Identity`
 - **VersionString**: `Version` en el nodo `Identity`
-
 
 --------------
 

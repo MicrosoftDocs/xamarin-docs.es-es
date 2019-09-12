@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 0277a5abd4e34d092b231cd42746f9e05c91b8df
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 66e26704f22a73559eef04608726ab3b4a935385
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199952"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771921"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementación de HybridWebView
 
@@ -507,7 +507,6 @@ Esta funcionalidad se logra del siguiente modo:
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha mostrado cómo crear un representador personalizado para un control personalizado `HybridWebView`, lo que mejora los controles web específicos de la plataforma para permitir la invocación de código de C# desde JavaScript.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

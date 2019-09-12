@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 959729fc21ba59133e2a92c1121fdb93d608f635
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 95f25dbce55e2b960f604b6e304ffb6e8ed775e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653819"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771336"
 ---
 # <a name="adding-a-tap-gesture-recognizer"></a>Adición de un reconocedor de gesto de pulsar
 
@@ -113,7 +113,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

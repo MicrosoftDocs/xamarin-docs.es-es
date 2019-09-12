@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 48e5e71a9d4435852f72eb9be21f2e80cd124bfd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 12a2152424fac4024d8b83adb0c80c2499ec8b1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291093"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770102"
 ---
 # <a name="xamarinmac-performance"></a>Rendimiento de Xamarin.Mac
 
@@ -60,7 +60,6 @@ Las aplicaciones de escritorio a menudo procesan grandes cantidades de datos, y 
 Siempre que sea posible, use la [asíncronía](~/cross-platform/platform/async.md) y los subprocesos para que no se bloquee la interfaz de usuario.
 
 Para operaciones de larga ejecución, valore la posibilidad de usar [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) u otras opciones indicadas en los documentos de [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) de Apple para enviar notificaciones a los usuarios.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

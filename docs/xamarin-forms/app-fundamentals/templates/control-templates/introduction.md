@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289791"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771266"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introducción a las plantillas de control de Xamarin.Forms
 
@@ -51,7 +51,6 @@ La elección de dónde se puede definir una instancia de [`ControlTemplate`](xre
 - Las instancias de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) definidas en el nivel de aplicación se pueden aplicar a las páginas de toda la aplicación.
 
 Las plantillas de control situadas más abajo en la jerarquía de vistas tienen prioridad sobre las definidas más arriba. Por ejemplo, un elemento [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) denominado `DarkTheme` que se define en el nivel de página tendrá prioridad sobre una plantilla con el mismo nombre definida en el nivel de aplicación. Por tanto, una plantilla de control que defina un tema que se va a aplicar a cada página de una aplicación se debe definir en el nivel de aplicación.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

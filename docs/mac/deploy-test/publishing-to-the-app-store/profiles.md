@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: c0a4766abf8ded591bf348f2c2a7ba2283cdde00
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b2d9d49e37b195dadf3aa89fefb0911e4215d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290241"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769924"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfiles de aprovisionamiento para aplicaciones Xamarin.Mac
 
@@ -90,7 +90,6 @@ Haga lo siguiente:
 7. El perfil de aprovisionamiento también aparecerá en la lista: 
 
     [![](profiles-images/certif26.png "Consulta de los perfiles instalados")](profiles-images/certif26.png#lightbox)
-
 
 Si el desarrollador cambia en algún momento las características que un identificador de aplicación usa (por ejemplo, habilita iCloud o las notificaciones de inserción), debe volver a crear los perfiles de aprovisionamiento para ese identificador de aplicación.
 

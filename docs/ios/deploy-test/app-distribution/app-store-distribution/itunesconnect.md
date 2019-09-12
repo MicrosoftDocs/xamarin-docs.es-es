@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 910f91478eeb6894e11748c929cc94bc2c0dbe64
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 01e6ae4362c902c0982f7b93cc1f65b003db1020
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763242"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -304,7 +304,6 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 
     [![](itunesconnect-images/review02.png "Edición de la información de versiones en iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 7. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
-
 
 ## <a name="maintaining-pricing-information"></a>Mantener la información de precio
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 3d85fa063580e9619ef433e98f6e6a0e4121ee37
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e8f08a96d42aa02cb00f37337ecbc2620a8785e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288996"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762962"
 ---
 # <a name="execution-environment-for-xamarinios-apps"></a>Entorno de ejecución para aplicaciones Xamarin.iOS
 
@@ -35,4 +35,3 @@ Las variables de entorno permanentes se establecen mediante la definición de ar
 # to pass multipe environment variables, use --setenv multiple times
 --setenv:MONO_TRACE=E:all --setenv:GC_DONT_GC=1
 ```
-

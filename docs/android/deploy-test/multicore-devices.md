@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829959"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753946"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
@@ -79,7 +79,7 @@ Este es el nombre de una ABI para CPU que admiten el conjunto de instrucciones c
 > [!NOTE]
 > Aunque se ejecuta en x86, Google TV no es compatible con el NDK de Android.
 
-#### <a name="x8664"></a>x86_64
+#### <a name="x86_64"></a>x86_64
 
 Este es el nombre de una ABI para CPU que admiten el conjunto de instrucciones x86 de 64 bits (también conocido como *x64* o *AMD64*). Xamarin.Android 5.1 ha introducido soporte técnico para esta arquitectura (para más información, consulte [64-bit runtime support](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#64-bit-runtime-support) [Soporte técnico del entorno de ejecución de 64 bits]).
 
@@ -191,7 +191,6 @@ Además, incluso si se especifican ambas ABI ,`armeabi` y `armeabi-v7a`, (como s
 ```
 
 Como consecuencia, `armeabi` `libmonodroid.so` se encontrará primero en el archivo `.apk` y `armeabi` `libmonodroid.so` será el que se extraiga, aunque `armeabi-v7a` `libmonodroid.so` exista y esté optimizado para el destino. Esta situación puede dar también lugar a extraños errores en tiempo de ejecución, dado que `armeabi` no es seguro para SMP.
-
 
 ##### <a name="installing-native-libraries-android-404-and-later"></a>Instalación de bibliotecas nativas: Android 4.0.4 y versiones posteriores
 

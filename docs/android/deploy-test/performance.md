@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d7d6bf128d3814917633bdd69e3c9c54c8d6a20c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197508"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753818"
 ---
 # <a name="xamarinandroid-performance"></a>Rendimiento de Xamarin.Android
 
@@ -34,7 +34,6 @@ Existen varias técnicas para aumentar el rendimiento, y la percepción de rendi
 - [Eliminar recursos de imágenes sin usar](#disposeimages)
 - [Evitar la aritmética de punto flotante](#avoidfloats)
 - [Descartar cuadros de diálogo](#dismissdialogs)
-
 
 > [!NOTE]
 > Antes de leer este artículo, debería leer [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), donde se explican técnicas no específicas de una plataforma para mejorar el uso de memoria y el rendimiento de las aplicaciones compiladas con la plataforma Xamarin.
@@ -246,7 +245,6 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 Para más información sobre la liberación de recursos desechables, vea [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Liberar los recursos de IDisposable).  
 
-
 <a name="avoidfloats" />
 
 ## <a name="avoid-floating-point-arithmetic"></a>Evitar la aritmética de punto flotante
@@ -265,7 +263,6 @@ Cuando use la clase [`ProgressDialog`](xref:Android.App.ProgressDialog) (o cualq
 ## <a name="summary"></a>Resumen
 
 En este artículo se describen y se explican técnicas para aumentar el rendimiento de las aplicaciones compiladas con Xamarin.Android. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

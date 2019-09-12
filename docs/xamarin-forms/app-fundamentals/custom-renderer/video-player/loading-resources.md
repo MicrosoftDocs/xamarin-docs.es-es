@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 269d9d1ff658217a49ff56057c01c011f920b5df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771835"
 ---
 # <a name="loading-application-resource-videos"></a>Carga de vídeos de recursos de aplicación
 
@@ -180,7 +180,6 @@ Esta es la ejecución de la página:
 [![Reproducir recurso de vídeo](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "Play Video Resource")
 
 Ya ha visto cómo [cargar vídeos desde un URI web](web-videos.md) y cómo reproducir recursos insertados. Además, puede [cargar vídeos desde la biblioteca de vídeos del dispositivo](accessing-library.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

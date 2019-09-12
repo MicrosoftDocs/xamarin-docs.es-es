@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289884"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763065"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribución interna para aplicaciones Xamarin.iOS
 
@@ -94,7 +94,6 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesita un identificador de aplicación para identificar la aplicación que va a distribuir al dispositivo del usuario. Si aún no lo ha creado, siga estos pasos para hacerlo:
 
-
 1. En el [Centro de usuarios registrados de Apple Developer](https://developer.apple.com/account/overview.action), vaya a la sección *Certificate, Identifiers and Profiles* (Certificado, identificadores y perfiles). Seleccione **App IDs** (Identificadores de aplicación) en **Identifiers** (Identificadores).
 2. Haga clic en el botón **+** y proporcione un **Nombre** que la identifique en el portal.
 3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como: **Explícito**: com.[nombreDeDominio].[ NombreDeAplicación] **CarácterComodín**:com.[nombreDeDominio].*
@@ -150,13 +149,11 @@ La aplicación se puede distribuir de forma segura de diferentes formas, como:
 
 Para distribuir la aplicación de cualquiera de estas formas, primero debe crear un archivo IPA, como se explica en la sección siguiente.
 
-
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>Creación de un IPA para la implementación interna
 
 Una vez aprovisionadas, las aplicaciones se pueden empaquetar en un archivo conocido como *IPA*. Se trata de un archivo zip que contiene la aplicación, junto con iconos y metadatos adicionales. El archivo IPA se usa para agregar una aplicación de forma local en iTunes para que se pueda sincronizar directamente en un dispositivo incluido en el perfil de aprovisionamiento.
 
 Para obtener más información sobre cómo crear un IPA, consulte la guía [Compatibilidad con IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
-
 
 ## <a name="summary"></a>Resumen
 

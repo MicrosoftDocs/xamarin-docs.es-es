@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: 170bd30d65b9f5947bdb9d23d3100a8048f73ac7
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4bbfbaf2b7efc7e1d2f75a7462d6a2559ed7a9c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864056"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755701"
 ---
 # <a name="hello-android-multiscreen"></a>Multipantalla de Hello, Android
 
@@ -26,7 +26,6 @@ En la primera parte de esta guía, agregará una segunda pantalla a la aplicaci�
 ## <a name="part-2-deep-diveandroidget-startedhello-android-multiscreenhello-android-multiscreen-deepdivemd"></a>[Parte 2: profundización](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
 
 En la segunda parte de este documento, revisaremos lo que ha creado y explicaremos la arquitectura, la navegación y otros conceptos nuevos de Android que surjan durante el proceso.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

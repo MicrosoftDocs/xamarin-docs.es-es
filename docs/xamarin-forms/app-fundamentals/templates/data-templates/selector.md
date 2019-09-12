@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 684820a646527b382b1dbb936b9256fd4457803e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651894"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771253"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de un elemento DataTemplateSelector de Xamarin.Forms
 
@@ -133,7 +133,6 @@ La instancia de `PersonDataTemplateSelector` establece sus propiedades `ValidTem
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha explicado cómo crear y consumir un elemento [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector). `DataTemplateSelector` se puede usar para elegir un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) en tiempo de ejecución según el valor de una propiedad enlazada a datos. Esto permite aplicar varias instancias de `DataTemplate` al mismo tipo de objeto para personalizar la apariencia de objetos concretos.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

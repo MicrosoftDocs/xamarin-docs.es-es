@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 133550bab03c4d2e3826ea59cf231ac3d85f29cc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 761b1a8b2c3fd97ca3f1560b79b042e0fd89da92
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525659"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754183"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Depuración en Android Emulator
 
@@ -21,7 +21,6 @@ _En esta guía se explica cómo iniciar un dispositivo virtual en Android Emulat
 ## <a name="overview"></a>Información general
 
 Android Emulator (incluido como parte de la carga de trabajo **Desarrollo para dispositivos móviles con .NET**) se puede ejecutar en varias configuraciones para simular otros dispositivos Android. Cada una de estas configuraciones se crea como un _dispositivo virtual_. En esta guía, obtendrá información sobre cómo iniciar el emulador desde Visual Studio y ejecutar la aplicación en un dispositivo virtual. Para obtener información sobre cómo configurar Android Emulator y crear dispositivos virtuales, vea [Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md).
-
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso de un dispositivo virtual preconfigurado
 
@@ -65,7 +64,6 @@ Normalmente, se selecciona el dispositivo virtual **Android\_Accelerated\_x86** 
 ## <a name="editing-virtual-devices"></a>Edición de dispositivos virtuales
 
 Para modificar dispositivos virtuales (o crear otros), debe usar [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
 
 <a name="launching" />
 
@@ -113,11 +111,9 @@ Los inicios posteriores del dispositivo virtual son mucho más rápidos porque e
 
 ![Proceso de carga del estado durante el reinicio](debug-on-emulator-images/loading-state.png)
 
-
 ## <a name="troubleshooting"></a>Solución de problemas
 
 Para obtener sugerencias y soluciones alternativas a problemas habituales del emulador, vea [Solución de problemas de Android Emulator](~/android/get-started/installation/android-emulator/troubleshooting.md).
-
 
 ## <a name="summary"></a>Resumen
 

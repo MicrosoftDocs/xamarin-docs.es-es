@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 00d5d5cf9cda38fbfc09fcfe8b4dcb56d00dee5b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b538df5e8e615f8594bd38cb13d9b45b0961dac
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291424"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770124"
 ---
 # <a name="xamarinmac-linker-options"></a>Opciones del enlazador de Xamarin.Mac
 
@@ -53,7 +53,6 @@ Para cambiar a la configuración del enlazador para un proyecto de Xamarin.Mac, 
 
 4. La vinculación de plataforma para los marcos de destino Full no aparecerán en el IDE hasta una futura actualización. Hasta entonces, agregue `--linkplatform` a los **argumentos de mmp adicionales** en su lugar.
 5. Haga clic en el botón **Aceptar** para guardar los cambios.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

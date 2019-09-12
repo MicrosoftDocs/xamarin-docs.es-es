@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
 ms.custom: video
-ms.openlocfilehash: b889573c0cefbd692b1e879c1612a143d4bb7c99
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: ade1baa90f8a3b6a35e89d53de6d5f9b841c8f9e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120751"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764968"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartir
 
@@ -94,7 +94,6 @@ await Share.RequestAsync(new ShareFileRequest
 - `Subject` no se usa.
 
 -----
-
 
 ## <a name="api"></a>API
 

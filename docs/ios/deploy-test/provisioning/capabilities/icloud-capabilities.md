@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 0972b7c6fa686f40ca548f8267f8e514e9244f05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3fd3ec0207ac3ae1e5fcaa7d11d91247cd73666d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286138"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762905"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Capacidades de iCloud en Xamarin.iOS
 
@@ -92,7 +92,7 @@ Para crear un nuevo identificador de aplicación y agregar un contenedor a este,
     ![Pantalla para seleccionar el contenedor](icloud-capabilities-images/image34.png)
 
 10. Confirme las asignaciones de contenedores y presione **Assign** (Asignar).
- 
+
 Este Id. de aplicación ya puede usarse para generar, o volver a generar, un nuevo perfil de aprovisionamiento, como se explica en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md). 
 
 Para más información sobre el uso de iCloud, consulte las siguientes guías:
@@ -102,7 +102,7 @@ Para más información sobre el uso de iCloud, consulte las siguientes guías:
 * [Introduction to Document Picker](~/ios/platform/document-picker.md) (Introducción al selector de documentos)
 
 ## <a name="next-steps"></a>Pasos siguientes
- 
+
 En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.

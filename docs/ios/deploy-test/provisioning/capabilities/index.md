@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 6014bb0889c84c35edc991011bae46065d4ff8d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287101"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756148"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -113,7 +113,6 @@ Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en
 
 -----
 
-
 <a name="devcenter" />
 
 ## <a name="using-the-developer-center"></a>Uso de Developer Center
@@ -146,7 +145,6 @@ El uso del Centro para desarrolladores es un proceso de dos pasos en el que se d
     ![Confirmación del identificador de aplicación](images/image9.png)
 
 9. Haga clic en **Register** (Registrar) y en **Done** (Listo). El identificador de aplicación que acaba de crear debe aparecer en la lista de identificadores de aplicación de iOS.
-
 
 <a name="provisioningprofile" />
 

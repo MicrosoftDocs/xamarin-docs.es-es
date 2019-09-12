@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119113"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760995"
 ---
 # <a name="localization"></a>Localización
 
@@ -77,7 +77,6 @@ De forma predeterminada, cuando se generan referencias fuertemente tipadas para 
 
 Seleccione el archivo **AppResources.resx** y observe el panel **Propiedades** para ver dónde está configurada esta herramienta de compilación. La captura de pantalla siguiente muestra **Herramienta personalizada: ResXFileCodeGenerator**.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "Ventana de propiedades para AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
@@ -90,7 +89,6 @@ Seleccione el archivo **AppResources.resx** y observe el panel **Propiedades** p
 
 Para hacer que las propiedades de la cadena fuertemente tipada sean `public`, debe cambiar manualmente la configuración a **Herramienta personalizada: PublicResXFileCodeGenerator**, tal y como se muestra en la captura de pantalla siguiente:
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-public-sml.png "Ventana de propiedades para AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
@@ -98,7 +96,6 @@ Para hacer que las propiedades de la cadena fuertemente tipada sean `public`, de
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "Panel de propiedades para AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
-
 
 [![](text-images/xs-resx-public-sml.png "Panel de propiedades para AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
