@@ -4,11 +4,12 @@
       "docset_name": "xamarin-docs",
       "build_source_folder": "docs",
       "build_output_subfolder": "xamarin-docs",
-      "locale": "es-ES",
+      "locale": "es-es",
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/dotnet"
+        "/dotnet",
+        "/uwp/api"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -30,7 +31,7 @@
     "master",
     "live"
   ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/xamarin-docs.es-ES",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/xamarin-docs.es-es",
   "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
@@ -42,7 +43,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.es-ES",
+      "url": "https://github.com/Microsoft/templates.docs.msft.es-es",
       "branch": "master",
       "branch_mapping": {}
     },
