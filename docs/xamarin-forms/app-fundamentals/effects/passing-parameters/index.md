@@ -1,28 +1,27 @@
 ---
-title: Pasar parámetros a un efecto
-description: Parámetros de efecto pueden definirse mediante propiedades, habilitar el efecto reutilizar. Parámetros, a continuación, pueden pasarse al efecto especificando valores para cada propiedad al crear una instancia del efecto.
+title: Paso de parámetros a un efecto
+description: Los parámetros de efecto pueden definirse mediante propiedades, lo que permite volver a usar el efecto. Después, se pueden pasar parámetros al efecto mediante la especificación de valores para cada propiedad al crear una instancia del efecto.
 ms.prod: xamarin
 ms.assetid: F6429859-6EF7-48BE-A0CB-8F42B8A75215
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: a199c7907c24f3a97fd4f01b64eb2e858e5c5d52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.openlocfilehash: f7d8c8f7d3a3778afdae64039a9614c02c261156
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30783109"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771422"
 ---
-# <a name="passing-parameters-to-an-effect"></a>Pasar parámetros a un efecto
+# <a name="passing-parameters-to-an-effect"></a>Paso de parámetros a un efecto
 
-_Parámetros de efecto pueden definirse mediante propiedades, habilitar el efecto reutilizar. Parámetros, a continuación, pueden pasarse al efecto especificando valores para cada propiedad al crear una instancia del efecto._
+_Los parámetros de efecto pueden definirse mediante propiedades, lo que permite volver a usar el efecto. Después, se pueden pasar parámetros al efecto mediante la especificación de valores para cada propiedad al crear una instancia del efecto._
 
-## <a name="passing-effect-parameters-as-common-language-runtime-propertiesclr-propertiesmd"></a>[Pasar parámetros de efecto como propiedades de tiempo de ejecución de lenguaje común](clr-properties.md)
+## <a name="passing-effect-parameters-as-common-language-runtime-propertiesclr-propertiesmd"></a>[Pasar parámetros de efecto como propiedades de Common Language Runtime](clr-properties.md)
 
-Propiedades de Common Language Runtime (CLR) pueden utilizarse para definir los parámetros del efecto que no responden a los cambios de propiedad en tiempo de ejecución. Este artículo muestra cómo utilizar propiedades CLR para pasar parámetros a un efecto.
+Las propiedades de Common Language Runtime (CLR) se pueden usar para definir parámetros de efecto que no responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar propiedades CLR para pasar parámetros a un efecto.
 
 ## <a name="passing-effect-parameters-as-attached-propertiesattached-propertiesmd"></a>[Pasar parámetros de efecto como propiedades adjuntas](attached-properties.md)
 
-Propiedades adjuntas pueden utilizarse para definir los parámetros del efecto que responden a los cambios de propiedad en tiempo de ejecución. Este artículo se muestra el uso de propiedades para pasar parámetros a un efecto y el cambio de un parámetro en tiempo de ejecución asociadas.
-
+Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar las propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución.

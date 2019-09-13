@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 50bcdcc23d1291071a6045544faad9388755116b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225466"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753562"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -71,8 +71,6 @@ Los nombres de archivo utilizan las siguientes reglas:
 - No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
 - Debe estar en Markdown y utilizar la extensión de archivo .md.
 - Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
-
-
 
 ## <a name="headings"></a>Encabezados
 
@@ -158,7 +156,6 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 1. Por orden
 1. Lista
 
-
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada con una lista insertada
 
 1. Aquí
@@ -170,7 +167,6 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 1. ordered
 1. lista
 
-
 ### <a name="unordered-lists"></a>Listas desordenadas
 
 - Esto
@@ -178,7 +174,6 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 - a
 - con viñetas
 - lista
-
 
 ##### <a name="unordered-list-with-an-embedded-list"></a>Lista desordenada con una lista insertada
 
@@ -193,7 +188,6 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
     1. Sra. Blanco
 - listas
 
-
 ## <a name="horizontal-rule"></a>Regla horizontal
 
 ---
@@ -207,7 +201,6 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 | col 1 está de forma predeterminada | alineado a la izquierda     |    1 $ |
 
 Puede usar una [herramienta de generador de tabla de Markdown](http://www.tablesgenerator.com/markdown_tables) para ayudarle a crearlas más fácilmente.
-
 
 ### <a name="inline-code-blocks-with-language-identifier"></a>Bloques de código alineados con el identificador de idioma
 
