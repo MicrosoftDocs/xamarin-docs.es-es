@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019
-ms.openlocfilehash: de93927728271e9f0d9d2ef850b70eeeee249c84
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 0694439f5e363399e0442c9883426c0f0bf5d989
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658109"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887430"
 ---
 # <a name="xamarinforms-activityindicator"></a>ActivityIndicator de Xamarin. Forms
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-El control Xamarin.[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms muestra una animación para mostrar que la aplicación está ocupada en una actividad prolongada. A diferencia [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)de, el `ActivityIndicator` no proporciona ninguna indicación de progreso. `ActivityIndicator` Hereda [de`View`](xref:Xamarin.Forms.View).
+El control Xamarin. [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms muestra una animación para mostrar que la aplicación está ocupada en una actividad prolongada. A diferencia [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)de, el `ActivityIndicator` no proporciona ninguna indicación de progreso. `ActivityIndicator` Hereda [de`View`](xref:Xamarin.Forms.View).
 
 Las capturas de pantallas `ActivityIndicator` siguientes muestran un control en iOS y Android:
 

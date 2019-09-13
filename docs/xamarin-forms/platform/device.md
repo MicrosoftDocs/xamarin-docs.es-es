@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 77cc414cd9b15f99f95d4a54f7af5ce6f028c41a
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121313"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887448"
 ---
 # <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
 
@@ -114,7 +114,7 @@ Como alternativa, el `OnIdiom` se puede usar extensión de marcado en XAML para 
 El [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valor recupera un [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valor de enumeración que representa la dirección del flujo actual que usa el dispositivo. La dirección de flujo es la dirección en la que el ojo humano lee los elementos de la interfaz de usuario en la página. Los valores de la enumeración son:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 En XAML, el valor [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) se puede recuperar mediante la extensión de marcado `x:Static`:
@@ -182,20 +182,20 @@ Si el código del temporizador interactúa con la interfaz de usuario (como esta
 
 ## <a name="interact-with-the-ui-from-background-threads"></a>Interacción con la interfaz de usuario desde subprocesos en segundo plano
 
-La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma universal de Windows, utilizan un modelo de subprocesamiento único para el código que implica la interfaz de usuario. Este subproceso se llama a menudo el *subproceso principal* o el subproceso de la *interfaz de usuario*. Una consecuencia de este modelo es que todo el código que tiene acceso a los elementos de la interfaz de usuario se debe ejecutar en el subproceso principal de la aplicación.
+La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma universal de Windows, utilizan un modelo de subprocesamiento único para el código que implica la interfaz de usuario. Este subproceso se llama a menudo el *subproceso principal* o el *subproceso*de la interfaz de usuario. Una consecuencia de este modelo es que todo el código que tiene acceso a los elementos de la interfaz de usuario se debe ejecutar en el subproceso principal de la aplicación.
 
 A veces, las aplicaciones utilizan subprocesos en segundo plano para realizar operaciones que pueden tardar mucho tiempo, como recuperar datos de un servicio Web. Si el código que se ejecuta en un subproceso en segundo plano necesita acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal.
 
 La `Device` clase incluye los siguientes `static` métodos que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
 
-| Método | Argumentos | Valores devueltos | Propósito |
+| Método | Argumentos | Devuelve | Propósito |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que se complete. |
-| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un `Func<T>` en el subproceso principal y espera a que se complete. |
-| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un `Action` en el subproceso principal y espera a que se complete. |
-| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un `Func<Task<T>>` en el subproceso principal y espera a que se complete. |
-| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un `Func<Task>` en el subproceso principal y espera a que se complete. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el `SynchronizationContext` para el subproceso principal. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un elemento `Func<T>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un elemento `Action` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un elemento `Func<Task<T>>` en el subproceso principal y espera a que se complete. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un elemento `Func<Task>` en el subproceso principal y espera a que se complete. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el elemento `SynchronizationContext` para el subproceso principal. |
 
 En el código siguiente se muestra un ejemplo del `BeginInvokeOnMainThread` uso del método:
 
