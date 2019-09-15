@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a2f637677620f9bfb2bd26a5af55fb9fb56a7af9
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768416"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985692"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
@@ -63,9 +63,23 @@ La barra de herramientas restricciones se ha actualizado y ahora consta de dos p
   - En el modo de edición de restricciones, este botón ajusta las restricciones para que coincidan con el marco del elemento.
   - En el modo de edición de fotogramas, este botón ajusta el marco del elemento para que coincida con la posición en la que se definen las restricciones.
 
+## <a name="constraints-editing-popover"></a>Restricciones de edición de elemento flotante
+
+La ventana emergente del editor de restricciones nos permite agregar y actualizar varias restricciones a la vez para una vista Select. Podemos crear varias restricciones de espaciado, relación de aspecto y alineación, como alinear una vista con los bordes izquierdos de dos vistas.
+
+Para editar restricciones en la vista seleccionada, haga clic en los puntos suspensivos para mostrar el elemento flotante ![: elemento flotante de edición de restricciones](designer-auto-layout-images/constraints-popup.png)
+
+Al abrir las restricciones elemento flotante, se muestran las restricciones predeterminadas en la vista. Podemos establecer todas las restricciones de espaciado seleccionando **todos los lados** del cuadro combinado en la esquina superior derecha y seleccionar **Borrar todo** para quitarlas. 
+
+La **W** establecerá width y **H** establecerá la restricción de alto. Al comprobar la **relación de aspecto**, el alto y el ancho de las vistas se controlarán en tamaños de pantalla diferentes, el ancho de la vista se utiliza como numerador para la ración y el alto como denominador.
+
+![espaciado de restricciones](designer-auto-layout-images/constraints-spacing.png)
+
+Cuatro cuadros combinados para restricciones de espaciado muestran las vistas vecinas para delimitar la restricción
+
 ## <a name="surface-based-constraint-editing"></a>Edición de restricciones basada en superficies
 
-En la sección anterior, hemos aprendido a agregar restricciones default y a quitar restricciones mediante la barra de herramientas restricciones. Para una edición de restricciones más ajustada, podemos interactuar con las restricciones directamente en la superficie de diseño. En esta sección se presentan los conceptos básicos de la edición de restricciones basada en superficies, incluidos los controles de espaciado de PIN, las áreas de colocación y el trabajo con distintos tipos de restricciones.
+Para una edición de restricciones más ajustada, podemos interactuar con las restricciones directamente en la superficie de diseño. En esta sección se presentan los conceptos básicos de la edición de restricciones basada en superficies, incluidos los controles de espaciado de PIN, las áreas de colocación y el trabajo con distintos tipos de restricciones.
 
 ### <a name="creating-constraints"></a>Crear restricciones
 

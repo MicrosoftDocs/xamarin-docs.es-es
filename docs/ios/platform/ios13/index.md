@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: ea7ebdf5e589f3c24f8c607d1464e86678012f23
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 48e7f97bf37ec5204ec1798ec1fdd7dfe5954cc5
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120617"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985978"
 ---
 # <a name="introduction-to-ios-13"></a>Introducción a iOS 13
 
@@ -23,6 +23,10 @@ Siga estas [instrucciones](~/ios/platform/ios13/get-started.md) para comenzar.
 ## <a name="dark-modedark-modemd"></a>[Modo oscuro](dark-mode.md)
 
 iOS 13 incorpora un nuevo modo oscuro que proporciona a los desarrolladores los medios para permitir fácilmente que sus aplicaciones se ajusten. Las nuevas herramientas permiten diseñar aplicaciones simultáneamente con temas claros y oscuros.
+
+## <a name="sign-in-with-applesign-inmd"></a>[Inicio de sesión con Apple](sign-in.md)
+
+iOS 13 proporciona una nueva funcionalidad para iniciar sesión en aplicaciones mediante el inicio de sesión con dispositivos de Apple, lo que le permite tener más confianza de que su información personal no se roba o recopila de ninguna manera aprovechando las ventajas de 2FA y un conjunto restringido de proporcionado informaciones.
 
 ## <a name="augmented-reality"></a>Realidad aumentada
 
@@ -41,10 +45,6 @@ Core ML 3 permite entrenar fácilmente modelos de aprendizaje automático con la
 iPados es una expansión de iOS creada específicamente con el iPad en mente.
 
 Con iPados, puede hacer un mayor uso del lápiz de Apple mediante PencilKit con nuevos gestos, permitir el uso de varias ventanas y arrastrar y colocar varios contenidos entre aplicaciones. iPados también puede permitir que las aplicaciones proporcionen fuentes para todo el sistema.
-
-## <a name="privacy-and-security"></a>Privacidad y seguridad
-
-iOS 13 proporciona una nueva funcionalidad para iniciar sesión en aplicaciones mediante el inicio de sesión con dispositivos de Apple, lo que le permite tener más confianza de que su información personal no se roba o recopila de ninguna manera aprovechando las ventajas de 2FA y un conjunto restringido de proporcionado informaciones.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

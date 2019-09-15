@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: f6f594d86cab8b1173ee9f67402862e1ec2890b2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b947217706fc8ef7ce7945bf4c88349f4367ffcd
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510372"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985668"
 ---
 # <a name="checkbox"></a>CheckBox
 
-En esta sección, creará una casilla para seleccionar elementos, mediante el[`CheckBox`](xref:Android.Widget.CheckBox)
-widget. Cuando se presiona la casilla, un mensaje del sistema indicará el estado actual de la casilla.
+En esta sección, creará una casilla para seleccionar elementos, con el [`CheckBox`](xref:Android.Widget.CheckBox) widget. Cuando se presiona la casilla, un mensaje del sistema indicará el estado actual de la casilla.
 
-Abra el archivo Resources **/layout/main. axml** y [`CheckBox`](xref:Android.Widget.CheckBox) agregue el elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)dentro del):
+Abra el archivo **Resources/layout/main. axml** y [`CheckBox`](xref:Android.Widget.CheckBox) agregue el elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)dentro del):
 
 ```xml
 <CheckBox android:id="@+id/checkbox"
@@ -27,8 +26,7 @@ Abra el archivo Resources **/layout/main. axml** y [`CheckBox`](xref:Android.Wid
         android:text="check it out" />
 ```
 
-Para hacer algo cuando se cambia el estado, agregue el código siguiente al final de la[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
-forma
+Para hacer algo cuando se cambia el estado, agregue el código siguiente al final del [`OnCreate()`](xref:Android.App.Activity.OnCreate*) método:
 
 ```csharp
 CheckBox checkbox = FindViewById<CheckBox>(Resource.Id.checkbox);
@@ -41,18 +39,11 @@ checkbox.Click += (o, e) => {
 };
 ```
 
-Esto captura el[`CheckBox`](xref:Android.Widget.CheckBox)
-del diseño y, a continuación, controla el evento click, que define la acción que se realizará cuando se haga clic en la casilla. Al hacer clic en él, el[`Checked`](xref:Android.Widget.CompoundButton.Checked)
-se llama a la propiedad para comprobar el nuevo estado de la casilla. Si se ha activado,[`Toast`](xref:Android.Widget.Toast)
-muestra el mensaje "seleccionado"; en caso contrario, muestra "no seleccionado". El[`CheckBox`](xref:Android.Widget.CheckBox)
-controla sus propios cambios de estado, por lo que solo necesita consultar el estado actual.
+Esto captura el [`CheckBox`](xref:Android.Widget.CheckBox) elemento del diseño y, a continuación, controla el evento de clic, que define la acción que se realizará cuando se haga clic en la casilla. Al hacer clic en él [`Checked`](xref:Android.Widget.CompoundButton.Checked) , se llama a la propiedad para comprobar el nuevo estado de la casilla. Si se ha activado, [`Toast`](xref:Android.Widget.Toast) muestra el mensaje "seleccionado"; en caso contrario, muestra "no seleccionado". [`CheckBox`](xref:Android.Widget.CheckBox) Controla sus propios cambios de estado, por lo que solo necesita consultar el estado actual.
 
 Ejecútelo.
 
 > [!TIP]
-> Si necesita cambiar el estado por su cuenta (por ejemplo, al cargar un [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)guardado, use el[`Checked`](xref:Android.Widget.CompoundButton.Checked)
-> establecedor de propiedad o[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
-> .
+> Si necesita cambiar el estado por su cuenta (por ejemplo, al cargar un [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)guardado, use [`Checked`](xref:Android.Widget.CompoundButton.Checked) el método o [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle) el establecedor de propiedad.
 
-*Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la*
-licencia de atribución de[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).
+*Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en el* [*Licencia de atribución de Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).
