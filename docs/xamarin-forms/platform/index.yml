@@ -67,3 +67,9 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_form.svg'
               href: native-views/index.md
             title: Vistas nativas
+          - href: sign-in-with-apple/index.md
+            html: Obtenga información sobre cómo usar el Inicio de sesión con Apple en Android y iOS para proporcionar una mayor privacidad de usuario.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
+              href: sign-in-with-apple/index.md
+            title: Inicio de sesión con Apple
