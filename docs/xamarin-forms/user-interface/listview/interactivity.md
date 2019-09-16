@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2d51f42339b1ff2a99f2a00bb5a9e662fb01d87
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121621"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998075"
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView)permite interactuar con los datos que presenta.
+La clase de Xamarin [`ListView`](xref:Xamarin.Forms.ListView) . Forms admite la interacción del usuario con los datos que presenta.
 
-<a name="selectiontaps" />
-
-## <a name="selection--taps"></a>Derivaciones de & selección
+## <a name="selection-and-taps"></a>Selección y pulsaciones
 
 El [ `ListView` ](xref:Xamarin.Forms.ListView) modo de selección se controla estableciendo la [ `ListView.SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) propiedad con un valor de la [ `ListViewSelectionMode` ](xref:Xamarin.Forms.ListViewSelectionMode) enumeración:
 
@@ -49,7 +47,7 @@ El siguientes capturas de pantalla se muestra un [ `ListView` ](xref:Xamarin.For
 
 ![](interactivity-images/selection-default.png "ListView con selección habilitada")
 
-### <a name="disabling-selection"></a>Deshabilitar selección
+### <a name="disable-selection"></a>Deshabilitar selección
 
 Para deshabilitar [ `ListView` ](xref:Xamarin.Forms.ListView) selección conjunto el [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) propiedad [ `None` ](xref:Xamarin.Forms.ListViewSelectionMode.None):
 
@@ -61,8 +59,6 @@ Para deshabilitar [ `ListView` ](xref:Xamarin.Forms.ListView) selección conjunt
 var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 ```
 
-<a name="Context_Actions" />
-
 ## <a name="context-actions"></a>Acciones de contexto
 
 A menudo, los usuarios deseen realizar acciones en un elemento en un `ListView`. Por ejemplo, considere la posibilidad de obtener una lista de mensajes de correo electrónico en la aplicación de correo. En iOS, puede deslizar para eliminar un mensaje::
@@ -71,42 +67,13 @@ A menudo, los usuarios deseen realizar acciones en un elemento en un `ListView`.
 
 Acciones de contexto se pueden implementar en C# y XAML. A continuación encontrará guías específicas para ambos, pero primero vamos a Eche un vistazo a algunos detalles de implementación clave para ambos.
 
-Acciones de contexto se crean mediante `MenuItem`s. Los eventos TAP para MenuItems generados por el MenuItem, no el ListView. Esto es diferente de cómo se controlan los eventos tap para las celdas, donde el ListView provoca el evento en lugar de la celda. Dado que el ListView está provocando el evento, su controlador de eventos tiene información de clave, al igual que el elemento se ha seleccionado o pulsa.
+Las acciones de contexto se `MenuItem` crean mediante elementos. Los eventos TAP `MenuItems` para los objetos los genera `MenuItem` el propio, no `ListView`el. Esto es diferente de cómo se controlan los eventos TAP para las celdas `ListView` , donde provoca el evento en lugar de la celda. Dado que `ListView` el objeto está provocando el evento, su controlador de eventos proporciona información de clave, como qué elemento se ha seleccionado o punteado.
 
-De forma predeterminada, un elemento de menú no tiene ninguna manera de saber qué celda pertenece. `CommandParameter` está disponible en `MenuItem` para almacenar objetos, como el objeto subyacente ViewCell de MenuItem. `CommandParameter` se puede establecer en XAML y C#.
-
-### <a name="c"></a>C\#
-
-Acciones de contexto se pueden implementar en cualquier `Cell` subclase (siempre y cuando no se use como un encabezado de grupo) mediante la creación de `MenuItem`s y agregarlas a la `ContextActions` colección para la celda. Tiene las siguientes propiedades se pueden configurar para la acción de contexto:
-
-- **Texto** &ndash; la cadena que aparece en el elemento de menú.
-- **Hacer clic en** &ndash; el evento cuando se hace clic en el elemento.
-- **IsDestructive** &ndash; (opcional) cuando sea true el elemento se representa de forma diferente, en iOS.
-
-Se pueden agregar varias acciones de contexto a una celda, pero solo uno debe tener `IsDestructive` establecido en `true`. El código siguiente muestra cómo las acciones de contexto se agregarían a un `ViewCell`:
-
-```csharp
-var moreAction = new MenuItem { Text = "More" };
-moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-moreAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
-};
-
-var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
-deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-deleteAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
-};
-// add to the ViewCell's ContextActions property
-ContextActions.Add (moreAction);
-ContextActions.Add (deleteAction);
-```
+De forma predeterminada, `MenuItem` no tiene ninguna manera de saber a qué celda pertenece. La `CommandParameter` propiedad está disponible en `MenuItem` para almacenar objetos, como `ViewCell`el objeto situado detrás `MenuItem`de. La `CommandParameter` propiedad se puede establecer en XAML y C#.
 
 ### <a name="xaml"></a>XAML
 
-`MenuItem`s también se pueden crear mediante declaración en una colección de XAML. El XAML siguiente muestra una celda personalizada con dos acciones de contexto implementadas:
+`MenuItem`los elementos se pueden crear en una colección XAML. El XAML siguiente muestra una celda personalizada con dos acciones de contexto implementadas:
 
 ```xaml
 <ListView x:Name="ContextDemoList">
@@ -114,10 +81,12 @@ ContextActions.Add (deleteAction);
     <DataTemplate>
       <ViewCell>
          <ViewCell.ContextActions>
-            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-               Text="More" />
-            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
-               Text="Delete" IsDestructive="True" />
+            <MenuItem Clicked="OnMore"
+                      CommandParameter="{Binding .}"
+                      Text="More" />
+            <MenuItem Clicked="OnDelete"
+                      CommandParameter="{Binding .}"
+                      Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
               <Label Text="{Binding title}" />
@@ -131,12 +100,14 @@ ContextActions.Add (deleteAction);
 En el archivo de código subyacente, asegúrese de que el `Clicked` se implementan los métodos:
 
 ```csharp
-public void OnMore (object sender, EventArgs e) {
+public void OnMore (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("More Context Action", mi.CommandParameter + " more context action", "OK");
 }
 
-public void OnDelete (object sender, EventArgs e) {
+public void OnDelete (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
@@ -145,11 +116,40 @@ public void OnDelete (object sender, EventArgs e) {
 > [!NOTE]
 > El `NavigationPageRenderer` para Android tiene una reemplazable `UpdateMenuItemIcon` método que se puede usar para cargar los iconos de un personalizado `Drawable`. Esta invalidación permite usar las imágenes SVG como iconos en `MenuItem` instancias en Android.
 
-<a name="Pull_to_Refresh" />
+### <a name="code"></a>Código
 
-## <a name="pull-to-refresh"></a>Deslizar para actualizar
+Las acciones de contexto se pueden implementar `Cell` en cualquier subclase (siempre y cuando no se usen como encabezado de grupo) creando `MenuItem` instancias y agregándolas a la `ContextActions` colección para la celda. Tiene las siguientes propiedades se pueden configurar para la acción de contexto:
 
-Los usuarios han llegado a esperar que extraer en una lista de datos se actualizará esa lista. [`ListView`](xref:Xamarin.Forms.ListView)es compatible con esta plataforma. Para habilitar la funcionalidad de extracción a actualización, establezca [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) en `true`:
+- **Texto** &ndash; la cadena que aparece en el elemento de menú.
+- **Hacer clic en** &ndash; el evento cuando se hace clic en el elemento.
+- **IsDestructive** &ndash; (opcional) cuando es true, el elemento se representa de forma diferente en iOS.
+
+Se pueden agregar varias acciones de contexto a una celda, pero solo uno debe tener `IsDestructive` establecido en `true`. El código siguiente muestra cómo las acciones de contexto se agregarían a un `ViewCell`:
+
+```csharp
+var moreAction = new MenuItem { Text = "More" };
+moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+moreAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
+};
+
+var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+deleteAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+};
+// add to the ViewCell's ContextActions property
+ContextActions.Add (moreAction);
+ContextActions.Add (deleteAction);
+```
+
+## <a name="pull-to-refresh"></a>Extraer para actualizar
+
+Los usuarios han llegado a esperar que extraer en una lista de datos se actualizará esa lista. El [`ListView`](xref:Xamarin.Forms.ListView) control es compatible con este. Para habilitar la funcionalidad de extracción a actualización, establezca [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) en `true`:
 
 ```xaml
 <ListView ...

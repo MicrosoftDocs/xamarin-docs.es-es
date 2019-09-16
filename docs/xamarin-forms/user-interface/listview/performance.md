@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: f92a338b58dfb82ff5d442ed856e246f4a8a5a8f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ed920db129d2af203046a648c0069580f99a295e
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761855"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998181"
 ---
 # <a name="listview-performance"></a>Rendimiento de ListView
 
@@ -20,24 +20,22 @@ ms.locfileid: "70761855"
 
 Al escribir aplicaciones móviles, es importante el rendimiento. Los usuarios han llegado a esperar el desplazamiento suave y tiempos de carga rápida. No se puede satisfacer las expectativas de los usuarios de costo que las clasificaciones en el almacén de aplicaciones o en el caso de una aplicación de línea de negocio, costo de su organización tiempo y dinero.
 
-Aunque [ `ListView` ](xref:Xamarin.Forms.ListView) es una eficaz vista para mostrar los datos, tiene algunas limitaciones. El rendimiento del desplazamiento puede verse afectado cuando se usa celdas personalizadas, especialmente cuando contienen jerarquías de vista profundamente anidadas o utilicen algunos diseños que requieren una gran cantidad de medida. Afortunadamente, hay técnicas que puede usar para evitar un rendimiento deficiente.
-
-<a name="cachingstrategy" />
+Xamarin. Forms [`ListView`](xref:Xamarin.Forms.ListView) es una vista eficaz para mostrar los datos, pero tiene algunas limitaciones. El rendimiento del desplazamiento puede verse afectado cuando se usan celdas personalizadas, sobre todo cuando contienen jerarquías de vista profundamente anidadas o se usan determinados diseños que requieren una medida compleja. Afortunadamente, hay técnicas que puede usar para evitar un rendimiento deficiente.
 
 ## <a name="caching-strategy"></a>Estrategia de almacenamiento en caché
 
-ListView a menudo se usa para mostrar muchos más datos que puede ajustar en la pantalla. Considere la posibilidad de una aplicación de música, por ejemplo. Una biblioteca de canciones puede tener miles de entradas. El enfoque simple, que sería crear una fila por cada canción, tendría un rendimiento deficiente. Ese enfoque desperdicia memoria valiosa y puede ralentizar el desplazamiento a un rastreo. Otro enfoque consiste en crear y destruir las filas, como los datos se desplazan en la vista. Esto requiere la creación de instancias constante y limpieza de los objetos de vista, que puede ser muy lento.
+Los controles ListView suelen usarse para mostrar muchos más datos de los que caben en la pantalla. Por ejemplo, una aplicación de música podría tener una biblioteca de canciones con miles de entradas. La creación de un elemento para cada entrada desperdiciaría la memoria valiosa y funcionaría mal. Crear y destruir filas de manera constante requeriría que la aplicación creara instancias y limpie los objetos constantemente, lo que también tendría un rendimiento bajo.
 
-Para ahorrar memoria, nativo [ `ListView` ](xref:Xamarin.Forms.ListView) equivalentes para cada plataforma tienen características integradas para la reutilización de las filas. Solo las celdas visibles en pantalla se cargan en memoria y el **contenido** se carga en las celdas existentes. Esto evita que la aplicación de la necesidad de crear instancias de miles de objetos, ahorra tiempo y memoria.
+Para conservar memoria, los equivalentes [`ListView`](xref:Xamarin.Forms.ListView) nativos de cada plataforma tienen características integradas para reutilizar las filas. Solo las celdas visibles en pantalla se cargan en memoria y el **contenido** se carga en las celdas existentes. Este patrón evita que la aplicación Cree instancias de miles de objetos, lo que ahorra tiempo y memoria.
 
-Xamarin.Forms permite [ `ListView` ](xref:Xamarin.Forms.ListView) celda volver a usar a través de la [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) enumeración, que tiene los siguientes valores:
+Xamarin. Forms [`ListView`](xref:Xamarin.Forms.ListView) permite la reutilización de celdas a través de la [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeración, que tiene los valores siguientes:
 
 ```csharp
 public enum ListViewCachingStrategy
 {
-  RetainElement,   // the default value
-  RecycleElement,
-  RecycleElementAndDataTemplate
+    RetainElement,   // the default value
+    RecycleElement,
+    RecycleElementAndDataTemplate
 }
 ```
 
@@ -46,46 +44,44 @@ public enum ListViewCachingStrategy
 
 ### <a name="retainelement"></a>RetainElement
 
-El [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) estrategia de almacenamiento en caché especifica que el [ `ListView` ](xref:Xamarin.Forms.ListView) generará una celda para cada elemento en la lista y el valor predeterminado es `ListView` comportamiento. Por lo general debe utilizarse en las siguientes circunstancias:
+El [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) estrategia de almacenamiento en caché especifica que el [ `ListView` ](xref:Xamarin.Forms.ListView) generará una celda para cada elemento en la lista y el valor predeterminado es `ListView` comportamiento. Debe usarse en las siguientes circunstancias:
 
-- Cuando cada celda tiene un gran número de enlaces (20-30 +).
-- Cuando la plantilla de celda cambia con frecuencia.
-- Cuando las pruebas revelan que el `RecycleElement` almacenamiento en caché de resultados de la estrategia una velocidad de ejecución reducida.
+- Cada celda tiene un gran número de enlaces (20-30 +).
+- La plantilla de celda cambia con frecuencia.
+- La prueba revela que `RecycleElement` la estrategia de almacenamiento en caché tiene como resultado una velocidad de ejecución reducida.
 
-Es importante tener en cuenta las consecuencias de la [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) estrategia de almacenamiento en caché cuando se trabaja con celdas personalizadas. Cualquier código de inicialización de la celda tendrá que ejecutar para la creación de cada celda, que puede ser varias veces por segundo. En este caso, las técnicas de diseño que eran aceptables en una página, como uso de varios anidados [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) instancias, se convierten en los cuellos de botella de rendimiento cuando se programa de instalación y se destruye en tiempo real como el usuario se desplaza.
-
-<a name="recycleelement" />
+Es importante tener en cuenta las consecuencias de la [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) estrategia de almacenamiento en caché cuando se trabaja con celdas personalizadas. Cualquier código de inicialización de la celda tendrá que ejecutar para la creación de cada celda, que puede ser varias veces por segundo. En este caso, las técnicas de diseño que estaban bien en una página, como el uso [`StackLayout`](xref:Xamarin.Forms.StackLayout) de varias instancias anidadas, se convierten en cuellos de botella de rendimiento cuando se configuran y destruyen en tiempo real a medida que el usuario se desplaza.
 
 ### <a name="recycleelement"></a>RecycleElement
 
-El [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) estrategia de almacenamiento en caché especifica que el [ `ListView` ](xref:Xamarin.Forms.ListView) intentará minimizar su velocidad de consumo y la ejecución de memoria mediante el reciclado de celdas de la lista. Este modo no siempre ofrece una mejora del rendimiento y las pruebas deben realizarse para determinar las mejoras. Sin embargo, suele ser la opción preferida y debe usarse en las siguientes circunstancias:
+El [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) estrategia de almacenamiento en caché especifica que el [ `ListView` ](xref:Xamarin.Forms.ListView) intentará minimizar su velocidad de consumo y la ejecución de memoria mediante el reciclado de celdas de la lista. Este modo no siempre ofrece una mejora del rendimiento y las pruebas deben realizarse para determinar las mejoras. Sin embargo, es la opción preferida y debe usarse en las siguientes circunstancias:
 
-- Cuando cada celda tiene un pequeño o un número moderado de enlaces.
-- Cuando cada celda [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) define todos los datos de celda.
-- Cuando cada celda es similar en gran medida, con la plantilla de celda que no cambian.
+- Cada celda tiene un número pequeño o moderado de enlaces.
+- Cada una de [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) las celdas define todos los datos de la celda.
+- Cada celda es muy similar, y la plantilla de celda no cambia.
 
-Durante la virtualización de la celda tendrá su contexto de enlace que se actualiza y, por lo que si una aplicación utiliza este modo debe asegurarse de que las actualizaciones de contexto de enlace se controlan apropiadamente. Todos los datos sobre la celda deben proceder del contexto de enlace o se pueden producir errores de coherencia. Esto puede realizarse mediante el uso de enlace de datos para mostrar datos de la celda. Como alternativa, se deben establecer los datos de la celda la `OnBindingContextChanged` invalidar, en lugar de en el constructor de la celda personalizada, como se muestra en el ejemplo de código siguiente:
+Durante la virtualización de la celda tendrá su contexto de enlace que se actualiza y, por lo que si una aplicación utiliza este modo debe asegurarse de que las actualizaciones de contexto de enlace se controlan apropiadamente. Todos los datos sobre la celda deben proceder del contexto de enlace o se pueden producir errores de coherencia. Este problema se puede evitar utilizando el enlace de datos para mostrar los datos de la celda. Como alternativa, se deben establecer los datos de la celda la `OnBindingContextChanged` invalidar, en lugar de en el constructor de la celda personalizada, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class CustomCell : ViewCell
 {
-  Image image = null;
-
-  public CustomCell ()
-  {
-    image = new Image();
-    View = image;
-  }
-
-  protected override void OnBindingContextChanged ()
-  {
-    base.OnBindingContextChanged ();
-
-    var item = BindingContext as ImageItem;
-    if (item != null) {
-      image.Source = item.ImageUrl;
+    Image image = null;
+    
+    public CustomCell ()
+    {
+        image = new Image();
+        View = image;
     }
-  }
+    
+    protected override void OnBindingContextChanged ()
+    {
+        base.OnBindingContextChanged ();
+        
+        var item = BindingContext as ImageItem;
+        if (item != null) {
+            image.Source = item.ImageUrl;
+        }
+    }
 }
 ```
 
@@ -107,7 +103,7 @@ El [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrateg
 > [!NOTE]
 > El [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) estrategia de almacenamiento tiene un requisito previo que la `DataTemplate`s devuelto por la [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) debe utilizar el [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate.%23ctor(System.Type)) constructor que toma un `Type`.
 
-### <a name="setting-the-caching-strategy"></a>Establecimiento de la estrategia de almacenamiento en caché
+### <a name="set-the-caching-strategy"></a>Establecimiento de la estrategia de almacenamiento en caché
 
 El [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) se especifica el valor de enumeración con un [ `ListView` ](xref:Xamarin.Forms.ListView) sobrecarga del constructor, tal como se muestra en el ejemplo de código siguiente:
 
@@ -115,7 +111,7 @@ El [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) se 
 var listView = new ListView(ListViewCachingStrategy.RecycleElement);
 ```
 
-En XAML, establezca el `CachingStrategy` atributo tal como se muestra en el código siguiente:
+En XAML, establezca el `CachingStrategy` atributo como se muestra en el código XAML siguiente:
 
 ```xaml
 <ListView CachingStrategy="RecycleElement">
@@ -129,21 +125,21 @@ En XAML, establezca el `CachingStrategy` atributo tal como se muestra en el cód
 </ListView>
 ```
 
-Esto tiene el mismo efecto que establecer el argumento de estrategia de almacenamiento en caché en el constructor en C# Tenga en cuenta que no hay ningún `CachingStrategy` propiedad `ListView`.
+Este método tiene el mismo efecto que establecer el argumento de la estrategia de almacenamiento en C#caché en el constructor de.
 
-#### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Establecimiento de la estrategia de almacenamiento en caché en un ListView crean Subclase
+#### <a name="set-the-caching-strategy-in-a-subclassed-listview"></a>Establecer la estrategia de almacenamiento en caché en un control ListView de subclases
 
-Establecer el `CachingStrategy` atributo de XAML en una subclase [ `ListView` ](xref:Xamarin.Forms.ListView) no producirá el comportamiento deseado, porque no hay ningún `CachingStrategy` propiedad `ListView`. Además, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) está habilitado, se generará el siguiente mensaje de error: **No se encontró ninguna propiedad, propiedad enlazable o evento para ' CachingStrategy '**
+Al establecer `CachingStrategy` el atributo desde XAML en una [`ListView`](xref:Xamarin.Forms.ListView) subclase, no se producirá el comportamiento deseado, porque no `CachingStrategy` hay ninguna `ListView`propiedad en. Además, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) está habilitado, se generará el siguiente mensaje de error: **No se encontró ninguna propiedad, propiedad enlazable o evento para ' CachingStrategy '**
 
 La solución a este problema consiste en especificar un constructor de subclases [ `ListView` ](xref:Xamarin.Forms.ListView) que acepta un [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) parámetro y lo pasa a la clase base:
 
 ```csharp
 public class CustomListView : ListView
 {
-  public CustomListView (ListViewCachingStrategy strategy) : base (strategy)
-  {
-  }
-  ...
+    public CustomListView (ListViewCachingStrategy strategy) : base (strategy)
+    {
+    }
+    ...
 }
 ```
 
@@ -151,34 +147,32 @@ El [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) se 
 
 ```xaml
 <local:CustomListView>
-  <x:Arguments>
-    <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
-  </x:Arguments>
+    <x:Arguments>
+        <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+    </x:Arguments>
 </local:CustomListView>
 ```
 
-<a name="improving-performance" />
+## <a name="listview-performance-suggestions"></a>Sugerencias de rendimiento de ListView
 
-## <a name="improving-listview-performance"></a>Mejorar el rendimiento de ListView
-
-Existen muchas técnicas para mejorar el rendimiento de un `ListView`:
+Existen muchas técnicas para mejorar el rendimiento de un `ListView`. Las siguientes sugerencias pueden mejorar el rendimiento de ListView
 
 - Enlazar el `ItemsSource` propiedad a un `IList<T>` colección en lugar de un `IEnumerable<T>` colección, porque `IEnumerable<T>` colecciones no admiten el acceso aleatorio.
-- Utilice las celdas integradas (como `TextCell`  /  `SwitchCell` ) en lugar de `ViewCell` siempre puede.
-- Use menos elementos. Por ejemplo, considere el uso de una sola `FormattedString` etiqueta en lugar de varias etiquetas.
+- Use las celdas `TextCell` integradas (como  /  `SwitchCell` ) en lugar de `ViewCell` siempre que pueda.
+- Use menos elementos. Por ejemplo, considere la posibilidad de `FormattedString` usar una sola etiqueta en lugar de varias etiquetas.
 - Reemplace el `ListView` con un `TableView` al mostrar los datos no homogéneos, es decir, los datos de diferentes tipos.
 - Limitar el uso de la [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método. Si se sobreutiliza, degradará el rendimiento.
 - En Android, evite establecer un `ListView`de visibilidad del separador de fila o de color después de que se ha creado una instancia, como resultado una reducción del rendimiento.
-- Evite cambiar el diseño de la celda según la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext). Esto provoca costos de inicialización y de diseño grandes.
+- Evite cambiar el diseño de la celda según la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext). Cambiar el diseño conlleva grandes costos de medición e inicialización.
 - Evite las jerarquías de diseño profundamente anidado. Use `AbsoluteLayout` o `Grid` para ayudar a reducir el anidamiento.
-- Evitar específico `LayoutOptions` distinto `Fill` (relleno es el más barato de proceso).
+- Evite un `LayoutOptions` específico distinto `Fill` de`Fill` (es el más barato de calcular).
 - Evite colocar un `ListView` dentro de un `ScrollView` por las razones siguientes:
   - El `ListView` implementa su propio desplazamiento.
   - El `ListView` no recibirán los gestos, como se controlarán por el elemento primario `ScrollView`.
-  - El `ListView` puede presentar un encabezado personalizado y un pie de página que se desplaza por los elementos de la lista, ofreciendo la funcionalidad que el `ScrollView` utilizó. Para obtener más información, consulte [encabezados y pies de página](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
-- Considere la posibilidad de un representador personalizado si necesita un diseño muy específico y complejo presentan en sus celdas.
+  - El `ListView` puede presentar un encabezado personalizado y un pie de página que se desplaza por los elementos de la lista, ofreciendo la funcionalidad que el `ScrollView` utilizó. Para obtener más información, vea [encabezados y pies de página](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#headers-and-footers).
+- Considere la posibilidad de un representador personalizado si necesita un diseño específico y complejo presentado en las celdas.
 
-`AbsoluteLayout` tiene la posibilidad de realizar diseños sin una llamada única medida. Esto resulta muy eficaz para el rendimiento. Si `AbsoluteLayout` no se puede usar, considere la posibilidad de [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). Si usa `RelativeLayout`, pasar directamente restricciones será considerablemente más rápido que utilizar la API de la expresión. Eso es porque la expresión de API usa JIT, y en iOS el árbol debe interpretarse, que es más lento. La expresión de API es adecuada para los diseños de página donde solo requería en el diseño inicial y la rotación, pero en `ListView`, donde se ejecuta constantemente durante el desplazamiento, repercute en el rendimiento.
+`AbsoluteLayout`tiene la posibilidad de realizar diseños sin una única llamada de medida, lo que lo convierte en un rendimiento elevado. Si `AbsoluteLayout` no se puede usar, considere la posibilidad de [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). Si usa `RelativeLayout`, pasar directamente restricciones será considerablemente más rápido que utilizar la API de la expresión. Este método es más rápido porque la API de expresión usa JIT y, en iOS, el árbol debe interpretarse, lo que es más lento. La expresión de API es adecuada para los diseños de página donde solo requería en el diseño inicial y la rotación, pero en `ListView`, donde se ejecuta constantemente durante el desplazamiento, repercute en el rendimiento.
 
 Creación de un representador personalizado para un [ `ListView` ](xref:Xamarin.Forms.ListView) o sus celdas es un enfoque para reducir el efecto de los cálculos de diseño en el rendimiento del desplazamiento. Para obtener más información, consulte [personalizar un ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) y [personalizar ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
 
