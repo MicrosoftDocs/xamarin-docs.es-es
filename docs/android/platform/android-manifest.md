@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: f1cc2f4685354687390866c0922a802591c7c054
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d65f0c8e717e8e8c995209f7dda1e8a44ee621c
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757703"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021108"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajar con el manifiesto de Android
 
@@ -72,7 +72,8 @@ Este ejemplo genera el siguiente fragmento XML:
 <activity android:name="awesome.demo.activity" />
 ```
 
-*Nota*: debe usar la `Name` propiedad solo por motivos de compatibilidad con versiones anteriores, ya que este cambio de nombre puede ralentizar la búsqueda de tipos en tiempo de ejecución. Si tiene código heredado que espera que el nombre de tipo predeterminado de la actividad se base en el espacio de nombres en minúsculas y el nombre de clase, consulte [nombres de contenedor de Android Callable](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) para obtener sugerencias sobre el mantenimiento de la compatibilidad. 
+> [!NOTE]
+> Debe usar la `Name` propiedad solo por motivos de compatibilidad con versiones anteriores, ya que este cambio de nombre puede ralentizar la búsqueda de tipos en tiempo de ejecución. Si tiene código heredado que espera que el nombre de tipo predeterminado de la actividad se base en el espacio de nombres en minúsculas y el nombre de clase, consulte [nombres de contenedor de Android Callable](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) para obtener sugerencias sobre el mantenimiento de la compatibilidad. 
 
 ### <a name="activity-title-bar"></a>Barra de título de actividad
 

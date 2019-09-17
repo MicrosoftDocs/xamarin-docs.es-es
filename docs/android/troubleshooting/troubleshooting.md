@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: b750dd4eebb4e181e3a1d3a33c6505bb58b3848b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a80410ecc3557f00755ebb60ab48781740fa928d
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757078"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021149"
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -83,15 +83,17 @@ Xamarin. Android admite las siguientes propiedades del sistema:
 
 - *debug.mono.env*: Una lista de variables de entorno *|* separadas por canalización (' ') que se van a exportar durante el inicio de la aplicación, *antes* de que se haya inicializado mono. Esto permite establecer variables de entorno que controlan el registro de mono.
 
-  - *Nota*: Dado que el valor está *|* separado por "", el valor debe tener un nivel adicional de cotización, ya \`que el comando de *Shell* \` ADB quitará un conjunto de Comillas.
+  > [!NOTE]
+  > Dado que el valor está *|* separado por "", el valor debe tener un nivel adicional de cotización, ya \`que el comando de *Shell* \` ADB quitará un conjunto de Comillas.
 
-  - *Nota*: Los valores de propiedad del sistema Android no pueden tener más de 92 caracteres de longitud.
+  > [!NOTE]
+  > Los valores de propiedad del sistema Android no pueden tener más de 92 caracteres de longitud.
 
-  - Ejemplo:
+  Ejemplo:
 
-    ```
-    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-    ```
+  ```
+  adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+  ```
 
 - *debug.mono.log*: Una lista separada por comas (' *,* ') de los componentes que deben imprimir mensajes adicionales en el registro de depuración de Android. De forma predeterminada, no se establece nada. Los componentes incluyen:
 
@@ -100,7 +102,8 @@ Xamarin. Android admite las siguientes propiedades del sistema:
   - *gref*: Mensajes de asignación y desasignación de referencia de impresión (débil, global).
   - *lref*: Imprimir mensajes de asignación y desasignación de referencia local.
 
-  *Nota*: Estos son *muy* detallados. No habilite a menos que realmente sea necesario.
+  > [!NOTE]
+  > Son *muy* detallados. No habilite a menos que realmente sea necesario.
 
 - *debug.mono.trace*: Permite establecer la configuración de [seguimiento](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` mono.
 
@@ -176,7 +179,8 @@ Xamarin. Android usa referencias globales de Android para proporcionar asignacio
 
 Desafortunadamente, los emuladores de Android solo permiten la existencia de 2000 referencias globales a la vez. El hardware tiene un límite mucho más alto de 52000 referencias globales. El límite inferior puede ser problemático al ejecutar aplicaciones en el emulador, por lo que saber de *dónde* procede la instancia puede ser muy útil.
 
- *Nota*: el recuento de referencias globales es interno a Xamarin. Android y no (y no puede) incluir referencias globales tomadas por otras bibliotecas nativas cargadas en el proceso. Usar el recuento de referencias globales como una estimación.
+> [!NOTE]
+> El recuento de referencias globales es interno a Xamarin. Android y no (y no puede) incluir referencias globales tomadas por otras bibliotecas nativas cargadas en el proceso. Usar el recuento de referencias globales como una estimación.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)

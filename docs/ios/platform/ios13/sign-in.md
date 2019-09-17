@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: ae4cccc900396c7ebd6e737160e38c5e9dcdc74e
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986169"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021395"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Inicio de sesión con Apple en Xamarin. iOS
 
@@ -25,10 +25,11 @@ En este documento se explica cómo puede Agregar inicio de sesión con Apple a a
 ## <a name="requirements"></a>Requisitos
 
 Esta característica requiere:
+
 * iOS 13
 * Xamarin. iOS 12,99
-* Visual Studio 2019 o Visual Studio 2019 para Mac con compatibilidad con Xcode 11. 
- 
+* Visual Studio 2019 o Visual Studio 2019 para Mac con compatibilidad con Xcode 11.
+
 Consulte [Introducción para obtener más](get-started.md) información.
 
 ## <a name="apple-developer-setup"></a>Configuración de Apple Developer
@@ -218,7 +219,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha introducido el inicio de sesión con Apple para iOS. 
+En este artículo se ha introducido el inicio de sesión con Apple para iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
