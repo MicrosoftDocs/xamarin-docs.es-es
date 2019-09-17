@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: b8006b1ffe253ac57c1ab435690c5b378cc709fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 030f1ba87dde958aef156731de926427676163dc
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278663"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033495"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>¿Se puede cambiar la ruta de acceso de salida del archivo IPA?
 
@@ -45,6 +45,7 @@ Estos pasos funcionarán en cualquier proyecto de iOS que use el motor de compil
 2. Establezca el valor de DestinationFolder en la carpeta de salida deseada. Como es habitual, puede usar las propiedades de MSBuild (como $ (OutputPath)) dentro de este argumento si lo desea.
 
 ## <a name="notes"></a>Notas
+
 - La `CreateIpaDependsOn` propiedad se define en el `Xamarin.iOS.Common.targets` archivo que forma parte de Xamarin. iOS. Se comporta tal y como se describe en la sección [invalidar destinos predefinidos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) del [artículo How to: Extienda el proceso](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)de compilación de Visual Studio.
 
 - Puede usar una tarea de **movimiento** en lugar de una tarea de **copia** si lo prefiere. Si elige esta opción y está compilando en Windows, deberá usar el nombre `<Microsoft.Build.Tasks.Move>` completo de la tarea para evitar una ambigüedad con las tareas de compilación de XamarinVS.
@@ -79,6 +80,7 @@ Estos pasos funcionarán en cualquier proyecto de iOS que use el motor de compil
 2. `DestinationFolder` Establezca en la carpeta de salida deseada. Como es habitual, puede usar las propiedades de `$(OutputPath)`MSBuild (como) dentro de este argumento si lo desea.
 
 ## <a name="notes"></a>Notas
+
 - La `CreateIpaDependsOn` propiedad se define en el `Xamarin.iOS.Common.targets` archivo que forma parte de Xamarin. iOS. t se comporta tal y como se describe en la sección [invalidar destinos predefinidos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) del artículo [How to: Extienda el proceso](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)de compilación de Visual Studio.
 
 - Puede usar una tarea de **movimiento** en lugar de una tarea de **copia** si lo prefiere. Si elige esta opción y está compilando en Windows, deberá usar el nombre `<Microsoft.Build.Tasks.Move>` completo de la tarea para evitar una ambigüedad con las tareas de compilación de XamarinVS.

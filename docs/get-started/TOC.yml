@@ -76,8 +76,6 @@
           href: ~/cross-platform/desktop/index.md
         - name: Desarrolladores de Java
           href: ~/android/get-started/java-developers.md
-        - name: Desarrolladores de Swift
-          href: ~/ios/get-started/objective-c-developers/index.md
         - name: Desarrolladores de Objective-C
           href: ~/ios/get-started/objective-c-developers/index.md
         - name: Azure
