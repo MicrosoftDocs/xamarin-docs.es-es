@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: d1aa70c5cfeeccbbb29d600c4ac92aff0d5aacfd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 95067df17424d5b9367578e675d747317a827de9
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669825"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059803"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
 > [!div class="checklist"]
+>
 > - Crear una instancia de [`Button`](xref:Xamarin.Forms.Button) de Xamarin.Forms en XAML.
 > - Responder al elemento `Button` que se pulsa.
 > - Cambiar la apariencia del objeto `Button`.

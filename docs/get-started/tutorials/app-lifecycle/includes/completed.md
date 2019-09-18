@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: c3e78badbea16205565757058e9226b5dc7606cd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9f22de73ded5bce1a257ba22c288d58b09a18003
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669831"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059809"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
 > [!div class="checklist"]
+>
 > - Responder a una aplicación que se inicia, está en modo de suspensión o se reanuda.
 > - Conservar datos entre los cambios de estado del ciclo de vida.
 

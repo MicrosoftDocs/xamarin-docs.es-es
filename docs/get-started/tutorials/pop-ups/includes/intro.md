@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98eb75948ec2b53919b8de7cdc80d39d7c3ebf4c
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 19276826e1996e68fd27107d23e0def76a1025a5
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277457"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059810"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -15,6 +15,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Mostrar una alerta para solicitar al usuario que realice una selección.
 > - Mostrar una hoja de acción para guiar al usuario a través de una tarea.
 
