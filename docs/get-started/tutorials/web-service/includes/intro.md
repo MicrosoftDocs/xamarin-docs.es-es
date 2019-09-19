@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b89c0ba1b865eecab304e8aebb06bc72568cc97
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277455"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107356"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -17,6 +17,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Usar el Administrador de paquetes NuGet para agregar Newtonsoft.Json a un proyecto de Xamarin.Forms.
 > - Crear las clases del servicio web.
 > - Usar las clases del servicio web.

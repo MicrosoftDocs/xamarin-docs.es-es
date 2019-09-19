@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 164befeb08d7cb6691cb037b1f6b7f31c390afea
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 552251490665b673e02eb58c50c643daed9c1aed
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277446"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107348"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -17,6 +17,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Crear una instancia de [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms en XAML.
 > - Rellenar el objeto `ListView` con datos.
 > - Responder a elementos de `ListView` que están seleccionados.

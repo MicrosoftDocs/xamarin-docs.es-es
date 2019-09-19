@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9bda76a477973bb06eb018abbf4ad53dc3e8c1e7
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 85404d5aceb525a77c98bf2d86ebc4b464f5796f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277439"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107345"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -14,6 +14,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Crear una instancia de [`Image`](xref:Xamarin.Forms.Image) de Xamarin.Forms en XAML.
 > - Personalizar la apariencia de `Image`.
 > - Mostrar un archivo de imagen local de cada proyecto de plataforma.

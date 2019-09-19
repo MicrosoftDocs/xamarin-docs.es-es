@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce6714014db66dff3a87e50c73dc77afb962cc5c
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: e05a20149d33eed58918382371e8bc333d4a5f8d
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277440"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107349"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -14,6 +14,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Crear una instancia de [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin.Forms en XAML.
 > - Responder al texto en el cambio del objeto `Entry`.
 > - Personalizar el comportamiento del objeto `Entry`.
