@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: dfd6c9d6419f663b1ef474066f7918859d42b3c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f4c8c8b19d7738478cdc2c8f83c6fc8d1f361466
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757292"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985661"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
@@ -240,7 +240,7 @@ Para llamar a un constructor de clase base en C#, utilice dos puntos (`:`) segui
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...

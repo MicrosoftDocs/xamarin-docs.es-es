@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 51e802b1e142955fb3988432f9d9c7393f2ee0ea
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5d299112da87207f7486247e0ed6f00c35a35fe5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292328"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106042"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -21,6 +21,7 @@ Para publicar una aplicación en el [App Store](https://www.apple.com/ios/app-st
 En esta guía se describen los pasos que se deben seguir para preparar una aplicación para el App Store y enviarla a Apple para su revisión. En concreto, se describe cómo hacer lo siguiente:
 
 > [!div class="checklist"]
+>
 > - Seguir las directrices de revisión del App Store
 > - Configurar un identificador de aplicación y los derechos
 > - Proporcionar un icono del App Store e iconos de la aplicación
@@ -316,12 +317,11 @@ Hay varias formas de usar la nueva propiedad. Por ejemplo, para la salida del ar
        <MtouchFloat32>true</MtouchFloat32>
        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
        <MtouchLink>SdkOnly</MtouchLink>
-       <MtouchArch>;ARMv7, ARM64</MtouchArch>
+       <MtouchArch>ARMv7, ARM64</MtouchArch>
        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
        <MtouchTlsProvider>Default</MtouchTlsProvider>
-       <PlatformTarget>x86&</PlatformTarget>
        <BuildIpa>true</BuildIpa>
-       <IpaPackageDir>$(OutputPath</IpaPackageDir>
+       <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 

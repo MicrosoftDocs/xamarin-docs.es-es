@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8374e90ea6d460a0e0c22763db023654c3008b32
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753562"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105744"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -65,6 +65,7 @@ Markdown utiliza caracteres especiales como \*, \` y \# para dar formato. Si des
 ## <a name="file-name"></a>Nombre del archivo
 
 Los nombres de archivo utilizan las siguientes reglas:
+
 - Solo contienen letras minúsculas, números y guiones.
 - No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
 - Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
@@ -75,6 +76,7 @@ Los nombres de archivo utilizan las siguientes reglas:
 ## <a name="headings"></a>Encabezados
 
 Utilice mayúsculas y minúsculas de estilo de oración. Utilice siempre mayúscula en:
+
 - La primera palabra de un encabezado.
 - La palabra que sigue a un signo de dos puntos en un título o un encabezado (por ejemplo, "Cómo: Ordenar una matriz").
 
@@ -131,6 +133,7 @@ El sistema de compilación tiene algunas extensiones que permiten vincular a las
 Al vincular a una API, puede usar su identificador único (UID) que se genera automáticamente desde el código fuente.
 
 Puede utilizar alguna de las siguientes sintaxis:
+
 1. Vínculo de Markdown: `[link_text](xref:UID)`
 2. Vínculo automático: `<xref:UID>`
 3. Forma abreviada: `@UID`
@@ -143,6 +146,7 @@ Para obtener más información acerca de cómo utilizar esta notación, consulte
 > En este momento, no hay ninguna manera fácil de buscar los UID. La mejor manera de encontrar el UID de una API es buscar en este repositorio: [docascode/coreapi](https://github.com/docascode/coreapi). Estamos trabajando para tener un sistema mejor en el futuro.
 
 Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser HTML codificado como %60 y %23 respectivamente, como en los ejemplos siguientes:
+
 - Ejemplo: @System.Threading.Tasks.Task\`1 se convierte en `@System.Threading.Tasks.Task%601`
 - Ejemplo: @System.Exception.\#ctor se convierte en `@System.Exception.%23ctor`
 
