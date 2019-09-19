@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: d8267d4def0f7c24c660dfb4d301c111a92bb0b9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d3f00f3abd13d2edf8b827a881768fbd54d6379
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767153"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106020"
 ---
 # <a name="threading-in-xamarinios"></a>Subprocesamiento en Xamarin. iOS
 
 El tiempo de ejecución de Xamarin. iOS proporciona a los desarrolladores acceso a las API de subprocesos de`System.Threading.Thread, System.Threading.ThreadPool`.net, tanto explícitamente al usar subprocesos () como implícitamente cuando se usan los patrones de delegado asincrónico o los métodos BeginXXX, así como toda la gama de API que admiten la Biblioteca TPL.
 
 Xamarin recomienda encarecidamente que use la [biblioteca de procesamiento paralelo de tareas](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) para crear aplicaciones por varias razones:
+
 - El programador de TPL predeterminado delegará la ejecución de la tarea en el grupo de subprocesos, que a su vez aumentará dinámicamente el número de subprocesos necesarios mientras se produce el proceso, a la vez que evita un escenario en el que hay demasiados subprocesos que acaban compitiendo en el tiempo de CPU. 
 - Es más fácil pensar en las operaciones en cuanto a las tareas de TPL. Puede manipularlos fácilmente, programarlos, serializar su ejecución o iniciar muchos en paralelo con un amplio conjunto de API. 
 - Es la base para programar con las nuevas C# extensiones de lenguaje asincrónico. 

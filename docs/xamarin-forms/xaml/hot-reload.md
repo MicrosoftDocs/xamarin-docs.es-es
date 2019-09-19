@@ -7,18 +7,21 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
-ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
+ms.openlocfilehash: 2a47876b7b53cf557014c772333e651146afe53f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896407"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106010"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Recarga activa de XAML para Xamarin. Forms (versión preliminar)
 
 ![Características en versión preliminar](~/media/shared/preview.png)
 
 La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar su productividad y ahorrar tiempo. Sin la recarga activa de XAML, debe compilar e implementar la aplicación cada vez que quiera ver un cambio de XAML. Con la recarga activa, al guardar el archivo XAML, los cambios se reflejan en directo en la aplicación en ejecución. Además, se mantendrán el estado y los datos de navegación, lo que le permitirá iterar rápidamente en la interfaz de usuario sin perder su lugar en la aplicación. Por lo tanto, con la recarga activa de XAML, pasará menos tiempo recompilando e implementando sus aplicaciones para validar los cambios de la interfaz de usuario.
+
+> [!NOTE]
+> Si está escribiendo una aplicación de WPF o de UWP, consulte [recarga en caliente de XAML para UWP y WPF](/visualstudio/debugger/xaml-hot-reload).
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 

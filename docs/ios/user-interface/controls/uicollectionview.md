@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 078d5a2d5c05f39a9c6d8d081b08faa7b4b8ec67
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768857"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106106"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin. iOS
 
@@ -459,6 +459,7 @@ Seleccione la vista de colección (puede que sea más fácil hacerlo desde el es
 [![](uicollectionview-images/quick04.png "Establecer los tamaños de la vista de colección")](uicollectionview-images/quick04.png#lightbox)
 
 A continuación, edite la celda predeterminada:
+
 - Cambiar el color de fondo a azul
 - Agregue una etiqueta para que actúe como título de la celda
 - Establecimiento del identificador de reutilización en la **celda**

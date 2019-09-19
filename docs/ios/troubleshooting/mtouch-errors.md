@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: e001f22759ac70bbf81a10bf5e56790497dab767
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985954"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105988"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
@@ -1598,6 +1598,7 @@ No se pudo cargar el ensamblado raíz. Compruebe que la ruta de acceso del mensa
 Se produjo un error inesperado al intentar optimizar el código de enlace generado. El elemento que causa el problema se denomina en el mensaje de error. Para corregir este problema, el ensamblado denominado (o que contiene el tipo o el método denominado) deberá proporcionarse en un nuevo problema en [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) junto con un registro de compilación completo con el nivel `-v -v -v -v` de detalle habilitado (es decir, en los **argumentos Mtouch adicionales**).
 
 El último dígito `x` será:
+
 - `0`para un nombre de ensamblado;
 - `1`para un nombre de tipo;
 - `3`para un nombre de método;
