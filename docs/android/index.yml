@@ -19,9 +19,9 @@ abstract:
       - href: 'https://developers.google.com/'
         text: Documentación para desarrolladores de Google
       - href: /visualstudio/
-        text: Visual Studio
+        text: Programa para la mejora
 sections:
-  - title: Introducción
+  - title: Primeros pasos
     items:
       - type: paragraph
         text: 'Aprenda a crear su primera aplicación Android con Xamarin y C#.'
@@ -30,7 +30,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Configuración
+            text: Programa de instalación
             href: ~/android/get-started/installation/index.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
@@ -42,8 +42,8 @@ sections:
             href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: Android Pie
-            href: ~/android/platform/pie.md
+            text: Android 10
+            href: ~/android/platform/android-10.md
   - title: Guías
     items:
       - type: list
@@ -113,6 +113,6 @@ sections:
           - title: API
             href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Documentos de la API de Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de clases base</a></p>'
-          - title: Ejemplos
+          - title: Muestras
             href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android">Ejemplos de Android</a></p>'

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 076e6bfd1155c0eba4045af59a599a34b0fca1d5
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754037"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021181"
 ---
 # <a name="xamarinandroid-environment"></a>Entorno de Xamarin.Android
 
@@ -93,10 +93,11 @@ Es una cadena separada por comas (`,`), que contiene uno de los siguientes valor
 - `assembly`: imprimir `.apk` y ensamblar los mensajes de análisis.
 - `gc`: imprimir los mensajes relacionados con GC.
 - `gref`: imprimir los mensajes de referencia global de JNI.
-- `lref`: imprimir los mensajes de referencia local de JNI.  
-    *Nota*: Este valor *en realidad* enviará correo basura a `adb logcat`.  
-    En Xamarin.Android 5.1, también creará un archivo `.__override__/lrefs.txt`, que puede volverse *gigantesco*.  
-    Evítelo.
+- `lref`: imprimir los mensajes de referencia local de JNI.
+  > [!NOTE]
+  > Este valor *en realidad* enviará correo basura a `adb logcat`.
+  > En Xamarin.Android 5.1, también creará un archivo `.__override__/lrefs.txt`, que puede volverse *gigantesco*.
+  > Evítelo.
 - `timing`: imprimir alguna información de tiempo de método. Este valor también creará los archivos `.__override__/methods.txt` y `.__override__/counters.txt`.
 
 ### `debug.mono.max_grefc`
