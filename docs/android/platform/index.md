@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 40fa2d93b7fd756c284727566e8043f5084bd483
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757486"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119233"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -41,6 +41,10 @@ Android 3,0 presentó fragmentos, en los que se muestra cómo admitir diseños m
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
 
 En esta guía se explica cómo Android 6,0 admite la _vinculación de aplicaciones_, una técnica que permite a las aplicaciones móviles responder a las direcciones URL de los sitios Web. En él se explica cómo implementar la vinculación de aplicaciones en una aplicación Android 6,0 y cómo configurar un sitio web para conceder permisos a la aplicación móvil para administrar los vínculos de la aplicación para el dominio.
+
+## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
+
+En este artículo se proporciona un esquema de las nuevas características de Android 10, se explica cómo preparar Xamarin. Android para el desarrollo de Android 10 y se proporcionan vínculos a aplicaciones de ejemplo que muestran cómo usar las características de Android Oreo en aplicaciones de Xamarin. Android.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Gráfico circular de Android 9](~/android/platform/pie.md)
 
