@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529308"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198476"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes de Xamarin.Forms
 
@@ -120,7 +120,7 @@ Al especificar un nombre de fuente personalizada, siempre es una buena idea usar
 
 Xamarin. Forms define los campos [`NamedSize`](xref:Xamarin.Forms.NamedSize) de la enumeración que representan tamaños de fuente específicos. En la tabla siguiente se `NamedSize` muestran los miembros y sus tamaños predeterminados en iOS, Android y el plataforma universal de Windows (UWP):
 
-| Member | iOS | Android | UWP |
+| Miembro | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15.667 |
@@ -155,7 +155,7 @@ A continuación, se describen los pasos necesarios para cada plataforma. Cuando 
 ### <a name="ios"></a>iOS
 
 Es posible mostrar una fuente personalizada en primer lugar, lo que garantiza que se carga y, luego, que hace referencia a él por su nombre mediante Xamarin.Forms `Font` métodos.
-Siga las instrucciones de [esta entrada de blog](https://blog.xamarin.com/custom-fonts-in-ios/):
+Siga las instrucciones de [esta entrada de blog](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
 1. Agregue el archivo de fuente **con la acción de compilación: BundleResource**y
 2. Actualización de la **Info.plist** archivo (**fuentes proporcionadas por la aplicación**, o `UIAppFonts`, key), a continuación,
@@ -240,7 +240,7 @@ En el siguiente ejemplo de XAML se muestra un icono de fuente único [`Image`](x
 </Image>
 ```
 
-Este código muestra un icono Xbox, de la familia de fuentes Ionicons, en [`Image`](xref:Xamarin.Forms.Image) una vista. Tenga en cuenta que, mientras que el carácter Unicode `\uf30c`para este icono es, tiene que incluir un carácter de `&#xf30c;`escape en XAML, por lo que se convierte en. El código de C# equivalente es:
+Este código muestra un icono Xbox, de la familia de fuentes Ionicons, en [`Image`](xref:Xamarin.Forms.Image) una vista. Tenga en cuenta que, mientras que el carácter Unicode `\uf30c`para este icono es, tiene que incluir un carácter de `&#xf30c;`escape en XAML, por lo que se convierte en. El código de C# equivalente es el siguiente:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

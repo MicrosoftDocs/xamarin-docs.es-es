@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2019
-ms.openlocfilehash: d2a2146a0b7345475e2eb93d52fb02387c833224
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e03990a74ac8477b56b109e26a97b05ad13dba53
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200039"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198448"
 ---
 # <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Sugerencias para la solución de problemas de iOS 13 y Xamarin. iOS
 
@@ -26,12 +26,13 @@ Después de actualizar a **Xcode 11 beta 1** cada vez que se inicia un simulador
 
 `Foundation.ObjCException: NSInvalidArgumentException: -[SimDevice registerNotificationHandler:]: unrecognized selector sent to instance 0x7ffbf5d1e110`
 
-### <a name="workaround"></a>Solución alternativa
+### <a name="workaround"></a>Solución
 
 Hasta que haya una [corrección](https://github.com/xamarin/xamarin-macios/issues/6216), se pueden seguir los pasos siguientes para volver a instalar el marco de trabajo del simulador antiguo a fin de permitir que los desarrolladores sigan funcionando:
 
 > [!NOTE]
 > En estos pasos se supone que tiene dos aplicaciones Xcode:
+>
 > - **Xcode11-beta1. app** : versión beta que no funciona con simuladores y Visual Studio para Mac.
 > - **Xcode102. app** : una versión estable de Xcode 10. El suyo también podría llamarse **Xcode. app**.
 >

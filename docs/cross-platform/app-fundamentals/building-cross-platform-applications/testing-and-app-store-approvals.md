@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761980"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198423"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
@@ -100,7 +100,7 @@ La lista siguiente es un buen punto de partida para comprobar los casos de los e
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>Las instrucciones son algo más que una "Guía"
 
-Apple es famosa por ser estricto en cuanto al cumplimiento de las directrices de la interfaz de usuario, ya que uno de los puntos fuertes clave de su plataforma es la coherencia (y el aumento percibido en la facilidad de uso). Microsoft ha adoptado un enfoque similar con las aplicaciones Windows que implementan la interfaz de usuario de estilo metro. El proceso de aprobación de ambas plataformas implicará que la aplicación se evalúe para su adherencia a la filosofía de diseño pertinente.
+Apple es famosa por ser estricto en cuanto al cumplimiento de las directrices de la interfaz de usuario, ya que uno de los puntos fuertes clave de su plataforma es la coherencia (y el aumento percibido en la facilidad de uso). Microsoft ha adoptado un enfoque similar con las aplicaciones Windows que implementan el [sistema de diseño fluida](https://microsoft.com/design/fluent). El proceso de aprobación de ambas plataformas implicará que la aplicación se evalúe para su adherencia a la filosofía de diseño pertinente.
 
 Esto no significa que la innovación de la interfaz de usuario no se admite o se le anima, pero hay ciertas cosas que "simplemente no debe hacer" o que se rechazará la aplicación.
 

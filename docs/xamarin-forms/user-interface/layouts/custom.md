@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9442116bf053768fe22d123d1c7e3d146f9b2834
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292574"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198509"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado en Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms define cuatro clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout y cuadrícula, y cada uno de ellos organiza a sus elementos secundarios de forma diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño que no se proporciona mediante Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout minúsculas orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales._
+_Xamarin. Forms define cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño que no se proporciona mediante Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout minúsculas orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales._
 
 En Xamarin.Forms, se derivan todas las clases de diseño de la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) clase y restringir el tipo genérico a [ `View` ](xref:Xamarin.Forms.View) y sus tipos derivados. A su vez, el `Layout<T>` clase se deriva de la [ `Layout` ](xref:Xamarin.Forms.Layout) (clase), que proporciona el mecanismo para colocar y secundarios de ajuste de tamaño los elementos.
 
@@ -427,7 +427,7 @@ El número de columnas en cada fila depende del tamaño de fotografía, el ancho
 
 - [WrapLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Creación de los diseños personalizados en Xamarin.Forms (vídeo)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Creación de los diseños personalizados en Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [>\<De diseño](xref:Xamarin.Forms.Layout`1)
 - [Diseño](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

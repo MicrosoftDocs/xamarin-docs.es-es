@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 3c729517c687e3d81fc3cc17938c96762c7b9252
-ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
+ms.openlocfilehash: 293fc8e3f8965e3109a0a549897dd23c34c46917
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119461"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198466"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -62,11 +62,11 @@ Para crear un proyecto con Xamarin. Android 10,0, primero debe usar el administr
 1. Inicie el administrador de SDK. En Visual Studio, haga clic en **herramientas > Android > Android SDK Manager.** En Visual Studio para Mac, haga clic en **herramientas > administrador de SDK.**
 2. En la esquina inferior derecha, haga clic en el icono de engranaje y seleccione **repositorio > Google (no compatible):**
 
-![Selección del repositorio de Android SDK Manager](~/android/platform/android-10-images/sdkrepository.png)
+    ![Selección del repositorio de Android SDK Manager](~/android/platform/android-10-images/sdkrepository.png)
 
 3. Instale los paquetes de la **plataforma del SDK de Android 10** , que se muestran como **Android SDK plataforma 29** en la pestaña **plataformas** (para obtener más información acerca del uso del administrador de SDK, consulte [Android SDK Setup](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
 
-![Pestaña plataforma de Android SDK Manager](~/android/platform/android-10-images/sdkplatforms.png)
+    ![Pestaña plataforma de Android SDK Manager](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Creación de un proyecto de Xamarin. Android
 
