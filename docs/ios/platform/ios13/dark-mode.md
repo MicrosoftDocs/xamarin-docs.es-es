@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
-ms.openlocfilehash: d21afcc7d7b130528e9cceac47840acd49b91f59
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be487ab839e2fb4d21b85719a56dc34303317a5f
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70129977"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206395"
 ---
 # <a name="dark-mode-in-xamarinios"></a>Modo oscuro en Xamarin. iOS
-
-![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
 
 El modo oscuro es una opción para todo el sistema para los temas claros y oscuros. los usuarios de iOS ahora pueden elegir el tema o permitir que iOS Cambie dinámicamente la apariencia según el entorno y la hora del día.
 

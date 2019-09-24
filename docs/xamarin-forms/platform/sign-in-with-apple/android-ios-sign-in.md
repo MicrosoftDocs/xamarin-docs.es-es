@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c852a80136c8aae3a4da0fd3d8a8fa259e08aa4d
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021161"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206527"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Uso del inicio de sesión con Apple en Xamarin. Forms
 
-![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
-
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
 
 Iniciar sesión con Apple es para todas las aplicaciones nuevas de iOS 13 que usan servicios de autenticación de terceros. Los detalles de implementación entre iOS y Android son bastante diferentes. En esta guía se explica cómo puede hacerlo hoy mismo en Xamarin. Forms.
 
@@ -50,7 +48,7 @@ Cuando el usuario inicia la autenticación, se producen los pasos siguientes:
 8. La aplicación móvil analiza el fragmento de URI en `AppleAccount` y valida que la `nonce` demanda recibida coincida con la `nonce` generada al inicio del flujo.
 9. La aplicación móvil ya está autenticada.
 
-## <a name="azure-functions"></a>Azure Functions
+## <a name="azure-functions"></a>Comprobación de
 
 Este ejemplo utiliza Azure Functions. Como alternativa, un controlador de ASP.NET Core o una solución de servidor Web similar podría ofrecer la misma funcionalidad.
 
@@ -65,7 +63,7 @@ Deben configurarse varias opciones de configuración de la aplicación al usar A
 - `APPLE_SIGNIN_REDIRECT_URI`-La *dirección URL de redireccionamiento* que se configura al crear el *identificador de servicios* en la sección de configuración *de inicio de sesión de Apple* .  Para probarlo, podría ser similar a lo siguiente:`http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY`: El contenido de texto del `.p8` archivo, con todas las `\n` nuevas líneas quitadas, por lo que es una cadena larga.
 
-### <a name="security-considerations"></a>Consideraciones sobre la seguridad
+### <a name="security-considerations"></a>Consideraciones de seguridad
 
 **Nunca** almacene la clave de P8 dentro del código de la aplicación. El código de aplicación es fácil de descargar y desensamblar. 
 

@@ -5,12 +5,12 @@ description: Visual Studio para Mac puede usarse para compilar e integrar códig
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766361"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206381"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar bibliotecas deC++ C/con Xamarin
 
@@ -73,7 +73,7 @@ Una vez configurada la fuente, se debe hacer referencia al paquete desde cada pr
 
 El repositorio de código fuente contiene una [lista de lecturas adicionales](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) que incluye artículos sobre cómo configurar una fuente de NuGet privada en Azure DevOps y cómo insertar el paquete en esa fuente. Aunque requiere un poco más de tiempo de configuración que un directorio local, este tipo de fuente es mejor en un entorno de desarrollo en equipo.
 
-## <a name="walk-through"></a>Ejemplo paso a paso
+## <a name="walk-through"></a>Tutorial
 
 Los pasos proporcionados son específicos de **Visual Studio para Mac**, pero la estructura funciona también en **Visual Studio 2017** .
 
@@ -132,7 +132,7 @@ Serán estas funciones contenedoras que se usan en el lado de [Xamarin](https://
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Encapsular la biblioteca nativa (fase 2)
 
-Esta fase requiere las [bibliotecas precompiladas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) que se describen en la [sección anterior](##creating-the-native-libraries-stage-1).
+Esta fase requiere las [bibliotecas precompiladas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) que se describen en la [sección anterior](#creating-the-native-libraries-stage-1).
 
 ### <a name="creating-the-visual-studio-solution"></a>Crear la solución de Visual Studio
 
@@ -648,7 +648,7 @@ Para completar el tutorial, cree una aplicación de **Xamarin. Forms** para cons
     > [!NOTE]
     > En este caso, no es necesario especificar un **nombre de usuario** y una **contraseña**. 
 
-4. Haga clic en **OK**.
+4. Haga clic en **Aceptar**.
 
 ### <a name="referencing-the-package"></a>Hacer referencia al paquete
 

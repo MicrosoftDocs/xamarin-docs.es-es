@@ -7,30 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021395"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206363"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Inicio de sesión con Apple en Xamarin. iOS
-
-![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
 
 Iniciar sesión con Apple es un nuevo servicio que proporciona protección de identidad para los usuarios de servicios de autenticación de terceros. A partir de iOS 13, Apple requiere que cualquier aplicación nueva que use servicios de autenticación de terceros también debe proporcionar el inicio de sesión con Apple. Las aplicaciones existentes que se están actualizando no necesitan agregar el inicio de sesión con Apple hasta el 2020 de abril.
 
 En este documento se explica cómo puede Agregar inicio de sesión con Apple a aplicaciones de iOS 13.
-
-## <a name="requirements"></a>Requisitos
-
-Esta característica requiere:
-
-* iOS 13
-* Xamarin. iOS 12,99
-* Visual Studio 2019 o Visual Studio 2019 para Mac con compatibilidad con Xcode 11.
-
-Consulte [Introducción para obtener más](get-started.md) información.
 
 ## <a name="apple-developer-setup"></a>Configuración de Apple Developer
 
