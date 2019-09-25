@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 71efb000b3f78283863193e0cc1db5dc45100c0a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768561"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250159"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabajar con campos de texto y búsqueda de tvOS en Xamarin
 
@@ -95,6 +95,8 @@ Para obtener más información, consulte referencia de la [clase UISearchControl
 La forma más fácil de trabajar con campos de texto en una aplicación Xamarin. tvOS es agregarlos al diseño de la interfaz de usuario mediante el diseñador de iOS.
 
 Haga lo siguiente:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

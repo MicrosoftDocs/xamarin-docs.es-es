@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3868b2a35894cdcd7a11c626268307338744ecb4
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757531"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250060"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obtención de una clave de la API de Google Maps
 
@@ -28,6 +28,8 @@ La obtención de una clave de Maps API V2 implica los siguientes pasos:
 
 Para solicitar una clave de API de Maps de Google, debe conocer la huella digital SHA-1 del almacén de claves que se usa para firmar la aplicación.
 Normalmente, esto significa que tendrá que determinar la huella digital SHA-1 para el almacén de claves de depuración y, a continuación, la huella digital SHA-1 para el almacén de claves que se usa para firmar la aplicación para su lanzamiento.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

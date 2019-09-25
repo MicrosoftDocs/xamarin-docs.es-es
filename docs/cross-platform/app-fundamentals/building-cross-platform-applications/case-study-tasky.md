@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281209"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249785"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Caso práctico de aplicación multiplataforma: Tasky
 
@@ -475,7 +475,7 @@ Las aplicaciones resultantes tienen este aspecto en cada plataforma:
 
  <a name="iOS" />
 
-#### <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 La aplicación usa el diseño de la interfaz de usuario estándar de iOS, como el botón ' Agregar ' que se coloca en la barra de navegación y el icono de **más (+)** integrado. También usa el comportamiento predeterminado `UINavigationController` del botón ' atrás ' y admite ' deslizar a eliminar ' en la tabla.
 
@@ -483,7 +483,7 @@ La aplicación usa el diseño de la interfaz de usuario estándar de iOS, como e
 
  <a name="Android" />
 
-#### <a name="android"></a>Android
+### <a name="android"></a>Android
 
 La aplicación Android usa controles integrados, incluido el diseño integrado para las filas que requieren un "tick" mostrado. El comportamiento de back-out del hardware o del sistema se admite además de un botón atrás en pantalla.
 
@@ -491,7 +491,7 @@ La aplicación Android usa controles integrados, incluido el diseño integrado p
 
  <a name="Windows_Phone" />
 
-#### <a name="windows-phone"></a>Windows Phone
+### <a name="windows-phone"></a>Windows Phone
 
 La aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior.
 

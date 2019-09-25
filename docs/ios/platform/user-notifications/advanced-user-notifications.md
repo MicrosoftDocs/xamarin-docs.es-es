@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 8bca2b47212b9effe637dcd2e116630579609b39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cd6458b7d27a50744839fff57b4031943193d7f7
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769415"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250112"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin. iOS
 
@@ -162,6 +162,8 @@ Si el usuario interactúa con las acciones personalizadas (presentadas debajo de
 ### <a name="adding-a-notification-content-extension"></a>Agregar una extensión de contenido de notificación
 
 Para implementar una interfaz de usuario de notificación de usuario personalizada en una aplicación de Xamarin. iOS, haga lo siguiente:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

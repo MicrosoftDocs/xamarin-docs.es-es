@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: conceptdev
 ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: 745c59ad50f0e8ad50a8ec56549d99b7b5e72228
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b567985fcfd9e133587c5c285e17d21465fda659
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772478"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250079"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -50,6 +50,8 @@ La generación de perfiles es útil en todos los tipos de desarrollo, pero es es
 ## <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
 El Xamarin Profiler proporciona a los desarrolladores una manera de generar perfiles de aplicaciones desde Visual Studio para Mac o Visual Studio. El generador de perfiles recopila y muestra información sobre la aplicación, que el desarrollador puede usar para analizar el comportamiento de una aplicación. Hay varias maneras de generar perfiles de una aplicación con el Xamarin Profiler, es decir, la generación de perfiles de memoria y el muestreo estadístico. Estos se llevan a cabo a través de las asignaciones y los instrumentos del generador de perfiles Time respectivamente.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

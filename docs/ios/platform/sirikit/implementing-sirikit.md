@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27bf22403c9411d300e67bfdaef4aa4dfe74f6e0
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769795"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250183"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementación de SiriKit en Xamarin. iOS
 
@@ -43,7 +43,7 @@ Como se muestra en la guía Descripción de los [conceptos de SiriKit](~/ios/pla
 
 [![](implementing-sirikit-images/elements01.png "Extender la aplicación con el diagrama de SiriKit")](implementing-sirikit-images/elements01.png#lightbox)
 
-Entre ellas se incluyen las siguientes:
+Se incluyen los siguientes:
 
 1. **Extensión intents** : comprueba las respuestas de los usuarios, confirma que la aplicación puede controlar la solicitud y realiza realmente la tarea para completar la solicitud del usuario.
 2. **La extensión** - de la interfaz de usuario de intents es*opcional*, proporciona una interfaz de usuario personalizada para las respuestas en el entorno de Siri y puede incluir la interfaz de usuario y la personalización de marca de las aplicaciones en Siri para enriquecer la experiencia del usuario.
@@ -66,6 +66,8 @@ Al mover este código común a un proyecto compartido, PCL o biblioteca nativa, 
 En el caso del MonkeyChat de la aplicación de ejemplo, los modelos de datos y el código de procesamiento, como el acceso a la red y a la base de datos, se moverán a una biblioteca nativa.
 
 Haga lo siguiente:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

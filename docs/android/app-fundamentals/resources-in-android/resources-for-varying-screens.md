@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755058"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249659"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Crear recursos para diferentes pantallas
 
@@ -50,6 +50,8 @@ Sin embargo, es posible que el escalado provoque que los mapas de bits parezcan 
 La declaración del tamaño de la pantalla garantiza que solo los dispositivos compatibles puedan descargar la aplicación. Esto se logra estableciendo el elemento [Supports-Screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) en el archivo **archivo AndroidManifest. XML** . Este elemento se usa para especificar los tamaños de pantalla admitidos por la aplicación. Se considera que una pantalla determinada es compatible Si la aplicación puede colocar correctamente sus diseños en la pantalla de relleno. Al usar este elemento de manifiesto, la aplicación no se mostrará en [*Google Play*](https://play.google.com/) para los dispositivos que no cumplan las especificaciones de pantalla. Sin embargo, la aplicación todavía se ejecutará en dispositivos con pantallas no compatibles, pero los diseños pueden aparecer borrosos y con Pixelizar.
 
 Los Sixes de pantalla admitidos se declaran en el archivo Configurations **/archivo AndroidManifest. XML** de la solución:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

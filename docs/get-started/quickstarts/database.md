@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653506"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249678"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenar datos en una base de datos de SQLite.NET local
 
@@ -27,10 +27,10 @@ En esta guía de inicio rápido, obtendrá información sobre cómo:
 
 En la guía de inicio rápido se explica cómo almacenar datos en una base de datos de SQLite.NET local. A continuación se muestra la aplicación final:
 
-[ ![(database-images/screenshots1-sml.png " ")]Página notas] (database-images/screenshots1.png#lightbox "Página notas") Nota: Página de(database-images/screenshots2.png#lightbox "entrada de nota") de página [ ![(database-images/screenshots2-sml.png " ")]] 
+[![](database-images/screenshots1-sml.png "")](database-images/screenshots1.png#lightbox "Página notas")
+[![](database-images/screenshots2-sml.png "Página de entrada de nota") de página de notas](database-images/screenshots2.png#lightbox "Página de entrada de nota")
 
-
-### <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de intentar esta guía de inicio rápido, debe completar correctamente el [Inicio rápido anterior](multi-page.md) . También puede descargar el [ejemplo de inicio rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) y usarlo como punto de partida para esta guía de inicio rápido.
 

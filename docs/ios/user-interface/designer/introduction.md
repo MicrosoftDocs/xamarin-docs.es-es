@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768935"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250150"
 ---
 # <a name="ios-designer-basics"></a>aspectos básicos del diseñador de iOS
 
@@ -35,6 +35,8 @@ En esta sección se describe cómo el diseñador de iOS facilita la creación de
 IOS Designer permite a los desarrolladores diseñar visualmente la interfaz de usuario de una aplicación. Como se describe en la guía [Introduction to storyboards (introducción a los guiones gráficos](~/ios/user-interface/storyboards/index.md) ), un guion gráfico describe las pantallas (controladores de vista) que componen una aplicación, los elementos de la interfaz (vistas) colocados en esos controladores de vista y el flujo de navegación global de la aplicación. 
 
 Un controlador de vista tiene dos partes: una representación visual en el diseñador de iOS y C# una clase asociada:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

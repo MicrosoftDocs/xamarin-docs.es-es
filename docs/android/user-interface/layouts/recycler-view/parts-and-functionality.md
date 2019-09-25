@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: bea058a1f275d6f02fe4cbdf70f8e47a11d1cf8e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7aa2cae4c8ca1ef9bb0412a4a62dc619af97b57f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764124"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249775"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Componentes y funcionalidad de RecyclerView
 
@@ -52,7 +52,7 @@ Si no extiende `ItemDecoration` y `ItemAnimator`, `RecyclerView` utiliza impleme
 
 <a name="recycling" />
 
-### <a name="how-view-recycling-works"></a>Cómo funciona el reciclaje de vistas
+## <a name="how-view-recycling-works"></a>Cómo funciona el reciclaje de vistas
 
 `RecyclerView`no asigna una vista de elemento para cada elemento del origen de datos. En su lugar, asigna solo el número de vistas de elemento que caben en la pantalla y reutiliza esos diseños de elemento a medida que el usuario se desplaza. Cuando la vista se desplaza por primera vez fuera de la vista, pasa por el proceso de reciclaje que se muestra en la ilustración siguiente:
 
@@ -73,7 +73,7 @@ Si no extiende `ItemDecoration` y `ItemAnimator`, `RecyclerView` utiliza impleme
 
 Además de la reutilización de la `RecyclerView` vista de elementos, también usa otra optimización de eficacia: los titulares de la vista. Un *contenedor de vistas* es una clase simple que almacena en caché las referencias de la vista. Cada vez que el adaptador infla un archivo de diseño de elementos, también crea un contenedor de vistas correspondiente. El titular de la `FindViewById` vista usa para obtener referencias a las vistas dentro del archivo de diseño de elementos inflado. Estas referencias se usan para cargar datos nuevos en las vistas cada vez que se recicla el diseño para Mostrar datos nuevos.
 
-### <a name="the-layout-manager"></a>Administrador de diseño
+## <a name="the-layout-manager"></a>Administrador de diseño
 
 El administrador de diseño es responsable de colocar los elementos `RecyclerView` en la pantalla; determina el tipo de presentación (una lista o una cuadrícula), la orientación (si los elementos se muestran vertical u horizontalmente) y qué elementos de dirección deben mostrarse. (en orden normal o en orden inverso). El administrador de diseño también es responsable de calcular el tamaño y la posición de cada elemento en la pantalla de **RecycleView** .
 
@@ -92,7 +92,7 @@ Para especificar el administrador de diseño, cree una instancia del administrad
 
 Para obtener más información sobre el administrador de diseño, vea la referencia de la [clase RecyclerView. LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-### <a name="the-view-holder"></a>El titular de la vista
+## <a name="the-view-holder"></a>El titular de la vista
 
 El titular de la vista es una clase que se define para almacenar en caché las referencias de la vista. El adaptador utiliza estas referencias de vista para enlazar cada vista a su contenido. Cada elemento de `RecyclerView` tiene una instancia asociada de contenedor de vistas que almacena en memoria caché las referencias de la vista para ese elemento. Para crear un contenedor de vistas, siga estos pasos para definir una clase que contenga el conjunto exacto de vistas por elemento:
 
@@ -103,7 +103,7 @@ El titular de la vista es una clase que se define para almacenar en caché las r
 Un ejemplo detallado de una `ViewHolder` implementación se presenta en [un ejemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Para obtener más información `RecyclerView.ViewHolder`sobre, vea la referencia de la [clase RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-### <a name="the-adapter"></a>El adaptador
+## <a name="the-adapter"></a>El adaptador
 
 La mayor parte del "trabajo pesado" del código `RecyclerView` de integración tiene lugar en el adaptador. `RecyclerView`requiere que proporcione un adaptador derivado de `RecyclerView.Adapter` para tener acceso al origen de datos y rellenar cada elemento con el contenido del origen de datos.
 Dado que el origen de datos es específico de la aplicación, debe implementar la funcionalidad del adaptador que entienda cómo obtener acceso a los datos. El adaptador extrae información del origen de datos y la carga en cada elemento de `RecyclerView` la colección.
@@ -123,9 +123,9 @@ Al implementar un adaptador, debe invalidar los métodos siguientes `RecyclerVie
 
 - **`ItemCount`** &ndash; Devuelve el número de elementos del origen de datos.
 
-El administrador de diseño llama a estos métodos mientras coloca los elementos dentro `RecyclerView`de. 
+El administrador de diseño llama a estos métodos mientras coloca los elementos dentro `RecyclerView`de.
 
-### <a name="notifying-recyclerview-of-data-changes"></a>Notificar los cambios de datos de RecyclerView
+## <a name="notifying-recyclerview-of-data-changes"></a>Notificar los cambios de datos de RecyclerView
 
 `RecyclerView`no actualiza automáticamente su presentación cuando cambia el contenido de su origen de datos; el adaptador debe notificar `RecyclerView` cuando se produzca un cambio en el conjunto de datos. El conjunto de datos puede cambiar de muchas maneras. por ejemplo, el contenido de un elemento puede cambiar o se puede modificar la estructura global de los datos.
 `RecyclerView.Adapter`proporciona una serie de métodos a los que puede llamar para `RecyclerView` que responda a los cambios de datos de la manera más eficaz:

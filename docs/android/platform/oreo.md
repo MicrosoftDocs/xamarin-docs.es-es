@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0387cd91bd24080417a5e9763410d68b6e688555
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 31e4073df70ced0cc9729c6dc292500264ad7fce
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757494"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249954"
 ---
 # <a name="oreo-features"></a>Características de Oreo
 
@@ -52,6 +52,8 @@ En las secciones siguientes se explica cada uno de estos pasos:
 ### <a name="update-visual-studio-and-xamarinandroid"></a>Actualización de Visual Studio y Xamarin. Android
 
 Para agregar compatibilidad con Android Oreo a Visual Studio, haga lo siguiente:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

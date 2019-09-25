@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 96d2fe0b03ad7067d6fece072742ea2796224f8b
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527078"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250119"
 ---
 # <a name="images-in-xamarinforms"></a>Imágenes en Xamarin.Forms
 
@@ -53,7 +53,7 @@ Archivos de imagen se pueden agregar a cada proyecto de aplicación y hacer refe
 Para usar una imagen única en todas las aplicaciones, *se debe usar el mismo nombre de archivo en todas las plataformas*, y debe ser un nombre de recurso de Android válido (es decir. se permiten solo letras minúsculas, números, el carácter de subrayado y el período).
 
 - **iOS** : la preferida en forma de administrar y admitir imágenes, ya que es usar iOS 9 **conjuntos de imágenes del catálogo de activos**, que debe contener todas las versiones de una imagen que son necesarias para admitir varios dispositivos y factores de escala de un aplicación. Para obtener más información, consulte [agregar imágenes a un conjunto de imágenes de catálogo de activos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
-- **Android** : incluir imágenes en el directorio Resources **/drawable** con **la acción de compilación: AndroidResource**. También se pueden proporcionar versiones de alta y baja resolución de una imagen (en un nombre apropiado **recursos** subdirectorios como **drawable ldpi**, **drawable-hdpi**y **drawable xhdpi**).
+- **Android** : incluir imágenes en el directorio **Resources/drawable** con **la acción de compilación: AndroidResource**. También se pueden proporcionar versiones de alta y baja resolución de una imagen (en un nombre apropiado **recursos** subdirectorios como **drawable ldpi**, **drawable-hdpi**y **drawable xhdpi**).
 - **Plataforma universal de Windows (UWP)** : Coloque imágenes en el directorio raíz de la aplicación **con la acción de compilación: Contenido**.
 
 > [!IMPORTANT]
@@ -73,7 +73,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar una imagen local en cada plataforma:
 
-[![Elemento ImageSource local](images-images/local-sml.png "mostrar una imagen Local de aplicación de ejemplo")](images-images/local.png#lightbox "mostrar una imagen Local de aplicación de ejemplo")
+[![ImageSource local](images-images/local-sml.png "Aplicación de ejemplo que muestra una imagen local")](images-images/local.png#lightbox "Aplicación de ejemplo que muestra una imagen local")
 
 Para obtener más flexibilidad el `Device.RuntimePlatform` propiedad puede utilizarse para seleccionar un archivo de imagen diferente o la ruta de acceso para algunas o todas las plataformas, como se muestra en este ejemplo de código:
 
@@ -94,7 +94,7 @@ Antes de iOS 9, las versiones de retina de la imagen podrían colocarse en el **
 
 Imágenes de Android resolución alternativo deben colocarse en [directorios especialmente denominada](https://developer.android.com/guide/practices/screens_support.html) en el proyecto Android, como se muestra en la captura de pantalla siguiente:
 
-[![Ubicación de la imagen de varias resoluciones Android](images-images/xs-highdpisolution-sml.png "ubicación de la imagen de varias resoluciones Android")](images-images/xs-highdpisolution.png#lightbox "ubicación de la imagen de varias resoluciones de Android")
+[![Ubicación de la imagen de varias resoluciones de Android](images-images/xs-highdpisolution-sml.png "Ubicación de la imagen de varias resoluciones de Android")](images-images/xs-highdpisolution.png#lightbox "Ubicación de la imagen de varias resoluciones de Android")
 
 Los nombres de archivo de imagen UWP [puede tener el sufijo con `.scale-xxx` antes de la extensión de archivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), donde `xxx` es el porcentaje de ajuste de escala aplicado al recurso, por ejemplo, **myimage.scale 200.png**. A continuación, se pueden hacer referencia de las imágenes en el código o XAML sin el modificador de escala, por ejemplo, simplemente **myimage.png**. La plataforma seleccionará la escala de activos correspondiente más cercana en función de PPP de la pantalla actual.
 
@@ -115,6 +115,8 @@ Algunos controles tienen propiedades que se muestran una imagen, como:
 También se incluyen imágenes incrustadas con una aplicación (por ejemplo, imágenes locales), pero en lugar de tener una copia de la imagen en la estructura de archivos de la aplicación la imagen de archivo está incrustado en el ensamblado como un recurso. Este método para distribuir las imágenes se recomienda cuando se usan imágenes idénticas en cada plataforma y es especialmente adecuado para la creación de componentes, como la imagen se incluye con el código.
 
 Para incrustar una imagen en un proyecto, haga doble clic para agregar nuevos elementos y seleccione la imagen/s que desea agregar. De forma predeterminada, la imagen **tendrá la acción de compilación: Ninguno**; debe establecerse en acción de **compilación: EmbeddedResource**.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -154,7 +156,7 @@ Actualmente no hay ninguna conversión implícita de los identificadores de recu
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar una imagen incrustada en cada plataforma:
 
-[![ResourceImageSource](images-images/resource-sml.png "mostrar una imagen incrustada de aplicación de ejemplo")](images-images/resource.png#lightbox "mostrar una imagen incrustada de aplicación de ejemplo")
+[![ResourceImageSource](images-images/resource-sml.png "Aplicación de ejemplo que muestra una imagen incrustada")](images-images/resource.png#lightbox "Aplicación de ejemplo que muestra una imagen incrustada")
 
 ### <a name="using-xaml"></a>Uso de XAML
 
@@ -260,7 +262,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar una imagen remota en cada plataforma:
 
-[![Descargar ImageSource](images-images/download-sml.png "mostrar una imagen descargada de aplicación de ejemplo")](images-images/download.png#lightbox "mostrar una imagen descargada de aplicación de ejemplo")
+[![Descargado ImageSource](images-images/download-sml.png "Aplicación de ejemplo que muestra una imagen descargada")](images-images/download.png#lightbox "Aplicación de ejemplo que muestra una imagen descargada")
 
 ### <a name="downloaded-image-caching"></a>Almacenamiento en caché de la imagen descargada
 

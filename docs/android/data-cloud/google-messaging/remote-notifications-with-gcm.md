@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 813bb59cf11f35f69620c30e8ba12281df08df75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754504"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249925"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con Google Cloud Messaging
 
@@ -116,7 +116,7 @@ Estableceremos estos permisos en el manifiesto de Android. Vamos a editar **arch
 </manifest>
 ```
 
-En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para su proyecto de aplicación cliente. Por ejemplo, `com.xamarin.gcmexample`. 
+En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para su proyecto de aplicación cliente. Por ejemplo: `com.xamarin.gcmexample`. 
 
 ### <a name="check-for-google-play-services"></a>Comprobar Google Play Services
 
@@ -312,7 +312,7 @@ public RegistrationIntentService() : base ("RegistrationIntentService") { }
 
 La funcionalidad básica de `RegistrationIntentService` reside en el `OnHandleIntent` método. Vamos a examinar este código para ver cómo registra nuestra aplicación con GCM.
 
-##### <a name="request-a-registration-token"></a>Solicitar un token de registro
+#### <a name="request-a-registration-token"></a>Solicitar un token de registro
 
 `OnHandleIntent`primero llama al método [InstanceID. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) de Google para solicitar un token de registro de GCM. Encapsulamos este código en un `lock` para protegerse frente a la posibilidad de que se produzcan varios &ndash; intentos `lock` de registro al mismo tiempo, lo que garantiza que estas intenciones se procesan de forma secuencial. Si no se puede obtener un token de registro, se produce una excepción y se registra un error. Si el registro se realiza correctamente `token` , se establece en el token de registro que obtuvimos de GCM: 
 
@@ -334,7 +334,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### <a name="forward-the-registration-token-to-the-app-server"></a>Reenviar el token de registro al servidor de aplicaciones
+#### <a name="forward-the-registration-token-to-the-app-server"></a>Reenviar el token de registro al servidor de aplicaciones
 
 Si obtenemos un token de registro (es decir, no se produjo ninguna excepción), `SendRegistrationToAppServer` llamamos a para asociar el token de registro del usuario con la cuenta del lado servidor (si existe) que mantiene nuestra aplicación. Dado que esta implementación depende del diseño del servidor de aplicaciones, se proporciona un método vacío aquí: 
 
@@ -347,7 +347,7 @@ void SendRegistrationToAppServer (string token)
 
 En algunos casos, el servidor de aplicaciones no necesita el token de registro del usuario. en ese caso, se puede omitir este método. Cuando se envía un token de registro al servidor de aplicaciones `SendRegistrationToAppServer` , debe mantener un valor booleano para indicar si el token se ha enviado al servidor. Si este valor booleano es false `SendRegistrationToAppServer` , envía el token al servidor &ndash; de aplicaciones; de lo contrario, el token ya se envió al servidor de aplicaciones en una llamada anterior. 
 
-##### <a name="subscribe-to-the-notification-topic"></a>Suscribirse al tema de notificación
+#### <a name="subscribe-to-the-notification-topic"></a>Suscribirse al tema de notificación
 
 A continuación, llamamos a `Subscribe` nuestro método para indicar a GCM que queremos suscribirte a un tema de notificación. En `Subscribe`, llamamos a la API [GcmPubSub. subscribe](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) para suscribir la aplicación cliente a todos los `/topics/global`mensajes en:
 
@@ -501,7 +501,7 @@ En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para su
 
 Echemos un vistazo a cada una de las opciones de este XML:
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---|---|
 |`com.google.android.gms.gcm.GcmReceiver`|Declara que nuestra aplicación implementa un receptor de GCM que captura y procesa los mensajes entrantes de notificaciones de entrada.|
 |`com.google.android.c2dm.permission.SEND`|Declara que solo los servidores GCM pueden enviar mensajes directamente a la aplicación.|

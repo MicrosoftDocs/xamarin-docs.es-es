@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f41d65c8981d4ef6ffcf1b812fbbbb7e72e7719
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509747"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249796"
 ---
 # <a name="3264-bit-platform-considerations"></a>consideraciones sobre las plataformas de 32 y 64 bits
 
@@ -34,11 +34,13 @@ Los Classic API de Xamarin`XamMac.dll` ( `monotouch.dll`y) solo admiten las apli
 
 En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en el Unified API, los desarrolladores deben actualizar manualmente la configuración de compilación para que tenga como destino 64 bits:
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic en el proyecto de la aplicación para abrir la ventana **Opciones del proyecto** .
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone,  en la lista desplegable arquitecturas admitidas, seleccione **\_x86 64** o **i386\_+ x86 64**:
+3. Para el simulador de iPhone, en la lista desplegable **arquitecturas admitidas** , seleccione **x86\_64** o **i386 +\_x86 64**:
 
    [![Establecimiento de arquitecturas admitidas\_en x86 64 o i386\_+ x86 64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
@@ -46,14 +48,14 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
    [![Establecimiento de arquitecturas admitidas en una de las combinaciones de ARM64](Images/Image02.png "Establecimiento de arquitecturas admitidas en una de las combinaciones de ARM64")](Images/Image02-large.png#lightbox)
 
-5. Haga clic en **OK**.
+5. Haga clic en **Aceptar**.
 6. Realice una compilación limpia.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **propiedades**.
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone  , establezca las arquitecturas admitidas en **\_x86 64** o **i386\_+ x86 64**: 
+3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86\_64** o **i386 +\_x86 64**: 
 
    [![Establecimiento de arquitecturas admitidas en x86_64 o i386\_+ x86 64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
