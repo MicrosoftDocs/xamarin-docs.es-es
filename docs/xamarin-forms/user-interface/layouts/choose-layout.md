@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69894002"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Elegir un diseño de Xamarin. Forms
@@ -22,7 +22,7 @@ Las clases de diseño de Xamarin. Forms permiten organizar y agrupar los control
 
 En la imagen siguiente se muestran los diseños típicos que se pueden lograr con las clases de diseño principales de Xamarin. Forms:
 
-Las [ ![clases de diseño principales en](images/layouts.png "las clases de diseño") de] Xamarin. Forms de Xamarin. Forms (images/layouts-large.png#lightbox "Clases de diseño de Xamarin. Forms")
+[![Clases de diseño principales de Xamarin. Forms](images/layouts.png "Clases de diseño de Xamarin. Forms")](images/layouts-large.png#lightbox "Clases de diseño de Xamarin. Forms")
 
 ## <a name="stacklayout"></a>StackLayout
 

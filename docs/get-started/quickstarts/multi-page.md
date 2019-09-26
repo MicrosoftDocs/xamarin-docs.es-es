@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68653796"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Realizar la navegación en una aplicación de Xamarin. Forms de varias páginas
@@ -28,8 +28,8 @@ En esta guía de inicio rápido, obtendrá información sobre cómo:
 
 En la guía de inicio rápido se explica cómo convertir una aplicación de Xamarin. Forms multiplataforma de una sola página, capaz de almacenar una sola nota en una aplicación de varias páginas, capaz de almacenar varias notas. A continuación se muestra la aplicación final:
 
-[ ![(multi-page-images/screenshots1-sml.png " ")]Página notas] (multi-page-images/screenshots1.png#lightbox "Página notas") Nota: Página de(multi-page-images/screenshots2.png#lightbox "entrada de nota") de página [ ![(multi-page-images/screenshots2-sml.png " ")]] 
-
+[![](multi-page-images/screenshots1-sml.png "")](multi-page-images/screenshots1.png#lightbox "Página notas")
+[![](multi-page-images/screenshots2-sml.png "Página de entrada de nota") de página de notas](multi-page-images/screenshots2.png#lightbox "Página de entrada de nota")
 
 ### <a name="prerequisites"></a>Requisitos previos
 
@@ -59,7 +59,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
 
     ![](multi-page-images/vs/add-note-class.png "Agregar clase de nota")
 
-    Esto agregará una clase denominada **Note** a la carpeta models del proyecto **Notes** .
+    Esto agregará una clase denominada **Note** a la carpeta **Models** del proyecto **Notes** .
 
 6. En **Note.CS**, quite todo el código de plantilla y reemplácelo por el código siguiente:
 
@@ -342,7 +342,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
 
     ![](multi-page-images/vsmac/add-note-class.png "Agregar clase de nota")
 
-    Esto agregará una clase denominada **Note** a la carpeta models del proyecto **Notes** .
+    Esto agregará una clase denominada **Note** a la carpeta **Models** del proyecto **Notes** .
 
 6. En **Note.CS**, quite todo el código de plantilla y reemplácelo por el código siguiente:
 

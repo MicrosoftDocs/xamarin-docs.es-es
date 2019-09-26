@@ -1,16 +1,16 @@
 ---
 title: Usar proyectos compartidos para compartir código
-description: Los proyectos compartidos permiten escribir código común al que hacen referencia varios proyectos de aplicación diferentes. El código se compila como parte de cada proyecto de referencia y puede incluir directivas de compilador para ayudar a incorporar la funcionalidad específica de la plataforma en la base de código compartido.
+description: Los proyectos compartidos permiten escribir código común al que hacen referencia varios proyectos de aplicación diferentes. El código se compila como parte de cada proyecto de referencia y puede incluir directivas de compilador para ayudar a incorporar una funcionalidad específica de la plataforma en el código base compartido.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739061"
 ---
 # <a name="shared-projects-code-sharing"></a>Uso compartido de código de proyectos compartidos
@@ -39,7 +39,7 @@ Tenga en cuenta que los proyectos de aplicación de Android no pueden hacer refe
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Tutorial de Visual Studio para Mac
 
-En esta sección se explica cómo crear y usar un proyecto compartido mediante Visual Studio para Mac. Consulte la sección [ejemplo de proyectos](#Shared_Project_Example) compartidos para ver un ejemplo completo.
+En esta sección se explica cómo crear y usar un proyecto compartido mediante Visual Studio para Mac. Consulte la sección [ejemplo de proyectos compartidos](#Shared_Project_Example) para ver un ejemplo completo.
 
 ## <a name="creating-a-shared-project"></a>Crear un proyecto compartido
 
@@ -73,7 +73,7 @@ A continuación se muestra la pantalla **Opciones** : el **nombre** del proyecto
 
 ## <a name="visual-studio-walkthrough"></a>Tutorial de Visual Studio
 
-En esta sección se explica cómo crear y usar un proyecto compartido con Visual Studio. Consulte la sección [ejemplo de proyectos](#Shared_Project_Example) compartidos para ver una implementación completa.
+En esta sección se explica cómo crear y usar un proyecto compartido con Visual Studio. Consulte la sección [ejemplo de proyectos compartidos](#Shared_Project_Example) para ver una implementación completa.
 
 ### <a name="creating-a-shared-project"></a>Crear un proyecto compartido
 

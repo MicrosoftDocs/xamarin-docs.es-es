@@ -9,10 +9,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70290601"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensiones de iOS en Xamarin. iOS
@@ -27,9 +27,9 @@ Todas las extensiones se instalan junto con una aplicación de contenedor (con a
 
 ## <a name="extension-points"></a>Puntos de extensión
 
-|Type|DESCRIPCIÓN|Punto de extensión|Aplicación host|
+|Tipo|Descripción|Punto de extensión|Aplicación host|
 |--- |--- |--- |--- |
-|.|Editor o visor especializado para un tipo de medio determinado|`com.apple.ui-services`|Cualquiera|
+|Acción|Editor o visor especializado para un tipo de medio determinado|`com.apple.ui-services`|Cualquiera|
 |Proveedor de documentos|Permite que la aplicación use un almacén de documentos remoto|`com.apple.fileprovider-ui`|Aplicaciones que usan un [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
 |Teclado|Teclados alternativos|`com.apple.keyboard-service`|Cualquiera|
 |Edición de fotografías|Manipulación y edición de fotografías|`com.apple.photo-editing`|Editor de fotos. app|

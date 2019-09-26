@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
 ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70754451"
 ---
 # <a name="using-data-in-an-app"></a>Uso de datos en una aplicación
@@ -29,7 +29,7 @@ El proyecto de Android se muestra &ndash; debajo del código que se muestra en e
 
 El código de interfaz de usuario nativo para las actividades en Android está fuera del ámbito de este documento. Consulte la guía de los [adaptadores y ListView de Android](~/android/user-interface/layouts/list-view/index.md) para obtener más información sobre los controles de interfaz de usuario.
 
-## <a name="read"></a>Lectura
+## <a name="read"></a>Leer
 
 Hay un par de operaciones de lectura en el ejemplo:
 

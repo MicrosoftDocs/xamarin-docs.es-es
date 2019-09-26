@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019
 ms.openlocfilehash: 14abf2e7eff64d2e3e9656bf1ca76f4cee615408
-ms.sourcegitcommit: 5ef92b44f0d10c58013d3c3dd6283509f1499587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69986081"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introducción a la CollectionView de Xamarin. Forms
@@ -22,7 +22,7 @@ ms.locfileid: "69986081"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) es una vista para presentar listas de datos con diferentes especificaciones de diseño. Pretende proporcionar una alternativa más flexible y de rendimiento a [`ListView`](xref:Xamarin.Forms.ListView). Por ejemplo, las siguientes capturas de `CollectionView` pantallas muestran un que usa una cuadrícula vertical de dos columnas y que permite la selección múltiple:
 
-[ ![Captura de pantalla de un diseño de cuadrícula vertical de CollectionView, en el diseño de cuadrículas verticales de la CollectionView de iOS y Android](introduction-images/verticalgrid-multipleselection.png "con selección múltiple") ] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Diseño de cuadrícula vertical de CollectionView con selección múltiple")
+[![Captura de pantalla de un diseño de cuadrícula vertical de CollectionView, en iOS y Android](introduction-images/verticalgrid-multipleselection.png "Diseño de cuadrícula vertical de CollectionView con selección múltiple")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Diseño de cuadrícula vertical de CollectionView con selección múltiple")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)está disponible en Xamarin. Forms 4,0. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, o bien a `MainActivity` la clase en Android, antes `Forms.Init`de llamar a:
 
@@ -50,18 +50,18 @@ Aunque las [`CollectionView`](xref:Xamarin.Forms.CollectionView) API [`ListView`
 
 | Concepto | API de ListView | CollectionView |
 |---|---|---|
-| Datos | `ItemsSource` | Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) se rellena con datos estableciendo su `ItemsSource` propiedad. Para obtener más información, vea rellenar [una CollectionView con datos](populate-data.md#populate-a-collectionview-with-data). |
+| Datos | `ItemsSource` | Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) se rellena con datos estableciendo su `ItemsSource` propiedad. Para obtener más información, vea [rellenar una CollectionView con datos](populate-data.md#populate-a-collectionview-with-data). |
 | Apariencia del elemento | `ItemTemplate` | La apariencia de cada elemento de un [`CollectionView`](xref:Xamarin.Forms.CollectionView) puede definirse estableciendo la `ItemTemplate` propiedad en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Para obtener más información, vea [definir la apariencia](populate-data.md#define-item-appearance)de los elementos. |
 | Celdas | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)no tiene concepto de celdas. En su lugar, se usa una plantilla de datos para definir la apariencia de cada elemento de datos de la lista. |
 | Separadores de filas | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)no incluye separadores integrados. Se pueden proporcionar, si se desea, en la plantilla de elemento. |
-| Número de selección | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la selección única y múltiple. Para obtener más información, consulte [selección de CollectionView de Xamarin. Forms](selection.md). |
+| Selección | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la selección única y múltiple. Para obtener más información, consulte [selección de CollectionView de Xamarin. Forms](selection.md). |
 | Alto de fila | `HasUnevenRows`, `RowHeight` | En, el alto de la fila de cada elemento viene determinado por `ItemSizingStrategy` la propiedad. `CollectionView` Para obtener más información, vea tamaño de los [elementos](layout.md#item-sizing).|
 | Almacenamiento en memoria caché | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)utiliza automáticamente la virtualización proporcionada por los controles nativos subyacentes. |
 | Encabezados y pies de página | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)puede presentar un encabezado y un pie de página que se desplacen con los elementos de `Header`la lista `HeaderTemplate`, a `FooterTemplate` través de las propiedades, `Footer`, y. Para obtener más información, vea [encabezados y pies de página](layout.md#headers-and-footers). |
 | Agrupar | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)muestra datos agrupados correctamente estableciendo su `IsGrouped` propiedad en. `true` Los encabezados de grupo y los pies de grupo se pueden personalizar estableciendo `GroupHeaderTemplate` las `GroupFooterTemplate` propiedades y [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) en objetos. Para obtener más información, vea GROUPING de la agrupación de datos de [Xamarin. Forms](grouping.md). |
 | Extraer para actualizar | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | La incorporación de cambios a la actualización no se `CollectionView`admite actualmente en, pero se agregará en una versión futura. |
 | Acciones de contexto | `ContextActions` | Las acciones de contexto no se admiten `CollectionView`actualmente en, pero se agregarán en una versión futura. |
-| Desplazamiento | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)define `ScrollTo` métodos que desplazan los elementos en la vista. Para obtener más información, vea [desplazamiento](scrolling.md). |
+| Desplazarse | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)define `ScrollTo` métodos que desplazan los elementos en la vista. Para obtener más información, vea [desplazamiento](scrolling.md). |
 
 ## <a name="related-links"></a>Vínculos relacionados
 

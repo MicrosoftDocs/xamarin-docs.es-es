@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70762618"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Opciones de visualización y calificadores de recursos
@@ -34,7 +34,7 @@ Este cuadro de diálogo presenta menús desplegables para los siguientes calific
 
 Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que puede seleccionar y configurar calificadores de recursos (como se explica a continuación).
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Lenguaje
 
 En el menú desplegable **idioma** se muestran solo los idiomas que tienen definidos los recursos (o **todos los idiomas**, que es el valor predeterminado). Sin embargo, también hay una opción **Agregar idioma o región...** que le permite agregar un nuevo idioma a la lista:
 
@@ -113,7 +113,7 @@ Este cuadro de diálogo presenta menús desplegables para los siguientes calific
 
 Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que puede seleccionar y configurar calificadores de recursos (como se explica a continuación).
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Lenguaje
 
 En el menú desplegable **idioma** se muestran solo los idiomas que tienen definidos los recursos (o **todos los idiomas**, que es el valor predeterminado). Sin embargo, también hay una opción **Agregar idioma o región...** que le permite agregar un nuevo idioma a la lista:
 

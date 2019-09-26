@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
 ms.openlocfilehash: 7847148551c20dbcf49bcc263bdc50716a6ef14e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70283171"
 ---
 # <a name="ios-security-and-privacy-features"></a>Características de seguridad y privacidad de iOS

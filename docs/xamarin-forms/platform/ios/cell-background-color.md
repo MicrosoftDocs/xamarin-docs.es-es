@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68651376"
 ---
 # <a name="cell-background-color-on-ios"></a>Color de fondo de celda en iOS
@@ -56,7 +56,7 @@ El `ListView.On<iOS>` método especifica que solo se ejecutarán este específic
 
 El resultado es que el color de fondo de [`Cell`](xref:Xamarin.Forms.Cell) un se puede establecer en un [`Color`](xref:Xamarin.Forms.Color)específico:
 
-[ ![Captura de pantalla de las celdas de encabezado de verde azulado en la ListView de iOS](cell-background-color-images/group-header-cell-color.png "con las celdas de encabezado de verde azulado") ] (cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celdas de encabezado de verde azulado")
+[![Captura de pantalla de las celdas de encabezado de verde azulado, en iOS](cell-background-color-images/group-header-cell-color.png "ListView con celdas de encabezado de verde azulado")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celdas de encabezado de verde azulado")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

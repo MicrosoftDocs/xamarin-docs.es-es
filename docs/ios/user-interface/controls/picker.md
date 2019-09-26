@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/14/2018
 ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70286383"
 ---
 # <a name="picker-control-in-xamarinios"></a>Control selector en Xamarin. iOS
@@ -189,7 +189,7 @@ La [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) propiedad establec
 datePickerView.MinuteInterval = 10;
 ```
 
-#### <a name="mode"></a>Mode
+#### <a name="mode"></a>Modo
 
 Los selectores de fecha admiten cuatro [modos](xref:UIKit.UIDatePickerMode), que se describen a continuación:
 

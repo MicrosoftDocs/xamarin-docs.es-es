@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: f40737799f63c6e0c61fcc6f4f59584222a49d6d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68648318"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Estilo de encabezado de grupo de ListView en iOS
@@ -50,7 +50,7 @@ Además, el `ListView.GetGroupHeaderStyle` método se puede utilizar para devolv
 
 El resultado es que un valor `GroupHeaderStyle` especificado se aplica a, [`ListView`](xref:Xamarin.Forms.ListView)que controla si las celdas de encabezado flotan durante el desplazamiento:
 
-[ ![Captura de pantalla de las celdas de encabezado de ListView flotantes y no flotantes, en la ListView de iOS](listview-group-header-style-images/group-header-styles.png "con celdas de encabezado flotante y no flotantes") ] (listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con celdas de encabezado flotante y no flotante")
+[![Captura de pantalla de las celdas de encabezado de ListView flotantes y no flotantes, en iOS](listview-group-header-style-images/group-header-styles.png "ListView con celdas de encabezado flotante y no flotante")](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con celdas de encabezado flotante y no flotante")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

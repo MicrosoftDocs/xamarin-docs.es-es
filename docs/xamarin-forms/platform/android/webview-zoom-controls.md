@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: 2142882add91d613263d11fa4c1e6d7ad142c7c7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655998"
 ---
 # <a name="webview-zoom-on-android"></a>Zoom de WebView en Android
@@ -47,7 +47,7 @@ El `WebView.On<Android>` método especifica que solo se ejecutarán este especí
 
 El resultado es que se puede habilitar el aumento del zoom en un [`WebView`](xref:Xamarin.Forms.WebView)control y los controles de zoom se pueden superponer en el: `WebView`
 
-[ ![Captura de pantalla de vista previa ampliada en]la(webview-zoom-controls-images/webview-zoom.png "vista") previa de Android ampliada] (webview-zoom-controls-images/webview-zoom-large.png#lightbox "Vista previa ampliada")
+[![Captura de pantalla de vista previa ampliada en Android](webview-zoom-controls-images/webview-zoom.png "Vista previa ampliada")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Vista previa ampliada")
 
 > [!IMPORTANT]
 > Los controles de zoom deben estar habilitados y mostrados, a través de las propiedades o métodos enlazables correspondientes, para [`WebView`](xref:Xamarin.Forms.WebView)superponerse en un.

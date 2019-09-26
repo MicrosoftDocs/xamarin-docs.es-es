@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
 ms.openlocfilehash: 19cc24c3937921f4f4d95584e1cd656c37b4155f
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71105973"
 ---
 # <a name="xamarinforms-label"></a>Etiqueta de Xamarin.Forms

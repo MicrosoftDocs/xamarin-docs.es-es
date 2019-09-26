@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70760225"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
@@ -34,7 +34,7 @@ Una solución eficaz para estos desafíos es particionar una aplicación en comp
 - Promueve la reutilización y una separación limpia de las preocupaciones entre las funcionalidades horizontales de la aplicación, como la autenticación y el acceso a datos, y las funcionalidades verticales, como la funcionalidad empresarial específica de la aplicación. Esto permite administrar las dependencias y las interacciones entre los componentes de la aplicación más fácilmente.
 - Ayuda a mantener una separación de roles, ya que permite que individuos, o equipos, se centren en una tarea específica o en una parte de la funcionalidad de acuerdo con sus conocimientos. En concreto, proporciona una separación más nítida entre la interfaz de usuario y la lógica de negocios de la aplicación.
 
-Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Entre ellas se incluyen las siguientes:
+Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Se incluyen los siguientes:
 
 - Decidir cómo proporcionar una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica. Una de las decisiones más importantes a la hora de crear una aplicación de Xamarin. Forms Enterprise es si se debe colocar lógica de negocios en archivos de código subyacente, o si se va a crear una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica, para que la aplicación sea más mantenible y comprobable. Para obtener más información, vea [modelo-vista-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinar si se va a usar un contenedor de inserción de dependencias. Los contenedores de inserción de dependencias reducen el acoplamiento de dependencias entre los objetos al proporcionar una utilidad para construir instancias de clases con sus dependencias insertadas y administrar su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -89,7 +89,7 @@ Para obtener información sobre la implementación de los servicios back- [end, 
 
 Esta guía se centra en la creación de aplicaciones empresariales multiplataforma con Xamarin. Forms y usa la aplicación móvil eShopOnContainers como ejemplo. En la figura 1-2 se muestran las páginas de la aplicación móvil eShopOnContainers que proporcionan la funcionalidad descrita anteriormente.
 
-La aplicación móvil eShopOnContainers [ ![(introduction-images/screenshots.png " ")]] (introduction-images/screenshots-large.png#lightbox "La aplicación móvil eShopOnContainers")
+[![](introduction-images/screenshots.png "La aplicación móvil eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "La aplicación móvil eShopOnContainers")
 
 **Figura 1-2**: La aplicación móvil eShopOnContainers
 
@@ -103,7 +103,7 @@ La aplicación móvil eShopOnContainers ejercita la siguiente funcionalidad de X
 - Convertidores
 - Estilos
 - Animaciones
-- Comandos:
+- Comandos
 - comportamientos
 - Desencadenadores
 - Efectos
@@ -119,7 +119,7 @@ Además, se proporcionan pruebas unitarias para algunas de las clases de la apli
 
 La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describen los proyectos que componen la aplicación móvil eShopOnContainers:
 
-|Proyecto|DESCRIPCIÓN|
+|Proyecto|Descripción|
 |--- |--- |
 |eShopOnContainers.Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
 |eShopOnContainers.Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|
@@ -136,7 +136,7 @@ Las clases de la aplicación móvil eShopOnContainers se pueden volver a usar en
 
 El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 
-|Carpeta|DESCRIPCIÓN|
+|Carpeta|Descripción|
 |--- |--- |
 |Animaciones|Contiene clases que permiten usar animaciones en XAML.|
 |comportamientos|Contiene los comportamientos que se exponen a las clases de vista.|
@@ -147,7 +147,7 @@ El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 |Extensiones|Contiene métodos de extensión para `VisualElement` las `IEnumerable` clases y.|
 |Aplicaciones auxiliares|Contiene las clases auxiliares para la aplicación.|
 |Modelos|Contiene las clases de modelo de la aplicación.|
-|Properties (Propiedades)|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
+|Propiedades|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
 |Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
 |Desencadenadores|Contiene el `BeginAnimation` desencadenador, que se usa para invocar una animación en XAML.|
 |Validaciones|Contiene clases implicadas en la validación de la entrada de datos.|

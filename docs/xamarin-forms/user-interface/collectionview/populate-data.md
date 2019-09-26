@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888545"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Datos de CollectionView de Xamarin. Forms
@@ -30,7 +30,7 @@ Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView)define una `ItemsUpdatingScrollMode` propiedad que representa el comportamiento `CollectionView` de desplazamiento de cuando se agregan nuevos elementos a él. Para obtener más información sobre esta propiedad, vea [control de posición de desplazamiento cuando se agregan nuevos elementos](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos](#load-data-incrementally)de forma incremental.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](#load-data-incrementally).
 
 ## <a name="populate-a-collectionview-with-data"></a>Rellenar un CollectionView con datos
 
@@ -55,7 +55,7 @@ Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) se rellena con datos es
 > [!NOTE]
 > Tenga en cuenta que el elemento `x:Array` requiere un atributo `Type` que indica el tipo de los elementos de la matriz.
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -76,7 +76,7 @@ collectionView.ItemsSource = new string[]
 
 De forma predeterminada [`CollectionView`](xref:Xamarin.Forms.CollectionView) , muestra los elementos en una lista vertical, tal como se muestra en las siguientes capturas de pantallas:
 
-[ ![Captura de pantalla de la colección CollectionView que contiene elementos de texto, en iOS y](populate-data-images/text.png "elementos de texto Android en una colección CollectionView") ] (populate-data-images/text-large.png#lightbox "Elementos de texto de una CollectionView")
+[![Captura de pantalla de CollectionView que contiene elementos de texto, en iOS y Android](populate-data-images/text.png "Elementos de texto de una CollectionView")](populate-data-images/text-large.png#lightbox "Elementos de texto de una CollectionView")
 
 Para obtener información sobre cómo cambiar el [`CollectionView`](xref:Xamarin.Forms.CollectionView) diseño, vea [especificar un diseño](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en `CollectionView`, vea definir la apariencia del [elemento](#define-item-appearance).
 
@@ -88,7 +88,7 @@ Para obtener información sobre cómo cambiar el [`CollectionView`](xref:Xamarin
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -139,7 +139,7 @@ La apariencia de cada elemento en [`CollectionView`](xref:Xamarin.Forms.Collecti
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -186,7 +186,7 @@ public class Monkey
 
 Las siguientes capturas de pantallas muestran el resultado de la plantilla de cada elemento de la lista:
 
-[ ![Captura de pantalla de CollectionView donde cada elemento tiene una plantilla, en iOS y](populate-data-images/datatemplate.png "elementos con plantilla de Android en una CollectionView") ] (populate-data-images/datatemplate-large.png#lightbox "Elementos con plantilla en una CollectionView")
+[![Captura de pantalla de CollectionView donde cada elemento tiene una plantilla, en iOS y Android](populate-data-images/datatemplate.png "Elementos con plantilla en una CollectionView")](populate-data-images/datatemplate-large.png#lightbox "Elementos con plantilla en una CollectionView")
 
 Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -216,7 +216,7 @@ La apariencia de cada elemento en [`CollectionView`](xref:Xamarin.Forms.Collecti
 </ContentPage>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -243,7 +243,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 La clase `MonkeyDataTemplateSelector` define las propiedades `AmericanMonkey` y `OtherMonkey` de tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que se establecen para diferentes plantillas de datos. La `OnSelectTemplate` invalidación devuelve `AmericanMonkey` la plantilla, que muestra el nombre y la ubicación de Monkey en verde azulado, cuando el nombre de Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", `OnSelectTemplate` la invalidación `OtherMonkey` devuelve la plantilla, que muestra el nombre y la ubicación de Monkey en Silver:
 
-[ ![Captura de pantalla de selección de plantilla de elemento de tiempo de ejecución de CollectionView, en iOS y Android](populate-data-images/datatemplateselector.png "selección de plantilla de elementos en tiempo de ejecución en una CollectionView") ] (populate-data-images/datatemplateselector-large.png#lightbox "Selección de plantilla de elementos en tiempo de ejecución en una CollectionView")
+[![Captura de pantalla de selección de plantilla de elemento de tiempo de ejecución de CollectionView, en iOS y Android](populate-data-images/datatemplateselector.png "Selección de plantilla de elementos en tiempo de ejecución en una CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Selección de plantilla de elementos en tiempo de ejecución en una CollectionView")
 
 Para obtener más información sobre los selectores de plantilla de datos, vea [Create a Xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
@@ -277,7 +277,7 @@ En el siguiente ejemplo de XAML [`CollectionView`](xref:Xamarin.Forms.Collection
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView

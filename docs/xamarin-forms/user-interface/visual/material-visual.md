@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
 ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71198496"
 ---
 # <a name="xamarinforms-material-visual"></a>Material visual de Xamarin. Forms

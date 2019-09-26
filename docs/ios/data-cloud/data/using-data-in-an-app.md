@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70766856"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso de datos en una aplicación iOS
@@ -31,7 +31,7 @@ El proyecto de iOS se muestra a continuación: el código que se muestra en esta
 El código de la interfaz de usuario nativa para ViewControllers en iOS está fuera del ámbito de este documento.
 Consulte la guía [iOS Working with tables and Cells (trabajar con tablas y celdas](~/ios/user-interface/controls/tables/index.md) ) para obtener más información sobre los controles de interfaz de usuario.
 
-## <a name="read"></a>Lectura
+## <a name="read"></a>Leer
 
 Hay un par de operaciones de lectura en el ejemplo:
 

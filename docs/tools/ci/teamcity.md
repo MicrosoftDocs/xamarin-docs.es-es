@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
 ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70293139"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usar el equipo City con Xamarin

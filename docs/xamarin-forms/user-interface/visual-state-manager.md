@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 228501172ede71204c64e1efe1673ce92be424ea
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68656056"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>El Administrador de estado Visual de Xamarin.Forms
@@ -253,7 +253,7 @@ Similar a este marcado es la base de la **VSM en la vista** página en el **[Vsm
 
 Tenga en cuenta que el segundo `Entry` también tiene un `DataTrigger` como parte de su `Trigger` colección. Esto hace que el `Entry` deshabilitarse hasta que no se escribe algo en la tercera `Entry`. Esta es la página de inicio que se ejecutan en iOS, Android y la plataforma Universal de Windows (UWP):
 
-[![VSM en la vista: VSM]deshabilitado(vsm-images/VsmOnViewDisabled.png "en la vista:") deshabilitado](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
+[![VSM en la vista: VSM]deshabilitado(vsm-images/VsmOnViewDisabled.png "en la vista: deshabilitado")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
 El estado visual actual es "Disabled" por lo que el fondo de la segunda `Entry` es de color fucsia en iOS y Android pantallas. La implementación de UWP de `Entry` no permite establecer el fondo de color cuando el `Entry` está deshabilitado. 
 

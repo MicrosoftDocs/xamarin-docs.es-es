@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68681074"
 ---
 # <a name="portable-class-libraries-pcl"></a>Bibliotecas de clases portables (PCL)
@@ -21,10 +21,10 @@ ms.locfileid: "68681074"
 
 Un componente clave de la creación de aplicaciones multiplataforma es poder compartir código entre varios proyectos específicos de la plataforma. Sin embargo, esto es complicado por el hecho de que las distintas plataformas usan a menudo un subconjunto diferente de la biblioteca de clases base (BCL) de .NET y, por tanto, se crean realmente en un perfil de biblioteca de .NET Core diferente. Esto significa que cada plataforma solo puede usar las bibliotecas de clases que están destinadas al mismo perfil, de modo que parezcan necesitar proyectos de biblioteca de clases independientes para cada plataforma.
 
-Hay tres enfoques principales para el uso compartido de código que solucionan este problema: **proyectos de .net Standard**, proyectos de **recursos**compartidos y **proyectos de biblioteca de clases portable (PCL)** .
+Hay tres enfoques principales para el uso compartido de código que solucionan este problema: **proyectos de .net Standard**, **proyectos de recursos compartidos**y **proyectos de biblioteca de clases portable (PCL)** .
 
 - **.Net Standard proyectos** son el método preferido para compartir código .net, lea más sobre los [proyectos de .net Standard y Xamarin](~/cross-platform/app-fundamentals/net-standard.md).
-- Los **proyectos de recursos** compartidos usan un único conjunto de archivos y ofrecen una manera rápida y sencilla de compartir código dentro de una solución y, por lo general, emplean directivas de compilación condicional para especificar rutas de acceso de código para varias plataformas que lo usarán (para más información vea el [artículo sobre proyectos](~/cross-platform/app-fundamentals/shared-projects.md)compartidos).
+- Los **proyectos de recursos compartidos** usan un único conjunto de archivos y ofrecen una manera rápida y sencilla de compartir código dentro de una solución y, por lo general, emplean directivas de compilación condicional para especificar rutas de acceso de código para varias plataformas que lo usarán (para más información vea el [artículo sobre proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md)).
 - Los proyectos **PCL** tienen como destino perfiles específicos que admiten un conjunto conocido de clases o características de BCL. Sin embargo, el lado inferior a PCL es que a menudo requieren un esfuerzo de arquitectura adicional para separar el código específico del perfil en sus propias bibliotecas.
 
 En esta página se explica cómo crear un proyecto de **PCL** que tenga como destino un perfil específico, al que pueden hacer referencia varios proyectos específicos de la plataforma.
@@ -86,7 +86,7 @@ En esta sección se explica cómo crear y usar una biblioteca de clases portable
 
 Agregar una biblioteca de clases portable a la solución es muy similar a agregar un proyecto de biblioteca normal.
 
-1. En el cuadro de diálogo **nuevo proyecto** , seleccione la opción biblioteca multiplataforma **> Biblioteca > portable Library** :
+1. En el cuadro de diálogo **nuevo proyecto** , seleccione la opción biblioteca **multiplataforma > Biblioteca > portable Library** :
 
     ![Crear un nuevo proyecto de PCL](pcl-images/image2.png)
 

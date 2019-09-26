@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
 ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68649355"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos y delegados en Xamarin. iOS
@@ -25,7 +25,7 @@ En este artículo, obtendrá información sobre todos estos temas, lo que le pro
 
 - **Eventos** : usar eventos .net con controles UIKit.
 - **Protocolos** : Obtenga información sobre qué son los protocolos y cómo se usan, y cómo crear un ejemplo que proporcione datos para una anotación de mapa.
-- Delegados: Obtenga información sobre los delegados de Objective-C extendiendo el ejemplo de mapa para controlar la interacción del usuario que incluye una anotación y, a continuación, aprender la diferencia entre los delegados fuertes y débiles y Cuándo utilizar cada uno de ellos.
+- **Delegados** : Obtenga información sobre los delegados de Objective-C extendiendo el ejemplo de mapa para controlar la interacción del usuario que incluye una anotación y, a continuación, aprender la diferencia entre los delegados fuertes y débiles y Cuándo utilizar cada uno de ellos.
 
 Para ilustrar los protocolos y los delegados, crearemos una aplicación de mapa simple que agrega una anotación a un mapa, como se muestra aquí:
 
@@ -68,7 +68,7 @@ Para más información sobre el patrón de acción de destino de iOS, consulte l
 
 Para obtener más información sobre cómo usar el diseñador de iOS con Xamarin. iOS, consulte la documentación de [información general del diseñador de iOS](~/ios/user-interface/designer/index.md) .
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Si desea interceptar eventos de UIControl, tiene una serie de opciones: desde el uso de las C# expresiones lambda y las funciones de delegado hasta el uso de las API de Objective-C de bajo nivel.
 
@@ -152,7 +152,7 @@ De esta manera, el `MKAnnotation` Protocolo se utiliza para proporcionar los dat
 
  [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Texto de ejemplo para la llamada cuando el usuario puntea en la anotación")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-Como se describe en la sección siguiente, los [protocolos](#protocols-deep-dive)profunden, Xamarin. iOS enlaza los protocolos a las clases abstractas. En el `MKAnnotation` caso del Protocolo, C# la clase enlazada se denomina `MKAnnotation` para imitar el nombre del protocolo y es una subclase `NSObject`de la clase base raíz para CocoaTouch. El protocolo requiere que se implemente un captador y un establecedor para la coordenada; sin embargo, un título y un subtítulo son opcionales. Por lo tanto, `MKAnnotation` en la clase `Coordinate` , la propiedad es *abstracta*, lo que requiere que se implemente `Subtitle` y las `Title` propiedades y se marcan como *virtuales*, convirtiéndolos en opcionales, como se muestra a continuación:
+Como se describe en la sección siguiente, los [protocolos Profunden](#protocols-deep-dive), Xamarin. iOS enlaza los protocolos a las clases abstractas. En el `MKAnnotation` caso del Protocolo, C# la clase enlazada se denomina `MKAnnotation` para imitar el nombre del protocolo y es una subclase `NSObject`de la clase base raíz para CocoaTouch. El protocolo requiere que se implemente un captador y un establecedor para la coordenada; sin embargo, un título y un subtítulo son opcionales. Por lo tanto, `MKAnnotation` en la clase `Coordinate` , la propiedad es *abstracta*, lo que requiere que se implemente `Subtitle` y las `Title` propiedades y se marcan como *virtuales*, convirtiéndolos en opcionales, como se muestra a continuación:
 
 ```csharp
 [Register ("MKAnnotation"), Model ]

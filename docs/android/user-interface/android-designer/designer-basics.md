@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70761409"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Aspectos básicos de Xamarin. Android Designer
@@ -222,7 +222,7 @@ Las propiedades *booleanas* se seleccionan normalmente como marcas de verificaci
 
 El Android Designer admite la edición directa de ciertas propiedades en el **superficie de diseño** (por lo que no tiene que buscar estas propiedades en la lista de propiedades). Entre las propiedades que se pueden editar directamente se incluyen texto, margen y tamaño.
 
-### <a name="text"></a>Text
+### <a name="text"></a>Texto
 
 Las propiedades de texto de algunos widgets (como `Button` y `TextView`) se pueden editar directamente en el **superficie de diseño**. Al hacer doble clic en un widget, se pone en modo de edición, como se muestra a continuación:
 
@@ -446,7 +446,7 @@ Algunos widgets tienen propiedades de varios valores que se agrupan juntos ( `Pa
 
 El Android Designer admite la edición directa de ciertas propiedades en el Superficie de diseño (por lo que no tiene que buscar estas propiedades en la lista de propiedades). Entre las propiedades que se pueden editar directamente se incluyen texto, margen y tamaño.
 
-### <a name="text"></a>Text
+### <a name="text"></a>Texto
 
 Las propiedades de texto de algunos widgets (como `Button` y `TextView`) se pueden editar directamente en el superficie de diseño. Al hacer doble clic en un widget, se pone en modo de edición, como se muestra a continuación:
 

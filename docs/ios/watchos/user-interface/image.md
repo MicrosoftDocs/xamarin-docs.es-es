@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769963"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Controles de imagen de watchos en Xamarin
@@ -21,7 +21,7 @@ watchOS proporciona un [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) cont
 ![](image-images/image-walkway.png "Imagen que muestra de Apple Watch") ![](image-images/image-animation.png "de Apple Watch con una animación simple")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
-Usar las imágenes del catálogo de activos para agregar imágenes a las aplicaciones de Watch Kit.
+Use imágenes del catálogo de recursos para agregar imágenes a las aplicaciones del kit de inspección.
 Solo **@2x** versiones son necesarias, ya que todos ver dispositivos tienen pantallas de Retina.
 
 ![](image-images/asset-universal-sml.png "Solo se necesitan 2x versiones, ya que todos los dispositivos de inspección tienen pantallas retinas")

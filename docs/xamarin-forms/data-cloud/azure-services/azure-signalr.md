@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
 ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739212"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure Signalr Service con Xamarin. Forms

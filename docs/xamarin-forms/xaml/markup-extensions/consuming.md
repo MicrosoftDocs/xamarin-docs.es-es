@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887901"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
@@ -143,7 +143,7 @@ El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment
 
 Este es el ejemplo en ejecución:
 
-[![Demostración de x: Static](consuming-images/staticdemo-small.png "x: Static demostración")](consuming-images/staticdemo-large.png#lightbox "demostración x: Static")
+[![demo de x:Static](consuming-images/staticdemo-small.png "demo de x:Static")](consuming-images/staticdemo-large.png#lightbox "Demo de x:Static")
 
 <a name="reference" />
 
@@ -185,9 +185,9 @@ El **x: Reference demostración** página muestra dos usos de `x:Reference` con 
 </ContentPage>
 ```
 
-Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecuta:
+Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Esta es la ejecución del programa:
 
-[![Demostración de x: Reference](consuming-images/referencedemo-small.png "x: Reference demostración")](consuming-images/referencedemo-large.png#lightbox "x: Reference demostración")
+[![demostración de x:Reference](consuming-images/referencedemo-small.png "demostración de x:Reference")](consuming-images/referencedemo-large.png#lightbox "Demostración de x:Reference")
 
 <a name="type" />
 
@@ -242,7 +242,7 @@ Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de 
 
 Aquí está la página principal de apertura en **las extensiones de marcado**:
 
-[![Main página](consuming-images/mainpage-small.png "Main página")](consuming-images/mainpage-large.png#lightbox "Main página")
+[![Página principal](consuming-images/mainpage-small.png "Página principal")](consuming-images/mainpage-large.png#lightbox "Página principal")
 
 Cada `CommandParameter` propiedad está establecida en un `x:Type` extensión de marcado que se hace referencia a una de las otras páginas. El `Command` propiedad está enlazada a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
 
@@ -325,7 +325,7 @@ public partial class TypeDemoPage : ContentPage
 
 El método que se ejecuta cuando un `Button` se presiona crea una nueva instancia del argumento, se establece su `VerticalOptions` propiedad y lo agrega a la `StackLayout`. Los tres `Button` elementos, a continuación, compartan la página con las vistas creadas dinámicamente:
 
-[![Demostración de x: Type](consuming-images/typedemo-small.png "x: Type demostración")](consuming-images/typedemo-large.png#lightbox "demostración x: Type")
+[![demostración de x:Type](consuming-images/typedemo-small.png "demostración de x:Type")](consuming-images/typedemo-large.png#lightbox "Demostración de x:Type")
 
 <a name="array" />
 
@@ -382,7 +382,7 @@ El **x: Array demostración** página muestra cómo usar `x:Array` para agregar 
 
 El `ViewCell` crea un simple `BoxView` para cada entrada de color:
 
-[![Demostración de x: Array](consuming-images/arraydemo-small.png "x: Array demostración")](consuming-images/arraydemo-large.png#lightbox "demostración x: Array")
+[![demostración de x:Array](consuming-images/arraydemo-small.png "demostración de x:Array")](consuming-images/arraydemo-large.png#lightbox "Demostración de x:Array")
 
 Hay varias maneras de especificar la persona `Color` elementos de esta matriz. Puede usar un `x:Static` extensión de marcado:
 
@@ -453,9 +453,9 @@ El **x: Null demostración** página ilustra un escenario cuando `x:Null` podrí
 
 A continuación, verá que para uno de los `Label` elementos, desea que todos los valores de propiedades en la parte implícita `Style` , excepto para el `FontFamily`, que desee que sea el valor predeterminado. Puede definir otra `Style` para ese propósito, pero un enfoque más sencillo consiste simplemente en establecer el `FontFamily` propiedad de la instancia concreta `Label` a `x:Null`, tal y como se muestra en el centro de `Label`.
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-[![Demostración de x: Null](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png#lightbox "demostración x: Null")
+[![demo de x:null](consuming-images/nulldemo-small.png "demo de x:null")](consuming-images/nulldemo-large.png#lightbox "Demo de x:Null")
 
 Tenga en cuenta que cuatro de los `Label` elementos tienen una fuente de serif, pero el centro `Label` tiene la fuente sans serif de forma predeterminada.
 
@@ -497,9 +497,9 @@ El **OnPlatform demostración** página muestra cómo usar el `OnPlatform` exten
 
 En este ejemplo, las tres `OnPlatform` expresiones usan la versión abreviada de la `OnPlatformExtension` nombre de clase. Los tres `OnPlatform` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en iOS, Android y UWP. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las plataformas que no están especificadas, al tiempo que elimina la `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-[![Demostración de OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform demostración")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform demostración")
+[![Demostración] en la plataforma (consuming-images/onplatformdemo-small.png "Demostración") en la plataforma](consuming-images/onplatformdemo-large.png#lightbox "Demostración en la plataforma")
 
 <a name="onidiom" />
 
@@ -535,9 +535,9 @@ El **OnIdiom demostración** página muestra cómo usar el `OnIdiom` extensión 
 
 En este ejemplo, las tres `OnIdiom` expresiones usan la versión abreviada de la `OnIdiomExtension` nombre de clase. Los tres `OnIdiom` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en el teléfono, tableta y escritorio expresiones. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las expresiones que no se especifican, mientras se elimina el `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-[![Demostración de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom demostración")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demostración")
+[![Demo de idioma](consuming-images/onidiomdemo-small.png "Demo de idioma")](consuming-images/onidiomdemo-large.png#lightbox "Demo de idioma")
 
 ## <a name="datatemplate-markup-extension"></a>Extensión de marcado DataTemplate
 
@@ -585,7 +585,7 @@ En este ejemplo, la versión abreviada del nombre `FontImageExtension` de clase 
 
 Esta es la ejecución del programa:
 
-[ ![Captura de pantalla de la FontImage demo de la extensión de marcado FontImage](consuming-images/fontimagedemo.png "") ] (consuming-images/fontimagedemo-large.png#lightbox "Demostración de FontImage")
+[![Captura de pantalla de la extensión de marcado FontImage](consuming-images/fontimagedemo.png "Demostración de FontImage")](consuming-images/fontimagedemo-large.png#lightbox "Demostración de FontImage")
 
 Para obtener información sobre cómo mostrar los iconos de fuente especificando los datos del `FontImageSource` icono de fuente de un objeto, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 

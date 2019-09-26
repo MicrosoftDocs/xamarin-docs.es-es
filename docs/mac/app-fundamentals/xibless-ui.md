@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770159"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. Xib: diseño de la interfaz de usuario menos en Xamarin. Mac

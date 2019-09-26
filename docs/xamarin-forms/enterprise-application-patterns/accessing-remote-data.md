@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770803"
 ---
 # <a name="accessing-remote-data"></a>Acceso a datos remotos
@@ -53,7 +53,7 @@ La `CatalogService` clase se utiliza para administrar el proceso de recuperació
 
 En la figura 10-1 se muestra la interacción de las clases que leen los datos del catálogo del microservicio `CatalogView`de catálogo para que los muestre el.
 
-[Recuperación de datos del microservicio de catálogo ![(accessing-remote-data-images/catalogdata.png " ")]] (accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperación de datos del microservicio de catálogo")
+[![](accessing-remote-data-images/catalogdata.png "Recuperación de datos del microservicio de catálogo")](accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperación de datos del microservicio de catálogo")
 
 **Figura 10-1**: Recuperación de datos del microservicio de catálogo
 
@@ -68,7 +68,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Este método llama al `GetCatalogAsync` método de la `CatalogService` instancia que se ha insertado en `CatalogViewModel` el Autofac. El siguiente ejemplo de código muestra la `GetCatalogAsync` método:
+Este método llama al `GetCatalogAsync` método de la `CatalogService` instancia que se ha insertado en `CatalogViewModel` el Autofac. El siguiente ejemplo de código muestra el método `GetCatalogAsync`:
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -158,7 +158,7 @@ La `BasketService` clase se utiliza para administrar el proceso de recuperación
 
 En la figura 10-2 se muestra la interacción de las clases que envían los datos `BasketView`de la cesta mostrados por el microservicio de la cesta.
 
-[Envío de datos al microservicio de la cesta ![(accessing-remote-data-images/basketdata.png " ")]] (accessing-remote-data-images/basketdata-large.png#lightbox "Envío de datos al microservicio de la cesta")
+[![](accessing-remote-data-images/basketdata.png "Envío de datos al microservicio de la cesta")](accessing-remote-data-images/basketdata-large.png#lightbox "Envío de datos al microservicio de la cesta")
 
 **Figura 10-2**: Envío de datos al microservicio de la cesta
 

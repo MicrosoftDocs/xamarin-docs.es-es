@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
 ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770326"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes en Xamarin. Mac

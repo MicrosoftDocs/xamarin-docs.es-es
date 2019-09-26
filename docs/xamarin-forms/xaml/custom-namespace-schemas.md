@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
 ms.openlocfilehash: d76b5eefcaf0edeb12f128c60e9b8fffff8bcf3b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68644705"
 ---
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de espacios de nombres personalizados XAML en Xamarin. Forms

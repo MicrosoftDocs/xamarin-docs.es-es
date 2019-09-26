@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
 ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69529276"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Crear una aplicación de Xamarin. Forms
@@ -29,7 +29,7 @@ El proceso de implementación de los procesos en tiempo de ejecución en una apl
 
 Las siguientes capturas de pantallas muestran páginas con temas, con la aplicación de iOS que usa un tema claro y la aplicación Android con un tema oscuro:
 
-[![Captura de pantalla de la Página principal de una aplicación de la que se ha importado, en iOS y Android] (theming-images/main-page-both-themes.png "Página principal de la aplicación") ] con la que se han importado (theming-images/main-page-both-themes-large.png#lightbox "Página principal de la aplicación") con la que se han importado Captura de [ ![pantalla de la página de detalles de una aplicación de la que se ha importado, en la página de detalles de iOS y Android](theming-images/detail-page-both-themes.png "de")la](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalles") de la aplicación de la aplicación con el mismo 
+[![Captura de pantalla de la Página principal de una aplicación de la que se ha importado, en iOS y Android] (theming-images/main-page-both-themes.png "Página principal de la aplicación") ](theming-images/main-page-both-themes-large.png#lightbox "Página principal de la aplicación con la que se han importado") con la que se han importado Captura de [ ![pantalla de la página de detalles de una aplicación de la que se ha importado, en la](theming-images/detail-page-both-themes.png "Página de detalles") de iOS y Android de la aplicación.](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalles de la aplicación con el mismo") 
 
 
 ## <a name="define-themes"></a>Definir temas

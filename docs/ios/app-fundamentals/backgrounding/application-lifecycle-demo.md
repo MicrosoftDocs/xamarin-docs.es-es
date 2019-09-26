@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2018
 ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70289436"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demostración del ciclo de vida de la aplicación para Xamarin. iOS

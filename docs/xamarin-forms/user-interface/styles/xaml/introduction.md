@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228171"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Introducción a los estilos de Xamarin. Forms
@@ -107,8 +107,8 @@ Cada [`Style`](xref:Xamarin.Forms.Style) instancia contiene una colección de un
 
 Cada [`Style`](xref:Xamarin.Forms.Style) instancia puede ser *explícita*o *implícita*:
 
-- Una instancia *explícita* [`Style`](xref:Xamarin.Forms.Style) se define especificando un `x:Key` [`TargetType`](xref:Xamarin.Forms.Style.TargetType) valor de y, y estableciendo la propiedad del [`Style`](xref:Xamarin.Forms.NavigableElement.Style) elemento de destino en la `x:Key` referencia. Para obtener más información sobre los estilos explícitos, vea [estilos explícitos](~/xamarin-forms/user-interface/styles/explicit.md).
-- Una instancia *implícita* [`Style`](xref:Xamarin.Forms.Style) se define especificando solo un. [`TargetType`](xref:Xamarin.Forms.Style.TargetType) La `Style` instancia se aplicará automáticamente a todos los elementos de ese tipo. Tenga en cuenta que las subclases de `TargetType` no tienen el `Style` aplicado automáticamente. Para obtener más información sobre los estilos implícitos, vea [estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md).
+- Una instancia *explícita* [`Style`](xref:Xamarin.Forms.Style) se define especificando un `x:Key` [`TargetType`](xref:Xamarin.Forms.Style.TargetType) valor de y, y estableciendo la propiedad del [`Style`](xref:Xamarin.Forms.NavigableElement.Style) elemento de destino en la `x:Key` referencia. Para obtener más información sobre los estilos *explícitos* , vea [estilos explícitos](~/xamarin-forms/user-interface/styles/explicit.md).
+- Una instancia *implícita* [`Style`](xref:Xamarin.Forms.Style) se define especificando solo un. [`TargetType`](xref:Xamarin.Forms.Style.TargetType) La `Style` instancia se aplicará automáticamente a todos los elementos de ese tipo. Tenga en cuenta que las subclases de `TargetType` no tienen el `Style` aplicado automáticamente. Para obtener más información sobre los estilos *implícitos* , vea [estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md).
 
 Al crear una [`Style`](xref:Xamarin.Forms.Style), la [`TargetType`](xref:Xamarin.Forms.Style.TargetType) propiedad siempre es obligatoria. En el ejemplo de código siguiente se muestra un estilo explícito `x:Key`(observe el) creado en XAML:
 
@@ -128,7 +128,7 @@ Para aplicar `Style`, el objeto de destino debe ser un [`VisualElement`](xref:Xa
 
 Estilos de más abajo en la jerarquía de vistas tienen prioridad sobre las define mayor seguridad. Por ejemplo, si se establece un [ `Style` ](xref:Xamarin.Forms.Style) que establece [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) a `Red` en la aplicación de nivel serán reemplazado por un estilo de nivel de página establece `Label.TextColor` a `Green`. De forma similar, un estilo de nivel de página se reemplazará por un estilo de nivel de control. Además, si `Label.TextColor` se establece directamente en una propiedad de control, tiene prioridad sobre cualquier estilo.
 
-En los artículos de esta sección se muestra y se explica cómo crear y aplicar estilos explícitos e *implícitos* , cómo crear estilos globales, la herencia de estilo, cómo responder a los cambios de estilo en tiempo de ejecución y cómo usar los estilos integrados incluidos en Xamarin. Forms.
+En los artículos de esta sección se muestra y se explica cómo crear y aplicar estilos *explícitos* e *implícitos* , cómo crear estilos globales, la herencia de estilo, cómo responder a los cambios de estilo en tiempo de ejecución y cómo usar los estilos integrados incluidos en Xamarin. Forms.
 
 > [!NOTE]
 > **¿Qué es StyleId?**

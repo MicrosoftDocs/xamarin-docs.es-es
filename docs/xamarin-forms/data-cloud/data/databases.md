@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739178"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos locales de Xamarin.Forms
@@ -26,7 +26,7 @@ Las aplicaciones de Xamarin.Forms pueden usar el paquete de [NuGet SQLite.NET PC
 
 La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) acompañante es una sencilla aplicación de lista de tareas. Las siguientes capturas de pantalla muestran cómo el ejemplo aparece en cada plataforma:
 
-[![Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de pantalla de primera página de lista de tareas pendientes")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots") [![ Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de pantalla de primera página de lista de tareas pendientes")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots")
+[![Capturas de ejemplo de base de datos de Xamarin. Forms](databases-images/todo-list-sml.png "Capturas de pantallas de la primera página de ToDoList") ](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList") [ ![Ejemplo de base de datos de Xamarin. Forms capturas]de pantallas de(databases-images/todo-list-sml.png "ToDoList primera página") ](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList")
 
 <a name="Using_SQLite_with_PCL" />
 

@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658037"
 ---
 # <a name="xamarinforms-searchbar"></a>Barra de Xamarin. Forms
@@ -20,7 +20,7 @@ ms.locfileid: "69658037"
 
 Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) es un control de entrada de usuario que se usa para iniciar una búsqueda. El `SearchBar` control admite el texto de marcador de posición, la entrada de consulta, la ejecución de búsqueda y la cancelación. En la captura de pantalla `SearchBar` siguiente se muestra una consulta con `ListView`los resultados mostrados en un:
 
-[ ![Captura de pantalla de barra en iOS y Android](searchbar-images/device-searchbars-cropped.png "barra en iOS y Android") ] (searchbar-images/device-searchbars.png#lightbox "Barra en iOS y Android")
+[![Captura de pantalla de barra en iOS y Android](searchbar-images/device-searchbars-cropped.png "Barra en iOS y Android")](searchbar-images/device-searchbars.png#lightbox "Barra en iOS y Android")
 
 La `SearchBar` clase define las siguientes propiedades:
 
@@ -82,7 +82,7 @@ SearchBar searchBar = new SearchBar
 
 En la captura de pantalla siguiente `SearchBar` se muestra el control resultante:
 
-[ ![Captura de pantalla de barra personalizado en iOS y Android](searchbar-images/device-searchbars-styled-cropped.png "personalizado barra en iOS y Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Barra personalizado en iOS y Android")
+[![Captura de pantalla de barra personalizado en iOS y Android](searchbar-images/device-searchbars-styled-cropped.png "Barra personalizado en iOS y Android")](searchbar-images/device-searchbars-styled.png#lightbox "Barra personalizado en iOS y Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Realizar una búsqueda con controladores de eventos
 

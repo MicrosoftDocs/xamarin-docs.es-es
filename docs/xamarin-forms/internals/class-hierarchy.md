@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2019
 ms.openlocfilehash: f08146d4439ff1fc22edea71ab1cbb337f64c037
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68984397"
 ---
 # <a name="xamarinforms-controls-class-hierarchy"></a>Jerarquía de clases de controles de Xamarin. Forms
@@ -22,7 +22,7 @@ Estos tipos se pueden dividir en páginas, diseños, vistas y celdas. Una págin
 
 En el diagrama de clases siguiente se muestra la jerarquía de tipos que se suelen usar para compilar una interfaz de usuario en Xamarin. Forms:
 
-[ ![Control de Xamarin. Forms de clase diagrama de clases]de(class-hierarchy-images/class-diagram.png "Xamarin. Forms") ] (class-hierarchy-images/class-diagram-large.png#lightbox "Diagrama de clase de controles de Xamarin. Forms")
+[![Diagrama de clase de controles de Xamarin. Forms](class-hierarchy-images/class-diagram.png "Diagrama de clase de controles de Xamarin. Forms")](class-hierarchy-images/class-diagram-large.png#lightbox "Diagrama de clase de controles de Xamarin. Forms")
 
 > [!NOTE]
 > [Aquí](class-hierarchy-images/class-diagram-high-resolution.png)se puede descargar una versión de alta resolución del diagrama de clases. Sin embargo, tenga en cuenta que el diagrama no muestra `CarouselView` actualmente `CollectionView` los tipos y. Estos se agregarán una vez que los controles no estén en versión preliminar. Además, el diagrama solo muestra un tipo de Shell.

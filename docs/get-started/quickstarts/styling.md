@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70756757"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Aplicar estilo a una aplicación de Xamarin. Forms multiplataforma
@@ -26,8 +26,8 @@ En esta guía de inicio rápido, obtendrá información sobre cómo:
 
 En la guía de inicio rápido se explica cómo aplicar un estilo a una aplicación de Xamarin. Forms multiplataforma con estilos XAML. A continuación se muestra la aplicación final:
 
-[ ![(styling-images/screenshots1-sml.png " ")]Página notas] (styling-images/screenshots1.png#lightbox "Página notas") Nota: Página de(styling-images/screenshots2.png#lightbox "entrada de nota") de página [ ![(styling-images/screenshots2-sml.png " ")]] 
-
+[![](styling-images/screenshots1-sml.png "")](styling-images/screenshots1.png#lightbox "Página notas")
+[![](styling-images/screenshots2-sml.png "Página de entrada de nota") de página de notas](styling-images/screenshots2.png#lightbox "Página de entrada de nota")
 
 ### <a name="prerequisites"></a>Requisitos previos
 

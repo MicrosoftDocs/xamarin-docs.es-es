@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739154"
 ---
 # <a name="xamarinforms-checkbox"></a>CheckBox de Xamarin. Forms
@@ -108,9 +108,9 @@ En este ejemplo, [`Label`](xref:Xamarin.Forms.Label) utiliza una expresión de e
 
 En las siguientes capturas de pantalla, la captura [`Label`](xref:Xamarin.Forms.Label) de pantalla de `CheckBox` iOS muestra el formato cuando está vacío, mientras `Label` que en la `CheckBox` captura de pantalla de Android se muestra el formato cuando se comprueba el:
 
-[ ![Captura de pantalla de una casilla enlazada a datos, en iOS y en la](checkbox-images/checkbox-databinding.png "casilla enlazado a datos") de Android] (checkbox-images/checkbox-databinding-large.png#lightbox "Casilla enlazado a datos")
+[![Captura de pantalla de una casilla enlazada a datos, en iOS y Android](checkbox-images/checkbox-databinding.png "Casilla enlazado a datos")](checkbox-images/checkbox-databinding-large.png#lightbox "Casilla enlazado a datos")
 
-Para obtener más información sobre los desencadenadores, consulte los desencadenadores de [Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Para obtener más información sobre los desencadenadores, consulte los [desencadenadores de Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-checkbox"></a>Deshabilitar una casilla
 

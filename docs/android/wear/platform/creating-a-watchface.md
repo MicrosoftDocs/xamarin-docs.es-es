@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
 ms.openlocfilehash: a6dfab949eb19708f69d838a7c792f2e7bbd76b3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70758517"
 ---
 # <a name="creating-a-watch-face"></a>Creación de una esfera del reloj

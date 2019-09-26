@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888650"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Desplazamientos de CollectionView de Xamarin. Forms
@@ -30,7 +30,7 @@ Además, [`CollectionView`](xref:Xamarin.Forms.CollectionView) define un evento 
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Esta característica se conoce como ajuste, ya que los elementos se ajustan a la posición cuando se detiene el desplazamiento. Para obtener más información, vea [puntos de acoplamiento](#snap-points).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos](populate-data.md#load-data-incrementally)de forma incremental.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
@@ -42,7 +42,7 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede contr
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -115,7 +115,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Este código de ejemplo produce el desplazamiento mínimo necesario para desplazar el elemento a la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android CollectionView,](scrolling-images/scrolltoposition-makevisible.png "lista vertical con elemento") ] desplazado (scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista de CollectionView vertical con elemento") desplazado
+[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-makevisible.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 > [!NOTE]
 > El [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) miembro se utiliza de forma predeterminada si no `position` se especifica el argumento al llamar al `ScrollTo` método.
@@ -130,7 +130,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de ejemplo hace que el elemento se desplace hasta el inicio de la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android CollectionView,](scrolling-images/scrolltoposition-start.png "lista vertical con elemento") ] desplazado (scrolling-images/scrolltoposition-start-large.png#lightbox "Lista de CollectionView vertical con elemento") desplazado
+[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-start.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ### <a name="center"></a>Centrar
 
@@ -142,7 +142,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de ejemplo hace que el elemento se desplace hasta el centro de la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android CollectionView,](scrolling-images/scrolltoposition-center.png "lista vertical con elemento") ] desplazado (scrolling-images/scrolltoposition-center-large.png#lightbox "Lista de CollectionView vertical con elemento") desplazado
+[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-center.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ### <a name="end"></a>Fin
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Este código de ejemplo hace que el elemento se desplace hasta el final de la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android CollectionView,](scrolling-images/scrolltoposition-end.png "lista vertical con elemento") ] desplazado (scrolling-images/scrolltoposition-end-large.png#lightbox "Lista de CollectionView vertical con elemento") desplazado
+[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-end.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ## <a name="disable-scroll-animation"></a>Deshabilitar animación de desplazamiento
 
@@ -180,7 +180,7 @@ El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsI
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -211,7 +211,7 @@ La [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeración define los
 
 De forma predeterminada, [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) la propiedad se establece `SnapPointsType.None`en, lo que garantiza que el desplazamiento no ajusta los elementos, como se muestra en las siguientes capturas de pantallas:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical sin puntos de acoplamiento, en la lista vertical de CollectionView de iOS y Android](scrolling-images/snappoints-none.png "sin puntos de acoplamiento") ] (scrolling-images/snappoints-none-large.png#lightbox "Lista vertical de CollectionView sin puntos de acoplamiento")
+[![Captura de pantalla de una lista de CollectionView vertical sin puntos de acoplamiento, en iOS y Android](scrolling-images/snappoints-none.png "Lista vertical de CollectionView sin puntos de acoplamiento")](scrolling-images/snappoints-none-large.png#lightbox "Lista vertical de CollectionView sin puntos de acoplamiento")
 
 ### <a name="snap-points-alignment"></a>Alineación de puntos de acoplamiento
 
@@ -245,7 +245,7 @@ De forma predeterminada, [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -264,7 +264,7 @@ CollectionView collectionView = new CollectionView
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento superior se alinea con la parte superior de la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con puntos de inicio, en iOS y Android,](scrolling-images/snappoints-start.png "lista vertical de CollectionView con puntos de ajuste iniciales") ] (scrolling-images/snappoints-start-large.png#lightbox "Lista de collectionviews verticales con puntos de acoplamiento iniciales")
+[![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento de inicio, en iOS y Android](scrolling-images/snappoints-start.png "Lista de collectionviews verticales con puntos de acoplamiento iniciales")](scrolling-images/snappoints-start-large.png#lightbox "Lista de CollectionViews verticales con puntos de acoplamiento iniciales")
 
 #### <a name="center"></a>Centrar
 
@@ -289,7 +289,7 @@ El `SnapPointsAlignment.Center` miembro indica que los puntos de ajuste están a
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -308,7 +308,7 @@ CollectionView collectionView = new CollectionView
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento superior se alineará en el centro de la parte superior de la vista:
 
-[ ![Captura de pantalla de una lista vertical de CollectionView con puntos de acoplamiento, en la lista vertical de la CollectionView de iOS y Android](scrolling-images/snappoints-center.png "con puntos de acoplamiento") ] (scrolling-images/snappoints-center-large.png#lightbox "Lista vertical de CollectionView con puntos de acoplamiento")
+[![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento, en iOS y Android](scrolling-images/snappoints-center.png "Lista vertical de CollectionView con puntos de acoplamiento")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical de CollectionView con puntos de acoplamiento")
 
 #### <a name="end"></a>Fin
 
@@ -333,7 +333,7 @@ El `SnapPointsAlignment.End` miembro indica que los puntos de ajuste están alin
 </CollectionView>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -352,7 +352,7 @@ CollectionView collectionView = new CollectionView
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento inferior se alinea con la parte inferior de la vista:
 
-[ ![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento finales, en iOS y Android,](scrolling-images/snappoints-end.png "lista vertical de CollectionView con puntos de ajuste finales") ] (scrolling-images/snappoints-end-large.png#lightbox "Lista vertical de CollectionView con puntos de ajuste finales")
+[![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento finales, en iOS y Android](scrolling-images/snappoints-end.png "Lista vertical de CollectionView con puntos de ajuste finales")](scrolling-images/snappoints-end-large.png#lightbox "Lista vertical de CollectionView con puntos de ajuste finales")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

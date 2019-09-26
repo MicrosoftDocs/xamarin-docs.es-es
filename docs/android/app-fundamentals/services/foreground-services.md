@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: 6f3427641ba4ace3b640fcc970fd33f55087a9c8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68644113"
 ---
 # <a name="foreground-services"></a>Servicios de primer plano
@@ -86,7 +86,7 @@ Esta captura de pantalla muestra la notificación expandida en la bandeja de not
 
 ![Imagen que muestra la notificación expandida](foreground-services-images/foreground-services-02.png "Imagen que muestra la notificación expandida.")
 
-Puede encontrar más información sobre las notificaciones en la sección [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md) de la guía de notificaciones de [Android](~/android/app-fundamentals/notifications/index.md) .
+Puede encontrar más información sobre las notificaciones en la sección [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md) de la guía de [notificaciones de Android](~/android/app-fundamentals/notifications/index.md) .
 
 ## <a name="unregistering-as-a-foreground-service"></a>Anular el registro como servicio en primer plano
 

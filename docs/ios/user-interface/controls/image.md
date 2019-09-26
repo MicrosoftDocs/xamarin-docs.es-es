@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
 ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70768988"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Mostrar imágenes con Xamarin. iOS

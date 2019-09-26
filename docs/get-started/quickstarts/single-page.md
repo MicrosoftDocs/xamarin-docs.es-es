@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655005"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Crear una aplicación de Xamarin. Forms de una sola página
@@ -177,7 +177,7 @@ Para obtener más información acerca de estos requisitos previos, consulte [ins
 
     ![](single-page-images/vs/ios-start.png "Barra de herramientas de iOS de Visual Studio")
 
-    [Notas en el simulador de iOS ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
+    [![](single-page-images/vs/notes-ios.png "Notas en el simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -327,7 +327,7 @@ Para obtener más información acerca de estos requisitos previos, consulte [ins
 
     ![](single-page-images/vs/ios-start.png "Barra de herramientas de iOS de Visual Studio")
 
-    [Notas en el simulador de iOS ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
+    [![](single-page-images/vs/notes-ios.png "Notas en el simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -468,7 +468,7 @@ Para obtener más información acerca de estos requisitos previos, consulte [ins
 
       ![](single-page-images/vsmac/start.png "Barra de herramientas de Visual Studio para Mac")
 
-      [Notas en el simulador de iOS ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
+      [![](single-page-images/vsmac/notes-ios.png "Notas en el simulador de iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 

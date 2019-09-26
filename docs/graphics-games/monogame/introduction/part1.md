@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68978446"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creación de un juego multiplataforma
@@ -30,9 +30,9 @@ Cuando haya finalizado, el proyecto tiene la estructura adecuada para realizar l
 >
 > Debe descargar e instalar manualmente la versión más reciente desde http://www.monogame.net/downloads/ y después ejecutar el instalador. Es posible que tenga que reiniciar Visual Studio para que aparezcan las plantillas.
 >
-> La sección **desarrollo de juegos** debería aparecer en el **Administrador**de complementos.
+> La sección **desarrollo de juegos** debería aparecer en el **Administrador de complementos**.
 
-Para habilitar el complemento de monogame para Visual Studio para Mac, seleccione **Visual Studio para Mac** > **Administrador de complementos.** ... Para Visual Studio 2019 en Windows, seleccione **herramientas** > **Administrador de complementos..** .. Seleccione la pestaña **Galería** , expanda la categoría **desarrollo de juegos** y seleccione complemento monogame y, a continuación, haga clic en **instalar...** :
+Para habilitar el complemento de monogame para Visual Studio para Mac, seleccione **Visual Studio para Mac** > **Administrador de complementos.** ... Para Visual Studio 2019 en Windows, seleccione **herramientas** > **Administrador de complementos..** .. Seleccione la pestaña **Galería** , expanda la categoría **desarrollo de juegos** y seleccione **complemento monogame**y, a continuación, haga clic en **instalar...** :
 
 ![Galería de Visual Studio para Mac Extensions seleccionar monogame](part1-images/image2.png)
 
