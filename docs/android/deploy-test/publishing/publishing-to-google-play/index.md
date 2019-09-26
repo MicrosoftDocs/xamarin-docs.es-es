@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755962"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250022"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -109,6 +109,8 @@ Se trata de una dirección URL de un vídeo de YouTube que muestra la aplicació
 
 ### <a name="publishing-to-google-play"></a>Publicación en Google Play
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 introduce un flujo de trabajo integrado para publicar aplicaciones en Google Play desde Visual Studio. Si utiliza una versión de Xamarin Android anterior a la 7.0, debe cargar manualmente el APK mediante Google Play Developer Console. Además, debe tener al menos un APK que ya esté cargado para poder utilizar el flujo de trabajo integrado. Si todavía no ha cargado su primer APK, debe cargarlo manualmente. Para obtener más información, consulte [Manually Uploading the APK (Carga manual del APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
@@ -122,7 +124,7 @@ En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/sig
 5. Firme la aplicación con el certificado.
 6. Publique la aplicación firmada en Google Play.
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)**, haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)**. Seleccione **Google Play** y haga clic en **Siguiente**:
+En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Seleccione **Google Play** y haga clic en **Siguiente**:
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -228,7 +230,7 @@ Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play
 - **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
 - **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
 
-Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)**, asegúrese de especificar un valor porcentual:
+Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)** , asegúrese de especificar un valor porcentual:
 
 [![Selección de Alfa, Beta, Lanzamiento o Producción](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
@@ -257,7 +259,7 @@ Si se produce este error, cargue un APK manualmente, por ejemplo, una compilaci�
 
 [![Ya se actualizó un APK con el código de versión (1)](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
-Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)**.
+Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -269,7 +271,7 @@ Si se aceptan el id. de cliente y el secreto de cliente, se mostrará el mensaje
 
 [![Mensaje de registro correcto](images/xs/11-registration-successful-sml.png)](images/xs/11-registration-successful.png#lightbox)
 
-En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)**, seleccione una cuenta de Google y una pista para cargar la aplicación:
+En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)** , seleccione una cuenta de Google y una pista para cargar la aplicación:
 
 [![Cuadro de diálogo para elegir una cuenta de Google](images/xs/12-choose-google-account-sml.png)](images/xs/12-choose-google-account.png#lightbox)
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5113255d8776987783ad5e8f023e7b2b30924ea4
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756117"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250005"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -19,19 +19,19 @@ Después de haber codificado y probado una aplicación, es necesario preparar un
 
 Para compilar la aplicación para lanzamiento, siga estos pasos:
 
-- **[Especificar el icono de la aplicación](#Specify_the_Application_Icon)**: cada aplicación de Xamarin.Android debe tener un icono de aplicación especificado. Aunque técnicamente no es necesario, algunos mercados lo requieren, como Google Play.
+- **[Especificar el icono de la aplicación](#Specify_the_Application_Icon)** : cada aplicación de Xamarin.Android debe tener un icono de aplicación especificado. Aunque técnicamente no es necesario, algunos mercados lo requieren, como Google Play.
 
-- **[Versión de la aplicación](#Versioning)**: este paso consiste en inicializar o actualizar la información de control de versiones. Esto es importante para las actualizaciones futuras de la aplicación y para asegurarse de que los usuarios sean conscientes de qué versión de la aplicación han instalado.
+- **[Versión de la aplicación](#Versioning)** : este paso consiste en inicializar o actualizar la información de control de versiones. Esto es importante para las actualizaciones futuras de la aplicación y para asegurarse de que los usuarios sean conscientes de qué versión de la aplicación han instalado.
 
-- **[Reducir el APK](#shrink_apk)**: se puede reducir considerablemente el tamaño del APK final si se usa el enlazador de Xamarin.Android en el código administrado y ProGuard en el código de bytes de Java.
+- **[Reducir el APK](#shrink_apk)** : se puede reducir considerablemente el tamaño del APK final si se usa el enlazador de Xamarin.Android en el código administrado y ProGuard en el código de bytes de Java.
 
-- **[Proteger la aplicación](#protect_app)**: impida que los usuarios o los atacantes depuren, alteren o usen técnicas de ingeniería inversa en la aplicación. Para ello, deshabilite la depuración, ofusque el código administrado, agregue protección contra la depuración y la alteración y use la compilación nativa.
+- **[Proteger la aplicación](#protect_app)** : impida que los usuarios o los atacantes depuren, alteren o usen técnicas de ingeniería inversa en la aplicación. Para ello, deshabilite la depuración, ofusque el código administrado, agregue protección contra la depuración y la alteración y use la compilación nativa.
 
-- **[Establecer las propiedades de empaquetado](#Set_Packaging_Properties)**: las propiedades de empaquetado controlan la creación del paquete de aplicaciones Android (APK). En este paso se optimiza el APK, se protegen sus activos y se modulariza el empaquetado según sea necesario.
+- **[Establecer las propiedades de empaquetado](#Set_Packaging_Properties)** : las propiedades de empaquetado controlan la creación del paquete de aplicaciones Android (APK). En este paso se optimiza el APK, se protegen sus activos y se modulariza el empaquetado según sea necesario.
 
-- **[Compilar](#Compile)**: en este paso se compila el código y los recursos para comprobar que se compila en el modo de lanzamiento.
+- **[Compilar](#Compile)** : en este paso se compila el código y los recursos para comprobar que se compila en el modo de lanzamiento.
 
-- **[Archivar para la publicación](#archive)**: en este paso se compila la aplicación y se coloca en un archivo para la firma y la publicación.
+- **[Archivar para la publicación](#archive)** : en este paso se compila la aplicación y se coloca en un archivo para la firma y la publicación.
 
 Cada uno de estos pasos se describe con más detalle a continuación.
 
@@ -40,6 +40,8 @@ Cada uno de estos pasos se describe con más detalle a continuación.
 ## <a name="specify-the-application-icon"></a>Especificar el icono de la aplicación
 
 Se recomienda encarecidamente que cada aplicación de Xamarin.Android especifique un icono de aplicación. Algunos mercados de aplicaciones no permitirán que una aplicación de Android se publique sin uno. La propiedad `Icon` del atributo `Application` se usa para especificar el icono de la aplicación para un proyecto de Xamarin.Android.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -212,7 +214,7 @@ Una vez que lo haya configurado, Dotfuscator CE protegerá automáticamente toda
 
 Cuando esta opción está habilitada, los ensamblados se agrupan en una biblioteca compartida nativa. Esta opción garantiza la seguridad del código y protege los ensamblados administrados incrustándolos en archivos binarios nativos.
 
-Esta opción requiere una licencia empresarial y solo está disponible cuando está deshabilitada la opción **Use Fast Deployment (Utilizar la implementación rápida)**. La opción **Bundle assemblies into native code (Agrupar los ensamblados en el código nativo)** está deshabilitada de forma predeterminada.
+Esta opción requiere una licencia empresarial y solo está disponible cuando está deshabilitada la opción **Use Fast Deployment (Utilizar la implementación rápida)** . La opción **Bundle assemblies into native code (Agrupar los ensamblados en el código nativo)** está deshabilitada de forma predeterminada.
 
 Tenga en cuenta que la opción **Bundle into Native Code (Agrupar en código nativo)** *no* implica que los ensamblados se compilen en código nativo. No es posible utilizar [**Compilación AOT**](#aot) para compilar ensamblados en código nativo. Actualmente solo es una función experimental y no está destinada a la tareas de producción.
 
@@ -289,7 +291,7 @@ Cuando haya concluido todos los pasos anteriores, compile la aplicación (selecc
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para empezar el proceso de publicación, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione el elemento de menú contextual **Archivo…**:
+Para empezar el proceso de publicación, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione el elemento de menú contextual **Archivo…** :
 
 [![Aplicación Archive](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
@@ -297,11 +299,11 @@ La opción **Archivo…** inicia **Archive Manager** y comienza el proceso de ar
 
 [![Archive Manager](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
-Otra forma de crear un archivo consiste en hacer clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccionar **Archivar todo…**, con lo que se compila la solución y se archivan todos los proyectos de Xamarin que pueden generar un archivo:
+Otra forma de crear un archivo consiste en hacer clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccionar **Archivar todo…** , con lo que se compila la solución y se archivan todos los proyectos de Xamarin que pueden generar un archivo:
 
 [![Archivar todo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
-Tanto la opción **Archivo** como la opción **Archivar todo** inician automáticamente **Archive Manager**. Para iniciar **Archive Manager** directamente, haga clic en el elemento de menú **Herramientas > Archive Manager…**:
+Tanto la opción **Archivo** como la opción **Archivar todo** inician automáticamente **Archive Manager**. Para iniciar **Archive Manager** directamente, haga clic en el elemento de menú **Herramientas > Archive Manager…** :
 
 [![Inicio de Archive Manager](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
@@ -331,7 +333,7 @@ En el **panel de detalles** se muestra información adicional sobre cada archivo
 
 ### <a name="distribution"></a>Distribución
 
-Cuando una versión archivada de la aplicación esté lista para la publicación, seleccione el archivo en **Archive Manager** y haga clic en el botón **Distribuir…**:
+Cuando una versión archivada de la aplicación esté lista para la publicación, seleccione el archivo en **Archive Manager** y haga clic en el botón **Distribuir…** :
 
 [![Botón Distribuir](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
@@ -355,7 +357,7 @@ La opción **Archive for Publishing** (Archivo para la publicación) compila el 
 
 [![Vista de Archive](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-En este ejemplo, en **Archive Manager** solo se muestra una aplicación archivada, **MyApp**. Observe que el campo de comentario permite guardar un breve comentario con el archivo. Para publicar una versión archivada de una aplicación de Xamarin.Android, seleccione la aplicación en **Archive Manager** y haga clic en **Firmar y distribuir…**, como se muestra más arriba. En el cuadro de diálogo resultante **Sign and Distribute** (Firmar y distribuir), se presentan dos opciones:
+En este ejemplo, en **Archive Manager** solo se muestra una aplicación archivada, **MyApp**. Observe que el campo de comentario permite guardar un breve comentario con el archivo. Para publicar una versión archivada de una aplicación de Xamarin.Android, seleccione la aplicación en **Archive Manager** y haga clic en **Firmar y distribuir…** , como se muestra más arriba. En el cuadro de diálogo resultante **Sign and Distribute** (Firmar y distribuir), se presentan dos opciones:
 
 [![Firmar y distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 

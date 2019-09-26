@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8267c49302a755dcc433345b6a53aa9f2e2c71e6
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756212"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250172"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -22,7 +22,7 @@ Las pruebas beta son una parte integral del ciclo de desarrollo de software y ha
 
 TestFlight es el servicio de pruebas beta de Apple para aplicaciones iOS y solo es accesible a través de [iTunes Connect](https://itunesconnect.apple.com/). Está actualmente disponible para aplicaciones iOS 8.0 y versiones posteriores. TestFlight permite realizar pruebas beta con usuarios internos y externos y, debido a una revisión de la aplicación Beta para estos últimos, garantiza un proceso mucho más sencillo en la revisión final al publicar en el App Store.
 
-Anteriormente, el binario se generaba en Visual Studio para Mac y se cargaba en el sitio web de TestFlightApp para la distribución a los evaluadores. Con el nuevo proceso, hay una serie de mejoras que le permitirán tener aplicaciones de alta calidad y bien probadas en el App Store. Por ejemplo: 
+Anteriormente, el binario se generaba en Visual Studio para Mac y se cargaba en el sitio web de TestFlightApp para la distribución a los evaluadores. Con el nuevo proceso, hay una serie de mejoras que le permitirán tener aplicaciones de alta calidad y bien probadas en el App Store. Por ejemplo:
 
 - La revisión de la aplicación beta necesaria para las pruebas externas garantiza una mayor probabilidad de éxito de su revisión final en el App Store, ya que ambas requieren el cumplimiento de las directrices de Apple.
 - Antes de cargar, la aplicación debe estar registrada en iTunes Connect. Esto garantiza que no habrá ninguna discrepancia entre los perfiles, los nombres y los certificados de aprovisionamiento.
@@ -91,6 +91,8 @@ Una vez creado el registro de iTunes Connect, podrá cargar nuevas compilaciones
 
 En primer lugar, compile la versión [final distribuible](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) en el IDE y, a continuación, [envíe la aplicación a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) mediante el cargador de aplicaciones o la función de archivo en Xcode.
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ### <a name="create-an-archive"></a>Crear un archivo
@@ -103,7 +105,7 @@ En primer lugar, compile la versión [final distribuible](~/ios/deploy-test/app-
 
 ### <a name="sign-and-distribute-your-app"></a>Firmar y distribuir la aplicación
 
- Al crear un archivo se abre automáticamente la **Vista de archivos**, en que se muestran todos los proyectos archivados, agrupados por solución. Para firmar la aplicación y prepararla para su distribución, seleccione **Firmar y distribuir...**, como se muestra a continuación:
+ Al crear un archivo se abre automáticamente la **Vista de archivos**, en que se muestran todos los proyectos archivados, agrupados por solución. Para firmar la aplicación y prepararla para su distribución, seleccione **Firmar y distribuir...** , como se muestra a continuación:
 
 [![](testflight-images/archive-view.png "Al crear un archivo se abre automáticamente la vista Archivos")](testflight-images/archive-view.png#lightbox)
 

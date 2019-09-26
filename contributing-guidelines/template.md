@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 8374e90ea6d460a0e0c22763db023654c3008b32
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105744"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249565"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -179,7 +179,7 @@ Cuando el UID contiene los caracteres especiales \` o \#, el valor UID debe ser 
 - con viñetas
 - lista
 
-##### <a name="unordered-list-with-an-embedded-list"></a>Lista desordenada con una lista insertada
+#### <a name="unordered-list-with-an-embedded-list"></a>Lista desordenada con una lista insertada
 
 - Esto
 - con viñetas
@@ -210,7 +210,7 @@ Puede usar una [herramienta de generador de tabla de Markdown](http://www.tables
 
 Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar la codificación de color específica del lenguaje a un bloque de código. Esta es la lista completa de [identificadores de lenguaje de GFM](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs).
 
-##### <a name="c9839"></a>C&#9839;
+#### <a name="c9839"></a>C&#9839;
 
 ```c#
 using System;
