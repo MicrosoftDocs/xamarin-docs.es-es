@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 96d2fe0b03ad7067d6fece072742ea2796224f8b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: baf5d7a348c96cc2c43fd909bcc543fbfbfe81ce
+ms.sourcegitcommit: 58b21bf0eda3a7cea91a95b479f499c9d499b6d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250119"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71310787"
 ---
 # <a name="images-in-xamarinforms"></a>Imágenes en Xamarin.Forms
 
@@ -274,7 +274,7 @@ Un [ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource) también admite el al
 Almacenamiento en caché está habilitado de forma predeterminada y almacenará la imagen localmente durante 24 horas. Para deshabilitar el almacenamiento en caché para una imagen concreta, crear una instancia del origen de la imagen como sigue:
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri="http://server.com/image" };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
 ```
 
 Para establecer un período de caché específica (por ejemplo, 5 días) crear una instancia del origen de la imagen como sigue:
