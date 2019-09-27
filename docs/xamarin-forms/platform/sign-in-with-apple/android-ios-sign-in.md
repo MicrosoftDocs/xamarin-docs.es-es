@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206527"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319521"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Uso del inicio de sesión con Apple en Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Iniciar sesión con Apple es para todas las aplicaciones nuevas de iOS 13 que usan servicios de autenticación de terceros. Los detalles de implementación entre iOS y Android son bastante diferentes. En esta guía se explica cómo puede hacerlo hoy mismo en Xamarin. Forms.
 

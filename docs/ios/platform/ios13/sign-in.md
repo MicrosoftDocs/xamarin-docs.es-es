@@ -7,14 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206363"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319528"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Inicio de sesión con Apple en Xamarin. iOS
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Iniciar sesión con Apple es un nuevo servicio que proporciona protección de identidad para los usuarios de servicios de autenticación de terceros. A partir de iOS 13, Apple requiere que cualquier aplicación nueva que use servicios de autenticación de terceros también debe proporcionar el inicio de sesión con Apple. Las aplicaciones existentes que se están actualizando no necesitan agregar el inicio de sesión con Apple hasta el 2020 de abril.
 
@@ -204,10 +206,6 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 #endregion
 ```
-
-## <a name="summary"></a>Resumen
-
-En este artículo se ha introducido el inicio de sesión con Apple para iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
