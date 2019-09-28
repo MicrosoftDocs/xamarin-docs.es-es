@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 1cb4080be2bcb421db1e9db08a18b49ad95c4fb7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 40cfa7925f1617486a83134dd94626a0f11e80f3
+ms.sourcegitcommit: 709072506f0bb6abc1d6046ec15f6bf66b282d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765300"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71344619"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Asociados de consultoría certificados para ofrecer soluciones móviles
 
@@ -32,7 +32,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="usa"></a>EE. UU.
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[10 perlas](http://10pearls.com/get-in-touch/)|Herndon, VA; Toronto, ON, Canadá; Dubai-Emiratos Árabes Unidos; Karachi, Pakistán|10 perlas crea soluciones de tecnología integrales personalizadas para diversos clientes, incluidas grandes empresas, pequeñas & medianas empresas, así como inicios de alto crecimiento.|
 |[1ª versión, Inc.](http://www.1stversion.com)|Miami, FL|1º. version es una agencia de consultoría digital con un personal innovador, que proporciona y crea soluciones eficaces para nuestros clientes.|
@@ -131,11 +131,11 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 |[Software MiC](http://mic-software.net/)|Fresno, CA, Estados Unidos|Estamos orgullosos de ofrecer un servicio que se ha diseñado, totalmente adaptado para satisfacer los requisitos individuales de nuestro cliente|
 |[Mindtree](http://www.mindtree.com)|Warren, NJ|MindTree ofrece servicios tecnológicos y de transformación digital de concepción hasta a la ejecución, lo que permite que los clientes globales 2000 superen la competencia.|
 |[Compositor móvil](http://www.mcomposer.com/)|Minneapolis, MN|AMobile Composer se centra en la creación de soluciones móviles empresariales que resuelven problemas empresariales reales. Como empresa de SaaS, la plataforma de Composer Mobile proporciona un conjunto de módulos para ensamblar con rapidez las prácticas recomendadas para las aplicaciones móviles empresariales nativas.|
-|[Software de Mooseworks](http://mooseworkssoftware.com/)|Dublín, NH |Mooseworks software se inició en 2003. Nos hemos especializado en el mercado móvil antes de que el móvil estuviera frío. En ese momento, hemos vendido controles a desarrolladores que crearon aplicaciones con cientos de miles de usuarios finales. W|
+|[Software de Mooseworks](http://mooseworkssoftware.com/)|Dublín, NH |Mooseworks software se inició en 2003. Nos hemos especializado en el mercado móvil antes de que el móvil estuviera frío. En ese momento, hemos vendido controles a desarrolladores que crearon aplicaciones con cientos de miles de usuarios finales. X|
 |[Consultoría de Motis](http://www.motisconsulting.com/)|Dubuque, Iowa|Motis Consulting puede ayudar. Obtenga más información sobre las soluciones de Motis y póngase en contacto con nosotros para obtener ayuda con su estrategia de productos, arquitectura o necesidades de desarrollo relacionadas con aplicaciones de software de escritorio o móviles.|
 |[Tecnología Nebbia](http://www.nebbiatech.com/)|Florida|Somos una compañía de software que se centra en las tecnologías de Microsoft. Creamos productos increíbles que aprovechan Azure al aplicar procedimientos recomendados en DevOps. Tenemos un enfoque en la nube y nos asociamos con los clientes para ayudarles a moverse a la nube y sacar el máximo partido a su inversión en la nube.|
 |[Exclusiv](http://www.ness.com/)|San José, California, EE. UU.|La ingeniería digital de la informática proporciona servicios de transformación digital y de ingeniería de productos de software personalizado para ayudar a las organizaciones a imaginar, compilar y desarrollar continuamente sus plataformas digitales para entrar en nuevos mercados, captar nuevos ingresos y obtener operaciones mayores. |
-|[Neudesic](http://www.neudesic.com)|Irvine, CA; Atlanta, GA; Austin, TX; Chicago, IL; Dallas, TX; Denver, CO; Houston, TX; Los Ángeles, CA; Nueva York, NY; Philadelphia, PA; Phoenix, AZ; Portland, o; Seattle, WA|Neudesic es un integrador de sistemas nacionales líder y un asociado de Microsoft de confianza, reconocido por las empresas de investigación independientes para nuestras funcionalidades y experiencia en torno a la tecnología de Microsoft. También mantenemos alianzas estratégicas con otros líderes del sector, como Theobald, AWS, Dell, Xamarin, Metalogix, Nintex y otros. Al trabajar en estrecha colaboración con nuestras alianzas &ndash; que combinan nuestra experiencia con sus herramientas y tecnologías &ndash; , Neudesic puede ofrecer la mejor solución posible a cada desafío empresarial.|
+|[Neudesic](http://www.neudesic.com)|Irvine, CA; Atlanta, GA; Austin, TX; Chicago, IL; Dallas, TX; Denver, CO; Houston, TX; Los Ángeles, CA; Nueva York, NY; Philadelphia, PA; Phoenix, AZ; Portland, o; Seattle, WA|Neudesic es un integrador de sistemas nacionales líder y un asociado de Microsoft de confianza, reconocido por las empresas de investigación independientes para nuestras funcionalidades y experiencia en torno a la tecnología de Microsoft. También mantenemos alianzas estratégicas con otros líderes del sector, como Theobald, AWS, Dell, Xamarin, Metalogix, Nintex y otros. Al trabajar en estrecha colaboración con nuestras alianzas &ndash; combina nuestra experiencia con sus herramientas y tecnología &ndash; Neudesic es capaz de ofrecer la mejor solución posible a cada desafío de negocio.|
 |[Tecnologías de NIIT](http://www.niit-tech.com)|Atlanta, GA, EE. UU.; Noida, Uttar Pradesh, India; Londres, Reino Unido; Madrid, España; Singapur|NIIT Technologies es una organización global de soluciones de ti que se ocupa de los requisitos de los clientes en América, Europa, Asia y Australia. NIIT Technologies Services se refiere a los clientes de viajes y transporte, banca y servicios financieros, seguros, fabricación y verticales multimedia, y ofrece una amplia gama de servicios. Centrado en los servicios digitales, la compañía ayuda a las empresas a diseñar modelos operativos ágiles, escalables y digitales.  Proporcionamos una amplia gama de soluciones y servicios eficaces que se distribuyen a través de la cadena de valores de servicios digitales, como experiencia, análisis e integración.|
 |[Nous Infosystems](http://nousinfosystems.com)|Edison, NJ & San Ramon, CA, Estados Unidos; Bentford, Reino Unido; Mississauga, ON, Canadá; Mainz, Alemania; Bengaluru, Coimbatore, India; Dubai, Eau|Nous, un asociado de Xamarin líder, permite a sus clientes adoptar fácilmente la eficaz plataforma de Xamarin y usar sus equipos empresariales existentes, herramientas C#y códigos de/.net de forma eficaz para trabajar en móviles. Ofrecemos experiencia de usuario de un extremo a otro de servicios de movilidad empresarial & diseño, servicios de asesoramiento de Xamarin, servicios de desarrollo de aplicaciones, servicios de prueba y soporte técnico.|
 |[Noutash Consulting Inc.](http://www.noutashconsulting.ca/)|Scarborough, activado|Nuestros asesores se especializan en la creación de aplicaciones móviles originales y creativas que son atractivas y muy funcionales.|
@@ -164,8 +164,8 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 |[Seamgen, LLC](http://www.seamgen.com)|San Diego, CA|Un equipo de desarrollo de aplicaciones móviles y Web de pila completa, en el servicio. El equipo de Seamgen de expertos en tecnología apasionados puede crear todo lo que necesite, desde aplicaciones móviles hasta sitios web con capacidad de respuesta hasta servicios basados en la nube. Son sus asociados tecnológicos en todas las fases del proceso de desarrollo, trabajando con usted para diseñar y desarrollar soluciones que complementen y mejoran la arquitectura del sistema existente, y que están bien en todas las tecnologías más recientes que se usan para móviles y Web. desarrollo de aplicaciones.|
 |[Grupo SELA](http://www.selagroup.com)|Bellevue, WA; Arlington, VA; Bnei Brak, Israel; Pune, India; Toronto, Canadá; Singapur|SELA ha sido socio Microsoft Certified Partner for Learning Solutions (CPLS) desde 2000. Con más de 300 cursos desarrollados por Sela y 55 formadores Senior, la Universidad tecnológica ofrece cursos y certificaciones sólidos para el sector de ti. Sela tiene más de 800 clientes de todo el mundo, como Microsoft, SAP, NCR, Motorola, HP, BMC Software, ECI, comverso e IBM entre otros.|
 |[Gritarlo digital limitado](http://www.shoutdigital.com)|Philadelphia, PA|Gritarlo digital se formó en 2009 y hemos creado un equipo orgulloso de 30 en la parte posterior de las excelentes soluciones de cliente y una gran cantidad de trabajo duro. Creemos en la creación de asociaciones de confianza a largo plazo con nuestros clientes. Nuestra calidad y atención es todo lo que ofrecemos. Nuestra experiencia ayuda a los clientes ambiciosos a revolucionar su futuro digital. |
-|[Tecnologías de Skyline](http://www.skylinetechnologies.com)|Appleton, WI|Con el objetivo de ofrecer información única y conocimientos tecnológicos para ofrecer un valor sin parangón a su negocio, el objetivo de Skyline es ayudarle a resolver sus desafíos empresariales más difíciles y a imaginar lo que es posible a través de la tecnología. En cada compromiso del cliente, los usuarios llevan las personas adecuadas a &ndash; la tabla que eleva la conversación más allá de la tecnología para salvar la brecha desde donde se encuentra donde desea.|
-|[Consultoría de slalom](http://www.slalom.com)|Seattle, WA; Boston, MA; Chicago, IL; Denver, CO; Houston, TX; Los Ángeles, CA; Nueva York, NY; Portland, o; San Francisco, CA; Merezca la pena, TX, EE. UU., etc. Dallas, TX, EE. UU.; Phoenix, AZ, EE. UU.; Boise, ID, EE. UU.; Sal Lake City, UT, EE. UU.; Toronto, ON, Canadá; Detroit, MI, Estados Unidos; Washington, DC, Estados Unidos; Philadelphia, PA, Estados Unidos; Hartford, CT, EE. UU.; Atlanta, GA, EE. UU.; St. Louis, MO, Estados Unidos; San José, California, EE. UU.; Minneapolis, MN, EE. UU.; San Diego, CA, Estados Unidos; Londres, Reino Unido|De todas las cosas que hacen que slalom sea único, sus personas se encuentran en la parte superior de la lista. Theyre a los asesores experimentados con conocimientos profundos en los campos elegidos que tienen especial interés en la diferencia en los negocios de sus clientes y en las comunidades en las que viven. Y hay &ndash; &ndash; algo más que se sonrisa. Uno de sus clientes ha mencionado que puede reconocer a los asesores de slalom porque son los que están en el salón que están sonriendo. Como han crecido hasta más de 3.000 consultores en 16 oficinas en los EE. UU. y Londres, han mantenido su interés en permitir que las personas hagan exactamente eso.|
+|[Tecnologías de Skyline](http://www.skylinetechnologies.com)|Appleton, WI|Con el objetivo de ofrecer información única y conocimientos tecnológicos para ofrecer un valor sin parangón a su negocio, el objetivo de Skyline es ayudarle a resolver sus desafíos empresariales más difíciles y a imaginar lo que es posible a través de la tecnología. En cada compromiso del cliente, los usuarios llevan las personas adecuadas a la tabla &ndash; elevando la conversación más allá de la tecnología para salvar la brecha desde donde se encuentra donde desea.|
+|[Consultoría de slalom](http://www.slalom.com)|Seattle, WA; Boston, MA; Chicago, IL; Denver, CO; Houston, TX; Los Ángeles, CA; Nueva York, NY; Portland, o; San Francisco, CA; Merezca la pena, TX, EE. UU., etc. Dallas, TX, EE. UU.; Phoenix, AZ, EE. UU.; Boise, ID, EE. UU.; Sal Lake City, UT, EE. UU.; Toronto, ON, Canadá; Detroit, MI, Estados Unidos; Washington, DC, Estados Unidos; Philadelphia, PA, Estados Unidos; Hartford, CT, EE. UU.; Atlanta, GA, EE. UU.; St. Louis, MO, Estados Unidos; San José, California, EE. UU.; Minneapolis, MN, EE. UU.; San Diego, CA, Estados Unidos; Londres, Reino Unido|De todas las cosas que hacen que slalom sea único, sus personas se encuentran en la parte superior de la lista. Theyre a los asesores experimentados con conocimientos profundos en los campos elegidos que tienen especial interés en la diferencia en los negocios de sus clientes y en las comunidades en las que viven. Y &ndash; algo más &ndash; se sonrisa. Uno de sus clientes ha mencionado que puede reconocer a los asesores de slalom porque son los que están en el salón que están sonriendo. Como han crecido hasta más de 3.000 consultores en 16 oficinas en los EE. UU. y Londres, han mantenido su interés en permitir que las personas hagan exactamente eso.|
 |[SmartBridge](http://smartbridge.com)|Houston, TX, EE. UU.|En Smartbridge, evaluaremos, implementaremos, crearemos y administraremos soluciones empresariales. |
 |[Softeq](http://www.softeq.com/)|Houston, TX, EE. UU.|Softeq Development Inc. es una compañía de desarrollo de pila completa que ayuda a sus clientes a diseñar, desarrollar e iniciar nuevos productos para mercados B2B o B2C. Softeq ofrece habilidades en el hardware y en el nivel de la aplicación, lo que la convierte de forma exclusiva en los proyectos de desarrollo de soluciones de IoT y puede abarcar todas las fases de un ciclo de desarrollo del producto: desde PCB y diseño del gabinete hasta el back-end en la nube y el cliente móvil instala. Softeq ha sido asociado de desarrollo móvil a largo plazo para Nike, NVIDIA, Intel y Disney, y ofrece competencias probadas en el desarrollo de Xamarin.|
 |[Softjourn](https://softjourn.com/en#1)|Fremont, CA, Estados Unidos; Ivano-Frankivsk, Ucrania; Wroc ≈ Çaw, Polonia|Expertos en el desarrollo de software personalizado para tarjetas y pagos, aplicaciones de medios y de vales.|
@@ -182,12 +182,12 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 |[Tecnologías de marcado.](http://www.sundialer.com)|Tampa, FL|Las tecnologías de marcado de Sprang en el Lauderdale de Fort en 1990. El marcado de este sistema se fundó para combinar lo mejor en la integración de telefonía de equipos con diálogos, Internet, Windows y tecnologías de SQL Server. El marcado final fue el primer marcador de predicción basado en cuadros de diálogo de Windows para alcanzar el mercado del centro de llamadas estadounidense y en todo el mundo.|
 |[Consultoría de syrinx](http://www.syrinx.com)|Needham, MA, EE. UU.|El equipo de desarrollo móvil de syrinx está formado por expertos que comprenden la tecnología móvil y trabajan directamente con su empresa para crear e implementar las aplicaciones exclusivas o de destino que son ideales para su organización. Saben que no es solo la tecnología que necesita para funcionar. también es Integration, agilidad, escalabilidad, inventario, marketing y factores de experiencia del cliente.|
 |[Tallan]( http://www.tallan.com)|Dallas, TX|Tallan presta servicio a organizaciones de todo el país en Hartford, Nueva York, Boston, Atlanta, Condado naranja, CA, Tampa, Dallas y Washington D.C.|
-|[Technossus](http://www.technossus.com/)|Irvine, California, EE. UU.|Technossus es una empresa de consultoría de tecnología y soluciones de software galardonadas y galardonados de forma privada. Fundada en casi una década por expertos del sector, ayudamos a las empresas a diseñar, desarrollar e implementar soluciones de software innovadoras. Nuestros valores principales incluyen el compromiso de ofrecer un valor y una calidad excepcionales a &ndash; cada cliente. Superamos las expectativas y ofrecemos soluciones que transforman las empresas y mejoran el rendimiento operativo de manera rentable.|
+|[Technossus](http://www.technossus.com/)|Irvine, California, EE. UU.|Technossus es una empresa de consultoría de tecnología y soluciones de software galardonadas y galardonados de forma privada. Fundada en casi una década por expertos del sector, ayudamos a las empresas a diseñar, desarrollar e implementar soluciones de software innovadoras. Nuestros valores principales incluyen el compromiso de proporcionar un valor y una calidad excepcionales a cada cliente &ndash; cada vez. Superamos las expectativas y ofrecemos soluciones que transforman las empresas y mejoran el rendimiento operativo de manera rentable.|
 |[Tecknoworks](http://www.tecknoworks.com)||Motivado por nuestra pasión por la tecnología y por nuestra curiosidad por aprender nuevas cosas cada día, hemos estado ayudando a las personas y a las organizaciones a usar la tecnología durante más de 15 años. |
 |[Tecordeon Inc](http://www.tecordeon.com)|Los Ángeles, CA; Hyderabad, India|Tecordeon Inc. es una de las empresas de desarrollo de software y outsourcing de más rápido crecimiento que proporciona soluciones de software completas a sus clientes. La empresa se especializa en ofrecer desarrollo de aplicaciones móviles, desarrollo de aplicaciones Web, desarrollo de aplicaciones de Internet enriquecidas, pruebas de aplicaciones móviles, integración de sistemas, servicios de validación y pruebas de software, control de calidad servicios, etc. Además, Tecordeon Inc tiene experiencia de software específica del sector en tecnología, entretenimiento, asistencia sanitaria, medios, finanzas y muchos otros sectores.|
 |[Software de Terrace](http://www.terrace.com)|San Francisco, CA|Nuestra empresa autor es "compilar con nosotros". Creemos que esta frase describe con precisión nuestra misión. Es sencillo. Trabajamos estrechamente con los clientes, escuchamos su visión, formulamos un plan completo e implementamos una solución innovadora con la tecnología más reciente.|
 |[Profesionales de la aplicación](http://www.TheAppPros.com)|Springfield, Lu|Con el reconocimiento de la creciente importancia de las aplicaciones móviles para las pequeñas y medianas empresas, nos centramos especialmente en ayudar a las empresas locales y a empezar a sacar el máximo partido de sus recursos mediante el desarrollo de sofisticadas aplicaciones para ayudar a crecer. Mantenga y mejore las operaciones empresariales.|
-|[El método probado](http://www.provenmethod.com)|Atlanta, GA|El método probado de hacer negocios comienza pensando estratégicamente en sus objetivos empresariales y, a continuación, colaborar con usted para desarrollar e implementar rápidamente soluciones flexibles y eficaces. Estas soluciones se ofrecen a los profesionales de TI con capacidad, experiencia y a largo plazo, respaldados por 25 años de éxito &ndash; en el negocio de TI para satisfacer sus objetivos empresariales.|
+|[El método probado](http://www.provenmethod.com)|Atlanta, GA|El método probado de hacer negocios comienza pensando estratégicamente en sus objetivos empresariales y, a continuación, colaborar con usted para desarrollar e implementar rápidamente soluciones flexibles y eficaces. Estas soluciones se ofrecen a los profesionales de TI con capacidad, experiencia y a largo plazo, respaldados por 25 años de éxito empresarial de ti &ndash; todo el trabajo para satisfacer sus objetivos empresariales.|
 |[La Corporación triple](http://triplei.com)||Tanto si el trabajo se realiza correctamente como si se obtiene el trabajo de sus sueños, podemos ayudarle a lograr el éxito empresarial. Tome una llamada o envíenos una nota. Esperamos tener noticias suyas.  |
 |[Think Ahead Software LLC](http://www.thinkaheadsoftware.com)|Este Windsor, CT|Somos un proveedor de soluciones empresariales de Internet que proporciona servicios de desarrollo de software, consultoría y hospedaje de aplicaciones. Nuestras especialidades incluyen el desarrollo de aplicaciones empresariales para la web y aplicaciones móviles para las plataformas iOS y Android. |
 |[ThinkPower Information Corporation](http://www.thinkpower.info)|Nueva York, NY|ThinkPower se fundó en 2005, con personal interno de 150, proporciona un servicio de desarrollo de software de aplicaciones web/móviles personalizado. |
@@ -214,13 +214,13 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="argentina"></a>Argentina
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[D-Genix](http://d-genix.com/)|Rosario, Argentina|DGenix es una compañía de desarrollo de software muy especializada que se centra en proporcionar soluciones completas y de alta calidad a nuestros clientes ubicados en todo el mundo.|
 
 ## <a name="australia"></a>Australia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Creado para itinerancia de Pty Ltd](http://www.builttoroam.com)|Sydney, Australia|En la compilación para la itinerancia, somos especialistas de aplicaciones multiplataforma y de tecnología en la nube, pero estamos en el negocio de la solución de problemas. |
 |[CommerceLab](http://www.commercelab.com.au)|Sydney, Australia|Nuestro desarrollo de aplicaciones basadas en Sydney aporta a las pequeñas empresas, en línea y sin conexión, la capacidad de competir en el Marketplace moderno|
@@ -239,7 +239,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="belgium"></a>Bélgica
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[3factr](http://3factr.be/)|Edegem, Bélgica|3factr es el 100% centrado en el desarrollo móvil de Xamarin con integraciones de API de diverso. Theyprovide como software factory el desarrollo interno de aplicaciones de Xamarin iOS, Android y UWP.|
 |[CaveBirdLabs](http://www.cavebirdlabs.com/)|Amberes, Bélgica|CaveBirdLabs es un estudio de desarrollo móvil basado en Bélgica que se centra en el desarrollo de aplicaciones móviles atractivas.|
@@ -251,14 +251,14 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="brazil"></a>Brasil
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Grupo Viceri](http://www.viceri.com.br)|Jundiaí, Brasil|Proporcionamos Web, desarrollo de aplicaciones móviles y servicios de inteligencia empresarial|
 |[Soluciones superactivas](http://www.superactive.com.br/)|Brasil|Un cliente superactivo é uma empresa especializada em Desenvolvimento de Soluções tecnológicas inovadoras com foco na TI estratégica, otimizando processos, de forma a fornecer resultados rápidos e seguros para os SEUS clientes. |
 
 ## <a name="canada"></a>Canadá
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Apcurium](http://www.apcurium.com)|Montreal, Canadá|Apcurium desarrolla soluciones móviles que se conectan hoy en día con dispositivos móviles, plataformas y tecnologías con estrategias empresariales específicas y expectativas de los usuarios.|
 |[Laboratorios de BSI](https://bsilabs.ca/)|Toronto, Canadá|BSI Labs es un asesor de servicios completos que se especializa en la estrategia móvil, el diseño de la experiencia de usuario y la interfaz de usuario, el desarrollo de aplicaciones móviles y la integración de sistemas.|
@@ -275,44 +275,44 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="chile"></a>Chile
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Birdie](http://www.birdie.cl)|Santiago, Chile|Birdie es una compañía de desarrollo de aplicaciones|
 
 ## <a name="china"></a>China
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Software de vista alta](http://www.highviewsoft.com)|Pekín, China|El software de vista alta se centra en proporcionar aplicaciones multiplataforma y diseño de programas de servicio basado en la nube, desarrollo, implementación, aprendizaje técnico y otros servicios de consultoría|
 
 ## <a name="colombia"></a>Colombia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[IDlink](http://www.idlink.co)|Medellín, Colombia|IDlink es una empresa de consultoría y desarrollo de software especializada en el diseño y desarrollo de soluciones de identificación automática y captura de datos (AIDC) basadas en la tecnología de código de barras y RFID.|
 |[WorkApps](http://www.workapps.com.co/)|Bogota, Colombia|WorkApps es una empresa de Colombia fundada por los tituladores de ingenieros de sistemas de la Universidad Nacional de Colombia. Su servicio genera innovación en los productos desarrollados.|
 
 ## <a name="costa-rica"></a>Costa Rica
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Apptividad](http://apptividad.com/)|San José, Costa Rica|Apptividad puede proporcionar más exposición para su empresa o marca a través de canales web, AR y aplicaciones móviles. Use también la eficaz integración de API para sistemas internos y asociados empresariales.|
 
 ## <a name="cyprus"></a>Chipre
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
-|[I.T. de Tech Solutions LTD](http://www.datatech.com.cy)|Chipre|I.T. de Tech Solutions Ltd es un proveedor líder de soluciones tecnológicas en los campos de administración de contenido empresarial, administración de la cadena de suministro y soluciones móviles.|
+|@no__t 0Datatech I.T. Solutions LTD @ no__t-0|Chipre|I.T. de Tech Solutions Ltd es un proveedor líder de soluciones tecnológicas en los campos de administración de contenido empresarial, administración de la cadena de suministro y soluciones móviles.|
 
 ## <a name="czech-republic"></a>República Checa
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[DevMasters](http://www.devmasters.cz/)|Praga, República Checa|DevMasters es una empresa de ti Checa centrada en el desarrollo de soluciones y aplicaciones|
 
 ## <a name="denmark"></a>Dinamarca
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Bureauet de aplicación](https://appbureauet.dk/)|Svendborg, Dinamarca|La aplicación Bureauet es una compañía de desarrollo de aplicaciones|
 |[Bluefragments](http://www.bluefragments.com)|Copenhague, Dinamarca|Bluefragments se especializa en el desarrollo de aplicaciones y es un asociado certificado de Microsoft.|
@@ -322,21 +322,21 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="dominican-republic"></a>República Dominicana
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Maven S.R.L.](http://www.maven.do)|República Dominicana|Maven es una pequeña empresa con grandes sueños. Se fundó en 2012 como una manera de ofrecer soluciones de software nuevas, de máxima calidad y diversas en la República Dominicana. Nos estinamos a proporcionar a nuestros clientes la calidad garantizada del desarrollo de software y, al hacerlo, fomentar una relación de confianza y responsabilidad con sus necesidades.|
 |[Solvex Dominicana](http://www.solvex.com.do)||Solvex Values Professional Experience. La empresa, establecida en 2014, ahora tiene 200 ingenieros de software de los cuales más de un 80% tienen 5 o más años de experiencia en la entrega de software. |
 
 ## <a name="egypt"></a>Egipto
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[ITWorx](http://www.itworx.com)|Cairo, Egipto|ITWORX es una empresa global de servicios de ti que proporciona soluciones basadas en la nube y locales a las organizaciones líderes del mundo, con énfasis en el análisis avanzado, la movilidad empresarial, la administración del rendimiento y CRM.|
 |[Desarrollo de jios](https://www.jiosdev.com/)|Egipto|El desarrollo de jios es una empresa estable de crecimiento rápido que ofrece servicios de consulta de tecnología y outsourcing especializados en el desarrollo de aplicaciones personalizadas, Cloud Services y aplicaciones móviles. |
 
 ## <a name="france"></a>Francia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Transacción de Francia](http://www.altran.fr/)|París, Francia|Altran es líder mundial en servicios de ingeniería y R & D|
 |[Arolla](http://www.arolla.fr/)|París, Francia|Arolla es una empresa de consultoría especializada en las técnicas más avanzadas de desarrollo de software.|
@@ -350,7 +350,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 |[TI móvil](http://www.la-mobile-it.com)|Grenoble, Francia|Nous Sommes spécialisés depuis 10 ans dans le for Mobile et avons des Relations étroites avec nos partenaires, Client et Fournisseurs verter el qui de la Touche. Nous n'avons aucune exclusivité, Si vous désirez obtenir des conseils, Nous présenter une Solution ou encore devenir partenaire, contactez-Nous!|
 |[Servicios de Matelli](http://www.matelli.fr/english/)|París, Francia|Matelli es una empresa de servicios de información fundada en 2008 para crear aplicaciones empresariales web y móviles personalizadas para sus clientes.|
 |[Obras mentales](http://www.mentalworks.fr)|París, Francia|Mentalworks es una Agencia tecnológica tecnológica atípica: la Agencia de marketing e-Agency y las empresas de consultoría/ESN. Esta experiencia les permite crear sitios web, aplicaciones móviles o aplicaciones empresariales personalizadas e integrar soluciones tecnológicas clave.|
-|[Aplicaciones naranja para empresas](http://www.orange-business.com/en/contact-us)|París, Francia; Zurich, Suiza|Orange Business Services es un operador de telecomunicaciones global y una empresa de servicios de ti. Sus empleados de 20.000 admiten empresas, organismos gubernamentales locales y organizaciones de sectores públicos en todos los aspectos de su transformación digital. Ayudan a las empresas a colaborar de forma más eficaz, a trabajar de forma más &ndash; eficaz y a proteger mejor a sus clientes que conectan a sus personas, sitios y equipos de forma segura y confiable.|
+|[Aplicaciones naranja para empresas](http://www.orange-business.com/en/contact-us)|París, Francia; Zurich, Suiza|Orange Business Services es un operador de telecomunicaciones global y una empresa de servicios de ti. Sus empleados de 20.000 admiten empresas, organismos gubernamentales locales y organizaciones de sectores públicos en todos los aspectos de su transformación digital. Ayudan a las empresas a colaborar de forma más eficaz, a operar de forma más eficaz y a proteger mejor a sus clientes &ndash; que conecta sus personas, sitios y equipos de forma segura y confiable.|
 |[Re Pág](http://www.pageup.fr)|Dijon, Francia||
 |[Tecnologías de Rayonnance](http://rayonnance.fr)|París, Francia|El grupo Rayonnance es un integrador francés líder especializado en más de 13 años en la implementación de aplicaciones de rastreabilidad y movilidad en Windows terminal Business (Windows Mobile, Windows Phone 8,1, Windows 8), Android e IOS.|
 |[SFEIR](http://www.sfeir.com)|Neuilly-sur-cerco, Francia; Estrasburgo, Francia; Lille, Francia; Leudelange, Luxemburgo|SFEIR est une Communauté façonnée par et mina des développeurs talentueux. Nous créons des Applications de Pointe et relevons avec-clients leurs Défis Techniques Plus ambitieux.|
@@ -359,7 +359,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="germany"></a>Alemania
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[27interactive](http://27interactive.com)|Düsseldorf, Alemania; Hamburgo, Alemania|Adapte las soluciones multiplataforma para smartphones y tabletas con Android, iOS, Windows y macOS|
 |[AIT](http://www.aitgmbh.de)|Stuttgart, Alemania|AIT es uno de los principales desarrolladores y consultores de software que se especializan en la plataforma .NET y mucho más. Ha sido un socio de Microsoft Gold galardonado de varios años.|
@@ -384,25 +384,25 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="greece"></a>Grecia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[SA de entersoft](https://www.entersoft.eu)|Kallithea, Grecia|Entersoft es un proveedor líder de software y servicios para la empresa que proporciona servicios y soporte técnico de alta calidad innovadores y completos para garantizar la eficacia optimizada para sus clientes.|
 
 ## <a name="hong-kong"></a>Hong Kong
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Unissoft Technology Co. Ltd.](http://www.inas.online/en/Index.php)|Hong Kong|Nuestra tecnología básica subyacente, Tsing Hua Archive Management Software (o TH-AMS™ abreviada), ha sido el producto recomendado de la administración de los archivos de estado de China durante un largo período de tiempo, por lo que también lo usa el gobierno, varios sectores incluidos petróleo y química; en varias empresas como el funcionamiento del riego, la metalurgia, la telecomunicaciones y la---inmobiliaria a través del modelo de licencias local tradicional. |
 
 ## <a name="hungary"></a>Hungría
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Soluciones de uva](http://grape.hu/)|Budapest, Hungría|Soluciones de uva es una empresa de desarrollo de software dinámica establecida en 2006. Principalmente desarrollamos aplicaciones empresariales personalizadas para nuestros clientes locales e internacionales. |
 
 ## <a name="india"></a>India
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[GAVS Technologies NA Inc](http://www.gavstech.com)|Chennai, India|GAVS Technologies es una & proveedor de soluciones de servicios de TI globales para clientes en varios sectores verticales del sector.|
 |[Greynubo](http://www.greynubo.com/)|Singapur Bengaluru, India|GreyNubo consta de un equipo de profesionales comprometidos que tienen muchos años de experiencia de dominio en CRM, CPQ, Mobile acoplado con una sólida base en la plataforma Salesforce.|
@@ -410,21 +410,21 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 |[Tecnologías emergentes privadas limitadas](http://www.popuptechnologies.com)|Mumbai|Las tecnologías emergentes se han vuelto 5 años atrás y, desde entonces, han sido un accesorio en el panorama móvil. Con sede central en Mumbai, tecnologías emergentes es una empresa de soluciones móviles que se renueva continuamente con nuevas tecnologías. Con una cartera de más de 100 aplicaciones móviles en todas las plataformas: iOS, Android, Windows, Xamarin, BlackBerry, HTML5, TIZEN y progresivo Web Apps.|
 |[Tecnologías de comunicación Sasken limitadas](http://www.sasken.com)|Mumbai, India|Sasken ayuda a los usuarios a mantenerse mejor conectados dondequiera que estén. Más industrias, entre las que se incluyen la electrónica automática, la electrónica de consumo, el minorista y la atención sanitaria ven la conectividad a la nube como una necesidad, junto con la toma de decisiones controladas por datos y en tiempo real. Con las competencias de dominio sin parangón en la comunicación y el procesamiento multimedia, están preparadas para enfrentarse a los desafíos críticos que el sector manifiesta. Funcionan con sus homólogos en el ecosistema para ofrecer servicios expuestos en el nuevo entorno en constante evolución de los dispositivos conectados.|
 |[ServPRO Technologies Pvt Ltd](http://www.servpro.in)|Mumbai, India|ServPRO, que se basa en "Serving proactivo", fue fundada en 2009 por Mr. Pushpinder Bhatia. ServPRO es un proveedor líder de soluciones y servicios de TI dedicado a ofrecer Crítico para la empresa & soluciones de TI innovadoras a través de muchos segmentos verticales, como el modo & prendas, comercio minorista, petróleo & gas, fármacos, fabricación, banca, agro, FMCG/CPG, Bull, EXIM y otros sectores verticales del sector.|
-|[Taritas Software Solutions Pvt. Ltd.](http://www.taritas.com/)|Bengaluru, Karnataka, India; Jabalpur, Madhya Pradesh, India|Taritas es una empresa de outsourcing de software que ofrece soluciones vanguardistas para muchas industrias. Un conocimiento exhaustivo del desarrollo de software y aplicaciones combinado con beneficios de costos de consumo internacional nos permite ofrecer servicios de desarrollo de alta calidad dedicados principalmente a minimizar los costos de proyecto y maximizar el beneficio de nuestros clientes. Seguimos el enfoque "la primera vez, el tiempo & el presupuesto". |
+|[Taritas de soluciones de software Pvt. Ltd. ](http://www.taritas.com/)|Bengaluru, Karnataka, India; Jabalpur, Madhya Pradesh, India|Taritas es una empresa de outsourcing de software que ofrece soluciones vanguardistas para muchas industrias. Un conocimiento exhaustivo del desarrollo de software y aplicaciones combinado con beneficios de costos de consumo internacional nos permite ofrecer servicios de desarrollo de alta calidad dedicados principalmente a minimizar los costos de proyecto y maximizar el beneficio de nuestros clientes. Seguimos el enfoque "la primera vez, el tiempo & el presupuesto". |
 |[Tech Mahindra](https://techmahindra.com)|Bengaluru|Tech Mahindra representa el mundo conectado, que ofrece servicios y soluciones de tecnología de la información innovadores y centrados en el cliente, lo que permite a las empresas, los asociados y la sociedad aumentar™. Somos una empresa de 4,4 mil millones USD con 117600 + Professionals en 90 países, ayudando a más de 840 + clientes globales, incluidas las compañías de la lista Fortune 500.|
-|[TechAhead software Pvt. Ltd.](http://www.techaheadcorp.com)|Princeton, NJ; Noida, India|Estamos creando soluciones de movilidad que aceleren la transformación digital del área de trabajo, aumenten la productividad, apliquen seguridad y permitan a los usuarios trabajar desde cualquier lugar y en cualquier momento. Desarrolle soluciones de movilidad con el mejor ajuste para sus objetivos empresariales y de modelo empresarial que se reperciben perfectamente con la percepción de la marca, la penetración del mercado, la integración del servicio y las expectativas de los clientes.|
+|[TechAhead software Pvt. Ltd. ](http://www.techaheadcorp.com)|Princeton, NJ; Noida, India|Estamos creando soluciones de movilidad que aceleren la transformación digital del área de trabajo, aumenten la productividad, apliquen seguridad y permitan a los usuarios trabajar desde cualquier lugar y en cualquier momento. Desarrolle soluciones de movilidad con el mejor ajuste para sus objetivos empresariales y de modelo empresarial que se reperciben perfectamente con la percepción de la marca, la penetración del mercado, la integración del servicio y las expectativas de los clientes.|
 |[Servicios de asesoría de árbol de recorrido](http://www.walkingtree.in/)|Hyderabad, India|El árbol de caminar es un proveedor de software y servicios de ti reconocido por su pasión por la tecnología. Actúan como equipo de desarrollo de productos o equipo de ingeniería de back-end para los clientes de todo el mundo.|
 |[Arañas Web](http://www.webspiders.com)|Nueva York, NY; Londres, Reino Unido; Singapur India|Arañas Web (WS) es una empresa de software empresarial que desarrolla productos para marketing y recursos humanos para impulsar el reenvío de "interacción con el usuario" mediante la movilidad y los bots dirigidos a inteligencia artificial.|
 
 ## <a name="ireland"></a>Irlanda
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Tecnología Greenfinch](https://greenfinch.ie/)|Dublín, Irlanda|Empresa de ingeniería de software centrada en la innovación & calidad. Proporcionamos a nuestros clientes un diseño, compilar & servicio de administración para ayudarles a cumplir los desafíos de su negocio en el mundo de cambio rápido de hoy en día.|
 
 ## <a name="italy"></a>Italia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Cortis Lentini](http://www.cortislentini.com)|Milán, Italia; Roma, Italia; Bergamo; Italia|Cortis Lentini, una infraestructura innovadora y servicios de Oursourcing técnico|
 |[Dataexpert S.r.l.](http://www.dataexpert.it)|Milán, Italia|El experto es un líder en el suministro de servicios de TI con un alto valor orientado a los servicios y fácil de integrar con infraestructuras tecnológicas existentes, una implementación rápida y sencilla.|
@@ -440,37 +440,37 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="japan"></a>Japón
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Fenrir Inc.](http://www.fenrir-inc.com/)|Osaka, Japón; Tokio, Japón; Nagoya, Japón|Fenrir desarrolla aplicaciones web y móviles para iOS, Android y Windows |
 
 ## <a name="latvia"></a>Letonia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Diatom empresas](http://www.diatomenterprises.com/)|Riga, Letonia|Desarrollamos sistemas Web, móviles y de escritorio individuales que ponen en mayúsculas el nivel de la personalización empresarial de nuestros clientes.|
 
 ## <a name="liechtenstein"></a>Liechtenstein
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Soluciones de bits & Consulting Services GmbH](https://www.bitsolutions.ch)|Balzers, Liechtenstein|Soluciones de bits & Consulting Services desarrolla aplicaciones Web, móviles y de escritorio individuales|
 
 ## <a name="luxembourg"></a>Luxemburgo
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[AGILUX](https://agilux.lu)|Pommerloch, Luxemburgo|Agilux es una empresa de consultoría de equipos especializada en la integración de soluciones de TI para la administración comercial y la contabilidad de PYMES, el desarrollo de sitios web, el comercio electrónico y las aplicaciones móviles.|
 
 ## <a name="macedonia"></a>Macedonia del Norte
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Química de código](http://www.codechem.com)|Macedonia del Norte, Skopie|La química de código proporciona servicios de desarrollo de software, administración de proyectos y consultoría. |
 
 ## <a name="mexico"></a>México
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Alset](http://alset.com.mx)|Ciudad de México, México|ALSET es una empresa especializada en tecnología de la información (TI) con una amplia experiencia en el suministro de sectores con soluciones de vanguardia, avanzadas, confiables y sólidas.|
 |[Grupo GIGIGO](http://www.gigigo.com)|Ciudad de México, México; San Paulo, Brasil; Madrid, España|Fundada en 2004, durante estos años GIGIGO se ha convertido en un Ally digital sólido y confiable, capaz de dirigirse y acompañar a grandes corporaciones a través de su camino hacia la transformación digital.|
@@ -483,7 +483,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="middle-east"></a>Oriente Medio
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Tecnologías ágiles](http://www.agiletz.com)|Dubai, Emiratos Árabes Unidos; Kuwait Omán Bahréin Qatar Cairo, Egipto|Agile Technologies es un proveedor de soluciones de TI de empresa que proporciona asesoría, entrenamiento y servicios de DevOps, desarrollo y pruebas.|
 |[CodeValue](http://www.codevalue.net)|Herzliya, Israel; Yokne'am Illit, Israel|CodeValue es una empresa de software líder que ofrece una gama completa de servicios de software que permiten a los clientes centrarse en sus actividades principales de negocio.|
@@ -493,7 +493,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="netherlands"></a>Países Bajos
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Expertos de César](http://www.caesarexperts.nl/)|Utrecht, Países Bajos|Los expertos de César diseñan, compilan, implementan y administran soluciones TIC innovadoras y eficaces.|
 |[Dalosy](https://dalosy.com)|Hendrik-ido-Ambacht, Países Bajos| Dalosy proporciona soluciones móviles que satisfacen las necesidades y los desafíos específicos de distintas empresas y sectores.|
@@ -523,7 +523,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="new-zealand"></a>Nueva Zelanda
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Optimizar diseños](https://www.enlighten.co.nz)|Auckland, Nueva Zelanda|Está habilitado para ofrecer soluciones tecnológicas orientadas a los clientes, innovadoras y de diseño excepcional para el mundo. Utilizan tecnologías de Microsoft para crear una aplicación en C# para iOS, Android y Windows|
 |[Aplicaciones de hidrógeno Ltd](http://www.hydrogenapps.com)|Auckland, Nueva Zelanda|Gracias al uso de más de una década de experiencia en la entrega exitosa de plataformas a gran escala en todo el mundo, hidrógeno aporta su profunda experiencia de entrega de software pendiente a la nueva Age de aplicaciones, movilidad y desarrollo de juegos.|
@@ -532,19 +532,19 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="oman"></a>Omán
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Tecnología avanzada de sistemas](http://www.astechoman.com/)|Muscat, Omán|AstechOman es un proveedor de soluciones de ti. |
 
 ## <a name="philippines"></a>Filipinas
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Haiyan Group Inc.](http://www.haiyan.com.ph)|Manila, Filipinas|Haiyan Group Inc. desarrolla aplicaciones web y móviles para iOS y Android|
 
 ## <a name="poland"></a>Polonia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Applandeo](http://www.applandeo.com/en/)|Krakow, Polonia|Applandeo es una empresa de desarrollo web y de aplicaciones|
 |[ASSECO POLONIA S.A.](https://pl.asseco.com/)|Rzeszów, Polonia|ASSECO Polonia ha desarrollado soluciones de software tecnológicamente avanzadas para empresas e instituciones de todos los sectores clave de la economía durante más de 20 años.|
@@ -555,7 +555,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="portugal"></a>Portugal
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Agap2](http://www.agap2.com)|Lisboa, Portugal|Agap2: un grupo de consultoría y de ingeniería de operaciones europeo que se ha especializado en el sector y TI|
 |[Carbono en negrita](http://www.carbonbybold.com/)|Lisboa, Portugal|Carbon by BOLD, es una marca que se centra en los servicios de consultoría móvil y ayuda a las empresas a integrar Mobile en sus estrategias de negocio. |
@@ -563,33 +563,33 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="russia"></a>Rusia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Binwell Ltd.](https://www.binwell.com)|San Petersburgo, Rusia|Binwell diseña y crea software personalizado, proporcionando soluciones bien diseñadas. Comenzaremos a partir de las necesidades empresariales y comprenderemos el "valor" exacto que traeremos al cliente en cada paso.|
 |[Notissimus](http://notissimus.com)|St. Petersburgo, Rusia|¿La compañía trabaja en ventas o servicios? Ha llegado al lugar adecuado. Los nuevos proyectos siempre son bienvenidos. |
 
 ## <a name="serbia"></a>Serbia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[INSSIO](http://inssio.com)|Belgrado, Serbia|Desde la concepción del proyecto al lanzamiento de la aplicación, INSSIO convierte sus ideas empresariales en software que impulsa su negocio.|
 
 ## <a name="singapore"></a>Singapur
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[CyanSYS](http://www.cyansys.com)|Singapur Kuala Lumpur, Malasia; Makati, Filipinas; Hong Kong; Kota Kinabalu, Sabah, Malasia; Yakarta, Indonesia|CyanSYS se esfuerza por proporcionar soluciones escalables & calidad a pequeñas y medianas empresas, lo que les permite competir & crecer a través de la tecnología de la información.|
 |[Xamariners](http://xamariners.com/)|Singapur|Creamos aplicaciones que se ejecutan de forma nativa en iOS, Android, Windows y Mac con una única base de código, así como bots descriptivos y aplicaciones de realidad aumentada.|
 
 ## <a name="slovakia"></a>Eslovaquia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Logamic](https://www.logamic.com/)|Bratislava, Eslovaquia|Si desea agregar un desarrollador de Xamarin dedicado a su equipo o quiere que cubramos todo el proceso de desarrollo, o bien, si desea consultar a Xamarin Mobile Development, no dude en ponerse en contacto con nosotros. |
 
 ## <a name="south-africa"></a>Sudáfrica
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Sistemas de software de AD](http://www.adsoftsystems.co.za)|Ciudad del cabo, Sudáfrica|Los sistemas de software de AD ofrecen soluciones personalizadas de desarrollo web y móvil. Se centran en el desarrollo nativo, pero también diseñan soluciones para permitir la reutilización máxima en todas las plataformas móviles principales.|
 |[CodeWrite Pty Ltd](http://www.codewrite.co.za/)|Johannesburgo, Sudáfrica|Nos centramos en soluciones basadas en Web y basadas en aplicaciones móviles, aplicaciones de software empresarial personalizadas enriquecidas y la integración del software del sistema de control de acceso de seguridad.|
@@ -602,9 +602,10 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="spain"></a>España
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[DevsDNA](http://www.devsdna.com)|Seville, España|En DevsDNA creemos otra manera de hacer negocios y crear software es posible. Desafortunadamente, nuestra sociedad contemporánea carece de transparencia, ética, principios y una brújula moral.|
+|[Itequia](https://itequia.com)|Barcelona, España|Itequia desarrolla aplicaciones de software web, móviles y personalizadas modernas. Contamos con más de 10 años de experiencia en trabajar con organizaciones líderes de gran tamaño y medianas, compilar sitios web de Internet, aplicaciones en tiempo real, aplicaciones móviles de uso generalizado, procesos críticos y portales de automatización, entre muchas otras soluciones de software.|
 |[KutirTech](http://www.kutirtech.com)|Malaga, España  |Durante más de 13 años, hemos creado y respaldado aplicaciones web y móviles para clientes empresariales grandes y pequeños. Exploramos y experimentamos constantemente con las mejores herramientas y tecnologías de clase y aportamos la combinación adecuada de herramientas y habilidades para que nuestros clientes empresariales se realicen correctamente.|
 |[Asesoría de consultoría S. L](http://www.pasiona.com)|Barcelona, España|Nos basamos en 2007 en la premisa de que escuchar y participar en el diálogo con nuestros clientes es la mejor manera de proporcionar soluciones tecnológicas innovadoras que se adapten a sus necesidades. Eso es nuestra misión y nuestro d'etre de raison. Somos una empresa de consultoría especializada en el desarrollo de soluciones personalizadas para cada empresa, ya que cada cliente es diferente y requiere un tratamiento exclusivo y exclusivo. Estamos comprometidos con la innovación, el trabajo de alta calidad, el entrenamiento continuo y el valor de la teaRegional humana Premier|
 |[TalentoMobile](http://www.talentomobile.com/)|España |Somos nativos digitales. Se pueden digitalizar los procesos empresariales y la conexión con los clientes, tanto con nuestras soluciones como con nuestros productos.|
@@ -612,7 +613,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="sweden"></a>Suecia
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[BITZEAL](http://www.bitzeal.se)|Gothenburg, Suecia|Bitzeal hace que las aplicaciones basadas en Web, las aplicaciones de teléfono y Dekstop y el firmware|
 |[Conevo consultoría de ti AB](http://www.conevo.se)|Estocolmo, Suecia|Conevo es una empresa de consultoría de ti que, a través de la excelente capacidad de respuesta para el negocio de sus clientes, crea las mejores soluciones de ti y más sostenible de una forma eficaz y Humble|
@@ -620,7 +621,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="switzerland"></a>Suiza
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Arendi](http://www.arendi.ch/)|Hombrechtikon, Suiza|Arendi proporciona una amplia gama de servicios: desarrollo de aplicaciones, desarrollo de hardware y firmware y administración de proyectos |
 |[BBV Software Services AG](http://www.bbv.ch)|Zürich, Suiza|BBV Software Services es una empresa de consultoría y software de Suiza. Pueden desarrollar soluciones móviles que se adapten a sus necesidades empresariales específicas y complejas.|
@@ -630,21 +631,21 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="taiwan"></a>Taiwán
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[iScreen Corporation](http://www.iscreen.com)|Taipei, Taiwán|iScreen ha creado su base en una tecnología sólida, con el objetivo empresarial de consultar, diseñar y compilar aplicaciones web y de plataforma móvil.|
 |[JetFusion Information Co., Ltd.](http://www.jetfusion.com.tw/)|Taipei|Proporcionamos servicios de construcción del sistema y desarrollo de software altamente flexibles, en tiempo real y profesionales, y también proporcionan soluciones completas del sistema de información empresarial.|
 
 ## <a name="turkey"></a>Turquía
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Holograma LTD](http://hologramsoft.com/)|Estambul, Turquía|Holograma LTD es un versátil centro de desarrollo de software que trabaja en el espacio de la empresa y del juego, centrándose en varias plataformas.|
 |[Sistemleri Bilisim](http://www.mobilist.com.tr)|Estambul, Turquía|Hemos incorporado diseños inteligentes y de ingeniería de alta calidad para ofrecer soluciones innovadoras.|
 
 ## <a name="uk"></a>Reino Unido
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Asesoría financiera adaptativa limitada](http://weareadaptive.com)|Londres, Reino Unido|El límite de consultoría financiera adaptativo es un asesor con una amplia experiencia en el sector financiero|
 |[Apptelic Ltd](http://Apptelic.com)|Londres, Reino Unido|Apptelic Ltd es una compañía de desarrollo de software especializada en el desarrollo de aplicaciones móviles y de escritorio para iOS, Android, Windows y Xbox One.|
@@ -689,7 +690,7 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="ukraine"></a>Ucrania
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Software de FreezePro](http://freezeprosoftware.com)|Lviv, Ucrania|FreezePro software es una compañía de desarrollo de software y outsourcing personalizada. Lo establecieron los profesionales de ENTERPRISING con un fuerte fondo de ti.|
 |[Innovaciones de GUI limitadas](http://www.gui-innovations.com)|Kiev, Ucrania|Proporcionamos soluciones de software para un mundo móvil. Tenemos experiencia inigualable en el diseño, desarrollo y soporte técnico de software para muchas plataformas.|
@@ -697,13 +698,13 @@ _En la lista por ubicación principal, muchos asociados proporcionan servicios a
 
 ## <a name="uruguay"></a>Uruguay
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[Nareia](http://nareia.com.uy)|Uruguay|Nos encanta el mundo móvil, realmente le encanta crear fantásticas aplicaciones para iOS y Android, y tenemos una gran experiencia en el desarrollo móvil con Xamarin.  |
 
 ## <a name="vietnam"></a>Vietnam
 
-| Asociado | Ubicaciones | DESCRIPCIÓN |
+| Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
 |[DVLUP](http://www.dvlup.net/)|Ho Chi Minh City, Vietnam|El desarrollo fue fundado por los líderes de la comunidad de desarrollo con la misión de nivelar a los desarrolladores de Vietnam|
 |[Limitada a la empresa FPT software Hanoi](http://www.fpt-software.com/)|Hanoi, Vietnam|Vietnam es el más grande y el proveedor de servicios de transformación digital de más rápido crecimiento.|
