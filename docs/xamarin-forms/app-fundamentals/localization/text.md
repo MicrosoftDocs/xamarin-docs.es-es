@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760995"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249689"
 ---
 # <a name="localization"></a>Localización
 
@@ -60,7 +60,7 @@ El archivo de recursos base (RESX) contendrá las cadenas del idioma predetermin
 
 Elija un nombre descriptivo, como **AppResources**, y pulse **Aceptar**.
 
-[![Agregar archivo de recursos](text-images/resx-new-file-sml.png "Cuadro de diálogo Nuevo archivo")](text-images/resx-new-file.png#lightbox "New File Dialog")
+[![Agregar archivo de recursos](text-images/resx-new-file-sml.png "Cuadro de diálogo Nuevo archivo")](text-images/resx-new-file.png#lightbox "Cuadro de diálogo Nuevo archivo")
 
 Se agregarán dos archivos al proyecto:
 
@@ -76,6 +76,8 @@ El árbol de la solución mostrará los archivos según su relación. El archivo
 De forma predeterminada, cuando se generan referencias fuertemente tipadas para las cadenas, serán de tipo `internal` para el ensamblado. Esto es así porque la herramienta de compilación predeterminada para los archivos RESX genera el archivo **.designer.cs** con propiedades de tipo `internal`.
 
 Seleccione el archivo **AppResources.resx** y observe el panel **Propiedades** para ver dónde está configurada esta herramienta de compilación. La captura de pantalla siguiente muestra **Herramienta personalizada: ResXFileCodeGenerator**.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

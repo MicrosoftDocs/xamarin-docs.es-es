@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 5d299112da87207f7486247e0ed6f00c35a35fe5
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 9f9504890b12f6a3d8046e98ce537cc0d742f2ed
+ms.sourcegitcommit: 159f250ae7535fca7ab3bc4dc7395dc4cc2af93f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106042"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71278147"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -180,50 +180,27 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
     ![Selección de configuración de compilación y plataforma](publishing-to-the-app-store-images/chooseConfig-m157.png "Selección de configuración de compilación y plataforma")
 
 2. En el menú **Compilación**, seleccione **Archive for Publishing** (Archivo para publicar).
-3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)** :
+3. Una vez creado el archivo, se mostrará la vista **Archivos**. Haga clic en **Sign and Distribute…** (Firmar y distribuir…) para abrir el Asistente para la publicación.
 
-    ![Vista de archivos](publishing-to-the-app-store-images/archives-m157.png "Vista de archivos")
+
+    ![Captura de pantalla de la ubicación del botón Firmar y distribuir en la vista Archivos.](publishing-to-the-app-store-images/archives-mac.png "Captura de pantalla de la ubicación del botón Firmar y distribuir en la vista Archivos.")
 
     > [!NOTE]
     > De forma predeterminada, la vista de **Archivos** solo muestra los archivos de la solución abierta. Para ver todas las soluciones que tienen archivos, active la casilla **Show all archives** (Mostrar todos los archivos). Es recomendable conservar los archivos antiguos para que la información de depuración que incluyen se puede usar para resolver los símbolos de los informes de bloqueo, si es necesario.
 
-4. Haga clic en **Sign and Distribute…** (Firmar y distribuir…) para abrir el Asistente para la publicación.
-5. Seleccione el canal de distribución del **App Store**. Haga clic en **Siguiente**.
+4. Seleccione el canal de distribución del **App Store**. Haga clic en **Siguiente**.
 
-    ![Selección del canal de distribución](publishing-to-the-app-store-images/distChannel-m157.png "Selección del canal de distribución")
+5. Seleccione **Cargar** como destino. Haga clic en **Siguiente**.
 
 6. En la ventana **Perfil de aprovisionamiento**, seleccione su identidad de firma, la aplicación y el perfil de aprovisionamiento. Haga clic en **Siguiente**.
 
-    ![Selección del perfil de aprovisionamiento](publishing-to-the-app-store-images/provProfileSelect-m157.png "Selección del perfil de aprovisionamiento")
+    ![Captura de pantalla de la página del asistente de perfil de aprovisionamiento en la que se muestra una selección válida del perfil de aprovisionamiento, la aplicación y la identidad de firma.](publishing-to-the-app-store-images/provProfileSelect-mac.png "Captura de pantalla de la página del asistente de perfil de aprovisionamiento en la que se muestra una selección válida del perfil de aprovisionamiento, la aplicación y la identidad de firma.")
 
-7. Compruebe los detalles del paquete y haga clic en **Publicar** para guardar un paquete .ipa para la aplicación:
+7. En la ventana **App Store Connect information** (Información de App Store Connect), seleccione el nombre de usuario de un ID de Apple en el menú y escriba [una contraseña específica de la aplicación](https://support.apple.com/ht204397). Haga clic en **Siguiente**.
 
-    ![Comprobación de los detalles de la aplicación](publishing-to-the-app-store-images/publish-m157.png "Comprobación de los detalles de la aplicación")
+    ![Captura de pantalla de la página del asistente de información de App Store Connect en la que se muestra el nombre de usuario de un ID de Apple seleccionado.](publishing-to-the-app-store-images/connectInfo-mac.png "Captura de pantalla de la página del asistente de información de App Store Connect en la que se muestra el nombre de usuario de un ID de Apple seleccionado.")
 
-8. Una vez que se haya guardado el archivo .ipa, la aplicación está lista para cargarse en iTunes Connect.
-
-    ![Listo para el envío](publishing-to-the-app-store-images/readyToGo-m157.png "Listo para el envío")
-
-9. Haga clic en **Abrir Application Loader** e inicie sesión (tenga en cuenta que debe [crear una contraseña específica de la aplicación](https://support.apple.com/ht204397) para el identificador de Apple).
-
-    > [!NOTE]
-    > Para obtener más información sobre la herramienta, consulte la [documentación de Apple sobre Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
-
-10. Seleccione **Deliver Your App** (Entregar la aplicación) y haga clic en el botón **Elegir**:
-
-    ![Seleccione Deliver Your App (Entregar la aplicación)](publishing-to-the-app-store-images/publishvs01.png "Seleccione Deliver Your App (Entregar la aplicación)")
-
-11. Seleccione el archivo .ipa que ha creado anteriormente y haga clic en el botón **Aceptar**.
-12. Application Loader validará el archivo:
-
-    ![Pantalla de validación](publishing-to-the-app-store-images/publishvs02.png "Pantalla de validación")
-
-13. Haga clic en el botón **Siguiente** y la aplicación se validará en el App Store:
-
-    ![Validación en el App Store](publishing-to-the-app-store-images/publishvs03.png "Validación en el App Store")
-
-14. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
-15. Application Loader le informará cuando el archivo se haya cargado correctamente.
+8. Compruebe los detalles del paquete y haga clic en **Publicar**. Después de seleccionar una ubicación en la que guardar el archivo .ipa, el asistente cargará la aplicación en App Store Connect.
 
     > [!NOTE]
     > Apple puede rechazar aplicaciones con el archivo **iTunesMetadata.plist** incluido en el archivo .ipa, lo que produce un error como el siguiente:

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 31dfcc26121b0683db476b0c4be9a420efe5b66f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771233"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198567"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -144,7 +144,7 @@ Una implementación de acción de desencadenador debe:
 
 - Invalidar el método `Invoke`: se llama a este método cada vez que se cumplen los criterios del desencadenador.
 
-- Opcionalmente, exponer propiedades que se pueden establecer en el código XAML cuando se declara el desencadenador (como `Anchor`, `Scale` y `Length` en este ejemplo).
+- Opcionalmente, exponer propiedades que se pueden establecer en el código XAML cuando se declara el desencadenador. Para obtener un ejemplo de esto, vea la clase `VisualElementPopTriggerAction` en la aplicación de ejemplo que lo acompaña.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -158,7 +158,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-Las propiedades expuestas por la acción de desencadenador se pueden establecer en la declaración de XAML de este modo:
+Después, el desencadenador de eventos se puede usar desde XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">
