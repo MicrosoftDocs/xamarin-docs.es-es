@@ -32,7 +32,7 @@ sections:
           - image:
               src: ~/media/icons/i_desktop-phone.svg
             text: Xamarin.Forms
-            href: ~/get-started/quickstarts/index.md
+            href: ~/get-started/quickstarts/index.yml
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
             text: Android
@@ -57,17 +57,17 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/cross-platform/get-started/index.md
             title: Creación de aplicaciones móviles
-          - href: ~/cross-platform/platform
+          - href: ~/cross-platform/platform/index.md
             html: 'Xamarin es compatible con C#, F# y el motor de plantillas de Razor.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/cross-platform/platform
+              href: ~/cross-platform/platform/index.md
             title: Compatibilidad con lenguajes
-          - href: ~/cross-platform/app-fundamentals/
+          - href: ~/cross-platform/app-fundamentals/index.md
             html: Todo lo que necesita saber para crear aplicaciones.
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/cross-platform/app-fundamentals/
+              href: ~/cross-platform/app-fundamentals/index.md
             title: Uso compartido de código
           - href: ~/cross-platform/deploy-test/performance.md
             html: Directrices sobre la seguridad y el rendimiento de las aplicaciones.
@@ -75,15 +75,15 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
               href: ~/cross-platform/deploy-test/performance.md
             title: Rendimiento y seguridad
-          - href: ~/cross-platform/deploy-test/
+          - href: ~/cross-platform/deploy-test/index.md
             html: Sugerencias de depuración e implementación.
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/cross-platform/deploy-test/
+              href: ~/cross-platform/deploy-test/index.md
             title: Implementación y depuración
-          - href: ~/cross-platform/desktop/
+          - href: ~/cross-platform/desktop/index.md
             html: Guía para desarrolladores de escritorio de .NET interesados en la compilación de aplicaciones móviles.
             image:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: ~/cross-platform/desktop/
+              href: ~/cross-platform/desktop/index.md
             title: Desarrolladores de escritorio

@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
             title: Introducción
-          - href: ~/android/app-fundamentals/
+          - href: ~/android/app-fundamentals/index.md
             html: 'Todo lo que necesita saber para crear aplicaciones Android, por ejemplo, trabajar con archivos, imágenes, bases de datos y mucho más.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/android/app-fundamentals/
+              href: ~/android/app-fundamentals/index.md
             title: Principios de la aplicación
-          - href: ~/android/user-interface
+          - href: ~/android/user-interface/index.md
             html: Obtenga información sobre el conjunto completo de widgets de control de interfaz de usuario disponibles para Android.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/android/user-interface/
+              href: ~/android/user-interface/index.md
             title: Interfaz de usuario
-          - href: ~/android/platform/
+          - href: ~/android/platform/index.md
             html: 'Trabajo con características de la plataforma Android, como la autenticación mediante huellas digitales, y las características más recientes en Android 8.0 Oreo.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/android/platform/
+              href: ~/android/platform/index.md
             title: Características de la plataforma
           - href: ~/essentials/index.md?context=xamarin/android
             html: API multiplataforma para aplicaciones móviles.
@@ -80,29 +80,29 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/android
             title: Xamarin.Essentials
-          - href: ~/android/data-cloud/
+          - href: ~/android/data-cloud/index.md
             html: 'Almacenamiento de datos locales y remotos, recuperación y otros servicios basados en la nube.'
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/android/data-cloud/
+              href: ~/android/data-cloud/index.md
             title: Datos y servicios en la nube
-          - href: ~/android/deploy-test/
+          - href: ~/android/deploy-test/index.md
             html: 'Instrucciones para crear e implementar aplicaciones en Google Play, así como sugerencias para probarlas por adelantado.'
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/android/deploy-test/
+              href: ~/android/deploy-test/index.md
             title: Implementación y prueba
-          - href: ~/android/internals/
+          - href: ~/android/internals/index.md
             html: Información adicional sobre el funcionamiento interno de Xamarin.Android y ayuda con características como la localización y accesibilidad.
             image:
               src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-              href: ~/android/internals/
+              href: ~/android/internals/index.md
             title: Conceptos avanzados y funcionamiento interno
-          - href: ~/android/wear/
+          - href: ~/android/wear/index.md
             html: Creación de aplicaciones para Android Wear.
             image:
               src: ~/media/icons/i_android-wear.svg
-              href: ~/android/wear/
+              href: ~/android/wear/index.md
             title: Android Wear
   - title: Referencia
     items:

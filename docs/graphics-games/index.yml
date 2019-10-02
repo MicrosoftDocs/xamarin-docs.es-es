@@ -12,7 +12,7 @@ abstract:
   menu:
     items:
       - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
-        text: Ejemplos
+        text: Muestras
 sections:
   - title: null
     items:
@@ -45,8 +45,8 @@ sections:
         className: cardsD
         items:
           - title: Xamarin.Forms
-            href: ~/xamarin-forms/index.md
-            html: <p><a href="~/get-started/quickstarts/index.md">Primeros pasos</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Principios de la aplicación</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaz de usuario</a><br /><a href="~/xamarin-forms/platform/index.md">Características de la plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implementación y pruebas</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Datos y Azure Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.yml">Conceptos avanzados y funcionamiento interno</a></p>
+            href: ~/xamarin-forms/index.yml
+            html: <p><a href="~/get-started/quickstarts/index.yml">Primeros pasos</a><br /><a href="~/xamarin-forms/app-fundamentals/index.yml">Principios de la aplicación</a><br /><a href="~/xamarin-forms/user-interface/index.yml">Interfaz de usuario</a><br /><a href="~/xamarin-forms/platform/index.yml">Características de la plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.yml">Implementación y pruebas</a><br /><a href="~/xamarin-forms/xaml/index.yml">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.yml">Datos y Azure Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.yml">Conceptos avanzados y funcionamiento interno</a></p>
           - title: Android
             href: ~/android/index.md
             html: <p><a href="~/android/get-started/index.md">Primeros pasos</a><br /><a href="~/android/app-fundamentals/index.md">Principios de la aplicación</a><br /><a href="~/android/user-interface/index.md">Interfaz de usuario</a><br /><a href="~/android/platform/index.md">Características de la plataforma</a><br /><a href="~/android/deploy-test/index.md">Implementación y pruebas</a><br /><a href="~/android/data-cloud/index.md">Datos y servicios en la nube</a><br /><a href="~/android/internals/index.md">Conceptos avanzados y funcionamiento interno</a></p>
