@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: c0509abcaaa10263c3f0c4c3d19fd765ded521e1
-  ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+  ms.openlocfilehash: e89b094cddbff742489f070e4745530bc8c7d70b
+  ms.sourcegitcommit: fa0e2ff8dd242c6e2da872179993964c9b8a73b4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71326200"
+  ms.lasthandoff: 10/01/2019
+  ms.locfileid: "71717016"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -201,33 +201,31 @@ additionalContent:
     - title: iOS
       links:
       - text: Conceptos básicos sobre aplicaciones
-        url: ~/android/app-fundamentals/index.md
+        url: ~/ios/app-fundamentals/index.md
       - text: Interfaz de usuario
-        url: ~/android/user-interface/index.md
+        url: ~/ios/user-interface/index.md
       - text: Características de la plataforma
-        url: ~/android/platform/index.md
+        url: ~/ios/platform/index.md
       - text: Servicios en la nube de Azure
-        url: ~/android/data-cloud/index.md
+        url: ~/ios/data-cloud/index.md
       - text: Implementación y pruebas
-        url: ~/android/deploy-test/index.md
+        url: ~/ios/deploy-test/index.md
       - text: Conceptos avanzados y funcionamiento interno
-        url: ~/android/internals/index.md
+        url: ~/ios/internals/index.md
       - text: Muestras
         url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
     - title: Mac
       links:
       - text: Conceptos básicos sobre aplicaciones
-        url: ~/android/app-fundamentals/index.md
+        url: ~/mac/app-fundamentals/index.md
       - text: Interfaz de usuario
-        url: ~/android/user-interface/index.md
+        url: ~/mac/user-interface/index.md
       - text: Características de la plataforma
-        url: ~/android/platform/index.md
-      - text: Servicios en la nube de Azure
-        url: ~/android/data-cloud/index.md
+        url: ~/mac/platform/index.md
       - text: Implementación y pruebas
-        url: ~/android/deploy-test/index.md
+        url: ~/mac/deploy-test/index.md
       - text: Conceptos avanzados y funcionamiento interno
-        url: ~/android/internals/index.md
+        url: ~/mac/internals/index.md
       - text: Muestras
         url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
   footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)'
