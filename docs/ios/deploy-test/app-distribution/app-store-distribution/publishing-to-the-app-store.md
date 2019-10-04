@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 9f9504890b12f6a3d8046e98ce537cc0d742f2ed
-ms.sourcegitcommit: 159f250ae7535fca7ab3bc4dc7395dc4cc2af93f
+ms.openlocfilehash: b6fb02697d3df59181750bf6fd7c840129554ac3
+ms.sourcegitcommit: 84d788f7dbabc1c83ac795ed3952d589074fa8e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71278147"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71811183"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -121,9 +121,38 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 15. Haga clic en **Aceptar** para guardar los cambios en las propiedades del proyecto.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
-1. Asegúrese de que Visual Studio 2019 o Visual Studio 2017 están [emparejados con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Asegúrese de que Visual Studio 2019 se haya [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y luego seleccione **Propiedades**.
+3. Vaya a la pestaña **Compilación de iOS** y establezca **Configuración** en **Versión** y **Plataforma** en **iPhone**.
+4. Para compilar con un SDK de iOS específico, selecciónelo en la lista **Versión del SDK**. En caso contrario, deje este valor en **Predeterminado**.
+5. La vinculación reduce el tamaño total de la aplicación, ya que elimina el código no usado. En la mayoría de los casos, la opción **Comportamiento del enlazador** debe establecerse en el valor predeterminado **Vincular solo SDK de marco**. En algunos casos, como cuando se usan bibliotecas de terceros, puede ser necesario establecer este valor en **No vincular** para asegurarse de que no se quita el código necesario. Para obtener más información, vea la guía [Vincular aplicaciones Xamarin.iOS](~/ios/deploy-test/linker.md).
+6. Active **Optimizar imágenes PNG** para reducir aún más el tamaño de la aplicación.
+7. La depuración no debe habilitarse porque hará que la compilación sea innecesariamente grande.
+8. En el caso de iOS 11, seleccione una de las arquitecturas de dispositivo que admite **ARM64**. Para obtener más información sobre la compilación de dispositivos iOS de 64 bits, vea la sección **Habilitar compilaciones de 64 bits de aplicaciones Xamarin.iOS** de la documentación [Consideraciones sobre las plataformas de 32 y 64 bits](~/cross-platform/macios/32-and-64/index.md).
+9. Tal vez le interese usar el compilador **LLVM** para compilar código más rápido y más pequeño, pero esta opción aumenta los tiempos de compilación.
+10. En función de las necesidades de la aplicación, puede que también quiera ajustar el tipo de **Recolección de elementos no utilizados** que se está usando y la configuración de **Internacionalización**.
+
+    Después de establecer las opciones descritas anteriormente, la configuración de compilación debería ser similar al siguiente:
+
+    ![Configuración de compilación de iOS](publishing-to-the-app-store-images/build-w157.png "Configuración de compilación de iOS")
+
+    Consulte también la guía [Mecanismos de compilación de iOS](~/ios/deploy-test/ios-build-mechanics.md), en la que se describe con más detalle la configuración de compilación.
+
+11. Vaya a la pestaña **Firma del lote de iOS**. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone** y de que la opción **Aprovisionamiento manual** está seleccionada.
+12. Establezca **Identidad de firma** en **Distribución (automática)** .
+13. Para **Perfil de aprovisionamiento**, seleccione el perfil de aprovisionamiento del App Store [creado anteriormente](#create-and-install-an-app-store-provisioning-profile).
+
+    Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
+
+    ![Configuración de firma del lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma del lote de iOS")
+
+14. Guarde la configuración de compilación y ciérrela.
+
+# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+
+1. Asegúrese de que Visual Studio 2017 está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y luego seleccione **Propiedades**.
 3. Vaya a la pestaña **Compilación de iOS** y establezca **Configuración** en **Versión** y **Plataforma** en **iPhone**.
 4. Para compilar con un SDK de iOS específico, selecciónelo en la lista **Versión del SDK**. En caso contrario, deje este valor en **Predeterminado**.
@@ -182,7 +211,6 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 2. En el menú **Compilación**, seleccione **Archive for Publishing** (Archivo para publicar).
 3. Una vez creado el archivo, se mostrará la vista **Archivos**. Haga clic en **Sign and Distribute…** (Firmar y distribuir…) para abrir el Asistente para la publicación.
 
-
     ![Captura de pantalla de la ubicación del botón Firmar y distribuir en la vista Archivos.](publishing-to-the-app-store-images/archives-mac.png "Captura de pantalla de la ubicación del botón Firmar y distribuir en la vista Archivos.")
 
     > [!NOTE]
@@ -209,12 +237,42 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
     >
     > Para encontrar una solución a este error, eche un vistazo a [esta publicación en los foros de Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
 > [!NOTE]
-> Visual Studio 2017 no admite actualmente el flujo de trabajo **Archive for Publishing** (Archivo para la publicación) que se encuentra en Visual Studio para Mac.
+> La publicación en App Store se admite en la versión 16.3 de Visual Studio 2019, así como en versiones posteriores.
 
-1. Asegúrese de que Visual Studio 2019 o Visual Studio 2017 están [emparejados con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Asegúrese de que Visual Studio 2019 está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Seleccione **Versión** en la lista desplegable **Configuraciones de soluciones** y **iPhone** en la lista desplegable **Plataformas de solución**.
+
+    ![Captura de pantalla de la barra de herramientas de Visual Studio en la que se muestra la configuración de la solución establecida en Versión, la plataforma de la solución establecida en iPhone y el destino establecido en Dispositivo.](publishing-to-the-app-store-images/chooseConfig-w157.png "Captura de pantalla de la barra de herramientas de Visual Studio en la que se muestra la configuración de la solución establecida en Versión, la plataforma de la solución establecida en iPhone y el destino establecido en Dispositivo.")
+
+3. En el menú **Compilar**, elija **Archivar...** . Se abrirá el **Administrador de archivos** y se iniciará la creación de un archivo.
+
+4. Una vez creado el archivo, haga clic en **Distribuir...** para abrir el asistente para publicación.
+
+    ![Captura de pantalla de la ubicación del botón de distribución en la vista del administrador de archivos.](publishing-to-the-app-store-images/archives-win.png "Captura de pantalla de la ubicación del botón de distribución en la vista del administrador de archivos.")
+
+5. Seleccione el canal de distribución del **App Store**.
+
+6. Seleccione la identidad de firma y el perfil de aprovisionamiento. Haga clic en **Upload to Store** (Cargar en la tienda).
+
+    ![Captura de pantalla del asistente para publicación en la que se muestra la selección de una identidad de firma válida y un perfil de aprovisionamiento.](publishing-to-the-app-store-images/provProfileSelect-win.png "Captura de pantalla del asistente para publicación en la que se muestra la selección de una identidad de firma válida y un perfil de aprovisionamiento.")
+
+7. Escriba el ID de Apple y [una contraseña específica de la aplicación](https://support.apple.com/ht204397). Haga clic en **Aceptar** para iniciar la carga de la aplicación en App Store Connect.
+
+    ![Captura de pantalla de la ventana emergente en la que escribir el ID de Apple y la contraseña específica de la aplicación.](publishing-to-the-app-store-images/connectInfo-win.png "Captura de pantalla de la ventana emergente en la que escribir el ID de Apple y la contraseña específica de la aplicación.")
+
+# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+
+> [!NOTE]
+> Visual Studio 2017 no admite el flujo de trabajo de publicación completa que se encuentra en Visual Studio para Mac y Visual Studio 2019.
+>
+> Los pasos siguientes corresponden a Xcode 10.
+>
+> Todavía puede seguir los pasos que se indican a continuación para crear un archivo .IPA, pero para implementarlo en el App Store con Xcode 11 (que es necesario para la compatibilidad con iOS 13) debe [usar Visual Studio para Mac](?tabs=macos#build-and-submit-your-app).
+
+1. Asegúrese de que Visual Studio 2017 está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Seleccione **Versión** en la lista desplegable **Configuraciones de soluciones** de Visual Studio 2017 y **iPhone** en la lista desplegable **Plataformas de solución**.
 
     ![Selección de configuración de compilación y plataforma](publishing-to-the-app-store-images/chooseConfig-w157.png "Selección de configuración de compilación y plataforma")
@@ -226,6 +284,13 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 4. Para buscar el archivo .ipa en el equipo Windows, haga clic con el botón derecho en el nombre del proyecto de Xamarin.iOS en el **Explorador de soluciones** de Visual Studio 2019 o Visual Studio 2017 y seleccione **Abrir la carpeta en el Explorador de archivos**. Después, en el **Explorador de archivos** de Windows que se acaba de abrir, vaya al subdirectorio **bin/iPhone/Release**. A menos que haya [personalizado la ubicación de salida del archivo .ipa](#customize-the-ipa-location), debería estar en este directorio.
 5. Para ver el archivo .ipa en el host de compilación de Mac, haga clic con el botón derecho en el nombre del proyecto de Xamarin.iOS en el **Explorador de soluciones** de Visual Studio 2019 o Visual Studio 2017 (en Windows) y seleccione **Mostrar archivo IPA en servidor de compilación**. Se abrirá una ventana del **Finder** en el host de compilación de Mac con el archivo .ipa seleccionado.
+
+    > [!TIP]
+    >
+    > Los pasos siguientes solo son válidos si usa Xcode 10 y está creando una aplicación para iOS 12 y versiones anteriores.
+    >
+    > Para implementar en el App Store con Xcode 11 (para iOS 13), debe [usar Visual Studio para Mac](?tabs=macos#build-and-submit-your-app) para compilar y cargar la aplicación. **Application Loader** no estará disponible para Xcode 11.
+
 6. En el host de compilación de Mac, abra el **cargador de aplicaciones**. En Xcode, seleccione **Xcode > Open Developer Tool (Abrir la herramienta para desarrolladores) > Application Loader (Cargador de aplicaciones)** .
 
     > [!NOTE]
@@ -331,4 +396,3 @@ En este artículo se describe cómo configurar, compilar y enviar una aplicació
 - [Configuración de una aplicación en iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Iconos de aplicación en Xamarin.iOS](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Pantallas de inicio para aplicaciones Xamarin.iOS](~/ios/app-fundamentals/images-icons/launch-screens.md)
-- [Documentación de Application Loader (Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)

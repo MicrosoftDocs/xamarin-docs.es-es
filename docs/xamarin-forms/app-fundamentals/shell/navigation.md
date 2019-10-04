@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
+ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888965"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674565"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -302,7 +302,7 @@ La clase `BackButtonBehavior` define las siguientes propiedades que controlan la
 
 - `Command`, de tipo `ICommand`, que se ejecuta cuando se presiona el botón Atrás.
 - `CommandParameter`, de tipo `object`, que es el parámetro que se pasa a `Command`.
-- `IconOveride`, de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), el icono usado para el botón Atrás.
+- `IconOverride`, de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), el icono usado para el botón Atrás.
 - `IsEnabled`, de tipo `boolean`, indica si se ha habilitado el botón Atrás. El valor predeterminado es `true`.
 - `TextOverride`, de tipo `string`, el texto usado para el botón Atrás.
 
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 La propiedad `Command` se establece en `ICommand` para ejecutarse cuando se presiona el botón Atrás, y la propiedad `IconOverride` se establece en el icono que se usa para el botón Atrás:
 
-[![Captura de pantalla de la invalidación de un icono de botón Atrás de Shell en iOS y Android](navigation-images/back-button.png "Invalidación de icono de botón Atrás de Shell")](navigation-images/back-button-large.png#lightbox "Shell back button icon override")
+[![Captura de pantalla de la invalidación de un icono de botón Atrás de Shell en iOS y Android](navigation-images/back-button.png "Invalidación de icono de botón Atrás de Shell")](navigation-images/back-button-large.png#lightbox "Invalidación de icono de botón Atrás de Shell")
 
 ## <a name="related-links"></a>Vínculos relacionados
 
