@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: e30f726cfb783fc47bc09f7590a523eb0e487105
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5992be5963c315c4f93fc4e03c24e3776087d418
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756526"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975800"
 ---
 # <a name="external-storage"></a>Almacenamiento externo
 
@@ -30,9 +30,9 @@ En esta guía se describen los conceptos y las API de Android que son específic
 
 Hay dos tipos diferentes de archivos que una aplicación puede mantener en el almacenamiento externo:
 
-* **Archivos privados** los archivos privadossonarchivosespecíficosdelaaplicación(perosiguensiendodelecturamundialydeescriturainternacional).&ndash; Android espera que los archivos privados se almacenen en un directorio específico del almacenamiento externo. Aunque los archivos se denominan "privados", siguen siendo visibles y accesibles para otras aplicaciones en el dispositivo, no se les ofrece ninguna protección especial por parte de Android.
+* Archivos **privados** &ndash; los archivos privados son archivos específicos de la aplicación (pero siguen siendo de lectura mundial y de escritura internacional). Android espera que los archivos privados se almacenen en un directorio específico del almacenamiento externo. Aunque los archivos se denominan "privados", siguen siendo visibles y accesibles para otras aplicaciones en el dispositivo, no se les ofrece ninguna protección especial por parte de Android.
 
-* Archivos&ndash; públicos: son archivos que no se consideran específicos de la aplicación y están diseñados para ser compartidos libremente.
+* Archivos **públicos** &ndash; son archivos que no se consideran específicos de la aplicación y están diseñados para ser compartidos libremente.
 
 Las diferencias entre estos archivos son principalmente conceptuales. Los archivos privados son privados en el sentido de que se consideran una parte de la aplicación, mientras que los archivos públicos son otros archivos que existen en el almacenamiento externo. Android proporciona dos API diferentes para resolver las rutas de acceso a archivos públicos y privados, pero, de lo contrario, se usan las mismas API de .NET para leer y escribir en estos archivos. Se trata de las mismas API que se describen en la sección sobre [lectura y escritura](~/android/platform/files/index.md#reading-or-writing-to-files-on-internal-storage).
 
@@ -40,69 +40,69 @@ Las diferencias entre estos archivos son principalmente conceptuales. Los archiv
 
 Los archivos externos privados se consideran específicos de una aplicación (similar a los archivos internos), pero se mantienen en el almacenamiento externo por una serie de motivos (por ejemplo, demasiado grandes para el almacenamiento interno). Al igual que los archivos internos, estos archivos se eliminarán cuando el usuario desinstale la aplicación.
 
-La ubicación principal para los archivos externos privados se encuentra llamando al método `Android.Content.Context.GetExternalFilesDir(string type)`. Este método devolverá `Java.IO.File` un objeto que representa el directorio de almacenamiento externo privado para la aplicación. Al `null` pasar a este método, se devolverá la ruta de acceso al directorio de almacenamiento del usuario para la aplicación. Por ejemplo, para una aplicación con el nombre `com.companyname.app`del paquete, el directorio "raíz" de los archivos externos privados sería:
+La ubicación principal para los archivos externos privados se encuentra llamando al método `Android.Content.Context.GetExternalFilesDir(string type)`. Este método devolverá un objeto `Java.IO.File` que representa el directorio de almacenamiento externo privado para la aplicación. Al pasar `null` a este método, se devolverá la ruta de acceso al directorio de almacenamiento del usuario para la aplicación. Por ejemplo, para una aplicación con el nombre de paquete `com.companyname.app`, el directorio "raíz" de los archivos externos privados sería:
 
 ```bash
 /storage/emulated/0/Android/data/com.companyname.app/files/
 ```
 
-Este documento hará referencia al directorio de almacenamiento para los archivos privados en el almacenamiento _externo\_como\_almacenamiento externo privado_.
+Este documento hará referencia al directorio de almacenamiento para los archivos privados en el almacenamiento externo como _Private @ no__t-1EXTERNAL @ no__t-2STORAGE_.
 
-El parámetro de `GetExternalFilesDir()` es una cadena que especifica un _directorio_de la aplicación. Se trata de un directorio diseñado para proporcionar una ubicación estándar para una organización lógica de archivos. Los valores de cadena están disponibles a través de constantes `Android.OS.Environment` en la clase:
+El parámetro de `GetExternalFilesDir()` es una cadena que especifica un _directorio_de la aplicación. Se trata de un directorio diseñado para proporcionar una ubicación estándar para una organización lógica de archivos. Los valores de cadena están disponibles a través de constantes en la clase `Android.OS.Environment`:
 
 | `Android.OS.Environment` | Directorio |
 |-|-|
 | DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
 | DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
 | DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
-| DirectoryDocuments | **_Almacenamiento\_externo\_privado_/Documents** |
+| DirectoryDocuments | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/Documents** |
 | DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
 | DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
-| DirectoryNotifications | **_Almacenamiento\_externo\_privado_/notifications** |
+| DirectoryNotifications | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/notifications** |
 | DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
 | DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
 | DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
 
-En el caso de los dispositivos que tienen varias particiones de almacenamiento externo, cada partición tendrá un directorio destinado a los archivos privados. El método `Android.Content.Context.GetExternalFilesDirs(string type)` devolverá una matriz `Java.IO.Files`de. Cada objeto representa un directorio privado específico de la aplicación en todos los dispositivos de almacenamiento compartido/externo donde la aplicación puede colocar los archivos que posee.
+En el caso de los dispositivos que tienen varias particiones de almacenamiento externo, cada partición tendrá un directorio destinado a los archivos privados. El método `Android.Content.Context.GetExternalFilesDirs(string type)` devolverá una matriz de `Java.IO.Files`. Cada objeto representa un directorio privado específico de la aplicación en todos los dispositivos de almacenamiento compartido/externo donde la aplicación puede colocar los archivos que posee.
 
 > [!IMPORTANT]
-> La ruta de acceso exacta al directorio de almacenamiento privado privado puede variar de un dispositivo a otro y entre versiones de Android. Por este motivo, las aplicaciones no deben codificar de forma rígida la ruta de acceso a este directorio y, en su lugar, usar `Android.Content.Context.GetExternalFilesDir()`las API de Xamarin. Android, como.
+> La ruta de acceso exacta al directorio de almacenamiento externo privado puede variar de un dispositivo a otro y entre versiones de Android. Por este motivo, las aplicaciones no deben codificar de forma rígida la ruta de acceso a este directorio y, en su lugar, usar las API de Xamarin. Android, como `Android.Content.Context.GetExternalFilesDir()`.
 
 ### <a name="public-external-files"></a>Archivos externos públicos
 
-Los archivos públicos son archivos que existen en el almacenamiento externo y que no están almacenados en el directorio que Android asigna para los archivos privados. Los archivos públicos no se eliminarán cuando se desinstale la aplicación. Se debe conceder permiso a las aplicaciones Android para poder leer o escribir archivos públicos. Es posible que los archivos públicos existan en cualquier lugar del almacenamiento externo, pero por Convención Android espera que existan archivos públicos en el directorio identificado por `Android.OS.Environment.ExternalStorageDirectory`la propiedad. Esta propiedad devolverá `Java.IO.File` un objeto que representa el directorio de almacenamiento externo principal. Por ejemplo, `Android.OS.Environment.ExternalStorageDirectory` puede hacer referencia al siguiente directorio:
+Los archivos públicos son archivos que existen en el almacenamiento externo y que no están almacenados en el directorio que Android asigna para los archivos privados. Los archivos públicos no se eliminarán cuando se desinstale la aplicación. Se debe conceder permiso a las aplicaciones Android para poder leer o escribir archivos públicos. Es posible que los archivos públicos existan en cualquier lugar del almacenamiento externo, pero por Convención Android espera que existan archivos públicos en el directorio identificado por la propiedad `Android.OS.Environment.ExternalStorageDirectory`. Esta propiedad devolverá un objeto `Java.IO.File` que representa el directorio principal de almacenamiento externo. Por ejemplo, `Android.OS.Environment.ExternalStorageDirectory` puede hacer referencia al siguiente directorio:
 
 ```bash
 /storage/emulated/0/
 ```
 
-Este documento hará referencia al directorio de almacenamiento de archivos públicos en el almacenamiento externo _como\_almacenamiento\_externo público_.
+Este documento hará referencia al directorio de almacenamiento para los archivos públicos en el almacenamiento externo como _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_.
 
-Android también admite el concepto de directorios de aplicación _en\_el\_almacenamiento externo público_. Estos directorios son exactamente iguales que los directorios de la aplicación `_PRIVATE\_EXTERNAL\_STORAGE_` para y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá `Java.IO.File` un objeto que corresponde a un directorio de aplicación público. El `directoryType` parámetro es un parámetro obligatorio y no puede `null`ser.
+Android también admite el concepto de directorios de aplicación en _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Estos directorios son exactamente iguales que los directorios de la aplicación para `_PRIVATE\_EXTERNAL\_STORAGE_` y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un objeto `Java.IO.File` que corresponde a un directorio de aplicación público. El parámetro `directoryType` es un parámetro obligatorio y no puede ser `null`.
 
-Por ejemplo, al `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` llamar a, se devolverá una cadena que será similar a:
+Por ejemplo, si se llama a `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`, se devolverá una cadena que será similar a:
 
 ```bash
 /storage/emulated/0/Documents
 ```
 
 > [!IMPORTANT]
-> La ruta de acceso exacta al directorio de almacenamiento externo público puede variar entre el dispositivo y el dispositivo y entre las versiones de Android. Por este motivo, las aplicaciones no deben codificar de forma rígida la ruta de acceso a este directorio y, en su lugar, usar `Android.OS.Environment.ExternalStorageDirectory`las API de Xamarin. Android, como.
+> La ruta de acceso exacta al directorio de almacenamiento externo público puede variar entre el dispositivo y el dispositivo y entre las versiones de Android. Por este motivo, las aplicaciones no deben codificar de forma rígida la ruta de acceso a este directorio y, en su lugar, usar las API de Xamarin. Android, como `Android.OS.Environment.ExternalStorageDirectory`.
 
 ## <a name="working-with-external-storage"></a>Trabajar con almacenamiento externo
 
 Una vez que una aplicación de Xamarin. Android ha obtenido la ruta de acceso completa a un archivo, debe utilizar cualquiera de las API estándar de .NET para crear, leer, escribir o eliminar archivos. Esto maximiza la cantidad de código compatible entre plataformas de una aplicación. Sin embargo, antes de intentar acceder a un archivo, una aplicación de Xamarin. Android debe asegurarse de que es posible acceder a ese archivo.
 
-1. **Comprobar el almacenamiento externo** &ndash; En función de la naturaleza del almacenamiento externo, es posible que la aplicación no pueda montarla y utilizarla. Todas las aplicaciones deben comprobar el estado del almacenamiento externo antes de intentar usarlo.
-2. **Realizar una comprobación de permisos en tiempo de ejecución** &ndash; Una aplicación Android debe solicitar permiso del usuario para tener acceso al almacenamiento externo. Esto significa que se debe realizar una solicitud de permiso en tiempo de ejecución antes de cualquier acceso a archivos. Los [permisos de la guía de Xamarin. Android](~/android/app-fundamentals/permissions.md) contienen más detalles sobre los permisos de Android.
+1. **Compruebe el almacenamiento externo** &ndash; en función de la naturaleza del almacenamiento externo, es posible que la aplicación no pueda montarlo y usarlo. Todas las aplicaciones deben comprobar el estado del almacenamiento externo antes de intentar usarlo.
+2. **Realice una comprobación de permiso en tiempo de ejecución** &ndash; una aplicación Android debe solicitar permiso al usuario para tener acceso al almacenamiento externo. Esto significa que se debe realizar una solicitud de permiso en tiempo de ejecución antes de cualquier acceso a archivos. Los [permisos de la guía de Xamarin. Android](~/android/app-fundamentals/permissions.md) contienen más detalles sobre los permisos de Android.
 
 A continuación se explica cada una de estas dos tareas.
 
 ### <a name="verifying-that-external-storage-is-available"></a>Comprobando que el almacenamiento externo está disponible
 
-El primer paso antes de escribir en el almacenamiento externo es comprobar que es legible o grabable. La `Android.OS.Environment.ExternalStorageState` propiedad contiene una cadena que identifica el estado del almacenamiento externo. Esta propiedad devolverá una cadena que representa el estado. Esta tabla es una lista de los `ExternalStorageState` valores que puede `Environment.ExternalStorageState`devolver:
+El primer paso antes de escribir en el almacenamiento externo es comprobar que es legible o grabable. La propiedad `Android.OS.Environment.ExternalStorageState` contiene una cadena que identifica el estado del almacenamiento externo. Esta propiedad devolverá una cadena que representa el estado. Esta tabla es una lista de los valores de `ExternalStorageState` que puede devolver `Environment.ExternalStorageState`:
 
-| ExternalStorageState | DESCRIPCIÓN  |
+| ExternalStorageState | Descripción  |
 |----------------------|---|
 | MediaBadRemoval      | El medio se quitó repentinamente sin que se desmonte correctamente. |
 | MediaChecking        | El medio está presente pero se está llevando a cabo una comprobación del disco.  |
@@ -127,7 +127,7 @@ bool isWriteable = Environment.MediaMounted.Equals(Environment.ExternalStorageSt
 
 Android considera que el acceso al almacenamiento externo es un _permiso peligroso_, lo que normalmente requiere que el usuario conceda su permiso para acceder al recurso. El usuario puede revocar este permiso en cualquier momento.  Esto significa que se debe realizar una solicitud de permiso en tiempo de ejecución antes de cualquier acceso a archivos. A las aplicaciones se les conceden automáticamente permisos para leer y escribir sus propios archivos privados. Es posible que las aplicaciones lean y escriban los archivos privados que pertenecen a otras aplicaciones después de que el usuario [les conceda permisos](~/android/app-fundamentals/permissions.md) .
 
-Todas las aplicaciones de Android deben declarar uno de los dos permisos para el almacenamiento externo en **archivo AndroidManifest. XML** . Para identificar los permisos, se debe agregar uno de `uses-permission` los dos elementos siguientes a **archivo AndroidManifest. XML**:
+Todas las aplicaciones de Android deben declarar uno de los dos permisos para el almacenamiento externo en **archivo AndroidManifest. XML** . Para identificar los permisos, se debe agregar uno de los dos elementos `uses-permission` siguientes a **archivo AndroidManifest. XML**:
 
 ```xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -135,7 +135,7 @@ Todas las aplicaciones de Android deben declarar uno de los dos permisos para el
 ```
 
 > [!NOTE]
-> Si el usuario concede `WRITE_EXTERNAL_STORAGE` `READ_EXTERNAL_STORAGE` , también se concede implícitamente. No es necesario solicitar ambos permisos en **archivo AndroidManifest. XML**.
+> Si el usuario concede `WRITE_EXTERNAL_STORAGE`, también se concederá implícitamente `READ_EXTERNAL_STORAGE`. No es necesario solicitar ambos permisos en **archivo AndroidManifest. XML**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -147,7 +147,7 @@ Los permisos también se pueden agregar mediante la pestaña **manifiesto de And
 
 Los permisos también se pueden agregar mediante la pestaña **manifiesto de Android** del **Panel de propiedades**de la solución:
 
-[![Panel de solución: permisos necesarios para Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Solution Pad: permisos necesarios para Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
@@ -169,7 +169,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Eliminar archivos
 
-Cualquiera de las API C# estándar se puede usar para eliminar un archivo de almacenamiento externo, [`System.IO.File.Delete`](xref:System.IO.File.Delete*)como. También es posible usar las API de Java a costa de portabilidad del código. Por ejemplo:
+Cualquiera de las API C# estándar se puede usar para eliminar un archivo de almacenamiento externo, como [`System.IO.File.Delete`](xref:System.IO.File.Delete*). También es posible usar las API de Java a costa de portabilidad del código. Por ejemplo:
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");
