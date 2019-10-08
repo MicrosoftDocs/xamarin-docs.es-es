@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 71972f13f991bc5ad3ddf3c1c631fa7413290204
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 26068973fd91d5229b7e2108f5df46ae4476ef74
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759905"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997201"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animaciones sencillas en Xamarin.Forms
 
@@ -23,7 +23,7 @@ _La clase ViewExtensions proporciona métodos de extensión que se pueden usar p
 El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase proporciona los siguientes métodos de extensión que pueden usarse para crear animaciones sencillas:
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) anima el [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) y [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) las propiedades de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
-- [`ScaleTo`](xref:Xamarin.Forms.VisualElement.Scale) anima el [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
+- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) anima el [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
 - [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) se aplica un aumento incremental animado o disminución en el [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
 - [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) anima el [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
 - [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) se aplica un aumento incremental animado o disminución en el [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement).
@@ -38,7 +38,7 @@ El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase también incluy
 > [!NOTE]
 > El [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase proporciona un [ `LayoutTo` ](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)) método de extensión. Sin embargo, este método está pensado para usarse diseños para animar las transiciones entre Estados de diseño que contienen el tamaño y posición de los cambios. Por lo tanto, que debe usarse únicamente por [ `Layout` ](xref:Xamarin.Forms.Layout) subclases.
 
-Los métodos de extensión de la animación de la clase [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) son asincrónicos y devuelven un objeto `Task<bool>`. El valor devuelto es `false` si se completa la animación y `true` si esta se cancela. Por lo tanto, los métodos de animación normalmente deben usarse con el operador `await`, lo que permite determinar fácilmente cuándo se ha completado una animación. Además, después se pueden crear animaciones secuenciales con métodos de animación posteriores que se ejecutan después de que se haya completado el método anterior. Para obtener más información, consulte [Animaciones compuestas](#compound).
+Los métodos de extensión de la animación en el [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) clase son asincrónicas y devuelto un `Task<bool>` objeto. El valor devuelto es `false` si se completa la animación, y `true` si se cancela la animación. Por lo tanto, los métodos de animación normalmente deben usarse con el `await` operador, lo que permite determinar fácilmente cuándo se ha completado una animación. Además, a continuación, es posible crear animaciones secuenciales con métodos de animación posteriores que se ejecutan después de que se ha completado el método anterior. Para obtener más información, consulte [compuesta animaciones](#compound).
 
 Si hay un requisito para permitir que una animación completa en segundo plano, el `await` se puede omitir el operador. En este escenario, los métodos de extensión de la animación se devolverá rápidamente después de iniciar la animación, con la animación que se producen en segundo plano. Esta operación puede aprovecharse al crear animaciones compuestas. Para obtener más información, consulte [animaciones compuesto](#composite).
 
@@ -79,13 +79,13 @@ Las capturas de pantalla siguientes muestran el giro relativo en curso en cada p
 
 ### <a name="scaling"></a>Cambiar escala
 
-En el ejemplo de código siguiente se muestra cómo utilizar el [ `ScaleTo` ](xref:Xamarin.Forms.VisualElement.Scale) método se va a animar el [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [ `Image` ](xref:Xamarin.Forms.Image):
+En el ejemplo de código siguiente se muestra cómo utilizar el [ `ScaleTo` ](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método se va a animar el [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [ `Image` ](xref:Xamarin.Forms.Image):
 
 ```csharp
 await image.ScaleTo (2, 2000);
 ```
 
-Este código se anima la [ `Image` ](xref:Xamarin.Forms.Image) instancia mediante el escalamiento vertical a dos veces su tamaño superior a 2 segundos (2.000 milisegundos). El [ `ScaleTo` ](xref:Xamarin.Forms.VisualElement.Scale) método obtiene la actual [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) el valor de propiedad (valor predeterminado de 1) para el inicio de la animación y, a continuación, se escala desde ese valor a su primer argumento (2). Esto tiene el efecto de aumentar el tamaño de la imagen a dos veces su tamaño.
+Este código se anima la [ `Image` ](xref:Xamarin.Forms.Image) instancia mediante el escalamiento vertical a dos veces su tamaño superior a 2 segundos (2.000 milisegundos). El [ `ScaleTo` ](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método obtiene la actual [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) el valor de propiedad (valor predeterminado de 1) para el inicio de la animación y, a continuación, se escala desde ese valor a su primer argumento (2). Esto tiene el efecto de aumentar el tamaño de la imagen a dos veces su tamaño.
 
 Las capturas de pantalla siguientes muestran el escalado en curso en cada plataforma:
 
@@ -106,7 +106,7 @@ Este código se anima la [ `Image` ](xref:Xamarin.Forms.Image) instancia mediant
 
 ### <a name="scaling-and-rotation-with-anchors"></a>Escalado y la rotación con delimitadores
 
-El [ `AnchorX` ](xref:Xamarin.Forms.VisualElement.AnchorX) y [ `AnchorY` ](xref:Xamarin.Forms.VisualElement.AnchorY) propiedades establecen el centro de ajuste de escala o rotación para el [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) y [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedades. Por lo tanto, sus valores también afectan a la [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) y [ `ScaleTo` ](xref:Xamarin.Forms.VisualElement.Scale) métodos.
+El [ `AnchorX` ](xref:Xamarin.Forms.VisualElement.AnchorX) y [ `AnchorY` ](xref:Xamarin.Forms.VisualElement.AnchorY) propiedades establecen el centro de ajuste de escala o rotación para el [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) y [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedades. Por lo tanto, sus valores también afectan a la [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) y [ `ScaleTo` ](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) métodos.
 
 Dado un [ `Image` ](xref:Xamarin.Forms.Image) que se ha colocado en el centro de un diseño, en el ejemplo de código siguiente se muestra la rotación de la imagen en torno al centro del diseño estableciendo su [ `AnchorY` ](xref:Xamarin.Forms.VisualElement.AnchorY) propiedad:
 
@@ -179,7 +179,7 @@ await image.ScaleTo (2, 2000);
 await image.ScaleTo (1, 2000);
 ```
 
-En este ejemplo, el [ `Image` ](xref:Xamarin.Forms.Image) es escalar y girar simultáneamente más de 4 segundos (de 4000 milisegundos). El escalado de la `Image` utiliza dos animaciones secuenciales que se producen al mismo tiempo como la rotación. El [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) método se ejecuta sin un `await` operador y se devuelve inmediatamente, con la primera [ `ScaleTo` ](xref:Xamarin.Forms.VisualElement.Scale) , a continuación, a partir de animación. El `await` operador en la primera `ScaleTo` retrasa la llamada al método el segundo `ScaleTo` hasta la primera llamada a un método `ScaleTo` ha completado la llamada al método. En este momento la `RotateTo` animación es la mitad forma completa y el `Image` estará gira 180 grados. Durante los últimos 2 segundos (2.000 milisegundos), el segundo `ScaleTo` animación y `RotateTo` animación ambos completar.
+En este ejemplo, el [ `Image` ](xref:Xamarin.Forms.Image) es escalar y girar simultáneamente más de 4 segundos (de 4000 milisegundos). El escalado de la `Image` utiliza dos animaciones secuenciales que se producen al mismo tiempo como la rotación. El [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) método se ejecuta sin un `await` operador y se devuelve inmediatamente, con la primera [ `ScaleTo` ](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) , a continuación, a partir de animación. El `await` operador en la primera `ScaleTo` retrasa la llamada al método el segundo `ScaleTo` hasta la primera llamada a un método `ScaleTo` ha completado la llamada al método. En este momento la `RotateTo` animación es la mitad forma completa y el `Image` estará gira 180 grados. Durante los últimos 2 segundos (2.000 milisegundos), el segundo `ScaleTo` animación y `RotateTo` animación ambos completar.
 
 ### <a name="running-multiple-asynchronous-methods-concurrently"></a>Ejecución simultánea de varios métodos asincrónicos
 
@@ -194,7 +194,7 @@ await Task.WhenAny<bool>
 await image.ScaleTo (1, 2000);
 ```
 
-En este ejemplo, el `Task.WhenAny` llamada de método contiene dos tareas. La primera tarea gira la imagen más de 4 segundos (de 4000 milisegundos) y la segunda tarea escala la imagen superior a 2 segundos (2.000 milisegundos). Cuando se completa la segunda tarea, el `Task.WhenAny` se completa la llamada al método. Sin embargo, aunque el [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) método todavía se está ejecutando, el segundo [ `ScaleTo` ](xref:Xamarin.Forms.VisualElement.Scale) método puede comenzar.
+En este ejemplo, el `Task.WhenAny` llamada de método contiene dos tareas. La primera tarea gira la imagen más de 4 segundos (de 4000 milisegundos) y la segunda tarea escala la imagen superior a 2 segundos (2.000 milisegundos). Cuando se completa la segunda tarea, el `Task.WhenAny` se completa la llamada al método. Sin embargo, aunque el [ `RotateTo` ](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) método todavía se está ejecutando, el segundo [ `ScaleTo` ](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método puede comenzar.
 
 El `Task.WhenAll` método se completa cuando se hayan completado todos los métodos en su colección, como se muestra en el ejemplo de código siguiente:
 

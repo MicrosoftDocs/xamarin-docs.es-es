@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5992be5963c315c4f93fc4e03c24e3776087d418
-ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.openlocfilehash: c67f58a4b1886d3f89f7bd1639e1cd687d329869
+ms.sourcegitcommit: 4ff181101d76f048b949c9613b2c72cf02618f8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71975800"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994817"
 ---
 # <a name="external-storage"></a>Almacenamiento externo
 
@@ -78,7 +78,7 @@ Los archivos públicos son archivos que existen en el almacenamiento externo y q
 
 Este documento hará referencia al directorio de almacenamiento para los archivos públicos en el almacenamiento externo como _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_.
 
-Android también admite el concepto de directorios de aplicación en _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Estos directorios son exactamente iguales que los directorios de la aplicación para `_PRIVATE\_EXTERNAL\_STORAGE_` y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un objeto `Java.IO.File` que corresponde a un directorio de aplicación público. El parámetro `directoryType` es un parámetro obligatorio y no puede ser `null`.
+Android también admite el concepto de directorios de aplicación en _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Estos directorios son exactamente iguales que los directorios de la aplicación para `PRIVATE_EXTERNAL_STORAGE` y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un objeto `Java.IO.File` que corresponde a un directorio de aplicación público. El parámetro `directoryType` es un parámetro obligatorio y no puede ser `null`.
 
 Por ejemplo, si se llama a `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`, se devolverá una cadena que será similar a:
 

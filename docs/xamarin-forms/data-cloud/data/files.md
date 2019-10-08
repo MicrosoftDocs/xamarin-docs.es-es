@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760566"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997158"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados._
 
@@ -58,7 +58,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 Estas operaciones se demuestran en la aplicación de ejemplo, donde se incluye una página que guarda y carga texto:
 
-[![Guardar y cargar texto](files-images/saveandload-sml.png "Guardar y cargar archivos en la aplicación")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
+[![Guardar y cargar texto](files-images/saveandload-sml.png "Guardar y cargar archivos en la aplicación")](files-images/saveandload.png#lightbox "Guardar y cargar archivos en la aplicación")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
@@ -68,34 +68,35 @@ Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue u
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Configurar una acción de compilación de recurso incrustado](files-images/vs-embeddedresource-sml.png "Establecer BuildAction como EmbeddedResource")](files-images/vs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
+[Configuración de ![acción de compilación de recursos incrustados](files-images/vs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Archivo de texto insertado en PCL, configurando la acción de compilación del recurso incrustado](files-images/xs-embeddedresource-sml.png "Establecer BuildAction como EmbeddedResource")](files-images/xs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
+[![Archivo de texto incrustado en la biblioteca estándar de .net, configuración de acción de compilación de recursos incrustados](files-images/xs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
 
 -----
 
-`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo que tiene como prefijo el espacio de nombres predeterminado para el proyecto donde se inserta (en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **PCLTextResource.txt**, por lo que el identificador de recurso es `WorkingWithFiles.PCLTextResource.txt`).
+`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource. txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt`.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 string text = "";
-using (var reader = new System.IO.StreamReader (stream)) {
+using (var reader = new System.IO.StreamReader (stream))
+{  
     text = reader.ReadToEnd ();
 }
 ```
 
 Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles), se muestra el texto representado en un control `Label`.
 
- [![Archivo de texto insertado en PCL](files-images/pcltext-sml.png "Archivo de texto insertado en PCL mostrado en la aplicación")](files-images/pcltext.png#lightbox "Embedded Text File in PCL Displayed in App")
+ [![Archivo de texto insertado en la biblioteca estándar de .net](files-images/pcltext-sml.png "archivo de texto incrustado en .net Standard biblioteca que se muestra en la aplicación")](files-images/pcltext.png#lightbox "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")
 
 Cargar y deserializar código XML es igual de sencillo. En el código siguiente, se muestra un archivo XML que se carga y se deserializa desde un recurso y, después, se enlaza a `ListView` para mostrarlo. El archivo XML contiene una matriz de objetos `Monkey` (la clase se define en el código de ejemplo).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
     var serializer = new XmlSerializer(typeof(List<Monkey>));
@@ -105,7 +106,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Archivo XML insertado en PCL, mostrado en ListView](files-images/pclxml-sml.png "Archivo XML insertado en PCL mostrado en ListView")](files-images/pclxml.png#lightbox "Embedded XML File in PCL Displayed in ListView")
+ [![Archivo XML incrustado en la biblioteca estándar de .net, que se muestra en]el(files-images/pclxml-sml.png "archivo XML incrustado de ListView en la biblioteca estándar de .net que se muestra en ListView")](files-images/pclxml.png#lightbox "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -139,9 +140,9 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organización de recursos
 
-En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión**, como `WorkingWithFiles.PCLTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
+En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión**, como `WorkingWithFiles.LibTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder**, los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.PCLTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder**, los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.LibTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 <a name="Debugging_Embedded_Resources" />
 
