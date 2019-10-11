@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: e89b094cddbff742489f070e4745530bc8c7d70b
-  ms.sourcegitcommit: fa0e2ff8dd242c6e2da872179993964c9b8a73b4
+  ms.openlocfilehash: ced31e2802ab7d0550069b0c96a91b014a33f59d
+  ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/01/2019
-  ms.locfileid: "71717016"
+  ms.lasthandoff: 10/08/2019
+  ms.locfileid: "72032516"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -138,7 +138,7 @@ additionalContent:
       url: ~/xamarin-forms/platform/index.yml
     - title: Xamarin.Essentials
       summary: API multiplataforma para características de dispositivo comunes.
-      url: ~/essentials/platform-feature-support.md
+      url: ~/essentials/index.md
     - title: Acceso a un servicio web de REST
       summary: Comparta código mediante tecnologías de control de versiones como Git y TFVC.
       url: ~/xamarin-forms/data-cloud/web-services/rest.md

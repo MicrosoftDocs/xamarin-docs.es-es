@@ -200,6 +200,7 @@
 ### [Barra de progreso](user-interface/progressbar.md)
 ### [Barra de búsqueda](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
+### [Pantalla de presentación](user-interface/splashscreen.md)
 ### [Control de incremento](user-interface/stepper.md)
 ### [Estilos](user-interface/styles/index.md)
 #### [Aplicación de estilos para aplicaciones Xamarin.Forms con estilos XAML](user-interface/styles/xaml/index.md)

@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759543"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032583"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Dibujar un círculo Simple en SkiaSharp
 
@@ -26,7 +26,7 @@ El [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamari
 
 ![](circle-images/circleexample.png "Un círculo azul destacado en rojo")
 
-El [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva de la clase de página `ContentPage` y contiene dos `using` directivas para los espacios de nombres de SkiaSharp:
+El [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva de la clase de página `ContentPage` y contiene dos `using` directivas para los espacios de nombres de SkiaSharp:
 
 ```csharp
 using SkiaSharp;
@@ -143,7 +143,7 @@ Esta vez, el `DrawCircle` llamada rellena el círculo con las nuevas propiedades
 
 Este es el programa que se ejecuta en la plataforma Universal de Windows, iOS y Android:
 
-[![](circle-images/simplecircle-small.png "Captura de pantalla de la página de círculo Simple triple")](circle-images/simplecircle-large.png#lightbox "Triple captura de pantalla de la página de círculo Simple")
+[![](circle-images/simplecircle-small.png "Captura de pantalla triple de la página círculo simple")](circle-images/simplecircle-large.png#lightbox "Captura de pantalla triple de la página círculo simple")
 
 Al ejecutar el programa, puede activar el teléfono o el simulador lateralmente para ver cómo se vuelve a dibujar el gráfico. Cada vez que el gráfico debe volver a dibujar, la `PaintSurface` se llama al controlador de eventos nuevo.
 
