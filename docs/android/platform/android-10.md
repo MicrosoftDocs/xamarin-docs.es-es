@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 293fc8e3f8965e3109a0a549897dd23c34c46917
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: df9fa43d2071d273104edafbe6b880a97afb3f96
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198466"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273143"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -78,7 +78,7 @@ Al crear un proyecto de Android, debe configurar las opciones de versión para q
 
 ### <a name="configure-a-device-or-emulator"></a>Configurar un dispositivo o emulador
 
-Si usa un dispositivo físico, como un píxel, puede descargar la actualización de Android 10 si va `System` a la  >  `System update`  >  `Check for update` en la configuración del teléfono. Si prefiere que el dispositivo parpadee, consulte las instrucciones sobre la intermitencia de una [imagen de fábrica](https://developers.google.com/android/ota) o una [imagen de OTA](https://developers.google.com/android/ota) en el dispositivo.
+Si usa un dispositivo físico, como un píxel, puede descargar la actualización de Android 10 yendo al `System` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 en la configuración del teléfono. Si prefiere que el dispositivo parpadee, consulte las instrucciones sobre la intermitencia de una [imagen de fábrica](https://developers.google.com/android/images) o una [imagen de OTA](https://developers.google.com/android/ota) en el dispositivo.
 
 Si usa un emulador, cree un dispositivo virtual para el nivel de API 29 y seleccione una imagen basada en x86. Para obtener información sobre el uso de la Android Device Manager para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con la Android Device Manager.](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-manager) Para obtener información acerca del uso del Android Emulator para probar y depurar, consulte [depuración en el Android Emulator.](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
@@ -88,29 +88,29 @@ Android 10 presenta una variedad de características nuevas. Algunas de estas nu
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Mejore su aplicación con características y API de Android 10
 
-Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las [nuevas características y API](https://developer.android.com/preview/api-overview.html) que puede usar. Estas son algunas de las características principales para empezar a trabajar con.
+Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las [nuevas características y api](https://developer.android.com/preview/api-overview.html)@no__t-clientes 1 que puede usar. Estas son algunas de las características principales para empezar a trabajar con.
 
 Estas características se recomiendan para todas las aplicaciones:
 
-- **Tema oscuro:**  garantiza una experiencia coherente para los usuarios que habilitan el tema oscuro en todo el sistema mediante la adición de un [tema](https://developer.android.com/preview/features/darktheme) oscuro o la habilitación de [Force oscuro](https://developer.android.com/preview/features/darktheme#force_dark).
+- **Tema oscuro:** @no__t 1Ensure una experiencia coherente para los usuarios que habilitan el tema oscuro en todo el sistema mediante la adición de un [tema oscuro](https://developer.android.com/preview/features/darktheme) or habilitar [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark).
 
 ![Tema oscuro](~/android/platform/android-10-images/darktheme.png)
 
-- **Admita la [navegación](https://developer.android.com/preview/features/gesturalnav)**  de gestural en su aplicación pasando de un lado a perímetro y asegurándose de que los gestos personalizados son complementarios a los movimientos de navegación del sistema.
+- **Compatibilidad con la [navegación gestural](https://developer.android.com/preview/features/gesturalnav)**  in la aplicación pasando de un lado a perímetro y asegurándose de que los gestos personalizados son complementarios a los movimientos de navegación del sistema.
 
 ![Navegación por gestos](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Optimizar para foldables:**  ofrezca experiencias de vanguardia a EDGE en los dispositivos innovadores actuales mediante la [optimización de foldables](https://developer.android.com/preview/features/foldables).
+- **Optimize for foldables:**  Deliver experiencias de vanguardia a EDGE en los dispositivos innovadores actuales mediante la [optimización de foldables](https://developer.android.com/preview/features/foldables).
 
 ![Doblado](~/android/platform/android-10-images/foldable.png)
 
 Se recomiendan estas características si es pertinente para su aplicación:
 
-- **Notificaciones más interactivas:**  si las notificaciones incluyen mensajes, habilite  [las respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions)para atraer a los usuarios y permitirles tomar medidas al instante.
-- **Mejor biometría:**  si usa la autenticación biométrica, vaya a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la mejor manera de admitir la autenticación mediante huellas digitales en dispositivos modernos.
-- **Grabación enriquecida:**  para admitir la grabación de subtítulos o juegos, habilite la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
-- **Códecs mejores:**  para aplicaciones multimedia, pruebe [AV1](https://en.wikipedia.org/wiki/AV1) para streaming de vídeo y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) para obtener un vídeo de alto rango dinámico. Para la transmisión por secuencias de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, hay disponible una  [API MIDI nativa](https://developer.android.com/preview/features/midi).
-- **Mejores API de red:**  si la aplicación administra dispositivos IOT a través de Wi-Fi, pruebe las nuevas [API](https://developer.android.com/preview/features#peer2peer) de conexión de red para funciones como la configuración, descarga o impresión.
+- **Notificaciones más interactivas:**  SI las notificaciones incluyen mensajes, habilitan [las respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) To invitan a los usuarios y les permiten tomar medidas al instante.
+- **Mejor biometría:**  Si se usa la autenticación biométrica, se mueve a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la mejor manera de admitir la autenticación mediante huellas digitales en dispositivos modernos.
+- **Grabación enriquecida:**  to admite la grabación de subtítulos o juegos, habilita la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
+- **Códecs mejores:** aplicaciones multimedia  Para, pruebe el streaming de vídeo de [AV1](https://en.wikipedia.org/wiki/AV1) for y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) for un vídeo de alto nivel dinámico. Para el streaming de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, una [API MIDI nativa](https://developer.android.com/preview/features/midi) is disponible.
+- **Mejores API de red:**  SI la aplicación administra dispositivos IOT a través de Wi-Fi, pruebe las nuevas [API de conexión de red](https://developer.android.com/preview/features#peer2peer) for funciones como la configuración, descarga o impresión.
 
 Estas son solo algunas de las muchas características y API nuevas de Android 10. Para verlos todos, visite el [sitio de Android 10 para desarrolladores](https://developer.android.com/about/versions/10/highlights).
 
@@ -121,7 +121,7 @@ Cuando la versión de Android de destino se establece en el nivel de API 29, hay
 - [Para garantizar la estabilidad y la compatibilidad de la aplicación, la plataforma Android ahora restringe las interfaces que no son de SDK que puede usar la aplicación en Android 10](https://developer.android.com/about/versions/10/behavior-changes-10#non-sdk-restrictions).
 - La [memoria compartida ha cambiado](https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory).
 - [Tiempo de ejecución de Android & corrección del AOT](https://developer.android.com/about/versions/10/behavior-changes-10#system-only-oat).
-- [Los permisos para los intentos de pantalla completa `USE_FULL_SCREEN_INTENT`deben solicitar ](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
+- [Los permisos para los intentos de pantalla completa deben solicitar `USE_FULL_SCREEN_INTENT`](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
 - [Compatibilidad con foldables](https://developer.android.com/about/versions/10/behavior-changes-10#foldables).
 
 ## <a name="summary"></a>Resumen

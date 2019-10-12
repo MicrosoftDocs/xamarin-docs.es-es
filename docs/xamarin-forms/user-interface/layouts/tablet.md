@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 87d99c62f20e6cfd23605d1917a577ac0d95038f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772457"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273112"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
 
@@ -42,7 +42,7 @@ Para proporcionar una experiencia de inicio agradable y asegurarse de que se uti
 Antes de iOS 9, todas las aplicaciones requerían la pantalla completa en el dispositivo, pero algunos iPad ahora pueden realizar varias [tareas de pantalla dividida](~/ios/platform/multitasking.md).
 Esto significa que la aplicación podría ocupar simplemente una columna delgada en el lateral de la pantalla, el 50% del ancho de la pantalla o toda la pantalla.
 
-[ejemplo de pantalla dividida de iPad ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "ejemplo de pantalla dividida de iPad")
+[![](tablet-images/ipad-sml.png "Ejemplo de pantalla dividida de iPad")](tablet-images/ipad.png#lightbox "Ejemplo de pantalla dividida de iPad")
 
 La funcionalidad de pantalla dividida significa que debe diseñar la aplicación para que funcione bien con tan solo 320 píxeles de ancho o hasta 1366 píxeles de ancho.
 
@@ -59,7 +59,7 @@ Para admitir tabletas y equipos de escritorio que ejecuten Windows, deberá usar
 
 Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y escritorios de Windows a dimensiones arbitrarias, además de ejecutarse en pantalla completa.
 
-[Ejemplo de pantalla dividida de Windows ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
+[![](tablet-images/splitscreen-sml.png "Ejemplo de pantalla dividida de Windows")](tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
 
 <a name="optimize" />
 
@@ -69,7 +69,7 @@ Puede ajustar la interfaz de usuario de Xamarin. Forms en función de si se usa 
 
 ### <a name="deviceidiom"></a>Device.Idiom
 
-Puede usar la [`Device`](~/xamarin-forms/platform/device.md) clase para cambiar el comportamiento de la aplicación o la interfaz de usuario. Mediante la `Device.Idiom` enumeración puede
+Puede usar la clase [`Device`](~/xamarin-forms/platform/device.md) para cambiar el comportamiento de la aplicación o la interfaz de usuario. Con la enumeración `Device.Idiom`, puede
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone)
@@ -84,11 +84,11 @@ Este enfoque se puede expandir para realizar cambios significativos en los dise�
 
 ### <a name="leveraging-masterdetailpage"></a>Aprovechar MasterDetailPage
 
-Es ideal para pantallas de mayor tamaño, especialmente en el iPad donde [`UISplitViewController`](xref:UIKit.UISplitViewController) usa para proporcionar una experiencia de iOS nativa. [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
+El [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) es ideal para pantallas de mayor tamaño, especialmente en el iPad donde usa el [`UISplitViewController`](xref:UIKit.UISplitViewController) para proporcionar una experiencia de iOS nativa.
 
-Revise [esta entrada de blog de Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) para ver cómo puede adaptar la interfaz de usuario para que los teléfonos usen un diseño y las `MasterDetailPage`pantallas más grandes puedan usar otro (con).
+Revise [esta entrada de blog de Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver cómo puede adaptar la interfaz de usuario para que los teléfonos usen un diseño y las pantallas más grandes puedan usar otro (con el `MasterDetailPage`).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Blog de Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+- [Blog de Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 - [Ejemplo de mis compradores](https://github.com/jamesmontemagno/myshoppe)
