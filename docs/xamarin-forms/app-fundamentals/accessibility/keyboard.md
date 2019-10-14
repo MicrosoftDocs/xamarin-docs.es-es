@@ -1,18 +1,18 @@
 ---
 title: Accesibilidad del teclado
-description: En lugar de usar la secuencia de tabulación predeterminada, a veces es necesario ajustar la accesibilidad de la interfaz de usuario mediante la especificación de la secuencia de tabulación con una combinación de las propiedades IsTapStop y TabIndex.
+description: En lugar de usar la secuencia de tabulación predeterminada, a veces es necesario ajustar la accesibilidad de la interfaz de usuario mediante la especificación de la secuencia de tabulación con una combinación de las propiedades IsTabStop y TabIndex.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b8c6ed9e803b8dec05b2279ed93f956ed11a1c07
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651061"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997108"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
@@ -121,11 +121,11 @@ Aquí, el orden de tabulación está basado en columnas. Por lo tanto, al presio
 
 Además de establecer el orden de tabulación de los controles, puede ser necesario excluir los controles del orden de tabulación. Una manera de conseguirlo es estableciendo la propiedad [`IsEnabled`](xref:Xamarin.Forms.VisualElement) de los controles en `false`, ya que los controles deshabilitados se excluyen del orden de tabulación.
 
-Sin embargo, puede ser necesario excluir los controles del orden de tabulación incluso cuando no están deshabilitados. Esto puede lograrse con la propiedad `VisualElement.IsTapStop`, que indica si un elemento [`VisualElement`](xref:Xamarin.Forms.VisualElement) se incluye en la navegación por tabulación. Su valor predeterminado es `true`, y cuando su valor es `false`, la infraestructura de navegación mediante tabulación omite el control, independientemente de si se ha definido un `TabIndex`.
+Sin embargo, puede ser necesario excluir los controles del orden de tabulación incluso cuando no están deshabilitados. Esto puede lograrse con la propiedad `VisualElement.IsTabStop`, que indica si un elemento [`VisualElement`](xref:Xamarin.Forms.VisualElement) se incluye en la navegación por tabulación. Su valor predeterminado es `true`, y cuando su valor es `false`, la infraestructura de navegación mediante tabulación omite el control, independientemente de si se ha definido un `TabIndex`.
 
 ## <a name="supported-controls"></a>Controles admitidos
 
-Las propiedades `TabIndex` y `IsTapStop` se admiten en los siguientes controles, que aceptan entradas de teclado en una o varias plataformas:
+Las propiedades `TabIndex` y `IsTabStop` se admiten en los siguientes controles, que aceptan entradas de teclado en una o varias plataformas:
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
