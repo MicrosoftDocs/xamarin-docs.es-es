@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 2a47876b7b53cf557014c772333e651146afe53f
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 020b8208dfbfd7594d152a7b6e32f7e41f974c2f
+ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106010"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72303263"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Recarga activa de XAML para Xamarin. Forms (versión preliminar)
 
@@ -35,9 +35,9 @@ Xamarin.Forms | 4,1 o superior
 
 No se requiere ninguna instalación o configuración adicional para usar la recarga activa de XAML. Está integrado en Visual Studio y puede habilitarse en la configuración del IDE. Una vez habilitada, puede empezar a usar la recarga activa de XAML mediante la depuración de la aplicación en un emulador, un simulador o un dispositivo físico. Actualmente, la recarga activa de XAML solo funciona durante la depuración en iOS o Android.
 
-En Windows, la recarga en caliente de XAML se puede habilitar activando la casilla **Habilitar la recarga activa de Xamarin** en **herramientas** > **Opciones** > **Xamarin** > **Hot Reload**.
+En Windows, la recarga activa de XAML se puede habilitar activando la casilla **Habilitar recarga activa de Xamarin** en **herramientas** > **opciones** > **Xamarin** > **recargan en caliente**.
 
-En un equipo Mac, la recarga activa de XAML se puede habilitar activando la casilla **Habilitar la recarga activa de Xamarin** en los proyectos de**preferencias** > de **Visual Studio** > **proyectos** > de la**recarga activa de Xamarin**.
+En un equipo Mac, la recarga activa de XAML se puede habilitar activando la casilla de verificación **Habilitar la recarga activa de Xamarin** en **Visual Studio** > **Preferences** > **proyectos** >  la**recarga activa de Xamarin**.
 
 ## <a name="resilient-reloading"></a>Recarga resistente
 
@@ -46,9 +46,9 @@ Si realiza un cambio que no se puede volver a cargar la recarga activa de XAML, 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
 - No se pueden agregar, quitar ni cambiar el nombre de archivos o paquetes NuGet durante una sesión de recarga activa de XAML. Si agrega o quita un archivo o un paquete de NuGet, vuelva a compilar y volver a implementar la aplicación para seguir usando la recarga activa de XAML.
-- Establezca el enlazador en **vincular ninguno** para obtener la mejor experiencia. La configuración de **Link SDK solo** funciona la mayor parte del tiempo, pero puede producir un error en ciertos casos.
+- Establezca el enlazador en **no vincular** para obtener la mejor experiencia. La configuración de **Link SDK solo** funciona la mayor parte del tiempo, pero puede producir un error en ciertos casos.
 - La depuración en un iPhone físico requiere que el intérprete use la recarga activa de XAML. Agregue **--interprete** al campo **argumentos de Mtouch adicionales** en la configuración de compilación de iOS para usar la recarga activa de XAML.
-- Las referencias creadas mediante la asignación de un control a otro campo o propiedad utilizando su `x:Name` valor no se volverán a cargar.
+- Las referencias creadas mediante la asignación de un control a otro campo o propiedad mediante su valor `x:Name` no se volverán a cargar.
 - La actualización de la jerarquía visual de la aplicación de Shell en **AppShell. Xaml** puede producir problemas al mantener el estado de la aplicación. Vuelva a compilar la aplicación para continuar con la recarga.
 - La recarga activa de XAML no puede C# volver a cargar el código, incluidos los controladores de eventos, los controles personalizados, el código subyacente de la página y las clases adicionales.
 
@@ -65,4 +65,4 @@ Si forma parte de la versión preliminar privada, la extensión de recarga activ
 - Si no ocurre nada al guardar el archivo XAML, asegúrese de que la recarga activa está habilitada en el IDE.
 - Si realiza la depuración en un iPhone físico y la aplicación deja de responder, compruebe que el intérprete está habilitado. Para activarla, agregue **--interprete** al campo **argumentos de Mtouch adicionales** en la configuración de compilación de iOS.
 
-Para notificar un error, use la herramienta de comentarios en el menú **ayuda** > **Enviar comentarios** > **notificar un problema** de Windows y el menú **ayuda** > **notificar un problema** en un equipo Mac.
+Para notificar un error, use la herramienta de comentarios del menú **ayuda** > **Enviar comentarios** > **informar de un problema** en Windows y el menú **ayuda** >  informar de un**problema** en un equipo Mac.
