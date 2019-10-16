@@ -18,7 +18,7 @@ ms.locfileid: "69888862"
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
-_Integrar un servicio web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web de RESTful desde una aplicación de Xamarin.Forms._
+_Integrar un servicio web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web RESTful desde una aplicación de Xamarin.Forms._
 
 La transferencia de estado representacional (REST) es un estilo de arquitectura para compilar servicios web. Las solicitudes REST se realizan a través de HTTP con los mismos verbos HTTP que los exploradores web usan para recuperar las páginas web y para enviar datos a los servidores. Los verbos son:
 
@@ -54,7 +54,9 @@ El servicio REST está escrito con ASP.NET Core y proporciona las siguientes ope
 |Operación|Método HTTP|URI relativo|Parámetros|
 |--- |--- |--- |--- |
 |Obtener una lista de tareas pendientes|GET|/api/todoitems/|
-|Crear una nueva tarea pendiente|EXPONER|/api/todoitems/|TodoItem en formato JSON|
+
+|Crear una nueva tarea pendiente|POST|/api/todoitems/|TodoItem en formato JSON|
+
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|TodoItem en formato JSON|
 |Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
 
@@ -72,7 +74,9 @@ config.Routes.MapHttpRoute(
 
 La tabla de enrutamiento contiene una plantilla de ruta y, cuando el marco de la API web recibe una solicitud HTTP, intenta hacer coincidir el URI con la plantilla de ruta de la tabla de enrutamiento. Si no se encuentra una ruta coincidente, el cliente recibe un error 404 (no encontrado). Si se encuentra una ruta coincidente, la API web selecciona el controlador y la acción de la siguiente forma:
 
-- Para buscar el controlador, la API web agrega "controller" en el valor de la variable *{controller}* .
+
+- Para buscar el controlador, la API web agrega "controller" en el valor de la variable *{controller}*.
+
 - Para buscar la acción, la API web observa el método HTTP y examina las acciones del controlador que tengan el mismo método HTTP como un atributo.
 - La variable de marcador de posición *{id}* se asigna a un parámetro de acción.
 
@@ -157,9 +161,11 @@ La instancia `TodoItem` se convierte en una carga JSON para enviar al servicio w
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **201 (CREADO)** : la solicitud ha dado como resultado la creación de un nuevo recurso antes de que se enviara la respuesta.
-- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
-- **409 (CONFLICTO)** : la solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
+
+- **201 (CREADO)**: la solicitud ha dado como resultado la creación de un nuevo recurso antes de que se enviara la respuesta.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **409 (CONFLICTO)**: la solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
+
 
 ### <a name="updating-data"></a>Actualizar datos
 
@@ -174,13 +180,15 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-El funcionamiento del método `PutAsync` es idéntico al del método `PostAsync` que se usa para crear datos en el servicio web, pero varían las posibles respuestas enviadas desde el servicio web. Sin embargo, se diferencian las posibles respuestas enviadas desde el servicio web.
+
+El funcionamiento del método `PutAsync` es idéntico al del método `PostAsync` que se usa para crear datos en el servicio web, pero varían las posibles respuestas enviadas desde el servicio web.
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (SIN CONTENIDO)** : la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
-- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
-- **404 (NO ENCONTRADO)** : el recurso solicitado no existe en el servidor.
+- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
+
 
 ### <a name="deleting-data"></a>Eliminar datos
 
@@ -202,9 +210,11 @@ public async Task DeleteTodoItemAsync (string id)
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (SIN CONTENIDO)** : la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
-- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
-- **404 (NO ENCONTRADO)** : el recurso solicitado no existe en el servidor.
+
+- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
+
 
 ## <a name="related-links"></a>Vínculos relacionados
 
