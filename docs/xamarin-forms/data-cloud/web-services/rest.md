@@ -72,7 +72,7 @@ config.Routes.MapHttpRoute(
 
 La tabla de enrutamiento contiene una plantilla de ruta y, cuando el marco de la API web recibe una solicitud HTTP, intenta hacer coincidir el URI con la plantilla de ruta de la tabla de enrutamiento. Si no se encuentra una ruta coincidente, el cliente recibe un error 404 (no encontrado). Si se encuentra una ruta coincidente, la API web selecciona el controlador y la acción de la siguiente forma:
 
-- Para buscar el controlador, Web API agrega "controller" en el valor de la *{controller}* variable.
+- Para buscar el controlador, la API web agrega "controller" en el valor de la variable *{controller}* .
 - Para buscar la acción, la API web observa el método HTTP y examina las acciones del controlador que tengan el mismo método HTTP como un atributo.
 - La variable de marcador de posición *{id}* se asigna a un parámetro de acción.
 
@@ -157,9 +157,9 @@ La instancia `TodoItem` se convierte en una carga JSON para enviar al servicio w
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **201 (CREADO)**: la solicitud ha dado como resultado la creación de un nuevo recurso antes de que se enviara la respuesta.
-- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
-- **409 (CONFLICTO)**: la solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
+- **201 (CREADO)** : la solicitud ha dado como resultado la creación de un nuevo recurso antes de que se enviara la respuesta.
+- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
+- **409 (CONFLICTO)** : la solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
 
 ### <a name="updating-data"></a>Actualizar datos
 
@@ -174,13 +174,13 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-La operación de la `PutAsync` es idéntico al método el `PostAsync` método que se usa para crear datos en el servicio web. Sin embargo, se diferencian las posibles respuestas enviadas desde el servicio web.
+El funcionamiento del método `PutAsync` es idéntico al del método `PostAsync` que se usa para crear datos en el servicio web, pero varían las posibles respuestas enviadas desde el servicio web. Sin embargo, se diferencian las posibles respuestas enviadas desde el servicio web.
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
-- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
-- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
+- **204 (SIN CONTENIDO)** : la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)** : el recurso solicitado no existe en el servidor.
 
 ### <a name="deleting-data"></a>Eliminar datos
 
@@ -202,9 +202,9 @@ public async Task DeleteTodoItemAsync (string id)
 
 El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
-- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
-- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
+- **204 (SIN CONTENIDO)** : la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)** : el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)** : el recurso solicitado no existe en el servidor.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

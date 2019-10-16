@@ -101,6 +101,7 @@
 #### [Reducir](app-fundamentals/gestures/pinch.md)
 #### [Movimiento panorámico](app-fundamentals/gestures/pan.md)
 #### [Deslizar rápidamente](app-fundamentals/gestures/swipe.md)
+### [Notificaciones locales](app-fundamentals/local-notifications.md)
 ### [Localización](app-fundamentals/localization/index.md)
 #### [Localización de cadenas e imágenes](app-fundamentals/localization/text.md)
 #### [Localización de derecha a izquierda](app-fundamentals/localization/right-to-left.md)
