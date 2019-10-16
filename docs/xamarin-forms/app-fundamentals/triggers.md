@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198567"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997155"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -278,6 +278,11 @@ En la parte inferior de las pantallas, el botón **Iniciar sesión** permanece i
 
 Otra forma de implementar cambios cuando se produce un desencadenador es mediante la incorporación de colecciones `EnterActions` y `ExitActions` y la especificación de implementaciones `TriggerAction<T>`.
 
+La colección [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) se usa para definir un elemento `IList` de objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) que se invocará cuando se cumpla la condición del desencadenador. La colección [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) se usa para definir un elemento `IList` de objetos `TriggerAction` que se invocará cuando ya no se cumpla la condición del desencadenador.
+
+> [!NOTE]
+> La clase [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) omite los objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definidos en las colecciones `EnterActions` y `ExitActions`.    
+
 Puede proporcionar *tanto* `EnterActions` como `ExitActions`, así como `Setter` en un desencadenador, pero tenga en cuenta que se llama a los elementos `Setter` de inmediato (no se espera a que se completen `EnterAction` o `ExitAction`). También puede hacer todo en el código y no usar elementos `Setter` en absoluto.
 
 ```xaml
@@ -292,7 +297,7 @@ Puede proporcionar *tanto* `EnterActions` como `ExitActions`, así como `Setter`
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -327,8 +332,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-Nota: `EnterActions` y `ExitActions` se omiten en **desencadenadores de eventos**.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

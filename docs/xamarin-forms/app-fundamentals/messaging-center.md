@@ -6,19 +6,21 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2019
-ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 10/08/2019
+ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
+ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821013"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72170963"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 El patrón de publicación y suscripción es un patrón de mensajería en el que los publicadores envían mensajes sin tener conocimiento de los destinatarios, que se conocen como suscriptores. Del mismo modo, los suscriptores escuchan mensajes específicos, sin tener conocimiento de ningún publicador.
+
+Los eventos de .NET implementan el patrón de publicación y suscripción, y son el enfoque más sencillo para una capa de comunicación entre los componentes si no se requiere el acoplamiento flexible, como sucede con un control y la página que lo contiene. Pero las duraciones del publicador y del suscriptor están acopladas por referencias a objetos, y el tipo de suscriptor debe tener una referencia al tipo de publicador. Esto puede generar problemas de administración de memoria, en especial cuando hay objetos de corta duración que se suscriben a un evento de un objeto estático o de larga duración. Si no se quita el controlador de eventos, el suscriptor se mantendrá activo mediante la referencia a él en el publicador y esto impedirá o retrasará la recolección de elementos no utilizados del suscriptor.
 
 La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener ninguna referencia mutua, lo que ayuda a reducir su interdependencia.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: 150a4e3c1deafbabea892d5adb786374c3d97d12
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ec44e32c3eb0d0d436a497ddb14c86af1de8d703
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769586"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273165"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -85,7 +85,7 @@ Un archivo de tarjeta es realmente un archivo ZIP con una extensión **.pkpass**
 
 - **pass.json**: obligatorio. Contiene toda la información de la tarjeta.
 - **manifest.json**: obligatorio. Contiene los hashes de SHA1 de cada archivo de la tarjeta, excepto el archivo de firma y este archivo (manifest.json).
-- **Signature** : requerido. Se crea firmando `manifest.json` el archivo con el certificado generado en el portal de aprovisionamiento de iOS.
+- **Signature** : requerido. Se crea firmando el archivo `manifest.json` con el certificado generado en el portal de aprovisionamiento de iOS.
 - **logo. png** : opcional.
 - **background. png** : opcional.
 - **Icon. png** : opcional.
@@ -101,11 +101,11 @@ JSON es el formato porque normalmente se crean pasadas en un servidor, lo que si
 
 - **teamIdentifier** : esta vincula todos los pasos que genere en la cuenta de App Store. Este valor es visible en el portal de aprovisionamiento de iOS.
 - **passTypeIdentifier** : Regístrese en el portal de aprovisionamiento para agrupar las pasadas (si genera más de un tipo). Por ejemplo, una cafetería podría crear un tipo de pase de tarjeta de tienda para permitir que sus clientes obtengan créditos de fidelidad, pero también un tipo de paso de cupón independiente para crear y distribuir cupones de descuento. Esa misma cafetería podría incluso contener eventos de música en directo y emitir pasadas de incidencias de eventos para ellos.
-- **SerialNumber** : una cadena única dentro de `passTypeidentifier` este. El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
+- **SerialNumber** : una cadena única dentro de este `passTypeidentifier`. El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
 
 Hay muchas otras claves JSON en cada tarjeta; se muestra un ejemplo de ellas a continuación:
 
-``` 
+```
 {
    "passTypeIdentifier":"com.xamarin.passkitdoc.banana",  //Type Identifier (iOS Provisioning Portal)
    "formatVersion":1,                                     //Always 1 (for now)
@@ -192,7 +192,7 @@ Se puede actualizar a través de la inserciones o a través de la API de PassKit
 
 ### <a name="localization"></a>Localización
 
-Traducir un paso en varios idiomas es similar a la localización de una aplicación de iOS: crear directorios específicos de idioma `.lproj` con la extensión y colocar los elementos localizados dentro de. Las traducciones de texto deben introducirse `pass.strings` en un archivo, mientras que las imágenes localizadas deben tener el mismo nombre que la imagen que reemplazan en la raíz del paso.
+La conversión de un paso en varios idiomas es similar a la localización de una aplicación de iOS: cree directorios específicos de idioma con la extensión `.lproj` y coloque los elementos localizados dentro de. Las traducciones de texto deben introducirse en un archivo `pass.strings`, mientras que las imágenes localizadas deben tener el mismo nombre que la imagen que reemplazan en la raíz del paso.
 
 ## <a name="security"></a>Seguridad
 
@@ -200,8 +200,8 @@ Las tarjetas se firman con un certificado privado que genera en el Portal de apr
 
 1. Calcule un hash SHA1 para cada archivo en el directorio de la tarjeta (no incluya el archivo `manifest.json` ni el archivo `signature`; ninguno de ellos debe existir en esta fase de todos modos).
 1. Escriba `manifest.json` como una lista de clave/valor JSON de cada nombre de archivo con su hash.
-1. Utilice el certificado para firmar el `manifest.json` archivo y escribir el resultado en un archivo denominado `signature` .
-1. Comprimir todo y dar al archivo resultante una `.pkpass` extensión de archivo.
+1. Use el certificado para firmar el archivo `manifest.json` y escriba el resultado en un archivo denominado `signature`.
+1. COMPRIMIR todo y dar al archivo resultante una extensión de archivo `.pkpass`.
 
 Dado que la clave privada se necesita para firmar la tarjeta, este proceso solo debe realizarse en un servidor seguro que controle. NO distribuya las claves para probar y generar tarjetas en una aplicación.
 
@@ -222,9 +222,9 @@ Para crear un Pass Type ID (identificador del tipo de tarjeta), realice lo sigui
 
 El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta) para que se admitan todos los _tipos_ diferentes de tarjeta. El Pass ID (identificador de tarjeta) o el Pass Type identifier (identificador del tipo de tarjeta) crea un identificador único de la tarjeta. Usaremos este identificador para vincular la tarjeta con su cuenta de desarrollador mediante un certificado.
 
-1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione **+** el botón para crear un nuevo tipo de paso: [![](passkit-images/passid.png "Crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
+1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione el botón **+** para crear un nuevo tipo de paso: [![](passkit-images/passid.png "Crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
 
-2. Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo de `pass.` paso deben comenzar con la `pass.com.xamarin.coupon.banana` cadena en este ejemplo, se usa: [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
+2. Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo de paso deben comenzar con la cadena `pass.` en este ejemplo usamos `pass.com.xamarin.coupon.banana`: [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
 3. Confirme el ID. de paso presionando el botón **registrar** .
 
@@ -265,14 +265,14 @@ Hay algunos archivos de origen en el [código de ejemplo](https://docs.microsoft
 
 Abra Pass. JSON y edite el archivo JSON. Debe actualizar al menos el `passTypeIdentifier` y `teamIdentifer` para que coincida con su cuenta de desarrollador de Apple.
 
-```csharp
+```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
 "teamIdentifier" : "?????????",
 ```
 
-A continuación, debe calcular los valores hash de cada archivo y crear `manifest.json` el archivo. Tendrá un aspecto similar al siguiente cuando haya terminado:
+A continuación, debe calcular los valores hash de cada archivo y crear el archivo `manifest.json`. Tendrá un aspecto similar al siguiente cuando haya terminado:
 
-```csharp
+```json
 {
   "icon@2x.png" : "30806547dcc6ee084a90210e2dc042d5d7d92a41",
   "icon.png" : "87e9ffb203beb2cce5de76113f8e9503aeab6ecc",
@@ -290,11 +290,11 @@ Descargue **Wallet Seed Support Materials** (Materiales de soporte técnico de i
 
 #### <a name="testing"></a>Pruebas
 
-Si va a examinar la salida de estas herramientas (estableciendo el nombre de archivo en. zip y abriéndolo), verá los siguientes archivos (tenga en cuenta la adición de los `manifest.json` archivos y `signature` ):
+Si va a examinar la salida de estas herramientas (estableciendo el nombre de archivo en. zip y abriéndolo), verá los siguientes archivos (tenga en cuenta la adición de los archivos `manifest.json` y `signature`):
 
  [![](passkit-images/image19.png "Examinar la salida de estas herramientas")](passkit-images/image19.png#lightbox)
 
-Una vez que haya firmado, comprimido y cambiado el nombre del archivo (por ejemplo, a `BananaCoupon.pkpass`) puede arrastrarlo al simulador para probarlo o enviarlo por correo electrónico para que lo recupere en un dispositivo real. Debería ver una pantalla para **Agregar** el paso, de la siguiente manera:
+Una vez que haya firmado, comprimido y cambiado el nombre del archivo (por ejemplo, para `BananaCoupon.pkpass`), puede arrastrarlo al simulador para probarlo o enviarlo por correo electrónico para recuperarlo en un dispositivo real. Debería ver una pantalla para **Agregar** el paso, de la siguiente manera:
 
  [![](passkit-images/image20.png "Agregar la pantalla de paso")](passkit-images/image20.png#lightbox)
 
@@ -381,7 +381,7 @@ La opción predeterminada es que la aplicación permita todos los tipos de tarje
 
 Haga doble clic en el archivo **contitles. plist** para abrir el archivo de origen XML.
 
-Para agregar el derecho de Wallet, establezca la propiedad `Passbook Identifiers` en en la lista desplegable, que establecerá automáticamente el **tipo** `Array`. A continuación, establezca el **valor** de `$(TeamIdentifierPrefix)*`cadena en:
+Para agregar el derecho de Wallet, establezca la **propiedad** en `Passbook Identifiers` en la lista desplegable, que establecerá automáticamente el **tipo** `Array`. A continuación, establezca el **valor** de cadena en `$(TeamIdentifierPrefix)*`:
 
 ![](passkit-images/image33.png "Habilitar derechos de Wallet")
 
@@ -395,11 +395,11 @@ Donde `pass.$(CFBundleIdentifier)` es el identificador de la tarjeta que se ha c
 
 ### <a name="debugging"></a>Depuración
 
-Si tiene problemas para implementar la aplicación, compruebe que está usando el **Perfil de aprovisionamiento** correcto y `Entitlements.plist` que está seleccionado como el archivo de **derechos personalizados** en las opciones de **firma de paquete de iPhone** .
+Si tiene problemas para implementar la aplicación, compruebe que está usando el **Perfil de aprovisionamiento** correcto y que el `Entitlements.plist` está seleccionado como el archivo de **derechos personalizados** en las opciones de firma del **paquete de iPhone** .
 
 Si experimenta este error al implementar:
 
-```csharp
+```
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 
@@ -509,11 +509,11 @@ PKPass no es mutable, por lo que no puede actualizar los objetos de tarjeta en e
 
 La creación del archivo de tarjeta debe realizarse en un servidor porque las tarjetas deben firmarse con un certificado que se debe mantener privado y seguro.
 
-Una vez que se ha generado un archivo de paso actualizado `Replace` , use el método para sobrescribir los datos antiguos en el dispositivo.
+Una vez que se ha generado un archivo de paso actualizado, use el método `Replace` para sobrescribir los datos antiguos en el dispositivo.
 
 ### <a name="display-a-pass-for-scanning"></a>Mostrar un paso para el examen
 
-Como se indicó anteriormente, solo Wallet puede mostrar un paso para la digitalización. Se puede mostrar un paso mediante el `OpenUrl` método, como se muestra A continuación:
+Como se indicó anteriormente, solo Wallet puede mostrar un paso para la digitalización. Se puede mostrar un paso mediante el método `OpenUrl`, como se muestra a continuación:
 
  `UIApplication.SharedApplication.OpenUrl (p.PassUrl);`
 
