@@ -20,32 +20,32 @@ ms.locfileid: "69888862"
 
 _Integrar un servicio web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web RESTful desde una aplicación de Xamarin.Forms._
 
-Representational State Transfer (REST) es un estilo de arquitectura para la creación de servicios web. Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos HTTP que los exploradores web que se usan para recuperar las páginas web y para enviar datos a los servidores. Los verbos son:
+La transferencia de estado representacional (REST) es un estilo de arquitectura para compilar servicios web. Las solicitudes REST se realizan a través de HTTP con los mismos verbos HTTP que los exploradores web usan para recuperar las páginas web y para enviar datos a los servidores. Los verbos son:
 
-- **GET**: Esta operación se usa para recuperar datos desde el servicio web.
-- **POST**: Esta operación se usa para crear un nuevo elemento de datos en el servicio web.
-- **PUT**: Esta operación se usa para actualizar un elemento de datos en el servicio web.
-- **PATCH**: Esta operación se usa para actualizar un elemento de datos en el servicio web con la descripción de un conjunto de instrucciones sobre cómo se debe modificar el elemento. Este verbo no se utiliza en la aplicación de ejemplo.
-- **DELETE**: Esta operación se usa para eliminar un elemento de datos en el servicio web.
+- **GET**: esta operación se usa para recuperar datos desde el servicio web.
+- **POST**: esta operación se usa para crear un nuevo elemento de datos en el servicio web.
+- **PUT**: esta operación se usa para actualizar un elemento de datos en el servicio web.
+- **PATCH**: esta operación se usa para actualizar un elemento de datos en el servicio web con la descripción de un conjunto de instrucciones sobre cómo se debe modificar el elemento. Este verbo no se usa en la aplicación de ejemplo.
+- **DELETE**: esta operación se usa para eliminar un elemento de datos en el servicio web.
 
-Las APIs de los servicios web que se adhieren a REST se denominan APIs RESTful y se definen utilizando:
+Las API del servicio web que se adhieren a REST se conocen como API RESTful y se definen mediante:
 
 - Un URI base.
 - Métodos HTTP, como GET, POST, PUT, PATCH o DELETE.
-- Un tipo de medio para los datos, como JavaScript Object Notation (JSON).
+- Un tipo de medio para los datos, como la notación de objetos JavaScript (JSON).
 
-Los servicios web RESTful normalmente utilizan mensajes JSON para devolver datos al cliente. JSON es un formato de intercambio de datos basado en texto que genera cargas compactas, lo que reduce los requisitos de ancho de banda al enviar datos. La aplicación de ejemplo usa la biblioteca de código abierto [NewtonSoft JSON.NET](http://www.newtonsoft.com/json) para serializar y deserializar los mensajes.
+Los servicios web RESTful suelen usar mensajes JSON para devolver datos al cliente. JSON es un formato de intercambio de datos basado en texto que genera cargas compactas, lo que reduce los requisitos de ancho de banda al enviar datos. La aplicación de ejemplo usa la [biblioteca de código abierto JSON.NET de NewtonSoft](http://www.newtonsoft.com/json) para serializar y deserializar los mensajes.
 
 La simplicidad de REST ha ayudado a convertirlo en el método principal para acceder a servicios web en aplicaciones móviles.
 
-Cuando se ejecute la aplicación de ejemplo, se conectará a un servicio REST alojado localmente, como se muestra en la siguiente captura de pantalla:
+Cuando se ejecute la aplicación de ejemplo, se conectará a un servicio REST hospedado localmente, como se muestra en la siguiente captura de pantalla:
 
 ![](rest-images/portal.png "Aplicación de ejemplo")
 
 > [!NOTE]
-> En iOS 9 y versiones posteriores, App Transport Security (ATS) exige conexiones seguras entre los recursos de Internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación, evitando así la divulgación accidental de información confidencial. Puesto que ATS está habilitada de forma predeterminada en las aplicaciones creadas para iOS 9, todas las conexiones estará sujeto a los requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, fallarán con una excepción.
+> En iOS 9 y versiones posteriores, App Transport Security (ATS) exige conexiones seguras entre los recursos de Internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación, lo que impide la divulgación accidental de información confidencial. Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estarán sujetas a los requisitos de seguridad de ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
 >
->Se puede optar por desactivar ATS si no es posible usar el protocolo **HTTPS** y la comunicación segura para los recursos de Internet. Esto puede lograrse mediante la actualización del archivo **Info.plist** en la aplicación. Para obtener más información, consulte [App Transport Security](~/ios/app-fundamentals/ats.md).
+>Se puede optar por no usar ATS si no se puede utilizar el protocolo **HTTPS** ni proteger la comunicación de los recursos de Internet. Esto puede lograrse al actualizar el archivo **Info.plist** de la aplicación. Para obtener más información, consulte [Seguridad de transporte de aplicaciones](~/ios/app-fundamentals/ats.md).
 
 ## <a name="consuming-the-web-service"></a>Consumo del servicio Web
 
@@ -58,9 +58,9 @@ El servicio REST está escrito con ASP.NET Core y proporciona las siguientes ope
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|TodoItem en formato JSON|
 |Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
 
-La mayoría de los URI incluyen el ID de `TodoItem` en la ruta. Por ejemplo, para eliminar un `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, el cliente envía una solicitud DELETE `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. Para obtener más información acerca del modelo de datos usado en la aplicación de ejemplo, vea [el modelado de datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
+La mayoría de los URI incluyen el identificador `TodoItem` en la ruta de acceso. Por ejemplo, para eliminar un `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, el cliente envía una solicitud DELETE a `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. Para obtener más información sobre el modelo de datos usado en la aplicación de ejemplo, vea [Modelado de los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-Cuando el marco de la WEB API recibe una solicitud, enruta la solicitud a una acción. Estas acciones son simplemente métodos públicos en la clase `TodoItemsController`. El marco de trabajo usa una tabla de enrutamiento para determinar qué acción va a invocar en respuesta a una solicitud, que se muestra en el ejemplo de código siguiente:
+Cuando el marco de la API web recibe una solicitud, enruta dicha solicitud a una acción. Estas acciones son simplemente métodos públicos de la clase `TodoItemsController`. El marco usa una tabla de enrutamiento para determinar qué acción va a invocar como respuesta a una solicitud, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
 config.Routes.MapHttpRoute(
@@ -70,21 +70,21 @@ config.Routes.MapHttpRoute(
 );
 ```
 
-La tabla de enrutamiento contiene una plantilla de ruta, y cuando el marco de la Web API recibe una solicitud HTTP, intenta coincidir el URI con la plantilla de ruta en la tabla de enrutamiento. Si no se puede encontrar una ruta coincidente, el cliente recibe un error 404 (no encontrado). Si se encuentra una ruta coincidente, la Web API selecciona el controlador y la acción de la siguiente siguiente:
+La tabla de enrutamiento contiene una plantilla de ruta y, cuando el marco de la API web recibe una solicitud HTTP, intenta hacer coincidir el URI con la plantilla de ruta de la tabla de enrutamiento. Si no se encuentra una ruta coincidente, el cliente recibe un error 404 (no encontrado). Si se encuentra una ruta coincidente, la API web selecciona el controlador y la acción de la siguiente forma:
 
-- Para buscar el controlador, la Web API agrega "controller" en el valor de la variable *{controller}*.
-- Para buscar la acción, la Web API examina el método HTTP y examina las acciones del controlador que coincidan con el mismo método HTTP como un atributo.
+- Para buscar el controlador, la API web agrega "controller" en el valor de la variable *{controller}*.
+- Para buscar la acción, la API web observa el método HTTP y examina las acciones del controlador que tengan el mismo método HTTP como un atributo.
 - La variable de marcador de posición *{id}* se asigna a un parámetro de acción.
 
-El servicio REST usa la autenticación básica. Para obtener más información, consulte [autenticar un servicio web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md). Para obtener más información sobre el enrutamiento de ASP.NET Web API, consulte [Enrutamiento de ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) en el sitio web de ASP.NET. Para obtener más información acerca de cómo crear el servicio REST usando ASP.NET Core, consulte [crear servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/).
+El servicio REST usa la autenticación básica. Para obtener más información, consulte [Autenticación de un servicio web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md). Para obtener más información sobre el enrutamiento de ASP.NET Web API, consulte [Enrutamiento de ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) en el sitio web de ASP.NET. Para obtener más información sobre cómo compilar el servicio REST mediante ASP.NET Core, consulte [Crear servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/).
 
-La clase `HttpClient` se utiliza para enviar y recibir solicitudes a través de HTTP. Proporciona funcionalidad para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por URI. Cada solicitud se envía como una operación asincrónica. Para obtener más información acerca de las operaciones asincrónicas, consulte [Información general del soporte asíncrono](~/cross-platform/platform/async.md).
+La clase `HttpClient` se usa para enviar y recibir solicitudes a través de HTTP. Proporciona funcionalidad para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado con un URI. Cada solicitud se envía como una operación asincrónica. Para obtener más información sobre las operaciones asincrónicas, vea [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 
-La clase `HttpResponseMessage` representa un mensaje de respuesta HTTP recibido del servicio web después de realizar una solicitud HTTP. Contiene información acerca de la respuesta, incluido el código de estado, los encabezados y cualquier cuerpo. El clase `HttpContent` representa el cuerpo HTTP y los encabezados de contenido, como el `Content-Type` y `Content-Encoding`. El contenido se puede leer utilizando cualquiera de los métodos `ReadAs`, como `ReadAsStringAsync` y `ReadAsByteArrayAsync`, dependiendo del formato de los datos.
+La clase `HttpResponseMessage` representa un mensaje de respuesta HTTP recibido del servicio web después de realizar una solicitud HTTP. Contiene información sobre la respuesta, como el código de estado, los encabezados y cualquier cuerpo. La clase `HttpContent` representa el cuerpo HTTP y los encabezados de contenido, como `Content-Type` y `Content-Encoding`. El contenido se puede leer con cualquiera de los métodos `ReadAs`, como `ReadAsStringAsync` y `ReadAsByteArrayAsync`, en función del formato de los datos.
 
 ### <a name="creating-the-httpclient-object"></a>Crear el objeto HTTPClient
 
-La instancia `HttpClient` se declara a nivel de clase para que el objeto esté durante el tiempo que la aplicación necesite realizar solicitudes HTTP, como se muestra en el siguiente código de ejemplo:
+La instancia `HttpClient` se declara en el nivel de clase para que el objeto permanezca durante el tiempo que la aplicación necesite realizar solicitudes HTTP, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class RestService : IRestService
@@ -100,9 +100,9 @@ public class RestService : IRestService
 }
 ```
 
-### <a name="retrieving-data"></a>Obtener datos
+### <a name="retrieving-data"></a>Recuperar datos
 
-El método `HttpClient.GetAsync` se utiliza para enviar la solicitud de tipo GET al servicio web especificado por el identificador URI y luego recibe la respuesta del servicio web, como se muestra en el siguiente código de ejemplo:
+El método `HttpClient.GetAsync` se usa para enviar la solicitud GET al servicio web especificado por el URI y, después, recibir la respuesta del servicio web, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -120,13 +120,13 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se realizó correctamente o no. Para esta operación, el servicio REST envía el código de estado HTTP 200 (OK) en la respuesta, lo indica que la solicitud se realizó correctamente y que la información solicitada está en la respuesta.
+El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Para esta operación, el servicio REST envía el código de estado HTTP 200 (correcto) en la respuesta, lo que indica que la solicitud se ha realizado correctamente y que la información solicitada está en la respuesta.
 
-Si la operación HTTP se realizó correctamente, se lee el contenido de la respuesta para su visualización. La propiedad `HttpResponseMessage.Content` representa el contenido de la respuesta HTTP y el método `HttpContent.ReadAsStringAsync` escribe asincrónicamente el contenido HTTP en una variable de tipo `string`. Este contenido, a continuación, se convierte de JSON a una instancia `List` de `TodoItem`.
+Si la operación HTTP se ha realizado correctamente, se lee el contenido de la respuesta para su visualización. La propiedad `HttpResponseMessage.Content` representa el contenido de la respuesta HTTP y el método `HttpContent.ReadAsStringAsync` escribe asincrónicamente el contenido HTTP en una cadena. Después, este contenido se convierte de JSON a un objeto `List` de instancias de `TodoItem`.
 
 ### <a name="creating-data"></a>Creación de datos
 
-El método `HttpClient.PostAsync` se utiliza para enviar la solicitud de tipo POST al servicio web especificado por el identificador URI y luego recibe la respuesta del servicio web, como se muestra en el siguiente código de ejemplo:
+El método `HttpClient.PostAsync` se usa para enviar la solicitud POST al servicio web especificado por el URI y, después, para recibir la respuesta del servicio web, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -153,17 +153,17 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-La instancia `TodoItem` se convierte en un objeto serializado JSON para enviar al servicio web. Esta objeto serializado se inserta en el cuerpo del contenido HTTP que se enviará al servicio web antes de realizar la solicitud con el método `PostAsync`.
+La instancia `TodoItem` se convierte en una carga JSON para enviar al servicio web. Esta carga se inserta después en el cuerpo del contenido HTTP que se enviará al servicio web antes de realizar la solicitud con el método `PostAsync`.
 
-El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se realizó correctamente o no. Las respuestas comunes para esta operación son:
+El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **201 (CREATED)**: La solicitud dio como resultado la creación de un nuevo recurso antes de enviar la respuesta.
-- **400 (BAD REQUEST)**: La solicitud no es entendida por el servidor.
-- **409 (CONFLICT)**: La solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
+- **201 (CREADO)**: la solicitud ha dado como resultado la creación de un nuevo recurso antes de que se enviara la respuesta.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **409 (CONFLICTO)**: la solicitud no se pudo llevar a cabo debido a un conflicto en el servidor.
 
 ### <a name="updating-data"></a>Actualizar datos
 
-El método `HttpClient.PutAsync` se utiliza para enviar la solicitud de tipo PUT al servicio web especificado por el identificador URI y luego recibe la respuesta del servicio web, como se muestra en el siguiente código de ejemplo:
+El método `HttpClient.PutAsync` se usa para enviar la solicitud PUT al servicio web especificado por el URI y, después, recibir la respuesta del servicio web, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -174,17 +174,17 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-El funcionamiento del método `PutAsync` es idéntico al método `PostAsync` que se usa para crear datos en el servicio web. Sin embargo, se diferencian las posibles respuestas enviadas desde el servicio web.
+El funcionamiento del método `PutAsync` es idéntico al del método `PostAsync` que se usa para crear datos en el servicio web, pero varían las posibles respuestas enviadas desde el servicio web.
 
-El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se realizó correctamente o no. Las respuestas comunes para esta operación son:
+El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (NO CONTENT)**: La solicitud se ha procesado correctamente y la respuesta está en blanco intencionalmente.
-- **400 (BAD REQUEST)**: El servidor no entiende la solicitud.
-- **404 (NOT FOUND)**: El recurso solicitado no existe en el servidor.
+- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
 
 ### <a name="deleting-data"></a>Eliminar datos
 
-El método `HttpClient.DeleteAsync` se utiliza para enviar la solicitud de tipo DELETE al servicio web especificado por el identificador URI y luego recibe la respuesta del servicio web, como se muestra en el siguiente código de ejemplo:
+El método `HttpClient.DeleteAsync` se usa para enviar la solicitud DELETE al servicio web especificado por el URI y, después, recibir la respuesta del servicio web, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
@@ -200,11 +200,11 @@ public async Task DeleteTodoItemAsync (string id)
 }
 ```
 
-El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se realizó correctamente o no. Las respuestas comunes para esta operación son:
+El servicio REST envía un código de estado HTTP en la propiedad `HttpResponseMessage.IsSuccessStatusCode` para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
-- **204 (NO CONTENT)**: La solicitud se ha procesado correctamente y la respuesta está en blanco intencionalmente.
-- **400 (BAD REQUEST)**: El servidor no entiende la solicitud.
-- **404 (NOT FOUND)**: El recurso solicitado no existe en el servidor.
+- **204 (SIN CONTENIDO)**: la solicitud se ha procesado correctamente y la respuesta está en blanco intencionadamente.
+- **400 (SOLICITUD INCORRECTA)**: el servidor no entiende la solicitud.
+- **404 (NO ENCONTRADO)**: el recurso solicitado no existe en el servidor.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
