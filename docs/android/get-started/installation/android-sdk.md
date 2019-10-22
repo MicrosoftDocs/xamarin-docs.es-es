@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: da0a441be9cd07af456b1600155151e48d44162c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758059"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273157"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuración del SDK de Android para Xamarin.Android
 
@@ -45,7 +45,7 @@ El Administrador de Android SDK de Xamarin también necesita disponer de Java De
 
 - Si está desarrollando contenido específicamente para el nivel de API 23 o uno anterior, puede continuar usando [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-- Si usa la versión preliminar 5 de Visual Studio 15.8 o una posterior, puede probar a usar la [distribución OpenJDK Mobile de Microsoft](openjdk.md) (actualmente en versión preliminar) en lugar de JDK 8.
+- Si usa la versión preliminar 5 de Visual Studio 15.8 o una posterior, puede probar a usar la [distribución OpenJDK Mobile de Microsoft](openjdk.md) en lugar de JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android no admite JDK 9.
@@ -137,7 +137,7 @@ El Administrador de Android SDK de Xamarin también necesita disponer de Java De
 
 - Si está desarrollando contenido específicamente para el nivel de API 23 o uno anterior, puede continuar usando [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-- Si usa Visual Studio para Mac 7.7 o versiones posteriores, puede probar a usar la [distribución OpenJDK Mobile de Microsoft](openjdk.md) (actualmente en versión preliminar) en lugar de JDK 8.
+- Si usa Visual Studio para Mac 7.7 o versiones posteriores, puede probar a usar la [distribución OpenJDK Mobile de Microsoft](openjdk.md) en lugar de JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android no admite JDK 9.

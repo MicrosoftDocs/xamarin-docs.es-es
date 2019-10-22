@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ecc4686e9966de7a184730589c44a951e4daddb2
+ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771908"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72424863"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área circular en un mapa
 
@@ -229,7 +229,6 @@ namespace MapOverlay.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 circle = formsMap.Circle;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -250,7 +249,7 @@ namespace MapOverlay.Droid
 }
 ```
 
-El método `OnElementChanged` llama al método `MapView.GetMapAsync`, que obtiene el `GoogleMap` subyacente asociado a la vista, siempre que el representador personalizado se adjunte a un nuevo elemento de Xamarin.Forms. Una vez la instancia de `GoogleMap` está disponible, se invoca el método `OnMapReady`, en que el círculo se crea mediante la instancia de un objeto `CircleOptions` que especifica el centro del círculo y su radio en metros. A continuación, se llama al método `NativeMap.AddCircle` para agregar el círculo al mapa.
+El método `OnElementChanged` recupera los datos de círculo personalizados, siempre que el representador personalizado esté asociado a un nuevo elemento de Xamarin.Forms. Una vez la instancia de `GoogleMap` está disponible, se invoca el método `OnMapReady`, en que el círculo se crea mediante la instancia de un objeto `CircleOptions` que especifica el centro del círculo y su radio en metros. A continuación, se llama al método `NativeMap.AddCircle` para agregar el círculo al mapa.
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creación de un representador personalizado en la Plataforma universal de Windows
 
