@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 202ce8d674a39b06fd1b07460dff4bf573062592
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70291412"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabajar con indicadores de progreso de tvOS en Xamarin
@@ -77,8 +77,8 @@ La manera más sencilla de trabajar con un indicador de progreso en una aplicaci
 
 2. Arrastre un **indicador de actividad** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
-    ![](progress-indicators-images/activity01-vs.png
-    "Indicador de actividad de un indicador de actividad")
+    ![Un indicador de actividad](progress-indicators-images/activity01-vs.png
+    "Un indicador de actividad")
 
 3. En la pestaña **Widget** del **Explorador de propiedades**, puede ajustar varias propiedades del indicador de actividad, como su **estilo**, **comportamiento**y **nombre**: 
 
@@ -106,7 +106,7 @@ Para obtener más información sobre cómo trabajar con guiones gráficos, vea n
 
 Como se indicó anteriormente, los indicadores de actividad deben mostrarse cuando la aplicación ejecuta un proceso largo de longitud indeterminada.
 
-En cualquier momento, puede ver si un indicador de actividad se anima comprobando su `IsAnimating` propiedad. Si la `HidesWhenStopped` propiedad es `true`, el indicador de actividad se ocultará automáticamente cuando se detenga su animación.
+En cualquier momento, puede ver si un indicador de actividad se anima comprobando su propiedad `IsAnimating`. Si la propiedad `HidesWhenStopped` es `true`, el indicador de actividad se ocultará automáticamente cuando se detenga su animación.
 
 Puede usar el siguiente código para iniciar la animación: 
 
@@ -127,7 +127,7 @@ ActivityIndicator.StopAnimating();
 
 Una vez más, se debe usar una barra de progreso cada vez que la aplicación ejecute una tarea de ejecución prolongada de una duración conocida. 
 
-La `Progress` propiedad se usa para establecer la cantidad de la tarea que se ha completado del 0% al 100% (de 0,0 a 1,0). Utilice la `ProgressTintColor` propiedad para establecer el color de la barra cantidad completada y `TrackTintColor` la propiedad para establecer el color de fondo (cantidad incompleta).
+La propiedad `Progress` se usa para establecer la cantidad de la tarea que se ha completado del 0% al 100% (de 0,0 a 1,0). Use la propiedad `ProgressTintColor` para establecer el color de la barra cantidad completada y la propiedad `TrackTintColor` para establecer el color de fondo (cantidad incompleta).
 
 ## <a name="summary"></a>Resumen
 

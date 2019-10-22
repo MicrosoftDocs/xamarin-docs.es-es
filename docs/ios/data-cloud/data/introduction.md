@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70767019"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introducción al almacenamiento de datos en aplicaciones de Xamarin. iOS
 
 ## <a name="when-to-use-a-database"></a>Cuándo usar una base de datos
 
-Aunque las capacidades de almacenamiento y procesamiento de los dispositivos móviles están aumentando, los teléfonos y las tabletas siguen &amp; retrasando sus homólogos de equipos portátiles de escritorio. Por esta razón, merece la pena dedicar algún tiempo a planear la arquitectura de almacenamiento de datos de la aplicación en lugar de asumir simplemente que una base de datos es la respuesta correcta en todo momento. Hay varias opciones diferentes que se adaptan a diferentes requisitos, como:
+Aunque las capacidades de almacenamiento y procesamiento de los dispositivos móviles están aumentando, los teléfonos y las tabletas siguen retrasando sus homólogos de escritorio &amp; portátiles. Por esta razón, merece la pena dedicar algún tiempo a planear la arquitectura de almacenamiento de datos de la aplicación en lugar de asumir simplemente que una base de datos es la respuesta correcta en todo momento. Hay varias opciones diferentes que se adaptan a diferentes requisitos, como:
 
 - **Preferencias** : iOS ofrece un mecanismo integrado para almacenar pares clave-valor simples de datos. Si va a almacenar una configuración de usuario simple o pequeñas partes de datos (como información de personalización), use las características nativas de la plataforma para almacenar este tipo de información. En el caso de iOS, también puede aprovechar la sincronización de iCloud para estos datos, tanto para la copia de seguridad como para la sincronización de usuarios con varios dispositivos.
 - **Archivos de texto** : datos proporcionados por el usuario o memorias caché del contenido descargado (por ejemplo, HTML) se puede almacenar directamente en el sistema de archivos. Use una Convención de nomenclatura de archivos adecuada para ayudarle a organizar los archivos y a encontrar los datos.

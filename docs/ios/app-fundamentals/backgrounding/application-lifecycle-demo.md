@@ -8,24 +8,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2018
 ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289436"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demostración del ciclo de vida de la aplicación para Xamarin. iOS
 
-En este artículo y el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) se muestran los cuatro Estados de aplicación en iOS y `AppDelegate` el rol de los métodos en notificar a la aplicación Cuándo se cambia el estado. La aplicación imprimirá actualizaciones en la consola cada vez que cambie el estado de la aplicación:
+En este artículo y el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) se muestran los cuatro Estados de la aplicación en iOS y el rol de los métodos de `AppDelegate` para notificar a la aplicación Cuándo se cambia el estado. La aplicación imprimirá actualizaciones en la consola cada vez que cambie el estado de la aplicación:
 
-[![](application-lifecycle-demo-images/image3-sml.png "La aplicación de ejemplo")](application-lifecycle-demo-images/image3.png#lightbox)
+[![](application-lifecycle-demo-images/image3-sml.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "La aplicación imprimirá actualizaciones en la consola cada vez que cambie el estado de la aplicación.")](application-lifecycle-demo-images/image4.png#lightbox)
+[![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Tutorial
 
 1. Abra el proyecto del **ciclo de vida** en la solución **LifecycleDemo** .
-1. Abra la `AppDelegate` clase. Se ha agregado el registro a los métodos del ciclo de vida para indicar cuándo ha cambiado el estado de la aplicación:
+1. Abra la clase `AppDelegate`. Se ha agregado el registro a los métodos del ciclo de vida para indicar cuándo ha cambiado el estado de la aplicación:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,11 +51,11 @@ En este artículo y el [código de ejemplo](https://docs.microsoft.com/samples/x
     }
     ```
 
-1. Inicie la aplicación en el simulador o en el dispositivo. `OnActivated`se llamará cuando se inicie la aplicación. La aplicación está ahora en estado _activo_ .
-1. Presione el botón Inicio en el simulador o el dispositivo para poner la aplicación en segundo plano. `OnResignActivation`y `DidEnterBackground` se llamará cuando la aplicación pase de `Active` a `Inactive` y `Backgrounded` al estado. Puesto que no hay ningún código de aplicación establecido para ejecutarse en segundo plano, la aplicación se considera _suspendida_ en la memoria.
-1. Vuelva a la aplicación para volver a colocarla en primer plano. `WillEnterForeground`se `OnActivated` llamará a y a ambos:
+1. Inicie la aplicación en el simulador o en el dispositivo. se llamará a `OnActivated` cuando se inicie la aplicación. La aplicación está ahora en estado _activo_ .
+1. Presione el botón Inicio en el simulador o el dispositivo para poner la aplicación en segundo plano. se llamará a `OnResignActivation` y `DidEnterBackground` a medida que la aplicación pase de `Active` a `Inactive` y al estado `Backgrounded`. Puesto que no hay ningún código de aplicación establecido para ejecutarse en segundo plano, la aplicación se considera _suspendida_ en la memoria.
+1. Vuelva a la aplicación para volver a colocarla en primer plano. se llamará a `WillEnterForeground` y `OnActivated`:
 
-    ![](application-lifecycle-demo-images/image4.png "Cambios de estado impresos en la consola")
+    ![](application-lifecycle-demo-images/image4.png "State changes printed to the console")
 
     La siguiente línea de código en el controlador de vista se ejecuta cuando la aplicación ha entrado en primer plano desde el fondo y cambia el texto que se muestra en la pantalla:
 
@@ -73,7 +73,7 @@ En este artículo y el [código de ejemplo](https://docs.microsoft.com/samples/x
 
     [![Deslizar rápidamente para quitar una aplicación en ejecución](application-lifecycle-demo-images/app-switcher-swipe-sml.png "Deslizar rápidamente para quitar una aplicación en ejecución")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
 
-iOS finalizará la aplicación. Tenga en `WillTerminate` cuenta que no se llama a porque la aplicación ya está _suspendida_ en segundo plano.
+iOS finalizará la aplicación. Tenga en cuenta que no se llama a `WillTerminate` porque la aplicación ya está _suspendida_ en segundo plano.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

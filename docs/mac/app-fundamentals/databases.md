@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769907"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de datos en Xamarin. Mac
@@ -33,7 +33,7 @@ En este artículo, trataremos los aspectos básicos del trabajo con la codificac
 
 Como vamos a usar la codificación de valores de clave y el enlace de datos, trabaje primero con el [enlace de datos y el código de valor de clave](~/mac/app-fundamentals/databinding.md) , ya que se tratarán técnicas y conceptos básicos que se usarán en esta documentación y en su aplicación de ejemplo.
 
-Es posible que desee echar un vistazo a la [sección exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los `Register` atributos y `Export` que se usan para conectar C# las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los atributos `Register` y `Export` que se usan para C# conectar las clases a Objective-C. objetos y elementos de la interfaz de usuario.
 
 ## <a name="direct-sqlite-access"></a>Acceso directo a SQLite
 
@@ -476,7 +476,7 @@ public bool isManager {
 }
 ```
 
-Cualquier cambio realizado en las propiedades **Name**, **profesión** o **isManager** se enviará a la base de datos si los datos se han guardado allí antes (por ejemplo `_conn` , si la `null`variable no es). A continuación, echemos un vistazo a los métodos que hemos agregado para **crear**, **Actualizar**, **cargar** y **eliminar** usuarios de la base de datos.
+Cualquier cambio realizado en las propiedades **Name**, **profesión** o **isManager** se enviará a la base de datos si los datos se han guardado allí antes (por ejemplo, si la variable `_conn` no está `null`). A continuación, echemos un vistazo a los métodos que hemos agregado para **crear**, **Actualizar**, **cargar** y **eliminar** usuarios de la base de datos.
 
 #### <a name="create-a-new-record"></a>Crear un nuevo registro
 
@@ -526,19 +526,19 @@ public void Create(SqliteConnection conn) {
 }
 ```
 
-Estamos usando `SQLiteCommand` para crear el nuevo registro en la base de datos. Obtenemos un nuevo comando de `SQLiteConnection` (Conn) que pasamos al método mediante una llamada a. `CreateCommand` A continuación, se establece la instrucción SQL para escribir realmente el nuevo registro y se proporcionan parámetros para los valores reales:
+Estamos usando una `SQLiteCommand` para crear el nuevo registro en la base de datos. Obtenemos un nuevo comando del `SQLiteConnection` (Conn) que pasamos al método llamando a `CreateCommand`. A continuación, se establece la instrucción SQL para escribir realmente el nuevo registro y se proporcionan parámetros para los valores reales:
 
 ```csharp
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
 ```
 
-Después, se establecen los valores de los parámetros mediante `Parameters.AddWithValue` el método `SQLiteCommand`en. Mediante el uso de parámetros, garantizamos que los valores (por ejemplo, una comilla simple) se codifican correctamente antes de enviarse a SQLite. Ejemplo:
+Después, se establecen los valores de los parámetros mediante el método `Parameters.AddWithValue` en el `SQLiteCommand`. Mediante el uso de parámetros, garantizamos que los valores (por ejemplo, una comilla simple) se codifican correctamente antes de enviarse a SQLite. Ejemplo:
 
 ```csharp
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-Por último, puesto que una persona puede ser un administrador y tener una colección de empleados bajo ellos, llamaremos `Create` de forma recursiva al método en esas personas para guardarlos también en la base de datos:
+Por último, puesto que una persona puede ser un administrador y tener una colección de empleados bajo ellos, llamaremos de forma recursiva al método `Create` de esas personas para guardarlos también en la base de datos:
 
 ```csharp
 // Save children to database as well
@@ -594,13 +594,13 @@ public void Update(SqliteConnection conn) {
 }
 ```
 
-Al igual que en `SQLiteConnection`el caso de `SQLiteCommand` **Create** anterior, obtenemos un de la pasada y establecemos nuestro SQL para actualizar nuestro registro (proporcionando parámetros):
+Al igual que en el caso de **Create** anterior, obtenemos un `SQLiteCommand` de la `SQLiteConnection` pasada y establecemos nuestro SQL para actualizar nuestro registro (proporcionando parámetros):
 
 ```csharp
 command.CommandText = "UPDATE [People] SET Name = @COL2, Occupation = @COL3, isManager = @COL4, ManagerID = @COL5 WHERE ID = @COL1";
 ```
 
-Se rellenan los valores de los parámetros `command.Parameters.AddWithValue ("@COL1", ID);`(example:) y, de nuevo, se llama a Update de forma recursiva en todos los registros secundarios:
+Se rellenan los valores de los parámetros (por ejemplo, `command.Parameters.AddWithValue ("@COL1", ID);`) y, de nuevo, se llama a Update de forma recursiva en todos los registros secundarios:
 
 ```csharp
 // Save children to database as well
@@ -711,7 +711,7 @@ command.CommandText = "SELECT ID FROM [People] WHERE ManagerID = @COL1";
 command.Parameters.AddWithValue ("@COL1", id);
 ```
 
-Por último, usamos un lector de datos para ejecutar la consulta y devolver los campos de registro (que copiamos en la instancia `PersonModel` de la clase):
+Por último, usamos un lector de datos para ejecutar la consulta y devolver los campos de registro (que copiamos en la instancia de la clase `PersonModel`):
 
 ```csharp
 using (var reader = command.ExecuteReader ()) {
@@ -726,7 +726,7 @@ using (var reader = command.ExecuteReader ()) {
 }
 ```
 
-Si esta persona es administrador, es necesario cargar también todos sus empleados (de nuevo, mediante una llamada recursiva a su `Load` método):
+Si esta persona es administrador, es necesario cargar también todos sus empleados (de nuevo, mediante una llamada recursiva a su método `Load`):
 
 ```csharp
 // Is this a manager?
@@ -798,7 +798,7 @@ command.CommandText = "DELETE FROM [People] WHERE (ID = @COL1 OR ManagerID = @CO
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-Una vez quitado el registro, borramos la instancia actual de la `PersonModel` clase:
+Una vez quitado el registro, borramos la instancia actual de la clase `PersonModel`:
 
 ```csharp
 // Empty class
@@ -904,7 +904,7 @@ foreach (var cmd in commands) {
 conn.Close ();
 ```
 
-Por último, usamos nuestro modelo de datos`PersonModel`() para crear un conjunto predeterminado de registros para la base de datos la primera vez que se ejecuta la aplicación o si falta la base de datos:
+Por último, usamos nuestro modelo de datos (`PersonModel`) para crear un conjunto predeterminado de registros para la base de datos la primera vez que se ejecuta la aplicación o si falta la base de datos:
 
 ```csharp
 // Build list of employees
@@ -969,13 +969,13 @@ _conn.Close ();
 
 ```
 
-Aquí se usa una sobrecarga del constructor de la `PersonModel` clase para cargar la persona en la memoria:
+Aquí se usa una sobrecarga del constructor para la clase `PersonModel` para cargar la persona en la memoria:
 
 ```csharp
 var person = new PersonModel (_conn, childID);
 ```
 
-También se llama a la clase enlazada a datos para agregar la persona a nuestra colección `AddPerson (person)`de personas, lo que garantiza que la interfaz de usuario reconoce el cambio y lo muestra:
+También se llama a la clase enlazada a datos para agregar la persona a nuestra colección de personas `AddPerson (person)`, lo que garantiza que la interfaz de usuario reconoce el cambio y lo muestra:
 
 ```csharp
 [Export("addObject:")]
@@ -1010,7 +1010,7 @@ using (var command = _conn.CreateCommand ()) {
 _conn.Close ();
 ```
 
-La única diferencia real en la instrucción SQL (que solo carga los administradores `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"`), pero funciona igual que la sección anterior de lo contrario.
+La única diferencia real en la instrucción SQL (que solo carga los administradores `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"`), pero funciona igual que la sección anterior. de lo contrario,.
 
 <a name="Databases-and-ComboBoxes" />
 
@@ -1018,7 +1018,7 @@ La única diferencia real en la instrucción SQL (que solo carga los administrad
 
 Los controles de menú disponibles para macOS (como el cuadro combinado) pueden establecerse para rellenar la lista desplegable desde una lista interna (que puede estar predefinida en Interface Builder o rellenarse mediante código) o proporcionando su propio origen de datos externo personalizado. Vea [proporcionar datos de control de menú](~/mac/user-interface/standard-controls.md#Providing-Menu-Control-Data) para obtener más detalles.
 
-Como ejemplo, edite el ejemplo de enlace simple anterior en Interface Builder, agregue un cuadro combinado y expóngalo mediante una toma `EmployeeSelector`denominada:
+Como ejemplo, edite el ejemplo de enlace simple anterior en Interface Builder, agregue un cuadro combinado y expóngalo mediante una toma denominada `EmployeeSelector`:
 
 [![Exponer una salida de un cuadro combinado](databases-images/combo01.png "Exponer una salida de un cuadro combinado")](databases-images/combo01-large.png#lightbox)
 
@@ -1030,7 +1030,7 @@ Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos.
 
 #### <a name="providing-combobox-data"></a>Proporcionar datos de ComboBox
 
-Después, agregue una nueva clase al proyecto denominado `ComboBoxDataSource` y haga que tenga el aspecto siguiente:
+A continuación, agregue una nueva clase al proyecto llamada `ComboBoxDataSource` y haga que tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -1401,11 +1401,11 @@ namespace MacDatabase
 
 En este ejemplo, vamos a crear un nuevo `NSComboBoxDataSource` que puede presentar elementos del cuadro combinado desde cualquier origen de datos de SQLite. En primer lugar, definimos las siguientes propiedades:
 
-- `Conn`: Obtiene o establece una conexión a la base de datos de SQLite.
-- `TableName`: Obtiene o establece el nombre de la tabla.
-- `IDField`: Obtiene o establece el campo que proporciona el identificador único de la tabla especificada. El valor predeterminado es `ID`.
-- `DisplayField`: Obtiene o establece el campo que se muestra en la lista desplegable.
-- `RecordCount`: Obtiene el número de registros de la tabla especificada.
+- `Conn`: obtiene o establece una conexión a la base de datos SQLite.
+- `TableName`: obtiene o establece el nombre de la tabla.
+- `IDField`: obtiene o establece el campo que proporciona el identificador único de la tabla especificada. El valor predeterminado es `ID`.
+- `DisplayField`: obtiene o establece el campo que se muestra en la lista desplegable.
+- `RecordCount`: obtiene el número de registros de la tabla especificada.
 
 Cuando se crea una nueva instancia del objeto, se pasa la conexión, el nombre de la tabla, opcionalmente el campo ID. y el campo de visualización:
 
@@ -1419,7 +1419,7 @@ public ComboBoxDataSource (SqliteConnection conn, string tableName, string displ
 }
 ```
 
-El `GetRecordCount` método devuelve el número de registros de la tabla especificada:
+El método `GetRecordCount` devuelve el número de registros de la tabla especificada:
 
 ```csharp
 private nint GetRecordCount ()
@@ -1461,9 +1461,9 @@ private nint GetRecordCount ()
 }
 ```
 
-Se llama siempre que se cambia `TableName`el `IDField` valor `DisplayField` de las propiedades, o.
+Se llama siempre que se cambia el valor de las propiedades `TableName`, `IDField` o `DisplayField`.
 
-El `IDForIndex` método devuelve el identificador único (`IDField`) del registro en el índice del elemento de lista desplegable dado: 
+El método `IDForIndex` devuelve el identificador único (`IDField`) del registro en el índice del elemento de lista desplegable dado: 
 
 ```csharp
 public string IDForIndex (nint index)
@@ -1504,7 +1504,7 @@ public string IDForIndex (nint index)
 }
 ```
 
-El `ValueForIndex` método devuelve el valor (`DisplayField`) para el elemento en el índice de la lista desplegable dado:
+El método `ValueForIndex` devuelve el valor (`DisplayField`) del elemento en el índice de la lista desplegable dado:
 
 ```csharp
 public string ValueForIndex (nint index)
@@ -1545,7 +1545,7 @@ public string ValueForIndex (nint index)
 }
 ```
 
-El `IDForValue` método devuelve el identificador único (`IDField`) para el valor especificado (`DisplayField`):
+El método `IDForValue` devuelve el identificador único (`IDField`) para el valor especificado (`DisplayField`):
 
 ```csharp
 public string IDForValue (string value)
@@ -1589,7 +1589,7 @@ public string IDForValue (string value)
 }
 ```
 
-Devuelve el número precalculado de elementos de la lista como se calcula cuando se `TableName`cambian `IDField` las propiedades, o `DisplayField`: `ItemCount`
+El `ItemCount` devuelve el número precalculado de elementos de la lista como se calcula cuando se cambian las propiedades `TableName`, `IDField` o `DisplayField`:
 
 ```csharp
 public override nint ItemCount (NSComboBox comboBox)
@@ -1598,7 +1598,7 @@ public override nint ItemCount (NSComboBox comboBox)
 }
 ```
 
-El `ObjectValueForItem` método proporciona el valor (`DisplayField`) para el índice del elemento de lista desplegable dado:
+El método `ObjectValueForItem` proporciona el valor (`DisplayField`) para el índice del elemento de lista desplegable dado:
 
 ```csharp
 public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
@@ -1639,9 +1639,9 @@ public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
 }
 ```
 
-Tenga en cuenta que estamos usando `LIMIT` las `OFFSET` instrucciones y en nuestro comando de SQLite para limitar al registro que necesitamos.
+Tenga en cuenta que estamos usando las instrucciones `LIMIT` y `OFFSET` en nuestro comando de SQLite para limitar el registro que necesitamos.
 
-El `IndexOfItem` método devuelve el índice del elemento DropDown del valor`DisplayField`() dado:
+El método `IndexOfItem` devuelve el índice del elemento DropDown del valor (`DisplayField`) dado:
 
 ```csharp
 public override nint IndexOfItem (NSComboBox comboBox, string value)
@@ -1691,9 +1691,9 @@ public override nint IndexOfItem (NSComboBox comboBox, string value)
 }
 ```
 
-Si no se puede encontrar el valor, `NSRange.NotFound` el valor es devuelto y se anula la selección de todos los elementos en la lista desplegable.
+Si no se encuentra el valor, se devuelve el valor `NSRange.NotFound` y se anula la selección de todos los elementos en la lista desplegable.
 
-El `CompletedString` método devuelve el primer valor coincidente (`DisplayField`) para una entrada con tipo parcial:
+El método `CompletedString` devuelve el primer valor coincidente (`DisplayField`) para una entrada con tipo parcial:
 
 ```csharp
 public override string CompletedString (NSComboBox comboBox, string uncompletedString)
@@ -1743,7 +1743,7 @@ public override string CompletedString (NSComboBox comboBox, string uncompletedS
 
 #### <a name="displaying-data-and-responding-to-events"></a>Mostrar datos y responder a eventos
 
-Para reunir todas las piezas, edite `SubviewSimpleBindingController` y haga que tenga un aspecto similar al siguiente:
+Para reunir todas las piezas, edite el `SubviewSimpleBindingController` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -1858,9 +1858,9 @@ namespace MacDatabase
 }
 ```
 
-La `DataSource` propiedad proporciona un acceso directo `ComboBoxDataSource` al (creado anteriormente) adjunto al cuadro combinado.
+La propiedad `DataSource` proporciona un acceso directo a la `ComboBoxDataSource` (creada anteriormente) adjunta al cuadro combinado.
 
-El `LoadSelectedPerson` método carga la persona desde la base de datos para el identificador único dado:
+El método `LoadSelectedPerson` carga la persona desde la base de datos para el identificador único dado:
 
 ```csharp
 private void LoadSelectedPerson (string id)
@@ -1874,13 +1874,13 @@ private void LoadSelectedPerson (string id)
 }
 ```
 
-En la `AwakeFromNib` invalidación del método, se adjunta primero una instancia de nuestro origen de datos del cuadro combinado personalizado:
+En la invalidación del método `AwakeFromNib`, primero adjuntamos una instancia de nuestro origen de datos de cuadro combinado personalizado:
 
 ```csharp
 EmployeeSelector.DataSource = new ComboBoxDataSource (Conn, "People", "Name");
 ```
 
-A continuación, se responde al usuario que edita el valor de texto del cuadro combinado buscando el identificador único asociado (`IDField`) de los datos que presenta y carga la persona determinada, si se encuentra:
+A continuación, respondemos al usuario que edita el valor de texto del cuadro combinado buscando el identificador único asociado (`IDField`) de los datos que presenta y carga la persona determinada, si se encuentra:
 
 ```csharp
 EmployeeSelector.Changed += (sender, e) => {
@@ -1912,7 +1912,7 @@ Person = new PersonModel (Conn, DataSource.IDForIndex(0));
 
 Como se indicó anteriormente, al usar el administrador de relaciones de objetos de [SQLite.net](http://www.sqlite.org) de código abierto, se puede reducir considerablemente la cantidad de código necesario para leer y escribir datos de una base de datos de SQLite. Es posible que esta no sea la mejor ruta que se debe tomar al enlazar datos debido a algunos de los requisitos que la codificación de valores de clave y el enlace de datos se colocan en un objeto.
 
-De acuerdo con el sitio Web _de SQLite.net, "SQLite es una biblioteca de software que implementa un motor de base de datos de SQL de transacciones independiente sin servidor y sin configuración. SQLite es el motor de base de datos más ampliamente implementado del mundo. El código fuente de SQLite está en el dominio público. "_
+De acuerdo con el sitio web de SQLite.Net, _"SQLite es una biblioteca de software que implementa un motor de base de datos de SQL de transacciones independiente sin servidor y sin configuración. SQLite es el motor de base de datos más ampliamente implementado del mundo. El código fuente de SQLite está en el dominio público. "_
 
 En las secciones siguientes, se muestra cómo usar SQLite.Net para proporcionar datos para una vista de tabla.
 
@@ -1966,7 +1966,7 @@ namespace MacDatabase
 }
 ```
 
-En primer lugar, se incluye`using Sqlite`SQLite.net () y, a continuación, se exponen varias propiedades, cada una de las cuales se escribirá en la base de datos cuando se guarde este registro. La primera propiedad que hacemos como clave principal y la establece en incremento automático como se indica a continuación:
+En primer lugar, se incluye SQLite.NET (`using Sqlite`) y, a continuación, se exponen varias propiedades, cada una de las cuales se escribirá en la base de datos cuando se guarde este registro. La primera propiedad que hacemos como clave principal y la establece en incremento automático como se indica a continuación:
 
 ```csharp
 [PrimaryKey, AutoIncrement]
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 ### <a name="adding-a-table-view"></a>Agregar una vista de tabla
 
-Como ejemplo de uso, agregaremos una vista de tabla a nuestra interfaz de usuario en Interface Builder de Xcode. Expondremos esta vista de tabla a través de una`OccupationTable`salida () para que podamos acceder C# a ella a través del código:
+Como ejemplo de uso, agregaremos una vista de tabla a nuestra interfaz de usuario en Interface Builder de Xcode. Expondremos esta vista de tabla a través de una salida (`OccupationTable`) para que podamos acceder C# a ella a través del código:
 
 [![Exponer una salida de la vista de tabla](databases-images/table01.png "Exponer una salida de la vista de tabla")](databases-images/table01-large.png#lightbox)
 
@@ -2071,7 +2071,7 @@ A continuación, agregaremos las clases personalizadas para rellenar esta tabla 
 
 ### <a name="creating-the-table-data-source"></a>Crear el origen de datos de la tabla
 
-Vamos a crear un origen de datos personalizado para proporcionar los datos de nuestra tabla. En primer lugar, agregue una nueva `TableORMDatasource` clase denominada y haga que tenga un aspecto similar al siguiente:
+Vamos a crear un origen de datos personalizado para proporcionar los datos de nuestra tabla. En primer lugar, agregue una nueva clase denominada `TableORMDatasource` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -2125,11 +2125,11 @@ namespace MacDatabase
 }
 ```
 
-Cuando creamos una instancia de esta clase más adelante, pasaremos a nuestra conexión de base de datos SQLite.NET abierta. El `LoadOccupations` método consulta la base de datos y copia los registros encontrados en la memoria `OccupationModel` (mediante nuestro modelo de datos).
+Cuando creamos una instancia de esta clase más adelante, pasaremos a nuestra conexión de base de datos SQLite.NET abierta. El método `LoadOccupations` consulta la base de datos y copia los registros encontrados en la memoria (mediante nuestro modelo de datos de `OccupationModel`).
 
 ### <a name="creating-the-table-delegate"></a>Crear el delegado de tabla
 
-La clase final que se necesita es un delegado de tabla personalizado para mostrar la información que se ha cargado desde la base de datos SQLite.NET. Vamos a agregar un nuevo `TableORMDelegate` a nuestro proyecto y hacer que tenga un aspecto similar al siguiente:
+La clase final que se necesita es un delegado de tabla personalizado para mostrar la información que se ha cargado desde la base de datos SQLite.NET. Vamos a agregar una nueva `TableORMDelegate` a nuestro proyecto y que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -2193,11 +2193,11 @@ namespace MacDatabase
 }
 ```
 
-Aquí usamos la colección del `Occupations` origen de datos (que se cargó desde la base de datos SQLite.net) para rellenar las columnas de la tabla a través de la `GetViewForItem` invalidación del método.
+Aquí usamos la colección de `Occupations` del origen de datos (que cargamos desde la base de datos SQLite.NET) para rellenar las columnas de la tabla a través de la invalidación del método `GetViewForItem`.
 
 ### <a name="populating-the-table"></a>Rellenar la tabla
 
-Con todas las piezas en su lugar, vamos a rellenar la tabla cuando se infla del archivo. Xib invalidando el `AwakeFromNib` método y haciéndolo similar al siguiente:
+Con todas las piezas en su lugar, vamos a rellenar la tabla cuando se infla del archivo. Xib invalidando el método de `AwakeFromNib` y haciéndolo similar al siguiente:
 
 ```csharp
 public override void AwakeFromNib ()

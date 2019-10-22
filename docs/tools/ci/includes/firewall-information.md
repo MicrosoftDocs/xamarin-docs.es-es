@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d46968f9c53314abe561e7f4871cfbf6e07b7002
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "61047853"
 ---
 ## <a name="firewall-configuration"></a>Configuración del firewall
