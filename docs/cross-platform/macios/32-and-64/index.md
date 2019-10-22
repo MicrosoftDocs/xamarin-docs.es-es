@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71249796"
 ---
 # <a name="3264-bit-platform-considerations"></a>consideraciones sobre las plataformas de 32 y 64 bits
@@ -21,7 +21,7 @@ A partir de iOS 11, las aplicaciones de 32 bits dejarán de iniciarse y [todos l
 
 A partir del 2018 de enero, [las nuevas aplicaciones enviadas a Mac App Store deben admitir 64 bits](https://developer.apple.com/news/?id=06282017a)y las aplicaciones existentes deben actualizarse en junio de 2018.
 
-Los Classic API de Xamarin`XamMac.dll` ( `monotouch.dll`y) solo admiten las aplicaciones de 32 bits. Sin embargo, las nuevas aplicaciones de Xamarin. iOS y Xamarin. Mac usan`Xamarin.iOS` el `Xamarin.Mac` [Unified API](~/cross-platform/macios/unified/index.md) (y) de forma predeterminada y, por tanto, pueden tener como destino 32 y 64 bits, según sea necesario.
+Classic API de Xamarin (`XamMac.dll` y `monotouch.dll`) solo admiten aplicaciones de 32 bits. Sin embargo, las nuevas aplicaciones de Xamarin. iOS y Xamarin. Mac usan el [Unified API](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` y `Xamarin.Mac`) de forma predeterminada y, por tanto, pueden tener como destino 32 y 64 bits, según sea necesario.
 
 ## <a name="ios"></a>iOS
 
@@ -40,9 +40,9 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
 1. En el **Panel de solución**, haga doble clic en el proyecto de la aplicación para abrir la ventana **Opciones del proyecto** .
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone, en la lista desplegable **arquitecturas admitidas** , seleccione **x86\_64** o **i386 +\_x86 64**:
+3. Para el simulador de iPhone, en la lista desplegable **arquitecturas admitidas** , seleccione **x86 \_64** o **i386 + x86 \_64**:
 
-   [![Establecimiento de arquitecturas admitidas\_en x86 64 o i386\_+ x86 64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Establecer las arquitecturas admitidas en x86 \_64 o i386 + x86 \_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. En el caso de los dispositivos físicos, seleccione una de las combinaciones de **ARM64** disponibles:
 
@@ -55,9 +55,9 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **propiedades**.
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86\_64** o **i386 +\_x86 64**: 
+3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86 \_64** o **i386 + x86 \_64**: 
 
-   [![Establecimiento de arquitecturas admitidas en x86_64 o i386\_+ x86 64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Establecimiento de arquitecturas admitidas en x86_64 o i386 + x86 \_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. En el caso de los dispositivos físicos, seleccione una de las combinaciones de **ARM64** disponibles:
     
@@ -81,7 +81,7 @@ Durante la transición de Apple de 32 bits a 64, las aplicaciones de iOS tendrá
 La compatibilidad con arquitecturas de 32 bits y de 64 bits aumentará considerablemente el tamaño de una aplicación. Sin embargo, si lo hace, permitirá que los dispositivos más recientes ejecuten código optimizado, al tiempo que se siguen admitiendo dispositivos antiguos.
 
 > [!IMPORTANT]
-> Si recibe el siguiente mensaje al enviar una aplicación de iOS a iTunes App Store, _"Warning ITMS-9000: Falta compatibilidad con 64 bits. A partir del 1 de febrero de 2015, las nuevas aplicaciones de iOS cargadas en App Store deben incluir compatibilidad con 64 bits y compilarse con el SDK de iOS 8, incluido en Xcode 6 o posterior. Para habilitar 64 bits en el proyecto, se recomienda usar la configuración de compilación predeterminada de Xcode de "arquitecturas estándar" para compilar un único binario con código de 32 bits y de 64 bits "._ Debe cambiar las arquitecturas admitidas a una de las combinaciones de **ARM64** disponibles (como se muestra arriba), volver a compilar y reenviar.
+> Si recibe el siguiente mensaje al enviar una aplicación de iOS a la tienda de aplicaciones de iTunes, _"ADVERTENCIA ITMS-9000: falta compatibilidad con 64 bits. A partir del 1 de febrero de 2015, las nuevas aplicaciones de iOS cargadas en App Store deben incluir compatibilidad con 64 bits y compilarse con el SDK de iOS 8, incluido en Xcode 6 o posterior. Para habilitar 64 bits en el proyecto, se recomienda usar la configuración de compilación predeterminada de Xcode de "arquitecturas estándar" para compilar un único binario con código de 32 bits y de 64 bits "._ Debe cambiar las arquitecturas admitidas a una de las combinaciones de **ARM64** disponibles (como se muestra arriba), volver a compilar y reenviar.
 
 ## <a name="mac"></a>Mac
 

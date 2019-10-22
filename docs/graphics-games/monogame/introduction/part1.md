@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68978446"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creación de un juego multiplataforma
@@ -28,11 +28,11 @@ Cuando haya finalizado, el proyecto tiene la estructura adecuada para realizar l
 > [!IMPORTANT]
 > Monogame no se instala de forma predeterminada en Visual Studio 2019 o Visual Studio para Mac.
 >
-> Debe descargar e instalar manualmente la versión más reciente desde http://www.monogame.net/downloads/ y después ejecutar el instalador. Es posible que tenga que reiniciar Visual Studio para que aparezcan las plantillas.
+> Debe descargar e instalar manualmente la versión más reciente de http://www.monogame.net/downloads/ después ejecutar el instalador. Es posible que tenga que reiniciar Visual Studio para que aparezcan las plantillas.
 >
 > La sección **desarrollo de juegos** debería aparecer en el **Administrador de complementos**.
 
-Para habilitar el complemento de monogame para Visual Studio para Mac, seleccione **Visual Studio para Mac** > **Administrador de complementos.** ... Para Visual Studio 2019 en Windows, seleccione **herramientas** > **Administrador de complementos..** .. Seleccione la pestaña **Galería** , expanda la categoría **desarrollo de juegos** y seleccione **complemento monogame**y, a continuación, haga clic en **instalar...** :
+Para habilitar el complemento de monogame para Visual Studio para Mac, seleccione **Visual Studio para Mac**  > **Administrador de complementos..** .. Para Visual Studio 2019 en Windows, seleccione **herramientas**  > **Administrador de complementos..** .. Seleccione la pestaña **Galería** , expanda la categoría **desarrollo de juegos** y seleccione **complemento monogame**y, a continuación, haga clic en **instalar...** :
 
 ![Galería de Visual Studio para Mac Extensions seleccionar monogame](part1-images/image2.png)
 
@@ -54,7 +54,7 @@ Ahora nuestro proyecto se ejecutará igual que cualquier otro proyecto de iOS o 
 
 ## <a name="fixing-android-compile-errors"></a>Corrección de errores de compilación de Android
 
-La versión actual de las plantillas de monogame incluye algunos errores de sintaxis en el archivo `Activity1.cs` de Android. Para corregir estos problemas, reemplace la `OnCreate` función por lo siguiente:
+La versión actual de las plantillas de monogame incluye algunos errores de sintaxis en el archivo de `Activity1.cs` de Android. Para solucionar estos problemas, reemplace la función `OnCreate` por la siguiente:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)

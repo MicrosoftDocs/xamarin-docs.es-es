@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
 ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "64749928"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>Ejemplos independientes de la plataforma SkiaSharp
@@ -22,7 +22,7 @@ SkiaSharp proporciona una API de gráficos 2D enriquecida y eficaz que se puede 
 
 La biblioteca está disponible actualmente como [paquete NuGet](https://www.nuget.org/packages/SkiaSharp)multiplataforma, puede agregarla al proyecto agregando la referencia de Nuget.
 
-Para dibujar, el código creará un `SkCanvas` que describe la superficie donde se realizarán las operaciones de dibujo.
+Para dibujar, el código creará una `SkCanvas` que describe la superficie en la que se realizarán las operaciones de dibujo.
 
 ## <a name="obtaining-an-skcanvas"></a>Obtención de un SKCanvas
 
@@ -36,9 +36,9 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>Dibujar en SKCanvas
 
-Usa `SKCanvas` un modelo de dibujo similar en el espíritu a otros modelos de dibujo con los que puede estar familiarizado, usa colores con un canal de transparencia opcional y puede dibujar líneas, arcos, texto e imágenes.
+En el `SKCanvas` se usa un modelo de dibujo similar a otros modelos de dibujo con los que puede estar familiarizado, se usan colores con un canal de transparencia opcional y se pueden dibujar líneas, arcos, texto e imágenes.
 
-A continuación se muestran solo algunas de las muchas cosas diferentes que se pueden realizar con SkiaSharp.  En los ejemplos siguientes, la `canvas` variable es de tipo SKCanvas.
+A continuación se muestran solo algunas de las muchas cosas diferentes que se pueden realizar con SkiaSharp.  En los ejemplos siguientes, la variable `canvas` es de tipo SKCanvas.
 
 ### <a name="drawing-xamagon"></a>Dibujo de Xamagon
 

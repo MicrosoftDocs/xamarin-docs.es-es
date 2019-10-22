@@ -1,24 +1,24 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
-title: 'WPF frente a Xamarin.Forms: Similitudes & diferencias'
+title: 'WPF frente a Xamarin. Forms: similitudes & diferencias'
 description: En este documento se comparan y contrastan WPF con Xamarin. Forms. Se describen las plantillas de control, XAML, la infraestructura de enlace, las plantillas de datos, ItemsControl, UserControl, la navegación y la navegación de direcciones URL.
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
 ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71106031"
 ---
-# <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF frente a Xamarin.Forms: Similitudes & diferencias
+# <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF frente a Xamarin. Forms: similitudes & diferencias
 
 ## <a name="control-templates"></a>Plantillas de control
 
-WPF admite el concepto de *plantillas de control* que proporcionan las instrucciones de visualización para un`Button`control `ListBox`(,, etc.). Como se mencionó anteriormente, Xamarin. Forms usa clases de _representación_ concretas para esto que interactúan con la plataforma nativa (iOS, Android, etc.) para visualizar el control.
+WPF admite el concepto de *plantillas de control* que proporcionan las instrucciones de visualización de un Control (`Button`, `ListBox`, etc.). Como se mencionó anteriormente, Xamarin. Forms usa clases de _representación_ concretas para esto que interactúan con la plataforma nativa (iOS, Android, etc.) para visualizar el control.
 
-Sin embargo, Xamarin. _Forms tiene un_ `ControlTemplate` tipo; se `Page` usa para los objetos. Proporciona una definición para `Page` que proporciona contenido coherente, pero permite al usuario de la página cambiar los colores, las fuentes, etc. e incluso agregar elementos para que sea único para la aplicación.
+Sin embargo, Xamarin. _Forms tiene un_ tipo `ControlTemplate`: se usa para los objetos `Page`. Proporciona una definición para una `Page` que proporciona contenido coherente, pero permite al usuario de la página cambiar los colores, las fuentes, etc. e incluso agregar elementos para que sea único para la aplicación.
 
 Los usos comunes de esto son cosas como cuadros de diálogo de autenticación, mensajes y para proporcionar una apariencia de página estandarizada pero que se puede personalizar en la aplicación. Como parte de esta compatibilidad, se usan muchos controles conocidos con nombre de WPF:
 
@@ -33,9 +33,9 @@ Pero es importante saber que _no_ están atendiendo al mismo propósito en Xamar
 
 XAML se usa como lenguaje de marcado declarativo para WPF y Xamarin. Forms. En su mayor parte, la sintaxis es idéntica: la principal diferencia es que los objetos definidos/creados por los gráficos XAML.
 
-- Xamarin. Forms admite la [especificación de XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); Esto facilita la definición de datos como, por `string`ejemplo, `int`s, s, etc., así como la definición de tipos genéricos y el paso de argumentos a los constructores.
+- Xamarin. Forms admite la [especificación de XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); Esto facilita la definición de datos, como `string`s, `int`s, etc., así como la definición de tipos genéricos y el paso de argumentos a los constructores.
 
-- Actualmente no hay ninguna manera de cargar dinámicamente XAML como WPF puede con `XamlReader`. Sin embargo, puede obtener la misma funcionalidad básica con un [paquete de NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) .
+- Actualmente no hay ninguna manera de cargar dinámicamente XAML, como WPF, con `XamlReader`. Sin embargo, puede obtener la misma funcionalidad básica con un [paquete de NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) .
 
 ### <a name="markup-extensions"></a>Extensiones de marcado
 
@@ -49,14 +49,14 @@ Xamarin. Forms admite la extensión de XAML a través de extensiones de marcado,
 6. `{StaticResource}`
 7. `{x:Type}`
 
-Además, incluye `{x:Reference}` de la especificación de XAML 2009 y una `{TemplateBinding}` extensión de marcado que se usa para la versión especializada de `ControlTemplate` compatible con Xamarin. Forms.
+Además, incluye `{x:Reference}` de la especificación de XAML 2009 y una extensión de marcado `{TemplateBinding}` que se usa para la versión especializada de `ControlTemplate` compatible con Xamarin. Forms.
 
 > [!WARNING]
-> La `ControlTemplate` compatibilidad no es la misma, aunque tenga el mismo nombre.
+> La compatibilidad con `ControlTemplate` no es la misma, aunque tenga el mismo nombre.
 
-Xamarin. Forms admite también extensiones de marcado personalizadas, pero la implementación es ligeramente diferente. En WPF, debe derivar de `MarkupExtension` una clase base abstracta. En Xamarin. Forms, que se reemplaza con una `IMarkupExtension` interfaz `IMarkupExtension<T>` o que es más flexible.
+Xamarin. Forms admite también extensiones de marcado personalizadas, pero la implementación es ligeramente diferente. En WPF, debe derivar de `MarkupExtension`-una clase base abstracta. En Xamarin. Forms, que se reemplaza con una interfaz `IMarkupExtension` o `IMarkupExtension<T>` que es más flexible.
 
-Al igual que WPF, el único método necesario es `ProvideValue` un método para devolver el valor de la extensión de marcado.
+Al igual que WPF, el único método necesario es un método `ProvideValue` para devolver el valor de la extensión de marcado.
 
 ## <a name="binding-infrastructure"></a>Infraestructura de enlace
 
@@ -66,9 +66,9 @@ Uno de los conceptos principales que se llevan a cabo es una infraestructura de 
 
 La definición de una propiedad enlazable en Xamarin. Forms es la misma que la de WPF:
 
-1. El objeto debe derivarse `BindableObject`de.
+1. El objeto debe derivarse de `BindableObject`.
 2. Debe haber un campo estático público de tipo `BindableProperty` declarado para definir la clave de almacenamiento de respaldo para la propiedad.
-3. Debe haber un contenedor de propiedades de instancia pública que `GetValue` use `SetValue` y para recuperar y cambiar el valor de las propiedades.
+3. Debe haber un contenedor de propiedades de instancia público que use `GetValue` y `SetValue` para recuperar y cambiar el valor de las propiedades.
 
 Para obtener un ejemplo completo, vea [propiedades enlazables en Xamarin. Forms](~/xamarin-forms/xaml/bindable-properties.md).
 
@@ -78,9 +78,9 @@ Las propiedades adjuntas son un subconjunto de la propiedad enlazable y funciona
 
 ### <a name="using-the-binding-engine"></a>Usar el motor de enlace
 
-El proceso para utilizar el motor de enlace es el mismo que en WPF. Se puede utilizar en el código subyacente mediante la creación de un `Binding` objeto enlazado a un objeto de origen (cualquier tipo .net) y un valor de propiedad opcional (si se omite, trata el objeto de origen como la propiedad en sí, como WPF). A continuación, puede `SetBinding` utilizar en `BindableObject` cualquier para asociar el enlace `BindableProperty`a un.
+El proceso para utilizar el motor de enlace es el mismo que en WPF. Se puede utilizar en el código subyacente si se crea un objeto de `Binding` vinculado a un objeto de origen (cualquier tipo .NET) y un valor de propiedad opcional (si se omite, trata el objeto de origen como la propiedad en sí, como WPF). A continuación, puede usar `SetBinding` en cualquier `BindableObject` para asociar el enlace a un `BindableProperty`.
 
-Como alternativa, puede definir la relación de enlace en XAML mediante `BindingExtension`. Tiene los mismos valores básicos que la extensión en WPF.
+Como alternativa, puede definir la relación de enlace en XAML mediante el `BindingExtension`. Tiene los mismos valores básicos que la extensión en WPF.
 
 La compatibilidad y el motor de enlace son más similares a la implementación de Silverlight que WPF. Hay varias características que faltan que no se implementaron en Xamarin. Forms:
 
@@ -102,7 +102,7 @@ La compatibilidad y el motor de enlace son más similares a la implementación d
 
 #### <a name="relativesource"></a>RelativeSource
 
-No se admiten `RelativeSource` los enlaces. En WPF, permiten enlazar a otros elementos visuales definidos en XAML. En Xamarin. Forms, esta misma funcionalidad se puede lograr mediante `{x:Reference}` la extensión de marcado. Por ejemplo, suponiendo que tenemos un control con el nombre "otherControl" que tiene una propiedad Text, se puede enlazar a él de la siguiente manera:
+No se admiten enlaces de `RelativeSource`. En WPF, permiten enlazar a otros elementos visuales definidos en XAML. En Xamarin. Forms, esta misma funcionalidad se puede lograr mediante el `{x:Reference}` extensión de marcado. Por ejemplo, suponiendo que tenemos un control con el nombre "otherControl" que tiene una propiedad Text, se puede enlazar a él de la siguiente manera:
 
 **WPF**
 
@@ -116,54 +116,54 @@ Text={Binding RelativeSource={RelativeSource otherControl}, Path=Text}
 Text={Binding Source={x:Reference otherControl}, Path=Text}
 ```
 
-Se puede usar la misma capacidad para la `{RelativeSource Self}` característica. Sin embargo, no se admite la búsqueda de antecesores por`{RelativeSource FindAncestor}`tipo ().
+Se puede usar la misma capacidad para la característica `{RelativeSource Self}`. Sin embargo, no se admite la búsqueda de antecesores por tipo (`{RelativeSource FindAncestor}`).
 
 #### <a name="binding-context"></a>Contexto de enlace
 
-En WPF, puede definir un `DataContext` valor de propiedad que reprents el origen de enlace predeterminado. Si no se define el origen de un enlace, se utiliza este valor de propiedad. El valor se hereda en el árbol visual, lo que permite que se defina en un nivel superior y, a continuación, lo usen los elementos secundarios.
+En WPF, puede definir un valor de propiedad `DataContext` que reprents el origen de enlace predeterminado. Si no se define el origen de un enlace, se utiliza este valor de propiedad. El valor se hereda en el árbol visual, lo que permite que se defina en un nivel superior y, a continuación, lo usen los elementos secundarios.
 
-En Xamarin. Forms, esta misma característica es disponibles, pero el nombre de `BindingContext`la propiedad es.
+En Xamarin. Forms, esta misma característica es disponibles, pero el nombre de la propiedad es `BindingContext`.
 
 #### <a name="value-converters"></a>Convertidores de valores
 
-Los convertidores de valores son totalmente compatibles con Xamarin. Forms, al igual que WPF. Se usa la misma forma de interfaz, pero Xamarin. Forms tiene la interfaz definida `Xamarin.Forms` en el espacio de nombres.
+Los convertidores de valores son totalmente compatibles con Xamarin. Forms, al igual que WPF. Se usa la misma forma de interfaz, pero Xamarin. Forms tiene la interfaz definida en el espacio de nombres `Xamarin.Forms`.
 
-### <a name="model-view-viewmodel"></a>Model-View-ViewModel
+### <a name="model-view-viewmodel"></a>Modelo-vista-ViewModel
 
 MVVM es totalmente compatible con WPF y Xamarin. Forms.
 
-WPF incluye un integrado `RoutedCommand` que se usa a veces; Xamarin. Forms no tiene compatibilidad integrada con comandos más allá de `ICommand` la definición de interfaz. Puede incluir una variedad de marcos de MVVM para agregar las clases base necesarias para implementar MVVM.
+WPF incluye una `RoutedCommand` integrada que se usa a veces; Xamarin. Forms no tiene compatibilidad integrada con comandos más allá de la definición de la interfaz de `ICommand`. Puede incluir una variedad de marcos de MVVM para agregar las clases base necesarias para implementar MVVM.
 
 #### <a name="inotifypropertychanged-and-inotifycollectionchanged"></a>INotifyPropertyChanged e INotifyCollectionChanged
 
 Ambas interfaces son totalmente compatibles con los enlaces de Xamarin. Forms. A diferencia de muchos marcos de trabajo basados en XAML, las notificaciones de cambio de propiedad se pueden generar en subprocesos en segundo plano de Xamarin. Forms (al igual que WPF) y el motor de enlace realizará correctamente la transición al subproceso de interfaz de usuario.
 
-Además, ambos entornos admiten `SynchronziationContext` y `async` / `await` para realizar la serialización correcta de subprocesos. WPF incluye la `Dispatcher` clase en todos los elementos visuales, Xamarin. Forms tiene un `Device.BeginInvokeOnMainThread` método estático que también se puede usar `SynchronizationContext` (aunque se prefiere para la codificación multiplataforma).
+Además, ambos entornos admiten `SynchronziationContext` y `async` / `await` para realizar la serialización correcta de subprocesos. WPF incluye la clase `Dispatcher` en todos los elementos visuales, Xamarin. Forms tiene un método estático `Device.BeginInvokeOnMainThread` que también se puede utilizar (aunque se prefiere `SynchronizationContext` para la codificación multiplataforma).
 
-- Xamarin. Forms incluye `ObservableCollection<T>` un que admite notificaciones de cambio de colección.
+- Xamarin. Forms incluye una `ObservableCollection<T>` que admite las notificaciones de cambio de colección.
 - Puede usar `BindingBase.EnableCollectionSynchronization` para habilitar las actualizaciones entre subprocesos para una colección. La API es ligeramente diferente de la variación de WPF. [consulte los documentos para obtener detalles de uso](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*).
 
 ## <a name="data-templates"></a>Plantillas de datos
 
-Las plantillas de datos se admiten en Xamarin. Forms para personalizar la `ListView` representación de una fila (celda). A diferencia de WPF que puede `DataTemplate`usar s para cualquier control orientado a contenido, Xamarin. Forms solo los `ListView`usa actualmente para. La definición de plantilla se puede definir en línea (asignada `ItemTemplate` a la propiedad) o como un recurso en `ResourceDictionary`un.
+Las plantillas de datos se admiten en Xamarin. Forms para personalizar la representación de una fila de `ListView` (celda). A diferencia de WPF, que puede usar `DataTemplate`s para cualquier control orientado a contenido, Xamarin. Forms solo los usa actualmente para `ListView`. La definición de plantilla se puede definir en línea (asignada a la propiedad `ItemTemplate`) o como un recurso en un `ResourceDictionary`.
 
 Además, no son tan flexibles como sus homólogos de WPF.
 
-1. El elemento raíz de `DataTemplate` _siempre_ debe ser un `ViewCell` objeto.
-2. Los desencadenadores de datos se admiten por completo en una plantilla de datos `DataType` , pero deben incluir una propiedad que indique el tipo de la propiedad a la que está asociado el desencadenador.
-3. `DataTemplateSelector`también se admite, pero se deriva de `DataTemplate` y, por tanto, simplemente se asigna `ItemTemplate` directamente a la propiedad `ItemTemplateSelector` (frente a en WPF).
+1. El elemento raíz del `DataTemplate` _siempre_ debe ser un objeto `ViewCell`.
+2. Los desencadenadores de datos se admiten por completo en una plantilla de datos, pero deben incluir una propiedad `DataType` que indique el tipo de la propiedad a la que está asociado el desencadenador.
+3. también se admite `DataTemplateSelector`, pero se deriva de `DataTemplate` y, por tanto, simplemente se asigna directamente a la propiedad `ItemTemplate` (vs.  `ItemTemplateSelector` en WPF).
 
 ## <a name="itemscontrol"></a>ItemsControl
 
-No hay ningún equivalente integrado a `ItemsControl` en Xamarin. Forms, pero hay [uno personalizado para Xamarin. Forms disponible aquí](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
+No hay ningún equivalente integrado a un `ItemsControl` de Xamarin. Forms; pero hay una [personalizada para Xamarin. Forms disponible aquí](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
 
 ## <a name="user-controls"></a>Controles de usuario
 
-En WPF, `UserControl`se usan para proporcionar una sección de la interfaz de usuario que tiene un comportamiento asociado. En Xamarin. Forms, usamos `ContentView` para el mismo propósito. Ambos admiten el enlace y la inclusión en XAML.
+En WPF, `UserControl`s se usan para proporcionar una sección de la interfaz de usuario que tiene un comportamiento asociado. En Xamarin. Forms, usamos el `ContentView` para el mismo propósito. Ambos admiten el enlace y la inclusión en XAML.
 
 ## <a name="navigation"></a>Navegación
 
-WPF incluye un uso `NavigationService` poco frecuente que se puede usar para proporcionar una característica de navegación de tipo "explorador". Sin embargo, la mayoría de las aplicaciones no se molestan `Window` y, en su lugar, usaban elementos diferentes, o secciones diferentes de la ventana para mostrar los datos.
+WPF incluye un `NavigationService` que rara vez se usa, que se puede usar para proporcionar una característica de navegación de tipo "explorador". Sin embargo, la mayoría de las aplicaciones no se molestan y, en su lugar, usan distintos elementos de `Window`, o secciones diferentes de la ventana para mostrar los datos.
 
 En los dispositivos de teléfono, las _pantallas_ diferentes suelen ser la solución y, por tanto, Xamarin. Forms incluye compatibilidad con varias formas de navegación:
 
@@ -174,7 +174,7 @@ En los dispositivos de teléfono, las _pantallas_ diferentes suelen ser la soluc
 |Tabulaciones|TabbedPage|
 |Deslice el dedo hacia la izquierda o la derecha|CarouselView|
 
-Es el enfoque más común y cada página tiene una `Navigation` propiedad que se puede usar para enviar o desactivar las páginas en la pila de navegación. `NavigationPage` Este es el equivalente más cercano al `NavigationService` encontrado en WPF.
+El `NavigationPage` es el enfoque más común, y cada página tiene una propiedad `Navigation` que se puede usar para enviar o cerrar páginas en la pila de navegación. Este es el equivalente más cercano al `NavigationService` que se encuentra en WPF.
 
 ### <a name="url-navigation"></a>Navegación de direcciones URL
 

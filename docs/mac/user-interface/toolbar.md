@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70772724"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas en Xamarin. Mac
@@ -26,7 +26,7 @@ En este artículo se describen los aspectos básicos del trabajo con barras de h
 
 Antes de continuar, lea el artículo de [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente la [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y las secciones de [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que abarca conceptos clave y técnicas que se usarán en esta guía.
 
-Eche un vistazo a la sección [exposición de C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) . Se explican `Register` los `Export` atributos y que se C# usan para conectar clases a clases de Objective-C.
+Eche un vistazo a la sección [exposición de C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) . Se explican los atributos `Register` y `Export` que se C# usan para conectar clases a clases Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introducción a las barras de herramientas
 
@@ -87,7 +87,7 @@ Para exponer elementos de la C# interfaz de usuario al código mediante salidas 
 4. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos.
 5. Se agregará un archivo **WindowController.CS** al proyecto en el **Panel de solución** en Visual Studio para Mac: 
 
-    ![Seleccionar WindowController.CS en el panel de solución](toolbar-images/windowcontroller02.png "Seleccionar WindowController.CS en el panel de solución")
+    ![Seleccionar WindowController.cs en el Panel de solución](toolbar-images/windowcontroller02.png "Seleccionar WindowController.cs en el Panel de solución")
 
 6. Vuelva a abrir el guion gráfico en la Interface Builder de Xcode.
 7. El archivo **WindowController. h** estará disponible para su uso: 
@@ -98,7 +98,7 @@ Para exponer elementos de la C# interfaz de usuario al código mediante salidas 
 
 Las barras de herramientas se crean y mantienen con los Interface Builder de Xcode. Para agregar una barra de herramientas a una aplicación, edite el guión gráfico principal de la aplicación (en este caso, **Main. Storyboard**) haciendo doble clic en él en el **Panel de solución**:
 
-![Abrir Main. Storyboard en el panel de solución](toolbar-images/edit01.png "Abrir Main. Storyboard en el panel de solución")
+![Abrir Main. Storyboard en el Panel de solución](toolbar-images/edit01.png "Abrir Main. Storyboard en el Panel de solución")
 
 En el **Inspector de biblioteca**, escriba "herramienta" en el **cuadro de búsqueda** para que sea más fácil ver todos los elementos de la barra de herramientas disponibles:
 
@@ -198,7 +198,7 @@ Guarde el documento, vuelva a Visual Studio para Mac para sincronizarlo con Xcod
 
 Mediante el uso de un elemento de la **barra de herramientas de imagen**, cualquier imagen de mapa de bits agregada a la carpeta de **recursos** (y dada una acción de compilación de **recurso de agrupación**) se puede mostrar en la barra de herramientas como un icono:
 
-1. En Visual Studio para Mac, en el **Panel de solución**, haga clic con el botón derecho en la carpeta **recursos** y seleccione **Agregar** > **Agregar archivos**.
+1. En Visual Studio para Mac, en el **Panel de solución**, haga clic con el botón derecho en la carpeta **recursos** y seleccione **Agregar**  > **Agregar archivos**.
 2. En el cuadro de diálogo **Agregar archivos** , vaya a las imágenes deseadas, selecciónelas y haga clic en el botón **abrir** : 
 
     [![Seleccionar imágenes para agregar](toolbar-images/edit11.png "Seleccionar imágenes para agregar")](toolbar-images/edit11-large.png#lightbox)
@@ -269,7 +269,7 @@ public void EraseDocument() {
 }
 ```
 
-Después, edite el archivo **WindowController.CS** y agregue el código siguiente en la parte inferior `WindowController` de la clase:
+Después, edite el archivo **WindowController.CS** y agregue el código siguiente en la parte inferior de la clase `WindowController`:
 
 ```csharp
 [Export ("trashDocument:")]
@@ -288,9 +288,9 @@ Tenga en cuenta que ahora se puede usar el elemento de la barra de herramientas 
 
 ## <a name="disabling-toolbar-items"></a>Deshabilitar elementos de la barra de herramientas
 
-Para deshabilitar un elemento en una barra de herramientas, `NSToolbarItem` cree una clase personalizada `Validate` e invalide el método. A continuación, en Interface Builder, asigne el tipo personalizado al elemento que desea habilitar o deshabilitar.
+Para deshabilitar un elemento de una barra de herramientas, cree una clase de `NSToolbarItem` personalizada e invalide el método `Validate`. A continuación, en Interface Builder, asigne el tipo personalizado al elemento que desea habilitar o deshabilitar.
 
-Para crear una clase `NSToolbarItem` personalizada, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **nuevo archivo..** .. Seleccione**clase vacía** **General** > , escriba "ActivatableItem" como **nombre**y haga clic en el botón **nuevo** : 
+Para crear una clase de `NSToolbarItem` personalizada, haga clic con el botón derecho en el proyecto y seleccione **agregar**  > **nuevo archivo..** .. Seleccione **General**  > **clase vacía**, escriba "ActivatableItem" como **nombre**y haga clic en el botón **nuevo** : 
 
 ![Agregar una clase vacía en Visual Studio para Mac](toolbar-images/custom01.png "Agregar una clase vacía en Visual Studio para Mac")
 
@@ -338,7 +338,7 @@ Haga doble clic en **Main. Storyboard** para abrirlo en Xcode. Seleccione el ele
 
 ![Establecer una clase personalizada para un elemento de la barra de herramientas](toolbar-images/custom02.png "Establecer una clase personalizada para un elemento de la barra de herramientas")
 
-Cree una toma llamada `trashItem` para el elemento de la barra de herramientas de la **papelera** . Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode. Por último, Abra **MainWindow.CS** y actualice `AwakeFromNib` el método para que se lea de la siguiente manera:
+Cree una toma llamada `trashItem` para el elemento de la barra de herramientas de la **papelera** . Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode. Por último, Abra **MainWindow.CS** y actualice el método `AwakeFromNib` para leer de la siguiente manera:
 
 ```csharp
 public override void AwakeFromNib ()

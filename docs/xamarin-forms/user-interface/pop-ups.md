@@ -1,36 +1,34 @@
 ---
 title: Mostrar elementos emergentes
-description: 'Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo se muestra cómo usar las API de alertas y de hojas de acción para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas y guían a los usuarios a través de tareas.'
+description: 'Xamarin. Forms proporciona tres elementos de interfaz de usuario de tipo emergente: una alerta, una hoja de acción y un símbolo del sistema. En este artículo se muestra el uso de alertas, hojas de acción y API de mensajes para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas, guiar a los usuarios a través de tareas y mostrar mensajes.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 3b6b2ea2d497c9fdce2c323c7f7a793a4186aa4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 09/25/2019
+ms.openlocfilehash: ddf0b96295f7153803db65a1fd741cc5df473730
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656109"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697093"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-_Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo se muestra cómo usar las API de alertas y de hojas de acción para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas y guían a los usuarios a través de tareas._
-
-Mostrar una alerta o pedir al usuario que seleccione una opción es una tarea común de la interfaz de usuario. Xamarin.Forms tiene dos métodos en la clase [`Page`](xref:Xamarin.Forms.Page) para interactuar con el usuario mediante un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) y [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Se representan con controles nativos adecuados en cada plataforma.
+Mostrar una alerta, pedir al usuario que elija una opción o mostrar un mensaje es una tarea común de la interfaz de usuario. Xamarin. Forms tiene tres métodos en la clase [`Page`](xref:Xamarin.Forms.Page) para interactuar con el usuario a través de un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)y `DisplayPromptAsync`. Se representan con controles nativos adecuados en cada plataforma.
 
 ## <a name="display-an-alert"></a>Visualización de una alerta
 
 Todas las plataformas compatibles con Xamarin.Forms tienen una ventana emergente modal para mostrar alertas al usuario o realizar preguntas sencillas. Para mostrar estas alertas en Xamarin.Forms, use el método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) en cualquier elemento [`Page`](xref:Xamarin.Forms.Page). En la siguiente línea de código, se muestra un mensaje sencillo al usuario:
 
 ```csharp
-DisplayAlert ("Alert", "You have been alerted", "OK");
+await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![](pop-ups-images/alert.png "Cuadro de diálogo de alerta con un botón")
+![](pop-ups-images/alert.png "Alert Dialog with One Button")
 
 En este ejemplo, no se recopila información del usuario. La alerta se muestra modalmente y, después de cerrarla, el usuario sigue interactuando con la aplicación.
 
@@ -44,7 +42,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "Cuadro de diálogo de alerta con dos botones")](pop-ups-images/alert2.png#lightbox "Alert Dialog with Two Buttons")
+[![DisplayAlert](pop-ups-images/alert2-sml.png "Cuadro de diálogo de alerta con dos botones")](pop-ups-images/alert2.png#lightbox "Cuadro de diálogo de alerta con dos botones")
 
 ## <a name="guide-users-through-tasks"></a>Guiar a los usuarios a través de tareas
 
@@ -60,7 +58,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "Cuadro de diálogo de ActionSheet")
+![](pop-ups-images/action.png "ActionSheet Dialog")
 
 El botón `destroy` se representa de forma distinta y puede dejarse como `null`, o bien se puede especificar como el tercer parámetro de cadena. En el ejemplo siguiente, se usa el botón `destroy`:
 
@@ -72,7 +70,45 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayActionSheet](pop-ups-images/action2-sml.png "Cuadro de diálogo de hoja de acción con el botón Destruir")](pop-ups-images/action2.png#lightbox "Action Sheet Dialog with Destroy Button")
+[![DisplayActionSheet](pop-ups-images/action2-sml.png "Cuadro de diálogo de hoja de acción con el botón destruir")](pop-ups-images/action2.png#lightbox "Cuadro de diálogo de hoja de acción con el botón destruir")
+
+## <a name="display-a-prompt"></a>Mostrar un mensaje
+
+Para mostrar un símbolo del sistema, llame al `DisplayPromptAsync` en cualquier [`Page`](xref:Xamarin.Forms.Page), pasando un título y un mensaje como argumentos `string`:
+
+```csharp
+string result = await DisplayPromptAsync("Question 1", "What's your name?");
+```
+
+El mensaje se muestra de forma modal:
+
+[![Captura de pantalla de un símbolo del sistema modal, en iOS y Android](pop-ups-images/simple-prompt.png "Símbolo del sistema modal")](pop-ups-images/simple-prompt-large.png#lightbox "Símbolo del sistema modal")
+
+Si se puntea el botón Aceptar, se devuelve la respuesta especificada como `string`. Si se puntea el botón Cancelar, se devuelve `null`.
+
+La lista de argumentos completa para el método `DisplayPromptAsync` es:
+
+- `title`, de tipo `string`, es el título que se va a mostrar en el símbolo del sistema.
+- `message`, de tipo `string`, es el mensaje que se va a mostrar en el símbolo del sistema.
+- `accept`, de tipo `string`, es el texto del botón Aceptar. Este argumento es opcional, cuyo valor predeterminado es OK.
+- `cancel`, de tipo `string`, es el texto del botón Cancelar. Es un argumento opcional, cuyo valor predeterminado es cancelar.
+- `placeholder`, de tipo `string`, es el texto del marcador de posición que se va a mostrar en el símbolo del sistema. Se trata de un argumento opcional, cuyo valor predeterminado es `null`.
+- `maxLength`, de tipo `int`, es la longitud máxima de la respuesta del usuario. Este argumento es opcional, cuyo valor predeterminado es-1.
+- `keyboard`, de tipo `Keyboard`, es el tipo de teclado que se va a utilizar para la respuesta del usuario. Se trata de un argumento opcional, cuyo valor predeterminado es `Keyboard.Default`.
+
+En el ejemplo siguiente se muestra cómo establecer algunos de los argumentos opcionales:
+
+```csharp
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+}
+```
+
+Este código limita el número de caracteres que se pueden introducir en 2 y muestra el teclado numérico para la entrada del usuario:
+
+[![Captura de pantalla de un símbolo del sistema modal, en iOS y Android](pop-ups-images/keyboard-prompt.png "Símbolo del sistema modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Símbolo del sistema modal")
+
+> [!NOTE]
+> El método de `DisplayPromptAsync` solo se implementa actualmente en iOS y Android.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

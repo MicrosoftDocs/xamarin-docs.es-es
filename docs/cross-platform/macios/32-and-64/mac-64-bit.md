@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
 ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70765920"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Actualización de las aplicaciones unificadas de Xamarin. Mac a 64 bits
 
 A partir del 2018 de enero, Apple requiere que las nuevas [presentaciones de Mac App Store tengan como destino 64 bits](https://developer.apple.com/news/?id=06282017a). Las aplicaciones que ya están disponibles en Mac App Store deben actualizarse para que tengan un destino de 64 de junio de 2018.
 
-La plantilla de proyecto **archivo** > **nuevo** de Xamarin. Mac crea aplicaciones de 64 bits de forma predeterminada, por lo que las aplicaciones creadas recientemente ya son compatibles con 64 bits y no requieren ningún cambio.
+El **archivo**  > **nueva** plantilla de proyecto de Xamarin. Mac crea aplicaciones de 64 bits de forma predeterminada, por lo que cualquier aplicación recién creada ya es compatible con 64 bits y no requiere ningún cambio.
 
 ## <a name="targeting-64-bit"></a>Establecer como destino 64 bits
 
@@ -25,13 +25,13 @@ La plantilla de proyecto **archivo** > **nuevo** de Xamarin. Mac crea aplicacion
 
    ![Menú contextual del proyecto](mac-64-bit-images/1-contextual_menu-vsmac.png "Menú contextual del proyecto")
 
-2. Seleccione la **compilación de Mac** y establezca las **arquitecturas admitidas** en **\_x86 64**:
+2. Seleccione la **compilación de Mac** y establezca las **arquitecturas admitidas** en **x86 \_64**:
 
    [![Establecimiento de las arquitecturas admitidas en x86_64](mac-64-bit-images/2-project_options-vsmac.png "Establecimiento de las arquitecturas admitidas en x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 
 3. Si la aplicación tiene dependencias externas, como referencias nativas o proyectos de enlace, actualícelos para tener como destino 64 bits.
 
-### <a name="errors"></a>Errors
+### <a name="errors"></a>Errores
 
 La primera vez que compile o ejecute la aplicación con compatibilidad con 64 bits, puede encontrar errores de vínculo de Clang o problemas en tiempo de ejecución. Estos errores pueden producirse si las dependencias de terceros, por ejemplo, las referencias nativas de los proyectos de Xamarin. Mac o de enlaces, o los marcos de trabajo para todo el sistema cargados manualmente, no se han actualizado a 64 bits.
 
@@ -46,7 +46,7 @@ file was built for i386 which is not the architecture being linked (x86_64):
 PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary 
 ```
 
-Este error se puede seguir en tiempo de `dlopen` ejecución `IntPtr.Zero` devolviendo en lugar de un identificador esperado.
+Este error se podría seguir en tiempo de ejecución `dlopen` devolver `IntPtr.Zero` en lugar de un identificador esperado.
 
 #### <a name="example-error-resulting-from-a-statically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Error de ejemplo resultante de una dependencia de terceros vinculada estáticamente que no tiene como destino 64 bits:
 

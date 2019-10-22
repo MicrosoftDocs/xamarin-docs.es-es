@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70758496"
 ---
 # <a name="introduction-to-android-wear"></a>Introducción a Android Wear
@@ -36,7 +36,7 @@ La primera versión del desgaste de Android se centró principalmente en la exte
 
 #### <a name="wearable-notifications"></a>Notificaciones de portátil
 
-La manera más sencilla de admitir el desgaste de Android es aprovechar la naturaleza compartida de las notificaciones entre el dispositivo de mano y el dispositivo portátil. Mediante el uso de la API de notificación de `WearableExtender` support V4 y la clase (disponible en la [biblioteca de compatibilidad de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), puede aprovechar las características nativas de la plataforma, como las tarjetas de estilo de bandeja de entrada o la entrada de voz. El ejemplo [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) proporciona código de ejemplo que muestra cómo enviar una lista de notificaciones a un dispositivo de desgaste de Android. 
+La manera más sencilla de admitir el desgaste de Android es aprovechar la naturaleza compartida de las notificaciones entre el dispositivo de mano y el dispositivo portátil. Mediante el uso de la API de notificación de support V4 y la clase `WearableExtender` (disponible en la [biblioteca de compatibilidad de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), puede aprovechar las características nativas de la plataforma, como las tarjetas de estilo de bandeja de entrada o la entrada de voz. El ejemplo [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) proporciona código de ejemplo que muestra cómo enviar una lista de notificaciones a un dispositivo de desgaste de Android. 
 
 #### <a name="companion-applications"></a>Aplicaciones complementarias
 
@@ -44,11 +44,11 @@ Otra estrategia consiste en crear una aplicación completa que se ejecute de for
 
 ### <a name="user-interface"></a>Interfaz de usuario
 
-El patrón de navegación principal para el desgaste es una serie de tarjetas organizadas verticalmente. Cada una de estas tarjetas puede tener acciones asociadas que se superponen en la misma fila. La `GridViewPager` clase proporciona esta funcionalidad; se adhiere al mismo concepto de adaptador `ListView`que. Normalmente, se asocia `GridViewPager` con un `FragmentGridPagerAdaptor` (o `GridPagerAdaptor`) que permite `Fragment`representar cada celda de fila y columna como: 
+El patrón de navegación principal para el desgaste es una serie de tarjetas organizadas verticalmente. Cada una de estas tarjetas puede tener acciones asociadas que se superponen en la misma fila. La clase `GridViewPager` proporciona esta funcionalidad; se adhiere al mismo concepto de adaptador que `ListView`. Normalmente asocia el `GridViewPager` con un `FragmentGridPagerAdaptor` (o `GridPagerAdaptor`) que le permite representar cada celda de fila y columna como `Fragment`: 
 
 [![Navegación por desgaste](intro-to-wear-images/2d-picker-sml.png "Navegación por desgaste")](intro-to-wear-images/2d-picker.png#lightbox)
 
-El desgaste también hace uso de botones de acción que se componen de un círculo de color grande con un pequeño texto de Descripción debajo (como se muestra arriba).  En el ejemplo [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) se muestra cómo `GridViewPager` usar `GridPagerAdapter` y en una aplicación de desgaste.
+El desgaste también hace uso de botones de acción que se componen de un círculo de color grande con un pequeño texto de Descripción debajo (como se muestra arriba).  En el ejemplo [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) se muestra cómo usar `GridViewPager` y `GridPagerAdapter` en una aplicación de desgaste.
 
 El desgaste de Android 2,0 agrega un cajón de navegación, un cajón de acciones y botones de acción insertados a la interfaz de usuario de desgaste. Para más información sobre los elementos de la interfaz de usuario de 2,0 de Android, consulte el tema sobre la [anatomía](https://www.google.com/design/spec-wear/system-overview/anatomy.html) de Android. 
 
@@ -56,13 +56,13 @@ El desgaste de Android 2,0 agrega un cajón de navegación, un cajón de accione
 
 El desgaste de Android proporciona dos API de comunicación diferentes para facilitar la comunicación entre las aplicaciones de portátil y las aplicaciones de mano complementarias: 
 
-**API de datos** &ndash; Esta API es similar a un almacén de datos sincronizado entre el dispositivo portátil y el dispositivo de mano. Android se encarga de propagar los cambios entre portátil y el dispositivo de mano cuando es óptimo hacerlo. Cuando el portátil está fuera del intervalo, pone en cola la sincronización para más adelante. El punto de entrada principal para esta API `WearableClass.DataApi`es. Para obtener más información acerca de esta API, vea el tema Android [Syncing Data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
+**Data api** &ndash; esta API es similar a un almacén de datos sincronizado entre el dispositivo portátil y el dispositivo de mano. Android se encarga de propagar los cambios entre portátil y el dispositivo de mano cuando es óptimo hacerlo. Cuando el portátil está fuera del intervalo, pone en cola la sincronización para más adelante. El punto de entrada principal para esta API es `WearableClass.DataApi`. Para obtener más información acerca de esta API, vea el tema Android [Syncing Data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
 
-**API de mensajes** &ndash; Esta API permite usar una ruta de comunicación de nivel inferior: una carga pequeña se envía de forma unidireccional sin sincronización entre las aplicaciones de mano y portátil.
-El punto de entrada principal para esta API `WearableClass.MessageApi`es.
+**Message api** &ndash; esta API permite usar una ruta de comunicación de nivel inferior: una carga pequeña se envía de forma unidireccional sin sincronización entre las aplicaciones de handheld y portátil.
+El punto de entrada principal para esta API es `WearableClass.MessageApi`.
 Para obtener más información acerca de esta API, consulte el tema [envío y recepción de mensajes](https://developer.android.com/training/wearables/data-layer/messages.html) de Android.
 
-Puede optar por registrar devoluciones de llamada para recibir esos mensajes a través de cada una de las interfaces del agente de escucha de API o, como alternativa, implementar `WearableListenerService`un servicio en la aplicación que se derive de.
+Puede optar por registrar devoluciones de llamada para recibir esos mensajes a través de cada una de las interfaces del agente de escucha de API o, como alternativa, implementar un servicio en la aplicación que se derive de `WearableListenerService`.
 Se crearán instancias de este servicio automáticamente con el desgaste de Android.
 En el ejemplo [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) se muestra cómo implementar un `WearableListenerService`.
 
@@ -126,11 +126,11 @@ Para obtener más información sobre estos dos nuevos interactivos interactivos,
 
 #### <a name="curved-layouts"></a>Diseños curvos 
 
-Desgaste 2,0 presenta nuevas características para mostrar diseños curvos en dispositivos de desgaste de ida y vuelta. En concreto, la `WearableRecyclerView` nueva clase está optimizada para mostrar una lista de elementos verticales en pantallas redondas: 
+Desgaste 2,0 presenta nuevas características para mostrar diseños curvos en dispositivos de desgaste de ida y vuelta. En concreto, la nueva clase de `WearableRecyclerView` está optimizada para mostrar una lista de elementos verticales en pantallas redondas: 
 
 ![Ejemplo de diseño curvo](intro-to-wear-images/curved-layout.png "Ejemplo de diseño curvo")
 
-`WearableRecyclerView`extiende la `RecyclerView` clase para admitir diseños curvos y gestos de desplazamiento circular. Para obtener más información, consulte la documentación de la API de Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) . 
+`WearableRecyclerView` extiende la `RecyclerView` clase para admitir diseños curvos y movimientos de desplazamiento circular. Para obtener más información, consulte la documentación de la API de Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) . 
 
 #### <a name="standalone-apps"></a>Aplicaciones independientes 
 
@@ -138,7 +138,7 @@ Las aplicaciones de desgaste de Android 2,0 pueden funcionar independientemente 
 
 #### <a name="wrist-gestures"></a>Gestos de muñecas 
 
-Los gestos de muñecas permiten a los usuarios interactuar con la aplicación sin usar la pantalla &ndash; táctil los usuarios pueden responder a la aplicación con una sola mano. Se admiten dos gestos de muñecas: 
+Los gestos de muñecas permiten a los usuarios interactuar con la aplicación sin usar la pantalla táctil &ndash; los usuarios pueden responder a la aplicación con una sola mano. Se admiten dos gestos de muñecas: 
 
 - Desplazarse hacia afuera
 - Gesto de muñeca en
@@ -154,8 +154,8 @@ Estos son algunos ejemplos de los dispositivos que pueden ejecutar el desgaste d
 - [Motorola 360](https://moto360.motorola.com/)
 - [Reloj de LG G](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
 - [Inspección R de LG G](http://www.lg.com/us/smartwatch/g-watch-r)
-- [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-- [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [En directo de Samsung Gear](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [SONY SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 - [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 ## <a name="further-reading"></a>Información adicional

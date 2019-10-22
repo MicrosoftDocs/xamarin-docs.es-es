@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "67832540"
 ---
 # <a name="introduction-to-urhosharp"></a>Introducción a UrhoSharp
@@ -44,7 +44,7 @@ UrhoSharp se distribuye de manera adecuada como un [paquete NuGet](https://www.n
 
 El paquete Urho se puede usar desde un proyecto específico de la plataforma o desde un proyecto de biblioteca de clases portable, lo que le permite volver a usar todo el código en todas las plataformas.  Esto significa que todo lo que tendría que hacer en cada plataforma es escribir el punto de entrada específico de la plataforma y, a continuación, transferir el control al código de juego compartido.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 Puede obtener un sabor para las funcionalidades de Urho abriendo en Visual Studio para Mac o Visual Studio la solución de ejemplo de:
 
@@ -68,7 +68,7 @@ Mientras que los otros ejemplos muestran propiedades individuales de cada ejempl
 
 ## <a name="basic-structure"></a>Estructura básica
 
-El juego debe subclaser `Application` la clase, aquí es donde se configurará el juego ( `Setup` en el método) y se iniciará el `Start` juego (en el método).  A continuación, cree la interfaz de usuario principal.  Vamos a recorrer un ejemplo pequeño que muestra las API para configurar una escena 3D, algunos elementos de la interfaz de usuario y asociarle un comportamiento sencillo.
+El juego debe subclaser la `Application` clase, aquí es donde configurará el juego (en el método `Setup`) e iniciará el juego (en el método `Start`).  A continuación, cree la interfaz de usuario principal.  Vamos a recorrer un ejemplo pequeño que muestra las API para configurar una escena 3D, algunos elementos de la interfaz de usuario y asociarle un comportamiento sencillo.
 
 ```csharp
 class MySample : Application {
@@ -135,9 +135,9 @@ Para iniciar la aplicación, llame a la función de inicialización del motor, s
 new MySample().Run();
 ```
 
-El Runtime invocará los `Setup` métodos `Start` y automáticamente.  Si invalida `Setup` , puede configurar los parámetros del motor (no se muestran en este ejemplo).
+El tiempo de ejecución invocará los métodos `Setup` y `Start` automáticamente.  Si invalida `Setup` puede configurar los parámetros del motor (no se muestran en este ejemplo).
 
-Debe invalidar `Start` , ya que esto iniciará el juego.  En este método se cargarán los recursos, se conectarán los controladores de eventos, se configurará la escena y se iniciarán las acciones que desee.  En nuestro ejemplo, creamos un poco de interfaz de usuario para mostrar al usuario, así como para configurar una escena 3D.
+Debe invalidar `Start` ya que esto iniciará el juego.  En este método se cargarán los recursos, se conectarán los controladores de eventos, se configurará la escena y se iniciarán las acciones que desee.  En nuestro ejemplo, creamos un poco de interfaz de usuario para mostrar al usuario, así como para configurar una escena 3D.
 
 En el siguiente fragmento de código se usa el marco de interfaz de usuario para crear un elemento de texto y agregarlo a la aplicación:
 
@@ -156,11 +156,11 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-El marco de interfaz de usuario está ahí para proporcionar una interfaz de usuario muy sencilla y funciona agregando nuevos nodos al `UI.Root` nodo.
+El marco de interfaz de usuario está ahí para proporcionar una interfaz de usuario muy sencilla y funciona agregando nuevos nodos al nodo `UI.Root`.
 
 En la segunda parte de nuestro ejemplo se configura la escena principal.  Esto implica una serie de pasos, la creación de una escena 3D, la creación de un cuadro 3D en la pantalla, la adición de una luz, una cámara y una ventanilla.  Estos se exploran con más detalle en la sección [escena, nodos, componentes y cámaras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-La tercera parte de nuestro ejemplo desencadena un par de acciones.  Las acciones son recetas que describen un efecto determinado y, una vez creadas, las puede ejecutar un nodo a petición llamando al `RunActionAsync` método `Node`en.
+La tercera parte de nuestro ejemplo desencadena un par de acciones.  Las acciones son recetas que describen un efecto determinado y, una vez creadas, las puede ejecutar un nodo a petición llamando al método `RunActionAsync` en un `Node`.
 
 La primera acción escala el cuadro con un efecto de rebote y el segundo gira el cuadro siempre:
 
@@ -169,7 +169,7 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-Lo anterior muestra cómo la primera acción que se crea es una `ScaleTo` acción, que es simplemente una receta que indica que se desea escalar un segundo hacia el valor de una propiedad Scale de un nodo.  Esta acción, a su vez, se ajusta en torno a `EaseBounceOut` una acción de entrada y salida lenta, la acción.  Las acciones de entradas y salidas lentas distorsionan la ejecución lineal de una acción y aplican un efecto; en este caso, proporciona el efecto de rebote.
+Lo anterior muestra cómo la primera acción que se crea es una acción `ScaleTo`, es simplemente una receta que indica que se desea escalar un segundo hacia el valor de la propiedad Scale de un nodo.  Esta acción, a su vez, se ajusta en torno a una acción de entrada y salida lenta, la acción de `EaseBounceOut`.  Las acciones de entradas y salidas lentas distorsionan la ejecución lineal de una acción y aplican un efecto; en este caso, proporciona el efecto de rebote.
 Por lo tanto, nuestra receta podría escribirse de la siguiente manera:
 
 ```csharp

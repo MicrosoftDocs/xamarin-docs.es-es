@@ -1,45 +1,37 @@
 ---
-title: Xamarin.Forms ScrollView
-description: En este artículo se explica cómo usar la clase Xamarin.Forms ScrollView para presentar los diseños que no caben en una sola pantalla y que tienen contenido dejar espacio para el teclado.
+title: ScrollView de Xamarin. Forms
+description: En este artículo se explica cómo usar la clase ScrollView de Xamarin. Forms para presentar diseños que no caben en una sola pantalla y que tienen espacio de contenido para el teclado.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 131b9dc64db1ea0dba3982bd71459c2a281743bc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 09/17/2019
+ms.openlocfilehash: 8d523c6da6ca7feaf6894123822f789f37455865
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770284"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696853"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
+# <a name="xamarinforms-scrollview"></a>ScrollView de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView) contiene los diseños y les permite desplazamiento fuera de la pantalla. `ScrollView` También se utiliza para permitir que las vistas se mueva automáticamente a la parte visible de la pantalla cuando se muestra el teclado.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) contiene diseños y les permite desplazarse fuera de la ventana desplegable. `ScrollView` también se usa para permitir que las vistas se muevan automáticamente a la parte visible de la pantalla cuando se muestra el teclado.
 
-[![](scroll-view-images/layouts-sml.png "Los diseños de Xamarin.Forms")](scroll-view-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
-En este artículo se tratan los aspectos siguientes:
+## <a name="purpose"></a>Finalidad
 
-- **[Propósito](#purpose)**  &ndash; el propósito de `ScrollView` y cuando se utiliza.
-- **[Uso](#usage)**  &ndash; uso `ScrollView` en la práctica.
-- **[Propiedades](#properties)**  &ndash; propiedades públicas que se pueden leer y modificar.
-- **[Métodos](#methods)**  &ndash; métodos públicos que se pueden llamar para desplazar la vista.
-- **[Eventos](#events)**  &ndash; eventos que pueden usarse para detectar cambios en los Estados de la vista.
-
-## <a name="purpose"></a>Propósito
-
-`ScrollView` puede utilizarse para asegurarse de que se muestran vistas mayor bien en los teléfonos más pequeños. Por ejemplo, un diseño que funciona en un iPhone 6s puede quedar cortado en un iPhone 4s. Mediante un `ScrollView` permitirían las partes recortadas del diseño que se mostrará en la pantalla más pequeña.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) puede usarse para asegurarse de que las vistas de mayor tamaño se muestran bien en teléfonos más pequeños. Por ejemplo, un diseño que funciona en un iPhone 6S puede estar recortado en un iPhone 4S. El uso de un `ScrollView` permitiría mostrar las partes recortadas del diseño en la pantalla más pequeña.
 
 ## <a name="usage"></a>Uso
 
 > [!NOTE]
-> `ScrollView`s no debería estar anidado. Además, `ScrollView`s no debería estar anidado con otros controles que proporcionan el desplazamiento, como `ListView` y `WebView`.
+> [`ScrollView`](xref:Xamarin.Forms.ScrollView) objetos no deben estar anidados. Además, `ScrollView`s no se deben anidar con otros controles que proporcionen desplazamiento, como `ListView` y `WebView`.
 
-`ScrollView` expone un `Content` propiedad que se puede establecer en un diseño o vista única. Considere este ejemplo de un diseño con un gran boxView, seguido por un `Entry`:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) expone una propiedad `Content`, que se puede establecer en una sola vista o diseño. Considere este ejemplo de un diseño con un boxView muy grande, seguido de un `Entry`:
 
 ```xaml
 <ContentPage.Content>
@@ -62,30 +54,33 @@ stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest =
 stack.Children.Add(new Entry());
 ```
 
-Antes de que el usuario se desplaza hacia abajo, solo el `BoxView` está visible:
+Antes de que el usuario se desplace hacia abajo, solo está visible la `BoxView`:
 
-![](scroll-view-images/scroll-start.png "BoxView en ScrollView")
+![](scroll-view-images/scroll-start.png "BoxView in ScrollView")
 
-Tenga en cuenta que cuando el usuario comienza a escribir texto en el `Entry`, la vista se desplaza para mantener visible en pantalla:
+Tenga en cuenta que cuando el usuario comienza a escribir texto en el `Entry`, la vista se desplaza para mantenerlo visible en la pantalla:
 
-![](scroll-view-images/scroll-end.png "Entrada de ScrollView")
+![](scroll-view-images/scroll-end.png "Entry in ScrollView")
 
 ## <a name="properties"></a>Propiedades
 
-`ScrollView` define las siguientes propiedades:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define las siguientes propiedades:
 
-- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) Obtiene un [ `Size` ](xref:Xamarin.Forms.Size) valor que representa el tamaño del contenido.
-- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) Obtiene o establece un [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) valor de enumeración que representa la dirección de desplazamiento de la `ScrollView`.
-- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) Obtiene un `double` que representa la actual posición de desplazamiento X.
-- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) Obtiene un `double` que representa la posición de desplazamiento Y actual.
-- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) Obtiene o establece un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa cuándo está visible la barra de desplazamiento horizontal.
-- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) Obtiene o establece un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa el momento de la barra de desplazamiento vertical está visible.
+- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) obtiene un valor de [`Size`](xref:Xamarin.Forms.Size) que representa el tamaño del contenido.
+- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) obtiene o establece un valor de enumeración de [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) que representa la dirección de desplazamiento de la `ScrollView`.
+- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) obtiene un `double` que representa la posición de desplazamiento X actual.
+- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) obtiene un `double` que representa la posición de desplazamiento Y actual.
+- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) obtiene o establece un valor de [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) que representa Cuándo está visible la barra de desplazamiento horizontal.
+- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) obtiene o establece un valor de [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) que representa Cuándo está visible la barra de desplazamiento vertical.
+
+> [!NOTE]
+> El desplazamiento se puede deshabilitar estableciendo la propiedad [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) en `Neither`.
 
 ## <a name="methods"></a>Métodos
 
-`ScrollView` Proporciona un `ScrollToAsync` método, que se puede usar para desplazar la vista mediante coordenadas o bien especificando una vista concreta que debe hacerse visible.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) proporciona un método de `ScrollToAsync`, que se puede utilizar para desplazar la vista usando las coordenadas o especificando una vista determinada que debe hacerse visible.
 
-Cuando se usa coordenadas, especifique el `x` y `y` coordenadas, junto con un valor booleano que indica si el desplazamiento debe animarse:
+Al utilizar coordenadas, especifique las coordenadas `x` y `y`, junto con un valor booleano que indica si se debe animar el desplazamiento:
 
 ```csharp
 scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from the top is visible
@@ -93,18 +88,21 @@ scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from
 scroll.ScrollToAsync(label, ScrollToPosition.Start, true); //scrolls so that the label is at the start of the list
 ```
 
-Al desplazarse a un elemento determinado, el `ScrollToPosition` especifica enumeración donde en la vista del elemento aparecerá:
+> [!IMPORTANT]
+> El método `ScrollToAsync` no producirá un desplazamiento cuando la propiedad [`ScrollView.Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) esté establecida en `Neither`.
 
-- **Centro de** &ndash; desplaza el elemento en el centro de la parte visible de la vista.
-- **End** &ndash; desplaza el elemento al final de la parte visible de la vista.
-- **MakeVisible** &ndash; desplaza el elemento para que sea visible dentro de la vista.
-- **Iniciar** &ndash; desplaza el elemento al principio de la parte visible de la vista.
+Al desplazarse a un elemento determinado, la enumeración `ScrollToPosition` especifica dónde aparecerá el elemento en la vista.
 
-El `IsAnimated` propiedad especifica cómo se desplazará la vista. Cuando establece en true, una animación suave, se usará, en lugar de pasar al instante el contenido en la vista.
+- **Center** &ndash; desplaza el elemento hasta el centro de la parte visible de la vista.
+- **End** &ndash; desplaza el elemento hasta el final de la parte visible de la vista.
+- **MakeVisible** &ndash; desplaza el elemento para que esté visible dentro de la vista.
+- **Iniciar** &ndash; desplaza el elemento hasta el inicio de la parte visible de la vista.
 
-## <a name="events"></a>Eventos
+La propiedad `IsAnimated` especifica cómo se desplazará la vista. Cuando se establece en `true`, se usará una animación Smooth, en lugar de mover el contenido al instante en la vista.
 
-`ScrollView` define un solo evento `Scrolled`. `Scrolled` se produce cuando ha finalizado la vista de desplazamiento. El controlador de eventos `Scrolled` toma `ScrolledEventArgs`, que tiene el `ScrollX` y `ScrollY` propiedades. El siguiente ejemplo muestra cómo actualizar una etiqueta con la posición de desplazamiento actual de un `ScrollView`:
+## <a name="events"></a>Events
+
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define un solo evento, `Scrolled`. `Scrolled` se produce cuando la vista ha terminado de desplazarse. El controlador de eventos para `Scrolled` toma `ScrolledEventArgs`, que tiene las propiedades `ScrollX` y `ScrollY`. A continuación se muestra cómo actualizar una etiqueta con la posición de desplazamiento actual de un `ScrollView`:
 
 ```csharp
 Label label = new Label { Text = "Position: " };
@@ -114,7 +112,7 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 };
 ```
 
-Tenga en cuenta que las posiciones de desplazamiento pueden ser negativas, porque el efecto de rebote al desplazarse al final de una lista.
+Tenga en cuenta que las posiciones de desplazamiento pueden ser negativas debido al efecto de rebote al desplazarse al final de una lista.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

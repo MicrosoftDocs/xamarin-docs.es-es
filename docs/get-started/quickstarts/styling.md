@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70756757"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Aplicar estilo a una aplicación de Xamarin. Forms multiplataforma
@@ -26,8 +26,8 @@ En esta guía de inicio rápido, obtendrá información sobre cómo:
 
 En la guía de inicio rápido se explica cómo aplicar un estilo a una aplicación de Xamarin. Forms multiplataforma con estilos XAML. A continuación se muestra la aplicación final:
 
-[![](styling-images/screenshots1-sml.png "")](styling-images/screenshots1.png#lightbox "Página notas")
-[![](styling-images/screenshots2-sml.png "Página de entrada de nota") de página de notas](styling-images/screenshots2.png#lightbox "Página de entrada de nota")
+[![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
+[![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
 
 ### <a name="prerequisites"></a>Requisitos previos
 
@@ -77,7 +77,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </Application>
     ```
 
-    Este código define un [`Thickness`](xref:Xamarin.Forms.Thickness) valor, una serie de [`Color`](xref:Xamarin.Forms.Color) valores [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y estilos implícitos para y [`ContentPage`](xref:Xamarin.Forms.ContentPage). Tenga en cuenta que estos estilos, que están en el nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de la aplicación, se pueden consumir en toda la aplicación. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código define un valor [`Thickness`](xref:Xamarin.Forms.Thickness) , una serie de valores [`Color`](xref:Xamarin.Forms.Color) y estilos implícitos para las [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y [`ContentPage`](xref:Xamarin.Forms.ContentPage). Tenga en cuenta que estos estilos, que están en el [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)en el nivel de la aplicación, se pueden consumir en toda la aplicación. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **app. Xaml** presionando **Ctrl + S**y cierre el archivo.
 
@@ -116,7 +116,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </ContentPage>
     ```
 
-    Este código agrega un [`ListView`](xref:Xamarin.Forms.ListView) estilo implícito para al nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de página y establece la `ListView.Margin` propiedad en un valor definido en el nivel `ResourceDictionary`de la aplicación. Tenga en cuenta `ListView` que el estilo implícito se agregó al nivel `ResourceDictionary`de página, porque solo lo consume `NotesPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código agrega un estilo implícito para el [`ListView`](xref:Xamarin.Forms.ListView) al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de nivel de página y establece la propiedad `ListView.Margin` en un valor definido en el `ResourceDictionary` de nivel de aplicación. Tenga en cuenta que el estilo implícito de `ListView` se ha agregado a la `ResourceDictionary` de nivel de página, porque solo lo utiliza el `NotesPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **NotesPage. Xaml** presionando **Ctrl + S**y cierre el archivo.
 
@@ -165,13 +165,13 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </ContentPage>
     ```
 
-    Este código agrega estilos implícitos para [`Editor`](xref:Xamarin.Forms.Editor) las [`Button`](xref:Xamarin.Forms.Button) vistas y al nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de página, y establece la `StackLayout.Margin` propiedad en un valor definido en el nivel `ResourceDictionary`de la aplicación. Tenga en cuenta `Editor` que `Button` los estilos implícitos y se agregaron al `ResourceDictionary`nivel de página, porque solo los `NoteEntryPage`consumen. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código agrega estilos implícitos para las vistas [`Editor`](xref:Xamarin.Forms.Editor) y [`Button`](xref:Xamarin.Forms.Button) al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de nivel de página, y establece la propiedad `StackLayout.Margin` en un valor definido en el `ResourceDictionary` de nivel de la aplicación. Tenga en cuenta que los estilos implícitos `Editor` y `Button` se agregaron a la `ResourceDictionary` de nivel de página, porque solo los consumen el `NoteEntryPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **NoteEntryPage. Xaml** presionando **Ctrl + S**y cierre el archivo.
 
 5. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, vea [crear la guía de inicio rápido](single-page.md#building-the-quickstart).
 
-    En el **NotesPage** , presione **+** el botón para navegar hasta el **NoteEntryPage** y escriba una nota. En cada página, observe cómo ha cambiado el estilo de la guía de inicio rápido anterior.
+    En el **NotesPage** , presione el botón **+** para ir a **NoteEntryPage** y escriba una nota. En cada página, observe cómo ha cambiado el estilo de la guía de inicio rápido anterior.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -218,7 +218,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </Application>
     ```
 
-    Este código define un [`Thickness`](xref:Xamarin.Forms.Thickness) valor, una serie de [`Color`](xref:Xamarin.Forms.Color) valores [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y estilos implícitos para y [`ContentPage`](xref:Xamarin.Forms.ContentPage). Tenga en cuenta que estos estilos, que están en el nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de la aplicación, se pueden consumir en toda la aplicación. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código define un valor [`Thickness`](xref:Xamarin.Forms.Thickness) , una serie de valores [`Color`](xref:Xamarin.Forms.Color) y estilos implícitos para las [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y [`ContentPage`](xref:Xamarin.Forms.ContentPage). Tenga en cuenta que estos estilos, que están en el [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)en el nivel de la aplicación, se pueden consumir en toda la aplicación. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **app. Xaml** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
@@ -257,7 +257,7 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </ContentPage>
     ```
 
-    Este código agrega un [`ListView`](xref:Xamarin.Forms.ListView) estilo implícito para al nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de página y establece la `ListView.Margin` propiedad en un valor definido en el nivel `ResourceDictionary`de la aplicación. Tenga en cuenta `ListView` que el estilo implícito se agregó al nivel `ResourceDictionary`de página, porque solo lo consume `NotesPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código agrega un estilo implícito para el [`ListView`](xref:Xamarin.Forms.ListView) al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de nivel de página y establece la propiedad `ListView.Margin` en un valor definido en el `ResourceDictionary` de nivel de aplicación. Tenga en cuenta que el estilo implícito de `ListView` se ha agregado a la `ResourceDictionary` de nivel de página, porque solo lo utiliza el `NotesPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **NotesPage. Xaml** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
@@ -306,13 +306,13 @@ Antes de intentar esta guía de inicio rápido, debe completar correctamente el 
     </ContentPage>
     ```
 
-    Este código agrega estilos implícitos para [`Editor`](xref:Xamarin.Forms.Editor) las [`Button`](xref:Xamarin.Forms.Button) vistas y al nivel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de página, y establece la `StackLayout.Margin` propiedad en un valor definido en el nivel `ResourceDictionary`de la aplicación. Tenga en cuenta `Editor` que `Button` los estilos implícitos y se agregaron al `ResourceDictionary`nivel de página, porque solo los `NoteEntryPage`consumen. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
+    Este código agrega estilos implícitos para las vistas [`Editor`](xref:Xamarin.Forms.Editor) y [`Button`](xref:Xamarin.Forms.Button) al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de nivel de página, y establece la propiedad `StackLayout.Margin` en un valor definido en el `ResourceDictionary` de nivel de la aplicación. Tenga en cuenta que los estilos implícitos `Editor` y `Button` se agregaron a la `ResourceDictionary` de nivel de página, porque solo los consumen el `NoteEntryPage`. Para obtener más información sobre el estilo XAML, vea [aplicar](deepdive.md#styling) un análisis detallado en la guía de [Inicio rápido de Xamarin. Forms](deepdive.md).
 
     Guarde los cambios en **NoteEntryPage. Xaml** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
 5. Compile y ejecute el proyecto en cada plataforma. Para obtener más información, vea [crear la guía de inicio rápido](single-page.md#building-the-quickstart).
 
-    En el **NotesPage** , presione **+** el botón para navegar hasta el **NoteEntryPage** y escriba una nota. En cada página, observe cómo ha cambiado el estilo de la guía de inicio rápido anterior.
+    En el **NotesPage** , presione el botón **+** para ir a **NoteEntryPage** y escriba una nota. En cada página, observe cómo ha cambiado el estilo de la guía de inicio rápido anterior.
 
 ::: zone-end
 

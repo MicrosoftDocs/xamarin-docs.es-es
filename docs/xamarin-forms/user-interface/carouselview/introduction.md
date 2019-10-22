@@ -1,36 +1,32 @@
 ---
 title: Introducción a Xamarin. Forms CarouselView
-description: CarouselView es una vista para presentar los datos en un diseño de tipo carrusel.
+description: CarouselView es una vista para presentar los datos en un diseño desplazable, donde los usuarios pueden deslizarse para desplazarse por una colección de elementos.
 ms.prod: xamarin
 ms.assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f
 ms.technology: xamarin-forms
-author: pauldipietro
-ms.author: padipi
-ms.date: 09/09/2019
-ms.openlocfilehash: 7979f6ed362c580d9cf80f19b3bc0ea7550ca70c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/08/2019
+ms.openlocfilehash: 2fe4d984f36880493a9a04d99b63876551366477
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70985975"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696968"
 ---
 # <a name="xamarinforms-carouselview-introduction"></a>Introducción a Xamarin. Forms CarouselView
 
-![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
+![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)es una vista para presentar información en un modo de carrusel.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) es una vista para presentar los datos en un diseño desplazable, donde los usuarios pueden deslizarse para desplazarse por una colección de elementos. De forma predeterminada, `CarouselView` mostrará sus elementos en una orientación horizontal. Se mostrará un solo elemento en la pantalla, con gestos de deslizar rápidamente, lo que da como resultado la navegación hacia delante y hacia atrás a través de la colección de elementos.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)está disponible en Xamarin. Forms 4,3. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, o bien a `MainActivity` la clase en Android, antes `Forms.Init`de llamar a:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) está disponible en Xamarin. forms 4,3. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la clase `AppDelegate` en iOS, o bien a la clase `MainActivity` en Android, antes de llamar a `Forms.Init`:
 
 ```csharp
-Forms.SetFlags("CollectionView_Experimental");
+Forms.SetFlags("CarouselView_Experimental");
 ```
 
-_Nota: En el que se redactó este documento, el CarouselView todavía usa la marca CollectionView para habilitar su funcionalidad._
-
 > [!IMPORTANT]
-> [`CarouselView`](xref:Xamarin.Forms.CarouselView)está disponible en iOS y Android, pero es posible que algunas funciones solo estén disponibles parcialmente en el Plataforma universal de Windows.
+> [`CarouselView`](xref:Xamarin.Forms.CarouselView) está disponible en iOS y Android, pero es posible que algunas funciones solo estén disponibles parcialmente en el plataforma universal de Windows.
 
-## <a name="when-to-use-carouselview"></a>Cuándo usar CarouselView
-
-Aunque el CarouselView basa gran parte de su implementación en una de CollectionView, su finalidad es más centrada. Aunque el uso de CollectionView y CarouselView está a su discreción, los carruseles en las aplicaciones se suelen usar para resaltar información y se limitan en el número total de elementos usados.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) comparte gran parte de su implementación con [`CollectionView`](xref:Xamarin.Forms.CollectionView). Sin embargo, los dos controles tienen diferentes casos de uso. Normalmente, `CollectionView` se usa para presentar listas de datos, de cualquier longitud, mientras que `CarouselView` se suele usar para resaltar información en una lista de longitud limitada.

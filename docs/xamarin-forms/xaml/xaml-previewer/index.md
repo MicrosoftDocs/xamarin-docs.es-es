@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757266"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Vista previa de XAML para Xamarin. Forms
@@ -52,7 +52,7 @@ Puede cambiar si la pantalla está dividida vertical u horizontalmente o contrae
 
 El botón **vista previa** se muestra en el editor cuando se abre una página XAML. Para mostrar u ocultar el previsor, presione los botones **vista previa** o **dividir** en la parte inferior izquierda de cualquier ventana de documento XAML:
 
-[![Vista previa de Xamarin. Forms habilitada con el botón de vista previa o de división](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[vista previa de ![Xamarin. Forms habilitada con el botón vista previa o dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > En versiones anteriores de Visual Studio para Mac, el botón **vista previa** se encontraba en la parte superior derecha de la ventana.
@@ -64,14 +64,14 @@ El botón **vista previa** se muestra en el editor cuando se abre una página XA
 Las opciones que aparecen a lo largo de la parte superior del panel de vista previa son:
 
 * **Android** : Mostrar la versión de Android de la pantalla
-* **iOS** : Mostrar la versión de iOS de la pantalla *(tenga en cuenta lo siguiente: Si usa Visual Studio en Windows, debe [emparejarse con un equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar este modo*).
-* Lista desplegable de dispositivos de dispositivos Android o iOS, incluida la resolución y el tamaño de pantalla
+* **iOS** : Mostrar la versión de iOS de la pantalla (*Nota: Si usa Visual Studio en Windows, debe [emparejarse con un equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar este modo*).
+* Lista desplegable de dispositivos de dispositivos Android o iOS, **incluida la resolución** y el tamaño de pantalla
 * **Vertical (icono)** : usa la orientación vertical para la vista previa
 * **Horizontal (icono)** : usa la orientación horizontal para la vista previa
 
 ## <a name="detect-design-mode"></a>Detectar el modo de diseño
 
-La propiedad [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) estática indica si la aplicación se está ejecutando en el visor de vista previa. Si lo usa, puede especificar código que solo se ejecutará cuando la aplicación se esté ejecutando en el visor de vista previa:
+La propiedad [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) estáticas indica si la aplicación se está ejecutando en la vista previa. Si lo usa, puede especificar código que solo se ejecutará cuando la aplicación se esté ejecutando en el visor de vista previa:
 
 ```csharp
 if (DesignMode.IsDesignModeEnabled)
@@ -87,7 +87,7 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Esta propiedad es útil si Inicializa una biblioteca en el constructor de páginas que no se puede ejecutar en tiempo de diseño.
 
-## <a name="troubleshooting"></a>solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Compruebe los problemas siguientes y los [foros de Xamarin](https://forums.xamarin.com/categories/xamarin-forms), si el visor de vista previa no funciona.
 
@@ -95,10 +95,10 @@ Compruebe los problemas siguientes y los [foros de Xamarin](https://forums.xamar
 
 * Puede tardar algún tiempo en iniciarse el previsor; verá "inicializando representación" hasta que esté listo.
 * Intente cerrar y volver a abrir el archivo XAML.
-* Asegúrese de que `App` la clase tiene un constructor sin parámetros.
+* Asegúrese de que la clase de `App` tenga un constructor sin parámetros.
 * Compruebe la versión de Xamarin. Forms: debe ser al menos Xamarin. Forms 3,6. Puede actualizar a la versión más reciente de Xamarin. Forms a través de NuGet.
 * Comprobar la instalación de JDK: la vista previa de Android requiere al menos [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-* Intente envolver cualquier clase inicializada en el C# código de la página que `if (!DesignMode.IsDesignModeEnabled)`se encuentra en.
+* Intente envolver cualquier clase inicializada en el C# código de la página subyacente en `if (!DesignMode.IsDesignModeEnabled)`.
 
 ### <a name="custom-controls-arent-rendering"></a>Los controles personalizados no se representan
 

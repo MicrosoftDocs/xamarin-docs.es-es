@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739178"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos locales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-_Xamarin.Forms admite aplicaciones de base de datos que usan el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en código compartido. En este artículo se describe cómo las aplicaciones de Xamarin.Forms pueden leer y escribir datos en una base de datos de SQLite local mediante SQLite.Net._
+_Xamarin. Forms es compatible con aplicaciones controladas por base de datos que usan el motor de base de datos SQLite, lo que permite cargar y guardar objetos en código compartido. En este artículo se describe cómo las aplicaciones de Xamarin. Forms pueden leer y escribir datos en una base de datos SQLite local mediante SQLite.Net._
 
 ## <a name="overview"></a>Información general
 
@@ -26,7 +26,7 @@ Las aplicaciones de Xamarin.Forms pueden usar el paquete de [NuGet SQLite.NET PC
 
 La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) acompañante es una sencilla aplicación de lista de tareas. Las siguientes capturas de pantalla muestran cómo el ejemplo aparece en cada plataforma:
 
-[![Capturas de ejemplo de base de datos de Xamarin. Forms](databases-images/todo-list-sml.png "Capturas de pantallas de la primera página de ToDoList") ](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList") [ ![Ejemplo de base de datos de Xamarin. Forms capturas]de pantallas de(databases-images/todo-list-sml.png "ToDoList primera página") ](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList")
+[![Ejemplo de base de datos de Xamarin. Forms capturas](databases-images/todo-list-sml.png "Capturas de pantallas de la primera página de TodoList")](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList") de seguridad de [ ![Xamarin. Forms ejemplo](databases-images/todo-list-sml.png "Capturas de pantallas de la primera página de TodoList")](databases-images/todo-list.png#lightbox "Capturas de pantallas de la primera página de TodoList")
 
 <a name="Using_SQLite_with_PCL" />
 
@@ -34,7 +34,7 @@ La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-f
 
 Para agregar compatibilidad de SQLite a una biblioteca de .NET Standard de Xamarin.Forms, use la función de búsqueda de NuGet para buscar **sqlite-net-pcl** e instalar el paquete más reciente:
 
-![Agregar paquete de NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
+![Adición del paquete PCL de SQLite.NET de NuGet](databases-images/vs2017-sqlite-pcl-nuget.png "Adición del paquete PCL de SQLite.NET de NuGet")
 
 Hay una serie de paquetes de NuGet con nombres similares, el paquete correcto tiene estos atributos:
 

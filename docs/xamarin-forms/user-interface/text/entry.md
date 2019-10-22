@@ -1,32 +1,32 @@
 ---
-title: Entrada de Xamarin.Forms
-description: En este artículo se explica cómo usar la clase de entrada de Xamarin.Forms para aceptar el texto de una línea o una entrada de contraseña en una aplicación.
+title: Entrada de Xamarin. Forms
+description: En este artículo se explica cómo usar la clase de entrada de Xamarin. Forms para aceptar texto de una sola línea o la entrada de contraseña en una aplicación.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
-ms.openlocfilehash: 040d01dceaa6c5dd785d2423c72247ee602b98db
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 09/25/2019
+ms.openlocfilehash: 106d22cd7f20f8368bc728aa45c4d7f19d09c44c
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767716"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697057"
 ---
-# <a name="xamarinforms-entry"></a>Entrada de Xamarin.Forms
+# <a name="xamarinforms-entry"></a>Entrada de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Texto de una línea o la contraseña de entrada_
+_Entrada de texto o de contraseña de una sola línea_
 
-Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) se usa para la entrada de texto de una línea. El `Entry`, como el [ `Editor` ](xref:Xamarin.Forms.Editor) ver, admite varios tipos de teclado. Además, el `Entry` puede usarse como un campo de contraseña.
+La [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin. Forms se usa para la entrada de texto de una sola línea. La `Entry`, al igual que la vista de [`Editor`](xref:Xamarin.Forms.Editor) , admite varios tipos de teclado. Además, el `Entry` se puede usar como campo de contraseña.
 
-## <a name="display-customization"></a>Personalización de la presentación
+## <a name="display-customization"></a>Personalizar la visualización
 
-### <a name="setting-and-reading-text"></a>Establecimiento y lectura de texto
+### <a name="setting-and-reading-text"></a>Establecer y leer texto
 
-El `Entry`, al igual que otras vistas de presentación de texto, expone el [ `Text` ](xref:Xamarin.Forms.Entry.Text) propiedad. Esta propiedad se puede utilizar para establecer y leer el texto presentado por el `Entry`. El ejemplo siguiente se muestra cómo establecer el `Text` propiedad en XAML:
+La `Entry`, al igual que otras vistas de presentación de texto, expone la propiedad [`Text`](xref:Xamarin.Forms.Entry.Text) . Esta propiedad se puede utilizar para establecer y leer el texto presentado por el `Entry`. En el ejemplo siguiente se muestra cómo establecer la propiedad `Text` en XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -38,15 +38,15 @@ En C#:
 var MyEntry = new Entry { Text = "I am an Entry" };
 ```
 
-Para leer el texto, obtener acceso a la `Text` propiedad en C#:
+Para leer texto, acceda a la propiedad `Text` C#en:
 
 ```csharp
 var text = MyEntry.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>Establecer el texto de marcador de posición
+### <a name="setting-placeholder-text"></a>Establecer el texto del marcador de posición
 
-El [ `Entry` ](xref:Xamarin.Forms.Entry) puede establecerse para mostrar texto de marcador de posición cuando no está almacenando proporcionados por el usuario. Esto se consigue estableciendo la [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) propiedad a un `string`y a menudo se usa para indicar el tipo de contenido que sea adecuada para el `Entry`. Además, el color del texto de marcador de posición puede controlarse estableciendo la [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) propiedad a un [ `Color` ](xref:Xamarin.Forms.Color):
+El [`Entry`](xref:Xamarin.Forms.Entry) se puede establecer para mostrar el texto del marcador de posición cuando no almacena los datos proporcionados por el usuario. Esto se consigue estableciendo la propiedad [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) en un `string` y a menudo se usa para indicar el tipo de contenido adecuado para el `Entry`. Además, el color del texto del marcador de posición se puede controlar estableciendo la propiedad [`PlaceholderColor`](xref:Xamarin.Forms.Entry.PlaceholderColor) en un [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Entry Placeholder="Username" PlaceholderColor="Olive" />
@@ -57,11 +57,11 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 ```
 
 > [!NOTE]
-> El ancho de un `Entry` puede definirse estableciendo su `WidthRequest` propiedad. No dependen del ancho de un `Entry` que se define en función del valor de su `Text` propiedad.
+> El ancho de un `Entry` se puede definir estableciendo su propiedad `WidthRequest`. No dependa del ancho de una `Entry` que se está definiendo en función del valor de su propiedad `Text`.
 
 ### <a name="preventing-text-entry"></a>Impedir la entrada de texto
 
-Se puede impedir que los usuarios modifiquen el texto en [`Entry`](xref:Xamarin.Forms.Entry) un estableciendo la `IsReadOnly` propiedad, que tiene un valor predeterminado de `false`, en `true`:
+Se puede impedir que los usuarios modifiquen el texto en un [`Entry`](xref:Xamarin.Forms.Entry) estableciendo la propiedad `IsReadOnly`, que tiene un valor predeterminado de `false`, para `true`:
 
 ```xaml
 <Entry Text="This is a read-only Entry"
@@ -73,11 +73,11 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 ```
 
 > [!NOTE]
-> La `IsReadonly` propiedad no modifica la apariencia visual de un [`Entry`](xref:Xamarin.Forms.Entry), `Entry` a diferencia de la `IsEnabled` propiedad que también cambia la apariencia visual del a gris.
+> La propiedad `IsReadonly` no modifica la apariencia visual de un [`Entry`](xref:Xamarin.Forms.Entry), a diferencia de la propiedad `IsEnabled`, que también cambia la apariencia visual del `Entry` a gris.
 
 ### <a name="limiting-input-length"></a>Limitar la longitud de entrada
 
-El [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propiedad puede utilizarse para limitar la longitud de entrada que sea aceptable para el [ `Entry` ](xref:Xamarin.Forms.Entry). Esta propiedad debe establecerse en un entero positivo:
+La propiedad [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) se puede utilizar para limitar la longitud de entrada permitida para el [`Entry`](xref:Xamarin.Forms.Entry). Esta propiedad debe establecerse en un entero positivo:
 
 ```xaml
 <Entry ... MaxLength="10" />
@@ -87,11 +87,31 @@ El [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propiedad puede utili
 var entry = new Entry { ... MaxLength = 10 };
 ```
 
-Un [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor de propiedad de 0 indica que no se permitirá ninguna entrada y un valor de `int.MaxValue`, que es el valor predeterminado para un [ `Entry` ](xref:Xamarin.Forms.Entry), indica que no hay ninguna límite real del número de caracteres que pueden especificarse.
+Un valor de propiedad [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) de 0 indica que no se permitirá ninguna entrada y un valor de `int.MaxValue`, que es el valor predeterminado para un [`Entry`](xref:Xamarin.Forms.Entry), indica que no hay ningún límite efectivo en el número de caracteres que se pueden escribir.
+
+### <a name="character-spacing"></a>Espaciado de caracteres
+
+El espaciado de caracteres se puede aplicar a un [`Entry`](xref:Xamarin.Forms.Entry) estableciendo la propiedad `Entry.CharacterSpacing` en un valor `double`:
+
+```xaml
+<Entry ...
+       CharacterSpacing="10" />
+```
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+Entry entry = new Entry { CharacterSpacing = 10 };
+```
+
+El resultado es que los caracteres del texto que muestra el [`Entry`](xref:Xamarin.Forms.Entry) se espacian `CharacterSpacing` unidades independientes del dispositivo.
+
+> [!NOTE]
+> El valor de la propiedad `CharacterSpacing` se aplica al texto que se muestra en las propiedades `Text` y `Placeholder`.
 
 ### <a name="password-fields"></a>Campos de contraseña
 
-`Entry` proporciona el `IsPassword` propiedad. Cuando `IsPassword` es `true`, se mostrará el contenido del campo como círculos negros:
+`Entry` proporciona la propiedad `IsPassword`. Cuando `IsPassword` se `true`, el contenido del campo se presentará como círculos negros:
 
 En XAML:
 
@@ -107,7 +127,7 @@ var MyEntry = new Entry { IsPassword = true };
 
 ![Ejemplo de IsPassword de entrada](entry-images/password.png)
 
-Marcadores de posición se pueden usar con instancias de `Entry` que están configurados como campos de contraseña:
+Los marcadores de posición se pueden usar con instancias de `Entry` que están configuradas como campos de contraseña:
 
 En XAML:
 
@@ -123,9 +143,9 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![Ejemplo de IsPassword de entrada y marcador de posición](entry-images/passwordplaceholder.png)
 
-### <a name="setting-the-cursor-position-and-text-selection-length"></a>Establecer la posición del Cursor y la longitud de la selección de texto
+### <a name="setting-the-cursor-position-and-text-selection-length"></a>Establecer la posición del cursor y la longitud de la selección de texto
 
-El [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) propiedad puede usarse para devolver o establecer la posición en la que se insertará el siguiente carácter en la cadena almacenada en el [ `Text` ](xref:Xamarin.Forms.Entry.Text) propiedad:
+La propiedad [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) se puede utilizar para devolver o establecer la posición en la que se insertará el siguiente carácter en la cadena almacenada en la propiedad [`Text`](xref:Xamarin.Forms.Entry.Text) :
 
 ```xaml
 <Entry Text="Cursor position set" CursorPosition="5" />
@@ -135,9 +155,9 @@ El [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) propiedad puede
 var entry = new Entry { Text = "Cursor position set", CursorPosition = 5 };
 ```
 
-El valor predeterminado de la [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) propiedad es 0, lo que indica que se insertará el texto al principio de la `Entry`.
+El valor predeterminado de la propiedad [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) es 0, que indica que el texto se insertará al principio del `Entry`.
 
-Además, el [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) propiedad puede usarse para devolver o establecer la longitud de selección de texto dentro de la `Entry`:
+Además, la propiedad [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) se puede utilizar para devolver o establecer la longitud de la selección de texto dentro de la `Entry`:
 
 ```xaml
 <Entry Text="Cursor position and selection length set" CursorPosition="2" SelectionLength="10" />
@@ -147,13 +167,37 @@ Además, el [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) prop
 var entry = new Entry { Text = "Cursor position and selection length set", CursorPosition = 2, SelectionLength = 10 };
 ```
 
-El valor predeterminado de la [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) propiedad es 0, lo que indica que no hay texto seleccionado.
+El valor predeterminado de la propiedad [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) es 0, que indica que no se ha seleccionado ningún texto.
 
-### <a name="customizing-the-keyboard"></a>Personalizar el teclado
+### <a name="displaying-a-clear-button"></a>Mostrar un botón borrar
 
-El teclado que aparece cuando los usuarios interactúan con un [ `Entry` ](xref:Xamarin.Forms.Entry) se puede establecer mediante programación a través de la [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) propiedad a una de las siguientes propiedades desde el [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) clase:
+La propiedad `ClearButtonVisibility` se puede utilizar para controlar si un [`Entry`](xref:Xamarin.Forms.Entry) muestra un botón borrar, lo que permite al usuario borrar el texto. Esta propiedad se debe establecer en un miembro de enumeración de `ClearButtonVisibility`:
 
-- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) : se usa para el texto y los lugares donde emoji son útiles.
+- `Never` indica que nunca se mostrará un botón CLEAR. Este es el valor predeterminado de la propiedad `Entry.ClearButtonVisibility`.
+- `WhileEditing` indica que se mostrará un botón borrar en el [`Entry`](xref:Xamarin.Forms.Entry), mientras que tiene el foco y el texto.
+
+En el ejemplo siguiente se muestra cómo establecer la propiedad en XAML:
+
+```xaml
+<Entry Text="Xamarin.Forms"
+       ClearButtonVisibility="WhileEditing" />
+```
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearButtonVisibility.WhileEditing };
+```
+
+Las capturas de pantallas siguientes muestran un [`Entry`](xref:Xamarin.Forms.Entry) con el botón Borrar habilitado:
+
+![Captura de pantalla de una entrada con un botón borrar, en iOS y Android](entry-images/entry-clear-button.png)
+
+### <a name="customizing-the-keyboard"></a>Personalización del teclado
+
+El teclado que se muestra cuando los usuarios interactúan con un [`Entry`](xref:Xamarin.Forms.Entry) se pueden establecer mediante programación a través de la propiedad [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) , en una de las siguientes propiedades de la clase [`Keyboard`](xref:Xamarin.Forms.Keyboard) :
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat): se usa para el texto y los lugares donde los emoji son útiles.
 - [`Default`](xref:Xamarin.Forms.Keyboard.Default): el teclado predeterminado.
 - [`Email`](xref:Xamarin.Forms.Keyboard.Email): se usa al especificar direcciones de correo electrónico.
 - [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric): se usa al escribir números.
@@ -162,21 +206,21 @@ El teclado que aparece cuando los usuarios interactúan con un [ `Entry` ](xref:
 - [`Text`](xref:Xamarin.Forms.Keyboard.Text): se usa al escribir texto.
 - [`Url`](xref:Xamarin.Forms.Keyboard.Url) : se usa para especificar las rutas de acceso de archivo y direcciones web.
 
-Esto puede realizarse en XAML como sigue:
+Esto se puede lograr en XAML de la siguiente manera:
 
 ```xaml
 <Entry Keyboard="Chat" />
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 var entry = new Entry { Keyboard = Keyboard.Chat };
 ```
 
-Ejemplos de cada teclado pueden encontrarse en nuestra [recetas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) repositorio.
+Puede encontrar ejemplos de cada teclado en nuestro repositorio de [recetas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) .
 
-El [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) clase también tiene un [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método generador que puede usarse para personalizar un teclado mediante la especificación del comportamiento de mayúsculas y minúsculas, corrector ortográfico y sugerencias. Los valores de enumeración [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) se especifican como argumentos para el método, con la devolución de un `Keyboard` personalizado. La enumeración `KeyboardFlags` contiene los valores siguientes:
+La clase [`Keyboard`](xref:Xamarin.Forms.Keyboard) tiene también un patrón de diseño Factory Method [`Create`](xref:Xamarin.Forms.Keyboard.Create*) que puede usarse para personalizar un teclado mediante la especificación del comportamiento de las mayúsculas y minúsculas, el corrector ortográfico y las sugerencias. Los valores de enumeración [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) se especifican como argumentos para el método, con la devolución de un `Keyboard` personalizado. La enumeración `KeyboardFlags` contiene los valores siguientes:
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None): no se agregan características al teclado.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence): indica que la primera letra de la primera palabra de cada frase se escribirá automáticamente en mayúsculas.
@@ -201,46 +245,46 @@ El ejemplo de código XAML siguiente muestra cómo personalizar el [`Keyboard`](
 </Entry>
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter text here" };
 entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-#### <a name="customizing-the-return-key"></a>Personalización de la tecla ENTRAR
+#### <a name="customizing-the-return-key"></a>Personalización de la tecla RETURN
 
-La apariencia de la tecla ENTRAR en el teclado en pantalla, que es que se muestra cuando un [ `Entry` ](xref:Xamarin.Forms.Entry) tiene el foco, se pueden personalizar mediante el establecimiento del [ `ReturnType` ](xref:Xamarin.Forms.Entry.ReturnType) propiedad con un valor de la [ `ReturnType` ](xref:Xamarin.Forms.ReturnType) enumeración:
+La apariencia de la tecla entrar en el teclado en pantalla, que se muestra cuando un [`Entry`](xref:Xamarin.Forms.Entry) tiene el foco, puede personalizarse estableciendo la propiedad [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) en un valor de la enumeración [`ReturnType`](xref:Xamarin.Forms.ReturnType) :
 
-- [`Default`](xref:Xamarin.Forms.ReturnType.Default) : indica que se requiere ninguna clave de valor devuelta concreta y que se usará el valor predeterminado de la plataforma.
-- [`Done`](xref:Xamarin.Forms.ReturnType.Done) : indica una clave de valor devuelta "Done".
-- [`Go`](xref:Xamarin.Forms.ReturnType.Go) : indica una clave de valor devuelta "Ir".
-- [`Next`](xref:Xamarin.Forms.ReturnType.Next) : indica una clave de valor devuelta "Siguiente".
-- [`Search`](xref:Xamarin.Forms.ReturnType.Search) : indica una clave de valor devuelta de "Búsqueda".
-- [`Send`](xref:Xamarin.Forms.ReturnType.Send) : indica una tecla de retorno del "Envío".
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) : indica que no se requiere ninguna clave de devolución específica y que se usará el valor predeterminado de la plataforma.
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) : indica una tecla de retorno "Done".
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) : indica una tecla de retorno "Go".
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) : indica una clave de retorno "Next".
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) : indica una clave de "búsqueda".
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) : indica una clave de "envío".
 
-En el siguiente ejemplo XAML se muestra cómo establecer la tecla ENTRAR:
+En el siguiente ejemplo de XAML se muestra cómo establecer la clave de devolución:
 
 ```xaml
 <Entry ReturnType="Send" />
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 var entry = new Entry { ReturnType = ReturnType.Send };
 ```
 
 > [!NOTE]
-> El aspecto exacto de la clave de valor devuelto depende de la plataforma. En iOS, la clave de valor devuelta es un botón basado en texto. Sin embargo, en plataformas de Windows Universal y Android, la clave devuelta es un botón de icono.
+> La apariencia exacta de la tecla RETURN depende de la plataforma. En iOS, la tecla RETURN es un botón basado en texto. Sin embargo, en las plataformas Android y universal de Windows, la tecla RETURN es un botón basado en iconos.
 
-Cuando se presiona la tecla ENTRAR, el [ `Completed` ](xref:Xamarin.Forms.Entry.Completed) desencadena el evento y cualquier `ICommand` especificado por el [ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand) se ejecuta la propiedad. Además, cualquier `object` especificado por el [ `ReturnCommandParameter` ](xref:Xamarin.Forms.Entry.ReturnCommandParameter) propiedad se pasará a la `ICommand` como un parámetro. Para obtener más información acerca de los comandos, consulte [la interfaz de comandos](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+Cuando se presiona la tecla entrar, el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) se activa y se ejecuta cualquier `ICommand` especificado por la propiedad [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) . Además, los `object` especificados por la propiedad [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) se pasarán a la `ICommand` como un parámetro. Para obtener más información sobre los comandos, consulte [The Command Interface](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) (La interfaz de comandos).
 
-### <a name="enabling-and-disabling-spell-checking"></a>Habilitar y deshabilitar el corrector ortográfico
+### <a name="enabling-and-disabling-spell-checking"></a>Habilitar y deshabilitar la revisión ortográfica
 
-El [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad controla si corrector ortográfico está habilitado. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escriba texto, se indican los errores de ortografía.
+La propiedad [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) controla si está habilitada la revisión ortográfica. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escribe texto, se indican errores ortográficos.
 
-Sin embargo, para algunos escenarios de entrada de texto, como escribir un nombre de usuario, corrector ortográfico proporciona una experiencia negativa y debe deshabilitarse estableciendo el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad `false`:
+Sin embargo, en algunos escenarios de entrada de texto, como la especificación de un nombre de usuario, la revisión ortográfica proporciona una experiencia negativa y debe deshabilitarse estableciendo la propiedad [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) en `false`:
 
 ```xaml
 <Entry ... IsSpellCheckEnabled="false" />
@@ -251,13 +295,13 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 ```
 
 > [!NOTE]
-> Cuando el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad está establecida en `false`y no se usa un teclado personalizado, se deshabilitará el corrector ortográfico nativo. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) ha sido conjunto que deshabilita el corrector comprobación, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), el `IsSpellCheckEnabled` se omite. Por lo tanto, no se puede usar la propiedad para habilitar el corrector ortográfico para un `Keyboard` que deshabilita de forma explícita.
+> Cuando la propiedad [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) está establecida en `false` y no se utiliza un teclado personalizado, se deshabilitará el corrector ortográfico nativo. Sin embargo, si se ha establecido un [`Keyboard`](xref:Xamarin.Forms.Keyboard) que deshabilita la revisión ortográfica, como [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat), se omite la propiedad `IsSpellCheckEnabled`. Por lo tanto, la propiedad no se puede usar para habilitar la revisión ortográfica de un `Keyboard` que lo deshabilita explícitamente.
 
-### <a name="enabling-and-disabling-text-prediction"></a>Habilitación y deshabilitación de la predicción de texto
+### <a name="enabling-and-disabling-text-prediction"></a>Habilitar y deshabilitar la predicción de texto
 
-El [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) propiedad controla si la predicción de texto y automática está habilitada la corrección de texto. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escriba texto, se presentan las predicciones de word.
+La propiedad [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) controla si está habilitada la predicción de texto y la corrección de texto automática. De forma predeterminada, la propiedad se establece en `true`. A medida que el usuario escribe texto, se presentan las predicciones de palabras.
 
-Sin embargo, para algunos escenarios de entrada de texto, como escribir un nombre de usuario, la predicción de texto y texto automático corrección proporciona una experiencia negativa y debe deshabilitarse estableciendo el [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) propiedad `false`:
+Sin embargo, en algunos escenarios de entrada de texto, como la especificación de un nombre de usuario, la predicción de texto y la corrección automática de texto proporcionan una experiencia negativa y se deben deshabilitar estableciendo la propiedad [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) en `false`:
 
 ```xaml
 <Entry ... IsTextPredictionEnabled="false" />
@@ -268,16 +312,16 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 ```
 
 > [!NOTE]
-> Cuando el [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) propiedad está establecida en `false`, y un teclado personalizado no es que se va a usar, la predicción de texto y automática se deshabilita la corrección de texto. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) se ha establecido que deshabilita la predicción de texto, el `IsTextPredictionEnabled` se omite. Por lo tanto, no se puede usar la propiedad para habilitar la predicción de texto para un `Keyboard` que deshabilita de forma explícita.
+> Cuando la propiedad [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) está establecida en `false` y no se utiliza un teclado personalizado, se deshabilita la predicción de texto y la corrección de texto automática. Sin embargo, si se ha establecido un [`Keyboard`](xref:Xamarin.Forms.Keyboard) que deshabilita la predicción de texto, se omite la propiedad `IsTextPredictionEnabled`. Por lo tanto, la propiedad no se puede usar para habilitar la predicción de texto para un `Keyboard` que lo deshabilita explícitamente.
 
 ### <a name="colors"></a>Colores
 
-Puede establecerse una entrada para usar un fondo personalizado y los colores de texto a través de las propiedades enlazables siguientes:
+La entrada se puede establecer para utilizar un fondo personalizado y colores de texto a través de las siguientes propiedades enlazables:
 
 - **TextColor** &ndash; establece el color del texto.
-- **BackgroundColor** &ndash; establece el color que aparece detrás del texto.
+- **BackgroundColor** &ndash; establece el color que se muestra detrás del texto.
 
-Atención especial es necesaria para asegurarse de que los colores se podrán usar en cada plataforma. Dado que cada plataforma tiene distintos valores predeterminados para los colores de texto y fondo, a menudo deberá establecer ambos si establece uno.
+Es necesario tener especial cuidado para asegurarse de que se puedan usar los colores en cada plataforma. Dado que cada plataforma tiene valores predeterminados diferentes para los colores de texto y de fondo, a menudo necesitará establecer ambos si establece uno.
 
 Use el código siguiente para establecer el color del texto de una entrada:
 
@@ -296,7 +340,7 @@ entry.TextColor = Color.Green;
 
 ![Ejemplo de TextColor de entrada](entry-images/textcolor.png)
 
-Tenga en cuenta que el marcador de posición no está afectado por el `TextColor`.
+Tenga en cuenta que el marcador de posición no se ve afectado por el `TextColor` especificado.
 
 Para establecer el color de fondo en XAML:
 
@@ -313,21 +357,21 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 ![Ejemplo de BackgroundColor de entrada](entry-images/textbackgroundcolor.png)
 
-Tenga cuidado para asegurarse de que los colores de fondo y de texto que elija puede utilizar en cada plataforma y no interferir con cualquier texto de marcador de posición.
+Asegúrese de que los colores de fondo y de texto que elija se pueden usar en cada plataforma y no oculte ningún texto de marcador de posición.
 
 ## <a name="events-and-interactivity"></a>Eventos e interactividad
 
-Entrada expone dos eventos:
+La entrada expone dos eventos:
 
-- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; se genera cuando cambia el texto en la entrada. Proporciona el texto antes y después del cambio.
-- [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; se genera cuando el usuario ha finalizado la entrada presionando la tecla ENTRAR del teclado.
+- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; genera cuando cambia el texto en la entrada. Proporciona el texto antes y después del cambio.
+- [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; genera cuando el usuario finaliza la entrada presionando la tecla entrar en el teclado.
 
 > [!NOTE]
-> La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la [`Entry`](xref:Xamarin.Forms.Entry) que hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) eventos [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) y.
+> La clase [`VisualElement`](xref:Xamarin.Forms.VisualElement) , de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene eventos [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) y [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) .
 
 ### <a name="completed"></a>Completada
 
-El `Completed` evento sirve para reaccionar a la finalización de una interacción con una entrada. `Completed`se genera cuando el usuario finaliza la entrada con un campo presionando la tecla entrar en el teclado (o presionando la tecla TAB en UWP). El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
+El evento `Completed` se utiliza para reaccionar a la finalización de una interacción con una entrada. `Completed` se produce cuando el usuario finaliza la entrada con un campo presionando la tecla entrar en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma al remitente y `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -336,7 +380,7 @@ void Entry_Completed (object sender, EventArgs e)
 }
 ```
 
-El evento completado se puede suscribir en XAML:
+Se puede suscribir el evento completado a en XAML:
 
 ```xaml
 <Entry Completed="Entry_Completed" />
@@ -349,13 +393,13 @@ var entry = new Entry ();
 entry.Completed += Entry_Completed;
 ```
 
-Después de la [ `Completed` ](xref:Xamarin.Forms.Entry.Completed) evento se activa, cualquier `ICommand` especificado por el [ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand) se ejecuta la propiedad, con el `object` especificado por el [ `ReturnCommandParameter` ](xref:Xamarin.Forms.Entry.ReturnCommandParameter) propiedad que se pasan a la `ICommand`.
+Una vez que se desencadena el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) , se ejecuta cualquier `ICommand` especificado por la propiedad [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) , con el `object` especificado por la propiedad [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) que se pasa al `ICommand`.
 
 ### <a name="textchanged"></a>TextChanged
 
-El `TextChanged` evento sirve para reaccionar ante un cambio en el contenido de un campo.
+El evento `TextChanged` se utiliza para reaccionar a un cambio en el contenido de un campo.
 
-`TextChanged` se produce cada vez que el `Text` de la `Entry` cambios. El controlador para el evento toma una instancia de `TextChangedEventArgs`. `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos de la `Entry` `Text` a través de la `OldTextValue` y `NewTextValue` propiedades:
+`TextChanged` se produce cuando cambia el `Text` de la `Entry`. El controlador del evento toma una instancia de `TextChangedEventArgs`. `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos del `Entry` `Text` a través de las propiedades `OldTextValue` y `NewTextValue`:
 
 ```csharp
 void Entry_TextChanged (object sender, TextChangedEventArgs e)
@@ -365,7 +409,7 @@ void Entry_TextChanged (object sender, TextChangedEventArgs e)
 }
 ```
 
-El `TextChanged` se pueden suscribir a eventos en XAML:
+El evento `TextChanged` se puede suscribir a en XAML:
 
 ```xaml
 <Entry TextChanged="Entry_TextChanged" />
@@ -381,4 +425,4 @@ entry.TextChanged += Entry_TextChanged;
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Entrada de API](xref:Xamarin.Forms.Entry)
+- [API de las entradas](xref:Xamarin.Forms.Entry)

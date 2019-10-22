@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770035"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
@@ -38,13 +38,13 @@ A continuación se indican las limitaciones y los problemas conocidos que pueden
 
 Las siguientes sugerencias pueden ser útiles al trabajar con extensiones en Xamarin. Mac:
 
-- Como Xamarin. Mac actualmente no admite extensiones de depuración, la experiencia de depuración dependerá principalmente `printf` de la ejecución y de las instrucciones. Sin embargo, las extensiones se ejecutan en un `Console.WriteLine` proceso de espacio aislado, por lo que no actuará como lo hace en otras aplicaciones de Xamarin. Mac. Al invocar [ `NSLog` directamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) , se generarán mensajes de depuración en el registro del sistema.
-- Cualquier excepción no detectada bloqueará el proceso de extensión, lo que proporciona solo una pequeña cantidad de información útil en el **registro del sistema**. Puede ser útil ajustar el `try/catch` código problemático en un `NSLog`bloque (excepción) antes de volver a producirlo.
-- Se puede tener acceso al **registro del sistema** desde la aplicación de **consola** en **aplicaciones** > **utilidades**:
+- Como Xamarin. Mac no es compatible actualmente con las extensiones de depuración, la experiencia de depuración dependerá principalmente de la ejecución y `printf` como las instrucciones. Sin embargo, las extensiones se ejecutan en un proceso de espacio aislado, por lo que `Console.WriteLine` no actuarán como en otras aplicaciones de Xamarin. Mac. Al invocar [`NSLog` directamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) , se generarán mensajes de depuración en el registro del sistema.
+- Cualquier excepción no detectada bloqueará el proceso de extensión, lo que proporciona solo una pequeña cantidad de información útil en el **registro del sistema**. Puede ser útil ajustar el código problemático en un bloque de `try/catch` (excepción) que `NSLog` de antes de volver a producirlo.
+- Se puede tener acceso al **registro del sistema** desde la aplicación de **consola** en **aplicaciones**  > **utilidades**:
 
-    [![](extensions-images/extension02.png "Registro del sistema")](extensions-images/extension02.png#lightbox)
+    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - Como se indicó anteriormente, la ejecución de la aplicación host de extensión la registrará en el sistema. Eliminando la agrupación de aplicaciones con el anulación del registro. 
-- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar):`plugin kit -mv`
+- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar): `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App" />
 

@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769940"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar y pegar en Xamarin. Mac
@@ -31,7 +31,7 @@ En este artículo se tratarán las dos formas principales de usar la mesa de opc
 
 En este artículo, trataremos los conceptos básicos sobre cómo trabajar con la mesa de trabajo en una aplicación de Xamarin. Mac para admitir operaciones de copia y pegado. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
 
-Es posible que desee echar un vistazo a la [sección exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los `Register` atributos y `Export` que se usan para conectar C# las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los atributos `Register` y `Export` que se usan para C# conectar las clases a Objective-C. objetos y elementos de la interfaz de usuario.
 
 ## <a name="getting-started-with-the-pasteboard"></a>Introducción a la mesa de pegado
 
@@ -48,10 +48,10 @@ En primer lugar, vamos a crear una nueva aplicación de Xamarin. Mac basada en d
 Haga lo siguiente:
 
 1. Inicie Visual Studio para Mac y haga clic en el vínculo **nuevo proyecto...** .
-2. Seleccione aplicación de**Cocoa**de**aplicación** >  **Mac** > y haga clic en el botón **siguiente** : 
+2. Seleccione **Mac**  > **App**  > **aplicación de coco**y haga clic en el botón **siguiente** : 
 
     [![Creación de un nuevo proyecto de aplicación de cacao](copy-paste-images/sample01.png "Creación de un nuevo proyecto de aplicación de cacao")](copy-paste-images/sample01-large.png#lightbox)
-3. Escriba `MacCopyPaste` para el **nombre del proyecto** y mantenga todo lo demás como predeterminado. Haga clic en siguiente: 
+3. Escriba `MacCopyPaste` del **nombre del proyecto** y mantenga todo lo demás como predeterminado. Haga clic en siguiente: 
 
     [![Establecer el nombre del proyecto](copy-paste-images/sample01a.png "Establecer el nombre del proyecto")](copy-paste-images/sample01a-large.png#lightbox)
 
@@ -61,9 +61,9 @@ Haga lo siguiente:
 
 ### <a name="add-an-nsdocument"></a>Agregar un NSDocument
 
-A continuación, se agregará la clase personalizada `NSDocument` que actuará como almacenamiento en segundo plano para la interfaz de usuario de la aplicación. Contendrá una sola vista de imagen y sabrá cómo copiar una imagen de la vista en el área de pegado predeterminada y cómo tomar una imagen de la mesa de pegada predeterminada y mostrarla en la vista de imagen.
+A continuación, agregaremos una clase de `NSDocument` personalizada que actuará como almacenamiento en segundo plano para la interfaz de usuario de la aplicación. Contendrá una sola vista de imagen y sabrá cómo copiar una imagen de la vista en el área de pegado predeterminada y cómo tomar una imagen de la mesa de pegada predeterminada y mostrarla en la vista de imagen.
 
-Haga clic con el botón derecho en el proyecto de Xamarin. Mac en el **Panel de solución** y seleccione **Agregar** > **nuevo archivo...** :
+Haga clic con el botón derecho en el proyecto de Xamarin. Mac en el **Panel de solución** y seleccione **Agregar**  > **nuevo archivo...** :
 
 ![Agregar un NSDocument al proyecto](copy-paste-images/sample03.png "Agregar un NSDocument al proyecto")
 
@@ -174,7 +174,7 @@ namespace MacCopyPaste
 
 Echemos un vistazo a parte del código en detalle a continuación.
 
-En el código siguiente se proporciona una propiedad para comprobar la existencia de datos de imagen en la mesa de área predeterminada, si una `true` imagen está disponible `false`, se devuelve Else:
+En el código siguiente se proporciona una propiedad para comprobar la existencia de datos de imagen en la mesa de área predeterminada, si hay una imagen disponible, `true` se devuelve en caso contrario `false`:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -397,7 +397,7 @@ namespace MacCopyPaste
 
 Echemos un vistazo a este código en detalle a continuación.
 
-En primer lugar, se expone una instancia `ImageDocument` de la clase que se ha creado anteriormente:
+En primer lugar, se expone una instancia de la clase `ImageDocument` que se ha creado anteriormente:
 
 ```csharp
 private ImageDocument _document;
@@ -414,7 +414,7 @@ public ImageDocument Document {
 }
 ```
 
-`Export`Mediante, `WillChangeValue` y `Document` , se configura la propiedad para permitir el enlace de datos y el código de valor de clave en Xcode. `DidChangeValue`
+Con `Export`, `WillChangeValue` y `DidChangeValue`, se configura la propiedad `Document` para permitir el enlace de datos y el código de valor de clave en Xcode.
 
 También exponemos la imagen de la imagen correctamente que hemos agregado a nuestra interfaz de usuario en Xcode con la siguiente propiedad:
 
@@ -433,7 +433,7 @@ public NSImage Image {
 }
 ```
 
-Cuando se carga y se muestra la ventana principal, se crea una instancia de `ImageDocument` nuestra clase y se adjunta la imagen de la interfaz de usuario con el código siguiente:
+Cuando se carga y se muestra la ventana principal, se crea una instancia de la clase `ImageDocument` y se adjunta la imagen de la interfaz de usuario con el código siguiente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -448,7 +448,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Por último, en respuesta al usuario que hace clic en los elementos de la barra de herramientas copiar y pegar, `ImageDocument` llamamos a la instancia de la clase para realizar el trabajo real:
+Por último, en respuesta al usuario que hace clic en los elementos de la barra de herramientas copiar y pegar, llamamos a la instancia de la clase `ImageDocument` para realizar el trabajo real:
 
 ```csharp
 partial void CopyImage (NSObject sender) {
@@ -535,13 +535,13 @@ void PasteImage (NSObject sender)
 }
 ```
 
-Para cada elemento de menú, obtenemos la ventana de clave actual, más alto y la convertimos `ImageWindow` en nuestra clase:
+Para cada elemento de menú, obtenemos la ventana de clave actual, más alto y la convertimos en nuestra `ImageWindow` clase:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-Desde allí se llama a `ImageDocument` la instancia de clase de esa ventana para controlar las acciones de copiar y pegar. Por ejemplo: 
+Desde allí se llama a la instancia de clase de `ImageDocument` de esa ventana para controlar las acciones de copiar y pegar. Por ejemplo: 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -600,9 +600,9 @@ namespace MacCopyPaste
 }
 ```
 
-Una vez más, obtenemos la ventana actual, el nivel superior `ImageDocument` y usamos su instancia de clase para ver si existen los datos de imagen necesarios. A continuación, usamos `MenuWillHighlightItem` el método para habilitar o deshabilitar cada elemento en función de este estado.
+Una vez más, obtenemos la ventana actual, el nivel superior y usamos su `ImageDocument` instancia de clase para ver si existen los datos de imagen necesarios. A continuación, usamos el método `MenuWillHighlightItem` para habilitar o deshabilitar cada elemento en función de este estado.
 
-Edite el archivo **AppDelegate.CS** y haga `DidFinishLaunching` que el método tenga el aspecto siguiente:
+Edite el archivo **AppDelegate.CS** y haga que el método `DidFinishLaunching` tenga el aspecto siguiente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -613,7 +613,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-En primer lugar, deshabilitaremos la habilitación y deshabilitación automática de los elementos de menú en el menú edición. A continuación, se adjunta una instancia de `EditMenuDelegate` la clase que se ha creado anteriormente.
+En primer lugar, deshabilitaremos la habilitación y deshabilitación automática de los elementos de menú en el menú edición. A continuación, se adjunta una instancia de la clase `EditMenuDelegate` que se ha creado anteriormente.
 
 Para obtener más información, consulte la documentación de los [menús](~/mac/user-interface/menu.md) .
 
@@ -639,11 +639,11 @@ En las secciones siguientes, veremos una visión detallada de cómo trabajar con
 
 ## <a name="about-the-pasteboard"></a>Acerca de la mesa de la mesa
 
-En MacOS (antes conocido como OS X), la mesa`NSPasteboard`de pegado () proporciona compatibilidad con varios procesos de servidor, como copiar & pegar, arrastrar & colocar y servicios de aplicación. En las secciones siguientes, veremos con más detalle varios conceptos clave de la mesa de pegado.
+En macOS (anteriormente conocido como OS X), la mesa de área (`NSPasteboard`) proporciona compatibilidad con varios procesos de servidor, como copiar & pegar, arrastrar & colocar y Servicios de aplicación. En las secciones siguientes, veremos con más detalle varios conceptos clave de la mesa de pegado.
 
 ### <a name="what-is-a-pasteboard"></a>¿Qué es una mesa de área?
 
-La `NSPasteboard` clase proporciona un mecanismo normalizado para intercambiar información entre aplicaciones o dentro de una aplicación determinada. La función principal de una mesa de pegado es para controlar las operaciones de copiar y pegar:
+La clase `NSPasteboard` proporciona un mecanismo normalizado para intercambiar información entre aplicaciones o dentro de una aplicación determinada. La función principal de una mesa de pegado es para controlar las operaciones de copiar y pegar:
 
 1. Cuando el usuario selecciona un elemento en una aplicación y usa el elemento de menú **cortar** o **copiar** , se colocan una o más representaciones del elemento seleccionado en la mesa de área.
 2. Cuando el usuario usa el elemento de menú **pegar** (dentro de la misma aplicación o en otro diferente), la versión de los datos que puede controlar se copia desde la mesa de pegado y se agrega a la aplicación.
@@ -659,15 +659,15 @@ En su forma más sencilla, las mesas de área se usan para trasladar los datos d
 
 Una mesa de tareas puede ser pública o privada y se puede usar para una variedad de propósitos dentro de una aplicación o entre varias aplicaciones. macOS proporciona varias mesas de pegas estándar, cada una con un uso específico y definido:
 
-- `NSGeneralPboard`: La mesa de opciones predeterminada para las operaciones de **cortar**, **copiar** y **pegar** .
-- `NSRulerPboard`-Admite operaciones de **cortar**, **copiar** y **pegar** en **reglas**.
-- `NSFontPboard`-Admite operaciones de **cortar**, **copiar** y **pegar** en `NSFont` objetos.
-- `NSFindPboard`: Admite los paneles de búsqueda específicos de la aplicación que pueden compartir texto de búsqueda.
-- `NSDragPboard`: Admite las operaciones de **arrastrar y colocar &** .
+- `NSGeneralPboard`: la mesa de opciones predeterminada para las operaciones de **cortar**, **copiar** y **pegar** .
+- `NSRulerPboard`: admite operaciones de **cortar**, **copiar** y **pegar** en **reglas**.
+- `NSFontPboard`: admite las operaciones de **cortar**, **copiar** y **pegar** en objetos `NSFont`.
+- `NSFindPboard`: admite los paneles de búsqueda específicos de la aplicación que pueden compartir texto de búsqueda.
+- `NSDragPboard`: admite las operaciones de **arrastrar y colocar &** .
 
-En la mayoría de los casos, usará una de las portapapeles definidas por el sistema. Pero puede haber situaciones que requieran la creación de sus propias mesa de pegado. En estas situaciones, puede usar el `FromName (string name)` método de la `NSPasteboard` clase para crear una mesa de pegado personalizada con el nombre especificado.
+En la mayoría de los casos, usará una de las portapapeles definidas por el sistema. Pero puede haber situaciones que requieran la creación de sus propias mesa de pegado. En estas situaciones, puede usar el método `FromName (string name)` de la clase `NSPasteboard` para crear una mesa de pegado personalizada con el nombre especificado.
 
-Opcionalmente, puede llamar al `CreateWithUniqueName` método de la `NSPasteboard` clase para crear una mesa de área con un nombre único.
+Opcionalmente, puede llamar al método `CreateWithUniqueName` de la clase `NSPasteboard` para crear una mesa de opciones con el nombre único.
 
 ### <a name="pasteboard-items"></a>Elementos de la mesa de área
 
@@ -691,13 +691,13 @@ En general, debe proporcionar tantas representaciones de los datos que se copian
 
 En esta situación, puede colocar la primera representación de datos en la mesa de la mesa y la aplicación receptora puede solicitar una representación diferente, que se puede generar sobre la marcha justo antes de la operación de pegado.
 
-Al colocar el elemento inicial en la mesa de pegado, especificará que una o varias de las demás representaciones disponibles se proporcionan mediante un objeto que se ajusta a la `NSPasteboardItemDataProvider` interfaz. Estos objetos proporcionarán representaciones adicionales a petición, como solicita la aplicación receptora.
+Al colocar el elemento inicial en la mesa de pegado, especificará que una o varias de las demás representaciones disponibles se proporcionan mediante un objeto que se ajusta a la interfaz `NSPasteboardItemDataProvider`. Estos objetos proporcionarán representaciones adicionales a petición, como solicita la aplicación receptora.
 
 ### <a name="change-count"></a>Recuento de cambios
 
 Cada área de la mesa mantiene un _recuento de cambios_ que se incrementa cada vez que se declara un nuevo propietario. Una aplicación puede determinar si el contenido de la mesa de pegado ha cambiado desde la última vez que lo examinó comprobando el valor del recuento de cambios.
 
-Use los `ChangeCount` métodos `ClearContents` y de la `NSPasteboard` clase para modificar el número de cambios de una mesa de pegada determinada.
+Use los métodos `ChangeCount` y `ClearContents` de la clase `NSPasteboard` para modificar el número de cambios de una mesa de pegada determinada.
 
 ## <a name="copying-data-to-a-pasteboard"></a>Copiar datos en una mesa de pegado
 
@@ -716,9 +716,9 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-Normalmente, solo escribirá en la mesa de opciones general, como hemos hecho en el ejemplo anterior. Cualquier objeto que se envíe al `WriteObjects` método *debe* ajustarse a la `INSPasteboardWriting` interfaz. `NSString`Varias clases integradas (como, `NSImage`, `NSURL`, `NSColor` `NSAttributedString`, y `NSPasteboardItem`) se ajustan automáticamente a esta interfaz.
+Normalmente, solo escribirá en la mesa de opciones general, como hemos hecho en el ejemplo anterior. Cualquier objeto que se envíe al método `WriteObjects` *debe* ajustarse a la interfaz `INSPasteboardWriting`. Varias clases integradas (como `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString` y `NSPasteboardItem`) se ajustan automáticamente a esta interfaz.
 
-Si está escribiendo una clase de datos personalizada en la mesa de área, debe ajustarse a la `INSPasteboardWriting` interfaz o incluirse en una instancia de la `NSPasteboardItem` clase (consulte la sección tipos de [datos personalizados](#Custom_Data_Types) más adelante).
+Si está escribiendo una clase de datos personalizada en la mesa de la mesa, debe ajustarse a la interfaz de `INSPasteboardWriting` o debe ajustarse en una instancia de la clase `NSPasteboardItem` (consulte la sección [tipos de datos personalizados](#Custom_Data_Types) a continuación).
 
 ## <a name="reading-data-from-a-pasteboard"></a>Leer datos de una mesa de pegado
 
@@ -726,14 +726,14 @@ Como se indicó anteriormente, para maximizar la posibilidad de compartir datos 
 
 ### <a name="simple-paste-operation"></a>Operación de pegado simple
 
-Puede leer los datos de la mesa de `ReadObjectsForClasses` pegado mediante el método. Necesitará dos parámetros:
+Puede leer los datos de la mesa de pegado mediante el método `ReadObjectsForClasses`. Necesitará dos parámetros:
 
-1. Matriz de tipos `NSObject` de clase basados en que se desea leer de la mesa de pegado. Debería ordenar esto con el tipo de datos más deseado en primer lugar, con cualquier tipo restante en preferencia decreciente.
+1. Matriz de tipos de clase basados en `NSObject` que desea leer de la mesa de pegado. Debería ordenar esto con el tipo de datos más deseado en primer lugar, con cualquier tipo restante en preferencia decreciente.
 2. Diccionario que contiene restricciones adicionales (como la limitación a tipos de contenido de dirección URL específicos) o un diccionario vacío si no se requieren más restricciones.
 
 El método devuelve una matriz de elementos que cumplen los criterios que pasamos y, por tanto, contiene como máximo el mismo número de tipos de datos que se solicitan. también es posible que ninguno de los tipos solicitados esté presente y se devolverá una matriz vacía.
 
-Por ejemplo, el código siguiente comprueba si existe un `NSImage` en la mesa de opciones general y lo muestra en una imagen bien, si lo hace:
+Por ejemplo, el código siguiente comprueba si existe una `NSImage` en la mesa de opciones general y la muestra en una imagen bien, si lo hace:
 
 ```csharp
 [Export("PasteImage:")]
@@ -767,8 +767,8 @@ public void PasteImage(NSObject sender) {
 
 En función del tipo de aplicación de Xamarin. Mac que se va a crear, es posible que pueda controlar varias representaciones de los datos que se van a pegar. En esta situación, existen dos escenarios para recuperar datos de la mesa de pegado:
 
-1. Realice una llamada única al `ReadObjectsForClasses` método y proporcione una matriz de todas las representaciones que desee (en el orden preferido).
-2. Realice varias llamadas al `ReadObjectsForClasses` método solicitando una matriz diferente de tipos cada vez.
+1. Realice una llamada única al método `ReadObjectsForClasses` y proporcione una matriz de todas las representaciones que desee (en el orden preferido).
+2. Realizar varias llamadas al método `ReadObjectsForClasses` solicitando una matriz diferente de tipos cada vez.
 
 Vea la sección anterior **operación de pegado** más arriba para obtener más información sobre cómo recuperar datos de una mesa de pegado.
 
@@ -776,9 +776,9 @@ Vea la sección anterior **operación de pegado** más arriba para obtener más 
 
 Hay ocasiones en las que es posible que desee comprobar si una mesa de pegado contiene una representación de datos determinada sin leer realmente los datos de la mesa de pegado (por ejemplo, habilitar el elemento de menú **pegar** solo cuando existan datos válidos).
 
-Llame al `CanReadObjectForClasses` método de la mesa de la mesa para ver si contiene un tipo determinado.
+Llame al método `CanReadObjectForClasses` de la mesa de la mesa para ver si contiene un tipo determinado.
 
-Por ejemplo, el código siguiente determina si la mesa de opciones general `NSImage` contiene una instancia de:
+Por ejemplo, el código siguiente determina si la mesa de opciones general contiene una instancia de `NSImage`:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -795,7 +795,7 @@ public bool ImageAvailableOnPasteboard {
 
 ### <a name="reading-urls-from-the-pasteboard"></a>Lectura de las direcciones URL de la mesa de la mesa
 
-En función de la función de una aplicación de Xamarin. Mac determinada, puede que sea necesario leer las direcciones URL de una mesa de pegado, pero solo si cumplen un determinado conjunto de criterios (por ejemplo, apuntar a archivos o direcciones URL de un tipo de datos específico). En esta situación, puede especificar criterios de búsqueda adicionales mediante el segundo parámetro de los `CanReadObjectForClasses` métodos `ReadObjectsForClasses` o.
+En función de la función de una aplicación de Xamarin. Mac determinada, puede que sea necesario leer las direcciones URL de una mesa de pegado, pero solo si cumplen un determinado conjunto de criterios (por ejemplo, apuntar a archivos o direcciones URL de un tipo de datos específico). En esta situación, puede especificar criterios de búsqueda adicionales mediante el segundo parámetro de los métodos `CanReadObjectForClasses` o `ReadObjectsForClasses`.
 
 <a name="Custom_Data_Types" />
 
@@ -803,7 +803,7 @@ En función de la función de una aplicación de Xamarin. Mac determinada, puede
 
 Hay ocasiones en las que tendrá que guardar sus propios tipos personalizados en la mesa de pegado desde una aplicación de Xamarin. Mac. Por ejemplo, una aplicación de dibujo vectorial que permite al usuario copiar y pegar objetos de dibujo.
 
-En esta situación, deberá diseñar la clase personalizada de datos para `NSObject` que herede de y se ajuste a unas cuantas interfaces (`INSCoding`, `INSPasteboardWriting` y `INSPasteboardReading`). Opcionalmente, puede usar un `NSPasteboardItem` para encapsular los datos que se van a copiar o pegar.
+En esta situación, necesitará diseñar la clase personalizada de datos para que herede de `NSObject` y se ajuste a algunas interfaces (`INSCoding`, `INSPasteboardWriting` y `INSPasteboardReading`). Opcionalmente, puede usar un `NSPasteboardItem` para encapsular los datos que se van a copiar o pegar.
 
 Ambas opciones se tratarán en detalle a continuación.
 
@@ -929,7 +929,7 @@ En las secciones siguientes se detallará esta clase.
 
 #### <a name="inheritance-and-interfaces"></a>Herencia e interfaces
 
-Antes de que se pueda escribir o leer una clase de datos personalizada en una mesa de pegado, `INSPastebaordWriting` debe `INSPasteboardReading` ajustarse a las interfaces y. Además, debe heredar de `NSObject` y también ajustarse a la `INSCoding` interfaz:
+Antes de que se pueda escribir o leer una clase de datos personalizada de una mesa de pegada, debe ajustarse a las interfaces `INSPastebaordWriting` y `INSPasteboardReading`. Además, debe heredar de `NSObject` y también ajustarse a la interfaz de `INSCoding`:
 
 ```csharp
 [Register("ImageInfo")]
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-La clase también se debe exponer a Objective-C mediante la `Register` Directiva y debe exponer las propiedades o los métodos necesarios mediante `Export`. Por ejemplo:
+La clase también se debe exponer a Objective-C mediante la Directiva `Register` y debe exponer las propiedades o los métodos necesarios mediante `Export`. Por ejemplo:
 
 ```csharp
 [Export("name")]
@@ -949,7 +949,7 @@ public string ImageType { get; set; }
 
 Estamos exponiendo los dos campos de datos que esta clase contendrá: el nombre de la imagen y su tipo (jpg, PNG, etc.). 
 
-Para obtener más información, consulte la sección [exposición de C# clases o métodos a Objective-C](~/mac/internals/how-it-works.md) de la documentación [interna de Xamarin. Mac](~/mac/internals/how-it-works.md) , en `Register` la que se explican los atributos C# y `Export` que se usan para conectar las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
+Para obtener más información, consulte la sección [exposición de C# clases o métodos a Objective-C](~/mac/internals/how-it-works.md) de la documentación [interna de Xamarin. Mac](~/mac/internals/how-it-works.md) , en la que se explican los atributos `Register` y C# `Export` que se usan para conectar las clases a Objective-C. objetos y elementos de la interfaz de usuario.
 
 #### <a name="constructors"></a>Constructores
 
@@ -974,15 +974,15 @@ public ImageInfo(NSCoder decoder) {
 }
 ```
 
-En primer lugar, se expone el constructor _vacío_ en el método de Objective- `init`C predeterminado de.
+En primer lugar, se expone el constructor _vacío_ en el método predeterminado de Objective-C de `init`.
 
-A continuación, exponemos un `NSCoding` constructor compatible que se usará para crear una nueva instancia del objeto a partir de la mesa de pegado al pegar con el nombre exportado de. `initWithCoder`
+A continuación, exponemos un constructor compatible con `NSCoding` que se utilizará para crear una nueva instancia del objeto a partir de la mesa de pegado al pegar con el nombre exportado de `initWithCoder`.
 
-Este constructor toma `NSCoder` (tal y como lo crea `NSKeyedArchiver` cuando se escribe en la mesa de la mesa), extrae los datos emparejados de clave y valor y los guarda en los campos de propiedades de la clase de datos.
+Este constructor toma un `NSCoder` (tal y como lo crea un `NSKeyedArchiver` cuando se escribe en la mesa de la mesa), extrae los datos emparejados de clave y valor y los guarda en los campos de propiedades de la clase de datos.
 
 #### <a name="writing-to-the-pasteboard"></a>Escribir en el área de la mesa
 
-Si se ajusta a la `INSPasteboardWriting` interfaz, es necesario exponer dos métodos y, opcionalmente, un tercer método para que la clase se pueda escribir en la mesa de la mesa.
+Al dar forma a la interfaz `INSPasteboardWriting`, es necesario exponer dos métodos y, opcionalmente, un tercer método para que la clase se pueda escribir en la mesa de la mesa.
 
 En primer lugar, es necesario indicar a la mesa de las representaciones de tipos de datos en las que se puede escribir la clase personalizada:
 
@@ -996,7 +996,7 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 
 Cada representación se identifica mediante un identificador de tipo uniforme (UTI), que no es más que una cadena simple que identifica de forma única el tipo de datos que se presentan (para obtener más información, consulte [Introducción a los identificadores de tipo uniformes](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) de Apple). documentación).
 
-En nuestro formato personalizado, vamos a crear nuestra propia UTI: "com. Xamarin. Image-info" (tenga en cuenta que, en notación inversa, como un identificador de la aplicación). Nuestra clase también es capaz de escribir una cadena estándar en la mesa de`public.text`área (). 
+En nuestro formato personalizado, vamos a crear nuestra propia UTI: "com. Xamarin. Image-info" (tenga en cuenta que, en notación inversa, como un identificador de la aplicación). Nuestra clase también es capaz de escribir una cadena estándar en la mesa de área (`public.text`). 
 
 A continuación, es necesario crear el objeto en el formato solicitado que realmente se escribe en la mesa de la mesa:
 
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-Para el `public.text` tipo, se devuelve un objeto simple con formato `NSString` . Para el tipo `com.xamarin.image-info` personalizado, usamos `NSKeyedArchiver` y la `NSCoder` interfaz para codificar la clase de datos personalizada en un archivo emparejado de clave-valor. Tendremos que implementar el método siguiente para controlar realmente la codificación:
+Para el tipo de `public.text`, se devuelve un objeto de `NSString` con formato sencillo. En el caso del tipo de `com.xamarin.image-info` personalizado, usamos una `NSKeyedArchiver` y la interfaz `NSCoder` para codificar la clase de datos personalizada en un archivo emparejado de clave-valor. Tendremos que implementar el método siguiente para controlar realmente la codificación:
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1040,7 +1040,7 @@ public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type,
 }
 ```
 
-Actualmente, solo `WritingPromised` está disponible la opción y se debe usar cuando un tipo determinado solo se promete y no se escriba realmente en la mesa de la mesa. Para obtener más información, consulte la sección de [datos prometidos](#Promised_Data) anterior.
+Actualmente, solo está disponible la opción `WritingPromised` y se debe usar cuando solo se promete un tipo determinado y no se escriba realmente en la mesa de la mesa. Para obtener más información, consulte la sección de [datos prometidos](#Promised_Data) anterior.
 
 Con estos métodos en su lugar, se puede usar el siguiente código para escribir la clase personalizada en la mesa de la mesa:
 
@@ -1057,7 +1057,7 @@ pasteboard.WriteObjects (new ImageInfo[] { Info });
 
 #### <a name="reading-from-the-pasteboard"></a>Leer de la mesa de pegado
 
-Al aplicarse a la `INSPasteboardReading` interfaz, es necesario exponer tres métodos para que se pueda leer la clase de datos personalizada de la mesa de pegado.
+Al aplicarse a la interfaz `INSPasteboardReading`, es necesario exponer tres métodos para que la clase de datos personalizada pueda leerse desde la mesa de la mesa.
 
 En primer lugar, es necesario indicar a la mesa de las representaciones de tipos de datos que la clase personalizada puede leer desde el portapapeles:
 
@@ -1090,7 +1090,7 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-En el `com.xamarin.image-info` caso del tipo, estamos indicando a la mesa de pegado que descodifique el par clave- `NSKeyedArchiver` valor que creamos con al escribir la clase en `initWithCoder:` la mesa de la mesa llamando al constructor que agregamos a la clase.
+En el caso del tipo de `com.xamarin.image-info`, estamos indicando a la mesa de pegado que descodifique el par clave-valor que creamos con el `NSKeyedArchiver` al escribir la clase en la mesa de pegado llamando al constructor de `initWithCoder:` que agregamos a la clase.
 
 Por último, es necesario agregar el siguiente método para leer las demás representaciones de datos de UTI de la mesa de opciones:
 
@@ -1131,13 +1131,13 @@ if (ok) {
 
 ### <a name="using-a-nspasteboarditem"></a>Uso de un NSPasteboardItem
 
-Puede haber ocasiones en las que tenga que escribir elementos personalizados en la mesa de tareas que no garantizan la creación de una clase personalizada o que desea proporcionar datos en un formato común, solo según sea necesario. En estas situaciones, puede usar `NSPasteboardItem`.
+Puede haber ocasiones en las que tenga que escribir elementos personalizados en la mesa de tareas que no garantizan la creación de una clase personalizada o que desea proporcionar datos en un formato común, solo según sea necesario. En estas situaciones, puede usar un `NSPasteboardItem`.
 
-Un `NSPasteboardItem` proporciona un control específico de los datos que se escriben en la mesa de la mesa y está diseñado para el acceso temporal; debe desecharse después de que se haya escrito en la mesa de pegado.
+Un `NSPasteboardItem` proporciona un control específico de los datos que se escriben en la mesa de la mesa y está diseñado para el acceso temporal; debe desecharse después de que se haya escrito en la mesa de la mesa.
 
 #### <a name="writing-data"></a>Escribir datos
 
-Para escribir los datos personalizados en un `NSPasteboardItem` , debe proporcionar un personalizado. `NSPasteboardItemDataProvider` Agregue una nueva clase al proyecto y llámela **ImageInfoDataProvider.CS**. Edite el archivo y haga que tenga el aspecto siguiente:
+Para escribir los datos personalizados en una `NSPasteboardItem` deberá proporcionar un `NSPasteboardItemDataProvider` personalizado. Agregue una nueva clase al proyecto y llámela **ImageInfoDataProvider.CS**. Edite el archivo y haga que tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -1200,9 +1200,9 @@ namespace MacCopyPaste
 }
 ```
 
-Como hicimos con la clase de datos personalizada, es necesario usar las `Register` directivas y `Export` para exponerla a Objective-C. La clase debe heredar `NSPasteboardItemDataProvider` de y debe implementar `FinishedWithDataProvider` los `ProvideDataForType` métodos y.
+Como hicimos con la clase de datos personalizada, es necesario usar las directivas `Register` y `Export` para exponerla a Objective-C. La clase debe heredar de `NSPasteboardItemDataProvider` y debe implementar los métodos `FinishedWithDataProvider` y `ProvideDataForType`.
 
-Utilice el `ProvideDataForType` método para proporcionar los datos que se van a ajustar en `NSPasteboardItem` el de la siguiente manera:
+Utilice el método `ProvideDataForType` para proporcionar los datos que se ajustarán en el `NSPasteboardItem` de la manera siguiente:
 
 ```csharp
 [Export ("pasteboard:item:provideDataForType:")]
@@ -1220,7 +1220,7 @@ public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardIt
 }
 ```
 
-En este caso, se almacenan dos fragmentos de información sobre la imagen (nombre y ImageType) y se escriben en una cadena simple`public.text`().
+En este caso, se almacenan dos fragmentos de información sobre la imagen (nombre y ImageType) y se escriben en una cadena simple (`public.text`).
 
 Escriba escribir los datos en la mesa de opciones, use el código siguiente:
 

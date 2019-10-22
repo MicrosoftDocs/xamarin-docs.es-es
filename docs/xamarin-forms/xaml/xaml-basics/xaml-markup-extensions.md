@@ -1,38 +1,38 @@
 ---
 title: Parte 3. Extensiones de marcado XAML
-description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permiten establecer objetos o valores que se hace referencia indirectamente desde otros orígenes de propiedades.
+description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite establecer las propiedades en objetos o valores a los que se hace referencia indirectamente desde otros orígenes.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 3eb02dbc4e77fcd8b237b85e21e577d0c4566794
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1321f08cba4bf4cf23759ebb179a603b544ffc2e
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772726"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696645"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-_Las extensiones de marcado XAML constituyen una característica importante de XAML que permiten establecer objetos o valores que se hace referencia indirectamente desde otros orígenes de propiedades. Las extensiones de marcado XAML son especialmente importantes para compartir objetos y hacer referencia a las constantes que se utilizan en toda una aplicación, pero encuentra su mayor utilidad los enlaces de datos._
+_Las extensiones de marcado XAML constituyen una característica importante de XAML que permite establecer las propiedades en objetos o valores a los que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para compartir objetos y hacer referencia a constantes usadas en una aplicación, pero encuentran su utilidad más grande en los enlaces de datos._
 
 ## <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
-En general, usa XAML para establecer las propiedades de un objeto a los valores explícitos, como una cadena, un número, un miembro de enumeración o una cadena que se convierte en un valor en segundo plano.
+En general, se usa XAML para establecer las propiedades de un objeto en valores explícitos, como una cadena, un número, un miembro de enumeración o una cadena que se convierte en un valor en segundo plano.
 
-Sin embargo, en ocasiones, las propiedades en su lugar, deben hacer referencia a valores definidos en alguna parte de lo contrario, o que pueden requerir un procesamiento poco por código en tiempo de ejecución. Para estos fines, XAML *las extensiones de marcado* están disponibles.
+Sin embargo, en ocasiones, las propiedades deben hacer referencia a valores definidos en otra parte, o que podrían requerir un pequeño procesamiento por código en tiempo de ejecución. Para estos propósitos, están disponibles *las extensiones de marcado* XAML.
 
-Estas extensiones de marcado XAML no son extensiones de XML. XAML es XML completamente válido. Se denominan "extensions" porque están respaldadas por el código en las clases que implementan `IMarkupExtension`. Puede escribir sus propias extensiones de marcado personalizada.
+Estas extensiones de marcado XAML no son extensiones de XML. XAML es completamente XML legal. Se denominan "extensiones" porque están respaldadas por código en clases que implementan `IMarkupExtension`. Puede escribir sus propias extensiones de marcado personalizadas.
 
-En muchos casos, las extensiones de marcado XAML son reconocibles al instante en archivos XAML porque aparecen como valores de atributo delimitados por llaves: {y}, pero a veces aparecen las extensiones de marcado en el marcado como elementos convencionales.
+En muchos casos, las extensiones de marcado XAML se reconocen al instante en los archivos XAML porque aparecen como valores de atributo delimitados por llaves: {y}, pero a veces las extensiones de marcado aparecen en el marcado como elementos convencionales.
 
 ## <a name="shared-resources"></a>Recursos compartidos
 
-Algunas páginas XAML contienen varias vistas con propiedades establecidas en los mismos valores. Por ejemplo, muchos de los valores de propiedad para estos `Button` objetos son iguales:
+Algunas páginas XAML contienen varias vistas cuyas propiedades se establecen en los mismos valores. Por ejemplo, muchos de los valores de propiedad de estos objetos `Button` son los mismos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -69,11 +69,11 @@ Algunas páginas XAML contienen varias vistas con propiedades establecidas en lo
 </ContentPage>
 ```
 
-Si una de estas propiedades debe cambiarse, es preferible realizar el cambio de una sola vez en lugar de tres veces. Si se tratara de código, que es probable que va a utilizar constantes y los objetos de solo lectura estáticos para ayudar a mantener tales valores coherentes y fáciles de modificar.
+Si es necesario cambiar alguna de estas propiedades, es preferible realizar el cambio una sola vez en lugar de tres veces. Si se tratara de código, es probable que use constantes y objetos estáticos de solo lectura para ayudar a mantener estos valores coherentes y fáciles de modificar.
 
-En XAML, una conocida solución consiste en almacenar estos valores u objetos en un *diccionario de recursos*. El `VisualElement` clase define una propiedad denominada `Resources` typu `ResourceDictionary`, que es un diccionario con claves de tipo `string` y valores de tipo `object`. Puede colocar objetos en este diccionario y, a continuación, hacer referencia a ellos desde el marcado, todo ello en XAML.
+En XAML, una solución popular es almacenar estos valores u objetos en un *Diccionario de recursos*. La clase `VisualElement` define una propiedad denominada `Resources` de tipo `ResourceDictionary`, que es un diccionario con claves de tipo `string` y valores de tipo `object`. Puede colocar objetos en este diccionario y luego hacer referencia a ellos desde el marcado, todo en XAML.
 
-Para usar un diccionario de recursos en una página, incluya un par de `Resources` etiquetas de elemento de propiedad. Resulta más conveniente colocar estos elementos en la parte superior de la página:
+Para usar un diccionario de recursos en una página, incluya un par de `Resources` etiquetas de elemento de propiedad. Lo más conveniente es colocarlos en la parte superior de la página:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -88,7 +88,7 @@ Para usar un diccionario de recursos en una página, incluya un par de `Resource
 </ContentPage>
 ```
 
-También es necesario incluir explícitamente `ResourceDictionary` etiquetas:
+También es necesario incluir explícitamente `ResourceDictionary` Etiquetas:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -105,7 +105,7 @@ También es necesario incluir explícitamente `ResourceDictionary` etiquetas:
 </ContentPage>
 ```
 
-Ahora se pueden agregar objetos y valores de distintos tipos al diccionario de recursos. Estos tipos deben ser instanciables. No pueden ser clases abstractas, por ejemplo. Estos tipos también deben tener un constructor público sin parámetros. Cada elemento requiere una clave del diccionario especificada con el `x:Key` atributo. Por ejemplo:
+Ahora se pueden agregar objetos y valores de varios tipos al Diccionario de recursos. Estos tipos deben ser instancias. Por ejemplo, no pueden ser clases abstractas. Estos tipos también deben tener un constructor sin parámetros público. Cada elemento requiere una clave de diccionario especificada con el atributo `x:Key`. Por ejemplo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -127,9 +127,9 @@ Ahora se pueden agregar objetos y valores de distintos tipos al diccionario de r
 </ContentPage>
 ```
 
-Estos dos elementos son valores de tipo de estructura `LayoutOptions`y cada una tiene una clave única y una o dos propiedades establecidas. En el código y marcado, es mucho más habitual utilizar los campos estáticos de `LayoutOptions`, pero aquí es más conveniente establecer las propiedades.
+Estos dos elementos son valores del tipo de estructura `LayoutOptions`, y cada uno tiene una clave única y una o dos propiedades establecidas. En el código y el marcado, es mucho más habitual usar los campos estáticos de `LayoutOptions`, pero aquí es más conveniente establecer las propiedades.
 
-Ahora es necesario establecer la `HorizontalOptions` y `VerticalOptions` propiedades de estos botones para estos recursos, y que se realiza con el `StaticResource` extensión de marcado XAML:
+Ahora es necesario establecer las propiedades `HorizontalOptions` y `VerticalOptions` de estos botones en estos recursos, y esto se hace con la extensión de marcado XAML `StaticResource`:
 
 ```xaml
 <Button Text="Do this!"
@@ -141,11 +141,11 @@ Ahora es necesario establecer la `HorizontalOptions` y `VerticalOptions` propied
         FontSize="24" />
 ```
 
-El `StaticResource` extensión de marcado siempre está delimitada por llaves e incluye la clave del diccionario.
+La extensión de marcado de `StaticResource` siempre está delimitada por llaves e incluye la clave del diccionario.
 
-El nombre `StaticResource` lo distingue de `DynamicResource`, que también admite Xamarin.Forms. `DynamicResource` es para las claves del diccionario asociadas con los valores que podrían cambiar en tiempo de ejecución, mientras que `StaticResource` tiene acceso a los elementos del diccionario de solo una vez cuando se construyen los elementos en la página.
+El nombre `StaticResource` lo distingue de `DynamicResource`, que también admite Xamarin. Forms. `DynamicResource` es para las claves de diccionario asociadas a valores que pueden cambiar durante el tiempo de ejecución, mientras `StaticResource` tiene acceso a los elementos del diccionario una sola vez cuando se construyen los elementos de la página.
 
-Para el `BorderWidth` propiedad, es necesario almacenar un valor double en el diccionario. XAML define convenientemente etiquetas para los tipos de datos comunes, como `x:Double` y `x:Int32`:
+En el caso de la propiedad `BorderWidth`, es necesario almacenar un Double en el diccionario. XAML define convenientemente las etiquetas para tipos de datos comunes como `x:Double` y `x:Int32`:
 
 ```xaml
 <ContentPage.Resources>
@@ -164,7 +164,7 @@ Para el `BorderWidth` propiedad, es necesario almacenar un valor double en el di
 </ContentPage.Resources>
 ```
 
-No es necesario ponerlo en tres líneas. Esta entrada del diccionario para este ángulo de giro solo toma una línea hacia arriba:
+No es necesario colocarlo en tres líneas. Esta entrada del diccionario para este ángulo de rotación solo ocupa una línea:
 
 ```xaml
 <ContentPage.Resources>
@@ -185,7 +185,7 @@ No es necesario ponerlo en tres líneas. Esta entrada del diccionario para este 
 </ContentPage.Resources>
 ```
 
-Se pueden hacer referencia a esos dos recursos en la misma manera que el `LayoutOptions` valores:
+Se puede hacer referencia a esos dos recursos de la misma manera que los valores `LayoutOptions`:
 
 ```xaml
 <Button Text="Do this!"
@@ -197,19 +197,19 @@ Se pueden hacer referencia a esos dos recursos en la misma manera que el `Layout
         FontSize="24" />
 ```
 
-Para los recursos de tipo `Color`, puede usar las mismas representaciones de cadena que utilizar al asignar directamente los atributos de estos tipos. Los convertidores de tipos se invocan cuando se crea el recurso. Este es un recurso de tipo `Color`:
+En el caso de los recursos de tipo `Color`, puede usar las mismas representaciones de cadena que se utilizan al asignar atributos directamente de estos tipos. Los convertidores de tipos se invocan cuando se crea el recurso. A continuación se muestra un recurso de tipo `Color`:
 
 ```xaml
 <Color x:Key="textColor">Red</Color>
 ```
 
-Conjunto de programas a menudo, un `FontSize` propiedad a un miembro de la `NamedSize` enumeración como `Large`. El `FontSizeConverter` clase funciona en segundo plano para convertirlo en un valor depende de la plataforma mediante el `Device.GetNamedSized` método. Sin embargo, al definir un recurso de tamaño de fuente, tiene más sentido usar un valor numérico, se muestra aquí como una `x:Double` tipo:
+A menudo, los programas establecen una propiedad `FontSize` en un miembro de la enumeración `NamedSize` como `Large`. La clase `FontSizeConverter` funciona en segundo plano para convertirla en un valor dependiente de la plataforma mediante el método `Device.GetNamedSized`. Sin embargo, al definir un recurso de tamaño de fuente, tiene más sentido usar un valor numérico, que se muestra aquí como un tipo de `x:Double`:
 
 ```xaml
 <x:Double x:Key="fontSize">24</x:Double>
 ```
 
-Ahora todas las propiedades excepto `Text` definida según la configuración de recursos:
+Ahora todas las propiedades, excepto `Text`, se definen mediante la configuración de recursos:
 
 ```xaml
 <Button Text="Do this!"
@@ -221,7 +221,7 @@ Ahora todas las propiedades excepto `Text` definida según la configuración de 
         FontSize="{StaticResource fontSize}" />
 ```
 
-También es posible usar `OnPlatform` dentro del diccionario de recursos para definir valores diferentes para las plataformas. Le mostramos cómo un `OnPlatform` objeto puede ser parte del diccionario de recursos para los colores de texto diferente:
+También es posible usar `OnPlatform` dentro del Diccionario de recursos para definir valores diferentes para las plataformas. A continuación se muestra cómo un objeto `OnPlatform` puede formar parte del Diccionario de recursos para diferentes colores de texto:
 
 ```xaml
 <OnPlatform x:Key="textColor"
@@ -232,9 +232,9 @@ También es posible usar `OnPlatform` dentro del diccionario de recursos para de
 </OnPlatform>
 ```
 
-Tenga en cuenta que `OnPlatform` obtiene tanto un `x:Key` porque es un objeto en el diccionario de atributos y un `x:TypeArguments` atributo porque es una clase genérica. El `iOS`, `Android`, y `UWP` atributos se convierten en `Color` valores cuando se inicializa el objeto.
+Observe que `OnPlatform` obtiene un atributo `x:Key` porque es un objeto del diccionario y un atributo `x:TypeArguments` porque es una clase genérica. Los atributos `iOS`, `Android` y `UWP` se convierten en valores `Color` cuando se inicializa el objeto.
 
-Este es el archivo XAML completo final con tres botones de acceso a seis valores compartidos:
+Este es el archivo XAML final completo con tres botones que obtienen acceso a seis valores compartidos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -295,11 +295,11 @@ Este es el archivo XAML completo final con tres botones de acceso a seis valores
 </ContentPage>
 ```
 
-Las capturas de pantalla comprobación un estilo coherente y el estilo depende de la plataforma:
+Las capturas de pantallas comprueban el estilo coherente y el estilo que depende de la plataforma:
 
-[![Controles con estilo](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
+[![Styled controles](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
-Aunque es más común para definir el `Resources` colección en la parte superior de la página, tenga en cuenta que el `Resources` propiedad se define mediante `VisualElement`, y puede tener `Resources` colecciones en otros elementos en la página. Por ejemplo, pruebe a agregar uno para el `StackLayout` en este ejemplo:
+Aunque es más común definir el `Resources` colección en la parte superior de la página, tenga en cuenta que la propiedad `Resources` está definida por `VisualElement` y puede tener `Resources` colecciones en otros elementos de la página. Por ejemplo, intente agregar uno al `StackLayout` en este ejemplo:
 
 ```xaml
 <StackLayout>
@@ -312,24 +312,24 @@ Aunque es más común para definir el `Resources` colección en la parte superio
 </StackLayout>
 ```
 
-Descubrirá que el color del texto de los botones ahora es azul. Básicamente, cada vez que el analizador de XAML encuentra un `StaticResource` extensión de marcado, se busca en el árbol visual y se usa la primera `ResourceDictionary` encuentra que contiene esa clave.
+Descubrirá que el color del texto de los botones es ahora azul. Básicamente, cada vez que el analizador XAML encuentra una extensión de marcado `StaticResource`, busca en el árbol visual y usa el primer `ResourceDictionary` que encuentra con esa clave.
 
-Uno de los tipos más comunes de los objetos almacenados en diccionarios de recursos es Xamarin.Forms `Style`, que define una colección de valores de propiedad. Los estilos se tratan en el artículo [estilos](~/xamarin-forms/user-interface/styles/index.md).
+Uno de los tipos más comunes de objetos almacenados en los diccionarios de recursos es el `Style` de Xamarin. Forms, que define una colección de valores de propiedad. Los estilos se describen en el artículo [estilos](~/xamarin-forms/user-interface/styles/index.md).
 
-Los programadores nuevos en XAML se preguntan si puede colocar un elemento visual como `Label` o `Button` en un `ResourceDictionary`. Si bien es seguramente posible, no tiene mucho sentido. El propósito de la `ResourceDictionary` es compartir objetos. No se puede compartir un elemento visual. La misma instancia no puede aparecer dos veces en una sola página.
+A veces, los desarrolladores nuevos en XAML preguntan si pueden colocar un elemento visual como `Label` o `Button` en un `ResourceDictionary`. Aunque es probable que sea posible, no tiene mucho sentido. El propósito del `ResourceDictionary` es compartir objetos. No se puede compartir un elemento visual. La misma instancia no puede aparecer dos veces en una sola página.
 
-## <a name="the-xstatic-markup-extension"></a>La extensión de marcado x: Static
+## <a name="the-xstatic-markup-extension"></a>La extensión de marcado x:Static
 
-A pesar de las similitudes de sus nombres, `x:Static` y `StaticResource` son muy diferentes. `StaticResource` Devuelve un objeto de un diccionario de recursos mientras `x:Static` tiene acceso a uno de los siguientes:
+A pesar de las similitudes de sus nombres, `x:Static` y `StaticResource` son muy diferentes. `StaticResource` devuelve un objeto de un diccionario de recursos mientras `x:Static` tiene acceso a uno de los siguientes:
 
 - un campo estático público
 - una propiedad estática pública
-- un campo constante público
-- un miembro de enumeración.
+- un campo de constante pública
+- miembro de la enumeración.
 
-El `StaticResource` extensión de marcado es compatible con las implementaciones de XAML que definen un diccionario de recursos, mientras que `x:Static` es una parte intrínseca de XAML, como el `x` recolectarse de prefijo.
+La extensión de marcado de `StaticResource` es compatible con las implementaciones de XAML que definen un diccionario de recursos, mientras que `x:Static` es una parte intrínseca de XAML, como revela el prefijo `x`.
 
-Estos son algunos ejemplos que muestran cómo `x:Static` puede hacer referencia explícitamente los campos estáticos y los miembros de enumeración:
+Estos son algunos ejemplos en los que se muestra cómo `x:Static` puede hacer referencia explícita a los campos estáticos y a los miembros de enumeración:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -338,7 +338,7 @@ Estos son algunos ejemplos que muestran cómo `x:Static` puede hacer referencia 
        TextColor="{x:Static Color.Aqua}" />
 ```
 
-Hasta ahora, esto no es muy impresionante. Pero la `x:Static` extensión de marcado puede hacer referencia a propiedades o campos estáticos desde su propio código. Por ejemplo, este es un `AppConstants` clase que contiene algunos campos estáticos que desea usar en varias páginas en toda una aplicación:
+Hasta ahora, esto no es muy impresionante. Pero el `x:Static` extensión de marcado también puede hacer referencia a propiedades o campos estáticos de su propio código. Por ejemplo, a continuación se muestra una `AppConstants` clase que contiene algunos campos estáticos que podría querer usar en varias páginas en una aplicación:
 
 ```csharp
 using System;
@@ -380,32 +380,32 @@ namespace XamlSamples
 }
 ```
 
-Para hacer referencia a los campos estáticos de esta clase en el archivo XAML, necesitará alguna manera de indicar dentro del archivo XAML donde se encuentra este archivo. Hacer esto con una declaración de espacio de nombres XML.
+Para hacer referencia a los campos estáticos de esta clase en el archivo XAML, necesitará alguna manera de indicar dentro del archivo XAML donde se encuentra este archivo. Para ello, debe tener una declaración de espacio de nombres XML.
 
-Recuerde que los archivos XAML que se creó como parte de la plantilla estándar de XAML de Xamarin.Forms contienen dos declaraciones de espacio de nombres XML: uno para tener acceso a las clases de Xamarin.Forms y otro para hacer referencia a las etiquetas y atributos intrínsecos de XAML:
+Recuerde que los archivos XAML creados como parte de la plantilla XAML de Xamarin. Forms estándar contienen dos declaraciones de espacio de nombres XML: una para tener acceso a las clases de Xamarin. Forms y otra para hacer referencia a etiquetas y atributos intrínsecos de XAML:
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Necesitará las declaraciones de espacio de nombres XML adicionales para tener acceso a otras clases. Cada declaración de espacio de nombres XML adicional define un nuevo prefijo. Para obtener acceso a las clases de locales a la biblioteca estándar de .NET de aplicación compartida, como `AppConstants`, a menudo, los programadores XAML usan el prefijo `local`. La declaración de espacio de nombres debe indicar el nombre de espacio de nombres CLR (Common Language Runtime), también conocido como el .NET espacio de nombres, que es el nombre que aparece en C# `namespace` definición o en un `using` directiva:
+Necesitará declaraciones de espacio de nombres XML adicionales para tener acceso a otras clases. Cada declaración de espacio de nombres XML adicional define un nuevo prefijo. Para tener acceso a las clases locales de la biblioteca .NET Standard de aplicaciones compartidas, como `AppConstants`, los programadores de XAML suelen usar el prefijo `local`. La declaración del espacio de nombres debe indicar el nombre del espacio de nombres CLR (Common Language Runtime), también conocido como nombre del espacio de nombres .NET, C# que es el nombre que aparece en una definición de `namespace` o en una directiva `using`:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-También puede definir las declaraciones de espacio de nombres XML para los espacios de nombres de .NET en cualquier ensamblado al que hace referencia la biblioteca .NET Standard. Por ejemplo, este es un `sys` prefijo para .NET standard `System` espacio de nombres, que se encuentra en la **mscorlib** ensamblado, que una vez significaba "Biblioteca común de Microsoft objeto en tiempo de ejecución", pero ahora significa "multilingüe estándar Objeto en tiempo de ejecución biblioteca común." Se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **mscorlib**:
+También puede definir declaraciones de espacios de nombres XML para espacios de nombres de .NET en cualquier ensamblado al que haga referencia la biblioteca .NET Standard. Por ejemplo, a continuación se muestra un prefijo de `sys` para el espacio de nombres estándar de .NET `System`, que se encuentra en el ensamblado **mscorlib** , que, una vez que se expongan para "biblioteca en tiempo de ejecución de objetos comunes de Microsoft", pero ahora significa "biblioteca en tiempo de ejecución de objetos comunes multilingüe". Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-Tenga en cuenta que la palabra clave `clr-namespace` seguida de dos puntos y, a continuación, el nombre de espacio de nombres. NET, seguido por un punto y coma, la palabra clave `assembly`, un signo igual y el nombre del ensamblado.
+Observe que la palabra clave `clr-namespace` va seguida de dos puntos y el nombre del espacio de nombres de .NET, seguido de un punto y coma, la palabra clave `assembly`, un signo igual y el nombre del ensamblado.
 
-Sí, sigue una coma `clr-namespace` pero sigue el signo igual `assembly`. La sintaxis se definió de esta manera deliberadamente: La mayoría de las declaraciones de espacios de nombres XML hacen referencia a un URI que `http`comienza con un nombre de esquema de URI como, que siempre va seguido de un signo de dos puntos. El `clr-namespace` parte de esta cadena está pensado para imitar esta convención.
+Sí, los dos puntos siguen `clr-namespace` pero el signo igual sigue `assembly`. La sintaxis se definió de esta manera deliberadamente: la mayoría de las declaraciones de espacios de nombres XML hacen referencia a un URI que comienza con un nombre de esquema de URI como `http`, que siempre va seguido de un signo de dos puntos. La parte `clr-namespace` de esta cadena está pensada para imitar esa Convención.
 
-Ambas declaraciones de espacio de nombres de estos se incluyen en el **StaticConstantsPage** ejemplo. Tenga en cuenta que el `BoxView` dimensiones se establecen en `Math.PI` y `Math.E`, pero ha escalado por un factor de 100:
+Ambas declaraciones de espacios de nombres se incluyen en el ejemplo **StaticConstantsPage** . Tenga en cuenta que las dimensiones de `BoxView` se establecen en `Math.PI` y `Math.E`, pero se escalan por un factor de 100:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -433,26 +433,27 @@ Ambas declaraciones de espacio de nombres de estos se incluyen en el **StaticCon
 </ContentPage>
 ```
 
-El tamaño de los resultantes `BoxView` respecto a la pantalla es dependiente de la plataforma:
+El tamaño del `BoxView` resultante con respecto a la pantalla depende de la plataforma:
 
-[![Controles mediante la extensión de marcado x:Static](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
+[![Controls mediante la extensión de marcado x:Static](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## <a name="other-standard-markup-extensions"></a>Otras extensiones de marcado estándar
 
-Varias extensiones de marcado son intrínsecas de XAML y se admiten en los archivos XAML de Xamarin.Forms. Algunas de ellas no se utilizan muy a menudo, pero son esenciales cuando necesite:
+Varias extensiones de marcado son intrínsecas de XAML y se admiten en los archivos XAML de Xamarin. Forms. Algunos de ellos no se usan con frecuencia, pero son esenciales cuando se necesitan:
 
-- Si tiene una propiedad que no es `null` valor de forma predeterminada, pero se desea establecerlo en `null`, establézcalo como el `{x:Null}` extensión de marcado.
-- Si una propiedad es de tipo `Type`, puede asignarla a un `Type` objeto mediante la extensión de marcado `{x:Type someClass}`.
-- Puede definir matrices en XAML usando el `x:Array` extensión de marcado. Esta extensión de marcado tiene un atributo obligatorio denominado `Type` que indica el tipo de los elementos de la matriz.
-- El `Binding` se describe la extensión de marcado en [parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- Si una propiedad tiene un valor que no es de `null` de forma predeterminada pero desea establecerlo en `null`, establézcalo en la extensión de marcado `{x:Null}`.
+- Si una propiedad es de tipo `Type`, puede asignarla a un objeto `Type` mediante el `{x:Type someClass}` de la extensión de marcado.
+- Puede definir matrices en XAML mediante el `x:Array` extensión de marcado. Esta extensión de marcado tiene un atributo required denominado `Type` que indica el tipo de los elementos de la matriz.
+- La extensión de marcado de `Binding` se describe en la [parte 4. Aspectos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- La extensión de marcado de `RelativeSource` se describe en [enlaces relativos](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## <a name="the-constraintexpression-markup-extension"></a>La extensión de marcado ConstraintExpression
 
-Las extensiones de marcado pueden tener propiedades, pero no se establecen como atributos XML. En una extensión de marcado, valores de las propiedades están separados por comas y comillas no aparece encerrado entre llaves.
+Las extensiones de marcado pueden tener propiedades, pero no se establecen como atributos XML. En una extensión de marcado, los valores de propiedad se separan mediante comas y no aparecen comillas dentro de las llaves.
 
-Esto se puede ilustrar con la extensión de marcado de Xamarin.Forms denominada `ConstraintExpression`, que se usa con el `RelativeLayout` clase. Puede especificar la ubicación o el tamaño de una vista secundaria como una constante o con respecto a un elemento primario o en otra vista con nombre. La sintaxis de la `ConstraintExpression` permite establecer la posición o el tamaño de una vista mediante una `Factor` veces una propiedad de otra vista, más una `Constant`. Algo más complejo que requiere el código.
+Esto se puede ilustrar con la extensión de marcado Xamarin. Forms denominada `ConstraintExpression`, que se usa con la clase `RelativeLayout`. Puede especificar la ubicación o el tamaño de una vista secundaria como una constante, o en relación con un elemento primario u otra vista con nombre. La sintaxis de la `ConstraintExpression` permite establecer la posición o el tamaño de una vista utilizando un `Factor` veces una propiedad de otra vista, más una `Constant`. Algo más complejo que requiere código.
 
-Veamos un ejemplo:
+A continuación se ofrece un ejemplo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -547,20 +548,20 @@ Veamos un ejemplo:
 </ContentPage>
 ```
 
-Quizás la lección más importante que debe tomar de este ejemplo es la sintaxis de la extensión de marcado: No deben aparecer comillas dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es normal que desee incluir los valores de las propiedades de comillas. ¡Resistir la tentación!
+Quizás la lección más importante que debe tomar de este ejemplo es la sintaxis de la extensión de marcado: no deben aparecer comillas dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es natural incluir los valores de las propiedades entre comillas. Resista la tentación.
 
 Este es el programa que se ejecuta:
 
-[![Diseño relativo mediante restricciones](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
+[![Relative diseño mediante restricciones](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 
-Las extensiones de marcado XAML que se muestra a continuación proporcionan compatibilidad importante para los archivos XAML. Pero quizás es la extensión de marcado XAML más valiosa `Binding`, que se trata en la siguiente parte de esta serie, [parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+Las extensiones de marcado XAML que se muestran aquí proporcionan una compatibilidad importante para los archivos XAML. Pero quizás la extensión de marcado XAML más valiosa es `Binding`, que se trata en la siguiente parte de esta serie, [parte 4. Aspectos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
-- [Parte 1. Introducción a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [Parte 2. Sintaxis XAML esencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [Parte 1. Introducción con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Parte 2. Sintaxis XAML básica](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [Parte 5. Desde el enlace de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Parte 5. Del enlace de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

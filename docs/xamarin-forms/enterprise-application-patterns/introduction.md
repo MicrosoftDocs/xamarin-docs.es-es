@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760225"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
@@ -62,7 +62,7 @@ En esta guía se incluye una aplicación de ejemplo, eShopOnContainers, que es u
 
 En la figura 1-1 se proporciona información general de alto nivel sobre la arquitectura de la aplicación de ejemplo.
 
-![](introduction-images/architecture.png "arquitectura de alto nivel de eShopOnContainers")
+![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
 
 **Figura 1-1**: arquitectura de alto nivel de eShopOnContainers
 
@@ -83,15 +83,15 @@ La aplicación de ejemplo incluye los siguientes servicios back-end:
 
 Estos servicios de back-end se implementan como microservicios mediante ASP.NET Core MVC y se implementan como contenedores únicos en un solo host de Docker. Colectivamente, estos servicios de back-end se conocen como la aplicación de referencia eShopOnContainers. Las aplicaciones cliente se comunican con los servicios back-end a través de una interfaz Web de transferencia de estado representacional (REST). Para más información sobre los microservicios y Docker, consulte [microservicios en contenedores](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
-Para obtener información sobre la implementación de los servicios back- [end, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
+Para obtener información sobre la implementación de los servicios back-end, consulte [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
 
 ### <a name="mobile-app"></a>Aplicación móvil
 
 Esta guía se centra en la creación de aplicaciones empresariales multiplataforma con Xamarin. Forms y usa la aplicación móvil eShopOnContainers como ejemplo. En la figura 1-2 se muestran las páginas de la aplicación móvil eShopOnContainers que proporcionan la funcionalidad descrita anteriormente.
 
-[![](introduction-images/screenshots.png "La aplicación móvil eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "La aplicación móvil eShopOnContainers")
+[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
-**Figura 1-2**: La aplicación móvil eShopOnContainers
+**Figura 1-2**: la aplicación móvil eShopOnContainers
 
 La aplicación móvil consume los servicios back-end proporcionados por la aplicación de referencia eShopOnContainers. Sin embargo, se puede configurar para consumir datos de servicios ficticios para aquellos que deseen evitar la implementación de los servicios back-end.
 
@@ -121,14 +121,14 @@ La solución de aplicación móvil eShopOnContainers organiza el código fuente 
 
 |Proyecto|Descripción|
 |--- |--- |
-|eShopOnContainers.Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
-|eShopOnContainers.Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|
+|eShopOnContainers. Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
+|eShopOnContainers. Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|
 |eShopOnContainers. iOS|Este proyecto contiene código específico de iOS y es el punto de entrada de la aplicación de iOS.|
-|eShopOnContainers.UWP|Este proyecto contiene código específico de Plataforma universal de Windows (UWP) y es el punto de entrada de la aplicación de Windows.|
-|eShopOnContainers.TestRunner.Droid|Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.iOS|Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.Windows|Este proyecto es el ejecutor de pruebas Plataforma universal de Windows del proyecto eShopOnContainers. UnitTests.|
-|eShopOnContainers.UnitTests|Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers. Core.|
+|eShopOnContainers. UWP|Este proyecto contiene código específico de Plataforma universal de Windows (UWP) y es el punto de entrada de la aplicación de Windows.|
+|eShopOnContainers. TestRunner. Droid|Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. iOS|Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. Windows|Este proyecto es el ejecutor de pruebas Plataforma universal de Windows del proyecto eShopOnContainers. UnitTests.|
+|eShopOnContainers. UnitTests|Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers. Core.|
 
 Las clases de la aplicación móvil eShopOnContainers se pueden volver a usar en cualquier aplicación de Xamarin. Forms con poca o ninguna modificación.
 
@@ -142,14 +142,14 @@ El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 |comportamientos|Contiene los comportamientos que se exponen a las clases de vista.|
 |Controles|Contiene controles personalizados usados por la aplicación.|
 |Convertidores|Contiene los convertidores de valores que aplican la lógica personalizada a un enlace.|
-|Efectos|Contiene la `EntryLineColorEffect` clase, que se usa para cambiar el color del borde de `Entry` controles concretos.|
-|Excepciones|Contiene el personalizado `ServiceAuthenticationException`.|
-|Extensiones|Contiene métodos de extensión para `VisualElement` las `IEnumerable` clases y.|
+|Efectos|Contiene la clase `EntryLineColorEffect`, que se usa para cambiar el color del borde de controles de `Entry` concretos.|
+|Excepciones|Contiene el `ServiceAuthenticationException` personalizado.|
+|Extensiones|Contiene métodos de extensión para las clases `VisualElement` y `IEnumerable`.|
 |Aplicaciones auxiliares|Contiene las clases auxiliares para la aplicación.|
 |Modelos|Contiene las clases de modelo de la aplicación.|
-|Propiedades|Contiene `AssemblyInfo.cs`un archivo de metadatos de ensamblado .net.|
+|Propiedades|Contiene `AssemblyInfo.cs`, un archivo de metadatos de ensamblado .NET.|
 |Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
-|Desencadenadores|Contiene el `BeginAnimation` desencadenador, que se usa para invocar una animación en XAML.|
+|Desencadenadores|Contiene el desencadenador `BeginAnimation`, que se usa para invocar una animación en XAML.|
 |Validaciones|Contiene clases implicadas en la validación de la entrada de datos.|
 |ViewModels|Contiene la lógica de la aplicación que se expone a las páginas.|
 |Vistas|Contiene las páginas de la aplicación.|
@@ -162,7 +162,7 @@ Los proyectos de plataforma contienen implementaciones de efectos, implementacio
 
 Las plataformas y herramientas de desarrollo de aplicaciones móviles multiplataforma de Xamarin proporcionan una solución completa para las aplicaciones de cliente móvil B2E, B2B y B2C, lo que proporciona la capacidad de compartir código en todas las plataformas de destino (iOS, Android y Windows) y ayuda a reducir el costo total de propiedad. Las aplicaciones pueden compartir su interfaz de usuario y el código de lógica de la aplicación, a la vez que conservan la apariencia y el funcionamiento de la plataforma nativa.
 
-Los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se pueda modificar o extender con el tiempo. El diseño para esta adaptación puede ser difícil, pero normalmente implica la creación de particiones de una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente en una aplicación.
+Los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se pueda modificar o ampliar con el tiempo. El diseño para esta adaptación puede ser difícil, pero normalmente implica la creación de particiones de una aplicación en componentes discretos de acoplamiento flexible que se pueden integrar fácilmente en una aplicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273112"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
@@ -42,7 +42,7 @@ Para proporcionar una experiencia de inicio agradable y asegurarse de que se uti
 Antes de iOS 9, todas las aplicaciones requerían la pantalla completa en el dispositivo, pero algunos iPad ahora pueden realizar varias [tareas de pantalla dividida](~/ios/platform/multitasking.md).
 Esto significa que la aplicación podría ocupar simplemente una columna delgada en el lateral de la pantalla, el 50% del ancho de la pantalla o toda la pantalla.
 
-[![](tablet-images/ipad-sml.png "Ejemplo de pantalla dividida de iPad")](tablet-images/ipad.png#lightbox "Ejemplo de pantalla dividida de iPad")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 La funcionalidad de pantalla dividida significa que debe diseñar la aplicación para que funcione bien con tan solo 320 píxeles de ancho o hasta 1366 píxeles de ancho.
 
@@ -59,7 +59,7 @@ Para admitir tabletas y equipos de escritorio que ejecuten Windows, deberá usar
 
 Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y escritorios de Windows a dimensiones arbitrarias, además de ejecutarse en pantalla completa.
 
-[![](tablet-images/splitscreen-sml.png "Ejemplo de pantalla dividida de Windows")](tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 <a name="optimize" />
 
@@ -67,9 +67,9 @@ Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y es
 
 Puede ajustar la interfaz de usuario de Xamarin. Forms en función de si se usa un dispositivo de teléfono o tableta o escritorio. Esto significa que puede optimizar la experiencia del usuario en dispositivos de gran tamaño, como tabletas y equipos de escritorio.
 
-### <a name="deviceidiom"></a>Device.Idiom
+### <a name="deviceidiom"></a>Dispositivo. expresión
 
-Puede usar la clase [`Device`](~/xamarin-forms/platform/device.md) para cambiar el comportamiento de la aplicación o la interfaz de usuario. Con la enumeración `Device.Idiom`, puede
+Puede usar la clase [`Device`](~/xamarin-forms/platform/device.md) para cambiar el comportamiento de la aplicación o la interfaz de usuario. Con la enumeración `Device.Idiom` puede
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone)
@@ -84,9 +84,9 @@ Este enfoque se puede expandir para realizar cambios significativos en los dise�
 
 ### <a name="leveraging-masterdetailpage"></a>Aprovechar MasterDetailPage
 
-El [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) es ideal para pantallas de mayor tamaño, especialmente en el iPad donde usa el [`UISplitViewController`](xref:UIKit.UISplitViewController) para proporcionar una experiencia de iOS nativa.
+La [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) es ideal para pantallas de mayor tamaño, especialmente en el iPad, donde usa el [`UISplitViewController`](xref:UIKit.UISplitViewController) para proporcionar una experiencia de iOS nativa.
 
-Revise [esta entrada de blog de Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver cómo puede adaptar la interfaz de usuario para que los teléfonos usen un diseño y las pantallas más grandes puedan usar otro (con el `MasterDetailPage`).
+Revise [esta entrada de blog de Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver cómo puede adaptar la interfaz de usuario para que los teléfonos usen un diseño y las pantallas más grandes puedan usar otro (con la `MasterDetailPage`).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

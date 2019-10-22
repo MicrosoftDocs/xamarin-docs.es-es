@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
 ms.openlocfilehash: 982d5b81a22d6e69227081420a5947aed4d3aab1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70755682"
 ---
 # <a name="accessibility-on-android"></a>Accesibilidad en Android
@@ -34,7 +34,7 @@ saveButton.ContentDescription = "Save data";
 
 **Diseño de AXML**
 
-En los diseños XML, use `android:contentDescription` el atributo:
+En los diseños XML, use el atributo `android:contentDescription`:
 
 ```xml
 <ImageButton
@@ -45,12 +45,12 @@ En los diseños XML, use `android:contentDescription` el atributo:
 
 ### <a name="use-hint-for-textview"></a>Use Hint para TextView
 
-En `EditText` el `TextView` caso de los controles y para la `Hint` entrada de datos, use la propiedad para proporcionar una descripción de la entrada `ContentDescription`que se espera (en lugar de).
+En el caso de los controles `EditText` y `TextView` para la entrada de datos, use la propiedad `Hint` para proporcionar una descripción de la entrada que se espera (en lugar de `ContentDescription`).
 Cuando se escribe texto, el texto en sí se "Lee" en lugar de la sugerencia.
 
 **C#**
 
-Establezca la `Hint` propiedad en el código:
+Establezca la propiedad `Hint` en el código:
 
 ```csharp
 someText.Hint = "Enter some text"; // displays (and is "read") when control is empty
@@ -58,7 +58,7 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
 
 **Diseño de AXML**
 
-En los archivos de diseño XML `android:hint` , use el atributo:
+En los archivos de diseño XML, use el atributo `android:hint`:
 
 ```xml
 <EditText
@@ -68,11 +68,11 @@ En los archivos de diseño XML `android:hint` , use el atributo:
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>LabelFor vincula los campos de entrada con etiquetas
 
-Para asociar una etiqueta a un control de entrada de datos `LabelFor` , use la propiedad para
+Para asociar una etiqueta a un control de entrada de datos, use la propiedad `LabelFor` para
 
 **C#**
 
-En C#, establezca la `LabelFor` propiedad en el identificador de recurso del control que describe este contenido (normalmente, esta propiedad se establece en una etiqueta y hace referencia a otro control de entrada):
+En C#, establezca la propiedad `LabelFor` en el identificador de recurso del control que describe este contenido (normalmente, esta propiedad se establece en una etiqueta y hace referencia a otro control de entrada):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);
@@ -82,7 +82,7 @@ tv.LabelFor = Resource.Id.editFirstName;
 
 **Diseño de AXML**
 
-En XML de diseño, `android:labelFor` use la propiedad para hacer referencia a otro identificador de control:
+En XML de diseño, use la propiedad `android:labelFor` para hacer referencia al identificador de otro control:
 
 ```xml
 <TextView
@@ -96,9 +96,9 @@ En XML de diseño, `android:labelFor` use la propiedad para hacer referencia a o
 
 ### <a name="announce-for-accessibility"></a>Anunciar para accesibilidad
 
-Utilice el `AnnounceForAccessibility` método en cualquier control de vista para comunicar un evento o un cambio de estado a los usuarios cuando la accesibilidad esté habilitada. Este método no es necesario para la mayoría de las operaciones en las que la narración integrada proporciona suficientes comentarios, pero debe usarse cuando la información adicional sea útil para el usuario.
+Use el método `AnnounceForAccessibility` en cualquier control de vista para comunicar un evento o un cambio de estado a los usuarios cuando está habilitada la accesibilidad. Este método no es necesario para la mayoría de las operaciones en las que la narración integrada proporciona suficientes comentarios, pero debe usarse cuando la información adicional sea útil para el usuario.
 
-En el código siguiente se muestra un ejemplo `AnnounceForAccessibility`simple que llama a:
+El código siguiente muestra un ejemplo simple que llama a `AnnounceForAccessibility`:
 
 ```csharp
 button.Click += delegate {
@@ -113,7 +113,7 @@ La navegación accesible se basa en controles que tienen el foco para ayudar al 
 
 **C#**
 
-Para evitar que un control tenga C#el foco, establezca la `Focusable` propiedad en: `false`
+Para evitar que un control tenga C#el foco, establezca la propiedad `Focusable` en `false`:
 
 ```csharp
 label.Focusable = false;
@@ -121,17 +121,17 @@ label.Focusable = false;
 
 **Diseño de AXML**
 
-En los archivos XML de diseño `android:focusable` , establezca el atributo:
+En diseñar archivos XML, establezca el atributo `android:focusable`:
 
 ```xml
 <android:focusable="false" />
 ```
 
-También puede controlar el orden de foco con `nextFocusDown`los `nextFocusLeft`atributos `nextFocusRight`, `nextFocusUp` ,, que se establecen normalmente en el diseño AXML. Utilice estos atributos para asegurarse de que el usuario puede navegar fácilmente por los controles de la pantalla.
+También puede controlar el orden de foco con los atributos `nextFocusDown`, `nextFocusLeft`, `nextFocusRight` `nextFocusUp`, que normalmente se establecen en el diseño AXML. Utilice estos atributos para asegurarse de que el usuario puede navegar fácilmente por los controles de la pantalla.
 
 ## <a name="accessibility-and-localization"></a>Accesibilidad y localización
 
-En los ejemplos anteriores está la descripción de la sugerencia y contenido establece directamente en el valor de presentación. Es preferible usar valores en un archivo **Strings. XML** , como el siguiente:
+En los ejemplos anteriores, la sugerencia y la descripción del contenido se establecen directamente en el valor para mostrar. Es preferible usar valores en un archivo **Strings. XML** , como el siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -145,7 +145,7 @@ A continuación se muestra el uso de texto de un C# archivo de cadenas en y arch
 
 **C#**
 
-En lugar de utilizar literales de cadena en el código, buscar valores traducidos de archivos `Resources.GetText`de cadenas con:
+En lugar de utilizar literales de cadena en el código, buscar valores traducidos de archivos de cadenas con `Resources.GetText`:
 
 ```csharp
 someText.Hint = Resources.GetText (Resource.String.enter_info);
@@ -154,7 +154,7 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 **AXML**
 
-En diseño, los atributos de `hint` accesibilidad `contentDescription` XML como y se pueden establecer en un identificador de cadena:
+En diseño, los atributos de accesibilidad XML como `hint` y `contentDescription` se pueden establecer en un identificador de cadena:
 
 ```xml
 <TextView

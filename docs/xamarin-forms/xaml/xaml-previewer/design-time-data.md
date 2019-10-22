@@ -8,15 +8,15 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
-ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72303246"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos de tiempo de diseño con el vista previa de XAML
 
-@no__t los diseños 0Some son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML. _
+_Algunos diseños son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML._
 
 ## <a name="design-time-data-basics"></a>Aspectos básicos de los datos de tiempo de diseño
 
@@ -36,7 +36,7 @@ Por ejemplo, puede Agregar texto a una etiqueta que normalmente tiene datos enla
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Datos de tiempo de diseño con texto en una etiqueta datos de tiempo de](xaml-previewer-images/designtimedata-label-sm.png "diseño con texto como etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Datos de tiempo de diseño con texto en una etiqueta](xaml-previewer-images/designtimedata-label-sm.png "Datos de tiempo de diseño con texto como etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
 En este ejemplo, sin `d:Text`, el previsor de XAML no mostraría nada para la etiqueta. En su lugar, muestra "nombre". donde la etiqueta tendrá datos reales en tiempo de ejecución.
 
@@ -46,7 +46,7 @@ Puede usar `d:` con cualquier atributo de un control de Xamarin. Forms, como col
 <d:Button Text="Design Time Button" />
 ```
 
-[![Datos de tiempo de diseño con un control de botón](xaml-previewer-images/designtimedata-controls-sm.png "datos de tiempo de diseño con un control de botón")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Datos de tiempo de diseño con un control de botón](xaml-previewer-images/designtimedata-controls-sm.png "Datos de tiempo de diseño con un control de botón")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 En este ejemplo, el botón solo aparece en tiempo de diseño. Use este método para colocar un marcador de posición en para un [control personalizado no admitido por el controlador de vista previa de XAML](render-custom-controls.md).
 
@@ -58,7 +58,7 @@ Puede establecer un origen de tiempo de diseño para las imágenes enlazadas a l
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 
-[![Datos de tiempo de diseño con imágenes](xaml-previewer-images/designtimedata-image-sm.png "datos de tiempo de diseño con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Datos de tiempo de diseño con imágenes](xaml-previewer-images/designtimedata-image-sm.png "Datos de tiempo de diseño con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Datos de tiempo de diseño para ListView
 
@@ -84,7 +84,7 @@ Los controles ListView son una manera popular de mostrar los datos en una aplica
 </StackLayout>
 ```
 
-[![Datos de tiempo de diseño con]los datos de tiempo de diseño de ListView(xaml-previewer-images/designtimedata-itemssource-sm.png "con un control ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Datos de tiempo de diseño con un control ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Datos de tiempo de diseño con un control ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 En este ejemplo se muestra un control ListView de tres TextCells en el objeto de vista previa de XAML. Puede cambiar `x:String` a un modelo de datos existente en el proyecto.
 
@@ -129,7 +129,7 @@ xmlns:models="clr-namespace:Monkeys.Models"
 
 La ventaja es que puede enlazar con el modelo real que piensa usar.
 
-## <a name="alternative-hardcode-a-static-viewmodel"></a>Lugar Codificar un ViewModel estático
+## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa: codificar un ViewModel estático
 
 Si no desea agregar datos de tiempo de diseño a controles individuales, puede configurar un almacén de datos ficticios para enlazar a la página. Consulte la entrada de blog de James Montemagno [sobre cómo agregar datos en tiempo de diseño](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) para ver cómo enlazar a un ViewModel estático en XAML.
 

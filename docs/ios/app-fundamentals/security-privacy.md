@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
 ms.openlocfilehash: 7847148551c20dbcf49bcc263bdc50716a6ef14e
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70283171"
 ---
 # <a name="ios-security-and-privacy-features"></a>Características de seguridad y privacidad de iOS
@@ -27,7 +27,7 @@ Apple ha realizado varias mejoras en la seguridad y la privacidad en iOS 10 (y v
 Se han realizado los siguientes cambios generales en la seguridad y la privacidad en iOS 10:
 
 - La API de Common Data Security Architecture (CDSA) ha quedado en desuso y debe reemplazarse por la API de SecKey para generar claves asimétricas.
-- La nueva `NSAllowsArbitraryLoadsInWebContent` clave se puede Agregar al archivo **info. plist** de la aplicación y permitirá que las páginas web se carguen correctamente, mientras que la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación. Para obtener más información, consulte nuestra documentación de [seguridad de transporte de aplicaciones](~/ios/app-fundamentals/ats.md) .
+- La nueva clave de `NSAllowsArbitraryLoadsInWebContent` se puede Agregar al archivo **info. plist** de la aplicación y permitirá que las páginas web se carguen correctamente mientras la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación. Para obtener más información, consulte nuestra documentación de [seguridad de transporte de aplicaciones](~/ios/app-fundamentals/ats.md) .
 - Dado que el nuevo portapapeles en iOS 10 y macOS Sierra permite al usuario copiar y pegar entre dispositivos, la API se ha expandido para permitir que un portapapeles se limite a un dispositivo específico y que tenga la marca de tiempo para que se borre automáticamente en un momento dado. Además, los portapapeles con nombre ya no se conservan y deben reemplazarse por los contenedores de la mesa de pegada.
 - Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que el desarrollador deje de usar la criptografía SHA-1 y 3DES lo antes posible.
 
@@ -42,25 +42,25 @@ Las aplicaciones que se ejecutan en iOS 10 (o posterior) deben declarar estátic
 
 Están disponibles las siguientes claves relacionadas con la privacidad:
 
-- **Privacidad: Descripción de uso de Apple Music** (`NSAppleMusicUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario.
-- **Privacidad: Descripción de uso de periféricos Bluetooth** (`NSBluetoothPeripheralUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder a Bluetooth en el dispositivo del usuario.
-- **Privacidad: Descripción de uso de calendarios** (`NSCalendarsUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso al calendario del usuario.
-- **Privacidad: Descripción de uso de la cámara** (`NSCameraUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere tener acceso a la cámara del dispositivo.
-- **Privacidad-Descripción del uso de contactos** (`NSContactsUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a los contactos del usuario.
-- **Privacidad: Descripción del uso de recursos compartidos de mantenimiento** (`NSHealthShareUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a los datos de mantenimiento del usuario. Para obtener más información, consulte referencia de la [clase HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)de Apple.
-- **Privacidad: Descripción de uso de actualización de estado** (`NSHealthUpdateUsageDescription`): Permite al desarrollador describir por qué la aplicación desea editar los datos de estado del usuario. Para obtener más información, consulte referencia de la [clase HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)de Apple.
-- **Privacidad: Descripción de uso de HomeKit** (`NSHomeKitUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder a los datos de configuración de HomeKit del usuario.
-- **Privacidad: Descripción de uso de la ubicación siempre** (`NSLocationAlwaysUsageDescription`): Permite al desarrollador describir por qué la aplicación desea siempre tener acceso a la ubicación del usuario.
-- En desuso **Privacidad: Descripción de uso de ubicación** (`NSLocationUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la ubicación del usuario. *NOTA: Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSLocationAlwaysUsageDescription` o`NSLocationWhenInUseUsageDescription` en su lugar.*
-- **Privacidad: Descripción de uso de la ubicación en** uso (`NSLocationWhenInUseUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere tener acceso a la ubicación del usuario mientras se ejecuta.
-- En desuso **Privacidad: Descripción de uso de la biblioteca multimedia** : permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario. *NOTA: Esta clave está en desuso en iOS 8 (y versiones posteriores). Use `NSAppleMusicUsageDescription` en su lugar.*
-- **Privacidad: Descripción de uso del micrófono** (`NSMicrophoneUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso al micrófono de los dispositivos.
-- **Privacidad: Descripción del uso de movimiento** (`NSMotionUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder al acelerómetro del dispositivo.
-- **Privacidad: Descripción de uso de la biblioteca de fotos** (`NSPhotoLibraryUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca de fotos del usuario.
-- **Privacidad: Descripción de uso de recordatorios** (`NSRemindersUsageDescription`): Permite al desarrollador describir por qué la aplicación desea tener acceso a los recordatorios del usuario.
-- **Privacidad: Descripción de uso de Siri** (`NSSiriUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere enviar datos de usuario a Siri.
-- **Privacidad: Descripción de uso del reconocimiento de voz** (`NSSpeechRecognitionUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere enviar datos de usuario a los servidores de reconocimiento de voz de Apple.
-- **Privacidad: Descripción del uso del proveedor de TV** (`NSVideoSubscriberAccountUsageDescription`): Permite al desarrollador describir por qué la aplicación quiere acceder a la cuenta de proveedor de TV del usuario.
+- **Privacidad: Descripción de uso de Apple Music** (`NSAppleMusicUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario.
+- **Privacidad: Descripción de uso de periféricos de Bluetooth** (`NSBluetoothPeripheralUsageDescription`): permite al desarrollador describir por qué la aplicación quiere acceder a Bluetooth en el dispositivo del usuario.
+- **Privacidad: Descripción de uso de calendarios** (`NSCalendarsUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso al calendario del usuario.
+- **Privacidad: Descripción de uso de la cámara** (`NSCameraUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a la cámara del dispositivo.
+- **Privacidad: Descripción de uso de contactos** (`NSContactsUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a los contactos del usuario.
+- **Privacidad: Descripción del uso de recursos compartidos de mantenimiento** (`NSHealthShareUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a los datos de mantenimiento del usuario. Para obtener más información, consulte referencia de la [clase HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)de Apple.
+- **Privacidad: Descripción del uso de actualizaciones de mantenimiento** (`NSHealthUpdateUsageDescription`): permite al desarrollador describir por qué la aplicación desea editar los datos de mantenimiento del usuario. Para obtener más información, consulte referencia de la [clase HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)de Apple.
+- **Privacidad: Descripción de uso de HomeKit** (`NSHomeKitUsageDescription`): permite al desarrollador describir por qué la aplicación quiere acceder a los datos de configuración de HomeKit del usuario.
+- **Privacidad: Descripción de uso de siempre** (`NSLocationAlwaysUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener siempre acceso a la ubicación del usuario.
+- En desuso **Privacidad: Descripción del uso** de la ubicación (`NSLocationUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a la ubicación del usuario. *Nota: esta clave está en desuso en iOS 8 (y versiones posteriores). En su lugar, use `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription`.*
+- **Privacidad: ubicación en** la que se encuentra en uso Descripción del uso (`NSLocationWhenInUseUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a la ubicación del usuario mientras se ejecuta.
+- En desuso **Privacidad: Descripción de uso de la biblioteca multimedia** : permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca multimedia del usuario. *Nota: esta clave está en desuso en iOS 8 (y versiones posteriores). En su lugar, use `NSAppleMusicUsageDescription`.*
+- **Privacidad: Descripción de uso de micrófono** (`NSMicrophoneUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso al micrófono de los dispositivos.
+- **Privacidad: Descripción del uso del movimiento** (`NSMotionUsageDescription`): permite al desarrollador describir por qué la aplicación quiere acceder al acelerómetro del dispositivo.
+- **Privacidad: Descripción de uso** de la biblioteca de fotos (`NSPhotoLibraryUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a la biblioteca de fotos del usuario.
+- **Privacidad: Descripción de uso de recordatorios** (`NSRemindersUsageDescription`): permite al desarrollador describir por qué la aplicación desea tener acceso a los recordatorios del usuario.
+- **Privacidad: Descripción de uso de Siri** (`NSSiriUsageDescription`): permite al desarrollador describir por qué la aplicación quiere enviar datos de usuario a Siri.
+- **Privacidad: Descripción de uso del reconocimiento de voz** (`NSSpeechRecognitionUsageDescription`): permite al desarrollador describir por qué la aplicación quiere enviar datos de usuario a los servidores de reconocimiento de voz de Apple.
+- **Privacidad: Descripción del uso del proveedor de TV** (`NSVideoSubscriberAccountUsageDescription`): permite al desarrollador describir por qué la aplicación quiere acceder a la cuenta de proveedor de TV del usuario.
 
 Para obtener más información sobre cómo trabajar con las claves **info. plist** , consulte la [referencia de clave](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1)de la lista de propiedades de la información de Apple.
 
@@ -68,7 +68,7 @@ Para obtener más información sobre cómo trabajar con las claves **info. plist
 
 ## <a name="setting-privacy-keys"></a>Configuración de las claves de privacidad
 
-En el siguiente ejemplo de acceso a HomeKit en iOS 10 (y versiones posteriores), el desarrollador tendrá que agregar la `NSHomeKitUsageDescription` clave al archivo **info. plist** de la aplicación y proporcionar una cadena que declare por qué la aplicación desea tener acceso a la base de datos HomeKit del usuario. Esta cadena se presentará al usuario la primera vez que ejecute la aplicación:
+En el siguiente ejemplo de acceso a HomeKit en iOS 10 (y versiones posteriores), el desarrollador tendrá que agregar la clave de `NSHomeKitUsageDescription` al archivo **info. plist** de la aplicación y proporcionar una cadena que declare por qué la aplicación desea tener acceso a la base de datos HomeKit del usuario. Esta cadena se presentará al usuario la primera vez que ejecute la aplicación:
 
 ![Una alerta de NSHomeKitUsageDescription de ejemplo](security-privacy-images/info01.png "Una alerta de NSHomeKitUsageDescription de ejemplo")
 
@@ -80,7 +80,7 @@ Xamarin. iOS para Visual Studio no admite actualmente la edición de las claves 
 2. Seleccione el **Editor de plist genérico** en la lista de programas para abrir el archivo y, a continuación, haga clic en **Aceptar**.
 
     ![Seleccione el editor de plist genérico](security-privacy-images/InfoEditorSelectionVs.png "Seleccione el editor de plist genérico")
-3. Haga clic **+** en el botón de la última fila del editor para agregar una nueva entrada a la lista. Esto se denominará "propiedad personalizada", con el tipo establecido en `String` y un valor vacío.
+3. Haga clic en el botón **+** de la última fila del editor para agregar una nueva entrada a la lista. Esto se denominará "propiedad personalizada", con el tipo establecido en `String` y un valor vacío.
 4. Haga clic en el nombre de la propiedad y aparecerá una lista desplegable.
 5. En la lista desplegable, seleccione una clave de privacidad (como **privacidad-HomeKit Usage Description**): 
 
@@ -108,7 +108,7 @@ Para establecer cualquiera de las claves de privacidad, haga lo siguiente:
 -----
 
 > [!IMPORTANT]
-> En el ejemplo anterior, si no se establece la `NSHomeKitUsageDescription` clave en el archivo **info. plist** , se _producirá un_ error en la aplicación en modo silencioso (cerrado por el sistema en tiempo de ejecución) sin errores cuando se ejecute en iOS 10 (o superior).
+> En el ejemplo anterior, si se produce un error al establecer la clave `NSHomeKitUsageDescription` en el archivo **info. plist** , la aplicación _generará un error en modo silencioso_ (cerrado por el sistema en tiempo de ejecución) sin errores cuando se ejecute en iOS 10 (o superior).
 
 <a name="Summary" />
 

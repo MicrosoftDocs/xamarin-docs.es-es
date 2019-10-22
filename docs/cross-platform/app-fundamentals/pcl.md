@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68681074"
 ---
 # <a name="portable-class-libraries-pcl"></a>Bibliotecas de clases portables (PCL)
@@ -74,7 +74,7 @@ En cierta medida, ambos desventajas se pueden eludir mediante el patrón de prov
 
 En este diagrama se muestra la arquitectura de una aplicación multiplataforma que usa una biblioteca de clases portable para compartir código, pero también el uso de la inserción de dependencias para pasar características dependientes de la plataforma:
 
-[![](pcl-images/image1.png "Este diagrama muestra la arquitectura de una aplicación multiplataforma mediante una biblioteca de clases portable para compartir código, pero también mediante la inserción de dependencias para pasar características dependientes de la plataforma.")](pcl-images/image1.png#lightbox)
+[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -100,7 +100,7 @@ La PCL ahora está lista para agregar el código. También se puede hacer refere
 
 Para ver y cambiar la configuración de PCL de este proyecto, haga clic con el botón derecho en el proyecto y elija **opciones > Compilar > general** para ver la pantalla que se muestra aquí:
 
-[![Opciones de proyecto de PCL para establecer el perfil](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
+[![PCL opciones de proyecto para establecer el perfil](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
 
 Haga clic en **cambiar...** para modificar el perfil de destino de esta biblioteca de clases portable.
 
@@ -110,11 +110,11 @@ Si se cambia el perfil después de que el código ya se haya agregado a la PCL, 
 
 Cuando se escribe código en una biblioteca PCL, el editor de Visual Studio para Mac reconoce las limitaciones del perfil seleccionado y ajusta las opciones de autocompletar en consecuencia. Por ejemplo, en esta captura de pantalla se muestran las opciones de autocompletar de System.IO con el perfil predeterminado (Profile136) que se usa en Visual Studio para Mac: Observe la barra de desplazamiento que indica la mitad de las clases disponibles que se muestran (de hecho, solo hay 14 clases disponibles).
 
-[![Lista de IntelliSense de 14 clases en la clase System.IO de una PCL](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
+[![Intellisense lista de 14 clases en la clase System.IO de una PCL](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
-Compárelo con la función de autocompletar System.IO en un proyecto de Xamarin. iOS o Xamarin. Android: hay 40 clases disponibles, incluidas las `File` clases `Directory` usadas comúnmente como y que no están en ningún perfil de PCL.
+Compárelo con la función de autocompletar System.IO en un proyecto de Xamarin. iOS o Xamarin. Android: hay 40 clases disponibles, incluidas las clases de uso frecuente, como `File` y `Directory` que no están en ningún perfil de PCL.
 
-[![Lista de IntelliSense de las clases 40 en .NET Framework espacio de nombres System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
+[![Intellisense lista de 40 clases en .NET Framework espacio de nombres System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
 Esto refleja el equilibrio subyacente del uso de PCL: la capacidad de compartir código sin problemas en muchas plataformas significa que algunas API no están disponibles porque no tienen implementaciones comparables en todas las plataformas posibles.
 
@@ -122,11 +122,11 @@ Esto refleja el equilibrio subyacente del uso de PCL: la capacidad de compartir 
 
 Una vez creado un proyecto PCL, puede agregarle una referencia desde cualquier proyecto de biblioteca o aplicación compatible de la misma manera que normalmente agrega referencias. En Visual Studio para Mac, haga clic con el botón secundario en el nodo referencias y elija **Editar referencias...** a continuación, cambie a la pestaña **proyectos** como se muestra a continuación:
 
-[![Agregar una referencia a una PCL a través de la opción Editar referencias](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
+[![Add una referencia a una PCL a través de la opción Editar referencias](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
 En la captura de pantalla siguiente se muestra el panel de solución de la aplicación de ejemplo TaskyPortable, que muestra la biblioteca PCL en la parte inferior y una referencia a esa biblioteca PCL en el proyecto de Xamarin. iOS.
 
-[![Solución de ejemplo de TaskyPortable que muestra el proyecto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
+[![TaskyPortable solución de ejemplo que muestra el proyecto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
 La salida de una PCL (es decir, la DLL del ensamblado resultante) también se puede agregar como referencia a la mayoría de los proyectos. Esto hace que PCL sea una manera ideal de enviar componentes y bibliotecas multiplataforma.
 
@@ -147,9 +147,9 @@ Agregar una PCL a la solución en Visual Studio es ligeramente diferente para ag
 2. Visual Studio le preguntará inmediatamente con el siguiente cuadro de diálogo para que se pueda configurar el perfil.
  Marque las plataformas que necesite admitir y presione Aceptar.
 
-    [![Seleccionar las plataformas de destino de la biblioteca](pcl-images/image11-sml.png "Marque las plataformas que necesite admitir y presione aceptar") .](pcl-images/image11.png#lightbox)
+    [![Seleccionar las plataformas de destino de la biblioteca](pcl-images/image11-sml.png "Marque las plataformas que necesite admitir y presione Aceptar.")](pcl-images/image11.png#lightbox)
 
-3. El proyecto PCL aparecerá como se muestra en la explorador de soluciones &ndash; el texto **(portátil)** aparece junto al nombre del proyecto para indicar que es una PCL:
+3. El proyecto PCL aparecerá como se muestra en el Explorador de soluciones &ndash; el texto **(portátil)** aparece junto al nombre del proyecto para indicar que es una PCL:
 
     ![NET Framework definido por el perfil de PCL](pcl-images/image12.png "NET Framework definido por el perfil de PCL")
 
@@ -159,7 +159,7 @@ La PCL ahora está lista para agregar el código. También se puede hacer refere
 
 Para ver y cambiar la configuración de PCL, haga clic con el botón derecho en el proyecto y elija **propiedades > biblioteca** , tal como se muestra en esta captura de pantalla:
 
-[![Editar los destinos de la plataforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
+[![Edit los destinos de la plataforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
 
 Si se cambia el perfil después de que el código ya se haya agregado a la PCL, es posible que la biblioteca ya no se compile si el código hace referencia a características que no forman parte del perfil recién seleccionado.
 
@@ -170,11 +170,11 @@ Si se cambia el perfil después de que el código ya se haya agregado a la PCL, 
 
 Cuando se escribe código en una biblioteca PCL, Visual Studio reconocerá las limitaciones del perfil seleccionado y ajustará las opciones de IntelliSense en consecuencia. Por ejemplo, en esta captura de pantalla se muestran las opciones de Autocompletar para System.IO con el perfil predeterminado (Profile136): Observe la barra de desplazamiento que indica la mitad de las clases disponibles que se muestran (de hecho, solo hay 14 clases disponibles).
 
-[![Número reducido de clases de e/s disponibles en una PCL](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
+[![Reduced número de clases de e/s disponibles en una PCL](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
 
-Compárelo con la función de autocompletar System.IO en un proyecto normal: hay 40 clases disponibles, incluidas las clases `File` de `Directory` uso frecuente como y que no están en ningún perfil de PCL.
+Compárelo con la función de autocompletar System.IO en un proyecto normal: hay 40 clases disponibles, incluidas las clases de uso frecuente, como `File` y `Directory` que no están en ningún perfil de PCL.
 
-[![Muchas más clases de e/s disponibles en el .NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
+[![Many más clases de e/s disponibles en el .NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
 
 Esto refleja el equilibrio subyacente del uso de PCL: la capacidad de compartir código sin problemas en muchas plataformas significa que algunas API no están disponibles porque no tienen implementaciones comparables en todas las plataformas posibles.
 
@@ -183,13 +183,13 @@ Esto refleja el equilibrio subyacente del uso de PCL: la capacidad de compartir 
 
 ### <a name="using-pcl"></a>Usar PCL
 
-Una vez creado un proyecto PCL, puede agregarle una referencia desde cualquier proyecto de biblioteca o aplicación compatible de la misma manera que normalmente agrega referencias. En Visual Studio, haga clic con el botón derecho en el nodo `Add Reference...` referencias y elija cambiar a la **solución >** la pestaña proyectos, como se muestra a continuación:
+Una vez creado un proyecto PCL, puede agregarle una referencia desde cualquier proyecto de biblioteca o aplicación compatible de la misma manera que normalmente agrega referencias. En Visual Studio, haga clic con el botón derecho en el nodo referencias y elija `Add Reference...`, a continuación, vaya a la pestaña **proyectos de > de soluciones** , como se muestra a continuación:
 
-[![Agregar una referencia a una PCL mediante la pestaña agregar proyectos de referencia](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
+[![Add una referencia a una PCL a través de la pestaña agregar proyectos de referencia](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
 En la captura de pantalla siguiente se muestra el panel de solución de la aplicación de ejemplo TaskyPortable, que muestra la biblioteca PCL en la parte inferior y una referencia a esa biblioteca PCL en el proyecto de Xamarin. iOS.
 
-[![Solución de ejemplo TaskyPortable que muestra una biblioteca PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
+[![TaskyPortable solución de ejemplo que muestra una biblioteca PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 
 La salida de una PCL (es decir, la DLL del ensamblado resultante) también se puede agregar como referencia a la mayoría de los proyectos.
 Esto hace que PCL sea una manera ideal de enviar componentes y bibliotecas multiplataforma.
@@ -201,19 +201,19 @@ Esto hace que PCL sea una manera ideal de enviar componentes y bibliotecas multi
 La aplicación de ejemplo [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) muestra cómo se puede usar una biblioteca de clases portable con Xamarin.
 Estas son algunas capturas de pantallas de las aplicaciones resultantes que se ejecutan en iOS y Android:
 
-[![](pcl-images/image18.png "Estas son algunas capturas de pantallas de las aplicaciones resultantes que se ejecutan en iOS, Android y Windows Phone")](pcl-images/image18.png#lightbox)
+[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
 
 Comparte una serie de clases de datos y lógicas que son solo código portable, y también muestra cómo incorporar requisitos específicos de la plataforma mediante la inserción de dependencias para la implementación de la base de datos SQLite.
 
 La estructura de la solución se muestra a continuación (en Visual Studio para Mac y Visual Studio, respectivamente):
 
-[![](pcl-images/image19.png "La estructura de la solución se muestra aquí en Visual Studio para Mac y Visual Studio, respectivamente.")](pcl-images/image19.png#lightbox)
+[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
 
 Dado que el código SQLite-NET tiene partes específicas de la plataforma (para trabajar con las implementaciones de SQLite en cada sistema operativo diferente) con fines de demostración, se ha refactorizado en una clase abstracta que se puede compilar en una biblioteca de clases portable. el código real implementado como subclases en los proyectos de iOS y Android.
 
 ### <a name="taskyportablelibrary"></a>TaskyPortableLibrary
 
-La biblioteca de clases portable está limitada en las características de .NET que puede admitir. Dado que se compila para ejecutarse en varias plataformas, no puede usar `[DllImport]` la funcionalidad que se usa en SQLite-net. En su lugar, SQLite-NET se implementa como una clase abstracta y después se hace referencia a él a través del resto del código compartido. A continuación se muestra un extracto de la API abstracta:
+La biblioteca de clases portable está limitada en las características de .NET que puede admitir. Dado que se compila para ejecutarse en varias plataformas, no puede usar `[DllImport]` funcionalidad que se usa en SQLite-NET. En su lugar, SQLite-NET se implementa como una clase abstracta y después se hace referencia a él a través del resto del código compartido. A continuación se muestra un extracto de la API abstracta:
 
 ```csharp
 public abstract class SQLiteConnection : IDisposable {
@@ -254,7 +254,7 @@ El resto del código compartido utiliza la clase abstracta para "almacenar" y "r
 
 Los proyectos de aplicación de iOS y Android contienen la interfaz de usuario y otro código específico de la plataforma que se usa para conectar el código compartido en la PCL.
 
-Estos proyectos también contienen una implementación de la API de base de datos abstracta que funciona en esa plataforma. En iOS y Android, el motor de base de datos de SQLite está integrado en el sistema operativo, por lo `[DllImport]` que la implementación puede usar tal y como se muestra para proporcionar la implementación concreta de la conectividad de base de datos. Aquí se muestra un extracto del código de implementación específico de la plataforma:
+Estos proyectos también contienen una implementación de la API de base de datos abstracta que funciona en esa plataforma. En iOS y Android, el motor de base de datos de SQLite está integrado en el sistema operativo, por lo que la implementación puede usar `[DllImport]` tal como se muestra para proporcionar la implementación concreta de la conectividad de base de datos. Aquí se muestra un extracto del código de implementación específico de la plataforma:
 
 ```csharp
 [DllImport("sqlite3", EntryPoint = "sqlite3_open")]

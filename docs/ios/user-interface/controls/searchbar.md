@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
 ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70283359"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barras de búsqueda en Xamarin. iOS
@@ -57,7 +57,7 @@ Establecer propiedades en la barra de búsqueda:
 
 ![Propiedades de la barra de búsqueda](searchbar-images/image6.png)
 
-Provoca el `SearchButtonClicked` evento cuando se presiona el botón Buscar. Se llamará a la lógica de búsqueda:
+Genera el evento `SearchButtonClicked` cuando se presiona el botón Buscar. Se llamará a la lógica de búsqueda:
 
 ```csharp
 searchBar.SearchButtonClicked += (sender, e) => {
@@ -88,7 +88,7 @@ Estas propiedades se explican a continuación:
   - Muestra el botón resultados de la búsqueda/marcadores: muestra un icono de resultados de la búsqueda o marcadores en la barra de búsqueda.
   - Muestra el botón Cancelar: permite a los usuarios salir de la función de búsqueda. Se recomienda seleccionar esta opción.
   - Muestra la barra de ámbito: permite a los usuarios limitar el ámbito de la búsqueda. Por ejemplo, al buscar en la aplicación música, el usuario puede seleccionar si quiere buscar Apple Music o su biblioteca para una canción o un intérprete determinados. Para mostrar varias opciones, agregue una matriz de títulos a la propiedad **ScopeBarTitles** .
-  ![Títulos de ámbito de la barra de búsqueda](searchbar-images/image4.png)
+  ![Search títulos de ámbito de barra ](searchbar-images/image4.png)
 
 - **Comportamiento de texto** : estas opciones se usan para abordar cómo se da formato a la entrada del usuario cuando se escriben. El uso de mayúsculas establecerá el inicio de cada palabra o frase, o todos los caracteres en mayúsculas. Corrección y revisión ortográfica con preguntar al usuario sobre las sugerencias de palabras que escriben.
 - **Teclado** : controla el estilo de teclado que se muestra para la entrada y, por tanto, las teclas que están disponibles en el teclado. Esto incluye el panel numérico, el panel de teléfono, el correo electrónico y la dirección URL junto con otras opciones.
