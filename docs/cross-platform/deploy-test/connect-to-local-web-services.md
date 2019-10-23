@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: a29cc650d9aa3976b6fd7aaaa82e233317684335
-ms.sourcegitcommit: 20c645f41620d5124da75943de1b690261d00660
+ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
+ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72426564"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526823"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
@@ -27,7 +27,7 @@ Las aplicaciones móviles que se ejecutan en el simulador de iOS o el emulador d
 Sin embargo, se requiere trabajo adicional para que una aplicación que se ejecuta en el simulador de iOS o el emulador de Android consuma un servicio web local que se expone a través de HTTPS. En este escenario, el proceso es el siguiente:
 
 1. Cree un certificado de desarrollo autofirmado en la máquina. Para más información, consulte [Crear un certificado de desarrollo](#create-a-development-certificate).
-1. Configure el proyecto para usar la pila de red `HttpClient` administrada para su compilación de depuración. Para más información, consulte [Configurar el proyecto](#configure-your-project).
+1. Configure el proyecto para usar la pila de red `HttpClient` adecuada para su compilación de depuración. Para más información, consulte [Configurar el proyecto](#configure-your-project).
 1. Especifique la dirección de la máquina local. Para más información, consulte [Especificar la dirección de la máquina local](#specify-the-local-machine-address).
 1. Omita la comprobación de seguridad del certificado de desarrollo local. Para más información, consulte [Omitir la comprobación de seguridad del certificado](#bypass-the-certificate-security-check).
 
@@ -54,7 +54,7 @@ De forma alternativa, cuando se ejecuta un proyecto de ASP.NET Core 2.1 (o poste
 
 Para más información sobre cómo habilitar HTTPS local en la máquina, consulte [Habilitar HTTPS local](/aspnet/core/getting-started#enable-local-https).
 
-## <a name="configure-your-project"></a>Configurar el proyecto
+## <a name="configure-your-project"></a>Configuración del proyecto
 
 Las aplicaciones de Xamarin que se ejecutan en iOS y Android pueden especificar qué pila de red usa la clase `HttpClient`, siendo las opciones una pila de red administrada o pilas de red nativas. La pila administrada proporciona un alto nivel de compatibilidad con código .NET ya existente, pero está limitada a TLS 1.0 y puede ser más lenta y dar lugar a un tamaño de archivo ejecutable mayor. Las pilas nativas pueden ser más rápidas y proporcionan mayor seguridad, pero no ofrecen toda la funcionalidad de la clase `HttpClient`.
 
@@ -66,7 +66,7 @@ Sin embargo, cuando una aplicación necesita conectarse a un servicio web seguro
 
 ### <a name="android"></a>Android
 
-Las aplicaciones de Xamarin que se ejecutan en Android pueden usar la pila de red `HttpClientHandler` administrada o la pila de red `AndroidClientHandler` nativa. De forma predeterminada, los nuevos proyectos de la plataforma Android usan la pila de red `AndroidClientHandler` para admitir TLS 1.2 y emplean API para mejorar el rendimiento y reducir el tamaño del archivo ejecutable. Para más información sobre las pilas de red de Android, consulte [Pila HttpClient y selector de implementación de SSL/TLS para Android](~/android/app-fundamentals/http-stack.md).
+Las aplicaciones de Xamarin que se ejecutan en Android pueden usar la pila de red `HttpClient` administrada o la pila de red `AndroidClientHandler` nativa. De forma predeterminada, los nuevos proyectos de la plataforma Android usan la pila de red `AndroidClientHandler` para admitir TLS 1.2 y emplean API para mejorar el rendimiento y reducir el tamaño del archivo ejecutable. Para más información sobre las pilas de red de Android, consulte [Pila HttpClient y selector de implementación de SSL/TLS para Android](~/android/app-fundamentals/http-stack.md).
 
 ## <a name="specify-the-local-machine-address"></a>Especificar la dirección de la máquina local
 

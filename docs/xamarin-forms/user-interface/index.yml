@@ -43,6 +43,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: button.md
             title: Botón
+          - href: carouselview/index.md
+            html: Aprenda a usar CarouselView para presentar datos en un diseño de carrusel lineal.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: collectionview/index.md
+            title: CarouselView
           - href: checkbox.md
             html: Obtenga información sobre cómo establecer un valor booleano con CheckBox.
             image:
@@ -74,7 +80,7 @@ sections:
               href: datepicker.md
             title: DatePicker
           - href: pop-ups.md
-            html: Obtenga información sobre cómo mostrar cuadros de diálogo para solicitar a los usuarios preguntas sencillas y guiarlos a través de las tareas.
+            html: 'Obtenga información sobre cómo mostrar cuadros de diálogo para formular a los usuarios preguntas sencillas, guiarlos por las tareas y mostrar avisos.'
             image:
               src: ~/media/icons/i_user-interface.svg
               href: pop-ups.md
@@ -109,11 +115,11 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: listview/index.md
             title: ListView
-          - href: map.md
+          - href: map/index.md
             html: 'Obtenga información sobre cómo usar el control Map, incluida la configuración necesaria de la plataforma, y cómo rellenar un mapa con anclas.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: map.md
+              href: map/index.md
             title: Asignaciones
           - href: menuitem.md
             html: Obtenga información sobre cómo usar la clase MenuItem para agregar elementos al menú contextual de las celdas de ListView.
@@ -133,6 +139,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: progressbar.md
             title: ProgressBar
+          - href: refreshview.md
+            html: Aprenda a usar RefreshView para proporcionar funcionalidad completa de arrastrar para actualizar contenido desplazable.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: refreshview.md
+            title: RefreshView
           - href: searchbar.md
             html: Obtenga información sobre cómo iniciar una búsqueda con el control SearchBar.
             image:
