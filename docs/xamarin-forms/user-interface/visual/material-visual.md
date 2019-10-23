@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
 ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71198496"
 ---
 # <a name="xamarinforms-material-visual"></a>Material visual de Xamarin. Forms
@@ -26,11 +26,11 @@ El proceso para habilitar el visual material de Xamarin. Forms en la aplicación
 
 1. Agregue el paquete de NuGet [Xamarin. Forms. visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) a los proyectos de la plataforma iOS y Android. Este paquete de NuGet ofrece representadores de diseño de material optimizados en iOS y Android. En iOS, el paquete proporciona la dependencia transitiva a [Xamarin. iOS. MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), que es un C# enlace a [los componentes de material de Google para iOS](https://material.io/develop/ios/). En Android, el paquete proporciona destinos de compilación para asegurarse de que el TargetFramework está correctamente configurado.
 1. Inicialice los representadores de materiales en cada proyecto de plataforma. Para obtener más información, consulte [inicializar representadores de materiales](#initialize-material-renderers).
-1. Consume los representadores de materiales [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) estableciendo la `Material` propiedad en en cualquier página que deba adoptar las reglas de diseño del material. Para obtener más información, consulte [consumo de representadores de materiales](#consume-material-renderers).
+1. Consume los representadores de materiales estableciendo la propiedad [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) en `Material` en cualquier página que deba adoptar las reglas de diseño del material. Para obtener más información, consulte [consumo de representadores de materiales](#consume-material-renderers).
 1. opta Personalice los representadores de materiales. Para obtener más información, consulte [Personalización de representadores de materiales](#customize-material-renderers).
 
 > [!IMPORTANT]
-> En Android, los representadores de materiales requieren una versión mínima de 5,0 (API 21) o superior, y un valor de TargetFramework de la versión 9,0 (API 28). Además, el proyecto de plataforma requiere las bibliotecas de compatibilidad con Android 28.0.0 o superior, y su tema debe heredar de un tema de componentes de materiales o seguir heredando de un tema AppCompat. Para obtener más información, consulte [Introducción a los componentes de Material para Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+> En Android, los representadores de materiales requieren una versión mínima de 5,0 (API 21) o superior, y un valor de TargetFramework de la versión 9,0 (API 28). Además, el proyecto de plataforma requiere las bibliotecas de compatibilidad con Android 28.0.0 o superior, y su tema debe heredar de un tema de componentes de materiales o seguir heredando de un tema AppCompat. Para obtener más información, consulte [Introducción a los componentes de materiales para Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
 
 Los representadores de materiales se incluyen actualmente en el paquete de NuGet [Xamarin. Forms. visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) para las vistas siguientes:
 
@@ -47,20 +47,20 @@ Los representadores de materiales se incluyen actualmente en el paquete de NuGet
 - [`Slider`](xref:Xamarin.Forms.Slider)
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
 
-Funcionalmente, los representadores de material no son distintos a los representadores de forma predeterminada.
+Funcionalmente, los representadores de materiales no son diferentes a los representadores predeterminados.
 
 ## <a name="initialize-material-renderers"></a>Inicializar representadores de materiales
 
 Después de instalar el paquete de NuGet de [Xamarin. Forms. visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , los representadores de materiales deben inicializarse en cada proyecto de plataforma.
 
-En iOS, esto debe ocurrir en **AppDelegate.CS** invocando el `Xamarin.Forms.FormsMaterial.Init` método *después* del `Xamarin.Forms.Forms.Init` método:
+En iOS, esto debe ocurrir en **AppDelegate.CS** al invocar el método `Xamarin.Forms.FormsMaterial.Init` *después* del método `Xamarin.Forms.Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
 global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-En Android, esto debe ocurrir en **MainActivity.CS** invocando el `Xamarin.Forms.FormsMaterial.Init` método *después* del `Xamarin.Forms.Forms.Init` método:
+En Android, esto debe ocurrir en **MainActivity.CS** al invocar el método `Xamarin.Forms.FormsMaterial.Init` *después* del método `Xamarin.Forms.Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -69,7 +69,7 @@ global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
 ## <a name="consume-material-renderers"></a>Consumo de representadores de materiales
 
-Las aplicaciones pueden optar por usar los representadores de [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) materiales estableciendo la propiedad en una página, diseño o vista `Material`, para:
+Las aplicaciones pueden optar por usar los representadores de materiales estableciendo la propiedad [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) en una página, diseño o vista, para `Material`:
 
 ```xaml
 <ContentPage Visual="Material"
@@ -85,24 +85,24 @@ ContentPage contentPage = new ContentPage();
 contentPage.Visual = VisualMarker.Material;
 ```
 
-La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) propiedad se puede establecer en cualquier tipo que `IVisual`implemente, con la [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) clase que proporciona las `IVisual` propiedades siguientes:
+La propiedad [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) se puede establecer en cualquier tipo que implemente `IVisual`, con la clase [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) que proporciona las siguientes propiedades de `IVisual`:
 
 - `Default`: indica que la vista debe representarse mediante el representador predeterminado.
 - `MatchParent`: indica que la vista debe utilizar el mismo representador que su elemento primario directo.
 - `Material`: indica que la vista debe representarse mediante un representador de materiales.
 
 > [!IMPORTANT]
-> La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) propiedad se define en la [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, con vistas que heredan `Visual` el valor de propiedad de sus elementos primarios. Por consiguiente, si `Visual` se establece la [`ContentPage`](xref:Xamarin.Forms.ContentPage) propiedad en, se garantiza que cualquier vista admitida en la página utilizará ese visual. Además, el `Visual` propiedad se puede invalidar en una vista.
+> La propiedad [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) se define en la clase [`VisualElement`](xref:Xamarin.Forms.VisualElement) , con vistas que heredan el valor de la propiedad `Visual` de sus elementos primarios. Por consiguiente, al establecer la propiedad `Visual` en un [`ContentPage`](xref:Xamarin.Forms.ContentPage) se garantiza que las vistas admitidas en la página utilizarán ese visual. Además, la propiedad `Visual` se puede invalidar en una vista.
 
 Las siguientes capturas de pantallas muestran una interfaz de usuario que se representa mediante los representadores predeterminados:
 
 [![Captura de pantalla de los representadores predeterminados, en iOS y Android](material-visual-images/default-renderers.png "Vistas con representadores predeterminados")](material-visual-images/default-renderers-large.png#lightbox)
 
-Las capturas de pantalla siguientes muestran la misma interfaz de usuario que se va a representar utilizando a los representadores de materiales:
+Las siguientes capturas de pantallas muestran la misma interfaz de usuario que se representa mediante los representadores de materiales:
 
 [![Captura de pantalla de representadores de materiales, en iOS y Android](material-visual-images/material-renderers.png "Vistas con representadores de materiales")](material-visual-images/material-renderers-large.png#lightbox)
 
-Las principales diferencias visibles entre los representadores predeterminados y los representadores de materiales, que se muestran aquí [`Button`](xref:Xamarin.Forms.Button) , son que los representadores [`Frame`](xref:Xamarin.Forms.Frame) de materiales ponen en mayúsculas el texto y redondean las esquinas de los bordes. Sin embargo, los representadores de materiales usan controles nativos y, por lo tanto, puede haber diferencias en la interfaz de usuario entre plataformas para áreas como fuentes, sombras, colores y elevación.
+Las principales diferencias visibles entre los representadores predeterminados y los representadores de materiales, que se muestran aquí, son que los representadores de materiales ponen en mayúsculas [`Button`](xref:Xamarin.Forms.Button) texto y redondean las esquinas de los bordes de [`Frame`](xref:Xamarin.Forms.Frame) . Sin embargo, los representadores de materiales usan controles nativos y, por lo tanto, puede haber diferencias en la interfaz de usuario entre plataformas para áreas como fuentes, sombras, colores y elevación.
 
 > [!NOTE]
 > Los componentes del diseño material se adhieren a las directrices de Google. Como resultado, los representadores de diseño de material se sesgan hacia ese tamaño y comportamiento. Cuando necesite un mayor control de los estilos o el comportamiento, puede crear su propio [efecto](~/xamarin-forms/app-fundamentals/effects/index.md), [comportamiento](~/xamarin-forms/app-fundamentals/behaviors/index.md)o [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para obtener los detalles que necesita.
@@ -124,7 +124,7 @@ Los representadores de materiales se pueden personalizar opcionalmente, al igual
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-En el código siguiente se muestra un ejemplo de personalización de la `MaterialProgressBarRenderer` clase:
+En el código siguiente se muestra un ejemplo de personalización de la clase `MaterialProgressBarRenderer`:
 
 ```csharp
 using Xamarin.Forms.Material.Android;
@@ -139,10 +139,10 @@ namespace MyApp.Android
 }
 ```
 
-`ExportRendererAttribute` En este ejemplo, especifica que la `CustomMaterialProgressBarRenderer` clase se utilizará para representar la [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) vista, con el `IVisual` tipo registrado como tercer argumento.
+En este ejemplo, el `ExportRendererAttribute` especifica que la clase `CustomMaterialProgressBarRenderer` se usará para representar la vista [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) , con el tipo `IVisual` registrado como tercer argumento.
 
 > [!NOTE]
-> Se usará un representador `IVisual` que especifique un tipo, como `ExportRendererAttribute`parte de su, para representar en las vistas, en lugar del representador predeterminado. En tiempo de selección del representador, el `Visual` propiedad de la vista es inspeccionar y se incluye en el proceso de selección del representador.
+> Un representador que especifica un tipo de `IVisual`, como parte de su `ExportRendererAttribute`, se usará para representar en las vistas, en lugar del representador predeterminado. En el momento de la selección del representador, se inspecciona la propiedad `Visual` de la vista y se incluye en el proceso de selección del representador.
 
 Para obtener más información acerca de los representadores personalizados, vea [representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 

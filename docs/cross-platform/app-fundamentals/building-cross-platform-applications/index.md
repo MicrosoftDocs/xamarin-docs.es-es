@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/28/2016
 ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70288059"
 ---
 # <a name="building-cross-platform-applications"></a>Creación de aplicaciones multiplataforma
@@ -46,7 +46,7 @@ Los principios descritos en este documento se ponen en práctica en la *tarea*de
 Tasky es una sencilla aplicación de lista de tareas pendientes para iOS, Android y Windows Phone.
 Se muestran los aspectos básicos de la creación de una aplicación multiplataforma con Xamarin y se usa una base de datos SQLite local.
 
- lista de tareas de lista [ ![de tareas](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ lista de [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) de [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Lea el [caso práctico de tarea](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -63,8 +63,8 @@ Por último, analiza brevemente las pruebas y proporciona referencias a un caso 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Opciones de código compartido](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Caso práctico: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Caso práctico: @No__t_0 de tareas
 - [Aplicación de ejemplo de tarea (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Desarrollo de aplicaciones móviles de Xamarin: Aspectos básicos de C# Xamarin. Forms y multiplataforma (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Xamarin desarrollo de aplicaciones móviles: Aspectos básicos de C# Xamarin. Forms y multiplataforma (Amazon) ](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desarrollo móvil con C# por Greg shackles (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
 - [Desarrollo Móvil multiplataforma profesional en C# Scott Olson, John Hunter, Ben Horgen, Kenny goers (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)
