@@ -108,8 +108,6 @@
           href: deploy-test/connect-to-local-web-services.md
         - name: Configuración personalizada del enlazador
           href: deploy-test/linker.md
-        - name: Instalación de NUnit 2.6.4 mediante NuGet
-          href: deploy-test/installing-nunit-using-nuget.md
         - name: Depuración multiproceso
           href: deploy-test/multi-process-debugging.md
     - name: Desarrolladores de escritorio
