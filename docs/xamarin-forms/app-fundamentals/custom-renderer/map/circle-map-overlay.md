@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ecc4686e9966de7a184730589c44a951e4daddb2
-ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.openlocfilehash: 1fe2611e26d357d910cc85800355b42d11e1104b
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72424863"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697180"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área circular en un mapa
 
@@ -33,7 +33,7 @@ Cuando una aplicación de Xamarin.Forms representa un control [`Map`](xref:Xamar
 1. [Personalice](#Customizing_the_Map) el mapa; para hacerlo, cree un representador personalizado para el mapa en cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) debe inicializarse y configurarse antes de su uso. Para obtener más información, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md)
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) debe inicializarse y configurarse antes de su uso. Para obtener más información, consulte [`Maps Control`](~/xamarin-forms/user-interface/map/index.md)
 
 Para obtener información sobre cómo personalizar un mapa mediante un representador personalizado, consulte [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
