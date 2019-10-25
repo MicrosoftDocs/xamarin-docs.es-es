@@ -6,13 +6,13 @@ ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: dd1dc9b679a46dc082de1fe9b3c5f10b6757c0d8
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.date: 09/20/2019
+ms.openlocfilehash: 3e63a580bbdb1c220d44b100725cdc8ce387b405
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68739281"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696515"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introducción a Xamarin.Forms Shell
 
@@ -28,7 +28,15 @@ Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móvile
 Además, las aplicaciones de Shell se benefician de una mayor velocidad de representación y un consumo reducido de memoria.
 
 > [!IMPORTANT]
-> El shell de Xamarin.Forms solo está disponible en iOS y Android. Las aplicaciones existentes de iOS y Android pueden adoptar Shell y aprovechar inmediatamente las mejoras de navegación, rendimiento y extensibilidad.
+> Las aplicaciones existentes pueden adoptar Shell y aprovechar inmediatamente las mejoras de navegación, rendimiento y extensibilidad.
+
+## <a name="platform-support"></a>Compatibilidad con la plataforma
+
+El Shell de Xamarin.Forms está totalmente disponible en iOS y Android, pero solo parcialmente disponible en la Plataforma universal de Windows (UWP). Además, Shell es actualmente experimental en UWP y solo se puede usar agregando la siguiente línea de código a la clase `App` en el proyecto de UWP, antes de llamar a `Forms.Init`:
+
+```csharp
+global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
+```
 
 ## <a name="shell-navigation-experience"></a>Experiencia de navegación de Shell
 
@@ -38,18 +46,18 @@ Shell ofrece una experiencia de navegación bien fundamentada basada en controle
 
 Al seleccionar un elemento de control flotante, se selecciona y muestra la pestaña inferior que representa el elemento:
 
-[![Captura de pantalla de las pestañas inferiores de Shell en iOS y Android](introduction-images/monkeys.png "Pestañas inferiores de Shell")](introduction-images/monkeys-large.png#lightbox "Pestañas inferiores de Shell")
+[![Captura de pantalla de pestañas inferiores de Shell en iOS y Android](introduction-images/monkeys.png "Pestañas inferiores de Shell")](introduction-images/monkeys-large.png#lightbox "Pestañas inferiores de Shell")
 
 > [!NOTE]
 > Cuando el control flotante no está abierto, la barra de pestañas inferior se puede considerar el nivel superior de navegación en la aplicación.
 
 Cada pestaña muestra un objeto [ `ContentPage`](xref:Xamarin.Forms.ContentPage). Sin embargo, si una pestaña inferior contiene más de una página, las páginas son navegables mediante la barra de pestañas superior:
 
-[![Captura de pantalla de las pestañas superiores de Shell en iOS y Android](introduction-images/cats.png "Pestañas superiores de Shell")](introduction-images/cats-large.png#lightbox "Pestañas superiores de Shell")
+[![Captura de pantalla de pestañas superiores de Shell en iOS y Android](introduction-images/cats.png "Pestañas superiores de Shell")](introduction-images/cats-large.png#lightbox "Pestañas superiores de Shell")
 
 Dentro de cada pestaña, se puede navegar a objetos adicionales [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-[![Captura de pantalla de navegación entre páginas de Shell en iOS y Android](introduction-images/cat-details.png "Navegación por aplicaciones de Shell")](introduction-images/cat-details-large.png#lightbox "Navegación por aplicaciones de Shell")
+[![Captura de pantalla de navegación de páginas de Shell en iOS y Android](introduction-images/cat-details.png "Navegación por aplicaciones de Shell")](introduction-images/cat-details-large.png#lightbox "Navegación por aplicaciones de Shell")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

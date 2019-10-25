@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771266"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introducción a las plantillas de control de Xamarin.Forms
@@ -26,7 +26,7 @@ Las plantillas de control proporcionan una separación clara entre el aspecto de
 
 Un elemento [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) especifica la apariencia de una página o vista, y contiene un diseño raíz que incluye los controles que implementan la plantilla. Normalmente, un elemento `ControlTemplate` usará un elemento [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) para marcar dónde va a aparecer el contenido que la página o vista va a mostrar. Después, la página o vista que consume el elemento `ControlTemplate` definirá el contenido que `ContentPresenter` va a mostrar. En el diagrama siguiente se ilustra un elemento `ControlTemplate` para una página que contiene una serie controles, incluido un control `ContentPresenter` marcado por un rectángulo de color azul:
 
-![](introduction-images/control-template.png "Plantilla de control para una página")
+![](introduction-images/control-template.png "Control Template for a Page")
 
 Se puede aplicar [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) a los tipos siguientes si se establecen sus propiedades `ControlTemplate`:
 

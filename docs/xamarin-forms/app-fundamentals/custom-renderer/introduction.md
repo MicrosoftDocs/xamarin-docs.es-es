@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771880"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
@@ -56,7 +56,7 @@ El prefijo de espacio de nombres `local` puede ser cualquier texto. Pero los val
 
 Después, el control personalizado `MyEntry` se representa en cada plataforma, con un fondo gris, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/screenshots.png "Control personalizado MyEntry en cada plataforma")
+![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
 
 El cambio del color de fondo del control en cada plataforma se ha obtenido simplemente mediante la creación de subclases del control. Pero los resultados que pueden obtenerse con esta técnica son limitados, ya que no es posible aprovechar las mejoras y personalizaciones específicas de cada plataforma. Cuando sea necesario usarlos, tendrán que implementarse representadores personalizados.
 

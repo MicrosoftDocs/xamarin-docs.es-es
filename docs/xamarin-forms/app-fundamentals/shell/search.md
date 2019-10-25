@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 09/25/2019
+ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739249"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695932"
 ---
 # <a name="xamarinforms-shell-search"></a>Búsqueda de Xamarin.Forms Shell
 
@@ -20,11 +20,11 @@ ms.locfileid: "68739249"
 
 Xamarin.Forms Shell incluye la funcionalidad de búsqueda integrada que proporciona la clase `SearchHandler`. La funcionalidad de búsqueda se puede agregar a una página mediante el establecimiento de la propiedad adjunta `Shell.SearchHandler` en un objeto `SearchHandler` en subclase. El resultado es un cuadro de búsqueda que se agrega en la parte superior de la página:
 
-[![Captura de pantalla de una clase SearchHandler de Shell en iOS y Android](search-images/searchhandler.png "SearchHandler de Shell")](search-images/searchhandler-large.png#lightbox "Shell SearchHandler")
+[![Captura de pantalla de una clase SearchHandler de Shell en iOS y Android](search-images/searchhandler.png "Clase SearchHandler de Shell")](search-images/searchhandler-large.png#lightbox "Clase SearchHandler de Shell")
 
 Cuando se escribe una consulta en el cuadro de búsqueda, la propiedad `Query` se actualiza y, en cada actualización, se ejecuta el método `OnQueryChanged`. Este método se puede invalidar para rellenar el área de sugerencias de búsqueda con datos:
 
-[![Captura de pantalla de unos resultados de búsqueda de una clase SearchHandler de Shell en iOS y Android](search-images/search-suggestions.png "Resultados de búsqueda de SearchHandler de Shell")](search-images/search-suggestions-large.png#lightbox "Shell SearchHandler search results")
+[![Captura de pantalla de resultados de la búsqueda en una clase SearchHandler de Shell, en iOS y Android](search-images/search-suggestions.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-suggestions-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
 
 Luego, cuando se selecciona un resultado del área de sugerencias de búsqueda, se ejecuta el método `OnItemSelected`. Este método se puede invalidar para responder de forma adecuada; por ejemplo, navegando a una página de detalles.
 
@@ -99,15 +99,15 @@ El método `MonkeySearchHandler.OnQueryChanged` devuelve un elemento `List` de o
 
 La propiedad `ShowsResults` está establecida en `true`, de modo que se muestran sugerencias de búsqueda cuando el usuario escribe una consulta de búsqueda:
 
-[![Captura de pantalla de resultados de búsqueda en una clase SearchHandler de Shell en iOS y Android](search-images/search-results.png "Resultados de búsqueda de SearchHandler de Shell")](search-images/search-results-large.png#lightbox "Shell SearchHandler search results")
+[![Captura de pantalla de resultados de la búsqueda en una clase SearchHandler de Shell, en iOS y Android](search-images/search-results.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
 
 A medida que cambia la consulta de búsqueda, se actualiza el área de sugerencias de búsqueda:
 
-[![Captura de pantalla de resultados de búsqueda en una clase SearchHandler de Shell en iOS y Android](search-images/search-results-change.png "Resultados de búsqueda de SearchHandler de Shell")](search-images/search-results-change-large.png#lightbox "Shell SearchHandler search results")
+[![Captura de pantalla de resultados de la búsqueda en una clase SearchHandler de Shell, en iOS y Android](search-images/search-results-change.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-change-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
 
 Cuando se selecciona un resultado de búsqueda, hay un desplazamiento hasta `MonkeyDetailPage` y se muestran datos sobre el mono seleccionado:
 
-[![Captura de pantalla de detalles de mono en iOS y Android](search-images/detailpage.png "Detalles de mono")](search-images/detailpage-large.png#lightbox "Monkey details")
+[![Captura de pantalla de detalles de mono en iOS y Android](search-images/detailpage.png "Detalles de mono")](search-images/detailpage-large.png#lightbox "Detalles de mono")
 
 ## <a name="define-search-results-item-appearance"></a>Definición de la apariencia de los elemento de los resultados de búsqueda
 
@@ -172,7 +172,7 @@ Los elementos especificados en [ `DataTemplate`](xref:Xamarin.Forms.DataTemplate
 
 Las capturas de pantalla siguientes muestran el resultado de crear plantillas para cada elemento del área de sugerencias:
 
-[![Captura de pantalla de resultados de búsqueda con plantilla en una clase SearchHandler de Shell en iOS y Android](search-images/search-results-template.png "Resultados de búsqueda con plantilla de SearchHandler de Shell")](search-images/search-results-template-large.png#lightbox "Shell SearchHandler templated search results")
+[![Captura de pantalla de resultados de la búsqueda con plantilla en una clase SearchHandler de Shell, en iOS y Android](search-images/search-results-template.png "Resultados de la búsqueda con plantilla de la clase SearchHandler de Shell")](search-images/search-results-template-large.png#lightbox "Resultados de la búsqueda con plantilla de la clase SearchHandler de Shell")
 
 Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -211,12 +211,14 @@ La clase `SearchHandler` define las siguientes propiedades que afectan a su apar
 
 - `BackgroundColor`, del tipo `Color`, es el color de fondo para el texto del cuadro de búsqueda.
 - `CancelButtonColor`, del tipo `Color`, es el color del botón Cancelar.
+- `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `SearchHandler`.
 - `FontAttributes`, del tipo `FontAttributes`, indica si el texto del cuadro de búsqueda está en negrita o cursiva.
 - `FontFamily`, del tipo `string`, es la familia de fuentes utilizada para el texto del cuadro de búsqueda.
 - `FontSize`, del tipo `double`, es el tamaño del texto del cuadro de búsqueda.
 - `HorizontalTextAlignment`, del tipo `TextAlignment`, es la alineación horizontal del texto del cuadro de búsqueda.
 - `PlaceholderColor`, del tipo `Color`, es el color del texto del cuadro de búsqueda del marcador de posición.
 - `TextColor`, del tipo `Color`, es el color del texto del cuadro de búsqueda.
+- `VerticalTextAlignment`, del tipo `TextAlignment`, es la alineación vertical del texto del cuadro de búsqueda.
 
 ## <a name="searchhandler-keyboard"></a>Teclado SearchHandler
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656978"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678844"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
@@ -32,7 +32,7 @@ La dirección de flujo es la dirección en la que el ojo humano lee los elemento
 
 Al establecer la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) como [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) en un elemento, generalmente se establece la alineación a la derecha, el orden de lectura de derecha a izquierda y el diseño del control para que fluya de derecha a izquierda:
 
-[![TodoItemPage en árabe, con una dirección de flujo de derecha a izquierda](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in Arabic with a right-to-left flow direction")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in Arabic with a right-to-left flow direction")
+[![TodoItemPage en árabe con una dirección de flujo de derecha a izquierda](rtl-images/TodoItemPage-Arabic.png "TodoItemPage en árabe con una dirección de flujo de derecha a izquierda")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage en árabe con una dirección de flujo de derecha a izquierda")
 
 > [!TIP]
 > Solo debe establecerse la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) en el diseño inicial. El cambio de este valor en tiempo de ejecución hace que el proceso de diseño sea difícil y que ello afecte al rendimiento.
@@ -72,7 +72,7 @@ La configuración regional de derecha a izquierda necesaria debe agregarse como 
 </array>
 ```
 
-![Idiomas compatibles con Info.plist](rtl-images/ios-locales.png "Info.plist supported languages")
+![Idiomas compatibles de Info.plist](rtl-images/ios-locales.png "Idiomas compatibles de Info.plist")
 
 Para obtener más información, consulte [Localization Basics in iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios) (Introducción a la localización en iOS).
 
@@ -145,6 +145,46 @@ La localización de derecha a izquierda de Xamarin.Forms actualmente tiene una s
 - El control de la alineación del texto de [`Editor`](xref:Xamarin.Forms.Editor) lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - Los elementos secundarios [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) no heredan la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - El control de la alineación del texto de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+
+## <a name="force-right-to-left-layout"></a>Forzar el diseño de derecha a izquierda
+
+Las aplicaciones de Xamarin.iOS y Xamarin.Android se pueden forzar para que siempre usen un diseño de derecha a izquierda, independientemente de la configuración del dispositivo, modificando los proyectos de plataforma respectivos.
+
+### <a name="ios"></a>iOS
+
+Las aplicaciones de Xamarin.iOS se pueden forzar para que siempre usen un diseño de derecha a izquierda modificando la clase **AppDelegate** de la siguiente manera:
+
+1. Declare la función `IntPtr_objc_msgSend` como la primera línea de la clase `AppDelegate`:
+
+   ```csharp
+   [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+   internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+   ```
+
+1. Llame a la función `IntPtr_objc_msgSend` desde el método `FinishedLaunching`, antes de volver del método `FinshedLaunching`:
+
+   ```csharp
+   bool result = base.FinishedLaunching(app, options);
+
+   ObjCRuntime.Selector selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+   IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+
+   return result;
+   ```
+
+Este enfoque es útil para las aplicaciones que siempre requieren un diseño de derecha a izquierda y elimina el requisito para establecer la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+
+Para obtener más información sobre el método `IntrPtr_objc_msgSend`, consulte los [selectores de Objective-C en Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
+
+### <a name="android"></a>Android
+
+Las aplicaciones de Xamarin.Android se pueden forzar para que siempre usen un diseño de derecha a izquierda modificando la clase **MainActivity** para que incluya la siguiente línea:
+
+```csharp
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
+
+Este enfoque es útil para las aplicaciones que siempre requieren un diseño de derecha a izquierda y elimina el requisito para establecer la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Vídeo de Xamarin.University sobre la compatibilidad de idiomas de derecha a izquierda
 

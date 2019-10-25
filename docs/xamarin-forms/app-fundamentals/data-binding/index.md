@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
-ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 09/27/2019
+ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653368"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697140"
 ---
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
@@ -58,6 +58,10 @@ Profundice en la propiedad `Path` del enlace de datos para acceder a las subprop
 ## <a name="binding-value-convertersconvertersmd"></a>[Enlace de convertidores de valores](converters.md)
 
 Use convertidores de valor de enlace para modificar valores en el enlace de datos.
+
+## <a name="relative-bindingsrelative-bindingsmd"></a>[Enlaces relativos](relative-bindings.md)
+
+Use enlaces relativos para establecer el origen de enlace en relación con la posición del destino de enlace.
 
 ## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Conmutación por recuperación de enlaces](binding-fallbacks.md)
 

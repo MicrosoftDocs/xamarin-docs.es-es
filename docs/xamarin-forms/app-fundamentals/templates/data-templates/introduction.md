@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771275"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introducción a las plantillas de Xamarin.Forms
@@ -90,7 +90,7 @@ public WithoutDataTemplatePageCS()
 
 [`ListView`](xref:Xamarin.Forms.ListView) llama a `ToString` cuando se muestran los objetos de la colección. Como no hay ninguna invalidación de `Person.ToString`, `ToString` devuelve el nombre de tipo de cada objeto, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/no-data-template.png "Objeto ListView sin una plantilla de datos")
+![](introduction-images/no-data-template.png "ListView without a Data Template")
 
 El objeto `Person` puede invalidar el método `ToString` para mostrar datos significativos, como se muestra en el ejemplo de código siguiente:
 
@@ -107,7 +107,7 @@ public class Person
 
 Como resultado, [`ListView`](xref:Xamarin.Forms.ListView) muestra el valor de propiedad `Person.Name` para cada objeto de la colección, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/override-tostring.png "Objeto ListView con una plantilla de datos")
+![](introduction-images/override-tostring.png "ListView with a Data Template")
 
 La invalidación de `Person.ToString` podría devolver una cadena con formato formada por las propiedades `Name`, `Age` y `Location`. Pero este enfoque solo ofrece un control limitado sobre la apariencia de cada elemento de datos. Para obtener más flexibilidad, se puede crear un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que defina la apariencia de los datos.
 
