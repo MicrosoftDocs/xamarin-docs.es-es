@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/20/2019
-ms.openlocfilehash: b45a7af917e9147f519056ee5a9e5d06da51113a
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 42c00a060e0477aff4ea02f6213fa751b2adf4dd
+ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697666"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810488"
 ---
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Polígonos y polilíneas del mapa de Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-[![ "demostración de polígono y polilínea en iOS y Android"](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
+[!["demostración de polígono y polilínea en iOS y Android"](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
 
 los elementos `Polygon` y `Polyline` permiten resaltar áreas específicas en un mapa. Un `Polygon` es una forma totalmente adjunta que puede tener un trazo y un color de relleno. Un `Polyline` es una línea que no rodea completamente un área.
 
@@ -40,9 +40,41 @@ La clase `Polygon` define una propiedad adicional:
 
 ## <a name="create-a-polygon"></a>Crear un polígono
 
-Se puede Agregar un objeto `Polygon` a un mapa creando una instancia de él y agregándolo a la colección de `MapElements` del mapa:
+Se puede Agregar un objeto `Polygon` a un mapa creando una instancia de él y agregándolo a la colección de `MapElements` del mapa. Esto se puede lograr en XAML de la siguiente manera:
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polygon StrokeColor="#FF9900"
+                           StrokeWidth="8"
+                           FillColor="#88FF9900">
+                 <maps:Polygon.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6368678</x:Double>
+                             <x:Double>-122.137305</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polygon.Geopath>
+             </maps:Polygon>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
+
+El código de C# equivalente es el siguiente:
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
+
 // instantiate a polygon
 Polygon polygon = new Polygon
 {
@@ -61,32 +93,10 @@ Polygon polygon = new Polygon
         new Position(47.6384943, -122.1361248),
         new Position(47.6372943, -122.1376912)
     }
-}
+};
 
 // add the polygon to the map's MapElements collection
 map.MapElements.Add(polygon);
-```
-
-También se puede crear un `Polygon` en XAML:
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polygon StrokeColor="#FF9900"
-                      StrokeWidth="8"
-                      FillColor="#88FF9900">
-            <maps:Polygon.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6368678</x:Double>
-                        <x:Double>-122.137305</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polygon.Geopath>
-        </maps:Polygon>
-    </maps:Map.MapElements>
-</maps:Map>
 ```
 
 Se especifican las propiedades `StrokeColor` y `StrokeWidth` para personalizar el contorno del polígono. El valor de la propiedad `FillColor` coincide con el valor de la propiedad `StrokeColor` pero tiene un valor alfa especificado para que sea transparente, lo que permite que el mapa subyacente sea visible a través de la forma. La propiedad `GeoPath` contiene una lista de objetos de `Position` que definen las coordenadas geográficas de los puntos de polígono. Un objeto `Polygon` se representa en el mapa una vez que se ha agregado a la colección `MapElements` de la `Map`.
@@ -96,9 +106,37 @@ Se especifican las propiedades `StrokeColor` y `StrokeWidth` para personalizar e
 
 ## <a name="create-a-polyline"></a>Crear una polilínea
 
-Se puede Agregar un objeto `Polyline` a un mapa creando una instancia de él y agregándolo a la colección de `MapElements` del mapa:
+Se puede Agregar un objeto `Polyline` a un mapa creando una instancia de él y agregándolo a la colección de `MapElements` del mapa. Esto se puede lograr en XAML de la siguiente manera:
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polyline StrokeColor="Blue"
+                            StrokeWidth="12">
+                 <maps:Polyline.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6381401</x:Double>
+                             <x:Double>-122.1317367</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polyline.Geopath>
+             </maps:Polyline>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
 // instantiate a polyline
 Polyline polyline = new Polyline
 {
@@ -123,30 +161,8 @@ Polyline polyline = new Polyline
 map.MapElements.Add(polyline);
 ```
 
-También se puede crear un `Polyline` en XAML:
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polyline StrokeColor="Blue"
-                       StrokeWidth="12">
-            <maps:Polyline.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6381401</x:Double>
-                        <x:Double>-122.1317367</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polyline.Geopath>
-        </maps:Polyline>
-    </maps:Map.MapElements>
-</maps:Map>
-```
-
 Se especifican las propiedades `StrokeColor` y `StrokeWidth` para personalizar la línea. La propiedad `GeoPath` contiene una lista de objetos de `Position` que definen las coordenadas geográficas de los puntos de polilínea. Un objeto `Polyline` se representa en el mapa una vez que se ha agregado a la colección `MapElements` de la `Map`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Proyecto de mapa de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Mapa de Xamarin. Forms](~/xamarin-forms/user-interface/map/index.md)
+- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
