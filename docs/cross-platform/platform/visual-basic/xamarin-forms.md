@@ -1,66 +1,77 @@
 ---
-title: Xamarin.Forms con Visual Basic.NET
-description: Plantilla de proyecto de PCL de Xamarin.Forms se puede modificar para usar Visual Basic para el ensamblado principal, eficazmente lo que le permite crear aplicaciones móviles multiplataforma con VB.NET.
+title: Xamarin. Forms con Visual Basic.NET
+description: La plantilla de proyecto de Xamarin. Forms se puede modificar para usar Visual Basic para el ensamblado principal, lo que le permite compilar aplicaciones móviles multiplataforma con VB.NET.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
-author: asb3993
-ms.author: amburns
-ms.date: 03/23/2017
-ms.openlocfilehash: f397cf595a9ae151c5f105341733b2c57023fe99
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+author: conceptdev
+ms.author: crdun
+ms.date: 04/24/2019
+ms.openlocfilehash: ed7e1d65ed361a94ce72a724d797309b40ef8b6c
+ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61282311"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72959146"
 ---
-# <a name="xamarinforms-using-visual-basicnet"></a>Xamarin.Forms con Visual Basic.NET
+# <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms con Visual Basic.NET
 
-Xamarin admite Visual Basic directamente, siga las instrucciones de esta página para crear una solución de PCL de Xamarin.Forms en C# y, a continuación, reemplace el proyecto PCL común de código con Visual Basic.
+Xamarin no admite Visual Basic directamente: siga las instrucciones de esta página para crear una C# solución de Xamarin. Forms y, a continuación C# , reemplace el proyecto de .net Standard por Visual Basic.
 
-[![](xamarin-forms-images/hero-sml.png "Crear una solución Xamarin.Forms PCL y, a continuación, reemplace el proyecto PCL común de código con Visual Basic")](xamarin-forms-images/hero.png#lightbox)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+
+[![crear una solución de Xamarin. Forms y luego reemplazar el proyecto de .NET Standard por Visual Basic](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
 
 > [!NOTE]
 > Debe usar Visual Studio en Windows para programar con Visual Basic.
 
-## <a name="xamarinforms-with-visual-basic-walkthrough"></a>Xamarin.Forms con el tutorial de Visual Basic
+## <a name="xamarinforms-with-visual-basic-walkthrough"></a>Tutorial de Xamarin. Forms con Visual Basic
 
-Siga estos pasos para crear un proyecto de Xamarin.Forms simple que utiliza Visual Basic:
+Siga estos pasos para crear un proyecto sencillo de Xamarin. Forms que usa Visual Basic:
 
-1. Cree un nuevo *Xamarin.Forms C#* solución que usa las bibliotecas de clases portables (PCL).
-Vaya a **archivo > Nuevo proyecto** y en el **nuevo proyecto** ventana Navegar a **instalado > Plantillas > Visual C# > multiplataforma** , a continuación, elija **Cross Platform App (Xamarin.Forms o nativa) > Xamarin.Forms**.
+1. En Visual Studio 2019, elija **crear un nuevo proyecto**.
 
-2. Haga doble clic en la solución y **Agregar > Nuevo proyecto**.
+2. En la ventana **crear un nuevo proyecto** , escriba **Xamarin. Forms** para filtrar la lista y seleccione **aplicación móvil (Xamarin. Forms)** y, a continuación, presione **siguiente**.
 
-3. Elija la **Visual Basic > biblioteca de clases (Portable)** tipo de proyecto:
+    [Filtro de![para aplicaciones de Xamarin. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
 
-   [![](xamarin-forms-images/add-vb-2-sml.png "Agregar nuevo proyecto de biblioteca de clases portable")](xamarin-forms-images/add-vb-2.png#lightbox)
+3. En la siguiente pantalla, escriba un nombre para el proyecto y presione **crear**.
 
-4. Seleccione las plataformas, como se muestra para configurar el perfil de PCL correcto (no olvide incluir Xamarin.iOS y Xamarin.Android):
+4. Elija la plantilla **en blanco** y haga clic en **Aceptar**:
 
-   ![](xamarin-forms-images/add-vb-3-sml.png "Elija las plataformas para admitir")
+    [![plantilla de Xamarin. Forms en blanco](xamarin-forms-images/04-sml.png)](xamarin-forms-images/04.png#lightbox)
 
-5. Haga doble clic en el proyecto de Visual Basic y elija **propiedades**, a continuación, cambie el **espacio de nombres predeterminado** para que coincida con los existentes de C# proyectos:
+    Esto crea una solución de Xamarin. Forms en Visual Studio C#, mediante. Los pasos siguientes modifican la solución para utilizar Visual Basic.
 
-   ![](xamarin-forms-images/add-vb-4s-sml.png "Asegúrese de que el espacio de nombres de raíz de Visual Basic coincide con la aplicación de Xamarin.Forms")
+5. Haga clic con el botón derecho en la solución y elija **agregar > nuevo proyecto...**
 
-6. Haga doble clic en el nuevo proyecto de Visual Basic y elija **administrar paquetes de Nuget**, a continuación, instale **Xamarin.Forms** y cierre la ventana del Administrador de paquetes.
+6. Escriba **Visual Basic biblioteca** para filtrar las opciones del proyecto y elija la opción **biblioteca de clases (.net Standard)** con el icono de Visual Basic:
 
-   [![](xamarin-forms-images/add-vb-4-sml.png "Formularios y cierre la ventana del Administrador de paquetes")](xamarin-forms-images/add-vb-4.png#lightbox)
+    [![filtro de Visual Basic biblioteca](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
-7. Cambiar el nombre predeterminado **Class1** archivo *y* clase `App`:
+7. En la siguiente pantalla, escriba un nombre para el proyecto y presione **crear**.
 
-   [![](xamarin-forms-images/add-vb-5-sml.png "Cambiar el nombre el archivo predeterminado Class1 y la clase a la aplicación")](xamarin-forms-images/add-vb-5.png#lightbox)
+8. Haga clic con el botón derecho en el proyecto de Visual Basic y elija **propiedades**y, a continuación, cambie C# el espacio de **nombres predeterminado** para que coincida con los proyectos existentes:
 
-8. Pegue el código siguiente en el **App.vb** archivo, que se convertirá en el punto inicial de la aplicación de Xamarin.Forms. No olvide incluir `Imports Xamarin.Forms` y agregue `Inherits Application` a la clase:
+    [![asegurarse de que el espacio de nombres raíz Visual Basic coincide con la aplicación Xamarin. Forms](xamarin-forms-images/07a-sml.png)](xamarin-forms-images/07a.png#lightbox)
 
-    ```vb 
+9. Haga clic con el botón derecho en el nuevo proyecto de Visual Basic, elija **administrar paquetes NuGet**, instale **Xamarin. Forms** y cierre la ventana Administrador de paquetes.
+
+    [![formularios y cerrar la ventana del administrador de paquetes](xamarin-forms-images/07b-sml.png)](xamarin-forms-images/07b.png#lightbox)
+
+10. Cambie el nombre del archivo **Class1. VB** predeterminado a **app. VB**:
+
+    [![cambiar el nombre del archivo y la clase de Class1 predeterminados a la aplicación](xamarin-forms-images/08.png)](xamarin-forms-images/08.png#lightbox)
+
+11. Pegue el código siguiente en el archivo **app. VB** , que se convertirá en el punto inicial de la aplicación de Xamarin. Forms:
+
+    ```vb
     Imports Xamarin.Forms
 
     Public Class App
         Inherits Application
 
         Public Sub New()
-            Dim label = New Label With {.HoriztonalTextAlignment = TextAlignment.Center,
+            Dim label = New Label With {.HorizontalTextAlignment = TextAlignment.Center,
                                         .FontSize = Device.GetNamedSize(NamedSize.Medium, GetType(Label)),
                                         .Text = "Welcome to Xamarin.Forms with Visual Basic.NET"}
 
@@ -78,12 +89,12 @@ Vaya a **archivo > Nuevo proyecto** y en el **nuevo proyecto** ventana Navegar a
     End Class
     ```
 
-9. Ahora necesitamos para apuntar a los proyectos de Android y iOS en el nuevo proyecto de Visual Basic.
-Haga doble clic en el **referencias** nodo en iOS y Android proyectos para abrir el **Administrador de referencias**. Paso de anular la C# biblioteca portable y seleccione la biblioteca portable de VB (no olvide, hacer esto para tanto los proyectos de iOS y Android).
+12. Actualice los proyectos de iOS y Android para que hagan referencia a nuevos Visual Basic proyecto (y C# no al proyecto creado por la plantilla).
+Haga clic con el botón secundario en el nodo **referencias** en los proyectos de iOS y Android para abrir el **Administrador de referencias**. Desmarque la C# biblioteca y marque la biblioteca de Visual Basic (no olvide hacerlo en los proyectos de iOS y Android).
 
-   [![](xamarin-forms-images/add-vb-8-sml.png "Quitar la referencia de proyecto anterior, agregue la referencia de Visual Basic")](xamarin-forms-images/add-vb-8.png#lightbox)
+    [![quitar la referencia de proyecto anterior, agregue Visual Basic referencia](xamarin-forms-images/10-sml.png)](xamarin-forms-images/10.png#lightbox)
 
-10. Eliminar el proyecto portable de C#. Agregar nuevo **.vb** out de archivos para compilar la aplicación de Xamarin.Forms. Una plantilla para el nuevo `ContentPage`s en Visual Basic se muestra a continuación:
+13. Elimine C# el proyecto. Agregue nuevos archivos **. VB** para compilar la aplicación de Xamarin. Forms. A continuación se muestra una plantilla para las nuevas `ContentPage`s en Visual Basic:
 
     ```vb
     Imports Xamarin.Forms
@@ -92,7 +103,7 @@ Haga doble clic en el **referencias** nodo en iOS y Android proyectos para abrir
     Inherits ContentPage
 
         Public Sub New()
-            Dim label = New Label With {.HoriztonalTextAlignment = TextAlignment.Center,
+            Dim label = New Label With {.HorizontalTextAlignment = TextAlignment.Center,
                                         .FontSize = Device.GetNamedSize(NamedSize.Medium, GetType(Label)),
                                         .Text = "Visual Basic ContentPage"}
 
@@ -106,19 +117,17 @@ Haga doble clic en el **referencias** nodo en iOS y Android proyectos para abrir
     End Class
     ```
 
-## <a name="limitations-of-visual-basic-in-xamarinforms"></a>Limitaciones de Visual Basic en Xamarin.Forms
+## <a name="limitations-of-visual-basic-in-xamarinforms"></a>Limitaciones de Visual Basic en Xamarin. Forms
 
-Como se indicó en el [Portable Visual Basic.NET página](~/cross-platform/platform/visual-basic/index.md), Xamarin no admite el lenguaje Visual Basic. Esto significa que existen algunas limitaciones sobre dónde se puede usar Visual Basic:
+Como se indica en la [Página portable Visual Basic.net](~/cross-platform/platform/visual-basic/index.md), Xamarin no admite el lenguaje Visual Basic. Esto significa que hay algunas limitaciones en cuanto a cómo se puede usar Visual Basic:
 
- - Los representadores personalizados no se puede escribir en Visual Basic, deben escribirse en C# en los proyectos de plataforma nativa.
+- Las páginas XAML no se pueden incluir en el proyecto de Visual Basic: el generador de código subyacente C#solo puede compilar. Se puede incluir XAML en una biblioteca de clases C# portable, a la que se hace referencia y que se usa para rellenar los archivos XAML a través de modelos de Visual Basic (un ejemplo de esto se incluye en el [ejemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages)).
 
- - Implementaciones de servicios de dependencia no se puede escribir en Visual Basic, deben escribirse en C# en los proyectos de plataforma nativa.
+- Los representadores personalizados no se pueden escribir en Visual Basic, deben escribirse en los proyectos C# de la plataforma nativa.
 
- - No se puede incluir páginas XAML en el proyecto de Visual Basic: solo puede crear el generador de código subyacente de C#. Es posible incluir XAML en una independiente, que se hace referencia, C# biblioteca de clases portable y utilizar el enlace de datos para rellenar los archivos XAML a través de modelos de Visual Basic (se incluye un ejemplo de esto en el [ejemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages)).
-
- - Xamarin no admite el lenguaje Visual Basic.NET.
+- Las implementaciones de servicios de dependencia no se pueden escribir en Visual Basic, deben C# escribirse en los proyectos de la plataforma nativa.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamarinFormsVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
-- [Desarrollo multiplataforma con .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)
+- [XamarinFormsVB (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [Desarrollo multiplataforma con el .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)
