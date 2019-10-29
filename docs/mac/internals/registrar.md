@@ -4,15 +4,15 @@ description: En este documento se describe el propósito del registrador de Xama
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: d44f445b0c3bcc6fd498372f6cdf3e20be39d5b5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 991d9b2d911b5aa4ac07225fd1df34877451df49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290098"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017318"
 ---
 # <a name="xamarinmac-registrar"></a>Registrador de Xamarin. Mac
 
@@ -44,4 +44,4 @@ Hay algunos escenarios:
 - Complementos cargados después del inicio con clases que derivan de NSObject
 - Instancias de clase creadas dinámicamente que se derivan de NSObject
 
-en el que el registrador no puede saber que necesita registrar algún tipo en el inicio. El `ObjCRuntime.Runtime.RegisterAssembly` método se proporciona para informar al registrador de que tiene tipos adicionales que se deben tener en cuenta.
+en el que el registrador no puede saber que necesita registrar algún tipo en el inicio. El método `ObjCRuntime.Runtime.RegisterAssembly` se proporciona para informar al registrador de que tiene tipos adicionales que considerar.

@@ -1,20 +1,20 @@
 ---
-title: Fragments
+title: Fragmentos
 description: Android 3,0 presentó fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla que se encuentran en teléfonos y tabletas. En este artículo se explica cómo usar fragmentos para desarrollar aplicaciones de Xamarin. Android y cómo admitir fragmentos en dispositivos anteriores a Android 3,0 (nivel de API 11).
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d243429fe4f61768568a634b205055c1ad94297
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761859"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020251"
 ---
-# <a name="fragments"></a>Fragments
+# <a name="fragments"></a>Fragmentos
 
 _Android 3,0 presentó fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla que se encuentran en teléfonos y tabletas. En este artículo se explica cómo usar fragmentos para desarrollar aplicaciones de Xamarin. Android y cómo admitir fragmentos en dispositivos anteriores a Android 3,0 (nivel de API 11)._
 
@@ -28,17 +28,17 @@ Los paquetes de soporte técnico se denominaban originalmente *bibliotecas de co
 
 Por ejemplo, en la imagen siguiente se muestra cómo una sola aplicación utiliza fragmentos en diversos factores de forma de dispositivo.
 
-[![Diagrama de cómo se usan los fragmentos en tabletas y auriculares](images/00.png)](images/00.png#lightbox)
+[![diagrama de cómo se usan los fragmentos en tabletas y auriculares](images/00.png)](images/00.png#lightbox)
 
 El *fragmento A* contiene una lista, mientras que el *fragmento B* contiene detalles de un elemento seleccionado en esa lista. Cuando la aplicación se ejecuta en una tableta, puede mostrar ambos fragmentos en la misma actividad. Cuando se ejecuta la misma aplicación en un auricular (con un tamaño de pantalla menor), los fragmentos se hospedan en dos actividades independientes. Los fragmentos A y B son los mismos en ambos factores de forma, pero las actividades que los hospedan son diferentes.
 
-Para ayudar a que una actividad coordine y administre todos estos fragmentos, Android presentó una nueva clase denominada *FragmentManager*. Cada actividad tiene su propia instancia de `FragmentManager` para agregar, eliminar y buscar fragmentos hospedados. En el diagrama siguiente se ilustra la relación entre los fragmentos y las actividades:
+Para ayudar a que una actividad coordine y administre todos estos fragmentos, Android presentó una nueva clase denominada *FragmentManager*. Cada actividad tiene su propia instancia de un `FragmentManager` para agregar, eliminar y buscar fragmentos hospedados. En el diagrama siguiente se ilustra la relación entre los fragmentos y las actividades:
 
-[![Diagrama que ilustra las relaciones entre la actividad, el administrador de fragmentos y los fragmentos](images/01.png)](images/01.png#lightbox)
+[Diagrama de![que ilustra las relaciones entre la actividad, el administrador de fragmentos y los fragmentos](images/01.png)](images/01.png#lightbox)
 
 En algunos aspectos, los fragmentos se pueden considerar como controles compuestos o como actividades mínimas. Agrupan partes de la interfaz de usuario en módulos reutilizables que se pueden usar de forma independiente por parte de los desarrolladores en las actividades. Un fragmento tiene una jerarquía de vistas, al igual que una actividad, pero, a diferencia de una actividad, se puede compartir entre pantallas. Las vistas difieren de los fragmentos en que los fragmentos tienen su propio ciclo de vida; las vistas no lo hacen.
 
-Aunque la actividad es un host a uno o varios fragmentos, no es directamente consciente de los propios fragmentos. Del mismo modo, los fragmentos no reconocen directamente otros fragmentos en la actividad de hospedaje. Sin embargo, los `FragmentManager` fragmentos y las actividades son conscientes del de su actividad. Mediante el uso `FragmentManager`de, es posible que una actividad o un fragmento obtengan una referencia a una instancia específica de un fragmento y, a continuación, llame a métodos en esa instancia. De esta manera, la actividad o los fragmentos pueden comunicarse e interactuar con otros fragmentos.
+Aunque la actividad es un host a uno o varios fragmentos, no es directamente consciente de los propios fragmentos. Del mismo modo, los fragmentos no reconocen directamente otros fragmentos en la actividad de hospedaje. Sin embargo, los fragmentos y las actividades reconocen el `FragmentManager` en su actividad. Mediante el `FragmentManager`, es posible que una actividad o un fragmento obtengan una referencia a una instancia específica de un fragmento y, a continuación, llame a métodos en esa instancia. De esta manera, la actividad o los fragmentos pueden comunicarse e interactuar con otros fragmentos.
 
 Esta guía contiene una cobertura completa sobre cómo usar fragmentos, entre los que se incluyen:
 
@@ -50,11 +50,11 @@ Esta guía contiene una cobertura completa sobre cómo usar fragmentos, entre lo
 
 Los fragmentos están disponibles en la Android SDK a partir del nivel de API 11 (Android 3,0), tal como se muestra en la siguiente captura de pantalla:
 
-[![Selección del nivel de API en el administrador de Android SDK](images/02.png)](images/02.png#lightbox)
+[![seleccionar el nivel de API en el administrador de Android SDK](images/02.png)](images/02.png#lightbox)
 
 Los fragmentos están disponibles en Xamarin. Android 4,0 y versiones posteriores. Una aplicación de Xamarin. Android debe tener como destino al menos el nivel de API 11 (Android 3,0) o superior para poder usar fragmentos. La plataforma de destino se puede establecer en las propiedades del proyecto, como se muestra a continuación:
 
-[![Establecimiento del nivel de API de la plataforma de destino en las opciones del proyecto](images/03-sml.png)](images/03.png#lightbox)
+[![establecer el nivel de API de la plataforma de destino en las opciones del proyecto](images/03-sml.png)](images/03.png#lightbox)
 
 Es posible usar fragmentos en versiones anteriores de Android mediante el paquete de soporte de Android y Xamarin. Android 4,2 o superior. La forma de hacerlo se describe con más detalle en los documentos de esta sección.
 
@@ -63,4 +63,3 @@ Es posible usar fragmentos en versiones anteriores de Android mediante el paquet
 - [Galería de Honeycomb (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Paquete de soporte](https://developer.android.com/sdk/compatibility-library.html)
-- [Seminario Web de MOTODEV: Presentación de fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

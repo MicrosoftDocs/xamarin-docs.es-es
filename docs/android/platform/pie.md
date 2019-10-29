@@ -4,15 +4,15 @@ description: Cómo empezar a desarrollar aplicaciones para el gráfico circular 
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 6475cd0f27e41321902b57dd28f59bfb250e0c8f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757463"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019884"
 ---
 # <a name="android-pie-features"></a>Características de gráficos circulares de Android
 
@@ -30,14 +30,14 @@ Xamarin. Android 9,0 proporciona compatibilidad con el gráfico circular de Andr
 
 La lista siguiente es necesaria para usar las características de gráficos circulares de Android en aplicaciones basadas en Xamarin:
 
-- **Visual Studio** &ndash; Se recomienda Visual Studio 2019.
+- Se recomienda **visual studio** &ndash; visual Studio 2019.
     Si usa Visual Studio 2017, en Windows Update a Visual Studio 2017, versión 15,8 o posterior. En macOS, actualice a Visual Studio 2017 para Mac versión 7,6 o posterior.
 
-- Xamarin. **Android** &ndash; Xamarin. Android 9.0.0.17 o posterior debe instalarse con Visual Studio (Xamarin. Android se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** ).
+- **Xamarin. android** &ndash; Xamarin. Android 9.0.0.17 o posterior debe instalarse con Visual Studio (Xamarin. Android se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** ).
 
-- **Kit para desarrolladores de Java** &ndash; El desarrollo de Xamarin Android 9.0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o puede probar la versión preliminar de la distribución de Microsoft de [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** .
+- El **Kit para desarrolladores de Java** &ndash; desarrollo de Xamarin Android 9,0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o puede probar la versión preliminar de la distribución de Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** .
 
-- **Android SDK** &ndash; Android SDK API 28 o posterior debe instalarse a través del administrador de Android SDK.
+- **Android SDK** &ndash; Android SDK API 28 o posterior deben instalarse a través del administrador de Android SDK.
 
 ## <a name="getting-started"></a>Introducción
 
@@ -67,11 +67,11 @@ Para crear un proyecto con Xamarin. Android 9,0, primero debe usar el administra
 
 2. En la esquina inferior derecha, haga clic en el icono de engranaje y seleccione **repositorio > Google (no compatible)** :
 
-    [![Establecimiento del repositorio en Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![configuración del repositorio en Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Instale los paquetes del SDK de **gráficos circulares de Android** , que se muestran como **Android SDK plataforma 28** en la pestaña **plataformas** (para obtener más información acerca del uso del administrador de SDK, consulte [Android SDK Setup](~/android/get-started/installation/android-sdk.md)):
 
-    [![Instalación de paquetes de gráficos circulares Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![instalación de paquetes de gráficos circulares de Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Si usa un emulador, cree un dispositivo virtual que admita el **nivel de API 28**. Para obtener más información acerca de la creación de dispositivos virtuales, consulte [Administración de dispositivos virtuales con el Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
@@ -92,13 +92,13 @@ Para obtener información sobre cómo usar el emulador de Android para probar y 
 
 El gráfico circular de Android presenta una variedad de características nuevas. Algunas de estas nuevas características están pensadas para aprovechar las nuevas capacidades de hardware que ofrecen los dispositivos Android más recientes, mientras que otras están diseñadas para mejorar aún más la experiencia del usuario de Android:
 
-- **Mostrar compatibilidad con recortes** Proporciona API para buscar la ubicación y la forma del _recorte_ en la parte superior de la pantalla en los dispositivos Android más recientes. &ndash;
+- **Mostrar compatibilidad con Recortes** &ndash; proporciona API para encontrar la ubicación y la forma del _recorte_ en la parte superior de la pantalla en dispositivos Android más recientes.
 
-- **Mejoras en las notificaciones** Ahora, los mensajes de notificación pueden mostrar imágenes, `Person` y se usa una nueva clase para simplificar los participantes de la conversación. &ndash;
+- Las mejoras en las **notificaciones** &ndash; mensajes de notificación ahora pueden mostrar imágenes, y se usa una nueva clase de `Person` para simplificar los participantes de la conversación.
 
-- **Posicionamiento interior** &ndash; Compatibilidad de la plataforma con el protocolo WiFi de tiempo de ida y vuelta, que permite que las aplicaciones usen dispositivos wifi para la navegación en la configuración de interior.
+- **Posicionamiento interior** &ndash; la compatibilidad de la plataforma con el protocolo WiFi de tiempo de ida y vuelta, lo que permite que las aplicaciones usen dispositivos wifi para la navegación en la configuración de interior.
 
-- **Compatibilidad con varias cámaras** &ndash; Ofrece la capacidad de obtener acceso a flujos simultáneamente desde varias cámaras físicas (como cámaras duales y de doble retroceso).
+- La **compatibilidad con varias** cámaras &ndash; ofrece la capacidad de obtener acceso a las secuencias de forma simultánea desde varias cámaras físicas (como cámaras duales y de doble cara).
 
 En las secciones siguientes se resaltan estas características y se proporcionan ejemplos de código breves para ayudarle a empezar a usarlas en la aplicación.
 
@@ -107,15 +107,15 @@ En las secciones siguientes se resaltan estas características y se proporcionan
 Muchos dispositivos Android más recientes con pantallas de borde a borde tienen un *recorte de pantalla* (o "muesca") en la parte superior de la pantalla de la cámara y el altavoz.
 La captura de pantalla siguiente proporciona un ejemplo de emulador de un recorte:
 
-[![Emulador de Android simulando un recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![emulador de Android simulando un recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Para administrar el modo en que la ventana de la aplicación muestra su contenido en los dispositivos con un recorte de pantalla, el gráfico circular de Android ha agregado un nuevo atributo de diseño de ventana de [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) . Este atributo se puede establecer en uno de los siguientes valores:
 
-- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; La ventana nunca se puede superponer con el área de recorte.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; la ventana nunca se puede superponer con el área de recorte.
 
-- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; La ventana se puede extender en el área de recorte, pero solo en los bordes cortos de la pantalla. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; la ventana se puede extender en el área de recorte, pero solo en los bordes cortos de la pantalla. 
 
-- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; Se permite que la ventana se extienda en el área de recorte si el recorte está incluido en una barra del sistema.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; la ventana se puede extender en el área de recorte si el recorte está incluido en una barra del sistema.
 
 Por ejemplo, para evitar que la ventana de la aplicación se superponga con el área de recorte, establezca el modo de recorte del diseño en *nunca*: 
 
@@ -124,14 +124,14 @@ Window.Attributes.LayoutInDisplayCutoutMode =
     Android.Views.LayoutInDisplayCutoutMode.Never;
 ```
 
-En los ejemplos siguientes se proporcionan ejemplos de estos modos de recorte. La primera captura de pantalla de la izquierda es la aplicación en modo sin pantalla completa. En la captura de pantalla del centro, la aplicación se rellenará `LayoutInDisplayCutoutModeShortEdges`con `LayoutInDisplayCutoutMode` el valor establecido en. Tenga en cuenta que el fondo blanco de la aplicación se extiende en el área Mostrar recorte:
+En los ejemplos siguientes se proporcionan ejemplos de estos modos de recorte. La primera captura de pantalla de la izquierda es la aplicación en modo sin pantalla completa. En la captura de pantalla del centro, la aplicación se rellenará con `LayoutInDisplayCutoutMode` establecida en `LayoutInDisplayCutoutModeShortEdges`. Tenga en cuenta que el fondo blanco de la aplicación se extiende en el área Mostrar recorte:
 
-[![Ejemplo de visualización de los modos de recorte en el emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![ejemplo muestran los modos de recorte en el emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
-En la captura de pantalla final (encima de la derecha `LayoutInDisplayCutoutMode` ), se `LayoutInDisplayCutoutModeShortNever` establece en antes de que pase a la pantalla completa.
+En la captura de pantalla final (encima de la derecha), `LayoutInDisplayCutoutMode` se establece en `LayoutInDisplayCutoutModeShortNever` antes de que pase a la pantalla completa.
 Tenga en cuenta que no se permite que el fondo blanco de la aplicación se extienda en el área Mostrar recorte.
 
-Si necesita información más detallada sobre el área de recorte en el dispositivo, puede usar la nueva clase [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout`representa el área de la pantalla que no se puede usar para mostrar el contenido. Puede usar esta información para recuperar la ubicación y la forma del recorte para que la aplicación no intente Mostrar contenido en este área no funcional.
+Si necesita información más detallada sobre el área de recorte en el dispositivo, puede usar la nueva clase [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout` representa el área de la pantalla que no se puede usar para mostrar el contenido. Puede usar esta información para recuperar la ubicación y la forma del recorte para que la aplicación no intente Mostrar contenido en este área no funcional.
 
 Para obtener más información acerca de las nuevas características de recorte en Android P, consulte [Mostrar compatibilidad con recortes](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
@@ -149,11 +149,11 @@ El gráfico circular de Android presenta las siguientes mejoras para mejorar la 
 
 En el ejemplo siguiente se muestra cómo usar las nuevas API para generar una notificación que contiene una imagen. En las siguientes capturas de pantallas, se publica una notificación de texto y va seguida de una notificación con una imagen incrustada. Cuando las notificaciones se expanden (como se muestra a la derecha), se muestra el texto de la primera notificación y se amplía la imagen incrustada en la segunda notificación:
 
-[![Notificación de ejemplo con imagen](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![notificación de ejemplo con imagen](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
-En el ejemplo siguiente se muestra cómo incluir una imagen en una notificación circular de Android y se muestra el uso de la `Person` nueva clase:
+En el ejemplo siguiente se muestra cómo incluir una imagen en una notificación circular de Android y se muestra el uso de la nueva `Person` clase:
 
-1. Cree un `Person` objeto que represente al remitente. Por ejemplo, el nombre y el icono del remitente se incluyen en `fromPerson`:
+1. Cree un objeto `Person` que represente al remitente. Por ejemplo, el nombre y el icono del remitente se incluyen en `fromPerson`:
 
     ```csharp
     Icon senderIcon = Icon.CreateWithResource(this, Resource.Drawable.sender_icon);
@@ -163,7 +163,7 @@ En el ejemplo siguiente se muestra cómo incluir una imagen en una notificación
         .Build();
     ```
 
-2. Cree un `Notification.MessagingStyle.Message` que contenga la imagen que se va a enviar, pasando la imagen al nuevo método [Notification. MessagingStyle. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
+2. Cree una `Notification.MessagingStyle.Message` que contenga la imagen que se va a enviar, pasando la imagen al nuevo método [Notification. MessagingStyle. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
    Por ejemplo:
 
     ```csharp
@@ -173,7 +173,7 @@ En el ejemplo siguiente se muestra cómo incluir una imagen en una notificación
             .SetData("image/", imageUri);
     ```
 
-3. Agregue el mensaje a un `Notification.MessagingStyle` objeto. Por ejemplo:
+3. Agregue el mensaje a un objeto `Notification.MessagingStyle`. Por ejemplo:
 
     ```csharp
     Notification.MessagingStyle style = new Notification.MessagingStyle(fromPerson)
@@ -204,7 +204,7 @@ Para obtener más información sobre la creación de notificaciones, consulte [n
 
 El gráfico circular de Android proporciona compatibilidad con IEEE 802.11 MC (también conocido como _tiempo de ida y vuelta_ _WiFi),_ lo que permite que las aplicaciones detecten la distancia a uno o varios puntos de acceso Wi-Fi. Con esta información, es posible que la aplicación aproveche el *posicionamiento interior* con una precisión de uno a dos metros. En los dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11 MC, la aplicación puede ofrecer características de navegación, como el control basado en la ubicación de dispositivos inteligentes o las instrucciones que se activan a través de un almacén:
 
-[![Ejemplo de navegación en interiores con RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![ejemplo de navegación en interiores con RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 La nueva clase [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) y varias clases auxiliares proporcionan los medios para medir la distancia a los dispositivos Wi-Fi. Para obtener más información sobre las API de posicionamiento interior introducidas en Android P, consulte [Android .net. WiFi. RTT](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
@@ -223,7 +223,7 @@ Además, el gráfico circular de Android admite otras características nuevas:
 
 - La nueva clase [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , que se puede usar para dibujar y mostrar imágenes animadas.
 
-- Nueva clase [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que reemplaza `BitmapFactory`A. `ImageDecoder`se puede usar para descodificar `AnimatedImageDrawable`un.
+- Nueva clase [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que reemplaza `BitmapFactory`. `ImageDecoder` se puede usar para descodificar un `AnimatedImageDrawable`.
 
 - Compatibilidad con imágenes HDR (alto rango dinámico) y vídeo HEIF (formato de archivo de imagen de alta eficiencia).
 
@@ -245,7 +245,7 @@ Para más información sobre los cambios de comportamiento de las aplicaciones d
 
 ## <a name="sample-code"></a>Código de ejemplo
 
-[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) es una aplicación de ejemplo de Xamarin. Android para un gráfico circular de Android que muestra cómo establecer los modos de recorte `Person` de pantalla, cómo usar la nueva clase y cómo enviar una notificación que incluye una imagen.
+[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) es una aplicación de ejemplo de Xamarin. Android para un gráfico circular de Android que muestra cómo establecer los modos de recorte de pantalla, cómo usar la nueva clase de `Person` y cómo enviar una notificación que incluye una imagen.
 
 ## <a name="summary"></a>Resumen
 

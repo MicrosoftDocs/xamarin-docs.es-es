@@ -3,15 +3,15 @@ title: recolección de elementos no utilizados
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 40fb8f81a82aab9e7d9d3ea3bf4084c14cb6d4ff
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62560d97a2e85a6045e419f0c0602a375f5a2a75
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757930"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027882"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
@@ -34,15 +34,15 @@ Hay tres categorías de tipos de objeto.
 - **Objetos administrados**: tipos que *no* heredan de [java. lang. Object](xref:Java.Lang.Object) , por ejemplo, [System. String](xref:System.String). 
     Estos se recopilan normalmente por el GC. 
 
-- **Objetos de Java**: Tipos de Java que están presentes en la máquina virtual en tiempo de ejecución de Android, pero no se exponen a la máquina virtual mono. Estas son aburridas y no se tratarán más adelante. Estos se recopilan normalmente con la máquina virtual en tiempo de ejecución de Android. 
+- **Objetos de Java**: tipos de Java que están presentes en la máquina virtual en tiempo de ejecución de Android, pero no se exponen a la máquina virtual mono. Estas son aburridas y no se tratarán más adelante. Estos se recopilan normalmente con la máquina virtual en tiempo de ejecución de Android. 
 
 - **Objetos del mismo nivel**: tipos que implementan [IJavaObject](xref:Android.Runtime.IJavaObject) , por ejemplo, todas las subclases [java. lang. Object](xref:Java.Lang.Object) y [java. lang. Throwable](xref:Java.Lang.Throwable) . Las instancias de estos tipos tienen dos "mitades" de un *elemento administrado del mismo nivel* y un *elemento nativo del mismo nivel*. El elemento administrado del mismo nivel es una C# instancia de la clase. El elemento nativo del mismo nivel es una instancia de una clase de Java dentro de la máquina C# virtual en tiempo de ejecución de Android y la propiedad [IJavaObject. Handle](xref:Android.Runtime.IJavaObject.Handle) contiene una referencia global de JNI al elemento nativo del mismo nivel. 
 
 Hay dos tipos de elementos del mismo nivel nativos:
 
-- **Entornos del mismo nivel** : Tipos de Java "normales" que no saben nada de Xamarin. Android, por ejemplo,   [Android. Content. Context](xref:Android.Content.Context).
+- **Plataforma del mismo nivel** : tipos de Java "normales" que no saben nada de Xamarin. Android, por ejemplo,   [Android. Content. Context](xref:Android.Content.Context).
 
-- **Elementos del mismo nivel de usuario** :   Los contenedores a los que se [puede llamar de Android](~/android/platform/java-integration/working-with-jni.md) , que se generan en tiempo de compilación para cada subclase Java. lang. Object presente dentro de la aplicación.
+- **Pares de usuarios** : los contenedores de Android a los que se [puede llamar](~/android/platform/java-integration/working-with-jni.md) , que se generan en tiempo de compilación para cada subclase Java. lang. Object presente dentro de la aplicación.
 
 Como hay dos máquinas virtuales dentro de un proceso de Xamarin. Android, hay dos tipos de recolecciones de elementos no utilizados:
 
@@ -59,19 +59,19 @@ Las colecciones mono son donde ocurre la diversión. Los objetos administrados s
 
 3. Se comprueban las referencias globales de JNI creadas en (1). Si se ha recopilado la referencia débil, se recopila el objeto del mismo nivel. Si *no* se ha recopilado la referencia débil, la referencia débil se reemplaza con una referencia global de JNI y el objeto del mismo nivel no se recopila. Nota: en la API 14 +, esto significa que el valor devuelto de `IJavaObject.Handle` puede cambiar después de un GC. 
 
-El resultado final de todo esto es que una instancia de un objeto del mismo nivel se activará siempre que el código administrado (por ejemplo, almacenado en una `static` variable) haga referencia a él o que el código de Java haga referencia a él. Además, la duración de los elementos del mismo nivel nativos se ampliará más allá de lo que de otro modo activaría, ya que el elemento nativo del mismo nivel no se recopilará hasta que el elemento nativo del mismo nivel y el del mismo nivel administrados sean recopilables.
+El resultado final de todo esto es que una instancia de un objeto del mismo nivel se activará siempre que se haga referencia a él mediante código administrado (por ejemplo, almacenado en una variable `static`) o el código de Java haga referencia a él. Además, la duración de los elementos del mismo nivel nativos se ampliará más allá de lo que de otro modo activaría, ya que el elemento nativo del mismo nivel no se recopilará hasta que el elemento nativo del mismo nivel y el del mismo nivel administrados sean recopilables.
 
 ## <a name="object-cycles"></a>Ciclos de objeto
 
 Los objetos del mismo nivel están lógicamente presentes en el tiempo de ejecución de Android y en las máquinas virtuales mono. Por ejemplo, una instancia administrada del mismo nivel de [Android. app. Activity](xref:Android.App.Activity) tendrá una instancia de Java de [Android. app. Activity](https://developer.android.com/reference/android/app/Activity.html) Framework correspondiente. Se espera que todos los objetos que heredan de [java. lang. Object](xref:Java.Lang.Object) tengan representaciones en ambas máquinas virtuales. 
 
-Todos los objetos que tienen una representación en ambas máquinas virtuales tendrán duraciones extendidas en comparación con los objetos que solo están presentes en una sola máquina virtual [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)(por ejemplo, un). Llamando a [GC. Collect](xref:System.GC.Collect) no recopilará necesariamente estos objetos, ya que el GC de Xamarin. Android debe asegurarse de que ninguna máquina virtual haga referencia al objeto antes de recopilarlo. 
+Todos los objetos que tienen una representación en ambas máquinas virtuales tendrán duraciones extendidas en comparación con los objetos que solo están presentes en una sola máquina virtual (por ejemplo, un [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)). Llamando a [GC. Collect](xref:System.GC.Collect) no recopilará necesariamente estos objetos, ya que el GC de Xamarin. Android debe asegurarse de que ninguna máquina virtual haga referencia al objeto antes de recopilarlo. 
 
 Para acortar la duración del objeto, se debe invocar [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose) . Esto hará que la conexión se haga manualmente "servidor" en el objeto entre las dos máquinas virtuales liberando la referencia global, lo que permite recopilar los objetos más rápidamente. 
 
 ## <a name="automatic-collections"></a>Colecciones automáticas
 
-A partir de la [versión 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), Xamarin. Android realiza automáticamente un GC completo cuando se cruza un umbral de Gref. Este umbral es el 90% del Grefs máximo conocido de la plataforma: 1800 Grefs en el emulador (2000 máx.) y 46800 Grefs en hardware (máximo 52000). *Nota:* Xamarin. Android solo cuenta el Grefs creado por [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)y no conocerá ningún otro Grefs creado en el proceso. Esta es *solo*una heurística. 
+A partir de la [versión 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), Xamarin. Android realiza automáticamente un GC completo cuando se cruza un umbral de Gref. Este umbral es el 90% del Grefs máximo conocido de la plataforma: 1800 Grefs en el emulador (2000 máx.) y 46800 Grefs en hardware (máximo de 52000). *Nota:* Xamarin. Android solo cuenta el Grefs creado por [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)y no conocerá ningún otro Grefs creado en el proceso. Esta es *solo*una heurística. 
 
 Cuando se realiza una recopilación automática, se imprime un mensaje similar al siguiente en el registro de depuración:
 
@@ -93,22 +93,22 @@ El puente de GC funciona durante una recolección de elementos no utilizados mon
 
 3. Compruebe qué objetos están realmente inactivos. 
 
-Este complejo proceso es lo que permite a las subclases de hacer referencia a cualquier objeto de forma gratuita; quita todas las restricciones a `Java.Lang.Object` C#las que se pueden enlazar los objetos de Java. Debido a esta complejidad, el proceso del puente puede resultar muy caro y puede causar pausas perceptibles en una aplicación. Si la aplicación experimenta pausas significativas, merece la pena investigar una de las tres implementaciones de puente de GC siguientes: 
+Este complejo proceso es lo que permite a las subclases de `Java.Lang.Object` hacer referencia a cualquier objeto de forma gratuita. quita las restricciones a C#las que se pueden enlazar los objetos de Java. Debido a esta complejidad, el proceso del puente puede resultar muy caro y puede causar pausas perceptibles en una aplicación. Si la aplicación experimenta pausas significativas, merece la pena investigar una de las tres implementaciones de puente de GC siguientes: 
 
 - **Tarjan** : un diseño completamente nuevo del puente de GC basado en el [algoritmo de Robert Tarjan y la propagación de referencias hacia atrás](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     Tiene el mejor rendimiento en nuestras cargas de trabajo simuladas, pero también tiene la mayor parte del código experimental. 
 
 - **New** : una revisión importante del código original, corrigiendo dos instancias de comportamiento cuadrático pero manteniendo el algoritmo principal (basado en el [algoritmo de Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) para buscar componentes fuertemente conectados). 
 
-- **Antigua** : la implementación original (considerada la más estable de los tres). Este es el puente que una aplicación debe usar si las `GC_BRIDGE` pausas son aceptables. 
+- **Antigua** : la implementación original (considerada la más estable de los tres). Este es el puente que una aplicación debe usar si las pausas `GC_BRIDGE` son aceptables. 
 
 La única manera de averiguar qué puente de GC funciona mejor es experimentar en una aplicación y analizar la salida. Hay dos maneras de recopilar los datos de pruebas comparativas: 
 
-- **Habilitar registro** : habilite el registro (como se describe en la sección de [configuración](~/android/internals/garbage-collection.md) ) para cada opción de puente de GC y, a continuación, Capture y compare los resultados del registro de cada configuración. Inspeccione `GC` los mensajes para cada opción; en concreto, `GC_BRIDGE` los mensajes. Pausar hasta 150MS para las aplicaciones no interactivas son tolerable, pero las pausas anteriores a 60 ms para aplicaciones muy interactivas (como los juegos) son un problema. 
+- **Habilitar registro** : habilite el registro (como se describe en la sección de [configuración](~/android/internals/garbage-collection.md) ) para cada opción de puente de GC y, a continuación, Capture y compare los resultados del registro de cada configuración. Inspeccione los mensajes de `GC` para cada opción; en concreto, los mensajes de `GC_BRIDGE`. Pausar hasta 150MS para las aplicaciones no interactivas son tolerable, pero las pausas anteriores a 60 ms para aplicaciones muy interactivas (como los juegos) son un problema. 
 
 - **Habilitar cuentas de puente** : las cuentas de puente muestran el costo medio de los objetos a los que apunta cada objeto implicado en el proceso del puente. Al ordenar esta información por tamaño, se proporcionarán sugerencias sobre lo que contiene la mayor cantidad de objetos adicionales. 
 
-Para especificar la `GC_BRIDGE` opción que una aplicación debe hacer, `bridge-implementation=old` `bridge-implementation=new` pasar o `bridge-implementation=tarjan` a la `MONO_GC_PARAMS` variable de entorno, por ejemplo: 
+Para especificar qué opción de `GC_BRIDGE` debe ser una aplicación, pase `bridge-implementation=old`, `bridge-implementation=new` o `bridge-implementation=tarjan` a la variable de entorno `MONO_GC_PARAMS`, por ejemplo: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
@@ -127,23 +127,23 @@ Hay varias maneras de ayudar al GC a reducir el uso de memoria y los tiempos de 
 El GC tiene una vista incompleta del proceso y puede no ejecutarse cuando la memoria es baja, ya que el GC no sabe que la memoria es baja. 
 
 Por ejemplo, una instancia de un tipo de [objeto Java. lang. Object](xref:Java.Lang.Object) o un tipo derivado tiene al menos 20 bytes de tamaño (sujeto a cambios sin previo aviso, etc., etc.). 
-Los contenedores a los que se [puede llamar administrados](~/android/internals/architecture.md) no agregan miembros de instancia adicionales, por lo que, si tiene una instancia de [Android. Graphics. Bitmap](xref:Android.Graphics.Bitmap) que hace referencia a un BLOB &ndash; de memoria de 10 MB, el GC de Xamarin. Android no sabrá que el GC verá un objeto de 20 bytes y no podrá determinar si está vinculado a los objetos asignados en tiempo de ejecución de Android que mantienen 10 MB de memoria activo. 
+Los contenedores a los que se [puede llamar administrados](~/android/internals/architecture.md) no agregan miembros de instancia adicionales, por lo que, si tiene una instancia de [Android. Graphics. Bitmap](xref:Android.Graphics.Bitmap) que hace referencia a un BLOB de memoria de 10 MB, el GC de Xamarin. Android no sabrá que &ndash; el GC verá un objeto de 20 bytes y no se puede determinar que está vinculado a los objetos asignados en tiempo de ejecución de Android que mantienen 10 MB de memoria activo. 
 
-A menudo es necesario ayudar al GC. Desafortunadamente, *GC. AddMemoryPressure ()* y *GC. No se admite RemoveMemoryPressure ()* , por lo que si *sabe* que acaba de liberar un gráfico de objetos asignados a Java de gran tamaño, es posible que tenga que llamar manualmente a [GC. Collect ()](xref:System.GC.Collect) para solicitar a un GC que libere la memoria del lado de la Java, o puede desechar explícitamente las subclases *java. lang. Object* , interrumpiendo la asignación entre el contenedor al que se puede llamar y la instancia de Java. Por ejemplo, vea el [error 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
+A menudo es necesario ayudar al GC. Desafortunadamente, *GC. AddMemoryPressure ()* y *GC. No se admite RemoveMemoryPressure ()* , por lo que si *sabe* que acaba de liberar un gráfico de objetos asignados a Java de gran tamaño, es posible que tenga que llamar manualmente a [GC. Collect ()](xref:System.GC.Collect) para solicitar a un GC que libere la memoria del lado de la Java, o puede desechar explícitamente las subclases *java. lang. Object* , interrumpiendo la asignación entre el contenedor al que se puede llamar y la instancia de Java. Por ejemplo, vea el [error 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
 > [!NOTE]
-> Debe ser *extremadamente* cuidadoso al desechar instancias `Java.Lang.Object` de subclases.
+> Debe tener *mucho* cuidado al desechar `Java.Lang.Object` instancias de subclases.
 
-Para minimizar la posibilidad de daños en la memoria, observe las siguientes directrices `Dispose()`al llamar a.
+Para minimizar la posibilidad de daños en la memoria, observe las siguientes directrices al llamar a `Dispose()`.
 
 #### <a name="sharing-between-multiple-threads"></a>Compartir entre varios subprocesos
 
-Si el *Java o la instancia administrada* se pueden compartir entre varios subprocesos, *no debería `Dispose()`ser d*, **nunca**. Por ejemplo,[`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
-puede devolver una *instancia almacenada en caché*. Si varios subprocesos proporcionan los mismos argumentos, obtendrán la *misma* instancia. Por consiguiente, `Dispose()`la `Typeface` operación de una instancia de un subproceso puede invalidar otros subprocesos `ArgumentException`, lo que `JNIEnv.CallVoidMethod()` puede dar lugar a s desde (entre otros) porque la instancia se eliminó de otro subproceso. 
+Si el *Java o la instancia administrada* se pueden compartir entre varios subprocesos, *no debería ser `Dispose()`d*, **nunca**. Por ejemplo, [`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
+puede devolver una *instancia almacenada en caché*. Si varios subprocesos proporcionan los mismos argumentos, obtendrán la *misma* instancia. Por consiguiente, `Dispose()`Ing de la instancia de `Typeface` de un subproceso puede invalidar otros subprocesos, lo que puede dar lugar a `ArgumentException`s de `JNIEnv.CallVoidMethod()` (entre otros) porque la instancia se eliminó de otro subproceso. 
 
 #### <a name="disposing-bound-java-types"></a>Eliminación de tipos de Java enlazados
 
-Si la instancia es de un tipo de Java enlazado, la instancia se puede eliminar siempre *que la instancia* no se vuelva a usar desde el código administrado *y* no se pueda compartir la instancia de Java entre los subprocesos (vea la explicación anterior `Typeface.Create()` ). (Tomar esta determinación puede ser difícil). La próxima vez que la instancia de Java Escriba código administrado, se creará un *nuevo* contenedor. 
+Si la instancia es de un tipo de Java enlazado, la instancia se puede *eliminar siempre que la instancia* no se reutilice desde código administrado *y* no se pueda compartir la instancia de Java entre subprocesos (consulte la explicación anterior `Typeface.Create()`). (Tomar esta determinación puede ser difícil). La próxima vez que la instancia de Java Escriba código administrado, se creará un *nuevo* contenedor. 
 
 Esto suele ser útil cuando se trata de Drawables y de otras instancias de recursos pesados:
 
@@ -152,11 +152,11 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-Lo anterior es seguro porque el elemento del mismo nivel que [drawable. CreateFromPath ()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) hará referencia a un elemento de marco de trabajo del mismo nivel, *no* a un usuario del mismo nivel. La llamada `Dispose()` al final del bloque `using` interrumpirá la relación entre las instancias [Dibujables](xref:Android.Graphics.Drawables.Drawable) administrables y de marco [Dibujables](https://developer.android.com/reference/android/graphics/drawable/Drawable.html), lo que permite que la instancia de Java se recopile en cuanto sea necesario el Runtime de Android. Esto *no* sería seguro si la instancia del mismo nivel hacía referencia a un usuario del mismo nivel; Aquí vamos a usar información "externa" para *saber* que el `Drawable` no puede hacer referencia a un usuario del mismo nivel `Dispose()` y, por lo tanto, la llamada es segura. 
+Lo anterior es seguro porque el elemento del mismo nivel que [drawable. CreateFromPath ()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) hará referencia a un elemento de marco de trabajo del mismo nivel, *no* a un usuario del mismo nivel. La llamada a `Dispose()` al final del bloque de `using` interrumpirá la relación entre las instancias [Dibujables](xref:Android.Graphics.Drawables.Drawable) administrables y [Dibujables](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) de marco, lo que permite que la instancia de Java se recopile en cuanto sea necesario el Runtime de Android. Esto *no* sería seguro si la instancia del mismo nivel hacía referencia a un usuario del mismo nivel; Aquí vamos a usar información "externa" para *saber* que el `Drawable` no puede hacer referencia a un usuario del mismo nivel y, por tanto, la llamada `Dispose()` es segura. 
 
 #### <a name="disposing-other-types"></a>Desechar otros tipos 
 
-Si la instancia hace referencia a un tipo que no es un enlace de un tipo de Java (como `Activity`un personalizado), **no** llame `Dispose()` a a menos que *sepa* que ningún código Java llamará a los métodos invalidados en esa instancia. Si no lo hace, se [ `NotSupportedException`producirán.](~/android/internals/architecture.md#Premature_Dispose_Calls) 
+Si la instancia hace referencia a un tipo que no es un enlace de un tipo de Java (por ejemplo, un `Activity`personalizado), **no** llame a `Dispose()` a menos que *sepa* que ningún código Java llamará a los métodos invalidados en esa instancia. Si no lo hace, se producirán [`NotSupportedException`s](~/android/internals/architecture.md#Premature_Dispose_Calls). 
 
 Por ejemplo, si tiene un agente de escucha de clic personalizado:
 
@@ -185,9 +185,9 @@ Parameter name: jobject
 at Android.Runtime.JNIEnv.CallVoidMethod
 ```
 
-Esta situación se suele producir cuando el primer Dispose de un objeto hace que un miembro se convierta en NULL y, a continuación, un intento de acceso posterior en este miembro null provoca que se produzca una excepción. En concreto, el del `Handle` objeto (que vincula una instancia administrada a su instancia de Java subyacente) se invalida en el primer Dispose, pero el código administrado sigue intentando tener acceso a esta instancia subyacente de Java aunque ya no esté disponible (consulte [ Contenedores RCW administrados](~/android/internals/architecture.md#Managed_Callable_Wrappers) para obtener más información sobre la asignación entre las instancias de Java y las instancias administradas). 
+Esta situación se suele producir cuando el primer Dispose de un objeto hace que un miembro se convierta en NULL y, a continuación, un intento de acceso posterior en este miembro null provoca que se produzca una excepción. En concreto, el `Handle` del objeto (que vincula una instancia administrada a su instancia subyacente de Java) se invalida en el primer Dispose, pero el código administrado sigue intentando tener acceso a esta instancia subyacente de Java aunque ya no esté disponible (consulte [ Contenedores RCW administrados](~/android/internals/architecture.md#Managed_Callable_Wrappers) para obtener más información sobre la asignación entre las instancias de Java y las instancias administradas). 
 
-Una buena manera de evitar esta excepción es comprobar explícitamente en el `Dispose` método que la asignación entre la instancia administrada y la instancia de Java subyacente sigue siendo válida; es decir, comprobar si el valor del `Handle` objeto es null`IntPtr.Zero`() antes de tener acceso a sus miembros. Por ejemplo, el método `Dispose` siguiente tiene acceso a `childViews` un objeto: 
+Una buena manera de evitar esta excepción es comprobar explícitamente en el método de `Dispose` que la asignación entre la instancia administrada y la instancia de Java subyacente sigue siendo válida; es decir, compruebe si el `Handle` del objeto es null (`IntPtr.Zero`) antes de tener acceso a sus miembros. Por ejemplo, el método `Dispose` siguiente tiene acceso a un objeto `childViews`: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -203,7 +203,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-Si un paso de eliminación inicial `childViews` hace que tenga un `Handle`no válido `for` , el acceso al bucle `ArgumentException`producirá una excepción. Al agregar una comprobación `Handle` nula explícita antes del primer `childViews` acceso, el método `Dispose` siguiente evita que se produzca la excepción: 
+Si un paso de eliminación inicial hace que `childViews` tenga un `Handle`no válido, el acceso al bucle `for` producirá una `ArgumentException`. Al agregar una comprobación explícita de `Handle` NULL antes del primer acceso `childViews`, el siguiente método de `Dispose` evita que se produzca la excepción: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -226,7 +226,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 
 ### <a name="reduce-referenced-instances"></a>Reducir las instancias a las que se hace referencia
 
-Siempre que se examina una `Java.Lang.Object` instancia de un tipo o una subclase durante el GC, también se debe examinar todo el *gráfico de objetos* al que hace referencia la instancia. El gráfico de objetos es el conjunto de instancias de objeto al que hace referencia la "instancia raíz", *además* de todo lo al que hace referencia la instancia raíz, de forma recursiva. 
+Siempre que se examina una instancia de un tipo `Java.Lang.Object` o una subclase durante el GC, también se debe examinar todo el *gráfico de objetos* al que hace referencia la instancia. El gráfico de objetos es el conjunto de instancias de objeto al que hace referencia la "instancia raíz", *además* de todo lo al que hace referencia la instancia raíz, de forma recursiva. 
 
 Considere la siguiente clase:
 
@@ -246,11 +246,11 @@ class BadActivity : Activity {
 }
 ```
 
-Cuando `BadActivity` se construye, el gráfico de objetos contendrá 10004 instancias ( `BadActivity`1x, `strings`1x, `string[]` 1x retenidas por `strings`, instancias de cadena 10000x), *todas* ellas deberán examinarse cada vez que el valorde`BadActivity` se analiza la instancia. 
+Cuando se construye `BadActivity`, el gráfico de objetos contendrá 10004 instancias (1x `BadActivity`, 1x `strings`, 1x `string[]` retenidas por `strings`, 10000x String instances), *todas* ellas deberán examinarse cada vez que se examine la instancia de `BadActivity`. 
 
 Esto puede tener efectos perjudiciales en los tiempos de colección, lo que aumenta el tiempo de pausa de GC. 
 
-Puede ayudar al GC *reduciendo* el tamaño de los gráficos de objetos que tienen la raíz de las instancias del mismo nivel de usuario. En el ejemplo anterior, esto se puede hacer pasando `BadActivity.strings` a una clase independiente que no se hereda de Java. lang. Object: 
+Puede ayudar al GC *reduciendo* el tamaño de los gráficos de objetos que tienen la raíz de las instancias del mismo nivel de usuario. En el ejemplo anterior, esto se puede hacer moviendo `BadActivity.strings` a una clase independiente que no se hereda de Java. lang. Object: 
 
 ```csharp
 class HiddenReference<T> {
@@ -323,22 +323,22 @@ Para realizar un seguimiento de Cuándo se crean y destruyen referencias globale
 
 ## <a name="configuration"></a>Configuración
 
-El recolector de elementos no utilizados de Xamarin. Android se `MONO_GC_PARAMS` puede configurar estableciendo la variable de entorno. Las variables de entorno se pueden establecer con una acción de compilación de [AndroidEnvironment](~/android/deploy-test/environment.md).
+El recolector de elementos no utilizados de Xamarin. Android se puede configurar estableciendo la variable de entorno `MONO_GC_PARAMS`. Las variables de entorno se pueden establecer con una acción de compilación de [AndroidEnvironment](~/android/deploy-test/environment.md).
 
-La `MONO_GC_PARAMS` variable de entorno es una lista separada por comas de los parámetros siguientes: 
+La variable de entorno `MONO_GC_PARAMS` es una lista separada por comas de los parámetros siguientes: 
 
-- `nursery-size` = *tamaño* : Establece el tamaño de la enfermera. El tamaño se especifica en bytes y debe ser una potencia de dos. Los `k` sufijos `m` y `g` se pueden usar para especificar kilo-, mega-and gigabytes, respectivamente. La enfermera es la primera generación (de dos). Una enfermera más grande normalmente acelerará el programa, pero evidentemente usará más memoria. El tamaño de enfermeras predeterminado es de 512 KB. 
+- *tamaño* de la = de `nursery-size`: establece el tamaño de la enfermera. El tamaño se especifica en bytes y debe ser una potencia de dos. Los sufijos `k`, `m` y `g` se pueden usar para especificar kilo-, mega-and gigabytes, respectivamente. La enfermera es la primera generación (de dos). Una enfermera más grande normalmente acelerará el programa, pero evidentemente usará más memoria. El tamaño de enfermeras predeterminado es de 512 KB. 
 
-- `soft-heap-limit` = *tamaño* : El consumo máximo de memoria administrada de destino para la aplicación. Cuando el uso de memoria está por debajo del valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
+- *tamaño* de la = de `soft-heap-limit`: el consumo máximo de memoria administrada de la aplicación. Cuando el uso de memoria está por debajo del valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
     Por encima de este límite, el GC está optimizado para el uso de memoria (más colecciones). 
 
-- `evacuation-threshold` = *umbral* : Establece el umbral de evacuación en porcentaje. El valor debe ser un entero comprendido en el intervalo comprendido entre 0 y 100. El valor predeterminado es 66. Si la fase de barrido de la colección encuentra que el grupo de un tipo de bloque de montón específico es inferior a este porcentaje, se realizará una recolección de copia para ese tipo de bloque en la siguiente colección principal, con lo que se restaurará la ocupación para que se acerque al 100 por ciento. Un valor de 0 desactiva la evacuación. 
+- *umbral* de = de `evacuation-threshold`: establece el umbral de evacuación en porcentaje. El valor debe ser un entero comprendido en el intervalo comprendido entre 0 y 100. El valor predeterminado es 66. Si la fase de barrido de la colección encuentra que el grupo de un tipo de bloque de montón específico es inferior a este porcentaje, se realizará una recolección de copia para ese tipo de bloque en la siguiente colección principal, con lo que se restaurará la ocupación para que se acerque al 100 por ciento. Un valor de 0 desactiva la evacuación. 
 
-- `bridge-implementation` = *implementación de puente* : Esto establecerá la opción puente de GC para solucionar los problemas de rendimiento de GC. Hay tres valores posibles: *Old* , *New* , *Tarjan*.
+- implementación de `bridge-implementation` = *Bridge* : Esto establecerá la opción de puente de GC para ayudar a resolver los problemas de rendimiento de GC. Hay tres valores posibles: *Old* , *New* , *Tarjan*.
 
-- `bridge-require-precise-merge`: El puente Tarjan contiene una optimización que, en raras ocasiones, puede hacer que se recopile un objeto en un GC después de que se convierta en un elemento no utilizado. Al incluir esta opción, se deshabilita la optimización, lo que permite que los GC sean más predecibles, pero potencialmente más lentos.
+- `bridge-require-precise-merge`: el puente Tarjan contiene una optimización que, en raras ocasiones, puede hacer que se recopile un objeto en un GC después de que se convierta en un elemento no utilizado. Al incluir esta opción, se deshabilita la optimización, lo que permite que los GC sean más predecibles, pero potencialmente más lentos.
 
-Por ejemplo, para configurar el GC para que tenga un límite de tamaño de montón de 128 MB, agregue un nuevo archivo al proyecto con una `AndroidEnvironment` **acción de compilación** de con el contenido: 
+Por ejemplo, para configurar el GC para que tenga un límite de tamaño de montón de 128 MB, agregue un nuevo archivo al proyecto con una **acción de compilación** de `AndroidEnvironment` con el contenido: 
 
 ```shell
 MONO_GC_PARAMS=soft-heap-limit=128m

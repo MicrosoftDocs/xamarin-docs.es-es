@@ -4,15 +4,15 @@ description: Cómo configurar un bloqueo de pantalla e inscribir una huella digi
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f52be16a81f3c8047997e1f4a88e13f6b940db14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c0290dfa3b4aa301a07a589f78577899e8282158
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756418"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027594"
 ---
 # <a name="enrolling-a-fingerprint"></a>Inscripción de una huella digital
 
@@ -46,7 +46,7 @@ Para configurar un bloqueo de pantalla, realice los pasos siguientes:
 
 4. Desde allí, siga la secuencia para agregar una huella digital al dispositivo:
 
-    [![Secuencia de capturas de pantallas para agregar una huella digital al dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
+    [![secuencia de capturas de pantallas para agregar una huella digital al dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. En la última pantalla se le pedirá que coloque el dedo en el escáner de huellas digitales: 
 
@@ -56,13 +56,13 @@ Para configurar un bloqueo de pantalla, realice los pasos siguientes:
 
 ### <a name="simulating-a-fingerprint-scan-on-the-emulator"></a>Simular un examen de huellas digitales en el emulador
 
-En un emulador de Android, es posible simular un examen de huellas digitales mediante el Android Debug Bridge. En OS X iniciar una sesión de terminal mientras esté en Windows inicie un símbolo del sistema o una sesión `adb`de PowerShell y ejecute:
+En un emulador de Android, es posible simular un examen de huellas digitales mediante el Android Debug Bridge. En OS X iniciar una sesión de terminal mientras en Windows inicia un símbolo del sistema o una sesión de PowerShell y ejecuta `adb`:
 
 ```shell
 $ adb -e emu finger touch 1
 ```
 
-El valor de **1** es el _\_identificador_ del dedo que se "examinó". Es un entero único que se asigna para cada huella digital virtual. En el futuro, cuando se ejecute la aplicación, puede ejecutar este mismo comando ADB cada vez que el emulador le pida una huella digital, puede ejecutar `adb` el comando y pasarle _el\_identificador de dedo_ para simular el análisis de huellas digitales.
+El valor **1** es el _dedo\_identificador_ del dedo que se "examinó". Es un entero único que se asigna para cada huella digital virtual. En el futuro en el que se ejecuta la aplicación, puede ejecutar este mismo comando ADB cada vez que el emulador le pida una huella digital, puede ejecutar el comando `adb` y pasarle el _dedo\_identificador_ para simular el análisis de huellas digitales.
 
 Una vez completado el examen de huellas digitales, Android le notificará que se ha agregado la huella digital:  
 

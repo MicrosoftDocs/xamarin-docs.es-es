@@ -3,21 +3,21 @@ title: Microsoft Azure y Xamarin
 description: En este documento se incluyen vínculos a documentación sobre Servicios conectados en Visual Studio para Mac, Azure Mobile Apps, la autenticación de Active Directory y WebAPI.
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 273a1a8fec4cf40893ff94fef4b1394065a8547b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766098"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016620"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure y Xamarin
 
-[![](images/evolve-mikej-azure-sml.png "Las características de App de Azure Services son fáciles de agregar a las aplicaciones de Xamarin, como el almacenamiento de datos en la nube y las notificaciones de envío entre plataformas.")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
-[Evolve 2016: Desarrollo de aplicaciones conectadas con Azure y Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[Evolucione 2016: desarrollo de aplicaciones conectadas con Azure y Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Servicios conectados en Visual Studio para Mac
 
@@ -35,7 +35,7 @@ Configure las aplicaciones en el [portal de App de Azure Services](https://porta
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) puede usarse para iniciar sesión de usuarios en aplicaciones de Xamarin a través del [componente Xamarin. auth](https://www.nuget.org/packages/Xamarin.Auth/).
 Las aplicaciones pueden tener acceso a servicios adicionales como Office 365.
 
-## <a name="webapi"></a>WebAPI
+## <a name="webapi"></a>webAPI
 
 La API Web de Microsoft expone una interfaz similar a REST que las aplicaciones de Xamarin pueden usar fácilmente.
 Puede poner en marcha fácilmente un [sitio web de Azure](https://trywebsites.azurewebsites.net/) y crear una aplicación basada en WebAPI para conectarse a las aplicaciones de Xamarin.
@@ -58,6 +58,6 @@ Además de los [ejemplos de documentación](https://github.com/xamarin/mobile-sa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Azure PCL ( @paulbatumpor) (ejemplo)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
+- [Ejemplo de Azure PCL (por @paulbatum) (ejemplo)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
 - [Azure Portal](https://azure.microsoft.com/)
 - [Cliente móvil para Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

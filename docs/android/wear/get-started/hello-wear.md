@@ -4,15 +4,15 @@ description: Cree su primera aplicación de desgaste de Android y ejecútela en 
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: ce82f10fdb8159d2007d490747329c1a3b5aeecd
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250068"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028665"
 ---
 # <a name="hello-wear"></a>Hola, Wear
 
@@ -24,7 +24,7 @@ _Cree su primera aplicación de desgaste de Android y ejecútela en un dispositi
 
 Siga estos pasos para crear su primera aplicación de desgaste de Xamarin. Android:
 
-### <a name="1-create-a-new-android-project"></a>1. Crear un nuevo proyecto de Android
+### <a name="1-create-a-new-android-project"></a>1. crear un nuevo proyecto de Android
 
 Cree una nueva **aplicación de desgaste de Android**:
 
@@ -32,37 +32,37 @@ Cree una nueva **aplicación de desgaste de Android**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo Nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo Nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
 Esta plantilla incluye automáticamente el NuGet (y las dependencias) de **Xamarin Android portátil Library** , por lo que tendrá acceso a widgets específicos de desgaste. Si no ve la plantilla de desgaste, revise la guía de [instalación y configuración](~/android/wear/get-started/installation.md) para comprobar que ha instalado un Android SDK compatible. 
 
-### <a name="2-choose-the-correct-target-framework"></a>2. Elegir la **plataforma de destino** correcta
+### <a name="2-choose-the-correct-target-framework"></a>2. Elija la versión de **.NET Framework de destino** correcta
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Asegúrese de que **Android to target mínimo** esté establecido en **Android 5,0 (Lollipop)** o posterior: 
 
-[![Establecimiento de la versión de .NET Framework de destino en Android 5,0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![establecer la plataforma de destino en Android 5,0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Asegúrese de que el marco de trabajo de destino esté establecido en **Android 5,0 (Lollipop)** o posterior:
 
-[![Establecimiento de la versión de .NET Framework de destino en Android 5,0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![establecer la versión de .NET Framework de destino en Android 5,0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
 Para obtener más información sobre cómo establecer la plataforma de destino, consulte Descripción de los niveles de la [API de Android](~/android/app-fundamentals/android-api-levels.md).
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Editar el diseño **Main. axml**
+### <a name="3-edit-the-mainaxml-layout"></a>3. editar el diseño **Main. axml**
 
-Configure el diseño para que `TextView` contenga `Button` un y un para el ejemplo: 
+Configure el diseño para que contenga un `TextView` y un `Button` para el ejemplo: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Editar el origen de **MainActivity.CS**
+### <a name="4-edit-the-mainactivitycs-source"></a>4. editar el origen de **MainActivity.CS**
 
 Agregue el código para incrementar un contador y mostrarlo cada vez que se haga clic en el botón: 
 
@@ -129,7 +129,7 @@ public class MainActivity : Activity
 }
 ```
 
-### <a name="5-setup-an-emulator-or-device"></a>5. Configurar un emulador o un dispositivo
+### <a name="5-setup-an-emulator-or-device"></a>5. configurar un emulador o un dispositivo
 
 El siguiente paso consiste en configurar un emulador o un dispositivo para implementar y ejecutar la aplicación. Si aún no está familiarizado con el proceso de implementación y ejecución de aplicaciones de Xamarin. Android en general, consulte la guía de [Inicio rápido de Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
@@ -137,17 +137,17 @@ Si no tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatc
 
 Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch de Android, puede ejecutar la aplicación en el dispositivo en lugar de usar un emulador. Para obtener más información sobre la depuración en un dispositivo de desgaste, consulte [depurar en un dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
 
-### <a name="6-run-the-android-wear-app"></a>6. Ejecutar la aplicación de desgaste de Android
+### <a name="6-run-the-android-wear-app"></a>6. ejecutar la aplicación de desgaste de Android
 
 El dispositivo de desgaste de Android debe aparecer en el menú desplegable del dispositivo. Asegúrese de elegir el dispositivo de desgaste de Android correcto o AVD antes de iniciar la depuración. Después de seleccionar el dispositivo, haga clic en el botón reproducir para implementar la aplicación en el emulador o el dispositivo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Selección de un menú de uso de AVD en Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![elección de un menú de uso de AVD en Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Elección de una AVD de desgaste en el menú de Visual Studio para Mac dispositivo](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![elegir un uso de AVD en Visual Studio para Mac menú del dispositivo](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,11 +159,11 @@ Si usa un emulador de inspección, puede tardar un rato en iniciar la aplicació
 
 Una vez que la aplicación se implemente correctamente, la pantalla del dispositivo de desgaste debería mostrar una pantalla similar a la siguiente:
 
-[![Pantalla inicial de la aplicación de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![pantalla inicial de la aplicación de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Pulse **en** la situado en la parte frontal del dispositivo de desgaste y ver el incremento de recuento con cada TAP:
 
-[![Captura de pantalla de la aplicación de desgaste tras 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![captura de pantalla de la aplicación de desgaste tras 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

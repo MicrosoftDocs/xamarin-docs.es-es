@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d5edb5f4e2ce1ca39ba27a1de1a51760ea167e8b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757128"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026718"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>¿Qué versión de Xamarin.Android agrega compatibilidad con Lollipop?
 
@@ -22,7 +22,7 @@ ms.locfileid: "70757128"
 - [Xamarin. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) agregó compatibilidad con la versión preliminar de Android L.
 - [Xamarin. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) agregó compatibilidad con el círculo Android.
 
-Xamarin solo admite activamente la versión estable actual de las herramientas de Xamarin. La información siguiente se proporciona "tal cual" para las versiones anteriores de las herramientas. Para obtener la información más reciente sobre las versiones de Xamarin, consulte [aquí](http://releases.xamarin.com/).
+Xamarin solo admite activamente la versión estable actual de las herramientas de Xamarin. La información siguiente se proporciona "tal cual" para las versiones anteriores de las herramientas. Para obtener la información más reciente sobre las versiones de Xamarin, consulte las notas de la [versión](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>"Missing Android. jar para el nivel de API 21" en Android L Preview
 
@@ -42,12 +42,12 @@ Existen algunas soluciones alternativas para este problema:
 
 2. Cambie el nombre de la carpeta Android-21 de Android-21 a Android-L. (Lo mejor es que solo se use como una solución temporal y que no funcione muy bien).
 
-   **% LOCALAPPDATA%\\\\Android Android: plataformas\\\\de SDK Android-21**
+   **% LOCALAPPDATA%\\plataformas Android\\Android-SDK\\\\Android-21**
 
 3. Retroceder temporalmente al nivel de API de Android 21 "L" Preview [1]:
 
-    1. Elimine el **% LOCALAPPDATA\\%\\Android Android-\\SDK\\Platforms Android-21** 
-    2. Extraer [1] en **C:\\usuarios\\&lt;nombre&gt;de\\usuario\\AppDatalocal\\AndroidAndroid\\-SDK plataformas para crear\\** una carpeta **de Android-L** .
+    1. Elimine el **% LOCALAPPDATA%\\plataformas android\\Android-sdk\\\\Android-21** 
+    2. Extract [1] en **C:\\usuarios\\&lt;username&gt;\\AppData\\Local\\android\\Android-sdk\\plataformas** para crear una carpeta **Android-L** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -75,4 +75,4 @@ Existen algunas soluciones alternativas para este problema:
 
 -----
 
-[1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)
+[1]- [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)

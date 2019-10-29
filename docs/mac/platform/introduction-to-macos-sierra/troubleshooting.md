@@ -4,15 +4,15 @@ description: En este documento se proporcionan varias sugerencias para la soluci
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/22/2016
-ms.openlocfilehash: 51276a7682599c6480c637fac385992feaf06e49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4e7f7169e4c7ec0ec2947e17b1434179f47488f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278894"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017036"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin. Mac: solución de problemas de macOS Sierra
 
@@ -51,28 +51,28 @@ Si se especifica una fecha de expiración o un código de seguridad (CW) incorre
 
 Problemas conocidos:
 
-- Si `NSObject.ValueForKey` se llama `null` a, se producirá una excepción en una clave.
-- Y ya no son conjuntos de cifrado RC4 durante el protocolo de `http://` enlace TLS para direcciones URL. `NSURLConnection` `NSURLSession`
-- Las aplicaciones pueden bloquearse si modifican la geometría de una supervista `ViewWillLayoutSubviews` en `LayoutSubviews` los métodos o.
+- Si se llama a `NSObject.ValueForKey`, se producirá una excepción `null` clave.
+- Tanto `NSURLSession` como `NSURLConnection` ya no son los conjuntos de cifrado RC4 durante el protocolo de enlace TLS para las direcciones URL de `http://`.
+- Las aplicaciones pueden bloquearse si modifican la geometría de una supervista en los métodos `ViewWillLayoutSubviews` o `LayoutSubviews`.
 - Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación deje de usar la criptografía SHA-1 y 3DES lo antes posible.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP CFNetwork
 
-La `HTTPBodyStream` propiedad de la `NSMutableURLRequest` clase se debe establecer en un flujo no abierto ya que `NSURLConnection` y `NSURLSession` ahora exigen estrictamente este requisito.
+La propiedad `HTTPBodyStream` de la clase `NSMutableURLRequest` debe establecerse en un flujo no abierto, ya que `NSURLConnection` y `NSURLSession` ahora exigen estrictamente este requisito.
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para guardar el archivo"._ error.
+Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para guardar el archivo"._ Error.
 
 <a name="CoreImage" />
 
 ## <a name="core-image"></a>Imagen principal
 
-La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor`Se quitará la API que se incluyó en macOS Sierra beta 1.
+La API de `CIImageProcessor` admite ahora un recuento de imágenes de entrada arbitrarias. `CIImageProcessor` API que se incluyó en macOS Sierra beta 1 se quitará.
 
 <a name="Notifications" />
 
@@ -84,13 +84,13 @@ Cuando se trabaja con extensiones de contenido de notificación, los controlador
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Después de una operación de entrega `UserInfo` , la propiedad `NSUserActivity` de un objeto puede estar vacía. Llame explícitamente al `BecomeCurrent` `NSUserActivity` objeto como solución alternativa actual.
+Después de una operación de entrega, la propiedad `UserInfo` de un objeto `NSUserActivity` puede estar vacía. Llame explícitamente `BecomeCurrent` objeto `NSUserActivity` como solución alternativa actual.
 
 <a name="Safari" />
 
 ## <a name="safari"></a>Safari
 
-WebGeolocation requiere una dirección URL`https://`segura () para trabajar tanto en iOS 10 como en MacOS Sierra para evitar el uso malintencionado de datos de ubicación.
+WebGeolocation requiere una dirección URL segura (`https://`) para trabajar tanto en iOS 10 como en macOS Sierra para evitar el uso malintencionado de datos de ubicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

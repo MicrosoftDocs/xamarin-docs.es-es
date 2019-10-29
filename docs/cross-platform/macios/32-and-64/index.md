@@ -3,15 +3,15 @@ title: consideraciones sobre las plataformas de 32 y 64 bits
 description: En este documento se describen varias consideraciones que hay que tener en cuenta al establecer como destino arquitecturas de 32 bits y de 64 bits para una aplicación Xamarin. iOS o Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71249796"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016332"
 ---
 # <a name="3264-bit-platform-considerations"></a>consideraciones sobre las plataformas de 32 y 64 bits
 
@@ -40,9 +40,9 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
 1. En el **Panel de solución**, haga doble clic en el proyecto de la aplicación para abrir la ventana **Opciones del proyecto** .
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone, en la lista desplegable **arquitecturas admitidas** , seleccione **x86 \_64** o **i386 + x86 \_64**:
+3. Para el simulador de iPhone, en la lista desplegable **arquitecturas admitidas** , seleccione **x86\_64** o **i386 + x86\_64**:
 
-   [![Establecer las arquitecturas admitidas en x86 \_64 o i386 + x86 \_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Establecimiento de arquitecturas admitidas en x86\_64 o i386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. En el caso de los dispositivos físicos, seleccione una de las combinaciones de **ARM64** disponibles:
 
@@ -55,9 +55,9 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **propiedades**.
 2. Seleccione **compilación de iOS**.
-3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86 \_64** o **i386 + x86 \_64**: 
+3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86\_64** o **i386 + x86\_64**: 
 
-   [![Establecimiento de arquitecturas admitidas en x86_64 o i386 + x86 \_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Establecimiento de arquitecturas admitidas en x86_64 o i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. En el caso de los dispositivos físicos, seleccione una de las combinaciones de **ARM64** disponibles:
     

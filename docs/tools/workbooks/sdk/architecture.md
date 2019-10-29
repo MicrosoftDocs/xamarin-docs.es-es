@@ -3,19 +3,19 @@ title: Información general sobre la arquitectura
 description: En este documento se describe la arquitectura de Xamarin Workbooks, examinando cómo funcionan conjuntamente el agente interactivo y el cliente interactivo.
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 7129d0bedddb272ef87e3d209cb05c2ca0c0acf4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b3f2613e315bc05fedfb5b2fa70d11c2874ba65
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285280"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029618"
 ---
 # <a name="architecture-overview"></a>Información general sobre la arquitectura
 
-Xamarin Workbooks incluye dos componentes principales que deben funcionar conjuntamente entre sí: _Agente_ y _cliente_.
+Xamarin Workbooks incluye dos componentes principales que deben funcionar conjuntamente entre sí: _agente_ y _cliente_.
 
 ## <a name="interactive-agent"></a>Agente interactivo
 

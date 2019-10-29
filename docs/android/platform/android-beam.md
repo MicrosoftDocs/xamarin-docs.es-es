@@ -3,42 +3,42 @@ title: Android Beam
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 11f1d38eb10421d4ecef3e2039688b2d9a6d9e6e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757861"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027828"
 ---
 # <a name="android-beam"></a>Android Beam
 
 El rayo de Android es una tecnología de transmisión de datos en proximidad (NFC) introducida en Android 4,0 que permite a las aplicaciones compartir información a través de NFC en estrecha proximidad.
 
-[![Diagrama que ilustra dos dispositivos en información de uso compartido de proximidad aproximada](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[Diagrama de![que ilustra dos dispositivos en información de uso compartido de proximidad aproximada](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 El rayo de Android funciona insertando mensajes sobre NFC cuando dos dispositivos están dentro del alcance. Los dispositivos de 4cm entre sí pueden compartir datos con el rayo de Android. Una actividad en un dispositivo crea un mensaje y especifica una actividad (o actividades) que puede controlar la inserción. Cuando la actividad especificada está en primer plano y los dispositivos están dentro del alcance, el rayo de Android enviará el mensaje al segundo dispositivo. En el dispositivo receptor, se invoca una intención que contiene los datos del mensaje.
 
 Android admite dos maneras de configurar mensajes con el rayo de Android:
 
-- `SetNdefPushMessage`-Antes de que se inicie el rayo de Android, una aplicación puede llamar a SetNdefPushMessage para especificar un NdefMessage para insertarlo sobre NFC y la actividad que lo está insertando. Este mecanismo se utiliza mejor cuando un mensaje no cambia mientras una aplicación está en uso.
+- `SetNdefPushMessage`: antes de que se inicie el haz de Android, una aplicación puede llamar a SetNdefPushMessage para especificar un NdefMessage de inserción sobre NFC y la actividad que lo inserta. Este mecanismo se utiliza mejor cuando un mensaje no cambia mientras una aplicación está en uso.
 
-- `SetNdefPushMessageCallback`-Cuando se inicia el rayo de Android, una aplicación puede controlar una devolución de llamada para crear un NdefMessage. Este mecanismo permite que se retrase la creación de mensajes hasta que los dispositivos se encuentren dentro del alcance. Admite escenarios en los que el mensaje puede variar en función de lo que sucede en la aplicación.
+- `SetNdefPushMessageCallback`: cuando se inicia el rayo de Android, una aplicación puede controlar una devolución de llamada para crear un NdefMessage. Este mecanismo permite que se retrase la creación de mensajes hasta que los dispositivos se encuentren dentro del alcance. Admite escenarios en los que el mensaje puede variar en función de lo que sucede en la aplicación.
 
-En cualquier caso, para enviar datos con el rayo de Android, una aplicación `NdefMessage`envía un y empaqueta los datos `NdefRecords`en varios. Echemos un vistazo a los puntos clave que deben abordarse antes de que podamos desencadenar el haz de Android. En primer lugar, trabajaremos con el estilo de devolución de `NdefMessage`llamada de creación de.
+En cualquier caso, para enviar datos con el rayo de Android, una aplicación envía un `NdefMessage`, empaquetando los datos en varios `NdefRecords`. Echemos un vistazo a los puntos clave que deben abordarse antes de que podamos desencadenar el haz de Android. En primer lugar, trabajaremos con el estilo de devolución de llamada de creación de un `NdefMessage`.
 
 ## <a name="creating-a-message"></a>Crear un mensaje
 
-Podemos registrar devoluciones de llamada `NfcAdapter` con un en el `OnCreate` método de la actividad. Por ejemplo, suponiendo que `NfcAdapter` un `mNfcAdapter` nombre se declara como una variable de clase en la actividad, podemos escribir el código siguiente para crear la devolución de llamada que construirá el mensaje:
+Podemos registrar devoluciones de llamada con un `NfcAdapter` en el método de `OnCreate` de la actividad. Por ejemplo, suponiendo que una `NfcAdapter` denominada `mNfcAdapter` se declara como una variable de clase en la actividad, podemos escribir el código siguiente para crear la devolución de llamada que construirá el mensaje:
 
 ```csharp
 mNfcAdapter = NfcAdapter.GetDefaultAdapter (this);
 mNfcAdapter.SetNdefPushMessageCallback (this, this);
 ```
 
-La actividad, que implementa `NfcAdapter.ICreateNdefMessageCallback`, se pasa `SetNdefPushMessageCallback` al método anterior. Cuando se inicia el rayo de Android, el sistema `CreateNdefMessage`llamará a, desde el que la `NdefMessage` actividad puede construir un, como se muestra a continuación:
+La actividad, que implementa `NfcAdapter.ICreateNdefMessageCallback`, se pasa al método `SetNdefPushMessageCallback` anterior. Cuando se inicia el rayo de Android, el sistema llamará `CreateNdefMessage`, desde el que la actividad puede construir un `NdefMessage` como se muestra a continuación:
 
 ```csharp
 public NdefMessage CreateNdefMessage (NfcEvent evt)
@@ -74,10 +74,10 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 Para obtener un ejemplo de código completo que usa el rayo de Android, que se muestra en la siguiente captura de pantalla, vea la [demostración de rayos de Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) en la galería de ejemplo.
 
-[![Capturas de pantallas de ejemplo de la demostración de rayos de Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![capturas de pantallas de ejemplo de la demostración de rayos de Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demo de rayos de Android (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Presentación del bocadillo de helado](http://www.android.com/about/ice-cream-sandwich/)
+- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con varios tamaños de
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e9c87b76dc6845962450b8cb6fab921ea1748832
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aeaa1bb1273bc062e0ac76eaa09722827f15797f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768327"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028391"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Trabajar con tamaños de pantalla de watchos en Xamarin
 
@@ -30,11 +30,11 @@ Debe tener en cuenta el tamaño de la pantalla al diseñar y probar sus aplicaci
 
 De forma predeterminada, el diseñador de Visual Studio para Mac mostrará controladores de interfaz de inspección en **cualquier Apple Watch**.
 
-![](screen-sizes-images/screen-any-sml.png "El diseñador muestra los controladores de interfaz de inspección en cualquier Apple Watch")
+![](screen-sizes-images/screen-any-sml.png "The Designer displays watch interface controllers at Any Apple Watch")
 
 Use el menú tamaño para editar y obtener una vista previa del guion gráfico en cualquiera de los tamaños de pantalla disponibles: **38mm** o **42mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "Selección del tamaño de 38mm o 42mm")
+![](screen-sizes-images/screen-menu-sml.png "Selecting the 38mm or 42mm size")
 
 En ocasiones, el tamaño de pantalla mayor representará el contenido que se truncaría o ocultaría en la pantalla más pequeña.
 Asegúrese de probar ambos tamaños.
@@ -43,7 +43,7 @@ Asegúrese de probar ambos tamaños.
 
 La aplicación debe mostrar el mismo contenido en la pantalla, independientemente del tamaño, y debe expandir o contraer los elementos según corresponda. En el diseñador de Visual Studio para Mac, en el inspector de atributos, debe usar en relación con el contenedor o **el tamaño para ajustar el contenido** en **función** de los tamaños fijos.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Usar en relación con el contenedor o el tamaño para ajustar el contenido en preferencia a los tamaños fijos")
+![](screen-sizes-images/sizeattributepanel-sml.png "Use Relative to Container or Size to Fit Content in preference to fixed sizes")
 
 Dado que la pantalla de inspección está rodeada por un bisel negro, no se recomienda proporcionar relleno alrededor de la interfaz. Permita que los elementos se coloquen en el borde de la pantalla y deje que el bisel forme un borde natural alrededor de la aplicación.
 
@@ -51,13 +51,13 @@ Dado que la pantalla de inspección está rodeada por un bisel negro, no se reco
 
 Al realizar pruebas en el simulador, puede cambiar fácilmente entre los dos tamaños de pantalla mediante el menú **Hardware > dispositivo** .
 
-![](screen-sizes-images/simulator.png "El simulador puede cambiar entre los dos tamaños de pantalla mediante el menú dispositivo de hardware")
+![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
 
 ## <a name="image-resources"></a>Recursos de imagen
 
 Debe usar varios recursos de imagen si un solo recurso no tiene un aspecto adecuado en tamaños diferentes. Los catálogos de recursos de imagen permiten especificar mapas de bits independientes para cada tamaño:
 
-![](screen-sizes-images/images-xcassets.png "Editor de catálogo de recursos de imagen")
+![](screen-sizes-images/images-xcassets.png "Image asset catalog editor")
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded

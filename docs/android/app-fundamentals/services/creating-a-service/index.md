@@ -3,15 +3,15 @@ title: Crear un servicio
 ms.prod: xamarin
 ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754894"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024862"
 ---
 # <a name="creating-a-service"></a>Crear un servicio
 

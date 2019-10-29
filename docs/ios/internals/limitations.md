@@ -4,15 +4,15 @@ description: En este documento se describen las limitaciones de Xamarin. iOS, la
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753335"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022311"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin. iOS
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>No hay generación de código dinámico
 
-Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Entre ellas se incluyen las siguientes:
+Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Se incluyen los siguientes:
 
 - System. Reflection. Emit no está disponible.
 - No se admite System. Runtime. Remoting.
@@ -75,7 +75,7 @@ Sin embargo, toda la API de reflexión, incluido Type. GetType ("someClass"), lo
 
 Para llamar a una función nativa a C# través de un delegado, la declaración del delegado se debe decorar con uno de los siguientes atributos:
 
-- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (se prefiere, ya que es multiplataforma y compatible con .NET Standard 1.1 +)
+- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (preferido, ya que es multiplataforma y compatible con .net Standard 1.1 +)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Si no se proporciona uno de estos atributos, se producirá un error de tiempo de ejecución como:

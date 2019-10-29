@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar System. Data y mono. Data.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 44d2e468efeacea919af2d243588d0da6d72945d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4f5f6adf99306754fa7b2aa49855fe228e740d7e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766539"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016947"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data en Xamarin. iOS
 
@@ -28,13 +28,13 @@ Xamarin. iOS 8,10 agrega compatibilidad con [System. Data](xref:System.Data), in
 
 ## <a name="example"></a>Ejemplo
 
-El programa siguiente crea una base de `Documents/mydb.db3`datos de en y, si la base de datos no existe previamente, se rellena con datos de ejemplo. A continuación, se consulta la base de datos, con `stderr`la salida escrita en.
+El programa siguiente crea una base de datos en `Documents/mydb.db3`y, si la base de datos no existe previamente, se rellena con datos de ejemplo. A continuación, se consulta la base de datos, con la salida escrita en `stderr`.
 
 ### <a name="add-references"></a>Agregar referencias
 
-En primer lugar, haga clic con el botón derecho en el nodo **referencias** y elija **Editar referencias...** a continuación, seleccione `System.Data` y: `Mono.Data.Sqlite`
+En primer lugar, haga clic con el botón derecho en el nodo **referencias** y elija **Editar referencias...** a continuación, seleccione `System.Data` y `Mono.Data.Sqlite`:
 
-[![](system.data-images/edit-references-sml.png "Agregar nuevas referencias")](system.data-images/edit-references.png#lightbox)
+[![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>Código de ejemplo
 
@@ -144,15 +144,15 @@ La funcionalidad que falta en **System. Data. dll** consta de:
 - Cualquier cosa que requiera [System. CodeDom](xref:System.CodeDom) (por ejemplo,  [System. Data. TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
 - Compatibilidad con archivos de configuración XML (por ejemplo,  [System. Data. Common. DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
 - [System. Data. Common. DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depende de la compatibilidad con el archivo de configuración XML)
-- [System.Data.OleDb](xref:System.Data.OleDb)
-- [System.Data.Odbc](xref:System.Data.Odbc)
-- La `System.EnterpriseServices.dll` dependencia se ha *quitado* de, lo que da lugar a `System.Data.dll` la eliminación del método [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
+- [System. Data. OleDb](xref:System.Data.OleDb)
+- [System. Data. ODBC](xref:System.Data.Odbc)
+- La dependencia de `System.EnterpriseServices.dll` se ha *quitado* de `System.Data.dll`, lo que da lugar a la eliminación del método [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
 
 <a name="Mono.Data.Sqlite" />
 
-### <a name="monodatasqlite"></a>Mono.Data.Sqlite
+### <a name="monodatasqlite"></a>Mono. Data. SQLite
 
-Mientras tanto, **mono. Data. SQLite. dll** no sufrió ningún cambio en el código fuente, sino que puede hospedarse en varios problemas en `Mono.Data.Sqlite.dll` tiempo de *ejecución* desde que enlaza SQLite 3,5. iOS 8, mientras tanto, se incluye con SQLite 3.8.5. Basta con decir que algunas cosas han cambiado entre las dos versiones.
+Mientras tanto, **mono. Data. SQLite. dll** no sufrió ningún cambio en el código fuente, sino que puede hospedarse en varios problemas en *tiempo de ejecución* desde `Mono.Data.Sqlite.dll` enlaza SQLite 3,5. iOS 8, mientras tanto, se incluye con SQLite 3.8.5. Basta con decir que algunas cosas han cambiado entre las dos versiones.
 
 La versión anterior de iOS se incluye con las siguientes versiones de SQLite:
 
@@ -161,7 +161,7 @@ La versión anterior de iOS se incluye con las siguientes versiones de SQLite:
 - **iOS 5** -versión 3.7.7.
 - **iOS 4** : versión 3.6.22.
 
-Los problemas más comunes parecen estar relacionados con las consultas de esquema de la base de datos; por ejemplo, determinar en tiempo de ejecución Qué columnas existen `Mono.Data.Sqlite.SqliteConnection.GetSchema` en una tabla determinada, como ( `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` invalidar [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e (reemplazar [). DbDataReader. GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). En Resumen, parece que no funciona nada que use [DataTable](xref:System.Data.DataTable) .
+Los problemas más comunes parecen estar relacionados con las consultas de esquema de base de datos; por ejemplo, determinar en tiempo de ejecución Qué columnas existen en una tabla determinada, como `Mono.Data.Sqlite.SqliteConnection.GetSchema` (invalidar [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) y `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (invalidar [ DbDataReader. GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). En Resumen, parece que no funciona nada que use [DataTable](xref:System.Data.DataTable) .
 
 <a name="Data_Binding" />
 

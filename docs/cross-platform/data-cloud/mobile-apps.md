@@ -3,15 +3,15 @@ title: Microsoft Azure Mobile Apps
 description: En este documento se proporcionan vínculos a guías que describen cómo compilar una aplicación de Xamarin que está conectada a Azure. Describe cómo trabajar con el componente, los usuarios y las notificaciones de envío de Xamarin Azure.
 ms.prod: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/02/2017
-ms.openlocfilehash: 7d39615f20cdd52bb862d9ee998e9a45bbb6834e
-ms.sourcegitcommit: d116fdcad9f5f0587ce64749cd8d791eee87f8aa
+ms.openlocfilehash: 84517e4961dc3ad728b6cc352e9fb992d9e8b5bf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72246536"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016590"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure Mobile Apps
 
@@ -28,12 +28,12 @@ as https://developer xamarin com/guides/cross-platform/data-cloud/mobile-service
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
 The ZIPs in /Resources/ are also referenced by inbound links
-Getting Started http://go.microsoft.com/fwlink/p/?LinkId=331359
-Get started with data http://go.microsoft.com/fwlink/p/?LinkId=331302
-Get started with push http://go.microsoft.com/fwlink/p/?LinkId=331303
-Get started with authentication http://go.microsoft.com/fwlink/p/?LinkId=331328
-Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=331329
-Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
+Getting Started https://go.microsoft.com/fwlink/p/?LinkId=331359
+Get started with data https://go.microsoft.com/fwlink/p/?LinkId=331302
+Get started with push https://go.microsoft.com/fwlink/p/?LinkId=331303
+Get started with authentication https://go.microsoft.com/fwlink/p/?LinkId=331328
+Get started with Notification Hubs https://go.microsoft.com/fwlink/p/?LinkId=331329
+Validate and modify data  https://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
 
 Estos vínculos son para la documentación de Xamarin disponible en el sitio web de [Azure Mobile Apps](https://docs.microsoft.com/azure/app-service-mobile/) .
@@ -81,7 +81,7 @@ Proporciona instrucciones completas para configurar y codificar una pantalla de 
 
 Código de ejemplo de back-ends de JavaScript
 
-- [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
+- [Todo. js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
 
 ## <a name="get-started-with-push"></a>Introducción a la instalación
 

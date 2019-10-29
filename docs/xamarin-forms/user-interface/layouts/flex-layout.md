@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 187befd88c115133a92aa90a711438e7754518d5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 75249966c6506bc33ea06c7cfa9c398bd7eb8045
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68648802"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029483"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>FlexLayout de Xamarin. Forms
 
@@ -21,7 +21,7 @@ ms.locfileid: "68648802"
 
 _Use FlexLayout para apilar o ajustar una colección de vistas secundarias._
 
-La [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) de Xamarin. Forms es nueva en la versión 3,0 de Xamarin. Forms. Se basa en el módulo de [diseño de caja flexible](http://www.w3.org/TR/css-flexbox-1/)de CSS, conocido normalmente como _diseño_ flexible o _flexible_, por lo que se llama porque incluye muchas opciones flexibles para organizar los elementos secundarios dentro del diseño.
+La [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) de Xamarin. Forms es nueva en la versión 3,0 de Xamarin. Forms. Se basa en el módulo de [diseño de caja flexible](https://www.w3.org/TR/css-flexbox-1/)de CSS, conocido normalmente como _diseño_ flexible o _flexible_, por lo que se llama porque incluye muchas opciones flexibles para organizar los elementos secundarios dentro del diseño.
 
 `FlexLayout` es similar a la [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) de Xamarin. Forms en que puede organizar sus elementos secundarios horizontal y verticalmente en una pila. Sin embargo, el `FlexLayout` también es capaz de ajustar sus elementos secundarios si hay demasiados para caber en una sola fila o columna, y también tiene muchas opciones para la orientación, la alineación y la adaptación a distintos tamaños de pantalla.
 
@@ -190,7 +190,7 @@ Este es el programa que se ejecuta, desplazado progresivamente de arriba abajo:
 
 ### <a name="page-layout-with-flexlayout"></a>Diseño de página con FlexLayout
 
-Hay un diseño estándar en el diseño web denominado The [_Santo permite_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) porque es un formato de diseño que es muy conveniente, pero que a menudo es difícil de comprender con la perfección. El diseño está compuesto de un encabezado en la parte superior de la página y un pie de página en la parte inferior, que se extiende hasta el ancho completo de la página. Ocupar el centro de la página es el contenido principal, pero a menudo con un menú en columnas a la izquierda del contenido y la información complementaria (a veces denominada área de _retirada_ ) a la derecha. En [la sección 5.4.1 de la especificación de diseño de caja flexible de CSS](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) se describe cómo se puede realizar el diseño Santo permite con un cuadro flexible.
+Hay un diseño estándar en el diseño web denominado The [_Santo permite_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) porque es un formato de diseño que es muy conveniente, pero que a menudo es difícil de comprender con la perfección. El diseño está compuesto de un encabezado en la parte superior de la página y un pie de página en la parte inferior, que se extiende hasta el ancho completo de la página. Ocupar el centro de la página es el contenido principal, pero a menudo con un menú en columnas a la izquierda del contenido y la información complementaria (a veces denominada área de _retirada_ ) a la derecha. En [la sección 5.4.1 de la especificación de diseño de caja flexible de CSS](https://www.w3.org/TR/css-flexbox-1/#order-accessibility) se describe cómo se puede realizar el diseño Santo permite con un cuadro flexible.
 
 La página de **diseño de Santa permite** del ejemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** muestra una implementación sencilla de este diseño mediante una `FlexLayout` anidada en otra. Dado que esta página está diseñada para un teléfono en modo vertical, las áreas situadas a la izquierda y a la derecha del área de contenido son solo de 50 píxeles de ancho:
 
@@ -261,7 +261,7 @@ En este programa se muestran tres propiedades enlazables asociadas:
 
 ### <a name="catalog-items-with-flexlayout"></a>Catalogar elementos con FlexLayout
 
-La página de **elementos de catálogo** en el ejemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** es similar a la del [ejemplo 1 de la sección 1,1 de la especificación del cuadro de diseño Flex de CSS](http://www.w3.org/TR/css-flexbox-1/#overview) , con la diferencia de que muestra una serie de imágenes desplazables horizontalmente y descripciones de tres Monkeys :
+La página de **elementos de catálogo** en el ejemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** es similar a la del [ejemplo 1 de la sección 1,1 de la especificación del cuadro de diseño Flex de CSS](https://www.w3.org//TR/css-flexbox-1/#overview) , con la diferencia de que muestra una serie de imágenes desplazables horizontalmente y descripciones de tres Monkeys :
 
 [![La página elementos del catálogo](flex-layout-images/CatalogItems.png "La página elementos del catálogo")](flex-layout-images/CatalogItems-Large.png#lightbox)
 
@@ -575,7 +575,7 @@ La página **experimento base** del ejemplo **[FlexLayoutDemos](https://docs.mic
 
 [![Página experimento base](flex-layout-images/BasisExperiment.png "Página experimento base")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-En la captura de pantalla de iOS de la izquierda se muestran los dos `Label` elementos a los que se les da alto en unidades independientes del dispositivo. La pantalla de Android muestra que se les proporciona alto que son una fracción del alto total del `FlexLayout`. Si el `Basis` se establece en 100%, el elemento secundario es el alto del `FlexLayout` y se ajustará a la columna siguiente y ocupará el alto completo de esa columna, como muestra la captura de pantalla de UWP: aparece como si los cinco elementos secundarios estuvieran organizados en una fila , pero en realidad están dispuestos en cinco columnas.
+En la captura de pantalla de iOS de la izquierda se muestran los dos `Label` elementos a los que se les da alto en unidades independientes del dispositivo. La pantalla de Android muestra que se les proporciona alto que son una fracción del alto total del `FlexLayout`. Si el `Basis` se establece en 100%, el elemento secundario es el alto del `FlexLayout`y se ajustará a la columna siguiente y ocupará el alto completo de esa columna, como muestra la captura de pantalla de UWP: aparece como si los cinco elementos secundarios estuvieran organizados en una fila , pero en realidad están dispuestos en cinco columnas.
 
 ### <a name="the-grow-property"></a>La propiedad Grow
 

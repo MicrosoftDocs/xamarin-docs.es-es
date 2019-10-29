@@ -4,15 +4,15 @@ description: Definición de la estructura visual de la aplicación Xamarin. Andr
 ms.prod: xamarin
 ms.assetid: 2BA72B0E-230D-4F98-B4D5-4EFB0D479789
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/18/2017
-ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f15aeff8590cf6d82168fd3e39ba6f78d649d2ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764472"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028972"
 ---
 # <a name="xamarinandroid-layouts"></a>Diseños de Xamarin. Android
 
@@ -34,7 +34,7 @@ Los diseños se usan para organizar los elementos que componen la interfaz de us
 
     ![Ejemplo de vista de Recycler](images/recycler-view.png)
 
-- [ListView](~/android/user-interface/layouts/list-view/index.md) es un grupo de vistas que crea una lista de elementos desplazables. Los elementos de la lista se insertan automáticamente en la lista mediante un adaptador de lista. `ListView` Es un componente importante de la interfaz de usuario de las aplicaciones de Android porque se usa en todas partes desde listas cortas de opciones de menú hasta largas listas de contactos o favoritos de Internet. Proporciona una manera sencilla de presentar una lista de desplazamiento de filas a las que se puede dar formato con un estilo integrado o personalizarse en gran medida. Una instancia de ListView requiere un adaptador para insertarlo con los datos contenidos en las vistas de fila.
+- [ListView](~/android/user-interface/layouts/list-view/index.md) es un grupo de vistas que crea una lista de elementos desplazables. Los elementos de la lista se insertan automáticamente en la lista mediante un adaptador de lista. El `ListView` es un componente importante de la interfaz de usuario de las aplicaciones de Android, ya que se usa en todas partes desde listas cortas de opciones de menú hasta largas listas de contactos o favoritos de Internet. Proporciona una manera sencilla de presentar una lista de desplazamiento de filas a las que se puede dar formato con un estilo integrado o personalizarse en gran medida. Una instancia de ListView requiere un adaptador para insertarlo con los datos contenidos en las vistas de fila.
 
     ![Ejemplo de vista de lista](images/list-view.png)
 

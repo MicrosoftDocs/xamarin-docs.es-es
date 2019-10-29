@@ -3,15 +3,15 @@ title: Enlace de Objective-C
 description: En este documento se proporcionan vínculos a varias guías que describen cómo C# crear enlaces a código de Objective-C, lo que permite a los desarrolladores usar bibliotecas de uso no estándar en aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765767"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016278"
 ---
 # <a name="binding-objective-c"></a>Enlace de Objective-C
 
@@ -38,7 +38,7 @@ Objective Sharpie es una herramienta de línea de comandos que ayuda a arrancar 
 
 La [Página enlace de iOS](~/ios/platform/binding-objective-c/index.md) vuelve a vincular a estos recursos de enlace comunes, además de los ejemplos siguientes.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Tutorial: Enlazar una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Tutorial: enlazar una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
 En este artículo se proporciona un tutorial paso a paso para crear un proyecto de enlace con el proyecto de código abierto [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-C como ejemplo. La biblioteca InfColorPicker proporciona un controlador de vistas reutilizable que permite al usuario seleccionar un color en función de su representación HSB, lo que facilita la selección de color. El objetivo Sharpie se usará para ayudar en el proceso de enlace.
 

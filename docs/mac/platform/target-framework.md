@@ -4,15 +4,15 @@ description: En este artículo se tratan las plataformas de destino (bibliotecas
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e07ec4fd4436d951ea4033dbceab2cef47e96218
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025929"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Plataforma de destino para Xamarin. Mac
 
@@ -30,11 +30,11 @@ Una de las repercusiones más importantes de estas distintas plataformas de dest
 
 Hay tres opciones de plataforma de destino disponibles para Xamarin. Mac, cada una con diferentes ventajas e inconvenientes:
 
-- **Moderno** (denominada Mobile en la documentación anterior): un subconjunto muy similar a lo que impulsa Xamarin. iOS, muy optimizado para el rendimiento y el tamaño. Esta plataforma de destino es segura para el vinculador, por lo que estos proyectos pueden tener su superficie final drásticamente reducida quitando el código no utilizado.
+- **Moderno** (conocido como móvil en documentación antigua): un subconjunto muy similar a lo que impulsa Xamarin. iOS, muy optimizado para el rendimiento y el tamaño. Esta plataforma de destino es segura para el vinculador, por lo que estos proyectos pueden tener su superficie final drásticamente reducida quitando el código no utilizado.
 
-- **Completo** (llamado XM 4,5 en la documentación anterior): un subconjunto muy similar a la BCL de "escritorio", con algunas pequeñas desinstalaciones. Como la plataforma de destino es casi idéntica a net45 (y versiones posteriores), puede consumir fácilmente muchos paquetes Nuget que no proporcionan netstandard2 o compilaciones de Xamarin. Mac específicas. Sin embargo, debido al uso del sistema. Configuration, no es compatible con la vinculación.
+- **Full** (llamado XM 4,5 en la documentación anterior): un subconjunto muy similar a la BCL de "escritorio", con unas pocas eliminaciones pequeñas. Como la plataforma de destino es casi idéntica a net45 (y versiones posteriores), puede consumir fácilmente muchos paquetes Nuget que no proporcionan netstandard2 o compilaciones de Xamarin. Mac específicas. Sin embargo, debido al uso del sistema. Configuration, no es compatible con la vinculación.
 
-- **No compatible** (llamado sistema en la documentación anterior): en lugar de vincular a una BCL proporcionada por Xamarin. Mac, use el sistema actual de mono instalado. Esto proporciona el conjunto más completo de ensamblados, incluidos algunos conocidos como problemáticos (System. Drawing, por ejemplo). Esta opción solo existe en un "último recurso" y se recomienda encarecidamente agotar otras opciones antes de usarla. Como implica el nombre, el uso no es compatible con los canales de soporte técnico oficiales.
+- **No compatible** (llamado sistema en la documentación anterior): en lugar de vincular a una BCL proporcionada por Xamarin. Mac, use el sistema actual instalado mono. Esto proporciona el conjunto más completo de ensamblados, incluidos algunos conocidos como problemáticos (System. Drawing, por ejemplo). Esta opción solo existe en un "último recurso" y se recomienda encarecidamente agotar otras opciones antes de usarla. Como implica el nombre, el uso no es compatible con los canales de soporte técnico oficiales.
 
 ## <a name="setting-the-target-framework"></a>Establecer la versión de .NET Framework de destino
 

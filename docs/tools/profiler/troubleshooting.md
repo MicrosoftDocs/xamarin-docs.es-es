@@ -3,15 +3,15 @@ title: Solución de problemas de Xamarin Profiler
 description: En este documento se proporciona información sobre la solución de problemas relacionados con el Xamarin Profiler. Describe los problemas relacionados con el registro y los diagnósticos, el IDE y otros temas.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: c6a05e332bf0c08f8c7ea328c2793f7d0bf00fb7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285697"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019209"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de Xamarin Profiler
 
@@ -25,9 +25,9 @@ El equipo de Xamarin puede ayudar a realizar un seguimiento de los problemas si 
 
 ### <a name="getting-log-outputs"></a>Obtención de salidas de registro
 
-En, los registros de Mac `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`se guardan en.
+En los registros de Mac se guardan en `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
-En Windows, estos se guardan para `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluir el registro más reciente cada vez que se envía un problema.
+En Windows, estos se guardan en `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluya el registro más reciente cada vez que envíe un problema.
 
 Estamos agregando más registros a medida que avanzamos, por lo que esta salida debe crecer y ser más útil con el tiempo.
 
@@ -37,17 +37,17 @@ Estamos agregando más registros a medida que avanzamos, por lo que esta salida 
 
 Un archivo **. MLPD** es la salida comprimida del generador de perfiles en tiempo de ejecución de mono. La GUI Xamarin Profiler Lee los datos de un **. MLPD** y los muestra para el usuario. los archivos **. MLPD** son herramientas de depuración útiles para Xamarin porque ayudan a nuestros ingenieros a diagnosticar los problemas que puede tener el generador de perfiles con los datos.
 
-El **. MLPD** de la sesión actual se guarda automáticamente en el directorio de `/tmp` su Mac y se puede identificar mediante la marca de tiempo. Si activa el registro, el primer resultado será la ruta de acceso al archivo **. MLPD** . El archivo **. MLPD** se guardará normalmente en el directorio a partir de ~/var/Folders...
+El **. MLPD** de la sesión actual se guarda automáticamente en el directorio de `/tmp` de su Mac y se puede identificar mediante la marca de tiempo. Si activa el registro, el primer resultado será la ruta de acceso al archivo **. MLPD** . El archivo **. MLPD** se guardará normalmente en el directorio a partir de ~/var/Folders...
 
 También se puede guardar el archivo **. MLPD** para una sesión actual eligiendo **archivo > Guardar como..** . en el menú del generador de perfiles:
 
 **Visual Studio para Mac**:
 
-![](troubleshooting-images/image17.png "Guardando archivo. MLPD en Visual Studio para Mac")
+![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Guardar el archivo. MLPD en Visual Studio")
+![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
 
 Es importante tener en cuenta que **. MLPD** contiene mucha información y el tamaño del archivo será grande.
 
@@ -73,13 +73,13 @@ Compruebe la siguiente configuración para resolver este procedimiento:
 
 Si se ejecuta este cuadro de error al usar el generador de perfiles en Visual Studio:
 
-![](troubleshooting-images/error.png "Cuadro de error al usar el generador de perfiles en Visual Studio")
+![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
 
 Normalmente, se debe a que no puede iniciarse en el simulador o en el emulador. Intente ejecutar la aplicación normalmente, corrija los problemas que proporciona y, a continuación, intente volver a usar el generador de perfiles.
 
 #### <a name="to-watch-a-specific-thread"></a>Para ver un subproceso concreto
 
-Si tiene un subproceso que desea inspeccionar específicamente, sería idóneo asignar un nombre al subproceso al principio de su creación para obtener `ThreadName` en lugar de. `0x0` Por ejemplo, para establecer el nombre del `UI`subproceso como, podría usar el código siguiente:
+Si tiene un subproceso que desea inspeccionar específicamente, sería idóneo asignar un nombre al subproceso al principio de su creación para obtener `ThreadName` en lugar de `0x0`. Por ejemplo, para establecer el nombre del subproceso como `UI`, puede usar el código siguiente:
 
 ```csharp
 RunOnUiThread (() => {

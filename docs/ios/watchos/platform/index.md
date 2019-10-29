@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a varias guías que describen car
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2b987992bcb3dd4d2575a46e21a2302ed78d8d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e571132b5f1e30bececb8302f2dacfcd908ad42e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282285"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028288"
 ---
 # <a name="watchos-platform-features"></a>características de la plataforma watchos
 
@@ -46,7 +46,7 @@ Agregue compatibilidad con complicaciones para Mostrar datos actualizados en la 
 
 ## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[Sugerencias proactivas](~/ios/watchos/platform/proactive-suggestions.md)
 
-watchos 3 permite que la aplicación presente de forma proactiva información al usuario en contextos determinados. Para admitir esta característica, [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) ahora incluye la `MapItem` propiedad que permite que la aplicación proporcione información de ubicación para su uso posterior por parte de otras aplicaciones.
+watchos 3 permite que la aplicación presente de forma proactiva información al usuario en contextos determinados. Para admitir esta característica, [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) ahora incluye la propiedad `MapItem` que permite que la aplicación proporcione información de ubicación para su uso posterior por parte de otras aplicaciones.
 
 ## <a name="quick-interaction-techniquesioswatchosplatformquick-interaction-techniquesmd"></a>[Técnicas de interacción rápida](~/ios/watchos/platform/quick-interaction-techniques.md)
 
@@ -54,4 +54,4 @@ Proporcionar interacciones de usuario rápidas es esencial para crear atractivas
 
 ## <a name="workout-app-enhancementsioswatchosplatformworkout-appsmd"></a>[Mejoras en las aplicaciones de entrenamiento](~/ios/watchos/platform/workout-apps.md)
 
-Novedad de watchos 3, las aplicaciones relacionadas con el entrenamiento tienen la capacidad de ejecutarse en segundo plano en el Apple Watch. Para habilitar esta característica (y obtener acceso a los datos de HealthKit), la aplicación debe `WKBackgroundModes` incluir la clave `Info.plist` en el archivo con `workout-processing`el valor.
+Novedad de watchos 3, las aplicaciones relacionadas con el entrenamiento tienen la capacidad de ejecutarse en segundo plano en el Apple Watch. Para habilitar esta característica (y obtener acceso a los datos de HealthKit), la aplicación debe incluir la clave de `WKBackgroundModes` en el archivo de `Info.plist` con el valor `workout-processing`.

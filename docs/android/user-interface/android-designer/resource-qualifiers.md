@@ -4,15 +4,15 @@ description: En este tema se explica cómo definir los recursos que se usarán s
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ccac795333dff52d35a66e8cd205c7b5bbd1bb2c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70762618"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029414"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Opciones de visualización y calificadores de recursos
 
@@ -24,7 +24,7 @@ _En este tema se explica cómo definir los recursos que se usarán solo cuando s
 
 Se puede tener acceso a las **Opciones del calificador de recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
 
-[Opciones de calificador ![Resource](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[![opciones de calificador de recursos](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 Este cuadro de diálogo presenta menús desplegables para los siguientes calificadores de recursos:
 
@@ -38,7 +38,7 @@ Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que
 
 En el menú desplegable **idioma** se muestran solo los idiomas que tienen definidos los recursos (o **todos los idiomas**, que es el valor predeterminado). Sin embargo, también hay una opción **Agregar idioma o región...** que le permite agregar un nuevo idioma a la lista:
 
-[idioma o región ![Add](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[![Agregar idioma o región](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 Al hacer clic en **Agregar idioma o región...** , se abre el cuadro de diálogo **Seleccionar idioma** para mostrar las listas desplegables de idiomas y regiones disponibles:
 
@@ -54,7 +54,7 @@ Tenga en cuenta que si agrega un nuevo lenguaje pero no crea nuevos recursos, el
 
 Al hacer clic en el menú desplegable **modo de interfaz de usuario** , se muestra una lista de los modos, como **normal**, **coche Dock**, **mesa acoplada**, **televisión**, **dispositivo**y **inspección**:
 
-[menú modo de ![UI](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
+[menú modo de interfaz de usuario de![](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Debajo de esta lista están los modos nocturnos **no nocturno** y **nocturno**, seguidos de las direcciones de diseño de **izquierda a derecha** y de **derecha a izquierda** (para obtener información sobre las opciones de **izquierda a derecha** y **de derecha a izquierda** , vea [ LayoutDirection](xref:Android.Util.LayoutDirection)).
 Los últimos elementos del cuadro de diálogo **Opciones de calificador de recursos** son las **pantallas redondas** (para su uso con el desgaste de Android) o **no las pantallas redondas**.
@@ -103,7 +103,7 @@ Para obtener más información sobre los tipos de recursos, vea [recursos de And
 
 Se puede tener acceso a las **Opciones del calificador de recursos** haciendo clic en el icono de puntos suspensivos a la derecha del botón modo **horizontal** :
 
-[Opciones de calificador ![Resource](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[![opciones de calificador de recursos](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 Este cuadro de diálogo presenta menús desplegables para los siguientes calificadores de recursos:
 
@@ -117,15 +117,15 @@ Cada uno de estos menús desplegables abre nuevos cuadros de diálogo en los que
 
 En el menú desplegable **idioma** se muestran solo los idiomas que tienen definidos los recursos (o **todos los idiomas**, que es el valor predeterminado). Sin embargo, también hay una opción **Agregar idioma o región...** que le permite agregar un nuevo idioma a la lista:
 
-[idioma o región ![Add](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[![Agregar idioma o región](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 Al hacer clic en **Agregar idioma o región...** , se abre el cuadro de diálogo **Seleccionar idioma** para mostrar las listas desplegables de idiomas y regiones disponibles:
 
-[![List de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![lista de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 En este ejemplo, hemos elegido **fr (Francés)** como idioma y **ser** (Bélgica) para el dialecto regional de francés. Tenga en cuenta que el campo **región** es opcional porque se pueden especificar muchos idiomas sin tener en cuenta las regiones específicas. Cuando se vuelve a abrir el menú desplegable de **idioma** , se muestra el recurso de idioma o región recién agregado:
 
-[![Language y región elegidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[![idioma y región elegidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 Tenga en cuenta que si agrega un nuevo lenguaje pero no crea nuevos recursos, el idioma agregado ya no se mostrará la próxima vez que abra el proyecto.
 
@@ -133,7 +133,7 @@ Tenga en cuenta que si agrega un nuevo lenguaje pero no crea nuevos recursos, el
 
 Al hacer clic en el menú desplegable **modo de interfaz de usuario** , se muestra una lista de los modos, como **normal**, **coche Dock**, **mesa acoplada**, **televisión**, **dispositivo**y **inspección**:
 
-[menú modo de ![UI](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
+[menú modo de interfaz de usuario de![](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
 Debajo de esta lista se encuentran los modos nocturnos **no nocturno** y **nocturno**, seguidos de las direcciones de diseño de **izquierda a derecha** y de **derecha a izquierda**. El último par de opciones permite seleccionar **pantallas redondas** o **pantallas rectangulares** (útiles para dispositivos de desgaste de Android).
 
@@ -144,7 +144,7 @@ Para obtener información sobre las opciones de **izquierda a derecha** y de **d
 
 El icono de configuración de la **barra de acciones** está disponible a la izquierda del icono de pincel (editor de temas):
 
-[configuración de la barra de ![Action](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[configuración de Barra de acciones de![](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 Este icono abre un cuadro de diálogo elemento flotante que proporciona una manera de seleccionar uno de los tres modos de Barra de acciones:
 
@@ -158,17 +158,17 @@ Este icono abre un cuadro de diálogo elemento flotante que proporciona una mane
 
 En el menú desplegable de **tema** se muestran todos los temas definidos en el proyecto. Al seleccionar **más temas** , se abre un cuadro de diálogo con una lista de todos los temas disponibles en el Android SDK instalado, como se muestra a continuación:
 
-[![More lista de temas](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[![más lista de temas](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 Cuando se selecciona un tema, el Superficie de diseño se actualiza para mostrar el efecto del nuevo tema. Tenga en cuenta que este cambio se hace permanente solo si se hace clic en el botón **Aceptar** del cuadro de diálogo **tema** . Una vez que se ha seleccionado un tema, se incluirá en el menú desplegable del **tema** , como se muestra a continuación:
 
-[![Light tema está ahora disponible](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[![tema claro ya está disponible](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Versión de Android
 
 El selector de **versión** de Android establece la versión de Android que se usa para representar el diseño en el diseñador. El selector muestra todas las versiones que son compatibles con la versión de .NET Framework de destino del proyecto:
 
-[![List de las versiones de Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[![lista de versiones de Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 La versión de .NET Framework de destino se puede establecer en la configuración del proyecto en la sección **Opciones del proyecto > Compilar > general** . Para obtener más información acerca de la versión de .NET Framework de destino, consulte [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md).
 

@@ -3,19 +3,19 @@ title: 'Parte 4: Trabajo con varias plataformas'
 description: En este documento se describe cómo controlar la divergencia de las aplicaciones en función de la plataforma o la capacidad. Describe el tamaño de la pantalla, las metáforas de navegación, la entrada táctil y los gestos, las notificaciones de envío y los paradigmas de interfaz como listas y pestañas.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555723e689a9ba076ee34d49b93cf7141e542832
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288882"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016888"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4: Trabajo con varias plataformas
 
-## <a name="handling-platform-divergence-amp-features"></a>Control de &amp; las características de divergencia de plataforma
+## <a name="handling-platform-divergence-amp-features"></a>Control de la divergencia de la plataforma &amp; características
 
 La divergencia no es solo un problema de ' multiplataforma '; los dispositivos de la plataforma "mismo" tienen capacidades diferentes (especialmente la gran variedad de dispositivos Android que están disponibles). Lo más obvio y básico es el tamaño de la pantalla, pero otros atributos de dispositivo pueden variar y requieren que una aplicación Compruebe ciertas funcionalidades y se comporten de manera diferente en función de su presencia (o ausencia).
 
@@ -108,7 +108,7 @@ Estas bibliotecas también ofrecen funcionalidad multiplataforma para C# desarro
 
 Hay algunas situaciones en las que el código compartido todavía necesitará trabajar de forma diferente en cada plataforma, lo que podría tener acceso a clases o características que se comporten de manera diferente. La compilación condicional funciona mejor con proyectos de recursos compartidos, donde se hace referencia al mismo archivo de código fuente en varios proyectos que tienen distintos símbolos definidos.
 
-Los proyectos de Xamarin `__MOBILE__` siempre definen lo que es cierto para los proyectos de aplicación iOS y Android (tenga en cuenta el doble subrayado anterior y posterior a la corrección en estos símbolos).
+Los proyectos de Xamarin siempre definen `__MOBILE__` que es true para los proyectos de aplicación iOS y Android (tenga en cuenta el doble subrayado anterior y posterior a la corrección en estos símbolos).
 
 ```csharp
 #if __MOBILE__
@@ -148,7 +148,7 @@ El código que solo se debe compilar en aplicaciones de Xamarin. Android puede u
 #endif
 ```
 
-Cada versión de la API también define una nueva Directiva de compilador, por lo que código como este le permitirá agregar características si las API más recientes son de destino. Cada nivel de API incluye todos los símbolos de nivel "inferiores". Esta característica no es realmente útil para admitir varias plataformas; Normalmente, `__ANDROID__` el símbolo será suficiente.
+Cada versión de la API también define una nueva Directiva de compilador, por lo que código como este le permitirá agregar características si las API más recientes son de destino. Cada nivel de API incluye todos los símbolos de nivel "inferiores". Esta característica no es realmente útil para admitir varias plataformas; Normalmente, el símbolo de `__ANDROID__` será suficiente.
 
 ```csharp
 #if __ANDROID_11__
@@ -158,7 +158,7 @@ Cada versión de la API también define una nueva Directiva de compilador, por l
 
 #### <a name="mac"></a>Mac
 
-Actualmente no hay ningún símbolo integrado para Xamarin. Mac, pero puede Agregar el suyo propio en las opciones del proyecto de aplicación Mac **> Compilar > compilador** en el cuadro **definir símbolos** , o editar el archivo **. csproj** y agregarlo `__MAC__`(por ejemplo,).
+Actualmente no hay ningún símbolo integrado para Xamarin. Mac, pero puede Agregar el suyo propio en las opciones del proyecto de aplicación Mac **> Compilar > compilador** en el cuadro **definir símbolos** , o editar el archivo **. csproj** y agregarlo (por ejemplo `__MAC__`)
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
@@ -179,11 +179,11 @@ Use `WINDOWS_UWP`. No hay ningún carácter de subrayado alrededor de la cadena 
 Un ejemplo sencillo de caso práctico de compilación condicional es establecer la ubicación del archivo para el archivo de base de datos de SQLite. Las tres plataformas tienen requisitos ligeramente diferentes para especificar la ubicación del archivo:
 
 - **iOS** : Apple prefiere que los datos que no son de usuario se coloquen en una ubicación específica (el directorio de la biblioteca), pero no hay ninguna constante del sistema para este directorio. Se requiere código específico de la plataforma para compilar la ruta de acceso correcta.
-- **Android** : la ruta de acceso del `Environment.SpecialFolder.Personal` sistema devuelta por es una ubicación aceptable para almacenar el archivo de base de datos.
+- **Android** : la ruta de acceso del sistema devuelta por `Environment.SpecialFolder.Personal` es una ubicación aceptable para almacenar el archivo de base de datos.
 - **Windows Phone** : el mecanismo de almacenamiento aislado no permite especificar una ruta de acceso completa, solo una ruta de acceso relativa y un nombre de archivo.
-- **Plataforma universal de Windows** : usa `Windows.Storage` las API de.
+- **Plataforma universal de Windows** : utiliza `Windows.Storage` API.
 
-En el código siguiente `DatabaseFilePath` se usa la compilación condicional para asegurarse de que es correcta para cada plataforma:
+En el código siguiente se usa la compilación condicional para asegurarse de que la `DatabaseFilePath` sea correcta para cada plataforma:
 
 ```csharp
 public static string DatabaseFilePath {

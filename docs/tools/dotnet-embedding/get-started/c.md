@@ -3,15 +3,15 @@ title: introducción a C
 description: En este documento se describe cómo usar la inserción de .NET para insertar código de .NET en una aplicación de C. Describe cómo usar la inserción de .NET en Visual Studio 2019 y Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/19/2018
-ms.openlocfilehash: 1dc68a709f8e1f864961bbe87af112b648b0dd2a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9660eccd3e14a6c4ecad901064650fe1e25458f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278740"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029780"
 ---
 # <a name="getting-started-with-c"></a>introducción a C
 
@@ -71,7 +71,7 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Dado que `--compile` la marca se pasó a la herramienta, la incrustación de .net también debe haber compilado los archivos de salida en una biblioteca compartida, que puede encontrar junto a los archivos generados, un archivo **libmanaged. dylib** en MacOS y **Managed. dll** en Windows.
+Dado que la marca de `--compile` se ha pasado a la herramienta, la incrustación de .NET también debe haber compilado los archivos de salida en una biblioteca compartida, que puede encontrar junto a los archivos generados, un archivo **libmanaged. dylib** en MacOS y el archivo **. dll administrado** en Windows.
 
 Para consumir la biblioteca compartida, puede incluir el archivo de encabezado **administrado. h** c, que proporciona las declaraciones de c correspondientes a las API de biblioteca administrada respectivas y un vínculo con la biblioteca compartida compilada anteriormente mencionada.
 

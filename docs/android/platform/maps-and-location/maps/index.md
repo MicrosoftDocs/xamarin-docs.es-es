@@ -4,15 +4,15 @@ description: En este artículo se describe cómo usar las asignaciones y la ubic
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 194f82757b0b4cb5e148e06d4303dc0d22afb9b3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d877f415bb96024bb41edc2be9aec108ae248e88
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761707"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020034"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar las asignaciones y la ubicación de Google con Xamarin. Android
 
@@ -34,5 +34,5 @@ En primer lugar, se explica cómo aprovechar la aplicación de mapas integrada d
 - [MapsAndLocationDemo_v3 (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
 - [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtención de una clave de la API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Lista de intentos: Invocar aplicaciones de Google en dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Lista de intentos: invocación de aplicaciones de Google en dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)
 - [Ubicación y asignaciones](https://developer.android.com/guide/topics/location/index.html)

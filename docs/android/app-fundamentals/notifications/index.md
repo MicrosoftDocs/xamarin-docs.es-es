@@ -3,15 +3,15 @@ title: Notificaciones en Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755366"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025535"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notificaciones en Xamarin. Android
 
@@ -27,11 +27,11 @@ En este tutorial se explica cómo usar las notificaciones locales en una aplicac
 
 ## <a name="further-reading"></a>Información adicional
 
-[Mensajería en la nube Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. La mensajería en la nube Firebase se puede usar para implementar notificaciones remotas (también denominadas notificaciones de envío) en aplicaciones de Xamarin. Android.
+[Firebase Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) Messaging &ndash; Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. La mensajería en la nube Firebase se puede usar para implementar notificaciones remotas (también denominadas notificaciones de envío) en aplicaciones de Xamarin. Android.
 
-[Notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; Este tema de desarrollador de Android es la guía definitiva para las notificaciones de Android. Incluye una sección de consideraciones de diseño que le ayuda a diseñar las notificaciones para que cumplan las directrices de la interfaz de usuario de Android. Proporciona más información sobre la navegación previa al inicio de una actividad y explica cómo mostrar el progreso en una notificación y controlar la reproducción multimedia en la pantalla de bloqueo.
+Las [notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; este tema para desarrolladores de Android es la guía definitiva para las notificaciones de Android. Incluye una sección de consideraciones de diseño que le ayuda a diseñar las notificaciones para que cumplan las directrices de la interfaz de usuario de Android. Proporciona más información sobre la navegación previa al inicio de una actividad y explica cómo mostrar el progreso en una notificación y controlar la reproducción multimedia en la pantalla de bloqueo.
 
-[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; Este servicio Android permite que la aplicación escuche (e interactúe con) todas las notificaciones publicadas en el dispositivo Android, no solo las notificaciones que la aplicación está registrada para recibir.
+[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; este servicio Android permite que la aplicación escuche (e interactúe con) todas las notificaciones publicadas en el dispositivo Android, no solo las notificaciones que la aplicación está registrada para recibir.
 Tenga en cuenta que el usuario debe conceder explícitamente permiso a la aplicación para que pueda escuchar notificaciones en el dispositivo.
 
 ## <a name="related-links"></a>Vínculos relacionados

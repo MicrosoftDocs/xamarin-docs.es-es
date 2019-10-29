@@ -4,15 +4,15 @@ description: Puede personalizar un enlace de Xamarin. Android editando los metad
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756642"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020653"
 ---
 # <a name="customizing-bindings"></a>Personalización de enlaces
 
@@ -24,7 +24,7 @@ Xamarin. Android automatiza gran parte del proceso de enlace. sin embargo, en al
 
 - Resolver errores de compilación causados por tipos que faltan, tipos ofuscados, nombres duplicados, problemas de visibilidad de clases y otras situaciones que las herramientas de Xamarin. Android no pueden resolver. 
 
-- Cambiar la asignación que usa Xamarin. Android para enlazar la API de Android a diferentes C# tipos en (por ejemplo, muchos desarrolladores prefieren asignar `int` constantes de Java C# `enum` a constantes).
+- Cambio de la asignación que usa Xamarin. Android para enlazar la API de Android a C# diferentes tipos en (por ejemplo, muchos desarrolladores prefieren asignar constantes de Java C# `int`a constantes de`enum`).
 
 - Quitar los tipos no usados que no es necesario enlazar. 
 

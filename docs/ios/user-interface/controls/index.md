@@ -4,15 +4,15 @@ description: En este documento se proporcionan vínculos a guías que describen 
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2979b51c954ab891da5e452e579a650a013a7572
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289533"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022045"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controles de interfaz de usuario en Xamarin. iOS
 
@@ -26,9 +26,9 @@ A partir de iOS 8, UIAlertController ha terminado de reemplazar UIActionSheet y 
 
 La clase botón se usa para representar distintos estilos de botón en pantallas de iOS. En esta sección se presentan las diferentes opciones para trabajar con botones en iOS.
 
-## <a name="collection-viewsuicollectionviewmd"></a>[Vistas de colecciones](uicollectionview.md)
+## <a name="collection-viewsuicollectionviewmd"></a>[Vistas de colección](uicollectionview.md)
 
-Las vistas de colección, disponibles `UICollectionView` en la clase, son un nuevo concepto en iOS 6 que presenta la presentación de varios elementos en la pantalla mediante diseños. Los patrones para proporcionar datos a un `UICollectionView` para crear elementos e interactuar con esos elementos siguen la misma delegación y los mismos patrones de origen de datos que se usan habitualmente en el desarrollo de iOS.
+Las vistas de colección, disponibles en la clase `UICollectionView`, son un nuevo concepto en iOS 6 que presenta la presentación de varios elementos en la pantalla mediante diseños. Los patrones para proporcionar datos a una `UICollectionView` para crear elementos e interactuar con dichos elementos siguen los mismos patrones de delegación y de origen de datos que se usan habitualmente en el desarrollo de iOS.
 
 ## <a name="imagesimagemd"></a>[Imágenes](image.md)
 
@@ -36,15 +36,15 @@ Agregar imágenes a la aplicación requiere dos pasos: en primer lugar, agregue 
 
 ## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[Controles manuales de la cámara](intro-to-manual-camera-controls.md)
 
-Los controles `AVFoundation Framework` de la cámara manual, proporcionados por en iOS 8, permiten que una aplicación móvil tenga control total sobre la cámara de un dispositivo iOS. Este nivel específico de control se puede usar para crear aplicaciones de cámara de nivel profesional y proporcionar composiciones de artista mediante el ajuste de los parámetros de la cámara mientras se toma una imagen o un vídeo.
+Los controles de cámara manuales, proporcionados por el `AVFoundation Framework` en iOS 8, permiten que una aplicación móvil tenga control total sobre la cámara de un dispositivo iOS. Este nivel específico de control se puede usar para crear aplicaciones de cámara de nivel profesional y proporcionar composiciones de artista mediante el ajuste de los parámetros de la cámara mientras se toma una imagen o un vídeo.
 
-## <a name="mapsios-mapsindexmd"></a>[Mapas](ios-maps/index.md)
+## <a name="mapsios-mapsindexmd"></a>[Asignaciones](ios-maps/index.md)
 
 Las asignaciones son una característica común en todos los sistemas operativos móviles modernos. iOS ofrece compatibilidad de asignación de forma nativa a través del marco del kit de mapas. Con el kit de mapa, las aplicaciones pueden agregar fácilmente mapas completos e interactivos. Estas asignaciones pueden personalizarse de varias formas, como agregar anotaciones para marcar ubicaciones en un mapa y superponer gráficos de formas arbitrarias. El kit de mapas incluso tiene compatibilidad integrada para mostrar la ubicación actual de un dispositivo.
 
 ## <a name="labelslabelsmd"></a>[Etiquetas](labels.md)
 
-El `UILabel` control se usa para mostrar texto de solo lectura y de una sola línea.
+El control `UILabel` se usa para mostrar texto de solo lectura y de una sola línea.
 
 ## <a name="pickers-and-date-pickerspickermd"></a>[Selectores y selectores de fecha](picker.md)
 
@@ -54,7 +54,7 @@ Un caso de usuario específico para los selectores para establecer la fecha y la
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicadores de progreso y actividad](progress-activity-indicator.md)
 
-iOS proporciona dos maneras principales de indicar el progreso de la aplicación: Indicadores de actividad (incluido un indicador de actividad de _red_ específico) y barras de progreso.
+iOS proporciona dos maneras principales de indicar el progreso de la aplicación: indicadores de actividad (incluido un indicador de actividad de _red_ específico) y barras de progreso.
 
 ## <a name="search-barssearchbarmd"></a>[Barras de búsqueda](searchbar.md)
 
@@ -62,11 +62,11 @@ UISearchBar se usa para buscar en una lista de valores.
 
 ## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Controles deslizantes, conmutadores y controles segmentados](slider-switch-segmented-controls.md)
 
-El control deslizante permite la selección simple de un valor numérico dentro de un intervalo. iOS usa `UISwitch` como entrada booleana que se puede representar mediante un botón de radio en otras plataformas. Un control segmentado es una manera organizada de permitir que los usuarios interactúen con un pequeño número de opciones.
+El control deslizante permite la selección simple de un valor numérico dentro de un intervalo. iOS usa el `UISwitch` como entrada booleana que se puede representar mediante un botón de radio en otras plataformas. Un control segmentado es una manera organizada de permitir que los usuarios interactúen con un pequeño número de opciones.
 
 ## <a name="stack-viewuistackviewmd"></a>[Vista de pila](uistackview.md)
 
-El control de vista de`UIStackView`pila () aprovecha la eficacia de las clases de diseño y tamaño automáticos para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a la orientación y el tamaño de pantalla del dispositivo iOS.
+El control de vista de pila (`UIStackView`) aprovecha la eficacia de las clases de diseño y tamaño automáticos para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a la orientación y el tamaño de pantalla del dispositivo iOS.
 
 ## <a name="tables-and-cellstablesindexmd"></a>[Tablas y vistas](tables/index.md)
 
@@ -74,7 +74,7 @@ en esta sección se presentan las clases que se usan para crear y mostrar tablas
 
 ## <a name="text-inputtext-inputmd"></a>[Entrada de texto](text-input.md)
 
-La aceptación de la entrada de texto del `UITextField` usuario se logra con para las entradas de una sola línea y UITextView para el texto editable de varias líneas. Puede arrastrar cualquiera de estos controles a una pantalla y hacer doble clic para establecer el texto inicial.
+La aceptación de la entrada de texto del usuario se logra con el `UITextField` para las entradas de una sola línea y UITextView para el texto editable de varias líneas. Puede arrastrar cualquiera de estos controles a una pantalla y hacer doble clic para establecer el texto inicial.
 
 ## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[Barras de pestañas y controladores de la barra de pestañas](creating-tabbed-applications.md)
 

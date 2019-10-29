@@ -3,15 +3,15 @@ title: Arquitectura
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fe0903eca5c907fc104728ca0ad7c676a45a5180
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756690"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027910"
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -22,7 +22,7 @@ Puede usar el [sistema](xref:System), [System.IO](xref:System.IO), [System.net](
 
 En Android, la mayoría de los recursos del sistema como audio, gráficos, OpenGL y telefonía no están disponibles directamente en las aplicaciones nativas, solo se exponen a través de las API de Java en tiempo de ejecución de Android que residen en uno de los espacios de nombres [Java](xref:Java.Lang). * o [Android ](xref:Android). * espacios de nombres. La arquitectura es aproximadamente similar a la siguiente:
 
-[![Diagrama de mono y arte sobre el kernel y por debajo de los enlaces de .NET/Java +](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
+[![diagrama de mono y arte sobre el kernel y por debajo de los enlaces de .NET/Java +](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Los desarrolladores de Xamarin. Android acceden a las distintas características del sistema operativo mediante una llamada a las API de .NET que conocen (para el acceso de bajo nivel) o mediante las clases expuestas en los espacios de nombres de Android, que proporcionan un puente a las API de Java que expone el tiempo de ejecución de Android.
 
@@ -56,7 +56,7 @@ Para hacer un seguimiento de Cuándo se crean y destruyen referencias globales, 
 
 Las referencias globales se pueden liberar explícitamente mediante una llamada a [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose) en el contenedor al que se puede llamar administrado. Esto eliminará la asignación entre la instancia de Java y la instancia administrada y permitirá la recopilación de la instancia de Java. Si se vuelve a tener acceso a la instancia de Java desde el código administrado, se creará un nuevo contenedor al que se puede llamar administrado.
 
-Se debe tener cuidado al desechar los contenedores que se pueden llamar administrados si la instancia se puede compartir accidentalmente entre subprocesos, ya que si se elimina la instancia, afectará a las referencias de otros subprocesos. Para obtener la máxima seguridad `Dispose()` , solo las instancias que se han `new` asignado a través de los métodos *o* desde los métodos que *sabe* que siempre asignan nuevas instancias y no las instancias almacenadas en caché, lo que puede provocar un uso compartido accidental de instancias entre ThreadPool.
+Se debe tener cuidado al desechar los contenedores que se pueden llamar administrados si la instancia se puede compartir accidentalmente entre subprocesos, ya que si se elimina la instancia, afectará a las referencias de otros subprocesos. Para obtener la máxima seguridad, solo `Dispose()` de instancias que se han asignado a través de `new` *o* de métodos que *sabe* que siempre asignan nuevas instancias y no instancias almacenadas en caché, lo que puede provocar un uso compartido accidental de instancias entre subprocesos.
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Subclases de contenedor con llamadas administradas
 
@@ -92,11 +92,11 @@ Orden de eventos:
 
 4. El constructor *TextView* invoca *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
 
-5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [java. lang. Object. GetObject&lt; TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [Java. lang. Object. GetObject @no_ _t_4_ TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
-6. *Java. lang. Object. GetObject&lt;TextView&gt;()* comprueba si ya existe una instancia correspondiente C# para el *identificador* . Si existe, se devuelve. En este escenario, no existe, por lo que *Object&lt;.&gt;GetObject t ()* debe crear uno.
+6. *Java. lang. Object. GetObject&lt;TextView&gt;()* comprueba si ya existe una instancia correspondiente C# para el *identificador* . Si existe, se devuelve. En este escenario, no existe, por lo que *Object. GetObject&lt;t&gt;()* debe crear uno.
 
-7. *Object. GetObject&lt;T&gt;()* busca el constructor *LogTextBox (IntPtr, JniHandleOwneship)* , lo invoca, crea una asignación entre el *identificador* y la instancia creada, y devuelve la instancia creada.
+7. *Object. GetObject&lt;t&gt;()* busca el constructor *LogTextBox (IntPtr, JniHandleOwneship)* , lo invoca, crea una asignación entre el *identificador* y la instancia creada, y devuelve la instancia creada.
 
 8. *TextView. n_GetDefaultMovementMethod ()* invoca el captador de la propiedad *LogTextBox. DefaultMovementMethod* .
 
@@ -165,8 +165,8 @@ Solo *Dispose ()* de las subclases de contenedor a las que se puede llamar admin
 
 ## <a name="application-startup"></a>Inicio de la aplicación
 
-Cuando se inicia una actividad, servicio, etc., Android comprobará primero si ya existe un proceso en ejecución para hospedar la actividad/servicio, etc. Si no existe tal proceso, se creará un nuevo proceso, se leerá [archivo AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) y se cargará y se creará una [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) instancia del tipo especificado en el atributo. A continuación, se crea una instancia [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) de todos los tipos especificados por los valores de atributo y se invoca el método [ContentProvider. attachInfo% 28)](xref:Android.Content.ContentProvider.AttachInfo*) . Xamarin. Android se enlaza en esto agregando un *mono. MonoRuntimeProvider* *ContentProvider* archivo AndroidManifest. XML durante el proceso de compilación. *Mono. El método MonoRuntimeProvider. attachInfo ()* es responsable de cargar el tiempo de ejecución de mono en el proceso.
-Cualquier intento de usar mono antes de este punto producirá un error. ( *Nota*: Este es el motivo por el que los tipos de la subclase [Android. app. Application](xref:Android.App.Application) deben proporcionar un [constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), ya que la instancia de la aplicación se crea antes de que se pueda inicializar mono.
+Cuando se inicia una actividad, servicio, etc., Android comprobará primero si ya existe un proceso en ejecución para hospedar la actividad/servicio, etc. Si no existe tal proceso, se creará un nuevo proceso, se leerá [archivo AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) y se cargará y se creará una instancia del tipo especificado en el atributo [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) . A continuación, se crea una instancia de todos los tipos especificados por los valores de atributo [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) y se invoca el método [ContentProvider. attachInfo %28)](xref:Android.Content.ContentProvider.AttachInfo*) . Xamarin. Android se enlaza en esto agregando un *mono. MonoRuntimeProvider* *ContentProvider* archivo AndroidManifest. XML durante el proceso de compilación. *Mono. El método MonoRuntimeProvider. attachInfo ()* es responsable de cargar el tiempo de ejecución de mono en el proceso.
+Cualquier intento de usar mono antes de este punto producirá un error. ( *Nota*: este es el motivo por el que los tipos de la subclase [Android. app. Application](xref:Android.App.Application) deben proporcionar un [constructor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), ya que se crea la instancia de la aplicación antes de que se pueda inicializar mono.)
 
-Una vez completada la inicialización del proceso, se consulta para encontrar el nombre de clase de la actividad/servicio, `AndroidManifest.xml` etc. para iniciar. Por ejemplo, el [ /manifest/application/activity/@android:name atributo](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) se usa para determinar el nombre de una actividad que se va a cargar. En el caso de las actividades, este tipo debe heredar [Android. app. Activity](xref:Android.App.Activity).
+Una vez completada la inicialización del proceso, se consultan `AndroidManifest.xml` para encontrar el nombre de clase de la actividad/servicio, etc., para iniciar. Por ejemplo, el [atributo/manifest/application/activity/@android:name](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) se utiliza para determinar el nombre de una actividad que se va a cargar. En el caso de las actividades, este tipo debe heredar [Android. app. Activity](xref:Android.App.Activity).
 El tipo especificado se carga a través de [Class. forName ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (que requiere que el tipo sea un tipo de Java, por lo tanto, los contenedores a los que se puede llamar de Android) y, después, se cree una instancia de él. La creación de una instancia de contenedor de Android al que se puede llamar desencadenará C# la creación de una instancia del tipo correspondiente. Después, Android invocará [Activity. Create (bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , lo que provocará que se invoque la [actividad correspondiente. Create (bundle)](xref:Android.App.Activity.OnCreate*) y está fuera de las carreras.

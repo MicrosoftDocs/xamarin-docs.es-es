@@ -4,15 +4,15 @@ description: En este documento se describen los distintos cambios del marco de t
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768583"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028283"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Cambios adicionales en los marcos de watchos 3
 
@@ -27,8 +27,8 @@ Se han realizado las siguientes mejoras en el marco de datos principal para Watc
 - Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) raíz admiten errores y recuperaciones simultáneas sin serialización.
 - La clase [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) mantiene un grupo de almacenes de datos de SQLite.
 - Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) con almacenes de datos de SQLite en el modo de diario de Wal admiten la nueva característica de generación de consultas, donde los contextos de objeto administrados (MOC) se pueden anclar a versiones de base de datos específicas para futuras capturas y transacciones con errores.
-- Usar el nivel `NSPersistenceContainer` alto para `NSPersistentStoreCoordinator`hacer referencia a, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración de datos principales.
-- Se han agregado varios métodos de conveniencia para `NSManagedObject` facilitar la realización de capturas y la creación de subclases.
+- Usar el `NSPersistenceContainer` de alto nivel para hacer referencia a la `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración de datos principales.
+- Se han agregado varios métodos útiles nuevos a `NSManagedObject` que facilitan la realización de capturas y la creación de subclases.
 
 Para obtener más información, consulte la referencia de la [plataforma principal de datos](https://developer.apple.com/reference/coredata)de Apple.
 
@@ -55,7 +55,7 @@ Se han realizado las siguientes mejoras en el marco de trabajo de HealthKit para
 
 - Use la nueva clase [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar el `ActivityType` y `LocationType` de un entrenamiento.
 - Se han agregado los nuevos [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y el método `WheelchairUse` de la clase [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) para trabajar con los datos de mantenimiento relacionados con la silla.
-- Se han agregado nuevas claves de metadatos para los tipos meteorológicos `HKWeatherConditionCloudy`( `HKWeatherConditionClear` como y) y los tipos `HKWorkoutActivityTypeFlexibility` de `HKWorkoutActivityTypeWheelchairRunPace`entrenamiento (como y).
+- Se han agregado nuevas claves de metadatos para los tipos meteorológicos (como `HKWeatherConditionClear` y `HKWeatherConditionCloudy`) y los tipos de entrenamiento (como `HKWorkoutActivityTypeFlexibility` y `HKWorkoutActivityTypeWheelchairRunPace`).
 
 ## <a name="homekit"></a>HomeKit
 
@@ -70,14 +70,14 @@ Se han realizado las siguientes mejoras en el marco de trabajo de HomeKit para W
 Se han realizado las siguientes mejoras en el marco de trabajo de PassKit para Watch OS 3:
 
 - Amplía el marco de trabajo para admitir pagos en la aplicación y seguros en el Apple Watch de bienes y servicios físicos.
-- Las siguientes clases están ahora disponibles: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) y [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
+- Ahora están disponibles las siguientes clases: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) y [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
 ## <a name="uikit"></a>UIKit
 
 Se han realizado las siguientes mejoras en el marco de trabajo de UIKit para Watch OS 3:
 
-- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros `PreferredFontForTextStyle` de texto utilizan `UIFont` el nuevo método de la clase.
-- Se `ColorWithDisplayP3` ha agregado el método para admitir el color ancho.
+- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros de texto utilizan el nuevo método `PreferredFontForTextStyle` de la clase `UIFont`.
+- Se ha agregado el método `ColorWithDisplayP3` para admitir el color ancho.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

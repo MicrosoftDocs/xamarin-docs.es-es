@@ -3,21 +3,21 @@ title: Crear enlaces con Sharpie objetivo
 description: En esta sección se proporciona una introducción a Objective Sharpie, la herramienta de línea de comandos de Xamarin que se usa para automatizar el proceso de creación de un enlace a una biblioteca de Objective-C.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765709"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016190"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Crear enlaces con Sharpie objetivo
 
 _En esta sección se proporciona una introducción a Objective Sharpie, la herramienta de línea de comandos de Xamarin que se usa para automatizar el proceso de creación de un enlace a una biblioteca de Objective-C._
 
-- [Información general](#overview) & [Historia](#history)
+- [Información general](#overview) & [historial](#history)
 - [Introducción](get-started.md)
 - [Herramientas y comandos](tools.md)
 - [Características](platform/index.md)
@@ -44,7 +44,7 @@ Sin embargo, Objective Sharpie es una herramienta muy avanzada que requiere un c
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Descarga de Sharpie de objetivos](https://aka.ms/objective-sharpie)
-- [Tutorial: Enlazar una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Tutorial: enlazar una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Detalles de enlace](~/cross-platform/macios/binding/overview.md)
 - [Guía de referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md)

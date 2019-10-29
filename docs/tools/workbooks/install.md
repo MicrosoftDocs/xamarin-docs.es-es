@@ -3,15 +3,15 @@ title: Instalación y requisitos de los libros
 description: En este documento se describe cómo descargar e instalar Xamarin Workbooks, y se describen las plataformas admitidas y los requisitos del sistema.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 6fc204e8524d53820407b2efd3ab0de6af28c669
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249909"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029627"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
@@ -61,7 +61,7 @@ ms.locfileid: "71249909"
 
 Adjuntar siempre los archivos de registro de cliente de los libros:
 
-- Macintosh`~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 1.4. x también ofrece la posibilidad de seleccionar el archivo de registro en Finder (macOS) o en el explorador (Windows) directamente desde el menú principal:
@@ -70,7 +70,7 @@ Adjuntar siempre los archivos de registro de cliente de los libros:
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Rutas de acceso de registro para los libros 1,3 y anteriores:
 
-- Macintosh`~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 ### <a name="platform-version-information"></a>Información de versión de la plataforma
@@ -93,7 +93,7 @@ Programa para la mejora
 - **Ayuda > Acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 Si puede adjuntar o vincular al archivo **. Workbooks** con el que tiene problemas, puede que le resulte más fácil resolver el error.
 
@@ -103,11 +103,11 @@ Si tiene problemas para conectar su libro de iOS o Android y ya ha comprobado [n
 
 - Nombre del dispositivo al que está intentando conectarse
 - Versión del sistema operativo del dispositivo
-- Android: Comprobar que se usa un emulador x86
-- Android: ¿Qué plataforma de emulador usa? ¿Es el emulador de Google?
+- Android: comprobar que se usa un emulador x86
+- Android: ¿qué plataforma de emulador usa? ¿Es el emulador de Google?
   ¿Android Emulator de Visual Studio? ¿Xamarin Android Player?
-- iOS en Windows: ¿Qué versión del simulador de iOS remoto de Xamarin tiene instalado (Active **Agregar o quitar programas** en el **Panel de control**)?
-- iOS en Windows: Proporcione también información de versión de la plataforma para el host de compilación de Mac.
+- iOS en Windows: ¿qué versión del simulador de iOS remoto de Xamarin tiene instalado (Active **Agregar o quitar programas** en el **Panel de control**)?
+- iOS en Windows: proporcione también información de versión de la plataforma para el host de compilación de Mac.
 - ¿El dispositivo tiene conectividad de red (consulte a través del explorador Web)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -128,7 +128,7 @@ Si instaló libros con un instalador descargado, tendrá que desinstalarlo a tra
 
 > **Iniciar > Configuración > características & de System > apps**
 
-![](install-images/windows-remove.png "Xamarin Workbooks como se muestra &quot;en &amp; características de aplicaciones&quot;")
+![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
 
 **Siga el procedimiento del Instalador de Visual Studio para asegurarse de que los libros no se vuelvan a instalar sin su conocimiento.**
 
@@ -144,7 +144,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 El desinstalador detallará los archivos y directorios que se quitarán y pedirá confirmación antes de continuar.
 
-Pase el `-help` argumento `uninstall` al script para escenarios más avanzados.
+Pase el argumento `-help` al script de `uninstall` para escenarios más avanzados.
 
 En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
@@ -155,11 +155,11 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 ## <a name="downgrading"></a>Degradar
 
-El identificador de paquete para los **libros de/Applications/Xamarin.** la aplicación `com.xamarin.Inspector` cambió `com.xamarin.Workbooks` de a en la versión 1,4, ya que los libros y el inspector se han dividido por completo.
+El identificador de la agrupación de **/Applications/Xamarin Workbooks. app** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1,4, ya que los libros y el inspector ahora están totalmente divididos.
 
 Debido a un error en instaladores más antiguos, no es posible degradar las versiones 1,4 o más recientes con los instaladores de 1.3.2 o anteriores.
 
 Para cambiar de 1,4 o posterior a 1.3.2 o anterior:
 
 1. [Desinstalar libros & inspector manualmente](#uninstall-macos)
-2. Ejecutar el instalador 1.3.2 o `.pkg` anterior
+2. Ejecutar el instalador de `.pkg` 1.3.2 o anterior

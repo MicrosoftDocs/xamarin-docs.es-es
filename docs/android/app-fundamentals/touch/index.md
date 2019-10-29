@@ -4,15 +4,15 @@ description: 'Las pantallas táctiles en muchos de los dispositivos de hoy en d�
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43637d8592631b2732e5922544f52d91947dd3bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754715"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024282"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Toque y gestos en Xamarin. Android
 
@@ -22,7 +22,7 @@ _Las pantallas táctiles en muchos de los dispositivos de hoy en día permiten a
 
 iOS y Android son similares en las maneras en que controlan el toque. Ambos pueden admitir puntos de contacto con varios toques en los gestos complejos y de pantalla. En esta guía se presentan algunas de las similitudes en los conceptos, así como las peculiaridades de la implementación de funciones táctiles y gestos en ambas plataformas.
 
-Android usa un `MotionEvent` objeto para encapsular los datos táctiles y métodos en el objeto de vista para escuchar los toques.
+Android usa un objeto `MotionEvent` para encapsular los datos táctiles y métodos en el objeto de vista para escuchar los toques.
 
 Además de capturar los datos táctiles, tanto iOS como Android proporcionan medios para interpretar los patrones de los toques en los gestos. Estos reconocedores de gestos se pueden usar a su vez para interpretar comandos específicos de la aplicación, como un giro de una imagen o un turno de una página. Android proporciona una serie de gestos admitidos, así como recursos para facilitar la adición de gestos personalizados complejos.
 
@@ -33,7 +33,7 @@ En esta guía se sigue un formato similar para cada sistema operativo: en primer
 ## <a name="sections"></a>Secciones
 
 - [Entrada táctil de Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
-- [Tutorial: Uso de Touch en Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Tutorial: uso de Touch en Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 - [Seguimiento multitáctil](touch-tracking.md)
 
 ## <a name="summary"></a>Resumen

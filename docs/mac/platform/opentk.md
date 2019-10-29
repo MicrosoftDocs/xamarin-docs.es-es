@@ -4,25 +4,25 @@ description: En este artículo se proporciona una introducción al uso de OpenTK
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 908ed187d8d3d341f8d65e3a3d417588492f325f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292967"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029876"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin. Mac
 
 OpenTK (The Open Toolkit) es una biblioteca avanzada de bajo nivel C# que facilita el trabajo con OpenGL, OpenCL y openic. OpenTK se puede usar para juegos, aplicaciones científicas u otros proyectos que requieran gráficos 3D, audio o funcionalidad de cálculo. En este artículo se ofrece una breve introducción al uso de OpenTK en una aplicación de Xamarin. Mac.
 
-[![](opentk-images/intro01.png "Ejecución de una aplicación de ejemplo")](opentk-images/intro01.png#lightbox)
+[![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
 En este artículo, trataremos los aspectos básicos de OpenTK en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
 
-Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) también, en él se explican `Export` los `Register` comandos y que se usan para C# conectar las clases a Objetos de Objective-C y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , donde se explican los comandos`Register`y`Export`que se usan para conectar las C# clases a Objective-C. objetos y elementos de la interfaz de usuario.
 
 <a name="About_OpenTK" />
 
@@ -36,7 +36,7 @@ Como se indicó anteriormente, OpenTK (el kit de herramientas abierto) es una bi
 - **Enlaces enriquecidos con seguridad de tipos** : OpenTK admite las versiones más recientes de OpenGL, OpenGL | es, openy y OpenCL con la carga de extensión automática, la comprobación de errores y la documentación en línea.
 - **Opciones de GUI flexibles** : OpenTK proporciona una ventana de juego nativa y de alto rendimiento diseñada específicamente para juegos y Xamarin. Mac.
 - **Code-OpenTK totalmente administrado y conforme a CLS** es compatible con las versiones de 32 y 64 bits de MacOS sin bibliotecas no administradas.
-- **Kit de herramientas Math 3D** OpenTK proporciona `Vector`Structs `Quaternion` , y`Bezier` a través de `Matrix`su kit de herramientas de matemáticas 3D.
+- **Kit de herramientas Math 3D** OpenTK proporciona Structs `Vector`, `Matrix`, `Quaternion` y `Bezier` a través de su kit de herramientas de matemáticas 3D.
 
 OpenTK se puede usar para juegos, aplicaciones científicas u otros proyectos que requieran gráficos 3D, audio o funcionalidad de cálculo.
 
@@ -52,13 +52,13 @@ Como introducción rápida al uso de OpenTK en una aplicación de Xamarin. Mac, 
 
 ### <a name="starting-a-new-project"></a>Iniciar un nuevo proyecto
 
-Inicie Visual Studio para Mac y cree una nueva solución de Xamarin. Mac. Seleccione > **aplicación**Macgeneral > aplicación de**coco**: > 
+Inicie Visual Studio para Mac y cree una nueva solución de Xamarin. Mac. Seleccione **Mac** > **app** > **General** > **aplicación de coco**:
 
-[![](opentk-images/sample01.png "Adición de una nueva aplicación de coco")](opentk-images/sample01.png#lightbox)
+[![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
 
-Escriba `MacOpenTK` como **nombre del proyecto**:
+Escriba `MacOpenTK` para el **nombre del proyecto**:
 
-[![](opentk-images/sample02.png "Establecer el nombre del proyecto")](opentk-images/sample02.png#lightbox)
+[![](opentk-images/sample02.png "Setting the project name")](opentk-images/sample02.png#lightbox)
 
 Haga clic en el botón **crear** para compilar el nuevo proyecto.
 
@@ -68,15 +68,15 @@ Haga clic en el botón **crear** para compilar el nuevo proyecto.
 
 Antes de poder usar Open TK en una aplicación de Xamarin. Mac, debe incluir una referencia al ensamblado OpenTK. En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **referencias** y seleccione **Editar referencias.** ...
 
-Active la casilla de `OpenTK` verificación y haga clic en el botón **Aceptar** :
+Coloque una comprobación por `OpenTK` y haga clic en el botón **Aceptar** :
 
-[![](opentk-images/sample03.png "Editar las referencias del proyecto")](opentk-images/sample03.png#lightbox)
+[![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
 ### <a name="using-opentk"></a>Usar OpenTK
 
-Con el nuevo proyecto creado, haga doble clic en `MainWindow.cs` el archivo en el **Explorador de soluciones** para abrirlo para su edición. Haga que `MainWindow` la clase tenga el aspecto siguiente:
+Con el nuevo proyecto creado, haga doble clic en el archivo `MainWindow.cs` en el **Explorador de soluciones** para abrirlo para su edición. Haga que la clase de `MainWindow` tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -168,7 +168,7 @@ Vamos a repasar este código en detalle más adelante.
 
 ### <a name="required-apis"></a>API necesarias
 
-Se requieren varias referencias para usar OpenTK en una clase de Xamarin. Mac. Al principio de la definición, hemos incluido las siguientes `using` instrucciones:
+Se requieren varias referencias para usar OpenTK en una clase de Xamarin. Mac. Al principio de la definición, hemos incluido las siguientes instrucciones de `using`:
 
 ```csharp
 using System;
@@ -198,7 +198,7 @@ Game = new MonoMacGameView(ContentView.Frame);
 ContentView = Game;
 ```
 
-Aquí hemos realizado la vista de juego del mismo tamaño que la ventana principal de Mac y hemos reemplazado la vista de contenido de la `MonoMacGameView`ventana por la nueva. Dado que reemplazamos el contenido de la ventana existente, se cambiará automáticamente el tamaño de la vista concedido cuando se cambie el tamaño de las ventanas principales.
+Aquí hemos realizado la vista de juego del mismo tamaño que la ventana principal de Mac y hemos reemplazado la vista de contenido de la ventana por la nueva `MonoMacGameView`. Dado que reemplazamos el contenido de la ventana existente, se cambiará automáticamente el tamaño de la vista concedido cuando se cambie el tamaño de las ventanas principales.
 
 <a name="Responding_to_Events" />
 
@@ -210,7 +210,7 @@ Hay varios eventos predeterminados a los que debe responder cada vista de juego.
 
 ### <a name="the-load-event"></a>Evento Load
 
-El `Load` evento es el lugar para cargar recursos desde el disco, como imágenes, texturas o música. Para nuestra aplicación de prueba sencilla, no usamos el `Load` evento, pero lo hemos incluido como referencia:
+El evento `Load` es el lugar para cargar recursos desde el disco, como imágenes, texturas o música. Para nuestra sencilla aplicación de prueba, no usamos el evento `Load`, pero lo hemos incluido como referencia:
 
 ```csharp
 Game.Load += (sender, e) =>
@@ -223,7 +223,7 @@ Game.Load += (sender, e) =>
 
 ### <a name="the-resize-event"></a>El evento Resize
 
-Se `Resize` debe llamar al evento cada vez que se cambie el tamaño de la vista del juego. En nuestra aplicación de ejemplo, vamos a hacer que la ventanilla de GL tenga el mismo tamaño que la vista de juego (a la que se cambia automáticamente el tamaño de la ventana principal de Mac) con el siguiente código:
+Se debe llamar al evento `Resize` cada vez que se cambia el tamaño de la vista del juego. En nuestra aplicación de ejemplo, vamos a hacer que la ventanilla de GL tenga el mismo tamaño que la vista de juego (a la que se cambia automáticamente el tamaño de la ventana principal de Mac) con el siguiente código:
 
 ```csharp
 Game.Resize += (sender, e) =>
@@ -237,7 +237,7 @@ Game.Resize += (sender, e) =>
 
 ### <a name="the-updateframe-event"></a>El evento UpdateFrame
 
-El `UpdateFrame` evento se utiliza para controlar la entrada del usuario, actualizar las posiciones de los objetos, ejecutar cálculos físicos o de inteligencia artificial. Para nuestra aplicación de prueba sencilla, no usamos el `UpdateFrame` evento, pero lo hemos incluido como referencia:
+El evento `UpdateFrame` se utiliza para controlar la entrada del usuario, actualizar las posiciones de los objetos, ejecutar cálculos físicos o de inteligencia artificial. Para nuestra sencilla aplicación de prueba, no usamos el evento `UpdateFrame`, pero lo hemos incluido como referencia:
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -247,13 +247,13 @@ Game.UpdateFrame += (sender, e) =>
 ```
 
 > [!IMPORTANT]
-> La implementación de Xamarin. Mac de OpenTK no incluye `Input API`, por lo que tendrá que usar las API proporcionadas por Apple para agregar compatibilidad con el teclado y el mouse. Opcionalmente, puede crear una instancia personalizada de `MonoMacGameView` e invalidar los `KeyDown` métodos y. `KeyUp`
+> La implementación de Xamarin. Mac de OpenTK no incluye el `Input API`, por lo que tendrá que usar las API proporcionadas por Apple para agregar compatibilidad con el teclado y el mouse. Opcionalmente, puede crear una instancia personalizada del `MonoMacGameView` e invalidar los métodos `KeyDown` y `KeyUp`.
 
 <a name="The_RenderFrame_Event" />
 
 ### <a name="the-renderframe-event"></a>El evento RenderFrame
 
-El `RenderFrame` evento contiene el código que se usa para representar (dibujar) los gráficos. En nuestra aplicación de ejemplo, vamos a rellenar la vista de juego con un triángulo sencillo:
+El evento `RenderFrame` contiene el código que se usa para representar (dibujar) los gráficos. En nuestra aplicación de ejemplo, vamos a rellenar la vista de juego con un triángulo sencillo:
 
 ```csharp
 Game.RenderFrame += (sender, e) =>
@@ -280,7 +280,7 @@ Game.RenderFrame += (sender, e) =>
 Normalmente, el código de representación tendrá una llamada a `GL.Clear` para quitar los elementos existentes antes de dibujar los nuevos elementos.
 
 > [!IMPORTANT]
-> La versión de Xamarin. Mac de OpenTK **no** llama al `SwapBuffers` método de la `MonoMacGameView` instancia al final del código de representación. Si lo hace, la vista de juego se verá estroboscópica rápidamente en lugar de mostrar la vista representada.
+> En el caso de la versión de Xamarin. Mac de OpenTK, **no** llame al método `SwapBuffers` de la instancia de `MonoMacGameView` al final del código de representación. Si lo hace, la vista de juego se verá estroboscópica rápidamente en lugar de mostrar la vista representada.
 
 <a name="Running_the_Game_View" />
 
@@ -293,11 +293,11 @@ Con todos los eventos necesarios definir y la vista de juego conectada a la vent
 Game.Run(60.0);
 ```
 
-Pasamos la velocidad de fotogramas deseada en la que queremos que se actualice la vista de juego, en nuestro ejemplo `60` hemos elegido fotogramas por segundo (la misma frecuencia de actualización que la de TV normal).
+Pasamos la velocidad de fotogramas deseada en la que queremos que se actualice la vista de juego, en nuestro ejemplo hemos elegido `60` fotogramas por segundo (la misma frecuencia de actualización que la de TV normal).
 
 Vamos a ejecutar la aplicación y ver la salida:
 
-[![](opentk-images/intro01.png "Un ejemplo de la salida de las aplicaciones")](opentk-images/intro01.png#lightbox)
+[![](opentk-images/intro01.png "A sample of the apps output")](opentk-images/intro01.png#lightbox)
 
 Si se cambia el tamaño de la ventana, la vista de juego también residirá y se cambiará el tamaño del triángulo y también se actualizará en tiempo real.
 
@@ -307,11 +307,11 @@ Si se cambia el tamaño de la ventana, la vista de juego también residirá y se
 
 Con los aspectos básicos del trabajo con OpenTk en una aplicación de Xamarin. Mac, estas son algunas sugerencias de lo que se debe probar a continuación:
 
-- Intente cambiar el color del triángulo y el color de fondo de la vista de juego en `Load` los `RenderFrame` eventos y.
-- Haga que el triángulo cambie de color cuando el usuario presione una tecla `UpdateFrame` en `RenderFrame` los eventos y o cree su `MonoMacGameView` propia clase personalizada e `KeyUp` invalide los métodos y `KeyDown` .
-- Haga que el triángulo se mueva por la pantalla mediante las teclas de `UpdateFrame` reconocimiento del evento. Hint: Use el `Matrix4.CreateTranslation` método para crear una matriz de traslación y `GL.LoadMatrix` llamar al método para cargarla en `RenderFrame` el evento.
-- Use un `for` bucle para representar varios triángulos en el `RenderFrame` evento.
-- Gire la cámara para dar una vista diferente del triángulo en el espacio 3D. Hint: Use el `Matrix4.CreateTranslation` método para crear una matriz de traslación y `GL.LoadMatrix` llamar al método para cargarla. También puede `Vector2`usar las clases `Vector4` , `Vector3`y `Matrix4` para las manipulaciones de la cámara.
+- Intente cambiar el color del triángulo y el color de fondo de la vista del juego en los eventos `Load` y `RenderFrame`.
+- Haga que el triángulo cambie de color cuando el usuario presione una tecla en los eventos `UpdateFrame` y `RenderFrame` o cree su propia clase de `MonoMacGameView` personalizada e invalide los métodos `KeyUp` y `KeyDown`.
+- Haga que el triángulo se mueva por la pantalla mediante las teclas de reconocimiento del evento `UpdateFrame`. Hint: Use el método `Matrix4.CreateTranslation` para crear una matriz de traslación y llamar al método `GL.LoadMatrix` para cargarla en el evento `RenderFrame`.
+- Use un bucle `for` para representar varios triángulos en el evento `RenderFrame`.
+- Gire la cámara para dar una vista diferente del triángulo en el espacio 3D. Hint: Use el método `Matrix4.CreateTranslation` para crear una matriz de traslación y llamar al método `GL.LoadMatrix` para cargarla. También puede usar las clases `Vector2`, `Vector3`, `Vector4` y `Matrix4` para las manipulaciones de la cámara.
 
 Para obtener más ejemplos, consulte el repositorio de [GitHub de ejemplos de OpenTK](https://github.com/opentk/opentk/tree/master/Source/Examples) . Contiene una lista oficial de ejemplos del uso de OpenTK. Tendrá que adaptar estos ejemplos para usar con la versión de Xamarin. Mac de OpenTK.
 

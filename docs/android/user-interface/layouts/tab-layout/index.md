@@ -4,15 +4,15 @@ description: Información general sobre los diseños con pestañas en Android
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2017
-ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4ca4200d0f9036ed76e20e3a1840303e7bb3b7e3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762190"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028789"
 ---
 # <a name="tabbed-layouts"></a>Diseños con pestañas
 
@@ -20,13 +20,13 @@ ms.locfileid: "70762190"
 
 Las pestañas son un conocido patrón de interfaz de usuario en aplicaciones móviles debido a su simplicidad y facilidad de uso. Proporcionan una manera coherente y sencilla de desplazarse entre varias pantallas en una aplicación. Android tiene varias API para las interfaces con pestañas: 
 
-- **Barra** &ndash; Esto forma parte de un nuevo conjunto de API que se presentó en Android 3,0 (nivel de API 11) con el objetivo de proporcionar una interfaz de navegación y cambio de vista coherente. Se ha trasladado a Android 2,2 (nivel de API 8) con la [biblioteca de compatibilidad de Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
+- **Barra** &ndash; esto forma parte de un nuevo conjunto de API que se presentó en Android 3,0 (nivel de API 11) con el objetivo de proporcionar una interfaz de navegación y cambio de vista coherente. Se ha trasladado a Android 2,2 (nivel de API 8) con la [biblioteca de compatibilidad de Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
 
-- **PagerTabStrip** Indica las páginas actual, siguiente y anterior `ViewPager`de. &ndash; `ViewPager`solo está disponible a través de la [biblioteca de compatibilidad de Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
-     Para obtener más información `PagerTabStrip`sobre, vea [ViewPager](~/android/user-interface/controls/view-pager/index.md).
+- **PagerTabStrip** &ndash; indica las páginas actual, siguiente y anterior de un `ViewPager`. `ViewPager` solo está disponible a través de la [biblioteca de compatibilidad de Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+     Para obtener más información acerca de `PagerTabStrip`, vea [ViewPager](~/android/user-interface/controls/view-pager/index.md).
 
-- **Barra de herramientas** es un componente de barra de acción más reciente y flexible `ActionBar`que reemplaza a. &ndash; `Toolbar` `Toolbar`está disponible en Android 5,0 Lollipop o posterior y también está disponible para versiones anteriores de Android mediante el paquete NuGet de la [biblioteca de compatibilidad de Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
-    `Toolbar`es actualmente el componente de la barra de acciones recomendado que se usará en las aplicaciones Android.
+- **Barra de herramientas** &ndash; `Toolbar` es un componente de barra de acción más reciente y flexible que reemplaza a `ActionBar`. `Toolbar` está disponible en Android 5,0 Lollipop o posterior y también está disponible para versiones anteriores de Android mediante el paquete NuGet de la [biblioteca de compatibilidad de Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
+    `Toolbar` es actualmente el componente de la barra de acciones recomendado que se va a usar en las aplicaciones de Android.
     Para obtener más información, vea [barra de herramientas](~/android/user-interface/controls/tool-bar/index.md). 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -4,21 +4,21 @@ description: En este artículo se presenta un tutorial paso a paso en el que se 
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2091e710352b25167b740e409955787ffec99e1c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768957"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022001"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotaciones y superposiciones en Xamarin. iOS
 
 La aplicación que vamos a crear en este tutorial se muestra a continuación:
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "Una aplicación de ejemplo de MapKit")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
+ [![](ios-maps-walkthrough-images/00-map-overlay.png "An example MapKit app")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
 Puede encontrar el código completado en el [ejemplo de tutorial de Maps](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough).
 
@@ -35,7 +35,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
     using CoreGraphics
     ```
 
-1. Agregue una `MKMapView` variable de instancia a la clase, junto con `MapDelegate` una instancia de. Crearemos lo `MapDelegate` siguiente:
+1. Agregue una variable de instancia de `MKMapView` a la clase, junto con una instancia de `MapDelegate`. Crearemos el `MapDelegate` en breve:
 
     ```csharp
     public partial class ViewController : UIViewController
@@ -45,7 +45,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
         ...
     ```
 
-1. En el método del `LoadView` controlador, `MKMapView` agregue y establézcalo en la `View` propiedad del controlador:
+1. En el método `LoadView` del controlador, agregue un `MKMapView` y establézcalo en la propiedad `View` del controlador:
 
     ```csharp
     public override void LoadView ()
@@ -57,7 +57,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     A continuación, agregaremos código para inicializar la asignación en el método ' ViewDidLoad ' '.
 
-1. En `ViewDidLoad` agregar código para establecer el tipo de asignación, muestre la ubicación del usuario y permita el zoom y la panorámica:
+1. En `ViewDidLoad` agregue código para establecer el tipo de mapa, Mostrar la ubicación del usuario y permitir el zoom y el movimiento panorámico:
 
     ```csharp
     // change map type, show user location and allow zooming and panning
@@ -80,20 +80,20 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     ```
 
-1. Cree una nueva instancia de `MapDelegate` y asígnela `Delegate` al de `MKMapView`. De `MapDelegate` nuevo, nos implcodeent en breve:
+1. Cree una nueva instancia de `MapDelegate` y asígnela al `Delegate` de la `MKMapView`. Una vez más, implcodeentemos el `MapDelegate` en breve:
 
     ```csharp
     mapDelegate = new MapDelegate ();
     map.Delegate = mapDelegate;
     ```
 
-1. A partir de iOS 8, debe solicitar la autorización del usuario para usar su ubicación, así que vamos a agregarlo a nuestro ejemplo. En primer lugar, `CLLocationManager` defina una variable de nivel de clase:
+1. A partir de iOS 8, debe solicitar la autorización del usuario para usar su ubicación, así que vamos a agregarlo a nuestro ejemplo. En primer lugar, defina una `CLLocationManager` variable de nivel de clase:
 
     ```csharp
     CLLocationManager locationManager = new CLLocationManager();
     ```
 
-1. En el `ViewDidLoad` método, queremos comprobar si el dispositivo que ejecuta la aplicación está usando iOS 8 y, si es así, solicitaremos la autorización cuando la aplicación esté en uso:
+1. En el método `ViewDidLoad`, queremos comprobar si el dispositivo que ejecuta la aplicación está usando iOS 8 y, si es así, solicitaremos la autorización cuando la aplicación esté en uso:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion(8,0)){
@@ -107,7 +107,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     y cadena:
 
-    `Maps Walkthrough Docs Sample`
+    `Maps Walkthrough Docs Sample`Operador
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs: una clase para anotaciones personalizadas
 
@@ -149,13 +149,13 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
 ## <a name="viewcontroller---adding-the-annotation-and-overlay"></a>ViewController: agregar la anotación y la superposición
 
-1. Con el `ConferenceAnnotation` en su lugar, podemos agregarlo al mapa. De nuevo en `ViewDidLoad` el método `ViewController`de, agregue la anotación en la coordenada central del mapa:
+1. Con la `ConferenceAnnotation` en su lugar, podemos agregarla al mapa. De nuevo en el método `ViewDidLoad` del `ViewController`, agregue la anotación en la coordenada central del mapa:
 
     ```csharp
     map.AddAnnotations (new ConferenceAnnotation ("Evolve Conference", mapCenter));
     ```
 
-1. También queremos tener una superposición del hotel. Agregue el código siguiente para crear el `MKPolygon` mediante las coordenadas del Hotel proporcionado y agréguelo al mapa mediante una llamada `AddOverlay`a:
+1. También queremos tener una superposición del hotel. Agregue el código siguiente para crear el `MKPolygon` usando las coordenadas del Hotel proporcionado y agréguelo al mapa mediante una llamada a `AddOverlay`:
 
     ```csharp
     // add an overlay of the hotel
@@ -176,11 +176,11 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
     map.AddOverlay (hotelOverlay);
     ```
 
-Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `MapDelegate` clase para controlar la creación de las vistas de anotación y superposición, respectivamente.
+Esto completa el código de `ViewDidLoad`. Ahora tenemos que implementar la clase de `MapDelegate` para administrar la creación de las vistas de anotación y superposición, respectivamente.
 
 ## <a name="mapdelegate"></a>MapDelegate
 
-1. Cree una clase denominada `MapDelegate` que herede de `MKMapViewDelegate` e incluya una `annotationId` variable que se utilizará como identificador de reutilización para la anotación:
+1. Cree una clase llamada `MapDelegate` que herede de `MKMapViewDelegate` e incluya una variable `annotationId` para usarla como identificador de reutilización para la anotación:
 
     ```csharp
     class MapDelegate : MKMapViewDelegate
@@ -192,7 +192,7 @@ Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `Ma
 
     Aquí solo tenemos una anotación para que el código de reutilización no sea estrictamente necesario, pero es recomendable incluirlo.
 
-1. Implemente `GetViewForAnnotation` el método para devolver una vista para `ConferenceAnnotation` la con la imagen de **Conference. png** incluida en este tutorial:
+1. Implemente el método `GetViewForAnnotation` para devolver una vista del `ConferenceAnnotation` mediante la imagen **Conference. png** incluida en este tutorial:
 
     ```csharp
     public override MKAnnotationView GetViewForAnnotation (MKMapView mapView, NSObject annotation)
@@ -218,14 +218,14 @@ Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `Ma
     }
     ```
 
-1. Cuando el usuario puntea en la anotación, queremos mostrar una imagen que muestre la ciudad de Austin. Agregue las siguientes variables al `MapDelegate` para la imagen y la vista para mostrarla:
+1. Cuando el usuario puntea en la anotación, queremos mostrar una imagen que muestre la ciudad de Austin. Agregue las siguientes variables al `MapDelegate` de la imagen y la vista para mostrarla:
 
     ```csharp
     UIImageView venueView;
     UIImage venueImage;
     ```
 
-1. A continuación, para mostrar la imagen cuando se puntea la anotación, implemente `DidSelectAnnotation` el método de la siguiente manera:
+1. A continuación, para mostrar la imagen cuando se Puntee la anotación, implemente el método `DidSelectAnnotation` como se indica a continuación:
 
     ```csharp
     public override void DidSelectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -245,7 +245,7 @@ Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `Ma
     }
     ```
 
-1. Para ocultar la imagen cuando el usuario anule la selección de la anotación punteando en cualquier otra parte del mapa, implemente el método de la `DidSelectAnnotationView` siguiente manera:
+1. Para ocultar la imagen cuando el usuario anule la selección de la anotación punteando en cualquier otra parte del mapa, implemente el método `DidSelectAnnotationView` como se indica a continuación:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -260,9 +260,9 @@ Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `Ma
     }
     ```
 
-    Ahora tenemos el código para la anotación en contexto. Lo único que queda es agregar código a `MapDelegate` para crear la vista para la superposición de Hotel.
+    Ahora tenemos el código para la anotación en contexto. Lo único que queda es agregar código al `MapDelegate` para crear la vista de la superposición de Hotel.
 
-1. Agregue la siguiente implementación de `GetViewForOverlay` `MapDelegate`a:
+1. Agregue la siguiente implementación de `GetViewForOverlay` al `MapDelegate`:
 
     ```csharp
     public override MKOverlayView GetViewForOverlay (MKMapView mapView, NSObject overlay)
@@ -278,7 +278,7 @@ Esto completa el código en `ViewDidLoad`. Ahora debemos implementar nuestra `Ma
 
 Ejecute la aplicación. Ahora tenemos un mapa interactivo con una anotación personalizada y una superposición. Pulse en la anotación y se mostrará la imagen de Austin, como se muestra a continuación:
 
- [![](ios-maps-walkthrough-images/01-map-image.png "Pulse en la anotación y se mostrará la imagen de Austin")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
+ [![](ios-maps-walkthrough-images/01-map-image.png "Tap on the annotation and the image of Austin is displayed")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 

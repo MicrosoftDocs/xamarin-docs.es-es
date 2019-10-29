@@ -3,15 +3,15 @@ title: Trabajar con el manifiesto de Android
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 2d65f0c8e717e8e8c995209f7dda1e8a44ee621c
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021108"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027800"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajar con el manifiesto de Android
 
@@ -21,7 +21,7 @@ ms.locfileid: "71021108"
 
 ## <a name="the-basics"></a>Conceptos básicos
 
-En tiempo de compilación, los ensamblados se examinan`abstract` en busca de clases que no son de [`[Activity]`](xref:Android.App.ActivityAttribute) la [actividad](xref:Android.App.Activity) y tienen el atributo declarado en ellos. A continuación, usa estas clases y atributos para generar el manifiesto. Por ejemplo, considere el siguiente código: 
+En tiempo de compilación, los ensamblados se examinan para las clases no`abstract` que se derivan de la [actividad](xref:Android.App.Activity) y tienen el atributo [`[Activity]`](xref:Android.App.ActivityAttribute) declarado en ellos. A continuación, usa estas clases y atributos para generar el manifiesto. Por ejemplo, considere el siguiente código: 
 
 ```csharp
 namespace Demo
@@ -32,7 +32,7 @@ namespace Demo
 }
 ```
 
-Esto hace que no se genere nada en **archivo AndroidManifest. XML**. Si desea que se `<activity/>` genere un elemento, debe utilizar el[`[Activity]`](xref:Android.App.Activity) 
+Esto hace que no se genere nada en **archivo AndroidManifest. XML**. Si desea que se genere un elemento `<activity/>`, debe usar el [`[Activity]`](xref:Android.App.Activity) 
 atributo personalizado: 
 
 ```csharp
@@ -51,13 +51,13 @@ Este ejemplo hace que se agregue el siguiente fragmento XML a **archivo AndroidM
 <activity android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-El `[Activity]` atributo no tiene ningún efecto `abstract` en los tipos; `abstract` los tipos se omiten.
+El atributo `[Activity]` no tiene ningún efecto en los tipos de `abstract`; se omiten los tipos de `abstract`.
 
 ### <a name="activity-name"></a>Nombre de actividad
 
 A partir de Xamarin. Android 5,1, el nombre de tipo de una actividad se basa en el MD5SUM del nombre calificado con el ensamblado del tipo que se va a exportar. Esto permite proporcionar el mismo nombre completo a partir de dos ensamblados diferentes y no obtener un error de empaquetado. (Antes de Xamarin. Android 5,1, el nombre de tipo predeterminado de la actividad se creó a partir del espacio de nombres en minúsculas y el nombre de clase). 
 
-Si desea invalidar este valor predeterminado y especificar explícitamente el nombre de la actividad, use [`Name`](xref:Android.App.ActivityAttribute.Name) la propiedad: 
+Si desea invalidar este valor predeterminado y especificar explícitamente el nombre de la actividad, use la propiedad [`Name`](xref:Android.App.ActivityAttribute.Name) : 
 
 ```csharp
 [Activity (Name="awesome.demo.activity")]
@@ -73,11 +73,11 @@ Este ejemplo genera el siguiente fragmento XML:
 ```
 
 > [!NOTE]
-> Debe usar la `Name` propiedad solo por motivos de compatibilidad con versiones anteriores, ya que este cambio de nombre puede ralentizar la búsqueda de tipos en tiempo de ejecución. Si tiene código heredado que espera que el nombre de tipo predeterminado de la actividad se base en el espacio de nombres en minúsculas y el nombre de clase, consulte [nombres de contenedor de Android Callable](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) para obtener sugerencias sobre el mantenimiento de la compatibilidad. 
+> Debe utilizar la propiedad `Name` solo por motivos de compatibilidad con versiones anteriores, ya que este cambio de nombre puede ralentizar la búsqueda de tipos en tiempo de ejecución. Si tiene código heredado que espera que el nombre de tipo predeterminado de la actividad se base en el espacio de nombres en minúsculas y el nombre de clase, consulte [nombres de contenedor de Android Callable](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) para obtener sugerencias sobre el mantenimiento de la compatibilidad. 
 
 ### <a name="activity-title-bar"></a>Barra de título de actividad
 
-De forma predeterminada, Android proporciona una barra de título a la aplicación cuando se ejecuta. El valor utilizado para este es [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). En la mayoría de los casos, este valor será diferente del nombre de clase. Para especificar la etiqueta de la aplicación en la barra de título, [`Label`](xref:Android.App.ActivityAttribute.Label) use la propiedad.
+De forma predeterminada, Android proporciona una barra de título a la aplicación cuando se ejecuta. El valor utilizado para esto es [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). En la mayoría de los casos, este valor será diferente del nombre de clase. Para especificar la etiqueta de la aplicación en la barra de título, use la propiedad [`Label`](xref:Android.App.ActivityAttribute.Label) .
 Por ejemplo: 
 
 ```csharp
@@ -96,7 +96,7 @@ Este ejemplo genera el siguiente fragmento XML:
 
 ### <a name="launchable-from-application-chooser"></a>Iniciable desde Application selector
 
-De forma predeterminada, la actividad no se mostrará en la pantalla del iniciador de aplicaciones de Android. Esto se debe a que es probable que haya muchas actividades en la aplicación y no desea un icono para cada una de ellas. Para especificar la que se debe iniciar desde el iniciador de la aplicación, [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) use la propiedad. Por ejemplo: 
+De forma predeterminada, la actividad no se mostrará en la pantalla del iniciador de aplicaciones de Android. Esto se debe a que es probable que haya muchas actividades en la aplicación y no desea un icono para cada una de ellas. Para especificar la que se debe iniciar desde el iniciador de la aplicación, use la propiedad [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) . Por ejemplo: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -119,7 +119,7 @@ Este ejemplo genera el siguiente fragmento XML:
 
 ### <a name="activity-icon"></a>Icono de actividad
 
-De forma predeterminada, se proporcionará a la actividad el icono del iniciador predeterminado proporcionado por el sistema. Para usar un icono personalizado, agregue primero el **. png** a **Resources/drawable**, establezca su acción de compilación en **AndroidResource**y [`Icon`](xref:Android.App.ActivityAttribute.Icon) , a continuación, use la propiedad para especificar el icono que se va a usar. Por ejemplo: 
+De forma predeterminada, se proporcionará a la actividad el icono del iniciador predeterminado proporcionado por el sistema. Para usar un icono personalizado, agregue primero el **. png** a **Resources/drawable**, establezca su acción de compilación en **AndroidResource**y, a continuación, use la propiedad [`Icon`](xref:Android.App.ActivityAttribute.Icon) para especificar el icono que se va a usar. Por ejemplo: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -142,13 +142,13 @@ Este ejemplo genera el siguiente fragmento XML:
 
 ### <a name="permissions"></a>Permisos
 
-Al agregar permisos al manifiesto de Android (como se describe en [Agregar permisos para el manifiesto de Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)), estos permisos se registran en **Properties/archivo AndroidManifest. XML**. Por ejemplo, si establece el `INTERNET` permiso, se agrega el elemento siguiente a **Properties/archivo AndroidManifest. XML**: 
+Al agregar permisos al manifiesto de Android (como se describe en [Agregar permisos para el manifiesto de Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)), estos permisos se registran en **Properties/archivo AndroidManifest. XML**. Por ejemplo, si establece el permiso `INTERNET`, se agrega el elemento siguiente a **Properties/archivo AndroidManifest. XML**: 
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-Las compilaciones de depuración establecen automáticamente algunos permisos para `INTERNET` facilitar la &ndash; depuración (como y `READ_EXTERNAL_STORAGE`). esta configuración solo se establece en el **archivo OBJ/Debug/Android/archivo AndroidManifest. XML** generado y no se muestra como habilitado en el Configuración de **permisos necesarios** . 
+Las compilaciones de depuración establecen automáticamente algunos permisos para facilitar la depuración (como `INTERNET` y `READ_EXTERNAL_STORAGE`) &ndash; estos valores solo se establecen en el **archivo OBJ/Debug/Android/archivo AndroidManifest. XML** generado y no se muestran como habilitados **en la** configuración de permisos. 
 
 Por ejemplo, si examina el archivo de manifiesto generado en **obj/Debug/Android/archivo AndroidManifest. XML**, es posible que vea los siguientes elementos de permiso agregados: 
 
@@ -163,10 +163,10 @@ En la versión de compilación de lanzamiento del manifiesto (en **obj/Debug/And
 
 ### <a name="intent-actions-and-features"></a>Acciones y características de intención
 
-El manifiesto de Android proporciona una manera de describir las funcionalidades de su actividad. Esto se hace a través de las [intenciones](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) y el[`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
-atributo personalizado. Puede especificar qué acciones son adecuadas para su actividad con el[`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
-constructor y qué categorías son adecuadas con el[`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-propiedad. Se debe proporcionar al menos una actividad (que es el motivo por el que se proporcionan las actividades en el constructor). `[IntentFilter]`se puede proporcionar varias veces y cada una de ellas tiene como resultado `<intent-filter/>` un elemento independiente `<activity/>`dentro de. Por ejemplo:
+El manifiesto de Android proporciona una manera de describir las funcionalidades de su actividad. Esto se hace a través de las [intenciones](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) y el [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
+atributo personalizado. Puede especificar qué acciones son adecuadas para su actividad con el [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
+constructor y qué categorías son adecuadas con el [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
+propiedad. Se debe proporcionar al menos una actividad (que es el motivo por el que se proporcionan las actividades en el constructor). `[IntentFilter]` se pueden proporcionar varias veces y cada una de ellas tiene como resultado un elemento `<intent-filter/>` independiente dentro de la `<activity/>`. Por ejemplo:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -196,9 +196,9 @@ Este ejemplo genera el siguiente fragmento XML:
 
 ### <a name="application-element"></a>Elemento Application
 
-El manifiesto de Android también proporciona una manera de declarar las propiedades de toda la aplicación. Esto se hace a través `<application>` del elemento y su homólogo, el atributo personalizado de la [aplicación](xref:Android.App.ApplicationAttribute) . Tenga en cuenta que se trata de una configuración de toda la aplicación (en todo el ensamblado) en lugar de la configuración por actividad. Normalmente, se declaran `<application>` las propiedades de toda la aplicación y, a continuación, se invalidan estas opciones (según sea necesario) en función de cada actividad. 
+El manifiesto de Android también proporciona una manera de declarar las propiedades de toda la aplicación. Esto se hace a través del elemento `<application>` y su homólogo, el atributo personalizado de la [aplicación](xref:Android.App.ApplicationAttribute) . Tenga en cuenta que se trata de una configuración de toda la aplicación (en todo el ensamblado) en lugar de la configuración por actividad. Normalmente, se declaran `<application>` propiedades de toda la aplicación y, a continuación, se invalidan estas opciones (según sea necesario) en cada actividad. 
 
-Por ejemplo, se agrega `Application` el atributo siguiente a **AssemblyInfo.CS** para indicar que se puede depurar la aplicación, que su nombre legible para el usuario es **mi aplicación**y que usa el `Theme.Light` estilo como tema predeterminado para todos los operaciones 
+Por ejemplo, el siguiente atributo de `Application` se agrega a **AssemblyInfo.CS** para indicar que se puede depurar la aplicación, que su nombre legible para el usuario es **mi aplicación**y que usa el estilo `Theme.Light` como tema predeterminado para todas las actividades: 
 
 ```csharp
 [assembly: Application (Debuggable=true,   
@@ -215,25 +215,25 @@ Esta declaración hace que se genere el siguiente fragmento XML en **obj/Debug/A
                 ... />
 ```
 
-En este ejemplo, todas las actividades de la aplicación tendrán como valor `Theme.Light` predeterminado el estilo. Si establece el tema de una actividad en `Theme.Dialog`, solo esa actividad usará el `Theme.Dialog` estilo, mientras que todas las demás actividades de la aplicación tendrán como `Theme.Light` valor predeterminado el estilo establecido `<application>` en el elemento. 
+En este ejemplo, todas las actividades de la aplicación tendrán como valor predeterminado el estilo `Theme.Light`. Si establece el tema de una actividad en `Theme.Dialog`, solo esa actividad usará el estilo de `Theme.Dialog` mientras todas las demás actividades de la aplicación tendrán como valor predeterminado el estilo de `Theme.Light` establecido en el elemento de `<application>`. 
 
-El `Application` elemento no es la única manera de configurar `<application>` atributos. Como alternativa, puede insertar atributos directamente en el `<application>` elemento de **Properties/archivo AndroidManifest. XML**. Estos valores se combinan en el último `<application>` elemento que reside en **obj/Debug/Android/archivo AndroidManifest. XML**. Tenga en cuenta que el contenido de **las propiedades/archivo AndroidManifest. XML** siempre invalida los datos proporcionados por los atributos personalizados. 
+El elemento `Application` no es la única manera de configurar los atributos de `<application>`. Como alternativa, puede insertar atributos directamente en el elemento `<application>` de **Properties/archivo AndroidManifest. XML**. Estos valores se combinan en el último elemento `<application>` que reside en **obj/Debug/Android/archivo AndroidManifest. XML**. Tenga en cuenta que el contenido de **las propiedades/archivo AndroidManifest. XML** siempre invalida los datos proporcionados por los atributos personalizados. 
 
-Hay muchos atributos de toda la aplicación que se pueden configurar en el `<application>` elemento. para obtener más información sobre esta configuración, vea la sección [propiedades públicas](xref:Android.App.ApplicationAttribute) de [ApplicationAttribute](xref:Android.App.ApplicationAttribute). 
+Hay muchos atributos de toda la aplicación que se pueden configurar en el elemento `<application>`; para obtener más información sobre esta configuración, vea la sección [propiedades públicas](xref:Android.App.ApplicationAttribute) de [ApplicationAttribute](xref:Android.App.ApplicationAttribute). 
 
 ## <a name="list-of-custom-attributes"></a>Lista de atributos personalizados
 
-- [Android. app. ActivityAttribute](xref:Android.App.ActivityAttribute) : Genera un fragmento de XML de [/manifest/Application/Activity](https://developer.android.com/guide/topics/manifest/activity-element.html) 
-- [Android. app. ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Genera un fragmento de XML de [/manifest/Application](https://developer.android.com/guide/topics/manifest/application-element.html) 
-- [Android. app. InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Genera un fragmento de XML de [/manifest/Instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
-- [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Genera un fragmento de XML de [//Intent-Filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
-- [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Genera un fragmento de XML de [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
-- [Android. app. PermissionAttribute](xref:Android.App.PermissionAttribute) : Genera un fragmento de XML de [//Permission](https://developer.android.com/guide/topics/manifest/permission-element.html) 
-- [Android. app. PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Genera un fragmento de XML de [//Permission-Group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
-- [Android. app. PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Genera un fragmento de XML de [//Permission-Tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
-- [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute) : Genera un fragmento de XML de [/manifest/Application/Service](https://developer.android.com/guide/topics/manifest/service-element.html) 
-- [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Genera un fragmento de XML de [/manifest/Application/uses-Library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
-- [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Genera un fragmento de XML de [/manifest/uses-Permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
-- [Android. Content. BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Genera un fragmento de XML de [/manifest/Application/Receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
-- [Android. Content. ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Genera un fragmento de XML de [/manifest/Application/Provider](https://developer.android.com/guide/topics/manifest/provider-element.html) 
-- [Android. Content. GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Genera un fragmento de XML de [/manifest/Application/Provider/Grant-URI-Permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
+- [Android. app. ActivityAttribute](xref:Android.App.ActivityAttribute) : genera un fragmento XML de [/manifest/Application/Activity](https://developer.android.com/guide/topics/manifest/activity-element.html) 
+- [Android. app. ApplicationAttribute](xref:Android.App.ApplicationAttribute) : genera un fragmento XML de [/manifest/Application](https://developer.android.com/guide/topics/manifest/application-element.html) 
+- [Android. app. InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : genera un fragmento XML de [/manifest/Instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
+- [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : genera un fragmento XML de [//Intent-Filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
+- [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : genera un fragmento XML de [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
+- [Android. app. PermissionAttribute](xref:Android.App.PermissionAttribute) : genera un fragmento XML de [//Permission](https://developer.android.com/guide/topics/manifest/permission-element.html) 
+- [Android. app. PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : genera un fragmento XML de [//Permission-Group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
+- [Android. app. PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : genera un fragmento XML de [//Permission-Tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
+- [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute) : genera un fragmento XML de [/manifest/Application/Service](https://developer.android.com/guide/topics/manifest/service-element.html) 
+- [Android. app. UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : genera un fragmento XML de [/manifest/Application/uses-Library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
+- [Android. app. UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : genera un fragmento XML de [/manifest/uses-Permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
+- [Android. Content. BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : genera un fragmento XML de [/manifest/Application/Receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
+- [Android. Content. ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : genera un fragmento XML de [/manifest/Application/Provider](https://developer.android.com/guide/topics/manifest/provider-element.html) 
+- [Android. Content. GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : genera un fragmento XML de [/manifest/Application/Provider/Grant-URI-Permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)

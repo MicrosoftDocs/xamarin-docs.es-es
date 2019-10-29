@@ -4,19 +4,19 @@ description: Los documentos de esta sección cubren características específica
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
-ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
+ms.openlocfilehash: a0b8b80499854d485b8420adb580c22a74933443
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119233"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020171"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
-_Los documentos de esta sección tratan características específicas de Android. Aquí encontrará temas sobre fragmentos, trabajo con mapas y encapsulamiento de datos con los proveedores de contenido._
+_Los documentos de esta sección cubren características específicas de Android. Aquí encontrará temas como el uso de fragmentos, el trabajo con mapas y la encapsulación de datos con proveedores de contenido._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
@@ -38,7 +38,7 @@ En esta guía se describe el distribuidor de trabajos de Firebase y cómo usarlo
 
 Android 3,0 presentó fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla que se encuentran en teléfonos y tabletas. En este artículo se explica cómo usar fragmentos para desarrollar aplicaciones de Xamarin. Android y cómo admitir fragmentos en dispositivos anteriores a Android 3,0 (nivel de API 11).
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Aplicación: vinculación](~/android/platform/app-linking.md)
 
 En esta guía se explica cómo Android 6,0 admite la _vinculación de aplicaciones_, una técnica que permite a las aplicaciones móviles responder a las direcciones URL de los sitios Web. En él se explica cómo implementar la vinculación de aplicaciones en una aplicación Android 6,0 y cómo configurar un sitio web para conceder permisos a la aplicación móvil para administrar los vínculos de la aplicación para el dominio.
 

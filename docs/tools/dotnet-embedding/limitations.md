@@ -3,15 +3,15 @@ title: Limitaciones de la inserción de .NET
 description: En este documento se describen las limitaciones de la incrustación de .NET, la herramienta que permite consumir código .NET en otros lenguajes de programación.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292709"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029743"
 ---
 # <a name="net-embedding-limitations"></a>Limitaciones de la inserción de .NET
 
@@ -23,7 +23,7 @@ En este documento se explican las limitaciones de la inserción de .NET y, siemp
 
 No es posible tener dos entornos de ejecución mono coexistentes dentro de la misma aplicación. Esto significa que no puede usar dos bibliotecas generadas por la incrustación .NET diferentes dentro de la misma aplicación.
 
-**Solución:** Puede usar el generador para crear una biblioteca única que incluya varios ensamblados (de proyectos diferentes).
+**Solución alternativa:** Puede usar el generador para crear una biblioteca única que incluya varios ensamblados (de proyectos diferentes).
 
 ### <a name="subclassing"></a>Subclases
 
@@ -41,9 +41,9 @@ En función de sus necesidades, es posible que se puedan solucionar las partes d
 
 ### <a name="nullability"></a>Nulabilidad
 
-No hay metadatos en .NET que nos indiquen si una referencia nula es aceptable o no para una API. La mayoría de las `ArgumentNullException` API iniciarán si no pueden `null` hacer frente a un argumento. Esto es problemático, ya que la administración de las excepciones de Objective-C es algo mejor que se evita.
+No hay metadatos en .NET que nos indiquen si una referencia nula es aceptable o no para una API. La mayoría de las API iniciarán `ArgumentNullException` si no pueden hacer frente a un argumento `null`. Esto es problemático, ya que la administración de las excepciones de Objective-C es algo mejor que se evita.
 
-Dado que no se pueden generar anotaciones de nulabilidad precisas en los archivos de encabezado y se desea minimizar las excepciones administradas, se`NS_ASSUME_NONNULL_BEGIN`usan argumentos que no son NULL () y se agregan algunos específicos, cuando es posible la precisión, las anotaciones de nulabilidad.
+Dado que no se pueden generar anotaciones de nulabilidad precisas en los archivos de encabezado y desea minimizar las excepciones administradas, se usan argumentos que no son NULL (`NS_ASSUME_NONNULL_BEGIN`) y se agregan algunos específicos, cuando es posible la precisión, las anotaciones de nulabilidad.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 

@@ -3,15 +3,15 @@ title: Servicios iniciados con Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: f5b5f8cf224c18852a0a0e7e4f591b49905ba026
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70755072"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024774"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Servicios iniciados con Xamarin. Android
 

@@ -4,15 +4,15 @@ description: En este documento se enumeran las características introducidas y m
 ms.prod: xamarin
 ms.assetid: CD4E4C3C-5341-4830-8ED2-6C67AFC49674
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: eb14b4cc34495eefaf400ba6a4474e0067747db8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c6565cb35b79e950fa2b01d6b8a7f771ed530749
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017289"
 ---
 # <a name="introduction-to-macos-high-sierra"></a>Introducción a macOS High Sierra
 

@@ -3,15 +3,15 @@ title: Métodos abreviados de teclado del editor de Xamarin Workbooks
 description: En este documento se describen los métodos abreviados de teclado disponibles para su uso en el editor de Xamarin Workbooks. En concreto, examina varias formas de usar la tecla retorno.
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 9904d0f9fb1acfc3c3c197b9881c2add00aba534
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f8c76f96ea16b9341d349ca110a3eb39207a4d30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285327"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019105"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Métodos abreviados de teclado del editor de Xamarin Workbooks
 

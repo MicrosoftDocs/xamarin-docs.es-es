@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2018
-ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0f7499551db7d86d7978b9c3e1f562a2f054c202
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762021"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019529"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>¿Cómo se puede actualizar la versión del kit de desarrollo de Java (JDK)?
 
@@ -41,7 +41,7 @@ Para actualizar a Microsoft Mobile OpenJDK, consulte [Microsoft Mobile OpenJDK P
 
 4. Abra Visual Studio y actualice la **Ubicación del kit de desarrollo de Java** para que apunte al nuevo JDK en **herramientas > Opciones > la configuración de Xamarin > Android > Ubicación del kit de desarrollo de Java**:
 
-    [![Configuración de la ruta de acceso del JDK en la página de configuración de Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [![configuración de la ruta de acceso del JDK en la página de configuración de Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Asegúrese de reiniciar Visual Studio después de actualizar la ubicación.
 
@@ -57,6 +57,6 @@ Asegúrese de reiniciar Visual Studio después de actualizar la ubicación.
 
 Mac OS establecerá automáticamente la nueva versión de JDK como valor predeterminado mediante la actualización de **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. A continuación, puede comprobar de forma que la ubicación del **SDK de Java (JDK)** esté establecida en el valor predeterminado esperado de **/usr** en **Visual Studio para Mac > preferencias > proyectos > ubicaciones de SDK > ubicaciones de > de Android > la ubicación del SDK de Java (JDK)** :
 
-[![Establecimiento de la ubicación de JDK en la pestaña ubicaciones de Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
+[![configuración de la ubicación de JDK en la pestaña ubicaciones de Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----

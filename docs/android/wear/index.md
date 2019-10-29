@@ -4,15 +4,15 @@ description: Compilar aplicaciones para dispositivos portátil de Android.
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 63fb9c3b1484026cb390a8a475c711562dfd0771
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758330"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028590"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -46,7 +46,7 @@ El sitio para desarrolladores de Android proporciona información detallada sobr
 
 Puede encontrar una serie de [ejemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) con el desgaste de Android (o ir directamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
-|Muestra|DESCRIPCIÓN|Captura de pantalla|
+|Ejemplo|Descripción|Captura de pantalla|
 |--- |--- |--- |
 |[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|Un ejemplo sencillo de los aspectos básicos de los proyectos de portátil, incluidas las notificaciones de GridViewPager y interactivas.|![Captura de pantalla de Skeletonwear](images/skeleton.png)|
 |[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demostración sencilla del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto. Vea cómo funciona WatchViewStub en el diseño **Resources/layout/main_activity. XML** .|![Captura de pantalla de WatchViewStub](images/watchview.png)|
@@ -59,11 +59,11 @@ Puede encontrar una serie de [ejemplos](https://docs.microsoft.com/samples/brows
 
 Consulte estos vínculos de vídeo que describen Xamarin. Android con soporte técnico de uso:
 
-|DESCRIPCIÓN|Captura de pantalla|
+|Descripción|Captura de pantalla|
 |--- |--- |
-|[Android L y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; La versión preliminar para desarrolladores de Android L presentó una gran cantidad de nuevas API para que los desarrolladores aprovechen las ventajas de, incluido el diseño de materiales, las notificaciones y las nuevas animaciones, por nombrar algunas.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
-|[C#está en mis oídos y en mis ojos: El uso de &ndash; portátil de](https://www.youtube.com/watch?v=80H8tXByZQc) Google Glass y Android podría parecer algo en el futuro (o un episodio de gadget de inspector), pero muchas personas ya están adoptando el futuro hoy mismo. C#los desarrolladores saben esto y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátil (desde el desarrollo de 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
-|[Novedades de Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, desgaste de Android, Android TV, Android auto, diseño de material y arte; ¿qué significa esto para usted como desarrollador de Xamarin?, desde evolucione 2014.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
+|[Android l y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; la versión preliminar para desarrolladores de Android l presentó una gran cantidad de nuevas API para que los desarrolladores aprovechen las ventajas de, incluido el diseño de materiales, las notificaciones y las nuevas animaciones, por nombrar algunas.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
+|[está en mis oídos y en mis ojos: Google Glass y el desgaste de Android&ndash;la informática de portátil podría parecer algo en el futuro (o un episodio de gadget de inspector), pero muchas personas ya están adoptando el futuro hoy mismo. C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#los desarrolladores saben esto y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátil (desde el desarrollo de 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
+|[Novedades de Xamarin. android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, desgaste de Android, televisión de Android, Android auto, diseño de material y arte; ¿Qué significa esto como desarrollador de Xamarin? de evolucionar 2014.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
 
 <!--
 

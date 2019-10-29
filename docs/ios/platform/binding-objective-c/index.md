@@ -5,26 +5,26 @@ ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 24203d8a3a4356fb4de08d132c164d9f2d19a0c9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61d1adfc997b34302f1f89f56653af906ca90135
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291802"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022223"
 ---
 # <a name="binding-ios-libraries"></a>Enlace de bibliotecas de iOS
 
 Siga estos vínculos para obtener información sobre el enlace de bibliotecas de Objective-C y CocoaPods para Xamarin. iOS y Xamarin. Mac:
 
 - [**Información general**](~/cross-platform/macios/binding/overview.md) -
-  Describe cómo funciona el enlace.
-- [**Enlace de bibliotecas de Objective-C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Instrucciones sobre cómo enlazar bibliotecas de Objective-C para su uso en proyectos de Xamarin.
-- [**Guía de referencia de definiciones de tipos**](~/cross-platform/macios/binding/binding-types-reference.md) -
-  Describe todos los atributos disponibles para enlazar a los autores con el fin de controlar el proceso de generación de enlaces.
+  describe cómo funciona el enlace.
+- [**Enlace de bibliotecas de Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  instrucciones sobre cómo enlazar bibliotecas de Objective-c para su uso en proyectos de Xamarin.
+- [**Guía de referencia de definición de tipos**](~/cross-platform/macios/binding/binding-types-reference.md) -
+  describe todos los atributos disponibles para enlazar autores para impulsar el proceso de generación de enlaces.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

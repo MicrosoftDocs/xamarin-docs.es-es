@@ -4,21 +4,21 @@ description: Cómo usar el widget EditText para aceptar los datos proporcionados
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62859e19c533d7b200833996b44a65cb275805c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029250"
 ---
 # <a name="xamarinandroid-edit-text"></a>Editar texto de Xamarin. Android
 
 En esta sección, usará el widget [EditText](xref:Android.Widget.EditText) para crear un campo de texto para los datos proporcionados por el usuario. Una vez que el texto se ha escrito en el campo, la tecla **entrar** mostrará el texto en un mensaje del sistema.
 
-Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](xref:Android.Widget.EditText) a un diseño contenedor. En el ejemplo siguiente, **activity_main. axml** tiene un `EditText` que se ha agregado `LinearLayout`a un:
+Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](xref:Android.Widget.EditText) a un diseño contenedor. En el ejemplo siguiente, **activity_main. axml** tiene una `EditText` que se ha agregado a un `LinearLayout`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,10 +35,10 @@ Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](x
 </LinearLayout>
 ```
 
-En este ejemplo de código, `EditText` el `android:imeOptions` atributo se establece `actionGo`en. Esta configuración cambia la acción de [listo](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) predeterminada a la acción [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que al pulsar la tecla **entrar** se `KeyPress` desencadene el controlador de entrada.
+En este ejemplo de código, el atributo `EditText` `android:imeOptions` se establece en `actionGo`. Esta configuración cambia la acción de [listo](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) predeterminada a la acción [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que al pulsar la tecla **entrar** se desencadene el controlador de entrada `KeyPress`.
 (Normalmente, `actionGo` se usa para que la tecla **entrar** lleve al usuario al destino de una dirección URL que se escribe).
 
-Para controlar la entrada de texto del usuario, agregue el código siguiente al final del método[OnCreate](xref:Android.App.Activity.OnCreate*) en **MainActivity.cs**:
+Para controlar la entrada de texto del usuario, agregue el código siguiente al final del método [alcrear](xref:Android.App.Activity.OnCreate*) en **MainActivity.CS**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
@@ -52,19 +52,19 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Además, agregue la siguiente `using` instrucción a la parte superior de **MainActivity.CS** si aún no está presente:
+Además, agregue la siguiente instrucción `using` a la parte superior de **MainActivity.CS** si aún no está presente:
 
 ```csharp
 using Android.Views;
 ```
 
-En este ejemplo de código se infla el elemento [EditText](xref:Android.Widget.EditText) del diseño y se agrega un controlador [KeyPress](xref:Android.Views.View.KeyPress) que define la acción que se debe realizar cuando se presiona una tecla mientras el widget tiene el foco. En este caso, el método se define para que escuche la tecla **entrar** (al puntear) y, a continuación, mostrar un mensaje del [sistema](xref:Android.Widget.Toast) con el texto que se ha escrito. Tenga en cuenta que la propiedad [controlada](xref:Android.Views.View.KeyEventArgs.Handled) siempre `true` debe ser si se ha controlado el evento. Esto es necesario para evitar que el evento se propague (lo que daría lugar a un retorno de carro en el campo de texto).
+En este ejemplo de código se infla el elemento [EditText](xref:Android.Widget.EditText) del diseño y se agrega un controlador [KeyPress](xref:Android.Views.View.KeyPress) que define la acción que se debe realizar cuando se presiona una tecla mientras el widget tiene el foco. En este caso, el método se define para que escuche la tecla **entrar** (al puntear) y, a continuación, mostrar un mensaje del [sistema](xref:Android.Widget.Toast) con el texto que se ha escrito. Tenga en cuenta que la propiedad [controlada](xref:Android.Views.View.KeyEventArgs.Handled) siempre debe ser `true` si se ha controlado el evento. Esto es necesario para evitar que el evento se propague (lo que daría lugar a un retorno de carro en el campo de texto).
 
 Ejecute la aplicación y escriba texto en el campo de texto. Al presionar la tecla **entrar** , la notificación del sistema se mostrará como se muestra a la derecha:
 
-[![Ejemplos de cómo escribir texto en EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+[![ejemplos de cómo escribir texto en EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Algunas partes de esta página son modificaciones basadas en el trabajo creado y* [*compartido por el proyecto de código abierto de Android*](http://code.google.com/policies.html) *y se usan según los términos descritos en el* [*Licencia de atribución de Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se basa en el* [*tutorial de formularios de Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Algunas partes de esta página son modificaciones basadas en el trabajo creado y* [*compartido por el proyecto de código abierto de Android*](https://code.google.com/policies.html) *y que se usan según los términos descritos en la licencia de* [*atribución de Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/) *. Este tutorial se basa en el tutorial de* [*formularios de Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## <a name="related-links"></a>Vínculos relacionados
 

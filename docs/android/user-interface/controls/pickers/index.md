@@ -4,19 +4,19 @@ description: Usar cuadros de diálogo integrados de Android para consultar la fe
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: aeb8d647c08b81d5bc36932a888410c7961928a0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d2f458fd5433ce195c568bfd5f0b8014e3d787e7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510242"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029188"
 ---
 # <a name="picker-controls-for-xamarinandroid"></a>Controles de selector para Xamarin. Android
 
-Los selectores son elementos de interfaz de usuario que permiten al usuario seleccionar una fecha o una hora mediante los cuadros de diálogo proporcionados por Android:
+Los *selectores* son elementos de interfaz de usuario que permiten al usuario seleccionar una fecha o una hora mediante los cuadros de diálogo proporcionados por Android:
 
 - [Selector de fecha](~/android/user-interface/controls/pickers/date-picker.md) se usa para seleccionar una fecha (año, mes y día).
 

@@ -3,15 +3,15 @@ title: Introducción con el SDK de Xamarin Workbooks
 description: En este documento se describe cómo empezar a trabajar con el SDK de Xamarin Workbooks, que se puede usar para desarrollar integraciones para Xamarin Workbooks.
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 8e3dc65f9f615ff893f3526d53d99da25045c794
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4a9e9113f83dd89b622de3e1f74f458efd4f07f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283964"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73018686"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Introducción con el SDK de Xamarin Workbooks
 
@@ -19,7 +19,7 @@ En este documento se proporciona una guía rápida para empezar a desarrollar in
 
 ## <a name="general-overview"></a>Información general
 
-Xamarin Workbooks integraciones son bibliotecas pequeñas que usan el [ `Xamarin.Workbooks.Integrations` ][nuget] SDK de NuGet para integrarse con los agentes Xamarin Workbooks y inspector para proporcionar experiencias mejoradas.
+Xamarin Workbooks integraciones son bibliotecas pequeñas que usan el [`Xamarin.Workbooks.Integrations`][nuget] SDK de NuGet para integrarse con los agentes Xamarin Workbooks y inspector para proporcionar experiencias mejoradas.
 
 Hay 3 pasos principales para empezar a desarrollar una integración, aquí se describen.
 
@@ -29,27 +29,27 @@ Las bibliotecas de integración se desarrollan mejor como bibliotecas multiplata
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Visual Studio para Mac de plantilla de biblioteca portable](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
+[![plantilla de biblioteca portable Visual Studio para Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Plantilla de biblioteca portable de Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
+[![plantilla de biblioteca portable de Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
 En Visual Studio, querrá asegurarse de que selecciona las siguientes plataformas de destino para la biblioteca portable:
 
-[![Plataformas de biblioteca portable Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
+[![de las plataformas de biblioteca portable Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
-Una vez creado el proyecto de biblioteca, agregue una referencia a `Xamarin.Workbooks.Integration` nuestra biblioteca de Nuget a través del administrador de paquetes Nuget.
+Una vez creado el proyecto de biblioteca, agregue una referencia a nuestra `Xamarin.Workbooks.Integration` biblioteca de NuGet a través del administrador de paquetes NuGet.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Visual Studio para Mac NuGet](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
+[Visual Studio para Mac de![NuGet](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![NuGet en Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
+[![NuGet de Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
 -----
 
@@ -57,7 +57,7 @@ Querrá eliminar la clase vacía que se crea para usted como parte del proyecto;
 
 ## <a name="building-an-integration"></a>Creación de una integración
 
-Crearemos una integración simple. Realmente nos encanta el color verde, por lo que agregaremos el color verde como una representación de cada objeto. En primer lugar, cree una nueva `SampleIntegration`clase denominada y haga que implemente nuestra `IAgentIntegration` interfaz:
+Crearemos una integración simple. Realmente nos encanta el color verde, por lo que agregaremos el color verde como una representación de cada objeto. En primer lugar, cree una nueva clase llamada `SampleIntegration`y haga que implemente nuestra `IAgentIntegration` interfaz:
 
 ```csharp
 using Xamarin.Interactive;
@@ -70,7 +70,7 @@ public class SampleIntegration : IAgentIntegration
 }
 ```
 
-Lo que queremos hacer es agregar una [representación](~/tools/workbooks/sdk/representations.md) para cada objeto que sea un color verde. Haremos esto mediante un proveedor de representación. Los proveedores heredan `RepresentationProvider` de la clase, por lo que solo necesitamos invalidar: `ProvideRepresentations`
+Lo que queremos hacer es agregar una [representación](~/tools/workbooks/sdk/representations.md) para cada objeto que sea un color verde. Haremos esto mediante un proveedor de representación. Los proveedores heredan de la clase `RepresentationProvider`, por lo que solo necesitamos invalidar `ProvideRepresentations`:
 
 ```csharp
 using Xamarin.Interactive.Representations;
@@ -85,10 +85,10 @@ class SampleRepresentationProvider : RepresentationProvider
 }
 ```
 
-Devolvemos un `Color`, un tipo de representación pregenerada en nuestro SDK.
-Observará que el tipo de valor devuelto aquí `IEnumerable<object>`es un &mdash;proveedor de representación puede devolver muchas representaciones para un objeto. Se llama a todos los proveedores de representación para cada objeto, por lo que es importante no realizar ninguna suposición sobre los objetos que se le pasan.
+Devolvemos un `Color`, un tipo de representación creado previamente en nuestro SDK.
+Observará que el tipo de valor devuelto aquí es un `IEnumerable<object>`&mdash;un proveedor de representación puede devolver muchas representaciones para un objeto. Se llama a todos los proveedores de representación para cada objeto, por lo que es importante no realizar ninguna suposición sobre los objetos que se le pasan.
 
-El último paso es registrar realmente nuestro proveedor con el agente e indicar a los libros dónde encontrar el tipo de integración. Para registrar el proveedor, agregue este código al `IntegrateWith` método de la `SampleIntegration` clase que hemos creado anteriormente:
+El último paso es registrar realmente nuestro proveedor con el agente e indicar a los libros dónde encontrar el tipo de integración. Para registrar el proveedor, agregue este código al método `IntegrateWith` en la clase `SampleIntegration` que hemos creado anteriormente:
 
 ```csharp
 agent.RepresentationManager.AddProvider (new SampleRepresentationProvider ());
@@ -100,7 +100,7 @@ La configuración del tipo de integración se realiza a través de un atributo d
 [assembly: AgentIntegration (typeof (SampleIntegration))]
 ````
 
-Durante el desarrollo, es posible que le resulte más `AddProvider` cómodo usar sobrecargas en `RepresentationManager` que le permitan registrar una devolución de llamada simple para proporcionar representaciones dentro de un libro y, a `RepresentationProvider` continuación, trasladar el código a la implementación una vez. ya ha terminado. Un ejemplo de representación [`OxyPlot`][oxyplot] `PlotModel` de podría ser similar al siguiente:
+Durante el desarrollo, es posible que le resulte más cómodo usar sobrecargas `AddProvider` en `RepresentationManager` que le permitan registrar una devolución de llamada simple para proporcionar representaciones dentro de un libro y, a continuación, pasar ese código a su implementación de `RepresentationProvider` una vez que haya terminado. Un ejemplo para representar un [`OxyPlot`][oxyplot] `PlotModel` podría ser similar al siguiente:
 
 ```csharp
 InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
@@ -111,7 +111,7 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 ```
 
 > [!NOTE]
-> Estas API proporcionan una forma rápida de empezar a trabajar, pero no recomendamos que se envíe una integración completa solo con ellas&mdash;, ya que proporcionan un control muy bajo de cómo el cliente procesa los tipos.
+> Estas API proporcionan una forma rápida de empezar a trabajar, pero no recomendamos que se envíe una integración completa solo con ellas&mdash;proporcionan un control muy bajo de cómo el cliente procesa los tipos.
 
 Con la representación registrada, la integración está lista para su envío.
 
@@ -119,7 +119,7 @@ Con la representación registrada, la integración está lista para su envío.
 
 Para enviar la integración, debe agregarla a un paquete NuGet.
 Puede enviarlo con el NuGet de la biblioteca existente o, si está creando un nuevo paquete, puede usar este archivo. nuspec de plantilla como punto de partida.
-Tendrá que rellenar las secciones relevantes para su integración. La parte más importante es que todos los archivos de la integración deben estar en un `xamarin.interactive` directorio en la raíz del paquete. Esto nos permite encontrar fácilmente todos los archivos relevantes para la integración, independientemente de si usa un paquete existente o crea uno nuevo.
+Tendrá que rellenar las secciones relevantes para su integración. La parte más importante es que todos los archivos de la integración deben estar en un directorio de `xamarin.interactive` en la raíz del paquete. Esto nos permite encontrar fácilmente todos los archivos relevantes para la integración, independientemente de si usa un paquete existente o crea uno nuevo.
 
 ```xml
 <?xml version="1.0"?>
@@ -147,15 +147,15 @@ y, a continuación, publíquelo en [NuGet][nugetorg]. Una vez allí, podrá hace
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Libro con integración](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
+[![libro con integración](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Libro con integración](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
+[![libro con integración](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 
-Tenga en cuenta que no ve `#r` ninguna directiva ni nada para inicializar la integración: los libros se han ocupado de todo en segundo plano.
+Tenga en cuenta que no ve ninguna directiva de `#r` ni nada para inicializar la integración: los libros se han ocupado de todo en segundo plano.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

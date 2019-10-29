@@ -4,15 +4,15 @@ description: En esta guía se explica cómo Android 6,0 admite la vinculación d
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757734"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027746"
 ---
 # <a name="app-linking-in-android"></a>Vinculación de aplicaciones en Android
 
@@ -20,17 +20,17 @@ _En esta guía se explica cómo Android 6,0 admite la vinculación de aplicacion
 
 ## <a name="app-linking-overview"></a>Información general de vinculación de aplicaciones
 
-Las aplicaciones móviles ya no viven en un &ndash; silo en muchos casos son componentes importantes de sus negocios, junto con su sitio Web. Es deseable que las empresas conecten sin problemas su presencia web y sus aplicaciones móviles, con vínculos en un sitio web que inician aplicaciones móviles y muestran contenido relevante en la aplicación móvil. *Aplicación: vinculación* (también conocido como *vinculación profunda*) es una técnica que permite a un dispositivo móvil responder a un URI e iniciar una aplicación móvil que se corresponda con ese URI.
+Las aplicaciones móviles ya no viven en un silo &ndash; en muchos casos son componentes importantes de sus negocios, junto con su sitio Web. Es deseable que las empresas conecten sin problemas su presencia web y sus aplicaciones móviles, con vínculos en un sitio web que inician aplicaciones móviles y muestran contenido relevante en la aplicación móvil. *La vinculación de aplicaciones* (también denominada *vinculación profunda*) es una técnica que permite a un dispositivo móvil responder a un URI e iniciar una aplicación móvil que se corresponda con ese URI.
 
-Android controla la vinculación de aplicaciones a través del *sistema* &ndash; de intención cuando el usuario hace clic en un vínculo en un explorador móvil, el explorador móvil enviará un intento de que Android delegue a una aplicación registrada. Por ejemplo, al hacer clic en un vínculo de un sitio web de cocina, se abriría una aplicación móvil que está asociada a ese sitio web y se muestra una receta específica al usuario. Si hay más de una aplicación registrada para controlar esa intención, Android generará lo que se conoce como un *cuadro de diálogo de desambiguación* que le pedirá a un usuario la aplicación de la aplicación que debe administrar la intención, por ejemplo:
+Android controla la vinculación de aplicaciones a través del &ndash; *del sistema* cuando el usuario hace clic en un vínculo en un explorador móvil, el explorador móvil enviará un intento de que Android delegue a una aplicación registrada. Por ejemplo, al hacer clic en un vínculo de un sitio web de cocina, se abriría una aplicación móvil que está asociada a ese sitio web y se muestra una receta específica al usuario. Si hay más de una aplicación registrada para controlar esa intención, Android generará lo que se conoce como un *cuadro de diálogo de desambiguación* que le pedirá a un usuario la aplicación de la aplicación que debe administrar la intención, por ejemplo:
 
 ![Captura de pantalla de ejemplo de un cuadro de diálogo de desambiguación](app-linking-images/01-disambiguation-dialog.png)
 
-Android 6,0 mejora esto mediante el control automático de vínculos. Es posible que Android registre automáticamente una aplicación como el controlador predeterminado para un URI &ndash; que la aplicación iniciará automáticamente y navegará directamente a la actividad correspondiente. El modo en que Android 6,0 decide controlar un URI haga clic en depende de los siguientes criterios:
+Android 6,0 mejora esto mediante el control automático de vínculos. Es posible que Android registre automáticamente una aplicación como el controlador predeterminado para un URI &ndash; la aplicación se iniciará automáticamente y navegará directamente a la actividad correspondiente. El modo en que Android 6,0 decide controlar un URI haga clic en depende de los siguientes criterios:
 
-1. **Una aplicación existente ya está asociada con el URI** &ndash; Es posible que el usuario ya haya asociado una aplicación existente con un URI. En ese caso, Android seguirá usando esa aplicación.
-2. **No hay ninguna aplicación existente asociada al URI, pero se instala una aplicación auxiliar** . &ndash; En este escenario, el usuario no ha especificado una aplicación existente, por lo que Android usará la aplicación de soporte instalada para controlar la solicitud.
-3. **No hay ninguna aplicación existente asociada al URI, pero hay muchas aplicaciones auxiliares instaladas** . &ndash; Dado que hay varias aplicaciones que admiten el URI, se mostrará el cuadro de diálogo de anulación de ambigüedades y el usuario debe seleccionar qué aplicación controlará el URI.
+1. **Una aplicación existente ya está asociada con el uri** &ndash; es posible que el usuario ya haya asociado una aplicación existente con un URI. En ese caso, Android seguirá usando esa aplicación.
+2. **No hay ninguna aplicación existente asociada al URI, pero se instala una aplicación de soporte** &ndash; en este escenario, el usuario no ha especificado una aplicación existente, por lo que Android usará la aplicación de soporte instalada para controlar la solicitud.
+3. **No hay ninguna aplicación existente asociada al URI, pero se instalan muchas aplicaciones auxiliares** &ndash; porque hay varias aplicaciones que admiten el URI, se muestra el cuadro de diálogo de desambiguación y el usuario debe seleccionar qué aplicación controlará el URI.
 
 Si el usuario no tiene ninguna aplicación instalada que admita el URI y otra se instala posteriormente, Android establecerá esa aplicación como el controlador predeterminado para el URI después de comprobar la asociación con el sitio web que está asociado con el URI.
 
@@ -46,8 +46,8 @@ La vinculación de aplicaciones es posible en versiones anteriores de Android me
 
 La configuración de vínculos de aplicación en Android 6,0 implica dos pasos principales:
 
-1. **Agregar uno o varios filtros de intención para el URI del sitio web** &ndash; la guía de filtros de intención de Android en cómo administrar una dirección URL haga clic en un explorador móvil.
-2. **Publicación de un archivo *JSON de vínculos de activos digitales* en el sitio web** &ndash; este es un archivo que se carga en un sitio web y que se usa en Android para comprobar la relación entre la aplicación móvil y el dominio del sitio Web. Sin esto, Android no puede instalar la aplicación como el identificador predeterminado de los URI. el usuario debe hacerlo manualmente.
+1. **Agregar uno o varios filtros de intención para el URI del sitio web** &ndash; la guía de filtros de intención de Android en How to control a URL click in a Mobile Browser.
+2. **Publicación de un archivo *JSON de vínculos de activos digitales* en el sitio web** &ndash; se trata de un archivo que se carga en un sitio web y que se usa en Android para comprobar la relación entre la aplicación móvil y el dominio del sitio Web. Sin esto, Android no puede instalar la aplicación como el identificador predeterminado de los URI. el usuario debe hacerlo manualmente.
 
 <a name="configure-intent-filter" />
 
@@ -55,14 +55,14 @@ La configuración de vínculos de aplicación en Android 6,0 implica dos pasos p
 
 Es necesario configurar un filtro de intención que asigne un URI (o un conjunto de URI posible) de un sitio web a una actividad en una aplicación Android. En Xamarin. Android, esta relación se establece mediante la etiquetación de una actividad con el [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). El filtro de intención debe declarar la siguiente información:
 
-- **`Intent.ActionView`** &ndash; Se registrará el filtro de intención para responder a las solicitudes de visualización de la información.
-- **`Categories`** El filtro de intención debe registrar ambos **[propósitos. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** y **[intención. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder administrar correctamente el URI Web. &ndash;
-- **`DataScheme`** El filtro de intención debe `http` declarar y/ `https`o. &ndash; Estos son los únicos dos esquemas válidos.
-- **`DataHost`** &ndash; Este es el dominio del que se originarán los URI.
-- **`DataPathPrefix`** &ndash; Se trata de una ruta de acceso opcional a los recursos del sitio Web.
-- **`AutoVerify`** &ndash; El`autoVerify` atributo indica a Android que Compruebe la relación entre la aplicación y el sitio Web. Esto se tratará más adelante.
+- **`Intent.ActionView`** &ndash; se registrará el filtro de intención para responder a las solicitudes de visualización de información
+- **`Categories`** &ndash; el filtro de intención debe registrar ambos **[propósitos. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** y **[intención. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder controlar correctamente el URI Web.
+- **`DataScheme`** &ndash; el filtro de intención debe declarar `http` y/o `https`. Estos son los únicos dos esquemas válidos.
+- **`DataHost`** &ndash; este es el dominio desde el que se originarán los URI.
+- **`DataPathPrefix`** &ndash; se trata de una ruta de acceso opcional a los recursos del sitio Web.
+- **`AutoVerify`** &ndash; el atributo `autoVerify` indica a Android que Compruebe la relación entre la aplicación y el sitio Web. Esto se tratará más adelante.
 
-En el ejemplo siguiente se muestra cómo usar [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) para controlar vínculos desde `https://www.recipe-app.com/recipes` y hacia `http://www.recipe-app.com/recipes`:
+En el ejemplo siguiente se muestra cómo usar [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) para controlar vínculos desde `https://www.recipe-app.com/recipes` y desde `http://www.recipe-app.com/recipes`:
 
 ```csharp
 [IntentFilter(new [] { Intent.ActionView },
@@ -84,15 +84,15 @@ Android comprobará todos los hosts identificados por los filtros de intención 
 La vinculación de aplicaciones Android 6,0 requiere que Android Compruebe la asociación entre la aplicación y el sitio Web antes de establecer la aplicación como el controlador predeterminado para el URI. Esta comprobación se realizará cuando se instale la aplicación por primera vez. El archivo de *vínculos de recursos digitales* es un archivo JSON que se hospeda en los webdomains relevantes.
 
 > [!NOTE]
-> El `android:autoVerify` filtro&ndash; de intención debe establecer el atributo; en caso contrario, Android no realizará la comprobación.
+> El filtro de intención debe establecer el atributo de `android:autoVerify` &ndash;, de lo contrario, Android no realizará la comprobación.
 
 El archivo lo coloca el webmaster del dominio en la ubicación **https://domain/.well-known/assetlinks.json** .
 
 El archivo de recursos digitales contiene los metadatos necesarios para que Android Compruebe la asociación. Un archivo **assetlinks. JSON** tiene los siguientes pares clave-valor:
 
-- `namespace`&ndash; espacio de nombres de la aplicación Android.
-- `package_name`&ndash; el nombre del paquete de la aplicación de Android (declarado en el manifiesto de aplicación).
-- `sha256_cert_fingerprints`&ndash; las huellas digitales SHA256 de la aplicación firmada. Consulte la guía de [búsqueda de la firma MD5 o SHA1 de su almacén de claves](~/android/deploy-test/signing/keystore-signature.md) para obtener más información sobre cómo obtener la huella digital SHA1 de una aplicación.
+- `namespace` &ndash; el espacio de nombres de la aplicación Android.
+- `package_name` &ndash; el nombre del paquete de la aplicación Android (declarado en el manifiesto de aplicación).
+- `sha256_cert_fingerprints` &ndash; las huellas digitales SHA256 de la aplicación firmada. Consulte la guía de [búsqueda de la firma MD5 o SHA1 de su almacén de claves](~/android/deploy-test/signing/keystore-signature.md) para obtener más información sobre cómo obtener la huella digital SHA1 de una aplicación.
 
 El siguiente fragmento de código es un ejemplo de **assetlinks. JSON** con una sola aplicación enumerada:
 
@@ -173,9 +173,9 @@ Se pueden realizar dos pruebas para asegurarse de que los filtros de intención 
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    - **`Package`** &ndash; Nombre del paquete de la aplicación.
-    - **`Domain`** &ndash; Los dominios (separados por espacios) cuyos vínculos Web controlará la aplicación
-    - **`Status`** &ndash; Este es el estado actual de control de vínculos de la aplicación. Un valor de **siempre** significa que la aplicación ha `android:autoVerify=true` declarado y ha pasado la comprobación del sistema. Va seguido de un número hexadecimal que representa el registro del sistema Android de la preferencia.
+    - **`Package`** &ndash; el nombre del paquete de la aplicación.
+    - **`Domain`** &ndash; los dominios (separados por espacios) cuyos vínculos Web controlará la aplicación
+    - **`Status`** &ndash; este es el estado actual de control de vínculos de la aplicación. Un valor de **siempre** significa que la aplicación ha `android:autoVerify=true` declarado y ha pasado la comprobación del sistema. Va seguido de un número hexadecimal que representa el registro del sistema Android de la preferencia.
 
     Por ejemplo:
 
@@ -196,6 +196,6 @@ En esta guía se describe cómo funciona la vinculación de aplicaciones en Andr
 
 - [Buscar la firma MD5 o SHA1 de su almacén de claves](~/android/deploy-test/signing/keystore-signature.md)
 - [Actividades e intents](https://university.xamarin.com/classes#4)
-- [AppLinks](http://applinks.org/)
+- [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Vínculos a recursos digitales de Google](https://developers.google.com/digital-asset-links/)
 - [Generador y evaluador de la lista de instrucciones](https://developers.google.com/digital-asset-links/tools/generator)

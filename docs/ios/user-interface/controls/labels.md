@@ -4,23 +4,23 @@ description: En este documento se explica cómo usar las etiquetas en Xamarin. i
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022021"
 ---
 # <a name="labels-in-xamarinios"></a>Etiquetas en Xamarin. iOS
 
-El `UILabel` control se usa para mostrar texto de solo lectura y de una sola línea.
+El control `UILabel` se usa para mostrar texto de solo lectura y de una sola línea.
 
 ## <a name="implementing-a-label"></a>Implementar una etiqueta
 
-Se crea una nueva etiqueta creando una instancia de [`UILabel`](xref:UIKit.UILabel):
+Se crea una nueva etiqueta creando una instancia de un [`UILabel`](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obtener más información sobre el estilo `NSAttributedString` de texto, consulte la receta de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Para obtener más información sobre cómo aplicar estilos a un texto mediante `NSAttributedString` consulte la receta de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-De forma predeterminada, las `Enabled` etiquetas tienen el valor true, pero es posible establecerlo en deshabilitado para dar al usuario una sugerencia de que un control determinado está deshabilitado:
+De forma predeterminada, las etiquetas tienen la `Enabled` establecida en true, pero es posible establecerla en deshabilitado para dar al usuario una sugerencia de que un control determinado está deshabilitado:
 
 ```csharp
 label.Enabled = false;

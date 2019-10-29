@@ -3,15 +3,15 @@ title: Localización de la interfaz de usuario de la aplicación
 description: En este documento se describen los conceptos multiplataforma de internacionalización y localización, y se examina cómo afectan al diseño de la aplicación.
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9e0a6569710ca3ad10f57d7145a97af92574427c
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198439"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016798"
 ---
 # <a name="localization"></a>Localización
 
@@ -59,7 +59,7 @@ Las cadenas alemanas (por ejemplo,) pueden ser muy largas; a veces, una palabra 
 
 Compare las longitudes de cadena para algunos elementos de la pantalla principal de iOS en inglés, alemán y japonés:
 
-[![](localization-images/language-compare-sml.png "Longitud de cadena de alemán frente a Japonés")](localization-images/language-compare.png#lightbox)
+[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
 
 Tenga en cuenta que la **configuración** en inglés (8 caracteres) requiere 13 caracteres para la traducción alemana, pero solo 2 caracteres en japonés.
 
@@ -235,7 +235,7 @@ Tendrá que escribir código en la aplicación para evaluar el número que se mu
 
 En ocasiones, los lenguajes basados en latín usan diferentes palabras según el género del sujeto. Si su aplicación conoce el sexo, debe permitir que las cadenas traducidas reflejen esto.
 
-También hay un caso más obvio, incluso en inglés, en el que las cadenas hacen referencia a una persona concreta o a un usuario de la aplicación. Por ejemplo, algunos sitios muestran mensajes como `"Bob commented on his post"` , por lo que necesita cadenas para el sexo macho, hembra, no binaria o desconocido:
+También hay un caso más obvio, incluso en inglés, en el que las cadenas hacen referencia a una persona concreta o a un usuario de la aplicación. Por ejemplo, algunos sitios muestran mensajes como `"Bob commented on his post"`, por lo que necesita cadenas para el sexo macho, hembra, no binaria o desconocido:
 
 **Bueno**:
 
@@ -271,7 +271,7 @@ Para compilar características de traducción en la aplicación, tenga en cuenta
 Con fines de prueba, puede usar una de las muchas herramientas de traducción en línea para incluir algún texto localizado en la aplicación durante el desarrollo:
 
 - [Traductor de Bing](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Traducción de Google](https://translate.google.com/)
 
 Hay muchas otras disponibles. La calidad de la traducción de la máquina generalmente no se considera lo suficientemente adecuada como para publicar una aplicación sin que los traductores profesionales o los hablantes nativos la revisen y prueben primero.
 
@@ -279,7 +279,7 @@ Hay muchas otras disponibles. La calidad de la traducción de la máquina genera
 
 También hay servicios de traducción profesional que tomarán las cadenas y las distribuirá a sus propios traductores, lo que le proporcionará traducciones finalizadas.
 
-Uno de los servicios más conocidos es [Lionbridge](http://www.lionbridge.com/). La mayoría de los servicios profesionales admiten todos los tipos de archivo comunes, como cadenas, XML, RESX y POT/PO.
+Uno de los servicios más conocidos es [Lionbridge](https://www.lionbridge.com/). La mayoría de los servicios profesionales admiten todos los tipos de archivo comunes, como cadenas, XML, RESX y POT/PO.
 
 ## <a name="summary"></a>Resumen
 

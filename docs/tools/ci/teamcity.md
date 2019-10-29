@@ -3,21 +3,21 @@ title: Usar el equipo City con Xamarin
 description: En esta guía se explican los pasos implicados en el uso de TeamCity para compilar aplicaciones móviles y después enviarlas a Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72273126"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029802"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usar el equipo City con Xamarin
 
 _En esta guía se explican los pasos implicados en el uso de TeamCity para compilar aplicaciones móviles y después enviarlas a Xamarin Test Cloud._
 
-Como se describe en la guía de [Introducción a la integración continua](~/tools/ci/intro-to-ci.md) , la integración continua (CI) es una práctica útil al desarrollar aplicaciones móviles de calidad. Existen muchas opciones viables para el software de servidor de integración continua. Esta guía se centrará en [TeamCity](http://www.jetbrains.com/teamcity/) de JetBrains.
+Como se describe en la guía de [Introducción a la integración continua](~/tools/ci/intro-to-ci.md) , la integración continua (CI) es una práctica útil al desarrollar aplicaciones móviles de calidad. Existen muchas opciones viables para el software de servidor de integración continua. Esta guía se centrará en [TeamCity](https://www.jetbrains.com/teamcity/) de JetBrains.
 
 Hay varias permutaciones diferentes de una instalación de TeamCity. A continuación se muestra una lista de algunos de ellos:
 
@@ -31,7 +31,7 @@ De los escenarios anteriores, la ejecución de TeamCity en una cuenta de usuario
 
 Hay varios pasos implicados en la configuración de TeamCity:
 
-- **Instalación de TeamCity** : la instalación de TeamCity no se trata en esta guía. En esta guía se da por supuesto que TeamCity se ha instalado y se está ejecutando en una cuenta de usuario. Las instrucciones sobre cómo [instalar TeamCity](http://confluence.jetbrains.com/display/TCD8/Installation) se pueden encontrar en la [documentación de TeamCity 8](http://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) de JetBrains.
+- **Instalación de TeamCity** : la instalación de TeamCity no se trata en esta guía. En esta guía se da por supuesto que TeamCity se ha instalado y se está ejecutando en una cuenta de usuario. Las instrucciones sobre cómo [instalar TeamCity](https://confluence.jetbrains.com/display/TCD8/Installation) se pueden encontrar en la [documentación de TeamCity 8](https://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) de JetBrains.
 
 - **Preparar el servidor de compilación** : este paso implica la instalación del software, las herramientas y los certificados necesarios para compilar aplicaciones móviles y prepararlas para su distribución.
 
@@ -85,7 +85,7 @@ El script de compilación puede ser tan simple como un archivo de PowerShell (en
 
 - [**psake**](https://github.com/psake/psake) : se trata de una biblioteca de Windows PowerShell para compilar software
 
-- [**Falsa**](http://fsharp.github.io/FAKE/) : se trata de un DSL basado F# en que hace posible utilizar las bibliotecas de .net existentes si es necesario.
+- [**Falsa**](https://fsharp.github.io/FAKE/) : se trata de un DSL basado F# en que hace posible utilizar las bibliotecas de .net existentes si es necesario.
 
 El lenguaje de scripting que se use dependerá de sus preferencias y requisitos. El ejemplo [TaskyPro-calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contiene un ejemplo del uso de inclinación como un [script de compilación](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
 
@@ -211,4 +211,4 @@ A continuación, hemos explicado cómo crear un proyecto en TeamCity que pone en
 
 - [Preparación de las aplicaciones de Xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
 - [Preparación de las aplicaciones de Xamarin. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [Instalación y configuración de TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
+- [Instalación y configuración de TeamCity](https://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

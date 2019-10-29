@@ -3,15 +3,15 @@ title: Libros interactivos
 description: En este documento se describe cómo usar Xamarin Workbooks para crear documentos activos C# que contengan código para experimentar, enseñar, entrenar o explorar.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 7b3c356460d9427821843dc084b3f306c026ffa0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a6ca347c231d001cab521d7280a66b714b6a5aef
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293084"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029560"
 ---
 # <a name="interactive-workbooks"></a>Libros interactivos
 
@@ -27,25 +27,25 @@ Los libros se pueden guardar y abrir de nuevo más adelante dentro de la aplicac
 
 La ventana de edición de código proporciona la finalización del código, el color de la sintaxis, el diagnóstico en directo en línea y la compatibilidad con la instrucción de varias líneas.
 
-[![](workbook-images/inspector-0.6.0-repl-small.png "La ventana de edición de código proporciona la finalización del código, el color de la sintaxis, el diagnóstico en directo en línea y la compatibilidad con la instrucción de varias líneas.")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin Workbooks se guardan en `.workbook` un archivo, que es un archivo CommonMark con algunos metadatos en la parte superior (consulte [tipos de archivo de libros](#workbooks-files-types) para obtener más detalles sobre cómo se pueden guardar los libros).
+Xamarin Workbooks se guardan en un archivo `.workbook`, que es un archivo CommonMark con algunos metadatos en la parte superior (consulte [tipos de archivo de libros](#workbooks-files-types) para obtener más detalles sobre cómo se pueden guardar los libros).
 
 ### <a name="nuget-package-support"></a>Compatibilidad con paquetes NuGet
 
-Muchos paquetes de NuGet populares se admiten directamente en Xamarin Workbooks. Puede buscar paquetes examinando el **archivo > Agregar paquete**. Al agregar un paquete, se incorporarán automáticamente las instrucciones que hacen referencia a los ensamblados del paquete, lo que le permite usarlos de `#r` inmediato.
+Muchos paquetes de NuGet populares se admiten directamente en Xamarin Workbooks. Puede buscar paquetes examinando el **archivo > Agregar paquete**. Al agregar un paquete, se incorporan automáticamente `#r` instrucciones que hacen referencia a ensamblados de paquete, lo que le permite usarlos inmediatamente.
 
 Al guardar un libro con referencias de paquete, esas referencias también se guardan. Si comparte el libro con otra persona, se descargarán automáticamente los paquetes a los que se hace referencia.
 
 Hay algunas limitaciones conocidas con la compatibilidad con paquetes NuGet en los libros de:
 
 - Las bibliotecas nativas solo se admiten en iOS y solo cuando se vinculan a la biblioteca administrada.
-- Los paquetes que dependen `.targets` de archivos o scripts de PowerShell probablemente no funcionarán según lo previsto.
+- Los paquetes que dependen de `.targets` archivos o scripts de PowerShell probablemente no funcionarán según lo esperado.
 - Para quitar o modificar una dependencia del paquete, edite el manifiesto del libro con un editor de texto. La administración correcta de paquetes está en camino.
 
 ### <a name="xamarinforms-support"></a>Compatibilidad con Xamarin. Forms
 
-Si hace referencia al paquete de NuGet de Xamarin. Forms en el libro, la aplicación del libro cambiará la vista principal para que esté basada en Xamarin. Forms. Puede tener acceso a ella `Xamarin.Forms.Application.Current.MainPage`a través de.
+Si hace referencia al paquete de NuGet de Xamarin. Forms en el libro, la aplicación del libro cambiará la vista principal para que esté basada en Xamarin. Forms. Puede tener acceso a ella a través de `Xamarin.Forms.Application.Current.MainPage`.
 
 La pestaña ver inspector también tiene compatibilidad especial para mostrar la jerarquía de vistas de Xamarin. Forms para ayudarle a comprender los diseños.
 
@@ -53,7 +53,7 @@ La pestaña ver inspector también tiene compatibilidad especial para mostrar la
 
 Puede editar el texto alrededor del código mediante el editor de texto enriquecido incluido, como se muestra a continuación:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Editar el texto alrededor del código mediante el editor de texto enriquecido integrado")
+![](workbook-images/inspector-0.6.2-editing.gif "Edit the text around the code using the built-in rich text editor")
 
 ### <a name="markdown-authoring"></a>Creación de Markdown
 
@@ -61,7 +61,7 @@ A veces, es posible que los autores de libros le resulten más fáciles de edita
 
 Tenga en cuenta que si después edita y guarda el libro en el cliente de los libros, es posible que se vuelva a dar formato al texto de CommonMark.
 
-Tenga en cuenta que, debido a la extensión CommonMark que usamos para habilitar los metadatos de `---` yaml en los archivos de libro, está reservada para ese propósito. Si desea crear [saltos temáticos](http://spec.commonmark.org/0.27/#thematic-break) en el texto, debe usar `***` o `___` en su lugar. Tales interrupciones deben evitarse en los libros 1,2 y anteriores debido a un error durante el guardado.
+Tenga en cuenta que, debido a la extensión CommonMark que usamos para habilitar los metadatos de YAML en los archivos de libro, `---` está reservado para ese propósito. Si desea crear [saltos temáticos](https://spec.commonmark.org/0.27/#thematic-break) en el texto, debe usar `***` o `___` en su lugar. Tales interrupciones deben evitarse en los libros 1,2 y anteriores debido a un error durante el guardado.
 
 ### <a name="improvements-in-workbooks-13"></a>Mejoras en los libros 1,3
 
@@ -80,7 +80,7 @@ También puede vincular a los encabezados del documento del libro. Se generan de
 1. Se quitan todos los caracteres excepto los alfanuméricos y los guiones.
 1. Todos los espacios se sustituyen por guiones.
 
-Esto significa que un encabezado como "importante header" obtiene un identificador de `important-header` y al que se puede vincular mediante la inserción de `#important-header` un vínculo a en el libro.
+Esto significa que un encabezado como "importante header" obtiene un identificador de `important-header` y que se puede vincular mediante la inserción de un vínculo a `#important-header` en el libro.
 
 ## <a name="document-structure"></a>Estructura del documento
 
@@ -89,7 +89,7 @@ Esto significa que un encabezado como "importante header" obtiene un identificad
 Unidad de contenido discreta que representa el código ejecutable o Markdown. Una celda de código consta de hasta cuatro subcomponentes:
 
 - Editor
-  - Buffer
+  - Búfer
 - Diagnóstico del compilador
 - Salida de la consola
 - Resultados de la ejecución
@@ -98,7 +98,7 @@ Unidad de contenido discreta que representa el código ejecutable o Markdown. Un
 
 Componente de texto interactivo de una celda. En el caso de las celdas de código, este es el editor de código real con resaltado de sintaxis, etc. En el caso de las celdas de Markdown, se trata de un editor de contenido de texto enriquecido con una barra de herramientas de creación y formato sensible al contexto.
 
-### <a name="buffer"></a>Buffer
+### <a name="buffer"></a>Búfer
 
 Contenido de texto real de un editor.
 
@@ -118,29 +118,29 @@ Las representaciones enriquecidas y potencialmente interactivas de los resultado
 
 ### <a name="plain-files"></a>Archivos sin formato
 
-De forma predeterminada, un libro se guarda como un `.workbook` archivo de texto sin formato que contiene texto con formato CommonMark.
+De forma predeterminada, un libro se guarda como un archivo de `.workbook` de texto sin formato que contiene texto con formato CommonMark.
 
 ### <a name="packages"></a>Paquetes
 
-Un paquete de libro es un directorio denominado con la `.workbook` extensión.
+Un paquete de libro es un directorio denominado con la extensión `.workbook`.
 En el buscador de Mac y en el menú de Xamarin Workbooks abrir cuadro de diálogo y archivos recientes, este directorio se reconocerá como si fuera un archivo.
 
-El directorio debe contener un `index.workbook` archivo, que es el libro de texto sin formato real que se cargará en Xamarin Workbooks. El directorio también puede contener recursos necesarios para `index.workbook`, incluidas imágenes u otros archivos.
+El directorio debe contener un archivo de `index.workbook`, que es el libro de texto sin formato real que se cargará en Xamarin Workbooks. El directorio también puede contener recursos necesarios para `index.workbook`, incluidas imágenes u otros archivos.
 
-Si un archivo de `.workbook` texto sin formato que hace referencia a recursos de su mismo directorio se abre en los libros 0.99.3 o posterior, cuando se guarda, se convertirá `.workbook` en un paquete. Esto es cierto en Mac y Windows.
+Si un archivo `.workbook` de texto sin formato que hace referencia a recursos de su mismo directorio se abre en los libros 0.99.3 o posterior, cuando se guarda, se convertirá en un paquete de `.workbook`. Esto es cierto en Mac y Windows.
 
 > [!NOTE]
-> Los usuarios de Windows abrirán el `package.workbook\index.workbook` archivo directamente, pero de lo contrario el paquete se comportará igual que en Mac.
+> Los usuarios de Windows abrirán el archivo `package.workbook\index.workbook` directamente, pero de lo contrario el paquete se comportará igual que en Mac.
 
 ### <a name="archives"></a>Archivos
 
-Los paquetes de libros, que son directorios, pueden ser difíciles de distribuir fácilmente a través de Internet. La solución es archivos de libro. Un archivo de libro es un paquete de libro comprimido con zip, denominado `.workbook` con la extensión.
+Los paquetes de libros, que son directorios, pueden ser difíciles de distribuir fácilmente a través de Internet. La solución es archivos de libro. Un archivo de libro es un paquete de libro comprimido con zip, denominado con la extensión `.workbook`.
 
 A partir de los libros 1,1, al guardar un paquete de libro, el cuadro de diálogo Guardar ofrece la opción de guardar como archivo en su lugar. Los libros 1,0 no tenían forma integrada de crear o guardar archivos.
 
 En los libros 1,0, cuando se abre un archivo de libro, se convierte de forma transparente en un paquete de libro y se perdió el archivo zip. En los libros 1,1, el archivo zip permanece. Cuando el usuario guarda el archivo, se reemplaza por un nuevo archivo zip.
 
-Puede crear un archivo de libro manualmente haciendo clic con el botón secundario en un paquete de libro y seleccionando **comprimir** en Mac o **enviando a > carpeta comprimida (en zip)** en Windows. A continuación, cambie el nombre del archivo zip `.workbook` para que tenga una extensión de archivo. Esto solo funciona con paquetes de libro, no con archivos de libro sin formato.
+Puede crear un archivo de libro manualmente haciendo clic con el botón secundario en un paquete de libro y seleccionando **comprimir** en Mac o **enviando a > carpeta comprimida (en zip)** en Windows. A continuación, cambie el nombre del archivo zip para que tenga una extensión de archivo `.workbook`. Esto solo funciona con paquetes de libro, no con archivos de libro sin formato.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

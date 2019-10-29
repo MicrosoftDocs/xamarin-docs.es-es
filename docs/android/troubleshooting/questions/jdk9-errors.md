@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 58b1b29a34bfb03661959af4dea8ed57b8f504cc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2ea7c9b9f900bc339d183c2f5b317792ebec5232
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760870"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026833"
 ---
 # <a name="xamarinandroid-and-java-development-kit-9-or-later"></a>Xamarin. Android y el kit de desarrollo de Java 9 o posterior
 
@@ -36,7 +36,7 @@ Como alternativa, puede instalar la [versión preliminar de Microsoft Mobile Ope
 
 ## <a name="checking-the-jdk-version"></a>Comprobando la versión de JDK
 
-Puede comprobar la versión de Java que ha instalado escribiendo el siguiente comando (el directorio JDK `bin` debe estar `PATH`en):
+Puede comprobar la versión de Java que ha instalado escribiendo el siguiente comando (el directorio JDK `bin` debe estar en el `PATH`):
 
 ```shell
 java -version
@@ -52,12 +52,12 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 
 Si está instalado JDK 9 o posterior, debe instalar Java JDK 8 (1,8) o la versión preliminar de Microsoft Mobile OpenJDK. Para obtener información sobre cómo instalar JDK 8, consulte [Cómo actualizar la versión del kit de desarrollo de Java (JDK)](~/android/troubleshooting/questions/update-jdk.md). Para obtener información sobre cómo instalar Microsoft Mobile OpenJDK, vea [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md).
 
-Tenga en cuenta que no tiene que desinstalar una versión posterior del JDK; sin embargo, debe asegurarse de que Xamarin usa JDK 8 en lugar de una versión posterior de JDK. En Visual Studio, haga clic en **herramientas > opciones > Xamarin > configuración de Android**. Si la **Ubicación del kit de desarrollo de Java** no está establecida en una ubicación de JDK 8 (por ejemplo, **C:\\archivos\\de programa Java\\JDK 1.8.0 _111**), haga clic en **cambiar** y establézcala en la ubicación donde está instalado JDK 8. En Visual Studio para Mac, vaya a **preferencias > proyectos > ubicaciones del sdk > SDK de Java > Android (JDK)** y haga clic en **examinar** para actualizar esta ruta de acceso.
+Tenga en cuenta que no tiene que desinstalar una versión posterior del JDK; sin embargo, debe asegurarse de que Xamarin usa JDK 8 en lugar de una versión posterior de JDK. En Visual Studio, haga clic en **herramientas > opciones > Xamarin > configuración de Android**. Si la **Ubicación del kit de desarrollo de Java** no está establecida en una ubicación de JDK 8 (por ejemplo, **C:\\archivos de programa\\Java\\JDK 1.8.0 _111**), haga clic en **cambiar** y establézcalo en la ubicación donde está instalado JDK 8. En Visual Studio para Mac, vaya a **preferencias > proyectos > ubicaciones del sdk > SDK de Java > Android (JDK)** y haga clic en **examinar** para actualizar esta ruta de acceso.
 
 ## <a name="known-issues-with-jdk-9"></a>Problemas conocidos de JDK 9
 
 ### <a name="apksigner"></a>apksigner
 
-Existe un problema conocido con apksigner y JDK 9 en el que el `apksigner.bat` archivo invoca `apksigner.jar` con `-Djava.ext.dirs` en lugar de `-classpath` lo que se espera en JDK 9. Se recomienda usar JDK 8 (1,8). Para obtener información sobre cómo instalar JDK 8, consulte [Cómo actualizar la versión del kit de desarrollo de Java (JDK)](~/android/troubleshooting/questions/update-jdk.md) .
+Existe un problema conocido con apksigner y JDK 9 en el que el archivo `apksigner.bat` invoca el `apksigner.jar` con `-Djava.ext.dirs` en lugar de `-classpath` que se espera en JDK 9. Se recomienda usar JDK 8 (1,8). Para obtener información sobre cómo instalar JDK 8, consulte [Cómo actualizar la versión del kit de desarrollo de Java (JDK)](~/android/troubleshooting/questions/update-jdk.md) .
 
-Si ha instalado JDK 9, asegúrese de que la ruta de acceso siguiente no esté establecida `PATH` en la variable de entorno, ya que seguirá señalando `C:\ProgramData\Oracle\Java\javapath`a JDK 9:. Después de quitarlo `java-version` , en una línea de comandos debería mostrar JDK 8.
+Si ha instalado JDK 9, asegúrese de que la siguiente ruta de acceso no esté establecida en la variable de entorno `PATH`, ya que seguirá señalando a JDK 9: `C:\ProgramData\Oracle\Java\javapath`. Después de quitarlo, `java-version` en una línea de comandos debería mostrar JDK 8.

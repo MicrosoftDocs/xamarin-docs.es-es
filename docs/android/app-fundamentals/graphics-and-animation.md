@@ -4,15 +4,15 @@ description: Android proporciona un marco de trabajo muy rico y diverso para adm
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: ea713b2b56f18c435f3ec676b42d0aa4802abc6a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1781503d214b959d31223cbe8f55fd6afa0fef44
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755426"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019287"
 ---
 # <a name="android-graphics-and-animation"></a>Gráficos y animación de Android
 
@@ -24,24 +24,24 @@ A pesar de que se ejecutan en dispositivos que tradicionalmente tienen una capac
 
 Afortunadamente para nosotros, las plataformas móviles modernas tienen marcos muy eficaces para crear animaciones sofisticadas y gráficos personalizados a la vez que conservan la facilidad de uso. Esto permite a los desarrolladores agregar interactividad enriquecida con muy poco esfuerzo.
 
-Los marcos de API de interfaz de usuario en Android pueden dividirse en dos categorías aproximadamente: Gráficos y animación.
+Los marcos de API de interfaz de usuario en Android pueden dividirse en dos categorías aproximadamente: gráficos y animaciones.
 
 Los gráficos se dividen en enfoques diferentes para hacer gráficos 2D y 3D. los gráficos 3D están disponibles a través de una serie de marcos de trabajo integrados como OpenGL ES (una versión específica para móviles de OpenGL) y marcos de terceros como monogame (un kit de herramientas multiplataforma compatible con XNA Toolkit). Aunque los gráficos 3D no se encuentran dentro del ámbito de este artículo, examinaremos las técnicas de dibujo 2D integradas.
 
 Android proporciona dos API diferentes para crear gráficos 2D. Uno es un enfoque declarativo de alto nivel y el otro mediante programación API de bajo nivel:
 
-- **Recursos Dibujables** &ndash; Se usan para crear gráficos personalizados mediante programación o (más normalmente) incrustando instrucciones de dibujo en archivos XML. Los recursos que se pueden dibujar se suelen definir como archivos XML que contienen instrucciones o acciones para que Android represente un gráfico 2D. 
+- **Los recursos** que se pueden dibujar &ndash; se usan para crear gráficos personalizados mediante programación o (más normalmente) mediante la incrustación de instrucciones de dibujo en archivos XML. Los recursos que se pueden dibujar se suelen definir como archivos XML que contienen instrucciones o acciones para que Android represente un gráfico 2D. 
 
-- **Lienzo** de &ndash; se trata de una API de bajo nivel que implica dibujar directamente en un mapa de bits subyacente. Proporciona un control muy exhaustivo sobre lo que se muestra. 
+- **Canvas** &ndash; esta es una API de bajo nivel que implica dibujar directamente en un mapa de bits subyacente. Proporciona un control muy exhaustivo sobre lo que se muestra. 
 
 Además de estas técnicas de gráficos 2D, Android también proporciona varias maneras de crear animaciones:
 
-- **Animaciones Dibujables** Android también admite animaciones de fotogramas fotogramas conocidas como *animación dibujable.* &ndash; Esta es la API de animación más sencilla. Android se carga secuencialmente y muestra los recursos que se dibujan en secuencia (muy parecido a un dibujo).
+- **Animaciones dibujables** &ndash; Android también admite animaciones de fotogramas fotogramas conocidas como *animación dibujable*. Esta es la API de animación más sencilla. Android se carga secuencialmente y muestra los recursos que se dibujan en secuencia (muy parecido a un dibujo).
 
-- **Ver animaciones** Las animaciones de vista son las API de animación originales en Android y están disponibles en todas las versiones de Android. &ndash; Esta API está limitada, ya que solo funcionará con objetos de vista y solo puede realizar transformaciones simples en esas vistas.
-    Las animaciones de vista se definen normalmente en los archivos XML `/Resources/anim` que se encuentran en la carpeta.
+- **Ver animaciones** &ndash; *animaciones de vista* son las API de animación originales en Android y están disponibles en todas las versiones de Android. Esta API está limitada, ya que solo funcionará con objetos de vista y solo puede realizar transformaciones simples en esas vistas.
+    Las animaciones de vista se definen normalmente en los archivos XML que se encuentran en la carpeta `/Resources/anim`.
 
-- **Animaciones de propiedades** Android 3,0 presentó un nuevo conjunto de API de animación conocido como *animaciones de propiedades.* &ndash; Estas nuevas API incorporan un sistema extensible y flexible que se puede usar para animar las propiedades de cualquier objeto, no solo los objetos de vista. Esta flexibilidad permite encapsular animaciones en clases distintas que harán que el uso compartido del código sea más sencillo.
+- **Animaciones de propiedades** &ndash; Android 3,0 presentó un nuevo conjunto de API de animación conocido como *animaciones de propiedades*. Estas nuevas API incorporan un sistema extensible y flexible que se puede usar para animar las propiedades de cualquier objeto, no solo los objetos de vista. Esta flexibilidad permite encapsular animaciones en clases distintas que harán que el uso compartido del código sea más sencillo.
 
 Las animaciones de vista son más adecuadas para las aplicaciones que deben ser compatibles con las API anteriores a Android 3,0 (nivel de API 11). De lo contrario, las aplicaciones deben usar las API de animación de propiedades más recientes por las razones mencionadas anteriormente.
 
@@ -58,7 +58,7 @@ Consulte [la guía de accesibilidad de Google](https://developer.android.com/gui
 
 ## <a name="2d-graphics"></a>Gráficos 2D
 
-Los recursos que se pueden dibujar son una técnica popular en aplicaciones Android. Como con otros recursos, los recursos que se pueden &ndash; dibujar son declarativos que se definen en archivos XML. Este enfoque permite una separación limpia del código de los recursos. Esto puede simplificar el desarrollo y el mantenimiento, ya que no es necesario cambiar el código para actualizar o cambiar los gráficos en una aplicación de Android. Sin embargo, aunque los recursos que se pueden dibujar son útiles para muchos requisitos gráficos sencillos y comunes, carecen de la eficacia y el control de la API de canvas.
+Los recursos que se pueden dibujar son una técnica popular en aplicaciones Android. Como con otros recursos, los recursos dibujables son declarativos &ndash; se definen en archivos XML. Este enfoque permite una separación limpia del código de los recursos. Esto puede simplificar el desarrollo y el mantenimiento, ya que no es necesario cambiar el código para actualizar o cambiar los gráficos en una aplicación de Android. Sin embargo, aunque los recursos que se pueden dibujar son útiles para muchos requisitos gráficos sencillos y comunes, carecen de la eficacia y el control de la API de canvas.
 
 La otra técnica, con el objeto [Canvas](xref:Android.Graphics.Canvas) , es muy similar a la de otros marcos de API tradicionales, como System. Drawing o el dibujo principal de iOS. El uso del objeto Canvas proporciona el máximo control sobre cómo se crean los gráficos 2D. Es adecuado para situaciones en las que un recurso que se puede dibujar no funcionará o será difícil de trabajar con él. Por ejemplo, puede ser necesario dibujar un control deslizante personalizado cuya apariencia cambiará en función de los cálculos relacionados con el valor del control deslizante.
 
@@ -66,31 +66,31 @@ Vamos a examinar los recursos que se van a dibujar en primer lugar. Son más sen
 
 ### <a name="drawable-resources"></a>Recursos Dibujables
 
-Los recursos que se pueden dibujar se definen en un archivo XML `/Resources/drawable`en el directorio. A diferencia de la incrustación de PNG o JPEG, no es necesario proporcionar versiones específicas de densidad de recursos que se pueda dibujar.
+Los recursos que se pueden dibujar se definen en un archivo XML en el directorio `/Resources/drawable`. A diferencia de la incrustación de PNG o JPEG, no es necesario proporcionar versiones específicas de densidad de recursos que se pueda dibujar.
 En tiempo de ejecución, una aplicación de Android cargará estos recursos y usará las instrucciones de estos archivos XML para crear gráficos 2D.
 Android define varios tipos diferentes de recursos que se dibujan:
 
-- [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; Se trata de un objeto dibujable que dibuja una forma geométrica primitiva y aplica un conjunto limitado de efectos gráficos en esa forma. Son muy útiles para cosas como la personalización de botones o la configuración del fondo de TextViews. Veremos un ejemplo de cómo usar un `ShapeDrawable` más adelante en este artículo.
+- [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; se trata de un objeto dibujable que dibuja una forma geométrica primitiva y aplica un conjunto limitado de efectos gráficos en esa forma. Son muy útiles para cosas como la personalización de botones o la configuración del fondo de TextViews. Veremos un ejemplo de cómo usar una `ShapeDrawable` más adelante en este artículo.
 
-- [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; Se trata de un recurso que se dibuja y que cambiará la apariencia según el estado de un widget/control. Por ejemplo, un botón puede cambiar su apariencia en función de si está presionado o no.
+- [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; se trata de un recurso que se dibuja y que cambiará la apariencia según el estado de un widget/control. Por ejemplo, un botón puede cambiar su apariencia en función de si está presionado o no.
 
-- [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; Este recurso dibujable que apilará varios drawables uno encima de otro. En la captura de pantalla siguiente se muestra un ejemplo de un *LayerDrawable* :
+- [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; este recurso de dibujo que se va a apilar entre otros drawables uno encima de otro. En la captura de pantalla siguiente se muestra un ejemplo de un *LayerDrawable* :
 
     ![Ejemplo de LayerDrawable](graphics-and-animation-images/image1.png)
 
-- [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) Se trata de una LayerDrawable, pero con una diferencia. &ndash; Un *TransitionDrawable* es capaz de animar una capa que se muestra encima de otra encima.
+- [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; es *LayerDrawable* , pero con una diferencia. Un *TransitionDrawable* es capaz de animar una capa que se muestra encima de otra encima.
 
-- [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) Esto es muy similar a un StateListDrawable en que mostrará una imagen basada en determinadas condiciones. &ndash; Sin embargo, a diferencia de *StateListDrawable*, *LevelListDrawable* muestra una imagen basada en un valor entero. Un ejemplo de una *LevelListDrawable* sería Mostrar la fuerza de una señal WiFi. A medida que cambia la intensidad de la señal Wi-Fi, el dibujo que se muestra cambiará en consecuencia.
+- [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; es muy similar a un *StateListDrawable* en que mostrará una imagen basada en determinadas condiciones. Sin embargo, a diferencia de *StateListDrawable*, *LevelListDrawable* muestra una imagen basada en un valor entero. Un ejemplo de una *LevelListDrawable* sería Mostrar la fuerza de una señal WiFi. A medida que cambia la intensidad de la señal Wi-Fi, el dibujo que se muestra cambiará en consecuencia.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; Como su nombre implica, estos Drawables proporcionan la funcionalidad de escalado y recorte. El *ScaleDrawable* escalará otro dibujable, mientras que el *ClipDrawable* recortará otro dibujable.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como su nombre implica, estas Drawables proporcionan la funcionalidad de escalado y recorte. El *ScaleDrawable* escalará otro dibujable, mientras que el *ClipDrawable* recortará otro dibujable.
 
-- [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; Este dibujo se aplicará a los lados de otro recurso que se dibuja. Se utiliza cuando una vista necesita un fondo menor que los límites reales de la vista.
+- [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; este dibujo se aplicará a los lados de otro recurso dibujable. Se utiliza cuando una vista necesita un fondo menor que los límites reales de la vista.
 
 - XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; este archivo es un conjunto de instrucciones, en XML, que se realizarán en un mapa de bits real. Algunas acciones que Android puede realizar son el mosaico, la interpolación y el suavizado de contorno. Uno de los usos muy comunes de esto es poner en mosaico un mapa de bits a través del fondo de un diseño.
 
 #### <a name="drawable-example"></a>Ejemplo dibujable
 
-Echemos un vistazo a un ejemplo rápido de cómo crear un gráfico 2D con un `ShapeDrawable`. Un `ShapeDrawable` puede definir una de las cuatro formas básicas: rectángulo, óvalo, línea y anillo. También es posible aplicar efectos básicos, como el degradado, el color y el tamaño. El siguiente XML es un `ShapeDrawable` que se puede encontrar en el proyecto complementario *AnimationsDemo* (en el `Resources/drawable/shape_rounded_blue_rect.xml`archivo).
+Echemos un vistazo a un ejemplo rápido de cómo crear un gráfico 2D con un `ShapeDrawable`. Un `ShapeDrawable` puede definir una de las cuatro formas básicas: rectángulo, óvalo, línea y anillo. También es posible aplicar efectos básicos, como el degradado, el color y el tamaño. El siguiente código XML es un `ShapeDrawable` que se puede encontrar en el proyecto complementario *AnimationsDemo* (en el archivo `Resources/drawable/shape_rounded_blue_rect.xml`).
 Define un rectángulo con un fondo de degradado púrpura y esquinas redondeadas:
 
 ```xml
@@ -153,22 +153,22 @@ Una clase que se usa normalmente con el lienzo es la clase [Paint](xref:Android.
 La API de canvas usa el *modelo de la pintor* para dibujar gráficos 2D.
 Las operaciones se aplican en capas sucesivas unas de otras. Cada operación cubrirá parte del mapa de bits subyacente. Cuando el área se superpone a un área dibujada anteriormente, el nuevo dibujo ocultará el antiguo de forma parcial o totalmente. Esta es la misma manera que muchas otras API de dibujo como los gráficos principales de System. Drawing y iOS.
 
-Hay dos maneras de obtener un `Canvas` objeto. La primera forma implica definir un objeto de [mapa de bits](xref:Android.Graphics.Bitmap) y, a `Canvas` continuación, crear una instancia de un objeto con él. Por ejemplo, el fragmento de código siguiente crea un nuevo lienzo con un mapa de bits subyacente:
+Hay dos maneras de obtener un objeto `Canvas`. La primera forma implica definir un objeto de [mapa de bits](xref:Android.Graphics.Bitmap) y, a continuación, crear una instancia de un objeto `Canvas` con él. Por ejemplo, el fragmento de código siguiente crea un nuevo lienzo con un mapa de bits subyacente:
 
 ```csharp
 Bitmap bitmap = Bitmap.CreateBitmap(100, 100, Bitmap.Config.Argb8888);
 Canvas canvas = new Canvas(b);
 ```
 
-La otra manera de obtener un `Canvas` objeto es mediante el método de devolución de llamada [OnDraw](xref:Android.Views.View.OnDraw*) que se proporciona a la clase base de [vista](xref:Android.Views.View) . Android llama a este método cuando decide que una vista debe dibujarse y pasar un `Canvas` objeto para la vista con la que trabajar.
+La otra manera de obtener un objeto `Canvas` es mediante el método de devolución de llamada [OnDraw](xref:Android.Views.View.OnDraw*) que se proporciona a la clase base de la [vista](xref:Android.Views.View) . Android llama a este método cuando decide que una vista debe dibujarse y pasar un objeto `Canvas` para que la vista funcione.
 
 La clase Canvas expone métodos para proporcionar las instrucciones Draw mediante programación. Por ejemplo:
 
-- [Canvas. DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*) &ndash; rellena el mapa de bits del lienzo completo con el dibujo especificado.
+- [Canvas. DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*) &ndash; rellena todo el mapa de bits del lienzo con el dibujo especificado.
 
-- [Canvas. DrawPath](xref:Android.Graphics.Canvas.DrawPath*) &ndash; dibuja la forma geométrica especificada utilizando la pintura especificada.
+- [Canvas. DrawPath](xref:Android.Graphics.Canvas.DrawPath*) &ndash; dibuja la forma geométrica especificada utilizando el dibujo especificado.
 
-- [Canvas. DrawText](xref:Android.Graphics.Canvas.DrawText*) &ndash; dibuja el texto en el lienzo con el color especificado. El texto se dibuja en la `x,y` ubicación.
+- [Canvas. DrawText](xref:Android.Graphics.Canvas.DrawText*) &ndash; dibuja el texto en el lienzo con el color especificado. El texto se dibuja en la ubicación `x,y`.
 
 #### <a name="drawing-with-the-canvas-api"></a>Dibujo con la API de Canvas
 
@@ -199,7 +199,7 @@ public class MyView : View
 }
 ```
 
-Este código anterior crea primero una pintura roja y un objeto de pintura verde. Rellena el contenido del lienzo con rojo y, a continuación, indica al lienzo que dibuje un rectángulo verde que sea el 25% del ancho del lienzo. Un ejemplo de esto puede verse en `AnimationsDemo` el proyecto que se incluye con el código fuente de este artículo. Al iniciar la aplicación y seleccionar el elemento de dibujo en el menú principal, deberíamos tener una pantalla similar a la siguiente:
+Este código anterior crea primero una pintura roja y un objeto de pintura verde. Rellena el contenido del lienzo con rojo y, a continuación, indica al lienzo que dibuje un rectángulo verde que sea el 25% del ancho del lienzo. Un ejemplo de esto puede verse en `AnimationsDemo` proyecto que se incluye con el código fuente de este artículo. Al iniciar la aplicación y seleccionar el elemento de dibujo en el menú principal, deberíamos tener una pantalla similar a la siguiente:
 
 ![Pantalla con objetos de pintura roja y de pintura verde](graphics-and-animation-images/image3.png)
 
@@ -207,40 +207,40 @@ Este código anterior crea primero una pintura roja y un objeto de pintura verde
 
 Usuarios como cosas que se mueven en sus aplicaciones. Las animaciones son una excelente manera de mejorar la experiencia del usuario de una aplicación y ayudar a deshacerla. Las mejores animaciones son las que los usuarios no tienen en cuenta porque se sienten naturales. Android proporciona las siguientes tres API para animaciones:
 
-- **Ver animación** &ndash; Esta es la API original. Estas animaciones están asociadas a una vista específica y pueden realizar transformaciones simples en el contenido de la vista. Debido a su simplicidad, esta API sigue siendo útil para cosas como animaciones alfa, giros, etc.
+- **Ver animación** &ndash; esta es la API original. Estas animaciones están asociadas a una vista específica y pueden realizar transformaciones simples en el contenido de la vista. Debido a su simplicidad, esta API sigue siendo útil para cosas como animaciones alfa, giros, etc.
 
-- **Animación de propiedades** &ndash; Las animaciones de propiedades se introdujeron en Android 3,0. Permiten a una aplicación animar casi todo. Las animaciones de propiedad se pueden utilizar para cambiar cualquier propiedad de cualquier objeto, aunque ese objeto no esté visible en la pantalla.
+- La **animación de propiedades** &ndash; animaciones de propiedades se introdujeron en Android 3,0. Permiten a una aplicación animar casi todo. Las animaciones de propiedad se pueden utilizar para cambiar cualquier propiedad de cualquier objeto, aunque ese objeto no esté visible en la pantalla.
 
-- **Animación dibujable** &ndash; Este es un recurso dibujado especial que se usa para aplicar un efecto de animación muy simple a los diseños.
+- **Animación dibujable** &ndash; este recurso de dibujo especial que se usa para aplicar un efecto de animación muy simple a los diseños.
 
 En general, la animación de propiedades es el sistema preferido que se va a usar, ya que es más flexible y ofrece más características.
 
 ### <a name="view-animations"></a>Ver animaciones
 
 Las animaciones de vista se limitan a las vistas y solo pueden realizar animaciones en valores como los puntos de inicio y final, el tamaño, la rotación y la transparencia.
-Estos tipos de animaciones se conocen normalmente como *animaciones de interpolación*. Las animaciones de vista se pueden definir &ndash; de dos maneras mediante programación en el código o mediante archivos XML. Los archivos XML son la manera preferida de declarar animaciones de vista, ya que son más legibles y fáciles de mantener.
+Estos tipos de animaciones se conocen normalmente como *animaciones de interpolación*. Las animaciones de vista se pueden definir de dos maneras &ndash; mediante programación en código o mediante archivos XML. Los archivos XML son la manera preferida de declarar animaciones de vista, ya que son más legibles y fáciles de mantener.
 
-Los archivos XML de animación se almacenarán en `/Resources/anim` el directorio de un proyecto de Xamarin. Android. Este archivo debe tener uno de los siguientes elementos como elemento raíz:
+Los archivos XML de animación se almacenarán en el directorio `/Resources/anim` de un proyecto de Xamarin. Android. Este archivo debe tener uno de los siguientes elementos como elemento raíz:
 
-- `alpha`&ndash; Una animación de fundido de salida o de fundido.
+- `alpha` &ndash; una animación de fundido o fundido de salida.
 
-- `rotate`&ndash; Animación de giro.
+- `rotate` &ndash; una animación de rotación.
 
-- `scale`&ndash; Animación de cambio de tamaño.
+- `scale` &ndash; una animación de cambio de tamaño.
 
-- `translate`&ndash; Movimiento horizontal y/o vertical.
+- `translate` &ndash; un movimiento horizontal y/o vertical.
 
-- `set`&ndash; Contenedor que puede contener uno o varios elementos de animación.
+- `set` &ndash; un contenedor que puede contener uno o varios elementos de animación.
 
-De forma predeterminada, todas las animaciones de un archivo XML se aplicarán simultáneamente. Para que las animaciones se realicen de forma `android:startOffset` secuencial, establezca el atributo en uno de los elementos definidos anteriormente.
+De forma predeterminada, todas las animaciones de un archivo XML se aplicarán simultáneamente. Para que las animaciones se realicen de forma secuencial, establezca el atributo `android:startOffset` en uno de los elementos definidos anteriormente.
 
 Es posible afectar a la tasa de cambio en una animación mediante el uso de un *interpolador*. Un interpolador permite acelerar, repetir o desacelerar los efectos de animación. El marco de trabajo de Android proporciona varios interpoladores listos para el cuadro, como (pero sin limitarse a):
 
-- `AccelerateInterpolator`Estos interpoladores aumentan o reducen la velocidad de cambio de una animación. / `DecelerateInterpolator` &ndash;
+- `AccelerateInterpolator` / `DecelerateInterpolator` &ndash; estos interpoladores aumentan o reducen la tasa de cambio en una animación.
 
-- `BounceInterpolator`&ndash; el cambio se rebota al final.
+- `BounceInterpolator` &ndash; el cambio se rebota al final.
 
-- `LinearInterpolator`&ndash; la tasa de cambios es constante.
+- `LinearInterpolator` &ndash; la velocidad de los cambios es constante.
 
 El siguiente código XML muestra un ejemplo de un archivo de animación que combina algunos de estos elementos:
 
@@ -289,7 +289,7 @@ El siguiente código XML muestra un ejemplo de un archivo de animación que comb
 
 Esta animación realizará todas las animaciones simultáneamente. La animación de la primera escala ampliará la imagen horizontalmente y la reducirá verticalmente y, a continuación, la imagen se girará de manera simultánea 45 grados en el sentido contrario a las agujas del reloj y se reducirá en la pantalla.
 
-La animación se puede aplicar mediante programación a una vista si se infla la animación y, a continuación, se aplica a una vista. Android proporciona la clase `Android.Views.Animations.AnimationUtils` auxiliar que impondrá un recurso de animación y devolverá una instancia de. `Android.Views.Animations.Animation` Este objeto se aplica a una vista mediante una `StartAnimation` llamada a y `Animation` pasando el objeto. En el fragmento de código siguiente se muestra un ejemplo de esto:
+La animación se puede aplicar mediante programación a una vista si se infla la animación y, a continuación, se aplica a una vista. Android proporciona la clase auxiliar `Android.Views.Animations.AnimationUtils` que impondrá un recurso de animación y devolverá una instancia de `Android.Views.Animations.Animation`. Este objeto se aplica a una vista mediante una llamada a `StartAnimation` y pasando el objeto `Animation`. En el fragmento de código siguiente se muestra un ejemplo de esto:
 
 ```csharp
 Animation myAnimation = AnimationUtils.LoadAnimation(Resource.Animation.MyAnimation);
@@ -306,34 +306,34 @@ Proporcionan una API más extensible que se puede usar para animar cualquier pro
 
 Todas las animaciones de propiedades las crean las instancias de la subclase de [animación](xref:Android.Animation.Animator) . Las aplicaciones no usan directamente esta clase, sino que usan una de sus subclases:
 
-- [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash; Esta clase es la clase más importante en toda la API de animación de propiedades. Calcula los valores de las propiedades que se deben cambiar. `ViewAnimator` No actualiza directamente esos valores; en su lugar, genera eventos que se pueden usar para actualizar objetos animados.
+- [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash; esta clase es la clase más importante en toda la API de animación de propiedades. Calcula los valores de las propiedades que se deben cambiar. El `ViewAnimator` no actualiza directamente esos valores; en su lugar, genera eventos que se pueden utilizar para actualizar objetos animados.
 
-- [ObjectAnimator](xref:Android.Animation.ObjectAnimator) Esta clase es una subclase de `ValueAnimator`. &ndash; Está diseñado para simplificar el proceso de animación de objetos aceptando un objeto de destino y una propiedad para actualizar.
+- [ObjectAnimator](xref:Android.Animation.ObjectAnimator) &ndash; esta clase es una subclase de `ValueAnimator`. Está diseñado para simplificar el proceso de animación de objetos aceptando un objeto de destino y una propiedad para actualizar.
 
-- [AnimationSet](xref:Android.Animation.AnimatorSet) &ndash; Esta clase es responsable de orquestar cómo se ejecutan las animaciones en relación con otras. Las animaciones pueden ejecutarse simultáneamente, secuencialmente o con un retraso especificado entre ellas.
+- [AnimationSet](xref:Android.Animation.AnimatorSet) &ndash; esta clase es responsable de coordinar cómo se ejecutan las animaciones en relación con otras. Las animaciones pueden ejecutarse simultáneamente, secuencialmente o con un retraso especificado entre ellas.
 
 Los *evaluadores* son clases especiales que los animadores usan para calcular los nuevos valores durante una animación. En la caja, Android proporciona los siguientes evaluadores:
 
-- [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; Calcula los valores de las propiedades de entero.
+- [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; calcula los valores de las propiedades de entero.
 
-- [FloatEvaluator](xref:Android.Animation.FloatEvaluator) &ndash; Calcula los valores de las propiedades float.
+- [FloatEvaluator](xref:Android.Animation.FloatEvaluator) &ndash; calcula los valores de las propiedades float.
 
-- [ArgbEvaluator](xref:Android.Animation.ArgbEvaluator) &ndash; Calcula los valores de las propiedades de color.
+- [ArgbEvaluator](xref:Android.Animation.ArgbEvaluator) &ndash; calcula los valores de las propiedades de color.
 
-Si la propiedad que se está animando no es `float`un `int` , o el color, las aplicaciones pueden crear su propio evaluador implementando la `ITypeEvaluator` interfaz. (La implementación de evaluadores personalizados queda fuera del ámbito de este tema).
+Si la propiedad que se anima no es una `float`, `int` o color, las aplicaciones pueden crear su propio evaluador implementando la interfaz de `ITypeEvaluator`. (La implementación de evaluadores personalizados queda fuera del ámbito de este tema).
 
 #### <a name="using-the-valueanimator"></a>Usar ValueAnimator
 
 Hay dos partes en cualquier animación: calcular valores animados y después establecer esos valores en las propiedades de algún objeto. 
 [ValueAnimator](xref:Android.Animation.ValueAnimator) solo calculará los valores, pero no funcionará directamente en objetos. En su lugar, los objetos se actualizarán dentro de los controladores de eventos que se invocarán durante la duración de la animación. Este diseño permite actualizar varias propiedades de un valor animado.
 
-Puede obtener una instancia de `ValueAnimator` mediante una llamada a uno de los siguientes métodos de fábrica:
+Puede obtener una instancia de `ValueAnimator` llamando a uno de los siguientes métodos de fábrica:
 
 - `ValueAnimator.OfInt`
 - `ValueAnimator.OfFloat`
 - `ValueAnimator.OfObject`
 
-Una vez hecho esto, la `ValueAnimator` instancia debe tener su conjunto de duración y, a continuación, se puede iniciar. En el ejemplo siguiente se muestra cómo animar un valor de 0 a 1 en el intervalo de 1000 milisegundos:
+Una vez hecho esto, la instancia de `ValueAnimator` debe tener su conjunto de duración y, a continuación, se puede iniciar. En el ejemplo siguiente se muestra cómo animar un valor de 0 a 1 en el intervalo de 1000 milisegundos:
 
 ```csharp
 ValueAnimator animator = ValueAnimator.OfInt(0, 100);
@@ -341,7 +341,7 @@ animator.SetDuration(1000);
 animator.Start();
 ```
 
-Pero, el fragmento de código anterior no es muy útil &ndash; . el animador se ejecutará, pero no hay ningún destino para el valor actualizado. La `Animator` clase generará el evento de actualización cuando decida que es necesario informar a los agentes de escucha de un nuevo valor. Las aplicaciones pueden proporcionar un controlador de eventos para responder a este evento, tal y como se muestra en el siguiente fragmento de código:
+Pero, el fragmento de código anterior no es muy útil &ndash; el animador se ejecutará, pero no hay ningún destino para el valor actualizado. La clase `Animator` generará el evento Update cuando decida que es necesario informar a los agentes de escucha de un nuevo valor. Las aplicaciones pueden proporcionar un controlador de eventos para responder a este evento, tal y como se muestra en el siguiente fragmento de código:
 
 ```csharp
 MyCustomObject myObj = new MyCustomObject();
@@ -355,13 +355,13 @@ animator.Update += (object sender, ValueAnimator.AnimatorUpdateEventArgs e) =>
 };
 ```
 
-Ahora que tenemos una descripción de `ValueAnimator`, le permite obtener más información `ObjectAnimator`sobre.
+Ahora que tenemos conocimientos sobre `ValueAnimator`, le permite obtener más información acerca de la `ObjectAnimator`.
 
 #### <a name="using-the-objectanimator"></a>Usar ObjectAnimator
 
-[ObjectAnimator](xref:Android.Animation.ObjectAnimator) es una subclase de `ViewAnimator` que combina el motor de control de tiempo y el `ValueAnimator` cálculo de valores de con la lógica necesaria para conectar controladores de eventos. El `ValueAnimator` requiere que las aplicaciones conecten explícitamente un &ndash; controlador `ObjectAnimator` de eventos se encargará de este paso.
+[ObjectAnimator](xref:Android.Animation.ObjectAnimator) es una subclase de `ViewAnimator` que combina el motor de control de tiempo y el cálculo de valores del `ValueAnimator` con la lógica necesaria para conectar controladores de eventos. El `ValueAnimator` requiere que las aplicaciones conecten explícitamente un controlador de eventos &ndash; `ObjectAnimator` se encargará de este paso.
 
-La API de `ObjectAnimator` es muy similar a la API de `ViewAnimator`, pero requiere que proporcione el objeto y el nombre de la propiedad que se va a actualizar. En el ejemplo siguiente se muestra un ejemplo `ObjectAnimator`del uso de:
+La API para `ObjectAnimator` es muy similar a la API de `ViewAnimator`, pero requiere que proporcione el objeto y el nombre de la propiedad que se va a actualizar. En el ejemplo siguiente se muestra un ejemplo del uso de `ObjectAnimator`:
 
 ```csharp
 MyCustomObject myObj = new MyCustomObject();
@@ -378,7 +378,7 @@ Como puede ver en el fragmento de código anterior, `ObjectAnimator` puede reduc
 
 La API de animación final es la API de animación dibujable. Las animaciones Dibujables cargan una serie de recursos que se puedan dibujar uno tras otro y los muestran secuencialmente, de forma similar a un dibujo animado.
 
-Los recursos Dibujables se definen en un archivo XML que tiene `<animation-list>` un elemento como el elemento raíz y una serie `<item>` de elementos que definen cada fotograma de la animación. Este archivo XML se almacena en la `/Resource/drawable` carpeta de la aplicación. El siguiente código XML es un ejemplo de una animación dibujable:
+Los recursos Dibujables se definen en un archivo XML que tiene un elemento `<animation-list>` como el elemento raíz y una serie de elementos `<item>` que definen cada fotograma de la animación. Este archivo XML se almacena en la carpeta `/Resource/drawable` de la aplicación. El siguiente código XML es un ejemplo de una animación dibujable:
 
 ```xml
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
@@ -391,7 +391,7 @@ Los recursos Dibujables se definen en un archivo XML que tiene `<animation-list>
 </animation-list>
 ```
 
-Esta animación se ejecutará a través de seis fotogramas. El `android:duration` atributo declara cuánto tiempo se mostrará cada fotograma. El siguiente fragmento de código muestra un ejemplo de cómo crear una animación dibujable e iniciarla cuando el usuario hace clic en un botón de la pantalla:
+Esta animación se ejecutará a través de seis fotogramas. El atributo `android:duration` declara cuánto tiempo se mostrará cada fotograma. El siguiente fragmento de código muestra un ejemplo de cómo crear una animación dibujable e iniciarla cuando el usuario hace clic en un botón de la pantalla:
 
 ```csharp
 AnimationDrawable _asteroidDrawable;
@@ -425,7 +425,7 @@ En este artículo se presentaron muchos nuevos conceptos y API para ayudar a agr
 
 - [Demostración de animaciones (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animación y gráficos](https://developer.android.com/guide/topics/graphics/index.html)
-- [Uso de animaciones para que la Mobile Apps sea vida](http://youtu.be/ikSk_ILg3d0)
+- [Uso de animaciones para que la Mobile Apps sea vida](https://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)
 - [Canvas](xref:Android.Graphics.Canvas)
 - [Animador de objetos](xref:Android.Animation.ObjectAnimator)

@@ -4,15 +4,15 @@ description: En este artículo se describen las técnicas de interacción rápid
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8b851721aa5b2b993ad64b89d90d02b5f2bd0ee3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768590"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028186"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -64,9 +64,9 @@ watchos 3 será compatible con los cuatro reconocedores de gesto siguientes:
 
 - Tipos de gestos discretos:
   - El gesto de deslizar rápidamente (`WKSwipeGestureRecognizer`).
-  - Gesto de punteo`WKTapGestureRecognizer`().
+  - Gesto de punteo (`WKTapGestureRecognizer`).
 - Tipos de gestos continuos:
-  - El gesto de panorámica`WKPanGestureRecognizer`().
+  - El gesto de movimiento panorámico (`WKPanGestureRecognizer`).
   - El gesto de presionar largo (`WKLongPressGestureRecognizer`).
 
 Para implementar uno de los reconocedores de gestos nuevos, basta con arrastrarlo a una superficie de diseño en el diseñador de iOS en Visual Studio para Mac y configurar sus propiedades.
@@ -75,19 +75,19 @@ En el código, responda a la acción del reconocedor para controlar el movimient
 
 #### <a name="discrete-gesture-states"></a>Estados de gestos discretos
 
-En el caso de gestos discretos, se llama a la acción cuando se reconoce el gesto`WKGestureRecognizerState`y se asigna un estado () como:
+En el caso de gestos discretos, se llama a la acción cuando se reconoce el gesto y se asigna un estado (`WKGestureRecognizerState`) como:
 
-[![](quick-interaction-techniques-images/quick01.png "Estados de gestos discretos")](quick-interaction-techniques-images/quick01.png#lightbox)
+[![](quick-interaction-techniques-images/quick01.png "Discrete Gesture States")](quick-interaction-techniques-images/quick01.png#lightbox)
 
-Todos los gestos discretos empiezan en el `Possible` estado y pasan `Failed` al estado o `Recognized` . Cuando se usan gestos discretos, el desarrollador generalmente no trata directamente con el estado. En su lugar, se basan en la acción a la que se llama cuando solo se reconoce el gesto.
+Todos los gestos discretos empiezan en el estado `Possible` y pasan al estado `Failed` o `Recognized`. Cuando se usan gestos discretos, el desarrollador generalmente no trata directamente con el estado. En su lugar, se basan en la acción a la que se llama cuando solo se reconoce el gesto.
 
 #### <a name="continuous-gesture-states"></a>Estados de gesto continuos
 
 Los gestos continuos son ligeramente diferentes de los gestos discretos, donde la acción se llama varias veces a medida que se reconoce el gesto:
 
-[![](quick-interaction-techniques-images/quick02.png "Estados de gesto continuos")](quick-interaction-techniques-images/quick02.png#lightbox)
+[![](quick-interaction-techniques-images/quick02.png "Continuous Gesture States")](quick-interaction-techniques-images/quick02.png#lightbox)
 
-De nuevo, los gestos continuos se `Possible` inician en el estado, pero progresan en varias actualizaciones. Aquí el desarrollador deberá tener en cuenta el estado del reconocedor y actualizar la interfaz de usuario `Changed` de la aplicación durante la fase `Recognized` hasta `Canceled`que el gesto sea final o.
+De nuevo, los gestos continuos se inician en el estado `Possible`, pero progresan en varias actualizaciones. Aquí el desarrollador deberá tener en cuenta el estado del reconocedor y actualizar la interfaz de usuario de la aplicación durante la fase `Changed` hasta que el gesto finalice `Recognized` o `Canceled`.
 
 #### <a name="gesture-recognizer-usage-tips"></a>Sugerencias de uso del reconocedor de gestos
 
@@ -96,16 +96,16 @@ Apple sugiere lo siguiente al trabajar con reconocedores de gestos en watchos 3:
 - Agregue los reconocedores de gestos a los elementos de grupo en lugar de a los controles individuales. Puesto que el Apple Watch tiene un tamaño de pantalla físico más pequeño, los elementos de grupo tienden a ser objetivos más grandes y más fáciles de alcanzar para el usuario. Además, los reconocedores de gestos pueden entrar en conflicto con los gestos integrados que ya están en los controles de interfaz de usuario nativa.
 - Establezca relaciones de dependencia en el guión gráfico de la aplicación Watch.
 - Algunos gestos tienen prioridad sobre otros tipos de gestos, como:
-  - Desplazamiento
+  - Desplazarse
   - Force Touch
 
 ### <a name="digital-crown-rotation"></a>Rotación Digital Crown
 
 Al implementar la compatibilidad de Digital Crown en sus aplicaciones de watchos 3, un desarrollador puede proporcionar mayor velocidad de navegación y interacciones de precisión para sus usuarios.
 
-Desde watchos 2, Apple Watch aplicación podría usar el `WKInterfacePicker` objeto para tener acceso al digital Crown proporcionando una lista de y un estilo de selector (secuencia de `WKPickerItems` lista, apilada o imagen). watchos entonces permite al usuario usar el Digital Crown para seleccionar un elemento de la lista.
+Desde watchos 2, Apple Watch aplicación podría usar el `WKInterfacePicker` objeto para tener acceso al Digital Crown proporcionando una lista de `WKPickerItems` y un estilo de selector (secuencia de lista, apilada o imagen). watchos entonces permite al usuario usar el Digital Crown para seleccionar un elemento de la lista.
 
-Al usar `WKInterfacePicker`, WatchKit controla la mayor parte del trabajo de la siguiente manera:
+Cuando se usa un `WKInterfacePicker`, WatchKit controla la mayor parte del trabajo de la siguiente manera:
 
 - Dibujar la lista y los elementos de la interfaz individual.
 - Procesando los eventos de Digital Crown.
@@ -115,12 +115,12 @@ Como novedad de watchos 3, el desarrollador tiene acceso directo a los eventos d
 
 Los siguientes elementos proporcionan acceso Digital Crown:
 
-- `WKCrownSequencer`: Proporciona acceso a los giros por segundo.
-- `WKCrownDelegate`: Proporciona acceso a los eventos Delta de rotación.
+- `WKCrownSequencer`: proporciona acceso a los giros por segundo.
+- `WKCrownDelegate`: proporciona acceso a los eventos Delta de rotación.
 
 #### <a name="rotations-per-second"></a>Rotaciones por segundo
 
-El acceso a los giros por segundo desde el Digital Crown resulta útil cuando se trabaja con animaciones basadas en la física. Para tener acceso a los giros por segundo, use `CrownSequencer` la propiedad `WKInterfaceController` de la extensión de inspección. Por ejemplo:
+El acceso a los giros por segundo desde el Digital Crown resulta útil cuando se trabaja con animaciones basadas en la física. Para tener acceso a los giros por segundo, use la propiedad `CrownSequencer` del `WKInterfaceController` de la extensión inspección. Por ejemplo:
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +128,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>Diferencias de giro
 
-Use las diferencias de rotación de la Digital Crown para contar el número de giros. Use el `CrownDidRotate` método `WKCrownDelegate` de invalidación de para tener acceso a las diferencias de giro. Por ejemplo:
+Use las diferencias de rotación de la Digital Crown para contar el número de giros. Utilice el método de invalidación `CrownDidRotate` del `WKCrownDelegate` para tener acceso a las diferencias de giro. Por ejemplo:
 
 ```csharp
 using System;
@@ -162,13 +162,13 @@ namespace MonkeyWatch.MonkeySeeExtension
 }
 ```
 
-Aquí, la aplicación mantiene un acumulador (`AccumulatedRotations`) para determinar el número de giros. Un giro completo de la digital Crown es igual a un delta acumulado `1.0` de y un medio de giro `0.5`sería.
+Aquí, la aplicación mantiene un acumulador (`AccumulatedRotations`) para determinar el número de giros. Un giro completo de la Digital Crown es igual a un delta acumulado de `1.0` y se `0.5`un giro medio.
 
 Apple ha dejado al desarrollador para determinar cómo se corresponden los recuentos de rotación con la confidencialidad de los cambios en el elemento de la interfaz de usuario que se está actualizando.
 
-El signo (`+/-`) del delta de rotación indica la dirección en la que el usuario está convirtiendo el digital Crown:
+El signo (`+/-`) del delta de rotación indica la dirección en la que el usuario está convirtiendo el Digital Crown:
 
-[![](quick-interaction-techniques-images/quick03.png "El signo de la diferencia de rotación indica la dirección en la que el usuario está convirtiendo el Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
+[![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 Si el usuario se desplaza hacia arriba, WatchKit devolverá deltas positivos y, si se desplaza hacia abajo, se devolverán diferencias negativas, independientemente de la orientación en la que el usuario esté contratando el reloj.
 
@@ -188,15 +188,15 @@ Depende del desarrollador determinar cuándo el elemento de interfaz personaliza
 
 La manera estándar en que un usuario navega por una vista de tabla en una aplicación de watchos es desplazarse hasta el fragmento de datos deseado, puntear en una fila específica para mostrar la vista detallada, puntear en el botón atrás cuando termine de ver los detalles y repita el proceso para cualquier otra información que el y están interesados en dentro de la tabla:
 
-[![](quick-interaction-techniques-images/quick04.png "Moverse entre una tabla y la vista de detalle")](quick-interaction-techniques-images/quick04.png#lightbox)
+[![](quick-interaction-techniques-images/quick04.png "Moving between a table and the Detail view")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 Como novedad de watchos 3, el desarrollador puede habilitar la paginación vertical en los controles de vista de tabla. Con esta característica habilitada, el usuario puede desplazarse para buscar una fila de la vista de tabla y puntear en la fila para ver sus detalles como antes. Sin embargo, ahora pueden deslizarse hacia arriba para seleccionar la fila siguiente de la tabla o hacia abajo para seleccionar la fila anterior (o usar el Digital Crown), sin tener que volver a la vista de tabla en primer lugar:
 
-[![](quick-interaction-techniques-images/quick05.png "Desplazarse entre una tabla y la vista de detalle y deslizar hacia arriba y hacia abajo para desplazarse por las demás filas")](quick-interaction-techniques-images/quick05.png#lightbox)
+[![](quick-interaction-techniques-images/quick05.png "Moving between a table and the Detail view and swiping up and down to move between the other rows")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 Para habilitar este modo, abra el guión gráfico de la aplicación watchos en Xcode para editarlo, seleccione la vista de tabla y active la casilla **paginación de detalles vertical** :
 
-[![](quick-interaction-techniques-images/quick06.png "Active la casilla paginación de detalles vertical")](quick-interaction-techniques-images/quick06.png#lightbox)
+[![](quick-interaction-techniques-images/quick06.png "Check the Vertical Detail Paging checkbox")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Asegúrese de que la tabla usa objetos segue para mostrar la vista detallada y de guardar los cambios en el guión gráfico y volver a Visual Studio para Mac para sincronizar.
 
@@ -244,7 +244,7 @@ En watchos 3, las notificaciones locales se pueden programar en el Apple Watch y
 
 Al incluir el mismo identificador de notificación en las versiones Apple Watch y iPhone de las notificaciones, se evita que se muestren notificaciones duplicadas en el reloj. La versión Apple Watch de la notificación tendrá prioridad sobre la versión de iPhone.
 
-Como watchos 3 usa el mismo `UINotification` marco de API que Ios 10, consulte la documentación del [marco de notificaciones de usuario](~/ios/platform/user-notifications/index.md) de iOS 10 para obtener más detalles.
+Como watchos 3 usa el mismo `UINotification` marco de API que iOS 10, consulte la documentación del [marco de notificaciones de usuario](~/ios/platform/user-notifications/index.md) de iOS 10 para obtener más detalles.
 
 ### <a name="using-spritekit-and-scenekit"></a>Usar SpriteKit y SceneKit
 
@@ -252,12 +252,12 @@ Como novedad de watchos 3, el desarrollador ahora puede usar los objetos SpritKi
 
 Se han agregado dos nuevas clases de interfaz para admitir esta característica:
 
-- `WKInterfaceSKScene`-Para trabajar con gráficos 2D de SpriteKit.
-- `WKInterfaceSCNScene`-Para trabajar con gráficos SceneKit 3D.
+- `WKInterfaceSKScene`: para trabajar con gráficos 2D de SpriteKit.
+- `WKInterfaceSCNScene`: para trabajar con gráficos SceneKit 3D.
 
 Para usar estos objetos, simplemente arrástrelos a la superficie de diseño dentro del guión gráfico de la aplicación de inspección en la Interface Builder de Xcode y use el **Inspector de atributos** para configurarlos.
 
-Desde este punto, trabajar con SpriteKit o SceneKit Scenes funciona igual que en una aplicación de iOS. La aplicación de inspección presentará `WKInterfaceSKScene` una llamada a uno de `Present` los métodos. En el caso de SceneKit, `Scene` basta con establecer `WKInterfaceSCNScene` la propiedad del objeto.
+Desde este punto, trabajar con SpriteKit o SceneKit Scenes funciona igual que en una aplicación de iOS. La aplicación de inspección presentará un `WKInterfaceSKScene` llamando a uno de los métodos de `Present`. En el caso de SceneKit, basta con establecer la propiedad `Scene` del objeto `WKInterfaceSCNScene`.
 
 ## <a name="actionable-complications"></a>Complicaciones procesables
 
@@ -312,7 +312,7 @@ Una experiencia de interacción rápida bien diseñada dará al usuario la confi
 
 En este caso, se trata de un problema específico cuando la aplicación de inspección realiza cualquier tipo de conexión de red o comparte información con su aplicación de iPhone complementaria. A menudo, esto puede conducir a un indicador de espera mientras se realiza la transacción, lo que no es deseable durante una interacción rápida. Considere el ejemplo siguiente:
 
-[![](quick-interaction-techniques-images/quick07.png "Diagrama de la aplicación de inspección que realiza una conexión de red y comparte información con su aplicación de iPhone complementaria")](quick-interaction-techniques-images/quick07.png#lightbox)
+[![](quick-interaction-techniques-images/quick07.png "Diagram of the watch app doing a network connection and sharing information with its companion iPhone app")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. El usuario elige un elemento para comprar en el reloj.
 2. Puntean en el botón comprar.
@@ -324,7 +324,7 @@ Desde el momento en que el usuario pulsa el botón comprar hasta que se completa
 
 Con el modelo sugerido de Apple, eche un vistazo a la misma interacción rápida de nuevo:
 
-[![](quick-interaction-techniques-images/quick08.png "Diagrama de modelo sugerido de manzanas")](quick-interaction-techniques-images/quick08.png#lightbox)
+[![](quick-interaction-techniques-images/quick08.png "Apples suggested model diagram")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. El usuario elige un elemento para comprar en el reloj.
 2. Puntean en el botón comprar.
@@ -334,7 +334,7 @@ Con el modelo sugerido de Apple, eche un vistazo a la misma interacción rápida
 
 Esta vez, tan pronto como el usuario pulsa el botón comprar, se muestra un mensaje que indica que la compra se ha iniciado, por lo que puede colocar su muñeca y finalizar la interacción rápida en este momento. Más adelante, se les informará de si la transacción se ha realizado correctamente o no en una notificación de usuario. De esta manera, el usuario solo está interactuando con la aplicación durante las fases "activas" del proceso.
 
-En el caso de las aplicaciones que están realizando redes, pueden `NSURLSession` usar un fondo para controlar la comunicación de red con una tarea de descarga. Esto permitirá que la aplicación se reactivarán en segundo plano para procesar la información descargada. En el caso de una aplicación que requiera procesamiento en segundo plano, use una aserción de tarea en segundo plano para controlar el procesamiento necesario.
+En el caso de las aplicaciones que están realizando redes, pueden usar un `NSURLSession` en segundo plano para controlar la comunicación de red con una tarea de descarga. Esto permitirá que la aplicación se reactivarán en segundo plano para procesar la información descargada. En el caso de una aplicación que requiera procesamiento en segundo plano, use una aserción de tarea en segundo plano para controlar el procesamiento necesario.
 
 ## <a name="quick-interaction-design-tips"></a>Sugerencias de diseño de interacción rápida
 

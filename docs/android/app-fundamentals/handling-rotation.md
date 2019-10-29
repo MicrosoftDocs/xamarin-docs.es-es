@@ -4,15 +4,15 @@ description: En este tema se describe cómo controlar los cambios de orientació
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 98acabec7132730304bf5e8b81e99f2727b6d50e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3277dd5eb7600500a5f60b2bbb13621aa237a235
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755571"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019267"
 ---
 # <a name="handling-rotation"></a>Control de giro
 
@@ -24,26 +24,26 @@ Dado que los dispositivos móviles se giran con facilidad, la rotación integrad
 
 En esta guía se examinan los siguientes temas de orientación:
 
-- **Rotación de diseño declarativo** &ndash; Cómo usar el sistema de recursos de Android para compilar aplicaciones que tienen en cuenta la orientación, incluida la forma de cargar los diseños y drawables para las orientaciones particulares.
+- La **rotación del diseño Declarativo** &ndash; cómo usar el sistema de recursos de Android para compilar aplicaciones que tienen en cuenta la orientación, incluida la forma de cargar los diseños y drawables para las orientaciones particulares.
 
-- **Rotación de diseño mediante programación** &ndash; Cómo agregar controles mediante programación y cómo controlar manualmente los cambios de orientación.
+- La **rotación del diseño mediante programación** &ndash; cómo agregar controles mediante programación y cómo controlar los cambios de orientación manualmente.
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Controlar la rotación mediante declaración con diseños
 
 Al incluir archivos en carpetas que siguen las convenciones de nomenclatura, Android carga automáticamente los archivos correspondientes cuando cambia la orientación.
 Esto incluye compatibilidad con:
 
-- *Recursos de diseño* &ndash; Especificar los archivos de diseño que se inflan para cada orientación.
+- *Recursos de diseño* &ndash; especificar qué archivos de diseño se inflan para cada orientación.
 
-- *Recursos Dibujables* &ndash; Que especifica qué drawables se cargan para cada orientación.
+- *Recursos* que se pueden dibujar &ndash; especificar qué drawables se cargan para cada orientación.
 
 ### <a name="layout-resources"></a>Recursos de diseño
 
 De forma predeterminada, los archivos de Android XML (AXML) incluidos en la carpeta **recursos/diseño** se usan para representar vistas para una actividad. Los recursos de esta carpeta se utilizan para la orientación vertical y horizontal si no se proporcionan recursos de diseño adicionales específicamente para el panorama. Considere la estructura del proyecto creada por la plantilla de proyecto predeterminada:
 
-[![Estructura predeterminada de la plantilla de proyecto](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
+[![estructura de plantilla de proyecto predeterminada](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
-Este proyecto crea un único archivo **Main. axml** en la carpeta **recursos/diseño** . Cuando se llama al `OnCreate` método de la actividad, se infla la vista definida en **Main. axml,** que declara un botón como se muestra en el código XML siguiente:
+Este proyecto crea un único archivo **Main. axml** en la carpeta **recursos/diseño** . Cuando se llama al método `OnCreate` de la actividad, se infla la vista definida en **Main. axml,** que declara un botón como se muestra en el código XML siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -59,13 +59,13 @@ Este proyecto crea un único archivo **Main. axml** en la carpeta **recursos/dis
 </LinearLayout>
 ```
 
-Si el dispositivo se gira a la orientación horizontal, se llama de `OnCreate` nuevo al método de la actividad y se infla el mismo archivo **Main. axml** , tal y como se muestra en la siguiente captura de pantalla:
+Si el dispositivo se gira a la orientación horizontal, se llama de nuevo al método `OnCreate` de la actividad y se infla el mismo archivo **Main. axml** , como se muestra en la siguiente captura de pantalla:
 
-[![Misma pantalla pero con orientación horizontal](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
+[![misma pantalla pero con orientación horizontal](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
 #### <a name="orientation-specific-layouts"></a>Diseños específicos de la orientación
 
-Además de la carpeta de diseño (que de forma predeterminada es vertical y también se puede llamar explícitamente al *Puerto de diseño* mediante la `layout-land`inclusión de una carpeta denominada), una aplicación puede definir las vistas que necesita en el entorno sin ningún cambio de código.
+Además de la carpeta de diseño (que de forma predeterminada es vertical y también se puede llamar explícitamente al *Puerto de diseño* mediante la inclusión de una carpeta denominada `layout-land`), una aplicación puede definir las vistas que necesita cuando están en horizontal sin ningún cambio de código.
 
 Supongamos que el archivo **Main. axml** contiene el siguiente código XML:
 
@@ -81,7 +81,7 @@ Supongamos que el archivo **Main. axml** contiene el siguiente código XML:
 </RelativeLayout>
 ```
 
-Si se agrega al proyecto una carpeta denominada layout-Land que contiene un archivo **Main. axml** adicional, si se aumenta el diseño en horizontal, se cargará en Android el archivo **Main. axml** recién agregado. Considere la versión horizontal del archivo **Main. axml** que contiene el código siguiente (para simplificar, este XML es similar a la versión vertical predeterminada del código, pero usa una cadena diferente en `TextView`):
+Si se agrega al proyecto una carpeta denominada layout-Land que contiene un archivo **Main. axml** adicional, si se aumenta el diseño en horizontal, se cargará en Android el archivo **Main. axml** recién agregado. Considere la versión horizontal del archivo **Main. axml** que contiene el código siguiente (para simplificar, este XML es similar a la versión vertical predeterminada del código, pero usa una cadena diferente en el `TextView`):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -97,13 +97,13 @@ Si se agrega al proyecto una carpeta denominada layout-Land que contiene un arch
 
 Al ejecutar este código y girar el dispositivo de vertical a horizontal, se muestra la nueva carga de XML, como se muestra a continuación:
 
-[![Capturas de pantallas verticales y horizontales que imprimen el modo vertical](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
+[![capturas de pantallas verticales y horizontales que imprimen el modo vertical](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
 ### <a name="drawable-resources"></a>Recursos Dibujables
 
 Durante la rotación, Android trata los recursos que se dibujan de manera similar a los recursos de diseño. En este caso, el sistema obtiene el drawables de las carpetas **Resources/drawable** y **Resources-Land** , respectivamente.
 
-Por ejemplo, suponga que el proyecto incluye una imagen con el nombre Monkey. png en la carpeta **Resources/drawable** , donde se hace referencia `ImageView` a drawable desde un en XML similar al siguiente:
+Por ejemplo, suponga que el proyecto incluye una imagen con el nombre Monkey. png en la carpeta **Resources/drawable** , donde se hace referencia a drawable desde un `ImageView` en XML similar al siguiente:
 
 ```xml
 <ImageView
@@ -116,7 +116,7 @@ Por ejemplo, suponga que el proyecto incluye una imagen con el nombre Monkey. pn
 
 Supongamos también que se incluye una versión diferente de **Monkey. png** en **recursos/tierras Dibujables**. Al igual que con los archivos de diseño, cuando se gira el dispositivo, los cambios Dibujables para la orientación determinada, como se muestra a continuación:
 
-[![Una versión diferente de Monkey. png mostrada en los modos vertical y horizontal](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
+[![versión diferente de Monkey. png mostrada en los modos vertical y horizontal](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
 ## <a name="handling-rotation-programmatically"></a>Controlar la rotación mediante programación
 
@@ -133,7 +133,7 @@ Para agregar controles mediante programación, una aplicación debe realizar los
 - Agregue controles al diseño.
 - Establezca el diseño como la vista de contenido.
 
-Por ejemplo, considere una interfaz de usuario que consta de un `TextView` único control agregado `RelativeLayout`a, tal como se muestra en el código siguiente.
+Por ejemplo, considere una interfaz de usuario que consta de un único control `TextView` agregado a un `RelativeLayout`, tal y como se muestra en el código siguiente.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -162,13 +162,13 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Este código crea una instancia de una `RelativeLayout` clase y establece su `LayoutParameters` propiedad. La `LayoutParams` clase es la manera de Android de encapsular cómo se colocan los controles de forma reutilizable. Una vez creada una instancia de un diseño, se pueden crear y agregar controles. Los controles también `LayoutParameters`tienen, `TextView` como en este ejemplo. Una vez creado, se agrega `RelativeLayout` a y al establecer `RelativeLayout` como la vista de contenido da como resultado que la aplicación muestre `TextView` el, tal y como se muestra: `TextView`
+Este código crea una instancia de una clase `RelativeLayout` y establece su propiedad `LayoutParameters`. La clase `LayoutParams` es la forma de Android de encapsular cómo se colocan los controles de forma reutilizable. Una vez creada una instancia de un diseño, se pueden crear y agregar controles. Los controles también tienen `LayoutParameters`, como el `TextView` en este ejemplo. Una vez creado el `TextView`, agregarlo al `RelativeLayout` y establecer el `RelativeLayout` como la vista de contenido hace que la aplicación muestre el `TextView` como se muestra a continuación:
 
-[![Botón incrementar contador mostrado en los modos vertical y horizontal](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
+[![botón aumentar contador mostrado en los modos vertical y horizontal](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
 ### <a name="detecting-orientation-in-code"></a>Detectar orientación en el código
 
-Si una aplicación intenta cargar una interfaz de usuario diferente para cada orientación cuando `OnCreate` se llama a (esto ocurrirá cada vez que se gire un dispositivo), debe detectar la orientación y, a continuación, cargar el código de interfaz de usuario deseado. Android tiene una clase denominada `WindowManager`, que se puede usar para determinar la rotación del dispositivo actual a través de la `WindowManager.DefaultDisplay.Rotation` propiedad, como se muestra a continuación:
+Si una aplicación intenta cargar una interfaz de usuario diferente para cada orientación cuando se llama a `OnCreate` (se producirá cada vez que se gire un dispositivo), debe detectar la orientación y, a continuación, cargar el código de interfaz de usuario deseado. Android tiene una clase denominada `WindowManager`, que se puede usar para determinar la rotación del dispositivo actual a través de la propiedad `WindowManager.DefaultDisplay.Rotation`, como se muestra a continuación:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -208,19 +208,19 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Este código establece el `TextView` que se va a colocar en 100 píxeles desde la parte superior izquierda de la pantalla, animando automáticamente al nuevo diseño, cuando se gira a horizontal, como se muestra aquí:
+Este código establece la `TextView` que se va a colocar 100 píxeles desde la parte superior izquierda de la pantalla, animando automáticamente al nuevo diseño, cuando se gira a horizontal, como se muestra aquí:
 
-[![El estado de vista se conserva en los modos vertical y horizontal](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
+[![estado de vista se conserva en los modos vertical y horizontal](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
 ### <a name="preventing-activity-restart"></a>Impedir el reinicio de la actividad
 
-Además de controlar todo en `OnCreate`, una aplicación también puede impedir que una actividad se reinicie cuando cambie la orientación estableciendo `ConfigurationChanges` en el de la `ActivityAttribute` manera siguiente:
+Además de controlar todo en `OnCreate`, una aplicación también puede impedir que una actividad se reinicie cuando cambie la orientación estableciendo `ConfigurationChanges` en el `ActivityAttribute` de la manera siguiente:
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
 
-Ahora, cuando se gira el dispositivo, la actividad no se reinicia. Para controlar manualmente el cambio de orientación en este caso, una actividad puede invalidar el `OnConfigurationChanged` método y determinar la orientación desde el `Configuration` objeto que se pasa, como en la nueva implementación de la actividad siguiente:
+Ahora, cuando se gira el dispositivo, la actividad no se reinicia. Para controlar manualmente el cambio de orientación en este caso, una actividad puede invalidar el método `OnConfigurationChanged` y determinar la orientación desde el objeto `Configuration` que se pasa, como en la nueva implementación de la actividad siguiente:
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
@@ -271,7 +271,7 @@ public class CodeLayoutActivity : Activity
 }
 ```
 
-Aquí los `TextView's` parámetros de diseño se inicializan tanto horizontal como vertical. Las variables de clase contienen los parámetros, junto `TextView` con el propio, ya que la actividad no se volverá a crear cuando cambie la orientación. El código todavía utiliza `surfaceOrientartion` en `OnCreate` para establecer `TextView`el diseño inicial de. Después, controla `OnConfigurationChanged` todos los cambios de diseño posteriores.
+Aquí, los parámetros de diseño `TextView's` se inicializan tanto horizontal como vertical. Las variables de clase contienen los parámetros, junto con el propio `TextView`, ya que la actividad no se volverá a crear cuando cambie la orientación. El código todavía utiliza el `surfaceOrientartion` en `OnCreate` para establecer el diseño inicial de la `TextView`. Después, `OnConfigurationChanged` controla todos los cambios de diseño posteriores.
 
 Cuando se ejecuta la aplicación, Android carga los cambios de la interfaz de usuario a medida que se produce la rotación del dispositivo y no reinicia la actividad.
 
@@ -279,7 +279,7 @@ Cuando se ejecuta la aplicación, Android carga los cambios de la interfaz de us
 
 Los reinicios de actividad causados por la rotación de dispositivos también se pueden evitar si se define el diseño en XML. Por ejemplo, se puede usar este enfoque si se desea evitar un reinicio de actividad (por razones de rendimiento, quizás) y no es necesario cargar nuevos recursos para distintas orientaciones.
 
-Para ello, sigue el mismo procedimiento que usamos con un diseño mediante programación. Simplemente establezca `ConfigurationChanges` `ActivityAttribute`en, como hicimos en el `CodeLayoutActivity` anterior. Cualquier código que deba ejecutarse para el cambio de orientación se puede implementar de nuevo en `OnConfigurationChanged` el método.
+Para ello, sigue el mismo procedimiento que usamos con un diseño mediante programación. Simplemente establezca `ConfigurationChanges` en el `ActivityAttribute`, como hicimos en el `CodeLayoutActivity` anterior. Cualquier código que deba ejecutarse para el cambio de orientación se puede implementar de nuevo en el método `OnConfigurationChanged`.
 
 ## <a name="maintaining-state-during-orientation-changes"></a>Mantener el estado durante los cambios de orientación
 
@@ -296,4 +296,4 @@ En este artículo se explica cómo usar las capacidades integradas de Android pa
 - [Demostración de rotación (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Control de los cambios en tiempo de ejecución](https://developer.android.com/guide/topics/resources/runtime-changes.html)
-- [Cambio de orientación de pantalla rápida](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
+- [Cambio de orientación de pantalla rápida](https://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

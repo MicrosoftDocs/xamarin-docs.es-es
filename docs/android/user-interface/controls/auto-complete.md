@@ -3,28 +3,28 @@ title: Autocompletar para Xamarin. Android
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2018
-ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5a11ab06321b890d8f1f5a35a8456b06a900fbcc
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762440"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029376"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Autocompletar para Xamarin. Android
 
-`AutoCompleteTextView`es un elemento de la vista de texto editable que muestra sugerencias de finalización automáticamente mientras el usuario está escribiendo. La lista de sugerencias se muestra en un menú desplegable en el que el usuario puede elegir un elemento del que reemplazar el contenido del cuadro de edición.
+`AutoCompleteTextView` es un elemento de la vista de texto editable que muestra sugerencias de finalización automáticamente mientras el usuario está escribiendo. La lista de sugerencias se muestra en un menú desplegable en el que el usuario puede elegir un elemento del que reemplazar el contenido del cuadro de edición.
 
 ![Ejemplo de autocompletar](images/auto-complete.png)
 
 ## <a name="overview"></a>Información general
 
-Para crear un widget de entrada de texto que proporcione sugerencias de autocompletar, use el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-widget. Las sugerencias se reciben de una colección de cadenas asociadas al widget a través [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)de.
+Para crear un widget de entrada de texto que proporcione sugerencias de autocompletar, use el [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+widget. Las sugerencias se reciben de una colección de cadenas asociadas al widget a través de un [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter).
 
-En este tutorial, creará un[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+En este tutorial, creará una [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget que proporciona sugerencias para un nombre de país.
 
 ```xml
@@ -45,14 +45,14 @@ widget que proporciona sugerencias para un nombre de país.
 </LinearLayout>
 ```
 
-[`TextView`](xref:Android.Widget.TextView) Es una etiqueta que presenta el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+El [`TextView`](xref:Android.Widget.TextView) es una etiqueta que presenta el [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
 ## <a name="tutorial"></a>Tutorial
 
 Inicie un nuevo proyecto denominado *HelloAutoComplete*.
 
-Cree un archivo XML denominado `list_item.xml` y guárdelo dentro de la carpeta **recursos/diseño** . Establezca la acción de compilación de este archivo `AndroidResource`en. Edite el archivo para que tenga el siguiente aspecto:
+Cree un archivo XML denominado `list_item.xml` y guárdelo en la carpeta **recursos/diseño** . Establezca la acción de compilación de este archivo en `AndroidResource`. Edite el archivo para que tenga el siguiente aspecto:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -66,7 +66,7 @@ Cree un archivo XML denominado `list_item.xml` y guárdelo dentro de la carpeta 
 </TextView> 
 ```
 
-Este archivo define un simple [`TextView`](xref:Android.Widget.TextView) que se utilizará para cada elemento que aparece en la lista de sugerencias.
+Este archivo define una [`TextView`](xref:Android.Widget.TextView) simple que se utilizará para cada elemento que aparece en la lista de sugerencias.
 
 Abra **Resources/layout/main. axml** e inserte lo siguiente:
 
@@ -88,7 +88,7 @@ Abra **Resources/layout/main. axml** e inserte lo siguiente:
 </LinearLayout>
 ```
 
-Abra **MainActivity.CS** e inserte el código siguiente para el[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Abra **MainActivity.CS** e inserte el código siguiente para el [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 forma
 
 ```csharp
@@ -106,11 +106,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Una vez que la vista de contenido se `main.xml` establece en el diseño, el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-widget se captura desde el diseño con [`FindViewById`](xref:Android.App.Activity.FindViewById*). A continuación [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) , se inicializa un nuevo para enlazar el `list_item.xml` diseño a cada elemento de `COUNTRIES` lista de la matriz de cadenas (definido en el paso siguiente). Por último `SetAdapter()` , se llama a para [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) asociar el con el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+Una vez que la vista de contenido se establece en el diseño de `main.xml`, el [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+widget se captura del diseño con [`FindViewById`](xref:Android.App.Activity.FindViewById*). A continuación, se inicializa una nueva [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) para enlazar el `list_item.xml` diseño a cada elemento de la lista de la matriz de cadenas de `COUNTRIES` (definida en el paso siguiente). Por último, se llama a `SetAdapter()` para asociar el [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) a la [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget para que la matriz de cadenas rellene la lista de sugerencias.
 
-Dentro de `MainActivity` la clase, agregue la matriz de cadenas:
+Dentro de la clase `MainActivity`, agregue la matriz de cadenas:
 
 ```csharp
 static string[] COUNTRIES = new string[] {
@@ -158,17 +158,17 @@ static string[] COUNTRIES = new string[] {
 };
 ```
 
-Esta es la lista de sugerencias que se proporcionarán en una lista desplegable cuando el usuario escribe en el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+Esta es la lista de sugerencias que se proporcionarán en una lista desplegable cuando el usuario escribe en el [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
 Ejecute la aplicación. A medida que escribe, debería ver algo parecido a esto:
 
-[![Captura de pantalla de autocompletar de ejemplo con nombres que contienen "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
+[![captura de pantalla de autocompletar de ejemplo con nombres que contienen "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 ## <a name="more-information"></a>Más información
 
-Tenga en cuenta que el uso de una matriz de cadenas codificadas de forma rígida no es una práctica de diseño recomendada, ya que el código de la aplicación debe centrarse en el comportamiento, no en el contenido. El contenido de la aplicación, como las cadenas, se debe externalizar desde el código para facilitar modificaciones en el contenido y facilitar la localización del contenido. Las cadenas codificadas de forma rígida se usan en este tutorial solo para simplificar y centrarse en el[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-widget. En su lugar, la aplicación debe declarar dichas matrices de cadenas en un archivo XML. Esto se puede hacer con un `<string-array>` recurso en el archivo `res/values/strings.xml` del proyecto. Por ejemplo:
+Tenga en cuenta que el uso de una matriz de cadenas codificadas de forma rígida no es una práctica de diseño recomendada, ya que el código de la aplicación debe centrarse en el comportamiento, no en el contenido. El contenido de la aplicación, como las cadenas, se debe externalizar desde el código para facilitar modificaciones en el contenido y facilitar la localización del contenido. Las cadenas codificadas de forma rígida se usan en este tutorial solo para simplificar y centrarse en el [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+widget. En su lugar, la aplicación debe declarar dichas matrices de cadenas en un archivo XML. Esto se puede hacer con un recurso de `<string-array>` en el archivo `res/values/strings.xml` del proyecto. Por ejemplo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,7 +185,7 @@ widget. En su lugar, la aplicación debe declarar dichas matrices de cadenas en 
 </resources>
 ```
 
-Para usar estas cadenas de recursos para [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), reemplace el original[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+Para usar estas cadenas de recursos para el [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), reemplace el [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) original
 línea del constructor con lo siguiente:
 
 ```csharp
@@ -195,8 +195,8 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>Referencias
 
-- [Receta AutoCompleteTextView](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Proyecto de ejemplo de Xamarin. Android para el`AutoCompleteTextView`
+- [Receta AutoCompleteTextView](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; proyecto de ejemplo de Xamarin. Android para el `AutoCompleteTextView`
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 - [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la [licencia de atribución de Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/). Este tutorial se basa en el [tutorial de autocompletar de Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._
+_Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la [licencia de atribución de Creative Commons 2,5](https://creativecommons.org/licenses/by/2.5/). Este tutorial se basa en el [tutorial de autocompletar de Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

@@ -4,15 +4,15 @@ description: En este documento se describe el sistema de recuento de referencias
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753344"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022299"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Nuevo sistema de recuento de referencias en Xamarin. iOS
 
@@ -22,13 +22,13 @@ Xamarin. iOS 9.2.1 presentó el sistema de recuento de referencias mejorado a to
 
 A partir de Xamarin 9.2.1, el nuevo sistema de recuento de referencias está habilitado para **todas** las aplicaciones de forma predeterminada.
 
-Si está desarrollando una aplicación existente, puede comprobar el archivo. csproj para asegurarse de que todas las apariciones de `MtouchUseRefCounting` se establecen en `true`, como se indica a continuación:
+Si está desarrollando una aplicación existente, puede comprobar el archivo. csproj para asegurarse de que todas las apariciones de `MtouchUseRefCounting` estén establecidas en `true`, como se indica a continuación:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Si se establece en `false` , la aplicación no utilizará las nuevas herramientas.
+Si se establece en `false` la aplicación no usará las nuevas herramientas.
 
 ### <a name="using-older-versions-of-xamarin"></a>Usar versiones anteriores de Xamarin
 
@@ -38,7 +38,7 @@ Xamarin. iOS 7.2.1 y versiones posteriores ofrece una vista previa mejorada de n
 
 Para habilitar este nuevo sistema de recuento de referencias, active la casilla **usar la extensión de recuento de referencias** que se encuentra en la pestaña **Opciones avanzadas** de las **Opciones de compilación de iOS**del proyecto, como se muestra a continuación: 
 
-[![](newrefcount-images/image1.png "Habilitar el nuevo sistema de recuento de referencias")](newrefcount-images/image1.png#lightbox)
+[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
 
 Tenga en cuenta que estas opciones se han quitado en las versiones más recientes de Visual Studio para Mac.
 
@@ -71,7 +71,7 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sin la extensión de recuento de referencias, este `cell` código se bloqueó porque se `TouchDown` vuelve a recopilar y, por tanto, su delegado, que se traducirá en un puntero pendiente.
+Sin la extensión de recuento de referencias, este código se bloquearía porque `cell` se vuelve a recopilar, por lo que su `TouchDown` delegado, que se traducirá en un puntero pendiente.
 
 La extensión de recuento de referencias garantiza que el objeto administrado permanece activo y evita su colección, siempre que el código nativo retenga el objeto nativo.
 

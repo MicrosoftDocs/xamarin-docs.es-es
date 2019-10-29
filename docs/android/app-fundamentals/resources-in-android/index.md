@@ -4,15 +4,15 @@ description: En este artículo se presenta el concepto de recursos de Android en
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
-ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1ff4d9d896aaa5f290402a49aa4b4bd1f1e00aaf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025055"
 ---
 # <a name="android-resources"></a>Recursos de Android
 
@@ -26,11 +26,11 @@ Una aplicación Android rara vez es solo código fuente. A menudo hay muchos otr
 
 Los recursos ofrecen varias ventajas a una aplicación de Android:
 
-- **Separación de código** &ndash; Separa el código fuente de imágenes, cadenas, menús, animaciones, colores, etc. Como tales recursos pueden ayudar considerablemente al localizar.
+- **La separación de código** &ndash; separa el código fuente de imágenes, cadenas, menús, animaciones, colores, etc. Como tales recursos pueden ayudar considerablemente al localizar.
 
-- **Destino en varios dispositivos** &ndash; Proporciona compatibilidad más sencilla con diferentes configuraciones de dispositivo sin cambios de código.
+- El **destino de varios dispositivos** &ndash; proporciona compatibilidad más sencilla con diferentes configuraciones de dispositivo sin cambios de código.
 
-- **Comprobación en tiempo de compilación** &ndash; Los recursos son estáticos y se compilan en la aplicación. Esto permite comprobar el uso de los recursos en tiempo de compilación, cuando será fácil detectar y corregir los errores, en lugar de en tiempo de ejecución cuando sea más difícil de localizar y de corregir.
+- La **comprobación en tiempo de compilación** &ndash; recursos son estáticos y se compilan en la aplicación. Esto permite comprobar el uso de los recursos en tiempo de compilación, cuando será fácil detectar y corregir los errores, en lugar de en tiempo de ejecución cuando sea más difícil de localizar y de corregir.
 
 Cuando se inicia un nuevo proyecto de Xamarin. Android, se crea un directorio especial denominado recursos, junto con algunos subdirectorios:
 
@@ -60,11 +60,11 @@ Por ejemplo, **Resources/drawable-de** especificará las imágenes para los disp
 
 En este artículo se describe el uso de los recursos y se tratan los temas siguientes:
 
-- **Aspectos básicos** de los recursos de Android &ndash; Usar recursos predeterminados mediante programación y mediante declaración, agregando tipos de recursos, como imágenes y fuentes, a una aplicación.
+- Los **aspectos básicos** de los recursos de Android &ndash; usar los recursos predeterminados mediante programación y mediante declaración, agregando tipos de recursos, como imágenes y fuentes, a una aplicación.
 
-- **Configuraciones específicas del dispositivo** &ndash; Compatibilidad con las diferentes resoluciones de pantalla y densidades de una aplicación.
+- Las **configuraciones específicas de dispositivo** &ndash; admiten las diferentes resoluciones de pantalla y densidades de una aplicación.
 
-- **Localización** de &ndash; Mediante el uso de recursos para admitir las distintas regiones, puede usarse una aplicación.
+- La **localización** &ndash; uso de recursos para admitir las distintas regiones que puede usar una aplicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

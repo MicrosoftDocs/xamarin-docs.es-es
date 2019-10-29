@@ -4,15 +4,15 @@ description: Los servicios enlazados son servicios de Android que proporcionan u
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/04/2018
-ms.openlocfilehash: 584f523446584192cfa882697c0f76865ce78a10
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: a3b0e8499d208f209de481163a236e5241c83ee6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754924"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024994"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servicios enlazados en Xamarin. Android
 
@@ -36,7 +36,7 @@ En este diagrama se ilustra el modo en que la actividad, la conexión de servici
 
 En esta guía se explica cómo extender la clase `Service` para implementar un servicio enlazado. También se trata la implementación de `IServiceConnection` y la extensión de `Binder` para permitir que un cliente se comunique con el servicio. Una aplicación de ejemplo acompaña a esta guía, que contiene una solución con un solo proyecto de Xamarin. Android denominado **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Se trata de una aplicación muy básica que muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio enlazado tiene una API muy sencilla con un solo método, `GetFormattedTimestamp`, que devuelve una cadena que indica al usuario Cuándo se ha iniciado el servicio y cuánto tiempo se ha estado ejecutando. La aplicación también permite al usuario Desenlazar manualmente y enlazar con el servicio.
 
-[![Screenshot de la aplicación que se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
+[![captura de pantalla de la aplicación que se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## <a name="implementing-and-consuming-a-bound-service"></a>Implementación y consumo de un servicio enlazado
 

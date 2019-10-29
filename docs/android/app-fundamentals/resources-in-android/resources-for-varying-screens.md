@@ -3,15 +3,15 @@ title: Creación de recursos para diferentes pantallas
 ms.prod: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/28/2018
-ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: cbd392dcae173eb3baf0fb8f0c3c4ec7c0da23a1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249659"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025113"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Crear recursos para diferentes pantallas
 
@@ -21,19 +21,19 @@ Android se ejecuta en muchos dispositivos diferentes, cada uno con una amplia va
 
 Es importante comprender algunos términos y conceptos para admitir varias pantallas.
 
-- **Tamaño de pantalla** &ndash; La cantidad de espacio físico para mostrar la aplicación
+- **Tamaño** de la pantalla &ndash; la cantidad de espacio físico para mostrar la aplicación
 
-- **Densidad de pantalla** &ndash; Número de píxeles de un área determinada de la pantalla. La unidad de medida típica es puntos por pulgada (PPP).
+- **Densidad de pantalla** &ndash; el número de píxeles de un área determinada de la pantalla. La unidad de medida típica es puntos por pulgada (PPP).
 
-- **Solución** de &ndash; Número total de píxeles en la pantalla. Al desarrollar aplicaciones, la resolución no es tan importante como el tamaño y la densidad de la pantalla.
+- La **resolución** &ndash; el número total de píxeles en la pantalla. Al desarrollar aplicaciones, la resolución no es tan importante como el tamaño y la densidad de la pantalla.
 
-- **Píxel independiente de la densidad (DP)** &ndash; Unidad de medida virtual que permite diseñar diseños independientes de la densidad. Esta fórmula se usa para convertir el DP en píxeles de pantalla:
+- El **píxel independiente de la densidad (DP)** &ndash; una unidad de medida virtual para permitir que los diseños se diseñen independientemente de la densidad. Esta fórmula se usa para convertir el DP en píxeles de pantalla:
 
-    PX &equals; DP &times; PPP 160&divide;
+    PX &equals; DP &times; DPI &divide; 160
 
-- **Orientación** &ndash; La orientación de la pantalla se considera horizontal cuando es más ancha que la alta. En cambio, la orientación vertical es cuando la pantalla es más alta que la ancha. La orientación puede cambiar durante la vigencia de una aplicación cuando el usuario gira el dispositivo.
+- La **orientación** &ndash; la orientación de la pantalla se considera horizontal cuando es más ancha que la alta. En cambio, la orientación vertical es cuando la pantalla es más alta que la ancha. La orientación puede cambiar durante la vigencia de una aplicación cuando el usuario gira el dispositivo.
 
-Observe que los tres primeros de estos conceptos se relacionan entre &ndash; sí al aumentar la resolución sin aumentar la densidad, lo que aumentará el tamaño de la pantalla. Sin embargo, si aumentan la densidad y la resolución, el tamaño de la pantalla puede permanecer sin cambios. Esta relación entre el tamaño de la pantalla, la densidad y la resolución complica la compatibilidad con la pantalla rápidamente.
+Observe que los tres primeros de estos conceptos se relacionan entre sí &ndash; el aumento de la resolución sin aumentar la densidad aumentará el tamaño de la pantalla. Sin embargo, si aumentan la densidad y la resolución, el tamaño de la pantalla puede permanecer sin cambios. Esta relación entre el tamaño de la pantalla, la densidad y la resolución complica la compatibilidad con la pantalla rápidamente.
 
 Para ayudar a abordar esta complejidad, el marco de trabajo de Android prefiere usar *píxeles independientes de la densidad (DP)* para los diseños de pantalla. Mediante el uso de píxeles independientes de densidad, los elementos de la interfaz de usuario aparecerán para que el usuario tenga el mismo tamaño físico en las pantallas con diferentes densidades.
 
@@ -55,11 +55,11 @@ Los Sixes de pantalla admitidos se declaran en el archivo Configurations **/arch
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Manifiesto de Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![manifiesto de Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Manifiesto de Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![manifiesto de Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
@@ -106,13 +106,13 @@ Como directriz, estos son algunos números para varios dispositivos:
 
 - **Teléfono típico** &ndash; 320 DP: un teléfono típico
 
-- **Un dispositivo 5 "Tablet/" Tweener "** &ndash; 480 DP: por ejemplo, la nota de Samsung
+- **Un dispositivo 5 "Tablet/" interpolador "** &ndash; 480 DP: por ejemplo, la nota de Samsung
 
-- **Una tableta de 7 "** 600 DP: por ejemplo, el Nook de Barnes &amp;noble &ndash;
+- **Un 7 "tablet** &ndash; 600 DP: por ejemplo, Barnes &amp; noble Nook
 
-- **Una tableta de 10 "** &ndash; 720 DP: por ejemplo, el Xoom de Motorola
+- **Un 10 "tablet** &ndash; 720 DP: por ejemplo, Motorola Xoom
 
-En el caso de las aplicaciones que tienen como destino niveles de API de hasta 12 (Android 3,1), los diseños deben ir en directorios que usan los calificadores **Small**/**Xlarge** **grandes**/**normales**/como generalizaciones de los distintos tamaños de pantalla que están disponibles en la mayoría de los dispositivos. Por ejemplo, en la imagen siguiente, existen recursos alternativos para los cuatro tamaños de pantalla diferentes:
+En el caso de las aplicaciones que tienen como destino niveles de API de hasta 12 (Android 3,1), los diseños deben ir en directorios que usan los calificadores **pequeños**/**normal**/**grande**/**Xlarge** como generalizaciones de la pantalla. tamaños disponibles en la mayoría de los dispositivos. Por ejemplo, en la imagen siguiente, existen recursos alternativos para los cuatro tamaños de pantalla diferentes:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -171,14 +171,14 @@ Este sitio web le ayudará en la creación de mapas de bits que tienen como dest
 
 Android se ejecuta en un número de dispositivos desconcertante, y la combinación de los tamaños de pantalla y las densidades de pantalla puede parecer abrumadora. Las siguientes sugerencias pueden ayudarle a minimizar el esfuerzo necesario para admitir varios dispositivos:
 
-- **Solo diseño y desarrollo para lo que necesita** &ndash; Existen muchos dispositivos diferentes, pero algunos existen en factores de forma poco frecuentes que pueden suponer un esfuerzo importante para diseñar y desarrollar para. El panel de [**densidad y tamaño de pantalla**](https://developer.android.com/resources/dashboard/screens.html) es una página proporcionada por Google que proporciona datos sobre el desglose de la matriz de densidad de pantalla o el tamaño de la pantalla. Este desglose proporciona información sobre cómo desarrollar el esfuerzo en las pantallas de soporte técnico.
+- **Solo diseñar y desarrollar para lo que necesita** &ndash; existen muchos dispositivos diferentes, pero algunos existen en factores de forma poco frecuentes que pueden suponer un esfuerzo importante para diseñar y desarrollar para. El panel de [**densidad y tamaño de pantalla**](https://developer.android.com/resources/dashboard/screens.html) es una página proporcionada por Google que proporciona datos sobre el desglose de la matriz de densidad de pantalla o el tamaño de la pantalla. Este desglose proporciona información sobre cómo desarrollar el esfuerzo en las pantallas de soporte técnico.
 
 - **Usar DPS en lugar de píxeles** -píxeles se vuelve problemático a medida que cambia la densidad de la pantalla. No codificar valores de píxeles. Evite píxeles en favor de DP (píxeles independientes de la densidad).
 
-- **Evitar** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) Siempre que **sea posible** &ndash; , está en desuso en el nivel de API 3 (Android 1,5) y dará como resultado diseños frágiles. 
-   No debe usarse. En su lugar, intente usar widgets de diseño más flexibles como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)o el nuevo [**GridLayout**](xref:Android.Widget.GridLayout).
+- **Evite** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
+  **siempre que sea posible** &ndash; quede en desuso en el nivel de API 3 (Android 1,5) y dará como resultado diseños frágiles. No debe usarse. En su lugar, intente usar widgets de diseño más flexibles como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)o el nuevo [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Elegir una orientación de diseño como predeterminada** Por ejemplo, en lugar de proporcionar los recursos alternativos y el puerto de diseño, coloque los recursos para el panorama en el diseño y los recursos de vertical en el puerto de diseño. &ndash;
+- **Elija una orientación de diseño como &ndash; predeterminada** ; por ejemplo, en lugar de proporcionar el **diseño** de recursos alternativos y el **Puerto de diseño**, coloque los recursos para la horizontal en el **diseño**y los recursos de vertical en **Layout: Puerto**.
 
 - **Usar LayoutParams para el alto y el ancho** : al definir los elementos de la interfaz de usuario en un archivo de diseño XML, una aplicación Android que use los valores **wrap_content** y **fill_parent** tendrá más éxito y garantizará una apariencia adecuada en los distintos dispositivos que usar unidades independientes de píxeles o de densidad. Estos valores de dimensión hacen que Android escale los recursos de mapa de bits según corresponda. Por esta misma razón, las unidades independientes de la densidad se reservan mejor para cuando se especifican los márgenes y el relleno de los elementos de la interfaz de usuario.
 

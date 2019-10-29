@@ -3,15 +3,15 @@ title: Creación manual de paquetes NuGet para Xamarin
 description: Este documento contiene sugerencias para ayudar a compilar paquetes NuGet que tienen como destino la plataforma Xamarin. Describe los perfiles de Xamarin de paquetes de NuGet, PCL paquetes Nuget con dependencias de plataforma y vínculos a varios ejemplos de código abierto.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289200"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016775"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes NuGet para Xamarin
 
@@ -26,7 +26,7 @@ El sitio web de NuGet que [admite varias versiones y perfiles de .NET Framework]
 
 Las principales plataformas de destino de Xamarin que se usan hoy en día son:
 
-- **MonoAndroid** - Xamarin.Android
+- **Monoandroid** -Xamarin. Android
 - **Xamarin. iOS** : [Unified API](~/cross-platform/macios/unified/index.md) de Xamarin. iOS (admite 64 bits)
 - **Xamarin. Mac** : perfil móvil de Xamarin. Mac, que es equivalente a la superficie de la API de Xamarin. iOS y Xamarin. Android.
 
@@ -51,7 +51,7 @@ La mayoría de los archivos **. nuspec** especifican el número de versión de l
 
 Puede especificar la versión con un conjunto de números sin un separador decimal o puede especificarlo mediante separadores decimales. Sin el separador decimal, NuGet solo tomará cada número y lo convertirá en una versión insertando un '. ' entre cada dígito.
 
-En la sección anterior, "MonoAndroid10" hace referencia a "Android 1,0". Esto significa simplemente que la [plataforma de destino](~/android/app-fundamentals/android-api-levels.md) del proyecto debe ser la versión 1,0 o superior de monoandroid. La versión se especifica en el `<TargetFrameworkVersion>` elemento del archivo de proyecto.
+En la sección anterior, "MonoAndroid10" hace referencia a "Android 1,0". Esto significa simplemente que la [plataforma de destino](~/android/app-fundamentals/android-api-levels.md) del proyecto debe ser la versión 1,0 o superior de monoandroid. La versión se especifica en el elemento `<TargetFrameworkVersion>` del archivo de proyecto.
 
 Para aclarar:
 
@@ -63,11 +63,11 @@ Para aclarar:
 
 Los perfiles de PCL están limitados en lo que a las API de .NET Framework pueden acceder y, por supuesto, no pueden tener acceso a código específico de la plataforma. Estos vínculos de terceros describen los distintos enfoques para crear paquetes NuGet que usan las API nativas y PCL para proporcionar compatibilidad con Xamarin y otras plataformas:
 
-- [Cómo hacer que las bibliotecas de clases portables funcionen para usted](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [El anzuelo y el interruptor de PCL](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Creación de una PCL de NuGet que funcione con Xamarin. iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Cómo hacer que las bibliotecas de clases portables funcionen para usted](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [El anzuelo y el interruptor de PCL](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Creación de una PCL de NuGet que funcione con Xamarin. iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-Esta [lista externa de perfiles de PCL con su nombre de destino de NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) también es una referencia útil.
+Esta [lista externa de perfiles de PCL con su nombre de destino de NuGet](https://portablelibraryprofiles.stephencleary.com) también es una referencia útil.
 
 ## <a name="examples"></a>Ejemplos
 

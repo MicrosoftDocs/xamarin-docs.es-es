@@ -4,15 +4,15 @@ description: En este documento se describe el registrador de tipos de Xamarin C#
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 0d8e16c2a651df293b13e7f7586d5a643caa1c9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f38c49ce9334a5659f0a8b5dd03e3bae8863cf5a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022276"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrar el tipo de Xamarin. iOS
 
@@ -27,13 +27,13 @@ Durante el inicio, se registrará Xamarin. iOS:
 - Interfaces con un atributo [[Protocol]](xref:Foundation.ProtocolAttribute) como protocolos Objective-C.
 - Miembros con [[Export]](xref:Foundation.ExportAttribute), lo que permite a Objective-C tener acceso a ellos.
 
-Por ejemplo, considere el método `Main` administrado común en aplicaciones de Xamarin. iOS:
+Por ejemplo, considere el método de `Main` administrado común en las aplicaciones de Xamarin. iOS:
 
 ```csharp
 UIApplication.Main (args, null, "AppDelegate");
 ```
 
-Este código indica al tiempo de ejecución de Objective-C que use `AppDelegate` el tipo denominado como la clase delegada de la aplicación. Para que el tiempo de ejecución de Objective-C pueda crear una instancia de C# `AppDelegate` la clase, se debe registrar esa clase.
+Este código indica al tiempo de ejecución de Objective-C que use el tipo denominado `AppDelegate` como la clase delegada de la aplicación. Para que el tiempo de ejecución de Objective-C pueda crear una instancia de C# la clase`AppDelegate`, se debe registrar esa clase.
 
 Xamarin. iOS realiza el registro automáticamente, ya sea en tiempo de ejecución (registro dinámico) o en tiempo de compilación (registro estático).
 
@@ -46,13 +46,13 @@ Después, en el inicio, registra el mapa con el tiempo de ejecución de Objectiv
 
 A partir de Xamarin. iOS 8,10, es posible crear categorías de Objective-C mediante C# la sintaxis.
 
-Para crear una categoría, utilice el `[Category]` atributo y especifique el tipo que se va a extender. Por ejemplo, el código siguiente extiende `NSString`:
+Para crear una categoría, utilice el atributo `[Category]` y especifique el tipo que se va a extender. Por ejemplo, el código siguiente extiende `NSString`:
 
 ```csharp
 [Category (typeof (NSString))]
 ```
 
-Cada uno de los métodos de una categoría `[Export]` tiene un atributo, lo que lo pone a disposición del tiempo de ejecución de Objective-C:
+Cada uno de los métodos de una categoría tiene un atributo `[Export]`, lo que lo pone a disposición del tiempo de ejecución de Objective-C:
 
 ```csharp
 [Export ("today")]
@@ -86,7 +86,7 @@ public static class MyStringCategory
  }
  ```
 
-En este ejemplo se agregará `toUpper` un método de instancia `NSString` nativo a la clase. Se puede llamar a este método desde Objective-C:
+En este ejemplo se agregará un método de instancia de `toUpper` nativo a la clase `NSString`. Se puede llamar a este método desde Objective-C:
 
 ```csharp
 [Category (typeof (UIViewController))]
@@ -102,7 +102,7 @@ public static class MyViewControllerCategory
 
 ### <a name="protocols"></a>Protocolos
 
-A partir de Xamarin. iOS 8,10, las interfaces `[Protocol]` con el atributo se exportarán a Objective-C como protocolos:
+A partir de Xamarin. iOS 8,10, las interfaces con el atributo `[Protocol]` se exportarán a Objective-C como protocolos:
 
 ```csharp
 [Protocol ("MyProtocol")]
@@ -134,7 +134,7 @@ Este nuevo sistema de registro ofrece las siguientes características nuevas:
 - Eliminación de código nativo sin usar:
   - El nuevo sistema de registro agregará referencias fuertes al código que se usa en bibliotecas estáticas, lo que permite que el vinculador nativo destaque el código nativo sin usar del binario resultante. En los enlaces de ejemplo de Xamarin, la mayoría de las aplicaciones se 300 000 más pequeñas.
 
-- Compatibilidad con subclases genéricas `NSObject`de; vea los [genéricos de NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información. Además, el nuevo sistema de registro detectará construcciones genéricas no admitidas que anteriormente habrían causado un comportamiento aleatorio en tiempo de ejecución.
+- Compatibilidad con subclases genéricas de `NSObject`; consulte [genéricos de NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información. Además, el nuevo sistema de registro detectará construcciones genéricas no admitidas que anteriormente habrían causado un comportamiento aleatorio en tiempo de ejecución.
 
 ### <a name="errors-caught-by-the-new-registrar"></a>Errores detectados por el nuevo registrador
 
@@ -180,26 +180,26 @@ Algunos aspectos que hay que tener en cuenta sobre el nuevo registrador:
 
 - Algunas bibliotecas de terceros deben actualizarse para que funcionen con el nuevo sistema de registro. Consulte las [modificaciones necesarias](#required-modifications) a continuación para obtener más detalles.
 
-- Una desventaja a corto plazo es también que se debe usar Clang si se usa el marco de cuentas (esto se debe a que el encabezado **accounts. h** de Apple solo lo puede compilar Clang). Agregue `--compiler:clang` los argumentos de Mtouch adicionales para usar Clang si usa Xcode 4,6 o una versión anterior (Xamarin. iOS seleccionará automáticamente Clang en Xcode 5,0 o posterior).
+- Una desventaja a corto plazo es también que se debe usar Clang si se usa el marco de cuentas (esto se debe a que el encabezado **accounts. h** de Apple solo lo puede compilar Clang). Agregue `--compiler:clang` a los argumentos adicionales de Mtouch para usar Clang si usa Xcode 4,6 o una versión anterior (Xamarin. iOS seleccionará automáticamente Clang en Xcode 5,0 o posterior).
 
-- Si se usa Xcode 4,6 (o anterior), se debe seleccionar GCC/G + + si los nombres de tipo exportados contienen caracteres que no son ASCII (esto se debe a que la versión de Clang que se incluye con Xcode 4,6 no admite caracteres no ASCII dentro de identificadores en código de Objective-C). Agregue `--compiler:gcc` los argumentos Mtouch adicionales para usar gcc.
+- Si se usa Xcode 4,6 (o anterior), se debe seleccionar GCC/G + + si los nombres de tipo exportados contienen caracteres que no son ASCII (esto se debe a que la versión de Clang que se incluye con Xcode 4,6 no admite caracteres no ASCII dentro de identificadores en código de Objective-C). Agregue `--compiler:gcc` a los argumentos Mtouch adicionales para usar GCC.
 
 ## <a name="selecting-a-registrar"></a>Selección de un registrador
 
 Puede seleccionar un registrador diferente agregando una de las siguientes opciones a los argumentos Mtouch adicionales en la configuración de **compilación de iOS** del proyecto:
 
-- `--registrar:static`: valor predeterminado para las compilaciones de dispositivos
+- `--registrar:static`: valores predeterminados para las compilaciones de dispositivos
 - `--registrar:dynamic`: valor predeterminado para las compilaciones del simulador
 
 > [!NOTE]
-> Los Classic API de Xamarin admiten otras opciones `--registrar:legacystatic` , `--registrar:legacydynamic`como y. Sin embargo, estas opciones no son compatibles con el Unified API.
+> Las Classic API de Xamarin admiten otras opciones, como `--registrar:legacystatic` y `--registrar:legacydynamic`. Sin embargo, estas opciones no son compatibles con el Unified API.
 
 ## <a name="shortcomings-in-the-old-registration-system"></a>Deficiencias en el sistema de registro anterior
 
 El sistema de registro anterior tiene las siguientes desventajas:
 
-- No había ninguna referencia estática (nativa) a las clases y métodos de Objective-C en bibliotecas nativas de terceros, lo que significaba que no pudimos solicitar al enlazador nativo que quitara código nativo de terceros que no se usaba realmente (porque se quitaría todo). Este es el motivo por el `-force_load libNative.a` que cada enlace de terceros tenía que hacer (o el equivalente `ForceLoad=true` en el `[LinkWith]` atributo).
-- Podría exportar dos tipos administrados con el mismo nombre de Objective-C sin ninguna advertencia. Un escenario poco frecuente era acabar con dos `AppDelegate` clases en diferentes espacios de nombres. En el tiempo de ejecución, sería completamente aleatorio cuál se eligió (de hecho, se modificó entre las ejecuciones de una aplicación que no se han vuelto a generar, lo que se hizo para una experiencia de depuración muy desconcertantes y frustrante).
+- No había ninguna referencia estática (nativa) a las clases y métodos de Objective-C en bibliotecas nativas de terceros, lo que significaba que no pudimos solicitar al enlazador nativo que quitara código nativo de terceros que no se usaba realmente (porque se quitaría todo). Este es el motivo de la `-force_load libNative.a` que tiene que hacer cada enlace de terceros (o el `ForceLoad=true` equivalente en el atributo `[LinkWith]`).
+- Podría exportar dos tipos administrados con el mismo nombre de Objective-C sin ninguna advertencia. Un escenario poco frecuente era terminar con dos clases de `AppDelegate` en diferentes espacios de nombres. En el tiempo de ejecución, sería completamente aleatorio cuál se eligió (de hecho, se modificó entre las ejecuciones de una aplicación que no se han vuelto a generar, lo que se hizo para una experiencia de depuración muy desconcertantes y frustrante).
 - Podría exportar dos métodos con la misma firma de Objective-C. De nuevo, el motivo por el que se llamaría desde Objective-C era aleatorio (pero este problema no era tan común como el anterior, por lo que la única manera de experimentar este error era invalidar el método administrado de la suerte).
 - El conjunto de métodos que se exportó era ligeramente diferente entre las compilaciones estáticas y dinámicas.
 - No funciona correctamente cuando se exportan clases genéricas (que la implementación genérica exacta ejecutada en tiempo de ejecución sería aleatoria, lo que da lugar a un comportamiento indeterminado).
@@ -212,7 +212,7 @@ En esta sección se describen los enlaces que se deben realizar para trabajar co
 
 ### <a name="protocols-must-have-the-protocol-attribute"></a>Los protocolos deben tener el atributo [Protocol]
 
-Los protocolos deben tener ahora `[Protocol]` el atributo. Si no lo hace, se producirá un error del vinculador nativo como:
+Los protocolos deben tener ahora el atributo `[Protocol]`. Si no lo hace, se producirá un error del vinculador nativo como:
 
 ```console
 Undefined symbols for architecture i386: "_OBJC_CLASS_$_ProtocolName", referenced from: ...
@@ -224,9 +224,9 @@ Todos los selectores deben indicar el número de parámetros correctamente. Ante
 
 En Resumen, el número de caracteres de dos puntos debe coincidir con el número de parámetros:
 
-- Sin parámetros:`foo`
-- Un parámetro:`foo:`
-- Dos parámetros:`foo:parameterName2:`
+- Sin parámetros: `foo`
+- Un parámetro: `foo:`
+- Dos parámetros: `foo:parameterName2:`
 
 Los siguientes son usos incorrectos:
 
@@ -242,7 +242,7 @@ void Display ();
 
 ### <a name="use-isvariadic-parameter-in-export"></a>Usar el parámetro IsVariadic en la exportación
 
-Las funciones variádicas deben usar `IsVariadic` el argumento para `[Export]` el atributo:
+Las funciones variádicas deben usar el argumento `IsVariadic` para el atributo `[Export]`:
 
 ```csharp
 [Export ("variadicMethod:", IsVariadic = true)]

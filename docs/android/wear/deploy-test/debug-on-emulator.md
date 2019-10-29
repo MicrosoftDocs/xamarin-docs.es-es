@@ -4,15 +4,15 @@ description: En estos artículos se explica cómo depurar una aplicación de des
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: f085aaffbedb2965222b98a22cf6a4bb2393642b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca0a6884c05686bded25a2e515456ab192002a24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764037"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028677"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar el desgaste de Android en un emulador
 
@@ -28,13 +28,13 @@ Para ejecutar la aplicación de desgaste en un emulador, debe instalar el Androi
 
 Al crear un dispositivo virtual de desgaste, seleccione un perfil de dispositivo de desgaste de Android (como el cuadrado de uso de **Android**). Para mejorar el rendimiento, use el desgaste de CPU/ABI **x86** , tal como se aprecia en este ejemplo:
 
-[![Ejemplo de configuración de dispositivo virtual de desgaste](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
+[![ejemplo de uso de la configuración de dispositivos virtuales](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 ## <a name="launch-the-wear-virtual-device"></a>Inicio del dispositivo virtual de desgaste 
 
 Después de crear un dispositivo virtual de desgaste de Android, puede elegirlo en el menú desplegable del dispositivo en el IDE antes de iniciar la depuración. Si el dispositivo virtual no está disponible en la desactivación del dispositivo, compruebe que el proyecto es un proyecto de aplicación de *desgaste* de Android (no un proyecto de aplicación de Android) y que su nivel de API de destino se establece en el mismo nivel de API que el dispositivo virtual. Por ejemplo:
 
-[![Selección de un menú de uso de AVD en Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
+[![elección de un menú de uso de AVD en Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Una vez que se inicia el emulador de Android, Xamarin. Android implementará la aplicación de desgaste en el emulador. El emulador ejecuta la aplicación con la imagen de dispositivo virtual configurada.
 

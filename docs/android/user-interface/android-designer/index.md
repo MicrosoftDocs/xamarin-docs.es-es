@@ -4,15 +4,15 @@ description: En este artículo se describen las características de Xamarin. And
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 176037db501c2577775bdfb817fea01f16a02242
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8793dafe5bc44999cb884621d0c41956674b05e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761640"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029390"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin. Android Designer
 

@@ -4,15 +4,15 @@ description: En este artículo se describen algunas de las nuevas característic
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 382315f755102d7111db1a5c0f71d43bdea97a10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761462"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020180"
 ---
 # <a name="ice-cream-sandwich-features"></a>Características del bocadillo de helado
 
@@ -22,10 +22,10 @@ _En este artículo se describen algunas de las nuevas características disponibl
 
 La versión 4,0 del SO Android (nivel de API 14) representa un retrabajo importante del sistema operativo Android e incluye una serie de cambios importantes y actualizaciones, entre los que se incluyen:
 
-- **Interfaz de usuario actualizada** : varias características nuevas de la interfaz de usuario proporcionan a los desarrolladores más capacidad y flexibilidad cuando crean interfaces de usuario de la aplicación. Estas nuevas características incluyen: `GridLayout` , `PopupMenu` , `Switch` widget y `TextureView` . 
+- **Interfaz de usuario actualizada** : varias características nuevas de la interfaz de usuario proporcionan a los desarrolladores más capacidad y flexibilidad cuando crean interfaces de usuario de la aplicación. Estas nuevas características incluyen: `GridLayout`, `PopupMenu`, `Switch` widget y `TextureView`. 
 - **Mejor aceleración de hardware** : ahora, la representación en 2D tiene lugar en la GPU para todos los controles de Android. Además, la aceleración de hardware está activada de forma predeterminada en todas las aplicaciones desarrolladas para Android 4,0. 
 - **Nuevas API de datos** : hay un nuevo acceso a los datos a los que no se podía tener acceso oficialmente, como los datos de calendario y el perfil de usuario del propietario del dispositivo. 
-- **Uso compartido de datos** de aplicaciones: compartir datos entre aplicaciones y dispositivos es ahora más fácil que nunca mediante `ShareActionProvider` tecnologías como, lo que facilita la creación de una acción de uso compartido desde un barra de acciones y el *haz de Android* para el *campo Near Communications (NFC)* , que lo convierte en un complemento para compartir datos entre dispositivos en estrecha proximidad entre sí. 
+- **Uso compartido de datos de aplicaciones** : el uso compartido de datos entre aplicaciones y dispositivos es ahora más fácil que nunca mediante tecnologías como el `ShareActionProvider`, lo que facilita la creación de una acción de uso compartido desde un barra de acciones y un *haz de Android* para comunicaciones de *campo en proximidad ( NFC)* , que lo convierte en un ajuste para compartir datos entre dispositivos en estrecha proximidad entre sí. 
 
 En este artículo, vamos a explorar estas características y otros cambios que se han realizado en la API de Android 4,0 y explicaremos cómo usar cada característica con Xamarin. Android.
 
@@ -38,7 +38,7 @@ Hay una variedad de nuevas tecnologías de interfaz de usuario disponibles con A
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** : habilita el contenido de vídeo y OpenGL en una vista. 
 - **[Barra de navegación](~/android/user-interface/controls/navigation-bar.md)** : contiene botones virtuales para la parte posterior, la Página principal y la multitarea. 
 
-Además, se han mejorado otros elementos de la `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`interfaz de usuario, como, que ahora es más fácil de trabajar, y pestañas, que tienen un aspecto más pulido.
+Además, se han mejorado otros elementos de la interfaz de usuario, como el `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, que ahora es más fácil de trabajar y las pestañas, que tienen un aspecto más pulido.
 
 ## <a name="sharing-features"></a>Compartir características
 
@@ -61,7 +61,7 @@ Por último, hemos examinado cómo usar el proveedor *ContactsContract* para acc
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de sandwich de helado](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-ics-samples)
-- [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
+- [TextureViewDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
 - [CalendarDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
 - [Tutorial de diseño de pestañas](~/android/user-interface/layouts/tab-layout/index.md)
 - [Bocadillo de helado](https://developer.android.com/about/versions/android-4.0-highlights.html)

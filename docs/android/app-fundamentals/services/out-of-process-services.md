@@ -4,15 +4,15 @@ description: Por lo general, todos los componentes de una aplicación de Android
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 5429f260399602b7ef15e8263bc74cb8ae940f4f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: fda5ed3b2a26166e23d4a796219758853d0aace7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754881"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024547"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Ejecución de servicios de Android en procesos remotos
 
@@ -469,7 +469,7 @@ A continuación, el **archivo AndroidManifest. XML** del cliente apk debe solici
 
 Para ver los permisos que se han concedido a una aplicación, abra la aplicación de configuración de Android y seleccione **aplicaciones**. Busque y seleccione la aplicación en la lista. En la pantalla de información de la **aplicación** , pulse **permisos** que mostrarán una vista que muestra todos los permisos concedidos a la aplicación:
 
-[![Screenshots desde un dispositivo Android que muestra cómo encontrar los permisos concedidos a una aplicación](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
+[![capturas de pantalla de un dispositivo Android que muestra cómo encontrar los permisos concedidos a una aplicación](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 

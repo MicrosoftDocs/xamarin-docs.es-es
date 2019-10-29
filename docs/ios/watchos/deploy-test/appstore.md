@@ -4,15 +4,15 @@ description: En este documento se describe cómo implementar aplicaciones de wat
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b80573a728e1868254b5a89254ebc385b3baa12
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768075"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028368"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implementación de aplicaciones de watchos en la tienda de aplicaciones
 
@@ -21,7 +21,7 @@ ms.locfileid: "70768075"
 
 - Asegúrese de que tiene:
   - [**Perfiles de aprovisionamiento de distribución**](#provisioning) creados para los proyectos.
-  - El **destino** de implementación`MinimumOSVersion`() de la aplicación primaria de iOS establecida en **8,2** o anterior (no se admite 8,3).
+  - El **destino de implementación** (`MinimumOSVersion`) de la aplicación primaria de iOS establecida en **8,2** o anterior (no se admite 8,3).
 
 - En [**iTunes Connect**](#iTunes_Connect):
 
@@ -51,17 +51,17 @@ Para compilar para la implementación de App Store, debe crear un **Perfil de ap
 
 Si tiene un identificador de aplicación comodín, *solo se necesitará un perfil de aprovisionamiento*; pero si tiene un identificador de aplicación independiente para cada proyecto, necesitará un perfil de aprovisionamiento para cada identificador de aplicación:
 
-![](appstore-images/provisioningprofile-distribution-sml.png "El perfil de distribución de App Store")
+![](appstore-images/provisioningprofile-distribution-sml.png "The App Store Distribution profile")
 
 Una vez que haya creado los tres perfiles, aparecerán en la lista. Recuerde descargar e instalar cada uno de ellos (haciendo doble clic en él):
 
-![](appstore-images/provisioningprofiles-sml.png "La lista de perfiles disponibles")
+![](appstore-images/provisioningprofiles-sml.png "The list of available profiles")
 
 Para comprobar el perfil de aprovisionamiento en las opciones del **proyecto** , seleccione la pantalla **compilar > la firma del lote de iOS** y seleccione la configuración de **AppStore | iPhone** .
 
 La lista de perfiles de **aprovisionamiento** mostrará todos los perfiles coincidentes. debería ver los perfiles coincidentes que ha creado en esta lista desplegable.
 
-![](appstore-images/options-selectprofile-sml.png "Cuadro de diálogo de firma de lote de iOS")
+![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
 <a name="iTunes_Connect"/>
 
@@ -74,7 +74,7 @@ Siga la [información general](~/ios/deploy-test/app-distribution/index.md)de la
 
 Al configurar la aplicación en iTunes Connect, no olvide agregar el icono de inspección y las capturas de pantallas:
 
-![](appstore-images/itunesconnect-watch-sml.png "Icono de inspección y capturas de pantallas en iTunes Connect")
+![](appstore-images/itunesconnect-watch-sml.png "The Watch icon and screenshots in iTunes Connect")
 
 El archivo de icono debe ser 1024x1024 píxeles y tendrá una máscara circular aplicada cuando se muestre. El icono no debe tener un canal alfa.
 
@@ -88,19 +88,19 @@ Puede usar el simulador de inspección de 42mm para realizar capturas de pantall
 
 1. Asegúrese de que la aplicación iOS es el proyecto de inicio. Si no es así, haga clic con el botón derecho para establecerlo:
 
-   ![](appstore-images/xs-startup.png "Establecer el proyecto de inicio")
+   ![](appstore-images/xs-startup.png "Setting the startup project")
 
 2. Elija la configuración de compilación de **AppStore** :
 
-   ![](appstore-images/xs-appstore.png "Configuración de compilación de AppStore")
+   ![](appstore-images/xs-appstore.png "The AppStore build configuration")
 
 3. Elija el elemento de menú **Compilar > archivo** para iniciar el proceso de archivo:
 
-   ![](appstore-images/xs-archive.png "Menú compilar")
+   ![](appstore-images/xs-archive.png "The Build menu")
 
 También puede elegir el elemento de menú **ver > archivos...** para ver los archivos que se han creado anteriormente.
 
-  ![](appstore-images/xs-archives-sml.png "La vista de archivos")
+  ![](appstore-images/xs-archives-sml.png "The Archives view")
 
 <a name="xcode" />
 
@@ -110,21 +110,21 @@ Xcode mostrará automáticamente los archivos creados en Visual Studio para Mac.
 
 1. Inicie Xcode y elija **Window > Organizer**:
 
-   ![](appstore-images/xc-organizer.png "El menú ventana")
+   ![](appstore-images/xc-organizer.png "The Window menu")
 
 2. Cambie a la pestaña **archivos** y seleccione el archivo que se creó con Visual Studio para Mac:
 
-   ![](appstore-images/xc-archives.png "Pestaña archivos")
+   ![](appstore-images/xc-archives.png "The Archives tab")
 
 3. Opcionalmente, **valide...** el archivo y, a continuación, elija **enviar...** para cargar la aplicación en iTunes Connect.
 
 4. Elija el equipo de desarrollo (si pertenece a más de uno) y, a continuación, confirme el envío:
 
-   ![](appstore-images/xc-submit1.png "Sección del equipo de desarrollo")
+   ![](appstore-images/xc-submit1.png "The development team section")
 
 5. Visite iTunes Connect de nuevo para ver el binario cargado. Vaya a la página de configuración de la aplicación y elija **versión preliminar** en el menú superior para ver la lista de **compilaciones** :
 
-   [![](appstore-images/itc-prerelease-sml.png "Página de configuración de aplicaciones en iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 Después, puede enviar la aplicación para su aprobación en la página **versiones** . Consulte la introducción a la [distribución de aplicaciones de iOS](~/ios/deploy-test/app-distribution/index.md) para obtener más información.
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Asegúrese de que tiene la versión más reciente de Visual Studio para Mac y de que **Appicor. appiconset** contiene un conjunto completo de imágenes. Si sigue viendo este error, vea el origen del archivo **Contents. JSON** para confirmar que contiene una entrada para todas las imágenes necesarias. Como alternativa, una vez que se haya asegurado de que está usando la versión más reciente de Xamarin, elimine y vuelva a crear el **Appicor. appiconset**.
 
 > [!IMPORTANT]
-> Hay un error conocido en la compatibilidad con el icono de inspección de Visual Studio para Mac: espera una imagen de 88x88 píxeles **29x29@3x** para la imagen (que debe ser 87x87 píxeles).
+> Hay un error conocido en la compatibilidad con el icono de inspección de Visual Studio para Mac: espera una imagen de 88x88 píxeles para la imagen de **29x29@3x** (que debe ser 87x87 píxeles).
 
 No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el archivo **Contents. JSON** (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 

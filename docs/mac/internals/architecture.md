@@ -4,15 +4,15 @@ description: En esta guía se explora Xamarin. Mac y su relación con Objective-
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 2c9bbd663257e937e35e062f03b4aa84813edb27
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 51900adb1dd15675e584671f3b06ad6d7572f47d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287784"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017562"
 ---
 # <a name="xamarinmac-architecture"></a>Arquitectura de Xamarin. Mac
 
@@ -62,7 +62,7 @@ En primer lugar, debe haber una manera de exponer Objective-C a C#, que se reali
 
 Como se mencionó anteriormente, el registrador es un código que expone código administrado a Objective-C. Para ello, crea una lista de todas las clases administradas que se derivan de NSObject:
 
-- Para todas las clases que no contengan una clase de Objective-c existente, se crea una nueva clase de Objective-c con miembros de Objective-c que reflejan todos los `[Export]` miembros administrados que tienen un atributo.
+- Para todas las clases que no contengan una clase de Objective-C existente, se crea una nueva clase de Objective-C con miembros de Objective-C que reflejen todos los miembros administrados que tienen un atributo `[Export]`.
 - En las implementaciones de cada miembro de Objective-C, se agrega automáticamente el código para llamar al miembro administrado reflejado.
 
 El pseudo-código siguiente muestra un ejemplo de cómo hacerlo:
@@ -136,7 +136,7 @@ public interface NSBox {
 }
 ```
 
-El generador, llamado `bmac` en Xamarin. Mac, toma estos archivos de definición y usa las herramientas de .net para compilarlos en un ensamblado temporal. Sin embargo, este ensamblado temporal no se utiliza para llamar a código de Objective-C. A continuación, el generador lee el ensamblado C# temporal y genera código que se puede usar en tiempo de ejecución. Por este motivo, por ejemplo, si agrega un atributo Random al archivo Definition. CS, no aparecerá en el código de salida. El generador no lo conoce y, por lo `bmac` tanto, no sabe buscarlo en el ensamblado temporal para generarlo.
+El generador, llamado `bmac` en Xamarin. Mac, toma estos archivos de definición y usa las herramientas de .NET para compilarlos en un ensamblado temporal. Sin embargo, este ensamblado temporal no se utiliza para llamar a código de Objective-C. A continuación, el generador lee el ensamblado C# temporal y genera código que se puede usar en tiempo de ejecución. Por este motivo, por ejemplo, si agrega un atributo Random al archivo Definition. CS, no aparecerá en el código de salida. El generador no lo conoce y, por lo tanto, `bmac` no sabe buscarlo en el ensamblado temporal para generarlo.
 
 Una vez creado el archivo Xamarin. Mac. dll, el empaquetador, `mmp`, agrupará todos los componentes.
 
@@ -147,7 +147,7 @@ En un nivel alto, se consigue mediante la ejecución de las siguientes tareas:
 - Si la vinculación está habilitada, ejecute el enlazador administrado para optimizar los ensamblados quitando las partes no utilizadas.
 - Cree una aplicación de iniciador, vinculando en el código del iniciador que se ha hablado junto con el código del registrador en el modo estático.
 
-A continuación, se ejecuta como parte del proceso de compilación de usuario que compila el código de usuario en un ensamblado que hace referencia a Xamarin. Mac `mmp` . dll de y se ejecuta para convertirlo en un paquete.
+A continuación, se ejecuta como parte del proceso de compilación de usuario que compila el código de usuario en un ensamblado que hace referencia a Xamarin. Mac. dll de y se ejecuta `mmp` para convertirlo en un paquete.
 
 Para obtener información más detallada sobre el enlazador y cómo se usa, consulte la guía del [enlazador](~/ios/deploy-test/linker.md) de iOS.
 

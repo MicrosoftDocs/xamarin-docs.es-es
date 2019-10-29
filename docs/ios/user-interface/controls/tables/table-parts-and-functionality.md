@@ -4,29 +4,29 @@ description: En este documento se describen las distintas partes de un UITableVi
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768354"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021854"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Elementos de tabla y funcionalidad de Xamarin. iOS
 
 Un UITableView puede tener un estilo "agrupado" o "sin formato", y consta de las siguientes partes:
 
 - [Encabezado de sección](#Section_Header)
-- [Celdas](#Cells) de (o filas, si lo prefiere)
+- [Celdas](#Cells) (o filas, si lo prefiere)
 - [Pie de sección](#Section_Footer)
 - [Index](#Index)
 - [Modo de edición](#Edit_Features) (incluye ' deslizar rápidamente a eliminar ' y arrastrar Controladores para cambiar el orden de las filas) 
 
 Estas capturas de pantalla muestran cómo se muestran las filas, los encabezados, los pies de página, los controles de edición y el índice de la sección.
 
- [![](table-parts-and-functionality-images/image1a.png "Estas capturas de pantalla muestran cómo se muestran las filas, los encabezados, los pies de página, los controles de edición y el índice de la sección.")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Estas partes se describen con más detalle a continuación:
 
@@ -72,7 +72,7 @@ En el resto de este documento se muestra cómo implementar todas estas caracter�
 
 A continuación se muestran las clases principales que se usan para mostrar las vistas de tabla:
 
-[![](table-parts-and-functionality-images/classdiagram.png "Aquí se muestran las clases principales que se usan para mostrar las vistas de tabla")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 A continuación se describe el propósito de cada clase:
 

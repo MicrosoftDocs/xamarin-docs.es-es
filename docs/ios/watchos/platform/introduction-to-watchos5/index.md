@@ -4,15 +4,15 @@ description: En este documento se proporciona una descripción de alto nivel de 
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: e873d476e38c91bad0db805d53e2c396f4ffb9dd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4aca6a8e7e78b5e9853361eaa694fed889d7f4e9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282040"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028208"
 ---
 # <a name="introduction-to-watchos-5"></a>Introducción a watchOS 5
 

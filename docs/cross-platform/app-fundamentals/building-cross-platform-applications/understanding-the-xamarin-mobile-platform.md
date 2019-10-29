@@ -3,15 +3,15 @@ title: 'Parte 1: Descripción de la plataforma móvil Xamarin'
 description: En este documento se describe la plataforma de Xamarin a alto nivel, en el proceso de compilación, el acceso al SDK de la plataforma, el uso compartido de código, la creación de la interfaz de usuario, los diseñadores visuales, etc.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: af2b8cd39d5fb1b0ce6c12f7d6ad87e245b9a594
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e10e9f5330de3226fb0f08051ab135ea58900fe7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761972"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016863"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: Descripción de la plataforma móvil Xamarin
 
@@ -39,7 +39,7 @@ El C# origen se convierte en una aplicación nativa de manera muy diferente en c
 
 La documentación del enlazador de [Xamarin. iOS](~/ios/deploy-test/linker.md) y [Xamarin. Android](~/android/deploy-test/linker.md) proporciona más información sobre esta parte del proceso de compilación.
 
-Se debe evitar la compilación en tiempo de ejecución, `System.Reflection.Emit` que genera código dinámicamente con –.
+En tiempo de ejecución ' compilación ': se debe evitar la generación dinámica de código con `System.Reflection.Emit`.
 
 El kernel de Apple evita la generación dinámica de código en dispositivos iOS, por lo que la emisión de código sobre la marcha no funcionará en Xamarin. iOS. Del mismo modo, las características de Dynamic Language Runtime no se pueden usar con las herramientas de Xamarin.
 
@@ -49,8 +49,8 @@ Algunas características de reflexión funcionan (por ejemplo, MonoTouch. Dialog
 
 Xamarin facilita el acceso a las características proporcionadas por el SDK específico de la C# plataforma con la sintaxis conocida:
 
-- **iOS** : Xamarin. iOS expone los marcos de CocoaTouch SDK de Apple como espacios de nombres a C#los que puede hacer referencia. Por ejemplo, el marco de trabajo de UIKit que contiene todos los controles de interfaz de usuario `using UIKit;` se puede incluir con una instrucción simple.
-- **Android** : Xamarin. Android expone los Android SDK de Google como espacios de nombres, por lo que puede hacer referencia `using Android.Views;` a cualquier parte del SDK compatible con una instrucción using, como para tener acceso a los controles de la interfaz de usuario.
+- **iOS** : Xamarin. iOS expone los marcos de CocoaTouch SDK de Apple como espacios de nombres a C#los que puede hacer referencia. Por ejemplo, el marco de trabajo de UIKit que contiene todos los controles de interfaz de usuario se puede incluir con una simple instrucción `using UIKit;`.
+- **Android** : Xamarin. Android expone los Android SDK de Google como espacios de nombres, por lo que puede hacer referencia a cualquier parte del SDK compatible con una instrucción using, como `using Android.Views;` para tener acceso a los controles de la interfaz de usuario.
 - **Windows** : las aplicaciones de Windows se compilan con Visual Studio en Windows. Los tipos de proyecto incluyen Windows Forms, WPF, WinRT y el Plataforma universal de Windows (UWP).
 
 ## <a name="seamless-integration-for-developers"></a>Perfecta integración para desarrolladores
@@ -86,7 +86,7 @@ El desarrollo de aplicaciones de Android requiere la instalación de los SDK de 
 
 Xamarin proporciona un instalador unificado que configurará el sistema con las herramientas necesarias de Java, Android y Xamarin (incluido un diseñador visual para los diseños de pantalla). Consulte la [Guía de instalación de Xamarin. Android](~/android/get-started/installation/index.md) para obtener instrucciones detalladas.
 
-Puede compilar y probar aplicaciones en un dispositivo real sin ninguna licencia de Google, sin embargo, para distribuir la aplicación a través de una tienda (como Google Play &amp; , Amazon o Barnes Noble), se puede pagar una tarifa de registro al operador. Google Play publicará la aplicación al instante, mientras que las demás tiendas tienen un proceso de aprobación similar al de Apple.
+Puede compilar y probar aplicaciones en un dispositivo real sin ninguna licencia de Google; sin embargo, para distribuir la aplicación a través de una tienda (como Google Play, Amazon o Barnes &amp; noble) se puede pagar una tarifa de registro al operador. Google Play publicará la aplicación al instante, mientras que las demás tiendas tienen un proceso de aprobación similar al de Apple.
 
 ### <a name="windows"></a>Windows
 
@@ -115,7 +115,7 @@ Cada plataforma tiene un método diferente para la disposición visual de las pa
 
 Estas capturas de pantalla muestran los diseñadores de pantallas visuales disponibles en cada plataforma:
 
- [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Estas capturas de pantalla muestran los diseñadores de pantallas visuales disponibles en cada plataforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "These screenshots show the visual screen designers available on each platform")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 En todos los casos, se puede hacer referencia a los elementos que se crean visualmente en el código.
 
@@ -143,13 +143,13 @@ La plataforma Xamarin permite volver a usar el código C# existente en todas las
 
 Dado que los productos C# de Xamarin usan y .NET Framework, se puede volver a usar un gran número de código fuente existente (proyectos internos y de código abierto) en los proyectos de Xamarin. iOS o Xamarin. Android. A menudo, el origen se puede agregar simplemente a una solución de Xamarin y funcionará inmediatamente. Si se ha utilizado una característica de .NET Framework no admitida, es posible que se requieran algunos ajustes.
 
-Los ejemplos C# de origen que se pueden usar en Xamarin. iOS o Xamarin. Android incluyen: SQLite-NET, NewtonSoft. JSON y SharpZipLib.
+Los ejemplos C# de origen que se pueden usar en Xamarin. iOS o Xamarin. Android incluyen: SQLite-net, NEWTONSOFT. JSON y SharpZipLib.
 
 ### <a name="objective-c-bindings--binding-projects"></a>Enlaces de Objective-C + proyectos de enlace
 
 Xamarin proporciona una herramienta denominada *btouch* que ayuda a crear enlaces que permiten el uso de bibliotecas de Objective-C en proyectos de Xamarin. iOS. Consulte la [documentación de tipos de Objective-C de enlace](~/cross-platform/macios/binding/binding-types-reference.md) para más información sobre cómo hacerlo.
 
-Entre los ejemplos de bibliotecas de Objective-C que se pueden usar en Xamarin. iOS se incluyen: Exploración de códigos de barras RedLaser, Google Analytics y la integración de PayPal. Los enlaces de Xamarin. iOS de código abierto están disponibles en [GitHub](https://github.com/mono/monotouch-bindings).
+Entre los ejemplos de bibliotecas de Objective-C que se pueden usar en Xamarin. iOS se incluyen: Análisis de código de barras RedLaser, Google Analytics e integración de PayPal. Los enlaces de Xamarin. iOS de código abierto están disponibles en [GitHub](https://github.com/mono/monotouch-bindings).
 
 ### <a name="jar-bindings--binding-projects"></a>Enlaces. jar + proyectos de enlace
 

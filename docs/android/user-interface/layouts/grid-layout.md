@@ -3,21 +3,21 @@ title: GridLayout
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: bd05596ce8c6f8acb81b3ca68c6393a0be47768a
-ms.sourcegitcommit: cb13fadbaa6d19dea94b9005bda20c2efd1b8039
+ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72541916"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029006"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout de Xamarin. Android
 
 La `GridLayout` es una nueva subclase `ViewGroup` que admite la colocación de vistas en una cuadrícula 2D, similar a una tabla HTML, como se muestra a continuación:
 
- [![Cropped GridLayout que muestra cuatro celdas](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [![el GridLayout recortado que muestra cuatro celdas](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` funciona con una jerarquía de vista plana, en la que las vistas secundarias establecen sus ubicaciones en la cuadrícula especificando las filas y las columnas en las que deben estar. De este modo, el *GridLayout* puede colocar las vistas en la cuadrícula sin necesidad de que las vistas intermedias proporcionen una estructura de tabla, como se muestra en las filas de la tabla que se usan en TableLayout. Al mantener una jerarquía plana, *GridLayout* puede diseñar más rápidamente sus vistas secundarias. Echemos un vistazo a un ejemplo para ilustrar lo que significa realmente este concepto en el código.
 
@@ -49,11 +49,11 @@ El siguiente XML agrega varios controles `TextView` a un *GridLayout*.
 
 El diseño ajustará el tamaño de las filas y las columnas para que puedan ajustarse a su contenido, tal como se muestra en el diagrama siguiente:
 
- [![Diagram de diseño que muestra dos celdas a la izquierda más pequeñas que a la derecha](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [![diagrama de diseño que muestra dos celdas a la izquierda más pequeñas que a la derecha](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 Esto da como resultado la siguiente interfaz de usuario cuando se ejecuta en una aplicación:
 
- [![Screenshot de la aplicación GridLayoutDemo que muestra cuatro celdas](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [![captura de pantalla de la aplicación GridLayoutDemo que muestra cuatro celdas](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>Especificar orientación
 
@@ -71,11 +71,11 @@ Observe que en el XML anterior, cada `TextView` no especifica una fila o columna
 
 Ahora, el `GridLayout` colocará las celdas de arriba abajo en cada columna, en lugar de izquierda a derecha, como se muestra a continuación:
 
- [![Diagram ilustrar cómo se colocan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [Diagrama de![que ilustra cómo se sitúan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Esto da como resultado la siguiente interfaz de usuario en tiempo de ejecución:
 
- [![Screenshot de GridLayoutDemo con celdas colocadas en orientación vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [![captura de pantalla de GridLayoutDemo con celdas colocadas en orientación vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>Especificar la posición explícita
 
@@ -165,7 +165,7 @@ Por ejemplo, el código XML siguiente agrega una fila adicional al `GridLayout` 
 
 Este XML crea el espaciado en el `GridLayout` como se muestra a continuación:
 
- [![Screenshot de GridLayoutDemo ilustrar celdas mayores con espaciado](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [![captura de pantalla de GridLayoutDemo ilustrando celdas mayores con espaciado](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 La ventaja de usar la nueva vista `Space` es que permite el espaciado y no es necesario establecer atributos en cada vista secundaria.
 
@@ -216,7 +216,7 @@ La `GridLayout` también admite celdas que abarcan varias columnas y filas. Por 
 
 Esto hará que la primera columna del `GridLayout` se estire para acomodar el tamaño del botón, como se ve aquí:
 
-[![Screenshot de GridLayoutDemo con el botón que abarca solo la primera columna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[![captura de pantalla de GridLayoutDemo con el botón que abarca solo la primera columna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 Para evitar que la primera columna se ajuste, podemos establecer el botón para que abarque dos columnas; para ello, establezca su ColumnSpan de la siguiente manera:
 
@@ -231,10 +231,10 @@ Para evitar que la primera columna se ajuste, podemos establecer el botón para 
 
 Esto da como resultado un diseño para el `TextViews` que es similar al diseño anterior, con el botón agregado a la parte inferior del `GridLayout`, como se muestra a continuación:
 
- [![Screenshot de GridLayoutDemo con el botón que abarca ambas columnas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [![captura de pantalla de GridLayoutDemo con el botón que abarca ambas columnas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [GridLayoutDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Presentación del bocadillo de helado](http://www.android.com/about/ice-cream-sandwich/)
+- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

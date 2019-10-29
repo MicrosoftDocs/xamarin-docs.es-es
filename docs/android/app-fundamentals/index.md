@@ -4,15 +4,15 @@ description: Conceptos básicos de la aplicación
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: af7ba83b9026a91028f4ffa9894d564d5ff13eb8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: eb581d68f3b7e57975b6979fe1005b1fac411ec8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755301"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019221"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Aspectos básicos de la aplicación Xamarin. Android
 

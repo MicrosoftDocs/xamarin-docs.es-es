@@ -3,15 +3,15 @@ title: 'Parte 3: configuración de una solución multiplataforma de Xamarin'
 description: En este documento se describe cómo configurar una solución multiplataforma en Xamarin. Describe diversas estrategias de uso compartido de código, como proyectos compartidos y .NET Standard.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 843887282c9a5af671d46699ae2f601fd32902e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758153"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016879"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: configuración de una solución multiplataforma de Xamarin
 
@@ -43,7 +43,7 @@ Una biblioteca de clases portable (PCL) es un tipo especial de proyecto que se p
 
 Puede leer más sobre la compatibilidad de Xamarin con las [bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md) y seguir las instrucciones para ver cómo funciona el [ejemplo TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) .
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>Estándar .NET
 
 Los proyectos de [.net Standard](~/cross-platform/app-fundamentals/net-standard.md) , que se introdujeron en 2016, proporcionan una manera sencilla de compartir código entre plataformas y generar ensamblados que se pueden usar en Windows, plataformas de Xamarin (iOS, Android, Mac) y Linux.
 
@@ -63,7 +63,7 @@ El enfoque de Xamarin es agrupar el código en dos tipos de proyecto:
 
 ### <a name="core-project"></a>Proyecto principal
 
-Los proyectos de código compartidos solo deben hacer referencia a ensamblados que están disponibles en todas las plataformas: IE. los espacios de nombres de Common `System`Framework `System.Core` como `System.Xml`, y.
+Los proyectos de código compartidos solo deben hacer referencia a ensamblados que están disponibles en todas las plataformas: IE. los espacios de nombres comunes del marco como `System`, `System.Core` y `System.Xml`.
 
 Los proyectos compartidos deben implementar tanta funcionalidad que no sea de interfaz de usuario como sea posible, lo que podría incluir los siguientes niveles:
 
@@ -89,11 +89,11 @@ Los proyectos específicos de la plataforma deben implementar:
 
 En este diagrama se ilustra la arquitectura de la aplicación:
 
- [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "En este diagrama se ilustra la arquitectura de la aplicación.")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 En esta captura de pantalla se muestra una configuración de soluciones con los proyectos de proyecto principal, iOS y aplicación de Android compartidos. El proyecto compartido contiene código relacionado con cada uno de los niveles arquitectónicos (código de negocio, servicio, datos y acceso a datos):
 
- ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "El proyecto compartido contiene código relacionado con cada uno de los niveles arquitectónicos (negocio, servicio, datos y código de acceso a datos)")
+ ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
 
  <a name="Project_References" />
 
@@ -104,7 +104,7 @@ Los proyectos de aplicación específicos de la plataforma hacen referencia al c
 
 La aplicación proyecta cada proyecto compartido de referencia y contiene el código de interfaz de usuario necesario para presentar la funcionalidad al usuario, como se muestra en estas capturas de pantallas:
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "La aplicación de los proyectos cada referencia de proyecto compartido") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "la aplicación de los proyectos cada referencia de proyecto compartido")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "La aplicación proyecta cada proyecto compartido de referencia") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "La aplicación proyecta cada proyecto compartido de referencia")
 
 En los casos prácticos se proporcionan ejemplos específicos de cómo se deben estructurar los proyectos.
 
@@ -118,8 +118,8 @@ En los casos prácticos se proporcionan ejemplos específicos de cómo se deben 
 
 Es importante establecer la acción de compilación correcta para determinados tipos de archivo. En esta lista se muestra la acción de compilación para algunos tipos de archivo comunes:
 
-- **Todos C# los archivos** : acción de compilación: Compile
-- **Imágenes en Xamarin. iOS & Windows** : acción de compilación: Contenido
+- **Todos C# los archivos** : acción de compilación: compilar
+- **Imágenes en Xamarin. iOS & Windows** : acción de compilación: contenido
 - **Archivos Xib y Storyboard en Xamarin. iOS** : acción de compilación: InterfaceDefinition
 - **Imágenes y diseños AXML en Android** : acción de compilación: AndroidResource
 - **Archivos XAML en proyectos de Windows** : acción de compilación: Página

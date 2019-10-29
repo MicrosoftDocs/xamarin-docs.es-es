@@ -3,15 +3,15 @@ title: Uso de datos en una aplicación Android
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: c0ff15c516fa2eb85ac9748004df5a14425b510c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754451"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023734"
 ---
 # <a name="using-data-in-an-app"></a>Uso de datos en una aplicación
 
@@ -94,7 +94,7 @@ Algunas aplicaciones se incluyen con una base de datos que ya se ha rellenado co
 
 - La extensión de la &ndash; de los **administradores de SQLite** en Windows funciona en Mac y Windows y genera archivos que son compatibles con iOS y Android.
 
-- @No__t_1 de **línea de comandos** , vea [www.SQLite.org/SQLite.html](http://www.sqlite.org/sqlite.html) .
+- &ndash; de **línea de comandos** , vea [www.SQLite.org/SQLite.html](https://www.sqlite.org/sqlite.html) .
 
 Al crear un archivo de base de datos para su distribución con la aplicación, tenga cuidado con el nombre de las tablas y columnas para asegurarse de que coinciden con lo que espera el código, especialmente si usa SQLite.NET, lo C# que esperará que los nombres coincidan con sus clases y propiedades ( o los atributos personalizados asociados).
 

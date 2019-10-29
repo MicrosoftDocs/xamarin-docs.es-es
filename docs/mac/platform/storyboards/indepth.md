@@ -4,25 +4,25 @@ description: En este documento se describe cómo trabajar con guiones gráficos 
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 6aca181b2942bbde854df41c8f9741106cda6776
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 06774d13cf053b661dd0b2d24b7df0c0b767b4db
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279311"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026412"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajar con guiones gráficos en Xamarin. Mac
 
 Un guión gráfico define toda la interfaz de usuario de una aplicación determinada dividida en una información general funcional de los controladores de vista. En el Interface Builder de Xcode, cada uno de estos controladores reside en su propia escena.
 
-[![Un guión gráfico en la Interface Builder de Xcode](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
+[![un guion gráfico en Interface Builder de Xcode](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
 
-El guión gráfico es un archivo de recursos (con las `.storyboard`extensiones de) que se incluye en el lote de la aplicación de Xamarin. Mac cuando se compila y se envía. Para definir el guión gráfico de inicio de la aplicación, edite `Info.plist` su archivo y seleccione la **interfaz principal** en el cuadro desplegable: 
+El guión gráfico es un archivo de recursos (con las extensiones de `.storyboard`) que se incluye en el lote de la aplicación de Xamarin. Mac cuando se compila y se envía. Para definir el guión gráfico de inicio de la aplicación, edite `Info.plist` archivo y seleccione la **interfaz principal** en el cuadro desplegable: 
 
-[![Editor de info. plist](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
+[![el editor info. plist](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -39,13 +39,13 @@ var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") a
 controller.ShowWindow(this);
 ```
 
-`FromName` Carga el archivo de guion gráfico con el nombre especificado que se ha incluido en el paquete de la aplicación. `InstantiateControllerWithIdentifier` Crea una instancia del controlador de vista con la identidad especificada. La identidad se establece en el Interface Builder de Xcode al diseñar la interfaz de usuario:
+El `FromName` carga el archivo de guion gráfico con el nombre especificado que se ha incluido en el paquete de la aplicación. El `InstantiateControllerWithIdentifier` crea una instancia del controlador de vista con la identidad especificada. La identidad se establece en el Interface Builder de Xcode al diseñar la interfaz de usuario:
 
-[![Establecer el identificador de guión gráfico](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
+[![establecer el identificador de guión gráfico](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
-Opcionalmente, puede usar el `InstantiateInitialController` método para cargar el controlador de vista al que se ha asignado el controlador inicial en Interface Builder:
+Opcionalmente, puede usar el método `InstantiateInitialController` para cargar el controlador de vista al que se ha asignado el controlador inicial en Interface Builder:
 
-[![Establecimiento del controlador inicial](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
+[![establecer el controlador inicial](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
 
 Está marcado por el **punto de entrada del guión gráfico** y por la flecha de apertura finalizada.
 
@@ -59,16 +59,16 @@ Los controladores de vista definen las relaciones entre una vista determinada de
 
 ### <a name="the-view-controller-lifecycle"></a>Ciclo de vida del controlador de vista
 
-Se han agregado varios métodos nuevos a la `NSViewController` clase para admitir guiones gráficos en MacOS. Lo más importante es que los métodos siguientes usen para responder al ciclo de vida de la vista que controla el controlador de vista dado:
+Se han agregado varios métodos nuevos a la clase `NSViewController` para admitir guiones gráficos en macOS. Lo más importante es que los métodos siguientes usen para responder al ciclo de vida de la vista que controla el controlador de vista dado:
 
-- `ViewDidLoad`: Se llama a este método cuando la vista se carga desde el archivo de guion gráfico.
-- `ViewWillAppear`: Se llama a este método justo antes de que la vista se muestre en la pantalla.
-- `ViewDidAppear`: Este método se llama directamente después de que la vista se muestre en la pantalla.
-- `ViewWillDisappear`: Se llama a este método justo antes de que se quite la vista de la pantalla.
-- `ViewDidDisappear`: Este método se llama directamente después de quitar la vista de la pantalla.
-- `UpdateViewConstraints`: Se llama a este método cuando es necesario actualizar las restricciones que definen una posición y tamaño de diseño automático de la vista.
-- `ViewWillLayout`: Se llama a este método justo antes de que las subvistas de esta vista se colocan en la pantalla.
-- `ViewDidLayout`: Este método se llama directamente después de que las subvistas de la vista se colocan en la pantalla.
+- `ViewDidLoad`: se llama a este método cuando la vista se carga desde el archivo de guion gráfico.
+- `ViewWillAppear`: se llama a este método justo antes de que la vista se muestre en la pantalla.
+- `ViewDidAppear`: este método se llama directamente después de que la vista se muestre en la pantalla.
+- `ViewWillDisappear`: se llama a este método justo antes de que se quite la vista de la pantalla.
+- `ViewDidDisappear`: este método se llama directamente después de que la vista se haya quitado de la pantalla.
+- `UpdateViewConstraints`: se llama a este método cuando es necesario actualizar las restricciones que definen una posición y tamaño de diseño automático de la vista.
+- `ViewWillLayout`: se llama a este método justo antes de que las subvistas de esta vista se colocan en la pantalla.
+- `ViewDidLayout`: este método se llama directamente después de que las subvistas de la vista se colocan en la pantalla.
 
 <a name="The-Responder-Chain" />
 
@@ -76,7 +76,7 @@ Se han agregado varios métodos nuevos a la `NSViewController` clase para admiti
 
 Además, `NSViewControllers` ahora forman parte de la cadena de _respuesta_de la ventana:
 
-[![Cadena del respondedor](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
+[![la cadena de respuesta](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
 Y, por tanto, están conectados para recibir y responder a eventos como cortar, copiar y pegar selecciones de elementos de menú. Esta conexión de controlador de vista automática solo se produce en aplicaciones que se ejecutan en macOS Sierra (10,12) y versiones posteriores.
 
@@ -86,13 +86,13 @@ Y, por tanto, están conectados para recibir y responder a eventos como cortar, 
 
 En guiones gráficos, los controladores de vista (como el controlador de vista en dos paneles y el controlador de vista de pestaña) ahora pueden implementar la _contención_, de modo que pueden "contener" otros controladores de subvista:
 
-[![Ejemplo de contención de controlador de vista](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
+[![un ejemplo de la contención del controlador de vista](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 
 Los controladores de vista secundarios contienen métodos y propiedades para volver a enlazarlos al controlador de vista primario y trabajar con la visualización y eliminación de vistas de la pantalla.
 
 Todos los controladores de vista de contenedor integrados en macOS tienen un diseño específico que Apple sugiere que siga si crea sus propios controladores de vista de contenedor personalizados:
 
-[![Diseño del controlador de vista](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
+[![el diseño del controlador de vista](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
 
 El controlador de vista de colección contiene una matriz de elementos de la vista de colección, cada uno de los cuales contiene uno o varios controladores de vista que contienen sus propias vistas.
 
@@ -116,13 +116,13 @@ En función de la contención de las tendencias de macOS, hay situaciones en las
 - **Elemento flotante** : presenta el destino de segue como en una ventana de elemento flotante. Por ejemplo, use este tipo segue para presentar opciones cuando el usuario hace clic en un elemento de la interfaz de usuario.
 - **Personalizado** : presenta el destino de segue con un tipo segue personalizado definido por el desarrollador. Para obtener más información, consulte la sección creación de un [objetos segue personalizado](#Creating-Custom-Segues) .
 
-Al usar la presentación objetos segue, puede invalidar `PrepareForSegue` el método del controlador de vista primario para la presentación a fin de inicializar las variables y y proporcionar los datos al controlador de vistas que se está presentando.
+Al usar la presentación objetos segue, puede invalidar el método `PrepareForSegue` del controlador de vista primario para la presentación a fin de inicializar las variables y y proporcionar los datos al controlador de vistas que se está presentando.
 
 <a name="Triggered-Segues" />
 
 ### <a name="triggered-segues"></a>Objetos segue desencadenado
 
-Los objetos segue desencadenados permiten especificar objetos segue con nombre (a través de su propiedad de **identificador** en Interface Builder) y desactivarlos mediante eventos como el usuario que hace clic en un botón o `PerformSegue` llamando al método en el código:
+Los objetos segue desencadenados permiten especificar objetos segue con nombre (a través de su propiedad de **identificador** en Interface Builder) y desactivarlos mediante eventos como el usuario que hace clic en un botón o llamando al método `PerformSegue` en el código:
 
 ```csharp
 // Display the Scene defined by the given Segue ID
@@ -131,9 +131,9 @@ PerformSegue("MyNamedSegue", this);
 
 El identificador de segue se define dentro del Interface Builder de Xcode al diseñar la interfaz de usuario de la aplicación:
 
-[![Escribir un nombre de segue](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
+[![escribir un nombre de segue](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
 
-En el controlador de vista que actúa como el origen de segue, debe invalidar el `PrepareForSegue` método y realizar cualquier inicialización necesaria antes de que se ejecute segue y se muestre el controlador de vista especificado:
+En el controlador de vista que actúa como el origen de segue, debe invalidar el método `PrepareForSegue` y realizar cualquier inicialización necesaria antes de que se ejecute segue y se muestre el controlador de vista especificado:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Opcionalmente, puede invalidar el `ShouldPerformSegue` método y controlar si el segue se ejecuta realmente a través C# del código. En el caso de los controladores de vista `DismissController` presentados manualmente, llame a su método para quitarlos de la pantalla cuando ya no se necesiten.
+Opcionalmente, puede invalidar el método `ShouldPerformSegue` y controlar si el segue se ejecuta realmente o no mediante C# código. En el caso de los controladores de vista presentados manualmente, llame a su método `DismissController` para quitarlos de la pantalla cuando ya no se necesiten.
 
 <a name="Creating-Custom-Segues" />
 
@@ -208,14 +208,14 @@ namespace OnCardMac
 
 Hay un par de cosas que debe tener en cuenta aquí:
 
-- Estamos usando el `Register` atributo para exponer esta clase a Objective-C/MacOS.
-- Estamos invalidando el `Perform` método para realizar realmente la acción de nuestro segue personalizado.
-- Estamos reemplazando el controlador de `ContentViewController` la ventana por el que se define en el destino (destino) de segue.
-- Estamos quitando el controlador de vista original para liberar memoria mediante el `RemoveFromParentViewController` método.
+- Usamos el atributo `Register` para exponer esta clase a Objective-C/macOS.
+- Estamos invalidando el método `Perform` para realizar realmente la acción de nuestro segue personalizado.
+- Estamos reemplazando el controlador de `ContentViewController` de la ventana por el que se define en el destino (destino) de segue.
+- Estamos quitando el controlador de vista original para liberar memoria mediante el método `RemoveFromParentViewController`.
 
-Para usar este nuevo tipo de segue en la Interface Builder de Xcode, debemos compilar primero la aplicación, luego cambiar a Xcode y agregar un nuevo segue entre dos escenas. Establezca el **estilo** en **Custom** y la **clase segue** en `ReplaceViewSegue` (el nombre de nuestra clase segue personalizada):
+Para usar este nuevo tipo de segue en la Interface Builder de Xcode, debemos compilar primero la aplicación, luego cambiar a Xcode y agregar un nuevo segue entre dos escenas. Establezca el **estilo** en **Custom** y la **clase segue** en `ReplaceViewSegue` (el nombre de la clase segue personalizada):
 
-[![Establecimiento de la clase segue](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
+[![establecer la clase segue](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -224,10 +224,10 @@ Para usar este nuevo tipo de segue en la Interface Builder de Xcode, debemos com
 Los controladores de ventanas contienen y controlan los distintos tipos de ventana que puede crear la aplicación macOS. En el caso de los guiones gráficos, tienen las siguientes características:
 
 1. Deben proporcionar un controlador de vista de contenido. Este será el mismo controlador de vista de contenido que tiene la ventana secundaria.
-2. La `Storyboard` propiedad contendrá el guión gráfico desde el que se cargó el controlador de `null` ventana; de lo contrario, si no se carga desde un guion gráfico.
-3. Puede llamar `DismissController` al método para cerrar la ventana especificada y quitarla de la vista.
+2. La propiedad `Storyboard` contendrá el guión gráfico desde el que se cargó el controlador de ventana, de lo contrario `null` si no se carga desde un guion gráfico.
+3. Puede llamar al método `DismissController` para cerrar la ventana especificada y quitarla de la vista.
 
-Al igual que los controladores de vista, `PerformSegue`los `PrepareForSegue` controladores de `ShouldPerformSegue` ventanas implementan los métodos, y, y se pueden usar como origen de una operación segue.
+Al igual que los controladores de vista, los controladores de ventanas implementan los métodos `PerformSegue`, `PrepareForSegue` y `ShouldPerformSegue` y se pueden usar como origen de una operación segue.
 
 El controlador de ventana es responsable de las siguientes características de una aplicación macOS:
 
@@ -245,15 +245,15 @@ Sin embargo, si los gestos de iOS están determinados por el diseño de la aplic
 
 Mediante el uso de reconocedores de gestos, puede reducir considerablemente la cantidad de código necesario para agregar interacciones personalizadas a un elemento en la interfaz de usuario. Como pueden determinar automáticamente entre dos clics dobles y únicos, hacer clic y arrastrar eventos, etc.
 
-En lugar de reemplazar el `MouseDown` evento en el controlador de vista, debe usar un reconocedor de gestos para controlar el evento de entrada del usuario al trabajar con guiones gráficos.
+En lugar de reemplazar el evento de `MouseDown` en el controlador de vista, debe usar un reconocedor de gestos para controlar el evento de entrada del usuario al trabajar con guiones gráficos.
 
 Los siguientes reconocedores de gestos están disponibles en macOS:
 
-- `NSClickGestureRecognizer`-Registra eventos de presionar y bajar del mouse.
-- `NSPanGestureRecognizer`-Registra los eventos de presionar el botón del mouse, arrastrar y soltar.
-- `NSPressGestureRecognizer`: Registra la acción de mantener presionado el botón del mouse durante un período de tiempo determinado.
-- `NSMagnificationGestureRecognizer`: Registra un evento de ampliación del hardware del dispositivo de registro.
-- `NSRotationGestureRecognizer`: Registra un evento de rotación del hardware de paneles de registro.
+- `NSClickGestureRecognizer`: registrar eventos de presionar y bajar el mouse.
+- `NSPanGestureRecognizer`: registra los eventos de presionar el botón del mouse, arrastrar y soltar.
+- `NSPressGestureRecognizer`: registra que mantiene presionado un botón del mouse durante un período de tiempo determinado.
+- `NSMagnificationGestureRecognizer`: registra un evento de ampliación del hardware del mismo.
+- `NSRotationGestureRecognizer`: registra un evento de rotación del hardware del mismo.
 
 <a name="Using-Storyboard-References" />
 
@@ -269,23 +269,23 @@ Además, una referencia de guion gráfico puede proporcionar un _delimitador_ a 
 
 Para agregar una referencia a un guion gráfico externo, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo..** . Guion gráfico de **Mac** > .  >  Escriba un **nombre** para el nuevo guion gráfico y haga clic en el botón **nuevo** : 
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo...**  > un **guion gráfico**de > **Mac** . Escriba un **nombre** para el nuevo guion gráfico y haga clic en el botón **nuevo** : 
 
-    [![Agregar un nuevo guion gráfico](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
+    [![agregar un nuevo guion gráfico](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
 2. En el **Explorador de soluciones**, haga doble clic en el nombre del nuevo guion gráfico para abrirlo para su edición en el Interface Builder de Xcode.
 3. Diseñe el diseño de las escenas del nuevo guión gráfico como lo haría normalmente y guarde los cambios: 
 
-    [![Diseñar la interfaz](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
+    [![diseño de la interfaz](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
 4. Cambie al guion gráfico al que va a agregar la referencia en el Interface Builder.
 5. Arrastre una **referencia de guion gráfico** desde la **biblioteca de objetos** hasta el superficie de diseño: 
 
-    [![Seleccionar una referencia de guion gráfico en la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![seleccionar una referencia de guion gráfico en la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. En el **Inspector de atributos**, seleccione el nombre del **guion gráfico** que creó anteriormente: 
 
-    [![Configuración de la referencia](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
+    [![configuración de la referencia](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
 7. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear.  En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![Establecimiento del tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![establecer el tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guion gráfico.
 9. Vuelva a Visual Studio para Mac para sincronizar los cambios.
 
@@ -300,20 +300,20 @@ Para agregar una referencia a una escena específica, un guion gráfico externo 
 1. En el **Explorador de soluciones**, haga doble clic en el guion gráfico externo para abrirlo para su edición en el Interface Builder de Xcode.
 2. Agregue una nueva escena y diseñe su diseño como lo haría normalmente: 
 
-    [![Diseñar el diseño en Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
+    [![diseño del diseño en Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la nueva escena: 
 
-    [![Establecer el identificador de guión gráfico](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
+    [![establecer el identificador de guión gráfico](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Abra el guion gráfico al que va a agregar la referencia en Interface Builder.
 5. Arrastre una **referencia de guion gráfico** desde la **biblioteca de objetos** hasta el superficie de diseño: 
 
-    [![Seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. En el **Inspector de identidad**, seleccione el nombre del **guión gráfico** y el **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![Establecimiento del identificador de referencia](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
+    [![establecer el identificador de referencia](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![Establecimiento del tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![establecer el tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guion gráfico.
 9. Vuelva a Visual Studio para Mac para sincronizar los cambios.
 
@@ -328,19 +328,19 @@ Para agregar una referencia a una escena específica del mismo guión gráfico, 
 1. En el **Explorador de soluciones**, haga doble clic en el guion gráfico para abrirlo para su edición.
 2. Agregue una nueva escena y diseñe su diseño como lo haría normalmente: 
 
-    [![Editar el guion gráfico en Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
+    [![editar el guion gráfico en Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la nueva escena: 
 
-    [![Establecer el identificador de guión gráfico](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
+    [![establecer el identificador de guión gráfico](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Arrastre una **referencia de guion gráfico** desde el **cuadro de herramientas** hasta el superficie de diseño: 
 
-    [![Seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. En **Inspector de atributos**, seleccione **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![Establecimiento del identificador de referencia](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
+    [![establecer el identificador de referencia](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
-    [![Seleccionar el tipo de segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![seleccionar el tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 7. Guarde los cambios en el guion gráfico.
 8. Vuelva a Visual Studio para Mac para sincronizar los cambios.
 

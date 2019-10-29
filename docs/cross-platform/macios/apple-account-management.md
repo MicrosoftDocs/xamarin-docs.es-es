@@ -3,15 +3,15 @@ title: Administración de cuentas Apple
 description: En este documento se describe cómo usar las características de administración de cuentas de Apple en Visual Studio para Mac y Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766119"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016344"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas Apple
 
@@ -39,7 +39,7 @@ Para usar esta característica, debe tener una cuenta de desarrollador de Apple.
 
 - Asegúrese de que está conectado a Internet. Esto se debe a que Fastlane se comunica directamente con el portal para desarrolladores de Apple.
 - Asegúrese de que tiene [las herramientas de Fastlane instaladas](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Asegúrese de que tiene las herramientas de Fastlane [https://download.fastlane.tools](https://download.fastlane.tools)más recientes de.
+- Asegúrese de que tiene las herramientas de Fastlane más recientes de [https://download.fastlane.tools](https://download.fastlane.tools).
 - Antes de empezar, asegúrese de aceptar los contratos de licencia de usuario en el [portal para desarrolladores](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Agregar una cuenta de desarrollador de Apple
@@ -50,7 +50,7 @@ Para usar esta característica, debe tener una cuenta de desarrollador de Apple.
 
     ![Opciones de la cuenta de desarrollador de Apple](apple-account-management-images/image1.png)
 
-2. Presione el **+** botón para mostrar el cuadro de diálogo de inicio de sesión, como se muestra a continuación: 
+2. Presione el botón **+** para mostrar el cuadro de diálogo de inicio de sesión, como se muestra a continuación: 
 
     ![cuadro de diálogo Fastlane.](apple-account-management-images/image2.png)
 
@@ -132,7 +132,7 @@ En el cuadro de diálogo Detalles del equipo también se muestra una lista de to
 
 -----
 
-## <a name="ios-bundle-signing"></a>iOS Bundle Signing
+## <a name="ios-bundle-signing"></a>Firma de lote de iOS
 
 Para obtener información sobre la implementación de la aplicación en un dispositivo, consulte la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
 
@@ -144,7 +144,7 @@ Este es actualmente un problema conocido relacionado con el [#53906](https://bug
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Si tiene problemas para iniciar sesión en su cuenta, intente lo siguiente:
 
-- Abra la aplicación de cadena de claves y, en categoría, seleccione *contraseñas*. `deliver.`Busque y elimine todas las entradas.
+- Abra la aplicación de cadena de claves y, en categoría, seleccione *contraseñas*. Busque `deliver.`y elimine todas las entradas.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Error al agregar la cuenta. Inicie sesión con una contraseña específica de la aplicación "
 

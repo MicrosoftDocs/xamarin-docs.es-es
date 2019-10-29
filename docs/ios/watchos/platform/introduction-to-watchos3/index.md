@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: b167ddca86148818c534b7a9b0e338f8a4406b15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5ff315270646389d67b505eef04c1aa11d0029c1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767764"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028263"
 ---
 # <a name="introduction-to-watchos-3"></a>Introducción a watchOS 3
 
@@ -102,7 +102,7 @@ watchos 3 incluye varios marcos existentes de Apple que antes no estaban disponi
 
 ## <a name="proactive-suggestions"></a>Sugerencias proactivas
 
-watchos 3 permite que la aplicación presente de forma proactiva información al usuario en contextos determinados. Para admitir esta característica, [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) ahora incluye la `MapItem` propiedad que permite que la aplicación proporcione información de ubicación para su uso posterior por parte de otras aplicaciones.
+watchos 3 permite que la aplicación presente de forma proactiva información al usuario en contextos determinados. Para admitir esta característica, [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) ahora incluye la propiedad `MapItem` que permite que la aplicación proporcione información de ubicación para su uso posterior por parte de otras aplicaciones.
 
 Para obtener más información, consulte la guía [de introducción a las sugerencias proactivas](~/ios/watchos/platform/proactive-suggestions.md) .
 
@@ -112,7 +112,7 @@ Para obtener más información, consulte la guía [de introducción a las sugere
 
 Apple ha realizado varias mejoras en la seguridad y la privacidad en watchos 3 que le ayudarán a los desarrolladores a mejorar la seguridad de sus aplicaciones y a garantizar la privacidad del usuario final.
 
-Como resultado, las aplicaciones que se ejecutan en watchos 3 (o posterior) deben declarar estáticamente su intención de acceder a características específicas o información de usuario especificando una o más `Info.plist` claves específicas de la privacidad en sus archivos que expliquen al usuario por qué la aplicación quiere obtener acceso.
+Como resultado, las aplicaciones que se ejecutan en watchos 3 (o posterior) deben declarar de forma estática su intención de acceder a características específicas o a información de usuario especificando una o varias claves específicas de la privacidad en sus archivos `Info.plist` que expliquen al usuario por qué la aplicación quiere obtener acceso.
 
 Como watchos 3 comparte estos cambios con iOS 10, consulte nuestra guía de [mejoras de seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md) de iOS 10 para obtener más información.
 
@@ -138,7 +138,7 @@ Para obtener más información, consulte nuestra guía [de técnicas de interacc
 
 ## <a name="watch-connectivity-framework-enhancements"></a>Vea las mejoras del marco de conectividad
 
-La nueva `HasContentPending` propiedad de la clase [WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) indica que la sesión ha recibido datos en segundo plano que deben procesarse. Y la `RemainingComplicationUserInfoTransfers` propiedad devuelve las horas restantes en las que la aplicación iOS puede actualizar su complicación de watchos.
+La nueva propiedad `HasContentPending` de la clase [WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) indica que la sesión ha recibido datos en segundo plano que deben procesarse. Y la propiedad `RemainingComplicationUserInfoTransfers` devuelve las horas restantes en las que la aplicación iOS puede actualizar su complicación de watchos.
 
 Para obtener más información, consulte nuestra guía de [tareas en segundo plano](~/ios/watchos/platform/background-tasks.md) .
 
@@ -149,9 +149,9 @@ Para obtener más información, consulte nuestra guía de [tareas en segundo pla
 watchos 3 incluye varias mejoras en el marco de trabajo de WatchKit, entre las que se incluyen las siguientes:
 
 - La aplicación puede obtener el estado de la Digital Crown con la nueva clase [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) y recibir actualizaciones cuando el usuario gira la corona con la clase [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) .
-- La clase [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) ahora incluye el `ApplicationState` método y la constante [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) que la aplicación puede usar para realizar un seguimiento del estado de tiempo de ejecución de la aplicación. `WKExtension`también proporciona dos nuevos métodos que se pueden usar para programar tareas en segundo plano.
-- Ahora, [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) incluye los nuevos `ApplicationWillEnterForeground`métodos `ApplicationDidEnterBackground` , `HandleBackgroundTasks` y para supervisar los cambios en el estado de la aplicación y controlar las actualizaciones de las tareas en segundo plano.
-- Se ha agregado una nueva clase [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) para proporcionar los siguientes tipos de reconocimiento de gestos a las aplicaciones de inspección: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) y [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- La clase [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) ahora incluye el método `ApplicationState` y la constante [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) que la aplicación puede usar para realizar un seguimiento del estado de tiempo de ejecución de la aplicación. `WKExtension` también proporciona dos nuevos métodos que se pueden usar para programar tareas en segundo plano.
+- Ahora, [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) incluye los nuevos métodos `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` y `HandleBackgroundTasks` para supervisar los cambios en el estado de la aplicación y controlar las actualizaciones de las tareas en segundo plano.
+- Se ha agregado una nueva clase [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) para proporcionar los siguientes tipos de reconocimiento de gestos a las aplicaciones de inspección: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) y [ WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - La nueva clase [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) proporciona una interfaz para cualquier cámara IP asociada a HomeKit.
 - La nueva clase [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) permite a la aplicación mostrar una película "póster" que se reemplaza por la película en ejecución cuando el usuario la puntea.
 - La nueva clase [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) permite a la aplicación presentar un botón Apple Pay en su interfaz de usuario que iniciará una solicitud de pago cuando se Puntee.
@@ -164,7 +164,7 @@ Para obtener más información, consulte nuestra guía [de técnicas de interacc
 
 ## <a name="workout-app-enhancements"></a>Mejoras de la aplicación Workout
 
-Novedad de watchos 3, las aplicaciones relacionadas con el entrenamiento tienen la capacidad de ejecutarse en segundo plano en el Apple Watch. Para habilitar esta característica (y obtener acceso a los datos de HealthKit), la aplicación debe `WKBackgroundModes` incluir la clave `Info.plist` en el archivo con `workout-processing`el valor.
+Novedad de watchos 3, las aplicaciones relacionadas con el entrenamiento tienen la capacidad de ejecutarse en segundo plano en el Apple Watch. Para habilitar esta característica (y obtener acceso a los datos de HealthKit), la aplicación debe incluir la clave de `WKBackgroundModes` en el archivo de `Info.plist` con el valor `workout-processing`.
 
 Además, ahora el desarrollador tiene la capacidad de iniciar la aplicación de entrenamiento de watchos desde la versión de la aplicación iOS en el iPhone emparejado.
 
@@ -184,7 +184,7 @@ Para obtener más información, consulte nuestra guía [adicional de cambios](~/
 
 Las siguientes API están en desuso en watchos 3:
 
-- La `UILocalNotification` clase de UIKit está en desuso y debe reemplazarse por el marco de trabajo de notificaciones del usuario.
+- La clase de `UILocalNotification` de UIKit ha quedado en desuso y debe reemplazarse por el marco de trabajo de notificaciones del usuario.
 
 Consulte la documentación de las diferencias de API de los monitores de Apple [2,2 a watchos 3,0](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) para obtener una lista completa de los desuso y los cambios.
 

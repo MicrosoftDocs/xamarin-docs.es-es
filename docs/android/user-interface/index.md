@@ -4,15 +4,15 @@ description: Creación de interfaces de usuario para aplicaciones de Xamarin. An
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 405fb0e30881ee64514d3984842ac820d5663382
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a881629c63ea2991b8ea4673811311076fcaabe9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764483"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028996"
 ---
 # <a name="user-interface"></a>Interfaz de usuario
 
@@ -37,7 +37,7 @@ Una aplicación Android tarda algún tiempo en iniciarse, sobre todo cuando la a
 ## <a name="layoutsandroiduser-interfacelayoutsindexmd"></a>[Diseños](~/android/user-interface/layouts/index.md)
 
 Los diseños se utilizan para definir la estructura visual de una interfaz de usuario.
-Los diseños como `ListView` y `RecyclerView` son los bloques de creación más fundamentales de las aplicaciones de Android. Normalmente, un diseño usará un `Adapter` para actuar como un puente del diseño a los datos subyacentes que se usan para rellenar los elementos de datos en el diseño. En esta sección se `LinearLayout`explica cómo usar diseños como `TableLayout`, `RelativeLayout`,, `RecyclerView`y `GridView`.
+Los diseños como `ListView` y `RecyclerView` son los bloques de creación más fundamentales de las aplicaciones de Android. Normalmente, un diseño usará un `Adapter` para actuar como un puente del diseño a los datos subyacentes que se usan para rellenar los elementos de datos en el diseño. En esta sección se explica cómo usar diseños como `LinearLayout`, `RelativeLayout`, `TableLayout`, `RecyclerView`y `GridView`.
 
 ## <a name="controlsandroiduser-interfacecontrolsindexmd"></a>[Controles](~/android/user-interface/controls/index.md)
 

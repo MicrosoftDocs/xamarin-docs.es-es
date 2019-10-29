@@ -3,15 +3,15 @@ title: 'Parte 6: Pruebas y aprobaciones de App Store'
 description: En este documento se describe cómo probar una aplicación multiplataforma en el dispositivo, administrar casos de prueba, automatizar pruebas, ejecutar pruebas unitarias y trabajar a través del proceso de envío de la aplicación.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198423"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016852"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
@@ -58,7 +58,7 @@ Consulte la documentación sobre las [pruebas unitarias con Xamarin. iOS](~/ios/
 
 ### <a name="andrunit"></a>Andr. unidad
 
-Hay un equivalente de código abierto de Touch. Unit para Android llamado Andr. Unit. Puede descargarlo de [GitHub](https://github.com/spouliot/Andr.Unit) y obtener información sobre la herramienta en [ @spouliotel blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)de.
+Hay un equivalente de código abierto de Touch. Unit para Android llamado Andr. Unit. Puede descargarlo desde [GitHub](https://github.com/spouliot/Andr.Unit) y obtener información sobre la herramienta en el [blog de@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## <a name="app-store-approvals"></a>Aprobaciones de App Store
 
@@ -129,7 +129,7 @@ Además de los problemas técnicos obvios que pueden dar lugar a la rechazo de u
 
 Ponga todo el esfuerzo en los metadatos de la aplicación en el desarrollo y las pruebas. Las aplicaciones se rechazan por infracciones menores en los metadatos, por lo que merece la pena dedicar tiempo a conseguirlo.
 
-### <a name="app-stores-not-for-everyone"></a>Tiendas de aplicaciones: No para todos
+### <a name="app-stores-not-for-everyone"></a>Tiendas de aplicaciones: no para todos
 
 El objetivo principal de los almacenes en cada plataforma es la distribución del consumidor: la capacidad de llegar a tantos clientes como sea posible. Sin embargo, no todas las aplicaciones están destinadas a los consumidores, existe una base de aplicaciones de redes internas y de tipo extranet que requiere una distribución limitada a los empleados, proveedores o clientes. Estas aplicaciones no son "para venta" y no necesitan aprobación, ya que el desarrollador controla la distribución a un grupo cerrado de usuarios.
 La compatibilidad con este tipo de implementación varía según la plataforma.

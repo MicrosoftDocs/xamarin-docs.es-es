@@ -4,15 +4,15 @@ description: En este documento se describe cómo Xamarin. iOS genera código par
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 778b8eeb82ebfb62cfb8c16e14f341c9afb8ff7a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768486"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022252"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generación de código. Xib en Xamarin. iOS
 
@@ -33,7 +33,7 @@ Las clases personalizadas se pueden definir en un archivo **. Xib** mediante el 
 
 ## <a name="generating-code"></a>Generar código
 
-Para cualquier  **{0}archivo. Xib** con una acción de compilación de la *Página*, si también existe un  **{0}archivo. Xib.Designer.CS** en el proyecto, Visual Studio para Mac generará clases parciales en el archivo de diseñador para todas las clases de usuario que puede encontrar en el archivo **. Xib** , con las propiedades de las salidas y métodos parciales para todas las acciones. La generación de código se habilita simplemente por la presencia de este archivo.
+En el caso de cualquier archivo **{0}. Xib** con una acción de compilación de la *Página*, si un archivo **{0}. Xib.Designer.CS** también existe en el proyecto, Visual Studio para Mac generará clases parciales en el archivo del diseñador para todas las clases de usuario que puede encontrar en el archivo **. Xib** , con las propiedades de las salidas y métodos parciales para todas las acciones. La generación de código se habilita simplemente por la presencia de este archivo.
 
 El archivo del diseñador se actualiza automáticamente cuando cambia el archivo **. Xib** y Visual Studio para Mac vuelve a obtener el foco. El archivo del diseñador no debe modificarse manualmente, ya que los cambios se sobrescribirán la próxima vez que Visual Studio para Mac actualice el archivo.
 
@@ -41,7 +41,7 @@ El archivo del diseñador se actualiza automáticamente cuando cambia el archivo
 
 Visual Studio para Mac genera las clases de diseñador mediante el espacio de nombres predeterminado del proyecto para la ubicación del archivo de diseñador, para que sea coherente con la namespacing normal del proyecto .NET. El espacio de nombres de los archivos del diseñador está controlado por el "espacio de nombres predeterminado" del proyecto y sus opciones de "directivas de nomenclatura de .NET". Tenga cuidado de que si cambia el espacio de nombres predeterminado del proyecto, MD volverá a generar las clases en el nuevo espacio de nombres, por lo que es posible que las clases parciales ya no coincidan.
 
-Para hacer que la clase sea reconocible por el tiempo de ejecución de Objective-C, `[Register (name)]` Visual Studio para Mac aplica un atributo a la clase. Aunque Xamarin. iOS registra `NSObject`automáticamente las clases derivadas de, usa los nombres completos de .net. El atributo aplicado por Visual Studio para Mac invalida esto para asegurarse de que cada clase se registra con el nombre usado en el archivo **. Xib** . Si usa clases personalizadas en IB sin usar Visual Studio para Mac para generar archivos de diseñador, puede que tenga que aplicar esto manualmente para que las clases administradas coincidan con los nombres de clase de Objective-C esperados.
+Para hacer que la clase sea reconocible por el tiempo de ejecución de Objective-C, Visual Studio para Mac aplica un atributo de `[Register (name)]` a la clase. Aunque Xamarin. iOS registra automáticamente las clases derivadas de `NSObject`, utiliza los nombres de .NET completos. El atributo aplicado por Visual Studio para Mac invalida esto para asegurarse de que cada clase se registra con el nombre usado en el archivo **. Xib** . Si usa clases personalizadas en IB sin usar Visual Studio para Mac para generar archivos de diseñador, puede que tenga que aplicar esto manualmente para que las clases administradas coincidan con los nombres de clase de Objective-C esperados.
 
 Las clases no se pueden definir en más de un **. Xib**o entrarán en conflicto.
 
@@ -51,7 +51,7 @@ Las clases parciales de diseñador no están diseñadas para usarse tal cual. La
 
 La razón de esto es la necesidad de flexibilidad. Por ejemplo, varias clases de código subyacente podrían subclaser una clase abstracta administrada común, que subclase la clase a la que se va a crear una subclase de IB.
 
-Es convencional colocarlos en un  **{0}archivo. Xib.CS** junto al archivo de  **{0}diseñador. Xib.Designer.CS** .
+Es convencional colocarlos en un archivo **{0}. Xib.CS** junto al archivo de diseñador **{0}. Xib.Designer.CS** .
 
 <a name="generated" />
 
@@ -63,19 +63,19 @@ En las clases de diseñador parciales, Visual Studio para Mac genera propiedades
 
 Las clases de diseñador contienen propiedades correspondientes a todas las salidas definidas en la clase personalizada. El hecho de que estas son propiedades es un detalle de implementación del puente Xamarin. iOS a Objective C para habilitar el enlace diferido. Debe considerarlos equivalentes a los campos privados, pensados para usarse únicamente desde la clase CodeBehind. Si desea que sean públicos, agregue propiedades de descriptor de acceso a la parte de clase que no sea de diseñador, como haría con cualquier otro campo privado.
 
-Si las propiedades de la toma se definen para tener `id` un tipo de `NSObject`(equivalente a), el generador de código del diseñador determina actualmente el tipo más fuerte posible basado en los objetos conectados a esa salida, por comodidad.
+Si las propiedades de la toma se definen para tener un tipo de `id` (equivalente a `NSObject`), el generador de código del diseñador determina actualmente el tipo más fuerte posible basado en los objetos conectados a esa salida, por comodidad.
 Sin embargo, es posible que no se admita en versiones futuras, por lo que se recomienda que escriba explícitamente las salidas al definir la clase personalizada.
 
 ### <a name="action-properties"></a>Propiedades de acción
 
 Las clases de diseñador contienen métodos parciales correspondientes a todas las acciones definidas en la clase personalizada. Son métodos sin una implementación de. El propósito de los métodos parciales es doble:
 
-1. Si escribe `partial` en el cuerpo de clase de la parte de clase que no es de diseñador, Visual Studio para Mac ofrecerá para Autocompletar las firmas de todos los métodos parciales no implementados.
+1. Si escribe `partial` en el cuerpo de clase de la parte de clase que no es de diseñador, Visual Studio para Mac le ofrecerá la función de autocompletar las firmas de todos los métodos parciales no implementados.
 2. Las firmas de método parcial tienen un atributo aplicado que los expone en el mundo de Objective-C, por lo que se pueden administrar como la acción correspondiente.
 
 Si lo desea, puede omitir el método parcial e implementar la acción aplicando el atributo a un método diferente o dejar que pase a una clase base.
 
-Si se definen las acciones para que tengan un tipo de `id` remitente (equivalente `NSObject`a), el generador de código del diseñador determina actualmente el tipo más fuerte posible basado en los objetos conectados a esa acción. Sin embargo, es posible que no se admita en versiones futuras, por lo que se recomienda que escriba explícitamente las acciones al definir la clase personalizada.
+Si se definen las acciones para que tengan un tipo de remitente `id` (equivalente a `NSObject`), el generador de código del diseñador determina actualmente el tipo más fuerte posible basado en los objetos conectados a esa acción. Sin embargo, es posible que no se admita en versiones futuras, por lo que se recomienda que escriba explícitamente las acciones al definir la clase personalizada.
 
 Tenga en cuenta que estos métodos parciales se crean C#solo para, porque CodeDom no admite métodos parciales, por lo que no se generan para otros lenguajes.
 

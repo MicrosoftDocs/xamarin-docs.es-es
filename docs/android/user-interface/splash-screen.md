@@ -4,21 +4,21 @@ description: Una aplicación Android tarda algún tiempo en iniciarse, sobre tod
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 4633811b2c0b001ab220f5fedaf116b1b269344a
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032552"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028718"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 
-@no__t aplicación Android tarda algún tiempo en iniciarse, especialmente cuando la aplicación se inicia por primera vez en un dispositivo. Una pantalla de presentación puede mostrar el progreso de inicio al usuario o para indicar la personalización de marca. _
+_Una aplicación Android tarda algún tiempo en iniciarse, sobre todo cuando la aplicación se inicia por primera vez en un dispositivo. Una pantalla de presentación puede mostrar el progreso de inicio al usuario o para indicar la personalización de marca._
 
 ## <a name="overview"></a>Información general
 
@@ -32,7 +32,7 @@ En esta guía se describe una técnica para implementar una pantalla de presenta
 
 3. Agregar una nueva actividad a la aplicación que se usará como la pantalla de presentación definida por el tema creado en el paso anterior.
 
-[@no__t: pantalla de presentación del logotipo de Xamarin de 1Example seguida de la pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[![pantalla de presentación del logotipo de Xamarin de ejemplo seguida de la pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +67,7 @@ La aplicación de ejemplo define una dibujable denominada **splash_screen. XML**
 </layer-list>
 ```
 
-Esta `layer-list` centra la imagen de la pantalla de presentación en un color de fondo especificado por el recurso `@color/splash_background`. La aplicación de ejemplo define este color en el archivo **Resources/Values/color. XML** :
+Esta `layer-list` centra la imagen de la pantalla de presentación en un color de fondo especificado por el recurso de `@color/splash_background`. La aplicación de ejemplo define este color en el archivo **Resources/Values/color. XML** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,11 +77,11 @@ Esta `layer-list` centra la imagen de la pantalla de presentación en un color d
 </resources>
 ```
 
-Para obtener más información sobre los objetos `Drawable`, consulte la [documentación de Google en Android drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable).
+Para obtener más información sobre los objetos de `Drawable`, consulte la [documentación de Google en Android drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable).
 
 ### <a name="implementing-a-theme"></a>Implementar un tema
 
-Para crear un tema personalizado para la actividad de la pantalla de presentación, edite (o agregue) el archivo **Values/Styles. XML** y cree un nuevo elemento `style` para la pantalla de presentación. A continuación, se muestra un archivo **Values/Style. XML** de ejemplo con un `style` denominado less **. Splash**:
+Para crear un tema personalizado para la actividad de la pantalla de presentación, edite (o agregue) el archivo **Values/Styles. XML** y cree un nuevo elemento `style` para la pantalla de presentación. A continuación se muestra un archivo **Values/Style. XML** de ejemplo con un `style` denominado mis archivos **. Splash**:
 
 ```xml
 <resources>
@@ -101,7 +101,7 @@ Para crear un tema personalizado para la actividad de la pantalla de presentaci�
 </resources>
 ```
 
-Mi **. Splash** es muy Spartan &ndash; declara el fondo de la ventana, quita explícitamente la barra de título de la ventana y declara que está en pantalla completa. Si desea crear una pantalla de presentación que eMule la interfaz de usuario de la aplicación antes de que la actividad infla el primer diseño, puede usar `windowContentOverlay` en lugar de `windowBackground` en la definición de estilo. En este caso, también debe modificar **splash_screen. XML** drawable para que muestre una emulación de la interfaz de usuario.
+**. Splash** es muy Spartan &ndash; declara el fondo de la ventana, quita explícitamente la barra de título de la ventana y declara que está en pantalla completa. Si desea crear una pantalla de presentación que eMule la interfaz de usuario de la aplicación antes de que la actividad infla el primer diseño, puede usar `windowContentOverlay` en lugar de `windowBackground` en la definición de estilo. En este caso, también debe modificar **splash_screen. XML** drawable para que muestre una emulación de la interfaz de usuario.
 
 ### <a name="create-a-splash-activity"></a>Crear una actividad de presentación
 
@@ -139,9 +139,9 @@ public class SplashActivity : AppCompatActivity
 ```
 
 `SplashActivity` usa explícitamente el tema que se creó en la sección anterior, invalidando el tema predeterminado de la aplicación.
-No es necesario cargar un diseño en `OnCreate`, ya que el tema declara una función dibujable como fondo.
+No es necesario cargar un diseño en `OnCreate` como el tema declara una función dibujable como fondo.
 
-Es importante establecer el atributo `NoHistory=true` para que la actividad se quite de la pila de retroceso. Para evitar que el botón atrás cancele el proceso de inicio, también puede invalidar `OnBackPressed` y hacer que no haga nada:
+Es importante establecer el atributo de `NoHistory=true` para que la actividad se quite de la pila de retroceso. Para evitar que el botón atrás cancele el proceso de inicio, también puede invalidar `OnBackPressed` y hacer que no haga nada:
 
 ```csharp
 public override void OnBackPressed() { }
@@ -149,7 +149,7 @@ public override void OnBackPressed() { }
 
 El trabajo de inicio se realiza de forma asincrónica en `OnResume`. Esto es necesario para que el trabajo de inicio no se ralentice o retrase la apariencia de la pantalla de inicio. Una vez completado el trabajo, `SplashActivity` iniciará `MainActivity` y el usuario puede empezar a interactuar con la aplicación.
 
-Esta nueva `SplashActivity` se establece como la actividad del iniciador de la aplicación estableciendo el atributo `MainLauncher` en `true`. Dado que `SplashActivity` es ahora la actividad del iniciador, debe editar `MainActivity.cs` y quitar el atributo `MainLauncher` de `MainActivity`:
+Esta nueva `SplashActivity` se establece como la actividad del iniciador de la aplicación estableciendo el atributo `MainLauncher` en `true`. Dado que `SplashActivity` es ahora la actividad del iniciador, debe editar `MainActivity.cs`y quitar el atributo `MainLauncher` de `MainActivity`:
 
 ```csharp
 [Activity(Label = "@string/ApplicationName")]
@@ -167,7 +167,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
 
 1. En la carpeta **Resources/drawable** , agregue la versión horizontal de la imagen de la pantalla de presentación que desee usar. En este ejemplo, **splash_logo_land. png** es la versión horizontal del logotipo que se usó en los ejemplos anteriores (utiliza letras en blanco en lugar de azul).
 
-2. En la carpeta **Resources/drawable** , cree una versión horizontal del `layer-list` drawable que se definió anteriormente (por ejemplo, **splash_screen_land. XML**). En este archivo, establezca la ruta de acceso del mapa de bits en la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land. XML** usa **splash_logo_land. png**:
+2. En la carpeta **Resources/drawable** , cree una versión horizontal del `layer-list` dibujable que se definió anteriormente (por ejemplo, **splash_screen_land. XML**). En este archivo, establezca la ruta de acceso del mapa de bits en la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land. XML** usa **splash_logo_land. png**:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -188,7 +188,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
 
 4. Agregue los archivos **colors. XML** y **style. XML** a **valores-terrenos** (se pueden copiar y modificar desde los archivos **valores/colores. XML** y **valores/estilo. XML** existentes).
 
-5. Modifique **Values-Land/Style. XML** para que use la versión horizontal del objeto drawable para `windowBackground`. En este ejemplo, se usa **splash_screen_land. XML** :
+5. Modifique **Values-Land/Style. XML** para que use la versión horizontal de drawable para `windowBackground`. En este ejemplo, se usa **splash_screen_land. XML** :
 
     ```xml
     <resources>
@@ -221,7 +221,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
 
 7. Vuelva a compilar y ejecutar la aplicación. Gire el dispositivo al modo horizontal mientras se sigue mostrando la pantalla de presentación. La pantalla de presentación cambia a la versión horizontal:
 
-    [@no__t: 1Rotation de la pantalla de presentación en modo horizontal](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [![rotación de la pantalla de presentación en modo horizontal](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 Tenga en cuenta que el uso de una pantalla de presentación en modo horizontal no siempre proporciona una experiencia sin problemas. De forma predeterminada, Android inicia la aplicación en modo vertical y la cambia al modo horizontal, incluso si el dispositivo ya está en modo horizontal. Como resultado, si la aplicación se inicia mientras el dispositivo está en modo horizontal, el dispositivo presenta brevemente la pantalla de presentación vertical y, a continuación, anima el giro desde el vertical hasta la pantalla de presentación horizontal. Desafortunadamente, esta transición inicial vertical a horizontal tiene lugar incluso cuando se especifica `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` en las marcas de la actividad de presentación. La mejor manera de solucionar esta limitación es crear una única imagen de pantalla de presentación que se represente correctamente en los modos vertical y horizontal.
 

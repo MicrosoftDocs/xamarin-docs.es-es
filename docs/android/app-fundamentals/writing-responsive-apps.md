@@ -3,15 +3,15 @@ title: Escribir aplicaciones con capacidad de respuesta
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: e3f7d788e71718f4ca1336b7906cf3d63bf07f32
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1900a4fc42778db07e78c41bbc0acfafbd594cdf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509197"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024194"
 ---
 # <a name="writing-responsive-applications"></a>Escribir aplicaciones con capacidad de respuesta
 

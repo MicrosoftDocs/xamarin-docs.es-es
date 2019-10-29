@@ -4,15 +4,15 @@ description: Hemos tratado la teoría detrás de guardar el estado en la guía d
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: febb9b297712a97c03613468b79ca583ec300e77
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e449e6a62d0c8ca283f20c689477c1f1482611c5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887723"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017001"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Tutorial: guardado del estado de actividad
 
@@ -20,9 +20,9 @@ _Hemos tratado la teoría detrás de guardar el estado en la guía del ciclo de 
 
 ## <a name="activity-state-walkthrough"></a>Tutorial de estado de actividad
 
-Vamos a abrir el proyecto **ActivityLifecycle_Start** (en el ejemplo [ActivityLifecycle](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) ), compilarlo y ejecutarlo. Se trata de un proyecto muy sencillo que tiene dos actividades para demostrar el ciclo de vida de la actividad y cómo se llama a los distintos métodos del ciclo de vida. Al iniciar la aplicación, se muestra la pantalla `MainActivity` de:
+Vamos a abrir el proyecto **ActivityLifecycle_Start** (en el ejemplo [ActivityLifecycle](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) ), compilarlo y ejecutarlo. Se trata de un proyecto muy sencillo que tiene dos actividades para demostrar el ciclo de vida de la actividad y cómo se llama a los distintos métodos del ciclo de vida. Al iniciar la aplicación, se muestra la pantalla de `MainActivity`:
 
-[![Actividad de una pantalla](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
+[![actividad de una pantalla](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Ver transiciones de estado
 
@@ -48,7 +48,7 @@ Cuando hacemos clic en el botón **iniciar actividad b** , vemos *actividad* en 
 
 Como resultado, la *actividad B* se inicia y se muestra en lugar de *la actividad a*: 
 
-[![Pantalla de actividad B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
+[![pantalla de actividad B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Cuando hacemos clic en el botón **atrás** , la *actividad B* se destruye y se reanuda *la actividad A* : 
 
@@ -63,13 +63,13 @@ Cuando hacemos clic en el botón **atrás** , la *actividad B* se destruye y se 
 
 ### <a name="adding-a-click-counter"></a>Agregar un contador de clics
 
-A continuación, vamos a cambiar la aplicación para que tengamos un botón que cuente y muestre el número de veces que se hace clic en él. En primer lugar, vamos a `_counter` agregar una variable `MainActivity`de instancia a:
+A continuación, vamos a cambiar la aplicación para que tengamos un botón que cuente y muestre el número de veces que se hace clic en él. En primer lugar, vamos a agregar una variable de instancia de `_counter` a `MainActivity`:
 
 ```csharp
 int _counter = 0;
 ```
 
-A continuación, vamos a editar el archivo de diseño **Resource/layout/main. axml** y agregar `clickButton` un nuevo que muestre el número de veces que el usuario hizo clic en el botón. El **Main. axml** resultante debe ser similar al siguiente: 
+A continuación, vamos a editar el archivo de diseño **Resource/layout/main. axml** y agregaremos una nueva `clickButton` que muestre el número de veces que el usuario hizo clic en el botón. El **Main. axml** resultante debe ser similar al siguiente: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,7 +90,7 @@ A continuación, vamos a editar el archivo de diseño **Resource/layout/main. ax
 </LinearLayout>
 ```
 
-Vamos a agregar el código siguiente al final del método de [creación](xref:Android.App.Activity.OnCreate*) en `MainActivity` &ndash; `clickButton`este código que controla los eventos de clic de:
+Vamos a agregar el código siguiente al final del método de [creación](xref:Android.App.Activity.OnCreate*) en `MainActivity` &ndash; este código controla los eventos de clic en el `clickButton`:
 
 ```csharp
 var clickbutton = FindViewById<Button> (Resource.Id.clickButton);
@@ -104,13 +104,13 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 } ;
 ```
 
-Al compilar y ejecutar la aplicación de nuevo, aparece un botón nuevo que se incrementa y muestra el `_counter` valor de en cada clic:
+Al compilar y ejecutar la aplicación de nuevo, aparece un botón nuevo que se incrementa y muestra el valor de `_counter` en cada clic:
 
-[![Agregar recuento de entradas táctiles](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
+[![agregar recuento de entradas táctiles](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Pero cuando giramos el dispositivo al modo horizontal, se pierde este recuento:
 
-[![Al girar a horizontal, el recuento se vuelve a establecer en cero.](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
+[![girar a horizontal establece el recuento de nuevo en cero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Al examinar la salida de la aplicación, vemos que la *actividad A* se pausó, se detuvo, se destruye, se vuelve a crear, se reinicia y luego se reanuda durante la rotación del modo vertical a horizontal: 
 
@@ -141,7 +141,7 @@ protected override void OnSaveInstanceState (Bundle outState)
 }
 ```
 
-Cuando se vuelve a crear y reanudar la *actividad a* , Android lo `Bundle` pasa a nuestro `OnCreate` método. Vamos a agregar código a `OnCreate` para restaurar el `_counter` valor `Bundle`desde el pasado. Agregue el código siguiente justo antes de la línea `clickbutton` donde se define: 
+Cuando se vuelve a crear y reanudar la *actividad a* , Android pasa esta `Bundle` a nuestro método `OnCreate`. Vamos a agregar código a `OnCreate` para restaurar el valor de `_counter` de la `Bundle`pasada. Agregue el código siguiente justo antes de la línea donde se define `clickbutton`: 
 
 ```csharp
 if (bundle != null)
@@ -153,7 +153,7 @@ if (bundle != null)
 
 Vuelva a compilar y ejecutar la aplicación y, a continuación, haga clic en el segundo botón varias veces. Cuando giramos el dispositivo al modo horizontal, se conserva el recuento.
 
-[![Al girar la pantalla se muestra el recuento de cuatro conservadas](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
+[![al girar la pantalla se muestra el recuento de cuatro](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 Echemos un vistazo a la ventana de salida para ver lo que ha sucedido:
 
@@ -169,7 +169,7 @@ Echemos un vistazo a la ventana de salida para ver lo que ha sucedido:
 [ActivityLifecycle.MainActivity] Activity A - OnResume
 ```
 
-Antes de llamar al método [OnStop](xref:Android.App.Activity.OnStop) , se llamó a `OnSaveInstanceState` nuestro nuevo método para guardar `Bundle`el `_counter` valor en. Android lo pasó `Bundle` de nuevo a nosotros cuando llamó a `OnCreate` nuestro método, y pudimos usarlo para restaurar el `_counter` valor al lugar donde se quedó.
+Antes de llamar al método [OnStop](xref:Android.App.Activity.OnStop) , se llamó al método New `OnSaveInstanceState` para guardar el valor de `_counter` en un `Bundle`. Android pasó esta `Bundle` de vuelta a nosotros cuando llamó al método `OnCreate` y pudimos usarlo para restaurar el valor de `_counter` en el lugar en el que se quedó.
 
 ## <a name="summary"></a>Resumen
 

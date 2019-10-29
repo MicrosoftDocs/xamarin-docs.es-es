@@ -4,15 +4,15 @@ description: Este artículo es un tutorial de Xamarin. Android Designer. Muestra
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: f696e8159d929bf41596c4dc9498e682e361f412
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: df83bdfcc847b07754a349060c9be1613efd0b08
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249988"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029523"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usar Xamarin. Android Designer
 
@@ -38,142 +38,142 @@ El objetivo de este tutorial es usar el Android Designer para crear una interfaz
 
 ### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
 
-El primer paso es crear un nuevo proyecto de Xamarin. Android. Inicie Visual Studio, haga clic en **nuevo proyecto...** y elija la plantilla **\# Visual C > Android > Android App (Xamarin)** .
+El primer paso es crear un nuevo proyecto de Xamarin. Android. Inicie Visual Studio, haga clic en **nuevo proyecto...** y elija la plantilla de **visual C\# > Android > Android App (Xamarin)** .
 Asigne a la nueva aplicación el nombre **DesignerWalkthrough** y haga clic en **Aceptar**.
 
-[![Aplicación en blanco para Android](designer-walkthrough-images/vs/01-android-app-w158-sml.png)](designer-walkthrough-images/vs/01-android-app-w158.png#lightbox)
+[![aplicación en blanco de Android](designer-walkthrough-images/vs/01-android-app-w158-sml.png)](designer-walkthrough-images/vs/01-android-app-w158.png#lightbox)
 
 En el cuadro de diálogo **nueva aplicación de Android** , elija **aplicación vacía** y haga clic en **Aceptar**:
 
-[![Selección de la plantilla aplicación en blanco de Android](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
+[![selección de la plantilla aplicación en blanco de Android](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
 
 ### <a name="adding-a-layout"></a>Agregar un diseño
 
 El siguiente paso consiste en crear un **LinearLayout** que contendrá los elementos de la interfaz de usuario. Haga clic con el botón derecho en **recursos/diseño** en el **Explorador de soluciones** y seleccione **Agregar > nuevo elemento.** ... En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **diseño de Android**. Asigne al archivo el nombre **list_item** y haga clic en **Agregar**:
 
-[![Nuevo diseño](designer-walkthrough-images/vs/03-new-layout-w158-sml.png)](designer-walkthrough-images/vs/03-new-layout-w158.png#lightbox)
+[![nuevo diseño](designer-walkthrough-images/vs/03-new-layout-w158-sml.png)](designer-walkthrough-images/vs/03-new-layout-w158.png#lightbox)
 
-El nuevo diseño de **list_item** se muestra en el diseñador. Observe que se muestran &ndash; dos paneles. el *superficie de diseño* para **list_item** está visible en el panel izquierdo, mientras que su origen XML se muestra en el panel derecho. Puede intercambiar las posiciones de los paneles de **superficie de diseño** y de **origen** haciendo clic en el icono **intercambiar paneles** que se encuentra entre los dos paneles:
+El nuevo diseño de **list_item** se muestra en el diseñador. Observe que se muestran dos paneles &ndash; el *superficie de diseño* de **list_item** está visible en el panel izquierdo mientras su origen XML se muestra en el panel derecho. Puede intercambiar las posiciones de los paneles de **superficie de diseño** y de **origen** haciendo clic en el icono **intercambiar paneles** que se encuentra entre los dos paneles:
 
-[![Vista de diseñador](designer-walkthrough-images/vs/04-designer-view-w158-sml.png)](designer-walkthrough-images/vs/04-designer-view-w158.png#lightbox)
+[vista del diseñador de![](designer-walkthrough-images/vs/04-designer-view-w158-sml.png)](designer-walkthrough-images/vs/04-designer-view-w158.png#lightbox)
 
 En el menú **Ver** , haga clic en **otras ventanas > esquema del documento** para abrir el esquema del **documento**. El **esquema del documento** muestra que el diseño contiene actualmente un solo widget **LinearLayout** :
 
-[![Esquema del documento](designer-walkthrough-images/vs/06-document-outline-w158-sml.png)](designer-walkthrough-images/vs/06-document-outline-w158.png#lightbox)
+[![esquema del documento](designer-walkthrough-images/vs/06-document-outline-w158-sml.png)](designer-walkthrough-images/vs/06-document-outline-w158.png#lightbox)
 
-El siguiente paso consiste en crear la interfaz de usuario para la aplicación de explorador de `LinearLayout`color dentro de este.
+El siguiente paso consiste en crear la interfaz de usuario para la aplicación de explorador de color dentro de este `LinearLayout`.
 
 ### <a name="creating-the-list-item-user-interface"></a>Crear la interfaz de usuario de elemento de lista
 
-Si el panel **cuadro de herramientas** no está visible, haga clic en la pestaña cuadro de **herramientas** de la izquierda. En el **cuadro de herramientas**, desplácese hacia abajo hasta la sección **imágenes & medios** y desplácese hacia `ImageView`abajo hasta encontrar un:
+Si el panel **cuadro de herramientas** no está visible, haga clic en la pestaña cuadro de **herramientas** de la izquierda. En el **cuadro de herramientas**, desplácese hacia abajo hasta la sección **imágenes & medios** y desplácese hacia abajo hasta encontrar un `ImageView`:
 
-[![Buscar ImageView](designer-walkthrough-images/vs/07-locate-imageview-w158-sml.png)](designer-walkthrough-images/vs/07-locate-imageview-w158.png#lightbox)
+[![buscar ImageView](designer-walkthrough-images/vs/07-locate-imageview-w158-sml.png)](designer-walkthrough-images/vs/07-locate-imageview-w158.png#lightbox)
 
-Como alternativa, puede escribir *ImageView* en la barra de búsqueda para buscar `ImageView`:
+Como alternativa, puede escribir *ImageView* en la barra de búsqueda para buscar el `ImageView`:
 
-[![Búsqueda de ImageView](designer-walkthrough-images/vs/08-imageview-search-w158-sml.png)](designer-walkthrough-images/vs/08-imageview-search-w158.png#lightbox)
+[![ImageView Search](designer-walkthrough-images/vs/08-imageview-search-w158-sml.png)](designer-walkthrough-images/vs/08-imageview-search-w158.png#lightbox)
 
-Arrástrelo hasta el superficie de diseño (se usará para mostrar una muestra de color en la aplicación del explorador de color): `ImageView` `ImageView`
+Arrastre esta `ImageView` hasta el Superficie de diseño (este `ImageView` se usará para mostrar una muestra de color en la aplicación del explorador de color):
 
 [![ImageView en canvas](designer-walkthrough-images/vs/09-imageview-on-canvas-w158-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas-w158.png#lightbox)
 
-A continuación, arrastre `LinearLayout (Vertical)` un widget desde el **cuadro de herramientas** al diseñador. Observe que un contorno azul indica los límites del agregado `LinearLayout`. El **esquema del documento** muestra que es un elemento secundario `LinearLayout`de, que `imageView1 (ImageView)`se encuentra en:
+A continuación, arrastre un widget de `LinearLayout (Vertical)` desde el **cuadro de herramientas** al diseñador. Observe que un contorno azul indica los límites del `LinearLayout`agregado. El **esquema del documento** muestra que es un elemento secundario de `LinearLayout`, que se encuentra en `imageView1 (ImageView)`:
 
-[![Contorno azul](designer-walkthrough-images/vs/10-blue-outline-w158-sml.png)](designer-walkthrough-images/vs/10-blue-outline-w158.png#lightbox)
+[![contorno azul](designer-walkthrough-images/vs/10-blue-outline-w158-sml.png)](designer-walkthrough-images/vs/10-blue-outline-w158.png#lightbox)
 
-Al seleccionar `ImageView` en el diseñador, el contorno azul se desplaza para rodear `ImageView`el. Además, la selección se mueve a `imageView1 (ImageView)` en el **esquema del documento**:
+Al seleccionar el `ImageView` en el diseñador, el contorno azul se desplaza para rodear el `ImageView`. Además, la selección se mueve a `imageView1 (ImageView)` en el **esquema del documento**:
 
-[![Seleccionar ImageView](designer-walkthrough-images/vs/11-select-imageview-w158-sml.png)](designer-walkthrough-images/vs/11-select-imageview-w158.png#lightbox)
+[![seleccionar ImageView](designer-walkthrough-images/vs/11-select-imageview-w158-sml.png)](designer-walkthrough-images/vs/11-select-imageview-w158.png#lightbox)
 
-A continuación, arrastre `Text (Large)` un widget desde el **cuadro de herramientas** hasta el `LinearLayout`recién agregado. Observe que el diseñador usa resaltados verdes para indicar dónde se insertará el nuevo widget:
+A continuación, arrastre un widget de `Text (Large)` desde el **cuadro de herramientas** a la `LinearLayout`agregada recientemente. Observe que el diseñador usa resaltados verdes para indicar dónde se insertará el nuevo widget:
 
-[![Iluminaciones verdes](designer-walkthrough-images/vs/12-green-highlight-w158-sml.png)](designer-walkthrough-images/vs/12-green-highlight-w158.png#lightbox)
+[![iluminaciones verdes](designer-walkthrough-images/vs/12-green-highlight-w158-sml.png)](designer-walkthrough-images/vs/12-green-highlight-w158.png#lightbox)
 
-Después, agregue un `Text (Small)` widget debajo del `Text (Large)` widget:
+Después, agregue un widget `Text (Small)` debajo del widget `Text (Large)`:
 
-[![Agregar widget de texto pequeño](designer-walkthrough-images/vs/13-add-small-text-w158-sml.png)](designer-walkthrough-images/vs/13-add-small-text-w158.png#lightbox)
+[![agregar un widget de texto pequeño](designer-walkthrough-images/vs/13-add-small-text-w158-sml.png)](designer-walkthrough-images/vs/13-add-small-text-w158.png#lightbox)
 
 En este punto, la superficie del diseñador debe ser similar a la captura de pantalla siguiente:
 
-[![Diseño del diseñador](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
+[diseño del diseñador de![](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
-Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior `linearLayout1`(con sangría debajo).
+Si los dos widgets `textView` no están dentro de `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior (con sangría en `linearLayout1`).
 
 ### <a name="arranging-the-user-interface"></a>Organizar la interfaz de usuario
 
-El siguiente paso consiste en modificar la interfaz de usuario para `ImageView` Mostrar la a la izquierda, con `TextView` los dos widgets apilados `ImageView`a la derecha de.
+El siguiente paso consiste en modificar la interfaz de usuario para mostrar el `ImageView` a la izquierda, con los dos widgets de `TextView` apilados a la derecha de la `ImageView`.
 
 1. Seleccione el control `ImageView`.
 
 2. En el **ventana Propiedades**, escriba *ancho* en el cuadro de búsqueda y busque el **ancho del diseño**.
 
-3. Cambie la configuración de **ancho** de `wrap_content`diseño a:
+3. Cambie la configuración del **ancho del diseño** a `wrap_content`:
 
 ![Establecer ajustar contenido](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
-Otra manera de cambiar la `Width` configuración es hacer clic en el triángulo del lado derecho del widget para alternar el valor de ancho a: `wrap_content`
+Otra manera de cambiar el valor de la `Width` es hacer clic en el triángulo del lado derecho del widget para alternar el valor de ancho a `wrap_content`:
 
 ![Arrastre para establecer el ancho](designer-walkthrough-images/vs/15b-width-arrow-w158.png)
 
-Al hacer clic en el triángulo `Width` de nuevo `match_parent`, se devuelve el valor a. A continuación, vaya al panel **esquema del documento** y seleccione la `LinearLayout`raíz:
+Al hacer clic en el triángulo de nuevo, se devuelve el valor `Width` a `match_parent`. A continuación, vaya al panel **esquema del documento** y seleccione el `LinearLayout`raíz:
 
-[![Seleccionar LinearLayout raíz](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
+[![seleccionar LinearLayout raíz](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
 
-Con la raíz `LinearLayout` seleccionada, vuelva al panel de **propiedades** , escriba *orientación* en el cuadro de búsqueda y busque la configuración de **orientación** . Cambie la orientación `horizontal`a:
+Con la `LinearLayout` raíz seleccionada, vuelva al panel de **propiedades** , escriba *orientación* en el cuadro de búsqueda y busque la configuración de **orientación** . Cambie la **orientación** a `horizontal`:
 
 ![Seleccionar orientación horizontal](designer-walkthrough-images/vs/17-horizontal-orientation-w158.png)
 
 En este punto, la superficie del diseñador debe ser similar a la captura de pantalla siguiente.
-Observe que los `TextView` widgets se han colocado a la derecha `ImageView`de:
+Observe que los widgets de `TextView` se han desplace a la derecha de la `ImageView`:
 
-[![Diseño del diseñador](designer-walkthrough-images/vs/18-designer-layout-w158-sml.png)](designer-walkthrough-images/vs/18-designer-layout-w158.png#lightbox)
+[diseño del diseñador de![](designer-walkthrough-images/vs/18-designer-layout-w158-sml.png)](designer-walkthrough-images/vs/18-designer-layout-w158.png#lightbox)
 
 ### <a name="modifying-the-spacing"></a>Modificar el espaciado
 
-El siguiente paso consiste en modificar la configuración del relleno y los márgenes en la interfaz de usuario para proporcionar más espacio entre los widgets. `ImageView` Seleccione en la superficie de diseño. En el panel **propiedades** , escriba `min` en el cuadro de búsqueda. Escriba `70dp` para **altura mínima** y `50dp` para **ancho mínimo**:
+El siguiente paso consiste en modificar la configuración del relleno y los márgenes en la interfaz de usuario para proporcionar más espacio entre los widgets. Seleccione el `ImageView` en la superficie de diseño. En el panel **propiedades** , escriba `min` en el cuadro de búsqueda. Escriba `70dp` para **altura mínima** y `50dp` para el **ancho mínimo**:
 
-[![Establecer el alto y el ancho](designer-walkthrough-images/vs/18b-set-height-width-sml.png)](designer-walkthrough-images/vs/18b-set-height-width.png#lightbox)
+[![establecer el alto y el ancho](designer-walkthrough-images/vs/18b-set-height-width-sml.png)](designer-walkthrough-images/vs/18b-set-height-width.png#lightbox)
 
-En el panel **propiedades** , escriba `padding` en el cuadro de búsqueda y `10dp` escriba para **relleno**. Estos `minHeight`valores y la`padding` configuración agregan relleno alrededor de todos los lados de yloalarganverticalmente.`ImageView` `minWidth` Observe que el esquema XML cambia a medida que se escriben estos valores:
+En el panel **propiedades** , escriba `padding` en el cuadro de búsqueda y escriba `10dp` para **relleno**. Estos `minHeight`, `minWidth` y `padding` configuración agregan relleno alrededor de todos los lados del `ImageView` y lo alargan verticalmente. Observe que el esquema XML cambia a medida que se escriben estos valores:
 
-[![Establecer relleno](designer-walkthrough-images/vs/19-padding-widths-w158-sml.png)](designer-walkthrough-images/vs/19-padding-widths-w158.png#lightbox)
+[![establecer relleno](designer-walkthrough-images/vs/19-padding-widths-w158-sml.png)](designer-walkthrough-images/vs/19-padding-widths-w158.png#lightbox)
 
 La configuración de los márgenes inferior, izquierdo, derecho y superior se puede establecer de forma independiente mediante la especificación de valores en los campos de **relleno hacia abajo**, **relleno izquierdo**, **relleno derecho**y **relleno superior** , respectivamente.
-Por ejemplo, establezca el campo **relleno izquierdo** en `5dp` y los **campos parte inferior**, **relleno derecho**y **relleno superior** para `10dp`:
+Por ejemplo, establezca el campo **relleno izquierdo** en `5dp` y los campos de relleno **inferior**, **relleno derecho**y **relleno superior** para `10dp`:
 
-[![Configuración de relleno personalizada](designer-walkthrough-images/vs/20-custom-padding-w158-sml.png)](designer-walkthrough-images/vs/20-custom-padding-w158.png#lightbox)
+[![configuración de relleno personalizada](designer-walkthrough-images/vs/20-custom-padding-w158-sml.png)](designer-walkthrough-images/vs/20-custom-padding-w158.png#lightbox)
 
-A continuación, ajuste la posición del `LinearLayout` widget que contiene los dos `TextView` widgets. En el **esquema del documento**, `linearLayout1`seleccione. En la ventana **propiedades** , escriba `margin` en el cuadro de búsqueda. Establezca el margen **inferior del diseño**, el margen de diseño a la **izquierda**y el **margen de diseño arriba** en `5dp`. Establezca **margen de diseño** a `0dp`la derecha en:
+A continuación, ajuste la posición del widget `LinearLayout` que contiene los dos widgets de `TextView`. En el **esquema del documento**, seleccione `linearLayout1`. En la ventana **propiedades** , escriba `margin` en el cuadro de búsqueda. Establezca el margen **inferior del diseño**, el margen de diseño a la **izquierda**y la **parte superior del margen de diseño** en `5dp`. Establezca **margen de diseño derecho** en `0dp`:
 
-[![Establecer márgenes](designer-walkthrough-images/vs/21-margins-w158-sml.png)](designer-walkthrough-images/vs/21-margins-w158.png#lightbox)
+[![establecer márgenes](designer-walkthrough-images/vs/21-margins-w158-sml.png)](designer-walkthrough-images/vs/21-margins-w158.png#lightbox)
 
 ### <a name="removing-the-default-image"></a>Quitar la imagen predeterminada
 
-Dado que `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
+Dado que el `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
 
-1. Seleccione en la **superficie del diseñador.** `ImageView`
+1. Seleccione la `ImageView` en la **superficie del diseñador**.
 
 2. En **propiedades**, escriba *src* en el cuadro de búsqueda.
 
 3. Haga clic en el cuadrado pequeño situado a la derecha del valor de la propiedad **src** y seleccione **restablecer**:
 
-[![Borrar el valor src de ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
+[![borrar el valor src de ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
-Esto quita `android:src="@android:drawable/ic_menu_gallery"` del XML de origen para eso `ImageView`.
+Esto quita `android:src="@android:drawable/ic_menu_gallery"` del XML de origen de ese `ImageView`.
 
 ### <a name="adding-a-listview-container"></a>Agregar un contenedor de ListView
 
-Ahora que se ha definido el diseño **list_item** , el paso siguiente consiste en agregar `ListView` un al diseño principal. Contendrá una lista de **list_item.** `ListView` 
+Ahora que se ha definido el diseño **list_item** , el paso siguiente consiste en agregar un `ListView` al diseño principal. Este `ListView` contendrá una lista de **list_item**. 
 
-En el **Explorador de soluciones**, Abra **Resources/layout/activity_main. axml**. En el **cuadro de herramientas**, `ListView` busque el widget y arrástrelo hasta el **superficie de diseño**. `ListView` En el diseñador estará en blanco excepto las líneas azules que conforman el borde cuando está seleccionado. Puede ver el **esquema del documento** para comprobar que **ListView** se ha agregado correctamente:
+En el **Explorador de soluciones**, Abra **Resources/layout/activity_main. axml**. En el **cuadro de herramientas**, busque el widget de `ListView` y arrástrelo hasta el **superficie de diseño**. Los `ListView` en el diseñador estarán en blanco excepto en el caso de las líneas azules que describan su borde cuando se selecciona. Puede ver el **esquema del documento** para comprobar que **ListView** se ha agregado correctamente:
 
-[![Nuevo ListView](designer-walkthrough-images/vs/23-new-listview-w158-sml.png)](designer-walkthrough-images/vs/23-new-listview-w158.png#lightbox)
+[![nuevo ListView](designer-walkthrough-images/vs/23-new-listview-w158-sml.png)](designer-walkthrough-images/vs/23-new-listview-w158.png#lightbox)
 
-De forma predeterminada, `ListView` se `Id` proporciona el valor `@+id/listView1`.
-Mientras `listView1` aún está seleccionado en el **esquema del documento**, abra el panel de **propiedades** , haga clic en **organizar por**y seleccione **categoría**.
+De forma predeterminada, a la `ListView` se le asigna un valor `Id` de `@+id/listView1`.
+Mientras `listView1` todavía está seleccionado en el **esquema del documento**, abra el panel de **propiedades** , haga clic en **organizar por**y seleccione **categoría**.
 Abra **Main**, busque la propiedad **ID** y cambie su valor a `@+id/myListView`:
 
-[![Cambiar el nombre de ID a mi ListView](designer-walkthrough-images/vs/24-change-id-w158-sml.png)](designer-walkthrough-images/vs/24-change-id-w158.png#lightbox)
+[![cambiar el nombre del identificador a mi ListView](designer-walkthrough-images/vs/24-change-id-w158-sml.png)](designer-walkthrough-images/vs/24-change-id-w158.png#lightbox)
 
 En este momento, la interfaz de usuario está lista para usarse.
 
@@ -275,11 +275,11 @@ namespace DesignerWalkthrough
 
 ```
 
-Este código usa un adaptador `ListView` personalizado para cargar información de color y para mostrar estos datos en la interfaz de usuario que se acaba de crear. Para que este ejemplo sea breve, la información de color está codificada de forma rígida en una lista, pero el adaptador se podría modificar para extraer la información de color de un origen de datos o para calcularla sobre la marcha. Para obtener más información `ListView` acerca de los adaptadores, vea [ListView](~/android/user-interface/layouts/list-view/index.md).
+Este código usa un adaptador de `ListView` personalizado para cargar información de color y para mostrar estos datos en la interfaz de usuario que se acaba de crear. Para que este ejemplo sea breve, la información de color está codificada de forma rígida en una lista, pero el adaptador se podría modificar para extraer la información de color de un origen de datos o para calcularla sobre la marcha. Para obtener más información acerca de los adaptadores de `ListView`, consulte [ListView](~/android/user-interface/layouts/list-view/index.md).
 
 Compile y ejecute la aplicación. La captura de pantalla siguiente es un ejemplo de cómo aparece la aplicación cuando se ejecuta en un dispositivo:
 
-[![Captura de pantalla final](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
+[![captura de pantalla final](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -289,11 +289,11 @@ El primer paso es crear un nuevo proyecto de Xamarin. Android.
 
 Inicie Visual Studio para Mac y haga clic en **nuevo proyecto.** ... Seleccione la plantilla **aplicación de Android** y haga clic en **siguiente**:
 
-[![Aplicación en blanco para Android](designer-walkthrough-images/xs/01-android-app-m75-sml.png)](designer-walkthrough-images/xs/01-android-app-m75.png#lightbox)
+[![aplicación en blanco de Android](designer-walkthrough-images/xs/01-android-app-m75-sml.png)](designer-walkthrough-images/xs/01-android-app-m75.png#lightbox)
 
 Asigne a la nueva aplicación el nombre **DesignerWalkthrough**. En **plataformas de destino**, seleccione **más reciente y más** y haga clic en **siguiente**:
 
-[![Aplicación de nombre](designer-walkthrough-images/xs/02-designer-walkthrough-m75-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough-m75.png#lightbox)
+[aplicación de nombre de![](designer-walkthrough-images/xs/02-designer-walkthrough-m75-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough-m75.png#lightbox)
 
 En la siguiente pantalla del cuadro de diálogo, haga clic en **crear**.
 
@@ -303,15 +303,15 @@ El siguiente paso consiste en crear un **LinearLayout** que contendrá los eleme
 
 En Visual Studio para Mac, haga clic con el botón derecho en **recursos/diseño** en el panel de **solución** y seleccione **Agregar > nuevo archivo..** .. En el cuadro de diálogo **nuevo archivo** , seleccione **Android > layout**. Asigne al archivo el nombre **list_item** y haga clic en **nuevo**:
 
-[![Nuevo diseño](designer-walkthrough-images/xs/03-new-layout-m75-sml.png)](designer-walkthrough-images/xs/03-new-layout-m75.png#lightbox)
+[![nuevo diseño](designer-walkthrough-images/xs/03-new-layout-m75-sml.png)](designer-walkthrough-images/xs/03-new-layout-m75.png#lightbox)
 
 Una vez agregado este archivo, el nuevo diseño de **list_item** se muestra en el **superficie de diseño** (si ve el mensaje, *este proyecto contiene recursos que no se compilaron correctamente, la representación podría verse afectada*, haga clic en **generar > Compilar todo** para compilar el proyecto):
 
-[![Vista de diseñador](designer-walkthrough-images/xs/04-designer-view-m75-sml.png)](designer-walkthrough-images/xs/04-designer-view-m75.png#lightbox)
+[vista del diseñador de![](designer-walkthrough-images/xs/04-designer-view-m75-sml.png)](designer-walkthrough-images/xs/04-designer-view-m75.png#lightbox)
 
 Haga clic en la pestaña **origen** en la parte inferior del diseñador para ver el origen XML de este diseño. Al hacer clic en la pestaña **esquema del documento** de la derecha, se muestra que el diseño contiene actualmente un solo widget **LinearLayout** :
 
-[![XML del diseñador](designer-walkthrough-images/xs/05-designer-xml-m75-sml.png)](designer-walkthrough-images/xs/05-designer-xml-m75.png#lightbox)
+[XML del diseñador de![](designer-walkthrough-images/xs/05-designer-xml-m75-sml.png)](designer-walkthrough-images/xs/05-designer-xml-m75.png#lightbox)
 
 El siguiente paso consiste en crear la interfaz de usuario para la aplicación de explorador de color.
 
@@ -319,103 +319,103 @@ El siguiente paso consiste en crear la interfaz de usuario para la aplicación d
 
 Haga clic en la pestaña **Diseñador** en la parte inferior de la pantalla para volver a la **superficie del diseñador**. En el panel **cuadro de herramientas** de la derecha, desplácese hacia abajo hasta la sección **imágenes & medios** y busque `ImageView`:
 
-[![Buscar ImageView](designer-walkthrough-images/xs/06-locate-imageview-m75-sml.png)](designer-walkthrough-images/xs/06-locate-imageview-m75.png#lightbox)
+[![buscar ImageView](designer-walkthrough-images/xs/06-locate-imageview-m75-sml.png)](designer-walkthrough-images/xs/06-locate-imageview-m75.png#lightbox)
 
-Como alternativa, puede escribir *ImageView* en la barra de búsqueda para buscar `ImageView`:
+Como alternativa, puede escribir *ImageView* en la barra de búsqueda para buscar el `ImageView`:
 
-[![Búsqueda de ImageView](designer-walkthrough-images/xs/07-imageview-search-m75-sml.png)](designer-walkthrough-images/xs/07-imageview-search-m75.png#lightbox)
+[![ImageView Search](designer-walkthrough-images/xs/07-imageview-search-m75-sml.png)](designer-walkthrough-images/xs/07-imageview-search-m75.png#lightbox)
 
-Arrástrelo hasta el **superficie de diseño** (se usará para mostrar una muestra de color en la aplicación del explorador de color): `ImageView` `ImageView`
+Arrastre esta `ImageView` hasta el **superficie de diseño** (este `ImageView` se usará para mostrar una muestra de color en la aplicación del explorador de color):
 
 [![ImageView en canvas](designer-walkthrough-images/xs/08-imageview-on-canvas-m75-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas-m75.png#lightbox)
 
-A continuación, arrastre `LinearLayout (Vertical)` un widget desde el **cuadro de herramientas** hasta el **superficie de diseño**. Observe que un contorno azul indica los límites del agregado `LinearLayout`. El **esquema del documento** muestra que es un elemento secundario `LinearLayout`de, que `imageView1 (ImageView)`se encuentra a continuación:
+A continuación, arrastre un widget de `LinearLayout (Vertical)` desde el **cuadro de herramientas** hasta el **superficie de diseño**. Observe que un contorno azul indica los límites del `LinearLayout`agregado. El **esquema del documento** muestra que es un elemento secundario de `LinearLayout`, que se encuentra a continuación `imageView1 (ImageView)`:
 
-[![Contorno azul](designer-walkthrough-images/xs/10-blue-outline-m75-sml.png)](designer-walkthrough-images/xs/10-blue-outline-m75.png#lightbox)
+[![contorno azul](designer-walkthrough-images/xs/10-blue-outline-m75-sml.png)](designer-walkthrough-images/xs/10-blue-outline-m75.png#lightbox)
 
-Al seleccionar `ImageView` en el diseñador, el contorno azul se desplaza para rodear `ImageView`el. Además, la selección se mueve a `imageView1 (ImageView)` en el **esquema del documento**:
+Al seleccionar el `ImageView` en el diseñador, el contorno azul se desplaza para rodear el `ImageView`. Además, la selección se mueve a `imageView1 (ImageView)` en el **esquema del documento**:
 
-[![Seleccionar ImageView](designer-walkthrough-images/xs/11-select-imageview-m75-sml.png)](designer-walkthrough-images/xs/11-select-imageview-m75.png#lightbox)
+[![seleccionar ImageView](designer-walkthrough-images/xs/11-select-imageview-m75-sml.png)](designer-walkthrough-images/xs/11-select-imageview-m75.png#lightbox)
 
-A continuación, arrastre `Text (Large)` un widget desde el **cuadro de herramientas** hasta el `LinearLayout`recién agregado. Tenga en cuenta que al arrastrar el mouse hasta el **superficie de diseño**, se resalta dónde se insertará el nuevo widget.
-El `Text (Large)` widget debe estar ubicado en `linearLayout1` , tal y como se muestra aquí:
+A continuación, arrastre un widget de `Text (Large)` desde el **cuadro de herramientas** a la `LinearLayout`agregada recientemente. Tenga en cuenta que al arrastrar el mouse hasta el **superficie de diseño**, se resalta dónde se insertará el nuevo widget.
+El widget de `Text (Large)` debe encontrarse dentro de `linearLayout1` como se muestra aquí:
 
 [![Agregar un widget de texto grande](designer-walkthrough-images/xs/12-green-highlight-m75-sml.png)](designer-walkthrough-images/xs/12-green-highlight-m75.png#lightbox)
 
-Después, agregue un `Text (Small)` widget debajo del `Text (Large)` widget. En este momento, el **superficie de diseño** debe parecerse a la siguiente captura de pantalla:
+A continuación, agregue un widget `Text (Small)` debajo del widget `Text (Large)`. En este momento, el **superficie de diseño** debe parecerse a la siguiente captura de pantalla:
 
-[![Agregar widget de texto pequeño](designer-walkthrough-images/xs/13-add-small-text-m75-sml.png)](designer-walkthrough-images/xs/13-add-small-text-m75.png#lightbox)
+[![agregar un widget de texto pequeño](designer-walkthrough-images/xs/13-add-small-text-m75-sml.png)](designer-walkthrough-images/xs/13-add-small-text-m75.png#lightbox)
 
-Si los dos `textView` widgets no están dentro `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior ( `linearLayout1`con sangría debajo).
+Si los dos widgets `textView` no están dentro de `linearLayout1`, puede arrastrarlos a `linearLayout1` en el **esquema del documento** y colocarlos de modo que aparezcan como se muestra en la captura de pantalla anterior (con sangría en `linearLayout1`).
 
 ### <a name="arranging-the-user-interface"></a>Organizar la interfaz de usuario
 
-El siguiente paso consiste en modificar la interfaz de usuario para `ImageView` Mostrar la a la izquierda, con `TextView` los dos widgets apilados `ImageView`a la derecha de.
+El siguiente paso consiste en modificar la interfaz de usuario para mostrar el `ImageView` a la izquierda, con los dos widgets de `TextView` apilados a la derecha de la `ImageView`.
 
-1. Con el `ImageView` seleccionado, haga clic en la pestaña **propiedades** .
+1. Con la `ImageView` seleccionada, haga clic en la pestaña **propiedades** .
 
 2. Justo debajo de la pestaña **propiedades** , haga clic en **diseño**.
 
-3. Desplácese hacia abajo hasta **vista** y `Width` cambie la `wrap_content`configuración a:
+3. Desplácese hacia abajo hasta **vista** y cambie el valor `Width` a `wrap_content`:
 
-[![Establecer ajustar contenido](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
+[![establecer ajustar contenido](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
 
-Otra manera de cambiar la `Width` configuración es hacer clic en el triángulo del lado derecho del widget para alternar el valor de ancho a: `wrap_content`
+Otra manera de cambiar el valor de la `Width` es hacer clic en el triángulo del lado derecho del widget para alternar el valor de ancho a `wrap_content`:
 
-[![Arrastre para establecer el ancho](designer-walkthrough-images/xs/16-width-arrow-m75-sml.png)](designer-walkthrough-images/xs/16-width-arrow-m75.png#lightbox)
+[![arrastre para establecer el ancho](designer-walkthrough-images/xs/16-width-arrow-m75-sml.png)](designer-walkthrough-images/xs/16-width-arrow-m75.png#lightbox)
 
-Al hacer clic en el triángulo `Width` de nuevo `match_parent`, se devuelve el valor a. A continuación, vaya al panel **esquema del documento** y seleccione la `LinearLayout`raíz:
+Al hacer clic en el triángulo de nuevo, se devuelve el valor `Width` a `match_parent`. A continuación, vaya al panel **esquema del documento** y seleccione el `LinearLayout`raíz:
 
-[![Seleccionar LinearLayout raíz](designer-walkthrough-images/xs/17-root-linearlayout-m75-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout-m75.png#lightbox)
+[![seleccionar LinearLayout raíz](designer-walkthrough-images/xs/17-root-linearlayout-m75-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout-m75.png#lightbox)
 
-Con la raíz `LinearLayout` seleccionada, vuelva a la pestaña **propiedades** y haga clic en **Widget**. Cambie la `Orientation` configuración a `horizontal` como se muestra a continuación. En este momento, el **superficie de diseño** debe ser similar a la captura de pantalla siguiente. Observe que los `TextView` widgets se han colocado a la derecha `ImageView`de:
+Con la `LinearLayout` raíz seleccionada, vuelva a la pestaña **propiedades** y haga clic en **Widget**. Cambie la configuración de `Orientation` a `horizontal` como se muestra a continuación. En este momento, el **superficie de diseño** debe ser similar a la captura de pantalla siguiente. Observe que los widgets de `TextView` se han desplace a la derecha de la `ImageView`:
 
-[![Seleccionar orientación horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
+[![seleccionar orientación horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
 
 ### <a name="modifying-the-spacing"></a>Modificar el espaciado
 
-El siguiente paso consiste en modificar la configuración del relleno y los márgenes en la interfaz de usuario para proporcionar más espacio entre los widgets. Seleccione el `ImageView` y haga clic en la pestaña **diseño** en **propiedades**. `Min Width` Cambie a `50dp`, a`Min Height` y`Padding`a . `70dp` `10dp`
-Esto aplica el `ImageView` relleno alrededor de todos los lados de y lo alarga verticalmente:
+El siguiente paso consiste en modificar la configuración del relleno y los márgenes en la interfaz de usuario para proporcionar más espacio entre los widgets. Seleccione la `ImageView` y haga clic en la pestaña **diseño** en **propiedades**. Cambie el `Min Width` a `50dp`, el `Min Height` a `70dp`y el `Padding` a `10dp`.
+Esto aplica el relleno alrededor de todos los lados del `ImageView` y lo alarga verticalmente:
 
-[![Establecer relleno](designer-walkthrough-images/xs/20-padding-widths-m75-sml.png)](designer-walkthrough-images/xs/20-padding-widths-m75.png#lightbox)
+[![establecer relleno](designer-walkthrough-images/xs/20-padding-widths-m75-sml.png)](designer-walkthrough-images/xs/20-padding-widths-m75.png#lightbox)
 
-La configuración de relleno superior, derecho, inferior y izquierdo se puede establecer de forma independiente especificando valores `Top`en `Right`los `Bottom`campos de `Left` relleno,, y, respectivamente. Por ejemplo, establezca el `Left` valor de relleno `5dp` en y `Top`los `Right`valores de `Bottom` relleno, y `10dp`en. Tenga en cuenta `Padding` que la configuración cambia a una lista separada por comas de estos valores:
+La configuración de relleno superior, derecho, inferior y izquierdo se puede establecer de forma independiente especificando valores en los campos `Top`, `Right`, `Bottom`y `Left` relleno, respectivamente. Por ejemplo, establezca el valor de relleno de `Left` en `5dp` y los valores de relleno `Top`, `Right`y `Bottom` en `10dp`. Tenga en cuenta que la configuración de `Padding` cambia a una lista separada por comas de estos valores:
 
-[![Configuración de relleno personalizada](designer-walkthrough-images/xs/21-custom-padding-m75-sml.png)](designer-walkthrough-images/xs/21-custom-padding-m75.png#lightbox)
+[![configuración de relleno personalizada](designer-walkthrough-images/xs/21-custom-padding-m75-sml.png)](designer-walkthrough-images/xs/21-custom-padding-m75.png#lightbox)
 
-A continuación, ajuste la posición del `LinearLayout` widget que contiene los dos `TextView` widgets. En el **esquema del documento**, `linearLayout1`seleccione. En el panel **propiedades** , seleccione la pestaña **diseño** . Desplácese hacia abajo hasta la sección **vista** y `Left`establezca `Top`los `Right` `Bottom` márgenes,, y `5dp`en `5dp`, `0dp`, y `5dp` , respectivamente:
+A continuación, ajuste la posición del widget `LinearLayout` que contiene los dos widgets de `TextView`. En el **esquema del documento**, seleccione `linearLayout1`. En el panel **propiedades** , seleccione la pestaña **diseño** . Desplácese hacia abajo hasta la sección **vista** y establezca los márgenes `Left`, `Top`, `Right`y `Bottom` en `5dp`, `5dp`, `0dp`y `5dp` respectivamente. :
 
-[![Establecer márgenes](designer-walkthrough-images/xs/22-margins-m75-sml.png)](designer-walkthrough-images/xs/22-margins-m75.png#lightbox)
+[![establecer márgenes](designer-walkthrough-images/xs/22-margins-m75-sml.png)](designer-walkthrough-images/xs/22-margins-m75.png#lightbox)
 
 ### <a name="removing-the-default-image"></a>Quitar la imagen predeterminada
 
-Dado que `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
+Dado que el `ImageView` se usa para mostrar los colores (en lugar de las imágenes), el siguiente paso es quitar el origen de imagen predeterminado agregado por la plantilla.
 
 1. Seleccione el control `ImageView`.
 
 2. Haga clic en la pestaña **Widget** en **propiedades**.
 
-3. Desactive `Src` la opción para que esté en blanco:
+3. Desactive el valor `Src` para que esté en blanco:
 
-[![Borrar el valor src de ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
+[![borrar el valor src de ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 
-Esto quita `android:src="@android:drawable/ic_menu_gallery"` del XML de origen para eso `ImageView`.
+Esto quita `android:src="@android:drawable/ic_menu_gallery"` del XML de origen de ese `ImageView`.
 
 ### <a name="adding-a-listview-container"></a>Agregar un contenedor de ListView
 
-Ahora que se ha definido el diseño **list_item** , el paso siguiente consiste en agregar `ListView` un al diseño principal. Contendrá una lista de **list_item.** `ListView` 
+Ahora que se ha definido el diseño **list_item** , el paso siguiente consiste en agregar un `ListView` al diseño principal. Este `ListView` contendrá una lista de **list_item**. 
 
 En el **Explorador de soluciones**, Abra **Resources/layout/main. axml**.
-Haga clic `Button` en el widget (si existe) y elimínelo. En el **cuadro de herramientas**, `ListView` busque el widget y arrástrelo hasta el **superficie de diseño**.
-`ListView` En el diseñador estará en blanco excepto las líneas azules que conforman el borde cuando está seleccionado. Puede ver el **esquema del documento** para comprobar que **ListView** se ha agregado correctamente:
+Haga clic en el widget de `Button` (si existe) y elimínelo. En el **cuadro de herramientas**, busque el widget de `ListView` y arrástrelo hasta el **superficie de diseño**.
+Los `ListView` en el diseñador estarán en blanco excepto en el caso de las líneas azules que describan su borde cuando se selecciona. Puede ver el **esquema del documento** para comprobar que **ListView** se ha agregado correctamente:
 
-[![Nuevo ListView](designer-walkthrough-images/xs/24-new-listview-m75-sml.png)](designer-walkthrough-images/xs/24-new-listview-m75.png#lightbox)
+[![nuevo ListView](designer-walkthrough-images/xs/24-new-listview-m75-sml.png)](designer-walkthrough-images/xs/24-new-listview-m75.png#lightbox)
 
-De forma predeterminada, `ListView` se `Id` proporciona el valor `@+id/listView1`.
-Mientras `listView1` aún está seleccionado en el **esquema del documento**, abra el panel de **propiedades** , haga clic en **organizar por**y seleccione **categoría**.
+De forma predeterminada, a la `ListView` se le asigna un valor `Id` de `@+id/listView1`.
+Mientras `listView1` todavía está seleccionado en el **esquema del documento**, abra el panel de **propiedades** , haga clic en **organizar por**y seleccione **categoría**.
 Abra **Main**, busque la propiedad **ID** y cambie su valor a `@+id/myListView`:
 
-[![Cambiar el nombre de ID a mi ListView](designer-walkthrough-images/xs/25-change-id-m75-sml.png)](designer-walkthrough-images/xs/25-change-id-m75.png#lightbox)
+[![cambiar el nombre del identificador a mi ListView](designer-walkthrough-images/xs/25-change-id-m75-sml.png)](designer-walkthrough-images/xs/25-change-id-m75.png#lightbox)
 
 En este momento, la interfaz de usuario está lista para usarse.
 
@@ -515,11 +515,11 @@ namespace DesignerWalkthrough
 }
 ```
 
-Este código usa un adaptador `ListView` personalizado para cargar información de color y para mostrar estos datos en la interfaz de usuario que se acaba de crear. Para que este ejemplo sea breve, la información de color está codificada de forma rígida en una lista, pero el adaptador se podría modificar para extraer la información de color de un origen de datos o para calcularla sobre la marcha. Para obtener más información `ListView` acerca de los adaptadores, vea [ListView](~/android/user-interface/layouts/list-view/index.md).
+Este código usa un adaptador de `ListView` personalizado para cargar información de color y para mostrar estos datos en la interfaz de usuario que se acaba de crear. Para que este ejemplo sea breve, la información de color está codificada de forma rígida en una lista, pero el adaptador se podría modificar para extraer la información de color de un origen de datos o para calcularla sobre la marcha. Para obtener más información acerca de los adaptadores de `ListView`, consulte [ListView](~/android/user-interface/layouts/list-view/index.md).
 
 Compile y ejecute la aplicación. La captura de pantalla siguiente es un ejemplo de cómo aparece la aplicación cuando se ejecuta en un dispositivo:
 
-[![Captura de pantalla final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
+[![captura de pantalla final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
 

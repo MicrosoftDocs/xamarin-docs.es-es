@@ -1,34 +1,34 @@
 ---
-title: Ruido de SkiaSharp y composición
-description: Generar a los sombreadores de ruido de Perlin y se combina con otros sombreadores.
+title: SkiaSharp ruido y composición
+description: Genere sombreadores de ruido de Perl y combínelo con otros sombreadores.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: dea7f5e51a864922d56f7b65d19b21a889cbc650
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c1e500936b89f2ec8dc17279a7ed878dc7f5cbb3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656163"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029441"
 ---
-# <a name="skiasharp-noise-and-composing"></a>Ruido de SkiaSharp y composición
+# <a name="skiasharp-noise-and-composing"></a>SkiaSharp ruido y composición
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Gráficos vectoriales simple tienden a parecer natural. Las líneas rectas y curvas suaves colores sólidos no son similares a las imperfecciones de objetos del mundo real. Mientras trabaja en los gráficos generados por el equipo para la película 1982 _Tron_, Ken Perlin de científico informático empezó a desarrollar algoritmos que utilizan procesos aleatorios para ofrecer estas imágenes de texturas más realistas. En 1997, Ken Perlin ganó un premio Academy por logros técnicos. Su trabajo ha llegado a ser conocido como ruido de Perlin y se admite en SkiaSharp. Por ejemplo:
+Los gráficos vectoriales simples tienden a parecer poco naturales. Las líneas rectas, las curvas suaves y los colores sólidos no se asemejan a las imperfecciones de los objetos del mundo real. Al trabajar en los gráficos generados por el equipo para el _Tron_de películas 1982, Computer científico Ken Perl comenzó a desarrollar algoritmos que usaban procesos aleatorios para proporcionar a estas imágenes texturas más realistas. En 1997, Ken Perl ha ganado una Premio a la Academia de logros técnicos. Su trabajo ha sido conocido como Perlen el ruido y se admite en SkiaSharp. Por ejemplo:
 
-![Ejemplo de ruido de Perlin](noise-images/NoiseSample.png "muestra de ruido de Perlin")
+![Ejemplo de ruido de Perlen](noise-images/NoiseSample.png "Ejemplo de ruido de Perlen")
 
-Como puede ver, cada píxel no es un valor de color aleatorio. La continuidad de píxel a píxel da como resultado formas aleatorias.
+Como puede ver, cada píxel no es un valor de color aleatorio. La continuidad de píxel a píxel produce formas aleatorias.
 
-La compatibilidad de ruido de Perlin en Skia se basa en una especificación de W3C para CSS y SVG. Sección 8.20 de [ **filtro efectos de módulo de nivel 1** ](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) incluye los algoritmos de ruido de Perlin subyacentes en el código de C.
+La compatibilidad de Perlen el ruido en Skia se basa en una especificación del W3C para CSS y SVG. En la sección 8,20 del [**módulo de efectos de filtro 1**](https://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) se incluyen los algoritmos de ruido de Perl en código C.
 
-## <a name="exploring-perlin-noise"></a>Exploración de ruido de Perlin
+## <a name="exploring-perlin-noise"></a>Exploración del ruido de Perl
 
-El [ `SKShader` ](xref:SkiaSharp.SKShader) clase define dos métodos estáticos para generar ruido de Perlin: [ `CreatePerlinNoiseFractalNoise` ](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) y [ `CreatePerlinNoiseTurbulence` ](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*). Los parámetros son idénticos:
+La clase [`SKShader`](xref:SkiaSharp.SKShader) define dos métodos estáticos distintos para generar Perlen noise: [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) y [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*). Los parámetros son idénticos:
 
 ```csharp
 public static SkiaSharp CreatePerlinNoiseFractalNoise (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed);
@@ -36,15 +36,15 @@ public static SkiaSharp CreatePerlinNoiseFractalNoise (float baseFrequencyX, flo
 public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed);
 ```
 
-Ambos métodos también están incluidos en las versiones sobrecargadas con adicional `SKPointI` parámetro. La sección [ **ruido de Perlin mosaico** ](#tiling-perlin-noise) describe estas sobrecargas.
+Ambos métodos también existen en versiones sobrecargadas con un parámetro `SKPointI` adicional. En la sección de [**mosaico Perl**](#tiling-perlin-noise) en el ruido se describen estas sobrecargas.
 
-Los dos `baseFrequency` argumentos son valores positivos definidos en la documentación de SkiaSharp como comprendida entre 0 y 1, pero se puede establecer en los valores más altos. Cuanto mayor sea el valor, mayor será el cambio en la imagen aleatorio en dirección horizontal y vertical.
+Los dos argumentos de `baseFrequency` son valores positivos definidos en la documentación de SkiaSharp en el intervalo de 0 a 1, pero también se pueden establecer en valores superiores. Cuanto mayor sea el valor, mayor será el cambio en la imagen aleatoria en las direcciones horizontal y vertical.
 
-El `numOctaves` valor es un entero de 1 o superior. Se relaciona con un factor de iteración en los algoritmos. Cada octava adicional contribuye un efecto que es la mitad de la octava anterior, por lo que reduce el efecto con los valores más altos de octava.
+El valor `numOctaves` es un entero de 1 o superior. Se relaciona con un factor de iteración en los algoritmos. Cada octava adicional aporta un efecto que es la mitad de la octava anterior, por lo que el efecto disminuye con valores de octava más altos.
 
-El `seed` parámetro es el punto de partida para el generador de números aleatorios. Aunque se especifica como un valor de punto flotante, la fracción se trunca antes de que se usa y 0 es igual a 1.
+El parámetro `seed` es el punto inicial para el generador de números aleatorios. Aunque se especifica como un valor de punto flotante, la fracción se trunca antes de usarse y 0 es igual que 1.
 
-El **ruido de Perlin** página en el [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo permite que experimenta con distintos valores de la `baseFrequency` y `numOctaves` argumentos. Este es el archivo XAML:
+La página de **ruido de Perlen** en el ejemplo [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) le permite experimentar con varios valores de los argumentos `baseFrequency` y `numOctaves`. Este es el archivo XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -92,7 +92,7 @@ El **ruido de Perlin** página en el [ **SkiaSharpFormsDemos**)](https://docs.mi
 </ContentPage>
 ```
 
-Se utilizan dos `Slider` vistas para las dos `baseFrequency` argumentos. Para expandir el intervalo de valores inferior, los controles deslizantes son logarítmicos. El archivo de código subyacente calcula los argumentos para el `SKShader`métodos de competencias de la `Slider` valores. El `Label` vistas muestran los valores calculados:
+Utiliza dos vistas de `Slider` para los dos argumentos de `baseFrequency`. Para expandir el intervalo de valores inferiores, los controles deslizantes son logarítmicos. El archivo de código subyacente calcula los argumentos para los métodos de `SKShader`de las potencias de los valores de `Slider`. Las vistas `Label` muestran los valores calculados:
 
 ```csharp
 float baseFreqX = (float)Math.Pow(10, baseFrequencyXSlider.Value - 4);
@@ -102,9 +102,9 @@ float baseFreqY = (float)Math.Pow(10, baseFrequencyYSlider.Value - 4);
 baseFrequencyYText.Text = String.Format("Base Frequency Y = {0:F4}", baseFreqY);
 ```
 
-Un `Slider` valor de 1 corresponde a 0,001, un `Slider` valor 2 del sistema operativo corresponde a 0,01, un `Slider` valores de 3 corresponde a 0,1 y un `Slider` corresponde el valor de 4 a 1.
+Un valor `Slider` de 1 corresponde a 0,001, un valor de `Slider` os 2 corresponde a 0,01, un `Slider` valores de 3 corresponde a 0,1 y un valor `Slider` de 4 corresponde a 1.
 
-Este es el archivo de código subyacente que incluya ese código:
+Este es el archivo de código subyacente que incluye ese código:
 
 ```csharp
 public partial class PerlinNoisePage : ContentPage
@@ -165,19 +165,19 @@ public partial class PerlinNoisePage : ContentPage
 }
 ```
 
-Este es el programa que se ejecutan en iOS, Android y plataforma Universal de Windows (UWP) los dispositivos. El ruido fractal se muestra en la mitad superior del lienzo. Es el ruido turbulencias en la parte inferior la mitad:
+Este es el programa que se ejecuta en dispositivos iOS, Android y Plataforma universal de Windows (UWP). El ruido fractal se muestra en la mitad superior del lienzo. El ruido de turbulencias está en la mitad inferior:
 
-[![Ruido de Perlin](noise-images/PerlinNoise.png "ruido de Perlin")](noise-images/PerlinNoise-Large.png#lightbox)
+[![Sonido de Perl](noise-images/PerlinNoise.png "Sonido de Perl")](noise-images/PerlinNoise-Large.png#lightbox)
 
-Los mismos argumentos siempre producen el mismo patrón que comienza en la esquina superior izquierda. Esta coherencia es obvia al ajustar el ancho y alto de la ventana UWP. Como Windows 10, se vuelve a dibujar la pantalla, el patrón en la mitad superior del lienzo sigue siendo el mismo.
+Los mismos argumentos siempre producen el mismo patrón que comienza en la esquina superior izquierda. Esta coherencia es obvia al ajustar el ancho y el alto de la ventana de UWP. Cuando Windows 10 vuelve a dibujar la pantalla, el patrón de la mitad superior del lienzo sigue siendo el mismo.
 
-El patrón de ruido incorpora varios grados de transparencia. La transparencia se vuelve evidente si se establece un color el `canvas.Clear()` llamar. Ese color se convierte en destacado en el patrón. También verá este efecto en la sección [ **combinar varios de los sombreadores**](#combining-multiple-shaders).
+El patrón de ruido incorpora varios grados de transparencia. La transparencia es obvia si establece un color en la `canvas.Clear()` llamada. Ese color se destaca en el patrón. También verá este efecto en la sección [**combinar varios sombreadores**](#combining-multiple-shaders).
 
-Estos patrones de ruido de Perlin rara vez se utilizan por sí mismos. A menudo estén sometidos para mezclar los modos y filtros de color que se describe en los artículos posteriores.
+Estos patrones de ruido de Perlan rara vez se usan. A menudo, están sujetos a los modos de mezcla y los filtros de color descritos en los artículos posteriores.
 
-## <a name="tiling-perlin-noise"></a>Ruido de Perlin disposición en mosaico
+## <a name="tiling-perlin-noise"></a>Colocar en mosaico Perl en el ruido
 
-Dos estático `SKShader` métodos para crear ruido de Perlin también están incluidos en las versiones de sobrecarga. El [ `CreatePerlinNoiseFractalNoise` ](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise(System.Single,System.Single,System.Int32,System.Single,SkiaSharp.SKPointI)) y [ `CreatePerlinNoiseTurbulence` ](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise(System.Single,System.Single,System.Int32,System.Single,SkiaSharp.SKPointI)) sobrecargas tienen más `SKPointI` parámetro:
+Los dos métodos de `SKShader` estáticos para crear el ruido de Perl también existen en las versiones de sobrecarga. Las sobrecargas [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise(System.Single,System.Single,System.Int32,System.Single,SkiaSharp.SKPointI)) y [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise(System.Single,System.Single,System.Int32,System.Single,SkiaSharp.SKPointI)) tienen un parámetro de `SKPointI` adicional:
 
 ```csharp
 public static SKShader CreatePerlinNoiseFractalNoise (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed, SKPointI tileSize);
@@ -185,9 +185,9 @@ public static SKShader CreatePerlinNoiseFractalNoise (float baseFrequencyX, floa
 public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed, SKPointI tileSize);
 ```
 
-El [ `SKPointI` ](xref:SkiaSharp.SKPointI) estructura es la versión de entero de la conocida [ `SKPoint` ](xref:SkiaSharp.SKPoint) estructura. `SKPointI` define `X` y `Y` las propiedades de tipo `int` lugar `float`.
+La estructura [`SKPointI`](xref:SkiaSharp.SKPointI) es la versión entera de la estructura de [`SKPoint`](xref:SkiaSharp.SKPoint) familiar. `SKPointI` define las propiedades `X` y `Y` de tipo `int` en lugar de `float`.
 
-Estos métodos crean un patrón de repetición del tamaño especificado. En cada icono, el borde derecho es el mismo que el borde izquierdo y el borde superior es el mismo que el borde inferior. Esta característica se muestra en el **en mosaico ruido de Perlin** página. El archivo XAML es similar al ejemplo anterior, pero solo tiene un `Stepper` vista para cambiar el `seed` argumento:
+Estos métodos crean un patrón de repetición del tamaño especificado. En cada icono, el borde derecho es el mismo que el borde izquierdo y el borde superior es el mismo que el borde inferior. Esta característica se muestra en la página de **ruido de Perlen en mosaico** . El archivo XAML es similar al ejemplo anterior, pero solo tiene una vista `Stepper` para cambiar el argumento `seed`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -219,7 +219,7 @@ Estos métodos crean un patrón de repetición del tamaño especificado. En cada
 </ContentPage>
 ```
 
-El archivo de código subyacente define una constante para el tamaño del mosaico. El `PaintSurface` controlador crea un mapa de bits de ese tamaño y un `SKCanvas` para dibujar en ese mapa de bits. El `SKShader.CreatePerlinNoiseTurbulence` método crea un sombreador con ese tamaño de mosaico. Este sombreador se dibuja en el mapa de bits:
+El archivo de código subyacente define una constante para el tamaño del mosaico. El controlador de `PaintSurface` crea un mapa de bits de ese tamaño y un `SKCanvas` para dibujar en dicho mapa de bits. El método `SKShader.CreatePerlinNoiseTurbulence` crea un sombreador con ese tamaño de mosaico. Este sombreador se dibuja en el mapa de bits:
 
 ```csharp
 public partial class TiledPerlinNoisePage : ContentPage
@@ -289,7 +289,7 @@ public partial class TiledPerlinNoisePage : ContentPage
 }
 ```
 
-Después de crear el mapa de bits, otro `SKPaint` objeto se usa para crear un patrón de mosaico de mapa de bits mediante una llamada a `SKShader.CreateBitmap`. Tenga en cuenta los dos argumentos de `SKShaderTileMode.Repeat`:
+Una vez creado el mapa de bits, se usa otro objeto `SKPaint` para crear un patrón de mapa de bits en mosaico llamando a `SKShader.CreateBitmap`. Observe los dos argumentos de `SKShaderTileMode.Repeat`:
 
 ```csharp
 paint.Shader = SKShader.CreateBitmap(bitmap,
@@ -297,29 +297,29 @@ paint.Shader = SKShader.CreateBitmap(bitmap,
                                      SKShaderTileMode.Repeat);
 ```
 
-Este sombreador se usa para abarcar el lienzo. Por último, otra `SKPaint` objeto se usa para trazar un rectángulo que muestra el tamaño del mapa de bits original.
+Este sombreador se usa para cubrir el lienzo. Por último, se usa otro objeto `SKPaint` para trazar un rectángulo que muestre el tamaño del mapa de bits original.
 
-Solo el `seed` parámetro es seleccionable desde la interfaz de usuario. Si el mismo `seed` patrón se usa en cada plataforma, mostraría el mismo patrón. Diferentes `seed` valores como resultado patrones diferentes:
+Solo el parámetro `seed` es seleccionable desde la interfaz de usuario. Si se usa el mismo patrón de `seed` en cada plataforma, mostraría el mismo patrón. Los distintos valores de `seed` producen patrones diferentes:
 
-[![En el mosaico de ruido de Perlin](noise-images/TiledPerlinNoise.png "en mosaico ruido de Perlin")](noise-images/TiledPerlinNoise-Large.png#lightbox)
+[![Sonido de Perl en mosaico](noise-images/TiledPerlinNoise.png "Sonido de Perl en mosaico")](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
-El patrón de 200 píxeles cuadrado en la esquina superior izquierda fluye a la perfección en los otros iconos.
+El patrón de cuadrado de 200 píxeles de la esquina superior izquierda fluye sin problemas en los demás iconos.
 
-## <a name="combining-multiple-shaders"></a>Combinar varios de los sombreadores
+## <a name="combining-multiple-shaders"></a>Combinar varios sombreadores
 
-El `SKShader` clase incluye un [ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*) método que crea un sombreador con un color sólido especificado. Este sombreador no es muy útil por sí mismo porque simplemente puede establecer ese color en el `Color` propiedad de la `SKPaint` de objeto y establecer el `Shader` propiedad en null.
+La clase `SKShader` incluye un método [`CreateColor`](xref:SkiaSharp.SKShader.CreateColor*) que crea un sombreador con un color sólido especificado. Este sombreador no es muy útil porque simplemente se puede establecer ese color en la propiedad `Color` del objeto `SKPaint` y establecer la propiedad `Shader` en NULL.
 
-Esto `CreateColor` método resulta útil en otro método que `SKShader` define. Este método es [ `CreateCompose` ](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader)), que combina dos sombreadores. Esta es la sintaxis:
+Este método `CreateColor` resulta útil en otro método que define `SKShader`. Este método es [`CreateCompose`](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader)), que combina dos sombreadores. Esta es la sintaxis:
 
 ```csharp
 public static SKShader CreateCompose (SKShader dstShader, SKShader srcShader);
 ```
 
-El `srcShader` (sombreador de origen) eficazmente se dibuja en la parte superior de la `dstShader` (sombreador de destino). Si el sombreador de origen es un color sólido o un degradado sin transparencia, el sombreador de destino quedarán completamente ocultos.
+El `srcShader` (sombreador de origen) se dibuja realmente encima de la `dstShader` (sombreador de destino). Si el sombreador de origen es un color sólido o un degradado sin transparencia, el sombreador de destino estará completamente oculto.
 
-Un sombreador de ruido de Perlin contiene transparencia. Si dicho sombreado es el origen, se mostrará el sombreador de destino a través de las áreas transparentes.
+Un sombreador de ruido de Perlen contiene transparencia. Si ese sombreador es el origen, el sombreador de destino se mostrará a través de las áreas transparentes.
 
-El **compone ruido de Perlin** página tiene un archivo XAML que es prácticamente idéntico al primero **ruido de Perlin** página. El archivo de código subyacente también es similar. Pero el original **ruido de Perlin** página establece el `Shader` propiedad de `SKPaint` con el sombreador devuelto desde estático `CreatePerlinNoiseFractalNoise` y `CreatePerlinNoiseTurbulence` métodos. Esto **compone ruido de Perlin** página llamadas `CreateCompose` para un sombreador de combinación. El destino es un sombreado azul sólido siguieron `CreateColor`. El origen es un sombreador de ruido de Perlin:
+La página de **ruido de Perl en composición** tiene un archivo XAML que es prácticamente idéntico a la primera página de ruido de **Perlen** . El archivo de código subyacente también es similar. Sin embargo, la página de **ruido de Perl** en el original establece la propiedad `Shader` de `SKPaint` en el sombreador devuelto de los métodos estáticos `CreatePerlinNoiseFractalNoise` y `CreatePerlinNoiseTurbulence`. En esta página de **ruido de Perlen** , se llama a `CreateCompose` para un sombreador de combinación. El destino es un sombreador azul sólido creado mediante `CreateColor`. El origen es un sombreador de ruido de Perlen:
 
 ```csharp
 public partial class ComposedPerlinNoisePage : ContentPage
@@ -382,19 +382,19 @@ public partial class ComposedPerlinNoisePage : ContentPage
 }
 ```
 
-El sombreador de ruido fractal está en la parte superior; el sombreador turbulencias está en la parte inferior:
+El sombreador de ruido fractal está en la parte superior; el sombreador de turbulencias está en la parte inferior:
 
-[![Compone ruido de Perlin](noise-images/ComposedPerlinNoise.png "compone ruido de Perlin")](noise-images/ComposedPerlinNoise-Large.png#lightbox)
+[![Compuestos Perl en el ruido](noise-images/ComposedPerlinNoise.png "Compuestos Perl en el ruido")](noise-images/ComposedPerlinNoise-Large.png#lightbox)
 
-Observe cuánto azul estos sombreadores son a los que se muestra el **ruido de Perlin** página. La diferencia muestra la cantidad de transparencia en los sombreadores de ruido.
+Observe cuántos azules son estos sombreadores que los que se muestran en la página de **ruido de Perlen** . La diferencia ilustra la cantidad de transparencia en los sombreadores de ruido.
 
-También hay una sobrecarga de la [ `CreateCompose` ](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader,SkiaSharp.SKBlendMode)) método:
+También hay una sobrecarga del método [`CreateCompose`](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader,SkiaSharp.SKBlendMode)) :
 
 ```csharp
 public static SKShader CreateCompose (SKShader dstShader, SKShader srcShader, SKBlendMode blendMode);
 ```
 
-El último parámetro es un miembro de la `SKBlendMode` enumeración, una enumeración con 29 miembros que se describe en la siguiente serie de artículos en [ **los modos de composición y blend de SkiaSharp**](../blend-modes/index.md).
+El último parámetro es un miembro de la enumeración `SKBlendMode`, una enumeración con 29 miembros que se describe en la siguiente serie de artículos sobre los [**modos de composición y mezcla de SkiaSharp**](../blend-modes/index.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

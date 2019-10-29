@@ -4,15 +4,15 @@ description: En esta guía se tratará el acceso a archivos en el almacenamiento
 ms.prod: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: c67f58a4b1886d3f89f7bd1639e1cd687d329869
-ms.sourcegitcommit: 4ff181101d76f048b949c9613b2c72cf02618f8b
+ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994817"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020481"
 ---
 # <a name="external-storage"></a>Almacenamiento externo
 
@@ -30,9 +30,9 @@ En esta guía se describen los conceptos y las API de Android que son específic
 
 Hay dos tipos diferentes de archivos que una aplicación puede mantener en el almacenamiento externo:
 
-* Archivos **privados** &ndash; los archivos privados son archivos específicos de la aplicación (pero siguen siendo de lectura mundial y de escritura internacional). Android espera que los archivos privados se almacenen en un directorio específico del almacenamiento externo. Aunque los archivos se denominan "privados", siguen siendo visibles y accesibles para otras aplicaciones en el dispositivo, no se les ofrece ninguna protección especial por parte de Android.
+* Los archivos **privados** &ndash; archivos privados son archivos específicos de la aplicación (pero siguen siendo de lectura mundial y de escritura internacional). Android espera que los archivos privados se almacenen en un directorio específico del almacenamiento externo. Aunque los archivos se denominan "privados", siguen siendo visibles y accesibles para otras aplicaciones en el dispositivo, no se les ofrece ninguna protección especial por parte de Android.
 
-* Archivos **públicos** &ndash; son archivos que no se consideran específicos de la aplicación y están diseñados para ser compartidos libremente.
+* Archivos **públicos** &ndash; estos son archivos que no se consideran específicos de la aplicación y están diseñados para ser compartidos libremente.
 
 Las diferencias entre estos archivos son principalmente conceptuales. Los archivos privados son privados en el sentido de que se consideran una parte de la aplicación, mientras que los archivos públicos son otros archivos que existen en el almacenamiento externo. Android proporciona dos API diferentes para resolver las rutas de acceso a archivos públicos y privados, pero, de lo contrario, se usan las mismas API de .NET para leer y escribir en estos archivos. Se trata de las mismas API que se describen en la sección sobre [lectura y escritura](~/android/platform/files/index.md#reading-or-writing-to-files-on-internal-storage).
 
@@ -46,22 +46,22 @@ La ubicación principal para los archivos externos privados se encuentra llamand
 /storage/emulated/0/Android/data/com.companyname.app/files/
 ```
 
-Este documento hará referencia al directorio de almacenamiento para los archivos privados en el almacenamiento externo como _Private @ no__t-1EXTERNAL @ no__t-2STORAGE_.
+Este documento hará referencia al directorio de almacenamiento para los archivos privados en el almacenamiento externo como _privado\_almacenamiento de\_externo_.
 
-El parámetro de `GetExternalFilesDir()` es una cadena que especifica un _directorio_de la aplicación. Se trata de un directorio diseñado para proporcionar una ubicación estándar para una organización lógica de archivos. Los valores de cadena están disponibles a través de constantes en la clase `Android.OS.Environment`:
+El parámetro para `GetExternalFilesDir()` es una cadena que especifica un _directorio_de la aplicación. Se trata de un directorio diseñado para proporcionar una ubicación estándar para una organización lógica de archivos. Los valores de cadena están disponibles a través de constantes en la clase `Android.OS.Environment`:
 
 | `Android.OS.Environment` | Directorio |
 |-|-|
-| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
-| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
-| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
-| DirectoryDocuments | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/Documents** |
-| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
-| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
-| DirectoryNotifications | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/notifications** |
-| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
-| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
-| DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
+| DirectoryAlarms | **_Private\_EXTERNAL\_Storage_/Alarms** |
+| DirectoryDcim | **_Private\_EXTERNAL\_Storage_/DCIM** |
+| DirectoryDownloads | **_Private\_EXTERNAL\_Storage_/download** |
+| DirectoryDocuments | **_Private\_EXTERNAL\_Storage_/Documents** |
+| DirectoryMovies | **_Private\_EXTERNAL\_Storage_/Movies** |
+| DirectoryMusic | **_Private\_EXTERNAL\_Storage_/Music** |
+| DirectoryNotifications | **_Private\_EXTERNAL\_Storage_/notifications** |
+| DirectoryPodcasts | **_Private\_EXTERNAL\_Storage_/podcasts** |
+| DirectoryRingtones | **_Private\_EXTERNAL\_Storage_/ringtones** |
+| DirectoryPictures | **_Private\_EXTERNAL\_Storage_/Pictures** |
 
 En el caso de los dispositivos que tienen varias particiones de almacenamiento externo, cada partición tendrá un directorio destinado a los archivos privados. El método `Android.Content.Context.GetExternalFilesDirs(string type)` devolverá una matriz de `Java.IO.Files`. Cada objeto representa un directorio privado específico de la aplicación en todos los dispositivos de almacenamiento compartido/externo donde la aplicación puede colocar los archivos que posee.
 
@@ -76,11 +76,11 @@ Los archivos públicos son archivos que existen en el almacenamiento externo y q
 /storage/emulated/0/
 ```
 
-Este documento hará referencia al directorio de almacenamiento para los archivos públicos en el almacenamiento externo como _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_.
+Este documento hará referencia al directorio de almacenamiento de archivos públicos en el almacenamiento externo como _\_público\_almacenamiento externo_.
 
-Android también admite el concepto de directorios de aplicación en _Public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Estos directorios son exactamente iguales que los directorios de la aplicación para `PRIVATE_EXTERNAL_STORAGE` y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un objeto `Java.IO.File` que corresponde a un directorio de aplicación público. El parámetro `directoryType` es un parámetro obligatorio y no puede ser `null`.
+Android también admite el concepto de directorios de aplicación en _almacenamiento público\_externo\__ . Estos directorios son exactamente iguales que los directorios de la aplicación para `PRIVATE_EXTERNAL_STORAGE` y se describen en la tabla de la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un objeto `Java.IO.File` que se corresponda con un directorio de aplicación público. El parámetro `directoryType` es un parámetro obligatorio y no se puede `null`.
 
-Por ejemplo, si se llama a `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`, se devolverá una cadena que será similar a:
+Por ejemplo, al llamar a `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` se devolverá una cadena que será similar a la siguiente:
 
 ```bash
 /storage/emulated/0/Documents
@@ -93,14 +93,14 @@ Por ejemplo, si se llama a `Environment.GetExternalStoragePublicDirectory(Enviro
 
 Una vez que una aplicación de Xamarin. Android ha obtenido la ruta de acceso completa a un archivo, debe utilizar cualquiera de las API estándar de .NET para crear, leer, escribir o eliminar archivos. Esto maximiza la cantidad de código compatible entre plataformas de una aplicación. Sin embargo, antes de intentar acceder a un archivo, una aplicación de Xamarin. Android debe asegurarse de que es posible acceder a ese archivo.
 
-1. **Compruebe el almacenamiento externo** &ndash; en función de la naturaleza del almacenamiento externo, es posible que la aplicación no pueda montarlo y usarlo. Todas las aplicaciones deben comprobar el estado del almacenamiento externo antes de intentar usarlo.
+1. Compruebe la &ndash; de **almacenamiento externo** en función de la naturaleza del almacenamiento externo, es posible que la aplicación no pueda montarla y utilizarla. Todas las aplicaciones deben comprobar el estado del almacenamiento externo antes de intentar usarlo.
 2. **Realice una comprobación de permiso en tiempo de ejecución** &ndash; una aplicación Android debe solicitar permiso al usuario para tener acceso al almacenamiento externo. Esto significa que se debe realizar una solicitud de permiso en tiempo de ejecución antes de cualquier acceso a archivos. Los [permisos de la guía de Xamarin. Android](~/android/app-fundamentals/permissions.md) contienen más detalles sobre los permisos de Android.
 
 A continuación se explica cada una de estas dos tareas.
 
 ### <a name="verifying-that-external-storage-is-available"></a>Comprobando que el almacenamiento externo está disponible
 
-El primer paso antes de escribir en el almacenamiento externo es comprobar que es legible o grabable. La propiedad `Android.OS.Environment.ExternalStorageState` contiene una cadena que identifica el estado del almacenamiento externo. Esta propiedad devolverá una cadena que representa el estado. Esta tabla es una lista de los valores de `ExternalStorageState` que puede devolver `Environment.ExternalStorageState`:
+El primer paso antes de escribir en el almacenamiento externo es comprobar que es legible o grabable. La propiedad `Android.OS.Environment.ExternalStorageState` contiene una cadena que identifica el estado del almacenamiento externo. Esta propiedad devolverá una cadena que representa el estado. Esta tabla es una lista de los valores `ExternalStorageState` que puede devolver `Environment.ExternalStorageState`:
 
 | ExternalStorageState | Descripción  |
 |----------------------|---|
@@ -127,7 +127,7 @@ bool isWriteable = Environment.MediaMounted.Equals(Environment.ExternalStorageSt
 
 Android considera que el acceso al almacenamiento externo es un _permiso peligroso_, lo que normalmente requiere que el usuario conceda su permiso para acceder al recurso. El usuario puede revocar este permiso en cualquier momento.  Esto significa que se debe realizar una solicitud de permiso en tiempo de ejecución antes de cualquier acceso a archivos. A las aplicaciones se les conceden automáticamente permisos para leer y escribir sus propios archivos privados. Es posible que las aplicaciones lean y escriban los archivos privados que pertenecen a otras aplicaciones después de que el usuario [les conceda permisos](~/android/app-fundamentals/permissions.md) .
 
-Todas las aplicaciones de Android deben declarar uno de los dos permisos para el almacenamiento externo en **archivo AndroidManifest. XML** . Para identificar los permisos, se debe agregar uno de los dos elementos `uses-permission` siguientes a **archivo AndroidManifest. XML**:
+Todas las aplicaciones de Android deben declarar uno de los dos permisos para el almacenamiento externo en **archivo AndroidManifest. XML** . Para identificar los permisos, se debe agregar uno de los dos siguientes elementos `uses-permission` a **archivo AndroidManifest. XML**:
 
 ```xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -147,7 +147,7 @@ Los permisos también se pueden agregar mediante la pestaña **manifiesto de And
 
 Los permisos también se pueden agregar mediante la pestaña **manifiesto de Android** del **Panel de propiedades**de la solución:
 
-[![Solution Pad: permisos necesarios para Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Panel de solución: permisos necesarios para Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 

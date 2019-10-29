@@ -4,27 +4,27 @@ description: En las secciones anteriores hemos explorado el desarrollo con tabla
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: a4d6144ad48b9e2f263137fb2474bc9eb278d93f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7eff434c21b5e2330d320f2eb85174dc6fe65b34
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768967"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021940"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajo con tablas en iOS Designer
 
 Los guiones gráficos son una manera WYSIWYG de crear aplicaciones de iOS y se admiten en Visual Studio en Mac y Windows. Para obtener más información sobre los guiones gráficos, consulte el documento [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/index.md) . Los guiones gráficos también permiten editar los diseños de celda *de* la tabla, lo que simplifica el desarrollo con tablas y celdas.
 
-Al configurar las propiedades de una vista de tabla en el diseñador de iOS, hay dos tipos de contenido de celda entre los que puede elegir: Contenido de prototipos **estáticos** o **dinámicos** .
+Al configurar las propiedades de una vista de tabla en el diseñador de iOS, hay dos tipos de contenido de celda entre los que puede elegir: contenido del prototipo **dinámico** o **estático** .
 
 <a name="Prototype_Content" />
 
 ## <a name="dynamic-prototype-content"></a>Contenido del prototipo dinámico
 
-Un `UITableView` objeto con contenido de prototipo suele estar pensado para mostrar una lista de datos en la que la celda de prototipo (o las celdas, como se puede definir más de una) se reutilizan para cada elemento de la lista. No es necesario crear una instancia de las celdas, ya que se obtienen `GetView` en el método llamando `DequeueReusableCell` al método de `UITableViewSource`.
+Un `UITableView` con contenido de prototipo suele estar pensado para mostrar una lista de los datos en los que la celda del prototipo (o las celdas, como puede definir más de una) se reutilizan para cada elemento de la lista. No es necesario crear una instancia de las celdas, se obtienen en el método `GetView` llamando al método `DequeueReusableCell` de su `UITableViewSource`.
 
  <a name="Static_Content" />
 
@@ -38,7 +38,7 @@ Un `UITableView` objeto con contenido de prototipo suele estar pensado para most
 
 El ejemplo StoryboardTable contiene una aplicación de maestro-detalle simple que usa ambos tipos de UITableView en un guion gráfico. En el resto de esta sección se describe cómo crear un pequeño ejemplo de lista de tareas pendientes que tendrá un aspecto similar al siguiente:
 
- [![Pantallas de ejemplo](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
+ [pantallas de ejemplo![](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 La interfaz de usuario se compilará con un guion gráfico y ambas pantallas usarán un UITableView. En la pantalla principal se usa el *contenido del prototipo* para diseñar la fila y en la pantalla de detalles se usa *contenido estático* para crear un formulario de entrada de datos mediante diseños de celda personalizados.
 
@@ -46,9 +46,9 @@ La interfaz de usuario se compilará con un guion gráfico y ambas pantallas usa
 
 Cree una nueva solución en Visual Studio con **(crear) nuevo proyecto... > Aplicación de vista únicaC#()** y llámela _StoryboardTables_.
 
- [![Cuadro de diálogo Crear nuevo proyecto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
+ [![cuadro de diálogo crear un nuevo proyecto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
-La solución se abrirá con algunos C# archivos y un `Main.storyboard` archivo ya creado. Haga doble clic en `Main.storyboard` el archivo para abrirlo en el diseñador de iOS.
+La solución se abrirá con algunos C# archivos y un archivo de`Main.storyboard`ya creado. Haga doble clic en el archivo de `Main.storyboard` para abrirlo en el diseñador de iOS.
 
 <a name="Modifying_the_Storyboard" />
 
@@ -72,23 +72,23 @@ El primer cambio en el guión gráfico es eliminar la vista de detalles existent
 2. Arrastre un **controlador de navegación** y un **controlador de vista de tabla** al guion gráfico desde el cuadro de herramientas. 
 3. Cree un segue desde el controlador de vista raíz para el segundo controlador de vista de tabla que acaba de agregar. Para crear segue, control + arrastre *desde la celda detail* hasta la UITableViewController recién agregada. Elija la opción **Mostrar** en **selección de segue**. 
 4. Seleccione el nuevo segue que creó y asígnele un identificador para hacer referencia a este segue en el código. Haga clic en segue y escriba `TaskSegue` para el **identificador** en el **Panel de propiedades**, como se indica a continuación:    
-  [![Asignar nombres a segue en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
+  [![asignar nombres a segue en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. A continuación, configure las dos vistas de tabla seleccionándola y usando el Panel de propiedades. Asegúrese de seleccionar ver y no ver controlador: puede usar el esquema del documento como ayuda para la selección.
 
-6. Cambiar el controlador de vista raíz para **que sea contenido: Los prototipos** dinámicos (la vista en el superficie de diseño se etiquetará como **contenido del prototipo** ):
+6. Cambie el controlador de vista raíz para que sea **contenido: prototipos dinámicos** (la vista en el superficie de diseño se etiquetará como **contenido del prototipo** ):
 
-    [![Establecer la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
+    [![establecer la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7. Cambie el nuevo **UITableViewController** para que **sea contenido: Celdas**estáticas. 
+7. Cambie el nuevo **UITableViewController** para que sea **contenido: celdas estáticas**. 
 
-8. El nuevo UITableViewController debe tener el nombre de clase y el identificador establecido. Seleccione el controlador de vista y escriba _TaskDetailViewController_ para la **clase** en el **Panel de propiedades** : se creará un `TaskDetailViewController.cs` nuevo archivo en el panel de solución. Escriba **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Se usará más adelante para cargar esta vista en C# el código:  
+8. El nuevo UITableViewController debe tener el nombre de clase y el identificador establecido. Seleccione el controlador de vista y escriba _TaskDetailViewController_ para la **clase** en el **Panel de propiedades** : se creará un nuevo archivo de `TaskDetailViewController.cs` en el panel de solución. Escriba **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Se usará más adelante para cargar esta vista en C# el código:  
 
-    [![Establecer el identificador de guión gráfico](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
+    [![establecer el identificador de guión gráfico](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. La superficie de diseño de guion gráfico debe tener ahora el siguiente aspecto (el título del elemento de navegación del controlador de vista raíz se ha cambiado a "tablón de tareas"):
 
-    [![Superficie de diseño](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
+    [![superficie de diseño](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 <a name="Create_the_UI" />
 
@@ -109,23 +109,23 @@ A continuación, deberá crear un botón que agregará nuevas tareas, como se mu
 Haga lo siguiente: 
 
 - Arrastre un **elemento de botón de barra** del cuadro de herramientas a la _parte derecha de la barra de navegación_.
-- En el **Panel de propiedades**, en **elemento de botón** de **barra, seleccione identificador: Agregar** (para convertirlo en *+* un botón más). 
+- En el **Panel de propiedades**, en **elemento de botón de barra** , seleccione **identificador: agregar** (para convertirlo en un botón *+* más). 
 - Asígnele un nombre para que se pueda identificar en el código en una fase posterior. Tenga en cuenta que deberá asignar al controlador de vista raíz un nombre de clase (por ejemplo, **ItemViewController**) para que pueda establecer el nombre del elemento del botón de barra.
 
 #### <a name="taskdetail-view-controller"></a>Controlador de vista TaskDetail
 
 La vista de detalle requiere mucho más trabajo. Las celdas de la vista de tabla deben arrastrarse hasta la vista y, a continuación, se pueden rellenar con etiquetas, vistas de texto y botones. En la captura de pantalla siguiente se muestra la interfaz de usuario finalizada con dos secciones. Una sección tiene tres celdas, tres etiquetas, dos campos de texto y un modificador, mientras que la segunda sección tiene una celda con dos botones:
 
- [![diseño de vista de detalle](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
+ [![diseño de la vista de detalle](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 Los pasos para crear el diseño completo son:
 
 Seleccione la vista de tabla y abra el **Panel de propiedades**. Actualice las siguientes propiedades:
 
 - **Secciones**: _2_ 
-- **Estilo**: _Agrupados_
-- **Separador**: _Ninguna_
-- **Selección**: _Sin selección_
+- **Estilo**: _agrupado_
+- **Separador**: _ninguno_
+- **Selección**: _no hay selección_
 
 Seleccione la sección superior y, en **propiedades > sección** de la vista de tabla, cambie **las filas** a _3_, como se muestra a continuación:
 
@@ -133,14 +133,14 @@ Seleccione la sección superior y, en **propiedades > sección** de la vista de 
 
 Para cada celda, abra el **Panel de propiedades** y establezca:
 
-- **Estilo**:  _Personalizada_
-- **Identificador**: Elija un identificador único para cada celda (por ejemplo, "_title_", "_notas_", "_Done_").
+- **Estilo**: _personalizado_
+- **Identificador**: elija un identificador único para cada celda (por ejemplo, "_title_", "_notas_", "_Done_").
 - Arrastre los controles necesarios para generar el diseño que se muestra en la captura de pantalla (Coloque **UILabel**, **campo** y **UISwitch** en las celdas correctas y establezca las etiquetas adecuadamente, por ej. Título, notas y listo).
 
 En la segunda sección, establezca **las filas** en _1_ y arrastre el controlador de tamaño inferior de la celda para que sea más alto.
 
 - **Establezca el identificador**en un valor único (por ejemplo, "guardar"). 
-- **Establecer el fondo**:  _Borrar color_ .
+- **Establezca fondo**: _Borrar color_ .
 - Arrastre dos botones a la celda y establezca sus títulos correctamente (por ejemplo, _Guardar_ y _eliminar_), como se muestra a continuación:
 
    [![establecer dos botones en la sección inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
@@ -163,9 +163,9 @@ Hay algunos pasos finales para crear nuestro guion gráfico. En primer lugar, de
 
 El resto del trabajo se realizará en Visual Studio en Mac o Windows con C#. Tenga en cuenta que los nombres de propiedad utilizados en el código reflejan los establecidos en el tutorial anterior.
 
-En primer lugar, queremos crear `Chores` una clase, que proporcionará una manera de obtener y establecer el valor de ID, Name, Notes y el booleano Done, de modo que podamos usar esos valores en toda la aplicación.
+En primer lugar, queremos crear una clase `Chores`, que proporcionará una manera de obtener y establecer el valor de ID, Name, Notes y el booleano Done, de modo que podamos usar esos valores en toda la aplicación.
 
-En la `Chores` clase, agregue el código siguiente:
+En la clase `Chores` agregue el código siguiente:
 
 ```csharp
 public class Chores {
@@ -176,11 +176,11 @@ public class Chores {
   }
 ```
 
-A continuación, cree `RootTableSource` una clase que herede de `UITableViewSource`. 
+A continuación, cree una clase `RootTableSource` que herede de `UITableViewSource`. 
 
-La diferencia entre esta y una vista de tabla que no es Storyboard es `GetView` que el método no necesita crear una instancia de `theDequeueReusableCell` las celdas: el método siempre devolverá una instancia de la celda prototipo (con el identificador coincidente).
+La diferencia entre esta y una vista de tabla que no es Storyboard es que el método `GetView` no necesita crear una instancia de las celdas: `theDequeueReusableCell` método siempre devolverá una instancia de la celda prototipo (con el identificador coincidente).
 
-El código siguiente procede del `RootTableSource.cs` archivo:
+El código siguiente procede del archivo `RootTableSource.cs`:
 
 ```csharp
 public class RootTableSource : UITableViewSource
@@ -217,7 +217,7 @@ public Chores GetItem(int id)
 }
 ```
 
-Para usar la `RootTableSource` clase, cree una nueva colección en el `ItemViewController`constructor de:
+Para usar la clase `RootTableSource`, cree una nueva colección en el constructor del `ItemViewController`:
 
 ```csharp
 chores = new List<Chore> {
@@ -226,7 +226,7 @@ chores = new List<Chore> {
     };
 ```
 
-En `ViewWillAppear` , pase la colección al origen y asígnela a la vista de tabla:
+En `ViewWillAppear` pasar la colección al origen y asignarla a la vista de tabla:
 
 ```csharp
 public override void ViewWillAppear(bool animated)
@@ -239,7 +239,7 @@ public override void ViewWillAppear(bool animated)
 
 Si ejecuta la aplicación ahora, ahora se cargará la pantalla principal y se mostrará una lista de dos tareas. Cuando se toca una tarea, el segue definido por el guion gráfico hará que aparezca la pantalla de detalles, pero no se mostrará ningún dato en ese momento.
 
-Para "enviar un parámetro" en un segue, invalide el `PrepareForSegue` método y establezca las propiedades `DestinationViewController` de `TaskDetailViewController` (en este ejemplo). Se ha creado una instancia de la clase de controlador de vista de destino, pero aún no se muestra al usuario: Esto significa que puede establecer propiedades en la clase pero no modificar los controles de interfaz de usuario:
+Para "enviar un parámetro" en un segue, invalide el método `PrepareForSegue` y establezca las propiedades en el `DestinationViewController` (el `TaskDetailViewController` en este ejemplo). Se ha creado una instancia de la clase de controlador de vista de destino, pero aún no se muestra al usuario: Esto significa que puede establecer propiedades en la clase pero no modificar los controles de interfaz de usuario:
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
@@ -256,7 +256,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
     }
 ```
 
-En `TaskDetailViewController` el`SetTask` método, asigna sus parámetros a las propiedades para que se pueda hacer referencia a ellos en ViewWillAppear. No se pueden modificar las propiedades del `SetTask` control en porque puede que `PrepareForSegue` no exista cuando se llame a:
+En `TaskDetailViewController` el método `SetTask` asigna sus parámetros a las propiedades para que se pueda hacer referencia a ellos en ViewWillAppear. Las propiedades del control no se pueden modificar en `SetTask` porque puede que no existan cuando se llama a `PrepareForSegue`:
 
 ```csharp
 Chore currentTask {get;set;}
@@ -294,7 +294,7 @@ public void DeleteTask(Chores chore)
 }
 ```
 
-A continuación, deberá agregar el controlador de eventos del `TouchUpInside` botón `ViewDidLoad` al método de **TaskDetailViewController.CS**. La `Delegate` referencia de la propiedad `ItemViewController` a se creó específicamente para que podamos `SaveTask` llamar `DeleteTask`a y, que cierran esta vista como parte de su operación:
+A continuación, deberá agregar el controlador de eventos del `TouchUpInside` del botón al método `ViewDidLoad` de **TaskDetailViewController.CS**. La `Delegate` referencia de propiedad al `ItemViewController` se creó específicamente para que podamos llamar a `SaveTask` y `DeleteTask`, que cierran esta vista como parte de su operación:
 
 ```csharp
 SaveButton.TouchUpInside += (sender, e) => {
@@ -307,7 +307,7 @@ SaveButton.TouchUpInside += (sender, e) => {
 DeleteButton.TouchUpInside += (sender, e) => Delegate.DeleteTask(currentTask);
 ```
 
-La última parte de la funcionalidad restante que se va a compilar es la creación de nuevas tareas. En **ItemViewController.CS** , agregue un método que cree nuevas tareas y abra la vista de detalles. Para crear una instancia de una vista de un guion `InstantiateViewController` gráfico, use `Identifier` el método con para esa vista; en este ejemplo, será ' detail ':
+La última parte de la funcionalidad restante que se va a compilar es la creación de nuevas tareas. En **ItemViewController.CS** , agregue un método que cree nuevas tareas y abra la vista de detalles. Para crear una instancia de una vista de un guion gráfico, use el método `InstantiateViewController` con el `Identifier` de esa vista; en este ejemplo, será "detail":
 
 ```csharp
 public void CreateTask () 
@@ -324,7 +324,7 @@ public void CreateTask ()
     }
 ```
 
-Por último, conecte el botón en la barra de navegacióndel método `ViewDidLoad` de ItemViewController.CS para llamarlo:
+Por último, conecte el botón en la barra de navegación del método `ViewDidLoad` de **ItemViewController.CS**para llamarlo:
 
 ```csharp
 AddButton.Clicked += (sender, e) => CreateTask ();
@@ -332,14 +332,14 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Esto completa el ejemplo de guión gráfico: la aplicación finalizada tiene el siguiente aspecto:
 
-[![Aplicación finalizada](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
+[![aplicación finalizada](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 En el ejemplo se muestra:
 
 - Crear una tabla con contenido de prototipo donde se definen las celdas para reutilizarlas para mostrar listas de datos. 
 - Crear una tabla con contenido estático para crear un formulario de entrada. Esto incluye cambiar el estilo de tabla y agregar secciones, celdas y controles de interfaz de usuario. 
-- Cómo crear un segue e invalidar el `PrepareForSegue` método para notificar a la vista de destino los parámetros que requiere. 
-- Cargar vistas de guion gráfico directamente `Storyboard.InstantiateViewController` con el método.
+- Cómo crear un segue e invalidar el método de `PrepareForSegue` para notificar a la vista de destino los parámetros que requiere. 
+- Cargar vistas de guion gráfico directamente con el método `Storyboard.InstantiateViewController`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

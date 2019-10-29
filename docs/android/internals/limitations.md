@@ -1,17 +1,17 @@
 ---
-title: Xamarin. Android frente a Diferencias de escritorio en el tiempo de ejecución de mono
+title: 'Xamarin. Android frente al escritorio: diferencias en el tiempo de ejecución de mono'
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8fe0e3a9adedb161c527ccdf6d6c3a7cd06a1d86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757786"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027837"
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -25,16 +25,16 @@ Estas son las limitaciones de Xamarin. Android en comparación con el escritorio
 
 ## <a name="limited-java-generation-support"></a>Compatibilidad con la generación limitada de Java
 
-Los contenedores a los que se puede llamar de [Android](~/android/platform/java-integration/android-callable-wrappers.md) deben generarse para que el código Java llame a código administrado. *De forma predeterminada*, los contenedores a los que se puede llamar de Android solo contendrán (ciertos) métodos y constructores declarados que [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)invalidan un método Java Virtual (es decir, `Attribute`tiene) o implementan un método de interfaz Java (la interfaz también tiene).
+Los contenedores a los que se puede llamar de [Android](~/android/platform/java-integration/android-callable-wrappers.md) deben generarse para que el código Java llame a código administrado. *De forma predeterminada*, los contenedores a los que se puede llamar de Android solo contendrán (ciertos) constructores y métodos declarados que invalidan un método Java Virtual (es decir, tiene [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)) o implementan un método de interfaz de Java (la interfaz del mismo modo tiene `Attribute`).
   
-Antes de la versión 4,1, no se podía declarar ningún método adicional. Con la versión 4,1, [se `Export` pueden `ExportField` usar los atributos personalizados y para declarar métodos y campos de Java en el contenedor de Android al que se puede llamar](~/android/platform/java-integration/working-with-jni.md).
+Antes de la versión 4,1, no se podía declarar ningún método adicional. Con la versión 4,1, [se pueden usar los atributos personalizados `Export` y `ExportField` para declarar métodos y campos de Java en el contenedor de Android al que se puede llamar](~/android/platform/java-integration/working-with-jni.md).
 
 ### <a name="missing-constructors"></a>Faltan constructores
 
-Los constructores siguen siendo complicados [`ExportAttribute`](xref:Java.Interop.ExportAttribute) , a menos que se use. El algoritmo para generar constructores de contenedor a los que se puede llamar de Android es que se emitirá un constructor de Java si:
+Los constructores siguen siendo complicados, a menos que se use [`ExportAttribute`](xref:Java.Interop.ExportAttribute) . El algoritmo para generar constructores de contenedor a los que se puede llamar de Android es que se emitirá un constructor de Java si:
 
 1. Hay una asignación de Java para todos los tipos de parámetro
-2. La clase base declara el mismo constructor &ndash; esto es necesario porque el contenedor de Android al que se puede llamar *debe* invocar el constructor de clase base correspondiente; no se pueden usar argumentos predeterminados (ya que no hay ninguna manera fácil de determinar qué valores debe usarse en Java).
+2. La clase base declara el mismo constructor &ndash; es necesario porque el contenedor de Android al que se puede llamar *debe* invocar el constructor de clase base correspondiente; no se pueden usar argumentos predeterminados (ya que no hay ninguna manera fácil de determinar qué valores se deben usar en Java).
 
 Por ejemplo, considere la siguiente clase:
 
@@ -47,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Aunque parece perfectamente lógico, el contenedor de Android al que se puede llamar resultante *en las compilaciones de versión* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo [`Context.StartService`](xref:Android.Content.Context.StartService*), se producirá un error:
+Aunque parece perfectamente lógico, el contenedor de Android al que se puede llamar resultante *en las compilaciones de versión* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo, [`Context.StartService`](xref:Android.Content.Context.StartService*), se producirá un error:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -70,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-La solución consiste en declarar un constructor predeterminado, adornarlo con `ExportAttribute`y [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)establecer: 
+La solución consiste en declarar un constructor predeterminado, adornarlo con el `ExportAttribute`y establecer el [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString): 
 
 ```csharp
 [Service]
@@ -88,7 +88,7 @@ class MyIntentService : IntentService {
 
 Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes limitaciones:
 
-- Los tipos genéricos no `[Export]` pueden `[ExportField`usar o]. Si intenta hacerlo, se generará un `XA4207` error.
+- Los tipos genéricos no pueden usar `[Export]` ni `[ExportField`]. Si intenta hacerlo, se generará un error de `XA4207`.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -101,7 +101,7 @@ Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes li
     }
     ```
 
-- Los métodos genéricos no `[Export]` pueden `[ExportField]`usar ni:
+- Los métodos genéricos no pueden usar `[Export]` o `[ExportField]`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -116,7 +116,7 @@ Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes li
     }
     ```
 
-- `[ExportField]`no se puede usar en métodos que devuelven `void`:
+- no se puede usar `[ExportField]` en métodos que devuelven `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -153,5 +153,5 @@ Tenemos algunas clases que no aplican esta limitación, pero se ajustan de forma
 - [Contenedores que se pueden llamar de Android](~/android/platform/java-integration/android-callable-wrappers.md)
 - [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [ExportAttribute](xref:Java.Interop.ExportAttribute)
-- [SuperString](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
+- [Supercadena](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
 - [RegisterAttribute](xref:Android.Runtime.RegisterAttribute)

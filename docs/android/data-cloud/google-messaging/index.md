@@ -4,15 +4,15 @@ description: Esta sección contiene guías que describen cómo implementar aplic
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2018
-ms.openlocfilehash: bfcc526d1787caede4361030f5bf6718a59672b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e0d257cd5d443c77fd0a8132d9cd31ec572182aa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754391"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023529"
 ---
 # <a name="google-messaging"></a>Mensajería de Google
 

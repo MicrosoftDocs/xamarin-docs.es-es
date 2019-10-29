@@ -3,15 +3,15 @@ title: Instalación y requisitos del inspector
 description: En este documento se describe cómo instalar el Xamarin Inspector y se describen las plataformas de sistema operativo, IDE y de aplicación compatibles.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 1273a51d29d7abcbecb9b19ae42e111db8ccc06c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292302"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029692"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalación y requisitos del inspector
 
@@ -75,7 +75,7 @@ Visual Studio para Mac
 - **Visual Studio > Acerca de Visual Studio > Mostrar detalles > copiar información**
 - Pegar en informe de errores
 
-Visual Studio
+Programa para la mejora
 
 - **Ayuda > Acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
@@ -86,7 +86,7 @@ Adjunte siempre los archivos de registro de cliente del IDE y del inspector.
 
 Cliente de inspector
 
-- Macintosh`~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 1.4. x también ofrece la posibilidad de seleccionar el archivo de registro en Finder (macOS) o en el explorador (Windows) directamente desde el menú principal:
@@ -97,7 +97,7 @@ Visual Studio para Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
 
-Visual Studio
+Programa para la mejora
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
 - El contenido del panel de **salida** de Visual Studio también puede ser informativo.
@@ -114,8 +114,8 @@ En el caso de Android e iOS, es fundamental saber en qué dispositivo se está d
 
 - Nombre del dispositivo tal como se muestra en el IDE
 - Versión del sistema operativo del dispositivo
-- Android: Comprobar que se usa un emulador x86
-- Android: ¿Qué plataforma de emulador usa? ¿Es el emulador de Google? ¿Android Emulator de Visual Studio? ¿Xamarin Android Player?
+- Android: comprobar que se usa un emulador x86
+- Android: ¿qué plataforma de emulador usa? ¿Es el emulador de Google? ¿Android Emulator de Visual Studio? ¿Xamarin Android Player?
 - ¿La aplicación que está depurando aparece correctamente y funciona en el dispositivo?
 - ¿El dispositivo tiene conectividad de red (consulte a través del explorador Web)?
 
