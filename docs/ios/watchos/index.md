@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a varias guías que describen có
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 36e3bec3c616f9aa3efcc5bec25647d7e5ef3162
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3e572e22e6c02e5401ad0e2c2293d601660ac08f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292256"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030141"
 ---
 # <a name="building-watchos-apps-with-xamarin"></a>Compilación de aplicaciones de watchos con Xamarin
 

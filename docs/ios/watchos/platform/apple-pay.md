@@ -4,15 +4,15 @@ description: En este artículo se describen las mejoras que Apple ha realizado p
 ms.prod: xamarin
 ms.assetid: 32FF5D21-C252-485D-83AC-A7E592237962
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 579f2afd8e52251973900f35ef91ac086adf7603
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 372b034b7e14f3cfaadde8fe5a5370e368f161db
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768647"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030124"
 ---
 # <a name="apple-pay-on-watchos-in-xamarin"></a>Apple Pay en watchos en Xamarin
 
@@ -26,7 +26,7 @@ Con iOS 10 y watchos 3, se han agregado varias API nuevas que funcionan con iOS 
 
 ## <a name="passkit-framework-enhancements"></a>Mejoras de PassKit Framework
 
-En iOS 10, el marco de trabajo de PassKit se ha ampliado para admitir `UIKit` Apple Pay fuera de y para permitir que los emisores de tarjetas presenten sus tarjetas dentro de sus aplicaciones. 
+En iOS 10, el marco de trabajo de PassKit se ha ampliado para admitir Apple Pay fuera de `UIKit` y permitir que los emisores de tarjetas presenten sus tarjetas en sus aplicaciones. 
 
 ### <a name="supporting-apple-pay-outside-of-uikit"></a>Compatibilidad Apple Pay fuera de UIKit
 
@@ -36,13 +36,13 @@ Mediante el uso de [PKPaymentAuthorizationController](https://developer.apple.co
 
 Con iOS 10 y watchos 3, se han agregado nuevas características al marco PassKit que permiten a los emisores de tarjetas presentar sus tarjetas de pago desde sus propias aplicaciones. El desarrollador puede Agregar un `PKPaymentButtonTypeInStore` botón a la interfaz de usuario de la aplicación que mostrará un botón Apple Pay de una tarjeta.
 
-El `PresentPaymentPass` método de la clase [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) también se puede usar para mostrar la tarjeta mediante programación.
+El método `PresentPaymentPass` de la clase [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) también se puede usar para mostrar la tarjeta mediante programación.
 
 ## <a name="new-payment-network-support"></a>Nueva compatibilidad con redes de pago
 
 Novedad de iOS 10 y watchos 3, una aplicación puede admitir automáticamente una nueva red de pago cuando está disponible sin que el desarrollador tenga que modificar, volver a compilar la aplicación y volver a enviarla a la tienda de aplicaciones.
 
-El nuevo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) de la `PKPaymentNetwork` clase permite a una aplicación detectar las redes disponibles en el dispositivo del usuario en tiempo de ejecución. Además, la propiedad [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) se ha expandido para tomar el nombre del proveedor de pago como argumento. Con estos métodos, una aplicación puede admitir automáticamente cualquier red que admita el proveedor de pagos.
+El nuevo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) de la clase `PKPaymentNetwork` permite a una aplicación detectar las redes disponibles en el dispositivo del usuario en tiempo de ejecución. Además, la propiedad [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) se ha expandido para tomar el nombre del proveedor de pago como argumento. Con estos métodos, una aplicación puede admitir automáticamente cualquier red que admita el proveedor de pagos.
 
 Para obtener más información, consulte la [configuración de Apple Pay](~/ios/platform/apple-pay.md) y la [Guía de Apple Pay](https://developer.apple.com/apple-pay/)de Apple.
 
