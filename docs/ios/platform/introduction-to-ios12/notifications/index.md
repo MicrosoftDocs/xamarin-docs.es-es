@@ -4,15 +4,15 @@ description: 'Este documento contiene vínculos a guías que describen cómo usa
 ms.prod: xamarin
 ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 75a3505294b612789a2e2fc2226e6d6f811f80e9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43cf072d9d4c0ced5bcfa91441ddf980ec4f818f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291252"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031924"
 ---
 # <a name="notifications-in-ios-12"></a>Notificaciones en iOS 12
 

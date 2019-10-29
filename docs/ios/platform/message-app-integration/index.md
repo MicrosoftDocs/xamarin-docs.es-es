@@ -4,15 +4,15 @@ description: En estos artículos se muestra cómo incluir una extensión de apli
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2016
-ms.openlocfilehash: cee6f5a6f9815c348f5446c6a75c2b1a0f4c10c6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 44b82118b03efecaf04c85cee9d7d77960180e3b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769594"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031691"
 ---
 # <a name="message-app-integration-in-xamarinios"></a>Integración de aplicaciones de mensajes en Xamarin. iOS
 

@@ -4,26 +4,26 @@ description: En este documento se proporcionan vínculos a guías en las que se 
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/13/2017
-ms.openlocfilehash: 59ac5a4f9949f1e65e67b9629c43ddb4b822bf43
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c478437a9c84475e8c31484523db16336f8808e6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290059"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029931"
 ---
 # <a name="binding-mac-libraries-for-xamarinmac"></a>Enlace de bibliotecas de Mac para Xamarin. Mac
 
 Siga estos vínculos para obtener información sobre el enlace de bibliotecas de Objective-C en Xamarin. Mac:
 
 - [**Información general**](~/cross-platform/macios/binding/overview.md) -
-  Describe cómo funciona el enlace.
-- [**Enlace de bibliotecas de Objective-C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Instrucciones sobre cómo enlazar bibliotecas de Objective-C para su uso en proyectos de Xamarin.
-- [**Guía de referencia de definiciones de tipos**](~/cross-platform/macios/binding/binding-types-reference.md) -
-  Describe todos los atributos disponibles para enlazar a los autores con el fin de controlar el proceso de generación de enlaces.
+  describe cómo funciona el enlace.
+- [**Enlace de bibliotecas de Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  instrucciones sobre cómo enlazar bibliotecas de Objective-c para su uso en proyectos de Xamarin.
+- [**Guía de referencia de definición de tipos**](~/cross-platform/macios/binding/binding-types-reference.md) -
+  describe todos los atributos disponibles para enlazar autores para impulsar el proceso de generación de enlaces.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

@@ -4,15 +4,15 @@ description: En este artículo se describen los recursos que se pueden usar para
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 570fd554b375c4911028faf412c3c20bac1881aa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7d68687208c07ba551a4e142abb23ec97a24d20
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286535"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032112"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Sugerencias para la solución de problemas de iOS 11 y Xamarin. iOS
 
@@ -26,4 +26,4 @@ Si cree que ha encontrado un error en Xamarin. iOS, informe del problema [en git
 
 ## <a name="forums-and-stackoverflow"></a>Foros y StackOverflow
 
-Para obtener respuestas a preguntas específicas sobre el uso o la implementación de una característica específica de iOS 11 en Xamarin. iOS, el foro de Xamarin [iOS](http://forums.xamarin.com/categories/ios) proporciona una gran cantidad de información. [Stackoverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) es otra buena fuente de información que ayuda a los usuarios.
+Para obtener respuestas a preguntas específicas sobre el uso o la implementación de una característica específica de iOS 11 en Xamarin. iOS, el foro de Xamarin [iOS](https://forums.xamarin.com/categories/ios) proporciona una gran cantidad de información. [Stackoverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) es otra buena fuente de información que ayuda a los usuarios.

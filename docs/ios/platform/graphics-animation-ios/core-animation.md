@@ -4,15 +4,15 @@ description: En este artículo se examina el marco de animación básico, en el 
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60bab56440fc7227e14d31875a8b6108cd1a86f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753074"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032481"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animación básica en Xamarin. iOS
 
@@ -46,9 +46,9 @@ En esta sección se describen las características de animación de UIKit, entre
 
 ### <a name="view-controller-transitions"></a>Transiciones de controladores de vistas
 
- `UIViewController`proporciona compatibilidad integrada para la transición entre controladores de vista a través del `PresentViewController` método. Cuando se `PresentViewController`usa, la transición al segundo controlador se puede animar opcionalmente.
+ `UIViewController` proporciona compatibilidad integrada para la transición entre controladores de vista a través del método `PresentViewController`. Cuando se usa `PresentViewController`, la transición al segundo controlador se puede animar opcionalmente.
 
-Por ejemplo, considere una aplicación con dos controladores, donde tocar un botón en el primer controlador llama `PresentViewController` a para mostrar un segundo controlador. Para controlar qué animación de transición se usa para mostrar el segundo controlador, simplemente establezca [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) su propiedad como se muestra a continuación:
+Por ejemplo, considere una aplicación con dos controladores, donde tocar un botón en el primer controlador llama a `PresentViewController` para mostrar un segundo controlador. Para controlar qué animación de transición se usa para mostrar el segundo controlador, simplemente establezca su propiedad [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) como se muestra a continuación:
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
@@ -56,27 +56,27 @@ SecondViewController vc2 = new SecondViewController {
 };
 ```
 
-En este caso, `PartialCurl` se usa una animación, aunque hay varias otras disponibles, entre las que se incluyen:
+En este caso, se usa una animación `PartialCurl`, aunque hay varias otras disponibles, entre las que se incluyen:
 
-- `CoverVertical`: Se desliza hacia arriba desde la parte inferior de la pantalla.
-- `CrossDissolve`: La vista antigua atenúa & la nueva vista se atenúa.
-- `FlipHorizontal`: Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
+- `CoverVertical`: se desliza hacia arriba desde la parte inferior de la pantalla.
+- `CrossDissolve`: la vista anterior se atenúa & la nueva vista se atenúa
+- `FlipHorizontal`: volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
 
-Para animar la transición, `true` pase como el segundo argumento `PresentViewController`a:
+Para animar la transición, pase `true` como el segundo argumento a `PresentViewController`:
 
 ```csharp
 PresentViewController (vc2, true, null);
 ```
 
-En la captura de pantalla siguiente se muestra el aspecto de `PartialCurl` la transición para el caso:
+En la captura de pantalla siguiente se muestra el aspecto de la transición para el caso `PartialCurl`:
 
- ![](core-animation-images/06-view-transitions.png "En esta captura de pantalla se muestra la transición PartialCurl")
+ ![](core-animation-images/06-view-transitions.png "This screenshot shows the PartialCurl transition")
 
 ### <a name="view-transitions"></a>Ver transiciones
 
 Además de las transiciones entre controladores, UIKit también admite la animación de transiciones entre vistas para intercambiar una vista para otra.
 
-Por ejemplo, suponga que tiene un controlador con `UIImageView`, donde el punteo de la imagen debe mostrar `UIImageView`un segundo. Para animar la supervista de la vista de imagen a la transición a la segunda vista de imagen `UIView.Transition`es tan sencilla como `toView` llamar `fromView` a, pasándole y como se muestra a continuación:
+Por ejemplo, suponga que tiene un controlador con `UIImageView`, donde el punteo de la imagen debe mostrar un segundo `UIImageView`. Para animar la supervista de la vista de imagen a la transición a la segunda vista de imagen es tan sencilla como llamar a `UIView.Transition`, pasándole el `toView` y `fromView` como se muestra a continuación:
 
 ```csharp
 UIView.Transition (
@@ -88,24 +88,24 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition`también toma un `duration` parámetro que controla durante cuánto tiempo se ejecuta la animación, [`options`](xref:UIKit.UIViewAnimationOptions) así como para especificar elementos como la animación que se va a usar y la función de aceleración. Además, puede especificar un controlador de finalización al que se llamará cuando se complete la animación.
+`UIView.Transition` también toma un parámetro `duration` que controla cuánto tiempo se ejecuta la animación, así como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar elementos como la animación que se va a usar y la función de aceleración. Además, puede especificar un controlador de finalización al que se llamará cuando se complete la animación.
 
-En la captura de pantalla siguiente se muestra la transición animada entre `TransitionFlipFromTop` las vistas de imagen cuando se usa:
+En la captura de pantalla siguiente se muestra la transición animada entre las vistas de imagen cuando se usa `TransitionFlipFromTop`:
 
- ![](core-animation-images/07-animated-transition.png "En esta captura de pantalla se muestra la transición animada entre las vistas de imagen cuando se usa TransitionFlipFromTop")
+ ![](core-animation-images/07-animated-transition.png "This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used")
 
 ### <a name="view-property-animations"></a>Ver animaciones de propiedades
 
-UIKit admite animar una variedad de propiedades de `UIView` la clase de forma gratuita, entre las que se incluyen:
+UIKit admite animar una variedad de propiedades en la clase de `UIView` de forma gratuita, entre las que se incluyen:
 
 - Fotograma
 - Límites
 - Centrar
 - Alpha
-- Transformación
+- Transform
 - Color
 
-Estas animaciones se producen implícitamente mediante la especificación de los cambios `NSAction` de propiedad en un delegado `UIView.Animate` que se pasa al método estático. Por ejemplo, el código siguiente anima el punto central de un `UIImageView`:
+Estas animaciones se producen implícitamente mediante la especificación de los cambios de propiedad en un `NSAction` delegado que se pasa al método de `UIView.Animate` estático. Por ejemplo, el código siguiente anima el punto central de un `UIImageView`:
 
 ```csharp
 pt = imgView.Center;
@@ -125,27 +125,27 @@ UIView.Animate (
 
 Esto da como resultado una imagen que se anima hacia atrás y hacia delante en la parte superior de la pantalla, como se muestra a continuación:
 
- ![](core-animation-images/08-animate-center.png "Imagen que se anima hacia atrás y hacia delante en la parte superior de la pantalla como salida")
+ ![](core-animation-images/08-animate-center.png "An image animating back and forth across the top of the screen as the output")
 
-Al igual que `Transition` con el `Animate` método, permite establecer la duración, junto con la función de aceleración. En este ejemplo también se `UIViewAnimationOptions.Autoreverse` usa la opción, que hace que la animación se anime desde el valor hacia el inicial. Sin embargo, el código también establece `Center` de nuevo en su valor inicial en un controlador de finalización. Mientras que una animación está interpolando valores de propiedad a lo largo del tiempo, el valor real del modelo de la propiedad siempre es el valor final que se ha establecido. En este ejemplo, el valor es un punto situado cerca del lado derecho de la supervista. Sin establecer `Center` en el punto inicial, que es donde se completa la animación debido `Autoreverse` a que se establece, la imagen se ajustará al lado derecho una vez finalizada la animación, como se muestra a continuación:
+Al igual que con el método `Transition`, `Animate` permite establecer la duración, junto con la función de aceleración. En este ejemplo también se usa la opción `UIViewAnimationOptions.Autoreverse`, que hace que la animación se anime desde el valor al inicial. Sin embargo, el código también establece el `Center` de nuevo en su valor inicial en un controlador de finalización. Mientras que una animación está interpolando valores de propiedad a lo largo del tiempo, el valor real del modelo de la propiedad siempre es el valor final que se ha establecido. En este ejemplo, el valor es un punto situado cerca del lado derecho de la supervista. Sin establecer la `Center` en el punto inicial, que es donde se completa la animación debido al `Autoreverse` que se establece, la imagen se ajustará al lado derecho una vez completada la animación, como se muestra a continuación:
 
- ![](core-animation-images/09-animation-complete.png "Si no se establece el centro en el punto inicial, la imagen se volverá a ajustar al lado derecho una vez completada la animación.")
+ ![](core-animation-images/09-animation-complete.png "Without setting the Center to the initial point, the image would snap back to the right side after the animation completes")
 
 ## <a name="using-core-animation"></a>Usar la animación básica
 
- `UIView`las animaciones permiten una gran cantidad de capacidad y deben usarse si es posible debido a la facilidad de implementación. Como se mencionó anteriormente, las animaciones de UIView usan el marco de animaciones básicas. Sin embargo, algunas cosas no se pueden `UIView` realizar con animaciones, como la animación de propiedades adicionales que no se pueden animar con una vista o la interpolación a lo largo de una ruta de acceso no lineal. En casos en los que necesite un control más preciso, la animación básica también puede usarse directamente.
+ `UIView` animaciones permiten una gran cantidad de capacidad y deben usarse si es posible debido a la facilidad de implementación. Como se mencionó anteriormente, las animaciones de UIView usan el marco de animaciones básicas. Sin embargo, algunas cosas no se pueden hacer con `UIView` animaciones, como la animación de propiedades adicionales que no se pueden animar con una vista o la interpolación a lo largo de un trazado no lineal. En casos en los que necesite un control más preciso, la animación básica también puede usarse directamente.
 
 ### <a name="layers"></a>Capas
 
-Al trabajar con la animación básica, la animaciónse produce a través de capas `CALayer`, que son de tipo. Una capa es conceptualmente similar a una vista en que hay una jerarquía de capas, de forma muy parecida a como hay una jerarquía de vistas. En realidad, las vistas inversas de capas, con la vista que agrega compatibilidad para la interacción con el usuario. Puede tener acceso a la capa de cualquier vista a través de `Layer` la propiedad de la vista. De hecho, el contexto utilizado en `Draw` el método `UIView` de se crea realmente a partir de la capa. Internamente, la capa de `UIView` respaldo de tiene su delegado establecido en la propia vista, que es lo que llama `Draw`a. Por tanto, al dibujar `UIView`en un, realmente está dibujando en su capa.
+Al trabajar con la animación básica, la animación se produce a través de *capas*, que son de tipo `CALayer`. Una capa es conceptualmente similar a una vista en que hay una jerarquía de capas, de forma muy parecida a como hay una jerarquía de vistas. En realidad, las vistas inversas de capas, con la vista que agrega compatibilidad para la interacción con el usuario. Puede tener acceso a la capa de cualquier vista a través de la propiedad `Layer` de la vista. De hecho, el contexto utilizado en `Draw` método de `UIView` se crea realmente a partir de la capa. Internamente, la capa de respaldo de una `UIView` tiene su delegado establecido en la propia vista, que es lo que llama a `Draw`. Por tanto, al dibujar en una `UIView`, realmente está dibujando en su capa.
 
 Las animaciones de capas pueden ser implícitas o explícitas. Las animaciones implícitas son declarativas. Solo tiene que declarar qué propiedades de capa deben cambiar y la animación funciona. Por otro lado, las animaciones explícitas se crean a través de una clase de animación que se agrega a una capa. Las animaciones explícitas permiten un control adicional sobre cómo se crea una animación. En las secciones siguientes se profundiza en animaciones implícitas y explícitas con mayor profundidad.
 
 ### <a name="implicit-animations"></a>Animaciones IMPLÍCITAS
 
-Una manera de animar las propiedades de una capa es a través de una animación implícita. `UIView`las animaciones crean animaciones implícitas. Sin embargo, también puede crear animaciones implícitas directamente en una capa.
+Una manera de animar las propiedades de una capa es a través de una animación implícita. `UIView` animaciones crean animaciones implícitas. Sin embargo, también puede crear animaciones implícitas directamente en una capa.
 
-Por ejemplo, el código siguiente establece un de una `Contents` capa a partir de una imagen, establece un ancho y un color de borde, y agrega la capa como una subcapa de la capa de la vista:
+Por ejemplo, el código siguiente establece el `Contents` de una capa a partir de una imagen, establece un ancho y un color de borde, y agrega la capa como una subcapa de la capa de la vista:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -164,7 +164,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Para agregar una animación implícita para la capa, solo tiene que ajustar los cambios `CATransaction`de propiedad en un. Esto permite animar las propiedades que no se pueden animar con una animación de vista `BorderWidth` , `BorderColor` como y, como se muestra a continuación:
+Para agregar una animación implícita para la capa, solo tiene que ajustar los cambios de propiedad en un `CATransaction`. Esto permite animar las propiedades que no se pueden animar con una animación de vista, como el `BorderWidth` y `BorderColor` como se muestra a continuación:
 
 ```csharp
 public override void ViewDidAppear (bool animated)
@@ -180,21 +180,21 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Este código también anima el de `Position`la capa, que es la ubicación del punto de anclaje de la capa, medido desde la parte superior izquierda de las coordenadas del supernivel. El punto de anclaje de una capa es un punto normalizado en el sistema de coordenadas de la capa.
+Este código también anima el `Position`de la capa, que es la ubicación del punto de anclaje de la capa, medido desde la parte superior izquierda de las coordenadas del supernivel. El punto de anclaje de una capa es un punto normalizado en el sistema de coordenadas de la capa.
 
 En la ilustración siguiente se muestra la posición y el punto de anclaje:
 
- ![](core-animation-images/10-postion-anchorpt.png "En esta ilustración se muestra la posición y el punto de anclaje")
+ ![](core-animation-images/10-postion-anchorpt.png "This figure shows the position and anchor point")
 
-Cuando se ejecuta el ejemplo, `Position` `BorderWidth` y `BorderColor` se animan como se muestra en las siguientes capturas de pantallas:
+Cuando se ejecuta el ejemplo, el `Position`, el `BorderWidth` y el `BorderColor` se animan como se muestra en las siguientes capturas de pantallas:
 
- ![](core-animation-images/11-implicit-animation.png "Cuando se ejecuta el ejemplo, la posición, BorderWidth y BorderColor se animan como se muestra")
+ ![](core-animation-images/11-implicit-animation.png "When the example is run, the Position, BorderWidth and BorderColor animate as shown")
 
 ### <a name="explicit-animations"></a>Animaciones explícitas
 
 Además de las animaciones IMPLÍCITAS, la animación básica incluye una variedad de clases que heredan de `CAAnimation` que permiten encapsular animaciones que se agregan explícitamente a una capa. Estos permiten un control más preciso sobre las animaciones, como la modificación del valor inicial de una animación, la agrupación de animaciones y la especificación de fotogramas clave para permitir trazados no lineales.
 
-En el código siguiente se muestra un ejemplo de una animación explícita `CAKeyframeAnimation` utilizando un para la capa mostrada anteriormente (en la sección de animación implícita):
+En el código siguiente se muestra un ejemplo de una animación explícita mediante una `CAKeyframeAnimation` para la capa mostrada anteriormente (en la sección animación implícita):
 
 ```csharp
 public override void ViewDidAppear (bool animated)
@@ -225,11 +225,11 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Este código cambia el `Position` de la capa mediante la creación de una ruta de acceso que se usa para definir una animación de fotogramas clave. Observe que la capa `Position` está establecida en el valor final de la `Position` de la animación. Sin esto, el nivel volverá repentinamente a su `Position` antes de la animación porque la animación solo cambia el valor de presentación y no el valor de modelo real. Al establecer el valor del modelo en el valor final de la animación, la capa permanece en su lugar al final de la animación.
+Este código cambia el `Position` de la capa mediante la creación de una ruta de acceso que se usa para definir una animación de fotogramas clave. Observe que la `Position` de la capa está establecida en el valor final de la `Position` de la animación. Sin esto, el nivel volverá repentinamente a su `Position` antes de la animación, ya que la animación solo cambia el valor de presentación y no el valor real del modelo. Al establecer el valor del modelo en el valor final de la animación, la capa permanece en su lugar al final de la animación.
 
 Las siguientes capturas de pantallas muestran el nivel que contiene la imagen que se anima a través de la ruta de acceso especificada:
 
- ![](core-animation-images/12-explicit-animation.png "En esta captura de pantalla se muestra el nivel que contiene la imagen que se anima a través de la ruta de acceso especificada")
+ ![](core-animation-images/12-explicit-animation.png "This screenshot shows the layer containing the image animating through the specified path")
 
 ## <a name="summary"></a>Resumen
 

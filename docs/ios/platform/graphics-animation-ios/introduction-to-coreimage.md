@@ -4,15 +4,15 @@ description: La imagen principal es un nuevo marco de trabajo incluido en iOS 5 
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ffaa6553830a64589818c991e8f729ff7232e367
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5525373d9bf904f67bdf02d7ec8df72e7bbd3f55
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752832"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032368"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen básica en Xamarin. iOS
 
@@ -46,7 +46,7 @@ var ciImage = CIImage.FromCGImage(image.CGImage);
 CIFeature[] features = detector.FeaturesInImage(ciImage);
 ```
 
-La matriz de características se rellenará con `CIFaceFeature` objetos (si se detectaron rostros). Hay un para `CIFaceFeature` cada una de las caras. `CIFaceFeature`tiene las siguientes propiedades:
+La matriz de características se rellenará con objetos `CIFaceFeature` (si se detectaron rostros). Hay una `CIFaceFeature` para cada una de las caras. `CIFaceFeature` tiene las siguientes propiedades:
 
 - HasMouthPosition: indica si se ha detectado una boca para este problema.
 - HasLeftEyePosition: indica si se ha detectado el ojo izquierdo para esta esfera.
@@ -55,7 +55,7 @@ La matriz de características se rellenará con `CIFaceFeature` objetos (si se d
 - LeftEyePosition: las coordenadas del ojo izquierdo para esta esfera.
 - RightEyePosition: las coordenadas del ojo adecuado para esta esfera.
 
-Las coordenadas de todas estas propiedades tienen su origen en la parte inferior izquierda, a diferencia de UIKit, que usa la parte superior izquierda como el origen. Al usar las coordenadas en `CIFaceFeature` , asegúrese de ' voltearlas '. Esta vista de imagen personalizada muy básica de CoreImage\CoreImageViewController.CS muestra cómo dibujar los triángulos de ' indicador de caras ' en la imagen `FlipForBottomOrigin` (tenga en cuenta el método):
+Las coordenadas de todas estas propiedades tienen su origen en la parte inferior izquierda, a diferencia de UIKit, que usa la parte superior izquierda como el origen. Al usar las coordenadas en `CIFaceFeature` Asegúrese de ' voltear '. Esta vista de imagen personalizada muy básica de CoreImage\CoreImageViewController.cs muestra cómo dibujar los triángulos de ' indicador de caras ' en la imagen (tenga en cuenta el método `FlipForBottomOrigin`):
 
 ```csharp
 public class FaceDetectImageView : UIView
@@ -120,7 +120,7 @@ Hay más de 50 filtros integrados diferentes y el marco es extensible para que s
 
 Aplicar un filtro a una imagen tiene cuatro pasos distintos: cargar la imagen, crear el filtro, aplicar el filtro y guardar (o mostrar) el resultado.
 
-En primer lugar, cargue una imagen `CIImage` en un objeto.
+En primer lugar, cargue una imagen en un objeto de `CIImage`.
 
 ```csharp
 var uiimage = UIImage.FromFile ("photo.JPG");
@@ -135,7 +135,7 @@ sepia.Image = ciimage;
 sepia.Intensity = 0.8f;
 ```
 
-En tercer lugar, `OutputImage` tenga acceso a la `CreateCGImage` propiedad y llame al método para representar el resultado final.
+En tercer lugar, tenga acceso a la propiedad `OutputImage` y llame al método `CreateCGImage` para representar el resultado final.
 
 ```csharp
 CIImage output = sepia.OutputImage;
@@ -150,9 +150,9 @@ var ui = UIImage.FromImage (cgimage);
 imgview.Image = ui;
 ```
 
-Estas capturas de pantallas muestran el `CISepia` resultado `CIHueAdjust` de los filtros y que se muestran en el código de ejemplo CoreImage. zip.
+Estas capturas de pantallas muestran el resultado de los filtros `CISepia` y `CIHueAdjust` que se muestran en el código de ejemplo CoreImage. zip.
 
-Consulte la [receta ajustar el contrato y el brillo de](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) la `CIColorControls` imagen para obtener un ejemplo del filtro.
+Vea la [receta ajustar el contrato y el brillo de la imagen](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) para obtener un ejemplo del filtro `CIColorControls`.
 
 ```csharp
 var uiimage = UIImage.FromFile("photo.JPG");
@@ -212,7 +212,7 @@ La [referencia de la clase CIFilter](https://developer.apple.com/library/prerele
 
 La salida de las categorías de lista tiene el siguiente aspecto en el simulador: puede desplazarse por la lista para ver todos los filtros y sus parámetros.
 
- [![](introduction-to-coreimage-images/coreimage05.png "La salida de las categorías de lista tiene el siguiente aspecto en el simulador")](introduction-to-coreimage-images/coreimage05.png#lightbox)
+ [![](introduction-to-coreimage-images/coreimage05.png "The List Categories output looks like this on the simulator")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 Cada filtro enumerado se ha expuesto como una clase en Xamarin. iOS, por lo que también puede explorar la API de Xamarin. iOS. CoreImage en el explorador de ensamblados o usar autocompletar en Visual Studio para Mac o Visual Studio. 
 

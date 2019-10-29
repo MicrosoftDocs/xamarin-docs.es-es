@@ -3,15 +3,15 @@ title: 'Parte 2: Arquitectura'
 description: En este documento se describen los patrones de arquitectura útiles para la creación de aplicaciones multiplataforma. Se describen las capas de aplicación típicas (capa de datos, capa de acceso a datos, etc.) y patrones comunes de software móvil (MVVM, MVC, etc.).
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762116"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030266"
 ---
 # <a name="part-2---architecture"></a>Parte 2: Arquitectura
 
@@ -46,7 +46,7 @@ Los patrones son una manera establecida de capturar soluciones recurrentes a pro
 
 - **Model, View, ViewModel (MVVM)** : el patrón Model-View-ViewModel es popular con los marcos de trabajo que admiten el enlace de datos, como Xamarin. Forms. Los SDK habilitados para XAML, como Windows Presentation Foundation (WPF) y Silverlight, lo han utilizado. donde el ViewModel actúa como un paso entre los datos (modelo) y la interfaz de usuario (vista) mediante el enlace de datos y los comandos.
 - **Modelo, vista, controlador (MVC)** : un patrón común y a menudo no entendido, MVC se usa con más frecuencia al compilar interfaces de usuario y proporciona una separación entre la definición real de una pantalla de la interfaz de usuario (vista), el motor subyacente que controla la interacción ( Controlador) y los datos que lo rellenan (modelo). En realidad, el modelo es una pieza completamente opcional y, por lo tanto, el núcleo de comprensión de este patrón se encuentra en la vista y el controlador. MVC es un enfoque popular para las aplicaciones de iOS.
-- **Fachada empresarial** : el patrón de administrador de aka proporciona un punto de entrada simplificado para el trabajo complejo. Por ejemplo, en una aplicación de seguimiento de tareas, puede tener `TaskManager` una clase con métodos `GetAllTasks()` como, `GetTask(taskID)` , `SaveTask (task)` , etc. La `TaskManager` clase proporciona una fachada al funcionamiento interno de guardar o recuperar objetos de tareas.
+- **Fachada empresarial** : el patrón de administrador de aka proporciona un punto de entrada simplificado para el trabajo complejo. Por ejemplo, en una aplicación de seguimiento de tareas, es posible que tenga una clase `TaskManager` con métodos como `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)`, etc. La clase `TaskManager` proporciona una fachada al funcionamiento interno de guardar o recuperar objetos de tareas.
 - **Singleton** : el patrón singleton proporciona una manera en la que solo puede existir una única instancia de un objeto determinado. Por ejemplo, al usar SQLite en aplicaciones móviles, solo desea una instancia de la base de datos. Usar el patrón singleton es una manera sencilla de asegurarse de esto.
 - **Proveedor** : modelo acuñó por Microsoft (es decir, similar a la estrategia o inserción de dependencias básica) para fomentar la reutilización de código en aplicaciones de Silverlight, WPF y WinForms. El código compartido se puede escribir en una interfaz o una clase abstracta, y las implementaciones concretas específicas de la plataforma se escriben y se pasan cuando se usa el código.
 - **Async** : no se debe confundir con la palabra clave Async, el patrón Async se usa cuando es necesario ejecutar el trabajo de ejecución prolongada sin mantener la interfaz de usuario o el procesamiento actual. En su forma más sencilla, el patrón Async simplemente describe que las tareas de ejecución prolongada deben iniciarse en otro subproceso (o en una abstracción de subproceso similar, como una tarea) mientras el subproceso actual continúa procesándose y escucha una respuesta del proceso en segundo plano. y, a continuación, actualiza la interfaz de usuario cuando se devuelven los datos y el estado.

@@ -4,15 +4,15 @@ description: En este documento se describe PhotoKit, se analizan los objetos de 
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 433e50632ce7334f7a815fb8952dda2dfc110578
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 82cff753e7569c2642c467db692c2d2d84347df0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290527"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031618"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit en Xamarin. iOS
 
@@ -20,18 +20,18 @@ PhotoKit es un nuevo marco que permite que las aplicaciones consulten la bibliot
 
 ## <a name="model-objects"></a>Objetos de modelo
 
-PhotoKit representa estos recursos en lo que llama a los objetos de modelo. Los objetos de modelo que representan las fotos y los vídeos son del `PHAsset`tipo. Un `PHAsset` contiene metadatos como el tipo de medio del recurso y su fecha de creación.
-Del mismo modo `PHAssetCollection` , `PHCollectionList` las clases y contienen metadatos sobre colecciones de recursos y listas de colecciones, respectivamente. Las colecciones de recursos son grupos de activos, como todas las fotografías y vídeos de un año determinado. Del mismo modo, las listas de colecciones son grupos de recopilaciones de recursos, como fotos y vídeos agrupados por año.
+PhotoKit representa estos recursos en lo que llama a los objetos de modelo. Los objetos de modelo que representan las fotos y los vídeos son del tipo `PHAsset`. Un `PHAsset` contiene metadatos, como el tipo de medio del recurso y su fecha de creación.
+Del mismo modo, las clases `PHAssetCollection` y `PHCollectionList` contienen metadatos sobre colecciones de recursos y listas de colecciones, respectivamente. Las colecciones de recursos son grupos de activos, como todas las fotografías y vídeos de un año determinado. Del mismo modo, las listas de colecciones son grupos de recopilaciones de recursos, como fotos y vídeos agrupados por año.
 
 ## <a name="querying-model-data"></a>Consultar datos del modelo
 
-PhotoKit facilita la consulta de datos del modelo mediante una variedad de métodos de captura. Por ejemplo, para recuperar todas las imágenes, llamaría `PHAsset.Fetch`a, pasando el tipo de `PHAssetMediaType.Image` medio.
+PhotoKit facilita la consulta de datos del modelo mediante una variedad de métodos de captura. Por ejemplo, para recuperar todas las imágenes, llamaría a `PHAsset.Fetch`, pasando el tipo de medio `PHAssetMediaType.Image`.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-La `PHFetchResult` instancia contendría entonces todas las `PHAsset` instancias que representan imágenes. Para obtener las imágenes, se usa `PHImageManager` (o la `PHCachingImageManager`versión de almacenamiento en caché) para realizar una solicitud de la imagen mediante una `RequestImageForAsset`llamada a. Por ejemplo, el código siguiente recupera una imagen para cada recurso de `PHFetchResult` que se va a mostrar en una celda de vista de colección:
+A continuación, la instancia de `PHFetchResult` contendría todas las instancias de `PHAsset` que representan imágenes. Para obtener las imágenes, use el `PHImageManager` (o la versión de almacenamiento en caché, `PHCachingImageManager`) para realizar una solicitud de la imagen mediante una llamada a `RequestImageForAsset`. Por ejemplo, el código siguiente recupera una imagen para cada recurso de un `PHFetchResult` que se va a mostrar en una celda de vista de colección:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -51,7 +51,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 Esto da como resultado una cuadrícula de imágenes como se muestra a continuación:
 
-![](photokit-images/image4.png "La aplicación en ejecución que muestra una cuadrícula de imágenes")
+![](photokit-images/image4.png "The running app displaying a grid of images")
 
 ## <a name="saving-changes-to-the-photo-library"></a>Guardar cambios en la biblioteca de fotos
 
@@ -123,8 +123,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 Cuando el usuario selecciona el botón, se aplica el filtro:
 
-![](photokit-images/image5.png "Un ejemplo del filtro que se está aplicando")
+![](photokit-images/image5.png "An example of the filter being applied")
 
 Y gracias a PHPhotoLibraryChangeObserver, el cambio se refleja en la vista de colección cuando el usuario se desplaza hacia atrás:
 
-![](photokit-images/image6.png "El cambio se refleja en la vista de recopilación cuando el usuario se desplaza hacia atrás.")
+![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")

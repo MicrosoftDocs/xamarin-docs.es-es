@@ -4,15 +4,15 @@ description: En este documento se describe la realidad aumentada en iOS 11 con A
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: b05991be60e34cad6b7bfc5af15fe521e1ff6dd1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0094a496ce99addb08648431d993bd4afddca2f4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752597"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032246"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introducción a ARKit en Xamarin. iOS
 
@@ -31,15 +31,15 @@ Para empezar a trabajar con la realidad aumentada, las siguientes instrucciones 
 
 ![Modelo 3D jet flotante en imagen de cámara](images/jet-sml.png)
 
-### <a name="1-add-a-3d-model"></a>1. Agregar un modelo 3D
+### <a name="1-add-a-3d-model"></a>1. agregar un modelo 3D
 
 Los recursos se deben agregar al proyecto con la acción de compilación **SceneKitAsset** .
 
 ![SceneKit recursos en un proyecto](images/scene-assets.png)
 
-### <a name="2-configure-the-view"></a>2. Configurar la vista
+### <a name="2-configure-the-view"></a>2. configurar la vista
 
-En el método del `ViewDidLoad` controlador de vista, cargue el recurso de la escena y establezca la `Scene` propiedad en la vista:
+En el método `ViewDidLoad` del controlador de vista, cargue el recurso de la escena y establezca la propiedad `Scene` en la vista:
 
 ```csharp
 ARSCNView SceneView = (View as ARSCNView);
@@ -51,7 +51,7 @@ var scene = SCNScene.FromFile("art.scnassets/ship");
 SceneView.Scene = scene;
 ```
 
-### <a name="3-optionally-implement-a-session-delegate"></a>3. Opcionalmente, implementar un delegado de sesión
+### <a name="3-optionally-implement-a-session-delegate"></a>3. implementar opcionalmente un delegado de sesión
 
 Aunque no es necesario para los casos sencillos, la implementación de un delegado de sesión puede ser útil para depurar el estado de la sesión de ARKit (y, en aplicaciones reales, proporcionar comentarios al usuario). Cree un delegado simple mediante el código siguiente:
 
@@ -66,14 +66,14 @@ public class SessionDelegate : ARSessionDelegate
 }
 ```
 
-Asigne el delegado en `ViewDidLoad` el método:
+Asigne el delegado en el método `ViewDidLoad`:
 
 ```csharp
 // Track changes to the session
 SceneView.Session.Delegate = new SessionDelegate();
 ```
 
-### <a name="4-position-the-3d-model-in-the-world"></a>4. Colocar el modelo 3D en el mundo
+### <a name="4-position-the-3d-model-in-the-world"></a>4. colocar el modelo 3D en el mundo
 
 En `ViewWillAppear`, el código siguiente establece una sesión de ARKit y establece la posición del modelo 3D en el espacio relativo a la cámara del dispositivo:
 
@@ -95,9 +95,9 @@ ship.Position = new SCNVector3(2f, -2f, -9f);
 
 Cada vez que se ejecuta o se reanuda la aplicación, el modelo 3D se colocará delante de la cámara. Una vez colocado el modelo, mueva la cámara y mire como ARKit mantiene el modelo colocado.
 
-### <a name="5-pause-the-augmented-reality-session"></a>5. Pausar la sesión de realidad aumentada
+### <a name="5-pause-the-augmented-reality-session"></a>5. pausar la sesión de realidad aumentada
 
-Es recomendable pausar la sesión de ARKit cuando el controlador de vista no esté visible (en el `ViewWillDisappear` método:
+Es recomendable pausar la sesión de ARKit cuando el controlador de vista no esté visible (en el método `ViewWillDisappear`:
 
 ```csharp
 SceneView.Session.Pause();
@@ -105,7 +105,7 @@ SceneView.Session.Pause();
 
 ## <a name="summary"></a>Resumen
 
-El código anterior da como resultado una aplicación ARKit simple. Los ejemplos más complejos esperan que el controlador de vistas que hospeda la sesión de realidad `IARSCNViewDelegate`aumentada implemente, y que se implementen métodos adicionales.
+El código anterior da como resultado una aplicación ARKit simple. Los ejemplos más complejos esperan que el controlador de vistas que hospeda la sesión de realidad aumentada implemente `IARSCNViewDelegate`y que se implementen métodos adicionales.
 
 ARKit proporciona muchas características más sofisticadas, como el seguimiento de superficie y la interacción del usuario. Vea la [demostración de UrhoSharp](urhosharp.md) para obtener un ejemplo de cómo combinar el seguimiento de ARKit con UrhoSharp.
 

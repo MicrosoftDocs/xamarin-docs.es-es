@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar Xamarin. iOS para trabajar
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: d321e8061d3091abeaa3cff6a6af9172c981cb60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291198"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031886"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Notificaciones provisionales en Xamarin. iOS
 
@@ -26,7 +26,7 @@ Eche un vistazo a la aplicación de ejemplo [RedGreenNotifications](https://docs
 
 ## <a name="sending-provisional-notifications"></a>Envío de notificaciones provisionales
 
-Para enviar notificaciones provisionales, `UNAuthorizationOptions.Provisional` proporcione como opción al[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+Para enviar notificaciones provisionales, proporcione `UNAuthorizationOptions.Provisional` como opción al [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
 método de `UNUserNotificationCenter`:
 
 ```csharp
@@ -41,7 +41,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Si el usuario promueve notificaciones provisionales a entregas destacadas `UNAuthorizationOptions` , los `RequestAuthorization` valores que se pasan a determinarán la nueva configuración de entrega `UNAuthorizationOptions.Alert` de `UNAuthorizationOptions.Sound`notificaciones (en el código anterior, y).
+Si el usuario promueve notificaciones provisionales a entregas destacadas, los `UNAuthorizationOptions` valores pasados a `RequestAuthorization` determinarán la nueva configuración de entrega de notificaciones (en el código anterior, `UNAuthorizationOptions.Alert` y `UNAuthorizationOptions.Sound`).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

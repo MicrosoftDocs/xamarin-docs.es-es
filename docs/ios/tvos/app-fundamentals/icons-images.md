@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con iconos e imágenes
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 7eca637e546324f9282aedcac48dacffa72bf246
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769268"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030853"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -26,7 +26,7 @@ Crear iconos e imágenes atractivas es una parte fundamental del desarrollo de u
 - [Configuración de imágenes de proyecto de Xamarin. tvOS](#Setting-Xamarin.tvOS-Project-Images) : describe los pasos necesarios para establecer el icono de la aplicación y la imagen de inicio de la aplicación Xamarin. tvOS.
 
 > [!IMPORTANT]
-> Todas las imágenes de Apple TV están en la resolución 1x (`@1x`) y _solo_ se deben usar imágenes de este tamaño. Los gráficos más grandes y de mayor resolución no solo tardan tiempo en descargar y usar más memoria y almacenamiento, pero tienen que cambiarse dinámicamente en tiempo de ejecución y afectarán negativamente al rendimiento del dibujo.
+> Todas las imágenes de Apple TV se encuentran en la resolución 1x (`@1x`) y _solo_ se deben usar imágenes de este tamaño. Los gráficos más grandes y de mayor resolución no solo tardan tiempo en descargar y usar más memoria y almacenamiento, pero tienen que cambiarse dinámicamente en tiempo de ejecución y afectarán negativamente al rendimiento del dibujo.
 
 <a name="Launch-Image" />
 
@@ -55,15 +55,15 @@ Apple realiza las siguientes sugerencias para diseñar la imagen de inicio de la
 
 Para establecer la imagen de inicio del proyecto de tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic en `Assets.xcassets` para abrirlo para su edición: 
 
-    [![](icons-images-images/asset01.png "El archivo assets. xcassets")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, haga clic `LaunchImages` en el recurso: 
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, haga clic en el recurso `LaunchImages`: 
 
-    [![](icons-images-images/asset02.png "El recurso LaunchImages")](icons-images-images/asset02.png#lightbox)
+    [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
 3. Haga clic en la entrada **1x Apple TV** y seleccione la imagen de inicio o, si lo desea, arrastre una nueva imagen del sistema de archivos: 
 
-    [![](icons-images-images/asset03.png "Seleccionar una imagen de inicio")](icons-images-images/asset03.png#lightbox)
+    [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. Guarde los cambios.
 
 <a name="Layered-Images" />
@@ -74,7 +74,7 @@ Novedad de Apple TV, las imágenes superpuestas funcionan con el efecto de Paral
 
 Las imágenes superpuestas contienen de dos (2) a cinco (5) capas separadas que se combinan para formar una imagen completa. A excepción de la capa de fondo, cada capa usa su orden Z junto con la transparencia para crear una ilusión de profundidad. Cuando el usuario interactúa con una imagen por capas, se escalan y superponen las capas ordenadas por Z más altas para crear este efecto.
 
-[![](icons-images-images/layered01.png "Diagrama ordenado por Z de imágenes superpuestas")](icons-images-images/layered01.png#lightbox)
+[![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > Las imágenes superpuestas son necesarias para los iconos de la aplicación y son opcionales para otros elementos que pueden recibir el [foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como la imagen de estante superior). Sin embargo, Apple sugiere el uso de imágenes superpuestas para cualquier imagen que pueda centrarse en la aplicación.
@@ -88,7 +88,7 @@ Apple realiza las siguientes sugerencias para diseñar imágenes por capas:
 - **Incluir una zona segura** : como las capas superiores se pueden recortar durante un efecto de Parallax, debe crear un borde de zona segura en cada capa. Si consigue que el contenido esté demasiado cerca del borde de las capas, puede recortarse. Las capas superiores experimentarán más escalado y recortando que las capas inferiores. Vea la sección ajustar el tamaño de las [capas de imagen](#Sizing-Image-Layers) a continuación.
 - **Vista previa** de las imágenes con capas a menudo se debe obtener una vista previa con frecuencia para asegurarse de que se produce el efecto 3D deseado y que no se va a recortar ningún contenido de los niveles individuales. Debe obtener una vista previa de las imágenes por capas en hardware de Apple TV real para asegurarse de que se representan según lo previsto.
 
-Siempre que sea posible, debe usar siempre los `UIKit` controles integrados para mostrar las imágenes en capas, ya que obtendrán automáticamente el efecto parallax cuando entren en el foco.
+Siempre que sea posible, siempre debe usar los controles `UIKit` integrados para mostrar las imágenes en capas, ya que obtendrán automáticamente el efecto parallax cuando entren en el foco.
 
 <a name="Sizing-Image-Layers" />
 
@@ -96,7 +96,7 @@ Siempre que sea posible, debe usar siempre los `UIKit` controles integrados para
 
 Es importante recordar incluir un borde de _zona segura_ en cada capa que componga la imagen por capas. Dado que las capas individuales se pueden escalar y recortar durante el efecto de Parallax, el contenido de las capas se puede recortar si está demasiado cerca del borde de la capa:
 
-[![](icons-images-images/layered02.png "borde de 35 píxeles")](icons-images-images/layered02.png#lightbox)
+[![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -105,19 +105,19 @@ Es importante recordar incluir un borde de _zona segura_ en cada capa que compon
 tvOS funciona con imágenes superpuestas en los siguientes formatos:
 
 - **Archivos de automóvil** : es un formato de catálogo de recursos propietario creado por Apple. No se crean directamente archivos de automóvil, sino que se crean en tiempo de compilación desde cualquier archivo LSR y se incluyen en el lote de aplicaciones.
-- **Imágenes de LSR** : se trata de un formato de imagen de propiedad creado por Apple. Use el [complemento de Adobe Photoshop exportador de Parallax](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) o el [previsor de Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para crear y obtener una vista previa de las imágenes en capas en el formato LSR.
-- **Assets. xcassets** : de dos (2) a cinco (5) imágenes `.png` con formato estándar incluidas en un catálogo de recursos que se compilarán en un coche o en una imagen en capas con formato LSR en tiempo de compilación.
-- **Archivos de LCR** : se trata de un formato de archivo propietario creado por Apple. Los archivos de LCR están diseñados para usarse como contenido adicional descargado de uno de los servidores de contenido. El archivo LCR nunca debe incluirse en el lote de aplicaciones. Los archivos de LCR se generan a partir de archivos de `layerutil` LSR o Photoshop mediante la herramienta de línea de comandos incluida con Xcode.
+- **Imágenes de LSR** : se trata de un formato de imagen de propiedad creado por Apple. Use el [complemento de Adobe Photoshop exportador de Parallax](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) o el [previsor de Parallax](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para crear y obtener una vista previa de las imágenes en capas en el formato LSR.
+- **Assets. xcassets** : de dos (2) a cinco (5) estándar `.png` imágenes con formato incluidas en un catálogo de recursos que se compilarán en un coche o en una imagen en capas con formato LSR en tiempo de compilación.
+- **Archivos de LCR** : se trata de un formato de archivo propietario creado por Apple. Los archivos de LCR están diseñados para usarse como contenido adicional descargado de uno de los servidores de contenido. El archivo LCR nunca debe incluirse en el lote de aplicaciones. Los archivos de LCR se generan a partir de archivos de LSR o Photoshop mediante la `layerutil` herramienta de línea de comandos incluida con Xcode.
 
 <a name="The-Parallax-Previewer" />
 
 ### <a name="the-parallax-previewer"></a>Vista previa de Parallax
 
-Apple creó el [previsor de Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para obtener una vista previa y crear las imágenes en capas necesarias para los iconos de la aplicación y los elementos opcionales que permiten el foco. El previsor muestra cada capa que forma la imagen en capas completa:
+Apple creó el [previsor de Parallax](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para obtener una vista previa y crear las imágenes en capas necesarias para los iconos de la aplicación y los elementos opcionales que permiten el foco. El previsor muestra cada capa que forma la imagen en capas completa:
 
 [![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
-Al obtener una vista previa de una imagen en capas, puede usar el mouse para girar la imagen y obtener una vista previa del efecto de Parallax. Use los **+** botones (más) **-** y (menos) para agregar y quitar capas.
+Al obtener una vista previa de una imagen en capas, puede usar el mouse para girar la imagen y obtener una vista previa del efecto de Parallax. Use los botones **+** (más) y **-** (menos) para agregar y quitar capas.
 
 Al crear una nueva imagen en capas, puede exportarse en el formato LSR y incluirse en el lote de la aplicación.
 
@@ -129,7 +129,7 @@ Para obtener más información sobre cómo crear y obtener una vista previa de l
 
 La aplicación Xamarin. tvOS necesitará no solo un icono de aplicación para la pantalla principal de Apple TV, sino también un icono para la tienda de aplicaciones. El icono de la aplicación es el primer cambio para crear una gran impresión para el usuario potencial y debe comunicar el propósito de la aplicación de un vistazo.
 
-[![](icons-images-images/icon01.png "Icono de la aplicación")](icons-images-images/icon01.png#lightbox)
+[![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png#lightbox)
 
 Cada aplicación debe proporcionar una versión pequeña y una grande de su icono de aplicación. El icono pequeño se usará en la pantalla principal de Apple TV cuando se instale la aplicación. La versión grande se usa en el App Store. El icono de la aplicación grande debe imitar la apariencia de la versión del icono pequeño.
 
@@ -160,21 +160,21 @@ Apple proporciona las siguientes sugerencias para crear iconos de aplicación:
 
 Para establecer los iconos de la aplicación necesarios para el proyecto tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic en `Assets.xcassets` para abrirlo para su edición: 
 
-    [![](icons-images-images/asset01.png "Los recursos. xcassets fileg")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso: 
+    [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, expanda el recurso `App Icon & Top Shelf Image`: 
 
-    [![](icons-images-images/asset04.png "Expandir el recurso de imagen de estante superior")](icons-images-images/asset04.png#lightbox)
-3. A continuación, expanda el `App Icon - Small` recurso: 
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+3. A continuación, expanda el recurso `App Icon - Small`: 
 
-    [![](icons-images-images/asset05.png "Expanda el icono de la aplicación: recurso pequeño")](icons-images-images/asset05.png#lightbox)
-4. A continuación, `Back` expanda el recurso y `Contents` haga clic en la entrada: 
+    [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
+4. A continuación, expanda el recurso `Back` y haga clic en la entrada `Contents`: 
 
-    [![](icons-images-images/asset06.png "Después, expanda el recurso de reserva.")](icons-images-images/asset06.png#lightbox)
+    [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. Haga clic en la **entrada 1x Apple TV** y seleccione un archivo de imagen.
-6. Repita los pasos anteriores para los `Front` recursos `Middle` y.
-7. A continuación, repita los mismos pasos para `App Icon - Large` definir el recurso.
+6. Repita los pasos anteriores para los recursos de `Front` y `Middle`.
+7. A continuación, repita los mismos pasos para definir el recurso de `App Icon - Large`.
 8. Guarde los cambios.
 
 <a name="Top-Shelf-Image" />
@@ -183,9 +183,9 @@ Para establecer los iconos de la aplicación necesarios para el proyecto tvOS, h
 
 Si el usuario ha colocado la aplicación Xamarin. tvOS en la fila superior de la pantalla de inicio de Apple TV, se mostrará una imagen de estante superior grande cuando el usuario seleccione la aplicación. Esta imagen debe resaltar las características de la aplicación o proporcionar vínculos directos a su contenido.
 
-[![](icons-images-images/topshelf01.png "Ejemplo de imagen de estante superior")](icons-images-images/topshelf01.png#lightbox)
+[![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
 
-La imagen de estante superior se puede proporcionar como un único archivo `.png` o `.lsr` estático (consulte [creación de imágenes por capas](#Creating-Layered-Images)) o se puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco (vea el [contenido de estante superior dinámico](#Dynamic-Top-Shelf-Content) a continuación).
+La imagen de estante superior se puede proporcionar como un solo archivo estático de `.png` o `.lsr` (consulte [creación de imágenes por capas](#Creating-Layered-Images)) o se puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco (vea el contenido de [estante superior dinámico](#Dynamic-Top-Shelf-Content) a continuación).
 
 |Tamaño de la imagen de estante superior|Notas|
 |---|---|
@@ -203,15 +203,15 @@ Apple proporciona las siguientes sugerencias para crear las imágenes de estante
 
 Para establecer la imagen de estante superior necesaria para el proyecto tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic en `Assets.xcassets` para abrirlo para su edición: 
 
-    [![](icons-images-images/asset01.png "El archivo assets. xcassets")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso: 
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, expanda el recurso `App Icon & Top Shelf Image`: 
 
-    [![](icons-images-images/asset04.png "Expandir el recurso de imagen de estante superior")](icons-images-images/asset04.png#lightbox)
-3. Haga clic en `Top Shelf Image` el recurso: 
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+3. Haga clic en el recurso de `Top Shelf Image`: 
 
-    [![](icons-images-images/asset07.png "El recurso de imagen de estante superior")](icons-images-images/asset07.png#lightbox)
+    [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
 4. Haga clic en la **entrada 1x Apple TV** y seleccione un archivo de imagen.
 5. Guarde los cambios.
 
@@ -260,7 +260,7 @@ Además del desplazamiento automático, el usuario puede tomar el control de los
 |Tamaño sin foco|1740x560px|
 |Tamaño centrado|1740x620px|
 
-Los banners de bajorrelieve desplazados pueden proporcionarse como `.png` `.lsr` archivos estáticos o en capas.
+Los banners de bajorrelieve desplazables se pueden proporcionar como un `.png` estático o un archivo `.lsr` superpuesto.
 
 Apple proporciona las siguientes sugerencias para los banners de bajorrelieve de desplazamiento:
 
@@ -277,15 +277,15 @@ Si la aplicación Xamarin. tvOS es un juego y ha incluido Game Center soporte t�
 
 - **Iconos de logros** : se requiere una imagen opaca para cada logro que se recortará automáticamente en un círculo. Los logros son elementos que no pueden recibir el foco.
 - **Ilustración del panel** : se puede proporcionar una imagen opcional que aparecerá en la parte superior del panel de la aplicación en Game Center. Estas imágenes no tienen el foco.
-- **Material gráfico de marcadores** : debe proporcionar entre una (1) a tres (3) 16:9 imágenes de relación de aspecto para cada marcador que admita la aplicación. Pueden ser `.lsr` archivos estáticos `.png` o en capas. La ilustración del marcador tiene el foco.
+- **Material gráfico de marcadores** : debe proporcionar entre una (1) a tres (3) 16:9 imágenes de relación de aspecto para cada marcador que admita la aplicación. Estos pueden ser estáticos `.png` o archivos `.lsr` superpuestos. La ilustración del marcador tiene el foco.
 
 ||Iconos de logros|Ilustración del panel|Material gráfico de marcador|
 |---|---|---|---|
-|Tamaño visible|200x200px|923x150px|N/D|
-|Tamaño real|320x320px|N/D|659x371px|
-|Tamaño de zona segura|N/D|N/D|618x348px|
-|Tamaño sin foco|N/D|N/D|548x309px|
-|Tamaño centrado|N/D|N/D|618x348px|
+|Tamaño visible|200x200px|923x150px|no disponible|
+|Tamaño real|320x320px|no disponible|659x371px|
+|Tamaño de zona segura|no disponible|no disponible|618x348px|
+|Tamaño sin foco|no disponible|no disponible|548x309px|
+|Tamaño centrado|no disponible|no disponible|618x348px|
 
 Para obtener más información sobre cómo trabajar con Game Center, consulte la [Guía de programación de Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)de Apple.
 
@@ -303,12 +303,12 @@ Como se indicó anteriormente, todas las aplicaciones de tvOS requieren una [ima
 
 Haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic en `Info.plist` el para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic en el `Info.plist` para abrirlo para su edición: 
 
-    [![](icons-images-images/info01.png "El archivo info. plist")](icons-images-images/info01.png#lightbox)
+    [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
 2. En el **Editor info. plist**, seleccione el catálogo de recursos (configurado anteriormente en la sección [configuración de los iconos de la aplicación](#Setting-the-App-Icons) ) para los iconos de la **aplicación**: 
 
-    [![](icons-images-images/info02.png "Editor de info. plist")](icons-images-images/info02.png#lightbox)
+    [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Después, seleccione el catálogo de activos (configurado anteriormente en la sección [configuración de la imagen de inicio](#Setting-the-Launch-Image) ) para las **imágenes de inicio**.
 4. Guarde los cambios.
 

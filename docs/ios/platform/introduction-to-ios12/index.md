@@ -4,15 +4,15 @@ description: En este documento se proporciona una descripción de alto nivel de 
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
-ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284634"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032003"
 ---
 # <a name="introduction-to-ios-12"></a>Introducción a iOS 12
 
@@ -56,7 +56,7 @@ iOS 12 facilita a los usuarios y desarrolladores el trabajo con contraseñas:
 
 - El Autorrelleno de contraseña y las contraseñas seguras automáticas permiten generar, almacenar y usar contraseñas seguras automáticamente en aplicaciones de iOS al registrarse e iniciar sesión en una aplicación.
 - El código de seguridad Autorrellenar permite usar códigos de autenticación basados en SMS sin cortar ni pegar ni memorizar manualmente.
-- La `ASWebAuthenticationSession` clase simplifica el proceso de trabajar con los servicios de autenticación federada.
+- La clase `ASWebAuthenticationSession` simplifica el proceso de trabajar con los servicios de autenticación federada.
 - Autorrellenar las extensiones del proveedor de credenciales permiten a las aplicaciones de contraseña de terceros proporcionar el nombre de usuario y las contraseñas a los campos de inicio de sesión.
 
 ## <a name="healthkit-updates"></a>Actualizaciones de HealthKit
@@ -69,7 +69,7 @@ En iOS 12, las aplicaciones iMessage admiten contextos de presentación, que per
 
 ## <a name="network-framework"></a>Marco de red
 
-El marco de red, la pila de `URLSession` red que subyace a las API que se usan habitualmente en las aplicaciones de iOS, ahora está disponible como un marco independiente, lo que facilita el trabajo con TCP, UDP, TLS, IPv4/IPv6, etc.
+El marco de red, la pila de red que subyace a las API de `URLSession` que se usan habitualmente en las aplicaciones de iOS, ahora está disponible como un marco independiente, lo que facilita el trabajo con TCP, UDP, TLS, IPv4/IPv6, etc.
 
 ## <a name="carplay"></a>CarPlay
 
@@ -80,4 +80,4 @@ En iOS 12, las aplicaciones de terceros pueden ofrecer asignaciones y reactivar 
 Con iOS 12, Apple ha quedado en desuso:
 
 - OpenGL ES, lo que [anima a los desarrolladores](https://developer.apple.com/ios/whats-new/) a adoptar metal.
-- [`UIWebView`](xref:UIKit.UIWebView), [en favor de `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- [`UIWebView`](xref:UIKit.UIWebView), [en favor de `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).

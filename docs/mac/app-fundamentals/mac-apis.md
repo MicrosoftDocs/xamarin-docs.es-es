@@ -4,15 +4,15 @@ description: En este documento se describe cómo leer selectores de Objective-C 
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: c7dfa87d2fa4e3e5b917029451a081640a552cce
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd427d13bb79fd31e1e814726aaaf61788ae10ec
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281002"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030074"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>API de macOS para desarrolladores de Xamarin. Mac
 
@@ -30,12 +30,12 @@ A veces será necesario leer una llamada de método o una definición de Objecti
 
 La declaración se puede leer de izquierda a derecha:
 
-- El `-` prefijo significa que es un método de instancia (no estático). + significa que es un método de clase (estático)
-- `(BOOL)`es el tipo de valor devuelto C#(bool en)
-- `canDragRowsWithIndexes`es la primera parte del nombre.
-- `(NSIndexSet *)rowIndexes`es el primer parámetro y su tipo. El primer parámetro tiene el formato:`(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint`es el segundo parámetro y su tipo. Cada parámetro después del primero tiene el formato:`selectorPart:(Type) pararmName`
-- El nombre completo de este selector de mensajes es `canDragRowsWithIndexes:atPoint:`:. `:` Tenga en cuenta que, al final, es importante.
+- El prefijo `-` significa que es un método de instancia (no estático). + significa que es un método de clase (estático)
+- `(BOOL)` es el tipo de valor devuelto C#(bool en)
+- `canDragRowsWithIndexes` es la primera parte del nombre.
+- `(NSIndexSet *)rowIndexes` es el primer parámetro y su tipo. El primer parámetro tiene el formato: `(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint` es el segundo parámetro y su tipo. Cada parámetro después del primero tiene el formato: `selectorPart:(Type) pararmName`
+- El nombre completo de este selector de mensajes es: `canDragRowsWithIndexes:atPoint:`. Tenga en cuenta que el `:` al final es importante.
 - El enlace real de Xamarin C# . Mac es:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 Esta invocación del selector se puede leer de la misma manera:
@@ -44,26 +44,26 @@ Esta invocación del selector se puede leer de la misma manera:
 [v canDragRowsWithIndexes:set atPoint:point];
 ```
 
-- La instancia `v` tiene su `canDragRowsWithIndexes:atPoint` selector denominado con dos parámetros, `set` y `point`, pasados.
+- La instancia `v` tiene su selector de `canDragRowsWithIndexes:atPoint` denominado con dos parámetros, `set` y `point`, pasados.
 - En C#, la invocación del método tiene el siguiente aspecto:`x.CanDragRows (set, point);`
 
 <a name="finding_selector" />
 
 ## <a name="finding-the-c-member-for-a-given-selector"></a>Buscar el C# miembro de un selector determinado
 
-Ahora que ha encontrado el selector de Objective-C que debe invocar, el paso siguiente consiste en asignarlo al miembro C# equivalente. Hay cuatro métodos que puede probar (continuando con el `NSTableView CanDragRows` ejemplo):
+Ahora que ha encontrado el selector de Objective-C que debe invocar, el paso siguiente consiste en asignarlo al miembro C# equivalente. Hay cuatro métodos que puede probar (continuando con el ejemplo `NSTableView CanDragRows`):
 
-1. Use la lista de finalización automática para buscar algo del mismo nombre. Como sabemos que es una instancia de `NSTableView` , puede escribir:
-
-    - `NSTableView x;`
-    - `x.`[Ctrl + espacio si no aparece la lista).
-    - `CanDrag`especifica
-    - Haga clic con el botón derecho en el método, vaya a declaración para abrir el explorador de ensamblados, donde puede comparar el `Export` atributo con el selector en cuestión.
-
-2. Busque en el enlace de clase completo. Como sabemos que es una instancia de `NSTableView` , puede escribir:
+1. Use la lista de finalización automática para buscar algo del mismo nombre. Como sabemos que es una instancia de `NSTableView` puede escribir:
 
     - `NSTableView x;`
-    - Haga clic con `NSTableView`el botón derecho en, vaya a declaración al explorador de ensamblados
+    - `x.` [Ctrl + espacio si no aparece la lista).
+    - `CanDrag` [entrar]
+    - Haga clic con el botón derecho en el método, vaya a declaración para abrir el explorador de ensamblados, donde puede comparar el atributo de `Export` con el selector en cuestión.
+
+2. Busque en el enlace de clase completo. Como sabemos que es una instancia de `NSTableView` puede escribir:
+
+    - `NSTableView x;`
+    - Haga clic con el botón derecho en `NSTableView`, vaya a declaración al explorador de ensamblados.
     - Buscar el selector en cuestión
 
 3. Puede usar la [documentación en línea de la API de Xamarin. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .

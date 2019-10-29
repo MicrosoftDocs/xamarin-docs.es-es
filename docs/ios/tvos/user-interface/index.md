@@ -4,15 +4,15 @@ description: Cobertura general de la experiencia del usuario (UX), incluidos los
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: f0633b0f91bf39d10ad42e1ee41997213ca3047e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8bf8aad6804fcbbc984b942fdafd12522299998
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769043"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030446"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Creación de interfaces de usuario de tvOS con Xamarin
 
@@ -24,7 +24,7 @@ Las guías que se enumeran a continuación proporcionan información detallada s
 
 ## <a name="working-with-alertsiostvosuser-interfacealertsmd"></a>[Trabajar con alertas](~/ios/tvos/user-interface/alerts.md)
 
-En este artículo se explica `UIAlertController` cómo trabajar con para mostrar un mensaje de alerta al usuario en Xamarin. tvOS.
+En este artículo se explica cómo trabajar con `UIAlertController` para mostrar un mensaje de alerta al usuario en Xamarin. tvOS.
 
 ## <a name="working-with-buttonsiostvosuser-interfacebuttonsmd"></a>[Trabajar con botones](~/ios/tvos/user-interface/buttons.md)
 

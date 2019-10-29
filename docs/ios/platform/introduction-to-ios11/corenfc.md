@@ -4,15 +4,15 @@ description: En este documento se describe cómo leer etiquetas de comunicación
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752431"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032202"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC principal en Xamarin. iOS
 
@@ -63,7 +63,7 @@ La aplicación debe solicitar la funcionalidad de **lectura de etiquetas Near Fi
 
 Cree un nuevo **identificador de aplicación** y asegúrese de que el servicio de **lectura de etiquetas NFC** esté marcado:
 
-[![Página nuevo ID. de aplicación del portal para desarrolladores con la lectura de etiquetas NFC seleccionada](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![página nuevo ID. de aplicación del portal para desarrolladores con la lectura de etiquetas NFC seleccionada](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Después, debe crear un nuevo perfil de aprovisionamiento para este identificador de aplicación y, después, descargarlo e instalarlo en el equipo Mac de desarrollo.
 
@@ -71,12 +71,12 @@ Después, debe crear un nuevo perfil de aprovisionamiento para este identificado
 
 Una vez configurado el proyecto, agregue `using CoreNFC;` a la parte superior del archivo y siga estos tres pasos para implementar la funcionalidad de lectura de etiquetas NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Ejecutar`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar `INFCNdefReaderSessionDelegate`
 
 La interfaz tiene dos métodos que se van a implementar:
 
-- `DidDetect`: Se le llama cuando se lee correctamente una etiqueta.
-- `DidInvalidate`: Se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
+- `DidDetect`: se le llama cuando se lee correctamente una etiqueta.
+- `DidInvalidate`: se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -125,7 +125,7 @@ Una vez que se ha invalidado una sesión, se debe crear un nuevo objeto de sesi�
 
 <a name="step2" />
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. Iniciar un`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar un `NFCNdefReaderSession`
 
 El análisis debe comenzar con una solicitud de usuario, como presionar un botón.
 El código siguiente crea e inicia una sesión de examen:
@@ -135,25 +135,25 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-Los parámetros `NFCNdefReaderSession` del constructor son los siguientes:
+Los parámetros del constructor `NFCNdefReaderSession` son los siguientes:
 
-- `delegate`: Una implementación de `INFCNdefReaderSessionDelegate`. En el código de ejemplo, el delegado se implementa en el controlador de vista de `this` tabla, por lo que se usa como parámetro de delegado.
-- `queue`: La cola en la que se administran las devoluciones de llamada. Puede ser `null`, en cuyo caso, asegúrese de usar al actualizar `DispatchQueue.MainQueue` los controles de la interfaz de usuario (como se muestra en el ejemplo).
-- `invalidateAfterFirstRead`: Cuando `true`, el examen se detiene después del primer análisis correcto; `false` cuando el examen continúa y se devuelven varios resultados hasta que se cancela el examen o se alcanza el tiempo de espera de 60 segundos.
+- `delegate`: una implementación de `INFCNdefReaderSessionDelegate`. En el código de ejemplo, el delegado se implementa en el controlador de vista de tabla, por lo que `this` se utiliza como parámetro de delegado.
+- `queue`: la cola en la que se administran las devoluciones de llamada. Puede ser `null`, en cuyo caso asegúrese de usar el `DispatchQueue.MainQueue` al actualizar los controles de la interfaz de usuario (como se muestra en el ejemplo).
+- `invalidateAfterFirstRead`: cuando `true`, el examen se detiene después del primer análisis correcto; Cuando el análisis de `false` continuará y se devuelvan varios resultados hasta que se cancele el examen o se alcance el tiempo de espera de 60 segundos.
 
-### <a name="3-cancel-the-scanning-session"></a>3. Cancelar la sesión de examen
+### <a name="3-cancel-the-scanning-session"></a>3. cancelar la sesión de examen
 
 El usuario puede cancelar la sesión de detección a través de un botón proporcionado por el sistema en la interfaz de usuario:
 
 ![Botón Cancelar durante el examen](corenfc-images/scan-cancel-sml.png)
 
-La aplicación puede cancelar mediante programación el análisis llamando al `InvalidateSession` método:
+La aplicación puede cancelar mediante programación el análisis llamando al método `InvalidateSession`:
 
 ```csharp
 Session.InvalidateSession();
 ```
 
-En ambos casos, se llamará `DidInvalidate` al método del delegado.
+En ambos casos, se llamará al método `DidInvalidate` del delegado.
 
 ## <a name="summary"></a>Resumen
 

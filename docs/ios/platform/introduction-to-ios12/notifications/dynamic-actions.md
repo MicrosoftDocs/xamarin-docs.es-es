@@ -4,15 +4,15 @@ description: Con iOS 12, una extensión de contenido de notificación puede Agre
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 5be233e9b07069dc7c9842a3ddd00e7d46d9c22f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb38d222cecd1a6c5bb65b0fb376888770dd0e49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291283"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031969"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botones de acción de notificación dinámica en Xamarin. iOS
 
@@ -32,12 +32,12 @@ Los fragmentos de código de esta guía proceden de esta aplicación de ejemplo.
 La categoría de una notificación determina sus botones de acción predeterminados.
 
 Crear y registrar categorías de notificación mientras se inicia una aplicación.
-Por ejemplo, en la [aplicación de ejemplo](#sample-app-redgreennotifications), `FinishedLaunching` el método `AppDelegate` de hace lo siguiente:
+Por ejemplo, en la [aplicación de ejemplo](#sample-app-redgreennotifications), el método `FinishedLaunching` de `AppDelegate` hace lo siguiente:
 
 - Define una categoría para las notificaciones rojas y otra para las notificaciones verdes
-- Registra estas categorías mediante una llamada a la[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
-método de`UNUserNotificationCenter`
-- Adjunta un solo[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
+- Registra estas categorías mediante una llamada a la [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
+método de `UNUserNotificationCenter`
+- Asocia un solo [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 a cada categoría
 
 En el código de ejemplo siguiente se muestra cómo funciona:
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Según este código, cualquier notificación cuyo[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
+Según este código, cualquier notificación cuyo [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 el valor de "categoría roja" o "verde-Categoría" muestra, de forma predeterminada, un botón de acción **girar 20 °** .
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>Control en la aplicación de los botones de acción de notificación
 
-`UNUserNotificationCenter`tiene una `Delegate` propiedad de tipo [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+`UNUserNotificationCenter` tiene una propiedad `Delegate` de tipo [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
-En la aplicación de ejemplo `AppDelegate` , se establece como delegado del centro de notificaciones `FinishedLaunching`de usuario en:
+En la aplicación de ejemplo, `AppDelegate` se establece como delegado del centro de notificaciones de usuario en `FinishedLaunching`:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-A continuación `AppDelegate` , implementa[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+A continuación, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 para controlar los grifos de botones de acción:
 
 ```csharp
@@ -125,23 +125,23 @@ Esta implementación de `DidReceiveNotificationResponse` no controla el botón d
 
 Una extensión de contenido de notificación contiene un controlador de vista que define la interfaz personalizada para una notificación.
 
-Este controlador de vista puede usar `GetNotificationActions` los `SetNotificationActions` métodos y en su[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+Este controlador de vista puede usar los métodos `GetNotificationActions` y `SetNotificationActions` en su [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 propiedad para tener acceso a los botones de acción de la notificación y modificarlos.
 
 En la aplicación de ejemplo, el controlador de vista de la extensión de contenido de notificación modifica los botones de acción solo cuando responde a una pulsación de un botón de acción ya existente.
 
 > [!NOTE]
-> Una extensión de contenido de notificación puede responder a una TAP del botón de acción en [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) el método de su controlador de vista, declarado como parte de [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
+> Una extensión de contenido de notificación puede responder a una derivación del botón de acción en el método [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) del controlador de vista, declarado como parte de [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
-> Aunque comparte un nombre con el `DidReceiveNotificationResponse` método [descrito anteriormente](#in-app-handling-of-notification-action-buttons), se trata de un método diferente.
+> Aunque comparte un nombre con el método `DidReceiveNotificationResponse` [descrito anteriormente](#in-app-handling-of-notification-action-buttons), se trata de un método diferente.
 >
 > Una vez que una extensión de contenido de notificación finaliza el procesamiento de una derivación de botones, puede elegir si quiere indicar a la aplicación principal que controle esa misma punteo de botón. Para ello, debe pasar un valor adecuado de [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) a su controlador de finalización:
 >
-> - `Dismiss`indica que se debe descartar la interfaz de notificación y que no es necesario que la aplicación principal controle la derivación de botones.
-> - `DismissAndForwardAction`indica que se debe descartar la interfaz de notificación y que la aplicación principal también debe controlar la derivación de botones.
-> - `DoNotDismiss`indica que no se debe descartar la interfaz de notificación y que no es necesario que la aplicación principal controle la derivación de botones.
+> - `Dismiss` indica que se debe descartar la interfaz de notificación y que no es necesario que la aplicación principal controle la derivación de botones.
+> - `DismissAndForwardAction` indica que se debe descartar la interfaz de notificación y que la aplicación principal también debe controlar la derivación de botones.
+> - `DoNotDismiss` indica que no se debe descartar la interfaz de notificación y que no es necesario que la aplicación principal controle la derivación de botones.
 
-El método de la `DidReceiveNotificationResponse` extensión de contenido determina qué botón de acción se ha punteado, gira la imagen en la interfaz de la notificación y muestra u oculta un botón de acción de **restablecimiento** :
+El método de `DidReceiveNotificationResponse` de la extensión de contenido determina qué botón de acción se ha punteado, gira la imagen en la interfaz de la notificación y muestra u oculta un botón de acción de **restablecimiento** :
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]

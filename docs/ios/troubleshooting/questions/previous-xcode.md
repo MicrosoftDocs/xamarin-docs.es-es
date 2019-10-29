@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 76D47B6D-F4E9-4957-B30C-B259A8FB125F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/02/2018
-ms.openlocfilehash: e6c52128118c6dcbb1c3eb502a9e1f235e487abb
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.openlocfilehash: 3da62e6679bc98b85b051329b92a1b9bbc4956cd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71033410"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030929"
 ---
 # <a name="how-can-i-download-a-previous-version-of-xcode"></a>¿Cómo puedo descargar una versión anterior de Xcode?
 

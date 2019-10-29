@@ -4,15 +4,15 @@ description: En este documento se describe el color ancho y cómo se puede usar 
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a1f5301d0c5c0674e162b3d7689c83bbb4f6ae90
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e7240a271de1f0199c2c9fc045f5c95745eb98c5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290533"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031244"
 ---
 # <a name="wide-color-in-xamarinios"></a>Color ancho en Xamarin. iOS
 
@@ -50,7 +50,7 @@ Lo siguiente ocurrirá cuando el desarrollador envíe una aplicación a la tiend
 
 - Cuando la aplicación se implementa en el usuario final, la segmentación de aplicaciones se asegurará de que solo se entregue la variante de contenido adecuada en el dispositivo del usuario.
 - En el dispositivo que no admiten el color ancho, no hay ningún costo de carga por incluir el contenido de color ancho, ya que nunca se envía al dispositivo.
-- `NSImage`en macOS Sierra (y versiones posteriores), se seleccionará automáticamente la mejor representación de contenido para la pantalla del hardware.
+- `NSImage` en macOS Sierra (y versiones posteriores) seleccionará automáticamente la mejor representación de contenido para la pantalla del hardware.
 - El contenido que se muestra se actualizará automáticamente cuando se cambien las características de visualización de hardware de los dispositivos.
 
 ### <a name="asset-catalog-storage"></a>Almacenamiento del catálogo de activos
@@ -84,7 +84,7 @@ public UIImage DrawWideColorImage ()
     }
 ```
 
-Hay problemas con el código estándar que deben solucionarse _antes_ de que se puedan usar para dibujar una imagen de color ancho. El `UIGraphics.BeginImageContext (size)` método usado para iniciar el dibujo de la imagen de iOS tiene las siguientes limitaciones:
+Hay problemas con el código estándar que deben solucionarse _antes_ de que se puedan usar para dibujar una imagen de color ancho. El método `UIGraphics.BeginImageContext (size)` que se usa para iniciar el dibujo de imágenes de iOS tiene las siguientes limitaciones:
 
 - No puede crear contextos de imagen con más de 8 bits por canal de color.
 - No puede representar colores en el espacio de color sRGB de intervalo extendido.
@@ -118,22 +118,22 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-La nueva `UIGraphicsImageRenderer` clase crea un nuevo contexto de imagen que es capaz de controlar el espacio de color sRGB de intervalo extendido y tiene las siguientes características:
+La nueva clase de `UIGraphicsImageRenderer` crea un nuevo contexto de imagen que es capaz de controlar el espacio de color sRGB de intervalo extendido y tiene las siguientes características:
 
 - De forma predeterminada, está totalmente administrada por el color.
 - De forma predeterminada, es compatible con el espacio de colores sRGB de rango extendido.
 - Decide de forma inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido de color sRGB en función de las capacidades del dispositivo iOS en el que se ejecuta la aplicación.
-- Administra por completo y automáticamente la duración del contexto`CGContext`de la imagen (), por lo que el desarrollador no tiene que preocuparse por llamar a los comandos de contexto Begin y end.
-- Es compatible con el `UIGraphics.GetCurrentContext()` método.
+- Administra por completo y automáticamente la duración del contexto de la imagen (`CGContext`), por lo que el desarrollador no tiene que preocuparse por llamar a los comandos de contexto de inicio y fin.
+- Es compatible con el método `UIGraphics.GetCurrentContext()`.
 
-Se llama al `UIGraphicsImageRenderer` método de la clase para crear una imagen de color ancho y pasar un controlador de finalización con el contexto de la imagen que se va a dibujar en. `CreateImage` Todo el dibujo se realiza dentro de este controlador de finalización de la siguiente manera:
+Se llama al método `CreateImage` de la clase `UIGraphicsImageRenderer` para crear una imagen de color ancho y pasar un controlador de finalización con el contexto de la imagen que se va a dibujar en. Todo el dibujo se realiza dentro de este controlador de finalización de la siguiente manera:
 
-- El `UIColor.FromDisplayP3` método crea un nuevo color rojo completamente saturado en la gama ancha que muestra el espacio de colores P3 y se usa para dibujar la primera mitad del rectángulo. 
+- El método `UIColor.FromDisplayP3` crea un nuevo color rojo completamente saturado en la gama ancha que muestra el espacio de colores P3 y se utiliza para dibujar la primera mitad del rectángulo. 
 - La segunda mitad del rectángulo se dibuja en el color rojo de sRGB normal de la comparación.
 
 ### <a name="drawing-wide-color-in-macos"></a>Dibujo de color ancho en macOS
 
-La `NSImage` clase se ha expandido en MacOS Sierra para admitir el dibujo de imágenes de color ancho. Por ejemplo:
+La clase `NSImage` se ha expandido en macOS Sierra para admitir el dibujo de imágenes de color ancho. Por ejemplo:
 
 ```csharp
 var size = CGSize(250,250);
@@ -157,7 +157,7 @@ Para representar imágenes de color ancho en pantalla, el proceso funciona de fo
 
 ### <a name="rendering-on-screen-in-ios"></a>Representación en pantalla en iOS
 
-Cuando la aplicación necesita representar una imagen en la pantalla de color ancho en iOS, invalide `Draw` el método `UIView` de en cuestión como de costumbre. Por ejemplo:
+Cuando la aplicación necesita representar una imagen en la pantalla de color ancho en iOS, invalide el método `Draw` del `UIView` en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -183,15 +183,15 @@ namespace MonkeyTalk
 }
 ```
 
-Como iOS 10 hace con la `UIGraphicsImageRenderer` clase mostrada anteriormente, decide de forma inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido de color sRGB en función de las capacidades del dispositivo iOS en `Draw` el que se ejecuta la aplicación cuando se llama al método. Además, el `UIImageView` color también se ha administrado desde iOS 9,3.
+Como iOS 10 hace con la clase `UIGraphicsImageRenderer` mostrada anteriormente, decide de forma inteligente si debe representarse en el espacio de color sRGB o el intervalo extendido de color sRGB en función de las capacidades del dispositivo iOS en el que se ejecuta la aplicación cuando se llama al método `Draw`. Además, el `UIImageView` se ha administrado por colores desde iOS 9,3 también.
 
-Si la aplicación necesita saber cómo se realiza la representación `UIView` en o `UIViewController`, puede comprobar la nueva `DisplayGamut` propiedad de la `UITraitCollection` clase. Este valor será una `UIDisplayGamut` enumeración de lo siguiente:
+Si la aplicación necesita saber cómo se realiza la representación en un `UIView` o `UIViewController`, puede comprobar la nueva propiedad `DisplayGamut` de la clase `UITraitCollection`. Este valor será una enumeración `UIDisplayGamut` de lo siguiente:
 
 - P3
 - SRGB
 - Sin especificar
 
-Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva `ContentsFormat` propiedad `CALayer` de para especificar el espacio de colores deseado. Este valor puede ser una `CAContentsFormat` enumeración de lo siguiente:
+Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva propiedad `ContentsFormat` del `CALayer` para especificar el espacio de colores deseado. Este valor puede ser una enumeración `CAContentsFormat` de lo siguiente:
 
 - Gray8Uint
 - Rgba16Float
@@ -199,7 +199,7 @@ Si la aplicación desea controlar qué espacio de colores se usa para dibujar un
 
 ### <a name="rendering-on-screen-in-macos"></a>Representación en pantalla en macOS
 
-Cuando la aplicación necesita representar una imagen en color ancho en pantalla en MacOS, invalide el `DrawRect` método `NSView` de en cuestión como de costumbre. Por ejemplo:
+Cuando la aplicación necesita representar una imagen en color ancho en pantalla en macOS, invalide el método `DrawRect` del `NSView` en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-Una vez más, decide de manera inteligente si debe representarse en el espacio de color sRGB o en el intervalo extendido, en función de las capacidades del hardware Mac en el `DrawRect` que se ejecuta la aplicación cuando se llama al método.
+Una vez más, decide de manera inteligente si debe representarse en el espacio de colores sRGB o extendido de rango ampliado en función de las capacidades del hardware Mac en el que se ejecuta la aplicación cuando se llama al método `DrawRect`.
 
-Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva `DepthLimit` propiedad de la `NSWindow` clase para especificar el espacio de colores deseado. Este valor puede ser una `NSWindowDepth` enumeración de lo siguiente:
+Si la aplicación desea controlar qué espacio de colores se usa para dibujar una imagen, puede usar una nueva propiedad `DepthLimit` de la clase `NSWindow` para especificar el espacio de colores deseado. Este valor puede ser una enumeración `NSWindowDepth` de lo siguiente:
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb

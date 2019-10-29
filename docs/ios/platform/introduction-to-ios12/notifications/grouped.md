@@ -4,15 +4,15 @@ description: Con iOS 12, es posible agrupar las notificaciones en el centro de n
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6352de1483aea49a628cbb30d104906fde767afa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291263"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031956"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notificaciones agrupadas en Xamarin. iOS
 
@@ -30,7 +30,7 @@ Los fragmentos de código de esta guía proceden de esta aplicación de ejemplo.
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>Solicitar autorización y permitir notificaciones en primer plano
 
-Para que una aplicación pueda enviar notificaciones locales, debe solicitar permiso para hacerlo. En el de la aplicación [`AppDelegate`](xref:UIKit.UIApplicationDelegate)de ejemplo [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) , el método solicita este permiso:
+Para que una aplicación pueda enviar notificaciones locales, debe solicitar permiso para hacerlo. En el [`AppDelegate`](xref:UIKit.UIApplicationDelegate)de la aplicación de ejemplo, el método [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) solicita este permiso:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-La [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (establecida anteriormente) [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) para decide si una aplicación en primer plano debe mostrar una notificación entrante llamando al controlador de finalización que se [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions}))pasa a:
+El [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (establecido anteriormente) para un [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) decide si una aplicación en primer plano debe mostrar una notificación entrante llamando al controlador de finalización que se pasa a [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,7 +56,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-El [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) parámetro indica que la aplicación debe mostrar la alerta pero no reproducir un sonido ni actualizar un distintivo.
+El parámetro [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) indica que la aplicación debe mostrar la alerta pero no reproducir un sonido ni actualizar un distintivo.
 
 ## <a name="threaded-notifications"></a>Notificaciones de subprocesos
 
@@ -80,8 +80,8 @@ void StartNewThread()
 Para enviar una notificación de subprocesos, la aplicación de ejemplo:
 
 - Comprueba si la aplicación tiene autorización para enviar una notificación.
-- Crea un[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-objeto para el contenido de la notificación y establece su[`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
+- Crea un [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+objeto para el contenido de la notificación y establece su [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
 al identificador de subproceso creado anteriormente.
 - Crea una solicitud y programa la notificación:
 
@@ -122,11 +122,11 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 Todas las notificaciones de la misma aplicación con el mismo identificador de subproceso aparecerán en el mismo grupo de notificación.
 
 > [!NOTE]
-> Para establecer un identificador de subproceso en una notificación remota, agregue `thread-id` la clave a la carga JSON de la notificación. Vea el documento [generación de una notificación remota](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) de Apple para obtener más detalles.
+> Para establecer un identificador de subproceso en una notificación remota, agregue la clave `thread-id` a la carga JSON de la notificación. Vea el documento [generación de una notificación remota](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) de Apple para obtener más detalles.
 
 ### <a name="summaryargument"></a>SummaryArgument
 
-`SummaryArgument`Especifica cómo afectará una notificación al texto de resumen que aparece en la esquina inferior izquierda de un grupo de notificaciones al que pertenece la notificación. iOS agrega texto de Resumen de las notificaciones del mismo grupo para crear una descripción general del Resumen.
+`SummaryArgument` especifica cómo afectará una notificación al texto de resumen que aparece en la esquina inferior izquierda de un grupo de notificaciones al que pertenece la notificación. iOS agrega texto de Resumen de las notificaciones del mismo grupo para crear una descripción general del Resumen.
 
 La aplicación de ejemplo usa el autor del mensaje como argumento de resumen. Con este enfoque, el texto de Resumen de un grupo de seis notificaciones con Alice podría ser **de 5 más notificaciones de Alice y me**.
 
@@ -134,8 +134,8 @@ La aplicación de ejemplo usa el autor del mensaje como argumento de resumen. Co
 
 Cada vez que se pulsa el botón **recordatorio de cita** de la aplicación de ejemplo envía una de las distintas notificaciones de recordatorio de cita. Dado que estos recordatorios no son subprocesos, aparecen en el grupo de notificación de nivel de aplicación en la pantalla de bloqueo y en el centro de notificaciones.
 
-Para enviar una notificación de no subproceso, el método de `ScheduleUnthreadedNotification` la aplicación de ejemplo usa un código similar al anterior.
-Sin embargo, no establece `ThreadIdentifier` en el `UNMutableNotificationContent` objeto.
+Para enviar una notificación de no subproceso, el método de `ScheduleUnthreadedNotification` de la aplicación de ejemplo usa un código similar al anterior.
+Sin embargo, no establece el `ThreadIdentifier` en el objeto `UNMutableNotificationContent`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

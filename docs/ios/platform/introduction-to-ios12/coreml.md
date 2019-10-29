@@ -4,15 +4,15 @@ description: En este documento se describen las actualizaciones de Core ML dispo
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/15/2018
-ms.openlocfilehash: 7e22a095a51c2dca749cb1b17807a061d066d0c4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6245873385caa23e37d5499daa822fa0b699ac1e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290306"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032035"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 en Xamarin. iOS
 
@@ -28,7 +28,7 @@ Los fragmentos de código de este documento proceden de este ejemplo.
 
 ## <a name="generate-sample-data"></a>Generar datos de ejemplo
 
-En `ViewController`, el método de la `ViewDidLoad` aplicación de `LoadMLModel`ejemplo llama a, que carga el modelo de ml Core incluido:
+En `ViewController`, el método de `ViewDidLoad` de la aplicación de ejemplo llama a `LoadMLModel`, que carga el modelo de ML Core incluido:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-A continuación, la aplicación de ejemplo `MarsHabitatPricerInput` crea objetos 100.000 para usarlos como entrada para las predicciones de ml básicas secuenciales. Cada ejemplo generado tiene un valor aleatorio establecido para el número de paneles solares, el número de invernaderos y el número de acres:
+A continuación, la aplicación de ejemplo crea 100.000 objetos `MarsHabitatPricerInput` que se usarán como entrada para las predicciones de ML básicas secuenciales. Cada ejemplo generado tiene un valor aleatorio establecido para el número de paneles solares, el número de invernaderos y el número de acres:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Al pulsar cualquiera de los tres botones de la aplicación se ejecutan dos secuencias de predicciones: `for` una que usa un bucle y otra mediante `GetPredictions` el nuevo método de Batch incluido en iOS 12:
+Al pulsar cualquiera de los tres botones de la aplicación se ejecutan dos secuencias de predicciones: una que usa un bucle de `for` y otra con el nuevo método de `GetPredictions` por lotes introducido en iOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (bucle)
 
-La `for` versión de bucle de la prueba recorre en iteración el número especificado de entradas, [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) llama a para cada una de ellas y descarta el resultado. El método multiplica el tiempo que se tarda en realizar las predicciones:
+La versión de bucle `for` de la prueba recorre en iteración el número especificado de entradas, llamando [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) para cada una de ellas y descartando el resultado. El método multiplica el tiempo que se tarda en realizar las predicciones:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,8 +94,8 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (nueva API de batch)
 
-La versión de batch de la prueba crea `MLArrayBatchProvider` un objeto a partir de la matriz de entrada (ya que se trata de `GetPredictions` un parámetro de entrada necesario para el método), crea un[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-objeto que evita que los cálculos de predicción se limiten a la CPU y usa `GetPredictions` la API para capturar las predicciones, descartando de nuevo el resultado:
+La versión de batch de la prueba crea un objeto `MLArrayBatchProvider` a partir de la matriz de entrada (ya que se trata de un parámetro de entrada necesario para el método `GetPredictions`), crea una [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+objeto que evita que los cálculos de predicción se limiten a la CPU y usa la API de `GetPredictions` para capturar las predicciones, descartando de nuevo el resultado:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,7 +118,7 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Resultados
 
-En el simulador y el `GetPredictions` dispositivo, finaliza más rápidamente que las predicciones de ml principales basadas en bucle.
+En el simulador y el dispositivo, `GetPredictions` finaliza más rápidamente que las predicciones de ML principales basadas en bucle.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

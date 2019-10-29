@@ -4,15 +4,15 @@ description: En este documento se describe cómo empezar a crear aplicaciones de
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ebdbbfd0e8195f35755cb849129452fe40f82950
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d51e4f3f3f92cbe533e17eb04b1fcf7e9209dd4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769171"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030727"
 ---
 # <a name="getting-started-with-tvos-in-xamarin"></a>Introducción con tvOS en Xamarin
 

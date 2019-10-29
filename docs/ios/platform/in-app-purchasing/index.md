@@ -4,15 +4,15 @@ description: En este documento se describe cómo vender productos y servicios di
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752639"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032357"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras desde la aplicación en Xamarin. iOS
 

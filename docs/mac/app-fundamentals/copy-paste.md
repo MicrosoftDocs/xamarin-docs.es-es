@@ -4,15 +4,15 @@ description: En este artículo se explica cómo trabajar con la mesa de trabajo 
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 446006b89b82a1f5070a45d7e296e0563d74dbe4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769940"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032624"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar y pegar en Xamarin. Mac
 

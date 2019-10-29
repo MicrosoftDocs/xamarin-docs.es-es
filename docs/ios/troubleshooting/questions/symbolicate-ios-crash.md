@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/09/2018
-ms.openlocfilehash: cc681e94187530c5442ad4fb12557017b92b2bb4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 418a0196849099da03983085aca9ceed2077207b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769222"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030915"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
 
@@ -20,15 +20,15 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
 - Si ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;&gt;directorio de proyecto&lt;/bin/&gt;configuracióndeplataforma&lt; /Device-Builds/dispositivo&gt; &lt;/&gt;&lt;- versión de SO&gt;/**
+    **&lt;directorio de proyecto&gt;/bin/&lt;Platform&gt;/&lt;Configuration&gt;/Device-Builds/&lt;Device&gt;-&lt;os-version&gt;/**
 
     Por ejemplo:
   
-    **TestApp/bin/iPhone/Release/device-builds/iphone8.4-11.3.1/**
+    **TestApp/bin/iPhone/Release/Device-compilaciones/iPhone 8.4-11.3.1/**
 
 - Si no ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;configuración de&gt;la&lt;plataformade/bin/&gt;dedirectoriodeproyecto/&lt;&gt;/**
+    **&lt;directorio de proyecto&gt;/bin/&lt;Platform&gt;/&lt;Configuration&gt;/**
 
     Por ejemplo:
 

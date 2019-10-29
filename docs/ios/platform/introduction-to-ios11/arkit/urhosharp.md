@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar una aplicación de A
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2017
-ms.openlocfilehash: 7f53108460c4e0799ab6c4078d8bb26788b0bf6e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 67ee62fe18385f3a79f4afcb26299990f4666763
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752545"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032236"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso de ARKit con UrhoSharp en Xamarin. iOS
 
@@ -36,26 +36,26 @@ De este modo, cuando se coloca un objeto en el espacio 3D y el usuario se mueve,
 
 ### <a name="ios-application-launch"></a>Inicio de la aplicación de iOS
 
-La aplicación de iOS debe crear e iniciar el contenido 3D. para ello, debe crear un que implemente una subclase `Urho.Application` de y proporcionar el código de instalación invalidando el `Start` método.  Aquí es donde la escena se rellena con datos, los controladores de eventos se configuran y así sucesivamente.
+La aplicación de iOS debe crear e iniciar el contenido 3D. para ello, cree una clase que implemente una subclase de la `Urho.Application` y proporcione el código de instalación invalidando el método `Start`.  Aquí es donde la escena se rellena con datos, los controladores de eventos se configuran y así sucesivamente.
 
-Hemos introducido una `Urho.ArkitApp` clase que `Urho.Application` subclases y, en su `Start` método, realiza el pesado trabajo.   Lo único que tiene que hacer en la aplicación Urho existente es cambiar la clase base para que sea `Urho.ArkitApp` de tipo y tener una aplicación que ejecute su escena de Urho en el mundo.
+Hemos introducido una `Urho.ArkitApp` clase que subclase `Urho.Application` y en su método `Start` realiza el pesado trabajo.   Todo lo que necesita hacer en la aplicación Urho existente es cambiar la clase base para que sea de tipo `Urho.ArkitApp` y tener una aplicación que ejecute su escena de Urho en el mundo.
 
 ### <a name="the-arkitapp-class"></a>La clase ArkitApp
 
 Esta clase proporciona un conjunto de valores predeterminados cómodos, tanto una escena con algunos objetos clave como el procesamiento de eventos ARKit, ya que el sistema operativo los entrega.
 
-La instalación se realiza en el `Start` método virtual.   Cuando invalide este método en la subclase, debe asegurarse de encadenar a su elemento primario usando `base.Start()` en su propia implementación.
+La instalación se realiza en el método virtual `Start`.   Cuando invalide este método en la subclase, debe asegurarse de encadenar a su elemento primario mediante `base.Start()` en su propia implementación.
 
-El `Start` método configura la escena, la ventanilla, la cámara y una luz direccional, y las muestra como propiedades públicas:
+El método `Start` configura la escena, la ventanilla, la cámara y una luz direccional, y las muestra como propiedades públicas:
 
-- `Scene` que contiene los objetos.
-- una dirección `Light` con sombras y cuya ubicación está disponible a través de `LightNode` la propiedad.
-- un `Camera` cuyos componentes se actualizan cuando ARKit entrega una actualización a la aplicación y
-- que `ViewPort` muestra los resultados.
+- `Scene` para contener los objetos,
+- `Light` direccional con sombras y cuya ubicación está disponible a través de la propiedad `LightNode`
+- `Camera` cuyos componentes se actualizan cuando ARKit entrega una actualización a la aplicación y
+- `ViewPort` que muestra los resultados.
 
 ### <a name="your-code"></a>El código
 
-A continuación, debe subclaser `ArkitApp` la clase e invalidar el `Start` método.   Lo primero que debe hacer el método es encadenar a `ArkitApp.Start` mediante una llamada `base.Start()`a.  Después, puede usar cualquiera de las propiedades de configuración de ArkitApp para agregar los objetos a la escena, personalizar las luces, las sombras o los eventos que desea controlar.
+A continuación, debe subclaser la `ArkitApp` clase e invalidar el método `Start`.   Lo primero que debe hacer el método es encadenar al `ArkitApp.Start` llamando a `base.Start()`.  Después, puede usar cualquiera de las propiedades de configuración de ArkitApp para agregar los objetos a la escena, personalizar las luces, las sombras o los eventos que desea controlar.
 
 El ejemplo ARKit/UrhoSharp carga un carácter animado con texturas y reproduce la animación, con la siguiente implementación:
 
@@ -102,15 +102,15 @@ La API de ARKit es bastante sencilla, cree y configure un objeto [ARSession](htt
 
 Vamos a crear las imágenes que va a entregar la cámara a nosotros con nuestro contenido 3D y ajustaremos la cámara en UrhoSharp para que se ajuste a las posibilidades de la ubicación y la posición del dispositivo.
 
-En el diagrama siguiente se muestra lo que se está `ArkitApp` llevando a cabo en la clase:
+En el diagrama siguiente se muestra lo que se está llevando a cabo en la clase `ArkitApp`:
 
-[![Diagrama de las clases y pantallas de ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
+[![diagrama de clases y pantallas de ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
 ### <a name="rendering-the-frames"></a>Representación de los marcos
 
 La idea es sencilla. Combine el vídeo que sale de la cámara con nuestros gráficos 3D para generar la imagen combinada.     Se va a obtener una serie de estas imágenes capturadas en secuencia y se combinará esta entrada con la escena Urho.
 
-La manera más sencilla de hacerlo es insertar un `RenderPathCommand` en el principal. `RenderPath`  Se trata de un conjunto de comandos que se realizan para dibujar un solo fotograma.  Este comando rellenará la ventanilla con cualquier textura que se le pase.    Lo configuramos en el primer fotograma que se está procesando y la definición real se realiza en el archivo **ARRenderPath. XML** que se carga en este momento.
+La manera más sencilla de hacerlo es insertar un `RenderPathCommand` en el `RenderPath`principal.  Se trata de un conjunto de comandos que se realizan para dibujar un solo fotograma.  Este comando rellenará la ventanilla con cualquier textura que se le pase.    Lo configuramos en el primer fotograma que se está procesando y la definición real se realiza en el archivo **ARRenderPath. XML** que se carga en este momento.
 
 Sin embargo, nos enfrentamos a dos problemas para mezclar estos dos mundos juntos:
 
@@ -151,7 +151,7 @@ Por lo tanto, podemos representar las imágenes capturadas como un fondo y repre
 
 ### <a name="adjusting-the-camera"></a>Ajuste de la cámara
 
-Los `ARFrame` objetos también contienen la posición estimada del dispositivo.  Ahora tenemos que trasladar la cámara de juego ARFrame-Before ARKit no es una gran cantidad de seguimiento de la orientación del dispositivo (rollo, tono y guiñada) y representa un holograma anclado en la parte superior del vídeo, pero si mueve el dispositivo, se desplazarán los hologramas.
+Los objetos `ARFrame` también contienen la posición estimada del dispositivo.  Ahora tenemos que trasladar la cámara de juego ARFrame-Before ARKit no es una gran cantidad de seguimiento de la orientación del dispositivo (rollo, tono y guiñada) y representa un holograma anclado en la parte superior del vídeo, pero si mueve el dispositivo, se desplazarán los hologramas.
 
 Esto sucede porque los sensores integrados, como giroscopio, no pueden realizar un seguimiento de los movimientos, solo pueden acelerar.  ARKit analiza cada fotograma y extrae los puntos de características para realizar el seguimiento y, por lo tanto, puede proporcionarnos una matriz de transformación precisa que contenga datos de movimiento y rotación.
 
@@ -162,7 +162,7 @@ var row = arCamera.Transform.Row3;
 CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
-`-row.Z` Usamos porque ARKit usa un sistema de coordenadas de la mano derecha.
+Usamos `-row.Z` porque ARKit usa un sistema de coordenadas de la mano derecha.
 
 ### <a name="plane-detection"></a>Detección de plano
 

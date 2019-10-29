@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5AC6AC4-0E7C-4746-A7CF-872F0E75AFF4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 1e359d510b1ff92299dc4b9792a2911d5583e66a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d21dfdbf6c9be00fe6851bb288268faccd74308
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769728"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030967"
 ---
 # <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequest"></a>MDocArchiveToMsxDocConverter.exe no encontró rver.BaseCommand.OnRequest
 
@@ -37,4 +37,4 @@ Hay dos problemas independientes en este mensaje:
 
 2. `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
 
-    Este error es el problema real. Desafortunadamente, debido a una [limitación](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) , este seguimiento de la pila de excepciones está *incompleto*. Si observa un seguimiento de la pila incompleto similar al siguiente en el registro del servidor Mac, `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` puede comprobar el archivo en el host de compilación de Mac para buscar el seguimiento de la pila completo.
+    Este error es el problema real. Desafortunadamente, debido a una [limitación](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) , este seguimiento de la pila de excepciones está *incompleto*. Si observa un seguimiento de la pila incompleto similar al siguiente en el registro del servidor Mac, puede comprobar el archivo de `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` en el host de compilación de Mac para buscar el seguimiento de la pila completo.

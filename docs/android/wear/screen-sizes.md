@@ -3,15 +3,15 @@ title: Trabajar con tamaños de pantalla en Xamarin. Android y desgaste del SO
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 86e05dc0e9cd5df325126cc5a339b36dd27c1e45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758317"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030353"
 ---
 # <a name="working-with-screen-sizes"></a>Trabajar con tamaños de pantalla
 
@@ -21,15 +21,15 @@ Los dispositivos de desgaste de Android pueden tener una pantalla rectangular o 
 
 ## <a name="identifying-screen-type"></a>Tipo de pantalla de identificación
 
-La biblioteca de soporte técnico de desgaste proporciona algunos controles que le ayudan a detectar y adaptarse a diferentes formas `WatchViewStub` de `BoxInsetLayout`pantalla, como y.
+La biblioteca de soporte técnico de desgaste proporciona algunos controles que le ayudan a detectar y adaptarse a diferentes formas de pantalla, como `WatchViewStub` y `BoxInsetLayout`.
 
-Tenga en cuenta que algunos de los otros controles de la biblioteca de `GridViewPager`compatibilidad (como) detectan *automáticamente* la forma de pantalla y no deben agregarse como elementos secundarios de los controles que se describen a continuación.
+Tenga en cuenta que algunos de los demás controles de la biblioteca de compatibilidad (como `GridViewPager`) detectan *automáticamente* la forma de pantalla y no deben agregarse como elementos secundarios de los controles que se describen a continuación.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
 Vea el ejemplo de [WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) para ver cómo detectar el tipo de pantalla y mostrar un diseño diferente para cada tipo.
 
-El archivo de diseño principal contiene `android.support.wearable.view.WatchViewStub` un que hace referencia a diferentes diseños para pantallas rectangulares y `app:rectLayout` redondas usando los atributos y `app:roundLayout` :
+El archivo de diseño principal contiene una `android.support.wearable.view.WatchViewStub` que hace referencia a diferentes diseños para pantallas rectangulares y redondas mediante los atributos `app:rectLayout` y `app:roundLayout`:
 
 ```xml
 <android.support.wearable.view.WatchViewStub
@@ -49,7 +49,7 @@ La solución contiene diferentes diseños para cada estilo que se seleccionarán
 
 En lugar de crear diseños diferentes para cada tipo de pantalla, también puede crear una vista única que se adapte a pantallas rectangulares o redondas.
 
-En este [ejemplo de Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) se muestra cómo `BoxInsetLayout` usar el para usar el mismo diseño en pantallas rectangulares y redondas.
+En este [ejemplo de Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) se muestra cómo usar el `BoxInsetLayout` para usar el mismo diseño en pantallas rectangulares y redondas.
 
 ## <a name="wear-ui-designer"></a>Diseñador de IU de desgaste
 

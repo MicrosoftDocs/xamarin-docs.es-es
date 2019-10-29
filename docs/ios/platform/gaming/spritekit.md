@@ -4,15 +4,15 @@ description: En este documento se describe SpriteKit, el marco de gráficos 2D d
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: d2466de4891c289f4686c37bc9fe73c24a5a48ca
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8829211ebf06eea224eade3f1b9d836207cdd64
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753062"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032471"
 ---
 # <a name="spritekit-in-xamarinios"></a>SpriteKit en Xamarin. iOS
 
@@ -27,13 +27,13 @@ SpriteKit admite ahora la derivación del cuerpo de la física de un Sprite a pa
 
 Por ejemplo, observe en la siguiente colisión cómo los plátanos y Monkey entran en conflicto casi en la superficie de cada imagen:
 
-![](spritekit-images/image13.png "El plátano y Monkey entran en conflicto casi en la superficie de cada imagen.")
+![](spritekit-images/image13.png "The banana and monkey collide nearly at the surface of each image")
 
-SpriteKit hace posible la creación de este cuerpo físico con una sola línea de código. Simplemente llame `SKPhysicsBody.Create` a con la textura y el tamaño: Sprite. PhysicsBody = SKPhysicsBody. Create (Sprite. Texture, Sprite. Tamaño);
+SpriteKit hace posible la creación de este cuerpo físico con una sola línea de código. Simplemente llame a `SKPhysicsBody.Create` con la textura y el tamaño: Sprite. PhysicsBody = SKPhysicsBody. Create (Sprite. Texture, Sprite. Tamaño);
 
 ## <a name="alpha-threshold"></a>Umbral alfa
 
-Además de establecer simplemente la `PhysicsBody` propiedad directamente en el objeto Geometry derivado de la textura, las aplicaciones pueden establecer y umbral alfa para controlar cómo se deriva la geometría. 
+Además de establecer simplemente la propiedad `PhysicsBody` directamente en la geometría derivada de la textura, las aplicaciones pueden establecer y umbral alfa para controlar cómo se deriva la geometría. 
 
 El umbral alfa define el valor alfa mínimo que debe tener un píxel para incluirse en el cuerpo físico resultante. Por ejemplo, el código siguiente da como resultado un cuerpo de física ligeramente diferente:
 
@@ -43,15 +43,15 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 
 El efecto de ajustar el umbral alfa como este ajusta la colisión anterior, de modo que el Monkey se recurra al conflicto con el plátano:
 
-![](spritekit-images/image14.png "El Monkey se sitúa cuando entra en conflicto con el plátano")
+![](spritekit-images/image14.png "The monkey falls over when colliding with the banana")
 
 ## <a name="physics-fields"></a>Campos de física
 
 Otra excelente adición a SpriteKit es el nuevo soporte de campo físico. Estos permiten agregar elementos, como los campos de Vortex, los campos de gravedad radial y los campos de muelle por nombrar solo unos pocos.
 
-Los campos de física se crean mediante la clase SKFieldNode, que se agrega a una escena como cualquier `SKNode`otro. Hay una variedad de métodos `SKFieldNode` de generador para crear distintos campos físicos. Puede crear un campo de Spring llamando a `SKFieldNode.CreateSpringField()`, un campo de gravedad radial llamando `SKFieldNode.CreateRadialGravityField()`a, y así sucesivamente.
+Los campos de física se crean mediante la clase SKFieldNode, que se agrega a una escena como cualquier otro `SKNode`. Hay una variedad de métodos de generador en `SKFieldNode` para crear distintos campos físicos. Puede crear un campo de Spring llamando a `SKFieldNode.CreateSpringField()`, un campo de gravedad radial llamando a `SKFieldNode.CreateRadialGravityField()`, etc.
 
-`SKFieldNode`también tiene propiedades para controlar atributos de campo como la intensidad del campo, la región del campo y la atenuación de las fuerzas del campo.
+`SKFieldNode` también tiene propiedades para controlar los atributos de campo, como la intensidad del campo, la región del campo y la atenuación de las fuerzas del campo.
 
 ## <a name="spring-field"></a>Campo Spring
 
@@ -66,7 +66,7 @@ fieldNode.Region = new SKRegion(Frame.Size);
 AddChild (fieldNode);
 ```
 
-Después, puede Agregar sprites y establecer sus `PhysicsBody` propiedades para que el campo físico afecte a los sprites, como hace el código siguiente cuando el usuario toca la pantalla:
+Después, puede Agregar sprites y establecer sus propiedades de `PhysicsBody` para que el campo físico afecte a los sprites, como hace el código siguiente cuando el usuario toca la pantalla:
 
 ```csharp
 public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -85,7 +85,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Esto hace que los plátanos oscilan como un muelle alrededor del nodo de campo:
 
-![](spritekit-images/image15.png "Los plátanos oscilan como un muelle alrededor del nodo de campo")
+![](spritekit-images/image15.png "The bananas oscillate like a spring around the field node")
 
 ## <a name="radial-gravity-field"></a>Campo de gravedad radial
 
@@ -101,4 +101,4 @@ fieldNode.Falloff = 1.0f;
 
 Esto da como resultado un campo de fuerza diferente, en el que los plátanos se extraen radialmente sobre el campo:
 
-![](spritekit-images/image16.png "Los plátanos se extraen en torno al campo")
+![](spritekit-images/image16.png "The bananas are pulled radially around the field")

@@ -4,15 +4,15 @@ description: En este artículo se muestra cómo usar SiriKit en una aplicación 
 ms.prod: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 802cf60f88f80ce7d67cd9fd8ec85ca343fd2916
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 90d3a3b6a1e3a3c20ba8cf2ed1f12f234e3af33b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769386"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031482"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit en Xamarin. iOS
 
@@ -29,7 +29,7 @@ Siri funciona con el concepto de **dominios**, grupos de acciones conocidas para
 - Buscar fotografías.
 - Enviar o recibir pagos.
 
-Cuando el usuario realiza una solicitud de Siri que implica a uno de los servicios de una extensión de aplicación, SiriKit envía a la extensión un objeto de **intención** que describe la solicitud del usuario junto con los datos auxiliares. A continuación, la extensión de la aplicación genera el objeto de **respuesta** adecuado para el **objetivo**dado, lo que detalla cómo la extensión puede controlar la solicitud.
+Cuando el usuario realiza una solicitud de Siri que implica a uno de los servicios de una extensión de aplicación, SiriKit envía a la extensión un objeto de **intención** que describe la solicitud del usuario junto con los datos auxiliares. a continuación, la extensión de la aplicación genera el objeto de **respuesta** adecuado para el **objetivo**dado, lo que detalla cómo la extensión puede controlar la solicitud.
 
 ## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[Descripción de los conceptos de SiriKit](~/ios/platform/sirikit/understanding-sirikit.md)
 

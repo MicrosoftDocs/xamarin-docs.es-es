@@ -4,15 +4,15 @@ description: En este artículo se describen los recursos que se pueden usar para
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
-ms.openlocfilehash: 6d4303ebcd77ad5234b4750b46bbd0c84ffc5356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cbed65ce39e9298d397051740737aa164fadbc0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291745"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031848"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Solución de problemas de desarrollo de iOS 12 con Xamarin
 
@@ -23,7 +23,6 @@ En este documento se describen los lugares en los que buscar ayuda si tiene prob
 Compruebe los siguientes recursos para obtener los problemas conocidos:
 
 - Notas de la versión
-  - Blog de [versiones de Xamarin](http://releases.xamarin.com/)
   - Archivo de [notas](https://docs.microsoft.com/xamarin/ios/release-notes/) de la versión de Xamarin
   - Visual Studio para Mac ([estable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [vista previa](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
   - Visual Studio 2017 ([estable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [versión preliminar](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
@@ -40,5 +39,5 @@ Para notificar nuevos problemas en la [comunidad de desarrolladores](https://dev
 
 Para analizar las preguntas sobre cómo implementar características específicas de iOS 12 en Xamarin. iOS, eche un vistazo a:
 
-- [Foros de Xamarin](http://forums.xamarin.com/categories/ios)
-- [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=xamarin)
+- [Foros de Xamarin](https://forums.xamarin.com/categories/ios)
+- [Desbordamiento de pila](https://stackoverflow.com/search?tab=newest&q=xamarin)

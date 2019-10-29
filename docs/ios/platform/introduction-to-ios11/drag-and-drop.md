@@ -4,15 +4,15 @@ description: En este documento se describe cómo implementar la función de arra
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2017
-ms.openlocfilehash: 8f1e9cabb78152374ee3eede80dcfc5dcba8dde1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 928936815c89dd74d0ad3775f59ea210702c8857
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752376"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032172"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Arrastrar y colocar en Xamarin. iOS
 
@@ -35,20 +35,20 @@ Al agregar compatibilidad con arrastrar y colocar a las aplicaciones, puede prop
 
 ## <a name="drag-and-drop-with-text-controls"></a>Arrastrar y colocar con controles de texto
 
-`UITextView`y `UITextField` permiten automáticamente arrastrar el texto seleccionado y colocar el contenido de texto en.
+`UITextView` y `UITextField` admiten automáticamente arrastrar texto seleccionado y colocar el contenido de texto en.
 
 <a name="uitableview" />
 
 ## <a name="drag-and-drop-with-uitableview"></a>Arrastrar y colocar con UITableView
 
-`UITableView`tiene un control integrado para las interacciones de arrastrar y colocar con las filas de la tabla, requiriendo solo unos cuantos métodos para habilitar el comportamiento predeterminado.
+`UITableView` tiene un control integrado para las interacciones de arrastrar y colocar con las filas de la tabla, requiriendo solo unos cuantos métodos para habilitar el comportamiento predeterminado.
 
 Hay dos interfaces implicadas:
 
-- `IUITableViewDragDelegate`: Empaqueta información cuando se inicia una arrastre en la vista de tabla.
-- `IUITableViewDropDelegate`: Procesa información cuando se intenta y completa una operación de eliminación.
+- `IUITableViewDragDelegate`: empaqueta información cuando se inicia una arrastre en la vista de tabla.
+- `IUITableViewDropDelegate`: procesa información cuando se intenta y completa una operación de quitar.
 
-En el [ejemplo DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) , estas dos interfaces se implementan en `UITableViewController` la clase, junto con el delegado y el origen de datos. Están asignados en el `ViewDidLoad` método:
+En el [ejemplo DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) , estas dos interfaces se implementan en la clase `UITableViewController`, junto con el delegado y el origen de datos. Están asignadas en el método `ViewDidLoad`:
 
 ```csharp
 this.TableView.DragDelegate = this;
@@ -59,9 +59,9 @@ A continuación se explica el código necesario mínimo para estas dos interface
 
 ### <a name="table-view-drag-delegate"></a>Delegado de arrastre de vista de tabla
 
-El único método _necesario_ para admitir arrastrar una fila de una vista de tabla es `GetItemsForBeginningDragSession`. Si el usuario comienza a arrastrar una fila, se llamará a este método.
+El único método _necesario_ para admitir arrastrar una fila desde una vista de tabla es `GetItemsForBeginningDragSession`. Si el usuario comienza a arrastrar una fila, se llamará a este método.
 
-A continuación se muestra una implementación de. Recupera los datos asociados a la fila arrastrada, los codifica y configura un `NSItemProvider` objeto que determina cómo controlarán las aplicaciones la parte "Drop" de la operación (por ejemplo, si pueden controlar el tipo de datos, `PlainText`, en el ejemplo):
+A continuación se muestra una implementación de. Recupera los datos asociados a la fila arrastrada, los codifica y configura una `NSItemProvider` que determina cómo controlarán las aplicaciones la parte "Drop" de la operación (por ejemplo, si pueden controlar el tipo de datos, `PlainText`, en el ejemplo):
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -91,13 +91,13 @@ Hay muchos métodos opcionales en el delegado de arrastre que se pueden implemen
 
 Se llama a los métodos del delegado Drop cuando se produce una operación de arrastre sobre una vista de tabla o se completa por encima de él. Los métodos necesarios determinan si se permite quitar los datos y qué acciones se realizan en caso de que se complete la eliminación:
 
-- `CanHandleDropSession`: Mientras un arrastre está en curso y, potencialmente, se coloca en la aplicación, este método determina si se permite quitar los datos que se arrastran.
-- `DropSessionDidUpdate`: Mientras la operación de arrastrar está en curso, se llama a este método para determinar qué acción está prevista. Se puede usar la información de la vista de tabla que se está arrastrando, la sesión de arrastre y la ruta de acceso del índice posible para determinar el comportamiento y los comentarios visuales proporcionados al usuario.
-- `PerformDrop`: Cuando el usuario completa la colocación (al levantar el dedo), este método extrae los datos que se arrastran y modifica la vista de tabla para agregar los datos en una nueva fila (o filas).
+- `CanHandleDropSession`: mientras un arrastre está en curso y, potencialmente, se coloca en la aplicación, este método determina si se permite quitar los datos que se arrastran.
+- `DropSessionDidUpdate`: mientras la operación de arrastrar está en curso, se llama a este método para determinar qué acción está prevista. Se puede usar la información de la vista de tabla que se está arrastrando, la sesión de arrastre y la ruta de acceso del índice posible para determinar el comportamiento y los comentarios visuales proporcionados al usuario.
+- `PerformDrop`: cuando el usuario completa la colocación (al levantar el dedo), este método extrae los datos que se arrastran y modifica la vista de tabla para agregar los datos en una nueva fila (o filas).
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession`indica si la vista de tabla puede aceptar los datos que se arrastran. En este fragmento de código `CanLoadObjects` , se usa para confirmar que esta vista de tabla puede aceptar datos de cadena.
+`CanHandleDropSession` indica si la vista de tabla puede aceptar los datos que se arrastran. En este fragmento de código, `CanLoadObjects` se utiliza para confirmar que esta vista de tabla puede aceptar datos de cadena.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,9 +108,9 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-Se llama repetidamente al métodomientraslaoperacióndearrastrarestáencurso,paraproporcionarindicacionesvisualesalusuario.`DropSessionDidUpdate`
+Se llama repetidamente al método `DropSessionDidUpdate` mientras la operación de arrastrar está en curso, para proporcionar indicaciones visuales al usuario.
 
-En el código siguiente, `HasActiveDrag` se usa para determinar si la operación se originó en la vista de tabla actual. Si es así, solo se permite que se muevan las filas individuales.
+En el código siguiente, `HasActiveDrag` se utiliza para determinar si la operación se originó en la vista de tabla actual. Si es así, solo se permite que se muevan las filas individuales.
 Si el arrastre procede de otro origen, se indicará una operación de copia:
 
 ```csharp
@@ -131,13 +131,13 @@ public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDr
 }
 ```
 
-La operación Drop puede ser `Cancel`, `Move`o `Copy`.
+La operación Drop puede ser una de `Cancel`, `Move`o `Copy`.
 
 La intención de colocar puede ser insertar una nueva fila o agregar o anexar datos a una fila existente.
 
 #### <a name="performdrop"></a>PerformDrop
 
-Se llama al método cuando el usuario completa la operación y modifica la vista de tabla y el origen de datos para reflejar los datos colocados. `PerformDrop`
+Se llama al método `PerformDrop` cuando el usuario completa la operación y modifica la vista de tabla y el origen de datos para reflejar los datos colocados.
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)

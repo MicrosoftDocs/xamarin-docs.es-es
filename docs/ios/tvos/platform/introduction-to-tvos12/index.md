@@ -4,15 +4,15 @@ description: En este documento se proporciona un alto nivel de información gene
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: f5028fe6ae7ee726ffd94d7908a089ce3bdcb385
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287949"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030549"
 ---
 # <a name="introduction-to-tvos-12"></a>Introducción a tvOS 12
 
@@ -26,11 +26,11 @@ tvOS 12 incluye TVUIKit, un conjunto de API que permiten a los desarrolladores d
 
 ## <a name="password-autofill"></a>Autorrellenar de contraseña
 
-Con tvOS 12, los usuarios pueden usar sus dispositivos iOS para iniciar sesión en una aplicación de tvOS con una sola derivación. Esto se habilita a través de una `UITextContentType` combinación de uso para especificar los campos de nombre de usuario y contraseña, dominios asociados para establecer una relación entre una aplicación de iOS y una aplicación de tvOS, y los entornos de enfoque preferidos para seleccionar un elemento para recibir el foco después de un usuario. proporciona un nombre de usuario y una contraseña.
+Con tvOS 12, los usuarios pueden usar sus dispositivos iOS para iniciar sesión en una aplicación de tvOS con una sola derivación. Esto se habilita a través de una combinación de uso de `UITextContentType` para especificar los campos de nombre de usuario y contraseña, dominios asociados para establecer una relación entre una aplicación de iOS y una aplicación de tvOS, y los entornos de enfoque preferidos para seleccionar un elemento para recibir el foco después de un usuario. proporciona un nombre de usuario y una contraseña.
 
 ## <a name="focus-engine-enhancements"></a>Mejoras en el motor de enfoque
 
-tvOS 12 permite todas las aplicaciones, independientemente de cómo se representen, para interactuar con el motor de foco. A través de las interacciones de un usuario con el Siri remoto, el motor de foco puede usarse con cualquier aplicación para seleccionar un elemento, la sugerencia en los cambios de foco posibles y la actualización natural del foco. Esto está habilitado en las aplicaciones personalizadas a `IUIFocusItemContainer` través de la `UIFocusMovementHint` interfaz de UIKit `IUIFocusItemScrollableContainer` , la clase, la interfaz y otras clases y métodos relacionados.
+tvOS 12 permite todas las aplicaciones, independientemente de cómo se representen, para interactuar con el motor de foco. A través de las interacciones de un usuario con el Siri remoto, el motor de foco puede usarse con cualquier aplicación para seleccionar un elemento, la sugerencia en los cambios de foco posibles y la actualización natural del foco. Esto está habilitado en las aplicaciones personalizadas a través de la interfaz `IUIFocusItemContainer` de UIKit, la clase `UIFocusMovementHint`, la interfaz `IUIFocusItemScrollableContainer` y otras clases y métodos relacionados.
 
 ## <a name="vision-framework"></a>Vision Framework
 

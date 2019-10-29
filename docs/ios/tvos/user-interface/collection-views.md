@@ -4,21 +4,21 @@ description: En este documento se describe cómo trabajar con vistas de colecci�
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: be0208accfdc287f93cf635a22c6409cd03483e9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769130"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030501"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabajar con vistas de colección de tvOS en Xamarin
 
 Las vistas de colección permiten mostrar un grupo de contenido mediante diseños arbitrarios. Mediante el uso de la compatibilidad integrada, permiten los diseños de cuadrícula de creación sencillas o lineales, a la vez que también admiten diseños personalizados.
 
-[![](collection-views-images/collection01.png "Vista de colección de ejemplo")](collection-views-images/collection01.png#lightbox)
+[![](collection-views-images/collection01.png "Sample collection view")](collection-views-images/collection01.png#lightbox)
 
 La vista de colección mantiene una colección de elementos utilizando un delegado y un origen de datos para proporcionar la interacción del usuario y el contenido de la colección. Dado que la vista de colección se basa en un subsistema de diseño que es independiente de la propia vista, proporcionar un diseño diferente puede cambiar fácilmente la presentación de los datos de la vista de colección sobre la marcha.
 
@@ -26,21 +26,21 @@ La vista de colección mantiene una colección de elementos utilizando un delega
 
 ## <a name="about-collection-views"></a>Acerca de las vistas de colección
 
-Como se indicó anteriormente, una vista de`UICollectionView`colección () administra una colección ordenada de elementos y presenta esos elementos con diseños personalizables. Las vistas de colección funcionan de manera similar a las vistas`UITableView`de tabla (), salvo que pueden usar diseños para presentar elementos en más de una sola columna.
+Como se indicó anteriormente, una vista de colección (`UICollectionView`) administra una colección ordenada de elementos y presenta esos elementos con diseños personalizables. Las vistas de colección funcionan de manera similar a las vistas de tabla (`UITableView`), salvo que pueden usar diseños para presentar elementos en más de una sola columna.
 
-Cuando se usa una vista de colección en tvOS, la aplicación es responsable de proporcionar los datos asociados a la colección mediante un origen`UICollectionViewDataSource`de datos (). Opcionalmente, los datos de la vista de colección se pueden organizar y presentar en grupos diferentes (secciones).
+Cuando se usa una vista de colección en tvOS, la aplicación es responsable de proporcionar los datos asociados a la colección mediante un origen de datos (`UICollectionViewDataSource`). Opcionalmente, los datos de la vista de colección se pueden organizar y presentar en grupos diferentes (secciones).
 
-La vista de colección presenta los elementos individuales en la pantalla mediante una`UICollectionViewCell`celda () que proporciona la presentación de un fragmento de información determinado de la colección (como una imagen y su título).
+La vista de colección presenta los elementos individuales en la pantalla mediante una celda (`UICollectionViewCell`) que proporciona la presentación de un fragmento de información determinado de la colección (como una imagen y su título).
 
 Opcionalmente, se pueden agregar vistas adicionales a la presentación de la vista de colección para que actúen como encabezado y pie de página para las secciones y celdas. El diseño de la vista de colección es responsable de definir la posición de estas vistas junto con las celdas individuales.
 
-La vista de colección puede responder a la interacción del usuario mediante`UICollectionViewDelegate`un delegado (). Este delegado también es responsable de determinar si una celda determinada puede obtener el foco, si se ha resaltado una celda o si se ha seleccionado una. En algunos casos, el delegado determina el tamaño de las celdas individuales.
+La vista de colección puede responder a la interacción del usuario mediante un delegado (`UICollectionViewDelegate`). Este delegado también es responsable de determinar si una celda determinada puede obtener el foco, si se ha resaltado una celda o si se ha seleccionado una. En algunos casos, el delegado determina el tamaño de las celdas individuales.
 
 <a name="Collection-View-Layouts" />
 
 ## <a name="collection-view-layouts"></a>Diseños de la vista de colección
 
-Una característica clave de una vista de colección es su separación entre los datos que presenta y su diseño. Un diseño de vista de`UICollectionViewLayout`colección () es responsable de proporcionar la organización y la ubicación de las celdas (y las vistas complementarias) con en la presentación en pantalla de la vista de colección.
+Una característica clave de una vista de colección es su separación entre los datos que presenta y su diseño. Un diseño de vista de colección (`UICollectionViewLayout`) es responsable de proporcionar la organización y la ubicación de las celdas (y las vistas complementarias) con en la presentación en pantalla de la vista de colección.
 
 La vista de colección crea las celdas individuales desde su origen de datos adjunto y, a continuación, se organizan y muestran en el diseño de vista de colección dado.
 
@@ -56,10 +56,10 @@ El origen de datos de una vista de colección no es solo responsable de proporci
 
 Dado que las vistas de colección se diseñaron para administrar grandes colecciones de elementos, las celdas individuales se pueden quitar de la cola y volver a usar para evitar las limitaciones de memoria que se sobrecargan. Hay dos métodos diferentes para quitar de la cola las vistas:
 
-- `DequeueReusableCell`: Crea o devuelve una celda del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
-- `DequeueReusableSupplementaryView`: Crea o devuelve una vista complementaria del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
+- `DequeueReusableCell`: crea o devuelve una celda del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
+- `DequeueReusableSupplementaryView`: crea o devuelve una vista complementaria del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
 
-Antes de llamar a cualquiera de estos métodos, debe registrar la clase, el `.xib` guión gráfico o el archivo usados para crear la vista de la celda con la vista de colección. Por ejemplo:
+Antes de llamar a cualquiera de estos métodos, debe registrar la clase, el guión gráfico o el archivo `.xib` que se usa para crear la vista de la celda con la vista de colección. Por ejemplo:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -78,13 +78,13 @@ Una vez que la celda se ha quitado de la cola, se configura con los datos del el
 
 ## <a name="about-collection-view-controllers"></a>Acerca de los controladores de vista de colección
 
-Un controlador de vista de`UICollectionViewController`colección () es un controlador de`UIViewController`vista especializado () que proporciona el siguiente comportamiento:
+Un controlador de vista de colección (`UICollectionViewController`) es un controlador de vista especializado (`UIViewController`) que proporciona el siguiente comportamiento:
 
-- Es responsable de cargar la vista de colección desde su guión gráfico `.xib` o archivo y crear una instancia de la vista. Si se crea en el código, crea automáticamente una nueva vista de colección no configurada.
-- Una vez cargada la vista de colección, el controlador intenta cargar su origen de datos y delegar desde el `.xib` guión gráfico o el archivo. Si no hay ninguno disponible, se establece como el origen de ambos.
+- Es responsable de cargar la vista de colección desde su archivo Storyboard o `.xib` y crear una instancia de la vista. Si se crea en el código, crea automáticamente una nueva vista de colección no configurada.
+- Una vez que se carga la vista de colección, el controlador intenta cargar su origen de datos y delegar desde el guión gráfico o el archivo de `.xib`. Si no hay ninguno disponible, se establece como el origen de ambos.
 - Garantiza que los datos se carguen antes de que la vista de colección se rellene la primera vez que se muestre y que se vuelva a cargar y borre la selección en cada pantalla subsiguiente.
 
-Además, el controlador de vista de colección proporciona métodos reemplazables que se pueden usar para administrar el ciclo de vida de la `AwakeFromNib` vista `ViewWillDisplay`de colección, como y.
+Además, el controlador de vista de colección proporciona métodos reemplazables que se pueden usar para administrar el ciclo de vida de la vista de colección, como `AwakeFromNib` y `ViewWillDisplay`.
 
 <a name="Collection-Views-and-Storyboards" />
 
@@ -97,80 +97,80 @@ Vamos a hacer lo siguiente:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Inicie una nueva **aplicación de tvOS de vista única** en Visual Studio para Mac.
-1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo en el diseñador de iOS.
+1. En el **Explorador de soluciones**, haga doble clic en el archivo de `Main.storyboard` y ábralo en el diseñador de iOS.
 1. Agregue una vista de imagen, una etiqueta y un botón a la vista existente y configúrela para que tengan un aspecto similar al siguiente: 
 
-    [![](collection-views-images/collection02.png "Diseño de ejemplo")](collection-views-images/collection02.png#lightbox)
+    [![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
 1. Asigne un **nombre** a la vista de imagen y la etiqueta en la **pestaña widget** del **Explorador de propiedades**. Por ejemplo: 
 
-    [![](collection-views-images/collection03.png "Establecimiento del nombre")](collection-views-images/collection03.png#lightbox)
+    [![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
 1. A continuación, arrastre un controlador de vista de colección al guion gráfico: 
 
-    [![](collection-views-images/collection04.png "Un controlador de vista de colección")](collection-views-images/collection04.png#lightbox)
+    [![](collection-views-images/collection04.png "A Collection View Controller")](collection-views-images/collection04.png#lightbox)
 1. Control: arrastre desde el botón hasta el controlador de **vista de colección y seleccione Enviar** en el menú emergente: 
 
-    [![](collection-views-images/collection05.png "Seleccione la extracción en el menú emergente.")](collection-views-images/collection05.png#lightbox)
+    [![](collection-views-images/collection05.png "Select Push from the popup")](collection-views-images/collection05.png#lightbox)
 1. Cuando se ejecute la aplicación, esto hará que se muestre la vista de colección siempre que el usuario haga clic en el botón.
 1. Seleccione la vista de recopilación y escriba los valores siguientes en la **pestaña diseño** del **Explorador de propiedades**: 
 
-    [![](collection-views-images/collection06.png "Explorador de propiedades")](collection-views-images/collection06.png#lightbox)
+    [![](collection-views-images/collection06.png "The Properties Explorer")](collection-views-images/collection06.png#lightbox)
 1. Esto controla el tamaño de las celdas individuales y los bordes entre las celdas y el borde exterior de la vista de colección.
-1. Seleccione el controlador `CityCollectionViewController` de vista de colección y establezca su clase en en la **pestaña widget**: 
+1. Seleccione el controlador de vista de colección y establezca su clase en `CityCollectionViewController` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection07.png "Establezca la clase en CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
-1. Seleccione la vista `CityCollectionView` de colección y establezca su clase en en la **pestaña widget**: 
+    [![](collection-views-images/collection07.png "Set the class to CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
+1. Seleccione la vista de colección y establezca su clase en `CityCollectionView` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection08.png "Establezca la clase en CityCollectionView")](collection-views-images/collection08.png#lightbox)
-1. Seleccione la celda vista `CityCollectionViewCell` de colección y establezca su clase en en la **pestaña widget**: 
+    [![](collection-views-images/collection08.png "Set the class to CityCollectionView")](collection-views-images/collection08.png#lightbox)
+1. Seleccione la celda vista de colección y establezca su clase en `CityCollectionViewCell` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection09.png "Establezca la clase en CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
-1. En la **pestaña widget** , asegúrese de que el `Flow` diseño sea y que la `Vertical` dirección de **desplazamiento** sea para la vista de colección: 
+    [![](collection-views-images/collection09.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
+1. En la **pestaña widget** , asegúrese de que el **diseño** es `Flow` y de que la **dirección de desplazamiento** se `Vertical` para la vista de colección: 
 
-    [![](collection-views-images/collection10.png "La pestaña widget")](collection-views-images/collection10.png#lightbox)
-1. Seleccione la celda vista `CityCell` de colección y establezca su **identidad** en en la **pestaña widget**: 
+    [![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
+1. Seleccione la celda vista de colección y establezca su **identidad** en `CityCell` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection11.png "Establezca la identidad en CityCell")](collection-views-images/collection11.png#lightbox)
+    [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Guarde los cambios.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Inicie una nueva **aplicación de tvOS de vista única** en Visual Studio.
-1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` el archivo y ábralo en el diseñador de iOS.
+1. En el **Explorador de soluciones**, haga doble clic en el archivo de `Main.storyboard` y ábralo en el diseñador de iOS.
 1. Agregue una vista de imagen, una etiqueta y un botón a la vista existente y configúrela para que tengan un aspecto similar al siguiente: 
 
-    [![](collection-views-images/collection02vs.png "Configurar el diseño")](collection-views-images/collection02vs.png#lightbox)
+    [![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
 1. Asigne un **nombre** a la vista de imagen y la etiqueta en la **pestaña widget** del **Explorador de propiedades**. Por ejemplo: 
 
-    [![](collection-views-images/collection03vs.png "Explorador de propiedades")](collection-views-images/collection03vs.png#lightbox)
+    [![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
 1. A continuación, arrastre un controlador de vista de colección al guion gráfico: 
 
-    [![](collection-views-images/collection04vs.png "Un controlador de vista de colección")](collection-views-images/collection04vs.png#lightbox)
+    [![](collection-views-images/collection04vs.png "A Collection View Controller")](collection-views-images/collection04vs.png#lightbox)
 1. Control: arrastre desde el botón hasta el controlador de **vista de colección y seleccione Enviar** en el menú emergente: 
 
-    [![](collection-views-images/collection05vs.png "Seleccione la extracción en el menú emergente.")](collection-views-images/collection05vs.png#lightbox)
+    [![](collection-views-images/collection05vs.png "Select Push from the popup")](collection-views-images/collection05vs.png#lightbox)
 1. Cuando se ejecute la aplicación, esto hará que se muestre la vista de colección siempre que el usuario haga clic en el botón.
 1. Seleccione la vista de colección y, en la **pestaña diseño** del **Explorador de propiedades** , escriba el **ancho** en _361_ y el **alto** como _256_ 
 1. Esto controla el tamaño de las celdas individuales y los bordes entre las celdas y el borde exterior de la vista de colección.
-1. Seleccione el controlador `CityCollectionViewController` de vista de colección y establezca su clase en en la **pestaña widget**: 
+1. Seleccione el controlador de vista de colección y establezca su clase en `CityCollectionViewController` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection07vs.png "Establezca la clase en CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
-1. Seleccione la vista `CityCollectionView` de colección y establezca su clase en en la **pestaña widget**: 
+    [![](collection-views-images/collection07vs.png "Set the class to CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
+1. Seleccione la vista de colección y establezca su clase en `CityCollectionView` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection08vs.png "Establezca la clase en CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
-1. Seleccione la celda vista `CityCollectionViewCell` de colección y establezca su clase en en la **pestaña widget**: 
+    [![](collection-views-images/collection08vs.png "Set the class to CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
+1. Seleccione la celda vista de colección y establezca su clase en `CityCollectionViewCell` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection09vs.png "Establezca la clase en CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
-1. En la **pestaña widget** , asegúrese de que el `Flow` diseño sea y que la `Vertical` dirección de **desplazamiento** sea para la vista de colección: 
+    [![](collection-views-images/collection09vs.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
+1. En la **pestaña widget** , asegúrese de que el **diseño** es `Flow` y de que la **dirección de desplazamiento** se `Vertical` para la vista de colección: 
 
-    [![](collection-views-images/collection10vs.png "Pestaña del widget")](collection-views-images/collection10vs.png#lightbox)
-1. Seleccione la celda vista `CityCell` de colección y establezca su **identidad** en en la **pestaña widget**: 
+    [![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
+1. Seleccione la celda vista de colección y establezca su **identidad** en `CityCell` en la **pestaña widget**: 
 
-    [![](collection-views-images/collection11vs.png "Establezca la identidad en CityCell")](collection-views-images/collection11vs.png#lightbox)
+    [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Guarde los cambios.
 
 -----
 
-Si hubiéramos elegido `Custom` para el **diseño**de la vista de colección, podríamos haber especificado un diseño personalizado. Apple proporciona una integrada `UICollectionViewFlowLayout` `UICollectionViewDelegateFlowLayout` que puede presentar fácilmente los datos en un diseño basado en cuadrícula (los usa el `flow` estilo de diseño). 
+Si hubiéramos elegido `Custom` para el **diseño**de la vista de colección, podríamos haber especificado un diseño personalizado. Apple proporciona un `UICollectionViewFlowLayout` integrado y `UICollectionViewDelegateFlowLayout` que pueden presentar fácilmente los datos en un diseño basado en cuadrícula (el estilo de diseño de `flow` usa estos elementos). 
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -186,7 +186,7 @@ Ahora que tenemos nuestra vista de colección (y el controlador de vista de cole
 
 En primer lugar, vamos a crear un modelo para los datos que contienen el nombre de archivo de la imagen que se va a mostrar, el título y una marca para permitir la selección de la ciudad.
 
-Cree una `CityInfo` clase y haga que tenga el aspecto siguiente:
+Cree una clase `CityInfo` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -216,7 +216,7 @@ namespace tvCollection
 
 ### <a name="the-collection-view-cell"></a>La celda de la vista de colección
 
-Ahora es necesario definir cómo se presentarán los datos para cada celda. Edite `CityCollectionViewCell.cs` el archivo (creado automáticamente en el archivo de guion gráfico) y haga que tenga un aspecto similar al siguiente:
+Ahora es necesario definir cómo se presentarán los datos para cada celda. Edite el archivo de `CityCollectionViewCell.cs` (creado automáticamente en el archivo de guion gráfico) y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -289,7 +289,7 @@ Para obtener más información sobre la navegación y el foco, consulte nuestra 
 
 Con nuestro modelo de datos creado y el diseño de celda definido, vamos a crear un origen de datos para nuestra vista de colección. El origen de datos no solo proporcionará los datos de respaldo, sino que también quitará la cola de las celdas para mostrar las celdas individuales en la pantalla.
 
-Cree una `CityViewDatasource` clase y haga que tenga el aspecto siguiente:
+Cree una clase `CityViewDatasource` y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -382,7 +382,7 @@ namespace tvCollection
 }
 ```
 
-Echemos un vistazo a esta clase en detalle. En primer lugar, se `UICollectionViewDataSource` hereda de y se proporciona un acceso directo al identificador de las celdas (que asignamos en el diseñador de iOS):
+Echemos un vistazo a esta clase en detalle. En primer lugar, se hereda de `UICollectionViewDataSource` y se proporciona un acceso directo al identificador de las celdas (que asignamos en el diseñador de iOS):
 
 ```csharp
 public static NSString CardCellId = new NSString ("CityCell");
@@ -406,7 +406,7 @@ public void PopulateCities() {
 }
 ```
 
-A continuación, se `NumberOfSections` invalida el método y se devuelve el número de secciones (grupos de elementos) que tiene nuestra vista de colección. En este caso, solo hay uno:
+A continuación, reemplazamos el método `NumberOfSections` y devuelven el número de secciones (grupos de elementos) que la vista de colección tiene. En este caso, solo hay uno:
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -439,7 +439,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-Después de obtener una celda de vista de colección `CityCollectionViewCell` de nuestro tipo, la rellenamos con el elemento especificado.
+Después de obtener una celda de vista de colección de nuestro `CityCollectionViewCell` tipo, la rellenamos con el elemento especificado.
 
 <a name="Responding-to-User-Events" />
 
@@ -451,7 +451,7 @@ Dado que queremos que el usuario pueda seleccionar un elemento de nuestra colecc
 
 ### <a name="the-app-delegate"></a>Delegado de la aplicación
 
-Necesitamos una manera de relacionar el elemento seleccionado actualmente de la vista de colección con la vista de llamada. Vamos a usar una propiedad personalizada en nuestro `AppDelegate`. Edite `AppDelegate.cs` el archivo y agregue el código siguiente:
+Necesitamos una manera de relacionar el elemento seleccionado actualmente de la vista de colección con la vista de llamada. Vamos a usar una propiedad personalizada en nuestro `AppDelegate`. Edite el archivo de `AppDelegate.cs` y agregue el código siguiente:
 
 ```csharp
 public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning Circle", true);
@@ -463,7 +463,7 @@ Define la propiedad y establece la ciudad predeterminada que se mostrará inicia
 
 ### <a name="the-collection-view-delegate"></a>Delegado de la vista de colección
 
-A continuación, agregue una `CityViewDelegate` nueva clase al proyecto y haga que tenga un aspecto similar al siguiente:
+A continuación, agregue una nueva clase de `CityViewDelegate` al proyecto y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -517,7 +517,7 @@ namespace tvCollection
 }
 ```
 
-Echemos un vistazo más de cerca a esta clase. En primer lugar, se `UICollectionViewDelegateFlowLayout`hereda de. La razón por la que se hereda de esta clase y `UICollectionViewDelegate` no es que estamos usando el integrado `UICollectionViewFlowLayout` para presentar nuestros elementos y no un tipo de diseño personalizado.
+Echemos un vistazo más de cerca a esta clase. En primer lugar, heredamos de `UICollectionViewDelegateFlowLayout`. La razón por la que se hereda de esta clase y no la `UICollectionViewDelegate` es que usamos el `UICollectionViewFlowLayout` integrado para presentar nuestros elementos y no un tipo de diseño personalizado.
 
 A continuación, se devuelve el tamaño de los elementos individuales mediante este código:
 
@@ -542,7 +542,7 @@ public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Comprobamos si una parte determinada de los datos de respaldo tiene su `CanSelect` marca establecida en `true` y devuelve ese valor. Para obtener más información sobre la navegación y el foco, consulte nuestra documentación sobre [Cómo trabajar con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md) y [Siri de dispositivos remotos y Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
+Comprobamos si una parte determinada de los datos de respaldo tiene su marca `CanSelect` establecida en `true` y devolver ese valor. Para obtener más información sobre la navegación y el foco, consulte nuestra documentación sobre [Cómo trabajar con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md) y [Siri de dispositivos remotos y Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
 Por último, se responde al usuario que selecciona un elemento con el código siguiente:
 
@@ -557,13 +557,13 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Aquí establecemos la `SelectedCity` propiedad de nuestro `AppDelegate` en el elemento que el usuario seleccionó y cerraremos el controlador de vista de colección, volviendo a la vista que nos llamó. Todavía no hemos definido `ParentController` la propiedad de nuestra vista de colección. lo haremos a continuación.
+Aquí establecemos la propiedad `SelectedCity` de nuestro `AppDelegate` en el elemento que el usuario seleccionó y cerraremos el controlador de vista de colección, volviendo a la vista que nos llamó. Todavía no hemos definido la propiedad `ParentController` de nuestra vista de colección. lo haremos a continuación.
 
 <a name="Configuring-the-Collection-View" />
 
 ## <a name="configuring-the-collection-view"></a>Configurar la vista de colección
 
-Ahora es necesario editar la vista de colección y asignar el origen de datos y el delegado. Edite `CityCollectionView.cs` el archivo (creado para nosotros automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
+Ahora es necesario editar la vista de colección y asignar el origen de datos y el delegado. Edite el archivo de `CityCollectionView.cs` (creado para nosotros automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -625,7 +625,7 @@ namespace tvCollection
 }
 ```
 
-En primer lugar, proporcionamos un acceso directo `AppDelegate`para acceder a: 
+En primer lugar, proporcionamos un acceso directo para acceder a nuestro `AppDelegate`: 
 
 ```csharp
 public static AppDelegate App {
@@ -682,7 +682,7 @@ Establecemos la transparencia del elemento anterior que pierde el foco a cero (0
 
 Ahora tenemos que realizar la configuración final en nuestra vista de colección y permitir que el controlador establezca la propiedad que hemos definido para que la vista de colección se pueda cerrar después de que el usuario realice una selección.
 
-Edite `CityCollectionViewController.cs` el archivo (creado automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
+Edite el archivo de `CityCollectionViewController.cs` (creado automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 // This file has been autogenerated from a class added in the UI designer.
@@ -726,7 +726,7 @@ namespace tvCollection
 
 Ahora que tenemos todas las piezas colocadas para rellenar y controlar nuestra vista de colección, es necesario realizar las modificaciones finales en nuestra vista principal para que todo esté unido.
 
-Edite `ViewController.cs` el archivo (creado automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
+Edite el archivo de `ViewController.cs` (creado automáticamente desde nuestro guion gráfico) y haga que tenga un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -777,7 +777,7 @@ namespace MySingleView
 }
 ```
 
-El código siguiente muestra inicialmente el elemento seleccionado de la `SelectedCity` propiedad `AppDelegate` de y lo vuelve a mostrar cuando el usuario ha realizado una selección de la vista de colección:
+El código siguiente muestra inicialmente el elemento seleccionado de la propiedad `SelectedCity` de la `AppDelegate` y lo vuelve a mostrar cuando el usuario ha realizado una selección en la vista de colección:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -797,17 +797,17 @@ public override void ViewWillAppear (bool animated)
 
 Con todo en su lugar, Si compila y ejecuta la aplicación, la vista principal se muestra con la ciudad predeterminada:
 
-[![](collection-views-images/run01.png "La pantalla principal")](collection-views-images/run01.png#lightbox)
+[![](collection-views-images/run01.png "The main screen")](collection-views-images/run01.png#lightbox)
 
 Si el usuario hace clic en el botón **seleccionar una vista** , se mostrará la vista de colección:
 
-[![](collection-views-images/run02.png "La vista de colección")](collection-views-images/run02.png#lightbox)
+[![](collection-views-images/run02.png "The collection view")](collection-views-images/run02.png#lightbox)
 
-Cualquier ciudad que tenga su `CanSelect` propiedad establecida en `false` se mostrará atenuada y el usuario no podrá establecer el foco. Cuando el usuario resalta un elemento (conviértalo en el foco), se muestra el título y puede usar el efecto de Parallax para imponer la imagen en 3D.
+Cualquier ciudad que tenga su propiedad `CanSelect` establecida en `false` se mostrará atenuada y el usuario no podrá establecer el foco. Cuando el usuario resalta un elemento (conviértalo en el foco), se muestra el título y puede usar el efecto de Parallax para imponer la imagen en 3D.
 
 Cuando el usuario hace clic en una imagen seleccionada, la vista de colección se cierra y la vista principal se vuelve a mostrar con la nueva imagen:
 
-[![](collection-views-images/run03.png "Una nueva imagen en la pantalla principal")](collection-views-images/run03.png#lightbox)
+[![](collection-views-images/run03.png "A new image on the home screen")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 

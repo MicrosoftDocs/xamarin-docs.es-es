@@ -4,15 +4,15 @@ description: En este documento se describe el marco de lenguaje natural. En iOS 
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/20/2018
-ms.openlocfilehash: 7b0d07f2153a0395146506a371631e0bcf75ebef
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1598bad7bdbea8334b7fdfa2b950400b698579b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292913"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031994"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Usar el marco de lenguaje natural con Xamarin. iOS
 
@@ -33,7 +33,7 @@ En esta aplicación de ejemplo se muestra cómo usar el marco de lenguaje natura
 
 ## <a name="recognizing-languages"></a>Reconocimiento de idiomas
 
-En la pestaña **reconocedor** de la aplicación de ejemplo se muestra cómo usar un[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
+En la pestaña **reconocedor** de la aplicación de ejemplo se muestra cómo usar un [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 para determinar el idioma de un bloque de texto.
 
 > [!NOTE]
@@ -43,8 +43,8 @@ para determinar el idioma de un bloque de texto.
 
 Puntee en el botón **idioma** para identificar el idioma dominante en la entrada del usuario.
 
-El `HandleDetermineLanguageButtonTap` método`LanguageRecognizerViewController` del utiliza el[`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
-método de `NLLanguageRecognizer` para capturar el[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+El método `HandleDetermineLanguageButtonTap` del `LanguageRecognizerViewController` utiliza el [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+método de un `NLLanguageRecognizer` para capturar el [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 para el idioma principal que se encuentra en el texto:
 
 ```csharp
@@ -63,9 +63,9 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 Puntee en el botón **probabilidades de lenguaje** para capturar una lista de supuestos de lenguaje para la entrada del usuario.
 
-El `HandleLanguageProbabilitiesButtonTap` método de la `LanguageRecognizerViewController` clase crea una instancia `NLLanguageRecognizer` de y le solicita que[`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
-texto del usuario. A continuación, llama a la del reconocedor de lenguaje[`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
-método, que captura un diccionario de lenguajes y probabilidades asociadas. A `LanguageRecognizerTableViewController` continuación, la clase representa estos lenguajes y probabilidades.
+El método `HandleLanguageProbabilitiesButtonTap` de la clase `LanguageRecognizerViewController` crea instancias de un `NLLanguageRecognizer` y le pide que [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+texto del usuario. A continuación, llama al [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*) del reconocedor de idioma
+método, que captura un diccionario de lenguajes y probabilidades asociadas. A continuación, la clase `LanguageRecognizerTableViewController` representa estos lenguajes y probabilidades.
 
 ```csharp
 partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
@@ -81,7 +81,7 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 }
 ```
 
-Los `NLLanguage` valores posibles son:
+Entre los posibles valores de `NLLanguage` se incluyen:
 
 - `Amharic`
 - `Arabic`
@@ -141,18 +141,18 @@ Los `NLLanguage` valores posibles son:
 - `Urdu`
 - `Vietnamese`
 
-Una lista completa de los idiomas admitidos está disponible como parte del[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+Una lista completa de los idiomas admitidos está disponible como parte del [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 documentación de la API enum.
 
 ## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>Tokening de texto en palabras, oraciones y párrafos
 
-En la pestaña **Tokenizer** de la aplicación de ejemplo se muestra cómo separar un bloque de texto en sus palabras o oraciones de [`NLTokenizer`](xref:NaturalLanguage.NLTokenizer)componente con un.
+En la pestaña **Tokenizer** de la aplicación de ejemplo se muestra cómo separar un bloque de texto en sus palabras o oraciones de componente con un [`NLTokenizer`](xref:NaturalLanguage.NLTokenizer).
 
 Puntee en el botón **palabras** o **oraciones** para obtener una lista de tokens. Cada token está asociado a una palabra o frase en el texto original.
 
-`ShowTokens`divide la entrada del usuario en tokens llamando al método[`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
-método de un `NLTokenizer`. Este método devuelve una matriz de[`NSValue`](xref:Foundation.NSValue)
-objetos, cada uno de `NSRange` los cuales ajusta un valor que corresponde a un token en el texto original.
+`ShowTokens` divide la entrada del usuario en tokens llamando al [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
+método de un `NLTokenizer`. Este método devuelve una matriz de [`NSValue`](xref:Foundation.NSValue)
+objetos, cada uno de los cuales encapsula un valor `NSRange` correspondiente a un token en el texto original.
 
 ```csharp
 void ShowTokens(NLTokenUnit unit)
@@ -168,7 +168,7 @@ void ShowTokens(NLTokenUnit unit)
 }
 ```
 
-`LanguageTokenizerTableViewController`representa un token único en cada celda de la tabla. Extrae un `NSRange` de un token `NSValue`, busca la cadena correspondiente en el texto original y establece una etiqueta en la celda de la vista de tabla:
+`LanguageTokenizerTableViewController` representa un token único en cada celda de la tabla. Extrae un `NSRange` de una `NSValue`de token, busca la cadena correspondiente en el texto original y establece una etiqueta en la celda de la vista de tabla:
 
 ```csharp
 public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Etiquetado de entidades con nombre y partes de la voz
 
-La pestaña **etiquetador** de la aplicación de ejemplo XamarinNL muestra cómo usar el método[`NLTagger`](xref:NaturalLanguage.NLTagger)
+La pestaña **etiquetador** de la aplicación de ejemplo XamarinNL muestra cómo usar el [`NLTagger`](xref:NaturalLanguage.NLTagger)
 clase para asociar categorías con tokens de una cadena de entrada.
 El marco de lenguaje natural incluye compatibilidad integrada para reconocer personas, lugares, organizaciones y partes de la voz.
 
@@ -191,12 +191,12 @@ El marco de lenguaje natural incluye compatibilidad integrada para reconocer per
 
 Puntee en el botón **entidades con nombre** o **partes de voz** para capturar:
 
-- Matriz de `NSValue` objetos, cada uno de los `NSRange` cuales ajusta un objeto para un token en el texto original.
-- Una matriz de [`NLTag`](xref:NaturalLanguage.NLTag) valores: categorías para los `NSValue` tokens en el mismo índice de matriz.
+- Matriz de objetos `NSValue`, cada uno de los cuales encapsula un `NSRange` para un token en el texto original.
+- Matriz de valores de [`NLTag`](xref:NaturalLanguage.NLTag) : categorías para los tokens de `NSValue` en el mismo índice de matriz.
 
-En `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` `NLTagScheme.LexicalClass` `NLTagScheme.NameType` y cada`HandleNamedEntitiesButtonTap` llamada`ShowTags`, pasando [un`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) elemento, ya sea (para elementos de voz) o (para entidades con nombre).
+En `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` y `HandleNamedEntitiesButtonTap` cada llamada `ShowTags`, pasando a lo largo de un [`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) , ya sea `NLTagScheme.LexicalClass` (para elementos de voz) o `NLTagScheme.NameType` (para entidades con nombre).
 
-`ShowTags`crea una `NLTagger`instancia de, con una matriz de `NLTagScheme` tipos para la que se consultará (en este caso, `NLTagScheme` solo el valor pasado). A continuación, usa el[`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
+`ShowTags` crea un `NLTagger`y crea una instancia de él con una matriz de tipos `NLTagScheme` para los que se consultará (en este caso, solo el valor de `NLTagScheme` que se pasa). A continuación, utiliza el [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
 en el `NLTagger` para determinar las etiquetas relevantes para el texto de los datos proporcionados por el usuario.
 
 ```csharp
@@ -217,9 +217,9 @@ void ShowTags(NLTagScheme tagScheme)
 }
 ```
 
-Después, las etiquetas se muestran en una tabla por `LanguageTaggerTableViewController`.
+Los `LanguageTaggerTableViewController`muestran las etiquetas en una tabla.
 
-Los `NLTag` valores posibles son:
+Entre los posibles valores de `NLTag` se incluyen:
 
 - `Adjective`
 - `Adverb`
@@ -253,7 +253,7 @@ Los `NLTag` valores posibles son:
 - `Word`
 - `WordJoiner`
 
-Una lista completa de etiquetas admitidas está disponible como parte del[`NLTag`](xref:NaturalLanguage.NLTag)
+Una lista completa de etiquetas admitidas está disponible como parte del [`NLTag`](xref:NaturalLanguage.NLTag)
 documentación de la API enum.
 
 ## <a name="related-links"></a>Vínculos relacionados

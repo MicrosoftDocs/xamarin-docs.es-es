@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31aa4d1fb8b77b88fc6b6790147409ff8ec13145
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290924"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029840"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introducción a macOS Sierra
 
@@ -52,7 +52,7 @@ Para obtener más información, consulte la referencia de [.NET Framework de APP
 
 Aplicaciones modernas de macOS como el explorador Web de Safari de Apple, páginas procesador de textos de páginas y números de la hoja de distribución usan muchas nuevas tecnologías para presentar una interfaz de usuario unificada y contextual que se encuentra fuera de los elementos de interfaz de usuario tradicionales, como los paneles flotantes y varios abiertos. Windows.
 
-[![Ejemplo de una ventana de Mac con pestañas](images/content08.png)](images/content08.png#lightbox)
+[![un ejemplo de una ventana de Mac con pestañas](images/content08.png)](images/content08.png#lightbox)
 
 En la guía de [creación de aplicaciones MacOS modernas](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) se describen varias sugerencias, características y técnicas que un desarrollador puede usar para compilar una aplicación moderna de MacOS en Xamarin. Mac.
 
@@ -83,15 +83,15 @@ Para obtener más información, consulte la guía de programación de la [extens
 
 Apple ha realizado varias mejoras en la seguridad y la privacidad en macOS Sierra que ayudarán a la aplicación a mejorar la seguridad de la aplicación y a garantizar la privacidad del usuario final, que incluye lo siguiente:
 
-- La nueva `NSAllowsArbitraryLoadsInWebContent` clave se puede Agregar al archivo de `Info.plist` la aplicación y permitirá que las páginas web se carguen correctamente, mientras que la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
+- La nueva clave de `NSAllowsArbitraryLoadsInWebContent` se puede Agregar al archivo de `Info.plist` de la aplicación y permitirá que las páginas web se carguen correctamente, mientras que la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
 - La API de Common Data Security Architecture (CDSA) ha quedado en desuso y debe reemplazarse por la API de SecKey para generar claves asimétricas.
 - Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación deje de usar la criptografía SHA-1 y 3DES lo antes posible.
 - Dado que el nuevo portapapeles en iOS 10 y macOS Sierra permite al usuario copiar y pegar entre dispositivos, la API se ha expandido para permitir que un portapapeles se limite a un dispositivo específico y que tenga la marca de tiempo para que se borre automáticamente en un momento dado. Además, los portapapeles con nombre ya no se conservan y deben reemplazarse por los contenedores de la mesa de pegada.
-- Si la aplicación tiene acceso a datos protegidos (como el calendario del usuario), _debe_ declarar ese intento con la clave de valor de cadena de propósito correcto `Info.plist` en su`NSCalendarUsageDescription` archivo (en el caso del calendario).
+- Si la aplicación tiene acceso a datos protegidos (como el calendario del usuario), _debe_ declarar ese intento con la clave de valor de cadena de propósito correcto en su `Info.plist` archivo (`NSCalendarUsageDescription` en el caso del calendario).
 - Las aplicaciones firmadas para desarrolladores que no se entregan a través de Mac App Store ahora pueden aprovechar las ventajas de CloudKit, la cadena de claves de iCloud, la unidad iCloud, las notificaciones de entrega remotas, los derechos de MapKit y VPN.
 - macOS Sierra ya no admite la entrega de código externo o datos junto con la aplicación de firma de código en su imagen de archivo zip o de disco sin signo, ya que la ruta de acceso en tiempo de ejecución no se conoce antes del tiempo de ejecución.
 
-Además, las aplicaciones que se ejecutan en MacOS Sierra (o posterior) deben declarar estáticamente su intención de acceder a características específicas o información de usuario especificando una o `Info.plist` más claves específicas de la privacidad en sus archivos que expliquen al usuario por qué la aplicación quiere obtener acceso.
+Además, las aplicaciones que se ejecutan en macOS Sierra (o posterior) deben declarar estáticamente su intención de acceder a características específicas o información de usuario mediante la especificación de una o varias claves específicas de la privacidad en sus archivos `Info.plist`, que explican al usuario por qué la aplicación quiere obtener acceso. .
 
 Como macOS Sierra comparte estos cambios con iOS 10, consulte nuestra guía de [mejoras de seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md) de iOS 10 para obtener más información.
 
@@ -99,7 +99,7 @@ Como macOS Sierra comparte estos cambios con iOS 10, consulte nuestra guía de [
 
 ### <a name="smart-card-driver-extension-support"></a>Compatibilidad con la extensión de controlador de tarjeta inteligente
 
-Con MacOS Sierra, la aplicación puede crear `NSExtension` controladores de tarjetas inteligentes basados en que permitan el acceso de solo lectura al contenido de determinados tipos de tarjetas inteligentes. Esta información se presenta en la cadena de claves del sistema (reemplazando el método de arquitectura de seguridad de datos común en desuso).
+Con macOS Sierra, la aplicación puede crear controladores de tarjetas inteligentes basados en `NSExtension` que permitan el acceso de solo lectura al contenido de determinados tipos de tarjetas inteligentes. Esta información se presenta en la cadena de claves del sistema (reemplazando el método de arquitectura de seguridad de datos común en desuso).
 
 para más información, vea la referencia de [CryptoTokenKit Framework](https://developer.apple.com/reference/cryptotokenkit)de Apple.
 
@@ -123,11 +123,11 @@ Para obtener más información, consulte la [referencia de registro](https://dev
 
 macOS Sierra amplía la compatibilidad con los formatos de píxeles de rango extendido y los espacios de colores de amplia gama en todo el sistema, incluidos los marcos como los gráficos principales, la imagen principal, el metal y el AVFoundation. La compatibilidad con dispositivos con pantallas de color ancho se facilita aún más proporcionando este comportamiento en toda la pila de gráficos.
 
-Además, `AppKit` se ha modificado para que funcione en el nuevo **sRGB** ColorSpace ampliado, lo que facilita la combinación de colores en gamas de colores anchos sin pérdida significativa de rendimiento.
+Además, `AppKit` se ha modificado para que funcione en el nuevo **sRGB** ColorSpace extendido, lo que facilita la combinación de colores en gamas de colores anchos sin pérdida significativa de rendimiento.
 
 Apple ofrece las siguientes prácticas recomendadas al trabajar con colores anchos:
 
-- `NSColor`ahora usa el espacio de color sRGB y dejará de fijar valores en `0.0` el `1.0` intervalo para. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para macOS Sierra.
+- `NSColor` ahora usa el espacio de color sRGB y dejará de fijar valores a la `0.0` para `1.0` intervalo. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para macOS Sierra.
 - Cuando se usa una API de bajo nivel como gráficos principales o metal para proporcionar el procesamiento de imágenes, la aplicación debe usar un espacio de colores extendido y un formato de píxel que admita valores de punto flotante de 16 bits. Cuando sea necesario, la aplicación tendrá que fijar manualmente los valores de componente de color.
 - Los gráficos principales, los sombreadores de imagen principal y de rendimiento de metal proporcionan nuevos métodos para la conversión entre los dos espacios de color.
 

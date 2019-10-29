@@ -4,15 +4,15 @@ description: En este artículo se proporcionan varias sugerencias para la soluci
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c734bfdd1baaf89cf25d687657e5f14bdbc7834c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a6588dee675aee3e2580b70dfdea2920c6235775
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283449"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030603"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS 10 compiladas con Xamarin
 
@@ -41,35 +41,35 @@ Problemas conocidos:
 
 Problemas conocidos:
 
-- Si `NSObject.ValueForKey` se llama `null` a, se producirá una excepción en una clave.
-- La referencia a una fuente por nombre `UIFont.WithName` cuando se llama a producirá un bloqueo.
-- Y ya no son conjuntos de cifrado RC4 durante el protocolo de `http://` enlace TLS para direcciones URL. `NSURLConnection` `NSURLSession`
-- Las aplicaciones pueden bloquearse si modifican la geometría de una supervista `ViewWillLayoutSubviews` en `LayoutSubviews` los métodos o.
+- Si se llama a `NSObject.ValueForKey`, se producirá una excepción `null` clave.
+- Hacer referencia a una fuente por nombre al llamar a `UIFont.WithName` provocará un bloqueo.
+- Tanto `NSURLSession` como `NSURLConnection` ya no son los conjuntos de cifrado RC4 durante el protocolo de enlace TLS para las direcciones URL de `http://`.
+- Las aplicaciones pueden bloquearse si modifican la geometría de una supervista en los métodos `ViewWillLayoutSubviews` o `LayoutSubviews`.
 - Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación deje de usar la criptografía SHA-1 y 3DES lo antes posible.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP CFNetwork
 
-La `HTTPBodyStream` propiedad de la `NSMutableURLRequest` clase se debe establecer en un flujo no abierto ya que `NSURLConnection` y `NSURLSession` ahora exigen estrictamente este requisito.
+La propiedad `HTTPBodyStream` de la clase `NSMutableURLRequest` debe establecerse en un flujo no abierto, ya que `NSURLConnection` y `NSURLSession` ahora exigen estrictamente este requisito.
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para guardar el archivo"._ error.
+Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para guardar el archivo"._ Error.
 
 <a name="CoreImage" />
 
 ## <a name="core-image"></a>Imagen principal
 
-La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor`Se quitará la API que se incluyó en tvOS 10 Beta 1.
+La API de `CIImageProcessor` admite ahora un recuento de imágenes de entrada arbitrarias. `CIImageProcessor` API que se incluyó en tvOS 10 Beta 1 se quitará.
 
 <a name="NSUserActivity" />
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Después de una operación de entrega `UserInfo` , la propiedad `NSUserActivity` de un objeto puede estar vacía. Llame explícitamente al `BecomeCurrent` objeto ' NSUserActivity ' como solución alternativa actual.
+Después de una operación de entrega, la propiedad `UserInfo` de un objeto `NSUserActivity` puede estar vacía. Llame explícitamente `BecomeCurrent` objeto ' NSUserActivity ' como solución alternativa actual.
 
 <a name="UIKit" />
 
@@ -77,12 +77,12 @@ Después de una operación de entrega `UserInfo` , la propiedad `NSUserActivity`
 
 Problemas conocidos:
 
-- Los cambios en la apariencia de `UINavigationBar`fondo `UITabBar` de `UIToolBar` o pueden dar lugar a un paso de diseño para resolver el nuevo aspecto. Intentar modificar estos aspectos visuales dentro `LayoutSubviews`de un evento `WillLayoutSubviews` , `UpdateConstraints`o `DidUpdateSubviews` puede dar lugar a un bucle de diseño infinito.
-- En tvOS 10, al llamar `RemoveGestureRecognizer` al método de `UIView` un objeto se cancela explícitamente cualquier reconocedor de gestos en curso.
+- Los cambios en la apariencia de fondo de `UINavigationBar`, `UITabBar` o `UIToolBar` pueden dar lugar a un paso de diseño para resolver el nuevo aspecto. Si se intenta modificar estos aspectos visuales dentro de un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` evento, se puede producir un bucle de diseño infinito.
+- En tvOS 10, al llamar al método `RemoveGestureRecognizer` de un objeto `UIView` se cancela explícitamente cualquier reconocedor de gestos en curso.
 - Los controladores de vista presentados ahora pueden afectar a la apariencia de la barra de estado.
-- tvOS 10 requiere que el desarrollador llame `base.AwakeFromNib` a al `UIViewController` subclase e invalide `AwakeFromNib` el método.
-- Las aplicaciones con `UIView` subclases personalizadas que `LayoutSubviews` invalidan y han sucio `base.LayoutSubviews` el diseño antes de llamar a pueden desencadenar un bucle de diseño infinito en tvOS 10.
-- Los recursos de imágenes que se pueden voltear o especificar de dirección no se `UIButton` voltean cuando se asignan a los objetos.
+- tvOS 10 requiere que el desarrollador llame a `base.AwakeFromNib` al subclaser `UIViewController` e invalidar el método `AwakeFromNib`.
+- Las aplicaciones con subclases de `UIView` personalizadas que invalidan `LayoutSubviews` y han modificado el diseño antes de llamar a `base.LayoutSubviews` pueden desencadenar un bucle de diseño infinito en tvOS 10.
+- Los recursos de imágenes que son específicos de la dirección o volteable no se voltean cuando se asignan a objetos de `UIButton`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

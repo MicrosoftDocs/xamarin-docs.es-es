@@ -4,15 +4,15 @@ description: En este documento se proporciona una descripción de alto nivel de 
 ms.prod: xamarin
 ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/20/2019
-ms.openlocfilehash: b68bb7b3a46be4df3c86af44f646d2dd1eaa6b6f
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: 75ba809df122fa9b34dc9052baa9a0faaafe0cad
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206336"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031718"
 ---
 # <a name="introduction-to-ios-13"></a>Introducción a iOS 13
 

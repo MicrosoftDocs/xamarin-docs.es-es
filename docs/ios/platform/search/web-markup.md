@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear los resultados de la bús
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769477"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031527"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Buscar con marcado Web en Xamarin. iOS
 
@@ -20,12 +20,12 @@ En el caso de las aplicaciones que proporcionan acceso a su contenido a través 
 
 Si la aplicación de iOS ya admite la vinculación profunda móvil y el sitio web presentó vínculos profundos al contenido dentro de la aplicación, _Applebot_ web Crawler de Apple indexará este contenido y lo agregará automáticamente a su índice de nube:
 
-[![](web-markup-images/webmarkup01.png "Información general de Cloud index")](web-markup-images/webmarkup01.png#lightbox)
+[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple mostrará estos resultados en los resultados de búsqueda de Spotlight y de la búsqueda de Safari.
 Si el usuario pulsa uno de estos resultados (y tiene la aplicación instalada), se le dirigirá al contenido de la aplicación:
 
-[![](web-markup-images/webmarkup02.png "Vínculos profundos desde un sitio web en los resultados de la búsqueda")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitar la indización de contenido web
 
@@ -71,7 +71,7 @@ Puede proporcionar vínculos profundos al contenido de la aplicación mediante u
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-Para obtener más información, consulte la documentación del Protocolo de la [tarjeta Twitter](http://dev.twitter.com/cards/mobile) de Twitter.
+Para obtener más información, consulte la documentación del Protocolo de la [tarjeta Twitter](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) de Twitter.
 
 ## <a name="using-facebook-app-links"></a>Uso de vínculos de aplicación de Facebook
 
@@ -83,11 +83,11 @@ Puede proporcionar vínculos profundos al contenido de la aplicación mediante u
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-Para obtener más información, consulte la documentación de los vínculos de la [aplicación](http://applinks.org) de Facebook.
+Para obtener más información, consulte la documentación de los vínculos de la [aplicación](https://developers.facebook.com/docs/applinks) de Facebook.
 
 ## <a name="opening-deep-links"></a>Abrir vínculos profundos
 
-Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplicación de Xamarin. iOS. Edite el archivo **AppDelegate.CS** e invalide el `OpenURL` método para controlar el formato de la dirección URL personalizada. Por ejemplo:
+Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplicación de Xamarin. iOS. Edite el archivo **AppDelegate.CS** e invalide el método `OpenURL` para controlar el formato de la dirección URL personalizada. Por ejemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,7 +113,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-En el código anterior, buscamos una dirección URL que contenga `/appname` y pasando el valor de`123` `query` (en este ejemplo) a un controlador de vista personalizado en nuestra aplicación para mostrar el contenido solicitado al usuario.
+En el código anterior, buscamos una dirección URL que contenga `/appname` y pasando el valor de `query` (`123` en este ejemplo) a un controlador de vista personalizado en nuestra aplicación para mostrar el contenido solicitado al usuario.
 
 ## <a name="providing-rich-results-with-structured-data"></a>Proporcionar resultados enriquecidos con datos estructurados
 
@@ -129,7 +129,7 @@ Una opción para proporcionar marcado de datos estructurados es mediante Open Gr
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-Para obtener más información, vea el sitio web de [Open Graph](http://ogp.me) .
+Para obtener más información, vea el sitio web de [Open Graph](https://ogp.me) .
 
 Otro formato común para el marcado de datos estructurados es esquema. microdatos de la organización. Por ejemplo:
 
@@ -152,7 +152,7 @@ La misma información se puede representar en el formato JSON-LD del esquema.
 
 A continuación se muestra un ejemplo de metadatos del sitio web que proporcionan resultados de búsqueda enriquecidos al usuario final:
 
-[![](web-markup-images/deeplink01.png "Resultados de búsqueda enriquecidas mediante marcado de datos estructurados")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
 
 Apple admite actualmente los siguientes tipos de esquema de schema.org:
 
@@ -165,7 +165,7 @@ Apple admite actualmente los siguientes tipos de esquema de schema.org:
 - Receta
 - SearchAction
 
-Para obtener más información sobre estos tipos de esquema, vea [Schema.org](http://schema.org).
+Para obtener más información sobre estos tipos de esquema, vea [Schema.org](https://schema.org).
 
 ## <a name="providing-actions-with-structured-data"></a>Proporcionar acciones con datos estructurados
 
@@ -207,5 +207,5 @@ Para obtener más información, consulte el [sitio para desarrolladores de búsq
 
 - [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guía de programación de búsqueda de aplicaciones](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

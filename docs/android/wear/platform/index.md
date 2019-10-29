@@ -4,15 +4,15 @@ description: Componentes clave de la plataforma de SO de desgaste
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 95b7958ea936d2f2c2e5d8fac903fc3042615989
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 71c31bc9c1fde34a4b9a6dc90d28218ae7b13f5a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762137"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030343"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 

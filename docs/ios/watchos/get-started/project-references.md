@@ -4,15 +4,15 @@ description: En este documento se describe la relación entre una aplicación de
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: dcadb5146df39aa4887e28b65078acc9454f3d34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3dcd5f17b35b9829831adcf997d8bde97c0572e7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767985"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030166"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referencias de proyectos de watchos en Xamarin
 
@@ -26,30 +26,30 @@ Para ver las referencias, haga doble clic en los nodos referencias de cada proye
 
 - **aplicación de inspección** de referencias de **aplicación de iPhone**
 
-  ![](project-references-images/catalog-reference1.png "Aplicación de inspección de referencias de aplicación de iPhone")
+  ![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
 
 - La **aplicación de inspección** hace referencia a la extensión de la **aplicación Watch**
 
-  ![](project-references-images/catalog-reference2.png "Aplicación de inspección de referencias de aplicación de iPhone")
+  ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
 - La **extensión de la aplicación inspección** no hace referencia a ninguno de los otros proyectos
 
-  ![](project-references-images/catalog-reference3.png "La extensión de la aplicación de inspección no hace referencia a los otros proyectos")
+  ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
 
 ## <a name="bundle-identifiers"></a>Identificadores de agrupación
 
 También debe asegurarse de que los **identificadores de paquete** sean correctos.
-Los tres proyectos deben tener el *mismo* prefijo de identificador, con los dos proyectos de inspección que tienen extensiones `watchkitextension` predefinidas de y `watchkitapp`, como se indica a continuación (en el ejemplo **WatchKitCatalog** ):
+Los tres proyectos deben tener el *mismo* prefijo de identificador, con los dos proyectos de inspección con extensiones predefinidas de `watchkitextension` y `watchkitapp`, como se indica a continuación (en el ejemplo **WatchKitCatalog** ):
 
-- Proyecto Unificado de Xamarin. iOS:`com.xamarin.WatchKitCatalog`
+- Proyecto Unificado de Xamarin. iOS: `com.xamarin.WatchKitCatalog`
 
-- Proyecto de extensión WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
+- Proyecto de extensión de WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
 
-- Proyecto de la aplicación de inspección:`com.xamarin.WatchKitCatalog.watchkitapp`
+- Proyecto de la aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Asegúrese también de que la configuración de **info. plist** sea correcta:
 
-- El proyecto de `WKCompanionAppBundleIdentifier` la aplicación de inspección coincide con el identificador de lote de la aplicación principal/contenedor (es decir, el que se ejecuta en el iPhone).
+- El `WKCompanionAppBundleIdentifier` del proyecto de la aplicación de inspección coincide con el identificador de lote de la aplicación contenedora o primario (es decir, el que se ejecuta en el iPhone).
 
 - El **identificador de paquete de WKApp** del proyecto de extensión del kit de inspección coincide con el identificador de lote del proyecto de la aplicación de inspección.
 
@@ -59,17 +59,17 @@ Esta captura de pantalla es el archivo info. plist **de la extensión de inspecc
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](project-references-images/infoplist-extension.png "Esta captura de pantalla es el archivo info. plist de la extensión de inspección.")
+![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](project-references-images/infoplist-extension-vs.png "Esta captura de pantalla es el archivo info. plist de la extensión de inspección.")
+![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
 
 -----
 
 Esta captura de pantalla es el archivo info. plist **de la aplicación de inspección** .
 La versión del **so de inspección** actual es 8,2, por lo que el destino de **implementación** de la aplicación de inspección debe ser **8,2**. Tenga en cuenta que si tiene instalado Xcode 6,3, este valor se puede establecer en 8,3; debe cambiarlo 8,2.
 
-![](project-references-images/infoplist-watchapp.png "El archivo Watch info. plist")
+![](project-references-images/infoplist-watchapp.png "The watch Info.plist file")
 
 El destino de implementación de la aplicación de inspección puede ser diferente de la extensión inspección y la aplicación iOS.

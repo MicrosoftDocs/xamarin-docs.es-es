@@ -4,15 +4,15 @@ description: En este artículo se muestra cómo incluir una extensión de aplica
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 37f2942c97f7604fbd72a6dd38de518d3668ee9e
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 51a89533390eb1be8c1f36e0121229fb5a942279
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250132"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031660"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Conceptos básicos de la extensión de aplicaciones de mensajes en Xamarin. iOS
 
@@ -87,7 +87,7 @@ Para que una imagen se incluya en un paquete de adhesivos, debe cumplir los sigu
 - Las imágenes no pueden ser menores que los 100x100 puntos o mayores que 206 x 206 puntos.
 
 > [!IMPORTANT]
-> Siempre se deben proporcionar `@3x` las imágenes de adhesivos en el intervalo de 300 x 300 a 618 x 618 píxeles. El sistema generará automáticamente las `@2x` versiones `@1x` y en tiempo de ejecución según sea necesario.
+> Siempre se deben proporcionar las imágenes de adhesivo en el `@3x` resolución en el intervalo de 300 x 300 a 618 x 618 píxeles. El sistema generará automáticamente las versiones `@2x` y `@1x` en tiempo de ejecución, según sea necesario.
 
 Apple sugiere la prueba de los recursos de la imagen con adhesivos en diferentes fondos de color (como blanco, negro, rojo, amarillo y multicolor) y en fotos, para asegurarse de que tienen el mejor aspecto en todas las situaciones posibles.
 
@@ -121,15 +121,15 @@ Para crear una experiencia de adhesivo personalizada, haga lo siguiente:
 
 1. Inicie Visual Studio para Mac:
 2. Abra la solución para agregar una extensión de aplicación de mensajes a.
-3. Seleccione la**extensión IMessage** **extensions** > de **iOS** > y haga clic en el botón **siguiente** :
+3. Seleccione **extensiones** de > de **iOS** > **extensión IMessage** y haga clic en el botón **siguiente** :
 
-    [![](intro-to-message-app-extensions-images/message01.png "Selección de la extensión iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Escriba un **nombre de extensión** y haga clic en el botón **siguiente** :
 
-    [![](intro-to-message-app-extensions-images/message02.png "Escriba un nombre de extensión")](intro-to-message-app-extensions-images/message02.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. Haga clic en el botón **crear** para compilar la extensión:
 
-    [![](intro-to-message-app-extensions-images/message03.png "Haga clic en el botón crear")](intro-to-message-app-extensions-images/message03.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -137,45 +137,45 @@ Para crear una experiencia de adhesivo personalizada, haga lo siguiente:
 2. Abra la solución para agregar una extensión de aplicación de mensaje.
 3. Seleccione **extensiones de ios > extensión IMessage (iOS)** y haga clic en el botón **siguiente** :
 
-    [![Selección de la extensión iMessage (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
+    [![seleccionar la extensión iMessage (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 
 4. Escriba un **nombre** y haga clic en el botón **Aceptar**
 
 -----
 
-De forma predeterminada, `MessagesViewController.cs` el archivo se agregará a la solución. Este es el punto de entrada principal de la extensión y hereda de la `MSMessageAppViewController` clase.
+De forma predeterminada, el archivo `MessagesViewController.cs` se agregará a la solución. Este es el punto de entrada principal de la extensión y hereda de la clase `MSMessageAppViewController`.
 
 El marco de mensajes proporciona clases para presentar los adhesivos disponibles al usuario:
 
-- `MSStickerBrowserViewController`: Controla la vista en la que se presentarán los adhesivos. También se ajusta a la `IMSStickerBrowserViewDataSource` interfaz para devolver el recuento de adhesivos y la etiqueta de un índice de explorador determinado.
-- `MSStickerBrowserView`: Esta es la vista en la que se mostrarán los adhesivos disponibles.
-- `MSStickerSize`: Decide los tamaños de celda individuales de la cuadrícula de adhesivos presentados en la vista de explorador.
+- `MSStickerBrowserViewController`: controla la vista en la que se presentarán los adhesivos. También se ajusta a la interfaz `IMSStickerBrowserViewDataSource` para devolver el recuento de adhesivos y la etiqueta de un índice de explorador determinado.
+- `MSStickerBrowserView`: esta es la vista en la que se mostrarán los adhesivos disponibles.
+- `MSStickerSize`: decide los tamaños de celda individuales de la cuadrícula de adhesivos presentados en la vista de explorador.
 
 ### <a name="creating-a-custom-sticker-browser"></a>Crear un explorador de adhesivos personalizado
 
-El desarrollador puede personalizar aún más la experiencia de adhesivo para el usuario proporcionando un explorador de adhesivo`MSMessageAppBrowserViewController`personalizado () en la extensión de la aplicación de mensajes. El explorador de adhesivos personalizado cambia el modo en que se presentan los adhesivos al usuario cuando seleccionan un adhesivo para incluirlos en el flujo de mensajes.
+El desarrollador puede personalizar aún más la experiencia de adhesivo para el usuario proporcionando un explorador de adhesivo personalizado (`MSMessageAppBrowserViewController`) en la extensión de la aplicación de mensajes. El explorador de adhesivos personalizado cambia el modo en que se presentan los adhesivos al usuario cuando seleccionan un adhesivo para incluirlos en el flujo de mensajes.
 
 Haga lo siguiente:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En el **Panel de solución**, haga clic con el botón derecho en el nombre del proyecto de la extensión y seleccione **Agregar** > **nuevo archivo..** .  >  **iOS |**  > **Controlador de interfaz**Apple Watch.
+1. En el **Panel de solución**, haga clic con el botón derecho en el nombre del proyecto de la extensión y seleccione **Agregar** > **nuevo archivo...**  > **iOS | Apple Watch** > **controlador de interfaz**.
 2. Escriba `StickerBrowserViewController` como **nombre** y haga clic en el botón **nuevo** :
 
-    [![](intro-to-message-app-extensions-images/browser01.png "Escriba StickerBrowserViewController para el nombre")](intro-to-message-app-extensions-images/browser01.png#lightbox)
-3. Abra el `StickerBrowserViewController.cs` archivo para editarlo.
+    [![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+3. Abra el archivo de `StickerBrowserViewController.cs` para editarlo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto de la extensión y seleccione **Agregar** > **nuevo archivo..** .  >  **iOS |**  > **Controlador de interfaz**Apple Watch.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto de la extensión y seleccione **Agregar** > **nuevo archivo...**  > **iOS | Apple Watch** > **controlador de interfaz**.
 2. Escriba `StickerBrowserViewController` como **nombre** y haga clic en el botón **nuevo** :
 
-    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Escriba StickerBrowserViewController para el nombre")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
-3. Abra el `StickerBrowserViewController.cs` archivo para editarlo.
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
+3. Abra el archivo de `StickerBrowserViewController.cs` para editarlo.
 
 -----
 
-Haga que `StickerBrowserViewController.cs` tenga el aspecto siguiente:
+Haga que el `StickerBrowserViewController.cs` tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ Eche un vistazo al código anterior en detalle. Crea almacenamiento para los adh
 public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
 ```
 
-Y reemplaza dos métodos de la `MSStickerBrowserViewController` clase para proporcionar datos para el explorador desde este almacén de datos:
+Y reemplaza dos métodos de la clase `MSStickerBrowserViewController` para proporcionar datos para el explorador desde este almacén de datos:
 
 ```csharp
 public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
@@ -284,7 +284,7 @@ public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, n
 }
 ```
 
-El `CreateSticker` método obtiene la ruta de acceso de un recurso de imagen del paquete de la extensión y lo usa para crear una nueva `MSSticker` instancia de a partir de este recurso, que agrega a la colección:
+El método `CreateSticker` obtiene la ruta de acceso de un recurso de imagen del paquete de la extensión y lo usa para crear una nueva instancia de un `MSSticker` a partir de este recurso, que agrega a la colección:
 
 ```csharp
 private void CreateSticker (string assetName, string localizedDescription)
@@ -311,9 +311,9 @@ private void CreateSticker (string assetName, string localizedDescription)
 }
 ```
 
-Se `LoadSticker` llama al método desde `ViewDidLoad` para crear un adhesivo a partir del recurso de imagen con nombre (incluido en el paquete de la aplicación) y agregarlo a la colección de adhesivos.
+Se llama al método `LoadSticker` desde `ViewDidLoad` para crear un adhesivo a partir del recurso de imagen con nombre (incluido en el lote de la aplicación) y agregarlo a la colección de adhesivos.
 
-Para implementar el explorador de adhesivos personalizado, `MessagesViewController.cs` edite el archivo y haga que tenga un aspecto similar al siguiente:
+Para implementar el explorador de adhesivos personalizado, edite el archivo de `MessagesViewController.cs` y haga que tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -361,7 +361,7 @@ Al echar un vistazo a este código en detalle, se crea almacenamiento para el ex
 public StickerBrowserViewController BrowserViewController { get; set;}
 ```
 
-Y en el `ViewDidLoad` método, crea una instancia de y configura un nuevo explorador:
+Y en el método `ViewDidLoad`, crea una instancia de y configura un nuevo explorador:
 
 ```csharp
 // Create new browser and configure it
@@ -393,7 +393,7 @@ Con los métodos anteriores, la extensión puede admitir la selección de adhesi
 
 Esta vista de adhesivo se puede cambiar entre estos modos mediante programación o manualmente por el usuario.
 
-Eche un vistazo al siguiente ejemplo de cómo controlar el cambio entre los dos modos de vista diferentes. Se necesitarán dos controladores de vista diferentes para cada Estado. Controla la vista compacta y tiene un aspecto similar al siguiente: `StickerBrowserViewController`
+Eche un vistazo al siguiente ejemplo de cómo controlar el cambio entre los dos modos de vista diferentes. Se necesitarán dos controladores de vista diferentes para cada Estado. El `StickerBrowserViewController` controla la vista **compacta** y tiene un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -494,7 +494,7 @@ namespace MessageExtension
 }
 ```
 
-Controlará la vista de adhesivo expandida y tendrá un aspecto similar al siguiente: `AddStickerViewController`
+La `AddStickerViewController` controlará la vista de adhesivo **expandida** y tendrá un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -546,7 +546,7 @@ namespace MessageExtension
 }
 ```
 
-`MessageViewController` Implementa estos controladores de vista para impulsar el estado solicitado:
+El `MessageViewController` implementa estos controladores de vista para impulsar el estado solicitado:
 
 ```csharp
 using System;
@@ -666,7 +666,7 @@ namespace MessageExtension
 }
 ```
 
-Cuando el usuario solicita agregar un nuevo adhesivo a su colección disponible, se crea un `AddStickerViewController` nuevo controlador visible y la vista de adhesivo entra en la vista **expandida** :
+Cuando el usuario solicita agregar un nuevo adhesivo a su colección disponible, se crea un nuevo `AddStickerViewController` el controlador visible y la vista de adhesivo entra en la vista **expandida** :
 
 ```csharp
 // Switch to expanded view mode
@@ -686,7 +686,7 @@ public void AddStickerToCollection (MSSticker sticker)
 }
 ```
 
-El `DidTransition` método se invalida para controlar el cambio entre los dos modos:
+El método `DidTransition` se invalida para controlar el cambio entre los dos modos:
 
 ```csharp
 public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)

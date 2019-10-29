@@ -4,21 +4,21 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751994"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031781"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
 _En este artículo se presentan todas las API y características nuevas y modificadas disponibles en iOS 9 para desarrolladores de Xamarin. iOS._
 
-![](images/ios9-sml.png "El logotipo de iOS 9")
+![](images/ios9-sml.png "The iOS 9 logo")
 
 Apple ha agregado varias API y servicios nuevos en iOS 9 junto con muchas mejoras en las características existentes.
 
@@ -137,15 +137,15 @@ En iOS 9, Apple ha mejorado la cadena de claves para proporcionar un nuevo tipo 
 
 - Nueva restricción de Touch ID que invalida los elementos de cadena de claves cuando se modifica la base de datos de huellas digitales.
 - Nuevas restricciones que permiten crear Access Control lista de entradas solo con Touch ID o el código de acceso.
-- Nuevo contexto de autenticación que permite invocar la autenticación independiente de `SecItem` las llamadas.
+- Nuevo contexto de autenticación que permite invocar la autenticación independiente de las llamadas `SecItem`.
 - Access Control enumeración entropía (mediante la opción de contraseña de aplicación) para el cifrado de elementos de cadena de claves proporcionado por la aplicación.
-- Compatibilidad para generar y usar claves dentro del enclave seguro (mediante el `kSecAttrTokenIDSecureEnclave` atributo).
+- Compatibilidad para generar y usar claves dentro del enclave seguro (a través del atributo `kSecAttrTokenIDSecureEnclave`).
 
 Para obtener más información, consulte nuestra [Introducción a la documentación de Touch ID](~/ios/platform/touchid.md) .
 
 ## <a name="right-to-left-language-support"></a>Compatibilidad con idiomas de derecha a izquierda
 
-En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Incluye lo siguiente:
+En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Entre estas estructuras se incluyen las siguientes:
 
 - Los controles estándar de [UIKit](xref:UIKit) se voltearán de derecha a izquierda en función de la configuración regional y de idioma de los dispositivos iOS.
 - La clase [UIView](xref:UIKit.UIView) proporciona atributos que permiten definir cómo debe aparecer una vista determinada cuando se voltea de derecha a izquierda.
@@ -177,8 +177,8 @@ Para obtener más información, consulte la documentación [adicional sobre los 
 Apple ha dejado de usar las siguientes API y funciones en iOS 9:
 
 - **Libreta de direcciones & interfaz de usuario** de la libreta de direcciones: estas API se han sustituido por los marcos de IU Contact y Contact UI. Para obtener más información, consulte nuestra documentación de la interfaz de usuario de contactos [y contactos](~/ios/platform/contacts.md) .
-- **CBCentralManager** : se `RetrievePeripherals` han `RetrieveConnectedPeripherals` quitado los `CBCentralManager` métodos y de la clase en iOS 9. Llamar a estos métodos hará que una aplicación se bloquee al emparejar un accesorio o el inicio de la aplicación.
-- **FetchAllChanges** : el `FetchAllChanges` de la `CKFetchRecordChangesOperation` clase se devolvió y se quitará en iOS 9.
+- **CBCentralManager** : se han quitado los métodos `RetrievePeripherals` y `RetrieveConnectedPeripherals` de la clase `CBCentralManager` en iOS 9. Llamar a estos métodos hará que una aplicación se bloquee al emparejar un accesorio o el inicio de la aplicación.
+- **FetchAllChanges** : se devolvió la `FetchAllChanges` de la clase `CKFetchRecordChangesOperation` y se quitará en iOS 9.
 - **Media Player** : el marco de Media Player está en desuso en iOS 9. En su lugar, use las API AVKit o AV Foundation.
 
 Para obtener una lista completa de las desuso específicas de la API, consulte la documentación de diferencias de la [API de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) de Apple.

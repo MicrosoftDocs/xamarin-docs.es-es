@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 376BBA27-8694-4E63-9976-BF60349D42D8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 3ef916dbd277544309f1803f923cde302494e4f1
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.openlocfilehash: 052df9676e4e6e105b5345d6120b884a3dead11f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71033502"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031008"
 ---
 # <a name="ipa-file-is-0-bytes"></a>El archivo IPA es de 0 bytes
 

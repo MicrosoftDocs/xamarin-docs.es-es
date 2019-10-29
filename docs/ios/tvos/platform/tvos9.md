@@ -4,15 +4,15 @@ description: En este artículo se presentan todas las API y características nue
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 34f332eb712f479f9f9565a3894212e3cdd5aaf6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769119"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030543"
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
@@ -55,7 +55,7 @@ No se admiten las siguientes características y capacidades:
 - Cartera
 - Configuración inalámbrica de accesorios
 
-Para obtener más información, consulte la documentación de los [ensamblados admitidos](~/ios/tvos/internals/assemblies.md) y los [marcos de trabajo admitidos](~/ios/tvos/internals/frameworks.md).
+Para obtener más información, consulte la documentación de los [ensamblados admitidos](~/ios/tvos/internals/assemblies.md) y los [marcos de trabajo admitidos](~/ios/tvos/internals/frameworks.md) .
 
 <a name="Apple-TV-Hardware" />
 
@@ -75,7 +75,7 @@ El nuevo Apple TV tiene las siguientes especificaciones de hardware:
 
 ### <a name="siri-remote"></a>Siri remoto
 
-En función de la región, el Remote TV remoto proporcionado tendrá una configuración: Siri remoto o Apple TV remoto.
+En función de la región, el Remote TV remoto proporcionado tendrá una configuración: Siri Remote o Apple TV Remote.
 
 Siri Remote está disponible actualmente en los siguientes países:
 
@@ -90,7 +90,7 @@ Siri Remote está disponible actualmente en los siguientes países:
 
 Todos los demás países recibirán el control remoto de Apple TV, que reemplaza el botón de Siri por un botón de búsqueda que muestra la pantalla de búsqueda predeterminada con entrada de texto para realizar búsquedas:
 
-[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
+[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
 
 Para obtener más información, consulte la documentación de [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -154,7 +154,7 @@ Para obtener más información, consulte la documentación sobre [Cómo trabajar
 
 La pantalla principal de Apple TV muestra todas las aplicaciones que están instaladas y proporciona una forma de acceder a las preferencias del usuario:
 
-[![](tvos9-images/home01.png "La pantalla principal")](tvos9-images/home01.png#lightbox)
+[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
 
 El usuario navega por una cuadrícula de iconos de la aplicación mediante gestos táctiles en el Siri remoto con el foco para seleccionar una aplicación e iniciarla. El icono de la aplicación es la primera oportunidad de crear una gran impresión para el usuario potencial y debe comunicar el propósito de la aplicación de un vistazo.
 
@@ -168,9 +168,9 @@ Para obtener más información, consulte la documentación sobre [Cómo trabajar
 
 Si el usuario ha colocado la aplicación Xamarin. tvOS en la fila superior de la pantalla de inicio de Apple TV, se mostrará una imagen de estante superior grande cuando el usuario seleccione la aplicación. Esta imagen debe resaltar las características de la aplicación o proporcionar vínculos directos a su contenido.
 
-[![](tvos9-images/topshelf01.png "Estante superior")](tvos9-images/topshelf01.png#lightbox)
+[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
 
-La imagen de estante superior se puede proporcionar como un único archivo `.png` o `.lsr` estático, o bien se puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco.
+La imagen de estante superior se puede proporcionar como un solo archivo estático `.png` o `.lsr`, o bien se puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco.
 
 En lugar de mostrar una imagen de estante superior estática, puede contener una fila dinámica o elementos enfocables o un conjunto dinámico de banners de desplazamiento. Ambos estilos dinámicos le permiten resaltar el contenido proporcionado por la aplicación o saltar a sus características más usadas.
 

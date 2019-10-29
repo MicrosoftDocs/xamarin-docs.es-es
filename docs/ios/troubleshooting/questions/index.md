@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: a8549e03c96a5e21f7a235064ebd72fc671cf2b8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769281"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031087"
 ---
 # <a name="ios-frequently-asked-questions"></a>Preguntas más frecuentes sobre iOS
 
@@ -41,7 +41,7 @@ Si tiene que establecer variables de entorno de tiempo de ejecución para mono, 
 
 ## <a name="publishing-questions"></a>Publicación de preguntas
 
-### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[Error al enviar a la tienda de aplicaciones: "No se permite la inserción de opciones de agrupación no válidas en Bitcode en el envío".](invalid-bundle-bitcode.md)
+### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[Error al enviar a la tienda de aplicaciones: "no se permiten las opciones de agrupación no válidas que se van a insertar en Bitcode en el envío".](invalid-bundle-bitcode.md)
 
 El envío de aplicaciones que _requieran_ Bitcode, como watchos y aplicaciones de tvOS, debe realizarse con Xcode 9.
 
@@ -52,29 +52,29 @@ A partir de Xamarin Cycle 7, puede usar destinos de MSBuild personalizados para 
 Sí, en esta guía se describe cómo hacerlo.
 
 ### <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studiomodify-ipamd"></a>[¿Puedo agregar o quitar archivos de un archivo IPA después de compilarlos en Visual Studio?](modify-ipa.md)
-Sí, es posible, pero normalmente será necesario volver a firmar la `.app` agrupación después de realizar el cambio. Tenga en cuenta que no `.ipa` es necesario modificar el archivo en el uso normal. Este artículo se proporciona únicamente con fines informativos.
+Sí, es posible, pero normalmente será necesario volver a firmar el paquete de `.app` después de realizar el cambio. Tenga en cuenta que no es necesario modificar el archivo `.ipa` en el uso normal. Este artículo se proporciona únicamente con fines informativos.
 
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[¿Es posible crear un archivo. xcarchive desde Visual Studio?](create-xcarchive.md)
-A `.xcarchive` partir de Xamarin 4, ahora es posible crear desde Windows estableciendo la `ArchiveOnBuild` propiedad en `true`.
+A partir de Xamarin 4, ahora es posible crear un `.xcarchive` desde Windows estableciendo la propiedad `ArchiveOnBuild` en `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[¿Por qué se produce un error "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." al enviar mi aplicación?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[¿Por qué aparece el siguiente error al enviar mi aplicación: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." ?](itunesmetadata-disallowed-paths.md)
 Este error es el resultado de un cambio en el proceso de comprobación de App Store de Apple. Este error específico _no_ está relacionado con la versión concreta de Xamarin que ha instalado, por lo que la degradación _no_ servirá de ayuda. En esta guía se proporciona un vínculo a más información sobre cómo corregir el problema.
 
 ## <a name="diagnosing-specific-error-messages"></a>Diagnóstico de mensajes de error específicos
 
 ### <a name="ios-designer-error-with-registerserviceporterror-registerserviceportmd"></a>[Error de iOS Designer con RegisterServicePort](error-registerserviceport.md)
-Los errores de y los mensajes de error similares a los anteriores suelen ser un problema con spyware o malware en el equipo. `RegisterServicePort` En esta guía se detallan las confirmaciones del diagnóstico y la información sobre la eliminación de spyware o malware.
+Los errores con `RegisterServicePort` y mensajes de error similares como los anteriores suelen ser un problema con spyware o malware en el equipo. En esta guía se detallan las confirmaciones del diagnóstico y la información sobre la eliminación de spyware o malware.
 
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain?](no-codesigning-keys.md)
 Este mensaje de error se produce cuando el proyecto en cuestión busca credenciales de firma de código válidas pero no puede encontrarlas. La firma de código es necesaria para las pruebas y las implementaciones en dispositivos iOS físicos; Además de las compilaciones ad-hoc & App Store.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[¿Por qué se produce un error System.Exception: Failed to marshal the Objective-C object en mi aplicación para iOS 9?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[¿Por qué se produce el siguiente error en mi aplicación iOS 9: System.Exception: Failed to marshal the Objective-C object?](exception-marshal-obj-c.md)
 Los cambios de la API en iOS 9 requieren que se use un constructor de devolución de llamada al llamar a código no administrado, ya que la API subyacente espera ahora.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Error en tiempo de ejecución: The assembly mscorlib.dll was not found or could not be loaded](error-mscorlib-not-found.md)
-Este problema se produce cuando faltan `.monotouch-64` las carpetas *Hidden* `.monotouch-32` y en `.xcarchive` para la creación de firmas/IPA, lo que desencadena el error de tiempo de ejecución.
+Este problema se produce cuando faltan las carpetas *ocultas* `.monotouch-32` y `.monotouch-64` en la `.xcarchive` para la creación de firmas/IPA y se desencadena el error de tiempo de ejecución.
 
-### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Error de compilación: No se puede codificar el desplazamiento X en la reubicación distribuida resultante](error-encode-offset-scattered-relocation.md)
+### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Error de compilación: no se puede codificar el desplazamiento X en la reubicación distribuida resultante](error-encode-offset-scattered-relocation.md)
 Este problema se produce al compilar para arquitecturas de 32 bits, como ARMv7, cuando el archivo binario final es demasiado grande para la cadena de herramientas nativa.
 
 ## <a name="deprecated"></a>En desuso
@@ -86,13 +86,13 @@ Este problema se produce al compilar para arquitecturas de 32 bits, como ARMv7, 
 Hubo algunos problemas conocidos en las versiones anteriores de Xamarin que podrían provocar que el archivo IPA en Windows fuese 0 bytes.
 
 ### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Error de IBTool: The operation couldn’t be completed.](error-ibtool.md)
-Apple [corrigió](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) este `ibtool` error en Xcode 6.1.1, por lo que la solución más sencilla es actualizar a Xcode 6.1.1 o superior.
+Apple [corrigió](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) este error `ibtool` en Xcode 6.1.1, por lo que la actualización a Xcode 6.1.1 o superior es la solución más sencilla.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Error MT1009: Could not copy the assembly](error-mt1009.md)
 Esto afecta a los usuarios que ejecutan Xamarin. iOS 7.2.6. Este problema se debe a los permisos de archivo que necesitan más privilegios cuando Xamarin. iOS se instala con una cuenta de usuario diferente a la cuenta principal del desarrollador.
 
 ### <a name="systemexception-amdevicenotificationsubscribe-returned-exception-amddevicenotificationsubscribemd"></a>[System.Exception AMDeviceNotificationSubscribe returned ...](exception-amddevicenotificationsubscribe.md)
-Este mensaje puede aparecer en un cuadro de diálogo de error cuando se inicia por primera vez `mtbserver.log` Visual Studio para Mac o en el archivo. Tenga en cuenta que se trata de un problema poco frecuente. Si Visual Studio tiene problemas para conectarse al host de compilación de Mac, hay otros errores que es más probable que aparezcan en `mtbserver.log` el archivo.
+Este mensaje puede aparecer en un cuadro de diálogo de error cuando se inicia por primera vez Visual Studio para Mac o en el archivo de `mtbserver.log`. Tenga en cuenta que se trata de un problema poco frecuente. Si Visual Studio tiene problemas para conectarse al host de compilación de Mac, hay otros errores que es más probable que aparezcan en el archivo de `mtbserver.log`.
 
 ### <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequestmdocarchivetomsxdocconverter-not-foundmd"></a>[MDocArchiveToMsxDocConverter.exe no encontró rver.BaseCommand.OnRequest](mdocarchivetomsxdocconverter-not-found.md)
 Este error puede aparecer en el `Mac Server Log` en Visual Studio.

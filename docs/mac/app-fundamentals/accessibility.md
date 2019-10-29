@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con las característic
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 3f3b9c84fad0bce8939187fcd0c91d18314ce8ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032638"
 ---
 # <a name="accessibility-on-macos"></a>Accesibilidad en macOS
 

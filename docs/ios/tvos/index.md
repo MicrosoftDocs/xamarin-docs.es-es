@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: e95d7a01b2743db119f7982db1f9ed34bc4d02a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e61aaa6a2071797f905bf7398576f2045a46faea
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769621"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030698"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introducción a tvOS en Xamarin
 
@@ -64,7 +64,7 @@ Aplicaciones de ejemplo de tvOS compiladas con Xamarin:
 
 Además, Apple proporciona las siguientes aplicaciones de ejemplo que se pueden transcodificar C# para que funcionen con la compatibilidad de Xamarin con las aplicaciones de tvOS:
 
-- [DemoBots: Creación de un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
+- [DemoBots: creación de un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemas conocidos y solución de problemas
 

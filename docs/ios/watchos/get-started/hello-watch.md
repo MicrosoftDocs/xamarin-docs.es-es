@@ -4,15 +4,15 @@ description: En este documento se proporciona un tutorial sobre la creación de 
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768688"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032773"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
@@ -24,17 +24,17 @@ Una vez que haya creado una solución que siga los pasos de [instalación e inst
 
 Compruebe que las [referencias son correctas](~/ios/watchos/get-started/project-references.md): que la aplicación primaria tiene una referencia a la extensión y que la extensión tiene una referencia a la aplicación de inspección.
 
-Confirme que los identificadores de lote siguen \*la Convención \*. watchkitextension. watchkitapp y que el archivo info. plist de la extensión tiene el valor de **identificador de paquete WKApp** establecido en el identificador de paquete de la aplicación de inspección.
+Confirme que los identificadores de lote siguen la Convención \*. watchkitextension \*. watchkitapp y que el archivo info. plist de la extensión tiene el valor de **identificador de paquete WKApp** establecido en el identificador de paquete de la aplicación de inspección.
 
 Ahora debería poder ejecutar la aplicación de inspección, pero como el archivo de guion gráfico en la aplicación de inspección está en blanco, no podrá saber.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](hello-watch-images/projectstructure.png "El Explorador de soluciones")
+![](hello-watch-images/projectstructure.png "The Solution Explorer")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-projectstructure.png "El Explorador de soluciones")
+![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
 
 -----
 
@@ -47,7 +47,7 @@ Haga doble clic en interface. Storyboard en la aplicación de inspección para i
 1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
 1. Compruebe que la **clase** está establecida en **InterfaceController**
 
-    ![](hello-watch-images/interfacecontrollerattributes.png "Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch")
+    ![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -58,7 +58,7 @@ Haga doble clic en interface. Storyboard en la aplicación de inspección para e
 1. Haga clic en el controlador de interfaz; etc
 1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
 
-    ![](hello-watch-images/vs-interfacecontrollerattributes.png "Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch")
+    ![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
 -----
 
@@ -70,24 +70,24 @@ Cree la interfaz de usuario:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](hello-watch-images/draganddrop.png "Establezca el texto y los atributos de los controles como se muestra")
+![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-draganddrop.png "Establezca el texto y los atributos de los controles como se muestra")
+![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
 
 -----
 
-1. Establezca el **nombre** en el panel de **propiedades** de cada control. En este ejemplo hemos usado `myButton` y. `myLabel`
+1. Establezca el **nombre** en el panel de **propiedades** de cada control. En este ejemplo hemos usado `myButton` y `myLabel`.
 
 1. Seleccione el botón del guión gráfico y vaya a la lista de **eventos** del panel de **propiedades** .
 
 1. Cree una nueva **acción** escribiendo `OnButtonPress` y presionando **entrar**.
   La acción aparecerá en la lista y se creará automáticamente un método parcial en C#.
 
-![](hello-watch-images/buttonaction.png "La acción OnButtonPress agregada a un botón")
+![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-Después de guardar el guión gráfico, el **InterfaceController.Designer.CS** se actualiza con los nombres y las acciones del control. Si abre este archivo una vez que se ha actualizado, puede ver cómo `RegisterAttribute` corresponde al controlador y cómo se corresponden los controles de interfaz de C# usuario con las `OutletAttribute` variables de instancia marcadas con y cómo se asignan las acciones a métodos parciales etiquetados con el `ActionAttribute`:
+Después de guardar el guión gráfico, el **InterfaceController.Designer.CS** se actualiza con los nombres y las acciones del control. Si abre este archivo una vez que se ha actualizado, puede ver cómo se corresponde el `RegisterAttribute` con el controlador y cómo se corresponden los C# controles de interfaz de usuario con las variables de instancia marcadas con el`OutletAttribute`y cómo las acciones se asignan a métodos parciales etiquetados con el`ActionAttribute`:
 
 ```csharp
 // WARNING
@@ -136,7 +136,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 }
 ```
 
-Este código debe ser bastante transparente: la variable `clickCount` de instancia se incrementa cada vez que se llama a la función. `OnButtonPress` El texto de `myLabel` se cambia para reflejar este recuento. `myLabel`, por supuesto, es el nombre de una de las salidas creadas en Xcode. La `partial` función es la implementación de la función asociada al nombre de la acción especificada.
+Este código debe ser bastante transparente: la variable de instancia `clickCount` se incrementa cada vez que se llama a la función `OnButtonPress`. El texto de `myLabel` se cambia para reflejar este recuento. `myLabel`, por supuesto, es el nombre de una de las salidas creadas en XCode. La función `partial` es la implementación de la función asociada al nombre de la acción especificada.
 
 Si aún no es el proyecto de inicio,
 
@@ -146,15 +146,15 @@ Si aún no es el proyecto de inicio,
 
 1. Haga clic en el botón **depurar** para desencadenar una compilación y un inicio del simulador.
 
-    [![](hello-watch-images/readytodebug-sml.png "Elementos de la interfaz de Visual Studio")](hello-watch-images/readytodebug.png#lightbox)
+    [![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png#lightbox)
 
 Cuando se inicie el simulador, presione el botón para incrementar la etiqueta.
 Enhorabuena, tiene una aplicación de Watch.
 
-![](hello-watch-images/running.png "La aplicación que se ejecuta en el simulador")
+![](hello-watch-images/running.png "The app running in the Simulator")
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Introducción (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
-- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Vídeo de la primera aplicación de inspección](https://blog.xamarin.com/your-first-watch-kit-app/)

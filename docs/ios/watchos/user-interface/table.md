@@ -4,15 +4,15 @@ description: En este documento se describe cómo usar los controles de tabla de 
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766952"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032666"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 

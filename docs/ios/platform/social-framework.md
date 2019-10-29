@@ -4,15 +4,15 @@ description: El marco de redes sociales proporciona una API unificada para inter
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 6008663276151ef9512e4a370252da6861fa1b19
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9c5714d5819831047d10d83b4de01fc826b9cc01
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769439"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031466"
 ---
 # <a name="social-framework-in-xamarinios"></a>Marco de redes sociales en Xamarin. iOS
 
@@ -20,32 +20,29 @@ _El marco de redes sociales proporciona una API unificada para interactuar con r
 
 El uso del marco de redes sociales permite a las aplicaciones interactuar con redes sociales desde una sola API sin tener que administrar la autenticación. Incluye un controlador de vista proporcionado por el sistema para la creación de publicaciones, así como una abstracción que permite el consumo de la API de cada red social a través de HTTP.
 
-> [!IMPORTANT]
-> Para que una API multiplataforma se conecte a varias redes sociales, consulte el componente [Xamarin. social](http://components.xamarin.com/view/xamarin.social/) en el almacén de componentes de Xamarin.
-
 ## <a name="connecting-to-twitter"></a>Conexión a Twitter
 
 ### <a name="twitter-account-settings"></a>Configuración de la cuenta de Twitter
 
 Para conectarse a Twitter mediante el marco de redes sociales, es necesario configurar una cuenta en la configuración del dispositivo, tal como se muestra a continuación:
 
- [![](social-framework-images/twitter01.png "Configuración de la cuenta de Twitter")](social-framework-images/twitter01.png#lightbox)
+ [![](social-framework-images/twitter01.png "Twitter Account Settings")](social-framework-images/twitter01.png#lightbox)
 
 Una vez que se ha escrito y comprobado una cuenta con Twitter, cualquier aplicación en el dispositivo que use las clases de marco de redes sociales para acceder a Twitter usará esta cuenta.
 
 ### <a name="sending-tweets"></a>Envío de tweets
 
-El marco de redes sociales incluye un `SLComposeViewController` controlador denominado que presenta una vista proporcionada por el sistema para editar y enviar un tweet. En la captura de pantalla siguiente se muestra un ejemplo de esta vista:
+El marco de redes sociales incluye un controlador denominado `SLComposeViewController` que presenta una vista proporcionada por el sistema para editar y enviar un tweet. En la captura de pantalla siguiente se muestra un ejemplo de esta vista:
 
- [![](social-framework-images/twitter02.png "En esta captura de pantalla se muestra un ejemplo de SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
+ [![](social-framework-images/twitter02.png "This screenshot shows an example of the SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
-Para usar `SLComposeViewController` con Twitter, se debe crear una instancia del controlador `FromService` llamando al método con `SLServiceType.Twitter` como se muestra a continuación:
+Para usar un `SLComposeViewController` con Twitter, se debe crear una instancia del controlador llamando al método `FromService` con `SLServiceType.Twitter` como se muestra a continuación:
 
 ```csharp
 var slComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
 ```
 
-Una vez `SLComposeViewController` devuelta la instancia, se puede usar para presentar una interfaz de usuario para publicar en Twitter. Sin embargo, lo primero que hay que hacer es comprobar la disponibilidad de la red social, en este caso Twitter, llamando `IsAvailable`a:
+Una vez devuelta la instancia de `SLComposeViewController`, se puede usar para presentar una interfaz de usuario para publicar en Twitter. Sin embargo, lo primero que hay que hacer es comprobar la disponibilidad de la red social, en este caso Twitter, llamando a `IsAvailable`:
 
 ```csharp
 if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
@@ -53,13 +50,13 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController`nunca envía un tweet directamente sin interacción del usuario. Sin embargo, se puede inicializar con los métodos siguientes:
+ `SLComposeViewController` nunca envía un tweet directamente sin la interacción del usuario. Sin embargo, se puede inicializar con los métodos siguientes:
 
-- `SetInitialText`: Agrega el texto inicial que se va a mostrar en el tweet.
-- `AddUrl`: Agrega una dirección URL al tweet.
-- `AddImage`: Agrega una imagen al tweet.
+- `SetInitialText`: agrega el texto inicial que se va a mostrar en el tweet.
+- `AddUrl`: agrega una dirección URL al tweet.
+- `AddImage`: agrega una imagen al tweet.
 
-Una vez inicializado, `PresentVIewController` al llamar a se muestra la `SLComposeViewController`vista creada por. El usuario puede editar y enviar el tweet opcionalmente, o cancelar su envío. En cualquier caso, el controlador debe descartarse en `CompletionHandler`, donde también se puede comprobar el resultado para ver si se ha enviado o cancelado el tweet, como se muestra a continuación:
+Una vez inicializado, al llamar a `PresentVIewController` se muestra la vista creada por el `SLComposeViewController`. El usuario puede editar y enviar el tweet opcionalmente, o cancelar su envío. En cualquier caso, el controlador debe descartarse en el `CompletionHandler`, donde también se puede comprobar el resultado para ver si se ha enviado o cancelado el tweet, como se muestra a continuación:
 
 ```csharp
 slComposer.CompletionHandler += (result) => {
@@ -72,7 +69,7 @@ slComposer.CompletionHandler += (result) => {
 
 #### <a name="tweet-example"></a>Ejemplo de Tweet
 
-En el código siguiente se muestra `SLComposeViewController` el uso de para presentar una vista usada para enviar un Tweet:
+En el código siguiente se muestra el uso de la `SLComposeViewController` para presentar una vista usada para enviar un Tweet:
 
 ```csharp
 using System;
@@ -137,7 +134,7 @@ namespace SocialFrameworkDemo
 
 ### <a name="calling-twitter-api"></a>Llamada a la API de Twitter
 
-El marco de redes sociales también incluye compatibilidad para hacer solicitudes HTTP a redes sociales. Encapsula la solicitud en una `SLRequest` clase que se usa para dirigirse a la API de la red social concreta.
+El marco de redes sociales también incluye compatibilidad para hacer solicitudes HTTP a redes sociales. Encapsula la solicitud en una clase `SLRequest` que se usa para dirigirse a la API de la red social concreta.
 
 Por ejemplo, el código siguiente realiza una solicitud a Twitter para obtener la escala de tiempo pública (expandiendo en el código indicado anteriormente):
 
@@ -252,7 +249,7 @@ var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?cou
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
 
-En este ejemplo se limitan los resultados devueltos a las últimas `?count=10` diez entradas mediante la inclusión de en la dirección URL. Por último, adjunta la solicitud a la cuenta de Twitter (que se cargó anteriormente) y realiza la llamada a Twitter para capturar los datos:
+En este ejemplo se limitan los resultados devueltos a las últimas diez entradas mediante la inclusión de `?count=10` en la dirección URL. Por último, adjunta la solicitud a la cuenta de Twitter (que se cargó anteriormente) y realiza la llamada a Twitter para capturar los datos:
 
 ```csharp
 // Request data
@@ -283,7 +280,7 @@ request.PerformRequest ((data, response, error) => {
 
 Si los datos se cargaron correctamente, se mostrarán los datos JSON sin procesar (como se muestra en la salida del ejemplo siguiente):
 
-[![](social-framework-images/twitter03.png "Un ejemplo de la presentación de datos JSON sin procesar")](social-framework-images/twitter03.png#lightbox)
+[![](social-framework-images/twitter03.png "An example of the raw JSON data display")](social-framework-images/twitter03.png#lightbox)
 
 En una aplicación real, los resultados de JSON se pueden analizar como normal y los resultados se presentan al usuario. Vea [Introducción a los servicios web](~/cross-platform/data-cloud/web-services/index.md) para obtener información sobre cómo analizar JSON.
 
@@ -293,7 +290,7 @@ En una aplicación real, los resultados de JSON se pueden analizar como normal y
 
 La conexión a Facebook con el marco de redes sociales es casi idéntica al proceso usado para Twitter mostrado anteriormente. Una cuenta de usuario de Facebook debe estar configurada en la configuración del dispositivo, tal como se muestra a continuación:
 
-[![](social-framework-images/facebook01.png "Configuración de la cuenta de Facebook")](social-framework-images/facebook01.png#lightbox)
+[![](social-framework-images/facebook01.png "Facebook Account Settings")](social-framework-images/facebook01.png#lightbox)
 
 Una vez configurada, cualquier aplicación en el dispositivo que use el marco de redes sociales usará esta cuenta para conectarse a Facebook.
 
@@ -301,7 +298,7 @@ Una vez configurada, cualquier aplicación en el dispositivo que use el marco de
 
 Como el marco de redes sociales es una API unificada diseñada para tener acceso a varias redes sociales, el código sigue siendo casi idéntico, independientemente de la red social utilizada.
 
-Por ejemplo, `SLComposeViewController` se puede utilizar exactamente como en el ejemplo de Twitter mostrado anteriormente, el único diferente es cambiar a la configuración y las opciones específicas de Facebook. Por ejemplo:
+Por ejemplo, el `SLComposeViewController` se puede utilizar exactamente como en el ejemplo de Twitter mostrado anteriormente, lo único que cambia a la configuración y las opciones específicas de Facebook. Por ejemplo:
 
 ```csharp
 using System;
@@ -365,13 +362,13 @@ namespace SocialFrameworkDemo
 }
 ```
 
-Cuando se usa con Facebook, `SLComposeViewController` muestra una vista que es prácticamente idéntica al ejemplo de Twitter, que muestra **Facebook** como título en este caso:
+Cuando se usa con Facebook, el `SLComposeViewController` muestra una vista que es prácticamente idéntica al ejemplo de Twitter, que muestra **Facebook** como título en este caso:
 
-[![](social-framework-images/facebook02.png "Presentación de SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
+[![](social-framework-images/facebook02.png "The SLComposeViewController display")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Llamada a Graph API de Facebook
 
-Al igual que en el ejemplo de Twitter, el `SLRequest` objeto de la plataforma social se puede usar con la API Graph de Facebook. Por ejemplo, el código siguiente devuelve información de la API Graph sobre la cuenta de Xamarin (mediante la expansión del código anterior):
+Al igual que en el ejemplo de Twitter, el objeto de `SLRequest` de la plataforma social se puede usar con la API Graph de Facebook. Por ejemplo, el código siguiente devuelve información de la API Graph sobre la cuenta de Xamarin (mediante la expansión del código anterior):
 
 ```csharp
 using Accounts;
@@ -471,7 +468,7 @@ Si no se establece esta opción (o se usa una clave no válida), se producirá u
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha mostrado cómo usar el marco de redes sociales para interactuar con Twitter y Facebook. Se mostró dónde configurar cuentas para cada red social en la configuración del dispositivo. También se describe cómo utilizar `SLComposeViewController` para presentar una vista unificada para la publicación en redes sociales. Además, examinó la clase `SLRequest` que se usa para llamar a la API de cada red social.
+En este artículo se ha mostrado cómo usar el marco de redes sociales para interactuar con Twitter y Facebook. Se mostró dónde configurar cuentas para cada red social en la configuración del dispositivo. También se describe cómo usar el `SLComposeViewController` para presentar una vista unificada para la publicación en redes sociales. Además, examinó la clase `SLRequest` que se usa para llamar a la API de cada red social.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

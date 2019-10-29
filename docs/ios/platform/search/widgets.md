@@ -4,15 +4,15 @@ description: En este documento se describen las mejoras que Apple ha realizado e
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 969d7fc78af9dd10f7ad57f58a6f4f619d0a201a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca6ccce934b32fa0d7e48cd8f295d9acefe6e121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769454"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031507"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Mejoras en el widget de pantalla principal y de búsqueda en iOS 10
 
@@ -24,7 +24,7 @@ Los widgets (también conocidos como extensiones de hoy) son un tipo especial de
 
 Los widgets son muy personalizables y pueden contener elementos de interfaz de usuario como texto, imágenes, botones, etc. Además, el desarrollador puede personalizar aún más el diseño de sus widgets.
 
-[![](widgets-images/widgets01.png "Widgets de ejemplo")](widgets-images/widgets01.png#lightbox)
+[![](widgets-images/widgets01.png "Example widgets")](widgets-images/widgets01.png#lightbox)
 
 Hay dos lugares principales que un usuario puede ver e interactuar con los widgets de una aplicación:
 

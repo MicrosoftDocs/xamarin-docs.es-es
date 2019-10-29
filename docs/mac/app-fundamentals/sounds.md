@@ -4,23 +4,23 @@ description: En este documento se describe cómo reproducir sonido con AVAudioPl
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18043a88a129d48a1cad3b9ee15b6989d50ad126
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283303"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030040"
 ---
 # <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reproducir sonido con AVAudioPlayer en Xamarin. Mac
 
 ## <a name="about-the-avaudioplayer"></a>Acerca de AVAudioPlayer
 
-La `AVAudioPlayer` clase se usa para reproducir datos de audio de cualquier memoria o de un archivo. Apple recomienda el uso de esta clase para reproducir audio en la aplicación a menos que esté realizando streaming de red o requiera e/s de audio de baja latencia.
+La clase `AVAudioPlayer` se usa para reproducir datos de audio de cualquier memoria o de un archivo. Apple recomienda el uso de esta clase para reproducir audio en la aplicación a menos que esté realizando streaming de red o requiera e/s de audio de baja latencia.
 
-Puede utilizar la `AVAudioPlayer` clase para hacer lo siguiente:
+Puede usar la clase `AVAudioPlayer` para hacer lo siguiente:
 
 - Reproducir sonidos de cualquier duración con bucles opcionales.
 - Reproducir varios sonidos al mismo tiempo con la sincronización opcional.
@@ -28,7 +28,7 @@ Puede utilizar la `AVAudioPlayer` clase para hacer lo siguiente:
 - Compatibilidad con características como el avance rápido o el rebobinado.
 - Obtener datos de medición de nivel de reproducción.
 
-`AVAudioPlayer`admite sonidos en cualquier formato de audio proporcionado por iOS, tvOS y macOS, como. AIF,. WAV o. mp3.
+`AVAudioPlayer` admite sonidos en cualquier formato de audio proporcionado por iOS, tvOS y macOS, como. AIF,. WAV o. mp3.
 
 ## <a name="playing-sounds-in-macos"></a>Reproducir sonidos en macOS
 

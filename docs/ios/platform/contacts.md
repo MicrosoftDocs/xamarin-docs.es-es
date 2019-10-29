@@ -4,21 +4,21 @@ description: En este artículo se explica cómo trabajar con los nuevos marcos d
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 438ed93bafa37496e6a97ea2fe98ca6a515682cf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753298"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032566"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contactos y ContactsUI en Xamarin. iOS
 
 _En este artículo se explica cómo trabajar con los nuevos marcos de interfaz de usuario contactos y contactos en una aplicación Xamarin. iOS. Estos marcos de trabajo reemplazan la interfaz de usuario de libreta de direcciones existente y la libreta de direcciones utilizada en versiones anteriores de iOS._
 
-Con la introducción de iOS 9, Apple ha lanzado dos nuevos marcos de trabajo `Contacts` , `ContactsUI`y, que reemplazan los marcos de interfaz de usuario de la libreta de direcciones y la libreta de direcciones existentes usados por iOS 8 y versiones anteriores.
+Con la introducción de iOS 9, Apple ha publicado dos nuevos marcos de trabajo, `Contacts` y `ContactsUI`, que reemplazan los marcos de interfaz de usuario existentes de libreta de direcciones y de libreta de direcciones usados por iOS 8 y versiones anteriores.
 
 Los dos nuevos marcos de trabajo contienen la siguiente funcionalidad:
 
@@ -27,10 +27,10 @@ Los dos nuevos marcos de trabajo contienen la siguiente funcionalidad:
 
 - [**ContactsUI**](#contactsui) : proporciona elementos de interfaz de usuario de Xamarin. iOS para mostrar, editar, seleccionar y crear contactos en dispositivos iOS.
 
-[![](contacts-images/add01.png "Una hoja de contacto de ejemplo en un dispositivo iOS")](contacts-images/add01.png#lightbox)
+[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> Los marcos `AddressBook` de `AddressBookUI` trabajo y existentes que usan iOS 8 (y anteriores) han quedado desusados en iOS 9 y deben reemplazarse por `Contacts` los `ContactsUI` nuevos marcos de trabajo y lo antes posible para cualquier aplicación de Xamarin. iOS existente. Las nuevas aplicaciones deben escribirse en los nuevos marcos de trabajo.
+> Los marcos de `AddressBook` y `AddressBookUI` existentes que usan iOS 8 (y versiones anteriores) han quedado desusados en iOS 9 y deben reemplazarse por los nuevos `Contacts` y `ContactsUI` Marcos lo antes posible para cualquier aplicación de Xamarin. iOS existente. Las nuevas aplicaciones deben escribirse en los nuevos marcos de trabajo.
 
 En las secciones siguientes, echaremos un vistazo a estos nuevos marcos y cómo implementarlos en una aplicación Xamarin. iOS.
 
@@ -44,13 +44,13 @@ El marco Contacts proporciona acceso a Xamarin. iOS a la información de contact
 
 ### <a name="contact-objects"></a>Objetos de contacto
 
-La `CNContact` clase proporciona acceso seguro para subprocesos y de solo lectura a las propiedades de un contacto como el nombre, la dirección o los números de teléfono. `CNContact`funciones como `NSDictionary` y contienen varias colecciones de propiedades de solo lectura (como direcciones o números de teléfono):
+La clase `CNContact` proporciona acceso seguro para subprocesos y de solo lectura a las propiedades de un contacto como el nombre, la dirección o los números de teléfono. `CNContact` funciones como un `NSDictionary` y contiene varias colecciones de propiedades de solo lectura (como direcciones o números de teléfono):
 
-[![](contacts-images/contactobjects.png "Información general sobre objetos de contacto")](contacts-images/contactobjects.png#lightbox)
+[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
 
-En el caso de las propiedades que pueden tener varios valores (como la dirección de correo electrónico o los números de teléfono), se `NSLabeledValue` representarán como una matriz de objetos. `NSLabeledValue`es una tupla segura para subprocesos que consta de un conjunto de solo lectura de etiquetas y valores en los que la etiqueta define el valor para el usuario (por ejemplo, un correo electrónico doméstico o de trabajo). El marco de contactos proporciona una selección de etiquetas predefinidas ( `CNLabelKey` a `CNLabelPhoneNumberKey` través de las clases estáticas y) que se pueden usar en la aplicación o la opción de definir etiquetas personalizadas para sus necesidades.
+En el caso de las propiedades que pueden tener varios valores (como la dirección de correo electrónico o los números de teléfono), se representarán como una matriz de objetos de `NSLabeledValue`. `NSLabeledValue` es una tupla segura para subprocesos que consta de un conjunto de solo lectura de etiquetas y valores en los que la etiqueta define el valor para el usuario (por ejemplo, un correo electrónico doméstico o de trabajo). El marco de contactos proporciona una selección de etiquetas predefinidas (a través de las clases estáticas `CNLabelKey` y `CNLabelPhoneNumberKey`) que puede usar en la aplicación o la opción de definir etiquetas personalizadas para sus necesidades.
 
-En cualquier aplicación de Xamarin. iOS que necesite ajustar los valores de un contacto existente (o crear otros nuevos), use la `NSMutableContact` versión de la clase y sus subclases ( `CNMutablePostalAddress`como).
+En cualquier aplicación de Xamarin. iOS que necesite ajustar los valores de un contacto existente (o crear otros nuevos), use la versión `NSMutableContact` de la clase y sus subclases (como `CNMutablePostalAddress`).
 
 Por ejemplo, el código siguiente creará un nuevo contacto y lo agregará a la colección de contactos del usuario:
 
@@ -110,7 +110,7 @@ else
 
 Si este código se ejecuta en un dispositivo iOS 9, se agregará un nuevo contacto a la colección del usuario. Por ejemplo:
 
-[![](contacts-images/add01.png "Un nuevo contacto agregado a la colección del usuario")](contacts-images/add01.png#lightbox)
+[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Ponerse en contacto con el formato y la localización
 
@@ -131,9 +131,9 @@ Console.WriteLine(CNLabeledValue<NSString>.LocalizeLabel(CNLabelKey.Home));
 
 ### <a name="fetching-existing-contacts"></a>Capturando contactos existentes
 
-Mediante el uso de una instancia `CNContactStore` de la clase, puede obtener información de contacto de la base de datos de contactos del usuario. `CNContactStore` Contiene todos los métodos necesarios para capturar o actualizar contactos y grupos de la base de datos. Dado que estos métodos son sincrónicos, se recomienda que los ejecute en un subproceso en segundo plano para evitar el bloqueo de la interfaz de usuario.
+Mediante el uso de una instancia de la clase `CNContactStore`, puede obtener información de contacto de la base de datos de contactos del usuario. La `CNContactStore` contiene todos los métodos necesarios para capturar o actualizar contactos y grupos de la base de datos. Dado que estos métodos son sincrónicos, se recomienda que los ejecute en un subproceso en segundo plano para evitar el bloqueo de la interfaz de usuario.
 
-Mediante el uso de predicados (generados a partir de la `CNContact` clase), puede filtrar los resultados devueltos al obtener contactos de la base de datos. Para capturar solo los contactos que contienen la `Appleseed`cadena, use el código siguiente:
+Mediante el uso de predicados (creados a partir de la clase `CNContact`), puede filtrar los resultados devueltos al obtener contactos de la base de datos. Para capturar solo los contactos que contienen la cadena `Appleseed`, use el código siguiente:
 
 ```csharp
 // Create predicate to locate requested contact
@@ -163,9 +163,9 @@ Si este código se ejecutó después del ejemplo que hemos creado en la sección
 
 ### <a name="contact-access-privacy"></a>Privacidad de acceso de contacto
 
-Dado que los usuarios finales pueden conceder o denegar el acceso a su información de contacto por aplicación, la primera vez que realiza una llamada `CNContactStore`a, se mostrará un cuadro de diálogo en el que se le pedirá que permita el acceso a su aplicación.
+Dado que los usuarios finales pueden conceder o denegar el acceso a su información de contacto por aplicación, la primera vez que realice una llamada al `CNContactStore`, se mostrará un cuadro de diálogo en el que se le pedirá que permita el acceso a su aplicación.
 
-La solicitud de permiso solo se mostrará una vez, la primera vez que se ejecute la aplicación, y las ejecuciones posteriores `CNContactStore` o llamadas a usarán el permiso que el usuario seleccionó en ese momento.
+La solicitud de permiso solo se presentará una vez, la primera vez que se ejecute la aplicación, y las ejecuciones posteriores o llamadas al `CNContactStore` usarán el permiso que el usuario seleccionó en ese momento.
 
 Debe diseñar la aplicación para que controle correctamente el usuario que deniega el acceso a su base de datos de contactos.
 
@@ -173,7 +173,7 @@ Debe diseñar la aplicación para que controle correctamente el usuario que deni
 
 Un _contacto parcial_ es un contacto que solo se han capturado algunas de las propiedades disponibles del almacén de contactos para. Si intenta obtener acceso a una propiedad que no se ha capturado anteriormente, se producirá una excepción.
 
-Puede comprobar fácilmente si un contacto determinado tiene la propiedad deseada mediante los `IsKeyAvailable` métodos o `AreKeysAvailable` de la `CNContact` instancia. Por ejemplo:
+Puede comprobar fácilmente si un contacto determinado tiene la propiedad deseada mediante los métodos `IsKeyAvailable` o `AreKeysAvailable` de la instancia de `CNContact`. Por ejemplo:
 
 ```csharp
 // Does the contact contain the requested key?
@@ -187,19 +187,19 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> Los `GetUnifiedContact` métodos `GetUnifiedContacts` y de la `CNContactStore` clase _solo_ devuelven un contacto parcial limitado a las propiedades solicitadas de las claves de captura proporcionadas.
+> Los métodos `GetUnifiedContact` y `GetUnifiedContacts` de la clase `CNContactStore` _solo_ devuelven un contacto parcial limitado a las propiedades solicitadas de las claves de captura proporcionadas.
 
 ### <a name="unified-contacts"></a>Contactos unificados
 
 Un usuario puede tener distintos orígenes de información de contacto para una sola persona en su base de datos de contactos (como iCloud, Facebook o Google Mail). En las aplicaciones de iOS y OS X, esta información de contacto se vinculará automáticamente y se mostrará al usuario como un solo _contacto unificado_:
 
-[![](contacts-images/unified01.png "Información general sobre contactos unificados")](contacts-images/unified01.png#lightbox)
+[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
 
 Este contacto unificado es una vista temporal y en memoria de la información de contacto de los vínculos a la que se le dará su propio identificador único (que debe usarse para volver a capturar el contacto si es necesario). De forma predeterminada, el marco de contactos devolverá un contacto unificado siempre que sea posible.
 
 ### <a name="creating-and-updating-contacts"></a>Crear y actualizar contactos
 
-Como vimos en la sección de [objetos de contacto](#Contact_Objects) anterior, se usa `CNContactStore` un y `CNMutableContact` una instancia de para crear nuevos contactos que luego se escriben en la base de datos de contacto `CNSaveRequest`del usuario mediante un:
+Como vimos en la sección de [objetos de contacto](#Contact_Objects) anterior, se usa una `CNContactStore` y una instancia de un `CNMutableContact` para crear nuevos contactos que se escriben después en la base de datos de contacto del usuario mediante un `CNSaveRequest`:
 
 ```csharp
 // Create a new Mutable Contact (read/write)
@@ -222,7 +222,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 }
 ```
 
-También se `CNContactStore`puede usar para almacenar en caché varios cambios de contactos y grupos en una sola operación y procesar por lotes dichas modificaciones en el. `CNSaveRequest`
+También se puede usar un `CNSaveRequest` para almacenar en caché varios cambios de contactos y grupos en una sola operación y procesar por lotes esas modificaciones en el `CNContactStore`.
 
 Para actualizar un contacto no mutable obtenido a partir de una operación de captura, primero debe solicitar una copia mutable que luego modifique y vuelva a guardar en el almacén de contactos. Por ejemplo:
 
@@ -252,17 +252,17 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 ### <a name="contact-change-notifications"></a>Notificaciones de cambio de contacto
 
-Cada vez que se modifica un contacto, el almacén de `CNContactStoreDidChangeNotification` contactos envía un al centro de notificaciones predeterminado. Si ha almacenado en memoria caché o está mostrando actualmente algún contacto, deberá actualizar los objetos del almacén de contactos (`CNContactStore`).
+Cada vez que se modifica un contacto, el almacén de contactos envía una `CNContactStoreDidChangeNotification` al centro de notificaciones predeterminado. Si ha almacenado en memoria caché o está mostrando actualmente algún contacto, deberá actualizar los objetos del almacén de contactos (`CNContactStore`).
 
 ### <a name="containers-and-groups"></a>Contenedores y grupos
 
 Los contactos de un usuario pueden existir localmente en el dispositivo del usuario o como contactos sincronizados con el dispositivo desde una o varias cuentas de servidor (como Facebook o Google). Cada grupo de contactos tiene su propio _contenedor_ y un contacto determinado solo puede existir en un contenedor.
 
-[![](contacts-images/containers01.png "Información general sobre contenedores y grupos")](contacts-images/containers01.png#lightbox)
+[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
 
 Algunos contenedores permiten organizar los contactos en uno o varios _grupos_ o _subgrupos_. Este comportamiento depende de la memoria auxiliar de un contenedor determinado. Por ejemplo, iCloud solo tiene un contenedor, pero puede tener muchos grupos (pero no subgrupos). Microsoft Exchange, por otro lado, no admite grupos, pero puede tener varios contenedores (uno para cada carpeta de Exchange).
 
-[![](contacts-images/containers02.png "Superposición dentro de contenedores y grupos")](contacts-images/containers02.png#lightbox)
+[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui" />
 
@@ -274,9 +274,9 @@ Mediante el uso de controles integrados de Apple no solo se reduce la cantidad d
 
 ### <a name="the-contact-picker-view-controller"></a>Controlador de vista del selector de contactos
 
-El controlador de vista del selector de`CNContactPickerViewController`contactos () administra la vista de selector de contactos estándar que permite al usuario seleccionar un contacto o una propiedad de contacto de la base de datos de contacto del usuario. El usuario puede seleccionar uno o más contactos (según su uso) y el controlador de vista del selector de contactos no solicita permiso antes de mostrar el selector.
+El controlador de vista del selector de contactos (`CNContactPickerViewController`) administra la vista de selector de contactos estándar que permite al usuario seleccionar un contacto o una propiedad de contacto de la base de datos de contacto del usuario. El usuario puede seleccionar uno o más contactos (según su uso) y el controlador de vista del selector de contactos no solicita permiso antes de mostrar el selector.
 
-Antes de llamar a `CNContactPickerViewController` la clase, debe definir las propiedades que el usuario puede seleccionar y definir predicados para controlar la visualización y selección de las propiedades de contacto.
+Antes de llamar a la clase `CNContactPickerViewController`, se definen las propiedades que el usuario puede seleccionar y definir predicados para controlar la visualización y selección de las propiedades de contacto.
 
 Use una instancia de la clase que herede de `CNContactPickerDelegate` para responder a la interacción del usuario con el selector. Por ejemplo:
 
@@ -343,7 +343,7 @@ PresentViewController(picker,true,null);
 
 ### <a name="the-contact-view-controller"></a>El controlador de vista de contactos
 
-La clase Contact View Controller`CNContactViewController`() proporciona un controlador para presentar una vista de contacto estándar al usuario final. La vista de contactos puede mostrar nuevos contactos nuevos, desconocidos o existentes, y se debe especificar el tipo antes de que se muestre la vista mediante`FromNewContact`una `FromUnknownContact`llamada `FromContact`al constructor estático correcto (,,). Por ejemplo:
+La clase Contact View Controller (`CNContactViewController`) proporciona un controlador para presentar una vista de contacto estándar al usuario final. La vista de contactos puede mostrar nuevos contactos nuevos, desconocidos o existentes, y se debe especificar el tipo antes de que se muestre la vista mediante una llamada al constructor estático correcto (`FromNewContact`, `FromUnknownContact`, `FromContact`). Por ejemplo:
 
 ```csharp
 // Create a new contact view

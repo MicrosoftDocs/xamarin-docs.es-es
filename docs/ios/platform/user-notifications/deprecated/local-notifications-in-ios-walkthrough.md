@@ -4,15 +4,15 @@ description: En esta sección veremos cómo usar las notificaciones locales en u
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 764be6319e95b16dc043bebd2abfb27ba0696457
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769751"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031404"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin. iOS
 
@@ -25,11 +25,11 @@ _En esta sección veremos cómo usar las notificaciones locales en una aplicaci�
 
 Permita crear una aplicación sencilla que mostrará las notificaciones locales en acción. Esta aplicación tendrá un solo botón. Cuando hacemos clic en el botón, se creará una notificación local. Una vez transcurrido el período de tiempo especificado, verá que aparece la notificación.
 
-1. En Visual Studio para Mac, cree una nueva solución de iOS de vista única y `Notifications`llámela.
-1. Abra el `Main.storyboard` archivo y arrastre un botón hasta la vista. Asigne un nombre al **botón**del botón y asígnele el título **Agregar notificación**. También puede establecer algunas [restricciones](~/ios/user-interface/designer/designer-auto-layout.md) en el botón en este punto: 
+1. En Visual Studio para Mac, cree una nueva solución de iOS de vista única y llámela `Notifications`.
+1. Abra el archivo de `Main.storyboard` y arrastre un botón hasta la vista. Asigne un nombre al **botón**del botón y asígnele el título **Agregar notificación**. También puede establecer algunas [restricciones](~/ios/user-interface/designer/designer-auto-layout.md) en el botón en este punto: 
 
-    ![](local-notifications-in-ios-walkthrough-images/image3.png "Establecer algunas restricciones en el botón")
-1. Edite `ViewController` la clase y agregue el siguiente controlador de eventos al método ViewDidLoad:
+    ![](local-notifications-in-ios-walkthrough-images/image3.png "Setting some constraints on the button")
+1. Edite la clase `ViewController` y agregue el siguiente controlador de eventos al método ViewDidLoad:
 
     ```csharp
     button.TouchUpInside += (sender, e) =>
@@ -57,7 +57,7 @@ Permita crear una aplicación sencilla que mostrará las notificaciones locales 
 
     Este código creará una notificación que utiliza un sonido, establece el valor de la distintivo del icono en 1 y muestra una alerta al usuario.
 
-1. Después, edite `AppDelegate.cs`el archivo, agregue primero el siguiente código `FinishedLaunching` al método. Hemos comprobado que el dispositivo ejecuta iOS 8, en caso de que sea **necesario** solicitar el permiso del usuario para recibir notificaciones:
+1. Después, edite el archivo `AppDelegate.cs`, agregue primero el siguiente código al método `FinishedLaunching`. Hemos comprobado que el dispositivo ejecuta iOS 8, en caso de que sea **necesario** solicitar el permiso del usuario para recibir notificaciones:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -85,7 +85,7 @@ Permita crear una aplicación sencilla que mostrará las notificaciones locales 
     }
     ```
 
-1. Necesitamos controlar el caso en el que se inició la notificación debido a una notificación local. Edite el `FinishedLaunching` método `AppDelegate` en para incluir el siguiente fragmento de código:
+1. Necesitamos controlar el caso en el que se inició la notificación debido a una notificación local. Edite el método `FinishedLaunching` en el `AppDelegate` para incluir el siguiente fragmento de código:
 
     ```csharp
     // check for a notification
@@ -112,7 +112,8 @@ Permita crear una aplicación sencilla que mostrará las notificaciones locales 
 
 1. Por último, ejecute la aplicación. En iOS 8 se le pedirá que permita las notificaciones. Haga clic en **Aceptar** y, a continuación, haga clic en el botón **Agregar notificación** . Después de una pausa breve, debería ver el cuadro de diálogo de alerta, tal como se muestra en las siguientes capturas de pantallas:
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "Confirmar la capacidad de enviar notificaciones") ![](local-notifications-in-ios-walkthrough-images/image1.png "botón Agregar notificación") ![](local-notifications-in-ios-walkthrough-images/image2.png "el cuadro de diálogo de alerta de notificación")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "Confirmar la capacidad de enviar notificaciones") ![](local-notifications-in-ios-walkthrough-images/image1.png "Botón Agregar notificación")
+    ![](local-notifications-in-ios-walkthrough-images/image2.png "The notification alert dialog")
 
 ## <a name="summary"></a>Resumen
 
