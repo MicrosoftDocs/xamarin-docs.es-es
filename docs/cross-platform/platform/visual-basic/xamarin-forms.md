@@ -3,15 +3,15 @@ title: Xamarin. Forms con Visual Basic.NET
 description: La plantilla de proyecto de Xamarin. Forms se puede modificar para usar Visual Basic para el ensamblado principal, lo que le permite compilar aplicaciones móviles multiplataforma con VB.NET.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: ed7e1d65ed361a94ce72a724d797309b40ef8b6c
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.openlocfilehash: e1a540eef2a4d54ead68ae4a9427b0622b668182
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959146"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014547"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms con Visual Basic.NET
 

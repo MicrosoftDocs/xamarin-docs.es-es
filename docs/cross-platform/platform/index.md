@@ -3,15 +3,15 @@ title: Compatibilidad del lenguaje de programación en Xamarin
 description: En este documento se describen varios lenguajes de programación compatibles con Xamarin. Se tratan las C#plantillas F#,, Basic.net visual portable y Razor.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/18/2018
-ms.openlocfilehash: 95c63d446f961738ad71242671d632620316b879
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db963a38322e809d1aa82c02fbb9ae5cc4a650fc
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290899"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014632"
 ---
 # <a name="programming-language-support-in-xamarin"></a>Compatibilidad del lenguaje de programación en Xamarin
 
@@ -23,7 +23,7 @@ La versión 5 C# de presentó dos nuevas palabras clave para expresar las operac
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Características del lenguaje C# 6](~/cross-platform/platform/csharp-six.md)
 
-La versión más reciente del C# lenguaje (versión 6) sigue evolucionando el lenguaje para que tenga menos reutilizable, mayor claridad y coherencia. La sintaxis de inicialización del limpiador, `await` la `catch/finally` capacidad de usar en bloques y el `?` operador condicional null son especialmente útiles.
+La versión más reciente del C# lenguaje (versión 6) sigue evolucionando el lenguaje para que tenga menos reutilizable, mayor claridad y coherencia. La sintaxis de inicialización del limpiador, la capacidad de usar `await` en bloques de `catch/finally` y el operador `?` condicional null son especialmente útiles.
 
 ## <a name="ffsharpindexmd"></a>[F#](fsharp/index.md)
 

@@ -3,15 +3,15 @@ title: Migración de un enlace a Unified API
 description: En este artículo se describen los pasos necesarios para actualizar un proyecto de enlace de Xamarin existente para que admita las API unificadas para las aplicaciones de Xamarin. IOS y Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8f55dd2d300da80a57c06f15cf185558cfc5e41
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765425"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015044"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migración de un enlace a Unified API
 
@@ -36,7 +36,7 @@ Los proyectos de enlace no se admiten en Visual Studio en un equipo Windows.
 
 Las API unificadas hacen que sea más fácil que nunca compartir código entre Mac e iOS, así como permitir la compatibilidad con aplicaciones 32 y 64 bits con el mismo binario. Al quitar los prefijos _MonoMac_ y _MonoTouch_ de los espacios de nombres, se consigue un uso compartido más sencillo en los proyectos de aplicación de Xamarin. Mac y Xamarin. iOS.
 
-Como resultado, tendremos que modificar cualquiera de nuestros contratos de enlace (y `.cs` otros archivos del proyecto de enlace) para quitar los prefijos _MonoMac_ y _MonoTouch_ de nuestras `using` instrucciones.
+Como resultado, tendremos que modificar cualquiera de nuestros contratos de enlace (y otros archivos de `.cs` en nuestro proyecto de enlace) para quitar los prefijos _MonoMac_ y _MonoTouch_ de nuestras instrucciones de `using`.
 
 Por ejemplo, dadas las siguientes instrucciones Using en un contrato de enlace:
 
@@ -48,7 +48,7 @@ using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
 ```
 
-Quitaremos el `MonoTouch` prefijo, lo que provocaría lo siguiente:
+Quitaremos el prefijo `MonoTouch` que da como resultado lo siguiente:
 
 ```csharp
 using System;
@@ -58,17 +58,17 @@ using UIKit;
 using ObjCRuntime;
 ```
 
-De nuevo, tendremos que hacer esto para cualquier `.cs` archivo del proyecto de enlace. Con este cambio en su lugar, el siguiente paso es actualizar nuestro proyecto de enlace para usar los nuevos tipos de datos nativos.
+De nuevo, tendremos que hacer esto para cualquier archivo de `.cs` en nuestro proyecto de enlace. Con este cambio en su lugar, el siguiente paso es actualizar nuestro proyecto de enlace para usar los nuevos tipos de datos nativos.
 
 Para obtener más información sobre el Unified API, consulte la documentación de [Unified API](~/cross-platform/macios/unified/index.md) . Para obtener más información acerca de la compatibilidad con aplicaciones de 32 y 64 bits e información sobre los marcos de trabajo, consulte la documentación de consideraciones sobre la [plataforma de bits 32 y 64](~/cross-platform/macios/32-and-64/index.md) .
 
 ## <a name="update-to-native-data-types"></a>Actualizar tipos de datos nativos
 
-Objective-C asigna el `NSInteger` tipo de datos `int32_t` a en sistemas de 32 bits `int64_t` y a en sistemas de 64 bits. Para que coincida con este comportamiento, el nuevo Unified API reemplaza los usos `int` anteriores de (que en .net se definen como `System.Int32`siempre) a un nuevo tipo de `System.nint`datos:.
+Objective-C asigna el tipo de datos `NSInteger` a `int32_t` en sistemas de 32 bits y `int64_t` en sistemas de 64 bits. Para que coincida con este comportamiento, el nuevo Unified API reemplaza los usos anteriores de `int` (que en .NET se definen como siempre `System.Int32`) a un tipo de datos nuevo: `System.nint`.
 
-Junto con el nuevo `nint` tipo de datos, el Unified API introduce `nuint` los `nfloat` tipos y, para asignar también `NSUInteger` a `CGFloat` los tipos y.
+Junto con el nuevo tipo de datos `nint`, el Unified API presenta los tipos `nuint` y `nfloat`, para asignar también a los tipos `NSUInteger` y `CGFloat`.
 
-Dado lo anterior, necesitamos revisar nuestra API y asegurarse de que `NSInteger`cualquier instancia de, `NSUInteger` y `CGFloat` de la que se haya asignado `int`previamente `uint` , `float` y de que se haya `nint`actualizado al nuevo .`nuint` tipos y`nfloat` .
+Dado lo anterior, necesitamos revisar nuestra API y asegurarse de que cualquier instancia de `NSInteger`, `NSUInteger` y `CGFloat` que asignamos anteriormente a `int`, `uint` y `float` se actualizan al nuevo `nint`, `nuint` y `nfloat` tipos.
 
 Por ejemplo, dada una definición de método de Objective-C de:
 
@@ -90,21 +90,21 @@ Actualizaremos el nuevo enlace para que sea:
 nint Add(nint operandUn, nint operandDeux);
 ```
 
-Si se está asignando a una biblioteca de terceros de la versión más reciente que la que se había vinculado inicialmente, `.h` es necesario revisar los archivos de encabezado de la biblioteca y ver si hay alguna `int`salida, llamadas `uint32_t` explícitas a, `int32_t`, `unsigned int`o se han actualizado para que `NSInteger`sean, `NSUInteger` o `CGFloat`. `float` Si es así, también se deben realizar `nint`las `nuint` mismas `nfloat` modificaciones en los tipos, y.
+Si se está asignando a una biblioteca de terceros de la versión más reciente que la que se había vinculado inicialmente, es necesario revisar los archivos de encabezado de la `.h` para la biblioteca y ver si existe alguna llamada explícita a `int`, `int32_t`, `unsigned int`, `uint32_t` o `float` se han actualizado para ser un `NSInteger`, `NSUInteger` o una `CGFloat`. Si es así, también se deben realizar las mismas modificaciones en los tipos `nint`, `nuint` y `nfloat` en sus asignaciones.
 
-Para obtener más información sobre estos cambios de tipo de datos, vea la documentación de [tipos nativos](~/cross-platform/macios/nativetypes.md) documento.
+Para obtener más información sobre estos cambios de tipos de datos, vea el documento [tipos nativos](~/cross-platform/macios/nativetypes.md) .
 
 ## <a name="update-the-coregraphics-types"></a>Actualización de los tipos de CoreGraphics
 
-Los tipos de datos de punto, tamaño y rectángulo que se `CoreGraphics` usan con el uso de los bits 32 o 64, en función del dispositivo en el que se ejecutan. Cuando Xamarin enlazaba originalmente las API de iOS y Mac, usamos estructuras de datos existentes que ocurrieron para coincidir `System.Drawing` con`RectangleF` los tipos de datos de (por ejemplo,).
+Los tipos de datos de punto, tamaño y rectángulo que se usan con `CoreGraphics` usan 32 o 64 bits en función del dispositivo en el que se ejecutan. Cuando Xamarin enlazaba originalmente las API de iOS y Mac, usamos estructuras de datos existentes que se producían para coincidir con los tipos de datos de `System.Drawing` (`RectangleF` por ejemplo).
 
-Debido a los requisitos para admitir 64 bits y los nuevos tipos de datos nativos, es necesario realizar los siguientes ajustes en el código existente cuando se `CoreGraphic` llama a los métodos:
+Debido a los requisitos para admitir 64 bits y los nuevos tipos de datos nativos, se deben realizar los siguientes ajustes en el código existente al llamar a métodos `CoreGraphic`:
 
-- **CGRect** : Úselo `CGRect` en lugar de `RectangleF` al definir regiones rectangulares de punto flotante.
-- **CGSize** : use `CGSize` en lugar de `SizeF` cuando defina tamaños de punto flotante (ancho y alto).
-- **CGPoint** : se `CGPoint` usa en lugar `PointF` de cuando se define una ubicación de punto flotante (coordenadas X e y).
+- **CGRect** : Use `CGRect` en lugar de `RectangleF` al definir regiones rectangulares de punto flotante.
+- **CGSize** : Use `CGSize` en lugar de `SizeF` al definir los tamaños de punto flotante (ancho y alto).
+- **CGPoint** : Use `CGPoint` en lugar de `PointF` al definir una ubicación de punto flotante (coordenadas X e y).
 
-Dado lo anterior, tendremos que revisar nuestra API y asegurarnos de que cualquier instancia de `CGRect`, `CGSize` o `CGPoint` a la que se haya `RectangleF`enlazado `PointF` anteriormente, `SizeF` o se haya cambiado `CGRect`al tipo nativo, `CGSize` o`CGPoint` directamente.
+Dado lo anterior, tendremos que revisar nuestra API y asegurarse de que cualquier instancia de `CGRect`, `CGSize` o `CGPoint` que estaba enlazada previamente a `RectangleF`, `SizeF` o `PointF` cambiar al tipo nativo `CGRect`, `CGSize` o `CGPoint` directamente.
 
 Por ejemplo, dado un inicializador de Objective-C de:
 
@@ -132,13 +132,13 @@ Una vez realizados todos los cambios de código, es necesario modificar nuestro 
 
 ## <a name="modify-the-binding-project"></a>Modificar el proyecto de enlace
 
-Como último paso para actualizar nuestro proyecto de enlace para usar las API unificadas, es necesario modificar el `MakeFile` que usamos para compilar el proyecto o el tipo de proyecto Xamarin (si se enlaza desde dentro de Visual Studio para Mac) e indicar a _btouch_ que enlace en las API unificadas en lugar de las clásicas.
+Como último paso para actualizar nuestro proyecto de enlace para usar las API unificadas, es necesario modificar el `MakeFile` que usamos para compilar el proyecto o el tipo de proyecto Xamarin (si se enlaza desde dentro de Visual Studio para Mac) e indicar a _btouch_ que enlace con las API unificadas en lugar de las clásicas.
 
 ### <a name="updating-a-makefile"></a>Actualizar un archivo make
 
-Si usamos un archivo make para compilar el proyecto de enlace en Xamarin. DLL, tendremos que incluir la `--new-style` opción de línea de comandos y llamar a `btouch-native` en lugar `btouch`de.
+Si usamos un archivo make para compilar el proyecto de enlace en Xamarin. DLL, tendremos que incluir la opción de línea de comandos `--new-style` y llamar a `btouch-native` en lugar de `btouch`.
 
-Como se indica a `MakeFile`continuación:
+Por lo tanto, en el `MakeFile`siguiente:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -180,7 +180,7 @@ Tenemos que cambiar de llamada `btouch` a `btouch-native`, por lo que ajustaremo
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
-Actualizaremos la llamada a `btouch` y agregaremos la opción de la `--new-style` siguiente manera:
+Actualizaremos la llamada a `btouch` y agregaremos la opción `--new-style` de la siguiente manera:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -197,14 +197,14 @@ Si usamos una plantilla de proyecto de enlace de Visual Studio para Mac para com
 
 Haga lo siguiente:
 
-1. Inicie Visual Studio para Mac.
-2. Seleccionar **archivo** > nuevasolución >  **..** .
-3. En el cuadro de diálogo Nueva solución, seleccione **iOS** > **Unified API** > **proyecto de enlace de iOS**: 
+1. Inicie Visual Studio para Mac:
+2. Seleccione el **archivo** > **nueva** solución de >  **..** .
+3. En el cuadro de diálogo Nueva solución, seleccione **ios** > **Unified API** > proyecto de **enlace de iOS**: 
 
-    [![](update-binding-images/image01new.png "En el cuadro de diálogo Nueva solución, seleccione iOS/Unified API/proyecto de enlace de iOS.")](update-binding-images/image01new.png#lightbox)
+    [![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
 4. En el cuadro de diálogo ' configurar el nuevo proyecto ', escriba un **nombre** para el nuevo proyecto de enlace y haga clic en el botón **Aceptar** .
 5. Incluya la versión de 64 bits de la biblioteca de Objective-C para la que va a crear enlaces.
-6. Copie el código fuente del proyecto existente de 32 bits Classic API Binding (como los `ApiDefinition.cs` archivos y `StructsAndEnums.cs` ).
+6. Copie el código fuente del proyecto de enlace de Classic API bits de 32 existente (por ejemplo, los archivos `ApiDefinition.cs` y `StructsAndEnums.cs`).
 7. Realice los cambios anteriores indicados en los archivos de código fuente.
 
 Una vez realizados todos estos cambios, puede compilar la nueva versión de 64 bits de la API como lo haría con la versión de 32 bits.
