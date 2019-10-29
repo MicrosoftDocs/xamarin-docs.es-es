@@ -3,15 +3,15 @@ title: Solución de problemas Xamarin Live Player
 description: En este documento se describen los problemas conocidos del Xamarin Live Player y las posibles correcciones. Se describen los problemas de conexión, los problemas de configuración y mucho más.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290176"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005941"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Solución de problemas Xamarin Live Player
 
@@ -46,9 +46,9 @@ Live Player no está disponible para iOS.
 
 - No se admiten los representadores personalizados.
 - No se admiten efectos.
-- No se admiten los controles personalizados con propiedades enlazables personalizadas.
-- No se admiten los recursos incrustados (p. ej., insertar imágenes u otros recursos en una PCL).
-- No se admiten los marcos MVVM de otros fabricantes (p. ej., Prism, Mvvm Cross, Mvvm Light, etc.).
+- No se admiten controles personalizados con propiedades enlazables personalizadas.
+- No se admiten los recursos incrustados (es decir, incrustar imágenes u otros recursos en una PCL).
+- No se admiten los marcos de trabajo de MVVM de terceros (es decir, Prisma, cruzado de MVVM, luz de MVVM, etc.).
 
 ### <a name="other-project-type-limitations"></a>Otras limitaciones de tipo de proyecto
 
@@ -56,10 +56,10 @@ Live Player no está disponible para iOS.
 
 ### <a name="miscellaneous-limitations"></a>Limitaciones diversas
 
-- Compatibilidad limitada con la reflexión (actualmente, afecta a algunos NuGets populares, como SQLite y Json.NET). Puede que otros NuGets sigan siendo compatibles. Es posible que aún se admitan otras paquetes Nuget.
-- No se pueden reemplazar algunas clases del sistema (por ejemplo, no puede implementar una subclase).
-- Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (en cambio, se ha configurado para operaciones comunes, como el acceso a la Galería fotográfica).
-- Se omiten los destinos personalizados y los pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody, Refit, AutoFac y AutoMapper.
+- Compatibilidad limitada para la reflexión (actualmente afecta a algunos paquetes Nuget populares, como SQLite y Json.NET). Es posible que aún se admitan otras paquetes Nuget.
+- Algunas clases del sistema no se pueden invalidar (por ejemplo, no puede implementar una subclase).
+- Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (sin embargo, se ha configurado para operaciones comunes como el acceso a la Galería fotográfica).
+- Se omiten los destinos personalizados y los pasos de compilación. Por ejemplo, las herramientas como Fody, alajustar, AutoFac y automapper no se pueden incorporar.
 - F#no se admiten proyectos
 - Es posible que no se admitan escenarios avanzados con interfaces y clases genéricas personalizadas.
 
@@ -74,7 +74,7 @@ Se produce cuando el dispositivo móvil que ejecuta Xamarin Live Player no está
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Mensaje de error al intentar implementarlo en el IDE
 
-**"IOException: no se pueden leer los datos de la conexión de transporte: La operación en un socket que no es de bloqueo bloquearía "**
+**"IOException: no se pueden leer los datos de la conexión de transporte: la operación en un socket que no es de bloqueo bloquearía"**
 
 Este error suele producirse cuando el dispositivo móvil que ejecuta Xamarin Live Player no está en la misma red que el equipo que ejecuta Visual Studio; Esto suele ocurrir cuando se conecta a un dispositivo que se ha emparejado anteriormente correctamente.
 
@@ -87,7 +87,7 @@ Este error suele producirse cuando el dispositivo móvil que ejecuta Xamarin Liv
 
 Si no puede conectarse a su dispositivo a través de Wi-Fi, puede intentar configurar manualmente el dispositivo a través del archivo de configuración, con los siguientes pasos:
 
-**Paso 1: Abrir el archivo de configuración**
+**Paso 1: abrir el archivo de configuración**
 
 Vaya a la carpeta de datos de la aplicación:
 
@@ -96,23 +96,23 @@ Vaya a la carpeta de datos de la aplicación:
 
 En esta carpeta, encontrará **PlayerDeviceList. XML** si no existe, tendrá que crear uno.
 
-**Paso 2: Obtener dirección IP**
+**Paso 2: obtener la dirección IP**
 
 En la aplicación Xamarin Live Player, vaya a **acerca de > prueba de conexión > iniciar la prueba de conexión**.
 
 Tome nota de la dirección IP; necesitará la dirección IP que se muestra al configurar el dispositivo.
 
-**Paso 3: Obtener código de emparejamiento**
+**Paso 3: obtener el código de emparejamiento**
 
 En el interior del Xamarin Live Player **pareja** o pareja de **nuevo**, presione **entrar manualmente**. Se mostrará un código numérico, que tendrá que actualizar el archivo de configuración.
 
-**Paso 4: Generar GUID**
+**Paso 4: generar el GUID**
 
 Vaya a: https://www.guidgenerator.com/online-guid-generator.aspx y genere un nuevo GUID y asegúrese de que mayúsculas esté activado.
 
-**Paso 5: Configurar dispositivo**
+**Paso 5: configurar el dispositivo**
 
-Abra **PlayerDeviceList. XML** en un editor como Visual Studio o Visual Studio Code. Debe configurar el dispositivo manualmente en este archivo. De forma predeterminada, el archivo debe contener el siguiente `Devices` elemento XML vacío:
+Abra **PlayerDeviceList. XML** en un editor como Visual Studio o Visual Studio Code. Debe configurar el dispositivo manualmente en este archivo. De forma predeterminada, el archivo debe contener el siguiente elemento XML vacío `Devices`:
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -154,7 +154,7 @@ Algunas clases del sistema no se pueden invalidar, por ejemplo:
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' no contiene una definición para ' Main '
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' no contiene una definición para ' Main '"
 
 Este error se produce en los proyectos de Android con las interfaces de usuario definidas en los archivos AXML.
 Los archivos AXML no se admiten actualmente en Xamarin Live Player.

@@ -4,15 +4,15 @@ description: En este artículo se describe cómo trabajar con barras de herramie
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5cf86adf07043a60c6fe445265e14591692e365b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70772724"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008353"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas en Xamarin. Mac
 

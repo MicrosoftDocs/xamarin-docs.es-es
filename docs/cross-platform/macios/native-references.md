@@ -3,15 +3,15 @@ title: Referencias nativas de los proyectos de iOS, Mac y enlaces
 description: Las referencias nativas le ofrecen la posibilidad de insertar un marco nativo en un proyecto de Xamarin. iOS, Xamarin. Mac o de enlace.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b3adfac067964e0a0f169b5d8f8860f34deffe62
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765500"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015616"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referencias nativas en proyectos de iOS, Mac y enlaces
 
@@ -30,19 +30,19 @@ En iOS 8 (y versiones posteriores), los **marcos de trabajo incrustados** pueden
 
 <a name="Static-vs-Dynamic-Frameworks" />
 
-### <a name="static-vs-dynamic-frameworks"></a>Frente a Marcos dinámicos
+### <a name="static-vs-dynamic-frameworks"></a>Marcos estáticos y dinámicos
 
 Los **marcos de trabajo estáticos** se vinculan en tiempo de compilación, donde los **Marcos dinámicos** están vinculados en tiempo de ejecución y se pueden modificar sin volver a vincular. Si ha usado algún marco de terceros antes de iOS 8, estaba usando un **marco de trabajo estático** compilado en la aplicación. Consulte la documentación de [programación de biblioteca dinámica](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) de Apple para obtener más detalles.
 
 <a name="Embedded-vs-System-Frameworks" />
 
-### <a name="embedded-vs-system-frameworks"></a>Incrustado frente a Marcos del sistema
+### <a name="embedded-vs-system-frameworks"></a>Marcos de trabajo incrustados y del sistema
 
 Los **marcos de trabajo incrustados** se incluyen en el lote de aplicaciones y solo se puede acceder a ellos en su aplicación específica a través de su espacio aislado. Los **marcos de trabajo del sistema** se almacenan en el nivel del sistema operativo y están disponibles para todas las aplicaciones del dispositivo. Actualmente, solo Apple tiene la capacidad de crear marcos de nivel de sistema operativo.
 
 <a name="Thin-vs-Fat-Frameworks" />
 
-### <a name="thin-vs-fat-frameworks"></a>En comparación con Marcos FAT
+### <a name="thin-vs-fat-frameworks"></a>Marcos finos frente a FAT
 
 Los **marcos finos** contienen solo el código compilado para una arquitectura de sistema específica en la que los **Marcos FAT** contienen código para varias arquitecturas. Cada código base específico de la arquitectura compilada en un marco de trabajo se conoce como un _segmento_. Por lo tanto, por ejemplo, si tenemos un marco que se compiló para las dos arquitecturas de simulador de iOS (i386 y X86_64), contendría dos segmentos.
 
@@ -52,7 +52,7 @@ Si intentó distribuir este marco de ejemplo con la aplicación, se ejecutaría 
 
 ## <a name="working-with-embedded-frameworks"></a>Trabajar con marcos de trabajo incrustados
 
-Hay dos pasos que se deben completar para trabajar con marcos de trabajo insertados en una aplicación de Xamarin. iOS o Xamarin. Mac: Crear un marco FAT e incrustar el marco de trabajo.
+Hay dos pasos que se deben completar para trabajar con marcos de trabajo insertados en una aplicación de Xamarin. iOS o Xamarin. Mac: creación de un marco de trabajo de Fat e inserción del marco.
 
 <a name="Overview" />
 
@@ -62,7 +62,7 @@ Como se indicó anteriormente, para poder usar un marco de trabajo incrustado en
 
 Cuando el marco y la aplicación de consumo están en el mismo proyecto de Xcode, esto no es un problema, ya que Xcode compilará el marco de trabajo y la aplicación con la misma configuración de compilación. Dado que las aplicaciones de Xamarin no pueden crear marcos de trabajo incrustados, no se puede usar esta técnica.
 
-Para solucionar este problema, se `lipo` puede usar la herramienta de línea de comandos para combinar dos o más marcos en un marco de Fat que contenga todos los segmentos necesarios. Para obtener más información sobre cómo trabajar `lipo` con el comando, consulte la documentación [vinculación de bibliotecas nativas](~/ios/platform/native-interop.md) .
+Para solucionar este problema, se puede usar la herramienta de línea de comandos `lipo` para combinar dos o más marcos en un marco de Fat que contenga todos los segmentos necesarios. Para obtener más información sobre cómo trabajar con el comando `lipo`, consulte la documentación sobre la [vinculación de bibliotecas nativas](~/ios/platform/native-interop.md) .
 
 <a name="Embedding-a-Framework" />
 
@@ -73,13 +73,13 @@ El paso siguiente es necesario para incrustar un marco de trabajo en un proyecto
 1. Cree un nuevo o abra un proyecto de Xamarin. iOS, Xamarin. Mac o de enlace existente.
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **Agregar referencia nativa**: 
 
-    [![](native-references-images/ref01.png "En el Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione Agregar referencia nativa.")](native-references-images/ref01.png#lightbox)
+    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
 3. En el cuadro de diálogo **abrir** , seleccione el nombre del marco nativo que desea incrustar y haga clic en el botón **abrir** : 
 
-    [![](native-references-images/ref02.png "Seleccione el nombre del marco de trabajo nativo que se va a incrustar y haga clic en el botón abrir")](native-references-images/ref02.png#lightbox)
+    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
 4. El marco de trabajo se agregará al árbol del proyecto: 
 
-    [![](native-references-images/ref03.png "El marco de trabajo se agregará al árbol de proyectos")](native-references-images/ref03.png#lightbox)
+    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
 
 Cuando se compila el proyecto, el marco nativo se incrustará en el lote de la aplicación.
 

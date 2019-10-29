@@ -4,15 +4,15 @@ description: En este documento se describe cómo trabajar con el subproceso de i
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee7ab7c5d0503cffd2c12a493f314f191d912e92
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768177"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002841"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabajar con el subproceso de interfaz de usuario en Xamarin. iOS
 
@@ -32,17 +32,17 @@ InvokeOnMainThread ( () => {
 });
 ```
 
-El `InvokeOnMainThread` método se define en `NSObject` , por lo que se puede llamar desde los métodos definidos en cualquier objeto UIKit (por ejemplo, un controlador de vista o vista).
+El método `InvokeOnMainThread` se define en `NSObject` para que se pueda llamar desde los métodos definidos en cualquier objeto UIKit (como un controlador de vista o vista).
 
 Durante la depuración de aplicaciones de Xamarin. iOS, se producirá un error si el código intenta tener acceso a un control de interfaz de usuario desde el subproceso equivocado. Esto le ayuda a realizar un seguimiento y corregir estos problemas con el método InvokeOnMainThread. Esto solo ocurre durante la depuración y no produce un error en las compilaciones de versión. El mensaje de error aparecerá de la siguiente manera:
 
- ![](ui-thread-images/image10.png "Ejecución del subproceso de interfaz de usuario")
+ ![](ui-thread-images/image10.png "UI Thread Execution")
 
  <a name="Background_Thread_Example" />
 
 ## <a name="background-thread-example"></a>Ejemplo de subproceso en segundo plano
 
-Este es un ejemplo que intenta tener acceso a un control de la interfaz `UILabel`de usuario (a) desde un subproceso en segundo plano mediante un subproceso simple:
+Este es un ejemplo que intenta tener acceso a un control de la interfaz de usuario (un `UILabel`) desde un subproceso en segundo plano mediante un subproceso simple:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -50,7 +50,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Ese código producirá durante `UIKitThreadAccessException` la depuración. Para corregir el problema (y asegurarse de que solo se tiene acceso al control de la interfaz de usuario desde el subproceso principal de la interfaz de usuario), `InvokeOnMainThread` ajuste cualquier código que haga referencia a los controles de interfaz de usuario dentro de una expresión similar a la siguiente:
+Ese código producirá la `UIKitThreadAccessException` durante la depuración. Para corregir el problema (y asegurarse de que solo se tiene acceso al control de la interfaz de usuario desde el subproceso principal de la interfaz de usuario), ajuste cualquier código que haga referencia a los controles de interfaz de usuario dentro de una expresión de `InvokeOnMainThread` como la siguiente:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -66,9 +66,9 @@ No necesitará usar esto para el resto de los ejemplos de este documento, pero e
 
 ## <a name="asyncawait-example"></a>Ejemplo de Async/Await
 
-El uso de C# las 5 palabras clave `InvokeOnMainThread` Async/Await no es necesario porque cuando una tarea en espera finaliza el método continúa en el subproceso que realiza la llamada.
+Cuando se usa C# la palabra clave de 5 Async/Await`InvokeOnMainThread`no es necesario porque cuando una tarea en espera completa el método continúa en el subproceso que realiza la llamada.
 
-Este código de ejemplo (que espera en una llamada al método Delay, exclusivamente para fines de demostración) muestra un método asincrónico al que se llama en el subproceso de la interfaz de usuario (es un controlador TouchUpInside). Dado que se llama al método contenedor en el subproceso de la interfaz de usuario, se puede `UILabel` llamar a las `UIAlertView` operaciones de interfaz de usuario como establecer el texto en o mostrar una después de que las operaciones asincrónicas se hayan completado en subprocesos en segundo plano.
+Este código de ejemplo (que espera en una llamada al método Delay, exclusivamente para fines de demostración) muestra un método asincrónico al que se llama en el subproceso de la interfaz de usuario (es un controlador TouchUpInside). Dado que se llama al método contenedor en el subproceso de interfaz de usuario, se puede llamar a las operaciones de interfaz de usuario como establecer el texto en un `UILabel` o mostrar un `UIAlertView` de forma segura después de que las operaciones asincrónicas se hayan completado en subprocesos en segundo plano
 
 ```csharp
 async partial void button2_TouchUpInside (UIButton sender)
@@ -89,7 +89,7 @@ async partial void button2_TouchUpInside (UIButton sender)
 }
 ```
 
-Si se llama a un método asincrónico desde un subproceso en segundo plano (no el subproceso principal de la interfaz de usuario), `InvokeOnMainThread` seguirá siendo necesario.
+Si se llama a un método asincrónico desde un subproceso en segundo plano (no el subproceso principal de la interfaz de usuario), `InvokeOnMainThread` seguiría siendo necesario.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

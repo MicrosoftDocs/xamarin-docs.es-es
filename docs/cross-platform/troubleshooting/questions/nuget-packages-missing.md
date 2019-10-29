@@ -3,15 +3,15 @@ title: Error de paquetes que faltan después de actualizar paquetes Nuget
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D61CC966-1D4A-49A5-8A6F-41572E28329B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 6ea175859055420780463619d0ae7fe9ec85c857
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2a6647a73c96c8618c5c1fa1fcf69d256c8516e9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288207"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013604"
 ---
 # <a name="missing-packages-error-after-updating-nuget-packages"></a>Error de paquetes que faltan después de actualizar paquetes Nuget
 

@@ -3,15 +3,15 @@ title: Características de Sharpie objetivo
 description: Este documento contiene vínculos a varias guías que ayudan a describir objetivos Sharpie, cómo usarlos y el resultado que genera.
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: dfbfd443b06518bccbf3b71fcc27acac0bca7481
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40f73a3f069c762266704d710080c324aa731ecf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279094"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016172"
 ---
 # <a name="objective-sharpie-features"></a>Características de Sharpie objetivo
 
@@ -24,8 +24,8 @@ Estos dos archivos son emitidos por Objective Sharpie, que se incluirán en el p
 ## <a name="native-frameworksnative-frameworksmd"></a>[**Marcos nativos**](native-frameworks.md)
 
 Algunas bibliotecas se distribuyen como marcos de trabajo en lugar de como origen.
-Objective Sharpie permite usar estas bibliotecas con la `-framework` opción.
+Objective Sharpie le permite usar estas bibliotecas con la opción `-framework`.
 
 ## <a name="verifyverifymd"></a>[**Ver**](verify.md)
 
-Objective Sharpie agregue `Verify` atributos para indicar que debe inspeccionar y actualizar manualmente el enlace generado. 
+Objective Sharpie agregue atributos `Verify` para indicar que debe inspeccionar y actualizar manualmente el enlace generado. 

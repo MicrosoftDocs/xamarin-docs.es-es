@@ -4,15 +4,15 @@ description: En este documento se describen los grupos de aplicaciones y su uso 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: fec6cef22ddbc47aca0027aa026e0524b38bec4e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e117fce77e9cdc8d9e9dc8b9ed7b3aa22eca4e39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768065"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001708"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabajar con grupos de aplicaciones de watchos en Xamarin
 
@@ -28,23 +28,23 @@ La ubicación compartida se configura mediante un [grupo de aplicaciones](https:
 
 ### <a name="provisioning"></a>Aprovisionamiento
 
-El grupo de aplicaciones tendrá un identificador, que normalmente es el identificador de paquete con un `group.` prefijo. Por ejemplo, podríamos usar el identificador `com.xamarin.WatchSettings` de paquete y el grupo `group.com.xamarin.WatchSettings`de aplicaciones.
+El grupo de aplicaciones tendrá un identificador, que normalmente es el identificador de paquete con un prefijo `group.`. Por ejemplo, podríamos usar el identificador de agrupación `com.xamarin.WatchSettings` y el grupo de aplicaciones `group.com.xamarin.WatchSettings`.
 
-[![](app-groups-images/app-group-sml.png "Use el ID. de paquete com. Xamarin. WatchSettings y el grupo de grupos de aplicaciones. com. Xamarin. WatchSettings")](app-groups-images/app-group.png#lightbox)
+[![](app-groups-images/app-group-sml.png "Use the Bundle ID com.xamarin.WatchSettings and the app group   group.com.xamarin.WatchSettings")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
 Además de configurar el perfil de aprovisionamiento, habilite los **grupos de aplicaciones** en el archivo **contitles. plist** y escriba el identificador que ha elegido:
 
-[![](app-groups-images/entitlements-sml.png "Configurar el archivo plist y escribir el identificador")](app-groups-images/entitlements.png#lightbox)
+[![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
 
 ### <a name="deployment"></a>Implementación
 
 Asegúrese de configurar el grupo de aplicaciones correctamente en el aprovisionamiento de [implementación](~/ios/watchos/deploy-test/index.md#App_Groups) .
 
-Para obtener más información, consulte el [las capacidades de grupos de aplicación](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentación.
+Para obtener más información, consulte la documentación sobre las [funcionalidades del grupo de aplicaciones](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Apple compartir datos con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Uso compartido de datos de Apple con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
 - [Documento del grupo de aplicaciones de Apple](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)

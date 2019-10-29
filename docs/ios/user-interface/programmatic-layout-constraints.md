@@ -4,15 +4,15 @@ description: En esta guía se presenta el uso de restricciones de diseño autom�
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 1c8cc9d810a7555626cb00ab0a05dfe03896c94a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ec012f882d6bc721e657385db333fce7a9e1aaf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292989"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002184"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restricciones de diseño mediante programación en Xamarin. iOS
 
@@ -20,7 +20,7 @@ _En esta guía se presenta el uso de restricciones de diseño automático C# de 
 
 El diseño automático (también denominado "diseño adaptable") es un enfoque de diseño con capacidad de respuesta. A diferencia del sistema de diseño de transición, donde la ubicación de cada elemento está codificada de forma rígida en un punto de la pantalla, el diseño automático trata sobre las *relaciones* : las posiciones de los elementos en relación con otros elementos en la superficie de diseño. En el corazón del diseño automático está la idea de restricciones o reglas que definen la ubicación de un elemento o conjunto de elementos en el contexto de otros elementos de la pantalla. Dado que los elementos no están asociados a una posición concreta en la pantalla, las restricciones ayudan a crear un diseño adaptable que tenga un aspecto correcto en diferentes tamaños de pantalla y orientaciones de dispositivo.
 
-Normalmente, al trabajar con el diseño automático en iOS, usará el diseñador de iOS para colocar de forma gráfica las restricciones de diseño en los elementos de la interfaz de usuario. Sin embargo, puede haber ocasiones en las que necesite crear y aplicar restricciones en C# el código. Por ejemplo, cuando se utilizan elementos de interfaz de usuario creados dinámicamente y se agregan a `UIView`.
+Normalmente, al trabajar con el diseño automático en iOS, usará el diseñador de iOS para colocar de forma gráfica las restricciones de diseño en los elementos de la interfaz de usuario. Sin embargo, puede haber ocasiones en las que necesite crear y aplicar restricciones en C# el código. Por ejemplo, al usar elementos de interfaz de usuario creados dinámicamente agregados a un `UIView`.
 
 En esta guía se muestra cómo crear y trabajar con restricciones mediante C# código en lugar de crearlas gráficamente en el diseñador de iOS.
 
@@ -30,8 +30,8 @@ En esta guía se muestra cómo crear y trabajar con restricciones mediante C# c�
 
 Como se indicó anteriormente, normalmente trabajará con restricciones de diseño automático en el diseñador de iOS. En aquellas ocasiones en las que tenga que crear las restricciones mediante programación, tiene tres opciones para elegir:
 
-- [Delimitadores de diseño](#Layout-Anchors) : esta API proporciona acceso a las propiedades de delimitador `HeightAnchor`(como `TopAnchor`, `BottomAnchor` o) de los elementos de la interfaz de usuario que están restringidos.
-- [Restricciones de diseño](#Layout-Constraints) : puede crear restricciones directamente mediante la `NSLayoutConstraint` clase.
+- [Delimitadores de diseño](#Layout-Anchors) : esta API proporciona acceso a las propiedades de delimitador (como `TopAnchor`, `BottomAnchor` o `HeightAnchor`) de los elementos de la interfaz de usuario que están restringidos.
+- [Restricciones de diseño](#Layout-Constraints) : puede crear restricciones directamente mediante la clase `NSLayoutConstraint`.
 - [Lenguaje de formato visual](#Visual-Format-Language) : proporciona un dibujo ASCII como método para definir restricciones.
 
 En las secciones siguientes se detallan todas las opciones.
@@ -40,16 +40,16 @@ En las secciones siguientes se detallan todas las opciones.
 
 ### <a name="layout-anchors"></a>Delimitadores de diseño
 
-Mediante el uso `NSLayoutAnchor` de la clase, tiene una interfaz fluida para crear restricciones basadas en las propiedades de delimitador de los elementos de la interfaz de usuario que se están restringiendo. Por ejemplo, las guías de diseño superior e inferior de un controlador de vista `TopAnchor`exponen las propiedades, `BottomAnchor` y `HeightAnchor` delimitador mientras una vista expone propiedades de borde, centro, tamaño y línea de base.
+Mediante el uso de la clase `NSLayoutAnchor`, tiene una interfaz fluida para crear restricciones basadas en las propiedades de delimitador de los elementos de la interfaz de usuario que se están restringiendo. Por ejemplo, las guías de diseño superior e inferior de un controlador de vista exponen las propiedades `TopAnchor`, `BottomAnchor` y `HeightAnchor` delimitador mientras una vista expone propiedades de borde, centro, tamaño y línea base.
 
 > [!IMPORTANT]
-> Además del conjunto estándar de propiedades de delimitador, las vistas de iOS `LayoutMarginsGuides` también `ReadableContentGuide` incluyen las propiedades y. Estas propiedades exponen `UILayoutGuide` objetos para trabajar con los márgenes y guías de contenido legibles de la vista, respectivamente.
+> Además del conjunto estándar de propiedades de delimitador, las vistas de iOS también incluyen las propiedades `LayoutMarginsGuides` y `ReadableContentGuide`. Estas propiedades exponen `UILayoutGuide` objetos para trabajar con los márgenes y guías de contenido legibles de la vista, respectivamente.
 
 Los delimitadores de diseño proporcionan varios métodos para crear restricciones en un formato compacto fácil de leer:
 
-- **ConstraintEqualTo** : define una relación en `first attribute = second attribute + [constant]` la que con un valor `constant` de desplazamiento proporcionado opcionalmente.
-- **ConstraintGreaterThanOrEqualTo** : define una relación en `first attribute >= second attribute + [constant]` la que con un valor `constant` de desplazamiento proporcionado opcionalmente.
-- **ConstraintLessThanOrEqualTo** : define una relación en `first attribute <= second attribute + [constant]` la que con un valor `constant` de desplazamiento proporcionado opcionalmente.
+- **ConstraintEqualTo** : define una relación en la que `first attribute = second attribute + [constant]` con un valor de desplazamiento opcional `constant`.
+- **ConstraintGreaterThanOrEqualTo** : define una relación en la que `first attribute >= second attribute + [constant]` con un valor de desplazamiento opcional `constant`.
+- **ConstraintLessThanOrEqualTo** : define una relación en la que `first attribute <= second attribute + [constant]` con un valor de desplazamiento opcional `constant`.
 
 Por ejemplo:
 
@@ -69,7 +69,7 @@ OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 
 Una restricción de diseño típica se puede expresar simplemente como una expresión lineal. Considere el ejemplo siguiente:
 
-[![](programmatic-layout-constraints-images/graph01.png "Una restricción de diseño expresada como una expresión lineal")](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![](programmatic-layout-constraints-images/graph01.png "A Layout Constraint expressed as a linear expression")](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 Que se convertiría en la siguiente línea de C# código mediante delimitadores de diseño:
 
@@ -89,13 +89,13 @@ Donde las partes del C# código se corresponden con las partes especificadas de 
 |Atributo 2|TrailingAnchor|
 |Constante|10.0|
 
-Además de proporcionar solo los parámetros necesarios para resolver una ecuación de restricción de diseño determinada, cada uno de los métodos de delimitador de diseño aplica la seguridad de tipos de los parámetros que se le pasan. Por tanto, los delimitadores `LeadingAnchor` de `TrailingAnchor` restricción horizontales como o solo se pueden utilizar con otros tipos de delimitadores horizontales y los multiplicadores solo se proporcionan a las restricciones de tamaño.
+Además de proporcionar solo los parámetros necesarios para resolver una ecuación de restricción de diseño determinada, cada uno de los métodos de delimitador de diseño aplica la seguridad de tipos de los parámetros que se le pasan. Por tanto, los delimitadores de restricción horizontales como `LeadingAnchor` o `TrailingAnchor` solo se pueden utilizar con otros tipos de delimitadores horizontales y los multiplicadores solo se proporcionan para las restricciones de tamaño.
 
 <a name="Layout-Constraints" />
 
 ### <a name="layout-constraints"></a>Restricciones de diseño
 
-Puede agregar restricciones de diseño automático manualmente mediante la construcción directa de un en `NSLayoutConstraint` C# el código. A diferencia del uso de delimitadores de diseño, debe especificar un valor para cada parámetro, incluso si no tiene ningún efecto en la restricción que se está definiendo. Como resultado, terminará produciendo una cantidad considerable de código difícil de leer y reutilizable. Por ejemplo:
+Puede agregar restricciones de diseño automático manualmente mediante la construcción directa de un `NSLayoutConstraint` en C# el código. A diferencia del uso de delimitadores de diseño, debe especificar un valor para cada parámetro, incluso si no tiene ningún efecto en la restricción que se está definiendo. Como resultado, terminará produciendo una cantidad considerable de código difícil de leer y reutilizable. Por ejemplo:
 
 ```csharp
 //// Pin the leading edge of the view to the margin
@@ -108,9 +108,9 @@ NSLayoutConstraint.Create (OrangeView, NSLayoutAttribute.Trailing, NSLayoutRelat
 NSLayoutConstraint.Create (OrangeView, NSLayoutAttribute.Height, NSLayoutRelation.Equal, OrangeView, NSLayoutAttribute.Width, 2.0f, 0.0f).Active = true;
 ```
 
-Donde la `NSLayoutAttribute` enumeración define el valor de los márgenes de la vista y corresponde `LayoutMarginsGuide` a las `Top` propiedades `Left` `Bottom` como `Right`, y, y `NSLayoutRelation` la enumeración define la relación que se creará entre los atributos especificados `Equal`como `LessThanOrEqual` , `GreaterThanOrEqual`o.
+Donde la enumeración `NSLayoutAttribute` define el valor de los márgenes de la vista y se corresponden con las propiedades `LayoutMarginsGuide` como `Left`, `Right`, `Top` y `Bottom`, y la enumeración `NSLayoutRelation` define la relación que se creará entre los atributos especificados como `Equal`, `LessThanOrEqual` o `GreaterThanOrEqual`.
 
-A diferencia de la API de delimitador `NSLayoutConstraint` de diseño, los métodos de creación no resaltan los aspectos importantes de una restricción determinada y no se realizan comprobaciones en tiempo de compilación en la restricción. Como resultado, es fácil construir una restricción no válida que producirá una excepción en tiempo de ejecución.
+A diferencia de la API de delimitador de diseño, los métodos de creación de `NSLayoutConstraint` no resaltan los aspectos importantes de una restricción determinada y no se realizan comprobaciones de tiempo de compilación en la restricción. Como resultado, es fácil construir una restricción no válida que producirá una excepción en tiempo de ejecución.
 
 <a name="Visual-Format-Language" />
 
@@ -126,11 +126,11 @@ El lenguaje de formato visual permite definir restricciones mediante ilustracion
 
 Siga los pasos que se indican a continuación al usar el lenguaje de formato visual para crear una restricción:
 
-1. Cree un `NSDictionary` objeto que contenga los objetos de vista y guías de diseño y una clave de cadena que se utilizará al definir los formatos.
-2. Opcionalmente, cree `NSDictionary` un que defina un conjunto de claves y valores`NSNumber`() usados como el valor constante para la restricción.
+1. Cree un `NSDictionary` que contenga los objetos de vista y guías de diseño y una clave de cadena que se utilizará al definir los formatos.
+2. Opcionalmente, cree un `NSDictionary` que defina un conjunto de claves y valores (`NSNumber`) usados como el valor constante para la restricción.
 3. Cree la cadena de formato para diseñar una sola columna o fila de elementos.
-4. `NSLayoutConstraint` Llame al `FromVisualFormat` método de la clase para generar las restricciones.
-5. Llame al `ActivateConstraints` método de la `NSLayoutConstraint` clase para activar y aplicar las restricciones.
+4. Llame al método `FromVisualFormat` de la clase `NSLayoutConstraint` para generar las restricciones.
+5. Llame al método `ActivateConstraints` de la clase `NSLayoutConstraint` para activar y aplicar las restricciones.
 
 Por ejemplo, para crear una restricción inicial y una final en el lenguaje de formato visual, podría usar lo siguiente:
 
@@ -149,7 +149,7 @@ NSLayoutConstraint.ActivateConstraints (constraints);
 
 Dado que el lenguaje de formato visual siempre crea restricciones de cero puntos adjuntados a los márgenes de la vista primaria al usar el espaciado predeterminado, este código genera resultados idénticos a los ejemplos presentados anteriormente.
 
-En el caso de diseños de interfaz de usuario más complejos, como varias vistas secundarias en una sola línea, el lenguaje de formato visual especifica el espaciado horizontal y la alineación vertical. Como en el ejemplo anterior, donde especifica `AlignAllTop` `NSLayoutFormatOptions` , alinea todas las vistas de una fila o columna con su parte superior.
+En el caso de diseños de interfaz de usuario más complejos, como varias vistas secundarias en una sola línea, el lenguaje de formato visual especifica el espaciado horizontal y la alineación vertical. Como en el ejemplo anterior, donde especifica el `AlignAllTop` `NSLayoutFormatOptions` alinea todas las vistas de una fila o columna con su parte superior.
 
 Vea el apéndice sobre el [lenguaje visual](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1) de Apple para ver algunos ejemplos de cómo especificar restricciones comunes y la gramática de cadena de formato visual.
 

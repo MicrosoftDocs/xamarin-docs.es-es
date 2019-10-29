@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
-ms.openlocfilehash: ddf0b96295f7153803db65a1fd741cc5df473730
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
+ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697093"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72971248"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
@@ -100,7 +100,6 @@ En el ejemplo siguiente se muestra cómo establecer algunos de los argumentos op
 
 ```csharp
 string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
-}
 ```
 
 Este código limita el número de caracteres que se pueden introducir en 2 y muestra el teclado numérico para la entrada del usuario:

@@ -4,15 +4,15 @@ description: En este documento se proporcionan vínculos a varios documentos que
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 682e1d8e8146472c65dc4d8009bd4d93162049fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bfec79d7c4278ce1382790f5048581cf74bb89c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285961"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001459"
 ---
 # <a name="watchos-application-fundamentals"></a>Aspectos básicos de la aplicación watchos
 

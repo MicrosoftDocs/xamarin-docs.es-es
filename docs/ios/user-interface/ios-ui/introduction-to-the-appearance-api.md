@@ -4,21 +4,21 @@ description: iOS le permite aplicar valores de propiedades visuales en un nivel 
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/15/2018
-ms.openlocfilehash: b0f09a729c6998e7a728bfc3d805058e7a43a54a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a7f0fe9d0dc07d892686e6596f3cc09a2587513
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287078"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003378"
 ---
 # <a name="appearance-api-in-xamarinios"></a>API de apariencia en Xamarin. iOS
 
 _iOS le permite aplicar valores de propiedades visuales en un nivel de clase estático en lugar de en objetos individuales para que el cambio se aplique a todas las instancias de ese control en la aplicación._
 
-Esta funcionalidad se expone en Xamarin. iOS a través de `Appearance` una propiedad estática en todos los controles UIKit que lo admiten. La apariencia visual (propiedades como el color de matiz y la imagen de fondo) se puede personalizar fácilmente para dar una apariencia coherente a la aplicación. La API de apariencia se presentó en iOS 5 y, aunque algunas partes de ella han quedado en desuso en iOS 9, sigue siendo una buena forma de lograr algunos estilos y aplicarles efectos en las aplicaciones de Xamarin. iOS.
+Esta funcionalidad se expone en Xamarin. iOS a través de una propiedad estática `Appearance` en todos los controles UIKit que lo admiten. La apariencia visual (propiedades como el color de matiz y la imagen de fondo) se puede personalizar fácilmente para dar una apariencia coherente a la aplicación. La API de apariencia se presentó en iOS 5 y, aunque algunas partes de ella han quedado en desuso en iOS 9, sigue siendo una buena forma de lograr algunos estilos y aplicarles efectos en las aplicaciones de Xamarin. iOS.
 
 ## <a name="overview"></a>Información general
 
@@ -28,14 +28,14 @@ Hay dos maneras diferentes de aplicar una apariencia personalizada:
 
 - **Directamente en una instancia del control** : puede establecer el color del matiz, la imagen de fondo y la posición del título (así como otros atributos) en muchos controles, como barras de herramientas, barras de navegación, botones y controles deslizantes.
 
-- **Establecer valores predeterminados en la propiedad estática de la apariencia** : los atributos personalizables de cada `Appearance` control se exponen a través de la propiedad estática. Cualquier personalización que se aplique a estas propiedades se usará como valor predeterminado para cualquier control de ese tipo que se cree una vez establecida la propiedad.
+- **Establecer valores predeterminados en la propiedad estática de la apariencia** : los atributos personalizables de cada control se exponen a través de la propiedad estática `Appearance`. Cualquier personalización que se aplique a estas propiedades se usará como valor predeterminado para cualquier control de ese tipo que se cree una vez establecida la propiedad.
 
 La aplicación de ejemplo de apariencia muestra los tres métodos, tal y como se muestra en estas capturas de pantallas:
 
-[![](introduction-to-the-appearance-api-images/appearance01-sml.png "La aplicación de ejemplo de apariencia muestra los tres métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![](introduction-to-the-appearance-api-images/appearance01-sml.png "The Appearance sample application demonstrates all three methods")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 A partir de iOS 8, el proxy de apariencia se ha ampliado a TraitCollections.
- `AppearanceForTraitCollection`se puede usar para establecer la apariencia predeterminada en una colección de rasgos determinada. Puede obtener más información al respecto en la guía [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/unified-storyboards.md) .
+ `AppearanceForTraitCollection` se puede usar para establecer la apariencia predeterminada en una colección de rasgos determinada. Puede obtener más información al respecto en la guía [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ## <a name="setting-appearance-properties"></a>Establecer propiedades de apariencia
 
@@ -54,7 +54,7 @@ UIProgressView.Appearance.ProgressTintColor = UIColor.Yellow;
 UIProgressView.Appearance.TrackTintColor = UIColor.Orange;
 ```
 
-Los estilos de elementos verdes se establecen como este, en `ViewDidLoad` el método que reemplaza los valores predeterminados y la clase de *apariencia* estática:
+Los estilos de elementos verdes se establecen como este, en el método `ViewDidLoad` que reemplaza los valores predeterminados y la clase de *apariencia* estática:
 
 ```csharp
 slider2.ThumbTintColor = UIColor.FromRGB (0,127,70); // dark green
@@ -69,15 +69,15 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>Usar UIAppearance en Xamarin. Forms
 
-La API de apariencia puede ser útil al [aplicar estilos a la aplicación de iOS en las](~/xamarin-forms/platform/ios/formatting.md#uiappearance) soluciones de Xamarin. Forms. Algunas líneas de la `AppDelegate` clase pueden ayudar a implementar una combinación de colores específica sin tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+La API de apariencia puede ser útil al [aplicar estilos a la aplicación de iOS en las](~/xamarin-forms/platform/ios/formatting.md#uiappearance) soluciones de Xamarin. Forms. Algunas líneas de la clase `AppDelegate` pueden ayudar a implementar una combinación de colores específica sin tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ### <a name="custom-themes-and-uiappearance"></a>Temas personalizados y UIAppearance
 
-iOS permite que muchos atributos visuales de los controles de interfaz de usuario se "deshagan" mediante las API de *UIAppearance* para forzar que todas las instancias de un control determinado tengan la misma apariencia. Esto se expone como una propiedad de apariencia en muchas clases de control de interfaz de usuario, no en instancias individuales del control. El establecimiento de una propiedad de visualización `Appearance` en la propiedad estática afecta a todos los controles de ese tipo en la aplicación.
+iOS permite que muchos atributos visuales de los controles de interfaz de usuario se "deshagan" mediante las API de *UIAppearance* para forzar que todas las instancias de un control determinado tengan la misma apariencia. Esto se expone como una propiedad de apariencia en muchas clases de control de interfaz de usuario, no en instancias individuales del control. Establecer una propiedad de visualización en la propiedad `Appearance` estática afecta a todos los controles de ese tipo en la aplicación.
 
 Para comprender mejor el concepto, considere un ejemplo.
 
-Para cambiar un específico `UISegmentedControl` para que tenga un matiz magenta, se haría referencia al control específico de la pantalla de `ViewDidLoad`la siguiente manera:
+Para cambiar un `UISegmentedControl` específico para que tenga un matiz magenta, se haría referencia al control específico de la pantalla de este modo en `ViewDidLoad`:
 
 ```csharp
 sg1.TintColor = UIColor.Magenta;
@@ -85,13 +85,13 @@ sg1.TintColor = UIColor.Magenta;
 
 Como alternativa, establezca el valor en el panel de propiedades del diseñador:
 
-[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Panel de propiedades matiz")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Properties Pad Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 En la imagen siguiente se muestra que esto establece el matiz solo en el control denominado ' SG1 '.
 
-[![](introduction-to-the-appearance-api-images/image53.png "Establecer el tinte de un control individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image53.png "Setting the individual control tint")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
-Para establecer muchos controles de esta manera sería completamente ineficaz, por lo que podemos establecer la propiedad estática `Appearance` en la propia clase. Esto se muestra en el código siguiente:
+Para establecer muchos controles de esta manera sería completamente ineficaz, por lo que en su lugar podemos establecer la propiedad static `Appearance` en la propia clase. Esto se muestra en el código siguiente:
 
 ```csharp
 UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
@@ -99,9 +99,9 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 La imagen siguiente muestra ahora ambos controles segmentados con la apariencia establecida en magenta:
 
-[![](introduction-to-the-appearance-api-images/image54.png "Establecer el matiz del control de apariencia")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image54.png "Setting the Appearance control tint")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
-`Appearance`las propiedades se deben establecer en una fase temprana del ciclo de vida de la aplicación `FinishedLaunching` , como en el evento de AppDelegate o en un ViewController antes de que se muestren los controles afectados.
+`Appearance` propiedades se deben establecer en una fase temprana del ciclo de vida de la aplicación, como en el evento de `FinishedLaunching` del AppDelegate, o en un ViewController antes de que se muestren los controles afectados.
 
 Consulte la [Introducción a la API de apariencia](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) para obtener información más detallada.
 

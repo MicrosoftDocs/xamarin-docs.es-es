@@ -4,15 +4,15 @@ description: El Xamarin Designer para iOS admite la representación de controles
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 51afbdf79248af6f76426dd0e0c862e506a0a22f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8c38ec407d13a99e2990a6d4cf39b5a23728b1d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768781"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003973"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 
@@ -45,9 +45,9 @@ La propiedad también se puede decorar con un [DisplayNameAttribute](xref:System
 
 ## <a name="initialization"></a>Inicialización
 
-En `UIViewController` el caso de las subclases, debe usar el método [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) para el código que depende de las vistas que creó en el diseñador.
+En el caso de las subclases de `UIViewController`, debe usar el método [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) para el código que depende de las vistas que creó en el diseñador.
 
-Para `UIView` y otras `NSObject` subclases, el método [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) es el lugar recomendado para realizar la inicialización del control personalizado una vez que se carga desde el archivo de diseño. Esto se debe a que las propiedades personalizadas establecidas en el panel de propiedades no se establecerán cuando se ejecute el constructor del control, pero se establecerán antes `AwakeFromNib` de que se llame a:
+Por `UIView` y otras subclases de `NSObject`, el método [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) es el lugar recomendado para realizar la inicialización del control personalizado una vez que se carga desde el archivo de diseño. Esto se debe a que las propiedades personalizadas establecidas en el panel de propiedades no se establecerán cuando se ejecute el constructor del control, pero se establecerán antes de que se llame a `AwakeFromNib`:
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -122,14 +122,14 @@ public class CustomView : UIView {
 }
 ```
 
-El `CustomView` componente expone una `Counter` propiedad que el desarrollador puede establecer en el diseñador de iOS. Sin embargo, independientemente del valor que se establezca en el diseñador, el valor de `Counter` la propiedad siempre será cero (0). El motivo es el siguiente:
+El componente `CustomView` expone una propiedad `Counter` que el desarrollador puede establecer en el diseñador de iOS. Sin embargo, independientemente del valor que se establezca en el diseñador, el valor de la propiedad `Counter` siempre será cero (0). El motivo es el siguiente:
 
-- Una instancia de `CustomControl` se infla a partir del archivo de guion gráfico.
-- Se establecen las propiedades modificadas en el diseñador de iOS (como establecer el valor de `Counter` en dos (2), por ejemplo).
-- El `AwakeFromNib` método se ejecuta y se realiza una llamada al método del `Initialize` componente.
-- Dentro `Initialize` del valor de la `Counter` propiedad se restablece a cero (0).
+- Una instancia del `CustomControl` se infla a partir del archivo de guion gráfico.
+- Se establecen todas las propiedades modificadas en el diseñador de iOS (por ejemplo, al establecer el valor de la `Counter` en dos (2), por ejemplo).
+- Se ejecuta el método `AwakeFromNib` y se realiza una llamada al método `Initialize` del componente.
+- Dentro `Initialize` el valor de la propiedad `Counter` se restablece a cero (0).
 
-Para corregir la situación anterior, inicialice la `Counter` propiedad en otra parte (como en el constructor del componente) o no invalide el `AwakeFromNib` método `Initialize` y llame a si el componente no requiere inicialización adicional fuera de lo que está siendo controlado por sus constructores.
+Para corregir la situación anterior, inicialice la propiedad `Counter` en otra parte (como en el constructor del componente) o no invalide el método `AwakeFromNib` y llame a `Initialize` si el componente no requiere ninguna inicialización adicional fuera de lo que está actualmente controlado por sus constructores.
 
 ## <a name="design-mode"></a>Modo de diseño
 
@@ -163,8 +163,8 @@ public class DesignerAwareLabel : UILabel, IComponent {
 }
 ```
 
-Siempre debe comprobar la `Site` propiedad antes de `null` intentar tener acceso a cualquiera de sus miembros. Si `Site` es`null`, es seguro asumir que el control no se está ejecutando en el diseñador.
-En el modo de `Site` diseño, se establecerá después de que se haya ejecutado el `AwakeFromNib` constructor del control y antes de que se llame a.
+Siempre debe comprobar la propiedad `Site` de `null` antes de intentar tener acceso a cualquiera de sus miembros. Si `Site` es `null`, es seguro suponer que el control no se está ejecutando en el diseñador.
+En el modo de diseño, `Site` se establecerá después de que se haya ejecutado el constructor del control y antes de que se llame a `AwakeFromNib`.
 
 ## <a name="debugging"></a>Depuración
 
@@ -173,14 +173,14 @@ Si un control no se representa, compruebe si hay errores en el control o una de 
 
 A menudo, la superficie de diseño puede detectar las excepciones producidas por los controles individuales mientras continúa representando otros controles. El control defectuoso se reemplaza por un marcador de posición rojo y puede ver el seguimiento de la excepción haciendo clic en el icono de exclamación:
 
- ![](ios-designable-controls-overview-images/exception-box.png "Un control defectuoso como marcador de posición rojo y los detalles de la excepción")
+ ![](ios-designable-controls-overview-images/exception-box.png "A faulty control as red placeholder and the exception details")
 
 Si los símbolos de depuración están disponibles para el control, el seguimiento tendrá nombres de archivo y números de línea.
 Si hace doble clic en una línea del seguimiento de la pila, se saltará a esa línea en el código fuente.
 
 Si el diseñador no puede aislar el control defectuoso, aparecerá un mensaje de advertencia en la parte superior de la superficie de diseño:
 
- ![](ios-designable-controls-overview-images/info-bar.png "Un mensaje de advertencia en la parte superior de la superficie de diseño")
+ ![](ios-designable-controls-overview-images/info-bar.png "A warning message at the top of the design surface")
 
 La representación completa se reanudará cuando el control defectuoso se corrija o se quite de la superficie de diseño.
 

@@ -4,15 +4,15 @@ description: En este documento se describe cómo crear un control personalizado 
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 651df247e3b5616a3baa38e85159c6a6d5247807
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4b8c72da1e280b83e215bca9316bc0b9de99402c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768804"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003804"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
 
@@ -25,17 +25,17 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 ## <a name="walkthrough"></a>Tutorial
 
 > [!IMPORTANT]
-> A partir de Xamarin. Studio 5,5, la forma en que se crean los controles personalizados es ligeramente diferente a la de las versiones anteriores. Para crear un control personalizado, se requiere `IComponent` la interfaz (con los métodos de implementación asociados) o se puede anotar la clase con `[DesignTimeVisible(true)]`. El último método se usa en el siguiente ejemplo de tutorial.
+> A partir de Xamarin. Studio 5,5, la forma en que se crean los controles personalizados es ligeramente diferente a la de las versiones anteriores. Para crear un control personalizado, se requiere la interfaz `IComponent` (con los métodos de implementación asociados) o se puede anotar la clase con `[DesignTimeVisible(true)]`. El último método se usa en el siguiente ejemplo de tutorial.
 
-1. Cree una nueva solución desde la aplicación de **> de iOS > aplicación de C# vista única >** plantilla `ScratchTicket`, asígnele un nombre y continúe con el Asistente para nuevo proyecto:
+1. Cree una nueva solución desde la aplicación de **> de iOS > aplicación de C# vista única >** plantilla, asígnele un nombre`ScratchTicket`y continúe con el Asistente para nuevo proyecto:
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "Crear una nueva solución")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/01new.png "Create a new solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
-1. Cree un nuevo archivo de clase vacía `ScratchTicketView`denominado:
+1. Cree un nuevo archivo de clase vacío denominado `ScratchTicketView`:
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "Crear una nueva clase ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/02new.png "Create a new ScratchTicketView class")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
-1. Agregue el código siguiente para `ScratchTicketView` la clase:
+1. Agregue el código siguiente para `ScratchTicketView` clase:
 
     ```csharp
     using System;
@@ -156,53 +156,53 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
     }
     ```
 
-1. Agregue los `FillTexture.png` `FillTexture2.png` archivos y`Monkey.png` (disponibles [en github](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) a la carpeta **recursos** .
+1. Agregue los archivos `FillTexture.png`, `FillTexture2.png` y `Monkey.png` (disponibles [en github](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) a la carpeta **recursos** .
 
-1. Haga doble clic en `Main.storyboard` el archivo para abrirlo en el diseñador:
+1. Haga doble clic en el archivo `Main.storyboard` para abrirlo en el diseñador:
 
-    [![](ios-designable-controls-walkthrough-images/03new.png "El diseñador de iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/03new.png "The iOS Designer")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 1. Arrastre y coloque una **vista de imagen** desde el **cuadro de herramientas** en la vista del guión gráfico.
 
-    [![](ios-designable-controls-walkthrough-images/04new.png "Una vista de imagen agregada al diseño")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/04new.png "An Image View added to the layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 1. Seleccione la **vista imagen** y cambie su propiedad **imagen** a `Monkey.png`.
 
-    [![](ios-designable-controls-walkthrough-images/05new.png "Establecimiento de la propiedad de imagen de vista de imagen en Monkey. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/05new.png "Setting Image View Image property to Monkey.png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
 1. A medida que se usan clases de tamaño, es necesario restringir esta vista de imagen. Haga clic en la imagen dos veces para ponerla en modo de restricción. Vamos a restringirlo al centro; para ello, haga clic en el controlador de anclaje central y alinearlo vertical y horizontalmente:
 
-    [![](ios-designable-controls-walkthrough-images/06new.png "Centrar la imagen")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/06new.png "Centering the image")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
 
 1. Para restringir el alto y el ancho, haga clic en los controladores de anclaje de tamaño (los manipuladores de forma "hueso") y seleccione ancho y alto, respectivamente:
 
-    [![](ios-designable-controls-walkthrough-images/07new.png "Agregar restricciones")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/07new.png "Adding Constraints")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 1. Actualice el marco en función de las restricciones haciendo clic en el botón actualizar de la barra de herramientas:
 
-    [![](ios-designable-controls-walkthrough-images/08new.png "Barra de herramientas restricciones")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/08new.png "The Constraints toolbar")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 1. A continuación, compile el proyecto para que la **vista de vales de tachado** aparezca en **componentes personalizados** en el cuadro de herramientas:
 
-    [![](ios-designable-controls-walkthrough-images/09new.png "Cuadro de herramientas componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/09new.png "The Custom Components toolbox")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 1. Arrastre y coloque una **vista de vale de tachado** para que aparezca sobre la imagen Monkey. Ajuste los manipuladores de arrastre para que la vista del vale de borrado cubra el Monkey por completo, como se muestra a continuación:
 
-    [![](ios-designable-controls-walkthrough-images/10new.png "Una vista de vale de borrado en la vista de imagen")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10new.png "A Scratch Ticket View over the Image View")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. Restrinja la vista del vale de desecho a la vista de imagen dibujando un rectángulo delimitador para seleccionar ambas vistas. Seleccione las opciones para restringir el ancho, el alto, el centro y el centro y actualizar los fotogramas según las restricciones, como se muestra a continuación:
 
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centrar y agregar restricciones")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/11new.png "Centering and adding Constraints")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 1. Ejecute la aplicación y "desecho" la imagen para mostrar el Monkey.
 
-    [![](ios-designable-controls-walkthrough-images/10-app.png "Ejecución de una aplicación de ejemplo")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "A sample app run")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="adding-design-time-properties"></a>Agregar propiedades en tiempo de diseño
 
-El diseñador también incluye compatibilidad en tiempo de diseño para los controles personalizados del tipo de propiedad Numeric, Enumeration, String, bool, CGSize, UIColor y UIImage. Para demostrar, vamos a agregar una propiedad a `ScratchTicketView` para establecer la imagen que está "desactivada".
+El diseñador también incluye compatibilidad en tiempo de diseño para los controles personalizados del tipo de propiedad Numeric, Enumeration, String, bool, CGSize, UIColor y UIImage. Para demostrar, vamos a agregar una propiedad al `ScratchTicketView` para establecer la imagen que está "desactivada".
 
-Agregue el código siguiente a la `ScratchTicketView` clase para la propiedad:
+Agregue el código siguiente a la clase `ScratchTicketView` para la propiedad:
 
 ```csharp
 [Export("Image"), Browsable(true)]
@@ -216,7 +216,7 @@ public UIImage Image
 }
 ```
 
-También es posible que deseemos agregar una comprobación de NULL `Draw` al método, de la siguiente manera:
+También es posible que deseemos agregar una comprobación nula al método `Draw`, de la siguiente manera:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -256,9 +256,9 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Incluir un `ExportAttribute` y un `BrowsableAttribute`conel argumento establecido en hacequelapropiedadsemuestreenelpaneldepropiedadesdel`true` diseñador. Al cambiar la propiedad a otra imagen incluida en el proyecto, `FillTexture2.png`como, el control se actualiza en tiempo de diseño, como se muestra a continuación:
+Si se incluye un `ExportAttribute` y un `BrowsableAttribute` con el argumento establecido en `true`, la propiedad se muestra en el panel de **propiedades** del diseñador. Al cambiar la propiedad a otra imagen incluida en el proyecto, como `FillTexture2.png`, el control se actualiza en tiempo de diseño, como se muestra a continuación:
 
- [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editar propiedades de tiempo de diseño")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editing Design Time properties")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 

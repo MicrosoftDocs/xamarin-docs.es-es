@@ -4,15 +4,15 @@ description: En este documento se proporciona una introducción a los guiones gr
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70768879"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002431"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -266,7 +266,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-Para obtener más información sobre el registro de clases y métodos, consulte la documentación del [registrador de tipos](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
+Para obtener más información sobre el registro de clases y métodos, consulte la documentación del [registrador de tipos](https://docs.microsoft.com/xamarin/ios/internals/registrar) .
 
 El último paso de esta clase es conectar el botón y la transición al controlador de vista de color rosa. Crearemos una instancia del `PinkViewController` del guión gráfico; a continuación, se programará un segue de extracción con `PushViewController`, como se muestra en el código de ejemplo siguiente:
 

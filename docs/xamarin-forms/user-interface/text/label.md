@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
-ms.openlocfilehash: 6ea8195d422da3c64175b164c5fbf2885eb234ab
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 10/28/2019
+ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
+ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696390"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980874"
 ---
 # <a name="xamarinforms-label"></a>Etiqueta de Xamarin. Forms
 
@@ -69,32 +69,6 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 ```
 
 El resultado es que los caracteres del texto que muestra el [`Label`](xref:Xamarin.Forms.Label) se espacian `CharacterSpacing` unidades independientes del dispositivo.
-
-## <a name="padding"></a>Relleno
-
-El relleno representa el espacio que hay entre un elemento y sus elementos secundarios, y se utiliza para separar el elemento de su propio contenido. El relleno se puede aplicar a las instancias de [`Label`](xref:Xamarin.Forms.Label) estableciendo la propiedad `Label.Padding` en un valor [`Thickness`](xref:Xamarin.Forms.Thickness) :
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-El código de C# equivalente es el siguiente:
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> En iOS, cuando se crea un [`Label`](xref:Xamarin.Forms.Label) que establece la propiedad `Padding`, se aplicará el relleno y el valor de relleno se podrá actualizar más adelante. Sin embargo, cuando se crea una `Label` que no establece la propiedad `Padding`, intentar establecerla más tarde no tendrá ningún efecto.
->
-> En Android y en el Plataforma universal de Windows, se puede especificar el valor de la propiedad `Padding` cuando se crea la `Label` o una versión posterior.
-
-Para obtener más información sobre el relleno, vea [márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="colors"></a>Colores
 
@@ -184,7 +158,6 @@ var label =
 Las siguientes capturas de pantallas muestran el resultado de establecer la propiedad `MaxLines` en 2, cuando el texto es lo suficientemente largo como para ocupar más de 2 líneas:
 
 ![Ejemplo de etiqueta MaxLines](label-images/label-maxlines.png)
-
 
 ## <a name="display-html"></a>Mostrar HTML
 
@@ -390,6 +363,48 @@ var label = new Label
 Las siguientes capturas de pantallas muestran el resultado de establecer la propiedad [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) en 1,8:
 
 ![Ejemplo de LineHeight de intervalo](label-images/span-lineheight.png)
+
+## <a name="padding"></a>Relleno
+
+El relleno representa el espacio que hay entre un elemento y sus elementos secundarios, y se utiliza para separar el elemento de su propio contenido. El relleno se puede aplicar a las instancias de [`Label`](xref:Xamarin.Forms.Label) estableciendo la propiedad `Label.Padding` en un valor [`Thickness`](xref:Xamarin.Forms.Thickness) :
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> En iOS, cuando se crea un [`Label`](xref:Xamarin.Forms.Label) que establece la propiedad `Padding`, se aplicará el relleno y el valor de relleno se podrá actualizar más adelante. Sin embargo, cuando se crea una `Label` que no establece la propiedad `Padding`, intentar establecerla más tarde no tendrá ningún efecto.
+>
+> En Android y en el Plataforma universal de Windows, se puede especificar el valor de la propiedad `Padding` cuando se crea la `Label` o una versión posterior.
+
+Para obtener más información sobre el relleno, vea [márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
 
 ## <a name="hyperlinks"></a>Hipervínculos
 

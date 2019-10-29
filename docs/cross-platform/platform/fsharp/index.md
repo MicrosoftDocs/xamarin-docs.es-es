@@ -3,15 +3,15 @@ title: Usar F# con Xamarin
 description: F# es un lenguaje de programación funcional fuertemente tipado diseñado para ejecutarse en .NET. En este documento se proporciona información general de alto nivel sobre sus características y vínculos a ejemplos F#creados con.
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 7fcb04eca457ad246e68d4f2a0d5212055764ed6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b101d8732a361c26b09032c0899a4c9c843a037b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280551"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014774"
 ---
 # <a name="using-f-with-xamarin"></a>Usar F# con Xamarin
 

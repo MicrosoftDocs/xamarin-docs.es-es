@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a varias guías que describen con
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 59257dafc1d92756feb85046df43de7b9da0cc42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ccdde29183645b93831b7261909714f9baf3fa4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290144"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010029"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Aspectos básicos de la aplicación Xamarin. iOS
 
@@ -72,4 +72,4 @@ Las pantallas táctiles en muchos de los dispositivos de hoy en día permiten a 
 
 ## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Trabajar con valores predeterminados del usuario](~/ios/app-fundamentals/user-defaults.md)
 
-La `NSUserDefaults` clase proporciona una manera para que las aplicaciones y extensiones de iOS interactúen con el sistema predeterminado de todo el sistema mediante programación. Al usar el sistema de valores predeterminados, el usuario puede configurar el comportamiento o el estilo de una aplicación para que se adapte a sus preferencias (según el diseño de la aplicación). Por ejemplo, para presentar los datos en métricas frente a medidas de los Imperials o seleccionar un tema de la interfaz de usuario determinado.
+La clase `NSUserDefaults` proporciona una manera para que las aplicaciones y extensiones de iOS interactúen mediante programación con el sistema predeterminado para todo el sistema. Al usar el sistema de valores predeterminados, el usuario puede configurar el comportamiento o el estilo de una aplicación para que se adapte a sus preferencias (según el diseño de la aplicación). Por ejemplo, para presentar los datos en métricas frente a medidas de los Imperials o seleccionar un tema de la interfaz de usuario determinado.

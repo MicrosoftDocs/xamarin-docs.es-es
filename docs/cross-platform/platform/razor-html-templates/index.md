@@ -3,15 +3,15 @@ title: Compilar vistas HTML mediante plantillas de Razor
 description: " El uso de una página web de pantalla completa para representar HTML puede ser una manera sencilla y eficaz de representar el formato complejo de una manera multiplataforma, especialmente si ya tiene el código HTML, JavaScript y CSS de un proyecto de sitio Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765347"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014600"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Compilar vistas HTML mediante plantillas de Razor
 
@@ -41,7 +41,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-Consulte las recetas de [UIWebView de iOS](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) para obtener más información sobre el uso del control UIWebView.
+Consulte las recetas de [UIWebView de iOS](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/content_controls/web_view) para obtener más información sobre el uso del control UIWebView.
 
 ### <a name="android"></a>Android
 
@@ -58,7 +58,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-Consulte las recetas de la [vista previa de Android](http://docs.xamarin.com/recipes/android/controls/webview/) para obtener más información sobre el uso del control WebView.
+Consulte las recetas de la [vista previa de Android](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/controls/webview) para obtener más información sobre el uso del control WebView.
 
 ### <a name="specifying-the-base-directory"></a>Especificar el directorio base
 
@@ -80,7 +80,7 @@ La salida de la plantilla se representa en iOS con el C# código siguiente:
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-El directorio base se especifica como `NSBundle.MainBundle.BundleUrl` , que hace referencia al directorio en el que está instalada la aplicación. Todos los archivos de la carpeta **recursos** se copian en esta ubicación, como el archivo **style. CSS** que se muestra aquí:
+El directorio base se especifica como `NSBundle.MainBundle.BundleUrl` que hace referencia al directorio en el que está instalada la aplicación. Todos los archivos de la carpeta **recursos** se copian en esta ubicación, como el archivo **style. CSS** que se muestra aquí:
 
  ![solución iPhoneHybrid](images/image1_240x163.png)
 
@@ -169,7 +169,7 @@ webView.SetWebViewClient (new HybridWebViewClient ());
 
 ### <a name="calling-javascript-from-c"></a>Llamar a JavaScript desde C\#
 
-Además de indicar a una vista Web que cargue una nueva página HTML, C# el código también puede ejecutar JavaScript en la página que se muestra actualmente. Los bloques de código JavaScript completos pueden crearse mediante C# cadenas y ejecutarse, o puede crear llamadas de método a JavaScript que ya estén `script` disponibles en la página a través de etiquetas.
+Además de indicar a una vista Web que cargue una nueva página HTML, C# el código también puede ejecutar JavaScript en la página que se muestra actualmente. Los bloques de código JavaScript completos pueden crearse mediante C# cadenas y ejecutarse, o puede crear llamadas de método a JavaScript que ya están disponibles en la página a través de`script`etiquetas.
 
 #### <a name="android"></a>Android
 
@@ -227,13 +227,13 @@ A continuación se muestra una plantilla de Razor simple ( **RazorView. cshtml**
 
 Tenga en cuenta las siguientes diferencias con respecto a un archivo HTML normal:
 
-- El `@` símbolo tiene un significado especial en las plantillas de Razor: indica que se C# va a evaluar la expresión siguiente.
-- `@model`la Directiva siempre aparece como la primera línea de un archivo de plantilla de Razor.
-- La `@model` Directiva debe ir seguida de un tipo. En este ejemplo, se pasa una cadena simple a la plantilla, pero puede ser cualquier clase personalizada.
-- Cuando `@Model` se hace referencia a en toda la plantilla, proporciona una referencia al objeto que se pasa a la plantilla cuando se genera (en este ejemplo será una cadena).
+- El símbolo de `@` tiene un significado especial en las plantillas de Razor: indica que se C# va a evaluar la expresión siguiente.
+- `@model` Directiva siempre aparece como la primera línea de un archivo de plantilla de Razor.
+- La Directiva de `@model` debe ir seguida de un tipo. En este ejemplo, se pasa una cadena simple a la plantilla, pero puede ser cualquier clase personalizada.
+- Cuando se hace referencia a `@Model` a través de la plantilla, se proporciona una referencia al objeto que se pasa a la plantilla cuando se genera (en este ejemplo será una cadena).
 - El IDE generará automáticamente una clase parcial para las plantillas (archivos con la extensión **. cshtml** ). Puede ver este código, pero no se debe editar.
  ![RazorView. cshtml](images/image6_125x34.png) la clase parcial se denomina RazorView para que coincida con el nombre de archivo de la plantilla. cshtml. Este es el nombre que se usa para hacer referencia a la plantilla C# en el código.
-- `@using`también se pueden incluir instrucciones en la parte superior de una plantilla de Razor para incluir espacios de nombres adicionales.
+- `@using` instrucciones también se pueden incluir en la parte superior de una plantilla de Razor para incluir espacios de nombres adicionales.
 
 A continuación, la salida HTML final se puede generar con C# el código siguiente. Tenga en cuenta que especificamos que el modelo es una cadena "Hola mundo" que se incorporará a la salida de la plantilla representada.
 
@@ -313,13 +313,13 @@ En la C# plantilla se pueden incluir más complejos, como las actualizaciones de
 </html>
 ```
 
-Puede escribir expresiones de una sola línea C# complejas (como el formato de la edad) rodeando el `@()`código con.
+Puede escribir expresiones de una sola línea C# complejas (como el formato de la edad) rodeando el código con `@()`.
 
 Se C# pueden escribir varias instrucciones con `@{}`.
 
 #### <a name="if-else-statements"></a>Instrucciones IF-Else
 
-Las bifurcaciones de código se `@if` pueden expresar con tal y como se muestra en este ejemplo de plantilla.
+Las bifurcaciones de código se pueden expresar con `@if` tal y como se muestra en este ejemplo de plantilla.
 
 ```html
 @model Monkey
@@ -340,7 +340,7 @@ Las bifurcaciones de código se `@if` pueden expresar con tal y como se muestra 
 
 #### <a name="loops"></a>Bucles
 
-También se pueden agregar construcciones `foreach` de bucle como. El `@` prefijo se puede usar en la variable de `@food` bucle (en este caso) para representarlo en HTML.
+También se pueden agregar construcciones de bucle como `foreach`. El prefijo `@` se puede usar en la variable de bucle (`@food` en este caso) para representarlo en HTML.
 
 ```html
 @model Monkey
@@ -394,7 +394,7 @@ Las partes importantes de la solución son:
 - Contenido estático como el archivo **style. CSS** .
 - Archivos de plantilla Razor. cshtml como **RazorView. cshtml** .
 - Clases de modelo a las que se hace referencia en las plantillas de Razor, como **ExampleModel.CS** .
-- La clase específica de la plataforma que crea la vista Web y representa la plantilla, `MainActivity` como en Android `iPhoneHybridViewController` y en iOS.
+- La clase específica de la plataforma que crea la vista Web y representa la plantilla, como el `MainActivity` en Android y el `iPhoneHybridViewController` en iOS.
 
 En la siguiente sección se explica cómo funcionan los proyectos.
 
@@ -416,7 +416,7 @@ La plantilla incluye un archivo Razor **. cshtml** que tiene código escrito pre
 
 #### <a name="rendering-the-template"></a>Representación de la plantilla
 
-La llamada `GenerateString` a en una plantilla representa el código HTML preparado para su presentación en una vista Web. Si la plantilla usa un modelo, debe proporcionarse antes de la representación. En este diagrama se muestra cómo funciona la representación: no se resuelven los recursos estáticos mediante la vista Web en tiempo de ejecución, utilizando el directorio base proporcionado para buscar los archivos especificados.
+La llamada al `GenerateString` en una plantilla representa el código HTML preparado para su presentación en una vista Web. Si la plantilla usa un modelo, debe proporcionarse antes de la representación. En este diagrama se muestra cómo funciona la representación: no se resuelven los recursos estáticos mediante la vista Web en tiempo de ejecución, utilizando el directorio base proporcionado para buscar los archivos especificados.
 
  ![Diagrama de flujo de Razor](images/image12_700x421.png)
 
@@ -430,7 +430,7 @@ Un ejemplo puede verse en cómo se controla el botón de RazorView. El botón ti
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-La `InvokeCSharpWithFormValues` función JavaScript Lee todos los valores del formulario HTML y `location.href` establece para la vista Web:
+La función `InvokeCSharpWithFormValues` JavaScript Lee todos los valores del formulario HTML y establece el `location.href` para la vista Web:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -446,7 +446,7 @@ Cuando la vista Web nativa procesa esta solicitud de navegación, tenemos la opo
 
 El interior de estos dos interceptores de navegación es esencialmente el mismo.
 
-En primer lugar, Compruebe la dirección URL que está intentando cargar la vista Web y, si no se inicia con el`hybrid:`esquema personalizado (), permita que la navegación se realice de la forma habitual.
+En primer lugar, Compruebe la dirección URL que está intentando cargar la vista Web y, si no se inicia con el esquema personalizado (`hybrid:`), permita que la navegación se realice de la forma habitual.
 
 Para el esquema de dirección URL personalizada, todo en la dirección URL entre el esquema y el es el nombre del método que se va a controlar (en este caso, "UpdateLabel"). Todo lo que aparece en la cadena de consulta se tratará como los parámetros de la llamada al método:
 
@@ -456,19 +456,19 @@ var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-`UpdateLabel`en este ejemplo se realiza una cantidad mínima de manipulación de cadenas en el parámetro de cuadro deC# texto (anteponiendo "dice" a la cadena) y, a continuación, vuelve a llamar a la vista Web.
+`UpdateLabel` en este ejemplo realiza una cantidad mínima de manipulación de cadenas en el parámetro de cuadro de textoC# (anteponiendo "dice" a la cadena) y, a continuación, vuelve a llamar a la vista Web.
 
 Después de administrar la dirección URL, el método anula la navegación para que la vista Web no intente terminar de navegar a la dirección URL personalizada.
 
 #### <a name="manipulating-the-template-from-c"></a>Manipular la plantilla desde C\#
 
-La comunicación con una vista web HTML presentada desde C# se realiza mediante una llamada a JavaScript en la vista Web. En iOS, esto se hace llamando `EvaluateJavascript` a en UIWebView:
+La comunicación con una vista web HTML presentada desde C# se realiza mediante una llamada a JavaScript en la vista Web. En iOS, esto se hace llamando a `EvaluateJavascript` en UIWebView:
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-En Android, se puede invocar JavaScript en la vista Web mediante la carga de JavaScript como una dirección URL `"javascript:"` mediante el esquema de direcciones URL:
+En Android, se puede invocar JavaScript en la vista Web mediante la carga de JavaScript como una dirección URL mediante el esquema de URL de `"javascript:"`:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -517,5 +517,5 @@ Finalmente, se introdujeron los ejemplos de RazorTodo que muestran cómo combina
 ### <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
-- [MVC 3-motor de vistas de Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
-- [Introducción a la programación web de ASP.NET mediante la sintaxis de Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
+- [MVC 3-motor de vistas de Razor (Microsoft)](https://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
+- [Introducción a la programación web de ASP.NET mediante la sintaxis de Razor (Microsoft)](https://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

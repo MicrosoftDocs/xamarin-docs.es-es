@@ -3,15 +3,15 @@ title: ¿Cómo se recopilan las pilas de llamadas actuales del proceso de Visual
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 64c24b09-2c4a-43ad-b94d-6cd05a1aee44
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: f07bc4437293bdc49e4811c0104fd7245ccf9738
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9ed79b2273758b8051a96169d4c9b53870de1fb1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282953"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013028"
 ---
 # <a name="how-do-i-collect-the-current-call-stacks-of-the-visual-studio-process"></a>¿Cómo se recopilan las pilas de llamadas actuales del proceso de Visual Studio?
 
@@ -23,20 +23,20 @@ Cuando la GUI se bloquea (se bloquea, se inmoviliza) en Visual Studio, una parte
 
 3. Seleccione **Depurar > Asociar al proceso**.
 
-   ![](vs-callstack-images/image1.png "Seleccionar Depurar > asociar al proceso")
+   ![](vs-callstack-images/image1.png "Select Debug > Attach to Process")
 
 4. Seleccione la instancia bloqueada original de `devenv.exe` de la lista de **Procesos disponibles**.
 
 5. Seleccione **Depurar > Interrumpir todo**.
 
-   ![](vs-callstack-images/image2.png "Seleccione Depurar > interrumpir todo")
+   ![](vs-callstack-images/image2.png "Select Debug > Break All")
 
 6. Seleccione **Depurar > guardar volcado como**.
 
-   ![](vs-callstack-images/image3.png "Seleccione Depurar > Guardar volcado como")
+   ![](vs-callstack-images/image3.png "Select Debug > Save Dump As")
 
 7. Cambie **Guardar como tipo** a **minivolcado (\*. DMP)** . Esto producirá un archivo mucho más pequeño que el **minivolcado con montón**y el montón no suele ser relevante para diagnosticar inmovilizaciones.
 
-   ![](vs-callstack-images/image4.png "Esto producirá un archivo mucho más pequeño que el minivolcado con montón y el montón no suele ser relevante para diagnosticar inmovilizaciones")
+   ![](vs-callstack-images/image4.png "This will produce a much smaller file than Minidump with Heap, and the heap is usually not relevant for diagnosing freezes")
 
 8. Guarde el archivo de volcado de memoria. Si envía el archivo en línea, puede comprimirlo para reducir el tamaño.

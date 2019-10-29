@@ -3,15 +3,15 @@ title: ¿Cómo puedo actualizar NuGet?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 753afbda38a79cdc472a9b635a2354c6b9934617
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.openlocfilehash: 96e5343dbd17f14000f7ce407576e664f8971fa8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71033368"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013587"
 ---
 # <a name="how-can-i-update-nuget"></a>¿Cómo puedo actualizar NuGet?
 
@@ -19,7 +19,7 @@ Las actualizaciones, extensiones y complementos de NuGet se pueden encontrar en 
 
 Tenga en cuenta que las actualizaciones *solo* se mostrarán en estos menús si el IDE no tiene instalada la última versión compatible de NuGet:
 
-## <a name="visual-studio"></a>Visual Studio
+## <a name="visual-studio"></a>Programa para la mejora
 
 1. Abrir **herramientas > extensiones y actualizaciones > actualizaciones > Galería de Visual Studio**
 2. Seleccionar el **Administrador de paquetes NuGet para Visual Studio [año]**

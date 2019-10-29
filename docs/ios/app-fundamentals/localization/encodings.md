@@ -4,15 +4,15 @@ description: En este documento se describen las codificaciones de internacionali
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: c8e82f9261601db48ec48092a5f3f81394a86eec
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d204aeac18fc08bf6eb2221b6f64ecbbded8121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763410"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010005"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codificaciones de internacionalización en Xamarin. iOS
 
@@ -22,22 +22,22 @@ Para reducir el tamaño de la aplicación, Xamarin. iOS no incluye ninguna codif
 
 Para ello, seleccione las codificaciones adicionales en el panel de compilación/avanzado de iOS en Visual Studio para Mac o Visual Studio:
 
- [![](encodings-images/00.png "Selección de las codificaciones adicionales")](encodings-images/00.png#lightbox)
+ [![](encodings-images/00.png "Selecting the extra encodings")](encodings-images/00.png#lightbox)
 
- [![](encodings-images/00a.png "Selección de las codificaciones adicionales")](encodings-images/00a.png#lightbox)
+ [![](encodings-images/00a.png "Selecting the extra encodings")](encodings-images/00a.png#lightbox)
 
 Puede seleccionar una de estas opciones:
 
 - CJK: para chineese, Japonés y Coreano
 - Oriente: Árabe, hebreo, Turco y Latin5.
-- distinta Cirílico, Báltico, vietnamita, ucraniano y tailandés
-- menos Codificaciones de EBCDIC y otras páginas de códigos poco frecuentes
-- indias Idiomas latinos, Pascua y Europa occidental
+- otros: cirílico, Báltico, vietnamita, ucraniano y tailandés
+- poco frecuente: codificaciones de EBCDIC y otras páginas de códigos poco frecuentes
+- oeste: lenguas latinas, Pascua y Europa occidental
 - todo
 
  <a name="cjk" />
 
-## <a name="cjk"></a>cjk
+## <a name="cjk"></a>compa
 
 - CP51932
 - CP932

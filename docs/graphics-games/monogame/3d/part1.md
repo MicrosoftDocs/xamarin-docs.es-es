@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 909594fe86c9718d9922470d7fca36155e33aed3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766833"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005236"
 ---
 # <a name="using-the-model-class"></a>Usar la clase Model
 
@@ -41,7 +41,7 @@ Antes de continuar, debemos comprobar que el proyecto se abre y se implementa co
 
 ## <a name="including-the-xnbs-in-the-game-project"></a>Incluir XNBs en el proyecto de juego
 
-El formato de archivo. XNB es una extensión estándar para el contenido compilado (contenido creado por la [herramienta de canalización monogame](http://www.monogame.net/documentation/?page=Pipeline)). Todo el contenido compilado tiene un archivo de código fuente (que es un archivo. FBX en el caso de nuestro modelo) y un archivo de destino (un archivo. XNB). El formato. FBX es un formato de modelo 3D común que pueden crear aplicaciones como [Maya](http://www.autodesk.com/products/maya/overview) y [Blender](http://www.blender.org/). 
+El formato de archivo. XNB es una extensión estándar para el contenido compilado (contenido creado por la [herramienta de canalización monogame](http://www.monogame.net/documentation/?page=Pipeline)). Todo el contenido compilado tiene un archivo de código fuente (que es un archivo. FBX en el caso de nuestro modelo) y un archivo de destino (un archivo. XNB). El formato. FBX es un formato de modelo 3D común que pueden crear aplicaciones como [Maya](https://www.autodesk.com/products/maya/overview) y [Blender](https://www.blender.org/). 
 
 La clase `Model` se puede construir cargando un archivo. XNB de un disco que contenga datos de geometría 3D.   Este archivo. XNB se crea a través de un proyecto de contenido. Las plantillas monogame incluyen automáticamente un proyecto de contenido (con la extensión. MGCP) en la carpeta de contenido. Para obtener información detallada sobre la herramienta de canalización de monogame, consulte la [Guía de canalizaciones de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 

@@ -3,15 +3,15 @@ title: Inserción de .NET
 description: La incrustación de .net permite que elC#código F#.net existente (, y otros) lo consuma el código escrito en otros lenguajes de programación.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: af068e5a09cc11eec33508a4f2eb33186168aae6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5a0e7eeaee9b3189de63d0b82a3822cc68023505
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290222"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73006942"
 ---
 # <a name="net-embedding"></a>Inserción de .NET
 

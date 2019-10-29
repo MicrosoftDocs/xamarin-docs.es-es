@@ -4,15 +4,15 @@ description: En este documento se proporcionan vínculos a guías que describen 
 ms.prod: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 1c60c1631fd3ecdccf4a91840cfca9ee6116a367
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b3bf1fcc6be7713c87b16ef9ec083189793b324
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289899"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008057"
 ---
 # <a name="data-and-cloud-services-in-xamarinios-apps"></a>Datos y Cloud Services en aplicaciones de Xamarin. iOS
 

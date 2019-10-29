@@ -4,15 +4,15 @@ description: En este documento se proporcionan vínculos a guías que describen 
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 954e3b8f612fd710dd178cfc296889c9da372183
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 325898b3c934e25ae1610a3437f787476dcd22cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768307"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003341"
 ---
 # <a name="user-interfaces-in-ios"></a>Interfaces de usuario en iOS
 
@@ -22,11 +22,11 @@ iOS permite que muchos atributos visuales de los controles de interfaz de usuari
 
 ## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[Creación de objetos de la interfaz de usuario](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
-Apple agrupa los elementos de funcionalidad relacionados en "Marcos", que equivalen a los espacios de nombres de Xamarin. iOS. `UIKit`es el espacio de nombres que contiene todos los controles de interfaz de usuario para iOS.
+Apple agrupa los elementos de funcionalidad relacionados en "Marcos", que equivalen a los espacios de nombres de Xamarin. iOS. `UIKit` es el espacio de nombres que contiene todos los controles de interfaz de usuario para iOS.
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opciones de diseño](~/ios/user-interface/ios-ui/layout-options.md)
 
-Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o se gira una vista: Ajuste automático de tamaño y diseño automático.
+Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o se gira una vista: ajuste automático de tamaño y Autodiseño.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

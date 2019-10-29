@@ -4,15 +4,15 @@ description: En este documento se describen varias formas de actualizar una apli
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1d5a227f4acdba319eefc91b4991dead5a036eb9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d56af364d63ff78bafbdd7d8043ae4d75d97959
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756324"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010698"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Actualización de una aplicación de Xamarin. iOS en segundo plano
 
@@ -43,9 +43,9 @@ En iOS 6, una aplicación que escribe el tiempo de primer plano necesario para c
 
 Para implementar la captura en segundo plano, edite *info. plist* y active las casillas **Habilitar modos en segundo plano** y **captura en segundo plano** :
 
- [![](updating-an-application-in-the-background-images/fetch.png "Edite el archivo info. plist y active las casillas habilitar modos en segundo plano y captura en segundo plano")](updating-an-application-in-the-background-images/fetch.png#lightbox)
+ [![](updating-an-application-in-the-background-images/fetch.png "Edit the Info.plist and check the Enable Background Modes and Background Fetch check boxes")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
-A continuación, en `AppDelegate`el, invalide el `FinishedLaunching` método para establecer el intervalo de captura mínimo. En este ejemplo, se permite que el sistema operativo decida con qué frecuencia se debe capturar el contenido nuevo:
+Después, en el `AppDelegate`, invalide el método `FinishedLaunching` para establecer el intervalo de captura mínimo. En este ejemplo, se permite que el sistema operativo decida con qué frecuencia se debe capturar el contenido nuevo:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -55,7 +55,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Por último, realice la búsqueda invalidando `PerformFetch` el método `AppDelegate`en y pasando un controlador de *finalización*. El controlador de finalización es un delegado que `UIBackgroundFetchResult`toma un:
+Por último, realice la búsqueda invalidando el método `PerformFetch` en el `AppDelegate`y pasando un *controlador de finalización*. El controlador de finalización es un delegado que toma un `UIBackgroundFetchResult`:
 
 ```csharp
 public override void PerformFetch (UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
@@ -70,24 +70,24 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 
 Cuando terminemos de actualizar el contenido, permitiremos que el sistema operativo lo sepa llamando al controlador de finalización con el estado adecuado. iOS ofrece tres opciones para el estado del controlador de finalización:
 
-1. `UIBackgroundFetchResult.NewData`-Se le llama cuando se ha capturado contenido nuevo y se ha actualizado la aplicación.
-1. `UIBackgroundFetchResult.NoData`-Se le llama cuando se ha producido la captura del nuevo contenido, pero no hay contenido disponible.
-1. `UIBackgroundFetchResult.Failed`-Útil para el control de errores, al que se llama cuando la captura no pudo pasar.
+1. `UIBackgroundFetchResult.NewData`: se le llama cuando se ha capturado contenido nuevo y se ha actualizado la aplicación.
+1. `UIBackgroundFetchResult.NoData`: se le llama cuando se ha producido la captura del nuevo contenido, pero no hay contenido disponible.
+1. `UIBackgroundFetchResult.Failed`: útil para el control de errores, al que se llama cuando la captura no pudo pasar.
 
 Las aplicaciones que usan la captura en segundo plano pueden realizar llamadas para actualizar la interfaz de usuario desde el fondo. Cuando el usuario abre la aplicación, esta se actualiza y muestra el contenido nuevo. También se actualizará la instantánea del conmutador de aplicaciones de la aplicación, de modo que el usuario pueda ver cuándo tiene contenido nuevo.
 
 > [!IMPORTANT]
-> Una `PerformFetch` vez que se llama a, la aplicación tiene aproximadamente 30 segundos para iniciar la descarga del nuevo contenido y llamar al bloque del controlador de finalización. Si esto tarda demasiado, se terminará la aplicación. Considere la posibilidad de usar la captura en segundo plano con el _servicio de transferencia en segundo plano_ al descargar medios u otros archivos grandes.
+> Una vez que se llama a `PerformFetch`, la aplicación tiene aproximadamente 30 segundos para iniciar la descarga del nuevo contenido y llamar al bloque del controlador de finalización. Si esto tarda demasiado, se terminará la aplicación. Considere la posibilidad de usar la captura en segundo plano con el _servicio de transferencia en segundo plano_ al descargar medios u otros archivos grandes.
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
 
-En el código de ejemplo anterior, se permite que el sistema operativo decida con qué frecuencia se debe capturar el nuevo contenido estableciendo `BackgroundFetchIntervalMinimum`el intervalo de captura mínimo en. iOS ofrece tres opciones para el intervalo de captura:
+En el código de ejemplo anterior, se permite que el sistema operativo decida con qué frecuencia se va a capturar el nuevo contenido estableciendo el intervalo de captura mínimo en `BackgroundFetchIntervalMinimum`. iOS ofrece tres opciones para el intervalo de captura:
 
-1. `BackgroundFetchIntervalNever`-Indique al sistema que no recupere nunca el nuevo contenido. Use esta opción para desactivar la captura en determinadas situaciones, por ejemplo, cuando el usuario no ha iniciado sesión. Este es el valor predeterminado para el intervalo de captura. 
-1. `BackgroundFetchIntervalMinimum`: Permita que el sistema decida con qué frecuencia se realiza la captura en función de los patrones de usuario, la duración de la batería, el uso de los datos y las necesidades de otras aplicaciones.
-1. `BackgroundFetchIntervalCustom`-Si sabe con qué frecuencia se actualiza el contenido de una aplicación, puede especificar un intervalo de "suspensión" después de cada captura, durante el cual la aplicación no podrá obtener contenido nuevo. Una vez que ese intervalo está activo, el sistema determinará cuándo se debe capturar el contenido.
+1. `BackgroundFetchIntervalNever`-indique al sistema que no recupere nunca el nuevo contenido. Use esta opción para desactivar la captura en determinadas situaciones, por ejemplo, cuando el usuario no ha iniciado sesión. Este es el valor predeterminado para el intervalo de captura. 
+1. `BackgroundFetchIntervalMinimum`: permita que el sistema decida con qué frecuencia se realiza la captura en función de los patrones de usuario, la duración de la batería, el uso de los datos y las necesidades de otras aplicaciones.
+1. `BackgroundFetchIntervalCustom`: si sabe con qué frecuencia se actualiza el contenido de una aplicación, puede especificar un intervalo de "suspensión" después de cada captura, durante el cual la aplicación no podrá obtener contenido nuevo. Una vez que ese intervalo está activo, el sistema determinará cuándo se debe capturar el contenido.
 
-`BackgroundFetchIntervalMinimum` Y`BackgroundFetchIntervalCustom` dependen del sistema para programar las capturas. Este intervalo es dinámico, lo que se adapta a las necesidades del dispositivo, así como a los hábitos del usuario individual. Por ejemplo, si un usuario comprueba una aplicación cada mañana y otro comprueba cada hora, iOS garantizará que el contenido esté actualizado para ambos usuarios cada vez que abra la aplicación.
+Tanto `BackgroundFetchIntervalMinimum` como `BackgroundFetchIntervalCustom` dependen del sistema para programar las capturas. Este intervalo es dinámico, lo que se adapta a las necesidades del dispositivo, así como a los hábitos del usuario individual. Por ejemplo, si un usuario comprueba una aplicación cada mañana y otro comprueba cada hora, iOS garantizará que el contenido esté actualizado para ambos usuarios cada vez que abra la aplicación.
 
 La captura en segundo plano debe usarse para las aplicaciones que se actualizan con frecuencia con contenido no crítico. En el caso de las aplicaciones con actualizaciones críticas, deben usarse notificaciones remotas. Las notificaciones remotas se basan en la captura en segundo plano y comparten el mismo controlador de finalización. A continuación, profundizaremos en las notificaciones remotas.
 
@@ -101,9 +101,9 @@ En iOS 6, las notificaciones de entrada entrantes indican al sistema que avise a
 
 Para implementar notificaciones remotas, edite *info. plist* y active las casillas **Habilitar modos en segundo plano** y **notificaciones remotas** :
 
- [![](updating-an-application-in-the-background-images/remote.png "Modo en segundo plano establecido para habilitar los modos en segundo plano y las notificaciones remotas")](updating-an-application-in-the-background-images/remote.png#lightbox)
+ [![](updating-an-application-in-the-background-images/remote.png "Background Mode set to Enable Background Modes and Remote notifications")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
-A continuación, establezca `content-available` la marca en la notificación de la extracción en 1. Esto permite que la aplicación sepa capturar contenido nuevo antes de mostrar la alerta:
+A continuación, establezca la marca de `content-available` en la notificación de extracción en 1. Esto permite que la aplicación sepa capturar contenido nuevo antes de mostrar la alerta:
 
 ```csharp
 'aps' {
@@ -112,7 +112,7 @@ A continuación, establezca `content-available` la marca en la notificación de 
 }
 ```
 
-En *AppDelegate*, invalide `DidReceiveRemoteNotification` el método para comprobar la carga de notificación del contenido disponible y llamar al bloque del controlador de finalización adecuado:
+En *AppDelegate*, invalide el método de `DidReceiveRemoteNotification` para comprobar la carga de notificación del contenido disponible y llamar al bloque de controladores de finalización adecuado:
 
 ```csharp
 public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
@@ -147,11 +147,11 @@ La diferencia más importante entre las notificaciones normal y silenciosa desde
 
 Sin embargo, APNs permitirá que las notificaciones silenciosas "se superpongan" junto con una respuesta de notificación remota normal o de mantenimiento de conexión. Dado que las notificaciones normales no tienen una velocidad limitada, se pueden usar para enviar notificaciones silenciosas almacenadas desde el APN al dispositivo, tal como se muestra en el diagrama siguiente:
 
- [![](updating-an-application-in-the-background-images/silent.png "Las notificaciones normales se pueden usar para enviar notificaciones silenciosas almacenadas desde el APN al dispositivo, tal como se muestra en este diagrama.")](updating-an-application-in-the-background-images/silent.png#lightbox)
+ [![](updating-an-application-in-the-background-images/silent.png "Regular notifications can be used to push stored silent notifications from the APNs to the device, as illustrated by this diagram")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > Apple anima a los desarrolladores a que envíen notificaciones push silenciosas cada vez que la aplicación lo requiera y permiten que APNs Programe su entrega.
 
 En esta sección, hemos tratado las diversas opciones para actualizar el contenido en segundo plano para ejecutar tareas que no se ajustan a una categoría necesaria para el fondo. Ahora, vamos a ver algunas de estas API en acción.
 
- [Siguiente: Parte 4: tutoriales de fondo de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Siguiente: parte 4: tutoriales de fondo de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

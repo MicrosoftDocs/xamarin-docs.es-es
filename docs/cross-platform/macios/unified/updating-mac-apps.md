@@ -3,15 +3,15 @@ title: Actualización de aplicaciones Mac existentes
 description: En este documento se describen los pasos que deben seguirse para actualizar una aplicación de Xamarin. Mac desde el Classic API al Unified API.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 43498c0609fdbe6dba59b9ed5926c9c58b72d4db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4590e5d987acbb5bd97b41477e6aafa7c17d7778
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280876"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015320"
 ---
 # <a name="updating-existing-mac-apps"></a>Actualización de aplicaciones Mac existentes
 
@@ -31,16 +31,16 @@ Antes de actualizar el código existente al Unified API, se recomienda encarecid
 
 Una vez que se hayan corregido las advertencias, seleccione un proyecto de Mac existente en Visual Studio para Mac o Visual Studio y elija **migrar a Xamarin. Mac Unified API** en el menú **proyecto** . Por ejemplo:
 
-![](updating-mac-apps-images/beta-tool1.png "Elija migrar a Xamarin. Mac Unified API en el menú proyecto.")
+![](updating-mac-apps-images/beta-tool1.png "Choose Migrate to Xamarin.Mac Unified API from the Project menu")
 
 Deberá aceptar esta advertencia antes de que se ejecute la migración automática (obviamente, debe asegurarse de que tiene copias de seguridad o control de código fuente antes de embarcarse en esta aventura):
 
-![](updating-mac-apps-images/migrate01.png "Aceptar esta advertencia antes de que se ejecute la migración automatizada")
+![](updating-mac-apps-images/migrate01.png "Agree to this warning before the automated migration will run")
 
 Hay dos tipos de plataforma de destino admitidos que se pueden seleccionar al usar el Unified API en una aplicación de Xamarin. Mac:
 
 - **Entorno móvil de Xamarin. Mac** : es el mismo .NET Framework optimizado que usa Xamarin. iOS y Xamarin. Android, lo que admite un subconjunto del marco de trabajo de **escritorio** completo. Este es el marco de trabajo recomendado porque proporciona archivos binarios más pequeños debido a un comportamiento de vinculación superior.
-- **SDK de Xamarin. Mac .net 4,5** : este marco de trabajo vuelve a ser un subconjunto del marco de trabajo de **escritorio** . Sin embargo, recorta mucho menos el marco de trabajo de **escritorio** completo que el marco **móvil** y debe _"simplemente trabajar"_ con la mayoría de los paquetes de NuGet o bibliotecas de terceros. Esto permite al desarrollador consumir ensamblados de **escritorio** estándar mientras sigue usando un marco compatible, pero esta opción genera agrupaciones de aplicaciones más grandes. Este es el marco recomendado en el que se usan ensamblados .NET de terceros que no son compatibles con el **marco móvil de Xamarin. Mac**. Para obtener una lista de los ensamblados admitidos , consulte la documentación de los [ensamblados](~/cross-platform/internals/available-assemblies.md).
+- **SDK de Xamarin. Mac .net 4,5** : este marco de trabajo vuelve a ser un subconjunto del marco de trabajo de **escritorio** . Sin embargo, recorta mucho menos el marco de trabajo de **escritorio** completo que el marco **móvil** y debe _"simplemente trabajar"_ con la mayoría de los paquetes de NuGet o bibliotecas de terceros. Esto permite al desarrollador consumir ensamblados de **escritorio** estándar mientras sigue usando un marco compatible, pero esta opción genera agrupaciones de aplicaciones más grandes. Este es el marco recomendado en el que se usan ensamblados .NET de terceros que no son compatibles con el **marco móvil de Xamarin. Mac**. Para obtener una lista de los ensamblados admitidos, consulte la documentación de los [ensamblados](~/cross-platform/internals/available-assemblies.md) .
 
 Para obtener información detallada sobre las plataformas de destino y las implicaciones de seleccionar un destino específico para su aplicación de Xamarin. Mac, consulte nuestra documentación sobre las [plataformas de destino](~/mac/platform/target-framework.md) . 
 
@@ -50,17 +50,17 @@ Básicamente, la herramienta automatiza todos los pasos descritos en la sección
 
 Una vez que se han corregido las advertencias, siga estos pasos para actualizar manualmente las aplicaciones de Xamarin. Mac para usar el nuevo Unified API:
 
-### <a name="1-update-project-type--build-target"></a>1. Actualizar el tipo de proyecto & destino de compilación
+### <a name="1-update-project-type--build-target"></a>1. actualizar el tipo de proyecto & destino de compilación
 
-Cambie el tipo de proyecto en los archivos csproj `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` de `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`a. Edite el archivo **csproj** en un editor de texto, reemplazando el primer `<ProjectTypeGuids>` elemento del elemento como se muestra a continuación:
+Cambie el tipo de proyecto en los archivos **csproj** de `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` a `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`. Edite el archivo **csproj** en un editor de texto, reemplazando el primer elemento del elemento `<ProjectTypeGuids>` como se muestra a continuación:
 
-![](updating-mac-apps-images/csproj.png "Edite el archivo csproj en un editor de texto, reemplazando el primer elemento del elemento ProjectTypeGuids como se muestra")
+![](updating-mac-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
 
-Cambie el elemento **Import** que contiene `Xamarin.Mac.targets` a `Xamarin.Mac.CSharp.targets` , como se muestra a continuación:
+Cambie el elemento **Import** que contiene `Xamarin.Mac.targets` a `Xamarin.Mac.CSharp.targets` como se muestra a continuación:
 
-![](updating-mac-apps-images/csproj2.png "Cambie el elemento Import que contiene Xamarin. Mac. targets a Xamarin. Mac. CSharp. targets tal como se muestra")
+![](updating-mac-apps-images/csproj2.png "Change the Import element that contains Xamarin.Mac.targets to Xamarin.Mac.CSharp.targets as shown")
 
-Agregue las siguientes líneas de código después del `<AssemblyName>` elemento:
+Agregue las siguientes líneas de código después del elemento `<AssemblyName>`:
 
 ```xml
 <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -70,33 +70,33 @@ Agregue las siguientes líneas de código después del `<AssemblyName>` elemento
 
 Ejemplo:
 
-![Agregue estas líneas de código después del \<elemento AssemblyName >](updating-mac-apps-images/csproj3.png)
+![Agregue estas líneas de código después del elemento \<AssemblyName >](updating-mac-apps-images/csproj3.png)
 
-### <a name="2-update-project-references"></a>2. Actualizar referencias de proyecto
+### <a name="2-update-project-references"></a>2. actualizar las referencias del proyecto
 
 Expanda el nodo **referencias** del proyecto de aplicación Mac. Inicialmente, mostrará una referencia * broked- **XamMac** similar a esta captura de pantalla (porque simplemente hemos cambiado el tipo de proyecto):
 
-![](updating-mac-apps-images/references.png "Inicialmente mostrará una referencia rota-XamMac similar a esta captura de pantalla")
+![](updating-mac-apps-images/references.png "It will initially show a broken- XamMac reference similar to this screenshot")
 
 Haga clic en el **icono de engranaje** situado junto a la entrada **XamMac** y seleccione **eliminar** para quitar la referencia rota.
 
 A continuación, haga clic con el botón derecho en la carpeta **referencias** en el **Explorador de soluciones** y seleccione **Editar referencias**. Desplácese hasta la parte inferior de la lista de referencias y coloque una comprobación además de **Xamarin. Mac**.
 
-![](updating-mac-apps-images/references2.png "Desplácese hasta la parte inferior de la lista de referencias y coloque una comprobación además de Xamarin. Mac.")
+![](updating-mac-apps-images/references2.png "Scroll to the bottom of the list of references and place a check besides Xamarin.Mac")
 
 Presione **Aceptar** para guardar los cambios de las referencias del proyecto.
 
-### <a name="3-remove-monomac-from-namespaces"></a>3. Quitar MonoMac de los espacios de nombres
+### <a name="3-remove-monomac-from-namespaces"></a>3. quitar MonoMac de los espacios de nombres
 
-Quite el prefijo **MonoMac** de los espacios `using` de nombres de las instrucciones o cualquier lugar en el que se haya calificado un nombre de clase completo (por ejemplo, `MonoMac.AppKit`solo `AppKit`se convierte en).
+Quite el prefijo **MonoMac** de los espacios de nombres en `using` instrucciones o en cualquier lugar en el que haya un nombre de clase completo (por ejemplo, `MonoMac.AppKit` simplemente se `AppKit`).
 
-### <a name="4-remap-types"></a>4. Tipos de reasignación
+### <a name="4-remap-types"></a>4. reasignar tipos
 
-Se han introducido [tipos nativos](~/cross-platform/macios/nativetypes.md) que reemplazan a algunos tipos que se usaron previamente, como `System.Drawing.RectangleF` instancias `CoreGraphics.CGRect` de con (por ejemplo,). La lista completa de tipos se puede encontrar en la página [tipos nativos](~/cross-platform/macios/nativetypes.md) .
+Se han introducido [tipos nativos](~/cross-platform/macios/nativetypes.md) que reemplazan algunos tipos que se usaron previamente, como instancias de `System.Drawing.RectangleF` con `CoreGraphics.CGRect` (por ejemplo). La lista completa de tipos se puede encontrar en la página [tipos nativos](~/cross-platform/macios/nativetypes.md) .
 
-### <a name="5-fix-method-overrides"></a>5. Corregir invalidaciones de método
+### <a name="5-fix-method-overrides"></a>5. corregir invalidaciones de método
 
-Algunos `AppKit` métodos han cambiado su firma para usar los nuevos [tipos nativos](~/cross-platform/macios/nativetypes.md) ( `nint`como). Si las subclases personalizadas invalidan estos métodos, las firmas dejarán de coincidir y producirán errores. Corrija estas invalidaciones de método cambiando la subclase para que coincida con la nueva firma mediante tipos nativos. 
+Algunos métodos `AppKit` han cambiado su firma para usar los nuevos [tipos nativos](~/cross-platform/macios/nativetypes.md) (por ejemplo, `nint`). Si las subclases personalizadas invalidan estos métodos, las firmas dejarán de coincidir y producirán errores. Corrija estas invalidaciones de método cambiando la subclase para que coincida con la nueva firma mediante tipos nativos. 
 
 ## <a name="considerations"></a>Consideraciones
 
