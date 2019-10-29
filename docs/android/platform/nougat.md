@@ -4,15 +4,15 @@ description: Cómo empezar a usar Xamarin. Android para desarrollar aplicaciones
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 128982abdee7a0fea8df79f7b7b9ecd6a290775a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761257"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027088"
 ---
 # <a name="nougat-features"></a>Características de nougat
 
@@ -24,18 +24,18 @@ En este artículo se proporciona un esquema de las características introducidas
 
 [Android nougat](https://developer.android.com/about/versions/nougat/android-7.0.html) es el seguimiento de Google para Android 6,0 Marshmallow. Xamarin. Android proporciona compatibilidad con **enlaces Android 7. x** en Xamarin Android 7,0 y versiones posteriores. Android nougat agrega muchas API nuevas para las características de nougat que se describen a continuación: estas API están disponibles para las aplicaciones de Xamarin. Android cuando se usa Xamarin. Android 7,0.
 
-[![Imágenes prominentes de tabletas y teléfonos Android con Android nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
+[![imágenes prominentes de tabletas y teléfonos Android que ejecutan Android nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 Para obtener más información sobre las API de Android 7. x, consulte [android 7,1 para desarrolladores](https://developer.android.com/preview/api-overview.html).
 Para obtener una lista de problemas conocidos de Xamarin. Android 7,0, consulte las notas de la [versión](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
 Android nougat proporciona muchas características nuevas de interés para los desarrolladores de Xamarin. Android. Entre ellas se incluyen:
 
-- **Compatibilidad con varias ventanas** &ndash; Esta mejora permite a los usuarios abrir dos aplicaciones en la pantalla al mismo tiempo.
+- La **compatibilidad con varias ventanas** &ndash; esta mejora permite a los usuarios abrir dos aplicaciones en la pantalla de una vez.
 
-- **Mejoras en las notificaciones** El sistema de notificaciones rediseñada en Android nougat incluye una característica de *respuesta directa* que permite a los usuarios responder rápidamente a los mensajes de texto directamente desde la interfaz de usuario de notificaciones. &ndash; Además, si la aplicación crea notificaciones para los mensajes recibidos, la nueva característica de *notificaciones integradas* puede agrupar las notificaciones como un solo grupo cuando se recibe más de un mensaje.
+- Las mejoras de las **notificaciones** &ndash; el sistema de notificaciones rediseñada en Android nougat incluye una característica de *respuesta directa* que permite a los usuarios responder rápidamente a los mensajes de texto directamente desde la interfaz de usuario de notificaciones. Además, si la aplicación crea notificaciones para los mensajes recibidos, la nueva característica de *notificaciones integradas* puede agrupar las notificaciones como un solo grupo cuando se recibe más de un mensaje.
 
-- **Protector de datos** &ndash; Esta característica es un nuevo servicio del sistema que ayuda a reducir el uso de datos móviles por parte de las aplicaciones; ofrece a los usuarios el control sobre cómo usan los datos móviles los datos de las aplicaciones.
+- El **protector de datos** &ndash; esta característica es un nuevo servicio del sistema que ayuda a reducir el uso de datos móviles por parte de las aplicaciones; permite a los usuarios controlar el modo en que las aplicaciones usan datos móviles.
 
 Además, Android nougat ofrece muchas otras mejoras de interés para los desarrolladores de aplicaciones, como una nueva característica de configuración de seguridad de red, Doze sobre la marcha, atestación de clave, nuevas API de configuración rápida, compatibilidad con múltiples configuraciones regionales, API de ICU4J, mejoras de WebView, acceso a las características del lenguaje Java 8, acceso a directorios de ámbito, una API de puntero personalizada, compatibilidad con plataforma VR, archivos virtuales y optimizaciones de procesamiento en segundo plano.
 
@@ -45,13 +45,13 @@ En este artículo se explica cómo empezar a compilar aplicaciones con Android n
 
 Para usar las nuevas características de Android nougat en aplicaciones basadas en Xamarin, se requiere lo siguiente:
 
-- **Visual Studio o Visual Studio para Mac** &ndash; Si usa Visual Studio, se requiere la versión 4.2.0.628 o posterior de Visual Studio Tools para Xamarin. Si usa Visual Studio para Mac, se requiere la versión 6.1.0 o posterior de Visual Studio para Mac.
+- **Visual Studio o Visual Studio para Mac** &ndash; si usa Visual Studio, se requiere la versión 4.2.0.628 o posterior de Visual Studio Tools para Xamarin. Si usa Visual Studio para Mac, se requiere la versión 6.1.0 o posterior de Visual Studio para Mac.
 
-- **Xamarin. Android** &ndash; Xamarin. Android 7,0 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac.
+- **Xamarin. android** &ndash; Xamarin. Android 7,0 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac.
 
 - **Android SDK** Android SDK 7,0 (API 24) o posterior debe instalarse a través del administrador de Android SDK.
 
-- **Kit para desarrolladores de Java** El desarrollo de Xamarin Android 7,0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 8 también admite niveles de API anteriores a 24). &ndash; Se requiere la versión de 64 bits de JDK 8 Si usa controles personalizados o la vista previa de formularios.
+- El **Kit para desarrolladores de Java** &ndash; desarrollo de Xamarin Android 7,0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 8 también admite niveles de API anteriores a 24). Se requiere la versión de 64 bits de JDK 8 Si usa controles personalizados o la vista previa de formularios.
 
 > [!IMPORTANT]
 > Xamarin.Android no admite JDK 9.
@@ -80,21 +80,21 @@ Para agregar compatibilidad con Xamarin para Android nougat, cambie el canal de 
 
 Para crear un proyecto con Xamarin Android 7,0, primero debe usar el administrador de Android SDK para instalar la **plataforma SDK Android N (API 24)** o posterior. También debe instalar la **Android SDK Tools**más reciente:
 
-1. Inicie el administrador de Android SDK (en Visual Studio para Mac, use **Herramientas > abrir el&hellip;administrador de Android SDK**; en Visual Studio, use **Herramientas > Android > Android SDK Manager**).
+1. Inicie el administrador de Android SDK (en Visual Studio para Mac, use **herramientas > abrir el administrador de Android SDK&hellip;** ; en Visual Studio, use **herramientas > Android > Android SDK Manager**).
 
 2. Instale **Android 7,0 (API 24)** o posterior:
 
-    [![Selección de paquetes de Android 7,0 en el administrador de Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
+    [![seleccionar paquetes de Android 7,0 en el administrador de Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
 3. Instale las herramientas de Android SDK más recientes:
 
-    [![Selección de las herramientas de Android SDK más recientes en el administrador de Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
+    [![seleccionar las herramientas de Android SDK más recientes en el administrador de Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
     Debe instalar Android SDK Tools revisión 25.2.2 o posterior, Android SDK Platform Tools 24.0.3 o posterior y Android SDK Build Tools 24.0.2 o posterior.
 
 4. Compruebe que la **Ubicación del kit de desarrollo de Java** está configurada para JDK 1,8:
 
-    [![Configuración de la ruta de acceso de JDK 8 en herramientas opciones](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
+    [![configuración de la ruta de acceso de JDK 8 en herramientas opciones](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
     Para ver esta configuración en Visual Studio, haga clic en **herramientas > opciones > Xamarin > configuración de Android**. En Visual Studio para Mac, haga clic en **preferencias > proyectos > ubicaciones del SDK > Android**.
 
@@ -113,11 +113,11 @@ Si usa un emulador, inicie Android AVD Manager y cree un nuevo dispositivo con l
 
 - Dispositivo: Nexus 5X, Nexus 6, el 6P de Nexus, el jugador de Nexus, el Nexus 9 o el píxel C.
 - Destino: Android 7,0-nivel de API 24
-- Abi: x86 o x86\_64
+- ABI: x86 o x86\_64
 
 Por ejemplo, este dispositivo virtual está configurado para emular un nexo 6:
 
-[![Configuración de AVD con un dispositivo de Nexus 6, destino de Android 7,0 y CPU/ABI x86 de Intel Atom](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
+[![configuración de un AVD mediante un dispositivo de Nexus 6, destino de Android 7,0 y CPU/ABI x86 de Intel Atom](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
 
 Si usa un dispositivo físico, como un nexo de Nexus 5, 6 o 9, puede actualizar el dispositivo a través de las actualizaciones automáticas por aire (OTA) o descargar una imagen del sistema y hacer que el dispositivo parpadee directamente. Para obtener más información sobre cómo actualizar manualmente el dispositivo a Android nougat, consulte [imágenes de OTA para dispositivos Nexus](https://developers.google.com/android/nexus/ota).
 
@@ -132,9 +132,9 @@ Android nougat presenta una variedad de características y funcionalidades nueva
 El modo de varias ventanas permite a los usuarios abrir dos aplicaciones a la vez con una compatibilidad completa con varias tareas. Estas aplicaciones pueden ejecutarse en paralelo (horizontal) o una por encima de la otra (vertical) en el modo de pantalla dividida.
 Los usuarios pueden arrastrar un divisor entre las aplicaciones para cambiar su tamaño y pueden cortar y pegar contenido entre las aplicaciones. Cuando se presentan dos aplicaciones en el modo de varias ventanas, la actividad seleccionada continúa ejecutándose mientras la actividad no seleccionada se pausa pero sigue estando visible. El modo de varias ventanas no modifica el ciclo de vida de la actividad de Android.
 
-[![Aplicaciones de ejemplo que se ejecutan en modo de varias ventanas en vertical y horizontal](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
+[![aplicaciones de ejemplo que se ejecutan en modo de varias ventanas en vertical y horizontal](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-Puede configurar cómo las actividades de la aplicación de Xamarin. Android admiten el modo de varias ventanas. Por ejemplo, puede configurar atributos que establezcan el tamaño mínimo y el alto y ancho predeterminados de la aplicación en el modo de varias ventanas. Puede usar la nueva `Activity.IsInMultiWindowMode` propiedad para determinar si la actividad está en modo de varias ventanas. Por ejemplo:
+Puede configurar cómo las actividades de la aplicación de Xamarin. Android admiten el modo de varias ventanas. Por ejemplo, puede configurar atributos que establezcan el tamaño mínimo y el alto y ancho predeterminados de la aplicación en el modo de varias ventanas. Puede usar la nueva propiedad `Activity.IsInMultiWindowMode` para determinar si la actividad está en modo de varias ventanas. Por ejemplo:
 
 ```csharp
 if (!IsInMultiWindowMode) {
@@ -157,7 +157,7 @@ Android nougat introduce un sistema de notificación rediseñado. Incluye una nu
 Cuando un usuario recibe una notificación de mensaje entrante, Android nougat hace posible responder al mensaje dentro de la notificación (en lugar de abrir la aplicación de mensajería para enviar una respuesta).
 Esta característica de respuesta en línea permite a los usuarios responder rápidamente a un mensaje SMS o de texto directamente dentro de la interfaz de notificación:
 
-[![Captura de pantalla de una notificación con un campo de respuesta directa en línea](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
+[![captura de pantalla de una notificación con un campo de respuesta directa en línea](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
 
 Para admitir esta característica en la aplicación, debe agregar *acciones de respuesta en línea* a la aplicación a través de un objeto [RemoteInput](xref:Android.App.RemoteInput) para que los usuarios puedan responder a través del texto directamente desde la interfaz de usuario de notificaciones.
 Por ejemplo, el código siguiente genera un `RemoteInput` para recibir la entrada de texto, crea un intento pendiente para la acción de respuesta y crea una acción de entrada remota habilitada:
@@ -191,14 +191,14 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-La aplicación de ejemplo del servicio C# de `RemoteInput` [Mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) incluye código que muestra cómo extender las notificaciones con un objeto. Para obtener más información sobre cómo agregar acciones de respuesta en línea a la aplicación para Android 7,0 o posterior, consulte el tema respuesta de Android [a las notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) .
+La aplicación de ejemplo del servicio C# de [Mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) incluye código que muestra cómo extender las notificaciones con un objeto`RemoteInput`. Para obtener más información sobre cómo agregar acciones de respuesta en línea a la aplicación para Android 7,0 o posterior, consulte el tema respuesta de Android [a las notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) .
 
 #### <a name="bundled-notifications"></a>Notificaciones agrupadas
 
 Los Nougats de Android pueden agrupar los mensajes de notificación juntos (por ejemplo, por tema de mensaje) y mostrar el grupo en lugar de cada mensaje independiente.
 Esta característica de *notificaciones integradas* permite a los usuarios descartar o archivar un grupo de notificaciones en una acción. El usuario puede desplazarse hacia abajo para expandir el paquete de notificaciones para ver cada notificación en detalle:
 
-[![Ejemplo de captura de pantalla de notificaciones integradas](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
+[![captura de pantalla de ejemplo de notificaciones integradas](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 Para admitir notificaciones integradas, la aplicación puede usar el método [Builder. SetGroup](xref:Android.App.Notification.Builder.SetGroup*) para agrupar notificaciones similares. Para obtener más información sobre los grupos de notificación agrupados en Android N, vea el tema sobre las [notificaciones de empaquetado](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle) de Android.
 
@@ -215,10 +215,10 @@ Para obtener más información sobre la nueva característica de protector de da
 ### <a name="app-shortcuts"></a>Accesos directos a aplicaciones
 
 Android 7,1 presentó una característica de *accesos directos de aplicaciones* que permite a los usuarios iniciar rápidamente tareas comunes o recomendadas con la aplicación.
-Para activar el menú de accesos directos, el usuario presiona el icono de aplicación para un segundo o más &ndash; el menú aparece con una vibración rápida.
+Para activar el menú de accesos directos, el usuario presiona el icono de la aplicación para un segundo o más &ndash; el menú aparece con una vibración rápida.
 La liberación de la prensa hace que el menú permanezca:
 
-[![Pantalla de ejemplo de un menú contextual de aplicación para una aplicación de mensajería](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
+[![pantalla de ejemplo de un menú contextual de aplicación para una aplicación de mensajería](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
 Esta característica solo está disponible en el nivel de API 25 o superior.
 Para obtener más información sobre la nueva característica de accesos directos de aplicación en Android 7,1, vea el tema sobre [accesos directos a aplicaciones](https://developer.android.com/guide/topics/ui/shortcuts.html) de Android.
@@ -229,11 +229,11 @@ Hay varios ejemplos de Xamarin. Android disponibles para mostrarle cómo sacar p
 
 - [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) muestra el uso de la API de varias ventanas disponible en Android nougat. Puede cambiar la aplicación de ejemplo en modo de varias ventanas para ver cómo afecta al ciclo de vida y el comportamiento de la aplicación.
 
-- El [servicio de mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) es un servicio sencillo que envía notificaciones `NotificationCompatManager`mediante el. También extiende la notificación con un `RemoteInput` objeto para permitir que los dispositivos nougat de Android respondan a través del texto directamente de la notificación sin tener que abrir una aplicación.
+- El [servicio de mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) es un servicio sencillo que envía notificaciones mediante el `NotificationCompatManager`. También extiende la notificación con un objeto `RemoteInput` para permitir que los dispositivos Android nougat respondan a través del texto directamente de la notificación sin tener que abrir una aplicación.
 
-- [Notificaciones activas](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) muestra cómo usar la API `NotificationManager` para indicarle el número de notificaciones que se muestran actualmente en la aplicación.
+- [Notificaciones activas](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) muestra cómo usar la API de `NotificationManager` para indicarle el número de notificaciones que se muestran actualmente en la aplicación.
 
-- [Acceso a directorios con ámbito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Muestra cómo usar la API de acceso a directorios de ámbito para acceder fácilmente a directorios específicos. Esto sirve como alternativa a tener que definir `READ_EXTERNAL_STORAGE` permisos o `WRITE_EXTERNAL_STORAGE` en el manifiesto.
+- [Acceso a directorios con ámbito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Muestra cómo usar la API de acceso a directorios de ámbito para acceder fácilmente a directorios específicos. Esto sirve como alternativa a tener que definir `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` permisos en el manifiesto.
 
 - [Arranque directo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Muestra cómo almacenar los datos en un almacenamiento cifrado de dispositivo que siempre está disponible mientras el dispositivo se arranca antes y después de que se escriban las credenciales de usuario (PIN/patrón/contraseña).
 

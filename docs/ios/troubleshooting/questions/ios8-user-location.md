@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9BE92C99-C9C5-427E-ADE4-789DF258BACE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 4b7f4239f97b7199f9b0eb7f1be9907a2c54cb0b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 548ea296ca1bc48ec2b5de7918a49b5bc1a55c3f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288105"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031045"
 ---
 # <a name="user-location-not-working-in-ios-8"></a>La ubicación de usuario no funciona en iOS 8
 
