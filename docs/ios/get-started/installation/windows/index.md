@@ -5,15 +5,15 @@ zone_pivot_groups: platform-win
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: 53f244521e4b916078bdcbaa02f1a79a919be0c4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d638bf17d2a4ea23134a2d4ed335637f67e46ff7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291304"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022452"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Instalación de Xamarin.iOS en Windows
 

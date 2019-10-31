@@ -4,15 +4,15 @@ description: Android Emulator se puede ejecutar en varias configuraciones para s
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: cb8dc64a8c40496aaf2ea23a834effb58436618a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 148afe5354d7995f15dc19c6257ed2a1567162ec
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759086"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027951"
 ---
 # <a name="android-emulator-setup"></a>Configuración de Android Emulator
 

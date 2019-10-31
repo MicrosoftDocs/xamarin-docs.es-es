@@ -4,15 +4,15 @@ description: Esta guía contiene vínculos a instrucciones que describen cómo i
 ms.prod: xamarin
 ms.assetid: 625A0933-47A5-6184-3AD5-7E1C8464AEBD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 815c706c6196b122b9c08b041e8d2578346dffae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4c7ace8f2f1080126d019ed30a647ced98cbde56
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292611"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022504"
 ---
 # <a name="installing-and-configuring-xamarinios-on-a-mac"></a>Instalación y configuración de Xamarin.iOS en un equipo Mac
 

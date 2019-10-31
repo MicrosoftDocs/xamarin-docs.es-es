@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a diversas guías en las que se d
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: ae4704c2b1ab97b3e0f396b2402005366e97fe92
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: bc7a5217f3260eb36e45a683b5520347c22641b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290134"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016385"
 ---
 # <a name="building-mobile-apps"></a>Creación de aplicaciones móviles
 

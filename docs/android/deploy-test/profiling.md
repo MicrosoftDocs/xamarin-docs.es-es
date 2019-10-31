@@ -5,15 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8C823FEE-A6F6-4C31-9EB6-E51407A2FD8E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753989"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027987"
 ---
 # <a name="profiling-android-apps"></a>Generar perfiles de aplicaciones Android
 

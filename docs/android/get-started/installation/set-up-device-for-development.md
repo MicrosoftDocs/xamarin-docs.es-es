@@ -4,15 +4,15 @@ description: En este artículo se explica cómo configurar un dispositivo Androi
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925058"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020715"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -71,7 +71,7 @@ Ejecute la aplicación **android.bat** en el directorio **[ruta de instalación 
 
 ### <a name="download-the-usb-drivers"></a>Descargar los controladores USB
 
-Los dispositivos Google Nexus (a excepción de Galaxy Nexus) requieren el controlador USB de Google. El controlador para Galaxy Nexus [está distribuido por Samsung](http://www.samsung.com/us/support/downloads/).
+Los dispositivos Google Nexus (a excepción de Galaxy Nexus) requieren el controlador USB de Google. El controlador para Galaxy Nexus [está distribuido por Samsung](https://www.samsung.com/us/support/downloads/).
 Todos los demás dispositivos Android deben usar el [controlador USB de su fabricante correspondiente](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Para instalar el paquete del **controlador USB de Google**, inicie Android SDK Manager y expanda la carpeta **Extras**, como se ve en la captura de pantalla siguiente:
@@ -183,7 +183,7 @@ En este artículo se ha descrito cómo configurar un dispositivo Android para el
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [Uso de dispositivos de hardware](https://developer.android.com/tools/device.html)
-- [Descargas de controladores de Samsung](http://www.samsung.com/us/support/downloads/)
+- [Descargas de controladores de Samsung](https://www.samsung.com/us/support/downloads/)
 - [Controladores USB de OEM](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [Controlador USB de Google](https://developer.android.com/sdk/win-usb.html)
-- [Desarrolladores de XDA: problema del controlador ADB/fastboot resuelto en Windows 8](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [Desarrolladores de XDA: problema del controlador ADB/fastboot resuelto en Windows 8](https://forum.xda-developers.com/showthread.php?t=1583801)

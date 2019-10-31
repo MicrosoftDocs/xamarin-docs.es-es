@@ -5,15 +5,15 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: d5de743cdbef1358450a2f358acb86dce2d373c7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 675e6cebab95d2a997bf48a6c9231b5e8c661342
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758013"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020841"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solución de problemas de Android Emulator
 
@@ -39,7 +39,7 @@ Si se ve un error al instalar el APK en el emulador o al ejecutar Android Debug 
    adb devices
    ```
 
-4. Si el emulador es accesible desde Android SDK, el emulador debe aparecer en la lista de dispositivos conectados. Por ejemplo: 
+4. Si el emulador es accesible desde Android SDK, el emulador debe aparecer en la lista de dispositivos conectados. Por ejemplo:
 
    ```shell
    List of devices attached
@@ -375,7 +375,7 @@ Si se ve un error al instalar el APK en el emulador o al ejecutar Android Debug 
    adb devices
    ```
 
-4. Si el emulador es accesible desde Android SDK, el emulador debe aparecer en la lista de dispositivos conectados. Por ejemplo: 
+4. Si el emulador es accesible desde Android SDK, el emulador debe aparecer en la lista de dispositivos conectados. Por ejemplo:
 
    ```shell
    List of devices attached

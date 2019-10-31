@@ -4,15 +4,15 @@ description: En este documento se ofrece una introducción a las técnicas de di
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ca524e9ff3c1d3c938905093f55a6482ea085963
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 74e258eeca78260fbfe3811e1dc6d8051e68e5f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763202"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030253"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribución ad hoc para aplicaciones Xamarin.iOS
 

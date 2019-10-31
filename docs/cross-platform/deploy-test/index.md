@@ -3,15 +3,15 @@ title: Implementación y depuración
 description: Este documento contiene vínculos a guías que proporcionan detalles sobre cómo trabajar con la depuración de varios procesos y configuraciones del vinculador personalizadas.
 ms.prod: xamarin
 ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/22/2018
-ms.openlocfilehash: e38a83e280f362eed9bde67901f7731658c6e57b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e323f0c7454cb595d8debb0e2fb227605c77c400
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280491"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016558"
 ---
 # <a name="deployment--debugging"></a>Implementación y depuración
 

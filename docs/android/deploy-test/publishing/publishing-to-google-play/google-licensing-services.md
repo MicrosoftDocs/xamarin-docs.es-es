@@ -3,15 +3,15 @@ title: Servicios de licencia de Google
 ms.prod: xamarin
 ms.assetid: E96BDCC3-454A-A797-5819-905E2BB1AC41
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/20/2017
-ms.openlocfilehash: 934cc5124c71f631def0d534420cf75a12ee4079
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4cc7f3b36c43d9c9bb611b7d669f8304aab05820
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753593"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021263"
 ---
 # <a name="google-licensing-services"></a>Servicios de licencia de Google
 

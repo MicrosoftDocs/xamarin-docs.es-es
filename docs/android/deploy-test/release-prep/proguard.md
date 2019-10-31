@@ -4,15 +4,15 @@ description: ProGuard de Xamarin.Android es un reductor, optimizador y comprobad
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: b85289d9dbd60d5ee0238540e67773ed9085b672
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 854287ec22fb89ec2f0a55f8c3854dc0106fb11a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249969"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021164"
 ---
 # <a name="proguard"></a>ProGuard
 

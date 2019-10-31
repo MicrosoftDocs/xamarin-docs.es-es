@@ -3,15 +3,15 @@ title: Rendimiento multiplataforma
 description: En este documento se describen diversas técnicas que pueden usarse para mejorar el rendimiento de una aplicación móvil. Además, analiza el generador de perfiles, el recurso IDisposable, las referencias débiles, el recolector de elementos no utilizados SGen, las técnicas de reducción de tamaño y mucho más.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016526"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -331,7 +331,7 @@ Los siguientes pasos pueden usarse para reducir aún más el tamaño del archivo
 - Reduzca el tamaño del código administrado de la aplicación. Esto se puede lograr si se habilita el enlazador en cada ensamblado (*Link All (Vincular todos)* para proyectos de iOS y *Link all assemblies (Vincular todos los ensamblados)* para proyectos de Android).
 
 Las aplicaciones de Android también se pueden dividir en un APK independiente para cada ABI ("arquitectura").
-Obtenga más información en la entrada de blog: [How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down) (Cómo reducir el tamaño de una aplicación de Android).
+Obtenga más información en la entrada de blog: [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/) (Cómo reducir el tamaño de una aplicación de Android).
 
 <a name="optimizeimages" />
 

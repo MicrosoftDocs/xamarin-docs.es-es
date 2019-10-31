@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a diversas guías en las que se d
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/17/2018
-ms.openlocfilehash: 13a6d46a1c9193a91030f2d90c167fb14d7cae7c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9623e91589c6ba094dda5a7fcd081219f5d25fd2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291498"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030032"
 ---
 # <a name="deploying-and-testing-xamarinmac-apps"></a>Implementar y probar aplicaciones Xamarin.Mac
 

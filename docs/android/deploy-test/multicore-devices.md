@@ -4,15 +4,15 @@ description: Android puede ejecutarse en varias arquitecturas de equipo diferent
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028013"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
@@ -140,7 +140,7 @@ Después de la instalación, el directorio de bibliotecas nativas contendrá:
 $APP/lib/libtwo.so # from the armeabi-v7a directory in the apk
 ```
 
-En otras palabras, no se instala ningún archivo `libone.so`. Como consecuencia, se producen problemas, dado que `libone.so` no existe para que la aplicación se cargue en tiempo de ejecución. Este comportamiento, aunque inesperado, se ha registrado como un error y se vuelve a clasificar como que [funciona según lo esperado](http://code.google.com/p/android/issues/detail?id=9089).
+En otras palabras, no se instala ningún archivo `libone.so`. Como consecuencia, se producen problemas, dado que `libone.so` no existe para que la aplicación se cargue en tiempo de ejecución. Este comportamiento, aunque inesperado, se ha registrado como un error y se vuelve a clasificar como que [funciona según lo esperado](https://code.google.com/p/android/issues/detail?id=9089).
 
 Por lo tanto, cuando el destino son versiones de Android anteriores a la 4.0, es necesario proporcionar *todas* las bibliotecas nativas para *cada* ABI que admita la aplicación, es decir, el archivo `.apk` debe contener:
 
@@ -174,7 +174,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-Lamentablemente, este comportamiento depende del orden, tal como se describe en el documento [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en el apk](http://code.google.com/p/android/issues/detail?id=25321).
+Lamentablemente, este comportamiento depende del orden, tal como se describe en el documento [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en el apk](https://code.google.com/p/android/issues/detail?id=25321).
 
 Las bibliotecas nativas se procesan "en orden" (como se enumeran al descomprimir, por ejemplo) y se extrae la *primera coincidencia*. Dado que el archivo `.apk` contiene las versiones `armeabi` y `armeabi-v7a` de `libtwo.so`, y `armeabi` se muestra en primer lugar, la versión que se extrae es `armeabi` y *no* la versión `armeabi-v7a`:
 
@@ -255,5 +255,5 @@ Luego, se pasa a describir cómo especificar la compatibilidad con ABI en una ap
 
 - [ABI para la arquitectura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [NDK de Android](https://developer.android.com/tools/sdk/ndk/index.html)
-- [Problema 9089: Nexus One no carga ninguna biblioteca nativa de armeabi si hay al menos una biblioteca en armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en el apk](http://code.google.com/p/android/issues/detail?id=25321).
+- [Problema 9089: Nexus One no carga ninguna biblioteca nativa de armeabi si hay al menos una biblioteca en armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
+- [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en el apk](https://code.google.com/p/android/issues/detail?id=25321).

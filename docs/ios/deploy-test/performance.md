@@ -4,15 +4,15 @@ description: Este documento describe las técnicas que pueden usarse para mejora
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/29/2016
-ms.openlocfilehash: b41916a65e091fb7d5198a6f06a5e91aa9d6bb81
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292338"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030201"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -211,11 +211,11 @@ class MyChild : UIView
 ```
 
 Para más información sobre la liberación de las referencias fuertes, vea [Liberar los recursos de IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
-También hay una excelente explicación en esta entrada de blog: [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, el recolector de elementos no utilizados y yo).
+También hay una excelente explicación en esta entrada de blog: [Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, el recolector de elementos no utilizados y yo).
 
 ### <a name="more-information"></a>Más información
 
-Para más información, vea [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Reglas para evitar ciclos de retención) en Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (¿Esto es un error en MonoTouch GC) en StackOverflow y [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (¿Por qué no puede MonoTouch GC eliminar objetos administrados con refcount > 1?) en StackOverflow.
+Para más información, vea [Rules to Avoid Retain Cycles](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Reglas para evitar ciclos de retención) en Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (¿Esto es un error en MonoTouch GC) en StackOverflow y [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (¿Por qué no puede MonoTouch GC eliminar objetos administrados con refcount > 1?) en StackOverflow.
 
 ## <a name="optimize-table-views"></a>Optimizar las vistas de tabla
 

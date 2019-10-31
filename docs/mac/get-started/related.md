@@ -4,15 +4,15 @@ description: 'En este documento se proporcionan vínculos a la documentación re
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b0e9f87505e7537f9c8aeb6f006072feffdbd57
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10450bbb87ed974475001102920ec6fb90cf7976
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278912"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029979"
 ---
 # <a name="xamarinmac-related-documentation"></a>Documentación relacionada con Xamarin.Mac
 

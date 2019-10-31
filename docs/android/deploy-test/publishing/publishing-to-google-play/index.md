@@ -3,15 +3,15 @@ title: Publicación en Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021283"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 

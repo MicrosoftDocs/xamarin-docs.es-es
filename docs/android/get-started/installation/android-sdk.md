@@ -4,15 +4,15 @@ description: Visual Studio incluye Android SDK Manager, que puede usar para desc
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: 9d8b3e68aa626890fdce5c004928541ece263703
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273157"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020812"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuración del SDK de Android para Xamarin.Android
 

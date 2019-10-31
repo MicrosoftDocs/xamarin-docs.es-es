@@ -4,15 +4,15 @@ description: En este artículo se explica cómo depurar una aplicación de Xamar
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: e2542a95ce7b62a017161da4fe206b83202c9085
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e697459b20a481b1d2bada69677647ad4fbd3023
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754146"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021589"
 ---
 # <a name="debug-on-device"></a>Depurar en un dispositivo
 

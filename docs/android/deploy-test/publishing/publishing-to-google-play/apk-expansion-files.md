@@ -3,15 +3,15 @@ title: Archivos de expansión de APK
 ms.prod: xamarin
 ms.assetid: DB7E38E8-3C4E-5191-27EA-22DE63044FE2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: e542336cfd3bf1eac50c343a3edfeb0efa414d0c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 712322435614966348fc5c10cabf724870c307e4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753605"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021294"
 ---
 # <a name="apk-expansion-files"></a>Archivos de expansión de APK
 

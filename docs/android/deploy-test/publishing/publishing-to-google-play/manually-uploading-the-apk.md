@@ -3,15 +3,15 @@ title: Carga manual del APK
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756071"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021250"
 ---
 # <a name="manually-uploading-the-apk"></a>Carga manual del APK
 
@@ -23,11 +23,11 @@ Una vez que se ha compilado el APK y se han preparado los activos promocionales,
 
 [![Google Play Developer Console](manually-uploading-the-apk-images/00-google-play-developer-console-sml.png)](manually-uploading-the-apk-images/00-google-play-developer-console.png#lightbox)
 
-Si ya tiene una aplicación registrada con Google Play, haga clic en el botón **Add new application (Agregar nueva aplicación)**:
+Si ya tiene una aplicación registrada con Google Play, haga clic en el botón **Add new application (Agregar nueva aplicación)** :
 
 [![Botón Add new application (Agregar nueva aplicación)](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png#lightbox)
 
-Cuando aparece el cuadro de diálogo **ADD NEW APPLICATION (AGREGAR NUEVA APLICACIÓN)**, escriba el nombre de la aplicación y haga clic en **Upload APK (Cargar APK)**:
+Cuando aparece el cuadro de diálogo **ADD NEW APPLICATION (AGREGAR NUEVA APLICACIÓN)** , escriba el nombre de la aplicación y haga clic en **Upload APK (Cargar APK)** :
 
 [![Botón Upload APK (Cargar APK)](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png#lightbox)
 
@@ -35,7 +35,7 @@ La pantalla siguiente permite publicar la aplicación para pruebas alfa, pruebas
 
 [![Botón Upload your first APK to Alpha (Cargar nuevo APK en Alfa)](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
 
-Aparece el cuadro de diálogo **UPLOAD NEW APK TO ALPHA (CARGAR NUEVO APK EN ALFA)**. El APK se puede cargar haciendo clic en **Browse files** (Examinar archivos) o arrastrando y soltando el APK: 
+Aparece el cuadro de diálogo **UPLOAD NEW APK TO ALPHA (CARGAR NUEVO APK EN ALFA)** . El APK se puede cargar haciendo clic en **Browse files** (Examinar archivos) o arrastrando y soltando el APK: 
 
 [![Cuadro de diálogo Upload New APK to Alpha (Cargar nuevo APK en Alfa)](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
 
@@ -60,7 +60,7 @@ Haga clic en **Store Listing (Descripción de la tienda)** en **Google Play Deve
 
 ### <a name="graphics-assets"></a>Activos gráficos
 
-Desplácese hacia abajo hasta la sección **GRAPHICS ASSETS (ACTIVOS GRÁFICOS)** de la página **Store Listing (Descripción de la tienda)**:
+Desplácese hacia abajo hasta la sección **GRAPHICS ASSETS (ACTIVOS GRÁFICOS)** de la página **Store Listing (Descripción de la tienda)** :
 
 [![Sección Activos gráficos](manually-uploading-the-apk-images/08-graphic-assets-sml.png)](manually-uploading-the-apk-images/08-graphic-assets.png#lightbox)
 
@@ -76,11 +76,11 @@ La clasificación de contenido se trata después de la sección siguiente.
 
 ### <a name="contact-details"></a>Detalles de contacto
 
-La sección final de esta página es una sección **CONTACT DETAILS (DETALLES DE CONTACTO)**. Se usa para recopilar información de contacto sobre el desarrollador de la aplicación:
+La sección final de esta página es una sección **CONTACT DETAILS (DETALLES DE CONTACTO)** . Se usa para recopilar información de contacto sobre el desarrollador de la aplicación:
 
 [![Sección Detalles de contacto](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
-Es posible proporcionar una dirección URL para la directiva de privacidad de la aplicación en la sección **PRIVACY POLICY (DIRECTIVA DE PRIVACIDAD)**, como se ha indicado arriba.
+Es posible proporcionar una dirección URL para la directiva de privacidad de la aplicación en la sección **PRIVACY POLICY (DIRECTIVA DE PRIVACIDAD)** , como se ha indicado arriba.
 
 ## <a name="content-rating"></a>Clasificación de contenido
 
@@ -88,7 +88,7 @@ Haga clic en **Content Rating (Clasificación de contenido)** en **Google Play D
 
 [![Sección Clasificación de contenido](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
-Todas las aplicaciones de Google Play deben clasificarse según el sistema de clasificación de Google Play. Además de la clasificación de contenido, todas las aplicaciones deben cumplir las [Políticas del Programa para Desarrolladores](http://www.android.com/us/developer-content-policy.html) de Google.
+Todas las aplicaciones de Google Play deben clasificarse según el sistema de clasificación de Google Play. Además de la clasificación de contenido, todas las aplicaciones deben cumplir las [Políticas del Programa para Desarrolladores](https://www.android.com/us/developer-content-policy.html) de Google.
 
 A continuación se muestran los cuatro niveles del sistema de clasificación de Google Play y se proporcionan algunas directrices como características o contenido que exigirían o forzarían el nivel de clasificación: 
 
@@ -130,8 +130,8 @@ Después de esta sección hay opciones adicionales que se pueden seleccionar, co
 
 ### <a name="consent"></a>Consentimiento
 
-En la parte inferior de la página **Pricing &amp; Distribution (Precios y distribución)** está la sección **CONSENT (CONSENTIMIENTO)**.
-Es una sección obligatoria que se usa para declarar que la aplicación se ajusta a las [directrices de contenido de Android](http://www.android.com/market/terms/developer-content-policy.html#hl=us) y que cumple las leyes de exportación de los Estados Unidos:
+En la parte inferior de la página **Pricing &amp; Distribution (Precios y distribución)** está la sección **CONSENT (CONSENTIMIENTO)** .
+Es una sección obligatoria que se usa para declarar que la aplicación se ajusta a las [directrices de contenido de Android](https://www.android.com/market/terms/developer-content-policy.html#hl=us) y que cumple las leyes de exportación de los Estados Unidos:
 
 [![Sección Consent (Consentimiento)](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
@@ -156,13 +156,13 @@ Es posible agregar elementos al manifiesto de la aplicación para ayudar a contr
 
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html): este elemento del manifiesto declara características de hardware o de software con las que debe contar un dispositivo para que la aplicación funcione. Este atributo es solo informativo. Google Play no mostrará la aplicación en los dispositivos que no cumplan este filtro. Aun así, la aplicación se puede instalar de otras maneras (manualmente o bien descargándola). Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 
-- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html): este elemento especifica que ciertas bibliotecas compartidas deben estar presentes en el dispositivo (por ejemplo, Google Maps). Este elemento también se puede especificar con `Android.App.UsesLibraryAttribute`. Por ejemplo:  
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html): este elemento especifica que ciertas bibliotecas compartidas deben estar presentes en el dispositivo (por ejemplo, Google Maps). Este elemento también se puede especificar con `Android.App.UsesLibraryAttribute`. Por ejemplo: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
-- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html): este elemento se usa para deducir ciertas características de hardware necesarias para ejecutar la aplicación que tal vez no se declararon correctamente con un elemento `<uses-feature>`. Por ejemplo, si una aplicación solicita permiso para usar la cámara, Google Play presupone que los dispositivos deben tener una cámara, aunque no haya ningún elemento `<uses-feature>` que declare la cámara. Este elemento se puede establecer con `Android.App.UsesPermissionsAttribute`. Por ejemplo:  
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html): este elemento se usa para deducir ciertas características de hardware necesarias para ejecutar la aplicación que tal vez no se declararon correctamente con un elemento `<uses-feature>`. Por ejemplo, si una aplicación solicita permiso para usar la cámara, Google Play presupone que los dispositivos deben tener una cámara, aunque no haya ningún elemento `<uses-feature>` que declare la cámara. Este elemento se puede establecer con `Android.App.UsesPermissionsAttribute`. Por ejemplo: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]

@@ -3,15 +3,15 @@ title: Compilar aplicaciones
 ms.prod: xamarin
 ms.assetid: F14D737A-8AAA-4416-ADA4-029D5A1B5076
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/13/2017
-ms.openlocfilehash: 43d0966e0020cfd0d1e83a0b34c5e5e3fc5d21a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 90d0b1c0c0ba05b8228aadd3b2feaf66f8d546d5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028124"
 ---
 # <a name="building-apps"></a>Compilar aplicaciones
 

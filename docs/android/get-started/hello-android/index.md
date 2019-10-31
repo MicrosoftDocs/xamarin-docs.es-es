@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: C6474F70-3617-46AD-93E8-BE66878EEC17
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: fbe62f08a096a5a48fe96a3445e09eac9c0485fd
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cb2e90355cf93903c7a3b7e1beb65528d09d82d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668262"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027981"
 ---
 # <a name="hello-android"></a>Hello, Android
 

@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755843"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020963"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Inicio rápido
 
@@ -78,7 +78,7 @@ Con el botón **Translation History** (Historial de traducciones) seleccionado e
 
 ### <a name="creating-the-second-activity"></a>Creación de la segunda actividad
 
-Cree una segunda actividad para activar la segunda pantalla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
+Cree una segunda actividad para activar la segunda pantalla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...** :
 
 [![Agregar un archivo nuevo](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -222,7 +222,7 @@ Con el botón **Translation History** (Historial de traducciones) seleccionado e
 
 ### <a name="creating-the-second-activity"></a>Creación de la segunda actividad
 
-Cree una segunda actividad para activar la segunda pantalla. En el **Panel de solución**, haga clic en el icono de engranaje de color gris junto al proyecto **Phoneword** y seleccione **Agregar > Nuevo archivo...**:
+Cree una segunda actividad para activar la segunda pantalla. En el **Panel de solución**, haga clic en el icono de engranaje de color gris junto al proyecto **Phoneword** y seleccione **Agregar > Nuevo archivo...** :
 
 En el cuadro de diálogo **Nuevo archivo**, elija **Android > Actividad**, asigne a la actividad el nombre `TranslationHistoryActivity` y haga clic en **Agregar**.
 

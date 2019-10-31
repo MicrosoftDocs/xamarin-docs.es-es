@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: f8193dfbb68634702fdb12e330970d4a83d8e601
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584325"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022776"
 ---
 # <a name="get-started-with-xamarinios"></a>Introducción a Xamarin.iOS
 

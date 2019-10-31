@@ -3,15 +3,15 @@ title: Publicar una aplicación
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753806"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021376"
 ---
 # <a name="publishing-an-application"></a>Publicar una aplicación
 
@@ -33,7 +33,7 @@ Como puede observarse en el diagrama anterior, la preparación es la misma indep
 
 - **A través de un sitio web**: una aplicación Xamarin.Android puede estar disponible para su descarga en un sitio web, desde el que los usuarios pueden instalarla haciendo clic en un vínculo.
 - **Por correo electrónico**: los usuarios pueden instalar una aplicación Xamarin.Android desde su correo electrónico. La aplicación se instalará cuando se abra el archivo adjunto con un dispositivo Android.
-- **A través de una tienda**: existen varias tiendas de aplicaciones para la distribución, como [Google Play](http://play.google.com/) o la [Tienda Apps de Amazon para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
+- **A través de una tienda**: existen varias tiendas de aplicaciones para la distribución, como [Google Play](https://play.google.com/) o la [Tienda Apps de Amazon para Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 Utilizar una tienda establecida es la manera más común para publicar una aplicación, ya que proporciona la mayor cobertura de mercado y el máximo control sobre la distribución. Sin embargo, publicar una aplicación a través de una tienda requiere un esfuerzo adicional.
 

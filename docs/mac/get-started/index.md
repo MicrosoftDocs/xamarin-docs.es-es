@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a guías en las que se describe c
 ms.prod: xamarin
 ms.assetid: 6CE7C634-6495-3517-B004-21C9EBF4C462
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 5b8095b6f774caea099926f23a3673fea3aee790
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2121bc34cf208226e1cf24c44b4d596586f494e2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290421"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029425"
 ---
 # <a name="getting-started-with-xamarinmac"></a>Introducción a Xamarin.Mac
 

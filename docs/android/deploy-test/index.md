@@ -4,15 +4,15 @@ description: En esta sección se incluyen guías en las que se explica cómo pro
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 70d03e2ed35970835e0343bc416041845e0edb29
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754011"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028044"
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 

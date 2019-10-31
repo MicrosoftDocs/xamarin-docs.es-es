@@ -4,15 +4,15 @@ description: En esta guía se explica cómo iniciar y depurar aplicaciones en Vi
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 761b1a8b2c3fd97ca3f1560b79b042e0fd89da92
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754183"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028083"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Depuración en Android Emulator
 

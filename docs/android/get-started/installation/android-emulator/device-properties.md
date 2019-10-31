@@ -5,15 +5,15 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
-ms.openlocfilehash: 7a4312120ce69493074f28fb3e202f437d3e69e8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ab4e0e79c39d36adcfb29e9659c2c6a924c80470
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758034"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020871"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Editar las propiedades del dispositivo virtual Android
 

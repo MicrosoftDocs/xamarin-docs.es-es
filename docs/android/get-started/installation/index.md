@@ -4,15 +4,15 @@ description: Cómo instalar y configurar Xamarin.Android para trabajar con Visua
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: c561ab94d8cae28ac180c201795f67518aa2d8f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0de2ed96c7b2af69e99fbd742c0fd07b27f2ef9d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757975"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020729"
 ---
 # <a name="setup-and-installation"></a>Configuración e instalación
 

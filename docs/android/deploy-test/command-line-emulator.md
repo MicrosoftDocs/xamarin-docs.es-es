@@ -3,15 +3,15 @@ title: Emulador de la línea de comandos
 ms.prod: xamarin
 ms.assetid: E592AA32-5E83-B7E5-1753-12416551B23C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/05/2018
-ms.openlocfilehash: 995b0783604f752915daaa77a8362899ac61e174
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.openlocfilehash: 35e10ffc20e075e0245c7e42f7fd0aff24de4abb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983593"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021580"
 ---
 # <a name="command-line-emulator"></a>Emulador de la línea de comandos
 
