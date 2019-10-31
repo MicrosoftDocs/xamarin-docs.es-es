@@ -4,15 +4,15 @@ description: En este documento se describe cómo compilar un APK que será el de
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754273"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028136"
 ---
 # <a name="building-abi-specific-apks"></a>Compilar APK específicos de ABI
 
@@ -35,7 +35,7 @@ En esta guía se describe cómo crear un script para la compilación de varios A
 1. Compilar la aplicación mediante **AndroidManifest.XML** del paso anterior.
 1. Preparar el APK para el lanzamiento mediante su firma y el uso de Zipalign.
 
-Al final de esta guía encontrará un tutorial en el que se demuestra cómo crear scripts para estos pasos mediante [Rake](http://martinfowler.com/articles/rake.html).
+Al final de esta guía encontrará un tutorial en el que se demuestra cómo crear scripts para estos pasos mediante [Rake](https://martinfowler.com/articles/rake.html).
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Crear el código de la versión para el APK
 
@@ -157,7 +157,7 @@ Una vez finalizada la tarea de Rake, habrá tres carpetas `bin` con el archivo `
 [![Ubicaciones de las carpetas específicas de la plataforma que contienen xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
+> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](https://fsharp.github.io/FAKE/).
 
 ## <a name="summary"></a>Resumen
 
