@@ -3,15 +3,15 @@ title: Proceso de compilación
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2019
-ms.openlocfilehash: 45d57f818fc6d90cb712b9f43ef815d44059ea68
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 06e40fce69ee6d614bcf27bd563d9452595bd6ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021373"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028148"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -73,7 +73,7 @@ Los siguientes destinos de compilación se definen para proyectos de Xamarin.And
 
 ## <a name="build-extension-points"></a>Puntos de extensión de compilación
 
-El sistema de compilación de Xamarin.Android expone algunos puntos de extensión públicos para los usuarios que quieran usar nuestro proceso de compilación. Para usar uno de estos puntos de extensión, deberá agregar su destino personalizado a la propiedad de MSBuild correspondiente en un `PropertyGroup`. Por ejemplo: 
+El sistema de compilación de Xamarin.Android expone algunos puntos de extensión públicos para los usuarios que quieran usar nuestro proceso de compilación. Para usar uno de estos puntos de extensión, deberá agregar su destino personalizado a la propiedad de MSBuild correspondiente en un `PropertyGroup`. Por ejemplo:
 
 ```xml
 <PropertyGroup>
@@ -261,7 +261,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
 - **AndroidGenerateJniMarshalMethodsAdditionalArguments**: propiedad de cadena que se puede usar para agregar parámetros adicionales a la invocación de `jnimarshalmethod-gen.exe`.  Resulta útil para la depuración, por lo que se pueden usar opciones tales como `-v`, `-d` o `--keeptemp`.
 
-  El valor predeterminado es una cadena vacía. Se puede establecer en el archivo csproj o en la línea de comandos. Por ejemplo: 
+  El valor predeterminado es una cadena vacía. Se puede establecer en el archivo csproj o en la línea de comandos. Por ejemplo:
 
   ```xml
   <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
@@ -524,9 +524,9 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   - **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
 
-  - **Other**: incluye otras codificaciones, como *Cirílico(Windows)*\[CP1251\], *Báltico (Windows)*\[iso-8859-4, CP1257\], *Vietnamita (Windows)*\[CP1258\], *Cirílico (KOI8-R)*\[koi8-r, CP1251\], *Ucraniano (KOI8-U)*\[koi8-u, CP1251\], *Báltico (ISO)*\[iso-8859-4, CP1257\], *Cirílico (ISO)*\[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)*\[CP874\].
+  - **Other**: incluye otras codificaciones, como *Cirílico(Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)* \[CP874\].
 
-  - **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] y *IBM EBCDIC (Griego)* \[CP875\].
+  - **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\] *, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] y *IBM EBCDIC (Griego)* \[CP875\].
 
   - **West**: incluye las codificaciones occidentales, como *Europeo Occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo Occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo Occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\] y *Nórdico (DOS)* \[CP865\].
 
@@ -636,7 +636,7 @@ De forma predeterminada, el destino de firma genera una nueva clave de firma de 
 
 - **AndroidSigningKeyAlias**: especifica el alias de la clave en el almacén de claves. Es el valor de **keytool -alias** usado al crear el almacén de claves.
 
-- **AndroidSigningKeyPass**: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)**.
+- **AndroidSigningKeyPass**: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)** .
 
 - **AndroidSigningKeyStore**: especifica el nombre de archivo del archivo de almacén de claves creado por `keytool`. Corresponde al valor proporcionado a la opción **keytool - keystore**.
 
@@ -749,7 +749,7 @@ Todos los archivos con una acción de compilación de *AndroidResource* se compi
 </ItemGroup>
 ```
 
-Quizás los usuarios más avanzados deseen que recursos diferentes se usen en distintas configuraciones, pero con la misma ruta de acceso efectiva. Para lograr esto, se pueden tener varios directorios de recursos y tener archivos con las mismas rutas de acceso relativas dentro de estos diferentes directorios, y usar condiciones de MSBuild para incluir condicionalmente diferentes archivos en diferentes configuraciones. Por ejemplo: 
+Quizás los usuarios más avanzados deseen que recursos diferentes se usen en distintas configuraciones, pero con la misma ruta de acceso efectiva. Para lograr esto, se pueden tener varios directorios de recursos y tener archivos con las mismas rutas de acceso relativas dentro de estos diferentes directorios, y usar condiciones de MSBuild para incluir condicionalmente diferentes archivos en diferentes configuraciones. Por ejemplo:
 
 ```xml
 <ItemGroup Condition="'$(Configuration)'!='Debug'">
