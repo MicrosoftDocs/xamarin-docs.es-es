@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028718"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425508"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
@@ -67,7 +67,7 @@ La aplicación de ejemplo define una dibujable denominada **splash_screen. XML**
 </layer-list>
 ```
 
-Esta `layer-list` centra la imagen de la pantalla de presentación en un color de fondo especificado por el recurso de `@color/splash_background`. La aplicación de ejemplo define este color en el archivo **Resources/Values/color. XML** :
+Esta `layer-list` centra la imagen de la pantalla de presentación en un color de fondo especificado por el recurso de `@color/splash_background`. La aplicación de ejemplo define este color en el archivo **Resources/Values/colors. XML** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
