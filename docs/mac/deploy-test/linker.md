@@ -4,15 +4,15 @@ description: En este documento se describe la vinculación en Xamarin.Mac. La vi
 ms.prod: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: 4b538df5e8e615f8594bd38cb13d9b45b0961dac
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f4ab94c4eede4a122ac834e075270a375bca0807
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770124"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030005"
 ---
 # <a name="xamarinmac-linker-options"></a>Opciones del enlazador de Xamarin.Mac
 
@@ -49,7 +49,7 @@ Para cambiar a la configuración del enlazador para un proyecto de Xamarin.Mac, 
 2. En el **Explorador de soluciones**, haga doble clic en el archivo de proyecto para abrir el cuadro de diálogo **Opciones de proyecto**.
 3. En la pestaña **Compilación para Mac**, seleccione el tipo de **Comportamiento del enlazador** que se adapte a las necesidades de su aplicación:
 
-    ![Elegir qué comportamiento de enlazador se utiliza](linker-images/link-behavior.png "Elegir qué comportamiento de enlazador se utiliza")
+    ![Elección del comportamiento del enlazador que se va a usar](linker-images/link-behavior.png "Elección del comportamiento del enlazador que se va a usar")
 
 4. La vinculación de plataforma para los marcos de destino Full no aparecerán en el IDE hasta una futura actualización. Hasta entonces, agregue `--linkplatform` a los **argumentos de mmp adicionales** en su lugar.
 5. Haga clic en el botón **Aceptar** para guardar los cambios.

@@ -4,15 +4,15 @@ description: En este documento se describe la manera en que los desarrolladores 
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/16/2018
-ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291431"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022756"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
 
@@ -49,14 +49,14 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 2. Abra Xcode y navegue hasta **Xcode > Preferencias**.
 3. En **Cuentas**, use el botón **+** para agregar su id. de Apple existente. Debería tener un aspecto similar al de la siguiente captura de pantalla:
 
-    ![Preferencias de Xcode – Cuentas](free-provisioning-images/launchapp1.png "Preferencias de Xcode – Cuentas")
+    ![Preferencias de Xcode: Cuentas](free-provisioning-images/launchapp1.png "Preferencias de Xcode: Cuentas")
 
 4. Cierre las preferencias de Xcode.
 5. Conecte el dispositivo iOS en el que quiera implementar su aplicación.
 6. Cree un proyecto en Xcode. Elija **Archivo > Nuevo > Proyecto** y seleccione **Aplicación de una vista**.
 7. En el cuadro de diálogo del nuevo proyecto, establezca el ID de Apple que acaba de agregar como el valor de **Equipo**. En la lista desplegable, debería tener un aspecto similar a **su nombre (equipo Personal)** :
 
-    ![Creación de una aplicación](free-provisioning-images/launchapp2.png "Creación de una aplicación")
+    ![Creación de una aplicación](free-provisioning-images/launchapp2.png "Creación de una nueva aplicación")
 
 8. Una vez creado el nuevo proyecto, elija un esquema de compilación de Xcode que tenga como destino el dispositivo iOS (en lugar de un simulador).
 
@@ -65,7 +65,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 9. Abra la configuración de proyecto de la aplicación. Para ello, seleccione el nodo superior en el **navegador de proyectos** de Xcode.
 10. En **General > Identidad**, asegúrese de que el **identificador de agrupación** _coincida exactamente_ con el identificador de agrupación de su aplicación Xamarin.iOS.
 
-    ![Establecimiento de un identificador de agrupación](free-provisioning-images/launchapp5.png "Establecimiento de un identificador de agrupación")
+    ![Establecimiento de un identificador de lote](free-provisioning-images/launchapp5.png "Establecimiento de un identificador de lote")
 
     > [!IMPORTANT]
     > Xcode solo creará un perfil de aprovisionamiento para un id. de aplicación explícito. Además, debe ser idéntico al identificador de aplicación de su aplicación Xamarin.iOS.
@@ -74,7 +74,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 11. En **Información sobre la implementación**, asegúrese de que el destino de la implementación coincida con la versión de iOS instalada en su dispositivo iOS conectado, o bien que sea inferior a esta.
 12. En **Firma**, seleccione **Administrar firma automáticamente** y seleccione su equipo en la lista desplegable:
 
-    ![Administración automática de la firma](free-provisioning-images/launchapp6.png "Administración automática de la firma")
+    ![Administrar la firma automáticamente](free-provisioning-images/launchapp6.png "Administrar la firma automáticamente")
 
     Xcode generará automáticamente un perfil de aprovisionamiento y una identidad de firma. Puede verlo haciendo clic en el icono de información, situado junto al perfil de aprovisionamiento:
 

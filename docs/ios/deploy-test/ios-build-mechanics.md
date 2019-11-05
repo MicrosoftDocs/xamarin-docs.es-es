@@ -4,15 +4,15 @@ description: En esta guía se examina cómo medir el tiempo de las aplicaciones 
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756257"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026366"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -32,7 +32,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac
 
 1. Haga clic en **Visual Studio para Mac > Preferencias...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos > Compilar**
-3. En el panel derecho, establezca el menú desplegable del contenido de registro en **Diagnóstico**:  [![](ios-build-mechanics-images/image2.png "Establecer el nivel de detalle del registro")](ios-build-mechanics-images/image2.png#lightbox)
+3. En el panel de la derecha, establezca el menú desplegable del contenido de registro en **Diagnóstico**:  [![](ios-build-mechanics-images/image2.png "Establecimiento del nivel de detalle del registro")](ios-build-mechanics-images/image2.png#lightbox)
 4. Haga clic en **Aceptar**.
 5. Reinicie Visual Studio para Mac.
 6. Limpie y recompile el paquete.
@@ -44,7 +44,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 
 1. Haga clic en **Herramientas > Opciones...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos y soluciones > Compilación y ejecución**.
-3. En el panel de la derecha, establezca *Detalles de la salida de la compilación de MSBuild* en **Diagnóstico**:  [![](ios-build-mechanics-images/image2-vs.png "Establecer los detalles de la salida de la compilación de MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
+3. En el panel de la derecha, establezca *Detalles de la salida de la compilación de MSBuild* en **Diagnóstico**:  [![](ios-build-mechanics-images/image2-vs.png "Establecimiento de los detalles de la salida de la compilación de MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Haga clic en **Aceptar**.
 5. Limpie y recompile el paquete.
 6. El resultado de diagnóstico se muestra en el panel de resultados.
@@ -97,7 +97,7 @@ Teniendo en cuenta la información anterior, en la lista siguiente se proporcion
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[![](ios-build-mechanics-images/image3.png "Configuración de las opciones")](ios-build-mechanics-images/image3.png#lightbox)
+[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Trucos de dispositivos
 
@@ -148,7 +148,7 @@ Consejos adicionales
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[![](ios-build-mechanics-images/image4.png "Configuración de las opciones")](ios-build-mechanics-images/image4.png#lightbox)
+[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Uso del enlazador
 

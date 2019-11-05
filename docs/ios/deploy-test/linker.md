@@ -4,15 +4,15 @@ description: En este documento se describe el vinculador de Xamarin.iOS, que se 
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 2cda4d53ae3f5f5716d53fd8862ca9cf000003e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762841"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030232"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -30,7 +30,7 @@ Como el enlazador es una herramienta estática, no puede marcar los tipos de inc
 
 Se puede personalizar el proceso de vinculación mediante la lista desplegable del comportamiento del enlazador en **Opciones del proyecto**. Para acceder a este menú, haga doble clic en el proyecto de iOS y vaya a **Compilación de iOS > Opciones del enlazador**, como se ilustra a continuación:
 
-[![](linker-images/image1.png "Opciones del enlazador")](linker-images/image1.png#lightbox)
+[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -40,10 +40,10 @@ Haga lo siguiente:
 
 1. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Propiedades**:
 
-    ![](linker-images/linking01w.png "Haga clic con el botón derecho en el nombre del proyecto en el Explorador de soluciones y seleccione Propiedades")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. En **Propiedades del proyecto**, seleccione **Compilación de iOS**:
 
-    ![](linker-images/linking02w.png "Seleccione Compilación de iOS")
+    ![](linker-images/linking02w.png "Select IOS Build")
 3. Siga las instrucciones siguientes para cambiar las opciones de vinculación.
 
 -----

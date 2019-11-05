@@ -4,15 +4,15 @@ description: En este artículo se describe la creación de las imágenes necesar
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021700"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icono para aplicaciones Xamarin.Mac
 
@@ -80,10 +80,10 @@ Haga lo siguiente:
 
 1. En el **Panel de solución**, abra **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Editar AppIcon.appiconset](app-icon-images/intro01.png "Editar AppIcon.appiconset")
+    ![Edición de AppIcon.appiconset](app-icon-images/intro01.png "Edición de AppIcon.appiconset")
 2. Para cada tamaño de icono necesario, haga clic en el icono y seleccione el archivo de imagen correspondiente que se creó anteriormente: 
 
-    [![Seleccionar una imagen de icono](app-icon-images/intro02.png "Seleccionar una imagen de icono")](app-icon-images/intro02-large.png#lightbox)
+    [![Selección de una imagen de icono](app-icon-images/intro02.png "Selección de una imagen de icono")](app-icon-images/intro02-large.png#lightbox)
 3. Guarde los cambios.
 
 ## <a name="using-the-icon"></a>Usar el icono
@@ -95,12 +95,12 @@ Haga lo siguiente:
 1. Haga doble clic en **Info.plist** en el **Panel de solución** para abrir las **Opciones de proyecto**.
 2. En la sección **Mac OS X Application Target** (Destino de la aplicación de Mac OS X), haga clic en **App Icons** (Iconos de aplicación) para seleccionar el archivo `AppIcon.appiconset`: 
 
-    [![Establecer el conjunto de iconos](app-icon-images/icon01.png "Establecer el conjunto de iconos")](app-icon-images/icon01-large.png#lightbox)
+    [![Establecimiento del conjunto de iconos](app-icon-images/icon01.png "Establecimiento del conjunto de iconos")](app-icon-images/icon01-large.png#lightbox)
 3. Guarde los cambios.
 
 Cuando se ejecute la aplicación, el icono nuevo se mostrará en el Dock:
 
-![Un ejemplo de un icono de aplicación en el Dock de macOS](app-icon-images/icon04.png "Un ejemplo de un icono de aplicación en el Dock de macOS")
+![Ejemplo de un icono de aplicación en el Dock de macOS](app-icon-images/icon04.png "Ejemplo de un icono de aplicación en el Dock de macOS")
 
 ## <a name="summary"></a>Resumen
 

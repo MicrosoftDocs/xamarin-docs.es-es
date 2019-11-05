@@ -4,15 +4,15 @@ description: En este artículo se describe cómo configurar Visual Studio 2019 
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279223"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022530"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configuración de Visual Studio para el desarrollo de iOS
 
@@ -42,7 +42,7 @@ Cuando se abre un proyecto de iOS en Visual Studio 2019 o Visual Studio 2017, 
 
 Si no aparece esta barra de herramientas, abra el menú **Ver** en Visual Studio 2019 o Visual Studio 2017 y elija **Barras de herramientas > iOS**:
 
-![Habilitar la barra de herramientas de iOS](config-options-images/ios-toolbar-enable.png "Enabling the iOS toolbar")
+![Habilitación de la barra de herramientas de iOS](config-options-images/ios-toolbar-enable.png "Habilitación de la barra de herramientas de iOS")
 
 ## <a name="solution-platforms-drop-down-menu"></a>Menú desplegable Plataformas de solución
 
@@ -54,8 +54,8 @@ Para asegurarse de que se ve este menú desplegable en la barra de herramientas 
 - Elija **Agregar o quitar botones**. 
 - Asegúrese de que esté marcado el elemento **Plataformas de solución**:
 
-![Habilitar el menú desplegable Plataformas de solución](config-options-images/solution-platforms-enable.png "Enabling the Solution Platforms drop-down menu")
+![Habilitación del menú desplegable Plataformas de solución](config-options-images/solution-platforms-enable.png "Habilitación del menú desplegable Plataformas de solución")
 
 Con un proyecto de iOS abierto, las barras de herramientas **estándar** y de **iOS** ahora deben ser similares a la captura de pantalla siguiente:
 
-![Barras de herramientas estándar y de iOS](config-options-images/toolbars.png "Standard and iOS toolbars")
+![Barras de herramientas Estándar y de iOS](config-options-images/toolbars.png "Barras de herramientas Estándar y de iOS")

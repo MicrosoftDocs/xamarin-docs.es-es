@@ -4,15 +4,15 @@ description: En este documento se proporciona una descripción de Xamarin.iOS pa
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 2970253ec15ca207b9f69e2b764e0a69f8037938
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2c5451b379968230d75599601052e3a33f5b5951
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753514"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022442"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin para desarrolladores de Objective-C
 
@@ -20,7 +20,7 @@ Xamarin ofrece a los desarrolladores que tienen iOS como destino una ruta trasla
 
 Además, Xamarin le permite aprovechar los recursos de Objective-C existentes mediante una tecnología que se conoce como "enlaces". Basta con crear una biblioteca estática en Objective C y exponerla a C# a través de un enlace, como se muestra en el diagrama siguiente:
 
- [![](images/01-bindings.png "Biblioteca estática en Objective-C expuesta a C# a través de un enlace")](images/01-bindings.png#lightbox)
+ [![](images/01-bindings.png "A static library in Objective-C exposed to C# via a binding")](images/01-bindings.png#lightbox)
 
 Esto no tiene por qué limitarse al código que no es de interfaz de usuario. Los enlaces pueden exponer también el código de interfaz de usuario desarrollado en Objective-C.
 

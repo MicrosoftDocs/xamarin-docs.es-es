@@ -4,15 +4,15 @@ description: En este documento se describe el proceso de empaquetado de una apli
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04ca9c98abbd97cd9e5d1f7694264b8316a7f151
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770121"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001551"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Compilación para el Mac App Store
 
@@ -25,11 +25,11 @@ En esta sección se describen los aspectos básicos de la compilación de una ap
 
 Cambie la **Configuración** a **Lanzamiento** antes de actualizar la firma de código y las opciones de empaquetado. El programador debe asegurarse de que se usen la **identidad** de la empresa y el perfil de aprovisionamiento que se crearon anteriormente al firmar la aplicación para el lanzamiento en App Store.
 
- [![Modificar las opciones de firma de código](bundling-images/config02.png "Modificar las opciones de firma de código")](bundling-images/config02-large.png#lightbox)
+ [![Edición de las opciones de firma de código](bundling-images/config02.png "Edición de las opciones de firma de código")](bundling-images/config02-large.png#lightbox)
 
 Asegúrese de que esté activada la opción para crear un paquete de instalador en la configuración de **Mac Build** (Compilación de Mac):
 
-[![Modificar las opciones de compilación](bundling-images/config03.png "Modificar las opciones de compilación")](bundling-images/config03-large.png#lightbox)
+[![Edición de las opciones de compilación](bundling-images/config03.png "Edición de las opciones de compilación")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>Compilar
 
@@ -41,7 +41,7 @@ Antes de compilar, asegúrese de que se ha seleccionado la configuración **Lanz
 
 Una vez que se ha compilado la aplicación, el desarrollador puede hacer clic con el botón derecho en el proyecto y seleccionar **Abrir carpeta contenedora** para buscar el archivo de paquete (en el directorio `bin/x86/AppStore` en el ejemplo que se muestra a continuación).  Este archivo de paquete incluye un instalador para la aplicación que se puede enviar a Apple para que se incluya en Mac App Store.
 
- ![Seleccionar el paquete de compilación en el buscador](bundling-images/image64.png "Seleccionar el paquete de compilación en el buscador")
+ ![Selección del paquete de compilación en Finder](bundling-images/image64.png "Selección del paquete de compilación en Finder")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

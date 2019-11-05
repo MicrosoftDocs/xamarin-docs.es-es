@@ -4,15 +4,15 @@ description: En este documento se describe cómo configurar, compilar y publicar
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: b6fb02697d3df59181750bf6fd7c840129554ac3
-ms.sourcegitcommit: 84d788f7dbabc1c83ac795ed3952d589074fa8e8
+ms.openlocfilehash: 3803d7e14b161a7c166bcae37e3d9f46b7637984
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71811183"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026638"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -117,7 +117,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
 
-    ![Firma del lote de iOS](publishing-to-the-app-store-images/bundleSigning-m157.png "Firma del lote de iOS")
+    ![Firma de lotes de iOS](publishing-to-the-app-store-images/bundleSigning-m157.png "Firma de lotes de iOS")
 
 15. Haga clic en **Aceptar** para guardar los cambios en las propiedades del proyecto.
 
@@ -146,7 +146,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
 
-    ![Configuración de firma del lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma del lote de iOS")
+    ![Configuración de firma de lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma de lote de iOS")
 
 14. Guarde la configuración de compilación y ciérrela.
 
@@ -175,7 +175,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
 
-    ![Configuración de firma del lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma del lote de iOS")
+    ![Configuración de firma de lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma de lote de iOS")
 
 14. Vaya a la pestaña **Opciones de IPA de iOS**.
 15. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone**.
@@ -186,7 +186,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 17. Para especificar un nombre de archivo .ipa que difiere del nombre del proyecto de Xamarin.iOS, escríbalo en el campo **Nombre del paquete**.
 
-    ![Configuración de firma del lote de iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "Configuración de firma del lote de iOS")
+    ![Configuración de firma de lote de iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "Configuración de firma de lote de iOS")
 
 18. Guarde la configuración de compilación y ciérrela.
 
@@ -206,7 +206,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 1. En Visual Studio para Mac, seleccione la configuración de compilación de **versión** y un dispositivo (no un simulador) para el que se va a compilar.
 
-    ![Selección de configuración de compilación y plataforma](publishing-to-the-app-store-images/chooseConfig-m157.png "Selección de configuración de compilación y plataforma")
+    ![Configuración de compilación y selección de la plataforma](publishing-to-the-app-store-images/chooseConfig-m157.png "Configuración de compilación y selección de la plataforma")
 
 2. En el menú **Compilación**, seleccione **Archive for Publishing** (Archivo para publicar).
 3. Una vez creado el archivo, se mostrará la vista **Archivos**. Haga clic en **Sign and Distribute…** (Firmar y distribuir…) para abrir el Asistente para la publicación.
@@ -222,11 +222,11 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 6. En la ventana **Perfil de aprovisionamiento**, seleccione su identidad de firma, la aplicación y el perfil de aprovisionamiento. Haga clic en **Siguiente**.
 
-    ![Captura de pantalla de la página del asistente de perfil de aprovisionamiento en la que se muestra una selección válida del perfil de aprovisionamiento, la aplicación y la identidad de firma.](publishing-to-the-app-store-images/provProfileSelect-mac.png "Captura de pantalla de la página del asistente de perfil de aprovisionamiento en la que se muestra una selección válida del perfil de aprovisionamiento, la aplicación y la identidad de firma.")
+    ![Captura de pantalla de la página del Asistente para perfil de aprovisionamiento en la que se muestra una identidad de firma válida, una aplicación y una selección de perfil de aprovisionamiento.](publishing-to-the-app-store-images/provProfileSelect-mac.png "Captura de pantalla de la página del Asistente para perfil de aprovisionamiento con una identidad de firma válida, una aplicación y un perfil de aprovisionamiento seleccionados.")
 
 7. En la ventana **App Store Connect information** (Información de App Store Connect), seleccione el nombre de usuario de un ID de Apple en el menú y escriba [una contraseña específica de la aplicación](https://support.apple.com/ht204397). Haga clic en **Siguiente**.
 
-    ![Captura de pantalla de la página del asistente de información de App Store Connect en la que se muestra el nombre de usuario de un ID de Apple seleccionado.](publishing-to-the-app-store-images/connectInfo-mac.png "Captura de pantalla de la página del asistente de información de App Store Connect en la que se muestra el nombre de usuario de un ID de Apple seleccionado.")
+    ![Captura de pantalla de la página del Asistente de Información de App Store Connect en la que se muestra un nombre de usuario de ID de Apple seleccionado.](publishing-to-the-app-store-images/connectInfo-mac.png "Captura de pantalla de la página del Asistente de Información de App Store Connect en la que se muestra un nombre de usuario de ID de Apple seleccionado.")
 
 8. Compruebe los detalles del paquete y haga clic en **Publicar**. Después de seleccionar una ubicación en la que guardar el archivo .ipa, el asistente cargará la aplicación en App Store Connect.
 
@@ -251,17 +251,17 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 4. Una vez creado el archivo, haga clic en **Distribuir...** para abrir el asistente para publicación.
 
-    ![Captura de pantalla de la ubicación del botón de distribución en la vista del administrador de archivos.](publishing-to-the-app-store-images/archives-win.png "Captura de pantalla de la ubicación del botón de distribución en la vista del administrador de archivos.")
+    ![Captura de pantalla de la ubicación del botón Distribuir en la vista de Archive Manager.](publishing-to-the-app-store-images/archives-win.png "Captura de pantalla de la ubicación del botón Distribuir en la vista de Archive Manager.")
 
 5. Seleccione el canal de distribución del **App Store**.
 
 6. Seleccione la identidad de firma y el perfil de aprovisionamiento. Haga clic en **Upload to Store** (Cargar en la tienda).
 
-    ![Captura de pantalla del asistente para publicación en la que se muestra la selección de una identidad de firma válida y un perfil de aprovisionamiento.](publishing-to-the-app-store-images/provProfileSelect-win.png "Captura de pantalla del asistente para publicación en la que se muestra la selección de una identidad de firma válida y un perfil de aprovisionamiento.")
+    ![Captura de pantalla de la página del Asistente de publicación en la que se muestra una identidad de firma válida y una selección de perfil de aprovisionamiento.](publishing-to-the-app-store-images/provProfileSelect-win.png "Captura de pantalla de la página del Asistente de publicación en la que se muestra una identidad de firma válida y una selección de perfil de aprovisionamiento.")
 
 7. Escriba el ID de Apple y [una contraseña específica de la aplicación](https://support.apple.com/ht204397). Haga clic en **Aceptar** para iniciar la carga de la aplicación en App Store Connect.
 
-    ![Captura de pantalla de la ventana emergente en la que escribir el ID de Apple y la contraseña específica de la aplicación.](publishing-to-the-app-store-images/connectInfo-win.png "Captura de pantalla de la ventana emergente en la que escribir el ID de Apple y la contraseña específica de la aplicación.")
+    ![Captura de pantalla de la ventana emergente para escribir el ID de Apple y la contraseña específica de la aplicación.](publishing-to-the-app-store-images/connectInfo-win.png "Captura de pantalla de la ventana emergente para escribir el ID de Apple y la contraseña específica de la aplicación.")
 
 # <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
@@ -275,7 +275,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 1. Asegúrese de que Visual Studio 2017 está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Seleccione **Versión** en la lista desplegable **Configuraciones de soluciones** de Visual Studio 2017 y **iPhone** en la lista desplegable **Plataformas de solución**.
 
-    ![Selección de configuración de compilación y plataforma](publishing-to-the-app-store-images/chooseConfig-w157.png "Selección de configuración de compilación y plataforma")
+    ![Configuración de compilación y selección de la plataforma](publishing-to-the-app-store-images/chooseConfig-w157.png "Configuración de compilación y selección de la plataforma")
 
 3. Compile el proyecto. Esto crea un archivo .ipa.
 
@@ -299,7 +299,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 7. Inicie sesión en el cargador de aplicaciones (tenga en cuenta que debe [crear una contraseña específica de la aplicación](https://support.apple.com/ht204397) para el identificador de Apple).
 8. Seleccione **Deliver Your App** (Entregar la aplicación) y haga clic en el botón **Elegir**:
 
-    ![Seleccione Deliver Your App (Entregar la aplicación)](publishing-to-the-app-store-images/publishvs01.png "Seleccione Deliver Your App (Entregar la aplicación)")
+    ![Selección de Deliver Your App (Entregar la aplicación)](publishing-to-the-app-store-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")
 
 9. Seleccione el archivo .ipa que ha creado anteriormente y haga clic en **Aceptar**.
 10. Application Loader validará el archivo:
@@ -308,7 +308,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 11. Haga clic en el botón **Siguiente** y la aplicación se validará en el App Store:
 
-    ![Validación en el App Store](publishing-to-the-app-store-images/publishvs03.png "Validación en el App Store")
+    ![Validación en App Store](publishing-to-the-app-store-images/publishvs03.png "Validación en App Store")
 
 12. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
 13. Application Loader le informará cuando el archivo se haya cargado correctamente.
@@ -326,7 +326,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 Para ver el estado del envío de la aplicación, inicie sesión en iTunes Connect y seleccione la aplicación. El estado inicial debería ser **Waiting For Review** (En espera de revisión), aunque podría aparecer temporalmente **Upload Received** (Carga recibida) mientras se está procesando.
 
-![En espera de revisión](publishing-to-the-app-store-images/image21.png "En espera de revisión")
+![Esperando revisión](publishing-to-the-app-store-images/image21.png "Esperando revisión")
 
 ## <a name="tips-and-tricks"></a>Sugerencias y trucos
 

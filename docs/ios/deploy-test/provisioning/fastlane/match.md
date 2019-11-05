@@ -4,15 +4,15 @@ description: En este documento se describe el comando match de fastlane, que se 
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08fdcafe33e4b9b2aa6b5595c732718878be33f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285725"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028514"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane para iOS: match
 
@@ -59,15 +59,15 @@ fastlane match init
 
 Cuando se le solicite, escriba la dirección URL del repositorio Git:
 
- [![](match-images/fastlane-image7.png "Escribir la dirección URL del repositorio GIT")](match-images/fastlane-image7.png#lightbox)
+ [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
 
 Para encontrar y copiar la dirección URL, haga clic en el botón **Clone or Download** (Clonar o descargar) situado en github.com, como se muestra a continuación:
 
-[![](match-images/fastlane-image6.png "Dirección URL del botón Clonar o Descargar de github.com")](match-images/fastlane-image6.png#lightbox)
+[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
 
 Cuando se inicializa el proyecto, se crea un matchfile, es decir, un archivo de texto que puede modificarse para pasar variables de entorno a la herramienta match. Aquí se muestra un ejemplo de matchfile:
 
-[![](match-images/fastlane-image8.png "Ejemplo de matchfile")](match-images/fastlane-image8.png#lightbox)
+[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -93,7 +93,7 @@ Además de crear certificados y perfiles, mediante el uso de estos comandos se p
 - Un archivo Léame con instrucciones básicas
 - Una versión de Match
 
-[![](match-images/fastlane-image9.png "Estructura del proyecto en el repositorio GIT")](match-images/fastlane-image9.png#lightbox)
+[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
 
 Los perfiles de aprovisionamiento se instalan en `~/Library/MobileDevice/Provisioning Profiles`. Los certificados y las claves privadas se instalan directamente en la cadena de claves.
 

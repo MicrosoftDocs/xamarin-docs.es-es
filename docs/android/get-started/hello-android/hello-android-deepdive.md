@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756719"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028004"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
@@ -332,7 +332,7 @@ Para que un dispositivo Android se pueda usar para probar aplicaciones, debe est
 
 Una vez que haya configurado el dispositivo, puede implementar en él. Para ello, conéctelo, selecciónelo en el cuadro de diálogo **Seleccionar dispositivo** e inicie la aplicación:
 
-![Seleccionar dispositivo de depuración](hello-android-deepdive-images/vs/06-select-device.png "Seleccionar dispositivo de depuración")
+![Selección del dispositivo de depuración](hello-android-deepdive-images/vs/06-select-device.png "Selección del dispositivo de depuración")
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -357,7 +357,7 @@ Para resolverlo, se recomienda agregar iconos de distintas resoluciones en la ca
 
 ::: zone pivot="windows"
 
-![carpetas mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "carpetas mipmap")
+![Carpetas mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "Carpetas mipmap")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -376,26 +376,26 @@ No todos tienen a su disposición un diseñador para crear los iconos e imágene
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
 
 - Visual Studio: Puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
 
-- [Glyphish](http://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
+- [Glyphish](https://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
 
-- [Fiverr](http://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [Fiverr](https://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12): Sketch es una aplicación de Mac para diseñar interfaces de usuario, iconos y mucho más. Es la aplicación que se usó para diseñar el conjunto de iconos de aplicación e imágenes de inicio de Xamarin. Sketch 3 está disponible en App Store y cuesta aproximadamente 80 $. También puede probar la versión gratuita [Sketch Tool](http://bohemiancoding.com/sketch/tool/).
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12): Sketch es una aplicación de Mac para diseñar interfaces de usuario, iconos y mucho más. Es la aplicación que se usó para diseñar el conjunto de iconos de aplicación e imágenes de inicio de Xamarin. Sketch 3 está disponible en App Store y cuesta aproximadamente 80 $. También puede probar la versión gratuita [Sketch Tool](https://bohemiancoding.com/sketch/tool/).
 
-- [Pixelmator](http://www.pixelmator.com/): Una aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 $.
+- [Pixelmator](https://www.pixelmator.com/): Una aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 $.
 
-- [Glyphish](http://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
+- [Glyphish](https://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
 
-- [Fiverr](http://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [Fiverr](https://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 

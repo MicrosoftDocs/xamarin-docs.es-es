@@ -4,15 +4,15 @@ description: En esta guía se describe cómo usar Emparejar con Mac para conecta
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 9296fa60a454fe83f9ec9b383067576b67e5f037
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198546"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022493"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
@@ -58,7 +58,7 @@ Para configurar el host de compilación de Mac, habilite primero la sesión remo
 
 2. Marque **Sesión remota** en la lista **Servicio**.
 
-    ![Habilitar la sesión remota](images/sharing.png "Enabling Remote Login")
+    ![Habilitación de Sesión remota](images/sharing.png "Habilitación de Sesión remota")
 
     Asegúrese de que está configurado para permitir el acceso de **Todos los usuarios** o que el nombre de usuario o el grupo de Mac se incluyen en la lista de usuarios permitidos.
 
@@ -78,13 +78,13 @@ Ahora que la sesión remota está habilitada, conecte Visual Studio 2019 al equ
 
     - Use el botón **Emparejar con Mac** de la barra de herramientas de iOS:
 
-      ![Barra de herramientas de iOS con el botón Emparejar con Mac resaltado](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
+      ![La barra de herramientas de iOS, con el botón Emparejar con Mac resaltado](images/ios-toolbar.png "La barra de herramientas de iOS, con el botón Emparejar con Mac resaltado")
 
     - O bien, seleccione **Herramientas > iOS > Emparejar con Mac**.
 
     - El cuadro de diálogo **Emparejar con Mac** muestra una lista de todos los hosts de compilación de Mac conectados anteriormente y disponibles actualmente:
 
-      ![Cuadro de diálogo Emparejar con Mac](images/pairtomac.png "The Pair to Mac dialog")
+      ![Cuadro de diálogo Emparejar con Mac](images/pairtomac.png "Cuadro de diálogo Emparejar con Mac")
 
 3. Seleccione un equipo Mac en la lista. Haga clic en **Conectar**.
 
@@ -92,7 +92,7 @@ Ahora que la sesión remota está habilitada, conecte Visual Studio 2019 al equ
 
     - La primera vez que se conecta a cualquier equipo Mac, se le pide que escriba el nombre de usuario y la contraseña de esa máquina:
 
-      ![Escribir un nombre de usuario y una contraseña para el equipo Mac](images/auth.png "Entering a username and password for the Mac")
+      ![Especificación de un nombre de usuario y una contraseña para el equipo Mac](images/auth.png "Especificación de un nombre de usuario y una contraseña para el equipo Mac")
 
       > [!TIP]
       > Al iniciar sesión, use el nombre de usuario del sistema en lugar del nombre completo.
@@ -107,14 +107,14 @@ Ahora que la sesión remota está habilitada, conecte Visual Studio 2019 al equ
 
     - Cuando Visual Studio 2019 está conectado a un equipo Mac, el elemento del equipo Mac del cuadro de diálogo **Emparejar con Mac** muestra un icono que indica que está conectado actualmente:
 
-      ![Un equipo Mac conectado](images/connected.png "A connected Mac")
+      ![Un equipo Mac conectado](images/connected.png "Un equipo Mac conectado")
 
       Solo puede haber un equipo Mac conectado en cualquier momento.
 
       > [!TIP]
       > Al hacer clic con el botón derecho en cualquier equipo Mac de la lista **Emparejar con Mac**, se abrirá un menú contextual que le permite **Conectar...** , **Olvidar este equipo Mac** o **Desconectar**:
       >
-      > ![Menús contextuales de Emparejar con Mac](images/contextmenu.png "The Pair to Mac context menus")
+      > ![Menús contextuales de Emparejar con Mac](images/contextmenu.png "Menús contextuales de Emparejar con Mac")
       >
       > Si elige **Olvidar este equipo Mac**, se olvidarán sus credenciales del equipo Mac seleccionado. Para volver a conectarse a ese equipo Mac, debe volver a escribir el nombre de usuario y la contraseña.
 
@@ -130,7 +130,7 @@ Si no ve un equipo Mac determinado en el cuadro de diálogo **Emparejar con Mac*
 
     - Abra **Preferencias del Sistema > Compartir > Sesión remota** en el equipo Mac:
 
-      [![Dirección IP del equipo Mac en Preferencias del Sistema > Compartir](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
+      [![Dirección IP del equipo Mac en Preferencias del sistema> Compartir](images/sharing-ipaddress.png "Dirección IP del equipo Mac en Preferencias del sistema> Compartir")](images/sharing.png#lightbox)
 
     - Como alternativa, use la línea de comandos. En la terminal, use este comando:
 
@@ -143,15 +143,15 @@ Si no ve un equipo Mac determinado en el cuadro de diálogo **Emparejar con Mac*
 
 2. En el cuadro de diálogo **Emparejar con Mac** de Visual Studio 2019, seleccione **Agregar equipo Mac**:
 
-    [![Botón Agregar equipo Mac en el cuadro de diálogo Emparejar con Mac](images/addtomac.png "The Add Mac button in the Pair to Mac dialog")](images/addtomac-large.png#lightbox)
+    [![Botón Agregar Mac en el cuadro de diálogo Emparejar con Mac](images/addtomac.png "Botón Agregar Mac en el cuadro de diálogo Emparejar con Mac")](images/addtomac-large.png#lightbox)
 
 3. Escriba la dirección IP del equipo Mac y haga clic en **Agregar**:
 
-    ![Escribir la dirección IP del equipo Mac](images/enteripaddress.png "Entering the Mac's IP address")
+    ![Especificación de la dirección IP del equipo Mac](images/enteripaddress.png "Especificación de la dirección IP del equipo Mac")
 
 4. Escriba el nombre de usuario y la contraseña del equipo Mac:
 
-    ![Escriba el nombre de usuario y la contraseña](images/auth.png "Entering a username and password")
+    ![Especificación de un nombre de usuario y una contraseña](images/auth.png "Especificación de un nombre de usuario y una contraseña")
 
    > [!TIP]
    > Al iniciar sesión, use el nombre de usuario del sistema en lugar del nombre completo.
@@ -178,7 +178,7 @@ El progreso se indica mediante varios mensajes, como se muestra en las siguiente
 
 ||Comprobación de la instalación|Descarga|Instalación
 |---|---|---|---|
-|Mono|[![Falta la instalación de Mono](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![Descarga de Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![Instalación de Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Falta la instalación de Mono](images/mono-missing.png "Falta la instalación de Mono")](images/mono-missing-large.png#lightbox)|[![Descarga de Mono](images/mono-downloading.png "Descarga de Mono")](images/mono-downloading-large.png#lightbox)|[![Instalación de Mono](images/mono-installing.png "Instalación de Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -194,7 +194,7 @@ El progreso se indica mediante varios mensajes, como se muestra en las siguiente
 
 ||Comprobación de la instalación|Descarga|Instalación
 |---|---|---|---|
-|Xamarin.iOS|[![Falta la instalación de Xamarin.iOS](images/xamios-missing.png "Missing Xamarin.iOS installation")](images/xamios-missing-large.png#lightbox)|[![Descarga de Xamarin.iOS](images/xamios-downloading.png "Downloading Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalación de Xamarin.iOS](images/xamios-installing.png "Installing Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Falta la instalación de Xamarin.iOS](images/xamios-missing.png "Falta la instalación de Xamarin.iOS")](images/xamios-missing-large.png#lightbox)|[![Descarga de Xamarin.iOS](images/xamios-downloading.png "Descarga de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalación de Xamarin.iOS](images/xamios-installing.png "Instalación de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licencias y herramientas de Xcode
 
@@ -202,7 +202,7 @@ Emparejar con Mac también comprobará si se ha instalado Xcode y se ha aceptado
 
 ||Comprobación de la instalación|Aceptación de la licencia|
 |---|---|---|
-|Xcode|[![Falta la instalación de Xcode](images/xcode-missing.png "Missing Xcode installation")](images/xcode-missing-large.png#lightbox)|[![Licencia de Xcode](images/xcode-license.png "Xcode license")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Falta la instalación de Xcode](images/xcode-missing.png "Falta la instalación de Xcode")](images/xcode-missing-large.png#lightbox)|[![Licencia de Xcode](images/xcode-license.png "Licencia de Xcode")](images/xcode-license-large.png#lightbox)|
 
 Además, Emparejar con Mac instalará o actualizará varios paquetes distribuidos con Xcode. Por ejemplo:
 

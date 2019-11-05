@@ -4,15 +4,15 @@ description: En este artículo se habla sobre el archivo iTunesMetadata.plist us
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281160"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026504"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS
 
@@ -242,7 +242,7 @@ En el caso de las aplicaciones de iOS, Apple actualmente define los géneros e i
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-Para más información, vea la documentación [Genre IDs Appendix (Apéndice de identificadores de género)](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) de Apple.
+Para más información, vea la documentación [Genre IDs Appendix (Apéndice de identificadores de género)](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) de Apple.
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
@@ -302,26 +302,26 @@ Haga lo siguiente:
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo de proyecto de Xamarin.iOS y seleccione **Agregar** > **Nuevo archivo…** .
 2. En el cuadro de diálogo Nuevo archivo, seleccione **iOS** > **Lista de propiedades**:
 
-    ![](itunesmetadata-images/image01.png "Seleccione la lista de propiedades de iOS")
+    ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Escriba `iTunesMetadata` para el **Nombre** y haga clic en el botón **Nuevo**.
 4. Haga doble clic en el archivo `iTunesMetadata.plist` en el **Explorador de soluciones** para abrirlo para su edición:
 
-    ![](itunesmetadata-images/image02.png "Editor de iTunesMetadata.plist")
+    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
 5. Haga clic en el **+** verde para crear una nueva entrada y escriba `UIRequiredDeviceCapabilities` como nombre de clave:
 
-    ![](itunesmetadata-images/image03.png "Cree una entrada y escriba UIRequiredDeviceCapabilities como el nombre de clave")
+    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Haga clic en el tipo de valor **Cadena** y seleccione **Diccionario** en la lista emergente:
 
-    ![](itunesmetadata-images/image04.png "Seleccione el diccionario en la lista emergente")
+    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
 7. Haga clic en el control situado a la izquierda del nombre de la propiedad para mostrar las entradas del diccionario:
 
-    ![](itunesmetadata-images/image05.png "Mostrar las entradas del diccionario")
+    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
 8. Haga clic en el texto **Agregar nueva entrada** y luego haga clic en el **+** verde para agregar una entrada al diccionario:
 
-    ![](itunesmetadata-images/image06.png "Agregue una entrada al diccionario")
+    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
 9. Escriba `armv7` para el nombre de clave, seleccione un tipo de **booleano** y escriba **Sí** como valor:
 
-    ![](itunesmetadata-images/image07.png "Escriba armv7 para el nombre de clave, seleccione un tipo de booleano y escriba Sí como valor")
+    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
 10. Repita los pasos anteriores hasta que haya rellenado el archivo `iTunesMetadata.plist` con todos los pares clave-valor necesarios (vea la sección anterior [Contenido de iTunesMetadata.plist](#iTunesMetadata_contents) para obtener más información).
 
 11. Guarde los cambios en el archivo plist.

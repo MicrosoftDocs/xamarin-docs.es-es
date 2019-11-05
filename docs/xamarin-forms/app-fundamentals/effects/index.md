@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 9d859377c40c6fca07e140c50da46d8f30aaae04
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
+ms.sourcegitcommit: 1242d32b7f072c837005cdee174abe6c0d1d0c68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73083834"
 ---
 # <a name="xamarinforms-effects"></a>Efectos de Xamarin.Forms
 
@@ -33,3 +33,7 @@ La creación de un efecto que se configura a través de parámetros permite que 
 ## <a name="invoking-events-from-an-effecttouch-trackingmd"></a>[Invocación de eventos desde un efecto](touch-tracking.md)
 
 Los efectos pueden invocar eventos. En este artículo se muestra cómo crear un evento que implementa el seguimiento de dedo multitoque de bajo nivel y señala una aplicación para presiones de toque, movimientos y liberaciones.
+
+## <a name="reusable-roundeffectreusable-roundeffectmd"></a>[RoundEffect reutilizable](reusable-roundeffect.md)
+
+RoundEffect es un efecto reutilizable que se puede aplicar a cualquier control derivado de VisualElement para representar el control como un círculo. Este efecto se puede usar para crear imágenes circulares, botones circulares u otros controles circulares.

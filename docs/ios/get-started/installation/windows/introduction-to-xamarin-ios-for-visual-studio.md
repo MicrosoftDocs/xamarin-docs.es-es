@@ -4,15 +4,15 @@ description: En este documento se describe cómo compilar y probar aplicaciones 
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 45c7c3a90fa0dedfed8f5f325a96b4c7aa7a5a9e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae32588d75ec3152a1b8b8558d40abbe2e76d1b4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292032"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022485"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
 
@@ -32,7 +32,7 @@ Al desarrollar para iOS en Visual Studio es necesario cumplir algunos requisitos
 
 Hay una serie de opciones de configuración disponibles para poder decidir cuál funciona mejor para las necesidades de desarrollo. Se enumeran a continuación:
 
-- Usar un equipo Mac como equipo de desarrollo principal y ejecutar una máquina virtual de Windows con Visual Studio instalado. Se recomienda usar software de máquina virtual como [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
+- Usar un equipo Mac como equipo de desarrollo principal y ejecutar una máquina virtual de Windows con Visual Studio instalado. Se recomienda usar software de máquina virtual como [Parallels](https://www.parallels.com/products/desktop/) o [VMWare](https://www.vmware.com/products/fusion/).
 - Usar un equipo Mac solo como host de compilación. En este caso, se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/get-started/installation/windows.md#installation) instaladas.
 
 En cualquier caso, debe seguir estos pasos:
@@ -53,7 +53,7 @@ A continuación se explican las funciones de estas barras de herramientas.
 
 Los controles relevantes para el desarrollo de Xamarin iOS se han rodeado con un círculo rojo:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Controles pertinentes para el desarrollo de Xamarin iOS rodeados con un círculo rojo")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Controles pertinentes para el desarrollo de Xamarin iOS rodeados con un círculo rojo")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
 - **Iniciar**: inicia la depuración o la ejecución de la aplicación en la plataforma seleccionada. Debe haber un equipo Mac conectado (vea el indicador de estado en la barra de herramientas de iOS).
 - **Configuraciones de soluciones**: permite seleccionar la configuración que se va a usar (por ejemplo, Depurar, Publicar).
@@ -63,7 +63,7 @@ Los controles relevantes para el desarrollo de Xamarin iOS se han rodeado con un
 
 El aspecto de la barra de herramientas de iOS de Visual Studio es similar en todas las versiones de Visual Studio. Se muestra a continuación:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Barra de herramientas iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Cada elemento se explica a continuación:
 
@@ -79,31 +79,31 @@ Hay opciones del panel *Salida* que se pueden ver para detectar errores y mensaj
 
 La captura de pantalla siguiente muestra las ventanas de salida disponibles, que pueden variar según el tipo de proyecto:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "Ventanas de salida disponibles")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin**: contiene información relacionada únicamente con Xamarin, como la conexión con el equipo Mac y el estado de activación.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Información relacionada únicamente con Xamarin, como la conexión con el equipo Mac y el estado de activación")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Diagnósticos de Xamarin**: muestra información más detallada sobre el proyecto de Xamarin, como la interacción con adb para Android.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Información detallada sobre el proyecto de Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Otros paneles de salida predeterminados de Visual Studio como Depurar y Compilar siguen estando disponibles en la vista de salida y se usan para la salida de depuración y la salida de MSBuild:
 
 - **Depurar**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Salida de depuración")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Compilar** & **Orden de compilación**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Salida de MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>Propiedades de proyecto de iOS
 
 Es posible acceder a las propiedades del proyecto de Visual Studio si se hace clic con el botón derecho en el nombre del proyecto y se selecciona *Propiedades* en el menú contextual. Esto le permitirá configurar la aplicación de iOS, como se muestra en la siguiente captura de pantalla:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuración de una aplicación de iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
 
 - *Firma del lote de iOS*: se conecta al equipo Mac para rellenar las identidades de firma de código y los perfiles de aprovisionamiento:
 
@@ -133,11 +133,11 @@ El guion gráfico y los archivos .xib se pueden editar en Visual Studio mediante
 
 Para empezar a crear o editar el guion gráfico, haga doble clic en `Main.storyboard` para abrirlo en el diseñador de iOS:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "Main.storyboard en el Diseñador de iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "The Main.storyboard in the iOS Designer")
 
 Para agregar objetos a la vista, use el panel **Cuadro de herramientas** para arrastrar y colocar elementos en la superficie de diseño. Si aún no está agregado, el cuadro de herramientas se puede agregar si se selecciona **Ver > Cuadro de herramientas**. Las propiedades de los objetos se pueden modificar, su diseño se puede ajustar y se pueden crear eventos mediante el panel **Propiedades**, como se muestra a continuación:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "Panel Propiedades")
+![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "The Properties pane")
 
  Para más información sobre cómo usar el diseñador de iOS, vea las guías sobre el [Diseñador](~/ios/user-interface/designer/index.md).
 
@@ -163,7 +163,7 @@ Esta ventana de herramientas proporciona: una tabla de entradas de registro, una
 
 En la aplicación se pueden establecer puntos de interrupción en cualquier momento para indicar al depurador que detenga temporalmente la ejecución del programa. Para establecer un punto de interrupción en Visual Studio, haga clic en el margen del editor, junto al número de línea del código en el que quiere interrumpir:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Establecimiento de un punto de depuración")
+![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Setting a debug point")
 
 Inicie la depuración y use el simulador o el dispositivo para ir a un punto de interrupción de la aplicación. Cuando se alcanza un punto de interrupción, se resalta la línea y se habilita el comportamiento de depuración normal de Visual Studio: se puede entrar en el código, saltarlo o salir, examinar las variables locales o usar la ventana Inmediato.
 

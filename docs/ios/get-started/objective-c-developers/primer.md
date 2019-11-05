@@ -4,15 +4,15 @@ description: En este documento se describe C# para desarrolladores de Objective-
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b84d959ce7976fc51cbdfee99cbceec560e8e8e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291996"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022424"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de C# para desarrolladores de Objective-C
 
@@ -58,7 +58,7 @@ public static class UITextViewExtensions
 
 A continuación, cuando una se crea una instancia de `UITextView` en el código, el método estará disponible en la lista de autocompletar tal y como se muestra a continuación:
 
- ![](primer-images/01-extensionmethodintellisense.png "El método disponible en la función de Autocompletar")
+ ![](primer-images/01-extensionmethodintellisense.png "The method available in the autocomplete")
 
 Cuando se llama al método de extensión, se pasa la instancia al argumento, como `textView` en este ejemplo.
 

@@ -4,15 +4,15 @@ description: En este documento se describe cómo depurar las excepciones que se 
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769881"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021670"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
 
@@ -183,7 +183,7 @@ Se forzará la aplicación para que ejecute cada segundo el recolector de elemen
 
 El siguiente paso es notificar el problema a Xamarin, para que pueda corregir el enlace en las versiones futuras. Si es el propietario de una licencia empresarial, cree un vale de soporte técnico en 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 En caso contrario, investigue en las siguientes fuentes si ya existe el problema:
 

@@ -4,15 +4,15 @@ description: Este documento contiene información general sobre las técnicas de
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a261d1fc86fac16cf48575616359b083daebf47
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8d4be4b06c051386afa0358856a6df49abb6653
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756550"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026468"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Introducción a la distribución de aplicaciones Xamarin.iOS
 
@@ -20,12 +20,12 @@ _Este documento contiene información general sobre las técnicas de distribuci�
 
 Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso del ciclo de vida de desarrollo de software es distribuirla a los usuarios, como se muestra en la sección destacada del siguiente diagrama:
 
-[![](images/publishingdiagram.png "Una vez que se ha desarrollado la aplicación iOS, el siguiente paso consiste en distribuirla a los usuarios, tal y como se muestra en la sección resaltada de este diagrama.")](images/publishingdiagram.png#lightbox)
+[![](images/publishingdiagram.png "After the iOS app has been developed, the next step is to distribute the app to users, as shown in the highlighted section of this diagram")](images/publishingdiagram.png#lightbox)
 
 Apple proporciona los siguientes métodos para distribuir una aplicación de iOS, que son compatibles con Xamarin.iOS:
 
 1. [**La App Store**](#App_Store_Distribution)
-2. [**Interna (Enterprise)**](#In-House_Distribution)
+2. [**Interna (Enterprise)** ](#In-House_Distribution)
 3. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante el correspondiente *perfil de aprovisionamiento*. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.

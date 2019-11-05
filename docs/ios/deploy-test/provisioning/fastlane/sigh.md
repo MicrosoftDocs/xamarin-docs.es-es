@@ -4,15 +4,15 @@ description: En este documento se describe el comando sigh de fastlane, que se u
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c9b6f6c29b86ee40c2d7b04dbe6fa4ce24a745ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9506d80ab10ce70938f95371a52bf28bda33d42d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762627"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028493"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane para iOS: sigh
 
@@ -64,7 +64,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 Donde `com.company.appname` es el identificador de agrupación de la aplicación, que se encuentra en el archivo Info.plist de la aplicación de Xamarin.iOS, como se muestra a continuación:
 
-[![](sigh-images/fastlane-image5.png "Archivo Info.plist de la aplicación Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
 
 El identificador de aplicación único debe ser una cadena de estilo DNS inversa. Una vez creada, tome nota de ella, ya que deberá usarla cuando emplee Sigh más adelante en esta guía.
 
@@ -111,7 +111,7 @@ Escriba su nombre de usuario del identificador de Apple cuando Fastlane se lo so
 
 Si el identificador de Apple está conectado a varios equipos, se mostrarán aquí. Seleccione el número que se corresponda con el equipo que quiera usar:
 
-[![](sigh-images/fastlane-image2.png "Selección del equipo que se va a usar")](sigh-images/fastlane-image2.png#lightbox)
+[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
 
 El identificador de equipo también se puede pasar a la CLI de la manera siguiente:
 
@@ -127,7 +127,7 @@ Después, fastlane creará, descargará e instalará automáticamente el perfil 
 
 Si busca en el Centro de desarrollo, verá el perfil de aprovisionamiento recién creado, tal como se muestra a continuación:
 
-[![](sigh-images/fastlane-image10.png "Consulta del perfil de aprovisionamiento recién creado")](sigh-images/fastlane-image10.png#lightbox)
+[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
 
 De forma predeterminada, sigh almacenará los perfiles de aprovisionamiento en la carpeta actual. Para cambiar el directorio de salida, edite `output_path` o haga lo siguiente:
 

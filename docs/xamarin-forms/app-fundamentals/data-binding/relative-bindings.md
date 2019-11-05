@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/30/2019
-ms.openlocfilehash: 24879b1ffcac97acdba27c32a22e43bfb6e80459
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
+ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749784"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72959136"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
@@ -31,10 +31,10 @@ La clase `RelativeSourceExtension` admite la extensión de marcado `RelativeSour
 
 La propiedad `Mode` se debe establecer en uno de los miembros de enumeración `RelativeBindingSourceMode`.
 
-- `TemplatedParent` indica el elemento al que se aplica la plantilla, en el que existe el elemento enlazado. Para obtener más información, vea [Enlace a una a un elemento primario con plantilla](#bind-to-a-templated-parent).
-- `Self` indica el elemento en el que se está estableciendo el enlace, lo cual le permite enlazar una propiedad de ese elemento a otra propiedad del mismo elemento. Para obtener más información, consulte [Enlace a sí mismo](#bind-to-self).
-- `FindAncestor` indica el antecesor en el árbol visual del elemento enlazado. Este modo se debe utilizar para enlazar a un control de antecesor representado por la propiedad `AncestorType`. Para obtener más información, consulte [Enlace a un antecesor](#bind-to-an-ancestor).
-- `FindAncestorBindingContext` indica el `BindingContext` del antecesor en el árbol visual del elemento enlazado. Este modo se debe utilizar para enlazar al `BindingContext` de un antecesor representado por la propiedad `AncestorType`. Para obtener más información, consulte [Enlace a un antecesor](#bind-to-an-ancestor).
+- `TemplatedParent` indica el elemento al que se aplica la plantilla, en el que existe el elemento enlazado. Para más información, vea [Enlace a un elemento primario con plantilla](#bind-to-a-templated-parent).
+- `Self` indica el elemento en el que se está estableciendo el enlace, lo cual le permite enlazar una propiedad de ese elemento a otra propiedad del mismo elemento. Para más información, vea [Enlace a sí mismo](#bind-to-self).
+- `FindAncestor` indica el antecesor en el árbol visual del elemento enlazado. Este modo se debe utilizar para enlazar a un control de antecesor representado por la propiedad `AncestorType`. Para más información, vea [Enlace a un antecesor](#bind-to-an-ancestor).
+- `FindAncestorBindingContext` indica el `BindingContext` del antecesor en el árbol visual del elemento enlazado. Este modo se debe utilizar para enlazar al `BindingContext` de un antecesor representado por la propiedad `AncestorType`. Para más información, vea [Enlace a un antecesor](#bind-to-an-ancestor).
 
 La propiedad `Mode` es la propiedad de contenido de la clase `RelativeSourceExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la parte `Mode=` de la expresión.
 
