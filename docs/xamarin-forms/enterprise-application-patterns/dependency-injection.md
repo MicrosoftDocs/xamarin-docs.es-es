@@ -6,13 +6,13 @@ ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 975b32610b4b496e329c5c5a29b79efd2874d8cf
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/04/2019
+ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
+ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029500"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567895"
 ---
 # <a name="dependency-injection"></a>Inserción de dependencias
 
@@ -57,9 +57,9 @@ El uso de un contenedor de inserción de dependencias tiene varias ventajas:
 
 En el contexto de una aplicación de Xamarin. Forms que usa MVVM, se suele usar un contenedor de inserción de dependencias para registrar y resolver modelos de vista, así como para registrar servicios e insertarlos en modelos de vista.
 
-Hay muchos contenedores de inserción de dependencias disponibles, con la aplicación móvil eShopOnContainers con Autofac para administrar la creación de instancias del modelo de vista y las clases de servicio en la aplicación. Autofac facilita la creación de aplicaciones de acoplamiento flexible y proporciona todas las características que se encuentran normalmente en los contenedores de inserción de dependencias, incluidos los métodos para registrar las asignaciones de tipos y las instancias de objeto, resolver objetos, administrar la duración de los objetos e insertar objetos dependientes en constructores de objetos que resuelve. Para obtener más información sobre Autofac, vea [Autofac](https://autofac.readthedocs.io/en/latest/index.html) en readthedocs.IO.
+Hay muchos contenedores de inserción de dependencias disponibles, con la aplicación móvil eShopOnContainers con TinyIoC para administrar la creación de instancias del modelo de vista y las clases de servicio en la aplicación. TinyIoC se eligió después de evaluar varios contenedores diferentes y ofrece un rendimiento superior en las plataformas móviles en comparación con la mayoría de los contenedores conocidos. Facilita la creación de aplicaciones de acoplamiento flexible y proporciona todas las características que se encuentran normalmente en los contenedores de inserción de dependencias, incluidos los métodos para registrar asignaciones de tipos, resolver objetos, administrar la duración de los objetos e insertar objetos dependientes en constructores de objetos que resuelve. Para obtener más información sobre TinyIoC, vea [TinyIoC](https://github.com/grumpydev/TinyIoC/wiki) en github.com.
 
-En Autofac, la interfaz de `IContainer` proporciona el contenedor de inserción de dependencias. En la figura 3-1 se muestran las dependencias cuando se usa este contenedor, que crea una instancia de un objeto `IOrderService` y lo inserta en la clase `ProfileViewModel`.
+En TinyIoC, el tipo de `TinyIoCContainer` proporciona el contenedor de inserción de dependencias. En la figura 3-1 se muestran las dependencias cuando se usa este contenedor, que crea una instancia de un objeto `IOrderService` y lo inserta en la clase `ProfileViewModel`.
 
 ![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
 
@@ -87,60 +87,33 @@ Hay dos formas de registrar tipos y objetos en el contenedor a través del códi
 > [!TIP]
 > Los contenedores de inserción de dependencias no siempre son adecuados. La inserción de dependencias presenta una complejidad adicional y requisitos que podrían no ser adecuados o útiles para aplicaciones pequeñas. Si una clase no tiene ninguna dependencia, o no es una dependencia para otros tipos, puede que no tenga sentido colocarla en el contenedor. Además, si una clase tiene un único conjunto de dependencias que son integrales para el tipo y nunca cambia, puede que no tenga sentido colocarlo en el contenedor.
 
-El registro de tipos que requieren la inserción de dependencias se debe realizar en un único método en una aplicación, y este método se debe invocar al principio del ciclo de vida de la aplicación para asegurarse de que la aplicación es consciente de las dependencias entre sus clases. En la aplicación móvil eShopOnContainers, se realiza mediante la clase `ViewModelLocator`, que compila el objeto `IContainer` y es la única clase de la aplicación que contiene una referencia a ese objeto. En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers declara el objeto `IContainer` en la clase `ViewModelLocator`:
+El registro de tipos que requieren la inserción de dependencias se debe realizar en un único método en una aplicación, y este método se debe invocar al principio del ciclo de vida de la aplicación para asegurarse de que la aplicación es consciente de las dependencias entre sus clases. En la aplicación móvil eShopOnContainers, se realiza mediante la clase `ViewModelLocator`, que compila el objeto `TinyIoCContainer` y es la única clase de la aplicación que contiene una referencia a ese objeto. En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers declara el objeto `TinyIoCContainer` en la clase `ViewModelLocator`:
 
 ```csharp
-private static IContainer _container;
+private static TinyIoCContainer _container;
 ```
 
-Los tipos e instancias se registran en el método `RegisterDependencies` de la clase `ViewModelLocator`. Esto se consigue creando primero una instancia de `ContainerBuilder`, que se muestra en el ejemplo de código siguiente:
+Los tipos se registran en el constructor de `ViewModelLocator`. Esto se consigue creando primero una instancia de `TinyIoCContainer`, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
-var builder = new ContainerBuilder();
+_container = new TinyIoCContainer();
 ```
 
-Los tipos e instancias se registran con el objeto `ContainerBuilder` y en el ejemplo de código siguiente se muestra la forma más común de registro de tipo:
+Después, los tipos se registran con el objeto `TinyIoCContainer` y en el ejemplo de código siguiente se muestra la forma más común de registro de tipo:
 
 ```csharp
-builder.RegisterType<RequestProvider>().As<IRequestProvider>();
+_container.Register<IRequestProvider, RequestProvider>();
 ```
 
-El método `RegisterType` que se muestra aquí asigna un tipo de interfaz a un tipo concreto. Indica al contenedor que cree una instancia de un objeto `RequestProvider` cuando crea una instancia de un objeto que requiere una inserción de un `IRequestProvider` a través de un constructor.
+El método `Register` que se muestra aquí asigna un tipo de interfaz a un tipo concreto. De forma predeterminada, cada registro de interfaz se configura como singleton para que todos los objetos dependientes reciban la misma instancia compartida. Por lo tanto, solo existirá una única instancia de `RequestProvider` en el contenedor, que es compartida por objetos que requieren una inyección de un `IRequestProvider` a través de un constructor.
 
 Los tipos concretos también se pueden registrar directamente sin una asignación de un tipo de interfaz, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
-builder.RegisterType<ProfileViewModel>();
+_container.Register<ProfileViewModel>();
 ```
 
-Cuando se resuelve el tipo de `ProfileViewModel`, el contenedor insertará sus dependencias necesarias.
-
-Autofac también permite el registro de instancias, donde el contenedor es responsable de mantener una referencia a una instancia singleton de un tipo. Por ejemplo, en el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers registra el tipo concreto que se va a usar cuando una instancia de `ProfileViewModel` requiere una instancia de `IOrderService`:
-
-```csharp
-builder.RegisterType<OrderService>().As<IOrderService>().SingleInstance();
-```
-
-El método `RegisterType` que se muestra aquí asigna un tipo de interfaz a un tipo concreto. El método `SingleInstance` configura el registro para que todos los objetos dependientes reciban la misma instancia compartida. Por lo tanto, solo existirá una única instancia de `OrderService` en el contenedor, que es compartida por objetos que requieren una inyección de un `IOrderService` a través de un constructor.
-
-El registro de instancias también se puede realizar con el método `RegisterInstance`, que se muestra en el ejemplo de código siguiente:
-
-```csharp
-builder.RegisterInstance(new OrderMockService()).As<IOrderService>();
-```
-
-En el método `RegisterInstance` que se muestra aquí se crea una nueva instancia de `OrderMockService` y se registra con el contenedor. Por lo tanto, solo existe una única instancia de `OrderMockService` en el contenedor, que es compartida por objetos que requieren una inyección de un `IOrderService` a través de un constructor.
-
-A continuación, se debe crear el objeto `IContainer`, que se muestra en el ejemplo de código siguiente:
-
-```csharp
-_container = builder.Build();
-```
-
-Al invocar el método `Build` en la instancia de `ContainerBuilder`, se crea un nuevo contenedor de inserción de dependencias que contiene los registros que se han realizado.
-
-> [!TIP]
-> Considere una `IContainer` como inmutable. Aunque Autofac proporciona un método `Update` para actualizar los registros de un contenedor existente, se debe evitar la llamada a este método siempre que sea posible. Hay riesgos para modificar un contenedor una vez compilado, especialmente si se ha usado el contenedor. Para obtener más información, vea [considerar un contenedor como inmutable](https://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) en readthedocs.IO.
+De forma predeterminada, cada registro de clase concreta se configura como una instancia múltiple para que todos los objetos dependientes reciban una nueva instancia. Por lo tanto, cuando se resuelva el `ProfileViewModel`, se creará una nueva instancia de y el contenedor insertará sus dependencias necesarias.
 
 <a name="resolution" />
 
@@ -154,21 +127,21 @@ Normalmente, cuando se resuelve un tipo, se produce una de estas tres cosas:
 1. Si el tipo se ha registrado como singleton, el contenedor devuelve la instancia singleton. Si es la primera vez que se llama al tipo para, el contenedor lo crea si es necesario y mantiene una referencia a él.
 1. Si el tipo no se ha registrado como singleton, el contenedor devuelve una nueva instancia de y no mantiene una referencia a ella.
 
-En el ejemplo de código siguiente se muestra cómo se puede resolver el tipo de `RequestProvider` que se registró anteriormente con Autofac:
+En el ejemplo de código siguiente se muestra cómo se puede resolver el tipo de `RequestProvider` que se registró anteriormente con TinyIoC:
 
 ```csharp
-var requestProvider = _container.Resolve<IRequestProvider>();
+var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-En este ejemplo, se pide a Autofac que resuelva el tipo concreto para el tipo de `IRequestProvider`, junto con las dependencias. Normalmente, se llama al método `Resolve` cuando se requiere una instancia de un tipo específico. Para obtener información sobre cómo controlar la duración de los objetos resueltos, vea [administrar la duración de los objetos resueltos](#managing_the_lifetime_of_resolved_objects).
+En este ejemplo, se pide a TinyIoC que resuelva el tipo concreto para el tipo de `IRequestProvider`, junto con las dependencias. Normalmente, se llama al método `Resolve` cuando se requiere una instancia de un tipo específico. Para obtener información sobre cómo controlar la duración de los objetos resueltos, vea [administrar la duración de los objetos resueltos](#managing_the_lifetime_of_resolved_objects).
 
 En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers crea instancias de los tipos de modelo de vista y sus dependencias:
 
 ```csharp
-var viewModel = _container.Resolve(viewModelType);
+var viewModel = _container.Resolve(viewModelType);
 ```
 
-En este ejemplo, se pide a Autofac que resuelva el tipo de modelo de vista para un modelo de vista solicitado, y el contenedor también resolverá las dependencias. Al resolver el tipo de `ProfileViewModel`, la dependencia que se va a resolver es un objeto `IOrderService`. Por lo tanto, Autofac primero crea un objeto `OrderService` y, a continuación, lo pasa al constructor de la clase `ProfileViewModel`. Para obtener más información sobre cómo la aplicación móvil eShopOnContainers construye modelos de vista y los asocia a las vistas, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+En este ejemplo, se pide a TinyIoC que resuelva el tipo de modelo de vista para un modelo de vista solicitado, y el contenedor también resolverá las dependencias. Al resolver el tipo de `ProfileViewModel`, las dependencias que se van a resolver son un objeto `ISettingsService` y un objeto `IOrderService`. Dado que los registros de interfaz se usaron al registrar las clases `SettingsService` y `OrderService`, TinyIoC devuelve instancias singleton para las clases `SettingsService` y `OrderService` y, a continuación, las pasa al constructor de la clase `ProfileViewModel`. Para obtener más información sobre cómo la aplicación móvil eShopOnContainers construye modelos de vista y los asocia a las vistas, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 > [!NOTE]
 > El registro y la resolución de tipos con un contenedor supone un costo de rendimiento, que los contenedores usan reflexión para crear todos los tipos, especialmente si se reconstruyen las dependencias para cada navegación de página en la aplicación. Si hay muchas dependencias, o estas son muy amplias, el costo de la creación puede aumentar significativamente.
@@ -177,26 +150,24 @@ En este ejemplo, se pide a Autofac que resuelva el tipo de modelo de vista para 
 
 ## <a name="managing-the-lifetime-of-resolved-objects"></a>Administrar la duración de los objetos resueltos
 
-Después de registrar un tipo, el comportamiento predeterminado de Autofac es crear una nueva instancia del tipo registrado cada vez que se resuelva el tipo, o cuando el mecanismo de dependencia Inserte instancias en otras clases. En este escenario, el contenedor no contiene una referencia al objeto resuelto. Sin embargo, al registrar una instancia, el comportamiento predeterminado de Autofac es administrar la duración del objeto como singleton. Por lo tanto, la instancia permanece en el ámbito mientras el contenedor está en el ámbito y se desecha cuando el contenedor sale del ámbito y se recolecta como elemento no utilizado, o cuando el código desecha explícitamente el contenedor.
+Después de registrar un tipo mediante un registro de clase concreto, el comportamiento predeterminado de TinyIoC es crear una nueva instancia del tipo registrado cada vez que se resuelva el tipo, o cuando el mecanismo de dependencia Inserte instancias en otras clases. En este escenario, el contenedor no contiene una referencia al objeto resuelto. Sin embargo, al registrar un tipo mediante el registro de la interfaz, el comportamiento predeterminado de TinyIoC es administrar la duración del objeto como singleton. Por lo tanto, la instancia permanece en el ámbito mientras el contenedor está en el ámbito y se desecha cuando el contenedor sale del ámbito y se recolecta como elemento no utilizado, o cuando el código desecha explícitamente el contenedor.
 
-Un ámbito de instancia de Autofac se puede usar para especificar el comportamiento de singleton para un objeto que Autofac crea a partir de un tipo registrado. Los ámbitos de instancia de Autofac administran la duración de los objetos con instancias creadas por el contenedor. El ámbito de la instancia predeterminada para el método `RegisterType` es el ámbito de `InstancePerDependency`. Sin embargo, el ámbito de `SingleInstance` se puede utilizar con el método `RegisterType`, de modo que el contenedor cree o devuelva una instancia singleton de un tipo cuando se llame al método `Resolve`. En el ejemplo de código siguiente se muestra cómo se indica a Autofac que cree una instancia singleton de la clase `NavigationService`:
+El comportamiento predeterminado de registro de TinyIoC se puede invalidar mediante los métodos de la API fluida `AsSingleton` y `AsMultiInstance`. Por ejemplo, el método `AsSingleton` se puede utilizar con el método `Register`, de modo que el contenedor cree o devuelva una instancia singleton de un tipo cuando se llame al método `Resolve`. En el ejemplo de código siguiente se muestra cómo se indica a TinyIoC que cree una instancia singleton de la clase `LoginViewModel`:
 
 ```csharp
-builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
+_container.Register<LoginViewModel>().AsSingleton();
 ```
 
-La primera vez que se resuelve la interfaz `INavigationService`, el contenedor crea un nuevo objeto `NavigationService` y mantiene una referencia a él. En las resoluciones posteriores de la interfaz `INavigationService`, el contenedor devuelve una referencia al objeto `NavigationService` que se creó anteriormente.
+La primera vez que se resuelve el tipo de `LoginViewModel`, el contenedor crea un nuevo objeto `LoginViewModel` y mantiene una referencia a él. En las resoluciones posteriores del `LoginViewModel`, el contenedor devuelve una referencia al objeto `LoginViewModel` que se creó anteriormente.
 
 > [!NOTE]
-> El ámbito SingleInstance desecha los objetos creados cuando se elimina el contenedor.
-
-Autofac incluye ámbitos de instancia adicionales. Para obtener más información, vea ámbito de la [instancia](https://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) en readthedocs.IO.
+> Los tipos que se registran como singletons se eliminan cuando se elimina el contenedor.
 
 ## <a name="summary"></a>Resumen
 
 La inserción de dependencias permite desacoplar tipos concretos del código que depende de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y asignaciones entre las interfaces y los tipos abstractos, y los tipos concretos que implementan o amplían estos tipos.
 
-Autofac facilita la creación de aplicaciones de acoplamiento flexible y proporciona todas las características que se encuentran normalmente en los contenedores de inserción de dependencias, incluidos los métodos para registrar las asignaciones de tipos y las instancias de objeto, resolver objetos, administrar la duración de los objetos e insertar objetos dependientes en constructores de objetos que resuelve.
+TinyIoC es un contenedor ligero que ofrece un rendimiento superior en plataformas móviles en comparación con la mayoría de los contenedores conocidos. Facilita la creación de aplicaciones de acoplamiento flexible y proporciona todas las características que se encuentran normalmente en los contenedores de inserción de dependencias, incluidos los métodos para registrar asignaciones de tipos, resolver objetos, administrar la duración de los objetos e insertar objetos dependientes en constructores de objetos que resuelve.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
