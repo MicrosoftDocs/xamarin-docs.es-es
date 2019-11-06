@@ -26,7 +26,7 @@ Las aplicaciones del sistema se instalan en la carpeta **/system/app/** (un dire
 
 Las aplicaciones del sistema se comportan exactamente igual que las aplicaciones de usuario, pero tienen las siguientes notables excepciones:
 
-- Las aplicaciones del sistema son actualizables igual que una _aplicación de usuario_ normal. Sin embargo, como siempre existe una copia de la aplicación en **/system/app/** , siempre es posible revertir la aplicación a la versión original.
+- Las aplicaciones del sistema son actualizables igual que una _aplicación de usuario_ normal. Sin embargo, como siempre existe una copia de la aplicación en **/system/app/**, siempre es posible revertir la aplicación a la versión original.
 
 - Las aplicaciones del sistema pueden tener concedidos determinados permisos solo del sistema que no están disponibles para una aplicación de usuario. Un ejemplo de un permiso solo del sistema es [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED), que permite que las aplicaciones se emparejen con dispositivos Bluetooth sin ninguna interacción del usuario.
 
@@ -44,7 +44,7 @@ En los pasos siguientes se describe cómo instalar una aplicación Xamarin.Andro
 
 1. **Empaquete un APK de lanzamiento de la aplicación Xamarin.Android**: este paso se describe con más detalle en la guía [Publicar una aplicación](~/android/deploy-test/publishing/index.md).
 
-2. **Extraiga las bibliotecas compartidas del APK**: mediante cualquier utilidad de compresión, abra el archivo APK y examine el contenido de la carpeta **/lib/** . Esta carpeta tendrá un subdirectorio para cada _interfaz binaria de aplicación_ (ABI) que sea compatible con la aplicación; el contenido de esta carpeta incluirá todas las bibliotecas compartidas que requiere la aplicación en esa ABI en particular:
+2. **Extraiga las bibliotecas compartidas del APK**: mediante cualquier utilidad de compresión, abra el archivo APK y examine el contenido de la carpeta **/lib/**. Esta carpeta tendrá un subdirectorio para cada _interfaz binaria de aplicación_ (ABI) que sea compatible con la aplicación; el contenido de esta carpeta incluirá todas las bibliotecas compartidas que requiere la aplicación en esa ABI en particular:
 
     ![Captura de pantalla de archivos .so en la carpeta armeabi-v7a de taskypro.zip](install-system-app-images/install-system-app-01.png)
 

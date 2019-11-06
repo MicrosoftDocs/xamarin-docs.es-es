@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: ced31e2802ab7d0550069b0c96a91b014a33f59d
-  ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+  ms.openlocfilehash: 908c1b347a10404ddeaff49ce5fe0a8e4b0e6ad9
+  ms.sourcegitcommit: 5384b26b3bd07f1e5796fd76cb24a40b3270ebd6
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/08/2019
-  ms.locfileid: "72032516"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73589464"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -41,7 +41,7 @@ productDirectory:
     - url: ~/xamarin-forms/xaml/index.yml
       text: Lenguaje XAML de Xamarin.Forms
     - url: ~/xamarin-forms/index.yml
-      text: Documentos de plataforma
+      text: Toda la documentación de Xamarin.Forms
   - title: Android
     imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
     links:
@@ -50,7 +50,7 @@ productDirectory:
     - url: ~/android/platform/android-10.md
       text: Android 10
     - url: ~/android/index.yml
-      text: Documentos de plataforma
+      text: Toda la documentación de Android
   - title: iOS
     imageSrc: https://docs.microsoft.com/media/common/i_web-apps.svg
     links:
@@ -59,14 +59,14 @@ productDirectory:
     - url: ~/ios/platform/ios13/index.md
       text: iOS 13
     - url: ~/ios/index.yml
-      text: Documentos de plataforma
+      text: Toda la documentación de iOS
   - title: Mac
     imageSrc: https://docs.microsoft.com/media/common/i_xplat-code.svg
     links:
     - url: ~/mac/get-started/hello-mac.md
       text: Compilación de una aplicación para Mac
     - url: ~/mac/index.yml
-      text: Documentos de plataforma
+      text: Toda la documentación de Mac
 conceptualContent:
   title: Introducción a Xamarin.Forms
   summary: Cree una aplicación multiplataforma para Android y iOS mediante C# y .NET en Visual Studio en Windows y macOS.
