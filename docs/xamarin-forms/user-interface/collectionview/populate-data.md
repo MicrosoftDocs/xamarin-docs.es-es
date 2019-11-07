@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 5afdaa9afa4c5ced39498a1cb45de07fe4bf4195
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696708"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662328"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Datos de CollectionView de Xamarin. Forms
 
@@ -69,12 +69,15 @@ collectionView.ItemsSource = new string[]
 };
 ```
 
-> [!IMPORTANT]
-> Si es necesario actualizar el [`CollectionView`](xref:Xamarin.Forms.CollectionView) a medida que se agregan, quitan o cambian elementos en la colección subyacente, la colección subyacente debe ser una colección `IEnumerable` que envíe notificaciones de cambios de propiedades, como `ObservableCollection`.
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) producirá una excepción si su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) se actualiza fuera del subproceso de la interfaz de usuario.
 
 De forma predeterminada, [`CollectionView`](xref:Xamarin.Forms.CollectionView) muestra los elementos en una lista vertical, tal como se muestra en las siguientes capturas de pantallas:
 
 [![Captura de pantalla de CollectionView que contiene elementos de texto, en iOS y Android](populate-data-images/text.png "Elementos de texto de una CollectionView")](populate-data-images/text-large.png#lightbox "Elementos de texto de una CollectionView")
+
+> [!IMPORTANT]
+> Si es necesario actualizar el [`CollectionView`](xref:Xamarin.Forms.CollectionView) a medida que se agregan, quitan o cambian elementos en la colección subyacente, la colección subyacente debe ser una colección `IEnumerable` que envíe notificaciones de cambios de propiedades, como `ObservableCollection`.
 
 Para obtener información sobre cómo cambiar el diseño de [`CollectionView`](xref:Xamarin.Forms.CollectionView) , consulte [diseño de CollectionView de Xamarin. Forms](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en el `CollectionView`, consulte [definir la apariencia del elemento](#define-item-appearance).
 

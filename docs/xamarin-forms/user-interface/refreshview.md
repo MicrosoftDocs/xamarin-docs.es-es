@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: b53c58a5e859bf7752855c3954666a062261599d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: e38987006025dad1c2ff49c3ea8916e2075d61d7
+ms.sourcegitcommit: d1d4700b3b1b417a9d7b7da85ab5d28f8e8e599d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697744"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649291"
 ---
 # <a name="xamarinforms-refreshview"></a>RefreshView de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
 El `RefreshView` es un control contenedor que proporciona funcionalidad de extracción para actualizar el contenido desplazable. Por lo tanto, el elemento secundario de un `RefreshView` debe ser un control desplazable, como [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)o [`ListView`](xref:Xamarin.Forms.ListView).
 
@@ -105,6 +105,6 @@ Como alternativa, al definir la propiedad `Command`, se puede especificar el del
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [RefreshView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+- [RefreshView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 - [Diseños enlazables en Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [Específico de la plataforma de dirección de extracción RefreshView](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)
