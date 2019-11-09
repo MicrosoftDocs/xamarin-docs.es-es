@@ -6,13 +6,13 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
-ms.openlocfilehash: 3c167b025b41bd4fc7c8c93bdb2f825c9daa540c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/07/2019
+ms.openlocfilehash: 83fbad8a9bbb9afef5ee80705fe9e86e51284e7d
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032848"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842981"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticación de usuarios con un proveedor de identidades
 
@@ -259,6 +259,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 El método `FindAccountsForService` devuelve una colección `IEnumerable` de objetos `Account`, con el primer elemento de la colección que se establece como la cuenta coincidente.
+
+## <a name="troubleshooting"></a>Solución de problemas
+
+- En Android, si recibe una notificación del sistema cuando cierra el explorador después de la autenticación y desea detener la notificación del sistema, agregue el código siguiente al proyecto de Android después de inicializar Xamarin. auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- En Android, si el explorador no se cierra automáticamente, una solución temporal consiste en degradar el paquete Xamarin. auth a la versión 1.5.0.3. Después, agregue la [Crypto Crypto v 2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) al proyecto de Android.
 
 ## <a name="summary"></a>Resumen
 
