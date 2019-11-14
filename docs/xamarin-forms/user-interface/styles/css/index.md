@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: 6cece2c7cad401a9dc6f14b689c5c9e5ab757df5
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: fdee070021b22f82cb69571f0fa2f396831b14e6
+ms.sourcegitcommit: 6781967baeed4fe2c58f070476e7c21d01c25c30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696883"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052803"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilos a aplicaciones de Xamarin. Forms con Hojas de estilo CSS (CSS)
 
@@ -352,7 +352,7 @@ Las siguientes propiedades CSS son compatibles con Xamarin. Forms (en la columna
 
 |Propiedad.|Se aplica a|Valores|Ejemplo|
 |---|---|---|---|
-|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| 0 1 2 3 4 5 6 7 @no__ t_18 9 0 1 2 |`align-content: space-between;`|
+|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| 0 1 2 |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| 0 1 2 3 4|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|\| de _colores_ `initial` |`background-color: springgreen;`|
@@ -372,7 +372,7 @@ Las siguientes propiedades CSS son compatibles con Xamarin. Forms (en la columna
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|\| _doble_ `initial` |`min-height: 250;`|
-|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| 0 1 2 3 4 5 6 7 @no__ 9 t_18 0|`justify-content: flex-end;`|
+|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
 |`line-height`|`Label`, `Span`|\| _doble_ `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_grosor_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_grosor_ \| `initial` |`margin-left: 3;`|
@@ -409,6 +409,8 @@ Actualmente no se admiten las siguientes propiedades:
 - Propiedades abreviadas, como `font`, y `border`.
 
 Además, no hay ningún valor `inherit` y, por tanto, no se admite la herencia. Por lo tanto, no es posible, por ejemplo, establecer la propiedad `font-size` en un diseño y esperar que todas las instancias de [`Label`](xref:Xamarin.Forms.Label) del diseño hereden el valor. La única excepción es la `direction` propiedad, que tiene un valor predeterminado de `inherit`.
+
+El destino de los elementos de `Span` tiene un problema conocido que evita que los intervalos sean el destino de los estilos CSS por elemento y nombre (mediante el símbolo de `#`). El elemento `Span` deriva de `GestureElement`, que no tiene la propiedad `StyleClass`, por lo que los intervalos no admiten el destino de clase CSS. Para obtener más información, vea [no se puede aplicar el estilo CSS al control span](https://github.com/xamarin/Xamarin.Forms/issues/5979).
 
 ### <a name="xamarinforms-specific-properties"></a>Propiedades específicas de Xamarin. Forms
 
@@ -456,7 +458,7 @@ Se admiten los siguientes valores de `color`:
 - `X11` [colores](https://en.wikipedia.org/wiki/X11_color_names/), que coinciden con los colores CSS, los colores predefinidos de UWP y los colores de Xamarin. Forms. Tenga en cuenta que estos valores de color no distinguen mayúsculas de minúsculas.
 - colores hex: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
 - colores RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Los valores están en el intervalo 0-255 o 0%-100%.
-- colores RGBA: `rgba(255, 0, 0, 0.8)` `rgba(100%, 0%, 0%, 0.8)`. El valor de opacidad está en el intervalo 0.0-1.0.
+- colores RGBA: `rgba(255, 0, 0, 0.8)``rgba(100%, 0%, 0%, 0.8)`. El valor de opacidad está en el intervalo 0.0-1.0.
 - HSL Colors: `hsl(120, 100%, 50%)`. El valor h está en el intervalo 0-360, mientras que s y l están en el intervalo 0%-100%.
 - HSLA colores: `hsla(120, 100%, 50%, .8)`. El valor de opacidad está en el intervalo 0.0-1.0.
 

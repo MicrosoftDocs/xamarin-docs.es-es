@@ -95,7 +95,7 @@ Es una cadena separada por comas (`,`), que contiene uno de los siguientes valor
 - `gref`: imprimir los mensajes de referencia global de JNI.
 - `lref`: imprimir los mensajes de referencia local de JNI.
   > [!NOTE]
-  > Este valor `adb logcat`en realidad* enviará correo basura a .
+  > Este valor *en realidad* enviará correo basura a `adb logcat`.
   > En Xamarin.Android 5.1, también creará un archivo `.__override__/lrefs.txt`, que puede volverse *gigantesco*.
   > Evítelo.
 - `timing`: imprimir alguna información de tiempo de método. Este valor también creará los archivos `.__override__/methods.txt` y `.__override__/counters.txt`.
