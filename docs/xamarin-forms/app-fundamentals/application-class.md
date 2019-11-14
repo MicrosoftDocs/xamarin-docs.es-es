@@ -4,15 +4,16 @@ description: En este artículo se explican las características de la clase App 
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
+ms.custom: video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971216"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842966"
 ---
 # <a name="xamarinforms-app-class"></a>Clase App de Xamarin.Forms
 
@@ -26,7 +27,7 @@ También expone [Métodos del ciclo de vida](~/xamarin-forms/app-fundamentals/ap
 
 Según la plantilla que se elija, la clase `App` puede definirse de alguna de estas dos maneras:
 
-* **C#**, o bien
+* **C#** , o bien
 * **XAML y C#**
 
 Para crear una clase **App** mediante XAML, se debe reemplazar la clase **App** predeterminada por una clase **App** de XAML y el código subyacente asociado, como se muestra en el ejemplo de código siguiente:
@@ -221,3 +222,9 @@ public sealed partial class MainPage
 Tenga en cuenta que `Forms.Init()` debe llamarse desde **App.xaml.cs** en el proyecto UWP.
 
 Para obtener más información, consulte [Proyectos de instalación de Windows](~/xamarin-forms/platform/windows/installation/index.md), donde se incluyen instrucciones para agregar un proyecto UWP a una solución existente de Xamarin.Forms cuyo destino no es UWP.
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
