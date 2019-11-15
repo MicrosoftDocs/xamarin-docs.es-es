@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
+ms.sourcegitcommit: ecb81266e59c9e1773a06582e138bf4eed713dfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004152"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74062929"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -39,7 +39,7 @@ ms.locfileid: "71004152"
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de un elemento ListView que responde a la pulsación y selección de elementos en iOS y Android](../images/item-selection.png "Selección de elementos de ListView")](../images/item-selection-large.png#lightbox "Selección de elementos de ListView")
+    [![Captura de pantalla de un elemento ListView que responde a la pulsación y selección de elementos en iOS y Android](../images/item-selection.png "Selección del elemento ListView")](../images/item-selection-large.png#lightbox "Selección del elemento ListView")
 
     Establezca puntos de interrupción en los dos controladores de eventos y pulse los elementos de [`ListView`](xref:Xamarin.Forms.ListView). Tenga en cuenta que el evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) solo se desencadena cuando se selecciona un nuevo elemento en [`ListView`](xref:Xamarin.Forms.ListView), mientras que el evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) se desencadena cada vez que se pulsa un elemento.
 
@@ -78,8 +78,8 @@ ms.locfileid: "71004152"
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de un elemento ListView que responde a la pulsación y selección de elementos en iOS y Android](../images/item-selection.png "Selección de elementos de ListView")](../images/item-selection-large.png#lightbox "Selección de elementos de ListView")
+    [![Captura de pantalla de un elemento ListView que responde a la pulsación y selección de elementos en iOS y Android](../images/item-selection.png "Selección del elemento ListView")](../images/item-selection-large.png#lightbox "Selección del elemento ListView")
 
     Establezca puntos de interrupción en los dos controladores de eventos y pulse los elementos de [`ListView`](xref:Xamarin.Forms.ListView). Tenga en cuenta que el evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) solo se desencadena cuando se selecciona un nuevo elemento en [`ListView`](xref:Xamarin.Forms.ListView), mientras que el evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) se desencadena cada vez que se pulsa un elemento.
 
-    Para obtener más información sobre la selección de elementos y las pulsaciones, vea [Selección y pulsaciones] (~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
+    Para obtener más información sobre la pulsación y selección de elementos, consulte [Selección y pulsaciones](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)
