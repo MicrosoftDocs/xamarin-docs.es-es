@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
-ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
+ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72526823"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135280"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
@@ -37,13 +37,13 @@ Cada elemento se explicará por turnos.
 
 Al instalar el SDK de .NET Core se instala el certificado de desarrollo HTTPS de ASP.NET Core en el almacén de certificados local del usuario. Sin embargo, aunque el certificado se ha instalado, no es de confianza. Para confiar en el certificado, realice el siguiente paso puntual para ejecutar la herramienta `dev-certs` de dotnet:
 
-```console
+```dotnetcli
 dotnet dev-certs https --trust
 ```
 
 El siguiente comando proporciona ayuda sobre la herramienta `dev-certs`:
 
-```console
+```dotnetcli
 dotnet dev-certs https --help
 ```
 
@@ -54,7 +54,7 @@ De forma alternativa, cuando se ejecuta un proyecto de ASP.NET Core 2.1 (o poste
 
 Para más información sobre cómo habilitar HTTPS local en la máquina, consulte [Habilitar HTTPS local](/aspnet/core/getting-started#enable-local-https).
 
-## <a name="configure-your-project"></a>Configuración del proyecto
+## <a name="configure-your-project"></a>Configurar el proyecto
 
 Las aplicaciones de Xamarin que se ejecutan en iOS y Android pueden especificar qué pila de red usa la clase `HttpClient`, siendo las opciones una pila de red administrada o pilas de red nativas. La pila administrada proporciona un alto nivel de compatibilidad con código .NET ya existente, pero está limitada a TLS 1.0 y puede ser más lenta y dar lugar a un tamaño de archivo ejecutable mayor. Las pilas nativas pueden ser más rápidas y proporcionan mayor seguridad, pero no ofrecen toda la funcionalidad de la clase `HttpClient`.
 
