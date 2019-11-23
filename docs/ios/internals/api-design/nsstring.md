@@ -16,9 +16,9 @@ ms.locfileid: "73022348"
 ---
 # <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString en Xamarin. iOS y Xamarin. Mac
 
-El diseño de Xamarin. iOS y Xamarin. Mac llama a la API de uso para exponer el tipo de cadena de .NET nativo, `string`, para la manipulación C# de cadenas en y otros lenguajes de programación de .net y para exponer la cadena como el tipo de datos expuesto por la API en lugar de la `NSString`tipo de datos .
+El diseño de Xamarin. iOS y Xamarin. Mac llama a la API de uso para exponer el tipo de cadena de .NET nativo, `string`, para la manipulación C# de cadenas en y otros lenguajes de programación de .net y para exponer la cadena como el tipo de datos expuesto por la API en lugar del tipo de datos   `NSString`.
 
-Esto significa que los desarrolladores no deben tener que mantener las cadenas que se van a usar para llamar a Xamarin. iOS & la API de Xamarin. Mac (unificada) en un tipo especial (`Foundation.NSString`), pueden seguir usando `System.String` de mono para todas las operaciones y siempre que una API en Xamarin. iOS o Xamarin. Mac requieren una cadena, nuestro enlace de API se encarga de calcular las referencias de la información.
+Esto significa que los desarrolladores no deben tener que mantener las cadenas que se van a usar para llamar a Xamarin. iOS & la API de Xamarin. Mac (unificada) en un tipo especial (`Foundation.NSString`), pueden seguir usando la `System.String` de mono para todas las operaciones y, siempre que una API de Xamarin. iOS o Xamarin. Mac requiera una cadena, nuestro enlace de la API se encarga de
 
 Por ejemplo, la propiedad de "texto" de Objective-C en un `UILabel` de tipo `NSString`, se declara de la siguiente manera:
 
@@ -34,9 +34,9 @@ class UILabel {
 }
 ```
 
-En segundo plano, la implementación de esta propiedad calcula las referencias C# de la cadena en un`NSString`y llama al método`objc_msgSend`de la misma manera que lo haría Objective-C.
+En segundo plano, la implementación de esta propiedad calcula las referencias C# de la cadena en un `NSString` y llama al método `objc_msgSend` de la misma manera que lo haría Objective-C.
 
-Hay unas cuantas API de Objective-C de terceros que no consumen un `NSString`, sino que consumen una cadena de C (un "*Char*"). En esos casos, todavía puede usar el tipo C# de datos de cadena, pero debe usar el atributo [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) para informar al generador de enlaces de que esta cadena no se debe serializar como`NSString`, sino como una cadena de C.
+Hay unas cuantas API de Objective-C de terceros que no consumen un `NSString`, sino que consumen una cadena de C (un "*Char*"). En esos casos, todavía puede usar el tipo C# de datos de cadena, pero debe usar el atributo [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) para informar al generador de enlaces de que esta cadena no se debe serializar como `NSString`, sino como una cadena de C.
 
  <a name="Exceptions_to_the_Rule" />
 
@@ -46,7 +46,7 @@ En Xamarin. iOS y Xamarin. Mac, hemos realizado una excepción a esta regla. La 
 
 Esto puede ocurrir cuando una API de Objective-C usa una constante `NSString` pública como un token que representa alguna acción, en lugar de comparar el contenido real de la cadena.
 
-En estos casos, se exponen `NSString`API de y hay una minoría de API que tienen este. También observará que las propiedades de NSString se exponen en algunas clases. Dichas propiedades de `NSString` se exponen para elementos como las notificaciones. Estas propiedades suelen tener el siguiente aspecto:
+En estos casos, se exponen `NSString`API de  y hay una minoría de API que tienen este. También observará que las propiedades de NSString se exponen en algunas clases. Dichas propiedades de `NSString` se exponen para elementos como las notificaciones. Estas propiedades suelen tener el siguiente aspecto:
 
 ```csharp
 class Foo {

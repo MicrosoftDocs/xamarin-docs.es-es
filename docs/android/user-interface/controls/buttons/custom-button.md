@@ -21,7 +21,7 @@ Haga clic con el botón derecho y descargue las tres imágenes siguientes y, a c
 
  [![icono verde de Android para el estado normal](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [![icono de Android naranja para el estado de foco](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [![icono de Android amarillo para el estado presionado](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
-Cree un nuevo archivo en el directorio **Resources/Drawing** llamado **android_button. XML**. Inserte el siguiente código XML:
+Cree un nuevo archivo en el directorio **Resources/Drawing** denominado **android_button. XML**. Inserte el siguiente código XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -34,7 +34,7 @@ Cree un nuevo archivo en el directorio **Resources/Drawing** llamado **android_b
 </selector>
 ```
 
-Define un único recurso que se va a dibujar, que cambiará su imagen en función del estado actual del botón. La primera `<item>` define **android_pressed. png** como la imagen cuando se presiona el botón (se activa). en el segundo `<item>` se define **android_focused. png** como la imagen cuando el botón está enfocado (cuando el botón se resalta mediante el panel de control de escritura o el panel de dirección). y el tercer `<item>` define **android_normal. png** como imagen para el estado normal (cuando no se presiona ni se centra). Ahora, este archivo XML representa un único recurso dibujado y, cuando se hace referencia a él en un [`Button`](xref:Android.Widget.Button) para su fondo, la imagen que se muestra cambiará en función de estos tres Estados.
+Define un único recurso que se va a dibujar, que cambiará su imagen en función del estado actual del botón. La primera `<item>` define **android_pressed. png** como imagen cuando se presiona el botón (se activa); en el segundo `<item>` se define **android_focused. png** como imagen cuando el botón está enfocado (cuando el botón está resaltado mediante el panel de control de escritura o el panel de dirección). y el tercer `<item>` define **android_normal. png** como imagen para el estado normal (cuando no se presiona ni se centra). Ahora, este archivo XML representa un único recurso dibujado y, cuando se hace referencia a él en un [`Button`](xref:Android.Widget.Button) para su fondo, la imagen que se muestra cambiará en función de estos tres Estados.
 
 > [!NOTE]
 > El orden de los elementos `<item>` es importante. Cuando se hace referencia a esta dibujable, los `<item>`s se recorren en orden para determinar cuál es el adecuado para el estado actual del botón.

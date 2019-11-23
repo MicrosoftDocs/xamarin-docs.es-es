@@ -209,7 +209,7 @@ Hay cuatro mensajes de consecuencia:
 - Creación de referencia global débil: estas son las líneas que comienzan con *+ w +* .
 - Destrucción de referencia global débil: son líneas que comienzan por *-w-* .
 
-En todos los mensajes, el valor de *grefc* es el recuento de referencias globales que ha creado Xamarin. Android, mientras que el valor de *grefwc* es el recuento de referencias globales débiles que ha creado Xamarin. Android. El *identificador* o el valor *de identificador de obj* es el valor de identificador de JNI y el carácter que aparece después de ' */* ' es el tipo de valor de identificador: */l* para la referencia local, */g* para referencias globales y */w* para global débil a.
+En todos los mensajes, el valor de *grefc* es el recuento de referencias globales que ha creado Xamarin. Android, mientras que el valor de *grefwc* es el recuento de referencias globales débiles que ha creado Xamarin. Android. El *identificador* o el valor *de identificador de obj* es el valor de identificador de JNI y el carácter que aparece después de ' */* ' es el tipo de valor de identificador: */l* para la referencia local, */g* para las referencias globales y */w* para las referencias globales débiles.
 
 Como parte del proceso de GC, las referencias globales (+ g +) se convierten en referencias globales débiles (lo que produce + w + y-g-), se inicia un GC de Java y, a continuación, se comprueba la referencia global débil para ver si se recopiló. Si todavía está activo, se crea un nuevo Gref en torno a la referencia débil (+ g +,-w-); en caso contrario, se destruye la referencia débil (-w).
 
@@ -306,7 +306,7 @@ Esto significa que la ruta de acceso no contiene el directorio donde se encuentr
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid. exe o aresgen. exe se cerró con el código 1
 
-Para que le resulte más fácil depurar este problema, vaya a Visual Studio y cambie el nivel de detalle de MSBuild. para ello, seleccione: **herramientas > opciones > proyectos** y **soluciones > compilar** y **Ejecutar > el detalle** de la salida de la compilación del proyecto de MSBuild y establecer esto valor a **normal**.
+Para que le resulte más fácil depurar este problema, vaya a Visual Studio y cambie el nivel de detalle de MSBuild. para ello, seleccione: **herramientas > opciones > proyectos** y **soluciones > compilar** y **Ejecutar > el detalle** de la salida de la compilación del proyecto de MSBuild y establezca este valor en **normal**.
 
 Vuelva a generar y compruebe el panel de resultados de Visual Studio, que debe contener el error completo.
 
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-El problema es que Xamarin. Android serializa incorrectamente tipos genéricos anidados. Se calculan las referencias de los `List<IDictionary<string, object>>` a [java. lang. ArrrayList](xref:Java.Util.ArrayList), pero el `ArrayList` contiene `mono.android.runtime.JavaObject` instancias (que hacen referencia a las instancias de `Dictionary<string, object>`) en lugar de algo que implementa [java. util. map](xref:Java.Util.IMap), lo que da como resultado lo siguiente: excepcional
+El problema es que Xamarin. Android serializa incorrectamente tipos genéricos anidados. `List<IDictionary<string, object>>` se está serializando en [java.lang.ArrrayList](xref:Java.Util.ArrayList), pero `ArrayList` contiene instancias `mono.android.runtime.JavaObject` (que hacen referencia a las instancias `Dictionary<string, object>`) en lugar de algo que implementa [java.util.Map](xref:Java.Util.IMap), por lo que se produce la siguiente excepción:
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -515,7 +515,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 ## <a name="unexpected-nullreferenceexceptions"></a>Excepciones NullReferenceException inesperado
 
-En ocasiones, el [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) mencionará excepciones NullReferenceException que &ldquo;no se puede producir,&rdquo; o que proceden de mono para el código en tiempo de ejecución de Android poco antes de que la aplicación se
+En ocasiones, el [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) mencionará excepciones NullReferenceException que &ldquo;no se pueden producir&rdquo; o que provienen de mono para el código en tiempo de ejecución de Android justo antes de que la aplicación sufra un problema:
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object
@@ -627,7 +627,7 @@ E/dalvikvm(  602): VM aborting
 
 En el ejemplo anterior (que, casualmente, proviene del [error 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)), el problema es que se están creando demasiadas instancias de Android. Graphics. Point; Vea el [comentario \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) para obtener una lista de las correcciones de este error concreto.
 
-Normalmente, una solución útil es encontrar el tipo que tiene demasiadas instancias asignadas &ndash; Android. Graphics. Point en el volcado de memoria anterior &ndash;, a continuación, buscar el lugar en el que se crearon en el código fuente y desecharlos correctamente (de modo que su objeto Java la duración se acorta). Esto no siempre es adecuado (\#685215 es multiproceso, por lo que la solución trivial evita la llamada a Dispose), pero es lo primero que hay que tener en cuenta.
+Normalmente, una solución útil es encontrar el tipo que tiene demasiadas instancias asignadas &ndash; Android. Graphics. Point en el volcado de memoria anterior &ndash;, a continuación, buscar el lugar en el que se crearon en el código fuente y desecharlos de forma adecuada (para que se acorte su duración de objetos de Java). Esto no siempre es adecuado (\#685215 es multiproceso, por lo que la solución trivial evita la llamada a Dispose), pero es lo primero que hay que tener en cuenta.
 
 Puede habilitar el [registro de Gref](~/android/troubleshooting/index.md) para ver cuándo se crean GREFs y cuántos existen.
 

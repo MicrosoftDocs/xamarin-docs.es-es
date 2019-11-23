@@ -30,11 +30,11 @@ La siguiente funcionalidad específica de la plataforma se proporciona para las 
 
 Se proporciona la siguiente funcionalidad específica de la plataforma para las vistas de Xamarin. Forms en iOS:
 
-- Establecer el color [de fondo de `Cell`](xref:Xamarin.Forms.Cell) . Para obtener más información, vea [color de fondo de celda en iOS](cell-background-color.md).
+- Establecer el color de fondo de [`Cell`](xref:Xamarin.Forms.Cell) . Para obtener más información, vea [color de fondo de celda en iOS](cell-background-color.md).
 - Asegurarse de que especifica el texto se ajusta a un [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando el tamaño de fuente. Para obtener más información, vea [tamaño de fuente de entrada en iOS](entry-font-size.md).
 - Establecer el color de cursor de un [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, vea [color cursor entry in iOS](entry-cursor-color.md).
-- Controlar si las celdas [de encabezado de `ListView`](xref:Xamarin.Forms.ListView) flotan durante el desplazamiento. Para obtener más información, consulte [estilo de encabezado de grupo de ListView en iOS](listview-group-header-style.md).
-- Controlar si las animaciones de fila están deshabilitadas cuando se está actualizando la colección [de elementos @no__t 1](xref:Xamarin.Forms.ListView) . Para obtener más información, consulte [animaciones de filas de ListView en iOS](listview-row-animations.md).
+- Controlar si [`ListView`](xref:Xamarin.Forms.ListView) las celdas de encabezado flotan durante el desplazamiento. Para obtener más información, consulte [estilo de encabezado de grupo de ListView en iOS](listview-group-header-style.md).
+- Controlar si las animaciones de fila están deshabilitadas cuando se está actualizando la colección de elementos de [`ListView`](xref:Xamarin.Forms.ListView) . Para obtener más información, consulte [animaciones de filas de ListView en iOS](listview-row-animations.md).
 - Establecer el estilo del separador en un [ `ListView` ](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [estilo de separador de ListView en iOS](listview-separator-style.md).
 - Controlar cuándo se produce la selección de elementos en un [ `Picker` ](xref:Xamarin.Forms.Picker). Para obtener más información, consulte [selección de elementos de selector en iOS](picker-selection.md).
 - Habilitar la [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propiedad debe establecerse si pulsa en una posición en la [ `Slider` ](xref:Xamarin.Forms.Slider) barra, en lugar de tener que arrastrar la `Slider` thumb. Para obtener más información, consulte [Slide Thumb TAP on IOS](slider-thumb.md).
@@ -54,7 +54,7 @@ Se proporciona la siguiente funcionalidad específica de la plataforma para los 
 
 - Controlar si un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) controla un movimiento táctil o pasa a su contenido. Para obtener más información, consulte [ScrollView Content toques in iOS](scrollview-content-touches.md).
 
-La siguiente funcionalidad específica de la plataforma se proporciona para la clase de Xamarin. Forms [`Application`](xref:Xamarin.Forms.Application) en iOS:
+Se proporciona la siguiente funcionalidad específica de la plataforma para la clase de [`Application`](xref:Xamarin.Forms.Application) de Xamarin. Forms en iOS:
 
 - Deshabilitar el ajuste de escala de accesibilidad para tamaños de fuente con nombre. Para obtener más información, vea [escalado de accesibilidad para tamaños de fuente con nombre en iOS](named-font-size-scaling.md).
 - Habilitación de diseño del control y la representación de las actualizaciones que se realizará en el subproceso principal. Para obtener más información, vea [actualizaciones principales del control de subprocesos en iOS](main-thread-updates-ui.md).
@@ -64,7 +64,7 @@ La siguiente funcionalidad específica de la plataforma se proporciona para la c
 
 Xamarin. Forms permite establecer colores y estilos de la interfaz de usuario multiplataforma, pero hay otras opciones para configurar el tema de iOS con las API de la plataforma en el proyecto de iOS.
 
-[Obtenga más](formatting.md) información sobre cómo dar formato a la interfaz de usuario con las API específicas de iOS, como la configuración de **info. plist** y la API `UIAppearance`.
+[Obtenga más](formatting.md) información sobre cómo dar formato a la interfaz de usuario con las API específicas de iOS, como la configuración de **info. plist** y la API de `UIAppearance`.
 
 ![](images/status-white-sml.png "iOS")
 

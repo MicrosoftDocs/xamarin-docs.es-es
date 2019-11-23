@@ -28,7 +28,7 @@ La pantalla de presentación debe mostrarse lo antes posible cuando se inicia la
 
 ## <a name="xamarinforms-android-splash-screen"></a>Pantalla de presentación de Android de Xamarin. Forms
 
-Para crear una pantalla de presentación en Android es necesario crear un @no__t de presentación-0 como `MainLauncher` con un tema especial. En cuanto se inicia la @no__t de inicio-0, se inicia el @no__t principal-1 con el tema normal de la aplicación.
+La creación de una pantalla de presentación en Android requiere la creación de un `Activity` de presentación como `MainLauncher` con un tema especial. En cuanto se inicia el `Activity` de presentación, se inicia el `Activity` principal con el tema normal de la aplicación.
 
 Para obtener más información sobre las pantallas de presentación en Xamarin. Android, consulte la [pantalla de presentación de Xamarin. Android](~/android/user-interface/splash-screen.md).
 
@@ -42,7 +42,7 @@ Para obtener más información acerca de las pantallas de inicio de Xamarin. iOS
 
 En UWP, el **paquete. appxmanifest** contiene una pestaña **activos visuales** con un submenú de **pantalla de presentación** . Los gráficos de la pantalla de presentación se pueden especificar en este menú:
 
-[@no__t de la pantalla de presentación de 1Setting en UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
+[![configuración de la pantalla de presentación en UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

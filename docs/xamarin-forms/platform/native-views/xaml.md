@@ -16,11 +16,11 @@ ms.locfileid: "70770638"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
-_Vistas nativas de iOS, Android y la plataforma Universal de Windows pueden hacer referencia directamente desde los archivos XAML de Xamarin.Forms. Se pueden establecer las propiedades y los controladores de eventos en vistas nativas, y pueden interactuar con las vistas de Xamarin.Forms. En este artículo se muestra cómo consumir vistas nativas en archivos XAML de Xamarin.Forms._
+_Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde los archivos XAML de Xamarin. Forms. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las vistas de Xamarin. Forms. En este artículo se muestra cómo consumir vistas nativas de archivos XAML de Xamarin. Forms._
 
-En este artículo se trata los temas siguientes:
+En este artículo se tratan los siguientes temas:
 
 - [Consumo de vistas nativas](#consuming) – el proceso para utilizar una vista en XAML nativa.
 - [Uso de enlaces nativos](#native_bindings) : a y desde las propiedades de vistas nativas de enlace de datos.
@@ -38,7 +38,7 @@ Para insertar una vista nativa a un archivo XAML de Xamarin.Forms:
 1. Cree una instancia de la vista nativa en el archivo XAML.
 
 > [!IMPORTANT]
-> El código XAML compilado debe estar deshabilitado para cualquier página XAML que use vistas nativas. Esto se puede lograr decorando la clase de código subyacente de la página XAML con el `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obtener más información sobre la compilación XAML, vea [compilar XAML en Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
+> El código XAML compilado debe estar deshabilitado para cualquier página XAML que use vistas nativas. Esto se puede lograr decorando la clase de código subyacente de la página XAML con el atributo `[XamlCompilation(XamlCompilationOptions.Skip)]`. Para obtener más información sobre la compilación XAML, vea [compilar XAML en Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Para hacer referencia a una vista nativa desde un archivo de código subyacente, debe usar un proyecto de activos compartidos (SAP) y ajustar el código específico de plataforma con directivas de compilación condicional. Para obtener más información, consulte [que hace referencia a vistas nativas desde código](#native_view_code).
 

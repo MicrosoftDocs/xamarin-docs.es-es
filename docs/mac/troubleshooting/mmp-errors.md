@@ -338,7 +338,7 @@ Como última solución de paja, use una versión anterior de Xamarin. Mac que no
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: al que hace referencia {0}.{1} @ no__t_2_\* este mensaje está relacionado con MM2006 \*\*
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: al que hace referencia {0}.{1}\*\* este mensaje está relacionado con MM2006 \*\*
 
 <a name="MM2010" />
 
@@ -570,7 +570,7 @@ Vea la [ADVERTENCIA Mtouch equivalente](~/ios/troubleshooting/mtouch-errors.md#M
 
 <a name="MM5310" />
 
-#### <a name="mm5310-install_name_tool-failed-with-an-error-code-0-check-build-log-for-details"></a>Error de MM5310: install_name_tool con un código de error '{0}'. Busque detalles en el registro de compilación.
+#### <a name="mm5310-install_name_tool-failed-with-an-error-code-0-check-build-log-for-details"></a>Error de MM5310: install_name_tool con un código de error "{0}". Busque detalles en el registro de compilación.
 
 <a name="MM5311" />
 

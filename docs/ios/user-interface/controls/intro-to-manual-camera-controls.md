@@ -1117,7 +1117,7 @@ Todos los comandos de captura entre corchetes se implementan en la clase `AVCapt
 Se han implementado dos nuevas clases para controlar la configuración:
 
 - `AVCaptureAutoExposureBracketedStillImageSettings`: tiene una propiedad, `ExposureTargetBias`, que se usa para establecer la diferencia para un corchete de exposición automática.
-- `AVCaptureManual` @ no__t_1_: tiene dos propiedades, `ExposureDuration` y `ISO`, que se usan para establecer la velocidad del obturador e ISO para un corchete de exposición manual.
+- `AVCaptureManual``ExposureBracketedStillImageSettings`: tiene dos propiedades, `ExposureDuration` y `ISO`, que se usan para establecer la velocidad del obturador y el ISO para un corchete de exposición manual.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>Los controles de captura entre corchetes hacen y no
 

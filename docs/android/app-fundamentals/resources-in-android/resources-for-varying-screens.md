@@ -112,7 +112,7 @@ Como directriz, estos son algunos números para varios dispositivos:
 
 - **Un 10 "tablet** &ndash; 720 DP: por ejemplo, Motorola Xoom
 
-En el caso de las aplicaciones que tienen como destino niveles de API de hasta 12 (Android 3,1), los diseños deben ir en directorios que usan los calificadores **pequeños**/**normal**/**grande**/**Xlarge** como generalizaciones de la pantalla. tamaños disponibles en la mayoría de los dispositivos. Por ejemplo, en la imagen siguiente, existen recursos alternativos para los cuatro tamaños de pantalla diferentes:
+En el caso de las aplicaciones que tienen como destino niveles de API de hasta 12 (Android 3,1), los diseños deben ir en directorios que usan los calificadores **pequeños**/**normal**/**grande**/**Xlarge** como generalizaciones de los distintos tamaños de pantalla que están disponibles en la mayoría de los dispositivos. Por ejemplo, en la imagen siguiente, existen recursos alternativos para los cuatro tamaños de pantalla diferentes:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -178,9 +178,9 @@ Android se ejecuta en un número de dispositivos desconcertante, y la combinaci�
 - **Evite** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
   **siempre que sea posible** &ndash; quede en desuso en el nivel de API 3 (Android 1,5) y dará como resultado diseños frágiles. No debe usarse. En su lugar, intente usar widgets de diseño más flexibles como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)o el nuevo [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Elija una orientación de diseño como &ndash; predeterminada** ; por ejemplo, en lugar de proporcionar el **diseño** de recursos alternativos y el **Puerto de diseño**, coloque los recursos para la horizontal en el **diseño**y los recursos de vertical en **Layout: Puerto**.
+- **Elija una orientación de diseño como &ndash; predeterminada** ; por ejemplo, en lugar de proporcionar el **diseño** de recursos alternativos y el **Puerto de diseño**, coloque los recursos para la horizontal en el **diseño**y los recursos de vertical en el **Puerto de diseño**.
 
-- **Usar LayoutParams para el alto y el ancho** : al definir los elementos de la interfaz de usuario en un archivo de diseño XML, una aplicación Android que use los valores **wrap_content** y **fill_parent** tendrá más éxito y garantizará una apariencia adecuada en los distintos dispositivos que usar unidades independientes de píxeles o de densidad. Estos valores de dimensión hacen que Android escale los recursos de mapa de bits según corresponda. Por esta misma razón, las unidades independientes de la densidad se reservan mejor para cuando se especifican los márgenes y el relleno de los elementos de la interfaz de usuario.
+- **Usar LayoutParams para el alto y el ancho** : al definir los elementos de la interfaz de usuario en un archivo de diseño XML, una aplicación de Android que use los valores de **wrap_content** y **fill_parent** tendrá más éxito garantizar un aspecto adecuado en los distintos dispositivos que el uso de unidades independientes de píxeles o de densidad. Estos valores de dimensión hacen que Android escale los recursos de mapa de bits según corresponda. Por esta misma razón, las unidades independientes de la densidad se reservan mejor para cuando se especifican los márgenes y el relleno de los elementos de la interfaz de usuario.
 
 ## <a name="testing-multiple-screens"></a>Probar varias pantallas
 

@@ -59,7 +59,7 @@ A continuación se resume cada uno de estos componentes.
 
 `ViewPager` extrae sus datos de un *adaptador*. El trabajo del adaptador es crear los `View`s que muestra el `ViewPager`, proporcionándoles según sea necesario. En el diagrama siguiente se muestra este concepto &ndash; el adaptador crea y rellena `View`s y los proporciona al `ViewPager`. Como el `ViewPager` detecta los gestos de deslizamiento del usuario, pide al adaptador que proporcione el `View` adecuado para mostrar: 
 
-[Diagrama de![que ilustra cómo el adaptador conecta imágenes y nombres a ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
+[Diagrama de ![que ilustra cómo el adaptador conecta imágenes y nombres a ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
 
 En este ejemplo concreto, cada `View` se construye a partir de una imagen de árbol y un nombre de árbol antes de pasarse al `ViewPager`. 
 
@@ -67,7 +67,7 @@ En este ejemplo concreto, cada `View` se construye a partir de una imagen de ár
 
 `ViewPager` puede usarse para mostrar un conjunto de datos grande (por ejemplo, una galería de imágenes puede contener cientos de imágenes). Para ayudar al usuario a navegar en conjuntos de datos grandes, `ViewPager` suele ir acompañado de un *indicador de buscapersonas* que muestra una cadena. La cadena puede ser el título de la imagen, un título o simplemente la posición de la vista actual dentro del conjunto de datos. 
 
-Hay dos vistas que pueden generar esta información de navegación: `PagerTabStrip` y `PagerTitleStrip.` muestra una cadena en la parte superior de una `ViewPager`y cada una de ellas extrae sus datos del adaptador del `ViewPager`para que siempre permanezcan sincronizadas con el @no__t_ que se muestra actualmente. 4_ . La diferencia entre ellos es que `PagerTabStrip` incluye un indicador visual para la cadena "actual", mientras que `PagerTitleStrip` no (como se muestra en estas capturas de pantallas): 
+Hay dos vistas que pueden generar esta información de navegación: `PagerTabStrip` y `PagerTitleStrip.` muestra una cadena en la parte superior de una `ViewPager`y cada una de ellas extrae sus datos del adaptador del `ViewPager`para que siempre permanezcan sincronizadas con el `View`que se muestra actualmente. La diferencia entre ellos es que `PagerTabStrip` incluye un indicador visual para la cadena "actual", mientras que `PagerTitleStrip` no (como se muestra en estas capturas de pantallas): 
 
 [![capturas de pantallas de la aplicación TreePager con PagerTitleStrip y PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 

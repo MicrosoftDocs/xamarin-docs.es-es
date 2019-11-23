@@ -17,9 +17,9 @@ ms.locfileid: "70228194"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
-_Los estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si se modifica una de las instancias de establecedor, quitar, o una nueva instancia de establecedor agregado, los cambios no se aplicará al elemento visual. Sin embargo, las aplicaciones pueden responder a cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos._
+_Los estilos no responden a los cambios de propiedad y permanecen sin cambios durante la ejecución de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si una de las instancias del establecedor se modifica, se quita o se agrega una nueva instancia de establecedor, los cambios no se aplicarán al elemento visual. Sin embargo, las aplicaciones pueden responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante recursos dinámicos._
 
 El `DynamicResource` extensión de marcado es similar a la `StaticResource` extensión de marcado en ambos utilizan una clave de diccionario para capturar un valor desde un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Sin embargo, mientras el `StaticResource` realiza una búsqueda de diccionario único, el `DynamicResource` mantiene un vínculo a la clave del diccionario. Por lo tanto, si se reemplaza la entrada del diccionario asociada con la clave, el cambio se aplica al elemento visual. Esto permite que los cambios de estilo en tiempo de ejecución que se realiza en una aplicación.
 
@@ -84,8 +84,8 @@ public partial class DynamicStylesPage : ContentPage
 
 Cuando el `OnButtonClicked` se ejecuta el controlador de eventos, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
-Ejemplo de estilo dinámico azul ejemplo[![de estilo dinámico verde](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
+[![ejemplo de estilo dinámico azul](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+[![ejemplo de estilo dinámico verde](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 
@@ -163,8 +163,8 @@ El [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instancias uso el `StaticResour
 
 En el archivo de código subyacente, el constructor crea un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) entrada con la clave `searchBarStyle`según el ejemplo anterior que se muestra estilos dinámicos. Cuando el `OnButtonClicked` se ejecuta el controlador de eventos, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![Ejemplo de herencia de estilo dinámico azul ejemplo](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
-[![de herencia de estilo dinámico verde](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
+[![ejemplo de herencia de estilo dinámico azul](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+[![ejemplo de herencia de estilo dinámico verde](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 

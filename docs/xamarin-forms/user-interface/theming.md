@@ -29,8 +29,8 @@ El proceso de implementación de los procesos en tiempo de ejecución en una apl
 
 Las siguientes capturas de pantallas muestran páginas con temas, con la aplicación de iOS que usa un tema claro y la aplicación Android con un tema oscuro:
 
-[![Captura de pantalla de la Página principal de una aplicación de la que se ha importado, en iOS y android](theming-images/main-page-both-themes.png "Página principal de la aplicación con la que se han importado")](theming-images/main-page-both-themes-large.png#lightbox "Página principal de la aplicación con la que se han importado") 
-[![captura de pantalla de la página de detalles de una aplicación de la que se ha importado, en iOS y Android](theming-images/detail-page-both-themes.png "Página de detalles de la aplicación con el mismo")](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalles de la aplicación con el mismo")
+[![Captura de pantalla de la Página principal de una aplicación de la que se ha importado, en iOS y android](theming-images/main-page-both-themes.png "Página principal de la aplicación con la que se han importado")](theming-images/main-page-both-themes-large.png#lightbox "Página principal de la aplicación con la que se han importado")
+[ ![captura de pantalla de la página de detalles de una aplicación de la que se ha importado, en iOS y Android](theming-images/detail-page-both-themes.png "Página de detalles de la aplicación con el mismo")](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalles de la aplicación con el mismo")
 
 ## <a name="define-themes"></a>Definir temas
 
@@ -70,7 +70,7 @@ En el ejemplo siguiente se muestra la `DarkTheme` de la aplicación de ejemplo:
 </ResourceDictionary>
 ```
 
-Cada [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contiene [`Color`](xref:Xamarin.Forms.Color) recursos que definen sus respectivos temas, y cada `ResourceDictionary` usa valores de clave idénticos. Para obtener más información acerca de los diccionarios de recursos, consulte [diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md).
+Cada [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contiene [`Color`](xref:Xamarin.Forms.Color) recursos que definen sus respectivos temas, y cada `ResourceDictionary` usa valores de clave idénticos. Para obtener más información acerca de los diccionarios de recursos, consulte [los diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 > [!IMPORTANT]
 > Se requiere un archivo de código subyacente para cada `ResourceDictionary`, que llama al método `InitializeComponent`. Esto es necesario para que un objeto CLR que representa el tema elegido se pueda crear en tiempo de ejecución.
@@ -183,7 +183,7 @@ Para obtener más información sobre los estilos, consulte aplicar estilos a [ap
 Cuando se selecciona un tema en tiempo de ejecución, la aplicación debe:
 
 1. Quitar el tema actual de la aplicación. Esto se consigue borrando la propiedad [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) del [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de nivel de la aplicación.
-2. Cargar el tema seleccionado. Esto se logra agregando una instancia del tema seleccionado a la propiedad `MergedDictionaries` del `ResourceDictionary` de nivel de la aplicación.
+2. Cargar el tema seleccionado. Esto se logra agregando una instancia del tema seleccionado a la propiedad `MergedDictionaries` del `ResourceDictionary`de nivel de la aplicación.
 
 Cualquier [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos que establezcan propiedades con la extensión de marcado `DynamicResource` aplicará los nuevos valores de tema. Esto se produce porque el `DynamicResource` extensión de marcado mantiene un vínculo a las claves del diccionario. Por lo tanto, cuando se reemplazan los valores asociados a las claves, los cambios se aplican a los objetos `VisualElement`.
 
