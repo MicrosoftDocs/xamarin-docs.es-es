@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f490bec121481d9f3f661913d8aefcef999bb4a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c9a0eee2779aa392cb2049b5518b6f30b7f05abc
+ms.sourcegitcommit: 58a08133496df53a639a82a7f672724220c57fd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016966"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540400"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin. Android
 
@@ -29,7 +29,7 @@ Android identifica dos tipos de difusiones:
 
 El receptor de difusión es una subclase del tipo `BroadcastReceiver` y debe invalidar el método [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . Android se ejecutará `OnReceive` en el subproceso principal, por lo que este método debe diseñarse para ejecutarse rápidamente. Se debe tener cuidado al generar subprocesos en `OnReceive` porque Android puede terminar el proceso cuando el método finaliza. Si un receptor de difusión debe realizar un trabajo de larga ejecución, se recomienda programar un _trabajo_ mediante el `JobScheduler` o el _distribuidor de trabajos Firebase_. La programación del trabajo con un trabajo se tratará en una guía independiente.
 
-Un _filtro de intención_ se usa para registrar un receptor de difusión para que Android pueda enrutar los mensajes correctamente. El filtro de intención se puede especificar en tiempo de ejecución (esto se conoce a veces como _receptor registrado_ en el contexto o como _registro dinámico_) o se puede definir de forma estática en el manifiesto de Android (un _receptor registrado con el manifiesto_). Xamarin. Android proporciona un C# atributo,`IntentFilterAttribute`, que registrará de forma estática el filtro de intención (esto se tratará con más detalle más adelante en esta guía). A partir de Android 8,0, no es posible que una aplicación se registre estáticamente para una difusión implícita.
+Un _filtro de intención_ se usa para registrar un receptor de difusión para que Android pueda enrutar los mensajes correctamente. El filtro de intención se puede especificar en tiempo de ejecución (esto se conoce a veces como _receptor registrado_ en el contexto o como _registro dinámico_) o se puede definir de forma estática en el manifiesto de Android (un _receptor registrado con el manifiesto_). Xamarin. Android proporciona un C# atributo, `IntentFilterAttribute`, que registrará de forma estática el filtro de intención (esto se tratará con más detalle más adelante en esta guía). A partir de Android 8,0, no es posible que una aplicación se registre estáticamente para una difusión implícita.
 
 La principal diferencia entre el receptor registrado en el manifiesto y el receptor registrado por el contexto es que un receptor registrado en el contexto solo responderá a las difusiones mientras se ejecuta una aplicación, mientras que un receptor registrado en el manifiesto puede responder a se difunde aunque es posible que la aplicación no se esté ejecutando.  
 
@@ -112,19 +112,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity
