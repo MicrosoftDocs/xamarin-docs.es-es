@@ -28,8 +28,7 @@
     "ceicnotifications@microsoft.com"
   ],
   "branches_to_filter": [
-    "master",
-    "live"
+    "master"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/xamarin-docs.es-es",
   "git_repository_branch_open_to_public_contributors": "live",
@@ -69,6 +68,9 @@
       "Pdf"
     ],
     "live": [
+      "Intellisense"
+    ],
+    "master": [
       "Publish",
       "Pdf"
     ]
