@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425561"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556161"
 ---
 # <a name="xamarinforms-map-pins"></a>PIN de mapa de Xamarin. Forms
 
@@ -198,7 +198,7 @@ Un [`Map`](xref:Xamarin.Forms.Maps.Map) se puede rellenar con PIN mediante el en
 </ContentPage>
 ```
 
-Los datos de la propiedad [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) se enlazan a la propiedad `Locations` del ViewModel conectado, que devuelve un `ObservableCollection` de `Location` objetos, que es un tipo personalizado. Cada objeto `Location` define `Address` y `Description` propiedades, de tipo `string` y una propiedad `Position`, de tipo [`Position`](xref:Xamarin.Forms.Maps.Position).
+Los datos de la propiedad [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) se enlazan a la propiedad `Locations` del ViewModel conectado, que devuelve un `ObservableCollection` de `Location` objetos, que es un tipo personalizado. Cada objeto `Location` define `Address` y `Description` propiedades, de tipo `string`y una propiedad `Position`, de tipo [`Position`](xref:Xamarin.Forms.Maps.Position).
 
 La apariencia de cada elemento de la colección de `IEnumerable` se define estableciendo la propiedad [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que contiene un [`Pin`](xref:Xamarin.Forms.Maps.Pin) objeto que los datos enlazan a las propiedades adecuadas.
 
@@ -225,6 +225,7 @@ La apariencia de cada elemento de la colección de `IEnumerable` se puede elegir
             </local:MapItemTemplateSelector.DefaultTemplate>
             <local:MapItemTemplateSelector.XamarinTemplate>
                 <DataTemplate>
+                    <!-- Change the property values, or the properties that are bound to. -->
                     <maps:Pin Position="{Binding Position}"
                               Address="{Binding Address}"
                               Label="Xamarin!" />
@@ -259,6 +260,9 @@ public class MapItemTemplateSelector : DataTemplateSelector
 ```
 
 La clase `MapItemTemplateSelector` define `DefaultTemplate` y `XamarinTemplate` propiedades de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se establecen en distintas plantillas de datos. El método `OnSelectTemplate` devuelve el `XamarinTemplate`, que muestra "Xamarin" como etiqueta cuando se puntea un `Pin`, cuando el elemento tiene una dirección que contiene "San Francisco". Cuando el elemento no tiene una dirección que contiene "San Francisco", el método `OnSelectTemplate` devuelve el `DefaultTemplate`.
+
+> [!NOTE]
+> Un caso de uso de esta funcionalidad es enlazar propiedades de objetos de [`Pin`](xref:Xamarin.Forms.Maps.Pin) de subclase a propiedades diferentes, en función del subtipo de `Pin`.
 
 Para obtener más información sobre los selectores de plantilla de datos, vea [crear un DataTemplateSelector de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

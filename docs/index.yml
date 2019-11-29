@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: 908c1b347a10404ddeaff49ce5fe0a8e4b0e6ad9
-  ms.sourcegitcommit: 5384b26b3bd07f1e5796fd76cb24a40b3270ebd6
+  ms.openlocfilehash: 45f34dbe05005da323ae21f0f3ac40db97538773
+  ms.sourcegitcommit: 2dea02d0c7497cd5a5cbdce5a26ae33540d78dcc
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73589464"
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74550064"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -24,7 +24,7 @@ highlightedContent:
     itemType: overview
     url: ~/get-started/what-is-xamarin.md
   - title: Novedades de la documentación de Xamarin
-    itemType: get-started
+    itemType: whats-new
     url: ~/whats-new/index.yml
   - title: Mejora de sus conocimientos de desarrollo para dispositivos móviles
     itemType: learn

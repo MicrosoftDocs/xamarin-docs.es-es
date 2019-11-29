@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/28/2019
-ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
-ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.openlocfilehash: d47146c90635084a4974cfa0c7dcb142ac918788
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980874"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556176"
 ---
 # <a name="xamarinforms-label"></a>Etiqueta de Xamarin. Forms
 
@@ -133,8 +133,9 @@ Las etiquetas se pueden establecer para controlar el texto que no cabe en una l�
 
 El número de líneas que muestra un [`Label`](xref:Xamarin.Forms.Label) se puede especificar estableciendo la propiedad `Label.MaxLines` en un valor `int`:
 
-- Cuando `MaxLines` es 0, el `Label` respeta el valor de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) para mostrar solo una línea, posiblemente truncada, o todas las líneas con todo el texto.
-- Cuando `MaxLines` es 1, el resultado es idéntico al establecimiento de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) en [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)o [0](xref:Xamarin.Forms.LineBreakMode). Sin embargo, el `Label` respetará el valor de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) con respecto a la selección de ubicación de puntos suspensivos, si procede.
+- Cuando `MaxLines` es-1, que es su valor predeterminado, el `Label` respeta el valor de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) para mostrar solo una línea, posiblemente truncada, o todas las líneas con todo el texto.
+- Cuando `MaxLines` es 0, el `Label` no se muestra.
+- Cuando `MaxLines` es 1, el resultado es idéntico al establecimiento de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) en [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)o [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). Sin embargo, el `Label` respetará el valor de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) con respecto a la selección de ubicación de puntos suspensivos, si procede.
 - Cuando `MaxLines` es mayor que 1, el `Label` mostrará hasta el número especificado de líneas, respetando el valor de la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) con respecto a la posición de los puntos suspensivos, si procede. Sin embargo, si se establece la propiedad `MaxLines` en un valor mayor que 1, no se produce ningún efecto si la propiedad [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) está establecida en [`NoWrap`](xref:Xamarin.Forms.LineBreakMode).
 
 En el siguiente ejemplo de XAML se muestra cómo establecer la propiedad `MaxLines` en un [`Label`](xref:Xamarin.Forms.Label):
@@ -166,7 +167,7 @@ La clase [`Label`](xref:Xamarin.Forms.Label) tiene una propiedad `TextType`, que
 - `Text` indica que el `Label` mostrará el texto sin formato y es el valor predeterminado de la propiedad `Label.TextType`.
 - `Html` indica que el `Label` mostrará el texto HTML.
 
-Por lo tanto, las instancias de [`Label`](xref:Xamarin.Forms.Label) pueden mostrar HTML estableciendo la propiedad `Label.TextType` en `Html` y la propiedad `Label.Text` en una cadena HTML:
+Por lo tanto, las instancias de [`Label`](xref:Xamarin.Forms.Label) pueden mostrar HTML estableciendo la propiedad `Label.TextType` en `Html`y la propiedad `Label.Text` en una cadena HTML:
 
 ```csharp
 Label label = new Label
@@ -215,7 +216,7 @@ Las etiquetas exponen una propiedad [`FormattedText`](xref:Xamarin.Forms.Label.F
 La propiedad `FormattedText` es de tipo [`FormattedString`](xref:Xamarin.Forms.FormattedString), que consta de una o varias instancias de [`Span`](xref:Xamarin.Forms.Span) , establecidas a través de la propiedad [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) . Se pueden usar las siguientes propiedades de `Span` para establecer la apariencia visual:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) : el color del fondo del intervalo.
-- `CharacterSpacing`, de tipo `double`, es el espaciado entre los caracteres del texto `Span`.
+- `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `Span`.
 - [`Font`](xref:Xamarin.Forms.Span.Font) : la fuente del texto del intervalo.
 - [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) : los atributos de fuente para el texto en el intervalo.
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) : la familia de fuentes a la que pertenece la fuente del texto del intervalo.
@@ -405,13 +406,12 @@ Label label = new Label
 
 Para obtener más información sobre el relleno, vea [márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-
 ## <a name="hyperlinks"></a>Hipervínculos
 
 El texto que se muestra en las instancias de [`Label`](xref:Xamarin.Forms.Label) y [`Span`](xref:Xamarin.Forms.Span) se puede convertir en hipervínculos con el siguiente enfoque:
 
 1. Establezca las propiedades `TextColor` y `TextDecoration` de la [`Label`](xref:Xamarin.Forms.Label) o [`Span`](xref:Xamarin.Forms.Span).
-1. Agregue un [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a la colección [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) de la [`Label`](xref:Xamarin.Forms.Label) o [`Span`](xref:Xamarin.Forms.Span), cuya propiedad [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) enlaza a un 0 y cuya propiedad [2](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) contiene la dirección URL que se va a abrir.
+1. Agregue un [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a la colección [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) de la [`Label`](xref:Xamarin.Forms.Label) o [`Span`](xref:Xamarin.Forms.Span), cuya propiedad [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) enlaza a un `ICommand`y cuya propiedad [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) contiene la dirección URL que se va a abrir.
 1. Defina el `ICommand` que se ejecutará en el [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
 1. Escriba el código que se ejecutará en el `ICommand`.
 
