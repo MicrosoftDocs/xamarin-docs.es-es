@@ -8,14 +8,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: f6d255e9af64d316ac76eab92a73cc1c90b82956
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 659545431a490f50224de3e7728b4d4d0c111d64
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019552"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681332"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting"></a>Solucionar problemas
 
 _Los documentos de esta sección cubren características específicas para la solución de problemas con Android._
 
@@ -35,6 +35,6 @@ En esta guía se proporcionan soluciones alternativas a algunos errores comunes 
 
 A partir de 26.0.1 del Android SDK Tools, Google ha quitado los administradores AVD y SDK existentes en favor de las nuevas herramientas de línea de comandos.
 
-## <a name="xamarinandroid-errors-referenceandroidtroubleshootingerrorsmd"></a>[Referencia de errores de Xamarin.Android](~/android/troubleshooting/errors.md)
+## <a name="xamarinandroid-errors-referencexamarinandroiderrors-and-warnings"></a>[Referencia de errores de Xamarin.Android](/xamarin/android/errors-and-warnings/)
 
-Una guía de referencia de errores que muestra los errores más comunes que puede experimentar al usar Xamarin. Android en Xamarin Studio
+Una guía de referencia de errores que muestra los errores más comunes que puede experimentar al usar Xamarin. Android en Visual Studio
