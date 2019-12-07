@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: c8363adf479f0880bfbdf6a047d495da4b849395
+ms.sourcegitcommit: a2ec4aef8457eab4310cde2a41485931263ce16b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425508"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902255"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
@@ -20,7 +20,7 @@ ms.locfileid: "73425508"
 
 _Una aplicación Android tarda algún tiempo en iniciarse, sobre todo cuando la aplicación se inicia por primera vez en un dispositivo. Una pantalla de presentación puede mostrar el progreso de inicio al usuario o para indicar la personalización de marca._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Una aplicación Android tarda algún tiempo en iniciarse, especialmente durante la primera vez que la aplicación se ejecuta en un dispositivo (en ocasiones, esto se conoce como _Inicio en frío_). La pantalla de presentación puede mostrar el progreso de inicio del usuario, o puede mostrar información de personalización de marca para identificar y promover la aplicación.
 
@@ -34,7 +34,7 @@ En esta guía se describe una técnica para implementar una pantalla de presenta
 
 [![pantalla de presentación del logotipo de Xamarin de ejemplo seguida de la pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 En esta guía se da por supuesto que la aplicación tiene como destino el nivel de API de Android 21 o superior. La aplicación también debe tener los paquetes de NuGet **Xamarin. Android. support. V4** y **Xamarin. Android. support. V7. AppCompat** agregados al proyecto.
 
@@ -50,7 +50,7 @@ La pantalla de presentación se implementa como una actividad que muestra la mar
 
 La pantalla de presentación mostrará un XML que se podrá dibujar en el fondo de la actividad de la pantalla de presentación. Es necesario usar una imagen de mapa de imágenes (como PNG o JPG) para que se muestre la imagen.
 
-La aplicación de ejemplo define una dibujable denominada **splash_screen. XML**. Este dibujo usa una [lista de capas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de la pantalla de presentación en la aplicación, tal como se muestra en el siguiente código XML:
+La aplicación de ejemplo define un drawable llamado **splash_screen. XML**. Este dibujo usa una [lista de capas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de la pantalla de presentación en la aplicación, tal como se muestra en el siguiente código XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -88,7 +88,7 @@ Para crear un tema personalizado para la actividad de la pantalla de presentaci�
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-    <style name="MyTheme" parent="MyTheme.Base">
+  <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
@@ -101,7 +101,7 @@ Para crear un tema personalizado para la actividad de la pantalla de presentaci�
 </resources>
 ```
 
-**. Splash** es muy Spartan &ndash; declara el fondo de la ventana, quita explícitamente la barra de título de la ventana y declara que está en pantalla completa. Si desea crear una pantalla de presentación que eMule la interfaz de usuario de la aplicación antes de que la actividad infla el primer diseño, puede usar `windowContentOverlay` en lugar de `windowBackground` en la definición de estilo. En este caso, también debe modificar **splash_screen. XML** drawable para que muestre una emulación de la interfaz de usuario.
+**. Splash** es muy Spartan &ndash; declara el fondo de la ventana, quita explícitamente la barra de título de la ventana y declara que está en pantalla completa. Si desea crear una pantalla de presentación que eMule la interfaz de usuario de la aplicación antes de que la actividad infla el primer diseño, puede usar `windowContentOverlay` en lugar de `windowBackground` en la definición de estilo. En este caso, también debe modificar la **splash_screen. XML** dibujable para que muestre una emulación de la interfaz de usuario.
 
 ### <a name="create-a-splash-activity"></a>Crear una actividad de presentación
 
@@ -165,7 +165,7 @@ La pantalla de presentación implementada en los pasos anteriores se mostrará c
 
 Para agregar una pantalla de presentación para el modo horizontal, siga estos pasos:
 
-1. En la carpeta **Resources/drawable** , agregue la versión horizontal de la imagen de la pantalla de presentación que desee usar. En este ejemplo, **splash_logo_land. png** es la versión horizontal del logotipo que se usó en los ejemplos anteriores (utiliza letras en blanco en lugar de azul).
+1. En la carpeta **Resources/drawable** , agregue la versión horizontal de la imagen de la pantalla de presentación que desee usar. En este ejemplo, **splash_logo_land. png** es la versión horizontal del logotipo que se usó en los ejemplos anteriores (usa el uso de letras en blanco en lugar de azul).
 
 2. En la carpeta **Resources/drawable** , cree una versión horizontal del `layer-list` dibujable que se definió anteriormente (por ejemplo, **splash_screen_land. XML**). En este archivo, establezca la ruta de acceso del mapa de bits en la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land. XML** usa **splash_logo_land. png**:
 
@@ -188,7 +188,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
 
 4. Agregue los archivos **colors. XML** y **style. XML** a **valores-terrenos** (se pueden copiar y modificar desde los archivos **valores/colores. XML** y **valores/estilo. XML** existentes).
 
-5. Modifique **Values-Land/Style. XML** para que use la versión horizontal de drawable para `windowBackground`. En este ejemplo, se usa **splash_screen_land. XML** :
+5. Modifique **Values-Land/Style. XML** para que use la versión horizontal de drawable para `windowBackground`. En este ejemplo, se utiliza **splash_screen_land. XML** :
 
     ```xml
     <resources>
