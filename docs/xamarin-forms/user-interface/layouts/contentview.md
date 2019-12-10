@@ -7,36 +7,36 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 86e92ee5293b4c9ed902f1c8d9858e06db1aa458
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 69f3311834fd438af97b3d2fa527572f02d2b0cb
+ms.sourcegitcommit: fa2898d95b35fcee05503f3829351ba5a7d4a44d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065507"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955084"
 ---
 # <a name="xamarinforms-contentview"></a>ContentView de Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
-La clase de Xamarin [`ContentView`](xref:Xamarin.Forms.ContentView) . Forms es un `Layout` tipo de que contiene un único elemento secundario y se utiliza normalmente para crear controles personalizados y reutilizables. La `ContentView` clase hereda de [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). En este artículo, y en el ejemplo asociado, se explica cómo `CardView` crear un control personalizado `ContentView` basado en la clase.
+La clase de [`ContentView`](xref:Xamarin.Forms.ContentView) de Xamarin. Forms es un tipo de `Layout` que contiene un solo elemento secundario y se utiliza normalmente para crear controles personalizados y reutilizables. La clase `ContentView` hereda de [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). En este artículo, y en el ejemplo asociado, se explica cómo crear un control de `CardView` personalizado basado en la clase `ContentView`.
 
-En la captura de pantalla `CardView` siguiente se muestra un control que `ContentView` se deriva de la clase:
+En la captura de pantalla siguiente se muestra un control de `CardView` que deriva de la clase `ContentView`:
 
-[![Captura de pantalla de la aplicación de ejemplo CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[captura de pantalla de la aplicación de ejemplo de ![CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
-La `ContentView` clase define una propiedad única:
+La clase `ContentView` define una propiedad única:
 
-* [`Content`](xref:Xamarin.Forms.ContentView.Content)es un `View` objeto. Esta propiedad está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, por lo que puede ser el destino de los enlaces de datos.
+* [`Content`](xref:Xamarin.Forms.ContentView.Content) es un objeto `View`. Esta propiedad está respaldada por un objeto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , por lo que puede ser el destino de los enlaces de datos.
 
-También hereda una propiedad de la `TemplatedView` clase: `ContentView`
+La `ContentView` también hereda una propiedad de la clase `TemplatedView`:
 
-* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate)es un `ControlTemplate` que puede definir o invalidar la apariencia del control.
+* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) es una `ControlTemplate` que puede definir o invalidar la apariencia del control.
 
-Para obtener más información sobre `ControlTemplate` la propiedad, vea [personalizar el aspecto con una ControlTemplate](#customize-appearance-with-a-controltemplate).
+Para obtener más información sobre la propiedad `ControlTemplate`, vea [personalizar la apariencia con una ControlTemplate](#customize-appearance-with-a-controltemplate).
 
 ## <a name="create-a-custom-control"></a>Crear un control personalizado
 
-La `ContentView` clase ofrece poca funcionalidad, pero se puede usar para crear un control personalizado. El proyecto de ejemplo define `CardView` un elemento de la interfaz de usuario de control-a que muestra una imagen, un título y una descripción en un diseño de tipo tarjeta.
+La clase `ContentView` ofrece poca funcionalidad, pero se puede usar para crear un control personalizado. El proyecto de ejemplo define un elemento de la interfaz de usuario de `CardView` control, que muestra una imagen, un título y una descripción en un diseño de tipo tarjeta.
 
 El proceso para crear un control personalizado es:
 
@@ -45,25 +45,25 @@ El proceso para crear un control personalizado es:
 1. Cree la interfaz de usuario para el control personalizado.
 
 > [!NOTE]
-> Es posible crear un control personalizado cuyo diseño se define en el código en lugar de XAML. Para simplificar, la aplicación de ejemplo solo define `CardView` una clase única con un diseño XAML. Sin embargo, la aplicación de ejemplo contiene una clase **CardViewCodePage** que muestra el proceso de consumo del control personalizado en el código.
+> Es posible crear un control personalizado cuyo diseño se define en el código en lugar de XAML. Para simplificar, la aplicación de ejemplo solo define una clase de `CardView` única con un diseño XAML. Sin embargo, la aplicación de ejemplo contiene una clase **CardViewCodePage** que muestra el proceso de consumo del control personalizado en el código.
 
 ### <a name="create-code-behind-properties"></a>Crear propiedades de código subyacente
 
-El `CardView` control personalizado define las siguientes propiedades:
+El control personalizado `CardView` define las siguientes propiedades:
 
-* `CardTitle`: un `string` objeto que representa el título que se muestra en la tarjeta.
-* `CardDescription`: un `string` objeto que representa la descripción que se muestra en la tarjeta.
-* `IconImageSource`: un `ImageSource` objeto que representa la imagen que se muestra en la tarjeta.
-* `IconBackgroundColor`: un `Color` objeto que representa el color de fondo de la imagen que se muestra en la tarjeta.
-* `BorderColor`: un `Color` objeto que representa el color del borde de la tarjeta, el borde de la imagen y la línea del divisor.
-* `CardColor`: un `Color` objeto que representa el color de fondo de la tarjeta.
+* `CardTitle`: objeto `string` que representa el título que se muestra en la tarjeta.
+* `CardDescription`: objeto `string` que representa la descripción que se muestra en la tarjeta.
+* `IconImageSource`: objeto `ImageSource` que representa la imagen que se muestra en la tarjeta.
+* `IconBackgroundColor`: objeto `Color` que representa el color de fondo de la imagen que se muestra en la tarjeta.
+* `BorderColor`: un objeto `Color` que representa el color del borde de la tarjeta, el borde de la imagen y la línea del divisor.
+* `CardColor`: objeto `Color` que representa el color de fondo de la tarjeta.
 
 > [!NOTE]
-> La `BorderColor` propiedad afecta a varios elementos con fines de demostración. Esta propiedad podría dividirse en tres propiedades si es necesario.
+> La propiedad `BorderColor` afecta a varios elementos con fines de demostración. Esta propiedad podría dividirse en tres propiedades si es necesario.
 
-Cada propiedad está respaldada por una `BindableProperty` instancia de. La copia `BindableProperty` de seguridad permite aplicar estilo a cada propiedad y enlazarla mediante el patrón MVVM.
+Cada propiedad está respaldada por una instancia de `BindableProperty`. La `BindableProperty` de respaldo permite aplicar estilo a cada propiedad y enlazarla mediante el patrón MVVM.
 
-En el ejemplo siguiente se muestra cómo crear una `BindableProperty`copia de seguridad:
+En el ejemplo siguiente se muestra cómo crear una `BindableProperty`de respaldo:
 
 ```csharp
 public static readonly BindableProperty CardTitleProperty = BindableProperty.Create(
@@ -73,7 +73,7 @@ public static readonly BindableProperty CardTitleProperty = BindableProperty.Cre
     string.Empty);      // the default value for the property
 ```
 
-La propiedad personalizada usa los `GetValue` métodos `SetValue` y para obtener y establecer los `BindableProperty` valores del objeto:
+La propiedad personalizada usa los métodos `GetValue` y `SetValue` para obtener y establecer los valores del objeto `BindableProperty`:
 
 ```csharp
 public string CardTitle
@@ -83,11 +83,11 @@ public string CardTitle
 }
 ```
 
-Para obtener más información `BindableProperty` sobre los objetos, vea [propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
+Para obtener más información sobre los objetos de `BindableProperty`, consulte [propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
 
 ### <a name="define-ui"></a>Definir la interfaz de usuario
 
-La interfaz de usuario del control `ContentView` personalizado usa como elemento raíz para `CardView` el control. En el ejemplo siguiente se `CardView` muestra el código XAML:
+La interfaz de usuario del control personalizado utiliza un `ContentView` como elemento raíz para el control `CardView`. En el ejemplo siguiente se muestra el `CardView` XAML:
 
 ```XAML
 <ContentView ...
@@ -99,37 +99,40 @@ La interfaz de usuario del control `ContentView` personalizado usa como elemento
             ...>
         <Grid>
             ...
-            <Frame BorderColor="{Binding BorderColor}"
-                   BackgroundColor="{Binding IconBackgroundColor}"
+            <Frame BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}"
                    ...>
                 <Image Source="{Binding IconImageSource}"
                        .. />
             </Frame>
-            <Label Text="{Binding CardTitle}"
+            <Label Text="{Binding CardTitle, FallbackValue='Card Title'}"
                    ... />
-            <BoxView BackgroundColor="{Binding BorderColor}"
+            <BoxView BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"
                      ... />
-            <Label Text="{Binding CardDescription}"
+            <Label Text="{Binding CardDescription, FallbackValue='Card description text.'}"
                    ... />
         </Grid>
     </Frame>
 </ContentView>
 ```
 
-El `ContentView` elemento establece la `x:Name` propiedad en, que se puede utilizar para tener acceso al objeto enlazado a `CardView` la instancia. Los elementos del diseño establecen enlaces en sus propiedades a los valores definidos en el objeto enlazado.
+El elemento `ContentView` establece la propiedad `x:Name` en **, que**se puede utilizar para tener acceso al objeto enlazado a la instancia de `CardView`. Los elementos del diseño establecen enlaces en sus propiedades a los valores definidos en el objeto enlazado.
 
 Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
+> [!NOTE]
+> La propiedad `FallbackValue` proporciona un valor predeterminado en caso de que el enlace sea `null`. Esto también permite que el controlador de [vista previa XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) de Visual Studio represente el control `CardView`.
+
 ## <a name="instantiate-a-custom-control"></a>Crear una instancia de un control personalizado
 
-Se debe agregar una referencia al espacio de nombres del control personalizado a una página que cree instancias del control personalizado. En el ejemplo siguiente se muestra una referencia de espacio de nombres `ContentPage` denominada controles agregados a una instancia en XAML:
+Se debe agregar una referencia al espacio de nombres del control personalizado a una página que cree instancias del control personalizado. En el ejemplo siguiente se muestra una referencia de espacio de nombres denominada **controles** agregados a una instancia de `ContentPage` en XAML:
 
 ```xaml
 <ContentPage ...
              xmlns:controls="clr-namespace:CardViewDemo.Controls" >
 ```
 
-Una vez agregada `CardView` la referencia, se pueden crear instancias en XAML y se han definido sus propiedades:
+Una vez agregada la referencia, se puede crear una instancia de `CardView` en XAML y se han definido sus propiedades:
 
 ```xaml
 <controls:CardView BorderColor="DarkGray"
@@ -139,7 +142,7 @@ Una vez agregada `CardView` la referencia, se pueden crear instancias en XAML y 
                    IconImageSource="user.png"/>
 ```
 
-También `CardView` se puede crear una instancia de un en el código:
+También se puede crear una instancia de `CardView` en el código:
 
 ```csharp
 CardView card = new CardView
@@ -154,9 +157,9 @@ CardView card = new CardView
 
 ## <a name="customize-appearance-with-a-controltemplate"></a>Personalización de la apariencia con un ControlTemplate
 
-Un control personalizado que se deriva de la `ContentView` clase puede definir la apariencia mediante XAML, código o no puede definir la apariencia en absoluto. Independientemente de cómo se defina la apariencia, `ControlTemplate` un objeto puede invalidar la apariencia con un diseño personalizado.
+Un control personalizado que se deriva de la clase `ContentView` puede definir la apariencia mediante XAML, código o no puede definir la apariencia en absoluto. Independientemente de cómo se defina la apariencia, un objeto `ControlTemplate` puede invalidar la apariencia con un diseño personalizado.
 
-El `CardView` diseño podría ocupar demasiado espacio en algunos casos de uso. Un `ControlTemplate` puede invalidar `CardView` el diseño para proporcionar una vista más compacta, adecuada para una lista comprimida:
+El diseño de `CardView` podría ocupar demasiado espacio en algunos casos de uso. Un `ControlTemplate` puede invalidar el diseño de `CardView` para proporcionar una vista más compacta, adecuada para una lista comprimida:
 
 ```xaml
 <ContentPage.Resources>
@@ -191,21 +194,21 @@ El `CardView` diseño podría ocupar demasiado espacio en algunos casos de uso. 
 </ContentPage.Resources>
 ```
 
-El enlace de datos `ControlTemplate` de un `TemplateBinding` utiliza la extensión de marcado para especificar enlaces. A `ControlTemplate` continuación, la propiedad se puede establecer en el objeto ControlTemplate definido mediante su `x:Key` valor. En el ejemplo siguiente se `ControlTemplate` muestra la propiedad establecida `CardView` en una instancia de:
+El enlace de datos en un `ControlTemplate` utiliza la extensión de marcado `TemplateBinding` para especificar enlaces. A continuación, la propiedad `ControlTemplate` se puede establecer en el objeto ControlTemplate definido mediante su valor `x:Key`. En el ejemplo siguiente se muestra la propiedad `ControlTemplate` establecida en una instancia de `CardView`:
 
 ```xaml
 <controls:CardView ControlTemplate="{StaticResource CardViewCompressed}"/>
 ```
 
-Las capturas de pantallas siguientes `CardView` muestran una `CardView` instancia `ControlTemplate` estándar y cuyo se ha invalidado:
+En las siguientes capturas de pantallas se muestra una instancia de `CardView` estándar y `CardView` de los que se ha invalidado `ControlTemplate`:
 
-[![Captura de pantalla de ControlTemplate de CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[captura de pantalla de ![CardView ControlTemplate](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-Para obtener más información sobre las plantillas de control, consulte [plantillas de control de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Para obtener más información sobre las plantillas de control, consulte [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 * [Aplicación de ejemplo ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
-* [Plantillas de control de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+* [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
