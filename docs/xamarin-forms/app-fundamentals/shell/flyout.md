@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
+ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889199"
+ms.lasthandoff: 11/24/2019
+ms.locfileid: "74451806"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -155,7 +155,7 @@ En el ejemplo siguiente se muestra cómo configurar estas propiedades:
 
 Esto da como resultado una imagen de fondo en el control flotante:
 
-![Captura de pantalla de la imagen de fondo de un control flotante](flyout-images/flyout-backgroundimage.png "Imagen de fondo de un control flotante")
+![Captura de pantalla de la imagen de fondo de un control flotante](flyout-images/flyout-backgroundimage.png "Imagen de fondo del control flotante")
 
 ## <a name="flyout-items"></a>Elementos del control flotante
 
@@ -193,7 +193,7 @@ En el ejemplo siguiente se crea un control flotante que contiene un encabezado y
 
 En este ejemplo, solo se puede acceder a cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) mediante elementos de control flotante:
 
-[![Captura de pantalla de una aplicación de Shell de dos páginas con elementos de control flotante en iOS y Android](flyout-images/two-page-app-flyout.png "Aplicación de Shell de dos páginas con elementos de control flotante")](flyout-images/two-page-app-flyout-large.png#lightbox "Shell two page app with flyout items")
+[![Captura de pantalla de una aplicación de dos páginas de Shell con elementos de control flotante, en iOS y Android](flyout-images/two-page-app-flyout.png "Aplicación de dos páginas de Shell con elementos de control flotante")](flyout-images/two-page-app-flyout-large.png#lightbox "Aplicación de dos páginas de Shell con elementos de control flotante")
 
 > [!NOTE]
 > Cuando no existe un encabezado de control flotante, aparecen elementos de control flotante en la parte superior del control flotante. En caso contrario, aparecen debajo del encabezado de control flotante.
@@ -300,7 +300,7 @@ En este ejemplo, se crean elementos de control flotante para el objeto `Tab`, qu
 
 El resultado son los siguientes elementos de control flotante:
 
-[![Captura de pantalla de control flotante que contiene objetos FlyoutItem en iOS y Android](flyout-images/flyout-reduced.png "Control flotante de Shell que contiene objetos FlyoutItem")](flyout-images/flyout-reduced-large.png#lightbox "Shell flyout containing FlyoutItem objects")
+[![Captura de pantalla de un control flotante que contiene objetos FlyoutItem, en iOS y Android](flyout-images/flyout-reduced.png "Control flotante de Shell con objetos FlyoutItem")](flyout-images/flyout-reduced-large.png#lightbox "Control flotante de Shell con objetos FlyoutItem")
 
 ## <a name="define-flyoutitem-appearance"></a>Definición de la apariencia de FlyoutItem
 
@@ -331,10 +331,73 @@ Se puede personalizar la apariencia de cada `FlyoutItem` mediante el establecimi
 
 En este ejemplo se muestra el título de cada objeto `FlyoutItem` en cursiva:
 
-[![Captura de pantalla de objetos FlyoutItem con plantilla en iOS y Android](flyout-images/flyoutitem-templated.png "Objetos FlyoutItem con plantilla de Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
+[![Captura de pantalla de objetos FlyoutItem con plantilla, en iOS y Android](flyout-images/flyoutitem-templated.png "Objetos FlyoutItem con plantilla de Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Objetos FlyoutItem con plantilla de Shell")
+
+
+Como `Shell.ItemTemplate` es una propiedad adjunta, se pueden asociar otras plantillas a objetos `FlyoutItem` específicos.
 
 > [!NOTE]
 > Shell proporciona las propiedades `Title` y `FlyoutIcon` para el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `ItemTemplate`.
+
+
+### <a name="default-template-for-flyoutitems-and-menuitems"></a>Plantilla predeterminada para objetos FlyoutItem y MenuItem
+Shell usa internamente la plantilla siguiente para su implementación predeterminada. Es un gran punto de partida si todo lo que quiere es realizar pequeños ajustes en los diseños existentes. Esto también ilustra las características de Visual State Manager de los elementos de control flotante. Esta misma plantilla también se puede usar para los objetos MenuItem
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## <a name="flyoutitem-tab-order"></a>Orden de tabulación de FlyoutItem
 
@@ -403,7 +466,7 @@ Se pueden agregar objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) al control f
 
 Este código agrega dos objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) al control flotante, debajo de todos los elementos del control flotante:
 
-[![Captura de pantalla de ventana flotante que contiene objetos MenuItem en iOS y Android](flyout-images/flyout.png "Control flotante de Shell que contiene objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Shell flyout containing MenuItem objects")
+[![Captura de pantalla de un control flotante que contiene objetos MenuItem, en iOS y Android](flyout-images/flyout.png "Control flotante de Shell con objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Control flotante de Shell con objetos MenuItem")
 
 El primer objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem) ejecuta un elemento `ICommand` llamado `RandomPageCommand`, que lleva a una página aleatoria de la aplicación. El segundo objeto `MenuItem` ejecuta un elemento `ICommand` llamado `HelpCommand`, que abre la dirección URL especificada por la propiedad `CommandParameter` en un explorador web.
 
@@ -446,10 +509,10 @@ Se puede personalizar la apariencia de cada `MenuItem` mediante el establecimien
 
 Este ejemplo adjunta el nivel de Shell `MenuItemTemplate` a cada objeto `MenuItem`, mostrando el título de cada objeto `MenuItem` en cursiva:
 
-[![Captura de pantalla de los objetos MenuItem con plantilla en iOS y Android](flyout-images/menuitem-templated.png "Objetos MenuItem con plantilla de Shell")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
+[![Captura de pantalla de objetos MenuItem con plantilla, en iOS y Android](flyout-images/menuitem-templated.png "Objetos MenuItem con plantilla de Shell")](flyout-images/menuitem-templated-large.png#lightbox "Objetos MenuItem con plantilla de Shell")
 
 > [!NOTE]
-> Shell proporciona las propiedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) y [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) para el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del objeto `MenuItemTemplate`.`
+> Shell proporciona las propiedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) y [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) para el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del objeto `MenuItemTemplate`. También puede usar `Title` en lugar de `Text` y `Icon` en lugar de `IconImageSource`, lo que le permitirá volver a usar la misma plantilla para los elementos de menú y los de control flotante
 
 Dado que `Shell.MenuItemTemplate` es una propiedad adjunta, se pueden asociar diferentes plantillas a objetos `MenuItem` específicos:
 
@@ -488,6 +551,10 @@ Dado que `Shell.MenuItemTemplate` es una propiedad adjunta, se pueden asociar di
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> También se puede usar la misma plantilla utilizada para los [elementos de control flotante](#default-template-for-flyoutitems-and-menuitems) para los elementos de menú.
 
 Este ejemplo adjunta el `MenuItemTemplate` de nivel de Shell al primer objeto `MenuItem` y adjunta el `MenuItemTemplate` alineado al segundo `MenuItem`.
 

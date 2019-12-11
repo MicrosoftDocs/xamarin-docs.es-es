@@ -6,13 +6,13 @@ ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.date: 12/03/2019
+ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978135"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74824242"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
@@ -46,18 +46,14 @@ Xamarin.Forms.Maps proporciona una abstracción multiplataforma para mostrar map
 
 [`ViewCell`](xref:Xamarin.Forms.ViewCell) de Xamarin.Forms es una celda que se puede agregar a [`ListView`](xref:Xamarin.Forms.ListView) o [`TableView`](xref:Xamarin.Forms.TableView), y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un `ViewCell` que se hospeda dentro de un control `ListView` de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
 
+## <a name="customizing-a-webviewhybridwebviewmd"></a>[Personalización de WebView](hybridwebview.md)
+
+Un objeto [`WebView`](xref:Xamarin.Forms.WebView) de Xamarin.Forms es una vista que muestra contenido web y HTML en la aplicación. En este artículo se explica cómo crear un representador personalizado que extienda `WebView` para permitir la invocación de código de C# desde JavaScript.
+
 ## <a name="implementing-a-viewviewmd"></a>[Implementación de una vista](view.md)
 
 Los controles de interfaces de usuario personalizadas de Xamarin.Forms deben derivar de la clase [`View`](xref:Xamarin.Forms.View), que se usa para colocar los diseños y los controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo.
 
-## <a name="implementing-a-hybridwebviewhybridwebviewmd"></a>[Implementación de una clase HybridWebView](hybridwebview.md)
-
-En este artículo se muestra cómo crear un representador personalizado para un control personalizado `HybridWebView`, que muestra cómo mejorar los controles específicos de la plataforma web para permitir que el código C# se invoque desde JavaScript.
-
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementación de un reproductor de vídeo](video-player/index.md)
 
 En este artículo se muestra cómo escribir los representadores para implementar un control personalizado `VideoPlayer` que puede reproducir vídeos de la web, vídeos insertados como recursos de la aplicación o vídeos almacenados en la biblioteca de vídeos en el dispositivo del usuario. Se muestran varias técnicas, incluida la implementación de métodos y propiedades enlazables de solo lectura.
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md)

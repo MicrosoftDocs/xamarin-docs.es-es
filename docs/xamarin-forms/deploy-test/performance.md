@@ -6,13 +6,13 @@ ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2019
-ms.openlocfilehash: 0841cb0cbe97644f3bb53105887f3adadf9bf6c5
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 11/27/2019
+ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820945"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681345"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Mejora del rendimiento de aplicaciones Xamarin.Forms
 
@@ -43,7 +43,7 @@ Los enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaci
 
 ## <a name="reduce-unnecessary-bindings"></a>Reducción de enlaces innecesarios
 
-No use enlaces para el contenido que se puede establecer fácilmente de forma estática. No hay ninguna ventaja en enlazar datos que no necesitan ser enlazados, ya que los enlaces no son rentables. Por ejemplo, establecer `Button.Text = "Accept"` tiene una menor sobrecarga que enlazar [`Button.Text`](xref:Xamarin.Forms.Button.Text) a una propiedad `string` de ViewModel propiedad con valor "Accept".
+No use enlaces para el contenido que se puede establecer fácilmente de forma estática. No hay ninguna ventaja en enlazar datos que no necesitan ser enlazados, ya que los enlaces no son rentables. Por ejemplo, establecer `Button.Text = "Accept"` tiene una menor sobrecarga que enlazar [`Button.Text`](xref:Xamarin.Forms.Button.Text) a una propiedad `string` del modelo de vista con el valor "Accept".
 
 ## <a name="use-fast-renderers"></a>Uso de representadores rápidos
 
@@ -157,6 +157,41 @@ Para obtener el mejor rendimiento posible, siga estas instrucciones:
 - No actualice ninguna instancia [`Label`](xref:Xamarin.Forms.Label) con más frecuencia de la necesaria, dado que el cambio de tamaño de la etiqueta puede producir que se vuelva a calcular la pantalla completa.
 - No establezca la propiedad [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) a menos sea necesario.
 - Establezca el [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) de las instancias [`Label`](xref:Xamarin.Forms.Label) en [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) siempre que sea posible.
+
+## <a name="use-asynchronous-programming"></a>Uso de la programación asincrónica
+
+Mediante la programación asincrónica se puede mejorar la capacidad de respuesta general de la aplicación y, normalmente, evitar los cuellos de botella de rendimiento. En .NET, el [Modelo asincrónico basado en tareas (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) es el modelo de diseño recomendado para las operaciones asincrónicas. Pero el uso incorrecto de TAP puede dar lugar a aplicaciones no ejecutables. Por tanto, al usar TAP, se deben seguir las instrucciones siguientes.
+
+### <a name="fundamentals"></a>Aspectos básicos
+
+- Entender el ciclo de vida de la tarea, que se representa mediante la enumeración `TaskStatus`. Para más información, vea [El significado de TaskStatus](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) y [Estado de la tarea](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status).
+- Use el método `Task.WhenAll` para esperar de forma asincrónica a que finalicen varias operaciones asincrónicas, en lugar de utilizar `await` de manera individual en una serie de operaciones asincrónicas. Para más información, vea [Task.WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Use el método `Task.WhenAny` para esperar de forma asincrónica a que finalice una de varias operaciones asincrónicas. Para más información, vea [Task.WhenAny](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Use el método `Task.Delay` para crear un objeto `Task` que finaliza tras el tiempo especificado. Esto resulta útil para escenarios como los de sondeo de datos y para retrasar el control de la entrada del usuario durante un tiempo predeterminado. Para más información, vea [Task.Delay](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskdelay).
+- Ejecute operaciones de CPU sincrónicas intensivas en el grupo de subprocesos con el método `Task.Run`. Este método es un acceso directo para el método `TaskFactory.StartNew`, con los argumentos óptimos establecidos. Para más información, vea [Task.Run](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskrun).
+- Evite intentar crear constructores asincrónicos. En su lugar, use eventos de ciclo de vida o lógica de inicialización independiente para ejecutar `await` de forma correcta en cualquier inicialización. Para más información, vea [Constructores asincrónicos](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) en blog.stephencleary.com.
+- Use el modelo de tareas en diferido para evitar esperar a que se completen las operaciones asincrónicas durante el inicio de la aplicación. Para más información, vea [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
+- Cree un contenedor de tareas para las operaciones asincrónicas existentes, que no usan TAP, mediante la creación de objetos `TaskCompletionSource<T>`. Estos objetos obtienen las ventajas de la programación de `Task` y permiten controlar la duración y la finalización del objeto `Task` asociado. Para más información, vea [La naturaleza de TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
+asynchronous-mvvm-applications-commands).
+- Devuelva un objeto `Task`, en lugar de devolver un objeto `Task` en espera, cuando no sea necesario procesar el resultado de una operación asincrónica. Esto es más eficaz debido a que se realizan menos cambios de contexto.
+- Use la biblioteca Flujo de datos de la biblioteca de procesamiento paralelo basado en tareas (TPL) en escenarios como el procesamiento de datos a medida que estén disponibles, o bien cuando tenga varias operaciones que se deban comunicar entre sí de forma asincrónica. Para más información, vea [Flujo de datos (biblioteca TPL)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
+
+### <a name="ui"></a>IU
+
+- Llame a una versión asincrónica de una API, si está disponible. Esto mantendrá desbloqueado al subproceso de IU, lo que le ayudará a mejorar la experiencia del usuario con la aplicación.
+- Actualice los elementos de la interfaz de usuario con los datos de las operaciones asincrónicas en el subproceso de la interfaz de usuario, para evitar que se inicien excepciones. Pero las actualizaciones de la propiedad `ListView.ItemsSource` se calcularán de forma automática en el subproceso de la interfaz de usuario. Para obtener información sobre cómo determinar si el código se ejecuta en el subproceso de la interfaz de usuario, vea [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+
+    > [!IMPORTANT]
+    > Todas las propiedades de control que se actualicen a través del enlace de datos se serializarán de forma automática en el subproceso de la interfaz de usuario.
+
+### <a name="error-handling"></a>Control de errores
+
+- Obtenga información sobre el control de excepciones asincrónico. Las excepciones no controladas que se inician desde código que se ejecuta de forma asincrónica se propagan de vuelta al subproceso que realiza la llamada, excepto en escenarios concretos. Para más información, vea [Control de excepciones (biblioteca TPL)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library).
+- Evite crear métodos `async void` y, en su lugar, cree métodos `async Task`. Estos facilitan el control de errores, la redacción y la capacidad de prueba. La excepción a esta instrucción son los controladores de eventos asincrónicos, que deben devolver `void`. Para más información, vea [Evite async void](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void).
+- No mezcle código de bloqueo y asincrónico mediante una llamada a los métodos `Task.Wait`, `Task.Result` o `GetAwaiter().GetResult`, ya que pueden dar lugar a un interbloqueo. Pero si se debe incumplir esta instrucción, el enfoque preferido consiste en llamar al método `GetAwaiter().GetResult` porque conserva las excepciones de la tarea. Para más información, vea [Async hasta el infinito](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way) y [Control de excepciones de tareas en .NET 4.5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/).
+- Use el método `ConfigureAwait` siempre que sea posible para crear código sin contexto. El código sin contexto tiene un rendimiento mejor en las aplicaciones para dispositivos móviles y es una técnica útil para evitar los interbloqueos cuando se trabaja con una base de código parcialmente asincrónica. Para más información, vea [Configuración del contexto](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context).
+- Use *tareas de continuación* para obtener funcionalidad como el control de excepciones iniciadas por la operación asincrónica anterior y la cancelación de una continuación antes de iniciarse o mientras se ejecuta. Para más información, vea [Encadenamiento de tareas mediante tareas de continuación](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks).
+- Use una implementación de `ICommand` asincrónica cuando se invoquen operaciones asincrónicas desde `ICommand`. Esto garantiza que se puedan controlar las excepciones de la lógica de comandos asincrónica. Para más información, vea [Programación asincrónica: Modelos para aplicaciones de MVVM asincrónicas: Comandos](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
 
 ## <a name="choose-a-dependency-injection-container-carefully"></a>Elección cuidadosa de un contenedor de inyección de dependencia
 
