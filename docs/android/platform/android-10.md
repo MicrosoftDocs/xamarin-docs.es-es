@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: df9fa43d2071d273104edafbe6b880a97afb3f96
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
+ms.sourcegitcommit: b11dc46a9ba23483195e923de88cbef173730087
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273143"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73612276"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -29,7 +29,7 @@ Xamarin. Android 10,0 proporciona compatibilidad con Android 10. Para obtener m�
 La lista siguiente es necesaria para usar características de Android 10 en aplicaciones basadas en Xamarin:
 
 - **Visual Studio** : se recomienda visual Studio 2019. En Windows Update a Visual Studio 2019, versión 16,3 o posterior. En macOS, actualice a Visual Studio 2019 para Mac versión 8,3 o posterior.
-- **Xamarin. Android** : Xamarin. Android 10,0 o posterior debe instalarse con Visual Studio (Xamarin. Android se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** en Windows y se instala como parte de **Visual Studio para Mac Installer**)
+- **Xamarin. Android** : Xamarin. Android 10,0 o posterior debe instalarse con Visual Studio (Xamarin. Android se instala automáticamente como parte de la carga de trabajo **desarrollo para dispositivos móviles con .net** en Windows y se instala como parte del **instalador de Visual Studio para Mac**).
 - **Kit para desarrolladores de Java** : el desarrollo de Xamarin. Android 10,0 requiere JDK 8. La distribución de Microsoft de OpenJDK se instala automáticamente como parte de Visual Studio.
 - **Android SDK** -Android SDK API 29 debe instalarse a través del administrador de Android SDK.
 
@@ -53,7 +53,7 @@ A continuación se explica cada uno de estos pasos:
 
 Se recomienda Visual Studio 2019 para compilar aplicaciones de Android 10 con Xamarin.
 
-Si usa Visual Studio 2019, actualice a Visual Studio 2019 versión 16,3 o posterior (para obtener instrucciones, consulte [actualización de Visual studio 2019 a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2019 para Mac 8,3 o posterior (para obtener instrucciones, vea [Actualizar Visual Studio 2019 para Mac a la versión más reciente](https://docs.microsoft.com/en-us/visualstudio/mac/update)).
+Si usa Visual Studio 2019, actualice a Visual Studio 2019 versión 16,3 o posterior (para obtener instrucciones, consulte [actualización de Visual studio 2019 a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2019 para Mac 8,3 o posterior (para obtener instrucciones, vea [Actualizar Visual Studio 2019 para Mac a la versión más reciente](https://docs.microsoft.com/visualstudio/mac/update)).
 
 ### <a name="install-the-android-sdk"></a>Instalar el Android SDK
 
@@ -64,23 +64,23 @@ Para crear un proyecto con Xamarin. Android 10,0, primero debe usar el administr
 
     ![Selección del repositorio de Android SDK Manager](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Instale los paquetes de la **plataforma del SDK de Android 10** , que se muestran como **Android SDK plataforma 29** en la pestaña **plataformas** (para obtener más información acerca del uso del administrador de SDK, consulte [Android SDK Setup](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
+3. Instale los paquetes de la **plataforma del SDK de Android 10** , que se muestran como **Android SDK plataforma 29** en la pestaña **plataformas** (para obtener más información acerca del uso del administrador de SDK, consulte [Android SDK Setup](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk)):
 
     ![Pestaña plataforma de Android SDK Manager](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Creación de un proyecto de Xamarin. Android
 
-Cree un nuevo proyecto de Xamarin. Android. Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](https://docs.microsoft.com/en-us/xamarin/android/get-started/hello-android/index) para obtener información sobre la creación de proyectos de Xamarin. Android.
+Cree un nuevo proyecto de Xamarin. Android. Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) para obtener información sobre la creación de proyectos de Xamarin. Android.
 
-Al crear un proyecto de Android, debe configurar las opciones de versión para que tengan como destino Android 10,0 o posterior. Por ejemplo, para tener como destino el proyecto para Android 10, debe configurar el nivel de API de Android de destino de su proyecto en **android 10,0 (API 29)** . Esto incluye la **versión de .NET Framework de destino** y la versión de Android SDK de **destino** a la API 29 o posterior. Para obtener más información sobre la configuración de los niveles de la API de Android, consulte [Descripción de los niveles de API de Android.](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/android-api-levels)
+Al crear un proyecto de Android, debe configurar las opciones de versión para que tengan como destino Android 10,0 o posterior. Por ejemplo, para tener como destino el proyecto para Android 10, debe configurar el nivel de API de Android de destino de su proyecto en **android 10,0 (API 29)** . Esto incluye la **versión de .NET Framework de destino** y la versión de Android SDK de **destino** a la API 29 o posterior. Para obtener más información sobre la configuración de los niveles de la API de Android, consulte [Descripción de los niveles de API de Android.](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)
 
 ![Plataforma de destino de Xamarin. Android](~/android/platform/android-10-images/targetframework.png)
 
 ### <a name="configure-a-device-or-emulator"></a>Configurar un dispositivo o emulador
 
-Si usa un dispositivo físico, como un píxel, puede descargar la actualización de Android 10 yendo al `System` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 en la configuración del teléfono. Si prefiere que el dispositivo parpadee, consulte las instrucciones sobre la intermitencia de una [imagen de fábrica](https://developers.google.com/android/images) o una [imagen de OTA](https://developers.google.com/android/ota) en el dispositivo.
+Si usa un dispositivo físico, como un píxel, puede descargar la actualización de Android 10. para ello, vaya a la `System` > `System update` > `Check for update` en la configuración del teléfono. Si prefiere que el dispositivo parpadee, consulte las instrucciones sobre la intermitencia de una [imagen de fábrica](https://developers.google.com/android/images) o una [imagen de OTA](https://developers.google.com/android/ota) en el dispositivo.
 
-Si usa un emulador, cree un dispositivo virtual para el nivel de API 29 y seleccione una imagen basada en x86. Para obtener información sobre el uso de la Android Device Manager para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con la Android Device Manager.](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-manager) Para obtener información acerca del uso del Android Emulator para probar y depurar, consulte [depuración en el Android Emulator.](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-emulator)
+Si usa un emulador, cree un dispositivo virtual para el nivel de API 29 y seleccione una imagen basada en x86. Para obtener información sobre el uso de la Android Device Manager para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con la Android Device Manager.](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) Para obtener información acerca del uso del Android Emulator para probar y depurar, consulte [depuración en el Android Emulator.](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
 ## <a name="new-features"></a>Características nuevas
 
@@ -88,29 +88,29 @@ Android 10 presenta una variedad de características nuevas. Algunas de estas nu
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Mejore su aplicación con características y API de Android 10
 
-Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las [nuevas características y api](https://developer.android.com/preview/api-overview.html)@no__t-clientes 1 que puede usar. Estas son algunas de las características principales para empezar a trabajar con.
+Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las [nuevas características y api](https://developer.android.com/preview/api-overview.html) que puede usar. Estas son algunas de las características principales para empezar a trabajar con.
 
 Estas características se recomiendan para todas las aplicaciones:
 
-- **Tema oscuro:** @no__t 1Ensure una experiencia coherente para los usuarios que habilitan el tema oscuro en todo el sistema mediante la adición de un [tema oscuro](https://developer.android.com/preview/features/darktheme) or habilitar [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark).
+- **Tema oscuro:**  garantizar una experiencia coherente para los usuarios que habilitan el tema oscuro en todo el sistema agregando un [tema oscuro](https://developer.android.com/preview/features/darktheme) o habilitando [Force oscuro](https://developer.android.com/preview/features/darktheme#force_dark).
 
 ![Tema oscuro](~/android/platform/android-10-images/darktheme.png)
 
-- **Compatibilidad con la [navegación gestural](https://developer.android.com/preview/features/gesturalnav)**  in la aplicación pasando de un lado a perímetro y asegurándose de que los gestos personalizados son complementarios a los movimientos de navegación del sistema.
+- **Admita la [navegación mediante gestos](https://developer.android.com/preview/features/gesturalnav)**  en su aplicación pasando de un lado a perímetro y asegurándose de que los gestos personalizados son complementarios a los movimientos de navegación del sistema.
 
 ![Navegación por gestos](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Optimize for foldables:**  Deliver experiencias de vanguardia a EDGE en los dispositivos innovadores actuales mediante la [optimización de foldables](https://developer.android.com/preview/features/foldables).
+- **Optimize for foldables:**  ofrecer experiencias de vanguardia a EDGE en los dispositivos innovadores actuales mediante la [optimización de foldables](https://developer.android.com/preview/features/foldables).
 
 ![Doblado](~/android/platform/android-10-images/foldable.png)
 
 Se recomiendan estas características si es pertinente para su aplicación:
 
-- **Notificaciones más interactivas:**  SI las notificaciones incluyen mensajes, habilitan [las respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) To invitan a los usuarios y les permiten tomar medidas al instante.
-- **Mejor biometría:**  Si se usa la autenticación biométrica, se mueve a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la mejor manera de admitir la autenticación mediante huellas digitales en dispositivos modernos.
-- **Grabación enriquecida:**  to admite la grabación de subtítulos o juegos, habilita la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
-- **Códecs mejores:** aplicaciones multimedia  Para, pruebe el streaming de vídeo de [AV1](https://en.wikipedia.org/wiki/AV1) for y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) for un vídeo de alto nivel dinámico. Para el streaming de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, una [API MIDI nativa](https://developer.android.com/preview/features/midi) is disponible.
-- **Mejores API de red:**  SI la aplicación administra dispositivos IOT a través de Wi-Fi, pruebe las nuevas [API de conexión de red](https://developer.android.com/preview/features#peer2peer) for funciones como la configuración, descarga o impresión.
+- **Notificaciones más interactivas:**  si las notificaciones incluyen mensajes, habilite [las respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) para atraer a los usuarios y permitirles tomar medidas al instante.
+- **Mejor biometría:**  si usa la autenticación biométrica, desplácese a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la mejor manera de admitir la autenticación mediante huellas digitales en dispositivos modernos.
+- **Grabación enriquecida:**  para admitir la grabación de subtítulos o juegos, habilitar la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
+- **Códecs mejores:**  para aplicaciones multimedia, pruebe  [AV1](https://en.wikipedia.org/wiki/AV1) para streaming de vídeo y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) para obtener un vídeo de alto nivel dinámico. Para la transmisión por secuencias de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, hay disponible una [API MIDI nativa](https://developer.android.com/preview/features/midi) .
+- **Mejores API de red:**  si la aplicación administra dispositivos IOT a través de Wi-Fi, pruebe las nuevas [API de conexión de red](https://developer.android.com/preview/features#peer2peer) para funciones como la configuración, descarga o impresión.
 
 Estas son solo algunas de las muchas características y API nuevas de Android 10. Para verlos todos, visite el [sitio de Android 10 para desarrolladores](https://developer.android.com/about/versions/10/highlights).
 
