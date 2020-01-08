@@ -8,12 +8,12 @@ metadata:
   ms.author: daortin
   ms.date: 12/23/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 244eb52cd22e04518da8d69b6e74dd0e1b68bf0a
-  ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+  ms.openlocfilehash: 624228746f3212b0c8b237dcb9694daea037e89f
+  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/25/2019
-  ms.locfileid: "75488561"
+  ms.lasthandoff: 01/07/2020
+  ms.locfileid: "75718720"
 landingContent:
 - title: Compilación de aplicaciones y juegos multiplataforma
   linkLists:
@@ -22,7 +22,7 @@ landingContent:
     - text: Requisitos
       url: ~/cross-platform/get-started/requirements.md
     - text: Xamarin.Forms
-      url: ~/get-started/quickstarts/index.yml
+      url: ~/get-started/quickstarts/index.md
     - text: .NET Standard
       url: ~/cross-platform/app-fundamentals/net-standard.md
   - linkListType: how-to-guide
