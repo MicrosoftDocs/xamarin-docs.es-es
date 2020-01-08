@@ -1,0 +1,55 @@
+- name: Gráficos y juegos
+  href: index.md
+  items:
+    - name: Desarrollo de juegos
+      href: game-development/index.md
+    - name: SkiaSharp
+      href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+    - name: UrhoSharp
+      href: urhosharp/index.md
+      items:
+        - name: Introducción
+          href: urhosharp/introduction.md
+        - name: Uso de UrhoSharp
+          href: urhosharp/using.md
+        - name: Notas específicas de la plataforma
+          href: urhosharp/platform/index.md
+          items:
+            - name: Android
+              href: urhosharp/platform/android.md
+            - name: iOS y tvOS
+              href: urhosharp/platform/ios.md
+            - name: macOS
+              href: urhosharp/platform/mac.md
+            - name: Windows
+              href: urhosharp/platform/windows.md
+            - name: Xamarin.Forms
+              href: urhosharp/platform/xamarin-forms.md
+        - name: 'Programación de UrhoSharp con F#'
+          href: urhosharp/fsharp.md
+    - name: MonoGame
+      href: monogame/index.md
+      items:
+        - name: Introducción a MonoGame
+          href: monogame/introduction/index.md
+          items:
+            - name: 'Parte 1: Creación un proyecto MonoGame multiplataforma'
+              href: monogame/introduction/part1.md
+            - name: 'Parte 2: Implementación de WalkingGame'
+              href: monogame/introduction/part2.md
+        - name: 3D con MonoGame
+          href: monogame/3d/index.md
+          items:
+            - name: 'Parte 1: Uso de la clase Model'
+              href: monogame/3d/part1.md
+            - name: 'Parte 2: Trazado de gráficos 3D con vértices'
+              href: monogame/3d/part2.md
+            - name: 'Parte 3: Coordenadas 3D'
+              href: monogame/3d/part3.md
+        - name: Referencia de GamePad
+          href: monogame/input.md
+        - name: Consideraciones de plataforma
+          href: monogame/platforms/index.md
+          items:
+            - name: Plataforma universal de Windows (UWP)
+              href: monogame/platforms/uwp.md

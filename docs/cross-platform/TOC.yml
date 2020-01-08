@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Creación de aplicaciones móviles
+    - name: Compilación de aplicaciones móviles
       href: get-started/index.md
       expanded: true
       items:
@@ -20,7 +20,7 @@
               href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
             - name: 'Parte 2: Arquitectura'
               href: app-fundamentals/building-cross-platform-applications/architecture.md
-            - name: 'Parte 3: Configuración de una solución multiplataforma de Xamarin'
+            - name: 'Parte 3: Configuración de una solución Xamarin multiplataforma'
               href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
             - name: 'Parte 4: Trabajo con varias plataformas'
               href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
@@ -49,13 +49,13 @@
               href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
             - name: Nueva biblioteca multiplataforma
               href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
-            - name: Nuevas bibliotecas específicas de plataforma
+            - name: Nuevas bibliotecas específicas de la plataforma
               href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
             - name: Guía de metadatos
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
         - name: Paquetes NuGet (manual)
           href: app-fundamentals/nuget-manual.md
-        - name: Utilizar bibliotecas de C o C++ en aplicaciones multiplataforma
+        - name: Uso de bibliotecas de C o C++ en aplicaciones multiplataforma
           href: cpp/index.md
     - name: Compatibilidad con lenguajes
       href: platform/index.md
@@ -64,14 +64,14 @@
           items:
             - name: Información general sobre la compatibilidad con Async
               href: platform/async.md
-            - name: 'Características del lenguaje C# 6'
+            - name: "Características del lenguaje C#\_6"
               href: platform/csharp-six.md
         - name: 'F#'
           href: platform/fsharp/index.md
           items:
-            - name: Introducción
+            - name: Primeros pasos
               href: platform/fsharp/overview.md
-            - name: 'Muestras de F#'
+            - name: 'Ejemplos de F#'
               href: platform/fsharp/samples.md
         - name: Visual Basic
           href: platform/visual-basic/index.md
@@ -80,7 +80,7 @@
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md
-        - name: Plantillas de Razor HTML
+        - name: Plantillas de Razor en HTML
           href: platform/razor-html-templates/index.md
     - name: Rendimiento y seguridad
       href: deploy-test/performance.md
@@ -88,6 +88,8 @@
         - name: Rendimiento
           href: deploy-test/memory-perf-best-practices.md
           items:
+            - name: Rendimiento de Xamarin.Forms
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Rendimiento de Android
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Rendimiento de iOS
@@ -111,7 +113,7 @@
         - name: Depuración multiproceso
           href: deploy-test/multi-process-debugging.md
     - name: Desarrolladores de escritorio
-      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers'
       href: desktop/index.md
       items:
         - name: Comparación del ciclo de vida de las aplicaciones
@@ -171,4 +173,4 @@
         - name: Actualización de referencias de componentes en NuGet
           href: troubleshooting/component-nuget.md
     - name: Muestras
-      href: samples/index.yml
+      href: samples/index.md

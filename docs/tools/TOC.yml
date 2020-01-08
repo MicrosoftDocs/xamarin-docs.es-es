@@ -1,5 +1,5 @@
 - name: Herramientas
-  href: index.yml
+  href: index.md
   expanded: true
   items:
     - name: Simulador iOS
@@ -22,7 +22,7 @@
       items:
         - name: Acerca de la versión preliminar de Xamarin Live Player
           href: live-player/index.md
-        - name: Configuración de Visual Studio
+        - name: "Configuración de Visual\_Studio"
           href: live-player/install.md
         - name: Aplicación de Xamarin Live Player
           href: live-player/player.md

@@ -226,7 +226,7 @@
             - name: Entrada de texto
               href: user-interface/controls/text-input.md
             - name: Vistas web
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Restricciones de diseño mediante programación
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: Entrada táctil 3D
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID y Face ID
+          href: platform/touch-id-face-id.md
         - name: Plataforma de notificaciones de usuario
           items:
             - name: Información general
@@ -890,7 +890,7 @@
           items:
             - name: Imagen
               href: watchos/user-interface/image.md
-            - name: Tabla
+            - name: Table
               href: watchos/user-interface/table.md
             - name: Menú (Force Touch)
               href: watchos/user-interface/menu.md
@@ -1112,4 +1112,4 @@
     - name: Notas de la versión
       href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
     - name: Muestras
-      href: samples/index.yml
+      href: samples/index.md

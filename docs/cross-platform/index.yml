@@ -1,89 +1,83 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Guía multiplataforma
+summary: Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se describen los detalles aplicables con independencia de las plataformas de destino.
 metadata:
-  description: Guía multiplataforma para desarrolladores de dispositivos móviles.
+  title: Guía multiplataforma
+  description: Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se describen los detalles aplicables con independencia de las plataformas de destino.
   author: davidortinau
   ms.author: daortin
-  ms.date: 04/25/2018
+  ms.date: 12/23/2019
   ms.topic: landing-page
-abstract:
-  description: 'Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se abordan los detalles aplicables con independencia de las plataformas de destino.'
-  menu:
-    items:
-      - href: ~/cross-platform/samples/index.yml
-        text: Ejemplos de Xamarin
-      - href: /visualstudio/
-        text: Programa para la mejora
-      - href: /visualstudio/mac/
-        text: Visual Studio para Mac
-sections:
-  - title: Primeros pasos
-    items:
-      - type: paragraph
-        text: 'Aprenda cómo crear sus primeras aplicaciones con Xamarin y C# para Android, iOS, Mac OS, UWP y mucho más.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Requisitos
-            href: ~/cross-platform/get-started/requirements.md
-          - image:
-              src: ~/media/icons/i_desktop-phone.svg
-            text: Xamarin.Forms
-            href: ~/get-started/quickstarts/index.yml
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Android
-            href: ~/android/get-started/hello-android/hello-android-quickstart
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: iOS
-            href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-            text: Mac
-            href: ~/mac/get-started/hello-mac.md
-  - title: Guías
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/cross-platform/get-started/index.md
-            html: Introducción al desarrollo de aplicaciones móviles con Xamarin
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-              href: ~/cross-platform/get-started/index.md
-            title: Creación de aplicaciones móviles
-          - href: ~/cross-platform/platform/index.md
-            html: 'Xamarin es compatible con C#, F# y el motor de plantillas de Razor.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/cross-platform/platform/index.md
-            title: Compatibilidad con lenguajes
-          - href: ~/cross-platform/app-fundamentals/index.md
-            html: Todo lo que necesita saber para crear aplicaciones.
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/cross-platform/app-fundamentals/index.md
-            title: Uso compartido de código
-          - href: ~/cross-platform/deploy-test/performance.md
-            html: Directrices sobre la seguridad y el rendimiento de las aplicaciones.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
-              href: ~/cross-platform/deploy-test/performance.md
-            title: Rendimiento y seguridad
-          - href: ~/cross-platform/deploy-test/index.md
-            html: Sugerencias de depuración e implementación.
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/cross-platform/deploy-test/index.md
-            title: Implementación y depuración
-          - href: ~/cross-platform/desktop/index.md
-            html: Guía para desarrolladores de escritorio de .NET interesados en la compilación de aplicaciones móviles.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: ~/cross-platform/desktop/index.md
-            title: Desarrolladores de escritorio
+  ms.openlocfilehash: 244eb52cd22e04518da8d69b6e74dd0e1b68bf0a
+  ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75488561"
+landingContent:
+- title: Compilación de aplicaciones y juegos multiplataforma
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Requisitos
+      url: ~/cross-platform/get-started/requirements.md
+    - text: Xamarin.Forms
+      url: ~/get-started/quickstarts/index.yml
+    - text: .NET Standard
+      url: ~/cross-platform/app-fundamentals/net-standard.md
+  - linkListType: how-to-guide
+    links:
+    - text: Ciclo de vida de desarrollo de aplicaciones
+      url: ~/cross-platform/get-started/introduction-to-mobile-sdlc.md
+    - text: Tutorial
+      url: ~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md
+- title: Compatibilidad con lenguajes
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Información general
+      url: ~/cross-platform/platform/index.md
+    - text: C#
+      url: ~/cross-platform/platform/csharp-six.md
+    - text: F#
+      url: ~/cross-platform/platform/fsharp/index.md
+    - text: Visual Basic
+      url: ~/cross-platform/platform/visual-basic/index.md
+    - text: Plantillas de Razor en HTML
+      url: ~/cross-platform/platform/razor-html-templates/index.md
+- title: Rendimiento y seguridad
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Rendimiento de Xamarin.Forms
+      url: /xamarin/xamarin-forms/deploy-test/performance?context=xamarin/cross-platform
+    - text: Rendimiento de Android
+      url: /xamarin/android/deploy-test/performance?context=xamarin/cross-platform
+    - text: Rendimiento de iOS
+      url: /xamarin/ios/deploy-test/performance?context=xamarin/cross-platform
+    - text: Rendimiento de Mac
+      url: /xamarin/mac/deploy-test/performance?context=xamarin/cross-platform
+    - text: Seguridad de la capa de transporte (TLS) 1.2
+      url: ~/cross-platform/app-fundamentals/transport-layer-security.md
+- title: Implementación y depuración
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Configuración personalizada del enlazador
+      url: ~/cross-platform/deploy-test/linker.md
+  - linkListType: how-to-guide
+    links:
+    - text: Conexión a servicios web locales
+      url: ~/cross-platform/deploy-test/connect-to-local-web-services.md
+    - text: Depuración de varios procesos
+      url: ~/cross-platform/deploy-test/multi-process-debugging.md
+- title: Desarrolladores de escritorio
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Comparación del ciclo de vida de las aplicaciones
+      url: ~/cross-platform/desktop/lifecycle.md
+    - text: Comparación de los controles de interfaz de usuario
+      url: ~/cross-platform/desktop/controls/index.md
+    - text: Guía de migración
+      url: ~/cross-platform/desktop/porting.md
