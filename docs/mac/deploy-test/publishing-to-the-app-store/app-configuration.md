@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 545c1cef26d3bbf85b490492347f4f63b42269a9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7db7edd4d8143f4e456f59b97de51e3c1d202dc0
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021697"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489406"
 ---
 # <a name="mac-app-configuration"></a>Configuración de aplicaciones de Mac
 

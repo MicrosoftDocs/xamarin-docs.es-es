@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: ae84dadf4c405f7f8075cedc0f16ca845fea6fdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8978dbce97948d02d520b788d024fb50f4884635
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014909"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488886"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -19,7 +19,7 @@ _C#5 presentó dos palabras clave para simplificar la programación asincrónica
 
 La compatibilidad con Async de Xamarin se basa en la base mono 3,0 y actualiza el perfil de API de la versión de Silverlight de la que es fácil de usar para ser una versión móvil de .NET 4,5.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 En este documento se presentan las nuevas palabras clave Async y Await y, a continuación, se explican algunos ejemplos sencillos que implementan métodos asincrónicos en Xamarin. iOS y Xamarin. Android.
 
@@ -31,7 +31,7 @@ La aplicación de ejemplo realiza una solicitud Web asincrónica simple (sin blo
 
 La compatibilidad con Async de Xamarin se basa en la base mono 3,0 y actualiza el perfil de API de la versión de Silverlight de la que es fácil de usar para ser una versión móvil de .NET 4,5.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 C#5 características requieren mono 3,0, que se incluye en Xamarin. iOS 6,4 y Xamarin. Android 4,8. Se le pedirá que actualice los mono, Xamarin. iOS, Xamarin. Android y Xamarin. Mac para aprovecharlo.
 
@@ -45,7 +45,7 @@ C#5 características requieren mono 3,0, que se incluye en Xamarin. iOS 6,4 y Xa
 
 La palabra clave `async` se coloca en una declaración de método (o en un método lambda o anónimo) para indicar que contiene código que se puede ejecutar de forma asincrónica, es decir, No bloquee el subproceso del llamador.
 
-Un método marcado con `async` debe contener al menos una expresión o instrucción Await. Si no hay ningún `await`en el método, se ejecutará de forma sincrónica (el mismo que si no hubiera ningún modificador `async`). Esto también producirá una advertencia del compilador (pero no un error).
+Un método marcado con `async` debe contener al menos una expresión o instrucción Await. Si no hay ninguna instrucción `await` presente en el método, se ejecutará de forma sincrónica (igual que si no hubiera ningún modificador `async`). Esto también producirá una advertencia del compilador (pero no un error).
 
 ### <a name="return-types"></a>Tipos de valor devueltos
 
@@ -57,7 +57,7 @@ Especifique `Task<TResult>` si el método debe devolver un valor, donde `TResult
 
 El tipo de valor devuelto `void` se usa principalmente para los controladores de eventos que lo requieren. El código que llama a métodos asincrónicos que devuelven void no puede `await` en el resultado.
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 Los métodos asincrónicos no pueden declarar `ref` o `out` parámetros.
 
@@ -180,7 +180,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 Algunos puntos importantes:
 
 - El método se marca como `async` pero devuelve `void`. Normalmente, esto solo se hace para los controladores de eventos (de lo contrario, se devolverá un `Task` o `Task<TResult>`).
-- El código `await` s en el método de `DownloadHomepage` directamente en una asignación a una variable (`intResult`), a diferencia del ejemplo anterior en el que usamos una variable de `Task<int>` intermedia para hacer referencia a la tarea.  *Esta* es la ubicación donde se devuelve el control al autor de la llamada hasta que el método asincrónico se ha completado en otro subproceso.
+- La palabra clave `await` en el método `DownloadHomepage` se asigna directamente a una variable (`intResult`), a diferencia del ejemplo anterior en el que usamos una variable de `Task<int>` intermedia para hacer referencia a la tarea.  *Esta* es la ubicación donde se devuelve el control al autor de la llamada hasta que el método asincrónico se ha completado en otro subproceso.
 - Cuando el método asincrónico finaliza y devuelve, la ejecución se reanuda en el `await`, lo que significa que se devuelve el resultado entero y, a continuación, se representa en un widget de interfaz de usuario.
 
 ## <a name="summary"></a>Resumen

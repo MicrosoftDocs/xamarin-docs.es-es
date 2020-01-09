@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 74e258eeca78260fbfe3811e1dc6d8051e68e5f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16ae440ec2fe3b5898c8f92d993279ef5e7e9794
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030253"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607924"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribución ad hoc para aplicaciones Xamarin.iOS
 
@@ -84,7 +84,7 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como:
     - **Explícito**: `com.[DomainName].[AppName]`
     - **Carácter comodín**: `com.[DomainName].*`
-4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que la aplicación necesite.
+4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) que la aplicación necesite.
 5. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el nuevo identificador de aplicación.
 
 Una vez que tenga los componentes necesarios para crear un perfil de distribución, siga estos pasos para crearlo:

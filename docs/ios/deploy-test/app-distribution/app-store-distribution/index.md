@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026698"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607937"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -85,7 +85,7 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como:
     - **Explícito**: com.[nombreDeDominio].[nombreDeAplicación]
     - **Comodín**: com.[nombreDeDominio].*
-4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que la aplicación necesite.
+4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) que la aplicación necesite.
 5. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
 
 ### <a name="creating-a-provisioning-profile"></a>Crear un perfil de aprovisionamiento

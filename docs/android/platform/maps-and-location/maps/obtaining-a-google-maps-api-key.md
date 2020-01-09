@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: bf0a099546b2d5610a639cbf9af4c7676d10bef9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 371876d087c7027d4cfe2d2d9ada8b0dbedb5dd5
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020047"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488977"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obtención de una clave de la API de Google Maps
 
@@ -39,7 +39,7 @@ De forma predeterminada, el almacén de claves que se usa para firmar las versio
 
 La información acerca de un almacén de claves se obtiene ejecutando el comando `keytool` desde el JDK. Esta herramienta se encuentra normalmente en el directorio bin de Java:
 
-**C:\\archivos de programa (x86)\\Java\\JDK [versión]\\bin\\keytool. exe**
+**C:\\archivos de programa\\Android\\JDK\\microsoft_dist_openjdk_ [versión]\\bin\\keytool. exe**
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -49,7 +49,7 @@ De forma predeterminada, el almacén de claves que se usa para firmar las versio
 
 La información acerca de un almacén de claves se obtiene ejecutando el comando `keytool` desde el JDK. Esta herramienta se encuentra normalmente en el directorio bin de Java:
 
-**/System/Library/Java/JavaVirtualMachines/[versión]. JDK/Contents/Home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
 
 -----
 
@@ -133,7 +133,7 @@ Una vez creado el proyecto de API de **Google Developer Console** , es necesario
 
 1. En la página **mapas SDK para Android** que se muestra (después de hacer clic en **Habilitar** en el paso anterior), vaya a la pestaña **credenciales** y haga clic en el botón **crear credenciales** :
 
-   [mensaje de credenciales del SDK de mapas de![para Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [mensaje de credenciales del SDK de mapas de ![para Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Haga clic en **clave de API**:
 
@@ -155,7 +155,7 @@ Una vez creado el proyecto de API de **Google Developer Console** , es necesario
 
    [![nombre del paquete especificado es com. Xamarin. docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
-7. Tenga en cuenta que, para que el APK tenga acceso a Google Maps, debe incluir las huellas digitales y los nombres de paquete SHA-1 para cada almacén de claves (depuración y lanzamiento) que use para firmar el APK. Por ejemplo, si usa un equipo para la depuración y otro equipo para generar la versión APK, debe incluir la huella digital del certificado SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital del certificado SHA-1 del almacén de claves de la versión de el segundo equipo. Haga clic en **+ Agregar nombre de paquete y huella digital** para agregar otra huella digital y el nombre del paquete, tal como se muestra en este ejemplo:
+7. Tenga en cuenta que, en orden para el APK tener acceso a Google Maps, debe incluir las huellas digitales de SHA-1 y empaquetar los nombres para cada almacén de claves (debug y release) que usó para firmar el APK. Por ejemplo, si usa un equipo para depuración y otro equipo para generar el APK de lanzamiento, debe incluir la huella digital de certificado de SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital de certificado de SHA-1 desde el almacén de claves de la versión de el segundo equipo. Haga clic en **+ Agregar nombre de paquete y huella digital** para agregar otra huella digital y el nombre del paquete, tal como se muestra en este ejemplo:
 
    [![agregar otra huella digital crea otro certificado SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 

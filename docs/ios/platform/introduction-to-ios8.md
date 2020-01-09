@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 2da018b3595850582331280909fa327cee4ff6e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031802"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489211"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
 _Con iOS 8, Apple ha proporcionado una gran cantidad de nuevas plataformas y API para entusiasmar a los desarrolladores. En esta guía se presentarán estas nuevas API y verá cómo iOS 8 puede beneficiar a los desarrolladores y a los usuarios._
 
-iOS 7 ha cambiado visualmente la interfaz de usuario de iOS completa de lo que los usuarios y desarrolladores tuvieron previsto, directamente desde el primer SO de iPhone. IOS 8 continúa con esto proporcionando muchos marcos de trabajo a los desarrolladores, lo que permite a los usuarios controlar casi todos los aspectos de su vida directo desde su iPhone. Por ejemplo, el mantenimiento y la idoneidad se pueden analizar con *HealthKit*, los códigos de acceso se obsoleta con autenticación biométrica mediante *LocalAuthentication*, *las extensiones de aplicación* abren un canal de comunicación entre aplicaciones de terceros y  *HomeKit* permite convertir su casa en una casa en el futuro. 
+iOS 7 ha cambiado visualmente la interfaz de usuario de iOS completa de lo que los usuarios y desarrolladores tuvieron previsto, directamente desde el primer SO de iPhone. IOS 8 continúa con esto proporcionando muchos marcos de trabajo a los desarrolladores, lo que permite a los usuarios controlar casi todos los aspectos de su vida directo desde su iPhone. Por ejemplo, el mantenimiento y la idoneidad se pueden analizar con *HealthKit*, los códigos de acceso se obsoleta con autenticación biométrica mediante *LocalAuthentication*, *las extensiones de aplicaciones* abren un canal de comunicación entre aplicaciones de terceros y *HomeKit* permiten la posibilidad de convertir su casa en una casa. 
 
 Si iOS 7 fuera a la luz de los usuarios, iOS 8 se centra en la imluz de los desarrolladores con una amplia gama de herramientas de Tasty nuevas. 
 
@@ -26,7 +26,7 @@ En esta guía se presentan las nuevas API para desarrolladores de Xamarin. iOS.
 
 También hay algunas API que han quedado en desuso en iOS 8, que se detallan al final de este documento.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Los siguientes elementos son necesarios para crear aplicaciones de iOS 8 en Visual Studio para Mac:
 
@@ -44,7 +44,7 @@ El control de sus dispositivos desde su iPhone no es una nueva aplicación de te
 
 Con HomeKit, las aplicaciones de terceros y Siri pueden detectar accesorios y agregarlos a su base de datos de configuración de inicio personal, editarlos y actuar sobre ellos, y comunicarse con los accesorios y sus servicios para realizar una acción.
 
-### <a name="configuration"></a>Configuración
+### <a name="configuration"></a>Configuración de
 
 En el diagrama siguiente se muestra la jerarquía básica de la configuración de HomeKit Accessories:
 
@@ -93,7 +93,7 @@ En primer lugar, ayuda a los servicios de cadena de claves existentes mediante e
 
 En segundo lugar, LocalAuthentication proporciona dos métodos para autenticar la aplicación localmente. Los desarrolladores deben usar `CanEvaluatePolicy` para determinar si el dispositivo es capaz de aceptar el ID. de Touch y, a continuación, `EvaluatePolicy` para iniciar la operación de autenticación.
 
-Para obtener más información sobre Touch ID e información sobre cómo integrarlo en una aplicación de Xamarin. iOS, consulte la [Introducción a](~/ios/platform/touchid.md) las guías de TouchID.
+Para obtener más información sobre Touch ID e información sobre cómo integrarlo en una aplicación de Xamarin. iOS, consulte [Touch ID and facial ID en las guías de Xamarin. iOS](~/ios/platform/touch-id-face-id.md) .
 
 ### <a name="document-picker"></a>Selector de documentos
 
@@ -172,5 +172,5 @@ En este artículo se han examinado algunas de las nuevas características introd
 - [Introducción al selector de documentos](~/ios/platform/document-picker.md)
 - [Introducción a HealthKit](~/ios/platform/healthkit.md)
 - [Introducción a los controles de cámara manual](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Introducción a TouchID](~/ios/platform/touchid.md)
+- [Touch ID y facial ID con Xamarin. iOS](~/ios/platform/touch-id-face-id.md)
 - [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md)

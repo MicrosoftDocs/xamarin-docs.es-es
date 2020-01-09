@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: eb8df9f7088c4954ed48ce8c7c145334004207cd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: de858049ef899134d61596cabfcf81fca973e8b0
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017944"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489354"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 

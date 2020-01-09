@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ef0bcba7a59984c6bad7091431fe00b1f1b7eee3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031793"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489094"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -131,7 +131,7 @@ Apple incluye los siguientes cambios en el marco de [autenticación local](xref:
 - La capacidad de usar el _contexto de autenticación_ en las llamadas a llaves y la compatibilidad para evaluar las listas de control de acceso de cadena de claves.
 - La capacidad de cancelar un aviso del usuario desde el código.
 
-Para más información sobre cómo trabajar con Touch ID en Xamarin. iOS, consulte la documentación [Introducción a Touch ID](~/ios/platform/touchid.md) .
+Para obtener más información, consulte [Touch ID and facial ID con Xamarin. iOS](~/ios/platform/touch-id-face-id.md).
 
 ### <a name="lacontext-changes"></a>LAContext cambios
 
@@ -221,7 +221,7 @@ La nueva clase de `NSDataAsset` permite que una aplicación de Xamarin. iOS reco
 
 Las nuevas clases de delimitador de diseño de `NSLayoutAnchor` y `NSLayoutDimension` funcionan con las nuevas propiedades de delimitador de la clase [UIView](xref:UIKit.UIView) (como `LeadingAnchor` y `WidthAnchor`) para facilitar el diseño en iOS 9.
 
-Consulte la documentación de [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información sobre cómo trabajar con las clases de diseño automático y tamaño en una aplicación de Xamarin. iOS y la [referencia de NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)de Apple, referencia de [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) y [ Referencia de UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obtener más información.
+Consulte la documentación de [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información sobre cómo trabajar con las clases de diseño automático y tamaño en una aplicación de Xamarin. iOS y referencia de [NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)de Apple, referencia de [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) y referencia de [UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obtener más información.
 
 ### <a name="new-readable-content-margins"></a>Nuevos márgenes de contenido legible
 

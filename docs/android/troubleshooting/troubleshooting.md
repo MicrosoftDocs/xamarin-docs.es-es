@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: ec5c6e4c4c47995e78c1819007a8fa5660873bd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026597"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488938"
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -662,7 +662,7 @@ Al implementar una aplicación compilada con [AOT + LLVM](~/android/deploy-test/
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-Se trata de un problema conocido tal y como se indicó en [56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). La solución consiste en deshabilitar LLVM.
+Se trata de un problema conocido: la solución consiste en deshabilitar LLVM.

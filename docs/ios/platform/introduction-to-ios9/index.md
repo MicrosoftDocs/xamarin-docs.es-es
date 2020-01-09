@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031781"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488951"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -141,7 +141,7 @@ En iOS 9, Apple ha mejorado la cadena de claves para proporcionar un nuevo tipo 
 - Access Control enumeración entropía (mediante la opción de contraseña de aplicación) para el cifrado de elementos de cadena de claves proporcionado por la aplicación.
 - Compatibilidad para generar y usar claves dentro del enclave seguro (a través del atributo `kSecAttrTokenIDSecureEnclave`).
 
-Para obtener más información, consulte nuestra [Introducción a la documentación de Touch ID](~/ios/platform/touchid.md) .
+Para obtener más información, consulte [Touch ID and facial ID en Xamarin. iOS](~/ios/platform/touch-id-face-id.md).
 
 ## <a name="right-to-left-language-support"></a>Compatibilidad con idiomas de derecha a izquierda
 

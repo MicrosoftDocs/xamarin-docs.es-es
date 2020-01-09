@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020963"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607911"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Inicio rápido
 
@@ -108,7 +108,7 @@ namespace Phoneword
 }
 ```
 
-En esta clase, se crea una `ListActivity` y se rellena mediante programación, por lo que no es necesario crear un nuevo archivo de diseño para esta actividad. Esto se explica con más detalle en [Hello, Android Multiscreen: análisis detallado](~/android/get-started/hello-android/hello-android-deepdive.md).
+En esta clase, se crea una `ListActivity` y se rellena mediante programación, por lo que no es necesario crear un nuevo archivo de diseño para esta actividad. Esto se explica con más detalle en [Hello, Android Multiscreen: análisis detallado](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
 ### <a name="adding-a-list"></a>Adición de una lista
 
@@ -156,7 +156,7 @@ string translatedNumber = string.Empty;
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
@@ -176,7 +176,7 @@ Guarde y compile la aplicación para asegurarse de que no existen errores.
 
 Implemente la aplicación en un dispositivo o emulador. En las siguientes capturas de pantalla se muestra la aplicación **Phoneword** en ejecución:
 
-[ ![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -295,7 +295,7 @@ Actualice el botón **Traducir** para agregar el número de teléfono a la lista
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
@@ -313,7 +313,7 @@ translateButton.Click += (sender, e) =>
 
 Implemente la aplicación en un dispositivo o emulador. En las siguientes capturas de pantalla se muestra la aplicación **Phoneword** en ejecución:
 
-[ ![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 

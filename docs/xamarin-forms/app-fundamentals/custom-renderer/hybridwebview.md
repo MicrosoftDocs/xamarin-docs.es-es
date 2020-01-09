@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019
-ms.openlocfilehash: e3c042a82a9870e68c94741ae4bdfaa728a40cb0
-ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823906"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487014"
 ---
-# <a name="customizing-a-hybridwebview"></a>Personalización de HybridWebView
+# <a name="customizing-a-webview"></a>Personalización de WebView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
@@ -103,7 +103,7 @@ En XAML, se puede hacer referencia al control personalizado `HybridWebView` en e
 
 ```
 
-El prefijo de espacio de nombres `local` puede tener cualquier nombre. Pero los valores `clr-namespace` y `assembly` deben coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se usa para hacer referencia al control personalizado.
+El prefijo de espacio de nombres `local` puede tener cualquier nombre. Pero los valores `clr-namespace` y `assembly` tienen que coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se usa para hacer referencia al control personalizado.
 
 El siguiente ejemplo de código muestra cómo se puede usar el control personalizado `HybridWebView` en una página C#:
 
