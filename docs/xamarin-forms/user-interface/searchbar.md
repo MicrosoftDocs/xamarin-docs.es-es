@@ -6,13 +6,13 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
-ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 11/04/2019
+ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696433"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490082"
 ---
 # <a name="xamarinforms-searchbar"></a>Barra de Xamarin. Forms
 
@@ -25,7 +25,7 @@ Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) es un control de entr
 La clase `SearchBar` define las siguientes propiedades:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) es una `Color` que define el color del botón Cancelar.
-* `CharacterSpacing`, de tipo `double`, es el espaciado entre los caracteres del texto `SearchBar`.
+* `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `SearchBar`.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) es un valor de enumeración `FontAttributes` que determina si la fuente `SearchBar` está en negrita, cursiva o ninguna de ellas.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) es una `string` que determina la familia de fuentes utilizada por la `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) puede ser un valor de enumeración `NamedSize` o un valor `double` que representa tamaños de fuente específicos entre plataformas.
@@ -85,6 +85,9 @@ SearchBar searchBar = new SearchBar
 En la captura de pantalla siguiente se muestra el control de `SearchBar` resultante:
 
 [![Captura de pantalla de barra personalizado en iOS y Android](searchbar-images/device-searchbars-styled-cropped.png "Barra personalizado en iOS y Android")](searchbar-images/device-searchbars-styled.png#lightbox "Barra personalizado en iOS y Android")
+
+> [!NOTE]
+> En iOS, la clase `SearchBarRenderer` contiene un método de `UpdateCancelButton` reemplazable. Este método controla cuándo aparece el botón Cancelar y se puede invalidar en un representador personalizado. Para obtener más información sobre los representadores personalizados, vea [representadores personalizados de Xamarin. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="perform-a-search-with-event-handlers"></a>Realizar una búsqueda con controladores de eventos
 

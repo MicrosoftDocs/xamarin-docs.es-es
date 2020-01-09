@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cd5aaac0f41ee6e4afd79397a77635e66abad219
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770836"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489796"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Buscar datos con Azure Search y Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
-_Azure Search es un servicio en la nube que proporciona la indización y consulta las capacidades de los datos cargados. Esto quita los requisitos de infraestructura y la complejidad de algoritmo de búsqueda tradicionalmente asociada con la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de Microsoft Azure Search para integrar la búsqueda de Azure en una aplicación de Xamarin.Forms._
+_Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una aplicación de Xamarin. Forms._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-Los datos se almacenan en Azure Search como índices y documentos. Un *índice* es un almacén de datos que se pueden buscar por el servicio Azure Search y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en un índice de búsqueda y es conceptualmente similar a una fila de la base de datos. Al cargar los documentos y enviar las consultas de búsqueda para Azure Search, las solicitudes se realizan en un índice específico en el servicio de búsqueda.
+Datos se almacenan en Azure Search como índices y documentos. Un *índice* es un almacén de datos que se pueden buscar por el servicio Azure Search y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en un índice de búsqueda y es conceptualmente similar a una fila de la base de datos. Al cargar documentos y enviar consultas de búsqueda para Azure Search, las solicitudes se realizan en un índice específico en el servicio de búsqueda.
 
 Cada solicitud realizada a Azure Search debe incluir el nombre del servicio y una clave de API. Hay dos tipos de clave de API:
 
@@ -38,7 +38,10 @@ Las consultas de búsqueda y filtrar las consultas pueden utilizarse por separad
 
 Azure Search también admite recuperar sugerencias basadas en la entrada de búsqueda. Para obtener más información, consulte [sugerencia consultas](#suggestions).
 
-## <a name="setup"></a>Programa de instalación
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
+
+## <a name="setup"></a>Instalación
 
 El proceso de integración de Azure Search en una aplicación de Xamarin.Forms es como sigue:
 
@@ -216,7 +219,7 @@ Esta consulta de filtro se aplica a todo el índice y quita los documentos de lo
 
 El `SearchAsync` método devuelve un `DocumentSearchResult` objeto que contiene los resultados de consulta. Este objeto es de tipo enumerado con cada `Document` objeto se crea como un `Monkey` de objetos y agregado a la `Monkeys` `ObservableCollection` para su presentación. Los siguientes capturas de pantalla show consulta resultados de búsqueda de Azure Search:
 
-![](azure-search-images/search.png "Resultados de búsqueda")
+![](azure-search-images/search.png "Search Results")
 
 Para obtener más información acerca de la búsqueda y filtrado, consulte [consultas del índice de Azure Search con el SDK de .NET](/azure/search/search-query-dotnet/).
 
@@ -268,7 +271,7 @@ El efecto general es que se devolverán los primeros 10 resultados del índice c
 
 El `SuggestAsync` método devuelve un `DocumentSuggestResult` objeto que contiene los resultados de consulta. Este objeto es de tipo enumerado con cada `Document` objeto se crea como un `Monkey` de objetos y agregado a la `Monkeys` `ObservableCollection` para su presentación. Las capturas de pantalla siguientes muestran los resultados de sugerencia obtenidos de Azure Search:
 
-![](azure-search-images/suggest.png "Resultados de la sugerencia")
+![](azure-search-images/suggest.png "Suggestion Results")
 
 Tenga en cuenta que en la aplicación de ejemplo, el `SuggestAsync` método solo se invoca cuando el usuario termina de escribir un término de búsqueda. Sin embargo, también puede usarse para admitir las consultas de búsqueda de autocompletado ejecutando en cada keypress.
 

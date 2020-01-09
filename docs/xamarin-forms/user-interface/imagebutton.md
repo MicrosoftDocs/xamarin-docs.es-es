@@ -6,17 +6,17 @@ ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 12/04/2019
+ms.openlocfilehash: 7c6647a0299b5ece3caaaa1d322ec1a0efac3557
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657174"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490095"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _El ImageButton muestra una imagen y responde a un pulse o haga clic en que se dirige a una aplicación para llevar a cabo una tarea determinada._
 
@@ -53,9 +53,12 @@ El ejemplo siguiente muestra cómo crear una instancia de un `ImageButton` en XA
 
 El `Source` propiedad especifica la imagen que aparece en el `ImageButton`. En este ejemplo se establece en un archivo local que se cargarán de cada proyecto de plataforma, lo que resulta en las capturas de pantalla siguiente:
 
-[![ImageButton básica](imagebutton-images/BasicImageButton.png "ImageButton básica")](imagebutton-images/BasicImageButton-Large.png#lightbox "ImageButton básica")
+[![ImageButton básico](imagebutton-images/BasicImageButton.png "ImageButton básico")](imagebutton-images/BasicImageButton-Large.png#lightbox "ImageButton básico")
 
 De forma predeterminada, el `ImageButton` es rectangular, pero puede dar TI redondeada esquinas mediante el `CornerRadius` propiedad. Para obtener más información acerca de `ImageButton` apariencia, consulte [ImageButton apariencia](#imagebutton-appearance).
+
+> [!NOTE]
+> Aunque un `ImageButton` puede cargar un GIF animado, solo mostrará el primer fotograma del GIF.
 
 El ejemplo siguiente muestra cómo crear una página que es funcionalmente equivalente al ejemplo XAML anterior, pero en su totalidad C#:
 
@@ -144,7 +147,7 @@ Cuando el `ImageButton` se pulsa, el `OnImageButtonClicked` método se ejecuta. 
 
 Esta particular `Clicked` controlador incrementa un contador y muestra el valor del contador en un [ `Label` ](xref:Xamarin.Forms.Label):
 
-[![Haga clic en básico de ImageButton](imagebutton-images/ImageButton.png "básica clic ImageButton")](imagebutton-images/ImageButton-Large.png#lightbox "básica clic ImageButton")
+[![Clic en ImageButton básico](imagebutton-images/ImageButton.png "Clic en ImageButton básico")](imagebutton-images/ImageButton-Large.png#lightbox "Clic en ImageButton básico")
 
 El ejemplo siguiente muestra cómo crear una página que es funcionalmente equivalente al ejemplo XAML anterior, pero en su totalidad C#:
 
@@ -238,7 +241,7 @@ El `Aspect` propiedad puede establecerse en uno de los miembros de la [ `Aspect`
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -letterbox la imagen (si es necesario) para que quepa la imagen completa en el `ImageButton`, con espacio en blanco que se agrega a la parte superior o inferior o lados dependiendo de si la imagen es ancho o alto. Este es el valor predeterminado de la [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumeración.
 
 > [!NOTE]
-> El `ImageButton` clase también tiene [ `Margin` ](xref:Xamarin.Forms.View.Margin) y `Padding` las propiedades que controlan el comportamiento de diseño de la `ImageButton`. Para obtener más información, consulte [margen y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+> El `ImageButton` clase también tiene [ `Margin` ](xref:Xamarin.Forms.View.Margin) y `Padding` las propiedades que controlan el comportamiento de diseño de la `ImageButton`. Para obtener más información, vea [Márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="imagebutton-visual-states"></a>Estados visuales ImageButton
 

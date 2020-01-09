@@ -7,16 +7,27 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 82cff753e7569c2642c467db692c2d2d84347df0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: def34efd1fd48cc0e7dd802a6d3e843be1e156a4
+ms.sourcegitcommit: 5ddb107b0a56bef8a16fce5bc6846f9673b3b22e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031618"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558812"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit en Xamarin. iOS
 
-PhotoKit es un nuevo marco que permite que las aplicaciones consulten la biblioteca de imágenes del sistema y creen interfaces de usuario personalizadas para ver y modificar su contenido. Incluye varias clases que representan recursos de imagen y vídeo, así como colecciones de recursos como álbumes y carpetas.
+[![descargar el ejemplo](~/media/shared/download.png) descargar un ejemplo de código](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp/)
+
+PhotoKit es un marco que permite que las aplicaciones consulten la biblioteca de imágenes del sistema y creen interfaces de usuario personalizadas para ver y modificar su contenido. Incluye varias clases que representan recursos de imagen y vídeo, así como colecciones de recursos como álbumes y carpetas.
+
+## <a name="permissions"></a>Permisos
+
+Para que la aplicación pueda acceder a la biblioteca de fotos, se mostrará un cuadro de diálogo de permisos al usuario. Debe proporcionar texto explicativo en el archivo **info. plist** para explicar el modo en que la aplicación usa la biblioteca de fotos, por ejemplo:
+
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Applies filters to photos and updates the original image</string>
+```
 
 ## <a name="model-objects"></a>Objetos de modelo
 
@@ -55,7 +66,7 @@ Esto da como resultado una cuadrícula de imágenes como se muestra a continuaci
 
 ## <a name="saving-changes-to-the-photo-library"></a>Guardar cambios en la biblioteca de fotos
 
-Aquí se explica cómo controlar la consulta y la lectura de datos. También puede volver a escribir los cambios en la biblioteca. Dado que varias aplicaciones interesadas pueden interactuar con la biblioteca de fotos del sistema, puede registrar un observador para recibir notificaciones de los cambios mediante un PhotoLibraryObserver. A continuación, cuando se entren los cambios, la aplicación puede actualizarse en consecuencia. Por ejemplo, esta es una implementación sencilla para volver a cargar la vista de Colección anterior:
+Aquí se explica cómo controlar la consulta y la lectura de datos. También puede volver a escribir los cambios en la biblioteca. Dado que varias aplicaciones interesadas pueden interactuar con la biblioteca de fotos del sistema, puede registrar un observador para recibir notificaciones de los cambios mediante un `PhotoLibraryObserver`. A continuación, cuando se entren los cambios, la aplicación puede actualizarse en consecuencia. Por ejemplo, esta es una implementación sencilla para volver a cargar la vista de Colección anterior:
 
 ```csharp
 class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
@@ -70,26 +81,25 @@ class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
     public override void PhotoLibraryDidChange (PHChange changeInstance)
     {
         DispatchQueue.MainQueue.DispatchAsync (() => {
-        var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
-        controller.fetchResults = changes.FetchResultAfterChanges;
-        controller.CollectionView.ReloadData ();
+            var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
+            controller.fetchResults = changes.FetchResultAfterChanges;
+            controller.CollectionView.ReloadData ();
         });
     }
 }
 ```
 
-Para volver a escribir los cambios de la aplicación, debe crear una solicitud de cambio. Cada una de las clases de modelo tiene una clase de solicitud de cambio asociada. Por ejemplo, para cambiar un PHAsset, se crea una PHAssetChangeRequest. Los pasos para realizar cambios que se escriben de nuevo en la biblioteca de fotos y se envían a los observadores como el anterior son:
+Para volver a escribir los cambios de la aplicación, debe crear una solicitud de cambio. Cada una de las clases de modelo tiene una clase de solicitud de cambio asociada. Por ejemplo, para cambiar un `PHAsset`, se crea un `PHAssetChangeRequest`. Los pasos para realizar cambios que se escriben de nuevo en la biblioteca de fotos y se envían a los observadores como el anterior son:
 
-- Realice la operación de edición.
-- Guarde los datos de la imagen filtrada en una instancia de PHContentEditingOutput.
-- Realice una solicitud de cambio para publicar los cambios de la salida de edición.
+1. Realice la operación de edición.
+2. Guarde los datos de la imagen filtrada en una instancia de `PHContentEditingOutput`.
+3. Realice una solicitud de cambio para publicar los cambios de la salida de edición.
 
 Este es un ejemplo en el que se escribe un cambio en una imagen que aplica un filtro Noir de imagen principal:
 
 ```csharp
 void ApplyNoirFilter (object sender, EventArgs e)
 {
-
     Asset.RequestContentEditingInput (new PHContentEditingInputRequestOptions (), (input, options) => {
 
         // perform the editing operation, which applies a noir filter in this case
@@ -123,8 +133,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 Cuando el usuario selecciona el botón, se aplica el filtro:
 
-![](photokit-images/image5.png "An example of the filter being applied")
+![Dos ejemplos en los que se muestra la foto antes y después de aplicar el filtro](photokit-images/image5.png)
 
-Y gracias a PHPhotoLibraryChangeObserver, el cambio se refleja en la vista de colección cuando el usuario se desplaza hacia atrás:
+Y gracias al `PHPhotoLibraryChangeObserver`, el cambio se refleja en la vista de colección cuando el usuario se desplaza hacia atrás:
 
-![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")
+![Vista de colección fotográfica que muestra la foto modificada](photokit-images/image6.png)

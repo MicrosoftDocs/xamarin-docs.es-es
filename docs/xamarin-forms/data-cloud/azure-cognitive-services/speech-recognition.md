@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eca079972f4e46c0cf60c4749658ff9a7fe1791b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655455"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489809"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Reconocimiento de voz con la API de Microsoft Speech
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Microsoft Speech API es una API basada en la nube que proporciona algoritmos para procesar el lenguaje oral. En este artículo se explica cómo usar la API de REST de reconocimiento de voz de Microsoft para convertir audio en texto en una aplicación de Xamarin.Forms._
+_Microsoft Speech API es una API basada en la nube que proporciona algoritmos para procesar el lenguaje hablado. En este artículo se explica cómo usar la API de REST de reconocimiento de voz de Microsoft para convertir audio en texto en una aplicación de Xamarin. Forms._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Microsoft Speech API tiene dos componentes:
 
@@ -28,6 +28,9 @@ Microsoft Speech API tiene dos componentes:
 - Un texto a voz API para convertir texto en palabras habladas. Conversión de texto a voz se realiza a través de una API de REST.
 
 En este artículo se centra en realizar el reconocimiento de voz a través de la API de REST. Mientras que las bibliotecas de cliente y el servicio admiten la devolución de resultados parciales, la API de REST solo puede devolver un resultado de reconocimiento único, sin los resultados parciales.
+
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
 Para usar la API de voz de Microsoft, se debe obtener una clave de API. Esto se puede obtener desde Azure [portal](https://portal.azure.com/). Para obtener más información, consulte [crear una cuenta de Cognitive Services en el portal de Azure](/azure/cognitive-services/cognitive-services-apis-create-account).
 
@@ -161,7 +164,7 @@ La respuesta de API se devuelve en formato JSON, con el texto reconocido que est
 
 En la aplicación de ejemplo, la respuesta JSON se deserializa en un `SpeechResult` instancia, con lo que se devuelve al método de llamada para su presentación, como se muestra en las capturas de pantalla siguiente:
 
-![](speech-recognition-images/speech-recognition.png "Reconocimiento de voz")
+![](speech-recognition-images/speech-recognition.png "Speech Recognition")
 
 ## <a name="summary"></a>Resumen
 

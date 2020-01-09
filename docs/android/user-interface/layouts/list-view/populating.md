@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017
-ms.openlocfilehash: fda021eb90feba1fed2352ef7f771f5583b00920
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7ec5537345536884e2dc3da02ab54a3ca00f760e
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028847"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607976"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Rellenar un control ListView de Xamarin. Android con datos
 
@@ -33,7 +33,6 @@ public class HomeScreen : ListActivity {
        items = new string[] { "Vegetables","Fruits","Flower Buds","Legumes","Bulbs","Tubers" };
        ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
    }
-   protected override void OnListItemClick(ListView l, View v, int position, long id)
 }
 ```
 

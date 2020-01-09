@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fda5ed3b2a26166e23d4a796219758853d0aace7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f546a1403aa0af07fc69187c4cfbec8982ed7a2a
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024547"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556514"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Ejecución de servicios de Android en procesos remotos
 
@@ -58,7 +58,7 @@ En esta guía se explican los detalles de la implementación de un servicio fuer
 > [!IMPORTANT]
 > [Bugzilla 51940/GitHub 1950-Services con procesos aislados y clase de aplicación personalizada no se pueden resolver sobrecargas correctamente](https://github.com/xamarin/xamarin-android/issues/1950) informa de que un servicio Xamarin. Android no se iniciará correctamente cuando la `IsolatedProcess` esté establecida en `true`. Esta guía se proporciona para una referencia. Una aplicación de Xamarin. Android todavía debe ser capaz de comunicarse con un servicio fuera de proceso escrito en Java.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 En esta guía se da por supuesto que está familiarizado con la creación de servicios.
 
@@ -70,7 +70,7 @@ Tal y como se ha descrito anteriormente, el hecho de que un servicio se ejecute 
 
 - **Cree la subclase `Service`** &ndash; subclase del `Service` tipo e implemente los métodos de ciclo de vida para un servicio enlazado. También es necesario establecer los metadatos que informarán a Android de que el servicio debe ejecutarse en su propio proceso.
 - **Implemente un `Handler`** &ndash; el `Handler` sea responsable de analizar las solicitudes del cliente, extraer los parámetros que se pasaron del cliente e invocar los métodos adecuados en el servicio.
-- **Cree** una instancia de `Messenger` &ndash; tal y como se describió anteriormente, cada `Service` debe mantener una instancia de la clase `Messenger` que enrutará las solicitudes de cliente al `Handler` creado en el paso anterior.
+- **Cree** una instancia de `Messenger`&ndash; tal y como se describió anteriormente, cada `Service` debe mantener una instancia de la clase `Messenger` que enrutará las solicitudes de cliente al `Handler` creado en el paso anterior.
 
 Un servicio diseñado para ejecutarse en su propio proceso es, fundamentalmente, un servicio enlazado. La clase de servicio extenderá la clase de `Service` base y se decorará con el `ServiceAttribute` que contiene los metadatos que Android necesita agrupar en el manifiesto de Android. Para empezar, las siguientes propiedades de los `ServiceAttribute` que son importantes para un servicio fuera de proceso:
 
@@ -129,7 +129,7 @@ Una vez establecido el `ServiceAttribute`, el servicio debe implementar un `Hand
 
 ### <a name="implementing-a-handler"></a>Implementar un controlador
 
-Para procesar las solicitudes de cliente, el servicio debe implementar un `Handler` e invalidar el `HandleMessage` methodThis es el método toma una instancia de `Message` que encapsula la llamada al método desde el cliente y traduce esa llamada en alguna acción o tarea que el servicio va a Form. El objeto `Message` expone una propiedad denominada `What` que es un valor entero, cuyo significado se comparte entre el cliente y el servicio y se relaciona con alguna tarea que el servicio debe realizar para el cliente.
+Para procesar las solicitudes de cliente, el servicio debe implementar un `Handler` e invalidar el método `HandleMessage`. Este es el método que toma una instancia de `Message` que encapsula la llamada al método desde el cliente y traduce esa llamada en alguna acción o tarea que realizará el servicio. El objeto `Message` expone una propiedad denominada `What` que es un valor entero, cuyo significado se comparte entre el cliente y el servicio y se relaciona con alguna tarea que el servicio debe realizar para el cliente.
 
 En el siguiente fragmento de código de la aplicación de ejemplo se muestra un ejemplo de `HandleMessage`. En este ejemplo, hay dos acciones que un cliente puede solicitar al servicio:
 
@@ -149,7 +149,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
 }
 ```
 
-También es posible empaquetar los parámetros para el servicio en el `Message`. Esto se tratará más adelante en esta guía. El siguiente tema a tener en cuenta es crear el objeto de `Messenger` para procesar el `Message`s entrante.
+También es posible empaquetar los parámetros para el servicio en el `Message`. Esto se tratará más adelante en esta guía. El siguiente tema a tener en cuenta es crear el objeto de `Messenger` para procesar los `Message`s entrantes.
 
 ### <a name="instantiating-the-messenger"></a>Creación de instancias de Messenger
 
@@ -242,7 +242,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -270,8 +270,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Una vez que se crea la conexión de servicio y el intento, es posible que el cliente llame a `BindService` e inicie el proceso de enlace:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 Una vez que el cliente se ha enlazado correctamente al servicio y el `Messenger` está disponible, es posible que el cliente envíe `Messages` al servicio.
@@ -300,7 +300,7 @@ La clase `Message` también expone dos propiedades adicionales que pueden ser de
 
 ### <a name="passing-additional-values-to-the-service"></a>Pasar valores adicionales al servicio
 
-Es posible pasar datos más complejos al servicio mediante el uso de un `Bundle`. En este caso, los valores adicionales se pueden colocar en un `Bundle` y enviar junto con el `Message` estableciendo la propiedad de la [propiedad `.Data`](xref:Android.OS.Message.Data) antes de enviarlo.
+Es posible pasar datos más complejos al servicio mediante el uso de un `Bundle`. En este caso, los valores adicionales se pueden colocar en un `Bundle` y enviar junto con el `Message` estableciendo la propiedad de la [propiedad`.Data`](xref:Android.OS.Message.Data) antes de enviarlo.
 
 ```csharp
 Bundle serviceParameters = new Bundle();
@@ -317,7 +317,7 @@ messenger.Send(msg);
 
 ## <a name="returning-values-from-the-service"></a>Devolver valores del servicio
 
-La arquitectura de mensajería que se ha explicado en este punto es unidireccional, el cliente envía un mensaje al servicio. Si es necesario que el servicio devuelva un valor a un cliente, se invierte todo lo que se ha analizado hasta este punto. El servicio debe crear un `Message`, empaquetar todos los valores devueltos y enviar el `Message` a través de un `Messenger` al cliente. Sin embargo, el servicio no crea su propio `Messenger`; en su lugar, se basa en el cliente que crea instancias y empaqueta un `Messenger` como parte de la solicitud inicial. El servicio `Send` el mensaje mediante este `Messenger` proporcionado por el cliente.  
+La arquitectura de mensajería que se ha explicado en este punto es unidireccional, el cliente envía un mensaje al servicio. Si es necesario que el servicio devuelva un valor a un cliente, se invierte todo lo que se ha analizado hasta este punto. El servicio debe crear un `Message`, empaquetar todos los valores devueltos y enviar el `Message` a través de un `Messenger` al cliente. Sin embargo, el servicio no crea su propio `Messenger`; en su lugar, se basa en el cliente que crea instancias y empaqueta un `Messenger` como parte de la solicitud inicial. El servicio `Send` el mensaje mediante este `Messenger`proporcionado por el cliente.  
 
 La secuencia de eventos para la comunicación bidireccional es la siguiente:
 
@@ -414,7 +414,7 @@ En la sección siguiente se describe un ejemplo simplificado de la creación de 
 
 Para utilizar un permiso personalizado, el servicio lo declara mientras el cliente solicita explícitamente ese permiso.
 
-Para crear un permiso en el servicio APK, se agrega un elemento `permission` al elemento `manifest` en **archivo AndroidManifest. XML**. Este permiso debe tener establecidos los atributos `name`, `protectionLevel` y `label`. El atributo `name` debe establecerse en una cadena que identifique de forma única el permiso. El nombre se mostrará en la vista **información** de la aplicación de la **configuración de Android** (como se muestra en la sección siguiente).
+Para crear un permiso en el servicio APK, se agrega un elemento `permission` al elemento `manifest` en **archivo AndroidManifest. XML**. Este permiso debe tener establecidos los atributos `name`, `protectionLevel`y `label`. El atributo `name` debe establecerse en una cadena que identifique de forma única el permiso. El nombre se mostrará en la vista **información** de la aplicación de la **configuración de Android** (como se muestra en la sección siguiente).
 
 El atributo `protectionLevel` debe establecerse en uno de los cuatro valores de cadena descritos anteriormente.  Los `label` y `description` deben hacer referencia a los recursos de cadena y se usan para proporcionar al usuario un nombre descriptivo y una descripción para el usuario.
 

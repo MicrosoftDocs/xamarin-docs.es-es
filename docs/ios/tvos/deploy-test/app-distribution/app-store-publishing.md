@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f49fa08e5d9b2ad76fc069b415d6ea5b899b2bf7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030789"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607898"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en Apple TV App Store
 
@@ -47,7 +47,7 @@ Apple también mantiene una lista de sugerencias de envío de la tienda de aplic
 
 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) es un conjunto de herramientas basadas en web para, entre otras cosas, la administración de las aplicaciones de tvOS en el App Store de Apple TV. La aplicación de Xamarin. tvOS tendrá que configurarse y configurarse correctamente en iTunes Connect para que se pueda enviar a Apple para su revisión y, en última instancia, publicarse para su venta o como una aplicación gratuita en el App Store de Apple TV.
 
-Haga lo siguiente:
+haga lo siguiente:
 
 1. Compruebe que los contratos adecuados se encuentran en vigor y actualizados en la sección **Contratos, impuestos y banca** de iTunes Connect para publicar una aplicación de iOS como gratuita o para su venta.
 2. Cree un nuevo **registro de iTunes Connect** para la aplicación y especifique su **nombre para mostrar** (como se muestra en la App Store de Apple TV).
@@ -91,7 +91,7 @@ Haga lo siguiente en Visual Studio para Mac:
 5. Seleccione y configure los derechos necesarios para la aplicación Xamarin. tvOS para que coincidan con el programa de instalación que realizó anteriormente cuando definió el identificador de la aplicación.
 6. Guarde los cambios en el archivo `Entitlements.plist`.
 
-Para obtener instrucciones detalladas, vea nuestra documentación sobre [Aprovisionamiento de servicios de aplicación](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices). Aunque este documento se ha escrito para iOS, se usan los mismos pasos para aprovisionar una aplicación Xamarin. tvOS.
+Para obtener instrucciones detalladas, vea nuestra documentación sobre [Aprovisionamiento de servicios de aplicación](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Aunque este documento se ha escrito para iOS, se usan los mismos pasos para aprovisionar una aplicación Xamarin. tvOS.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
@@ -125,7 +125,7 @@ Para obtener instrucciones detalladas, vea las secciones [Crear un perfil de dis
 
 De forma predeterminada, cuando se crea una nueva aplicación Xamarin. tvOS, se crean automáticamente _configuraciones de compilación_ para la implementación de **depuración** y **lanzamiento** . Antes de realizar la compilación final de la aplicación que va a enviar a Apple, hay algunas modificaciones que debe realizar en la configuración de la **versión** base.
 
-Haga lo siguiente:
+haga lo siguiente:
 
 1. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Opciones** para abrirlos para su edición.
 2. Si el destino es una versión específica de tvOS, selecciónela en **TvOS Build** > versión del **SDK de iOS**. Para la versión preliminar de la compatibilidad con tvOS, deje este valor establecido en **predeterminado**.
@@ -211,7 +211,7 @@ Si vuelve a iniciar sesión en iTunes Connect y selecciona la aplicación en la 
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Si tiene problemas para enviar la aplicación Xamarin. tvOS a la tienda de aplicaciones de Apple TV, consulte nuestra guía de [solución de problemas](~/ios/tvos/troubleshooting.md) . Contiene varios problemas conocidos que pueden surgir y cómo resolverlos en Xamarin. tvOS.
 

@@ -6,13 +6,13 @@ ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2019
-ms.openlocfilehash: c1df3adfa67a363609b397731ed298155d7531be
-ms.sourcegitcommit: 483e0ab0e9f30382219084c0345519f1025169b2
+ms.date: 12/04/2019
+ms.openlocfilehash: 946cf65f7d83722fd388bed555b9d3f35c487708
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809029"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489822"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticación de usuarios con Azure Active Directory B2C
 
@@ -26,15 +26,17 @@ Azure Active Directory B2C (ADB2C) es un servicio de administración de identida
 
 El proceso para integrar el servicio de administración de identidades de Azure Active Directory B2C en una aplicación móvil es como sigue:
 
-1. Creación de un inquilino de Azure Active Directory B2C
-1. Registro de la aplicación móvil con el inquilino de Azure Active Directory B2C
-1. Crear directivas para registro e inicio de sesión y olvidar los flujos de usuario de contraseñas
+1. Crear a un inquilino de Azure Active Directory B2C.
+1. Registrar la aplicación móvil con el inquilino de Azure Active Directory B2C.
+1. Cree directivas para el registro y el inicio de sesión y olvidó los flujos de usuario de contraseñas.
 1. Use la biblioteca de autenticación de Microsoft (MSAL) para iniciar un flujo de trabajo de autenticación con su inquilino de Azure Active Directory B2C.
 
 > [!NOTE]
-> Azure Active Directory B2C admite varios proveedores de identidades, como Microsoft, GitHub, Facebook, Twitter, etc. Para obtener más información sobre las funcionalidades de Azure Active Directory B2C, consulte la [documentación de Azure Active Directory B2C](/azure/active-directory-b2c/).
->
-> La biblioteca de autenticación de Microsoft admite varias arquitecturas de aplicaciones y plataformas. Para obtener información sobre las funcionalidades de MSAL, consulte [biblioteca de autenticación de Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) en github.
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
+
+Azure Active Directory B2C admite varios proveedores de identidades, como Microsoft, GitHub, Facebook, Twitter, etc. Para obtener más información sobre las funcionalidades de Azure Active Directory B2C, consulte la [documentación de Azure Active Directory B2C](/azure/active-directory-b2c/).
+
+La biblioteca de autenticación de Microsoft admite varias arquitecturas de aplicaciones y plataformas. Para obtener información sobre las funcionalidades de MSAL, consulte [biblioteca de autenticación de Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) en github.
 
 ## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Configuración de un inquilino de Azure Active Directory B2C
 
@@ -181,7 +183,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)

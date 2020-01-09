@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a4bf0b89a9ab336bf47ddcd104760211d912f423
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022045"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663439"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controles de interfaz de usuario en Xamarin. iOS
 
@@ -80,9 +80,9 @@ La aceptación de la entrada de texto del usuario se logra con el `UITextField` 
 
 las aplicaciones de iOS que usan una interfaz de usuario de navegación por tabulación se compilan mediante la clase UITabBarController. En este artículo veremos cómo configurar una aplicación con pestañas que contiene varios controladores y vistas. A continuación, examinaremos cómo cargar un UITabBarController cuando no sea el controlador raíz, como después de una pantalla de inicio de sesión.
 
-## <a name="web-viewsuiwebviewmd"></a>[Vistas web](uiwebview.md)
+## <a name="web-viewswebviewmd"></a>[Vistas web](webview.md)
 
-En este artículo, exploraremos cada una de las tres vistas web que proporciona Apple: `UIWebView`, `WKWebview`y `SFSafariViewController`, sus similitudes y diferencias y cómo se pueden usar.
+En este artículo, exploraremos las vistas web proporcionadas por Apple –`WKWebview` y `SFSafariViewController`: sus similitudes y diferencias y cómo se pueden usar.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

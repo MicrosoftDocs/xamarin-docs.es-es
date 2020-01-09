@@ -6,13 +6,13 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
-ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 12/11/2019
+ms.openlocfilehash: 5d0e289ddeb7eabef6d96c8882c772c704c54b34
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170945"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489731"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>características de la plataforma iOS en Xamarin. Forms
 
@@ -38,6 +38,7 @@ Se proporciona la siguiente funcionalidad específica de la plataforma para las 
 - Establecer el estilo del separador en un [ `ListView` ](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [estilo de separador de ListView en iOS](listview-separator-style.md).
 - Controlar cuándo se produce la selección de elementos en un [ `Picker` ](xref:Xamarin.Forms.Picker). Para obtener más información, consulte [selección de elementos de selector en iOS](picker-selection.md).
 - Habilitar la [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propiedad debe establecerse si pulsa en una posición en la [ `Slider` ](xref:Xamarin.Forms.Slider) barra, en lugar de tener que arrastrar la `Slider` thumb. Para obtener más información, consulte [Slide Thumb TAP on IOS](slider-thumb.md).
+- Control de la transición que se utiliza al abrir una `SwipeView`. Para obtener más información, consulte el [modo de transición de SwipeView](swipeview-swipetransitionmode.md).
 
 Se proporciona la siguiente funcionalidad específica de la plataforma para las páginas de Xamarin. Forms en iOS:
 
@@ -66,7 +67,7 @@ Xamarin. Forms permite establecer colores y estilos de la interfaz de usuario mu
 
 [Obtenga más](formatting.md) información sobre cómo dar formato a la interfaz de usuario con las API específicas de iOS, como la configuración de **info. plist** y la API de `UIAppearance`.
 
-![](images/status-white-sml.png "iOS")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>Otras características de iOS
 

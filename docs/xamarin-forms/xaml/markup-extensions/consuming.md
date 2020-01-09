@@ -1,36 +1,36 @@
 ---
 title: Consumo de extensiones de marcado XAML
-description: En este artículo se explica cómo usar las extensiones de marcado XAML de Xamarin. Forms para mejorar la eficacia y flexibilidad de XAML, permitiendo que los atributos de elemento se establezcan desde diversos orígenes.
+description: En este artículo se explica cómo usar las extensiones de marcado XAML de Xamarin.Forms para mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
-ms.openlocfilehash: a8698975d2609599e1404fbb9c87c617a54f23d7
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/04/2019
+ms.openlocfilehash: 736627edc8628f229e6e1a1e079fca24b8ff97db
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696346"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490121"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-Las extensiones de marcado XAML ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que se establezcan atributos de elemento desde diversos orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Aparecen en archivos XAML con el prefijo de espacio de nombres de `x` personalizado y se suelen conocer con este prefijo. En este artículo se describen las siguientes extensiones de marcado:
+Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Esta información aparece en los archivos XAML con el habitual `x` prefijo de espacio de nombres y se conocen comúnmente por este prefijo. En este artículo se describe las extensiones de marcado siguiente:
 
-- [`x:Static`](#static) : haga referencia a propiedades estáticas, campos o miembros de enumeración.
-- [`x:Reference`](#reference) : haga referencia a los elementos con nombre en la página.
-- [`x:Type`](#type) : establezca un atributo en un objeto `System.Type`.
-- [`x:Array`](#array) : construir una matriz de objetos de un tipo determinado.
-- [`x:Null`](#null) : establezca un atributo en un valor `null`.
-- [`OnPlatform`](#onplatform) : personalización de la apariencia de la interfaz de usuario en cada plataforma.
-- [`OnIdiom`](#onidiom) : Personalice la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación.
+- [`x:Static`](#static) : hacer referencia a propiedades estáticas, campos o los miembros de enumeración.
+- [`x:Reference`](#reference) – con el nombre de elementos de la página de referencia.
+- [`x:Type`](#type) : establezca un atributo en un `System.Type` objeto.
+- [`x:Array`](#array) : construya una matriz de objetos de un tipo determinado.
+- [`x:Null`](#null) : establezca un atributo en un `null` valor.
+- [`OnPlatform`](#onplatform) : personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma.
+- [`OnIdiom`](#onidiom) : personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en.
 - [`DataTemplate`](#datatemplate-markup-extension) : convierte un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 - [`FontImage`](#fontimage-markup-extension) : mostrar un icono de fuente en cualquier vista que pueda mostrar un `ImageSource`.
 
-Históricamente, las extensiones de marcado XAML adicionales han sido compatibles con otras implementaciones de XAML y también se admiten en Xamarin. Forms. Estos se describen con más detalle en otros artículos:
+Las extensiones de marcado XAML adicionales históricamente han sido compatible con otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Estos se describen con más detalle en otros artículos:
 
 - `StaticResource`: se hace referencia a los objetos de un diccionario de recursos, como se describe en el artículo [**diccionarios de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource`: responde a los cambios en los objetos de un diccionario de recursos, como se describe en el artículo [**estilos dinámicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
@@ -38,15 +38,15 @@ Históricamente, las extensiones de marcado XAML adicionales han sido compatible
 - `TemplateBinding`: realiza el enlace de datos de una plantilla de control, como se describe en el artículo [**enlace de una plantilla de control**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
 - `RelativeSource`: establece el origen de enlace en relación con la posición del destino de enlace, como se describe en el artículo [enlaces relativos](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
-El diseño de [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) usa la extensión de marcado personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). Esta extensión de marcado se describe en el artículo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+El [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de la extensión de marcado personalizada [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Esta extensión de marcado se describe en el artículo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
 ## <a name="xstatic-markup-extension"></a>x:Static (extensión de marcado)
 
-La clase [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) admite el `x:Static` extensión de marcado. La clase tiene una propiedad única denominada [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) de tipo `string` que se establece en el nombre de una constante pública, una propiedad estática, un campo estático o un miembro de enumeración.
+El `x:Static` extensión de marcado es compatible con la [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) clase. La clase tiene una propiedad única denominada [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) de tipo `string` establecer en el nombre de una constante pública, una propiedad estática, campo estático o miembro de enumeración.
 
-Una forma habitual de usar `x:Static` es definir primero una clase con algunas constantes o variables estáticas, como esta pequeña `AppConstants` clase en el programa [**MarkupExtensions**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) :
+Una forma común de usar `x:Static` consiste en definir primero una clase con algunas constantes o variables estáticas, como Este diminuto `AppConstants` clase en el [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) programa:
 
 ```csharp
 static class AppConstants
@@ -55,7 +55,7 @@ static class AppConstants
 }
 ```
 
-En la página de **demostración de x:Static** se muestran varias maneras de usar la extensión de marcado `x:Static`. El enfoque más detallado crea instancias de la clase `StaticExtension` entre `Label.FontSize` etiquetas de elemento de propiedad:
+El **x: Static demostración** página muestra varias maneras de usar el `x:Static` extensión de marcado. El enfoque más detallado, crea una instancia del `StaticExtension` clase entre `Label.FontSize` etiquetas de elemento de propiedad:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -77,7 +77,7 @@ En la página de **demostración de x:Static** se muestran varias maneras de usa
 </ContentPage>
 ```
 
-El analizador de XAML también permite abreviar la clase `StaticExtension` como `x:Static`:
+El analizador XAML también permite la `StaticExtension` clase va a abreviar como `x:Static`:
 
 ```xaml
 <Label Text="Label No. 2">
@@ -87,38 +87,38 @@ El analizador de XAML también permite abreviar la clase `StaticExtension` como 
 </Label>
 ```
 
-Esto se puede simplificar aún más, pero el cambio introduce una nueva sintaxis: consiste en colocar la clase de `StaticExtension` y la configuración de miembro entre llaves. La expresión resultante se establece directamente en el atributo `FontSize`:
+Esto se puede simplificar aún más, pero el cambio presenta parte de la nueva sintaxis: consta de colocar el `StaticExtension` clase y la configuración entre llaves del miembro. La expresión resultante se establece directamente en el `FontSize` atributo:
 
 ```xaml
 <Label Text="Label No. 3"
        FontSize="{x:StaticExtension Member=local:AppConstants.NormalFontSize}" />
 ```
 
-Observe *que no hay comillas dentro* de las llaves. La propiedad `Member` de `StaticExtension` ya no es un atributo XML. En su lugar, es parte de la expresión para la extensión de marcado.
+Tenga en cuenta que hay *ningún* comillas encerrado entre llaves. El `Member` propiedad de `StaticExtension` ya no es un atributo XML. En realidad es parte de la expresión para la extensión de marcado.
 
-Del mismo modo que puede abreviar `x:StaticExtension` para `x:Static` cuando lo usa como un elemento de objeto, también puede abreviarlo en la expresión entre llaves:
+Tal como se puede abreviar `x:StaticExtension` a `x:Static` cuando se usa como un elemento de objeto, también puede abreviar en la expresión entre llaves:
 
 ```xaml
 <Label Text="Label No. 4"
        FontSize="{x:Static Member=local:AppConstants.NormalFontSize}" />
 ```
 
-La clase `StaticExtension` tiene un atributo `ContentProperty` que hace referencia a la propiedad `Member`, que marca esta propiedad como la propiedad de contenido predeterminada de la clase. En el caso de las extensiones de marcado XAML, que se expresan con llaves, puede eliminar el `Member=` parte de la expresión:
+El `StaticExtension` clase tiene un `ContentProperty` que hacen referencia a la propiedad de atributo `Member`, que marca esta propiedad como propiedad de contenido de la clase predeterminada. Para las extensiones de marcado XAML que expresa entre llaves, puede eliminar el `Member=` forma parte de la expresión:
 
 ```xaml
 <Label Text="Label No. 5"
        FontSize="{x:Static local:AppConstants.NormalFontSize}" />
 ```
 
-Esta es la forma más común de la extensión de marcado `x:Static`.
+Se trata de la forma más común de la `x:Static` extensión de marcado.
 
-La página de **demostración estática** contiene otros dos ejemplos. La etiqueta raíz del archivo XAML contiene una declaración de espacio de nombres XML para el espacio de nombres de .NET `System`:
+El **demostración estático** página contiene dos ejemplos de otros. La etiqueta a la raíz del archivo XAML contiene una declaración de espacio de nombres XML para .NET `System` espacio de nombres:
 
 ```xaml
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-Esto permite establecer el tamaño de fuente `Label` en el `Math.PI` de campo estático. Esto da como resultado un texto bastante pequeño, por lo que la propiedad `Scale` se establece en `Math.E`:
+Esto permite la `Label` tamaño de fuente debe establecerse en el campo estático `Math.PI`. Esto da como resultado texto pequeño en su lugar, por lo que la `Scale` propiedad está establecida en `Math.E`:
 
 ```xaml
 <Label Text="&#x03C0; &#x00D7; E sized text"
@@ -127,7 +127,7 @@ Esto permite establecer el tamaño de fuente `Label` en el `Math.PI` de campo es
        HorizontalOptions="Center" />
 ```
 
-En el último ejemplo se muestra el valor de `Device.RuntimePlatform`. La propiedad estática `Environment.NewLine` se usa para insertar un carácter de nueva línea entre los dos objetos `Span`:
+El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment.NewLine` propiedad estática se utiliza para insertar un carácter de nueva línea entre los dos `Span` objetos:
 
 ```xaml
 <Label HorizontalTextAlignment="Center"
@@ -150,11 +150,11 @@ Este es el ejemplo en ejecución:
 
 ## <a name="xreference-markup-extension"></a>extensión de marcado x:Reference
 
-La clase [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) admite el `x:Reference` extensión de marcado. La clase tiene una propiedad única denominada [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) de tipo `string` que se establece en el nombre de un elemento de la página al que se ha asignado un nombre con `x:Name`. Esta propiedad `Name` es la propiedad content de `ReferenceExtension`, por lo que `Name=` no es necesario cuando `x:Reference` aparece entre llaves.
+El `x:Reference` extensión de marcado es compatible con la [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) clase. La clase tiene una propiedad única denominada [ `Name` ](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) typu `string` establecer en el nombre de un elemento en la página que se asignó un nombre con `x:Name`. Esto `Name` propiedad es la propiedad content de `ReferenceExtension`, por lo que `Name=` no es necesaria cuando `x:Reference` aparece entre llaves.
 
-La extensión de marcado de `x:Reference` se usa exclusivamente con enlaces de datos, que se describen con más detalle en el artículo [**enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+El `x:Reference` extensión de marcado se utiliza exclusivamente con los enlaces de datos, que se describen con más detalle en el artículo [ **enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-En la página de **demostración de x:Reference** se muestran dos usos de `x:Reference` con enlaces de datos, el primero en el que se usa para establecer la propiedad `Source` del objeto `Binding` y el segundo donde se usa para establecer la propiedad `BindingContext` para dos enlaces de datos. :
+El **x: Reference demostración** página muestra dos usos de `x:Reference` con enlaces de datos, la primera que se usa para establecer el `Source` propiedad de la `Binding` objeto y el segundo donde se usa para establecer el `BindingContext` propiedad para los enlaces de datos de dos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -186,7 +186,7 @@ En la página de **demostración de x:Reference** se muestran dos usos de `x:Ref
 </ContentPage>
 ```
 
-Ambas expresiones `x:Reference` utilizan la versión abreviada del nombre de la clase `ReferenceExtension` y eliminan la parte `Name=` de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado se incrusta en la extensión de marcado `Binding`. Tenga en cuenta que los valores de `Source` y `StringFormat` se separan mediante comas. Esta es la ejecución del programa:
+Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Esta es la ejecución del programa:
 
 [![Demostración de x:Reference](consuming-images/referencedemo-small.png "Demostración de x:Reference")](consuming-images/referencedemo-large.png#lightbox "Demostración de x:Reference")
 
@@ -194,15 +194,15 @@ Ambas expresiones `x:Reference` utilizan la versión abreviada del nombre de la 
 
 ## <a name="xtype-markup-extension"></a>x:Type (extensión de marcado)
 
-La extensión de marcado `x:Type` es el equivalente XAML de C# la palabra clave [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) . Es compatible con la clase [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) , que define una propiedad denominada [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) de tipo `string` que se establece en un nombre de clase o estructura. La extensión de marcado `x:Type` devuelve el objeto [`System.Type`](xref:System.Type) de esa clase o estructura. `TypeName` es la propiedad de contenido de `TypeExtension`, por lo que `TypeName=` no es necesario cuando `x:Type` aparece con llaves.
+El `x:Type` extensión de marcado es el equivalente XAML de C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palabra clave. Es compatible con la [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (clase), que define una propiedad denominada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) de tipo `string` que se establece en un nombre de clase o estructura. El `x:Type` devuelve de la extensión de marcado el [ `System.Type` ](xref:System.Type) objeto de esa clase o estructura. `TypeName` es la propiedad content de `TypeExtension`, por lo que `TypeName=` no es necesaria cuando `x:Type` aparece entre llaves.
 
-En Xamarin. Forms, hay varias propiedades que tienen argumentos de tipo `Type`. Entre los ejemplos se incluye la propiedad [`TargetType`](xref:Xamarin.Forms.Style.TargetType) de `Style` y el atributo [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) que se usa para especificar argumentos en clases genéricas. Sin embargo, el analizador de XAML realiza la operación de `typeof` automáticamente y la extensión de marcado `x:Type` no se utiliza en estos casos.
+Dentro de Xamarin.Forms, hay varias propiedades que tienen argumentos de tipo `Type`. Algunos ejemplos son el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad de `Style`y el [x: TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) atributo utilizado para especificar los argumentos en las clases genéricas. Sin embargo, el analizador XAML se realiza el `typeof` operación automáticamente y el `x:Type` extensión de marcado no se usa en estos casos.
 
-Un lugar donde *se* requiere `x:Type` es con la extensión de marcado `x:Array`, que se describe en la [sección siguiente](#array).
+Un único lugar donde `x:Type` *es* necesarios es con el `x:Array` extensión de marcado, como se describe en el [siguiente sección](#array).
 
-La extensión de marcado `x:Type` también es útil al construir un menú en el que cada elemento de menú corresponde a un objeto de un tipo determinado. Puede asociar un objeto `Type` a cada elemento de menú y, a continuación, crear una instancia del objeto cuando se selecciona el elemento de menú.
+El `x:Type` extensión de marcado también es útil al construir un menú donde cada elemento de menú correspondiente a un objeto de un tipo determinado. Puede asociar un `Type` con cada elemento de menú de objetos y, a continuación, cree una instancia del objeto cuando se selecciona el elemento de menú.
 
-Así es como funciona el menú de navegación en `MainPage` en el programa de **extensiones de marcado** . El archivo **mainpage. Xaml** contiene una `TableView` con cada `TextCell` correspondiente a una página determinada del programa:
+Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de marcado** programa works. El **MainPage.xaml** archivo contiene un `TableView` con cada `TextCell` correspondiente a una página determinada en el programa:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -241,11 +241,11 @@ Así es como funciona el menú de navegación en `MainPage` en el programa de **
 </ContentPage>
 ```
 
-Esta es la Página principal de apertura en **las extensiones de marcado**:
+Aquí está la página principal de apertura en **las extensiones de marcado**:
 
 [![Página principal](consuming-images/mainpage-small.png "Página principal")](consuming-images/mainpage-large.png#lightbox "Página principal")
 
-Cada propiedad `CommandParameter` está establecida en una extensión de marcado `x:Type` que hace referencia a una de las otras páginas. La propiedad `Command` se enlaza a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
+Cada `CommandParameter` propiedad está establecida en un `x:Type` extensión de marcado que se hace referencia a una de las otras páginas. El `Command` propiedad está enlazada a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -267,9 +267,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-La propiedad `NavigateCommand` es un objeto `Command` que implementa un comando Execute con un argumento de tipo `Type` &mdash; el valor de `CommandParameter`. El método utiliza `Activator.CreateInstance` para crear una instancia de la página y, a continuación, navega hasta ella. El constructor termina estableciendo el `BindingContext` de la página en sí mismo, lo que permite que el `Binding` de `Command` funcione. Vea el artículo sobre el [**enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md) y, en particular, el artículo sobre [**comandos**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) para obtener más información sobre este tipo de código.
+El `NavigateCommand` propiedad es un `Command` objeto que implementa un comando execute con un argumento de tipo `Type` &mdash; el valor de `CommandParameter`. Usa el método `Activator.CreateInstance` para crear una instancia de la página y, a continuación, navega a ella. El constructor concluye estableciendo el `BindingContext` de la página a sí mismo, lo que permite el `Binding` en `Command` funcione. Consulte la [ **enlace de datos** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) artículo y especialmente los [ **Commanding** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) artículo para obtener más detalles sobre este tipo de código.
 
-En la página de **demostración de x:Type** se usa una técnica similar para crear instancias de los elementos de Xamarin. Forms y agregarlos a un `StackLayout`. Inicialmente, el archivo XAML consta de tres elementos `Button` con sus propiedades `Command` establecidas en un `Binding` y las propiedades `CommandParameter` establecidas en tipos de tres vistas de Xamarin. Forms:
+El **x: Type demostración** página usa una técnica similar para crear instancias de elementos de Xamarin.Forms y agregarlos a un `StackLayout`. El archivo XAML inicialmente consta de tres `Button` elementos con sus `Command` propiedades establecidas en un `Binding` y `CommandParameter` propiedades establecidas en los tipos de las tres vistas de Xamarin.Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -301,7 +301,7 @@ En la página de **demostración de x:Type** se usa una técnica similar para cr
 </ContentPage>
 ```
 
-El archivo de código subyacente define e inicializa la propiedad `CreateCommand`:
+El archivo de código subyacente define e inicializa la `CreateCommand` propiedad:
 
 ```csharp
 public partial class TypeDemoPage : ContentPage
@@ -324,7 +324,7 @@ public partial class TypeDemoPage : ContentPage
 }
 ```
 
-El método que se ejecuta cuando se presiona un `Button` crea una nueva instancia del argumento, establece su propiedad `VerticalOptions` y la agrega a la `StackLayout`. Los tres elementos `Button` compartirán la página con vistas creadas dinámicamente:
+El método que se ejecuta cuando un `Button` se presiona crea una nueva instancia del argumento, se establece su `VerticalOptions` propiedad y lo agrega a la `StackLayout`. Los tres `Button` elementos, a continuación, compartan la página con las vistas creadas dinámicamente:
 
 [![Demostración de x:Type](consuming-images/typedemo-small.png "Demostración de x:Type")](consuming-images/typedemo-large.png#lightbox "Demostración de x:Type")
 
@@ -332,14 +332,14 @@ El método que se ejecuta cuando se presiona un `Button` crea una nueva instanci
 
 ## <a name="xarray-markup-extension"></a>x:Array (extensión de marcado)
 
-La extensión de marcado `x:Array` permite definir una matriz en el marcado. Es compatible con la clase [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) , que define dos propiedades:
+El `x:Array` extensión de marcado permite definir una matriz en el marcado. Es compatible con la [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) (clase), que define dos propiedades:
 
-- `Type` de tipo `Type`, que indica el tipo de los elementos de la matriz.
-- `Items` de tipo `IList`, que es una colección de los propios elementos. Esta es la propiedad de contenido de `ArrayExtension`.
+- `Type` de tipo `Type`, lo que indica el tipo de los elementos de la matriz.
+- `Items` de tipo `IList`, que es una colección de los propios elementos. Se trata de la propiedad content de `ArrayExtension`.
 
-La extensión de marcado `x:Array` no aparece nunca entre llaves. En su lugar, `x:Array` etiquetas inicial y final delimitan la lista de elementos. Establezca la propiedad `Type` en una extensión de marcado `x:Type`.
+El `x:Array` propia extensión de marcado nunca aparece entre llaves. En su lugar, `x:Array` etiquetas inicial y final delimitan la lista de elementos. Establecer el `Type` propiedad a un `x:Type` extensión de marcado.
 
-La página de **demostración de x:Array** muestra cómo usar `x:Array` para agregar elementos a un `ListView` estableciendo la propiedad `ItemsSource` en una matriz:
+El **x: Array demostración** página muestra cómo usar `x:Array` para agregar elementos a un `ListView` estableciendo el `ItemsSource` propiedad a una matriz:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -381,11 +381,11 @@ La página de **demostración de x:Array** muestra cómo usar `x:Array` para agr
 </ContentPage>        
 ```
 
-El `ViewCell` crea un `BoxView` simple para cada entrada de color:
+El `ViewCell` crea un simple `BoxView` para cada entrada de color:
 
 [![Demostración de x:Array](consuming-images/arraydemo-small.png "Demostración de x:Array")](consuming-images/arraydemo-large.png#lightbox "Demostración de x:Array")
 
-Hay varias maneras de especificar los elementos de `Color` individuales en esta matriz. Puede usar una extensión de marcado `x:Static`:
+Hay varias maneras de especificar la persona `Color` elementos de esta matriz. Puede usar un `x:Static` extensión de marcado:
 
 ```xaml
 <x:Static Member="Color.Blue" />
@@ -397,23 +397,23 @@ O bien, puede usar `StaticResource` para recuperar un color de un diccionario de
 <StaticResource Key="myColor" />
 ```
 
-Al final de este artículo, verá una extensión de marcado XAML personalizada que también crea un nuevo valor de color:
+Hacia el final de este artículo, verá una extensión de marcado XAML personalizada que también crea un nuevo valor de color:
 
 ```xaml
 <local:HslColor H="0.5" S="1.0" L="0.5" />
 ```
 
-Al definir matrices de tipos comunes, como cadenas o números, use las etiquetas enumeradas en el artículo [**pasar argumentos de constructor**](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) para delimitar los valores.
+Al definir matrices de tipos comunes, como cadenas o números, use las etiquetas enumeradas en el [ **pasar argumentos de Constructor** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) artículo para delimitar los valores.
 
 <a name="null" />
 
 ## <a name="xnull-markup-extension"></a>x:Null (extensión de marcado)
 
-La clase [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) admite el `x:Null` extensión de marcado. No tiene propiedades y es simplemente el equivalente XAML de la C# palabra clave [`null`](/dotnet/csharp/language-reference/keywords/null/) .
+El `x:Null` extensión de marcado es compatible con la [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) clase. No tiene ninguna propiedad lo que es simplemente el equivalente XAML de C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palabra clave.
 
-La extensión de marcado de `x:Null` rara vez es necesaria y rara vez se usa, pero si lo necesita, le alegrará de que exista.
+El `x:Null` extensión de marcado es rara vez es necesario y se usan en contadas ocasiones, pero si lo encuentra lo necesita, será muy contento de que existe.
 
-La página de **demostración de x:null** muestra un escenario en el que `x:Null` puede resultar práctico. Supongamos que define una `Style` implícita para `Label` que incluye un `Setter` que establece la propiedad `FontFamily` en un nombre de familia dependiente de la plataforma:
+El **x: Null demostración** página ilustra un escenario cuando `x:Null` podría ser conveniente. Supongamos que define un modo implícito `Style` para `Label` que incluye un `Setter` que establece el `FontFamily` propiedad a un nombre de familia depende de la plataforma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -452,42 +452,42 @@ La página de **demostración de x:null** muestra un escenario en el que `x:Null
 </ContentPage>   
 ```
 
-A continuación, descubrirá que para uno de los elementos `Label`, deseará todos los valores de propiedad del `Style` implícito, excepto el `FontFamily`, que desea que sea el valor predeterminado. Podría definir otro `Style` para ese propósito, pero un enfoque más sencillo es simplemente establecer la propiedad `FontFamily` de la `Label` determinada en `x:Null`, tal como se muestra en el centro `Label`.
+A continuación, verá que para uno de los `Label` elementos, desea que todos los valores de propiedades en la parte implícita `Style` , excepto para el `FontFamily`, que desee que sea el valor predeterminado. Puede definir otra `Style` para ese propósito, pero un enfoque más sencillo consiste simplemente en establecer el `FontFamily` propiedad de la instancia concreta `Label` a `x:Null`, tal y como se muestra en el centro de `Label`.
 
 Esta es la ejecución del programa:
 
 [![Demo de x:Null](consuming-images/nulldemo-small.png "Demo de x:Null")](consuming-images/nulldemo-large.png#lightbox "Demo de x:Null")
 
-Observe que cuatro de los elementos `Label` tienen una fuente serif, pero el centro `Label` tiene la fuente sans-serif predeterminada.
+Tenga en cuenta que cuatro de los `Label` elementos tienen una fuente de serif, pero el centro `Label` tiene la fuente sans serif de forma predeterminada.
 
 <a name="onplatform" />
 
 ## <a name="onplatform-markup-extension"></a>Extensión de marcado en la plataforma
 
-La extensión de marcado de `OnPlatform` permite personalizar la apariencia de la interfaz de usuario en cada plataforma. Proporciona la misma funcionalidad que las clases [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) y [`On`](xref:Xamarin.Forms.On) , pero con una representación más concisa.
+El `OnPlatform` extensión de marcado permite personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma. Proporciona la misma funcionalidad que el [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) y [ `On` ](xref:Xamarin.Forms.On) clases, pero con una representación más concisa.
 
-La clase [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) admite el `OnPlatform` extensión de marcado, que define las siguientes propiedades:
+El `OnPlatform` extensión de marcado es compatible con la [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) (clase), que define las siguientes propiedades:
 
-- `Default` de tipo `object`, que se establece en un valor predeterminado que se va a aplicar a las propiedades que representan las plataformas.
-- `Android` de tipo `object`, que se establece en un valor que se va a aplicar en Android.
-- `GTK` de tipo `object`, que se establece en un valor que se va a aplicar en plataformas GTK.
-- `iOS` de tipo `object`, que se establece en un valor que se va a aplicar en iOS.
-- `macOS` de tipo `object`, que se establece en un valor que se va a aplicar en macOS.
-- `Tizen` de tipo `object`, que se establece en un valor que se va a aplicar a la plataforma Tizen.
-- `UWP` de tipo `object`, que se establece en un valor que se va a aplicar a la Plataforma universal de Windows.
-- `WPF` de tipo `object`, que se establece en un valor que se va a aplicar a la plataforma de Windows Presentation Foundation.
-- `Converter` de tipo `IValueConverter`, que se establece en una implementación de `IValueConverter`.
-- `ConverterParameter` de tipo `object`, que se establece en un valor que se va a pasar a la implementación de `IValueConverter`.
+- `Default` de tipo `object`, establecido en un valor predeterminado que se aplicará a las propiedades que representan las plataformas.
+- `Android` de tipo `object`, que se establece en un valor que se aplicará de Android.
+- `GTK` de tipo `object`, que se establece en un valor que se aplicará de plataformas de GTK +.
+- `iOS` de tipo `object`, que se establece en un valor que se aplicará de iOS.
+- `macOS` de tipo `object`, que se establece en un valor que se aplicará de macOS.
+- `Tizen` de tipo `object`, que se establece en un valor que se aplicará de la plataforma Tizen.
+- `UWP` de tipo `object`, que se establece en un valor que se aplicará de la plataforma Universal de Windows.
+- `WPF` de tipo `object`, que se establece en un valor que se aplicará de la plataforma Windows Presentation Foundation.
+- `Converter` de tipo `IValueConverter`, que se establece en un `IValueConverter` implementación.
+- `ConverterParameter` de tipo `object`, que se establecen en un valor para pasar el `IValueConverter` implementación.
 
 > [!NOTE]
-> El analizador de XAML permite abreviar la clase [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) como `OnPlatform`.
+> El analizador XAML permite la [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) clase va a abreviar como `OnPlatform`.
 
-La propiedad `Default` es la propiedad content de `OnPlatformExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la `Default=` parte de la expresión siempre que sea el primer argumento. Si no se establece la propiedad `Default`, se usará de forma predeterminada el valor de la propiedad [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , siempre que la extensión de marcado tenga como destino una [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
+El `Default` propiedad es la propiedad content de `OnPlatformExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `Default=` forma parte de la expresión siempre que sea el primer argumento. Si no se establece la propiedad `Default`, se usará de forma predeterminada el valor de la propiedad [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , siempre que la extensión de marcado tenga como destino una [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
-> El analizador de XAML espera que se proporcionen valores del tipo correcto a las propiedades que consumen el `OnPlatform` extensión de marcado. Si es necesaria la conversión de tipos, la extensión de marcado `OnPlatform` intentará realizarla mediante los convertidores predeterminados proporcionados por Xamarin. Forms. Sin embargo, hay algunas conversiones de tipos que no pueden realizar los convertidores predeterminados y, en estos casos, la propiedad `Converter` debe establecerse en una implementación `IValueConverter`.
+> El analizador XAML espera que se proporcionen valores del tipo correcto a las propiedades que se consume el `OnPlatform` extensión de marcado. Si es necesaria, la conversión de tipos la `OnPlatform` extensión de marcado se intentará realizar mediante los convertidores predeterminados proporcionados por Xamarin.Forms. Sin embargo, hay algunas conversiones de tipos que no se puede realizar los convertidores de forma predeterminada y en estos casos el `Converter` propiedad debe establecerse en un `IValueConverter` implementación.
 
-En la página de demostración de la **plataforma** , se muestra cómo usar la extensión de marcado `OnPlatform`:
+El **OnPlatform demostración** página muestra cómo usar el `OnPlatform` extensión de marcado:
 
 ```xaml
 <BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
@@ -496,7 +496,7 @@ En la página de demostración de la **plataforma** , se muestra cómo usar la e
          HorizontalOptions="Center" />
 ```
 
-En este ejemplo, las tres expresiones `OnPlatform` utilizan la versión abreviada del nombre de la clase `OnPlatformExtension`. Las tres `OnPlatform` extensiones de marcado establecen las propiedades [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)y [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) del [`BoxView`](xref:Xamarin.Forms.BoxView) en valores diferentes en iOS, Android y UWP. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las plataformas que no se especifican, a la vez que se eliminan los `Default=` parte de la expresión. Observe que las propiedades de extensión de marcado que se establecen están separadas por comas.
+En este ejemplo, las tres `OnPlatform` expresiones usan la versión abreviada de la `OnPlatformExtension` nombre de clase. Los tres `OnPlatform` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en iOS, Android y UWP. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las plataformas que no están especificadas, al tiempo que elimina la `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
 Esta es la ejecución del programa:
 
@@ -506,26 +506,26 @@ Esta es la ejecución del programa:
 
 ## <a name="onidiom-markup-extension"></a>Extensión de marcado en idioma
 
-La extensión de marcado de `OnIdiom` permite personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Es compatible con la clase [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) , que define las siguientes propiedades:
+La extensión de marcado de `OnIdiom` permite personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Es compatible con la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (clase), que define las siguientes propiedades:
 
-- `Default` de tipo `object`, que se establece en un valor predeterminado que se va a aplicar a las propiedades que representan los expresiones de dispositivo.
-- `Phone` de tipo `object`, que se establece en un valor que se va a aplicar en los teléfonos.
-- `Tablet` de tipo `object`, que se establece en un valor que se va a aplicar a las tabletas.
-- `Desktop` de tipo `object`, que se establece en un valor que se va a aplicar en las plataformas de escritorio.
-- `TV` de tipo `object`, que se establece en un valor que se va a aplicar en las plataformas de TV.
-- `Watch` de tipo `object`, que se establece en un valor que se va a aplicar en las plataformas de inspección.
-- `Converter` de tipo `IValueConverter`, que se establece en una implementación de `IValueConverter`.
-- `ConverterParameter` de tipo `object`, que se establece en un valor que se va a pasar a la implementación de `IValueConverter`.
+- `Default` de tipo `object`, establecido en un valor predeterminado que se aplicará a las propiedades que representan las expresiones de dispositivo.
+- `Phone` de tipo `object`, que se establece en un valor que se aplicará de teléfonos.
+- `Tablet` de tipo `object`, que se establece en un valor que se aplicará de tabletas.
+- `Desktop` de tipo `object`, que se establece en un valor que se aplicará de plataformas de escritorio.
+- `TV` de tipo `object`, que se establece en un valor que se aplicará de plataformas de TV.
+- `Watch` de tipo `object`, que se establece en un valor que se aplicará de plataformas de inspección.
+- `Converter` de tipo `IValueConverter`, que se establece en un `IValueConverter` implementación.
+- `ConverterParameter` de tipo `object`, que se establecen en un valor para pasar el `IValueConverter` implementación.
 
 > [!NOTE]
-> El analizador de XAML permite abreviar la clase [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) como `OnIdiom`.
+> El analizador XAML permite la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) clase va a abreviar como `OnIdiom`.
 
-La propiedad `Default` es la propiedad content de `OnIdiomExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la `Default=` parte de la expresión siempre que sea el primer argumento.
+El `Default` propiedad es la propiedad content de `OnIdiomExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `Default=` forma parte de la expresión siempre que sea el primer argumento.
 
 > [!IMPORTANT]
-> El analizador de XAML espera que se proporcionen valores del tipo correcto a las propiedades que consumen el `OnIdiom` extensión de marcado. Si es necesaria la conversión de tipos, la extensión de marcado `OnIdiom` intentará realizarla mediante los convertidores predeterminados proporcionados por Xamarin. Forms. Sin embargo, hay algunas conversiones de tipos que no pueden realizar los convertidores predeterminados y, en estos casos, la propiedad `Converter` debe establecerse en una implementación `IValueConverter`.
+> El analizador XAML espera que se proporcionen valores del tipo correcto a las propiedades que se consume el `OnIdiom` extensión de marcado. Si es necesaria, la conversión de tipos la `OnIdiom` extensión de marcado se intentará realizar mediante los convertidores predeterminados proporcionados por Xamarin.Forms. Sin embargo, hay algunas conversiones de tipos que no se puede realizar los convertidores de forma predeterminada y en estos casos el `Converter` propiedad debe establecerse en un `IValueConverter` implementación.
 
-En la página de **demostración de idioma** se muestra cómo usar la extensión de marcado `OnIdiom`:
+El **OnIdiom demostración** página muestra cómo usar el `OnIdiom` extensión de marcado:
 
 ```xaml
 <BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
@@ -534,7 +534,7 @@ En la página de **demostración de idioma** se muestra cómo usar la extensión
          HorizontalOptions="Center" />
 ```
 
-En este ejemplo, las tres expresiones `OnIdiom` utilizan la versión abreviada del nombre de la clase `OnIdiomExtension`. Las tres `OnIdiom` extensiones de marcado establecen las propiedades [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)y [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) del [`BoxView`](xref:Xamarin.Forms.BoxView) en valores diferentes en las expresiones de teléfono, tableta y escritorio. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las expresiones que no se especifican, a la vez que se eliminan los `Default=` parte de la expresión. Observe que las propiedades de extensión de marcado que se establecen están separadas por comas.
+En este ejemplo, las tres `OnIdiom` expresiones usan la versión abreviada de la `OnIdiomExtension` nombre de clase. Los tres `OnIdiom` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en el teléfono, tableta y escritorio expresiones. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las expresiones que no se especifican, mientras se elimina el `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
 Esta es la ejecución del programa:
 
@@ -542,7 +542,7 @@ Esta es la ejecución del programa:
 
 ## <a name="datatemplate-markup-extension"></a>Extensión de marcado DataTemplate
 
-La extensión de marcado `DataTemplate` permite convertir un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Es compatible con la clase `DataTemplateExtension`, que define una propiedad `TypeName`, de tipo `string`, que se establece en el nombre del tipo que se va a convertir en un `DataTemplate`. La propiedad `TypeName` es la propiedad content de `DataTemplateExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `TypeName=` parte de la expresión.
+La extensión de marcado `DataTemplate` permite convertir un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Es compatible con la clase `DataTemplateExtension`, que define una propiedad `TypeName`, de tipo `string`, que se establece en el nombre del tipo que se va a convertir en un `DataTemplate`. El `TypeName` propiedad es la propiedad content de `DataTemplateExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la parte `TypeName=` de la expresión.
 
 > [!NOTE]
 > El analizador de XAML permite abreviar la clase `DataTemplateExtension` como `DataTemplate`.
@@ -563,17 +563,17 @@ Para obtener más información sobre las aplicaciones de Shell, consulte [Shell 
 
 La extensión de marcado `FontImage` permite mostrar un icono de fuente en cualquier vista que pueda mostrar un `ImageSource`. Proporciona la misma funcionalidad que la clase `FontImageSource`, pero con una representación más concisa.
 
-La clase `FontImageExtension` admite el `FontImage` extensión de marcado, que define las siguientes propiedades:
+La clase `FontImageExtension` admite la extensión de marcado `FontImage`, que define las siguientes propiedades:
 
 - `FontFamily` de tipo `string`, la familia de fuentes a la que pertenece el icono de fuente.
 - `Glyph` de tipo `string`, el valor del carácter Unicode del icono de fuente.
-- `Color` de tipo `Color`, el color que se va a utilizar al mostrar el icono de fuente.
-- `Size` de tipo `double`, el tamaño, en unidades independientes del dispositivo, del icono de fuente representada.
+- `Color` de tipo [`Color`](xref:Xamarin.Forms.Color), el color que se va a utilizar al mostrar el icono de fuente.
+- `Size` de tipo `double`, el tamaño, en unidades independientes del dispositivo, del icono de fuente representada. El valor predeterminado es 30. Además, esta propiedad se puede establecer en un tamaño de fuente con nombre.
 
 > [!NOTE]
 > El analizador de XAML permite abreviar la clase `FontImageExtension` como `FontImage`.
 
-La propiedad `Glyph` es la propiedad content de `FontImageExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la `Glyph=` parte de la expresión siempre que sea el primer argumento.
+El `Glyph` propiedad es la propiedad content de `FontImageExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `Glyph=` forma parte de la expresión siempre que sea el primer argumento.
 
 La página de **demostración de FontImage** muestra cómo usar la extensión de marcado `FontImage`:
 
@@ -590,14 +590,14 @@ Esta es la ejecución del programa:
 
 Para obtener información sobre cómo mostrar los iconos de fuente especificando los datos del icono de fuente en un `FontImageSource` objeto, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## <a name="define-your-own-markup-extensions"></a>Definición de sus propias extensiones de marcado
+## <a name="define-your-own-markup-extensions"></a>Definir sus propias extensiones de marcado
 
-Si ha encontrado una necesidad de una extensión de marcado XAML que no está disponible en Xamarin. Forms, puede [crear la suya propia](creating.md).
+Si se ha encontrado una necesidad de una extensión de marcado XAML que no está disponible en Xamarin.Forms, puede [crear las suyas propias](creating.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
-- [Capítulo de las extensiones de marcado XAML del libro de Xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Capítulo de extensiones de marcado XAML de Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)

@@ -6,21 +6,19 @@ ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 03/18/2017
-ms.openlocfilehash: 6004598b215c85b70b057ff156c3a905a0879138
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 01/02/2020
+ms.openlocfilehash: 90d5034f332b311ee83ac2654bcbbc2cde2b11c0
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010714"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607833"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferencia en segundo plano y NSURLSession en Xamarin. iOS
 
 Una transferencia en segundo plano se inicia mediante la configuración de un `NSURLSession` de fondo y la puesta en cola de las tareas de carga o descarga. Si las tareas se completan mientras la aplicación se encuentra en el fondo, se suspende o se finaliza, iOS enviará una notificación a la aplicación mediante una llamada al controlador de finalización en el *AppDelegate*de la aplicación. En el diagrama siguiente se muestra esto en acción:
 
- [![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png#lightbox)
-
-Veamos cuál es el aspecto del código.
+ [![se inicia una transferencia en segundo plano mediante la configuración de un NSURLSession de fondo y la puesta en cola de las tareas de carga o descarga](background-transfer-walkthrough-images/transfer.png)](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 ## <a name="configuring-a-background-session"></a>Configurar una sesión en segundo plano
 
@@ -38,7 +36,7 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
   NSUrlSessionConfiguration configuration =
       NSUrlSessionConfiguration.CreateBackgroundSessionConfiguration ("com.SimpleBackgroundTransfer.BackgroundSession");
   session = NSUrlSession.FromConfiguration
-      (configuration, (NSUrlSessionDelegate) new MySessionDelegate(), new NSOperationQueue());
+      (configuration, new MySessionDelegate(), new NSOperationQueue());
 
 }
 ```
@@ -58,13 +56,13 @@ Una `NSUrlSessionDelegate` proporciona los siguientes métodos básicos para com
 
 Las sesiones en segundo plano requieren delegados más especializados en función de los tipos de tareas que se están ejecutando. Las sesiones en segundo plano se limitan a dos tipos de tareas:
 
-- *Tareas de carga* : tareas de tipo `NSUrlSessionUploadTask` usar el `NSUrlSessionTaskDelegate`, que hereda de `NSUrlSessionDelegate`. Este delegado proporciona métodos adicionales para realizar el seguimiento del progreso de la carga, controlar el redireccionamiento HTTP y mucho más.
-- *Tareas de descarga* : tareas de tipo `NSUrlSessionDownloadTask` usar el `NSUrlSessionDownloadDelegate`, que hereda de `NSUrlSessionTaskDelegate`. Este delegado proporciona todos los métodos para las tareas de carga, así como métodos específicos de descarga para realizar el seguimiento del progreso de la descarga y determinar cuándo se ha reanudado o completado una tarea de descarga.
+- *Tareas de carga* : tareas de tipo `NSUrlSessionUploadTask` usar la interfaz `INSUrlSessionTaskDelegate`, que implementa `INSUrlSessionDelegate`. Esto proporciona métodos adicionales para realizar el seguimiento del progreso de la carga, controlar el redireccionamiento HTTP y mucho más.
+- *Tareas de descarga* : tareas de tipo `NSUrlSessionDownloadTask` usar la interfaz `INSUrlSessionDownloadDelegate`, que implementa `INSUrlSessionDelegate` y `INSUrlSessionTaskDelegate`. Esto proporciona todos los métodos para las tareas de carga, así como métodos específicos de descarga para realizar el seguimiento del progreso de la descarga y determinar cuándo se ha reanudado o completado una tarea de descarga.
 
-En el código siguiente se define una tarea que se puede usar para descargar una imagen de una dirección URL. La tarea se inicia llamando a `CreateDownloadTask` en nuestra sesión en segundo plano y pasando la solicitud de dirección URL:
+En el código siguiente se define una tarea que se puede usar para descargar una imagen de una dirección URL. La tarea se inicia llamando a `CreateDownloadTask` en la sesión en segundo plano y pasando la solicitud de la dirección URL:
 
 ```csharp
-const string DownloadURLString = "http://cdn1.xamarin.com/webimages/images/xamarin.png";
+const string DownloadURLString = "http://xamarin.com/images/xamarin.png"; // or other hosted file
 public NSUrlSessionDownloadTask downloadTask;
 
 NSUrl downloadURL = NSUrl.FromString (DownloadURLString);
@@ -72,12 +70,12 @@ NSUrlRequest request = NSUrlRequest.FromUrl (downloadURL);
 downloadTask = session.CreateDownloadTask (request);
 ```
 
-A continuación, vamos a crear un nuevo delegado de descarga de sesión para realizar un seguimiento de todas las tareas de descarga en esta sesión:
+A continuación, cree un nuevo delegado de descarga de sesión para realizar un seguimiento de todas las tareas de descarga en esta sesión. La clase delegada debe heredar de `NSObject` e implementar la interfaz necesaria:
 
 ```csharp
-public class MySessionDelegate : NSUrlSessionDownloadDelegate
+public class MySessionDelegate : NSObject, INSUrlSessionDownloadDelegate
 {
-  public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+  public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
   {
     Console.WriteLine (string.Format ("DownloadTask: {0}  progress: {1}", downloadTask, progress));
     InvokeOnMainThread( () => {
@@ -88,7 +86,7 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 }
 ```
 
-Si queremos averiguar el progreso de una tarea de descarga, podemos invalidar el método de `DidWriteData` para realizar un seguimiento del progreso e incluso actualizar la interfaz de usuario. Las actualizaciones de la interfaz de usuario aparecerán inmediatamente si la aplicación está en primer plano, o bien esperarán al usuario la próxima vez que abran la aplicación.
+Para averiguar el progreso de una tarea de descarga, invalide el método `DidWriteData` para realizar un seguimiento del progreso e, incluso, actualizar la interfaz de usuario. Las actualizaciones de la interfaz de usuario aparecerán inmediatamente si la aplicación está en primer plano, o bien esperarán al usuario la próxima vez que abran la aplicación.
 
 La API de delegado de sesión proporciona un amplio kit de herramientas para interactuar con las tareas. Para obtener una lista completa de los métodos de delegado de sesión, consulte la documentación de la API de `NSUrlSessionDelegate`.
 
@@ -99,31 +97,31 @@ La API de delegado de sesión proporciona un amplio kit de herramientas para int
 
 El paso final consiste en dejar que la aplicación sepa cuándo se han completado todas las tareas asociadas a la sesión y controlar el nuevo contenido.
 
-En *AppDelegate*, suscríbase al evento `HandleEventsForBackgroundUrl`. Cuando la aplicación entra en el fondo y se está ejecutando una sesión de transferencia, se llama a este método y el sistema lo pasa a un controlador de finalización:
+En el `AppDelegate`, suscríbase al evento `HandleEventsForBackgroundUrl`. Cuando la aplicación entra en el fondo y se está ejecutando una sesión de transferencia, se llama a este método y el sistema lo pasa a un controlador de finalización:
 
 ```csharp
 public System.Action backgroundSessionCompletionHandler;
 
-public override void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
+public void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
 {
   this.backgroundSessionCompletionHandler = completionHandler;
 }
 ```
 
-Usaremos el controlador de finalización para permitir que iOS sepa cuándo se realiza el procesamiento de la aplicación.
+Use el controlador de finalización para permitir que iOS sepa cuándo se realiza el procesamiento de la aplicación.
 
 Recuerde que una sesión puede generar varias tareas para procesar una transferencia. Cuando se completa la última tarea, se vuelve a iniciar una aplicación suspendida o finalizada en segundo plano. A continuación, la aplicación se vuelve a conectar a la `NSURLSession` con el identificador de sesión único y llama a `DidFinishEventsForBackgroundSession` en el delegado de la sesión. Este método es la oportunidad de la aplicación para controlar el nuevo contenido, incluida la actualización de la interfaz de usuario para reflejar los resultados de la transferencia:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   // Handle new information, update UI, etc.
 }
 ```
 
-Una vez que hemos terminado de administrar el nuevo contenido, llamamos al controlador de finalización para que el sistema sepa que es seguro tomar una instantánea de la aplicación y volver a la suspensión:
+Una vez que haya terminado de administrar el nuevo contenido, llame al controlador de finalización para que el sistema sepa que es seguro tomar una instantánea de la aplicación y volver a la suspensión:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
 
   // Handle new information, update UI, etc.
@@ -137,7 +135,7 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 }
 ```
 
-En este tutorial, trataremos los pasos básicos para implementar el servicio de transferencia en segundo plano en iOS 7.
+En este tutorial se han tratado los pasos básicos para implementar el servicio de transferencia en segundo plano en iOS 7 y versiones más recientes.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

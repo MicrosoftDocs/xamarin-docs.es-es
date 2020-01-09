@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/22/2019
-ms.openlocfilehash: 9a20618fea0091979c2ea862f417dccec565b218
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: 6df7a2e0056cd2d448206b56e1e9d2600b342b3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425604"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490264"
 ---
 # <a name="xamarinforms-map-geocoding"></a>Geocodificación del mapa de Xamarin. Forms
 
@@ -27,7 +27,7 @@ Una dirección postal se puede codificar en coordenadas de latitud y longitud me
 ```csharp
 using Xamarin.Forms.Maps;
 // ...
-Geocoder geoCoder;
+Geocoder geoCoder = new Geocoder();
 
 IEnumerable<Position> approximateLocations = await geoCoder.GetPositionsForAddressAsync("Pacific Ave, San Francisco, California");
 Position position = approximateLocations.FirstOrDefault();
@@ -43,7 +43,7 @@ Las coordenadas de latitud y longitud pueden estar invertidas geocodificadas en 
 ```csharp
 using Xamarin.Forms.Maps;
 // ...
-Geocoder geoCoder;
+Geocoder geoCoder = new Geocoder();
 
 Position position = new Position(37.8044866, -122.4324132);
 IEnumerable<string> possibleAddresses = await geoCoder.GetAddressesForPositionAsync(position);

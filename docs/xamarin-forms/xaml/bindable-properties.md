@@ -1,5 +1,5 @@
 ---
-title: Propiedades enlazables
+title: Propiedades enlazables de Xamarin. Forms
 description: Este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crear y consumirlos.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
@@ -7,20 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 50efd6b37d70fa835436c28c73b3d4f9fc6c7c83
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3f06e4d94103e895bdceb2836c67709eb0f48c9a
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758096"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490108"
 ---
-# <a name="bindable-properties"></a>Propiedades enlazables
+# <a name="xamarinforms-bindable-properties"></a>Propiedades enlazables de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-
-_En Xamarin.Forms, la funcionalidad de las propiedades de common language runtime (CLR) se extiende por las propiedades enlazables. Una propiedad enlazable es un tipo especial de propiedad, donde el valor de propiedad se realiza el seguimiento por el sistema de propiedades de Xamarin.Forms. Este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crear y consumirlos._
-
-## <a name="overview"></a>Información general
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 Propiedades enlazables amplían la funcionalidad de propiedad CLR de seguridad de una propiedad con un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) tipo, en lugar de una propiedad con un campo de respaldo. El propósito de las propiedades enlazables es proporcionar un sistema de propiedades que admite el enlace de datos, estilos, plantillas y valores se establecen a través de relaciones de elementos primarios y secundarios. Además, las propiedades enlazables pueden proporcionar valores predeterminados, validación de los valores de propiedad y las devoluciones de llamada que supervisen los cambios de propiedad.
 
@@ -34,9 +30,7 @@ Las propiedades deben implementarse como propiedades enlazables para admitir una
 
 Ejemplos de Xamarin.Forms que las propiedades enlazables [ `Label.Text` ](xref:Xamarin.Forms.Label.Text), [ `Button.BorderRadius` ](xref:Xamarin.Forms.Button.BorderRadius), y [ `StackLayout.Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation). Cada propiedad enlazable le corresponde una `public static readonly` propiedad de tipo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) que se expone en la misma clase y que es el identificador de la propiedad enlazable. Por ejemplo, el identificador de propiedad enlazable correspondiente para el `Label.Text` propiedad es [ `Label.TextProperty` ](xref:Xamarin.Forms.Label.TextProperty).
 
-<a name="consuming-bindable-property" />
-
-## <a name="creating-and-consuming-a-bindable-property"></a>Creación y consumo de una propiedad enlazable
+## <a name="create-a-bindable-property"></a>Crear una propiedad enlazable
 
 El proceso de creación de una propiedad enlazable es como sigue:
 
@@ -45,7 +39,7 @@ El proceso de creación de una propiedad enlazable es como sigue:
 
 Tenga en cuenta que todos los [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instancias deben crearse en el subproceso de interfaz de usuario. Esto significa que sólo el código que se ejecuta en el subproceso de interfaz de usuario puede obtener o establecer el valor de una propiedad enlazable. Sin embargo, `BindableProperty` instancias pueden tener acceso desde otros subprocesos por el cálculo de referencias para el subproceso de interfaz de usuario con el [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método.
 
-### <a name="creating-a-property"></a>Creación de una propiedad
+### <a name="create-a-property"></a>Crear una propiedad
 
 Para crear un `BindableProperty` instancia, debe derivar la clase contenedora de la [ `BindableObject` ](xref:Xamarin.Forms.BindableObject) clase. Sin embargo, la `BindableObject` clase es alta en la jerarquía de clases, por lo que la mayoría de las clases que se usa para las propiedades enlazables para compatibilidad con la funcionalidad de interfaz de usuario.
 
@@ -56,7 +50,7 @@ Como mínimo, debe especificarse un identificador al crear un [ `BindablePropert
 - El nombre de la [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty).
 - Tipo de la propiedad.
 - El tipo del objeto propietario.
-- Valor predeterminado de la propiedad. Esto garantiza que la propiedad siempre devuelve un valor determinado de forma predeterminada cuando no está establecido, y puede ser diferente del valor predeterminado para el tipo de la propiedad. El valor predeterminado será cuando restaura la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) se llama al método en la propiedad enlazable.
+- El valor predeterminado de la propiedad. Esto garantiza que la propiedad siempre devuelve un valor determinado de forma predeterminada cuando no está establecido, y puede ser diferente del valor predeterminado para el tipo de la propiedad. El valor predeterminado será cuando restaura la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) se llama al método en la propiedad enlazable.
 
 El código siguiente muestra un ejemplo de una propiedad enlazable, con un identificador y los valores de los cuatro campos obligatorios:
 
@@ -70,26 +64,27 @@ Esto crea un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instanc
 Si lo desea, al crear un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) de instancia, los siguientes parámetros se pueden especificar:
 
 - Modo de enlace. Esto se utiliza para especificar la dirección en la que se propaguen los cambios de valor de propiedad. En el modo de enlace predeterminada, los cambios se propaguen desde el *origen* a la *destino*.
-- Un delegado de validación que se invocará cuando se establece el valor de propiedad. Para obtener más información, consulte [las devoluciones de llamada de validación](#validation).
-- Un delegado de cambio de propiedad que se invoca cuando ha cambiado el valor de propiedad. Para obtener más información, consulte [detectar los cambios de propiedad](#propertychanges).
+- Un delegado de validación que se invocará cuando se establece el valor de propiedad. Para obtener más información, consulte [devoluciones de llamada de validación](#validation-callbacks).
+- Un delegado de cambio de propiedad que se invoca cuando ha cambiado el valor de propiedad. Para obtener más información, vea [detectar cambios](#detect-property-changes)en las propiedades.
 - Una propiedad de cambio de delegado que se invoca cuando cambia el valor de propiedad. Este delegado tiene la misma firma que el delegado de la propiedad ha cambiado.
-- Un delegado del valor de coerción que se invoca cuando ha cambiado el valor de propiedad. Para obtener más información, consulte [devoluciones de llamada de valor de coerción](#coerce).
-- Un `Func` que se usa para inicializar un valor de propiedad predeterminado. Para obtener más información, consulte [creación de un valor predeterminado con un elemento Func](#defaultfunc).
+- Un delegado del valor de coerción que se invoca cuando ha cambiado el valor de propiedad. Para obtener más información, vea [forzar devoluciones de llamada de valor](#coerce-value-callbacks).
+- Un `Func` que se usa para inicializar un valor de propiedad predeterminado. Para obtener más información, vea [crear un valor predeterminado con una FUNC](#create-a-default-value-with-a-func).
 
-### <a name="creating-accessors"></a>Creación de los descriptores de acceso
+### <a name="create-accessors"></a>Crear descriptores de acceso
 
 Los descriptores de acceso de propiedad deben usar la sintaxis de la propiedad para tener acceso a una propiedad enlazable. El `Get` descriptor de acceso debe devolver el valor que se encuentra en la propiedad enlazable correspondiente. Esto puede lograrse mediante una llamada a la [ `GetValue` ](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) método, pasando el identificador de propiedad enlazable en la que se va a obtener el valor y, a continuación, convertir el resultado al tipo requerido. El `Set` descriptor de acceso debe establecer el valor de la propiedad enlazable correspondiente. Esto puede lograrse mediante una llamada a la [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) método, pasando el identificador de propiedad enlazable en la que se va a establecer el valor y el valor que se va a establecer.
 
 El ejemplo de código siguiente muestra los descriptores de acceso para el `EventName` propiedad enlazable:
 
 ```csharp
-public string EventName {
+public string EventName
+{
   get { return (string)GetValue (EventNameProperty); }
   set { SetValue (EventNameProperty, value); }
 }
 ```
 
-### <a name="consuming-a-bindable-property"></a>Consumo de una propiedad enlazable
+## <a name="consume-a-bindable-property"></a>Usar una propiedad enlazable
 
 Una vez creada una propiedad enlazable, se puede consumir desde XAML o código. En XAML, esto se logra mediante la declaración de un espacio de nombres con un prefijo, con la declaración de espacio de nombres que indica el nombre del espacio de nombres CLR y, opcionalmente, un nombre de ensamblado. Para obtener más información, consulte [los espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md).
 
@@ -115,21 +110,18 @@ El código de C# equivalente se muestra en el ejemplo de código siguiente:
 
 ```csharp
 var listView = new ListView ();
-listView.Behaviors.Add (new EventToCommandBehavior {
+listView.Behaviors.Add (new EventToCommandBehavior
+{
   EventName = "ItemSelected",
   ...
 });
 ```
 
-<a name="advanced" />
-
 ## <a name="advanced-scenarios"></a>Escenarios avanzados
 
 Al crear un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) de la instancia, hay una serie de parámetros opcionales que se pueden establecer para habilitar escenarios avanzados de propiedad enlazable. Esta sección explora estos escenarios.
 
-<a name="propertychanges" />
-
-### <a name="detecting-property-changes"></a>Detección de cambios de propiedad
+### <a name="detect-property-changes"></a>Detección de cambios de propiedades
 
 Un `static` método de devolución de llamada de cambio de propiedad se puede registrar con una propiedad enlazable especificando el `propertyChanged` parámetro para el [ `BindableProperty.Create` ](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) método. El método de devolución de llamada especificada se invoca cuando cambia el valor de la propiedad enlazable.
 
@@ -148,8 +140,6 @@ static void OnEventNameChanged (BindableObject bindable, object oldValue, object
 ```
 
 En el método de devolución de llamada de cambio de propiedad, el [ `BindableObject` ](xref:Xamarin.Forms.BindableObject) parámetro se usa para indicar qué instancia de la clase propietaria informó de un cambio y los valores de los dos `object` parámetros representan los valores antiguos y nuevos de la propiedad enlazable.
-
-<a name="validation" />
 
 ### <a name="validation-callbacks"></a>Devoluciones de llamada de validación
 
@@ -172,9 +162,7 @@ static bool IsValidValue (BindableObject view, object value)
 
 Las devoluciones de llamada de validación se proporcionan con un valor y debe devolver `true` si el valor es válido para la propiedad, de lo contrario `false`. Se producirá una excepción si una devolución de llamada de validación devuelve `false`, que debe controlarse por el desarrollador. Un uso típico de un método de devolución de llamada de validación es restringir los valores de números enteros o dobles cuando se establece la propiedad enlazable. Por ejemplo, el `IsValidValue` método comprueba que el valor de propiedad es un `double` dentro del intervalo de 0 a 360.
 
-<a name="coerce" />
-
-### <a name="coerce-value-callbacks"></a>CoerceValue Callbacks
+### <a name="coerce-value-callbacks"></a>Devoluciones de llamada de valor de coerción
 
 Un `static` convertir el valor del método de devolución de llamada se puede registrar con una propiedad enlazable especificando el `coerceValue` parámetro para el [ `BindableProperty.Create` ](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) método. El método de devolución de llamada especificada se invoca cuando cambia el valor de la propiedad enlazable.
 
@@ -194,19 +182,17 @@ static object CoerceAngle (BindableObject bindable, object value)
   var homePage = bindable as HomePage;
   double input = (double)value;
 
-  if (input > homePage.MaximumAngle) {
+  if (input > homePage.MaximumAngle)
+  {
     input = homePage.MaximumAngle;
   }
-
   return input;
 }
 ```
 
 El `CoerceAngle` método comprueba el valor de la `MaximumAngle` propiedad y si el `Angle` es mayor el valor de propiedad, convierte el valor en el `MaximumAngle` valor de propiedad.
 
-<a name="defaultfunc" />
-
-### <a name="creating-a-default-value-with-a-func"></a>Creación de un valor predeterminado con un elemento Func
+### <a name="create-a-default-value-with-a-func"></a>Crear un valor predeterminado con FUNC
 
 Un `Func` puede usarse para inicializar el valor predeterminado de una propiedad enlazable, como se muestra en el ejemplo de código siguiente:
 
@@ -218,15 +204,11 @@ public static readonly BindableProperty SizeProperty =
 
 El `defaultValueCreator` parámetro se establece en un `Func` que invoca la [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) método devuelva un `double` que representa el nombre de tamaño para la fuente que se usa en un [ `Label` ](xref:Xamarin.Forms.Label) en la plataforma nativa.
 
-## <a name="summary"></a>Resumen
-
-En este artículo proporciona una introducción a las propiedades enlazables y se muestra cómo crear y consumirlos. Una propiedad enlazable es un tipo especial de propiedad, donde el valor de propiedad se realiza el seguimiento por el sistema de propiedades de Xamarin.Forms.
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md)
 - [Evento para el comportamiento de comandos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 - [Devolución de llamada de validación (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
 - [Convertir el valor de devolución de llamada (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
-- [BindableProperty](xref:Xamarin.Forms.BindableProperty)
-- [BindableObject](xref:Xamarin.Forms.BindableObject)
+- [API de BindableProperty](xref:Xamarin.Forms.BindableProperty)
+- [API de BindableObject](xref:Xamarin.Forms.BindableObject)
