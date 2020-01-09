@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4d28b80b32ff0d20afbe643d9c000f301a8ea582
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
+ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027809"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75667044"
 ---
 # <a name="android-job-scheduler"></a>Programador de trabajos de Android
 
 _En esta guía se describe cómo programar el trabajo en segundo plano mediante la API del programador de trabajos de Android, que está disponible en dispositivos Android que ejecutan Android 5,0 (nivel de API 21) y versiones posteriores._
 
-## <a name="overview"></a>Información general 
+## <a name="overview"></a>Información general del 
 
 Una de las mejores formas de mantener la respuesta de una aplicación Android al usuario es asegurarse de que el trabajo complejo o de larga ejecución se realiza en segundo plano. Sin embargo, es importante que el trabajo en segundo plano no afecte negativamente a la experiencia del usuario con el dispositivo. 
 
@@ -33,7 +33,7 @@ Android proporciona las siguientes API para ayudar a realizar el trabajo en segu
 Hay dos características clave para realizar eficazmente el trabajo en segundo plano (a veces denominado _trabajo en segundo plano_ o _trabajo_):
 
 1. **Programar de forma inteligente el trabajo** &ndash; es importante que cuando una aplicación esté realizando trabajo en segundo plano, lo haga como un buen ciudadano. Idealmente, la aplicación no debería exigir que se ejecute un trabajo. En su lugar, la aplicación debe especificar las condiciones que deben cumplirse para que el trabajo pueda ejecutarse y, a continuación, programar ese trabajo con el sistema operativo que realizará el trabajo cuando se cumplan las condiciones. Esto permite que Android ejecute el trabajo para garantizar la máxima eficacia en el dispositivo. Por ejemplo, las solicitudes de red se pueden procesar por lotes para ejecutarse todas al mismo tiempo con el fin de hacer el uso máximo de la sobrecarga implicada en las redes.
-2. La **encapsulación del trabajo** &ndash; el código para realizar el trabajo en segundo plano debe encapsularse en un componente discreto que se pueda ejecutar independientemente de la interfaz de usuario y será relativamente fácil de volver a programar si el trabajo no se completa para algunos debido.
+2. La **encapsulación del trabajo** &ndash; el código para realizar el trabajo en segundo plano debe encapsularse en un componente discreto que se pueda ejecutar independientemente de la interfaz de usuario y será relativamente fácil de volver a programar si el trabajo no se completa por algún motivo.
 
 El programador de trabajos de Android es un marco de trabajo integrado en el sistema operativo Android que proporciona una API fluida para simplificar la programación del trabajo en segundo plano.  El programador de trabajos de Android consta de los siguientes tipos:
 
@@ -43,7 +43,7 @@ El programador de trabajos de Android es un marco de trabajo integrado en el sis
 
 Para programar el trabajo con el programador de trabajos de Android, una aplicación de Xamarin. Android debe encapsular el código en una clase que extienda la clase `JobService`. `JobService` tiene tres métodos de ciclo de vida a los que se puede llamar durante la vigencia del trabajo:
 
-- **bool OnStartJob (parámetros JobParameters)** &ndash; este método es llamado por el `JobScheduler` para realizar el trabajo y se ejecuta en el subproceso principal de la aplicación. Es responsabilidad del `JobService` realizar de forma asincrónica el trabajo y `true` si hay trabajo restante o `false` si se realiza el trabajo.
+- **bool OnStartJob (parámetros JobParameters)** &ndash; este método es llamado por el `JobScheduler` para realizar el trabajo y se ejecuta en el subproceso principal de la aplicación. Es responsabilidad del `JobService` realizar de forma asincrónica el trabajo y devolver `true` si hay trabajo restante o `false` si se realiza el trabajo.
     
     Cuando el `JobScheduler` llama a este método, solicitará y conservará un wakelock de Android mientras dure el trabajo. Una vez finalizado el trabajo, es responsabilidad del `JobService` indicar al `JobScheduler` de este hecho que llame al método `JobFinished` (descrito a continuación).
 
@@ -55,7 +55,7 @@ Es posible especificar _restricciones_ o _desencadenadores_ que controlarán Cu�
 
 En esta guía se explica en detalle cómo implementar una clase de `JobService` y programarla con el `JobScheduler`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 El programador de trabajos de Android requiere el nivel de API 21 de Android (Android 5,0) o posterior. 
 

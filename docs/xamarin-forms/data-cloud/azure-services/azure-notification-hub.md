@@ -6,13 +6,13 @@ ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 05/23/2019
-ms.openlocfilehash: 28abc7f4fa608091cfc7f4c64d4fcabfd9755c2b
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.date: 11/27/2019
+ms.openlocfilehash: 0152a61dabe4068892cb6b5aa5b535ab88d2ff95
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681358"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487456"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Envío y recepción de notificaciones de envío con Azure Notification Hubs y Xamarin. Forms
 
@@ -29,6 +29,9 @@ Integre Azure Notification Hubs en Mobile Apps siguiendo estos pasos:
 1. [Configure el proyecto de iOS nativo para las notificaciones de envío](#configure-ios-for-notifications).
 1. [Notificaciones de prueba mediante el centro de notificaciones de Azure](#test-notifications-in-the-azure-portal).
 1. [Cree una aplicación de back-end para enviar notificaciones](#create-a-notification-dispatcher).
+
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Configuración de Notification Services de extracción y el centro de notificaciones de Azure
 
@@ -127,9 +130,9 @@ Complete los pasos siguientes para configurar la aplicación de Android para rec
 
 1. Configure el **nombre del paquete** de Android para que coincida con el nombre del paquete en la consola de Firebase.
 1. Instale los siguientes paquetes de NuGet para interactuar con Google Play, Firebase y Azure Notification Hubs:
-    1. Xamarin. GooglePlayServices. base.
+    1. Xamarin.GooglePlayServices.Base.
     1. Xamarin. Firebase. Messaging.
-    1. Xamarin. Azure. NotificationHubs. Android.
+    1. Xamarin.Azure.NotificationHubs.Android.
 1. Copie el archivo de `google-services.json` que descargó durante la instalación de FCM en el proyecto y establezca la acción de compilación en `GoogleServicesJson`.
 1. [Configure archivo AndroidManifest. XML para comunicarse con Firebase](#configure-android-manifest).
 1. [Invalide FirebaseMessagingService para controlar los mensajes](#override-firebasemessagingservice-to-handle-messages).

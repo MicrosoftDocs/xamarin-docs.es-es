@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027746"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487833"
 ---
 # <a name="app-linking-in-android"></a>Vinculación de aplicaciones en Android
 
@@ -36,7 +36,7 @@ Si el usuario no tiene ninguna aplicación instalada que admita el URI y otra se
 
 En esta guía se explica cómo configurar una aplicación Android 6,0 y cómo crear y publicar el archivo de vínculos de recursos digitales para admitir la vinculación de aplicaciones en Android 6,0.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 En esta guía se requiere Xamarin. Android 6,1 y una aplicación destinada a Android 6,0 (nivel de API 23) o superior.
 
@@ -195,7 +195,6 @@ En esta guía se describe cómo funciona la vinculación de aplicaciones en Andr
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Buscar la firma MD5 o SHA1 de su almacén de claves](~/android/deploy-test/signing/keystore-signature.md)
-- [Actividades e intents](https://university.xamarin.com/classes#4)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Vínculos a recursos digitales de Google](https://developers.google.com/digital-asset-links/)
 - [Generador y evaluador de la lista de instrucciones](https://developers.google.com/digital-asset-links/tools/generator)

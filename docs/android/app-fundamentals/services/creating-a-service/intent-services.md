@@ -6,16 +6,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: c58787a051bfc965cb7493138ed6114ac23ed04d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: acf8824c7a575bca37301a409bdf6d5f42cca622
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024843"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488067"
 ---
 # <a name="intent-services-in-xamarinandroid"></a>Servicios de intención en Xamarin. Android
-
-## <a name="intent-services-overview"></a>Información general sobre servicios de intención
 
 Tanto los servicios iniciados como los enlazados se ejecutan en el subproceso principal, lo que significa que para mantener el rendimiento sin problemas, un servicio necesita realizar el trabajo de forma asincrónica. Una de las formas más sencillas de solucionar este problema es con un _patrón de procesador de cola de trabajo_, en el que el trabajo que se va a hacer se coloca en una cola a la que presta servicio un solo subproceso.
 
@@ -57,8 +55,7 @@ El trabajo se envía a un `IntentService` mediante la creación de una instancia
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.Put
-("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```

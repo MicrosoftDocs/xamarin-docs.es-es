@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
-ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
+ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884129"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655412"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Recarga activa de XAML para Xamarin. Forms (versión preliminar)
 
@@ -20,6 +20,8 @@ La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar
 
 > [!NOTE]
 > Si está escribiendo una aplicación de WPF o de UWP, consulte [recarga en caliente de XAML para UWP y WPF](/visualstudio/debugger/xaml-hot-reload).
+>
+> La recarga activa de XAML para Xamarin. Forms _no_ funciona actualmente para los proyectos de UWP. Forms de Xamarin.
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 
@@ -49,6 +51,7 @@ Si realiza un cambio que no se puede volver a cargar la recarga activa de XAML, 
 - Las referencias creadas mediante la asignación de un control a otro campo o propiedad mediante su valor `x:Name` no se volverán a cargar.
 - La actualización de la jerarquía visual de la aplicación de Shell en **AppShell. Xaml** puede producir problemas al mantener el estado de la aplicación. Vuelva a compilar la aplicación para continuar con la recarga.
 - La recarga activa de XAML no puede C# volver a cargar el código, incluidos los controladores de eventos, los controles personalizados, el código subyacente de la página y las clases adicionales.
+- No _funciona en_ otras plataformas compatibles con Xamarin. Forms (como Mac OS o UWP).
 
 ## <a name="migrate-from-the-private-preview"></a>Migración desde la versión preliminar privada
 

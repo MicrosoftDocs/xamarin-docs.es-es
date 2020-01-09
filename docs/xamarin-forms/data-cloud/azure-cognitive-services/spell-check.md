@@ -7,25 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 924f5403f12250fcfc5f026438d08ed618fb373f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645342"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487612"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>La revisión ortográfica con Bing Spell Check API
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Bing Spell Check realiza contextual corrector ortográfico para el texto, que proporciona sugerencias de en línea para palabras mal escritas. En este artículo se explica cómo usar Bing Spell Check REST API para corregir errores ortográficos en una aplicación de Xamarin.Forms._
+_Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una aplicación de Xamarin. Forms._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Bing Spell Check REST API tiene dos modos de funcionamiento y un modo debe especificarse al realizar una solicitud a la API:
 
 - `Spell` corrige un texto breve (de hasta 9 palabras) sin realizar ningún cambio de mayúsculas y minúsculas.
 - `Proof` corrige texto largo, proporciona correcciones de mayúsculas y minúsculas y puntuación básica y suprime correcciones agresivas.
+
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
 Para usar Bing Spell Check API, se debe obtener una clave de API. Esto puede obtenerse en [pruebe Cognitive Services](https://azure.microsoft.com/try/cognitive-services/)
 
@@ -151,12 +154,12 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 Este código recorre el `FlaggedTokens` colección y reemplaza cualquier mal escrita o palabras gramaticalmente incorrectas en el texto de origen con la primera sugerencia. Las capturas de pantalla siguientes se muestran antes y después de la revisión ortográfica:
 
-![](spell-check-images/before-spell-check.png "Antes de comprobar la ortografía")
+![](spell-check-images/before-spell-check.png "Before Spell Check")
 
-![](spell-check-images/after-spell-check.png "Después de comprobar la ortografía")
+![](spell-check-images/after-spell-check.png "After Spell Check")
 
 > [!NOTE]
-> En el ejemplo anterior `Replace` se usa para simplificar, pero en una gran cantidad de texto podría reemplazar el token equivocado. La API proporciona el `offset` valor que debe usarse en las aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.
+> En el ejemplo anterior se usa `Replace` para simplificar, pero en una gran cantidad de texto podría reemplazar el token equivocado. La API proporciona el valor `offset` que se debe usar en las aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.
 
 ## <a name="summary"></a>Resumen
 

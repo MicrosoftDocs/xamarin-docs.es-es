@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1781503d214b959d31223cbe8f55fd6afa0fef44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: eeee9b7d694d9380c653fb87c24171bcaf79389d
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019287"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655306"
 ---
 # <a name="android-graphics-and-animation"></a>Gráficos y animación de Android
 
 _Android proporciona un marco de trabajo muy rico y diverso para admitir animaciones y gráficos 2D. En este tema se presentan estos marcos de trabajo y se describe cómo crear animaciones y gráficos personalizados para su uso en una aplicación de Xamarin. Android._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 A pesar de que se ejecutan en dispositivos que tradicionalmente tienen una capacidad limitada, las aplicaciones móviles con mayor clasificación suelen tener una experiencia de usuario sofisticada, completada con gráficos de alta calidad y animaciones que proporcionan una sensación intuitiva, dinámica y receptiva. A medida que las aplicaciones móviles son más sofisticadas, los usuarios han empezado a esperar más y más de aplicaciones.
 
@@ -82,7 +82,7 @@ Android define varios tipos diferentes de recursos que se dibujan:
 
 - [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; es muy similar a un *StateListDrawable* en que mostrará una imagen basada en determinadas condiciones. Sin embargo, a diferencia de *StateListDrawable*, *LevelListDrawable* muestra una imagen basada en un valor entero. Un ejemplo de una *LevelListDrawable* sería Mostrar la fuerza de una señal WiFi. A medida que cambia la intensidad de la señal Wi-Fi, el dibujo que se muestra cambiará en consecuencia.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como su nombre implica, estas Drawables proporcionan la funcionalidad de escalado y recorte. El *ScaleDrawable* escalará otro dibujable, mientras que el *ClipDrawable* recortará otro dibujable.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; Como su nombre implica, estos Drawables proporcionan la funcionalidad de escalado y recorte. El *ScaleDrawable* escalará otro dibujable, mientras que el *ClipDrawable* recortará otro dibujable.
 
 - [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; este dibujo se aplicará a los lados de otro recurso dibujable. Se utiliza cuando una vista necesita un fondo menor que los límites reales de la vista.
 
@@ -139,7 +139,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 Para ver el aspecto que tendría esto, ejecute el proyecto *AnimationsDemo* y seleccione el elemento dibujado por la forma en el menú principal. Deberíamos ver algo parecido a la captura de pantalla siguiente:
 
-![TextView con un fondo personalizado, dibujable con un degradado y con esquinas redondeadas](graphics-and-animation-images/image1.png)
+[![TextView con un fondo personalizado, que se dibuja con esquinas redondeadas y de degradado](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 Para obtener más información sobre los elementos XML y la sintaxis de los recursos que se van a dibujar, consulte la [documentación de Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
@@ -172,7 +172,7 @@ La clase Canvas expone métodos para proporcionar las instrucciones Draw mediant
 
 #### <a name="drawing-with-the-canvas-api"></a>Dibujo con la API de Canvas
 
-Veamos un ejemplo de la API de canvas en acción. En el fragmento de código siguiente se muestra cómo dibujar una vista:
+Este es un ejemplo de la API de canvas en acción. En el fragmento de código siguiente se muestra cómo dibujar una vista:
 
 ```csharp
 public class MyView : View
@@ -201,7 +201,7 @@ public class MyView : View
 
 Este código anterior crea primero una pintura roja y un objeto de pintura verde. Rellena el contenido del lienzo con rojo y, a continuación, indica al lienzo que dibuje un rectángulo verde que sea el 25% del ancho del lienzo. Un ejemplo de esto puede verse en `AnimationsDemo` proyecto que se incluye con el código fuente de este artículo. Al iniciar la aplicación y seleccionar el elemento de dibujo en el menú principal, deberíamos tener una pantalla similar a la siguiente:
 
-![Pantalla con objetos de pintura roja y de pintura verde](graphics-and-animation-images/image3.png)
+[![pantalla con objetos de pintura roja y de pintura verde](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## <a name="animation"></a>Animación
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: e54b36989f5b4694da5d46a89391d56920b8d6a9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddb25a1f01f91b627fc0c370f7f21e2a797b72cb
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656248"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545587"
 ---
 # <a name="xamarinforms-slider"></a>Control deslizante de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Usar un control deslizante para seleccionar un intervalo de valores continuos._
 
@@ -39,7 +39,7 @@ El `Slider` convierte la `Value` propiedad para que esté entre `Minimum` y `Max
 
 El [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objeto que acompaña a la `ValueChanged` eventos tiene dos propiedades, ambos de tipo `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) y [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). En el momento en el evento se desencadena, el valor de `NewValue` es el mismo que el `Value` propiedad de la `Slider` objeto.
 
-`Slider`también define `DragStarted` los `DragCompleted` eventos y, que se desencadenan al principio y al final de la acción de arrastrar. A diferencia del [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) evento, los `DragStarted` eventos `DragCompleted` y solo se activan a través de la `Slider`manipulación de usuarios de. Cuando se `DragStarted` activa el evento, `DragStartedCommand`se ejecuta el `ICommand`tipo de. De forma similar, `DragCompleted` cuando se desencadena el `DragCompletedCommand`evento, se `ICommand`ejecuta el tipo de.
+`Slider` también define eventos `DragStarted` y `DragCompleted`, que se activan al principio y al final de la acción de arrastrar. A diferencia del evento [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) , los eventos `DragStarted` y `DragCompleted` solo se activan a través de la manipulación de usuarios del `Slider`. Cuando se activa el evento `DragStarted`, se ejecuta el `DragStartedCommand`, de tipo `ICommand`. De forma similar, cuando se activa el evento `DragCompleted`, se ejecuta el `DragCompletedCommand`, de tipo `ICommand`.
 
 > [!WARNING]
 > No utilice opciones de diseño horizontal sin restricciones de `Center`, `Start`, o `End` con `Slider`. En Android y UWP, la `Slider` contrae a una barra de longitud cero y en iOS, la barra es muy breve. Mantenga el valor predeterminado `HorizontalOptions` de `Fill`y no use un ancho de `Auto` al poner `Slider` en un `Grid` diseño.
@@ -109,9 +109,9 @@ public class BasicSliderCodePage : ContentPage
 
 El `Slider` se inicializa para tener un `Maximum` propiedad de 360. El `ValueChanged` controlador de la `Slider` usa el `Value` propiedad de la `slider` objeto para establecer el `Rotation` propiedad de la primera `Label` y usa el `String.Format` método con el `NewValue` propiedad de la argumentos de evento para establecer el `Text` propiedad del segundo `Label`. Estos dos enfoques para obtener el valor actual de la `Slider` son intercambiables.
 
-Este es el programa que se ejecutan en iOS, Android y plataforma Universal de Windows (UWP) dispositivos:
+Este es el programa que se ejecuta en dispositivos iOS y Android:
 
-[![Código de control deslizante básica](slider-images/BasicSliderCode.png "código básico de control deslizante")](slider-images/BasicSliderCode-Large.png#lightbox)
+[![Código de control deslizante básico](slider-images/BasicSliderCode.png "Código de control deslizante básico")](slider-images/BasicSliderCode-Large.png#lightbox)
 
 El segundo `Label` muestra el texto "(no inicializado)" hasta que el `Slider` se manipula, lo que hace que la primera `ValueChanged` eventos se activen. Tenga en cuenta que el número de posiciones decimales que se muestran es diferente para cada plataforma. Estas diferencias están relacionadas con las implementaciones de la plataforma de la `Slider` y se describen más adelante en este artículo en la sección [diferencias de implementación de la plataforma](#implementations).
 
@@ -205,7 +205,7 @@ El **enlaces básicos de control deslizante** página muestra cómo escribir un 
 </ContentPage>
 ```
 
-El `Rotation` propiedad de la primera `Label` está enlazado a la `Value` propiedad de la `Slider`, ya que es el `Text` propiedad del segundo `Label` con un `StringFormat` especificación. La página de **enlaces del control deslizante básico** funciona de forma ligeramente diferente a la de las dos páginas anteriores: Cuando la página aparece por primera vez, `Label` la segunda muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la `ValueChanged` eventos llamando al controlador de eventos desde el constructor de clase.
+El `Rotation` propiedad de la primera `Label` está enlazado a la `Value` propiedad de la `Slider`, ya que es el `Text` propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de control deslizante** página funciones un poco diferente de las dos páginas anteriores: cuando la página aparece por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la `ValueChanged` eventos llamando al controlador de eventos desde el constructor de clase.
 
 <a name="precautions" />
 
@@ -295,11 +295,11 @@ La implementación de Android `Slider` se basa en el Android [ `SeekBar` ](xref:
 
 La implementación de UWP de `Slider` se basa en la UWP [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) control. El `StepFrequency` propiedad de la UWP `Slider` se establece en la diferencia entre el `Maximum` y `Minimum` propiedades se dividen por 10, pero no mayor que 1.
 
-Por ejemplo, para el intervalo predeterminado de 0 a 1, el `StepFrequency` propiedad está establecida en 0,1. Como el `Slider` se manipula el `Value` propiedad está restringida a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0.6, 0,7, 0,8, 0,9 y 1.0. (Esto es evidente en la última página en el [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) ejemplo.) Cuando la diferencia entre el `Maximum` y `Minimum` propiedades es 10 o superior, a continuación, `StepFrequency` está establecido en 1 y el `Value` propiedad tiene valores enteros.
+Por ejemplo, para el intervalo predeterminado de 0 a 1, el `StepFrequency` propiedad está establecida en 0,1. Como el `Slider` se manipula el `Value` propiedad está restringida a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0.6, 0,7, 0,8, 0,9 y 1.0. (Esto es evidente en la última página del ejemplo [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) ). Cuando la diferencia entre las propiedades `Maximum` y `Minimum` es 10 o superior, `StepFrequency` se establece en 1 y la propiedad `Value` tiene valores enteros.
 
 ### <a name="the-stepslider-solution"></a>La solución StepSlider
 
-Más versátil `StepSlider` se describe en [capítulo 27. Los representadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro *Creating Mobile Apps with Xamarin.Forms*. El `StepSlider` es similar a `Slider` pero agrega un `Steps` propiedad para especificar el número de valores entre `Minimum` y `Maximum`.
+En el capítulo 27 se describe un `StepSlider` más versátil [. Los representadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro que *crean Mobile Apps con Xamarin. Forms*. El `StepSlider` es similar a `Slider` pero agrega un `Steps` propiedad para especificar el número de valores entre `Minimum` y `Maximum`.
 
 ## <a name="sliders-for-color-selection"></a>Controles deslizantes para selección de color
 
@@ -383,7 +383,7 @@ public partial class RgbColorSlidersPage : ContentPage
 
 Los primeros conjuntos de sección la `Text` propiedad de uno de los `Label` instancias en una cadena de texto breve que indica el valor de la `Slider` en formato hexadecimal. A continuación, las tres `Slider` se tiene acceso a las instancias para crear un `Color` valor de los componentes RGB:
 
-[![Controles deslizantes de Color RGB](slider-images/RgbColorSliders.png "reguladores de Color RGB")](slider-images/RgbColorSliders-Large.png#lightbox)
+[![Controles deslizantes de color RGB](slider-images/RgbColorSliders.png "Controles deslizantes de color RGB")](slider-images/RgbColorSliders-Large.png#lightbox)
 
 ### <a name="binding-the-slider-to-a-viewmodel"></a>Enlazar el control deslizante a una clase ViewModel
 
@@ -503,9 +503,9 @@ El **HslColorSlidersPage.xaml** crea una instancia de archivo del `HslColorViewM
 
 Como el `Slider` se manipulan elementos, el `BoxView` y `Label` elementos se actualizan desde el ViewModel:
 
-[![Controles deslizantes de Color HSL](slider-images/HslColorSliders.png "reguladores de Color HSL")](slider-images/HslColorSliders-Large.png#lightbox)
+[![Controles deslizantes de color HSL](slider-images/HslColorSliders.png "Controles deslizantes de color HSL")](slider-images/HslColorSliders-Large.png#lightbox)
 
-El `StringFormat` componente de la `Binding` extensión de marcado está establecida para un formato de "F2" para mostrar dos posiciones decimales. (Cadena de formato en los enlaces de datos se describe en el artículo [aplicarles un formato](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) Sin embargo, la versión de UWP del programa se limita a los valores de 0, 0.1, 0.2... 0.9 y 1.0. Se trata de un resultado directo de la implementación de la UWP `Slider` como se describió anteriormente en la sección [diferencias de implementación de la plataforma](#implementations).
+El `StringFormat` componente de la `Binding` extensión de marcado está establecida para un formato de "F2" para mostrar dos posiciones decimales. (El formato de cadena en los enlaces de datos se describe en el artículo [formato de cadena](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)). Sin embargo, la versión de UWP del programa se limita a los valores 0, 0,1, 0,2,... 0,9 y 1,0. Se trata de un resultado directo de la implementación de la UWP `Slider` como se describió anteriormente en la sección [diferencias de implementación de la plataforma](#implementations).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

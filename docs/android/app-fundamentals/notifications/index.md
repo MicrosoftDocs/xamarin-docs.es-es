@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e0035414cb8a24e5571b2972ec638eec550c593c
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025535"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545561"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notificaciones en Xamarin. Android
 
@@ -29,7 +29,7 @@ En este tutorial se explica cómo usar las notificaciones locales en una aplicac
 
 [Firebase Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) Messaging &ndash; Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. La mensajería en la nube Firebase se puede usar para implementar notificaciones remotas (también denominadas notificaciones de envío) en aplicaciones de Xamarin. Android.
 
-Las [notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; este tema para desarrolladores de Android es la guía definitiva para las notificaciones de Android. Incluye una sección de consideraciones de diseño que le ayuda a diseñar las notificaciones para que cumplan las directrices de la interfaz de usuario de Android. Proporciona más información sobre la navegación previa al inicio de una actividad y explica cómo mostrar el progreso en una notificación y controlar la reproducción multimedia en la pantalla de bloqueo.
+Las [notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; este tema para desarrolladores de Android es la guía definitiva para las notificaciones de Android. Incluye una sección de consideraciones de diseño que le ayuda a diseñar las notificaciones para que cumplan las directrices de la interfaz de usuario de Android. Proporciona más información sobre cómo conservar la navegación al iniciar una actividad y explica cómo mostrar el progreso en una notificación y controlar la reproducción multimedia en la pantalla de bloqueo.
 
 [NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; este servicio Android permite que la aplicación escuche (e interactúe con) todas las notificaciones publicadas en el dispositivo Android, no solo las notificaciones que la aplicación está registrada para recibir.
 Tenga en cuenta que el usuario debe conceder explícitamente permiso a la aplicación para que pueda escuchar notificaciones en el dispositivo.
@@ -37,4 +37,3 @@ Tenga en cuenta que el usuario debe conceder explícitamente permiso a la aplica
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Notificaciones locales (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [Notificaciones remotas (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

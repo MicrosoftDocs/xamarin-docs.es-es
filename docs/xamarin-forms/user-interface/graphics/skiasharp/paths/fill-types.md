@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 924b66b3bdb66c2197b708d87e20eeb6f3ed9f46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770510"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545574"
 ---
 # <a name="the-path-fill-types"></a>Tipos de relleno del trazado
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp_
 
 Se pueden superponer dos perfiles en una ruta de acceso y las líneas que componen un contorno solo se pueden superponer. Posiblemente se puede rellenar cualquier área delimitada, pero es posible que no desea rellenar todas las áreas cerradas. Por ejemplo:
 
-![](fill-types-images/filltypeexample.png "Señala de cinco estrellas parcialmente filles")
+![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
 Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por el [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) propiedad de `SKPath`, que establece en un miembro de la [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumeración:
 
@@ -170,9 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, el tipo de relleno de la ruta de acceso debe afectar a sólo rellenos y no los trazos, pero los dos `Inverse` afectan a los modos de trazos y rellenos. Para los rellenos, las dos `Inverse` tipos rellenar áreas oppositely para que se rellena el área situada fuera de la estrella. Para los dos trazos `Inverse` tipos todo excepto el trazo de color. Uso de estos tipos de relleno inversa puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Captura de pantalla triple de la página de estrella Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "Triple captura de pantalla de la página de estrella Five-Pointed")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-Las capturas de pantalla de Android y UWP muestran los efectos de devanado y par-impar típicos, pero el orden del trazo y relleno también afecta a los resultados.
+En la captura de pantalla de Android se muestran los efectos típicos pares-impares y de bobinado, pero el orden del trazo y del relleno también afecta a los resultados.
 
 El algoritmo devanado es dependiente de la dirección que se dibujan líneas. Normalmente, al crear una ruta de acceso, puede controlar esa dirección que especifique que se dibujan líneas de un punto a otro. Sin embargo, el `SKPath` clase también define los métodos como `AddRect` y `AddCircle` que dibujar contornos todos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), que tiene dos miembros:
 
@@ -223,7 +223,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Es una interesante imagen creada con un mínimo de código:
 
-[![](fill-types-images/overlappingcircles-small.png "Captura de pantalla de la página de círculos superpuestos triple")](fill-types-images/overlappingcircles-large.png#lightbox "Triple captura de pantalla de la página de círculos superpuestos")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

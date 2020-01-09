@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 885f5321c10bcbc5389daf7dd7a97d1f9d572499
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010377"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488442"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin. iOS
 
@@ -47,15 +47,15 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||3x|
     |---|---|
     |Icono de aplicación|180x180|
-    |Principales|120x120|
+    |Noticias destacadas|120x120|
     |Configuración|87x87|
 
 - **iPhone: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|60 x 60<sup>1</sup>|120x120|
-    |Principales|40 x 40<sup>2</sup>|80x80|
+    |Icono de aplicación|60x60<sup>1</sup>|120x120|
+    |Noticias destacadas|40x40<sup>2</sup>|80x80|
     |Configuración|-|-|
 
 - **iPhone: iOS 5 & 6**
@@ -63,7 +63,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|57x57|114x114|
-    |Principales|29x29|58x58|
+    |Noticias destacadas|29x29|58x58|
     |Configuración|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>Tamaños de iconos de iPad
@@ -73,15 +73,15 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||2x (iPad Pro)|
     |---|---|
     |Icono de aplicación|167x167<sup>6</sup>|
-    |Principales|120x120<sup>6</sup>|
+    |Noticias destacadas|120x120<sup>6</sup>|
     |Configuración|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|76x76|152 x 152|
-    |Principales|40x40|80x80|
+    |Icono de aplicación|76x76|152x152|
+    |Noticias destacadas|40x40|80x80|
     |Configuración|-|-|
 
 - **iPad: iOS 5 & 6**
@@ -89,7 +89,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|72x72|144x144|
-    |Principales|50x50|100x100|
+    |Noticias destacadas|50x50|100x100|
     |Configuración|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. Tanto Visual Studio para Mac como Xcode ya no admiten la configuración de la imagen 1x para iOS 7.
@@ -107,39 +107,48 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
 
 En el caso de los iconos, se puede Agregar un conjunto de imágenes de `AppIcon` especial al archivo de `Assets.xcassets` en el proyecto de la aplicación. Toda la versión de la imagen necesaria para admitir todas las resoluciones se incluye en _xcasset_ y se agrupa. Un editor especial en Visual Studio para Mac permite al desarrollador incluir y configurar estas imágenes de forma gráfica.
 
-Para utilizar un catálogo de recursos, haga lo siguiente:
+Para usar un catálogo de recursos, siga estos pasos:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
-2. Desplácese hacia abajo hasta la sección iconos de la **aplicación** .
-3. En la lista desplegable **origen** , asegúrese de que está seleccionado **appicos** : 
+2. Desplácese hacia abajo hasta la sección **iconos de iPhone** .
+3. Haga clic en el botón **migrar a catálogo de recursos** :
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
+
 4. En el **Explorador de soluciones**, haga doble clic en el archivo `Assets.xcassets` para abrirlo para su edición: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
+
 5. Seleccione `AppIcon` de la lista de recursos para mostrar el `Icon Editor`:
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
+
 6. Haga clic en el tipo de icono dado y seleccione un archivo de imagen para el tipo o tamaño requerido, o bien arrastre en una imagen de una carpeta y suéltelo en el tamaño deseado.
 7. Haga clic en el botón **abrir** para incluir la imagen en el proyecto y establecerla en xcasset.
 8. Repita el procedimiento con todas las imágenes necesarias.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Haga doble clic en el archivo **info. plist** en el **Explorador de soluciones**:
+1. Haga doble clic en * * info.  \* * archivo en el **Explorador de soluciones**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
+
 2. Haga clic en la pestaña **activos visuales** y haga clic en el botón **usar catálogo de recursos** en iconos de la **aplicación**: 
 
     ![](app-icons-images/icon02w.png "Select the Visual Assets tab")
+
+    Si no hay ningún botón, pero en lugar de una lista desplegable, ya se ha agregado un catálogo de recursos a este proyecto.
+
 3. En el **Explorador de soluciones**, expanda la carpeta del **Catálogo de recursos** : 
 
     ![](app-icons-images/image009.png "Expand the Asset Catalog folder")
+
 4. Haga doble clic en el archivo **multimedia** para abrirlo en el editor: 
 
     ![](app-icons-images/image010.png "Open the Media file in the editor")
+
 5. En el **Explorador de propiedades** , el desarrollador puede seleccionar los distintos tipos y tamaños de los iconos necesarios.
 6. Haga clic en el tipo de icono dado y seleccione un archivo de imagen para el tipo o tamaño requerido.
 7. Haga clic en el botón **abrir** para incluir la imagen en el proyecto y establecerla en xcasset.
@@ -148,36 +157,6 @@ Para utilizar un catálogo de recursos, haga lo siguiente:
 -----
 
 Este es el método preferido de incluir y administrar los recursos de imagen que se usarán para proporcionar iconos de aplicación, de información destacada y de configuración para una aplicación.
-
-### <a name="migrating-from-infoplist-to-asset-catalogs"></a>Migración desde info. plist a catálogos de recursos
-
-En el caso de una aplicación de Xamarin. iOS existente que use el archivo `Info.plist` para administrar sus iconos, se recomienda encarecidamente que el desarrollador la cambie para usar el recurso de imagen `AppIcons` dentro de la `Assets.xcassets`.
-
-Haga lo siguiente:
-
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-
-1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
-2. Desplácese hacia abajo hasta la sección iconos de la **aplicación** .
-3. En la lista desplegable **origen** , seleccione **migrar a catálogos de recursos**: 
-
-    ![](app-icons-images/migrate02.png "Select Migrate to Asset Catalogs")
-4. Los iconos existentes definidos en el archivo `Info.plist` se migrarán a un conjunto de imágenes `AppIcons` agregado a `Assets.xcassets`: 
-
-     ![](app-icons-images/migrate03.png "The AppIcons Image Set in the Assets.xcassets")
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
-2. Haga clic en la sección iconos de iPhone: 
-
-    ![](app-icons-images/image007.png "Rhe iPhone Icons editor")
-3. Desplácese hacia abajo hasta la sección **iconos** .
-4. En la lista desplegable **Catálogo de activos** , seleccione **usar catálogos de recursos**.
-5. Los iconos existentes definidos en el archivo `Info.plist` se migrarán a un conjunto de `Images` agregado a `Assets.xcassets`.
-6. Guarde los cambios en el archivo `Info.plist`.
-
------
 
 <a name="itunes" />
 

@@ -6,12 +6,12 @@ ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
-ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 7b5cb6a93e5dcb958fcb30f0469b8300b169ee86
+ms.sourcegitcommit: cead6f989860331777b0502a5e56269958046517
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739212"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75687432"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure Signalr Service con Xamarin. Forms
 
@@ -20,6 +20,9 @@ ms.locfileid: "68739212"
 ASP.NET Core Signalr es un modelo de aplicación que simplifica el proceso de agregar comunicación en tiempo real a las aplicaciones. Azure Signalr Service permite el desarrollo y la implementación rápidos de aplicaciones de Signalr escalables. Azure Functions son métodos de código sin servidor de corta duración que se pueden combinar para formar aplicaciones escalables orientadas a eventos.
 
 En este artículo y en el ejemplo se muestra cómo combinar Azure Signalr Service y Azure Functions con Xamarin. Forms para ofrecer mensajes en tiempo real a los clientes conectados.
+
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
 ## <a name="create-an-azure-signalr-service-and-azure-functions-app"></a>Creación de un servicio de Azure Signalr y Azure Functions aplicación
 
@@ -31,7 +34,7 @@ La aplicación de ejemplo consta de tres componentes clave: un concentrador de s
 1. La función **Talk** pasa el mensaje entrante al concentrador signalr.
 1. Signalr Hub difunde el mensaje a todas las instancias de aplicaciones móviles conectadas, incluido el remitente original.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Las funciones **Negotiate** y **Talk** de la aplicación de ejemplo se pueden ejecutar localmente mediante Visual Studio 2019 y las herramientas en tiempo de ejecución de Azure. Sin embargo, el servicio Azure Signalr no se puede emular localmente y es difícil exponer Azure Functions hospedadas localmente a dispositivos físicos o virtuales para realizar pruebas. Se recomienda implementar el Azure Functions en una instancia de la aplicación Azure Functions, ya que esto permite realizar pruebas entre plataformas. Para obtener información detallada sobre la implementación, vea [implementar Azure Functions con Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### <a name="create-an-azure-signalr-service"></a>Creación de un servicio de Azure Signalr
@@ -52,7 +55,7 @@ Esta cadena de conexión se usa para [implementar Azure Functions con Visual Stu
 
 Para probar la aplicación de ejemplo, debe crear una nueva Azure Functions aplicación en el Azure Portal. Anote el nombre de la **aplicación** , ya que esta dirección URL se usa en el archivo **constants.CS** de la aplicación de ejemplo. En la captura de pantalla siguiente se muestra la creación de una nueva Azure Functions aplicación denominada "xdocsfunctions":
 
-[![Screenshot de la creación de Azure Functions aplicación](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[![captura de pantalla de la creación de Azure Functions aplicación](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 Azure Functions se puede implementar en una instancia de la aplicación Azure Functions desde Visual Studio 2019. En las secciones siguientes se describe la implementación de dos funciones en la aplicación de ejemplo en una instancia de la aplicación Azure Functions.
 
@@ -205,6 +208,7 @@ public async Task ConnectAsync()
         string negotiateJson = await client.GetStringAsync($"{Constants.HostName}/api/negotiate");
         NegotiateInfo negotiate = JsonConvert.DeserializeObject<NegotiateInfo>(negotiateJson);
         HubConnection connection = new HubConnectionBuilder()
+            .AddNewtonsoftJsonProtocol()
             .WithUrl(negotiate.Url, options =>
             {
                 options.AccessTokenProvider = async () => negotiate.AccessToken;
@@ -225,6 +229,9 @@ public async Task ConnectAsync()
     }
 }
 ```
+
+> [!NOTE]
+> Signalr Service usa `System.Text.Json` para serializar y deserializar JSON de forma predeterminada. Los datos serializados con otras bibliotecas, como Newtonsoft, pueden no ser deserializados por el servicio Signalr. La instancia de `HubConnection` del proyecto de ejemplo incluye una llamada a `AddNewtonsoftJsonProtocol` para especificar el serializador JSON. Este método se define en un paquete de NuGet especial denominado **Microsoft. AspNetCore. signalr. Protocols. NewtonsoftJson** que se debe incluir en el proyecto. Si usa `System.Text.Json` para serializar o deserializar datos JSON, este método y el paquete NuGet no deben usarse.
 
 El método `AddNewMessage` se enlaza como el controlador de eventos en el mensaje de `ConnectAsync` como se muestra en el código anterior. Cuando se recibe un mensaje, se llama al método `AddNewMessage` con los datos del mensaje proporcionados como `JObject`. El método `AddNewMessage` convierte el `JObject` en una instancia de la clase `Message` y, a continuación, invoca el controlador para `NewMessageReceived` si se ha enlazado uno. En el código siguiente se muestra el método `AddNewMessage`:
 
@@ -303,5 +310,5 @@ Una vez que se completen estos pasos y se ejecute la aplicación, al hacer clic 
 * [Creación de aplicaciones móviles en tiempo real con Xamarin y Signalr](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
 * [Introducción a SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introducción a Azure Functions](/azure/azure-functions/functions-overview)
-* [Azure Functions documentación](/azure/azure-functions/)
+* [Documentación de Azure Functions](/azure/azure-functions/)
 * [Ejemplo de chat de Signalr de MVVM](https://github.com/lbugnion/sample-xamarin-signalr)

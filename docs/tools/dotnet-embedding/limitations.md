@@ -6,12 +6,12 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
+ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029743"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545811"
 ---
 # <a name="net-embedding-limitations"></a>Limitaciones de la inserción de .NET
 
@@ -48,5 +48,11 @@ Dado que no se pueden generar anotaciones de nulabilidad precisas en los archivo
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
 Actualmente, la incrustación de .NET no es compatible con Bitcode en iOS, que está habilitado para algunas plantillas de proyecto de Xcode. Tendrá que deshabilitarse para vincular correctamente los marcos generados.
+
+* Para iOS, Bitcode es opcional para enviar aplicaciones a AppStore de Apple. Xamarin. iOS no es compatible con iOS, ya que el Bitcode generado es "ensamblado en línea". Esto no proporciona ninguna ventaja en la plataforma de iOS porque no se puede optimizar en el lado servidor, sino que hace que los archivos binarios sean más grandes y los tiempos de compilación sean más largos.
+
+* Para tvOS y watchos, Bitcode es necesario para enviar aplicaciones a AppStore de Apple. Xamarin. iOS admite Bitcode en tvOS (como "ensamblado en línea") y watchos (como "LLVM/IR") para cumplir este requisito.
+
+* En el caso de macOS, actualmente no se requiere compatibilidad con Bitcode ni con Xamarin. Mac.
 
 ![Opción Bitcode](images/ios-bitcode-option.png)

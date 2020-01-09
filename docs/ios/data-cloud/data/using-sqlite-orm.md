@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e229ad37e8cd5ff940fb5abece7b782b84336d50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fb0981fea906a474d39834a52f0a8bfdf496ca1e
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008162"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488418"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso de SQLite.NET con Xamarin. iOS
 
@@ -21,14 +21,14 @@ ORM representa la asignación relacional de objetos: una API que le permite guar
 
 <a name="Usage"/>
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Usage
 
 Para incluir la biblioteca de SQLite.NET en una aplicación de Xamarin, agregue el siguiente paquete de NuGet al proyecto:
 
 - **Nombre del paquete:** SQLite-net-PCL
 - **Autor:** Frank A. Krueger
 - **Id.:** sqlite-net-pcl
-- **URL:** [Nuget.org/Packages/SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Paquete NuGet de SQLite.NET](using-sqlite-orm-images/image1a-sml.png "Paquete NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -67,7 +67,7 @@ Una vez que tenga la biblioteca SQLite.NET disponible, siga estos tres pasos par
 
 ## <a name="basic-data-access-sample"></a>Ejemplo de acceso a datos básico
 
-El código de ejemplo *DataAccess_Basic* de este documento tiene este aspecto cuando se ejecuta en iOS. En el código se muestra cómo realizar operaciones simples de SQLite.NET y se muestra el resultado como texto en la ventana principal de la aplicación.
+El *DataAccess_Basic* código de ejemplo de este documento tiene este aspecto cuando se ejecuta en iOS. En el código se muestra cómo realizar operaciones simples de SQLite.NET y se muestra el resultado como texto en la ventana principal de la aplicación.
 
 **iOS**
 
@@ -130,13 +130,13 @@ Los atributos comunes que se pueden aplicar a las clases para controlar cómo se
 
 - **[PrimaryKey]** : este atributo se puede aplicar a una propiedad de entero para obligarlo a ser la clave principal de la tabla subyacente. No se admiten las claves principales compuestas.
 - **[AutoIncrement]** : este atributo hará que el valor de una propiedad de entero se incremente automáticamente para cada nuevo objeto insertado en la base de datos.
-- **[Column (Name)]** : proporcionar el parámetro opcional `name` invalidará el valor predeterminado del nombre de la columna de base de datos subyacente (que es igual que la propiedad).
-- **[Table (Name)]** : marca la clase como capaz de almacenarse en una tabla subyacente de SQLite. Si se especifica el parámetro de nombre opcional, se invalidará el valor predeterminado del nombre de la tabla de base de datos subyacente (que es igual que el nombre de clase).
+- **[Column (Name)]** &ndash; el parámetro `name` establece el nombre de la columna de base de datos subyacente.
+- **[Table (Name)]** : marca la clase como capaz de almacenarse en una tabla de SQLite subyacente con el nombre especificado.
 - **[MaxLength (valor)]** : restringir la longitud de una propiedad de texto cuando se intenta insertar una base de datos. El consumo de código debe validar esto antes de insertar el objeto, ya que este atributo solo es ' checked ' cuando se intenta realizar una operación de actualización o inserción de base de datos.
 - **[Ignore]** : hace que SQLite.net omita esta propiedad. Esto es especialmente útil para las propiedades que tienen un tipo que no se puede almacenar en la base de datos, o las propiedades que modelan recopilaciones que no se pueden resolver automáticamente como SQLite.
 - **[Unique]** : garantiza que los valores de la columna de base de datos subyacente son únicos.
 
-La mayoría de estos atributos son opcionales, SQLite usará los valores predeterminados para los nombres de tabla y columna. Siempre debe especificar una clave principal de tipo entero para que las consultas de selección y eliminación se puedan realizar de forma eficaz en los datos.
+La mayoría de estos atributos son opcionales. Siempre debe especificar una clave principal de tipo entero para que las consultas de selección y eliminación se puedan realizar de forma eficaz en los datos.
 
 ## <a name="more-complex-queries"></a>Consultas más complejas
 

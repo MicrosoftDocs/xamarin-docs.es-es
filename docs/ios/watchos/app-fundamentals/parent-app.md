@@ -1,92 +1,45 @@
 ---
-title: Trabajar con la aplicación primaria watchos en Xamarin
-description: En este documento se describe cómo trabajar con una aplicación primaria watchos en Xamarin. Se describen las extensiones de aplicaciones de WatchKit, las aplicaciones de iOS, el almacenamiento compartido y mucho más.
+title: Trabajar con la aplicación principal en Xamarin de watchOS
+description: Este documento describe cómo trabajar con una aplicación de watchOS primaria en Xamarin. Se describen las extensiones de aplicación de watchos, las aplicaciones de iOS, el almacenamiento compartido y mucho más.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 08637fe13b28565e7c6ab1c89b291c6db3b81025
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001476"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487768"
 ---
-# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación primaria watchos en Xamarin
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
-> [!IMPORTANT]
-> El acceso a la aplicación principal con los ejemplos siguientes solo funciona en aplicaciones de inspección de watchos 1.
+Hay diferentes formas de comunicación entre la aplicación del reloj y la aplicación de iOS se incluye con:
 
-Hay diferentes maneras de comunicarse entre la aplicación de inspección y la aplicación iOS con la que está incluida:
+- Las aplicaciones de inspección pueden [ejecutar código](#run-code) en la aplicación primaria en el iPhone.
 
-- Las extensiones de inspección pueden [llamar a un método](#code) en la aplicación primaria que se ejecuta en segundo plano en el iPhone.
+- Ver extensiones puede [comparten una ubicación de almacenamiento](#shared-storage) con la aplicación de iPhone primario.
 
-- Las extensiones de inspección pueden [compartir una ubicación de almacenamiento](#storage) con la aplicación principal de iPhone.
+- Use la entrega para pasar datos de una notificación a la aplicación de inspección y enviar el usuario a un controlador de interfaz específico en la aplicación.
 
-- Usar la entrega para pasar datos de un vistazo o una notificación a la aplicación de inspección, enviando el usuario a un controlador de interfaz específico en la aplicación.
-
-También se hace referencia a la aplicación primaria como la aplicación contenedora.
-
-<a name="code" />
+La aplicación primaria también en ocasiones se conoce como la aplicación de contenedor.
 
 ## <a name="run-code"></a>Ejecutar código
 
-La comunicación entre una extensión de inspección y la aplicación de iPhone primaria se muestra en el [ejemplo GpsWatch](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
-La extensión de inspección puede solicitar a la aplicación de iOS primaria que realice algún procesamiento en su nombre mediante el método de `OpenParentApplication`.
+En estos dos ejemplos se muestra cómo usar `WCSession` para ejecutar código y enviar mensajes entre una aplicación de inspección y el iPhone emparejado:
 
-Esto es especialmente útil para las tareas de larga ejecución (incluidas las solicitudes de red): solo la aplicación de iOS primaria puede aprovechar el procesamiento en segundo plano para completar estas tareas y guardar los datos recuperados en una ubicación accesible para la extensión de inspección.
-
-### <a name="watch-kit-app-extension"></a>Extensión de aplicación del kit de inspección
-
-Llame al `WKInterfaceController.OpenParentApplication` en la extensión de la aplicación de inspección. Devuelve un `bool` que indica si la solicitud del método se envió correctamente o no. Compruebe el parámetro `error` en el `Action` de respuesta para determinar si se ha producido algún error durante el método que se ejecuta en la aplicación de iPhone.
-
-```csharp
-WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, error) => {
-    if(error != null) {
-        Console.WriteLine (error);
-        return;
-    }
-    Console.WriteLine ("parent app responded");
-    // do something with replyInfo[] dictionary
-});
-```
-
-### <a name="ios-app"></a>Aplicación iOS
-
-Todas las llamadas de una extensión de aplicación de inspección se enrutan a través del método de `HandleWatchKitExtensionRequest` de la aplicación de iPhone.
-Si va a realizar diferentes solicitudes en la aplicación de inspección, este método tendrá que consultar el Diccionario de `userInfo` para determinar cómo procesar la solicitud.
-
-```csharp
-[Register ("AppDelegate")]
-public partial class AppDelegate : UIApplicationDelegate
-{
-    // ... other AppDelegate methods
-    public override void HandleWatchKitExtensionRequest
-        (UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
-    {
-        var status = 2;
-        // do something in the background, and respond
-        reply (new NSDictionary (
-            "count", NSNumber.FromInt32 ((int)status),
-            "value2", new NSString("some-info")
-            ));
-    }
-}
-```
-
-<a name="storage" />
+- [Supervisión de la conectividad](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
+- [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
 
 ## <a name="shared-storage"></a>Almacenamiento compartido
 
-Si configura un [grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) , las extensiones de iOS 8 (incluidas las extensiones de inspección) pueden compartir datos con la aplicación primaria.
+Si configura un [grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) , a continuación, las extensiones de iOS 8 (incluidas las extensiones de inspección) pueden compartir datos con la aplicación primaria.
 
-<a name="nsuserdefaults" />
+### <a name="nsuserdefaults"></a>Valores NSUserDefaults
 
-### <a name="nsuserdefaults"></a>NSUserDefaults
-
-El siguiente código se puede escribir en la extensión de la aplicación de inspección y en la aplicación de iPhone primaria para que puedan hacer referencia a un conjunto común de `NSUserDefaults`:
+Se puede escribir el código siguiente en la extensión de la aplicación de inspección y la aplicación de iPhone primario para que puede hacer referencia a un conjunto común de `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -104,9 +57,9 @@ var count = shared.IntForKey ("count");
 
 <a name="files" />
 
-### <a name="files"></a>Archivos
+### <a name="files"></a>Files
 
-La extensión de inspección y aplicación de iOS también puede compartir archivos mediante una ruta de acceso de archivo común.
+La extensión de inspección y aplicación de iOS también puede compartir archivos con una ruta de acceso de archivo comunes.
 
 ```csharp
 var FileManager = new NSFileManager ();
@@ -117,28 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Nota: Si la ruta de acceso es `null` Compruebe la [configuración del grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) para asegurarse de que los perfiles de aprovisionamiento se han configurado correctamente y se han descargado o instalado en el equipo de desarrollo.
+Nota: si la ruta de acceso es `null` , a continuación, compruebe el [configuración del grupo de aplicación](~/ios/watchos/app-fundamentals/app-groups.md) para asegurarse de los perfiles de aprovisionamiento se han configurado correctamente y han sido descargado o instalado en el equipo de desarrollo.
 
-Para obtener más información, consulte la documentación sobre las [funcionalidades del grupo de aplicaciones](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
-
-## <a name="wormholesharp"></a>WormHoleSharp
-
-Un conocido mecanismo de código abierto para watchos 1 (basado en [MMWormHole](https://github.com/mutualmobile/MMWormhole)) para pasar datos o comandos entre la aplicación primaria y la aplicación de inspección.
-
-Puede configurar el túnel espacial mediante un grupo de aplicaciones como este en la aplicación iOS y la extensión de inspección:
-
-```csharp
-// AppDelegate (iOS) or InterfaceController (watch extension)
-Wormhole wormHole;
-// ...
-wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
-```
-
-Descargue la C# versión [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
+Para obtener más información, consulte el [las capacidades de grupos de aplicación](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GpsWatch (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WormHoleSharp (ejemplo)](https://github.com/Clancey/WormHoleSharp)
 - [Referencia de WKInterfaceController de Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Uso compartido de datos de Apple con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Apple compartir datos con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

@@ -6,13 +6,13 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2019
-ms.openlocfilehash: 0ad31bc6f84ae633a9a18592a00670703db19df9
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/17/2019
+ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697876"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488234"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Datos de Xamarin. Forms CarouselView
 
@@ -249,7 +249,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La clase `MonkeyDataTemplateSelector` define `AmericanMonkey` y `OtherMonkey` propiedades de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se establecen en distintas plantillas de datos. La invalidación `OnSelectTemplate` devuelve la plantilla de `AmericanMonkey` cuando el nombre Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", el reemplazo `OnSelectTemplate` devuelve la plantilla de `OtherMonkey`, que muestra los datos atenuados:
+La clase `MonkeyDataTemplateSelector` define las propiedades `AmericanMonkey` y `OtherMonkey` de tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que se establecen para diferentes plantillas de datos. La invalidación `OnSelectTemplate` devuelve la plantilla de `AmericanMonkey` cuando el nombre Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", el reemplazo `OnSelectTemplate` devuelve la plantilla de `OtherMonkey`, que muestra los datos atenuados:
 
 [![Captura de pantalla de selección de plantilla de elemento de tiempo de ejecución de CarouselView, en iOS y Android](populate-data-images/datatemplateselector.png "Selección de plantilla de elementos en tiempo de ejecución en un CarouselView")](populate-data-images/datatemplateselector-large.png#lightbox "Selección de plantilla de elementos en tiempo de ejecución en un CarouselView")
 
@@ -257,6 +257,34 @@ Para obtener más información sobre los selectores de plantilla de datos, vea [
 
 > [!IMPORTANT]
 > Al utilizar [`CarouselView`](xref:Xamarin.Forms.CarouselView), no establezca nunca el elemento raíz de los objetos [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) en un `ViewCell`. Esto hará que se produzca una excepción porque `CarouselView` no tiene ningún concepto de celdas.
+
+## <a name="display-indicators"></a>Mostrar indicadores
+
+Los indicadores, que representan el número de elementos y la posición actual en un `CarouselView`, se pueden mostrar junto al `CarouselView`. Esto puede realizarse con el control `IndicatorView`:
+
+```xaml
+<StackLayout>
+    <CarouselView x:Name="carouselView"
+                  ItemsSource="{Binding Monkeys}">
+        <CarouselView.ItemTemplate>
+            <!-- DataTemplate that defines item appearance -->
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView ItemsSourceBy="carouselView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+</StackLayout>
+```
+
+En este ejemplo, el `IndicatorView` se representa debajo del `CarouselView`, con un indicador para cada elemento de la `CarouselView`. El `IndicatorView` se rellena con datos estableciendo la propiedad `ItemsSourceBy` en el objeto `CarouselView`. Cada indicador es un círculo gris claro, mientras que el indicador que representa el elemento actual del `CarouselView` es gris oscuro:
+
+[![Captura de pantalla de CarouselView y IndicatorView en iOS y Android](populate-data-images/indicators.png "Círculos IndicatorView")](populate-data-images/indicators-large.png#lightbox "Círculos IndicatorView")
+
+> [!IMPORTANT]
+> Al establecer la propiedad `ItemsSourceBy`, se produce el enlace de la propiedad `IndicatorView.Position` a la propiedad `CarouselView.Position` y la propiedad `IndicatorView.ItemsSource` enlaza a la propiedad `CarouselView.ItemsSource`.
+
+Para obtener más información sobre los indicadores, consulte [Xamarin. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
 ## <a name="pull-to-refresh"></a>Extraer para actualizar
 
@@ -351,6 +379,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [IndicatorView de Xamarin. Forms](~/xamarin-forms/user-interface/indicatorview.md)
 - [RefreshView de Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [Enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Plantillas de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

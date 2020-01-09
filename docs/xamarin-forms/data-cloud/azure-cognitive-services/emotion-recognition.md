@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 4dedcb0869c1e965679812239b1de09f07efa875
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869394"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487625"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones percibido mediante el Face API
 
@@ -20,11 +20,16 @@ ms.locfileid: "68869394"
 
 El Face API puede realizar la detección de emociones para detectar enojo, desprecio, asco, miedo, felicidad, neutralidad, tristeza y sorpresa, en una expresión facial en función de las anotaciones percibidas por los codificadores humanos. Sin embargo, es importante tener en cuenta que las expresiones faciales solas no representan necesariamente los Estados internos de las personas.
 
-Además de devolver un resultado de emoción para una expresión facial, el Face API también puede devolver un cuadro de límite para los rostros detectados. Tenga en cuenta que se debe obtener una clave de API para usar Face API. Esto puede obtenerse en [pruebe Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Además de devolver un resultado de emoción para una expresión facial, el Face API también puede devolver un cuadro de límite para los rostros detectados.
 
 Reconocimiento de emociones puede realizarse a través de una biblioteca de cliente y una API de REST. En este artículo se centra en realizar el reconocimiento de emociones a través de la API de REST. Para obtener más información acerca de la API de REST, consulte [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
 Face API puede usarse también para reconocer las expresiones faciales de personas en vídeo y puede devolver un resumen de sus emociones. Para obtener más información, consulte [cómo analizar vídeos en tiempo real](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
+
+> [!NOTE]
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
+
+Se debe obtener una clave de API para usar el Face API. Esto puede obtenerse en [pruebe Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Para obtener más información acerca de Face API, consulte [Face API](/azure/cognitive-services/face/overview/).
 
@@ -79,7 +84,7 @@ Este método genera un URI de solicitud y, a continuación, envía la solicitud 
 > [!NOTE]
 > Debe usar la misma región en las llamadas de Face API que utilizó para obtener las claves de suscripción. Por ejemplo, si ha obtenido las claves de suscripción desde el `westus` región, que será el punto de conexión de detección de caras `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### <a name="send-the-request"></a>Enviar la solicitud
+### <a name="send-the-request"></a>Envío de la solicitud
 
 El `SendRequestAsync` método realiza la solicitud POST a Face API y devuelve el resultado como un `Face` matriz:
 
@@ -130,7 +135,7 @@ A continuación, se envía la solicitud POST a `detect` API. La respuesta es lee
 
 El `detect` API enviará el código de estado HTTP 200 (OK) en la respuesta, siempre que la solicitud es válida, lo que indica que la solicitud es correcta y que la información solicitada está en la respuesta. Para obtener una lista de posibles respuestas de error, consulte [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
-### <a name="process-the-response"></a>Procesar la respuesta
+### <a name="process-the-response"></a>Procesamiento de la respuesta
 
 Se devuelve la respuesta de API en formato JSON. Los siguientes datos JSON muestran un mensaje de respuesta correcta típico que proporciona los datos solicitados por la aplicación de ejemplo:
 
@@ -170,7 +175,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 Captura de pantalla siguiente muestra el resultado del proceso de reconocimiento de emociones en la aplicación de ejemplo:
 
-![](emotion-recognition-images/emotion-recognition.png "Reconocimiento de emociones")
+![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

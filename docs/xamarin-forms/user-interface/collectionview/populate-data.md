@@ -6,13 +6,13 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 12/11/2019
+ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662328"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488183"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Datos de CollectionView de Xamarin. Forms
 
@@ -242,7 +242,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La clase `MonkeyDataTemplateSelector` define `AmericanMonkey` y `OtherMonkey` propiedades de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se establecen en distintas plantillas de datos. La invalidación `OnSelectTemplate` devuelve la plantilla de `AmericanMonkey`, que muestra el nombre y la ubicación de Monkey en verde azulado, cuando el nombre de Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", el reemplazo `OnSelectTemplate` devuelve la plantilla de `OtherMonkey`, que muestra el nombre y la ubicación de Monkey en Silver:
+La clase `MonkeyDataTemplateSelector` define las propiedades `AmericanMonkey` y `OtherMonkey` de tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que se establecen para diferentes plantillas de datos. La invalidación `OnSelectTemplate` devuelve la plantilla de `AmericanMonkey`, que muestra el nombre y la ubicación de Monkey en verde azulado, cuando el nombre de Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", el reemplazo `OnSelectTemplate` devuelve la plantilla de `OtherMonkey`, que muestra el nombre y la ubicación de Monkey en Silver:
 
 [![Captura de pantalla de selección de plantilla de elemento de tiempo de ejecución de CollectionView, en iOS y Android](populate-data-images/datatemplateselector.png "Selección de plantilla de elementos en tiempo de ejecución en una CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Selección de plantilla de elementos en tiempo de ejecución en una CollectionView")
 
@@ -250,6 +250,85 @@ Para obtener más información sobre los selectores de plantilla de datos, vea [
 
 > [!IMPORTANT]
 > Al utilizar [`CollectionView`](xref:Xamarin.Forms.CollectionView), no establezca nunca el elemento raíz de los objetos [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) en un `ViewCell`. Esto hará que se produzca una excepción porque `CollectionView` no tiene ningún concepto de celdas.
+
+## <a name="context-menus"></a>Menús contextuales
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite menús contextuales para elementos de datos a través de la `SwipeView`, que revela el menú contextual con un gesto de deslizar rápidamente. El `SwipeView` es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual para ese elemento de contenido. Por lo tanto, los menús contextuales se implementan para un `CollectionView` mediante la creación de una `SwipeView` que define el contenido que se ajusta a la `SwipeView` y los elementos de menú contextual que se revelan mediante el gesto de deslizar rápidamente. Esto se logra estableciendo el `SwipeView` como la vista raíz en el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada elemento de datos en el `CollectionView`:
+
+```xaml
+<CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Favorite"
+                                   IconImageSource="favorite.png"
+                                   BackgroundColor="LightGreen"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                   CommandParameter="{Binding}" />
+                        <SwipeItem Text="Delete"
+                                   IconImageSource="delete.png"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                   CommandParameter="{Binding}" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Grid BackgroundColor="White"
+                      Padding="10">
+                    <!-- Define item appearance -->
+                </Grid>
+            </SwipeView>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+
+collectionView.ItemTemplate = new DataTemplate(() =>
+{
+    // Define item appearance
+    Grid grid = new Grid { Padding = 10, BackgroundColor = Color.White };
+    // ...
+
+    SwipeView swipeView = new SwipeView();
+    SwipeItem favoriteSwipeItem = new SwipeItem
+    {
+        Text = "Favorite",
+        IconImageSource = "favorite.png",
+        BackgroundColor = Color.LightGreen
+    };
+    favoriteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.FavoriteCommand", source: collectionView));
+    favoriteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    SwipeItem deleteSwipeItem = new SwipeItem
+    {
+        Text = "Delete",
+        IconImageSource = "delete.png",
+        BackgroundColor = Color.LightPink
+    };
+    deleteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.DeleteCommand", source: collectionView));
+    deleteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    swipeView.LeftItems = new SwipeItems { favoriteSwipeItem, deleteSwipeItem };
+    swipeView.Content = grid;    
+    return swipeView;
+});
+```
+
+En este ejemplo, el contenido de la `SwipeView` es un [`Grid`](xref:Xamarin.Forms.Grid) que define la apariencia de cada elemento en la [`CollectionView`](xref:Xamarin.Forms.CollectionView). Los elementos de deslizamiento se utilizan para realizar acciones en el contenido de la `SwipeView` y se revelan cuando el control se desliza rápidamente desde el lado izquierdo:
+
+[![Captura de pantalla de elementos de menú contextual de CollectionView, en iOS y Android](populate-data-images/swipeview.png "CollectionView con elementos de menú contextual de SwipeView")](populate-data-images/swipeview-large.png#lightbox "CollectionView con elementos de menú contextual de SwipeView")
+
+`SwipeView` admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección de `SwipeItems` direccional a la que se agregan los objetos `SwipeItems`. De forma predeterminada, se ejecuta un dedo al puntear en el usuario. Además, una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y se vuelve a mostrar el contenido de la `SwipeView`. Sin embargo, estos comportamientos se pueden cambiar.
+
+Para obtener más información sobre el control de `SwipeView`, consulte [Xamarin. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Extraer para actualizar
 
@@ -344,6 +423,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 - [CollectionView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [RefreshView de Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
+- [SwipeView de Xamarin. Forms](~/xamarin-forms/user-interface/swipeview.md)
 - [Enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Plantillas de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creación de un DataTemplateSelector de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
