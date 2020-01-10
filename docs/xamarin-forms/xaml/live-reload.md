@@ -8,12 +8,12 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: 9fb085313e994adc486833bb25e893659aa33b4b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032756"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728348"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
@@ -22,7 +22,7 @@ ms.locfileid: "73032756"
 
 La recarga en vivo de Xamarin permite **realizar cambios en el código XAML y verlos reflejados en directo, sin necesidad de volver a compilar e implementar**. Cualquier cambio realizado en el código XAML se volverá a implementar al guardarlo y se reflejará en el destino de implementación.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 * [Visual Studio 2017 versión 15,7 o superior](https://visualstudio.microsoft.com/vs/) con la carga de trabajo **desarrollo para dispositivos móviles con .net** .
 * [Xamarin. Forms 3.0.0 o superior](https://www.nuget.org/packages/Xamarin.Forms/).
@@ -121,21 +121,21 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 * Los elementos que contienen AutomationId pueden producir un error de recarga.
 * La edición de XAML durante la depuración de UWP puede producir un bloqueo en tiempo de ejecución. Solución alternativa: use **iniciar sin depurar (Ctrl + F5)** en lugar de **iniciar depuración (F5)** .
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="error-codes"></a>Códigos de error
 
 * **XLR001**: *el proyecto actual hace referencia a la versión del paquete NuGet ' Xamarin. LiveReload ', pero la extensión de la recarga activa de Xamarin requiere la versión ' [Version] '.*
 
-  Con el fin de permitir la iteración rápida y la evolución de la característica de recarga en directo, el paquete Nuget y la extensión de Visual Studio deben coincidir exactamente. Actualice el paquete Nuget a la misma versión de la extensión que ha instalado.
+  Con el fin de permitir la iteración rápida y la evolución de la característica de recarga en directo, el paquete NuGet y la extensión de Visual Studio deben coincidir exactamente. Actualice el paquete NuGet a la misma versión de la extensión que ha instalado.
 
 * **XLR002**: *la recarga en vivo requiere al menos la propiedad ' MqttHostname ' al compilar desde la línea de comandos. También puede establecer ' EnableLiveReload ' en ' false ' para deshabilitar la característica.*
 
   Las propiedades requeridas por la recarga en directo no están disponibles al compilar desde la línea de comandos (o en la integración continua) y, por tanto, se deben proporcionar explícitamente. 
 
-* **XLR003**: *el paquete Nuget de recarga en vivo requiere la instalación de la extensión de Visual Studio de Xamarin Live reload.*
+* **XLR003**: *el paquete NuGet de recarga en vivo requiere la instalación de la extensión de Visual Studio de Xamarin Live reload.*
 
-  Se intentó compilar un proyecto que hace referencia al paquete Nuget de recarga en directo, pero la extensión visual no está instalada.  
+  Se intentó compilar un proyecto que hace referencia al paquete NuGet de recarga en directo, pero la extensión visual no está instalada.  
 
 * *Excepción al cargar ensamblados: System. IO. FileNotFoundException: no se pudo cargar el ensamblado ' Xamarin. Live. Reload, version = 0.3.27.0, Culture = neutral, PublicKeyToken = '.*
 
@@ -143,7 +143,7 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 
 ### <a name="app-doesnt-connect"></a>La aplicación no se conecta
 
-Cuando se compila la aplicación, la información de **herramientas > opciones > Xamarin > la recarga en vivo** (nombre de host, puerto y claves de cifrado) se insertan en la aplicación, de modo que, cuando se ejecuta `LiveReload.Init()`, no es necesario ningún emparejamiento ni configuración para la conexión a Ejecute.
+Cuando se compila la aplicación, la información de **herramientas > opciones > Xamarin > la recarga en vivo** (nombre de host, puerto y claves de cifrado) se insertan en la aplicación, de modo que, cuando se ejecuta `LiveReload.Init()`, no es necesario ningún emparejamiento ni configuración para que la conexión se realice correctamente.
 
 Aparte de los problemas de red normales (firewall, dispositivo en una red diferente), el motivo principal por el que la aplicación puede no conectarse correctamente al IDE es porque su configuración difiere de la de Visual Studio. Esto puede ocurrir si:
 
@@ -160,9 +160,9 @@ Si tiene una versión preliminar anterior y tiene problemas para desinstalarla, 
 1. Elimine la carpeta C:\Archivos de programa **(x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Nota: reemplace "Enterprise" por la edición instalada y "Preview" por "2017" Si instaló en una versión estable frente a)
 2. Abra un **símbolo del sistema para desarrolladores** de Visual Studio y ejecute `devenv /updateconfiguration`. 
 
-## <a name="tips--tricks"></a>Sugerencias & trucos
+## <a name="tips--tricks"></a>Sugerencias y trucos
 
-* Siempre y cuando la configuración de recarga en directo no cambie (incluidas las claves de cifrado, por ejemplo, si desactiva la generación **automática de claves de cifrado**) y se compila desde el mismo equipo, no es necesario compilar e implementar la aplicación después de la implementación inicial, a menos que cambie código o dependencias. Simplemente puede volver a iniciar una aplicación implementada previamente y se conectará al último host usado.
+* Siempre y cuando la configuración de recarga en directo no cambie (incluidas las claves de cifrado, por ejemplo, si desactiva la **generación automática de claves de cifrado**) y se compila desde el mismo equipo, no es necesario compilar e implementar la aplicación después de la implementación inicial, a menos que cambies el código o las dependencias. Simplemente puede volver a iniciar una aplicación implementada previamente y se conectará al último host usado.
 
 * No hay ninguna limitación en cuanto al número de dispositivos que se pueden conectar a la misma sesión de Visual Studio. Puede implementar e iniciar la aplicación en tantos dispositivos/simuladores como sea necesario para ver la recarga en directo que funciona en todos ellos al mismo tiempo.
 
@@ -170,7 +170,7 @@ Si tiene una versión preliminar anterior y tiene problemas para desinstalarla, 
 
 ## <a name="live-reload-server"></a>Servidor de recarga en vivo
 
-En escenarios en los que no es posible establecer una conexión desde la aplicación en ejecución a su equipo (como se indica mediante `localhost` o `127.0.0.1` en **herramientas > opciones > Xamarin > Live Reload**) (es decir, firewalls, redes diferentes), puede configurar un servidor remoto. en su lugar, el IDE y la aplicación se conectarán a.
+En escenarios en los que no es posible establecer una conexión desde la aplicación en ejecución a su equipo (como se indica mediante `localhost` o `127.0.0.1` en **herramientas > opciones > Xamarin > Live Reload**) (es decir, firewalls, redes diferentes), puede configurar un servidor remoto en su lugar, al que el IDE y la aplicación se conectarán.
 
 La recarga en vivo usa el [Protocolo MQTT](https://mqtt.org/) estándar para intercambiar mensajes y, por tanto, se puede comunicar con [servidores de terceros](https://github.com/mqtt/mqtt.github.io/wiki/servers). Hay incluso [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (también conocidos como *agentes*) disponibles que puede usar. La recarga en vivo se ha probado con `broker.hivemq.com` y `iot.eclipse.org` nombres de host, así como los servicios proporcionados por [www.cloudmqtt.com](https://www.cloudmqtt.com) y [www.cloudamqp.com](https://www.cloudamqp.com). También puede implementar su propio servidor de MQTT en la nube, como [HiveMQ en Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 

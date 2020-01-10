@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013988"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728181"
 ---
 # <a name="general-frequently-asked-questions"></a>Preguntas frecuentes generales
 
@@ -33,7 +33,7 @@ Las actualizaciones, extensiones y complementos de NuGet se pueden encontrar en 
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[¿Cómo se puede cambiar a una versión anterior un paquete NuGet?](nuget-package-downgrade.md)
 Visual Studio para Mac & Visual Studio tienen características para seleccionar versiones anteriores de paquetes e instalarlas automáticamente. similar al funcionamiento de los paquetes de actualización.
 
-### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Error de paquetes que faltan después de actualizar paquetes Nuget](nuget-packages-missing.md)
+### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Error de paquetes que faltan después de actualizar paquetes NuGet](nuget-packages-missing.md)
 Este problema se ha comunicado principalmente en las soluciones de aplicación de ejemplo de Xamarin. Forms, pero la posibilidad de este problema puede producirse en cualquier proyecto que use paquetes de NuGet.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Unificación de componentes de Google Play Services y NuGet](gps-components-nuget.md)
@@ -42,7 +42,7 @@ Solía haber varios componentes de Google Play Services y paquetes NuGet, pero p
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[¿Dónde se almacenan los componentes en mi equipo?](component-storage.md)
 Siempre que se instala un componente de Xamarin en un proyecto de aplicación, se coloca en las dos ubicaciones enumeradas en esta guía.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[¿Dónde se puede encontrar mi información de versión y los registros?](version-logs.md)
 En esta guía se detalla dónde encontrar la mayoría de la información de diagnóstico que se puede usar para solucionar problemas de Xamarin.
 

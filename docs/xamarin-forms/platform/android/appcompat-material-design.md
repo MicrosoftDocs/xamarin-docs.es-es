@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005453"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728335"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Agregar AppCompat y el diseño de material
 
@@ -21,13 +21,13 @@ _Siga estos pasos para convertir aplicaciones de Android de Xamarin. Forms exist
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 En estas instrucciones se explica cómo actualizar las aplicaciones Android existentes de Xamarin. Forms para usar la biblioteca AppCompat y habilitar el diseño de material en la versión de Android de las aplicaciones de Xamarin. Forms.
 
 ### <a name="1-update-xamarinforms"></a>1. actualizar Xamarin. Forms
 
-Asegúrese de que la solución usa Xamarin. Forms 2,0 o una versión más reciente. Actualice el paquete de Nuget de Xamarin. Forms a 2,0 si es necesario.
+Asegúrese de que la solución usa Xamarin. Forms 2,0 o una versión más reciente. Actualice el paquete de NuGet de Xamarin. Forms a 2,0 si es necesario.
 
 ### <a name="2-check-android-version"></a>2. comprobar la versión de Android
 
@@ -39,7 +39,7 @@ Asegúrese de que la plataforma de destino del proyecto de Android es Android 6,
 
 Cree los tres archivos siguientes en el proyecto de Android y péguelo en el contenido siguiente. Google proporciona una [Guía de estilo](https://www.google.com/design/spec/style/color.html#color-color-palette) y un [generador de paletas de colores](https://www.materialpalette.com/) para ayudarle a elegir una combinación de colores alternativa para la especificada.
 
-**Resources/Values/colors. XML**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Cree los tres archivos siguientes en el proyecto de Android y péguelo en el con
 </resources>
 ```
 
-**Resources/Values/Style. XML**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Cree los tres archivos siguientes en el proyecto de Android y péguelo en el con
 
 Se debe incluir un estilo adicional en la carpeta **Values-V21** para aplicar propiedades específicas cuando se ejecuta en un círculo de Android y versiones más recientes.
 
-**Resources/Values-V21/Style. XML**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,7 +84,7 @@ Se debe incluir un estilo adicional en la carpeta **Values-V21** para aplicar pr
 
 Para asegurarse de que se usa esta nueva información de tema, establezca tema en el archivo **archivo AndroidManifest** agregando `android:theme="@style/MyTheme"` (deje el resto del código XML tal como estaba).
 
-**Propiedades/archivo AndroidManifest. XML**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...

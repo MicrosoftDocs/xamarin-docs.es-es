@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5965b3f78bfc086b1cc6030a02f1cabafaae29d3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e71ff86869c42d478fbf1ee3f6de5bff59431fc
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016750"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728218"
 ---
 # <a name="editing-nuget-metadata"></a>Edición de metadatos de NuGet
 
@@ -27,7 +27,7 @@ La pestaña **General** contiene cuatro campos que se deben especificar para gen
 
 [![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
 
-- **ID** : el identificador del paquete, que debe ser único en Nuget.org (o donde se distribuirá el paquete). Siga esta [Guía](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y use únicamente caracteres que sean válidos en una dirección URL (sin espacios y eviten la mayoría de los caracteres especiales).
+- **ID** : el identificador del paquete, que debe ser único en NuGet.org (o donde se distribuirá el paquete). Siga esta [Guía](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y use únicamente caracteres que sean válidos en una dirección URL (sin espacios y eviten la mayoría de los caracteres especiales).
 - **Versión** : elija un número de versión coherente con [las reglas de control de versiones de NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
 - **Autores** : lista de nombres separados por comas.
 - **Descripción** : información general de las características del paquete que se muestra cuando los usuarios seleccionan el paquete.

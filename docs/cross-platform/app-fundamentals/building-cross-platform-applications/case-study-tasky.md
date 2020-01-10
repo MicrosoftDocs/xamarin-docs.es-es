@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a94baa66c1ca18762efccd980264170648c232fa
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030333"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728296"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Caso práctico de aplicación multiplataforma: tarea
 
@@ -25,7 +25,7 @@ Es aconsejable crear una de mapa de carreteras para lo que desea lograr antes de
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos de
 
 El primer paso para diseñar una aplicación es identificar las características deseadas. Estos pueden ser objetivos de alto nivel o casos de uso detallados. Tasky tiene requisitos funcionales sencillos:
 
@@ -52,7 +52,7 @@ Saber qué datos deben almacenarse le ayudará a determinar qué mecanismo de pe
 
 Tasky necesita almacenar tres propiedades para cada ' TaskItem ':
 
-- **Name** : cadena
+- **Name**: cadena
 - **Notas** : cadena
 - **Done** : booleano
 
@@ -115,7 +115,7 @@ Nota: verá que los proyectos hacen referencia a las bibliotecas de Framework qu
 
 La capa de datos contiene el código que realiza el almacenamiento físico de los datos, ya sea en una base de datos, en archivos planos u otros mecanismos. La capa de datos de tareas está compuesta de dos partes: la biblioteca SQLite-NET y el código personalizado agregado para conectarla.
 
-Tasky se basa en el paquete de Nuget SQLite-net (publicado por Frank Kreuger) para insertar el código SQLite-NET que proporciona una interfaz de base de datos de asignación relacional de objetos (ORM). La clase `TaskItemDatabase` hereda de `SQLiteConnection` y agrega los métodos de creación, lectura, actualización y eliminación (CRUD) necesarios para leer y escribir datos en SQLite. Es una implementación simple reutilizable de métodos CRUD genéricos que se pueden volver a usar en otros proyectos.
+Tasky se basa en el paquete de NuGet SQLite-net (publicado por Frank Kreuger) para insertar el código SQLite-NET que proporciona una interfaz de base de datos de asignación relacional de objetos (ORM). La clase `TaskItemDatabase` hereda de `SQLiteConnection` y agrega los métodos de creación, lectura, actualización y eliminación (CRUD) necesarios para leer y escribir datos en SQLite. Es una implementación simple reutilizable de métodos CRUD genéricos que se pueden volver a usar en otros proyectos.
 
 El `TaskItemDatabase` es un singleton, asegurándose de que todo el acceso se produce en la misma instancia. Se usa un bloqueo para evitar el acceso simultáneo de varios subprocesos.
 
@@ -251,7 +251,7 @@ En las secciones restantes se describen los detalles de implementación específ
 
  <a name="iOS_App" />
 
-## <a name="ios-app"></a>Aplicación iOS
+## <a name="ios-app"></a>Aplicación de iOS
 
 Solo hay unas cuantas clases necesarias para implementar la aplicación de tareas de iOS mediante el proyecto de PCL común para almacenar y recuperar datos. A continuación se muestra el proyecto de Xamarin. iOS completo de iOS:
 
@@ -324,7 +324,7 @@ La capa de interfaz de usuario consta de las siguientes clases:
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Pantalla principal
+#### <a name="home-screen"></a>Pantalla Inicio
 
 La pantalla principal es un `MonoTouch.Dialog` pantalla que muestra una lista de tareas de la base de datos SQLite. Hereda de `DialogViewController` e implementa código para establecer el `Root` para que contenga una colección de objetos `TaskItem` para su presentación.
 
@@ -341,7 +341,7 @@ Los dos métodos principales relacionados con la visualización e interacción c
 
 Detalles de tarea es una pantalla de entrada que permite editar o eliminar tareas.
 
-Tasky usa la API de reflexión de `MonoTouch.Dialog` para mostrar la pantalla, por lo que no hay ninguna implementación `UIViewController`. En su lugar, la clase `HomeScreen` crea una instancia de y muestra un `DialogViewController` mediante la clase `TaskDialog` de la capa de aplicación.
+Tasky usa la API de reflexión de `MonoTouch.Dialog`para mostrar la pantalla, por lo que no hay ninguna implementación `UIViewController`. En su lugar, la clase `HomeScreen` crea una instancia de y muestra un `DialogViewController` mediante la clase `TaskDialog` de la capa de aplicación.
 
 En esta captura de pantalla se muestra una pantalla vacía que muestra el atributo `Entry` estableciendo el texto de marca de agua en los campos **nombre** y **notas** :
 
@@ -381,7 +381,7 @@ También debe hacer referencia al proyecto PCL (por ejemplo, TaskyPortableLibrar
 
 De forma similar a la versión de iOS que vimos anteriormente, la capa de aplicación en la versión de Android contiene clases específicas de la plataforma necesarias para "enlazar" los objetos expuestos por el núcleo a la interfaz de usuario.
 
- **TaskListAdapter** : para mostrar una lista \<T > de objetos, es necesario implementar un adaptador para mostrar los objetos personalizados en un `ListView`. El adaptador controla qué diseño se usa para cada elemento de la lista; en este caso, el código usa un diseño integrado Android `SimpleListItemChecked`.
+ **TaskListAdapter** : para mostrar una lista\<t > de los objetos, es necesario implementar un adaptador para mostrar los objetos personalizados en un `ListView`. El adaptador controla qué diseño se usa para cada elemento de la lista; en este caso, el código usa un diseño integrado Android `SimpleListItemChecked`.
 
  <a name="User_Interface_(UI)" />
 
@@ -395,7 +395,7 @@ La capa de interfaz de usuario de la aplicación Android es una combinación de 
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Pantalla principal
+#### <a name="home-screen"></a>Pantalla Inicio
 
 La pantalla principal está formada por una subclase de actividad `HomeScreen` y el archivo de `HomeScreen.axml` que define el diseño (posición del botón y la lista de tareas). La pantalla tiene el siguiente aspecto:
 

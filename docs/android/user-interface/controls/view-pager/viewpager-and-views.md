@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 65a613f229f04a4ab01ca73a9c53c026add49f84
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029042"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728153"
 ---
 # <a name="viewpager-with-views"></a>ViewPager con vistas
 
 _ViewPager es un administrador de diseño que le permite implementar la navegación de gestural. La navegación Gestural permite al usuario desplazarse a la izquierda y a la derecha para recorrer las páginas de datos. En esta guía se explica cómo implementar una interfaz de usuario que se pueda deslizar con ViewPager y PagerTabStrip mediante las vistas como páginas de datos (en una guía posterior se explica cómo usar los fragmentos de las páginas)._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Esta guía es un tutorial que proporciona una demostración paso a paso de cómo usar `ViewPager` para implementar una galería de imágenes de árboles deciduous y perennes. En esta aplicación, el usuario se desliza a la izquierda y a la derecha a través de un "Catálogo de árboles" para ver las imágenes de árbol. En la parte superior de cada página del catálogo, el nombre del árbol se muestra en un`PagerTabStrip`y se muestra una imagen del árbol en un `ImageView`. Un adaptador se utiliza para interactuar el `ViewPager` con el modelo de datos subyacente. Esta aplicación implementa un adaptador derivado de `PagerAdapter`. 
 
@@ -28,7 +28,7 @@ Aunque a menudo las aplicaciones basadas en `ViewPager`se implementan con `Fragm
 
 Cree un nuevo proyecto de Android denominado **TreePager** (vea [Hola, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obtener más información sobre la creación de nuevos proyectos de Android). A continuación, inicie el administrador de paquetes NuGet. (Para obtener más información sobre la instalación de paquetes NuGet, vea [Tutorial: incluir un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Buscar e instalar la **biblioteca de compatibilidad de Android V4**: 
 
-[![captura de pantalla de la compatibilidad de Nuget V4 seleccionada en el administrador de paquetes NuGet](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
+[![captura de pantalla de la compatibilidad de NuGet V4 seleccionada en el administrador de paquetes NuGet](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 También se instalarán los paquetes adicionales reaquired de la **biblioteca de compatibilidad de Android V4**.
 
@@ -91,7 +91,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Este código hace lo siguiente:
+Este código realiza lo siguiente:
 
 1. Establece la vista a partir del recurso de diseño **Main. axml** .
 
@@ -207,7 +207,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Este código hace lo siguiente:
+Este código realiza lo siguiente:
 
 1. Crea una nueva `ImageView` para mostrar la imagen de árbol en la posición especificada. La `MainActivity` de la aplicación es el contexto que se pasará al constructor de `ImageView`.
 
@@ -234,17 +234,17 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Este código hace lo siguiente:
+Este código realiza lo siguiente:
 
 1. Convierte el `View` del contenedor pasado en una referencia `ViewPager`.
 
-2. Convierte el objeto Java (`view`) pasado en un C#`View`(`view as View`);
+2. Convierte el objeto Java (`view`) pasado en un C# `View` (`view as View`);
 
 3. Quita la vista de la `ViewPager`. 
 
 ### <a name="implement-isviewfromobject"></a>Implementación de IsViewFromObject
 
-A medida que el usuario se desliza hacia la izquierda y la derecha a través de las páginas de contenido, `ViewPager` llama a `IsViewFromObject` para comprobar que el `View` secundario en la posición especificada está asociado con el objeto del adaptador para la misma posición (por lo tanto, el objeto del adaptador se denomina *clave de objeto* ). En el caso de las aplicaciones relativamente sencillas, la asociación es una identidad &ndash; la clave de objeto del adaptador en esa instancia es la vista que se devolvió previamente al `ViewPager` a través de `InstantiateItem`. Sin embargo, para otras aplicaciones, la clave del objeto puede ser alguna otra instancia de la clase específica del adaptador que esté asociada a la vista secundaria, pero no a la misma, que `ViewPager` muestra en esa posición. Solo el adaptador sabe si la vista y la clave de objeto que se han pasado están asociadas. 
+A medida que el usuario se desliza hacia la izquierda y la derecha a través de las páginas de contenido, `ViewPager` llama a `IsViewFromObject` para comprobar que el `View` secundario en la posición especificada está asociado al objeto del adaptador para la misma posición (por lo tanto, el objeto del adaptador se denomina *clave de objeto*). En el caso de las aplicaciones relativamente sencillas, la asociación es una identidad &ndash; la clave de objeto del adaptador en esa instancia es la vista que se devolvió previamente al `ViewPager` a través de `InstantiateItem`. Sin embargo, para otras aplicaciones, la clave del objeto puede ser alguna otra instancia de la clase específica del adaptador que esté asociada a la vista secundaria, pero no a la misma, que `ViewPager` muestra en esa posición. Solo el adaptador sabe si la vista y la clave de objeto que se han pasado están asociadas. 
 
 `IsViewFromObject` debe implementarse para que `PagerAdapter` funcione correctamente. Si `IsViewFromObject` devuelve `false` para una posición determinada, `ViewPager` no mostrará la vista en esa posición. En la aplicación `TreePager`, la clave de objeto devuelta por `InstantiateItem` *es* la página `View` de un árbol, por lo que el código solo tiene que comprobar la identidad (es decir, la clave de objeto y la vista son una y la misma). Reemplaza `IsViewFromObject` por el código siguiente: 
 

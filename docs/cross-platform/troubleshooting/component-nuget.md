@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014340"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728257"
 ---
 # <a name="updating-component-references-to-nuget"></a>Actualización de referencias de componentes a NuGet
 
@@ -37,7 +37,7 @@ Si carga un proyecto en Visual Studio, se muestra el cuadro de diálogo siguient
 
 Para quitar un componente del proyecto:
 
-1. Abra el archivo **. csproj** . Para ello, haga clic con el botón derecho en el nombre del proyecto y seleccione **descargar el proyecto**. 
+1. Abra el archivo **.csproj**. Para ello, haga clic con el botón derecho en el nombre del proyecto y seleccione **descargar el proyecto**. 
 
 2. Vuelva a hacer clic con el botón derecho en el proyecto descargado y seleccione **Editar {your-Project-Name}. csproj**.
 
@@ -137,7 +137,7 @@ Para actualizar la solución, elimine la entrada del **componente** de la soluci
 
 ![Eliminar componente](component-nuget-images/delete-component-sml.png)
 
-El paquete NuGet permanecerá en la lista del nodo **paquetes** y la aplicación se compilará y ejecutará como de costumbre. En el futuro, las actualizaciones de este paquete se realizarán a través de la característica de actualización de **Nuget** :
+El paquete NuGet permanecerá en la lista del nodo **paquetes** y la aplicación se compilará y ejecutará como de costumbre. En el futuro, las actualizaciones de este paquete se realizarán a través de la característica de actualización de **NuGet** :
 
 ![Actualización del paquete NuGet](component-nuget-images/nuget-update-sml.png)
 
@@ -174,7 +174,7 @@ Haga clic con el botón derecho en el componente de la solución y elija **quita
 
 Esto eliminará el componente y las referencias. Esto interrumpirá la compilación hasta que agregue el paquete de NuGet equivalente para reemplazarlo.
 
-#### <a name="add-the-nuget-package"></a>Adición del paquete NuGet
+#### <a name="add-the-nuget-package"></a>Incorporación del paquete NuGet
 
 1. Haga clic con el botón derecho en el nodo **paquetes** y elija **agregar paquetes.** ...
 2. Busque el reemplazo de NuGet por nombre o autor:

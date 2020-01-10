@@ -6,12 +6,12 @@ ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 100ef7ffd7e05db0ed8b2af6b9990fc3a0ac1fa9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0b2fd92eb9157b561708eafe10d341381fa21543
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014148"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728205"
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Unificación de componentes de Google Play Services y NuGet
 
@@ -59,6 +59,6 @@ Dado que ya no son necesarios, hemos deshabilitado o eliminado de la lista los s
 - Google Play Services (JellyBean)
 - Google Play Services (KitKat)
 
-El nombre del componente de _Google Play Services (ICS)_ existente/Nuget ha cambiado a _Google Play Services_ y se mantendrá actualizado en el futuro. Todos los proyectos que hacen referencia a uno de los paquetes deshabilitados o delistados deben actualizarse para usar este.
+El nombre del componente de _Google Play Services (ICS)_ existente/NuGet ha cambiado a _Google Play Services_ y se mantendrá actualizado en el futuro. Todos los proyectos que hacen referencia a uno de los paquetes deshabilitados o delistados deben actualizarse para usar este.
 
 Los componentes deshabilitados todavía existen y deben restaurarse para los proyectos a los que todavía se hace referencia, para evitar que se interrumpan. De igual forma, los paquetes NuGet que se han deslistado siguen existiendo y se pueden restaurar. No se actualizarán en el futuro.

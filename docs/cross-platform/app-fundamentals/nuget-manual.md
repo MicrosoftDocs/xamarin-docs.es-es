@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016775"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728231"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes NuGet para Xamarin
 
@@ -26,7 +26,7 @@ El sitio web de NuGet que [admite varias versiones y perfiles de .NET Framework]
 
 Las principales plataformas de destino de Xamarin que se usan hoy en día son:
 
-- **Monoandroid** -Xamarin. Android
+- **MonoAndroid** - Xamarin.Android
 - **Xamarin. iOS** : [Unified API](~/cross-platform/macios/unified/index.md) de Xamarin. iOS (admite 64 bits)
 - **Xamarin. Mac** : perfil móvil de Xamarin. Mac, que es equivalente a la superficie de la API de Xamarin. iOS y Xamarin. Android.
 
@@ -79,5 +79,5 @@ Algunos ejemplos de código abierto a los que puede hacer referencia:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Nugetizer-3000 creación automatizada de Nuget](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Nugetizer-3000 creación automatizada de NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [Inclusión de un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: cbea7686c2ec96492f9531e1ff30d1686db1a4c0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031774"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728270"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilidad con iOS 9
 
@@ -46,7 +46,7 @@ Se recomienda comprobar explícitamente que Visual Studio se ha actualizado a la
 **No** es necesario esperar a las nuevas versiones de los componentes o paquetes Nuget que usa para solucionar los dos problemas mencionados anteriormente.
 Estos problemas se corrigen simplemente volviendo a compilar la aplicación con la versión estable más reciente de Xamarin. iOS.
 
-Del mismo modo, **no** es necesario que los proveedores de componentes y los autores de Nuget envíen nuevas compilaciones solo para corregir los dos problemas mencionados anteriormente. Sin embargo, si un componente o Nuget usa `UICollectionView` o carga vistas de archivos **Xib** , *puede* ser necesaria una actualización para solucionar los problemas de compatibilidad de iOS 9 que se mencionan a continuación.
+Del mismo modo, **no** es necesario que los proveedores de componentes y los autores de NuGet envíen nuevas compilaciones solo para corregir los dos problemas mencionados anteriormente. Sin embargo, si un componente o NuGet usa `UICollectionView` o carga vistas de archivos **Xib** , *puede* ser necesaria una actualización para solucionar los problemas de compatibilidad de iOS 9 que se mencionan a continuación.
 
 <a name="compat" />
 

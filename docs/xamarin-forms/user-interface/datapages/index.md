@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759684"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75727945"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de formularios de Xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está actualmente en versión preliminar")
+![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
 > Las páginas de formularios requieren una referencia de tema de Xamarin. Forms para representar. Esto implica la instalación del paquete de Nuget [Xamarin. Forms. theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de los paquetes de Nuget [Xamarin. Forms. theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin. Forms. theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -27,23 +27,23 @@ DataSourceControl proporciona una API para enlazar de forma rápida y sencilla u
 
 Para ver cómo funciona la demo de la ponencia de evolución, consulte la [Guía de introducción](get-started.md).
 
-[![](images/demo-sml.png "Aplicación de ejemplo DataSourceControl")](images/demo.png#lightbox "aplicación de ejemplo DataSourceControl")
+[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
 
 ## <a name="introduction"></a>Introducción
 
 Los orígenes de datos y las páginas de datos asociadas permiten a los desarrolladores consumir de forma rápida y sencilla un origen de datos compatible y representarlo mediante la técnica de la interfaz de usuario integrada que se puede personalizar con los temas.
 
-Las páginas de tipos se agregan a una aplicación de Xamarin. Forms incluyendo el paquete de Nuget de **Xamarin. Forms. pages** .
+Las páginas de tipos se agregan a una aplicación de Xamarin. Forms incluyendo el paquete de NuGet de **Xamarin. Forms. pages** .
 
 ### <a name="data-sources"></a>Orígenes de datos
 
 La vista previa tiene algunos orígenes de datos predefinidos disponibles para su uso:
 
 * **JsonDataSource**
-* **AzureDataSource** (Nuget independiente)
-* **AzureEasyTableDataSource** (Nuget independiente)
+* **AzureDataSource** (NuGet independiente)
+* **AzureEasyTableDataSource** (NuGet independiente)
 
-Vea la [Guía de introducción](get-started.md) para obtener un ejemplo de `JsonDataSource`uso de.
+Vea la [Guía de introducción](get-started.md) para obtener un ejemplo de uso de un `JsonDataSource`.
 
 ### <a name="pages--controls"></a>Páginas & controles
 
@@ -59,15 +59,15 @@ Se incluyen las siguientes páginas y controles para permitir un enlace sencillo
 
 Vea la [referencia de controles de páginas de página](controls.md) para obtener ejemplos.
 
-### <a name="under-the-hood"></a>En el capó
+### <a name="under-the-hood"></a>Aspectos técnicos
 
-Un origen de datos de Xamarin. Forms se `IDataSource` adhiere a la interfaz.
+Un origen de datos de Xamarin. Forms se adhiere a la interfaz `IDataSource`.
 
 La infraestructura de Xamarin. Forms interactúa con un origen de datos a través de las siguientes propiedades:
 
-* `Data`: una lista de solo lectura de los elementos de datos que se pueden mostrar.
+* `Data`: lista de solo lectura de los elementos de datos que se pueden mostrar.
 * `IsLoading`: un valor booleano que indica si los datos se cargan y están disponibles para su representación.
 * `[key]`: un indexador para recuperar elementos.
 
-Hay dos métodos `UnmaskKey` que `MaskKey` se pueden usar para ocultar (o mostrar) las propiedades de los elementos de datos (es decir, impedir que se representen).
+Hay dos métodos `MaskKey` y `UnmaskKey` que se pueden usar para ocultar (o mostrar) las propiedades de los elementos de datos (es decir, impedir que se representen).
 La clave corresponde a una propiedad con nombre en el objeto de elemento de datos.

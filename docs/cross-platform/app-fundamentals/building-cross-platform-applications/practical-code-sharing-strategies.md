@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fdc9fd6eac8c7b0c9ec91eb66b5d6723cda71006
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016837"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728244"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5: Estrategias prácticas de uso compartido de código
 
@@ -155,7 +155,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 Hacer referencia a Xamarin.iOS [trabajar con el sistema de archivos](~/ios/app-fundamentals/file-system.md) documento para obtener más información sobre la funcionalidad del sistema de archivos específicos de iOS. Al escribir código de acceso de archivo multiplataforma, recuerde que algunos sistemas de archivos distinguen mayúsculas de minúsculas y tienen separadores de directorio diferente. Es recomendable usar siempre el mismo uso de mayúsculas y minúsculas para nombres de archivo y la `Path.Combine()` método al construir rutas de acceso de archivo o directorio.
@@ -190,7 +190,7 @@ Las API de almacenamiento aislado no están disponibles en [bibliotecas de clase
 
 ### <a name="cross-platform-file-access-in-pcls"></a>Acceso de archivo entre plataformas en las PCL
 
-También es compatible con PCL Nuget – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) – ese acceso a los archivos de desarrollo multiplataforma instalaciones para plataformas compatibles con Xamarin y las API de Windows más recientes.
+También hay una NuGet compatible con PCL, [PCLStorage](https://www.nuget.org/packages/PCLStorage/) , que permite el acceso a archivos multiplataforma para plataformas compatibles con Xamarin y las API de Windows más recientes.
 
 ## <a name="network-operations"></a>Operaciones de red
 
@@ -205,7 +205,7 @@ Mayoría de aplicaciones móviles tendrán componente de red, por ejemplo:
 
 ### <a name="httpclient"></a>HttpClient
 
-El `HttpClient` clase en el `System.Net.Http` espacio de nombres está disponible en la mayoría de las plataformas Windows, Xamarin.Android y Xamarin.iOS. Hay un [Nuget de la biblioteca de cliente de Microsoft HTTP](https://www.nuget.org/packages/Microsoft.Net.Http/) que se puede utilizar para poner esta API en bibliotecas de clases portables (y Windows Phone 8 Silverlight).
+El `HttpClient` clase en el `System.Net.Http` espacio de nombres está disponible en la mayoría de las plataformas Windows, Xamarin.Android y Xamarin.iOS. Hay una [biblioteca de cliente http de Microsoft NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) que se puede usar para incorporar esta API en bibliotecas de clases portables (y Windows Phone 8 Silverlight).
 
 ```csharp
 var client = new HttpClient();
