@@ -7,18 +7,18 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
+ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032202"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75753016"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC principal en Xamarin. iOS
 
 _Lectura de etiquetas de transmisión de campos en proximidad (NFC) mediante iOS 11_
 
-CoreNFC es un nuevo marco de trabajo de iOS 11 que proporciona acceso a la radio de _transmisión de campos en proximidad_ (NFC) para leer etiquetas de dentro de las aplicaciones. Funciona en iPhone 7, 7 más, 8, 8 Plus y X.
+CoreNFC es un nuevo marco de trabajo de iOS 11 que proporciona acceso a la radio de _transmisión de campos en proximidad_ (NFC) para leer etiquetas de dentro de las aplicaciones. CoreNFC funciona en iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS y iPhone 11 Models (mientras que los modelos iPhone 6 y iPhone 6 más tienen la funcionalidad de pago de NFC, no admiten CoreNFC).
 
 El lector de etiquetas NFC en dispositivos iOS es compatible con todos los tipos de etiqueta NFC de 1 a 5 que contienen información del _formato de intercambio de datos NFC_ (NDEF).
 
@@ -31,7 +31,7 @@ Hay algunas restricciones que se deben tener en cuenta:
 
 En esta página se describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API con el [código de ejemplo "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Configuración
+## <a name="configuration"></a>Configuración de
 
 Para habilitar CoreNFC, debe configurar tres elementos en el proyecto:
 
