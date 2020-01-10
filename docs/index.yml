@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: 45f34dbe05005da323ae21f0f3ac40db97538773
-  ms.sourcegitcommit: 2dea02d0c7497cd5a5cbdce5a26ae33540d78dcc
+  ms.openlocfilehash: fa152418c40ac61df15e8a22b838d012935bee4b
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/27/2019
-  ms.locfileid: "74550064"
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679719"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -46,7 +46,7 @@ productDirectory:
     imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
     links:
     - url: ~/android/get-started/hello-android/hello-android-quickstart.md
-      text: Crear una aplicación para Android
+      text: Compilación de una aplicación Android
     - url: ~/android/platform/android-10.md
       text: Android 10
     - url: ~/android/index.yml
@@ -55,7 +55,7 @@ productDirectory:
     imageSrc: https://docs.microsoft.com/media/common/i_web-apps.svg
     links:
     - url: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-      text: Crear una aplicación para iOS
+      text: Compilación de una aplicación iOS
     - url: ~/ios/platform/ios13/index.md
       text: iOS 13
     - url: ~/ios/index.yml
@@ -104,7 +104,7 @@ conceptualContent:
       itemType: tutorial
     footerLink:
       url: ~/get-started/tutorials/index.yml
-      text: Ver más
+      text: Más información
   - title: Aprovechamiento de sus conocimientos
     links:
     - text: Escritorio de .NET (UWP, WPF, WinForms)
@@ -179,7 +179,7 @@ additionalContent:
       - text: Implementación y pruebas
         url: ~/xamarin-forms/deploy-test/index.yml
       - text: Conceptos avanzados y funcionamiento interno
-        url: ~/xamarin-forms/internals/index.yml
+        url: ~/xamarin-forms/internals/index.md
       - text: Muestras
         url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
     - title: Android

@@ -1,75 +1,75 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Características de la plataforma de Xamarin.Forms
+summary: Aprenda a usar diversas técnicas para aprovechar las características específicas de cada plataforma en Xamarin.Forms.
 metadata:
   title: Características de la plataforma de Xamarin.Forms
-  description: Obtenga información sobre cómo usar diversas técnicas para aprovechar las características específicas de cada plataforma en Xamarin.Forms.
+  description: Aprenda a usar diversas técnicas para aprovechar las características específicas de cada plataforma en Xamarin.Forms.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/23/2019
-abstract:
-  description: Obtenga información sobre cómo usar diversas técnicas para aprovechar las características específicas de cada plataforma en Xamarin.Forms.
-sections:
-  - title: Características específicas de las plataformas
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: android/index.md
-            html: 'Obtenga información sobre cómo usar las características específicas de la plataforma Android proporcionadas por Xamarin.Forms, y sobre cómo actualizar las aplicaciones existentes de Android de Xamarin.Forms para que usen Material Design.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
-              href: android/index.md
-            title: Android
-          - href: ios/index.md
-            html: Obtenga información sobre cómo usar las características específicas de la plataforma iOS proporcionadas por Xamarin.Forms y sobre cómo aplicar un estilo adicional de iOS.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: ios/index.md
-            title: iOS
-          - href: windows/index.md
-            html: Obtenga información sobre cómo usar las características específicas de la plataforma UWP proporcionadas por Xamarin.Forms y cómo agregar un proyecto de UWP a una solución existente de Xamarin.Forms.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
-              href: windows/index.md
-            title: Windows
-          - href: platform-specifics/index.md
-            html: Obtenga información sobre las características específicas de cada plataforma y sobre cómo los proveedores pueden crear características específicas de la plataforma con Effects.
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: platform-specifics/index.md
-            title: Crear características específicas de las plataformas
-  - title: Características de la plataforma
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: device.md
-            html: Obtenga información sobre cómo usar la clase Device para proporcionar un control detallado de la funcionalidad y los diseños en cada plataforma.
-            image:
-              src: ~/media/icons/i_desktop-phone.svg
-              href: device.md
-            title: Clase de dispositivo
-          - href: native-forms.md
-            html: 'Obtenga información sobre cómo usar las páginas derivadas de ContentPage de Xamarin.Forms para proyectos nativos de Xamarin.iOS, Xamarin.Android y UWP.'
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: native-forms.md
-            title: Formularios nativos
-          - href: native-views/index.md
-            html: 'Obtenga información sobre cómo se puede hacer referencia directamente a las vistas nativas de Android, iOS y la Plataforma universal de Windows desde aplicaciones de Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: native-views/index.md
-            title: Vistas nativas
-          - href: sign-in-with-apple/index.md
-            html: Obtenga información sobre cómo usar el Inicio de sesión con Apple en Android y iOS para proporcionar una mayor privacidad de usuario.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: sign-in-with-apple/index.md
-            title: Inicio de sesión con Apple
+  ms.date: 12/30/2019
+  ms.openlocfilehash: c95416d35a54dfd5954318ea068a4c70622dc1a1
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679654"
+landingContent:
+- title: Android
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Desplazamiento rápido ListView
+      url: android/listview-fast-scrolling.md
+    - text: Deslizamiento de página TabbedPage
+      url: android/tabbedpage-page-swiping.md
+    - text: Diseño de materiales
+      url: android/appcompat-material-design.md
+    - text: Elevación VisualElement
+      url: android/visualelement-elevation.md
+    - text: Ver más >
+      url: android/index.md
+- title: iOS
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Color del cursor de entrada
+      url: ios/entry-cursor-color.md
+    - text: Títulos de página grandes
+      url: ios/page-large-title.md
+    - text: Visibilidad del indicador de página principal
+      url: ios/page-home-indicator.md
+    - text: Control deslizante mediante toques
+      url: ios/slider-thumb.md
+    - text: Ver más >
+      url: ios/index.md
+- title: Windows
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Modo de selección de ListView
+      url: windows/listview-selectionmode.md
+    - text: Dirección de arrastre de RefreshView
+      url: windows/refreshview-pulldirection.md
+    - text: Spell Check SearchBar
+      url: windows/searchbar-spell-check.md
+    - text: Iconos de la pestaña TabbedPage
+      url: windows/tabbedpage-icons.md
+    - text: Ver más >
+      url: windows/index.md
+- title: Características de la plataforma
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Características específicas de las plataformas
+      url: platform-specifics/index.md
+    - text: Clase de dispositivo
+      url: device.md
+    - text: Formularios nativos
+      url: native-forms.md
+    - text: Vistas nativas
+      url: native-views/index.md
+    - text: Inicio de sesión con Apple
+      url: sign-in-with-apple/index.md

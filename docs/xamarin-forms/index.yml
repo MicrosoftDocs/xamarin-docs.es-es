@@ -9,12 +9,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 11/06/2019
-  ms.openlocfilehash: a5289c5b1935ec133b0f823a7fbebe307a8606a6
-  ms.sourcegitcommit: 2dea02d0c7497cd5a5cbdce5a26ae33540d78dcc
+  ms.openlocfilehash: e8269c87513c127c24fbfa3b93963300c41d8eae
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/27/2019
-  ms.locfileid: "74550081"
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75680136"
 highlightedContent:
   items:
   - title: ¿Qué es Xamarin.Forms?
@@ -96,7 +96,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/app-fundamentals/index.yml
-      text: Ver más
+      text: Más información
   - title: Interfaz de usuario
     links:
     - text: CollectionView
@@ -113,7 +113,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/user-interface/index.yml
-      text: Ver más
+      text: Más información
   - title: Lenguaje XAML de Xamarin.Forms
     links:
     - text: XAML Basics (Conceptos básicos de XAML)
@@ -130,7 +130,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/xaml/index.yml
-      text: Ver más
+      text: Más información
   - title: Características de la plataforma
     links:
     - text: Características específicas de Android
@@ -147,7 +147,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/platform/index.yml
-      text: Ver más
+      text: Más información
   - title: Xamarin.Essentials
     links:
     - text: Primeros pasos
@@ -164,7 +164,7 @@ conceptualContent:
       itemType: reference
     footerLink:
       url: ~/essentials/index.md?context=xamarin/xamarin-forms
-      text: Ver más
+      text: Más información
   - title: Datos y Azure Cloud Services
     links:
     - text: Control de archivos
@@ -181,7 +181,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/data-cloud/index.yml
-      text: Ver más
+      text: Más información
   - title: Implementación y prueba
     links:
     - text: Pruebas automatizadas con Visual Studio App Center
@@ -198,7 +198,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/deploy-test/index.yml
-      text: Ver más
+      text: Más información
   - title: Conceptos avanzados y funcionamiento interno
     links:
     - text: Jerarquía de clases de controles
@@ -214,8 +214,8 @@ conceptualContent:
       url: ~/xamarin-forms/internals/sourcelink.md
       itemType: concept
     footerLink:
-      url: ~/xamarin-forms/internals/index.yml
-      text: Ver más
+      url: ~/xamarin-forms/internals/index.md
+      text: Más información
 additionalContent:
   sections:
   - title: Libros

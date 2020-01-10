@@ -1,117 +1,63 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Diseños de Xamarin. Forms
+### YamlMime:Landing
+title: Diseños de Xamarin.Forms
+summary: Conozca las clases y los conceptos de diseño de Xamarin.Forms.
 metadata:
-  title: Diseños de Xamarin. Forms
-  description: Obtenga información sobre las clases de diseño y las características de diseño de Xamarin. Forms.
+  title: Diseños de Xamarin.Forms
+  description: Conozca las clases y los conceptos de diseño de Xamarin.Forms.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/14/2019
-abstract:
-  description: Obtenga información sobre las clases de diseño y las características de diseño de Xamarin. Forms.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: choose-layout.md
-            html: Obtenga información sobre cómo las clases de diseño principales de Xamarin.Forms colocan sus elementos secundarios y cambian el tamaño de estos.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: choose-layout.md
-            title: Elección de un diseño
-          - href: stack-layout.md
-            html: 'Obtenga información sobre cómo organizar las vistas en una pila unidimensional, ya sea horizontal o verticalmente.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stack-layout.md
-            title: StackLayout
-          - href: grid.md
-            html: 'Obtenga información sobre cómo organizar las vistas en filas y columnas, que pueden tener tamaños proporcionales o absolutos.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: grid.md
-            title: Cuadrícula
-          - href: flex-layout.md
-            html: Obtenga información sobre cómo organizar las vistas horizontal o verticalmente con ajuste.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: flex-layout.md
-            title: FlexLayout
-          - href: relative-layout.md
-            html: 'Obtenga información sobre cómo organizar las vistas estableciendo restricciones, con respecto a las propiedades de las vistas de diseño o del mismo nivel.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: RelativeLayout
-          - href: absolute-layout.md
-            html: 'Obtenga información sobre cómo organizar las vistas estableciendo valores de coordenadas y de tamaño, que pueden ser proporcionales o absolutos.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
-          - href: scroll-view.md
-            html: Obtenga información acerca de cómo proporcionar desplazamiento cuando una vista no cabe dentro de los límites de la pantalla.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: scroll-view.md
-            title: ScrollView
-          - href: contentview.md
-            html: Obtenga información sobre cómo usar ContentView para crear un control personalizado.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: contentview.md
-            title: ContentView
-          - href: frame.md
-            html: 'Obtenga información sobre cómo ajustar una vista con un marco que se puede configurar con color, sombra paralela y otras opciones.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: frame.md
-            title: Fotograma
-          - href: layout-options.md
-            html: Obtenga información sobre cómo definir la alineación de una vista dentro de su diseño primario.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-options.md
-            title: LayoutOptions
-          - href: margin-and-padding.md
-            html: 'Obtenga información sobre cómo controlar la distancia entre un elemento, sus elementos adyacentes y sus elementos secundarios.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: margin-and-padding.md
-            title: Margen y relleno
-          - href: device-orientation.md
-            html: Obtenga información sobre cómo configurar y responder a los cambios de orientación del dispositivo.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: device-orientation.md
-            title: Orientación del dispositivo
-          - href: tablet.md
-            html: Obtenga información acerca de cómo optimizar el diseño de las aplicaciones de escritorio y de tabletas.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: tablet.md
-            title: Diseño para tabletas y escritorios
-          - href: bindable-layouts.md
-            html: Obtenga información sobre cómo habilitar las clases de diseño para generar su contenido y establecer su apariencia creando un enlace con una colección de elementos.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: bindable-layouts.md
-            title: Diseños enlazables
-          - href: layout-compression.md
-            html: 'Obtenga información sobre cómo quitar objetos de diseño específicos del árbol visual, en un intento de mejorar el rendimiento de la representación de páginas.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-compression.md
-            title: Compresión de diseño
-          - href: custom.md
-            html: Obtenga información sobre cómo crear una clase de diseño personalizado con distinción de orientación.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: custom.md
-            title: Diseño personalizado
+  ms.date: 01/03/2020
+  ms.openlocfilehash: e8d3e6d57bab88c85f0058ee2c974d932bd07b37
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679745"
+landingContent:
+- title: Diseños principales
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Elección de un diseño
+      url: choose-layout.md
+    - text: AbsoluteLayout
+      url: absolute-layout.md
+    - text: FlexLayout
+      url: flex-layout.md
+    - text: Cuadrícula
+      url: grid.md
+    - text: RelativeLayout
+      url: relative-layout.md
+    - text: StackLayout
+      url: stack-layout.md
+- title: Diseños adicionales
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ContentView
+      url: contentview.md
+    - text: Fotograma
+      url: frame.md
+    - text: ScrollView
+      url: scroll-view.md
+- title: Conceptos de diseño
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Diseños enlazables
+      url: bindable-layouts.md
+    - text: Diseños personalizados
+      url: custom.md
+    - text: Orientación del dispositivo
+      url: device-orientation.md
+    - text: LayoutOptions
+      url: layout-options.md
+    - text: Compresión de diseño
+      url: layout-compression.md
+    - text: Margen y relleno
+      url: margin-and-padding.md
+    - text: Diseños para tabletas y escritorios
+      url: tablet.md
