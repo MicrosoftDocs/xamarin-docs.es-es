@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: 238011b4762f2d394629e75fbde476e618219df2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 31066d09b1e753dd054a6a908b626ca3edee008e
+ms.sourcegitcommit: 04929b5ff4384ca807727bec7c0467111a7eb283
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016359"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75867613"
 ---
 # <a name="available-assemblies"></a>Ensamblados disponibles
 
@@ -36,47 +36,47 @@ Estos son los ensamblados disponibles en el **Administrador de referencias > ens
 > [!div class="mx-tdCol2BreakAll"]
 > |Ensamblado|Compatibilidad de API|Xamarin iOS|Xamarin Android|Mac de Xamarin|
 > |--------|-----------------|-----------|---------------|-----------|
-> |FSharp.Core.dll| |✓|✓|✓|
-> |l18N. dll|Incluye CJK, Oriente bajo, otros, poco frecuentes, oeste|✓|✓|✓|
-> |Microsoft.CSharp.dll| |✓|✓|✓|
-> |Mono.CSharp.dll| |✓|✓|✓|
-> |Mono.Data.Sqlite.dll|Proveedor ADO.NET para SQLite; vea limitaciones.|✓|✓|✓|
-> |Mono.Data.Tds.dll|Compatibilidad con el protocolo TDS; se usa para la compatibilidad con [System. Data. SqlClient](xref:System.Data.SqlClient) dentro de [System. Data](xref:System.Data).|✓|✓|✓|
-> |Mono. Dynamic. &#8203;Intérprete. dll| |✓| | |
-> |Mono.Security.dll|API criptográficas.|✓|✓|✓|
-> |monotouch.dll|Este ensamblado contiene C# el enlace a la API de CocoaTouch. Esto solo está disponible en proyectos de iOS clásicos.|✓| | |
-> |MonoTouch. &#8203;Dialog-1. dll| |✓| | |
-> |MonoTouch. &#8203;NUnitLite. dll| |✓| | |
-> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |OpenTK-1.0.dll|Las API orientadas a objetos abiertos y OpenGL, ampliadas para proporcionar compatibilidad con dispositivos iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres:<br />System.Collections.Specialized<br />Integrado. &#8203;ComponentModel<br />System. ComponentModel. Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System .net. cache<br />System.Net.Mail<br />System .net. MIME<br />System.Net. &#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System. Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System. Security. &#8203;AccessControl<br />System.Security.Authentication<br />System. Security. &#8203;Criptografía de<br />System.Security.Permissions<br />System.Threading<br />System. Timers|✓|✓|✓|
-> |Integrado. &#8203;ComponentModel. &#8203;Composición. dll| |✓|✓|✓|
-> |Integrado. &#8203;ComponentModel. &#8203;DataAnnotations. dll| |✓|✓|✓|
-> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx) , con [alguna funcionalidad eliminada](~/ios/data-cloud/system.data.md).|✓|✓|✓|
-> |System. Data. &#8203;Servicios de. &#8203;Client. dll|Cliente oData completo.|✓|✓|✓|
-> |System.IO. &#8203;Compresión de| |✓|✓|✓|
-> |System.IO. &#8203;Compresión. &#8203;Sistema de archivos| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Net. &#8203;Http. dll| |✓|✓|✓|
-> |Integrado. &#8203;Numerics. dll| |✓|✓|✓|
-> |System. Runtime. &#8203;Serialization. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Integrado. &#8203;ServiceModel. dll|Pila de WCF tal como está presente en [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Integrado. &#8203;ServiceModel. &#8203;Internal. dll| |✓|✓|✓|
-> |Integrado. &#8203;ServiceModel. &#8203;Web. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres: <br />Sistema<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |Integrado. &#8203;Transacciones. dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); parte de la compatibilidad con [System. Data](~/ios/data-cloud/system.data.md) .|✓|✓|✓|
-> |System. Web. &#8203;Services. dll|Servicios web básicos del perfil de .NET 3,5, con las características de servidor quitadas.|✓|✓|✓|
-> |Integrado. &#8203;Windows. dll| |✓|✓|✓|
-> |Integrado. &#8203;Xml. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System. Xml. &#8203;Linq. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.Serialization.dll| |✓|✓|✓|
-> |Xamarin.iOS.dll|Este ensamblado contiene C# el enlace a la API de CocoaTouch. Solo se utiliza en proyectos de iOS unificados.|✓| | |
-> |Java.Interop.dll| | |✓| |
-> |Mono.Android.dll| | |✓| |
-> |Mono. Android. &#8203;Exportar. dll| | |✓| |
-> |Mono.Posix.dll| | |✓| |
-> |Integrado. &#8203;EnterpriseServices. dll| | |✓| |
-> |Xamarin. Android. &#8203;NUnitLite. dll| | |✓| |
-> |Mono. CompilerServices. &#8203;SymbolWriter. dll|Para escritores de compiladores.| | |✓|
-> |Xamarin.Mac.dll| | | |✓|
-> |Integrado. &#8203;Drawing. dll|System. Drawing no se admite en el Unified API para los marcos de trabajo de Xamarin. Mac, .NET 4,5 o Mobile. Se puede Agregar compatibilidad con System. Drawing a iOS y macOS mediante la biblioteca [sysdrawing-CoreGraphics](https://github.com/mono/sysdrawing-coregraphics)|✓| |✓|
+> |FSharp.Core.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |l18N. dll|Incluye CJK, Oriente bajo, otros, poco frecuentes, oeste|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Microsoft.CSharp.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Mono.CSharp.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Mono.Data.Sqlite.dll|Proveedor ADO.NET para SQLite; vea limitaciones.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Mono.Data.Tds.dll|Compatibilidad con el protocolo TDS; se usa para la compatibilidad con [System. Data. SqlClient](xref:System.Data.SqlClient) dentro de [System. Data](xref:System.Data).|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Mono.Dynamic.&#8203;Interpreter.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| | |
+> |Mono.Security.dll|API criptográficas.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |monotouch.dll|Este ensamblado contiene C# el enlace a la API de CocoaTouch. Esto solo está disponible en proyectos de iOS clásicos.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| | |
+> |MonoTouch.&#8203;Dialog-1.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| | |
+> |MonoTouch.&#8203;NUnitLite.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| | |
+> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |OpenTK-1.0.dll|Las API orientadas a objetos abiertos y OpenGL, ampliadas para proporcionar compatibilidad con dispositivos iPhone.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;ComponentModel.&#8203;Composition.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Data.dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx) , con [alguna funcionalidad eliminada](~/ios/data-cloud/system.data.md).|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Data.&#8203;Services.&#8203;Client.dll|Cliente oData completo.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.IO. &#8203;Compresión de| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.IO.&#8203;Compression.&#8203;FileSystem| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Net.&#8203;Http.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;Numerics.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;ServiceModel.dll|Pila de WCF tal como está presente en [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;ServiceModel.&#8203;Internals.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;Transactions.dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); parte de la compatibilidad con [System. Data](~/ios/data-cloud/system.data.md) .|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Web.&#8203;Services.dll|Servicios web básicos del perfil de .NET 3,5, con las características de servidor quitadas.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;Windows.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.Xml.Serialization.dll| |![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")|![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")|![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Xamarin.iOS.dll|Este ensamblado contiene C# el enlace a la API de CocoaTouch. Solo se utiliza en proyectos de iOS unificados.|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| | |
+> |Java.Interop.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |Mono.Android.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |Mono.Android.&#8203;Export.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |Mono.Posix.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |System.&#8203;EnterpriseServices.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |Xamarin.Android.&#8203;NUnitLite.dll| | |![Xamarin. Android compatible](~/media/shared/yes.png "Xamarin. Android compatible")| |
+> |Mono.CompilerServices.&#8203;SymbolWriter.dll|Para escritores de compiladores.| | |![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |Xamarin.Mac.dll| | | |![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
+> |System.&#8203;Drawing.dll|System. Drawing no se admite en el Unified API para los marcos de trabajo de Xamarin. Mac, .NET 4,5 o Mobile. Se puede Agregar compatibilidad con System. Drawing a iOS y macOS mediante la biblioteca [sysdrawing-CoreGraphics](https://github.com/mono/sysdrawing-coregraphics)|![Se admite Xamarin. iOS](~/media/shared/yes.png "Se admite Xamarin. iOS")| |![Xamarin. Mac compatible](~/media/shared/yes.png "Xamarin. Mac compatible")|
