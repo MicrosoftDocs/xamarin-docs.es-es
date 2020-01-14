@@ -612,9 +612,10 @@
       items:
         - name: Información general
           href: deploy-test/index.md
-        - name: App Distribution (Distribución de aplicaciones)
-          href: deploy-test/app-distribution/index.md
+        - name: Distribución de aplicaciones
           items:
+            - name: Información general
+              href: deploy-test/app-distribution/index.md
             - name: Distribución a través del App Store
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items:
