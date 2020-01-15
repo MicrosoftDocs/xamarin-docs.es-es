@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: 736627edc8628f229e6e1a1e079fca24b8ff97db
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 47fd6d34a1ef286fa8e1a307ea6033c9c6a9feea
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490121"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955753"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensiones de marcado XAML
 
@@ -35,7 +35,7 @@ Las extensiones de marcado XAML adicionales históricamente han sido compatible 
 - `StaticResource`: se hace referencia a los objetos de un diccionario de recursos, como se describe en el artículo [**diccionarios de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource`: responde a los cambios en los objetos de un diccionario de recursos, como se describe en el artículo [**estilos dinámicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding`: establezca un vínculo entre las propiedades de dos objetos, como se describe en el artículo [**enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding`: realiza el enlace de datos de una plantilla de control, como se describe en el artículo [**enlace de una plantilla de control**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `TemplateBinding`: realiza el enlace de datos de una plantilla de control, como se describe en el artículo [**plantillas de control de Xamarin. Forms**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource`: establece el origen de enlace en relación con la posición del destino de enlace, como se describe en el artículo [enlaces relativos](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 El [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de la extensión de marcado personalizada [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Esta extensión de marcado se describe en el artículo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
