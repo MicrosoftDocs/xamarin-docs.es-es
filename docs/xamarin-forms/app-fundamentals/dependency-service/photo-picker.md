@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 335fb03cd190752d488f047bdf22f67d72f30c2e
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: 6669dbaff3cfb5b929261352b8db046b35ec5b4f
+ms.sourcegitcommit: 2a053df1163ab0125a51138b2b1f702f657eba5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032562"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76020693"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Seleccionar una foto de la biblioteca de imágenes
 
@@ -156,7 +156,14 @@ La implementación de Android usa la técnica descrita en la receta [**Seleccion
 ```csharp
 public class MainActivity : FormsAppCompatActivity
 {
-    ...
+    internal static MainActivity Instance { get; private set; }  
+
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        // ... 
+        Instance = this;
+    }
+    // ...
     // Field, property, and method for Picture Picker
     public static readonly int PickImageId = 1000;
 
