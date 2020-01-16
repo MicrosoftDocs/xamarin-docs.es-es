@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: c9f934ad690bffa2418a7221445a473d9a90fdb9
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490212"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031393"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -518,6 +518,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>UIWebView desuso y rechazo de la tienda de aplicaciones (ITMS-90809)
+
+A partir del 2020 de abril, [Apple rechazará las aplicaciones](https://developer.apple.com/news/?id=12232019b) que siguen usando la API de `UIWebView` en desuso. Aunque Xamarin. Forms ha cambiado a `WKWebView` como valor predeterminado, todavía hay una referencia al SDK anterior en los archivos binarios de Xamarin. Forms. El comportamiento actual del [enlazador de iOS](~/ios/deploy-test/linker.md) no lo quita y, como resultado, la API de `UIWebView` en desuso seguirá apareciendo como referencia desde la aplicación cuando se envíe a la tienda de aplicaciones.
+
+Hay disponible una versión preliminar del enlazador para corregir este problema. Para habilitar la vista previa, debe proporcionar un argumento adicional `--optimize=experimental-xforms-product-type` al enlazador. 
+
+Los requisitos previos para que funcionen son los siguientes:
+
+- **Xamarin. forms 4,5 o una versión posterior** &ndash; versiones preliminares de Xamarin. forms 4,5 se pueden usar.
+- **Xamarin. iOS 13.10.0.17 o superior** &ndash; Compruebe la versión de Xamarin. iOS [en Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versión de Xamarin. iOS se incluye con Visual Studio para Mac 8.4.1 y Visual Studio 16.4.3.
+- **Quite las referencias a `UIWebView`** &ndash; el código no debería tener ninguna referencia a `UIWebView` o a cualquier clase que haga uso de `UIWebView`.
+
+### <a name="configure-the-linker-preview"></a>Configuración de la versión preliminar del vinculador
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+Siga estos pasos para que el vinculador Quite `UIWebView` referencias:
+
+1. **Abra propiedades del proyecto de ios** &ndash; haga clic con el botón derecho en el proyecto de iOS y elija **propiedades**.
+1. **Vaya a la sección compilación de ios** &ndash; seleccione la sección **compilación de iOS** .
+1. **Actualice los argumentos de Mtouch adicionales** &ndash; en los **argumentos de Mtouch adicionales** . Agregue esta marca `--optimize=experimental-xforms-product-type` (además de cualquier valor que ya esté allí). 
+1. **Actualice todas las configuraciones de compilación** &ndash; usar las listas **configuración** y **plataforma** en la parte superior de la ventana para actualizar todas las configuraciones de compilación. La configuración más importante que hay que actualizar es la configuración de **lanzamiento o iPhone** , ya que normalmente se usa para crear compilaciones para el envío de la tienda de aplicaciones.
+
+Puede ver la ventana con la nueva marca en su lugar en esta captura de pantalla:
+
+[![establecer la marca en la sección compilación de iOS](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+
+Siga estos pasos para que el vinculador Quite `UIWebView` referencias
+
+1. **Abra opciones del proyecto de ios** &ndash; haga clic con el botón derecho en el proyecto de iOS y elija **Opciones**.
+1. **Vaya a la sección compilación de ios** &ndash; seleccione la sección **compilación de iOS** .
+1. **Actualice los argumentos de _Mtouch_ adicionales** &ndash; en los **demás argumentos de _Mtouch_**  agregar esta marca `--optimize=experimental-xforms-product-type` (además de cualquier valor que ya esté en ella).
+1. **Actualice todas las configuraciones de compilación** &ndash; usar las listas **configuración** y **plataforma** en la parte superior de la ventana para actualizar todas las configuraciones de compilación. La configuración más importante que hay que actualizar es la configuración de **lanzamiento o iPhone** , ya que normalmente se usa para crear compilaciones para el envío de la tienda de aplicaciones.
+
+Puede ver la ventana con la nueva marca en su lugar en esta captura de pantalla:
+
+[![establecer la marca en la sección compilación de iOS](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+Ahora, cuando se crea una nueva compilación (versión) y se envía a la tienda de aplicaciones, no debería haber ninguna advertencia sobre la API en desuso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
