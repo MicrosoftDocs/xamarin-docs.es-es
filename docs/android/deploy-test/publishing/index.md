@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3062afda82be2b45146687b9d77210a42f8f55fa
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021376"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487963"
 ---
 # <a name="publishing-an-application"></a>Publicar una aplicación
 
@@ -21,7 +21,7 @@ Después de crear una gran aplicación, la gente querrá usarla. En este artícu
 
 El paso final en el desarrollo de una aplicación de Xamarin.Android es publicar la aplicación. La publicación es el proceso de compilación de una aplicación de Xamarin.Android para que esté lista para que los usuarios la instalen en sus dispositivos, e implica dos tareas esenciales:
 
-- **Preparar la publicación**: se crea una versión de lanzamiento de la aplicación que se puede implementar en dispositivos Android (consulte [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md) para obtener más información sobre la preparación de lanzamiento).
+- **Preparación para la publicación** &ndash;: se crea una versión de lanzamiento de la aplicación que se puede implementar en dispositivos Android (consulte [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md) para obtener más información sobre la preparación de lanzamiento).
 
 - **Distribución**: la versión de lanzamiento de una aplicación estará disponible a través de uno o varios canales de distribución.
 
@@ -56,6 +56,7 @@ En esta sección se muestra cómo cargar la aplicación en una tienda, como Goog
 - [Creación de proceso](~/android/deploy-test/building-apps/build-process.md)
 - [Vinculación](~/android/deploy-test/linker.md)
 - [Obtener una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
+- [Implementación mediante Visual Studio App Center](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
 - [Firma de aplicaciones](https://source.android.com/security/apksigning/)
 - [Publicación en Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Licencias de aplicaciones de Google](https://developer.android.com/guide/google/play/licensing/index.html)

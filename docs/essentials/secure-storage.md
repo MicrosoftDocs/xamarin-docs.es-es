@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 1e4cb52772a60489f887116cbcfd4e6a8930fa3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756794"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488496"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
@@ -155,13 +155,13 @@ En algunos casos, los datos de KeyChain se sincronizan con iCloud y es posible q
 
 Los valores cifrados se almacenan en `ApplicationData.Current.LocalSettings`, dentro de un contenedor con el nombre **[ID-APLICACIÓN].xamarinessentials**.
 
-**SecureStorage** usa la API [Preferences](preferences.md) y sigue la misma persistencia de datos que se describe en la documentación sobre [Preferencias](preferences.md#persistence).
+**SecureStorage** usa la API [Preferences](preferences.md) y sigue la misma persistencia de datos que se describe en la documentación sobre [Preferencias](preferences.md#persistence). También utiliza `LocalSettings` que tiene la restricción de que el nombre de cada valor puede tener una longitud máxima de 255 caracteres. Cada valor puede tener un tamaño máximo de 8 KB y cada valor compuesto puede tener un tamaño máximo de 64 KB.
 
 -----
 
 ## <a name="limitations"></a>Limitaciones
 
-Esta API está pensada para almacenar pequeñas cantidades de texto.  El rendimiento puede ser lento si intenta usarla para almacenar grandes cantidades de texto.
+Esta API está pensada para almacenar pequeñas cantidades de texto.  El rendimiento puede ser lento si intenta usarla para almacenar grandes cantidades de texto. 
 
 ## <a name="api"></a>API
 

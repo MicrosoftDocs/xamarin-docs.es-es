@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: cb5eb783109f4758fcbc997c4f2bf4a93aaa262b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b56275ef903aa7def239a2e19980f52d83e6194f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018125"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489744"
 ---
 # <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
 
@@ -38,7 +38,7 @@ Se tratarán los siguientes conceptos:
 El desarrollo de aplicaciones de Xamarin.Mac requiere:
 
 - Un equipo Mac con macOS High Sierra (10.13) o posterior.
-- [Xcode 9 o posterior](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+- [Xcode 10 o posterior](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - La última versión de [Xamarin.Mac y Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 Para ejecutar una aplicación compilada con Xamarin.Mac, necesitará:
@@ -515,7 +515,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Use `ViewDidLoad`, en lugar de otro método como `Initialize`, porque se llama a `ViewDidLoad` *después* de que haya cargado el sistema operativo y se haya creado una instancia de la interfaz de usuario del archivo **.storyboard**. Si el desarrollador ha intentado tener acceso al control de etiqueta antes de que el archivo **.storyboard** haya cargado por completo y haya creado una instancia, obtendría un error `NullReferenceException` porque aún no existiría el control de etiqueta.
+Use `ViewDidLoad`, en lugar de otro método como `Initialize`, porque se llama a `ViewDidLoad`*después* de que haya cargado el sistema operativo y se haya creado una instancia de la interfaz de usuario del archivo **.storyboard**. Si el desarrollador ha intentado tener acceso al control de etiqueta antes de que el archivo **.storyboard** haya cargado por completo y haya creado una instancia, obtendría un error `NullReferenceException` porque aún no existiría el control de etiqueta.
 
 Después, agregue el código para responder al usuario que haga clic en el botón. Agregue el siguiente método parcial a la clase `ViewController`:
 

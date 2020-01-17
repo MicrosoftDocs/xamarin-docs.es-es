@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.openlocfilehash: 0e5fd88678becd7becfcb1c43e14b1e33aad72de
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170963"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489887"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
@@ -26,7 +26,7 @@ La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Form
 
 La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) proporciona la funcionalidad de publicación y suscripción de multidifusión. Esto significa que puede haber varios publicadores que publican un único mensaje, y puede haber varios suscriptores que escuchen el mismo mensaje:
 
-![](messaging-center-images/messaging-center.png "Funcionalidad de publicación y suscripción de multidifusión")
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
 Los publicadores envían mensajes con el método [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), mientras que los suscriptores escuchan mensajes con el método [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Además, en caso necesario, los suscriptores también pueden cancelar la suscripción a mensajes con el método [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
@@ -82,6 +82,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 ```
 
 En este ejemplo, el método [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) se suscribe a los mensajes de `Hi` enviados por el tipo `MainPage`, cuyos datos de carga son un elemento `string`. Un delegado de devolución de llamada se ejecuta como respuesta a la recepción de este tipo de mensaje, que muestra los datos de carga en una alerta.
+
+> [!IMPORTANT]
+> El delegado que ejecuta el método `Subscribe` se ejecutará en el mismo subproceso que publica el mensaje mediante el método `Send`.
 
 ## <a name="unsubscribe-from-a-message"></a>Cancelación de la suscripción a un mensaje
 

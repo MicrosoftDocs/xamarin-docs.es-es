@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
-ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
-ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.date: 11/05/2019
+ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2019
-ms.locfileid: "74451806"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489965"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -217,7 +217,7 @@ Shell tiene operadores de conversión implícita que permiten simplificar la jer
 Esta conversión implícita encapsula automáticamente cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) en objetos `ShellContent`, que se encapsulan en objetos `Tab`, que se encapsulan en objetos `FlyoutItem`.
 
 > [!IMPORTANT]
-> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading) en la guía [Pestañas de Xamarin.Forms Shell](tabs.md).
+> En una aplicación de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading) en la guía [Pestañas de Xamarin.Forms Shell](tabs.md).
 
 ### <a name="flyoutitem-class"></a>Clase FlyoutItem
 
@@ -246,6 +246,23 @@ Además, la clase `FlyoutItem` expone los siguientes métodos reemplazables:
 - `OnTabStopPropertyChanged`, que se llama cada vez que cambia la propiedad `IsTabStop`.
 - `TabIndexDefaultValueCreator`, devuelve un elemento `int`, y se llama para establecer el valor predeterminado de la propiedad `TabIndex`.
 - `TabStopDefaultValueCreator`, devuelve un elemento `bool`, y se llama para establecer el valor predeterminado de la propiedad `TabStop`.
+
+## <a name="flyout-vertical-scroll"></a>Desplazamiento vertical de control flotante
+
+De forma predeterminada, un control flotante se puede desplazar verticalmente cuando los elementos del control flotante no caben en este. Este comportamiento se puede cambiar si se establece la propiedad enlazable `Shell.FlyoutVerticalScrollMode` en uno de los miembros de la enumeración `ScrollMode`:
+
+- `Disabled`: indica que se deshabilitará el desplazamiento vertical.
+- `Enabled` indica que se habilitará el desplazamiento vertical.
+- `Auto`: indica que se habilitará el desplazamiento vertical si los elementos de control flotante no caben en el control flotante. Este es el valor predeterminado de la propiedad `Shell.FlyoutVerticalScrollMode`.
+
+En el siguiente ejemplo se muestra cómo deshabilitar el desplazamiento vertical:
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
 
 ## <a name="flyout-display-options"></a>Opciones de presentación de control flotante
 

@@ -6,13 +6,13 @@ ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/30/2019
-ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.date: 12/04/2019
+ms.openlocfilehash: 63ce27fc871da12eabb1baad568af167c860926f
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959136"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955809"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
@@ -23,7 +23,7 @@ Los enlaces relativos proporcionan la capacidad de establecer el origen de enlac
 La clase `RelativeSourceExtension` admite la extensión de marcado `RelativeSource`, que define las siguientes propiedades:
 
 - `Mode`, del tipo `RelativeBindingSourceMode`, describe la ubicación del origen de enlace en relación con la posición del destino de enlace.
-- `AncestorLevel`, del tipo `int`, un nivel de antecesor opcional que se va a buscar, cuando la propiedad `Mode` es `FindAncestor`.
+- `AncestorLevel`, del tipo `int`, un nivel de antecesor opcional que se va a buscar, cuando la propiedad `Mode` es `FindAncestor`. Un `AncestorLevel` de `n` omite `n-1` instancias del `AncestorType`.
 - `AncestorType`, del tipo `Type`, el tipo de antecesor que se va a buscar, cuando la propiedad `Mode` es `FindAncestor`.
 
 > [!NOTE]
@@ -81,6 +81,9 @@ Los modos de enlace relativo `FindAncestor` y `FindAncestorBindingContext` se us
 > La propiedad `AncestorType` se debe establecer en un `Type` al utilizar los modos de enlace relativo `FindAncestor` y `FindAncestorBindingContext`, de lo contrario se produce una `XamlParseException`.
 
 Si no se establece explícitamente la propiedad `Mode`, al establecer la propiedad `AncestorType` en un tipo que se deriva de [`Element`](xref:Xamarin.Forms.Element) se establecerá implícitamente la propiedad `Mode` en `FindAncestor`. Del mismo modo, si se establece la propiedad `AncestorType` en un tipo que no se deriva de `Element`, se establecerá implícitamente la propiedad `Mode` en `FindAncestorBindingContext`.
+
+> [!NOTE]
+> Los enlaces relativos que usan el modo de `FindAncestorBindingContext` se volverán a aplicar cuando cambie la `BindingContext` de cualquier antecesor.
 
 En el código XAML siguiente se muestra un ejemplo en el que la propiedad `Mode` se establecerá implícitamente en `FindAncestorBindingContext`:
 
@@ -176,10 +179,10 @@ En este ejemplo, la [`Frame`](xref:Xamarin.Forms.Frame), que es el elemento raí
 
 [![Captura de pantalla de un enlace relativo de modo TemplatedParent, en iOS y Android](relative-bindings-images/templatedparent-relative-binding.png "Modo de enlace relativo TemplatedParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Modo de enlace relativo TemplatedParent")
 
-Para obtener más información sobre las plantillas de control, consulte [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Para obtener más información sobre las plantillas de control, consulte [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+- [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

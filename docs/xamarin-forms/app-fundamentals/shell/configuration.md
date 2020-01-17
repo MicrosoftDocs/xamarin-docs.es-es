@@ -6,13 +6,13 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 12/05/2019
+ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739315"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489913"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Configuración de la página Xamarin.Forms Shell
 
@@ -86,6 +86,21 @@ Como alternativa, se pueden establecer las propiedades de color con un estilo XA
 
 Para obtener más información sobre los estilos XAML, vea [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md) (Aplicación de estilo a aplicaciones Xamarin.Forms mediante XAML).
 
+## <a name="enable-navigation-bar-shadow"></a>Habilitación de sombra en la barra de navegación
+
+La clase `Shell` define la propiedad adjunta `NavBarHasShadow`, de tipo `bool`, que controla si la barra de navegación tiene una sombra. De forma predeterminada, el valor de la propiedad es `false`.
+
+Aunque esta propiedad se puede establecer en un objeto `Shell` con subclases, también se puede establecer en cualquier página que desee habilitar la sombra de la barra de navegación. Por ejemplo, el siguiente XAML muestra la habilitación de la sombra de la barra de navegación de [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+Esto hace que se habilite la sombra de la barra de navegación.
+
 ## <a name="disable-the-navigation-bar"></a>Deshabilitación de la barra de navegación
 
 La clase `Shell` define la propiedad adjunta `NavBarIsVisible`, de tipo `bool`, que define si la barra de navegación debe estar visible cuando se presenta una página. De forma predeterminada, el valor de la propiedad es `true`.
@@ -101,7 +116,7 @@ Aunque esta propiedad se puede establecer en un objeto `Shell` con subclases, no
 
 Como resultado, la barra de navegación deja de ser visible cuando se presenta la página:
 
-![Página de captura de la página de Shell con una barra de navegación invisible, en iOS y Android](configuration-images/navigationbar-invisible.png "Página de Shell con la barra de navegación invisible")
+![Página de captura de la página de Shell con una barra de navegación invisible, en iOS y Android](configuration-images/navigationbar-invisible.png "Página de Shell con barra de navegación invisible")
 
 ## <a name="disable-the-tab-bar"></a>Deshabilitación de la barra de pestañas
 
@@ -118,7 +133,7 @@ Aunque esta propiedad se puede establecer en un objeto `Shell` con subclases, no
 
 Como resultado, la barra de pestañas deja de ser visible cuando se presenta la página:
 
-![Página de captura de la página de Shell con una barra de pestañas invisible, en iOS y Android](configuration-images/tabbar-invisible.png "Página de Shell con la barra de pestañas invisible")
+![Página de captura de la página de Shell con una barra de pestañas invisible, en iOS y Android](configuration-images/tabbar-invisible.png "Página de Shell con barra de pestañas invisible")
 
 ## <a name="display-views-in-the-navigation-bar"></a>Visualización de las vistas en la barra de navegación
 
@@ -139,7 +154,7 @@ Aunque esta propiedad se puede establecer en un objeto `Shell` con subclases, ta
 
 Esto da como resultado una imagen que se muestra en la barra de navegación de la página:
 
-![Página de captura de pantalla de Shell con una vista de título, en iOS y Android](configuration-images/titleview.png "Página de Shell con una vista de título")
+![Página de captura de la página de Shell con una vista de título, en iOS y Android](configuration-images/titleview.png "Página de Shell con una vista de título")
 
 > [!IMPORTANT]
 > Si se ha configurado la barra de navegación para que no sea visible, con la propiedad adjunta `NavBarIsVisible`, la vista de título no se mostrará.

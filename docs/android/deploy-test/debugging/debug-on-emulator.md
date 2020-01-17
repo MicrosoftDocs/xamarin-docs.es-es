@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028083"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556527"
 ---
-# <a name="debugging-on-the-android-emulator"></a>Depuración en Android Emulator
+# <a name="debug-on-the-android-emulator"></a>Depuración en Android Emulator
 
 _En esta guía se explica cómo iniciar un dispositivo virtual en Android Emulator para depurar y probar la aplicación._
-
-## <a name="overview"></a>Información general
 
 Android Emulator (incluido como parte de la carga de trabajo **Desarrollo para dispositivos móviles con .NET**) se puede ejecutar en varias configuraciones para simular otros dispositivos Android. Cada una de estas configuraciones se crea como un _dispositivo virtual_. En esta guía, obtendrá información sobre cómo iniciar el emulador desde Visual Studio y ejecutar la aplicación en un dispositivo virtual. Para obtener información sobre cómo configurar Android Emulator y crear dispositivos virtuales, vea [Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md).
 

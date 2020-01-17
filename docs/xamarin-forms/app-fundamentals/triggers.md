@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997155"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489900"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -43,8 +43,9 @@ En este ejemplo se muestra un desencadenador que cambia un color de fondo `Entry
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -74,6 +75,7 @@ Los desencadenadores también se pueden agregar a una declaración `Style` en un
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -106,6 +108,7 @@ que es como se hace referencia a las propiedades de otro control. Cuando la long
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -168,7 +171,7 @@ Después, el desencadenador de eventos se puede usar desde XAML:
 
 Tenga cuidado al compartir desencadenadores en una instancia de `ResourceDictionary`, ya que una instancia se comparte entre controles, con lo que cualquier estado que se configure una vez se va a aplicar a todos ellos.
 
-Tenga en cuenta que los desencadenadores de eventos no admiten los elementos `EnterActions` y `ExitActions` [descritos abajo](#enterexit).
+Tenga en cuenta que los desencadenadores de eventos no admiten los elementos `EnterActions` y `ExitActions`[descritos abajo](#enterexit).
 
 <a name="multi" />
 
@@ -188,8 +191,7 @@ Este es el ejemplo de un desencadenador de un botón que se enlaza a dos entrada
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -270,7 +272,7 @@ A continuación se muestra el código XAML. Observe las siguientes diferencias c
 Estas capturas de pantalla muestran la diferencia entre los dos ejemplos de multi-desencadenadores anteriores. En la parte superior de las pantallas, la entrada de texto con un solo elemento `Entry` basta para habilitar el botón **Guardar**.
 En la parte inferior de las pantallas, el botón **Iniciar sesión** permanece inactivo hasta que ambos campos contienen datos.
 
-![](triggers-images/multi-requireall.png "Ejemplos de multi-desencadenadores")
+![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
 <a name="enterexit" />
 
@@ -316,19 +318,18 @@ El código `FadeTriggerAction` se muestra a continuación:
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```

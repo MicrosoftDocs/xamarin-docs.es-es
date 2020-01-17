@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 60f51be5ffad67d839edd42b7826b0c57c46eb8a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2b6dcd53a9761ec3f030f3f5bf81894e9faa8b1f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029992"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487027"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Publicación de aplicaciones Xamarin.Mac en el Mac App Store
 
@@ -40,7 +40,7 @@ Elija el tipo de inscripción correcto para su situación.
 
 En esta guía se describe el proceso de creación de los certificados y los identificadores necesarios para publicar una aplicación Xamarin.Mac.
 
-### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[Crear un perfil de aprovisionamiento](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
+### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[Creación de un perfil de aprovisionamiento](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
 
 En esta guía se describe el proceso de creación de los perfiles de aprovisionamiento necesarios para publicar una aplicación Xamarin.Mac.
 

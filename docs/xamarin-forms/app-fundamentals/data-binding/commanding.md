@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771634"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545626"
 ---
 # <a name="the-xamarinforms-command-interface"></a>La interfaz de comandos de Xamarin.Forms
 
@@ -279,9 +279,9 @@ Antes de examinar el constructor de la clase `PersonCollectionViewModel`, veremo
 
 Este es el funcionamiento: el usuario presiona primero el botón **New** (Nuevo). Esto habilita el formulario de entrada, pero deshabilita el botón **New**. Después, el usuario escribe un nombre, la edad y las habilidades. En cualquier momento durante la edición, el usuario puede presionar el botón **Cancel** (Cancelar) para volver a empezar. El botón **Submit** (Enviar) solo se habilita cuando se ha escrito un nombre y una edad válida. Al presionar este botón **Submit**, se transfiere a la persona a la colección mostrada por `ListView`. Después de presionar el botón **Cancel** o **Submit**, se borra el formulario de entrada y se vuelve a habilitar el botón **New**.
 
-En la pantalla de iOS de la izquierda se muestra el diseño antes de escribir una vigencia válida. En las pantallas de Android y UWP se muestra el botón **Submit** habilitado después de haber establecido una edad:
+En la pantalla de iOS de la izquierda se muestra el diseño antes de escribir una vigencia válida. En la pantallas de Android se muestra el botón **Enviar** habilitado después de haber establecido una edad:
 
-[![Entrada de personas](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png#lightbox "Person Entry")
+[![Entrada de persona](commanding-images/personentry-small.png "Entrada de persona")](commanding-images/personentry-large.png#lightbox "Entrada de persona")
 
 El programa no tiene ninguna función para editar las entradas existentes y no guarda las entradas al salir de la página.
 
@@ -532,7 +532,7 @@ Los 11 botones para los 10 dígitos y el separador decimal comparten un enlace a
 
 Este es el programa en acción:
 
-[![Teclado decimal](commanding-images/decimalkeyboard-small.png "Decimal Keyboard")](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard")
+[![Teclado decimal](commanding-images/decimalkeyboard-small.png "Teclado decimal")](commanding-images/decimalkeyboard-large.png#lightbox "Teclado decimal")
 
 Observe que el botón para el separador decimal en las tres capturas de pantalla está deshabilitado porque el número introducido ya contiene un separador decimal.
 

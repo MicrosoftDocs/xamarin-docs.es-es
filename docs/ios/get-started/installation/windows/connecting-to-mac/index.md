@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e93a12fec63dcb0a31e57de26b3d7ee8827e7864
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022493"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489068"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
@@ -168,7 +168,7 @@ A partir de la [versión 15.6 de Visual Studio 2019](https://docs.microsoft.com
 > - El aprovisionamiento automático del equipo Mac requiere que esté habilitada la sesión remota en el equipo Mac y el equipo Windows debe poder acceder a este desde la red. Vea [Habilitar la sesión remota en el equipo Mac](#enable-remote-login-on-the-mac) para obtener más detalles.
 > - El aprovisionamiento automático del equipo Mac requiere 3 GB de espacio libre en el equipo Mac para instalar Xamarin.iOS.
 
-Emparejar con Mac realiza las instalaciones o actualizaciones de software necesarias cuando Visual Studio 2017 se [conecta al equipo Mac](#connect-to-the-mac-from-visual-studio-2019).
+Emparejar con Mac realiza las instalaciones o actualizaciones de software necesarias cuando Visual Studio 2019 se [conecta al equipo Mac](#connect-to-the-mac-from-visual-studio-2019).
 
 ### <a name="mono"></a>Mono
 
@@ -218,7 +218,7 @@ La instalación de estos paquetes se produce rápidamente y sin preguntar al usu
 
 ### <a name="troubleshooting-automatic-mac-provisioning"></a>Solución de problemas de aprovisionamiento automático del equipo Mac
 
-Si se produce algún problema con el aprovisionamiento automático del equipo Mac, eche un vistazo a los registros del IDE de Visual Studio 2019, que se almacenan en **%LOCALAPPDATA%\Xamarin\Logs\15.0**. Estos registros pueden contener mensajes de error que le ayudarán a diagnosticar mejor el error o recibir soporte técnico.
+Si se produce algún problema con el aprovisionamiento automático del equipo Mac, eche un vistazo a los registros del IDE de Visual Studio 2019, que se almacenan en **%LOCALAPPDATA%\Xamarin\Logs\16.0**. Estos registros pueden contener mensajes de error que le ayudarán a diagnosticar mejor el error o recibir soporte técnico.
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Compilar aplicaciones de iOS desde la línea de comandos de Windows
 
@@ -236,7 +236,7 @@ Los parámetros pasados a `msbuild` en el ejemplo anterior son:
 - `ServerPassword`: contraseña que se usará al iniciar sesión en el host de compilación de Mac.
 
 > [!NOTE]
-> Visual Studio 2019 almacena `msbuild` en el directorio siguiente: **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Versión&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2019 almacena `msbuild` en el directorio siguiente: **C:\Program Files (x86)\Microsoft Visual Studio\2019\\&lt;Version&gt;\MSBuild\Current\Bin**
 
 La primera vez que Emparejar con Mac inicia sesión en un host de compilación de Mac concreto desde Visual Studio 2019 o la línea de comandos, configura claves SSH. Con estas claves, no se necesitará el nombre de usuario ni la contraseña en los futuros inicios de sesión. Las claves recién creadas se almacenan en **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fede666071aad8702eda17a94a06c7de49c7397e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029474"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489378"
 ---
 # <a name="upload-to-mac-app-store"></a>Cargar en Mac App Store
 
 _En esta guía se describe el proceso de carga de una aplicación Xamarin.Mac para su publicación en el Mac App Store._
 
-Las aplicaciones se envían para la aprobación de Mac App Store a través de [iTunes Connect](https://itunesconnect.apple.com/).
+Las aplicaciones se envían para la aprobación de Mac App Store a través de [iTunes Connect](https://itunesconnect.apple.com/). También necesitará la herramienta [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) de App Store.
 
 1. Elija crear una **aplicación macOS**: 
 
@@ -70,37 +70,22 @@ Las aplicaciones se envían para la aprobación de Mac App Store a través de [i
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. Inicie el cargador de aplicaciones y asegúrese de que ha iniciado sesión con el id. de Apple.
-Seleccione **Deliver Your App** (Entregar la aplicación) para continuar: 
+9. Inicie **Transporter**, inicie sesión con su ID de Apple y, a continuación, elija **ADD APP** (AGREGAR APLICACIÓN):
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. Seleccione en la lista de aplicaciones en el estado **Ready to Upload Binary** (Listo para cargar binario) y haga clic en **Siguiente**: 
+    Siga las instrucciones para cargar el paquete de la aplicación en iTunes Connect.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. Revise los metadatos de la aplicación y haga clic en **Elegir…** para buscar el archivo de paquete: 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. Busque el archivo de paquete que compiló en Visual Studio para Mac con la configuración de compilación de App Store: 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. Pulse **Enviar**: 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. El paquete se validará y se notificarán los errores. Corrija estos errores y vuelva a cargarlo. Cuando la carga se complete correctamente, la aplicación se enviará automáticamente para que lo revise el equipo de App Store: 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) reemplaza a la herramienta **Application Loader** que se utilizaba con Xcode 10 y versiones anteriores.
+    > Application Loader ya no está disponible en Xcode 11 o posterior.
 
 Cuando la aplicación se apruebe, estará disponible para su descarga o compra en Mac App Store.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Instalación](~//mac/get-started/installation.md)
-- [Ejemplo de Hello, Mac](~//mac/get-started/hello-mac.md)
+- [Ejemplo de Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guía de herramientas: firma de código de la aplicación](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)

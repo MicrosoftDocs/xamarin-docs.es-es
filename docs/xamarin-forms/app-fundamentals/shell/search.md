@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/18/2019
+ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695932"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490069"
 ---
 # <a name="xamarinforms-shell-search"></a>Búsqueda de Xamarin.Forms Shell
 
@@ -168,7 +168,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 });
 ```
 
-Los elementos especificados en [ `DataTemplate`](xref:Xamarin.Forms.DataTemplate) definen la apariencia de cada elemento en el área de sugerencias. En este ejemplo, el diseño dentro de `DataTemplate` se administra mediante un objeto [`Grid`](xref:Xamarin.Forms.Grid). El objeto `Grid` contiene un objeto [`Image`](xref:Xamarin.Forms.Image) y un objeto [`Label`](xref:Xamarin.Forms.Label), que enlazan ambos con las propiedades de cada objeto `Monkey`.
+Los elementos especificados en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definen la apariencia de cada elemento en el área de sugerencias. En este ejemplo, el diseño dentro de `DataTemplate` se administra mediante un objeto [`Grid`](xref:Xamarin.Forms.Grid). El objeto `Grid` contiene un objeto [`Image`](xref:Xamarin.Forms.Image) y un objeto [`Label`](xref:Xamarin.Forms.Label), que enlazan ambos con las propiedades de cada objeto `Monkey`.
 
 Las capturas de pantalla siguientes muestran el resultado de crear plantillas para cada elemento del área de sugerencias:
 
@@ -181,8 +181,11 @@ Para obtener más información sobre las plantillas de datos, consulte [Plantill
 Cuando se agrega un `SearchHandler` en la parte superior de una página, de forma predeterminada el cuadro de búsqueda está visible y totalmente expandido. Pero este comportamiento se puede cambiar estableciendo la propiedad `SearchHandler.SearchBoxVisibility` en uno de los miembros de la enumeración `SearchBoxVisibility`:
 
 - `Hidden`: el cuadro de búsqueda no es visible ni accesible.
-- `Collapsible`: el cuadro de búsqueda está oculto hasta que el usuario realiza una acción para mostrarlo.
-- `Expanded`: el cuadro de búsqueda está visible y totalmente expandido.
+- `Collapsible`: el cuadro de búsqueda está oculto hasta que el usuario realiza una acción para mostrarlo. En iOS, el cuadro de búsqueda aparece rebotando verticalmente el contenido de la página y, en Android, el cuadro de búsqueda aparece al pulsar el icono del signo de interrogación.
+- `Expanded`: el cuadro de búsqueda está visible y totalmente expandido. Este es el valor predeterminado de la propiedad `SearchHandler.SearchBoxVisibility`.
+
+> [!IMPORTANT]
+> En iOS, un cuadro de búsqueda contraíble requiere iOS 11 o superior.
 
 En el ejemplo siguiente se muestra cómo ocultar el cuadro de búsqueda:
 
@@ -190,7 +193,7 @@ En el ejemplo siguiente se muestra cómo ocultar el cuadro de búsqueda:
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...

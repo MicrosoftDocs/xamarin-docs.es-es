@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d981307ae96f75c67442d3898255c8bed62f1cf7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771713"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545675"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
@@ -97,7 +97,7 @@ Pero la inclusión del nombre de clase es un buen recordatorio del objeto de des
 
 Al manipular el elemento `Slider`, el elemento `Label` gira según corresponda:
 
-[![Enlace de código básico](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
+[![Enlace de código básico](basic-bindings-images/basiccodebinding-small.png "Enlace de código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "Enlace de código básico")
 
 La página **Enlace Xaml básico** es idéntica a la página **Enlace de código básico**, con la excepción de que define el enlace de datos completo en XAML:
 
@@ -193,11 +193,11 @@ El constructor `Binding` tiene seis parámetros, por lo que el parámetro `sourc
 
 La ejecución de este programa podría ser un poco sorprendente:
 
-[![Enlace de código alternativo](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
+[![Enlace de código alternativo](basic-bindings-images/alternativecodebinding-small.png "Enlace de código alternativo")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Enlace de código alternativo")
 
 En la pantalla de iOS de la izquierda se muestra el aspecto de la pantalla cuando aparece la página por primera vez. ¿Dónde está el elemento `Label`?
 
-El problema es que el elemento `Slider` tiene un valor inicial de 0. Esto hace que la propiedad `Scale` de `Label` también se establezca en 0, y se reemplace su valor predeterminado de 1. Como resultado, el elemento `Label` es invisible inicialmente. Como se muestra en las capturas de pantalla de Android y Plataforma Universal de Windows (UWP), el elemento `Slider` se puede manipular para que `Label` aparezca de nuevo, pero su desaparición inicial es desconcertante.
+El problema es que el elemento `Slider` tiene un valor inicial de 0. Esto hace que la propiedad `Scale` de `Label` también se establezca en 0, y se reemplace su valor predeterminado de 1. Como resultado, el elemento `Label` es invisible inicialmente. Como se muestra en la captura de pantalla de Android, el elemento `Slider` se puede manipular para que `Label` aparezca de nuevo, pero su desaparición inicial es desconcertante.
 
 En el [artículo siguiente](binding-mode.md) verá cómo evitar este problema si inicializa el elemento `Slider` a partir del valor predeterminado de la propiedad `Scale`.
 
@@ -325,7 +325,7 @@ El ejemplo **Herencia de contexto de enlace** es una simple demostración de la 
 
 La propiedad `BindingContext` de `StackLayout` se establece en el objeto `slider`. `Label` y `BoxView` heredan este contexto de enlace, y en los dos sus propiedades `Rotation` se establecen en la propiedad `Value` del elemento `Slider`:
 
-[![Herencia de contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
+[![Herencia del contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "Herencia del contexto de enlace")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Herencia del contexto de enlace")
 
 En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* puede cambiar el flujo de datos entre los objetos de origen y destino.
 

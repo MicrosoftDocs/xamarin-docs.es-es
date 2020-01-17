@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771686"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545652"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -47,9 +47,9 @@ A primera vista, esto podría parecer al contrario: ahora `Label` es el origen d
 
 Como cabría esperar, `Slider` se inicializa en el valor 1 a partir del valor `Opacity` inicial de `Label`. Esto se muestra en la captura de pantalla de iOS de la izquierda:
 
-[![Enlace inverso](binding-mode-images/reversebinding-small.png "Reverse Binding")](binding-mode-images/reversebinding-large.png#lightbox "Reverse Binding")
+[![Enlace inverso](binding-mode-images/reversebinding-small.png "Enlace inverso")](binding-mode-images/reversebinding-large.png#lightbox "Enlace inverso")
 
-Pero es posible que le sorprenda que `Slider` siga funcionando, como se muestra en las capturas de pantalla de Android y UWP. Esto parece sugerir que el enlace de datos funciona mejor cuando `Slider` es el destino de enlace en lugar de `Label`, porque la inicialización funciona de la forma esperada.
+Pero es posible que le sorprenda que `Slider` siga funcionando, como se muestra en la captura de pantalla de Android. Esto parece sugerir que el enlace de datos funciona mejor cuando `Slider` es el destino de enlace en lugar de `Label`, porque la inicialización funciona de la forma esperada.
 
 La diferencia entre el ejemplo **Enlace inverso** y los ejemplos anteriores implica el *modo de enlace*.
 
@@ -261,9 +261,9 @@ Pero la propiedad `Value` de `Slider` es `TwoWay`. Esto permite que cada element
 
 Cuando se ejecuta por primera vez el programa, `BoxView`, `Label` y los tres elementos `Slider` están establecidos a partir del modelo de vista en función de la propiedad `Color` inicial establecida cuando se creó la instancia del modelo de vista. Esto se muestra en la captura de pantalla de iOS de la izquierda:
 
-[![Selector de colores simple](binding-mode-images/simplecolorselector-small.png "Simple Color Selector")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple Color Selector")
+[![Selector de colores sencillo](binding-mode-images/simplecolorselector-small.png "Selector de colores sencillo")](binding-mode-images/simplecolorselector-large.png#lightbox "Selector de colores sencillo")
 
-Al manipular los controles deslizantes, se actualizan `BoxView` y `Label` en consecuencia, como se muestra en las capturas de pantalla de Android y UWP.
+Al manipular los controles deslizantes, se actualizan `BoxView` y `Label` en consecuencia, como se muestra en la captura de pantalla de Android.
 
 Un enfoque común consiste en crear instancias de ViewModel en el diccionario de recursos. También se pueden crear instancias de ViewModel dentro de etiquetas de elemento de propiedad para la propiedad `BindingContext`. En el archivo XAML **Selector de colores simple**, intente quitar `HslColorViewModel` del diccionario de recursos y establézcalo en la propiedad `BindingContext` de `Grid` de esta forma:
 
@@ -675,7 +675,7 @@ public partial class SampleSettingsPage : ContentPage
 
 En la captura de pantalla de iOS de la izquierda se muestra el programa al ejecutarlo por primera vez. El constructor de `SampleSettingsViewModel` inicializa el color de fondo en blanco, y eso es lo que está seleccionado en `ListView`:
 
-[![Configuración de ejemplo](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
+[![Configuración de ejemplo](binding-mode-images/samplesettings-small.png "Configuración de ejemplo")](binding-mode-images/samplesettings-large.png#lightbox "Configuración de ejemplo")
 
 La otra captura de pantalla muestra la configuración modificada. Al experimentar con esta página, recuerde colocar el programa en modo de suspensión o finalícelo en el dispositivo o emulador que se está ejecutando. La finalización del programa desde el depurador de Visual Studio no provocará que se llame a la invalidación de `OnSleep` en la clase `App`.
 

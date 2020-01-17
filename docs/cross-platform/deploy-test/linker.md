@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 6ecfad9a3dc33a4fc4012a797631b5c240aa7a80
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7d9b7dfc12c27a195e3cb797167690cded348803
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016535"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488912"
 ---
 # <a name="custom-linker-configuration"></a>Configuración personalizada del enlazador
 
@@ -64,3 +64,4 @@ Por último, cualquier tipo cuyo nombre completo (incluido el espacio de nombres
 
 - [Vincular en iOS](~/ios/deploy-test/linker.md)
 - [Vincular en Android](~/android/deploy-test/linker.md)
+- [Repositorio de GitHub del enlazador con ejemplos](https://github.com/mono/linker)

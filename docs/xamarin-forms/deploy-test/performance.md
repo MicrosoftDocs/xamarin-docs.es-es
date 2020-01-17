@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
-ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681345"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487170"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Mejora del rendimiento de aplicaciones Xamarin.Forms
 
@@ -172,7 +172,7 @@ Mediante la programación asincrónica se puede mejorar la capacidad de respuest
 - Evite intentar crear constructores asincrónicos. En su lugar, use eventos de ciclo de vida o lógica de inicialización independiente para ejecutar `await` de forma correcta en cualquier inicialización. Para más información, vea [Constructores asincrónicos](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) en blog.stephencleary.com.
 - Use el modelo de tareas en diferido para evitar esperar a que se completen las operaciones asincrónicas durante el inicio de la aplicación. Para más información, vea [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
 - Cree un contenedor de tareas para las operaciones asincrónicas existentes, que no usan TAP, mediante la creación de objetos `TaskCompletionSource<T>`. Estos objetos obtienen las ventajas de la programación de `Task` y permiten controlar la duración y la finalización del objeto `Task` asociado. Para más información, vea [La naturaleza de TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
-asynchronous-mvvm-applications-commands).
+ 
 - Devuelva un objeto `Task`, en lugar de devolver un objeto `Task` en espera, cuando no sea necesario procesar el resultado de una operación asincrónica. Esto es más eficaz debido a que se realizan menos cambios de contexto.
 - Use la biblioteca Flujo de datos de la biblioteca de procesamiento paralelo basado en tareas (TPL) en escenarios como el procesamiento de datos a medida que estén disponibles, o bien cuando tenga varias operaciones que se deban comunicar entre sí de forma asincrónica. Para más información, vea [Flujo de datos (biblioteca TPL)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
 

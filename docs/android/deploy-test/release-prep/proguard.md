@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 854287ec22fb89ec2f0a55f8c3854dc0106fb11a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1ae7850951060f2e89a953ce554a0dbfa286c3a1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021164"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488000"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -24,14 +24,14 @@ ProGuard detecta y quita las clases, los campos, los métodos y los atributos si
 
 ProGuard procesa los APK de entrada mediante los pasos siguientes: 
 
-1. **Paso de reducción** &ndash; ProGuard determina de forma recursiva qué clases y miembros de clases se usan. Todas las demás clases y miembros de clases se descartan. 
+1. **Paso de reducción**: ProGuard determina de forma recursiva qué clases y miembros de clases se usan. Todas las demás clases y miembros de clases se descartan. 
 
-2. **Paso de optimización** &ndash; ProGuard optimiza todavía más el código. 
+2. **Paso de optimización**: ProGuard optimiza todavía más el código. 
     Entre otras optimizaciones, se pueden hacer privadas, estáticas o finales las clases y los métodos que no son puntos de entrada, se pueden quitar los parámetros sin usar y se pueden insertar algunos métodos. 
 
 3. **Paso de ofuscación**: en el desarrollo nativo de Android, ProGuard cambia el nombre de las clases y los miembros de clases que no son puntos de entrada. La conservación de los puntos de entrada garantiza que todavía se pueda tener acceso a ellos mediante sus nombres originales. Sin embargo, este paso no es compatible con Xamarin.Android, dado que la aplicación se compila en lenguaje intermedio (IL).
 
-4. **Paso de comprobación previa** &ndash; se realizan comprobaciones en los códigos de bytes de Java antes del tiempo de ejecución y se anotan los archivos de clase para que pueda aprovecharlo la máquina virtual Java. Este es el único paso que no tiene que conocer los puntos de entrada. 
+4. **Paso de comprobación previa**: se realizan comprobaciones en los códigos de bytes de Java antes del tiempo de ejecución y se anotan los archivos de clase para que pueda aprovecharlo la máquina virtual Java. Este es el único paso que no tiene que conocer los puntos de entrada. 
 
 Cada uno de estos pasos es *opcional*. Como se explicará en la sección siguiente, ProGuard Xamarin.Android solo usa un subconjunto de estos pasos. 
 
@@ -77,9 +77,9 @@ Use los pasos siguientes para habilitar ProGuard en el proyecto de aplicación:
 
     [![Configuración para seleccionar la versión](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2. Habilite ProGuard. Para ello, active la opción **Habilitar ProGuard** en la pestaña **Empaquetado** de **Propiedades > Opciones de Android**: 
+2. Elija **ProGuard** en la lista desplegable **Reductor de código** en la ventana **Propiedades > Opciones de Android**: 
 
-    [![Opción Habilitar ProGuard seleccionada](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
+    [![Reductor de código de ProGuard seleccionado](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 Para la mayoría de las aplicaciones de Xamarin.Android, el archivo de configuración de ProGuard predeterminado que Xamarin.Android proporciona será suficiente para quitar (exclusivamente) todo el código sin usar. Para ver la configuración de ProGuard predeterminada, abra el archivo que se encuentra en **obj\\Release\\proguard\\proguard_xamarin.cfg**.
 

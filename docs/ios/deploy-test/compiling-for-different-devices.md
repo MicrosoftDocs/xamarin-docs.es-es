@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 30415bd2df14cdc13f94a020475acf471b25c6ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1f71179ccafc2daf65e792c4538bf47ea2df1e7d
+ms.sourcegitcommit: 0177e06169da621ed9d5fa0f6118a628e8c92bd2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030369"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663733"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilación para varios dispositivos en Xamarin.iOS
 
@@ -30,27 +30,23 @@ Las propiedades de compilación del ejecutable se pueden configurar en la págin
 
 Además de las opciones de configuración disponibles en la interfaz de usuario, también puede pasar su propia configuración de las opciones de la línea de comandos a la [herramienta de compilación de Xamarin.iOS (mtouch)](~/ios/deploy-test/mtouch.md).
 
-[http://iossupportmatrix.com/](http://iossupportmatrix.com/) es un recurso útil que puede usarse para asegurarse de que va a incluir todos los dispositivos, las arquitecturas y las versiones de iOS necesarios.
-
- <a name="SDK_Options" />
-
 ## <a name="sdk-options"></a>Opciones de SDK
 
 Visual Studio para Mac permite configurar dos propiedades importantes relacionadas con el SDK: la versión del SDK de iOS utilizada para compilar el software y el destino de la implementación, o bien la versión de iOS mínima requerida.
 
-La opción **Versión del SDK** de iOS permite usar distintas versiones de un SDK publicado de Apple, que remite a Xamarin.iOS a los compiladores, los enlazadores y las bibliotecas a las que debe hacer referencia durante la compilación. 
+La opción **Versión del SDK** de iOS permite usar distintas versiones de un SDK publicado de Apple, que remite a Xamarin.iOS a los compiladores, los enlazadores y las bibliotecas a las que debe hacer referencia durante la compilación. Haga clic con el botón derecho en el proyecto y elija **Opciones**; a continuación, elija **Compilación de iOS** en la ventana de opciones:
 
-La opción **Destino de implementación** se usa para seleccionar la versión mínima requerida del sistema operativo en que se ejecutará la aplicación. Se configura en el archivo Info.plist del proyecto. Debe elegir la versión mínima que tiene todas las API que necesita para ejecutar la aplicación.
+[![Elegir la versión del SDK en la ventana de opciones](compiling-for-different-devices-images/sdk-version-sml.png)](compiling-for-different-devices-images/sdk-version.png#lightbox)
+
+La opción **Destino de implementación** se usa para seleccionar la versión mínima requerida del sistema operativo en que se ejecutará la aplicación. Se configura en el archivo **Info.plist** del proyecto. Debe elegir la versión mínima que tiene todas las API que necesita para ejecutar la aplicación.
+
+[![Establecer el destino de implementación en el archivo Info.plist](compiling-for-different-devices-images/deployment-target-sml.png)](compiling-for-different-devices-images/deployment-target.png#lightbox)
 
 En general, la API de Xamarin.iOS API expone todos los métodos disponibles en la última versión del SDK y, si resulta necesario, se ofrecen propiedades prácticas que le permiten detectar si la funcionalidad está disponible en tiempo de ejecución (por ejemplo, `UIDevice.UserInterfaceIdiom` y `UIDevice.IsMultitaskingSupported` siempre funcionan en Xamarin.iOS, y nosotros realizamos todo el trabajo en segundo plano).
-
- <a name="Linking" />
 
 ## <a name="linking"></a>Vinculación
 
 Consulte nuestra página dedicada al [enlazador](~/ios/deploy-test/linker.md) para obtener más información sobre cómo el enlazador ayuda a reducir el tamaño de los ejecutables y cómo utilizarlo de manera eficaz.
-
- <a name="Code_Generation_Engine" />
 
 ## <a name="code-generation-engine"></a>Motor de generación de código
 
@@ -66,11 +62,7 @@ Puede habilitarlos en las opciones de Compilación de iOS en Visual Studio para 
 
 [![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
- <a name="ARMV7_and_ARMV7s_support" />
-
 ## <a name="architecture-support"></a>Compatibilidad de la arquitectura
-
-<a name="armv6-discontinued" />
 
 ### <a name="armv6-xamarinios-discontinued-support-for-armv6-with-v810"></a>ARMv6 (compatibilidad descontinuada de Xamarin.iOS para ARMv6 con v8.10)
 
@@ -107,13 +99,9 @@ Si el destino solo es un procesador de ARMv7s, el código generado será un poco
 
 Tenga en cuenta que las compilaciones enviadas a App Store deben incluir compatibilidad de 64 bits; se trata de un requisito establecido por [Apple](https://developer.apple.com/news/?id=12172014b). Además, iOS 11 solo admite las aplicaciones de 64 bits.
 
- <a name="ARM_Thumb_Support" />
-
 ### <a name="arm-thumb-2-support"></a>Compatibilidad con ARM Thumb-2
 
 Thumb es un conjunto de instrucciones más compacto que usan los procesadores ARM. Al habilitar la compatibilidad con Thumb, puede reducir el tamaño del archivo ejecutable, pero en detrimento de tiempos de ejecución más lentos. Thumb es compatible con ARMv7 y ARMv7s.
-
- <a name="Conditional_framwork_useage" />
 
 ## <a name="conditional-framework-usage"></a>Uso condicional de marcos de trabajo
 
@@ -131,4 +119,3 @@ Además de esto, necesita proteger el uso de los tipos de la ejecución en versi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Enlazador](~/ios/deploy-test/linker.md)
-- [Externo: matriz de compatibilidad con iOS](http://iossupportmatrix.com/)

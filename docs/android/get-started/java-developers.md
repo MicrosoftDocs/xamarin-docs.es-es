@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: 1d9b41af68576a67c901f8f19a57fb4738430306
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027942"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728062"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
@@ -44,7 +44,7 @@ En ambos lenguajes, los objetos se crean en el montón con la palabra clave `new
 
 No obstante, existen muchas diferencias entre Java y C#. Por ejemplo:
 
-- Java no admite las variables locales con tipo implícito (C# admite la palabra clave `var`).
+- Java (tal como se usa en Android) no admite las variables locales con tipo implícito (C# admite la palabra clave `var`).
 
 - En Java, puede pasar parámetros solo por valor, mientras que en C# puede pasarlos tanto por referencia como por valor. (C# ofrece las palabras clave `ref` y `out` para pasar los parámetros por referencia; no hay ningún equivalente en Java).
 
@@ -70,7 +70,7 @@ Por supuesto, hay muchas más diferencias entre C# y Java que pueden tratarse en
 
 C# proporciona muchas características claves de Xamarin.Android que actualmente no están disponibles para los desarrolladores de Java en Android. Estas características pueden ayudarle a escribir código mejor y en menos tiempo:
 
-- [Propiedades](#properties): con el sistema de propiedades de C#, puede acceder a las variables de miembros de forma segura y directa sin tener que escribir métodos de establecedor y captador.
+- [Propiedades](#properties) &ndash; Con el sistema de propiedades de C#, puede acceder a las variables de miembros de forma segura y directa sin tener que escribir métodos de establecedor y captador.
 
 - [Expresiones lambda](#lambdas) &ndash; En C# puede usar métodos anónimos (también denominados *lambdas*) para expresar la funcionalidad de forma más sucinta y eficaz. Puede evitar la sobrecarga de tener que escribir objetos de un solo uso, y puede pasar el estado local a un método sin tener que agregar parámetros.
 
@@ -81,19 +81,24 @@ C# proporciona muchas características claves de Xamarin.Android que actualmente
 
 Además, Xamarin le permite [aprovechar los recursos de Java existentes](#interop) mediante una tecnología que se conoce como *enlaces*. Puede llamar al código, los marcos de trabajo y las bibliotecas de Java existentes desde C# con el uso de generadores de enlaces automáticos de Xamarin. Para ello, basta con crear una biblioteca estática en Java y exponerla en C# mediante un enlace.
 
+> [!NOTE]
+> La programación de Android usa una versión específica del lenguaje Java que admite todas las características de Java 7 [y un subconjunto de Java 8](https://developer.android.com/studio/write/java8-support.html).
+>
+> Algunas características mencionadas en esta página (como la palabra clave `var` en C#) están disponibles en versiones más recientes de Java (p. ej., [`var` en Java 10](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), pero siguen si estar a disposición de los desarrolladores de Android.
+
 <a name="fundamentals" />
 
 ## <a name="going-from-java-to-c-development"></a>Pasar del desarrollo en Java al desarrollo en C#
 
 En las secciones siguientes se describen las diferencias básicas de "introducción" entre C# y Java; en una sección posterior se describen las diferencias orientadas a objetos entre estos lenguajes.
 
-### <a name="libraries-vs-assemblies"></a>Diferencia entre bibliotecas y Ensamblados
+### <a name="libraries-vs-assemblies"></a>Bibliotecas frente a ensamblados
 
 Java suele empaquetar clases relacionadas en archivos **.jar**. Sin embargo, en C# and .NET, los bits reutilizables de código precompilado se empaquetan en *ensamblados*, que suelen empaquetarse como archivos *.dll*. Un ensamblado es una unidad de implementación de código de C#/.NET, y cada ensamblado suele asociarse con un proyecto de C#. Los ensamblados contienen código intermedio que se compilan Just-In-Time en tiempo de ejecución.
 
 Para obtener más información sobre los ensamblados, vea el tema [Ensamblados y caché global de ensamblados](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
 
-### <a name="packages-vs-namespaces"></a>Diferencias entre paquetes y Espacios de nombres
+### <a name="packages-vs-namespaces"></a>Paquetes frente a espacios de nombres
 
 C# usa la palabra clave `namespace` para agrupar tipos relacionados; es similar a la palabra clave `package` de Java. Normalmente, una aplicación de Xamarin.Android residirá en un espacio de nombres creado para esa aplicación. Por ejemplo, el siguiente código de C# declara el contenedor del espacio de nombres `WeatherApp` para un aplicación de información meteorológica:
 
@@ -204,11 +209,9 @@ public class SensorsActivity : Activity, ISensorEventListener
 
 En este ejemplo, `SensorsActivity` hereda de `Activity` e implementa la funcionalidad declarada en la interfaz `ISensorEventListener`. Tenga en cuenta que la lista de interfaces debe aparecer después de la clase base o, de lo contrario, se producirá un error en tiempo de compilación. Por convención, los nombres de interfaz de C# van precedidos de una letra mayúscula "I"; esto permite determinar qué clases son interfaces sin requerir una palabra clave `implements`.
 
-Si desea impedir que una clase derive en subclases en C#, coloque `sealed` delante del nombre de clase; en Java, coloque `final` delante del nombre de clase.
+Si desea impedir que una clase derive en subclases en C#, coloque `sealed` &ndash; delante del nombre de clase; en Java, coloque `final` delante del nombre de clase.
 
 Para obtener más información sobre las definiciones de clases de C#, vea los temas [Clases](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) y [Herencia](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance).
-
-<a name="properties" />
 
 ### <a name="properties"></a>Propiedades
 
@@ -226,7 +229,7 @@ rulerView.DrawingCacheEnabled = true;
 
 En este ejemplo, se leen los valores de anchura y altura del objeto `rulerView` mediante el acceso a sus propiedades `MeasuredWidth` y `MeasuredHeight`. Cuando se leen estas propiedades, los valores de sus valores de campos asociados, pero ocultos, se capturan en segundo plano y se devuelven al autor de la llamada. El objeto `rulerView` puede almacenar los valores de anchura y altura en una unidad de medida (es decir, píxeles) y convertirlos sobre la marcha en una unidad de medida distinta (por ejemplo, milímetros) al acceder a las propiedades `MeasuredWidth` y `MeasuredHeight`.
 
-El objeto `rulerView` también tiene una propiedad denominada `DrawingCacheEnabled`; el código de ejemplo establece esta propiedad en `true` para habilitar la caché de dibujo en `rulerView`. En segundo plano, se actualiza un campo oculto asociado con el nuevo valor y es posible que se modifiquen otros aspectos del estado `rulerView`. Por ejemplo, cuando `DrawingCacheEnabled` está establecido en `false`, `rulerView` también puede borrar cualquier información de la caché de dibujo ya acumulada en el objeto.
+El objeto `rulerView` también tiene una propiedad denominada `DrawingCacheEnabled` &ndash; el código de ejemplo establece esta propiedad en `true` para habilitar la caché de dibujo en `rulerView`. En segundo plano, se actualiza un campo oculto asociado con el nuevo valor y es posible que se modifiquen otros aspectos del estado `rulerView`. Por ejemplo, cuando `DrawingCacheEnabled` está establecido en `false`, `rulerView` también puede borrar cualquier información de la caché de dibujo ya acumulada en el objeto.
 
 El acceso a las propiedades puede ser de lectura/escritura, solo lectura o solo escritura. Además, puede usar distintos modificadores de acceso para leer y escribir. Por ejemplo, puede definir una propiedad que tenga acceso de lectura público, pero acceso de escritura privado.
 
@@ -269,9 +272,9 @@ En este caso, el método `OnCreate` definido por la clase derivada (`MainActivit
 
 Java y C# admiten los modificadores de acceso `public`, `private` y `protected`. Sin embargo, C# admite dos modificadores de acceso adicionales:
 
-- **`internal`** : al miembro de clase se puede acceder únicamente dentro del ensamblado actual.
+- **`internal`** &ndash; Al miembro de clase se puede acceder únicamente dentro del ensamblado actual.
 
-- **`protected internal`** : al miembro de clase se puede acceder dentro del ensamblado de definición, de la clase de definición y de las clases derivadas (tienen acceso las clases derivadas dentro y fuera del ensamblado).
+- **`protected internal`** &ndash; Al miembro de clase se puede acceder dentro del ensamblado de definición, de la clase de definición y de las clases derivadas (tienen acceso las clases derivadas dentro y fuera del ensamblado).
 
 Para obtener más información sobre los modificadores de acceso de C#, vea el tema [Modificadores de acceso](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
 
@@ -409,7 +412,7 @@ Para más información sobre la compatibilidad de Xamarin con las característic
 
 Muchas de las palabras claves del lenguaje de Java también se usan en C#. También hay una serie de palabras clave de Java que tienen un equivalente en C# pero con un nombre distinto, como se indica en esta tabla:
 
-|Java|C#|DESCRIPCIÓN|
+|Java|C#|Descripción|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Se utiliza para declarar los valores booleanos true y false.|
 |`extends`|`:`|Precede a la clase e interfaces de las que se hereda.|
@@ -423,9 +426,9 @@ Muchas de las palabras claves del lenguaje de Java también se usan en C#. Tambi
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|Se usa para acceder a los miembros de la clase principal desde una clase derivada.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Ajusta una sección crítica del código con lanzamiento y adquisición de bloqueo.|
 
-Además, hay muchas palabras clave que son exclusivas de C# y que no tienen homólogo en Java. El código de Xamarin.Android suele usar las siguientes palabras clave de C# (es útil hacer referencia a esta tabla al leer [código de ejemplo](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) de Xamarin.Android):
+Además, hay muchas palabras clave que son exclusivas de C# y que no tienen homólogo en el Java usado en Android. El código de Xamarin.Android suele usar las siguientes palabras clave de C# (es útil hacer referencia a esta tabla al leer [código de ejemplo](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) de Xamarin.Android):
 
-|C#|DESCRIPCIÓN|
+|C#|Descripción|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Realiza conversiones entre tipos de referencia compatibles o tipos que aceptan valores NULL.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Especifica que un método o una expresión lambda son asincrónicos.|
@@ -457,13 +460,13 @@ Además, hay muchas palabras clave que son exclusivas de C# y que no tienen hom�
 
 Si dispone de una funcionalidad de Java existente que no desea convertir a C#, puede volver a usar las bibliotecas de Java existentes en las aplicaciones de Xamarin.Android con estas dos técnicas:
 
-- **Crear una biblioteca de enlaces de Java**: con este enfoque, se utilizan las herramientas de Xamarin para generar contenedores de C# que incluyen tipos de Java. Estos contenedores se denominan *enlaces*. Como resultado, la aplicación de Xamarin.Android puede usar el archivo *.jar* con una llamada a estos contenedores.
+- **Crear una biblioteca de enlaces de Java** &ndash; Con este enfoque, se utilizan las herramientas de Xamarin para generar contenedores de C# que incluyen tipos de Java. Estos contenedores se denominan *enlaces*. Como resultado, la aplicación de Xamarin.Android puede usar el archivo *.jar* con una llamada a estos contenedores.
 
-- **Java Native Interface**: *Java Native Interface* (JNI) es un marco que permite a las aplicaciones de C# llamar al código de Java o recibir llamadas de este código.
+- **Java Native Interface** &ndash; *Java Native Interface* (JNI) es un marco que permite a las aplicaciones de C# llamar al código de Java o recibir llamadas de este código.
 
 Para obtener más información sobre estas técnicas, vea [Java Integration Overview](~/android/platform/java-integration/index.md) (Información general sobre la integración de Java).
 
-## <a name="for-further-reading"></a>Más información
+## <a name="further-reading"></a>Información adicional
 
 La [guía de programación de C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/) es un recurso muy útil para iniciarse en el aprendizaje del lenguaje de programación C#, y puede usar la [referencia de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/) para buscar características particulares del lenguaje C#.
 

@@ -7,20 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018103"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489393"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfiles de aprovisionamiento para aplicaciones Xamarin.Mac
 
 Los perfiles de aprovisionamiento permiten a los desarrolladores incorporar en sus aplicaciones de Xamarin.Mac varias características específicas de macOS (antes conocido como Mac OS X), como iCloud y notificaciones de inserción. Es necesario crear, descargar e instalar un perfil de aprovisionamiento de Mac para cada aplicación que se desarrolle y que use estas características.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
-
-<a name="Development_Provisioning_Profile" />
 
 ## <a name="development-provisioning-profile"></a>Perfil de aprovisionamiento de desarrollo
 
@@ -60,8 +58,6 @@ Haga lo siguiente:
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
 Será necesario crear un perfil de aprovisionamiento de desarrollo para cada aplicación nueva o cuando se agregue un equipo nuevo para realizar pruebas en él.
-
-<a name="Production_Provisioning_Profile" />
 
 ## <a name="production-provisioning-profile"></a>Perfil de aprovisionamiento de producción
 

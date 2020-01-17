@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
-ms.openlocfilehash: 43bde3a31a79728548e72ea1d34977f1a131f282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028536"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655389"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabajar con derechos en Xamarin.iOS
 
@@ -41,15 +41,15 @@ Además de seleccionar y configurar los servicios de aplicaciones necesarios al 
 
 Para configurar los derechos en Visual Studio para Mac, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic en el archivo **Info.plist** para abrirlo para su edición.
-2. En la sección **iOS Application Target** (Destino de la aplicación de iOS), escriba un nombre para la aplicación y el **identificador de paquete** que se creó al definir el identificador de aplicación:
+1. En el **Panel de solución**, haga doble clic en el archivo **Info.plist** para abrirlo.
+2. En la sección **Identidad**, escriba un nombre para la aplicación y el **Identificador de paquete** que se creó al difinir el identificador de aplicación:
 
-    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
+    ![Especificación de un identificador de lote](entitlements-images/servicexs01-sml.png)
 
 3. Guarde los cambios en el archivo **Info.plist**.
-4. En el **Explorador de soluciones**, haga doble clic en el archivo **Entitlements.plist** para abrirlo para su edición:
+4. En el **Panel de solución**, haga doble clic en el archivo **Entitlements.plist** para abrirlo para su edición:
 
-    ![](entitlements-images/servicexs02.png "Editing the Entitlements")
+    ![Edición de los derechos](entitlements-images/servicexs02-sml.png)
 
 5. Seleccione y configure los derechos necesarios para la aplicación de Xamarin.iOS, de manera que coincidan con la configuración que se definió al crear el identificador de aplicación.
 6. Guarde los cambios en el archivo **Entitlements.plist**.
@@ -58,17 +58,17 @@ Para configurar los derechos en Visual Studio para Mac, haga lo siguiente:
 
 Para configurar los derechos en Visual Studio, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Info.plist**, seleccione **Abrir con...** y seleccione el archivo **Editor de lista de propiedades** para abrirlo y editarlo.
+1. En el **Explorador de soluciones**, haga doble clic en **Info.plist** para abrirlo para su edición.
 2. En la sección **iOS Application Target** (Destino de la aplicación de iOS), escriba un nombre para la aplicación y el **identificador de paquete** que se creó al definir el identificador de aplicación:
 
-    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
+    ![Establecimiento del identificador de lote](entitlements-images/servicevs01-sml.png)
 
 3. Guarde los cambios en el archivo **Info.plist**.
-4. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Entitlements.plist**, seleccione **Abrir con...** y seleccione el archivo **Editor de lista de propiedades** para abrirlo y editarlo:
+4. En el **Explorador de soluciones**, haga doble clic en el archivo **Entitlements.plist** para abrirlo:
 
-    ![](entitlements-images/servicevs02.png "Editing the Entitlements")
+    ![Edición de los derechos](entitlements-images/servicevs02-sml.png)
 
-    Como alternativa, haga doble clic en el archivo **Entitlements.plist** para abrir el editor de código fuente XML, con el que podrá establecer el valor de la propiedad y la clave del derecho como se detalla en la sección [Referencia de la clave de derechos](#entitlement-key-reference).
+    También puede hacer doble clic en el archivo **Entitlements.plist** y elegir **Abrir con...** el editor de código fuente XML, con el que podrá establecer el valor de la propiedad y la clave de derecho como se detalla en la sección [Referencia de la clave de derechos](#entitlement-key-reference).
 
 5. Seleccione y configure los derechos necesarios para la aplicación de Xamarin.iOS, de manera que coincidan con la configuración que se definió al crear el identificador de aplicación.
 6. Guarde los cambios en el archivo **Entitlements.plist**.
@@ -83,10 +83,10 @@ Para agregar un archivo Entitlements.plist a Xamarin.iOS, haga lo siguiente:
 
 1. Haga clic con el botón derecho en el archivo del proyecto y vaya a **Agregar > Nuevo archivo…** :
 
-    ![Menú contextual para agregar archivos](entitlements-images/image1.png)
+    ![Menú contextual para agregar archivos](entitlements-images/image1-sml.png)
 2. En el cuadro de diálogo Nuevo archivo, seleccione **iOS > Lista de propiedades** y asígnele el nombre Derechos:
 
-    ![Cuadro de diálogo Nuevo archivo](entitlements-images/image2.png)
+    ![Cuadro de diálogo Nuevo archivo](entitlements-images/image2-sml.png)
 
 ## <a name="entitlement-key-reference"></a>Referencia sobre las claves de derechos
 
@@ -104,8 +104,6 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
   - De esta manera, la aplicación admitirá todos los tipos de pases. Para restringir la aplicación y admitir únicamente un subconjunto de tipos de pase de equipo, establezca el valor de la cadena en: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
   Donde pass.$(CFBundleIdentifier) es el identificador de pase creado [anteriormente](~/ios/platform/passkit.md).
-
-<a name="icloud" />
 
 ### <a name="icloud"></a>iCloud
 
@@ -132,8 +130,6 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
   - **Clave**: com.apple.security.application-groups
   - **Cadena**: group.$(CFBundleIdentifier)
-
-<a name="apple-pay" />
 
 ### <a name="apple-pay"></a>Apple Pay
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 22c5b5b6479ce65c2e6b69f6ad5a98fd11ae47d7
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842908"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490004"
 ---
 # <a name="xamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
@@ -27,7 +27,7 @@ En iOS, la lista de pestañas aparece en la parte inferior de la pantalla y el �
 > [!TIP]
 > El elemento `TabbedRenderer` para iOS tiene un método reemplazable `GetIcon` que se puede usar para cargar iconos de pestaña desde un origen especificado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage`. Además, se pueden proporcionar versiones seleccionadas y sin seleccionar de un icono.
 
-En Android, la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles está debajo. Cada pestaña está formada por un título y un icono, que debe ser un archivo PNG con un canal alfa. Sin embargo, se pueden mover las pestañas a la parte inferior de la pantalla con una plataforma específica. Para información sobre los requisitos de los iconos, consulte [Pestañas](https://material.io/components/tabs/#) en material.io y [Compatibilidad con distintas densidades de píxeles](https://developer.android.com/training/multiscreen/screendensities) en developer.android.com. Para información sobre cómo mover las pestañas a la parte inferior de la pantalla, consulte [Establecimiento de la posición y el color de la barra de herramientas de TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
+En Android, la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles está debajo. Cada pestaña está formada por un título y un icono, que debe ser un archivo PNG con un canal alfa. Sin embargo, se pueden mover las pestañas a la parte inferior de la pantalla con una plataforma específica. Si hay más de cinco pestañas, y la lista de pestañas está en la parte inferior de la pantalla, aparece una pestaña *Más* que puede usarse para acceder a las demás pestañas. Para información sobre los requisitos de los iconos, consulte [Pestañas](https://material.io/components/tabs/#) en material.io y [Compatibilidad con distintas densidades de píxeles](https://developer.android.com/training/multiscreen/screendensities) en developer.android.com. Para información sobre cómo mover las pestañas a la parte inferior de la pantalla, consulte [Establecimiento de la posición y el color de la barra de herramientas de TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
 > [!TIP]
 > El elemento `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `GetIconDrawable` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage` y funciona con barras de pestañas superiores e inferiores. También se puede usar el método reemplazable `SetTabIcon` para cargar iconos de pestaña desde un elemento `Drawable` personalizado para barras de pestañas superiores.

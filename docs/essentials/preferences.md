@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
+ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317887"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488509"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
 
@@ -83,7 +83,9 @@ Todos los datos se almacenan en [Preferencias compartidas](https://developer.and
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) se usa para almacenar los valores en el dispositivo. Si no se especifica ningún `sharedName`, se usa `LocalSettings`; en caso contrario, el nombre se usa para crear un contenedor dentro de `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) se usa para almacenar los valores en el dispositivo. Si no se especifica ningún `sharedName`, se usa `LocalSettings`; en caso contrario, el nombre se usa para crear un contenedor dentro de `LocalSettings`. 
+
+`LocalSettings` también tiene la siguiente restricción de que el nombre de cada valor puede tener una longitud máxima de 255 caracteres. Cada valor puede tener un tamaño máximo de 8 KB y cada valor compuesto puede tener un tamaño máximo de 64 KB.
 
 --------------
 

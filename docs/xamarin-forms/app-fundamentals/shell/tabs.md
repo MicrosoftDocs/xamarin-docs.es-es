@@ -6,13 +6,13 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 11/06/2019
+ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888979"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489846"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
@@ -50,7 +50,7 @@ La aplicación más sencilla de Shell es una aplicación de página única, que 
 
 Este ejemplo de código tiene como resultado la siguiente aplicación de página única:
 
-[![Captura de pantalla de una aplicación de página única de Shell en iOS y Android](tabs-images/single-page-app.png "Aplicación de página única de Shell")](tabs-images/single-page-app-large.png#lightbox "Shell single page app")
+[![Captura de pantalla de una aplicación de página única de Shell en iOS y Android](tabs-images/single-page-app.png "Aplicación de una sola página de Shell")](tabs-images/single-page-app-large.png#lightbox "Aplicación de una sola página de Shell")
 
 > [!NOTE]
 > Si es necesario, la barra de navegación se puede ocultar mediante el establecimiento de la propiedad adjunta `Shell.NavBarIsVisible` en `false` en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
@@ -70,7 +70,7 @@ Shell tiene operadores de conversión implícita que permiten simplificar la jer
 Esta conversión implícita encapsula automáticamente el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) en un objeto `ShellContent`, que se encapsula en un objeto `Tab`, que se encapsula en un objeto `FlyoutItem`. Un control flotante no es necesario en una aplicación de página única y, por lo tanto, la propiedad `Shell.FlyoutBehavior` está establecida en `Disabled`.
 
 > [!IMPORTANT]
-> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
+> En una aplicación de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
 
 ## <a name="bottom-tabs"></a>Pestañas inferiores
 
@@ -100,7 +100,11 @@ Los objetos `Tab` se representan como pestañas inferiores, siempre y cuando hay
 
 Los títulos e iconos de pestaña se establecen en cada objeto `Tab`, y se muestran en las pestañas inferiores:
 
-[![Captura de pantalla de una aplicación de Shell de dos páginas con pestañas inferiores en iOS y Android](tabs-images/two-page-app-bottom-tabs.png "Aplicación del shell de dos páginas con pestañas inferiores")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Shell two page app with bottom tabs")
+[![Captura de pantalla de una aplicación de dos páginas de Shell con pestañas inferiores, en iOS y Android](tabs-images/two-page-app-bottom-tabs.png "Aplicación de dos páginas de Shell con pestañas inferiores")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Aplicación de dos páginas de Shell con pestañas inferiores")
+
+Si hay más de cinco pestañas, aparece una pestaña **Más** que puede usarse para acceder a las demás pestañas:
+
+[![Captura de pantalla de una aplicación de Shell con una pestaña Más, en iOS y Android](tabs-images/more-tabs.png "Aplicación de Shell con pestaña Más")](tabs-images/more-tabs-large.png#lightbox "Aplicación de Shell con pestañas Más")
 
 Como alternativa, se pueden usar operadores de conversión implícita de Shell para quitar los objetos `ShellContent` y `Tab` del ejemplo anterior:
 
@@ -119,7 +123,7 @@ Como alternativa, se pueden usar operadores de conversión implícita de Shell p
 Esta conversión implícita encapsula automáticamente cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) en un objeto `ShellContent`, ambos de los cuales se encapsulan en un objeto `Tab`.
 
 > [!IMPORTANT]
-> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
+> En una aplicación de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
 
 ### <a name="tab-class"></a>Clase Tab
 
@@ -138,7 +142,7 @@ La clase `Tab` incluye las siguientes propiedades que controlan la apariencia y 
 
 ## <a name="shell-content"></a>Contenido de Shell
 
-El elemento secundario de cada objeto `Tab` es un objeto `ShellContent` cuya propiedad `Content` está establecida en [ `ContentPage`](xref:Xamarin.Forms.ContentPage):
+El elemento secundario de cada objeto `Tab` es un objeto `ShellContent` cuya propiedad `Content` está establecida en [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -213,7 +217,7 @@ Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, se agrega una ba
 
 El resultado es el diseño que se muestra en las capturas de pantalla siguientes:
 
-[![Captura de pantalla de una aplicación de Shell dos páginas con pestañas superiores e inferiores en iOS y Android](tabs-images/two-page-app-top-tabs.png "Aplicación de Shell de dos páginas con pestañas superiores e inferiores")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Shell two page app with top and bottom tabs")
+[![Captura de pantalla de una aplicación de dos páginas de Shell con pestañas inferior y superior, en iOS y Android](tabs-images/two-page-app-top-tabs.png "Aplicación de dos páginas de Shell con pestañas superior e inferior")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Aplicación de dos páginas de Shell con pestañas superior e inferior")
 
 Como alternativa, se pueden usar operadores de conversión implícita de Shell para quitar los objetos `ShellContent` y el segundo objeto `Tab` del ejemplo anterior:
 
