@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019
-ms.openlocfilehash: fed556dc303fecb92a1ce5b09bfaa1aeb0c61bd0
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 03fb194a4c85d51a6fe477dcfdc8fa38fec5a89c
+ms.sourcegitcommit: ba83c107c87b015dbcc9db13964fe111a0573dca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869331"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265167"
 ---
 # <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin. Forms y Azure Cognitive Services
 
@@ -22,7 +22,7 @@ Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles
 
 ## <a name="speech-recognitionspeech-recognitionmd"></a>[Reconocimiento de voz](speech-recognition.md)
 
-Microsoft Speech API es una API basada en la nube que proporciona algoritmos para procesar el lenguaje oral. En este artículo se explica cómo usar la API de REST de reconocimiento de voz de Microsoft para convertir audio en texto en una aplicación de Xamarin.Forms.
+El servicio de voz de Azure es una API basada en la nube que proporciona algoritmos para procesar el lenguaje hablado. En este artículo se explica cómo usar el servicio de voz de Azure para transcribir voz a texto en una aplicación de Xamarin. Forms.
 
 ## <a name="spell-checkspell-checkmd"></a>[Corrector ortográfico](spell-check.md)
 
@@ -32,6 +32,6 @@ Bing Spell Check realiza contextual corrector ortográfico para el texto, que pr
 
 Microsoft Translator API puede usarse para traducir el texto de voz y a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una aplicación de Xamarin.Forms.
 
-## <a name="perceived-emotion-recognitionemotion-recognitionmd"></a>[Reconocimiento de emociones percibido](emotion-recognition.md)
+## <a name="perceived-emotion-recognitionemotion-recognitionmd"></a>[Reconocimiento de emociones percibidas](emotion-recognition.md)
 
 Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms.
