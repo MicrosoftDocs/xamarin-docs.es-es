@@ -1,25 +1,25 @@
 ---
 title: Plantillas de Xamarin.Forms
-description: En esta guía se explica cómo usar la compatibilidad de plantillas que proporciona Xamarin.Forms. Esto incluye plantillas de control, que pueden usarse para aplicar temas y cambiar el tema de las páginas fácilmente en tiempo de ejecución, y plantillas de datos, que definen la presentación de los datos en los controles admitidos.
+description: En esta guía se explica cómo usar la compatibilidad de plantillas que proporciona Xamarin.Forms. Esta compatibilidad incluye plantillas de control, que definen la estructura visual de controles y páginas personalizados, y plantillas de datos, que definen la presentación de los datos en controles compatibles.
 ms.prod: xamarin
 ms.assetid: 4453C209-C068-47D5-A49B-0ECC95C0FB3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/05/2016
-ms.openlocfilehash: 95f4ef1c5690aad9795181eb57448c9d97b44113
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 01/13/2020
+ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057994"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955692"
 ---
 # <a name="xamarinforms-templates"></a>Plantillas de Xamarin.Forms
 
-## <a name="control-templatescontrol-templatesindexmd"></a>[Plantillas de control](control-templates/index.md)
+## <a name="control-templatescontrol-templatemd"></a>[Plantillas de control](control-template.md)
 
-Las plantillas de control de Xamarin.Forms permiten crear y cambiar fácilmente el tema de las páginas de la aplicación en tiempo de ejecución.
+Las plantillas de control de Xamarin.Forms definen la estructura visual de los controles personalizados derivados [`ContentView`](xref:Xamarin.Forms.ContentView) y las páginas derivadas [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
 ## <a name="data-templatesdata-templatesindexmd"></a>[Plantillas de datos](data-templates/index.md)
 
-Las plantillas de datos de Xamarin.Forms permiten definir la presentación de los datos en los controles admitidos.
+Las plantillas de datos de Xamarin.Forms definen la presentación de los datos en los controles admitidos.

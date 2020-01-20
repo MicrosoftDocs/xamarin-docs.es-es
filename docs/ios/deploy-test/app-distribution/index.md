@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: e8d4be4b06c051386afa0358856a6df49abb6653
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 20126849027f735e9ecd3599c290b4e7a57f837e
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026468"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886585"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Introducción a la distribución de aplicaciones Xamarin.iOS
 
@@ -20,17 +20,16 @@ _Este documento contiene información general sobre las técnicas de distribuci�
 
 Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso del ciclo de vida de desarrollo de software es distribuirla a los usuarios, como se muestra en la sección destacada del siguiente diagrama:
 
-[![](images/publishingdiagram.png "After the iOS app has been developed, the next step is to distribute the app to users, as shown in the highlighted section of this diagram")](images/publishingdiagram.png#lightbox)
+[![Una vez que se ha desarrollado la aplicación iOS, el siguiente paso consiste en distribuirla a los usuarios, como se muestra en la sección resaltada de este diagrama](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
-Apple proporciona los siguientes métodos para distribuir una aplicación de iOS, que son compatibles con Xamarin.iOS:
+Apple proporciona los siguientes métodos para distribuir una aplicación de iOS:
 
-1. [**La App Store**](#App_Store_Distribution)
-2. [**Interna (Enterprise)** ](#In-House_Distribution)
-3. [**Ad Hoc**](#Ad_Hoc_Distribution)
+- [**App Store**](#app-store-distribution)
+- [**Interna (Enterprise)** ](#in-house-distribution)
+- [**Ad Hoc**](#ad-hoc-distribution)
+- [**Aplicaciones personalizadas para empresas**](#custom-apps-for-business)
 
 Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante el correspondiente *perfil de aprovisionamiento*. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
-
-<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -46,15 +45,11 @@ Es importante tener en cuenta que solo los desarrolladores que pertenecen al **P
 
 Para obtener más información, visite la guía [Distribución a través del App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md).
 
-<a name="In-House_Distribution"/>
-
 ## <a name="in-house-distribution"></a>Distribución interna
 
 A veces denominada *Distribución empresarial*, la distribución interna permite a los miembros del **Programa para desarrolladores empresariales de Apple** distribuir aplicaciones internamente a otros miembros de la misma organización. La distribución interna tiene las ventajas de no requerir una revisión de la App Store y no tener ningún límite en el número de dispositivos en los que se puede instalar una aplicación. Sin embargo, es importante tener en cuenta que los miembros del **Programa para desarrolladores empresariales de Apple** **no** tienen acceso a iTunes Connect y, por lo tanto, el licenciatario es responsable de distribuir la aplicación.
 
 Para obtener más información sobre cómo configurar y cómo distribuir una aplicación de forma interna, consulte la [Guía de distribución interna](~/ios/deploy-test/app-distribution/in-house-distribution.md).
-
-<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribución ad hoc
 
@@ -62,9 +57,9 @@ Los usuarios pueden probar las aplicaciones de Xamarin.iOS a través de la distr
 
 Para obtener más información sobre cómo configurar y cómo distribuir una aplicación de forma interna, consulte la [Guía de distribución ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md).
 
-## <a name="summary"></a>Resumen
+## <a name="custom-apps-for-business"></a>Aplicaciones personalizadas para empresas
 
-Este artículo le da una breve introducción a los mecanismos de distribución que están disponibles para las aplicaciones de Xamarin.iOS. Introduce la iTunes App Store, la implementación interna y ad hoc, y proporciona vínculos a información más detallada.
+Apple permite la [distribución personalizada](https://developer.apple.com/business/custom-apps/) de aplicaciones a empresas e instituciones educativas. Revise la [Guía de usuario de Apple Business Manager](https://support.apple.com/guide/apple-business-manager/welcome/web) para obtener información.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
