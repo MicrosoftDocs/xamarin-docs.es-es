@@ -62,7 +62,7 @@ Xamarin combina las capacidades de las plataformas nativas y agrega una serie de
 1. **Entorno de desarrollo integrado (IDE) moderno** : Xamarin usa Visual Studio, un IDE moderno que incluye características como la finalización automática de código, un sofisticado sistema de administración de proyectos y soluciones, una biblioteca de plantillas de proyecto completa, un control de código fuente integrado, etc.
 1. **Compatibilidad multiplataforma para dispositivos móviles** : Xamarin ofrece compatibilidad sofisticada multiplataforma para las tres plataformas principales de iOS, Android y Windows. Las aplicaciones se pueden escribir para compartir hasta el 90% del código y Xamarin. Essentials ofrece una API unificada para tener acceso a recursos comunes en las tres plataformas. El código compartido puede reducir significativamente los costos de desarrollo y el tiempo de comercialización de los desarrolladores de dispositivos móviles.
 
-### <a name="opno-locxamarinandroid"></a>Xamarin. Dispositivo
+### <a name="opno-locxamarinandroid"></a>Xamarin.Android
 
 [![[! Operador. NO-LOC (Xamarin)]. Diagrama de arquitectura de Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
@@ -70,7 +70,7 @@ Xamarin. Las aplicaciones de Android C# se compilan desde en **lenguaje intermed
 
 Para obtener más información, vea [Xamarin. Arquitectura de Android](~/android/internals/architecture.md).
 
-### <a name="opno-locxamarinios"></a>Xamarin. iOS
+### <a name="opno-locxamarinios"></a>Xamarin.iOS
 
 [![[! Operador. NO-LOC (Xamarin)]. diagrama de la arquitectura de iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
