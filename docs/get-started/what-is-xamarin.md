@@ -49,7 +49,7 @@ En el diagrama se muestra la arquitectura global de una aplicación Xamarin mult
 
 Xamarin se basa en **mono**, una versión de código abierto de la .NET Framework basada en los estándares ECMA de .net. Mono ha existido casi siempre y cuando el propio .NET Framework y se ejecuta en la mayoría de las plataformas, como Linux, UNIX, FreeBSD y macOS. El entorno de ejecución de mono controla automáticamente las tareas como la asignación de memoria, la recolección de elementos no utilizados y la interoperabilidad con las plataformas subyacentes.
 
-Para obtener más información acerca de la arquitectura específica de la plataforma, consulte [Xamarin. Android](#xamarinandroid) y [Xamarin. iOS](#xamarinios).
+Para obtener más información acerca de la arquitectura específica de la plataforma, consulte [Xamarin.Android](#xamarinandroid) y [Xamarin.iOS](#xamarinios).
 
 ### <a name="added-features"></a>Características agregadas
 
