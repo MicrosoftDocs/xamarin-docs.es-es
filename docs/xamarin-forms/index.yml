@@ -9,12 +9,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 11/06/2019
-  ms.openlocfilehash: e8269c87513c127c24fbfa3b93963300c41d8eae
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.openlocfilehash: 64920ebafca8239a98862b7008a371e60b7284da
+  ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/06/2020
-  ms.locfileid: "75680136"
+  ms.lasthandoff: 01/23/2020
+  ms.locfileid: "76550125"
 highlightedContent:
   items:
   - title: ¿Qué es Xamarin.Forms?
@@ -36,10 +36,10 @@ productDirectory:
   - title: Primeros pasos
     imageSrc: https://docs.microsoft.com//media/common/i_get-started.svg
     links:
-    - url: ~/get-started/requirements.md
-      text: Requisitos
     - url: ~/get-started/installation/index.md
       text: Instalación
+    - url: ~/get-started/supported-platforms.md
+      text: Plataformas compatibles
     - url: ~/get-started/first-app/index.md
       text: Compilación de la primera aplicación
   - title: Seguimiento de los tutoriales

@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/23/2019
-  ms.openlocfilehash: 980fced1b47ff1fa51e6f39840dc2cafce9a239e
-  ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+  ms.openlocfilehash: 672bf80503c85ac4bdaa903c647144be3819635d
+  ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
   ms.translationtype: HT
   ms.contentlocale: es-ES
   ms.lasthandoff: 01/23/2020
-  ms.locfileid: "75718732"
+  ms.locfileid: "76550086"
 landingContent:
 - title: Primeros pasos
   linkLists:
@@ -23,8 +23,8 @@ landingContent:
     links:
     - text: ¿Qué es Xamarin?
       url: ~/get-started/what-is-xamarin.md
-    - text: Requisitos
-      url: requirements.md
+    - text: Plataformas compatibles
+      url: supported-platforms.md
   - linkListType: how-to-guide
     links:
     - text: Instalación
