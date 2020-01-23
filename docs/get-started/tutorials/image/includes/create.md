@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a51a00c8cfcd0b12787ecd3cd1eb986bb8f596c0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "75490646"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
