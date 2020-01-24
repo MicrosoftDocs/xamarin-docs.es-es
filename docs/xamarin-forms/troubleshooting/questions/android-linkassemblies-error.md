@@ -7,32 +7,32 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a90c56102f77e3f64d9333eec03b025d24888977
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528367"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76549990"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Error de compilación de Android: error inesperado en la tarea LinkAssemblies
 
-Es posible que vea un mensaje `The "LinkAssemblies" task failed unexpectedly` de error al compilar un proyecto de Xamarin. Android que use formularios. Esto sucede cuando el enlazador está activo (normalmente en una compilación de *versión* para reducir el tamaño del paquete de la aplicación). y se produce porque los destinos de Android no se actualizan al marco de trabajo más reciente. (Más información: [Xamarin. Forms para los requisitos de Android](~/get-started/requirements.md#android))
+Es posible que vea un mensaje de error `The "LinkAssemblies" task failed unexpectedly` al compilar un proyecto de Xamarin. Android que usa formularios. Esto sucede cuando el enlazador está activo (normalmente en una compilación de *versión* para reducir el tamaño del paquete de la aplicación). y se produce porque los destinos de Android no se actualizan al marco de trabajo más reciente. (Más información: [plataformas compatibles con Xamarin. Forms](~/get-started/supported-platforms.md#android-platform-support))
 
 La solución a este problema es asegurarse de que tiene las últimas versiones de Android SDK compatibles y establecer la versión de **.NET Framework de destino** en la plataforma instalada más reciente. También se recomienda establecer la **versión de Android de destino** en la plataforma instalada más reciente y la versión de **Android mínima** en la API 19 o superior. Esto se considera la configuración admitida.
 
 ## <a name="setting-in-visual-studio-for-mac"></a>Establecer en Visual Studio para Mac
 
 1. Haga clic con el botón derecho en el proyecto de Android y seleccione **Opciones** en el menú.
-2. En el cuadro de diálogo **Opciones del proyecto** , vaya a compilar **> General**.
-3. Establezca compilar con la versión de **Android: (Plataforma de destino)**  a la plataforma instalada más reciente.
-4. En el cuadro de diálogo **Opciones del proyecto** , vaya a compilar **> aplicación de Android**.
+2. En el cuadro de diálogo **Opciones del proyecto** , vaya a **compilar > General**.
+3. Establezca **compilar con la versión de Android: (plataforma de destino)** en la plataforma instalada más reciente.
+4. En el cuadro de diálogo **Opciones del proyecto** , vaya a **compilar > aplicación de Android**.
 5. Establezca la **versión mínima de Android** en el nivel de API 19 o superior y la **versión de Android de destino** en la plataforma instalada más reciente que eligió en (3).
 
 ## <a name="setting-in-visual-studio"></a>Configuración en Visual Studio
 
 1. Haga clic con el botón derecho en el proyecto de Android y seleccione **propiedades** en el menú.
 2. En las propiedades del proyecto, vaya a **aplicación**.
-3. Establezca compilar con la versión de **Android: (Plataforma de destino)**  a la plataforma instalada más reciente.
+3. Establezca **compilar con la versión de Android: (plataforma de destino)** en la plataforma instalada más reciente.
 4. En las propiedades del proyecto, vaya a **manifiesto de Android**.
 5. Establezca la **versión mínima de Android** en el nivel de API 19 o superior y la **versión de Android de destino** en la plataforma instalada más reciente que eligió en (3).
 
