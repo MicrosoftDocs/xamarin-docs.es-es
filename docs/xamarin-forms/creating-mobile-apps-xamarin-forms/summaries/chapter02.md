@@ -1,22 +1,22 @@
 ---
 title: Resumen del capítulo 2 del documento. Anatomía de una aplicación
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 2 del documento. Anatomía de una aplicación'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 2. Anatomía de una aplicación'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 95defd11a9e568d1089cb2f262cb323045b6c247
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f900cb1532ba4415127c95b07e777881e1d74994
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334432"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724999"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumen del capítulo 2 del documento. Anatomía de una aplicación
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
 > Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
@@ -38,14 +38,12 @@ Con la plataforma Xamarin instalada, puede crear una nueva solución de Xamarin.
 > [!NOTE]
 > Bibliotecas de clases portables se han reemplazado por las bibliotecas de .NET Standard. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas de .NET estándares.
 
-Este ejemplo muestra una solución de Xamarin.Forms creada en Visual Studio sin modificaciones. La solución consta de seis proyectos:
+Este ejemplo muestra una solución de Xamarin.Forms creada en Visual Studio sin modificaciones. La solución consta de cuatro proyectos:
 
 - [**Hola**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), una biblioteca de clases Portable (PCL) compartidos por los otros proyectos
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), un proyecto de aplicación para Android
 - [**Hello.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.iOS), un proyecto de aplicación para iOS
 - [**Hello.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.UWP), un proyecto de aplicación para la plataforma Universal de Windows (Windows 10 y Windows 10 Mobile)
-- [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), un proyecto de aplicación para Windows 8.1
-- [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), un proyecto de aplicación para Windows Phone 8.1
 
 > [!NOTE]
 > Xamarin.Forms ya no es compatible con Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, pero las aplicaciones de Xamarin.Forms se ejecutan en el escritorio de Windows 10.
@@ -185,11 +183,11 @@ Generalmente estas propiedades no se usan directamente. En su lugar, las combina
 - [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
 - [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
-`HorizontalOptions` y `VerticalOptions` son las propiedades más importantes en el diseño de Xamarin.Forms y se tratan con más detalle en [ **Chapter 4. Desplazamiento de la pila**](chapter04.md).
+`HorizontalOptions` y `VerticalOptions` son las propiedades más importantes en el diseño de Xamarin. Forms y se describen con más detalle en el [**capítulo 4. Desplazarse por la pila**](chapter04.md).
 
 Este es el resultado con el `HorizontalOptions` y `VerticalOptions` propiedades de `Label` establecidos en `LayoutOptions.Center`:
 
-[![Triple captura de pantalla del programa greetings](images/ch02fg05-small.png "horizontal y verticalmente centrado etiquetar")](images/ch02fg05-large.png#lightbox "horizontal y verticalmente centrado de etiqueta")
+[![Captura de pantalla triple del programa Greetings](images/ch02fg05-small.png "Etiqueta centrada horizontalmente y verticalmente")](images/ch02fg05-large.png#lightbox "Etiqueta centrada horizontalmente y verticalmente")
 
 ## <a name="solution-5-center-the-text-within-the-label"></a>Solución 5. Centrar el texto dentro de la etiqueta
 

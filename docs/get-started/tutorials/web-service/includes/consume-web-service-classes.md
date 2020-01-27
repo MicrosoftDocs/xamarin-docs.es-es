@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659907"
 ---
 En este ejercicio se creará una interfaz de usuario para consumir la clase `RestService`, que a su vez recupera datos de la API web [OpenWeatherMap](https://openweathermap.org/).
@@ -123,7 +123,7 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Pulse [`Button`](xref:Xamarin.Forms.Button) para recuperar los datos meteorológicos actuales para Seattle:
 
-    [![Captura de pantalla de los datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
+    [![Captura de pantalla de datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
 
     > [!IMPORTANT]
     > Debe establecerse la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey` en la clase `Constants`.
@@ -245,7 +245,7 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Pulse [`Button`](xref:Xamarin.Forms.Button) para recuperar los datos meteorológicos actuales para Seattle:
 
-    [![Captura de pantalla de los datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
+    [![Captura de pantalla de datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
 
     > [!IMPORTANT]
     > Debe establecerse la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey` en la clase `Constants`.

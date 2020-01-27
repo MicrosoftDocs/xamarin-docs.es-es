@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725017"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin. Mac
 
@@ -20,9 +20,9 @@ OpenTK (The Open Toolkit) es una biblioteca avanzada de bajo nivel C# que facili
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-En este artículo, trataremos los aspectos básicos de OpenTK en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
+En este artículo, trataremos los aspectos básicos de OpenTK en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que vamos a usar en este artículo.
 
-Es posible que desee echar un vistazo a la sección [exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , donde se explican los comandos`Register`y`Export`que se usan para conectar las C# clases a Objective-C. objetos y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los comandos `Register` y `Export` que se usan para conectar C# sus clases a objetos de Objective-C y elementos de la interfaz de usuario.
 
 <a name="About_OpenTK" />
 
@@ -40,7 +40,7 @@ Como se indicó anteriormente, OpenTK (el kit de herramientas abierto) es una bi
 
 OpenTK se puede usar para juegos, aplicaciones científicas u otros proyectos que requieran gráficos 3D, audio o funcionalidad de cálculo.
 
-Para obtener más información, consulte [el sitio web del kit de herramientas abierto](http://www.opentk.com) .
+Para obtener más información, consulte [el sitio web del kit de herramientas abierto](https://opentk.net) .
 
 <a name="OpenTK_Quickstart" />
 
@@ -329,6 +329,6 @@ En este artículo se ha examinado rápidamente el trabajo con OpenTK en una apli
 - [MonoMacGameView (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
-- [El kit de herramientas abierto](http://www.opentk.com)
+- [El kit de herramientas abierto](https://opentk.net)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
 - [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

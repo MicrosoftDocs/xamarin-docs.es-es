@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560023"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,7 +23,7 @@ ms.locfileid: "67560023"
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de vistas secundarias en un diseño de pilas orientado horizontalmente en iOS y Android](../images/orientation.png "Diseño de pila que contiene instancias de etiquetas orientadas horizontalmente")](../images/orientation-large.png#lightbox "Diseño de pila que contiene instancias de etiquetas orientadas horizontalmente")
+    [![Captura de pantalla de vistas secundarias en horizontal en un elemento StackLayout, en iOS y Android](../images/orientation.png "StackLayout que contiene instancias de etiqueta orientadas en horizontal")](../images/orientation-large.png#lightbox "StackLayout que contiene instancias de etiqueta orientadas en horizontal")
 
     Fíjese en que las instancias [`Label`](xref:Xamarin.Forms.Label) dentro de [`StackLayout`](xref:Xamarin.Forms.StackLayout) ahora están alineadas horizontalmente, en lugar de verticalmente.
 
@@ -44,7 +44,7 @@ ms.locfileid: "67560023"
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de vistas secundarias en un diseño de pilas orientado horizontalmente en iOS y Android](../images/orientation.png "Diseño de pila que contiene instancias de etiquetas orientadas horizontalmente")](../images/orientation-large.png#lightbox "Diseño de pila que contiene instancias de etiquetas orientadas horizontalmente")
+    [![Captura de pantalla de vistas secundarias en horizontal en un elemento StackLayout, en iOS y Android](../images/orientation.png "StackLayout que contiene instancias de etiqueta orientadas en horizontal")](../images/orientation-large.png#lightbox "StackLayout que contiene instancias de etiqueta orientadas en horizontal")
 
     Fíjese en que las instancias [`Label`](xref:Xamarin.Forms.Label) dentro de [`StackLayout`](xref:Xamarin.Forms.StackLayout) ahora están alineadas horizontalmente, en lugar de verticalmente.
 

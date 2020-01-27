@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028368"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725127"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implementación de aplicaciones de watchos en la tienda de aplicaciones
 
@@ -128,7 +128,7 @@ Xcode mostrará automáticamente los archivos creados en Visual Studio para Mac.
 
 Después, puede enviar la aplicación para su aprobación en la página **versiones** . Consulte la introducción a la [distribución de aplicaciones de iOS](~/ios/deploy-test/app-distribution/index.md) para obtener más información.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Estos son algunos errores que pueden surgir durante el envío a la tienda de aplicaciones y los pasos que puede seguir para corregirlos.
 
@@ -177,7 +177,7 @@ Asegúrese de que tiene la versión más reciente de Visual Studio para Mac y de
 > [!IMPORTANT]
 > Hay un error conocido en la compatibilidad con el icono de inspección de Visual Studio para Mac: espera una imagen de 88x88 píxeles para la imagen de **29x29@3x** (que debe ser 87x87 píxeles).
 
-No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el archivo **Contents. JSON** (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el archivo **Contents. JSON** .
 
 ### <a name="invalid-watchkit-support"></a>Compatibilidad con WatchKit no válida
 

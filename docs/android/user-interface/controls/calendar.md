@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 3d74e2db541e1f30c7626cd1b08228c1e8f57a42
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9c655a503ebdd9ebc08646fb385cdd8f4aa5753
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029313"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725172"
 ---
 # <a name="xamarinandroid-calendar"></a>Calendario de Xamarin. Android
 
@@ -276,5 +276,3 @@ Como puede ver, Android permite un acceso eficaz y sencillo para recuperar y con
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demo de calendario (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
-- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

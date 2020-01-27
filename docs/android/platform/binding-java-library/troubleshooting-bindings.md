@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2eea51764e0e0f13c1a1a91db664872a67420d33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0c273797d7512f062260e49e0f71fdd1132f037b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020552"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723808"
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
 
 _En este artículo se resumen los errores comunes de servidor que pueden producirse al generar enlaces, junto con las posibles causas y las formas sugeridas de resolverlos._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Enlazar una biblioteca de Android (un archivo **. AAR** o **. jar**) rara vez es un suerte sencillo; normalmente requiere un esfuerzo adicional para mitigar los problemas derivados de las diferencias entre Java y .NET.
 Estos problemas impedirán que Xamarin. Android enlace la biblioteca de Android y se presente como mensajes de error en el registro de compilación. En esta guía se ofrecen algunas sugerencias para solucionar los problemas, se enumeran algunos de los problemas o escenarios más comunes y se proporcionan posibles soluciones para enlazar correctamente la biblioteca de Android.
@@ -52,7 +52,7 @@ Una vez que haya descompilado la biblioteca de Android, examine el código fuent
   - El nombre de clase incluye un **$** , es decir, **una clase $.**
   - El nombre de clase está totalmente comprometido por caracteres en minúsculas, es decir, **a.**      
 
-- **`import` instrucciones para las bibliotecas sin referencia** &ndash; identificar la biblioteca sin referencia y agregar esas dependencias al proyecto de enlace de Xamarin. Android con una **acción de compilación** de **ReferenceJar** o **EmbedddedReferenceJar** .
+- **`import` instrucciones para las bibliotecas sin referencia** &ndash; identificar la biblioteca sin referencia y agregar esas dependencias al proyecto de enlace de Xamarin. Android con una **acción de compilación** de **ReferenceJar** o **EmbedddedReferenceJar**.
 
 > [!NOTE]
 > La descompilación de una biblioteca de Java puede estar prohibida o sujeta a restricciones legales basadas en leyes locales o en la licencia en la que se publicó la biblioteca de Java. Si es necesario, dé de alta los servicios de un profesional legal antes de intentar descompilar una biblioteca de Java e inspeccionar el código fuente.
@@ -157,7 +157,7 @@ public interface MediationInterstitialListener {
 }
 ```
 
-Esto es así por diseño para evitar los nombres largos en los tipos de argumento de evento. Para evitar estos conflictos, se requiere una transformación de metadatos. Edite [**Transforms\Metadata.XML**](https://github.com/xamarin/monodroid-samples/blob/master/AdMob/AdMob/Transforms/Metadata.xml) y agregue un atributo `argsType` en cualquiera de las interfaces (o en el método de interfaz):
+Esto es así por diseño para evitar los nombres largos en los tipos de argumento de evento. Para evitar estos conflictos, se requiere una transformación de metadatos. Edite **Transforms\Metadata.XML** y agregue un atributo `argsType` en cualquiera de las interfaces (o en el método de interfaz):
 
 ```xml
 <attr path="/api/package[@name='com.google.ads.mediation']/
@@ -204,7 +204,7 @@ Se trata de un problema que se produce al enlazar métodos de Java con tipos de 
   }
   ```
 
-- Quite la covarianza del código generado C# . Esto implica agregar la siguiente transformación a **Transforms\Metadata.XML** , lo que hará que C# el código generado tenga un tipo de valor devuelto de`Java.Lang.Object`:
+- Quite la covarianza del código generado C# . Esto implica agregar la siguiente transformación a **Transforms\Metadata.XML** , lo que hará que C# el código generado tenga un tipo de valor devuelto de `Java.Lang.Object`:
 
   ```xml
   <attr
@@ -231,7 +231,7 @@ En Java, no es necesario que una clase derivada tenga la misma visibilidad que s
 
 Algunos proyectos de enlace también pueden depender de la funcionalidad de una biblioteca **.** Es posible que Xamarin. Android no cargue automáticamente la biblioteca **. so** . Cuando se ejecuta el código de Java ajustado, Xamarin. Android no realizará la llamada JNI y el mensaje de error _java. lang. UnsatisfiedLinkError: no se encuentra el método nativo:_ aparecerá en el logcat de salida para la aplicación.
 
-La solución para esto es cargar manualmente la biblioteca **. so** con una llamada a `Java.Lang.JavaSystem.LoadLibrary`. Por ejemplo, suponiendo que un proyecto de Xamarin. Android tiene libpocketsphinx_jni de biblioteca compartida **. por tanto** , se incluye en el proyecto de enlace con una acción de compilación de **EmbeddedNativeLibrary**, el siguiente fragmento de código (ejecutado antes de usar la biblioteca compartida) cargará la biblioteca **. so** :
+La solución para esto es cargar manualmente la biblioteca **. so** con una llamada a `Java.Lang.JavaSystem.LoadLibrary`. Por ejemplo, suponiendo que un proyecto de Xamarin. Android tiene una biblioteca compartida **libpocketsphinx_jni. por tanto** , se incluye en el proyecto de enlace con una acción de compilación de **EmbeddedNativeLibrary**, el siguiente fragmento de código (ejecutado antes de usar la biblioteca compartida) cargará la biblioteca **. so** :
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");

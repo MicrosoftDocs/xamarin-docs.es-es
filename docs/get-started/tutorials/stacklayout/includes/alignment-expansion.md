@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560024"
 ---
 El tamaño y la posición de las vistas secundarias dentro de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependen de los valores de las propiedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) y [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) de las vistas secundarias, y de los valores de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -53,7 +53,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de vistas secundarias en un StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancias de Label, con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancias de Label, con la alineación y la expansión establecidas")
+    [![Captura de pantalla de vistas secundarias en un elemento StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")
 
     Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo respeta las preferencias de alineación de las vistas secundarias que tienen la dirección opuesta a la orientación del `StackLayout`. Por lo tanto, las vistas secundarias de [`Label`](xref:Xamarin.Forms.Label) dentro del `StackLayout` con orientación vertical establecen sus propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) en uno de los campos de alineación siguientes:
 
@@ -109,7 +109,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de vistas secundarias en un StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancias de Label, con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancias de Label, con la alineación y la expansión establecidas")
+    [![Captura de pantalla de vistas secundarias en un elemento StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")
 
     Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo respeta las preferencias de alineación de las vistas secundarias que tienen la dirección opuesta a la orientación del `StackLayout`. Por lo tanto, las vistas secundarias de [`Label`](xref:Xamarin.Forms.Label) dentro del `StackLayout` con orientación vertical establecen sus propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) en uno de los campos de alineación siguientes:
 

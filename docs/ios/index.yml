@@ -12,7 +12,7 @@ abstract:
   description: 'Xamarin.iOS expone el iOS SDK completo para los desarrolladores de .NET. Cree aplicaciones iOS, totalmente nativas, con C# o F# en Visual Studio.'
   menu:
     items:
-      - href: ~/ios/samples/index.yml
+      - href: ~/ios/samples/index.md
         text: Muestras de iOS
       - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
         text: Notas de la versión

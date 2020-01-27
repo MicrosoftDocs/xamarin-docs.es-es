@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659905"
 ---
 En este ejercicio, creará una interfaz de usuario para consumir las clases de acceso a datos creadas anteriormente.
@@ -74,7 +74,7 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
 
     Escriba varios elementos de datos y pulse el [`Button`](xref:Xamarin.Forms.Button) de cada uno de ellos. De esta forma, se guardarán los datos en la base de datos y se volverá a rellenar el elemento [`ListView`](xref:Xamarin.Forms.ListView) con todos los datos de la base de datos:
 
-    [![Captura de pantalla de la persistencia de datos de la base de datos local SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
+    [![Captura de pantalla de la persistencia de datos de la base de datos local de SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
 
     Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
@@ -144,6 +144,6 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
 
     Escriba varios elementos de datos y pulse el [`Button`](xref:Xamarin.Forms.Button) de cada uno de ellos. De esta forma, se guardarán los datos en la base de datos y se volverá a rellenar el elemento [`ListView`](xref:Xamarin.Forms.ListView) con todos los datos de la base de datos:
 
-    [![Captura de pantalla de la persistencia de datos de la base de datos local SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
+    [![Captura de pantalla de la persistencia de datos de la base de datos local de SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
 
     Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).

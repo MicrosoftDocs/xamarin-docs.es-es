@@ -7,22 +7,22 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 1adade4e66a6df504ba7c8ac3ff1f668c014fe93
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7dc7a2faabef86aa63b52739edda696efcb54aba
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770448"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724251"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Detectar la transformación de escala para el escalado de objetos para diversos tamaños de SkiaSharp_
 
 Como ha visto en [ **traducir la transformación** ](translate.md) artículo, la transformación de traslación puede mover un objeto gráfico de una ubicación a otra. En cambio, la transformación de escala cambia el tamaño del objeto gráfico:
 
-![](scale-images/scaleexample.png "Una palabra alta escalada de tamaño")
+![](scale-images/scaleexample.png "A tall word scaled in size")
 
 La transformación de escala también a menudo hace que las coordenadas de gráficos mover la medida que se hacen más grandes.
 
@@ -102,18 +102,18 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Puede que se pregunte: ¿Cómo afectan los factores de escala al valor devuelto `MeasureText` desde el `SKPaint`método de? La respuesta es la siguiente: No, en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
+Tal vez se pregunte: ¿cómo afecta los factores de escala el valor devuelto de la `MeasureText` método `SKPaint`? La respuesta es: no en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
 
 Como puede ver, todo lo que se dibuja después el `Scale` llamar aumenta proporcionalmente:
 
-[![](scale-images/basicscale-small.png "Captura de pantalla de la página de escalado básico triple")](scale-images/basicscale-large.png#lightbox "Triple captura de pantalla de la página de escalado básico")
+[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
 
 El texto, el ancho de la línea discontinua, la longitud de los guiones en esa línea, el redondeo de las esquinas y en el margen de 10 píxeles entre los bordes superiores e izquierdos del lienzo y el rectángulo redondeado son todos los sujetos a los mismos factores de escala.
 
 > [!IMPORTANT]
 > La plataforma Universal de Windows no se representará correctamente texto escalado anisotropicly.
 
-Anisotrópico escalado hace que el ancho del trazo para convertirse en diferentes para las líneas alineado con los ejes horizontales y vertical. (Esto es también puede deducirse a partir de la primera imagen en esta página). Si no desea que el ancho del trazo se vea afectado por los factores de escala, establézcalo en 0 y siempre será un píxel de ancho, con independencia de la `Scale` configuración.
+Anisotrópico escalado hace que el ancho del trazo para convertirse en diferentes para las líneas alineado con los ejes horizontales y vertical. (Esto también es evidente en la primera imagen de esta página). Si no desea que el ancho del trazo se vea afectado por los factores de escala, establézcalo en 0 y siempre tendrá un ancho de píxel, independientemente del valor de `Scale`.
 
 El escalado es relativo a la esquina superior izquierda del lienzo. Esto podría ser exactamente lo que desea, pero no es posible. Suponga que desea colocar el texto y el rectángulo en otro lugar en el lienzo y desea ajustar la escala en relación con su centro. En ese caso puede utilizar la cuarta versión de la [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) método, que incluye dos parámetros adicionales para especificar el centro de escalado:
 
@@ -168,7 +168,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Se coloca la esquina superior izquierda del rectángulo redondeado `margin` píxeles desde la izquierda del lienzo y `margin` píxeles desde la parte superior. Los dos últimos argumentos para el `Scale` método se establecen en los valores más el ancho y alto del texto, que también es el ancho y alto del rectángulo redondeado. Esto significa que los ajustes de escala en relación con el centro del rectángulo:
 
-[![](scale-images/centeredscale-small.png "Captura de pantalla triple de la página escala centrado")](scale-images/centeredscale-large.png#lightbox "Triple captura de pantalla de la página escala centrado")
+[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
 
 El `Slider` elementos en este programa tienen un intervalo de &ndash;10 a 10. Como puede ver, los valores negativos (por ejemplo en Android, pantalla en el centro) escalado vertical hará que los objetos se voltea alrededor del eje horizontal que pasa a través del centro de escalado. Los valores negativos (tal como se muestra en la pantalla UWP a la derecha) el escalado horizontal hará que los objetos se voltea alrededor del eje vertical que pasa a través del centro de escalado.
 
@@ -249,9 +249,9 @@ using (SKPaint strokePaint = new SKPaint
 
 El `pathBounds` rectángulo es obtenido en la parte superior de este código y, a continuación, se usará más adelante con el ancho y alto del lienzo en el `Scale` llamar. Llamada por sí mismo escalará las coordenadas de la ruta de acceso cuando se representa por la `DrawPath` llamada pero la estrella se centrará en la esquina superior derecha del lienzo. Debe desplazar hacia abajo y a la izquierda. Este es el trabajo de la `Translate` llamar. Esas dos propiedades de `pathBounds` están aproximadamente -100, por lo que los factores de traslación alrededor de 100. Porque el `Translate` llamada es después de la `Scale` llamar, esos valores se escalan eficazmente mediante los factores de escala, por lo que mover el centro de la estrella en el centro del lienzo:
 
-[![](scale-images/anisotropicscaling-small.png "Captura de pantalla de la página escala anisotrópico triple")](scale-images/anisotropicscaling-large.png#lightbox "Triple captura de pantalla de la página escala anisotrópico")
+[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
 
-Otra manera de pensar en las `Scale` llamadas a y `Translate` es determinar el efecto en la secuencia inversa: La `Translate` llamada desplaza la ruta de acceso para que se vuelva totalmente visible pero esté orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
+Otra manera, puede pensar en el `Scale` y `Translate` llamadas consiste en determinar el efecto en orden inverso: la `Translate` llamada cambia la ruta de acceso, por lo que pasa a ser totalmente visible pero orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
 
 En realidad, parece que el asterisco es un poco mayor que el lienzo. El problema es el ancho del trazo. El `Bounds` propiedad de `SKPath` indica las dimensiones de las coordenadas se codifican en la ruta de acceso, y eso es lo que el programa usa para escalar. Cuando se representa la ruta de acceso con un ancho de trazo determinado, la ruta de acceso representada es mayor que el lienzo.
 
@@ -292,7 +292,7 @@ using (SKPaint textPaint = new SKPaint
 
 Es una lógica similar, y el texto se expande hasta el tamaño de la página según el rectángulo de límites de texto devuelto desde `MeasureText` (que es un poco mayor que el texto real):
 
-[![](scale-images/anisotropictext-small.png "Captura de pantalla triple de la página de prueba anisotrópico")](scale-images/anisotropictext-large.png#lightbox "Triple captura de pantalla de la página de prueba anisotrópico")
+[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
 
 Si necesita conservar la relación de aspecto de los objetos gráficos, desea usar el escalado isótropo. El **escalado isótropo** página muestra para la estrella que señala la 11. Conceptualmente, los pasos para mostrar un objeto gráfico en el centro de la página con un escalado isótropo son:
 
@@ -300,7 +300,7 @@ Si necesita conservar la relación de aspecto de los objetos gráficos, desea us
 - Escalar el objeto basándose en el valor mínimo de las dimensiones de página horizontales y verticales dividido entre las dimensiones del objeto gráfico.
 - Traducir el centro del objeto escalado hasta el centro de la página.
 
-El [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) lleva a cabo estos pasos en orden inverso antes de mostrar la estrella:
+El [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) lleva a cabo estos pasos en orden inverso antes de mostrar la estrella:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -341,7 +341,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El código también muestra la estrella 10 veces más, cada vez que reduce el escalado factor 10% y progresivamente cambiando el color de rojo a azul:
 
-[![](scale-images/isotropicscaling-small.png "Captura de pantalla de la página escala isótropo triple")](scale-images/isotropicscaling-large.png#lightbox "Triple captura de pantalla de la página escala isótropo")
+[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

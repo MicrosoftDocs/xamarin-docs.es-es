@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 01/24/2020
 ms.locfileid: "75727945"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de formularios de Xamarin. Forms
@@ -59,7 +59,7 @@ Se incluyen las siguientes páginas y controles para permitir un enlace sencillo
 
 Vea la [referencia de controles de páginas de página](controls.md) para obtener ejemplos.
 
-### <a name="under-the-hood"></a>Aspectos técnicos
+### <a name="under-the-hood"></a>En el capó
 
 Un origen de datos de Xamarin. Forms se adhiere a la interfaz `IDataSource`.
 

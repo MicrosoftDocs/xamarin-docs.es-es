@@ -6,12 +6,12 @@ ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: davidortinau
 ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: b3444b962a032ceaeeba36f63ad975b3d80a9f14
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 551e9b1fc6298ddc2cf64e2e9ef60d90f6c1abac
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016928"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723768"
 ---
 # <a name="building-cross-platform-applications"></a>Creación de aplicaciones multiplataforma
 
@@ -67,4 +67,3 @@ Por último, analiza brevemente las pruebas y proporciona referencias a un caso 
 - [Aplicación de ejemplo de tarea (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 - [Desarrollo de aplicaciones móviles de Xamarin: aspectos C# básicos de Xamarin. Forms y multiplataforma (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desarrollo móvil con C# por Greg shackles (O'Reilly)](https://shop.oreilly.com/product/0636920024002.do)
-- [Desarrollo Móvil multiplataforma profesional en C# Scott Olson, John Hunter, Ben Horgen, Kenny goers (Wrox)](https://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

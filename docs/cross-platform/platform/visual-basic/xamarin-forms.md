@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: e1a540eef2a4d54ead68ae4a9427b0622b668182
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 42be47e74b4b0da60d517a17bb6090c58448b718
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014547"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724874"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms con Visual Basic.NET
 
@@ -32,7 +32,7 @@ Siga estos pasos para crear un proyecto sencillo de Xamarin. Forms que usa Visua
 
 2. En la ventana **crear un nuevo proyecto** , escriba **Xamarin. Forms** para filtrar la lista y seleccione **aplicación móvil (Xamarin. Forms)** y, a continuación, presione **siguiente**.
 
-    [Filtro de![para aplicaciones de Xamarin. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
+    [Filtro de ![para aplicaciones de Xamarin. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
 
 3. En la siguiente pantalla, escriba un nombre para el proyecto y presione **crear**.
 
@@ -121,7 +121,7 @@ Haga clic con el botón secundario en el nodo **referencias** en los proyectos d
 
 Como se indica en la [Página portable Visual Basic.net](~/cross-platform/platform/visual-basic/index.md), Xamarin no admite el lenguaje Visual Basic. Esto significa que hay algunas limitaciones en cuanto a cómo se puede usar Visual Basic:
 
-- Las páginas XAML no se pueden incluir en el proyecto de Visual Basic: el generador de código subyacente C#solo puede compilar. Se puede incluir XAML en una biblioteca de clases C# portable, a la que se hace referencia y que se usa para rellenar los archivos XAML a través de modelos de Visual Basic (un ejemplo de esto se incluye en el [ejemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages)).
+- Las páginas XAML no se pueden incluir en el proyecto de Visual Basic: el generador de código subyacente C#solo puede compilar. Se puede incluir XAML en una biblioteca de clases C# portable, a la que se hace referencia y que se usa para rellenar los archivos XAML a través de modelos de Visual Basic (un ejemplo de esto se incluye en el [ejemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)).
 
 - Los representadores personalizados no se pueden escribir en Visual Basic, deben escribirse en los proyectos C# de la plataforma nativa.
 
@@ -129,5 +129,5 @@ Como se indica en la [Página portable Visual Basic.net](~/cross-platform/platfo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamarinFormsVB (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [XamarinFormsVB (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [Desarrollo multiplataforma con el .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)

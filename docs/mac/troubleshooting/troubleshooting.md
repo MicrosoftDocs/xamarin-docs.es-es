@@ -8,16 +8,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001608"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725445"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para la solución de problemas de Xamarin. Mac
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 A veces, todos se bloquean mientras se trabaja en un proyecto, ya sea en la imposibilidad de obtener una API para trabajar de la forma deseada o para intentar solucionar un error. Nuestro objetivo en Xamarin es que tenga éxito al escribir las aplicaciones móviles y de escritorio, y que hemos proporcionado algunos recursos para ayudarle.
 
@@ -54,7 +54,7 @@ La depuración de estos programas puede ser frustrante, ya que la búsqueda de l
 - Puede aumentar la salida agregando "MONO_LOG_LEVEL" al comando en la línea de comandos, por ejemplo:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- Puede adjuntar un depurador nativo (`lldb`) al proceso para ver si proporciona más información (esto requiere una licencia de pago). Por ejemplo, haga lo siguiente:
+- Puede adjuntar un depurador nativo (`lldb`) al proceso para ver si proporciona más información (esto requiere una licencia de pago). Por ejemplo, haga lo siguiente.
 
   1. Escriba `lldb MyApp.app/Contents/MacOS/MyApp` en el terminal.
   2. Escriba `run` en el terminal.
@@ -68,7 +68,7 @@ En las secciones siguientes se tratan los problemas conocidos y sus soluciones.
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>No se puede conectar al depurador en aplicaciones en espacio aislado
 
-El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador.* .
+El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador*.
 
 [![Editar los derechos](troubleshooting-images/debug01.png "Editar los derechos")](troubleshooting-images/debug01-large.png#lightbox)
 
@@ -80,7 +80,7 @@ Al incluir bibliotecas de terceros en la aplicación de Xamarin. Mac, podría ob
 
 Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la **compilación de mac** > **internacionalización** y Compruebe la internacionalización **occidental** :
 
-[![Editar las opciones de compilación](troubleshooting-images/issue01.png "Editar las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
+[![Edición de las opciones de compilación](troubleshooting-images/issue01.png "Edición de las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>No se pudo compilar (mm5103)
 
@@ -112,7 +112,7 @@ Escriba `Entitlements` como nombre y haga clic en el botón **nuevo** . Si el pr
 
 ## <a name="community-support-on-the-forums"></a>Soporte técnico de la comunidad en los foros
 
-La comunidad de desarrolladores que usan productos de Xamarin es sorprendente y muchos visitan nuestros [foros de Xamarin. Mac](https://forums.xamarin.com/categories/mac) para compartir experiencias y sus conocimientos. Además, los ingenieros de Xamarin visitan periódicamente el foro para ayudarle.
+La comunidad de desarrolladores que usan productos de Xamarin es sorprendente y muchos visitan nuestros [foros de Xamarin. Mac](https://forums.xamarin.com/categories/xamarin-mac) para compartir experiencias y sus conocimientos. Además, los ingenieros de Xamarin visitan periódicamente el foro para ayudarle.
 
 <a name="filing-a-bug"/>
 

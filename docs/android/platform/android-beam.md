@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 11f1d38eb10421d4ecef3e2039688b2d9a6d9e6e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: aab121ed5f811baf38eed48cf891ccdf076eaf44
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027828"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723817"
 ---
 # <a name="android-beam"></a>Android Beam
 
 El rayo de Android es una tecnología de transmisión de datos en proximidad (NFC) introducida en Android 4,0 que permite a las aplicaciones compartir información a través de NFC en estrecha proximidad.
 
-[Diagrama de![que ilustra dos dispositivos en información de uso compartido de proximidad aproximada](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[Diagrama de ![que ilustra dos dispositivos en información de uso compartido de proximidad aproximada](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 El rayo de Android funciona insertando mensajes sobre NFC cuando dos dispositivos están dentro del alcance. Los dispositivos de 4cm entre sí pueden compartir datos con el rayo de Android. Una actividad en un dispositivo crea un mensaje y especifica una actividad (o actividades) que puede controlar la inserción. Cuando la actividad especificada está en primer plano y los dispositivos están dentro del alcance, el rayo de Android enviará el mensaje al segundo dispositivo. En el dispositivo receptor, se invoca una intención que contiene los datos del mensaje.
 
@@ -79,5 +79,3 @@ Para obtener un ejemplo de código completo que usa el rayo de Android, que se m
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demo de rayos de Android (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3db7e456d4321aa7eba415813f8c374b030da4ca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 44468d3f2d323065161c290f2df8e6f0e89d3def
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029864"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724992"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Cambios adicionales en el marco de macOS Sierra
 
@@ -101,7 +101,7 @@ Para obtener más información, consulte las notas de la versión de Apple [Foun
 
 Se ha realizado la siguiente mejora en el marco de trabajo de GameKit para macOS Sierra:
 
-- La **aplicación Game Center** ha quedado en desuso y se ha quitado de MacOS. Si la aplicación usa GameKit, _debe_ presentar su propia interfaz para mostrar las características de GameKit, como los marcadores, etc. 
+- La **aplicación Game Center** ha quedado en desuso y se ha quitado de MacOS. Si la aplicación usa GameKit, _debe_ presentar su propia interfaz para mostrar las características de GameKit, como los marcadores, etc.
 - La clase [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) ha implementado un nuevo tipo de cuenta solo iCloud.
 - La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession` mantiene una lista de reproductores y la aplicación es responsable de la implementación de cómo y cuándo se almacena, recupera o intercambia la fecha del participante entre jugadores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
 
@@ -169,7 +169,7 @@ Se ha realizado la siguiente mejora en el marco de trabajo de SceneKit para macO
 - SceneKit interpreta los valores de los componentes de color en un espacio de colores RGB lineal para todos los tipos de sombreador.
 - Dado que SceneKit Lee y ajusta la información de Perfil de color en imágenes de textura, use catálogos de recursos para todas las imágenes para asegurarse de que se proporciona esta información.
 - Tanto la representación del espacio de colores lineal como el color ancho pueden deshabilitarse mediante la especificación de las claves `SCNDisableLinearSpaceRendering` y `SCNDisableWideGamut` en la `Info.plist`de la aplicación.
-- Cree primates polígono arbitrario (se carga desde archivos o se genera mediante programación) para especificar la geometría con la nueva clase [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Cree primates polígono arbitrario (se carga desde archivos o se genera mediante programación) para especificar la geometría con la nueva clase [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon?language=objc) .
 
 <a name="Security-Framework-Enhancements" />
 

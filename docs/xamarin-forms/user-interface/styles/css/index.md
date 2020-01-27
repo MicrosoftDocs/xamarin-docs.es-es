@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: 8425db35b64ec72ba0384f837e01acca49bd20f7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 726ebd55b38460ee966113e4ee487327cd42b03d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490056"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724198"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilos a las aplicaciones de Xamarin.Forms con hojas de estilos en cascada (CSS)
 
@@ -456,7 +456,7 @@ También se admiten las siguientes propiedades CSS específicas del shell de Xam
 
 La siguiente `color` se admiten valores:
 
-- `X11` [colores](https://en.wikipedia.org/wiki/X11_color_names/), que coincide con los colores CSS, los colores predefinidos de UWP y Xamarin.Forms colores. Tenga en cuenta que estos valores de color distinguen mayúsculas de minúsculas.
+- `X11` [colores](https://en.wikipedia.org/wiki/X11_color_names), que coincide con los colores CSS, los colores predefinidos de UWP y Xamarin.Forms colores. Tenga en cuenta que estos valores de color distinguen mayúsculas de minúsculas.
 - hex colores: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
 - los colores RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Los valores son en el intervalo 0-255, o 0-100%.
 - los colores RGBA: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. Es el valor de opacidad en el intervalo de 0,0 a 1,0.

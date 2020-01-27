@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032357"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725427"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras desde la aplicación en Xamarin. iOS
 
@@ -28,7 +28,7 @@ Proporcionar la funcionalidad de compra desde la aplicación requiere una serie 
 
 En este documento se explica cómo completar todos estos pasos para proporcionar compras desde la aplicación mediante Xamarin. iOS.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Para admitir la compra desde la aplicación, debe usar Xamarin. iOS 5,0 o una versión más reciente con Xcode 7 y versiones posteriores.
 
@@ -65,7 +65,6 @@ En este artículo se ha introducido el concepto de compra desde la aplicación, 
 - [Identificadores de producto de compra desde la aplicación Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota técnica de compras desde la aplicación](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [El primer envío de la tienda de aplicaciones](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [Centro de recursos de App Store](https://developer.apple.com/appstore/index.html)
 - [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Directrices de revisión del App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Administración de las aplicaciones](https://developer.apple.com/appstore/resources/managing/index.html)

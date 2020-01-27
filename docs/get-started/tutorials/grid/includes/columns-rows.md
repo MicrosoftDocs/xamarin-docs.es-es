@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61376015"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,7 +46,7 @@ ms.locfileid: "61376015"
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de una cuadrícula que tiene contenido distribuido en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")
+    [![Captura de pantalla de una cuadrícula que tiene contenido que aparece en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -88,4 +88,4 @@ ms.locfileid: "61376015"
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de una cuadrícula que tiene contenido distribuido en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")
+    [![Captura de pantalla de una cuadrícula que tiene contenido que aparece en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")

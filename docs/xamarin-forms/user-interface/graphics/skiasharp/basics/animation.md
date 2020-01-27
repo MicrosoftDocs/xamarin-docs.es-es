@@ -7,22 +7,22 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 80de16a0cf9b601ac3795085b638b9d62812f4d9
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759746"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725555"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animación básica de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra cómo animar los gráficos de SkiaSharp_
 
 Puede animar gráficos de SkiaSharp en Xamarin.Forms haciendo que el `PaintSurface` método al que llamar periódicamente, cada vez que los gráficos de dibujo un poco diferente. Aquí es una animación que se muestra más adelante en este artículo con círculos concéntricos que aparentemente se expanden desde el centro:
 
-![](animation-images/animationexample.png "Varios círculos concéntricos aparentemente expandir desde el centro")
+![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
 El **elipse en alza** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa anima los dos ejes de una elipse, por lo que parece estar en alza y puede incluso controlar el frecuencia de este pulsaciones. El [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) archivo crea una instancia de un Xamarin.Forms `Slider` y un `Label` para mostrar el valor actual del control deslizante. Se trata de una manera común de integrar un `SKCanvasView` con otras vistas de Xamarin.Forms:
 
@@ -141,7 +141,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El método calcula un radio máximo en función del tamaño del área de visualización y un radio mínimo según el radio máximo. El `scale` valor se anima entre 0 y 1 y de vuelta a 0, el método que usa para calcular un `xRadius` y `yRadius` que oscila entre `minRadius` y `maxRadius`. Estos valores se utilizan para dibujar y rellenar una elipse:
 
-[![](animation-images/pulsatingellipse-small.png "Captura de pantalla de la página de la elipse parpadeante triple")](animation-images/pulsatingellipse-large.png#lightbox "Triple captura de pantalla de la página de la elipse parpadeante")
+[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
 Tenga en cuenta que el `SKPaint` objeto se crea en un `using` bloque. Al igual que muchas clases de SkiaSharp `SKPaint` deriva `SKObject`, que se deriva de `SKNativeObject`, que implementa el [ `IDisposable` ](xref:System.IDisposable) interfaz. `SKPaint` invalida el `Dispose` método para liberar recursos no administrados.
 
@@ -149,7 +149,7 @@ Tenga en cuenta que el `SKPaint` objeto se crea en un `using` bloque. Al igual q
 
  Sería una mejor solución en este caso concreto crear dos `SKPaint` objetos una vez y guardarlos como campos.
 
-Eso es lo que el **círculos expandiendo** does de animación. El [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) clase comienza definiendo varios campos, como un `SKPaint` objeto:
+Eso es lo que el **círculos expandiendo** does de animación. El [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) clase comienza definiendo varios campos, como un `SKPaint` objeto:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -244,7 +244,7 @@ public class ExpandingCirclesPage : ContentPage
 
 El resultado es que la imagen de la misma cuando se ve `t` es igual a 0, como cuando `t` es igual a 1, y los círculos parecen continúe expandiendo para siempre:
 
-[![](animation-images/expandingcircles-small.png "Captura de pantalla triple de la página de expansión de círculos")](animation-images/expandingcircles-large.png#lightbox "Triple captura de pantalla de la página de círculos de expansión")
+[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

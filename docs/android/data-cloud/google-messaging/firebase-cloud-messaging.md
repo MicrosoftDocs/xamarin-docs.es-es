@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: c97c931445122cbaa613b87e3778f4dc9e92f4d0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4cf32bae208efa67acbb08f2e4525e4571b14b16
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023667"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723786"
 ---
 # <a name="firebase-cloud-messaging"></a>Mensajería en la nube de Firebase
 
@@ -22,7 +22,7 @@ _Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre
 
 En este tema se proporciona información general de alto nivel sobre cómo Firebase Cloud Messaging enruta los mensajes entre la aplicación de Xamarin. Android y un servidor de aplicaciones, y proporciona un procedimiento paso a paso para adquirir credenciales para que la aplicación pueda usar los servicios de FCM.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Firebase Cloud Messaging (FCM) es un servicio multiplataforma que controla el envío, el enrutamiento y la puesta en cola de los mensajes entre las aplicaciones de servidor y las aplicaciones de cliente móvil. FCM es el sucesor de Google Cloud Messaging (GCM) y se basa en Google Play Services.
 
@@ -34,7 +34,7 @@ Con FCM, los servidores de aplicaciones pueden enviar mensajes a un único dispo
 
 ## <a name="fcm-in-action"></a>Mensajería en la nube Firebase en acción
 
-Cuando se envía un mensaje de nivel inferior a una aplicación cliente desde un servidor de aplicaciones, el servidor de aplicaciones envía el mensaje a un *servidor de conexión FCM* proporcionado por Google; el servidor de conexión FCM, a su vez, reenvía el mensaje a un dispositivo que ejecuta la aplicación cliente. Los mensajes se pueden enviar a través de HTTP o [XMPP](https://developers.google.com/cloud-messaging/ccs) (Protocolo de mensajería y presencia extensible). Dado que las aplicaciones cliente no siempre están conectadas o en ejecución, el servidor de conexión FCM pone en cola y almacena los mensajes, enviándolos a las aplicaciones cliente a medida que se vuelven a conectar y están disponibles. Del mismo modo, FCM pondrá en cola los mensajes ascendentes desde la aplicación cliente al servidor de aplicaciones si el servidor de aplicaciones no está disponible. Para obtener más información sobre los servidores de conexión de FCM, consulte [acerca de Firebase Cloud Messaging Server](https://firebase.google.com/docs/cloud-messaging/server).
+Cuando se envía un mensaje de nivel inferior a una aplicación cliente desde un servidor de aplicaciones, el servidor de aplicaciones envía el mensaje a un *servidor de conexión FCM* proporcionado por Google; el servidor de conexión FCM, a su vez, reenvía el mensaje a un dispositivo que ejecuta la aplicación cliente. Los mensajes se pueden enviar a través de HTTP o [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (Protocolo de mensajería y presencia extensible). Dado que las aplicaciones cliente no siempre están conectadas o en ejecución, el servidor de conexión FCM pone en cola y almacena los mensajes, enviándolos a las aplicaciones cliente a medida que se vuelven a conectar y están disponibles. Del mismo modo, FCM pondrá en cola los mensajes ascendentes desde la aplicación cliente al servidor de aplicaciones si el servidor de aplicaciones no está disponible. Para obtener más información sobre los servidores de conexión de FCM, consulte [acerca de Firebase Cloud Messaging Server](https://firebase.google.com/docs/cloud-messaging/server).
 
 FCM usa las credenciales siguientes para identificar el servidor de aplicaciones y la aplicación cliente, y usa estas credenciales para autorizar las transacciones de mensajes a través de FCM:
 
@@ -57,7 +57,7 @@ En las secciones siguientes se explica cómo se usan estas credenciales cuando l
 
 Una aplicación cliente debe registrarse primero con FCM antes de que pueda tener lugar la mensajería. La aplicación cliente debe completar los pasos de registro que se muestran en el diagrama siguiente:
 
-[diagrama de pasos de registro de aplicaciones![](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
+[diagrama de pasos de registro de aplicaciones ![](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1. La aplicación cliente se pone en contacto con FCM para obtener un token de registro, pasando el identificador del remitente, la clave de API y el identificador de la aplicación a FCM.
 
@@ -93,7 +93,7 @@ Para obtener información detallada sobre cómo recibir mensajes FCM de bajada e
 
 La *mensajería de temas* permite que un servidor de aplicaciones envíe un mensaje a varios dispositivos que hayan participado en un tema determinado. También puede crear y enviar mensajes de tema a través de la GUI de notificaciones de la consola de Firebase. FCM controla el enrutamiento y la entrega de mensajes de tema a los clientes suscritos. Esta característica se puede usar para mensajes tales como alertas meteorológicas, cotizaciones bursátiles y noticias de titulares.
 
-[diagrama de mensajes de![tema](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
+[diagrama de mensajes de ![tema](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
 
 Los pasos siguientes se usan en la mensajería de temas (después de que la aplicación cliente obtenga un token de registro, como se explicó anteriormente):
 

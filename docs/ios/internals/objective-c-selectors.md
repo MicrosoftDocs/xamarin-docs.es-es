@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017
-ms.openlocfilehash: 79f226c137c3ab6b1dd2de9f92cb868056aa9d59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2a4d255500f68497fe7cb0cc439c5f9c0504b0f2
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022285"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725190"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selectores de Objective-C en Xamarin. iOS
 
 El lenguaje Objective-C se basa en los *selectores*. Un selector es un mensaje que se puede enviar a un objeto o una *clase*. [Xamarin. iOS](~/ios/internals/api-design/index.md) asigna selectores de instancia a métodos de instancia y selectores de clase a métodos estáticos.
 
 A diferencia de las funciones normales de C C++ (y como las funciones miembro), no se puede invocar directamente un selector mediante [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) en su lugar, los selectores se envían a una instancia o clase de Objective-C mediante el [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-funcionalidad.
+Función .
 
 Para obtener más información sobre los mensajes de Objective-C, eche un vistazo a la guía [trabajar con objetos](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) de Apple.
 
@@ -45,10 +45,10 @@ En conjunto, la declaración de `objc_msgSend` debe coincidir:
 
 ```csharp
 CGSize objc_msgSend(
-    IntPtr target, 
-    IntPtr selector, 
-    IntPtr font, 
-    nfloat width, 
+    IntPtr target,
+    IntPtr selector,
+    IntPtr font,
+    nfloat width,
     UILineBreakMode mode
 );
 ```
@@ -58,7 +58,7 @@ Declárela como se indica a continuación:
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
 static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -76,7 +76,7 @@ nfloat width = ...
 UILineBreakMode mode = ...
 
 CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
-    target.Handle, 
+    target.Handle,
     selector.Handle,
     font == null ? IntPtr.Zero : font.Handle,
     width,
@@ -90,7 +90,7 @@ Si el valor devuelto era una estructura de menos de 8 bytes de tamaño (como el 
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
 static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
     out CGSize retval,
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -111,7 +111,7 @@ CGSize size;
 
 if (Runtime.Arch == Arch.SIMULATOR)
     size = cgsize_objc_msgSend_IntPtr_float_int(
-        target.Handle, 
+        target.Handle,
         selector.Handle,
         font == null ? IntPtr.Zero : font.Handle,
         width,
@@ -147,16 +147,16 @@ Los nombres de selector se enumeran en la documentación de Apple. Por ejemplo, 
 
 Una vez que tenga un nombre de selector, puede crear una instancia de [`ObjCRuntime.Selector`](xref:ObjCRuntime.Selector) para él.
 
-### <a name="calling-objc_msgsend"></a>Llamando a objc_msgSend
+### <a name="calling-objc_msgsend"></a>Llamar a objc_msgSend
 
 `objc_msgSend` envía un mensaje (selector) a un objeto. Esta familia de funciones toma al menos dos argumentos necesarios: el destino del selector (un identificador de instancia o clase), el propio selector y los argumentos necesarios para el selector. Los argumentos de instancia y selector deben ser `System.IntPtr`, y todos los demás argumentos deben coincidir con el tipo que el selector espera, por ejemplo, un `nint` para un `int`o un `System.IntPtr` para todos los tipos derivados de `NSObject`. Usar el [`NSObject.Handle`](xref:Foundation.NSObject.Handle)
 propiedad para obtener un `IntPtr` para una instancia de tipo de Objective-C.
 
 Hay más de una `objc_msgSend` función:
 
-- Use [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) para los selectores que devuelven un struct. En ARM, incluye todos los tipos de valor devueltos que no son una enumeración ni ninguno de los tipos integrados de C (`char`, `short`, `int`, `long`, `float`, `double`). En x86 (el simulador), este método se debe usar para todas las estructuras de más de 8 bytes de tamaño (`CGSize` es de 8 bytes y no usa `objc_msgSend_stret` en el simulador). 
-- Use [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) para los selectores que devuelven un valor de punto flotante solo en x86. No es necesario usar esta función en ARM; en su lugar, use `objc_msgSend`. 
-- La función [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) principal se usa para todos los demás selectores.
+- Use [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) para los selectores que devuelven un struct. En ARM, incluye todos los tipos de valor devueltos que no son una enumeración ni ninguno de los tipos integrados de C (`char`, `short`, `int`, `long`, `float`, `double`). En x86 (el simulador), este método se debe usar para todas las estructuras de más de 8 bytes de tamaño (`CGSize` es de 8 bytes y no usa `objc_msgSend_stret` en el simulador).
+- Use [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) para los selectores que devuelven un valor de punto flotante solo en x86. No es necesario usar esta función en ARM; en su lugar, use `objc_msgSend`.
+- La función principal [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) se utiliza para todos los demás selectores.
 
 Una vez que haya decidido qué `objc_msgSend` funciones debe llamar (el simulador y el dispositivo pueden requerir un método diferente), puede usar un método de [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) normal para declarar la función para la invocación posterior.
 
@@ -183,7 +183,7 @@ if (Runtime.Arch == Arch.DEVICE)
     PointF ret;
     Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, myHandle, selector.Handle);
     return ret;
-} 
+}
 else
 {
     return Messaging.PointF_objc_msgSend_PointF_IntPtr (myHandle, selector.Handle);
@@ -201,7 +201,3 @@ para cualquier tipo de valor que no sea una enumeración ni ninguno de los tipos
 ### <a name="creating-your-own-signatures"></a>Crear sus propias firmas
 
 La siguiente [idea](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) se puede usar para crear sus propias firmas, si es necesario.
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- Ejemplo [de selectores de Objective-C](https://developer.xamarin.com/samples/mac-ios/Objective-C/)

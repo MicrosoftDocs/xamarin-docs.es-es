@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 7ced28a5ed379b761ffcc9841f5d0e923ec747e7
-ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
+ms.openlocfilehash: 528ccd66cc013f83752d93251cb9714115b29819
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75667057"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725609"
 ---
 # <a name="authentication-and-authorization"></a>Autenticación y autorización
 
@@ -100,7 +100,7 @@ Después de llamar al método `services.AddIdentityServer`, se llama a las API f
 > [!TIP]
 > Cargue dinámicamente la configuración de IdentityServer 4. Las API de IdentityServer 4 permiten configurar IdentityServer a partir de una lista en memoria de objetos de configuración. En la aplicación de referencia eShopOnContainers, estas colecciones en memoria están codificadas de forma rígida en la aplicación. Sin embargo, en escenarios de producción se pueden cargar dinámicamente desde un archivo de configuración o desde una base de datos.
 
-Para obtener información sobre la configuración de IdentityServer para usar ASP.NET Core identidad, consulte [uso de ASP.net Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) en la documentación de IdentityServer.
+Para obtener información sobre la configuración de IdentityServer para usar ASP.NET Core identidad, consulte [uso de ASP.net Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/6_aspnet_identity.html) en la documentación de IdentityServer.
 
 #### <a name="configuring-api-resources"></a>Configuración de recursos de API
 
@@ -406,7 +406,7 @@ public class BasketController : Controller
 Si un usuario no autorizado intenta tener acceso a un controlador o una acción marcados con el atributo `Authorize`, el marco de MVC devuelve un código de Estado HTTP 401 (no autorizado).
 
 > [!NOTE]
-> Los parámetros se pueden especificar en el atributo `Authorize` para restringir una API a usuarios específicos. Para obtener más información, vea la [Autorización](/aspnet/core/security/authorization/introduction/).
+> Los parámetros se pueden especificar en el atributo `Authorize` para restringir una API a usuarios específicos. Para obtener más información, vea [autorización](/aspnet/core/security/authorization/introduction/).
 
 IdentityServer se puede integrar en el flujo de trabajo de autorización para que los tokens de acceso proporcionen autorización de control. Este enfoque se muestra en la figura 9-5.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: 2c1f571efb9ec3fb726912eb1e30496bc51fe26e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 49d1eea60f766f4cb61484a6e441506cf8f046ff
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026983"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725083"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>¿Es posible conectarse a emuladores de Android que se ejecutan en un Mac desde una máquina virtual de Windows?
 
@@ -37,8 +37,7 @@ Para conectarse al Android Emulator que se ejecuta en un equipo Mac desde una m�
 
     El puerto impar es el que se usa para conectarse a `adb`. Vea también [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4. _Opción 1_: usar [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
-    para reenviar paquetes TCP entrantes recibidos externamente en el puerto 5555 (o en cualquier otro puerto que desee) al puerto impar en la interfaz de bucle invertido (**127.0.0.1 5555** en este ejemplo) y para reenviar los paquetes salientes de otra manera:
+4. _Opción 1_: usar `nc` para reenviar los paquetes TCP entrantes recibidos externamente en el puerto 5555 (o cualquier otro puerto que desee) al puerto impar en la interfaz de bucle invertido (**127.0.0.1 5555** en este ejemplo) y para reenviar los paquetes salientes de otra manera:
 
     ```bash
     cd /tmp
@@ -48,10 +47,9 @@ Para conectarse al Android Emulator que se ejecuta en un equipo Mac desde una m�
 
     Siempre y cuando los comandos `nc` sigan ejecutándose en una ventana de terminal, los paquetes se reenviarán según lo esperado. Puede escribir control-C en la ventana de terminal para salir de los comandos `nc` una vez que haya terminado de usar el emulador.
 
-    (La opción 1 suele ser más fácil que la opción 2, especialmente si las **preferencias del sistema > seguridad & privacidad > Firewall** está activada). 
+    (La opción 1 suele ser más fácil que la opción 2, especialmente si las **preferencias del sistema > seguridad & privacidad > Firewall** está activada).
 
-    _Opción 2_: usar [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
-    para redirigir los paquetes TCP desde `5555` de puerto (o cualquier otro puerto que desee) de la interfaz de [red compartida](https://kb.parallels.com/en/4948) al puerto impar en la interfaz de bucle invertido (`127.0.0.1:5555` en este ejemplo):
+    _Opción 2_: usar `pfctl` para redirigir los paquetes TCP desde `5555` de puerto (o cualquier otro puerto que desee) en la interfaz de [red compartida](https://kb.parallels.com/en/4948) al puerto impar en la interfaz de bucle invertido (`127.0.0.1:5555` en este ejemplo):
 
     ```bash
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
@@ -77,7 +75,7 @@ Si ha habilitado _sesión remota_ en el equipo Mac, puede usar `ssh` el reenvío
 
 3. Ejecute `ssh` en Windows para configurar el reenvío de Puerto bidireccional entre un puerto local en Windows (`localhost:15555` en este ejemplo) y el puerto del emulador impar en la interfaz de bucle invertido de Mac (`127.0.0.1:5555` en este ejemplo):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 

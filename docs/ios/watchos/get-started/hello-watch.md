@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032773"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725328"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
@@ -87,7 +87,7 @@ Cree la interfaz de usuario:
 
 ![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-Después de guardar el guión gráfico, el **InterfaceController.Designer.CS** se actualiza con los nombres y las acciones del control. Si abre este archivo una vez que se ha actualizado, puede ver cómo se corresponde el `RegisterAttribute` con el controlador y cómo se corresponden los C# controles de interfaz de usuario con las variables de instancia marcadas con el`OutletAttribute`y cómo las acciones se asignan a métodos parciales etiquetados con el`ActionAttribute`:
+Después de guardar el guión gráfico, el **InterfaceController.Designer.CS** se actualiza con los nombres y las acciones del control. Si abre este archivo una vez que se ha actualizado, puede ver cómo se corresponde el `RegisterAttribute` con el controlador y cómo se corresponden los C# controles de interfaz de usuario con las variables de instancia marcadas con el `OutletAttribute` y cómo las acciones se asignan a métodos parciales etiquetados con el `ActionAttribute`:
 
 ```csharp
 // WARNING
@@ -155,6 +155,5 @@ Enhorabuena, tiene una aplicación de Watch.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
-- [Vídeo de la primera aplicación de inspección](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)

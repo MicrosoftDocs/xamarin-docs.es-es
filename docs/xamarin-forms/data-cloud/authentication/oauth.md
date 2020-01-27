@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 25a09e27fb25e477c5176af0ee4a75a836751ccf
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 0fa433de7fd1acb6fb27741f1615a644315f373f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487638"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725564"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticación de usuarios con un proveedor de identidades
 
@@ -90,7 +90,7 @@ La `OAuth2Authenticator` clase requiere un número de parámetros, que son los s
 
 - **Id. de cliente** : Esto identifica al cliente que realiza la solicitud y se puede recuperar desde el proyecto en el [consola de API de Google](https://console.developers.google.com).
 - **Secreto de cliente** : debe ser `null` o `string.Empty`.
-- **Ámbito** : Esto identifica a la API de acceso que está solicitando la aplicación y el valor informa a la pantalla de consentimiento que se muestra al usuario. Para obtener más información sobre los ámbitos, consulte [solicitud de autorización de API](https://developers.google.com/+/web/api/rest/oauth) en el sitio Web de Google.
+- **Ámbito** : Esto identifica a la API de acceso que está solicitando la aplicación y el valor informa a la pantalla de consentimiento que se muestra al usuario. Para obtener más información sobre los ámbitos, consulte [autorización de solicitudes](https://developers.google.com/docs/api/how-tos/authorizing) en el sitio web de Google.
 - **Autorizar a la dirección URL** : identifica la dirección URL donde se obtendrán el código de autorización de.
 - **Dirección URL de redireccionamiento** : identifica la dirección URL donde se enviará la respuesta. El valor de este parámetro debe coincidir con uno de los valores que aparece en el **credenciales** pestaña para el proyecto en el [Google Developers Console](https://console.developers.google.com/).
 - **Dirección AccessToken Url** : identifica la dirección URL usada para solicitar tokens de acceso una vez obtenido un código de autorización.

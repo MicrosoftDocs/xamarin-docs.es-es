@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e86d69bb9dc751f70d03a556f65c11efd0b34d10
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728283"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725591"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos locales de Xamarin.Forms
 
@@ -92,7 +92,7 @@ Una clase contenedora de base de datos abstrae la capa de acceso a datos desde e
 
 ### <a name="lazy-initialization"></a>Inicialización diferida
 
-En el `TodoItemDatabase` se usa la clase de `Lazy` .NET para retrasar la inicialización de la base de datos hasta que se tiene acceso por primera vez. El uso de la inicialización diferida evita que el proceso de carga de la base de datos retrase el inicio de la aplicación. Para obtener más información, consulte [Lazy&lt;t&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+En el `TodoItemDatabase` se usa la clase de `Lazy` .NET para retrasar la inicialización de la base de datos hasta que se tiene acceso por primera vez. El uso de la inicialización diferida evita que el proceso de carga de la base de datos retrase el inicio de la aplicación. Para obtener más información, consulte [Lazy&lt;t&gt; Class](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -289,4 +289,4 @@ Para obtener más información, vea [control de archivos en Xamarin. Forms](~/xa
 - [Uso de SQLite con Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Uso de SQLite con iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
 - [Patrón asincrónico basado en tareas (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy<T> (clase)](https://docs.microsoft.com//api/system.lazy-1)
+- [Lazy&lt;T&gt; clase](xref:System.Lazy`1)

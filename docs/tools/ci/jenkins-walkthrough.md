@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d420faf59d940bb111b5ecd326a29083cab012e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4f91e683b826657a9740de7e0b98137858130042
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725382"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
@@ -32,7 +32,7 @@ Una vez que Jenkins esté configurado y se hayan instalado los complementos nece
 
 En esta guía se describe cómo configurar un servidor de Jenkins que abarque cada uno de estos puntos. Al final, deberíamos tener una buena comprensión de cómo configurar y configurar Jenkins para crear IPA y APK para nuestros proyectos móviles de Xamarin.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 El servidor de compilación ideal es un equipo independiente que se dedica a la única finalidad de compilar y probar la aplicación. Un equipo dedicado garantiza que los artefactos que podrían ser necesarios para otros roles (como el de un servidor Web) no contaminan la compilación. Por ejemplo, si el servidor de compilación también actúa como servidor Web, el servidor web puede requerir una versión en conflicto de alguna biblioteca común. Debido a este conflicto, es posible que el servidor Web no funcione correctamente o que Jenkins pueda crear compilaciones que no funcionen cuando se implementen en los usuarios.
 
@@ -387,7 +387,7 @@ Una vez que todas las acciones de compilación estén en su lugar, es recomendab
 
 ### <a name="submitting-tests-to-test-cloud"></a>Enviar pruebas a Test Cloud
 
-Las pruebas automatizadas se pueden enviar a Test Cloud mediante comandos de Shell. Para obtener más información sobre cómo configurar una serie de pruebas en Xamarin Test Cloud, consulte esta guía para el uso de [Xamarin. UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
+Las pruebas automatizadas se pueden enviar a Test Cloud mediante comandos de Shell. Para obtener más información sobre cómo configurar una serie de pruebas en Xamarin Test Cloud, consulte preparación de las [aplicaciones de Xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) y preparación de las [aplicaciones de Xamarin. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ## <a name="summary"></a>Resumen
 

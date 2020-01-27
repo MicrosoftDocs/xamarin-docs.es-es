@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ad4682e9a3d4de2565bee54ffa159fd739572e24
-ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
+ms.openlocfilehash: 25d8563288cce614bc2823b0146e5121688c6f02
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75663363"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725485"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de pestañas y controladores de barra de pestañas en Xamarin. iOS
 
@@ -27,7 +27,7 @@ En esta página se describen ambos escenarios: cuando las pestañas están en la
 El `UITabBarController` admite por fichas de desarrollo de aplicaciones a lo siguiente:
 
 - Permite que varios controladores para agregarse a ella.
-- Proporcionar una interfaz de usuario con pestañas, a través de la `UITabBar` (clase), para permitir que un usuario cambiar entre los controladores y sus vistas. 
+- Proporcionar una interfaz de usuario con pestañas, a través de la `UITabBar` (clase), para permitir que un usuario cambiar entre los controladores y sus vistas.
 
 Los controladores se agregan a la `UITabBarController` a través de su `ViewControllers` propiedad, que es un `UIViewController` matriz. El `UITabBarController` propio controla al cargar el controlador adecuado y presenta su vista en función de la pestaña seleccionada.
 
@@ -63,9 +63,9 @@ El `TabController` clase contendrá la implementación de la `UITabBarController
 
 Para implementar el `UITabBarController` tenemos que hacer lo siguiente:
 
-1. Establece la clase base del `TabController` a `UITabBarController` . 
-1. Crear `UIViewController` instancias se deben agregar a la `TabController` . 
-1. Agregar el `UIViewController` instancias en una matriz asignada a la `ViewControllers` propiedad de la `TabController` . 
+1. Establece la clase base del `TabController` a `UITabBarController` .
+1. Crear `UIViewController` instancias se deben agregar a la `TabController` .
+1. Agregar el `UIViewController` instancias en una matriz asignada a la `ViewControllers` propiedad de la `TabController` .
 
 Agregue el código siguiente a la `TabController` clase para conseguir estos pasos:
 
@@ -118,16 +118,16 @@ public partial class AppDelegate : UIApplicationDelegate
 {
     UIWindow window;
     TabController tabController;
-    
+
     public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
         window = new UIWindow (UIScreen.MainScreen.Bounds);
-        
+
         tabController = new TabController ();
         window.RootViewController = tabController;
-        
+
         window.MakeKeyAndVisible ();
-        
+
         return true;
     }
 }
@@ -217,7 +217,7 @@ En este ejemplo, se usa un guion gráfico para diseñar los controladores de vis
 
 - Cuando aparezca el cuadro de diálogo nuevo archivo, vaya a **iOS > iPhone guión gráfico vacía**.
 
-Vamos a llamar a este nuevo guion gráfico **MainStoryboard** , tal y como se muestra a continuación: 
+Vamos a llamar a este nuevo guion gráfico **MainStoryboard** , tal y como se muestra a continuación:
 
 [![](creating-tabbed-applications-images/new-file-dialog.png "Add a MainStoryboard file to the project")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
@@ -295,7 +295,7 @@ Eliminar estos nuevos controladores de vista, seleccione la barra negra situada 
 
 En el guión gráfico, podemos usar objetos Segue para controlar las transiciones entre el TabBarController y nuestros controladores de vista. Después de interactuar con la vista inicial, queremos cargarlos en el TabBarController presenta al usuario. Vamos a configurar esto en el diseñador.
 
-**CTRL-clic** y **arrastre** desde el botón para el TabBarController. En el mouse hacia arriba, aparecerá un menú contextual. Queremos usar un segue modal. 
+**CTRL-clic** y **arrastre** desde el botón para el TabBarController. En el mouse hacia arriba, aparecerá un menú contextual. Queremos usar un segue modal.
 
 Para configurar cada una de nuestras pestañas, **Ctrl-clic** desde el TabBarController a cada uno de nuestros controladores de vista en orden de uno a tres y seleccione la relación **ficha** en el menú contextual, como se muestra a continuación:
 
@@ -309,7 +309,7 @@ Si se haga clic en uno de los elementos de la barra de pestaña y explore el pan
 
 [![](creating-tabbed-applications-images/properties-panel.png "Setting the tab options in the Properties Explorer")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
-Podemos usar esto para editar determinados atributos como el distintivo, el título y el iOS [identificador](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), entre otros
+Podemos usar esto para editar ciertos atributos, como el distintivo, el título y el identificador de iOS, entre otros.
 
 Si se guarde y ejecute la aplicación ahora, buscaremos que vuelve a aparecer el botón cuando la instancia de ViewController1 se cargan en el TabBarController. Vamos a solucionar este problema mediante la comprobación para ver si la vista actual tiene un controlador de vista de un elemento primario. Si es así, sabemos están dentro de la TabBarController y, por lo tanto, se debe ocultar el botón. Vamos a agregar el código siguiente a la clase ViewController1:
 

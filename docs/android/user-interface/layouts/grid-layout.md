@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 13271b50353d95ecd2db40e25d549788111530f7
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029006"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725008"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout de Xamarin. Android
 
@@ -71,7 +71,7 @@ Observe que en el XML anterior, cada `TextView` no especifica una fila o columna
 
 Ahora, el `GridLayout` colocará las celdas de arriba abajo en cada columna, en lugar de izquierda a derecha, como se muestra a continuación:
 
- [Diagrama de![que ilustra cómo se sitúan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [Diagrama de ![que ilustra cómo se sitúan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Esto da como resultado la siguiente interfaz de usuario en tiempo de ejecución:
 
@@ -236,5 +236,3 @@ Esto da como resultado un diseño para el `TextViews` que es similar al diseño 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [GridLayoutDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

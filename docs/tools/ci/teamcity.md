@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 94bc775366d832e0994b8d3c74a45123ff56c13b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029802"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725310"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usar el equipo City con Xamarin
 
@@ -39,7 +39,7 @@ Hay varios pasos implicados en la configuración de TeamCity:
 
 - **Crear un proyecto de TeamCity** : una vez completados los tres pasos anteriores, debemos crear un proyecto de TeamCity que contendrá todos los metadatos necesarios para recuperar el código fuente, compilar los proyectos y enviar las pruebas a Xamarin test Cloud.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Se requiere experiencia con [App Center prueba](https://docs.microsoft.com/appcenter/test-cloud/) .
 
@@ -61,7 +61,7 @@ Un paso fundamental en la configuración de un servidor de compilación es insta
 3. **Xcode** : Xcode es necesario para compilar y firmar aplicaciones de iOS.
 4. **Herramientas de línea de comandos de Xcode** : esto se describe en el paso 1 de la sección de instalación de la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Identidad de firma & perfiles de aprovisionamiento** : importe los certificados y el perfil de aprovisionamiento a través de Xcode. Consulte la guía de Apple sobre la [exportación de identidades de firma y perfiles de aprovisionamiento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obtener más detalles.
-6. **Keystores de Android** : Copie el keystores de Android necesario en un directorio al que el usuario de TeamCity tenga acceso, es decir,  `~/Documents/keystores/MyAndroidApp1`.
+6. **Keystores de Android** : Copie el keystores de Android necesario en un directorio al que el usuario de TeamCity tenga acceso, es decir, `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** : este paso es opcional si la aplicación tiene pruebas escritas con calabash. Para obtener más información, consulte la guía de [instalación de calabash en OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) y la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
 
 En el siguiente diagrama se ilustran todos estos componentes:
@@ -87,7 +87,7 @@ El script de compilación puede ser tan simple como un archivo de PowerShell (en
 
 - [**Falsa**](https://fsharp.github.io/FAKE/) : se trata de un DSL basado F# en que hace posible utilizar las bibliotecas de .net existentes si es necesario.
 
-El lenguaje de scripting que se use dependerá de sus preferencias y requisitos. El ejemplo [TaskyPro-calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contiene un ejemplo del uso de inclinación como un [script de compilación](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
+El lenguaje de scripting que se use dependerá de sus preferencias y requisitos.
 
 > [!NOTE]
 > Es posible usar un sistema de compilación basado en XML como MSBuild o NAnt, pero estos no tienen la expresividad y el mantenimiento de un DSL dedicado a la creación de software.

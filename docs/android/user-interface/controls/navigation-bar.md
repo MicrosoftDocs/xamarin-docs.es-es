@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/01/2017
-ms.openlocfilehash: f28b9f19e901d75c432dfecbfec8a63588df3d70
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 99d0303dc1560796cb372d0b8af2fafd16c6097f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029228"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725145"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra de navegación de Xamarin. Android
 
@@ -22,9 +22,9 @@ En la captura de pantalla siguiente se muestra la barra de navegación desde un 
 
 Hay disponibles varias nuevas marcas que controlan la visibilidad de la barra de navegación y sus controles, así como la visibilidad de la barra del sistema que se presentó en Android 3. Las marcas se definen en la clase `Android.View.View` y se enumeran a continuación:
 
-- `SystemUiFlagVisible` &ndash; hace que la barra de navegación esté visible. 
-- `SystemUiFlagLowProfile` &ndash; atenúa los controles de la barra de navegación. 
-- `SystemUiFlagHideNavigation` &ndash; oculta la barra de navegación. 
+- `SystemUiFlagVisible` &ndash; hace que la barra de navegación esté visible.
+- `SystemUiFlagLowProfile` &ndash; atenúa los controles de la barra de navegación.
+- `SystemUiFlagHideNavigation` &ndash; oculta la barra de navegación.
 
 Estas marcas se pueden aplicar a cualquier vista de la jerarquía de vistas estableciendo la propiedad `SystemUiVisibility`. Si varias vistas tienen esta propiedad establecida, el sistema las combina con una operación OR y las aplica siempre que la ventana en la que se establecen las marcas conserva el foco. Al quitar una vista, también se quitarán las marcas que haya establecido.
 
@@ -39,17 +39,17 @@ var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
 var lowProfileButton = FindViewById<Button>(Resource.Id.lowProfileButton);
 var hideNavButton = FindViewById<Button> (Resource.Id.hideNavigation);
 var visibleButton = FindViewById<Button> (Resource.Id.visibleButton);
-           
+
 lowProfileButton.Click += delegate {
     tv.SystemUiVisibility =
         (StatusBarVisibility)View.SystemUiFlagLowProfile;
 };
-           
+
 hideNavButton.Click += delegate {
     tv.SystemUiVisibility =
        (StatusBarVisibility)View.SystemUiFlagHideNavigation;        
 };
-           
+
 visibleButton.Click += delegate {
     tv.SystemUiVisibility = (StatusBarVisibility)View.SystemUiFlagVisible;
 }
@@ -66,6 +66,4 @@ tv.SystemUiVisibilityChange +=
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SystemUIVisibilityDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
-- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)
+- [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277460"
 ---
 Xamarin.Forms tienen una ventana emergente modal, conocida como alerta, para mostrar alertas al usuario o realizar preguntas sencillas. En este ejercicio, usará el método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), de la clase [`Page`](xref:Xamarin.Forms.Page), para mostrar una alerta al usuario y formular una pregunta sencilla.
@@ -65,7 +65,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
     Después de descartar la alerta, pulse el segundo elemento [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de pantalla de una alerta que realiza una pregunta, en iOS y Android](../images/alert-question.png "Alerta que realiza una pregunta")](../images/alert-question-large.png#lightbox "Alerta que realiza una pregunta")
+    [![Captura de pantalla de una alerta que formula una pregunta, en iOS y Android](../images/alert-question.png "Alerta que formula una pregunta")](../images/alert-question-large.png#lightbox "Alerta que formula una pregunta")
 
     Observe que, después de seleccionar una respuesta a la pregunta, la respuesta se muestra en la ventana **Salida** de Visual Studio.
 
@@ -128,7 +128,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 
     Después de descartar la alerta, pulse el segundo elemento [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de pantalla de una alerta que realiza una pregunta, en iOS y Android](../images/alert-question.png "Alerta que realiza una pregunta")](../images/alert-question-large.png#lightbox "Alerta que realiza una pregunta")
+    [![Captura de pantalla de una alerta que formula una pregunta, en iOS y Android](../images/alert-question.png "Alerta que formula una pregunta")](../images/alert-question-large.png#lightbox "Alerta que formula una pregunta")
 
     Observe que, después de seleccionar una respuesta a la pregunta, la respuesta se muestra en la ventana **Salida** de Visual Studio para Mac.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 28b13951a0d681ffdb8e643667e496e0b3606628
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026979"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724007"
 ---
 # <a name="android-frequently-asked-questions"></a>Preguntas más frecuentes sobre Android
 
@@ -51,7 +51,7 @@ En esta guía se tratan los métodos al usar el emulador de Android.
 
 ### <a name="how-do-i-automate-an-android-nunit-test-projectautomate-android-nunit-testmd"></a>[¿Cómo se automatiza un proyecto de prueba de NUnit de Android?](automate-android-nunit-test.md)
 
-En esta guía se explican los pasos para configurar un proyecto de prueba de Android NUnit, _no_ un proyecto de Xamarin. UITest. Las guías de Xamarin. UITest se pueden encontrar [aquí](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+En esta guía se explican los pasos para configurar un proyecto de prueba de Android NUnit, _no_ un proyecto de Xamarin. UITest. Las guías de Xamarin. UITest se pueden encontrar [aquí](/appcenter/test-cloud/preparing-for-upload).
 
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[¿Por qué no se puede conectar la compilación de versión de Android a Internet?](android-internet.md)
 
@@ -65,7 +65,7 @@ La causa más común de este problema es que el permiso de **Internet** se inclu
 
 En este artículo se explica cómo resolver un error **PathTooLongException** que puede producirse al compilar un proyecto de Xamarin. Android.
 
-## <a name="deprecated"></a>En desuso
+## <a name="deprecated"></a>Obsoleto
 
 > [!NOTE]
 > Los artículos siguientes se aplican a los problemas que se han resuelto en las versiones recientes de Xamarin. Sin embargo, si el problema se produce en la versión más reciente del software, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con la información de control de versiones completa y el resultado del registro de compilación completo.

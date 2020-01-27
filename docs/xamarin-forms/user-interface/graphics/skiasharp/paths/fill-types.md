@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 98081ed1a9aef1260150671d4fd026dd64c20b62
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545574"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723644"
 ---
 # <a name="the-path-fill-types"></a>Tipos de relleno del trazado
 
@@ -35,7 +35,7 @@ Los algoritmos de devanado y par-impar determinan si cualquier área delimitada 
 
 Con muchas rutas rutinarias, el algoritmo devanado a menudo rellena todas las áreas cerradas de una ruta de acceso. El algoritmo par-impar generalmente produce resultados más interesantes.
 
-El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Five-Pointed estrella** página. El [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) archivo crean instancias de dos `Picker` vistas para seleccionar la ruta de acceso de rellenar el tipo y si se trazan o rellena la ruta de acceso o ambos y en qué orden:
+El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Five-Pointed estrella** página. El [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) archivo crean instancias de dos `Picker` vistas para seleccionar la ruta de acceso de rellenar el tipo y si se trazan o rellena la ruta de acceso o ambos y en qué orden:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         // angle from vertical
         double angle = i * 4 * Math.PI / 5;
-        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle), 
+        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle),
                                         -radius * (float)Math.Cos(angle)));
     }
     path.Close();

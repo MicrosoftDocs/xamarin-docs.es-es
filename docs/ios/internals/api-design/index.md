@@ -1,111 +1,111 @@
 ---
-title: Diseño de la API de Xamarin. iOS
-description: Principios de GUID que se usaron para diseñar las API de Xamarin. iOS y cómo se relacionan con Objective-C.
+title: Xamarin.iOS API Design
+description: Guiding principles that were used to architect the Xamarin.iOS APIs and how these relate to Objective-C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab56332617fece8e80429f82000880012bf85b41
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724438"
 ---
-# <a name="xamarinios-api-design"></a>Diseño de la API de Xamarin. iOS
+# <a name="xamarinios-api-design"></a>Xamarin.iOS API Design
 
-Además de las bibliotecas de clases base básicas que forman parte de mono, [Xamarin. iOS](~/ios/index.yml) se distribuye con enlaces para varias API de iOS para que los desarrolladores puedan crear aplicaciones de iOS nativas con mono.
+In addition to the core Base Class Libraries that are part of Mono, [Xamarin.iOS](~/ios/index.yml) ships with bindings for various iOS APIs to allow developers to create native iOS applications with Mono.
 
-En el núcleo de Xamarin. iOS, hay un motor de interoperabilidad que C# une el mundo al mundo de Objective-C, así como enlaces para las API basadas en C de iOS como CoreGraphics y [OpenGL es](#opengles).
+At the core of Xamarin.iOS, there is an interop engine that bridges the C# world with the Objective-C world, as well as bindings for the iOS C-based APIs like CoreGraphics and [OpenGL ES](#opengles).
 
-El motor en tiempo de ejecución de bajo nivel para comunicarse con código de Objective-C es [MonoTouch. ObjCRuntime](#objcruntime). Además de esto, se proporcionan enlaces para [Foundation](#foundation), CoreFoundation y [UIKit](#uikit) .
+The low-level runtime to communicate with Objective-C code is in [MonoTouch.ObjCRuntime](#objcruntime). On top of this, bindings for [Foundation](#foundation), CoreFoundation, and [UIKit](#uikit) are provided.
 
-## <a name="design-principles"></a>Principios de diseño
+## <a name="design-principles"></a>Design Principles
 
-Estos son algunos de los principios de diseño de los enlaces de Xamarin. iOS (también se aplican a Xamarin. Mac, los enlaces mono para Objective-C en macOS):
+These are some of our design principles for the Xamarin.iOS bindings (they also apply to Xamarin.Mac, the Mono bindings for Objective-C on macOS):
 
-- Siga las [directrices de diseño de .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines)
-- Permitir a los desarrolladores subclases de clases de Objective-C:
+- Follow the [Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines)
+- Allow developers to subclass Objective-C classes:
 
-  - Derivar de una clase existente
-  - Llamar al constructor base para encadenar
-  - Los métodos de reemplazo deben realizarse C#con el sistema de invalidación de
-  - La creación de subclases C# debe funcionar con construcciones estándar
+  - Derive from an existing class
+  - Call the base constructor to chain
+  - Overriding methods should be done with C#'s override system
+  - Subclassing should work with C# standard constructs
 
-- No exponga a los desarrolladores a los selectores de Objective-C
-- Proporcionar un mecanismo para llamar a bibliotecas arbitrarias de Objective-C
-- Haga que las tareas comunes de Objective-C resulten sencillas y objetivas, que son posibles.
-- Exponer propiedades de Objective-C C# como propiedades
-- Exponga una API fuertemente tipada:
+- Do not expose developers to Objective-C selectors
+- Provide a mechanism to call arbitrary Objective-C libraries
+- Make common Objective-C tasks easy and hard Objective-C tasks possible
+- Expose Objective-C properties as C# properties
+- Expose a strongly-typed API:
 
-  - Aumentar la seguridad de tipos
-  - Minimizar los errores en tiempo de ejecución
-  - Obtener IntelliSense del IDE en los tipos de valor devuelto
-  - Permite la documentación del menú emergente IDE
+  - Increase type safety
+  - Minimize runtime errors
+  - Get IDE IntelliSense on return types
+  - Allows for IDE popup documentation
 
-- Anime la exploración en el IDE de las API:
+- Encourage in-IDE exploration of the APIs:
 
-  - Por ejemplo, en lugar de exponer una matriz débilmente tipada de la manera siguiente:
+  - For example, instead of exposing a weakly-typed array like this:
 
     ```objc
     NSArray *getViews
     ```
 
-    Exponga un tipo seguro, de la siguiente manera:
+    Expose a strong type, like this:
 
     ```csharp
     NSView [] Views { get; set; }
     ```
 
-    Esto proporciona a Visual Studio para Mac la capacidad de realizar una finalización automática mientras se examina la API, hace que todas las operaciones de `System.Array` estén disponibles en el valor devuelto y permite que el valor devuelto participe en LINQ.
+    This gives Visual Studio for Mac the ability to do auto-completion while browsing the API, makes all of the `System.Array` operations available on the returned value, and allows the return value to participate in LINQ.
 
-- Tipos C# nativos:
+- Native C# types:
 
-  - [`NSString` se convierte en `string`](~/ios/internals/api-design/nsstring.md)
-  - Convertir `int` y `uint` parámetros que deben haberse enumerado en C# enumeraciones y C# enumeraciones con atributos`[Flags]`
-  - En lugar de objetos `NSArray` neutros para el tipo, exponga matrices como matrices fuertemente tipadas.
-  - En el caso de eventos y notificaciones, proporcione a los usuarios una opción entre:
+  - [`NSString` becomes `string`](~/ios/internals/api-design/nsstring.md)
+  - Turn `int` and `uint` parameters that should have been enums into C# enumerations and C# enumerations with `[Flags]` attributes
+  - Instead of type-neutral `NSArray` objects, expose arrays as strongly-typed arrays.
+  - For events and notifications, give users a choice between:
 
-    - Una versión fuertemente tipada de forma predeterminada
-    - Una versión débilmente tipada para casos de uso avanzados
+    - A strongly-typed version by default
+    - A weakly-typed version for advanced use cases
 
-- Compatibilidad con el patrón de delegado de Objective-C:
+- Support the Objective-C delegate pattern:
 
-  - C#sistema de eventos
-  - Exponga C# los delegados (expresiones lambda, métodos anónimos y`System.Delegate`) a las API de Objective-C como bloques
+  - C# event system
+  - Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) to Objective-C APIs as blocks
 
-### <a name="assemblies"></a>Ensamblados
+### <a name="assemblies"></a>Assemblies
 
-Xamarin. iOS incluye una serie de ensamblados que constituyen el *Perfil de Xamarin. iOS*. La página [ensamblados](~/cross-platform/internals/available-assemblies.md) tiene más información.
+Xamarin.iOS includes a number of assemblies that constitute the *Xamarin.iOS Profile*. La página [ensamblados](~/cross-platform/internals/available-assemblies.md) tiene más información.
 
-### <a name="major-namespaces"></a>Espacios de nombres principales
+### <a name="major-namespaces"></a>Major Namespaces
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-El espacio de nombres [ObjCRuntime](xref:ObjCRuntime) permite a los desarrolladores enlazar los mundos entre C# y Objective-C.
-Se trata de un nuevo enlace, diseñado específicamente para iOS, en función de la experiencia de coco # y gtk #.
+The [ObjCRuntime](xref:ObjCRuntime) namespace allows developers to bridge the worlds between C# and Objective-C.
+This is a new binding, designed specifically for the iOS, based on the experience from Cocoa# and Gtk#.
 
-#### <a name="foundation"></a>Cimiento
+#### <a name="foundation"></a>Foundation
 
-El espacio de nombres [Foundation](xref:Foundation) proporciona los tipos de datos básicos diseñados para interoperar con el marco de trabajo de Objective-c Foundation que forma parte de iOS y es la base para la programación orientada a objetos en Objective-c.
+The [Foundation](xref:Foundation) namespace provides the basic data types designed to interoperate with the Objective-C Foundation framework that is part of the iOS and it is the base for object oriented programming in Objective-C.
 
-Los reflejos de Xamarin C# . iOS en la jerarquía de clases de Objective-C. Por ejemplo, la clase base de Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) se puede C# usar desde [Foundation. NSObject](xref:Foundation.NSObject).
+Xamarin.iOS mirrors in C# the hierarchy of classes from Objective-C. For example, the Objective-C base class NSObject is usable from C# via [Foundation.NSObject](xref:Foundation.NSObject).
 
-Aunque este espacio de nombres proporciona enlaces para los tipos subyacentes de Objective-C Foundation, en algunos casos hemos asignado los tipos subyacentes a los tipos de .NET. Por ejemplo:
+Although this namespace provides bindings for the underlying Objective-C Foundation types, in a few cases we have mapped the underlying types to .NET types. Por ejemplo:
 
-- En lugar de tratar con [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) y [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), el tiempo de ejecución los expone C#como [cadenas](xref:System.String)y [matrices](xref:System.Array)fuertemente tipadas a través de la API.
+- Instead of dealing with NSString and [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
 
-- Aquí se muestran varias API auxiliares que permiten a los desarrolladores enlazar API de Objective-C de terceros, otras API de iOS o API que actualmente no están enlazadas con Xamarin. iOS.
+- Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
-Para más información sobre las API de enlace, consulte la sección [generador de enlaces de Xamarin. iOS](~/cross-platform/macios/binding/binding-types-reference.md) .
+For more details on binding APIs, see the [Xamarin.iOS Binding Generator](~/cross-platform/macios/binding/binding-types-reference.md) section.
 
 ##### <a name="nsobject"></a>NSObject
 
-El tipo [NSObject](xref:Foundation.NSObject) es la base para todos los enlaces de Objective-C. Los tipos de Xamarin. iOS reflejan dos clases de tipos de las API de CocoaTouch de iOS: los tipos de C (que normalmente se denominan tipos de CoreFoundation) y los tipos de Objective-C (todos ellos derivan de la clase NSObject).
+The [NSObject](xref:Foundation.NSObject) type is the foundation for all the Objective-C bindings. Xamarin.iOS types mirror two classes of types from the iOS CocoaTouch APIs: the C types (typically referred to as CoreFoundation types) and the Objective-C types (these all derive from the NSObject class).
 
-Para cada tipo que refleje un tipo no administrado, es posible obtener el objeto nativo a través de la propiedad [Handle](xref:Foundation.NSObject.Handle) .
+For each type that mirrors an unmanaged type, it is possible to obtain the native object through the [Handle](xref:Foundation.NSObject.Handle) property.
 
 Aunque mono proporcionará la recolección de elementos no utilizados para todos los objetos, el `Foundation.NSObject` implementa la interfaz [System. IDisposable](xref:System.IDisposable) . Esto significa que puede liberar explícitamente los recursos de cualquier NSObject determinado sin tener que esperar a que se inicie el recolector de elementos no utilizados. Esto es importante cuando se usa una NSObjects pesada, por ejemplo, UIImages que puede contener punteros a grandes bloques de datos.
 
@@ -202,7 +202,7 @@ C#los delegados se proporcionan para las operaciones comunes. Vea la sección [d
 
 #### <a name="opengles"></a>OpenGLES
 
-En el caso de OpenGL, se distribuye una [versión modificada](xref:OpenTK) de la API de [OpenTK](http://www.opentk.com/) , un enlace orientado a objetos a OpenGL que se ha modificado para usar estructuras y tipos de datos CoreGraphics, además de exponer solo la funcionalidad que está disponible en iOS.
+En el caso de OpenGL, se distribuye una [versión modificada](xref:OpenTK) de la API de [OpenTK](https://opentk.net/) , un enlace orientado a objetos a OpenGL que se ha modificado para usar estructuras y tipos de datos CoreGraphics, además de exponer solo la funcionalidad que está disponible en iOS.
 
 La funcionalidad OpenGL 1,1 está disponible a través del [tipo ES11.GL](xref:OpenTK.Graphics.ES11.GL).
 
@@ -236,11 +236,11 @@ UIView [] GetViews ();
 
 Hay algunos métodos que se exponen en `NSArray`, en los casos en los que podría querer usar una `NSArray` directamente, pero no se recomienda su uso en el enlace de API.
 
-Además, en el **Classic API** en lugar de exponer `CGRect`, `CGPoint` y `CGSize` de la API de CoreGraphics, los reemplazamos por las implementaciones `System.Drawing` `RectangleF`, `PointF` y `SizeF` como lo harían los desarrolladores. código OpenGL existente que usa OpenTK. Al usar el nuevo **Unified API**de 64 bits, se debe usar la API CoreGraphics.
+Además, en el **Classic API** en lugar de exponer `CGRect`, `CGPoint` y `CGSize` de la API de CoreGraphics, los reemplazamos por las implementaciones `System.Drawing` `RectangleF`, `PointF` y `SizeF`, ya que ayudarían a los desarrolladores a conservar el código OpenGL existente que usa OpenTK. Al usar el nuevo **Unified API**de 64 bits, se debe usar la API CoreGraphics.
 
 #### <a name="inheritance"></a>Herencia
 
-El diseño de la API de Xamarin. iOS permite a los desarrolladores extender los tipos nativos de Objective-C de la misma C# manera que extienden un tipo mediante la palabra clave "override" en una clase derivada, así como el encadenamiento hasta la implementación base C# mediante "base". palabra clave.
+El diseño de la API de Xamarin. iOS permite a los desarrolladores ampliar los tipos nativos de Objective-C de la misma C# manera que extienden un tipo mediante la palabra clave "override" en una clase derivada, así como el encadenamiento hasta la implementación base C# mediante la palabra clave "base".
 
 Este diseño permite a los desarrolladores evitar trabajar con los selectores de Objective-C como parte de su proceso de desarrollo, ya que todo el sistema Objective-C ya está encapsulado dentro de las bibliotecas de Xamarin. iOS.
 
@@ -279,15 +279,15 @@ En Xamarin. iOS se ofrecen tres mecanismos mutuamente excluyentes para enlazar a
 2. [Con establecimiento inflexible de tipos a través de una propiedad `Delegate`](#strongly-typed-via-a-delegate-property)
 3. [Con tipo flexible a través de una propiedad `WeakDelegate`](#loosely-typed-via-the-weakdelegate-property)
 
-Por ejemplo, considere la clase [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) . Esto se envía a una instancia de [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) , que se asigna a la propiedad del [delegado](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) .
+Por ejemplo, considere la clase UIWebView. Esto se envía a una instancia de UIWebViewDelegate, que se asigna a la propiedad del delegado.
 
 ##### <a name="via-events"></a>Eventos Via
 
 Para muchos tipos, Xamarin. iOS creará automáticamente un delegado adecuado que reenviará las llamadas `UIWebViewDelegate` C# a los eventos. Para `UIWebView`:
 
-- El método [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) se asigna al evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
-- El método [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) se asigna al evento [UIWebView. LoadFinished](xref:UIKit.UIWebView.LoadFinished) .
-- El método [WebView: didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) se asigna al evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
+- El método webViewDidStartLoad se asigna al evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
+- El método webViewDidFinishLoad se asigna al evento [UIWebView. LoadFinished](xref:UIKit.UIWebView.LoadFinished) .
+- El método WebView: didFailLoadWithError se asigna al evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
 
 Por ejemplo, este sencillo programa registra las horas de inicio y finalización al cargar una vista Web:
 
@@ -595,13 +595,13 @@ No es necesario preocuparse de esto al usar Visual Studio para Mac y InterfaceBu
 
 Un concepto básico de la programación de Objective-C es selectores. A menudo, se incluirán las API que requieren que se pase un selector o se espera que el código responda a un selector.
 
-Crear nuevos selectores C# en es muy fácil: solo tiene que crear una nueva instancia de la clase`ObjCRuntime.Selector`y usar el resultado en cualquier lugar de la API que lo requiera. Por ejemplo:
+Crear nuevos selectores C# en es muy fácil: solo tiene que crear una nueva instancia de la clase `ObjCRuntime.Selector` y usar el resultado en cualquier lugar de la API que lo requiera. Por ejemplo:
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-Para que C# un método responda a una llamada de selector, debe heredar del tipo`NSObject`y C# el método se debe decorar con el nombre del selector mediante el atributo `[Export]`. Por ejemplo:
+Para que C# un método responda a una llamada de selector, debe heredar del tipo `NSObject` y C# el método se debe decorar con el nombre del selector mediante el atributo `[Export]`. Por ejemplo:
 
 ```csharp
 public class MyMath : NSObject {
@@ -645,7 +645,7 @@ Este constructor se usa para inicializar la instancia, pero evitar que el códig
 public Foo (NSCoder coder)
 ```
 
-Este constructor se proporciona para los casos en los que el objeto se inicializa desde una instancia de NSCoding. Para obtener más información, consulte la [Guía de programación de serialización y archivos](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i) de Apple.
+Este constructor se proporciona para los casos en los que el objeto se inicializa desde una instancia de NSCoding.
 
 #### <a name="exceptions"></a>Excepciones
 
@@ -663,7 +663,7 @@ Xamarin. iOS tiene un recolector de elementos no utilizados que se encargará de
 
 #### <a name="nsobject-and-idisposable"></a>NSObject e IDisposable
 
-Exponer la interfaz de `IDisposable` es una forma cómoda de ayudar a los desarrolladores a liberar objetos que podrían encapsular grandes bloques de memoria (por ejemplo, un `UIImage` podría parecer simplemente un puntero inocente, pero podría estar señalando a una imagen de 2 megabytes) y otros recursos importantes y finitos (como un búfer de descodificación de vídeo).
+Exponer la interfaz de `IDisposable` es una forma cómoda de ayudar a los desarrolladores a liberar objetos que podrían encapsular grandes bloques de memoria (por ejemplo, un `UIImage` podría parecer simplemente un puntero inocente, pero podría apuntar a una imagen de 2 megabytes) y otros recursos importantes y finitos (como un búfer de descodificación de vídeo).
 
 NSObject implementa la interfaz IDisposable y también el [patrón de Dispose de .net](https://msdn.microsoft.com/library/fs2xkftw.aspx). Esto permite a los desarrolladores que subclases NSObject invalidar el comportamiento de Dispose y liberar sus propios recursos a petición. Por ejemplo, considere este controlador de vistas que se mantiene en torno a un montón de imágenes:
 

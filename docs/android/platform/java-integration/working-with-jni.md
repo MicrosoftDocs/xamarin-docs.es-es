@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 4d4274770263b120e856cf8db01a71f7ed124a63
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0fa717a775ff2f1ace9e248a8afde8d373e8a1f8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027182"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724349"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Trabajo con JNI y Xamarin. Android
 
 _Xamarin. Android permite escribir aplicaciones Android con C# en lugar de Java. Se proporcionan varios ensamblados con Xamarin. Android que proporcionan enlaces para las bibliotecas de Java, incluidos mono. Android. dll y mono. Android. GoogleMaps. dll. Sin embargo, no se proporcionan enlaces para cada posible biblioteca Java, y los enlaces que se proporcionan no pueden enlazar todos los tipos y miembros de Java. Para usar tipos y miembros de Java sin enlazar, se puede usar la interfaz nativa de Java (JNI). En este artículo se muestra cómo usar JNI para interactuar con tipos y miembros de Java desde aplicaciones de Xamarin. Android._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 No siempre es necesario o no es posible crear un contenedor al que se puede llamar (MCW) administrado para invocar código Java. En muchos casos, el JNI "inline" es absolutamente aceptable y útil para el uso único de miembros de Java sin enlazar. A menudo es más fácil usar JNI para invocar un solo método en una clase de Java que generar un enlace jar completo.
 
@@ -34,7 +34,7 @@ En este documento se explica:
 - Cómo exponer métodos virtuales para permitir el reemplazo desde código administrado.
 - Cómo exponer interfaces.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 JNI, tal y como se expone a través del [espacio de nombres Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv), está disponible en todas las versiones de Xamarin. Android.
 Para enlazar tipos e interfaces de Java, debe usar Xamarin. Android 4,0 o posterior.
@@ -149,13 +149,11 @@ Normalmente, Xamarin. Android genera automáticamente el código Java que compre
 
 - La interfaz de [Android. os.](xref:Android.OS.Parcelable) reutilizable espera que una clase de implementación tenga un campo estático `CREATOR` del tipo `Parcelable.Creator`. El código Java generado requiere algún campo explícito. Con nuestro escenario estándar, no hay ninguna manera de enviar el campo en código Java desde código administrado.
 
-Dado que la generación de código no proporciona una solución para generar métodos Java arbitrarios con nombres arbitrarios, a partir de Xamarin. Android 4,2, [ExportAttribute](xref:Java.Interop.ExportAttribute) y [ExportFieldAttribute](xref:Java.Interop.ExportFieldAttribute) se introdujeron para ofrecer una solución a lo anterior situación. Ambos atributos residen en el espacio de nombres `Java.Interop`:
+Dado que la generación de código no proporciona una solución para generar métodos Java arbitrarios con nombres arbitrarios, a partir de Xamarin. Android 4,2, [ExportAttribute](xref:Java.Interop.ExportAttribute) y [ExportFieldAttribute](xref:Java.Interop.ExportFieldAttribute) se introdujeron para ofrecer una solución a los escenarios anteriores. Ambos atributos residen en el espacio de nombres `Java.Interop`:
 
 - `ExportAttribute` &ndash; especifica un nombre de método y sus tipos de excepción esperados (para proporcionar "throws" explícitos en Java). Cuando se usa en un método, el método "exporta" un método Java que genera un código de envío a la invocación de JNI correspondiente al método administrado. Se puede utilizar con `android:onClick` y `java.io.Serializable`.
 
 - `ExportFieldAttribute` &ndash; especifica un nombre de campo. Reside en un método que funciona como inicializador de campo. Se puede utilizar con `android.os.Parcelable`.
-
-El proyecto de ejemplo [ExportAttribute](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) muestra cómo utilizar estos atributos.
 
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Solución de problemas de ExportAttribute y ExportFieldAttribute
 
@@ -263,7 +261,7 @@ Muchos de los tipos de [Android. Runtime](xref:Android.Runtime) tienen métodos 
 
 ### <a name="method-binding"></a>Enlace de método
 
-Los métodos de Java se C# exponen C# como métodos y como propiedades. Por ejemplo, el método Java [. lang. Runtime. runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) se enlaza como el método [java. lang. Runtime. runFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) y el método [java. lang. Object. getClass](https://developer.android.com/reference/java/lang/Object.html#getClass) está enlazado como [java. lang. Object. class. ](xref:Java.Lang.Object.Class)propiedad.
+Los métodos de Java se C# exponen C# como métodos y como propiedades. Por ejemplo, el método Java [. lang. Runtime. runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) se enlaza como el método [java. lang. Runtime. runFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) y el método [java. lang. Object. getClass](https://developer.android.com/reference/java/lang/Object.html#getClass) está enlazado como la propiedad [java. lang. Object. Class](xref:Java.Lang.Object.Class) .
 
 La invocación de métodos es un proceso de dos pasos:
 
@@ -352,7 +350,7 @@ En el caso de los enlaces de clase, puede ser el comportamiento correcto si el t
 
 1. Invocar [java. lang. Object (IntPtr, JniHandleOwnership)](xref:Java.Lang.Object#ctor*) en lugar del constructor `Java.Lang.Object` predeterminado. Esto es necesario para evitar la creación de una nueva instancia de Java.
 
-1. Compruebe el valor de [java. lang. Object. Handle](xref:Java.Lang.Object.Handle) antes de crear cualquier instancia de Java. La propiedad `Object.Handle` tendrá un valor distinto de `IntPtr.Zero` si un contenedor de Android al que se puede llamar se construyó en código Java, y el enlace de clase se construye para que contenga la instancia de contenedor de Android al que se puede llamar. Por ejemplo, cuando Android crea una instancia de `mono.samples.helloworld.HelloAndroid`, primero se creará el contenedor de Android al que se puede llamar y el constructor de `HelloAndroid` de Java creará una instancia del tipo `Mono.Samples.HelloWorld.HelloAndroid` correspondiente, con la propiedad `Object.Handle` establecida en la instancia de Java. antes de la ejecución del constructor.
+1. Compruebe el valor de [java. lang. Object. Handle](xref:Java.Lang.Object.Handle) antes de crear cualquier instancia de Java. La propiedad `Object.Handle` tendrá un valor distinto de `IntPtr.Zero` si un contenedor de Android al que se puede llamar se construyó en código Java, y el enlace de clase se construye para que contenga la instancia de contenedor de Android al que se puede llamar. Por ejemplo, cuando Android crea una instancia de `mono.samples.helloworld.HelloAndroid`, primero se creará el contenedor de Android Callable y el constructor de `HelloAndroid` de Java creará una instancia del tipo `Mono.Samples.HelloWorld.HelloAndroid` correspondiente, con la propiedad `Object.Handle` establecida en la instancia de Java antes de la ejecución del constructor.
 
 1. Si el tipo en tiempo de ejecución actual no es el mismo que el tipo declarativo, se debe crear una instancia del contenedor correspondiente de Android al que se puede llamar y usar [Object. SetHandle](xref:Java.Lang.Object.SetHandle*) para almacenar el identificador devuelto por [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*).
 
@@ -403,7 +401,7 @@ Los métodos [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance
 
 La creación de subclases de un tipo de Java o la implementación de una interfaz de Java requiere la generación de [contenedores de Android Callable](~/android/platform/java-integration/android-callable-wrappers.md) (ACWs) que se generan para cada subclase de `Java.Lang.Object` durante el proceso de empaquetado. La generación de ACW se controla mediante el atributo personalizado [Android. Runtime. RegisterAttribute](xref:Android.Runtime.RegisterAttribute) .
 
-En C# el caso de los tipos, el constructor de atributos personalizados de`[Register]`requiere un argumento: la [referencia de tipo simplificado de JNI](#_Simplified_Type_References_1) para el tipo de Java correspondiente. Esto permite proporcionar nombres diferentes entre Java y C#.
+En C# el caso de los tipos, el constructor de atributos personalizados de `[Register]` requiere un argumento: la [referencia de tipo simplificado de JNI](#_Simplified_Type_References_1) para el tipo de Java correspondiente. Esto permite proporcionar nombres diferentes entre Java y C#.
 
 Antes de Xamarin. Android 4,0, el `[Register]` atributo personalizado no estaba disponible para "alias" tipos de Java existentes. Esto se debe a que el proceso de generación de ACW generaría ACWs por cada subclase `Java.Lang.Object` encontrada.
 
@@ -438,11 +436,11 @@ partial class ManagedAdder : Adder {
 }
 ```
 
-Aquí, el tipo C# de *`Adder` escribe el`Adder`tipo Java* . El atributo `[Register]` se usa para especificar el nombre de JNI del tipo `mono.android.test.Adder` Java y la propiedad `DoNotGenerateAcw` se usa para impedir la generación de ACW. Esto producirá la generación de un ACW para el tipo de `ManagedAdder`, que subclase correctamente el tipo de `mono.android.test.Adder`. Si no se ha usado la propiedad `RegisterAttribute.DoNotGenerateAcw`, el proceso de compilación de Xamarin. Android habría generado un nuevo tipo de Java `mono.android.test.Adder`. Esto produciría errores de compilación, ya que el tipo de `mono.android.test.Adder` se presentaría dos veces, en dos archivos independientes.
+Aquí, el tipo C# de *`Adder` escribe el `Adder` tipo Java* . El atributo `[Register]` se usa para especificar el nombre de JNI del tipo `mono.android.test.Adder` Java y la propiedad `DoNotGenerateAcw` se usa para impedir la generación de ACW. Esto producirá la generación de un ACW para el tipo de `ManagedAdder`, que subclase correctamente el tipo de `mono.android.test.Adder`. Si no se ha usado la propiedad `RegisterAttribute.DoNotGenerateAcw`, el proceso de compilación de Xamarin. Android habría generado un nuevo tipo de Java `mono.android.test.Adder`. Esto produciría errores de compilación, ya que el tipo de `mono.android.test.Adder` se presentaría dos veces, en dos archivos independientes.
 
 ### <a name="binding-virtual-methods"></a>Enlazar métodos virtuales
 
-`ManagedAdder` subclases del tipo de `Adder` Java, pero no es especialmente interesante: C# el tipo de`Adder`no define ningún método virtual, por lo que`ManagedAdder`no puede invalidar nada.
+`ManagedAdder` subclases del tipo de `Adder` Java, pero no es especialmente interesante: C# el tipo de `Adder` no define ningún método virtual, por lo que `ManagedAdder` no puede invalidar nada.
 
 Los métodos de `virtual` de enlace para permitir el reemplazo por subclases requieren que se realicen varias operaciones que se encuentran en las dos categorías siguientes:
 
@@ -452,7 +450,7 @@ Los métodos de `virtual` de enlace para permitir el reemplazo por subclases req
 
 #### <a name="method-binding"></a>Enlace de método
 
-Un enlace de método requiere la adición de dos miembros de soporte C# a la definición de`Adder`:`ThresholdType`y`ThresholdClass`.
+Un enlace de método requiere la adición de dos miembros de soporte C# a la definición de `Adder`: `ThresholdType`y `ThresholdClass`.
 
 ##### <a name="thresholdtype"></a>ThresholdType
 
@@ -555,7 +553,7 @@ public class ManagedAdder extends mono.android.test.Adder {
 }
 ```
 
-Tenga en cuenta que se declara un método `@Override`, que delega en un método de prefijo de `n_`con el mismo nombre. Esto garantiza que cuando el código Java invoque `ManagedAdder.add`, se invocará `ManagedAdder.n_add`, lo que permitirá que se ejecute C# el método de invalidación de`ManagedAdder.Add`.
+Tenga en cuenta que se declara un método `@Override`, que delega en un método de prefijo de `n_`con el mismo nombre. Esto garantiza que cuando el código Java invoque `ManagedAdder.add`, se invocará `ManagedAdder.n_add`, lo que permitirá que se ejecute C# el método de invalidación de `ManagedAdder.Add`.
 
 Por lo tanto, la pregunta más importante: ¿cómo se `ManagedAdder.n_add` enlazar a `ManagedAdder.Add`?
 
@@ -681,7 +679,7 @@ Los métodos de `abstract` de enlace son en gran medida idénticos a los método
 
 1. Se crea un tipo de `Invoker` no `abstract` que crea subclases del tipo abstracto. El tipo de `Invoker` debe invalidar todos los métodos abstractos declarados en la clase base y la implementación reemplazada es la implementación de enlace de método, aunque el caso de envío no virtual se puede omitir.
 
-Por ejemplo, supongamos que se `abstract`el método de `mono.android.test.Adder.add` anterior. El C# enlace cambiaría de modo que `Adder.Add`eran abstractos y se definiría un nuevo tipo de`AdderInvoker`que implementaba`Adder.Add`:
+Por ejemplo, supongamos que se `abstract`el método de `mono.android.test.Adder.add` anterior. El C# enlace cambiaría de modo que `Adder.Add` eran abstractos y se definiría un nuevo tipo de `AdderInvoker` que implementaba `Adder.Add`:
 
 ```csharp
 partial class Adder {
@@ -737,7 +735,7 @@ La C# definición de la interfaz debe cumplir los siguientes requisitos:
 
 Al enlazar `abstract` métodos y `virtual`, se buscará en la jerarquía de herencia del tipo que se va a registrar. Las interfaces no pueden tener ningún método que contenga cuerpos, por lo que esto no funciona, por lo que es necesario especificar un tipo que indique dónde se encuentra el método de conector. El tipo se especifica dentro de la cadena de método del conector, después de un signo de dos puntos `':'`y debe ser el nombre de tipo calificado con el ensamblado del tipo que contiene el invocador.
 
-Las declaraciones de método de interfaz son una traducción del método de Java correspondiente usando tipos *compatibles* . En el caso de los tipos integrados de Java, los tipos C# compatibles son los tipos correspondientes, por C# ejemplo, `int`Java es`int`. En el caso de los tipos de referencia, el tipo compatible es un tipo que puede proporcionar un identificador de JNI del tipo Java adecuado.
+Las declaraciones de método de interfaz son una traducción del método de Java correspondiente usando tipos *compatibles* . En el caso de los tipos integrados de Java, los tipos C# compatibles son los tipos correspondientes, por C# ejemplo, `int` Java es `int`. En el caso de los tipos de referencia, el tipo compatible es un tipo que puede proporcionar un identificador de JNI del tipo Java adecuado.
 
 Los miembros de interfaz no se invocarán directamente mediante Java &ndash; la invocación se medirá a través del tipo de invocador &ndash; por lo que se permite cierta cantidad de flexibilidad.
 
@@ -753,7 +751,7 @@ public interface IAdderProgress : IJavaObject {
 ```
 
 Observe en lo anterior que asignamos el parámetro de `int[]` de Java a un [&gt;de JavaArray&lt;int ](xref:Android.Runtime.JavaArray`1).
-Esto no es necesario: podríamos haber enlazado a un C#`int[]`, o a un`IList<int>`o a otra cosa. Sea cual sea el tipo elegido, el `Invoker` debe ser capaz de traducirlo a un tipo de `int[]` de Java para la invocación.
+Esto no es necesario: podríamos haber enlazado a un C# `int[]`, o a un `IList<int>`o a otra cosa. Sea cual sea el tipo elegido, el `Invoker` debe ser capaz de traducirlo a un tipo de `int[]` de Java para la invocación.
 
 ### <a name="invoker-definition"></a>Definición de invocador
 
@@ -975,7 +973,7 @@ Muchos métodos JNIEnv devuelven *referencias a objetos* *JNI* , que son similar
 
 *La mayoría* de los métodos de creación de referencias crean las referencias locales.
 Android solo permite que exista un número limitado de referencias locales en un momento dado, normalmente 512. Las referencias locales se pueden eliminar a través de [JNIEnv. DeleteLocalRef](xref:Android.Runtime.JNIEnv.DeleteLocalRef*).
-A diferencia de JNI, no todos los métodos JNIEnv de referencia que devuelven referencias a objetos devuelven referencias locales. [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) devuelve una referencia *global* . Se recomienda encarecidamente que elimine las referencias locales tan pronto como pueda, si crea un [objeto Java. lang. Object](xref:Java.Lang.Object) alrededor del objeto y especifica `JniHandleOwnership.TransferLocalRef` a [java. lang. Object (identificador IntPtr, transferencia JniHandleOwnership)](xref:Java.Lang.Object#ctor*) constructor.
+A diferencia de JNI, no todos los métodos JNIEnv de referencia que devuelven referencias a objetos devuelven referencias locales. [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) devuelve una referencia *global* . Se recomienda encarecidamente que elimine las referencias locales tan pronto como pueda, mediante la construcción de un [objeto Java. lang. Object](xref:Java.Lang.Object) alrededor del objeto y la especificación de `JniHandleOwnership.TransferLocalRef` al constructor [java. lang. Object (control IntPtr, JniHandleOwnership Transfer)](xref:Java.Lang.Object#ctor*) .
 
 Las referencias globales se crean mediante [JNIEnv. NewGlobalRef](xref:Android.Runtime.JNIEnv.NewGlobalRef*) y [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*).
 Se pueden destruir con [JNIEnv. DeleteGlobalRef](xref:Android.Runtime.JNIEnv.DeleteGlobalRef*).
@@ -985,7 +983,7 @@ Las referencias globales débiles solo están disponibles en Android v 2.2 (Froy
 
 ### <a name="dealing-with-jni-local-references"></a>Trabajar con referencias locales de JNI
 
-Los métodos [JNIEnv. GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv. GetStaticObjectField](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [JNIEnv. CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [JNIEnv. CallNonvirtualObjectMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) y [JNIEnv. CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) devuelven una `IntPtr` que contiene un Referencia local de JNI a un objeto Java o `IntPtr.Zero` si Java devolvió `null`. Debido al número limitado de referencias locales que pueden estar pendientes a la vez (entradas 512), es conveniente asegurarse de que las referencias se eliminan a tiempo. Hay tres maneras de resolver las referencias locales: eliminarlas explícitamente, crear una instancia de `Java.Lang.Object` para almacenarlas y usar `Java.Lang.Object.GetObject<T>()` para crear un contenedor administrado al que se pueda llamar.
+Los métodos [JNIEnv. GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv. GetStaticObjectField](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [JNIEnv. CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [JNIEnv. CallNonvirtualObjectMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) y [JNIEnv. CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) devuelven una `IntPtr` que contiene una referencia local de JNI a un objeto de Java o `IntPtr.Zero` si Java devolvió `null`. Debido al número limitado de referencias locales que pueden estar pendientes a la vez (entradas 512), es conveniente asegurarse de que las referencias se eliminan a tiempo. Hay tres maneras de resolver las referencias locales: eliminarlas explícitamente, crear una instancia de `Java.Lang.Object` para almacenarlas y usar `Java.Lang.Object.GetObject<T>()` para crear un contenedor administrado al que se pueda llamar.
 
 ### <a name="explicitly-deleting-local-references"></a>Eliminar explícitamente las referencias locales
 
@@ -1293,7 +1291,7 @@ donde `*` es el tipo de valor devuelto del método.
 
 ## <a name="jni-type-signatures"></a>Signaturas de tipo JNI
 
-Las [signaturas de tipo JNI](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432) son referencias de tipo de [JNI](#_JNI_Type_References) (aunque no son referencias de tipo simplificadas), excepto los métodos. Con los métodos, la signatura de tipo JNI es un paréntesis de apertura `'('`, seguido de las referencias de tipo para todos los tipos de parámetro concatenados (sin comas separadoras ni nada más), seguido de un paréntesis de cierre `')'`, seguido del parámetro Referencia de tipo JNI del tipo de valor devuelto del método.
+Las [signaturas de tipo JNI](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432) son referencias de tipo de [JNI](#_JNI_Type_References) (aunque no son referencias de tipo simplificadas), excepto los métodos. Con los métodos, la signatura de tipo JNI es un paréntesis de apertura `'('`, seguido de las referencias de tipo para todos los tipos de parámetro concatenados (sin comas separadoras ni nada más), seguido de un paréntesis de cierre `')'`, seguido de la referencia de tipo JNI del tipo de valor devuelto del método.
 
 Por ejemplo, dado el método Java:
 
@@ -1307,7 +1305,7 @@ La signatura de tipo JNI sería:
 (ILjava/lang/String;[I)J
 ```
 
-En general, se recomienda *encarecidamente* usar el comando `javap` para determinar las firmas de JNI. Por ejemplo, la firma de tipo JNI del método [java. lang. Thread. state. valueA (String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) es "(Ljava/lang/String;) Ljava/lang/Thread $ State;", mientras que la firma de tipo JNI del método [java. lang. Thread. state. Values](https://developer.android.com/reference/java/lang/Thread.State.html#values) es "() [Ljava/ lang/Thread $ State; ". Vea los signos de punto y coma finales; Estos *forman* parte de la signatura de tipo JNI.
+En general, se recomienda *encarecidamente* usar el comando `javap` para determinar las firmas de JNI. Por ejemplo, la firma de tipo JNI del método [java. lang. Thread. state. valueA (String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) es "(Ljava/lang/String;) Ljava/lang/Thread $ State;", mientras que la firma de tipo JNI del método [java. lang. Thread. state. Values](https://developer.android.com/reference/java/lang/Thread.State.html#values) es "() [Ljava/lang/Thread $ State;". Vea los signos de punto y coma finales; Estos *forman* parte de la signatura de tipo JNI.
 
 <a name="_JNI_Type_References" />
 
@@ -1316,7 +1314,7 @@ En general, se recomienda *encarecidamente* usar el comando `javap` para determi
 Las referencias de tipo JNI son diferentes de las referencias de tipo de Java. No puede usar nombres de tipo Java completos como `java.lang.String` con JNI; en su lugar, debe usar las variaciones de JNI `"java/lang/String"` o `"Ljava/lang/String;"`, dependiendo del contexto; Consulte a continuación para obtener más información.
 Hay cuatro tipos de referencias de tipo JNI:
 
-- **integrado**
+- **built-in**
 - **representaciones**
 - **type**
 - **array**

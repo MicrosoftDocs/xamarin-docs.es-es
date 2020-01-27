@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 28a0b894d6230810f99ffaec4b93d9d87120e30f
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277448"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,7 +46,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de una vista de lista en iOS y Android](../images/create-listview.png "Vista de lista con datos")](../images/create-listview-large.png#lightbox "Vista de lista con datos")
+    [![Captura de pantalla de un elemento ListView en iOS y Android](../images/create-listview.png "ListView que muestra datos")](../images/create-listview-large.png#lightbox "ListView que muestra datos")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -88,4 +88,4 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de una vista de lista en iOS y Android](../images/create-listview.png "Vista de lista con datos")](../images/create-listview-large.png#lightbox "Vista de lista con datos")
+    [![Captura de pantalla de un elemento ListView en iOS y Android](../images/create-listview.png "ListView que muestra datos")](../images/create-listview-large.png#lightbox "ListView que muestra datos")

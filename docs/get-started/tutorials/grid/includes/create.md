@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "72678738"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -37,7 +37,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de una etiqueta en una cuadrícula, en iOS y Android](../images/create-grid.png "Cuadrícula que contiene una etiqueta")](../images/create-grid-large.png#lightbox "Cuadrícula que contiene una etiquetas")
+    [![Captura de pantalla de una etiqueta en una cuadrícula, en iOS y Android](../images/create-grid.png "Cuadrícula que contiene una etiqueta")](../images/create-grid-large.png#lightbox "Cuadrícula que contiene una etiqueta")
 
     Para obtener más información sobre [`Grid`](xref:Xamarin.Forms.Grid), vea [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -72,6 +72,6 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de una etiqueta en una cuadrícula, en iOS y Android](../images/create-grid.png "Cuadrícula que contiene una etiqueta")](../images/create-grid-large.png#lightbox "Cuadrícula que contiene una etiquetas")
+    [![Captura de pantalla de una etiqueta en una cuadrícula, en iOS y Android](../images/create-grid.png "Cuadrícula que contiene una etiqueta")](../images/create-grid-large.png#lightbox "Cuadrícula que contiene una etiqueta")
 
     Para obtener más información sobre [`Grid`](xref:Xamarin.Forms.Grid), vea [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

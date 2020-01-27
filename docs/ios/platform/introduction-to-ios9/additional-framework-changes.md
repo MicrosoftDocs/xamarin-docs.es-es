@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: fd9bced0d2185fd9bd0d18932921c101b2ed207c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489094"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725181"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -61,7 +61,6 @@ Para obtener más información, consulte los siguientes documentos:
 - [Introducción a CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) : Introducción al uso de CloudKit en una aplicación de Xamarin. iOS.
 - [CloudKit Inicio rápido](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) : Introducción a CloudKit.
 - [Referencia de CLOUDKIT JS](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) : documentación de CloudKit JS de Apple.
-- [Referencia de servicios Web de CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) : referencia de Apple que describe la interfaz http a CloudKit.
 - [Catálogo de CloudKit: Introducción a CloudKit (cacao y JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) : aplicación de ejemplo de Apple con CloudKit y CloudKit JS.
 
 > [!IMPORTANT]
@@ -117,7 +116,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 Apple incluye los siguientes cambios en el marco de trabajo de [HealthKit](xref:HealthKit) en iOS 9:
 
 - Compatibilidad con la eliminación y el seguimiento de la eliminación en bloque de las entradas en la base de datos HealthKit. Consulte referencia de la clase [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) y [HKHealthStore](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) de Apple para obtener más información.
-- Se han agregado nuevas categorías y características de seguimiento a la clase `HKQuantityTypeIdentifier` (como `UVExposure`) y a la clase `HKCategoryTypeIdentifier` (como `OvulationTestResult`). Consulte referencia de [constantes de HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) de Apple para obtener más información.
+- Se han agregado nuevas categorías y características de seguimiento a la clase `HKQuantityTypeIdentifier` (como `UVExposure`) y a la clase `HKCategoryTypeIdentifier` (como `OvulationTestResult`). 
 
 Consulte nuestra [Introducción a](~/ios/platform/healthkit.md) la documentación de HealthKit para más información sobre cómo trabajar con HealthKit en Xamarin. iOS.
 

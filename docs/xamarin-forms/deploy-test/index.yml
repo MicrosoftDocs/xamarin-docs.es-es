@@ -9,13 +9,13 @@ metadata:
   ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
   author: davidbritch
   ms.author: dabritch
-  ms.date: 01/03/2020
-  ms.openlocfilehash: 39d3458fab6f5eaf827a5475c919c3d9767b01d3
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.date: 01/22/2020
+  ms.openlocfilehash: a1e580c294dfffd2be9d8103333009c82d9b2349
+  ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/06/2020
-  ms.locfileid: "75679628"
+  ms.lasthandoff: 01/22/2020
+  ms.locfileid: "76518548"
 landingContent:
 - title: Pruebas
   linkLists:
@@ -23,6 +23,8 @@ landingContent:
     links:
     - text: Mejora del rendimiento de las aplicaciones
       url: performance.md
+    - text: Reinicio rápido
+      url: hot-restart.md
     - text: Automatización de pruebas con Visual Studio App Center
       url: /appcenter/test-cloud/
 - title: Implementación

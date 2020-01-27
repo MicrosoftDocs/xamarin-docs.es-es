@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67841442"
 ---
 La subclase [`Application`](xref:Xamarin.Forms.Application) tiene un diccionario [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que se puede usar para almacenar datos a lo largo de los cambios de estado del ciclo de vida. Este diccionario usa una clave `string` y almacena un valor `object`. El diccionario se guarda automáticamente en el dispositivo y se vuelve a rellenar cuando se reinicia la aplicación.
@@ -113,7 +113,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
 
     Por último, inicie la aplicación de nuevo desde Visual Studio y el texto que especificó anteriormente en el objeto [`Entry`](xref:Xamarin.Forms.Entry) se restaurará:
 
-    [![Captura de pantalla de un objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida, en iOS y Android](../images/persist-data.png "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")](../images/persist-data-large.png#lightbox "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")
+    [![Captura de pantalla de una entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida, en iOS y Android](../images/persist-data.png "Entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida")
 
     Para obtener más información sobre cómo conservar datos en el diccionario Properties, vea [Diccionario Properties](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) en la guía [Clase App de Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
@@ -217,6 +217,6 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
 
     Por último, inicie la aplicación de nuevo desde Visual Studio para Mac y el texto que especificó anteriormente en el objeto [`Entry`](xref:Xamarin.Forms.Entry) se restaurará:
 
-    [![Captura de pantalla de un objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida, en iOS y Android](../images/persist-data.png "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")](../images/persist-data-large.png#lightbox "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")
+    [![Captura de pantalla de una entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida, en iOS y Android](../images/persist-data.png "Entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuya propiedad Text persiste a través de los cambios de estado del ciclo de vida")
 
     Para obtener más información sobre cómo conservar datos en el diccionario Properties, vea [Diccionario Properties](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) en la guía [Clase App de Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).

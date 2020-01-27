@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: e247be8387ce984d6695431ec432119d01344b42
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 4747ce6555a6440c687dc3d239d75307f68683ca
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955767"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724487"
 ---
 # <a name="xamarinforms-layouts"></a>Diseños de Xamarin. Forms
 
@@ -36,7 +36,7 @@ Estas clases derivan de [ `Layout` ](xref:Xamarin.Forms.Layout), que define [ `P
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) contiene un único elemento secundario que se establece con el [ `Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad. El `Content` propiedad puede establecerse en cualquier `View` derivados, incluidos otros `Layout` derivados. `ContentView` se usa principalmente como un elemento estructural y actúa como clase base para [ `Frame` ](#frame).<br /><br />[Documentación de API](xref:Xamarin.Forms.ContentView) / [guía](~/xamarin-forms/user-interface/layouts/contentview.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/) | [![Ejemplo de ContentView](layouts-images/ContentView.png "Ejemplo de ContentView")](layouts-images/ContentView-Large.png#lightbox "Ejemplo de ContentView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) contiene un único elemento secundario que se establece con el [ `Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad. El `Content` propiedad puede establecerse en cualquier `View` derivados, incluidos otros `Layout` derivados. `ContentView` se usa principalmente como un elemento estructural y actúa como clase base para [ `Frame` ](#frame).<br /><br />[Documentación de API](xref:Xamarin.Forms.ContentView) / [guía](~/xamarin-forms/user-interface/layouts/contentview.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/) | [![Ejemplo de ContentView](layouts-images/ContentView.png "Ejemplo de ContentView")](layouts-images/ContentView-Large.png#lightbox "Ejemplo de ContentView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -97,7 +97,7 @@ Estas clases derivan de [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1).
 
 |     |     |
 | --- | --- |
-| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) coloca los elementos secundarios en ubicaciones específicas en relación con su elemento primario. Posición del elemento secundario se indica mediante el [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) y [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty). Un `AbsoluteLayout` es útil para animar las posiciones de las vistas.<br /><br />[Documentación de API](xref:Xamarin.Forms.AbsoluteLayout) / [guía](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Ejemplo de AbsoluteLayout](layouts-images/AbsoluteLayout.png "Ejemplo de AbsoluteLayout")](layouts-images/AbsoluteLayout-Large.png#lightbox "Ejemplo de AbsoluteLayout")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutdDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
+| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) coloca los elementos secundarios en ubicaciones específicas en relación con su elemento primario. Posición del elemento secundario se indica mediante el [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) y [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty). Un `AbsoluteLayout` es útil para animar las posiciones de las vistas.<br /><br />[Documentación de API](xref:Xamarin.Forms.AbsoluteLayout) / [guía](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Ejemplo de AbsoluteLayout](layouts-images/AbsoluteLayout.png "Ejemplo de AbsoluteLayout")](layouts-images/AbsoluteLayout-Large.png#lightbox "Ejemplo de AbsoluteLayout")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="relativelayout"></a>RelativeLayout

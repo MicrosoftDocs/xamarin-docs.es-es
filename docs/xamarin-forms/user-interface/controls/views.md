@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: dcba15d049e5bab09142f0aeba237b2a790a5950
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 7d53623ef1fb1eeb917cbf4cd6d65d461e525982
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728192"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724246"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Las vistas de Xamarin.Forms son los bloques de creación de interfaces de usuar
 
 Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los controles deslizantes que se conocen normalmente como *controles* o *widgets* en otros entornos de programación de gráficos. Las vistas compatibles con Xamarin.Forms todos se derivan los [ `View` ](xref:Xamarin.Forms.View) clase. Pueden dividirse en varias categorías:
 
-## <a name="views-for-presentation"></a>Vistas de presentación
+## <a name="views-for-presentation"></a>Vistas para presentación
 
 ### <a name="label"></a>Etiqueta
 
@@ -103,13 +103,13 @@ Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los con
 | `SwipeView` es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente. Cada elemento de menú se representa mediante una `SwipeItem`, que tiene una propiedad `Command` que ejecuta un `ICommand` cuando se puntea el elemento.<br /><br /> [Guía de](~/xamarin-forms/user-interface/swipeview.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![Ejemplo de SwipeView](views-images/SwipeView.png "Ejemplo de SwipeView")](views-images/SwipeView-Large.png#lightbox "Ejemplo de SwipeView")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Para establecer valores de las vistas
+## <a name="views-for-setting-values"></a>Vistas para establecer valores
 
 ### <a name="checkbox"></a>CheckBox
 
 |     |     |
 | --- | --- |
-| `CheckBox` permite al usuario seleccionar un valor booleano mediante un tipo de botón que puede estar activado o vacío. La propiedad `IsChecked` es el estado del `CheckBox`y el evento `CheckedChanged` se desencadena cuando cambia el estado.<br /><br />Documentación/ [Guía](~/xamarin-forms/user-interface/checkbox.md) de la API / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Ejemplo de CheckBox](views-images/CheckBox.png "Ejemplo de CheckBox")](views-images/CheckBox-Large.png#lightbox "Ejemplo de CheckBox")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+| `CheckBox` permite al usuario seleccionar un valor booleano mediante un tipo de botón que puede estar activado o vacío. La propiedad `IsChecked` es el estado del `CheckBox`y el evento `CheckedChanged` se desencadena cuando cambia el estado.<br /><br />Documentación/ [Guía](~/xamarin-forms/user-interface/checkbox.md) de la API / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Ejemplo de CheckBox](views-images/CheckBox.png "Ejemplo de CheckBox")](views-images/CheckBox-Large.png#lightbox "Ejemplo de CheckBox")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
 ### <a name="slider"></a>Slider
@@ -222,7 +222,7 @@ Estas dos clases se derivan de la [ `InputView` ](xref:Xamarin.Forms.InputView) 
 
 |     |     |
 | --- | --- |
-| [`TableView`](xref:Xamarin.Forms.TableView) muestra una lista de filas de tipo [ `Cell` ](xref:Xamarin.Forms.Cell) con encabezados opcionales y subencabezados. Establecer el [ `Root` ](xref:Xamarin.Forms.TableView.Root) propiedad a un objeto de tipo [ `TableRoot` ](xref:Xamarin.Forms.TableRoot)y agregue [ `TableSection` ](xref:Xamarin.Forms.TableSection) objetos a los que `TableRoot`. Cada `TableSection` es una colección de `Cell` objetos.<br /><br />[Documentación de API](xref:Xamarin.Forms.TableView) / [guía](~/xamarin-forms/user-interface/tableview.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview) | [![Ejemplo de TableView](views-images/TableView.png "Ejemplo de TableView")](views-images/TableView-Large.png#lightbox "Ejemplo de TableView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewDemoPage.xaml) |
+| [`TableView`](xref:Xamarin.Forms.TableView) muestra una lista de filas de tipo [ `Cell` ](xref:Xamarin.Forms.Cell) con encabezados opcionales y subencabezados. Establecer el [ `Root` ](xref:Xamarin.Forms.TableView.Root) propiedad a un objeto de tipo [ `TableRoot` ](xref:Xamarin.Forms.TableRoot)y agregue [ `TableSection` ](xref:Xamarin.Forms.TableSection) objetos a los que `TableRoot`. Cada `TableSection` es una colección de `Cell` objetos.<br /><br />[Documentación de API](xref:Xamarin.Forms.TableView) / [guía](~/xamarin-forms/user-interface/tableview.md) / [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview) | [![Ejemplo de TableView](views-images/TableView.png "Ejemplo de TableView")](views-images/TableView-Large.png#lightbox "Ejemplo de TableView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewFormDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewFormDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>Vínculos relacionados

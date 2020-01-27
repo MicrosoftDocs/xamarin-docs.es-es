@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61037649"
 ---
 Anteriormente, [`ListView`](xref:Xamarin.Forms.ListView) se ha rellenado con datos mediante el enlace de datos. Aun así, pese al enlace de datos con una colección, donde cada objeto de la colección ha definido varios elementos de datos, solo se ha mostrado un elemento de datos por objeto (la propiedad `Name` del objeto `Monkey`).
@@ -58,7 +58,7 @@ En este ejercicio, modificará el proyecto **ListViewTutorial** de forma que [`L
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de un elemento ListView cuyos elementos tienen plantillas creadas mediante una plantilla de datos](../images/customize-cell-appearance.png "Elemento ListView que muestra datos con plantillas")](../images/customize-cell-appearance-large.png#lightbox "Elemento ListView que muestra datos con plantillas")
+    [![Captura de pantalla de un elemento ListView cuyos elementos están basados en una plantilla de datos](../images/customize-cell-appearance.png "ListView que muestra datos basados en plantilla")](../images/customize-cell-appearance-large.png#lightbox "ListView que muestra datos basados en plantilla")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -108,4 +108,4 @@ En este ejercicio, modificará el proyecto **ListViewTutorial** de forma que [`L
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de un elemento ListView cuyos elementos tienen plantillas creadas mediante una plantilla de datos](../images/customize-cell-appearance.png "Elemento ListView que muestra datos con plantillas")](../images/customize-cell-appearance-large.png#lightbox "Elemento ListView que muestra datos con plantillas")
+    [![Captura de pantalla de un elemento ListView cuyos elementos están basados en una plantilla de datos](../images/customize-cell-appearance.png "ListView que muestra datos basados en plantilla")](../images/customize-cell-appearance-large.png#lightbox "ListView que muestra datos basados en plantilla")

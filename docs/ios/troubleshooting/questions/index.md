@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 186164d9f2239bc577470cc4b1a999f4c516dedb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031087"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725400"
 ---
 # <a name="ios-frequently-asked-questions"></a>Preguntas más frecuentes sobre iOS
 
@@ -77,7 +77,7 @@ Este problema se produce cuando faltan las carpetas *ocultas* `.monotouch-32` y 
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Error de compilación: no se puede codificar el desplazamiento X en la reubicación distribuida resultante](error-encode-offset-scattered-relocation.md)
 Este problema se produce al compilar para arquitecturas de 32 bits, como ARMv7, cuando el archivo binario final es demasiado grande para la cadena de herramientas nativa.
 
-## <a name="deprecated"></a>En desuso
+## <a name="deprecated"></a>Obsoleto
 
 > [!IMPORTANT]
 > Los artículos siguientes se aplican a los problemas que se han resuelto en las versiones recientes de Xamarin. Sin embargo, si el problema se produce en la versión más reciente del software, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con la información de control de versiones completa y el resultado del registro de compilación completo.
@@ -86,7 +86,7 @@ Este problema se produce al compilar para arquitecturas de 32 bits, como ARMv7, 
 Hubo algunos problemas conocidos en las versiones anteriores de Xamarin que podrían provocar que el archivo IPA en Windows fuese 0 bytes.
 
 ### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Error de IBTool: The operation couldn’t be completed.](error-ibtool.md)
-Apple [corrigió](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) este error `ibtool` en Xcode 6.1.1, por lo que la actualización a Xcode 6.1.1 o superior es la solución más sencilla.
+Apple corrigió este error `ibtool` en Xcode 6.1.1, por lo que la actualización a Xcode 6.1.1 o superior es la solución más sencilla.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Error MT1009: Could not copy the assembly](error-mt1009.md)
 Esto afecta a los usuarios que ejecutan Xamarin. iOS 7.2.6. Este problema se debe a los permisos de archivo que necesitan más privilegios cuando Xamarin. iOS se instala con una cuenta de usuario diferente a la cuenta principal del desarrollador.

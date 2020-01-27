@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032303"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725373"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Suscripciones e informes en Xamarin. iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Acerca de las suscripciones que no son de renovación
 
 Las suscripciones que no son de renovación están pensadas para productos que representan la venta de un servicio con una restricción de tiempo (como el acceso de una semana a una aplicación de navegación o acceso limitado por tiempo a un archivo de datos).   
-   
+
 Diferencias principales entre las suscripciones sin renovación y otros tipos de productos:
 
-- La definición del producto en iTunes Connect no incluye el término. El código de aplicación debe ser capaz de deducir el período de validez del ID. de producto. 
-- Se pueden adquirir varias veces (como un producto consumible). Las aplicaciones son necesarias para administrar el período de suscripción, la expiración y la renovación, y evitar que el usuario compre suscripciones superpuestas. 
-- Las compras no son compatibles con la función de restauración StoreKit. Si la suscripción debe estar disponible en todos los dispositivos de un usuario, la aplicación tendrá que diseñar e implementar esta característica junto con un servidor remoto. Las aplicaciones también son responsables de realizar copias de seguridad del estado de la suscripción en los casos en los que se realiza una copia de seguridad de un dispositivo y después se restaura a partir de la copia de seguridad. 
+- La definición del producto en iTunes Connect no incluye el término. El código de aplicación debe ser capaz de deducir el período de validez del ID. de producto.
+- Se pueden adquirir varias veces (como un producto consumible). Las aplicaciones son necesarias para administrar el período de suscripción, la expiración y la renovación, y evitar que el usuario compre suscripciones superpuestas.
+- Las compras no son compatibles con la función de restauración StoreKit. Si la suscripción debe estar disponible en todos los dispositivos de un usuario, la aplicación tendrá que diseñar e implementar esta característica junto con un servidor remoto. Las aplicaciones también son responsables de realizar copias de seguridad del estado de la suscripción en los casos en los que se realiza una copia de seguridad de un dispositivo y después se restaura a partir de la copia de seguridad.
 - Información general sobre la implementación
-- Normalmente, las suscripciones que no son de renovación deberían implementarse mediante el flujo de trabajo proporcionado por el servidor y se pueden administrar como productos consumibles. 
+- Normalmente, las suscripciones que no son de renovación deberían implementarse mediante el flujo de trabajo proporcionado por el servidor y se pueden administrar como productos consumibles.
 
 ## <a name="about-free-subscriptions"></a>Acerca de las suscripciones gratuitas
 
@@ -49,7 +49,7 @@ Las suscripciones renovables automáticamente deben implementarse mediante el fl
 El secreto compartido de compra desde la aplicación debe usarse en la solicitud JSON al comprobar las suscripciones renovables automáticamente en el servidor. El secreto compartido se crea o se obtiene acceso a él mediante iTunes Connect.
 
 En la Página principal de iTunes Connect, seleccione **mis aplicaciones**:   
-   
+
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Seleccione una aplicación y haga clic en la pestaña **compras desde la aplicación** :
@@ -57,7 +57,7 @@ Seleccione una aplicación y haga clic en la pestaña **compras desde la aplicac
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 En la parte inferior de la página, seleccione **ver o generar un secreto compartido**:
-   
+
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
@@ -98,19 +98,18 @@ El objeto SKPaymentTransaction no incluye el término de suscripción: debe usar
 
 Para facilitar la prueba de las suscripciones, sus duraciones se comprimen al realizar pruebas en el espacio aislado. las suscripciones de 1 semana se renuevan cada 3 minutos, 1 año suscripciones renovadas cada hora. Las suscripciones se renovarán automáticamente un máximo de 6 veces durante las pruebas en el espacio aislado.
 
-## <a name="reporting"></a>Informes
+## <a name="reporting"></a>Reporting
 
 iTunes Connect ( [itunesconnect.Apple.com](https://itunesconnect.apple.com)) proporciona:   
-   
+
  **Ventas y tendencias** : muestra detalles de las descargas de aplicaciones, actualizaciones y compras desde la aplicación.   
-   
+
  **Pagos e informes financieros** : detalla la información obtenida por las aplicaciones, además de enumerar los pagos que se han realizado en usted y el grado de su cuenta.
 
 A continuación se muestra un informe de ventas y tendencias de ejemplo:   
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
-   
- También hay una aplicación de [ **ITC Connect Mobile**iOS (vínculo de iTunes)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
-Aquí se muestran capturas de pantallas de iPhone para algunas de las estadísticas disponibles:   
-   
+
+ También hay una aplicación de **ITC Connect Mobile** iOS. Aquí se muestran capturas de pantallas de iPhone para algunas de las estadísticas disponibles:   
+
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

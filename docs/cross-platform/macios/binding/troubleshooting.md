@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: fe4b9ade9e6e462c3472a8bb3bb8750ed6cac326
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8194c369aa0e4f8bb17a1a162354b4f72c6aaa41
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015888"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725337"
 ---
 # <a name="binding-troubleshooting"></a>Solución de problemas de enlaces
 
@@ -44,15 +44,15 @@ Si ejecuta un caso en el que pasar `null` produce una `ArgumentNullException` pe
 
 Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin. Mac:
 
-- Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/mac).
-- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues). 
+- Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac).
+- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues).
 - Antes de la migración a GitHub, los problemas de Xamarin se recopilaban en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Busque allí para ver si están los mismos problemas.
 - Si no encuentra un problema, registre uno nuevo en el [repositorio de problemas de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos. 
+Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos.
 
 De la siguiente información, incluya toda la que pueda:
 
-- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**. 
+- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**.
 - El seguimiento de la pila completo del bloqueo.
 - El código de C# del bloqueo.

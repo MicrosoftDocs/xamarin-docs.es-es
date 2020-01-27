@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 2f1fb3706012fa86834986064a366071b644b2dc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f60be3f7dc14749f5cd58d5228c17fa85282cd78
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015950"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725355"
 ---
 # <a name="objective-sharpie-release-history"></a>Historial de versiones de Objective Sharpie
 
@@ -58,11 +58,9 @@ ms.locfileid: "73015950"
 
 ## <a name="216-march-17-2015"></a>2.1.6 (17 de marzo de 2015)
 
-[Descargar v 2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
-
 * Enlace de expresión de operador binario fijo: el lado izquierdo de la expresión se intercambió incorrectamente con el lado derecho (por ejemplo, `1 << 0` se enlazaba incorrectamente como `0 << 1`). Gracias a Adam Kemp para observar esto.
 * Se corrigió un problema con `NSInteger` y `NSUInteger` que se enlazan como `int` y `uint` en lugar de `nint` y `nuint` en i386; a continuación, `-DNS_BUILD_32_LIKE_64` se pasa a Clang para que el análisis `objc/NSObjCRuntime.h` funcione según lo previsto en i386.
-* La arquitectura predeterminada para los SDK de Mac OS X (por ejemplo, `-sdk macosx10.10`) es ahora x86_64 en lugar de i386, por lo que `-arch` se puede omitir a menos que se desee invalidar el valor predeterminado.
+* La arquitectura predeterminada para los SDK de Mac OS X (por ejemplo, `-sdk macosx10.10`) ahora es x86_64 en lugar de i386, por lo que `-arch` se puede omitir a menos que se desee invalidar el valor predeterminado.
 
 ## <a name="210-march-15-2015"></a>2.1.0 (15 de marzo de 2015)
 
@@ -95,7 +93,7 @@ Objective Sharpie 2,0 se basa en Clang 3.6.1.
 
 * Existe una heurística de nomenclatura mejorada para las enumeraciones anónimas precedidas inmediatamente por un `typedef` resolver a un tipo entero integrado como `long` o `int`.
 
-* Los punteros de C ahora se C# enlazan como punteros de`unsafe`en lugar de`System.IntPtr`. Esto da como resultado una mayor claridad en el enlace para cuando puede querer convertir los parámetros de puntero en `out` o `ref` parámetros. No es posible deducir siempre si un parámetro debe ser `out` o `ref`, por lo que el puntero se conserva en el enlace para permitir una auditoría más sencilla.
+* Los punteros de C ahora se C# enlazan como punteros de `unsafe` en lugar de `System.IntPtr`. Esto da como resultado una mayor claridad en el enlace para cuando puede querer convertir los parámetros de puntero en `out` o `ref` parámetros. No es posible deducir siempre si un parámetro debe ser `out` o `ref`, por lo que el puntero se conserva en el enlace para permitir una auditoría más sencilla.
 
 * Una excepción al enlace de puntero anterior es cuando se encuentra un puntero de 2 rangos a un objeto de Objective-C como parámetro. En estos casos, la Convención es predominante y el parámetro se enlazará como `out` (por ejemplo, `NSError **error` → `out NSError error`).
 

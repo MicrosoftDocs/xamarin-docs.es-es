@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 104141d98cecb31cae17f4510f742387be4a3fb7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 297c7806ce8a880d65c38ef0e4672e41fee5acfe
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027251"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724447"
 ---
 # <a name="lollipop-features"></a>Características de los círculos
 
@@ -40,11 +40,11 @@ Además de las mejoras de la interfaz de usuario que se han incorporado a travé
 
 - **Nuevas api** &ndash; Android 5,0 agrega nuevas API para la compatibilidad con varias redes, conectividad Bluetooth mejorada, administración de almacenamiento más sencilla y un control más flexible de los reproductores multimedia y los dispositivos de cámara. Hay disponible una nueva característica de programación de trabajos para ejecutar tareas de forma asincrónica a horas programadas. Esta característica ayuda a mejorar la duración de la batería, por ejemplo, la programación de tareas que se deben realizar cuando el dispositivo está conectado y cargándose.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Para usar las nuevas características de Android 5,0 en aplicaciones basadas en Xamarin, se requiere lo siguiente:
 
-- **Xamarin. android** &ndash; Xamarin. Android 4,20 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac. 
+- **Xamarin. android** &ndash; Xamarin. Android 4,20 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac.
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
 
@@ -105,7 +105,7 @@ Las notificaciones han cambiado significativamente en Android 5,0:
 
 - Los **sonidos y las vibraciones se controlan de forma diferente** &ndash; los sonidos de notificación y las vibraciones ahora se controlan mediante `Notification.Builder` en lugar de `Ringtone`, `MediaPlayer`y `Vibrator`.
 
-- **Nueva combinación de colores** &ndash; de acuerdo con el tema material, las notificaciones se representan con texto oscuro sobre el fondo blanco o muy ligero. Además, Android puede modificar los canales alfa en los iconos de notificación para que se coordinen con las combinaciones de colores del sistema. 
+- **Nueva combinación de colores** &ndash; de acuerdo con el tema material, las notificaciones se representan con texto oscuro sobre el fondo blanco o muy ligero. Además, Android puede modificar los canales alfa en los iconos de notificación para que se coordinen con las combinaciones de colores del sistema.
 
 - Las notificaciones de la **pantalla de bloqueo** &ndash; pueden aparecer ahora en la pantalla de bloqueo del dispositivo.
 
@@ -113,7 +113,7 @@ Las notificaciones han cambiado significativamente en Android 5,0:
 
 En la mayoría de los casos, la migración de la funcionalidad de notificación de aplicación existente a Android 5,0 requiere los pasos siguientes:
 
-1. Convierta el código para usar `Notification.Builder` (o `NotificationsCompat.Builder`) para crear notificaciones. 
+1. Convierta el código para usar `Notification.Builder` (o `NotificationsCompat.Builder`) para crear notificaciones.
 
 2. Compruebe que los recursos de notificación existentes estén visibles en la nueva combinación de colores del tema del material.
 
@@ -133,7 +133,7 @@ El nuevo tema material de Android 5,0 aporta cambios en la apariencia de la inte
 
 Android 5,0 le muestra la pantalla principal que aparece a la izquierda. La captura de pantalla de Center es la primera pantalla de la lista de aplicaciones y la captura de pantalla de la derecha es la pantalla de **configuración** . La especificación de [diseño de material](https://material.io/guidelines/material-design/introduction.html) de Google explica las reglas de diseño subyacentes en el nuevo concepto de tema de materiales.
 
-El tema material incluye tres tipos integrados que puede usar en la aplicación: el `Theme.Material` tema oscuro (el valor predeterminado), el tema `Theme.Material.Light` y el tema `Theme.Material.Light.DarkActionBar`: 
+El tema material incluye tres tipos integrados que puede usar en la aplicación: el `Theme.Material` tema oscuro (el valor predeterminado), el tema `Theme.Material.Light` y el tema `Theme.Material.Light.DarkActionBar`:
 
 [![capturas de pantallas de temas oscuros, claros y DarkActionBar](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
@@ -343,7 +343,7 @@ El sistema de notificación en Android 5,0 se ha actualizado significativamente 
 
 ![Ejemplo de una notificación de Android 5,0 no expandida](lollipop-images/expanded-notification-contracted.png)
 
-Cuando se muestra un icono grande en una notificación (como se muestra en el ejemplo anterior), Android 5,0 presenta el icono pequeño como un distintivo en el icono de gran tamaño. 
+Cuando se muestra un icono grande en una notificación (como se muestra en el ejemplo anterior), Android 5,0 presenta el icono pequeño como un distintivo en el icono de gran tamaño.
 
 En Android 5,0, las notificaciones también pueden aparecer en la pantalla de bloqueo del dispositivo.
 Por ejemplo, a continuación se muestra una captura de pantalla de ejemplo de un bloqueo de pantalla con una sola notificación:
@@ -352,7 +352,8 @@ Por ejemplo, a continuación se muestra una captura de pantalla de ejemplo de un
 
 Los usuarios pueden hacer doble punteo en una notificación en la pantalla de bloqueo para desbloquear el dispositivo y saltar a la aplicación que originó esa notificación, o bien deslizar para descartar la notificación. Las notificaciones tienen una nueva configuración de *visibilidad* que determina la cantidad de contenido que se puede mostrar en la pantalla de bloqueo. Los usuarios pueden elegir si desea permitir que se muestre contenido confidencial en las notificaciones de la pantalla de bloqueo.
 
-Android 5,0 presenta un nuevo formato de presentación de notificaciones de alta prioridad denominado " *Head-up*". Las notificaciones de los cabezales se desplazan hacia abajo desde la parte superior de la pantalla durante unos segundos y, a continuación, se revierten a la sombra de la notificación en la parte superior de la pantalla. Las notificaciones de cabezales permiten que la interfaz de usuario del sistema Coloque información importante delante del usuario sin interrumpir la actividad que se está ejecutando actualmente. En el ejemplo siguiente se muestra una notificación de suscripción sencilla que se muestra en la parte superior de una aplicación:
+Android 5,0 presenta un nuevo formato de presentación de notificaciones de alta prioridad denominado " *Head-up*". Las notificaciones de los cabezales se desplazan hacia abajo desde la parte superior de la pantalla durante unos segundos y, a continuación, se revierten a la sombra de la notificación en la parte superior de la pantalla. Las notificaciones de cabezales permiten que la interfaz de usuario del sistema Coloque información importante delante del usuario sin interrumpir la actividad que se está ejecutando actualmente.
+En el ejemplo siguiente se muestra una notificación de suscripción sencilla que se muestra en la parte superior de una aplicación:
 
 [![ejemplo de una notificación de cabeza](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
@@ -417,7 +418,7 @@ Además, puede usar la nueva clase `Android.App.Notification.MediaStyle` para as
 
 Para obtener más información acerca de las nuevas características de control de reproducción multimedia en Android 5,0, consulte [multimedia](https://developer.android.com/about/versions/android-5.0.html#Media).
 
-### <a name="storage"></a>Almacenamiento
+### <a name="storage"></a>Almacenamiento de
 
 Android 5,0 actualiza el marco de acceso de almacenamiento para que las aplicaciones funcionen con directorios y documentos más fácilmente:
 
@@ -473,4 +474,3 @@ Si no está familiarizado con el desarrollo de Xamarin Android, lea [instalació
 - [Versión preliminar para desarrolladores de Android L](https://developer.android.com/preview/index.html)
 - [Obtener la Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Diseño de materiales](https://developer.android.com/preview/material/index.html)
-- [Principios del diseño de materiales](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

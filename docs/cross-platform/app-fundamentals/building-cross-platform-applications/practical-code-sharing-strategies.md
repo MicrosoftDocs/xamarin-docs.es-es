@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 0e37e138607fb0e00fbdc463ac7c53facf81395d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728244"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723635"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5: Estrategias prácticas de uso compartido de código
 
@@ -272,8 +272,6 @@ Las acciones que una aplicación móvil puede tardar en estas situaciones son:
 - Si la conexión 3G, las aplicaciones pueden comportarse de forma diferente (por ejemplo, Apple no permite las aplicaciones de más de 20Mb a descargarse en 3G). Aplicaciones podrían utilizar esta información para advertir al usuario sobre descarga excesivo veces cuando se recuperan archivos de gran tamaño.
 - Incluso si la red está disponible, es recomendable comprobar la conectividad con el servidor de destino antes de iniciar otras solicitudes. Esto impedirá que las operaciones de red de la aplicación en el tiempo de espera de forma repetida y también permiten un mensaje de error más informativo que se mostrará al usuario.
 
-Hay un [Xamarin.iOS ejemplo](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponibles (que se basa en Apple [código de ejemplo de accesibilidad](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) para ayudar a detectar la disponibilidad de la red.
-
 ## <a name="webservices"></a>WebServices
 
 Consulte la documentación sobre [trabajar con servicios Web](~/cross-platform/data-cloud/web-services/index.md), que incluye acceso a REST, extremos SOAP y WCF con Xamarin.iOS. Es posible que las solicitudes de creación web service y analizar las respuestas, sin embargo, hay bibliotecas disponibles para hacer esto mucho más sencillo, incluidos Azure, RestSharp y ServiceStack. Pueden tener acceso a operaciones incluso básicas de WCF en aplicaciones de Xamarin.
@@ -300,8 +298,6 @@ También es un fragmento de código de Xamarin.iOS en nuestra [documentación de
 A diferencia de RestSharp, ServiceStack es tanto una solución de servidor para hospedar un servicio web, así como una biblioteca de cliente que se puede implementar en aplicaciones móviles para tener acceso a esos servicios.
 
 El [sitio Web de ServiceStack](http://servicestack.net/) explica el propósito del proyecto y vínculos a documentos y ejemplos de código. Los ejemplos incluyen una implementación de servidor completa de un servicio web, así como diversas aplicaciones del lado cliente que pueden tener acceso a él.
-
-Hay un [Xamarin.iOS ejemplo](http://www.servicestack.net/monotouch/remote-info/) en el sitio Web de ServiceStack y un fragmento de código en nuestro [documentación de servicios Web](~/cross-platform/data-cloud/web-services/index.md).
 
 ### <a name="wcf"></a>WCF
 
@@ -352,7 +348,7 @@ Para el código que no usa la biblioteca de tareas paralelas, cada plataforma ti
 - **iOS** : `owner.BeginInvokeOnMainThread(new NSAction(action))`
 - **Android** : `owner.RunOnUiThread(action)`
 - **Xamarin.Forms** : `Device.BeginInvokeOnMainThread(action)`
-- **Windows** : `Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **Windows**:`Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 IOS y Android sintaxis requiere una clase 'context' esté disponible, lo que significa que el código debe pasar este objeto a cualquier método que requiera una devolución de llamada en el subproceso de interfaz de usuario.
 

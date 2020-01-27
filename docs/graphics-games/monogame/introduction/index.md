@@ -6,18 +6,18 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8ffb62c8715ff60e9b0ea3b2bc536f3441fb8765
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978390"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724679"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introducción al desarrollo de juegos con monogame
 
 _En este tutorial de varias partes se muestra cómo crear una sencilla aplicación 2D con monogame.  Trata conceptos comunes de programación de juegos, como gráficos, entradas, entidades de juegos y física._
 
-En este artículo se describe la tecnología de API monogame para crear juegos multiplataforma. Para obtener una lista completa de las plataformas, vea el [sitio web](http://www.monogame.net/)de monogame. Este tutorial se usará C# para los ejemplos de código, aunque monogame también es F# totalmente funcional.
+En este artículo se describe la tecnología de API monogame para crear juegos multiplataforma. Para obtener una lista completa de las plataformas, vea el [sitio web de monogame](http://www.monogame.net/). Este tutorial se usará C# para los ejemplos de código, aunque monogame también es F# totalmente funcional.
 
 Monogame es una API con aceleración de hardware multiplataforma que proporciona gráficos, audio, administración de Estados de juegos, entrada y una canalización de contenido para la importación de recursos. A diferencia de la mayoría de los motores de juegos, monogame no proporciona ni impone ningún patrón o estructura de proyecto.  Aunque esto significa que los desarrolladores pueden organizar el código como deseen, también significa que se necesita un poco de código de instalación al iniciar un proyecto nuevo.
 
@@ -43,8 +43,6 @@ Los desarrolladores familiarizados con XNA ya estarán familiarizados con la sin
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Proyecto monogame de WalkingGame (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
-- [XNB fuentes iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB fuentes Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [Android de monogame en NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [IOS de monogame en NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [Documentación de la API de monogame](http://www.monogame.net/documentation/?page=main)

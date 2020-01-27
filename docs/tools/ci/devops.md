@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007446"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725136"
 ---
 # <a name="devops-with-xamarin"></a>DevOps con Xamarin
 
@@ -26,7 +26,7 @@ En las siguientes tablas se identifican qué características de DevOps de Visua
 
 ## <a name="agile-tools"></a>Herramientas de Agile
 
-Vínculo de referencia: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Sobre herramientas y gestión de proyectos de Agile)
+Vínculo de referencia: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)** (Sobre herramientas y gestión de proyectos de Agile)
 
 Comentario general: todas las características de planeación y seguimiento son independientes del tipo de proyecto y de los lenguajes de codificación.
 
@@ -77,7 +77,7 @@ Vínculo de referencia: **[Azure Pipelines](/azure/devops/pipelines/index?view=v
 |Compilar definiciones con scripts anteriores y posteriores|Sí||
 |Integración continua, incluidas entradas validadas|Sí|Entradas validadas para TFVC solo cuando GIT funciona en un modelo de solicitud de extracción en lugar de entradas.|
 
-## <a name="test"></a>Prueba
+## <a name="test"></a>Probar
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|

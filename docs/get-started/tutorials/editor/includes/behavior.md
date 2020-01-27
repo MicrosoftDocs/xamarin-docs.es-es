@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: bd3f37082443e93f10f60d9466fe22aae8571b14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373443"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -22,7 +22,7 @@ ms.locfileid: "61373443"
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Escriba texto en [`Editor`](xref:Xamarin.Forms.Entry) y observe que la altura de `Editor` aumenta a medida que se rellena con texto y disminuye a medida que se elimina texto, y que el número máximo de caracteres que se puede especificar son 200:
 
-    [![Captura de pantalla de un editor de ajuste automático de tamaño, en iOS y Android](../images/customize-behavior.png "Editor de ajuste automático de tamaño")](../images/customize-behavior-large.png#lightbox "Editor de ajuste automático de tamaño")
+    [![Captura de pantalla de un editor con ajuste automático de tamaño, en iOS y Android](../images/customize-behavior.png "Editor con ajuste automático de tamaño")](../images/customize-behavior-large.png#lightbox "Editor con ajuste automático de tamaño")
 
     Para obtener más información sobre la personalización del comportamiento de [`Editor`](xref:Xamarin.Forms.Editor), consulte la guía del [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
 
@@ -42,6 +42,6 @@ ms.locfileid: "61373443"
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Escriba texto en [`Editor`](xref:Xamarin.Forms.Entry) y observe que la altura de `Editor` aumenta a medida que se rellena con texto y disminuye a medida que se elimina texto, y que el número máximo de caracteres que se puede especificar son 200:
 
-    [![Captura de pantalla de un editor de ajuste automático de tamaño, en iOS y Android](../images/customize-behavior.png "Editor de ajuste automático de tamaño")](../images/customize-behavior-large.png#lightbox "Editor de ajuste automático de tamaño")
+    [![Captura de pantalla de un editor con ajuste automático de tamaño, en iOS y Android](../images/customize-behavior.png "Editor con ajuste automático de tamaño")](../images/customize-behavior-large.png#lightbox "Editor con ajuste automático de tamaño")
 
     Para obtener más información sobre la personalización del comportamiento de [`Editor`](xref:Xamarin.Forms.Editor), consulte la guía del [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).

@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015881"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725346"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Información general de los enlaces de Objective-C
 
@@ -19,7 +19,7 @@ _Detalles de cómo funciona el proceso de enlace_
 
 El enlace de una biblioteca de Objective-C para su uso con Xamarin toma tres pasos:
 
-1. Escriba una C# "definición de API" para describir cómo se expone la API nativa en .net y cómo se asigna a la base de Objective-C subyacente. Esto se hace mediante construcciones C# estándar como `interface`y varios **atributos** de enlace (vea este [ejemplo sencillo](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Escriba una C# "definición de API" para describir cómo se expone la API nativa en .net y cómo se asigna a la base de Objective-C subyacente. Esto se hace mediante construcciones C# estándar como `interface` y varios **atributos** de enlace (vea este [ejemplo sencillo](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Una vez que haya escrito la "definición de la C#API" en, debe compilarla para generar un ensamblado "de enlace". Esto puede hacerse en la [**línea de comandos**](#commandline) o mediante un [**proyecto de enlace**](#bindingproject) en Visual Studio para Mac o Visual Studio.
 
@@ -35,7 +35,7 @@ También puede leer más detalles técnicos de [Cómo funciona](#howitworks), lo
 
 ## <a name="command-line-bindings"></a>Enlaces de línea de comandos
 
-Puede usar el `btouch-native` para Xamarin. iOS (o `bmac-native` si usa Xamarin. Mac) para compilar enlaces directamente. Funciona pasando a la herramienta C# de línea de comandos las definiciones de API que ha creado manualmente (o usando Objective Sharpie) a la herramienta de línea de comandos (`btouch-native`para iOS o`bmac-native`para Mac).
+Puede usar el `btouch-native` para Xamarin. iOS (o `bmac-native` si usa Xamarin. Mac) para compilar enlaces directamente. Funciona pasando a la herramienta C# de línea de comandos las definiciones de API que ha creado manualmente (o usando Objective Sharpie) a la herramienta de línea de comandos (`btouch-native` para iOS o `bmac-native` para Mac).
 
 La sintaxis general para invocar estas herramientas es:
 
@@ -73,7 +73,7 @@ Lea los [documentos de Objective Sharpie](~/cross-platform/macios/binding/object
 
 Es posible usar el atributo [[Register]](xref:Foundation.RegisterAttribute) , el atributo [[Export]](xref:Foundation.ExportAttribute) y la [invocación manual del selector de Objective-c](~/ios/internals/objective-c-selectors.md) para enlazar manualmente los tipos de Objective-c nuevos (previamente desenlazados).
 
-En primer lugar, busque un tipo que desee enlazar. A efectos de discusión (y simplicidad), enlazaremos el tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (que ya se ha enlazado en [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); la implementación siguiente es solo para fines de ejemplo).
+En primer lugar, busque un tipo que desee enlazar. A efectos de discusión (y simplicidad), enlazaremos el tipo [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) (que ya se ha enlazado en [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); la implementación siguiente es solo para fines de ejemplo).
 
 En segundo lugar, es necesario crear C# el tipo. Lo más probable es que quiera colocarlo en un espacio de nombres; Dado que Objective-C no admite espacios de nombres, tendremos que usar el atributo `[Register]` para cambiar el nombre de tipo que Xamarin. iOS registrará con el tiempo de ejecución de Objective-C. El C# tipo también debe heredar de [Foundation. NSObject](xref:Foundation.NSObject):
 

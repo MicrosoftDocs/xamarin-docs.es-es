@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "66193785"
 ---
 
@@ -37,7 +37,7 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Después, pulse el [`Button`](xref:Xamarin.Forms.Button) que ha agregado a la [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Captura de pantalla de una hoja de acciones, en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios en la realización de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios en la realización de una tarea")
+    [![Captura de pantalla de una hoja de acción en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios a través de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios a través de una tarea")
 
     Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida** de Visual Studio.
 
@@ -71,7 +71,7 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Después, pulse el [`Button`](xref:Xamarin.Forms.Button) que ha agregado a la [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Captura de pantalla de una hoja de acciones, en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios en la realización de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios en la realización de una tarea")
+    [![Captura de pantalla de una hoja de acción en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios a través de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios a través de una tarea")
 
     Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida de la aplicación** de Visual Studio para Mac.
 

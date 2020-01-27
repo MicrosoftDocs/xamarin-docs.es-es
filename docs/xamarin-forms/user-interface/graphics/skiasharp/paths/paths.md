@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: eee338461593ad131f679d32cadf63fe3b1a4c40
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c892adf2f75ec00c4a9ee171ded78f79bb8227e9
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759346"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725199"
 ---
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar el objeto de SkiaSharp SKPath para la combinación de líneas y curvas conectadas_
 
 Una de las características más importantes de la ruta de acceso de gráficos es la capacidad para definir cuándo deben estar conectadas varias líneas y al no deben estar conectados. La diferencia puede ser significativa, como se muestra en la parte superior de estos dos triángulos:
 
-![](paths-images/connectedlinesexample.png "Dos triángulos que muestra la diferencia entre las líneas de conexión y sin conexión")
+![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
 
 Una ruta de acceso de gráficos está encapsulado por el [ `SKPath` ](xref:SkiaSharp.SKPath) objeto. Una ruta de acceso es una colección de uno o varios *contornos*. Cada contorno es una colección de *conectado* líneas rectas y curvas. Contornos no están conectados entre sí, pero pueden superponer visualmente. A veces un único perfil puede superponer.
 
@@ -53,7 +53,7 @@ El `R` significa *relativa*. Estos métodos tienen la misma sintaxis que los mé
 
 Un contorno termina con otra llamada a `MoveTo` o `RMoveTo`, que comienza un nuevo contorno o una llamada a `Close`, que cierra el contorno. El `Close` método automáticamente anexa una línea recta desde el punto actual hasta el primer punto del contorno y marca la ruta de acceso como cerrado, lo que significa que se representará sin los extremos de trazo.
 
-Se ilustra la diferencia entre los contornos abiertas y cerradas en el **dos perfiles de triángulo** página, que usa un `SKPath` objeto con dos perfiles para representar dos triángulos. El primer contorno está abierto y se cierra el segundo. Este es el [ `TwoTriangleContoursPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) clase:
+Se ilustra la diferencia entre los contornos abiertas y cerradas en el **dos perfiles de triángulo** página, que usa un `SKPath` objeto con dos perfiles para representar dos triángulos. El primer contorno está abierto y se cierra el segundo. Este es el [ `TwoTriangleContoursPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -101,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El primer contorno consta de una llamada a [ `MoveTo` ](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) utilizando las coordenadas X e Y en lugar de un `SKPoint` valor, seguido por tres llamadas a [ `LineTo` ](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para dibujar los tres lados de la triángulo. El segundo perfil tiene sólo dos llamadas a `LineTo` , pero finaliza el contorno con una llamada a [ `Close` ](xref:SkiaSharp.SKPath.Close), que cierra el contorno. La diferencia es importante:
 
-[![](paths-images/twotrianglecontours-small.png "Captura de pantalla de la página de dos perfiles de triángulo triple")](paths-images/twotrianglecontours-large.png#lightbox "Triple captura de pantalla de la página de dos perfiles de triángulo")
+[![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
 
 Como puede ver, el contorno de la primera es obviamente una serie de tres líneas conectadas, pero no se conecta con el principio final. Las dos líneas se superponen en la parte superior. El segundo contorno obviamente se cierra y se realizaba con uno menos `LineTo` llama porque el `Close` método agrega automáticamente una línea final para cerrar el contorno.
 
@@ -125,7 +125,7 @@ Como se define la apariencia del principio y al final de una línea por un extre
 - `Round` para una unión redondeada
 - `Bevel` para una combinación corten desactivado
 
-El **trazo combinaciones** página muestra estos tres combinaciones con código similar de trazar la **extremos de trazo** página. Se trata de la `PaintSurface` controlador de eventos en el [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) clase:
+El **trazo combinaciones** página muestra estos tres combinaciones con código similar de trazar la **extremos de trazo** página. Se trata de la `PaintSurface` controlador de eventos en el [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -189,9 +189,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-[![](paths-images/strokejoins-small.png "Triple captura de pantalla de la página de trazo une")](paths-images/strokejoins-large.png#lightbox "Triple captura de pantalla de la página se une a trazo")
+[![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
 
 La unión angular consta de un vértice agudo donde las líneas de conexión. Cuando se unen dos líneas en un ángulo pequeño, la unión angular puede ser bastante larga. Para evitar uniones excesivamente largos, la longitud de la unión angular está limitada por el valor de la [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) propiedad de `SKPaint`. Una unión angular que supera esta longitud se cortan para convertirse en una unión biselada.
 

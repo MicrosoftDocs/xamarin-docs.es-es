@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277452"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -35,7 +35,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
-    [![Captura de pantalla de un editor en iOS y Android](../images/create-editor.png "Editor que contiene el texto de marcador de posición")](../images/create-editor-large.png#lightbox "Editor que contiene el texto de marcador de posición")
+    [![Captura de pantalla de un editor en iOS y Android](../images/create-editor.png "Editor que contiene texto de marcador de posición")](../images/create-editor-large.png#lightbox "Editor que contiene texto de marcador de posición")
 
     > [!NOTE]
     > Mientras que Android indica el alto del objeto [`Editor`](xref:Xamarin.Forms.Editor), iOS no lo hace.
@@ -69,7 +69,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
-    [![Captura de pantalla de un editor en iOS y Android](../images/create-editor.png "Editor que contiene el texto de marcador de posición")](../images/create-editor-large.png#lightbox "Editor que contiene el texto de marcador de posición")
+    [![Captura de pantalla de un editor en iOS y Android](../images/create-editor.png "Editor que contiene texto de marcador de posición")](../images/create-editor-large.png#lightbox "Editor que contiene texto de marcador de posición")
 
     > [!NOTE]
     > Mientras que Android indica el alto del objeto [`Editor`](xref:Xamarin.Forms.Editor), iOS no lo hace.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/31/2019
-ms.openlocfilehash: 7b9bb93f75faba55d5ad79f60dc5697eada36cb5
-ms.sourcegitcommit: 55167ad9db910c5c0eb5a84c0923cb07acd2530e
+ms.openlocfilehash: a712486018079167b8e6756e183b1eb7cb096009
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607647"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725418"
 ---
 # <a name="xamarinios-samples"></a>Ejemplos de Xamarin. iOS
 
@@ -48,7 +48,7 @@ Marco de iOS 11 Vision y CoreML con un modelo formado con el servicio Custom Vis
     :::column:::
 [![contactos](images/contacts.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
-### <a name="contactshttpsdocsmicrosoftcomsamplesxamarinios-samplescontacts"></a>[Contactos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
+### <a name="contactshttpsdocsmicrosoftcomsamplesxamarinios-samplescontacts"></a>[Sus](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
 Cómo usar las propiedades y los controladores de visualización de ContactsUI.
     :::column-end:::
@@ -60,7 +60,7 @@ Cómo usar las propiedades y los controladores de visualización de ContactsUI.
 Conjunto de aplicaciones de controles disponibles en watchOS.
     :::column-end:::
     :::column:::
-[![catálogo de la interfaz de usuario de tvOS](images/tvosui.png)](https://docs.microsoft.com/xamarin/ios-samples/tvos-uicatalog/)
+[![catálogo de la interfaz de usuario de tvOS](images/tvosui.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 
 ### <a name="tvos-ui-cataloghttpsdocsmicrosoftcomsamplesxamarinios-samplestvos-uicatalog"></a>[Catálogo de la interfaz de usuario de tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 

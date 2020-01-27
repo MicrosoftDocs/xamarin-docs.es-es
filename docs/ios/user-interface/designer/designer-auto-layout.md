@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021807"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725476"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
@@ -20,7 +20,7 @@ El diseño automático (también denominado "diseño adaptable") es un enfoque d
 
 En esta guía se presentan las restricciones y cómo trabajar con ellas en Xamarin iOS Designer. En esta guía no se trata el trabajo con restricciones mediante programación. Para obtener información sobre el uso del diseño automático mediante programación, consulte la [documentación de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 El Xamarin Designer para iOS está disponible en Visual Studio para Mac en Visual Studio 2017 y versiones posteriores en Windows.
 
@@ -69,7 +69,7 @@ La ventana emergente del editor de restricciones nos permite agregar y actualiza
 
 Para editar restricciones en la vista seleccionada, haga clic en los puntos suspensivos para mostrar la elemento flotante: ![restricciones de edición de elemento flotante](designer-auto-layout-images/constraints-popup.png)
 
-Al abrir las restricciones elemento flotante, se muestran las restricciones predeterminadas en la vista. Podemos establecer todas las restricciones de espaciado seleccionando **todos los lados** del cuadro combinado en la esquina superior derecha y seleccionar **Borrar todo** para quitarlas. 
+Al abrir las restricciones elemento flotante, se muestran las restricciones predeterminadas en la vista. Podemos establecer todas las restricciones de espaciado seleccionando **todos los lados** del cuadro combinado en la esquina superior derecha y seleccionar **Borrar todo** para quitarlas.
 
 La **W** establecerá width y **H** establecerá la restricción de alto. Al comprobar la **relación de aspecto**, el alto y el ancho de las vistas se controlarán en tamaños de pantalla diferentes, el ancho de la vista se utiliza como numerador para la ración y el alto como denominador.
 
@@ -201,7 +201,7 @@ Dado el siguiente valor para la restricción en el diseñador de iOS:
 
 En lugar de actualizar de forma instantánea la vista adjunta en respuesta a los cambios de restricción, el motor de diseño automático programa un _paso de diseño diferido_ para un futuro próximo. Durante este paso aplazado, no solo se actualiza la restricción de la vista determinada, las restricciones de cada vista de la jerarquía se vuelven a calcular y actualizar para ajustarse al nuevo diseño.
 
-En cualquier momento, puede programar su propio paso de diseño aplazado mediante una llamada a los métodos `SetNeedsLayout` o `SetNeedsUpdateConstraints` de la vista primaria. 
+En cualquier momento, puede programar su propio paso de diseño aplazado mediante una llamada a los métodos `SetNeedsLayout` o `SetNeedsUpdateConstraints` de la vista primaria.
 
 El paso de diseño diferido consta de dos pasos únicos a través de la jerarquía de vistas:
 
@@ -234,4 +234,3 @@ En esta guía se ha introducido el diseño de iOS auto (o "adaptativo") y el con
 - [Tutorial de controles que se diseñan en iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Información general de Android Designer](~/android/user-interface/android-designer/index.md)
 - [Restricciones de programación](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Guía de diseño de Apple-auto](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

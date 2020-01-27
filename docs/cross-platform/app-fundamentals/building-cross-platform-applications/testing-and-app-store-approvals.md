@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016852"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723626"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
@@ -31,7 +31,7 @@ También debe probar en tantos dispositivos de hardware físicos diferentes como
 
 El teléfono móvil y el ecosistema de Tablet PC están creciendo todo el tiempo, lo que impide que se realicen pruebas en el número cada vez mayor de dispositivos disponibles. Para solucionar este problema, una serie de servicios ofrece la capacidad de controlar de forma remota muchos dispositivos diferentes para que las aplicaciones se puedan instalar y probar sin necesidad de invertir directamente en una gran cantidad de hardware.
 
-[App Center test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) ofrece una manera sencilla de probar aplicaciones iOS y Android en cientos de dispositivos diferentes.
+App Center test ofrece una manera sencilla de probar aplicaciones iOS y Android en cientos de dispositivos diferentes. Para más información, consulte [preparación de las aplicaciones de Xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) y preparación de las [aplicaciones de Xamarin. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### <a name="test-management"></a>Administración de pruebas
 

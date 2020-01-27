@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2017
-ms.openlocfilehash: 5d6b1b01cf9597a1d7ae9de762eff1514b494663
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ffa544789e0d605a241c8e038c790650a7fc6a3
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029119"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724981"
 ---
 # <a name="xamarinandroid-textureview"></a>TextureView de Xamarin. Android
 
@@ -30,16 +30,16 @@ public class TextureViewActivity : Activity,
 {
     Camera _camera;
     TextureView _textureView;
-       
+
     protected override void OnCreate (Bundle bundle)
     {
         base.OnCreate (bundle);
         _textureView = new TextureView (this);
         _textureView.SurfaceTextureListener = this;
-           
+
         SetContentView (_textureView);
     }
-       
+
     public void OnSurfaceTextureAvailable (
         Android.Graphics.SurfaceTexture surface,
         int width, int height)
@@ -56,7 +56,7 @@ public class TextureViewActivity : Activity,
         } catch (Java.IO.IOException ex) {
             Console.WriteLine (ex.Message);
         }
-           
+
         // this is the sort of thing TextureView enables
         _textureView.Rotation = 45.0f;
         _textureView.Alpha = 0.5f;
@@ -73,6 +73,4 @@ Para usar el `TextureView`, la aceleración de hardware debe estar habilitada, q
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TextureViewDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
-- [Presentación del bocadillo de helado](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)
+- [TextureViewDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)/)
