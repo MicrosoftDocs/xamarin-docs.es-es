@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 007c027772701e424aad5995c0ec025c3589171c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771786"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725096"
 ---
 # <a name="creating-the-platform-video-players"></a>Creación de reproductores de vídeo de plataforma
 
@@ -22,7 +22,7 @@ La solución [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/x
 
 ## <a name="the-video-player"></a>Reproductor de vídeo
 
-La clase [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) forma parte de la biblioteca de .NET Standard **VideoPlayerDemos** compartida entre las plataformas. Deriva de `View`:
+La clase [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/FormsVideoLibrary/VideoPlayer.cs) forma parte de la biblioteca de .NET Standard **VideoPlayerDemos** compartida entre las plataformas. Deriva de `View`:
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ Cada una de las plataformas contiene una clase denominada `VideoPlayerRenderer` 
 
 Hay varias clases involucradas en la implementación de un reproductor de vídeo en iOS. La aplicación primero crea un elemento [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController) y luego establece la propiedad [`Player`](xref:AVKit.AVPlayerViewController.Player*) en un objeto de tipo [`AVPlayer`](xref:AVFoundation.AVPlayer). Se necesitan otras clases cuando se asigna un origen de vídeo al reproductor.
 
-Como todos los representadores, el elemento [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) de iOS contiene un atributo `ExportRenderer` que identifica la vista `VideoPlayer` con el representador:
+Como todos los representadores, el elemento [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/FormsVideoLibrary/VideoPlayerRenderer.csVideoPlayerRenderer.cs) de iOS contiene un atributo `ExportRenderer` que identifica la vista `VideoPlayer` con el representador:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Por lo general, la propiedad `Control` de la clase de representador hace referen
 
 ### <a name="the-android-video-view"></a>Vista de vídeo de Android
 
-El representador de Android para `VideoPlayer` se basa en la clase [`VideoView`](xrtef:Android.Widget.VideoView) de Android. Pero, si se usa `VideoView` por sí solo para reproducir un vídeo en una aplicación de Xamarin.Forms, el vídeo llena el área asignada para `VideoPlayer` sin mantener la relación de aspecto correcta. Por este motivo (como verá en breve), `VideoView` se convierte en elemento secundario de un elemento `RelativeLayout` de Android. Una directiva `using` define `ARelativeLayout` para distinguirlo del elemento `RelativeLayout` de Xamarin.Forms, y ese es el segundo argumento genérico de `ViewRenderer`:
+El representador de Android para `VideoPlayer` se basa en la clase [`VideoView`](xref:Android.Widget.VideoView) de Android. Pero, si se usa `VideoView` por sí solo para reproducir un vídeo en una aplicación de Xamarin.Forms, el vídeo llena el área asignada para `VideoPlayer` sin mantener la relación de aspecto correcta. Por este motivo (como verá en breve), `VideoView` se convierte en elemento secundario de un elemento `RelativeLayout` de Android. Una directiva `using` define `ARelativeLayout` para distinguirlo del elemento `RelativeLayout` de Xamarin.Forms, y ese es el segundo argumento genérico de `ViewRenderer`:
 
 ```csharp
 using System;

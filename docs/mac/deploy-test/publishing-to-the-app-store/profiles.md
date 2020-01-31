@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489393"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725524"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfiles de aprovisionamiento para aplicaciones Xamarin.Mac
 
@@ -29,31 +29,31 @@ Un perfil de aprovisionamiento de desarrollo permite que una aplicación destina
 
 Haga lo siguiente:
 
-1. Seleccione el tipo de perfil de aprovisionamiento que se va a crear y haga clic en el botón **Continuar**: 
+1. Seleccione el tipo de perfil de aprovisionamiento que se va a crear y haga clic en el botón **Continuar**:
 
     [![](profiles-images/certif14.png "Selecting the profile type")](profiles-images/certif14.png#lightbox)
-2. Seleccione el identificador de la aplicación para la que se va a crear el perfil y haga clic en el botón **Continuar**: 
+2. Seleccione el identificador de la aplicación para la que se va a crear el perfil y haga clic en el botón **Continuar**:
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Seleccione el identificador de desarrollador usado para firmar el perfil y haga clic en **Continuar**: 
+3. Seleccione el identificador de desarrollador usado para firmar el perfil y haga clic en **Continuar**:
 
     [![](profiles-images/certif16.png "Selecting the developer ID")](profiles-images/certif16.png#lightbox)
-4. Seleccione los equipos en los que se puede usar este perfil y haga clic en **Continuar**: 
+4. Seleccione los equipos en los que se puede usar este perfil y haga clic en **Continuar**:
 
     [![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png#lightbox)
-5. Ahora, especifique un **nombre de perfil** y haga clic en el botón **Generar**: 
+5. Ahora, especifique un **nombre de perfil** y haga clic en el botón **Generar**:
 
     [![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png#lightbox)
-6. Haga clic en el botón **Descargar** para descargar el nuevo perfil: 
+6. Haga clic en el botón **Descargar** para descargar el nuevo perfil:
 
     [![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png#lightbox)
-7. Los perfiles de aprovisionamiento de desarrollo se instalan en el panel de preferencias de perfiles de la aplicación **Preferencias del sistema** de Mac: 
+7. Los perfiles de aprovisionamiento de desarrollo se instalan en el panel de preferencias de perfiles de la aplicación **Preferencias del sistema** de Mac:
 
     [![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png#lightbox)
-8. En el panel de preferencias de perfiles se mostrarán todos los perfiles instalados: 
+8. En el panel de preferencias de perfiles se mostrarán todos los perfiles instalados:
 
     [![](profiles-images/image47.png "Showing all installed profiles")](profiles-images/image47.png#lightbox)
-9. El perfil también aparecerá en la **utilidad de certificados de desarrollador** en caso de que tenga que volver a descargarse: 
+9. El perfil también aparecerá en la **utilidad de certificados de desarrollador** en caso de que tenga que volver a descargarse:
 
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
@@ -65,25 +65,25 @@ Los perfiles de aprovisionamiento de producción son necesarios para compilar un
 
 Haga lo siguiente:
 
-1. Seleccione el tipo de perfil que se va a crear y haga clic en el botón **Continuar**: 
+1. Seleccione el tipo de perfil que se va a crear y haga clic en el botón **Continuar**:
 
     [![](profiles-images/certif21.png "Selecting the type of profile")](profiles-images/certif21.png#lightbox)
-2. Seleccione el identificador de la aplicación para la que se va a crear el perfil y haga clic en el botón **Continuar**: 
+2. Seleccione el identificador de la aplicación para la que se va a crear el perfil y haga clic en el botón **Continuar**:
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Seleccione el identificador de empresa para firmar el perfil y haga clic en el botón **Continuar**: 
+3. Seleccione el identificador de empresa para firmar el perfil y haga clic en el botón **Continuar**:
 
     [![](profiles-images/certif23.png "Selecting the company ID")](profiles-images/certif23.png#lightbox)
-4. Especifique un **nombre de perfil** y haga clic en el botón **Generar**: 
+4. Especifique un **nombre de perfil** y haga clic en el botón **Generar**:
 
     [![](profiles-images/certif24.png "Generating the profile")](profiles-images/certif24.png#lightbox)
-5. Haga clic en **Descargar** para obtener el archivo del perfil de aprovisionamiento (extensión `.provisionprofile`): 
+5. Haga clic en **Descargar** para obtener el archivo del perfil de aprovisionamiento (extensión `.provisionprofile`):
 
     [![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png#lightbox)
-6. Arrástrelo al **organizador de Xcode** o haga doble clic en él para instalarlo. El perfil aparecerá en el organizador de Xcode: 
+6. Arrástrelo al **organizador de Xcode** o haga doble clic en él para instalarlo. El perfil aparecerá en el organizador de Xcode:
 
     [![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png#lightbox)
-7. El perfil de aprovisionamiento también aparecerá en la lista: 
+7. El perfil de aprovisionamiento también aparecerá en la lista:
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
@@ -95,4 +95,4 @@ Si el desarrollador cambia en algún momento las características que un identif
 - [Ejemplo de Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guía de herramientas: firma de código de la aplicación](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)
+- [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/)

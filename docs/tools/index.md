@@ -47,7 +47,7 @@ Identifique y solucione problemas de rendimiento.
 Conozca la plataforma Xamarin y C# interactivamente.
     :::column-end:::
     :::column:::
-[Incrustación ![.NET](~/media/index/xamarin-cross-platform-dotnet-embedding.svg)](~/tools/dotnet-embedding/index.md)
+[![Incrustación .NET](~/media/index/xamarin-cross-platform-dotnet-embedding.svg)](~/tools/dotnet-embedding/index.md)
 
 ### <a name="net-embeddingtoolsdotnet-embeddingindexmd"></a>[Inserción de .NET](~/tools/dotnet-embedding/index.md)
 

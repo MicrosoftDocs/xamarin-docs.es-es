@@ -140,6 +140,11 @@
       items:
         - name: Información general
           href: user-interface/index.md
+        - name: Guiones gráficos
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Guiones gráficos unificados
+              href: user-interface/storyboards/unified-storyboards.md
         - name: Diseñador de iOS
           href: user-interface/designer/index.md
           items:
@@ -151,11 +156,6 @@
               href: user-interface/designer/ios-designable-controls-walkthrough.md
             - name: Diseño automático con iOS Designer
               href: user-interface/designer/designer-auto-layout.md
-        - name: Guiones gráficos
-          href: user-interface/storyboards/index.md
-          items:
-            - name: Guiones gráficos unificados
-              href: user-interface/storyboards/unified-storyboards.md
         - name: Interfaces de usuario en iOS
           href: user-interface/ios-ui/index.md
           items:

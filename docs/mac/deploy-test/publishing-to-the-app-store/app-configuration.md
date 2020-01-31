@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 7db7edd4d8143f4e456f59b97de51e3c1d202dc0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f008ac42bfffeda2a47ca30aa2991d91f990732f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489406"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725043"
 ---
 # <a name="mac-app-configuration"></a>Configuración de aplicaciones de Mac
 
@@ -53,4 +53,4 @@ La sección **Compilación de Mac** del cuadro de diálogo **Opciones de proyect
 - [Instalación](/visualstudio/mac/installation/)
 - [Ejemplo de Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)
+- [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/)

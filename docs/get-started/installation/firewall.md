@@ -1,25 +1,25 @@
 ---
 title: Instrucciones de configuración del firewall para Xamarin
-description: En este documento se proporciona una lista de los hosts que deben permitirse en el firewall para permitir que Xamarin funcione en un entorno corporativo.
+description: En este documento se proporciona una lista de hosts que se deben permitir en la lista blanca del firewall para que Xamarin funcione en un entorno corporativo.
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2019
 ms.openlocfilehash: 2b52dfd55194ec076f28f8c33e758a39d14f5943
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
-ms.translationtype: MT
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "70291330"
 ---
-# <a name="xamarin-firewall-configuration-instructions"></a>Instrucciones de configuración del firewall de Xamarin
+# <a name="xamarin-firewall-configuration-instructions"></a>Instrucciones de configuración de firewall para Xamarin
 
-_Una lista de los hosts que debe permitir en el firewall para permitir que la plataforma de Xamarin funcione para su empresa._
+_Lista de los hosts que se deben permitir en el firewall para que la plataforma de Xamarin funcione en la empresa._
 
-Para que los productos de Xamarin se instalen y funcionen correctamente, determinados puntos de conexión deben ser accesibles para descargar las herramientas y las actualizaciones necesarias para el software. Si usted o la empresa tienen una configuración de firewall estricta, puede experimentar problemas con la instalación, las licencias, los componentes, etc. En este documento se describen algunos de los puntos de conexión conocidos que deben permitirse en el firewall para que Xamarin funcione. No se incluyen los puntos de conexión necesarios para las herramientas de otros fabricantes incluidas en la descarga. Si después de repasar esta lista sigue teniendo problemas, consulte las guías de solución de problemas de instalación de Apple o Android.
+Para que los productos de Xamarin se instalen y funcionen correctamente, determinados puntos de conexión deben ser accesibles para descargar las herramientas y las actualizaciones necesarias para el software. Si usted o la empresa tienen una configuración de firewall estricta, puede experimentar problemas con la instalación, las licencias, los componentes, etc. En este documento se indican algunos de los puntos de conexión conocidos que se deben permitir en el firewall para que Xamarin funcione. No se incluyen los puntos de conexión necesarios para las herramientas de otros fabricantes incluidas en la descarga. Si después de repasar esta lista sigue teniendo problemas, consulte las guías de solución de problemas de instalación de Apple o Android.
 
-## <a name="endpoints-to-allow"></a>Extremos que se permiten
+## <a name="endpoints-to-allow"></a>Puntos de conexión permitidos
 
 ### <a name="xamarin-installer"></a>Instalador de Xamarin
 
@@ -39,7 +39,7 @@ Si está usando un equipo Mac y tiene problemas de instalación de Xamarin.Andro
 
 Para obtener acceso a NuGet (Xamarin.Forms está empaquetado como NuGet), tiene que agregar las siguientes direcciones:
 
-- [www.nuget.org](www.nuget.org) (para acceder a NuGet)
+- www.nuget.org (para acceder a NuGet)
 - globalcdn.nuget.org (descargas de NuGet)
 - dl-ssl.google.com (componentes de Google para Android y Xamarin.Forms)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: e86d69bb9dc751f70d03a556f65c11efd0b34d10
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 52b227b0244a83ec4a7466cca7591c6b712f1c76
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725591"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794666"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos locales de Xamarin.Forms
 
@@ -175,7 +175,7 @@ Para obtener más información, vea [patrón asincrónico basado en tareas (TAP)
 La clase `TodoItemDatabase` incluye métodos para los cuatro tipos de manipulación de datos: crear, leer, editar y eliminar. La biblioteca SQLite.NET proporciona un mapa relacional de objetos simple (ORM) que permite almacenar y recuperar objetos sin escribir instrucciones SQL.
 
 ```csharp
-public static class TodoItemDatabase {
+public class TodoItemDatabase {
 
     // ...
 

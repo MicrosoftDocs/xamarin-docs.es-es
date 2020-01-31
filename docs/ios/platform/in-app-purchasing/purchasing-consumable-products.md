@@ -327,6 +327,6 @@ La aplicación tiene este aspecto cuando la característica **de compras desde l
 
 La información del producto puede seguir siendo solicitada cuando `CanMakePayments` es false, por lo que la aplicación todavía puede recuperar y mostrar los precios. Esto significa que si quitamos la `CanMakePayments` comprobación del código, los botones de compra seguirán estando activos, sin embargo, cuando se intenta realizar una compra, el usuario verá un mensaje que indica que **no se permiten compras desde la aplicación** (generado por StoreKit cuando se tiene acceso a la cola de pago):   
 
- [no se permiten ![compras desde la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+ [![no se permiten compras desde la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
 
 Las aplicaciones del mundo real pueden adoptar un enfoque diferente para controlar la restricción, como ocultar los botones por completo y, quizás, ofrecer un mensaje más detallado que la alerta que StoreKit muestra automáticamente.

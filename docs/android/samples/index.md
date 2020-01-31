@@ -22,7 +22,7 @@ Estas aplicaciones de ejemplo y demostraciones de código de Xamarin Android pue
 
 :::row:::
     :::column:::
-[Diseño de ![material](images/material-design.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
+[![Diseño de material](images/material-design.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
 
 ### <a name="material-designhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesandroid50-googleio2014master"></a>[Diseño de materiales](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
 
@@ -46,7 +46,7 @@ En este ejemplo se muestra cómo usar ViewPager y PagerTabStrip conjuntamente pa
 
 :::row:::
     :::column:::
-[Fragmentos de ![](images/fragments.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
+[![Fragmentos de](images/fragments.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
 ### <a name="fragmentshttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesfragmentswalkthrough"></a>[Fragmentos](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
@@ -70,7 +70,7 @@ Use este ejemplo para aprender a usar los nuevos widgets CardView y RecyclerView
 
 :::row:::
     :::column:::
-[Barra de herramientas ![](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
+[![Barra de herramientas](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 ### <a name="toolbarhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesandroid50-toolbar"></a>[Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 

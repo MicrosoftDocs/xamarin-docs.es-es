@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
-ms.openlocfilehash: 2ea3516c1fb89c8c9b9cc3694d7c95ccd87e9d41
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 2b2bfe9925a99c2ba7f1366ea28d5c72e2e1da88
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489702"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725546"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores en Xamarin.Mac
 
@@ -150,7 +150,7 @@ Como se ha mencionado anteriormente, el certificado de desarrollador no siempre 
 
 Para publicar una aplicación en App Store, necesitará dos certificados:
 
-- el certificado de **distribución de aplicaciones de Mac**, que se usará para firmar la aplicación; y 
+- el certificado de **distribución de aplicaciones de Mac**, que se usará para firmar la aplicación; y
 - el certificado de **distribución de instaladores de Mac**, para firmar el instalador.
 
 > [!TIP]
@@ -183,7 +183,7 @@ En primer lugar, cree el certificado del instalador:
 
 Para publicar automáticamente una aplicación de Xamarin.Mac (no se publica a través de App Store de Apple), necesitará dos certificados:
 
-- el certificado de **instalador del identificador de desarrollador**, que se usará para firmar la aplicación; y 
+- el certificado de **instalador del identificador de desarrollador**, que se usará para firmar la aplicación; y
 - el certificador de **aplicación del identificador de desarrollador**, para firmar el instalador.
 
 > [!TIP]
@@ -198,4 +198,4 @@ Una vez que haya creado, descargado e instalado certificados, estarán visibles 
 - [Instalación](/visualstudio/mac/installation/)
 - [Ejemplo de Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)
+- [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/)

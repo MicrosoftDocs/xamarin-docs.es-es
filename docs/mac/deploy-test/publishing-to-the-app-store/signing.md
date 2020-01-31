@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: de858049ef899134d61596cabfcf81fca973e8b0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489354"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725467"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 
 Si el desarrollador tiene previsto distribuir una aplicación directamente a los usuarios de macOS, Apple recomienda que firme el código con su identificador de desarrollador para que se pueda instalarse en sistemas macOS con el **equipo selector** habilitado. Si la aplicación no se ha firmado, el **equipo selector** impedirá con un mensaje de alerta que los usuarios realicen la instalación (es posible omitir esta restricción si se mantiene presionada la tecla Control durante el inicio).
 
-Obtenga más información sobre [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/) y [Distribuir fuera del Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) en el sitio web de Apple.
+Obtenga más información sobre [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/) y [Distribuir fuera del Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) en el sitio web de Apple.
 
 ## <a name="code-signing-options"></a>Opciones de firma de código
 
@@ -48,4 +48,4 @@ Una vez que se ha compilado la aplicación, el desarrollador puede hacer clic co
 - [Ejemplo de Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guía de herramientas: firma de código de la aplicación](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)
+- [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/)

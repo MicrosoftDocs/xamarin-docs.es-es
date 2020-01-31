@@ -22,7 +22,7 @@ La clase de [`ContentView`](xref:Xamarin.Forms.ContentView) de Xamarin. Forms es
 
 En la captura de pantalla siguiente se muestra un control de `CardView` que deriva de la clase `ContentView`:
 
-[captura de pantalla de la aplicación de ejemplo de ![CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[![captura de pantalla de la aplicación de ejemplo de CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
 La clase `ContentView` define una propiedad única:
 
@@ -202,7 +202,7 @@ El enlace de datos en un `ControlTemplate` utiliza la extensión de marcado `Tem
 
 En las siguientes capturas de pantallas se muestra una instancia de `CardView` estándar y `CardView` de los que se ha invalidado `ControlTemplate`:
 
-[captura de pantalla de ![CardView ControlTemplate](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[![captura de pantalla de CardView ControlTemplate](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
 Para obtener más información sobre las plantillas de control, consulte [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

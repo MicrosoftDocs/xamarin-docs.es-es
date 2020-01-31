@@ -24,7 +24,7 @@ Aplicaciones de ejemplo multiplataforma de Xamarin y demostraciones de código q
 
 :::row:::
     :::column:::
-[ejemplo de ![todo](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+[![ejemplo de todo](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
 ### <a name="todohttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplestodo"></a>[Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 

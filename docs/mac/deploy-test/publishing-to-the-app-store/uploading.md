@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 5569e10c059dec26137aadb814101992ed7e9f7e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489378"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725056"
 ---
 # <a name="upload-to-mac-app-store"></a>Cargar en Mac App Store
 
@@ -20,53 +20,53 @@ _En esta guía se describe el proceso de carga de una aplicación Xamarin.Mac pa
 
 Las aplicaciones se envían para la aprobación de Mac App Store a través de [iTunes Connect](https://itunesconnect.apple.com/). También necesitará la herramienta [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) de App Store.
 
-1. Elija crear una **aplicación macOS**: 
+1. Elija crear una **aplicación macOS**:
 
     [![](uploading-images/image65.png "iTunes Connect")](uploading-images/image65.png#lightbox)
 
-2. Escriba el nombre de la aplicación y otros detalles. El desarrollador solo puede elegir un **id. de paquete** que se haya creado previamente: 
+2. Escriba el nombre de la aplicación y otros detalles. El desarrollador solo puede elegir un **id. de paquete** que se haya creado previamente:
 
     [![](uploading-images/image66.png "Selecting the bundle ID")](uploading-images/image66.png#lightbox)
 
-3. Seleccione la fecha de disponibilidad y el precio. Independientemente de la fecha de disponibilidad que seleccione el desarrollador, la aplicación solo estará disponible para la venta después de que se haya aprobado. Este valor se puede establecer en un futuro más lejano si el desarrollador quiere tener más control sobre la fecha de disponibilidad real: 
+3. Seleccione la fecha de disponibilidad y el precio. Independientemente de la fecha de disponibilidad que seleccione el desarrollador, la aplicación solo estará disponible para la venta después de que se haya aprobado. Este valor se puede establecer en un futuro más lejano si el desarrollador quiere tener más control sobre la fecha de disponibilidad real:
 
     [![](uploading-images/image67.png "Setting the available date and price")](uploading-images/image67.png#lightbox)
 
-4. Especifique la información de la aplicación, incluida la categoría de App Store a la que pertenece: 
+4. Especifique la información de la aplicación, incluida la categoría de App Store a la que pertenece:
 
-    [![](uploading-images/image68.png "Entering the app information")](uploading-images/image68.png#lightbox) 
+    [![](uploading-images/image68.png "Entering the app information")](uploading-images/image68.png#lightbox)
 
-    Seleccione las clasificaciones aplicables: 
+    Seleccione las clasificaciones aplicables:
 
-    [![](uploading-images/image69.png "Setting the app ratings")](uploading-images/image69.png#lightbox) 
+    [![](uploading-images/image69.png "Setting the app ratings")](uploading-images/image69.png#lightbox)
 
-    Descripción, palabras clave y direcciones URL de contacto: 
+    Descripción, palabras clave y direcciones URL de contacto:
 
-    [![](uploading-images/image70.png "Editing the Description, keywords and contact URLs")](uploading-images/image70.png#lightbox) 
+    [![](uploading-images/image70.png "Editing the Description, keywords and contact URLs")](uploading-images/image70.png#lightbox)
 
-    Información de contacto y consejos para los revisores de App Store: 
+    Información de contacto y consejos para los revisores de App Store:
 
-    [![](uploading-images/image71.png "Editing the contact information and advice for the App Store reviewers")](uploading-images/image71.png#lightbox) 
+    [![](uploading-images/image71.png "Editing the contact information and advice for the App Store reviewers")](uploading-images/image71.png#lightbox)
 
-    Por último, capturas de pantalla: 
+    Por último, capturas de pantalla:
 
-    [![](uploading-images/image72.png "Adding the required screenshots")](uploading-images/image72.png#lightbox) 
+    [![](uploading-images/image72.png "Adding the required screenshots")](uploading-images/image72.png#lightbox)
 
     Las capturas de pantalla deben estar en formato JPG, TIF o PNG, con un tamaño en píxeles de 1280 x 800, 1440 x 900, 2880 x 1800 o 2560 x 1600. Pulse **Guardar** para finalizar.
 
-5. Se mostrará la información de la aplicación para que la revise. Haga clic en **Ver detalles** para cambiar el estado: 
+5. Se mostrará la información de la aplicación para que la revise. Haga clic en **Ver detalles** para cambiar el estado:
 
     [![](uploading-images/image73.png "Viewing the app details")](uploading-images/image73.png#lightbox)
 
-6. En la vista de detalles, haga clic en Ready to Upload Binary (Listo para cargar binario) para enviar el archivo de paquete de aplicación: 
+6. En la vista de detalles, haga clic en Ready to Upload Binary (Listo para cargar binario) para enviar el archivo de paquete de aplicación:
 
     [![](uploading-images/image74.png "Selecting Ready to Upload Binary")](uploading-images/image74.png#lightbox)
 
-7. Responda a la pregunta de criptografía: 
+7. Responda a la pregunta de criptografía:
 
     [![](uploading-images/image75.png "Answering the cryptography question")](uploading-images/image75.png#lightbox)
 
-8. El sitio le indicará cuándo está listo para aceptar el archivo de paquete de aplicación: 
+8. El sitio le indicará cuándo está listo para aceptar el archivo de paquete de aplicación:
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
@@ -88,4 +88,4 @@ Cuando la aplicación se apruebe, estará disponible para su descarga o compra e
 - [Ejemplo de Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuir las aplicaciones en Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guía de herramientas: firma de código de la aplicación](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Identificador del desarrollador y equipo selector](https://developer.apple.com/resources/developer-id/)
+- [Identificador del desarrollador y equipo selector](https://developer.apple.com/developer-id/)

@@ -36,7 +36,7 @@ En este ejemplo se muestra una aplicación de la lista de tareas pendientes dond
 Se trata de un juego familiar con un nuevo toque. Diez errores están ocultos en una cuadrícula de 9 x 9 iconos. Para ganar, debe buscar y marcar los diez errores.
     :::column-end:::
     :::column:::
-[Calculadora de ![RPN](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
+[![Calculadora de RPN](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 
 ### <a name="rpn-calculatorhttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesrpncalculator"></a>[Calculadora de RPN](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 
@@ -53,7 +53,7 @@ Una calculadora RPN (notación polaca inversa) permite que se introduzcan operac
 El programa simula un disco giratorio que se puede pintar al tocar y mover los dedos. SpinPaint responde al tacto cuando se pinta una línea con dedo, pero también duplica esa línea en tres imágenes espejo en los otros tres cuadrantes del disco.
     :::column-end:::
     :::column:::
-[Ejemplos de ![XAML](images/xaml.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
+[![Ejemplos de XAML](images/xaml.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 
 ### <a name="xaml-sampleshttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesxamlsamples"></a>[Ejemplos de XAML](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 

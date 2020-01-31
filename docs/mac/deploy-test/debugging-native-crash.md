@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021670"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725498"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
 
 ## <a name="overview"></a>Información general
 
-A veces, los errores de programación pueden provocar bloqueos en el entorno de ejecución Objective-C. A diferencia de las excepciones de C#, estos no señalan una línea específica del código para poder buscarlo y corregirlo. A veces, pueden resultar muy fáciles de encontrar y corregir, pero otras, pueden ser muy difíciles de rastrear. 
+A veces, los errores de programación pueden provocar bloqueos en el entorno de ejecución Objective-C. A diferencia de las excepciones de C#, estos no señalan una línea específica del código para poder buscarlo y corregirlo. A veces, pueden resultar muy fáciles de encontrar y corregir, pero otras, pueden ser muy difíciles de rastrear.
 
 Vamos a repasar algunos ejemplos de bloqueos nativos reales.
 
@@ -163,40 +163,40 @@ Esta guía lo ayudará a rastrear los errores de este tipo, si se producen, e in
 
 ### <a name="locating"></a>Búsqueda
 
-En casi todos los casos con errores de este tipo, el síntoma principal son los bloqueos nativos, normalmente con algo similar a `mono_sigsegv_signal_handler`, o bien `_sigtrap` en los marcos superiores de la pila. Cocoa tratará de volver la llamada en su código de C#, con lo que se ejecutará un objeto recopilado durante la recolección de elementos no utilizados y se producirá el bloqueo. Sin embargo, no todos los bloqueos con estos símbolos se deben a un problema de enlace así; tendrá que realizar más investigaciones para confirmar que este es el problema. 
+En casi todos los casos con errores de este tipo, el síntoma principal son los bloqueos nativos, normalmente con algo similar a `mono_sigsegv_signal_handler`, o bien `_sigtrap` en los marcos superiores de la pila. Cocoa tratará de volver la llamada en su código de C#, con lo que se ejecutará un objeto recopilado durante la recolección de elementos no utilizados y se producirá el bloqueo. Sin embargo, no todos los bloqueos con estos símbolos se deben a un problema de enlace así; tendrá que realizar más investigaciones para confirmar que este es el problema.
 
 Lo que hace que estos errores sean difíciles de rastrear es que solo se producen **después** de que una recolección de elementos no utilizados haya eliminado el objeto en cuestión. Si cree que tiene uno de estos errores, agregue el código siguiente en alguna parte de la secuencia de inicio:
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 Se forzará la aplicación para que ejecute cada segundo el recolector de elementos no utilizados. Vuelva a ejecutar la aplicación y trate de reproducir el error. Si el bloqueo se produce inmediatamente, o de forma coherente en lugar de aleatoria, va por buen camino.
 
 ### <a name="reporting"></a>Informes
 
-El siguiente paso es notificar el problema a Xamarin, para que pueda corregir el enlace en las versiones futuras. Si es el propietario de una licencia empresarial, cree un vale de soporte técnico en 
+El siguiente paso es notificar el problema a Xamarin, para que pueda corregir el enlace en las versiones futuras. Si es el propietario de una licencia empresarial, cree un vale de soporte técnico en
 
 [visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 En caso contrario, investigue en las siguientes fuentes si ya existe el problema:
 
-- Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/mac).
+- Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac).
 - Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues).
 - Antes de la migración a GitHub, los problemas de Xamarin se recopilaban en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Busque allí para ver si están los mismos problemas.
 - Si no encuentra un problema, registre uno nuevo en el [repositorio de problemas de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos. 
+Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos.
 
 De la siguiente información, incluya toda la que pueda:
 
-- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**. 
+- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**.
 - El seguimiento de la pila completo del bloqueo.
 - El código de C# del bloqueo.   
 
@@ -250,4 +250,4 @@ Nunca debe permitir que una excepción de C# "escape" código administrado al m�
 
 Sin hacer demasiado énfasis en los motivos técnicos, configurar la infraestructura para detectar excepciones administradas en todos los límites administrados o nativos es costoso y hay _muchas_ transiciones que se producen en numerosas operaciones comunes. Muchas operaciones, en concreto las que implican el subproceso de interfaz de usuario, deben finalizar rápidamente; si no, la aplicación sufrirá interrupciones y tendrá características de rendimiento inaceptables. Muchas de esas devoluciones de llamada realizan operaciones muy sencillas que, rara vez, tienen posibilidad de ejecutarse, por lo que, en esos casos, esta sobrecarga sería costosa e innecesaria.
 
-Por lo tanto, no configuraremos estos bloques Try Catch en la guía. En los casos en que el código no realice operaciones sencillas (es decir, devolver valores booleanos o matemática básica), puede tratar de configurar un bloque Try Catch usted mismo. 
+Por lo tanto, no configuraremos estos bloques Try Catch en la guía. En los casos en que el código no realice operaciones sencillas (es decir, devolver valores booleanos o matemática básica), puede tratar de configurar un bloque Try Catch usted mismo.

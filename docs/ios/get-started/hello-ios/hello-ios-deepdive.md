@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 0fa6c05b3aa90f1d1875b9169350b197d882d863
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023264"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724777"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -439,16 +439,13 @@ No todos tienen a su disposición un diseñador para crear los iconos e imágene
 
 ::: zone pivot="macos"
 
-- [**Sketch**](https://www.sketchapp.com"): Sketch es una aplicación de Mac para diseñar interfaces de usuario, iconos y mucho más. Es la aplicación que se usó para diseñar el conjunto de iconos de aplicación e imágenes de inicio de Xamarin. Sketch 3 está disponible en la App Store. También puede probar la versión gratuita [Sketch Tool](https://bohemiancoding.com/sketch/tool/).
 - [**Pixelmator**](https://www.pixelmator.com/): aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 USD.
-- [**Glyphish**](https://www.glyphish.com/): conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
 - [**Fiverr**](https://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 ::: zone pivot="windows"
 
 - Visual Studio: puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
-- [**Glyphish**](https://www.glyphish.com/): conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
 - [**Fiverr**](https://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 USD. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
