@@ -133,7 +133,7 @@ Una vez creado el proyecto de API de **Google Developer Console** , es necesario
 
 1. En la página **mapas SDK para Android** que se muestra (después de hacer clic en **Habilitar** en el paso anterior), vaya a la pestaña **credenciales** y haga clic en el botón **crear credenciales** :
 
-   [mensaje de credenciales del SDK de mapas de ![para Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![mensaje de credenciales del SDK de mapas de para Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Haga clic en **clave de API**:
 

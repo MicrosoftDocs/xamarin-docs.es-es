@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016394"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724839"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo de vida de desarrollo de software móvil
 
@@ -80,7 +80,7 @@ Al crear prototipos de experiencia del usuario, es importante tener en cuenta la
 1. **Android**: [Instrucciones de diseño](https://developer.android.com/design/index.html)
 1. **UWP**: [Conceptos básicos de diseño UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
-Por ejemplo, cada aplicación tiene una metáfora para cambiar de sección en una aplicación. iOS usa una barra de pestañas en la parte inferior de la pantalla, mientras que Android la usa en la superior. Por otro lado, UWP usa la vista [dinámica o de pestañas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
+Por ejemplo, cada aplicación tiene una metáfora para cambiar de sección en una aplicación. iOS usa una barra de pestañas en la parte inferior de la pantalla, mientras que Android la usa en la superior. Por otro lado, UWP usa la vista [dinámica o de pestañas](/windows/uwp/design/controls-and-patterns/pivot).
 
 Además, el propio hardware también impone decisiones de la experiencia del usuario. Por ejemplo, los dispositivos iOS no tienen ningún botón *Atrás* físico y, por tanto, presentan la metáfora de controlador de navegación:
 
