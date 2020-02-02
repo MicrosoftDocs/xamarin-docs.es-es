@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: 47fd6d34a1ef286fa8e1a307ea6033c9c6a9feea
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 693dd29e59aee73a206398a8a44cc4f15e385d8d
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955753"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940284"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensiones de marcado XAML
 
@@ -60,7 +60,7 @@ El **x: Static demostración** página muestra varias maneras de usar el `x:Stat
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:local="clr-namespace:MarkupExtensions"
              x:Class="MarkupExtensions.StaticDemoPage"
              Title="x:Static Demo">
@@ -115,7 +115,7 @@ Se trata de la forma más común de la `x:Static` extensión de marcado.
 El **demostración estático** página contiene dos ejemplos de otros. La etiqueta a la raíz del archivo XAML contiene una declaración de espacio de nombres XML para .NET `System` espacio de nombres:
 
 ```xaml
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 Esto permite la `Label` tamaño de fuente debe establecerse en el campo estático `Math.PI`. Esto da como resultado texto pequeño en su lugar, por lo que la `Scale` propiedad está establecida en `Math.E`:

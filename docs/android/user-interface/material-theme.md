@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e83e34dab407c5be84fc5b4c3c0c445d56907e3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028758"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940837"
 ---
 # <a name="material-theme"></a>Tema de materiales
 
@@ -36,7 +36,7 @@ Puede usar un solo tema para una aplicación completa o puede usar distintos tem
 
 Dado que el tema material solo se admite en Android 5,0 y versiones posteriores, no se puede usar (o un tema personalizado derivado del tema material) para que la aplicación se ejecute en versiones anteriores de Android. Sin embargo, puede configurar la aplicación para que use el tema material en dispositivos Android 5,0 y revertir correctamente a un tema anterior cuando se ejecute en versiones anteriores de Android (consulte la sección de [compatibilidad](#compatibility) de este artículo para obtener más información).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Lo siguiente es necesario para usar las nuevas características de tema de material de Android 5,0 en aplicaciones basadas en Xamarin:
 
@@ -44,7 +44,7 @@ Lo siguiente es necesario para usar las nuevas características de tema de mater
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
 
-- Se puede usar **Java jdk 1,8** &ndash; JDK 1,7 si es específicamente destino de nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- Se puede usar **Java jdk 1,8** &ndash; JDK 1,7 Si tiene como destino específicamente el nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Para obtener información sobre cómo configurar un proyecto de aplicación de Android 5,0, consulte [configuración de un proyecto de android 5,0](~/android/platform/lollipop.md).
 

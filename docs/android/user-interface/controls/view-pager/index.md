@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 600a94a0ee9eb5bcf06dc19d95cf9e77132a2e81
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029062"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940857"
 ---
 # <a name="viewpager"></a>ViewPager
 
 _ViewPager es un administrador de diseño que le permite implementar la navegación de gestural. La navegación Gestural permite al usuario desplazarse a la izquierda y a la derecha para recorrer las páginas de datos. En esta guía se explica cómo implementar la navegación gestural con ViewPager, con y sin fragmentos. También se describe cómo agregar indicadores de página mediante PagerTitleStrip y PagerTabStrip._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Un escenario común en el desarrollo de aplicaciones es la necesidad de proporcionar a los usuarios la navegación gestural entre las vistas del mismo nivel. En este enfoque, el usuario se desliza hacia la izquierda o la derecha para tener acceso a las páginas de contenido (por ejemplo, en un asistente para la instalación o en una presentación). Puede crear estas vistas deslizantes mediante el widget `ViewPager`, disponible en la [biblioteca de compatibilidad de Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). El `ViewPager` es un widget de diseño compuesto por varias vistas secundarias donde cada vista secundaria constituye una página en el diseño: 
 
@@ -35,7 +35,7 @@ En esta guía se muestran ambos enfoques:
 
 - En [Viewpager con fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), se desarrolla una aplicación de [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) ligeramente más compleja para mostrar cómo usar `ViewPager` con `Fragment`s para compilar una aplicación que presenta problemas matemáticos como tarjetas flash y responde a los datos proporcionados por el usuario. 
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Para usar `ViewPager` en el proyecto de la aplicación, debe instalar el paquete de la [biblioteca de compatibilidad de Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Para obtener más información sobre la instalación de paquetes NuGet, consulte [Tutorial: incluir un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
@@ -44,7 +44,7 @@ Para usar `ViewPager` en el proyecto de la aplicación, debe instalar el paquete
 Se usan tres componentes para implementar la navegación gestural con `ViewPager`:
 
 - ViewPager
-- Adaptador
+- Adaptador de
 - Indicador de buscapersonas
 
 A continuación se resume cada uno de estos componentes.
@@ -55,7 +55,7 @@ A continuación se resume cada uno de estos componentes.
 
 [![primer plano de la aplicación TreePager mostrar una transición entre vistas](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
-### <a name="adapter"></a>Adaptador
+### <a name="adapter"></a>Adaptador de
 
 `ViewPager` extrae sus datos de un *adaptador*. El trabajo del adaptador es crear los `View`s que muestra el `ViewPager`, proporcionándoles según sea necesario. En el diagrama siguiente se muestra este concepto &ndash; el adaptador crea y rellena `View`s y los proporciona al `ViewPager`. Como el `ViewPager` detecta los gestos de deslizamiento del usuario, pide al adaptador que proporcione el `View` adecuado para mostrar: 
 

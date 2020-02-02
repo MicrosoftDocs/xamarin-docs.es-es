@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 3adabbac3f56747093aa8a3def85869a92d33600
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010497"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940979"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
@@ -89,7 +89,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
 
     ![Etiqueta con restricciones de diseño](launch-screens-images/launch11.png)
 
-12. Pruebe otros dispositivos y orientaciones para comprobar que el diseño se parece a todos los escenarios. En los casos en los que es necesario realizar ajustes para un dispositivo o una orientación concretos, use el botón **Editar rasgos** para agregar restricciones a clases de tamaño específico:
+12. Pruebe otros dispositivos y orientaciones para comprobar que el diseño se parece a todos los escenarios. En los casos en los que es necesario realizar ajustes para un dispositivo o una orientación concretos, use el botón **Editar rasgos** para agregar restricciones para clases de tamaño específico:
 
     ![La pantalla de inicio se representa como un iPhone X con orientación horizontal](launch-screens-images/launch12.png)
 
@@ -172,7 +172,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
     
     ![Etiqueta con restricciones de diseño](launch-screens-images/launch14-vs.png) 
 
-15. Pruebe otros dispositivos y orientaciones para comprobar que el diseño se parece a todos los escenarios. En los casos en los que es necesario realizar ajustes para un dispositivo o una orientación concretos, use el botón **Editar rasgos** para agregar restricciones a clases de tamaño específico:
+15. Pruebe otros dispositivos y orientaciones para comprobar que el diseño se parece a todos los escenarios. En los casos en los que es necesario realizar ajustes para un dispositivo o una orientación concretos, use el botón **Editar rasgos** para agregar restricciones para clases de tamaño específico:
 
     ![La pantalla de inicio se representa como un iPhone X con orientación horizontal](launch-screens-images/launch15-vs.png) 
 

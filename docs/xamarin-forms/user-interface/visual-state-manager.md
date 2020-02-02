@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2019
-ms.openlocfilehash: 11de0ecf20c6748d4958d1f1f1bea80e6a87024e
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 99bf55b6e956efe54510e822d379665879f3ba44
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490017"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940294"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>El Administrador de estado Visual de Xamarin.Forms
 
@@ -511,7 +511,7 @@ Cuando se escribe un número de teléfono válido, el estado actual es "Valid". 
 
 [![Validación de VSM: estado válido](vsm-images/VsmValidationValid.png "Validación de VSM: válida")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
-El archivo de código subyacente es responsable de control de la `TextChanged` evento desde el `Entry`. El controlador utiliza una expresión regular para determinar si la cadena de entrada es válida o no. El método en el archivo de código subyacente denominado `GoToState` llama estático `VisualStateManager.GoToState` método para ambos `helpLabel` y `submitButton`:
+El archivo de código subyacente es responsable de controlar el evento de `TextChanged` desde el `Entry`. El controlador utiliza una expresión regular para determinar si la cadena de entrada es válida o no. El método en el archivo de código subyacente denominado `GoToState` llama estático `VisualStateManager.GoToState` método para ambos `helpLabel` y `submitButton`:
 
 ```csharp
 public partial class VsmValidationPage : ContentPage
@@ -681,7 +681,7 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
 
 Interno `ScrollView` denominado `menuScroll` y `StackLayout` denominado `menuStack` implementar en el menú de botones. La orientación de estos diseños es opuesta de `mainStack`. Debe ser el menú horizontal en modo vertical y vertical en modo horizontal.
 
-La cuarta sección de marcado VSM está en un estilo implícito para los botones sí mismos. Este marcado establece `VerticalOptions`, `HorizontalOptions`, y `Margin` propiedades específicas de las orientaciones horizontal y portait.
+La cuarta sección de marcado VSM está en un estilo implícito para los botones sí mismos. Este marcado establece `VerticalOptions`, `HorizontalOptions`y `Margin` propiedades específicas de las orientaciones vertical y horizontal.
 
 Los conjuntos de archivos de código subyacente del `BindingContext` propiedad de `menuStack` para implementar `Button` comandos y también se adjunta un controlador para el `SizeChanged` eventos de la página:
 

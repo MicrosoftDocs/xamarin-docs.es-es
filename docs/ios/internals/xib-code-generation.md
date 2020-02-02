@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 778b8eeb82ebfb62cfb8c16e14f341c9afb8ff7a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6218977e9ad0d4c396ef127c3c3ca53dc56d7d3
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022252"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940870"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generación de código. Xib en Xamarin. iOS
 
@@ -33,7 +33,7 @@ Las clases personalizadas se pueden definir en un archivo **. Xib** mediante el 
 
 ## <a name="generating-code"></a>Generar código
 
-En el caso de cualquier archivo **{0}. Xib** con una acción de compilación de la *Página*, si un archivo **{0}. Xib.Designer.CS** también existe en el proyecto, Visual Studio para Mac generará clases parciales en el archivo del diseñador para todas las clases de usuario que puede encontrar en el archivo **. Xib** , con las propiedades de las salidas y métodos parciales para todas las acciones. La generación de código se habilita simplemente por la presencia de este archivo.
+En el caso de cualquier archivo **{0}. Xib** con una acción de compilación de la *Página*, si un archivo **{0}. Xib.Designer.CS** también existe en el proyecto, Visual Studio para Mac generará clases parciales en el archivo de diseñador para todas las clases de usuario que puede encontrar en el archivo **. Xib** , con las propiedades de las salidas y métodos parciales para todas las acciones. La generación de código se habilita simplemente por la presencia de este archivo.
 
 El archivo del diseñador se actualiza automáticamente cuando cambia el archivo **. Xib** y Visual Studio para Mac vuelve a obtener el foco. El archivo del diseñador no debe modificarse manualmente, ya que los cambios se sobrescribirán la próxima vez que Visual Studio para Mac actualice el archivo.
 
@@ -47,7 +47,7 @@ Las clases no se pueden definir en más de un **. Xib**o entrarán en conflicto.
 
 ## <a name="non-designer-class-parts"></a>Partes de clase que no son de diseñador
 
-Las clases parciales de diseñador no están diseñadas para usarse tal cual. Las salidas son privadas y no se especifica ninguna clase base. Se espera que cada clase tenga una parte de clase "sin diseñador" correspondiente en otro archivo, que establece la clase base, utiliza o expone las salidas y define constructores que son necesarios para crear una instancia de la clase a partir de código nativo al cargar el archivo **. Xib** . Las plantillas default **. Xib** hacen esto, pero para las clases personalizadas adicionales que defina en un **. Xib**, debe agregar manualmente la parte que no sea del diseñador.
+Las clases parciales de diseñador no están diseñadas para usarse tal cual. Las salidas son privadas y no se especifica ninguna clase base. Se espera que cada clase tenga una parte de clase "sin diseñador" correspondiente en otro archivo, que establece la clase base, utiliza o expone las salidas y define constructores que son necesarios para crear una instancia de la clase a partir de código nativo al cargar el archivo **. Xib**. Las plantillas default **. Xib** hacen esto, pero para las clases personalizadas adicionales que defina en un **. Xib**, debe agregar manualmente la parte que no sea del diseñador.
 
 La razón de esto es la necesidad de flexibilidad. Por ejemplo, varias clases de código subyacente podrían subclaser una clase abstracta administrada común, que subclase la clase a la que se va a crear una subclase de IB.
 

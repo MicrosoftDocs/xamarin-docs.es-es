@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: 07b7e47ac448fdb9a4297fe03e8f4ea16295fddd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b76de0f0dc8f1fd2124eac9cfe03b872c71095b1
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031134"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940952"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Error de iOS Designer con RegisterServicePort
 

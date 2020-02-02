@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: d8bb526f8e53ab2005e2e59556597c351d33f87a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940958"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: Mtouch mensajes de error
 
-P. ej., parámetros, entorno, herramientas que faltan.
+Por ejemplo parámetros, entorno, herramientas que faltan.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -36,7 +36,7 @@ Se produjo una condición de error inesperada. Registre un nuevo problema en [Gi
 - Un caso de prueba mínimo que reproduce el error; etc
 - Toda la información de versión
 
-La forma más fácil de obtener información exacta sobre la versión es usar el menú de **Visual Studio para Mac** , **acerca de Visual Studio para Mac** elemento, mostrar el botón **detalles** y copiar y pegar la información de versión (puede usar el botón **copiar información** ). .
+La forma más fácil de obtener información exacta sobre la versión es usar el menú de **Visual Studio para Mac** , **acerca de Visual Studio para Mac** elemento, mostrar el botón **detalles** y copiar y pegar la información de versión (puede usar el botón **copiar información** ).
 
 <a name="MT0001" />
 
@@ -534,7 +534,7 @@ Xamarin. iOS requiere los archivos de encabezado, desde la versión del SDK espe
 
 Una solución alternativa posible es habilitar el vinculador administrado. Esto eliminará la API sin usar, incluida, en la mayoría de los casos, la nueva API en la que faltan los archivos de encabezado (o están incompletos). Sin embargo, esto no funcionará si el proyecto usa la API que se presentó en un SDK más reciente que el que proporciona Xcode.
 
-Una solución de última paja sería usar una versión anterior de Xamarin. iOS, una que admita el SDK que requiere el proyecto.
+Una solución de último recurso sería utilizar una versión anterior de Xamarin.iOS, que es compatible con el SDK de su proyecto requiere.
 
 <!-- MT0092 used by mlaunch -->
 
@@ -1855,7 +1855,7 @@ Este es siempre un error en Xamarin. iOS; Registre un nuevo problema en [GitHub]
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: el registrador encontró un tipo no válido `*`. No se admite el registro de tipos genéricos con Objective-C y puede dar lugar a bloqueos o comportamientos aleatorios (por compatibilidad con versiones anteriores de Xamarin. iOS es posible omitir este error pasando `--unsupported--enable-generics-in-registrar` como argumento Mtouch adicional en Página de opciones de compilación de iOS del proyecto. Vea [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) para obtener más información).
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: el registrador encontró un tipo no válido `*`. No se admite el registro de tipos genéricos con Objective-C y puede dar lugar a bloqueos o comportamientos aleatorios (por compatibilidad con versiones anteriores de Xamarin. iOS es posible omitir este error pasando `--unsupported--enable-generics-in-registrar` como argumento Mtouch adicional en la página Opciones de compilación de iOS del proyecto. Vea [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) para obtener más información).
 
 <a name="MT4113" />
 
@@ -2239,7 +2239,7 @@ Esto normalmente indica un error en Xamarin. iOS; Registre un nuevo problema en 
 
 Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace referencia en alguna parte. Hay varias razones por las que esto puede ocurrir:
 
-- Un enlace de terceros requiere un marco, pero el enlace no lo especifica en su `[LinkWith]` atributo. Solución
+- Un enlace de terceros requiere un marco, pero el enlace no lo especifica en su `[LinkWith]` atributo. Soluciones:
   - Si es el autor del enlace de terceros o tiene acceso a su origen, modifique el atributo `[LinkWith]` del enlace para incluir el marco que necesita:
 
     ```csharp
@@ -2251,7 +2251,7 @@ Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace 
 - Un enlace administrado hace referencia a símbolos nativos que no existen en la biblioteca nativa.
     Esto suele suceder cuando un enlace ha existido durante algún tiempo y el código nativo se ha modificado durante ese tiempo para que una clase nativa determinada se haya quitado o cambiado de nombre, mientras que el enlace no se ha actualizado.
 - P/Invoke hace referencia a un símbolo nativo que no existe. A partir de Xamarin. iOS 7,4 se informará de un error <a href="#MT5214">MT5214</a> en este caso (consulte MT5214 para obtener más información).
-- Una biblioteca o enlace de terceros se compiló con C++, pero el enlace no lo especifica en su`[LinkWith]`atributo. Normalmente, esto es bastante fácil de reconocer, ya que los símbolos tienen C++ símbolos alterados (un ejemplo común es`__ZNKSt9exception4whatEv`).
+- Una biblioteca o enlace de terceros se compiló con C++, pero el enlace no lo especifica en su `[LinkWith]` atributo. Normalmente, esto es bastante fácil de reconocer, ya que los símbolos tienen C++ símbolos alterados (un ejemplo común es `__ZNKSt9exception4whatEv`).
   - Si es el autor del enlace de terceros o tiene acceso a su origen, modifique el atributo `[LinkWith]` del enlace para establecer la marca de `IsCxx`:
 
     ```csharp
@@ -2266,7 +2266,7 @@ Esto sucede cuando el vinculador nativo no encuentra un símbolo al que se hace 
 
 Esto sucede cuando el vinculador nativo no puede encontrar una clase de Objective-C a la que se hace referencia en alguna parte. Hay varias razones por las que esto puede ocurrir: lo mismo que para [MT5210](#MT5210) y además:
 
-- Un enlace de terceros enlaza un protocolo de Objective-C, pero no lo anotó con el atributo `[Protocol]` en la definición de la API. Solución
+- Un enlace de terceros enlaza un protocolo de Objective-C, pero no lo anotó con el atributo `[Protocol]` en la definición de la API. Soluciones:
   - Agregue el atributo de `[Protocol]` que falta:
 
     ```csharp
@@ -2286,7 +2286,7 @@ Esto sucede cuando el vinculador nativo detecta símbolos duplicados entre todas
 - La misma biblioteca nativa se incluye dos veces.
 - Dos bibliotecas nativas distintas se producen para definir los mismos símbolos.
 - Una biblioteca nativa no se ha creado correctamente y contiene el mismo símbolo más de una vez.
-  Para confirmarlo, use el siguiente conjunto de comandos de un terminal (reemplace i386 por x86_64/ARMv7/armv7s/arm64 según la arquitectura que esté compilando para):
+  Para confirmarlo, use el siguiente conjunto de comandos de un terminal (reemplace i386 por x86_64/ARMv7/armv7s/arm64 según la arquitectura en la que se va a compilar):
 
   ```
   # Native libraries are usually fat libraries, containing binary code for
@@ -2488,7 +2488,7 @@ Se produjo un error al quitar el código administrado (quitando el código IL) d
 
 ### <a name="mt6003-unauthorizedaccessexception-message"></a>MT6003: [mensaje de UnauthorizedAccessException]
 
-Error de seguridad al quitar símbolos de depuración de la aplicación.
+Se produjo un error de seguridad al quitar los símbolos de depuración de la aplicación.
 
 ## <a name="mt7xxx-msbuild-error-messages"></a>MT7xxx: mensajes de error de MSBuild
 
@@ -2776,13 +2776,13 @@ En algunos casos, se trata de un problema de "red local" y se puede solucionar a
 Donde * puede ser:
 
 - cadena
-- array
-- Diccionario
+- matriz
+- dict
 - bool
 - reales
 - enteros
 - date
-- datos
+- Datos
 
 <a name="MT7046" />
 

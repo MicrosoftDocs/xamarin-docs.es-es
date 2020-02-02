@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 911f56026a1495099e81a542b30b280f26b6a9e1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025454"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940756"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permisos en Xamarin. Android
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Las aplicaciones de Android se ejecutan en su propio espacio aislado y, por motivos de seguridad, no tienen acceso a determinados recursos del sistema o hardware del dispositivo. El usuario debe conceder explícitamente el permiso a la aplicación para que pueda usar estos recursos. Por ejemplo, una aplicación no puede tener acceso al GPS en un dispositivo sin permiso explícito del usuario. Android producirá una `Java.Lang.SecurityException` si una aplicación intenta tener acceso a un recurso protegido sin permiso.
 
@@ -29,7 +29,7 @@ El desarrollador de la aplicación declara los permisos en **archivo AndroidMani
 Las aplicaciones de Android deben comprobar en tiempo de ejecución para ver si tienen permiso de acceso a un recurso protegido. Si la aplicación no tiene permiso, debe realizar solicitudes mediante las nuevas API proporcionadas por el Android SDK para que el usuario conceda los permisos. Los permisos se dividen en dos categorías:
 
 - **Los permisos normales** &ndash; son permisos que suponen un pequeño riesgo de seguridad para la seguridad o la privacidad del usuario. Android 6,0 concederá automáticamente permisos normales en el momento de la instalación. Consulte la documentación de Android para obtener una [lista completa de los permisos normales](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-- Los permisos **peligrosos** &ndash; a diferencia de los permisos normales, los permisos peligrosos son aquellos que protegen la seguridad o la privacidad del usuario. El usuario debe concederlas explícitamente. El envío o la recepción de un mensaje SMS es un ejemplo de una acción que requiere un permiso peligroso.
+- Los permisos **peligrosos** &ndash; a diferencia de los permisos normales, los permisos peligrosos son aquellos que protegen la seguridad o la privacidad del usuario. El usuario debe concederlos explícitamente. El envío o la recepción de un mensaje SMS es un ejemplo de una acción que requiere un permiso peligroso.
 
 > [!IMPORTANT]
 > La categoría a la que pertenece un permiso puede cambiar con el tiempo.  Es posible que un permiso categorizado como permiso "normal" se pueda elevar en los niveles de API futuros a un permiso peligroso.
@@ -51,7 +51,7 @@ En este documento se explica cómo agregar permisos a una aplicación de Xamarin
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Se recomienda encarecidamente que los proyectos de Xamarin. Android incluyan el paquete NuGet [Xamarin. Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Este paquete trasladará las API específicas de permisos a versiones anteriores de Android, lo que proporciona una interfaz común sin necesidad de comprobar constantemente la versión de Android en la que se ejecuta la aplicación.
 

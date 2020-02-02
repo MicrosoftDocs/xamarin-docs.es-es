@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/09/2018
-ms.openlocfilehash: 8f732e05565c420ef28da38c0da0e61ecd595313
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3bfa3bbde68fab95d729cc8a558d4eb3baf7b4fa
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025020"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940653"
 ---
 # <a name="fonts"></a>Fuentes
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 A partir del nivel de API 26, el Android SDK permite que las fuentes se traten como recursos, al igual que los diseños o drawables. La [biblioteca de compatibilidad de Android 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) migrará las nuevas fuentes de la API a las aplicaciones que tengan como destino el nivel de API 14 o superior.
 
-Después de destino API 26 o de instalar la biblioteca de compatibilidad de Android V26, hay dos maneras de usar fuentes en una aplicación de Android:
+Después de establecer la API 26 como destino o instalar la biblioteca de compatibilidad de Android V26, hay dos maneras de usar fuentes en una aplicación de Android:
 
 1. **Empaquete la fuente como un recurso de Android** &ndash; esto garantiza que la fuente esté siempre disponible para la aplicación, pero aumentará el tamaño de APK.
 2. **Descargue las fuentes** &ndash; Android también admite la descarga de una fuente de un _proveedor de fuentes_. El proveedor de fuentes comprueba si la fuente ya está en el dispositivo. Si es necesario, la fuente se descargará y almacenará en caché en el dispositivo. Esta fuente se puede compartir entre varias aplicaciones.
@@ -112,7 +112,7 @@ El atributo `fontWeight` corresponde al atributo `font-weight` de CSS y hace ref
 - &ndash; **fino** 100
 - **Luz adicional** &ndash; 200
 - &ndash; **claro** 300
-- &ndash; **Normal** 400
+- **Normal** &ndash; 400
 - &ndash; **mediana** 500
 - **Seminegrita** &ndash; 600
 - **Negrita** &ndash; 700
@@ -264,7 +264,7 @@ Antes de pasar el `FontRequest` al método `FontContractCompat.RequestFont`, hay
 - **`FontsContractCompat.FontRequestCallback`** &ndash; es una clase abstracta que se debe extender. Es una devolución de llamada que se invocará cuando finalice la `RequestFont`. Una aplicación de Xamarin. Android debe subclase `FontsContractCompat.FontRequestCallback` e invalidar el `OnTypefaceRequestFailed` y el `OnTypefaceRetrieved`, lo que proporciona las acciones que deben realizarse cuando se produce un error en la descarga o se realiza correctamente, respectivamente.
 - **`Handler`** &ndash; se trata de una `Handler` que usará `RequestFont` para descargar la fuente en un subproceso, si es necesario. Las fuentes **no** se deben descargar en el subproceso de la interfaz de usuario.
 
-Este fragmento de código es un ejemplo C# de una clase que descargará asincrónicamente una fuente de la colección de código abierto de Google Fonts. Implementa la interfaz de `FontRequestCallback` y genera un C# evento cuando `FontRequest`ha finalizado.
+Este fragmento de código es un ejemplo C# de una clase que descargará asincrónicamente una fuente de la colección de código abierto de Google Fonts. Implementa la interfaz de `FontRequestCallback` y genera un C# evento cuando `FontRequest` ha finalizado.
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
@@ -348,7 +348,7 @@ En esta guía se describen las nuevas API de Android 8,0 para admitir fuentes y 
 - [FontConfig](https://developer.android.com/reference/android/text/FontConfig.html)
 - [FontRequest](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html)
 - [FontsContractCompat](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html)
-- [Resources. GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
+- [Resources.GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
 - [Tipográfico](https://developer.android.com/reference/android/graphics/Typeface.html)
 - [Biblioteca de compatibilidad de Android 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
 - [Usar fuentes en Android](https://www.youtube.com/watch?v=TfB-TsLFJdM)

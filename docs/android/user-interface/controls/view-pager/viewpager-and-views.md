@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 7413fbe3f08988cfdb7c7b4e5237539aca250772
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728153"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940846"
 ---
 # <a name="viewpager-with-views"></a>ViewPager con vistas
 
@@ -62,18 +62,13 @@ Abra **Resources/layout/main. axml** y reemplace su contenido por el siguiente c
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
-This XML defines a `ViewPager` that occupies the entire screen. Note that
-you must use the fully-qualified name **android.support.v4.view.ViewPager**
-because `ViewPager` is packaged in a support library. `ViewPager` is
-available only from 
-[Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
-it is not available in the Android SDK. 
+Este XML define un `ViewPager` que ocupa toda la pantalla. Tenga en cuenta que debe usar el nombre completo **Android. support. V4. View. ViewPager** porque `ViewPager` está empaquetado en una biblioteca de soporte. `ViewPager` solo está disponible desde la [biblioteca de compatibilidad de Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/); no está disponible en el Android SDK. 
 
-## Set up ViewPager
+## <a name="set-up-viewpager"></a>Configuración de ViewPager
 
-Edit **MainActivity.cs** and add the following `using` statement:
+Edite **MainActivity.CS** y agregue la siguiente instrucción `using`:
 
 ```csharp
 using Android.Support.V4.View;
@@ -91,7 +86,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Este código realiza lo siguiente:
+Este código hace lo siguiente:
 
 1. Establece la vista a partir del recurso de diseño **Main. axml** .
 
@@ -207,7 +202,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Este código realiza lo siguiente:
+Este código hace lo siguiente:
 
 1. Crea una nueva `ImageView` para mostrar la imagen de árbol en la posición especificada. La `MainActivity` de la aplicación es el contexto que se pasará al constructor de `ImageView`.
 
@@ -234,7 +229,7 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Este código realiza lo siguiente:
+Este código hace lo siguiente:
 
 1. Convierte el `View` del contenedor pasado en una referencia `ViewPager`.
 

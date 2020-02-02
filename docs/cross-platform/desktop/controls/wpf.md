@@ -5,12 +5,12 @@ description: En este documento se comparan y contrastan WPF con Xamarin. Forms. 
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: e87595c121f1117d055d812cb06c81ecba850c12
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 9c69449f88f9c237b5075967c89ff7ff3b6fb57a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955654"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940796"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF frente a Xamarin. Forms: similitudes & diferencias
 
@@ -72,13 +72,13 @@ La definición de una propiedad enlazable en Xamarin. Forms es la misma que la d
 
 Para obtener un ejemplo completo, vea [propiedades enlazables en Xamarin. Forms](~/xamarin-forms/xaml/bindable-properties.md).
 
-### <a name="attached-properties"></a>Propiedades adjuntas
+### <a name="attached-properties"></a>Propiedades asociadas
 
-Las propiedades adjuntas son un subconjunto de la propiedad enlazable y funcionan de la misma manera que en WPF. La principal diferencia es que el contenedor de la propiedad se se omite en este caso y se reemplaza por un conjunto de métodos Get/Set estáticos en la clase propietaria. Consulte [propiedades adjuntas en Xamarin. Forms](~/xamarin-forms/xaml/attached-properties.md) para obtener más información.
+Las propiedades adjuntas son un subconjunto de la propiedad enlazable y funcionan de la misma manera que en WPF. La principal diferencia es que el contenedor de la propiedad se omite en este caso y se reemplaza por un conjunto de métodos Get/Set estáticos en la clase propietaria. Consulte [propiedades adjuntas en Xamarin. Forms](~/xamarin-forms/xaml/attached-properties.md) para obtener más información.
 
 ### <a name="using-the-binding-engine"></a>Usar el motor de enlace
 
-El proceso para utilizar el motor de enlace es el mismo que en WPF. Se puede utilizar en el código subyacente si se crea un objeto de `Binding` vinculado a un objeto de origen (cualquier tipo .NET) y un valor de propiedad opcional (si se omite, trata el objeto de origen como la propiedad en sí, como WPF). A continuación, puede usar `SetBinding` en cualquier `BindableObject` para asociar el enlace a un `BindableProperty`.
+El proceso para utilizar el motor de enlace es el mismo que en WPF. Se puede utilizar en el código subyacente mediante la creación de un objeto de `Binding` enlazado a un objeto de origen (cualquier tipo .NET) y un valor de propiedad opcional (si se omite, trata el objeto de origen como la propiedad en sí, como WPF). A continuación, puede usar `SetBinding` en cualquier `BindableObject` para asociar el enlace a un `BindableProperty`.
 
 Como alternativa, puede definir la relación de enlace en XAML mediante el `BindingExtension`. Tiene los mismos valores básicos que la extensión en WPF.
 

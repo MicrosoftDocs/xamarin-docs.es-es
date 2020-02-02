@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 053847426d770408826297d9a80b6e38d7f6bc44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37afc9ef7773bbfefe442216055c0501af2ab966
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029278"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940882"
 ---
 # <a name="xamarinandroid-cardview"></a>CardView de Xamarin. Android
 
 _El widget CardView es un componente de interfaz de usuario que presenta el contenido de texto e imagen en las vistas que se parecen a las tarjetas. En esta guía se explica cómo usar y personalizar CardView en aplicaciones de Xamarin. Android, a la vez que se mantiene la compatibilidad con versiones anteriores de Android._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 El widget `Cardview`, introducido en Android 5,0 (Lollipop), es un componente de interfaz de usuario que presenta el contenido de texto e imagen en las vistas que se parecen a las tarjetas. `CardView` se implementa como un widget `FrameLayout` con esquinas redondeadas y una sombra. Normalmente, un `CardView` se utiliza para presentar un elemento de una sola fila en un grupo de vistas de `ListView` o `GridView`. Por ejemplo, la siguiente captura de pantalla es un ejemplo de una aplicación de reserva de viajes que implementa tarjetas de destino de viaje basadas en `CardView`en un `ListView`desplazable:
 
@@ -28,7 +28,7 @@ En esta guía se explica cómo agregar el paquete de `CardView` al proyecto de X
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Para usar las nuevas características de Android 5,0 y versiones posteriores (incluido `CardView`) en aplicaciones basadas en Xamarin, es necesario lo siguiente:
 
@@ -36,7 +36,7 @@ Para usar las nuevas características de Android 5,0 y versiones posteriores (in
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
 
-- Se puede usar **Java jdk 1,8** &ndash; JDK 1,7 si es específicamente destino de nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- Se puede usar **Java jdk 1,8** &ndash; JDK 1,7 Si tiene como destino específicamente el nivel de API 23 y versiones anteriores. JDK 1,8 está disponible en [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 La aplicación también debe incluir el paquete de `Xamarin.Android.Support.v7.CardView`. Para agregar el paquete de `Xamarin.Android.Support.v7.CardView` en Visual Studio para Mac:
 

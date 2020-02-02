@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
+ms.openlocfilehash: 65b6eb0ab75344ef112bc09aa1165f86e125872b
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031393"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940355"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -107,7 +107,7 @@ browser.Source = htmlSource;
 
 ![Vista previa que muestra la cadena HTML](webview-images/html-string.png)
 
-En el código anterior, `@` se usa para marcar el código HTML como una cadena literal, lo que significa que se omiten todos los caracteres de escape habituales.
+En el código anterior, `@` se usa para marcar el HTML como un [literal de cadena textual](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), lo que significa que la mayoría de los caracteres de escape se omiten.
 
 > [!NOTE]
 > Puede que sea necesario establecer las propiedades `WidthRequest` y `HeightRequest` de la [`WebView`](xref:Xamarin.Forms.WebView) para ver el contenido HTML, en función del diseño al que el `WebView` sea un elemento secundario. Por ejemplo, esto es necesario en una [`StackLayout`](xref:Xamarin.Forms.StackLayout).
@@ -122,7 +122,7 @@ WebView puede mostrar el contenido de HTML, CSS y Javascript incrustados dentro 
     <title>Xamarin Forms</title>
   </head>
   <body>
-    <h1>Xamrin.Forms</h1>
+    <h1>Xamarin.Forms</h1>
     <p>This is an iOS web page.</p>
     <img src="XamarinLogo.png" />
   </body>

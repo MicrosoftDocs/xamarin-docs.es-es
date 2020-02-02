@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 542ae6696bae8fccfa6d5ed9842bce126760da37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021865"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940993"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de fila en Xamarin. iOS
 
@@ -33,7 +33,7 @@ Hay tres pasos necesarios para implementar las acciones de deslizamiento con `UI
 
 1. Invalide `GetLeadingSwipeActionsConfiguration` y/o `GetTrailingSwipeActionsConfiguration` métodos. Estos métodos devuelven un `UISwipeActionsConfiguration`.
 2. Cree una instancia del `UISwipeActionsConfiguration` que se va a devolver. Esta clase toma una matriz de `UIContextualAction`.
-3. Creará un control `UIContextualAction`.
+3. Cree un `UIContextualAction`.
 
 Estos se explican con mayor detalle en las secciones siguientes.
 
@@ -71,7 +71,7 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-Es importante tener en cuenta que el orden en que se muestran las acciones depende de cómo se pasen a la matriz. Por ejemplo, el código anterior de los deslizamientos iniciales muestra las acciones como se indica a continuación:
+Es importante tener en cuenta que el orden en que se muestran las acciones depende del modo en que se pasan a la matriz. Por ejemplo, el código anterior de los deslizamientos iniciales muestra las acciones como se indica a continuación:
 
 ![Acciones de deslizamiento iniciales mostradas en una fila de la tabla](row-action-images/action03.png)
 
