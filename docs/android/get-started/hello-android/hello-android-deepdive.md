@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028004"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724371"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
@@ -26,32 +26,32 @@ En esta guía se tratan los temas siguientes:
 
 ::: zone pivot="windows"
 
-- **Introducción a Visual Studio**: Introducción a Visual Studio y creación de una aplicación de Xamarin.Android.
+- **Introducción a Visual Studio**: introducción a Visual Studio y creación de una aplicación de Xamarin.Android.
 
 - **Anatomía de una aplicación de Xamarin.Android**: Paseo por las partes esenciales de una aplicación de Xamarin.Android.
 
-- **Aspectos básicos de la arquitectura y la aplicación**: Introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
+- **Aspectos básicos de la arquitectura y la aplicación**: introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
 
-- **Interfaz de usuario (UI)** : Creación de interfaces de usuario con Android Designer.
+- **Interfaz de usuario (UI)** : creación de interfaces de usuario con Android Designer.
 
-- **Actividades y ciclo de vida de la actividad**: Una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
+- **Actividades y ciclo de vida de la actividad**: una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
 
-- **Pruebas, implementación y toques finales**: Finalización de la aplicación con consejos sobre pruebas, implementación, generación de material gráfico y mucho más.
+- **Pruebas, implementación y toques finales**: finalización de la aplicación con consejos sobre pruebas, implementación, generación de material gráfico y mucho más.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **Introducción a Visual Studio para Mac**: Introducción a Visual Studio para Mac y creación de una nueva aplicación de Xamarin.Android.
+- **Introducción a Visual Studio para Mac**: introducción a Visual Studio para Mac y creación de una nueva aplicación de Xamarin.Android.
 
-- **Anatomía de una aplicación de Xamarin.Android**: Paseo por las partes esenciales de una aplicación de Xamarin.Android.
+- **Anatomía de una aplicación de Xamarin.Android**: paseo por las partes esenciales de una aplicación de Xamarin.Android.
 
-- **Aspectos básicos de la arquitectura y la aplicación**: Introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
+- **Aspectos básicos de la arquitectura y la aplicación**: introducción a las actividades, el manifiesto de Android y la esencia del desarrollo de Android.
 
-- **Interfaz de usuario (UI)** : Creación de interfaces de usuario con Android Designer.
+- **Interfaz de usuario (UI)** : creación de interfaces de usuario con Android Designer.
 
-- **Actividades y ciclo de vida de la actividad**: Una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
+- **Actividades y ciclo de vida de la actividad**: una introducción al ciclo de vida de la actividad y a la inserción de la interfaz de usuario en el código.
 
-- **Pruebas, implementación y toques finales**: Finalización de la aplicación con consejos sobre pruebas, implementación, generación de material gráfico y mucho más.
+- **Pruebas, implementación y toques finales**: finalización de la aplicación con consejos sobre pruebas, implementación, generación de material gráfico y mucho más.
 
 ::: zone-end
 
@@ -99,13 +99,13 @@ Se ha creado una solución denominada **Phoneword** y se ha colocado dentro el p
 
 Observe los elementos situados dentro del proyecto y fíjese en cada carpeta y su finalidad:
 
-- **Propiedades**: Contiene el archivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que describe todos los requisitos de la aplicación de Xamarin.Android, incluidos el nombre, el número de versión y los permisos. La carpeta **Propiedades** también contiene [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), un archivo de metadatos de ensamblado .NET. Se recomienda que incluya en este archivo información básica sobre la aplicación.
+- **Propiedades**: contiene el archivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que describe todos los requisitos de la aplicación de Xamarin.Android, incluidos el nombre, el número de versión y los permisos. La carpeta **Propiedades** también contiene [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), un archivo de metadatos de ensamblado .NET. Se recomienda que incluya en este archivo información básica sobre la aplicación.
 
-- **Referencias**: Contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Si expande el directorio Referencias, verá referencias a ensamblados .NET, como [System](xref:System), System.Core y [System.Xml](xref:System.Xml), así como una referencia al ensamblado Mono.Android de Xamarin.
+- **Referencias**: contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Si expande el directorio Referencias, verá referencias a ensamblados .NET, como [System](xref:System), System.Core y [System.Xml](xref:System.Xml), así como una referencia al ensamblado Mono.Android de Xamarin.
 
-- **Activos**: Contiene los archivos que la aplicación necesita para ejecutarse, como fuentes, archivos de datos locales y archivos de texto. Se puede acceder a los archivos incluidos aquí mediante la clase generada `Assets`. Para obtener más información sobre los activos de Android, consulte la guía de Xamarin [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md) (Uso de activos de Android).
+- **Activos**: contiene los archivos que la aplicación necesita para ejecutarse, como fuentes, archivos de datos locales y archivos de texto. Se puede acceder a los archivos incluidos aquí mediante la clase generada `Assets`. Para obtener más información sobre los activos de Android, consulte la guía de Xamarin [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md) (Uso de activos de Android).
 
-- **Recursos**: Contiene recursos de la aplicación, como cadenas, imágenes y diseños. Puede tener acceso a estos recursos en el código mediante la clase generada `Resource`. La guía [Android Resources](~/android/app-fundamentals/resources-in-android/index.md) (Recursos de Android) proporciona información detallada sobre el directorio **Recursos**. La plantilla de aplicación también incluye una guía concisa sobre los recursos en el archivo **AboutResources.txt**.
+- **Recursos**: contiene recursos de la aplicación, como cadenas, imágenes y diseños. Puede tener acceso a estos recursos en el código mediante la clase generada `Resource`. La guía [Android Resources](~/android/app-fundamentals/resources-in-android/index.md) (Recursos de Android) proporciona información detallada sobre el directorio **Recursos**. La plantilla de aplicación también incluye una guía concisa sobre los recursos en el archivo **AboutResources.txt**.
 
 ### <a name="resources"></a>Recursos
 
@@ -113,24 +113,24 @@ El directorio **Recursos** contiene cuatro carpetas denominadas **drawable**, **
 
 Los elementos se resumen en la tabla siguiente:
 
-- **drawable**: El directorio drawable contiene [recursos que se pueden dibujar](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imágenes y mapas de bits.
+- **drawable**: el directorio drawable contiene [recursos que se pueden dibujar](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imágenes y mapas de bits.
 
-- **mipmap**: El directorio mipmap contiene archivos drawable para distintas densidades de los iconos de iniciadores. En la plantilla predeterminada, el directorio drawable contiene el archivo del icono de la aplicación, **Icon.png**.
+- **mipmap**: el directorio mipmap contiene archivos drawable para distintas densidades de los iconos de iniciadores. En la plantilla predeterminada, el directorio drawable contiene el archivo del icono de la aplicación, **Icon.png**.
 
 ::: zone pivot="windows"
 
-- **layout**: El directorio layout contiene _archivos de Android Designer_ (.axml), que definen la interfaz de usuario de cada pantalla o actividad. La plantilla crea un diseño predeterminado denominado **activity_main.axml**.
+- **layout**: el directorio layout contiene _archivos de Android Designer_ (.axml), que definen la interfaz de usuario de cada pantalla o actividad. La plantilla crea un diseño predeterminado denominado **activity_main.axml**.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **layout**: El directorio layout contiene _archivos de Android Designer_ (.axml), que definen la interfaz de usuario de cada pantalla o actividad. La plantilla crea un diseño predeterminado denominado **Main.axml**.
+- **layout**: el directorio layout contiene _archivos de Android Designer_ (.axml), que definen la interfaz de usuario de cada pantalla o actividad. La plantilla crea un diseño predeterminado denominado **Main.axml**.
 
 ::: zone-end
 
-- **values**: Este directorio contiene archivos XML que almacenan valores simples, como cadenas, enteros y colores. La plantilla crea un archivo para almacenar valores de cadena denominado **Strings.xml**.
+- **values**: este directorio contiene archivos XML que almacenan valores simples, como cadenas, enteros y colores. La plantilla crea un archivo para almacenar valores de cadena denominado **Strings.xml**.
 
-- **Resource.designer.cs**: También conocido como la clase `Resource`, este archivo es una clase parcial que contiene los identificadores únicos asignados a cada recurso. Lo crean automáticamente las herramientas de Xamarin.Android y se vuelve a generar según sea necesario. Este archivo no se debe editar manualmente, ya que Xamarin.Android sobrescribirá todos los cambios manuales que se realicen en él.
+- **Resource.designer.cs**: también conocido como la clase `Resource`, este archivo es una clase parcial que contiene los identificadores únicos asignados a cada recurso. Lo crean automáticamente las herramientas de Xamarin.Android y se vuelve a generar según sea necesario. Este archivo no se debe editar manualmente, ya que Xamarin.Android sobrescribirá todos los cambios manuales que se realicen en él.
 
 ## <a name="app-fundamentals-and-architecture-basics"></a>Aspectos básicos de la arquitectura y la aplicación
 
@@ -235,11 +235,11 @@ En Android, las actividades pasan por distintas fases de un ciclo de vida en fun
 
 Si invalida los métodos `Activity` del ciclo de vida, puede controlar cómo se carga la actividad, cómo reacciona al usuario e incluso qué sucede después de que desaparezca de la pantalla del dispositivo. Por ejemplo, puede invalidar los métodos del ciclo de vida del diagrama anterior para realizar algunas tareas importantes:
 
-- **OnCreate**: Crea vistas, inicializa las variables y realiza otras tareas de preparación que se deben realizar antes de que el usuario vea la actividad. Solo se llama una vez a este método cuando la actividad se carga en memoria. 
+- **OnCreate** &ndash; Crea vistas, inicializa las variables y realiza otras tareas de preparación que se deben realizar antes de que el usuario vea la actividad. Solo se llama una vez a este método cuando la actividad se carga en memoria.
 
-- **OnResume**: Realiza las tareas que se deben llevar a cabo cada vez que la actividad vuelve a la pantalla del dispositivo.
+- **OnResume**: realiza las tareas que se deben llevar a cabo cada vez que la actividad vuelve a la pantalla del dispositivo.
 
-- **OnPause**: Realiza las tareas que se deben llevar a cabo cada vez que la actividad sale de la pantalla del dispositivo.
+- **OnPause**: realiza las tareas que se deben llevar a cabo cada vez que la actividad sale de la pantalla del dispositivo.
 
 Al agregar código personalizado a un método del ciclo de vida en `Activity`, *invalida* la *implementación base* de dicho método. Pulse el método del ciclo de vida existente (que ya tiene código asociado) y amplíe dicho método con su propio código. Llame a la implementación base desde dentro del método para asegurarse de que el código original se ejecuta antes que el código nuevo. En la sección siguiente se muestra un ejemplo.
 
@@ -296,7 +296,7 @@ Ahora que tiene referencias a los controles en el archivo de diseño, puede empe
 
 ### <a name="responding-to-user-interaction"></a>Responder a la interacción del usuario
 
-En Android, el evento `Click` escucha la entrada táctil del usuario. En esta aplicación, el evento `Click` se ha controlado con una expresión lambda, pero en su lugar se podría usar un delegado o un controlador de eventos con nombre. El código final de **TranslateButton** se parece a lo siguiente: 
+En Android, el evento `Click` escucha la entrada táctil del usuario. En esta aplicación, el evento `Click` se ha controlado con una expresión lambda, pero en su lugar se podría usar un delegado o un controlador de eventos con nombre. El código final de **TranslateButton** se parece a lo siguiente:
 
 ```csharp
 translateButton.Click += (sender, e) =>
@@ -376,26 +376,20 @@ No todos tienen a su disposición un diseñador para crear los iconos e imágene
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): es un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
 
 - Visual Studio: Puede usarlo para crear un conjunto de iconos sencillo para la aplicación directamente en el IDE.
 
-- [Glyphish](https://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
-
-- [Fiverr](https://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [Fiverr](https://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): Se trata de un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html): es un generador dentro del explorador y basado en web para todo tipo de iconos de Android, con vínculos a otras herramientas útiles de la comunidad. Funciona mejor en Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12): Sketch es una aplicación de Mac para diseñar interfaces de usuario, iconos y mucho más. Es la aplicación que se usó para diseñar el conjunto de iconos de aplicación e imágenes de inicio de Xamarin. Sketch 3 está disponible en App Store y cuesta aproximadamente 80 $. También puede probar la versión gratuita [Sketch Tool](https://bohemiancoding.com/sketch/tool/).
+- [Pixelmator](https://www.pixelmator.com/): una aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 $.
 
-- [Pixelmator](https://www.pixelmator.com/): Una aplicación versátil de edición de imágenes para Mac que cuesta aproximadamente 30 $.
-
-- [Glyphish](https://www.glyphish.com/): Conjuntos de iconos prediseñados de alta calidad que se pueden comprar o descargar de forma gratuita.
-
-- [Fiverr](https://www.fiverr.com/): Elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
+- [Fiverr](https://www.fiverr.com/): elija entre diversos diseñadores para que creen para usted un conjunto de iconos a partir de 5 $. Probablemente elegirá un diseñador al azar, pero se trata de un buen recurso si necesita que le diseñen iconos sobre la marcha.
 
 ::: zone-end
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e27e73ac2c5164fa3431c8892b21a71c32fcd8ef
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028013"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724020"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
@@ -91,17 +91,17 @@ El paquete de aplicaciones Android es el formato de archivo que contiene todo el
 
 Una descripción rápida del contenido del archivo `.apk`:
 
-- **AndroidManifest.xml**&ndash; este es el archivo `AndroidManifest.xml`, en formato XML binario.
+- **AndroidManifest.xml**: este es el archivo `AndroidManifest.xml`, en formato XML binario.
 
-- **classes.dex**&ndash; contiene el código de la aplicación, compilado en el formato de archivo `dex` que usa la máquina virtual en tiempo de ejecución de Android.
+- **classes.dex**: contiene el código de la aplicación, compilado en el formato de archivo `dex` que usa la máquina virtual en tiempo de ejecución de Android.
 
-- **resources.arsc**&ndash; este archivo contiene todos los recursos precompilados de la aplicación.
+- **resources.arsc**: este archivo contiene todos los recursos precompilados de la aplicación.
 
 - **lib**: este directorio contiene el código compilado de cada ABI. Contendrá una subcarpeta para cada ABI que se ha descrito en la sección anterior. En la captura de pantalla anterior, el archivo `.apk` en cuestión tiene bibliotecas nativas para `armeabi-v7a` y para `x86`.
 
-- **META-INF**&ndash; este directorio (si existe) se usa para almacenar información de firma, paquetes y datos de configuración de extensión.
+- **META-INF**: este directorio (si existe) se usa para almacenar información de firma, paquetes y datos de configuración de extensión.
 
-- **res**&ndash; este directorio contiene los recursos que no se compilaron en `resources.arsc`.
+- **res**: este directorio contiene los recursos que no se compilaron en `resources.arsc`.
 
 > [!NOTE]
 > El archivo `libmonodroid.so` es la biblioteca nativa que necesitan todas las aplicaciones Xamarin.Android.
@@ -110,9 +110,9 @@ Una descripción rápida del contenido del archivo `.apk`:
 
 Cada dispositivo Android admite la ejecución de código nativo en hasta dos ABI:
 
-- **La ABI "principal"** &ndash; corresponde al código máquina usado en la imagen del sistema.
+- **ABI "principal"** : corresponde al código máquina usado en la imagen del sistema.
 
-- **Una ABI "secundaria"** &ndash; una ABI opcional que también es compatible con la imagen del sistema.
+- **ABI "secundaria"** : ABI opcional que también es compatible con la imagen del sistema.
 
 Por ejemplo, normalmente un dispositivo ARMv5TE solo tendrá una ABI principal de `armeabi`, mientras que un dispositivo ARMv7 especificaría una ABI principal de `armeabi-v7a` y una ABI secundaria de `armeabi`. Normalmente, un dispositivo x86 solo debería especificar una ABI principal de `x86`.
 
@@ -253,7 +253,6 @@ Luego, se pasa a describir cómo especificar la compatibilidad con ABI en una ap
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ABI para la arquitectura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [NDK de Android](https://developer.android.com/tools/sdk/ndk/index.html)
 - [Problema 9089: Nexus One no carga ninguna biblioteca nativa de armeabi si hay al menos una biblioteca en armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
 - [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en el apk](https://code.google.com/p/android/issues/detail?id=25321).

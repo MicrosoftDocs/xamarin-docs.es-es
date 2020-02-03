@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026521"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724701"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurar aplicaciones Xamarin.iOS
 
@@ -198,7 +198,7 @@ Este depurador suave requiere una combinación cooperativa de depuración cuando
 
 Los registros de bloqueo y los resultados de la clase Console se enviarán a la consola del iPhone. Puede acceder a esta consola con Xcode mediante el "Organizador", seleccionando el dispositivo desde él.
 
-Como alternativa, si no desea iniciar Xcode, puede utilizar la [Utilidad de configuración de iPhone](https://www.apple.com/support/iphone/enterprise/) de Apple para tener acceso directamente a la consola. Esto tiene la ventaja adicional de que puede acceder a los registros de la consola de una máquina de Windows si está depurando un problema en el campo.
+Como alternativa, si no desea iniciar Xcode, puede utilizar la Utilidad de configuración de iPhone de Apple para acceder directamente a la consola. Esto tiene la ventaja adicional de que puede acceder a los registros de la consola de una máquina de Windows si está depurando un problema en el campo.
 
 Para los usuarios de Visual Studio, hay algunos registros disponibles en la ventana de salida, pero debe cambiar al equipo Mac para obtener registros más exhaustivos y detallados.
 

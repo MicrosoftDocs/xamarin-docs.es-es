@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771356"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725265"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
 
@@ -361,9 +361,9 @@ Gran parte de la estructura de esta clase `TouchRecognizer` es similar a la de l
 
 El programa [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contiene cinco páginas que prueban el efecto de seguimiento táctil para tareas comunes.
 
-La página **Arrastre de BoxView** le permite agregar elementos `BoxView` a un `AbsoluteLayout` y después arrastrarlos en la pantalla. El [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) crea instancias de dos vistas de `Button` para agregar elementos `BoxView` a la `AbsoluteLayout` y borrar el `AbsoluteLayout`.
+La página **Arrastre de BoxView** le permite agregar elementos `BoxView` a un `AbsoluteLayout` y después arrastrarlos en la pantalla. El [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml) crea instancias de dos vistas de `Button` para agregar elementos `BoxView` a la `AbsoluteLayout` y borrar el `AbsoluteLayout`.
 
-El método en el [archivo de código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs) que agrega un nuevo `BoxView` a `AbsoluteLayout` también agrega un objeto `TouchEffect` para `BoxView` y adjunta un controlador de eventos para el efecto:
+El método en el [archivo de código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml.cs) que agrega un nuevo `BoxView` a `AbsoluteLayout` también agrega un objeto `TouchEffect` para `BoxView` y adjunta un controlador de eventos para el efecto:
 
 ```csharp
 void AddBoxViewToLayout()
@@ -453,11 +453,11 @@ La lógica `Moved` mueve la `BoxView` modificando la propiedad adjunta `LayoutBo
 
 Puede mover varios elementos `BoxView` al mismo tiempo usando diferentes dedos.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Triple captura de pantalla de la página Arrastre de BoxView")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
+[![](touch-tracking-images/boxviewdragging-small.png "Triple screenshot of the BoxView Dragging page")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
 
 ### <a name="subclassing-the-view"></a>Creación de subclases de la vista
 
-A menudo, resulta más fácil para un elemento de Xamarin.Forms controlar sus propios eventos táctiles. La página **Arrastre de BoxView arrastrable** funciona igual que la página **Arrastre de BoxView**, pero los elementos que el usuario arrastra son instancias de una clase [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs) que se deriva de `BoxView`:
+A menudo, resulta más fácil para un elemento de Xamarin.Forms controlar sus propios eventos táctiles. La página **Arrastre de BoxView arrastrable** funciona igual que la página **Arrastre de BoxView**, pero los elementos que el usuario arrastra son instancias de una clase [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) que se deriva de `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -516,11 +516,11 @@ Las siguientes dos demostraciones requieren gráficos y usan SkiaSharp para este
 
 La página **Ellipse Drawing** (Dibujo de elipse) le permite dibujar una elipse deslizando el dedo en la pantalla. Dependiendo de cómo mueva el dedo, puede dibujar la elipse desde la esquina superior izquierda a la esquina inferior derecha, o desde cualquier otra esquina hasta la esquina opuesta. La elipse se dibuja con un color aleatorio y una opacidad.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Triple captura de pantalla de la página Dibujo de elipse")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
+[![](touch-tracking-images/ellipsedrawing-small.png "Triple screenshot of the Ellipse Drawing page")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
 
 Si después toca uno de los puntos suspensivos, puede arrastrarla a otra ubicación. Esto requiere una técnica conocida como "prueba de posicionamiento," lo que implica buscar el objeto gráfico en un momento determinado. Los puntos suspensivos de SkiaSharp no son elementos de Xamarin.Forms, por lo que no pueden realizar su propio procesamiento de `TouchEffect`. El `TouchEffect` debe aplicarse a todo el objeto `SKCanvasView`.
 
-El archivo [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) crea una instancia de `SKCanvasView` en un `Grid` de una sola celda. El objeto `TouchEffect` se asocia a ese `Grid`:
+El archivo [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/EllipseDrawingPage.xaml) crea una instancia de `SKCanvasView` en un `Grid` de una sola celda. El objeto `TouchEffect` se asocia a ese `Grid`:
 
 ```xaml
 <Grid x:Name="canvasViewGrid"
@@ -592,7 +592,7 @@ class EllipseDrawingFigure
 
 Las propiedades `StartPoint` y `EndPoint` se utilizan cuando el programa está procesando la entrada táctil; la propiedad `Rectangle` se utiliza para dibujar la elipse. La propiedad `LastFingerLocation` entra en juego cuando se arrastra la elipse y el método `IsInEllipse` ayuda en la prueba de posicionamiento. El método devuelve `true` si el punto está dentro de la elipse.
 
-El [archivo de código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) mantiene tres colecciones:
+El [archivo de código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/EllipseDrawingPage.xaml.cs) mantiene tres colecciones:
 
 ```csharp
 Dictionary<long, EllipseDrawingFigure> inProgressFigures = new Dictionary<long, EllipseDrawingFigure>();
@@ -688,7 +688,7 @@ case TouchActionType.Pressed:
 
 Otro ejemplo de SkiaSharp es la página **Finger Paint** (Dibujo con los dedos). Puede seleccionar un color de trazo y el ancho del trazo desde dos vistas `Picker` y después dibujar con uno o más dedos:
 
-[![](touch-tracking-images/fingerpaint-small.png "Triple captura de pantalla de la página Dibujo con los dedos")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![](touch-tracking-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 Este ejemplo también requiere una clase independiente para representar cada línea dibujada en la pantalla:
 
@@ -708,7 +708,7 @@ class FingerPaintPolyline
 }
 ```
 
-Un objeto `SKPath` se usa para representar cada línea. El archivo [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) mantiene dos colecciones de estos objetos, una para aquellas polilíneas que se están dibujando actualmente y otra para las polilíneas completadas:
+Un objeto `SKPath` se usa para representar cada línea. El archivo [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/FingerPaintPage.xaml.cs) mantiene dos colecciones de estos objetos, una para aquellas polilíneas que se están dibujando actualmente y otra para las polilíneas completadas:
 
 ```csharp
 Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
@@ -752,7 +752,7 @@ Todos los ejemplos anteriores han establecido la propiedad `Capture` del `TouchE
 
 Este tipo de procesamiento táctil es muy útil para un teclado de música. Una tecla debe ser capaz de detectar cuándo se pulsa, pero también cuándo un dedo pasa de una tecla a otra.
 
-La página **Silent Keyboard** teclado silencioso define clases [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) y [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs) pequeñas que derivan de [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs), que se deriva de `BoxView`.
+La página **Silent Keyboard** teclado silencioso define clases [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/WhiteKey.cs) y [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BlackKey.cs) pequeñas que derivan de [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/Key.cs), que se deriva de `BoxView`.
 
 La clase `Key` está lista para usarse en un programa de música real. Define propiedades públicas denominadas `IsPressed` y `KeyNumber`, que están pensadas para establecerse en el código de teclas que establece el estándar MIDI. La clase `Key` también define un evento denominado `StatusChanged`, que se invoca cuando la propiedad `IsPressed` cambia.
 
@@ -794,9 +794,9 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 Los métodos `AddToList` y `RemoveFromList` comprueban si la `List` ha cambiado entre vacía y no vacía y si es así, invocan el evento `StatusChanged`.
 
-Los distintos elementos `WhiteKey` y `BlackKey` se organizan en el [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml) de la página, que tiene mejor aspecto cuando se mantiene el teléfono en un modo horizontal:
+Los distintos elementos `WhiteKey` y `BlackKey` se organizan en el [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/SilentKeyboardPage.xaml) de la página, que tiene mejor aspecto cuando se mantiene el teléfono en un modo horizontal:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Triple captura de pantalla de la página Teclado silencioso")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
+[![](touch-tracking-images/silentkeyboard-small.png "Triple screenshot of the Silent Keyboard page")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
 
 Si pasa los dedos por las teclas, podrá ver por los pequeños cambios en el color que los eventos táctiles se transfieren de una tecla a otra.
 
