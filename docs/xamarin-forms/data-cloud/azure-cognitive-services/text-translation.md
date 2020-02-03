@@ -20,25 +20,25 @@ ms.locfileid: "76725573"
 
 _La API de traductor de Microsoft se puede usar para traducir la voz y el texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una aplicación de Xamarin. Forms._
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 La API del traductor tiene dos componentes:
 
 - Una API de REST para traducir texto de un idioma en el texto de otro idioma de traducción de texto. La API detecta automáticamente el idioma del texto que se ha enviado antes de trasladarlo.
-- Una API de REST para transcriba la voz de un idioma en el texto de otro idioma de traducción de voz. La API también integra capacidades de texto a voz para hablar de vuelta el texto traducido.
+- Una API de REST para transcriba la voz de un idioma en el texto de otro idioma de traducción de voz. La API también integra las funcionalidades de texto a voz para volver a hablar el texto traducido.
 
 En este artículo se centra en traducir el texto de un idioma a otro utilizando Translator Text API.
 
 > [!NOTE]
-> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de comenzar.
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
-Para usar Translator Text API, se debe obtener una clave de API. Esto puede obtenerse en [cómo suscribirse a Microsoft Translator Text API](/azure/cognitive-services/translator/translator-text-how-to-signup/).
+Para usar Translator Text API, se debe obtener una clave de API. Esto puede obtenerse en [Cómo suscribirse a Microsoft Translator Text API](/azure/cognitive-services/translator/translator-text-how-to-signup/).
 
-Para obtener más información acerca de Microsoft Translator Text API, consulte [documentación de Translator Text API](/azure/cognitive-services/translator/).
+Para obtener más información acerca de Microsoft Translator Text API, consulte la [documentación de Translator Text API](/azure/cognitive-services/translator/).
 
-## <a name="authentication"></a>Autenticación
+## <a name="authentication"></a>Authentication
 
-Cada solicitud realizada a Translator Text API requiere un token de acceso JSON Web Token (JWT), que puede obtenerse desde el servicio de token de cognitive services en `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Se puede obtener un token mediante una solicitud POST al servicio de token, especificando un `Ocp-Apim-Subscription-Key` encabezado que contiene la clave de API como su valor.
+Cada solicitud realizada al Translator Text API requiere un token de acceso JSON Web Token (JWT), que se puede obtener del servicio de token de servicios cognitivos en `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Un token se puede obtener realizando una solicitud POST al servicio de token, especificando un encabezado `Ocp-Apim-Subscription-Key` que contiene la clave de API como su valor.
 
 En el ejemplo de código siguiente se muestra cómo solicitar un acceso token al servicio de token:
 
@@ -61,7 +61,7 @@ async Task<string> FetchTokenAsync(string fetchUri)
 
 El token de acceso devuelta, que es texto Base64, tiene una fecha de expiración de 10 minutos. Por lo tanto, la aplicación de ejemplo renueva el token de acceso cada 9 minutos.
 
-Debe especificarse el token de acceso en cada Translator Text API llamar como una `Authorization` el prefijo con la cadena de encabezado `Bearer`, tal y como se muestra en el ejemplo de código siguiente:
+El token de acceso debe especificarse en cada llamada Translator Text API como un encabezado de `Authorization` con el prefijo `Bearer`de la cadena, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
@@ -71,7 +71,7 @@ Para obtener más información sobre el servicio de token de servicios cognitivo
 
 ## <a name="performing-text-translation"></a>Realizar la traducción de texto
 
-Traducción de texto se puede lograr mediante una solicitud GET a la `translate` API en `https://api.microsofttranslator.com/v2/http.svc/translate`. En la aplicación de ejemplo, el `TranslateTextAsync` método invoca el proceso de traducción de texto:
+La traducción de texto se puede lograr mediante la realización de una solicitud GET a la API de `translate` en `https://api.microsofttranslator.com/v2/http.svc/translate`. En la aplicación de ejemplo, el método `TranslateTextAsync` invoca el proceso de traducción de texto:
 
 ```csharp
 public async Task<string> TranslateTextAsync(string text)
@@ -85,7 +85,7 @@ public async Task<string> TranslateTextAsync(string text)
 }
 ```
 
-El `TranslateTextAsync` método genera un URI de solicitud y recupera un token de acceso al servicio de token. A continuación, se envía la solicitud de traducción de texto a la `translate` API, que devuelve una respuesta XML que contiene el resultado. Se analiza la respuesta XML y se devuelve el resultado de la traducción al método de llamada para su presentación.
+El método `TranslateTextAsync` genera un URI de solicitud y recupera un token de acceso del servicio de token. La solicitud de traducción de texto se envía a la API de `translate`, que devuelve una respuesta XML que contiene el resultado. Se analiza la respuesta XML y se devuelve el resultado de la traducción al método de llamada para su presentación.
 
 Para obtener más información sobre las API de REST de traducción de texto, consulte [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference).
 
@@ -103,14 +103,14 @@ string GenerateRequestUri(string endpoint, string text, string to)
 }
 ```
 
-Este método establece el texto que se deben traducir y el idioma para traducir el texto para. Para obtener una lista de los idiomas compatibles con Microsoft Translator, consulte [idiomas admitidos en Microsoft Translator Text API](/azure/cognitive-services/translator/languages/).
+Este método establece el texto que se deben traducir y el idioma para traducir el texto para. Para obtener una lista de los idiomas admitidos por Microsoft Translator, consulte [idiomas admitidos en microsoft Translator Text API](/azure/cognitive-services/translator/languages/).
 
 > [!NOTE]
-> Si una aplicación necesita saber qué idioma está el texto, el `Detect` API se puede llamar para detectar el idioma de la cadena de texto.
+> Si una aplicación necesita saber en qué idioma se encuentra el texto, se puede llamar a la API de `Detect` para detectar el idioma de la cadena de texto.
 
 ### <a name="sending-the-request"></a>Enviar la solicitud
 
-El `SendRequestAsync` método realiza la solicitud GET a la API de REST de traducción de texto y devuelve la respuesta:
+El método `SendRequestAsync` realiza la solicitud GET a la API de REST de traducción de texto y devuelve la respuesta:
 
 ```csharp
 async Task<string> SendRequestAsync(string url, string bearerToken)
@@ -126,9 +126,9 @@ async Task<string> SendRequestAsync(string url, string bearerToken)
 }
 ```
 
-Este método basa la solicitud GET mediante la adición de token de acceso para el `Authorization` encabezado, el prefijo con la cadena `Bearer`. A continuación, se envía la solicitud GET a la `translate` API con la URL de solicitud especifica el texto que se deben traducir y el idioma para traducir el texto a. La respuesta, a continuación, lee y devuelve al método de llamada.
+Este método compila la solicitud GET agregando el token de acceso al encabezado de `Authorization`, con el prefijo de la cadena `Bearer`. La solicitud GET se envía a la API de `translate`, con la dirección URL de la solicitud que especifica el texto que se va a traducir y el idioma al que se va a traducir el texto. La respuesta, a continuación, lee y devuelve al método de llamada.
 
-El `translate` API enviará el código de estado HTTP 200 (OK) en la respuesta, siempre que la solicitud es válida, lo que indica que la solicitud es correcta y que la información solicitada está en la respuesta. Para obtener una lista de posibles respuestas de error, vea los mensajes de respuesta en [obtener traducir](/azure/cognitive-services/translator/reference/v3-0-translate).
+La API de `translate` enviará el código de Estado HTTP 200 (correcto) en la respuesta, siempre que la solicitud sea válida, lo que indica que la solicitud se realizó correctamente y que la información solicitada se encuentra en la respuesta. Para obtener una lista de las posibles respuestas de error, consulte mensajes de respuesta en [obtener traducción](/azure/cognitive-services/translator/reference/v3-0-translate).
 
 ### <a name="processing-the-response"></a>Procesamiento de la respuesta
 
@@ -138,7 +138,7 @@ La respuesta de API se devuelve en formato XML. Los siguientes datos XML muestra
 <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Morgen kaufen gehen ein</string>
 ```
 
-En la aplicación de ejemplo, se analiza la respuesta XML en un `XDocument` instancia, con el valor de la raíz XML que se devuelve al método de llamada para su presentación, como se muestra en las capturas de pantalla siguiente:
+En la aplicación de ejemplo, la respuesta XML se analiza en una instancia de `XDocument`, con el valor raíz de XML que se devuelve al método de llamada para su presentación, tal y como se muestra en las siguientes capturas de pantalla:
 
 ![](text-translation-images/text-translation.png "Text Translation to German")
 
@@ -150,5 +150,5 @@ En este artículo se explica cómo usar Microsoft Translator Text API traducir t
 
 - [Translator Text API documentación](/azure/cognitive-services/translator/)
 - [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Cognitive Services todo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)

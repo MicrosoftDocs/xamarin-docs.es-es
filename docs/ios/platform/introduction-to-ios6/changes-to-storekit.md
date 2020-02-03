@@ -25,7 +25,7 @@ Los principales cambios en el kit de almacenamiento de iOS6 son las dos nuevas c
 
 Consulte las guías de [compras desde la aplicación](~/ios/platform/in-app-purchasing/index.md) para obtener una explicación detallada de las API de StoreKit.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Las características del kit de almacén que se describen en este documento requieren iOS 6 y Xcode 4,5, junto con Xamarin. iOS 6,0.
 
@@ -107,7 +107,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 }
 ```
 
-### <a name="errors"></a>Errores de
+### <a name="errors"></a>Errors
 
 El siguiente error se producirá si el ID. de Apple que usa no es válido, lo que puede resultar confuso, ya que implica un problema de red o de autenticación de algún tipo.
 
@@ -135,10 +135,10 @@ Apple proporciona una API de búsqueda dinámica para consultar todos los produc
 
 Los resultados también incluirán otros metadatos, como información de visualización y direcciones URL de material gráfico que se pueden usar para representar el producto en la aplicación.
 
-A continuación se muestran algunos ejemplos:
+Estos son algunos ejemplos:
 
-- **aplicación iBooks** : [https://itunes.apple.com/search?term=ibooks&amp ; entidad = software&amp; Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **DOT y Kangaroo iBooks** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = ebook&amp; Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **aplicación iBooks** : [https://itunes.apple.com/search?term=ibooks&amp; entidad = software&amp;Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **DOT y Kangaroo iBooks** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entity = ebook&amp;Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Fuente de socios empresariales
 

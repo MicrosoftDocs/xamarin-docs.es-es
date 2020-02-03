@@ -286,7 +286,7 @@ Normalmente, el código de representación tendrá una llamada a `GL.Clear` para
 
 ### <a name="running-the-game-view"></a>Ejecutar la vista de juego
 
-Con todos los eventos necesarios definir y la vista de juego conectada a la ventana principal de Mac de nuestra aplicación, se lee para ejecutar la vista de juego y mostrar nuestros gráficos. Utilice el código siguiente:
+Con todos los eventos necesarios definir y la vista de juego conectada a la ventana principal de Mac de nuestra aplicación, se lee para ejecutar la vista de juego y mostrar nuestros gráficos. Use el código siguiente:
 
 ```csharp
 // Run the game at 60 updates per second

@@ -287,7 +287,7 @@ Al cargar una aplicación en el dispositivo, puede recibir el error "AFCFileRefW
 ## <a name="error-mtouch-failed-with-no-output"></a>Error "error de Mtouch sin salida"
 
 Se producirá un error en la versión actual de Xamarin. iOS y Visual Studio para Mac cuando el nombre del proyecto o el directorio donde se almacena la solución o el proyecto contengan espacios.
-Para arreglarlo:
+Para solucionar este error:
 
 - Asegúrese de que ni su proyecto o el directorio donde está almacenado contiene un espacio.
 - En el proyecto "configuración principal", asegúrese de que el nombre del proyecto no contenga espacios.

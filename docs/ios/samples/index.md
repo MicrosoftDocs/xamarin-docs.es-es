@@ -48,7 +48,7 @@ Marco de iOS 11 Vision y CoreML con un modelo formado con el servicio Custom Vis
     :::column:::
 [![contactos](images/contacts.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
-### <a name="contactshttpsdocsmicrosoftcomsamplesxamarinios-samplescontacts"></a>[Sus](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
+### <a name="contactshttpsdocsmicrosoftcomsamplesxamarinios-samplescontacts"></a>[Contactos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
 Cómo usar las propiedades y los controladores de visualización de ContactsUI.
     :::column-end:::

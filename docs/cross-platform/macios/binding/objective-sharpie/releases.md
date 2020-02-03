@@ -133,7 +133,7 @@ Consulte la documentación de [Verify Attributes](~/cross-platform/macios/bindin
 
 [Descargar v 1.1.35](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.35.pkg)
 
-Correcciones de errores menores.
+Correcciones de errores leves.
 
 ## <a name="111-december-15-2014"></a>1.1.1:15 de diciembre de 2014
 

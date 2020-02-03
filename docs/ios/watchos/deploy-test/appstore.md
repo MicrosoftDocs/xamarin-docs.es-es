@@ -128,7 +128,7 @@ Xcode mostrará automáticamente los archivos creados en Visual Studio para Mac.
 
 Después, puede enviar la aplicación para su aprobación en la página **versiones** . Consulte la introducción a la [distribución de aplicaciones de iOS](~/ios/deploy-test/app-distribution/index.md) para obtener más información.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Estos son algunos errores que pueden surgir durante el envío a la tienda de aplicaciones y los pasos que puede seguir para corregirlos.
 

@@ -52,7 +52,7 @@ Esta página contiene información adicional y soluciones alternativas para los 
 - Es posible que vea el error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Esto ocurre después de una **limpieza** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
     La solución consiste en seleccionar **Compilar > volver a generar todo** y, a continuación, volver a iniciar la aplicación.
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
 La compatibilidad con el diseñador de iOS para el kit de inspección *requiere* que la solución se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), la superficie de diseño no funcionará correctamente.
 
@@ -257,7 +257,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obligatoria. Especifica la ruta de acceso a Xcode (6,2 o posterior).
+Necesario. Especifica la ruta de acceso a Xcode (6,2 o posterior).
 
 Ejemplo:
 

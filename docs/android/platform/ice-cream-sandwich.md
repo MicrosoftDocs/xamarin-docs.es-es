@@ -18,7 +18,7 @@ ms.locfileid: "76724380"
 
 _En este artículo se describen algunas de las nuevas características disponibles para los desarrolladores de aplicaciones con la API de Android 4, el bocadillo de helado. Abarca varias nuevas tecnologías de interfaz de usuario y, a continuación, examina una variedad de nuevas funcionalidades que Android 4 ofrece para compartir datos entre aplicaciones y entre dispositivos._
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 La versión 4,0 del SO Android (nivel de API 14) representa un retrabajo importante del sistema operativo Android e incluye una serie de cambios importantes y actualizaciones, entre los que se incluyen:
 
@@ -60,7 +60,7 @@ Por último, hemos examinado cómo usar el proveedor *ContactsContract* para acc
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
+- [TextureViewDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
 - [CalendarDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
 - [Tutorial de diseño de pestañas](~/android/user-interface/layouts/tab-layout/index.md)
 - [Bocadillo de helado](https://developer.android.com/about/versions/android-4.0-highlights.html)

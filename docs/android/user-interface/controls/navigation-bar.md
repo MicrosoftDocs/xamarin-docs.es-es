@@ -66,4 +66,4 @@ tv.SystemUiVisibilityChange +=
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
+- [SystemUIVisibilityDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)

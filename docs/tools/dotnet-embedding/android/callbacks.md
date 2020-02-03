@@ -291,7 +291,7 @@ Hay un par de cosas que podríamos mejorar estos escenarios:
 
 Hay mucho trabajo que realizar aquí, pero estas mejoras en la inserción de .NET son posibles.
 
-## <a name="further-reading"></a>Información adicional
+## <a name="further-reading"></a>Lecturas adicionales
 
 - [Introducción en Android](~/tools/dotnet-embedding/get-started/java/android.md)
 - [Investigación preliminar de Android](~/tools/dotnet-embedding/android/index.md)

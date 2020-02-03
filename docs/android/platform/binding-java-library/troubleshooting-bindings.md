@@ -18,7 +18,7 @@ ms.locfileid: "76723808"
 
 _En este artículo se resumen los errores comunes de servidor que pueden producirse al generar enlaces, junto con las posibles causas y las formas sugeridas de resolverlos._
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Enlazar una biblioteca de Android (un archivo **. AAR** o **. jar**) rara vez es un suerte sencillo; normalmente requiere un esfuerzo adicional para mitigar los problemas derivados de las diferencias entre Java y .NET.
 Estos problemas impedirán que Xamarin. Android enlace la biblioteca de Android y se presente como mensajes de error en el registro de compilación. En esta guía se ofrecen algunas sugerencias para solucionar los problemas, se enumeran algunos de los problemas o escenarios más comunes y se proporcionan posibles soluciones para enlazar correctamente la biblioteca de Android.

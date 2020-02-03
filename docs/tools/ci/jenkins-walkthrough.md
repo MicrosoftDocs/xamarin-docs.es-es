@@ -32,7 +32,7 @@ Una vez que Jenkins esté configurado y se hayan instalado los complementos nece
 
 En esta guía se describe cómo configurar un servidor de Jenkins que abarque cada uno de estos puntos. Al final, deberíamos tener una buena comprensión de cómo configurar y configurar Jenkins para crear IPA y APK para nuestros proyectos móviles de Xamarin.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 El servidor de compilación ideal es un equipo independiente que se dedica a la única finalidad de compilar y probar la aplicación. Un equipo dedicado garantiza que los artefactos que podrían ser necesarios para otros roles (como el de un servidor Web) no contaminan la compilación. Por ejemplo, si el servidor de compilación también actúa como servidor Web, el servidor web puede requerir una versión en conflicto de alguna biblioteca común. Debido a este conflicto, es posible que el servidor Web no funcione correctamente o que Jenkins pueda crear compilaciones que no funcionen cuando se implementen en los usuarios.
 

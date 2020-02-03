@@ -18,13 +18,13 @@ ms.locfileid: "76723644"
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Descubra los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp_
+_Descubra los distintos efectos posibles con los tipos de relleno de ruta de SkiaSharp_
 
-Se pueden superponer dos perfiles en una ruta de acceso y las líneas que componen un contorno solo se pueden superponer. Posiblemente se puede rellenar cualquier área delimitada, pero es posible que no desea rellenar todas las áreas cerradas. Por ejemplo:
+Se pueden superponer dos perfiles en una ruta de acceso y las líneas que componen un contorno solo se pueden superponer. Posiblemente se puede rellenar cualquier área delimitada, pero es posible que no desea rellenar todas las áreas cerradas. Este es un ejemplo:
 
 ![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
-Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por el [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) propiedad de `SKPath`, que establece en un miembro de la [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumeración:
+Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por la propiedad [`SKFillType`](xref:SkiaSharp.SKPath.FillType) de `SKPath`, que se establece en un miembro de la enumeración [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) :
 
 - `Winding`, el valor predeterminado
 - `EvenOdd`
@@ -35,7 +35,7 @@ Los algoritmos de devanado y par-impar determinan si cualquier área delimitada 
 
 Con muchas rutas rutinarias, el algoritmo devanado a menudo rellena todas las áreas cerradas de una ruta de acceso. El algoritmo par-impar generalmente produce resultados más interesantes.
 
-El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Five-Pointed estrella** página. El [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) archivo crean instancias de dos `Picker` vistas para seleccionar la ruta de acceso de rellenar el tipo y si se trazan o rellena la ruta de acceso o ambos y en qué orden:
+El ejemplo clásico es una estrella de cinco puntas, tal como se muestra en la página de **estrella de cinco puntas** . El archivo [**FivePointedStarPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) crea una instancia de dos vistas de `Picker` para seleccionar el tipo de relleno de trazado y si la ruta de acceso se traza o rellena, o ambos, y en qué orden:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -168,20 +168,20 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Normalmente, el tipo de relleno de la ruta de acceso debe afectar a sólo rellenos y no los trazos, pero los dos `Inverse` afectan a los modos de trazos y rellenos. Para los rellenos, las dos `Inverse` tipos rellenar áreas oppositely para que se rellena el área situada fuera de la estrella. Para los dos trazos `Inverse` tipos todo excepto el trazo de color. Uso de estos tipos de relleno inversa puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
+Normalmente, el tipo de relleno de la ruta de acceso solo debe afectar a los rellenos y no a los trazos, pero los dos modos `Inverse` afectan tanto a los rellenos como a los trazos. En el caso de los rellenos, los dos tipos de `Inverse` rellenan las áreas de forma opuesta para que se rellene el área fuera de la estrella. En el caso de los trazos, los dos tipos de `Inverse` colorean todo, excepto el trazo. Uso de estos tipos de relleno inversa puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
 
 [![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
 En la captura de pantalla de Android se muestran los efectos típicos pares-impares y de bobinado, pero el orden del trazo y del relleno también afecta a los resultados.
 
-El algoritmo devanado es dependiente de la dirección que se dibujan líneas. Normalmente, al crear una ruta de acceso, puede controlar esa dirección que especifique que se dibujan líneas de un punto a otro. Sin embargo, el `SKPath` clase también define los métodos como `AddRect` y `AddCircle` que dibujar contornos todos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), que tiene dos miembros:
+El algoritmo devanado es dependiente de la dirección que se dibujan líneas. Normalmente, al crear una ruta de acceso, puede controlar esa dirección que especifique que se dibujan líneas de un punto a otro. Sin embargo, la clase `SKPath` también define métodos como `AddRect` y `AddCircle` que dibujan contornos completos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), que tiene dos miembros:
 
 - `Clockwise`
 - `CounterClockwise`
 
-Los métodos de `SKPath` que incluyen un `SKPathDirection` asignarle un valor predeterminado del parámetro `Clockwise`.
+Los métodos de `SKPath` que incluyen un parámetro `SKPathDirection` le asignan el valor predeterminado `Clockwise`.
 
-El **círculos superpuestos** página crea una ruta de acceso con cuatro círculos superpuestos con un tipo de relleno par-impar ruta de acceso:
+La página **círculos superpuestos** crea una ruta de acceso con cuatro círculos superpuestos con un tipo de relleno de trazado par-impar:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

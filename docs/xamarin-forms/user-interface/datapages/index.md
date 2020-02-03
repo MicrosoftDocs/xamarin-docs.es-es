@@ -59,7 +59,7 @@ Se incluyen las siguientes páginas y controles para permitir un enlace sencillo
 
 Vea la [referencia de controles de páginas de página](controls.md) para obtener ejemplos.
 
-### <a name="under-the-hood"></a>En el capó
+### <a name="under-the-hood"></a>Una mirada al interior
 
 Un origen de datos de Xamarin. Forms se adhiere a la interfaz `IDataSource`.
 

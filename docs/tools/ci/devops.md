@@ -65,7 +65,7 @@ Las características de diseño son independientes del lenguaje de codificación
 |[Buscar cambios en el código y otro historial](/visualstudio/ide/find-code-changes-and-other-history-with-codelens)|Sí|Excepto en los límites específicos de la plataforma donde la implementación no se resuelve hasta el tiempo de ejecución.|
 |[Usar mapas de código para depurar aplicaciones](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|Sí||
 
-## <a name="build"></a>Compilar
+## <a name="build"></a>Build
 
 Vínculo de referencia: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 
@@ -77,14 +77,14 @@ Vínculo de referencia: **[Azure Pipelines](/azure/devops/pipelines/index?view=v
 |Compilar definiciones con scripts anteriores y posteriores|Sí||
 |Integración continua, incluidas entradas validadas|Sí|Entradas validadas para TFVC solo cuando GIT funciona en un modelo de solicitud de extracción en lugar de entradas.|
 
-## <a name="test"></a>Probar
+## <a name="test"></a>Prueba
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|
 |Planear pruebas, crear casos de prueba y organizar conjuntos de pruebas|Sí||
 |Pruebas manuales|Sí||
 |Administrador de pruebas (grabar y reproducir pruebas)|Sí|Dispositivos Windows y emuladores de Android únicamente de Visual Studio.|
-|Cobertura de código|no disponible||
+|Cobertura de código|N/D||
 |[Haga una prueba unitaria de su código](/visualstudio/test/unit-test-your-code/)|Sí|Para destinos Windows y Android, pueden usarse las herramientas integradas de MSTest. Xamarin recomienda NUnit para ejecutar pruebas unitarias en Windows, Android e iOS. Vea [Usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
 |[Usar la automatización de la interfaz de usuario para probar el código](/visualstudio/test/use-ui-automation-to-test-your-code/)|Solo Windows|La grabadora de pruebas de interfaz de usuario de Visual Studio es solo para Windows. Para todas las plataformas, vea [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
 
@@ -108,7 +108,7 @@ Vínculo de referencia: **[Compilación y versiones en Azure Pipelines y TFS](/a
 |-------------|----------------------------|-------------------------|
 |Administrar procesos de versión|Sí||
 |Implementar en servidores para la instalación de prueba mediante scripts|Sí||
-|Cargar a la tienda de aplicaciones|Partial|Hay extensiones disponibles que pueden automatizar este proceso para algunas tiendas de aplicaciones.  Vea [Extensions for Azure DevOps Services](https://marketplace.visualstudio.com/VSTS) (Extensiones para Azure DevOps Services); por ejemplo, la [extensión para Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
+|Cargar a la tienda de aplicaciones|Parcial|Hay extensiones disponibles que pueden automatizar este proceso para algunas tiendas de aplicaciones.  Vea [Extensions for Azure DevOps Services](https://marketplace.visualstudio.com/VSTS) (Extensiones para Azure DevOps Services); por ejemplo, la [extensión para Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
 
 ## <a name="monitor-with-hockeyapp"></a>Supervisión con HockeyApp
 

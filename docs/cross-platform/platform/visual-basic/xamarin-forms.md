@@ -129,5 +129,5 @@ Como se indica en la [Página portable Visual Basic.net](~/cross-platform/platfo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamarinFormsVB (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [XamarinFormsVB (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [Desarrollo multiplataforma con el .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)

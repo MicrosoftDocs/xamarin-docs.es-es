@@ -19,7 +19,7 @@ ms.locfileid: "76724304"
 
 _En algunos casos, es posible que obtenga errores al instalar las bibliotecas de compatibilidad de Android. En esta guía se proporcionan soluciones alternativas a algunos errores comunes._
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Al compilar un proyecto de aplicación de Xamarin. Android, es posible que obtenga errores de compilación cuando Visual Studio o Visual Studio para Mac intenten descargar e instalar las bibliotecas de dependencias. Muchos de estos errores se deben a problemas de conectividad de red, archivos dañados o problemas de control de versiones. En esta guía se describen los errores de instalación de la biblioteca de soporte técnico más comunes y se proporcionan los pasos para solucionar estos problemas y volver a compilar el proyecto de la aplicación.
 
@@ -63,7 +63,7 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
 1. Descargue el archivo **android\_m2repository\_r_nn_. zip** que corresponde al mensaje de error &ndash; se proporcionan los vínculos de la lista siguiente (junto con el hash MD5 correspondiente de la dirección URL de cada vínculo):
 
-    - [android\_m2repository\_r33.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r33.zip) &ndash; 5FB756A25962361D17BBE99C3B3FCC44
+    - [android\_m2repository\_R33. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r33.zip) &ndash; 5FB756A25962361D17BBE99C3B3FCC44
 
     - [android\_m2repository\_R32. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip) &ndash; F16A3455987DBAE5783F058F19F7FCDF
 
@@ -71,15 +71,15 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
     - [android\_m2repository\_R30. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r30.zip) &ndash; 05AD180B8BDC7C21D6BCB94DDE7F2C8F
 
-    - [android\_m2repository\_r29.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r29.zip) &ndash; 2A3A8A6D6826EF6CC653030E7D695C41
+    - [android\_m2repository\_R29. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r29.zip) &ndash; 2A3A8A6D6826EF6CC653030E7D695C41
 
     - [android\_m2repository\_R28. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r28.zip) &ndash; 17BE247580748F1EDB72E9F374AA0223
 
     - [android\_m2repository\_R27. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r27.zip) &ndash; C9FD4FCD69D7D12B1D9DF076B7BE4E1C
 
-    - [android\_m2repository\_r26.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r26.zip) &ndash; 8157FC1C311BB36420C1D8992AF54A4D
+    - [android\_m2repository\_R26. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r26.zip) &ndash; 8157FC1C311BB36420C1D8992AF54A4D
 
-    - [android\_m2repository\_r25.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r25.zip) &ndash; 0B3F1796C97C707339FB13AE8507AF50
+    - [android\_m2repository\_R25. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r25.zip) &ndash; 0B3F1796C97C707339FB13AE8507AF50
 
     - [android\_m2repository\_R24. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r24.zip) &ndash; 8E3C9EC713781EDFE1EFBC5974136BEA
 
@@ -91,7 +91,7 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
     - [android\_m2repository\_R20. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r20.zip) &ndash; 650E58DF02DB1A832386FA4A2DE46B1A
 
-    - [android\_m2repository\_r19.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r19.zip) &ndash; 263B062D6EFAA8AEE39E9460B8A5851A
+    - [android\_m2repository\_R19. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r19.zip) &ndash; 263B062D6EFAA8AEE39E9460B8A5851A
 
     - [android\_m2repository\_R18. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r18.zip) &ndash; 25947AD38DCB4865ABEB61522FAFDA0E
 
@@ -99,7 +99,7 @@ Si ha intentado usar los pasos de recuperación automática anteriores y sigue t
 
     - [android\_m2repository\_R16. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Si el archivo **m2repository** no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo `https://dl-ssl.google.com/android/repository/` al nombre de la **m2repository** que se va a descargar. Por ejemplo, use **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** para descargar **android\_ m2repository\_ R10. zip**.
+    Si el archivo **m2repository** no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo `https://dl-ssl.google.com/android/repository/` al nombre de la **m2repository** que se va a descargar. Por ejemplo, use **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** para descargar **android\_m2repository\_R10. zip**.
 
 2. Cambie el nombre del archivo por el hash MD5 correspondiente de la dirección URL de descarga, tal como se muestra en la tabla anterior. Por ejemplo, si descargó **android\_m2repository\_R25. zip**, cambie su nombre a **0B3F1796C97C707339FB13AE8507AF50. zip**. Si el hash MD5 de la dirección URL de descarga del archivo descargado no se muestra en la tabla, puede usar un [generador de MD5 en línea](http://www.webconfs.com/online-md5-generator.php) para convertir la dirección URL a una cadena hash MD5.
 

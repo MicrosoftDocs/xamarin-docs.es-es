@@ -20,7 +20,7 @@ El diseño automático (también denominado "diseño adaptable") es un enfoque d
 
 En esta guía se presentan las restricciones y cómo trabajar con ellas en Xamarin iOS Designer. En esta guía no se trata el trabajo con restricciones mediante programación. Para obtener información sobre el uso del diseño automático mediante programación, consulte la [documentación de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 El Xamarin Designer para iOS está disponible en Visual Studio para Mac en Visual Studio 2017 y versiones posteriores en Windows.
 

@@ -27,7 +27,7 @@ _Google Cloud Messaging (GCM) es un servicio que facilita la mensajería entre a
 
 En este tema se proporciona información general de alto nivel sobre cómo Google Cloud Messaging enruta los mensajes entre la aplicación y un servidor de aplicaciones, y proporciona un procedimiento paso a paso para adquirir credenciales para que la aplicación pueda usar los servicios de GCM.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Google Cloud Messaging (GCM) es un servicio que controla el envío, el enrutamiento y la puesta en cola de los mensajes entre las aplicaciones de servidor y las aplicaciones de cliente móvil. Una *aplicación cliente* es una aplicación habilitada para GCM que se ejecuta en un dispositivo. El *servidor de aplicaciones* (proporcionado por usted o su empresa) es el servidor habilitado para GCM con el que se comunica la aplicación cliente a través de GCM:
 

@@ -101,4 +101,4 @@ Sin embargo, las extensiones IDE de Xamarin. Android no proporcionan una manera 
 En este documento se describe el comportamiento actual a partir de marzo de 2016. La técnica descrita en este documento no forma parte del conjunto de pruebas estable para Xamarin, por lo que podría interrumpirse en el futuro.
 
 Si observa que la técnica ya no funciona o observa otros errores en el documento, no dude en agregarla a la discusión en el siguiente subproceso del Foro: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
-Gracias
+Gracias.

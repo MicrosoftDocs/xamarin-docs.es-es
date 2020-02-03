@@ -19,7 +19,7 @@ ms.locfileid: "76725190"
 El lenguaje Objective-C se basa en los *selectores*. Un selector es un mensaje que se puede enviar a un objeto o una *clase*. [Xamarin. iOS](~/ios/internals/api-design/index.md) asigna selectores de instancia a métodos de instancia y selectores de clase a métodos estáticos.
 
 A diferencia de las funciones normales de C C++ (y como las funciones miembro), no se puede invocar directamente un selector mediante [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) en su lugar, los selectores se envían a una instancia o clase de Objective-C mediante el [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-Función .
+.
 
 Para obtener más información sobre los mensajes de Objective-C, eche un vistazo a la guía [trabajar con objetos](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) de Apple.
 

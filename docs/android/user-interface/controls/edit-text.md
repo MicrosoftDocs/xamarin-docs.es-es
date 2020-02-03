@@ -38,7 +38,7 @@ Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](x
 En este ejemplo de código, el atributo `EditText` `android:imeOptions` se establece en `actionGo`. Esta configuración cambia la acción de [listo](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) predeterminada a la acción [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que al pulsar la tecla **entrar** se desencadene el controlador de entrada `KeyPress`.
 (Normalmente, `actionGo` se usa para que la tecla **entrar** lleve al usuario al destino de una dirección URL que se escribe).
 
-Para controlar la entrada de texto del usuario, agregue el código siguiente al final del método[OnCreate](xref:Android.App.Activity.OnCreate*) en **MainActivity.cs**:
+Para controlar la entrada de texto del usuario, agregue el código siguiente al final del método [alcrear](xref:Android.App.Activity.OnCreate*) en **MainActivity.CS**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);

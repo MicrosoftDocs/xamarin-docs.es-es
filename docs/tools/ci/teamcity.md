@@ -39,7 +39,7 @@ Hay varios pasos implicados en la configuración de TeamCity:
 
 - **Crear un proyecto de TeamCity** : una vez completados los tres pasos anteriores, debemos crear un proyecto de TeamCity que contendrá todos los metadatos necesarios para recuperar el código fuente, compilar los proyectos y enviar las pruebas a Xamarin test Cloud.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Se requiere experiencia con [App Center prueba](https://docs.microsoft.com/appcenter/test-cloud/) .
 

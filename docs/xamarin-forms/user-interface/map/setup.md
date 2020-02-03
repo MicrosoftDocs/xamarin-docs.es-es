@@ -58,14 +58,14 @@ La visualización e interacción con un mapa en iOS no requiere ninguna configur
 
 - iOS 11 y versiones posteriores
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) : para usar los servicios de ubicación en todo momento
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) : para usar servicios de ubicación en todo momento
 - iOS 10 y versiones anteriores
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) : para usar los servicios de ubicación en todo momento    
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) : para usar servicios de ubicación en todo momento    
 
-Para admitir iOS 11 y versiones anteriores, puede incluir estas tres claves: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, y `NSLocationAlwaysUsageDescription`.
+Para admitir iOS 11 y versiones anteriores, puede incluir las tres claves: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`y `NSLocationAlwaysUsageDescription`.
 
-La representación XML de estas claves en **Info.plist** se muestra a continuación. Debe actualizar el `string` valores para que reflejen cómo la aplicación está utilizando la información de ubicación:
+A continuación se muestra la representación XML para estas claves en **info. plist** . Debe actualizar los valores de `string` para que reflejen el modo en que la aplicación usa la información de Ubicación:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
@@ -76,7 +76,7 @@ La representación XML de estas claves en **Info.plist** se muestra a continuaci
 <string>Can we use your location at all times?</string>
 ```
 
-El **Info.plist** también se pueden agregar entradas en **origen** vista mientras edita el **Info.plist** archivo:
+Las entradas **info. plist** también se pueden agregar en la vista **código fuente** mientras se edita el archivo **info. plist** :
 
 ![Info. plist para iOS 8](setup-images/ios8-map-permissions.png "Entradas de info. plist necesarias de iOS 8")
 
@@ -112,7 +112,7 @@ Una vez que haya obtenido una clave de API, debe agregarse en el elemento `<appl
 Esto incrusta la clave de API en el manifiesto. Sin una clave de API válida, el control [`Map`](xref:Xamarin.Forms.Maps.Map) mostrará una cuadrícula en blanco.
 
 > [!NOTE]
-> Tenga en cuenta que, en orden para el APK tener acceso a Google Maps, debe incluir las huellas digitales de SHA-1 y empaquetar los nombres para cada almacén de claves (debug y release) que usó para firmar el APK. Por ejemplo, si usa un equipo para depuración y otro equipo para generar el APK de lanzamiento, debe incluir la huella digital de certificado de SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital de certificado de SHA-1 desde el almacén de claves de la versión de el segundo equipo. Recuerde también que modificar las credenciales de clave si la aplicación **nombre del paquete** cambios. Consulte [obtención de una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> Tenga en cuenta que, en orden para el APK tener acceso a Google Maps, debe incluir las huellas digitales de SHA-1 y empaquetar los nombres para cada almacén de claves (debug y release) que usó para firmar el APK. Por ejemplo, si usa un equipo para depuración y otro equipo para generar el APK de lanzamiento, debe incluir la huella digital de certificado de SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital de certificado de SHA-1 desde el almacén de claves de la versión de el segundo equipo. Recuerde también editar las credenciales clave si cambia el **nombre del paquete** de la aplicación. Consulte [obtención de una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar el número de versión de los servicios de Google Play
 
@@ -266,4 +266,4 @@ Este código pasa el ensamblado en el que reside la clase `Xamarin.Forms.Maps.UW
 - [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Clavijas de Xamarin. Forms. Maps](~/xamarin-forms/user-interface/map/pins.md).
 - [API de Maps](xref:Xamarin.Forms.Maps)
-- [Asignar a un representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Representador personalizado de asignación](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)

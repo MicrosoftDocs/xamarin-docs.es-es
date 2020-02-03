@@ -156,4 +156,4 @@ Enhorabuena, tiene una aplicación de Watch.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
-- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Vídeo de la primera aplicación de inspección](https://blog.xamarin.com/your-first-watch-kit-app/)

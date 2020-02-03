@@ -98,7 +98,7 @@ El objeto SKPaymentTransaction no incluye el término de suscripción: debe usar
 
 Para facilitar la prueba de las suscripciones, sus duraciones se comprimen al realizar pruebas en el espacio aislado. las suscripciones de 1 semana se renuevan cada 3 minutos, 1 año suscripciones renovadas cada hora. Las suscripciones se renovarán automáticamente un máximo de 6 veces durante las pruebas en el espacio aislado.
 
-## <a name="reporting"></a>Reporting
+## <a name="reporting"></a>Notificación
 
 iTunes Connect ( [itunesconnect.Apple.com](https://itunesconnect.apple.com)) proporciona:   
 

@@ -18,7 +18,7 @@ ms.locfileid: "76725065"
 
 La instalación del Android SDK no incluye automáticamente todos los paquetes mínimos necesarios para el desarrollo. Aunque las necesidades individuales de los desarrolladores varían, normalmente se necesitarán los siguientes paquetes para desarrollar con Xamarin. Android:
 
-## <a name="tools"></a>Tools
+## <a name="tools"></a>Herramientas
 
 Instale las herramientas más recientes de la carpeta Tools en SDK Manager:
 
@@ -46,5 +46,5 @@ Necesidad de instalar plataformas de SDK para las API 15 y 23. Tenga en cuenta q
 
 Solo son necesarios si desea utilizar los emuladores de Android listos para usar de Google. Para obtener más información, consulte [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 
-## <a name="extras"></a>Elementos adicionales
+## <a name="extras"></a>Extras
 Los extras Android SDK no suelen ser necesarios; pero resulta útil ser consciente de ellos, ya que pueden ser necesarios según el caso de uso.

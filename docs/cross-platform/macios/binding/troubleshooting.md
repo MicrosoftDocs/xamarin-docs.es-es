@@ -42,7 +42,7 @@ Si ejecuta un caso en el que pasar `null` produce una `ArgumentNullException` pe
 
 ## <a name="reporting-bugs"></a>Informes de errores
 
-Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin. Mac:
+Sus comentarios son importantes. Si encuentra algún problema con Xamarin. Mac:
 
 - Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac).
 - Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues).

@@ -118,7 +118,7 @@ Estableceremos estos permisos en el manifiesto de Android. Vamos a editar **arch
 </manifest>
 ```
 
-En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para el proyecto de aplicación cliente. Por ejemplo: `com.xamarin.gcmexample`.
+En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para el proyecto de aplicación cliente. Por ejemplo, `com.xamarin.gcmexample`.
 
 ### <a name="check-for-google-play-services"></a>Comprobar Google Play Services
 
@@ -501,7 +501,7 @@ En el XML anterior, cambie *YOUR_PACKAGE_NAME* por el nombre del paquete para el
 
 Echemos un vistazo a cada una de las opciones de este XML:
 
-|Configuración de|Descripción|
+|Configuración|Descripción|
 |---|---|
 |`com.google.android.gms.gcm.GcmReceiver`|Declara que nuestra aplicación implementa un receptor de GCM que captura y procesa los mensajes entrantes de notificaciones de entrada.|
 |`com.google.android.c2dm.permission.SEND`|Declara que solo los servidores GCM pueden enviar mensajes directamente a la aplicación.|

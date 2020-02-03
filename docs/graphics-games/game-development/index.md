@@ -17,7 +17,7 @@ ms.locfileid: "76724764"
 
 El desarrollo de juegos puede ser muy emocionante, especialmente dado lo fácil que puede ser publicar su trabajo en plataformas móviles. En este artículo se describen los conceptos y las tecnologías relacionados con el desarrollo de juegos que le ayudarán a crear juegos, tanto si el objetivo es crear un juego AAA de alta calidad como si solo se va a programar para divertirse.
 
-En este artículo se tratan los siguientes temas:
+En este artículo se tratan los temas siguientes:
 
 - **Juegos frente a conceptos de programación que no son de juegos** : exploraremos algunos conceptos que son exclusivos del desarrollo de juegos o que se comparten con otros tipos de desarrollo, pero merecemos hincapié aquí debido a su importancia.
 - **Equipo de desarrollo de juegos** : en esta sección se examinan los distintos roles de un equipo de desarrolladores de juegos.

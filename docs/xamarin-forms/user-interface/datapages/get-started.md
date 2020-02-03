@@ -37,7 +37,7 @@ Agregue estos paquetes NuGet a los proyectos de aplicación y biblioteca de Xama
 
 ## <a name="2-add-theme-reference"></a>2. Agregar referencia de tema
 
-En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y asegúrese de que el tema se combina con el diccionario de recursos de la aplicación:
+En el archivo **app. Xaml** , agregue un `xmlns:mytheme` personalizado para el tema y asegúrese de que el tema se combina en el Diccionario de recursos de la aplicación:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -55,9 +55,9 @@ En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y ase
 
 ## <a name="3-add-a-xaml-page"></a>3. agregar una página XAML
 
-Agregar una nueva página XAML a la aplicación de Xamarin.Forms y *cambie la clase base* desde `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Esto debe hacerse en C# y el XAML:
+Agregue una nueva página XAML a la aplicación de Xamarin. Forms y *cambie la clase base* de `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Esto debe hacerse en C# y el XAML:
 
-**Archivo de C#**
+**C#filesystem**
 
 ```csharp
 public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was ContentPage
@@ -71,7 +71,7 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 
 **Archivo XAML**
 
-Además de cambiar el elemento raíz para `<p:ListDataPage>` el espacio de nombres personalizado `xmlns:p` también se debe agregar:
+Además de cambiar el elemento raíz a `<p:ListDataPage>` el espacio de nombres personalizado para `xmlns:p` también debe agregarse:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -85,9 +85,9 @@ Además de cambiar el elemento raíz para `<p:ListDataPage>` el espacio de nombr
 </p:ListDataPage>
 ```
 
-**Subclase de la aplicación**
+**Subclase de aplicación**
 
-Cambiar el `App` constructor de clase para que la `MainPage` está establecido en un `NavigationPage` que contiene el nuevo `SessionDataPage`. Una página de navegación *debe* usarse.
+Cambie el constructor de clase `App` para que el `MainPage` se establezca en un `NavigationPage` que contenga la nueva `SessionDataPage`. Se *debe* usar una página de navegación.
 
 ```csharp
 MainPage = new NavigationPage (new SessionDataPage ());
@@ -95,10 +95,10 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 ## <a name="3-add-the-datasource"></a>3. agregar el origen de los
 
-Eliminar el `Content` elemento y reemplazarlo con un `p:ListDataPage.DataSource` para rellenar la página con datos. En el ejemplo siguiente Json remoto se está cargando el archivo de datos desde una dirección URL.
+Elimine el elemento `Content` y reemplácelo por un `p:ListDataPage.DataSource` para rellenar la página con datos. En el ejemplo siguiente Json remoto se está cargando el archivo de datos desde una dirección URL.
 
 > [!NOTE]
-> La vista previa *requiere* un atributo `StyleClass` para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene los estilos *codificado de forma rígida* para que coincida con el origen de datos JSON que se va a usar.
+> La vista previa *requiere* un atributo `StyleClass` para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene estilos *codificados* para coincidir con el origen de datos JSON que se está usando.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,7 +115,7 @@ Eliminar el `Content` elemento y reemplazarlo con un `p:ListDataPage.DataSource`
 </p:ListDataPage>
 ```
 
-**Datos JSON**
+**Datos de JSON**
 
 A continuación se muestra un ejemplo de los datos JSON del origen de la demostración:
 
@@ -141,7 +141,7 @@ Deben dar como resultado de los pasos anteriores en una página de datos de trab
 
 Esto funciona porque el estilo predefinido **"eventos"** existe en el paquete NuGet de tema claro y tiene estilos definidos que coinciden con el origen de datos (por ejemplo, "title", "image", "presentador").
 
-Los "eventos" `StyleClass` está diseñado para mostrar el `ListDataPage` control con un personalizado `CardView` control que es definido en Xamarin.Forms.Pages. El `CardView` control tiene tres propiedades: `ImageSource`, `Text`, y `Detail`. El tema está codificado para enlazar tres campos del origen de datos (desde el archivo JSON) a estas propiedades para mostrarlas.
+El `StyleClass` "eventos" se crea para mostrar el control de `ListDataPage` con un control de `CardView` personalizado que se define en Xamarin. Forms. pages. El control `CardView` tiene tres propiedades: `ImageSource`, `Text`y `Detail`. El tema está codificado para enlazar tres campos del origen de datos (desde el archivo JSON) a estas propiedades para mostrarlas.
 
 ## <a name="5-customize"></a>5. personalizar
 
@@ -164,11 +164,11 @@ El estilo heredado puede invalidarse especificando una plantilla y usar enlaces 
 </p:ListDataPage.DefaultItemTemplate>
 ```
 
-Proporcionando un `DataTemplate` este código invalida el `StyleClass` y en su lugar, usa el diseño predeterminado para un `ListItemControl`.
+Al proporcionar un `DataTemplate` este código invalida el `StyleClass` y, en su lugar, utiliza el diseño predeterminado para un `ListItemControl`.
 
 [![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
 
-Los programadores que prefieren C# o XAML puede crear datos de origen enlaces demasiado (Recuerde incluir un `using Xamarin.Forms.Pages;` instrucción):
+Los desarrolladores que C# prefieren XAML también pueden crear enlaces de origen de datos (Recuerde incluir una instrucción `using Xamarin.Forms.Pages;`):
 
 ```csharp
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
@@ -176,7 +176,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 Es un poco más trabajo crear temas desde cero, pero las versiones preliminares futuras harán que esto sea más fácil.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 <a name="loadtheme" />
 
@@ -186,7 +186,7 @@ En la versión preliminar, los temas no pueda cargar en tiempo de ejecución. Ag
 
 **iOS**
 
-En el **AppDelegate.cs** agregue las líneas siguientes después de `LoadApplication`
+En **AppDelegate.CS** , agregue las siguientes líneas después de `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -196,7 +196,7 @@ x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 
 **Android**
 
-En el **MainActivity.cs** agregue las líneas siguientes después de `LoadApplication`
+En **MainActivity.CS** , agregue las siguientes líneas después de `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);

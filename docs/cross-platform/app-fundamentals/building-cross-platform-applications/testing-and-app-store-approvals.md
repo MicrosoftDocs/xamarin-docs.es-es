@@ -15,7 +15,7 @@ ms.locfileid: "76723626"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
-## <a name="testing"></a>Pruebas
+## <a name="testing"></a>Prueba
 
 Muchas aplicaciones (incluso las aplicaciones Android, en algunas tiendas) tendrán que superar un proceso de aprobación antes de que se publiquen; por lo tanto, la prueba es fundamental para garantizar que la aplicación alcanza el mercado (por lo que solo se realiza correctamente con los clientes). Las pruebas pueden adoptar muchas formas, desde pruebas unitarias de nivel de desarrollador hasta la administración de pruebas beta a través de una amplia variedad de hardware.
 

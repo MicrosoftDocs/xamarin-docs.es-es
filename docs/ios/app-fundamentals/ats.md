@@ -239,7 +239,7 @@ Dentro de Visual Studio para Mac, haga doble clic en el archivo de `Info.plist` 
 [![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> Si la aplicación requiere una conexión a un sitio web inseguro, **siempre** debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar completamente el ATS con `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` solo debe usarse en situaciones de emergencias extremas.
+> Si la aplicación requiere una conexión a un sitio web inseguro, **siempre** debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar completamente el ATS con `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` solo se debe usar en situaciones extremas de emergencia.
 
 De nuevo, la deshabilitación de ATS _solo_ debe usarse como último recurso, si el cambio a conexiones seguras no está disponible o no es práctico.
 
@@ -253,4 +253,4 @@ En este artículo se ha introducido la seguridad de transporte de aplicaciones (
 
 - [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

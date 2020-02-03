@@ -40,7 +40,7 @@ Además de las mejoras de la interfaz de usuario que se han incorporado a travé
 
 - **Nuevas api** &ndash; Android 5,0 agrega nuevas API para la compatibilidad con varias redes, conectividad Bluetooth mejorada, administración de almacenamiento más sencilla y un control más flexible de los reproductores multimedia y los dispositivos de cámara. Hay disponible una nueva característica de programación de trabajos para ejecutar tareas de forma asincrónica a horas programadas. Esta característica ayuda a mejorar la duración de la batería, por ejemplo, la programación de tareas que se deben realizar cuando el dispositivo está conectado y cargándose.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Para usar las nuevas características de Android 5,0 en aplicaciones basadas en Xamarin, se requiere lo siguiente:
 
@@ -418,7 +418,7 @@ Además, puede usar la nueva clase `Android.App.Notification.MediaStyle` para as
 
 Para obtener más información acerca de las nuevas características de control de reproducción multimedia en Android 5,0, consulte [multimedia](https://developer.android.com/about/versions/android-5.0.html#Media).
 
-### <a name="storage"></a>Almacenamiento de
+### <a name="storage"></a>Storage
 
 Android 5,0 actualiza el marco de acceso de almacenamiento para que las aplicaciones funcionen con directorios y documentos más fácilmente:
 

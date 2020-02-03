@@ -1,5 +1,5 @@
 ---
-title: Mensajería en la nube de Firebase
+title: Firebase Cloud Messaging
 description: Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. En este artículo se proporciona información general sobre cómo funciona FCM y se explica cómo configurar Google Services para que la aplicación pueda usar FCM.
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76723786"
 ---
-# <a name="firebase-cloud-messaging"></a>Mensajería en la nube de Firebase
+# <a name="firebase-cloud-messaging"></a>Firebase Cloud Messaging
 
 _Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. En este artículo se proporciona información general sobre cómo funciona FCM y se explica cómo configurar Google Services para que la aplicación pueda usar FCM._
 
@@ -22,7 +22,7 @@ _Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre
 
 En este tema se proporciona información general de alto nivel sobre cómo Firebase Cloud Messaging enruta los mensajes entre la aplicación de Xamarin. Android y un servidor de aplicaciones, y proporciona un procedimiento paso a paso para adquirir credenciales para que la aplicación pueda usar los servicios de FCM.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Firebase Cloud Messaging (FCM) es un servicio multiplataforma que controla el envío, el enrutamiento y la puesta en cola de los mensajes entre las aplicaciones de servidor y las aplicaciones de cliente móvil. FCM es el sucesor de Google Cloud Messaging (GCM) y se basa en Google Play Services.
 
@@ -141,7 +141,7 @@ Antes de poder usar FCM Services en la aplicación, debe crear un nuevo proyecto
 
 Para obtener un ejemplo detallado de cómo agregar **Google-Services. JSON** a un proyecto de aplicación para recibir mensajes de notificación de envío de FCM en Android, consulte [notificaciones remotas con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-## <a name="for-further-reading"></a>Para obtener más información
+## <a name="for-further-reading"></a>Lecturas adicionales
 
 - La [mensajería en la nube Firebase](https://firebase.google.com/docs/cloud-messaging/) de Google proporciona una visión general de las funcionalidades clave de la mensajería en la nube de Firebase, una explicación de cómo funciona y las instrucciones de configuración.
 
@@ -157,4 +157,4 @@ En este artículo se proporciona información general sobre Firebase Cloud Messa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Mensajería en la nube de Firebase](https://firebase.google.com/docs/cloud-messaging/)
+- [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)

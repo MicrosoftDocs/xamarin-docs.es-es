@@ -18,7 +18,7 @@ ms.locfileid: "76724349"
 
 _Xamarin. Android permite escribir aplicaciones Android con C# en lugar de Java. Se proporcionan varios ensamblados con Xamarin. Android que proporcionan enlaces para las bibliotecas de Java, incluidos mono. Android. dll y mono. Android. GoogleMaps. dll. Sin embargo, no se proporcionan enlaces para cada posible biblioteca Java, y los enlaces que se proporcionan no pueden enlazar todos los tipos y miembros de Java. Para usar tipos y miembros de Java sin enlazar, se puede usar la interfaz nativa de Java (JNI). En este artículo se muestra cómo usar JNI para interactuar con tipos y miembros de Java desde aplicaciones de Xamarin. Android._
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 No siempre es necesario o no es posible crear un contenedor al que se puede llamar (MCW) administrado para invocar código Java. En muchos casos, el JNI "inline" es absolutamente aceptable y útil para el uso único de miembros de Java sin enlazar. A menudo es más fácil usar JNI para invocar un solo método en una clase de Java que generar un enlace jar completo.
 
@@ -34,7 +34,7 @@ En este documento se explica:
 - Cómo exponer métodos virtuales para permitir el reemplazo desde código administrado.
 - Cómo exponer interfaces.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 JNI, tal y como se expone a través del [espacio de nombres Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv), está disponible en todas las versiones de Xamarin. Android.
 Para enlazar tipos e interfaces de Java, debe usar Xamarin. Android 4,0 o posterior.
@@ -77,7 +77,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-### <a name="implementation-details"></a>Detalles de implementación
+### <a name="implementation-details"></a>Detalles de la implementación
 
 *En el resto de este artículo se proporcionan detalles de implementación que están sujetos a cambios sin previo aviso* (y se muestran aquí solo porque los desarrolladores pueden tener curiosidad sobre lo que está ocurriendo en el capó).
 
@@ -393,7 +393,7 @@ public Integer (int value)
 }
 ```
 
-Los métodos [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) son auxiliares para realizar una `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`y `JNIEnv.DeleteGlobalReference` en el valor devuelto desde `JNIEnv.FindClass`. Para obtener más información, vea la siguiente sección.
+Los métodos [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) son auxiliares para realizar una `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`y `JNIEnv.DeleteGlobalReference` en el valor devuelto desde `JNIEnv.FindClass`. Consulte la siguiente sección para obtener información detallada.
 
 <a name="_Supporting_Inheritance,_Interfaces_1" />
 
@@ -665,7 +665,7 @@ Al escribir un tipo que coincida con los criterios siguientes:
 
 1. Tiene un atributo personalizado `[Register]`
 
-1. `RegisterAttribute.DoNotGenerateAcw` es `true`
+1. `RegisterAttribute.DoNotGenerateAcw` es `true`.
 
 A continuación, para la interacción de GC, el tipo *no debe* tener ningún campo que pueda hacer referencia a una subclase `Java.Lang.Object` o `Java.Lang.Object` en tiempo de ejecución. Por ejemplo, no se permiten los campos de tipo `System.Object` y cualquier tipo de interfaz. Se permiten los tipos que no pueden hacer referencia a `Java.Lang.Object` instancias, como `System.String` y `List<int>`. Esta restricción es impedir la recolección de objetos prematura por parte del GC.
 
@@ -1314,7 +1314,7 @@ En general, se recomienda *encarecidamente* usar el comando `javap` para determi
 Las referencias de tipo JNI son diferentes de las referencias de tipo de Java. No puede usar nombres de tipo Java completos como `java.lang.String` con JNI; en su lugar, debe usar las variaciones de JNI `"java/lang/String"` o `"Ljava/lang/String;"`, dependiendo del contexto; Consulte a continuación para obtener más información.
 Hay cuatro tipos de referencias de tipo JNI:
 
-- **built-in**
+- **integrado**
 - **representaciones**
 - **type**
 - **array**

@@ -15,11 +15,11 @@ ms.locfileid: "76725283"
 ---
 # <a name="getting-started-with-macos"></a>Introducción a macOS
 
-## <a name="what-you-will-need"></a>Lo que necesitará
+## <a name="what-you-will-need"></a>Qué necesitará
 
 * Siga las instrucciones de la guía [Getting Started with Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) .
 
-## <a name="hello-world"></a>Hola a todos
+## <a name="hello-world"></a>Hello World
 
 En primer lugar, cree un ejemplo Hola mundo C#sencillo en.
 
@@ -40,7 +40,7 @@ public class MyNSView : NSTextView
 }
 ```
 
-Generar el proyecto. El ensamblado resultante se guardará como **~/Projects/Hello-from-CSharp/Hello-from-CSharp/bin/Debug/Hello-from-CSharp.dll**.
+Compile el proyecto. El ensamblado resultante se guardará como **~/Projects/Hello-from-CSharp/Hello-from-CSharp/bin/Debug/Hello-from-CSharp.dll**.
 
 ### <a name="bind-the-managed-assembly"></a>Enlazar el ensamblado administrado
 

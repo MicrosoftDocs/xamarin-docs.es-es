@@ -28,7 +28,7 @@ Proporcionar la funcionalidad de compra desde la aplicación requiere una serie 
 
 En este documento se explica cómo completar todos estos pasos para proporcionar compras desde la aplicación mediante Xamarin. iOS.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Para admitir la compra desde la aplicación, debe usar Xamarin. iOS 5,0 o una versión más reciente con Xcode 7 y versiones posteriores.
 

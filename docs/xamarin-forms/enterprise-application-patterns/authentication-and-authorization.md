@@ -20,7 +20,7 @@ La autenticación es el proceso de obtención de credenciales de identificación
 
 Hay muchos enfoques para integrar la autenticación y la autorización en una aplicación de Xamarin. Forms que se comunica con una aplicación web MVC de ASP.NET, incluido el uso de ASP.NET Core identidad, proveedores de autenticación externos como Microsoft, Google, Facebook, Twitter y middleware de autenticación. La aplicación móvil eShopOnContainers realiza la autenticación y la autorización con un microservicio de identidad en contenedor que usa IdentityServer 4. La aplicación móvil solicita tokens de seguridad de IdentityServer, ya sea para autenticar a un usuario o para tener acceso a un recurso. Para que IdentityServer emita tokens en nombre de un usuario, el usuario debe iniciar sesión en IdentityServer. Sin embargo, IdentityServer no proporciona una interfaz de usuario ni una base de datos para la autenticación. Por lo tanto, en la aplicación de referencia eShopOnContainers, se utiliza ASP.NET Core identidad para este propósito.
 
-## <a name="authentication"></a>Autenticación
+## <a name="authentication"></a>Authentication
 
 La autenticación es necesaria cuando una aplicación necesita conocer la identidad del usuario actual. El mecanismo principal de ASP.NET Core para identificar usuarios es el sistema de pertenencia ASP.NET Core identidad, que almacena información de usuario en un almacén de datos configurado por el desarrollador. Normalmente, este almacén de datos será un almacén de EntityFramework, aunque se pueden usar almacenes personalizados o paquetes de terceros para almacenar información de identidad en Azure Storage, Azure Cosmos DB u otras ubicaciones.
 
@@ -389,7 +389,7 @@ Para obtener información sobre la navegación de páginas, consulte [navegació
 
 <a name="authorization" />
 
-## <a name="authorization"></a>Autorización
+## <a name="authorization"></a>Authorization
 
 Después de la autenticación, ASP.NET Core API Web a menudo necesitan autorizar el acceso, lo que permite a un servicio poner API a disposición de algunos usuarios autenticados, pero no de todos.
 
@@ -406,7 +406,7 @@ public class BasketController : Controller
 Si un usuario no autorizado intenta tener acceso a un controlador o una acción marcados con el atributo `Authorize`, el marco de MVC devuelve un código de Estado HTTP 401 (no autorizado).
 
 > [!NOTE]
-> Los parámetros se pueden especificar en el atributo `Authorize` para restringir una API a usuarios específicos. Para obtener más información, vea [autorización](/aspnet/core/security/authorization/introduction/).
+> Los parámetros se pueden especificar en el atributo `Authorize` para restringir una API a usuarios específicos. Para más información, consulte [Autorización](/aspnet/core/security/authorization/introduction/).
 
 IdentityServer se puede integrar en el flujo de trabajo de autorización para que los tokens de acceso proporcionen autorización de control. Este enfoque se muestra en la figura 9-5.
 
