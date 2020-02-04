@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: fa152418c40ac61df15e8a22b838d012935bee4b
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.openlocfilehash: c28f849f772bb496b526552745a0aea1c2e08e62
+  ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/06/2020
-  ms.locfileid: "75679719"
+  ms.lasthandoff: 02/01/2020
+  ms.locfileid: "76940704"
 highlightedContent:
   items:
   - title: Configuración e instalación
@@ -140,7 +140,7 @@ additionalContent:
       summary: API multiplataforma para características de dispositivo comunes.
       url: ~/essentials/index.md
     - title: Acceso a un servicio web de REST
-      summary: Comparta código mediante tecnologías de control de versiones como Git y TFVC.
+      summary: Integración e interacción con servicios web mediante HTTP y JSON
       url: ~/xamarin-forms/data-cloud/web-services/rest.md
     - title: Implementación en dispositivos Android y iOS
       summary: Cargue la aplicación en dispositivos de prueba y tiendas de aplicaciones.
