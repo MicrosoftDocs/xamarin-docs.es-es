@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7e9010eb579f28e62b5f7ab72ac061e9898e7ecf
+ms.sourcegitcommit: a9b180651863cb7da31d3af14182fe3ad44796f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022001"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971536"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotaciones y superposiciones en Xamarin. iOS
 
@@ -80,7 +80,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     ```
 
-1. Cree una nueva instancia de `MapDelegate` y asígnela al `Delegate` de la `MKMapView`. Una vez más, implcodeentemos el `MapDelegate` en breve:
+1. Cree una nueva instancia de `MapDelegate` y asígnela al `Delegate` de la `MKMapView`. Una vez más, implementaremos el `MapDelegate` en breve:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -107,7 +107,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     y cadena:
 
-    `Maps Walkthrough Docs Sample`Operador
+    `Maps Walkthrough Docs Sample`.
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs: una clase para anotaciones personalizadas
 
@@ -245,7 +245,7 @@ Esto completa el código de `ViewDidLoad`. Ahora tenemos que implementar la clas
     }
     ```
 
-1. Para ocultar la imagen cuando el usuario anule la selección de la anotación punteando en cualquier otra parte del mapa, implemente el método `DidSelectAnnotationView` como se indica a continuación:
+1. Para ocultar la imagen cuando el usuario anule la selección de la anotación punteando en cualquier otra parte del mapa, implemente el método `DidDeselectAnnotationView` como se indica a continuación:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
