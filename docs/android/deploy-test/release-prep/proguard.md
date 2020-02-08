@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 1ae7850951060f2e89a953ce554a0dbfa286c3a1
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488000"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940692"
 ---
 # <a name="proguard"></a>ProGuard
 

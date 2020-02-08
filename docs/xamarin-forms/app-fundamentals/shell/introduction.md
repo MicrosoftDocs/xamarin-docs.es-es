@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 3e63a580bbdb1c220d44b100725cdc8ce387b405
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: cb2ae3afe9db86d4db603d499ef0e75e7cbbf552
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696515"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940402"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introducción a Xamarin.Forms Shell
 
@@ -38,6 +38,8 @@ El Shell de Xamarin.Forms está totalmente disponible en iOS y Android, pero sol
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
+Para obtener información sobre cómo agregar un proyecto de UWP a una solución de Xamarin.Forms, vea [Proyectos de instalación de Windows](~/xamarin-forms/platform/windows/installation/index.md).
+
 ## <a name="shell-navigation-experience"></a>Experiencia de navegación de Shell
 
 Shell ofrece una experiencia de navegación bien fundamentada basada en controles flotantes y pestañas. El nivel superior del panel de navegación en una aplicación de Shell es un control flotante o una barra de pestañas inferior, según los requisitos de navegación de la aplicación. El ejemplo siguiente muestra una aplicación donde el nivel superior de navegación es un control flotante:
@@ -51,7 +53,7 @@ Al seleccionar un elemento de control flotante, se selecciona y muestra la pesta
 > [!NOTE]
 > Cuando el control flotante no está abierto, la barra de pestañas inferior se puede considerar el nivel superior de navegación en la aplicación.
 
-Cada pestaña muestra un objeto [ `ContentPage`](xref:Xamarin.Forms.ContentPage). Sin embargo, si una pestaña inferior contiene más de una página, las páginas son navegables mediante la barra de pestañas superior:
+Cada pestaña muestra un objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Sin embargo, si una pestaña inferior contiene más de una página, las páginas son navegables mediante la barra de pestañas superior:
 
 [![Captura de pantalla de pestañas superiores de Shell en iOS y Android](introduction-images/cats.png "Pestañas superiores de Shell")](introduction-images/cats-large.png#lightbox "Pestañas superiores de Shell")
 

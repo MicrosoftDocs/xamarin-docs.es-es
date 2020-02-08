@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771563"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940377"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
@@ -44,7 +44,7 @@ La página **Formato de cadena** muestra varios usos de la propiedad `StringForm
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
 
@@ -123,7 +123,7 @@ Los conjuntos de la última sección establecen el `BindingContext` al valor de 
 
 Esta es la ejecución del programa:
 
-[![Formato de cadena](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png#lightbox "String Formatting")
+[![Formato de cadena](string-formatting-images/stringformatting-small.png "Formato de cadena")](string-formatting-images/stringformatting-large.png#lightbox "Formato de cadena")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModels y formato de cadena
 
@@ -176,7 +176,7 @@ Este método se muestra en el ejemplo **Mejor selector de colores**, que usa el 
 
 Ahora hay tres pares de elementos `Slider` y `Label` que están enlazados a la misma propiedad de origen en el objeto `HslColorViewModel`. La única diferencia es que `Label` tiene una propiedad `StringFormat` para mostrar cada valor `Slider`.
 
-[![Mejor selector de color](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png#lightbox "Better Color Selector")
+[![Mejor selector de colores](string-formatting-images/bettercolorselector-small.png "Mejor selector de colores")](string-formatting-images/bettercolorselector-large.png#lightbox "Mejor selector de colores")
 
 Tal vez se pregunte cómo podría mostrar sus valores RGB (rojos, verdes y azules) en formato hexadecimal de dos dígitos tradicional. Los valores enteros no están directamente disponibles desde la estructura de `Color`. Una solución sería calcular valores enteros de los componentes de color dentro de ViewModel y exponerlos como propiedades. Después puede aplicarles formato utilizando la especificación de formato `X2`.
 

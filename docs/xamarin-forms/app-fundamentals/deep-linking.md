@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ff5c7cb36305780d12b5fd69b7cbadec0eaef551
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771560"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940323"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
@@ -29,7 +29,7 @@ La indexación de la aplicación y la vinculación en profundidad de Xamarin.For
 
 La aplicación de ejemplo muestra una aplicación de lista de tareas pendientes en la que los datos se almacenan en una base de datos SQLite local, tal como aparece en las siguientes capturas de pantalla:
 
-![](deep-linking-images/screenshots.png "Aplicación de lista de tareas pendientes")
+![](deep-linking-images/screenshots.png "TodoList Application")
 
 Se indexan todas las instancias del elemento `TodoItem` que crea el usuario. A continuación, se puede usar una búsqueda específica de la plataforma para localizar los datos indexados de la aplicación. Cuando el usuario pulsa un resultado de la búsqueda de la aplicación, esta se inicia, se navega al elemento `TodoItemPage` y se muestra el elemento `TodoItem` al que se hace referencia desde el vínculo profundo.
 
@@ -79,6 +79,9 @@ AndroidAppLinks.Init(this);
 ```
 
 Al agregar **google-services.json** al proyecto (y al establecer la acción de compilación *GoogleServicesJson*\*), el proceso de compilación extraerá la clave de API y el id. de cliente. A continuación, las credenciales se agregarán al archivo de manifiesto generado.
+
+> [!NOTE]
+> En este artículo, los términos vínculos de aplicación y vínculos profundos suelen usarse indistintamente. Sin embargo, en Android estos términos tienen significados diferentes. En Android, un vínculo profundo es un filtro de intención que permite a los usuarios especificar directamente una actividad concreta en la aplicación. Al hacer clic en un vínculo profundo se puede abrir un cuadro de diálogo de desambiguación, que permite al usuario seleccionar una de las distintas aplicaciones que pueden controlar la dirección URL. Un vínculo de aplicación de Android es un vínculo profundo basado en la dirección URL de su sitio web, que se ha verificado que pertenece al sitio web. Al hacer clic en un vínculo de aplicación, se abre la aplicación si está instalada, sin que se abra un cuadro de diálogo de desambiguación.
 
 Para obtener más información, vea [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) (Contenido de vínculos profundos con la navegación de direcciones URL Xamarin.Forms) en el blog de Xamarin.
 
@@ -135,7 +138,7 @@ Esto agrega la instancia [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) a la 
 
 Una vez que la instancia [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) se ha registrado para la indexación, esta puede aparecer en los resultados de la búsqueda. La siguiente captura de pantalla muestra el contenido indexado que aparece en los resultados de la búsqueda en la plataforma iOS:
 
-![](deep-linking-images/ios-search.png "Contenido indexado en los resultados de la búsqueda en iOS")
+![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## <a name="de-registering-indexed-content"></a>Anulación del registro del contenido indexado
 

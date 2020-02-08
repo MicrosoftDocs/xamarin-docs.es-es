@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028136"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940634"
 ---
 # <a name="building-abi-specific-apks"></a>Compilar APK específicos de ABI
 
@@ -65,16 +65,16 @@ En el siguiente diagrama se ilustra la posición de cada código descrito en la 
 Google Play garantiza que se entrega el APK correcto al dispositivo en función del valor de `versionCode` y la configuración de APK. El APK con el código de versión más alto se entrega al dispositivo. Por ejemplo, una aplicación podría tener tres APK con los siguientes códigos de versión:
 
 - 11413456: la ABI es `armeabi`; tiene como destino el nivel de API 14; pantallas de pequeña a grande; con un número de versión de 456.
-- 21423456: la ABI es `armeabi-v7a`; tiene como destino el nivel de API 14; pantallas de normal a grande; con un número de versión de 456.
-- 61423456: la ABI es `x86`; tiene como destino el nivel de API 14; pantallas de normal a grande; con un número de versión de 456.
+- 21423456: la ABI es `armeabi-v7a`; tiene como destino el nivel de API 14; pantallas normales y grandes; con un número de versión de 456.
+- 61423456: la ABI es `x86`; tiene como destino el nivel de API 14; pantallas normales y grandes; con un número de versión de 456.
 
 Para continuar con este ejemplo, imagine que se corrigió un error que era específico de `armeabi-v7a`. La versión de la aplicación aumenta a 457 y se crea un nuevo APK con `android:versionCode` establecido en 21423457. Los códigos de versión para `armeabi` y las versiones `x86` permanecen igual.
 
 Imagine ahora que la versión x86 recibe algunas actualizaciones o correcciones de errores que tienen como destino una API más reciente (nivel de API 19), de modo que se convierte en la versión 500 de la aplicación. El nuevo valor de `versionCode` cambiaría a 61923500 mientras que armeabi/armeabi-v7a permanecen sin cambios. En este momento, los códigos de versión serían:
 
-- 11413456: la ABI es `armeabi`; tiene como destino el nivel de API 14; pantallas de pequeña a grande; con un número de versión de 456.
-- 21423457: la ABI es `armeabi-v7a`; tiene como destino el nivel de API 14; pantallas de normal a grande; con un número de versión de 456.
-- 61923500: la ABI es `x86`; tiene como destino el nivel de API 19; pantallas de normal a grande; con un número de versión de 500.
+- 11413456: la ABI es `armeabi`; tiene como destino el nivel de API 14; pantallas de pequeña a grande; con un nombre de versión de 456.
+- 21423457: la ABI es `armeabi-v7a`; tiene como destino el nivel de API 14; pantallas normales y grandes; con un nombre de versión de 457.
+- 61923500: la ABI es `x86`; tiene como destino el nivel de API 19; pantallas normales y grandes; con un nombre de versión de 500.
 
 Mantener estos códigos de versión de forma manual puede ser una carga considerable para el desarrollador. El proceso de calcular el valor correcto de `android:versionCode` y luego generar el APK debería automatizarse.
 En el tutorial al final de este documento, se incluye un ejemplo de cómo hacerlo.
@@ -95,19 +95,19 @@ La mejor manera de compilar el APK por ABI es usar `xbuild` o `msbuild`, como se
 
 En la lista siguiente se explica cada parámetro de línea de comandos:
 
-- `/t:Package`: crea un APK de Android que se firma con el almacén de claves de depuración.
+- `/t:Package` &ndash;: crea un APK de Android que se firma con el almacén de claves de depuración.
 
-- `/p:AndroidSupportedAbis=<TARGET_ABI>`: es la ABI para el destino. Debe ser `armeabi`, `armeabi-v7a` o `x86`.
+- `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash;: es la ABI para el destino. Debe ser `armeabi`, `armeabi-v7a` o `x86`.
 
-- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/`: es el directorio que contendrá los archivos intermedios que se crean como parte de la compilación. Si es necesario, Xamarin.Android creará un directorio con nombre después de la ABI, como `obj.armeabi-v7a`. Se recomienda usar una carpeta para cada ABI, ya que, de esta manera, se evitan problemas que pueden dar lugar a la pérdida de archivos entre una compilación y otra. Tenga en cuenta que este valor se termina con un separador de directorio (una `/` en el caso de OS X).
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash;: es el directorio que contendrá los archivos intermedios que se crean como parte de la compilación. Si es necesario, Xamarin.Android creará un directorio con nombre después de la ABI, como `obj.armeabi-v7a`. Se recomienda usar una carpeta para cada ABI, ya que, de esta manera, se evitan problemas que pueden dar lugar a la pérdida de archivos entre una compilación y otra. Tenga en cuenta que este valor se termina con un separador de directorio (una `/` en el caso de OS X).
 
-- `/p:AndroidManifest`: esta propiedad especifica la ruta de acceso al archivo **AndroidManifest.XML** que se usará durante la compilación.
+- `/p:AndroidManifest` &ndash;: esta propiedad especifica la ruta de acceso al archivo **AndroidManifest.XML** que se usará durante la compilación.
 
-- `/p:OutputPath=bin.<TARGET_ABI>`: es el directorio que albergará el APK final. Xamarin.Android creará un directorio con nombre después de la ABI, por ejemplo `bin.armeabi-v7a`.
+- `/p:OutputPath=bin.<TARGET_ABI>` &ndash;: es el directorio que albergará el APK final. Xamarin.Android creará un directorio con nombre después de la ABI, por ejemplo `bin.armeabi-v7a`.
 
-- `/p:Configuration=Release`: realiza una compilación de versión del APK. Las compilaciones de depuración no se pueden cargar en Google Play.
+- `/p:Configuration=Release` &ndash;: realiza una compilación de versión del APK. Las compilaciones de depuración no se pueden cargar en Google Play.
 
-- `<CS_PROJ FILE>`: es la ruta de acceso al archivo `.csproj` del proyecto de Xamarin.Android.
+- `<CS_PROJ FILE>` &ndash;: es la ruta de acceso al archivo `.csproj` del proyecto de Xamarin.Android.
 
 ### <a name="sign-and-zipalign-the-apk"></a>Iniciar sesión y usar Zipalign con el APK
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771644"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940342"
 ---
 # <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
 
@@ -40,7 +40,7 @@ Ese y otros muchos ejemplos se muestran en la página **Variaciones de la ruta d
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:globe="clr-namespace:System.Globalization;assembly=mscorlib"
+             xmlns:globe="clr-namespace:System.Globalization;assembly=netstandard"
              x:Class="DataBindingDemos.PathVariationsPage"
              Title="Path Variations"
              x:Name="page">
@@ -138,7 +138,7 @@ Ese elemento secundario es un control `Label`, que tiene una propiedad `Text` de
 
 Esta es la ejecución del programa:
 
-[![Variaciones de la ruta de acceso](binding-path-images/pathvariations-small.png "Path Variations")](binding-path-images/pathvariations-large.png#lightbox "Path Variations")
+[![Variaciones de ruta de acceso](binding-path-images/pathvariations-small.png "Variaciones de ruta de acceso")](binding-path-images/pathvariations-large.png#lightbox "Variaciones de ruta de acceso")
 
 ## <a name="debugging-complex-paths"></a>Depuración de rutas de acceso complejas
 
