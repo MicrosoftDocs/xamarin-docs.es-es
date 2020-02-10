@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 9213e893d222e26168940e09a93e158d1e74d8dc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.date: 02/07/2020
+ms.openlocfilehash: eff7dff15fb75859d43923f71696bccf1b0e2cc5
+ms.sourcegitcommit: 87b818373d83fd3a6856c4b5a702b013a731b5ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725582"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77069654"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Inicialización y configuración del mapa de Xamarin. Forms
 
@@ -234,6 +234,9 @@ El efecto general de este código es que cuando la aplicación solicita la ubica
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
 En UWP, la aplicación debe autenticarse para poder mostrar un mapa y consumir servicios de mapa. Para autenticar la aplicación, debe especificar una clave de autenticación de maps. Para obtener más información, consulte [solicitar una clave de autenticación de Maps](/windows/uwp/maps-and-location/authentication-key). El token de autenticación debe especificarse en la llamada al método `FormsMaps.Init("AUTHORIZATION_TOKEN")` para autenticar la aplicación con mapas de Bing.
+
+> [!NOTE]
+> En UWP, para usar servicios de mapa como geocodificación, también debe establecer la propiedad `MapService.ServiceToken` en el valor de la clave de autenticación. Esto puede realizarse con la siguiente línea de código: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 Además, si la aplicación necesita tener acceso a la ubicación del usuario, debe habilitar la funcionalidad de ubicación en el manifiesto del paquete. Esto se puede lograr de la siguiente manera:
 
