@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: caee3eeda90a560f032c17657072ae5ba5023a69
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659905"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135163"
 ---
 En este ejercicio, creará una interfaz de usuario para consumir las clases de acceso a datos creadas anteriormente.
 
@@ -36,7 +36,7 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consta de dos instancias de [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y un elemento [`ListView`](xref:Xamarin.Forms.ListView) en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Cada `Entry` tiene su conjunto de propiedades [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), que especifica el texto de marcador de posición que se muestra antes de la entrada del usuario. El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. El elemento `ListView` establece su propiedad [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que usa una [`TextCell`](xref:Xamarin.Forms.TextCell) para definir la apariencia de cada fila de [`ListView`](xref:Xamarin.Forms.ListView). El elemento `TextCell` enlaza los datos de sus propiedades [`Text`](xref:Xamarin.Forms.TextCell.Text) y [`Detail`](xref:Xamarin.Forms.TextCell.Detail) con las propiedades `Name` y `Age` de cada objeto `Person`, respectivamente.
+    Este código define mediante declaración la interfaz de usuario de la página, que consta de dos instancias de [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y un elemento [`ListView`](xref:Xamarin.Forms.ListView) en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Cada `Entry` tiene su conjunto de propiedades [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), que especifica el texto de marcador de posición que se muestra antes de la entrada del usuario. El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. El elemento `ListView` establece su propiedad [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que usa una [`TextCell`](xref:Xamarin.Forms.TextCell) para definir la apariencia de cada fila de [`ListView`](xref:Xamarin.Forms.ListView). El elemento `TextCell` enlaza los datos de sus propiedades [`Text`](xref:Xamarin.Forms.TextCell.Text) y [`Detail`](xref:Xamarin.Forms.TextCell.Detail) con las propiedades `Name` y `Age` de cada objeto `Person`, respectivamente.
 
     Además, las instancias de [`Entry`](xref:Xamarin.Forms.Entry) y el elemento [`ListView`](xref:Xamarin.Forms.ListView) tienen los nombres especificados con el atributo `x:Name`. Esto permite al archivo de código subyacente acceder a estos objetos mediante los nombre asignados.
 
@@ -106,7 +106,7 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consta de dos instancias de [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y un elemento [`ListView`](xref:Xamarin.Forms.ListView) en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Cada `Entry` tiene su conjunto de propiedades [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), que especifica el texto de marcador de posición que se muestra antes de la entrada del usuario. El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. El elemento `ListView` establece su propiedad [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que usa una [`TextCell`](xref:Xamarin.Forms.TextCell) para definir la apariencia de cada fila de [`ListView`](xref:Xamarin.Forms.ListView). El elemento `TextCell` enlaza los datos de sus propiedades [`Text`](xref:Xamarin.Forms.TextCell.Text) y [`Detail`](xref:Xamarin.Forms.TextCell.Detail) con las propiedades `Name` y `Age` de cada objeto `Person`, respectivamente.
+    Este código define mediante declaración la interfaz de usuario de la página, que consta de dos instancias de [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y un elemento [`ListView`](xref:Xamarin.Forms.ListView) en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Cada `Entry` tiene su conjunto de propiedades [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), que especifica el texto de marcador de posición que se muestra antes de la entrada del usuario. El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. El elemento `ListView` establece su propiedad [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que usa una [`TextCell`](xref:Xamarin.Forms.TextCell) para definir la apariencia de cada fila de [`ListView`](xref:Xamarin.Forms.ListView). El elemento `TextCell` enlaza los datos de sus propiedades [`Text`](xref:Xamarin.Forms.TextCell.Text) y [`Detail`](xref:Xamarin.Forms.TextCell.Detail) con las propiedades `Name` y `Age` de cada objeto `Person`, respectivamente.
 
     Además, las instancias de [`Entry`](xref:Xamarin.Forms.Entry) y el elemento [`ListView`](xref:Xamarin.Forms.ListView) tienen los nombres especificados con el atributo `x:Name`. Esto permite al archivo de código subyacente acceder a estos objetos mediante los nombre asignados.
 

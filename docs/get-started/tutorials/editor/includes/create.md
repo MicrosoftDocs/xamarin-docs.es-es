@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: fe7e11f37f303c2ec1f5bc58e98953449694191c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277452"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135023"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Editor`](xref:Xamarin.Forms.Editor) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Editor` aparece por primera vez. Además, la propiedad [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica el alto del elemento `Editor` en unidades independientes de dispositivo.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Editor`](xref:Xamarin.Forms.Editor) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Editor` aparece por primera vez. Además, la propiedad [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica el alto del elemento `Editor` en unidades independientes de dispositivo.
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
@@ -65,7 +65,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Editor`](xref:Xamarin.Forms.Editor) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Editor` aparece por primera vez. Además, la propiedad [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica el alto del elemento `Editor` en unidades independientes de dispositivo.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Editor`](xref:Xamarin.Forms.Editor) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Editor` aparece por primera vez. Además, la propiedad [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica el alto del elemento `Editor` en unidades independientes de dispositivo.
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 

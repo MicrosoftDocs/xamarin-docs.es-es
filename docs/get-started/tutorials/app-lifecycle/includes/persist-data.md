@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67841442"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135147"
 ---
 La subclase [`Application`](xref:Xamarin.Forms.Application) tiene un diccionario [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que se puede usar para almacenar datos a lo largo de los cambios de estado del ciclo de vida. Este diccionario usa una clave `string` y almacena un valor `object`. El diccionario se guarda automáticamente en el dispositivo y se vuelve a rellenar cuando se reinicia la aplicación.
 
@@ -82,7 +82,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez, y se registra un controlador de eventos denominado `OnEntryCompleted` con el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Además, el objeto `Entry` tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto `Entry` con el nombre que se le ha asignado.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez, y se registra un controlador de eventos denominado `OnEntryCompleted` con el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Además, el objeto `Entry` tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto `Entry` con el nombre que se le ha asignado.
 
 1. En el **Explorador de soluciones**, en el proyecto **AppLifecycleTutorial**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo. Después, en **MainPage.xaml.cs**, agregue una invalidación del método `OnAppearing` y el controlador de eventos `OnEntryCompleted` a la clase:
 
@@ -100,7 +100,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
     }
     ```
 
-    El método `OnAppearing` recupera el valor de la propiedad `App.DisplayText` y lo establece como valor de propiedad [`Text`](xref:Xamarin.Forms.Entry.Text) del objeto [`Entry`](xref:Xamarin.Forms.Entry).
+    El método `OnAppearing` recupera el valor de la propiedad `App.DisplayText` y lo establece como valor de propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) del objeto [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > La invalidación del método `OnAppearing` se ejecuta después de que se diseñe [`ContentPage`](xref:Xamarin.Forms.ContentPage), pero justo antes de que sea visible. Por lo tanto, se trata de un lugar adecuado para establecer el contenido de las vistas de Xamarin.Forms.
@@ -186,7 +186,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez, y se registra un controlador de eventos denominado `OnEntryCompleted` con el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Además, el objeto `Entry` tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto `Entry` con el nombre que se le ha asignado.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez, y se registra un controlador de eventos denominado `OnEntryCompleted` con el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Además, el objeto `Entry` tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto `Entry` con el nombre que se le ha asignado.
 
 1. En el **Panel de solución**, en el proyecto **AppLifecycleTutorial**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo. Después, en **MainPage.xaml.cs**, agregue una invalidación del método `OnAppearing` y el controlador de eventos `OnEntryCompleted` a la clase:
 
@@ -204,7 +204,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
     }
     ```
 
-    El método `OnAppearing` recupera el valor de la propiedad `App.DisplayText` y lo establece como valor de propiedad [`Text`](xref:Xamarin.Forms.Entry.Text) del objeto [`Entry`](xref:Xamarin.Forms.Entry).
+    El método `OnAppearing` recupera el valor de la propiedad `App.DisplayText` y lo establece como valor de propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) del objeto [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > La invalidación del método `OnAppearing` se ejecuta después de que se diseñe [`ContentPage`](xref:Xamarin.Forms.ContentPage), pero justo antes de que sea visible. Por lo tanto, se trata de un lugar adecuado para establecer el contenido de las vistas de Xamarin.Forms.

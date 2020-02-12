@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d8c50b1dfb2a2669f7611a6bc6da882c54b877aa
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277443"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135050"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -30,7 +30,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez.
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
@@ -60,7 +60,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Entry`](xref:Xamarin.Forms.Entry) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica el texto de marcador de posición que se muestra cuando el objeto `Entry` aparece por primera vez.
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
