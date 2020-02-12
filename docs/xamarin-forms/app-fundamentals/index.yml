@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/30/2019
-  ms.openlocfilehash: 960e8e555b051e3a6cf3eedd0f999a78f8317d61
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.openlocfilehash: c362c34fe467262f0a47c663b97962fde178f383
+  ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/06/2020
-  ms.locfileid: "75680417"
+  ms.lasthandoff: 02/11/2020
+  ms.locfileid: "77144614"
 landingContent:
 - title: Conceptos principales
   linkLists:
@@ -61,6 +61,8 @@ landingContent:
       url: accessibility/index.md
     - text: Indexación de la aplicación y vinculación en profundidad
       url: deep-linking.md
+    - text: Pantallas duales
+      url: dual-screen/index.md
     - text: Notificaciones locales
       url: local-notifications.md
     - text: Localización

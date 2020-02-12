@@ -9,12 +9,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 11/06/2019
-  ms.openlocfilehash: 64920ebafca8239a98862b7008a371e60b7284da
-  ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+  ms.openlocfilehash: 929ed310d69de3f67426cc400e7175e2c6f58fe6
+  ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/23/2020
-  ms.locfileid: "76550125"
+  ms.lasthandoff: 02/11/2020
+  ms.locfileid: "77144623"
 highlightedContent:
   items:
   - title: ¿Qué es Xamarin.Forms?
@@ -85,8 +85,8 @@ conceptualContent:
     - text: Enlace de datos
       url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
       itemType: concept
-    - text: DependencyService
-      url: ~/xamarin-forms/app-fundamentals/dependency-service/index.md
+    - text: Pantalla dual
+      url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
       itemType: concept
     - text: Navegación
       url: ~/xamarin-forms/app-fundamentals/navigation/index.md

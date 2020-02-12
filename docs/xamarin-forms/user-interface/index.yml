@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/30/2019
-  ms.openlocfilehash: 2a62ff0c3d94d47870b9b112b86091c534ed6ff8
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.openlocfilehash: 67d7b82b4b1570ea79937aaa28373e4b697fe4fb
+  ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/06/2020
-  ms.locfileid: "75679615"
+  ms.lasthandoff: 02/11/2020
+  ms.locfileid: "77144637"
 landingContent:
 - title: Referencia de controles
   linkLists:
@@ -47,6 +47,8 @@ landingContent:
       url: text/label.md
     - text: Asignación
       url: map/index.md
+    - text: MediaElement
+      url: mediaelement.md
     - text: WebView
       url: webview.md
 - title: Vistas que inician comandos
