@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: 7d53623ef1fb1eeb917cbf4cd6d65d461e525982
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 286950104e9a85b6ec89f0c0f3f891f29dada4ec
+ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724246"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144663"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Las vistas de Xamarin. Forms son los bloques de creación de interfaces de usua
 
 Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y controles deslizantes que normalmente se conocen como *controles* o *widgets* en otros entornos de programación gráficos. Todas las vistas compatibles con Xamarin. Forms derivan de la clase [`View`](xref:Xamarin.Forms.View) . Pueden dividirse en varias categorías:
 
-## <a name="views-for-presentation"></a>Vistas de presentación
+## <a name="views-for-presentation"></a>Vistas para presentación
 
 ### <a name="label"></a>Etiqueta
 
@@ -66,6 +66,13 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | [`Map`](xref:Xamarin.Forms.Maps.Map) muestra un mapa. El paquete de NuGet **Xamarin. Forms. Maps** debe estar instalado. Android y plataforma Universal de Windows requieren una clave de autorización de mapa.<br /><br />[Documentación de API](xref:Xamarin.Forms.Maps.Map) / [Guía](~/xamarin-forms/user-interface/map/index.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Ejemplo de mapa](views-images/Map.png "Ejemplo de mapa")](views-images/Map-Large.png#lightbox "Ejemplo de mapa")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) |
 |     |     |
 
+### <a name="mediaelement"></a>MediaElement
+
+|     |     |
+| --- | --- |
+| `MediaElement` muestra un vídeo o reproduce audio. Los elementos multimedia se pueden descargar a través de web o incrustados como recursos en proyectos de plataforma.<br /><br />[Guía](~/xamarin-forms/user-interface/mediaelement.md) de [ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) /  | |
+|     |     |
+
 ## <a name="views-that-initiate-commands"></a>Vistas que inician comandos
 
 ### <a name="button"></a>Botón
@@ -89,11 +96,11 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | `RefreshView` es un control contenedor que proporciona funcionalidad de extracción a actualización para el contenido desplazable. Los `ICommand` definidos por la propiedad `Command` se ejecutan cuando se desencadena una actualización, y la propiedad `IsRefreshing` indica el estado actual del control.<br /><br /> [Guía](~/xamarin-forms/user-interface/refreshview.md) de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) /  | [![Ejemplo de RefreshView](views-images/RefreshView.png "Ejemplo de RefreshView")](views-images/RefreshView-Large.png#lightbox "Ejemplo de RefreshView")<br /> código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs) |
 |     |     |
 
-### <a name="searchbar"></a>SearchBar
+### <a name="searchbar"></a>Barra de búsqueda
 
 |     |     |
 | --- | --- |
-| [`SearchBar`](xref:Xamarin.Forms.SearchBar) muestra un área para que el usuario escriba una cadena de texto y un botón (o una tecla del teclado) que indique a la aplicación que realice una búsqueda. La propiedad [`Text`](xref:Xamarin.Forms.SearchBar.Text) proporciona acceso al texto y el evento [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) indica que se ha presionado el botón.<br /><br />[Documentación de API](xref:Xamarin.Forms.SearchBar) / [Guía](~/xamarin-forms/user-interface/searchbar.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![Ejemplo de barra](views-images/SearchBar.png "Ejemplo de barra")](views-images/SearchBar-Large.png#lightbox "Ejemplo de barra")<br /> código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) |
+| [`SearchBar`](xref:Xamarin.Forms.SearchBar) muestra un área para que el usuario escriba una cadena de texto y un botón (o una tecla del teclado) que indique a la aplicación que realice una búsqueda. La propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) proporciona acceso al texto y el evento [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) indica que se ha presionado el botón.<br /><br />[Documentación de API](xref:Xamarin.Forms.SearchBar) / [Guía](~/xamarin-forms/user-interface/searchbar.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![Ejemplo de barra](views-images/SearchBar.png "Ejemplo de barra")](views-images/SearchBar-Large.png#lightbox "Ejemplo de barra")<br /> código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) |
 |     |     |
 
 ### <a name="swipeview"></a>SwipeView
@@ -103,7 +110,7 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | `SwipeView` es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente. Cada elemento de menú se representa mediante una `SwipeItem`, que tiene una propiedad `Command` que ejecuta un `ICommand` cuando se puntea el elemento.<br /><br /> [Guía](~/xamarin-forms/user-interface/swipeview.md) de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) /  | [![Ejemplo de SwipeView](views-images/SwipeView.png "Ejemplo de SwipeView")](views-images/SwipeView-Large.png#lightbox "Ejemplo de SwipeView")<br /> código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Para establecer valores de las vistas
+## <a name="views-for-setting-values"></a>Vistas para establecer valores
 
 ### <a name="checkbox"></a>CheckBox
 
@@ -119,7 +126,7 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | [`Slider`](xref:Xamarin.Forms.Slider) permite al usuario seleccionar un valor de `double` de un intervalo continuo especificado con las propiedades [`Minimum`](xref:Xamarin.Forms.Slider.Minimum) y [`Maximum`](xref:Xamarin.Forms.Slider.Maximum) .<br /><br />[Documentación de API](xref:Xamarin.Forms.Slider) / [Guía](~/xamarin-forms/user-interface/slider.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) | [![Ejemplo de control deslizante](views-images/Slider.png "Ejemplo de control deslizante")](views-images/Slider-Large.png#lightbox "Ejemplo de control deslizante")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) |
 |     |     |
 
-### <a name="stepper"></a>Motor paso a paso
+### <a name="stepper"></a>Control de incremento
 
 |     |     |
 | --- | --- |
@@ -155,14 +162,14 @@ Estas dos clases derivan de la clase [`InputView`](xref:Xamarin.Forms.InputView)
 
 |     |     |
 | --- | --- |
-| [`Entry`](xref:Xamarin.Forms.Entry) permite al usuario escribir y editar una sola línea de texto. El texto está disponible como la propiedad [`Text`](xref:Xamarin.Forms.Entry.Text) , y los eventos [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) y [`Completed`](xref:Xamarin.Forms.Entry.Completed) se activan cuando cambia el texto o el usuario indica la finalización punteando en la tecla entrar.<br /><br />Use un [`Editor`](#editor) para escribir y editar varias líneas de texto.<br /><br />[Documentación de API](xref:Xamarin.Forms.Entry) / [Guía](~/xamarin-forms/user-interface/text/entry.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Ejemplo de entrada](views-images/Entry.png "Ejemplo de entrada")](views-images/Entry-Large.png#lightbox "Ejemplo de entrada")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) |
+| [`Entry`](xref:Xamarin.Forms.Entry) permite al usuario escribir y editar una sola línea de texto. El texto está disponible como la propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) , y los eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) y [`Completed`](xref:Xamarin.Forms.Entry.Completed) se activan cuando cambia el texto o el usuario indica la finalización punteando en la tecla entrar.<br /><br />Use un [`Editor`](#editor) para escribir y editar varias líneas de texto.<br /><br />[Documentación de API](xref:Xamarin.Forms.Entry) / [Guía](~/xamarin-forms/user-interface/text/entry.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Ejemplo de entrada](views-images/Entry.png "Ejemplo de entrada")](views-images/Entry-Large.png#lightbox "Ejemplo de entrada")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) |
 |     |     |
 
 ### <a name="editor"></a>Editor
 
 |     |     |
 | --- | --- |
-| [`Editor`](xref:Xamarin.Forms.Editor) permite al usuario escribir y editar varias líneas de texto. El texto está disponible como la propiedad [`Text`](xref:Xamarin.Forms.Editor.Text) , y los eventos [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) y [`Completed`](xref:Xamarin.Forms.Editor.Completed) se activan cuando cambia el texto o el usuario envía una señal de finalización.<br /><br />Use una vista [`Entry`](#entry) para escribir y editar una sola línea de texto.<br /><br />[Documentación de API](xref:Xamarin.Forms.Editor) / [Guía](~/xamarin-forms/user-interface/text/editor.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Ejemplo de entrada](views-images/Editor.png "Ejemplo de editor")](views-images/Editor-Large.png#lightbox "Ejemplo de editor")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) |
+| [`Editor`](xref:Xamarin.Forms.Editor) permite al usuario escribir y editar varias líneas de texto. El texto está disponible como la propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) , y los eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) y [`Completed`](xref:Xamarin.Forms.Editor.Completed) se activan cuando cambia el texto o el usuario envía una señal de finalización.<br /><br />Use una vista [`Entry`](#entry) para escribir y editar una sola línea de texto.<br /><br />[Documentación de API](xref:Xamarin.Forms.Editor) / [Guía](~/xamarin-forms/user-interface/text/editor.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Ejemplo de entrada](views-images/Editor.png "Ejemplo de editor")](views-images/Editor-Large.png#lightbox "Ejemplo de editor")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) |
 |     |     |
 
 ## <a name="views-to-indicate-activity"></a>Vistas para indicar actividad
@@ -174,7 +181,7 @@ Estas dos clases derivan de la clase [`InputView`](xref:Xamarin.Forms.InputView)
 | [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) usa una animación para mostrar que la aplicación está ocupada en una actividad prolongada sin ofrecer ninguna indicación de progreso. La propiedad [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) controla la animación.<br /><br />Si se conoce el progreso de la actividad, use un [`ProgressBar`](#progressbar) en su lugar.<br /><br />[Documentación de API](xref:Xamarin.Forms.ActivityIndicator) / [Guía](~/xamarin-forms/user-interface/activityindicator.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/) | [![Ejemplo de ActivityIndicator](views-images/ActivityIndicator.png "Ejemplo de ActivityIndicator")](views-images/ActivityIndicator-Large.png#lightbox "Ejemplo de ActivityIndicator")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) |
 |     |     |
 
-### <a name="progressbar"></a>ProgressBar
+### <a name="progressbar"></a>Barra de progreso
 
 |     |     |
 | --- | --- |

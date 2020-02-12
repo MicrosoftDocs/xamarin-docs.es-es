@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 0149a66fedd98a94f1c9d96bf8e7e57715d1b90b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488262"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130859"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Diseño de Xamarin. Forms CarouselView
 
@@ -47,7 +47,7 @@ La clase `LinearItemsLayout` hereda de la clase [`ItemsLayout`](xref:Xamarin.For
 
 ## <a name="horizontal-layout"></a>Diseño horizontal
 
-De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) mostrará los elementos horizontalmente. Por lo tanto, no es necesario establecer la propiedad [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) para usar este diseño:
+De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) mostrará los elementos horizontalmente. Por lo tanto, no es necesario establecer la propiedad [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) para usar este diseño:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -87,7 +87,7 @@ De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) mostr
 </CarouselView>
 ```
 
-También puede realizar este diseño estableciendo la propiedad [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) en un objeto `LinearItemsLayout`, especificando el miembro de enumeración `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) como el valor de la propiedad `Orientation`:
+También puede realizar este diseño estableciendo la propiedad [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) en un objeto `LinearItemsLayout`, especificando el miembro de enumeración `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) como el valor de la propiedad `Orientation`:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -112,7 +112,7 @@ Esto da como resultado un diseño que crece horizontalmente a medida que se agre
 
 ## <a name="vertical-layout"></a>Diseño vertical
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) puede mostrar sus elementos verticalmente estableciendo la propiedad [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) en un objeto `LinearItemsLayout`, especificando el miembro de enumeración [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) `Vertical` como el valor de la propiedad `Orientation`:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) puede mostrar sus elementos verticalmente estableciendo la propiedad [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) en un objeto `LinearItemsLayout`, especificando el miembro de enumeración [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) `Vertical` como el valor de la propiedad `Orientation`:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -194,7 +194,7 @@ El resultado es que los elementos adyacentes se exponen parcialmente en la panta
 
 De forma predeterminada, cada elemento de una [`CarouselView`](xref:Xamarin.Forms.CarouselView) no tiene espacio vacío. Este comportamiento se puede cambiar estableciendo las propiedades en el diseño de los elementos utilizados por el `CarouselView`.
 
-Cuando un [`CarouselView`](xref:Xamarin.Forms.CarouselView) establece su propiedad [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) en un objeto `LinearItemsLayout`, la propiedad `LinearItemsLayout.ItemSpacing` se puede establecer en un valor `double` que representa el espacio vacío alrededor de cada elemento:
+Cuando un [`CarouselView`](xref:Xamarin.Forms.CarouselView) establece su propiedad [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) en un objeto `LinearItemsLayout`, la propiedad `LinearItemsLayout.ItemSpacing` se puede establecer en un valor `double` que representa el espacio vacío alrededor de cada elemento:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
