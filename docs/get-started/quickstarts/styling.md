@@ -8,13 +8,13 @@ ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: a7e1cdd59b463c38be1a49e962112cb893eed50f
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.date: 02/07/2020
+ms.openlocfilehash: fbd957c68d7a9aa2f8e44c91fab6174d8ed72014
+ms.sourcegitcommit: 5bcb6158693478ca1b3f6881dc912d3e7a8d1868
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "75488873"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77068760"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilo de una aplicación Xamarin.Forms multiplataforma
 
@@ -51,20 +51,16 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
             <Thickness x:Key="PageMargin">20</Thickness>
 
             <!-- Colors -->
-            <Color x:Key="AppBackgroundColor">WhiteSmoke</Color>
-            <Color x:Key="iOSNavigationBarColor">WhiteSmoke</Color>
-            <Color x:Key="AndroidNavigationBarColor">#2196F3</Color>
-            <Color x:Key="iOSNavigationBarTextColor">Black</Color>
-            <Color x:Key="AndroidNavigationBarTextColor">White</Color>
+            <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+            <Color x:Key="NavigationBarColor">#1976D2</Color>
+            <Color x:Key="NavigationBarTextColor">White</Color>
 
             <!-- Implicit styles -->
             <Style TargetType="{x:Type NavigationPage}">
                 <Setter Property="BarBackgroundColor"
-                        Value="{OnPlatform iOS={StaticResource iOSNavigationBarColor},
-                                           Android={StaticResource AndroidNavigationBarColor}}" />
+                        Value="{StaticResource NavigationBarColor}" />
                  <Setter Property="BarTextColor"
-                        Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                           Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                        Value="{StaticResource NavigationBarTextColor}" />           
             </Style>
 
             <Style TargetType="{x:Type ContentPage}"
@@ -108,6 +104,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Text}"
+                              TextColor="Black"
                               Detail="{Binding Date}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -139,8 +136,8 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
                    ApplyToDerivedTypes="True"
                    CanCascade="True">
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="BackgroundColor" Value="LightGray" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#1976D2" />
+                <Setter Property="TextColor" Value="White" />
                 <Setter Property="CornerRadius" Value="5" />
             </Style>
         </ContentPage.Resources>
@@ -192,20 +189,16 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
             <Thickness x:Key="PageMargin">20</Thickness>
 
             <!-- Colors -->
-            <Color x:Key="AppBackgroundColor">WhiteSmoke</Color>
-            <Color x:Key="iOSNavigationBarColor">WhiteSmoke</Color>
-            <Color x:Key="AndroidNavigationBarColor">#2196F3</Color>
-            <Color x:Key="iOSNavigationBarTextColor">Black</Color>
-            <Color x:Key="AndroidNavigationBarTextColor">White</Color>
+            <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+            <Color x:Key="NavigationBarColor">#1976D2</Color>
+            <Color x:Key="NavigationBarTextColor">White</Color>
 
             <!-- Implicit styles -->
             <Style TargetType="{x:Type NavigationPage}">
                 <Setter Property="BarBackgroundColor"
-                        Value="{OnPlatform iOS={StaticResource iOSNavigationBarColor},
-                                           Android={StaticResource AndroidNavigationBarColor}}" />
+                        Value="{StaticResource NavigationBarColor}" />
                  <Setter Property="BarTextColor"
-                        Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                           Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                        Value="{StaticResource NavigationBarTextColor}" />           
             </Style>
 
             <Style TargetType="{x:Type ContentPage}"
@@ -249,6 +242,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Text}"
+                              TextColor="Black"
                               Detail="{Binding Date}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -280,8 +274,8 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
                    ApplyToDerivedTypes="True"
                    CanCascade="True">
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="BackgroundColor" Value="LightGray" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#1976D2" />
+                <Setter Property="TextColor" Value="White" />
                 <Setter Property="CornerRadius" Value="5" />
             </Style>
         </ContentPage.Resources>

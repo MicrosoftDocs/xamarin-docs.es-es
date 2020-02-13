@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 3936fe16ee768505c53ec119c51dcbecef7e6fbe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "73842956"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131051"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -383,7 +383,7 @@ Para obtener más información sobre la navegación jerárquica, consulte [Hiera
 
 El enlace de datos se usa para simplificar la forma en que una aplicación de Xamarin.Forms muestra e interactúa con sus datos. Establece una conexión entre la interfaz de usuario y la aplicación subyacente. La clase [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene gran parte de la infraestructura para admitir el enlace de datos.
 
-El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un control [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente enlazará su propiedad [`Text`](xref:Xamarin.Forms.Editor.Text) a una propiedad `string` pública en un objeto de *origen*. En el diagrama siguiente se muestra la relación de enlace:
+El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un control [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente enlazará su propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) a una propiedad `string` pública en un objeto de *origen*. En el diagrama siguiente se muestra la relación de enlace:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 
@@ -432,7 +432,7 @@ Después, el objeto [`Editor`](xref:Xamarin.Forms.Editor) de `NoteEntryPage` se 
         ... />
 ```
 
-Se establece un enlace entre la propiedad [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) y la propiedad `Text` del objeto de *origen*. Los cambios realizados en `Editor` se propagarán de forma automática al objeto `Note`. De forma similar, si se realizan cambios en la propiedad `Note.Text`, el motor de enlace de Xamarin.Forms también actualizará el contenido de `Editor`. Esto se conoce como *enlace bidireccional*.
+Se establece un enlace entre la propiedad [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) y la propiedad `Text` del objeto de *origen*. Los cambios realizados en `Editor` se propagarán de forma automática al objeto `Note`. De forma similar, si se realizan cambios en la propiedad `Note.Text`, el motor de enlace de Xamarin.Forms también actualizará el contenido de `Editor`. Esto se conoce como *enlace bidireccional*.
 
 Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
