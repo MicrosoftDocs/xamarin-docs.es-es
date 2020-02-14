@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: d046962bf08b85069b1a698324db76a4ac3286d9
+ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489900"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144656"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -22,7 +22,7 @@ Los desencadenadores permiten expresar acciones de forma declarativa en XAML que
 
 Puede asignar un desencadenador directamente a un control o agregarlo a un diccionario de recursos de nivel de aplicación o página que se vaya a aplicar a varios controles.
 
-Hay cuatro tipos de desencadenadores:
+Hay varios tipos de desencadenadores:
 
 - [Desencadenador de propiedades](#property): se produce cuando una propiedad en un control se establece en un valor determinado.
 
@@ -31,6 +31,20 @@ Hay cuatro tipos de desencadenadores:
 - [Desencadenador de eventos](#event): se produce cuando tiene lugar un evento en el control.
 
 - [Multi-desencadenador](#multi): permite establecer varias condiciones de desencadenador antes de que se produzca una acción.
+
+- [Desencadenador adaptativo](#adaptive) (VERSIÓN PRELIMINAR): reacciona a los cambios en el ancho y el alto de una ventana de la aplicación.
+
+- [Desencadenador de comparación](#compare) (VERSIÓN PRELIMINAR): se ejecuta cuando se comparan dos valores.
+
+- [Desencadenador de dispositivo](#device) (VERSIÓN PRELIMINAR): se produce cuando se ejecuta en el dispositivo especificado. 
+
+- [Desencadenador de orientación](#orientation) (VERSIÓN PRELIMINAR): se ejecuta cuando cambia la orientación del dispositivo.
+
+Para usar los desencadenadores de VERSIÓN PRELIMINAR, asegúrese de habilitarlos mediante la marca de características en `App.xaml.cs`:
+
+```csharp
+Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
+```
 
 <a name="property" />
 
@@ -333,6 +347,141 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
+
+<a name="adaptive" />
+
+## <a name="adaptive-trigger-preview"></a>Desencadenador adaptativo (VERSIÓN PRELIMINAR)
+
+Una instancia de `AdaptiveTrigger` se desencadena de forma automática cuando la ventana tiene un alto o un ancho especificado. `AdaptiveTrigger` toma dos propiedades posibles:
+
+- **MinWindowHeight**
+- **MinWindowWidth**
+
+<a name="compare"/>
+
+## <a name="compare-trigger-preview"></a>Desencadenador de comparación (VERSIÓN PRELIMINAR)
+
+`CompareStateTrigger` es una instancia de `StateTrigger` muy versátil que se desencadena si **Value** (Valor) es igual a **Property** (Propiedad).
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="Checked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="True" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Green" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="UnChecked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="False" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>     
+    </VisualStateManager.VisualStateGroups>  
+    <Frame
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        BackgroundColor="White"
+        Margin="24">
+        <StackLayout
+            Orientation="Horizontal">
+            <CheckBox 
+                x:Name="CheckBox"
+                VerticalOptions="Center"/>
+            <Label
+                Text="Checked/Uncheck the CheckBox to modify the Grid BackgroundColor"
+                VerticalOptions="Center"/>
+        </StackLayout>
+    </Frame>
+</Grid>
+```
+
+En este ejemplo se muestra cómo modificar la propiedad **BackgroundColor** de un objeto **Grid** en función del estado de la propiedad **IsChecked** de **CheckBox**. **StateTrigger** admite enlaces que abren muchas posibilidades para la comparación de valores, no solo de los elementos de la interfaz de usuario, sino también de **BindingContext**.
+
+<a name="device" />
+
+## <a name="device-trigger-preview"></a>Desencadenador de dispositivo (VERSIÓN PRELIMINAR)
+
+Una instancia de `DeviceTrigger` permite controlar cómo se aplica un estado cuando se ejecuta en una plataforma de dispositivo específica, de manera similar a usar `OnPlatform`.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Android">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="Android" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="iOS">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="iOS" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>  
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This page changes the color based on the device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+En el ejemplo anterior, el color de fondo será azul en un dispositivo Android y rojo en un dispositivo iOS.
+
+<a name="orientation" />
+
+## <a name="orientation-trigger-preview"></a>Desencadenador de orientación (VERSIÓN PRELIMINAR)
+
+Una instancia de `OrientationTrigger` permite modificar el estado de la vista cuando el dispositivo cambia entre las orientaciones horizontal y vertical.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Landscape">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Landscape" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="Portrait">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Portrait" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This Grid changes the color based on the orientation device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+En el ejemplo anterior, el fondo es de color azul cuando el dispositivo está en orientación horizontal y de color rojo cuando la orientación es vertical.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

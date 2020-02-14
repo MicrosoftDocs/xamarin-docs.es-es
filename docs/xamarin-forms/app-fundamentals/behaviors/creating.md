@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: a3b9653651e3000b954cb6d16154cddc8d5d363a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 42ad56a7ae34bcef638ed25bea267dcabd21e20c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772095"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131091"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Creación de comportamientos de Xamarin.Forms
 
@@ -84,7 +84,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior` se deriva de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es un elemento [`Entry`](xref:Xamarin.Forms.Entry). El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) registra un controlador de eventos para el evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), y el método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) anula el registro del evento `TextChanged` para evitar fugas de memoria. El método `OnEntryTextChanged` proporciona la funcionalidad básica del comportamiento y analiza el valor especificado por el usuario en el elemento `Entry` y establece la propiedad [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) en rojo si el valor no es de tipo `double`.
+`NumericValidationBehavior` se deriva de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es un elemento [`Entry`](xref:Xamarin.Forms.Entry). El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) registra un controlador de eventos para el evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), y el método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) anula el registro del evento `TextChanged` para evitar fugas de memoria. El método `OnEntryTextChanged` proporciona la funcionalidad básica del comportamiento y analiza el valor especificado por el usuario en el elemento `Entry` y establece la propiedad [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) en rojo si el valor no es de tipo `double`.
 
 > [!NOTE]
 > Xamarin.Forms no establece el elemento `BindingContext` de un comportamiento, ya que los comportamientos se pueden compartir y aplicar a varios controles mediante estilos.
@@ -110,7 +110,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control, en función de la implementación del comportamiento. En las capturas de pantalla siguientes se muestra la respuesta del comportamiento a entradas no válidas:
 
-[![](creating-images/screenshots-sml.png "Aplicación de ejemplo con comportamiento de Xamarin.Forms")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
+[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > Los comportamientos se escriben para un tipo de control específico (o una superclase que se puede aplicar a muchos controles), y solo se deben agregar a un control compatible. El intento de adjuntar un comportamiento a un control incompatible iniciará una excepción.
@@ -162,7 +162,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-La clase `NumericValidationBehavior` contiene una propiedad adjunta denominada `AttachBehavior` con un captador y establecedor `static`, que controla la adición o eliminación del comportamiento del control al que se va a adjuntar. Esta propiedad adjunta registra el método `OnAttachBehaviorChanged` que se ejecutará cuando cambie el valor de la propiedad. Este método agrega o quita el comportamiento del control, en función del valor de la propiedad adjunta `AttachBehavior`.
+La clase `NumericValidationBehavior` contiene una propiedad adjunta denominada `AttachBehavior` con un captador y establecedor `static`, que controla la adición o eliminación del comportamiento del control al que se va a adjuntar. Esta propiedad asociada registra el método `OnAttachBehaviorChanged` que se ejecutará cuando cambie el valor de la propiedad. Este método agrega o quita el comportamiento del control, en función del valor de la propiedad adjunta `AttachBehavior`.
 
 En el ejemplo de código siguiente se muestra un estilo *explícito* para el elemento `NumericValidationBehavior` que usa la propiedad adjunta `AttachBehavior` y que se puede aplicar a controles [`Entry`](xref:Xamarin.Forms.Entry):
 
