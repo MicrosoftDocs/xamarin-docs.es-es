@@ -160,7 +160,7 @@ Una solución alternativa posible es habilitar el vinculador administrado. Esto 
 
 En su lugar, una segunda solución alternativa posible es usar el registrador dinámico. Esto impondrá un costo de inicio al registrar los tipos dinámicamente, pero quitar el requisito de archivo de encabezado.
 
-Una solución de última paja sería usar una versión anterior de Xamarin. Mac, una que admita el SDK que requiere el proyecto.
+Una solución última sería usar una versión anterior de Xamarin. Mac, una que admita el SDK que requiere el proyecto.
 
 <a name="MM0097" />
 
@@ -238,7 +238,7 @@ La manera recomendada de corregir este error es actualizar Xcode para obtener el
 
 También puede habilitar el [vinculador](https://docs.microsoft.com/xamarin/mac/deploy-test/linker) administrado para quitar las API sin usar, incluidas (en la mayoría de los casos) las nuevas que requieren la biblioteca especificada. Sin embargo, esto no funcionará si el proyecto requiere API introducidas en un SDK más reciente que el que proporciona Xcode.
 
-Como última solución de paja, use una versión anterior de Xamarin. Mac que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
+Como última solución, use una versión anterior de Xamarin. Mac que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx: copia de archivos/vínculos simbólicos (relacionados con el proyecto)
 

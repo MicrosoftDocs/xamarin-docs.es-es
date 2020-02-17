@@ -856,7 +856,7 @@ La manera recomendada de corregir este error es actualizar Xcode para obtener el
 
 También puede habilitar el [vinculador](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) administrado para quitar las API sin usar, incluidas (en la mayoría de los casos) las nuevas que requieren la biblioteca especificada. Sin embargo, esto no funcionará si el proyecto requiere API introducidas en un SDK más reciente que el que proporciona Xcode.
 
-Como última solución de paja, use una versión anterior de Xamarin. iOS que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
+Como última solución, use una versión anterior de Xamarin. iOS que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: mensajes de error relacionados con el proyecto
 
