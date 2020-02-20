@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/30/2019
-  ms.openlocfilehash: 67d7b82b4b1570ea79937aaa28373e4b697fe4fb
-  ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
+  ms.openlocfilehash: bbe7fd52581cd77ed7e7d910dd16264641c15abf
+  ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/11/2020
-  ms.locfileid: "77144637"
+  ms.lasthandoff: 02/20/2020
+  ms.locfileid: "77480596"
 landingContent:
 - title: Referencia de controles
   linkLists:
@@ -140,7 +140,7 @@ landingContent:
     - text: Estilos
       url: styles/index.md
     - text: Temas
-      url: theming.md
+      url: theming/index.md
     - text: Elemento visual
       url: visual/index.md
     - text: Administrador de estado visual
