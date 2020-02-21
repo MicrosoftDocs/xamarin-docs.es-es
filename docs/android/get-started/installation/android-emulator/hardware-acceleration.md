@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: 1199cdf00a5fa93b7ed7a4351ea5838a2065eddd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a724a21dfffead307ca3d65d5ff134cf2d7c90db
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020860"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374041"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleración de hardware para el rendimiento del emulador (Hyper-V y HAXM)
 
@@ -42,7 +42,7 @@ Las tecnologías de virtualización siguientes están disponibles para la aceler
 2. **Hardware Accelerated Execution Manager (HAXM) de Intel**.
    HAXM es un motor de virtualización para los equipos que ejecutan CPU de Intel.
 
-Para obtener la mejor experiencia en Windows, se recomienda usar HAXM para acelerar el emulador de Android. Si HAXM no está disponible en el equipo, se puede usar Windows Hypervisor Platform (WHPX). Android Emulator usará automáticamente la aceleración de hardware si se cumplen los criterios siguientes:
+Para obtener la mejor experiencia en Windows, se recomienda usar WHPX para acelerar el emulador de Android. Si WHPX no está disponible en el equipo, puede utilizarse HAXM. Android Emulator usará automáticamente la aceleración de hardware si se cumplen los criterios siguientes:
 
 - La aceleración de hardware está disponible y habilitada en el equipo de desarrollo.
 
@@ -102,6 +102,10 @@ Si el equipo cumple los criterios mencionados anteriormente, siga estos pasos pa
     [![Habilitación de Hyper-V y Windows Hypervisor Platform](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
 
    Después de realizar estos cambios, reinicie el equipo.
+   
+> [!IMPORTANT]
+>
+> En la actualización de octubre de 2018 de Windows 10 (RS5) y versiones posteriores, solo tiene que habilitar Hyper-V, ya que Windows Hypervisor Platform (WHPX) se usará automáticamente.
 
 2. **Instale [Visual Studio 15.8 o una versión posterior](https://visualstudio.microsoft.com/vs/)** (esta versión de Visual Studio proporciona compatibilidad con el IDE para ejecutar Android Emulator con Hyper-V).
 
