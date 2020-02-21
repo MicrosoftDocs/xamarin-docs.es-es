@@ -7,42 +7,42 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/18/2019
-ms.openlocfilehash: 1f2ef838287e32df5df42f73e4b43816d618552d
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 88655aabdbd32db63aaf3330a18b0ad8105ea26c
+ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887886"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506539"
 ---
 # <a name="xamarinforms-switch"></a>Modificador de Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-El control Xamarin. [`Switch`](xref:Xamarin.Forms.Switch) Forms es un botón de alternancia horizontal que el usuario puede manipular para alternar entre los Estados on y OFF, que están representados por `boolean` un valor. La `Switch` clase hereda de [`View`](xref:Xamarin.Forms.View).
+El control de Xamarin. Forms [`Switch`](xref:Xamarin.Forms.Switch) es un botón de alternancia horizontal que el usuario puede manipular para alternar entre los Estados on y OFF, que están representados por un valor `boolean`. La clase `Switch` hereda de [`View`](xref:Xamarin.Forms.View).
 
-Las siguientes capturas de `Switch` pantallas muestran un control en su estado **de alternancia activado** y desactivado en iOS y Android:
+En las siguientes capturas de pantallas se muestra un control de `Switch` en su estado **de alternancia activado** y **desactivado** en iOS y Android:
 
 ![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android](switch-images/switch-states-default.png "Conmutadores en iOS y Android")
 
-El `Switch` control define dos propiedades:
+El control `Switch` define las siguientes propiedades:
 
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)es un `boolean` valor que indica `Switch` si está **activado**.
-* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)es un `Color` que afecta al `Switch` modo en que se representa en el estado de alternancia o **activada**.
-* `ThumbColor`es el `Color` de la Thumb del modificador.
+* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) es un valor `boolean` que indica si la `Switch` está **activada**.
+* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) es una `Color` que afecta al modo en que el `Switch` se representa en el estado de alternancia o **activado**.
+* `ThumbColor` es el `Color` del control de posición del conmutador.
 
-Estas propiedades están respaldadas por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que `Switch` significa que se puede aplicar un estilo a y ser el destino de los enlaces de datos.
+Estas propiedades están respaldadas por un objeto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , lo que significa que se puede aplicar un estilo a los `Switch` y ser el destino de los enlaces de datos.
 
-El `Switch` control define un `Toggled` evento que se desencadena cuando cambia `IsToggled` la propiedad, ya sea a través de la manipulación de usuarios o `IsToggled` cuando una aplicación establece la propiedad. El `ToggledEventArgs` objeto que acompaña al `Toggled` evento tiene una propiedad única denominada `Value`, de tipo `bool`. Cuando se desencadena el evento, el valor de la `Value` propiedad refleja el nuevo valor de la `IsToggled` propiedad.
+El control `Switch` define un evento `Toggled` que se desencadena cuando cambia la propiedad `IsToggled`, ya sea a través de la manipulación del usuario o cuando una aplicación establece la propiedad `IsToggled`. El objeto `ToggledEventArgs` que acompaña al evento `Toggled` tiene una propiedad única denominada `Value`, de tipo `bool`. Cuando se desencadena el evento, el valor de la propiedad `Value` refleja el nuevo valor de la propiedad `IsToggled`.
 
 ## <a name="create-a-switch"></a>Crear un conmutador
 
-Se `Switch` puede crear una instancia de en XAML. Su `IsToggled` propiedad se puede establecer para alternar `Switch`. De forma predeterminada, `IsToggled` la propiedad `false`es. En el ejemplo siguiente se muestra cómo crear una `Switch` instancia de en XAML con `IsToggled` el conjunto de propiedades opcional:
+Se puede crear una instancia de `Switch` en XAML. Su propiedad `IsToggled` se puede establecer para alternar el `Switch`. De forma predeterminada, la propiedad `IsToggled` es `false`. En el ejemplo siguiente se muestra cómo crear una instancia de un `Switch` en XAML con el conjunto de propiedades de `IsToggled` opcional:
 
 ```xaml
 <Switch IsToggled="true"/>
 ```
 
-También `Switch` se puede crear en el código:
+También se puede crear un `Switch` en el código:
 
 ```csharp
 Switch switchControl = new Switch { IsToggled = true };
@@ -50,7 +50,7 @@ Switch switchControl = new Switch { IsToggled = true };
 
 ## <a name="switch-appearance"></a>Cambiar apariencia
 
-Además de las [`Switch`](xref:Xamarin.Forms.Switch) propiedades que heredan de la [`View`](xref:Xamarin.Forms.View) clase, `Switch` también define `OnColor` las propiedades `ThumbColor` y. La `OnColor` propiedad se puede establecer para definir el `Switch` color cuando se cambia a su estado, y la `ThumbColor` propiedad se puede establecer para definir el `Color` de la Thumb del conmutador. En el ejemplo siguiente se muestra cómo crear una `Switch` instancia de en XAML con estas propiedades establecidas:
+Además de las propiedades que [`Switch`](xref:Xamarin.Forms.Switch) heredan de la clase [`View`](xref:Xamarin.Forms.View) , `Switch` también define las propiedades `OnColor` y `ThumbColor`. La propiedad `OnColor` se puede establecer para definir el color **de** `Switch` cuando se cambia a su estado, y la propiedad `ThumbColor` se puede establecer para definir el `Color` del control de posición. En el ejemplo siguiente se muestra cómo crear una instancia de un `Switch` en XAML con estas propiedades establecidas:
 
 ```xaml
 <Switch OnColor="Orange"
@@ -63,19 +63,19 @@ También se pueden establecer las propiedades al crear un `Switch` en el código
 Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 ```
 
-En la captura de pantalla `Switch` siguiente se muestra el en sus Estados **de alternancia on** y `OnColor` **OFF** , con las propiedades y `ThumbColor` establecidas:
+En la captura de pantalla siguiente se muestra el `Switch` en sus Estados **de alternancia on** y **OFF** , con las propiedades `OnColor` y `ThumbColor` establecidas:
 
 ![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android](switch-images/switch-states-colors.png "Conmutadores en iOS y Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Responder a un cambio de estado del conmutador
 
-Cuando la `IsToggled` propiedad cambia, ya sea a través de la manipulación del usuario o `IsToggled` cuando una aplicación `Toggled` establece la propiedad, se desencadena el evento. Se puede registrar un controlador de eventos para este evento para responder al cambio:
+Cuando cambia la propiedad `IsToggled`, ya sea a través de la manipulación del usuario o cuando una aplicación establece la propiedad `IsToggled`, se desencadena el evento `Toggled`. Se puede registrar un controlador de eventos para este evento para responder al cambio:
 
 ```xaml
 <Switch Toggled="OnToggled" />
 ```
 
-El archivo de código subyacente contiene el controlador para el `Toggled` eventos:
+El archivo de código subyacente contiene el controlador del evento `Toggled`:
 
 ```csharp
 void OnToggled(object sender, ToggledEventArgs e)
@@ -84,9 +84,9 @@ void OnToggled(object sender, ToggledEventArgs e)
 }
 ```
 
-El `sender` argumento del controlador de eventos es el `Switch` responsable de desencadenar este evento. Puede utilizar la `sender` propiedad para `Switch` tener acceso al objeto o para distinguir entre varios `Switch` objetos que comparten el mismo `Toggled` controlador de eventos.
+El argumento `sender` del controlador de eventos es el `Switch` responsable de activar este evento. Puede utilizar la propiedad `sender` para tener acceso al objeto `Switch` o para distinguir entre varios objetos `Switch` que comparten el mismo controlador de eventos `Toggled`.
 
-También `Toggled` se puede asignar el controlador de eventos en el código:
+También se puede asignar el controlador de eventos `Toggled` en el código:
 
 ```csharp
 Switch switchControl = new Switch {...};
@@ -98,7 +98,7 @@ switchControl.Toggled += (sender, e) =>
 
 ## <a name="data-bind-a-switch"></a>Enlazar datos a un conmutador
 
-El `Toggled` controlador de eventos se puede eliminar mediante el enlace de datos y los desencadenadores para `Switch` responder a un cambio de estado de alternancia.
+El controlador de eventos `Toggled` se puede eliminar mediante el enlace de datos y los desencadenadores para responder a un `Switch` cambiar los Estados de alternancia.
 
 ```xaml
 <Switch x:Name="styleSwitch" />
@@ -116,13 +116,13 @@ El `Toggled` controlador de eventos se puede eliminar mediante el enlace de dato
 </Label>
 ```
 
-En este [`Label`](xref:Xamarin.Forms.Label) ejemplo, utiliza una expresión `DataTrigger` de enlace en para `Switch` supervisar la `IsToggled` propiedad del denominado `styleSwitch`. Cuando esta propiedad se `true`convierte en `FontAttributes` , `FontSize` `Label` se cambian las propiedades y de. Cuando la `IsToggled` propiedad vuelve a `false`, `FontAttributes` laspropiedades`FontSize` y de serestablecenasuestadoinicial.`Label`
+En este ejemplo, el [`Label`](xref:Xamarin.Forms.Label) utiliza una expresión de enlace en un `DataTrigger` para supervisar la propiedad `IsToggled` de la `Switch` denominada `styleSwitch`. Cuando esta propiedad se vuelve `true`, se cambian las propiedades `FontAttributes` y `FontSize` de la `Label`. Cuando la propiedad `IsToggled` vuelve a `false`, las propiedades `FontAttributes` y `FontSize` de la `Label` se restablecen a su estado inicial.
 
-Para obtener información sobre los desencadenadores, consulte los desencadenadores de [Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Para obtener información sobre los desencadenadores, consulte los [desencadenadores de Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-switch"></a>Deshabilitar un modificador
 
-Una aplicación puede entrar en un estado en `Switch` el que la alternancia no es una operación válida. En tales casos, `Switch` se puede deshabilitar estableciendo su `IsEnabled` propiedad en `false`. Esto impedirá que los usuarios puedan manipular el `Switch`.
+Una aplicación puede entrar en un estado en el que el `Switch` que se está alternando no es una operación válida. En tales casos, el `Switch` se puede deshabilitar estableciendo su propiedad `IsEnabled` en `false`. Esto impedirá que los usuarios puedan manipular el `Switch`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

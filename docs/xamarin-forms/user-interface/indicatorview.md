@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/17/2019
-ms.openlocfilehash: 6b7845011470d83d8f2187e0227950c23e46d52d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a5a9daa39dcc94bbf77d9c91ea651bda6ec5747b
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490521"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480551"
 ---
 # <a name="xamarinforms-indicatorview"></a>IndicatorView de Xamarin. Forms
 
@@ -39,10 +39,10 @@ Forms.SetFlags("IndicatorView_Experimental");
 - `IndicatorLayout`, de tipo `Layout<View>`, define la clase de diseño utilizada para representar la `IndicatorView`. Xamarin. Forms establece esta propiedad y, por lo general, no es necesario que la establezcan los desarrolladores.
 - `IndicatorTemplate`, de tipo `DataTemplate`, la plantilla que define la apariencia de cada indicador.
 - `IndicatorsShape`, de tipo `IndicatorShape`, la forma de cada indicador.
-- `ItemsSource`, de tipo `IEnumerable`, la colección para la que se mostrarán los indicadores. Esta propiedad se establecerá automáticamente cuando se establezca la propiedad `ItemsSourceBy`.
-- `ItemsSourceBy`, de tipo `VisualElement`, el objeto `CarouselView` para el que se van a mostrar los indicadores.
+- `ItemsSource`, de tipo `IEnumerable`, la colección para la que se mostrarán los indicadores. Esta propiedad se establecerá automáticamente cuando se establezca la propiedad adjunta `ItemsSourceBy`.
+- `ItemsSourceBy`, de tipo `VisualElement`, el objeto `CarouselView` para el que se van a mostrar los indicadores. Se trata de una propiedad adjunta.
 - `MaximumVisible`, de tipo `int`, el número máximo de indicadores visibles. El valor predeterminado es `int.MaxValue`.
-- `Position`, de tipo `int`, el índice del indicador actualmente seleccionado. Esta propiedad usa un enlace de `TwoWay`. Esta propiedad se establecerá automáticamente cuando se establezca la propiedad `ItemsSourceBy`.
+- `Position`, de tipo `int`, el índice del indicador actualmente seleccionado. Esta propiedad usa un enlace de `TwoWay`. Esta propiedad se establecerá automáticamente cuando se establezca la propiedad adjunta `ItemsSourceBy`.
 - `SelectedIndicatorColor`, de tipo `Color`, el color del indicador que representa el elemento actual de la `CarouselView`.
 
 Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , lo que significa que pueden ser destinos de enlaces de datos y con estilo.
@@ -59,17 +59,17 @@ En el ejemplo siguiente se muestra cómo crear una instancia de un `IndicatorVie
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-En este ejemplo, el `IndicatorView` se representa debajo del `CarouselView`, con un indicador para cada elemento de la `CarouselView`. El `IndicatorView` se rellena con datos estableciendo la propiedad `ItemsSourceBy` en el objeto `CarouselView`. Cada indicador es un círculo gris claro, mientras que el indicador que representa el elemento actual del `CarouselView` es gris oscuro.
+En este ejemplo, el `IndicatorView` se representa debajo del `CarouselView`, con un indicador para cada elemento de la `CarouselView`. El `IndicatorView` se rellena con datos estableciendo el `ItemsSourceBy` propiedad adjunta en el objeto `CarouselView`. Cada indicador es un círculo gris claro, mientras que el indicador que representa el elemento actual del `CarouselView` es gris oscuro.
 
 > [!IMPORTANT]
-> Al establecer la propiedad `ItemsSourceBy`, se produce el enlace de la propiedad `Position` a la propiedad `CarouselView.Position` y la propiedad `ItemsSource` enlaza a la propiedad `CarouselView.ItemsSource`.
+> Al establecer la propiedad adjunta de `ItemsSourceBy` se obtiene el `Position` enlace de la propiedad a la propiedad `CarouselView.Position` y la propiedad `ItemsSource` enlaza a la propiedad `CarouselView.ItemsSource`.
 
 ## <a name="change-indicator-shape"></a>Cambiar forma de indicador
 
@@ -82,7 +82,7 @@ En el ejemplo siguiente se muestra un `IndicatorView` configurado para usar indi
 
 ```xaml
 <IndicatorView IndicatorsShape="Square"
-               ItemsSourceBy="carouselView"
+               IndicatorView.ItemsSourceBy="carouselView"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
 ```
@@ -99,7 +99,7 @@ La apariencia de cada indicador puede definirse estableciendo la propiedad `Indi
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">
