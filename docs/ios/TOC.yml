@@ -322,6 +322,11 @@
           items:
             - name: 'Tutorial: Enlace de una biblioteca de Objective-C a iOS'
               href: platform/binding-objective-c/walkthrough.md
+        - name: Enlazar bibliotecas Swift de iOS
+          href: platform/binding-swift/index.md
+          items:
+            - name: Tutorial
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: Contacts y ContactsUI
