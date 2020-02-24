@@ -778,6 +778,8 @@
           href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
         - name: 'Información de la aplicación:'
           href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
+        - name: Tema de la aplicación
+          href: ~/essentials/app-theme.md?context=xamarin/xamarin-forms
         - name: Barómetro
           href: ~/essentials/barometer.md?context=xamarin/xamarin-forms
         - name: Batería
@@ -820,6 +822,8 @@
           href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
         - name: Sensor de orientación
           href: ~/essentials/orientation-sensor.md?context=xamarin/xamarin-forms
+        - name: Permisos
+          href: ~/essentials/permissions.md?context=xamarin/xamarin-forms
         - name: Marcador telefónico
           href: ~/essentials/phone-dialer.md?context=xamarin/xamarin-forms
         - name: 'Extensiones de plataforma (Size, Rect, Point)'
