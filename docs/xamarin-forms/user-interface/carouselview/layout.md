@@ -6,13 +6,13 @@ ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.date: 01/28/2020
+ms.openlocfilehash: 2e3d3ccd42907ef3678ccfb634c036930800a145
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130859"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636147"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Diseño de Xamarin. Forms CarouselView
 
@@ -108,7 +108,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Esto da como resultado un diseño que crece horizontalmente a medida que se agregan nuevos elementos.
+Esto da como resultado un diseño que crece horizontalmente a medida que se agregan nuevos elementos:
+
+[![Captura de pantalla de un diseño horizontal de CarouselView, en iOS y Android](layout-images/horizontal.png "CarouselView diseño horizontal")](layout-images/horizontal-large.png#lightbox "CarouselView diseño horizontal")
 
 ## <a name="vertical-layout"></a>Diseño vertical
 
@@ -165,7 +167,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Esto da como resultado un diseño que crece verticalmente a medida que se agregan nuevos elementos.
+Esto da como resultado un diseño que crece verticalmente a medida que se agregan nuevos elementos:
+
+[![Captura de pantalla de un diseño vertical de CarouselView, en iOS y Android](layout-images/vertical.png "CarouselView diseño vertical")](layout-images/vertical-large.png#lightbox "CarouselView diseño vertical")
 
 ## <a name="partially-visible-adjacent-items"></a>Elementos adyacentes parcialmente visibles
 
@@ -188,7 +192,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-El resultado es que los elementos adyacentes se exponen parcialmente en la pantalla.
+El resultado es que los elementos adyacentes se exponen parcialmente en la pantalla:
+
+[![Captura de pantalla de una CollectionView con elementos adyacentes parcialmente visibles, en iOS y Android](layout-images/peek-items.png "CarouselView indefinidos del área de inspección")](layout-images/peek-items-large.png#lightbox "Indefinidos de área máxima de CarouselView")
 
 ## <a name="item-spacing"></a>Espaciado de elementos
 
@@ -238,7 +244,9 @@ void OnImageTapped(object sender, EventArgs e)
 }
 ```
 
-El controlador de eventos `OnImageTapped` se ejecuta como respuesta a un objeto [`Image`](xref:Xamarin.Forms.Image) que se está punteando y cambia las dimensiones de la imagen (y su marco primario), para que se vea más fácilmente.
+El controlador de eventos `OnImageTapped` se ejecuta como respuesta a un objeto [`Image`](xref:Xamarin.Forms.Image) que se está incorporando y cambia las dimensiones de la imagen (y su `Frame`primario), para que se vea más fácilmente:
+
+[![Captura de pantalla de un CarouselView con el tamaño dinámico de los elementos, en iOS y Android](layout-images/runtime-resizing.png "Tamaño de elemento dinámico de CarouselView")](layout-images/runtime-resizing-large.png#lightbox "Tamaño de elemento dinámico de CarouselView")
 
 ## <a name="right-to-left-layout"></a>Diseño de derecha a izquierda
 

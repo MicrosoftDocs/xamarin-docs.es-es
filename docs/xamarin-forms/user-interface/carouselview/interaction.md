@@ -6,13 +6,13 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: fd85876b38c21c7ff1ea85d7a61c1449395d56f5
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.date: 02/11/2020
+ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749788"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635819"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Interacción de Xamarin. Forms CarouselView
 
@@ -20,14 +20,15 @@ ms.locfileid: "72749788"
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) define las siguientes propiedades que controlan la interacción del usuario:
 
-- `CurrentItem`, de tipo `object`, que se muestra en el elemento actual. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay` y tiene un valor `null` cuando no hay datos para mostrar.
+- `CurrentItem`, de tipo `object`, que se muestra en el elemento actual. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay`y tiene un valor `null` cuando no hay datos para mostrar.
 - `CurrentItemChangedCommand`, de tipo `ICommand`, que se ejecuta cuando cambia el elemento actual.
 - `CurrentItemChangedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `CurrentItemChangedCommand`.
 - `IsBounceEnabled`, de tipo `bool`, que especifica si el `CarouselView` se rebotará en un límite de contenido. El valor predeterminado es `true`.
 - `IsSwipeEnabled`, de tipo `bool`, que determina si un gesto de deslizar rápidamente cambiará el elemento mostrado. El valor predeterminado es `true`.
-- `Position`, de tipo `int`, el índice del elemento actual de la colección subyacente. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay` y tiene un valor 0 cuando no hay datos para mostrar.
+- `Position`, de tipo `int`, el índice del elemento actual de la colección subyacente. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay`y tiene un valor 0 cuando no hay datos para mostrar.
 - `PositionChangedCommand`, de tipo `ICommand`, que se ejecuta cuando cambia la posición.
 - `PositionChangedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `PositionChangedCommand`.
+- `VisibleViews`, de tipo `ObservableCollection<View>`, que es una propiedad de solo lectura que contiene los objetos de los elementos que están visibles actualmente.
 
 Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
 
@@ -48,7 +49,7 @@ Cuando el elemento mostrado actualmente cambie, la propiedad `CurrentItem` se es
 > [!IMPORTANT]
 > La propiedad `Position` cambia cuando cambia la propiedad `CurrentItem`. Esto hará que el `PositionChangedCommand` se ejecute y que el evento `PositionChanged` desencadene.
 
-### <a name="event"></a>evento
+### <a name="event"></a>Evento
 
 En el ejemplo de XAML siguiente se muestra un [`CarouselView`](xref:Xamarin.Forms.CarouselView) que utiliza un controlador de eventos para responder al cambio del elemento actual:
 
@@ -67,7 +68,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.CurrentItemChanged += OnCurrentItemChanged;
 ```
 
-En este ejemplo, el controlador de eventos `OnCurrentItemChanged` se ejecuta cuando se activa el evento `CurrentItemChanged`, con el controlador de eventos que expone los elementos anterior y actual:
+En este ejemplo, el controlador de eventos `OnCurrentItemChanged` se ejecuta cuando se activa el evento `CurrentItemChanged`:
 
 ```csharp
 void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
@@ -77,7 +78,11 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
 }
 ```
 
-### <a name="command"></a>Comando
+En este ejemplo, el controlador de eventos `OnCurrentItemChanged` expone los elementos anteriores y actuales:
+
+[![Captura de pantalla de un CarouselView con elementos anteriores y actuales, en iOS y Android](interaction-images/current-item-events.png "CarouselView con elementos actuales y anteriores")](interaction-images/current-item-events-large.png#lightbox "CarouselView con elementos actuales y anteriores")
+
+### <a name="command"></a>Get-Help
 
 En el ejemplo de XAML siguiente se muestra un [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa un comando para responder al elemento actual Changing:
 
@@ -117,7 +122,7 @@ Cuando el elemento mostrado actualmente cambia, la propiedad `Position` se estab
 > [!NOTE]
 > Si establece la propiedad `Position` en 0, se mostrará el primer elemento de la colección subyacente.
 
-### <a name="event"></a>evento
+### <a name="event"></a>Evento
 
 En el ejemplo de XAML siguiente se muestra un [`CarouselView`](xref:Xamarin.Forms.CarouselView) que utiliza un controlador de eventos para responder al cambio de propiedad `Position`:
 
@@ -136,7 +141,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.PositionChanged += OnPositionChanged;
 ```
 
-En este ejemplo, el controlador de eventos `OnPositionChanged` se ejecuta cuando se activa el evento `PositionChanged`, con el controlador de eventos que expone las posiciones anterior y actual:
+En este ejemplo, el controlador de eventos `OnPositionChanged` se ejecuta cuando se activa el evento `PositionChanged`:
 
 ```csharp
 void OnPositionChanged(object sender, PositionChangedEventArgs e)
@@ -146,7 +151,11 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
 }
 ```
 
-### <a name="command"></a>Comando
+En este ejemplo, el controlador de eventos `OnCurrentItemChanged` expone las posiciones anterior y actual:
+
+[![Captura de pantalla de un CarouselView con las posiciones actuales y anteriores, en iOS y Android](interaction-images/current-position-events.png "CarouselView con las posiciones actual y anterior")](interaction-images/current-position-events-large.png#lightbox "CarouselView con las posiciones actual y anterior")
+
+### <a name="command"></a>Get-Help
 
 En el ejemplo de XAML siguiente se muestra un [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa un comando para responder al cambio de propiedad `Position`:
 
@@ -201,7 +210,7 @@ carouselView.SetBinding(CarouselView.CurrentItemProperty, "CurrentItem");
 > [!NOTE]
 > La propiedad `CurrentItem` tiene un modo de enlace predeterminado de `TwoWay`.
 
-Los datos de la propiedad `CarouselView.CurrentItem` se enlazan a la propiedad `CurrentItem` del modelo de vista conectado, que es de tipo `Monkey`. De forma predeterminada, se usa un enlace `TwoWay` de modo que, si el usuario cambia el elemento actual, el valor de la propiedad `CurrentItem` se establecerá en el objeto `Monkey` actual. La propiedad `CurrentItem` se define en la clase `MonkeysViewModel` y está establecida en el cuarto elemento de la colección `Monkeys`:
+Los datos de la propiedad `CarouselView.CurrentItem` se enlazan a la propiedad `CurrentItem` del modelo de vista conectado, que es de tipo `Monkey`. De forma predeterminada, se usa un enlace `TwoWay` de modo que, si el usuario cambia el elemento actual, el valor de la propiedad `CurrentItem` se establecerá en el objeto `Monkey` actual. La propiedad `CurrentItem` se define en la clase `MonkeysViewModel`:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -219,6 +228,10 @@ public class MonkeysViewModel : INotifyPropertyChanged
     }
 }
 ```
+
+En este ejemplo, la propiedad `CurrentItem` está establecida en el cuarto elemento de la colección `Monkeys`:
+
+[![Captura de pantalla de un CarouselView con el elemento preestablecido, en iOS y Android](interaction-images/preset-item.png "CarouselView con elemento preestablecido")](interaction-images/preset-item-large.png#lightbox "CarouselView con elemento preestablecido")
 
 ## <a name="preset-the-position"></a>Valor preestablecido de la posición
 
@@ -242,7 +255,7 @@ carouselView.SetBinding(CarouselView.PositionProperty, "Position");
 > [!NOTE]
 > La propiedad `Position` tiene un modo de enlace predeterminado de `TwoWay`.
 
-Los datos de la propiedad `CarouselView.Position` se enlazan a la propiedad `Position` del modelo de vista conectado, que es de tipo `int`. De forma predeterminada, se usa un enlace `TwoWay` de modo que si el usuario se desplaza por el [`CarouselView`](xref:Xamarin.Forms.CarouselView), el valor de la propiedad `Position` se establecerá en el índice del elemento mostrado. La propiedad `Position` se define en la clase `MonkeysViewModel` y está establecida en el cuarto elemento de la colección `Monkeys`:
+Los datos de la propiedad `CarouselView.Position` se enlazan a la propiedad `Position` del modelo de vista conectado, que es de tipo `int`. De forma predeterminada, se usa un enlace `TwoWay` de modo que si el usuario se desplaza por el [`CarouselView`](xref:Xamarin.Forms.CarouselView), el valor de la propiedad `Position` se establecerá en el índice del elemento mostrado. La propiedad `Position` se define en la clase `MonkeysViewModel`:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -259,6 +272,79 @@ public class MonkeysViewModel : INotifyPropertyChanged
 }
 ```
 
+En este ejemplo, la propiedad `Position` está establecida en el cuarto elemento de la colección `Monkeys`:
+
+[![Captura de pantalla de un CarouselView con la posición preestablecida, en iOS y Android](interaction-images/preset-position.png "CarouselView con posición preestablecida")](interaction-images/preset-position-large.png#lightbox "CarouselView con posición preestablecida")
+
+## <a name="define-visual-states"></a>Definir Estados visuales
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define cuatro Estados visuales:
+
+- `CurrentItem` representa el estado visual del elemento que se muestra actualmente.
+- `PreviousItem` representa el estado visual del elemento mostrado previamente.
+- `NextItem` representa el estado visual del elemento siguiente.
+- `DefaultItem` representa el estado visual para el resto de los elementos.
+
+Estos Estados visuales se pueden usar para iniciar cambios visuales en los elementos mostrados por el [`CarouselView`](xref:Xamarin.Forms.CarouselView).
+
+En el siguiente ejemplo de XAML se muestra cómo definir los Estados visuales `CurrentItem`, `PreviousItem`, `NextItem`y `DefaultItem`:
+
+```xaml
+<CarouselView ItemsSource="{Binding Monkeys}"
+              PeekAreaInsets="100">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="CurrentItem">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1.1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PreviousItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="NextItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="DefaultItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.25" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+
+                <!-- Item template content -->
+                <Frame HasShadow="true">
+                    ...
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+```
+
+En este ejemplo, el estado visual `CurrentItem` especifica que el elemento actual que muestra la [`CarouselView`](xref:Xamarin.Forms.CarouselView) tendrá su propiedad [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) cambiada de su valor predeterminado de 1 a 1,1. Los Estados visuales `PreviousItem` y `NextItem` especifican que los elementos que rodean al elemento actual se mostrarán con un valor [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) de 0,5. El estado visual `DefaultItem` especifica que el resto de los elementos mostrados por el `CarouselView` se mostrarán con un valor `Opacity` de 0,25.
+
+> [!NOTE]
+> Como alternativa, los Estados visuales se pueden definir en una [`Style`](xref:Xamarin.Forms.Style) que tenga un valor de propiedad [`TargetType`](xref:Xamarin.Forms.Style.TargetType) que sea el tipo del elemento raíz de la [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que se establece como el valor de la propiedad `ItemTemplate`.
+
+Las capturas de pantallas siguientes muestran los Estados visuales `CurrentItem`, `PreviousItem`y `NextItem`:
+
+[![Captura de pantalla de un CarouselView con Estados visuales, en iOS y Android](interaction-images/visual-states.png "Estados visuales de CarouselView")](interaction-images/visual-states-large.png#lightbox "Estados visuales de CarouselView")
+
+Para obtener más información sobre los Estados visuales, consulte [Visual State Manager de Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
+
 ## <a name="clear-the-current-item"></a>Borrar el elemento actual
 
 La propiedad `CurrentItem` se puede borrar estableciéndolo, o el objeto al que se enlaza, en `null`.
@@ -274,3 +360,4 @@ De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) permi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Administrador de estado visual de Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

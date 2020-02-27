@@ -6,13 +6,13 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
-ms.openlocfilehash: 4119a650c431013bb0c8e680de600ed4e73d0c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 02/11/2020
+ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490509"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635594"
 ---
 # <a name="xamarinforms-swipeview"></a>SwipeView de Xamarin. Forms
 
@@ -57,7 +57,7 @@ Además, `SwipeView` define un método de `Close`, que cierra los elementos de d
 
 Un `SwipeView` debe definir el contenido que contenga el `SwipeView` y los elementos que se desplazan por el gesto de deslizar rápidamente. Los elementos de deslizamiento son uno o más objetos `SwipeItem` que se colocan en una de las cuatro colecciones direccionales `SwipeView`: `LeftItems`, `RightItems`, `TopItems`o `BottomItems`.
 
-El ejemplo siguiente muestra cómo crear una instancia de un `SwipeView` en XAML:
+En el ejemplo siguiente se muestra cómo crear una instancia de un `SwipeView` en XAML:
 
 ```xaml
 <SwipeView>
@@ -84,6 +84,49 @@ El ejemplo siguiente muestra cómo crear una instancia de un `SwipeView` en XAML
 </SwipeView>
 ```
 
+El código de C# equivalente es el siguiente:
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
+```
+
 En este ejemplo, el contenido de la `SwipeView` es un [`Grid`](xref:Xamarin.Forms.Grid) que contiene un [`Label`](xref:Xamarin.Forms.Label):
 
 [![Captura de pantalla del contenido de SwipeView, en iOS y Android](swipeview-images/swipeview-content.png "Contenido de SwipeView")](swipeview-images/swipeview-content-large.png#lightbox "Contenido de SwipeView")
@@ -92,9 +135,9 @@ Los elementos de deslizamiento se utilizan para realizar acciones en el contenid
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos, en iOS y Android](swipeview-images/swipeview-swipeitems.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
-De forma predeterminada, un elemento de deslizamiento se ejecuta cuando el usuario lo puntea. No obstante, este comportamiento se puede modificar. Para obtener más información, consulte el [modo de deslizar rápidamente](#swipe-mode).
+De forma predeterminada, un elemento de deslizamiento se ejecuta cuando el usuario lo puntea. No obstante, se puede modificar este comportamiento. Para obtener más información, consulte el [modo de deslizar rápidamente](#swipe-mode).
 
-Una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y se vuelve a mostrar el contenido de la `SwipeView`. No obstante, este comportamiento se puede modificar. Para obtener más información, consulte el [comportamiento de deslizamiento](#swipe-behavior).
+Una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y se vuelve a mostrar el contenido de la `SwipeView`. No obstante, se puede modificar este comportamiento. Para obtener más información, consulte el [comportamiento de deslizamiento](#swipe-behavior).
 
 > [!NOTE]
 > El deslizamiento de contenido y el deslizamiento de los elementos se pueden colocar en línea o definirse como recursos.
@@ -136,14 +179,16 @@ En el ejemplo siguiente se muestran dos objetos `SwipeItem` en la colección `Le
 </SwipeView>
 ```
 
-La apariencia de cada `SwipeItem` se define mediante las propiedades `Text`, `IconImageSource`y `BackgroundColor`:
+La apariencia de cada `SwipeItem` se define mediante una combinación de las propiedades `Text`, `IconImageSource`y `BackgroundColor`:
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos, en iOS y Android](swipeview-images/swipeview-swipeitems.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
 Cuando se puntea un `SwipeItem`, su evento de `Invoked` se activa y se controla mediante su controlador de eventos registrado. Como alternativa, la propiedad `Command` se puede establecer en una implementación `ICommand` que se ejecutará cuando se invoque la `SwipeItem`.
 
 > [!NOTE]
-> Además de definir los elementos de deslizar rápidamente como objetos `SwipeItem`, también es posible definir vistas de elemento de deslizamiento personalizado. Para obtener más información, vea [elementos de deslizamiento personalizado](#custom-swipe-items).
+> Cuando el aspecto de un `SwipeItem` se define solo mediante las propiedades `Text` o `IconImageSource`, el contenido siempre se centra.
+
+Además de definir los elementos de deslizar rápidamente como objetos `SwipeItem`, también es posible definir vistas de elemento de deslizamiento personalizado. Para obtener más información, vea [elementos de deslizamiento personalizado](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Deslizar rápidamente
 
@@ -288,4 +333,4 @@ Además, al definir la propiedad `Command` de una `SwipeItem` o `SwipeItemView`,
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SwipeView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)
+- [MenuItem de Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

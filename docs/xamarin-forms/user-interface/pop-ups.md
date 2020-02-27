@@ -6,13 +6,13 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
-ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
+ms.date: 01/17/2020
+ms.openlocfilehash: c71153cdaa94a7983b89968abc828011a648f2b1
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72971248"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636108"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
@@ -48,7 +48,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 El elemento [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) es un elemento de interfaz de usuario común en iOS. El método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de Xamarin.Forms le permite incluir este control en aplicaciones multiplataforma, lo que representa alternativas nativas en Android y UWP.
 
-Para mostrar una hoja de acción, use `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) en cualquier elemento [`Page`](xref:Xamarin.Forms.Page) y pase el mensaje y las etiquetas de botón como cadenas. Este método devuelve la etiqueta de cadena del botón en el que hizo clic el usuario. A continuación, se muestra un ejemplo sencillo:
+Para mostrar una hoja de acción, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) en cualquier [`Page`](xref:Xamarin.Forms.Page), pasando las etiquetas de mensaje y de botón como cadenas. Este método devuelve la etiqueta de cadena del botón en el que hizo clic el usuario. A continuación, se muestra un ejemplo sencillo:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -95,14 +95,15 @@ La lista de argumentos completa para el método `DisplayPromptAsync` es:
 - `placeholder`, de tipo `string`, es el texto del marcador de posición que se va a mostrar en el símbolo del sistema. Se trata de un argumento opcional, cuyo valor predeterminado es `null`.
 - `maxLength`, de tipo `int`, es la longitud máxima de la respuesta del usuario. Este argumento es opcional, cuyo valor predeterminado es-1.
 - `keyboard`, de tipo `Keyboard`, es el tipo de teclado que se va a utilizar para la respuesta del usuario. Se trata de un argumento opcional, cuyo valor predeterminado es `Keyboard.Default`.
+- `initialValue`, de tipo `string`, es una respuesta predefinida que se mostrará y que se puede editar. Es un argumento opcional, cuyo valor predeterminado es un `string`vacío.
 
 En el ejemplo siguiente se muestra cómo establecer algunos de los argumentos opcionales:
 
 ```csharp
-string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
 ```
 
-Este código limita el número de caracteres que se pueden introducir en 2 y muestra el teclado numérico para la entrada del usuario:
+Este código muestra una respuesta predefinida de 10, limita el número de caracteres que se pueden introducir en 2 y muestra el teclado numérico para la entrada del usuario:
 
 [![Captura de pantalla de un símbolo del sistema modal, en iOS y Android](pop-ups-images/keyboard-prompt.png "Símbolo del sistema modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Símbolo del sistema modal")
 

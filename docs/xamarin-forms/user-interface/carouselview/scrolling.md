@@ -6,13 +6,13 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/28/2020
+ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489757"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635937"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Desplazamiento de CarouselView de Xamarin. Forms
 
@@ -132,7 +132,7 @@ Este código de ejemplo produce el desplazamiento mínimo necesario para desplaz
 > [!NOTE]
 > De forma predeterminada, se utiliza el miembro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) , si no se especifica el argumento `position` al llamar al método `ScrollTo`.
 
-### <a name="start"></a>Inicio
+### <a name="start"></a>Start
 
 El miembro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de ejemplo hace que el elemento se desplace hasta el inicio de la vista.
 
-### <a name="center"></a>Centrar
+### <a name="center"></a>Center
 
 El miembro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el centro de la vista:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de ejemplo hace que el elemento se desplace hasta el centro de la vista.
 
-### <a name="end"></a>Fin
+### <a name="end"></a>End
 
 El miembro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el final de la vista:
 
@@ -217,6 +217,10 @@ La enumeración [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) define los
 
 De forma predeterminada en un [`CarouselView`](xref:Xamarin.Forms.CarouselView), la propiedad [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) se establece en `SnapPointsType.MandatorySingle`, lo que garantiza que el desplazamiento solo se desplaza un elemento cada vez.
 
+Las siguientes capturas de pantallas muestran un [`CarouselView`](xref:Xamarin.Forms.CarouselView) con el ajuste desactivado:
+
+[![Captura de pantalla de un CarouselView sin puntos de acoplamiento, en iOS y Android](scrolling-images/snappoints-none.png "CarouselView sin puntos de acoplamiento")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView sin puntos de acoplamiento")
+
 ### <a name="snap-points-alignment"></a>Alineación de puntos de acoplamiento
 
 La enumeración [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define `Start`, `Center`y `End` miembros.
@@ -224,7 +228,7 @@ La enumeración [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) 
 > [!IMPORTANT]
 > El valor de la propiedad [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) solo se respeta cuando la propiedad [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) se establece en `Mandatory`o `MandatorySingle`.
 
-#### <a name="start"></a>Inicio
+#### <a name="start"></a>Start
 
 El miembro `SnapPointsAlignment.Start` indica que los puntos de ajuste están alineados con el borde inicial de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 
@@ -254,9 +258,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Cuando un usuario desliza el dedo para iniciar un desplazamiento en un [`CarouselView`](xref:Xamarin.Forms.CarouselView)de desplazamiento horizontal, el elemento de la izquierda se alineará a la izquierda de la vista.
+Cuando un usuario desliza el dedo para iniciar un desplazamiento en un [`CarouselView`](xref:Xamarin.Forms.CarouselView)de desplazamiento horizontal, el elemento de la izquierda se alineará a la izquierda de la vista:
 
-#### <a name="center"></a>Centrar
+[![Captura de pantalla de un CarouselView con puntos de acoplamiento iniciales, en iOS y Android](scrolling-images/snappoints-start.png "CarouselView con puntos de acoplamiento iniciales")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView con puntos de acoplamiento iniciales")
+
+#### <a name="center"></a>Center
 
 El miembro `SnapPointsAlignment.Center` indica que los puntos de ajuste están alineados con el centro de los elementos.
 
@@ -288,9 +294,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Cuando un usuario desliza el dedo para iniciar un desplazamiento en un [`CarouselView`](xref:Xamarin.Forms.CarouselView)de desplazamiento horizontal, el elemento central se alinea con el centro de la vista.
+Cuando un usuario desliza el dedo para iniciar un desplazamiento en un [`CarouselView`](xref:Xamarin.Forms.CarouselView)de desplazamiento horizontal, el elemento central se alinea con el centro de la vista:
 
-#### <a name="end"></a>Fin
+[![Captura de pantalla de un CarouselView con puntos de acoplamiento, en iOS y Android](scrolling-images/snappoints-center.png "CarouselView con puntos de acoplamiento")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView con puntos de acoplamiento")
+
+#### <a name="end"></a>End
 
 El miembro `SnapPointsAlignment.End` indica que los puntos de ajuste están alineados con el borde final de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 
@@ -321,6 +329,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento en un [`CarouselView`](xref:Xamarin.Forms.CarouselView)de desplazamiento horizontal, el elemento de la derecha se alineará a la derecha de la vista.
+
+[![Captura de pantalla de un CarouselView con puntos de acoplamiento finales, en iOS y Android](scrolling-images/snappoints-end.png "CarouselView con puntos de acoplamiento finales")](scrolling-images/snappoints-end-large.png#lightbox "CarouselView con puntos de acoplamiento finales")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

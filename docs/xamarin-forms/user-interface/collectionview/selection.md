@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 1858d98b37df7d98f725b377280a971b3034ef0d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696360"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635630"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Selección de CollectionView de Xamarin. Forms
 
@@ -21,8 +21,8 @@ ms.locfileid: "72696360"
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define las siguientes propiedades que controlan la selección de elementos:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), de tipo [`SelectionMode`](xref:Xamarin.Forms.SelectionMode), el modo de selección.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), de tipo `object`, el elemento seleccionado en la lista. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay` y tiene un valor `null` cuando no se selecciona ningún elemento.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), de tipo `IList<object>`, los elementos seleccionados en la lista. Esta propiedad tiene un modo de enlace predeterminado de `OneWay` y tiene un valor `null` cuando no se selecciona ningún elemento.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), de tipo `object`, el elemento seleccionado en la lista. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay`y tiene un valor `null` cuando no se selecciona ningún elemento.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), de tipo `IList<object>`, los elementos seleccionados en la lista. Esta propiedad tiene un modo de enlace predeterminado de `OneWay`y tiene un valor `null` cuando no se selecciona ningún elemento.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), de tipo `ICommand`, que se ejecuta cuando cambia el elemento seleccionado.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), de tipo `object`, que es el parámetro que se pasa a la `SelectionChangedCommand`.
 
@@ -38,6 +38,8 @@ De forma predeterminada, [`CollectionView`](xref:Xamarin.Forms.CollectionView) s
 
 - `PreviousSelection`: la lista de elementos que se seleccionaron antes de que cambiara la selección.
 - `CurrentSelection`: la lista de elementos seleccionados, después de cambiar la selección.
+
+Además, [`CollectionView`](xref:Xamarin.Forms.CollectionView) tiene un método de `UpdateSelectedItems` que actualiza la propiedad [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) con una lista de elementos seleccionados, y solo activa una notificación de cambio única.
 
 ## <a name="single-selection"></a>Selección única
 
@@ -326,7 +328,7 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-Cuando la propiedad [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) está establecida en `None`, los elementos de la [`CollectionView`](xref:Xamarin.Forms.CollectionView) no se pueden seleccionar, la propiedad [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) permanecerá `null` y no se desencadenará el evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) .
+Cuando la propiedad [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) está establecida en `None`, los elementos de la [`CollectionView`](xref:Xamarin.Forms.CollectionView) no se pueden seleccionar, la propiedad [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) permanecerá `null`y no se desencadenará el evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) .
 
 > [!NOTE]
 > Cuando se ha seleccionado un elemento y se cambia la propiedad [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) de `Single` a `None`, la propiedad [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) se establecerá en `null` y el evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) se desencadenará con una propiedad `CurrentSelection` vacía.

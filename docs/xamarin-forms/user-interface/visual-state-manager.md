@@ -1,5 +1,5 @@
 ---
-title: El Administrador de estado Visual de Xamarin.Forms
+title: Administrador de estado visual de Xamarin. Forms
 description: Utilice Visual State Manager para realizar cambios en los elementos XAML basados en los estados visuales establecer desde el código.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -7,54 +7,55 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
-ms.openlocfilehash: 99bf55b6e956efe54510e822d379665879f3ba44
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.date: 02/21/2020
+ms.openlocfilehash: 086adee4dc6b921abe92f6486186023a3125695c
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940294"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636075"
 ---
-# <a name="the-xamarinforms-visual-state-manager"></a>El Administrador de estado Visual de Xamarin.Forms
+# <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin. Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
-_Utilice Visual State Manager para realizar cambios en los elementos XAML basados en los estados visuales establecer desde el código._
+_Use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código._
 
-El Administrador de estado Visual (VSM) es nuevo en Xamarin.Forms 3.0. VSM proporciona una manera estructurada para realizar cambios visuales en la interfaz de usuario desde el código. En la mayoría de los casos, la interfaz de usuario de la aplicación se define en XAML, y este XAML incluye marcado que describe cómo Visual State Manager afecta a los objetos visuales de la interfaz de usuario.
+Visual State Manager (VSM) proporciona una manera estructurada de realizar cambios visuales en la interfaz de usuario desde el código. En la mayoría de los casos, la interfaz de usuario de la aplicación se define en XAML, y este XAML incluye marcado que describe cómo Visual State Manager afecta a los objetos visuales de la interfaz de usuario.
 
-VSM introduce el concepto de _estados visuales_. Una vista de Xamarin.Forms, como un `Button` puede tener varios una apariencia visual distinta según su estado subyacente &mdash; si está deshabilitado, o presiona o, tiene foco de entrada. Estos son los Estados del botón.
+El VSM presenta el concepto de _Estados visuales_. Una vista de Xamarin. Forms como un `Button` puede tener varias apariencias visuales diferentes en función de su estado subyacente &mdash; si está deshabilitada, presionada o tiene el foco de entrada. Estos son los Estados del botón.
 
-Estados visuales se recopilan en _grupos de estado visual_. Todos los estados visuales dentro de un grupo de estados visuales son mutuamente excluyentes. Estados visuales y grupos de estado visual se identifican mediante cadenas de texto simple.
+Los Estados visuales se recopilan en _grupos de Estados visuales_. Todos los estados visuales dentro de un grupo de estados visuales son mutuamente excluyentes. Estados visuales y grupos de estado visual se identifican mediante cadenas de texto simple.
 
-Xamarin.Forms Visual State Manager define un grupo de estados visuales denominado "CommonStates" con tres estados visuales:
+El administrador de estado visual de Xamarin. Forms define un grupo de Estados visuales denominado "CommonStates" con los siguientes Estados visuales:
 
 - "Normal"
 - "Deshabilitado"
 - "Con foco"
+- Seleccionadas
 
-Es compatible con todas las clases que derivan de este grupo de estados visuales [ `VisualElement` ](xref:Xamarin.Forms.VisualElement), que es la clase base para [ `View` ](xref:Xamarin.Forms.View) y [ `Page` ](xref:Xamarin.Forms.Page).
+Este grupo de Estados visuales es compatible con todas las clases que derivan de [`VisualElement`](xref:Xamarin.Forms.VisualElement), que es la clase base para [`View`](xref:Xamarin.Forms.View) y [`Page`](xref:Xamarin.Forms.Page).
 
 También puede definir sus propios grupos de estados visuales y estados visuales, como en este artículo se muestran.
 
 > [!NOTE]
-> Xamarin.Forms los desarrolladores familiarizados con [desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md) son conscientes de que los desencadenadores también pueden realizar cambios en los objetos visuales en la interfaz de usuario según los cambios en las propiedades de una vista o la activación de eventos. Sin embargo, usar desencadenadores para tratar con varias combinaciones de estos cambios puede ser algo confuso. Históricamente, el Administrador de estado Visual se introdujo en entornos basados en XAML de Windows para solucionar la confusión resultante de las combinaciones de estados visuales. VSM los estados visuales dentro de un grupo de estados visuales siempre son mutuamente excluyentes. En cualquier momento, solo un estado de cada grupo es el estado actual.
+> Los desarrolladores de Xamarin. Forms familiarizados con los [desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md) son conscientes de que los desencadenadores también pueden realizar cambios en los objetos visuales de la interfaz de usuario en función de los cambios en las propiedades de una vista o en la activación de eventos. Sin embargo, usar desencadenadores para tratar con varias combinaciones de estos cambios puede ser algo confuso. Históricamente, el Administrador de estado Visual se introdujo en entornos basados en XAML de Windows para solucionar la confusión resultante de las combinaciones de estados visuales. VSM los estados visuales dentro de un grupo de estados visuales siempre son mutuamente excluyentes. En cualquier momento, solo un estado de cada grupo es el estado actual.
 
-## <a name="the-common-states"></a>Los Estados comunes
+## <a name="common-states"></a>Estados comunes
 
-El Administrador de estado Visual permite incluir secciones en el archivo XAML que se puede cambiar la apariencia visual de una vista si la vista normal o está deshabilitado, o tiene el foco de entrada. Estos se conocen como el _Estados comunes_.
+El administrador de estado visual le permite incluir marcado en el archivo XAML que puede cambiar la apariencia visual de una vista si la vista es normal, está deshabilitada o tiene el foco de entrada. Estos se conocen como _Estados comunes_.
 
-Por ejemplo, suponga que tiene un `Entry` vista en la página, y desea que la apariencia visual de la `Entry` para cambiar de las maneras siguientes:
+Por ejemplo, supongamos que tiene una vista `Entry` en la página y desea que el aspecto visual del `Entry` cambie de las siguientes maneras:
 
-- El `Entry` debe tener un rosa en segundo plano cuando el `Entry` está deshabilitado.
-- El `Entry` debe tener un fondo verde lima con normalidad.
-- El `Entry` debe expandir a dos veces su altura normal cuando tiene foco de entrada.
+- El `Entry` debe tener un fondo rosa cuando la `Entry` está deshabilitada.
+- Normalmente, el `Entry` debe tener un fondo verde.
+- El `Entry` debe expandirse hasta el doble de su alto normal cuando tenga el foco de entrada.
 
 Puede asociar el marcado VSM a una vista individual, o puede definir en un estilo si se aplica a varias vistas. Las dos secciones siguientes describen estos enfoques.
 
 ### <a name="vsm-markup-on-a-view"></a>Marcado VSM en una vista
 
-Para asociar el marcado VSM a un `Entry` ver, separar primero el `Entry` en etiquetas de inicio y finalización:
+Para asociar el marcado de VSM a una vista `Entry`, separe primero el `Entry` en etiquetas de inicio y cierre:
 
 ```xaml
 <Entry FontSize="18">
@@ -62,9 +63,9 @@ Para asociar el marcado VSM a un `Entry` ver, separar primero el `Entry` en etiq
 </Entry>
 ```
 
-Asignó un tamaño de fuente explícita porque uno de los Estados que usará el `FontSize` propiedad duplicar el tamaño del texto en el `Entry`.
+Se le asigna un tamaño de fuente explícito, ya que uno de los Estados utilizará la propiedad `FontSize` para doblar el tamaño del texto en el `Entry`.
 
-A continuación, inserte `VisualStateManager.VisualStateGroups` etiquetas entre las etiquetas:
+A continuación, inserte `VisualStateManager.VisualStateGroups` etiquetas entre esas etiquetas:
 
 ```xaml
 <Entry FontSize="18">
@@ -74,9 +75,9 @@ A continuación, inserte `VisualStateManager.VisualStateGroups` etiquetas entre 
 </Entry>
 ```
 
-[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) es una propiedad enlazable adjunta definida por el [ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager) clase. (Para obtener más información sobre las propiedades enlazables asociadas, vea el artículo [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)). Así es como se adjunta la propiedad `VisualStateGroups` al objeto `Entry`.
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) es una propiedad enlazable adjunta definida por la clase [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) . (Para obtener más información sobre las propiedades enlazables asociadas, vea el artículo [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)). Así es como se adjunta la propiedad `VisualStateGroups` al objeto `Entry`.
 
-El `VisualStateGroups` propiedad es de tipo [ `VisualStateGroupList` ](xref:Xamarin.Forms.VisualStateGroupList), que es una colección de [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) objetos. Dentro de la `VisualStateManager.VisualStateGroups` etiquetas, inserte un par de `VisualStateGroup` etiquetas para cada grupo de estados visuales que desea incluir:
+La propiedad `VisualStateGroups` es de tipo [`VisualStateGroupList`](xref:Xamarin.Forms.VisualStateGroupList), que es una colección de objetos [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) . Dentro de las etiquetas de `VisualStateManager.VisualStateGroups`, inserte un par de etiquetas de `VisualStateGroup` para cada grupo de Estados visuales que quiera incluir:
 
 ```xaml
 <Entry FontSize="18">
@@ -88,17 +89,17 @@ El `VisualStateGroups` propiedad es de tipo [ `VisualStateGroupList` ](xref:Xama
 </Entry>
 ```
 
-Tenga en cuenta que el `VisualStateGroup` etiqueta tiene una `x:Name` atributo que indica el nombre del grupo. El `VisualStateGroup` clase define un `Name` propiedad que puede usar en su lugar:
+Observe que la etiqueta `VisualStateGroup` tiene un atributo `x:Name` que indica el nombre del grupo. La clase `VisualStateGroup` define una propiedad `Name` que puede usar en su lugar:
 
 ```xaml
 <VisualStateGroup Name="CommonStates">
 ```
 
-Puede usar `x:Name` o `Name` , pero no ambos en el mismo elemento.
+Puede usar `x:Name` o `Name`, pero no ambos en el mismo elemento.
 
-El `VisualStateGroup` clase define una propiedad denominada [ `States` ](xref:Xamarin.Forms.VisualStateGroup.States), que es una colección de [ `VisualState` ](xref:Xamarin.Forms.VisualState) objetos. `States` es el _propiedad de contenido_ de `VisualStateGroups` por lo que puede incluir la `VisualState` etiquetas directamente entre el `VisualStateGroup` etiquetas. (Contenido de las propiedades se describen en el artículo [esencial sintaxis XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties).)
+La clase `VisualStateGroup` define una propiedad denominada [`States`](xref:Xamarin.Forms.VisualStateGroup.States), que es una colección de objetos [`VisualState`](xref:Xamarin.Forms.VisualState) . `States` es la _propiedad de contenido_ de `VisualStateGroups` para que pueda incluir las etiquetas de `VisualState` directamente entre las etiquetas de `VisualStateGroup`. (Las propiedades de contenido se describen en el artículo [sintaxis básica de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties)).
 
-El siguiente paso es incluir un par de etiquetas para cada estado visual en ese grupo. También pueden identificarse mediante `x:Name` o `Name`:
+El siguiente paso es incluir un par de etiquetas para cada estado visual en ese grupo. También se pueden identificar mediante `x:Name` o `Name`:
 
 ```xaml
 <Entry FontSize="18">
@@ -120,9 +121,9 @@ El siguiente paso es incluir un par de etiquetas para cada estado visual en ese 
 </Entry>
 ```
 
-`VisualState` define una propiedad denominada [ `Setters` ](xref:Xamarin.Forms.VisualState.Setters), que es una colección de [ `Setter` ](xref:Xamarin.Forms.Setter) objetos. Estas son las mismas `Setter` objetos que se usan en un [ `Style` ](xref:Xamarin.Forms.Style) objeto.
+`VisualState` define una propiedad denominada [`Setters`](xref:Xamarin.Forms.VisualState.Setters), que es una colección de objetos [`Setter`](xref:Xamarin.Forms.Setter) . Estos son los mismos `Setter` objetos que se usan en un objeto [`Style`](xref:Xamarin.Forms.Style) .
 
-`Setters` es _no_ la propiedad content de `VisualState`, por lo que es necesario incluir las etiquetas de elemento de propiedad para el `Setters` propiedad:
+`Setters` _no_ es la propiedad de contenido de `VisualState`, por lo que es necesario incluir etiquetas de elemento de propiedad para la propiedad `Setters`:
 
 ```xaml
 <Entry FontSize="18">
@@ -150,7 +151,7 @@ El siguiente paso es incluir un par de etiquetas para cada estado visual en ese 
 </Entry>
 ```
 
-Ahora puede insertar uno o varios `Setter` objetos entre cada par de `Setters` etiquetas. Estos son los `Setter` objetos que definen los estados visuales que se ha descrito anteriormente:
+Ahora puede insertar uno o más objetos `Setter` entre cada par de etiquetas de `Setters`. Estos son los objetos `Setter` que definen los Estados visuales descritos anteriormente:
 
 ```xaml
 <Entry FontSize="18">
@@ -178,9 +179,9 @@ Ahora puede insertar uno o varios `Setter` objetos entre cada par de `Setters` e
 </Entry>
 ```
 
-Cada `Setter` etiqueta indica el valor de una propiedad determinada cuando ese estado está activo. Cualquier propiedad que se hace referencia a un `Setter` objeto debe estar respaldado por una propiedad enlazable.
+Cada etiqueta `Setter` indica el valor de una propiedad determinada cuando ese estado es actual. Cualquier propiedad a la que hace referencia un objeto `Setter` debe estar respaldada por una propiedad enlazable.
 
-Similar a este marcado es la base de la **VSM en la vista** página en el **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** programa de ejemplo. La página incluye tres `Entry` vistas, pero solo la segunda se tiene la marca de VSM conectada a ella:
+El marcado similar a este es la base de la página de **VSM en la vista** en el programa de ejemplo **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** . La página incluye tres vistas de `Entry`, pero solo la segunda tiene el marcado de VSM asociado:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -203,27 +204,21 @@ Similar a este marcado es la base de la **VSM en la vista** página en el **[Vsm
         </StackLayout.Resources>
 
         <Label Text="Normal Entry:" />
-
         <Entry />
-
         <Label Text="Entry with VSM: " />
-
         <Entry>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
-
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="Lime" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Focused">
                         <VisualState.Setters>
                             <Setter Property="FontSize" Value="36" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="Pink" />
@@ -241,9 +236,7 @@ Similar a este marcado es la base de la **VSM en la vista** página en el **[Vsm
                 </DataTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Label Text="Entry to enable 2nd Entry:" />
-
         <Entry x:Name="entry3"
                Text=""
                Placeholder="Type something to enable 2nd Entry" />
@@ -251,23 +244,23 @@ Similar a este marcado es la base de la **VSM en la vista** página en el **[Vsm
 </ContentPage>
 ```
 
-Tenga en cuenta que el segundo `Entry` también tiene un `DataTrigger` como parte de su `Trigger` colección. Esto hace que el `Entry` deshabilitarse hasta que no se escribe algo en la tercera `Entry`. Esta es la página de inicio que se ejecutan en iOS, Android y la plataforma Universal de Windows (UWP):
+Observe que la segunda `Entry` también tiene un `DataTrigger` como parte de su colección `Trigger`. Esto hace que se deshabilite el `Entry` hasta que se escriba algo en el tercer `Entry`. Esta es la página de inicio que se ejecutan en iOS, Android y la plataforma Universal de Windows (UWP):
 
 [![VSM en la vista: deshabilitado](vsm-images/VsmOnViewDisabled.png "VSM en la vista: deshabilitado")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
-El estado visual actual es "Disabled" por lo que el fondo de la segunda `Entry` es de color fucsia en iOS y Android pantallas. La implementación de UWP de `Entry` no permite establecer el fondo de color cuando el `Entry` está deshabilitado.
+El estado visual actual es "deshabilitado", por lo que el fondo del segundo `Entry` es rosa en las pantallas iOS y Android. La implementación de UWP de `Entry` no permite establecer el color de fondo cuando la `Entry` está deshabilitada.
 
-Cuando escriba algún texto en la tercera `Entry`, el segundo `Entry` modificadores en el estado "Normal" y el fondo es ahora CAL:
+Cuando escribe texto en el tercer `Entry`, el segundo `Entry` cambia al estado "normal" y el fondo es ahora de Lima:
 
 [![VSM en vista: normal](vsm-images/VsmOnViewNormal.png "VSM en vista: normal")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
-Al tocar el segundo `Entry`, obtiene el foco de entrada. Se activa en estado "Focused" y se expande al doble del alto:
+Cuando toca el segundo `Entry`, obtiene el foco de entrada. Se activa en estado "Focused" y se expande al doble del alto:
 
 [![VSM en vista: centrado](vsm-images/VsmOnViewFocused.png "VSM en el centrado en la vista")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
-Tenga en cuenta que el `Entry` no conserva el fondo de color verde cuando recibe el foco de entrada. Como Visual State Manager cambia entre los estados visuales, no están establecidas las propiedades establecidas por el estado anterior. Tenga en cuenta que los estados visuales son mutuamente excluyentes. El estado "Normal" no significa solamente que el `Entry` está habilitado. Esto significa que el `Entry` está habilitado y no tiene el foco de entrada.
+Tenga en cuenta que el `Entry` no conserva el fondo de Lima cuando obtiene el foco de entrada. Como Visual State Manager cambia entre los estados visuales, no están establecidas las propiedades establecidas por el estado anterior. Tenga en cuenta que los estados visuales son mutuamente excluyentes. El estado "normal" no significa únicamente que esté habilitado el `Entry`. Significa que el `Entry` está habilitado y no tiene el foco de entrada.
 
-Si desea que el `Entry` para tener un fondo de color verde en el estado "Enfocado", agregue otro `Setter` a ese estado visual:
+Si desea que el `Entry` tenga un fondo Lima en el estado "centrado", agregue otro `Setter` a ese estado visual:
 
 ```xaml
 <VisualState x:Name="Focused">
@@ -278,7 +271,7 @@ Si desea que el `Entry` para tener un fondo de color verde en el estado "Enfocad
 </VisualState>
 ```
 
-En orden para estas `Setter` objetos funcione correctamente, un `VisualStateGroup` debe contener `VisualState` objetos para todos los Estados de ese grupo. Si no hay un estado visual que no tiene ningún `Setter` objetos, incluirla como una etiqueta vacía:
+Para que estos objetos `Setter` funcionen correctamente, un `VisualStateGroup` debe contener `VisualState` objetos para todos los Estados de ese grupo. Si hay un estado visual que no tiene ningún objeto `Setter`, inclúyalo de todos modos como una etiqueta vacía:
 
 ```xaml
 <VisualState x:Name="Normal" />
@@ -286,9 +279,9 @@ En orden para estas `Setter` objetos funcione correctamente, un `VisualStateGrou
 
 ### <a name="visual-state-manager-markup-in-a-style"></a>Marcado de administrador de estado visual en un estilo
 
-A menudo es necesario compartir el mismo marcado Visual State Manager entre dos o más vistas. En este caso, querrá poner el marcado en un `Style` definición.
+A menudo es necesario compartir el mismo marcado Visual State Manager entre dos o más vistas. En este caso, querrá colocar el marcado en una definición de `Style`.
 
-Aquí está la existente implícito `Style` para el `Entry` elementos en el **VSM en vista** página:
+Esta es la `Style` implícita existente para los elementos de `Entry` en la página de **VSM en la vista** :
 
 ```xaml
 <Style TargetType="Entry">
@@ -297,7 +290,7 @@ Aquí está la existente implícito `Style` para el `Entry` elementos en el **VS
 </Style>
 ```
 
-Agregar `Setter` las etiquetas para el `VisualStateManager.VisualStateGroups` propiedad enlazable asociada:
+Agregue etiquetas de `Setter` para la propiedad `VisualStateManager.VisualStateGroups` enlazable adjunta:
 
 ```xaml
 <Style TargetType="Entry">
@@ -309,7 +302,7 @@ Agregar `Setter` las etiquetas para el `VisualStateManager.VisualStateGroups` pr
 </Style>
 ```
 
-La propiedad de contenido para `Setter` es `Value`, por lo que el valor de la `Value` propiedad se puede especificar directamente dentro de esas etiquetas. Que es propiedad de tipo `VisualStateGroupList`:
+La propiedad de contenido para `Setter` es `Value`, por lo que el valor de la propiedad `Value` se puede especificar directamente dentro de esas etiquetas. Esa propiedad es de tipo `VisualStateGroupList`:
 
 ```xaml
 <Style TargetType="Entry">
@@ -323,7 +316,7 @@ La propiedad de contenido para `Setter` es `Value`, por lo que el valor de la `V
 </Style>
 ```
 
-Dentro de estas etiquetas pueden incluir uno o varios `VisualStateGroup` objetos:
+Dentro de esas etiquetas puede incluir uno o varios objetos `VisualStateGroup`:
 
 ```xaml
 <Style TargetType="Entry">
@@ -341,7 +334,7 @@ Dentro de estas etiquetas pueden incluir uno o varios `VisualStateGroup` objetos
 
 El resto del marcado VSM es igual que antes.
 
-Este es el **VSM en estilo** página que muestra el marcado VSM completo:
+Esta es la página **de VSM en estilo** que muestra el marcado de VSM completo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -356,20 +349,17 @@ Este es el **VSM en estilo** página que muestra el marcado VSM completo:
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
-
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="Lime" />
                                 </VisualState.Setters>
                             </VisualState>
-
                             <VisualState x:Name="Focused">
                                 <VisualState.Setters>
                                     <Setter Property="FontSize" Value="36" />
                                     <Setter Property="BackgroundColor" Value="Lime" />
                                 </VisualState.Setters>
                             </VisualState>
-
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="Pink" />
@@ -387,11 +377,8 @@ Este es el **VSM en estilo** página que muestra el marcado VSM completo:
         </StackLayout.Resources>
 
         <Label Text="Normal Entry:" />
-
         <Entry />
-
         <Label Text="Entry with VSM: " />
-
         <Entry>
             <Entry.Triggers>
                 <DataTrigger TargetType="Entry"
@@ -402,9 +389,7 @@ Este es el **VSM en estilo** página que muestra el marcado VSM completo:
                 </DataTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Label Text="Entry to enable 2nd Entry:" />
-
         <Entry x:Name="entry3"
                Text=""
                Placeholder="Type something to enable 2nd Entry" />
@@ -412,7 +397,7 @@ Este es el **VSM en estilo** página que muestra el marcado VSM completo:
 </ContentPage>
 ```
 
-Ahora todos los `Entry` vistas en esta página responden a la misma manera para sus estados visuales. Tenga en cuenta también que el estado de "Focused" incluye ahora un segundo `Setter` que ofrece cada `Entry` una CAL fondo también cuando tiene foco de entrada:
+Ahora todas las vistas de `Entry` de esta página responden de la misma manera a sus Estados visuales. Observe también que el estado "Focused" ahora incluye una segunda `Setter` que proporciona a cada `Entry` un fondo de verde lima también cuando tiene el foco de entrada:
 
 [![VSM en estilo](vsm-images/VsmInStyle.png "VSM en estilo")](vsm-images/VsmInStyle-Large.png#lightbox)
 
@@ -420,80 +405,57 @@ Ahora todos los `Entry` vistas en esta página responden a la misma manera para 
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin. Forms:
 
-| Clase | Estados | Más información |
+| Clase | States | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `CollectionView` | `Selected` | [Cambiar el color de los elementos seleccionados](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `VisualElement` | `Normal`, `Disabled`, `Focused` | [Estados comunes](#the-common-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Estados comunes](#common-states) |
 
 Se puede tener acceso a cada uno de estos Estados a través del grupo de Estados visuales denominado `CommonStates`.
 
-## <a name="defining-your-own-visual-states"></a>Definir sus propios estados visuales
+## <a name="set-state-on-multiple-elements"></a>Establecer el estado en varios elementos
 
-Cada clase que derive de `VisualElement` admite los tres estados comunes "Normal", "Con foco" y "Disabled". Internamente, el [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) clase detecta cuando se está convirtiendo en habilitado o deshabilitado, o con y sin foco y llama a estático [ `VisualStateManager.GoToState` ](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) método:
+En los ejemplos anteriores, los Estados visuales se adjuntaron y funcionaban en elementos únicos. Sin embargo, también es posible crear Estados visuales que estén asociados a un único elemento, pero que establezcan propiedades en otros elementos dentro del mismo ámbito. Esto evita tener que repetir Estados visuales en cada elemento en el que operan los Estados.
 
-```csharp
-VisualStateManager.GoToState(this, "Focused");
+El tipo de [`Setter`](xref:Xamarin.Forms.Setter) tiene una propiedad `TargetName`, de tipo `string`, que representa el elemento de destino que manipulará el `Setter` para un estado visual. Cuando se define la propiedad `TargetName`, el `Setter` establece el `Property` del elemento definido en `TargetName` para `Value`:
+
+```xaml
+<Setter TargetName="label"
+        Property="Label.TextColor"
+        Value="Red" />
 ```
 
-Este es el único código Visual State Manager que encontrará en el `VisualElement` clase. Dado que `GoToState` se llama para cada objeto en función de cada clase que derive de `VisualElement`, puede utilizar Visual State Manager con cualquier `VisualElement` objeto para responder a estos cambios.
+En este ejemplo, una `Label` denominada `label` tendrá su propiedad `TextColor` establecida en `Red`. Al establecer la propiedad `TargetName` debe especificar la ruta de acceso completa a la propiedad en `Property`. Por consiguiente, para establecer la propiedad `TextColor` en un `Label`, `Property` se especifica como `Label.TextColor`.
 
-Curiosamente, el nombre del grupo de estados visuales "CommonStates" no se mencionan explícitamente en `VisualElement`. El nombre del grupo no es parte de la API para el Administrador de estado Visual. Dentro de uno de los dos programa de ejemplo mostrado hasta ahora, puede cambiar el nombre del grupo de "CommonStates" en cualquier otro valor y el programa seguirá funcionando. El nombre del grupo es simplemente una descripción general de los Estados de ese grupo. Implícitamente se entiende que los estados visuales en todos los grupos se excluyen mutuamente: un estado y el estado de un único es actual en cualquier momento.
+> [!NOTE]
+> Cualquier propiedad a la que hace referencia un objeto `Setter` debe estar respaldada por una propiedad enlazable.
 
-Si desea implementar sus propios estados visuales, deberá llamar a `VisualStateManager.GoToState` desde el código. Con más frecuencia, hará que esta llamada desde el archivo de código subyacente de la clase de página.
-
-El **VSM validación** página en el **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** ejemplo muestra cómo utilizar Visual State Manager en relación con la validación de entrada. El archivo XAML consta de dos `Label` elementos, un `Entry`, y `Button`:
+En la página **VSM with Setter TargetName** en el ejemplo **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** se muestra cómo establecer el estado en varios elementos, a partir de un único grupo de Estados visuales. El archivo XAML está compuesto de un `StackLayout` que contiene un elemento `Label`, un `Entry`y un `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VsmDemos.VsmValidationPage"
-             Title="VSM Validation">
-    <StackLayout Padding="10, 10">
-
-        <Label Text="Enter a U.S. phone number:"
-               FontSize="Large" />
-
-        <Entry Placeholder="555-555-5555"
-               FontSize="Large"
-               Margin="30, 0, 0, 0"
-               TextChanged="OnTextChanged" />
-
-        <Label x:Name="helpLabel"
-               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1">
+             x:Class="VsmDemos.VsmSetterTargetNamePage"
+             Title="VSM with Setter TargetName">
+    <StackLayout Margin="10">
+        <Label Text="What is the capital of France?" />
+        <Entry x:Name="entry"
+               Placeholder="Enter answer" />
+        <Button Text="Reveal answer">
             <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup Name="ValidityStates">
-
-                    <VisualState Name="Valid">
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="Transparent" />
+                            <Setter Property="Scale"
+                                    Value="0.8" />
+                            <Setter TargetName="entry"
+                                    Property="Entry.Text"
+                                    Value="Paris" />
                         </VisualState.Setters>
                     </VisualState>
-
-                    <VisualState Name="Invalid" />
-
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-        </Label>
-
-        <Button x:Name="submitButton"
-                Text="Submit"
-                FontSize="Large"
-                Margin="0, 20"
-                VerticalOptions="Center"
-                HorizontalOptions="Center">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup Name="ValidityStates">
-
-                    <VisualState Name="Valid" />
-
-                    <VisualState Name="Invalid">
-                        <VisualState.Setters>
-                            <Setter Property="IsEnabled" Value="False" />
-                        </VisualState.Setters>
-                    </VisualState>
-
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
         </Button>
@@ -501,24 +463,105 @@ El **VSM validación** página en el **[VsmDemos](https://docs.microsoft.com/sam
 </ContentPage>
 ```
 
-Marcado VSM está asociado a la segunda `Label` (denominado `helpLabel`) y el `Button` (denominado `submitButton`). Hay dos estados se excluyen mutuamente, denominados "Valid" y "No válido". Tenga en cuenta que contiene cada uno de los dos grupos de "ValidationState" `VisualState` etiquetas para "Valid" y "No válido", aunque uno de ellos está vacío en cada caso.
+El marcado de VSM está asociado a la `StackLayout`. Hay dos Estados mutuamente exclusivos, denominados "normal" y "pressed", con cada Estado que contiene etiquetas `VisualState`.
 
-Si el `Entry` no contiene un número de teléfono válido, a continuación, el estado actual es "No válido" por lo que el segundo `Label` está visible y el `Button` está deshabilitado:
+El estado "normal" está activo cuando no se presiona el `Button` y se puede escribir una respuesta a la pregunta:
+
+[![VSM Setter TargetName: estado normal](vsm-images/VsmSetterTargetNameNormal.png "VSM Setter TargetName-normal")](vsm-images/VsmSetterTargetNameNormal-Large.png#lightbox)
+
+El estado "pressed" se activa cuando se presiona el `Button`:
+
+[![VSM Setter TargetName: estado pressed](vsm-images/VsmSetterTargetNamePressed.png "VSM Setter TargetName-pressed")](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
+
+El `VisualState` "pressed" especifica que, cuando se presiona el `Button`, su propiedad `Scale` se cambiará del valor predeterminado de 1 a 0,8. Además, el `Entry` denominado `entry` tendrá su propiedad `Text` establecida en París. Por lo tanto, el resultado es que, cuando se presiona el `Button`, se cambia de tamaño para que sea ligeramente menor y el `Entry` muestra París. A continuación, cuando se libera el `Button` se vuelve a escalar a su valor predeterminado de 1 y el `Entry` muestra cualquier texto escrito anteriormente.
+
+> [!IMPORTANT]
+> Actualmente no se admiten las rutas de acceso de propiedades en elementos `Setter` que especifican la propiedad `TargetName`.
+
+## <a name="define-your-own-visual-states"></a>Definir sus propios Estados visuales
+
+Cada clase que se deriva de `VisualElement` admite los tres Estados comunes "normal", "Focused" y "Disabled". Internamente, la clase [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) detecta cuándo está habilitada o deshabilitada, o tiene el foco o no está enfocada, y llama al método de [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) estático:
+
+```csharp
+VisualStateManager.GoToState(this, "Focused");
+```
+
+Este es el único código de Visual State Manager que encontrará en la clase `VisualElement`. Dado que se llama a `GoToState` para cada objeto basado en cada clase que deriva de `VisualElement`, puede usar el administrador de estado visual con cualquier objeto `VisualElement` para responder a estos cambios.
+
+Curiosamente, no se hace referencia explícitamente al nombre del grupo de Estados visuales "CommonStates" en `VisualElement`. El nombre del grupo no es parte de la API para el Administrador de estado Visual. Dentro de uno de los dos programa de ejemplo mostrado hasta ahora, puede cambiar el nombre del grupo de "CommonStates" en cualquier otro valor y el programa seguirá funcionando. El nombre del grupo es simplemente una descripción general de los Estados de ese grupo. Implícitamente se entiende que los estados visuales en todos los grupos se excluyen mutuamente: un estado y el estado de un único es actual en cualquier momento.
+
+Si desea implementar sus propios Estados visuales, deberá llamar a `VisualStateManager.GoToState` desde el código. Con más frecuencia, hará que esta llamada desde el archivo de código subyacente de la clase de página.
+
+En la página de **validación de VSM** en el ejemplo **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** se muestra cómo usar el administrador de estado visual en conexión con la validación de entrada. El archivo XAML consta de una `StackLayout` que contiene dos elementos `Label`, un `Entry`y un `Button`:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VsmDemos.VsmValidationPage"
+             Title="VSM Validation">
+    <StackLayout x:Name="stackLayout"
+                 Padding="10, 10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="ValidityStates">
+                    <VisualState Name="Valid">
+                        <VisualState.Setters>
+                            <Setter TargetName="helpLabel"
+                                    Property="Label.TextColor"
+                                    Value="Transparent" />
+                            <Setter TargetName="entry"
+                                    Property="Entry.BackgroundColor"
+                                    Value="Lime" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Invalid">
+                        <VisualState.Setters>
+                            <Setter TargetName="entry"
+                                    Property="Entry.BackgroundColor"
+                                    Value="Pink" />
+                            <Setter TargetName="submitButton"
+                                    Property="Button.IsEnabled"
+                                    Value="False" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        <Label Text="Enter a U.S. phone number:"
+               FontSize="Large" />
+        <Entry x:Name="entry"
+               Placeholder="555-555-5555"
+               FontSize="Large"
+               Margin="30, 0, 0, 0"
+               TextChanged="OnTextChanged" />
+        <Label x:Name="helpLabel"
+               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1" />
+        <Button x:Name="submitButton"
+                Text="Submit"
+                FontSize="Large"
+                Margin="0, 20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
+```
+
+El marcado de VSM se adjunta al `StackLayout` (denominado `stackLayout`). Hay dos Estados mutuamente exclusivos, denominados "Valid" y "no válidos", con cada Estado que contiene etiquetas `VisualState`.
+
+Si el `Entry` no contiene un número de teléfono válido, el estado actual es "no válido", por lo que el `Entry` tiene un fondo rosa, el segundo `Label` es visible y el `Button` está deshabilitado:
 
 [![Validación de VSM: Estado no válido](vsm-images/VsmValidationInvalid.png "Validación de VSM: no válida")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
-Cuando se escribe un número de teléfono válido, el estado actual es "Valid". El segundo `Entry` desaparece y el `Button` ahora está habilitado:
+Cuando se escribe un número de teléfono válido, el estado actual es "Valid". El `Entry` obtiene un fondo de Lima, el segundo `Label` desaparece y la `Button` está habilitada ahora:
 
 [![Validación de VSM: estado válido](vsm-images/VsmValidationValid.png "Validación de VSM: válida")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
-El archivo de código subyacente es responsable de controlar el evento de `TextChanged` desde el `Entry`. El controlador utiliza una expresión regular para determinar si la cadena de entrada es válida o no. El método en el archivo de código subyacente denominado `GoToState` llama estático `VisualStateManager.GoToState` método para ambos `helpLabel` y `submitButton`:
+El archivo de código subyacente es responsable de controlar el evento de `TextChanged` desde el `Entry`. El controlador utiliza una expresión regular para determinar si la cadena de entrada es válida o no. El método en el archivo de código subyacente denominado `GoToState` llama al método de `VisualStateManager.GoToState` estático para `stackLayout`:
 
 ```csharp
 public partial class VsmValidationPage : ContentPage
 {
-    public VsmValidationPage ()
+    public VsmValidationPage()
     {
-        InitializeComponent ();
+        InitializeComponent();
 
         GoToState(false);
     }
@@ -532,27 +575,40 @@ public partial class VsmValidationPage : ContentPage
     void GoToState(bool isValid)
     {
         string visualState = isValid ? "Valid" : "Invalid";
-        VisualStateManager.GoToState(helpLabel, visualState);
-        VisualStateManager.GoToState(submitButton, visualState);
+        VisualStateManager.GoToState(stackLayout, visualState);
     }
 }
 ```
 
-Observe también que el `GoToState` se llama al método desde el constructor para inicializar el estado. Siempre debe haber un estado actual. Pero no en el código está ahí cualquier referencia al nombre del grupo de estados visuales, aunque se hace referencia en el XAML como "ValidationStates" para fines de claridad.
+Observe también que se llama al método `GoToState` desde el constructor para inicializar el estado. Siempre debe haber un estado actual. Pero no en el código está ahí cualquier referencia al nombre del grupo de estados visuales, aunque se hace referencia en el XAML como "ValidationStates" para fines de claridad.
 
-Tenga en cuenta que el archivo de código subyacente debe tener en cuenta todos los objetos en la página que se ve afectada por estos estados visuales y llamar a `VisualStateManager.GoToState` para cada uno de estos objetos. En este ejemplo, es solo dos objetos (el `Label` y `Button`), pero podría ser varias más.
+Observe que el archivo de código subyacente solo debe tener en cuenta el objeto de la página que define los Estados visuales y llamar a `VisualStateManager.GoToState` para este objeto. Esto se debe a que ambos Estados visuales tienen como destino varios objetos en la página.
 
-Tal vez se pregunte: el archivo de código subyacente debe hacer referencia a todos los objetos en la página que se ve afectado por estos estados visuales, ¿por qué no el archivo de código subyacente simplemente tendrán acceso a los objetos directamente? Seguramente podría. Sin embargo, la ventaja de usar VSM es que puede controlar cómo visual elementos reaccionan a otro estado completamente en XAML, que conserva todo el diseño de interfaz de usuario en una ubicación. Esto evita la apariencia visual de configuración mediante el acceso a los elementos visuales directamente desde el código subyacente.
+Es posible que se pregunte: Si el archivo de código subyacente debe hacer referencia al objeto en la página que define los Estados visuales, ¿por qué no se puede acceder al archivo de código subyacente simplemente a este y a otros objetos directamente? Seguramente podría. Sin embargo, la ventaja de usar VSM es que puede controlar cómo visual elementos reaccionan a otro estado completamente en XAML, que conserva todo el diseño de interfaz de usuario en una ubicación. Esto evita la apariencia visual de configuración mediante el acceso a los elementos visuales directamente desde el código subyacente.
 
-Puede ser tentador que considere la posibilidad de derivar una clase de `Entry` y quizás definir una propiedad que se puede establecer para una función de validación externo. La clase que derive de `Entry` , a continuación, puede llamar a la `VisualStateManager.GoToState` método. Este esquema funcionará bien, pero solo si el `Entry` era el único objeto afectado por los diferentes estados visuales. En este ejemplo, un `Label` y un `Button` son también se ve afectado. No hay ninguna manera de marcado VSM adjunta a un `Entry` a otros objetos en la página y no hay forma de control para marcado VSM asociado a estos otros objetos para hacer referencia a un cambio en el estado visual de otro objeto.
+## <a name="visual-state-triggers"></a>Desencadenadores de estado visual
+
+Los Estados visuales admiten desencadenadores de estado, que son un grupo especializado de desencadenadores que definen las condiciones en las que se debe aplicar un [`VisualState`](xref:Xamarin.Forms.VisualState) .
+
+Los desencadenadores de estado se agregan a la colección de [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) de una [`VisualState`](xref:Xamarin.Forms.VisualState). Esta colección puede contener un único desencadenador de estado o varios desencadenadores de estado. Se aplicará un [`VisualState`](xref:Xamarin.Forms.VisualState) cuando todos los desencadenadores de estado de la colección estén activos.
+
+Al usar desencadenadores de estado para controlar los Estados visuales, Xamarin. Forms usa las siguientes reglas de prioridad para determinar qué desencadenador (y [`VisualState`](xref:Xamarin.Forms.VisualState)correspondiente) estará activo:
+
+1. Cualquier desencadenador que se derive de [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+1. [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activado debido a que se cumple la condición de [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) .
+1. [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activado debido a que se cumple la condición de [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) .
+
+Si hay varios desencadenadores activos simultáneamente (por ejemplo, dos desencadenadores personalizados), el primer desencadenador declarado en el marcado tiene prioridad.
+
+Para obtener más información acerca de los desencadenadores de estado, consulte [desencadenadores de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
 <a name="adaptive-layout" />
 
-## <a name="using-the-visual-state-manager-for-adaptive-layout"></a>Mediante el Administrador de estado Visual para el diseño adaptable
+## <a name="use-the-visual-state-manager-for-adaptive-layout"></a>Usar el administrador de estado visual para el diseño adaptable
 
 Puede cambiar el tamaño de una aplicación que se ejecuta en un teléfono normalmente puede verse en una vertical o relación de aspecto horizontal y un programa de Xamarin.Forms que se ejecuta en el escritorio de Xamarin.Forms para asumir diferentes tamaños y proporciones. Una aplicación bien diseñada puede mostrar su contenido distinto para estos distintos factores de forma de ventana o página.
 
-Esta técnica se conoce a veces como _diseño adaptable_. Debido a un diseño adaptable implica únicamente objetos visuales de un programa, es una aplicación de Visual State Manager ideal.
+A veces, esta técnica se conoce como _diseño adaptable_. Debido a un diseño adaptable implica únicamente objetos visuales de un programa, es una aplicación de Visual State Manager ideal.
 
 Un ejemplo sencillo es una aplicación que muestra una pequeña colección de botones que afectan al contenido de la aplicación. En modo vertical, se pueden mostrar estos botones en una fila horizontal en la parte superior de la página:
 
@@ -564,9 +620,9 @@ En modo horizontal, la matriz de botones podría mover a un lado y muestra en un
 
 De arriba a abajo, el programa se está ejecutando en la plataforma Universal de Windows, iOS y Android.
 
-El **diseño adaptable VSM** página en el [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) ejemplo define un grupo denominado "OrientationStates" con dos estados visuales denominados "Vertical" y "Horizontal". (Un enfoque más complejo podría basarse en varios diferentes anchos de página o ventana).
+La página de **diseño adaptable de VSM** en el ejemplo [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) define un grupo denominado "OrientationStates" con dos Estados visuales denominados "vertical" y "horizontal". (Un enfoque más complejo podría basarse en varios diferentes anchos de página o ventana).
 
-Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` denominado `mainStack` contiene el menú y el contenido, que es un `Image` elemento. Esto `StackLayout` debe tener una orientación vertical en modo vertical y una orientación horizontal en modo horizontal:
+Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` denominado `mainStack` contiene el menú y el contenido, que es un elemento `Image`. Esta `StackLayout` debe tener una orientación vertical en modo vertical y una orientación horizontal en modo horizontal:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -577,13 +633,11 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
     <StackLayout x:Name="mainStack">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup Name="OrientationStates">
-
                 <VisualState Name="Portrait">
                     <VisualState.Setters>
                         <Setter Property="Orientation" Value="Vertical" />
                     </VisualState.Setters>
                 </VisualState>
-
                 <VisualState Name="Landscape">
                     <VisualState.Setters>
                         <Setter Property="Orientation" Value="Horizontal" />
@@ -595,13 +649,11 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
         <ScrollView x:Name="menuScroll">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="OrientationStates">
-
                     <VisualState Name="Portrait">
                         <VisualState.Setters>
                             <Setter Property="Orientation" Value="Horizontal" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState Name="Landscape">
                         <VisualState.Setters>
                             <Setter Property="Orientation" Value="Vertical" />
@@ -613,13 +665,11 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
             <StackLayout x:Name="menuStack">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup Name="OrientationStates">
-
                         <VisualState Name="Portrait">
                             <VisualState.Setters>
                                 <Setter Property="Orientation" Value="Horizontal" />
                             </VisualState.Setters>
                         </VisualState>
-
                         <VisualState Name="Landscape">
                             <VisualState.Setters>
                                 <Setter Property="Orientation" Value="Vertical" />
@@ -633,14 +683,12 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
                         <Setter Property="VisualStateManager.VisualStateGroups">
                             <VisualStateGroupList>
                                 <VisualStateGroup Name="OrientationStates">
-
                                     <VisualState Name="Portrait">
                                         <VisualState.Setters>
                                             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                                             <Setter Property="Margin" Value="10, 5" />
                                         </VisualState.Setters>
                                     </VisualState>
-
                                     <VisualState Name="Landscape">
                                         <VisualState.Setters>
                                             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
@@ -657,15 +705,12 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
                 <Button Text="Banana"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="Banana.jpg" />
-
                 <Button Text="Face Palm"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="FacePalm.jpg" />
-
                 <Button Text="Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="monkey.png" />
-
                 <Button Text="Seated Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="SeatedMonkey.jpg" />
@@ -679,11 +724,11 @@ Marcado VSM se produce en cuatro lugares en el archivo XAML. El `StackLayout` de
 </ContentPage>
 ```
 
-Interno `ScrollView` denominado `menuScroll` y `StackLayout` denominado `menuStack` implementar en el menú de botones. La orientación de estos diseños es opuesta de `mainStack`. Debe ser el menú horizontal en modo vertical y vertical en modo horizontal.
+El `ScrollView` interno denominado `menuScroll` y el `StackLayout` denominado `menuStack` implementar el menú de botones. La orientación de estos diseños es opuesta a `mainStack`. Debe ser el menú horizontal en modo vertical y vertical en modo horizontal.
 
 La cuarta sección de marcado VSM está en un estilo implícito para los botones sí mismos. Este marcado establece `VerticalOptions`, `HorizontalOptions`y `Margin` propiedades específicas de las orientaciones vertical y horizontal.
 
-Los conjuntos de archivos de código subyacente del `BindingContext` propiedad de `menuStack` para implementar `Button` comandos y también se adjunta un controlador para el `SizeChanged` eventos de la página:
+El archivo de código subyacente establece la propiedad `BindingContext` de `menuStack` para implementar los comandos `Button` y también asocia un controlador al evento `SizeChanged` de la página:
 
 ```csharp
 public partial class VsmAdaptiveLayoutPage : ContentPage
@@ -717,7 +762,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 }
 ```
 
-El `SizeChanged` llamadas del controlador `VisualStateManager.GoToState` para las dos `StackLayout` y `ScrollView` elementos y, a continuación, recorre en bucle los elementos secundarios de `menuStack` para llamar a `VisualStateManager.GoToState` para el `Button` elementos.
+El controlador de `SizeChanged` llama a `VisualStateManager.GoToState` para los dos elementos `StackLayout` y `ScrollView` y, a continuación, recorre en bucle los elementos secundarios de `menuStack` para llamar a `VisualStateManager.GoToState` para los elementos `Button`.
 
 Puede parecer como si el archivo de código subyacente puede controlar los cambios de orientación más directamente estableciendo las propiedades de elementos en el archivo XAML, pero Visual State Manager es definitivamente un enfoque más estructurado. Todos los objetos visuales se mantienen en el archivo XAML, donde se convierten en más fáciles examinar, mantienen y modificar.
 
@@ -730,3 +775,4 @@ Puede parecer como si el archivo de código subyacente puede controlar los cambi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+- [Desencadenadores de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)
