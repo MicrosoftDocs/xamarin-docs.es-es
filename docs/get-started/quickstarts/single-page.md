@@ -1,6 +1,6 @@
 ---
 title: Creación de una aplicación de página única de Xamarin.Forms
-description: En este artículo se explica cómo crear una aplicación Xamarin.Forms multiplataforma de una página que permite escribir una nota y conservarla en el almacenamiento del dispositivo.
+description: En este artículo se explica cómo crear una aplicación de Xamarin.Forms multiplataforma de una página que permite escribir una nota y conservarla en el almacenamiento del dispositivo.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -16,17 +16,17 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/23/2020
 ms.locfileid: "71679981"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Creación de una aplicación Xamarin.Forms de página única
+# <a name="create-a-single-page-xamarinforms-application"></a>Creación de una aplicación de Xamarin.Forms de página única
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 En este inicio rápido aprenderá a:
 
-- Crear una aplicación Xamarin.Forms multiplataforma.
+- Crear una aplicación de Xamarin.Forms multiplataforma.
 - Definir la interfaz de usuario para una página mediante el lenguaje XAML.
 - Interactuar con los elementos de la interfaz de usuario XAML desde el código.
 
-El inicio rápido le guía sobre cómo crear una aplicación Xamarin.Forms multiplataforma que permite escribir una nota y conservarla en el almacenamiento del dispositivo. A continuación se muestra la aplicación final:
+El inicio rápido le guía sobre cómo crear una aplicación de Xamarin.Forms multiplataforma que permite escribir una nota y conservarla en el almacenamiento del dispositivo. A continuación se muestra la aplicación final:
 
 [![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
 
@@ -36,7 +36,7 @@ El inicio rápido le guía sobre cómo crear una aplicación Xamarin.Forms multi
 
 - Visual Studio 2019 (última versión), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada.
 - Conocimientos de C#.
-- (opcional) Un equipo Mac emparejado para compilar la aplicación en iOS.
+- (Opcional) Un equipo Mac emparejado para compilar la aplicación en iOS.
 
 Para más información sobre estos requisitos previos, vea [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -46,7 +46,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     ![](single-page-images/vs/new-solution-2019.png "New Project")
 
-2. En la ventana **Crear un proyecto nuevo**, seleccione **Dispositivos móviles** en la lista desplegable **Tipo de proyecto**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
+2. En la ventana **Crear un proyecto nuevo**, seleccione **Móvil** en la lista desplegable **Tipo de proyecto**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
@@ -57,7 +57,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
 
-4. En el cuadro de diálogo **Nueva aplicación multiplataforma**, haga clic en **Aplicación en blanco** y después en el botón **Aceptar**:
+4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **En blanco** y después en el botón **Aceptar**:
 
     ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
@@ -190,7 +190,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 - Visual Studio 2017, con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada.
 - Conocimientos de C#.
-- (opcional) Un equipo Mac emparejado para compilar la aplicación en iOS.
+- (Opcional) Un equipo Mac emparejado para compilar la aplicación en iOS.
 
 Para más información sobre estos requisitos previos, vea [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -492,7 +492,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 En este inicio rápido ha aprendido a:
 
-- Crear una aplicación Xamarin.Forms multiplataforma.
+- Crear una aplicación de Xamarin.Forms multiplataforma.
 - Definir la interfaz de usuario para una página mediante el lenguaje XAML.
 - Interactuar con los elementos de la interfaz de usuario XAML desde el código.
 
