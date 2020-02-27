@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545652"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567076"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -396,7 +396,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
     bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
     {
-        if (Object.Equals(storage, value))
+        if (object.Equals(storage, value))
             return false;
 
         storage = value;
