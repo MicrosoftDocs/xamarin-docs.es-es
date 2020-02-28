@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: Inicio de la aplicación de mapa nativa
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Inicio de comandos
@@ -620,6 +622,8 @@
           items:
             - name: Información general
               href: platform/android/index.md
+            - name: Migración de AndroidX
+              href: platform/android/androidx-migration.md
             - name: AppCompat y Material Design
               href: platform/android/appcompat-material-design.md
             - name: Relleno y sombras de los botones
@@ -662,6 +666,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: Color de fondo de celda
               href: platform/ios/cell-background-color.md
+            - name: Selección de elementos de DatePicker
+              href: platform/ios/datepicker-selection.md
             - name: Color del cursor de entrada
               href: platform/ios/entry-cursor-color.md
             - name: Tamaño de la fuente de entrada
@@ -702,16 +708,24 @@
               href: platform/ios/slider-thumb.md
             - name: Modo de transición de deslizamiento SwipeView
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: Barra de pestañas translúcida en TabbedPage
+              href: platform/ios/tabbedpage-translucent-tabbar.md
+            - name: Selección de elementos de TimePicker
+              href: platform/ios/timepicker-selection.md
             - name: Desenfoque VisualElement
               href: platform/ios/visualelement-blur.md
             - name: Sombras paralelas VisualElement
               href: platform/ios/visualelement-drop-shadow.md
             - name: Modo de color heredado VisualElement
               href: platform/ios/legacy-color-mode.md
+            - name: Primer respondedor VisualElement
+              href: platform/ios/visualelement-first-responder.md
         - name: Windows
           items:
             - name: Información general
               href: platform/windows/index.md
+            - name: Directorio de imagen predeterminado
+              href: platform/windows/default-image-directory.md
             - name: Orden de lectura InputView
               href: platform/windows/inputview-reading-order.md
             - name: Modo de selección ListView
