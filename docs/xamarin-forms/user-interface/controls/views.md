@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e8b6f5e1ea090abc8ebd6084095bf6b34663a42
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635876"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674569"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -181,7 +181,7 @@ Estas dos clases derivan de la clase [`InputView`](xref:Xamarin.Forms.InputView)
 | [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) usa una animación para mostrar que la aplicación está ocupada en una actividad prolongada sin ofrecer ninguna indicación de progreso. La propiedad [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) controla la animación.<br /><br />Si se conoce el progreso de la actividad, use un [`ProgressBar`](#progressbar) en su lugar.<br /><br />[Documentación de API](xref:Xamarin.Forms.ActivityIndicator) / [Guía](~/xamarin-forms/user-interface/activityindicator.md) de / de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/) | [![Ejemplo de ActivityIndicator](views-images/ActivityIndicator.png "Ejemplo de ActivityIndicator")](views-images/ActivityIndicator-Large.png#lightbox "Ejemplo de ActivityIndicator")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) |
 |     |     |
 
-### <a name="progressbar"></a>Barra de progreso
+### <a name="progressbar"></a>ProgressBar
 
 |     |     |
 | --- | --- |
@@ -208,7 +208,7 @@ Estas dos clases derivan de la clase [`InputView`](xref:Xamarin.Forms.InputView)
 
 |     |     |
 | --- | --- |
-| `IndicatorView` muestra indicadores que representan el número de elementos de un `CarouselView`. Establezca la propiedad `IndicatorView.ItemsSourceBy` adjunta en el objeto `CarouselView` para mostrar los indicadores. <br /><br />[Guía](~/xamarin-forms/user-interface/indicatorview.md) de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) /  | [![Ejemplo de IndicatorView](views-images/IndicatorView.png "Ejemplo de IndicatorView")](views-images/IndicatorView-Large.png#lightbox "Ejemplo de IndicatorView")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
+| `IndicatorView` muestra indicadores que representan el número de elementos de un `CarouselView`. Establezca la propiedad `CarouselView.IndicatorView` en el objeto `IndicatorView` para mostrar los indicadores de la `CarouselView`. <br /><br />[Guía](~/xamarin-forms/user-interface/indicatorview.md) de [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) /  | [![Ejemplo de IndicatorView](views-images/IndicatorView.png "Ejemplo de IndicatorView")](views-images/IndicatorView-Large.png#lightbox "Ejemplo de IndicatorView")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
 |     |     |
 
 ### <a name="listview"></a>ListView

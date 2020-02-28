@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 945b0ffcff589da28c5e0ef2509a9d2ad7c388b5
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 601a2884cb9ca90ab6681e48afda4c9f1f467932
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636000"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674551"
 ---
 # <a name="xamarinforms-mediaelement"></a>MediaElement de Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) es una vista para reproducir vídeo y audio. Los medios admitidos por la plataforma subyacente se pueden reproducir desde los orígenes siguientes:
 
@@ -537,7 +537,7 @@ Para obtener más información sobre el uso de un [`Slider`](xref:Xamarin.Forms.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MediaElementDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+- [MediaElementDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 - [Esquemas de URI](/windows/uwp/app-resources/uri-schemes)
 - [Desencadenadores de Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Control deslizante de Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)
