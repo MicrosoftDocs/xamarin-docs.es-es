@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 601a2884cb9ca90ab6681e48afda4c9f1f467932
-ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+ms.openlocfilehash: 76a30bfb17c8263345d781386acf9d34c01aae3b
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77674551"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160414"
 ---
 # <a name="xamarinforms-mediaelement"></a>MediaElement de Xamarin. Forms
 
@@ -38,14 +38,14 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> [`MediaElement`](xref:Xamarin.Forms.MediaElement) está disponible en iOS, Android, el plataforma universal de Windows (UWP) y plataformas adicionales.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement) está disponible en iOS, Android, el plataforma universal de Windows (UWP), macOS, Windows Presentation Foundation y Tizen.
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) define las siguientes propiedades:
 
 - [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), de tipo [`Aspect`](xref:Xamarin.Forms.Aspect), determina cómo se escalará el elemento multimedia para ajustarse al área de presentación. El valor predeterminado de esta propiedad es `AspectFit`.
 - [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), de tipo `bool`, indica si la reproducción multimedia se iniciará automáticamente cuando se establezca la propiedad [`Source`](xref:Xamarin.Forms.MediaElement.Source) . El valor predeterminado de esta propiedad es `true`.
 - [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), de tipo `double`, indica el progreso del almacenamiento en búfer actual. El valor predeterminado de esta propiedad es 0,0.
-- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), de tipo `bool`, indica si se puede cambiar la posición de los elementos multimedia estableciendo el valor de la propiedad [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Se trata de una propiedad de solo lectura.
+- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), de tipo `bool`, indica si se puede cambiar la posición de los elementos multimedia estableciendo el valor de la propiedad [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Esta propiedad es de solo lectura.
 - [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), de tipo [`MediaElementState`](xref:Xamarin.Forms.MediaElementState), indica el estado actual del control. Se trata de una propiedad de solo lectura, cuyo valor predeterminado es `MediaElementState.Closed`.
 - [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), de tipo `TimeSpan?`, indica la duración del medio abierto actualmente. Se trata de una propiedad de solo lectura cuyo valor predeterminado es `null`.
 - [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), de tipo `bool`, describe si el origen multimedia cargado actualmente debe reanudar la reproducción desde el principio después de llegar al final. El valor predeterminado de esta propiedad es `false`.
@@ -53,8 +53,8 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 - [`Position`](xref:Xamarin.Forms.MediaElement.Position), de tipo `TimeSpan`, describe el progreso actual a través del tiempo de reproducción del elemento multimedia. El valor predeterminado de esta propiedad es `TimeSpan.Zero`.
 - [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), de tipo `bool`, determina si se muestran los controles de reproducción de plataformas. El valor predeterminado de esta propiedad es `false`.
 - [`Source`](xref:Xamarin.Forms.MediaElement.Source), de tipo [`MediaSource`](xref:Xamarin.Forms.MediaSource), indica el origen del medio cargado en el control.
-- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), de tipo `int`, indica el alto del control. Se trata de una propiedad de solo lectura.
-- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), de tipo `int`, indica el ancho del control. Se trata de una propiedad de solo lectura.
+- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), de tipo `int`, indica el alto del control. Esta propiedad es de solo lectura.
+- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), de tipo `int`, indica el ancho del control. Esta propiedad es de solo lectura.
 - [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), de tipo `double`, determina el volumen del medio, que se representa en una escala lineal entre 0 y 1. Esta propiedad usa un enlace `TwoWay` y su valor predeterminado es 1.
 
 Estas propiedades, con la excepción de la propiedad `CanSeek`, están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , lo que significa que pueden ser destinos de enlaces de datos y con estilo.
