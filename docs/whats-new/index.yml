@@ -9,18 +9,20 @@ metadata:
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/20/2019
-  ms.openlocfilehash: 262cf0019c7395c695853adb42268e8a397dbb5c
-  ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+  ms.date: 02/28/2020
+  ms.openlocfilehash: 6b5f722f757f2fa7c579f11eb4ddb4b3efa78148
+  ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/23/2020
-  ms.locfileid: "75489055"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "78160544"
 landingContent:
 - title: Novedades
   linkLists:
   - linkListType: whats-new
     links:
+    - text: Febrero de 2020
+      url: 2020-02.md
     - text: Diciembre de 2019
       url: 2019-12.md
     - text: Octubre de 2019
