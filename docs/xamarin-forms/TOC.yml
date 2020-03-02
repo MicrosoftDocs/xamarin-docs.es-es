@@ -250,17 +250,19 @@
               href: app-fundamentals/dependency-service/registration-and-resolution.md
             - name: Selección de biblioteca de fotos
               href: app-fundamentals/dependency-service/photo-picker.md
-        - name: Pantalla dual
+        - name: Doble pantalla
           href: app-fundamentals/dual-screen/index.md
           items:
-            - name: Patrones de pantalla dual
+            - name: Patrones de doble pantalla
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: TwoPaneView
+            - name: Diseño de doble pantalla
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: DualScreenInfo
+            - name: Capacidades de dispositivos de doble pantalla
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: DualScreenHelper
+            - name: Asistentes de plataforma de doble pantalla
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: Desencadenadores de doble pantalla
+              href: app-fundamentals/dual-screen/triggers.md
         - name: Efectos
           href: app-fundamentals/effects/index.md
           items:

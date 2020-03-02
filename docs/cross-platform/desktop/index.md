@@ -16,22 +16,22 @@ ms.locfileid: "73016463"
 
 Esta sección contiene información para ayudar a los desarrolladores de WPF y Windows Forms a aprender el desarrollo de aplicaciones móviles con Xamarin, mediante la referencia cruzada de los conocimientos y la experiencia existentes a los lenguajes móviles, y proporcionando ejemplos de migración de aplicaciones de escritorio a Mobile.
 
-## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Comparación del ciclo de vida de la aplicación](lifecycle.md)
+## <a name="app-lifecycle-comparison"></a>[Comparación del ciclo de vida de la aplicación](lifecycle.md)
 
 Descripción de las diferencias entre el inicio de la aplicación de WPF y el de Xamarin. Forms.
 
-## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Comparación de controles de interfaz de usuario](controls/index.md)
+## <a name="ui-controls-comparison"></a>[Comparación de controles de interfaz de usuario](controls/index.md)
 
 Referencia rápida para buscar controles equivalentes en Windows Forms, WPF y Xamarin. Forms, incluidas instrucciones adicionales sobre las diferencias entre WPF y Xamarin. Forms.
 
-## <a name="porting-guidanceportingmd"></a>[Guía de migración](porting.md)
+## <a name="porting-guidance"></a>[Guía de migración](porting.md)
 
 Usar el analizador de portabilidad para ayudar a migrar el código de aplicación de escritorio (excluida la interfaz de usuario) a Xamarin. Forms.
 
-## <a name="samplessamplesmd"></a>[Muestras](samples.md)
+## <a name="samples"></a>[Muestras](samples.md)
 
 Ejemplos de referencia que muestran la arquitectura de aplicaciones empresariales y el código de portabilidad de WPF a Xamarin. Forms.
 
 ## <a name="learn-more"></a>Obtener más información
 
-[![creación de Mobile Apps libro](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) electrónico [![de patrones de aplicaciones empresariales](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+[![creación de Mobile Apps libro](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [![de patrones de aplicaciones empresariales](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
