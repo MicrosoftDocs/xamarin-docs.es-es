@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2020
-ms.openlocfilehash: 086adee4dc6b921abe92f6486186023a3125695c
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 0149806f3ab3772bc206cea9540a989d997c817b
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636075"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215005"
 ---
 # <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin. Forms
 
@@ -405,15 +405,16 @@ Ahora todas las vistas de `Entry` de esta página responden de la misma manera a
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin. Forms:
 
-| Clase | States | Más información |
+| Clase | Estados | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
-| `CollectionView` | `Selected` | [Cambiar el color de los elementos seleccionados](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Estados comunes](#common-states) |
 
 Se puede tener acceso a cada uno de estos Estados a través del grupo de Estados visuales denominado `CommonStates`.
+
+Además, el `CollectionView` implementa el estado `Selected`. Para obtener más información, vea cambiar el color de los [elementos seleccionados](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color).
 
 ## <a name="set-state-on-multiple-elements"></a>Establecer el estado en varios elementos
 
@@ -480,7 +481,7 @@ El `VisualState` "pressed" especifica que, cuando se presiona el `Button`, su pr
 
 ## <a name="define-your-own-visual-states"></a>Definir sus propios Estados visuales
 
-Cada clase que se deriva de `VisualElement` admite los tres Estados comunes "normal", "Focused" y "Disabled". Internamente, la clase [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) detecta cuándo está habilitada o deshabilitada, o tiene el foco o no está enfocada, y llama al método de [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) estático:
+Cada clase que se deriva de `VisualElement` admite los Estados comunes "normal", "Focused" y "Disabled". Además, la clase `CollectionView` admite el estado "seleccionado". Internamente, la clase [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) detecta cuándo está habilitada o deshabilitada, o tiene el foco o no está enfocada, y llama al método de [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) estático:
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");

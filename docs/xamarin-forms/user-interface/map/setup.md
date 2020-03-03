@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
-ms.openlocfilehash: eff7dff15fb75859d43923f71696bccf1b0e2cc5
-ms.sourcegitcommit: 87b818373d83fd3a6856c4b5a702b013a731b5ea
+ms.openlocfilehash: c3c4863814949be2e6575e92136ca740452a2f3c
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77069654"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78214987"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Inicialización y configuración del mapa de Xamarin. Forms
 
@@ -105,14 +105,16 @@ Una vez que haya obtenido una clave de API, debe agregarse en el elemento `<appl
 
 ```xml
 <application ...>
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
 </application>
 ```
 
 Esto incrusta la clave de API en el manifiesto. Sin una clave de API válida, el control [`Map`](xref:Xamarin.Forms.Maps.Map) mostrará una cuadrícula en blanco.
 
 > [!NOTE]
-> Tenga en cuenta que, en orden para el APK tener acceso a Google Maps, debe incluir las huellas digitales de SHA-1 y empaquetar los nombres para cada almacén de claves (debug y release) que usó para firmar el APK. Por ejemplo, si usa un equipo para depuración y otro equipo para generar el APK de lanzamiento, debe incluir la huella digital de certificado de SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital de certificado de SHA-1 desde el almacén de claves de la versión de el segundo equipo. Recuerde también editar las credenciales clave si cambia el **nombre del paquete** de la aplicación. Consulte [obtención de una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> `com.google.android.geo.API_KEY` es el nombre de metadatos recomendado para la clave de API. Por compatibilidad con versiones anteriores, se puede usar el nombre de metadatos de `com.google.android.maps.v2.API_KEY`, pero solo se permite la autenticación en la API de mapas de Android v2.
+
+Para que el APK acceda a Google Maps, debe incluir las huellas digitales y los nombres de paquete de SHA-1 para cada almacén de claves (depuración y lanzamiento) que use para firmar el APK. Por ejemplo, si usa un equipo para depuración y otro equipo para generar el APK de lanzamiento, debe incluir la huella digital de certificado de SHA-1 desde el almacén de claves de depuración del primer equipo y la huella digital de certificado de SHA-1 desde el almacén de claves de la versión de el segundo equipo. Recuerde también editar las credenciales clave si cambia el **nombre del paquete** de la aplicación. Consulte [obtención de una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar el número de versión de los servicios de Google Play
 
