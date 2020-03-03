@@ -4,14 +4,14 @@ description: En este documento se describe la clase Clipboard de Xamarin.Essenti
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 02/12/2019
+ms.date: 01/06/2020
 ms.custom: video
-ms.openlocfilehash: c186f5c61bd2fa3df305be92a03135e57e302d02
-ms.sourcegitcommit: 6e04246207aa743820029e8c217a43cfdd24f991
+ms.openlocfilehash: 0b5eaf3feb608a352f8f9c97bdddac55c89d4f94
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67352132"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545181"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Portapapeles
 
@@ -45,6 +45,24 @@ Para leer texto desde el **Portapapeles**:
 
 ```csharp
 var text = await Clipboard.GetTextAsync();
+```
+
+Siempre que cambia el contenido del Portapapeles, se desencadena un evento:
+
+```csharp
+public class ClipboardTest
+{
+    public ClipboardTest()
+    {
+        // Register for clipboard changes, be sure to unsubscribe when needed
+        Clipboard.ClipboardContentChanged += OnClipboardContentChanged;
+    }
+
+    void OnClipboardContentChanged(object sender, EventArgs    e)
+    {
+        Console.WriteLine($"Last clipboard change at {DateTime.UtcNow:T}";);
+    }
+}
 ```
 
 > [!TIP]

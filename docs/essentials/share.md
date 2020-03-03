@@ -4,14 +4,14 @@ description: La clase Share de Xamarin.Essentials permite que una aplicación co
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 01/06/2020
 ms.custom: video
-ms.openlocfilehash: ade1baa90f8a3b6a35e89d53de6d5f9b841c8f9e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f964967dce0dbb7e49d52a7f865b0fe8a9957bbe
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764968"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545203"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartir
 
@@ -77,18 +77,33 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
+## <a name="presentation-location"></a>Ubicación de la presentación
+
+Al solicitar un recurso compartido en iPadOS, tiene la posibilidad de presentar un control emergente. Puede especificar la ubicación con la propiedad `PresentationSourceBounds`:
+
+```csharp
+await Share.RequestAsync(new ShareFileRequest
+{
+    Title = Title,
+    File = new ShareFile(file),
+    PresentationSourceBounds = DeviceInfo.Platform== DevicePlatform.iOS && DeviceInfo.Idiom == DeviceIdiom.Tablet
+                            ? new System.Drawing.Rectangle(0, 20, 0, 0)
+                            : System.Drawing.Rectangle.Empty
+});
+```
+
 ## <a name="platform-differences"></a>Diferencias entre plataformas
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - La propiedad `Subject` se usa para el asunto deseado de un mensaje.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - `Subject` no se usa.
 - `Title` no se usa.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - El valor predeterminado de `Title` será el nombre de la aplicación si no se establece.
 - `Subject` no se usa.

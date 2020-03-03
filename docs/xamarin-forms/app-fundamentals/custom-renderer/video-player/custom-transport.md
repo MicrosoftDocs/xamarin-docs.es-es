@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771831"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636021"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
@@ -613,7 +613,7 @@ La página **Transporte personalizado** establece la propiedad **AreTransportCon
 </ContentPage>
 ```
 
-Los desencadenadores de datos se describen con detalle en el artículo [Desencadenadores de datos](~/xamarin-forms/app-fundamentals/triggers.md#data).
+Los desencadenadores de datos se describen con detalle en el artículo [Desencadenadores de datos](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers).
 
 El archivo de código subyacente contiene los controladores para los eventos `Clicked` del botón:
 
@@ -649,11 +649,11 @@ namespace VideoPlayerDemos
 
 Como `AutoPlay` se establece en `false` en el archivo **CustomTransport.xaml**, necesita pulsar el botón **Reproducir** cuando este se habilite para iniciar el vídeo. Los botones se definen de forma que los caracteres Unicode indicados anteriormente se muestren con sus equivalentes de texto. Los botones tienen una apariencia coherente en todas las plataformas cuando el vídeo está reproduciéndose:
 
-[![Transporte personalizado reproduciendo](custom-transport-images/customtransportplaying-small.png "Custom Transport Playing")](custom-transport-images/customtransportplaying-large.png#lightbox "Custom Transport Playing")
+[![Reproducción del transporte personalizado](custom-transport-images/customtransportplaying-small.png "Reproducción del transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "Reproducción del transporte personalizado")
 
 Pero, en Android y UWP, el botón **Reproducir** tiene una apariencia muy distinta cuando el vídeo está pausado:
 
-[![Transporte personalizado pausado](custom-transport-images/customtransportpaused-small.png "Custom Transport Paused")](custom-transport-images/customtransportpaused-large.png#lightbox "Custom Transport Paused")
+[![Transporte personalizado detenido](custom-transport-images/customtransportpaused-small.png "Transporte personalizado detenido")](custom-transport-images/customtransportpaused-large.png#lightbox "Transporte personalizado detenido")
 
 En una aplicación de producción, es probable que quiera usar sus propias imágenes de mapa de bits para los botones con el fin de conseguir una uniformidad visual.
 

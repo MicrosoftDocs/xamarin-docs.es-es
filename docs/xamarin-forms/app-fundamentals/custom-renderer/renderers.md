@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: ead643357b3ef88f3099c6ee03cda694a8ea1971
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f4c2663e4e4e298975fc1e230750ec562547b0da
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489250"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636034"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
@@ -22,14 +22,14 @@ A excepción de la clase `MapRenderer`, los representadores específicos de la p
 
 - **iOS**: Xamarin.Forms.Platform.iOS
 - **Android**: Xamarin.Forms.Platform.Android
-- **Android (AppCompat)** : Xamarin.Forms.Platform.Android.AppCompat
-- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
+- **Android (AppCompat)**: Xamarin.Forms.Platform.Android.AppCompat
+- **Plataforma universal de Windows (UWP)**: Xamarin.Forms.Platform.UWP
 
 La clase `MapRenderer` se puede encontrar en los espacios de nombres siguientes:
 
 - **iOS**: Xamarin.Forms.Maps.iOS
 - **Android**: Xamarin.Forms.Maps.Android
-- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Maps.UWP
+- **Plataforma universal de Windows (UWP)**: Xamarin.Forms.Maps.UWP
 
 > [!NOTE]
 > Para información sobre cómo crear representadores personalizados para aplicaciones de Shell, consulte [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
@@ -85,6 +85,7 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)|MKMapView|MapView||MapControl|
+|[`MediaElement`](xref:Xamarin.Forms.MediaElement)|MediaElementRenderer|UIView||VideoView|MediaElement|
 |[`Picker`](xref:Xamarin.Forms.Picker)|PickerRenderer|UITextField|EditText|EditText|ComboBox|
 |[`ProgressBar`](xref:Xamarin.Forms.ProgressBar)|ProgressBarRenderer|UIProgressView|ProgressBar||ProgressBar|
 |`RefreshView`|RefreshViewRenderer|UIView||SwipeRefreshLayout|RefreshContainer|
