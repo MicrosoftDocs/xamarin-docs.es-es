@@ -1,19 +1,19 @@
 ---
-title: Generador de perfiles de Xamarin
+title: Xamarin Profiler
 description: En esta guía se exploran las características clave de la Xamarin Profiler. Examina los generadores, la generación de perfiles y el momento en que se deben usar, y en un flujo de trabajo estándar para la generación de perfiles de aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
 ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: 8927e7b2a1b194d1bfab334736c3d024f0542b01
-ms.sourcegitcommit: 60e955ce65194ffea987409157ccc7d5db87c2ba
+ms.openlocfilehash: cb109055b476fee6d34041940c682187074f4e7d
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74690208"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295448"
 ---
-# <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
+# <a name="xamarin-profiler"></a>Xamarin Profiler
 
 _En esta guía se exploran las características clave de la Xamarin Profiler. Examina los generadores, la generación de perfiles y el momento en que se deben usar, y en un flujo de trabajo estándar para la generación de perfiles de aplicaciones de Xamarin._
 
@@ -25,7 +25,7 @@ El Xamarin Profiler tiene varios instrumentos disponibles para la generación de
 
 En esta guía se examinan los escenarios comunes de generación de perfiles y se presenta el generador de perfiles como una herramienta para ayudar a analizar y optimizar las aplicaciones de iOS y Android.
 
-## <a name="download-and-install"></a>Descargar e instalar
+## <a name="download-and-install"></a>Descarga e instalación
 
 > [!NOTE]
 > Debe ser un suscriptor de [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) para desbloquear esta característica en Visual Studio Enterprise en Windows o Visual Studio para Mac en un equipo Mac.
@@ -34,7 +34,7 @@ El Xamarin Profiler es una aplicación independiente y se integra con Visual Stu
 
 Descargue el paquete de instalación de la plataforma:
 
-- [**Mac**](https://dl.xamarin.com/profiler/profiler-mac-1.6.10-15.pkg)
+- [**Mac**](https://dl.xamarin.com/profiler/profiler-mac-1.6.13-11.pkg)
 - [**Windows**](https://dl.xamarin.com/profiler/XamarinProfiler.Windows.Installer.1.6.10-15.msi)
 
 Una vez descargado, inicie el instalador para agregar el Xamarin Profiler al sistema.
@@ -47,17 +47,17 @@ Al diseñar y desarrollar una aplicación, es importante no optimizar prematuram
 
 La generación de perfiles es útil en todos los tipos de desarrollo, pero es especialmente importante en el desarrollo móvil. El código no optimizado es mucho más perceptible en las plataformas móviles que en los equipos de escritorio y el éxito de la aplicación depende del código bonito y optimizado que se ejecuta de forma eficaz.
 
-## <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
+## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 El Xamarin Profiler proporciona a los desarrolladores una manera de generar perfiles de aplicaciones desde Visual Studio para Mac o Visual Studio. El generador de perfiles recopila y muestra información sobre la aplicación, que el desarrollador puede usar para analizar el comportamiento de una aplicación. Hay varias maneras de generar perfiles de una aplicación con el Xamarin Profiler, es decir, la generación de perfiles de memoria y el muestreo estadístico. Estos se llevan a cabo a través de las asignaciones y los instrumentos del generador de perfiles Time respectivamente.
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Actualmente, el Xamarin Profiler se puede usar para probar las aplicaciones de Xamarin. iOS, Xamarin. Android y Xamarin. Mac en Mac (a través de Visual Studio para Mac). El generador de perfiles es un proceso independiente del IDE y, por lo tanto, además de iniciar desde Visual Studio para Mac, puede usarse como una aplicación independiente para examinar archivos. exe y `.mlpd` que se han producido desde el [generador de perfiles de mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Actualmente, el Xamarin Profiler se puede usar para probar las aplicaciones de Xamarin. Android en Windows (a través de Visual Studio y Visual Studio para Mac). El generador de perfiles es un proceso independiente del IDE y, por lo tanto, además de iniciarse desde Visual Studio, se puede usar como una aplicación independiente para examinar archivos. exe y `.mlpd` que se han producido desde el [generador de perfiles de registros mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
@@ -98,13 +98,13 @@ Antes de poder generar correctamente el perfil de la aplicación, debe permitir 
 
 - iOS:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   **Compilación > > de depuración de iOS habilitar generación de perfiles**
 
   ![Cuadro de diálogo Opciones de iOS en Visual Studio para Mac](images/ios-options-mac.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **Propiedades > compilación de iOS > habilitar la generación de perfiles**
 
@@ -114,13 +114,13 @@ Antes de poder generar correctamente el perfil de la aplicación, debe permitir 
 
 - Android:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   **Compilación > Android Debug > habilitar la instrumentación de desarrollador**
 
   ![Cuadro de diálogo Opciones de Android en Visual Studio para Mac](images/android-project-options.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **Compilación > Android Debug > habilitar la instrumentación de desarrollador**
 
@@ -132,7 +132,7 @@ Antes de poder generar correctamente el perfil de la aplicación, debe permitir 
 
 El Xamarin Profiler se puede iniciar desde el IDE al generar perfiles de la aplicación iOS o Android, o como una aplicación independiente.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 #### <a name="launching-from-visual-studio-for-mac"></a>Iniciar desde Visual Studio para Mac
 
@@ -141,7 +141,7 @@ El Xamarin Profiler se puede iniciar desde el IDE al generar perfiles de la apli
 
   ![Inicio del generador de perfiles desde Visual Studio para Mac](images/start-profiling-xs.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 #### <a name="launching-from-visual-studio"></a>Iniciar desde Visual Studio
 
@@ -162,13 +162,13 @@ El generador de perfiles se puede usar para medir la memoria y el rendimiento. C
 
 Para guardar una sesión de generación de perfiles en cualquier momento, elija **archivo > guardar como...** en la barra de menús del generador de perfiles. Esto guarda el archivo en formato _MLPD_ , un formato especial y muy comprimido para los datos de generación de perfiles.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Una vez instalado, el Xamarin Profiler se puede encontrar en la carpeta Aplicaciones, tal como se muestra en la siguiente captura de pantalla:
 
 ![Abrir el generador de perfiles independiente desde Mac](images/applications.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Una vez instalada la aplicación Xamarin Profiler se puede encontrar en el directorio de la aplicación:
 
@@ -184,11 +184,11 @@ Para obtener más información, vea [generar archivos. MLPD](~/tools/profiler/tr
 
 El Xamarin Profiler se compone de cinco secciones, como se muestra a continuación:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [secciones de ![Profiler en Visual Studio para Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [secciones de ![Profiler en Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
@@ -206,11 +206,11 @@ El instrumento asignaciones proporciona información detallada sobre los objetos
 
 En la parte superior del generador de perfiles está el gráfico asignaciones, que muestra la cantidad de memoria asignada a intervalos regulares durante la generación de perfiles. Actualmente, el gráfico asignaciones es el número total de asignaciones y no el tamaño del montón en ese momento dado. En un sentido, nunca dejará de funcionar, sino que solo aumentará. Esto incluye los objetos asignados en la pila. En función de la versión en tiempo de ejecución utilizada, el gráfico puede tener una apariencia diferente, incluso para la misma aplicación.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [![instrumento de asignaciones](images/allocations1.png)](images/allocations1.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![instrumento de asignaciones](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
@@ -220,11 +220,11 @@ Hay diferentes vistas de datos en el instrumento de asignaciones, que permiten a
 
 - **Asignaciones** : muestra una lista de todas las asignaciones y las agrupa por nombre de clase. Esto proporciona una excelente introducción a las clases y los métodos que se usan, la frecuencia con la que se usan y el tamaño colectivo de las clases utilizadas. Si hace doble clic en una clase, se mostrará la memoria asignada: 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   [![pestaña asignaciones](images/allocations3.png)](images/allocations3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![pestaña asignaciones](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
@@ -236,11 +236,11 @@ La vista del inspector para asignaciones proporciona opciones para filtrar y agr
     1. **Árbol de llamadas invertido** : tiene en cuenta el seguimiento de la pila de arriba abajo. Se trata de una opción de vista cómoda, ya que indica los métodos más profundos en los que la CPU ha estado gastando su tiempo.
     2. **Independiente por subproceso** : esta opción organiza el árbol de llamadas por subproceso.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   [![pestaña árbol de llamadas](images/allocations2.png)](images/allocations2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![pestaña árbol de llamadas](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
@@ -248,11 +248,11 @@ La vista del inspector para asignaciones proporciona opciones para filtrar y agr
 
 - **Instantáneas** : en este panel se muestra información sobre las instantáneas de memoria. Para generarlas durante la generación de perfiles de una aplicación activa, haga clic en el botón _cámara_ en la barra de herramientas en cada punto en el que desea ver qué memoria se conserva y se libera. Después, puede hacer clic en cada instantánea para explorar lo que está ocurriendo en el capó. Tenga en cuenta que las instantáneas solo se pueden realizar cuando se genera una generación de perfiles de una aplicación en vivo. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   [![pestaña instantáneas](images/allocations4.png)](images/allocations4.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![pestaña instantáneas](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
@@ -264,13 +264,13 @@ El instrumento Time Profiler mide exactamente cuánto tiempo se dedica a cada m�
 
 El gráfico de trazados, tal como se muestra en la captura de pantalla siguiente, muestra el número de muestras recibidas por la aplicación cuando se ejecuta:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [Instrumento del generador de perfiles de ![tiempo](images/time1.png)](images/time1.png#lightbox) 
 
 [Instrumento de ![Time Profiler – lista de ejemplos](images/time3.png)](images/time3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Instrumento del generador de perfiles de ![tiempo](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
@@ -280,25 +280,25 @@ El gráfico de trazados, tal como se muestra en la captura de pantalla siguiente
 
 - **Árbol de llamadas** : muestra la cantidad de tiempo invertido en cada método:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
   [Instrumento del generador de perfiles de ![tiempo-árbol de llamadas](images/time2.png)](images/time2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [Instrumento del generador de perfiles de ![tiempo-árbol de llamadas](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
-### <a name="cycles"></a>Comercialización
+### <a name="cycles"></a>Cycles
 
 Mediante el uso de C# y F# el código administrado, puede ser bastante común y, desafortunadamente, es bastante fácil crear referencias a objetos que nunca se eliminarán. Este instrumento le permite identificar los objetos y mostrar los ciclos a los que se hace referencia en la aplicación.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [![instrumento de ciclos](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![instrumento de ciclos](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
@@ -310,11 +310,11 @@ Actualmente, solo se pueden crear perfiles de las configuraciones de depuración
 
 Si genera perfiles de una aplicación con cualquier otra configuración, se le presentará el siguiente cuadro de diálogo de mensaje:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [Cuadro de diálogo error de generación de perfiles de ![](images/image001.png)](images/image001.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Cuadro de diálogo error de generación de perfiles de ![](images/image1vs.png)](images/image1vs.png#lightbox) 
 

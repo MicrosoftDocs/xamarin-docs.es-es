@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-ms.openlocfilehash: 8b633481d74810bc4d86d68f8c36d55980092510
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 778f56ec844e2802c1e1bc783824d55218678761
+ms.sourcegitcommit: e9d88587aafc912124b87732d81c3910247ad811
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940318"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78337293"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Envío y recepción de notificaciones de envío con Azure Notification Hubs y Xamarin. Forms
 
@@ -31,7 +31,7 @@ Integre Azure Notification Hubs en Mobile Apps siguiendo estos pasos:
 1. [Cree una aplicación de back-end para enviar notificaciones](#create-a-notification-dispatcher).
 
 > [!NOTE]
-> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de comenzar.
+> Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Configuración de Notification Services de extracción y el centro de notificaciones de Azure
 
@@ -518,6 +518,7 @@ Azure Notification Hubs permite comprobar que la aplicación puede recibir mensa
 1. Al probar que una aplicación puede recibir notificaciones de envío, debe usar un dispositivo físico. Es posible que los dispositivos virtuales iOS y Android no estén configurados correctamente para recibir notificaciones de envío.
 1. La aplicación de ejemplo de Android registra el token y las plantillas una vez cuando se emite el token Firebase. Durante las pruebas, es posible que tenga que solicitar un nuevo token y volver a registrarlo en el centro de notificaciones de Azure. La mejor manera de forzar esto es limpiar el proyecto, eliminar las carpetas `bin` y `obj` y desinstalar la aplicación del dispositivo antes de volver a generar e implementar.
 1. Muchas partes del flujo de notificaciones de entrada se ejecutan de forma asincrónica. Esto puede dar lugar a que los puntos de interrupción no se alcancen o se alcancen en un orden inesperado. Use el registro de depuración o dispositivo para realizar un seguimiento de la ejecución sin interrumpir el flujo de la aplicación. Filtre el registro de dispositivos Android mediante el `DebugTag` especificado en `Constants`.
+1. Cuando se detiene la depuración en Visual Studio, la aplicación se cierra. Los receptores de mensajes u otros servicios que se inicien como parte del proceso de depuración se cerrarán y no responderán a los eventos de mensaje.
 
 ## <a name="create-a-notification-dispatcher"></a>Crear un distribuidor de notificaciones
 
