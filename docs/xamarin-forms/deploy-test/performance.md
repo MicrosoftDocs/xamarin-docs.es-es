@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
 ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487170"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913415"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Mejora del rendimiento de aplicaciones Xamarin.Forms
 

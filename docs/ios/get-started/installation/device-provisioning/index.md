@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
 ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022699"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910847"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Aprovisionamiento de dispositivos para Xamarin.iOS
 
