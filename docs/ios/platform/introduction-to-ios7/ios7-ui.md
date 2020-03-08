@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031862"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915721"
 ---
 # <a name="ios-7-user-interface-overview"></a>Introducción a la interfaz de usuario de iOS 7
 
@@ -201,7 +201,7 @@ En nuestra aplicación, veremos que la vista se vuelve a colocar, por lo que tod
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-Tenga en cuenta que, aunque los efectos de las API `TopLayoutGuide/BottomLayoutGuide` y `EdgesForExtendedLayout` son similares, están diseñados para rellenar diferentes objetivos. Cambiar el valor de `EdgesForExtendedLayout` de la configuración predeterminada puede corregir vistas recortadas en las aplicaciones diseñadas para iOS 6, pero un buen diseño de iOS 7 debe respetar el aspecto de la pantalla completa y ofrecer una experiencia de visualización de pantalla completa, confiando en `TopLayoutGuide` y `BottomLayoutGuide` correctamente Coloque el contenido que debe manipularse en un lugar cómodo para el usuario.
+Tenga en cuenta que, aunque los efectos de las API `TopLayoutGuide/BottomLayoutGuide` y `EdgesForExtendedLayout` son similares, están diseñados para rellenar diferentes objetivos. Cambiar el valor de `EdgesForExtendedLayout` del valor predeterminado puede corregir vistas recortadas en las aplicaciones diseñadas para iOS 6, pero un buen diseño de iOS 7 debe respetar el aspecto de la pantalla completa y ofrecer una experiencia de visualización de pantalla completa, confiando en `TopLayoutGuide` y `BottomLayoutGuide` para colocar correctamente el contenido que está diseñado para ser manipulado en un lugar cómodo para el usuario.
 
 Consulte [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) para obtener un ejemplo práctico.
 

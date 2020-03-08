@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016332"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910763"
 ---
 # <a name="3264-bit-platform-considerations"></a>consideraciones sobre las plataformas de 32 y 64 bits
 
@@ -36,7 +36,7 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic en el proyecto de la aplicación para abrir la ventana **Opciones del proyecto** .
 2. Seleccione **compilación de iOS**.
@@ -48,16 +48,16 @@ En el caso de las aplicaciones móviles de Xamarin. iOS que se han convertido en
 
    [![Establecimiento de arquitecturas admitidas en una de las combinaciones de ARM64](Images/Image02.png "Establecimiento de arquitecturas admitidas en una de las combinaciones de ARM64")](Images/Image02-large.png#lightbox)
 
-5. Haga clic en **Aceptar**.
+5. Haga clic en **OK**.
 6. Realice una compilación limpia.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **propiedades**.
 2. Seleccione **compilación de iOS**.
 3. Para el simulador de iPhone, establezca las **arquitecturas admitidas** en **x86\_64** o **i386 + x86\_64**: 
 
-   [![Establecimiento de arquitecturas admitidas en x86_64 o i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Establecer las arquitecturas admitidas en x86_64 o i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. En el caso de los dispositivos físicos, seleccione una de las combinaciones de **ARM64** disponibles:
     

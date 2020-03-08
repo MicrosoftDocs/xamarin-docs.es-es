@@ -9,17 +9,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940958"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911558"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: Mtouch mensajes de error
 
-Por ejemplo parámetros, entorno, herramientas que faltan.
+Por ejemplo, parámetros, entorno, herramientas que faltan.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -324,7 +324,7 @@ No se especificó ninguna acción para Mtouch.
 
 ### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: no se puede canonizar la ruta de acceso '\*': \*
 
-Se trata de un error interno. Si ve este error, registre un nuevo problema en [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Código de error interno. Si ve este error, registre un nuevo problema en [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0055" />
 
@@ -856,7 +856,7 @@ La manera recomendada de corregir este error es actualizar Xcode para obtener el
 
 También puede habilitar el [vinculador](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) administrado para quitar las API sin usar, incluidas (en la mayoría de los casos) las nuevas que requieren la biblioteca especificada. Sin embargo, esto no funcionará si el proyecto requiere API introducidas en un SDK más reciente que el que proporciona Xcode.
 
-Como última solución, use una versión anterior de Xamarin. iOS que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
+Como última solución de paja, use una versión anterior de Xamarin. iOS que no requiera que estos nuevos SDK estén presentes durante el proceso de compilación.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: mensajes de error relacionados con el proyecto
 
@@ -971,14 +971,14 @@ Quite el directorio `NOTICE` del proyecto.
 
 ### <a name="mt1019-your-application-has-entitlements-not-supported-by-your-current-provisioning-profile-and-could-not-be-installed-on-the-device--please-check-the-ios-device-log-for-more-detailed-information-error-0xe8008016"></a>MT1019: la aplicación tiene derechos que el perfil de aprovisionamiento actual no admite y no se pudo instalar en el dispositivo ' * '. Consulte el registro del dispositivo iOS para obtener información más detallada (error: 0xe8008016).
 
-Esto puede ocurrir si:
+Esto puede suceder si:
 
 - La aplicación tiene derechos que el perfil de aprovisionamiento actual no admite.
-  Soluciones posibles:
+  Posibles soluciones:
   - Especifique un perfil de aprovisionamiento diferente que admita los derechos que necesita la aplicación.
   - Quitar los derechos no admitidos en el perfil de aprovisionamiento actual.
 - El dispositivo en el que está intentando implementar no está incluido en el perfil de aprovisionamiento que está usando.
-  Soluciones posibles:
+  Posibles soluciones:
   - Cree una nueva aplicación a partir de una plantilla en Xcode, seleccione el mismo perfil de aprovisionamiento e impleméntela en el mismo dispositivo. En ocasiones, Xcode puede actualizar automáticamente los perfiles de aprovisionamiento con nuevos dispositivos (en otros casos, Xcode le preguntará qué hacer).
   -Vaya al centro de desarrollo de iOS y actualice el perfil de aprovisionamiento con el nuevo dispositivo y, a continuación, descargue el perfil de aprovisionamiento actualizado en la máquina.
 
@@ -1010,7 +1010,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 
 <a name="MT1024" />
@@ -1031,7 +1031,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1045,7 +1045,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1325,7 +1325,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1339,7 +1339,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1353,7 +1353,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1367,7 +1367,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1381,7 +1381,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1395,7 +1395,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1409,7 +1409,7 @@ Cosas que intentar resolver esto:
 
 - Elimine la aplicación del dispositivo e inténtelo de nuevo.
 - Desconecte el dispositivo y vuelva a conectarlo.
-- Reinicie el dispositivo.
+- Reinicio del dispositivo.
 - Reinicie el equipo Mac.
 - Sincronizar el dispositivo con iTunes (esto quitará los informes de bloqueo del dispositivo).
 
@@ -1709,7 +1709,7 @@ A veces es posible solucionar este problema deshabilitando las compilaciones inc
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: restricción de AOT: el método ' * ' debe ser estático, ya que se decora con [MonoPInvokeCallback]. Consulte [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacks"></a>MT3002: restricción de AOT: el método ' * ' debe ser estático, ya que se decora con [MonoPInvokeCallback]. Consulte [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
 
 Este mensaje de error procede del compilador de AOT.
 
@@ -1789,7 +1789,7 @@ Si cree que Xamarin. iOS debe admitir el tipo en cuestión, envíe una solicitud
 
 <a name="MT4102" />
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: el registrador encontró un tipo no válido `*` en la firma para el método `*`. Utilice `*` en su lugar.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: el registrador encontró un tipo no válido `*` en la firma para el método `*`. En su lugar, use `*`.
 
 Esto solo sucede actualmente con un tipo: System. DateTime. En su lugar, use el equivalente de Objective-C (NSDate).
 
@@ -1855,7 +1855,7 @@ Este es siempre un error en Xamarin. iOS; Registre un nuevo problema en [GitHub]
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: el registrador encontró un tipo no válido `*`. No se admite el registro de tipos genéricos con Objective-C y puede dar lugar a bloqueos o comportamientos aleatorios (por compatibilidad con versiones anteriores de Xamarin. iOS es posible omitir este error pasando `--unsupported--enable-generics-in-registrar` como argumento Mtouch adicional en la página Opciones de compilación de iOS del proyecto. Vea [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) para obtener más información).
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrar-for-more-information"></a>MT4112: el registrador encontró un tipo no válido `*`. No se admite el registro de tipos genéricos con Objective-C y puede dar lugar a bloqueos o comportamientos aleatorios (por compatibilidad con versiones anteriores de Xamarin. iOS es posible omitir este error pasando `--unsupported--enable-generics-in-registrar` como argumento Mtouch adicional en la página Opciones de compilación de iOS del proyecto. Vea [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) para obtener más información).
 
 <a name="MT4113" />
 
@@ -2396,7 +2396,7 @@ Existen algunos orígenes posibles para estos símbolos dinámicos:
 - Referencias de campo a ubicaciones de memoria en bibliotecas vinculadas estáticamente desde proyectos de enlace (atributos`[Field]`).
 - Clases de Objective-C a las que se hace referencia en bibliotecas vinculadas estáticamente desde proyectos de enlace (cuando se usan compilaciones incrementales o cuando no se usa el registrador estático).
 
-Soluciones posibles:
+Posibles soluciones:
 
 - Habilite el enlazador administrado (si es posible para todos los ensamblados en lugar de solo los ensamblados de SDK). Esto podría quitar suficientes orígenes de símbolos dinámicos para que la línea de comandos del vinculador no supere el máximo.
 - Reduzca el número de P/invocacións, las referencias de campo y/o las clases de Objective-C.
@@ -2502,7 +2502,7 @@ Se produjo un error de seguridad al quitar los símbolos de depuración de la ap
 
 *Tarea MSBuild: DetectDebugNetworkConfigurationTaskBase*
 
-Pasos para la solución de problemas:
+Pasos para solucionar problemas:
 
 - intente ejecutar `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` (que debería proporcionar una dirección IP y no un error obviamente).
 - intente ejecutar "ping \`hostname\`", que puede proporcionarle más información, como: `cannot resolve MyHost.local: Unknown host`
@@ -2775,14 +2775,14 @@ En algunos casos, se trata de un problema de "red local" y se puede solucionar a
 
 Donde * puede ser:
 
-- cadena
-- matriz
-- dict
+- string
+- array
+- Diccionario
 - bool
-- reales
-- enteros
+- real
+- integer
 - date
-- Datos
+- datos
 
 <a name="MT7046" />
 

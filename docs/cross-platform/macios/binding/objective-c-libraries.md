@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016291"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914782"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -34,14 +34,14 @@ Puede usar el proyecto de [ejemplo enlace de iOS](https://github.com/xamarin/mon
 
 ## <a name="getting-started"></a>Introducción
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
 Puede hacerlo desde Visual Studio para Mac seleccionando el tipo de proyecto, la biblioteca de **> de iOS > biblioteca de enlaces**:
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
 Puede hacerlo desde Visual Studio en Windows seleccionando el tipo de proyecto, **visual C# > iOS > biblioteca de enlaces (iOS)** :
@@ -169,7 +169,7 @@ Sin embargo, puesto que usamos la interfaz como esqueleto para generar una clase
 
 El enlace más sencillo que puede hacer es enlazar un método. Basta con declarar un método en la interfaz con C# las convenciones de nomenclatura y decorar el método con la [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
 . El atributo [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) es lo que vincula C# su nombre con el nombre de Objective-C en el tiempo de ejecución de Xamarin. iOS. Parámetro del [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
-Attribute es el nombre del selector Objective-C. Algunos ejemplos:
+Attribute es el nombre del selector Objective-C. He aquí algunos ejemplos:
 
 ```csharp
 // A method, that takes no arguments
@@ -779,7 +779,7 @@ interface MyUIViewExtension {
 }
 ```
 
-Lo anterior creará un `MyUIViewExtension` una clase que contiene el método de extensión `MakeBackgroundRed`.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier subclase `UIView`, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Así:
+Lo anterior creará un `MyUIViewExtension` una clase que contiene el método de extensión `MakeBackgroundRed`.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier subclase `UIView`, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Por ejemplo:
 
 ```csharp
 @interface SocialNetworking (Twitter)

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030853"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915786"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -135,7 +135,7 @@ Cada aplicación debe proporcionar una versión pequeña y una grande de su icon
 
 |Icono pequeño||Icono grande||
 |---|---|---|---|
-|Tamaño real|400x240px|Tamaño|1280x768px|
+|Tamaño real|400x240px|Size|1280x768px|
 |Tamaño de zona segura|370x222px|||
 |Tamaño sin foco|300x180px|||
 |Tamaño centrado|370x222px|||
@@ -281,11 +281,11 @@ Si la aplicación Xamarin. tvOS es un juego y ha incluido Game Center soporte t�
 
 ||Iconos de logros|Ilustración del panel|Material gráfico de marcador|
 |---|---|---|---|
-|Tamaño visible|200x200px|923x150px|no disponible|
-|Tamaño real|320x320px|no disponible|659x371px|
-|Tamaño de zona segura|no disponible|no disponible|618x348px|
-|Tamaño sin foco|no disponible|no disponible|548x309px|
-|Tamaño centrado|no disponible|no disponible|618x348px|
+|Tamaño visible|200x200px|923x150px|N/D|
+|Tamaño real|320x320px|N/D|659x371px|
+|Tamaño de zona segura|N/D|N/D|618x348px|
+|Tamaño sin foco|N/D|N/D|548x309px|
+|Tamaño centrado|N/D|N/D|618x348px|
 
 Para obtener más información sobre cómo trabajar con Game Center, consulte la [Guía de programación de Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)de Apple.
 

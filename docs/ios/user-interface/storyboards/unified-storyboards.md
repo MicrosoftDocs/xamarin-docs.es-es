@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001828"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914703"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -112,10 +112,10 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad.|Valor|
+|Propiedad|Value|
 |--- |--- |
-|`HorizontalSizeClass`|Unidad|
-|`VerticalSizeClass`|Estándar|
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Normal|
 |`UserInterfaceIdom`|Teléfono|
 |`DisplayScale`|2.0|
 
@@ -123,9 +123,9 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad.|Valor|
+|Propiedad|Value|
 |--- |--- |
-|`HorizontalSizeClass`|Unidad|
+|`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Sin especificar|
 |`UserInterfaceIdom`|Sin especificar|
 |`DisplayScale`|Sin especificar|
@@ -214,9 +214,9 @@ En primer lugar, iOS 8 realiza alguna configuración para preparar la transició
 
 iOS 8 proporciona varias devoluciones de llamada que el desarrollador puede usar para participar en el cambio de rasgo, tal como se muestra en la tabla siguiente:
 
-|Phase|Callback|Descripción|
+|Fase|Devolución de llamada|Descripción|
 |--- |--- |--- |
-|Programa de instalación|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
+|Configurar|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
 |Animación|`WillTransitionToTraitCollection`|El Coordinador de transiciones que se pasa a este método tiene una propiedad `AnimateAlongside` que permite al desarrollador agregar animaciones que se ejecutarán junto con las animaciones predeterminadas.|
 |Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyan su propio código de limpieza después de que tenga lugar la transición.|
 
@@ -242,7 +242,7 @@ En un controlador de vista en dos paneles, el controlador de vista principal jue
 
 ### <a name="showing-view-controllers"></a>Mostrar controladores de vista
 
-Otro cambio que Apple ha realizado en iOS 8 es la forma en que el desarrollador muestra los controladores de vista. En el pasado, si la aplicación tuviera un controlador de vista hoja (por ejemplo, un controlador de vista de tabla) y el desarrollador mostrase un diferente (por ejemplo, en respuesta al punteo del usuario en una celda), la aplicación volvería a la jerarquía del controlador a la Controlador de vista de navegación y llamar al método `PushViewController` para mostrar la nueva vista.
+Otro cambio que Apple ha realizado en iOS 8 es la forma en que el desarrollador muestra los controladores de vista. En el pasado, si la aplicación tuviera un controlador de vista hoja (por ejemplo, un controlador de vista de tabla) y el desarrollador mostrase un diferente (por ejemplo, en respuesta al punteo del usuario en una celda), la aplicación volvería a través de la jerarquía del controlador hasta el controlador de vista de navegación y llamará al método `PushViewController` para mostrar la nueva vista.
 
 Esto presentó un acoplamiento muy estrecho entre el controlador de navegación y el entorno en el que se estaba ejecutando. En iOS 8, Apple ha desacoplado esto proporcionando dos nuevos métodos:
 
@@ -253,7 +253,7 @@ Estos métodos funcionan empezando por el controlador de vista Hoja y pasando po
 
 Los desarrolladores pueden implementar `ShowViewController` y `ShowDetailViewController` en sus propios controladores de vista personalizados para obtener la misma funcionalidad automatizada que proporcionan `UINavigationController` y `UISplitViewController`.
 
-### <a name="how-it-works"></a>Cómo funciona
+### <a name="how-it-works"></a>Funcionamiento
 
 En esta sección, echaremos un vistazo a cómo se implementan realmente estos métodos en iOS 8. En primer lugar, echemos un vistazo al nuevo método `GetTargetForAction`:
 
@@ -680,7 +680,7 @@ Para ver una implementación de guiones gráficos unificados, consulte la aplica
 
 El archivo de pantalla de inicio se muestra como una pantalla de presentación mientras se inicia una aplicación de iOS para proporcionar comentarios al usuario de que la aplicación se está iniciando realmente. Antes de iOS 8, el desarrollador tendría que incluir varios `Default.png` recursos de imagen para cada tipo de dispositivo, orientación y resolución de pantalla en la que se ejecutaba la aplicación. Por ejemplo, `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`, etc.
 
-La factorización en los nuevos dispositivos iPhone 6 y iPhone 6 más (y el próximo Apple Watch) con todos los dispositivos iPhone y iPad existentes, representa una gran variedad de tamaños variables, orientaciones y resoluciones de `Default.png` recursos de imagen de la pantalla de inicio que deben crear y mantener. Además, estos archivos pueden ser bastante grandes y se "inflarán" el paquete de aplicaciones de entrega, lo que aumenta la cantidad de tiempo necesario para descargar la aplicación desde iTunes App Store (posiblemente para que se pueda entregar a través de una red de telefonía móvil) y el aumento de la cantidad de almacenamiento necesario en el dispositivo del usuario final.
+La factorización en los nuevos dispositivos iPhone 6 y iPhone 6 más (y el próximo Apple Watch) con todos los dispositivos iPhone y iPad existentes, representa una gran variedad de tamaños variables, orientaciones y resoluciones de `Default.png` recursos de imagen de la pantalla de inicio que se deben crear y mantener. Además, estos archivos pueden ser bastante grandes y se "inflarán" el paquete de aplicaciones de entrega, lo que aumenta la cantidad de tiempo necesario para descargar la aplicación desde iTunes App Store (posiblemente para que se pueda entregar a través de una red de telefonía móvil) y el aumento de la cantidad de almacenamiento necesario en el dispositivo del usuario final.
 
 Como novedad de iOS 8, el desarrollador puede crear un único archivo de `.xib` atómico en Xcode que use las clases de diseño y tamaño automáticos para crear una *pantalla de inicio dinámico* que funcione en todos los dispositivos, resoluciones y orientaciones. Esto no solo reduce la cantidad de trabajo necesario para que el desarrollador cree y mantenga todos los recursos de imagen necesarios, pero reduce en gran medida el tamaño del paquete instalado de la aplicación.
 

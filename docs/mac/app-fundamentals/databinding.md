@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030219"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78919147"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -26,9 +26,9 @@ Mediante el uso de la codificación de valores clave y técnicas de enlace de da
 
 [![Un ejemplo de la aplicación en ejecución](databinding-images/intro01.png "Un ejemplo de la aplicación en ejecución")](databinding-images/intro01-large.png#lightbox)
 
-En este artículo, trataremos los aspectos básicos del trabajo con la codificación de valores clave y el enlace de datos en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que usaremos en Este artículo.
+En este artículo, trataremos los aspectos básicos del trabajo con la codificación de valores clave y el enlace de datos en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que vamos a usar en este artículo.
 
-Es posible que desee echar un vistazo a la sección [exposición C# de clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los atributos `Register` y `Export` que se usan para C# conectar las clases a Objective-C. objetos y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican los atributos `Register` y `Export` que se usan para conectar C# las clases a objetos de Objective-C y elementos de la interfaz de usuario.
 
 <a name="What_is_Key-Value_Coding" />
 
@@ -317,7 +317,7 @@ namespace MacDatabinding
 }
 ```
 
-La mayoría de las características de esta clase se trataron en la sección sobre la [codificación de valores de clave](#What_is_Key-Value_Coding) anteriores. Sin embargo, echemos un vistazo a algunos elementos específicos y algunas adiciones que se realizaron para permitir que esta clase actúe como modelo de datos para **controladores de matriz** y **controladores de árbol** (que vamos a usar más adelante en las vistas de **árbol**de enlace de datos, **vistas de esquema** y las **vistas de colección**).
+La mayoría de las características de esta clase se trataron en la sección sobre la [codificación de valores de clave](#What_is_Key-Value_Coding) anteriores. Sin embargo, echemos un vistazo a algunos elementos específicos y algunas adiciones que se realizaron para permitir que esta clase actúe como modelo de datos para **controladores de matriz** y **controladores de árbol** (que vamos a usar más adelante en las vistas de **árbol**de enlace de datos, **vistas de esquema** y vistas de **colección**).
 
 En primer lugar, como un empleado podría ser un administrador, hemos usado un `NSArray` (específicamente un `NSMutableArray` para que se puedan modificar los valores) para permitir que los empleados que han administrado se adjunten a ellos:
 
@@ -334,7 +334,7 @@ public NSArray People {
 Dos cosas que debe tener en cuenta aquí:
 
 1. Hemos usado un `NSMutableArray` en lugar de una matriz C# o colección estándar, ya que se trata de un requisito para enlazar datos a controles AppKit como **vistas de tabla**, **vistas de esquema** y **colecciones**.
-2. Exponíamos la matriz de empleados convirtiéndola en un `NSArray` para el enlace de datos y cambió C# su nombre con formato,`People`, a uno que el enlace de datos espera,`personModelArray`en la forma **{CLASS_NAME} array** (tenga en cuenta que el primer carácter se ha en minúsculas).
+2. Exponíamos la matriz de empleados convirtiéndola en un `NSArray` para el enlace de datos y cambió C# su nombre con formato, `People`, a uno que el enlace de datos espera, `personModelArray` en la forma **{CLASS_NAME} matriz** (tenga en cuenta que el primer carácter se ha hecho en minúsculas).
 
 A continuación, es necesario agregar algunos métodos públicos de nombre especial para admitir **controladores de matriz** y controladores de **árbol**:
 
@@ -423,7 +423,7 @@ En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro arc
 
 [![Agregar un nuevo controlador de vista](databinding-images/simple01.png "Agregar un nuevo controlador de vista")](databinding-images/simple01-large.png#lightbox)
 
-A continuación, vuelva a Visual Studio para Mac, edite el archivo **SimpleViewController.CS** (que se agregó automáticamente a nuestro proyecto) y exponga una instancia del `PersonModel` al que se va a enlazar el formulario. Agregue el código siguiente:
+A continuación, vuelva a Visual Studio para Mac, edite el archivo **SimpleViewController.CS** (que se agregó automáticamente a nuestro proyecto) y exponga una instancia del `PersonModel` al que se va a enlazar el formulario. Agregue el siguiente código:
 
 ```csharp
 private PersonModel _person = new PersonModel();
@@ -507,7 +507,7 @@ En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro arc
 
 [![Agregar un nuevo controlador de vista](databinding-images/table01.png "Agregar un nuevo controlador de vista")](databinding-images/table01-large.png#lightbox)
 
-A continuación, vamos a editar el archivo **TableViewController.CS** (que se agregó automáticamente a nuestro proyecto) y se expone una matriz (`NSArray`) de `PersonModel` clases a las que se va a enlazar el formulario. Agregue el código siguiente:
+A continuación, vamos a editar el archivo **TableViewController.CS** (que se agregó automáticamente a nuestro proyecto) y se expone una matriz (`NSArray`) de `PersonModel` clases a las que se va a enlazar el formulario. Agregue el siguiente código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -610,7 +610,7 @@ Ahora debemos enlazar nuestra vista de tabla al controlador de la matriz, haga l
 
 Si ejecutamos la aplicación, la tabla se rellenará con nuestra matriz de `PersonModels`:
 
-[![Ejecutar la aplicación](databinding-images/table11.png "Ejecutar la aplicación")](databinding-images/table11-large.png#lightbox)
+[![Ejecutar la aplicación](databinding-images/table11.png "Ejecución de la aplicación")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding" />
 
@@ -622,7 +622,7 @@ En primer lugar, vamos a agregar un nuevo **controlador de vista** a nuestro arc
 
 [![Agregar un nuevo controlador de vista](databinding-images/outline01.png "Agregar un nuevo controlador de vista")](databinding-images/outline01-large.png#lightbox)
 
-A continuación, vamos a editar el archivo **OutlineViewController.CS** (que se agregó automáticamente a nuestro proyecto) y se expone una matriz (`NSArray`) de `PersonModel` clases a las que se va a enlazar el formulario. Agregue el código siguiente:
+A continuación, vamos a editar el archivo **OutlineViewController.CS** (que se agregó automáticamente a nuestro proyecto) y se expone una matriz (`NSArray`) de `PersonModel` clases a las que se va a enlazar el formulario. Agregue el siguiente código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -732,7 +732,7 @@ Ahora debemos enlazar nuestra vista de esquema al controlador de árbol, haga lo
 
 Si ejecutamos la aplicación, el contorno se rellenará con nuestra matriz de `PersonModels`:
 
-[![Ejecutar la aplicación](databinding-images/outline11.png "Ejecutar la aplicación")](databinding-images/outline11-large.png#lightbox)
+[![Ejecutar la aplicación](databinding-images/outline11.png "Ejecución de la aplicación")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>Enlace de datos de la vista de colección
 

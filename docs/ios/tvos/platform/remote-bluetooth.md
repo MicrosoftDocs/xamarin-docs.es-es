@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: c0338fce694d61dc19484c56dbc00bb854d0d0d7
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940972"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915792"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri controladores de Bluetooth y remotos para tvOS en Xamarin
 
@@ -38,12 +38,12 @@ El control remoto Siri tiene las siguientes características y usos previstos en
 
 |Característica|Uso general de la aplicación|Uso de la aplicación de juego|
 |---|---|---|
-|**Superficie táctil**<br />Deslice el dedo hasta navegar, presione para seleccionar y mantener los menús contextuales.|**Pulse/Deslice el dedo**<br />Navegación de la interfaz de usuario entre elementos que tienen el foco.<br /><br />**Hizo**<br />Activa el elemento seleccionado (enfocado).|**Pulse/Deslice el dedo**<br />Depende del diseño del juego y se puede usar como un panel de la cruceta punteando en los bordes.<br /><br />**Hizo**<br />Realice la función de botón principal.|
+|**Superficie táctil**<br />Deslice el dedo hasta navegar, presione para seleccionar y mantener los menús contextuales.|**Pulse/Deslice el dedo**<br />Navegación de la interfaz de usuario entre elementos que tienen el foco.<br /><br />**Hacer clic en .**<br />Activa el elemento seleccionado (enfocado).|**Pulse/Deslice el dedo**<br />Depende del diseño del juego y se puede usar como un panel de la cruceta punteando en los bordes.<br /><br />**Hacer clic en .**<br />Realice la función de botón principal.|
 |**Menu**<br />Presione para volver a la pantalla o el menú anterior.|Vuelve a la pantalla anterior y sale de la pantalla de inicio de Apple TV desde la pantalla principal de la aplicación.|Pausar y reanudar el juego, vuelve a la pantalla anterior y sale de la pantalla principal de Apple TV desde la pantalla principal de la aplicación.|
-|**Siri/buscar**<br />En países con Siri, mantenga presionado el control de voz, en todos los demás países, para mostrar la pantalla de búsqueda.|no disponible|no disponible|
+|**Siri/buscar**<br />En países con Siri, mantenga presionado el control de voz, en todos los demás países, para mostrar la pantalla de búsqueda.|N/D|N/D|
 |**Reproducir/pausar**<br />Reproducir y pausar medios o proporciona una función secundaria en las aplicaciones.|Inicia la reproducción multimedia y pausa/reanuda la reproducción.|Realiza la función de botón secundario u omite el vídeo de introducción (si existe).|
-|**Página principal**<br />Presione para volver a la pantalla principal, haga doble clic para mostrar las aplicaciones en ejecución y mantenga presionado el dispositivo de suspensión.|no disponible|no disponible|
-|**Cantidad**<br />Controla el volumen de equipos de audio y vídeo conectados.|no disponible|no disponible|
+|**Inicio**<br />Presione para volver a la pantalla principal, haga doble clic para mostrar las aplicaciones en ejecución y mantenga presionado el dispositivo de suspensión.|N/D|N/D|
+|**Volumen**<br />Controla el volumen de equipos de audio y vídeo conectados.|N/D|N/D|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -51,7 +51,7 @@ El control remoto Siri tiene las siguientes características y usos previstos en
 
 La superficie táctil de Siri remota es capaz de detectar una variedad de gestos de un solo dedo al que se puede responder en la aplicación Xamarin. tvOS:
 
-|Deslizar rápidamente|Haga clic|Puntee en|
+|Deslizar rápidamente|Haga clic en|Pulsar|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Mueve la selección (foco) entre los elementos de la interfaz de usuario en la pantalla (hacia arriba, hacia abajo, a la derecha). El deslizamiento rápido se puede usar para desplazarse a través de listas grandes de contenido con rapidez mediante la inercia.|Activa el elemento seleccionado (enfocado) o actúa como el botón principal de un juego. Al hacer clic y mantener, se pueden activar los menús contextuales o las funciones secundarias.|Pulsar ligeramente la superficie táctil en los bordes actúa como botones de dirección en un panel D, moviendo el foco hacia arriba, hacia abajo, a la izquierda o a la derecha, en función de la unidad punteada. Dependiendo de la aplicación, se puede usar para mostrar los controles ocultos.|
@@ -286,14 +286,14 @@ Un dispositivo de juego tiene las siguientes características y usos previstos e
 |**A**|Activa el elemento seleccionado (enfocado).|Realiza la función de botón principal y confirma las acciones del cuadro de diálogo.|
 |**B**|Vuelve a la pantalla anterior o sale de la pantalla principal si se encuentra en la pantalla principal de la aplicación.|Realiza la función de botón secundario o vuelve a la pantalla anterior.|
 |**X**|Inicia la reproducción de medios o pausa/reanuda la reproducción.|Depende del juego.|
-|**Y**|no disponible|Depende del juego.|
+|**S**|N/D|Depende del juego.|
 |**Menu**|Vuelve a la pantalla anterior o sale de la pantalla principal si se encuentra en la pantalla principal de la aplicación.|Pausar o reanudar el juego, vuelve a la pantalla anterior o sale de la pantalla principal si se encuentra en la pantalla principal de la aplicación.|
 |**Botón de hombro izquierdo**|Navega a la izquierda.|Depende del juego.|
 |**Desencadenador izquierdo**|Navega a la izquierda.|Depende del juego.|
 |**Botón derecho de hombro**|Navega hacia la derecha.|Depende del juego.|
 |**Desencadenador derecho**|Navega a la derecha|Depende del juego.|
 |**Stick analógico izquierdo**|Navega por los elementos de la interfaz de usuario (cambia el foco).|Depende del juego.|
-|**Stick analógico derecho**|no disponible|Depende del juego.|
+|**Stick analógico derecho**|N/D|Depende del juego.|
 
 Apple proporciona las siguientes sugerencias para trabajar con dispositivos de juego:
 

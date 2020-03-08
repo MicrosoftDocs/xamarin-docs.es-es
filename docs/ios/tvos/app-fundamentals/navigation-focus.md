@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030833"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915808"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabajar con la navegación y el foco de tvOS en Xamarin
 
@@ -48,7 +48,7 @@ Apple sugiere tener en cuenta lo siguiente al diseñar la navegación de la apli
 - **Proporcionar navegación hacia atrás a través del botón de menú** : para crear una experiencia fácil y familiar, permita que los usuarios naveguen hacia atrás mediante el botón de **menú** de Siri remoto. Presionar el botón de **menú** siempre debe volver a la pantalla anterior o volver al menú principal de la aplicación. En el nivel superior de la aplicación, al presionar el botón de **menú** debe volver a la pantalla principal de Apple TV.
 - **Normalmente, evite mostrar un botón atrás** , ya que si presiona el botón de **menú** en el control remoto de Siri navega hacia atrás a través de la pila de pantalla, evite mostrar un control adicional que duplique este comportamiento. Una excepción a esta regla es para la compra de pantallas o pantallas con acciones destructivas (como la eliminación de contenido) donde se debe mostrar también un botón **Cancelar** .
 - **Mostrar colecciones grandes en una sola pantalla, en lugar de muchas** , el control remoto Siri se diseñó para facilitar el traslado a través de una gran colección de contenido con movimientos sencillos. Si la aplicación funciona con una gran colección de elementos que puedan recibir el foco, considere la posibilidad de mantenerlos en una sola pantalla en lugar de dividirlos en muchas pantallas que requieran más navegación por la parte del usuario.
-- **Use controles estándar para la navegación** de nuevo para crear una experiencia de usuario sencilla y familiar, siempre que sea posible, Use controles `UIKit` integrados, como controles de página, barras de pestañas, controles segmentados, vistas de tabla, vistas de colección y vistas divididas para su navegación de la aplicación. Puesto que el usuario ya está familiarizado con estos elementos, puede navegar de manera intuitiva por la aplicación.
+- **Use controles estándar para la navegación** de nuevo para crear una experiencia de usuario sencilla y familiar, siempre que sea posible, use controles de `UIKit` integrados como controles de página, barras de pestañas, controles segmentados, vistas de tabla, vistas de colección y vistas divididas para la navegación de la aplicación. Puesto que el usuario ya está familiarizado con estos elementos, puede navegar de manera intuitiva por la aplicación.
 - **Favorecer la navegación de contenido horizontal** : debido a la naturaleza de Apple TV, el deslizamiento de izquierda a derecha en el Siri remoto es más natural que el de arriba y abajo. Tenga en cuenta esta opción al diseñar diseños de contenido para la aplicación.
 
 <a name="Focus-and-Selection" />
@@ -164,7 +164,7 @@ public override void ViewDidLoad ()
 
 En primer lugar, se crea un nuevo `UIFocusGuide` y se agrega a la colección de guía de diseño de la vista mediante el método `AddLayoutGuide`.
 
-Después, los delimitadores superior, izquierdo, ancho y alto de la guía de enfoque se ajustan en relación con los botones **más información** y **comprar** para colocarlos entre ellos. Vea:
+Después, los delimitadores superior, izquierdo, ancho y alto de la guía de enfoque se ajustan en relación con los botones **más información** y **comprar** para colocarlos entre ellos. Consulte:
 
 [![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
 

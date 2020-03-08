@@ -7,27 +7,27 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029627"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914377"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
 <a name="install" />
 
-## <a name="download-and-install"></a>Descargar e instalar
+## <a name="download-and-install"></a>Descarga e instalación
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Compruebe los [requisitos](#requirements) siguientes.
 2. Descargue e instale [Xamarin Workbooks para Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Comience a [reproducirse](~/tools/workbooks/workbook.md) con libros.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Compruebe los [requisitos](#requirements) siguientes.
 2. Descargue e instale [Xamarin Workbooks para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
@@ -37,7 +37,7 @@ ms.locfileid: "73029627"
 
 ## <a name="requirements"></a>Requisitos
 
-#### <a name="supported-operating-systems"></a>Sistemas operativos admitidos
+#### <a name="supported-operating-systems"></a>Sistemas operativos compatibles
 
 - **Mac** -OS X 10,11 o superior
 - **Windows** -Windows 7 o posterior (con Internet Explorer 11 o posterior y .net 4.6.1 o superior)
@@ -88,7 +88,7 @@ Visual Studio para Mac
 - **Visual Studio > Acerca de Visual Studio > Mostrar detalles > copiar información**
 - Pegar en informe de errores
 
-Programa para la mejora
+Visual Studio
 
 - **Ayuda > Acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
@@ -112,7 +112,7 @@ Si tiene problemas para conectar su libro de iOS o Android y ya ha comprobado [n
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Desinstalar
+## <a name="uninstall"></a>Desinstalación
 
 ### <a name="windows"></a>Windows
 

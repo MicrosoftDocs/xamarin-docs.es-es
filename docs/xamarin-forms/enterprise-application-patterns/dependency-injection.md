@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567895"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915283"
 ---
 # <a name="dependency-injection"></a>Inserción de dependencias
 
@@ -117,7 +117,7 @@ De forma predeterminada, cada registro de clase concreta se configura como una i
 
 <a name="resolution" />
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
 
 Una vez registrado un tipo, se puede resolver o insertar como una dependencia. Cuando se resuelve un tipo y el contenedor necesita crear una nueva instancia, inserta las dependencias en la instancia.
 

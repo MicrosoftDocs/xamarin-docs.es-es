@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489211"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910828"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
@@ -26,7 +26,7 @@ En esta guía se presentan las nuevas API para desarrolladores de Xamarin. iOS.
 
 También hay algunas API que han quedado en desuso en iOS 8, que se detallan al final de este documento.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Los siguientes elementos son necesarios para crear aplicaciones de iOS 8 en Visual Studio para Mac:
 
@@ -44,7 +44,7 @@ El control de sus dispositivos desde su iPhone no es una nueva aplicación de te
 
 Con HomeKit, las aplicaciones de terceros y Siri pueden detectar accesorios y agregarlos a su base de datos de configuración de inicio personal, editarlos y actuar sobre ellos, y comunicarse con los accesorios y sus servicios para realizar una acción.
 
-### <a name="configuration"></a>Configuración de
+### <a name="configuration"></a>Configuración
 
 En el diagrama siguiente se muestra la jerarquía básica de la configuración de HomeKit Accessories:
 

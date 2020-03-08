@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940837"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916691"
 ---
 # <a name="material-theme"></a>Tema de materiales
 
@@ -36,7 +36,7 @@ Puede usar un solo tema para una aplicación completa o puede usar distintos tem
 
 Dado que el tema material solo se admite en Android 5,0 y versiones posteriores, no se puede usar (o un tema personalizado derivado del tema material) para que la aplicación se ejecute en versiones anteriores de Android. Sin embargo, puede configurar la aplicación para que use el tema material en dispositivos Android 5,0 y revertir correctamente a un tema anterior cuando se ejecute en versiones anteriores de Android (consulte la sección de [compatibilidad](#compatibility) de este artículo para obtener más información).
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Lo siguiente es necesario para usar las nuevas características de tema de material de Android 5,0 en aplicaciones basadas en Xamarin:
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032224"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910868"
 ---
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
 
@@ -28,7 +28,7 @@ Apple ha agregado varias API y servicios nuevos en iOS 10 junto con muchas mejor
 
 La tecnología de visualización de tono verdadero de Apple usa el sensor de luz ambiente en un dispositivo iOS para ajustar de forma dinámica el color y la intensidad de la pantalla para que coincida con las condiciones de iluminación actuales. iOS 10 proporciona la nueva clave [UIWhitePointAdaptivityStyle](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW31) que se puede Agregar al archivo `Info.plist` de la aplicación y controla cómo se aplica el tono verdadero al cambio de color estándar. 
 
-Están disponibles los siguientes valores:
+Puede disponer de los siguientes valores:
 
 - `UIWhitePointAdaptivityStyleStandard` **default** : Use el adaptivity de punto blanco estándar.
 - `UIWhitePointAdaptivityStyleReading`: se usa para las aplicaciones centradas en la lectura.
@@ -42,7 +42,7 @@ Apple ha proporcionado varios puntos de extensión de aplicación nuevos en iOS 
 
 - Directorio de llamadas
 - Interfaz de usuario de intenciones e intents
-- Mensajes
+- error de Hadoop
 - Contenido de notificación
 - Notification Services
 - Paquete de adhesivo
@@ -52,7 +52,7 @@ Además, las extensiones de aplicación de teclado de terceros tienen las siguie
 - La nueva propiedad `DocumentInputMode` de la clase `UITextDocumentProxy` puede determinar el idioma de entrada de un documento y permitir que la extensión de teclado se alinee con ese idioma.
 - El nuevo método de `HandleInputModeList` permite que la extensión de teclado muestre el menú de selector de teclado del sistema en respuesta a la tecla de globo terráqueo que se está punteando.
 
-Para obtener más información, consulte la [Introducción a las extensiones](~/ios/platform/extensions.md), la [integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md), [Introducción a las sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md), [Introducción a SiriKit](~/ios/platform/sirikit/index.md), [Introducción a las notificaciones de usuario](~/ios/platform/user-notifications/index.md) y Apple [ Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Para obtener más información, consulte la [Introducción a las extensiones](~/ios/platform/extensions.md), la [integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md), [Introducción a las sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md), [Introducción a SiriKit](~/ios/platform/sirikit/index.md), [Introducción a las notificaciones de usuario](~/ios/platform/user-notifications/index.md) y guía de programación de la extensión de [aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)de Apple.
 
 ## <a name="app-search-enhancements"></a>Mejoras en las búsquedas de aplicaciones
 
@@ -123,7 +123,7 @@ iOS 10 presenta nuevas formas de impulsar la interacción con una aplicación, y
 - El conmutador de aplicación
 - La pantalla de bloqueo
 - CarPlay
-- Asignaciones
+- Mapas
 - Interacciones de Siri
 - Sugerencias de QuickType
 
@@ -158,7 +158,7 @@ SiriKit admite los siguientes dominios de servicio:
 - Buscar fotografías.
 - Enviar o recibir pagos.
 
-Cuando el usuario realiza una solicitud de Siri que implica a uno de los servicios de la extensión de la aplicación, SiriKit envía a la extensión un objeto de **intención** que describe la solicitud del usuario junto con los datos auxiliares. a continuación, la extensión de la aplicación genera el objeto de **respuesta** adecuado para el **objetivo**dado, lo que detalla cómo la extensión puede controlar la solicitud.
+Cuando el usuario realiza una solicitud de Siri que implica a uno de los servicios de la extensión de la aplicación, SiriKit envía a la extensión un objeto de **intención** que describe la solicitud del usuario junto con los datos auxiliares. A continuación, la extensión de la aplicación genera el objeto de **respuesta** adecuado para el **objetivo**dado, lo que detalla cómo la extensión puede controlar la solicitud.
 
 Aunque Siri normalmente controla toda la interacción del usuario, la extensión de la aplicación puede usar el marco de trabajo de **interfaz** de usuario para presentar una interfaz de usuario enriquecida y personalizada que incluye la personalización de marca y la información adicional de la aplicación.
 
@@ -168,7 +168,7 @@ Para obtener más información, consulte la guía [de introducción a SiriKit](~
 
 iOS 10 incluye un nuevo Speech API que permite que la aplicación admita el reconocimiento de voz continuo y la conversión de voz (desde secuencias de audio en directo o grabadas) en texto.
 
-Dado que el reconocimiento de voz requiere la transmisión y el almacenamiento temporal de los datos en los servidores de Apple, la aplicación _debe_ solicitar el permiso del usuario para realizar el reconocimiento incluyendo la clave de `NSSpeechRecognitionUsageDescription` en su archivo `Info.plist` y llamando al `SFSpeechRecognizer.RequestAutorization` forma.
+Dado que el reconocimiento de voz requiere la transmisión y el almacenamiento temporal de los datos en los servidores de Apple, la aplicación _debe_ solicitar el permiso del usuario para realizar el reconocimiento incluyendo la clave de `NSSpeechRecognitionUsageDescription` en su archivo `Info.plist` y llamando al método `SFSpeechRecognizer.RequestAutorization`.
 
 Para obtener más información, consulte la guía [de introducción a reconocimiento de voz](~/ios/platform/speech.md) .
 

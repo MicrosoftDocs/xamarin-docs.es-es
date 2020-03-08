@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
 ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022311"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911549"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin. iOS
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>No hay generación de código dinámico
 
-Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Se incluyen los siguientes:
+Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Entre ellas se incluyen las siguientes:
 
 - System. Reflection. Emit no está disponible.
 - No se admite System. Runtime. Remoting.
@@ -60,7 +60,7 @@ Dado que el kernel de iOS impide que una aplicación genere código de forma din
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
-Falta de System. Reflection. **Emit** significa que no funcionará ningún código que dependa de la generación de código en tiempo de ejecución. Esto incluye cosas como las siguientes:
+Falta de System. Reflection. **Emit** significa que no funcionará ningún código que dependa de la generación de código en tiempo de ejecución. Esto incluye elementos como:
 
 - Dynamic Language Runtime.
 - Cualquier lenguaje basado en Dynamic Language Runtime.
@@ -107,7 +107,7 @@ La pila de comunicación remota no está disponible en Xamarin. iOS.
 
 Se han deshabilitado las siguientes características en el tiempo de ejecución de iOS de mono:
 
-- generador de perfiles
+- Generador de perfiles
 - Reflection. Emit
 - Funcionalidad de Reflection. Emit. Save
 - Enlaces COM
