@@ -9,11 +9,11 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68757266"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918051"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Vista previa de XAML para Xamarin. Forms
 
@@ -52,7 +52,7 @@ Puede cambiar si la pantalla está dividida vertical u horizontalmente o contrae
 
 El botón **vista previa** se muestra en el editor cuando se abre una página XAML. Para mostrar u ocultar el previsor, presione los botones **vista previa** o **dividir** en la parte inferior izquierda de cualquier ventana de documento XAML:
 
-[vista previa de ![Xamarin. Forms habilitada con el botón vista previa o dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![el previsor de Xamarin. Forms habilitado con el botón vista previa o dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > En versiones anteriores de Visual Studio para Mac, el botón **vista previa** se encontraba en la parte superior derecha de la ventana.
