@@ -8,26 +8,26 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 290e533e54b2ee150b94d9fb6b0f5119324f9cf0
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197989"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916380"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Degradado lineal de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-El [ `SKPaint` ](xref:SkiaSharp.SKPaint) clase define un [ `Color` ](xref:SkiaSharp.SKPaint.Color) propiedad que se usa para trazar líneas o áreas de relleno con un color sólido. También puede trazar líneas o rellenar las áreas con _degradados_, que son graduales mezclas de colores:
+La clase [`SKPaint`](xref:SkiaSharp.SKPaint) define una propiedad [`Color`](xref:SkiaSharp.SKPaint.Color) que se usa para trazar líneas o rellenar áreas con un color sólido. También puede trazar líneas o rellenar áreas con _degradados_, que son mezclas graduales de colores:
 
-![Ejemplo de degradado lineal](linear-gradient-images/LinearGradientSample.png "ejemplo degradado lineal")
+![Ejemplo de degradado lineal](linear-gradient-images/LinearGradientSample.png "Ejemplo de degradado lineal")
 
-El tipo más básico de degradado es un _lineal_ degradado. La combinación de colores que se produce en una línea (denominado el _línea degradado_) desde un punto a otro. Las líneas que son perpendiculares a la línea de degradado tienen el mismo color. Crear un degradado lineal con uno de los dos métodos estático [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) métodos. La diferencia entre las dos sobrecargas es que uno incluye una transformación de matriz y el otro no. 
+El tipo más básico de degradado es un degradado _lineal_ . La combinación de colores se produce en una línea (denominada _línea de degradado_) de un punto a otro. Las líneas que son perpendiculares a la línea de degradado tienen el mismo color. Puede crear un degradado lineal mediante uno de los dos métodos de [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) estáticos. La diferencia entre las dos sobrecargas es que uno incluye una transformación de matriz y el otro no. 
 
-Estos métodos devuelven un objeto de tipo [ `SKShader` ](xref:SkiaSharp.SKShader) que establecer para el [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint`. Si el `Shader` propiedad es no nulo, invalida el `Color` propiedad. Cualquier línea que se traza o cualquier área que se rellena mediante este `SKPaint` objeto se basa en el degradado en lugar de con el color sólido.
+Estos métodos devuelven un objeto de tipo [`SKShader`](xref:SkiaSharp.SKShader) que se establece en la propiedad [`Shader`](xref:SkiaSharp.SKPaint.Shader) de `SKPaint`. Si la propiedad `Shader` no es null, invalida la propiedad `Color`. Cualquier línea que esté contorneada o cualquier área que se rellene con este `SKPaint` objeto se basa en el degradado, en lugar del color sólido.
 
 > [!NOTE]
-> El `Shader` propiedad se omite cuando se incluye un `SKPaint` objeto en un `DrawBitmap` llamar. Puede usar el `Color` propiedad de `SKPaint` para establecer un nivel de transparencia para mostrar un mapa de bits (como se describe en el artículo [SkiaSharp mostrar mapas de bits](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), pero no se puede usar el `Shader` propiedad para mostrar un mapa de bits con una transparencia degradada. Existen otras técnicas para mostrar mapas de bits con transparencias de degradado: Se describen en los artículos [SkiaSharp degradados circulares](circular-gradients.md#radial-gradients-for-masking) y los [modos de composición y mezcla SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> La propiedad `Shader` se omite cuando se incluye un objeto `SKPaint` en una llamada a `DrawBitmap`. Puede usar la propiedad `Color` de `SKPaint` para establecer un nivel de transparencia para mostrar un mapa de bits (como se describe en el artículo [Mostrar mapas de bits de SkiaSharp](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), pero no puede usar la propiedad `Shader` para mostrar un mapa de bits con una transparencia de degradado. Existen otras técnicas para mostrar mapas de bits con transparencias de degradado: estas se describen en los artículos [SkiaSharp gradientes circulares](circular-gradients.md#radial-gradients-for-masking) y [SkiaSharp composiciones and Blend modes](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Esquina a esquina degradados
 
@@ -37,7 +37,7 @@ A menudo un degradado lineal se extiende desde una de las esquinas de un rectán
 - horizontalmente a la esquina superior derecha
 - diagonalmente en la esquina inferior derecha
 
-Degradado lineal diagonal se muestra en la primera página en el **SkiaSharp sombreadores y otros efectos a** sección de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo. El **esquina a esquina degradado** página crea un `SKCanvasView` en su constructor. El `PaintSurface` controlador crea una `SKPaint` objeto en un `using` instrucción y, a continuación, define un rectángulo de 300 píxeles cuadrado centrado en el lienzo:
+El degradado lineal diagonal se muestra en la primera página de la sección **sombreadores SkiaSharp y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . La página de **degradado de esquina a esquina** crea un `SKCanvasView` en su constructor. El controlador de `PaintSurface` crea un objeto `SKPaint` en una instrucción `using` y, a continuación, define un rectángulo cuadrado de 300 píxeles centrado en el lienzo:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -84,21 +84,21 @@ public class CornerToCornerGradientPage : ContentPage
 }
 ```
 
-El `Shader` propiedad de `SKPaint` se asigna el `SKShader` devolver valor de estático `SKShader.CreateLinearGradient` método. Los cinco argumentos son los siguientes:
+A la propiedad `Shader` de `SKPaint` se le asigna el valor devuelto `SKShader` del método `SKShader.CreateLinearGradient` estático. Los cinco argumentos son los siguientes:
 
 - El punto inicial del degradado, se establece aquí en la esquina superior izquierda del rectángulo
 - El punto final del degradado, se establece aquí en la esquina inferior derecha del rectángulo
 - Una matriz de dos o más colores que contribuyen al degradado
-- Una matriz de `float` valores que indican la posición relativa de los colores de la línea de degradado
-- Un miembro de la [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode) enumeración que indica cómo se comporta el degradado más allá de los extremos de la línea de degradado
+- Matriz de valores de `float` que indican la posición relativa de los colores dentro de la línea de degradado.
+- Miembro de la enumeración [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) que indica cómo se comporta el degradado más allá de los extremos de la línea de degradado
 
-Una vez creado el objeto de gradiente, la `DrawRect` método dibuja el rectángulo de 300 píxeles cuadrado utilizando el `SKPaint` objeto que incluye el sombreador. Aquí se ejecuta en iOS, Android y la plataforma Universal de Windows (UWP):
+Una vez creado el objeto de degradado, el método `DrawRect` dibuja el rectángulo cuadrado de 300 píxeles usando el objeto `SKPaint` que incluye el sombreador. Aquí se ejecuta en iOS, Android y la plataforma Universal de Windows (UWP):
 
-[![Degradado de esquina a esquina](linear-gradient-images/CornerToCornerGradient.png "esquina a esquina degradado")](linear-gradient-images/CornerToCornerGradient-Large.png#lightbox)
+[![Degradado de esquina a esquina](linear-gradient-images/CornerToCornerGradient.png "Degradado de esquina a esquina")](linear-gradient-images/CornerToCornerGradient-Large.png#lightbox)
 
-La línea de degradado se define mediante los dos puntos especificados como los dos primeros argumentos. Tenga en cuenta que estos puntos son relativas a la _lienzo_ y _no_ para el objeto gráfico que se muestran con el degradado. A lo largo de la línea de degradado, el color gradualmente, pasa de color rojo en la esquina superior izquierda en azul en la esquina inferior derecha. Cualquier línea perpendicular a la línea de degradado tiene un color constante.
+La línea de degradado se define mediante los dos puntos especificados como los dos primeros argumentos. Tenga en cuenta que estos puntos son relativos al _lienzo_ y _no_ al objeto gráfico que se muestra con el degradado. A lo largo de la línea de degradado, el color gradualmente, pasa de color rojo en la esquina superior izquierda en azul en la esquina inferior derecha. Cualquier línea perpendicular a la línea de degradado tiene un color constante.
 
-La matriz de `float` valores especificados como el cuarto argumento tienen una correspondencia uno a uno con la matriz de colores. Los valores indican la posición relativa de la línea de degradado que se producen esos colores. En este caso, el 0 significa que `Red` se produce al principio de la línea de degradado y 1 significa que `Blue` se produce al final de la línea. Los números deben ser ascendente y deben estar en el intervalo de 0 a 1. Si no están en ese intervalo, se ajustará para que esté en ese intervalo.
+La matriz de `float` valores especificados como cuarto argumento tiene una correspondencia uno a uno con la matriz de colores. Los valores indican la posición relativa de la línea de degradado que se producen esos colores. En este caso, el valor de 0 significa que `Red` se produce al principio de la línea de degradado y 1 significa que `Blue` se produce al final de la línea. Los números deben ser ascendente y deben estar en el intervalo de 0 a 1. Si no están en ese intervalo, se ajustará para que esté en ese intervalo.
 
 Los dos valores de la matriz se pueden establecer en algo distinto de 0 y 1. Pruebe esto:
 
@@ -108,9 +108,9 @@ new float[] { 0.25f, 0.75f }
 
 Ahora el completamente primer trimestre de la línea de degradado es rojo puro, y el último trimestre es azul puro. La combinación de rojo y azul está restringida a la mitad de la línea de degradado central.
 
-Por lo general, deseará espacio estos valores de posición igualmente de 0 a 1. Si es así, puede proporcionar simplemente `null` como el cuarto argumento `CreateLinearGradient`.
+Por lo general, deseará espacio estos valores de posición igualmente de 0 a 1. En ese caso, puede simplemente proporcionar `null` como el cuarto argumento a `CreateLinearGradient`.
 
-Aunque este degradado se define entre dos vértices del rectángulo de 300 píxeles cuadrado, no se restringen a rellenar el rectángulo. El **esquina a esquina degradado** página incluye algún código adicional que responde a las pulsaciones o los clics del mouse en la página. El `drawBackground` campo se alterna entre `true` y `false` con cada vez que toque. Si el valor es `true`, el `PaintSurface` controlador usa el mismo `SKPaint` objeto para llenar todo el lienzo y, a continuación, se dibuja un rectángulo negro que indica el rectángulo más pequeño: 
+Aunque este degradado se define entre dos vértices del rectángulo de 300 píxeles cuadrado, no se restringen a rellenar el rectángulo. La página de **degradado de esquina a esquina** incluye algún código adicional que responda a los grifos o a los clics del mouse en la página. El campo `drawBackground` se alterna entre `true` y `false` cada vez que se pulsa. Si el valor es `true`, el controlador de `PaintSurface` utiliza el mismo objeto `SKPaint` para rellenar todo el lienzo y, a continuación, dibuja un rectángulo negro que indica el rectángulo más pequeño: 
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -153,17 +153,17 @@ public class CornerToCornerGradientPage : ContentPage
 
 Aquí es lo que verá después de puntear en la pantalla:
 
-[![Esquina a esquina degradado completo](linear-gradient-images/CornerToCornerGradientFull.png "esquina a esquina degradado completo")](linear-gradient-images/CornerToCornerGradientFull-Large.png#lightbox)
+[![Degradado de esquina a esquina lleno](linear-gradient-images/CornerToCornerGradientFull.png "Degradado de esquina a esquina lleno")](linear-gradient-images/CornerToCornerGradientFull-Large.png#lightbox)
 
-Tenga en cuenta que el degradado se repite en el mismo patrón más allá de los puntos que definen la línea de degradado. Esta repetición se produce porque el último argumento `CreateLinearGradient` es `SKShaderTileMode.Repeat`. (Verá las demás opciones en breve.)
+Tenga en cuenta que el degradado se repite en el mismo patrón más allá de los puntos que definen la línea de degradado. Esta repetición se produce porque el último argumento que se va a `CreateLinearGradient` es `SKShaderTileMode.Repeat`. (Verá las demás opciones en breve.)
 
 Tenga en cuenta que los puntos que se usa para especificar la línea de degradado no son únicos. Las líneas que son perpendiculares a la línea de degradado tienen el mismo color, por lo que hay un número infinito de líneas de degradado que se pueden especificar para el mismo efecto. Por ejemplo, al rellenar un rectángulo con un degradado horizontal, puede especificar las esquinas superior izquierda y derecha, o las esquinas inferior izquierda e inferior derecha o son paralelas a esas líneas e incluso con dos puntos.
 
 ## <a name="interactively-experiment"></a>Experimente de forma interactiva
 
-Puede experimentar con degradados lineales con interactivamente el **interactivo de degradado lineal** página. Esta página usa el `InteractivePage` clase introducida en el artículo [ **tres maneras de dibujar un arco**](../../curves/arcs.md). `InteractivePage` identificadores [ `TouchEffect` ](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md) eventos para mantener una colección de `TouchPoint` objetos que se pueden mover con el mouse o con los dedos.
+Puede experimentar de forma interactiva con degradados lineales con la página de **degradado lineal interactiva** . En esta página se usa la clase `InteractivePage` presentada en el artículo [**tres maneras de dibujar un arco**](../../curves/arcs.md). `InteractivePage` controla los eventos de [`TouchEffect`](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md) para mantener una colección de objetos `TouchPoint` que se pueden desplace con los dedos o con el mouse.
 
-Adjunta el archivo XAML el `TouchEffect` con un elemento primario de la `SKCanvasView` e incluye también un `Picker` que le permite seleccionar uno de los tres miembros de la [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode) enumeración:
+El archivo XAML asocia el `TouchEffect` a un elemento primario del `SKCanvasView` y también incluye un `Picker` que le permite seleccionar uno de los tres miembros de la enumeración [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) :
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -211,7 +211,7 @@ Adjunta el archivo XAML el `TouchEffect` con un elemento primario de la `SKCanva
 </local:InteractivePage>
 ```
 
-El constructor en el archivo de código subyacente, crea dos `TouchPoint` objetos para los puntos inicial y final del degradado lineal. El `PaintSurface` controlador define una matriz de tres colores (para un degradado de color rojo a verde a azul) y obtiene la actual `SKShaderTileMode` desde el `Picker`:
+El constructor del archivo de código subyacente crea dos objetos `TouchPoint` para los puntos inicial y final del degradado lineal. El controlador de `PaintSurface` define una matriz de tres colores (para un degradado de rojo a verde y azul) y obtiene el `SKShaderTileMode` actual de la `Picker`:
 
 ```csharp
 public partial class InteractiveLinearGradientPage : InteractivePage
@@ -266,9 +266,9 @@ public partial class InteractiveLinearGradientPage : InteractivePage
 }
 ```
 
-El `PaintSurface` controlador crea el `SKShader` objeto a partir de toda esa información y lo usa para todo el lienzo de color. La matriz de `float` valores se establecen en `null`. En caso contrario, para igualmente el espacio de tres colores, establecería ese parámetro en una matriz con los valores 0, 0,5 y 1.
+El controlador de `PaintSurface` crea el objeto de `SKShader` a partir de toda la información y lo utiliza para colorear todo el lienzo. La matriz de valores de `float` se establece en `null`. En caso contrario, para igualmente el espacio de tres colores, establecería ese parámetro en una matriz con los valores 0, 0,5 y 1.
 
-La mayor parte de la `PaintSurface` controlador está dedicado a la visualización de varios objetos: los puntos táctiles como círculos de esquema, la línea de degradado y las líneas perpendiculares a las líneas de degradado en los puntos de toque:
+La mayor parte del controlador de `PaintSurface` está dedicada a mostrar varios objetos: los puntos táctiles como círculos de contorno, la línea de degradado y las líneas perpendiculares a las líneas de degradado en los puntos táctiles:
 
 ```csharp
 public partial class InteractiveLinearGradientPage : InteractivePage
@@ -324,19 +324,19 @@ public partial class InteractiveLinearGradientPage : InteractivePage
 
 Es fácil dibujar la línea de degradado que se conecta la época de dos, pero las líneas perpendiculares requieren algo más de trabajo. La línea de degradado es puede convertir en un vector, normalizan para tener una longitud de una unidad y, a continuación, girar 90 grados. A continuación, ese vector tiene una longitud de 200 píxeles. Sirve para dibujar las cuatro líneas que se extienden desde los puntos de toque a ser perpendicular a la línea de degradado.
 
-Las líneas perpendiculares coinciden con el principio y al final del degradado. ¿Qué ocurre más allá de esas líneas depende del valor de la `SKShaderTileMode` enumeración:
+Las líneas perpendiculares coinciden con el principio y al final del degradado. Lo que sucede más allá de esas líneas depende de la configuración de la enumeración `SKShaderTileMode`:
 
-[![Degradado lineal interactivo](linear-gradient-images/InteractiveLinearGradient.png "interactivo degradado lineal")](linear-gradient-images/InteractiveLinearGradient-Large.png#lightbox)
+[![Degradado lineal interactivo](linear-gradient-images/InteractiveLinearGradient.png "Degradado lineal interactivo")](linear-gradient-images/InteractiveLinearGradient-Large.png#lightbox)
 
-Las tres capturas de pantalla muestran los resultados de los tres valores distintos de [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode). La captura de pantalla de iOS muestra `SKShaderTileMode.Clamp`, que simplemente extiende los colores en el borde del degradado. El `SKShaderTileMode.Repeat` opción en la captura de pantalla de Android muestra cómo se repite el patrón de degradado. El `SKShaderTileMode.Mirror` opción en la captura de pantalla UWP también repite el patrón, pero el patrón se invierte cada vez, lo que no hay interrupciones de color.
+Las tres capturas de pantallas muestran los resultados de los tres valores diferentes de [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode). La captura de pantalla de iOS muestra `SKShaderTileMode.Clamp`, que solo extiende los colores del borde del degradado. La opción `SKShaderTileMode.Repeat` de la captura de pantalla de Android muestra cómo se repite el patrón de degradado. La opción `SKShaderTileMode.Mirror` de la captura de pantalla de UWP también repite el patrón, pero el patrón se invierte cada vez, lo que da lugar a que no haya continuidad de color.
 
 ## <a name="gradients-on-gradients"></a>Degradados en degradados
 
-El `SKShader` clase no define ningún propiedades o métodos públicos, excepto para `Dispose`. El `SKShader` objetos creados por sus métodos estáticos, por tanto, son inmutables. Incluso si usa el mismo degradado para dos objetos diferentes, es probable que desee variar ligeramente el degradado. Para ello, deberá crear un nuevo `SKShader` objeto.
+La clase `SKShader` no define propiedades ni métodos públicos, salvo `Dispose`. Por lo tanto, los objetos `SKShader` creados por sus métodos estáticos son inmutables. Incluso si usa el mismo degradado para dos objetos diferentes, es probable que desee variar ligeramente el degradado. Para ello, deberá crear un nuevo objeto de `SKShader`.
 
-El **texto de degradado** página muestra el texto y un segundo plano que están coloreados con degradados similar:
+La página de **texto de degradado** muestra texto y un segundo plano de colores con degradados similares:
 
-[![Texto de degradado](linear-gradient-images/GradientText.png "texto de degradado")](linear-gradient-images/GradientText-Large.png#lightbox)
+[![Texto degradado](linear-gradient-images/GradientText.png "Texto degradado")](linear-gradient-images/GradientText-Large.png#lightbox)
 
 Las únicas diferencias en los degradados son los puntos inicial y final. Degradado que se utiliza para mostrar el texto se basa en dos puntos en las esquinas del rectángulo delimitador para el texto. Para el fondo, los dos puntos se basan en todo el lienzo. Este es el código:
 
@@ -409,11 +409,11 @@ public class GradientTextPage : ContentPage
 }
 ```
 
-El `Shader` propiedad de la `SKPaint` objeto se establece en primer lugar para mostrar un degradado para cubrir el fondo. Los puntos de degradado se establecen en las esquinas superior izquierda e inferior derecha del lienzo.
+La propiedad `Shader` del objeto `SKPaint` se establece primero para mostrar un degradado para cubrir el fondo. Los puntos de degradado se establecen en las esquinas superior izquierda e inferior derecha del lienzo.
 
-El código establece la `TextSize` propiedad de la `SKPaint` objeto para que el texto se muestra en el 90% del ancho del lienzo. Los límites del texto se utilizan para calcular `xText` y `yText` valores para pasar a la `DrawText` método para centrar el texto.
+El código establece la propiedad `TextSize` del objeto `SKPaint` de modo que el texto se muestre en el 90% del ancho del lienzo. Los límites de texto se utilizan para calcular `xText` y `yText` valores que se van a pasar al método `DrawText` para centrar el texto.
 
-Sin embargo, puntos de degradado para el segundo `CreateLinearGradient` llamada debe hacer referencia a la esquina superior izquierda e inferior derecha del texto en relación con el lienzo cuando se muestre. Esto se consigue cambiando el `textBounds` rectángulo por el mismo `xText` y `yText` valores:
+Sin embargo, los puntos de degradado para la segunda llamada `CreateLinearGradient` deben hacer referencia a la esquina superior izquierda e inferior derecha del texto en relación con el lienzo cuando se muestra. Esto se consigue desplazando el rectángulo `textBounds` por los mismos valores de `xText` y `yText`:
 
 ```csharp
 textBounds.Offset(xText, yText);
@@ -423,11 +423,11 @@ Ahora las esquinas superior izquierda e inferior derecha del rectángulo se pued
 
 ## <a name="animating-a-gradient"></a>Animar un degradado
 
-Hay varias maneras de animar un degradado. Un enfoque consiste en animar los puntos inicial y final. El **animación degradado** página mueve los dos puntos alrededor de un círculo que se centra en el lienzo. El radio de este círculo es la mitad del ancho o alto del lienzo, lo que sea menor. Los puntos inicial y final son opuesta entre sí en este círculo, y va de degradado en blanco a negro con un `Mirror` icono modo:
+Hay varias maneras de animar un degradado. Un enfoque consiste en animar los puntos inicial y final. La página de **animación de degradado** mueve los dos puntos en un círculo que está centrado en el lienzo. El radio de este círculo es la mitad del ancho o alto del lienzo, lo que sea menor. Los puntos inicial y final son opuestos entre sí en este círculo y el degradado va de blanco a negro con un modo de mosaico `Mirror`:
 
-[![Animación degradado](linear-gradient-images/GradientAnimation.png "animación degradado")](linear-gradient-images/GradientAnimation-Large.png#lightbox)
+[![Animación de degradado](linear-gradient-images/GradientAnimation.png "Animación de degradado")](linear-gradient-images/GradientAnimation-Large.png#lightbox)
 
-El constructor crea la `SKCanvasView`. El `OnAppearing` y `OnDisappearing` métodos controlan la lógica de animación:
+El constructor crea el `SKCanvasView`. Los métodos `OnAppearing` y `OnDisappearing` controlan la lógica de animación:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -475,9 +475,9 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-El `OnTimerTick` método calcula un `angle` valor que se anima desde 0 hasta 2π cada 3 segundos. 
+El método `OnTimerTick` calcula un valor `angle` que se anima desde 0 a 2π cada 3 segundos. 
 
-Aquí es una manera de calcular los dos puntos de degradado. Un `SKPoint` valor denominado `vector` se calcula para ampliar desde el centro del lienzo a un punto en el radio del círculo. La dirección de este vector se basa en los valores de seno y coseno del ángulo. A continuación, se calculan los dos puntos de degradado opuestos: Un punto se calcula restando ese Vector desde el punto central y otro punto se calcula agregando el vector al punto central:
+Aquí es una manera de calcular los dos puntos de degradado. Un valor `SKPoint` denominado `vector` se calcula para extender desde el centro del lienzo hasta un punto en el radio del círculo. La dirección de este vector se basa en los valores de seno y coseno del ángulo. A continuación, se calculan los dos puntos de degradado opuestos: un punto se calcula restando dicho vector desde el punto central, y otro punto se calcula sumando el vector en el punto central:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -511,7 +511,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Un enfoque un poco diferente requiere menos código. Este enfoque hace uso de la [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecargar el método con una transformación de matriz como el último argumento. Este enfoque es la versión en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo:
+Un enfoque un poco diferente requiere menos código. Este enfoque usa el método de sobrecarga [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) con una transformación de matriz como último argumento. Este enfoque es la versión en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -542,13 +542,13 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Si el ancho del lienzo es menor que el alto, los dos puntos de degradado se establecen en (0, 0) y (`info.Width`, 0). La transformación de rotación que se pasa como el último argumento `CreateLinearGradient` eficazmente gira esos dos puntos en torno al centro de la pantalla.
+Si el ancho del lienzo es menor que el alto, los dos puntos de degradado se establecen en (0,0) y (`info.Width`, 0). La transformación de giro pasada como el último argumento de `CreateLinearGradient` gira realmente los dos puntos alrededor del centro de la pantalla.
 
-Tenga en cuenta que si el ángulo es 0, no hay ningún giro y los dos puntos de degradado son las esquinas superior izquierda y derecha del lienzo. Los puntos no son los mismos puntos de degradado calculados como se muestra en la anterior `CreateLinearGradient` llamar. Pero estos puntos son _paralelo_ a la línea de degradado horizontal que corte el centro del lienzo y dan lugar a un degradado idénticos.
+Tenga en cuenta que si el ángulo es 0, no hay ningún giro y los dos puntos de degradado son las esquinas superior izquierda y derecha del lienzo. Esos puntos no son los mismos puntos de degradado calculados como se muestra en la llamada a `CreateLinearGradient` anterior. Pero estos puntos son _paralelos_ a la línea de degradado horizontal que disecciona el centro del lienzo y dan como resultado un degradado idéntico.
 
-**Degradado arco iris**
+**Degradado de arco iris**
 
-El **arco iris degradado** página dibuja un arco iris desde la esquina superior izquierda del lienzo en la esquina inferior derecha. Pero este degradado arco iris no es como un arco iris real. Es directamente en lugar de curvados, pero se basa en ocho colores HSL (matiz-saturación-luminosidad) que vienen determinados por recorrer los valores de matiz de 0 a 360:
+La página **degradado de arco iris** dibuja un arco iris desde la esquina superior izquierda del lienzo hasta la esquina inferior derecha. Pero este degradado arco iris no es como un arco iris real. Es directamente en lugar de curvados, pero se basa en ocho colores HSL (matiz-saturación-luminosidad) que vienen determinados por recorrer los valores de matiz de 0 a 360:
 
 ```csharp
 SKColor[] colors = new SKColor[8];
@@ -559,7 +559,7 @@ for (int i = 0; i < colors.Length; i++)
 }
 ```
 
-Que el código es parte de la `PaintSurface` controlador se muestra a continuación. El controlador comienza creando una ruta de acceso que define un polígono de seis lados que se extiende desde la esquina superior izquierda del lienzo a la esquina inferior derecha:
+Ese código forma parte del controlador de `PaintSurface` que se muestra a continuación. El controlador comienza creando una ruta de acceso que define un polígono de seis lados que se extiende desde la esquina superior izquierda del lienzo a la esquina inferior derecha:
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -617,13 +617,13 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-Los dos puntos de degradado `CreateLinearGradient` del método se basan en dos de los puntos que definen esta ruta de acceso: Ambos puntos están cerca de la esquina superior izquierda. La primera consiste en el borde superior del lienzo y el segundo es en el borde izquierdo del lienzo. Este es el resultado:
+Los dos puntos de degradado del método `CreateLinearGradient` se basan en dos de los puntos que definen esta ruta de acceso: ambos puntos están cerca de la esquina superior izquierda. La primera consiste en el borde superior del lienzo y el segundo es en el borde izquierdo del lienzo. Este es el resultado:
 
-[![Degradado arco iris defectuoso](linear-gradient-images/RainbowGradientFaulty.png "degradado arco iris defectuoso")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
+[![Error de degradado de arco iris](linear-gradient-images/RainbowGradientFaulty.png "Error de degradado de arco iris")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 
 Se trata de una imagen interesante, pero no resulta bastante la intención. El problema es que, cuando se crea un degradado lineal, las líneas de color constante son perpendiculares a la línea de degradado. La línea de degradado se basa en los puntos donde la figura toca los lados superiores e izquierdos, y esa línea generalmente no es perpendicular a los bordes de la ilustración que se extienden a la esquina inferior derecha. Este enfoque podría funcionar sólo si el lienzo fuera cuadrado.
 
-Para crear un degradado arco iris adecuado, la línea de degradado debe ser perpendicular al borde del arco iris. Es un cálculo más complejo. Debe definirse un vector que sea paralelo en el lado largo de la figura. El vector es gira 90 grados por lo que es perpendicular a ese lado. A continuación, que se alargue para que sea el ancho de la figura al multiplicar por `rainbowWidth`. Se calculan según los dos puntos de degradado en un punto en el lateral de la ilustración, y que además del vector de punto. Este es el código que aparece en el **arco iris degradado** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo:
+Para crear un degradado arco iris adecuado, la línea de degradado debe ser perpendicular al borde del arco iris. Es un cálculo más complejo. Debe definirse un vector que sea paralelo en el lado largo de la figura. El vector es gira 90 grados por lo que es perpendicular a ese lado. A continuación, se alarga para que sea el ancho de la figura multiplicando por `rainbowWidth`. Se calculan según los dos puntos de degradado en un punto en el lateral de la ilustración, y que además del vector de punto. Este es el código que aparece en la página de **degradado de arco iris** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -674,13 +674,13 @@ public class RainbowGradientPage : ContentPage
 
 Ahora los colores del arco iris están alineados con la cifra:
 
-[![Degradado arco iris](linear-gradient-images/RainbowGradient.png "degradado arco iris")](linear-gradient-images/RainbowGradient-Large.png#lightbox)
+[![Degradado de arco iris](linear-gradient-images/RainbowGradient.png "Degradado de arco iris")](linear-gradient-images/RainbowGradient-Large.png#lightbox)
 
 **Colores de infinito**
 
-También se usa un degradado arco iris en el **infinito colores** página. Esta página dibuja un signo de infinito utilizando un objeto de ruta de acceso que se describe en el artículo [ **tipos tres de curvas de Bézier**](../../curves/beziers.md#bezier-curve-approximation-to-circular-arcs). A continuación, se colorea la imagen con un degradado de arco iris animado barre continuamente a través de la imagen.
+También se usa un degradado de arco iris en la página de **colores de infinito** . En esta página se dibuja un signo de infinito mediante un objeto de trazado descrito en el artículo [**tres tipos de curvas de Bézier**](../../curves/beziers.md#bezier-curve-approximation-to-circular-arcs). A continuación, se colorea la imagen con un degradado de arco iris animado barre continuamente a través de la imagen.
 
-El constructor crea la `SKPath` objeto que describe el inicio de sesión de infinito. Después de crea la ruta de acceso, el constructor también puede obtener los límites rectangulares de la ruta de acceso. A continuación, calcula un valor denominado `gradientCycleLength`. Si un degradado se basa en las esquinas superior izquierda e inferior derecha de la `pathBounds` rectángulo, esto `gradientCycleLength` valor es el ancho horizontal total del patrón de degradado:
+El constructor crea el objeto `SKPath` que describe el signo de infinito. Después de crea la ruta de acceso, el constructor también puede obtener los límites rectangulares de la ruta de acceso. A continuación, calcula un valor denominado `gradientCycleLength`. Si un degradado se basa en las esquinas superior izquierda e inferior derecha del rectángulo `pathBounds`, este valor `gradientCycleLength` es el ancho horizontal total del patrón de degradado:
 
 ```csharp
 public class InfinityColorsPage : ContentPage
@@ -733,9 +733,9 @@ public class InfinityColorsPage : ContentPage
 }
 ```
 
-El constructor también crea el `colors` matriz para el arco iris y el `SKCanvasView` objeto.
+El constructor también crea la matriz `colors` para el arco iris y el objeto `SKCanvasView`.
 
-Invalidaciones de la `OnAppearing` y `OnDisappearing` métodos realizan la sobrecarga de la animación. El `OnTimerTick` método anima la `offset` campo de 0 a `gradientCycleLength` cada dos segundos:
+Las invalidaciones de los métodos `OnAppearing` y `OnDisappearing` realizan la sobrecarga de la animación. El método `OnTimerTick` anima el campo `offset` de 0 a `gradientCycleLength` cada dos segundos:
 
 ```csharp
 public class InfinityColorsPage : ContentPage
@@ -777,9 +777,9 @@ public class InfinityColorsPage : ContentPage
 }
 ```
 
-Por último, el `PaintSurface` controlador representa el inicio de sesión de infinito. Dado que la ruta de acceso contiene coordenadas positivas y negativas que rodea un punto central de (0, 0), un `Translate` transformación en el lienzo se usa para desplazar al centro. La transformación de traslación es seguida por un `Scale` transformación que se aplica el factor de escala que hace que el inicio de sesión infinito tan grande como sea posible mientras se desvía el 95% del ancho y altura del lienzo. 
+Por último, el controlador de `PaintSurface` representa el signo de infinito. Dado que la ruta de acceso contiene coordenadas negativas y positivas que rodean un punto central de (0,0), se usa una transformación de `Translate` en el lienzo para desplazarla al centro. La transformación traducir va seguida de una transformación `Scale` que aplica un factor de escala que hace que el signo de infinito sea lo más grande posible mientras se mantiene dentro del 95% del ancho y el alto del lienzo. 
 
-Tenga en cuenta que el `STROKE_WIDTH` constante se agrega al ancho y alto de la ruta de acceso del rectángulo delimitador. La ruta de acceso se va a trazar una línea de este ancho, por lo que aumenta el tamaño del tamaño infinito representado por ese formato medio en los cuatro lados:
+Observe que la constante `STROKE_WIDTH` se agrega al ancho y al alto del rectángulo delimitador de la ruta de acceso. La ruta de acceso se va a trazar una línea de este ancho, por lo que aumenta el tamaño del tamaño infinito representado por ese formato medio en los cuatro lados:
 
 ```csharp
 public class InfinityColorsPage : ContentPage
@@ -818,13 +818,13 @@ public class InfinityColorsPage : ContentPage
 }
 ```
 
-Examine los puntos que se pasan como los dos primeros argumentos de `SKShader.CreateLinearGradient`. Estos puntos se basan en la ruta de acceso original del rectángulo delimitador. El primer punto es (&ndash;250, &ndash;100) y el segundo es (250, 100). Interno SkiaSharp, esos puntos se someten a la transformación de lienzo actual para que se alineen correctamente con el inicio de sesión muestra infinito.
+Fíjese en los puntos pasados como los dos primeros argumentos de `SKShader.CreateLinearGradient`. Estos puntos se basan en la ruta de acceso original del rectángulo delimitador. El primer punto es (&ndash;250, &ndash;100) y el segundo es (250, 100). Interno SkiaSharp, esos puntos se someten a la transformación de lienzo actual para que se alineen correctamente con el inicio de sesión muestra infinito.
 
-Sin el último argumento `CreateLinearGradient`, verá un degradado arco iris que se extiende desde la esquina superior izquierda del signo infinito hasta la esquina inferior derecha. (En realidad, el degradado se extiende desde la esquina superior izquierda a la esquina inferior derecha del rectángulo delimitador. El signo representado infinito es mayor que el rectángulo delimitador en la mitad el `STROKE_WIDTH` valor en todos los lados. Dado que el gradiente es rojo al principio y al final, y el degradado se crea con `SKShaderTileMode.Repeat`, la diferencia no es apreciable.)
+Sin el último argumento para `CreateLinearGradient`, vería un degradado de arco iris que se extiende desde la parte superior izquierda del signo de infinito hasta la parte inferior derecha. (En realidad, el degradado se extiende desde la esquina superior izquierda a la esquina inferior derecha del rectángulo delimitador. El signo de infinito representado es mayor que el rectángulo delimitador a la mitad del valor de `STROKE_WIDTH` en todos los lados. Dado que el degradado es rojo al principio y al final, y el degradado se crea con `SKShaderTileMode.Repeat`, no se percibe la diferencia).
 
-Con ese último argumento `CreateLinearGradient`, el patrón de degradado barre continuamente a través de la imagen:
+Con ese último argumento para `CreateLinearGradient`, el patrón de degradado se barrido continuamente por la imagen:
 
-[![Colores de infinito](linear-gradient-images/InfinityColors.png "colores infinito")](linear-gradient-images/InfinityColors-Large.png#lightbox)
+[![Colores de infinito](linear-gradient-images/InfinityColors.png "Colores de infinito")](linear-gradient-images/InfinityColors-Large.png#lightbox)
 
 ## <a name="transparency-and-gradients"></a>Transparencia y degradados
 
@@ -832,11 +832,11 @@ Los colores que contribuyen a un degradado pueden incorporar la transparencia. E
 
 Puede usar esta técnica para algunos efectos interesantes. Uno de los ejemplos clásicos muestra un objeto gráfico con su reflexión:
 
-[![Degradado de reflexión](linear-gradient-images/ReflectionGradient.png "degradado de la reflexión")](linear-gradient-images/ReflectionGradient-Large.png#lightbox)
+[![Degradado de reflexión](linear-gradient-images/ReflectionGradient.png "Degradado de reflexión")](linear-gradient-images/ReflectionGradient-Large.png#lightbox)
 
 Se colorea el texto que está al revés con un degradado que es transparente en la parte superior a totalmente transparente en la parte inferior al 50%. Estos niveles de transparencia se asocian con los valores alfa de 0 x 80 y 0.
 
-El `PaintSurface` controlador en el **reflexión degradado** página amplía el tamaño del texto en el 90% del ancho del lienzo. A continuación, calcula `xText` y `yText` valores para colocar el texto que se centra horizontalmente pero sentado en una línea base correspondiente en el centro vertical de la página:
+El controlador de `PaintSurface` de la página **gradiente de reflexión** escala el tamaño del texto al 90% del ancho del lienzo. A continuación, calcula los valores `xText` y `yText` para colocar el texto de forma que se Centre horizontalmente pero se encuentre en una línea base que se corresponda con el centro vertical de la página:
 
 ```csharp
 public class ReflectionGradientPage : ContentPage
@@ -904,15 +904,15 @@ public class ReflectionGradientPage : ContentPage
 }
 ```
 
-Los `xText` y `yText` los valores son los mismos valores que se usa para mostrar el texto reflejado en la `DrawText` llamar a la parte inferior de la `PaintSurface` controlador. Justo antes de ese código, sin embargo, verá una llamada a la `Scale` método `SKCanvas`. Esto `Scale` método escala horizontalmente en 1 (que no hace nada), pero verticalmente por &ndash;1, que se voltea eficazmente todo al revés. El centro de rotación se establece en el punto (0, `yText`), donde `yText` es el centro vertical del lienzo, originalmente se calcula como `info.Height` dividido por 2.
+Esos valores `xText` y `yText` son los mismos que se usan para mostrar el texto reflejado en la llamada a `DrawText` en la parte inferior del controlador de `PaintSurface`. Sin embargo, justo antes de ese código, verá una llamada al método `Scale` de `SKCanvas`. Este método `Scale` escala horizontalmente por 1 (que no hace nada), sino verticalmente por &ndash;1, que de hecho voltea todo lo que está al revés. El centro de rotación se establece en el punto (0, `yText`), donde `yText` es el centro vertical del lienzo, calculado originalmente como `info.Height` dividido entre 2.
 
-Tenga en cuenta que Skia usa el degradado para objetos gráficos antes de las transformaciones de lienzo de color. Después de dibuja el texto unreflected, el `textBounds` rectángulo se desplaza por lo que se corresponde con el texto mostrado:
+Tenga en cuenta que Skia usa el degradado para objetos gráficos antes de las transformaciones de lienzo de color. Después de dibujar el texto no reflejado, el rectángulo de `textBounds` se desplaza para que se corresponda con el texto mostrado:
 
 ```csharp
 textBounds.Offset(xText, yText);
 ```
 
-El `CreateLinearGradient` llamada define un degradado desde la parte superior del rectángulo a la parte inferior. El gradiente es de un azul completamente transparente (`paint.Color.WithAlpha(0)`) a un 50% de selección azul transparente (`paint.Color.WithAlpha(0x80)`). La transformación del lienzo de gira el texto boca abajo, por lo que el azul transparente del 50% comienza en la línea de base y se vuelve transparente en la parte superior del texto.
+La llamada `CreateLinearGradient` define un degradado desde la parte superior del rectángulo hasta la parte inferior. El degradado es de un azul completamente transparente (`paint.Color.WithAlpha(0)`) a un azul transparente (`paint.Color.WithAlpha(0x80)`) del 50%. La transformación del lienzo de gira el texto boca abajo, por lo que el azul transparente del 50% comienza en la línea de base y se vuelve transparente en la parte superior del texto.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
