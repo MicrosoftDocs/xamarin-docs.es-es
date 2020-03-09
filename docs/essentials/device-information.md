@@ -5,12 +5,12 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 29b67e4410a3549e4e2cd63121ffa2e2205e0941
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940813"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295422"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Información del dispositivo
 
@@ -79,9 +79,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
-iOS no expone una API para que los desarrolladores obtengan el nombre del dispositivo iOS específico. En su lugar, se devuelve un identificador de hardware, como _iPhone10,6_ que hace referencia al iPhone X. Apple no proporciona una asignación de estos identificadores, pero se puede encontrar en [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (una fuente no oficial).
+iOS no expone una API para que los desarrolladores obtengan el modelo del dispositivo iOS específico. En su lugar, se devuelve un identificador de hardware, como _iPhone10,6_ que hace referencia al iPhone X. Apple no proporciona una asignación de estos identificadores, pero se puede encontrar en [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) y [Get iOS Model](https://github.com/dannycabrera/Get-iOS-Model) (fuentes no oficiales).
 
 --------------
 

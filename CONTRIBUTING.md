@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
+ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751920"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261623"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -64,6 +64,10 @@ El equipo de Xamarin revisará la solicitud y le notificará (mediante comentari
 Después, los encargados del mantenimiento combinarán la solicitud una vez que se hayan aplicado los comentarios y el cambio no presente problemas.
 
 Las confirmaciones de la rama principal se insertan en el sitio activo con un ritmo determinado, y después podrá ver su contribución en https://docs.microsoft.com/xamarin/.
+
+### <a name="contributing-to-international-content"></a>Contribución a contenido internacional
+
+Actualmente no se admiten las contribuciones de contenido de traducción automática (MT). En un esfuerzo por mejorar la calidad del contenido de MT, hemos realizado la transición a un motor neuronal de MT. Aceptamos y fomentamos las contribuciones de contenido de traducción humana (HT), que se usa para entrenar el motor neuronal de MT. Por lo tanto, con el tiempo, las contribuciones al contenido de HT mejorarán la calidad de HT y MT. Los temas de MT tendrán una declinación de responsabilidades que indica que es posible que parte del tema sea MT y que el botón **Editar** no se mostrará cuando esté deshabilitado.
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 

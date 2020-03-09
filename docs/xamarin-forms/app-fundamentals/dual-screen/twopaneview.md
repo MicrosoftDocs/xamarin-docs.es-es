@@ -1,5 +1,5 @@
 ---
-title: TwoPaneView de Xamarin.Forms
+title: Diseño de doble pantalla de Xamarin.Forms
 description: En esta guía se explica cómo usar TwoPaneView de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo.
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: 76a80a1c5750db29f132f71e0559364e26b33ab4
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.openlocfilehash: e961dc537d8b793feb3587ec89b69c53ab821088
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480542"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160584"
 ---
-# <a name="xamarinforms-twopaneview"></a>TwoPaneView de Xamarin.Forms
+# <a name="xamarinforms-dual-screen-layout"></a>Diseño de doble pantalla de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+![](~/media/shared/preview.png "This API is currently pre-release")
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 La clase `TwoPaneView` representa un contenedor con dos vistas que ajustan el tamaño y la posición del contenido en el espacio disponible, ya sea en paralelo o de arriba a abajo. `TwoPaneView` hereda de `Grid`, por lo que la manera más sencilla de pensar en estas propiedades es como si se aplicaran a una cuadrícula.
 
@@ -71,4 +73,4 @@ Las siguientes propiedades se aplican cuando `TwoPaneView` ocupa una sola pantal
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DualScreen (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+- [DualScreen (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)

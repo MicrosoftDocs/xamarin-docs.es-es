@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: daab2b3a18eeea2f50c9518144b3396fbba90928
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
+ms.openlocfilehash: 251c1b8102327093fcb142ca056743f00618f81b
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77545124"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78214978"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introducción a Xamarin.Essentials
 
@@ -19,7 +19,7 @@ Xamarin.Essentials brinda una API multiplataforma única que funciona con cualqu
 
 ## <a name="installation"></a>Instalación
 
-Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los proyectos nuevos de Visual Studio. También se puede agregar a cualquier proyecto existente usando Visual Studio con los pasos siguientes.
+Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los proyectos nuevos de Visual Studio. También se puede agregar a cualquier proyecto existente mediante Visual Studio con los pasos siguientes.
 
 1. Descargue e instale [Visual Studio](https://visualstudio.microsoft.com/) con [Visual Studio Tools para Xamarin](~/get-started/installation/index.md).
 
@@ -37,7 +37,7 @@ Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los
 
     # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-    En el panel del Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar > Agregar paquetes NuGet...**. Busque **Xamarin.Essentials** e instale el paquete en **TODOS** los proyectos, incluidos Android, iOS y las bibliotecas de .NET Standard.
+    En el panel del Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar > Agregar paquetes NuGet...** . Busque **Xamarin.Essentials** e instale el paquete en **TODOS** los proyectos, incluidos Android, iOS y las bibliotecas de .NET Standard.
 
     -----
 
