@@ -5,90 +5,71 @@ ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: davidortinau
 ms.author: daortin
-ms.date: 05/06/2018
-ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 03/05/2020
+ms.openlocfilehash: 17607e09a141fd29cd81cde93d812b20e62a9af8
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016344"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946246"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas Apple
 
-La interfaz de administración de cuentas de Apple proporciona una manera de ver todos los equipos de desarrollo asociados a un identificador de Apple. También permite ver más detalles sobre cada equipo mostrando una lista de _identidades de firma_ y _perfiles de aprovisionamiento_ que están instalados en el equipo.
+La interfaz de administración de cuentas de Apple en Visual Studio proporciona una manera de ver la información de los equipos de desarrollo asociados a un identificador de Apple. Permite hacer lo siguiente:
 
-La autenticación de su ID de Apple se realiza en la línea de comandos con [Fastlane](https://fastlane.tools/). Fastlane debe estar instalado en el equipo para que se autentique correctamente. Encontrará más información en Fastlane y cómo instalarlo en las guías de [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) .
+- **Agregar cuentas de desarrollador de Apple**
+- **Ver certificados de firma y perfiles de aprovisionamiento**
+- **Crear nuevos certificados de firma**
+- **Descargar perfiles de aprovisionamiento existentes**
 
-El cuadro de diálogo de la cuenta de Apple le permite hacer lo siguiente:
-
-- **Crear y administrar certificados**
-- **Crear y administrar perfiles de aprovisionamiento**
-
-En esta guía se describe la información sobre cómo hacerlo.
-
-> [!NOTE]
+> [!IMPORTANT]
 > Las herramientas de Xamarin para la administración de cuentas de Apple solo muestran información sobre las cuentas de desarrollador de Apple de pago. Para obtener información sobre cómo probar una aplicación en un dispositivo sin una cuenta de desarrollador de Apple de pago, consulte la guía [aprovisionamiento gratuito de aplicaciones de Xamarin. iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
-
-También puede usar las herramientas de aprovisionamiento automático de iOS para crear y administrar automáticamente las identidades de firma, los ID. de aplicación y los perfiles de aprovisionamiento. Para obtener más información sobre el uso de estas características, consulte la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-La administración de cuentas de Apple está disponible en Visual Studio para Mac, Visual Studio 2019 y Visual Studio 2017 (versión 15,7 y posteriores).
+La administración de cuentas de Apple está disponible en Visual Studio para Mac, Visual Studio 2019 y Visual Studio 2017 (versión 15,7 y posteriores). También debe tener una cuenta de desarrollador de Apple de pago para usar esta característica. Puede encontrar más información sobre las cuentas de desarrollador de Apple en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
 
-Para usar esta característica, debe tener una cuenta de desarrollador de Apple. Puede encontrar más información sobre las cuentas de desarrollador de Apple en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
+> [!NOTE]
+> Antes de empezar, asegúrese de aceptar primero todos los contratos de licencia de usuario en el [portal para desarrolladores de Apple](https://developer.apple.com/account/).
 
-- Asegúrese de que está conectado a Internet. Esto se debe a que Fastlane se comunica directamente con el portal para desarrolladores de Apple.
-- Asegúrese de que tiene [las herramientas de Fastlane instaladas](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Asegúrese de que tiene las herramientas de Fastlane más recientes de [https://download.fastlane.tools](https://download.fastlane.tools).
-- Antes de empezar, asegúrese de aceptar los contratos de licencia de usuario en el [portal para desarrolladores](https://developer.apple.com/account/).
+## <a name="add-an-apple-developer-account"></a>Agregar una cuenta de desarrollador de Apple
 
-## <a name="adding-an-apple-developer-account"></a>Agregar una cuenta de desarrollador de Apple
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+1. Vaya a **Visual Studio > preferencias > cuenta de desarrollador de Apple** y haga clic en el botón **+** para abrir el cuadro de diálogo de inicio de sesión:
 
-1. Para abrir el cuadro de diálogo de administración de cuentas, vaya a **Visual Studio > preferencias > cuenta de desarrollador de Apple**:
+    ![AScreenshot de la página de cuentas de desarrollador de Apple en preferencias de Visual Studio para Mac.](apple-account-management-images/add-account-vsm.png)
 
-    ![Opciones de la cuenta de desarrollador de Apple](apple-account-management-images/image1.png)
+2. Escriba el identificador y la contraseña de Apple y haga clic en **iniciar sesión**. Esto guardará las credenciales en la cadena de claves segura de este equipo.
 
-2. Presione el botón **+** para mostrar el cuadro de diálogo de inicio de sesión, como se muestra a continuación: 
-
-    ![cuadro de diálogo Fastlane.](apple-account-management-images/image2.png)
-
-3. Escriba el identificador y la contraseña de Apple y haga clic en el botón **iniciar sesión** . Esto guardará las credenciales en la cadena de claves segura de este equipo. [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) se utiliza para administrar las credenciales de forma segura y pasarlas al portal para desarrolladores de Apple.
-
-4. Seleccione **permitir siempre** en el cuadro de diálogo de alerta para permitir que Visual Studio use las credenciales:
+3. Seleccione **permitir siempre** en el cuadro de diálogo de alerta para permitir que Visual Studio use las credenciales:
 
     ![Cuadro de diálogo permitir alerta siempre](apple-account-management-images/image4.png)
 
-5. Una vez que la cuenta se haya agregado correctamente, verá el identificador de Apple y los equipos de los que forma parte su identificador de Apple.
+4. Una vez que la cuenta se haya agregado correctamente, verá el identificador de Apple y los equipos de los que forma parte su identificador de Apple:
 
     ![Cuadro de diálogo de la cuenta de desarrollador de Apple con cuentas agregadas](apple-account-management-images/image5.png)
 
-6. Seleccione cualquier equipo y presione la tecla **Ver detalles..** . . Se mostrará una lista de todas las identidades de firma y los perfiles de aprovisionamiento que están instalados en el equipo:
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-    ![Pantalla ver detalles que muestra las identidades de firma y los perfiles de aprovisionamiento en el equipo](apple-account-management-images/image6.png)
+> [!NOTE]
+> Si usa Visual Studio 2017 o Visual Studio 2019 (versión 16,4 y anterior), debe [emparejarse con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) antes de continuar.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+1. Vaya a **herramientas > opciones > Xamarin > cuentas de Apple** y haga clic en **Agregar**:
 
-1. Antes de empezar a agregar su identificador de Apple a Visual Studio 2019, asegúrese de que el entorno de desarrollo está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+    ![Captura de pantalla de la página de cuentas de Apple en opciones de Visual Studio.](apple-account-management-images/add-account-vsw.png)
 
-1. Para abrir la ventana Administración de cuentas, vaya a **herramientas > opciones > Xamarin > cuentas de Apple**:
+2. Escriba el identificador y la contraseña de Apple y haga clic en **iniciar sesión**.
 
-    ![Pantalla de opciones de cuentas de Apple](apple-account-management-images/prov1.png)
+3. Una vez que la cuenta se haya agregado correctamente, verá el identificador de Apple y los equipos de los que forma parte su identificador de Apple:
 
-1. Seleccione el botón **Agregar** y escriba el ID. y la contraseña de Apple:
-
-    ![cuadro de diálogo nombre de usuario y contraseña](apple-account-management-images/prov1a.png)
-
-1. Una vez que la cuenta se haya agregado correctamente, verá el identificador de Apple y los equipos de los que forma parte su identificador de Apple.
-
-1. Seleccione cualquier equipo y presione la tecla **Ver detalles..** . . Se mostrará una lista de todas las identidades de firma y los perfiles de aprovisionamiento que están instalados en el equipo:
-
-    ![cuadro de diálogo nombre de usuario y contraseña](apple-account-management-images/prov2.png)
+    ![Captura de pantalla de la página de la cuenta de desarrollador con cuentas agregadas.](apple-account-management-images/accounts-vsw.png)
 
 -----
 
-## <a name="managing-signing-identities-and-provisioning-profiles"></a>Administrar identidades de firma y perfiles de aprovisionamiento
+## <a name="view-signing-certificates-and-provisioning-profiles"></a>Ver certificados de firma y perfiles de aprovisionamiento
+
+Seleccione un equipo y haga clic en **Ver detalles..** . para abrir un cuadro de diálogo que muestra una lista de identidades de firma y perfiles de aprovisionamiento que están instalados en el equipo.
 
 El cuadro de diálogo Detalles del equipo muestra una lista de identidades de firma, organizadas por tipo. La columna **Estado** le informa si el certificado es: 
 
@@ -102,60 +83,26 @@ El cuadro de diálogo Detalles del equipo muestra una lista de identidades de fi
 
   ![información del cuadro de diálogo Detalles del equipo](apple-account-management-images/image7.png)
 
-## <a name="create-a-signing-identities"></a>Crear identidades de firma
+## <a name="create-a-signing-certificate"></a>Crear un certificado de firma
 
-Para crear una nueva identidad de firma, seleccione el botón desplegable **crear certificado** y seleccione el tipo que necesite. Si tiene los permisos correctos, aparecerá una nueva identidad de firma después de unos segundos.
+Para crear una nueva identidad de firma, haga clic en **crear certificado** para abrir el menú desplegable y seleccione el [tipo de certificado](https://help.apple.com/xcode/mac/current/#/dev80c6204ec) que desea crear. Si tiene los permisos correctos, aparecerá una nueva identidad de firma después de unos segundos.
 
 Si una opción de la lista desplegable está atenuada y no está seleccionada, significa que no tiene los permisos de equipo correctos para crear este tipo de certificado.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-
-![Opciones de crear certificado](apple-account-management-images/image8.png)
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-![Opciones de crear certificado](apple-account-management-images/prov3.png)
-
------
-
 ## <a name="download-provisioning-profiles"></a>Descargar perfiles de aprovisionamiento
 
-En el cuadro de diálogo Detalles del equipo también se muestra una lista de todos los perfiles de aprovisionamiento conectados a su cuenta de desarrollador. Puede descargar todos los perfiles de aprovisionamiento en el equipo local presionando el botón **descargar todos los perfiles** .
+En el cuadro de diálogo Detalles del equipo también se muestra una lista de todos los perfiles de aprovisionamiento conectados a su cuenta de desarrollador. Puede descargar todos los perfiles de aprovisionamiento en el equipo local haciendo clic en **descargar todos los perfiles**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![Descarga de la sección de perfiles de aprovisionamiento](apple-account-management-images/image9.png)
+## <a name="troubleshoot"></a>Solucionar problemas
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+- Puede tardar varias horas en aprobar una nueva cuenta de desarrollador de Apple. No podrá habilitar el aprovisionamiento automático hasta que se haya aprobado la cuenta.
 
-![Descarga de la sección de perfiles de aprovisionamiento](apple-account-management-images/prov4.png)
+- Si se produce un error al agregar una cuenta de desarrollador de Apple con el mensaje `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, asegúrese de que el ID. de Apple que usa tiene una pertenencia activa al programa para desarrolladores de Apple. Para usar una cuenta de pago de Apple Developer, consulte la guía [aprovisionamiento gratuito de aplicaciones de Xamarin. iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
------
+- Si se produce un error al intentar crear un nuevo certificado de firma con el `You have reached the limit for certificates of this type`de errores, se generará el número máximo de certificados permitidos. Para solucionarlo, vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account/ios/certificate/distribution) y revoque uno de los certificados de producción.
 
-## <a name="ios-bundle-signing"></a>Firma de lote de iOS
-
-Para obtener información sobre la implementación de la aplicación en un dispositivo, consulte la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
-
-## <a name="troubleshooting"></a>Solución de problemas
-
-### <a name="view-details-dialog-is-empty"></a>El cuadro de diálogo ver detalles está vacío
-
-Este es actualmente un problema conocido relacionado con el [#53906](https://bugzilla.xamarin.com/show_bug.cgi?id=53906)de errores. Asegúrese de que está usando la versión estable más reciente de Visual Studio para Mac
-
-### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Si tiene problemas para iniciar sesión en su cuenta, intente lo siguiente:
-
-- Abra la aplicación de cadena de claves y, en categoría, seleccione *contraseñas*. Busque `deliver.`y elimine todas las entradas.
-
-### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Error al agregar la cuenta. Inicie sesión con una contraseña específica de la aplicación "
-
-Esto se debe a que la autenticación en dos fases está habilitada en su cuenta. Asegúrese de que está usando la versión estable más reciente de Visual Studio para Mac
-
-### <a name="failed-to-create-new-certificate"></a>No se pudo crear el nuevo certificado
-"Ha alcanzado el límite para los certificados de este tipo"
-
-![cuadro de diálogo límite de certificado](apple-account-management-images/image10.png)
-
-Se ha generado el número máximo de certificados permitidos. Para solucionarlo, vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account/ios/certificate/distribution) y revoque uno de los certificados de producción.
+- Si tiene problemas para iniciar sesión en su cuenta en Visual Studio para Mac, una posible solución es abrir la aplicación de cadena de claves y, en **categoría** , seleccionar **contraseñas**. Busque `deliver.` y elimine todas las entradas encontradas.
 
 ## <a name="known-issues"></a>Problemas conocidos
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 67b760a58628950caa33fe9009c5023c8696691c
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940922"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946323"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlazar una biblioteca de Objective-C de iOS
 
@@ -41,7 +41,7 @@ Abordaremos todos los pasos necesarios para usar esta API de Objective-C en Xama
 
 En la aplicación de ejemplo se muestra cómo usar un delegado seguro para la comunicación entre la API de C# InfColorPicker y nuestro código. Una vez que hemos visto cómo usar un delegado fuerte, veremos cómo usar delegados débiles para realizar las mismas tareas.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 En este artículo se supone que está familiarizado con Xcode y el lenguaje Objective-C y que ha leído nuestra documentación sobre [Objective-c de enlace](~/cross-platform/macios/binding/index.md) . Además, se requiere lo siguiente para completar los pasos que se presentan:
 
@@ -54,11 +54,11 @@ En este artículo se supone que está familiarizado con Xcode y el lenguaje Obje
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Instalación de las herramientas de línea de comandos de Xcode
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Como se indicó anteriormente, usaremos las herramientas de línea de comandos de Xcode (específicamente `make` y `lipo`) en este tutorial. El comando `make` es una utilidad de UNIX muy común que automatiza la compilación de programas ejecutables y bibliotecas mediante un _archivo make_ que especifica cómo se debe compilar el programa. El comando `lipo` es una utilidad de línea de comandos de OS X para crear archivos de varias arquitecturas. combinará varios archivos de `.a` en un archivo que pueden usar todas las arquitecturas de hardware.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Como se indicó anteriormente, usaremos las herramientas de línea de comandos de Xcode en el **host de compilación de Mac** (específicamente `make` y `lipo`) en este tutorial. El comando `make` es una utilidad de UNIX muy común que automatiza la compilación de programas ejecutables y bibliotecas mediante un _archivo make_ para especificar cómo compilar el programa. El comando `lipo` es una utilidad de línea de comandos de OS X para crear archivos de varias arquitecturas. combinará varios archivos de `.a` en un archivo que pueden usar todas las arquitecturas de hardware.
 
@@ -247,7 +247,7 @@ Antes de poder usar **Objective-Sharpie** para automatizar el proceso de enlace,
 
 Vamos a hacer lo siguiente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Inicie Visual Studio para Mac:
 1. En el menú **archivo** , seleccione **nuevo** > **solución...** :
@@ -258,7 +258,7 @@ Vamos a hacer lo siguiente:
 
     ![](walkthrough-images/bind02.png "Select iOS Binding Project")
 
-1. Haga clic en el botón **siguiente** .
+1. Haga clic en el botón **Next** (Siguiente).
 
 1. Escriba "InfColorPickerBinding" como **nombre del proyecto** y haga clic en el botón **crear** para crear la solución:
 
@@ -268,7 +268,7 @@ Se creará la solución y se incluirán dos archivos predeterminados:
 
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Inicie Visual Studio.
 
@@ -299,7 +299,7 @@ Ahora que tenemos nuestro proyecto de enlace base listo, necesitamos agregar la 
 
 Siga estos pasos para agregar la biblioteca:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Haga clic con el botón derecho en la carpeta **referencias nativas** en el panel de solución y seleccione **Agregar referencias nativas**:
 
@@ -312,7 +312,7 @@ Siga estos pasos para agregar la biblioteca:
 
     ![](walkthrough-images/bind04.png "Including a file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Copie el `libInfColorPickerSDK.a` del **host de compilación de Mac** y péguelo en el proyecto de enlace.
 
@@ -346,11 +346,11 @@ Lo siguiente que debemos hacer es crear las definiciones de la API para el proye
 
 ## <a name="using-objective-sharpie"></a>Uso de Sharpie objetivo
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Objective Sharpie es una herramienta de línea de comandos (proporcionada por Xamarin) que puede ayudar a crear las definiciones necesarias para enlazar una biblioteca de Objective- C#C de terceros con. En esta sección, usaremos Sharpie objetivo para crear el **ApiDefinition.CS** inicial del proyecto InfColorPicker.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Objective Sharpie es una herramienta de línea de comandos (proporcionada por Xamarin) que puede ayudar a crear las definiciones necesarias para enlazar una biblioteca de Objective- C#C de terceros con. En esta sección, usaremos Sharpie objetivo en nuestro **host de compilación de Mac** para crear el **ApiDefinition.CS** inicial del proyecto InfColorPicker.
 
@@ -420,10 +420,13 @@ En el caso anterior, podemos ver que tenemos el SDK de `iphoneos9.3` instalado e
 Escriba el siguiente comando en la aplicación terminal:
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Donde `[full-path-to-project]` es la ruta de acceso completa al directorio donde se encuentra el archivo de proyecto **InfColorPicker** Xcode en nuestro equipo y [iPhone-OS] es el SDK de iOS que se ha instalado, como se indica en el comando `sharpie xcode -sdks`. Tenga en cuenta que en este ejemplo hemos pasado **\*. h** como un parámetro, que incluye *todos* los archivos de encabezado de este directorio; normalmente no debe hacerlo, sino que, en su lugar, ha leído cuidadosamente los archivos de encabezado para buscar el archivo **. h** de nivel superior que hace referencia a todos los demás archivos pertinentes y simplemente pasarlo a Objective Sharpie.
+Donde `[full-path-to-project]` es la ruta de acceso completa al directorio donde se encuentra el archivo de proyecto **InfColorPicker** Xcode en nuestro equipo y [iPhone-OS] es el SDK de iOS que se ha instalado, como se indica en el comando `sharpie xcode -sdks`. Tenga en cuenta que en este ejemplo hemos pasado **\*. h** como un parámetro, que incluye *todos* los archivos de encabezado de este directorio; normalmente no debe hacerlo, sino que, en su lugar, ha leído cuidadosamente los archivos de encabezado para buscar el archivo **. h** de nivel superior que hace referencia a todos los demás archivos pertinentes y simplemente pasarlo a Objective Sharpie. 
+
+> [!TIP] 
+> Para el argumento `-scope`, pase la carpeta que contiene los encabezados que desea enlazar. Sin el argumento `-scope`, Objective Sharpie intentará generar enlaces para los encabezados de SDK de iOS que se importan, por ejemplo, `#import <UIKit.h>`, lo que da lugar a un archivo de definiciones de gran tamaño que probablemente generará errores al compilar el proyecto de enlace. Con el conjunto de argumentos `-scope`, Objective Sharpie no generará enlaces para ningún encabezado fuera de la carpeta con ámbito. 
 
 La siguiente [salida](walkthrough-images/os05.png) se generará en el terminal:
 
@@ -456,13 +459,13 @@ Y los archivos **InfColorPicker.Enums.CS** y **InfColorPicker.CS** se crearán e
 
 [![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Abra ambos archivos en el proyecto de enlace que hemos creado anteriormente. Copie el contenido del archivo **InfColorPicker.CS** y péguelo en el archivo **ApiDefinition.CS** ; para ello, reemplace el bloque de código `namespace ...` existente por el contenido del archivo **InfColorPicker.CS** (lo que deja intactos las instrucciones de `using`):
 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Abra ambos archivos en el proyecto de enlace que hemos creado anteriormente. Copie el contenido del archivo **InfColorPicker.CS** (del host de **compilación de Mac**) y péguelo en el archivo **ApiDefinition.CS** , reemplazando el bloque de código `namespace ...` existente con el contenido del archivo **InfColorPicker.CS** (lo que deja intactos las instrucciones de `using`).
 
@@ -489,13 +492,13 @@ A continuación, hacemos lo mismo con el contenido del archivo de `InfColorPicke
 
 También puede que el objetivo Sharpie haya anotado el enlace con atributos `[Verify]`. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración C/Objective-C original (que se proporcionará en un comentario encima de la declaración enlazada). Una vez que haya comprobado los enlaces, debe quitar el atributo verify. Para obtener más información, consulte la guía de [comprobación](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 En este momento, nuestro proyecto de enlace debe estar completo y listo para compilar. Vamos a compilar nuestro proyecto de enlace y asegurarse de que terminamos sin errores:
 
 [Compile el proyecto de enlace y asegúrese de que no hay errores.](walkthrough-images/os12.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 En este momento, nuestro proyecto de enlace debe estar completo y listo para compilar. Vamos a compilar nuestro proyecto de enlace y asegurarse de que terminamos sin errores.
 
@@ -507,7 +510,7 @@ En este momento, nuestro proyecto de enlace debe estar completo y listo para com
 
 Siga estos pasos para crear una aplicación de iPhone de ejemplo para usar la biblioteca de enlace de iOS creada anteriormente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. **Crear proyecto de Xamarin. iOS** : Agregue un nuevo proyecto de Xamarin. iOS denominado **InfColorPickerSample** a la solución, tal como se muestra en las siguientes capturas de pantallas:
 
@@ -529,7 +532,7 @@ Siga estos pasos para crear una aplicación de iPhone de ejemplo para usar la bi
 
 1. Cuando se le pregunte, copie el archivo **. Xib** en el proyecto.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **Crear proyecto de Xamarin. iOS** : Agregue un nuevo proyecto de Xamarin. iOS denominado **InfColorPickerSample** mediante la plantilla de **aplicación de vista única** :
 

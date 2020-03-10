@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760162"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915312"
 ---
 # <a name="validation-in-enterprise-apps"></a>Validación en aplicaciones empresariales
 
-Cualquier aplicación que acepte la entrada de los usuarios debe asegurarse de que la entrada es válida. Una aplicación podría, por ejemplo, comprobar la entrada que solo contiene caracteres de un intervalo determinado, es de una longitud determinada o coincide con un formato determinado. Sin validación, un usuario puede proporcionar datos que provocan un error en la aplicación. La validación aplica las reglas de negocios y evita que un atacante Inserte datos malintencionados.
+Cualquier aplicación que acepte entradas de los usuarios debe asegurarse de que la entrada sea válida. Una aplicación podría, por ejemplo, comprobar la entrada que solo contiene caracteres de un intervalo determinado, es de una longitud determinada o coincide con un formato determinado. Sin validación, un usuario puede proporcionar datos que hagan que la aplicación produzca un error. La validación aplica reglas de negocio e impide que un atacante inserte datos malintencionados.
 
 En el contexto del patrón Model-View-ViewModel (MVVM), a menudo se necesitará un modelo de vista o modelo para realizar la validación de datos y señalar los errores de validación en la vista para que el usuario pueda corregirlos. La aplicación móvil eShopOnContainers realiza la validación sincrónica en el lado cliente de las propiedades del modelo de vista y notifica al usuario de los errores de validación resaltando el control que contiene los datos no válidos y mostrando los mensajes de error que informan al usuario. de por qué los datos no son válidos. En la figura 6-1 se muestran las clases implicadas en la realización de la validación en la aplicación móvil eShopOnContainers.
 
@@ -24,7 +24,7 @@ En el contexto del patrón Model-View-ViewModel (MVVM), a menudo se necesitará 
 
 **Figura 6-1**: clases de validación en la aplicación móvil eShopOnContainers
 
-Ver las propiedades del modelo que requieren validación son del tipo `ValidatableObject<T>` y cada instancia `ValidatableObject<T>` tiene reglas de validación agregadas a su propiedad `Validations`. La validación se invoca desde el modelo de vista llamando al método `Validate` de la instancia de `ValidatableObject<T>`, que recupera las reglas de validación y las ejecuta con la propiedad `ValidatableObject<T>` `Value`. Los errores de validación se colocan en la propiedad `Errors` de la instancia de `ValidatableObject<T>` y la propiedad `IsValid` de la instancia de `ValidatableObject<T>` se actualiza para indicar si la validación se realizó correctamente o no.
+Ver las propiedades del modelo que requieren validación son del tipo `ValidatableObject<T>`y cada instancia `ValidatableObject<T>` tiene reglas de validación agregadas a su propiedad `Validations`. La validación se invoca desde el modelo de vista llamando al método `Validate` de la instancia de `ValidatableObject<T>`, que recupera las reglas de validación y las ejecuta con la propiedad `ValidatableObject<T>` `Value`. Los errores de validación se colocan en la propiedad `Errors` de la instancia de `ValidatableObject<T>` y la propiedad `IsValid` de la instancia de `ValidatableObject<T>` se actualiza para indicar si la validación se realizó correctamente o no.
 
 La clase `ExtendedBindableObject` proporciona la notificación de cambio de propiedad, por lo que un control [`Entry`](xref:Xamarin.Forms.Entry) puede enlazar con la propiedad `IsValid` de `ValidatableObject<T>` instancia de la clase de modelo de vista para recibir una notificación de si los datos especificados son válidos o no.
 
@@ -424,7 +424,7 @@ Cada [`Label`](xref:Xamarin.Forms.Label) enlaza a la propiedad `Errors` del obje
 
 La aplicación móvil eShopOnContainers realiza la validación sincrónica en el lado cliente de las propiedades del modelo de vista y notifica al usuario de los errores de validación resaltando el control que contiene los datos no válidos y mostrando los mensajes de error que informan al usuario. por qué los datos no son válidos.
 
-Ver las propiedades del modelo que requieren validación son del tipo `ValidatableObject<T>` y cada instancia `ValidatableObject<T>` tiene reglas de validación agregadas a su propiedad `Validations`. La validación se invoca desde el modelo de vista llamando al método `Validate` de la instancia de `ValidatableObject<T>`, que recupera las reglas de validación y las ejecuta con la propiedad `ValidatableObject<T>` `Value`. Los errores de validación se colocan en la propiedad `Errors` del `ValidatableObject<T>`instance y la propiedad `IsValid` de la instancia de `ValidatableObject<T>` se actualiza para indicar si la validación se realizó correctamente o no.
+Ver las propiedades del modelo que requieren validación son del tipo `ValidatableObject<T>`y cada instancia `ValidatableObject<T>` tiene reglas de validación agregadas a su propiedad `Validations`. La validación se invoca desde el modelo de vista llamando al método `Validate` de la instancia de `ValidatableObject<T>`, que recupera las reglas de validación y las ejecuta con la propiedad `ValidatableObject<T>` `Value`. Los errores de validación se colocan en la propiedad `Errors` de la instancia de `ValidatableObject<T>`y la propiedad `IsValid` de la instancia de `ValidatableObject<T>` se actualiza para indicar si la validación se realizó correctamente o no.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

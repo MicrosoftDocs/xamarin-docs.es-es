@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/16/2018
 ms.openlocfilehash: 617c04e2f40af535fb381362a389524d693fad0b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025651"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913416"
 ---
 # <a name="local-notifications-on-android"></a>Notificaciones locales en Android
 
@@ -112,7 +112,7 @@ A partir de Android 8,0 (Oreo), puede usar la característica de *canales de not
 
 La aplicación de **YouTube** que se instala con Android Oreo enumera dos categorías de notificación: **Descargar notificaciones** y **notificaciones generales**:
 
-[pantallas de notificaciones de![para YouTube en Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
+[pantallas de notificaciones de ![para YouTube en Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Cada una de estas categorías corresponde a un canal de notificación. La aplicación de YouTube implementa un canal de **notificaciones de descarga** y un canal de **notificaciones generales** . El usuario puede pulsar **Descargar notificaciones**, que muestra la pantalla de configuración del canal de notificaciones de descarga de la aplicación:
 
@@ -592,7 +592,7 @@ builder.SetStyle (inboxStyle);
 
 Para agregar nuevas líneas de texto al cuerpo de la notificación, llame al método [AddLine](xref:Android.App.Notification.InboxStyle.AddLine*) del objeto `InboxStyle` (el alto máximo de la notificación de *bandeja de entrada* es 256 DP). Tenga en cuenta que, a diferencia del estilo *Big Text* , el estilo *Inbox* es compatible con líneas de texto individuales en el cuerpo de la notificación.
 
-También puede usar el estilo de *bandeja de entrada* para cualquier notificación que necesite Mostrar líneas individuales de texto en un formato expandido. Por ejemplo, el estilo de notificación de *bandeja de entrada* se puede usar para combinar varias notificaciones pendientes en una notificación de Resumen &ndash; puede actualizar una única notificación de estilo de *bandeja de entrada* con nuevas líneas de contenido de notificación (consulte Actualización de [un Notificación](#updating-a-notification) anterior), en lugar de generar una secuencia continua de notificaciones nuevas, principalmente similares.
+También puede usar el estilo de *bandeja de entrada* para cualquier notificación que necesite Mostrar líneas individuales de texto en un formato expandido. Por ejemplo, el estilo de notificación de *bandeja de entrada* se puede usar para combinar varias notificaciones pendientes en una notificación de Resumen &ndash; se puede actualizar una única notificación de estilo de *bandeja de entrada* con nuevas líneas de contenido de notificación (vea [actualización de una notificación](#updating-a-notification) anterior), en lugar de generar una secuencia continua de notificaciones nuevas y principalmente similares.
 
 ## <a name="configuring-metadata"></a>Configuración de metadatos
 
@@ -707,7 +707,7 @@ La característica no *molestar* (novedad en Android 5,0) filtra las notificacio
 
 ![No molestar modificadores de pantalla](local-notifications-images/26-do-not-disturb.png)
 
-Cuando el usuario configura *no molesta* para bloquear todas las interrupciones excepto las llamadas telefónicas (como se muestra en la captura de pantalla anterior), Android permite que se presenten notificaciones con un valor de categoría de `Notification.CategoryCall` mientras el dispositivo esté en no *molestar.* modo. Tenga en cuenta que las notificaciones de `Notification.CategoryAlarm` nunca se bloquean en el modo no *molestar* .
+Cuando el usuario configura *no molesta* para bloquear todas las interrupciones excepto las llamadas telefónicas (como se muestra en la captura de pantalla anterior), Android permite que se presenten notificaciones con un valor de categoría de `Notification.CategoryCall` mientras el dispositivo esté en modo *no molesta* . Tenga en cuenta que las notificaciones de `Notification.CategoryAlarm` nunca se bloquean en el modo no *molestar* .
 
 En el ejemplo [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) se muestra cómo usar `NotificationCompat.Builder` para iniciar una segunda actividad desde una notificación. Este código de ejemplo se explica en el tutorial [uso de notificaciones locales en Xamarin. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 
@@ -750,7 +750,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se explica cómo crear notificaciones locales en Android. Se ha descrito la anatomía de una notificación, se ha explicado cómo usar `NotificationCompat.Builder` para crear notificaciones, cómo aplicar estilo a las notificaciones en formato grande, *texto de gran tamaño*, *imagen* y formatos de *bandeja de entrada* , cómo establecer la configuración de los metadatos de notificación, como prioridad, visibilidad y categoría, y cómo iniciar una actividad desde una notificación. En este artículo también se describe cómo funciona esta configuración de notificaciones con las nuevas características de cabeza de seguridad, pantalla de bloqueo y *no molestar* que se introdujeron en Android 5,0. Por último, aprendió a usar `NotificationCompat.Builder` para mantener la compatibilidad con las notificaciones con versiones anteriores de Android.
+En este artículo se explica cómo crear notificaciones locales en Android. Se ha descrito la anatomía de una notificación, se ha explicado cómo usar `NotificationCompat.Builder` para crear notificaciones, cómo aplicar estilo a las notificaciones en formato grande, *texto de gran*tamaño, *imagen* y formatos de *bandeja de entrada* , cómo establecer la configuración de los metadatos de notificación, como la prioridad, la visibilidad y la categoría, y cómo iniciar una actividad desde una notificación. En este artículo también se describe cómo funciona esta configuración de notificaciones con las nuevas características de cabeza de seguridad, pantalla de bloqueo y *no molestar* que se introdujeron en Android 5,0. Por último, aprendió a usar `NotificationCompat.Builder` para mantener la compatibilidad con las notificaciones con versiones anteriores de Android.
 
 Para obtener instrucciones sobre el diseño de notificaciones para Android, vea [notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
