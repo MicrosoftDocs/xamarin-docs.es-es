@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
 ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488442"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916536"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin. iOS
 
@@ -54,8 +54,8 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|60x60<sup>1</sup>|120x120|
-    |Noticias destacadas|40x40<sup>2</sup>|80x80|
+    |Icono de aplicación|60 x 60<sup>1</sup>|120x120|
+    |Noticias destacadas|40 x 40<sup>2</sup>|80x80|
     |Configuración|-|-|
 
 - **iPhone: iOS 5 & 6**
@@ -109,7 +109,7 @@ En el caso de los iconos, se puede Agregar un conjunto de imágenes de `AppIcon`
 
 Para usar un catálogo de recursos, siga estos pasos:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese hacia abajo hasta la sección **iconos de iPhone** .
@@ -129,7 +129,7 @@ Para usar un catálogo de recursos, siga estos pasos:
 7. Haga clic en el botón **abrir** para incluir la imagen en el proyecto y establecerla en xcasset.
 8. Repita el procedimiento con todas las imágenes necesarias.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Haga doble clic en * * info.  \* * archivo en el **Explorador de soluciones**:
 
@@ -166,7 +166,7 @@ Si usa el método ad hoc de entrega de la aplicación (ya sea para usuarios corp
 
 Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese a la sección de **material gráfico de iTunes** del editor: 
@@ -175,7 +175,7 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 3. En el caso de las imágenes que faltan, haga clic en la miniatura en el editor, seleccione el archivo de imagen para la ilustración de iTunes deseada en el cuadro de diálogo Abrir archivo y haga clic en el botón **Aceptar** .
 4. Repita este paso hasta que se hayan especificado todas las imágenes necesarias para la aplicación.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
 

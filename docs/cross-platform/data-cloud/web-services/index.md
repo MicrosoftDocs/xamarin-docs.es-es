@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: ebd7cad9ef33a44dbc7aa469bb4e866bdfea2e61
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724786"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915378"
 ---
 # <a name="introduction-to-web-services"></a>Introducción a los servicios web
 
