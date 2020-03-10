@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760394"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915265"
 ---
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
@@ -20,9 +20,9 @@ El desarrollo de aplicaciones cliente-servidor ha provocado un enfoque en la cre
 
 Especialmente en lo que respecta a la edad de la nube, es que los componentes individuales no se pueden escalar fácilmente. Una aplicación monolítica contiene funcionalidad específica del dominio y se divide normalmente por capas funcionales como front-end, lógica de negocios y almacenamiento de datos. Una aplicación monolítica se escala mediante la clonación de toda la aplicación en varios equipos, tal como se muestra en la figura 8-1.
 
-![](containerized-microservices-images/monolithicapp.png "Enfoque de escalado de aplicaciones monolíticas")
+![](containerized-microservices-images/monolithicapp.png "Monolithic application scaling approach")
 
-**Figura 8-1**: Enfoque de escalado de aplicaciones monolíticas
+**Figura 8-1**: enfoque de escalado de aplicaciones monolíticas
 
 ## <a name="microservices"></a>Microservicios
 
@@ -30,9 +30,9 @@ Los microservicios ofrecen un enfoque diferente para el desarrollo y la implemen
 
 Los microservicios se pueden escalar horizontalmente de forma independiente, en comparación con las aplicaciones monolíticas de Giant que se escalan juntos. Esto significa que un área funcional específica, que requiere más capacidad de procesamiento o ancho de banda de red para admitir la demanda, se puede escalar en lugar de escalar horizontalmente otras áreas de la aplicación. En la figura 8-2 se muestra este enfoque, donde se implementan y escalan microservicios de forma independiente, y se crean instancias de servicios entre equipos.
 
-![](containerized-microservices-images/microservicesapp.png "Enfoque de escalado de aplicaciones de microservicios")
+![](containerized-microservices-images/microservicesapp.png "Microservices application scaling approach")
 
-**Figura 8-2**: Enfoque de escalado de aplicaciones de microservicios
+**Figura 8-2**: enfoque de escalado de aplicaciones de microservicios
 
 La escalabilidad horizontal de microservicios puede ser casi instantánea, lo que permite a una aplicación adaptarse a las cargas cambiantes. Por ejemplo, un único microservicio en la funcionalidad orientada a la Web de una aplicación podría ser el único microservicio de la aplicación que necesita escalar horizontalmente para controlar el tráfico entrante adicional.
 
@@ -56,7 +56,7 @@ Sin embargo, una solución basada en microservicios también tiene posibles desv
 - En producción, existe una complejidad operativa en la implementación y administración de un sistema comprometido con muchos servicios independientes.
 - La comunicación directa de cliente a microservicio puede dificultar la refactorización de los contratos de microservicios. Por ejemplo, con el tiempo, es posible que deba cambiar el sistema en el que se crean particiones en los servicios. Un único servicio puede dividirse en dos o más servicios, y dos servicios pueden combinarse. Cuando los clientes se comunican directamente con los microservicios, este trabajo de refactorización puede interrumpir la compatibilidad con las aplicaciones cliente.
 
-## <a name="containerization"></a>Inclusión en contenedores
+## <a name="containerization"></a>Contenedorización
 
 La inclusión en contenedores es un enfoque para el desarrollo de software en el que una aplicación y su conjunto de dependencias con control de versiones, además de la configuración del entorno que se abstrae como archivos de manifiesto de implementación, se empaquetan como una imagen de contenedor, se prueba como una unidad y implementado en un sistema operativo host.
 
@@ -64,9 +64,9 @@ Un contenedor es un entorno operativo aislado, controlado por recursos y portát
 
 Hay muchas similitudes entre contenedores y máquinas virtuales, como se muestra en la figura 8-3.
 
-![](containerized-microservices-images/containersvsvirtualmachines.png "Enfoque de escalado de aplicaciones de microservicios")
+![](containerized-microservices-images/containersvsvirtualmachines.png "Microservices application scaling approach")
 
-**Figura 8-3**: Comparación de máquinas virtuales y contenedores
+**Figura 8-3**: comparación de máquinas virtuales y contenedores
 
 Un contenedor ejecuta un sistema operativo, tiene un sistema de archivos y se puede acceder a él a través de una red como si fuera una máquina física o virtual. Sin embargo, la tecnología y los conceptos que usan los contenedores son muy diferentes de las máquinas virtuales. Las máquinas virtuales incluyen las aplicaciones, las dependencias necesarias y un sistema operativo invitado completo. Los contenedores incluyen la aplicación y sus dependencias, pero comparten el sistema operativo con otros contenedores, que se ejecutan como procesos aislados en el sistema operativo host (aparte de los contenedores de Hyper-V que se ejecutan dentro de una máquina virtual especial por contenedor). Por lo tanto, los contenedores comparten recursos y normalmente requieren menos recursos que las máquinas virtuales.
 
@@ -74,17 +74,17 @@ La ventaja de un enfoque de implementación y desarrollo orientado a contenedore
 
 Los conceptos clave al crear y trabajar con contenedores son:
 
-- Host de contenedor: La máquina física o virtual configurada para hospedar contenedores. El host de contenedor ejecutará uno o varios contenedores.
-- Imagen de contenedor: Una imagen se compone de una Unión de sistemas de archivos superpuestos apilados entre sí y es la base de un contenedor. Una imagen no tiene el estado y nunca cambia a medida que se implementa en entornos diferentes.
-- Contenedor Un contenedor es una instancia en tiempo de ejecución de una imagen.
-- Imagen de sistema operativo de contenedor: Los contenedores se implementan a partir de imágenes. La imagen del sistema operativo de contenedor es la primera capa de potencialmente muchas capas de imagen que componen un contenedor. Un sistema operativo de contenedor es inmutable y no se puede modificar.
-- Repositorio de contenedor: Cada vez que se crea una imagen de contenedor, la imagen y sus dependencias se almacenan en un repositorio local. Estas imágenes se pueden reutilizar muchas veces en el host de contenedor. Las imágenes de contenedor también pueden almacenarse en un registro público o privado, como [Docker Hub](https://hub.docker.com/), de modo que se puedan usar en distintos hosts de contenedor.
+- Host de contenedor: la máquina física o virtual configurada para hospedar contenedores. El host de contenedor ejecutará uno o varios contenedores.
+- Imagen de contenedor: una imagen se compone de una Unión de sistemas de archivos superpuestos apilados entre sí y es la base de un contenedor. Una imagen no tiene el estado y nunca cambia a medida que se implementa en entornos diferentes.
+- Contenedor: un contenedor es una instancia en tiempo de ejecución de una imagen.
+- Imagen del sistema operativo de contenedor: los contenedores se implementan a partir de imágenes. La imagen del sistema operativo de contenedor es la primera capa de potencialmente muchas capas de imagen que componen un contenedor. Un sistema operativo de contenedor es inmutable y no se puede modificar.
+- Repositorio de contenedor: cada vez que se crea una imagen de contenedor, la imagen y sus dependencias se almacenan en un repositorio local. Estas imágenes se pueden reutilizar muchas veces en el host de contenedor. Las imágenes de contenedor también pueden almacenarse en un registro público o privado, como [Docker Hub](https://hub.docker.com/), de modo que se puedan usar en distintos hosts de contenedor.
 
 Las empresas están adoptando cada vez más contenedores al implementar aplicaciones basadas en microservicios y Docker se ha convertido en la implementación de contenedor estándar que ha adoptado la mayoría de las plataformas de software y los proveedores de nube.
 
 La aplicación de referencia de eShopOnContainers usa Docker para hospedar cuatro microservicios de back-end en contenedor, como se muestra en la figura 8-4.
 
-![](containerized-microservices-images/microservicesarchitecture.png "microservicios de back-end de la aplicación de referencia eShopOnContainers")
+![](containerized-microservices-images/microservicesarchitecture.png "eShopOnContainers reference application back-end microservices")
 
 **Figura 8-4**: microservicios de back-end de la aplicación de referencia eShopOnContainers
 
@@ -92,7 +92,7 @@ La arquitectura de los servicios back-end de la aplicación de referencia se des
 
 Cada microservicio tiene su propia base de datos, lo que le permite desacoplarlo por completo de los otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de diferentes microservicios se logra mediante eventos de nivel de aplicación. Para obtener más información, consulte [comunicación entre microservicios](#communication_between_microservices).
 
-Para obtener más información acerca de la aplicación de [referencia, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
+Para obtener más información acerca de la aplicación de referencia, consulte [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
 
 <a name="communication_between_client_and_microservices" />
 
@@ -100,14 +100,14 @@ Para obtener más información acerca de la aplicación de [referencia, consulte
 
 La aplicación móvil eShopOnContainers se comunica con los microservicios de back-end en contenedor mediante la comunicación *directa de cliente a microservicio* , que se muestra en la figura 8-5.
 
-![](containerized-microservices-images/directclienttomicroservicecommunication.png "Enfoque de escalado de aplicaciones de microservicios")
+![](containerized-microservices-images/directclienttomicroservicecommunication.png "Microservices application scaling approach")
 
-**Figura 8-5**: Comunicación directa de cliente a microservicio
+**Figura 8-5**: comunicación directa de cliente a microservicio
 
 Con la comunicación directa de cliente a microservicio, la aplicación móvil realiza solicitudes a cada microservicio directamente a través de su punto de conexión público, con un puerto TCP diferente por microservicio. En producción, el punto de conexión normalmente se asigna al equilibrador de carga del microservicio, que distribuye las solicitudes entre las instancias disponibles.
 
 > [!TIP]
-> Considere el uso de la comunicación de puerta de enlace de API. La comunicación directa entre el cliente y el microservicio puede tener inconvenientes al compilar una aplicación grande y compleja basada en microservicios, pero es más que adecuada para una aplicación pequeña. Al diseñar una aplicación grande basada en microservicios con decenas de microservicios, considere la posibilidad de usar la comunicación de puerta de enlace de API. Para obtener más información, [consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
+> Considere el uso de la comunicación de puerta de enlace de API. La comunicación directa entre el cliente y el microservicio puede tener inconvenientes al compilar una aplicación grande y compleja basada en microservicios, pero es más que adecuada para una aplicación pequeña. Al diseñar una aplicación grande basada en microservicios con decenas de microservicios, considere la posibilidad de usar la comunicación de puerta de enlace de API. Para obtener más información, vea [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
 
 <a name="communication_between_microservices" />
 
@@ -121,28 +121,28 @@ La comunicación asincrónica basada en eventos de mensajería es fundamental al
 
 Un bus de eventos permite la comunicación de publicación y suscripción entre microservicios, sin necesidad de que los componentes se reconozcan entre sí de forma explícita, como se muestra en la figura 8-6.
 
-![](containerized-microservices-images/eventbus.png "Publicación: suscripción con un bus de eventos")
+![](containerized-microservices-images/eventbus.png "Publish-subscribe with an event bus")
 
 **Figura 8-6:** Publicación: suscripción con un bus de eventos
 
 Desde la perspectiva de la aplicación, el bus de eventos es simplemente un canal de publicación-suscripción expuesto a través de una interfaz. Sin embargo, el modo en que se implementa el bus de eventos puede variar. Por ejemplo, una implementación de bus de eventos podría usar RabbitMQ, Azure Service Bus u otros buses de servicio como NServiceBus y MassTransit. En la figura 8-7 se muestra cómo se usa un bus de eventos en la aplicación de referencia eShopOnContainers.
 
-![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Comunicación asincrónica controlada por eventos en la aplicación de referencia")
+![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Asynchronous event-driven communication in the reference application")
 
 **Figura 8-7:** Comunicación asincrónica controlada por eventos en la aplicación de referencia
 
 El bus de eventos eShopOnContainers, implementado mediante RabbitMQ, proporciona funcionalidad de publicación-suscripción asincrónica de uno a muchos. Esto significa que después de publicar un evento, puede haber varios suscriptores que escuchen el mismo evento. En la figura 8-9 se muestra esta relación.
 
-![](containerized-microservices-images/eventdrivencommunication.png "Comunicación de uno a varios")
+![](containerized-microservices-images/eventdrivencommunication.png "One-to-many communication")
 
-**Figura 8-9**: Comunicación de uno a varios
+**Figura 8-9**: comunicación de uno a varios
 
 Este enfoque de comunicación uno a varios usa eventos para implementar transacciones empresariales que abarcan varios servicios, lo que garantiza la coherencia final entre los servicios. Una transacción de coherencia final se compone de una serie de pasos distribuidos. Por lo tanto, cuando el microservicio de Perfil de usuario recibe el comando UpdateUser, actualiza los detalles del usuario en su base de datos y publica el evento UserUpdated en el bus de eventos. Tanto el microservicio de cesta como el microservicio de pedidos se han suscrito para recibir este evento y, en respuesta, actualizar la información de comprador en sus bases de datos respectivas.
 
 > [!NOTE]
 > El bus de eventos eShopOnContainers, implementado mediante RabbitMQ, está pensado para usarse únicamente como prueba de concepto. En el caso de los sistemas de producción, se deben tener en cuenta implementaciones de bus de eventos alternativas.
 
-Para obtener información sobre la implementación del bus de [eventos, consulte microservicios de .net: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
+Para obtener información sobre la implementación del bus de eventos, vea [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
 
 ## <a name="summary"></a>Resumen
 
