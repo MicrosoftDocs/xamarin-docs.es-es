@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
-ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
+ms.openlocfilehash: 2dea16633181d6b1120a5f9a90da685df66e5451
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980432"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031008"
 ---
 # <a name="advanced-manual-real-world-example"></a>Ejemplo avanzado (manual) del mundo real
 
@@ -124,7 +124,10 @@ Done.
 
 Observará que se ha pasado un argumento `-scope build/Headers` a Objective Sharpie. Dado que las bibliotecas de C y Objective-C deben `#import` o `#include` otros archivos de encabezado que son detalles de implementación de la biblioteca y no de la API que se desea enlazar, el argumento `-scope` indica a Objective Sharpie que omita cualquier API que no esté definida en un archivo en algún lugar del directorio de `-scope`.
 
-Encontrará que el argumento `-scope` suele ser opcional para las bibliotecas implementadas correctamente, pero no hay ningún daño en proporcionarlo explícitamente.
+Encontrará que el argumento `-scope` suele ser opcional para las bibliotecas implementadas correctamente, pero no hay ningún daño en proporcionarlo explícitamente. 
+
+> [!TIP]
+> Si los encabezados de la biblioteca importan los encabezados del SDK de iOS, por ejemplo, `#import <Foundation.h>`, tendrá que establecer el ámbito; de lo contrario, el objetivo Sharpie generará definiciones de enlace para el encabezado del SDK de iOS que se importó, lo que produce un enlace enorme que probablemente generará errores al compilar el proyecto de enlace. 
 
 Además, se ha especificado `-c -Ibuild/headers`. En primer lugar, el argumento `-c` indica a Objective Sharpie que deje de interpretar los argumentos de la línea de comandos y pase los argumentos subsiguientes _directamente al compilador Clang_. Por lo tanto, `-Ibuild/Headers` es un argumento del compilador Clang que indica a Clang que busque los includes en `build/Headers`, que es donde residen los encabezados de los POP. Sin este argumento, Clang no sabría dónde encontrar los archivos que `POP.h` es `#import`. _Casi todos los "problemas" con el uso de Sharpie objetivo se reducen a averiguar qué pasar a Clang_.
 

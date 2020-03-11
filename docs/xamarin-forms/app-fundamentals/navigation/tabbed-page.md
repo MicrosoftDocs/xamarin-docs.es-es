@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
 ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490004"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910709"
 ---
 # <a name="xamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
-[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En las capturas de pantalla siguientes se muestra un elemento `TabbedPage` en iOS y Android:
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) de Xamarin.Forms consiste en una lista de pestañas y un área más grande de detalles. Cada pestaña carga contenido en el área de detalles. En las capturas de pantalla siguientes se muestra un elemento `TabbedPage` en iOS y Android:
 
 [![Captura de pantalla de un elemento TabbedPage que contiene tres pestañas, en iOS y Android](tabbed-page-images/tabbedpage-today.png "TabbedPage con tres pestañas")](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage con tres pestañas")
 
