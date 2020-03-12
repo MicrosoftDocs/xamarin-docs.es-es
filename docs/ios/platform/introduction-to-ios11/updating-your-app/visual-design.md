@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032082"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088974"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Actualizaciones del diseño visual en iOS 11
 
@@ -76,9 +76,9 @@ iOS 7 [presentó](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `to
 
 El área segura es una nueva manera de pensar en el espacio visible de la aplicación y en cómo se agregan las restricciones entre una vista y una vista superior. Por ejemplo, considere la siguiente imagen:
 
-[Guía de![de área segura frente a la guía de diseño superior e inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
+[Guía de ![de área segura frente a la guía de diseño superior e inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-Anteriormente, si hubiera agregado una vista y quería que estuviera visible en el área verde anterior, la limitaría a la _parte inferior_ del `TopLayoutGuide` y la _parte superior_ del `BottomLayoutGuide`. En iOS 11, en su lugar se debe restringir a la _parte superior_ e _inferior_ del área segura. A continuación se muestra un ejemplo:
+Anteriormente, si hubiera agregado una vista y quería que estuviera visible en el área verde anterior, la limitaría a la _parte inferior_ del `TopLayoutGuide` y la _parte superior_ del `BottomLayoutGuide`. En iOS 11, en su lugar se debe restringir a la _parte superior_ e _inferior_ del área segura. A continuación, encontrará un ejemplo:
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;

@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: c8b4dcbfbf65bc4059125404b0d20ed35fa31f29
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488652"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088934"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4: Trabajo con varias plataformas
 
@@ -158,15 +158,17 @@ Cada versión de la API también define una nueva Directiva de compilador, por l
 
 #### <a name="mac"></a>Mac
 
-Actualmente no hay ningún símbolo integrado para Xamarin. Mac, pero puede Agregar el suyo propio en las opciones del proyecto de aplicación Mac **> Compilar > compilador** en el cuadro **definir símbolos** , o editar el archivo **. csproj** y agregarlo (por ejemplo `__MAC__`)
+Xamarin. Mac define `__MACOS__` que puede usar para compilar solo para macOS:
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### <a name="universal-windows-platform-uwp"></a>Plataforma universal de Windows (UWP)
 
-Use `WINDOWS_UWP`. No hay ningún carácter de subrayado alrededor de la cadena como los símbolos de la plataforma Xamarin.
+Mediante `WINDOWS_UWP`. No hay ningún carácter de subrayado alrededor de la cadena como los símbolos de la plataforma Xamarin.
 
 ```csharp
 #if WINDOWS_UWP
