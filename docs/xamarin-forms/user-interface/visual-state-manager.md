@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2020
 ms.openlocfilehash: 0149806f3ab3772bc206cea9540a989d997c817b
-ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215005"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306546"
 ---
 # <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin. Forms
 
@@ -405,7 +405,7 @@ Ahora todas las vistas de `Entry` de esta página responden de la misma manera a
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin. Forms:
 
-| Clase | Estados | Más información |
+| Clase | States | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |

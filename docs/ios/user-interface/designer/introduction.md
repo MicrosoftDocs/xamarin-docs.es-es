@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
 ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914754"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306066"
 ---
 # <a name="ios-designer-basics"></a>aspectos básicos del diseñador de iOS
 
@@ -298,7 +298,7 @@ Una vez expandida, la barra de herramientas inferior muestra todos los dispositi
 
 Tenga en cuenta que la selección de un dispositivo y la orientación solo cambia el modo en que el diseñador de iOS muestra una vista previa del diseño. Independientemente de la selección actual, las restricciones recién agregadas se aplican a todos los dispositivos y orientaciones, a menos que se haya usado el botón **Editar rasgos** para especificar lo contrario.
 
-Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considere los ejemplos siguientes:
+Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considere los siguientes ejemplos:
 
 - Si se selecciona **iPhone se** / **vertical**, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho compacto, tamaño de alto normal. 
 - Si se selecciona **iPad Pro 9,7 "**  / **horizontal** / **pantalla completa** , el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho normal, tamaño de alto normal.
@@ -330,8 +330,8 @@ La superficie de diseño admite el zoom a través de varios controles:
 Entre los controles se incluyen los siguientes:
 
 1. Zoom para ajustar
-2. Alejamiento
-3. Acercamiento
+2. Alejar
+3. Acercar
 4. Tamaño real (tamaño de píxel de 1:1)
 
 Estos controles ajustan el zoom en la superficie de diseño. No afectan a la interfaz de usuario de la aplicación en tiempo de ejecución.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019
 ms.openlocfilehash: 1cfda90360557af1160d421f18807f8b534967a8
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426352"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306510"
 ---
 # <a name="xamarinforms-map-control"></a>Control de mapa de Xamarin. Forms
 
@@ -106,15 +106,15 @@ Map map = new Map
 
 Las capturas de pantallas siguientes muestran un [`Map`](xref:Xamarin.Forms.Maps.Map) cuando la propiedad [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) está establecida en `Street`:
 
-[![Captura de pantalla del control de mapa con el tipo de mapa de calle, en iOS y Android](map-images/maptype-street.png "Control de mapa con la calle mapType")](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
+[![Captura de pantalla del control de mapa con el tipo de mapa de calle, en iOS y Android](map-images/maptype-street.png "Control de mapa con la calle mapType")](map-images/maptype-street-large.png#lightbox "Control de mapa con el tipo de asignación calle")
 
 Las capturas de pantallas siguientes muestran un [`Map`](xref:Xamarin.Forms.Maps.Map) cuando la propiedad [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) está establecida en `Satellite`:
 
-[![Captura de pantalla del control de mapa con el tipo de asignación satélite, en iOS y Android](map-images/maptype-satellite.png "Control de mapa con el mapType satélite")](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
+[![Captura de pantalla del control de mapa con el tipo de asignación satélite, en iOS y Android](map-images/maptype-satellite.png "Control de mapa con el mapType satélite")](map-images/maptype-satellite-large.png#lightbox "Control de mapa con el tipo de asignación satélite")
 
 Las capturas de pantallas siguientes muestran un [`Map`](xref:Xamarin.Forms.Maps.Map) cuando la propiedad [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) está establecida en `Hybrid`:
 
-[![Captura de pantalla del control de mapa con el tipo de mapa híbrido, en iOS y Android](map-images/maptype-hybrid.png "Control de mapa con el mapType híbrido")](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
+[![Captura de pantalla del control de mapa con el tipo de mapa híbrido, en iOS y Android](map-images/maptype-hybrid.png "Control de mapa con el mapType híbrido")](map-images/maptype-hybrid-large.png#lightbox "Control de mapa con el tipo de mapa híbrido")
 
 ## <a name="display-a-specific-location-on-a-map"></a>Mostrar una ubicación específica en un mapa
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 8640800717a88e800503e93c339eeb080707374e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915694"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306174"
 ---
 # <a name="web-views-in-xamarinios"></a>Vistas Web en Xamarin. iOS
 

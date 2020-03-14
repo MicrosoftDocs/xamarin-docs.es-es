@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697218"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305754"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Desplazamientos de CollectionView de Xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "72697218"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , que desplazan los elementos a la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista. Ambas sobrecargas tienen argumentos adicionales que se pueden especificar para indicar el grupo al que pertenece el elemento, la posición exacta del elemento una vez que se ha completado el desplazamiento y si se debe animar el desplazamiento.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que se desencadena cuando se invoca a uno de los métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . El objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompaña al evento `ScrollToRequested` tiene muchas propiedades, como `IsAnimated`, `Index`, `Item` y `ScrollToPosition`. Estas propiedades se establecen a partir de los argumentos especificados en el método `ScrollTo` llama a.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que se desencadena cuando se invoca a uno de los métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . El objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompaña al evento `ScrollToRequested` tiene muchas propiedades, como `IsAnimated`, `Index`, `Item`y `ScrollToPosition`. Estas propiedades se establecen a partir de los argumentos especificados en el método `ScrollTo` llama a.
 
 Además, [`CollectionView`](xref:Xamarin.Forms.CollectionView) define un evento `Scrolled` que se desencadena para indicar que se ha producido el desplazamiento. El objeto `ItemsViewScrolledEventArgs` que acompaña al evento `Scrolled` tiene muchas propiedades. Para obtener más información, vea [detectar desplazamiento](#detect-scrolling).
 
@@ -134,7 +134,7 @@ Este código de ejemplo produce el desplazamiento mínimo necesario para desplaz
 > [!NOTE]
 > De forma predeterminada, se utiliza el miembro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) , si no se especifica el argumento `position` al llamar al método `ScrollTo`.
 
-### <a name="start"></a>Iniciar
+### <a name="start"></a>Start
 
 El miembro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -146,7 +146,7 @@ Este código de ejemplo hace que el elemento se desplace hasta el inicio de la v
 
 [![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-start.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
-### <a name="center"></a>Centrar
+### <a name="center"></a>Center
 
 El miembro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el centro de la vista:
 
@@ -158,7 +158,7 @@ Este código de ejemplo hace que el elemento se desplace hasta el centro de la v
 
 [![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-center.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
-### <a name="end"></a>Fin
+### <a name="end"></a>End
 
 El miembro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que el elemento debe desplazarse hasta el final de la vista:
 
@@ -229,12 +229,12 @@ De forma predeterminada, la propiedad [`SnapPointsType`](xref:Xamarin.Forms.Item
 
 ### <a name="snap-points-alignment"></a>Alineación de puntos de acoplamiento
 
-La enumeración [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define `Start`, `Center` y `End` miembros.
+La enumeración [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define `Start`, `Center`y `End` miembros.
 
 > [!IMPORTANT]
-> El valor de la propiedad [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) solo se respeta cuando la propiedad [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) se establece en `Mandatory` o `MandatorySingle`.
+> El valor de la propiedad [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) solo se respeta cuando la propiedad [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) se establece en `Mandatory`o `MandatorySingle`.
 
-#### <a name="start"></a>Iniciar
+#### <a name="start"></a>Start
 
 El miembro `SnapPointsAlignment.Start` indica que los puntos de ajuste están alineados con el borde inicial de los elementos.
 
@@ -269,7 +269,7 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento su
 
 [![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento de inicio, en iOS y Android](scrolling-images/snappoints-start.png "Lista de CollectionViews verticales con puntos de acoplamiento iniciales")](scrolling-images/snappoints-start-large.png#lightbox "Lista de CollectionViews verticales con puntos de acoplamiento iniciales")
 
-#### <a name="center"></a>Centrar
+#### <a name="center"></a>Center
 
 El miembro `SnapPointsAlignment.Center` indica que los puntos de ajuste están alineados con el centro de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 
@@ -302,7 +302,7 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento su
 
 [![Captura de pantalla de una lista de CollectionView vertical con puntos de acoplamiento, en iOS y Android](scrolling-images/snappoints-center.png "Lista vertical de CollectionView con puntos de acoplamiento")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical de CollectionView con puntos de acoplamiento")
 
-#### <a name="end"></a>Fin
+#### <a name="end"></a>End
 
 El miembro `SnapPointsAlignment.End` indica que los puntos de ajuste están alineados con el borde final de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 

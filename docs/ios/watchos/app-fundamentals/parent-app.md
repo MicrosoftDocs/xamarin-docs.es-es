@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487768"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306252"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
@@ -20,7 +20,7 @@ Hay diferentes formas de comunicación entre la aplicación del reloj y la aplic
 
 - Las aplicaciones de inspección pueden [ejecutar código](#run-code) en la aplicación primaria en el iPhone.
 
-- Ver extensiones puede [comparten una ubicación de almacenamiento](#shared-storage) con la aplicación de iPhone primario.
+- Las extensiones de inspección pueden [compartir una ubicación de almacenamiento](#shared-storage) con la aplicación principal de iPhone.
 
 - Use la entrega para pasar datos de una notificación a la aplicación de inspección y enviar el usuario a un controlador de interfaz específico en la aplicación.
 
@@ -35,11 +35,11 @@ En estos dos ejemplos se muestra cómo usar `WCSession` para ejecutar código y 
 
 ## <a name="shared-storage"></a>Almacenamiento compartido
 
-Si configura un [grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) , a continuación, las extensiones de iOS 8 (incluidas las extensiones de inspección) pueden compartir datos con la aplicación primaria.
+Si configura un [grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) , las extensiones de iOS 8 (incluidas las extensiones de inspección) pueden compartir datos con la aplicación primaria.
 
 ### <a name="nsuserdefaults"></a>Valores NSUserDefaults
 
-Se puede escribir el código siguiente en la extensión de la aplicación de inspección y la aplicación de iPhone primario para que puede hacer referencia a un conjunto común de `NSUserDefaults`:
+El siguiente código se puede escribir en la extensión de la aplicación de inspección y en la aplicación de iPhone primaria para que puedan hacer referencia a un conjunto común de `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -57,7 +57,7 @@ var count = shared.IntForKey ("count");
 
 <a name="files" />
 
-### <a name="files"></a>Files
+### <a name="files"></a>Archivos
 
 La extensión de inspección y aplicación de iOS también puede compartir archivos con una ruta de acceso de archivo comunes.
 
@@ -70,11 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Nota: si la ruta de acceso es `null` , a continuación, compruebe el [configuración del grupo de aplicación](~/ios/watchos/app-fundamentals/app-groups.md) para asegurarse de los perfiles de aprovisionamiento se han configurado correctamente y han sido descargado o instalado en el equipo de desarrollo.
+Nota: Si la ruta de acceso es `null` Compruebe la [configuración del grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) para asegurarse de que los perfiles de aprovisionamiento se han configurado correctamente y se han descargado o instalado en el equipo de desarrollo.
 
-Para obtener más información, consulte el [las capacidades de grupos de aplicación](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentación.
+Para obtener más información, consulte la documentación sobre las [funcionalidades del grupo de aplicaciones](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Referencia de WKInterfaceController de Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Apple compartir datos con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Uso compartido de datos de Apple con la aplicación contenedora](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

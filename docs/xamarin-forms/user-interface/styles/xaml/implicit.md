@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
 ms.openlocfilehash: d58ba81596cccf470b7246514d71f35968599880
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918128"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306390"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos en Xamarin.Forms
 
@@ -80,7 +80,7 @@ Además de crear estilos *implícitos* en el nivel de página, también se puede
 </ContentPage>
 ```
 
-En este ejemplo, el [`Style`](xref:Xamarin.Forms.Style) implícito se asigna a la colección [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) del control [`StackLayout`](xref:Xamarin.Forms.StackLayout) . A continuación, el estilo *implícito* se puede aplicar al control y a sus elementos secundarios.
+En este ejemplo, el *implicit* [`Style`](xref:Xamarin.Forms.Style) implícito se asigna a la colección [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) del control [`StackLayout`](xref:Xamarin.Forms.StackLayout) . A continuación, el estilo *implícito* se puede aplicar al control y a sus elementos secundarios.
 
 Para obtener información sobre cómo crear estilos en la [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)de una aplicación, vea [estilos globales](~/xamarin-forms/user-interface/styles/application.md).
 

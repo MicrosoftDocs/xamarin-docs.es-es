@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: c0338fce694d61dc19484c56dbc00bb854d0d0d7
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915792"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306198"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri controladores de Bluetooth y remotos para tvOS en Xamarin
 
@@ -51,7 +51,7 @@ El control remoto Siri tiene las siguientes características y usos previstos en
 
 La superficie táctil de Siri remota es capaz de detectar una variedad de gestos de un solo dedo al que se puede responder en la aplicación Xamarin. tvOS:
 
-|Deslizar rápidamente|Haga clic en|Pulsar|
+|Deslizar rápidamente|Haga clic en|Puntee en|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Mueve la selección (foco) entre los elementos de la interfaz de usuario en la pantalla (hacia arriba, hacia abajo, a la derecha). El deslizamiento rápido se puede usar para desplazarse a través de listas grandes de contenido con rapidez mediante la inercia.|Activa el elemento seleccionado (enfocado) o actúa como el botón principal de un juego. Al hacer clic y mantener, se pueden activar los menús contextuales o las funciones secundarias.|Pulsar ligeramente la superficie táctil en los bordes actúa como botones de dirección en un panel D, moviendo el foco hacia arriba, hacia abajo, a la izquierda o a la derecha, en función de la unidad punteada. Dependiendo de la aplicación, se puede usar para mostrar los controles ocultos.|

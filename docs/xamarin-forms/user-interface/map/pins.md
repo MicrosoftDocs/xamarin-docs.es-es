@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
 ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
-ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74556161"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306570"
 ---
 # <a name="xamarinforms-map-pins"></a>PIN de mapa de Xamarin. Forms
 

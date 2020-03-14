@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
 ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160614"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305682"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes de Xamarin.Forms
 
@@ -61,7 +61,7 @@ Xamarin. Forms también define los campos en la enumeración [`NamedSize`](xref:
 
 Los estilos de fuente, como **Bold** y *Italic* , se pueden establecer en la propiedad `FontAttributes`. Actualmente se admiten los siguientes valores:
 
-- **None**
+- **Ninguno**
 - **Negrita**
 - **Aplicar**
 
@@ -240,7 +240,7 @@ La fuente se puede consumir después en cada plataforma haciendo referencia a su
        FontFamily="Lobster-Regular" />
 ```
 
-El código de C# equivalente es:
+El código de C# equivalente es el siguiente:
 
 ```csharp
 Label label = new Label
@@ -280,7 +280,7 @@ En el siguiente ejemplo de XAML se muestra un icono de fuente único en una vist
 </Image>
 ```
 
-Este código muestra un icono XBox, de la familia de fuentes Ionicons, en una vista [`Image`](xref:Xamarin.Forms.Image) . Tenga en cuenta que, mientras que el carácter Unicode para este icono es `\uf30c`, debe tener un carácter de escape en XAML, por lo que se convierte en `&#xf30c;`. El código de C# equivalente es:
+Este código muestra un icono XBox, de la familia de fuentes Ionicons, en una vista [`Image`](xref:Xamarin.Forms.Image) . Tenga en cuenta que, mientras que el carácter Unicode para este icono es `\uf30c`, debe tener un carácter de escape en XAML, por lo que se convierte en `&#xf30c;`. El código de C# equivalente es el siguiente:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

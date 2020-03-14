@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3d9531bbaa38a0a0a9bb42d22c79a63fda75c449
+ms.sourcegitcommit: 926f9a44065b41c7d74794a94bee66b61e903bf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940999"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79134006"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -22,7 +22,7 @@ Antes de que Apple introdujera el formato de archivo de guion gráfico como una 
 
 Un guion gráfico se puede crear, abrir y editar con Xamarin iOS Designer. En esta guía también se explica cómo usar el diseñador para crear los guiones gráficos mientras C# se usa para programar la navegación.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 Los guiones gráficos se pueden usar con Xcode, el diseñador de iOS en Visual Studio para Mac y Visual Studio 2019 con las cargas de trabajo de Xamarin instaladas.
 
@@ -84,7 +84,7 @@ Cualquier aplicación que use clases de tamaño también usará el nuevo [*objet
 
 |Segue|Descripción|
 |--- |--- |
-|Mostrar|Esto es muy similar a un segue de extracción, pero tiene en cuenta el contenido de la pantalla.|
+|Presentación|Esto es muy similar a un segue de extracción, pero tiene en cuenta el contenido de la pantalla.|
 |Mostrar detalles|Si la aplicación muestra una vista maestra y de detalles (por ejemplo, en un controlador de vista de división en un iPad), el contenido reemplazará la vista de detalles. Si la aplicación muestra solo el maestro o detalle, el contenido reemplazará la parte superior de la pila del controlador de vista.|
 |Presentación|Es similar al segue modal y permite seleccionar los estilos de presentación y de transición.|
 |Presentación de elemento flotante|Esto presenta el contenido como un elemento flotante|
@@ -128,7 +128,7 @@ Una vez finalizada la transición, el usuario verá el `CallHistoryController` c
 
 En ocasiones, puede que tenga que agregar un guion gráfico a un archivo que no es un guion gráfico. Una vez hecho esto en Visual Studio para Mac se puede simplificar mediante los pasos siguientes:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Cree un nuevo archivo de guion gráfico; para ello, vaya a **archivo > nuevo archivo > iOS > guion gráfico**, como se muestra a continuación:
 
@@ -149,7 +149,7 @@ En ocasiones, puede que tenga que agregar un guion gráfico a un archivo que no 
     }
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Cree un nuevo archivo de guion gráfico haciendo clic con el botón derecho en el proyecto para **agregar > nuevo archivo > iOS > guion gráfico vacío**, como se muestra a continuación:
 
@@ -187,6 +187,10 @@ En la captura de pantalla siguiente se muestran dos controladores de vista en nu
     [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
 2. Haga clic con el botón derecho en el archivo de guion gráfico y seleccione **abrir con > Xcode Interface Builder** para abrirlo en Xcode.
+
+    *Si prefiere usar el generador de interfaz de Xcode de forma predeterminada, puede elegirlo en el Visual Studio para Mac preferencias en **proyectos > iOS**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
 
 3. En Xcode, abra la biblioteca (a través de la **vista > Mostrar biblioteca** o *Mayús + Comando + L*) para mostrar una lista de objetos que se pueden agregar al guion gráfico. Agregue un `Navigation Controller` al guion gráfico arrastrando el objeto desde la lista hasta el guión gráfico. De forma predeterminada, el `Navigation Controller` proporcionará dos pantallas. la pantalla de la derecha es una `TableViewController` que se va a reemplazar por una vista más simple, por lo que se puede quitar haciendo clic en la vista y presionando la tecla Supr.
 

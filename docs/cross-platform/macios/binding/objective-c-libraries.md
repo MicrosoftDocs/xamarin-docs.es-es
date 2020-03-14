@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914782"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306030"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -169,7 +169,7 @@ Sin embargo, puesto que usamos la interfaz como esqueleto para generar una clase
 
 El enlace más sencillo que puede hacer es enlazar un método. Basta con declarar un método en la interfaz con C# las convenciones de nomenclatura y decorar el método con la [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
 . El atributo [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) es lo que vincula C# su nombre con el nombre de Objective-C en el tiempo de ejecución de Xamarin. iOS. Parámetro del [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
-Attribute es el nombre del selector Objective-C. He aquí algunos ejemplos:
+Attribute es el nombre del selector Objective-C. Algunos ejemplos:
 
 ```csharp
 // A method, that takes no arguments
@@ -779,7 +779,7 @@ interface MyUIViewExtension {
 }
 ```
 
-Lo anterior creará un `MyUIViewExtension` una clase que contiene el método de extensión `MakeBackgroundRed`.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier subclase `UIView`, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Por ejemplo:
+Lo anterior creará un `MyUIViewExtension` una clase que contiene el método de extensión `MakeBackgroundRed`.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier subclase `UIView`, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Así:
 
 ```csharp
 @interface SocialNetworking (Twitter)

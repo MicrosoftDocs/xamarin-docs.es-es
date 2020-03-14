@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
 ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911549"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305868"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin. iOS
 

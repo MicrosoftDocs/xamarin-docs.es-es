@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013172"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305826"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde se puede encontrar mi información de versión y los registros?
 
@@ -50,7 +50,7 @@ Normalmente es mejor devolver toda la información de los botones **copiar infor
 
 **Ayuda > Acerca de > Mostrar detalles > copiar información [Button]**
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 **Ayuda > Acerca de Microsoft Visual Studio > copiar información [Button]**
 
@@ -68,7 +68,7 @@ Abra el administrador de Android SDK y realice una captura de pantalla de la sec
 
 **Herramientas > Abrir Android SDK Manager**
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 **Herramientas > Android > Abrir Android SDK Manager...**
 
@@ -156,17 +156,17 @@ Estos son los registros del instalador de `XamarinInstaller.dmg`.
 
 (Tenga en cuenta que este elemento de menú solo aparecerá una vez que se haya iniciado la aplicación).
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
 **Ver > salida > Mostrar salida de: depurar**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />registros de Android [`adb`](https://developer.android.com/tools/help/adb.html) logcat
+### <a name="a-idadb-logcat-nameadb-logcat-android-adb-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />registros de Android [`adb`](https://developer.android.com/tools/help/adb.html) logcat
 
 Después de ejecutar el comando `adb`, vuelva a adjuntar el archivo **android_logcat. txt** desde el escritorio. En estas instrucciones se supone que solo tiene un dispositivo conectado.
 
 Vea también la página de [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) .
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 1. **Herramientas > Android > Inicio del símbolo del sistema de Android ADB**
 2. Limpie el registro: `adb logcat -c`

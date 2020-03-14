@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914703"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306258"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -112,10 +112,10 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad|Value|
+|Property|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
-|`VerticalSizeClass`|Normal|
+|`VerticalSizeClass`|Estándar|
 |`UserInterfaceIdom`|Teléfono|
 |`DisplayScale`|2.0|
 
@@ -123,7 +123,7 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad|Value|
+|Property|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Sin especificar|
@@ -214,9 +214,9 @@ En primer lugar, iOS 8 realiza alguna configuración para preparar la transició
 
 iOS 8 proporciona varias devoluciones de llamada que el desarrollador puede usar para participar en el cambio de rasgo, tal como se muestra en la tabla siguiente:
 
-|Fase|Devolución de llamada|Descripción|
+|Phase|Callback|Description|
 |--- |--- |--- |
-|Configurar|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
+|Programa de instalación|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
 |Animación|`WillTransitionToTraitCollection`|El Coordinador de transiciones que se pasa a este método tiene una propiedad `AnimateAlongside` que permite al desarrollador agregar animaciones que se ejecutarán junto con las animaciones predeterminadas.|
 |Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyan su propio código de limpieza después de que tenga lugar la transición.|
 

@@ -1,6 +1,6 @@
 ---
 title: Apariencia de ListView
-description: En este artículo se explica cómo personalizar ListView en aplicaciones de Xamarin. Forms mediante encabezados, pies de página, grupos y celdas de alto variable.
+description: En este artículo se explica cómo personalizar la ListView en las aplicaciones de Xamarin.Forms mediante el uso de encabezados, pies de página, grupos y las celdas de alto variable.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
 ms.openlocfilehash: 90b0e0f3802ce766decb802c9406d72b5966360e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032815"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305652"
 ---
 # <a name="listview-appearance"></a>Apariencia de ListView
 
@@ -20,19 +20,19 @@ ms.locfileid: "73032815"
 
 El [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin. Forms permite personalizar la presentación de la lista, además de las instancias de [`ViewCell`](xref:Xamarin.Forms.ViewCell) para cada fila de la lista.
 
-## <a name="grouping"></a>Agrupar
+## <a name="grouping"></a>Agrupación
 
-Los grandes conjuntos de datos pueden resultar difíciles de manejar cuando se presentan en una lista de desplazamiento continuo. La habilitación de la agrupación puede mejorar la experiencia del usuario en estos casos al organizar mejor el contenido y activar controles específicos de la plataforma que facilitan la navegación por los datos.
+Los grandes conjuntos de datos pueden resultar difíciles de manejar cuando se presentan en una lista de desplazamiento continuo. Habilitar agrupación puede mejorar la experiencia del usuario en estos casos organizar mejor el contenido y activando controles específicos de la plataforma que facilitan la navegación de datos.
 
 Cuando se activa la agrupación para un `ListView`, se agrega una fila de encabezado para cada grupo.
 
 Para habilitar la agrupación:
 
-- Cree una lista de listas (una lista de grupos, cada grupo es una lista de elementos).
+- Crear una lista de listas (una lista de grupos, cada grupo que se va a obtener una lista de elementos).
 - Establezca la `ItemsSource` del `ListView`en esa lista.
 - Establezca `IsGroupingEnabled` en true.
 - Establezca [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) para enlazar a la propiedad de los grupos que se utiliza como título del grupo.
-- Opta Establezca [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) para enlazar a la propiedad de los grupos que se usa como nombre corto para el grupo. El nombre corto se usa para las Jump Lists (columna derecha en iOS).
+- Opta Establezca [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) para enlazar a la propiedad de los grupos que se usa como nombre corto para el grupo. El nombre corto se utiliza para las listas de salto (columna derecha en iOS).
 
 Empiece por crear una clase para los grupos:
 
@@ -54,7 +54,7 @@ public class PageTypeGroup : List<PageModel>
 
 En el código anterior, `All` es la lista que se proporcionará a nuestro ListView como el origen de enlace. `Title` y `ShortName` son las propiedades que se utilizarán para los encabezados de grupo.
 
-En esta fase, `All` es una lista vacía. Agregue un constructor estático para que la lista se rellene al iniciar el programa:
+En esta fase, `All` es una lista vacía. Agregue un constructor estático para que se rellenará la lista en el inicio del programa:
 
 ```csharp
 static PageTypeGroup()
@@ -79,7 +79,7 @@ static PageTypeGroup()
 
 En el código anterior, también se puede llamar a `Add` en elementos de `Groups`, que son instancias de tipo `PageTypeGroup`. Este método es posible porque `PageTypeGroup` hereda de `List<PageModel>`.
 
-Este es el código XAML para mostrar la lista agrupada:
+Este es el XAML para mostrar la lista agrupada:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,11 +115,11 @@ En la siguiente captura de pantalla se muestra la interfaz de usuario resultante
 
 ### <a name="customizing-grouping"></a>Personalización de la agrupación
 
-Si se ha habilitado la agrupación en la lista, el encabezado de grupo también se puede personalizar.
+Si se ha habilitado la agrupación en la lista, también se puede personalizar el encabezado de grupo.
 
 De forma similar al modo en que el `ListView` tiene un `ItemTemplate` para definir cómo se muestran las filas, `ListView` tiene un `GroupHeaderTemplate`.
 
-A continuación se muestra un ejemplo de personalización del encabezado de grupo en XAML:
+Aquí se muestra un ejemplo de personalizar el encabezado de grupo en XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,11 +156,11 @@ A continuación se muestra un ejemplo de personalización del encabezado de grup
 
 ## <a name="headers-and-footers"></a>Encabezados y pies de página
 
-Es posible que un control ListView presente un encabezado y un pie de página que se desplacen con los elementos de la lista. El encabezado y el pie de página pueden ser cadenas de texto o un diseño más complicado. Este comportamiento es independiente de los [grupos de sección](#grouping).
+Es posible que un ListView presentar un encabezado y pie de página que se desplazan con los elementos de la lista. El encabezado y pie de página pueden ser cadenas de texto o un diseño más complicado. Este comportamiento es independiente de los [grupos de sección](#grouping).
 
 Puede establecer el `Header` o `Footer` en un valor de `string`, o bien puede establecerlos en un diseño más complejo. También hay `HeaderTemplate` y `FooterTemplate` propiedades que permiten crear diseños más complejos para el encabezado y el pie de página que admiten el enlace de datos.
 
-Para crear un encabezado/pie de página básico, solo tiene que establecer las propiedades de encabezado o de pie de página en el texto que desea mostrar. Mediante código:
+Para crear un encabezado/pie de página básico, solo tiene que establecer las propiedades de encabezado o de pie de página en el texto que desea mostrar. En el código:
 
 ```csharp
 ListView HeaderList = new ListView()
@@ -182,7 +182,7 @@ En XAML:
 
 ![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
 
-Para crear un encabezado y un pie de página personalizados, defina las vistas de encabezado y pie de página:
+Para crear un encabezado personalizado y un pie de página, definir las vistas de encabezado y pie de página:
 
 ```xaml
 <ListView.Header>
@@ -226,7 +226,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
-LENGUAJE
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
@@ -234,7 +234,7 @@ LENGUAJE
 
 ![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
 
-Ninguno:
+None (Ninguno):
 
 C#:
 
@@ -242,7 +242,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
-LENGUAJE
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
@@ -258,7 +258,7 @@ C#:
 SeparatorDemoListView.SeparatorColor = Color.Green;
 ```
 
-LENGUAJE
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
@@ -271,9 +271,9 @@ LENGUAJE
 
 ## <a name="row-height"></a>Alto de fila
 
-Todas las filas de un control ListView tienen el mismo alto de forma predeterminada. ListView tiene dos propiedades que se pueden usar para cambiar este comportamiento:
+Todas las filas en una ListView tienen el mismo alto de forma predeterminada. ListView tiene dos propiedades que pueden usarse para cambiar este comportamiento:
 
-- `HasUnevenRows` &ndash; `true`/`false` valor, las filas tienen alturas variables si están establecidas en `true`. Tiene como valor predeterminado `false`.
+- `HasUnevenRows` &ndash; `true`/`false` valor, las filas tienen alturas variables si están establecidas en `true`. Su valor predeterminado es `false`.
 - `RowHeight` &ndash; establece el alto de cada fila cuando se `false``HasUnevenRows`.
 
 Puede establecer el alto de todas las filas estableciendo la propiedad `RowHeight` en el `ListView`.
@@ -286,7 +286,7 @@ C#:
 RowHeightDemoListView.RowHeight = 100;
 ```
 
-LENGUAJE
+XAML:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
@@ -304,7 +304,7 @@ C#:
 RowHeightDemoListView.HasUnevenRows = true;
 ```
 
-LENGUAJE
+XAML:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 26fbe6af639c67a94408605ba456bb3a100d2355
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155256"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305892"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -34,7 +34,7 @@ ms.locfileid: "78155256"
 > [!NOTE]
 > `WebView` en Windows no es compatible con Silverlight, flash ni ningún control ActiveX, aunque sea compatible con Internet Explorer en esa plataforma.
 
-### <a name="websites"></a>Sitios web
+### <a name="websites"></a>Websites
 
 Para mostrar un sitio web desde Internet, establezca la propiedad [`Source`](xref:Xamarin.Forms.WebViewSource) del `WebView`en una dirección URL de cadena:
 
@@ -326,7 +326,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Ya está.
+Eso es todo.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
