@@ -7,58 +7,37 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.custom: video
-ms.date: 01/22/2019
-ms.openlocfilehash: bdc8366e75455755cbb2f533b6707f72e33436e2
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.date: 03/05/2020
+ms.openlocfilehash: f0612ca53bc54cf4b15982b7743c64b1997a4455
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425586"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031082"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Aprovisionamiento automático para Xamarin.iOS
 
-_Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática para solicitar certificados de desarrollo y perfiles._
+_Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso del aprovisionamiento automático para solicitar certificados de desarrollo y perfiles._
 
 ## <a name="requirements"></a>Requisitos
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+El aprovisionamiento automático está disponible en Visual Studio para Mac, Visual Studio 2019 y Visual Studio 2017 (versión 15.7 y posteriores). 
 
-- Visual Studio para Mac 7.3 o posterior
-- Xcode 9 o posterior
+También debe tener una cuenta de desarrollador de Apple de pago para usar esta característica. Puede encontrar más información sobre las cuentas de desarrollador de Apple en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+> [!NOTE]
+> Antes de empezar, asegúrese de aceptar primero todos los contratos de licencia en el [portal para desarrolladores de Apple](https://developer.apple.com/account/) o [App Store Connect](https://appstoreconnect.apple.com/).
 
-- Visual Studio 2019
-- O bien, Visual Studio 2017 versión 15.7 (o superior)
 
-También debe estar emparejado a un host de compilación de Mac que tenga lo siguiente:
+## <a name="enable-automatic-provisioning"></a>Habilitar el aprovisionamiento automático
 
-- Xcode 10 o posterior
+Antes de iniciar el proceso de firma automática, debe asegurarse de que se haya agregado un ID de Apple en Visual Studio, como se explica en la guía de [administración de cuentas de Apple](~/cross-platform/macios/apple-account-management.md). 
 
------
-
-## <a name="enabling-automatic-signing"></a>Habilitación de la firma automática
-
-Antes de iniciar el proceso de firma automática, debe asegurarse de que se haya agregado un Id. de Apple en Visual Studio, como se explica en la guía [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Administración de cuentas de Apple). Una vez que haya agregado un Id. de Apple, puede usar cualquier _equipo_ asociado. Así podrá crear certificados, perfiles y otros id. a partir de los datos del equipo. El id. de equipo también se usa para crear un prefijo para un id. de aplicación que se incluirá en el perfil de aprovisionamiento. Todo esto permite a Apple comprobar su identidad.
-
-> [!IMPORTANT]
-> Antes de comenzar, asegúrese de iniciar sesión en [iTunes Connect](https://itunesconnect.apple.com/) o [appleid.apple.com](https://appleid.apple.com) para comprobar que han aceptado las últimas directivas de cuenta de Apple. Si se le solicita, complete los pasos para aceptar los nuevos contratos de cuenta de Apple. Si no acepta el contrato de privacidad de mayo de 2018, verá una de las alertas siguientes al intentar aprovisionar el dispositivo:
->
-> ```
-> Unexpected authentication failure. Reason: {
-> "authType" : "sa"
-> }
-> ```
->
-> o
->
-> ```
-> Authentication Service Is Unavailable
-> ```
+Una vez que haya agregado un Id. de Apple, puede usar cualquier _equipo_ asociado. Así podrá crear certificados, perfiles y otros id. a partir de los datos del equipo. El id. de equipo también se usa para crear un prefijo para un id. de aplicación que se incluirá en el perfil de aprovisionamiento. Todo esto permite a Apple comprobar su identidad.
 
 Para inscribir la aplicación automáticamente para su implementación en un dispositivo iOS, haga lo siguiente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra un proyecto de iOS en Visual Studio para Mac.
 
@@ -76,29 +55,26 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
     Si se produce un error en la firma automática, el panel **Firma automática** muestra el motivo de ese error.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Empareje Visual Studio 2019 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> [!NOTE]
+> Si usa Visual Studio 2017 o Visual Studio 2019 (versión 16.4 y anteriores), tendrá que estar [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) antes de continuar.
 
-2. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Propiedades**. Vaya a la pestaña **Firma del lote de iOS**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto de iOS y seleccione **Propiedades**. Luego, vaya a la pestaña **Firma del lote de iOS**:
 
-3. Seleccione el esquema **Aprovisionamiento automático**:
+    ![Captura de pantalla de la página de firma de lote en las propiedades de iOS.](automatic-provisioning-images/bundle-signing-win.png)
 
-    ![Selección del esquema Automático](automatic-provisioning-images/prov4.png)
+2. Seleccione el esquema **Aprovisionamiento automático**.
 
-4. Seleccione el equipo en el cuadro combinado **Equipo** para iniciar el proceso de firma automática.
+3. Seleccione el equipo en el menú desplegable **Equipo** para iniciar el proceso de firma automática. Visual Studio indicará si el proceso se completó correctamente:
 
-    ![Selección del equipo](automatic-provisioning-images/prov3.png)
-
-5. Esto inicia el proceso de firma automática. Luego Visual Studio intenta generar un Id. de aplicación, un perfil de aprovisionamiento y una identidad de firma para usar estos artefactos para la firma. Puede ver el proceso de generación en la salida de la compilación:
-
-    ![Salida de la compilación que muestra la generación de artefactos](automatic-provisioning-images/prov5.png)
+    ![Captura de pantalla de la página de firma del lote que resalta el mensaje de que el aprovisionamiento automático se completó correctamente.](automatic-provisioning-images/signing-success-win.png)
 
 -----
 
-## <a name="triggering-automatic-provisioning"></a>Inicio del aprovisionamiento automático
+## <a name="run-automatic-provisioning"></a>Ejecución del aprovisionamiento automático
 
-Cuando se ha habilitado la firma automática, Visual Studio para Mac actualiza estos artefactos en caso necesario si sucede algo de lo siguiente:
+Cuando el aprovisionamiento automático está habilitado, Visual Studio volverá a ejecutar el proceso si es necesario cuando se produzca cualquiera de las siguientes acciones:
 
 - Se conecta un dispositivo iOS al equipo Mac
   - Comprueba automáticamente si el dispositivo está registrado en el portal Apple Developer. Si no es así, lo agrega y genera un nuevo perfil de aprovisionamiento que lo contiene.
@@ -110,7 +86,7 @@ Cuando se ha habilitado la firma automática, Visual Studio para Mac actualiza e
 
 ## <a name="wildcard-app-ids"></a>Identificadores de aplicación comodín
 
-A partir de Visual Studio para Mac 7.6, el aprovisionamiento automático, de forma predeterminada, intenta crear y usar el identificador de la aplicación comodín y perfiles de aprovisionamiento, en lugar de un identificador de aplicación basado en el **identificador del lote** especificado en **Info.plist**. Un identificador de aplicación comodín reduce el número de perfiles e identificadores que deben mantenerse en el portal para desarrolladores de Apple.
+En Visual Studio para Mac y Visual Studio 2019 (versión 16.5 o superior), el aprovisionamiento automático, de forma predeterminada, intenta crear y usar el identificador de la aplicación comodín y perfiles de aprovisionamiento, en lugar de un identificador de aplicación basado en el **identificador del lote** especificado en **Info.plist**. Un identificador de aplicación comodín reduce el número de perfiles e identificadores que deben mantenerse en el portal para desarrolladores de Apple.
 
 En algunos casos, los derechos de una aplicación requieren un identificador de aplicación explícito. Los siguientes derechos no admiten identificadores de aplicación comodín:
 
@@ -128,10 +104,13 @@ En algunos casos, los derechos de una aplicación requieren un identificador de 
 - Notificaciones push
 - Configuración inalámbrica de accesorios
 
-Si la aplicación utiliza uno de estos derechos, Visual Studio para Mac intentará crear un identificador de aplicación explícito (en lugar de un comodín).
+Si la aplicación utiliza uno de estos derechos, Visual Studio intentará crear un identificador de aplicación explícito (en lugar de un comodín).
 
-> [!NOTE]
-> Actualmente, el aprovisionamiento automático con los identificadores de aplicación comodín solo está disponible en Visual Studio para Mac.
+## <a name="troubleshoot"></a>Solucionar problemas 
+
+- Pueden pasar varias horas hasta que se apruebe una nueva cuenta de desarrollador de Apple. No podrá habilitar el aprovisionamiento automático hasta que se haya aprobado la cuenta.
+- Si el proceso de aprovisionamiento automático no puede completarse y aparece el mensaje de error `Authentication Service Is Unavailable`, inicie sesión en [App Store Connect](https://appstoreconnect.apple.com/) o [appleid.apple.com](https://appleid.apple.com) para comprobar que ha aceptado los contratos de servicio más recientes.
+- Si aparece el mensaje de error `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, asegúrese de que el equipo seleccionado tiene una suscripción de pago activa al programa para desarrolladores de Apple. Para usar una cuenta de pago de desarrolladores de Apple, consulte la guía de [aprovisionamiento gratuito para aplicaciones Xamarin.iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
@@ -139,9 +118,3 @@ Si la aplicación utiliza uno de estos derechos, Visual Studio para Mac intentar
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribución de aplicaciones)
 - [Solución de problemas](~/ios/deploy-test/troubleshooting.md)
 - [Guía de distribución de aplicaciones de Apple](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-
-## <a name="related-video"></a>Vídeo relacionado
-
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
-
-[!include[](~/essentials/includes/xamarin-show-essentials.md)]

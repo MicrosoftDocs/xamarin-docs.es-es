@@ -8,27 +8,27 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 75f153499edb6d979f9a0269a1439eaf8ca53878
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334252"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumen del capítulo 8. Código y XAML en armonía
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 
-Este capítulo analiza XAML mayor profundidad, y especialmente cómo código y XAML interactúan.
+En este capítulo se explora XAML más profundamente y, en particular, cómo interactúan el código y XAML.
 
-## <a name="passing-arguments"></a>Pasar argumentos
+## <a name="passing-arguments"></a>Paso de argumentos
 
-Por lo general, una clase que crea una instancia en XAML debe tener un constructor público sin parámetros; el objeto resultante se inicializa mediante la configuración de la propiedad. Sin embargo, hay otras dos formas que se pueden crear instancias de objetos e inicializados.
+En general, una clase de la que se ha creado una instancia en XAML debe tener un constructor sin parámetros público; el objeto resultante se inicializa a través de la configuración de las propiedades. Sin embargo, hay otras dos maneras en las que se pueden crear instancias en los objetos e iniciarlos.
 
-Aunque son técnicas de propósito generales, se usan principalmente en relación con los modelos de vista de MVVM.
+Aunque son técnicas de uso general, se usan principalmente en conexión con los modelos de vista MVVM.
 
 ### <a name="constructors-with-arguments"></a>Constructores con argumentos
 
-El [ **ParameteredConstructorDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ParameteredConstructorDemo) ejemplo muestra cómo usar el `x:Arguments` etiquetas para especificar los argumentos de constructor. Estos argumentos deben estar delimitados por etiquetas de elemento que indica el tipo del argumento. Para los tipos de datos de .NET básicos, están disponibles las siguientes etiquetas:
+En el ejemplo [**ParameteredConstructorDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ParameteredConstructorDemo) se muestra cómo utilizar la etiqueta `x:Arguments` para especificar argumentos de constructor. Estos argumentos se deben delimitar mediante etiquetas de elemento que indiquen el tipo del argumento. En el caso de los tipos de datos básicos de .NET, están disponibles las siguientes etiquetas:
 
 - `x:Object`
 - `x:Boolean`
@@ -45,41 +45,41 @@ El [ **ParameteredConstructorDemo** ](https://github.com/xamarin/xamarin-forms-b
 - `x:Array`
 - `x:DateTime`
 
-### <a name="can-i-call-methods-from-xaml"></a>¿Se puede llamar a métodos de XAML?
+### <a name="can-i-call-methods-from-xaml"></a>¿Puedo llamar a métodos desde XAML?
 
-El [ **FactoryMethodDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) ejemplo muestra cómo usar el `x:FactoryMethod` elemento para especificar un método de generador que se invoca para crear un objeto. Este tipo de método de generador debe ser public y static y debe crear un objeto del tipo en el que está definido. (Por ejemplo el [ `Color.FromRgb` ](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) método califica porque es estático y público y devuelve un valor de tipo `Color`.) Se especifican los argumentos para el método de fábrica en `x:Arguments` etiquetas.
+En el ejemplo [**FactoryMethodDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) se muestra cómo utilizar el elemento `x:FactoryMethod` para especificar un método Factory Method que se invoca para crear un objeto. Este método debe ser público y estático, y debe crear un objeto del tipo en el que se define. (Por ejemplo, el método [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) es válido porque es público y estático y devuelve un valor de tipo `Color`). Los argumentos del método Factory Method se especifican en etiquetas `x:Arguments`.
 
-## <a name="the-xname-attribute"></a>El atributo x: Name
+## <a name="the-xname-attribute"></a>Atributo x:Name
 
-El `x:Name` atributo permite que un objeto que se crea una instancia en XAML que se asignará un nombre. Las reglas para estos nombres son los mismos que para los nombres de variables de C#. Después de la devolución de la `InitializeComponent` llame en el constructor, el archivo de código subyacente puede hacer referencia a estos nombres para tener acceso al elemento correspondiente de XAML. Los nombres se convierten realmente por el analizador XAML en campos privados de la clase parcial generada.
+El atributo `x:Name` permite asignar un nombre a un objeto del que se ha creado una instancia en XAML. Las reglas para estos nombres son las mismas que para los nombres de variable de C#. Después de la devolución de la llamada de `InitializeComponent` en el constructor, el archivo de código subyacente puede hacer referencia a estos nombres para tener acceso al elemento XAML correspondiente. El analizador XAML convierte realmente los nombres en campos privados en la clase parcial generada.
 
-El [ **XamlClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlClock) ejemplo muestra el uso de `x:Name` para permitir que el archivo de código subyacente mantener dos `Label` elementos definidos en XAML que se actualiza con la fecha y hora actuales.
+En el ejemplo [**XamlClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlClock) se muestra el uso de `x:Name` para permitir que el archivo de código subyacente mantenga dos elementos `Label` definidos en XAML actualizados con la fecha y hora actuales.
 
-No se puede usar el mismo nombre para varios elementos en la misma página. Esto es un problema concreto, si usa `OnPlatform` crear en paralelo los objetos con nombre para cada plataforma. El [ **PlatformSpecificLabele** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/PlatformSpecificLabels) muestra una mejor manera de hacer algo como esto.
+No se puede usar el mismo nombre para varios elementos de la misma página. Se trata de un problema determinado si usa `OnPlatform` para crear objetos con nombre en paralelo para cada plataforma. En el ejemplo [**PlatformSpecificLabele**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/PlatformSpecificLabels) se muestra una mejor manera de hacer una tarea de ese tipo.
 
 ## <a name="custom-xaml-based-views"></a>Vistas personalizadas basadas en XAML
 
-Hay varias maneras de evitar la repetición de marcado en XAML. Una técnica común consiste en crear una nueva clase basada en XAML que se deriva de [ `ContentView` ](xref:Xamarin.Forms.ContentView). Esta técnica se muestra en el [ **ColorViewList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList) ejemplo. El `ColorView` clase se deriva de `ContentView` para mostrar un color determinado y su nombre, mientras que el `ColorViewListPage` clase se deriva de `ContentPage` como de costumbre y explícitamente crea 17 instancias de `ColorView`.
+Hay varias maneras de evitar la repetición de marcado en XAML. Una técnica común consiste en crear una nueva clase basada en XAML que se derive de [`ContentView`](xref:Xamarin.Forms.ContentView). Esta técnica se muestra en el ejemplo [**ColorViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList). La clase `ColorView` se deriva de `ContentView` para mostrar un color determinado y su nombre, mientras que la clase `ColorViewListPage` se deriva de `ContentPage` como de costumbre y crea explícitamente 17 instancias de `ColorView`.
 
-Obtener acceso a la `ColorView` clase en XAML requiere otra declaración de espacio de nombres XML, normalmente denominado `local` para las clases en el mismo ensamblado.
+El acceso a la clase `ColorView` en XAML requiere otra declaración de espacio de nombres XML, denominada normalmente `local` para las clases del mismo ensamblado.
 
 ## <a name="events-and-handlers"></a>Eventos y controladores
 
-Los eventos se pueden asignar a los controladores de eventos en XAML, pero el propio controlador de eventos debe implementarse en el archivo de código subyacente. El [ **XamlKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlKeypad) muestra cómo crear una interfaz de usuario de teclado en XAML y cómo implementar el `Clicked` controladores en el archivo de código subyacente.
+Los eventos se pueden asignar a los controladores de eventos en XAML, pero el propio controlador de eventos debe implementarse en el archivo de código subyacente. El ejemplo [**XamlKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlKeypad) muestra cómo compilar una interfaz de usuario de teclado en XAML y cómo implementar los controladores de `Clicked` en el archivo de código subyacente.
 
-## <a name="tap-gestures"></a>Puntee en gestos
+## <a name="tap-gestures"></a>Gestos de pulsación
 
-Cualquier `View` objeto puede obtener la entrada táctil y generar eventos de esa entrada. El `View` clase define un [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) propiedad de colección que puede contener uno o más instancias de clases que derivan de [ `GestureRecognizer` ](xref:Xamarin.Forms.GestureRecognizer).
+Cualquier objeto `View` puede obtener entradas táctiles y generar eventos a partir de esa entrada. La clase `View` define una propiedad de colección [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) que puede contener una o más instancias de las clases que derivan de [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer).
 
-El [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) genera [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) eventos. El [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) programa muestra cómo asociar `TapGestureRecognizer` objetos a cuatro `BoxView` elementos para crear un juego imitación:
+[`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) genera eventos [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped). El programa [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) muestra cómo adjuntar objetos de `TapGestureRecognizer` a cuatro elementos de `BoxView` para crear un juego de imitación:
 
-[![Captura de pantalla de triple de derivación de monkey](images/ch08fg07-small.png "imitación juego")](images/ch08fg07-large.png#lightbox "imitación juego")
+[![Captura de pantalla triple de Monkey Tap](images/ch08fg07-small.png "Juego de imitación")](images/ch08fg07-large.png#lightbox "Juego de imitación")
 
-Pero la **MonkeyTap** programa necesita realmente el sonido. (Consulte [el próximo capítulo](chapter09.md).)
+Pero el programa **MonkeyTap** realmente necesita sonido. (Vea el [capítulo siguiente](chapter09.md)).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto completo de capítulo 8 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
-- [Ejemplos de capítulo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
-- [Capítulo 8 F# ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
-- [Pasar argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md)
+- [Texto completo del capítulo 8 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
+- [Ejemplos del capítulo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+- [Ejemplo de F# del capítulo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
+- [Paso de argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md)

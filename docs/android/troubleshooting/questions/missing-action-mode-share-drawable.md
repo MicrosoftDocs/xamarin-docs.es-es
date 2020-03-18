@@ -8,24 +8,24 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: e688bd27d1116b2a77a12ccd6da29ea582053581
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75728114"
 ---
 # <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat: no se encontró ningún recurso que coincida con el nombre especificado: attr 'android: actionModeShareDrawable'
 
-1. Asegúrese de descargar los extras más recientes, así como el SDK de Android 5,0 (API 21) a través del administrador de Android SDK.
+1. Asegúrese de descargar los extras más recientes, así como el SDK de Android 5.0 (API 21) a través del Administrador de Android SDK.
 
-2. Asegúrese de que está compilando la aplicación con compileSdkVersion establecido en 21. También puede establecer el valor de targetSdkVersion en 21.
+2. Asegúrese de que está compilando la aplicación con compileSdkVersion establecido en 21. También puede establecer targetSdkVersion en 21.
 
 3. Si necesita una versión anterior, como la API 19, descargue la versión correspondiente que se encuentra en la página de NuGet:
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
 > [!NOTE]
-> Si lo instala manualmente a través de la consola del administrador de paquetes, asegúrese de instalar también la misma versión de Xamarin. Android. support. V4
+> Si la instala manualmente a través de la Consola del Administrador de paquetes, asegúrese de instalar también la misma versión de Xamarin.Android.Support.v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 

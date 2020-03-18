@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155269"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910732"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,6 +28,7 @@ Siga las guías para integrar estas características de Xamarin.Essentials en la
 
 * [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms): recupere los datos de aceleración del dispositivo en un espacio tridimensional.
 * [App Information](app-information.md?context=xamarin/xamarin-forms): conozca información sobre la aplicación.
+* [Tema de la aplicación](app-theme.md?context=xamarin/xamarin-forms): detecte el tema actual solicitado para la aplicación.
 * [Barometer](barometer.md?context=xamarin/xamarin-forms): supervise los cambios de presión con el barómetro.
 * [Battery](battery.md?context=xamarin/xamarin-forms): detecte fácilmente el nivel, origen y estado de la batería.
 * [Clipboard](clipboard.md?context=xamarin/xamarin-forms): establezca o lea fácil y rápidamente texto en el Portapapeles.
