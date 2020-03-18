@@ -8,21 +8,24 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e6c8e7b84ba8e3d0f6e6247798bb9164a3bc994d
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728348"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423907"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
 > [!NOTE]
-> La vista previa de la recarga en vivo de Xamarin ha finalizado y queremos agradecer a todos sus comentarios y comentarios. Lea nuestra [Guía básica](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) de Visual Studio 2019 para obtener más información sobre las nuevas características de productividad en las que estamos trabajando para Xamarin. Forms. Esta extensión seguirá estando disponible para Visual Studio 2017, pero no recibirá actualizaciones futuras.
+> La vista previa de la recarga en vivo de Xamarin ha finalizado y queremos agradecer a todos sus comentarios y comentarios. 
+>
+> Para editar el código XAML mientras se ejecuta la aplicación, use la [recarga activa de XAML para Xamarin. Forms](~/xamarin-forms/xaml/hot-reload.md).
+>
 
 La recarga en vivo de Xamarin permite **realizar cambios en el código XAML y verlos reflejados en directo, sin necesidad de volver a compilar e implementar**. Cualquier cambio realizado en el código XAML se volverá a implementar al guardarlo y se reflejará en el destino de implementación.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 * [Visual Studio 2017 versión 15,7 o superior](https://visualstudio.microsoft.com/vs/) con la carga de trabajo **desarrollo para dispositivos móviles con .net** .
 * [Xamarin. Forms 3.0.0 o superior](https://www.nuget.org/packages/Xamarin.Forms/).
@@ -121,7 +124,7 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 * Los elementos que contienen AutomationId pueden producir un error de recarga.
 * La edición de XAML durante la depuración de UWP puede producir un bloqueo en tiempo de ejecución. Solución alternativa: use **iniciar sin depurar (Ctrl + F5)** en lugar de **iniciar depuración (F5)** .
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="error-codes"></a>Códigos de error
 
@@ -160,7 +163,7 @@ Si tiene una versión preliminar anterior y tiene problemas para desinstalarla, 
 1. Elimine la carpeta C:\Archivos de programa **(x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Nota: reemplace "Enterprise" por la edición instalada y "Preview" por "2017" Si instaló en una versión estable frente a)
 2. Abra un **símbolo del sistema para desarrolladores** de Visual Studio y ejecute `devenv /updateconfiguration`. 
 
-## <a name="tips--tricks"></a>Sugerencias y trucos
+## <a name="tips--tricks"></a>Sugerencias & trucos
 
 * Siempre y cuando la configuración de recarga en directo no cambie (incluidas las claves de cifrado, por ejemplo, si desactiva la **generación automática de claves de cifrado**) y se compila desde el mismo equipo, no es necesario compilar e implementar la aplicación después de la implementación inicial, a menos que cambies el código o las dependencias. Simplemente puede volver a iniciar una aplicación implementada previamente y se conectará al último host usado.
 

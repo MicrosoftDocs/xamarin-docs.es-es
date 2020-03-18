@@ -7,13 +7,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 02/04/2019
-ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 03/16/2020
+ms.openlocfilehash: 465783c0771b666a276d18f47cf5d3d458d52933
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306426"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423933"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Vista previa de XAML para Xamarin. Forms
 
@@ -29,11 +29,11 @@ El previsor de XAML muestra cómo se verá la página XAML de Xamarin. Forms en 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-Para abrir el cuadro de vista previa de XAML, haga clic en las flechas del panel vista en dos paneles. Si desea cambiar el comportamiento predeterminado de la vista en dos paneles, use las opciones de herramientas > > cuadro de diálogo de **vista previa de formularios de Xamarin >** . En este cuadro de diálogo, puede seleccionar la vista de documento predeterminada y la orientación de división.
+Para abrir el cuadro de vista previa de XAML, haga clic en las flechas del panel vista en dos paneles. Si desea cambiar el comportamiento predeterminado de la vista en dos paneles, use las opciones de las herramientas > > cuadro de diálogo de **vista previa de XAML de xamarin > Xamarin. Forms** . En este cuadro de diálogo, puede seleccionar la vista de documento predeterminada y la orientación de división.
 
 [![Opciones de vista previa de Xamarin. Forms en Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opciones de vista previa de Xamarin. Forms en Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
-Al abrir un archivo XAML, el editor abrirá el tamaño completo o junto al previsualizador, en función de la configuración seleccionada en las opciones de herramientas > > cuadro de diálogo de **vista previa de formularios de Xamarin >** . Sin embargo, se puede cambiar la división de cada archivo en la ventana del editor.
+Al abrir un archivo XAML, el editor abrirá el tamaño completo o junto al previsualizador, en función de la configuración seleccionada en las opciones de herramientas > > cuadro de diálogo de la **vista previa de XAML de xamarin > Xamarin. Forms** . Sin embargo, se puede cambiar la división de cada archivo en la ventana del editor.
 
 #### <a name="xaml-preview-controls"></a>Controles de vista previa de XAML
 
@@ -44,6 +44,10 @@ Elija si desea ver el código, el previsor de XAML o ambos; para ello, seleccion
 Puede cambiar si la pantalla está dividida vertical u horizontalmente o contraer un panel por completo:
 
 [![Controles de orientación del panel de vista previa de Xamarin. Forms en Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Controles de orientación del panel de vista previa de Xamarin. Forms en Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar o deshabilitar el previsor de XAML
+
+Puede desactivar la vista previa de XAML en el cuadro de diálogo **herramientas > opciones > xamarin > Xamarin. Forms XAML Previewer** seleccionando **Editor XML predeterminado** como **editor XAML predeterminado**. Esto también desactiva el esquema del documento, el panel de propiedades y el cuadro de herramientas XAML. Para volver a activar la vista previa de XAML y las herramientas, cambie el **editor XAML predeterminado** a la **vista previa de Xamarin. Forms**.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -56,6 +60,10 @@ El botón **vista previa** se muestra en el editor cuando se abre una página XA
 
 > [!NOTE]
 > En versiones anteriores de Visual Studio para Mac, el botón **vista previa** se encontraba en la parte superior derecha de la ventana.
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar o deshabilitar el previsor de XAML
+
+Puede desactivar la vista previa de XAML en el cuadro de diálogo **preferencias de > de Visual Studio > editor de texto > XAML** seleccionando **Editor XML predeterminado** como **editor XAML predeterminado**. Esto también desactiva el esquema del documento, el panel de propiedades y el cuadro de herramientas XAML. Para volver a activar la vista previa de XAML y las herramientas, cambie el **editor XAML predeterminado** a la **vista previa de Xamarin. Forms**.
 
 ::: zone-end
 
