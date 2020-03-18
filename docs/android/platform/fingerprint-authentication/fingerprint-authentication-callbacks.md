@@ -7,30 +7,30 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
 ms.openlocfilehash: 8dc06740355bd95828e1a1bd8d9d15a2ef37e6b2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027530"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Respuesta a las devoluciones de llamada de autenticación
 
-El escáner de huellas digitales se ejecuta en segundo plano en su propio subproceso y, cuando finaliza, informará de los resultados del análisis al invocar un método de `FingerprintManager.AuthenticationCallback` en el subproceso de la interfaz de usuario. Una aplicación de Android debe proporcionar su propio controlador, que extiende esta clase abstracta, implementando todos los métodos siguientes:
+El escáner de huellas digitales se ejecuta en segundo plano en su propio subproceso y, cuando finaliza, informa de los resultados del análisis mediante la invocación de un método de `FingerprintManager.AuthenticationCallback` en el subproceso de interfaz de usuario. Una aplicación de Android debe proporcionar su propio controlador, que amplía esta clase abstracta e implementa todos los métodos siguientes:
 
-- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; llama cuando se produce un error irrecuperable. No hay nada más que una aplicación o usuario puede hacer para corregir la situación, salvo que es posible que vuelva a intentarlo.
-- **`OnAuthenticationFailed()`** &ndash; se invoca este método cuando se detecta una huella digital, pero el dispositivo no la reconoce.
-- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; llama cuando se produce un error recuperable, por ejemplo, el dedo se desliza rápidamente a través del escáner.
-- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; se llama a este método cuando se reconoce una huella digital.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Se invoca cuando se produce un error irrecuperable. No hay nada más que una aplicación o usuario pueda hacer para corregir la situación, excepto, quizás, volver a intentarlo.
+- **`OnAuthenticationFailed()`** &ndash; Este método se invoca cuando se detecta una huella digital, pero el dispositivo no la reconoce.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Se invoca cuando se produce un error recuperable; por ejemplo, el dedo se desliza demasiado rápido por el escáner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Se invoca cuando se reconoce una huella digital.
 
-Si se usó un `CryptoObject` al llamar a `Authenticate`, se recomienda llamar a `Cipher.DoFinal` en `OnAuthenticationSuccessful`.
-`DoFinal` producirá una excepción si el cifrado se altera o se inicializó incorrectamente, lo que indica que el resultado del escáner de huellas digitales puede haberse alterado fuera de la aplicación.
+Si se usó `CryptoObject` al llamar a `Authenticate`, se recomienda llamar a `Cipher.DoFinal` en `OnAuthenticationSuccessful`.
+`DoFinal` generará una excepción si el cifrado se alteró o se inicializó incorrectamente, lo que indica que el resultado del escáner de huellas digitales puede haberse alterado fuera de la aplicación.
 
 > [!NOTE]
-> Se recomienda mantener la clase de devolución de llamada relativamente ligera y liberar la lógica específica de la aplicación. Las devoluciones de llamada deben actuar como un "COP de tráfico" entre la aplicación Android y los resultados del escáner de huellas digitales.
+> Se recomienda mantener la clase de devolución de llamada relativamente ligera y libre de lógica específica de la aplicación. Las devoluciones de llamada deben actuar como "policía de tráfico" entre la aplicación para Android y los resultados del escáner de huellas digitales.
 
-## <a name="a-sample-authentication-callback-handler"></a>Un controlador de devolución de llamada de autenticación de ejemplo
+## <a name="a-sample-authentication-callback-handler"></a>Controlador de devolución de llamada de autenticación de muestra
 
-La clase siguiente es un ejemplo de una implementación de `FingerprintManager.AuthenticationCallback` mínima: 
+A continuación se muestra un ejemplo de implementación mínima de `FingerprintManager.AuthenticationCallback`: 
 
 ```csharp
 class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
@@ -90,44 +90,44 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 }
 ```
 
-`OnAuthenticationSucceeded` comprueba si se proporcionó un `Cipher` para `FingerprintManager` cuando se invocó `Authentication`. En ese caso, se llama al método `DoFinal` en el cifrado. Esto cierra el `Cipher`y lo restaura a su estado original. Si se produjo un problema con el cifrado, `DoFinal` producirá una excepción y se debe considerar que el intento de autenticación ha producido un error.
+`OnAuthenticationSucceeded` comprueba si se proporcionó un valor de `Cipher` para `FingerprintManager` cuando se invocó `Authentication`. En ese caso, se llama al método `DoFinal` en el cifrado. Esto cierra `Cipher` y lo restaura a su estado original. Si se produjo un problema con el cifrado, `DoFinal` devolverá una excepción y se debe considerar que el intento de autenticación ha generado un error.
 
-Cada una de las devoluciones de llamada `OnAuthenticationError` y `OnAuthenticationHelp` recibe un entero que indica cuál fue el problema. En la siguiente sección se explica cada uno de los posibles códigos de ayuda o error. Las dos devoluciones de llamada sirven para propósitos similares &ndash; para informar a la aplicación de que se ha producido un error en la autenticación mediante huella digital. La diferencia es la gravedad. `OnAuthenticationHelp` es un error recuperable por el usuario, como el deslizamiento de la huella digital demasiado rápido; `OnAuthenticationError` es más un error grave, como un escáner de huellas digitales dañado.
+Las devoluciones de llamada `OnAuthenticationError` y `OnAuthenticationHelp` reciben un entero que indica cuál era el problema. En la siguiente sección se explica cada uno de los posibles códigos de ayuda o error. Las dos devoluciones de llamada sirven para propósitos similares: para informar a la aplicación de que la autenticación mediante huella digital ha devuelto un error. La diferencia está en la gravedad. `OnAuthenticationHelp` es un error recuperable por el usuario, como el deslizamiento de la huella digital demasiado rápido, mientras que `OnAuthenticationError` es más un error grave, como un escáner de huellas digitales dañado.
 
-Tenga en cuenta que `OnAuthenticationError` se invocará cuando se cancele el análisis de huellas digitales a través del mensaje de `CancellationSignal.Cancel()`. El parámetro `errMsgId` tendrá el valor 5 (`FingerprintState.ErrorCanceled`). En función de los requisitos, una implementación de la `AuthenticationCallbacks` puede tratar esta situación de forma distinta a la de los demás errores. 
+Tenga en cuenta que se invocará `OnAuthenticationError` cuando se cancele la detección de huellas digitales a través del mensaje `CancellationSignal.Cancel()`. El parámetro `errMsgId` tendrá el valor 5 (`FingerprintState.ErrorCanceled`). En función de los requisitos, una implementación de `AuthenticationCallbacks` puede tratar esta situación de forma distinta a la del resto de errores. 
 
-`OnAuthenticationFailed` se invoca cuando la huella digital se ha analizado correctamente, pero no coincide con ninguna huella digital inscrito con el dispositivo. 
+`OnAuthenticationFailed` se invoca cuando la huella digital se ha detectado correctamente, pero no coincide con ninguna huella digital inscrita en el dispositivo. 
 
-## <a name="help-codes-and-error-message-ids"></a>Códigos de ayuda e ID. de mensaje de error 
+## <a name="help-codes-and-error-message-ids"></a>Códigos de ayuda e id. de mensajes de error 
 
-Puede encontrar una lista y una descripción de los códigos de error y los códigos de ayuda en la [documentación de Android SDK](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) de la clase FingerprintManager. Xamarin. Android representa estos valores con la enumeración `Android.Hardware.Fingerprints.FingerprintState`:
+Puede encontrar una lista y una descripción de los códigos de error y los códigos de ayuda en la [documentación de Android SDK](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) de la clase FingerprintManager. Xamarin.Android representa estos valores con la enumeración `Android.Hardware.Fingerprints.FingerprintState`:
 
-- **`AcquiredGood`** &ndash; (valor 0) la imagen adquirida fue buena.
+- **`AcquiredGood`** &ndash; (valor 0) La imagen adquirida era buena.
 
-- **`AcquiredImagerDirty`** &ndash; (valor 3) la imagen de huella digital era demasiado ruidosa debido a una suciedad sospechosa o detectada en el sensor. Por ejemplo, es razonable devolverlo después de varios `AcquiredInsufficient` o de la detección real de suciedad en el sensor (atascado píxeles, swaths, etc.). Se espera que el usuario tome medidas para limpiar el sensor cuando se devuelva.
+- **`AcquiredImagerDirty`** &ndash; (valor 3) La imagen de huella digital tenía demasiado ruido debido a la suciedad que se sospecha o se ha detectado que tiene el sensor. Por ejemplo, es razonable devolverlo después de varios valores `AcquiredInsufficient` o de la detección real de suciedad en el sensor (píxeles atascados, franjas, etc.). Se espera que el usuario tome medidas para limpiar el sensor cuando se devuelve este valor.
 
-- **`AcquiredInsufficient`** &ndash; (valor 2) la imagen de huella digital era demasiado ruidosa para procesarse debido a una condición detectada (es decir, una máscara seca) o un sensor posiblemente sucio (vea `AcquiredImagerDirty`.
+- **`AcquiredInsufficient`** &ndash; (valor 2) La imagen de huella digital tenía demasiado ruido para procesarla debido a una condición detectada (p. ej., piel seca) o un sensor posiblemente sucio (consulte `AcquiredImagerDirty`).
 
-- **`AcquiredPartial`** &ndash; (valor 1) se ha detectado solo una imagen de huella digital parcial. Durante la inscripción, se debe informar al usuario sobre lo que debe ocurrir para resolver este problema, por ejemplo, &ldquo;presionar firmemente en el sensor.&rdquo;
+- **`AcquiredPartial`** &ndash; (valor 1) Solo se ha detectado una imagen de huella digital parcial. Durante la inscripción, se debe informar al usuario sobre lo que debe ocurrir para resolver este problema; por ejemplo, &ldquo;presione firmemente el sensor.&rdquo;
 
-- **`AcquiredTooFast`** &ndash; (valor 5) la imagen de huella digital estaba incompleta debido al movimiento rápido. Aunque lo más adecuado para los sensores de matriz lineal, esto también podría ocurrir si el dedo se moviera durante la adquisición. Se debe solicitar al usuario que mueva el dedo más despacio (lineal) o deje el dedo en el sensor más tiempo.
+- **`AcquiredTooFast`** &ndash; (valor 5) La imagen de huella digital estaba incompleta debido a un movimiento rápido. Aunque suele corresponder a sensores de matriz lineal, también puede pasar si se mueve el dedo durante la detección. Se debe pedir al usuario que mueva el dedo más despacio (lineal) o que lo deje en el sensor más tiempo.
 
-- **`AcquiredToSlow`** &ndash; (valor 4) la imagen de huella digital no se pudo leer debido a la falta de movimiento. Esto es lo más adecuado para los sensores de matriz lineal que requieren un movimiento de deslizamiento.
+- **`AcquiredToSlow`** &ndash; (valor 4) La imagen de huella digital no se pudo leer debido a la falta de movimiento. Esto es lo más adecuado para los sensores de matriz lineal que requieren un movimiento de deslizamiento.
 
-- **`ErrorCanceled`** &ndash; (valor 5) la operación se canceló porque el sensor de huellas digitales no está disponible. Por ejemplo, esto puede ocurrir cuando se cambia el usuario, el dispositivo está bloqueado u otra operación pendiente lo impide o lo deshabilita.
+- **`ErrorCanceled`** &ndash; (valor 5) La operación se canceló porque el sensor de huellas digitales no está disponible. Por ejemplo, esto puede ocurrir cuando se cambia el usuario, se bloquea el dispositivo u otra operación pendiente lo impide o deshabilita.
 
-- **`ErrorHwUnavailable`** &ndash; (valor 1) el hardware no está disponible. Inténtelo de nuevo más tarde.
+- **`ErrorHwUnavailable`** &ndash; (valor 1) El hardware no está disponible. Vuelva a intentarlo más tarde.
 
-- **`ErrorLockout`** &ndash; (valor 7) la operación se canceló porque la API está bloqueada debido a demasiados intentos.
+- **`ErrorLockout`** &ndash; (valor 7) La operación se canceló porque la API está bloqueada debido a demasiados intentos.
 
-- **`ErrorNoSpace`** el estado de Error de &ndash; (valor 4) devuelto para operaciones como la inscripción; no se puede completar la operación porque no queda suficiente espacio de almacenamiento para completar la operación.
+- **`ErrorNoSpace`** &ndash; (valor 4) Estado de error devuelto para operaciones como la inscripción; no se puede completar la operación porque no queda suficiente espacio de almacenamiento para completarla.
 
-- **`ErrorTimeout`** &ndash; (valor 3) estado de error devuelto cuando la solicitud actual se ha ejecutado demasiado tiempo. Esto está pensado para evitar que los programas esperen el sensor de huellas digitales indefinidamente. El tiempo de espera es específico de la plataforma y del sensor, pero suele ser de 30 segundos.
+- **`ErrorTimeout`** &ndash; (valor 3) Estado de error devuelto cuando la solicitud actual se ha ejecutado demasiado tiempo. Esto está pensado para evitar que los programas esperen al sensor de huellas digitales indefinidamente. El tiempo de espera es específico de la plataforma y del sensor, pero suele ser de 30 segundos.
 
-- **`ErrorUnableToProcess`** estado de Error de &ndash; (valor 2) devuelto cuando el sensor no pudo procesar la imagen actual.
+- **`ErrorUnableToProcess`** &ndash; (valor 2) Estado de error devuelto cuando el sensor no puede procesar la imagen actual.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Cifra](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
+- [Cifrado](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
 - [AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
 - [AuthenticationCallback](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)
