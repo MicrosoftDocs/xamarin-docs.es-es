@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918090"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303700"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -56,7 +56,7 @@ En algunos casos, la parte del modelo de MVC puede estar vacía. Por ejemplo, po
 
 Una vista es el componente responsable de representar la interfaz de usuario. En casi todas las plataformas que usan el modelo MVC, la interfaz de usuario se compone de una jerarquía de vistas. Se puede imaginar una vista de MVC como una jerarquía de vistas con una sola vista (conocida como la vista raíz) en la parte superior de la jerarquía y una serie de vistas secundarias (conocidas como subvistas) por debajo. En iOS, la jerarquía de vistas de contenido de una pantalla corresponde al componente de vista de MVC.
 
-### <a name="controller"></a>Controller
+### <a name="controller"></a>Controlador
 
 El objeto controlador es el componente que conecta todos los elementos y en iOS se representa mediante `UIViewController`. Se puede imaginar el controlador como el código de respaldo de una pantalla o un conjunto de vistas. El controlador es responsable de escuchar las solicitudes del usuario y de devolver la jerarquía de vistas adecuada. Escucha las solicitudes de la vista (clics, entradas de texto, etc.) y realiza el procesamiento adecuado, la modificación y la recarga de la vista. El controlador también es responsable de crear o recuperar el modelo del almacén de datos de respaldo que haya en la aplicación y de rellenar la vista con sus datos.
 

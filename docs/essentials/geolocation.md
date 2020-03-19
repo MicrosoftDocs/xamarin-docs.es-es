@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558676"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303652"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalización
 
@@ -22,7 +22,7 @@ La clase **Geolocation** proporciona las API para recuperar las coordenadas de g
 
 Para acceder a la funcionalidad de **Geolocation**, se requiere la siguiente configuración específica para la plataforma:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Los permisos Coarse y Fine Location son requeridos y se deben configurar en el proyecto de Android. Además, si la aplicación tiene como destino Android 5.0 (nivel de API 21) o versiones posteriores, debe declarar que la aplicación usa las características de hardware en el archivo de manifiesto. Se puede agregar de las siguientes maneras:
 
@@ -50,7 +50,7 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 
 O bien, haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active los permisos **ACCESS_COARSE_LOCATION** y **ACCESS_FINE_LOCATION**. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 El archivo **Info.plist** de la aplicación debe contener la clave `NSLocationWhenInUseUsageDescription` para poder acceder a la ubicación del dispositivo.
 
@@ -63,7 +63,7 @@ También puede editar el archivo, agregar lo siguiente y actualizar el razonamie
 <string>Fill in a reason why your app needs access to location.</string>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Debe establecer el permiso `Location` para la aplicación. Para hacerlo, abra **Package.appxmanifest**, haga clic en la pestaña **Capacidades** y active **Ubicación**.
 

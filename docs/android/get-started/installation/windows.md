@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020701"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303580"
 ---
 # <a name="windows-installation"></a>Instalación en el equipo Windows
 
@@ -71,9 +71,9 @@ Para más información sobre cómo usar Android SDK Manager de Xamarin, vea [Con
 
 La emulación de un dispositivo Android en un equipo implica a los siguientes componentes:
 
-- **Google Android Emulator** &ndash; Se trata de un emulador basado en [QEMU](https://www.qemu.org/) que crea un dispositivo virtualizado que se ejecuta en la estación de trabajo del desarrollador.
-- **Una imagen de emulador** &ndash; Una _imagen de emulador_ es una plantilla o una especificación del hardware y el sistema operativo que se va a virtualizar. Por ejemplo, una imagen de emulador identificaría los requisitos de hardware de un Nexus 5X con Android 7.0 con Google Play Services instalado. Otra imagen de emulador podría especificar una tableta de 10" con Android 6.0.
-- **Dispositivo virtual Android (AVD)** &ndash; Un _dispositivo virtual Android_ es un dispositivo Android emulado creado a partir de una imagen de emulador. Al ejecutar y probar aplicaciones Android, Xamarin.Android inicia Android Emulator, inicia un AVD específico, instala el APK y luego ejecuta la aplicación.
+- **Google Android Emulator**: se trata de un emulador basado en [QEMU](https://www.qemu.org/) que crea un dispositivo virtualizado que se ejecuta en la estación de trabajo del desarrollador.
+- **Una imagen de emulador**: una _imagen de emulador_ es una plantilla o una especificación del hardware y el sistema operativo que se va a virtualizar. Por ejemplo, una imagen de emulador identificaría los requisitos de hardware de un Nexus 5X con Android 7.0 con Google Play Services instalado. Otra imagen de emulador podría especificar una tableta de 10" con Android 6.0.
+- **Dispositivo virtual Android (AVD)** : un _dispositivo virtual Android_ es un dispositivo Android emulado creado a partir de una imagen de emulador. Al ejecutar y probar aplicaciones Android, Xamarin.Android inicia Android Emulator, inicia un AVD específico, instala el APK y luego ejecuta la aplicación.
 
 Se puede lograr una mejora considerable del rendimiento al desarrollar en equipos basados en x86 mediante imágenes de emulador especiales optimizadas para la arquitectura x86 y una de entre dos tecnologías de virtualización:
 

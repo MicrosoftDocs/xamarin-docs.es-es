@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917736"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303712"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Capacidades de Apple Pay en Xamarin.iOS
 
-_La adición de funcionalidades a una aplicación a menudo requiere una configuración adicional de aprovisionamiento. En esta guía se explica la configuración necesaria para las funciones de Apple Pay._
+_Agregar funcionalidades a una aplicación requiere con frecuencia una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para las funcionalidades de Apple Pay._
 
 Con Apple Pay, los usuarios pueden pagar bienes físicos con su dispositivo iOS. En esta sección se describe cómo crear todos los componentes necesarios para Apple Pay en el Centro para desarrolladores de Apple.
 
@@ -154,6 +154,6 @@ En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.
 * Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
-* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esto _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 Si experimenta problemas con servicios de aplicaciones, vea la sección [Solución de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) de la guía principal.

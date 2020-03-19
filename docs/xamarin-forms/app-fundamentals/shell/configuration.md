@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2020
-ms.openlocfilehash: dfa452addd7cfb838091afdfb350484998d0cc9d
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636092"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303790"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Configuración de la página Xamarin.Forms Shell
 
@@ -112,7 +112,7 @@ En este ejemplo, la clase [`ContentPage`](xref:Xamarin.Forms.ContentPage) se est
 
 ## <a name="enable-navigation-bar-shadow"></a>Habilitación de sombra en la barra de navegación
 
-La clase `Shell` define la propiedad adjunta `NavBarHasShadow`, de tipo `bool`, que controla si la barra de navegación tiene una sombra. De forma predeterminada, el valor de la propiedad es `false`.
+La clase `Shell` define la propiedad adjunta `NavBarHasShadow`, de tipo `bool`, que controla si la barra de navegación tiene una sombra. De forma predeterminada, el valor de la propiedad es `false` en iOS y `true` en Android.
 
 Aunque esta propiedad se puede establecer en un objeto `Shell` con subclases, también se puede establecer en cualquier página que desee habilitar la sombra de la barra de navegación. Por ejemplo, el siguiente XAML muestra la habilitación de la sombra de la barra de navegación de [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
