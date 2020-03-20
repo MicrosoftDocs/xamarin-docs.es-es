@@ -85,7 +85,7 @@ Al ser un superconjunto de C, Objective-C usa encabezados para las declaraciones
 Por ejemplo, el código siguiente incluye el espacio de nombres `UIKit`, que permite que todas las clases de ese espacio de nombres estén disponibles para la implementación:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes
