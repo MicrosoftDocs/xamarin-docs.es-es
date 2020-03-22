@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: acf8824c7a575bca37301a409bdf6d5f42cca622
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 1fa1e5f06ebc847775a11c92ccdfc1055bee196a
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488067"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070325"
 ---
 # <a name="intent-services-in-xamarinandroid"></a>Servicios de intención en Xamarin. Android
 
@@ -55,7 +55,7 @@ El trabajo se envía a un `IntentService` mediante la creación de una instancia
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```

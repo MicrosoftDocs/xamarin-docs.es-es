@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020
-ms.openlocfilehash: c321884039674d3abb1a4b510ddfe2c062c28211
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 55fda0be2e260c5aa4a34ab2dcc1ac3cac33b92a
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77646735"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070288"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>TabbedPage barra de pestañas translúcidas en iOS
 
@@ -41,7 +41,7 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 El método `TabbedPage.On<iOS>` especifica que este específico de la plataforma solo se ejecutará en iOS. El método `TabbedPage.SetTranslucencyMode`, en el espacio de nombres [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , se usa para establecer el modo translucidez de la barra de pestañas en un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) especificando uno de los siguientes valores de enumeración de `TranslucencyMode`:
 
 - `Default`, que establece la barra de pestañas en su modo predeterminado translucidez. Este es el valor predeterminado de la propiedad `TabbedPage.TranslucencyMode`.
-- `Transparent`, que establece que la barra de pestañas sea traslúcida.
+- `Translucent`, que establece que la barra de pestañas sea traslúcida.
 - `Opaque`, que establece que la barra de pestañas sea opaca.
 
 Además, se puede utilizar el método `GetTranslucencyMode` para recuperar el valor actual de la enumeración `TranslucencyMode` que se aplica a la [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
