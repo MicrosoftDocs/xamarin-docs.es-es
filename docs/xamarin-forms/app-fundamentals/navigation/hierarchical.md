@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915681"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303826"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
-_La clase NavigationPage proporciona una experiencia de navegación jerárquica en la que el usuario puede navegar por las páginas, hacia delante y hacia atrás, según sea necesario. La clase implementa la navegación como una pila LIFO (último en salir, primero en salir) de objetos de página. En este artículo se muestra cómo usar la clase NavigationPage para realizar la navegación en una pila de páginas._
+_La clase NavigationPage proporciona una experiencia de navegación jerárquica en la que el usuario puede navegar por las páginas hacia adelante y hacia atrás, como quiera. La clase implementa la navegación como una pila de objetos de página en la que el último en entrar es el primero en salir (LIFO). En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas._
 
 Para pasar de una página a otra, una aplicación insertará una página nueva en la pila de navegación, donde se convertirá en la página activa, tal como se muestra en el diagrama siguiente.
 
@@ -60,7 +60,7 @@ public App ()
 }
 ```
 
-Esto hace que el `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instancia se inserte en la pila de navegación, donde se convierte en la página activa y en la página raíz de la aplicación. Esto se muestra en la captura de pantalla siguiente:
+Esto hace que la instancia [`ContentPage`](xref:Xamarin.Forms.ContentPage) de `Page1Xaml` se inserte en la pila de navegación, donde se convertirá en la página activa y en la página raíz de la aplicación. Esto se muestra en las capturas de pantalla siguientes:
 
 ![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
@@ -78,13 +78,13 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Esto hace que la instancia de `Page2Xaml` se inserte en la pila de navegación, donde se convertirá en la página activa. Esto se muestra en la captura de pantalla siguiente:
+Esto hace que la instancia de `Page2Xaml` se inserte en la pila de navegación, donde se convertirá en la página activa. Esto se muestra en las capturas de pantalla siguientes:
 
 ![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
 
 Al invocar el método [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*), ocurre lo siguiente:
 
-- Se invoca la invalidación de `PushAsync`[`OnDisappearing` de la página que llama a ](xref:Xamarin.Forms.Page.OnDisappearing).
+- Se invoca la invalidación de [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) de la página que llama a `PushAsync`.
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se ha navegado.
 - La tarea `PushAsync` finaliza.
 
@@ -108,9 +108,9 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 
 Esto hace que la instancia de `Page2Xaml` se quite de la pila de navegación y que la nueva página de nivel superior se convierta en la página activa. Al invocar el método [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), ocurre lo siguiente:
 
-- Se invoca la invalidación de `PopAsync`[`OnDisappearing` de la página que llama a ](xref:Xamarin.Forms.Page.OnDisappearing).
+- Se invoca la invalidación de [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) de la página que llama a `PopAsync`.
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se ha regresado.
-- Se devuelve la tarea `PopAsync`.
+- La tarea `PopAsync` vuelve.
 
 Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
@@ -155,7 +155,7 @@ Al establecer el parámetro `boolean` en `false`, la animación de transición d
 
 ## <a name="passing-data-when-navigating"></a>Pasar datos al navegar
 
-A veces es necesario que una página pase datos a otra durante la navegación. Dos técnicas para llevar a cabo esto son pasar datos a través de un constructor de página y establecer el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página nueva en los datos. En las siguientes secciones se explicarán de uno en uno.
+A veces es necesario que una página pase datos a otra durante la navegación. Dos técnicas para llevar a cabo esto son pasar datos a través de un constructor de página y establecer el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página nueva en los datos. A continuación, se explicarán de uno en uno.
 
 ### <a name="passing-data-through-a-page-constructor"></a>Pasar datos a través de un constructor de página
 

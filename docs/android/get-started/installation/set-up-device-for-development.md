@@ -7,58 +7,131 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 72e0a2adc79796b3df7b6fb4eca62448f1a1a7a4
+ms.sourcegitcommit: 997f7b6a1a1bc50b98c3ca5bbc75d6875ba2ae9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020715"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510736"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
 _En este artículo se explica cómo configurar un dispositivo Android y conectarlo a un equipo de modo que el dispositivo pueda usarse para ejecutar y depurar aplicaciones de Xamarin.Android._
 
-Después de realizar las pruebas en un emulador de Android, querrá ver y probar la ejecución de sus aplicaciones en un dispositivo Android. Estos son los pasos que debe llevar a cabo para conectar un dispositivo a un equipo para la depuración:
-
-1. **Habilitar la depuración en el dispositivo**: de forma predeterminada, no es posible depurar aplicaciones en un dispositivo Android.
-
-2. **Instalar controladores USB**: este paso no es necesario para los equipos macOS. Los equipos de Windows podrían requerir la instalación de controladores USB.
-
-3. **Conectar el dispositivo al equipo**: el último paso consiste en conectar el dispositivo al equipo mediante USB o Wi-Fi.
+Después de realizar las pruebas en un emulador de Android, querrá ver y probar la ejecución de sus aplicaciones en un dispositivo Android. Tendrá que habilitar la depuración y conectar el dispositivo al equipo.
 
 Cada uno de estos pasos se tratará con más detalle en las secciones siguientes.
 
 ## <a name="enable-debugging-on-the-device"></a>Habilitar la depuración en el dispositivo
 
-Puede usar cualquier dispositivo Android para probar una aplicación de Android, pero el dispositivo debe estar configurado correctamente antes de realizar la depuración. Los pasos que se deben llevar a cabo son ligeramente diferentes en función de la versión de Android que se ejecute en el dispositivo.
+Un dispositivo debe tener la depuración habilitada para probar una aplicación de Android. De manera predeterminada, se han ocultado las opciones para desarrolladores en Android a partir de la versión 4.2, y su habilitación puede variar en función de la versión de Android.
 
-### <a name="android-40-to-android-41"></a>De Android 4.0 a Android 4.1
+### <a name="android-90"></a>Android 9.0+
 
-En las versiones de Android de 4.0.x a 4.1.x, debe seguir estos pasos para habilitar la depuración:
+En las versiones de Android 9.0 y superiores, debe seguir estos pasos para habilitar la depuración:
 
 1. Vaya a la pantalla **Configuración**.
-2. Seleccione **Opciones del desarrollador**.
-3. Desactive la opción **Depuración de USB**.
+2. Seleccione **Sobre el teléfono**.
+3. Pulse **Número de compilación** 7 veces hasta que vea **¡Ahora eres un desarrollador!** .
 
-En esta captura de pantalla se muestra la pantalla **Opciones del desarrollador** en un dispositivo que ejecuta Android 4.0.3:
+### <a name="android-80-and-android-81"></a>Android 8.0 y Android 8.1
 
-[![Opciones del desarrollador](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
+1. Vaya a la pantalla **Configuración**.
+2. Seleccione **Sistema**.
+3. Seleccione **Sobre el teléfono**.
+4. Pulse **Número de compilación** 7 veces hasta que vea **¡Ahora eres un desarrollador!** .
 
-### <a name="android-42-and-higher"></a>Android 4.2 y versiones posteriores
+### <a name="android-71-and-lower"></a>Android 7.1 y versiones inferiores
 
-A partir de Android 4.2 y versiones posteriores, las **Opciones del desarrollador** están ocultas de forma predeterminada. Para que estén disponibles, vaya a **Ajustes > Acerca del dispositivo** y pulse el elemento **Número de compilación** siete veces para que se muestre la pestaña **Opciones de desarrollador**:
+1. Vaya a la pantalla **Configuración**.
+2. Seleccione **Sobre el teléfono**.
+3. Pulse **Número de compilación** 7 veces hasta que vea **¡Ahora eres un desarrollador!** .
 
-[![Elemento de número de compilación](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
+[![Pantalla de opciones del desarrollador en Android 9.0](set-up-device-for-development-images/build-version-sml.png)](set-up-device-for-development-images/build-version.png#lightbox)
+
+### <a name="verify-that-usb-debugging-is-enabled"></a>Comprobación de que está habilitada la depuración USB
+
+Después de habilitar el modo de desarrollador en el dispositivo, debe asegurarse de que está habilitada la depuración USB en el dispositivo. Esto también varía en función de la versión de Android.
+
+### <a name="android-90"></a>Android 9.0+
+
+Vaya a **Configuración > Sistema > Opciones avanzadas > Opciones del desarrollador** y habilite **Depuración USB**.
+
+### <a name="android-80-and-android-81"></a>Android 8.0 y Android 8.1
+
+Vaya a **Configuración > Sistema > Opciones del desarrollador** y habilite **Depuración USB**.
+
+### <a name="android-71-and-lower"></a>Android 7.1 y versiones inferiores
+
+Vaya a **Configuración > Opciones del desarrollador** y habilite **Depuración USB**.
 
 Una vez que la pestaña **Opciones del desarrollador** está disponible en **Ajustes > Sistema**, ábrala para mostrar las opciones del desarrollador:
 
-[![Pantalla de configuración del desarrollador](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
+[![Pantalla de opciones del desarrollador en Android 9.0](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
 
 Desde aquí puede habilitar las opciones del desarrollador, como la depuración de USB y el modo Permanecer activo.
 
+## <a name="connect-the-device-to-the-computer"></a>Conexión del dispositivo al equipo
+
+El paso final consiste en conectar el dispositivo al equipo. La manera más sencilla y confiable es hacerlo a través de USB.
+
+Recibirá un mensaje para confiar en el equipo en el dispositivo si no lo ha utilizado antes para depuración. También puede activar **Permitir siempre desde este ordenador** para evitar que le salga este aviso cada vez que conecte el dispositivo.
+
+![](set-up-device-for-development-images/trust-computer-for-usb-debugging.png "Google USB")
+
+## <a name="alternate-connection-via-wifi"></a>Conexión alternativa a través de Wi-Fi
+
+Es posible conectar un dispositivo Android a un equipo a través de Wi-Fi, sin usar un cable USB. Esta técnica requiere más esfuerzo, pero debería ser útil si el dispositivo está demasiado alejado del equipo como para estar conectado constantemente mediante cable. 
+
+### <a name="connecting-over-wifi"></a>Conectar a través de Wi-Fi
+
+De forma predeterminada, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) está configurado para comunicarse con un dispositivo Android a través de USB. Es posible volver a configurarlo para que use TCP/IP en lugar de USB. Para ello, tanto el dispositivo como el equipo deben estar en la misma red Wi-Fi. Para configurar el entorno para depurar mediante Wi-Fi, realice los siguientes pasos desde la línea de comandos:
+
+1. Determine la dirección IP del dispositivo Android. Una manera de averiguar la dirección IP es mirar en **Ajustes > Redes e Internet > Wi-Fi**, después, pulsar la red Wi-Fi a la que está conectado el dispositivo y luego pulsar en **Opciones avanzadas**. Se abrirá una lista desplegable con información sobre la conexión de red, parecida a la que se muestra en la siguiente captura de pantalla:
+
+    [![Dirección IP](set-up-device-for-development-images/ip-settings-sml.png)](set-up-device-for-development-images/ip-settings.png#lightbox)
+
+    En algunas versiones de Android, la dirección IP no aparecerá ahí, pero se puede encontrar en **Ajustes > Acerca del teléfono > Estado**.
+
+2. Conecte el dispositivo Android al equipo a través de USB.
+
+3. Después, reinicie ADB de modo que use TCP en el puerto 5555. En un símbolo del sistema, escriba el siguiente comando:
+
+    ```command
+    adb tcpip 5555
+    ```
+
+    Después de emitir este comando, el equipo no podrá escuchar los dispositivos que están conectados a través de USB.
+
+4. Desconecte el cable USB que conecta el dispositivo al equipo.
+
+5. Configure ADB para que se conecte al dispositivo Android en el puerto que se especificó en el paso 1 anterior:
+
+    ```command
+    adb connect 192.168.1.28:5555
+    ```
+
+    Una vez que se finalice este comando, el dispositivo Android se conecta al equipo a través de Wi-Fi.
+
+    Cuando termine la depuración a través de Wi-Fi, puede restablecer ADB al modo USB con el comando siguiente:
+    
+    ```command
+    adb usb
+    ```
+    
+    Es posible solicitarle a ADB que enumere los dispositivos que están conectados al equipo. Independientemente de cómo estén conectados los dispositivos, puede emitir el comando siguiente en el símbolo del sistema para ver qué está conectado:
+    
+    ```command
+    adb devices
+    ```
+
+## <a name="troubleshooting"></a>Solución de problemas
+
+En algunos casos, es posible que el dispositivo no se pueda conectar al equipo. Si es así, quizá le interesaría comprobar que están instalados los controladores USB.
+
 ## <a name="install-usb-drivers"></a>Instalar controladores USB
 
-Este paso no es necesario para macOS. Basta con que conecte el dispositivo al equipo Mac con un cable USB.
+Este paso no es necesario para macOS; basta con que conecte el dispositivo al equipo Mac con un cable USB.
 
 Puede que sea necesario instalar algunos controladores adicionales para que un equipo Windows reconozca un dispositivo Android conectado mediante USB.
 
@@ -76,9 +149,9 @@ Todos los demás dispositivos Android deben usar el [controlador USB de su fabri
 
 Para instalar el paquete del **controlador USB de Google**, inicie Android SDK Manager y expanda la carpeta **Extras**, como se ve en la captura de pantalla siguiente:
 
-[![Paquete de controladores USB de Google seleccionado](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
+![](set-up-device-for-development-images/google-usb-driver.png "Google USB driver selected")
 
-Active el cuadro del **controlador USB de Google** y haga clic en el botón **Instalar**.
+Active el cuadro del **controlador USB de Google** y haga clic en el botón **Aplicar cambios**.
 Los archivos del controlador se descargan en la siguiente ubicación:
 
 `[Android SDK install path]\extras\google\usb\_driver`
@@ -108,72 +181,6 @@ Para instalar los controladores en Windows 7:
 7. Haga clic en **Examinar** y busque la carpeta del controlador USB (el controlador USB de Google se encuentra en **[ruta de instalación de Android SDK]\extras\google\usb_driver**).
 
 8. Haga clic en **Siguiente** para instalar el controlador.
-
-### <a name="installing-unverified-drivers-in-windows-8"></a>Instalar controladores no comprobados en Windows 8
-
-Puede que sea necesario llevar a cabo pasos adicionales para instalar un controlador no comprobado en Windows 8. En los pasos siguientes se describe cómo instalar los controladores para un Galaxy Nexus:
-
-1. **Obtener acceso a las opciones de arranque avanzadas de Windows 8**: este paso consiste en reiniciar el equipo para tener acceso a las opciones de arranque avanzadas. Inicie un símbolo de la línea de comandos y reinicie el equipo mediante el comando siguiente:
-
-    ```command
-    shutdown.exe /r /o
-    ```
-
-2. **Conectar el dispositivo**: conecte el dispositivo al equipo.
-
-3. **Iniciar el administrador de dispositivos**: ejecute **devmgmt.msc**; debería ver el dispositivo en la lista con un triángulo amarillo sobre él.
-
-4. **Instalar los controladores del dispositivo**: instale los controladores del dispositivo como se describió anteriormente.
-
-## <a name="connect-the-device-to-the-computer"></a>Conectar el dispositivo al equipo
-
-El paso final consiste en conectar el dispositivo al equipo. Hay dos maneras de hacerlo:
-
-- **Cable USB**: esta es la manera más fácil y más común. Basta con que conecte el cable USB al dispositivo y, después, al equipo.
-
-- **Wi-Fi**: es posible conectar un dispositivo Android a un equipo a través de Wi-Fi, sin usar un cable USB. Esta técnica requiere algo más de esfuerzo, pero debería ser útil si el dispositivo está demasiado alejado del equipo como para estar conectado constantemente mediante cable. En la sección siguiente se explica cómo realizar la conexión a través de Wi-Fi.
-
-### <a name="connecting-over-wifi"></a>Conectar a través de Wi-Fi
-
-De forma predeterminada, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) está configurado para comunicarse con un dispositivo Android a través de USB. Es posible volver a configurarlo para que use TCP/IP en lugar de USB. Para ello, tanto el dispositivo como el equipo deben estar en la misma red Wi-Fi. Para configurar el entorno para depurar mediante Wi-Fi, siga estos pasos desde la línea de comandos:
-
-1. Determine la dirección IP del dispositivo Android. Una manera de averiguar la dirección IP es mirar en **Ajustes > Wi-Fi** y, después, pulsar la red Wi-Fi a la que está conectado el dispositivo. Se abrirá una pantalla de configuración con información sobre la conexión de red, parecida a la que se muestra en la siguiente captura de pantalla:
-
-    ![Dirección IP](set-up-device-for-development-images/ip-settings.png)
-
-    En algunas versiones de Android, la dirección IP no aparecerá ahí, pero se puede encontrar en **Ajustes > Acerca del teléfono > Estado**.
-
-2. Conecte el dispositivo Android al equipo a través de USB.
-
-3. Después, reinicie ADB de modo que use TCP en el puerto 5555. En un símbolo del sistema, escriba el siguiente comando:
-
-    ```command
-    adb tcpip 5555
-    ```
-
-    Después de emitir este comando, el equipo no podrá escuchar los dispositivos que están conectados a través de USB.
-
-4. Desconecte el cable USB que conecta el dispositivo al equipo.
-
-5. Configure ADB para que se conecte al dispositivo Android en el puerto que se especificó en el paso 1 anterior:
-
-    ```command
-    adb connect 192.168.1.28:5555
-    ```
-
-    Una vez que se finalice este comando, el dispositivo Android se conecta al equipo a través de Wi-Fi.
-
-Cuando termine la depuración a través de Wi-Fi, puede restablecer ADB al modo USB con el comando siguiente:
-
-```command
-adb usb
-```
-
-Es posible solicitarle a ADB que enumere los dispositivos que están conectados al equipo. Independientemente de cómo estén conectados los dispositivos, puede emitir el comando siguiente en el símbolo del sistema para ver qué está conectado:
-
-```command
-adb devices
-```
 
 ## <a name="summary"></a>Resumen
 

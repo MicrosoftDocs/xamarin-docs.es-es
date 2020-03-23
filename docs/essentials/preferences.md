@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
+ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78295409"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79497038"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
 
@@ -44,7 +44,7 @@ var myValue = Preferences.Get("my_key", "default_value");
 Para comprobar si una clave _determinada_ existe en las preferencias:
 
 ```csharp
-bool hasKey = Preferences.HasKey("my_key");
+bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
 Para quitar la _clave_ de las preferencias:
@@ -72,6 +72,15 @@ En **Preferences** se admiten los tipos de datos siguientes:
 - **long**
 - **string**
 - **DateTime**
+
+## <a name="integrate-with-system-settings"></a>Integración con la configuración del sistema
+
+Las preferencias se almacenan de forma nativa, lo que permite integrar la configuración en la configuración nativa del sistema. Siga la documentación y los ejemplos de la plataforma para integrarlos con ella:
+
+* Apple: [Implementación de un lote de configuración de iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Ejemplo de preferencias de la aplicación de iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Configuración de watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Introducción a las pantallas de configuración](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Detalles de implementación
 
