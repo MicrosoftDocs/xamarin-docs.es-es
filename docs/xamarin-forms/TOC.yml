@@ -956,6 +956,8 @@
           href: internals/class-hierarchy.md
         - name: Resolución de dependencias
           href: internals/dependency-resolution.md
+        - name: Marcas experimentales
+          href: internals/experimental-flags.md
         - name: Representadores rápidos
           href: internals/fast-renderers.md
         - name: SourceLink
