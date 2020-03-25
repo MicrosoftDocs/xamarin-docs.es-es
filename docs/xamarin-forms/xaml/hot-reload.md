@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
-ms.openlocfilehash: 225b7dc7dc639031b3198a8fb9e7fe9fb9d7ee7f
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+ms.openlocfilehash: a6cb5a0e3573ebf998bb2f81c08ff63c81678b54
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159813"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Recarga activa de XAML para Xamarin. Forms
 
@@ -57,7 +57,7 @@ La recarga activa de XAML admite la depuración simultánea en Visual Studio y V
 * **Windows** [Cómo: establecer proyectos de inicio múltiples](https://docs.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
 * **Mac** [establecer varios proyectos de inicio](https://docs.microsoft.com/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
-## <a name="known-limitations"></a>Restricciones conocidas
+## <a name="known-limitations"></a>Limitaciones conocidas
 
 * Todavía *no* se admiten otros destinos de Xamarin. Forms, como UWP y MacOS. [Aquí](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html)puede realizar un seguimiento del progreso del soporte técnico de UWP.
 * No se pueden agregar, quitar ni cambiar el nombre de archivos o paquetes NuGet durante una sesión de recarga activa de XAML. Si agrega o quita un archivo o un paquete de NuGet, vuelva a compilar y volver a implementar la aplicación para seguir usando la recarga activa de XAML.
@@ -72,7 +72,7 @@ La recarga activa de XAML admite la depuración simultánea en Visual Studio y V
 * [Sugerencias y trucos para la recarga activa de XAML](https://devblogs.microsoft.com/xamarin/tips-tricks-xaml-hot-reload/)
 * [Recarga activa de XAML para Xamarin. Forms en profundidad: el programa Xamarin](https://www.youtube.com/watch?v=crhjjPjzknk)
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 * Si no se puede inicializar la recarga activa de XAML:
   * Actualice la versión de Xamarin. Forms.
