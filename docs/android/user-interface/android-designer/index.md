@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 8793dafe5bc44999cb884621d0c41956674b05e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd49e498a3d54dea883292dcca42b0b4eaa6b9a2
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029390"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247579"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin. Android Designer
 
@@ -46,6 +46,8 @@ En este artículo se analizan las numerosas características de Xamarin. Android
  [Vistas de diseños alternativos](~/android/user-interface/android-designer/alternative-layout-views.md)
 
  [Características de Material Design](~/android/user-interface/android-designer/material-design-features.md)
+
+ [Diagnóstico de diseño de Android](~/android/user-interface/android-designer/diagnostics.md)
 
 ## <a name="summary"></a>Resumen
 
