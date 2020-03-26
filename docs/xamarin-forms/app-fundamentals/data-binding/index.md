@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
-ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 03/23/2020
+ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697140"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247605"
 ---
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
@@ -28,7 +28,7 @@ Para controlar este trabajo correctamente, el programa debe recibir una notifica
 
 ## <a name="the-data-binding-solution"></a>La solución de enlace de datos
 
-El enlace de datos automatiza este trabajo y vuelve innecesarios los controladores de eventos. (pero los eventos siguen siendo necesarios porque la infraestructura de enlace de datos los usa). Los enlaces de datos se pueden implementar en el código o en XAML, pero son mucho más comunes en XAML, ya que así es más fácil reducir el tamaño del archivo de código subyacente. Al reemplazar el código de procedimientos en los controladores de eventos con código declarativo o marcado, se simplifica y se aclara la aplicación.
+El enlace de datos automatiza este trabajo y vuelve innecesarios los controladores de eventos. Los enlaces de datos se pueden implementar en el código o en XAML, pero son mucho más comunes en XAML, ya que así es más fácil reducir el tamaño del archivo de código subyacente. Al reemplazar el código de procedimientos en los controladores de eventos con código declarativo o marcado, se simplifica y se aclara la aplicación.
 
 Uno de los dos objetos implicados en un enlace de datos es casi siempre un elemento que se deriva de `View` y forma parte de la interfaz visual de una página. El otro objeto puede ser:
 
@@ -39,39 +39,39 @@ En los programas de demo, como los del ejemplo [**DataBindingDemos**](https://do
 
 En los siguientes artículos se abordan los enlaces de datos:
 
-## <a name="basic-bindingsbasic-bindingsmd"></a>[Enlaces básicos](basic-bindings.md)
+## <a name="basic-bindings"></a>[Enlaces básicos](basic-bindings.md)
 
 Conozca la diferencia entre el origen y el destino del enlace de datos y vea enlaces de datos sencillos en código y en XAML.
 
-## <a name="binding-modebinding-modemd"></a>[Modo de enlace](binding-mode.md)
+## <a name="binding-mode"></a>[Modo de enlace](binding-mode.md)
 
 Descubra cómo el modo de enlace puede controlar el flujo de datos entre los dos objetos.
 
-## <a name="string-formattingstring-formattingmd"></a>[Formato de cadena](string-formatting.md)
+## <a name="string-formatting"></a>[Formato de cadena](string-formatting.md)
 
 Use un enlace de datos para dar formato y mostrar objetos como cadenas.
 
-## <a name="binding-pathbinding-pathmd"></a>[Enlace de ruta de acceso](binding-path.md)
+## <a name="binding-path"></a>[Enlace de ruta de acceso](binding-path.md)
 
 Profundice en la propiedad `Path` del enlace de datos para acceder a las subpropiedades y los miembros de la colección.
 
-## <a name="binding-value-convertersconvertersmd"></a>[Enlace de convertidores de valores](converters.md)
+## <a name="binding-value-converters"></a>[Enlace de convertidores de valores](converters.md)
 
 Use convertidores de valor de enlace para modificar valores en el enlace de datos.
 
-## <a name="relative-bindingsrelative-bindingsmd"></a>[Enlaces relativos](relative-bindings.md)
+## <a name="relative-bindings"></a>[Enlaces relativos](relative-bindings.md)
 
 Use enlaces relativos para establecer el origen de enlace en relación con la posición del destino de enlace.
 
-## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Conmutación por recuperación de enlaces](binding-fallbacks.md)
+## <a name="binding-fallbacks"></a>[Conmutación por recuperación de enlaces](binding-fallbacks.md)
 
 Fortalezca los enlaces de datos mediante la definición de valores de reserva para usarlos si se produce un error en el proceso de enlace.
 
-## <a name="the-command-interfacecommandingmd"></a>[Interfaz de comandos](commanding.md)
+## <a name="the-command-interface"></a>[Interfaz de comandos](commanding.md)
 
 Implemente la propiedad `Command` con los enlaces de datos.
 
-## <a name="compiled-bindingscompiled-bindingsmd"></a>[Enlaces compilados](compiled-bindings.md)
+## <a name="compiled-bindings"></a>[Enlaces compilados](compiled-bindings.md)
 
 Use enlaces compilados para mejorar el rendimiento del enlace de datos.
 

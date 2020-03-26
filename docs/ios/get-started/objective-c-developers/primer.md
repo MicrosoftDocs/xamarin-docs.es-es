@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
-ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
+ms.openlocfilehash: 56ee74e7a276edc960d2251bd33ccb90c1fa3cb4
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74536508"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070365"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de C# para desarrolladores de Objective-C
 
