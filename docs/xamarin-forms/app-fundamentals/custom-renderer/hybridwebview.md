@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2019
-ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 03/23/2020
+ms.openlocfilehash: 712ca4f8f3441e0d3c2aede1b2510b07ca89f829
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487014"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247618"
 ---
 # <a name="customizing-a-webview"></a>Personalización de WebView
 
@@ -268,6 +268,15 @@ namespace CustomRenderer.iOS
         {
             ((HybridWebView)Element).InvokeAction(message.Body.ToString());
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -282,8 +291,8 @@ Esta funcionalidad se logra del siguiente modo:
 - El constructor del representador llama al método [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) para agregar un controlador de mensajes de script denominado `invokeAction` al objeto [`WKUserContentController`](xref:WebKit.WKUserContentController), lo que hace que la función `window.webkit.messageHandlers.invokeAction.postMessage(data)` de JavaScript se defina en todos los marcos de todas las instancias de `WebView` en las que se usa el objeto `WKUserContentController`.
 - Siempre que el representador personalizado está asociado a un nuevo elemento de Xamarin.Forms:
   - El método [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) carga el archivo HTML especificado por la propiedad `HybridWebView.Uri`. El código especifica que el archivo se almacena en la carpeta `Content` del proyecto. Una vez que se muestra la página web, la función de JavaScript `invokeCSharpAction` se inserta en la página web.
-- Cuando cambia el elemento al que está asociado el representador:
-  - Se liberan recursos.
+- Los recursos se liberan cuando cambia el elemento al que está asociado el representador.
+- El elemento de Xamarin.Forms se limpia cuando se desecha el representador.
 
 > [!NOTE]
 > La clase `WKWebView` solo se admite en iOS 8 y versiones posteriores.
@@ -332,6 +341,15 @@ namespace CustomRenderer.Droid
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -363,8 +381,8 @@ Una vez que el usuario escribe su nombre y hace clic en el elemento HTML `button
   - El método [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) inserta una nueva instancia de `JSBridge` en el marco principal del contexto de JavaScript de WebView y le asigna el nombre `jsBridge`. Esto permite acceder a los métodos de la clase `JSBridge` desde JavaScript.
   - El método [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) carga el archivo HTML especificado por la propiedad `HybridWebView.Uri`. El código especifica que el archivo se almacena en la carpeta `Content` del proyecto.
   - En la clase `JavascriptWebViewClient`, la función de JavaScript `invokeCSharpAction` se inserta en la página web una vez que esta termina de cargarse.
-- Cuando cambia el elemento al que está asociado el representador:
-  - Se liberan recursos.
+- Los recursos se liberan cuando cambia el elemento al que está asociado el representador.
+- El elemento de Xamarin.Forms se limpia cuando se desecha el representador.
 
 Cuando se ejecuta la función de JavaScript `invokeCSharpAction`, a su vez invoca al método `JSBridge.InvokeAction`, que se muestra en el ejemplo de código siguiente:
 
@@ -441,6 +459,15 @@ namespace CustomRenderer.UWP
         {
             ((HybridWebView)Element).InvokeAction(e.Value);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -452,8 +479,8 @@ Esta funcionalidad se logra del siguiente modo:
 - Siempre que el representador personalizado está asociado a un nuevo elemento de Xamarin.Forms:
   - Se registran controladores de eventos para los eventos `NavigationCompleted` y `ScriptNotify`. El evento `NavigationCompleted` se desencadena cuando el control nativo `WebView` ha terminado de cargar el contenido actual o si se ha producido un error de navegación. El evento `ScriptNotify` se desencadena cuando el contenido del control nativo `WebView` usa JavaScript para pasar una cadena a la aplicación. La página web desencadena el evento `ScriptNotify` mediante una llamada a `window.external.notify` al pasar un parámetro `string`.
   - La propiedad `WebView.Source` está establecida en el URI del archivo HTML especificado por la propiedad `HybridWebView.Uri`. El código da por supuesto que el archivo está almacenado en la carpeta `Content` del proyecto. Una vez que se muestra la página web, se desencadena el evento `NavigationCompleted` y se invoca al método `OnWebViewNavigationCompleted`. La función de JavaScript `invokeCSharpAction` se inserta en la página web con el método `WebView.InvokeScriptAsync`, siempre que la navegación se haya realizado correctamente.
-- Cuando cambia el elemento al que está asociado el representador:
-  - Se cancela la suscripción a los eventos.
+- La suscripción de los eventos se cancela cuando cambia el representador al que está adjunto el elemento.
+- El elemento de Xamarin.Forms se limpia cuando se desecha el representador.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

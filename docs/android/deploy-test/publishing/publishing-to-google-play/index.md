@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 04e83fc68218216fe36cce67e43b83e8ad8feaa5
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021283"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070781"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -42,9 +42,9 @@ Para publicar aplicaciones en Google Play, es necesario tener una cuenta de edit
 
 Google Play no se admite en todos los países del mundo. Las listas de países más recientes se pueden encontrar en los siguientes vínculos:
 
-1. [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; Se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
+1. [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324): se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
 
-1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; Se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
+1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294): se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
 
 ### <a name="preparing-promotional-assets"></a>Preparación de los recursos promocionales
 
@@ -79,7 +79,7 @@ Las aplicaciones de Google Play requieren una versión de alta fidelidad del ico
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) es una herramienta útil para la creación de iconos adecuados para el iniciador y las aplicaciones de alta resolución.
 
-#### <a name="screen-shots"></a>Capturas de pantalla
+#### <a name="screenshots"></a>Capturas de pantalla
 
 Google Play requiere un mínimo de dos y un máximo de ocho capturas de pantalla para una aplicación. Se muestran en la página de detalles de la aplicación en Google Play.
 
@@ -111,7 +111,7 @@ Se trata de una dirección URL de un vídeo de YouTube que muestra la aplicació
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 introduce un flujo de trabajo integrado para publicar aplicaciones en Google Play desde Visual Studio. Si utiliza una versión de Xamarin Android anterior a la 7.0, debe cargar manualmente el APK mediante Google Play Developer Console. Además, debe tener al menos un APK que ya esté cargado para poder utilizar el flujo de trabajo integrado. Si todavía no ha cargado su primer APK, debe cargarlo manualmente. Para obtener más información, consulte [Manually Uploading the APK (Carga manual del APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
@@ -124,7 +124,7 @@ En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/sig
 5. Firme la aplicación con el certificado.
 6. Publique la aplicación firmada en Google Play.
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Seleccione **Google Play** y haga clic en **Siguiente**:
+En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Selección de **Google Play**:
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -142,7 +142,7 @@ En el cuadro de diálogo **Register Google API Access (Registrar acceso de API d
 
 En la siguiente sección se explica cómo crear un nuevo proyecto de API de Google y generar el _id. de cliente_ y el _secreto de cliente_ que se necesitan.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Visual Studio para Mac cuenta con un flujo de trabajo integrado para publicar aplicaciones en Google Play.
 
@@ -171,18 +171,19 @@ En la siguiente sección se explica cómo crear un nuevo proyecto de API de Goog
 
 En primer lugar, inicie sesión en su [cuenta de desarrollador de Google Play](https://play.google.com/apps/publish).
 Si no dispone de una cuenta de desarrollador de Google Play, consulte [Primeros pasos con la publicación](https://developer.android.com/distribute/googleplay/start.html).
-Además, en la [Introducción](https://developers.google.com/android-publisher/getting_started) la API para desarrolladores de Google Play se explica cómo utilizar la API. Después de iniciar sesión en Google Play Developer Console, haga clic en **Configuración**:
+Además, en la [Introducción](https://developers.google.com/android-publisher/getting_started) la API para desarrolladores de Google Play se explica cómo utilizar la API. Después de iniciar sesión en Google Play Developer Console, haga clic en **CREAR APLICACIÓN**:
 
-[![Icono Settings (Configuración)](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
+[![Botón Create new project (Crear nuevo proyecto)](images/01-create-new-project-sml.png)](images/01-create-new-project.png#lightbox)
 
-En el la página **CONFIGURACIÓN**, seleccione **Acceso de API** y haga clic en el botón **Crear nuevo proyecto**:
-
-[![Botón Create new project (Crear nuevo proyecto)](images/02-create-new-project-sml.png)](images/02-create-new-project.png#lightbox)
-
-Tras un minuto aproximadamente, el nuevo proyecto de API se genera de forma automática y se vincula a su cuenta de Google Play Developer Console.
+Después de crear el nuevo proyecto, se vinculará a la cuenta de Google Play Developer Console.
 
 El siguiente paso es crear un cliente de OAuth para la aplicación, si aún no se ha creado uno. Cuando los usuarios solicitan acceso a sus datos privados mediante la aplicación, el id. de cliente OAuth se usa para autenticar su aplicación.
-Haga clic en **Crear cliente de OAuth** para crear un nuevo cliente de OAuth:
+
+Vaya a la página **Configuración**.
+
+[![Icono Settings (Configuración)](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
+
+En la página **Configuración**, seleccione **Acceso a la API** y haga clic en **CREAR CLIENTE DE OAUTH** para crear un nuevo cliente de OAuth:
 
 [![Botón Create OAuth Client (Crear cliente de OAuth)](images/03-create-oauth-client-sml.png)](images/03-create-oauth-client.png#lightbox)
 
@@ -192,7 +193,7 @@ Después de unos segundos, se genera un nuevo id. de cliente. Haga clic en **Ver
 
 El id. de cliente se muestra con su fecha de creación y el nombre. Haga clic en el icono **Editar cliente de OAuth** para ver el secreto de cliente de la aplicación:
 
-[![Consulta de las credenciales de la aplicación](images/05-google-developer-console-sml.png)](images/05-google-developer-console.png#lightbox)
+[![Se muestran las credenciales de la aplicación](images/05-google-developer-console-sml.png)](images/05-google-developer-console.png#lightbox)
 
 El nombre predeterminado del cliente de OAuth es *Desarrollador de Google Play Android*. Se puede cambiar por nombre de la aplicación de Xamarin.Android o por cualquier nombre adecuado. En este ejemplo, se cambia el nombre de cliente OAuth por el nombre de la aplicación, **MyApp**:
 
@@ -206,7 +207,7 @@ Este archivo JSON contiene el id. de cliente y el secreto del cliente que puede 
 
 #### <a name="register-google-api-access"></a>Registro del acceso de la API de Google
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Utilice el identificador de cliente y el secreto de cliente para completar el cuadro de diálogo **Cuenta de API de Google Play** de Visual Studio para Mac. Es posible proporcionar una descripción a la cuenta, lo que permite registrar más de una cuenta de Google Play y cargar futuros APK en diferentes cuentas de Google Play. Copie el id. de cliente y el secreto de cliente en este cuadro de diálogo y haga clic en **Registrar**:
 
@@ -223,18 +224,19 @@ Después de hacer clic en **Permitir**, el explorador indica _Received verificat
 
 [![Cuenta agregada a las cuentas de Google Play](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
-Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play ofrece cuatro pistas posibles para cargar la aplicación:
+Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play ofrece cinco pistas posibles para cargar la aplicación:
 
-- **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
-- **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
-- **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
-- **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
+- **Interna**: se usa para distribuir rápidamente la aplicación para pruebas internas y comprobaciones de control de calidad.
+- **Alfa**: se usa para cargar una versión temprana de la aplicación en una lista reducida de evaluadores.
+- **Beta**: se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
+- **Producción**: se usa para la distribución completa en la tienda de Google Play.
+- **Personalizada**: se usa para probar versiones preliminares de la aplicación con usuarios específicos mediante la creación de una lista de evaluadores por dirección de correo electrónico.
 
-Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**. Si selecciona **Rollout (Implementación)** , asegúrese de especificar un valor porcentual:
+Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**.
 
-[![Selección de Alfa, Beta, Lanzamiento o Producción](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
+[![Cuenta agregada a las cuentas de Google Play](images/vs/08-google-play-track-sml.png)](images/vs/07-account-added.png#lightbox)
 
-Para obtener más información sobre las pruebas y las implementaciones graduales de Google Play, consulte [Configurar pruebas alpha o beta](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
+Para obtener más información sobre las pruebas de Google Play, vea [Configurar una prueba abierta, cerrada o interna](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
 A continuación, se muestra un cuadro de diálogo para especificar la contraseña del certificado de firma.
 Escriba la contraseña y haga clic en **Aceptar**:
@@ -251,50 +253,54 @@ Cuando finaliza la carga, el estado se muestra en la esquina inferior izquierda 
 
 ### <a name="troubleshooting"></a>Solución de problemas
 
+Si no ve su pista personalizada al seleccionar una pista de Google Play, asegúrese de que ha creado una versión para esa pista en Google Play Developer Console. Para obtener instrucciones sobre cómo crear una versión, consulte [Preparar y lanzar versiones](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
+
 Tenga en cuenta que se debe haber enviado antes un APK a Google Play Store para que **Publish to Google Play (Publicación en Google Play)** funcione. Si aún no se ha cargado un APK, el Asistente para publicación mostrará el siguiente error en la panel **Errores**:
 
 [![Debe cargar manualmente el primer APK de esta aplicación](images/vs/12-upload-error-sml.png)](images/vs/12-upload-error.png#lightbox)
 
-Si se produce este error, cargue un APK manualmente, por ejemplo, una compilación ad hoc, mediante Google Play Developer Console y utilice el cuadro de diálogo **Distribution Channel (Canal de distribución)** para posteriores actualizaciones del APK.  Para obtener más información, consulte [Manually Uploading the APK (Carga manual del APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md). El código de la versión del APK debe cambiar con cada carga. De lo contrario, se producirá el siguiente error:
+Si se produce este error, cargue un APK manualmente, por ejemplo, una compilación ad hoc, mediante Google Play Developer Console y utilice el cuadro de diálogo **Canal de distribución** para posteriores actualizaciones del APK.  Para obtener más información, consulte [Manually Uploading the APK (Carga manual del APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md). El código de la versión del APK debe cambiar con cada carga. De lo contrario, se producirá el siguiente error:
 
 [![Ya se actualizó un APK con el código de versión (1)](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
 Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)** .
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Utilice el identificador de cliente y el secreto de cliente para completar el cuadro de diálogo **Cuenta de API de Google Play** de Visual Studio para Mac. Es posible proporcionar una descripción a la cuenta, lo que permite registrar más de una cuenta de Google Play y cargar futuros APK en diferentes cuentas de Google Play. Copie el id. de cliente y el secreto de cliente en este cuadro de diálogo y haga clic en **Registrar**:
 
-[![Cuadro de diálogo de autorización de acceso](images/xs/10-register-sml.png)](images/xs/10-register.png#lightbox)
+[![Cuadro de diálogo de autorización de acceso](images/xs/03-register-sml.png)](images/xs/03-register.png#lightbox)
 
 Si se aceptan el id. de cliente y el secreto de cliente, se mostrará el mensaje **Registro aprobado**. Haga clic en **Siguiente**:
 
-[![Mensaje de registro correcto](images/xs/11-registration-successful-sml.png)](images/xs/11-registration-successful.png#lightbox)
+[![Mensaje de registro correcto](images/xs/04-registration-successful-sml.png)](images/xs/04-registration-successful.png#lightbox)
 
 En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)** , seleccione una cuenta de Google y una pista para cargar la aplicación:
 
-[![Cuadro de diálogo para elegir una cuenta de Google](images/xs/12-choose-google-account-sml.png)](images/xs/12-choose-google-account.png#lightbox)
+[![Cuadro de diálogo para elegir una cuenta de Google](images/xs/05-choose-google-account-sml.png)](images/xs/05-choose-google-account.png#lightbox)
 
-Google Play ofrece cuatro pistas posibles para cargar la aplicación:
+Google Play ofrece cinco pistas posibles para cargar la aplicación:
 
-- **Alfa** &ndash; Se usa para cargar una versión muy temprana de la aplicación en una lista reducida de evaluadores.
+- **Interna**: se usa para distribuir rápidamente la aplicación para pruebas internas y comprobaciones de control de calidad.
+- **Alfa**: se usa para cargar una versión temprana de la aplicación en una lista reducida de evaluadores.
+- **Beta**: se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
+- **Producción**: se usa para la distribución completa en la tienda de Google Play.
+- **Personalizada**: se usa para probar versiones preliminares de la aplicación con usuarios específicos mediante la creación de una lista de evaluadores por dirección de correo electrónico.
 
-- **Beta** &ndash; Se usa para cargar una versión temprana de la aplicación en una lista amplia de evaluadores.
-
-- **Lanzamiento** &ndash; Permite a un porcentaje de los usuarios recibir una versión actualizada de la aplicación. Así, puede aumentar lentamente el porcentaje de aproximadamente el 10 % de los usuarios hasta el 100 % mientras corrige errores.
-
-- **Producción** &ndash; Seleccione esta pista cuando la aplicación esté lista para su distribución completa desde Google Play Store.
-
-Para obtener más información sobre las pruebas y las implementaciones graduales de Google Play, consulte [Configurar pruebas alpha o beta](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
+Para obtener más información sobre las pruebas de Google Play, vea [Configurar una prueba abierta, cerrada o interna](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
 A continuación, elija una identidad de firma para firmar la aplicación.
 Seleccione **Usar clave existente** para usar una identidad de firma existente. De lo contrario, consulte la guía [Creating a New Certificate (Crear un certificado nuevo)](~/android/deploy-test/signing/index.md#newcert) para obtener información sobre cómo crear una clave. Después de haber seleccionado un certificado para firmar la aplicación, haga clic en **Siguiente**:
 
-[![Cuadro de diálogo Identidad de firma para Android](images/xs/13-android-signing-identity-sml.png)](images/xs/13-android-signing-identity.png#lightbox)
+[![Cuadro de diálogo Identidad de firma para Android](images/xs/06-android-signing-identity-sml.png)](images/xs/06-android-signing-identity.png#lightbox)
 
 Llegados a este punto, la aplicación puede cargarse en Google Play. En el cuadro de diálogo **Publicar en Google Play** se resume la información de la aplicación. Haga clic en **Publicar** para publicar la aplicación en Google Play:
 
-[![Cuadro de diálogo Publicar en Google Play](images/xs/14-publish-to-google-play-sml.png)](images/xs/14-publish-to-google-play.png#lightbox)
+[![Cuadro de diálogo Publicar en Google Play](images/xs/07-publish-to-google-play-sml.png)](images/xs/07-publish-to-google-play.png#lightbox)
+
+### <a name="troubleshooting"></a>Solución de problemas
+
+Si no ve su pista personalizada al seleccionar una pista de Google Play para la carga de la aplicación, asegúrese de que ha creado una versión para esa pista en Google Play Developer Console. Para obtener instrucciones sobre cómo crear una versión, consulte [Preparar y lanzar versiones](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 Tenga en cuenta que se debe haber enviado antes un APK a Google Play Store para que **Publish to Google Play (Publicación en Google Play)** funcione. Si no se carga un APK, puede producirse el error siguiente:
 

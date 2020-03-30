@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
+ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303526"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80261315"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -27,7 +27,7 @@ Para compilar la aplicación para lanzamiento, siga estos pasos:
 
 - **[Proteger la aplicación](#protect_app)** : impida que los usuarios o los atacantes depuren, alteren o usen técnicas de ingeniería inversa en la aplicación. Para ello, deshabilite la depuración, ofusque el código administrado, agregue protección contra la depuración y la alteración y use la compilación nativa.
 
-- **[Establecer las propiedades de empaquetado](#Set_Packaging_Properties)** : las propiedades de empaquetado controlan la creación del paquete de aplicaciones Android (APK). En este paso se optimiza el APK, se protegen sus activos y se modulariza el empaquetado según sea necesario.
+- **[Establecer las propiedades de empaquetado](#Set_Packaging_Properties)** : las propiedades de empaquetado controlan la creación del paquete de aplicaciones Android (APK). En este paso se optimiza el APK, se protegen sus activos y se modulariza el empaquetado según sea necesario. Además, puede proporcionar a los usuarios un lote de aplicaciones para Android optimizadas para sus dispositivos.
 
 - **[Compilar](#Compile)** : en este paso se compila el código y los recursos para comprobar que se compila en el modo de lanzamiento.
 
@@ -268,6 +268,16 @@ Cuando la opción **Habilitar Multi-Dex** está habilitada, se usan herramientas
 Es posible que una aplicación no use todos los métodos de todas las bibliotecas a los que se haga referencia, de modo que es posible que una herramienta como ProGuard (vea más arriba) pueda eliminar del código los métodos que no se usen. La práctica recomendada es habilitar **Habilitar Multi-Dex** solo si es absolutamente necesario, por ejemplo, si aplicación aún hace referencia a más de 65 000 métodos de Java incluso después de usar ProGuard.
 
 Para más información sobre Multi-Dex, vea [Configurar aplicaciones con más de 64 000 métodos](https://developer.android.com/tools/building/multidex.html).
+
+### <a name="android-app-bundles"></a>Lotes de aplicaciones para Android
+
+Los lotes de aplicaciones son diferentes a los APK, ya que no se pueden implementar directamente en un dispositivo. Es un formato que se debe cargar con todos los recursos y el código compilado. Después de cargar el lote de aplicaciones firmado, Google Play tendrá todo lo necesario para compilar y firmar el APK de la aplicación y proporcionarlo a los usuarios mediante la entrega dinámica.
+
+Para habilitar la compatibilidad con lotes de aplicaciones para Android, deberá habilitar el valor `bundle` de la propiedad **Formato de paquete Android** en las opciones del proyecto de Android. Antes de hacerlo, asegúrese de cambiar el proyecto a una configuración de `Release`, ya que los lotes de aplicaciones están destinados únicamente para los paquetes de lanzamiento.
+
+Ahora puede generar un lote de aplicaciones siguiendo el [flujo de archivo](#archive). Se generará un lote de aplicaciones para la aplicación.
+
+Para obtener más información sobre los lotes de aplicaciones para Android, vea [Acerca de los paquetes Android App Bundle](https://developer.android.com/guide/app-bundle/).
 
 <a name="Compile" />
 
