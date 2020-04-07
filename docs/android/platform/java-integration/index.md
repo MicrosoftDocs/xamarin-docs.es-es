@@ -26,7 +26,7 @@ Hay tres formas posibles de volver a usar las bibliotecas de Java en una aplicac
 
 - **Crear una biblioteca de enlaces de Java**: con esta técnica, se usa un proyecto de Xamarin.Android para crear contenedores C# alrededor de los tipos de Java. Una aplicación de Xamarin.Android puede hacer referencia a los contenedores C# creados por este proyecto y, a continuación, usar el archivo `.jar`. 
 
-- **Java Native Interface**: *Java Native* *Interface* (JNI) es un marco que permite a código que no es de Java (como C** o C#) llamar a código de Java o recibir llamadas de este código en una JVM. 
+- **Java Native Interface**: *Java Native* *Interface* (JNI) es un marco que permite a código que no es de Java (como C++ o C#) llamar a código de Java o recibir llamadas de este código en una JVM. 
 
 - **Portar el código**: este método implica tomar el código fuente Java y, a continuación, convertirlo en C#. Esto se puede hacer manualmente o mediante una herramienta automatizada como Sharpen. 
 
