@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3b1603b6af5ebb5558c3cd764f41fdbe24351b9b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "68669833"
 ---
 Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos HTTP que utilizan los exploradores web para recuperar páginas y enviar datos a los servidores. En este ejercicio, creará una clase que utiliza el verbo GET para recuperar datos desde la API web [OpenWeatherMap](https://openweathermap.org/). Esta API web puede utilizarse para recuperar datos de pronóstico meteorológico para una ubicación especificada. El uso de esta API web requiere registrarse para una clave de API.
@@ -11,7 +11,7 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
 > [!div class="nextstepaction"]
 > [Registro para obtener una clave de API](https://home.openweathermap.org/users/sign_up)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En el **Explorador de soluciones**, agregue una nueva clase denominada `Constants` al proyecto **WebServiceTutorial**. Después, en **Constants.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
@@ -131,7 +131,7 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
 
 1. Compile la solución para asegurarse de que no haya errores.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En el **Panel de solución**, agregue una nueva clase denominada `Constants` al proyecto **WebServiceTutorial**. Después, en **Constants.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 

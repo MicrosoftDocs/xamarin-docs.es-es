@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61384586"
 ---
 Es posible agregar archivos de imagen a proyectos de plataforma y hacer referencia a ellos desde código compartido de Xamarin.Forms. Este método de distribución de imágenes es necesario cuando las imágenes son específicas de la plataforma, por ejemplo, al usar resoluciones diferentes en plataformas diversas, o bien al emplear diseños que difieren ligeramente.
@@ -16,7 +16,7 @@ En este ejercicio, modificará la solución **ImageTutorial** para mostrar una i
 > [!IMPORTANT]
 > Para usar una imagen única en todas las plataformas, *es necesario usar el mismo nombre de archivo en todas las plataformas*. Debe ser un nombre de recurso de Android válido, es decir, solo se permiten letras minúsculas, números, el carácter de subrayado y el punto.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En el **Explorador de soluciones**, en el proyecto **ImageTutorial.iOS**, expanda **Catálogos de activos** y haga doble clic en **Activos** para abrirlo. Después, en la pestaña **Assets.xcassets**, haga clic en el botón **Más** y seleccione **Agregar conjunto de imágenes**:
 
@@ -62,7 +62,7 @@ En este ejercicio, modificará la solución **ImageTutorial** para mostrar una i
 
     Para obtener más información sobre las imágenes locales, vea [Imágenes locales](~/xamarin-forms/user-interface/images.md#local-images) en la guía [Imágenes en Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En el **Panel de solución**, en el proyecto **ImageTutorial.iOS**, haga doble clic en **Assets.xcassets** para abrirlo. Después, en la **Lista de activos**, haga clic con el botón derecho y seleccione **Nuevo conjunto de imágenes**:
 

@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61037649"
 ---
 Anteriormente, [`ListView`](xref:Xamarin.Forms.ListView) se ha rellenado con datos mediante el enlace de datos. Aun así, pese al enlace de datos con una colección, donde cada objeto de la colección ha definido varios elementos de datos, solo se ha mostrado un elemento de datos por objeto (la propiedad `Name` del objeto `Monkey`).
 
 En este ejercicio, modificará el proyecto **ListViewTutorial** de forma que [`ListView`](xref:Xamarin.Forms.ListView) muestre varios elementos de datos en cada fila.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`ListView`](xref:Xamarin.Forms.Image) para personalizar la apariencia de cada fila:
 
@@ -60,7 +60,7 @@ En este ejercicio, modificará el proyecto **ListViewTutorial** de forma que [`L
 
     [![Captura de pantalla de un elemento ListView cuyos elementos están basados en una plantilla de datos](../images/customize-cell-appearance.png "ListView que muestra datos basados en plantilla")](../images/customize-cell-appearance-large.png#lightbox "ListView que muestra datos basados en plantilla")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En **MainPage.xaml**, modifique la declaración [`ListView`](xref:Xamarin.Forms.Image) para personalizar la apariencia de cada fila:
 

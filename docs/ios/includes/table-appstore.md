@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70775894"
 ---
 |Id. de género|Nombre de género|

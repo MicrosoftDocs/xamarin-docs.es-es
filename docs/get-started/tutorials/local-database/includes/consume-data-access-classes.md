@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: caee3eeda90a560f032c17657072ae5ba5023a69
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135163"
 ---
 En este ejercicio, creará una interfaz de usuario para consumir las clases de acceso a datos creadas anteriormente.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En el **Explorador de soluciones**, en el proyecto **LocalDatabaseTutorial**, haga doble clic en **MainPage.xaml** para abrirlo. Después, en **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
@@ -78,7 +78,7 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
 
     Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En el **Panel de solución**, en el proyecto **LocalDatabaseTutorial**, haga doble clic en **MainPage.xaml** para abrirlo. Después, en **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
