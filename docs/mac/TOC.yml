@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Primeros pasos
+    - name: Introducción
       href: get-started/index.md
       expanded: true
       items:
@@ -223,5 +223,5 @@
           href: troubleshooting/mmp-errors.md
     - name: Notas de la versión
       href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-    - name: Muestras
+    - name: Ejemplos
       href: samples/index.md

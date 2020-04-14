@@ -22,20 +22,20 @@
       items:
         - name: Acerca de la versión preliminar de Xamarin Live Player
           href: live-player/index.md
-        - name: "Configuración de Visual\_Studio"
+        - name: Configuración de Visual Studio
           href: live-player/install.md
         - name: Aplicación de Xamarin Live Player
           href: live-player/player.md
         - name: Solución de problemas
           href: live-player/troubleshooting.md
-    - name: generador de perfiles
+    - name: Generador de perfiles
       href: profiler/index.md
       items:
         - name: Solución de problemas
           href: profiler/troubleshooting.md
         - name: Notas de la versión
           href: /xamarin/tools/profiler/release-notes/
-    - name: Libros
+    - name: Workbooks
       href: workbooks/index.md
       items:
         - name: Instalación y requisitos
@@ -54,7 +54,7 @@
         - name: SDK de integración
           href: workbooks/sdk/index.md
           items:
-            - name: Información general sobre la arquitectura
+            - name: Introducción a la arquitectura
               href: workbooks/sdk/architecture.md
             - name: Temas de integración avanzada
               href: workbooks/sdk/integrations.md
@@ -96,7 +96,7 @@
         - name: Objective-C
           href: dotnet-embedding/objective-c/index.md
           items:
-            - name: Procedimientos recomendados
+            - name: Prácticas recomendadas
               href: dotnet-embedding/objective-c/best-practices.md
             - name: Plataformas
               href: dotnet-embedding/objective-c/platforms.md

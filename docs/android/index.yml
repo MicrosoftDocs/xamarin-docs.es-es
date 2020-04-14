@@ -11,13 +11,13 @@ metadata:
   ms.author: dabritch
   ms.date: 01/27/2020
   ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
-  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/17/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77374089"
 landingContent:
-- title: Primeros pasos
+- title: Introducción
   linkLists:
   - linkListType: concept
     links:
@@ -85,7 +85,7 @@ landingContent:
       url: ~/android/platform/files/index.md
     - text: Autenticación de huella digital
       url: ~/android/platform/fingerprint-authentication/index.md
-    - text: Fragmentos
+    - text: Fragments
       url: ~/android/platform/fragments/index.md
     - text: Integración con Java
       url: ~/android/platform/java-integration/index.md
@@ -99,9 +99,9 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Acerca de
+    - text: Información
       url: ~/essentials/index.md?context=xamarin/android
-    - text: Primeros pasos
+    - text: Introducción
       url: ~/essentials/get-started.md?context=xamarin/android
     - text: Compatibilidad de plataformas y características
       url: ~/essentials/platform-feature-support.md?context=xamarin/android
@@ -151,7 +151,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Arquitectura
+    - text: Architecture
       url: ~/android/internals/architecture.md
     - text: Ensamblados disponibles
       url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
@@ -165,7 +165,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Primeros pasos
+    - text: Introducción
       url: ~/android/wear/get-started/index.md
     - text: Interfaz de usuario
       url: ~/android/wear/user-interface/index.md

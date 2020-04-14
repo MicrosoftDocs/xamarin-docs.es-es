@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 552251490665b673e02eb58c50c643daed9c1aed
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107348"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
@@ -14,7 +14,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 - Tutorial sobre las [etiquetas](~/get-started/tutorials/label/index.yml) (Label).
 - Tutorial sobre las [imágenes](~/get-started/tutorials/image/index.yml) (Image).
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >

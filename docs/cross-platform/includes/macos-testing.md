@@ -1,10 +1,10 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 2822d568956c2036481ac7ef3720c1afea8b1b2b
-ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "64987045"
 ---
 ||Notas sobre pruebas|

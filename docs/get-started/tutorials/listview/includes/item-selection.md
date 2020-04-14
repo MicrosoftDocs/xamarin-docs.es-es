@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "74062929"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`ListView`](xref:Xamarin.Forms.ListView) para que establezca controladores para los eventos [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) y [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped):
 
@@ -45,7 +45,7 @@ ms.locfileid: "74062929"
 
     Para obtener más información sobre la pulsación y selección de elementos, consulte [Selección y pulsaciones](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) en la guía [Interactividad de ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En **MainPage.xaml**, modifique la declaración [`ListView`](xref:Xamarin.Forms.ListView) para que establezca controladores para los eventos [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) y [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped):
 

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67560024"
 ---
 El tamaño y la posición de las vistas secundarias dentro de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependen de los valores de las propiedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) y [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) de las vistas secundarias, y de los valores de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -13,7 +13,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 - **Alineación**: indica la alineación preferida de la vista secundaria, que determina su posición y su tamaño en el diseño principal.
 - **Expansión**: indica si la vista secundaria debe usar espacio adicional, en caso de que esté disponible (solo lo usa [`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`StackLayout`](xref:Xamarin.Forms.StackLayout) para establecer las opciones de alineación y expansión para cada [`Label`](xref:Xamarin.Forms.Label):
 
@@ -69,7 +69,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
     Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En **MainPage.xaml**, modifique la declaración [`StackLayout`](xref:Xamarin.Forms.StackLayout) para establecer las opciones de alineación y expansión para cada [`Label`](xref:Xamarin.Forms.Label):
 
@@ -124,8 +124,3 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
     > Cuando se usa todo el espacio de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout), las preferencias de expansión no tienen ningún efecto.
 
     Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
-
------
-
-> [!div class="nextstepaction"]
-> [Encontré un problema](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)

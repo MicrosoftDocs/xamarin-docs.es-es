@@ -9,10 +9,10 @@ metadata:
   ms.date: 12/23/2019
   ms.topic: landing-page
   ms.openlocfilehash: 624228746f3212b0c8b237dcb9694daea037e89f
-  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/07/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "75718720"
 landingContent:
 - title: Compilación de aplicaciones y juegos multiplataforma
@@ -31,7 +31,7 @@ landingContent:
       url: ~/cross-platform/get-started/introduction-to-mobile-sdlc.md
     - text: Tutorial
       url: ~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md
-- title: Compatibilidad con lenguajes
+- title: Compatibilidad con idiomas
   linkLists:
   - linkListType: concept
     links:

@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 12/30/2019
   ms.openlocfilehash: f02b2744dab2700bc1ac680b134e42000d5d21ff
-  ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77480479"
 landingContent:
 - title: Conceptos principales
@@ -45,7 +45,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: comportamientos
+    - text: Comportamientos
       url: behaviors/index.md
     - text: Representadores personalizados
       url: custom-renderer/index.md

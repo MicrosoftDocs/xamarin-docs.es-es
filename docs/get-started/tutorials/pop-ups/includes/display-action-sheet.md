@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "66193785"
 ---
 
 Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de acciones, que se puede usar para guiar a los usuarios en la realización de una tarea. En este ejercicio, usará el método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de la clase [`Page`](xref:Xamarin.Forms.Page) para mostrar una hoja de acciones que guía a los usuarios en la realización de una tarea.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, agregue una nueva declaración [`Button`](xref:Xamarin.Forms.Button) que mostrará una hoja de acciones:
 
@@ -43,7 +43,7 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
     Para más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios a través de tareas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En **MainPage.xaml**, agregue una nueva declaración [`Button`](xref:Xamarin.Forms.Button) que mostrará una hoja de acciones:
 

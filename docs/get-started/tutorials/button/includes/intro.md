@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 42b42e8013032b684b31e8bd974c433ef176be52
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059804"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
@@ -11,7 +11,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 - Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
 - Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >

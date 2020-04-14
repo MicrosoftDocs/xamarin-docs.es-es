@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135147"
 ---
 La subclase [`Application`](xref:Xamarin.Forms.Application) tiene un diccionario [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que se puede usar para almacenar datos a lo largo de los cambios de estado del ciclo de vida. Este diccionario usa una clave `string` y almacena un valor `object`. El diccionario se guarda automáticamente en el dispositivo y se vuelve a rellenar cuando se reinicia la aplicación.
@@ -13,7 +13,7 @@ La subclase [`Application`](xref:Xamarin.Forms.Application) tiene un diccionario
 
 En este ejercicio, modificará la aplicación para conservar el texto de un objeto [`Entry`](xref:Xamarin.Forms.Entry) tras el procesamiento en segundo plano y restaurar el texto al objeto `Entry` cuando se reinicie la aplicación.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En el **Explorador de soluciones**, en el proyecto **AppLifecycleTutorial**, expanda **App.xaml** y haga doble clic en **App.xaml.cs** para abrirlo. Después, en **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
@@ -117,7 +117,7 @@ En este ejercicio, modificará la aplicación para conservar el texto de un obje
 
     Para obtener más información sobre cómo conservar datos en el diccionario Properties, vea [Diccionario Properties](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) en la guía [Clase App de Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En el **Panel de solución**, en el proyecto **AppLifecycleTutorial**, expanda **App.xaml** y haga doble clic en **App.xaml.cs** para abrirlo. Después, en **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 

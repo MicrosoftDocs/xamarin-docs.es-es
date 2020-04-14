@@ -18,7 +18,7 @@
       href: navigation.md
     - name: Validación
       href: validation.md
-    - name: Administración de configuración
+    - name: Administración de la configuración
       href: configuration-management.md
     - name: Microservicios en contenedores
       href: containerized-microservices.md

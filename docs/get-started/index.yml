@@ -11,13 +11,13 @@ metadata:
   ms.author: dabritch
   ms.date: 12/23/2019
   ms.openlocfilehash: 672bf80503c85ac4bdaa903c647144be3819635d
-  ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/23/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "76550086"
 landingContent:
-- title: Primeros pasos
+- title: Introducción
   linkLists:
   - linkListType: overview
     links:
@@ -77,9 +77,9 @@ landingContent:
       url: tutorials/app-lifecycle/index.yml
     - text: Base de datos local
       url: tutorials/local-database/index.yml
-    - text: servicios Web
+    - text: SERVICIOS WEB
       url: tutorials/web-service/index.yml
-- title: Obtener información sobre Xamarin
+- title: Más información sobre Xamarin
   linkLists:
   - linkListType: concept
     links:
