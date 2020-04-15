@@ -143,6 +143,8 @@
               href: user-interface/android-designer/material-design-features.md
             - name: Diagnóstico de diseño de Android
               href: user-interface/android-designer/diagnostics.md
+            - name: Analizadores de diagnóstico de Android Designer
+              href: user-interface/android-designer/diagnostic-analyzers.md
         - name: Tema de materiales
           href: user-interface/material-theme.md
         - name: Perfil de usuario
@@ -463,6 +465,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Vibración
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Autenticador web
+          href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Notas de la versión de Xamarin.Essentials
           href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: Solución de problemas

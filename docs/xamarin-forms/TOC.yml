@@ -860,6 +860,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/xamarin-forms
         - name: Vibración
           href: ~/essentials/vibrate.md?context=xamarin/xamarin-forms
+        - name: Autenticador web
+          href: ~/essentials/web-authenticator.md?context=xamarin/xamarin-forms
         - name: Notas de la versión de Xamarin.Essentials
           href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: Solución de problemas
@@ -924,8 +926,6 @@
               href: data-cloud/authentication/index.md
             - name: REST
               href: data-cloud/authentication/rest.md
-            - name: OAuth
-              href: data-cloud/authentication/oauth.md
             - name: Azure Active Directory B2C
               href: data-cloud/authentication/azure-ad-b2c.md
             - name: Autenticación en Azure Cosmos DB
