@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
 ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77553564"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos

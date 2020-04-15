@@ -8,10 +8,10 @@ ms.author: daortin
 ms.custom: video
 ms.date: 08/08/2018
 ms.openlocfilehash: 81a40b9a21bdb9b33173416aed335ac75af9f388
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73006314"
 ---
 # <a name="deploy-to-the-remoted-ios-simulator"></a>Implementación en el simulador remoto de iOS

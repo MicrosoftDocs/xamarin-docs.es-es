@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
-ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78261623"
 ---
 # <a name="contributing"></a>Contribución

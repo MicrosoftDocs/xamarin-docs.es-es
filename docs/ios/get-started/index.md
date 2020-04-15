@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022776"
 ---
 # <a name="get-started-with-xamarinios"></a>Introducción a Xamarin.iOS
@@ -36,19 +36,19 @@ La última versión de Xcode se puede descargar desde el [Centro para desarrolla
 
 ## <a name="getting-started-series"></a>Serie de introducción
 
-### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[Configuración e instalación](~/ios/get-started/installation/index.md)
+### <a name="setup-and-installation"></a>[Configuración e instalación](~/ios/get-started/installation/index.md)
 
 Configure Xamarin.iOS y ejecútelo en Visual Studio para Mac o Visual Studio. En esta sección se explican la descarga, la instalación mediante Xamarin Installer, el inicio de sesión con la cuenta de Microsoft, los elementos de solución de problemas comunes, el aprovisionamiento de dispositivos, etc.
 
-### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
+### <a name="hello-ios"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
 
 En esta guía en dos partes se enseña a compilar la primera aplicación de Xamarin.iOS mediante Visual Studio para Mac o Visual Studio y se presentan los aspectos básicos del desarrollo de aplicaciones de iOS con Xamarin. En ella también se presentan las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.iOS.
 
-### <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md)
+### <a name="hello-ios-multiscreen"></a>[Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md)
 
 En esta guía en dos partes se examina la ampliación de la aplicación creada en la guía Hello, iOS a fin de controlar una segunda pantalla. Se presentan conceptos como el modelo de diseño Modelo-Vista-Controlador, se implementa la navegación de iOS y se conoce a fondo la estructura y la funcionalidad de la aplicación de iOS.
 
-## <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Xamarin para desarrolladores de Objective-C](objective-c-developers/index.md)
+## <a name="xamarin-for-objective-c-developers"></a>[Xamarin para desarrolladores de Objective-C](objective-c-developers/index.md)
 
 Se proporciona información para los desarrolladores de Objective-C que realizan la transición a la plataforma Xamarin.
 

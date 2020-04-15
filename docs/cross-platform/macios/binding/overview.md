@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
 ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725346"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Introducción a los enlaces de Objective-C

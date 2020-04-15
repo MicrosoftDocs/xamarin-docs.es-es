@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488496"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
@@ -23,7 +23,7 @@ La clase **SecureStorage** ayuda a almacenar pares de clave-valor sencillos de m
 
 Para acceder a la funcionalidad **SecureStorage**, se requiere la siguiente configuración específica para la plataforma:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 > [!TIP]
 > [Copia de seguridad para aplicaciones](https://developer.android.com/guide/topics/data/autobackup) es una característica de Android 6.0 (nivel de API 23) y versiones posteriores que crea copias de seguridad de los datos de aplicación del usuario (preferencias compartidas, archivos en el almacenamiento interno de la aplicación y otros archivos específicos). Los datos se restauran cuando se reinstala o instala una aplicación en un dispositivo nuevo. Esto puede afectar a `SecureStorage`, que utiliza las preferencias compartidas de las que se creó una copia de seguridad y que no se pueden descifrar cuando se realiza la restauración. Xamarin.Essentials controla automáticamente este caso al quitar la clave para que se pueda restablecer, pero puede dar un paso adicional si deshabilita Copia de seguridad automática.
@@ -61,7 +61,7 @@ Es posible configurar Copia de seguridad automática para deshabilitar la copia 
     </full-backup-content>
     ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Cuando desarrolle en el **emulador de iOS**, habilite el derecho **Keychain** y agregue un grupo de acceso de cadena de claves para el identificador de agrupación de la aplicación. 
 
@@ -72,7 +72,7 @@ En las propiedades del proyecto, en **iOS Bundle Signing** (Firma de agrupación
 > [!TIP]
 > Al implementar en un dispositivo iOS, no es necesario este derecho y se debe quitar.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 No se requiere configuración adicional.
 
@@ -129,7 +129,7 @@ SecureStorage.RemoveAll();
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 [Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave (no una clave criptográfica, la _clave_ para el _valor_) usada en el archivo de preferencias compartido es un _hash MD5_ de la clave pasada a las API `SecureStorage`.
 
@@ -143,13 +143,13 @@ En los niveles de API anteriores, Android KeyStore solo admite el almacenamiento
 
 **SecureStorage** usa la API [Preferences](preferences.md) y sigue la misma persistencia de datos que se describe en la documentación sobre [Preferencias](preferences.md#persistence). Si se actualiza un dispositivo desde Nivel de API 22 o inferior a Nivel de API 23 y superior, se seguirá usando este tipo de cifrado a menos que la aplicación se desinstale o se llame a **RemoveAll**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 [KeyChain](xref:Security.SecKeyChain) se usa para almacenar valores de manera segura en dispositivos iOS.  El elemento `SecRecord` que se usa para almacenar el valor tiene un valor `Service` establecido en **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.
 
 En algunos casos, los datos de KeyChain se sincronizan con iCloud y es posible que la desinstalación de la aplicación no quite los valores seguros de iCloud ni otros dispositivos del usuario.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 [DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) se usa para cifrar valores de manera segura en dispositivos de UWP.
 

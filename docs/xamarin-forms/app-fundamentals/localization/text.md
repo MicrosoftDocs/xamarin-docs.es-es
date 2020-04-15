@@ -9,10 +9,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/01/2019
 ms.openlocfilehash: bf99873d88a69a715cdf7969ad94afd66372b5e3
-ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "74135342"
 ---
 # <a name="xamarinforms-string-and-image-localization"></a>Localización de cadenas e imágenes de Xamarin.Forms

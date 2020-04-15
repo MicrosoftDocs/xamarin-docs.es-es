@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
 ms.openlocfilehash: c07e0c7d9645c22f0d70c75fd7d8dffdec8cde04
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545038"
 ---
 # <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: convertidores de unidades

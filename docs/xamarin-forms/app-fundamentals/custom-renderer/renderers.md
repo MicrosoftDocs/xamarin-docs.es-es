@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
 ms.openlocfilehash: f4c2663e4e4e298975fc1e230750ec562547b0da
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77636034"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
@@ -22,14 +22,14 @@ A excepción de la clase `MapRenderer`, los representadores específicos de la p
 
 - **iOS**: Xamarin.Forms.Platform.iOS
 - **Android**: Xamarin.Forms.Platform.Android
-- **Android (AppCompat)**: Xamarin.Forms.Platform.Android.AppCompat
-- **Plataforma universal de Windows (UWP)**: Xamarin.Forms.Platform.UWP
+- **Android (AppCompat)** : Xamarin.Forms.Platform.Android.AppCompat
+- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
 
 La clase `MapRenderer` se puede encontrar en los espacios de nombres siguientes:
 
 - **iOS**: Xamarin.Forms.Maps.iOS
 - **Android**: Xamarin.Forms.Maps.Android
-- **Plataforma universal de Windows (UWP)**: Xamarin.Forms.Maps.UWP
+- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Maps.UWP
 
 > [!NOTE]
 > Para información sobre cómo crear representadores personalizados para aplicaciones de Shell, consulte [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).

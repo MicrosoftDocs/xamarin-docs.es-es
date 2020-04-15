@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940692"
 ---
 # <a name="proguard"></a>ProGuard
@@ -316,11 +316,11 @@ Este problema suele producirse en Windows porque el archivo `.cfg` tiene una cod
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para evitar este problema, edite el archivo de configuración personalizado desde un editor de texto que permita guardar el archivo sin una marca BOM. Para solucionar este problema, asegúrese de que el editor de texto tenga la codificación establecida en `UTF-8`. Por ejemplo, el editor de texto [Notepad++](https://notepad-plus-plus.org/) puede guardar archivos sin la L. MAT seleccionando **Encoding (Codificación) &gt; Encode in UTF-8 Without BOM (Codificar en UTF-8 sin BOM)** al guardar el archivo. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Para evitar este problema, guarde el archivo de configuración personalizado desde un editor de texto que permita omitir la marca BOM. 
 

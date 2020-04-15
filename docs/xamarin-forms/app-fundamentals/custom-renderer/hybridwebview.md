@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: 712ca4f8f3441e0d3c2aede1b2510b07ca89f829
-ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+ms.date: 03/31/2020
+ms.openlocfilehash: c736c083d4a8c424d3e017dae3cc30e35ad4fa3b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80247618"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80419059"
 ---
 # <a name="customizing-a-webview"></a>Personalización de WebView
 
@@ -336,7 +336,7 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
-                Control.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                Control.SetWebViewClient(new JavascriptWebViewClient(this, $"javascript: {JavascriptFunction}"));
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
@@ -357,11 +357,11 @@ namespace CustomRenderer.Droid
 La clase `HybridWebViewRenderer` carga la página web especificada en la propiedad `HybridWebView.Uri` en un control nativo [`WebView`](xref:Android.Webkit.WebView) y la función de JavaScript `invokeCSharpAction` se inserta en la página web, una vez que la página web ha terminado de cargarse, con la invalidación `OnPageFinished` en la clase `JavascriptWebViewClient`:
 
 ```csharp
-public class JavascriptWebViewClient : WebViewClient
+public class JavascriptWebViewClient : FormsWebViewClient
 {
     string _javascript;
 
-    public JavascriptWebViewClient(string javascript)
+    public JavascriptWebViewClient(HybridWebViewRenderer renderer, string javascript) : base(renderer)
     {
         _javascript = javascript;
     }

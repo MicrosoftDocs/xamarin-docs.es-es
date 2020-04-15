@@ -6,10 +6,10 @@ author: JonDouglas
 ms.author: jodou
 ms.date: 03/09/2020
 ms.openlocfilehash: 03bace97908a53ac6112cd2600b20d429fe2f521
-ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80215317"
 ---
 # <a name="apply-changes"></a>Aplicar cambios

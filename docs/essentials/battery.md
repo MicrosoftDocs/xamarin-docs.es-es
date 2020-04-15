@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756921"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batería
@@ -23,7 +23,7 @@ La clase **Battery** le permite comprobar la información sobre la batería del 
 
 Para acceder a la funcionalidad de **Battery**, se requiere la siguiente configuración específica para la plataforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 El permiso `Battery` es necesario y se debe configurar en el proyecto Android. Se puede agregar de las siguientes maneras:
 
@@ -43,11 +43,11 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 
 O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active el permiso **Battery** (Batería). Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 No se requiere configuración adicional.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 No se requiere configuración adicional.
 
@@ -164,16 +164,16 @@ Si el estado de ahorro de energía cambia a `On`, la aplicación debe detener el
 
 ## <a name="platform-differences"></a>Diferencias entre plataformas
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 No hay diferencias entre las plataformas.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - Se debe usar el dispositivo para probar las API. 
 - Solo devolverá `AC` o `Battery` para `PowerSource`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - Solo devolverá `AC` o `Battery` para `PowerSource`.
 

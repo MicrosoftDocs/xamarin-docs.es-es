@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
 ms.openlocfilehash: fbd957c68d7a9aa2f8e44c91fab6174d8ed72014
-ms.sourcegitcommit: 5bcb6158693478ca1b3f6881dc912d3e7a8d1868
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77068760"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilo de una aplicación Xamarin.Forms multiplataforma

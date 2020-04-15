@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
 ms.openlocfilehash: 10d2ae6ac35f02d75ef6e04a0531ec3f5dafd668
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940819"
 ---
 # <a name="android-job-scheduler"></a>Programador de trabajos de Android
@@ -22,7 +22,7 @@ _En esta guía se describe cómo programar trabajos en segundo plano mediante la
 
 Una de las mejores formas de mantener la respuesta de una aplicación Android al usuario es asegurarse de que el trabajo complejo o de larga duración se realice en segundo plano. Sin embargo, es importante que el trabajo en segundo plano no afecte negativamente a la experiencia del usuario con el dispositivo. 
 
-Por ejemplo, un trabajo en segundo plano puede sondear un sitio web cada tres o cuatro minutos para consultar los cambios en un conjunto de datos determinado. Este proceso, aparentemente benigno, tendría un efecto desastroso en la duración de la batería. La aplicación reactivará el dispositivo de forma repetida, elevará la CPU a un estado de energía mayor, encenderá los radios, realizará las solicitudes de red y, luego, procesará los resultados. La situación empeora porque el dispositivo no se apaga inmediatamente y vuelve al estado inactivo de baja energía. Un trabajo en segundo plano mal programado puede mantener involuntariamente el dispositivo en un estado con requisitos de energía innecesarios y excesivos. Esta actividad aparentemente inocente (sondear un sitio web) dejará al dispositivo inutilizable en un período de tiempo relativamente corto.
+Por ejemplo, un trabajo en segundo plano puede sondear un sitio web cada tres o cuatro minutos para consultar los cambios en un conjunto de datos determinado. Este proceso, aparentemente benigno, tendría un efecto desastroso en la duración de la batería. La aplicación reactivará el dispositivo de forma repetida, elevará la CPU a un estado de energía mayor, encenderá los radios, realizará las solicitudes de red y, luego, procesará los resultados. La situación empeora porque el dispositivo no se apaga inmediatamente y vuelve al estado inactivo de baja energía. Un trabajo en segundo plano mal programado puede mantener involuntariamente el dispositivo en un estado con requisitos de energía innecesarios y excesivos. Esta actividad aparentemente inocente (sondear un sitio web) dejará al dispositivo inutilizable durante un período de tiempo relativamente corto.
 
 Android proporciona las siguientes API para ayudar a realizar trabajos en segundo plano, pero por sí solas no son suficientes para la programación inteligente de trabajos. 
 

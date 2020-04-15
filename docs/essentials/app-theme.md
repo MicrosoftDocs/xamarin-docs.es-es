@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
 ms.openlocfilehash: e31cae6ff639dbe261599a7cf78ae31fc09318b3
-ms.sourcegitcommit: c83b55f60ece20e9163b3e587130250fdf113a16
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79190314"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: Tema de la aplicación

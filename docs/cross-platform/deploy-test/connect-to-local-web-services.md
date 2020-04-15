@@ -7,10 +7,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
 ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
-ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "74135280"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
@@ -87,7 +87,7 @@ Sin embargo, el enrutador virtual de cada emulador administra un espacio de red 
 
 ### <a name="xamarinforms-example"></a>Ejemplo de Xamarin.Forms
 
-En una aplicación de Xamarin.Forms, la clase [ `Device` ](xref:Xamarin.Forms.Device) puede usarse para detectar la plataforma en la que se ejecuta la aplicación. El nombre de host adecuado, que permite el acceso a servicios web seguros locales, se puede establecer de la manera siguiente:
+En una aplicación de Xamarin.Forms, la clase [`Device`](xref:Xamarin.Forms.Device) puede usarse para detectar la plataforma en la que se ejecuta la aplicación. El nombre de host adecuado, que permite el acceso a servicios web seguros locales, se puede establecer de la manera siguiente:
 
 ```csharp
 public static string BaseAddress =

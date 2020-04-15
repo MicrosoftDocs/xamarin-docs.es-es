@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2020
 ms.openlocfilehash: 0cce23973c90c89ce90e40651a2646d5f1bdd2c0
-ms.sourcegitcommit: 0e35d3eafad833d3f19768b001bd804ddda8b69b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78165534"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Desencadenadores de doble pantalla de Xamarin.Forms

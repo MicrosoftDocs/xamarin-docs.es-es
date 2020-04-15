@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2018
 ms.openlocfilehash: 805edf0aba0e45a631bb9e3f7536da3f18dc789d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70277654"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Instalación de la versión preliminar de Xamarin en Windows

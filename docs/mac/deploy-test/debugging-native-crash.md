@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
 ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725498"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac

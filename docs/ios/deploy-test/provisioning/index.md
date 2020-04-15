@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: 3f228441ff7be93b5b84f11e73b8410370c29406
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78946286"
 ---
 # <a name="code-signing-and-provisioning-for-xamarinios-apps"></a>Firma de código y aprovisionamiento para aplicaciones Xamarin.iOS

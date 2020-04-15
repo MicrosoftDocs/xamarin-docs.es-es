@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 49d67db46416584248a9b15db606538f5ebfba79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021016"
 ---
 # <a name="finding-your-keystores-signature"></a>Búsqueda de la firma de su almacén de claves
@@ -21,7 +21,7 @@ La firma MD5 o SHA1 de una aplicación Xamarin.Android depende del archivo **.ke
 
 Xamarin.Android firma todas las compilaciones de depuración con el mismo archivo **debug.keystore**. Este archivo se genera cuando se instala por primera vez Xamarin.Android. Los siguientes pasos detallan el proceso para buscar la firma MD5 o SHA1 de archivo predeterminado de Xamarin.Android **debug.keystore**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Busque el archivo de Xamarin **debug.keystore** que se utiliza para firmar la aplicación. De forma predeterminada, el almacén de claves que se utiliza para firmar las versiones de depuración de una aplicación de Xamarin.Android puede encontrarse en la siguiente ubicación:
 
@@ -59,7 +59,7 @@ Certificate fingerprints:
          Version: 3
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Busque el archivo de Xamarin **debug.keystore** que se utiliza para firmar la aplicación. De forma predeterminada, el almacén de claves que se utiliza para firmar las versiones de depuración de una aplicación de Xamarin.Android puede encontrarse en la siguiente ubicación:
 
@@ -112,7 +112,7 @@ KeyIdentifier [
 
 Los procesos para crear compilaciones de versión que se firman con un archivo **.keystore** personalizado son los mismos que los explicados anteriormente, con la versión del archivo **.keystore** reemplazando el archivo **debug.keystore** que utiliza Xamarin.Android. Sustituya sus propios valores para la contraseña de KeyStore y el nombre de alias utilizado cuando se creó el archivo del almacén de claves de la versión.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Cuando se utilice el asistente de Visual Studio **Distribuir** para firmar una aplicación de Xamarin.Android, encontrará el almacén de claves resultante en la siguiente ubicación:
 
@@ -124,7 +124,7 @@ Por ejemplo, si ha seguido los pasos de [Crear un nuevo certificado](~/android/d
 
 Para más información sobre cómo firmar una aplicación de Xamarin.Android, vea [Firmar el paquete de aplicación de Android](~/android/deploy-test/signing/index.md).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Cuando utilice el asistente de Visual Studio para Mac **Firmar y distribuir...** para firmar la aplicación, encontrará el almacén de claves resultante en la siguiente ubicación:
 

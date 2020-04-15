@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76723905"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Instalar Xamarin.Android como una aplicación del sistema

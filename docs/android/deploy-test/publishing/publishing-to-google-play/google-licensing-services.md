@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/20/2017
 ms.openlocfilehash: 4cc7f3b36c43d9c9bb611b7d669f8304aab05820
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021263"
 ---
 # <a name="google-licensing-services"></a>Servicios de licencia de Google

@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "69976438"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barómetro
@@ -75,17 +75,17 @@ public class BarometerTest
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Sin detalles de implementación específicos para la plataforma.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Esta API usa [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) para supervisar los cambios de presión, una característica de hardware que se agregó en iPhone 6 y dispositivos más nuevos. Se producirá una excepción `FeatureNotSupportedException` en los dispositivos que no admiten el altímetro.
 
 No se usa `SensorSpeed` porque no se admite en iOS.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Sin detalles de implementación específicos para la plataforma.
 

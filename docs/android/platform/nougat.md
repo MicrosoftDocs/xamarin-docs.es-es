@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
 ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027088"
 ---
 # <a name="nougat-features"></a>Características de Nougat
@@ -100,7 +100,7 @@ Para crear un proyecto con Xamarin Android 7.0, primero debe usar el Administrad
 
 ### <a name="start-a-xamarinandroid-project"></a>Inicio de un proyecto de Xamarin.Android
 
-Cree un nuevo proyecto de Xamarin.Android. Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](~/android/get-started/hello-android/index.md) para aprender sobre la creación de proyectos de Xamarin.Android.
+Creación de un proyecto de Xamarin.Android Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](~/android/get-started/hello-android/index.md) para aprender sobre la creación de proyectos de Xamarin.Android.
 
 Cuando cree un proyecto de Android, debe configurar las opciones de versión para utilizar Android 7.0, o posterior, como destino. Por ejemplo, para que el proyecto tenga como destino Android 7.0, debe configurar el nivel de API de Android de destino del proyecto para **Android 7.0 (API 24 - Nougat)** . Se recomienda establecer el nivel de plataforma de destino en API 24 o posterior. Para más información sobre los niveles de API de Android, vea [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md).
 

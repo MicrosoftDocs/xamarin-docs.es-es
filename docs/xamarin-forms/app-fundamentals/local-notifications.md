@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/10/2019
 ms.openlocfilehash: ef2ef004378212fac593179d7aa38b3688fa82c3
-ms.sourcegitcommit: 49afc8c6484c465bf5c9e1d64a8c9122a0bcf506
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72371542"
 ---
 # <a name="local-notifications-in-xamarinforms"></a>Notificaciones locales en Xamarin.Forms

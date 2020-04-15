@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
 ms.openlocfilehash: 344b6293090ffa4281ea6351f7f176a5be37e5bd
-ms.sourcegitcommit: 0e35d3eafad833d3f19768b001bd804ddda8b69b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78165556"
 ---
 # <a name="xamarinforms-dual-screen"></a>Doble pantalla de Xamarin.Forms

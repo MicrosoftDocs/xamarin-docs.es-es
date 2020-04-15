@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026366"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
@@ -26,7 +26,7 @@ Las velocidades de compilación de Xamarin también pueden verse afectadas por d
 
 ## <a name="timing-apps"></a>Aplicaciones de control de tiempo
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac:
 
@@ -38,7 +38,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac
 6. Limpie y recompile el paquete.
 7. Vea los resultados de diagnóstico en el panel de errores (Ver > Paneles > Errores); para ello, haga clic en el botón Salida de la compilación.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 

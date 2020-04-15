@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
 ms.openlocfilehash: 884b69b0cdecf4f979cec314b6440974c5bac97d
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73019793"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introducción a Renderscript

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019
 ms.openlocfilehash: dfb7f12affc8b0b41ec56cd17894c0f0a4b5fc6e
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73662351"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
@@ -35,11 +35,11 @@ El proceso de representación puede usarse para implementar personalizaciones es
 Se explicará cada elemento uno por uno, para implementar un representador `CustomMap` que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marcas en cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) debe inicializarse y configurarse antes de su uso. Para obtener más información, vea [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) tiene que inicializarse y configurarse antes de cada uso. Para obtener más información, vea [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 <a name="Creating_the_Custom_Map" />
 
-## <a name="creating-the-custom-map"></a>Creación del mapa personalizado
+## <a name="creating-the-custom-map"></a>Crear un mapa personalizado
 
 Se puede crear un control de mapa personalizado mediante la creación de subclases de la clase [`Map`](xref:Xamarin.Forms.Maps.Map), como se muestra en el siguiente ejemplo de código:
 
@@ -134,7 +134,7 @@ El proceso de creación de la clase de representador personalizada es el siguien
 1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se utilizará para representar el mapa personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> Proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control.
+> Proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -521,7 +521,7 @@ Este método abre un explorador web y navega a la dirección almacenada en la pr
 
 Para obtener más información sobre cómo personalizar una instancia de `MapView`, vea [Using the Google Maps API in your application](~/android/platform/maps-and-location/maps/maps-api.md) (Uso de la API de Google Maps en su aplicación).
 
-### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creación de un representador personalizado en la Plataforma universal de Windows
+### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creación del representador personalizado en la Plataforma universal de Windows
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 

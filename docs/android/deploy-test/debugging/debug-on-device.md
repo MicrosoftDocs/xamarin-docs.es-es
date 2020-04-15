@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3ca524e451a7a4eb838805c839b33c4b9dd6bddd
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556540"
 ---
 # <a name="debug-on-an-android-device"></a>Depuración en un dispositivo Android
@@ -24,7 +24,7 @@ Es posible depurar una aplicación Xamarin.Android en un dispositivo Android med
 
 Una vez que se conecte un dispositivo al equipo, se realiza la depuración de una aplicación de Xamarin.Android de la misma manera que cualquier otro producto de Xamarin o aplicación .NET. Asegúrese de que la configuración de **Debug (Depuración)** y el dispositivo externo estén seleccionados en el IDE. Esto garantizará que los símbolos de depuración necesarios estén disponibles y que el IDE se pueda conectar a la aplicación en ejecución: 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Configuración de depuración seleccionada](debug-on-device-images/image1-vs.png)
 
@@ -36,7 +36,7 @@ Una vez seleccionado el dispositivo, Xamarin.Android se conecta al dispositivo, 
 
 ![Punto de interrupción alcanzado](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Configuración de depuración seleccionada](debug-on-device-images/image1-xs.png)
 

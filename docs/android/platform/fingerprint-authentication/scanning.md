@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/23/2016
 ms.openlocfilehash: 61edd0e4b532f18a8fc28502e5bb990703068776
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027491"
 ---
 # <a name="scanning-for-fingerprints"></a>Examen de huellas digitales

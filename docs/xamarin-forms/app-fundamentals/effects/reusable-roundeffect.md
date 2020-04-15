@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/25/2019
 ms.openlocfilehash: 851ed7a2ad1c416b4d03d583b9d0aeb7f7774eea
-ms.sourcegitcommit: aa7e9d2c370ba9cbc830f10b94b4cd4221fc5467
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73055943"
 ---
 # <a name="xamarinforms-reusable-roundeffect"></a>RoundEffect reutilizable de Xamarin.Forms

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4d045c0025effae4f5e4cd30e03f8776be0c1270
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71105754"
 ---
 # <a name="voice-and-tone-guidelines"></a>Instrucciones de voz y tono

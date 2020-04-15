@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68738862"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Asistentes del sistema de archivos
@@ -54,21 +54,21 @@ Para abrir un archivo que se incluye en el paquete de aplicación:
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - **CacheDirectory**: devuelve el [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) del contexto actual.
 - **AppDataDirectory**: devuelve el [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) del contexto actual y se realiza una copia de seguridad mediante [Copia de seguridad automática](https://developer.android.com/guide/topics/data/autobackup.html) a partir de la API 23 y versiones posteriores.
 
 Agregue un archivo a la carpeta **Activos** del proyecto de Android y marque la acción de compilación como **AndroidAsset** para usarla con `OpenAppPackageFileAsync`.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - **CacheDirectory**: devuelve el directorio [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html).
 - **AppDataDirectory**: devuelve el directorio [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) del que iTunes e iCloud realizan una copia de seguridad.
 
 Agregue cualquier archivo a la carpeta **Activos** del proyecto de iOS y marque la acción de compilación como **BundledResource** para usarla con `OpenAppPackageFileAsync`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - **CacheDirectory**: devuelve el directorio [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder).
 - **AppDataDirectory**: devuelve el directorio [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) del que se realiza una copia de seguridad en la nube.

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
 ms.openlocfilehash: 280fe11f935db0a364f3342b22bb9544cdda1e6d
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020246"
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo de Firebase
@@ -24,16 +24,16 @@ Una de las mejores formas de mantener la respuesta de una aplicación Android al
 
 Por ejemplo, un trabajo en segundo plano puede sondear un sitio web cada tres o cuatro minutos para consultar los cambios en un conjunto de datos determinado. Este proceso, aparentemente benigno, tendría un efecto desastroso en la duración de la batería. La aplicación reactivará el dispositivo de forma repetida, elevará la CPU a un estado de energía mayor, encenderá los radios, realizará las solicitudes de red y, luego, procesará los resultados. La situación empeora porque el dispositivo no se apaga inmediatamente y vuelve al estado inactivo de baja energía. Un trabajo en segundo plano mal programado puede mantener involuntariamente el dispositivo en un estado con requisitos de energía innecesarios y excesivos. Esta actividad aparentemente inocente (sondear un sitio web) dejará al dispositivo inutilizable durante un período de tiempo relativamente corto.
 
-Android proporciona las siguientes API para ayudar a realizar el trabajo en segundo plano, pero por sí solas no son suficientes para la programación inteligente de trabajos. 
+Android proporciona las siguientes API para ayudar a realizar trabajos en segundo plano, pero por sí solas no son suficientes para la programación inteligente de trabajos. 
 
-- **[Servicios de intención](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** : los servicios de intención son excelentes para realizar el trabajo, pero no proporcionan ninguna manera de programar el trabajo.
-- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** : estas API solo permiten programar el trabajo, pero no proporcionan ninguna forma de realizar realmente el trabajo. Además, AlarmManager solo permite restricciones basadas en el tiempo, lo que significa que se producirá una alarma en un momento determinado o transcurrido un período de tiempo determinado. 
+- **[Servicios de intención](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** : los servicios de intención son excelentes para realizar el trabajo, pero no proporcionan ninguna manera de programarlo.
+- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** : estas API solo permiten programar el trabajo, pero no proporcionan ninguna forma de realizarlo. Además, AlarmManager solo permite restricciones basadas en el tiempo, lo que significa que se producirá una alarma en un momento determinado o transcurrido un período de tiempo determinado. 
 - **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)** : JobSchedule es una excelente API que funciona con el sistema operativo para programar trabajos. Sin embargo, solo está disponible para las aplicaciones Android que tienen como destino el nivel de API 21 o una versión posterior. 
 - **[Receptores de difusión](~/android/app-fundamentals/broadcast-receivers.md)** : una aplicación Android puede configurar receptores de difusión para que realicen el trabajo en respuesta a eventos o intenciones en todo el sistema. Sin embargo, los receptores de difusión no proporcionan ningún control sobre cuándo se debe ejecutar el trabajo. Además, los cambios en el sistema operativo Android se restringirán cuando funcionen los receptores de difusión o los tipos de trabajo a los que puedan responder. 
 
-Hay dos características clave para realizar eficazmente el trabajo en segundo plano (a veces denominado _trabajo en segundo plano_ o _trabajo_):
+Hay dos características clave para realizar eficazmente el trabajo en segundo plano (a veces denominado _tareas en segundo plano_ o _trabajo_):
 
-1. **Programar de forma inteligente el trabajo**: es importante que cuando una aplicación esté realizando trabajo en segundo plano, lo haga como un buen ciudadano. Lo ideal es que la aplicación no exija que se ejecute un trabajo. En su lugar, la aplicación debe especificar las condiciones que deben cumplirse para cuando pueda ejecutarse el trabajo y, luego, programar ese trabajo para que se ejecute cuando se cumplan las condiciones. Esto permite que Android realice el trabajo de forma inteligente. Por ejemplo, las solicitudes de red se pueden procesar por lotes para ejecutarse todas al mismo tiempo con el fin de hacer el uso máximo de la sobrecarga implicada en las redes.
+1. **Programar de forma inteligente el trabajo**: es importante que cuando una aplicación esté realizando trabajos en segundo plano, los haga como un buen ciudadano. Lo ideal es que la aplicación no exija que se ejecute un trabajo. En su lugar, la aplicación debe especificar las condiciones que deben cumplirse para cuando pueda ejecutarse el trabajo y, luego, programar ese trabajo para que se ejecute cuando se cumplan las condiciones. Esto permite que Android realice el trabajo de forma inteligente. Por ejemplo, las solicitudes de red se pueden procesar por lotes para ejecutarse todas al mismo tiempo con el fin de hacer el uso máximo de la sobrecarga implicada en las redes.
 2. **Encapsulación del trabajo**: el código para realizar el trabajo en segundo plano debe encapsularse en un componente discreto que se pueda ejecutar independientemente de la interfaz de usuario y sea relativamente fácil de volver a programar si el trabajo no se completa por algún motivo.
 
 El Distribuidor de trabajo de Firebase es una biblioteca de Google que proporciona una API fluida para simplificar la programación del trabajo en segundo plano. Está pensada para reemplazar a Google Cloud Manager. El Distribuidor de trabajo de Firebase consta de las siguientes API:

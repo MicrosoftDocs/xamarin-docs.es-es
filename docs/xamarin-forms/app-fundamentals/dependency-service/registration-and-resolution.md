@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
 ms.openlocfilehash: 6e666c16c9b1afc3478f524cae2f84d6704319c2
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70199225"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
@@ -138,7 +138,7 @@ DeviceOrientation orientation = DependencyService.Resolve<IDeviceOrientationServ
 ```
 
 > [!NOTE]
-> Cuando el método [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) llama al método [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) como solución alternativa, crea una instancia de la implementación de la plataforma de la interfaz de `T` como singleton de forma predeterminada. No obstante, este comportamiento se puede modificar. Para obtener más información, vea [Administración de la vigencia de los objetos resueltos](#manage-the-lifetime-of-resolved-objects).
+> Cuando el método [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) llama al método [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) como solución alternativa, crea una instancia de la implementación de la plataforma de la interfaz de `T` como singleton de forma predeterminada. No obstante, se puede modificar este comportamiento. Para obtener más información, vea [Administración de la vigencia de los objetos resueltos](#manage-the-lifetime-of-resolved-objects).
 
 ## <a name="manage-the-lifetime-of-resolved-objects"></a>Administración de la vigencia de los objetos resueltos
 

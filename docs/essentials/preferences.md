@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
 ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
-ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79497038"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias

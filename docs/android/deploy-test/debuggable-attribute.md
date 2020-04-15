@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/13/2019
 ms.openlocfilehash: 6e54dba0c832596818c5163dc4e14ad1e659e040
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75487976"
 ---
 # <a name="debuggable-attribute"></a>Atributo Debuggable

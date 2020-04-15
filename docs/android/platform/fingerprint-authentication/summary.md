@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: e955d4f96724bd5682e7d0e6db2c36fa1b7810f4
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027435"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Guía de autenticación con huella digital
@@ -37,6 +37,6 @@ Si aún no lo ha hecho, debe consultar la [aplicación de ejemplo](https://githu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo de guía de huellas digitales](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
+- [Aplicación de ejemplo de la guía de huellas digitales](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
 - [Ejemplo de cuadro de diálogo de huellas digitales](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [Icono de huella digital](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)

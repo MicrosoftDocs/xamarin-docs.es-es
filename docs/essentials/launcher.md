@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
 ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488522"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Selector
@@ -56,11 +56,11 @@ public class LauncherTest
 
 ### <a name="additional-platform-setup"></a>Configuración de una plataforma adicional
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Sin configuración adicional.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 En iOS 9 y versiones posteriores, Apple aplica los esquemas que una aplicación puede consultar. Para especificar los esquemas que desea usar, debe indicar `LSApplicationQueriesSchemes` en el archivo de `Info.plist`.
 
@@ -72,7 +72,7 @@ En iOS 9 y versiones posteriores, Apple aplica los esquemas que una aplicación
 </array>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Sin configuración adicional.
 
@@ -97,11 +97,11 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 ## <a name="platform-differences"></a>Diferencias entre plataformas
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 La tarea devuelta desde `CanOpenAsync` se completa de inmediato.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Si la aplicación de destino en este dispositivo nunca antes se abrió por `OpenAsync` desde la aplicación, iOS le pedirá una vez al usuario que permita que la aplicación la abra.
 
@@ -109,7 +109,7 @@ La tarea devuelta desde `CanOpenAsync` se completa de inmediato.
 
 [Aquí](xref:UIKit.UIApplication.CanOpenUrl*) encontrará más información sobre la implementación de iOS.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 No hay diferencias entre las plataformas.
 

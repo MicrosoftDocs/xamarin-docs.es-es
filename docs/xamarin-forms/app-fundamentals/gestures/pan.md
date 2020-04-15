@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: 73e312a1af56091a7e579d3fcbcea810ee0efb1e
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68820973"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Adición de un reconocedor de gesto de desplazamiento lateral
@@ -20,7 +20,7 @@ ms.locfileid: "68820973"
 
 _El gesto de desplazamiento lateral se usa para detectar el movimiento de los dedos alrededor de la pantalla y aplicar ese movimiento al contenido, y se implementa con la clase `PanGestureRecognizer`. Un escenario habitual para el gesto de desplazamiento lateral consiste en desplazar una imagen de forma horizontal y vertical, para poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen. Esto se logra moviendo la imagen dentro de la ventanilla, y se muestra en este artículo._
 
-Para que un elemento de interfaz de usuario se pueda mover con el gesto de desplazamiento lateral, cree una instancia de [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), controle el evento [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) y agregue el nuevo reconocedor de gestos a la colección [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) en el elemento de interfaz de usuario. En el ejemplo de código siguiente se muestra un elemento `PanGestureRecognizer` adjunto a un elemento [`Image`](xref:Xamarin.Forms.Image):
+Para que un elemento de interfaz de usuario se pueda mover con el gesto de desplazamiento lateral, cree una instancia de [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), controle el evento [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) y agregue el nuevo reconocedor de gestos a la colección [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) en el elemento de interfaz de usuario. En el siguiente ejemplo de código, se muestra un elemento `PanGestureRecognizer` asociado a un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var panGesture = new PanGestureRecognizer();

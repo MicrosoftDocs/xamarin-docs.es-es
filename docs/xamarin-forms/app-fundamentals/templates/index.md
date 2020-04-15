@@ -8,18 +8,18 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75955692"
 ---
 # <a name="xamarinforms-templates"></a>Plantillas de Xamarin.Forms
 
-## <a name="control-templatescontrol-templatemd"></a>[Plantillas de control](control-template.md)
+## <a name="control-templates"></a>[Plantillas de control](control-template.md)
 
 Las plantillas de control de Xamarin.Forms definen la estructura visual de los controles personalizados derivados [`ContentView`](xref:Xamarin.Forms.ContentView) y las páginas derivadas [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
-## <a name="data-templatesdata-templatesindexmd"></a>[Plantillas de datos](data-templates/index.md)
+## <a name="data-templates"></a>[Plantillas de datos](data-templates/index.md)
 
 Las plantillas de datos de Xamarin.Forms definen la presentación de los datos en los controles admitidos.

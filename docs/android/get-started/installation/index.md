@@ -8,36 +8,36 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0de2ed96c7b2af69e99fbd742c0fd07b27f2ef9d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020729"
 ---
 # <a name="setup-and-installation"></a>Configuración e instalación
 
 En los temas incluidos en esta sección se explica cómo instalar y configurar Xamarin.Android para que funcione con Visual Studio en Windows y macOS, cómo usar Android SDK Manager para descargar e instalar herramientas y componentes de Android SDK necesarios para compilar y probar la aplicación, cómo configurar Android Emulator para la depuración y cómo conectar un dispositivo Android físico al equipo de desarrollo para depurar la aplicación y realizar las pruebas finales.
 
-## <a name="windows-installationandroidget-startedinstallationwindowsmd"></a>[Instalación en el equipo Windows](~/android/get-started/installation/windows.md)
+## <a name="windows-installation"></a>[Instalación en el equipo Windows](~/android/get-started/installation/windows.md)
 
 En esta guía se describen los pasos de instalación y los detalles de configuración necesarios para instalar Xamarin.Android en Windows. Cuando acabe el artículo, tendrá una instalación operativa de Xamarin.Android integrada en Visual Studio y podrá empezar a compilar su primera aplicación de Xamarin.Android.
 
-## <a name="mac-installationhttpsdocsmicrosoftcomvisualstudiomacinstallation"></a>[Instalación para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+## <a name="mac-installation"></a>[Instalación para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 
 En este artículo se describen los pasos de instalación y los detalles de configuración necesarios para instalar Xamarin.Android en Mac. Cuando acabe el artículo, tendrá una instalación operativa de Xamarin.Android integrada en Visual Studio para Mac y podrá empezar a compilar su primera aplicación de Xamarin.Android.
 
-## <a name="android-sdk-setupandroidget-startedinstallationandroid-sdkmd"></a>[Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
+## <a name="android-sdk-setup"></a>[Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
 
 Visual Studio incluye un Android SDK Manager que reemplaza el Android SDK Manager independiente de Google. En este artículo se explica cómo usar SDK Manager para descargar herramientas de Android SDK, plataformas y otros componentes necesarios para desarrollar aplicaciones de Xamarin.Android.
 
-## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md)
+## <a name="android-emulator-setup"></a>[Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 
 En estos artículos se explica cómo configurar Android Emulator para probar y depurar aplicaciones de Xamarin.Android.
 
-## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Configuración de dispositivos Android](~/android/get-started/installation/set-up-device-for-development.md)
+## <a name="android-device-setup"></a>[Configuración de dispositivos Android](~/android/get-started/installation/set-up-device-for-development.md)
 
 En este artículo se explica cómo configurar un dispositivo Android físico y conectarlo a un equipo de desarrollo de modo que el dispositivo pueda usarse para ejecutar y depurar aplicaciones de Xamarin.Android.
 
-## <a name="microsoft-mobile-openjdk-previewandroidget-startedinstallationopenjdkmd"></a>[Vista previa de OpenJDK Mobile de Microsoft](~/android/get-started/installation/openjdk.md)
+## <a name="microsoft-mobile-openjdk-preview"></a>[Vista previa de OpenJDK Mobile de Microsoft](~/android/get-started/installation/openjdk.md)
 
 En esta guía se describen los pasos para cambiar a la versión preliminar de la distribución de OpenJDK de Microsoft. Esta distribución de OpenJDK está pensada para el desarrollo móvil.

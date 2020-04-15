@@ -6,10 +6,10 @@ author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
 ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73612276"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin

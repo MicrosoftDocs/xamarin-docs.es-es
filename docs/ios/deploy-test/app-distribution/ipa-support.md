@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030427"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Compatibilidad con IPA en Xamarin.iOS
@@ -54,7 +54,7 @@ Para obtener más información, consulte la documentación de [iTunes Artwork (I
 
 ## <a name="creating-an-ipa"></a>Creación de un IPA
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 La creación de un IPA ahora está integrada en el nuevo flujo de trabajo de publicación. Para ello, siga las instrucciones siguientes para archivar la aplicación, firmarla y guardar su IPA.
 
@@ -133,7 +133,7 @@ En algunos casos, como en un entorno de integración continua (CI), será necesa
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Una vez que se haya creado y seleccionado el perfil de aprovisionamiento, se haya creado el archivo opcional **iTunesMetadata.plist** y se hayan definido las ilustraciones de iTunes en Visual Studio, puede compilar un archivo IPA para la distribución. Después, debe configurar el proyecto. Haga lo siguiente:
 
@@ -229,11 +229,11 @@ El paquete IPA resultante se puede entregar a los usuarios de prueba para la ins
 
 La nueva aplicación de iOS se muestra en la sección **Mis aplicaciones**, en la que puede hacer clic y obtener información sobre la aplicación:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
 ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75728062"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java

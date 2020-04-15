@@ -8,22 +8,22 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
 ms.openlocfilehash: 2121bc34cf208226e1cf24c44b4d596586f494e2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73029425"
 ---
 # <a name="getting-started-with-xamarinmac"></a>Introducción a Xamarin.Mac
 
-## <a name="installationmacget-startedinstallationmd"></a>[Instalación](~/mac/get-started/installation.md)
+## <a name="installation"></a>[Instalación](~/mac/get-started/installation.md)
 
 Este artículo trata sobre la instalación de Xamarin.Mac, incluidos los requisitos, los requisitos previos de software y la activación.
 
-## <a name="hello-macmacget-startedhello-macmd"></a>[Hello, Mac](~/mac/get-started/hello-mac.md)
+## <a name="hello-mac"></a>[Hello, Mac](~/mac/get-started/hello-mac.md)
 
 En esta guía se muestra cómo crear una primera aplicación sencilla de Xamarin.Mac y, a lo largo del proceso, se presenta la cadena de herramientas de desarrollo, incluidos Visual Studio para Mac, Xcode e Interface Builder. También se presentan las salidas y las acciones, que exponen los controles de la interfaz de usuario al código y, por último, se explica cómo compilar, ejecutar y probar una aplicación de Xamarin.Mac.
 
-## <a name="related-documentationmacget-startedrelatedmd"></a>[Documentación relacionada](~/mac/get-started/related.md)
+## <a name="related-documentation"></a>[Documentación relacionada](~/mac/get-started/related.md)
 
 Vínculos a más documentación útil.

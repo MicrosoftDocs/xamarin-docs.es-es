@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/18/2019
 ms.openlocfilehash: aaceb6089a5b7e5f0551dafe9ef1fe50d01433d9
-ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77374028"
 ---
 # <a name="what-is-xamarinforms"></a>¿Qué es Xamarin.Forms?

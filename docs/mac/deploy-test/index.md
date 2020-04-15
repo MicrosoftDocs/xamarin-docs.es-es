@@ -8,22 +8,22 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/17/2018
 ms.openlocfilehash: 9623e91589c6ba094dda5a7fcd081219f5d25fd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030032"
 ---
 # <a name="deploying-and-testing-xamarinmac-apps"></a>Implementar y probar aplicaciones Xamarin.Mac
 
-## <a name="application-iconapp-iconmd"></a>[Icono de aplicación](app-icon.md)
+## <a name="application-icon"></a>[Icono de aplicación](app-icon.md)
 
 En este artículo se describe la creación de las imágenes necesarias para el icono de la aplicación de Xamarin.Mac, el empaquetado de las imágenes en un archivo .icns y la inclusión del icono en el proyecto de Xamarin.Mac.
 
-## <a name="performanceperformancemd"></a>[Rendimiento](performance.md)
+## <a name="performance"></a>[Rendimiento](performance.md)
 
 Sugerencia para aumentar el rendimiento de la aplicación Xamarin.Mac.
 
-## <a name="publishing-to-the-app-storepublishing-to-the-app-storeindexmd"></a>[Publicación en App Store](publishing-to-the-app-store/index.md)
+## <a name="publishing-to-the-app-store"></a>[Publicación en App Store](publishing-to-the-app-store/index.md)
 
 En esta guía se describe cómo implementar una aplicación de Xamarin.Mac con Visual Studio para Mac. Se explica cómo se configura una cuenta de desarrollador de Mac, se describe el proceso de creación de certificados para la firma de código y se muestra cómo se usan en Visual Studio para Mac para compilar aplicaciones de Mac que se puedan distribuir directamente o a través de Mac App Store.

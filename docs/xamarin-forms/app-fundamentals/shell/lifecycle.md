@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/25/2019
 ms.openlocfilehash: 2ed51763b5866c15e91d88a6a1a58c7285fb5973
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72749765"
 ---
 # <a name="xamarinforms-shell-lifecycle"></a>Ciclo de vida de Xamarin.Forms Shell

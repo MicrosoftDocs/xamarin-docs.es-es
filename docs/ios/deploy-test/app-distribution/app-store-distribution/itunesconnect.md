@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: aefd649fe1859306e5499addc1c08f4e42b2b424
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026681"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
@@ -136,7 +136,7 @@ Apple sugiere las siguientes directrices al elegir el nombre de la aplicación:
 - Hágalo coincidir con la funcionalidad de la aplicación.
 - Proporcione nombres localizados para mercados externos cuando proceda.
 
-### <a name="description"></a>DESCRIPCIÓN
+### <a name="description"></a>Descripción
 
 Escriba una descripción clara, concisa e informativa de la aplicación y sus características. Las primeras líneas son las más importantes y le dan una oportunidad para causar una primera impresión excelente y para atraer al usuario. Describa lo que hace que su aplicación sea especial y la diferencie de otras similares.
 

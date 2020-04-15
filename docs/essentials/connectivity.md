@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/08/2019
 ms.custom: video
 ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67855760"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Conectividad
@@ -23,7 +23,7 @@ La clase **Connectivity** permite supervisar los cambios en las condiciones de r
 
 Para acceder a la funcionalidad **Connectivity**, se requiere la siguiente configuración específica para la plataforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 El permiso `AccessNetworkState` es necesario y se debe configurar en el proyecto Android. Se puede agregar de las siguientes maneras:
 
@@ -43,11 +43,11 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 
 O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y compruebe el permiso **Access Network State** (Estado de red de acceso). Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 No se requiere configuración adicional.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 No se requiere configuración adicional.
 

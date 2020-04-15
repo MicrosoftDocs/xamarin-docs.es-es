@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: a7b52bac0e9e2061cf9ff277db044ab232b1e9e5
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815196"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61347916"
 ---
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 

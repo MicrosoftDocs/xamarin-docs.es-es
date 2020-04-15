@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
 ms.openlocfilehash: 2bd537a782b7090207b09ca02c5dfe5c4422a9ad
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545141"
 ---
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: Solución de problemas

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027800"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajo con el manifiesto de Android
@@ -166,7 +166,7 @@ En la versión de compilación de lanzamiento del manifiesto (en **obj/Debug/and
 El manifiesto de Android proporciona una manera de describir las funcionalidades de su actividad. Esto se hace mediante [intenciones](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) y el atributo personalizado [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 . Puede especificar qué acciones son adecuadas para su actividad con el constructor [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 y qué categorías son adecuadas con la propiedad [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-. Se debe proporcionar al menos una actividad (que es el motivo por el que se proporcionan las actividades en el constructor). Se puede proporcionar `[IntentFilter]` varias veces y cada una de ellas tiene como resultado un elemento `<intent-filter/>` independiente dentro del atributo `<activity/>`. Por ejemplo:
+propiedad. Se debe proporcionar al menos una actividad (que es el motivo por el que se proporcionan las actividades en el constructor). Se puede proporcionar `[IntentFilter]` varias veces y cada una de ellas tiene como resultado un elemento `<intent-filter/>` independiente dentro del atributo `<activity/>`. Por ejemplo:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
