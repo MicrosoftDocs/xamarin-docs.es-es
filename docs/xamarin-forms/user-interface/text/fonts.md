@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2020
-ms.openlocfilehash: 4f14d66e5321a0fb19078be4d97ae4df69f688c9
-ms.sourcegitcommit: 6f3281a32017cfcebadde8a2d6e10651a277828f
+ms.openlocfilehash: ca4d3b242fcc73bb73e8d6ab1f817eefcc2ade4d
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587428"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388803"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes en Xamarin.Forms
 
 [![Descargar](~/media/shared/download.png) ejemplo Descargue el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-En este artículo se describe cómo Xamarin.Forms le permite especificar atributos de fuente (incluido el peso y el tamaño) en los controles que muestran texto. La información de fuente se puede [especificar en el código](#Setting_Font_in_Code) o en [XAML.](#Setting_Font_in_Xaml) También es posible utilizar una [fuente personalizada](#Using_a_Custom_Font)y mostrar iconos de [fuente.](#display-font-icons)
+En este artículo se describe cómo Xamarin.Forms le permite especificar atributos de fuente (incluido el peso y el tamaño) en los controles que muestran texto. La información de fuente se puede [especificar en el código](#Setting_Font_in_Code) o en [XAML.](#Setting_Font_in_Xaml) También es posible utilizar una [fuente personalizada](#use-a-custom-font)y mostrar iconos de [fuente.](#display-font-icons)
 
 <a name="Setting_Font_in_Code" />
 
@@ -145,84 +145,14 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 > [!NOTE]
 > En iOS y Android, los tamaños de fuente con nombre se escalarán automáticamente en función de las opciones de accesibilidad del sistema operativo. Este comportamiento se puede deshabilitar en iOS con una plataforma específica. Para obtener más información, consulte Escalado de accesibilidad para tamaños de [fuente con nombre en iOS.](~/xamarin-forms/platform/ios/named-font-size-scaling.md)
 
-<a name="Using_a_Custom_Font" />
-
 ## <a name="use-a-custom-font"></a>Usar una fuente personalizada
-
-El uso de una fuente que no sea los tipos de letra integrados requiere una codificación específica de la plataforma. Esta captura de pantalla muestra la fuente personalizada **Lobster** de [las fuentes de código abierto](https://www.google.com/fonts) de Google representadas mediante Xamarin.Forms.
-
- [![Fuente personalizada en iOS y Android](fonts-images/custom-sml.png "Ejemplo de fuentes personalizadas")](fonts-images/custom.png#lightbox "Ejemplo de fuentes personalizadas")
-
-Los pasos necesarios para cada plataforma se describen a continuación. Al incluir archivos de fuente personalizados con una aplicación, asegúrese de comprobar que la licencia de la fuente permite la distribución.
-
-### <a name="ios"></a>iOS
-
-Es posible mostrar una fuente personalizada asegurándose primero de que se carga y, `Font` a continuación, hace referencia a ella por su nombre mediante el Xamarin.Forms métodos.
-Siga las instrucciones de esta entrada de [blog:](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/)
-
-1. Agregue el archivo de fuente con Acción de **compilación: BundleResource**y
-2. Actualice el archivo **Info.plist** **(Fuentes proporcionadas por**la clave de aplicación o `UIAppFonts`,)
-3. Refiérase a él por su nombre dondequiera que defina una fuente en Xamarin.Forms!
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" : null // set only for iOS
-}
-```
-
-### <a name="android"></a>Android
-
-Xamarin.Forms para Android puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura específico. En primer lugar, agregue el archivo de fuente a la carpeta **Activos** del proyecto de aplicación y establezca Acción de *compilación: AndroidAsset*. A continuación, use la ruta de acceso completa y *el nombre* de fuente separados por un hash (-) como el nombre de fuente en Xamarin.Forms, como se muestra en el fragmento de código siguiente:
-
-```csharp
-new Label
-{
-  Text = "Hello, Forms!",
-  FontFamily = Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : null // set only for Android
-}
-```
-
-### <a name="windows"></a>Windows
-
-Xamarin.Forms para plataformas Windows puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura específico. En primer lugar, agregue el archivo de fuente a la carpeta **/Assets/Fonts/** del proyecto de aplicación y establezca **Build Action:Content**. A continuación, utilice la ruta de acceso completa y el nombre de archivo de fuente, seguido de un hash (-) y el **nombre**de fuente , como se muestra en el fragmento de código siguiente:
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.UWP ? "Assets/Fonts/Lobster-Regular.ttf#Lobster" : null // set only for UWP apps
-}
-```
-
-> [!NOTE]
-> Tenga en cuenta que el nombre del archivo de fuente y el nombre de fuente pueden ser diferentes. Para descubrir el nombre de fuente en Windows, haga clic con el botón derecho en el archivo .ttf y seleccione **Vista previa**. El nombre de la fuente se puede determinar desde la ventana de vista previa.
-
-### <a name="xaml"></a>XAML
-
-También puedes [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) usar en XAML para representar una fuente personalizada:
-
-```xaml
-<Label Text="Hello Forms with XAML">
-    <Label.FontFamily>
-        <OnPlatform x:TypeArguments="x:String">
-                <On Platform="iOS" Value="Lobster-Regular" />
-                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
-        </OnPlatform>
-    </Label.FontFamily>
-</Label>
-```
-
-## <a name="use-a-custom-font-preview"></a>Usar una fuente personalizada (PREVIEW)
 
 Las fuentes personalizadas se pueden agregar al proyecto compartido de Xamarin.Forms y se consumen por proyectos de plataforma sin ningún trabajo adicional. El proceso para llevarlo a cabo es el siguiente:
 
 1. Agregue la fuente al proyecto compartido de Xamarin.Forms como un recurso incrustado ( Acción de**compilación: EmbeddedResource**).
 1. Registre el archivo de fuente con el **AssemblyInfo.cs**ensamblado, `ExportFont` en un archivo como AssemblyInfo.cs , utilizando el atributo. También se puede especificar un alias opcional.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Las fuentes incrustadas requieren el uso de Xamarin.Forms 4.5.0.530 o superior.
 
 En el ejemplo siguiente se muestra la fuente Lobster-Regular que se registra con el ensamblado, junto con un alias:
@@ -273,6 +203,9 @@ Label label2 = new Label
 Las siguientes capturas de pantalla muestran la fuente personalizada:
 
 [![Fuente personalizada en iOS y Android](fonts-images/custom-sml.png "Ejemplo de fuentes personalizadas")](fonts-images/custom.png#lightbox "Ejemplo de fuentes personalizadas")
+
+> [!IMPORTANT]
+> En Windows, el nombre del archivo de fuente y el nombre de fuente pueden ser diferentes. Para descubrir el nombre de fuente en Windows, haga clic con el botón derecho en el archivo .ttf y seleccione **Vista previa**. El nombre de la fuente se puede determinar desde la ventana de vista previa.
 
 ## <a name="display-font-icons"></a>Presentación iconos de fuente
 
