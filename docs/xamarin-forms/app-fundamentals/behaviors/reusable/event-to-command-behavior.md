@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
 ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650914"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
@@ -198,7 +198,7 @@ La propiedad `Command` del comportamiento está enlazada a datos a la propiedad 
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control. Cuando se selecciona un elemento en el control [`ListView`](xref:Xamarin.Forms.ListView), se desencadena el evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected), que ejecutará `OutputAgeCommand` en el modelo de vista. A su vez, esto actualiza la propiedad `SelectedItemText` del modelo de vista a la que se enlaza [`Label`](xref:Xamarin.Forms.Label), como se muestra en las capturas de pantalla siguientes:
 
-[![](event-to-command-behavior-images/screenshots-sml.png "Aplicación de ejemplo con EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
+[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
 
 La ventaja de usar este comportamiento para ejecutar un comando cuando se desencadena un evento es que se pueden asociar comandos con controles que no se han diseñado para interactuar con los comandos. Además, esto quita el código de control de eventos reutilizable de los archivos de código subyacente.
 
@@ -209,5 +209,5 @@ En este artículo se ha explicado el uso de un comportamiento de Xamarin.Forms p
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Comportamiento de EventToCommand (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-- [Behavior](xref:Xamarin.Forms.Behavior)
+- [Comportamiento](xref:Xamarin.Forms.Behavior)
 - [Comportamiento&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

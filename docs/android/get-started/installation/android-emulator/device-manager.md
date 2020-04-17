@@ -10,10 +10,10 @@ ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 64e637648b03dff81468f2d7ad072c7acc50868b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021156"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Administración de dispositivos virtuales con Android Device Manager
@@ -171,7 +171,7 @@ En el menú desplegable **Opciones adicionales** (&hellip;) que está situado en
 
 El menú de opciones adicionales contiene los elementos siguientes:
 
-- **Duplicate and Edit** (Duplicar y editar): duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo. Por ejemplo, al seleccionar **Pixel_API_27** y hacer clic en **Duplicar y editar**, se anexa un contador al nombre:
+- **Duplicar y editar**: duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo. Por ejemplo, al seleccionar **Pixel_API_27** y hacer clic en **Duplicar y editar**, se anexa un contador al nombre:
 
   [![Pantalla para duplicar y editar](device-manager-images/win/25-dupe-and-edit-sml.png)](device-manager-images/win/25-dupe-and-edit.png#lightbox)
 
@@ -179,7 +179,7 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
   [![Resultados de hacer clic en Mostrar en el Explorador](device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
 
-- **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la captura de pantalla [Arranque rápido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Restablecimiento de fábrica** para confirmar el restablecimiento:
+- **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados; para ello, borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la instantánea de [Arranque rápido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Restablecimiento de fábrica** para confirmar el restablecimiento:
 
   ![Cuadro de diálogo de restablecimiento de fábrica](device-manager-images/win/27-factory-reset.png)
 
@@ -339,7 +339,7 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
 - **Editar**: abre el dispositivo seleccionado actualmente en el editor de dispositivos, tal como se ha descrito anteriormente.
 
-- **Duplicate and Edit** (Duplicar y editar): duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo. Por ejemplo, al seleccionar **Pixel 2 API 28** y hacer clic en **Duplicar y editar**, se anexa un contador al nombre:
+- **Duplicar y editar**: duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo. Por ejemplo, al seleccionar **Pixel 2 API 28** y hacer clic en **Duplicar y editar**, se anexa un contador al nombre:
 
   [![Pantalla para duplicar y editar](device-manager-images/mac/25-dupe-and-edit-sml.png)](device-manager-images/mac/25-dupe-and-edit.png#lightbox)
 
@@ -347,7 +347,7 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
   [![Resultados de hacer clic en Mostrar en Finder](device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
 
-- **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la captura de pantalla [Arranque rápido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Restablecimiento de fábrica** para confirmar el restablecimiento.
+- **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados; para ello, borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la instantánea de [Arranque rápido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Restablecimiento de fábrica** para confirmar el restablecimiento.
 
   ![Cuadro de diálogo de restablecimiento de fábrica](device-manager-images/mac/27-factory-reset-m76.png)
 
@@ -365,7 +365,7 @@ En las secciones siguientes se explica cómo diagnosticar y solucionar los probl
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="android-sdk-in-non-standard-location"></a>Android SDK en ubicación no estándar
 
@@ -429,7 +429,7 @@ Para evitar este problema:
 
 Una vez realizados estos cambios, se reiniciará el AVD en un estado que permita que la conexión Wi-Fi vuelva a funcionar.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ### <a name="wrong-version-of-android-sdk-tools"></a>Versión incorrecta de Android SDK Tools
 
@@ -467,13 +467,13 @@ Una vez realizados estos cambios, se reiniciará el AVD en un estado que permita
 
 ### <a name="generating-a-bug-report"></a>Generación de informes de errores
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Si encuentra algún problema con Android Device Manager que no pueda resolver con los pasos anteriores para solucionar problemas, informe del error. Para ello, haga clic con el botón derecho en la barra del título y seleccione **Generate Bug Report** (Generar informe de errores):
 
 [![Ubicación del elemento de menú para informar de un error](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Si encuentra algún problema con Android Device Manager que no pueda resolver con los pasos anteriores para solucionar problemas, informe del error. Para ello, haga clic en **Ayuda > Notificar un problema**:
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
 ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650211"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Reservas de enlace de Xamarin.Forms
@@ -48,7 +48,7 @@ En lugar de definir los valores de la propiedad [`FallbackValue`](xref:Xamarin.F
 
 Esta es la ejecución del programa:
 
-![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue Binding")
+![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "Enlace FallbackValue")
 
 Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail**, [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
 
@@ -97,7 +97,7 @@ En lugar de definir los valores de la propiedad [`TargetNullValue`](xref:Xamarin
 
 Esta es la ejecución del programa:
 
-[![Enlace TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue Binding")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue Binding")
+[![Enlace TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "Enlace TargetNullValue")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "Enlace TargetNullValue")
 
 Cuando la propiedad `TargetNullValue` no está establecida en una expresión de enlace, un valor de origen de `null` se convertirá si se define un convertidor de valores, se le aplicará formato si se define `StringFormat` y, a continuación, se establecerá el resultado en el destino. Sin embargo, cuando la propiedad `TargetNullValue` está establecida, un valor de origen de `null` se convertirá si se ha definido un convertidor de valores, y si sigue siendo `null` después de la conversión, el valor de la propiedad `TargetNullValue` está establecido en el destino.
 
@@ -106,4 +106,4 @@ Cuando la propiedad `TargetNullValue` no está establecida en una expresión de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demos de enlace de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])

@@ -8,11 +8,11 @@ author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
 ms.openlocfilehash: a24edbc10d529878092b474df7f186d14049d5e0
-ms.sourcegitcommit: f8e22a3b0642179bf44a312e9a2fac0fbad8683c
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239118"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "60955094"
 ---
 # <a name="microsofts-mobile-openjdk-distribution"></a>Distribución de Mobile OpenJDK de Microsoft
 
@@ -47,15 +47,15 @@ Si tiene problemas con la configuración en Mac o Windows, puede seguir estos pa
 Compruebe si OpenJDK está instalado en la máquina en la ubicación correcta:
 
 - **Mac** &ndash; **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.x**
-- **Windows** &ndash; **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.x**
+- **Windows** &ndash; **C:\\Archivos de programa\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.x**
 
 Dirija el IDE al nuevo JDK:
 
-- **Mac** &ndash; Haga clic en **Herramientas > SDK Manager > Ubicaciones** y cambie la **Ubicación del SDK de Java (SDK)** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**, pero es posible que su versión sea más reciente.
+- **Mac**: haga clic en **Herramientas > Administrador de SDK > Ubicaciones** y cambie la **Ubicación del SDK de Java (JDK)** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**, pero es posible que su versión sea más reciente.
 
 ![Establecimiento de la ruta del JDK para la distribución de OpenJDK Mobile de Microsoft en un equipo Mac](openjdk-images/vsm.png)
 
-- **Windows** &ndash; Haga clic en **Herramientas > Opciones > Xamarin > Configuración de Android** y cambie la **Ubicación de Java Development Kit** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**, pero es posible que su versión sea más reciente:
+- **Windows**: haga clic en **Herramientas > Opciones > Xamarin > Configuración de Android** y cambie la **Ubicación de Java Development Kit** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**, pero es posible que su versión sea más reciente:
 
 ![Establecimiento de la ruta del JDK para la distribución de OpenJDK Mobile de Microsoft en Windows](openjdk-images/vs.png)
 

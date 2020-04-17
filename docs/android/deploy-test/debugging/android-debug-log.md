@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 39ee1039104052b8799debf19f09439f57a1791d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028094"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
@@ -32,7 +32,7 @@ El **Registro de depuración** no muestra mensajes de registro que se generan mi
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Acceso al registro de depuración desde Visual Studio
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para abrir la herramienta **Registro de dispositivos**, haga clic en el icono **Registro de dispositivos (logcat)** en la barra de herramientas:
 
@@ -49,15 +49,15 @@ La captura de pantalla siguiente muestra las distintas partes de la ventana **He
 
 - **Selector de dispositivos**: selecciona qué dispositivo físico o emulador en ejecución se va a supervisar.
 
-- **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
+- **Entradas de registro**: una tabla de mensajes de registro de logcat.
 
-- **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
+- **Borrar entradas del registro**: borra todas las entradas de registro actuales de la tabla.
 
-- **Reproducir/Pausar**: alterna entre la actualización o la pausa de la visualización de las nuevas entradas del registro.
+- **Reproducir/Pausar**: alterna entre la actualización o la pausa de la visualización de las nuevas entradas de registro.
 
-- **Detener** &ndash; Detiene la visualización de las nuevas entradas de registro.
+- **Detener**: detiene la visualización de las nuevas entradas de registro.
 
-- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas del registro.
+- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas de registro.
 
 Cuando se muestre la ventana de la herramienta **Registro de depuración**, use el menú desplegable de dispositivos para elegir el dispositivo Android que desea supervisar:
 
@@ -65,7 +65,7 @@ Cuando se muestre la ventana de la herramienta **Registro de depuración**, use 
 
 Después de seleccionar el dispositivo, la herramienta **Registro de dispositivos** agrega las entradas del registro automáticamente desde una aplicación en ejecución (estas entradas del registro se muestran en la en la tabla de entradas del registro). El cambio entre dispositivos se detiene y se inicia el registro de dispositivos. Tenga en cuenta que un proyecto Android debe estar cargado antes de que los dispositivos aparezcan en el selector de dispositivos. Si el dispositivo no aparece en el selector de dispositivos, compruebe que está disponible en el menú desplegable de dispositivos de Visual Studio junto al botón **Iniciar**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Para abrir el **Registro de dispositivos**, haga clic en **Ver > Paneles > Registro de dispositivos**:
 
@@ -77,19 +77,19 @@ La captura de pantalla siguiente muestra las distintas partes de la ventana **He
 
 - **Selector de dispositivos**: selecciona qué dispositivo físico o emulador en ejecución se va a supervisar.
 
-- **Entradas de registro** &ndash; Una tabla de mensajes de registro de logcat.
+- **Entradas de registro**: una tabla de mensajes de registro de logcat.
 
-- **Borrar entradas del registro** &ndash; Borra todas las entradas de registro actuales de la tabla.
+- **Borrar entradas del registro**: borra todas las entradas de registro actuales de la tabla.
 
-- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas del registro.
+- **Cuadro de búsqueda**: escriba las cadenas de búsqueda en este cuadro para filtrar por un subconjunto de las entradas de registro.
 
-- **Mostrar mensajes** &ndash; Alterna la visualización de los mensajes informativos.
+- **Mostrar mensajes**: alterna la visualización de los mensajes informativos.
 
-- **Mostrar advertencias** &ndash; Alterna la visualización de mensajes de advertencia, que se muestran en amarillo.
+- **Mostrar advertencias**: alterna la visualización de mensajes de advertencia, que se muestran en amarillo.
 
-- **Mostrar errores** &ndash; Alterna la visualización de mensajes de error, que se muestran en rojo.
+- **Mostrar errores**: alterna la visualización de mensajes de error, que se muestran en rojo.
 
-- **Volver a conectar** &ndash; Vuelve a conectar el dispositivo y actualiza la visualización del registro de entrada.
+- **Volver a conectar**: vuelve a conectar el dispositivo y actualiza la visualización de la entrada de registro.
 
 - **Agregar marcador**: inserta un mensaje de marcador (como `--- Marker N ---`) después de la entrada de registro más reciente, donde _N_ es un contador que comienza en 1 y se incrementa en 1 cuando se agregan nuevos marcadores.
 
@@ -103,7 +103,7 @@ Después de seleccionar el dispositivo, la herramienta **Registro de dispositivo
 
 ## <a name="accessing-from-the-command-line"></a>Acceso desde la línea de comandos
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Otra opción es ver el registro de depuración a través de la línea de comandos. Abra una ventana de símbolo del sistema y navegue hasta la carpeta de herramientas de la plataforma de Android SDK (normalmente, la carpeta de herramientas de la plataforma del SDK se encuentra en **C:\\Archivos de programa (x86)\\Android\\android-sdk\\platform-tools**).
 
@@ -113,7 +113,7 @@ Si se conecta solo un dispositivo (dispositivo físico o emulador), se puede ver
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Otra opción es ver el registro de depuración a través de la línea de comandos. Abra una ventana Terminal y navegue hasta la carpeta de herramientas de la plataforma de Android SDK (normalmente, la carpeta de herramientas de la plataforma del SDK se encuentra en **/Usuarios/nombredeusuario/Librería/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 

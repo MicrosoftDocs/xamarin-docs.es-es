@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771998"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizable
@@ -157,7 +157,7 @@ Las propiedades `Group` y `Name` del comportamiento se establecen en los valores
 
 En tiempo de ejecución, cuando el comportamiento se asocia al control [`Label`](xref:Xamarin.Forms.Label), se agregará `Xamarin.LabelShadowEffect` a la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control. Como resultado, se agrega una sombra al texto mostrado por el control `Label`, como se muestra en las capturas de pantalla siguientes:
 
-![](effect-behavior-images/screenshots.png "Aplicación de ejemplo con EffectsBehavior")
+![](effect-behavior-images/screenshots.png "Sample Application with EffectsBehavior")
 
 La ventaja de usar este comportamiento para agregar y quitar efectos de los controles es que se puede quitar el código de control de efecto reutilizable de los archivos de código subyacente.
 

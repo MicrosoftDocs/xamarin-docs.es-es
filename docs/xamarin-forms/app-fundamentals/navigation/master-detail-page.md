@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68645949"
 ---
 # <a name="xamarinforms-master-detail-page"></a>MasterDetailPage de Xamarin.Forms
@@ -24,7 +24,7 @@ _MasterDetailPage de Xamarin.Forms es una página que administra dos páginas re
 
 Normalmente, una página maestra presenta una lista de elementos, como se muestra en las siguientes capturas de pantalla:
 
-[![](master-detail-page-images/masterpage-components.png "Componentes de página maestra")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
 
 La ubicación de la lista de elementos es idéntica en cada plataforma; al seleccionar uno de los elementos, se le lleva a la página de detalles correspondiente. Además, la página maestra también incluye una barra de navegación que contiene un botón que se puede usar para ir a la página de detalles activa:
 
@@ -34,7 +34,7 @@ La ubicación de la lista de elementos es idéntica en cada plataforma; al selec
 
 Una página de detalles presenta datos correspondientes al elemento seleccionado en la página maestra; los componentes principales de la página de detalles se muestran en las capturas de pantalla siguientes:
 
-![](master-detail-page-images/detailpage-components.png "Componentes de página de detalles")
+![](master-detail-page-images/detailpage-components.png "Detail Page Components")
 
 La página de detalles contiene una barra de navegación cuyo contenido depende de la plataforma:
 
@@ -210,7 +210,7 @@ public class MasterPageCS : ContentPage
 
 En las capturas de pantalla siguientes se muestra la página maestra en cada plataforma:
 
-![](master-detail-page-images/masterpage.png "Ejemplo de página maestra")
+![](master-detail-page-images/masterpage.png "Master Page Example")
 
 ### <a name="creating-and-displaying-the-detail-page"></a>Creación y presentación de la página de detalles
 
@@ -245,7 +245,7 @@ El método `OnItemSelected` realiza las siguientes acciones:
 
 Las capturas de pantalla siguientes muestran la página de detalles `ContactPage`, que se presenta después de haberse seleccionado en la página maestra:
 
-![](master-detail-page-images/detailpage.png "Ejemplo de página de detalles")
+![](master-detail-page-images/detailpage.png "Detail Page Example")
 
 <a name="Controlling_the_Detail_Page_Display_Behavior" />
 

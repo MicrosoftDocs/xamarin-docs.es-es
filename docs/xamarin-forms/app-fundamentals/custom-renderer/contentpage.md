@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70772027"
 ---
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
@@ -24,7 +24,7 @@ Todos los controles de Xamarin.Forms tienen un representador que lo acompaña pa
 
 El siguiente diagrama muestra la relación entre la clase [`ContentPage`](xref:Xamarin.Forms.ContentPage) y los controles nativos correspondientes que la implementan:
 
-![](contentpage-images/contentpage-classes.png "Relación entre la clase ContentPage y los controles nativos de implementación")
+![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ContentPage`](xref:Xamarin.Forms.ContentPage) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -98,18 +98,18 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Se crea una subclase de la clase `PageRenderer`.
 1. Invalide el método `OnElementChanged` que representa la página nativa y escriba lógica para personalizar la página. Se llama al método `OnElementChanged` cuando se crea el correspondiente control de Xamarin.Forms.
-1. Agregue un atributo `ExportRenderer` a la clase de representador para especificar que se utilizará para representar la página de Xamarin.Forms. Este atributo se usa para registrar el representador personalizado con Xamarin.Forms.
+1. Agregue un atributo `ExportRenderer` a la clase de representador para especificar que se utilizará para representar la página de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
 > Proporcionar un representador de página en cada proyecto de la plataforma es un paso opcional. Si no hay un representador de página registrado, se usa el representador predeterminado de la página.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](contentpage-images/solution-structure.png "Responsabilidades del proyecto de representador personalizado CameraPage")
+![](contentpage-images/solution-structure.png "CameraPage Custom Renderer Project Responsibilities")
 
 Las clases `CameraPageRenderer` del representador específico de la plataforma, que se derivan de la clase `PageRenderer` para esa plataforma, representan la instancia `CameraPage`. Esto da como resultado que cada instancia de `CameraPage` se represente con una fuente de la cámara en directo, como se muestra en las siguientes capturas de pantalla:
 
-![](contentpage-images/screenshots.png "CameraPage en cada plataforma")
+![](contentpage-images/screenshots.png "CameraPage on each Platform")
 
 La clase `PageRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea una página de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CameraPage`.
 

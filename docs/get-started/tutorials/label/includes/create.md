@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1bcd808221ee319fa2818563418d2362b146e354
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "72678737"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389996"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Label`](xref:Xamarin.Forms.Label) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Label.Text`](xref:Xamarin.Forms.Button.Text) especifica que se muestre el texto, mientras que la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que `Label` se centre horizontalmente.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Label`](xref:Xamarin.Forms.Label) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Label.Text`](xref:Xamarin.Forms.Label.Text) especifica que se muestre el texto, mientras que la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que `Label` se centre horizontalmente.
 
 1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
@@ -62,7 +62,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Label`](xref:Xamarin.Forms.Label) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Label.Text`](xref:Xamarin.Forms.Button.Text) especifica que se muestre el texto, mientras que la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que el texto se centre horizontalmente.
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Label`](xref:Xamarin.Forms.Label) en un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propiedad [`Label.Text`](xref:Xamarin.Forms.Label.Text) especifica que se muestre el texto, mientras que la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que el texto se centre horizontalmente.
 
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 

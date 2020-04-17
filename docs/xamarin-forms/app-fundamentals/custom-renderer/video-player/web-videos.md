@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771759"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
@@ -465,7 +465,7 @@ Con la implementación de estas propiedades en los tres representadores, es posi
 
 La clase `VideoSourceConverter` convierte la cadena en un elemento `UriVideoSource`. Cuando se desplaza a la página **Play Web Video**, se empieza a cargar el vídeo y se inicia la reproducción cuando se ha descargado y almacenado en búfer una cantidad de datos suficiente. El vídeo tiene aproximadamente 10 minutos de duración:
 
-[![Reproducir vídeo web](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png#lightbox "Play Web Video")
+[![Reproducir vídeo web](web-videos-images/playwebvideo-small.png "Reproducir vídeo web")](web-videos-images/playwebvideo-large.png#lightbox "Reproducir vídeo web")
 
 En cada una de las plataformas, los controles de transporte se atenúan si no se usan, pero puede pulsar en el vídeo para restaurarlos y verlos.
 

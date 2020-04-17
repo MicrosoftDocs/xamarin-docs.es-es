@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: e027d41e98c26ef1659c27ab05df3052e19cc670
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 0fc74ae2307ffd14f8c52515c93993a51455997a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "73027133"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80805954"
 ---
 # <a name="location-services-on-android"></a>Servicios de ubicación en Android
 
@@ -84,7 +84,7 @@ La API del proveedor de ubicación fusionada proporciona numerosas herramientas 
 El proveedor de ubicación fusionada forma parte de [Google Play Services](https://developer.android.com/google/play-services/index.html).
 El paquete de Google Play Services debe instalarse y configurarse correctamente en la aplicación para que la API del proveedor de ubicación fusionada funcione, y el dispositivo debe tener instalado el APK de Google Play Services.
 
-Antes de que una aplicación de Xamarin.Android pueda usar el proveedor de ubicación fusionada, debe agregar el paquete **Xamarin.GooglePlayServices.Maps** al proyecto. Además, se deben agregar las siguientes instrucciones de `using` a cualquier archivo de código fuente que haga referencia a las clases que se describen a continuación:
+Antes de que una aplicación de Xamarin.Android pueda usar el proveedor de ubicación fusionada, debe agregar el paquete **Xamarin.GooglePlayServices.Location** al proyecto. Además, se deben agregar las siguientes instrucciones de `using` a cualquier archivo de código fuente que haga referencia a las clases que se describen a continuación:
 
 ```csharp
 using Android.Gms.Common;

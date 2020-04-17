@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027987"
 ---
 # <a name="profiling-android-apps"></a>Generar perfiles de aplicaciones Android
@@ -105,8 +105,8 @@ En los pasos siguientes se explica cómo iniciar una aplicación Android de Xama
 En la [documentación de Android Studio](https://developer.android.com/studio/profile/android-profiler.html) se incluye información detallada para usar Android Profiler.
 Los temas siguientes pueden ser de interés para desarrolladores de Android de Xamarin:
 
-- [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html): explica cómo inspeccionar la actividad de subprocesos y el uso de CPU de la aplicación en tiempo real.
+- [Generador de perfiles de CPU](https://developer.android.com/studio/profile/cpu-profiler.html): explica cómo inspeccionar la actividad de subprocesos y el uso de CPU de la aplicación en tiempo real.
 
-- [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html): muestra un gráfico en tiempo real del uso de memoria de la aplicación e incluye un botón para registrar las asignaciones de memoria para el análisis.
+- [Generador de perfiles de memoria](https://developer.android.com/studio/profile/memory-profiler.html): muestra un gráfico en tiempo real del uso de memoria de la aplicación e incluye un botón para registrar las asignaciones de memoria para el análisis.
 
-- [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html): muestra la actividad de red en tiempo real de los datos que la aplicación envía y recibe.
+- [Generador de perfiles de red](https://developer.android.com/studio/profile/network-profiler.html): muestra la actividad de red en tiempo real de los datos que la aplicación envía y recibe.

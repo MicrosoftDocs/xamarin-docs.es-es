@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771467"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Pasar parámetros de efecto como propiedades de Common Language Runtime
@@ -28,13 +28,13 @@ El proceso para crear parámetros de efecto que no respondan a los cambios de pr
 
 Después, se pueden pasar parámetros al efecto mediante la especificación de valores para cada propiedad al crear una instancia del efecto.
 
-En la aplicación de ejemplo se muestra un elemento `ShadowEffect` que agrega una sombra al texto mostrado por un control [`Label`](xref:Xamarin.Forms.Label). En el diagrama siguiente se ilustran las responsabilidades de cada proyecto en la aplicación de ejemplo, junto con las relaciones entre ellos:
+En la aplicación de ejemplo se muestra un elemento `ShadowEffect` que agrega una sombra al texto mostrado por un control [`Label`](xref:Xamarin.Forms.Label). El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](clr-properties-images/shadow-effect.png "Responsabilidades del proyecto de efecto de sombra")
+![](clr-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
 `LabelShadowEffect` personaliza un control [`Label`](xref:Xamarin.Forms.Label) en el elemento `HomePage` en cada proyecto específico de la plataforma. Los parámetros se pasan a cada elemento `LabelShadowEffect` a través de las propiedades de la clase `ShadowEffect`. Cada clase `LabelShadowEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se agrega una sombra al texto mostrado por el control `Label`, como se muestra en las capturas de pantalla siguientes:
 
-![](clr-properties-images/screenshots.png "Efecto de sombra en cada plataforma")
+![](clr-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>Creación de parámetros de efecto
 
@@ -79,7 +79,7 @@ En el ejemplo de código XAML siguiente se muestra un control [`Label`](xref:Xam
 </Label>
 ```
 
-El control [`Label`](xref:Xamarin.Forms.Label) equivalente en C# se muestra en el ejemplo de código siguiente:
+En el siguiente ejemplo de código, se muestra el control [`Label`](xref:Xamarin.Forms.Label) equivalente en C#:
 
 ```csharp
 var label = new Label {

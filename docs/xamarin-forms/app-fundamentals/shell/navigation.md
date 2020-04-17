@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71674565"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
@@ -156,7 +156,7 @@ En este ejemplo se navega a la página de la ruta `monkeydetails`.
 
 Además, se admiten los siguientes formatos de ruta relativa:
 
-| Formato | DESCRIPCIÓN |
+| Formato | Descripción |
 | --- | --- |
 | //*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia arriba desde la ruta mostrada actualmente. |
 | ///*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia abajo desde la ruta mostrada actualmente. |
@@ -192,7 +192,7 @@ El uso de cualquiera de estos formatos de ruta dará como resultado una excepci�
 
 Algunas de las clases de Shell se representan con `DebuggerDisplayAttribute`, que especifica cómo el depurador muestra una clase o campo. Esto puede ayudar a depurar las solicitudes de navegación puesto que se muestran los datos relacionados con la solicitud de navegación. Por ejemplo, en la captura de pantalla siguiente se muestran las propiedades `CurrentItem` y `CurrentState` del objeto `Shell.Current`:
 
-![Captura de pantalla del depurador](navigation-images/debugger.png "Depurador")
+![Captura de pantalla del depurador](navigation-images/debugger.png "instantáneas")
 
 En este ejemplo, la propiedad `CurrentItem`, de tipo `FlyoutItem`, muestra el título y la ruta del objeto `FlyoutItem`. Igualmente, la propiedad `CurrentState`, de tipo `ShellNavigationState`, muestra el URI de la ruta mostrada dentro de la aplicación de Shell.
 
@@ -211,7 +211,7 @@ La clase `Tab` define una propiedad `Stack`, de tipo `IReadOnlyList<Page>`, que 
 
 La clase `Shell` define un evento `Navigating`, que se desencadena cuando está a punto de realizarse la navegación, ya sea debido a la navegación mediante programación o a la interacción del usuario. El objeto `ShellNavigatingEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
 
-| Propiedad. | Escriba | DESCRIPCIÓN |
+| Propiedad. | Tipo | Descripción |
 |---|---|---|
 | `Current` | `ShellNavigationState` | Identificador URI de la página actual. |
 | `Source` | `ShellNavigationSource` | El tipo de navegación que se ha producido. |
@@ -226,7 +226,7 @@ Además, la clase `ShellNavigatingEventArgs` proporciona un método `Cancel` que
 
 La clase `Shell` también define un evento `Navigated`, que se desencadena cuando se ha completado la navegación. El objeto `ShellNavigatedEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
 
-| Propiedad. | Escriba | DESCRIPCIÓN |
+| Propiedad. | Tipo | Descripción |
 |---|---|---|
 | `Current` | `ShellNavigationState` | Identificador URI de la página actual. |
 | `Previous`| `ShellNavigationState` | Identificador URI de la página anterior. |
@@ -291,7 +291,7 @@ public partial class ElephantDetailPage : ContentPage
 }
 ```
 
-El primer argumento de `QueryPropertyAttribute` especifica el nombre de la propiedad que recibirá los datos, mientras que el segundo argumento especifica el identificador del parámetro de consulta. Por tanto, el elemento `QueryPropertyAttribute` del ejemplo anterior especifica que la propiedad `Name` recibirá los datos pasados al parámetro de consulta `name` del URI en la llamada al método `GoToAsync`. La propiedad `Name` decodifica entonces el valor del parámetro de consulta en una dirección URL y lo usa para establecer el objeto [`BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de la página en el objeto que se mostrará.
+El primer argumento de `QueryPropertyAttribute` especifica el nombre de la propiedad que recibirá los datos, mientras que el segundo argumento especifica el identificador del parámetro de consulta. Por tanto, el elemento `QueryPropertyAttribute` del ejemplo anterior especifica que la propiedad `Name` recibirá los datos pasados al parámetro de consulta `name` del URI en la llamada al método `GoToAsync`. La propiedad `Name` decodifica entonces el valor del parámetro de consulta en una dirección URL y lo usa para establecer el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página en el objeto que se mostrará.
 
 > [!NOTE]
 > Una clase se puede representar con varios objetos `QueryPropertyAttribute`.
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 La propiedad `Command` se establece en `ICommand` para ejecutarse cuando se presiona el botón Atrás, y la propiedad `IconOverride` se establece en el icono que se usa para el botón Atrás:
 
-[![Captura de pantalla de la invalidación de un icono de botón Atrás de Shell en iOS y Android](navigation-images/back-button.png "Invalidación de icono de botón Atrás de Shell")](navigation-images/back-button-large.png#lightbox "Invalidación de icono de botón Atrás de Shell")
+[![Captura de pantalla de la invalidación de un icono de botón Atrás de shell en iOS y Android](navigation-images/back-button.png "Invalidación de icono de botón Atrás de Shell")](navigation-images/back-button-large.png#lightbox "Invalidación de icono de botón Atrás de Shell")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

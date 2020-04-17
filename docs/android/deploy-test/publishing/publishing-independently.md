@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: dee49d556173ec0b9544820f129eef8a9cce404f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021318"
 ---
 # <a name="publishing-independently"></a>Publicación de forma independiente
@@ -23,9 +23,9 @@ Existen varias licencias para el desarrollo, la implementación y la distribuci�
 
 - **Visual Studio Community**: para estudiantes, equipos pequeños y desarrolladores de OSS que usan Windows.
 
-- **Visual Studio Professional** &ndash; Para desarrolladores individuales o equipos pequeños (solo Windows). Esta licencia ofrece una suscripción estándar o en la nube y no tiene restricciones de uso.
+- **Visual Studio Professional**: para desarrolladores individuales o equipos pequeños (solo Windows). Esta licencia ofrece una suscripción estándar o en la nube y no tiene restricciones de uso.
 
-- **Visual Studio Enterprise** &ndash; Para equipos de cualquier tamaño (solo Windows). Esta licencia incluye funcionalidades empresariales, una suscripción estándar o en la nube.
+- **Visual Studio Enterprise**: para equipos de cualquier tamaño (solo Windows). Esta licencia incluye funcionalidades empresariales, una suscripción estándar o en la nube.
 
 Visite la [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) para descargar las ediciones Community o para obtener más información sobre la compra de las ediciones Professional y Enterprise.
 
@@ -54,8 +54,8 @@ Es posible distribuir una aplicación a través de un servidor web. Para ello, c
 
 La instalación manual es la tercera opción para instalar aplicaciones. Para llevar a cabo la instalación manual de una aplicación:
 
-1. **Distribuya una copia del APK al usuario** &ndash; Por ejemplo, esta copia se puede distribuir en un CD o en una unidad flash USB.
-1. **El usuario instala la aplicación en un dispositivo Android** &ndash; Use la herramienta de línea de comandos *Android Debug Bridge* (**adb**). **adb** es una herramienta de línea de comandos versátil que permite la comunicación con una instancia del emulador o con un dispositivo Android. **adb** está incluido en Android SDK; lo encontrará en el directorio **\<sdk>/platform-tools/** .
+1. **Distribuya una copia del APK al usuario**: por ejemplo, esta copia se puede distribuir en un CD o en una unidad flash USB.
+1. **El usuario instala la aplicación en un dispositivo Android**: use la herramienta de línea de comandos *Android Debug Bridge* (**adb**). **adb** es una herramienta de línea de comandos versátil que permite la comunicación con una instancia del emulador o con un dispositivo Android. **adb** está incluido en Android SDK; lo encontrará en el directorio **\<sdk>/platform-tools/** .
 
 El dispositivo Android debe estar conectado con un cable USB al equipo.
 Los equipos Windows también pueden requerir controladores USB adicionales del proveedor del teléfono para que **adb** los pueda reconocer. Las instrucciones de instalación de estos controladores USB adicionales no se tratan en este documento.

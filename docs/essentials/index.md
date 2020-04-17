@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910732"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80387213"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -61,6 +61,7 @@ Siga las guías para integrar estas características de Xamarin.Essentials en la
 * [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms): métodos del asistente para convertir unidades.
 * [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms): haga seguimiento de las versiones de las aplicaciones y los números de compilación.
 * [Vibrate](vibrate.md?context=xamarin/xamarin-forms): haga que el dispositivo vibre.
+* [Autenticador web](web-authenticator.md?context=xamarin/xamarin-forms): inicie los flujos de autenticación web y escuche una devolución de llamada.
 
 ## <a name="troubleshooting"></a>[Solución de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771818"
 ---
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
@@ -38,31 +38,31 @@ Un reproductor de vídeo más sofisticado tendría algunas características adic
 
 En los siguientes artículos se muestra progresivamente cómo se compilan los representadores de plataforma y las clases auxiliares:
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Creación de reproductores de vídeo de la plataforma](player-creation.md)
+## <a name="creating-the-platform-video-players"></a>[Creación de reproductores de vídeo de la plataforma](player-creation.md)
 
 Cada plataforma necesita una clase `VideoPlayerRenderer` que crea y mantiene un control de reproductor de vídeo compatible con la plataforma. En este artículo se muestra la estructura de las clases del representador y cómo se crean los reproductores.
 
-## <a name="playing-a-web-videoweb-videosmd"></a>[Reproducir vídeo web](web-videos.md)
+## <a name="playing-a-web-video"></a>[Reproducir vídeo web](web-videos.md)
 
 Probablemente el origen más común de vídeos para cualquier reproductor de vídeo es Internet. En este artículo se describe cómo se puede hacer referencia a un vídeo web y cómo usarlo como origen para el reproductor de vídeo.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Enlazar orígenes de vídeo con el reproductor](source-bindings.md)
+## <a name="binding-video-sources-to-the-player"></a>[Enlazar orígenes de vídeo con el reproductor](source-bindings.md)
 
 En este artículo se usa `ListView` para presentar una colección de vídeos para reproducirlos. Un programa muestra cómo el archivo de código subyacente puede establecer el origen de vídeo del reproductor de vídeo, pero un segundo programa muestra cómo puede usar el enlace de datos entre `ListView` y el reproductor de vídeo.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Cargar vídeos de recursos de aplicación](loading-resources.md)
+## <a name="loading-application-resource-videos"></a>[Cargar vídeos de recursos de aplicación](loading-resources.md)
 
 Los vídeos se pueden insertar como recursos en los proyectos de plataforma. En este artículo se muestra cómo almacenar esos recursos y después cargarlos en el programa para reproducirlos en el reproductor de vídeo.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[Acceder a la biblioteca de vídeos del dispositivo](accessing-library.md)
+## <a name="accessing-the-devices-video-library"></a>[Acceder a la biblioteca de vídeos del dispositivo](accessing-library.md)
 
 Cuando se crea un vídeo con la cámara del dispositivo, el archivo de vídeo se almacena en la biblioteca de imágenes del dispositivo. En este artículo se muestra cómo acceder al selector de imágenes del dispositivo para seleccionar el vídeo y, luego, reproducirlo con el reproductor de vídeo.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[Controles de transporte de vídeo personalizados](custom-transport.md)
+## <a name="custom-video-transport-controls"></a>[Controles de transporte de vídeo personalizados](custom-transport.md)
 
 Aunque los reproductores de vídeo en cada plataforma proporcionan sus propios controles de transporte en forma de botones para **reproducir** y **pausar**, puede suprimir la presentación de estos botones y proporcionar los suyos propios. En este artículo se muestra cómo hacerlo.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[Barra de posición de vídeo personalizada](custom-positioning.md)
+## <a name="custom-video-positioning"></a>[Barra de posición de vídeo personalizada](custom-positioning.md)
 
 Todos los reproductores de vídeo de la plataforma tienen una barra de posición que muestra el progreso del vídeo y permite avanzar o retroceder a una posición determinada. En este artículo se muestra cómo sustituir esa barra de posición por un control personalizado.
 

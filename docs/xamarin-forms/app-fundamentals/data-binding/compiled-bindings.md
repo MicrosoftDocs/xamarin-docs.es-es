@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2019
 ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72697156"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
@@ -128,7 +128,7 @@ Tenga en cuenta que [`x:DataType``NamedColor` define el atributo `DataTemplate` 
 
 Cuando la aplicación se ejecuta por primera vez, [`ListView`](xref:Xamarin.Forms.ListView) se rellena con instancias de `NamedColor`. Cuando un elemento de `ListView` está seleccionado, la propiedad [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) se establece en el color del elemento seleccionado en `ListView`:
 
-[![Lista de colores compilados](compiled-bindings-images/compiledcolorlist-small.png "Lista de colores compilados")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Lista de colores compilados](compiled-bindings-images/compiledcolorlist-small.png "Lista de colores compilados")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Lista de colores compilados")
 
 Al seleccionar otros elementos de [`ListView`](xref:Xamarin.Forms.BoxView) se actualiza el color de [`BoxView`](xref:Xamarin.Forms.BoxView).
 

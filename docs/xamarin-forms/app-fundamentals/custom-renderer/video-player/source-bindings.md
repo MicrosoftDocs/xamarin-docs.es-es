@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 3dfdb83f99e7b15866abcc4980473ddf075dff69
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771767"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Enlazar orígenes de vídeo con el reproductor
@@ -75,7 +75,7 @@ namespace VideoPlayerDemos
 
 Cuando se carga la primera página, no se selecciona ningún elemento en `ListView`, por lo que tendrá que seleccionar uno para que el vídeo empiece a reproducirse:
 
-[![Seleccionar vídeo web](source-bindings-images/selectwebvideo-small.png "Select Web Video")](source-bindings-images/selectwebvideo-large.png#lightbox "Select Web Video")
+[![Seleccionar vídeo web](source-bindings-images/selectwebvideo-small.png "Seleccionar vídeo web")](source-bindings-images/selectwebvideo-large.png#lightbox "Seleccionar vídeo web")
 
 La propiedad `Source` de `VideoPlayer` se complementa con una propiedad enlazable, lo que quiere decir que puede ser el objetivo de un enlace de datos. Esto se demuestra mediante la página **Enlazar a VideoPlayer**. El marcado del archivo es compatible con la clase siguiente **BindToVideoPlayer.xaml**, que encapsula un título para un vídeo y un objeto correspondiente `VideoSource`:
 

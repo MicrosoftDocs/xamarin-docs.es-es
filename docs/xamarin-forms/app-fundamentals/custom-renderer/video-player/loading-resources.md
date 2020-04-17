@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771835"
 ---
 # <a name="loading-application-resource-videos"></a>Carga de vídeos de recursos de aplicación
@@ -177,7 +177,7 @@ Si el recurso de iOS se almacena en la carpeta **Recursos**, y si el recurso de 
 
 Esta es la ejecución de la página:
 
-[![Reproducir recurso de vídeo](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "Play Video Resource")
+[![Reproducir recurso de vídeo](loading-resources-images/playvideoresource-small.png "Reproducir recurso de vídeo")](loading-resources-images/playvideoresource-large.png#lightbox "Reproducir recurso de vídeo")
 
 Ya ha visto cómo [cargar vídeos desde un URI web](web-videos.md) y cómo reproducir recursos insertados. Además, puede [cargar vídeos desde la biblioteca de vídeos del dispositivo](accessing-library.md).
 

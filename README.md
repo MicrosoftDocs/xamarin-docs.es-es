@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c2a49af1a2d55011ef3579ddfe994e5455fed303
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "60857450"
+---
 # <a name="xamarin-documentation"></a>Documentación de Xamarin
 
 La documentación de este repositorio se hospeda en [**docs.microsoft.com/xamarin**](https://docs.microsoft.com/xamarin).
@@ -15,11 +23,11 @@ Cuando se envía una solicitud de incorporación de cambios, un bot de CLA deter
 
 Obtenga información sobre el [**proceso de contribución**](CONTRIBUTING.md) e identifique cuál de estos casos se adapta mejor a su situación:
 
-* **Comunidad: actualizaciones menores**: si va a colaborar con actualizaciones menores de forma desinteresada, puede encontrar el artículo en este repositorio, o bien visite el artículo en [https://docs.microsoft.com/xamarin](https://docs.microsoft.com/xamarin) y haga clic en el vínculo **Editar** del artículo que abre el origen de GitHub. Después, use el sitio web de GitHub para realizar las actualizaciones. También puede [bifurcar el repositorio](CONTRIBUTING.md) y enviar las actualizaciones de la bifurcación.
+* **Actualizaciones menores de la comunidad**: si va a colaborar con actualizaciones menores de forma desinteresada, puede encontrar el artículo en este repositorio, o bien visite el artículo en [https://docs.microsoft.com/xamarin](https://docs.microsoft.com/xamarin) y haga clic en el vínculo **Editar** del artículo que abre el origen de GitHub. Después, use el sitio web de GitHub para realizar las actualizaciones. También puede [bifurcar el repositorio](CONTRIBUTING.md) y enviar las actualizaciones de la bifurcación.
 
-* **Comunidad: artículos nuevos**: si forma parte de la comunidad de Xamarin y quiere crear un artículo, tendrá que trabajar con un empleado para que le ayude a agregar ese contenido nuevo mediante una combinación de trabajo en el repositorio público y privado. Comience por registrar un [asunto de GitHub](https://github.com/MicrosoftDocs/xamarin-docs/issues) en el repositorio en el que se describa el contenido propuesto.
+* **Nuevos artículos de la comunidad**: si forma parte de la comunidad de Xamarin y quiere crear un artículo, tendrá que trabajar con un empleado para que le ayude a agregar ese contenido nuevo mediante una combinación de trabajo en el repositorio público y privado. Comience por registrar un [asunto de GitHub](https://github.com/MicrosoftDocs/xamarin-docs/issues) en el repositorio en el que se describa el contenido propuesto.
 
-* **Empleados**: si es escritor técnico, administrador de programas o desarrollador del equipo de productos Xamarin y su trabajo consiste en crear artículos técnicos o colaborar en ellos, debe usar el repositorio privado (https://github.com/MicrosoftDocs/xamarin-docs-pr)). Si realiza cambios sustanciales en un artículo existente, agrega o cambia imágenes, o bien colabora en un artículo nuevo, tendrá que bifurcar este repositorio, instalar Git, un editor de markdown y aprender algunos comandos de Git. Vea la [Guía del colaborador interno](https://review.docs.microsoft.com/help/contribute/?branch=master) para obtener más información.
+* **Empleados**: si es escritor técnico, administrador de programas o desarrollador del equipo de productos Xamarin y su trabajo consiste en crear artículos técnicos o colaborar en ellos, debe usar el repositorio privado (https://github.com/MicrosoftDocs/xamarin-docs-pr) ). Si realiza cambios sustanciales en un artículo existente, agrega o cambia imágenes, o bien colabora en un artículo nuevo, tendrá que bifurcar este repositorio, instalar Git, un editor de markdown y aprender algunos comandos de Git. Vea la [Guía del colaborador interno](https://review.docs.microsoft.com/help/contribute/?branch=master) para obtener más información.
 
 ## <a name="legal-notices"></a>Avisos legales
 

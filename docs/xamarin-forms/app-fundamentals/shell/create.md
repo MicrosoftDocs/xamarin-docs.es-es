@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68739305"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
@@ -128,14 +128,14 @@ El siguiente XAML muestra un ejemplo de una clase `Shell` con subclases:
 
 Cuando se ejecuta, este XAML muestra el objeto `CatsPage`, porque es el primer elemento de contenido declarado en la clase `Shell` con subclases:
 
-[![Captura de pantalla de una aplicación de Shell en iOS y Android](create-images/cats.png "Aplicación Shell")](create-images/cats-large.png#lightbox "Shell app")
+[![Captura de pantalla de una aplicación de shell en iOS y Android](create-images/cats.png "Aplicación de shell")](create-images/cats-large.png#lightbox "Aplicación de shell")
 
 Al presionar el icono de tres barras, o al deslizar el dedo desde la izquierda, se muestra el control flotante:
 
-[![Captura de pantalla de un control flotante de Shell en iOS y Android](create-images/flyout-reduced.png "Control flotante de Shell")](create-images/flyout-reduced-large.png#lightbox "Shell flyout")
+[![Captura de pantalla de un control flotante de Shell en iOS y Android](create-images/flyout-reduced.png "Control flotante de Shell")](create-images/flyout-reduced-large.png#lightbox "Control flotante de Shell")
 
 > [!IMPORTANT]
-> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading) en la guía [Pestañas de Xamarin.Forms Shell](tabs.md).
+> En una aplicación de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading) en la guía [Pestañas de Xamarin.Forms Shell](tabs.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

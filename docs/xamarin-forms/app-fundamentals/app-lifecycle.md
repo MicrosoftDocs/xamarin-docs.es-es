@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
 ms.openlocfilehash: 41e8d073982bf7963b3a77a939bf28e52e86feaa
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67675175"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Ciclo de vida de aplicaciones de Xamarin.Forms
@@ -19,7 +19,7 @@ ms.locfileid: "67675175"
 La clase base [`Application`](xref:Xamarin.Forms.Application) proporciona las características siguientes:
 
 - [Métodos de ciclo de vida](#Lifecycle_Methods) `OnStart`, `OnSleep` y `OnResume`.
-- [Eventos de navegación de página](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- [Eventos de navegación de página](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) y [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
 - [Eventos de navegación modal](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` y `ModalPopped`.
 
 <a name="Lifecycle_Methods" />

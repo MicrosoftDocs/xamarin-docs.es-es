@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771253"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de un elemento DataTemplateSelector de Xamarin.Forms
@@ -91,7 +91,7 @@ En tiempo de ejecución, [`ListView`](xref:Xamarin.Forms.ListView) llama al mét
 
 En las capturas de pantalla siguientes se muestra el resultado de la aplicación de `PersonDataTemplateSelector` por parte de [`ListView`](xref:Xamarin.Forms.ListView) a cada objeto de la colección subyacente:
 
-![](selector-images/data-template-selector.png "Objeto ListView con un selector de plantillas de datos")
+![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
 
 Cualquier objeto `Person` que tenga un valor de propiedad `DateOfBirth` mayor o igual a 1980 se muestra en color verde, y los demás objetos se muestran en color rojo.
 

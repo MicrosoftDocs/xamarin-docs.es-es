@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 7a4c67f067b73873c3d1de4499abda2703217ddf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70760823"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
@@ -29,11 +29,11 @@ En este artículo se tratan los siguientes temas:
 
 Una página modal puede ser cualquiera de los tipos [Página](~/xamarin-forms/user-interface/controls/pages.md) compatibles con Xamarin.Forms. Para mostrar una página modal, la aplicación la insertará en la pila modal, donde se convertirá en la página activa, como se muestra en el siguiente diagrama:
 
-![](modal-images/pushing.png "Inserción de una página en la pila modal")
+![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
 
 Para volver a la página anterior, la aplicación mostrará la página actual de la pila modal y la nueva página de nivel superior se convertirá en la página activa, tal como se muestra en el siguiente diagrama:
 
-![](modal-images/popping.png "Sacar una página de la pila modal")
+![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
 <a name="Performing_Navigation" />
 
@@ -65,7 +65,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 Esto hace que la instancia de `ModalPage` se inserte en la pila modal, donde se convertirá en la página activa, siempre que se haya seleccionado un elemento en la [`ListView`](xref:Xamarin.Forms.ListView) en la instancia de `MainPage`. La instancia de `ModalPage` se muestra en la siguiente captura de pantalla:
 
-![](modal-images/modalpage.png "Ejemplo de página modal")
+![](modal-images/modalpage.png "Modal Page Example")
 
 Al invocar [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*), ocurre lo siguiente:
 

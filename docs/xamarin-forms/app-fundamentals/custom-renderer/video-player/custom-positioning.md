@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650644"
 ---
 # <a name="custom-video-positioning"></a>Barra de posición de vídeo personalizada
@@ -475,7 +475,7 @@ Por tanto, la propiedad `Position` del `VideoPlayer` puede enlazarse a la propie
 
 Los primeros puntos suspensivos (···) ocultan el `ActivityIndicator`; es el mismo que en la página anterior **Transporte personalizado**. Tenga en cuenta los dos elementos `Label` que muestran las propiedades `Position` y `TimeToEnd`. Los puntos suspensivos entre esos dos elementos `Label` ocultan los dos elementos `Button` que aparecen en la página **Transporte personalizado** para reproducir, hacer pausa y detener. La lógica de código subyacente también es la misma que la de la página **Transporte personalizado**.
 
-[![Posición personalizada](custom-positioning-images/custompositioning-small.png "Custom Positioning")](custom-positioning-images/custompositioning-large.png#lightbox "Custom Positioning")
+[![Posicionamiento personalizado](custom-positioning-images/custompositioning-small.png "Posicionamiento personalizado")](custom-positioning-images/custompositioning-large.png#lightbox "Posicionamiento personalizado")
 
 Con esto concluye la explicación de `VideoPlayer`.
 

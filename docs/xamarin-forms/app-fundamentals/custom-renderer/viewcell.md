@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
 ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70998056"
 ---
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
@@ -20,13 +20,13 @@ ms.locfileid: "70998056"
 
 _Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de ListView._
 
-Todos las celdas de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una [`ViewCell`](xref:Xamarin.Forms.ViewCell), en iOS se crea la instancia de la clase `ViewCellRenderer`, que a su vez crea una instancia del control `UITableViewCell` nativo. En la plataforma Android, la clase `ViewCellRenderer` crea una instancia del control `View` nativo. En la Plataforma Universal de Windows (UWP), la clase `ViewCellRenderer` crea una instancia de `DataTemplate` nativa. Para obtener más información sobre las clases de control nativo que se asignan a los controles de Xamarin.Forms y el representador, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Controles nativos y clases base del representador).
+Todos las celdas de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una [`ViewCell`](xref:Xamarin.Forms.ViewCell), en iOS se crea la instancia de la clase `ViewCellRenderer`, que a su vez crea una instancia del control `UITableViewCell` nativo. En la plataforma de Android, la clase `ViewCellRenderer` crea una instancia de un control `View` nativo. En la Plataforma Universal de Windows (UWP), la clase `ViewCellRenderer` crea una instancia de `DataTemplate` nativa. Para obtener más información sobre las clases de control nativo que se asignan a los controles de Xamarin.Forms y el representador, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Controles nativos y clases base del representador).
 
-El siguiente diagrama ilustra la relación entre la [`ViewCell`](xref:Xamarin.Forms.ViewCell) y los controles nativos correspondientes que la implementan:
+El siguiente diagrama muestra la relación entre la clase [`ViewCell`](xref:Xamarin.Forms.ViewCell) y los controles nativos correspondientes que la implementan:
 
-![](viewcell-images/viewcell-classes.png "Relación entre el Control ViewCell y los controles nativos de implementación")
+![](viewcell-images/viewcell-classes.png "Relationship Between the ViewCell Control and the Implementing Native Controls")
 
-El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ViewCell`](xref:Xamarin.Forms.ViewCell) en cada plataforma. El proceso para hacer esto es el siguiente:
+El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ViewCell`](xref:Xamarin.Forms.ViewCell) en cada plataforma. Para hacerlo, siga este procedimiento:
 
 1. [Cree](#Creating_the_Custom_Cell) una celda personalizada de Xamarin.Forms.
 1. [Consuma](#Consuming_the_Custom_Cell) la celda personalizada de Xamarin.Forms.
@@ -97,7 +97,7 @@ En XAML puede hacerse referencia a la celda personalizada `NativeCell` en el pro
 </ContentPage>
 ```
 
-El prefijo del espacio de nombres `local` puede tener cualquier nombre. Empero, los valores `clr-namespace` y `assembly` deben coincidir con los detalles del control personalizado. Una vez que se declare el espacio de nombres, el prefijo se utiliza para hacer referencia a la celda personalizada.
+El prefijo de espacio de nombres `local` puede tener cualquier nombre. Empero, los valores `clr-namespace` y `assembly` deben coincidir con los detalles del control personalizado. Una vez que se declare el espacio de nombres, el prefijo se utiliza para hacer referencia a la celda personalizada.
 
 El siguiente ejemplo de código muestra cómo una página de C# puede consumir la celda personalizada `NativeCell`:
 
@@ -156,7 +156,7 @@ Ahora se puede agregar un representador personalizado a cada proyecto de aplicac
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creación del representador personalizado en cada plataforma
 
-El proceso de creación de la clase de representador personalizada es el siguiente:
+El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Cree una subclase de la clase `ViewCellRenderer` que represente la celda personalizada.
 1. Invalide el método específico de la plataforma que representa la celda personalizada y escriba una lógica para personalizarla.
@@ -165,23 +165,23 @@ El proceso de creación de la clase de representador personalizada es el siguien
 > [!NOTE]
 > Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control. Con todo, los representadores personalizados son necesarios en cada proyecto de la plataforma al representar un elemento [ViewCell](xref:Xamarin.Forms.ViewCell).
 
-El siguiente diagrama ilustra las responsabilidades de cada proyecto en la aplicación de ejemplo, junto con las relaciones entre ellos:
+El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](viewcell-images/solution-structure.png "Responsabilidades del proyecto de representador personalizado NativeCell")
+![](viewcell-images/solution-structure.png "NativeCell Custom Renderer Project Responsibilities")
 
 Las clases del representador específico de la plataforma, que se derivan de la clase `ViewCellRenderer` para cada plataforma, representan la celda personalizada `NativeCell`. Esto da como resultado que cada celda personalizada `NativeCell` se represente con diseño específico de la plataforma, como se muestra en las siguientes capturas de pantalla:
 
-![](viewcell-images/screenshots.png "NativeCell en cada plataforma")
+![](viewcell-images/screenshots.png "NativeCell on each Platform")
 
 La clase `ViewCellRenderer` expone métodos específicos de la plataforma para representar la celda personalizada. Estos son el método `GetCell` en la plataforma iOS, el método `GetCellCore` en la plataforma Android y el método `GetTemplate` en UWP.
 
-Cada clase de presentador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo de la celda de Xamarin.Forms que se representa y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
+Cada clase de representador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo de la celda de Xamarin.Forms que se representa y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
 
 En las secciones siguientes se describe la implementación de cada clase de representador personalizado específico de plataforma.
 
 ### <a name="creating-the-custom-renderer-on-ios"></a>Creación del representador personalizado en iOS
 
-El siguiente ejemplo de código muestra el representador personalizado para la plataforma de iOS:
+El siguiente ejemplo de código muestra el representador personalizado para la plataforma iOS:
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeCell), typeof(NativeiOSCellRenderer))]
@@ -326,7 +326,7 @@ El diseño de la celda se realiza mediante la invalidación de `LayoutSubviews`,
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Creación del representador personalizado en Android
 
-El siguiente ejemplo de código muestra el representador personalizado para la plataforma de Android:
+En el ejemplo de código siguiente se muestra el representador personalizado para la plataforma Android:
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeCell), typeof(NativeAndroidCellRenderer))]

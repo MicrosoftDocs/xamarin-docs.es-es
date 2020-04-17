@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771727"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
@@ -24,7 +24,7 @@ Todas las vistas de Xamarin.Forms tienen un representador adjunto para cada plat
 
 El siguiente diagrama muestra la relación entre la clase [`View`](xref:Xamarin.Forms.View) y los controles nativos correspondientes que la implementan:
 
-![](view-images/view-classes.png "Relación entre la clase View y sus clases nativas de implementación")
+![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
 El proceso de representación puede usarse para implementar personalizaciones específicas de plataforma al crear un representador personalizado para una clase [`View`](xref:Xamarin.Forms.View) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -78,7 +78,7 @@ En XAML, se puede hacer referencia al control personalizado `CameraPreview` en e
 </ContentPage>
 ```
 
-El prefijo de espacio de nombres `local` puede tener cualquier nombre. Pero los valores `clr-namespace` y `assembly` deben coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se usa para hacer referencia al control personalizado.
+El prefijo de espacio de nombres `local` puede tener cualquier nombre. Pero los valores `clr-namespace` y `assembly` tienen que coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se usa para hacer referencia al control personalizado.
 
 El siguiente ejemplo de código muestra cómo se puede usar el control personalizado `CameraPreview` en una página C#:
 
@@ -121,11 +121,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](view-images/solution-structure.png "Responsabilidades de proyecto del representador personalizado de CameraPreview")
+![](view-images/solution-structure.png "CameraPreview Custom Renderer Project Responsibilities")
 
 El control personalizado `CameraPreview` se representa mediante clases de representador específicas de la plataforma, que se derivan de la clase `ViewRenderer` de cada plataforma. Esto da lugar a que cada control personalizado `CameraPreview` se represente con controles específicos de la plataforma, como se muestra en las capturas de pantalla siguientes:
 
-![](view-images/screenshots.png "CameraPreview en cada plataforma")
+![](view-images/screenshots.png "CameraPreview on each Platform")
 
 La clase `ViewRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el control personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CameraPreview`.
 

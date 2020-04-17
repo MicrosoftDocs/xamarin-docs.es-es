@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
 ms.openlocfilehash: c07848b808d023439c88117924e69c336984630b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771507"
 ---
 # <a name="creating-an-effect"></a>Creación de un efecto
@@ -33,13 +33,13 @@ Después, el efecto se puede consumir si se adjunta al control adecuado.
 > [!NOTE]
 > Proporcionar un efecto en cada proyecto de la plataforma es un paso opcional. Al intentar usar un efecto cuando no se ha registrado uno, se devolverá un valor distinto de NULL que no hace nada.
 
-En la aplicación de ejemplo se muestra un elemento `FocusEffect` que cambia el color de fondo de un control cuando recibe el foco. En el diagrama siguiente se ilustran las responsabilidades de cada proyecto en la aplicación de ejemplo, junto con las relaciones entre ellos:
+En la aplicación de ejemplo se muestra un elemento `FocusEffect` que cambia el color de fondo de un control cuando recibe el foco. El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](creating-images/focus-effect.png "Responsabilidades del proyecto de efecto de foco")
+![](creating-images/focus-effect.png "Focus Effect Project Responsibilities")
 
 La clase `FocusEffect` personaliza un control [`Entry`](xref:Xamarin.Forms.Entry) en el elemento `HomePage` en cada proyecto específico de la plataforma. Cada clase `FocusEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se representa el control `Entry` con un color de fondo específico de la plataforma, que cambia cuando el control recibe el foco, como se muestra en las capturas de pantalla siguientes:
 
-![](creating-images/screenshots-1.png "Efecto de foco en cada plataforma")
+![](creating-images/screenshots-1.png "Focus Effect on each Platform")
 ![](creating-images/screenshots-2.png "Focus Effect on each Platform")
 
 ## <a name="creating-the-effect-on-each-platform"></a>Creación del efecto en cada plataforma
@@ -240,7 +240,7 @@ Los efectos también se pueden adjuntar a los controles mediante un comportamien
 
 ## <a name="consuming-the-effect-in-cnum"></a>Consumo del efecto en C&num;
 
-El control [`Entry`](xref:Xamarin.Forms.Entry) equivalente en C# se muestra en el ejemplo de código siguiente:
+En el siguiente ejemplo de código, se muestra el control [`Entry`](xref:Xamarin.Forms.Entry) equivalente en C#:
 
 ```csharp
 var entry = new Entry {

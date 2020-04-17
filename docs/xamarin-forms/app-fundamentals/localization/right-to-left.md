@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72678844"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
@@ -44,7 +44,7 @@ El valor de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.Flow
 
 ## <a name="respecting-device-flow-direction"></a>Respetar la dirección del flujo del dispositivo
 
-Respetar la dirección del flujo del dispositivo según el idioma y la región seleccionados es una opción explícita del desarrollador y no se realiza automáticamente. Se consigue estableciendo la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de una página, o diseño raíz, en el valor `static`[`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection):
+Respetar la dirección del flujo del dispositivo según el idioma y la región seleccionados es una opción explícita del desarrollador y no se realiza automáticamente. Se consigue mediante el establecimiento de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de una página, o diseño raíz, en el valor `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection):
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -62,7 +62,7 @@ Se requiere una configuración de la plataforma específica para habilitar las c
 
 ### <a name="ios"></a>iOS
 
-La configuración regional de derecha a izquierda necesaria debe agregarse como un idioma compatible con los elementos de matriz para la clave `CFBundleLocalizations` **Info.plist**. En el ejemplo siguiente se muestra el idioma árabe agregado a la matriz para la clave `CFBundleLocalizations`:
+La configuración regional de derecha a izquierda necesaria debe agregarse como un idioma compatible con los elementos de matriz para la clave `CFBundleLocalizations`**Info.plist**. En el ejemplo siguiente se muestra el idioma árabe agregado a la matriz para la clave `CFBundleLocalizations`:
 
 ```xml
 <key>CFBundleLocalizations</key>
