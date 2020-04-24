@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: d8f9445a0fc45c2700e8d9a901cfce9bd6307d2b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a83e3ae4069657df06967b7157809c7dc86ad941
+ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "75490663"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82109636"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`Image`](xref:Xamarin.Forms.Image) para personalizar su apariencia:
 
     ```xaml
-    <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
            Aspect="Fill"
            HeightRequest="{OnPlatform iOS=300, Android=250}"
            WidthRequest="{OnPlatform iOS=300, Android=250}"
@@ -33,7 +33,7 @@ ms.locfileid: "75490663"
 1. En **MainPage.xaml**, modifique la declaración [`Image`](xref:Xamarin.Forms.Image) para personalizar su apariencia:
 
     ```xaml
-    <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
            Aspect="Fill"
            HeightRequest="{OnPlatform iOS=300, Android=250}"
            WidthRequest="{OnPlatform iOS=300, Android=250}"

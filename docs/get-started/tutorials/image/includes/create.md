@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a51a00c8cfcd0b12787ecd3cd1eb986bb8f596c0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 855ca4a56915578fdd2560110bc3231f122d0dc9
+ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "75490646"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82109663"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -25,7 +25,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>
@@ -64,7 +64,7 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>
