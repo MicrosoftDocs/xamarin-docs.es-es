@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 7278fd624bb3147c2e1a1a1a79adde68813a9888
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ef2f8e0375786ba7b627fdf75545cbb48318c1aa
+ms.sourcegitcommit: 854798de42566750d9c70b6d0539b7ee73ff6ddc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020153"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646598"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Contenedores de Android que se pueden llamar para Xamarin.Android
 
@@ -74,7 +74,7 @@ La nomenclatura ACW basada en MD5SUM se introdujo en Xamarin.Android 5.0. Para o
 
 Hay ocasiones en las que puede que tenga que implementar una interfaz de Android, como [Android.Content.IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Puesto que todas las clases e interfaces de Android amplían la interfaz [Android.Runtime.IJavaObject](xref:Android.Runtime.IJavaObject), la pregunta que surge es ¿cómo se implementa `IJavaObject`? 
 
-La pregunta se respondió anteriormente: el motivo por el que todos los tipos de Android deben implementar `IJavaObject` es para que Xamarin.Android tenga un contenedor de Android que se puede llamar que pueda proporcionar a Android, es decir, un proxy Java para el tipo concreto. Como **monodroid.exe** solo busca subclases `Java.Lang.Object` y `Java.Lang.Object` implementa `IJavaObject,`, la respuesta es obvia: la subclase `Java.Lang.Object`: 
+La pregunta se respondió anteriormente: el motivo por el que todos los tipos de Android deben implementar `IJavaObject` es para que Xamarin.Android tenga un contenedor de Android que se puede llamar que pueda proporcionar a Android, es decir, un proxy Java para el tipo concreto. Como **monodroid.exe** solo busca subclases `Java.Lang.Object` y `Java.Lang.Object` implementa `IJavaObject`, la respuesta es obvia: la subclase `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {

@@ -5,12 +5,12 @@ ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e31cae6ff639dbe261599a7cf78ae31fc09318b3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f322855f26d7a57acc06e97e0c97ab201c3fa586
+ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79190314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82047405"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: Tema de la aplicación
 
@@ -62,7 +62,7 @@ Siempre se devolverá Sin especificar en las versiones de iOS anteriores a la 13
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-De forma predeterminada, la aplicación se ejecuta con el tema establecido por el usuario en la configuración de Windows (**Configuración > Personalización > Colores > Elija su modo de aplicación predeterminado**). Puede establecer la propiedad RequestedTheme de la aplicación para reemplazar el valor predeterminado del usuario y especificar qué tema se usa.
+Las aplicaciones de UWP respetarán la configuración de App.xaml de UWP en **RequestedTheme**. Si se establece en un tema concreto, Xamarin.Essentials siempre devolverá esta configuración. Para usar el tema dinámico del sistema operativo, quite este nodo de la aplicación y, a continuación, cuando se ejecute la aplicación, devolverá el tema establecido por el usuario en la configuración de Windows (**Configuración > Personalización > Colores > Elija su modo de aplicación predeterminado**).
 
 Puede obtener más información en la [documentación sobre el tema solicitado en UWP](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme).
 
