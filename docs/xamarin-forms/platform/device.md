@@ -1,34 +1,34 @@
 ---
-title: Clase Device de Xamarin.Forms
-description: En este artículo se explica cómo usar la clase Device de Xamarin.Forms para un mayor control sobre la funcionalidad y los diseños por plataforma.
+title: Clase de dispositivo de Xamarin. Forms
+description: En este artículo se explica cómo usar la clase de dispositivo de Xamarin. Forms para tener un mayor control sobre la funcionalidad y los diseños en cada plataforma.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/12/2019
-ms.openlocfilehash: 25ddbea75d0fd6858f848499281da5d5f0b68171
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 04/17/2020
+ms.openlocfilehash: d0f0fa7dd68e8852dd7a72486c155ec064540644
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306432"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517067"
 ---
-# <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
+# <a name="xamarinforms-device-class"></a>Clase de dispositivo de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+[![Descargar el](~/media/shared/download.png) ejemplo descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
-La clase [`Device`](xref:Xamarin.Forms.Device) contiene una serie de propiedades y métodos para ayudar a los desarrolladores a personalizar el diseño y la funcionalidad para cada plataforma.
+La [`Device`](xref:Xamarin.Forms.Device) clase contiene una serie de propiedades y métodos para ayudar a los desarrolladores a personalizar el diseño y la funcionalidad para cada plataforma.
 
-Además de los métodos y propiedades para el código de destino en tipos y tamaños de hardware específicos, la clase `Device` incluye métodos que se pueden usar para interactuar con los controles de interfaz de usuario de los subprocesos en segundo plano. Para obtener más información, vea [interactuar con la interfaz de usuario de subprocesos en segundo plano](#interact-with-the-ui-from-background-threads).
+Además de los métodos y las propiedades para el código de destino en tipos y tamaños de `Device` hardware específicos, la clase incluye métodos que se pueden usar para interactuar con los controles de interfaz de usuario de los subprocesos en segundo plano. Para obtener más información, vea [interactuar con la interfaz de usuario de subprocesos en segundo plano](#interact-with-the-ui-from-background-threads).
 
-## <a name="providing-platform-specific-values"></a>Proporcionar valores específicos de la plataforma
+## <a name="provide-platform-specific-values"></a>Proporcionar valores específicos de la plataforma
 
-Antes de Xamarin. Forms 2.3.4, la plataforma en la que se ejecutaba la aplicación se podía obtener examinando la propiedad [`Device.OS`](xref:Xamarin.Forms.Device.OS) y comparándola con los valores de enumeración [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)y [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) . De forma similar, una de las sobrecargas de [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) podría usarse para proporcionar valores específicos de la plataforma a un control.
+Antes de Xamarin. Forms 2.3.4, la plataforma en la que se ejecutaba la aplicación se podía obtener [`Device.OS`](xref:Xamarin.Forms.Device.OS) examinando la propiedad y comparándola con [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)los [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android)valores [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)de enumeración,, y [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) . De forma similar, una [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) de las sobrecargas podría usarse para proporcionar valores específicos de la plataforma a un control.
 
-Sin embargo, desde Xamarin.Forms 2.3.4 estas API se ha desusado y reemplazado. La clase [`Device`](xref:Xamarin.Forms.Device) contiene ahora constantes de cadena públicas que identifican las plataformas: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`(en desuso), `Device.WinRT` (en desuso), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP)y [`Device.macOS`](xref:Xamarin.Forms.Device.macOS). Del mismo modo, las sobrecargas de [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) se han reemplazado por las API [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) y [`On`](xref:Xamarin.Forms.On) .
+Sin embargo, como Xamarin. Forms 2.3.4, estas API han quedado en desuso y se han reemplazado. La [`Device`](xref:Xamarin.Forms.Device) clase contiene ahora constantes de cadena públicas que identifican las [`Device.iOS`](xref:Xamarin.Forms.Device.iOS)plataformas [`Device.Android`](xref:Xamarin.Forms.Device.Android): `Device.WinPhone`,, (en desuso `Device.WinRT` ), (desusado [`Device.UWP`](xref:Xamarin.Forms.Device.UWP)), [`Device.macOS`](xref:Xamarin.Forms.Device.macOS)y. Del mismo modo [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) , las sobrecargas se han reemplazado por las [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) API y [`On`](xref:Xamarin.Forms.On) .
 
-En C#, se pueden proporcionar valores específicos de la plataforma mediante la creación de una instrucción `switch` en la propiedad [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) y, a continuación, proporcionar instrucciones `case` para las plataformas necesarias:
+En C#, se pueden proporcionar valores específicos de la plataforma mediante la `switch` creación de una [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) instrucción en la propiedad y `case` , a continuación, proporcionar instrucciones para las plataformas necesarias:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-Las clases [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) y [`On`](xref:Xamarin.Forms.On) proporcionan la misma funcionalidad en XAML:
+Las [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) clases [`On`](xref:Xamarin.Forms.On) y proporcionan la misma funcionalidad en XAML:
 
 ```xaml
 <StackLayout>
@@ -60,27 +60,27 @@ Las clases [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) y [`On`](xref:Xamarin
 </StackLayout>
 ```
 
-La clase [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) es una clase genérica en la que se deben crear instancias con un `x:TypeArguments` atributo que coincida con el tipo de destino. En la clase [`On`](xref:Xamarin.Forms.On) , el atributo [`Platform`](xref:Xamarin.Forms.On.Platform) puede aceptar un solo valor de `string` o varios valores de `string` delimitados por comas.
+La [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica en la que se deben crear instancias `x:TypeArguments` con un atributo que coincida con el tipo de destino. En la [`On`](xref:Xamarin.Forms.On) clase, el [`Platform`](xref:Xamarin.Forms.On.Platform) atributo puede aceptar un solo `string` valor o varios valores delimitados `string` por comas.
 
 > [!IMPORTANT]
-> Proporcionar un valor de atributo de `Platform` incorrecto en la clase `On` no producirá un error. En su lugar, el código se ejecutará sin el valor específico de la plataforma que se va a aplicar.
+> Proporcionar un valor `Platform` de atributo incorrecto en `On` la clase no producirá un error. En su lugar, se ejecutará el código sin que se aplique el valor específico de la plataforma.
 
-Como alternativa, se puede usar el `OnPlatform` extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario por plataforma. Para obtener más información, consulte [extensión de marcado](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)en la plataforma.
+Como alternativa, se `OnPlatform` puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en cada plataforma. Para obtener más información, consulte [extensión de marcado](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)en la plataforma.
 
-## <a name="deviceidiom"></a>Device.Idiom
+## <a name="deviceidiom"></a>Dispositivo. expresión
 
-La propiedad `Device.Idiom` se puede usar para modificar los diseños o la funcionalidad según el dispositivo en el que se ejecuta la aplicación. La enumeración [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
+La `Device.Idiom` propiedad se puede usar para modificar los diseños o la funcionalidad según el dispositivo en el que se ejecuta la aplicación. La [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) enumeración contiene los siguientes valores:
 
 - **Teléfono** : dispositivos iPhone, iPod Touch y Android más estrechos que 600 DIP ^
 - **Tableta** : iPad, dispositivos Windows y dispositivos Android más anchos que 600 DIP ^
-- **Escritorio** : solo se devuelve en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de windows 10 (devuelve `Phone` en dispositivos móviles de Windows, incluidos los escenarios de continuum).
+- **Escritorio** : solo se devuelve en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de `Phone` Windows 10 (se devuelve en dispositivos móviles de Windows, incluidos los escenarios de continuum).
 - **TV** : dispositivos de TV Tizen
 - **Inspección** : Tizen Watch Devices
 - **No compatible** : sin usar
 
 *^ DIP no es necesariamente el número de píxeles físicos*
 
-La propiedad `Idiom` es especialmente útil para la creación de diseños que aprovechan pantallas más grandes, como esto:
+La `Idiom` propiedad es especialmente útil para compilar diseños que aprovechan pantallas más grandes, como esto:
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -90,7 +90,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 }
 ```
 
-La clase [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) proporciona la misma funcionalidad en XAML:
+La [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) clase proporciona la misma funcionalidad en XAML:
 
 ```xaml
 <StackLayout>
@@ -105,19 +105,19 @@ La clase [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) proporciona la misma funciona
 </StackLayout>
 ```
 
-La clase [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) es una clase genérica en la que se deben crear instancias con un `x:TypeArguments` atributo que coincida con el tipo de destino.
+La [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica en la que se deben crear instancias `x:TypeArguments` con un atributo que coincida con el tipo de destino.
 
-Como alternativa, la extensión de marcado de `OnIdiom` se puede usar en XAML para personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Para obtener más información, vea [extensión de marcado en idioma](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
+Como alternativa, se `OnIdiom` puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Para obtener más información, vea [extensión de marcado en idioma](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
 
-## <a name="deviceflowdirection"></a>Device.FlowDirection
+## <a name="deviceflowdirection"></a>Device. FlowDirection
 
-El valor [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) recupera un valor de enumeración [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) que representa la dirección de flujo actual utilizada por el dispositivo. La dirección de flujo es la dirección en la que el ojo humano lee los elementos de la interfaz de usuario en la página. Los valores de la enumeración son:
+El [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) valor recupera un [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) valor de enumeración que representa la dirección de flujo actual utilizada por el dispositivo. La dirección de flujo es la dirección en la que el ojo humano lee los elementos de la interfaz de usuario en la página. Los valores de la enumeración son:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-En XAML, el valor [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) se puede recuperar mediante la extensión de marcado `x:Static`:
+En XAML, el [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) valor se puede recuperar mediante la `x:Static` extensión de marcado:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -131,9 +131,9 @@ this.FlowDirection = Device.FlowDirection;
 
 Para obtener más información acerca de la dirección de flujo, consulte [localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-## <a name="devicestyles"></a>Device.Styles
+## <a name="devicestyles"></a>Device. Styles
 
-La [propiedad`Styles`](~/xamarin-forms/user-interface/styles/index.md) contiene definiciones de estilo integradas que se pueden aplicar a algunos controles (como `Label`) `Style` propiedad. Los estilos disponibles son:
+La [ `Styles` propiedad](~/xamarin-forms/user-interface/styles/index.md) contiene definiciones de estilo integradas que se pueden aplicar a algunos controles de la propiedad ( `Label`como `Style` ). Los estilos disponibles son:
 
 - BodyStyle
 - CaptionStyle
@@ -142,9 +142,9 @@ La [propiedad`Styles`](~/xamarin-forms/user-interface/styles/index.md) contiene 
 - SubtitleStyle
 - TitleStyle
 
-## <a name="devicegetnamedsize"></a>Device.GetNamedSize
+## <a name="devicegetnamedsize"></a>Device. GetNamedSize
 
-`GetNamedSize` se puede usar al establecer [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) en C# el código:
+`GetNamedSize`se puede usar al establecer [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) en el código de C#:
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);
@@ -155,9 +155,54 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-## <a name="devicestarttimer"></a>Device.StartTimer
+## <a name="devicegetnamedcolor"></a>Device. GetNamedColor
 
-La clase `Device` también tiene un método `StartTimer` que proporciona una manera sencilla de desencadenar tareas dependientes del tiempo que funcionan en el código común de Xamarin. Forms, incluida una biblioteca de .NET Standard. Pase un `TimeSpan` para establecer el intervalo y devuelva `true` para mantener el temporizador en ejecución o `false` para detenerlo después de la invocación actual.
+Xamarin. Forms 4,6 introduce compatibilidad con los colores con nombre. Un color con nombre es un color que tiene un valor diferente en función del modo del sistema (por ejemplo, claro o oscuro) que está activo en el dispositivo. En Android, se tiene acceso a los colores con nombre a través de la clase [R. color](https://developer.android.com/reference/android/R.color#constants_2) . En iOS, los colores con nombre se denominan [colores del sistema](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors). En el Plataforma universal de Windows, los colores con nombre se denominan [recursos de tema XAML](/windows/uwp/design/controls-and-patterns/xaml-theme-resources).
+
+El `GetNamedColor` método se puede usar para recuperar los colores con nombre en Android, iOS y UWP. El método toma un `string` argumento y devuelve [`Color`](xref:Xamarin.Forms.Color):
+
+```csharp
+// Retrieve an Android named color
+Color color = Device.GetNamedColor(NamedPlatformColor.HoloBlueBright);
+```
+
+`Color.Default`se devolverá cuando no se pueda encontrar un nombre de color `GetNamedColor` o cuando se invoque en una plataforma no compatible.
+
+> [!NOTE]
+> Dado que `GetNamedColor` el método devuelve `Color` un que es específico de una plataforma, normalmente se debe utilizar junto con la [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) propiedad.
+
+La `NamedPlatformColor` clase contiene las constantes que definen los colores con nombre para Android, iOS y UWP:
+
+| Android | iOS | UWP |
+| --- | --- | --- |
+| `BackgroundDark` | `Label` | `SystemAltHighColor` |
+| `BackgroundLight` | `Link` | `SystemAltLowColor` |
+| `Black` | `OpaqueSeparator` | `SystemAltMediumColor` |
+| `DarkerGray` | `PlaceholderText` | `SystemAltMediumHighColor` |
+| `HoloBlueBright` | `QuaternaryLabel` | `SystemAltMediumLowColor` |
+| `HoloBlueDark` | `SecondaryLabel` | `SystemBaseHighColor` |
+| `HoloBlueLight` | `Separator` | `SystemBaseLowColor` |
+| `HoloGreenDark` | `SystemBlue` | `SystemBaseMediumColor` |
+| `HoloGreenLight` | `SystemGray` | `SystemBaseMediumHighColor` |
+| `HoloOrangeDark` | `SystemGray2` | `SystemBaseMediumLowColor` |
+| `HoloOrangeLight` | `SystemGray3` | `SystemChromeAltLowColor` |
+| `HoloPurple` | `SystemGray4` | `SystemChromeBlackHighColor` |
+| `HoloRedDark` | `SystemGray5` | `SystemChromeBlackLowColor` |
+| `HoloRedLight` | `SystemGray6` | `SystemChromeBlackMediumColor` |
+| `TabIndicatorText` | `SystemGreen` | `SystemChromeBlackMediumLowColor` |
+| `Transparent` | `SystemIndigo` | `SystemChromeDisabledHighColor` |
+| `White` | `SystemListLowColor` | `SystemChromeDisabledLowColor` |
+| `WidgetEditTextDark` | `SystemListMediumColor` | `SystemChromeHighColor` |
+| | `SystemPink` | `SystemChromeLowColor` |
+| | `SystemPurple` | `SystemChromeMediumColor` |
+| | `SystemRed` | `SystemChromeMediumLowColor` |
+| | `SystemTeal` | `SystemChromeWhiteColor` |
+| | `SystemYellow` |
+| | `TertiaryLabel` |
+
+## <a name="devicestarttimer"></a>Device. StartTimer
+
+La `Device` clase también tiene un `StartTimer` método que proporciona una manera sencilla de desencadenar tareas dependientes del tiempo que funcionan en el código común de Xamarin. Forms, incluida una biblioteca de .net Standard. Pase un `TimeSpan` para establecer el intervalo y volver `true` a mantener el temporizador en ejecución `false` o detenerlo después de la invocación actual.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () =>
@@ -167,10 +212,10 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () =>
 });
 ```
 
-Si el código dentro del temporizador interactúa con la interfaz de usuario (por ejemplo, estableciendo el texto de una `Label` o mostrando una alerta), debe realizarse dentro de una expresión de `BeginInvokeOnMainThread` (consulte a continuación).
+Si el código dentro del temporizador interactúa con la interfaz de usuario (por ejemplo, al establecer el texto de `Label` un o mostrar una alerta), debe realizarse dentro `BeginInvokeOnMainThread` de una expresión (consulte a continuación).
 
 > [!NOTE]
-> Las clases `System.Timers.Timer` y `System.Threading.Timer` son .NET Standard alternativas al uso del método `Device.StartTimer`.
+> Las `System.Timers.Timer` clases `System.Threading.Timer` y son .net Standard alternativas al uso del `Device.StartTimer` método.
 
 ## <a name="interact-with-the-ui-from-background-threads"></a>Interacción con la interfaz de usuario desde subprocesos en segundo plano
 
@@ -178,9 +223,9 @@ La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma u
 
 A veces, las aplicaciones utilizan subprocesos en segundo plano para realizar operaciones que pueden tardar mucho tiempo, como recuperar datos de un servicio Web. Si el código que se ejecuta en un subproceso en segundo plano necesita acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal.
 
-La clase `Device` incluye los siguientes métodos de `static` que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
+La `Device` clase incluye los siguientes `static` métodos que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
 
-| Método | Argumentos | Valores devueltos | Propósito |
+| Método | Argumentos | Devuelve | Propósito |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que se complete. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un elemento `Func<T>` en el subproceso principal y espera a que se complete. |
@@ -189,7 +234,7 @@ La clase `Device` incluye los siguientes métodos de `static` que se pueden usar
 | `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un elemento `Func<Task>` en el subproceso principal y espera a que se complete. |
 | `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el elemento `SynchronizationContext` para el subproceso principal. |
 
-En el código siguiente se muestra un ejemplo del uso del método `BeginInvokeOnMainThread`:
+En el código siguiente se muestra un ejemplo del `BeginInvokeOnMainThread` uso del método:
 
 ```csharp
 Device.BeginInvokeOnMainThread (() =>
@@ -202,4 +247,4 @@ Device.BeginInvokeOnMainThread (() =>
 
 - [Ejemplo de dispositivo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 - [Ejemplo de estilos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
-- [Dispositivo](xref:Xamarin.Forms.Device)
+- [API del dispositivo](xref:Xamarin.Forms.Device)
