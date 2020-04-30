@@ -7,39 +7,39 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019
-ms.openlocfilehash: 013e126b76de08442327707cd0502f207826dad8
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: ffd8f7cc31707d09bb3442c180a867d31afcef0f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425592"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517492"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin. Forms
 
-## <a name="initialization-and-configurationsetupmd"></a>[Inicialización y configuración](setup.md)
+## <a name="initialization-and-configuration"></a>[Inicialización y configuración](setup.md)
 
 El paquete de NuGet [Xamarin. Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) es necesario para usar la funcionalidad de Maps en una aplicación. Además, el acceso a la ubicación del usuario requiere que se hayan concedido permisos de ubicación a la aplicación.
 
-## <a name="map-controlmapmd"></a>[Control de mapa](map.md)
+## <a name="map-control"></a>[Control de mapa](map.md)
 
-El control [`Map`](xref:Xamarin.Forms.Maps.Map) es una vista multiplataforma para mostrar y anotar asignaciones. Usa el control de mapa nativo para cada plataforma, lo que proporciona una experiencia de mapas rápida y familiar a los usuarios.
+El [`Map`](xref:Xamarin.Forms.Maps.Map) control es una vista multiplataforma para mostrar y anotar asignaciones. Usa el control de mapa nativo para cada plataforma, lo que proporciona una experiencia de mapas rápida y familiar a los usuarios.
 
-## <a name="position-and-distanceposition-distancemd"></a>[Posición y distancia](position-distance.md)
+## <a name="position-and-distance"></a>[Posición y distancia](position-distance.md)
 
-El struct [`Position`](xref:Xamarin.Forms.Maps.Position) se utiliza normalmente al colocar una asignación y sus clavijas, y el [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct que se puede usar opcionalmente al colocar un mapa.
+La [`Position`](xref:Xamarin.Forms.Maps.Position) estructura se usa normalmente al colocar una asignación y sus clavijas, y [`Distance`](xref:Xamarin.Forms.Maps.Distance) el struct que se puede usar opcionalmente al colocar un mapa.
 
-## <a name="pinspinsmd"></a>[Chinchetas](pins.md)
+## <a name="pins"></a>[Dobla](pins.md)
 
-El control [`Map`](xref:Xamarin.Forms.Maps.Map) permite marcar las ubicaciones con objetos [`Pin`](xref:Xamarin.Forms.Maps.Pin) . Un `Pin` es un marcador de mapa que abre una ventana de información cuando se puntea.
+El [`Map`](xref:Xamarin.Forms.Maps.Map) control permite marcar ubicaciones con [`Pin`](xref:Xamarin.Forms.Maps.Pin) objetos. Un `Pin` es un marcador de mapa que abre una ventana de información cuando se puntea.
 
-## <a name="polygons-and-polylinespolygonsmd"></a>[Polígonos y polilíneas](polygons.md)
+## <a name="polygons-polylines-and-circles"></a>[Polígonos, polilíneas y círculos](polygons.md)
 
-los elementos `Polygon` y `Polyline` permiten resaltar áreas específicas en un mapa. Un `Polygon` es una forma totalmente adjunta que puede tener un trazo y un color de relleno. Un `Polyline` es una línea que no rodea completamente un área.
+`Polygon`los `Polyline`elementos, `Circle` y permiten resaltar áreas específicas en un mapa. Un `Polygon` es una forma totalmente adjunta que puede tener un trazo y un color de relleno. Una `Polyline` es una línea que no rodea completamente un área. Un `Circle` resalta un área circular del mapa.
 
-## <a name="geocodinggeocodermd"></a>[Codificación geográfica](geocoder.md)
+## <a name="geocoding"></a>[Codificación geográfica](geocoder.md)
 
-La clase [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) convierte entre las direcciones de cadena y las coordenadas de latitud y longitud que se almacenan en objetos [`Position`](xref:Xamarin.Forms.Maps.Position) .
+La [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) clase convierte entre las direcciones de cadena y las coordenadas de latitud y longitud que se [`Position`](xref:Xamarin.Forms.Maps.Position) almacenan en los objetos.
 
-## <a name="launch-the-native-map-appnative-map-appmd"></a>[Inicio de la aplicación de asignación nativa](native-map-app.md)
+## <a name="launch-the-native-map-app"></a>[Inicio de la aplicación de asignación nativa](native-map-app.md)
 
-La aplicación de asignación nativa en cada plataforma se puede iniciar desde una aplicación de Xamarin. Forms mediante la clase de `Launcher` de Xamarin. Essentials.
+La aplicación de asignación nativa en cada plataforma se puede iniciar desde una aplicación de Xamarin. Forms mediante la `Launcher` clase Xamarin. Essentials.
