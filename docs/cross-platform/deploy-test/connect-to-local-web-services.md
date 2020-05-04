@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/16/2019
-ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/29/2020
+ms.openlocfilehash: 3dc1a2cb99c5ef018807a8ac81139a6cace3c66f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74135280"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516500"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
@@ -60,9 +60,7 @@ Las aplicaciones de Xamarin que se ejecutan en iOS y Android pueden especificar 
 
 ### <a name="ios"></a>iOS
 
-Las aplicaciones de Xamarin que se ejecutan en iOS pueden usar la pila de red administrada o las pilas de red `CFNetwork` o `NSUrlSession` nativas. De forma predeterminada, los nuevos proyectos de la plataforma iOS usan la pila de red `NSUrlSession` para admitir TLS 1.2 y emplean API para mejorar el rendimiento y reducir el tamaño del archivo ejecutable.
-
-Sin embargo, cuando una aplicación necesita conectarse a un servicio web seguro que se ejecuta localmente, para las pruebas del desarrollador, resulta más fácil usar la pila de red administrada. Por lo tanto, se recomienda establecer los perfiles de compilación del simulador de depuración para usar la pila de red administrada y los perfiles de compilación y versión para usar la pila de red `NSUrlSession`. Cada pila de red se puede establecer mediante programación o por medio de un selector en las opciones del proyecto. Para más información, consulte [Selector de implementación de HttpClient y SSL/TLS para iOS y macOS](~/cross-platform/macios/http-stack.md).
+Las aplicaciones de Xamarin que se ejecutan en iOS pueden usar la pila de red administrada o las pilas de red `CFNetwork` o `NSUrlSession` nativas. De forma predeterminada, los nuevos proyectos de la plataforma iOS usan la pila de red `NSUrlSession` para admitir TLS 1.2 y emplean API para mejorar el rendimiento y reducir el tamaño del archivo ejecutable. Para más información, consulte [Selector de implementación de HttpClient y SSL/TLS para iOS y macOS](~/cross-platform/macios/http-stack.md).
 
 ### <a name="android"></a>Android
 
@@ -97,38 +95,14 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 ## <a name="bypass-the-certificate-security-check"></a>Omitir la comprobación de seguridad de certificado
 
-Al intentar invocar un servicio web seguro local desde una aplicación que se ejecuta en el simulador de iOS o el emulador de Android, se producirá una excepción `HttpRequestException`, incluso cuando se usa la pila de red administrada en cada plataforma. Esto se debe a que el certificado de desarrollo HTTPS local es autofirmado y este tipo de certificado no es de confianza en iOS o Android.
-
-Por lo tanto, cuando una aplicación consume un servicio web seguro local, es necesario omitir los errores de SSL. El mecanismo para lograr esto es actualmente diferente en iOS y Android.
-
-### <a name="ios"></a>iOS
-
-Los errores de SSL se pueden omitir en iOS en el caso de servicios web seguros locales, cuando se usa la pila de red administrada; para ello, establezca la propiedad `ServicePointManager.ServerCertificateValidationCallback` en una devolución de llamada que omita el resultado de la comprobación de seguridad del certificado de desarrollo HTTPS local:
+Al intentar invocar un servicio web seguro local desde una aplicación que se ejecuta en el simulador de iOS o el emulador de Android, se producirá una excepción `HttpRequestException`, incluso cuando se usa la pila de red administrada en cada plataforma. Esto se debe a que el certificado de desarrollo HTTPS local es autofirmado y este tipo de certificado no es de confianza en iOS o Android. Por lo tanto, cuando una aplicación consume un servicio web seguro local, es necesario omitir los errores de SSL. Esto puede llevarse a cabo cuando se usan las pilas de red tanto administradas como nativas en iOS y Android; para ello, hay que establecer la propiedad `ServerCertificateCustomValidationCallback` de un objeto `HttpClientHandler` en una devolución de llamada que omita el resultado de la comprobación de seguridad del certificado de desarrollo HTTPS local:
 
 ```csharp
-#if DEBUG
-    System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
-    {
-        if (certificate.Issuer.Equals("CN=localhost"))
-            return true;
-        return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
-    };
-#endif
-```
-
-En este ejemplo de código, el resultado de la validación del certificado de servidor se devuelve cuando el certificado sometido a validación no es el certificado `localhost`. Para este certificado, el resultado de la validación se omite y se devuelve `true`, que indica que el certificado es válido. Este código se debe agregar al método `AppDelegate.FinishedLaunching` en iOS, antes de la llamada al método `LoadApplication(new App())`.
-
-> [!NOTE]
-> Las pilas de red nativas en iOS no enlazan con `ServerCertificateValidationCallback`.
-
-### <a name="android"></a>Android
-
-Los errores de SSL se pueden omitir en Android en el caso de servicios web seguros locales, cuando se usan las pila de red `AndroidClientHandler` administradas y nativas; para ello, establezca la propiedad `ServerCertificateCustomValidationCallback` de un objeto `HttpClientHandler` en una devolución de llamada que omita el resultado de la comprobación de seguridad del certificado de desarrollo HTTPS local:
-
-```csharp
+// This method must be in a class in a platform project, even if
+// the HttpClient object is constructed in a shared project.
 public HttpClientHandler GetInsecureHandler()
 {
-    var handler = new HttpClientHandler();
+    HttpClientHandler handler = new HttpClientHandler();
     handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
     {
         if (cert.Issuer.Equals("CN=localhost"))

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019
-ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 04d40aa4cafe663113957d31bdb8a6463ba58ba5
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74824242"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516457"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
@@ -34,9 +34,9 @@ El control [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin.Forms permite que se e
 
 Un [`ContentPage`](xref:Xamarin.Forms.ContentPage) es un elemento visual que muestra una vista única y ocupa la mayor parte de la pantalla. En este artículo se muestra cómo crear un representador personalizado para la página `ContentPage`, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma.
 
-## <a name="customizing-a-map"></a>[Personalización de un mapa](map/index.md)
+## <a name="customizing-a-map-pin"></a>[Personalización de un anclado de mapa](map-pin.md)
 
-Xamarin.Forms.Maps proporciona una abstracción multiplataforma para mostrar mapas que usan la API de mapa nativo en cada plataforma y proporcionar una experiencia de mapa rápida y familiar para los usuarios. En este tema se muestra cómo crear representadores personalizados para el control `Map`, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada por una personalización propia específica de la plataforma.
+Xamarin.Forms.Maps proporciona una abstracción multiplataforma para mostrar mapas que usan la API de mapa nativo en cada plataforma y proporcionar una experiencia de mapa rápida y familiar para los usuarios. En este tema se muestra cómo crear representadores personalizados para el control `Map`, lo que permite que los desarrolladores reemplacen la representación nativa predeterminada por una personalización propia específica de la plataforma.
 
 ## <a name="customizing-a-listview"></a>[Personalización de la clase ListView](listview.md)
 

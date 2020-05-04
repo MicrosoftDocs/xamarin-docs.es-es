@@ -6,13 +6,13 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/02/2020
+ms.openlocfilehash: a40a2dc01c37773539089287d561f4c52ef7f6de
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71674565"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516525"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -173,6 +173,36 @@ bears
 ```
 
 Cuando se muestra la página registrada para la ruta `monkeys`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `monkeys/details`. Igualmente, cuando se muestra la página registrada para la ruta `bears`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `bears/details`. Para información sobre cómo registrar las rutas en este ejemplo, consulte [Registro de rutas de página](#register-page-routes).
+
+### <a name="backwards-navigation"></a>Navegación hacia atrás
+
+La navegación hacia atrás se puede llevar a cabo especificando ".." como argumento en el método `GotoAsync`:
+
+```csharp
+await Shell.Current.GoToAsync("..");
+```
+
+La navegación hacia atrás con ".." también se puede combinar con una ruta, como aquí:
+
+```csharp
+await Shell.Current.GoToAsync("../route");
+```
+
+En este ejemplo, el efecto general es navegar hacia atrás y, después, navegar a la ruta especificada.
+
+> [!IMPORTANT]
+> Desplazarse hacia atrás y luego a una ruta especificada solo es posible si la navegación hacia atrás sitúa al usuario en la ubicación actual en la jerarquía de rutas para navegar a la ruta especificada.
+
+Del mismo modo, es posible desplazarse hacia atrás varias veces y, seguidamente, navegar a una ruta especificada:
+
+```csharp
+await Shell.Current.GoToAsync("../../route");
+```
+
+En este ejemplo, el efecto general es navegar hacia atrás dos veces y, después, navegar a la ruta especificada.
+
+> [!NOTE]
+> Al navegar con "..", también se pueden pasar datos. Para más información, vea [Pasar datos](#pass-data).
 
 ### <a name="invalid-routes"></a>Rutas no válidas
 

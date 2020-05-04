@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/05/2019
-ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/22/2020
+ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303874"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517085"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -350,64 +350,84 @@ En este ejemplo se muestra el título de cada objeto `FlyoutItem` en cursiva:
 
 [![Captura de pantalla de objetos FlyoutItem con plantilla, en iOS y Android](flyout-images/flyoutitem-templated.png "Objetos FlyoutItem con plantilla de Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Objetos FlyoutItem con plantilla de Shell")
 
-
 Como `Shell.ItemTemplate` es una propiedad adjunta, se pueden asociar otras plantillas a objetos `FlyoutItem` específicos.
 
 > [!NOTE]
 > Shell proporciona las propiedades `Title` y `FlyoutIcon` para el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `ItemTemplate`.
 
+Shell incluye también tres clases de estilo, que se aplican automáticamente a objetos `FlyoutItem`. Para más información, vea [Clases de estilo FlyoutItem y MenuItem](#flyoutitem-and-menuitem-style-classes).
 
-### <a name="default-template-for-flyoutitems-and-menuitems"></a>Plantilla predeterminada para objetos FlyoutItem y MenuItem
-Shell usa internamente la plantilla siguiente para su implementación predeterminada. Es un gran punto de partida si todo lo que quiere es realizar pequeños ajustes en los diseños existentes. Esto también ilustra las características de Visual State Manager de los elementos de control flotante. Esta misma plantilla también se puede usar para los objetos MenuItem
+### <a name="default-template-for-flyoutitems"></a>Plantilla predeterminada para objetos FlyoutItem
+
+Aquí se muestra la plantilla[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) predeterminada usada con cada `FlyoutItem`:
 
 ```xaml
-<DataTemplate x:Key="FlyoutTemplates">
-    <Grid HeightRequest="{x:OnPlatform Android=50}">
+<DataTemplate x:Key="FlyoutTemplate">
+    <Grid x:Name="FlyoutItemLayout"
+          HeightRequest="{x:OnPlatform Android=50}"
+          ColumnSpacing="{x:OnPlatform UWP=0}"
+          RowSpacing="{x:OnPlatform UWP=0}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                    </VisualState>
+                    <VisualState x:Name="Normal" />
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{x:OnPlatform Android=#F2F2F2, iOS=#F2F2F2}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateGroupList>
         </VisualStateManager.VisualStateGroups>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50, UWP=Auto}" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image Source="{Binding FlyoutIcon}"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
-            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        <Image x:Name="FlyoutItemImage"
+               Source="{Binding FlyoutIcon}"
+               VerticalOptions="Center"
+               HorizontalOptions="{x:OnPlatform Default=Center, UWP=Start}"
+               HeightRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}"
+               WidthRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}">
+            <Image.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="UWP"
+                            Value="12,0,12,0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Image.Margin>
         </Image>
-        <Label VerticalOptions="Center"
-                Text="{Binding Title}"
-                FontSize="{x:OnPlatform Android=14, iOS=Small}"
-                FontAttributes="Bold" Grid.Column="1">
+        <Label x:Name="FlyoutItemLabel"
+               Grid.Column="1"
+               Text="{Binding Title}"
+               FontSize="{x:OnPlatform Android=14, iOS=Small}"
+               HorizontalOptions="{x:OnPlatform UWP=Start}"
+               HorizontalTextAlignment="{x:OnPlatform UWP=Start}"
+               FontAttributes="{x:OnPlatform iOS=Bold}"
+               VerticalTextAlignment="Center">
             <Label.TextColor>
                 <OnPlatform x:TypeArguments="Color">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="#D2000000" />
+                        <On Platform="Android"
+                            Value="#D2000000" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.TextColor>
             <Label.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="20, 0, 0, 0" />
+                        <On Platform="Android"
+                            Value="20, 0, 0, 0" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.Margin>
             <Label.FontFamily>
                 <OnPlatform x:TypeArguments="x:String">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="sans-serif-medium" />
+                        <On Platform="Android"
+                            Value="sans-serif-medium" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.FontFamily>
@@ -415,6 +435,13 @@ Shell usa internamente la plantilla siguiente para su implementación predetermi
     </Grid>
 </DataTemplate>
 ```
+
+Esta plantilla se puede usar como base para realizar modificaciones en el diseño de control flotante existente y, asimismo, muestra los estados visuales que se implementan para los elementos de control flotante.
+
+Además, los elementos [`Grid`](xref:Xamarin.Forms.Grid), [`Image`](xref:Xamarin.Forms.Image) y [`Label`](xref:Xamarin.Forms.Label) tienen todos valores `x:Name` y, por tanto, pueden ser destinos en Visual State Manager. Para más información, vea [Establecer el estado en varios elementos](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
+
+> [!NOTE]
+> Esta misma plantilla también se puede usar con los objetos `MenuItem`.
 
 ## <a name="flyoutitem-tab-order"></a>Orden de tabulación de FlyoutItem
 
@@ -569,12 +596,50 @@ Dado que `Shell.MenuItemTemplate` es una propiedad adjunta, se pueden asociar di
 </Shell>
 ```
 
+Este ejemplo adjunta el `MenuItemTemplate` de nivel de Shell al primer objeto `MenuItem` y adjunta el `MenuItemTemplate` alineado al segundo `MenuItem`.
 
 > [!NOTE]
-> También se puede usar la misma plantilla utilizada para los [elementos de control flotante](#default-template-for-flyoutitems-and-menuitems) para los elementos de menú.
+> La plantilla predeterminada para objetos `FlyoutItem` también se puede usar con objetos `MenuItem`. Para más información, vea [Plantilla predeterminada para objetos FlyoutItem](#default-template-for-flyoutitems).
 
-Este ejemplo adjunta el `MenuItemTemplate` de nivel de Shell al primer objeto `MenuItem` y adjunta el `MenuItemTemplate` alineado al segundo `MenuItem`.
+## <a name="flyoutitem-and-menuitem-style-classes"></a>Clases de estilo de FlyoutItem y MenuItem
+
+Shell incluye tres clases de estilo, que se aplican automáticamente a los objetos `FlyoutItem` y `MenuItem`. Los nombres de esas clases de estilo son:
+
+- `FlyoutItemLabelStyle`
+- `FlyoutItemImageStyle`
+- `FlyoutItemLayoutStyle`
+
+En el siguiente código XAML se muestra un ejemplo de definición de estilos para estas clases de estilo:
+
+```xaml
+<Style TargetType="Label"
+       Class="FlyoutItemLabelStyle">
+    <Setter Property="TextColor"
+            Value="Black" />
+    <Setter Property="HeightRequest"
+            Value="100" />
+</Style>
+
+<Style TargetType="Image"
+       Class="FlyoutItemImageStyle">
+    <Setter Property="Aspect"
+            Value="Fill" />
+</Style>
+
+<Style TargetType="Layout"
+       Class="FlyoutItemLayoutStyle"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Teal" />
+</Style>
+```
+
+Estos estilos se aplicarán automáticamente a objetos `FlyoutItem` y `MenuItem`, sin tener que establecer sus propiedades [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) en los nombres de clase de estilo.
+
+Además, se pueden definir y aplicar clases de estilo personalizadas a objetos `FlyoutItem` y `MenuItem`. Para más información sobre las clases de estilo, vea [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

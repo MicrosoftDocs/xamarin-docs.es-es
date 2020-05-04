@@ -6,13 +6,13 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/14/2018
-ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 03/10/2020
+ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303826"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517279"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -44,7 +44,7 @@ El diseño de una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) depende 
 - En Android, en la parte superior de la página, hay una barra de navegación que muestra un título, un icono y un botón *Atrás* que vuelve a la página anterior. El icono se define en el atributo `[Activity]` que decora la clase `MainActivity` en el proyecto específico de la plataforma Android.
 - En la Plataforma universal de Windows, en la parte superior de la página, hay una barra de navegación que muestra un título.
 
-En todas las plataformas, el valor de la propiedad [`Page.Title`](xref:Xamarin.Forms.Page.Title) se mostrará como el título de la página.
+En todas las plataformas, el valor de la propiedad [`Page.Title`](xref:Xamarin.Forms.Page.Title) se mostrará como el título de la página. Además, la propiedad `IconColor` se puede establecer en un elemento [`Color`](xref:Xamarin.Forms.Color) que se aplica al icono de la barra de navegación.
 
 > [!NOTE]
 > Se recomienda que una `NavigationPage` debe rellenarse únicamente con instancias de `ContentPage`.

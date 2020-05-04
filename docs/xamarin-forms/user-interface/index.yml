@@ -9,13 +9,13 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/30/2019
-  ms.openlocfilehash: bbe7fd52581cd77ed7e7d910dd16264641c15abf
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.date: 03/19/2020
+  ms.openlocfilehash: 334c6afaffdec3ccc99d251bfc021edaa0cd9d2a
+  ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77480596"
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "82517428"
 landingContent:
 - title: Referencia de controles
   linkLists:
@@ -35,17 +35,25 @@ landingContent:
       url: controls/common-properties.md
     - text: Controles de terceros
       url: controls/thirdparty.md
+- title: Interfaz de usuario declarativa en C#
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Marcado de C#
+      url: csharp-markup.md
 - title: Vistas para presentación
   linkLists:
   - linkListType: concept
     links:
     - text: BoxView
       url: boxview.md
+    - text: Expander
+      url: expander.md
     - text: Imagen
       url: images.md
     - text: Etiqueta
       url: text/label.md
-    - text: Map
+    - text: Asignación
       url: map/index.md
     - text: MediaElement
       url: mediaelement.md
@@ -59,6 +67,8 @@ landingContent:
       url: button.md
     - text: ImageButton
       url: imagebutton.md
+    - text: RadioButton
+      url: radiobutton.md
     - text: RefreshView
       url: refreshview.md
     - text: Barra de búsqueda
@@ -73,11 +83,11 @@ landingContent:
       url: checkbox.md
     - text: DatePicker
       url: datepicker.md
-    - text: Control deslizante
+    - text: Slider
       url: slider.md
     - text: Control de incremento
       url: stepper.md
-    - text: Switch
+    - text: Modificador
       url: switch.md
     - text: TimePicker
       url: timepicker.md

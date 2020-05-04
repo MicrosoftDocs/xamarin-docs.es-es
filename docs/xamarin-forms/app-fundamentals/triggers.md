@@ -6,13 +6,13 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/21/2020
-ms.openlocfilehash: bf9c06dae0df7da1cc69a85d8436376494039959
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/17/2020
+ms.openlocfilehash: b4eeb776cafa131f13eb70aca5bd20df6eafa07f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303838"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516732"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -341,7 +341,7 @@ Para más información sobre los estados visuales, vea [Administrador de estado 
 
 La clase [`StateTrigger`](xref:Xamarin.Forms.StateTrigger), que se deriva de la clase [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase), tiene una propiedad enlazable [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive). Un elemento `StateTrigger` desencadena un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState) cuando cambia el valor de la propiedad `IsActive`.
 
-La clase [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase), que es la clase base de todos los desencadenadores de estado, tiene una propiedad [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) y un evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged). Este evento se desencadena cuando se produce un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState).
+La clase [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase), que es la clase base de todos los desencadenadores de estado, tiene una propiedad [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) y un evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged). Este evento se desencadena cuando se produce un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState). Además, la clase `StateTriggerBase` tiene métodos `OnAttached` y `OnDetached` que se pueden invalidar.
 
 > [!IMPORTANT]
 > La propiedad enlazable [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) oculta la propiedad [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) heredada.
@@ -405,7 +405,7 @@ Unchecked state active: True
 ```
 
 > [!NOTE]
-> Se pueden crear desencadenadores de estado personalizados a partir de la derivación de la clase [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+> Para crear desencadenadores de estado personalizados, derive de la clase [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) e invalide los métodos `OnAttached` y `OnDetached` para realizar cualquier registro y limpieza necesarios.
 
 ### <a name="adaptive-trigger"></a>Desencadenador adaptable
 

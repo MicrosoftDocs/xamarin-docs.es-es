@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
+ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80261315"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166344"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -212,11 +212,11 @@ Una vez que lo haya configurado, Dotfuscator CE protegerá automáticamente toda
 
 ### <a name="bundle-assemblies-into-native-code"></a>Empaquetar ensamblados en código nativo
 
-Cuando esta opción está habilitada, los ensamblados se agrupan en una biblioteca compartida nativa. Esta opción garantiza la seguridad del código y protege los ensamblados administrados incrustándolos en archivos binarios nativos.
+Cuando esta opción está habilitada, los ensamblados se agrupan en una biblioteca compartida nativa. Esto permite comprimir los ensamblados, lo que hace posibles archivos `.apk` más pequeños. La compresión de ensamblados también confiere una forma *mínima* de ofuscación, si bien no conviene basarse en ella.
 
 Esta opción requiere una licencia empresarial y solo está disponible cuando está deshabilitada la opción **Use Fast Deployment (Utilizar la implementación rápida)** . La opción **Bundle assemblies into native code (Agrupar los ensamblados en el código nativo)** está deshabilitada de forma predeterminada.
 
-Tenga en cuenta que la opción **Bundle into Native Code (Agrupar en código nativo)** *no* implica que los ensamblados se compilen en código nativo. No es posible utilizar [**Compilación AOT**](#aot) para compilar ensamblados en código nativo. Actualmente solo es una función experimental y no está destinada a la tareas de producción.
+Tenga en cuenta que la opción **Bundle into Native Code (Agrupar en código nativo)** *no* implica que los ensamblados se compilen en código nativo. La [**compilación AOT**](#aot) no se puede usar para compilar ensamblados en código nativo.
 
 <a name="aot" />
 
