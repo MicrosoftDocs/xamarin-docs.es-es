@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2020
-ms.openlocfilehash: f47dc08d11a97598966ba7af620cfc81e5fe284f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: b1e573a6070a637ef2fdfa65bb0fc1375522fc3c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532890"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852493"
 ---
 # <a name="xamarinforms-expander"></a>Expansor de Xamarin. Forms
 
-[![Descargar el](~/media/shared/download.png) ejemplo descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
 El control Xamarin. `Expander` Forms proporciona un contenedor expansible para hospedar cualquier contenido. El control tiene un encabezado y contenido, y el contenido se muestra u oculta al puntear `Expander` en el encabezado. Cuando solo se `Expander` muestra el encabezado, `Expander` se *contrae*. Cuando el `Expander` contenido está visible, `Expander` se *expande*.
 
@@ -26,6 +26,8 @@ Las siguientes capturas de `Expander` pantallas muestran un en los Estados contr
 
 > [!IMPORTANT]
 > `Expander`es experimental actualmente y solo se puede usar si se establece `Expander_Experimental` la marca. Para obtener más información, vea [indicadores experimentales](~/xamarin-forms/internals/experimental-flags.md).
+>
+> Además, el `Expander` control está totalmente implementado en el `Xamarin.Forms` espacio de nombres. Por lo tanto, está disponible en todas las plataformas compatibles con Xamarin. Forms.
 
 El `Expander` control define las siguientes propiedades:
 

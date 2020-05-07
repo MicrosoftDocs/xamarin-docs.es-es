@@ -6,17 +6,17 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/11/2020
-ms.openlocfilehash: 7a2671c47a6d2fceaf2b444cfa8988b4bb8c249c
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.date: 05/06/2020
+ms.openlocfilehash: 31b705a51e405285cc5eaae391dd0794bfacfd9c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517258"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852483"
 ---
 # <a name="xamarinforms-webview"></a>Vista previa de Xamarin. Forms
 
-[![Descargar el](~/media/shared/download.png) ejemplo descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView)es una vista para mostrar contenido web y HTML en la aplicación:
 
@@ -330,7 +330,7 @@ Eso es todo.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 WebView genera los siguientes eventos para ayudarle a responder a los cambios en el estado:
 
@@ -554,11 +554,13 @@ Hay disponible una versión preliminar del enlazador para corregir este problema
 
 Los requisitos previos para que funcionen son los siguientes:
 
-- Se pueden usar las versiones preliminares de **Xamarin. Forms 4,5 o posteriores** &ndash; de Xamarin. Forms 4,5.
-- **Xamarin. iOS 13.10.0.17 o superior** &ndash; Compruebe la versión de Xamarin. iOS [en Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versión de Xamarin. iOS se incluye con Visual Studio para Mac 8.4.1 y Visual Studio 16.4.3.
-- **Quitar las referencias `UIWebView` al** &ndash; código no debe tener ninguna referencia a `UIWebView` o a clases que hagan uso de `UIWebView`.
+- **Xamarin. forms 4,5 o superior**. Se requiere Xamarin. Forms 4,6 o posterior si la aplicación usa el material visual.
+- **Xamarin. iOS 13.10.0.17 o superior**. Compruebe la versión de Xamarin. iOS [en Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versión de Xamarin. iOS se incluye con Visual Studio para Mac 8.4.1 y Visual Studio 16.4.3.
+- **Quite las referencias `UIWebView`a **. El código no debe tener ninguna referencia a `UIWebView` o a clases que hagan uso de `UIWebView`.
 
-### <a name="configure-the-linker-preview"></a>Configuración de la versión preliminar del vinculador
+Para obtener más información sobre cómo detectar y `UIWebView` quitar referencias, vea [UIWebView deprecated](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
+
+### <a name="configure-the-linker"></a>Configurar el enlazador
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -575,7 +577,7 @@ Puede ver la ventana con la nueva marca en su lugar en esta captura de pantalla:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Siga estos pasos para que el vinculador Quite `UIWebView` las referencias
+Siga estos pasos para que el vinculador Quite `UIWebView` las referencias:
 
 1. **Abra opciones** &ndash; del proyecto de iOS y haga clic con el botón derecho en el proyecto de iOS y elija **Opciones**.
 1. **Vaya a la sección** &ndash; compilación de iOS y seleccione la sección **compilación de iOS** .
@@ -594,3 +596,4 @@ Ahora, cuando se crea una nueva compilación (versión) y se envía a la tienda 
 
 - [Trabajar con WebView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Desuso de UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

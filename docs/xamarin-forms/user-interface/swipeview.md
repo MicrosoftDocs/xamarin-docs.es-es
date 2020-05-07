@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/26/2020
-ms.openlocfilehash: da6dbe63b7151ef0f9a1defca66fbb3abb25ad1d
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 992e4dd1a2b2a1d1a4f0b76dadf4704241486415
+ms.sourcegitcommit: 520ea9d52266f745d2c09642bac21f64a56f8c31
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517552"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859111"
 ---
 # <a name="xamarinforms-swipeview"></a>SwipeView de Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar el](~/media/shared/download.png) ejemplo descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
 `SwipeView` Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente:
 
@@ -330,10 +330,10 @@ En este ejemplo, el `SwipeItemView` objeto incluye [`StackLayout`](xref:Xamarin.
 
 El `Open` método requiere un `OpenSwipeItem` argumento, para especificar la dirección desde `SwipeView` la que se abrirá. La `OpenSwipeItem` enumeración tiene cuatro miembros:
 
-- `LeftItems`, que indica que `SwipeView` se abrirá a la izquierda para que se muestren los elementos de deslizar rápidamente `LeftItems` en la colección.
-- `TopItems`, que indica que `SwipeView` se abrirá desde la parte superior para mostrar los elementos que tienen el dedo en la `TopItems` colección.
-- `RightItems`, que indica que se `SwipeView` abrirá desde la derecha para mostrar los elementos que se desconectan en la `RightItems` colección.
-- `BottomItems`, que indica que `SwipeView` se abrirá desde la parte inferior para mostrar los elementos que se desconectan en `BottomItems` la colección.
+- `LeftItems`, que indica que `SwipeView` se abrirá a la izquierda para que se muestren los elementos de deslizamiento `LeftItems` en la colección.
+- `TopItems`, que indica que `SwipeView` se abrirá desde la parte superior para mostrar los elementos de deslizamiento en la `TopItems` colección.
+- `RightItems`, que indica que se `SwipeView` abrirá desde la derecha para mostrar los elementos que se desconectan en `RightItems` la colección.
+- `BottomItems`, que indica que `SwipeView` se abrirá desde la parte inferior, para mostrar los elementos de deslizamiento en `BottomItems` la colección.
 
 Dado un `SwipeView` denominado `swipeView`, en el ejemplo siguiente se muestra cómo abrir `SwipeView` un para mostrar los elementos de deslizamiento en la `LeftItems` Colección:
 
