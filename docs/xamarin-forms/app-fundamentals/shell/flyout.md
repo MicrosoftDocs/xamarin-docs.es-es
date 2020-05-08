@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2020
-ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517085"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852470"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -480,7 +480,13 @@ La clase `Shell` tiene una propiedad enlazable llamada `CurrentItem`, de tipo `F
 
 Este código establece el objeto `ShellContent` llamado `aboutItem` como la propiedad `CurrentItem`, que hace que se muestre. En este ejemplo, se usa una conversión implícita para encapsular el objeto `ShellContent` en un objeto `Tab`, que se encapsula en un objeto `FlyoutItem`.
 
-El código de C# equivalente es el siguiente:
+El código C# equivalente, dado un objeto `ShellContent` denominado `aboutItem`, es el siguiente:
+
+```csharp
+CurrentItem = aboutItem;
+```
+
+En este ejemplo, la propiedad `CurrentItem` está establecida en la clase `Shell` de la que se crean subclases. Como alternativa, la propiedad `CurrentItem` se puede establecer en cualquier clase a través de la propiedad estática `Shell.Current`:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

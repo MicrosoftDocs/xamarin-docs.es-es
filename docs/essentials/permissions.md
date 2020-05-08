@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 21f2079ace4adae6fd84d89426e5d66692af2a0a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3d61267ae78a4b84907a2bcf6e944eb286b113dd
+ms.sourcegitcommit: 8b94b2af2ac69e4a60e210ddc764f4d276c8d88d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78289805"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605451"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
 
@@ -37,6 +37,8 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 ```
 
 Se produce una excepción `PermissionException` si no se declara el permiso necesario.
+
+Es mejor comprobar el estado del permiso antes de solicitarlo. Cada sistema operativo devuelve un estado predeterminado diferente si nunca se ha solicitado el usuario. iOS devuelve `Unknown`, mientras que otros devuelven `Denied`.
 
 ## <a name="requesting-permissions"></a>Solicitar permisos
 
@@ -93,10 +95,10 @@ Guía de iconos:
 Si un permiso se marca con ![no admitido](~/media/shared/no.png "no admitido"), siempre devolverá `Granted` cuando se compruebe o solicite.
 
 ## <a name="general-usage"></a>Uso general
-A continuación, se muestra un patrón de uso general para controlar los permisos.
+Aquí se muestra un patrón de uso general para controlar los permisos.
 
 ```csharp
-public async Task<PermissionStatus> CheckAndRequestPermissionAsync<TPermission>()
+public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     if (status != PermissionStatus.Granted)

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
+ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016526"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82738794"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -264,6 +264,8 @@ SGen usa uno de tres montones para asignar espacio para los objetos:
 - **Espacio de objetos grandes**: es donde se guardan los objetos que necesitan más de 8000 bytes. Los objetos grandes no se envían a la guardería, sino que se asignan a este montón.
 
 Una de las ventajas de SGen es que el tiempo necesario para realizar una recolección menor es proporcional al número de nuevos objetos activos creados desde la última recolección menor. Esto reduce el impacto de la recolección de elementos no utilizados sobre el rendimiento de una aplicación, ya que estas recolecciones menores tardan menos que una recolección importante. La recolección de elementos importante se seguirá produciendo, pero con menos frecuencia.
+
+El recolector de elementos no utilizados SGen es el valor predeterminado en Xamarin.iOS 9.2.1 y en las versiones posteriores, por lo que se usará automáticamente. Tenga en cuenta que la posibilidad de cambiar el recolector de elementos no utilizados se ha quitado de las versiones más recientes de Visual Studio. Para obtener más información, vea [New Reference Counting System](~/ios/internals/newrefcount.md) (Nuevo sistema de recuento de referencias).
 
 ### <a name="reducing-pressure-on-the-garbage-collector"></a>Reducción de la presión sobre el recolector de elementos no utilizados
 
