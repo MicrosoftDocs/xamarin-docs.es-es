@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae5962de05190ad914c86ceb0a9b52edb72232dc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: cb03ad89c4fa7a8bed876a7210add68be06cf4a3
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107354"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343398"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -24,7 +24,7 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [StackLayoutTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
-- [Guía sobre el diseño de pila de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/stack-layout.md)
+- [Guía sobre el diseño de pila de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/stacklayout.md)
 - [Guía sobre los márgenes y el relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Guía sobre las opciones de diseño de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md)
 - [API del diseño de pila](xref:Xamarin.Forms.StackLayout)

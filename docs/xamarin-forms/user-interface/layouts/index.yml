@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/03/2020
-  ms.openlocfilehash: e8d3e6d57bab88c85f0058ee2c974d932bd07b37
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: 0b87ed6ec1f69a9ef9cb6b5d63079ac651967eff
+  ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "75679745"
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83149685"
 landingContent:
 - title: Diseños principales
   linkLists:
@@ -32,7 +32,7 @@ landingContent:
     - text: RelativeLayout
       url: relative-layout.md
     - text: StackLayout
-      url: stack-layout.md
+      url: stacklayout.md
 - title: Diseños adicionales
   linkLists:
   - linkListType: concept
