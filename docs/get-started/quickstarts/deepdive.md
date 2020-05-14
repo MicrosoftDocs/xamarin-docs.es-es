@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: def54534d30b92b3d6ea8b5a0e7cac2c93293710
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131051"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83149828"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -266,7 +266,7 @@ De forma predeterminada, [`StackLayout`](xref:Xamarin.Forms.StackLayout) asume u
 > [!NOTE]
 > El tamaño de las vistas se puede establecer a través de las propiedades `HeightRequest` y `WidthRequest`.
 
-Para obtener más información sobre la clase [`StackLayout`](xref:Xamarin.Forms.StackLayout), consulte [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+Para obtener más información sobre la clase [`StackLayout`](xref:Xamarin.Forms.StackLayout), consulte [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
 ### <a name="responding-to-user-interaction"></a>Responder a la interacción del usuario
 

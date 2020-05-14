@@ -5,12 +5,13 @@ ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 5d64967dfaa6ce7ef746a97f739cac67f5102fc2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.custom: video
+ms.openlocfilehash: 159add7ee83f3c65d791fc49ee3a85ddaaabae1d
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545166"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150140"
 ---
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: convertidores de color
 
@@ -83,3 +84,9 @@ El método `ToSystemColor` se aplica a Android.Graphics.Color, UIKit.UIColor y W
 - [Documentación sobre la API de los convertidores de color](xref:Xamarin.Essentials.ColorConverters)
 - [Color fuente de las extensiones de color](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentación sobre la API de las extensiones de color](xref:Xamarin.Essentials.ColorExtensions)
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Color-Converters-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

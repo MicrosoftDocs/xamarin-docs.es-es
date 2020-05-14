@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Launcher'
 description: La clase Launcher de Xamarin.Essentials permite que una aplicación abra un URI por el sistema.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f84d3bf379562c8ddd96a32dfb9f15b03b0a6827
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488522"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149788"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Selector
 
@@ -119,3 +120,9 @@ No hay diferencias entre las plataformas.
 
 - [Código fuente de Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
 - [Documentación de API para Launcher](xref:Xamarin.Essentials.Launcher)
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Launcher-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
