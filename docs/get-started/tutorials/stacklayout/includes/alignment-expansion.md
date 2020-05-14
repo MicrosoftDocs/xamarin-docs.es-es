@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 97e52d593e2b59d127da324d8ad74ad7b2096cdd
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67560024"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343424"
 ---
 El tamaño y la posición de las vistas secundarias dentro de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependen de los valores de las propiedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) y [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) de las vistas secundarias, y de los valores de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
