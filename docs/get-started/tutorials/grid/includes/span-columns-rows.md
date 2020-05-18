@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fa88f6e7844899926a194e9d0cdd455a497c2b31
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61375982"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83435428"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -35,7 +35,7 @@ ms.locfileid: "61375982"
 
     [![Captura de pantalla de una cuadrícula que tiene contenido que abarca varias columnas y filas, en iOS y Android](../images/span-columns-rows.png "Cuadrícula con contenido que abarca filas y columnas")](../images/span-columns-rows-large.png#lightbox "Cuadrícula con contenido que abarca filas y columnas")
 
-    Para obtener más información sobre la extensión de columnas y filas, consulte la sección [Intervalos](~/xamarin-forms/user-interface/layouts/grid.md#spans) en la guía de la [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    Para obtener más información sobre la extensión de columnas y filas, vea la sección [Filas y columnas](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) de la guía de [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -66,4 +66,4 @@ ms.locfileid: "61375982"
 
     [![Captura de pantalla de una cuadrícula que tiene contenido que abarca varias columnas y filas, en iOS y Android](../images/span-columns-rows.png "Cuadrícula con contenido que abarca filas y columnas")](../images/span-columns-rows-large.png#lightbox "Cuadrícula con contenido que abarca filas y columnas")
 
-    Para obtener más información sobre la extensión de columnas y filas, consulte la sección [Intervalos](~/xamarin-forms/user-interface/layouts/grid.md#spans) en la guía de la [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    Para obtener más información sobre la extensión de columnas y filas, vea la sección [Filas y columnas](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) de la guía de [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
