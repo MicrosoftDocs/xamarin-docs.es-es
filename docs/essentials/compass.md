@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Brújula'
 description: En este documento se describe la clase Compass de Xamarin.Essentials, que permite supervisar la dirección del norte magnético del dispositivo.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 54ce725a319e0222179945ece558338c8a152653
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61356882"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150122"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Brújula
 
@@ -80,11 +81,11 @@ Android no proporciona una API para recuperar la dirección de la brújula. El a
 
 En casos poco habituales, es posible que vea resultados incoherentes porque sea necesario calibrar los sensores, lo que implica mover el dispositivo describiendo un ocho. La mejor manera de hacerlo es abrir Google Maps, pulsar en el punto de la ubicación y seleccionar **Calibrar la brújula**.
 
-Tenga en cuenta que la ejecución simultánea de varios sensores desde la aplicación puede ajustar la velocidad del sensor.
+La ejecución simultánea de varios sensores desde la aplicación puede ajustar la velocidad del sensor.
 
 ## <a name="low-pass-filter"></a>Filtro de paso bajo
 
-Debido a la forma de calcular y actualizar los valores de la brújula de Android, es posible que sea necesario suavizarlos. Se puede aplicar un _filtro de paso bajo_ que calcula el promedio de los valores de seno y coseno de los ángulos, y se puede activar si se sobrecarga el método `Start`, que acepta el parámetro `bool applyLowPassFilter`:
+Debido a la forma de calcular y actualizar los valores de la brújula de Android, es posible que sea necesario suavizarlos. Se puede aplicar un _filtro de paso bajo_ que calcula el promedio de los valores de seno y coseno de los ángulos y que se puede activar si se sobrecarga el método `Start`, que acepta el parámetro `bool applyLowPassFilter`:
 
 ```csharp
 Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
@@ -98,3 +99,9 @@ Esto solo se aplica a la plataforma Android; el parámetro se ignora en iOS y UW
 
 - [Código fuente de Compass](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
 - [Documentación de API para Compass](xref:Xamarin.Essentials.Compass)
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Compass-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
