@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/11/2020
-ms.openlocfilehash: 56da2b137475ef258d780fba0a7cdec3c91323b8
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: 2535a92814181c5039256ea1e42b06419ed427aa
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83152334"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426033"
 ---
 # <a name="xamarinforms-stacklayout"></a>StackLayout de Xamarin. Forms
 
@@ -210,7 +210,7 @@ Las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalO
 > [!TIP]
 > No establezca las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y de a [`StackLayout`](xref:Xamarin.Forms.StackLayout) menos que necesite. Los valores predeterminados de `LayoutOptions.Fill` y `LayoutOptions.FillAndExpand` permiten la optimización de diseño óptima. Cambiar estas propiedades tiene un costo y consume memoria, incluso cuando se vuelven a establecer en los valores predeterminados.
 
-### <a name="alignment"></a>Asociación
+### <a name="alignment"></a>Alineación
 
 En el siguiente ejemplo de XAML se establecen las preferencias de alineación en cada vista secundaria del [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 
@@ -240,12 +240,12 @@ En este ejemplo, las preferencias de alineación se establecen en los [`Label`](
 
 [![Captura de pantalla de un StackLayout con el conjunto de opciones de alineación](stacklayout-images/alignment.png "StackLayout con opciones de alineación")](stacklayout-images/alignment-large.png#lightbox "StackLayout con opciones de alineación")
 
-Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo respeta las preferencias de alineación en las vistas secundarias que están en la dirección opuesta a la `StackLayout` orientación. Por lo tanto, las [`Label`](xref:Xamarin.Forms.Label) vistas secundarias dentro de la orientación vertical `StackLayout` establecen sus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) propiedades en uno de los campos de alineación:
+Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo respeta las preferencias de alineación de las vistas secundarias que tienen la dirección opuesta a la orientación del `StackLayout`. Por lo tanto, las vistas secundarias de [`Label`](xref:Xamarin.Forms.Label) dentro del `StackLayout` con orientación vertical establecen sus propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) en uno de los campos de alineación siguientes:
 
 - [`Start`](xref:Xamarin.Forms.LayoutOptions.Start), que coloca el control [`Label`](xref:Xamarin.Forms.Label) en el lado izquierdo de [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
-- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center), que centra el [`Label`](xref:Xamarin.Forms.Label) en [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center), que centra [`Label`](xref:Xamarin.Forms.Label) en el [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 - [`End`](xref:Xamarin.Forms.LayoutOptions.End), que coloca [`Label`](xref:Xamarin.Forms.Label) en el lado derecho de [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
-- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill), que garantiza que [`Label`](xref:Xamarin.Forms.Label) rellena el ancho de [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill), que garantiza que [`Label`](xref:Xamarin.Forms.Label) llena el ancho del [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
 El código de C# equivalente es el siguiente:
 
@@ -310,7 +310,7 @@ En este ejemplo, se establecen las preferencias de expansión en los [`Label`](x
 
 [![Captura de pantalla de un StackLayout con opciones de expansión establecidas](stacklayout-images/expansion.png "StackLayout con opciones de expansión")](stacklayout-images/expansion-large.png#lightbox "StackLayout con opciones de expansión")
 
-[`StackLayout`](xref:Xamarin.Forms.StackLayout)Solo puede expandir vistas secundarias en la dirección de su orientación. Por lo tanto, la orientación vertical `StackLayout` puede expandir [`Label`](xref:Xamarin.Forms.Label) vistas secundarias que establecen sus [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades en uno de los campos de expansión. Esto significa que, para la alineación vertical, cada `Label` ocupa la misma cantidad de espacio en el `StackLayout`. Sin embargo, solo el final `Label` , que establece su [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedad en [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) tiene un tamaño diferente.
+Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo puede expandir las vistas secundarias en la dirección de su orientación. Por lo tanto, un `StackLayout` con orientación vertical puede expandir las vistas secundarias de [`Label`](xref:Xamarin.Forms.Label) que establecen sus propiedades [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) en uno de los campos de alineación. Esto significa que, para la alineación vertical, cada `Label` ocupa la misma cantidad de espacio en el `StackLayout`. Aun así, solo el último elemento `Label`, que establece su propiedad [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) en [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand), tiene un tamaño diferente.
 
 > [!TIP]
 > Al utilizar [`StackLayout`](xref:Xamarin.Forms.StackLayout) , asegúrese de que solo una vista secundaria está establecida en [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) . Esta propiedad garantiza que el elemento secundario especificado ocupa el mayor espacio que el `StackLayout` puede asignarle y es poco rentable realizar estos cálculos más de una vez.
@@ -341,7 +341,7 @@ public ExpansionPageCS()
 ```
 
 > [!IMPORTANT]
-> Cuando se usa todo el espacio de un [`StackLayout`](xref:Xamarin.Forms.StackLayout) , las preferencias de expansión no tienen ningún efecto.
+> Cuando se usa todo el espacio de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout), las preferencias de expansión no tienen ningún efecto.
 
 Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](layout-options.md).
 
@@ -398,7 +398,7 @@ En este ejemplo, el elemento primario [`StackLayout`](xref:Xamarin.Forms.StackLa
 [![Captura de pantalla de objetos StackLayout anidados](stacklayout-images/combined.png "StackLayouts anidado")](stacklayout-images/combined-large.png#lightbox "StackLayouts anidado")
 
 > [!IMPORTANT]
-> El anidamiento de demasiados `StackLayout` objetos puede dar lugar a una página de no rendimiento, debido a la cantidad de cálculos de diseño necesarios. Para obtener más información, vea [elegir el diseño correcto](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
+> Cuanto más profundo sea el anidamiento de [`StackLayout`](xref:Xamarin.Forms.StackLayout) objetos y otros diseños, más los diseños anidados afectarán al rendimiento. Para obtener más información, vea [elegir el diseño correcto](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
 
 El código de C# equivalente es el siguiente:
 

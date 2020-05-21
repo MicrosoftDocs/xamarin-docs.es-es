@@ -1,54 +1,54 @@
 ---
-title: Proyectos de instalación de Windows
-description: Las soluciones de Xamarin.Forms anteriores (o aquellos creados en macOS) no tendrán los proyectos de plataforma Universal de Windows y, por lo que este artículo explica cómo agregar un nuevo proyecto UWP a una solución existente de Xamarin.Forms.
+title: Configurar proyectos de Windows
+description: Las soluciones de Xamarin. Forms anteriores (o las creadas en macOS) no tendrán proyectos de Plataforma universal de Windows, por lo que en este artículo se explica cómo agregar un nuevo proyecto de UWP a una solución existente de Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b0f06cf15d3a3ec7eae4742d5d037e233be46d08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d2d9c8c2104e96f16c3a3ff169f795068605f59
+ms.sourcegitcommit: 7011303ff1868f3dd3858415706f4b5732ee44f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857626"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83696087"
 ---
-# <a name="setup-windows-projects"></a>Proyectos de instalación de Windows
+# <a name="setup-windows-projects"></a>Configurar proyectos de Windows
 
-_Adición de nuevos proyectos de Windows a una solución existente de Xamarin.Forms_
+_Agregar nuevos proyectos de Windows a una solución existente de Xamarin. Forms_
 
-Las soluciones de Xamarin.Forms anteriores (o aquellos creados en macOS) no tendrán los proyectos de aplicaciones de plataforma Universal de Windows (UWP). Por lo tanto, deberá agregar manualmente un proyecto UWP para compilar una aplicación de Windows 10 (UWP).
+Las soluciones de Xamarin. Forms anteriores (o las creadas en macOS) no tendrán proyectos de aplicación Plataforma universal de Windows (UWP). Por lo tanto, tendrá que agregar manualmente un proyecto de UWP para compilar una aplicación de Windows 10 (UWP).
 
-## <a name="add-a-universal-windows-platform-app"></a>Agregar un Universal Windows Platform app
+## <a name="add-a-universal-windows-platform-app"></a>Agregar una aplicación Plataforma universal de Windows
 
-**Visual Studio de 2019** en **Windows 10** se recomienda para crear aplicaciones para UWP. Para obtener más información acerca de la plataforma Universal de Windows, consulte [Introducción a la plataforma Universal de Windows](/windows/uwp/get-started/universal-application-platform-guide/).
+Se recomienda **Visual Studio 2019** en **Windows 10** para compilar aplicaciones para UWP. Para obtener más información sobre el Plataforma universal de Windows, consulte [Introducción al plataforma universal de Windows](/windows/uwp/get-started/universal-application-platform-guide/).
 
-UWP está disponible en Xamarin.Forms 2.1 y versiones posteriores, y xamarin.Forms.Maps para que se admite en Xamarin.Forms 2.2 y versiones posteriores.
+UWP está disponible en Xamarin. Forms 2,1 y versiones posteriores, y Xamarin. Forms. Maps es compatible con Xamarin. Forms 2,2 y versiones posteriores.
 
-Compruebe el <a href="#troubleshooting">solución de problemas</a> sección para obtener sugerencias útiles.
+Consulte la sección de <a href="#troubleshooting">solución de problemas</a> para obtener sugerencias útiles.
 
-Siga estas instrucciones para agregar una aplicación para UWP que se ejecutará en teléfonos, tabletas y equipos de escritorio de Windows 10:
+Siga estas instrucciones para agregar una aplicación para UWP que se ejecutará en teléfonos, tabletas y escritorios de Windows 10:
 
- 1 . Haga doble clic en la solución y seleccione **Agregar > Nuevo proyecto...**  y agregue un **aplicación vacía (Windows Universal)** proyecto:
+ dimensional. Haga clic con el botón derecho en la solución y seleccione **agregar > nuevo proyecto...** y agregue un proyecto **aplicación vacía (Windows universal)** :
 
-  ![](universal-images/add-wu.png "Agregar cuadro de diálogo nuevo proyecto")
+  ![](universal-images/add-wu.png "Add New Project Dialog")
 
- 2 . En el **nuevo proyecto de plataforma Universal de Windows** cuadro de diálogo, seleccione las versiones mínima y de destino de Windows 10 que se ejecutará la aplicación:
+ dos. En el cuadro de diálogo **nuevo proyecto de plataforma universal de Windows** , seleccione las versiones mínima y de destino de Windows 10 en las que se ejecutará la aplicación:
 
-  ![](universal-images/target-version.png "Nuevo cuadro de diálogo de proyecto de plataforma Universal de Windows")
+  ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
 
- 3 . Haga doble clic en el proyecto de UWP y seleccione **administrar paquetes NuGet...**  y agregue el **Xamarin.Forms** paquete. Asegúrese de que los otros proyectos de la solución también se actualizan a la misma versión del paquete de Xamarin.Forms.
+ 3. Haga clic con el botón derecho en el proyecto UWP y seleccione **administrar paquetes NuGet...** y agregue el paquete **Xamarin. Forms** . Asegúrese de que los otros proyectos de la solución también se actualizan a la misma versión del paquete Xamarin. Forms.
 
- 4 . Asegúrese de que el nuevo proyecto UWP se compilará el **compilar > Administrador de configuración** ventana (Esto probablemente no habrá sucedido de forma predeterminada). Marca el **compilar** y **implementar** cuadros para el proyecto Universal:
+ 4. Asegúrese de que el nuevo proyecto de UWP se generará en la **> de compilación Configuration Manager** ventana (probablemente no se haya producido de forma predeterminada). Marque las casillas **compilar** e **implementar** del proyecto universal:
 
-  [![](universal-images/configuration-sml.png "Ventana del Administrador de configuración")](universal-images/configuration.png#lightbox "ventana del Administrador de configuración")
+  [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
- 5 . Haga doble clic en el proyecto y seleccione **Agregar > referencia** y crear una referencia al proyecto de aplicación de Xamarin.Forms (.NET Standard o proyectos compartidos).
+ 5. Haga clic con el botón derecho en el proyecto y seleccione **agregar > referencia** y cree una referencia al proyecto de aplicación de Xamarin. Forms (.net Standard o proyecto compartido).
 
-  ![](universal-images/addref-sml.png "Cuadro de diálogo Administrador de referencias")
+  ![](universal-images/addref-sml.png "Reference Manager Dialog")
 
- 6 . En el proyecto UWP, edite **App.xaml.cs** para incluir el `Init` llamada al método dentro de la `OnLaunched` método alrededor de la línea 52:
+ 1,8. En el proyecto de UWP, edite **app.Xaml.CS** para incluir la `Init` llamada de método dentro del método en torno a la `OnLaunched` línea 52:
 
 ```csharp
 // under this line
@@ -57,15 +57,15 @@ rootFrame.NavigationFailed += OnNavigationFailed;
 Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 ```
 
- 7 . En el proyecto UWP, edite **MainPage.xaml** quitando el `Grid` dentro de la `Page` elemento.
+ 7. En el proyecto de UWP, edite **mainpage. Xaml** quitando el `Grid` contenido dentro del `Page` elemento.
 
- 8 . En **MainPage.xaml**, agregue un nuevo `xmlns` entrada para `Xamarin.Forms.Platform.UWP`:
+ 203. En **mainpage. Xaml**, agregue una nueva `xmlns` entrada para `Xamarin.Forms.Platform.UWP` :
 
 ```csharp
 xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 ```
 
- 9 . En **MainPage.xaml**, cambiar la raíz `<Page` elemento `<forms:WindowsPage`:
+ 9. En **mainpage. Xaml**, cambie el `<Page` elemento raíz a `<forms:WindowsPage` :
 
 ```xaml
 <forms:WindowsPage
@@ -75,13 +75,13 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10 . En el proyecto UWP, edite **MainPage.xaml.cs** para quitar el `: Page` especificador de herencia para el nombre de clase (puesto que ahora se heredará desde `WindowsPage` debido a los cambios realizados en el paso anterior):
+ 7. En el proyecto de UWP, edite **mainpage.Xaml.CS** para quitar el `: Page` especificador de herencia para el nombre de clase (dado que ahora heredará de `WindowsPage` debido al cambio realizado en el paso anterior):
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11 . En **MainPage.xaml.cs**, agregue el `LoadApplication` llamar el `MainPage` constructor para iniciar la aplicación de Xamarin.Forms:
+ 279. En **mainpage.Xaml.CS**, agregue la `LoadApplication` llamada en el `MainPage` constructor para iniciar la aplicación de Xamarin. Forms:
 
 ```csharp
 // below this existing line
@@ -89,6 +89,9 @@ this.InitializeComponent();
 // add this line
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
+
+> [!NOTE]
+> El argumento para el `LoadApplication` método es la `Xamarin.Forms.Application` instancia definida en el proyecto de .net Standard.
 
 <!--
 11 . Double-click **Package.appxmanifest** to set these capabilities
@@ -100,19 +103,19 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12 . Agregue los recursos locales (p ej. archivos de imagen) de los proyectos existentes de plataforma que son necesarios.
+305. Agregue los recursos locales (por ejemplo, archivos de imagen) de los proyectos de plataforma existentes que son necesarios.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
 <a name="target-invocation-exception" />
 
-### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>"Excepción de invocación de destino" cuando se usa "Compilación con la cadena de herramientas nativas de .NET"
+### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>"Excepción de invocación de destino" cuando se usa "compilar con .NET Native cadena de herramientas"
 
-Si su aplicación para UWP se hace referencia a varios ensamblados (por ejemplo un control de terceros bibliotecas o su propia aplicación se divide en varias bibliotecas), no es posible que pueda Xamarin.Forms cargar los objetos de dichos ensamblados (como representadores personalizados).
+Si la aplicación de UWP hace referencia a varios ensamblados (por ejemplo, bibliotecas de control de terceros o si la propia aplicación se divide en varias bibliotecas), Xamarin. Forms puede no ser capaz de cargar objetos de esos ensamblados (como los representadores personalizados).
 
-Esto puede ocurrir cuando se usa el **compilar con cadena de herramientas .NET Native** que es una opción para aplicaciones UWP en el **Propiedades > compilar > General** ventana para el proyecto.
+Esto puede ocurrir cuando se usa la **cadena de herramientas compilar con .net Native** , que es una opción para las aplicaciones UWP en las **propiedades > compilar > ventana general** del proyecto.
 
-Puede solucionar este problema mediante una sobrecarga específica de UWP de la `Forms.Init` llamar **App.xaml.cs** tal como se muestra en el código siguiente (debe reemplazar `ClassInOtherAssembly` con una clase real hace referencia su código):
+Puede corregirlo mediante una sobrecarga específica de UWP de la `Forms.Init` llamada en **app.Xaml.CS** como se muestra en el código siguiente (debe reemplazar `ClassInOtherAssembly` por una clase real a la que las referencias de código):
 
 ```csharp
 // You'll need to add `using System.Reflection;`
@@ -126,13 +129,13 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 // replaces Xamarin.Forms.Forms.Init(e);
 ```
 
-Agregue una entrada para cada ensamblado que ha agregado como una referencia en el Explorador de soluciones, ya sea a través de una referencia directa o NuGet.
+Agregue una entrada para cada ensamblado que ha agregado como referencia en el Explorador de soluciones, ya sea mediante una referencia directa o un NuGet.
 
-#### <a name="dependency-services-and-net-native-compilation"></a>Compilación nativa de .NET y de servicios de dependencia
+#### <a name="dependency-services-and-net-native-compilation"></a>Servicios de dependencia y compilación de .NET Native
 
-Versiones de lanzamiento con .NET Native puede producir un error de compilación para resolver los servicios de dependencia que se definen fuera el ejecutable de aplicación principal (como en un proyecto independiente o biblioteca).
+Las compilaciones de versión que usan la compilación de .NET Native pueden no resolver servicios de dependencia definidos fuera del archivo ejecutable de la aplicación principal (por ejemplo, en un proyecto o biblioteca independiente).
 
-Use el `DependencyService.Register<T>()` método para registrar manualmente clases del servicio de dependencia. Según el ejemplo anterior, agregue el método register similar al siguiente:
+Use el `DependencyService.Register<T>()` método para registrar manualmente las clases de servicio de dependencia. Según el ejemplo anterior, agregue el método de registro de la siguiente manera:
 
 ```csharp
 Xamarin.Forms.Forms.Init(e, assembliesToInclude);

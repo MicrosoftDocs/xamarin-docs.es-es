@@ -1,387 +1,740 @@
 ---
-title: Cuadrícula de Xamarin.Forms
-description: En este artículo se explica cómo usar la clase de la cuadrícula de Xamarin.Forms para presentar vistas en las cuadrículas, que poseen las filas y columnas.
+title: Cuadrícula de Xamarin. Forms
+description: La cuadrícula de Xamarin. Forms es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/26/2017
-ms.openlocfilehash: 7a6c737bff6c504fea10fd2e34e4b26249f73aff
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 05/15/2020
+ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770396"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425911"
 ---
-# <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
+# <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin. Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[`Grid`](xref:Xamarin.Forms.Grid) permite organizar las vistas en filas y columnas. Las filas y columnas se pueden establecer para tener tamaños proporcionales o tamaños absolutos. El `Grid` diseño no debe confundirse con las tablas tradicionales y no está diseñada para presentar los datos tabulares. `Grid` no tiene el concepto de fila, columna o formato de celdas. A diferencia de las tablas HTML, `Grid` está pensado únicamente para diseño de contenido.
+[![Cuadrícula de Xamarin. Forms](grid-images/layouts.png "Cuadrícula de Xamarin. Forms")](grid-images/layouts-large.png#lightbox "Cuadrícula de Xamarin. Forms")
 
-[![](grid-images/layouts-sml.png "Los diseños de Xamarin.Forms")](grid-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
+[`Grid`](xref:Xamarin.Forms.Grid)Es un diseño que organiza sus elementos secundarios en filas y columnas, que pueden tener tamaños proporcionales o absolutos. De forma predeterminada, un `Grid` contiene una fila y una columna. Además, `Grid` se puede utilizar como un diseño primario que contiene otros diseños secundarios.
 
-Este artículo se trata:
+El [`Grid`](xref:Xamarin.Forms.Grid) diseño no se debe confundir con las tablas y no está diseñado para presentar datos tabulares. A diferencia de las tablas HTML, una `Grid` está pensada para diseñar el contenido. Para Mostrar datos tabulares, considere la posibilidad de usar un [control ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)o [TableView](~/xamarin-forms/user-interface/tableview.md).
 
-- **[Propósito](#purpose)**  &ndash; usos comunes de `Grid`.
-- **[Uso](#usage)**  &ndash; cómo usar `Grid` para lograr el diseño deseado.
-  - **[Las filas y columnas](#rows-and-columns)**  &ndash; especificar las filas y columnas para el `Grid`.
-  - **[Colocación de las vistas](#placing-views-in-a-grid)**  &ndash; agregar vistas a la cuadrícula de columnas y filas específicas.
-  - **[Espaciado](#spacing)**  &ndash; configurar los espacios entre las filas y columnas.
-  - **[Intervalos](#spans)**  &ndash; configurar elementos que se va a abarcar varias filas o columnas.
+La [`Grid`](xref:Xamarin.Forms.Grid) clase define las siguientes propiedades:
 
-![](grid-images/grid.png "Exploración de la cuadrícula")
+- [`Column`](xref:Xamarin.Forms.Grid.ColumnProperty), de tipo `int` , que es una propiedad adjunta que indica la alineación de las columnas de una vista dentro de un elemento primario `Grid` . El valor predeterminado de esta propiedad es 0. Una devolución de llamada de validación garantiza que, cuando se establece la propiedad, su valor es mayor o igual que 0.
+- [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions), de tipo [`ColumnDefinitionCollection`](xref:Xamarin.Forms.ColumnDefinitionCollection) , es una lista de [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objetos que definen el ancho de las columnas de la cuadrícula.
+- [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing), de tipo `double` , indica la distancia entre las columnas de la cuadrícula. El valor predeterminado de esta propiedad es 6 unidades independientes del dispositivo.
+- [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty), de tipo `int` , que es una propiedad adjunta que indica el número total de columnas que una vista abarca dentro de un elemento primario `Grid` . El valor predeterminado de esta propiedad es 1. Una devolución de llamada de validación garantiza que, cuando se establece la propiedad, su valor es mayor o igual que 1.
+- [`Row`](xref:Xamarin.Forms.Grid.RowProperty), de tipo `int` , que es una propiedad adjunta que indica la alineación de filas de una vista dentro de un elemento primario `Grid` . El valor predeterminado de esta propiedad es 0. Una devolución de llamada de validación garantiza que, cuando se establece la propiedad, su valor es mayor o igual que 0.
+- [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions), de tipo [`RowDefinitionCollection`](xref:Xamarin.Forms.RowDefinitionCollection) , es una lista de [`RowDefintion`](xref:Xamarin.Forms.RowDefinition) objetos que definen el alto de las filas de la cuadrícula.
+- [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing), de tipo `double` , indica la distancia entre las filas de la cuadrícula. El valor predeterminado de esta propiedad es 6 unidades independientes del dispositivo.
+- [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty), de tipo `int` , que es una propiedad adjunta que indica el número total de filas que una vista abarca dentro de un elemento primario `Grid` . El valor predeterminado de esta propiedad es 1. Una devolución de llamada de validación garantiza que, cuando se establece la propiedad, su valor es mayor o igual que 1.
 
-## <a name="purpose"></a>Propósito
+Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos y con estilo.
 
-`Grid` puede usarse para organizar las vistas en una cuadrícula. Esto es útil en un número de casos:
+La [`Grid`](xref:Xamarin.Forms.Grid) clase se deriva de la `Layout<T>` clase, que define una `Children` propiedad de tipo `IList<T>` . La `Children` propiedad es `ContentProperty` de la `Layout<T>` clase y, por tanto, no es necesario establecer explícitamente desde XAML.
 
-- Organizar botones en una aplicación de calculadora
-- Organizar botones y alternativas en una cuadrícula, como iOS o Android pantallas de inicio
-- Organizar las vistas para que sean del mismo tamaño en una dimensión (como en algunas barras de herramientas)
+> [!TIP]
+> Para obtener el mejor rendimiento posible del diseño, siga las instrucciones que se indican en [optimizar el rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance).
 
-## <a name="usage"></a>Uso
+## <a name="rows-and-columns"></a>Filas y columnas
 
-A diferencia de las tablas tradicionales, `Grid` no infiere el número y tamaño de filas y columnas del contenido. En su lugar, `Grid` tiene `RowDefinitions` y `ColumnDefinitions` colecciones. Éstos contienen las definiciones de dispuestos cuántas filas y columnas. Las vistas se agregan a `Grid` con la fila especificada y los índices de columnas, que identifican qué fila y columna que se debe colocar en una vista.
-
-### <a name="rows-and-columns"></a>Las filas y columnas
-
-Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `ColumnDefinitions` propiedades, que son colecciones de cada de [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) y [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)objetos, respectivamente. `RowDefinition` tiene una propiedad única, `Height`, y `ColumnDefinition` tiene una propiedad única, `Width`. Las opciones de alto y ancho son los siguientes:
-
-- **Auto** &ndash; automáticamente los tamaños para ajustar el contenido de la fila o columna. Especificado como [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) en C# o como `Auto` en XAML.
-- **Proportional(*)** &ndash; cambia el tamaño de filas y columnas como una proporción del espacio restante. Especificado como un valor y `GridUnitType.Star` en C# y como `#*` en XAML, con `#` que el valor deseado. Especificación de una fila o columna con `*` hará que se va a rellenar el espacio disponible.
-- **Absoluta** &ndash; tamaños de las columnas y filas con valores específicos de alto y ancho fijos. Especificado como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que el valor deseado.
-
-> [!NOTE]
-> Los valores de ancho de las columnas se `*` establecen de forma predeterminada en Xamarin. Forms, lo que garantiza que la columna rellenará el espacio disponible. Los valores de alto de las filas también se `*` establecen de forma predeterminada.
-
-Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces más alto que la fila central. La columna izquierda debe ser lo suficientemente ancho como para que quepa el contenido y la columna derecha debe rellenar el espacio restante.
-
-En XAML:
+De forma predeterminada, un [`Grid`](xref:Xamarin.Forms.Grid) contiene una fila y una columna:
 
 ```xaml
-<Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="2*" />
-    <RowDefinition Height="*" />
-    <RowDefinition Height="200" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="Auto" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-</Grid>
-```
-
-En C#:
-
-```csharp
-Grid grid = new Grid();
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(2, GridUnitType.Star) });
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
-grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) });
-```
-
-### <a name="placing-views-in-a-grid"></a>Colocación de las vistas en una cuadrícula
-
-Para colocar las vistas en un `Grid` , deberá agregarlos como elementos secundarios a la cuadrícula y, después, especifique qué fila y columna pertenecen en.
-
-En XAML, utilice `Grid.Row` y `Grid.Column` en cada vista individual para especificar la selección de ubicación. Tenga en cuenta que `Grid.Row` y `Grid.Column` especificar ubicación basándose en las listas de base cero de filas y columnas. Esto significa que en una cuadrícula 4 x 4, la celda superior izquierda es (0,0) y la celda inferior derecha es (3,3).
-
-El `Grid` se muestra a continuación contiene cuatro celdas:
-
-![](grid-images/label-grid.png "Cuadrícula de cuatro vistas")
-
-En XAML:
-
-```xaml
-<Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="*" />
-    <RowDefinition Height="*" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="*" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-  <Label Text="Top Left" Grid.Row="0" Grid.Column="0" />
-  <Label Text="Top Right" Grid.Row="0" Grid.Column="1" />
-  <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0" />
-  <Label Text="Bottom Right" Grid.Row="1" Grid.Column="1" />
-</Grid>
-```
-
-En C#:
-
-```csharp
-var grid = new Grid();
-
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star)});
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star)});
-
-var topLeft = new Label { Text = "Top Left" };
-var topRight = new Label { Text = "Top Right" };
-var bottomLeft = new Label { Text = "Bottom Left" };
-var bottomRight = new Label { Text = "Bottom Right" };
-
-grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0);
-grid.Children.Add(bottomLeft, 0, 1);
-grid.Children.Add(bottomRight, 1, 1);
-```
-
-El código anterior crea la cuadrícula con cuatro etiquetas, dos columnas y dos filas. Tenga en cuenta que cada etiqueta tendrá el mismo tamaño y que las filas se expandirán para usar todo el espacio disponible.
-
-En el ejemplo anterior, las vistas se agregan a la [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) colección utilizando el [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) sobrecarga que especifique los argumentos izquierdo y superiores. Cuando se usa el [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) sobrecarga que especifique a la izquierda, derecha, superior y argumentos de la parte inferior, mientras la izquierda y argumentos superiores siempre hará referencia a las celdas de la [ `Grid` ](xref:Xamarin.Forms.Grid), la derecha y argumentos de la parte inferior pueden parecer que hacen referencia a las celdas que están fuera de la `Grid`. Esto es porque el argumento derecho siempre debe ser mayor que el argumento izquierdo y el argumento final siempre debe ser mayor que el argumento superior. En el ejemplo siguiente se muestra código equivalente que utiliza ambos `Add` sobrecargas:
-
-```csharp
-// left, top
-grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0);
-grid.Children.Add(bottomLeft, 0, 1);
-grid.Children.Add(bottomRight, 1, 1);
-
-// left, right, top, bottom
-grid.Children.Add(topLeft, 0, 1, 0, 1);
-grid.Children.Add(topRight, 1, 2, 0, 1);
-grid.Children.Add(bottomLeft, 0, 1, 1, 2);
-grid.Children.Add(bottomRight, 1, 2, 1, 2);
-```
-
-### <a name="spacing"></a>Espaciado
-
-`Grid` tiene propiedades para controlar el espaciado entre las filas y columnas. Las propiedades siguientes están disponibles para personalizar el `Grid`:
-
-- **ColumnSpacing** &ndash; la cantidad de espacio entre las columnas. El valor predeterminado de esta propiedad es 6.
-- **RowSpacing** &ndash; la cantidad de espacio entre las filas. El valor predeterminado de esta propiedad es 6.
-
-El XAML siguiente especifica un `Grid` con dos columnas, una fila y 5 px de espaciado entre columnas:
-
-```xaml
-<Grid ColumnSpacing="5">
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="*" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-</Grid>
-```
-
-En C#:
-
-```csharp
-var grid = new Grid { ColumnSpacing = 5 };
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)});
-```
-
-### <a name="spans"></a>Intervalos
-
-A menudo cuando se trabaja con una cuadrícula, hay un elemento que debe ocupar más de una fila o columna. Considere la posibilidad de una aplicación de calculadora simple:
-
-![](grid-images/calculator.png "Aplicación Calulator")
-
-Tenga en cuenta que el botón 0 abarca dos columnas, al igual que las calculadoras integradas para cada plataforma. Esto se logra mediante el `ColumnSpan` propiedad, que especifica cuántas columnas un elemento deben ocupar. El XAML para ese botón:
-
-```xaml
-<Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
-```
-
-Y en C#:
-
-```csharp
-Button zeroButton = new Button { Text = "0" };
-controlGrid.Children.Add (zeroButton, 0, 4);
-Grid.SetColumnSpan (zeroButton, 2);
-```
-
-Tenga en cuenta que en el código, los métodos estáticos de la `Grid` clase se utilizan para realizar cambios de posicionamiento, incluidos los cambios a `ColumnSpan` y `RowSpan`. Tenga en cuenta que, con otras propiedades que se pueden establecer en cualquier momento, a diferencia de las propiedades establecidas mediante los métodos estáticos en ya deben puede estar también en la cuadrícula antes de modificarla.
-
-El XAML completo para la aplicación de calculadora anterior es como sigue:
-
-```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="LayoutSamples.CalculatorGridXAML"
-Title = "Calculator - XAML"
-BackgroundColor="#404040">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="plainButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#eee"/>
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-            <Style x:Key="darkerButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#ddd"/>
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-            <Style x:Key="orangeButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#E8AD00"/>
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White"
-        FontSize="60" Grid.ColumnSpan="4" />
-            <Button Text = "C" Grid.Row="1" Grid.Column="0"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "+/-" Grid.Row="1" Grid.Column="1"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "%" Grid.Row="1" Grid.Column="2"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "div" Grid.Row="1" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "7" Grid.Row="2" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "8" Grid.Row="2" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "9" Grid.Row="2" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "X" Grid.Row="2" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "4" Grid.Row="3" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "5" Grid.Row="3" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "6" Grid.Row="3" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "-" Grid.Row="3" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "1" Grid.Row="4" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "2" Grid.Row="4" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "3" Grid.Row="4" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "+" Grid.Row="4" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "0" Grid.ColumnSpan="2"
-        Grid.Row="5" Grid.Column="0" Style="{StaticResource plainButton}" />
-            <Button Text = "." Grid.Row="5" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "=" Grid.Row="5" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-        </Grid>
-    </ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridTutorial.MainPage">
+    <Grid Margin="20,35,20,20">
+        <Label Text="By default, a Grid contains one row and one column." />
+    </Grid>
 </ContentPage>
 ```
 
-Observe que tanto la etiqueta en la parte superior de la cuadrícula y el botón cero occuping más de una columna. Aunque se podría lograr un diseño similar con cuadrículas anidadas, la `ColumnSpan`  &  `RowSpan` enfoque es más sencillo.
+En este ejemplo, [`Grid`](xref:Xamarin.Forms.Grid) contiene un único elemento secundario [`Label`](xref:Xamarin.Forms.Label) que se coloca automáticamente en una única ubicación:
 
-La implementación de C#:
+[![Captura de pantalla de un diseño de cuadrícula predeterminado](grid-images/default.png "Diseño de cuadrícula predeterminado")](grid-images/default-large.png#lightbox "Diseño de cuadrícula predeterminado")
+
+El comportamiento de diseño de [`Grid`](xref:Xamarin.Forms.Grid) se puede definir con las [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) propiedades y, que son colecciones de [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objetos y, respectivamente. Estas colecciones definen las características de fila y columna de un `Grid` , y deben contener un [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) objeto para cada fila de `Grid` , y un [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objeto para cada columna en `Grid` .
+
+La [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) clase define una [`Height`](xref:Xamarin.Forms.RowDefinition.Height) propiedad, de tipo [`GridLength`](xref:Xamarin.Forms.GridLength) , y la [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) clase define una [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) propiedad, de tipo [`GridLength`](xref:Xamarin.Forms.GridLength) . El [`GridLength`](xref:Xamarin.Forms.GridLength) struct especifica un alto de fila o un ancho de columna en cuanto a la [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) enumeración, que tiene tres miembros:
+
+- `Absolute`: el alto de fila o el ancho de columna es un valor en unidades independientes del dispositivo (un número en XAML).
+- `Auto`: el alto de fila o el ancho de columna se ajusta automáticamente según el contenido de la celda ( `Auto` en XAML).
+- `Star`– el alto de fila o el ancho de columna sobrante se asigna proporcionalmente (un número seguido `*` de en XAML).
+
+Una [`Grid`](xref:Xamarin.Forms.Grid) fila con una `Height` propiedad de `Auto` restringe el alto de las vistas en esa fila de la misma manera que una vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Del mismo modo, una columna con una `Width` propiedad de funciona de forma `Auto` muy parecida a una horizontal `StackLayout` .
+
+> [!CAUTION]
+> Intente asegurarse de que el tamaño de las filas y columnas es el máximo posible [`Auto`](xref:Xamarin.Forms.GridLength.Auto) . Cada fila o columna de tamaño automático hará que el motor de diseño tenga que realizar cálculos de diseño adicionales. En su lugar, use filas y columnas de tamaño fijo si es posible. También puede establecer filas y columnas para ocupar una cantidad proporcional de espacio con el [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) valor de enumeración.
+
+En el siguiente código XAML se muestra cómo crear un [`Grid`](xref:Xamarin.Forms.Grid) con tres filas y dos columnas:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.BasicGridPage"
+             Title="Basic Grid demo">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        ...
+    </Grid>
+</ContentPage>
+```
+
+En este ejemplo, [`Grid`](xref:Xamarin.Forms.Grid) tiene un alto general que es el alto de la página. `Grid`Sabe que el alto de la tercera fila es 100 unidades independientes del dispositivo. Resta ese alto de su propio alto y asigna el alto restante proporcionalmente entre la primera y la segunda fila en función del número anterior a la estrella. En este ejemplo, el alto de la primera fila es el doble de la de la segunda fila.
+
+[`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition)Ambos objetos establecen el [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) en `*` , que es igual que `1*` , lo que significa que el ancho de la pantalla se divide equitativamente por debajo de las dos columnas.
+
+> [!IMPORTANT]
+> El valor predeterminado de la [`RowDefinition.Height`](xref:Xamarin.Forms.RowDefinition.Height) propiedad es `*` . Del mismo modo, el valor predeterminado de la [`ColumnDefinition.Width`](xref:Xamarin.Forms.ColumnDefinition.Width) propiedad es `*` . Por lo tanto, no es necesario establecer estas propiedades en los casos en los que estos valores predeterminados son aceptables.
+
+Las vistas secundarias se pueden colocar en [`Grid`](xref:Xamarin.Forms.Grid) celdas específicas con [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) y las [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) propiedades adjuntas. Además, para que las vistas secundarias abarquen varias filas y columnas, use [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) y las [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) propiedades adjuntas.
+
+En el código XAML siguiente se muestra la misma [`Grid`](xref:Xamarin.Forms.Grid) definición y también se colocan las vistas secundarias en `Grid` celdas específicas:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.BasicGridPage"
+             Title="Basic Grid demo">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <BoxView Color="Green" />
+        <Label Text="Row 0, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Column="1"
+                 Color="Blue" />
+        <Label Grid.Column="1"
+               Text="Row 0, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Color="Teal" />
+        <Label Grid.Row="1"
+               Text="Row 1, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="Purple" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Row1, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 Color="Red" />
+        <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="Row 2, Columns 0 and 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Grid>
+</ContentPage>
+```
+
+> [!NOTE]
+> Las `Grid.Row` `Grid.Column` propiedades y se indizan desde 0, por lo que se `Grid.Row="2"` refiere a la tercera fila mientras se `Grid.Column="1"` hace referencia a la segunda columna. Además, ambas propiedades tienen un valor predeterminado de 0, por lo que no es necesario establecer en vistas secundarias que ocupen la primera fila o la primera columna de un [`Grid`](xref:Xamarin.Forms.Grid) .
+
+En este ejemplo, las tres [`Grid`](xref:Xamarin.Forms.Grid) filas están ocupadas por las [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) vistas y. La tercera fila tiene un alto de 100 unidades independientes del dispositivo, con las dos primeras filas que ocupan el espacio restante (la primera fila es dos veces más alta que la segunda fila). Las dos columnas tienen el mismo ancho y lo dividen `Grid` en la mitad. El `BoxView` de la tercera fila abarca ambas columnas.
+
+[![Captura de pantalla de un diseño de cuadrícula básico](grid-images/basic.png "Diseño de cuadrícula básico")](grid-images/basic-large.png#lightbox "Diseño de cuadrícula básico")
+
+Además, las vistas secundarias de una [`Grid`](xref:Xamarin.Forms.Grid) pueden compartir celdas. El orden en el que los elementos secundarios aparecen en el código XAML es el orden en el que se colocan los elementos secundarios `Grid` . En el ejemplo anterior, los [`Label`](xref:Xamarin.Forms.Label) objetos solo están visibles porque se representan en la parte superior de los [`BoxView`](xref:Xamarin.Forms.BoxView) objetos. Los `Label` objetos no estarán visibles si los `BoxView` objetos se representaban encima de ellos.
+
+El código de C# equivalente es el siguiente:
 
 ```csharp
-public CalculatorGridCode ()
+public class BasicGridPageCS : ContentPage
 {
-  Title = "Calculator - C#";
-  BackgroundColor = Color.FromHex ("#404040");
+    public BasicGridPageCS()
+    {
+        Grid grid = new Grid
+        {
+            RowDefinitions =
+            {
+                new RowDefinition { Height = new GridLength(2, GridUnitType.Star) },
+                new RowDefinition(),
+                new RowDefinition { Height = new GridLength(100) }
+            },
+            ColumnDefinitions =
+            {
+                new ColumnDefinition(),
+                new ColumnDefinition()
+            }
+        };
 
-  var plainButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#eee") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+        // Row 0
+        // The BoxView and Label are in row 0 and column 0, and so only needs to be added to the
+        // Grid.Children collection to get default row and column settings.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Green
+        });
+        grid.Children.Add(new Label
+        {
+            Text = "Row 0, Column 0",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        });
+
+        // This BoxView and Label are in row 0 and column 1, which are specified as arguments
+        // to the Add method.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Blue
+        }, 1, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Row 0, Column 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 0);
+
+        // Row 1
+        // This BoxView and Label are in row 1 and column 0, which are specified as arguments
+        // to the Add method overload.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Teal
+        }, 0, 1, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Row 1, Column 0",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 0, 1, 1, 2); // These arguments indicate that that the child element goes in the column starting at 0 but ending before 1.
+                        // They also indicate that the child element goes in the row starting at 1 but ending before 2.
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Purple
+        }, 1, 2, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Row1, Column 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 2, 1, 2);
+
+        // Row 2
+        // Alternatively, the BoxView and Label can be positioned in cells with the Grid.SetRow
+        // and Grid.SetColumn methods.
+        BoxView boxView = new BoxView { Color = Color.Red };
+        Grid.SetRow(boxView, 2);
+        Grid.SetColumnSpan(boxView, 2);
+        Label label = new Label
+        {
+            Text = "Row 2, Column 0 and 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        Grid.SetRow(label, 2);
+        Grid.SetColumnSpan(label, 2);
+
+        grid.Children.Add(boxView);
+        grid.Children.Add(label);
+
+        Title = "Basic Grid demo";
+        Content = grid;
     }
-  };
-  var darkerButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#ddd") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+}
+```
+
+En el código, para especificar el alto de un [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) objeto y el ancho de un [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objeto, se usan valores de la [`GridLength`](xref:Xamarin.Forms.GridLength) estructura, a menudo en combinación con la [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) enumeración.
+
+El código de ejemplo anterior también muestra varios enfoques diferentes para agregar elementos secundarios a [`Grid`](xref:Xamarin.Forms.Grid) y especificar las celdas en las que residen. Cuando se usa la `Add` sobrecarga que especifica los argumentos *izquierdo*, *derecho*, *superior*e *inferior* , mientras que los argumentos *izquierdo* y *superior* siempre hacen referencia a las celdas de `Grid` , los argumentos *derecho* e *inferior* parecen hacer referencia a las celdas que están fuera de `Grid` . Esto se debe a que el argumento *derecho* siempre debe ser mayor que el argumento *izquierdo* y el argumento *inferior* siempre debe ser mayor que el argumento *superior* . En el ejemplo siguiente, en el que se supone que es 2x2 `Grid` , se muestra código equivalente mediante las dos `Add` sobrecargas:
+
+```csharp
+// left, top
+grid.Children.Add(topLeft, 0, 0);           // first column, first row
+grid.Children.Add(topRight, 1, 0);          // second column, first tow
+grid.Children.Add(bottomLeft, 0, 1);        // first column, second row
+grid.Children.Add(bottomRight, 1, 1);       // second column, second row
+
+// left, right, top, bottom
+grid.Children.Add(topLeft, 0, 1, 0, 1);     // first column, first row
+grid.Children.Add(topRight, 1, 2, 0, 1);    // second column, first tow
+grid.Children.Add(bottomLeft, 0, 1, 1, 2);  // first column, second row
+grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
+```
+
+> [!NOTE]
+> Además, las vistas secundarias se pueden agregar a un [`Grid`](xref:Xamarin.Forms.Grid) con [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) los [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) métodos y, que agregan elementos secundarios a una sola fila o a una sola columna `Grid` . `Grid`A continuación, se expande en filas o columnas a medida que se realizan estas llamadas, así como colocar automáticamente los elementos secundarios en las celdas correctas.
+
+## <a name="space-between-rows-and-columns"></a>Espacio entre filas y columnas
+
+De forma predeterminada, [`Grid`](xref:Xamarin.Forms.Grid) las filas están separadas por 6 unidades de espacio independientes del dispositivo. Del mismo modo, `Grid` las columnas se separan mediante 6 unidades de espacio independientes del dispositivo. Estos valores predeterminados se pueden cambiar estableciendo [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) las [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) propiedades y, respectivamente:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.GridSpacingPage"
+             Title="Grid spacing demo">
+    <Grid RowSpacing="0"
+          ColumnSpacing="0">
+        ..
+    </Grid>
+</ContentPage>
+```
+
+En este ejemplo se crea un [`Grid`](xref:Xamarin.Forms.Grid) que no tiene espacio entre sus filas y columnas:
+
+[![Captura de pantalla de la cuadrícula sin espaciado entre las celdas](grid-images/spacing.png "Cuadrícula sin espaciado entre las celdas")](grid-images/spacing-large.png#lightbox "Cuadrícula sin espaciado entre las celdas")
+
+> [!TIP]
+> Las [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) propiedades y se pueden establecer en valores negativos para que el contenido de la celda se superponga.
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+public GridSpacingPageCS()
+{
+    Grid grid = new Grid
+    {
+        RowSpacing = 0,
+        ColumnSpacing = 0,
+        // ...
+    };
+    // ...
+
+    Content = grid;
+}
+```
+
+## <a name="alignment"></a>Alineación
+
+Las vistas secundarias de una [`Grid`](xref:Xamarin.Forms.Grid) se pueden colocar en sus celdas por las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y. Estas propiedades se pueden establecer en los siguientes campos del [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) struct:
+
+- [`Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+
+> [!IMPORTANT]
+> Los `AndExpands` campos del [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) struct solo se pueden aplicar a [`StackLayout`](xref:Xamarin.Forms.StackLayout) objetos.
+
+El código XAML siguiente crea un [`Grid`](xref:Xamarin.Forms.Grid) con nueve celdas de igual tamaño y coloca un [`Label`](xref:Xamarin.Forms.Label) en cada celda con una alineación diferente:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.GridAlignmentPage"
+             Title="Grid alignment demo">
+    <Grid RowSpacing="0"
+          ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="AliceBlue" />
+        <Label Text="Upper left"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+        <BoxView Grid.Column="1"
+                 Color="LightSkyBlue" />
+        <Label Grid.Column="1"
+               Text="Upper center"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+        <BoxView Grid.Column="2"
+                 Color="CadetBlue" />
+        <Label Grid.Column="2"
+               Text="Upper right"
+               HorizontalOptions="End"
+               VerticalOptions="Start" />
+        <BoxView Grid.Row="1"
+                 Color="CornflowerBlue" />
+        <Label Grid.Row="1"
+               Text="Center left"
+               HorizontalOptions="Start"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="DodgerBlue" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Center center"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="2"
+                 Color="DarkSlateBlue" />
+        <Label Grid.Row="1"
+               Grid.Column="2"
+               Text="Center right"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="2"
+                 Color="SteelBlue" />
+        <Label Grid.Row="2"
+               Text="Lower left"
+               HorizontalOptions="Start"
+               VerticalOptions="End" />
+        <BoxView Grid.Row="2"
+                 Grid.Column="1"
+                 Color="LightBlue" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="Lower center"
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+        <BoxView Grid.Row="2"
+                 Grid.Column="2"
+                 Color="BlueViolet" />
+        <Label Grid.Row="2"
+               Grid.Column="2"
+               Text="Lower right"
+               HorizontalOptions="End"
+               VerticalOptions="End" />
+    </Grid>
+</ContentPage>
+```
+
+En este ejemplo, los [`Label`](xref:Xamarin.Forms.Label) objetos de cada fila se alinean de manera idéntica verticalmente, pero usan diferentes alineaciones horizontales. Como alternativa, se puede considerar que los `Label` objetos de cada columna están alineados de forma idéntica horizontalmente, pero con diferentes alineaciones verticales:
+
+[![Captura de pantalla de la alineación de celdas dentro de una cuadrícula](grid-images/alignment.png "Alineación de celdas en una cuadrícula")](grid-images/alignment-large.png#lightbox "Alineación de celdas en una cuadrícula")
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+public class GridAlignmentPageCS : ContentPage
+{
+    public GridAlignmentPageCS()
+    {
+        Grid grid = new Grid
+        {
+            RowSpacing = 0,
+            ColumnSpacing = 0,
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition()
+            },
+            ColumnDefinitions =
+            {
+                new ColumnDefinition(),
+                new ColumnDefinition(),
+                new ColumnDefinition()
+            }
+        };
+
+        // Row 0
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.AliceBlue
+        });
+        grid.Children.Add(new Label
+        {
+            Text = "Upper left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        });
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.LightSkyBlue
+        }, 1, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Upper center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start
+        }, 1, 0);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.CadetBlue
+        }, 2, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Upper right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.Start
+        }, 2, 0);
+
+        // Row 1
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.CornflowerBlue
+        }, 0, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Center
+        }, 0, 1);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.DodgerBlue
+        }, 1, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 1);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.DarkSlateBlue
+        }, 2, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.Center
+        }, 2, 1);
+
+        // Row 2
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.SteelBlue
+        }, 0, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.End
+        }, 0, 2);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.LightBlue
+        }, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.End
+        }, 1, 2);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.BlueViolet
+        }, 2, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.End
+        }, 2, 2);
+
+        Title = "Grid alignment demo";
+        Content = grid;
     }
-  };
-  var orangeButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.White },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+}
+```
+
+## <a name="nested-grid-objects"></a>Objetos de cuadrícula anidados
+
+[`Grid`](xref:Xamarin.Forms.Grid)Se puede utilizar como un diseño primario que contiene objetos secundarios anidados `Grid` u otros diseños secundarios. Al anidar `Grid` objetos,, `Grid.Row` , `Grid.Column` `Grid.RowSpan` y `Grid.ColumnSpan` las propiedades adjuntas siempre hacen referencia a la posición de las vistas dentro de su elemento primario `Grid` .
+
+En el código XAML siguiente se muestra un ejemplo de anidamiento de [`Grid`](xref:Xamarin.Forms.Grid) objetos:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:GridDemos.Converters"
+             x:Class="GridDemos.Views.ColorSlidersGridPage"
+             Title="Nested Grids demo">
+
+    <ContentPage.Resources>
+        <converters:DoubleToIntConverter x:Key="doubleToInt" />
+
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <BoxView x:Name="boxView"
+                 Color="Black" />
+        <Grid Grid.Row="1"
+              Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Slider x:Name="redSlider"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="1"
+                   Text="{Binding Source={x:Reference redSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Red = {0}'}" />
+            <Slider x:Name="greenSlider"
+                    Grid.Row="2"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="3"
+                   Text="{Binding Source={x:Reference greenSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Green = {0}'}" />
+            <Slider x:Name="blueSlider"
+                    Grid.Row="4"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="5"
+                   Text="{Binding Source={x:Reference blueSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Blue = {0}'}" />
+        </Grid>
+    </Grid>
+</ContentPage>
+```
+
+En este ejemplo, el [`Grid`](xref:Xamarin.Forms.Grid) diseño raíz contiene un [`BoxView`](xref:Xamarin.Forms.BoxView) en su primera fila y un elemento secundario `Grid` en la segunda fila. El elemento secundario `Grid` contiene [`Slider`](xref:Xamarin.Forms.Slider) objetos que manipulan el color que muestra `BoxView` , y los [`Label`](xref:Xamarin.Forms.Label) objetos que muestran el valor de cada uno de ellos `Slider` :
+
+[![Captura de pantalla de cuadrículas anidadas](grid-images/nesting.png "Objetos de cuadrícula anidados")](grid-images/nesting-large.png#lightbox "Objetos de cuadrícula anidados")
+
+> [!IMPORTANT]
+> Cuanto más profundo sea el anidamiento de [`Grid`](xref:Xamarin.Forms.Grid) objetos y otros diseños, más los diseños anidados afectarán al rendimiento. Para obtener más información, vea [elegir el diseño correcto](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+public class ColorSlidersGridPageCS : ContentPage
+{
+    BoxView boxView;
+    Slider redSlider;
+    Slider greenSlider;
+    Slider blueSlider;
+
+    public ColorSlidersGridPageCS()
+    {
+        // Create an implicit style for the Labels
+        Style labelStyle = new Style(typeof(Label))
+        {
+            Setters =
+            {
+                new Setter { Property = Label.HorizontalTextAlignmentProperty, Value = TextAlignment.Center }
+            }
+        };
+        Resources.Add(labelStyle);
+
+        // Root page layout
+        Grid rootGrid = new Grid
+        {
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition()
+            }
+        };
+
+        boxView = new BoxView { Color = Color.Black };
+        rootGrid.Children.Add(boxView);
+
+        // Child page layout
+        Grid childGrid = new Grid
+        {
+            Margin = new Thickness(20),
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition()
+            }
+        };
+
+        DoubleToIntConverter doubleToInt = new DoubleToIntConverter();
+
+        redSlider = new Slider();
+        redSlider.ValueChanged += OnSliderValueChanged;
+        childGrid.Children.Add(redSlider);
+
+        Label redLabel = new Label();
+        redLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Red = {0}", source: redSlider));
+        Grid.SetRow(redLabel, 1);
+        childGrid.Children.Add(redLabel);
+
+        greenSlider = new Slider();
+        greenSlider.ValueChanged += OnSliderValueChanged;
+        Grid.SetRow(greenSlider, 2);
+        childGrid.Children.Add(greenSlider);
+
+        Label greenLabel = new Label();
+        greenLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Green = {0}", source: greenSlider));
+        Grid.SetRow(greenLabel, 3);
+        childGrid.Children.Add(greenLabel);
+
+        blueSlider = new Slider();
+        blueSlider.ValueChanged += OnSliderValueChanged;
+        Grid.SetRow(blueSlider, 4);
+        childGrid.Children.Add(blueSlider);
+
+        Label blueLabel = new Label();
+        blueLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Blue = {0}", source: blueSlider));
+        Grid.SetRow(blueLabel, 5);
+        childGrid.Children.Add(blueLabel);
+
+        // Place the child Grid in the root Grid
+        rootGrid.Children.Add(childGrid, 0, 1);
+
+        Title = "Nested Grids demo";
+        Content = rootGrid;
     }
-  };
 
-  var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (150) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-
-  var label = new Label {
-    Text = "0",
-    HorizontalTextAlignment = TextAlignment.End,
-    VerticalTextAlignment = TextAlignment.End,
-    TextColor = Color.White,
-    FontSize = 60
-  };
-  controlGrid.Children.Add (label, 0, 0);
-
-  Grid.SetColumnSpan (label, 4);
-
-  controlGrid.Children.Add (new Button { Text = "C", Style = darkerButton }, 0, 1);
-  controlGrid.Children.Add (new Button { Text = "+/-", Style = darkerButton }, 1, 1);
-  controlGrid.Children.Add (new Button { Text = "%", Style = darkerButton }, 2, 1);
-  controlGrid.Children.Add (new Button { Text = "div", Style = orangeButton }, 3, 1);
-  controlGrid.Children.Add (new Button { Text = "7", Style = plainButton }, 0, 2);
-  controlGrid.Children.Add (new Button { Text = "8", Style = plainButton }, 1, 2);
-  controlGrid.Children.Add (new Button { Text = "9", Style = plainButton }, 2, 2);
-  controlGrid.Children.Add (new Button { Text = "X", Style = orangeButton }, 3, 2);
-  controlGrid.Children.Add (new Button { Text = "4", Style = plainButton }, 0, 3);
-  controlGrid.Children.Add (new Button { Text = "5", Style = plainButton }, 1, 3);
-  controlGrid.Children.Add (new Button { Text = "6", Style = plainButton }, 2, 3);
-  controlGrid.Children.Add (new Button { Text = "-", Style = orangeButton }, 3, 3);
-  controlGrid.Children.Add (new Button { Text = "1", Style = plainButton }, 0, 4);
-  controlGrid.Children.Add (new Button { Text = "2", Style = plainButton }, 1, 4);
-  controlGrid.Children.Add (new Button { Text = "3", Style = plainButton }, 2, 4);
-  controlGrid.Children.Add (new Button { Text = "+", Style = orangeButton }, 3, 4);
-  controlGrid.Children.Add (new Button { Text = ".", Style = plainButton }, 2, 5);
-  controlGrid.Children.Add (new Button { Text = "=", Style = orangeButton }, 3, 5);
-
-  var zeroButton = new Button { Text = "0", Style = plainButton };
-  controlGrid.Children.Add (zeroButton, 0, 5);
-  Grid.SetColumnSpan (zeroButton, 2);
-
-  Content = controlGrid;
+    void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        boxView.Color = new Color(redSlider.Value, greenSlider.Value, blueSlider.Value);
+    }
 }
 ```
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Creación de aplicaciones móviles con Xamarin.Forms, capítulo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [Grid](xref:Xamarin.Forms.Grid)
-- [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Ejemplo de BusinessTumble (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Demostraciones de cuadrícula (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [Opciones de diseño de Xamarin. Forms](layout-options.md)
+- [Elegir un diseño de Xamarin. Forms](choose-layout.md)
+- [Mejora del rendimiento de aplicaciones Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
