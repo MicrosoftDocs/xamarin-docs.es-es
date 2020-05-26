@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
+ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488496"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550905"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
@@ -133,11 +133,11 @@ SecureStorage.RemoveAll();
 
 [Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave (no una clave criptográfica, la _clave_ para el _valor_) usada en el archivo de preferencias compartido es un _hash MD5_ de la clave pasada a las API `SecureStorage`.
 
-## <a name="api-level-23-and-higher"></a>Nivel de API 23 y superior
+**Nivel de API 23 y superior**
 
 En los niveles de API más nuevos, una clave **AES** se obtiene de Android KeyStore y se usa con una cifra **AES/GCM/NoPadding** para cifrar el valor antes de que se almacene en el archivo de preferencias compartidas.
 
-## <a name="api-level-22-and-lower"></a>Nivel de API 22 e inferior
+**Nivel de API 22 e inferior**
 
 En los niveles de API anteriores, Android KeyStore solo admite el almacenamiento de claves **RSA**, que se usa con una cifra **RSA/ECB/PKCS1Padding** para cifrar una clave **AES** (generada de manera aleatoria en tiempo de ejecución) y se almacena en el archivo de preferencias compartidas en la clave _SecureStorageKey_, si todavía no se ha generado una.
 
