@@ -1,22 +1,25 @@
 ---
-title: ¿Por qué se produce un ERROR en el proyecto de Android de Xamarin. Forms. Maps con COMPILETODALVIK de nivel superior inesperado?
-ms.topic: troubleshooting
-ms.prod: xamarin
-ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/25/2017
-ms.openlocfilehash: 2872cc7b54e26d07b388f08d650048e8d3861930
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ¿Por qué mi Xamarin.Forms . Se produce un ERROR en el proyecto de Android de Maps con COMPILETODALVIK de nivel superior inesperado?
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e29535e71cb77b05da41c043c6fd932ae4f5ce95
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759967"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135855"
 ---
-# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>¿Por qué se produce un ERROR en el proyecto de Android de Xamarin. Forms. Maps con COMPILETODALVIK de nivel superior inesperado?
+# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>¿Por qué mi Xamarin.Forms . Se produce un ERROR en el proyecto de Android de Maps con COMPILETODALVIK de nivel superior inesperado?
 
-Este error puede aparecer en el panel de errores de Visual Studio para Mac o en la ventana de salida de la compilación de Visual Studio; en los proyectos de Android con Xamarin. Forms. Maps.
+Este error puede aparecer en el panel de errores de Visual Studio para Mac o en la ventana de salida de la compilación de Visual Studio; en los proyectos de Android con Xamarin.Forms . Maps.
 
 Esto se resuelve normalmente aumentando el tamaño del montón de Java para el proyecto de Xamarin. Android. Siga estos pasos para aumentar el tamaño del montón:
 

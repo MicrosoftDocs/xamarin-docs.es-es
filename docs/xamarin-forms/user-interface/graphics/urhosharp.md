@@ -1,65 +1,68 @@
 ---
-title: Uso de UrhoSharp en Xamarin.Forms
-description: Este artículo explica el uso de UrhoSharp agregar gráficos 3D a una aplicación de Xamarin.Forms para visualización avanzada.
-ms.prod: xamarin
-ms.assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/11/2016
-ms.openlocfilehash: 60c647a9a09ebffa5a9d50c799c09cf0dbf2e4ac
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+title: Usar UrhoSharp enXamarin.Forms
+description: En este artículo se explica cómo se puede usar UrhoSharp para agregar gráficos 3D a una Xamarin.Forms aplicación para la visualización avanzada.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c0eed1a451d62025562ac5fff4f12be96f0bf53
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728018"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137662"
 ---
-# <a name="using-urhosharp-in-xamarinforms"></a>Uso de UrhoSharp en Xamarin.Forms
+# <a name="using-urhosharp-in-xamarinforms"></a>Usar UrhoSharp enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
 
 ## <a name="what-is-urhosharp"></a>¿Qué es UrhoSharp?
 
-[UrhoSharp](~/graphics-games/urhosharp/index.md) es un poderoso motor 3D para desarrolladores de Xamarin y. NET. El [Introducción](~/graphics-games/urhosharp/introduction.md) contiene más explicaciones acerca de la biblioteca de UrhoSharp y [estas notas](~/graphics-games/urhosharp/using.md) describen cómo programar en segundo plano y las acciones.
+[UrhoSharp](~/graphics-games/urhosharp/index.md) es un motor 3D eficaz para los desarrolladores de Xamarin y .net. En la [Introducción](~/graphics-games/urhosharp/introduction.md) se explica más acerca de la biblioteca UrhoSharp y en [estas notas](~/graphics-games/urhosharp/using.md) se describe cómo programar las escenas y las acciones.
 
-UrhoSharp puede usarse para representar gráficos en las aplicaciones de Xamarin.Forms.
-Esto [ejemplo](https://github.com/xamarin/urho-samples/tree/master/FormsSample) muestra cómo se podría usar UrhoSharp para construir un gráfico 3D interactivo:
+UrhoSharp se puede usar para representar gráficos en Xamarin.Forms aplicaciones.
+Este [ejemplo](https://github.com/xamarin/urho-samples/tree/master/FormsSample) muestra cómo se podría usar UrhoSharp para construir un gráfico 3D interactivo:
 
 ![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
 ![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
 
 ## <a name="adding-the-urhosharp-nuget-packages"></a>Adición de los paquetes NuGet de UrhoSharp
 
-Antes de usar UrhoSharp, los desarrolladores deben agregar el paquete NuGet UrhoSharp a su solución. Esta guía se da por supuesto un proyecto de Xamarin.Forms con un iOS, Android y .NET Standard proyecto de biblioteca. Todo el código se escribirá en el proyecto de biblioteca de .NET Standard; pero también se debe agregar el NuGet UrhoSharp a los proyectos de iOS y Android.
+Antes de usar UrhoSharp, los desarrolladores deben agregar el paquete NuGet UrhoSharp a su solución. En esta guía se da por supuesto que se trata de un Xamarin.Forms proyecto con un proyecto de biblioteca de iOS, Android y .net Standard. Todo el código se escribirá en el proyecto de biblioteca de .NET Standard; pero también se debe agregar el NuGet UrhoSharp a los proyectos de iOS y Android.
 
-El paquete NuGet UrhoSharp. Forms contiene todos los objetos necesarios para crear objetos UrhoSharp. El paquete de NuGet UrhoSharp. Forms incluye la clase `UrhoSurface`, que se usa para hospedar UrhoSharp en Xamarin. Forms.
-Para empezar, haga clic con el botón derecho en la carpeta **paquetes** en el proyecto de biblioteca de .net Standard y seleccione **agregar paquetes.** ... Escriba el término de búsqueda **UrhoSharp. Forms**, seleccione **UrhoSharp para Xamarin. Forms**y haga clic en **Agregar paquete**.
+El paquete NuGet UrhoSharp. Forms contiene todos los objetos necesarios para crear objetos UrhoSharp. El paquete NuGet UrhoSharp. Forms incluye la `UrhoSurface` clase, que se usa para hospedar UrhoSharp en Xamarin.Forms .
+Para empezar, haga clic con el botón derecho en la carpeta **paquetes** en el proyecto de biblioteca de .net Standard y seleccione **agregar paquetes.**... Escriba el término de búsqueda **UrhoSharp. Forms**, seleccione **UrhoSharp para Xamarin.Forms **y, a continuación, haga clic en **Agregar paquete**.
 
 [![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
 
-El paquete UrhoSharp.Forms NuGet se agregarán al proyecto:
+El paquete NuGet UrhoSharp. Forms se agregará al proyecto:
 
 ![](urhosharp-images/packages.png "Packages Folder")
 
-Repita los pasos anteriores para los proyectos específicos de la plataforma (por ejemplo, iOS y Android).
+Repita los pasos anteriores para los proyectos específicos de la plataforma (como iOS y Android).
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Tutorial: Agregar UrhoSharp a una aplicación de Xamarin.Forms
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Tutorial: agregar UrhoSharp a una Xamarin.Forms aplicación
 
-El código en el ejemplo de Xamarin.Forms UrhoSharp estos pasos:
+En estos pasos se describe el código del Xamarin.Forms ejemplo UrhoSharp:
 
-1. [Crear una página de formularios de Xamarin](#1)
-2. [Agregar el UrhoSurface](#2)
-3. [Crear una aplicación Urho](#3)
-4. [Agregue la clase de gráficos para el UrhoSurface](#4)
-5. [Interactuar con UrhoSharp](#5)
+1. [Crear una página de Xamarin Forms](#1)
+2. [Agregar UrhoSurface](#2)
+3. [Compilación de una aplicación de Urho](#3)
+4. [Agregue la clase Charts a UrhoSurface](#4)
+5. [Interacción con UrhoSharp](#5)
 
-Tenga en cuenta que el ejemplo usa C# 6 funciones y podrían no compilarse en versiones anteriores de Visual Studio.
+Tenga en cuenta que el ejemplo usa características de C# 6 y puede no compilarse en versiones anteriores de Visual Studio.
 
 <a name="1"/>
 
 ### <a name="1-create-a-xamarin-forms-page"></a>1. crear una página de Xamarin Forms
 
-El código siguiente muestra una página de Xamarin.Forms `UrhoPage` antes de que se ha agregado ningún código relacionado con Urho:
+En el código siguiente se muestra una Xamarin.Forms página `UrhoPage` antes de que se haya agregado cualquier código relacionado con Urho:
 
 ```csharp
 public class UrhoPage : ContentPage
@@ -91,8 +94,8 @@ public class UrhoPage : ContentPage
 
 ### <a name="2-add-the-urhosurface"></a>2. agregar UrhoSurface
 
-UrhoSharp puede hospedarse en un `ContentPage` al igual que otros controles de Xamarin.Forms.
-El fragmento de código siguiente se muestra un `UrhoSurface` agregado a la página de Xamarin.Forms:
+UrhoSharp se puede hospedar en un `ContentPage` como otros Xamarin.Forms controles.
+El siguiente fragmento de código muestra una `UrhoSurface` agregada a la Xamarin.Forms página:
 
 ```csharp
 using Urho;
@@ -124,7 +127,7 @@ public class UrhoPage : ContentPage
 
 ### <a name="3-build-a-urho-application"></a>3. compilar una aplicación de Urho
 
-Hacer referencia a la `Charts` clase para la implementación de los gráficos 3D de Urho utilizados en este ejemplo. El esquema de código básico se muestra a continuación: tenga en cuenta que la clase implementa `Urho.Application` que es diferente a la `Xamarin.Forms.Application` clase que se implementa en **App.cs**.
+Consulte la `Charts` clase para la implementación de los gráficos Urho 3D que se usan en este ejemplo. A continuación se muestra el esquema de código básico: tenga en cuenta que la clase implementa, `Urho.Application` que es diferente de la `Xamarin.Forms.Application` clase que se implementa en **app.CS**.
 
 ```csharp
 using Urho;
@@ -147,13 +150,13 @@ namespace FormsSample
     }
 ```
 
-El [UrhoSharp documentación](~/graphics-games/urhosharp/index.md) contiene más información sobre cómo crear acciones y escenas 3D.
+La [documentación de UrhoSharp](~/graphics-games/urhosharp/index.md) contiene más información sobre cómo crear escenas y acciones 3D.
 
 <a name="4"/>
 
 ### <a name="4-add-the-charts-class-to-the-urhosurface"></a>4. Agregue la clase Charts a UrhoSurface
 
-Use el `UrhoSurface.Show<T>` método genérico para agregar la aplicación Urho a la página de Xamarin.Forms. El siguiente fragmento de código muestra el código adicional necesario para crear el `Charts` clase:
+Use el `UrhoSurface.Show<T>` método genérico para agregar la aplicación Urho a la Xamarin.Forms página. El siguiente fragmento de código muestra el código adicional necesario para crear la `Charts` clase:
 
 ```csharp
 public class UrhoPage : ContentPage
@@ -167,15 +170,15 @@ public class UrhoPage : ContentPage
   }
 ```
 
-Nota: el `Show<T>` método es asincrónico y se debe llamar a con el `await` palabra clave.
+Nota: el `Show<T>` método es asincrónico y se debe llamar con la `await` palabra clave.
 
 <a name="5"/>
 
 ### <a name="5-interacting-with-urhosharp"></a>5. interactuar con UrhoSharp
 
-El ejemplo permite que las barras del gráfico se seleccionen y se puede modificar. El `Charts` clase expone la `Bars` y `SelectedBar` para habilitar esta interacción.
+El ejemplo permite seleccionar y modificar las barras del gráfico. La `Charts` clase expone `Bars` y `SelectedBar` para habilitar esta interacción.
 
-Cada "bar" tiene un controlador de eventos de selección agregado después de la `Charts` clase representa, repitiendo el expuesto `Bars` colección:
+Cada "barra" tiene un controlador de eventos de selección agregado una vez `Charts` representada la clase, recorriendo en iteración la `Bars` colección expuesta:
 
 ```csharp
 protected override async void OnAppearing ()
@@ -188,7 +191,7 @@ protected override async void OnAppearing ()
 }
 ```
 
-El controlador de eventos usa el valor de Xamarin.Forms `Slider` control para ajustar el alto de la barra determinado:
+El controlador de eventos usa el valor del Xamarin.Forms `Slider` control para ajustar el alto de la barra determinada:
 
 ```csharp
 private void OnBarSelection(Bar bar)
@@ -208,7 +211,7 @@ void OnValuesSliderValueChanged(object sender, ValueChangedEventArgs e)
 }
 ```
 
-Por último, conectar los dos `Slider` controles para que cuando cambia su valor se ve afectado el lienzo de UrhoSharp. El primer control deslizante gira la imagen del gráfico 3D y el segundo control deslizante ajusta el alto de la barra seleccionada.
+Por último, conecte los dos `Slider` controles para que cuando su valor cambie el lienzo UrhoSharp se vea afectado. El primer control deslizante gira la imagen del gráfico 3D y el segundo control deslizante ajusta el alto de la barra seleccionada.
 
 ```csharp
 rotationSlider = new Slider(0, 500, 250);
@@ -218,13 +221,13 @@ selectedBarSlider = new Slider(0, 5, 2.5);
 selectedBarSlider.ValueChanged += OnValuesSliderValueChanged;
 ```
 
-Las animaciones en el [superior de la página](#what-is-urhosharp) mostrar la ejecución del ejemplo.
+Las animaciones en la [parte superior de la página](#what-is-urhosharp) muestran el ejemplo en ejecución.
 
 ## <a name="summary"></a>Resumen
 
-Esta página muestra el uso de UrhoSharp para agregar la visualización de datos 3D para Xamarin.Forms. Leer el [UrhoSharp documentación](~/graphics-games/urhosharp/index.md) para obtener más información sobre cómo crear escenas Urho que pueden incluirse en las aplicaciones de Xamarin.Forms mediante el método mostrado anteriormente.
+En esta página se muestra cómo se puede usar UrhoSharp para agregar la visualización de datos 3D a Xamarin.Forms . Lea la [documentación de UrhoSharp](~/graphics-games/urhosharp/index.md) para obtener más información sobre cómo crear escenas de Urho que se pueden incluir en Xamarin.Forms aplicaciones con el método mostrado anteriormente.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Gráficos de ejemplo (C# 6)](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
+- [Ejemplo de gráficos (C# 6)](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
 - [UrhoSharp](~/graphics-games/urhosharp/index.md)

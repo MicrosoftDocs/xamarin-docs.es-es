@@ -1,27 +1,30 @@
 ---
-title: Agregar formato específico de iOS
-description: En este artículo se explica cómo establecer la apariencia específica de iOS sin usar un representador personalizado de Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/29/2016
-ms.openlocfilehash: 24d86c54ea4b346e1c165b28c6b62f5a98390d64
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: En este artículo se explica cómo establecer la apariencia específica de iOS sin usar un Xamarin.Forms representador personalizado.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eb44b7d756fee4fa4f452b79292effb45ab98154
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306420"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138520"
 ---
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
 Una manera de establecer el formato específico de iOS es crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para un control y establecer estilos y colores específicos de la plataforma para cada plataforma.
 
-Otras opciones para controlar el aspecto de la aplicación de iOS de Xamarin. Forms incluyen:
+Otras opciones para controlar el Xamarin.Forms aspecto de la aplicación de iOS incluyen:
 
 - Configurar las opciones de presentación en [ **info. plist**](#info-plist)
-- Establecer estilos de control a través de la [API de`UIAppearance`](#uiappearance)
+- Establecer estilos de control a través de la [ `UIAppearance` API](#uiappearance)
 
 Estas alternativas se describen a continuación.
 
@@ -39,7 +42,7 @@ nav.BarBackgroundColor = Color.FromHex("91CA47");
 nav.BarTextColor = Color.White;
 ```
 
-El resultado se muestra en el siguiente fragmento de código de pantalla. Tenga en cuenta que los elementos de la barra de estado son negros (esto no se puede establecer en Xamarin. Forms porque es una característica específica de la plataforma).
+El resultado se muestra en el siguiente fragmento de código de pantalla. Tenga en cuenta que los elementos de la barra de estado son negros (esto no se puede establecer en Xamarin.Forms porque es una característica específica de la plataforma).
 
 ![](theme-images/status-default-sml.png "iOS Theming")
 
@@ -56,7 +59,7 @@ o bien, edite el archivo **info. plist** correspondiente directamente para inclu
 <false/>
 ```
 
-Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su texto es blanco (debido al formato de Xamarin. Forms) *y* el texto de la barra de estado también está en blanco gracias a la configuración específica de iOS:
+Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su texto es blanco (debido al Xamarin.Forms formato) *y* el texto de la barra de estado también está en blanco gracias a la configuración específica de iOS:
 
 ![](theme-images/status-white-sml.png "iOS Theming")
 
@@ -64,9 +67,9 @@ Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su t
 
 ## <a name="uiappearance-api"></a>API de UIAppearance
 
-La [API de`UIAppearance`](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) se puede usar para establecer propiedades visuales en muchos controles de iOS *sin* tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+La [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) se puede usar para establecer propiedades visuales en muchos controles de iOS *sin* tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
-La adición de una sola línea de código al método `FinishedLaunching` **AppDelegate.CS** puede aplicar estilo a todos los controles de un tipo determinado mediante su propiedad `Appearance`. El código siguiente contiene dos ejemplos: aplicar estilos a la barra de pestañas y control de modificador de forma global:
+La adición de una sola línea de código al método **AppDelegate.CS** `FinishedLaunching` puede aplicar estilo a todos los controles de un tipo determinado mediante su `Appearance` propiedad. El código siguiente contiene dos ejemplos: aplicar estilos a la barra de pestañas y control de modificador de forma global:
 
 **AppDelegate.CS** en el proyecto de iOS
 
@@ -86,12 +89,12 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-De forma predeterminada, el icono de la barra de pestañas seleccionada en un [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+De forma predeterminada, el icono de la barra de pestañas seleccionada en un[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 sería azul:
 
 ![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
 
-Para cambiar este comportamiento, establezca la propiedad `UITabBar.Appearance`:
+Para cambiar este comportamiento, establezca la `UITabBar.Appearance` propiedad:
 
 ```csharp
 UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
@@ -101,23 +104,24 @@ Esto hace que la pestaña seleccionada sea verde:
 
 ![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
 
-El uso de esta API le permite personalizar la apariencia de los `TabbedPage` de Xamarin. Forms en iOS con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
+El uso de esta API le permite personalizar la apariencia delXamarin.Forms
+`TabbedPage`en iOS con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
 
 ### <a name="uiswitch"></a>UISwitch
 
-El control `Switch` es otro ejemplo en el que se puede aplicar un estilo sencillo:
+El `Switch` control es otro ejemplo en el que se puede aplicar un estilo sencillo:
 
 ```csharp
 UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 ```
 
-Estas dos capturas de pantalla muestran el control `UISwitch` predeterminado a la izquierda y la versión personalizada (valor `Appearance`) de la derecha en el [ejemplo de todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
+Estas dos capturas de pantalla muestran el `UISwitch` control predeterminado a la izquierda y la versión personalizada (valor `Appearance` ) de la derecha en el [ejemplo de todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
 ![](theme-images/switch-default.png "Color de UISwitch predeterminado") ![](theme-images/switch-custom.png "Color de UISwitch personalizado")
 
 ### <a name="other-controls"></a>Otros controles
 
-Muchos controles de interfaz de usuario de iOS pueden tener sus colores predeterminados y otros atributos establecidos mediante el [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
+Muchos controles de interfaz de usuario de iOS pueden tener sus colores predeterminados y otros atributos establecidos mediante la [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

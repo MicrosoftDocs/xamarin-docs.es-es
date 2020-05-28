@@ -1,24 +1,27 @@
 ---
-title: Alto de la barra de NavigationPage en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo utilizar el específico de la plataforma Android que establece el alto de la barra de navegación en un NavigationPage.
-ms.prod: xamarin
-ms.assetid: C8A73B64-FE70-408A-A72E-8AF147F0C52C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 501ea85a12a6e9b8b4198e0391e7ec8a16605069
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2dcabe3c0067734250834c2927fd4cbb83906943
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649996"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128796"
 ---
 # <a name="navigationpage-bar-height-on-android"></a>Alto de la barra de NavigationPage en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específico de la plataforma Android establece el alto de la barra de navegación [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)en un. Se consume en XAML estableciendo el [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propiedad enlazable en un valor entero:
+Este específico de la plataforma Android establece el alto de la barra de navegación en un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Se consume en XAML estableciendo la [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propiedad Bindable en un valor entero:
 
 ```xaml
 <NavigationPage ...
@@ -28,7 +31,7 @@ Este específico de la plataforma Android establece el alto de la barra de naveg
 </NavigationPage>
 ```
 
-Como alternativa, pueden usarse desde C# mediante la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -44,15 +47,15 @@ public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
 }
 ```
 
-El `NavigationPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en la compatibilidad de aplicaciones Android. El [ `NavigationPage.SetBarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.SetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage},System.Int32)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) espacio de nombres, se usa para establecer el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Además, el [ `NavigationPage.GetBarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.GetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage})) método puede utilizarse para devolver el alto de la barra de navegación en el `NavigationPage`.
+El `NavigationPage.On<Android>` método especifica que este específico de la plataforma solo se ejecutará en Android de compatibilidad de aplicaciones. [ `NavigationPage.SetBarHeight` ] (XREF: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. NavigationPage. SetBarHeight ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . NavigationPage}, System. Int32)), en el [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) espacio de nombres, se usa para establecer el alto de la barra de navegación en [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Además, [ `NavigationPage.GetBarHeight` ] (XREF: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. NavigationPage. GetBarHeight ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . NavigationPage})) que se puede usar para devolver el alto de la barra de navegación en `NavigationPage` .
 
-El resultado es que el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) se pueden establecer:
+El resultado es que se puede establecer el alto de la barra de navegación en un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) :
 
-![](navigationpage-bar-height-images/navigationpage-barheight.png "NavigationPage alto de la barra de navegación")
+![](navigationpage-bar-height-images/navigationpage-barheight.png "NavigationPage navigation bar height")
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

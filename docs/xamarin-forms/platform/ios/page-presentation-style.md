@@ -1,18 +1,21 @@
 ---
-title: Estilo de presentación de página modal en iOS
-description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que establece el estilo de presentación de una página modal.
-ms.prod: xamarin
-ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/02/2020
-ms.openlocfilehash: 19175a6d97afb9d2d985d8a1bf8e1ce4c0179242
-ms.sourcegitcommit: 87035b654434c22ca1b0d70ee8d2496dcb63b365
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546511"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128016"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Estilo de presentación de página modal en iOS
 
@@ -60,7 +63,7 @@ El resultado es que se puede establecer el estilo de Presentación modal en un [
 [![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
-> Las páginas que usan este tipo específico de la plataforma para establecer el estilo de Presentación modal deben usar la navegación modal. Para obtener más información, vea [páginas modales de Xamarin. Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+> Las páginas que usan este tipo específico de la plataforma para establecer el estilo de Presentación modal deben usar la navegación modal. Para obtener más información, vea [ Xamarin.Forms páginas modales](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

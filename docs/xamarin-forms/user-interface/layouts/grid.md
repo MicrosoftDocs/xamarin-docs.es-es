@@ -1,24 +1,27 @@
 ---
-title: Cuadrícula de Xamarin. Forms
-description: La cuadrícula de Xamarin. Forms es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
-ms.prod: xamarin
-ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsCuadrícula
+description: La Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425911"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138078"
 ---
-# <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin. Forms
+# <a name="xamarinforms-grid"></a>Xamarin.FormsCuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Cuadrícula de Xamarin. Forms](grid-images/layouts.png "Cuadrícula de Xamarin. Forms")](grid-images/layouts-large.png#lightbox "Cuadrícula de Xamarin. Forms")
+[![Xamarin.FormsCuadrícula](grid-images/layouts.png "[! Operador. Cuadrícula de NO-LOC (Xamarin. Forms)]")](grid-images/layouts-large.png#lightbox "[! Operador. Cuadrícula de NO-LOC (Xamarin. Forms)]")
 
 [`Grid`](xref:Xamarin.Forms.Grid)Es un diseño que organiza sus elementos secundarios en filas y columnas, que pueden tener tamaños proporcionales o absolutos. De forma predeterminada, un `Grid` contiene una fila y una columna. Además, `Grid` se puede utilizar como un diseño primario que contiene otros diseños secundarios.
 
@@ -735,6 +738,6 @@ public class ColorSlidersGridPageCS : ContentPage
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de cuadrícula (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Opciones de diseño de Xamarin. Forms](layout-options.md)
-- [Elegir un diseño de Xamarin. Forms](choose-layout.md)
-- [Mejora del rendimiento de aplicaciones Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Opciones de diseño enXamarin.Forms](layout-options.md)
+- [Elegir un Xamarin.Forms diseño](choose-layout.md)
+- [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)

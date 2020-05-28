@@ -1,22 +1,25 @@
 ---
-title: Propiedades, métodos y eventos de controles comunes de Xamarin.Forms
-description: En este artículo se describen las propiedades, los métodos y los eventos comunes definidos en la clase VisualElement, que se suelen usar en las clases derivadas.
-ms.prod: xamarin
-ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 08/21/2019
-ms.openlocfilehash: 7d8f5309d14c2a99afff0998a7013a9ebec338c1
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.Formspropiedades, métodos y eventos de controles comunes
+description: ''
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425838"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136427"
 ---
-# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Propiedades, métodos y eventos de controles comunes de Xamarin.Forms
+# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
 
-La clase de Xamarin. Forms `VisualElement` es la clase base para la mayoría de los controles que se usan en una aplicación de Xamarin. Forms. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
+La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los controles utilizados en una Xamarin.Forms aplicación. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
 
 ## <a name="properties"></a>Propiedades
 
@@ -36,15 +39,15 @@ La `BackgroundColor` propiedad es un `Color` que determina el color de fondo del
 
 ### [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors)
 
-La `Behaviors` propiedad es `List` de `Behavior` objetos. Los comportamientos permiten asociar la funcionalidad reutilizable a los elementos agregándolos a la `Behaviors` lista. Para obtener más información sobre la `Behavior` clase, vea [comportamientos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/behaviors/index.md).
+La `Behaviors` propiedad es `List` de `Behavior` objetos. Los comportamientos permiten asociar la funcionalidad reutilizable a los elementos agregándolos a la `Behaviors` lista. Para obtener más información sobre la `Behavior` clase, vea [ Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/index.md).
 
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
-La `Bounds` propiedad es un objeto de solo lectura `Rectangle` que representa el espacio ocupado por el control. El `Bounds` valor de la propiedad se asigna durante el ciclo de diseño. `Rectangle` `struct` Contiene propiedades y métodos útiles para probar la intersección y la contención de rectángulos. Para obtener más información, consulte la [API de rectángulo de Xamarin. Forms](xref:Xamarin.Forms.Rectangle).
+La `Bounds` propiedad es un objeto de solo lectura `Rectangle` que representa el espacio ocupado por el control. El `Bounds` valor de la propiedad se asigna durante el ciclo de diseño. `Rectangle` `struct` Contiene propiedades y métodos útiles para probar la intersección y la contención de rectángulos. Para obtener más información, consulte la [ Xamarin.Forms API de rectángulo](xref:Xamarin.Forms.Rectangle).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-La `Effects` propiedad es `List` de `Effect` objetos, heredada de la `Element` clase (XREF: Xamarin. Forms. Element). Los efectos permiten personalizar los controles nativos y se suelen usar para pequeños cambios de estilo. Para obtener más información sobre la `Effect` clase, vea [efectos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/effects/index.md).
+La `Effects` propiedad es `List` de `Effect` objetos, heredada de `Element` (XREF: Xamarin.Forms . Element). Los efectos permiten personalizar los controles nativos y se suelen usar para pequeños cambios de estilo. Para obtener más información sobre la `Effect` clase, vea [ Xamarin.Forms efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
@@ -130,11 +133,11 @@ La `ScaleY` propiedad es un `double` valor que define la escala del control a lo
 
 ### [`Style`](xref:Xamarin.Forms.NavigableElement.Style)
 
-La propiedad `Style` se hereda de la clase `NavigableElement`. Esta propiedad es una instancia de la `Style` clase. La `Style` clase contiene desencadenadores, establecedores y comportamientos que definen la apariencia y el comportamiento de los elementos visuales. Para obtener más información, vea [estilos XAML de Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/index.md).
+La propiedad `Style` se hereda de la clase `NavigableElement`. Esta propiedad es una instancia de la `Style` clase. La `Style` clase contiene desencadenadores, establecedores y comportamientos que definen la apariencia y el comportamiento de los elementos visuales. Para obtener más información, vea [ Xamarin.Forms estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
 ### [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass)
 
-La `StyleClass` propiedad es una lista de `string` objetos que representan los nombres de `Style` las clases. Esta propiedad se hereda de la clase `NavigableElement`. La `StyleClass` propiedad permite aplicar varios atributos de estilo a una `VisualElement` instancia de. Para obtener más información, vea [clases de estilo de Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
+La `StyleClass` propiedad es una lista de `string` objetos que representan los nombres de `Style` las clases. Esta propiedad se hereda de la clase `NavigableElement`. La `StyleClass` propiedad permite aplicar varios atributos de estilo a una `VisualElement` instancia de. Para obtener más información, vea [ Xamarin.Forms clases de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
 ### [`TabIndex`](xref:Xamarin.Forms.VisualElement.TabIndex)
 
@@ -144,21 +147,21 @@ La `TabIndex` propiedad es un `int` valor que define el orden de control al avan
 
 La `TranslationX` propiedad es un `double` valor que define la conversión Delta que se va a aplicar en el eje X. La traducción se aplica después del diseño y se utiliza normalmente para aplicar animaciones. La conversión de un elemento fuera de los límites de su contenedor primario My impide que se funcionen las entradas.
 
-Para obtener más información, vea [animación en Xamarin. Forms](~/xamarin-forms/user-interface/animation/index.md).
+Para obtener más información, vea [animación Xamarin.Forms en ](~/xamarin-forms/user-interface/animation/index.md).
 
 ### [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 
 La `TranslationY` propiedad es un `double` valor que define la conversión Delta que se va a aplicar en el eje Y. La traducción se aplica después del diseño y se utiliza normalmente para aplicar animaciones. La conversión de un elemento fuera de los límites de su contenedor primario My impide que se funcionen las entradas.
 
-Para obtener más información, vea [animación en Xamarin. Forms](~/xamarin-forms/user-interface/animation/index.md).
+Para obtener más información, vea [animación Xamarin.Forms en ](~/xamarin-forms/user-interface/animation/index.md).
 
 ### [`Triggers`](xref:Xamarin.Forms.VisualElement.Triggers)
 
-La `Triggers` propiedad es de solo lectura `List` de `TriggerBase` objetos. Los desencadenadores permiten a los desarrolladores de aplicaciones expresar acciones en XAML que cambian la apariencia visual de los controles en respuesta a los cambios de eventos o propiedades. Para obtener más información, vea [desencadenadores de Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+La `Triggers` propiedad es de solo lectura `List` de `TriggerBase` objetos. Los desencadenadores permiten a los desarrolladores de aplicaciones expresar acciones en XAML que cambian la apariencia visual de los controles en respuesta a los cambios de eventos o propiedades. Para obtener más información, vea [ Xamarin.Forms desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ### [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)
 
-La `Visual` propiedad es una `IVisual` instancia de que permite crear representadores y aplicarlos de forma selectiva a `VisualElement` las instancias de. La `Visual` propiedad se establece para que coincida con su elemento primario, por lo que la definición de un representador en un componente también se aplicará a todos los elementos secundarios de ese componente. Si no se establece ningún representador personalizado en un control o en sus antecesores, se usará el representador de Xamarin. Forms predeterminado. Para obtener más información, vea [Visual Xamarin. Forms](~/xamarin-forms/user-interface/visual/index.md).
+La `Visual` propiedad es una `IVisual` instancia de que permite crear representadores y aplicarlos de forma selectiva a `VisualElement` las instancias de. La `Visual` propiedad se establece para que coincida con su elemento primario, por lo que la definición de un representador en un componente también se aplicará a todos los elementos secundarios de ese componente. Si no se establece ningún representador personalizado en un control o en sus antecesores, se Xamarin.Forms usará el representador predeterminado. Para obtener más información, vea [ Xamarin.Forms Visual](~/xamarin-forms/user-interface/visual/index.md).
 
 ### [`Width`](xref:Xamarin.Forms.VisualElement.Width)
 
@@ -212,11 +215,11 @@ El elemento ya debe tener el foco para que este método funcione.
 
 ## <a name="events"></a>Eventos
 
-Los eventos siguientes están disponibles en la `VisualElement` clase. Para obtener una lista completa, vea [eventos de Xamarin. Forms VisualElement](xref:Xamarin.Forms.VisualElement#events).
+Los eventos siguientes están disponibles en la `VisualElement` clase. Para obtener una lista completa, vea [ Xamarin.Forms VisualElement Events](xref:Xamarin.Forms.VisualElement#events).
 
 ### [`Focused`](xref:Xamarin.Forms.VisualElement.Focused)
 
-El `Focused` evento se desencadena cuando la `VisualElement` instancia recibe el foco. Este evento no se traspasa a través de la pila de Xamarin. Forms, sino que se recibe directamente del control nativo. El establecedor de la propiedad emite este evento [`IsFocused`](#isfocused) .
+El `Focused` evento se desencadena cuando la `VisualElement` instancia recibe el foco. Este evento no se traspasa a través de la Xamarin.Forms pila, sino que se recibe directamente del control nativo. El establecedor de la propiedad emite este evento [`IsFocused`](#isfocused) .
 
 ### [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
@@ -224,11 +227,11 @@ El `SizeChanged` evento se desencadena cuando `VisualElement` cambia la instanci
 
 ### [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused)
 
-El `Unfocused` evento se desencadena cuando la `VisualElement` instancia pierde el foco. Este evento no se traspasa a través de la pila de Xamarin. Forms, sino que se recibe directamente del control nativo. El establecedor de la propiedad emite este evento [`IsFocused`](#isfocused) .
+El `Unfocused` evento se desencadena cuando la `VisualElement` instancia pierde el foco. Este evento no se traspasa a través de la Xamarin.Forms pila, sino que se recibe directamente del control nativo. El establecedor de la propiedad emite este evento [`IsFocused`](#isfocused) .
 
 ## <a name="units-of-measurement"></a>Unidades de medida
 
-Todas las plataformas Android, iOS y UWP tienen unidades de medida diferentes que pueden variar en los dispositivos. Xamarin. Forms usa una unidad de medida independiente de la plataforma que normaliza las unidades entre dispositivos y plataformas. Hay 160 unidades por pulgada o 64 unidades por centímetro en Xamarin. Forms.
+Todas las plataformas Android, iOS y UWP tienen unidades de medida diferentes que pueden variar en los dispositivos. Xamarin.Formsutiliza una unidad de medida independiente de la plataforma que normaliza las unidades entre dispositivos y plataformas. Hay 160 unidades por pulgada, o 64 unidades por centímetro, en Xamarin.Forms .
 
 ## <a name="request-properties"></a>Propiedades de solicitud
 
@@ -261,7 +264,7 @@ El comportamiento es indefinido cuando el valor mínimo es mayor que el valor ab
 
 ### <a name="minimum-properties-within-a-grid"></a>Propiedades mínimas dentro de una cuadrícula
 
-`Grid`los diseños tienen su propio sistema para ajustar el tamaño relativo de las filas y las columnas. El uso de `MinimumWidthRequest` o `MinimumHeightRequest` dentro de un `Grid` diseño no tendrá ningún efecto. Para obtener más información, consulte [cuadrícula de Xamarin. Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+`Grid`los diseños tienen su propio sistema para ajustar el tamaño relativo de las filas y las columnas. El uso de `MinimumWidthRequest` o `MinimumHeightRequest` dentro de un `Grid` diseño no tendrá ningún efecto. Para obtener más información, vea [ Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,40 +1,43 @@
 ---
-title: Sombreadores de SkiaSharp
-description: Usar a sombreadores para crear degradados, iconos de mapa de bits y el ruido de Perlin.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 90022ddd59f56e0d70e5b8efd57d97713df5e969
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8f4ef3a583a7f9078f62c899d3b2abfc0848cc79
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654914"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135439"
 ---
-# <a name="skiasharp-shaders"></a>Sombreadores de SkiaSharp
+# <a name="skiasharp-shaders"></a>Sombreadores SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Puede establecer el [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint` a un objeto de tipo [ `SKShader` ](xref:SkiaSharp.SKShader) para crear varios tipos de degradados, un patrón de mosaico de mapa de bits o ruido de Perlin.
+Puede establecer la [`Shader`](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint` en un objeto de tipo [`SKShader`](xref:SkiaSharp.SKShader) para crear varios tipos de degradados, un patrón de mapa de bits en mosaico o un ruido de Perl.
 
-## <a name="the-skiasharp-linear-gradientlinear-gradientmd"></a>[Degradado lineal de SkiaSharp](linear-gradient.md)
+## <a name="the-skiasharp-linear-gradient"></a>[El degradado lineal SkiaSharp](linear-gradient.md)
 
-Descubra cómo trazar líneas o áreas de relleno con degradados se componen de una mezcla gradual de dos colores.
+Descubra cómo trazar líneas o rellenar áreas con degradados compuestos de una mezcla gradual de dos colores.
 
-## <a name="skiasharp-circular-gradientscircular-gradientsmd"></a>[Degradados circulares de SkiaSharp](circular-gradients.md)
+## <a name="skiasharp-circular-gradients"></a>[Degradados circulares SkiaSharp](circular-gradients.md)
 
-Obtenga información sobre los diferentes tipos de degradados en función de los círculos y usarlos para las máscaras o resaltes especulares.
+Obtenga información sobre los diferentes tipos de degradados basados en círculos y úselos para máscaras o resaltados especulares.
 
-## <a name="skiasharp-bitmap-tilingbitmap-tilingmd"></a>[Mosaico de mapa de bits de SkiaSharp](bitmap-tiling.md)
+## <a name="skiasharp-bitmap-tiling"></a>[Mosaico de mapa de bits SkiaSharp](bitmap-tiling.md)
 
-Icono de un área con mapas de bits repetido horizontal y verticalmente.
+Colocar en mosaico un área con mapas de bits repetidos horizontal y verticalmente.
 
-## <a name="skiasharp-noise-and-composingnoisemd"></a>[Ruido de SkiaSharp y composición](noise.md)
+## <a name="skiasharp-noise-and-composing"></a>[SkiaSharp ruido y composición](noise.md)
 
-Generar a los sombreadores de ruido de Perlin y se combina con otros sombreadores.
+Genere sombreadores de ruido de Perl y combínelo con otros sombreadores.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

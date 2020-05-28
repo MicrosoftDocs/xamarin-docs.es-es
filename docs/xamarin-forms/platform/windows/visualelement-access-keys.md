@@ -1,28 +1,31 @@
 ---
-title: Claves de acceso de VisualElement en Windows
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma específica de Windows que especifica una clave de acceso para un VisualElement.
-ms.prod: xamarin
-ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: ce1d682678c17bb24e7a4fd528c84554465c4fa6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1bfd61e79a2b4697e884afb45e4b9080ee939b87
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656835"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136531"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Claves de acceso de VisualElement en Windows
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Las claves de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y la accesibilidad de las aplicaciones en el Plataforma universal de Windows (UWP) al proporcionar una manera intuitiva de que los usuarios naveguen rápidamente e interactúen con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de hacerlo a través de un toque. o un mouse. Son combinaciones de la tecla Alt y uno o más teclas alfanuméricas, normalmente presionadas de manera secuencial. Métodos abreviados de teclado automáticamente son compatibles con las claves de acceso que utilizan un carácter alfanumérico individual.
+Las claves de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y la accesibilidad de las aplicaciones en el Plataforma universal de Windows (UWP) al proporcionar una manera intuitiva de que los usuarios naveguen rápidamente e interactúen con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de hacerlo a través de un toque o un mouse. Son combinaciones de la tecla Alt y una o varias claves alfanuméricas, normalmente presionadas secuencialmente. Los métodos abreviados de teclado se admiten automáticamente para las teclas de acceso que utilizan un solo carácter alfanumérico.
 
-Sugerencias de teclas de acceso son flotantes distintivos que se muestra al lado de los controles que incluyen las claves de acceso. Cada sugerencia de clave de acceso contiene las teclas alfanuméricas que activación el control asociado. Cuando un usuario presiona la tecla Alt, se muestran las sugerencias de teclas de acceso.
+Las sugerencias de teclas de acceso son notificaciones flotantes que se muestran junto a los controles que incluyen claves de acceso. Cada sugerencia de clave de acceso contiene las claves alfanuméricas que activan el control asociado. Cuando el usuario presiona la tecla Alt, se muestran las sugerencias de teclas de acceso.
 
-Este UWP específico de la plataforma se usa para especificar una clave de acceso [`VisualElement`](xref:Xamarin.Forms.VisualElement)para. Se consume en XAML estableciendo el [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) propiedad adjunta a un valor alfanumérico y, opcionalmente, establezca el [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) propiedad adjunta a un valor de la [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumeración, el [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) propiedad adjunta un `double`y el [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) propiedad adjunta a un `double`:
+Este UWP específico de la plataforma se usa para especificar una clave de acceso para [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Se utiliza en XAML estableciendo la [`VisualElement.AccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) propiedad adjunta en un valor alfanumérico y estableciendo opcionalmente la [`VisualElement.AccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) propiedad adjunta en un valor de la [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeración, la [`VisualElement.AccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) propiedad adjunta en un `double` y la [`VisualElement.AccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) propiedad adjunta en un `double` :
 
 ```xaml
 <TabbedPage ...
@@ -49,7 +52,7 @@ Este UWP específico de la plataforma se usa para especificar una clave de acces
 </TabbedPage>
 ```
 
-Como alternativa, pueden usarse desde C# mediante la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -75,30 +78,30 @@ button4.On<Windows>()
 ...
 ```
 
-El `VisualElement.On<Windows>` método especifica que solo se ejecutan este específicos de la plataforma en la plataforma Universal de Windows. El [ `VisualElement.SetAccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.String)) método, en el [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se usa para establecer el valor de clave de acceso para el `VisualElement`. El [ `VisualElement.SetAccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},Xamarin.Forms.AccessKeyPlacement)) método, opcionalmente, especifica la posición que se usará para mostrar la sugerencia de clave de acceso, con el [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumeración que proporciona los siguientes valores posibles:
+El `VisualElement.On<Windows>` método especifica que este específico de la plataforma solo se ejecutará en el plataforma universal de Windows. [ `VisualElement.SetAccessKey` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, System. String)), en el [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se usa para establecer el valor de la clave de acceso para `VisualElement` . [ `VisualElement.SetAccessKeyPlacement` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, Xamarin.Forms . AccessKeyPlacement)), especifica opcionalmente la posición que se va a usar para mostrar la sugerencia de clave de acceso, con la [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeración que proporciona los siguientes valores posibles:
 
-- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) : indica que la selección de ubicación de acceso keytips vendrá determinado por el sistema operativo.
-- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) : indica que la sugerencia de clave de acceso aparecerá por encima del borde superior de la `VisualElement`.
-- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) : indica que la sugerencia de clave de acceso aparecerá debajo de la parte inferior de la `VisualElement`.
-- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) : indica que aparecerá la sugerencia de clave de acceso a la derecha del borde derecho de la `VisualElement`.
-- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) : indica que aparecerá la sugerencia de clave de acceso a la izquierda del borde izquierdo de la `VisualElement`.
-- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) : indica que la sugerencia de clave de acceso aparecen superpuesta en el centro de la `VisualElement`.
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto): indica que el sistema operativo determinará la ubicación de la información sobre las teclas de acceso.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top): indica que la sugerencia de tecla de acceso aparecerá encima del borde superior de `VisualElement` .
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom): indica que la sugerencia de tecla de acceso aparecerá debajo del borde inferior de `VisualElement` .
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right): indica que la sugerencia de tecla de acceso aparecerá a la derecha del borde derecho del `VisualElement` .
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left): indica que la sugerencia de tecla de acceso aparecerá a la izquierda del borde izquierdo de `VisualElement` .
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center): indica que la sugerencia de tecla de acceso aparecerá superpuesta en el centro del `VisualElement` .
 
 > [!NOTE]
-> Normalmente, el [ `Auto` ](xref:Xamarin.Forms.AccessKeyPlacement.Auto) colocación keytips es suficiente, lo que incluye compatibilidad con interfaces de usuario adaptable.
+> Normalmente, la [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) Ubicación de la sugerencia de teclas es suficiente, lo que incluye la compatibilidad con las interfaces de usuario adaptables.
 
-El [ `VisualElement.SetAccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) y [ `VisualElement.SetAccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) pueden usarse métodos de control más detallado de la ubicación de acceso keytips. El argumento para el `SetAccessKeyHorizontalOffset` método indica el momento para mover la punta de clave de acceso hacia la izquierda o derecha y el argumento para el `SetAccessKeyVerticalOffset` método indica la distancia que hay que mover la sugerencia de clave de acceso hacia arriba o hacia abajo.
+[ `VisualElement.SetAccessKeyHorizontalOffset` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKeyHorizontalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, System. Double)) y [ `VisualElement.SetAccessKeyVerticalOffset` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKeyVerticalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Los métodos VisualElement}, System. Double)) se pueden usar para un control más granular de la ubicación de la información sobre las teclas de acceso. El argumento para el `SetAccessKeyHorizontalOffset` método indica la distancia a la que se debe desplace la punta de la tecla de acceso a la izquierda o a la derecha, y el argumento al `SetAccessKeyVerticalOffset` método indica hasta dónde se mueve la punta de la tecla de acceso hacia arriba o hacia abajo.
 
 >[!NOTE]
-> Desplazamientos de sugerencia de clave de acceso no pueden establecerse cuando se establece la posición de clave de acceso `Auto`.
+> No se pueden establecer los desplazamientos de la sugerencia de clave de acceso cuando se establece la posición de la clave de acceso `Auto` .
 
-Además, el [ `GetAccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [ `GetAccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [ `GetAccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), y [ `GetAccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})) pueden usarse métodos para recuperar el acceso de un valor y su ubicación de la clave.
+Además, [ `GetAccessKey` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. GetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})), [ `GetAccessKeyPlacement` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. GetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})), [ `GetAccessKeyHorizontalOffset` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. GetAccessKeyHorizontalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})) y [ `GetAccessKeyVerticalOffset` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. GetAccessKeyVerticalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})). los métodos se pueden usar para recuperar un valor de clave de acceso y su ubicación.
 
-El resultado es que se pueden mostrar sugerencias de teclas de acceso junto a cualquiera [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) instancias que definen el acceso de las claves, presionando la tecla Alt:
+El resultado es que las sugerencias de teclas de acceso se pueden mostrar junto a cualquier [`VisualElement`](xref:Xamarin.Forms.VisualElement) instancia que defina las teclas de acceso presionando la tecla Alt:
 
-![Específico de la plataforma de las claves de acceso de VisualElement](visualelement-access-keys-images/visualelement-accesskeys.png "VisualElement acceso claves específicas de la plataforma")
+![Claves de acceso VisualElement específicas de la plataforma](visualelement-access-keys-images/visualelement-accesskeys.png "Claves de acceso VisualElement específicas de la plataforma")
 
-Cuando un usuario activa una tecla de acceso presionando la tecla Alt, seguida por el acceso de clave, la acción predeterminada para el `VisualElement` se ejecutará. Por ejemplo, cuando un usuario activa la clave de acceso en un [ `Switch` ](xref:Xamarin.Forms.Switch), el `Switch` se alterna. Cuando un usuario activa la clave de acceso en un [ `Entry` ](xref:Xamarin.Forms.Entry), el `Entry` recibe el foco. Cuando un usuario activa la clave de acceso en un [ `Button` ](xref:Xamarin.Forms.Button), el controlador de eventos para el [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) se ejecuta el evento.
+Cuando un usuario activa una tecla de acceso, presione la tecla Alt seguida de la tecla de acceso para que se ejecute la acción predeterminada de `VisualElement` . Por ejemplo, cuando un usuario activa la tecla de acceso en un [`Switch`](xref:Xamarin.Forms.Switch) , `Switch` se alterna. Cuando un usuario activa la tecla de acceso en un [`Entry`](xref:Xamarin.Forms.Entry) , `Entry` obtiene el foco. Cuando un usuario activa la tecla de acceso en una [`Button`](xref:Xamarin.Forms.Button) , se ejecuta el controlador de eventos para el [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento.
 
 Para obtener más información acerca de las claves de acceso, consulte [claves de acceso](/windows/uwp/design/input/access-keys#key-tip-positioning).
 

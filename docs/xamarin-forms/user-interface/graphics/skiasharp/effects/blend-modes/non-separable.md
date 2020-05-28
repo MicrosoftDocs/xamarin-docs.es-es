@@ -1,57 +1,174 @@
 ---
-title: Los modos de mezcla no separables
-description: Utilizar los modos de mezcla no separables para alterar el matiz, saturación o luminosidad.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642781"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130187"
 ---
-# <a name="the-non-separable-blend-modes"></a>Los modos de mezcla no separables
+# <a name="the-non-separable-blend-modes"></a>Modos de mezcla no separables
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como se vio en el artículo [ **modos de fusión de SkiaSharp separable**](separable.md), los modos de mezcla separables realizan operaciones en los canales de rojos, verde y azules por separado. Los modos de mezcla no separables no lo hacen. Al operar en los niveles de matiz, saturación y luminosidad del color, los modos de mezcla no separable pueden modificar los colores de maneras interesantes:
+Como vimos en el artículo [**SkiaSharp modos de mezcla**](separable.md)separables, los modos de mezcla separables realizan operaciones en los canales rojo, verde y azul por separado. Los modos de mezcla no separables no. Al trabajar con los niveles de matiz, saturación y luminosidad del color, los modos de mezcla no separables pueden modificar los colores de maneras interesantes:
 
-![Ejemplo que no sean separables](non-separable-images/NonSeparableSample.png "ejemplo no separables")
+![Ejemplo no separable](non-separable-images/NonSeparableSample.png "Ejemplo no separable")
 
-## <a name="the-hue-saturation-luminosity-model"></a>El modelo de matiz-saturación-luminosidad
+## <a name="the-hue-saturation-luminosity-model"></a>Modelo Hue-saturación-luminosidad
 
-Para entender los modos de mezcla no separables, es necesario para tratar los píxeles de origen y destino, como los colores en el modelo de matiz-saturación-luminosidad. (Luminosidad también se conoce como la luminosidad.)
+Para comprender los modos de mezcla no separables, es necesario tratar los píxeles de origen y de destino como colores en el modelo Hue-saturación-luminosidad. (La luminosidad también se denomina luminosidad).
 
-El modelo de color HSL explicado en el artículo [ **integración con Xamarin.Forms** ](../../basics/integration.md) y un programa de ejemplo de este artículo permite la experimentación con colores HSL. Puede crear un `SKColor` valor con los valores de matiz, saturación y luminosidad estático [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) método.
+El modelo de color HSL se analizó en el artículo [**integración con Xamarin.Forms **](../../basics/integration.md) y un programa de ejemplo en ese artículo permite experimentar con los colores HSL. Puede crear un `SKColor` valor mediante valores de matiz, saturación y luminosidad con el método estático [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
 
-El matiz representa la longitud de onda dominante del color. Los valores de matiz oscilan entre 0 y 360 y desplazarse por las principales sumas y sustractivas: Rojo es el valor 0, el amarillo es 60, el verde es 120, el aguamarina es 180, el azul es 240, el magenta es 300 y el ciclo vuelve a rojo en 360.
+El matiz representa la longitud de onda dominante del color. Los valores de matiz oscilan entre 0 y 360 y se recorren las principales sumas y sustractivas: rojo es el valor 0, el amarillo es 60, el verde es 120, el aguamarina es 180, el azul es 240, el magenta es de 300 y el ciclo vuelve a rojo en 360.
 
-Si no hay ningún color predominante &mdash; por ejemplo, el color es blanco o negro o una sombra gris &mdash; el matiz es undefined y normalmente se establece en 0. 
+Si no hay ningún color dominante &mdash; , por ejemplo, el color es blanco o negro o un sombreado gris &mdash; , el matiz es indefinido y normalmente se establece en 0. 
 
-Los valores de saturación pueden oscilar entre 0 y 100 e indicar la pureza del color. Un valor de saturación de 100 es el color más puro mientras que los valores inferiores a 100 hacer que el color esté más grayish. Un valor de saturación de 0 da como resultado un tono de gris.
+Los valores de saturación pueden oscilar entre 0 y 100 e indican la pureza del color. Un valor de saturación de 100 es el color más puro, mientras que los valores inferiores a 100 hacen que el color sea más gris. Un valor de saturación de 0 da como resultado un sombreado de gris.
 
-El valor de luminosidad (o luminosidad) indica el color claro cómo es. Un valor de luminosidad 0 es negro, independientemente de las otras opciones. De forma similar, un valor de luminosidad de 100 es blanco. 
+El valor de luminosidad (o luminosidad) indica el brillo del color. Un valor de luminosidad de 0 es negro, independientemente de los demás valores. Del mismo modo, el valor de luminosidad 100 es blanco. 
 
-El valor HSL (0, 100, 50) es el valor RGB (FF, 00, 00), que es rojo puro. El valor HSL (180, 100, 50) es el valor RGB (00, FF, FF), cian puro. A medida que se reduce la saturación, se reduce el componente de color dominante y se incrementan los demás componentes. En un nivel de saturación de 0, todos los componentes son los mismos y el color es un tono de gris. Disminuir la luminosidad para ir a negro; Aumente la luminosidad para ir a en blanco.
+El valor HSL (0, 100, 50) es el valor RGB (FF, 00, 00), que es rojo puro. El valor HSL (180, 100, 50) es el valor RGB (00, FF, FF), aguamarina puro. A medida que se reduce la saturación, se reduce el componente de color dominante y se incrementan los demás componentes. En un nivel de saturación de 0, todos los componentes son los mismos y el color es un sombreado gris. Disminuya la luminosidad para ir a negro; aumente la luminosidad para ir a blanco.
 
-## <a name="the-blend-modes-in-detail"></a>Los modos de blend en detalle
+## <a name="the-blend-modes-in-detail"></a>Modos de Blend en detalle
 
-Al igual que los otros modos de mezcla, los cuatro modos de blend no separables implican un destino (que suele ser una imagen de mapa de bits) y un origen, que suele ser un único color o un degradado. Los modos de mezcla combinan valores de matiz, saturación y luminosidad desde el origen y el destino:
+Al igual que los demás modos de fusión, los cuatro modos de mezcla no separables implican un destino (que suele ser una imagen de mapa de bits) y un origen, que suele ser un solo color o degradado. Los modos de mezcla combinan los valores de matiz, saturación y luminosidad del destino y el origen:
 
-| Modo de mezcla   | Componentes de origen | Componentes de destino |
-| ------------ | ---------------------- | --------------------------- |
-| `Hue`        | Matiz                    | Saturación y luminosidad   |
-| `Saturation` | Saturación             | Matiz y luminosidad          |
-| `Color`      | Matiz y saturación     | Luminosidad                  | 
-| `Luminosity` | Luminosidad             | Matiz y saturación          | 
+| Modo de mezcla   | Componentes del origen | Componentes del destino |
+| ---
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Consulte el W3C [ **la composición y mezcla de nivel 1** ](https://www.w3.org/TR/compositing-1/) especificación de los algoritmos.
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-El **modos Blend no separables** página contiene un `Picker` para seleccionar uno de estos modos y tres blend `Slider` vistas para seleccionar un color HSL:
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+----------- | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-------------- | | `Hue`        | Matiz | Saturación y luminosidad | | `Saturation` | Saturación | Matiz y luminosidad | | `Color`      | Matiz y saturación | Luminosidad | | `Luminosity` | Luminosidad | Matiz y saturación | 
+
+Vea la especificación del [**nivel 1 de composición y combinación**](https://www.w3.org/TR/compositing-1/) de W3C para los algoritmos.
+
+La página **modos de mezcla no separables** contiene un `Picker` para seleccionar uno de estos modos de mezcla y tres `Slider` vistas para seleccionar un color HSL:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -113,7 +230,7 @@ El **modos Blend no separables** página contiene un `Picker` para seleccionar u
 
 Para ahorrar espacio, las tres `Slider` vistas no se identifican en la interfaz de usuario del programa. Deberá recordar que el orden es matiz, saturación y luminosidad. Dos `Label` vistas en la parte inferior de la página muestran los valores de color HSL y RGB.
 
-El archivo de código subyacente carga uno de los recursos de mapa de bits, que muestra tan grande como sea posible en el lienzo y, a continuación, se trata de un rectángulo en el lienzo. El color del rectángulo se basa en los tres `Slider` vistas y el modo de mezcla es el seleccionado en el `Picker`:
+El archivo de código subyacente carga uno de los recursos de mapa de bits, muestra lo más grande posible en el lienzo y, a continuación, trata el lienzo con un rectángulo. El color del rectángulo se basa en las tres `Slider` vistas y el modo de mezcla es el seleccionado en la `Picker` :
 
 ```csharp
 public partial class NonSeparableBlendModesPage : ContentPage
@@ -176,51 +293,51 @@ public partial class NonSeparableBlendModesPage : ContentPage
 }
 ```
 
-Tenga en cuenta que el programa no muestra el valor de color HSL seleccionados por los tres controles deslizantes. En su lugar, crea un valor de color de los controles deslizantes y, a continuación, usa el [ `ToHsl` ](xref:SkiaSharp.SKColor.ToHsl*) método para obtener los valores de matiz, saturación y luminosidad. Esto es porque el `FromHsl` método convierte un color HSL en un color RGB, que se almacena internamente en el `SKColor` estructura. El `ToHsl` método convierte de RGB a HSL, pero el resultado no será siempre el valor original. 
+Tenga en cuenta que el programa no muestra el valor de color HSL como seleccionado por los tres controles deslizantes. En su lugar, crea un valor de color a partir de los controles deslizantes y, a continuación, usa el [`ToHsl`](xref:SkiaSharp.SKColor.ToHsl*) método para obtener los valores de matiz, saturación y luminosidad. Esto se debe a que el `FromHsl` método convierte un color HSL en un color RGB, que se almacena internamente en la `SKColor` estructura. El `ToHsl` método convierte de RGB a HSL, pero el resultado no siempre será el valor original. 
 
-Por ejemplo, `FromHsl` convierte el valor HSL (180, 50, 0) en el color RGB (0, 0, 0), porque el `Luminosity` es cero. El `ToHsl` método convierte el color RGB (0, 0, 0) al color HSL (0, 0, 0), porque los valores de matiz y saturación son irrelevantes. Cuando se usa este programa, es mejor que ver con la representación del color HSL que el programa está usando en lugar del que se ha especificado con los controles deslizantes.
+Por ejemplo, `FromHsl` convierte el valor HSL (180, 50, 0) en el color RGB (0,0) porque `Luminosity` es cero. El `ToHsl` método convierte el color RGB (0,0) en el color HSL (0,0) porque los valores de matiz y saturación son irrelevantes. Cuando se usa este programa, es mejor ver la representación del color HSL que usa el programa en lugar de la que se especificó con los controles deslizantes.
 
-El `SKBlendModes.Hue` modo de mezcla utiliza el nivel de matiz del origen de conservando los niveles de saturación y luminosidad del destino. Al probar este modo de mezcla, los controles deslizantes de saturación y luminosidad deben establecerse en algo distinto de 0 o 100 porque en esos casos, el matiz no es define de forma única.
+El `SKBlendModes.Hue` modo de mezcla utiliza el nivel de matiz del origen mientras conserva los niveles de saturación y luminosidad del destino. Al probar este modo de mezcla, los controles deslizantes saturación y luminosidad deben establecerse en un valor distinto de 0 o 100 porque, en esos casos, el matiz no se define de forma única.
 
-[![Modos de mezcla no separables - Hue](non-separable-images/NonSeparableBlendModes-Hue.png "modos de mezcla no separables - Hue")](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
+[![Modos de mezcla no separables: matiz](non-separable-images/NonSeparableBlendModes-Hue.png "Modos de mezcla no separables: matiz")](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
 
-Cuando se use establece el control deslizante en 0 (como ocurre con la captura de pantalla de iOS a la izquierda), todo lo que vuelve rojiza. Pero esto no significa que la imagen esté completamente ausente de verde y azul. Obviamente hay tonalidades de gris todavía presentes en el resultado. Por ejemplo, el color RGB (40, 40, C0) es equivalente al color HSL (240, 50, 50). El matiz es azul, pero el valor de saturación de 50 indica que hay también los componentes rojos y verdes. Si el matiz se establece en 0 con `SKBlendModes.Hue`, el color HSL es (0, 50, 50), que es el color RGB (C0, 40, 40). Existen componentes todavía azules y verde, pero ahora el componente dominante es rojo.
+Cuando se usa, el control deslizante se establece en 0 (como con la captura de pantalla de iOS a la izquierda), todo se convierte en rojizo. Pero esto no significa que la imagen esté totalmente ausente de verde y azul. Obviamente, hay sombras de grises presentes en el resultado. Por ejemplo, el color RGB (40, 40, C0) es equivalente al color HSL (240, 50, 50). El matiz es azul, pero el valor de saturación de 50 indica que también hay componentes rojo y verde. Si el matiz se establece en 0 con `SKBlendModes.Hue` , el color HSL es (0, 50, 50), que es el color RGB (C0, 40, 40). Todavía hay componentes azules y verdes, pero ahora el componente dominante es rojo.
 
-El `SKBlendModes.Saturation` modo blend combina el nivel de saturación de la fuente con el tono y la luminosidad del destino. Al igual que el matiz, saturación no está bien definida si la luminosidad es 0 o 100. En teoría, debería funcionar cualquier valor de luminosidad entre estos dos extremos. Sin embargo, parece que el valor de luminosidad afecta al resultado de más de lo que debería. Establezca la luminosidad en 50 y puede ver cómo se puede establecer el nivel de saturación de la imagen:
+El `SKBlendModes.Saturation` modo de mezcla combina el nivel de saturación del origen con el matiz y la luminosidad del destino. Al igual que el matiz, la saturación no está bien definida si la luminosidad es 0 o 100. En teoría, los valores de luminosidad entre esos dos extremos deberían funcionar. Sin embargo, el valor de luminosidad parece afectar al resultado más de lo que debería. Establezca la luminosidad en 50 y puede ver cómo puede establecer el nivel de saturación de la imagen:
 
-[![Modos de mezcla no separables - saturación](non-separable-images/NonSeparableBlendModes-Saturation.png "modos de mezcla no separables - saturación")](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
+[![Modos de mezcla no separables: saturación](non-separable-images/NonSeparableBlendModes-Saturation.png "Modos de mezcla no separables: saturación")](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
 
-Puede usar este modo blend para aumentar el color de la saturación de una imagen aburrida, o puede reducir la saturación a cero (como se muestra en la captura de pantalla de iOS a la izquierda) para obtener una imagen resultante formada sólo los tonos de gris.
+Puede usar este modo de mezcla para aumentar la saturación de color de una imagen mate, o puede reducir la saturación a cero (como en la captura de pantalla de iOS a la izquierda) para una imagen resultante formada solo por tonos grises.
 
-El `SKBlendModes.Color` modo blend conserva la luminosidad del destino pero usa el tono y la saturación del origen. Nuevamente, esto implica que debería funcionar cualquier configuración del control deslizante de luminosidad en algún lugar entre los extremos. 
+El `SKBlendModes.Color` modo de mezcla conserva la luminosidad del destino, pero utiliza el matiz y la saturación del origen. De nuevo, esto implica que cualquier configuración del control deslizante de luminosidad en algún lugar entre los extremos debe funcionar. 
 
-[![Color de los modos de mezcla no separables -](non-separable-images/NonSeparableBlendModes-Color.png "modos de mezcla no separables - Color")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
+[![Modos de mezcla no separables: color](non-separable-images/NonSeparableBlendModes-Color.png "Modos de mezcla no separables: color")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
 
-Verá una aplicación de este modo blend en breve.
+Verá una aplicación de este modo de mezcla en breve.
 
-Por último, el `SKBlendModes.Luminosity` modo blend es el opuesto de `SKBlendModes.Color`. Conserva el tono y la saturación del destino pero usa la luminosidad del origen. El `Luminosity` modo de mezcla es el más misterioso del lote: Los controles deslizantes de matiz y saturación afectan a la imagen, pero incluso a la luminosidad media, la imagen no es distinta:
+Por último, el `SKBlendModes.Luminosity` modo de mezcla es el contrario de `SKBlendModes.Color` . Conserva el matiz y la saturación del destino, pero utiliza la luminosidad del origen. El `Luminosity` modo de mezcla es el más misterioso del lote: los controles deslizantes de matiz y saturación afectan a la imagen, pero incluso a la luminosidad media, la imagen no es distinta:
 
-[![Modos de mezcla no separables - luminosidad](non-separable-images/NonSeparableBlendModes-Luminosity.png "modos de mezcla no separables - luminosidad")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
+[![Modos de mezcla no separables-luminosidad](non-separable-images/NonSeparableBlendModes-Luminosity.png "Modos de mezcla no separables-luminosidad")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
-En teoría, aumentando o reduciendo la luminosidad de una imagen debe hacerla más clara u oscura. Curiosamente, el [ejemplo luminosidad en el Skia **SkBlendMode referencia** ](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) es bastante similar.
+En teoría, el aumento o disminución de la luminosidad de una imagen debe ser más claro o más oscuro. Curiosamente, el [ejemplo de luminosidad en la **referencia** de Skia SkBlendMode](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) es bastante similar.
 
-Por lo general no es el caso de que desea usar uno de los modos de mezcla no separables con un origen que consta de un único color que se aplica a la imagen de destino completa. El efecto es simplemente demasiado grande. Desea restringir el efecto en una parte de la imagen. En ese caso, el origen probablemente incorporará transparencia, o quizás el origen estará limitado a un gráfico más pequeño.
+Por lo general, no es el caso que desee usar uno de los modos de mezcla no separables con un origen que conste de un solo color aplicado a toda la imagen de destino. El efecto es demasiado grande. Deseará restringir el efecto a una parte de la imagen. En ese caso, el origen probablemente incorporará transparancy o quizás el origen se limite a un gráfico más pequeño.
 
-## <a name="a-matte-for-a-separable-mode"></a>Para un modo separable mate
+## <a name="a-matte-for-a-separable-mode"></a>Un mate para un modo separable
 
-Este es uno de los mapas de bits que se incluye como recurso en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo. Es el nombre de archivo **Banana.jpg**:
+Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **banana. jpg**:
 
-![Plátano Monkey](non-separable-images/Banana.jpg "Monkey plátano")
+![Monkey de banana](non-separable-images/Banana.jpg "Monkey de banana")
 
-Es posible crear un mate que abarca solo el plátano. Esto también es un recurso en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo. Es el nombre de archivo **BananaMatte.png**:
+Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte. png**:
 
-![Plátano mate](non-separable-images/BananaMatte.png "mate plátano")
+![Mate de banana](non-separable-images/BananaMatte.png "Mate de banana")
 
-Aparte de la forma plátano negro, el resto del mapa de bits es transparente.
+Aparte de la forma de banana negro, el resto del mapa de bits es transparente.
 
-El **plátano azul** página utiliza ese mate para modificar el tono y la saturación de la banana que contiene el objeto monkey, pero no cambiar nada más en la imagen. 
+La página **azul banana** usa ese mate para modificar el matiz y la saturación de la banana que contiene el Monkey, pero para no cambiar nada más en la imagen. 
 
-En la siguiente `BlueBananaPage` (clase), el **Banana.jpg** mapa de bits se carga como un campo. Las cargas de constructor la **BananaMatte.png** de mapa de bits como el `matteBitmap` objeto, pero no conserva ese objeto más allá del constructor. En su lugar, un mapa de bits terceros denominado `blueBananaBitmap` se crea. El `matteBitmap` se dibuja en `blueBananaBitmap` seguido por un `SKPaint` con su `Color` establecido en azul y su `BlendMode` establecido en `SKBlendMode.SrcIn`. El `blueBananaBitmap` permanece prácticamente transparente, pero con una imagen azul pura sólida de lo banana:
+En la `BlueBananaPage` clase siguiente, el mapa de bits **banana. jpg** se carga como un campo. El constructor carga el mapa de bits **BananaMatte. png** como el `matteBitmap` objeto, pero no conserva ese objeto más allá del constructor. En su lugar, se crea un tercer mapa de bits denominado `blueBananaBitmap` . `matteBitmap`Se dibuja en `blueBananaBitmap` seguido de un `SKPaint` con su `Color` establecido en Blue y su `BlendMode` establecido en `SKBlendMode.SrcIn` . El `blueBananaBitmap` permanece más transparente pero con una imagen de azul puro sólida de la banana:
 
 ```csharp
 public class BlueBananaPage : ContentPage
@@ -283,11 +400,11 @@ public class BlueBananaPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador dibuja el mapa de bits con el objeto monkey manteniendo el plátano. Este código va seguido de la presentación de `blueBananaBitmap` con `SKBlendMode.Color`. A través de la superficie de la plátano, tono y la saturación de cada píxel se sustituye por el azul sólido, que corresponde a un valor de matiz de 240 y un valor de saturación de 100. La luminosidad, sin embargo, sigue siendo el mismo, lo que significa que el plátano sigue teniendo una textura realista a pesar de su color nuevo:
+El `PaintSurface` controlador dibuja el mapa de bits con el Monkey que contiene el plátano. Este código va seguido de la presentación de `blueBananaBitmap` con `SKBlendMode.Color` . En la superficie del plátano, el matiz y la saturación de cada píxel se sustituyen por el azul sólido, que corresponde a un valor de matiz de 240 y un valor de saturación de 100. La luminosidad, sin embargo, sigue siendo la misma, lo que significa que el plátano sigue teniendo una textura realista a pesar de su nuevo color:
 
-[![Azul plátano](non-separable-images/BlueBanana.png "azul plátano")](non-separable-images/BlueBanana-Large.png#lightbox)
+[![Plátano azul](non-separable-images/BlueBanana.png "Plátano azul")](non-separable-images/BlueBanana-Large.png#lightbox)
 
-Intente cambiar el modo de mezcla para `SKBlendMode.Saturation`. El plátano permanece en amarillo, pero es un amarillo más intenso. En una aplicación de la vida real, esto podría ser un efecto más deseable que activar el plátano azul.
+Intente cambiar el modo de mezcla a `SKBlendMode.Saturation` . El plátano sigue siendo amarillo, pero es un amarillo más intenso. En una aplicación real, esto podría ser un efecto más deseable que convertir el plátano en azul.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

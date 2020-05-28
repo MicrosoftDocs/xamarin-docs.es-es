@@ -1,18 +1,21 @@
 ---
-title: Margen y relleno
-description: Las propiedades margin y padding controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario. En este artículo se muestra la diferencia entre las dos propiedades y cómo establecerlas.
-ms.prod: xamarin
-ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/27/2016
-ms.openlocfilehash: 66ac81631466131cf1ef44dde39aa768d31b65a1
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70772491"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137999"
 ---
 # <a name="margin-and-padding"></a>Margen y relleno
 
@@ -22,22 +25,22 @@ _Las propiedades margin y padding controlan el comportamiento de diseño cuando 
 
 Margin y padding son conceptos de diseño relacionados:
 
-- La propiedad [`Margin`](xref:Xamarin.Forms.View.Margin) representa la distancia entre un elemento y sus elementos adyacentes, y se usa para controlar la posición de representación del elemento y la posición de representación de sus vecinos. se pueden especificar `Margin` valores en las clases de [diseño](~/xamarin-forms/user-interface/controls/layouts.md) y de [vista](~/xamarin-forms/user-interface/controls/views.md) .
-- La propiedad [`Padding`](xref:Xamarin.Forms.Layout.Padding) representa la distancia entre un elemento y sus elementos secundarios, y se utiliza para separar el control de su propio contenido. se pueden especificar `Padding` valores en las clases de [diseño](~/xamarin-forms/user-interface/controls/layouts.md) .
+- La [`Margin`](xref:Xamarin.Forms.View.Margin) propiedad representa la distancia entre un elemento y sus elementos adyacentes, y se usa para controlar la posición de representación del elemento y la posición de representación de sus vecinos. `Margin`los valores se pueden especificar en las clases de [diseño](~/xamarin-forms/user-interface/controls/layouts.md) y de [vista](~/xamarin-forms/user-interface/controls/views.md) .
+- La [`Padding`](xref:Xamarin.Forms.Layout.Padding) propiedad representa la distancia entre un elemento y sus elementos secundarios, y se utiliza para separar el control de su propio contenido. `Padding`los valores se pueden especificar en las clases de [diseño](~/xamarin-forms/user-interface/controls/layouts.md) .
 
 En el siguiente diagrama se ilustran los dos conceptos:
 
 [![](margin-and-padding-images/margins-and-padding-sml.png "Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts")
 
-Tenga en cuenta que los valores de [`Margin`](xref:Xamarin.Forms.View.Margin) son aditivos. Por consiguiente, si dos elementos adyacentes especifican un margen de 20 píxeles, la distancia entre los elementos será de 40 píxeles. Además, los márgenes y el relleno son aditivos cuando se aplican ambos, en que la distancia entre un elemento y cualquier contenido será el margen más el relleno.
+Tenga en cuenta que [`Margin`](xref:Xamarin.Forms.View.Margin) los valores son aditivos. Por consiguiente, si dos elementos adyacentes especifican un margen de 20 píxeles, la distancia entre los elementos será de 40 píxeles. Además, los márgenes y el relleno son aditivos cuando se aplican ambos, en que la distancia entre un elemento y cualquier contenido será el margen más el relleno.
 
 ## <a name="specifying-a-thickness"></a>Especificar un grosor
 
-Las propiedades [`Margin`](xref:Xamarin.Forms.View.Margin) y [`Padding`](xref:Xamarin.Forms.Layout.Padding) son de tipo [`Thickness`](xref:Xamarin.Forms.Thickness). Existen tres posibilidades al crear una estructura de `Thickness`:
+Las [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Layout.Padding) propiedades y son de tipo [`Thickness`](xref:Xamarin.Forms.Thickness) . Existen tres posibilidades al crear una `Thickness` estructura:
 
-- Cree una estructura de [`Thickness`](xref:Xamarin.Forms.Thickness) definida por un único valor uniforme. El valor Single se aplica a los lados izquierdo, superior, derecho e inferior del elemento.
-- Cree una estructura de [`Thickness`](xref:Xamarin.Forms.Thickness) definida por valores horizontales y verticales. El valor horizontal se aplica simétricamente a los lados izquierdo y derecho del elemento, con el valor vertical que se aplica de forma simétrica a los lados superior e inferior del elemento.
-- Cree una estructura de [`Thickness`](xref:Xamarin.Forms.Thickness) definida por cuatro valores distintos que se aplican a los lados izquierdo, superior, derecho e inferior del elemento.
+- Cree una [`Thickness`](xref:Xamarin.Forms.Thickness) estructura definida por un único valor uniforme. El valor Single se aplica a los lados izquierdo, superior, derecho e inferior del elemento.
+- Cree una [`Thickness`](xref:Xamarin.Forms.Thickness) estructura definida por valores horizontales y verticales. El valor horizontal se aplica simétricamente a los lados izquierdo y derecho del elemento, con el valor vertical que se aplica de forma simétrica a los lados superior e inferior del elemento.
+- Cree una [`Thickness`](xref:Xamarin.Forms.Thickness) estructura definida por cuatro valores distintos que se apliquen a los lados izquierdo, superior, derecho e inferior del elemento.
 
 En el siguiente ejemplo de código XAML se muestran las tres posibilidades:
 
@@ -63,14 +66,14 @@ var stackLayout = new StackLayout {
 ```
 
 > [!NOTE]
-> `Thickness` valores pueden ser negativos, lo que suele recortar o sobredibujar el contenido.
+> `Thickness`los valores pueden ser negativos, lo que suele recortar o sobredibujar el contenido.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra la diferencia entre las propiedades [`Margin`](xref:Xamarin.Forms.View.Margin) y [`Padding`](xref:Xamarin.Forms.Layout.Padding) y cómo establecerlas. Las propiedades controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario.
+En este artículo se ha mostrado la diferencia entre las [`Margin`](xref:Xamarin.Forms.View.Margin) propiedades y y [`Padding`](xref:Xamarin.Forms.Layout.Padding) Cómo establecerlas. Las propiedades controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Márgen](xref:Xamarin.Forms.View.Margin)
-- [Acolcha](xref:Xamarin.Forms.Layout.Padding)
-- [Grosor](xref:Xamarin.Forms.Thickness)
+- [Espaciado interno](xref:Xamarin.Forms.Layout.Padding)
+- [Thickness](xref:Xamarin.Forms.Thickness)

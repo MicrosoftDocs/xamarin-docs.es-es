@@ -1,29 +1,32 @@
 ---
-title: Referencia de controles de páginas de página
-description: En este artículo se presentan los controles que están disponibles en el paquete NuGet de Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 359a9f27e9a9e7bc04d5a1ab938391fe5c2cd2ee
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+title: ''
+description: En este artículo se presentan los controles que están disponibles en el Xamarin.Forms paquete NuGet de páginas de página.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 093ef4b9b3ae7bde25da276330894bcf4e399145
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728036"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134451"
 ---
 # <a name="datapages-controls-reference"></a>Referencia de controles de páginas de página
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> Las páginas de formularios requieren una referencia de tema de Xamarin. Forms para representar. Esto implica la instalación del paquete de Nuget [Xamarin. Forms. theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de los paquetes de Nuget [Xamarin. Forms. theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin. Forms. theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
+> Las páginas de página requieren una Xamarin.Forms referencia de tema que se va a representar. Esto implica la instalación de [ Xamarin.Forms . Paquete NuGet Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de [ Xamarin.Forms . Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [ Xamarin.Forms . Paquetes NuGet Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
-Las páginas de datos de Xamarin. Forms NuGet incluyen una serie de controles que pueden aprovechar el enlace de origen de datos.
+Xamarin.FormsNuGet de páginas de datos incluye una serie de controles que pueden aprovechar el enlace de origen de datos.
 
-Para usar estos controles en XAML, asegúrese de que se ha incluido el espacio de nombres, por ejemplo, vea la declaración de `xmlns:pages` siguiente:
+Para usar estos controles en XAML, asegúrese de que se ha incluido el espacio de nombres, por ejemplo, vea la `xmlns:pages` declaración siguiente:
 
 ```xaml
 <ContentPage
@@ -33,7 +36,7 @@ Para usar estos controles en XAML, asegúrese de que se ha incluido el espacio d
     x:Class="DataPagesDemo.Detail">
 ```
 
-En los ejemplos siguientes se incluyen `DynamicResource` referencias que deben existir en el Diccionario de recursos del proyecto para que funcione. También hay un ejemplo de cómo crear un [control personalizado](#custom) .
+En los ejemplos siguientes `DynamicResource` se incluyen referencias que deben existir en el Diccionario de recursos del proyecto para que funcione. También hay un ejemplo de cómo crear un [control personalizado](#custom) .
 
 ## <a name="built-in-controls"></a>Controles integrados
 
@@ -44,10 +47,10 @@ En los ejemplos siguientes se incluyen `DynamicResource` referencias que deben e
 
 ### <a name="heroimage"></a>HeroImage
 
-El control `HeroImage` tiene cuatro propiedades:
+El `HeroImage` control tiene cuatro propiedades:
 
-* Text
-* Detalles
+* Texto
+* Detail (Detalle)
 * ImageSource
 * Aspecto
 
@@ -71,12 +74,12 @@ El control `HeroImage` tiene cuatro propiedades:
 
 ### <a name="listitem"></a>ListItem
 
-El diseño del control de `ListItem` es similar a las filas nativas de la tabla o la lista de iOS y Android, pero también se puede usar como vista normal. En el código de ejemplo siguiente, se muestra hospedado dentro de un `StackLayout`, pero también se puede usar en controles de lista de scolling enlazados a datos.
+El `ListItem` diseño del control es similar a las filas nativas de la tabla o la lista de iOS y Android, pero también se puede usar como vista normal. En el código de ejemplo siguiente, se muestra hospedado en `StackLayout` , pero también se puede usar en controles de lista de scolling enlazados a datos.
 
 Hay cinco propiedades:
 
-* Title
-* Detalles
+* Título
+* Detail (Detalle)
 * ImageSource
 * PlaceholdImageSource
 * Aspecto
@@ -91,7 +94,7 @@ Hay cinco propiedades:
     />
 ```
 
-Estas capturas de pantallas muestran el `ListItem` en las plataformas iOS y Android con los temas claro y oscuro:
+Estas capturas de pantallas muestran `ListItem` en las plataformas iOS y Android mediante los temas claro y oscuro:
 
 **Android**
 
@@ -103,15 +106,15 @@ Estas capturas de pantallas muestran el `ListItem` en las plataformas iOS y Andr
 
 ## <a name="custom-control-example"></a>Ejemplo de control personalizado
 
-El objetivo de este control de `CardView` personalizado es similar al CardView nativo de Android.
+El objetivo de este `CardView` control personalizado es similar al CardView nativo de Android.
 
 Contendrá tres propiedades:
 
-* Text
-* Detalles
+* Texto
+* Detail (Detalle)
 * ImageSource
 
-El objetivo es un control personalizado que se parecerá al código siguiente (tenga en cuenta que se requiere un `xmlns:local` personalizado que haga referencia al ensamblado actual):
+El objetivo es un control personalizado que se parecerá al código siguiente (tenga en cuenta que `xmlns:local` se requiere un personalizado que haga referencia al ensamblado actual):
 
 ```xaml
 <local:CardView
@@ -147,7 +150,7 @@ Debe ser similar a las capturas de pantallas siguientes con los colores correspo
 
 #### <a name="1-dataview-subclass"></a>1. subclase DataView
 
-La C# subclase de `DataView` define las propiedades enlazables del control.
+La subclase de C# de `DataView` define las propiedades enlazables del control.
 
 ```csharp
 public class CardView : DataView
@@ -189,9 +192,9 @@ public class CardView : DataView
 
 #### <a name="2-define-font-layout-and-margins"></a>2. definir la fuente, el diseño y los márgenes
 
-El diseñador de controles descifraría estos valores como parte del diseño de la interfaz de usuario para el control personalizado. Cuando se requieren especificaciones específicas de la plataforma, se usa el elemento `OnPlatform`.
+El diseñador de controles descifraría estos valores como parte del diseño de la interfaz de usuario para el control personalizado. Cuando se requieren especificaciones específicas de la plataforma, `OnPlatform` se usa el elemento.
 
-Tenga en cuenta que algunos valores hacen referencia a `StaticResource`s, que se definirán en el [paso 5](#5).
+Tenga en cuenta que algunos valores hacen referencia a `StaticResource` s: se definirán en el [paso 5](#5).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -355,7 +358,7 @@ Dado que se trata de un control personalizado, agregue los recursos que coincide
 
 #### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. establecer ControlTemplate para la clase CardView
 
-Por último, asegúrese C# de que la clase creada en el [paso 1](#1) usa la plantilla de control definida en el [paso 4](#4) mediante un elemento `Style` `Setter`.
+Por último, asegúrese de que la clase de C# creada en el [paso 1](#1) usa la plantilla de control definida en el [paso 4](#4) mediante un `Style` `Setter` elemento.
 
 ```xml
 <Style TargetType="local:CardView">
@@ -369,7 +372,7 @@ Por último, asegúrese C# de que la clase creada en el [paso 1](#1) usa la plan
 
 #### <a name="7-add-the-control-to-a-page"></a>7. agregar el control a una página
 
-Ahora se puede Agregar el control `CardView` a una página. En el ejemplo siguiente se muestra que se hospeda en un `StackLayout`:
+`CardView`Ahora se puede Agregar el control a una página. En el ejemplo siguiente se muestra que se hospeda en un `StackLayout` :
 
 ```xaml
 <StackLayout Spacing="0">

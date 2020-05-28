@@ -1,25 +1,28 @@
 ---
-title: Xamarin.Forms Visual
-description: Xamarin.Forms Visual permite que los representadores de forma selectiva se aplique a objetos VisualElement, sin tener que las vistas de Xamarin.Forms subclase.
-ms.prod: xamarin
-ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/05/2019
-ms.openlocfilehash: d440c6e95788fc876d6b0aa094f5bc2fce84bfb0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: Xamarin.FormsVisual
+description: Xamarin.FormsVisual permite que los representadores se apliquen de forma selectiva a los objetos VisualElement, sin tener que realizar vistas de subclases Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c0afcaa75029288d527fac2a2b21bcd614fd4dc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023455"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127132"
 ---
-# <a name="xamarinforms-visual"></a>Xamarin.Forms Visual
+# <a name="xamarinforms-visual"></a>Xamarin.FormsVisual
 
-## <a name="xamarinforms-material-visualmaterial-visualmd"></a>[Material de Xamarin.Forms Visual](material-visual.md)
+## <a name="xamarinforms-material-visualmaterial-visualmd"></a>[Xamarin.FormsMaterial visual](material-visual.md)
 
-Xamarin.Forms Material Visual puede utilizarse para crear aplicaciones de Xamarin.Forms que tienen un aspecto idénticos o idéntica en gran medida en iOS y Android.
+Xamarin.FormsEl material visual se puede usar para crear Xamarin.Forms aplicaciones que parezcan idénticas o en gran medida en iOS y Android.
 
-## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Crear a un representador Xamarin.Forms Visual](create.md)
+## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Creación de un Xamarin.Forms representador visual](create.md)
 
-Xamarin.Forms Visual permite que los representadores de forma selectiva se aplique a [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) objetos, sin tener que las vistas de Xamarin.Forms subclase.
+Xamarin.FormsVisual permite que los representadores se apliquen de forma selectiva a los [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sin tener que realizar vistas de subclases Xamarin.Forms .

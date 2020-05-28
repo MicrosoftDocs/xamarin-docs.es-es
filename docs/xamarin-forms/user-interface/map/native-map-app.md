@@ -1,27 +1,30 @@
 ---
-title: Inicio de la aplicación de asignación nativa desde Xamarin. Forms
-description: La aplicación de mapas nativos en cada plataforma se puede iniciar desde una aplicación de Xamarin. Forms mediante la clase del iniciador de Xamarin. Essentials.
-ms.prod: xamarin
-ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/30/2019
-ms.openlocfilehash: 54776d28bb75b152a6402e4d531d1baa4f724cba
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+title: Inicie la aplicación de asignación nativa desdeXamarin.Forms
+description: La aplicación de mapas nativos en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials clase iniciador.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426328"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129343"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicio de la aplicación de asignación nativa desde Xamarin. Forms
+# <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie la aplicación de asignación nativa desdeXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-La aplicación de asignación nativa en cada plataforma se puede iniciar desde una aplicación de Xamarin. Forms mediante la clase de `Launcher` de Xamarin. Essentials. Esta clase permite a una aplicación abrir otra aplicación a través de su esquema de URI personalizado. La funcionalidad del iniciador se puede invocar con el método `OpenAsync`, pasando un argumento `string` o `Uri` que representa el esquema de la dirección URL personalizada que se va a abrir. Para obtener más información sobre Xamarin. Essentials, consulte [Xamarin. Essentials](~/essentials/index.md?context=xamarin/xamarin-forms).
+La aplicación de asignación nativa en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials `Launcher` clase. Esta clase permite a una aplicación abrir otra aplicación a través de su esquema de URI personalizado. La funcionalidad del iniciador se puede invocar con el `OpenAsync` método, pasando `string` un `Uri` argumento o que representa el esquema de la dirección URL personalizada que se va a abrir. Para obtener más información acerca de Xamarin.Essentials , vea [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 
 > [!NOTE]
-> Una alternativa al uso de la clase de `Launcher` Xamarin. Essentials es usar su `Map` clase. Para obtener más información, consulte [Xamarin. Essentials: Map](~/essentials/maps.md?context=xamarin/xamarin-forms).
+> Una alternativa al uso de la Xamarin.Essentials `Launcher` clase es usar su `Map` clase. Para obtener más información, vea [ Xamarin.Essentials : Map](~/essentials/maps.md?context=xamarin/xamarin-forms).
 
 La aplicación Maps en cada plataforma usa un esquema URI personalizado único. Para obtener información sobre el esquema de URI de Maps en iOS, consulte [asignación de vínculos](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html) en Developer.Apple.com. Para obtener información sobre el esquema de URI de Maps en Android, consulte la [Guía para desarrolladores de Maps](https://developer.android.com/guide/components/intents-common.html#Maps) y [Google Maps intents for Android](https://developers.google.com/maps/documentation/urls/android-intents) en developers.Android.com. Para obtener información sobre el esquema de URI de Maps en el Plataforma universal de Windows (UWP), consulte [Inicio de la aplicación Windows Maps](/windows/uwp/launch-resume/launch-maps-app).
 
@@ -82,4 +85,4 @@ Este código de ejemplo hace que la aplicación de asignación nativa se inicie 
 - [Vínculos de mapa](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Guía para desarrolladores de Maps](https://developer.android.com/guide/components/intents-common.html#Maps)
 - [Google Maps para Android](https://developers.google.com/maps/documentation/)
-- [Inicio de la aplicación Windows Maps](/windows/uwp/launch-resume/launch-maps-app)
+- [Iniciar la aplicación Mapas de Windows](/windows/uwp/launch-resume/launch-maps-app)

@@ -1,28 +1,31 @@
 ---
-title: Orígenes de datos de ListView
-description: En este artículo se explica cómo rellenar el ListView de Xamarin.Forms con datos y cómo usar el enlace de datos con un ListView.
-ms.prod: xamarin
-ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: e51f0bd011750b030c0a11b9b89a2c2473f2a9ed
-ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+title: ''
+description: En este artículo se explica cómo rellenar Xamarin.Forms ListView con datos y cómo usar el enlace de datos con un control ListView.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80247592"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131513"
 ---
 # <a name="listview-data-sources"></a>Orígenes de datos de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
-Un [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin. Forms se usa para mostrar listas de datos. En este artículo se explica cómo rellenar un `ListView` con datos y cómo enlazar datos al elemento seleccionado.
+Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) Se usa para mostrar listas de datos. En este artículo se explica cómo rellenar `ListView` con datos y cómo enlazar datos al elemento seleccionado.
 
 ## <a name="itemssource"></a>ItemsSource
 
-Un [`ListView`](xref:Xamarin.Forms.ListView) se rellena con datos mediante la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) , que puede aceptar cualquier colección que implemente `IEnumerable`. La manera más sencilla de rellenar un `ListView` implica el uso de una matriz de cadenas:
+[`ListView`](xref:Xamarin.Forms.ListView)Se rellena con datos mediante la [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propiedad, que puede aceptar cualquier colección que implemente `IEnumerable` . La manera más sencilla de rellenar un `ListView` implica el uso de una matriz de cadenas:
 
 ```xaml
 <ListView>
@@ -62,9 +65,9 @@ listView.ItemsSource = new string[]
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
 
-Este enfoque rellenará el `ListView` con una lista de cadenas. De forma predeterminada, `ListView` llamará a `ToString` y mostrará el resultado en un `TextCell` para cada fila. Para personalizar el modo en que se muestran los datos, vea apariencia de la [celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
+Este enfoque rellenará `ListView` con una lista de cadenas. De forma predeterminada, `ListView` llamará a `ToString` y mostrará el resultado en una `TextCell` para cada fila. Para personalizar el modo en que se muestran los datos, vea apariencia de la [celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-Dado que `ItemsSource` se ha enviado a una matriz, el contenido no se actualizará a medida que la lista o la matriz subyacentes cambien. Si desea que ListView se actualice automáticamente a medida que se agregan, quitan y cambian elementos en la lista subyacente, deberá usar una `ObservableCollection`. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) se define en `System.Collections.ObjectModel` y es igual que `List`, salvo que puede notificar a `ListView` de cualquier cambio:
+Dado `ItemsSource` que se ha enviado a una matriz, el contenido no se actualizará a medida que la lista o la matriz subyacentes cambien. Si desea que ListView se actualice automáticamente a medida que se agregan, quitan y cambian elementos en la lista subyacente, deberá utilizar `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1)se define en `System.Collections.ObjectModel` y es igual `List` que, salvo que puede notificar los `ListView` cambios:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -76,17 +79,17 @@ employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 
 ## <a name="data-binding"></a>Enlace de datos
 
-El enlace de datos es el "pegamento" que enlaza las propiedades de un objeto de interfaz de usuario a las propiedades de algún objeto CLR, como una clase en el ViewModel. Enlace de datos es útil porque simplifica el desarrollo de interfaces de usuario mediante la sustitución mucha aburrido código reutilizable.
+El enlace de datos es el "pegamento" que enlaza las propiedades de un objeto de interfaz de usuario a las propiedades de algún objeto CLR, como una clase en el ViewModel. El enlace de datos es útil porque simplifica el desarrollo de las interfaces de usuario al reemplazar una gran cantidad de código reutilizable de aburrido.
 
-Enlace de datos funciona manteniendo los objetos sincronizados a medida que cambian sus valores enlazados. En lugar de tener que escribir controladores de eventos para cada vez que cambie el valor de un control, establezca el enlace y habilite el enlace en el ViewModel.
+El enlace de datos funciona manteniendo los objetos sincronizados a medida que cambian sus valores enlazados. En lugar de tener que escribir controladores de eventos para cada vez que cambie el valor de un control, establezca el enlace y habilite el enlace en el ViewModel.
 
-Para obtener más información sobre el enlace de datos, vea [conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) , que es la parte cuatro de la [serie de artículos de conceptos básicos de XAML de Xamarin. Forms](~/xamarin-forms/xaml/xaml-basics/index.md).
+Para obtener más información sobre el enlace de datos, vea [conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) , que es la cuarta parte de la [ Xamarin.Forms serie de artículos conceptos básicos de XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Enlazar celdas
 
-Las propiedades de las celdas (y los elementos secundarios de las celdas) se pueden enlazar a las propiedades de los objetos en el `ItemsSource`. Por ejemplo, un `ListView` podría usarse para presentar una lista de empleados.
+Las propiedades de las celdas (y los elementos secundarios de las celdas) se pueden enlazar a las propiedades de los objetos de `ItemsSource` . Por ejemplo, `ListView` se podría usar una para presentar una lista de empleados.
 
-La clase employee:
+La clase Employee:
 
 ```csharp
 public class Employee
@@ -95,7 +98,7 @@ public class Employee
 }
 ```
 
-Se crea un `ObservableCollection<Employee>`, se establece como el `ItemsSource`de `ListView` y la lista se rellena con datos:
+`ObservableCollection<Employee>`Se crea un, se establece como `ListView` `ItemsSource` y la lista se rellena con datos:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -117,7 +120,7 @@ public EmployeeListPage()
 ```
 
 > [!WARNING]
-> Aunque una `ListView` se actualizará en respuesta a los cambios en su `ObservableCollection`subyacente, un `ListView` no se actualizará si se asigna una instancia de `ObservableCollection` diferente a la referencia de `ObservableCollection` original (por ejemplo, `employees = otherObservableCollection;`).
+> Mientras `ListView` que se va a actualizar en respuesta a los cambios en su subyacente `ObservableCollection` , `ListView` no se actualizará si `ObservableCollection` se asigna una instancia diferente a la `ObservableCollection` referencia original (por ejemplo, `employees = otherObservableCollection;` ).
 
 El siguiente fragmento de código muestra un `ListView` enlazado a una lista de empleados:
 
@@ -139,16 +142,16 @@ El siguiente fragmento de código muestra un `ListView` enlazado a una lista de 
 </ContentPage>
 ```
 
-En este ejemplo de XAML se define una `ContentPage` que contiene un `ListView`. El origen de datos del `ListView` se establece mediante el atributo `ItemsSource`. El diseño de cada fila del `ItemsSource` se define dentro del elemento `ListView.ItemTemplate`. Esto da como resultado las siguientes capturas de pantallas:
+En este ejemplo de XAML se define un `ContentPage` que contiene un `ListView` . El origen de datos del control `ListView` se establece mediante el atributo `ItemsSource`. El diseño de cada fila de `ItemsSource` se define dentro del elemento `ListView.ItemTemplate`. Esto da como resultado las siguientes capturas de pantallas:
 
 ![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
 
 > [!WARNING]
-> `ObservableCollection` no es seguro para subprocesos. La modificación de un `ObservableCollection` hace que las actualizaciones de la interfaz de usuario se realicen en el mismo subproceso que realizó las modificaciones. Si el subproceso no es el subproceso de la interfaz de usuario principal, producirá una excepción.
+> `ObservableCollection` no es un subproceso seguro. `ObservableCollection`La modificación de hace que las actualizaciones de la interfaz de usuario se realicen en el mismo subproceso que realizó las modificaciones. Si el subproceso no es el subproceso de la interfaz de usuario principal, producirá una excepción.
 
 ### <a name="binding-selecteditem"></a>Enlace SelectedItem
 
-A menudo, querrá enlazar al elemento seleccionado de un `ListView`, en lugar de usar un controlador de eventos para responder a los cambios. Para hacer esto en XAML, enlace la propiedad `SelectedItem`:
+A menudo, querrá enlazar al elemento seleccionado de un `ListView` , en lugar de usar un controlador de eventos para responder a los cambios. Para hacer esto en XAML, enlace la `SelectedItem` propiedad:
 
 ```xaml
 <ListView x:Name="listView"
@@ -158,7 +161,7 @@ A menudo, querrá enlazar al elemento seleccionado de un `ListView`, en lugar de
 </ListView>
 ```
 
-Suponiendo que la `ItemsSource` de `listView`sea una lista de cadenas, `SomeLabel` tendrá su propiedad `Text` enlazada al `SelectedItem`.
+Suponiendo `listView` que `ItemsSource` es una lista de cadenas, `SomeLabel` tendrá su `Text` propiedad enlazada a `SelectedItem` .
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,24 +1,27 @@
 ---
-title: Sombras paralelas de colocación en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el específico de la plataforma Android que habilita una sombra paralela en un ImageButton.
-ms.prod: xamarin
-ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e2ad97eb5e7db3b832e8fb4340c86904b766b9a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653581"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140006"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras paralelas de colocación en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esta plataforma Android específica se usa para habilitar una sombra paralela en un `ImageButton`. Se consume en XAML estableciendo el `ImageButton.IsShadowEnabled` propiedad enlazable a `true`, junto con un número de propiedades enlazables opcionales adicionales que controlan el efecto de sombra:
+Esta plataforma Android específica se usa para habilitar una sombra paralela en un `ImageButton` . Se consume en XAML estableciendo la `ImageButton.IsShadowEnabled` propiedad enlazable en `true` , junto con una serie de propiedades adicionales enlazables opcionales que controlan la sombra paralela:
 
 ```xaml
 <ContentPage ...
@@ -44,7 +47,7 @@ Esta plataforma Android específica se usa para habilitar una sombra paralela en
 </ContentPage>
 ```
 
-Como alternativa, pueden usarse desde C# mediante la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -60,24 +63,24 @@ imageButton.On<Android>()
 ```
 
 > [!IMPORTANT]
-> Se dibuja una sombra paralela como parte de la `ImageButton` en segundo plano y el fondo se dibuja solo si el `BackgroundColor` se establece la propiedad. Por lo tanto, una sombra paralela no se dibujarán si el `ImageButton.BackgroundColor` no se establece la propiedad.
+> Se dibuja una sombra paralela como parte del `ImageButton` fondo y el fondo solo se dibuja si `BackgroundColor` se establece la propiedad. Por lo tanto, no se dibujará una sombra paralela si `ImageButton.BackgroundColor` no se establece la propiedad.
 
-El `ImageButton.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `ImageButton.SetIsShadowEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si una sombra paralela está habilitada en el `ImageButton`. Además, se pueden invocar los métodos siguientes para controlar el efecto de sombra:
+El `ImageButton.On<Android>` método especifica que este específico de la plataforma solo se ejecutará en Android. El `ImageButton.SetIsShadowEnabled` método, en el [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para controlar si una sombra paralela está habilitada en `ImageButton` . Además, se pueden invocar los métodos siguientes para controlar la sombra paralela:
 
-- `SetShadowColor` : establece el color de la sombra paralela. El color predeterminado es [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*).
-- `SetShadowOffset` : establece el desplazamiento de la sombra paralela. El desplazamiento cambia la dirección de la sombra se convierte y se especifica como un [ `Size` ](xref:Xamarin.Forms.Size) valor. El `Size` los valores de la estructura se expresan en unidades independientes del dispositivo, con el primer valor que se va a la distancia a la izquierda (valor negativo) o la derecha (valor positivo) y el segundo valor que se va a la distancia anterior (negativo) o por debajo (valor positivo) . El valor predeterminado de esta propiedad es (0.0, 0.0), que da como resultado la sombra que se va a convertir en torno a cada lado de la `ImageButton`.
-- `SetShadowRadius`: establece el radio de desenfoque utilizado para representar la sombra paralela. El valor de radio predeterminado es 10,0.
+- `SetShadowColor`: establece el color de la sombra paralela. El color predeterminado es [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
+- `SetShadowOffset`: establece el desplazamiento de la sombra paralela. El desplazamiento cambia la dirección en la que se proyecta la sombra y se especifica como un [`Size`](xref:Xamarin.Forms.Size) valor. Los `Size` valores de la estructura se expresan en unidades independientes del dispositivo, donde el primer valor es la distancia a la izquierda (valor negativo) o a la derecha (valor positivo) y el segundo valor es la distancia por encima (valor negativo) o inferior (valor positivo). El valor predeterminado de esta propiedad es (0,0, 0,0), lo que hace que se convierta la sombra en torno a cada lado de `ImageButton` .
+- `SetShadowRadius`: establece el radio de desenfoque que se usa para representar la sombra paralela. El valor de radio predeterminado es 10,0.
 
 > [!NOTE]
-> Se puede consultar el estado de una sombra paralela mediante una llamada a la `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, y `GetShadowRadius` métodos.
+> El estado de una sombra paralela se puede consultar mediante una llamada a los `GetIsShadowEnabled` `GetShadowColor` métodos,, `GetShadowOffset` y `GetShadowRadius` .
 
-El resultado es que se puede habilitar una sombra paralela en un `ImageButton`:
+El resultado es que se puede habilitar una sombra paralela en un `ImageButton` :
 
-![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton con sombra paralela")
+![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

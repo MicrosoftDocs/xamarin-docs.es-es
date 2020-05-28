@@ -1,31 +1,34 @@
 ---
-title: Gráficos de Xamarin.Forms
-description: Esta guía explica cómo incorporar gráficos y elementos visuales de motor de juego en una aplicación de Xamarin.Forms con CocosSharp, SkiaShap y UrhoSharp.
-ms.prod: xamarin
-ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/01/2018
-ms.openlocfilehash: 38b06c26208613baed45f40a8f0933f10496c467
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: Gráficos enXamarin.Forms
+description: En esta guía se explica cómo incorporar gráficos y objetos visuales del motor de juegos en una Xamarin.Forms aplicación mediante CocosSharp, SkiaShap y UrhoSharp.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 227bb3f0971bb8e3ceef7015f8fffb9994ccc36b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399236"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129329"
 ---
-# <a name="graphics-in-xamarinforms"></a>Gráficos de Xamarin.Forms
+# <a name="graphics-in-xamarinforms"></a>Gráficos enXamarin.Forms
 
-_Cómo incorporar gráficos y elementos visuales de motor de juego en una aplicación de Xamarin.Forms._
+_Cómo incorporar gráficos y objetos visuales del motor de juegos en una Xamarin.Forms aplicación._
 
-## <a name="using-cocossharp-in-xamarinformscocossharpmd"></a>[Uso de CocosSharp en Xamarin.Forms](cocossharp.md)
+## <a name="using-cocossharp-in-xamarinformscocossharpmd"></a>[Usar CocosSharp enXamarin.Forms](cocossharp.md)
 
-Cómo agregar CocosSharp para incluir de forma precisa, la imagen y la representación de texto en una aplicación de Xamarin.Forms.
+Cómo agregar CocosSharp para incluir la representación exacta de la forma, la imagen y el texto en una Xamarin.Forms aplicación.
 
-## <a name="using-skiasharp-in-xamarinformsskiasharpindexmd"></a>[Uso de SkiaSharp en Xamarin.Forms](skiasharp/index.md)
+## <a name="using-skiasharp-in-xamarinformsskiasharpindexmd"></a>[Usar SkiaSharp enXamarin.Forms](skiasharp/index.md)
 
-Cómo agregar SkiaSharp a una aplicación de Xamarin.Forms y usarlo para dibujar texto, imágenes y gráficos vectoriales en 2D.
+Cómo agregar SkiaSharp a una Xamarin.Forms aplicación y usarla para dibujar gráficos vectoriales 2D, imágenes y texto.
 
-## <a name="using-urhosharp-in-xamarinformsurhosharpmd"></a>[Uso de UrhoSharp en Xamarin.Forms](urhosharp.md)
+## <a name="using-urhosharp-in-xamarinformsurhosharpmd"></a>[Usar UrhoSharp enXamarin.Forms](urhosharp.md)
 
-Cómo agregar UrhoSharp para incluir visualizaciones 3D en una aplicación de Xamarin.Forms.
+Cómo agregar UrhoSharp para incluir visualizaciones 3D en una Xamarin.Forms aplicación.

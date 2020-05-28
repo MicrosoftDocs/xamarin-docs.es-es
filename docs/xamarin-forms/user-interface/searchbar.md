@@ -1,24 +1,27 @@
 ---
-title: SearchBar de Xamarin.Forms
-description: Xamarin. Forms barra es un control de entrada de usuario que se usa para iniciar una búsqueda. El control barra admite texto de marcador de posición, entrada de consulta, ejecución y cancelación. En este artículo se explica cómo usar barra en XAML y en código.
-ms.prod: xamarin
-ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 11/04/2019
-ms.openlocfilehash: 9162e89768aefe761111a02b80932231a6fe759f
-ms.sourcegitcommit: da15fb3b593a3e01ced9f8a1df572348d01d42ea
+title: Xamarin.FormsBarra
+description: Xamarin.FormsBarra es un control de entrada de usuario que se usa para iniciar una búsqueda. El control barra admite texto de marcador de posición, entrada de consulta, ejecución y cancelación. En este artículo se explica cómo usar barra en XAML y en código.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83844197"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127548"
 ---
-# <a name="xamarinforms-searchbar"></a>SearchBar de Xamarin.Forms
+# <a name="xamarinforms-searchbar"></a>Xamarin.FormsBarra
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) es un control de entrada de usuario que se usa para iniciar una búsqueda. El `SearchBar` control admite el texto de marcador de posición, la entrada de consulta, la ejecución de búsqueda y la cancelación. En la captura de pantalla siguiente se muestra una `SearchBar` consulta con los resultados mostrados en un `ListView` :
+Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) Es un control de entrada de usuario que se usa para iniciar una búsqueda. El `SearchBar` control admite el texto de marcador de posición, la entrada de consulta, la ejecución de búsqueda y la cancelación. En la captura de pantalla siguiente se muestra una `SearchBar` consulta con los resultados mostrados en un `ListView` :
 
 [![Captura de pantalla de barra en iOS y Android](searchbar-images/device-searchbars-cropped.png "Barra en iOS y Android")](searchbar-images/device-searchbars.png#lightbox "Barra en iOS y Android")
 
@@ -38,7 +41,7 @@ La `SearchBar` clase define las siguientes propiedades:
 * [`Text`](xref:Xamarin.Forms.InputView.Text)es un valor de tipo `string` que contiene el texto de la consulta en `SearchBar` .
 * [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)es un `Color` que define el color del texto de la consulta.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que se `SearchBar` puede personalizar y ser el destino de los enlaces de datos. Especificar las propiedades de fuente en `SearchBar` es coherente con la personalización de texto en otros [controles de texto de Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md). Para obtener más información, vea [fuentes en Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md).
+Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que se `SearchBar` puede personalizar y ser el destino de los enlaces de datos. Especificar las propiedades de fuente en `SearchBar` es coherente con la personalización de texto en otros [ Xamarin.Forms controles de texto](~/xamarin-forms/user-interface/text/index.md). Para obtener más información, vea [fuentes Xamarin.Forms en ](~/xamarin-forms/user-interface/text/fonts.md).
 
 ## <a name="create-a-searchbar"></a>Creación de un barra
 
@@ -87,7 +90,7 @@ En la captura de pantalla siguiente se muestra el `SearchBar` control resultante
 [![Captura de pantalla de barra personalizado en iOS y Android](searchbar-images/device-searchbars-styled-cropped.png "Barra personalizado en iOS y Android")](searchbar-images/device-searchbars-styled.png#lightbox "Barra personalizado en iOS y Android")
 
 > [!NOTE]
-> En iOS, la `SearchBarRenderer` clase contiene un método reemplazable `UpdateCancelButton` . Este método controla cuándo aparece el botón Cancelar y se puede invalidar en un representador personalizado. Para obtener más información sobre los representadores personalizados, vea [representadores personalizados de Xamarin. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+> En iOS, la `SearchBarRenderer` clase contiene un método reemplazable `UpdateCancelButton` . Este método controla cuándo aparece el botón Cancelar y se puede invalidar en un representador personalizado. Para obtener más información acerca de los representadores personalizados, vea [ Xamarin.Forms representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="perform-a-search-with-event-handlers"></a>Realizar una búsqueda con controladores de eventos
 
@@ -185,11 +188,11 @@ En el siguiente código XAML se muestra cómo enlazar un `SearchBar` al modelo d
 
 En este ejemplo `BindingContext` se establece para que sea una instancia de la `SearchViewModel` clase. Enlaza la `SearchCommand` propiedad a `PerformSearch` `ICommand` en el ViewModel y enlaza la `SearchBar` `Text` propiedad a la `SearchCommandParameter` propiedad. La `ListView.ItemsSource` propiedad está enlazada a la `SearchResults` propiedad del ViewModel.
 
-Para obtener más información sobre la `ICommand` interfaz y los enlaces, consulte [enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md) y [la interfaz Icommand](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+Para obtener más información sobre la `ICommand` interfaz y los enlaces, consulte [ Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md) y [la interfaz Icommand](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 * [Demostraciones de barra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
-* [Controles de texto de Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md)
-* [Fuentes de Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md)
-* [Enlace de datos de Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Xamarin.FormsControles de texto](~/xamarin-forms/user-interface/text/index.md)
+* [Fuentes enXamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
+* [Xamarin.Formsenlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
