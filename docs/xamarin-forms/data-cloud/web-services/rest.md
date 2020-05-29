@@ -1,22 +1,8 @@
 ---
-title: ''
-description: La integración de un servicio Web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web RESTful desde una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ecfcede22e96a4a91f5367dae49b0d837ca2416f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139170"
+title: "consumir un servicio web RESTful" Descripción: "la integración de un servicio Web en una aplicación es un escenario común". En este artículo se muestra cómo consumir un servicio web RESTful desde una Xamarin.Forms aplicación ".
+MS. Prod: Xamarin ms. AssetID: B540910C-9C51-416A-AAB9-057BF76489C3 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-a-restful-web-service"></a>Consumo de un servicio web RESTful
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
@@ -92,12 +78,12 @@ La `HttpClient` instancia de se declara en el nivel de clase para que el objeto 
 ```csharp
 public class RestService : IRestService
 {
-  HttpClient _client;
+  HttpClient client;
   ...
 
   public RestService ()
   {
-    _client = new HttpClient ();
+    client = new HttpClient ();
   }
   ...
 }
@@ -111,12 +97,12 @@ El `HttpClient.GetAsync` método se usa para enviar la solicitud GET al servicio
 public async Task<List<TodoItem>> RefreshDataAsync ()
 {
   ...
-  var uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
+  Uri uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
   ...
-  var response = await _client.GetAsync (uri);
+  HttpResponseMessage response = await client.GetAsync (uri);
   if (response.IsSuccessStatusCode)
   {
-      var content = await response.Content.ReadAsStringAsync ();
+      string content = await response.Content.ReadAsStringAsync ();
       Items = JsonConvert.DeserializeObject <List<TodoItem>> (content);
   }
   ...
@@ -127,6 +113,9 @@ El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsS
 
 Si la operación HTTP se realizó correctamente, se lee el contenido de la respuesta para su presentación. La `HttpResponseMessage.Content` propiedad representa el contenido de la respuesta HTTP y el `HttpContent.ReadAsStringAsync` método escribe de forma asincrónica el contenido http en una cadena. A continuación, este contenido se convierte de JSON a un `List` de `TodoItem` instancias de.
 
+> [!WARNING]
+> El uso del `ReadAsStringAsync` método para recuperar una respuesta grande puede tener un impacto negativo en el rendimiento. En tales circunstancias, la respuesta se debe deserializar directamente para evitar tener que almacenarla completamente en búfer.
+
 ### <a name="creating-data"></a>Crear datos
 
 El `HttpClient.PostAsync` método se usa para enviar la solicitud post al servicio Web especificado por el URI y, a continuación, para recibir la respuesta del servicio Web, como se muestra en el ejemplo de código siguiente:
@@ -134,23 +123,22 @@ El `HttpClient.PostAsync` método se usa para enviar la solicitud post al servic
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 {
-  var uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
+  Uri uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
 
   ...
-  var json = JsonConvert.SerializeObject (item);
-  var content = new StringContent (json, Encoding.UTF8, "application/json");
+  string json = JsonConvert.SerializeObject (item);
+  StringContent content = new StringContent (json, Encoding.UTF8, "application/json");
 
   HttpResponseMessage response = null;
   if (isNewItem)
   {
-    response = await _client.PostAsync (uri, content);
+    response = await client.PostAsync (uri, content);
   }
   ...
 
   if (response.IsSuccessStatusCode)
   {
     Debug.WriteLine (@"\tTodoItem successfully saved.");
-
   }
   ...
 }
@@ -172,7 +160,7 @@ El `HttpClient.PutAsync` método se usa para enviar la solicitud Put al servicio
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 {
   ...
-  response = await _client.PutAsync (uri, content);
+  response = await client.PutAsync (uri, content);
   ...
 }
 ```
@@ -192,9 +180,9 @@ El `HttpClient.DeleteAsync` método se usa para enviar la solicitud de eliminaci
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
 {
-  var uri = new Uri (string.Format (Constants.TodoItemsUrl, id));
+  Uri uri = new Uri (string.Format (Constants.TodoItemsUrl, id));
   ...
-  var response = await _client.DeleteAsync (uri);
+  HttpResponseMessage response = await client.DeleteAsync (uri);
   if (response.IsSuccessStatusCode)
   {
     Debug.WriteLine (@"\tTodoItem successfully deleted.");

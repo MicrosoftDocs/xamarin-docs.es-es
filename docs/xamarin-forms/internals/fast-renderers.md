@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRepresentadores rápidos
-description: En este artículo se presentan los representadores rápidos, que reducen los costos de inflación y representación de un Xamarin.Forms control en Android mediante el acoplamiento de la jerarquía de control nativa resultante.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3f25f4c2da5b2a426673b49045b5d2d05b0c6ac4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139079"
+title: " Xamarin.Forms representadores rápidos" Description: "en este artículo se presentan los representadores rápidos, lo que reduce la inflación y los costos de representación de un Xamarin.Forms control en Android mediante el acoplamiento de la jerarquía de control nativa resultante".
+MS. Prod: Xamarin ms. AssetID: 097f87f2-d891-4f3c-BE02-fb7d195a481a ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRepresentadores rápidos
 
 Tradicionalmente, la mayoría de los representadores de control originales en Android se componen de dos vistas:
@@ -31,9 +17,10 @@ Los representadores rápidos reducen los costos de inflación y representación 
 Los representadores rápidos están disponibles para los siguientes controles en Xamarin.Forms en Android:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`Frame`](xref:Xamarin.Forms.Frame)
+- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Funcionalmente, estos representadores rápidos no son diferentes a los representadores heredados. A partir de Xamarin.Forms 4,0 y versiones posteriores, todas las aplicaciones que tienen como destino `FormsAppCompatActivity` usarán estos representadores rápidos de forma predeterminada. Los representadores de todos los controles nuevos, incluidos [`ImageButton`](xref:Xamarin.Forms.ImageButton) y [`CollectionView`](xref:Xamarin.Forms.CollectionView) , usan el enfoque de representador rápido.
 

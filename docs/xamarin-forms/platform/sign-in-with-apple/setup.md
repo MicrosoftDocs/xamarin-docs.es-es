@@ -1,20 +1,9 @@
 ---
-title: 'Pasos de configuración: Inicio de sesión con Apple para Xamarin. Forms'
-description: Iniciar sesión con el programa de instalación de Apple difiere en función de las distintas plataformas a las que se destina la aplicación móvil.
-ms.prod: xamarin
-ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 09/10/2019
-ms.openlocfilehash: c1f75f4872d787e261ab6bbac3624e31538c6ff0
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206531"
+title: "pasos de configuración: Inicio de sesión con Apple para Xamarin.Forms " Descripción: "el inicio de sesión con el programa de instalación de Apple difiere en función de las distintas plataformas a las que se destina la aplicación móvil".
+MS. Prod: Xamarin ms. AssetID: 8F712802-395B-469B-B5BE-C927AD1A8391 ms. Technology: Xamarin-Forms Author: davidortinau ms. Author: daortin ms. Date: 09/10/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Configuración iniciar sesión con Apple para Xamarin. Forms
+
+# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Configurar inicio de sesión con Apple paraXamarin.Forms
 
 En esta guía se describe la serie de pasos necesarios para configurar las aplicaciones multiplataforma con el fin de seguir el inicio de sesión con Apple. Aunque el programa de instalación de Apple es sencillo en el portal para desarrolladores de Apple, es necesario realizar pasos adicionales para crear una relación segura entre Android y Apple. 
 
@@ -33,14 +22,14 @@ Agregue el dominio y haga clic en **registrar**.
 ![registro del formulario de dominio](sign-in-images/readme-signin-domain-more.png)
 
 > [!NOTE]
-> Si ve un error sobre el dominio que no es compatible con SPF, deberá agregar un registro TXT de DNS SPF a su dominio y esperar a que se propague antes de continuar: El TXT SPF puede tener un aspecto similar al siguiente:`v=spf1 a a:myapp.com -all`
+> Si ve un error que le informará de que el dominio no es compatible con SPF, deberá agregar un registro TXT de DNS SPF a su dominio y esperar a que se propague antes de continuar: el TXT SPF puede tener un aspecto similar al siguiente:`v=spf1 a a:myapp.com -all`
 
-A continuación, tendrá que comprobar la propiedad del dominio haciendo clic en **Descargar** para recuperar `apple-developer-domain-association.txt` el archivo y cargarlo en la `.well-known` carpeta del sitio web del dominio.
+A continuación, tendrá que comprobar la propiedad del dominio haciendo clic en **Descargar** para recuperar el `apple-developer-domain-association.txt` archivo y cargarlo en la `.well-known` carpeta del sitio web del dominio.
 
 Una vez `.well-known/apple-developer-domain-association.txt` cargado el archivo y accesible, puede hacer clic en **comprobar** para que Apple Compruebe la propiedad del dominio.
 
 > [!NOTE]
-> Apple comprobará la propiedad `https://`con. Asegúrese de que tiene la configuración de SSL y de que el archivo es accesible a través de una dirección URL segura.
+> Apple comprobará la propiedad con `https://` . Asegúrese de que tiene la configuración de SSL y de que el archivo es accesible a través de una dirección URL segura.
 
 Este proceso se completó correctamente antes de continuar.
 
@@ -62,7 +51,7 @@ En la sección [identificadores](https://developer.apple.com/account/resources/i
 
 ![Crear un nuevo identificador de servicio](sign-in-images/readme-serviceid-create.png)
 
-Asigne a su ID. de servicios una descripción y un identificador.  Este identificador será su `ServerId`.  Asegúrese de habilitar el **Inicio de sesión con Apple**.
+Asigne a su ID. de servicios una descripción y un identificador.  Este identificador será su `ServerId` .  Asegúrese de habilitar el **Inicio de sesión con Apple**.
 
 Antes de continuar, haga clic en **configurar** junto a la opción _iniciar sesión con Apple_ habilitada.
 
@@ -70,10 +59,10 @@ En el panel Configuración, asegúrese de que está seleccionado el **identifica
 
 A continuación, elija el **dominio web** que configuró anteriormente.
 
-Por último, agregue una o más **direcciones URL de retorno**.  Cualquier `redirect_uri` usuario que use más adelante debe registrarse aquí exactamente como lo usa.  Asegúrese de incluir `http://` o `https://` en la dirección URL cuando la escriba.
+Por último, agregue una o más **direcciones URL de retorno**.  Cualquier `redirect_uri` usuario que use más adelante debe registrarse aquí exactamente como lo usa.  Asegúrese `http://` de incluir o `https://` en la dirección URL cuando la escriba.
 
 > [!NOTE]
-> Con fines de prueba, no puede `127.0.0.1` usar `localhost`ni, pero puede `local.test`usar otros dominios como.  Si decide hacerlo, puede editar el archivo del `hosts` equipo para resolver este dominio ficticio en la dirección IP local.
+> Con fines de prueba, no puede usar `127.0.0.1` ni `localhost` , pero puede usar otros dominios como `local.test` .  Si decide hacerlo, puede editar el archivo del equipo `hosts` para resolver este dominio ficticio en la dirección IP local.
 
 ![Configuración del inicio de sesión de Apple](sign-in-images/readme-serviceid-configure.png)
 
@@ -114,7 +103,7 @@ Asigne un nombre `P8FileContents` a esta clave y guárdela en un lugar seguro. L
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se describen los pasos necesarios para configurar el inicio de sesión con Apple para su uso en las aplicaciones de Xamarin. Forms.
+En este artículo se describen los pasos necesarios para configurar el inicio de sesión con Apple para su uso en las Xamarin.Forms aplicaciones.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

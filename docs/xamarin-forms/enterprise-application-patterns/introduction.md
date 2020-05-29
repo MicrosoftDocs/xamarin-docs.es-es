@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139368"
+title: "Introducción al desarrollo de aplicaciones empresariales" Descripción: "en este capítulo se proporciona una introducción al desarrollo de aplicaciones empresariales y se presenta la aplicación móvil eShopOnContainers".
+MS. Prod: Xamarin ms. AssetID: cbce0659-FA03-447A-86ec-140438143230 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
 
 Independientemente de la plataforma, los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos:
@@ -106,15 +92,15 @@ La aplicación móvil eShopOnContainers ejercita la siguiente Xamarin.Forms func
 - Convertidores
 - Estilos
 - Animaciones
-- Comandos
-- Comportamientos
+- Comandos:
+- comportamientos
 - Desencadenadores
 - Efectos
 - Representadores personalizados
 - MessagingCenter
 - Controles personalizados
 
-Para obtener más información acerca de esta funcionalidad, consulte la [ Xamarin.Forms documentación](~/xamarin-forms/index.yml)y [creación de Xamarin.Forms Mobile Apps con ](https://aka.ms/xamebook).
+Para obtener más información acerca de esta funcionalidad, consulte la [ Xamarin.Forms documentación](~/xamarin-forms/index.yml)y [creación de Xamarin.Forms Mobile Apps con ](https://aka.ms/xamformsebook).
 
 Además, se proporcionan pruebas unitarias para algunas de las clases de la aplicación móvil eShopOnContainers.
 
@@ -122,7 +108,7 @@ Además, se proporcionan pruebas unitarias para algunas de las clases de la apli
 
 La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describen los proyectos que componen la aplicación móvil eShopOnContainers:
 
-|Project|Description|
+|Proyecto|Descripción|
 |--- |--- |
 |eShopOnContainers. Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
 |eShopOnContainers. Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|
@@ -139,10 +125,10 @@ Las clases de la aplicación móvil eShopOnContainers se pueden volver a usar en
 
 El proyecto de PCL eShopOnContainers. Core contiene las siguientes carpetas:
 
-|Carpeta|Description|
+|Carpeta|Descripción|
 |--- |--- |
 |Animaciones|Contiene clases que permiten usar animaciones en XAML.|
-|Comportamientos|Contiene los comportamientos que se exponen a las clases de vista.|
+|comportamientos|Contiene los comportamientos que se exponen a las clases de vista.|
 |Controles|Contiene controles personalizados usados por la aplicación.|
 |Convertidores|Contiene los convertidores de valores que aplican la lógica personalizada a un enlace.|
 |Efectos|Contiene la `EntryLineColorEffect` clase, que se usa para cambiar el color del borde de `Entry` controles concretos.|

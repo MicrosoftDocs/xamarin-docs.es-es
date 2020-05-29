@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDiseños
-description: Xamarin.FormsLos diseños se utilizan para crear controles de interfaz de usuario en estructuras visuales. En este artículo se enumeran los diseños incluidos en Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137311"
+Título: " Xamarin.Forms diseños" Descripción: " Xamarin.Forms los diseños se usan para crear controles de interfaz de usuario en estructuras visuales. En este artículo se enumeran los diseños incluidos en Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: F4180997-BA21-453A-9958-D1E2940DF050 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-layouts"></a>Xamarin.FormsDiseños
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -44,7 +30,7 @@ Estas clases derivan de [`Layout`](xref:Xamarin.Forms.Layout) , que [`Padding`](
 
 <a named="frame" />
 
-### <a name="frame"></a>Frame
+### <a name="frame"></a>Fotograma
 
 |     |     |
 | --- | --- |
@@ -57,7 +43,7 @@ Estas clases derivan de [`Layout`](xref:Xamarin.Forms.Layout) , que [`Padding`](
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView)es capaz de desplazar su contenido. Establezca la [`Content`](xref:Xamarin.Forms.ScrollView.Content) propiedad en una vista o diseño demasiado grande para caber en la pantalla. (El contenido de una `ScrollView` es muy frecuente [`StackLayout`](#stackLayout) ). Establezca la [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad para indicar si el desplazamiento debe ser vertical, horizontal o ambos.<br /><br />[Documentación](xref:Xamarin.Forms.ScrollView)  /  de API [Guía](~/xamarin-forms/user-interface/layouts/scroll-view.md)  /  de [Ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Ejemplo de ScrollView](layouts-images/ScrollView.png "Ejemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Ejemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView)es capaz de desplazar su contenido. Establezca la [`Content`](xref:Xamarin.Forms.ScrollView.Content) propiedad en una vista o diseño demasiado grande para caber en la pantalla. (El contenido de una `ScrollView` es muy frecuente [`StackLayout`](#stackLayout) ). Establezca la [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad para indicar si el desplazamiento debe ser vertical, horizontal o ambos.<br /><br />[Documentación](xref:Xamarin.Forms.ScrollView)  /  de API [Guía](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  de [Ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Ejemplo de ScrollView](layouts-images/ScrollView.png "Ejemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Ejemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView

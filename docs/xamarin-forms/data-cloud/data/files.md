@@ -1,28 +1,17 @@
 ---
-title: Control de archivos en Xamarin.Forms
-description: El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados.
-ms.prod: xamarin
-ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/21/2018
-ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997158"
+title: "control de archivos en Xamarin.Forms " Description: "el control de archivos con Xamarin.Forms se puede lograr mediante el código en una biblioteca de .net Standard o mediante el uso de recursos incrustados".
+MS. Prod: Xamarin ms. AssetID: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+# <a name="file-handling-in-xamarinforms"></a>Control de archivos enXamarin.Forms
 
-_El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados._
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
-## <a name="overview"></a>Información general
+_El control de archivos con Xamarin.Forms se puede lograr mediante el uso de código en una biblioteca de .net Standard o mediante el uso de recursos incrustados._
 
-El código de Xamarin.Forms se ejecuta en varias plataformas, cada una con su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
+## <a name="overview"></a>Introducción
+
+Xamarin.Formsel código se ejecuta en varias plataformas, cada una de las cuales tiene su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
 Para obtener información sobre cómo controlar archivos de imagen, vea la página [Trabajar con imágenes](~/xamarin-forms/user-interface/images.md).
 
@@ -50,7 +39,7 @@ Además, el método `File.Exists` determina si existe el archivo especificado:
 bool doesExist = File.Exists(fileName);
 ```
 
-La ruta del archivo en cada plataforma puede determinarse desde una biblioteca de .NET Standard mediante el uso de un valor de la enumeración [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) como el primer argumento para el método `Environment.GetFolderPath`. Después, esto puede combinarse con un nombre de archivo con el método `Path.Combine`:
+La ruta de acceso del archivo en cada plataforma se puede determinar a partir de una biblioteca .NET Standard mediante el uso de un valor de la [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) enumeración como primer argumento del `Environment.GetFolderPath` método. Después, esto puede combinarse con un nombre de archivo con el método `Path.Combine`:
 
 ```csharp
 string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
@@ -66,17 +55,17 @@ Estas operaciones se demuestran en la aplicación de ejemplo, donde se incluye u
 
 Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue un archivo y asegúrese de usar esta **acción de compilación: EmbeddedResource**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[Configuración de ![acción de compilación de recursos incrustados](files-images/vs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
+[![Configuración de la acción de compilación de recursos incrustados](files-images/vs-embeddedresource-sml.png "Establecer EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Archivo de texto incrustado en la biblioteca estándar de .net, configuración de acción de compilación de recursos incrustados](files-images/xs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
+[![Archivo de texto incrustado en la biblioteca estándar de .NET, configurar la acción de compilación de recursos incrustados](files-images/xs-embeddedresource-sml.png "Establecer EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Establecer EmbeddedResource BuildAction")
 
 -----
 
-`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource. txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt`.
+`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource. txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -90,7 +79,7 @@ using (var reader = new System.IO.StreamReader (stream))
 
 Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles), se muestra el texto representado en un control `Label`.
 
- [![Archivo de texto insertado en la biblioteca estándar de .net](files-images/pcltext-sml.png "archivo de texto incrustado en .net Standard biblioteca que se muestra en la aplicación")](files-images/pcltext.png#lightbox "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")
+ [![Archivo de texto insertado en la biblioteca estándar de .NET](files-images/pcltext-sml.png "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")](files-images/pcltext.png#lightbox "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")
 
 Cargar y deserializar código XML es igual de sencillo. En el código siguiente, se muestra un archivo XML que se carga y se deserializa desde un recurso y, después, se enlaza a `ListView` para mostrarlo. El archivo XML contiene una matriz de objetos `Monkey` (la clase se define en el código de ejemplo).
 
@@ -106,7 +95,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Archivo XML incrustado en la biblioteca estándar de .net, que se muestra en]el(files-images/pclxml-sml.png "archivo XML incrustado de ListView en la biblioteca estándar de .net que se muestra en ListView")](files-images/pclxml.png#lightbox "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")
+ [![Archivo XML incrustado en la biblioteca estándar de .NET, que se muestra en ListView](files-images/pclxml-sml.png "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")](files-images/pclxml.png#lightbox "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -167,5 +156,5 @@ En este artículo, se muestran algunas operaciones de archivo sencillas para gua
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
+- [Xamarin.FormsAssembl](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
